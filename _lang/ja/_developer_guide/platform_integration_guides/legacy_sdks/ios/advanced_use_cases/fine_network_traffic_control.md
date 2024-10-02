@@ -8,7 +8,7 @@ description: "この記事では、iOS アプリケーションのきめ細か�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # きめ細かなネットワークトラフィック制御
 

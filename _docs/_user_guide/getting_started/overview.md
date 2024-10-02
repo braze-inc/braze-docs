@@ -23,6 +23,10 @@ Let's explore the power of Braze together.
 
 Braze is a customer engagement platform that helps brands of all sizes create personalized and targeted campaigns across various channels. Braze gives you the ability to listen to your customers, understand what their behavior is signaling, and then act by sending customers the right message, through the right channel, at the right time.
 
+{% alert tip %}
+Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users) so they can explore the platform with you.
+{% endalert %}
+
 ## Users and segments
 
 Users are your customers—the people receiving the messages you send using Braze. All the data you gather about a user and ingest into Braze is stored in their user profile, such as their demographics, personal information, preferences, and behaviors. This information powers your messaging and is how you can tailor your messages to the right user.

@@ -18,9 +18,6 @@
 			"destination": "/api/404.html"
 		}
 	],
-	"github": {
-		"silent": true
-	},
 	"headers": [
 		{
 			"source": "/(.*)",

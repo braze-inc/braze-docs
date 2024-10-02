@@ -18,7 +18,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 ## Step 1: Create a new Canvas 
 
-Go to **Messaging** > **Canvas**, then click **Create Canvas**.
+Go to **Messaging** > **Canvas**, then select **Create Canvas**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
@@ -26,7 +26,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 2: Set up your Canvas
 
-The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the builder steps.
+The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Select each of the following tabs to view which settings you can adjust for each builder step.
 
 {% tabs local %}
   {% tab Basics %}
@@ -136,9 +136,9 @@ If a user re-enters the Canvas, reaches the same component as their previous ent
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. 
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
 
-Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based Canvases, this limit occurs at every UTC hour. For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
 {% alert warning %}
 Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
@@ -150,19 +150,34 @@ After adding segments and filters to your target audience, you can test if your 
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
 
-#### Adjust entry controls
+#### Selecting entry controls
 
 Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
 
 ![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
+Braze doesn't recommend using the **Limit everytime the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+
 #### Setting exit criteria
 
 Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
 
+#### Calculating target population
+
+In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
+
+Note that:
+
+- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
+- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+
+To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
+
+![Target Population breakdown with option to cacluate exact statistics.][2]
+
 ### Step 2d: Select your send settings
 
-Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -184,13 +199,17 @@ If desired, specify Quiet Hours (the time during which your messages will not be
 
 ## Step 3: Build your Canvas
 
+{% alert tip %}
+Save time and streamline your Canvas creation by using [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
+{% endalert %}
+
 ### Adding a variant
 
 ![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-Click **Add Variant** and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
+Select **Add Variant**, then add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
-You can add additional variants by clicking the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
+You can add additional variants by selecting the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
 ![][12]
 
@@ -210,7 +229,7 @@ By default, the Canvas variant assignment is locked in when users enter the Canv
 
 ### Adding steps
 
-You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
+You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, select the <i class="fas fa-plus-circle"></i> plus button to add a component with the popover menu.
 
 {% alert tip %}
 As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Shift</kbd> + <kbd>-</kbd>.
@@ -230,7 +249,7 @@ As your Canvas journey increases in steps, the maximum duration is the longest p
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-You can edit any step in your Canvas Flow workflow by clicking any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Click the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas Flow workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
@@ -253,7 +272,7 @@ The Message component manages the messages sent to users. You can select your **
 
 ![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
-Click **Done** after you've finished configuring your Canvas component.
+Select **Done** after you've finished configuring your Canvas component.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -282,11 +301,11 @@ In the first Message step following an Action Path, you can use `event_propertie
 
 ### Editing connections
 
-To move a connection between steps, click the arrow connecting the two components and select a different component. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
+To move a connection between steps, select the arrow connecting the two components and select a different component. To remove the connection, select the arrow followed by **Cancel Connection** in the footer of the Canvas composer.
 
 ## Step 4: Use multivariate testing using Canvas
 
-You can add a control group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
+You can add a control group to your Canvas by selecting the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
 
 Braze will track the conversions for users who are placed into the control group, although they will not receive any messages. To preserve an accurate test, we will track the number of conversions for your variants and the control group for exactly the same amount of time, as shown on the conversion event selection screen. 
 
@@ -310,7 +329,7 @@ For this reason, Intelligent Selection works best on Canvases that have new user
 
 ## Step 5: Save and launch your Canvas
 
-Once you're done creating your Canvas, click **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
+Once you're done creating your Canvas, select **Launch Canvas** to save and launch your Canvas. After you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page. 
 
 You can also save your Canvas as a draft if you need to come back to it.
 
@@ -321,7 +340,8 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 {% endalert %}
 
 
-[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
+[1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
+[2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
@@ -331,7 +351,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[18a]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}

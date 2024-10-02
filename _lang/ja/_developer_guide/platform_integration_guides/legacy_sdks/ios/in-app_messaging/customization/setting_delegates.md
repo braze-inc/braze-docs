@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # デリゲートの設定
 
@@ -30,7 +30,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
@@ -55,7 +55,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInA
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.delegate = self
@@ -76,7 +76,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",

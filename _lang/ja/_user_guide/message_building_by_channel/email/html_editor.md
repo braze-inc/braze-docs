@@ -1,25 +1,25 @@
 ---
-nav_title: HTML エディター
+nav_title: HTMLエディター
 article_title: 電子メール用HTMLエディタ
 page_order: 4
 layout: dev_guide
 guide_top_header: "電子メール用HTMLエディタ"
-guide_top_text: "このランディングページは、電子メール用のHTMLエディタに関連する記事のホームページです。"
+guide_top_text: "このランディングページは、メール用のHTMLエディタに関連する記事のホームページです。"
 
 page_type: landing
-description: "このランディングページは、電子メール用のHTMLエディタに関連する記事のホームページです。"
+description: "このランディングページは、メール用のHTMLエディタに関連する記事のホームページです。"
 channel: email
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: "Creating an Email with Custom HTML"
+  - name: "ユーザ定義HTMLを使用したメールの作成"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-    fa_icon: fas fa-envelope
-  - name: "CSS Inlining"
+    image: /assets/img/braze_icons/mail-01.svg
+  - name: "CSSインライニング"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
-    fa_icon: fas fa-file-code
-  - name: "Gmail Promotions Tab"
+    image: /assets/img/braze_icons/file-code-01.svg
+  - name: "「Gmail プロモーション」タブ"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
-    fa_icon: fas fa-envelope-circle-check
+    image: /assets/img/braze_icons/message-check-circle.svg
 
 ---

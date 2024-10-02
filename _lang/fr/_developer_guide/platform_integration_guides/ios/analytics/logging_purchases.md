@@ -7,7 +7,7 @@ description: "Cet article de référence montre comment suivre les achats et les
 
 ---
  
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Enregistrement des achats pour iOS
 

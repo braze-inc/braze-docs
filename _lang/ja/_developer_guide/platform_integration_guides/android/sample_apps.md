@@ -20,14 +20,14 @@ description: "このリファレンス記事では、Android サンプルアプ�
 
 1. 新しい[ワークスペース][25]を作成し、Braze API 識別子キーを書き留めます。<br><br>
 2. FCM 送信者 ID と Braze API 識別子キーを `/droidboy/res/values/braze.xml` 内の適切な場所 (それぞれ `com_braze_push_fcm_sender_id` と `com_braze_api_key` という文字列のタグの間) にコピーします。<br><br>
-3. FCM サーバーキーとサーバー ID を [**設定の管理**] のワークスペース設定にコピーします。<br><br>
+3. FCM サーバーキーとサーバー ID を \[**設定の管理**] のワークスペース設定にコピーします。<br><br>
 4. Droidboy APK をアセンブルするには、SDK ディレクトリ内で `./gradlew assemble` を実行します。Windows では `gradlew.bat` を使用します。<br><br>
 5. Droidboy APK をテストデバイスに自動的にインストールするには、SDK ディレクトリ内で `./gradlew installDebug` を実行します。
 
 ## Hello Braze テストアプリケーションの構築
 Hello Braze テストアプリケーションは、Braze SDK の最小限のユースケースを示し、さらに Braze SDK を Gradle プロジェクトに簡単に統合する方法も示します。
 
-1. [**設定の管理**] ページの API 識別子キーを `res/values` フォルダーの `braze.xml` ファイルにコピーします。
+1. \[**設定の管理**] ページの API 識別子キーを `res/values` フォルダーの `braze.xml` ファイルにコピーします。
 ![][34]<br><br>
 2. サンプルアプリをデバイスまたはエミュレーターにインストールするには、SDK ディレクトリ内で次のコマンドを実行します。
 ```

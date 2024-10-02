@@ -3,19 +3,19 @@ nav_title: 2月
 page_order: 11
 noindex: true
 page_type: update
-description: "この記事には、2019 年 2 月のリリースノートが含まれています。"
+description: "この記事には2019年2月のリリースノートが含まれている。"
 ---
-# 2019 年 2 月
+# 2019年2月
 
-## E メール購読グループ
+## 電子メール購読グループ
 
-[サブスクリプショングループは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)、[上記のグローバルサブスクリプションステートからオーディエンスをさらに絞り込むことができるセグメントフィルターです]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)。これらのグループでは、より詳細なサブスクリプションオプションをエンドユーザーに提示できます。
+[サブスクリプショングループは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)、上記の[グローバルサブスクリプションステートから]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)さらにオーディエンスを絞り込むことができるセグメントフィルタである。これらのグループは、エンドユーザーにより詳細な購読オプションを提示する能力を提供する。
 
-たとえば、複数のカテゴリのメールキャンペーンを送信する場合、[メールプリファレンスセンターを使用して](#email-preference-center)、1つのページからそれらのグループをまとめて購読または購読解除するオプションを顧客に提供できます。
+例えば、複数のカテゴリのメールキャンペーンを配信している場合、[メールプレファレンスセンターを](#email-preference-center)利用することで、1つのページから一括で購読または購読解除を行うことができる。
 
-[サブスクリプショングループ REST API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、Braze **ダッシュボードに保存したサブスクリプショングループをサブスクリプショングループページにプログラムで管理します**。
+[Subscription Group REST APIを]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)使用して、Brazeダッシュボード上の**Subscription Group**ページに保存したSubscription Groupをプログラムで管理する。
 
-## Eメールプリファレンスセンター
+## Eメール・プリファレンス・センター
 
-[メールプリファレンスセンターでは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)、特定のグループのニュースレターを受信するユーザーを簡単に管理できます。作成した各サブスクリプショングループは、プリファレンスセンターリストに追加されます。プリファレンスセンターの名前をクリックすると、インタラクティブプレビューが表示されます。
+[メールプレファレンスセンターは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)、どのユーザーが特定のニュースレターグループを受信するかを管理する簡単な方法である。あなたが作成した各購読グループは、プリファレンスセンターのリストに追加される。プリファレンス・センターの名前をクリックすると、インタラクティブなプレビューが表示される。
 

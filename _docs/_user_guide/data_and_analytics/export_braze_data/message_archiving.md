@@ -20,7 +20,7 @@ When this feature is turned on, if you have connected a cloud storage bucket to 
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-If you setup credentials for multiple cloud storage providers, Message Archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, Message Archiving will upload to that bucket.
+If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
 
 {% alert important %}
 Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.

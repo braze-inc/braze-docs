@@ -72,7 +72,7 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 {% if include.variable_name == "push notifications" %}
 
-| Message type | Max message length | Max title length |
+| Message type | Maximum message length | Maximum title length |
 | --- | --- | --- |
 | iOS lock screen | 175 characters | 43 characters |
 | iOS notification | 175 characters | 43 characters |

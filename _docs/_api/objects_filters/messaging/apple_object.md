@@ -11,7 +11,7 @@ description: "This reference article lists and explains the different Apple obje
 
 # Apple push object
 
-> The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Apple push object
 
@@ -35,7 +35,7 @@ description: "This reference article lists and explains the different Apple obje
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
 }
 ```
 

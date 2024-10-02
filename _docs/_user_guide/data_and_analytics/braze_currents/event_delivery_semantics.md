@@ -3,21 +3,21 @@ nav_title: Event Delivery Semantics
 article_title: Event Delivery Semantics
 page_order: 3
 page_type: reference
-description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse partners."
+description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse Storage partners."
 tool: Currents
 
 ---
 
 # Event delivery semantics
 
-> This article outlines how Currents manages flat file event data we send to Data Warehouse partners.
+> This article outlines how Currents manages flat file event data we send to Data Warehouse Storage partners.
 
 Currents for Data Storage is a continuous streams of data from our platform to a storage bucket on one of our data warehouse [partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
 {% alert important %}
-Note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+Note that this content **only applies to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
 {% endalert %}
 
 
@@ -30,6 +30,10 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 ## Timestamps
 
 All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the IANA format of the user's local time zone at the time of the event.
+
+### Latency
+
+Events sent to Braze through SDK or API can include a timestamp from the past. The most notable example is when SDK data gets queued, such as when there isn't mobile connectivity. In that case, the event timestamp will reflect when the event was generated. This means a percentage of events will appear to have high latency.
 
 ## Apache Avro
 
@@ -69,7 +73,7 @@ File naming conventions may change in the future, Braze recommends searching all
 
 ### Avro write threshold
 
-Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events within the same 5-minute period.
+Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events per file.
 
 {% alert important %}
 Currents will never write empty files.
@@ -77,7 +81,7 @@ Currents will never write empty files.
 
 ### Avro schema changes
 
-From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated.
+From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated. Currents events written to Azure Blob Storage, Google Cloud Storage, and Amazon S3 will write the `<schema-id>` in the path. For example `<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`.
 
 #### Non-breaking changes
 

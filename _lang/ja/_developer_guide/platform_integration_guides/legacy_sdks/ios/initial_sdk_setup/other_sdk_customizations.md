@@ -8,7 +8,7 @@ page_order: 3
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # その他の SDK のカスタマイズ
 
@@ -20,13 +20,13 @@ Braze iOS SDK のデフォルトのログレベルは最小 (次の表では `8`
 
 ### ログレベル
 
-| レベル | 説明 |
+| レベル    | 説明 |
 |----------|-------------|
-| 0 | 詳細。すべてのログ情報は iOS コンソールに記録されます。 |
-| 1        | デバッグ。デバッグおよび高度なログ情報は、iOS コンソールに記録されます。 |
-| 2        | 警告。警告および高度なログ情報が iOS コンソールに記録されます。 |
-| 4        | エラー。エラーおよび高度なログ情報は iOS コンソールに記録されます。 |
-| 8        | 最小限。最小限の情報が iOS コンソールに記録されます。SDK のデフォルト設定。 |
+| 0        | 詳細。すべてのログ情報はiOSコンソールに記録される。  |
+| 1        | デバッグ。デバッグとそれ以上のログ情報はiOSコンソールに記録される。  |
+| 2        | 警告。警告以上のログ情報はiOSコンソールに記録される。  |
+| 4        | エラー。エラーとそれ以上のログ情報はiOSコンソールに記録される。  |
+| 8        | 最小限。最小限の情報が iOS コンソールに記録されます。SDKのデフォルト設定。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### 詳細なログ記録
@@ -38,7 +38,7 @@ Braze iOS SDK のデフォルトのログレベルは最小 (次の表では `8`
 ログレベルはコンパイル時または実行時に割り当てることができます。
 
 {% tabs local %}
-{% tab Compile Time %}
+{% tab コンパイル時 %}
 
 `Braze` という名前の辞書を `Info.plist` ファイルへ追加します。`Braze` 辞書内で、`LogLevel` 文字列サブエントリを追加し、値を `0` に設定します。 
 
@@ -57,7 +57,7 @@ Braze iOS SDK v4.0.2 より前では、辞書キー `Appboy` を `Braze` の代�
 ```
 
 {% endtab %}
-{% tab Runtime %}
+{% tab ランタイム %}
 
 `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内に `ABKLogLevelKey` を追加します。その値を整数 `0` に設定します。
 
@@ -132,49 +132,49 @@ IDFA 収集を実装するには、次の手順に従います。
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
-\#import "IDFADelegate.h"
-\#import <AdSupport/ASIdentifierManager.h>
+```objc
+#import "IDFADelegate.h"
+#import <AdSupport/ASIdentifierManager.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @implementation IDFADelegate
 
-- (NSString \*)advertisingIdentifierString {
-  return [[[ASIdentifierManagersharedManager]AdvertisingIdentifier]UUIDString];
+- (NSString *)advertisingIdentifierString {
+  return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 }
 
 - (BOOL)isAdvertisingTrackingEnabledOrATTAuthorized {
-  if (@available(iOS 14, \*)) {
+  if (@available(iOS 14, *)) {
     return [ATTrackingManager trackingAuthorizationStatus] == ATTrackingManagerAuthorizationStatusAuthorized;
   }
-  return [[ASIdentifierManagersharedManager] isAdvertisingTrackingEnabled];
+  return [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
 }
 
 @end
-\`\`\`
+```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
-\`\`\`swift
-import Appboy\_iOS\_SDK
+```swift
+import Appboy_iOS_SDK
 import AdSupport
 import AppTrackingTransparency
 
-class IDFADelegate:NSObject, ABKIDFADelegate {
+class IDFADelegate: NSObject, ABKIDFADelegate {
    func advertisingIdentifierString() -> String {
     return ASIdentifierManager.shared().advertisingIdentifier.uuidString
   }
 
   func isAdvertisingTrackingEnabledOrATTAuthorized() -> Bool {
-if #available(iOS 14, *) {
-return ATTrackingManager.trackingAuthorizationStatus ==  ATTrackingManager.AuthorizationStatus.authorized
-}
-    return ASIdentifierManager.shared().isAdvertisingTrackingEnabled
-      }
+    if #available(iOS 14, *) {
+      return ATTrackingManager.trackingAuthorizationStatus ==  ATTrackingManager.AuthorizationStatus.authorized
     }
-    \`\`\`
-  {% endtab %}
+    return ASIdentifierManager.shared().isAdvertisingTrackingEnabled
+  }
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ##### ステップ2:Braze の初期化中にデリゲートを設定する

@@ -87,7 +87,6 @@ The following table lists possible returned errors and their associated troubles
 | Error                | Troubleshooting                                          |
 | -------------------- | -------------------------------------------------------- |
 | `catalog-not-found`  | Check that the catalog name is valid.                    |
-| `catalog-in-process` | Catalog is currently processing. Please try again later. |
 | `invalid-selection`  | Check that the selection name is valid.                  |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -1,21 +1,13 @@
 <a class="skip-main" href="#content_start">Skip to content</a>
 
-{% comment %} End Securitiai {% endcomment %}
+{% comment %} End OneTrust {% endcomment %}
+<!-- OneTrust Cookies Consent Notice start for braze.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a4189af1-fcc1-4ec1-9f51-e3bc768c6650"></script>
 <script type="text/javascript">
-(function () {
-	var s = document.createElement('script');
-	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
-	s.setAttribute('data-tenant-uuid', '696dac19-dc81-444e-9540-c5e4d95b761f');
-	s.setAttribute('data-domain-uuid', '919e1189-1359-4a37-bf88-4267da5dbe71');
-	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
-  s.setAttribute('crossorigin', 'anonymous');
-	s.defer = true;
-	var parent_node = document.head || document.body;
-	parent_node.appendChild(s);
-	s.addEventListener('load', function() { window.initCmp(); });
-})()
+function OptanonWrapper() { }
 </script>
-{% comment %} End Securitiai {% endcomment %}
+<!-- OneTrust Cookies Consent Notice end for braze.com -->
+{% comment %} End OneTrust {% endcomment %}
 
 <header id="header_nav" >
 
@@ -26,7 +18,6 @@
             <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
 
       </div>
-   
     <div class="navbarCollapse d-none d-md-block" id="header_navbar" >
       <ul class="navbar-nav" id="header_menu">
         {%- assign collect = site.collections | sort: site.page_order -%}
@@ -69,7 +60,7 @@
 							<select class="lang-select" id="lang_select">
 								<option value="en">EN</option>
 								<option value="fr">FR</option>
-								<option value="ja">JP</option>
+								<option value="ja">JA</option>
 							</select>
 							</div>
 						</li>
@@ -94,7 +85,7 @@
         <select class="lang-select" id="lang_select_responsive">
           <option value="en">EN</option>
 					<option value="fr">FR</option>
-          <option value="ja">JP</option>
+          <option value="ja">JA</option>
         </select>
       </div>
       <ul class="navbar-nav " id="dropdown_menu">
@@ -140,7 +131,7 @@
        {% include header_search.html %}
     <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
     </div>
-     
+
       {% unless hide_nav %}
        {%- if active_title != "Home" -%}
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="Toggle navigation" id="header_toggle">

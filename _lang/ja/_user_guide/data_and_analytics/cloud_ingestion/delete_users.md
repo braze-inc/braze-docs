@@ -13,9 +13,9 @@ description: "このリファレンス記事では、クラウドデータ取り
 
 ## 連携の設定 
 
-標準のプロセスに従って、接続するデータウェアハウスの Braze ダッシュボードで[新規の連携を作成]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)します。削除テーブルにアクセスできるロールが含まれていることを確認します。[**インポート同期の作成**] ページで、[**データのタイプ**] を [**ユーザーを削除**] に設定します。これにより、連携の実行中にユーザーを削除する適切なアクションが確実に実行されます。
+標準のプロセスに従って、接続するデータウェアハウスの Braze ダッシュボードで[新規の連携を作成]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)します。削除テーブルにアクセスできるロールが含まれていることを確認します。\[**インポート同期の作成**] ページで、\[**データのタイプ**] を \[**ユーザーを削除**] に設定します。これにより、連携の実行中にユーザーを削除する適切なアクションが確実に実行されます。
 
-![\]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
+![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
 ## ソースデータの設定 
 
@@ -28,7 +28,7 @@ description: "このリファレンス記事では、クラウドデータ取り
 ### ユーザー識別子列
 
 テーブルには、ユーザー識別子列が 1 列以上含まれている場合があります。各行は、識別子 (`external_id` 単独か、`alias_name` と `alias_label` または `braze_id` の組み合わせ) を 1 つのみ含まなければなりません。ソーステーブルには、1 つ、2 つ、または 3 つすべての識別子タイプの列が含まれる場合があります。
-- `EXTERNAL_ID` - 更新対象のユーザーを特定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。
+- `EXTERNAL_ID` - 更新対象のユーザーを特定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。 
 - `ALIAS_NAME` および `ALIAS_LABEL` \- この 2 列はユーザーエイリアスオブジェクトを作成します。`alias_name` は一意の識別子である必要があり、`alias_label` はエイリアスのタイプを指定します。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を 1 つしか持つことができません。
 - `BRAZE_ID` - Braze のユーザー識別子。これは Braze SDK によって生成されます。クラウドデータ取り込み経由で Braze ID を使用して新規ユーザーを作成することはできません。新規ユーザーを作成するには、外部ユーザー ID またはユーザーエイリアスを指定します。 
 
@@ -51,7 +51,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 );
 ```
 {% endtab %}
-{% tab Redshift %}
+{% tab レッドシフト %}
 ```json
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
@@ -71,11 +71,11 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 
 | フィールド名 | タイプ | モード |
 |---|---|---|
-| `UPDATED_AT` | タイムスタンプ | 必須 |
-| `EXTERNAL_ID` | 文字列 | 省略 (NULL) 可 |
-| `ALIAS_NAME` | 文字列 | 省略 (NULL) 可 |
-| `ALIAS_LABEL` | 文字列 | 省略 (NULL) 可 |
-| `BRAZE_ID` | 文字列 | 省略 (NULL) 可 |
+| `UPDATED_AT`| タイムスタンプ | 必須 |
+| `EXTERNAL_ID`| 文字列 | NULLABLE |
+| `ALIAS_NAME`| 文字列 | NULLABLE |
+| `ALIAS_LABEL`| 文字列 | NULLABLE |
+| `BRAZE_ID`| 文字列 | NULLABLE |
 {% endtab %}
 
 {% tab Databricks %}
@@ -83,11 +83,11 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 
 | フィールド名 | タイプ | モード |
 |---|---|---|
-| `UPDATED_AT` | タイムスタンプ | 必須 |
-| `EXTERNAL_ID` | 文字列 | 省略 (NULL) 可 |
-| `ALIAS_NAME` | 文字列 | 省略 (NULL) 可 |
-| `ALIAS_LABEL` | 文字列 | 省略 (NULL) 可 |
-| `BRAZE_ID` | 文字列 | 省略 (NULL) 可 |
+| `UPDATED_AT`| タイムスタンプ | 必須 |
+| `EXTERNAL_ID`| 文字列 | NULLABLE |
+| `ALIAS_NAME`| 文字列 | NULLABLE |
+| `ALIAS_LABEL`| 文字列 | NULLABLE |
+| `BRAZE_ID`| 文字列 | NULLABLE |
 {% endtab %}
 {% endtabs %}
 

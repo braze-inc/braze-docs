@@ -9,14 +9,14 @@ description: "このページでは、tvOS アプリケーションでニュー�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # ニュースフィード統合
 
 > この記事では、tvOS プラットフォーム用のニュースフィードを設定する方法について説明します。
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## tvOS フィードの統合
@@ -31,7 +31,7 @@ NSArray *feedCards =  [[Appboy sharedInstance].feedController getNewsFeedCards];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let feedCards = Appboy.sharedInstance()?.feedController.newsFeedCards

@@ -11,7 +11,7 @@ description: "This article covers how to set up and track basic analytics in the
 
 > This article covers how to set up and track basic analytics in your Flutter app.
 
-Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
+Before you start, read our [Analytics Overview]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/) article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Session tracking
 
@@ -161,5 +161,3 @@ The following keys are reserved and cannot be used as purchase properties:
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

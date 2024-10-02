@@ -13,7 +13,7 @@ channel:
 
 > [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-Check out our [case studies][31] to see examples of in-app messages.
+Check out our [case studies](https://www.braze.com/customers) to see examples of in-app messages.
 
 ## In-app message types
 
@@ -89,7 +89,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
+For further details about Intelligent Selection and control groups, refer to [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 {% endtab %}
 {% endtabs %}
@@ -100,5 +100,3 @@ The standard SDK integration includes steps that activate in-app messages, inclu
 {% endalert %}
 
 
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

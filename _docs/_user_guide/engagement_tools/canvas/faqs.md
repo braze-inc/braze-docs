@@ -32,7 +32,8 @@ When you stop a Canvas, the following applies:
 - No further messages will be sent out, despite where a user is in the flow.
 - **Exception:** Canvases with emails will not immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
-#### In-app messages in Canvas 
+#### In-app messages in Canvas
+
 In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they will still receive the in-app message upon their next session start, as long as the in-app message hasn't expired yet.
 
 {% alert note %}
@@ -110,6 +111,10 @@ It's common for a Canvas variant's conversion total to be greater than the sum o
 
 By default, filters and segments for full steps in the Canvas are checked at send time. For Canvas Flow, the Decision Split component performs an evaluation right after receiving a previous step (or before a delay).
 
+{% alert tip %}
+For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
+
 ## Canvas Flow
 
 ### What is Canvas Flow?
@@ -162,7 +167,7 @@ Let's say on April 12 we have a Delay component where the delay is set to send y
 
 #### Intelligent Timing behavior
 
-Since [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
 Let's say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
 - **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.

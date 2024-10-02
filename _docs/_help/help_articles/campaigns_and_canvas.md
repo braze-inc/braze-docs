@@ -37,3 +37,7 @@ guide_menu_list:
 
     
 ---
+
+{% alert tip %}
+For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}

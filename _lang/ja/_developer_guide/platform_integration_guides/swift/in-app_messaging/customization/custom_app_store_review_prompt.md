@@ -17,10 +17,10 @@ channel:
 
 > アプリ内メッセージの一般的な用途として、ユーザーに App Store でのレビューを依頼するキャンペーンの作成があります。この例では、ユーザーにアプリのレビューを促すカスタムアプリ内メッセージの作成方法を説明します。
 
-## ステップ1: アプリ内メッセージデリゲートの設定
+## ステップ1:アプリ内メッセージデリゲートの設定
 まず、アプリで [`BrazeInAppMessageUIDelegate`][1] を設定します。 
 
-## ステップ2: デフォルトの App Store レビューメッセージを無効にする
+## ステップ2:デフォルトの App Store レビューメッセージを無効にする
 次に、`inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)を実装して、デフォルトの App Store レビューメッセージを無効にします。
 
 {% tabs %}
@@ -56,7 +56,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 {% endtab %}
 {% endtabs %}
 
-## ステップ3: ディープリンクの作成
+## ステップ3:ディープリンクの作成
 ディープリンク処理コードで、次のコードを追加して `{YOUR-APP-SCHEME}:app-store-review` ディープリンクを処理します。`SKStoreReviewController` を使用するには `StoreKit` をインポートする必要があることに注意してください。
 
 {% tabs %}

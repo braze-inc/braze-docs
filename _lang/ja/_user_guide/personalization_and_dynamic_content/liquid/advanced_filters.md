@@ -1,40 +1,40 @@
 ---
-nav_title: 詳細フィルタ
-article_title: 高度な液体フィルター
+nav_title: 高度なフィルター
+article_title: 高度なLiquidフィルター
 page_order: 4
-description: "このリファレンス記事には、高度なフィルタ、例、およびキャンペーンでの使用方法が記載されています。"
+description: "このリファレンス記事には、高度なフィルター、例、およびキャンペーンでの使用方法が一覧表示されています。"
 
 ---
 
-# 詳細フィルタ
+# 高度なフィルター
 
-## フィルタのエンコード
+## エンコーディングフィルター
 
 {% raw %}
-| filter name | filter description | example input | example 出力 |
-|---|---|---|---|
-`md5` | md5 エンコードされた文字列を返します| `{{'hey' | md5}}` | 6057f13c496ecf7fd777ceb9e79ae285 |
-`sha1` | sha1 エンコードされた文字列| `{{'hey' | sha1}}` | 7f550a9f4c44173a37664d938f1355f0f92a47a7 |
-`sha2` | sha2 (256 ビット、SHA-256 とも呼ばれます) エンコードされた文字列| `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba897b57e40fcb7d1a7a28b26cba62591204 |
-`base64` | base64 エンコードされた文字列を返します| `{{'blah' | base64_encode}}` | YmxhaA== |
-`hmac_sha1_hex` (以前の`hmac_sha1`) | hmac-sha1 シグネチャを返します。16 進文字列としてエンコードされます| `{{'hey' | hmac_sha1_hex: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e |
-`hmac_sha1_base64` | base64 文字列としてエンコードされたhmac-sha1 シグネチャを返します| `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= |
-`hmac_sha256_hex` | 16 進文字列としてエンコードされたhmac-sha256 シグネチャを返します| `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fb4000b8c924841d508e |
-`hmac_sha256_base64` | base64 文字列としてエンコードされたhmac-sha256 シグネチャを返します| `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxNDAALjJIQdUI4= |
+| フィルター name | フィルター description | example input | example output |
+\|---|---|---|---|
+`md5` | md5エンコードされた文字列を返します | `{{'hey' | md5}}` | 6057f13c496ecf7fd777ceb9e79ae285 |
+`sha1` | sha1エンコードされた文字列を返します | `{{'hey' | sha1}}` | 7f550a9f4c44173a37664d938f1355f0f92a47a7 |
+`sha2` | sha2（256ビット、SHA-256とも呼ばれる）エンコードされた文字列を返します | `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba8a8977b57e40fcb77d1a7a28b26cba62591204 |
+`base64` | base64エンコードされた文字列を返します | `{{'blah' | base64_encode}}` | YmxhaA== |
+`hmac_sha1_hex`（以前は`hmac_sha1`）| hmac-sha1署名を返し、16進文字列としてエンコード | `{{'hey' | hmac_sha1_hex: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e |
+`hmac_sha1_base64` | hmac-sha1署名を返し、base64文字列としてエンコードされます | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= |
+`hmac_sha256_hex` | hmac-sha256署名を返し、16進文字列としてエンコードされます | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e |
+`hmac_sha256_base64` | hmac-sha256署名を返し、base64文字列としてエンコードされます | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## URLフィルタ
+## URLフィルター
 
-| filter name | filter description | example input | example 出力 |
+| フィルター名 | フィルター 説明 | 例の入力 | 例の出力 |
 |---|---|---|---|
-| `url_escape` | URLS で許可されていない文字列内のすべての文字を識別し、その文字をエスケープされたバリアント| `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | URL で許可されていない文字列のすべての文字を、アンパサンド(&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
-| `url_encode` | URLフレンドリな文字列をエンコードする| `{{ 'google search' | url_encode }}` | google+search |
+| `url_escape` | URLで許可されていない文字列内のすべての文字を識別し、エスケープされたバリアントに置き換えます | `{{'hey<>hi' | url_escape}}` | こんにちは |
+| `url_param_escape` | URLで許可されていない文字をすべてエスケープされたバリアントに置き換えます。アンパサンド（&）を含みます。 | `{{'hey<&>hi' | url_param_escape}` | こんにちは |
+| `url_encode` | URL フレンドリーな文字列をエンコードします | `{{ 'google search' | url_encode }}` | グーグル+検索 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}
 {% alert tip %}
-`assign` タグをHTML と組み合わせると、複数のハイパーリンクを作成する際の時間と労力を節約できます。
+`assign`タグは、複数のハイパーリンクを作成する際に時間と労力を節約するためにHTMLと組み合わせることができます。
 {% raw %}
 ```
 {% assign url = "https://www.examplelink.com" %}
@@ -44,46 +44,46 @@ description: "このリファレンス記事には、高度なフィルタ、例
 {% endalert %}
 {% raw %}
 
-## プロパティアクセサフィルタ
+## プロパティ アクセサ フィルター
 
-| フィルタ名| フィルタの説明|
+| フィルター名 | フィルター 説明 |
 |---|---|---|---|
-| `property_accessor` | ハッシュキーとハッシュキーを取り、そのキーのハッシュの値を返します|
+| `property_accessor` | ハッシュとハッシュキーを受け取り、そのキーでそのハッシュの値を返します |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**ハッシュの例:**`{"a" => 42, "b" => 0}`
-**入力例:**`{{hash | property_accessor: 'a'}}`
-**出力例:** `42`
+**例のハッシュ:**`{"a" => 42, "b" => 0}`
+**例の入力:**`{{hash | property_accessor: 'a'}}`
+**例の出力:** `42`
 
-さらに、プロパティアクセサフィルタを使用すると、カスタム属性をハッシュキーにテンプレート化して特定のハッシュ値にアクセスできます。
+さらに、プロパティアクセサフィルターを使用すると、カスタム属性をテンプレート化してハッシュキーに変換し、特定のハッシュ値にアクセスできます。
 
 {% endraw %}
 
 {% alert note %}
-Braze 内のLiquid では、ハッシュを変数(式など) としてインスタンス化する方法はありません。
+Liquid内のBrazeでは、ハッシュを変数（式など）としてインスタンス化する方法はありません。
 {% endalert %}
 
 {% raw %}
 
-## 数値書式フィルタ
+## 数値フォーマットフィルター
 
-| filter name | filter description | example input | example 出力 |
+| フィルター名 | フィルター 説明 | 例の入力 | 例の出力 |
 |---|---|---|---|
-| `number_with_delimiter` | カンマで数値をフォーマット| `{{ 123456 | number_with_delimiter }}` | 123,456 |
+| `number_with_delimiter` | コンマで数字をフォーマットします | `{{ 123456 | number_with_delimiter }}` | 123,456 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## JSON エスケープ/文字列エスケープフィルタ
+## JSONエスケープ / 文字列エスケープフィルター
 
-| フィルタ名| フィルタの説明|
+| フィルター名 | フィルター 説明 |
 |---|---|---|---|
-| `json_escape` | 文字列の特殊文字をエスケープします(二重引用符`""` やバックスラッシュ'\\' など)。|
+| `json_escape` | 文字列内の特殊文字（ダブルクォート`""`やバックスラッシュ''など）をエスケープします。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-このフィルタは、JSON ディクショナリの文字列をパーソナライズする場合に常に使用する必要があり、特にWebhook に役立ちます。
+このフィルターは、JSON辞書で文字列をパーソナライズする際に常に使用する必要があり、特にwebhookに便利です。
 {% endraw %}
 
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:#accounting-for-null-attribute-values
+[37]:\#ヌル属性値の会計

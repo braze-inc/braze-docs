@@ -9,7 +9,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # カスタムビューコントローラにアプリ内メッセージを表示する
 
@@ -41,7 +41,7 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 
 ## メソッド宣言
 
-追加情報については、以下のヘッダーファイルを参照してください。
+詳細については、次のヘッダー ファイルを参照してください。
 
 - [`ABKInAppMessage.h`][14]
 

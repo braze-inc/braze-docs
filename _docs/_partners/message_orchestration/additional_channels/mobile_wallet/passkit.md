@@ -280,7 +280,7 @@ In addition to creating and updating passes, you can also retrieve your users' p
 **Liquid example responses**
 
 {% tabs local %}
-{% tab {{passes.redemptionDetails}} %}
+{% tab passes.redemptionDetails %}
 
 ```json
 {
@@ -297,7 +297,7 @@ In addition to creating and updating passes, you can also retrieve your users' p
 ```
 
 {% endtab %}
-{% tab {{passes.status}} %}
+{% tab passes.status %}
 ```
 UNREDEEMED 
 ```

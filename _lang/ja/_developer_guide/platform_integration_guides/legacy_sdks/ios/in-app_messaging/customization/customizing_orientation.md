@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 向きのカスタマイズ
 
@@ -51,24 +51,24 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
-//アプリ内メッセージの向きを縦向きに設定
+```objc
+// Set inAppMessage orientation to portrait
 inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
 
-//アプリ内メッセージの向きを横向きに設定
+// Set inAppMessage orientation to landscape
 inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
-\`\`\`
+```
 
 {% endtab %}
 {% tab swift %}
 
-\`\`\`swift    
-  //アプリ内メッセージの向きを縦向きに設定
+```swift    
+  // Set inAppMessage orientation to portrait
   inAppMessage.orientation = ABKInAppMessageOrientation.portrait
 
-  //アプリ内メッセージの向きを横向きに設定
+  // Set inAppMessage orientation to landscape
   inAppMessage.orientation = ABKInAppMessageOrientation.landscape
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}

@@ -8,7 +8,7 @@ description: "この参照記事では、iOS 用 Carthage を使用して Braze 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Carthage 統合
 
@@ -43,7 +43,7 @@ github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 
 `<BRAZE_IOS_SDK_VERSION>` は「x.y.z」形式の[適切なバージョン][4]の Braze iOS SDK に置き換えてください。
 
-## 次のステップ
+## 次のステップ:
 
 指示に従って[統合を完了][5]します。
 

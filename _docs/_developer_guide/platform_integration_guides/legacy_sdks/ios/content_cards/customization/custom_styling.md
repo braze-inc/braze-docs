@@ -9,7 +9,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Custom Styling
 
@@ -79,4 +79,3 @@ To prevent the Content Card UI from adopting dark theme styling when the user de
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches

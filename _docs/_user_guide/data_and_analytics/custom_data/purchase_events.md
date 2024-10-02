@@ -115,7 +115,7 @@ You can view this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
 
 Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
 
-$$\text{Lifetime revenue} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$
+$$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$  
 
 There are two main places in Braze you can reference to understand your users' LTV:
 

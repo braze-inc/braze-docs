@@ -283,7 +283,7 @@ module Jekyll
                   end
 
                   cur_url = @baseurl + curinfo.url
-                  if curinfo['redirect_to']
+                  if curinfo['redirect_to'] && level == 0
                     cur_url = curinfo['redirect_to'].gsub!(/^\/docs\//, "#{@baseurl}\/")
                   end
 

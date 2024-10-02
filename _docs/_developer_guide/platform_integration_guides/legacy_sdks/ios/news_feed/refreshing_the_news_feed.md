@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Refreshing the News Feed
 
@@ -37,7 +37,6 @@ Appboy.sharedInstance()?.requestFeedRefresh()
 {% endtab %}
 {% endtabs %}
 
-For more information, see the `Appboy.h` [header file][15].
+For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File").
 
 
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File"

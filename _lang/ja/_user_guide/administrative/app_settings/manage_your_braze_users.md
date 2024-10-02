@@ -11,16 +11,13 @@ description: "このランディングページには、ユーザーの追加と
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Adding Users
+- name: Braze ユーザーの管理
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/
-  fa_icon: fas fa-user-plus
-- name: Deleting Users
-  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard//
-  fa_icon: fas fa-user-times
-- name: Setting User Permissions
+  image: /assets/img/braze_icons/user-plus-01.svg
+- name: ユーザー権限の設定
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-  fa_icon: fas fa-user-shield
-- name: Teams
+  image: /assets/img/braze_icons/user-square.svg
+- name: チーム
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 ---

@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # バッジ
 
@@ -23,8 +23,8 @@ noindex: true
 
 [`ABKContentCardsController`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html) の次のメソッド宣言はこれについて詳しく説明したものです。
 
-\`\`\`objc
-\- (NSInteger)unviewedContentCardCount;
+```objc
+- (NSInteger)unviewedContentCardCount;
 /*
 This method returns the number of currently active Content Cards that have not been viewed.
 A "view" happens when a card becomes visible in the Content Cards view. This differentiates between cards that are off-screen in the scrolling view and those which are on-screen; when a card scrolls onto the screen, it's counted as viewed.
@@ -33,10 +33,10 @@ Cards are counted only once, even if they appear in multiple Content Cards views
 */
 
 - (NSInteger)contentCardCount;
-/*
+/* 
 This method returns the total number of currently active Content Cards. Cards are counted only once even if they appear in multiple Content Cards views.
-*/
-\`\`\`
+ */
+```
 
 ## アプリのバッジカウントに未閲覧コンテンツカードの数を表示する
 
@@ -58,7 +58,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)

@@ -115,8 +115,8 @@ Braze.requestPushPermission(permissionOptions);
 
 You can additionally subscribe to events where Braze has detected and handled an incoming push notification. Use the listener key `Braze.Events.PUSH_NOTIFICATION_EVENT`.
 
-{% alert note %}
-Braze push notification events are available on both Android and iOS. Due to platform differences, iOS will only detect Braze push events when a user has interacted with a notification.
+{% alert important %}
+iOS push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
 {% endalert %}
 
 ```javascript
@@ -128,15 +128,11 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 #### Push notification event fields
 
-{% alert note %}
-Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS after a user has interacted with a push.
-{% endalert %}
-
 For a full list of push notification fields, refer to the table below:
 
 | Field Name         | Type      | Description |
 | ------------------ | --------- | ----------- |
-| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze React Native SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
+| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze React Native SDK are `push_opened` and `push_received`. |
 | `url`              | String    | Specifies the URL that was opened by the notification. |
 | `use_webview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
 | `title`            | String    | Represents the title of the notification. |
@@ -231,7 +227,7 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should receive the notification on your device shortly.
 
-![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
+![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
 
 ## Forwarding Android push to additional FMS
 
@@ -254,7 +250,9 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
 }
 ```
 
-## Enabling rich push notifications for iOS
+## Configuring app extensions with Expo
+
+### Enabling rich push notifications for iOS
 
 {% alert tip %}
 Rich push notifications are available for Android by default.
@@ -278,13 +276,15 @@ To enable rich push notifications on iOS using Expo, configure the `enableBrazeI
 }
 ```
 
-## Enabling push stories for iOS
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).
+
+### Enabling Push Stories for iOS
 
 {% alert tip %}
 Push stories are available for Android by default.
 {% endalert %}
 
-To enable push stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group][4].
+To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
 
 Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
 
@@ -305,7 +305,15 @@ Next, configure the `enableBrazeIosPushStories` property to `true` and assign yo
 }
 ```
 
-[1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
-[2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/
-[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoPushStories`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).
+
+{% alert warning %}
+If you are using Push Stories with Expo Application Services, be sure to use the `EXPO_NO_CAPABILITY_SYNC=1` flag when running `eas build`. There is a known issue in the command line which removes the App Groups capability from your extension's provisioning profile.
+{% endalert %}
+
+### Using app extensions with Expo Application Services {#app-extensions}
+
+If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
+
+One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
+

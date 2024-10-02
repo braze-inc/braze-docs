@@ -120,15 +120,14 @@ hide_breadcrumb: false
     </div>
 
   </div>
-
-    {%- unless hide_bottom_nav -%}
-    <div id="bottom_nav" >
-      {%- unless hide_feedback -%}
-      {% include feedback.html  %}
-      {%- endunless -%}
-    </div>
-
-    {%- endunless -%}
-
-    {% include footer.html class="footer_help" %}
 </div>
+{%- unless hide_bottom_nav -%}
+<div id="bottom_nav" >
+  {%- unless hide_feedback -%}
+  {% include feedback.html  %}
+  {%- endunless -%}
+</div>
+
+{%- endunless -%}
+
+{% include footer.html class="footer_help" %}

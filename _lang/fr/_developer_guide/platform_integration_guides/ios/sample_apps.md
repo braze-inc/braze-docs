@@ -7,7 +7,7 @@ description: "Cet article couvre les exemples d’applications iOS."
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Exemples d’applications
 

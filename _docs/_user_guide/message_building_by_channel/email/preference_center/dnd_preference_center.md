@@ -61,7 +61,7 @@ You can set certain styles to be applied across all relevant blocks in your pref
 To return to the common styles, select the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
 {% endalert %}
 
-## Drag and drop preference center components
+## Drag-and-drop preference center components
 
 The drag-and-drop editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
 
@@ -109,6 +109,8 @@ You will see a preview of both the preference center and the confirmation page. 
 When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. After you confirm the name, the preference center will be launched and ready for use.
 
 ## Using the preference center
+
+{% multi_lang_include preference_center_warning.md %}
 
 To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 

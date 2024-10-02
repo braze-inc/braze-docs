@@ -60,6 +60,10 @@ To use your Tinyclues segment, create a Braze campaign or Canvas and select the 
 
 ![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Tinyclues cohort".][5]{: style="max-width:90%;"}
 
+## User Matching
+
+Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. Identified users who were originally created as anonymous users can't be identified by their `device_id`, and must be identified by their `external_id` or `alias`.
+
 ## Troubleshooting
 
 Are you having trouble finding the right cohort within the list? In Tinyclues, view your campaign details and verify the name by checking the **Export File Name**.

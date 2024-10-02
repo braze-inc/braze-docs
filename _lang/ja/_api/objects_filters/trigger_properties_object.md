@@ -3,19 +3,19 @@ nav_title: "トリガー・プロパティ・オブジェクト"
 article_title: APIトリガープロパティオブジェクト
 page_order: 11
 page_type: reference
-description: "この参照記事では、トリガ・プロパティ・オブジェクトの様々な構成要素について説明します。"
+description: "このリファレンス記事では、トリガープロパティオブジェクトのさまざまなコンポーネントについて説明します。"
 tool: Campaigns
 
 ---
 
 # トリガー・プロパティ・オブジェクト
 
-> APIトリガー配信でキャンペーンを送信するためにエンドポイントの1つを使用する場合、メッセージをカスタマイズするためにキーと値のマップを提供することができます。
+> APIトリガー配信でキャンペーンを送信するためにエンドポイントの1つを使用する場合、メッセージをカスタマイズするためにキーと値のマップを提供することができる。
 
-`trigger_properties` のオブジェクトを含む API 要求を行うと、そのオブジェクトの値を、`api_trigger_properties` ネームスペースの下にあるメッセージ・テンプレートで参照できます。例えば、以下のようなリクエストは、{% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %} を追加することで、`"shoes"` という単語をメッセージに追加することができる。
+`trigger_properties` のオブジェクトを含む API リクエストを行った場合、そのオブジェクトの値は、`api_trigger_properties` 名前空間の下のメッセージテンプレートで参照できます。例えば、以下を使ったリクエストの場合、{% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %} を追加することで、メッセージに `"shoes"` という単語を追加できます。
 
 {% alert note %}
-`trigger_properties` オブジェクトと{% raw %}`api_trigger_properties.${product_name}`{% endraw %} 構文はキャンペーンでのみサポートされています。CanvasのAPIトリガーリクエストからのキーと値でメッセージをカスタマイズするには、[Canvasエントリー・プロパティ・オブジェクトを]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)使用します。`trigger_properties` オブジェクトの最大サイズ制限は50KB。
+`trigger_properties` オブジェクトと{% raw %}`api_trigger_properties.${product_name}`{% endraw %} 構文はキャンペーンでのみサポートされる。キャンバスの API トリガーリクエストからのキーと値でメッセージをカスタマイズするには、[キャンバスエントリープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)を使用します。`trigger_properties` オブジェクトの最大サイズ制限は50KBである。
 {% endalert %}
 
 ## オブジェクト本体

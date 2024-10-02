@@ -22,7 +22,7 @@ noindex: true
 This is the description of the endpoint. API descriptions usually start with "Use this endpoint to..."-->
 Use this endpoint to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
-<!-- Your postman link. Once you have published the endpoint to postman, you will be able get a direct link to the information in the postman docs to share here-->
+<!-- Your postman link. After you have published the endpoint to postman, you will be able get a direct link to the information in the postman docs to share here-->
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
 ## Rate limit

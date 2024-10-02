@@ -2,25 +2,25 @@
 nav_title: ブレイズ・アクション ディープリンク
 article_title: ブレイズ・アクション ディープリンク
 page_order: 100
-description: "このリファレンス記事では、Brazeアクションディープリンクを使用して、メッセージングチャネルのボタン内でSDKアクションを実行する方法について説明します。"
+description: "このリファレンス記事では、Brazeアクションディープリンクを使用して、メッセージングチャネルボタン内でSDKアクションを実行する方法について説明する。"
 hidden: true
 ---
 
 # ブレイズ・アクション ディープリンク
 
-> Braze Actionsを使用すると、「ディープリンク」を使ってネイティブSDKの機能を実行できます。<br><br>Brazeダッシュボードには、アプリ内メッセージやコンテンツカードで使用できるいくつかの標準的なクリックアクション（Request Push Permission、Log Custom Event、Log Custom Attribute）が含まれています。<br><br>その他のすべてのアクション、または複数のアクションを組み合わせる場合は、このガイドを使用して独自のBraze Actionディープリンクを構築してください。
+> Braze Actionsを使えば、「ディープリンク」を使ってネイティブSDKの機能を実行できる。<br><br>Braze ダッシュボードには、いくつかの標準的なクリック時アクション (プッシュ通知の権限を要求、カスタムイベントをログに記録、カスタム属性をログに記録) が含まれており、アプリ内メッセージやコンテンツカードで使用することができます。<br><br>その他のすべてのアクション、または複数のアクションを組み合わせる場合は、このガイドを使用して独自のBraze Actionディープリンクを構築する。
 
 ## SDKサポート
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-`brazeActions://` ディープリンクスキームは、アプリ内メッセージやコンテンツカード内にディープリンクやリダイレクトオプションがあれば、どこでも使用できます。
+`brazeActions://` ディープリンク・スキームは、アプリ内メッセージやコンテンツ・カード内にディープリンクやリダイレクト・オプションがあれば、どこでも使用できる。
 
-HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge)ディープリンクはHTMLメッセージタイプではサポートされていません。
+HTML アプリ内メッセージの場合、HTML メッセージタイプではディープリンクはサポートされていないため、代わりに [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) を使用してください。
 
 ## スキーマ
 
-`container` アクションタイプ内に複数のアクション`steps` を含めることができます。`container` のないシングルステップも有効である。
+複数のアクションの `steps` を `container` アクションタイプに含めることができます。`container` を含まない単一のステップも有効です。
 
 ```json
 {
@@ -29,7 +29,7 @@ HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]
 }
 ```
 
-個々の`step` は、アクション`type` とオプションの`args` 配列を含む：
+個々の `step` には、アクションの `type` とオプションの `args` 配列が含まれています。
 
 ```json
 {
@@ -38,56 +38,56 @@ HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]
 }
 ```
 
-## ユーアールアイ 
+## URI 
 
 Braze ActionsのURIスキームは`brazeActions://v1/{base64encodedJsonString}` 。
 
 次のJavaScriptは、JSON文字列のエンコードとデコードの方法を示している：
 
-\`\`\`javascript
+```javascript
 function decode(encoded) {
-    const binary = window.atob(encoded.replace()/-/g, '+').replace(/_/g, '/'));
+    const binary = window.atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
     let bits8 = new Uint8Array(binary.length);
     for (let i = 0; i < binary.length; i++) {
       bits8[i] = binary.charCodeAt(i);
-    ()
+    }
     const bits16 = new Uint16Array(bits8.buffer);
     return String.fromCharCode(...bits16);
-()
+}
 
 /**
-* Returns a url-safe base64 encoded string of the input.
-* Unicode inputs are accepted.
-* Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
-*/
- function encode(input) {
- // Split the original 16-bit char code into two 8-bit char codes then
-// reconstitute a new string (of double length) using those 8-bit codes
- // into a UTF-8 string.
-const codeUnits = new Uint16Array(input.length);
-for (let i = 0; i < codeUnits.length; i++) {
-codeUnits[i] = input.charCodeAt(i);
+ * Returns a url-safe base64 encoded string of the input.
+ * Unicode inputs are accepted.
+ * Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
+ */
+function encode(input) {
+    // Split the original 16-bit char code into two 8-bit char codes then 
+    // reconstitute a new string (of double length) using those 8-bit codes
+    // into a UTF-8 string.
+    const codeUnits = new Uint16Array(input.length);
+    for (let i = 0; i < codeUnits.length; i++) {
+        codeUnits[i] = input.charCodeAt(i);
+    }
+    const charCodes = new Uint8Array(codeUnits.buffer);
+    let utf8String = "";
+    for (let i = 0; i < charCodes.byteLength; i++) {
+        utf8String += String.fromCharCode(charCodes[i]);
+    }
+    return btoa(utf8String).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 }
-const charCodes = new Uint8Array(codeUnits.buffer);
-let utf8String = "";
-for (let i = 0; i < charCodes.byteLength; i++) {
-utf8String += String.fromCharCode(charCodes[i]);
-}
-return btoa(utf8String).replace(/+/g, "-").replace(/\//g, "_").replace(/=/g, "");
- }
-\`\`\`
+```
 
 ## 対応アクション
 
-|タイプ|引数
+|タイプ|引数|
 |--|--|
-|`container`|実行する他のアクションの配列|。
-|`logCustomEvent`|1. `event name`<br>2\.`event properties JSON object` (オプション)|。
+|`container`|実行する他のアクションの配列|
+|`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (オプション)|
 |`setEmailNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
 |`setPushNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
-|`setCustomUserAttribute`|1. `attribute_name`<br>[2-2]: `attribute_value`
-|`requestPushPermission`| N/A |
-|`openLink`|1. `url`<br>2. `openInNewTab` (boolean)|
+|`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|
+|`requestPushPermission`| 該当なし |
+|`openLink`|1. `url`<br>2\.`openInNewTab` (boolean)|
 |`openLinkInWebview`| `url`|
 |`addToSubscriptionGroup`| `subscriptionGroupId`|
 |`removeFromSubscriptionGroup`| `subscriptionGroupId`|
@@ -96,7 +96,7 @@ return btoa(utf8String).replace(/+/g, "-").replace(/\//g, "_").replace(/=/g, "")
 
 ## JSONエンコーダー
 
-JSON文字列を入力すると、結果の`brazeActions://` URIが表示されます。または、`brazeActions://` URIを入力してJSONをデコードする。
+JSON文字列を入力すると、結果の`brazeActions://` URIが表示される。または、`brazeActions://` URIを入力してJSONをデコードする。
 
 <div><h4>JSON入力</h4></div>
 <textarea id="braze-actions-input" rows="12"></textarea>

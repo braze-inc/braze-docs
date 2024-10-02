@@ -132,7 +132,7 @@ To add key-value pairs to your message, switch to the **Settings** tab and click
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the following sections for further details on how to best utilize our tools to build Content Cards.
+Build the remainder of your campaign; see the following sections for further details on how to best use our tools to build Content Cards.
 
 #### Choose delivery schedule or trigger
 
@@ -209,14 +209,18 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ### Updating launched cards
 
-Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider the following approaches.
+Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [Campaign Re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) as shown in the following options.
+
+{% alert note %}
+Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility&#8212;however, all other Content Card types use whichever send time or impression time is latest.
+{% endalert %}
 
 #### Option 1: Duplicating the campaign
 
 One approach is to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would received the updated cards.
 
-* If users should never be re-eligible for a Content Card, filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
-* If users who received the prior card would be re-eligible in X days, then set the filter for `Last Received Message from specific campaign` to more than X days ago **OR** `Received Message from Campaign` with the `Has Not` condition.
+* If users should never be re-eligible for a Content Card, you can filter for users who have not received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
+* If users who received the prior card should be re-eligible in X days, you can set the filter for `Last Received Message from specific campaign` to more than X days ago **OR** `Received Message from Campaign` with the `Has Not` condition.
 
 **Example:** A campaign is triggered off of session start with re-eligibility set to 30 days. A user received the campaign two days ago and you want to change the copy. First archive the campaign and remove the cards from feed. Then duplicate the campaign and re-launch with the new copy. If the user has a session again, they will receive the new card immediately.
 

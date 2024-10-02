@@ -24,11 +24,11 @@ glossaries:
   - name: UCS-2 Encoding (Universal Coded Character Set)
     description: UCS-2 encoding is a fallback encoding standard, especially when a message cannot be encoded using GSM-7 or when a language needs more than 128 characters to be rendered. USC-2 is better measured by <a href='https://en.wikipedia.org/wiki/Code_point'>code points</a>, as opposed to "characters". Regardless, you could estimate that the character limit per segment for this type of encoding is 67 characters.
   - name: Subscription Groups for SMS
-    description: Subscription Groups are a Braze tool that allows you to target specific subscription levels of users or customers. Subscription Groups for SMS are constructed internally based on your message service and cannot be shared across workspaces.
+    description: Subscription groups are a Braze tool that allows you to target specific subscription levels of users or customers. subscription groups for SMS are constructed internally based on your message service and cannot be shared across workspaces.
   - name: Message Segments
     description: A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
   - name: Message Service
-    description: A collection of long codes, short codes, and alpha-numeric IDs used to send your SMS message with Braze.
+    description: A collection of long codes, short codes, and alphanumeric IDs used to send your SMS message with Braze.
   - name: Keyword
     description: "A short word that is sent to a short or long code to interact with a pre-defined SMS program or to request to OPT-OUT of a specific program or all programs on a code. For example, <code>STOP</code>. Keywords should <br> - be alphanumeric <br> - have no spaces <br> - be less than 10 characters. <br> <br> A specific keyword and short code combination may only be used on one active program at a time. If a keyword is entered that is already in use by another program, a validation error will appear. <br> <br> There are two mandatory keyword categories that all SMS content providers must comply with: <code>STOP</code> and <code>HELP</code>."
   - name: Mandatory Keyword HELP

@@ -1,7 +1,7 @@
 ---
 nav_title: Changelog
 article_title: Changelog for Xamarin SDK
-page_order: 30
+page_order: 7
 page_type: update
 platform:
   - Xamarin

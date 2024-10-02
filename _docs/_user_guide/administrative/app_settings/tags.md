@@ -36,6 +36,14 @@ To filter by a tag, select the tag name from the list of tags or search for the 
 You can add up to 175 tags to a campaign, Canvas, or segment.
 {% endalert %}
 
+## Custom data tags
+
+Tags may also be added to custom data when managing [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) and [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#managing-custom-events). 
+
+{% alert important %}
+This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
 ## Best practices {#tags-best-practices}
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.

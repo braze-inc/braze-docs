@@ -15,6 +15,29 @@ function generateUUID() { // Public Domain/MIT
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
+
+function unEncodeURIComponent(str) {
+  let decodedStr = decodeURIComponent(str);
+  decodedStr = decodedStr.replace(/%21|%27|%28|%29|%2A/g, function(match) {
+    switch (match) {
+      case '%21':
+        return '!';
+      case '%27':
+        return "'";
+      case '%28':
+        return '(';
+      case '%29':
+        return ')';
+      case '%2A':
+        return '*';
+      default:
+        return match;
+    }
+  });
+
+  return decodedStr;
+}
+
 function string_to_slug(str) {
   if (str) {
     str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
@@ -219,7 +242,7 @@ $(document).ready(function() {
         // Prevent default anchor click behavior
         event.preventDefault();
         // Store hash
-        var hash = this.hash;
+        var hash = unEncodeURIComponent(this.hash);
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
@@ -484,21 +507,44 @@ $(document).ready(function() {
   };
 
   var external_ignore = ['braze.statuspage.io','www.braze.com']
-  var links = $('#main_content a').filter(function() {
-     var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
-     if ($(this).hasClass('extignore')) {
-       tofilter = false;
-     }
-     else if ($(this).has('img').length > 0) {
-       if ($(this).has('img')[0].childNodes.length > 0) {
-         tofilter = false;
-       }
-     }
-     else if ($(this).has('div').length >0 ) {
-        tofilter = false;
-     }
-     return tofilter
-  }).after(' <i class="fas fa-external-link-alt"></i>')
+  $('#main_content a').filter(function() {
+    var is_external = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+    if ($(this).hasClass('extignore')) {
+      is_external = false;
+    }
+    else if ($(this).has('img').length > 0) {
+      if ($(this).has('img')[0].childNodes.length > 0) {
+       is_external = false;
+      }
+    }
+    else if ($(this).has('div').length >0 ) {
+      is_external = false;
+    }
+
+    var punctuations = ['.','!','?'];
+    var has_punchtuation = false;
+    var punctuation = null;
+    if ($(this)[0]) {
+      if ($(this)[0].nextSibling){
+        punctuation = ($(this)[0].nextSibling.nodeValue || '').substr(0,1);
+        if (punctuations.includes(punctuation)) {
+          $(this)[0].nextSibling.nodeValue = ($(this)[0].nextSibling.nodeValue || '').substring(1);
+          has_punchtuation = true;
+        }
+      }
+    }
+
+    if (is_external || has_punchtuation){
+      $(this).wrap('<span class="inline-link">');
+    }
+
+    if (has_punchtuation){
+      $(this).after(punctuation);
+    }
+    if (is_external){
+      $(this).after(' <i class="fas fa-external-link-alt"></i>');
+    }
+  });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
     $this = $(this);
     if ($this.html().length > 120) {

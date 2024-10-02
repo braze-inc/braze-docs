@@ -8,7 +8,7 @@ page_type: reference
 
 # Initial SDK setup for web
 
-> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation][9] for a complete technical reference.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs") for a complete technical reference.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -173,7 +173,7 @@ You can keep up-to-date with our latest release [following our release feed](htt
 - Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, or in your package manager's dependencies.
 - If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file.
 
-These two files must be updated in coordination with each other to ensure proper functionality.
+These two files must be updated in coordination with each other for proper functionality.
 
 ## Alternative integration methods
 
@@ -270,4 +270,3 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
 }
 ```
 
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"

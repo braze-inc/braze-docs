@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # アプリ内メッセージ配信
 
@@ -32,7 +32,7 @@ noindex: true
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、高品質のユーザー エクスペリエンスを確保するために、アプリ内メッセージのレートが30秒に1回に制限されています。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが30秒に1回に制限されています。
 
 この値は、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内の `ABKMinimumTriggerTimeIntervalKey` を使用してオーバーライドできます。`ABKMinimumTriggerTimeIntervalKey` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
@@ -48,7 +48,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
@@ -115,7 +115,7 @@ Braze が特定のイベントに一致するトリガーを検出できない�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
@@ -140,7 +140,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
   let customInAppMessage = ABKInAppMessageSlideup.init()

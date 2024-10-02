@@ -101,6 +101,10 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after it is launched.
 
+### I updated my scheduled campaign. Why didn't it launch?
+
+This can happen when a campaign is scheduled to launch at the exact time that it was updated. For example, if it's currently 3:10pm and you changed the campaign to launch at 3:10pm and selected **Update campaign**, it's now past 3:10pm, meaning the scheduled time for launch has passed. Instead of scheduling the campaign for the same time, select **Send as soon as campaign launch**.
+
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
 You can safely make changes to messages within the following safe zones:
@@ -126,6 +130,10 @@ Make sure to re-adjust campaign schedule times to allow for time zone sending.
 ### Why does the number of users entering a campaign not match the expected number?
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.
+
+{% alert tip %}
+For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
 
 ### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 

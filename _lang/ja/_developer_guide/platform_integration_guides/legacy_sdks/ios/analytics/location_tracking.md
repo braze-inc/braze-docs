@@ -10,7 +10,7 @@ Tool:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS の位置情報の追跡
 
@@ -37,7 +37,7 @@ Braze iOS SDK `v3.17.0` 以降、位置情報の追跡はデフォルトで無�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -56,24 +56,24 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
+```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
                                                      longitude:longitude
                                             horizontalAccuracy:horizontalAccuracy];
 
-\`\`\`
+```
 
-\`\`\`objc
+```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
                                                      longitude:longitude
                                             horizontalAccuracy:horizontalAccuracy
                                                       altitude:altitude
                                               verticalAccuracy:verticalAccuracy];
 
-\`\`\`
+```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)

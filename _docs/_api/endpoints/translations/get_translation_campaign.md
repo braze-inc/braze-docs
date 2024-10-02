@@ -38,6 +38,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 |`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
 
 ## Example request
 

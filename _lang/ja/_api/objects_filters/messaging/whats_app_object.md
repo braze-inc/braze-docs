@@ -1,18 +1,18 @@
 ---
 nav_title: "WhatsAppオブジェクト"
-article_title: WhatsApp メッセージングオブジェクト
+article_title: WhatsAppメッセージングオブジェクト
 page_order: 15
 page_type: reference
 channel: WhatsApp
-description: "このリファレンス記事では、Braze WhatsAppオブジェクトのさまざまなコンポーネントについて説明します。"
+description: "この参考記事では、Braze WhatsApp オブジェクトのさまざまなコンポーネントについて説明します。"
 
 ---
 
-# WhatsApp オブジェクト
+# WhatsAppオブジェクト
 
-> この `whats_app` オブジェクトを使用すると、 [メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)を介してWhatsAppメッセージを変更または作成できます。
+> `whats_app` オブジェクトを使用すると、[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)経由でWhatsAppメッセージを変更または作成できる。
 
-## WhatsApp オブジェクト
+## WhatsAppオブジェクト
 
 ```json
 {
@@ -28,7 +28,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 
 ### メッセージの種類
 
-#### template\_message
+#### template_message
 
 ```json
 {
@@ -43,17 +43,17 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 
 ##### ヘッダー変数オブジェクト
 
-この `header_variables` オブジェクトを使用すると、WhatsApp テンプレートのヘッダー変数の値を指定できます。各キーは、指定された値に置き換えるWhatsAppテンプレート変数インデックス(ゼロインデックス)です。
+`header_variables` オブジェクトを使用すると、WhatsApp テンプレートのヘッダー変数の値を指定することができる。各キーは、指定された値で置換するWhatsAppテンプレート変数のインデックス（ゼロインデックス）である。
 
 ```json
 {
   "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0"
 }
 ```
-現在、指定できるヘッダー変数は 0 個または 1 個のみです。
+現在、指定できるヘッダー変数は0個か1個だけである。
 
 
-###### 例:
+###### 例
 
 ```json
 {
@@ -61,9 +61,9 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-##### 本文変数オブジェクト
+##### ボディ変数オブジェクト
 
-この `body_variables` オブジェクトを使用すると、WhatsApp テンプレートの本文変数の値を指定できます。各キーは、指定された値に置き換えるWhatsAppテンプレート変数インデックス(ゼロインデックス)です。
+`body_variables` オブジェクトを使用すると、WhatsApp テンプレートのボディ変数の値を指定することができる。各キーは、指定された値で置換するWhatsAppテンプレート変数のインデックス（ゼロインデックス）である。
 ```json
 {
   "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0",
@@ -71,7 +71,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-###### 例:
+###### 例
 
 ```json
 {
@@ -82,7 +82,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 
 ##### ボタン変数オブジェクト
 
-この `button_variables` オブジェクトを使用すると、WhatsApp テンプレートのボタン変数の値を指定できます。各キーは、指定された値に置き換えるWhatsAppテンプレート変数インデックス(ゼロインデックス)です。
+`button_variables` オブジェクトを使用すると、WhatsApp テンプレートのボタン変数の値を指定することができる。各キーは、指定された値で置換するWhatsAppテンプレート変数のインデックス（ゼロインデックス）である。
 
 ```json
 {
@@ -90,9 +90,9 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-現在、指定できるボタン変数は 1 つで、これは行動喚起 URL のパス コンポーネントです。変数インデックスは、テンプレートのCTA URLボタンインデックスと一致する必要があります。たとえば、CTAボタンがテンプレートの2番目のボタンである場合は、変数インデックス「1」を使用します。
+現在、指定できるボタン変数は 1 つだけで、CTA URL のパスコンポーネントです。変数のインデックスは、テンプレート内のCTA URLボタンのインデックスと一致しなければならない。例えば、CTAボタンがテンプレートの2番目のボタンであれば、変数インデックス「1」を使う。
 
-###### 例:
+###### 例
 
 ```json
 {
@@ -100,7 +100,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-#### text\_response\_message
+#### text_response_message
 
 ```json
 {
@@ -109,7 +109,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-###### 例:
+###### 例
 
 ```json
 {
@@ -118,7 +118,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-#### text\_image\_response\_message
+#### text_image_response_message
 
 ```json
 {
@@ -127,7 +127,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-###### 例:
+###### 例
 
 ```json
 {
@@ -136,7 +136,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-#### quick\_reply\_response\_message
+#### quick_reply_response_message
 
 ```json
 {
@@ -148,7 +148,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-##### Button オブジェクト
+##### ボタン・オブジェクト
 
 ```json
 {
@@ -156,7 +156,7 @@ description: "このリファレンス記事では、Braze WhatsAppオブジェ�
 }
 ```
 
-###### 例:
+###### 例
 
 ```json
 {

@@ -29,7 +29,7 @@ Pypestream is a full-stack, conversational AI platform offering patented, all-in
 
 ## Dyspatch partnership
 
-With Dyspatch, use the intuitive drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of steps! For more information, check out our [Dyspatch]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/) documentation.
+With Dyspatch, use the intuitive drag-and-drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of steps! For more information, check out our [Dyspatch]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/) documentation.
 
 ## RudderStack partnership
 

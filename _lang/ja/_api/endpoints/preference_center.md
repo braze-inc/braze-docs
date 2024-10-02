@@ -1,30 +1,30 @@
 ---
-nav_title: ユーザー設定センター
-article_title: プリファレンスセンターエンドポイント
+nav_title: 環境設定センター
+article_title: ユーザー設定センターのエンドポイント
 search_tag: Endpoint
 page_order: 4
 layout: dev_guide
 
-description: "このランディングページには、Braze プリファレンスセンターのエンドポイントが一覧表示されます。"
+description: "このランディングページには、Braze ユーザー設定センターのエンドポイントが一覧表示されます。"
 page_type: landing
 
-guide_top_header: "プリファレンスセンターエンドポイント"
-guide_top_text: "このセクションのエンドポイントを使用してプリファレンスセンターを構築します。プリファレンスセンターは、ユーザーのサブスクリプション状態とサブスクリプショングループのステータスを表示できる BrazeがホストするWebサイトです。開発者チームは HTML と CSS を使用して、ページのスタイルがブランドガイドラインと一致するようにプリファレンスセンターを構築できます。</a><br><br><a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>プリファレンスセンターを作成してカスタマイズする方法の詳細については、プリファレンスセンターの概要をご覧ください。"
+guide_top_header: "ユーザー設定センターのエンドポイント"
+guide_top_text: "このセクションのエンドポイントを使用してユーザー設定センターを構築します。これは、ユーザーのサブスクリプションの状態とサブスクリプショングループの状態を確認できる Braze ホスト型 Web サイトです。開発者チームは HTML と CSS を使用して、ページのスタイルがブランドのガイドラインと一致するようにユーザー設定センターを作成できます。<br><br>ユーザー設定センターの作成およびカスタマイズ方法について詳しくは、<a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>ユーザー設定センターの概要</a>を参照してください。"
 
 guide_featured_list:
-  - name: "GET: Create Preference Center URL"
+  - name: "取得:環境設定センターのURLを作成する"
     link: /docs/api/endpoints/preference_center/get_create_url_preference_center/
-    fa_icon: fas fa-wrench
-  - name: "GET: List Preference Centers"
+    image: /assets/img/braze_icons/tool-01.svg
+  - name: "取得:ユーザー設定センターのリスト"
     link: /docs/api/endpoints/preference_center/get_list_preference_center/
-    fa_icon: fas fa-user
-  - name: "GET: View Preference Center Details"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "取得:ユーザー設定センターの詳細の表示"
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
-    fa_icon: fas fa-envelope-open
-  - name: "POST: Create Preference Center"
+    image: /assets/img/braze_icons/mail-04.svg
+  - name: "POST:ユーザー設定センターの作成"
     link: /docs/api/endpoints/preference_center/post_create_preference_center/
-    fa_icon: fas fa-check
-  - name: "PUT: Update Preference Center"
+    image: /assets/img/braze_icons/check-square-broken.svg
+  - name: "PUT:ユーザー設定センターの更新"
     link: /docs/api/endpoints/preference_center/put_update_preference_center/
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
 ---

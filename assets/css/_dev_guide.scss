@@ -86,7 +86,7 @@ $guide_transition_time : 0.25s;
         vertical-align: middle;
         color: $text-color;
 
-        line-height: 1.8;
+        line-height: 1.25;
         display: inline-block;
       }
 
@@ -95,7 +95,7 @@ $guide_transition_time : 0.25s;
     a {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       margin-bottom: 2%;
 
       flex: 0 0 100%;

@@ -8,9 +8,6 @@ description: "This landing page lists Braze partners (Alloys) who allow you to i
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Dynamic Content"
 
 valid_partner_list:
@@ -50,4 +47,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
 ---

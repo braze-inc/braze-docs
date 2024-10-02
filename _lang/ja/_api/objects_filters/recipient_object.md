@@ -3,17 +3,17 @@ nav_title: "受信者オブジェクト"
 article_title: API受信者オブジェクト
 page_order: 9
 page_type: reference
-description: "この参照記事では、ろう付けレシピエントオブジェクトのさまざまなコンポーネントについて説明します。"
+description: "この参考記事では、Braze 受信者オブジェクトのさまざまなコンポーネントについて説明します。"
 
 ---
 
-# Recipientsオブジェクト
+# 受信者オブジェクト
 
-> 受信者オブジェクトを使用すると、エンドポイントで情報をリクエストまたは書き込みできます。
+> 受信者オブジェクトは、エンドポイントに情報を要求したり書き込んだりすることができる。
 
-このオブジェクトには、`external_user_id` または`user_alias` のいずれかが必要です。**リクエストは1つだけ指定する必要があります。**
+このオブジェクトには `external_user_id` または `user_alias` のいずれかが必要です。**リクエストでは 1 つだけ指定する必要があります。**
 
-recipients オブジェクトを使用すると、[user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、および[Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) を組み合わせることができ。
+受信者オブジェクトは、[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[トリガープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、[キャンバスエントリプロパティオブジェクトを]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)組み合わせることができます。
 
 ## オブジェクト本体
 
@@ -29,11 +29,11 @@ recipients オブジェクトを使用すると、[user alias object]({{site.bas
 - [ユーザーのエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [外部ユーザ ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 
-## 受信者オブジェクトのデデューピング
+## 受信者オブジェクトのデデュープ
 
-受信者オブジェクトを使用してAPI コールを行う場合、同じアドレス(つまり、email、push) をターゲットとする重複した受信者が存在する場合、ユーザはデデュープ されます。つまり、同一のユーザが削除され、残りのユーザが削除されます。 
+受信者オブジェクトを使用して API 呼び出しを行うときに、**同じアドレス (つまり、メール、プッシュ) を対象とする重複した受信者が存在する場合**、ユーザーは重複排除され、同一のユーザーが削除されて 1 人のユーザーが残ります。 
 
-たとえば、同じ`external_user_id` が使用される場合、1 つのメッセージのみが受信されます。この動作の回避策が必要な場合は、複数のAPI コールを実行することを検討してください。
+たとえば、同じ `external_user_id` が使用される場合、受信されるメッセージは 1 つだけです。この動作を回避する必要がある場合は、複数のAPIコールを行うことを検討すること。
 
 ```json
 {"campaign_id":"#####","recipients":[

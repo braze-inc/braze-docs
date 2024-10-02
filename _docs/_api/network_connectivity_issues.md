@@ -26,7 +26,7 @@ For more information about MTR, check out these resources based on your operatin
 
 ## Allowlisting Braze API endpoints IP ranges
 
-To allowlist Braze API endpoints through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. For a list of Braze API IP ranges, refer to both [Fastly's public IP list][3] and [Cloudflare's public IP list][6]. Note that these IPs may change.
+To allowlist Braze API endpoints through your firewall, our CDN provides access to the list of assigned IP ranges through a JSON dump. For a list of Braze API IP ranges, refer to both [Fastly's public IP list][3] and [Cloudflare's public IP list][6]. Note that these IPs may change.
 
 [1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
 [2]: http://www.fastly-debug.com/

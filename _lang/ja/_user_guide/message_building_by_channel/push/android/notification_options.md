@@ -1,9 +1,9 @@
 ---
 nav_title: "通知オプション"
-article_title: Android 通知オプション
+article_title: Androidの通知オプション
 page_order: 2
 page_type: reference
-description: "このリファレンス記事では、いくつかのAndroid通知オプションと、それらをブレーズキャンペーン内で最適に使用する方法について説明します。"
+description: "この参考記事では、いくつかのAndroid通知オプションと、Brazeのキャンペーンでそれらを最適に使用する方法について説明する。"
 
 platform: Android
 channel:
@@ -13,17 +13,17 @@ channel:
 
 # 通知オプション
 
-> メッセージを分類し、ユーザーの通知トレイにグループ化する場合は、Braze を使用してAndroid の通知チャネル機能を利用できます。
+> メッセージを分類してユーザーの通知トレイにグループ分けしたい場合は、Brazeを通じてAndroidの通知チャンネル機能を利用できる。
 
-Android プッシュキャンペーンを作成し、**Notification Channel** ドロップダウンの**Compose** タブの最上部を探します。
+Androidプッシュ・キャンペーンを作成し、**\[メール送信]**タブの一番上にある\[**通知チャンネル**]ドロップダウンを探す。
 
 ![][28]{: style="max-width:60%;" }
 
-ドロップダウンから通知チャネルを選択します。また、通知チャネル設定が誤動作した場合は、フォールバックチャネルを選択する必要があります。
+ドロップダウンから通知チャンネルを選択する。また、通知チャンネル設定が誤動作した場合の予備チャンネルを選択する必要がある。
 
-ここにリストされている[Notification Channels]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) がない場合は、Notification Channel ID を使用して追加できます。開発者に問い合わせて、通知チャネルID が何であるかを確認するか、必要に応じて新しいID を作成します。 
+ここに[通知チャンネルが]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/)ない場合は、通知チャンネルIDを使って追加できる。開発者に連絡し、通知チャネルIDを確認するか、必要に応じて新しいIDを作成する。 
 
-Notification ID をNotification Channel に追加するには、**Notification Channel** ドロップダウンメニューで**Manage Notification Channel** をクリックし、必要なフィールドに入力します。Notification Channels は、Braze プラットフォームで使用する前にアプリで定義する必要があります。
+通知チャネルに通知IDを追加するには、**通知チャネルの**ドロップダウンメニューで**通知チャネルを管理を**クリックし、必要なフィールドに記入する。通知チャンネルは、Brazeプラットフォームで使用する前に、アプリ上で定義する必要がある。
 
 ![][29]{: style="max-width:80%;" }
 

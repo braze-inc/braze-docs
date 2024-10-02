@@ -1,52 +1,52 @@
 ---
 page_order: 0
 nav_title: ホーム
-article_title: ブレイズヘルプ
+article_title: Braze ヘルプ
 layout: self_help
 help_top_header: "Braze Help"
 
 page_type: landing
 user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate with and reach your users."
-description: "このランディングページには、「ベスト・セルフヘルプ」のセクションがある。ここでは、さまざまなヘルプ記事、ベストプラクティスやFAQ、リリースノート、メディアリソースなどをご覧いただけます。"
+description: "このランディングページには、「ベスト・セルフヘルプ」のセクションがある。ここでは、さまざまなヘルプ記事、ベストプラクティスやFAQ、リリースノート、メディアリソースなどを見つけることができる。"
 
 resources_list:
-  - name: Help Articles
+  - name: ヘルプ記事
     link: /docs/help/help_articles/overview/
-    fa_icon: fa-solid fa-circle-info
-  - name: Best Practices and FAQ
+    image: /assets/img/braze_icons/info-circle.svg
+  - name: ベストプラクティスとFAQ
     link: /docs/help/faqs/
-    fa_icon: fa-brands fa-readme
-  - name: Release Notes
+    image: /assets/img/braze_icons/book-open-01.svg
+  - name: リリースノート
     link: /docs/help/release_notes/most_recent/
-    fa_icon: fa-solid fa-note-sticky
-  - name: Braze Learning Login
+    image: /assets/img/braze_icons/sticker-square.svg
+  - name: ログイン
     link: https://learning.braze.com/
-    fa_icon: fa-solid fa-chalkboard-user
-  - name: Media Resources
+    image: /assets/img/braze_icons/user-square.svg
+  - name: メディア・リソース
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    fa_icon: fa-brands fa-youtube
-  - name: Braze Support
+    image: /assets/img/braze_icons/youtube.svg
+  - name: ブレイズ・サポート
     link: /docs/braze_support/
-    fa_icon: fa-solid fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
-  - name: Know Before You Send
+  - name: 送る前に知っておこう
     link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
-  - name: Migrating Push Token
+  - name: プッシュトークンの移行
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: Logging Custom Event Properties
+  - name: カスタムイベント・プロパティを記録する
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-  - name: Dispatch ID
+  - name: 派遣ID
     link: /docs/help/help_articles/data/dispatch_id/
-  - name: Email Bounces
+  - name: メールバウンス
     link: /docs/help/help_articles/email/email_bounces/
-  - name: Deleting Users via API
+  - name: API経由でユーザーを削除する
     link: /docs/help/help_articles/api/delete_user/
-  - name: Changing Custom Data Type
+  - name: カスタムデータ型を変更する
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: In-App Messages Not Displaying
+  - name: アプリ内メッセージが表示されない
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
-  - name: Using Event Logging
+  - name: イベントログを使う
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
 

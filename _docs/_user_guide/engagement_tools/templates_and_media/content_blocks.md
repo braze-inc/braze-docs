@@ -43,14 +43,14 @@ There are two types of editors used to create a Content Block—classic and drag
 | Content Block Attribute | Specifications |
 |---|---|
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
-| Description | (optional) Maximum of 250 characters. Provide a description of the Content Block so that other Braze users will know what it's for and where it's used. |
+| Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
 | Content Size | Maximum of 50kB (kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
@@ -66,6 +66,10 @@ After creating your Content Block, you can insert it in your messages by followi
 
 1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
+
+{% alert note %}
+Canvas entry properties and event properties are only supported in a Canvas, not in the Content Block.
+{% endalert %}
 
 ### Updating and copying Content Blocks
 

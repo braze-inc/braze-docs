@@ -21,14 +21,12 @@
     a {
       text-decoration: none;
       color: #6e6e70;
-      border-bottom-width: 0;
-      border-color: inherit;
       &:hover {
         text-decoration: none;
+        border-bottom-width: 2px;
+        border-bottom-color: $braze-purple;
+        border-bottom-style: solid;
       }
-      border-bottom-width: 2px;
-      border-color: $braze-link-color;
-      text-decoration: none;
     }
     li {
       display: inline;

@@ -1,38 +1,38 @@
 ---
-nav_title: "ポスト:ユーザーを追跡"
-article_title: "ポスト:ユーザーを追跡"
+nav_title: "POST:ユーザーを追跡する"
+article_title: "POST:ユーザーを追跡する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、Track user Brazeエンドポイントの詳細について説明します。"
+description: "この記事では、「ユーザーを追跡」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
 # ユーザーを追跡
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|{1} %}
 /users/track
 {% endapimethod %}
 
-> このエンドポイントを使用して、カスタムイベント、購入の記録、ユーザープロファイル属性の更新を行います。
+> このエンドポイントを使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を更新します。
 
 {% alert note %}
-BrazeはAPI経由で渡されたデータを額面通りに処理し、お客様は不要なデータポイントの消費を最小限に抑えるため、デルタ（変化するデータ）のみを渡す必要があります。詳しくは[データ]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)ポイントを参照。
+Braze は API 経由で渡されたデータを額面通りに処理し、顧客は不要なデータポイントの消費を最小限に抑えるためにデルタ (変更されたデータ) のみを渡す必要があります。続きを読むには、[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)を参照してください。
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.track` パーミッションを持つ[API キーが]({{site.baseurl}}/api/api_key/)必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.track`の権限が必要です。
 
-サーバー間通話にAPIを使用している顧客がファイアウォールの内側にいる場合、`rest.iad-01.braze.com` 。
+サーバー間の呼び出しに API を使用する顧客がファイアウォールの内側にいる場合には、`rest.iad-01.braze.com` を許可リストに登録する必要が生じることがあります。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
-## リクエスト本文
+## Request body
 
 ```
 Content-Type: application/json
@@ -41,30 +41,30 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "attributes" : (optional, array of attributes object),
-  "events" : (optional, array of event object),
-  "purchases" : (optional, array of purchase object),
+  "attributes": (optional, array of attributes object),
+  "events": (optional, array of event object),
+  "purchases": (optional, array of purchase object),
 }
 ```
 
-### リクエストパラメータ
+### リクエストパラメーター
 
 {% alert important %}
-以下の表に列挙されている各リクエストコンポーネントに対して、`external_id` 、`user_alias` 、`braze_id` 、`email` のいずれかが必要である。
+次のテーブルに記載されている各リクエストコンポーネントには、`external_id`、`user_alias`、`braze_id`、`email`、または `phone` のいずれかが必要です。
 {% endalert %}
 
-| パラメータ｜必須｜データ型｜説明
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`attributes` ｜任意｜属性オブジェクトの配列｜[ユーザー属性オブジェクトを]({{site.baseurl}}/api/objects_filters/user_attributes_object/)参照。
-|`events` ｜任意｜イベント・オブジェクトの配列｜[イベント・オブジェクトを]({{site.baseurl}}/api/objects_filters/event_object/)参照。
-|`purchases` ｜オプション｜購入オブジェクトの配列｜[購入オブジェクトを]({{site.baseurl}}/api/objects_filters/purchase_object/)参照
+| `attributes` | オプション | 属性オブジェクトの配列 | [ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)を参照してください |
+| `events` | オプション | イベントオブジェクトの配列 | [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)を参照してください |
+| `purchases` | オプション | 購入オブジェクトの配列 | [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)を参照してください |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 
-### メールアドレスによるユーザープロファイルの更新リクエスト例
+### メールアドレスでユーザープロファイルを更新
 
-`/users/track` エンドポイントを使用すると、電子メール・アドレスによってユーザー・プロファイルを更新できます。 
+`/users/track` エンドポイントを使用して、メールアドレスでユーザープロファイルを更新できます。 
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -135,12 +135,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### 電話番号によるユーザープロファイルの更新リクエスト例
+### 電話番号でユーザープロファイルを更新する
 
-`/users/track` エンドポイントを使用して、電話番号別にユーザープロファイルを更新できます。このエンドポイントは、有効な電話番号が含まれている場合にのみ機能します。
+電話番号を使用して`/users/track`エンドポイントでユーザープロファイルを更新できます。このエンドポイントは、有効な電話番号を含めた場合にのみ機能します。
 
 {% alert important %}
-Eメールと電話の両方をリクエストに含める場合、BrazeはEメールを識別子として使用します。
+リクエストにメールと電話の両方を含めると、Brazeはメールを識別子として使用します。
 {% endalert %}
 
 ```
@@ -162,11 +162,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ],
 }'
 ```
-### 購読グループを設定するリクエスト例
+### サブスクリプショングループを設定する
 
-この例では、ユーザを作成し、ユーザ属性オブジェクト内でサブスクリプショングループを設定する方法を示します。 
+この例では、ユーザーを作成し、ユーザー属性オブジェクト内にサブスクリプショングループを設定する方法を示します。 
 
-このエンドポイントで購読ステータスを更新すると、`external_id` で指定されたユーザー（User1 など）が更新され、そのユーザー（User1）と同じ電子メールを持つすべてのユーザーの購読ステータスが更新されます。
+このエンドポイントを使用してサブスクリプションステータスを更新すると、`external_id` で指定されたユーザー (User1 など) が更新され、そのユーザー (User1) と同じメールアドレスを持つすべてのユーザーのサブスクリプションステータスも更新されます。
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -178,7 +178,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     "external_id": "user_identifier",
     "email": "example@email.com",
     "email_subscribe": "subscribed",
-    "subscription_groups" : [{
+    "subscription_groups": [{
       "subscription_group_id": "subscription_group_identifier_1",
       "subscription_state": "unsubscribed"
       },
@@ -196,9 +196,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### エイリアス専用ユーザーの作成リクエスト例
+### エイリアスのみのユーザーを作成するリクエスト例
 
-`/users/track` エンドポイントを使用して、リクエスト本文に`_update_existing_only` キーを`false` という値で設定することで、新しいエイリアスのみのユーザーを作成することができる。この値が省略された場合、エイリアスのみのユーザー・プロファイルは作成されません。エイリアスのみのユーザーを使用すると、そのエイリアスを持つプロファイルが1つ存在することが保証されます。これは、重複したユーザープロファイルの作成を防ぐため、新しい統合を構築する際に特に役立ちます。
+リクエストの本文に`_update_existing_only`キーを`false`の値で設定することにより、新しいエイリアス専用ユーザーを作成するために`/users/track`エンドポイントを使用できます。この値が省略された場合、エイリアスのみのユーザープロファイルは作成されません。エイリアスのみのユーザーを使用すると、そのエイリアスを持つ1つのプロファイルが存在することが保証されます。これは、新しい統合を構築する際に特に役立ちます。重複したユーザープロファイルの作成を防ぎます。
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -220,31 +220,31 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 
-## 回答
+## 応答
 
-前述のAPIリクエストのいずれかを使用すると、次の3つの一般的な応答のいずれかを受け取るはずです：[成功したメッセージ](#successful-message)、[致命的でないエラーを伴う成功したメッセージ](#successful-message-with-non-fatal-errors)、[致命的なエラーを伴うメッセージ](#message-with-fatal-errors)。
+これらのAPIリクエストのいずれかを使用する場合、次の3つの一般的な応答のいずれかを受け取るはずです: [成功メッセージ](#successful-message)、[非致命的なエラーを含む成功メッセージ](#successful-message-with-non-fatal-errors)、または[致命的なエラーを含むメッセージ](#message-with-fatal-errors)。
 
-### 成功メッセージ
+### 成功したメッセージ
 
-成功したメッセージには次のような返答がある：
+成功したメッセージには次の応答が返されます:
 
 ```json
 {
-  "message" : "success",
-  "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "message": "success",
+  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
+  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
 }
 ```
 
-### 致命的でないエラーを含む成功メッセージ
+### 非致命的なエラーがある成功メッセージ
 
-メッセージは成功したが、致命的でないエラー、例えば、長いイベント・リストの中に無効なイベント・オブジェクトが1つでもあった場合、以下のようなレスポンスが返ってくる：
+メッセージが成功しているが、長いイベントリストの中に1つの無効なイベントオブジェクトが含まれているなどの致命的でないエラーがある場合、次の応答が返されます:
 
 ```json
 {
-  "message" : "success",
-  "errors" : [
+  "message": "success",
+  "errors": [
     {
       <minor error message>
     }
@@ -252,16 +252,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }
 ```
 
-成功メッセージの場合、`errors` の配列でエラーの影響を受けなかったデータはそのまま処理される。 
+成功メッセージの場合、`errors` 配列内のエラーの影響を受けないデータは引き続き処理されます。 
 
-### 致命的なエラーを含むメッセージ
+### 致命的なエラーが発生したメッセージ
 
-メッセージに致命的なエラーがある場合、次のような応答が返されます：
+メッセージに致命的なエラーがある場合、次の応答が返されます:
 
 ```json
 {
-  "message" : <fatal error message>,
-  "errors" : [
+  "message": <fatal error message>,
+  "errors": [
     {
       <fatal error message>
     }
@@ -269,27 +269,29 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }
 ```
 
-### 致命的なエラー・レスポンス・コード
+### 致命的なエラー応答コード
 
-リクエストが致命的なエラーに遭遇した場合に返されるステータスコードと関連するエラーメッセージについては、[致命的なエラーと]({{site.baseurl}}/api/errors/#fatal-errors)応答を参照してください。
+ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
-provided external\_id is blacklisted and disallowed "というエラーが表示された場合、リクエストに "ダミー・ユーザー "が含まれている可能性があります。 詳細については、[スパムブロックを]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking)参照してください。 
+「provided external_id is blacklisted and disallowed」というエラーを受け取った場合、リクエストに「dummyユーザー」が含まれている可能性があります。詳細については、「[スパムのブロック]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking)」を参照してください。 
 
 ## よくある質問
 
-### 同じメールアドレスを持つ複数のプロフィールが見つかった場合はどうなりますか？
-`external_id` が存在する場合、外部 ID を持つ最近更新されたプロファイルが優先的に更新されます。`external_id` が存在しない場合は、最近更新されたプロフィールが優先的に更新されます。
+{% multi_lang_include email-via-sms-warning.md %}
 
-### メールアドレスを持つプロフィールが現在存在しない場合はどうなりますか？
-新しいプロフィールが作成され、Eメールのみのユーザーが作成されます。エイリアスは作成されない。メールアドレスによるユーザープロファイルの更新のリクエスト例にあるように、Eメールフィールドはtest@braze.com。
+### 同じメールアドレスを持つ複数のプロファイルが見つかった場合はどうなりますか？
+`external_id` が存在する場合、external ID を持つ最新の更新されたプロファイルが更新の優先順位となります。`external_id`が存在しない場合、最も最近更新されたプロファイルが更新の優先対象となります。
 
-### `/users/track` 、レガシーユーザーデータをどのようにインポートしますか？
-ユーザーは、ユーザープロファイルを生成するために、まだモバイルアプリを使用していないユーザーのデータをBraze APIを通じて送信することができます。ユーザーがその後アプリケーションを使用する場合、SDKを介した識別に続くすべての情報は、APIコールを介して作成された既存のユーザープロファイルにマージされます。識別前にSDKによって匿名で記録されたユーザーの行動は、既存のAPI生成ユーザープロファイルと統合された時点で失われます。
+### メールアドレスのプロファイルが存在しない場合はどうなりますか？
+新しいプロファイルが作成され、メール専用のユーザーが作成されます。エイリアスは作成されません。メールフィールドはtest@braze.comに設定されます。これは、メールアドレスによるユーザープロファイルの更新要求の例で示されています。
 
-セグメンテーションツールは、アプリに関与したかどうかに関係なく、これらのユーザーを含む。ユーザーAPI経由でアップロードされたユーザーのうち、まだアプリとエンゲージしていないユーザーを除外したい場合は、`Session Count > 0` というフィルターを追加するだけです。
+### どのようにして`/users/track`を使用してレガシーユーザーデータをインポートしますか？
+まだモバイルアプリを使用していないユーザーのユーザープロファイルを生成するために、Braze APIを通じてデータを送信することができます。ユーザーがその後アプリケーションを使用すると、SDKを介して識別された後のすべての情報が、APIコールを介して作成された既存のユーザープロファイルとマージされます。識別前に SDK によって匿名で記録されたユーザーの行動は、既存の API 生成ユーザープロファイルと統合された時点で失われます。
 
-### `/users/track` 、重複イベントはどのように処理されるのか？
+セグメンテーションツールは、ユーザーがアプリを使用したかどうかに関係なく、これらのユーザーを含めます。ユーザー API 経由でアップロードされたものの、アプリをまだ使用していないユーザーを除外する場合は、`Session Count > 0` フィルターを追加します。
 
-events配列の各eventオブジェクトは、指定された時間にユーザーによってカスタムイベントが1回発生したことを表す。つまり、Brazeに取り込まれる各イベントは、それぞれ独自のイベントIDを持つため、「重複する」イベントは、個別のユニークなイベントとして扱われます。
+### `/users/track`は重複イベントをどのように処理しますか？
+
+イベント配列内の各イベントオブジェクトは、指定された時間にユーザーによるカスタムイベントの単一の発生を表します。これは、Brazeに取り込まれる各イベントに独自のイベントIDがあることを意味し、「重複」イベントは別々のユニークなイベントとして扱われるということです。
 
 {% endapi %}

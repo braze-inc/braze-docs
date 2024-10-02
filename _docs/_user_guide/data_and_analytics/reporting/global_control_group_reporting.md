@@ -30,6 +30,10 @@ Keep in mind that the percentage metrics in your report are rounded. For instanc
 
 Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
 
+### Group sizes
+
+Before May 2024, the Global Control Group was excluded from user archival, but the treatment sample group was not. Starting May 2024, both groups are excluded from user archival. This could result in your treatment sample group and Global Control Group having significantly different sizes. The next time you reset your Global Control Group, this discrepancy will resolve and you'll see similar group sizes.
+
 ## Report metrics
 
 | Metric | Definition | Calculation |

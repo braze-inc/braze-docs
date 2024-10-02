@@ -84,6 +84,11 @@ To measure the impact of an individual WhatsApp message, you can add a [control 
 To measure the impact of an individual webhook message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% endif %}
+
+#### Changes Since Last Viewed
+
+The number of updates to the campaign from other members of your team is tracked by the *Changes Since Last Viewed* metric on the campaign overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the campaign's name, schedule, tags, message, audience, approval status, or team access configuration. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your campaign.
+
 <!--
 ### Message Performance
 
@@ -204,9 +209,9 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | Other Opens | The number of recipients that opened your email, including emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward _Other Opens_ and only once toward _Unique Opens_. |
 | Estimated Real Opens | An estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
 | Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
-| Bounces | The total number of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used, or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. |
-| Hard Bounces | A hard bounce is an email message that has been returned to the sender because the recipient's address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. |
-| Soft Bounces | A soft bounce is an email message that gets as far as the recipient's mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. You can also track hard and soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab). |
+| Bounces | The total number of messages that were unsuccessfully delivered to the intended recipients. This could occur because the email addresses were incorrect or deactivated. |
+| Hard Bounces | A hard bounce is when an email fails to deliver to the recipient due to a permanent delivery error. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email receives a hard bounce, we will stop any future requests to this email address. |
+| Soft Bounces | A soft bounce is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver. You can view your hard and soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ##### Estimated real open rate {#estimated-real-open-rate}
@@ -219,7 +224,7 @@ Typically around 10,000 delivered emails are required for the statistic to be co
 
 ###### Limitations
 
-Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for campaigns launched before November 14, 2023.
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -254,6 +259,8 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
 | Opens | Instances including both _Direct Opens_ and _Influenced Opens_ in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
 
 {% alert tip %}
 Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
@@ -297,6 +304,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device or the phone number is no longer in service. As a Braze customer, rejections are charged toward your SMS allotment. |
 | Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
 | Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
+| Total Clicks | The total number (and percentage) of users who clicked within the delivered message. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "webhook" %}
@@ -321,9 +329,12 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Term | Definition |
 | --- | --- |
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
-| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
-| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. |
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count. |
+| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. | 
+| Delivery rate | The percentage of users who had a delivery over users who had a send. Calculation: (Deliveries) / (Sends)|
+| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. | 
+| Read rate | The percentage of users who read the message over users who had a send. Calculation: (Reads) / (Sends)|
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but not in the _Deliveries_ count. | 
+| Failure rate | The percentage of users who had unsuccessful sends over users who had a successful send. Calculation: (Failures) / (Sends)|
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics
