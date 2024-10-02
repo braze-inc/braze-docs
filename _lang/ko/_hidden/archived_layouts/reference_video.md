@@ -40,7 +40,7 @@ noindex: true
 
 # 페이지 제목
 
-{% multi_lang_include video.html id="XY5uXoKIvFY" align="오른쪽" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 >  이 유형의 문서에는 개념을 설명하고 기술 프로세스 및 제품 콘텐츠(캔버스 단계, 세분화, 특정 유형의 개체 등)에 대한 구체적인 정보가 포함되어 있습니다. 다른 유형의 참조 템플릿은 용어집입니다. 이 형식은 설명이 필요한 특정 개념이 없는 한 API 용어집이나 참조 설명서에 사용되지 않습니다. 이 페이지에서 [이것](#what-is-x-concept), [저것](#topic-1-regarding-this-concept), 그리고 [다른](#topic-2-regarding-this-concept) 것을 배우게 될 것이라는 개요를 작성하세요. [참고 설명서의 좋은 샘플입니다](https://guide.meteor.com/code-style.html). 이것은 [매우 기술적인 참조 설명서](https://www.w3schools.com/html/html_intro.asp)의 좋은 예입니다.
 >
