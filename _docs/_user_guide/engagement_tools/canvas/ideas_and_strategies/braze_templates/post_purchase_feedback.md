@@ -29,7 +29,7 @@ Before you start, you'll need to complete the following:
 |Prerequisite|Description|
 |------------|-----------|
 |Custom attribute|You can create a custom attribute value in the Braze dashboard. For more information, see [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).|
-|Ad account|$PLACEHOLDER. For more information, see [$PLACEHOLDER](). |
+|Ad account|Audience Sync requires an ad account. For more information, see [Audience Sync]({{site.baseurl}}/partners/canvas_steps/overview/#use-cases). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Customizing the template
@@ -54,104 +54,120 @@ Enter a new name for your Canvas. Decorumsoft named theirs "Liquid Mirage: Post-
 
 ### Step 2: Write a follow-up feedback message
 
-<!-- Since IAM requires pre-set up, lets remove IAM references and only use email -->
+Next you'll create a follow-up feedback survey for users you recently purchased your product. Under **Follow-up Feedback**, select **Messages**. 
 
-Under **Follow-up Feedback**, select **Messages** > **In-App Message**. 
+![The 'Follow-up Feedback' section in the Canvas with the 'Messages' preview window displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/follow_up_feedback_message.png %})
 
-![ALT_TEXT]()
+Decorumsoft doesn't have In-App Messages set up yet, so they're going to remove it as an option from the feedback survey. If you already have In-App Messages configured in [the Braze SDK]($PLACEHOLDER_URL), feel free to leave this option and customize your message. Otherwise, hover your mouse over the **In-App Messages** tab and select **Remove Variant**.
 
-Fill out the **Compose** step. $PLACEHOLDER company wrote the following:
-<!-- not sure if 'step' is the right word here? -->
+![The 'In-App Messages' tab showing the option to remove the variant.]({% image_buster /assets/img/canvas_templates/remove_iam_for_feedback_survey.png %})
 
-|Field|Description|
-|-----|-----------|
-|Header|$PLACEHOLDER|
-|Body|$PLACEHOLDER|
-|Helper text|$PLACEHOLDER|
-|Choice 1|$PLACEHOLDER|
-|Choice 2|$PLACEHOLDER|
-|Submit button text|$PLACEHOLDER|
-|Submit on-click behavior|$PLACEHOLDER|
-{: .reset-td-br-1 .reset-td-br-2}
+In the **Email** tab, fill out the **Sending info**, then select **Edit message** to start crafting your feedback survey. Decorumsoft used [Braze AI]($PLACEHOLDER_URL) to help write their email. Here's what they wrote:
 
-Next, select **Email**. Fill out your sending info, then select **Edit message** to craft your email. $PLACEHOLDER company wrote the following:
+![$PLACEHOLDER: We'll need an image here of a semi-branded email for Decorumsoft.]()
 
-![ALT_TEXT]()
+When you're finished, select **Done** > **Save as draft**.
 
-When you're finished, select **Done**.
+### Step 3: Customize the action path
 
-### Step 3: Add custom attributes to the action path
+Next, you'll add the custom attribute [you created earlier](#prerequisites) to each sentiment Call to Action (CTA) link, so you can capture which option the user choose when they gave feedback.
 
-Next add the custom attribute [you created earlier](#prerequisites) to each sentiment CTA link, so you can capture which option the user choose when they gave feedback. To add custom attributes:
-
-1. Under **Feedback Action**, select **Good feedback**, then choose your custom attribute value.
+Under **Feedback Action**, select **Good feedback**.
    
-![ALT_TEXT]()
+![The 'Feedback Action' section in the Canvas with 'Good feedback' and 'Bad feedback' displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/feedback_action.png %})
 
-{:start="2"}
-2. Next, select **Bad feedback**, then choose your custom attribute value.
+Select the **Choose An Attribute** dropdown, choose the custom attribute [you created earlier](#prerequisites), then select **any new value**.
 
-![ALT_TEXT]()
+![The custom attribute set to 'Change Custom Attribute [$PLACEHOLDER] to [any new value]'.]()
 
-{:start="3"}
-3. When you're finished select **Done**, then **Save as draft**.
+Next, select **Bad feedback**. Select the **Choose An Attribute** dropdown, choose the custom attribute [you created earlier](#prerequisites), then select **any new value**.
 
-### Step 4: Create messages for each feedback path
-
-Under the **Feedback Action** step, create a message for **Good feedback**, **Bad feedback**, and **Everyone else** by selecting **Messages** and filling out a message. When you're finished select **Done**, then **Save as draft**.
-
-![ALT_TEXT]()
-
-### Step 5: Set up ad retargeting
-
-Before you can set up ad retargeting, you need to select a partner for Audience Sync. To choose a partner, under **Ad Retargeting**, select **Audience Sync**.
-
-![ALT_TEXT]()
-
-Choose one or more of the listed partners. If you have Audience Sync Pro, you can add any of our [Audience Sync technology partners]({{site.baseurl}}/partners/canvas_steps/overview).
-
-![ALT_TEXT]()
-
-1. Select the ad account [you created earlier](#prerequisites).
-2. Choose an audience. Why for each $PLACEHOLDER?
-3. Select an action. Why for each $PLACEHOLDER?
-4. Choose one or more fields to match.
-5. When you're finished select **Done**, then **Save as draft**.
-
-![ALT_TEXT]() 
-
-### Step 6: Set up webhook support cases
-
-Under **Support Case Creation**, select **Messages**.
-
-![ALT_TEXT]()
-
-Compose your Webhook. $PLACEHOLDER company wrote the following:
-<!-- not sure if 'step' is the right word here? -->
-
-|Field|Description|
-|-----|-----------|
-|Webhook URL|$PLACEHOLDER|
-|HTTP method|$PLACEHOLDER|
-|REquest Body|$PLACEHOLDER|
-|Key 1 and Value 1|$PLACEHOLDER|
-|Key 2 and Value 2|$PLACEHOLDER|
-|Key 3 and Value 3|$PLACEHOLDER|
-|Request headers|$PLACEHOLDER|
-{: .reset-td-br-1 .reset-td-br-2}
+![The custom attribute set to 'Change Custom Attribute [$PLACEHOLDER] to [any new value]'.]()
 
 When you're finished select **Done**, then **Save as draft**.
 
+### Step 4: Set up ad retargeting
+
+Before you can set up ad retargeting, you need to choose a partner for your Audience Sync. Under **Ad Retargeting**, select **Audience Sync**.
+
+![The 'Ad Retargeting' section in the Canvas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/ad_retargeting_audience_sync.png %})
+
+Choose one or more of the default partners. Alternatively, if you have Audience Sync Pro, you can choose any of the [Braze Audience Sync technology partners]({{site.baseurl}}/partners/canvas_steps/overview).
+
+![The default list of partners for Audience Sync.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/choose_audience_sync_partner.png %})
+
+To finish setting up Audience Sync:
+
+1. Select the ad account [you created earlier](#prerequisites).
+2. Choose an audience.
+3. Select an action.
+4. Choose one or more fields to match.
+5. When you're finished select **Done**, then **Save as draft**.
+
+### Step 5: Set up webhook support cases
+
+Next, you'll set up a webhook to trigger potential support cases. Under **Support Case Creation**, select **Messages**.
+
+![The 'Support Case Creation' section in the Canvas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/support_case_creation.png %})
+
+Compose your Webhook. For a full tutorial, see [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook). Here's what Decorumsoft did:
+
+<table>
+  <tr>
+    <td><strong>Webhook URL</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>HTTP method</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>Request Body</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>Key 1 and Value 1</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>Key 2 and Value 2</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>Key 3 and Value 3</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td><strong>Request headers</strong></td>
+    <td>$PLACEHOLDER</td>
+  </tr>
+</table>
+
+When you're finished select **Done**, then **Save as draft**.
+
+### Step 6: Finish personalizing the Canvas
+
+Now that you've created your feedback survey, all required steps to test and launch your Canvas are complete. However, there's still a few more steps you'll need to personalize.
+
+Use the skills you've learned so far and finish personalizing your Canvas. Also, be sure to save often, so you don't lose any work!
+
+<!-- Consider converting this to a table, and writing a short explanation + any relevant links in the right column -->
+- Good feedback: Discount offer message
+- Bad feedback: Negative experience message
+- Everyone else: No offer message
+
 ### Step 7: Test and launch the Canvas
 
-Before you launch your Canvas, its always best practice to test it first. <!-- (Does testing actually send to someone?) --> To start testing, select **Test Canvas**.
+Before you launch your Canvas, its always best practice to test it first. To start testing, select **Test Canvas**.
 
-![ALT_TEXT]()
+![The Canvas footer with 'Test Canvas', 'Save as draft', and 'Launch Canvas' displayed.]({% image_buster /assets/img/canvas_templates/select_test_canvas.png %})
 
-You can either test your Canvas using a random user or you can search for a specific user instead. For a random user, select **Get Random User**. When you're ready select **Run Test**.
+{% alert tip %}
+For a full walkthrough, see [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/).
+{% endalert %}
 
-![ALT_TEXT]()
+You can either test your Canvas using a random user or you can search for a specific user instead. When you're ready select **Run Test** and follow the prompts on the screen. After you're finish testing, select **Done**.
 
-If you like what you see and you're ready to launch, select **Launch Canvas**.
+![The testing page for the Canvas with a test user selected.]({% image_buster /assets/img/canvas_templates/select_run_test.png %})
 
-![ALT_TEXT]()
+If you like what you see and you're ready to officially launch your Canvas, select **Launch Canvas**. Congratulations on launching your first feature adoption Canvas!

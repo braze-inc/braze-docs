@@ -108,7 +108,7 @@ Under **Additional Filters**, create a filter using the event [you created earli
 
 When you're finished, select **Save as draft**.
 
-### Step 4: Add events to the action path
+### Step 4: Customize the action path
 
 Under **Action Path**, select **Activated Feature**.
 
@@ -136,55 +136,39 @@ Next you'll create a feedback survey for users to fill out after they've used yo
 
 ![The 'Feedback Survey' section in the Canvas with the 'Messages' preview window displaying an orange badge indicating more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_feedback_survey.png %})
 
-Calorie Rocket doesn't have In-App Messages set up yet, so they are going to remove it as an option from the feedback survey. If you already have In-App Messages configured through [the Braze SDK]($PLACEHOLDER_URL), feel free to leave this option and customize your message. Otherwise, hover your mouse over the **In-App Messages** tab and select **Remove Variant**.
+Calorie Rocket doesn't have In-App Messages set up yet, so they're going to remove it as an option from the feedback survey. If you already have In-App Messages configured in [the Braze SDK]($PLACEHOLDER_URL), feel free to leave this option and customize your message. Otherwise, hover your mouse over the **In-App Messages** tab and select **Remove Variant**.
 
-![The 'In-App Messages' tab showing the option to remove the variant.]({% image_buster /assets/img/canvas_templates/feature_adoption/remove_iam_for_feedback_survey.png %})
+![The 'In-App Messages' tab showing the option to remove the variant.]({% image_buster /assets/img/canvas_templates/remove_iam_for_feedback_survey.png %})
 
 In the **Email** tab, fill out the **Sending info**, then select **Edit message** to start crafting your feedback survey. Calorie Rocket used [Braze AI]($PLACEHOLDER_URL) to help write their email. Here's what they wrote:
 
-<table border="1">
-  <tr>
-    <td><strong>Header</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Body</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Helper text</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Choice 1</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Choice 2</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Submit button text</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-  <tr>
-    <td><strong>Submit on-click behavior</strong></td>
-    <td>$PLACEHOLDER</td>
-  </tr>
-</table>
+![$PLACEHOLDER: We'll need an image here of a semi-branded email for Calorie Rocket.]()
 
 When you're finished, select **Done** > **Save as draft**.
 
-### Step 6: Test and launch the Canvas (optional)
+### Step 6: Finish personalizing the Canvas
 
-Before you launch your Canvas, its always best practice to test it first. <!-- (Does testing actually send to someone?) --> To start testing, select **Test Canvas**.
+Now that you've created your feedback survey, all required steps to test and launch your Canvas are complete. However, there's still a few more steps you'll need to personalize.
 
-![ALT_TEXT]()
+Use the skills you've learned so far and finish personalizing your Canvas. Also, be sure to save often, so you don't lose any work!
 
-You can either test your Canvas using a random user or you can search for a specific user instead. For a random user, select **Get Random User**. When you're ready select **Run Test**.
+<!-- Consider converting this to a table, and writing a short explanation + any relevant links in the right column -->
+- Feature Introduction Message
+- Reminder w/ Tips Message
+- FAQ vs. Reminder
 
-![ALT_TEXT]()
+### Step 7: Test and launch the Canvas
 
-If you like what you see and you're ready to launch, select **Launch Canvas**.
+Before you launch your Canvas, its always best practice to test it first. To start testing, select **Test Canvas**.
 
-![ALT_TEXT]()
+![The Canvas footer with 'Test Canvas', 'Save as draft', and 'Launch Canvas' displayed.]({% image_buster /assets/img/canvas_templates/select_test_canvas.png %})
+
+{% alert tip %}
+For a full walkthrough, see [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/).
+{% endalert %}
+
+You can either test your Canvas using a random user or you can search for a specific user instead. When you're ready select **Run Test** and follow the prompts on the screen. After you're finish testing, select **Done**.
+
+![The testing page for the Canvas with a test user selected.]({% image_buster /assets/img/canvas_templates/select_run_test.png %})
+
+If you like what you see and you're ready to officially launch your Canvas, select **Launch Canvas**. Congratulations on launching your first feature adoption Canvas!
