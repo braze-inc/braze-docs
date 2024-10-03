@@ -108,9 +108,9 @@ Under **Additional Filters**, create a filter using the event [you created earli
 
 When you're finished, select **Save as draft**.
 
-### Step 4: Customize the action path
+### Step 4: Customize the action paths
 
-Under **Action Path**, select **Activated Feature**.
+The action paths let you define your user paths based on a specific action, including user engagement events and custom events. Under **Action Path**, select **Activated Feature**.
 
 ![The action path in the Canvas with 'Activated Feature' and 'Taken Tour' displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_1.png %})
 

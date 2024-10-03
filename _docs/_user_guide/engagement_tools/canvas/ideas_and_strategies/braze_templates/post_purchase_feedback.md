@@ -54,7 +54,7 @@ Enter a new name for your Canvas. Decorumsoft named theirs "Liquid Mirage: Post-
 
 ### Step 2: Write a follow-up feedback message
 
-Next you'll create a follow-up feedback survey for users you recently purchased your product. Under **Follow-up Feedback**, select **Messages**. 
+Next, you'll create a follow-up feedback survey for users you recently purchased your product. Under **Follow-up Feedback**, select **Messages**. 
 
 ![The 'Follow-up Feedback' section in the Canvas with the 'Messages' preview window displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/follow_up_feedback_message.png %})
 
@@ -70,9 +70,7 @@ When you're finished, select **Done** > **Save as draft**.
 
 ### Step 3: Customize the action path
 
-Next, you'll add the custom attribute [you created earlier](#prerequisites) to each sentiment Call to Action (CTA) link, so you can capture which option the user choose when they gave feedback.
-
-Under **Feedback Action**, select **Good feedback**.
+Next, you'll add the custom attribute [you created earlier](#prerequisites) to each sentiment Call to Action (CTA) link, so you can capture which option the user choose when they gave feedback. Under **Feedback Action**, select **Good feedback**.
    
 ![The 'Feedback Action' section in the Canvas with 'Good feedback' and 'Bad feedback' displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/feedback_action.png %})
 
