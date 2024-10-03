@@ -63,43 +63,60 @@ For in-app messages and Content Cards, you can control marketing pressure by set
 
 For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but since his device has not communicated with Braze servers since his session started, his device is unaware that the message has met its cap and he will also receive the message. However, when an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
 
-### Rate limiting and Canvas components
-
-Rate limits apply to all message sending across a Canvas. If multiple channels are utilized in a Canvas or Canvas step, the rate limit will be shared across channels. 
-
 ### Rate limiting and A/B testing
 
 When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
 
 ### Delivery speed rate limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute. When targeting users during campaign creation, you can navigate to **Advanced Options** to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they're delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute. When targeting users during campaign creation, you can navigate to either Target Audiences (for Campaigns) or Send Settings (for Canvas) to select a rate limit (in various increments from as low as 10 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they’re delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
 
 ![][3]
 
-For instance, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 for each of the first seven minutes, and 5,000 over the last minute. Note that messages sent using a rate limit won't have the rate limit setting (such as 10,000 per minute) evenly sent out over 60 seconds. Instead, Braze makes sure no more than 10,000 per minute messages are sent (this could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute). Be wary of delaying time-sensitive messages with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won't receive the message until the following day.
+For instance, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute. Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute (this could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute). 
 
 {% alert important %}
-When sending a multichannel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10,000 users with valid push tokens but 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost nine hours later.
+Be wary of delaying time-sensitive messages with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
 {% endalert %}
+
+#### Single-channel campaigns
+
+When sending a single-channel campaign with a speed rate limit, the rate limit is applied for all messages together.
+
+#### Multichannel campaigns
+
+When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. As a result, the following may occur:
+
+- The total number of messages sent per minute could be more than the rate limit. 
+    - For example, if your campaign has a rate limit of 10,000 per min and utilizes email and in-app banners, Braze can send a max of 20,000 total messages each minute (10,000 email and 10,000 push).
+- Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
+    - For example, if you send a campaign that contains an email and a push notification, you may have 10,000 users with valid push tokens but 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost nine hours later.
+
+{% alert note %}
+Push campaigns delivering on multiple push platforms (such as iOS or Android) apply the same rate limiting process. For example, let's say we have a push campaign using Android and iOS with a 10,000 rate limit. Braze will send up to 20,000 total push notifications each minute (10,000 for Android and 10,000 for iOS).
+{% endalert %}
+
+#### Canvas delivery speed rate limiting
+
+When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per min and utilizes email and in-app messages, Braze will send a total of 10,000 messages per minute across email and in-app messages.
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content Retry][19] feature is enabled, Braze will retry call failures while respecting the rate limit you set for each resend. Let's think again about the 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content Retry][19] feature is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
 
-Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the "back of the queue" and add an additional minute, if necessary, to the total minutes it would take to send your message.
+Instead of attempting to make up for the delay and send the remaining 4,000 messages in the second minute or add it to the 10,000 it is already set to send, Braze will move those 6,000 failed messages to the “back of the queue” and add an additional minute, if necessary, to the total minutes it would take to send your message.
 
-|Minute|No Failure|6,000 Failure in Minute 1|
-|---|---|---|
-|1|10,000|4,000|
-|2|10,000|10,000|
-|3|10,000|10,000|
-|4|10,000|10,000|
-|5|10,000|10,000|
-|6|10,000|10,000|
-|7|10,000|10,000|
-|8|5,000|10,000|
-|9|0|6,000|
+| Minute | No Failure | 6,000 Failure in Minute 1 |
+|--------|------------|---------------------------|
+| 1      | 10,000     | 4,000                     |
+| 2      | 10,000     | 10,000                    |
+| 3      | 10,000     | 10,000                    |
+| 4      | 10,000     | 10,000                    |
+| 5      | 10,000     | 10,000                    |
+| 6      | 10,000     | 10,000                    |
+| 7      | 10,000     | 10,000                    |
+| 8      | 5,000      | 10,000                    |
+| 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Multichannel campaigns
