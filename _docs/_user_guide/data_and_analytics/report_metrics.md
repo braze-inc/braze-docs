@@ -30,6 +30,18 @@ Email
 
 {% api %}
 
+### AMP Opens
+
+{% apitags %}
+Email
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='AMP Opens' %}
+
+{% endapi %}
+
+{% api %}
+
 ### Audience
 
 {% apitags %}
@@ -60,8 +72,8 @@ For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were u
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Bounces:</b> Count</li>
-        <li><b>Bounce % or Bounce Rate %:</b> (Sends - Bounces) / (Sends)</li>
+        <li><i>Bounces</i> :Count</li>
+        <li><i>Bounce %</i> or <i>Bounce Rate %</i>: (Sends - Bounces) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -90,7 +102,7 @@ iOS Push, Android Push
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Body Clicks' %}
+{% multi_lang_include metrics.md metric='Body Clicks' %} For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)
 
 <span class="calculation-line">Calculation: (Body Clicks) / (Impressions)</span>
 
@@ -208,7 +220,29 @@ In-App Message
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
+
+#### In-app messages
+
+For in-app messages, a conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not.
+
+Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This means that each in-app message delivery is associated with only one conversion.
+
+{% endapi %}
+
+{% api %}
+
+### Total Conversions
+
+{% apitags %}
+In-App Message
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Total Conversions' %}
+
+When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, *Total Conversions* can increase once for each time the user logs an impression for a new instance of the in-app message campaign. 
+
+For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then *Total Conversions* will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and *Total Conversions* will increase by one.
 
 {% endapi %}
 
@@ -220,9 +254,25 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversion rate' %}
+{% multi_lang_include metrics.md metric='Conversion Rate' %}
 
-<span class="calculation-line">Calculation: (Primary Conversions) / (Unique Recipients)</span>
+#### In-app messages
+
+The metric of total daily <i>Unique Impressions</i> is used to calculate the <i>Conversion Rate</i> for in-app messages.
+
+Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the <i>Conversion Rate</i> can increase accordingly, but impressions will only be counted once.
+
+<!-- Check the different calculations. They're misaligned on the Docs site.-->
+
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>In-App Messages</b>: (Primary Conversions) / (Unique Impressions)</li>
+        <li><b>Other Channels</b>: (Primary Conversions) / (Unique Recipients)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -252,8 +302,8 @@ Email, Web Push, iOS Push, Android Push, WhatsApp
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Deliveries:</b> Count</li>
-        <li><b>Deliveries %:</b> (Sends - Bounces) / (Sends)</li>
+        <li><i>Deliveries</i>: Count</li>
+        <li><i>Deliveries %</i>: (Sends - Bounces) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -316,6 +366,18 @@ Webhook
 
 {% api %}
 
+### Estimated Real Opens
+
+{% apitags %}
+Email
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Estimated Real Opens' %}
+
+{% endapi %}
+
+{% api %}
+
 ### Failures
 
 {% apitags %}
@@ -334,7 +396,7 @@ WhatsApp
 Email
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Hard Bounce' %} A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email receives a hard bounce, we will stop any future requests to this email address.
+{% multi_lang_include metrics.md metric='Hard Bounce' %} If an email receives a hard bounce, we will stop any future requests to this email address.
 
 {% endapi %}
 
@@ -398,6 +460,16 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 {% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
 
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Primary Conversions (A) or Primary Conversion Event</i>: Count</li>
+        <li><i>Primary Conversions (A) %</i> or <i>Primary Conversion Event Rate</i>: (Primary Conversions) / (Unique Recipients)</li>
+    </ul>
+</span>
+{:/}
+
 {% endapi %}
 
 {% api %}
@@ -445,6 +517,8 @@ SMS
 
 {% endapi %}
 
+{% api %}
+
 ### Revenue
 
 {% apitags %}
@@ -457,16 +531,37 @@ Email
 
 {% api %}
 
-### Sends or Messages Sent
+### Sends
 
 {% apitags %}
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Sends or Messages Sent' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
+{% multi_lang_include metrics.md metric='Sends' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
 
 {% alert tip %}
 For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/).
+{% endalert %}
+
+<span class="calculation-line">Calculation: Count</span>
+
+{% endapi %}
+
+{% api %}
+
+### Messages Sent
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Messages Sent' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
+
+{% alert tip %}
+For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+
+- **At launch or step entry:** The number of cards created and available to be seen. This doesn't count whether the users viewed the card.
+- **At first impression:** The number of cards displayed to users.
 {% endalert %}
 
 <span class="calculation-line">Calculation: Count</span>
@@ -499,7 +594,7 @@ SMS
 Email
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
 
 {% endapi %}
 
@@ -513,7 +608,15 @@ Email
 
 {% multi_lang_include metrics.md metric='Spam' %}
 
-<span class="calculation-line">Calculation: (Marked as Spam) / (Sends)</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><i>Spam</i>: Count</li>
+        <li><i>Spam %</i> or <i>Spam Rate %</i>: (Marked as Spam) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -549,7 +652,7 @@ In-App Message
 Email, Content Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %}
+{% multi_lang_include metrics.md metric='Total Clicks' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. For AMP emails, this is the total clicks in the HTML and plaintext versions.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -586,7 +689,9 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %}
+{% multi_lang_include metrics.md metric='Total Impressions' %} For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
+
+For in-app messages, if there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on an impression is logged for every time that user sees the in-app message.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -600,7 +705,7 @@ In-App Message, Content Cards
 Email, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Opens' %}
+{% multi_lang_include metrics.md metric='Total Opens' %}  For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. For AMP emails, this is the total opens for the HTML and plaintext versions. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -635,14 +740,15 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 Email, Content Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %}
+{% multi_lang_include metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email. This includes clicks on Braze-provided unsubscribe links. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Email:</b> (Unique Clicks) / (Deliveries)</li>
-        <li><b>Content Cards:</b> (Unique Clicks) / (Unique Impressions)</li>
+        <li><i>Unique Clicks</i>: Count</li>
+        <li><b>Content Cards</b> <i>Unique Clicks</i> % or <i>Unique Clicks Rate</i>:</b> (Unique Clicks) / (Unique Impressions)</li>
+        <li><b>Email</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Deliveries)</li>
     </ul>
 </span>
 {:/}
@@ -671,7 +777,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %}  For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. Conversely, the count should not increment the second time a user views a Content Card. This number is received from Braze.
+{% multi_lang_include metrics.md metric='Unique Impressions' %} For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibilty is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>. <br><br>For Content Cards, the count should not increment the second time a user views a card. 
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -685,14 +791,14 @@ In-App Message, Content Cards
 Email, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Opens' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+{% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Unique Opens:</b> Count</li>
-        <li><b>Unique Opens % or Unique Open Rate:</b> (Unique Opens) / (Deliveries)</li>
+        <li><i>Unique Opens</i>: Count</li>
+        <li><i>Unique Opens %</i> or <i>Unique Open Rate</i>: (Unique Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}
@@ -707,7 +813,7 @@ Email, LINE
 All
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %}
+{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -727,8 +833,8 @@ Email
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><b>Unsubscribers or Unsub:</b> Count</li>
-        <li><b>Unsubscribers % or Unsub Rate:</b> (Unsubscribes) / (Deliveries)</li>
+        <li><i>Unsubscribers</i> or <i>Unsub</i>: Count</li>
+        <li><i>Unsubscribers %</i> or <i>Unsub Rate</i>: (Unsubscribes) / (Deliveries)</li>
     </ul>
 </span>
 {:/}

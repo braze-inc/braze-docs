@@ -195,6 +195,12 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 ## Metrics and analytics
 
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
 <table>
     <thead>
         <tr>
@@ -204,20 +210,20 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
     </thead>
     <tbody>
         <tr>
-            <td><span style="white-space: nowrap">Total Opens</span></td>
-            <td>Total opens for the HTML and plaintext versions of your AMP email.</td>
+            <td class="no-split">Total Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
         </tr>
         <tr>
-            <td>Total Clicks</td>
-            <td>Total clicks in the HTML and plaintext versions of your AMP email.</td>
+            <td class="no-split">Total Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} For AMP emails, this is the total clicks in the HTML and plaintext versions.</td>
         </tr>
         <tr>
-            <td>AMP Opens</td>
-            <td>Total count for opens in your AMP HTML email and AMP HTML versions of the email.</td>
+            <td class="no-split">AMP Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
-            <td>AMP Clicks</td>
-            <td>{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+            <td class="no-split">AMP Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>

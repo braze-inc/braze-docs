@@ -165,15 +165,53 @@ In this view, you can use the **Show Heatmap** toggle to bring up a visual view 
 
 Here is a breakdown of some key metrics you may see while reviewing your message performance. For the definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Content Cards.
 
-| Term | Definition |
-| -- | -- |
-| Messages Sent | This is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression):<br><br>  {::nomarkdown}<ul><li><b>At launch or step entry:</b> The number of cards created and available to be seen. This doesn't count whether the users viewed the card.</li><li><b>At first impression:</b> The number of cards displayed to users.</li></ul>{:/} |
-| Total Impressions | The total count of impressions logged for a given Content Card. This can increment multiple times for the same user. |
-| Unique Impressions | The number of users who have viewed a given card. This count doesn't increment the second time that a user views a card. |
-| Unique Recipients | The total number of viewers (unique, but only unique per day) that have viewed the particular card. Because a viewer can be a unique recipient every day, you should expect this to be higher than Unique Impressions. |
-| Unique Clicks | The number of recipients who have clicked the CTA link of a Content Card at least once—excluding clicks on Braze-provided unsubscribe links. Measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). |
-Unique Dismissals | The number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Messages Sent</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
+                This is calculated differently depending on what you selected for 
+                <a href="https://braze.com/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Card creation</a>:<br><br>
+                <ul>
+                    <li><b>At launch or step entry:</b> The number of cards created and available to be seen. This doesn't count whether the users viewed the card.</li>
+                    <li><b>At first impression:</b> The number of cards displayed to users.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="no-split">Total Impressions</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} This can increment multiple times for the same user.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Impressions</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">This count</span> doesn't increment the second time that a user views a card.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Recipients</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} This includes clicks on Braze-provided unsubscribe links.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Dismissals</td>
+            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 {% alert note %}
 Regarding how impressions are logged, there are some nuances between web, Android, and iOS. Generally speaking, Braze logs an impression when a card is seen, which is after a user scrolls to the specific Content Card in their feed.
@@ -197,22 +235,74 @@ Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique
 
 #### Email metrics
 
-Here are some key email-specific metrics that you won't see in other channels. To see the definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
+Here are some key email-specific metrics that you won't see in other channels. To see the full definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
 
-| Metric | Definition |
-| --- | --- |
-| Unique Clicks | The number of recipients that clicked within the email sent. This is tracked over a 7-day period and is measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
-| Unique Opens | The number of recipients that opened your email. This can also include emails that are machine opened and is tracked over a 7-day period. This number should be between 10–20%. Anything greater than 20% is exceptional! |
-| Click to Open Rate | The percentage of unique emails opened that have been clicked at least once. |
-| Spam Rate | The percentage of delivered emails marked or designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy, or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
-| Unsubscribers (Unsubs) | The number of messages resulting in an unsubscription. This occurs when a user clicks the unsubscribe link in your email. |
-| Other Opens | The number of recipients that opened your email, including emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward _Other Opens_ and only once toward _Unique Opens_. |
-| Estimated Real Opens | An estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
-| Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
-| Bounces | The total number of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used, or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. |
-| Hard Bounces | A hard bounce is an email message that has been returned to the sender because the recipient's address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. |
-| Soft Bounces | A soft bounce is an email message that gets as far as the recipient's mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. You can also track hard and soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab). |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Unique Clicks</td>
+            <td class="no-split">
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email and measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links. This number should be between 5–10%. Anything greater than 10% is exceptional!
+            </td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Opens</td>
+            <td class="no-split">
+                {% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. This number should be between 10–20%. Anything greater than 20% is exceptional!
+            </td>
+        </tr>
+        <tr>
+            <td class="no-split">Click-to-Open Rate</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Spam Rate</td>
+            <td class="no-split">
+                {% multi_lang_include metrics.md metric='Spam' %} If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy, or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence).
+            </td>
+        </tr>
+        <tr>
+            <td class="no-split">Unsubscribers or Unsub</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Other Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Estimated Real Opens</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} See the following section for details.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Machine Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Bounces</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} </td>
+        </tr>
+        <tr>
+            <td class="no-split">Hard Bounce</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Soft Bounce</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
@@ -230,22 +320,57 @@ Estimated Real Open Rate is only available in campaigns, and is not reported in 
 
 #### In-app message metrics
 
-Here are some key in-app message metrics you may see in your analytics. To see the definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key in-app message metrics you may see in your analytics. To see the full definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary][1].
 
-| Term                   | Definition                                                                                                         |
-|------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Body Clicks*           | Occurs when a user clicks on the message itself and not one of the buttons. This only applies to messages created with the traditional editor. |
-| Button 1 and Button 2 Clicks | The percentage of recipients that pressed that specific button.                                                |
-| Unique Impressions     | The total number of people who actually received and viewed the in-app message. If a user receives the message twice within 24 hours, only one impression is counted that day. <br><br> **If re-eligibility is on:** {::nomarkdown}<ul><li>Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action again.</li><li>For in-app messages, *Unique Impressions* = *Unique Recipients* since impressions and recipients both increment after 24 hours.</li></ul>{:/} |
-| Total Impressions            | The number of users whose devices reported that the message had been delivered. If a user receives the message twice, they are counted twice. <br><br> **If there are multiple devices:** {::nomarkdown}<ul><li>If re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. </li></ul>{:/} **If re-eligibility is on:** {::nomarkdown}<ul><li>An impression is logged for every time that user sees the in-app message.</li></ul>{:/} |
-| Conversion             | Conversion tracking starts once a user logs an impression of an in-app message. A conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not. <br><br> Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion will be assigned to the latest in-app message received, provided that it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, then the new conversion cannot be logged for that specific message. This ensures that each in-app message delivery is associated with only one conversion. |
-| Total Conversions      | When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, _Total Conversions_ can increase once for each time the user logs an impression for a new instance of the in-app message campaign. <br><br> For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then _Total Conversions_ will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and _Total Conversions_ will increase by one. |
-| Conversion Rate        | The metric of total daily unique impressions (_Unique Impressions_) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the _Conversion Rate_ can increase accordingly, but impressions will only be counted once. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
 
-{% alert note %}
-*Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor and the custom code editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
-{% endalert %}
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Body Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Button 1 Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Button 2 Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Unique Impressions</td>
+            <td class="no-split">
+                {% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Total Impressions</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Total Impressions' %} </td>
+        </tr>
+        <tr>
+            <td class="no-split">Conversions (B, C, D)</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Total Conversions</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Conversion Rate</td>
+            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 {% elsif include.channel == "push" %}
 

@@ -1,5 +1,9 @@
 {% if include.metric == "AMP Clicks" %}
-<i>AMP Clicks</i> is the total number of clicks in your AMP HTML email, cumulative of the HTML, plaintext, and <span style="white-space: nowrap">AMP HTML</span> versions of the email.
+<i>AMP Clicks</i> is the total number of clicks in your AMP HTML email, cumulative of the HTML, plaintext, and AMP HTML versions of the email.
+{% endif %}
+
+{% if include.metric == "AMP Opens" %}
+<i>AMP Opens</i> is the total count for opens in your AMP HTML email and AMP HTML versions of the email.
 {% endif %}
 
 {% if include.metric == "Audience" %}
@@ -10,12 +14,16 @@
 <i>Bounces</i> is the total number of messages that were unsuccessfully delivered to the intended recipients. 
 {% endif %}
 
+{% if include.metric == "Estimated Real Opens" %}
+<i>Estimated Real Opens</i> is an estimate of how many unique opens there would be if machine opens did not exist, and is the result of a proprietary Braze statistical model.
+{% endif %}
+
 {% if include.metric == "Hard Bounce" %}
-A <i>Hard Bounce</i> is when an email fails to deliver to the recipient due to a permanent delivery error. 
+A <i>Hard Bounce</i> is when an email fails to deliver to the recipient due to a permanent delivery error. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. 
 {% endif %}
 
 {% if include.metric == "Soft Bounce" %}
-A <i>Soft Bounce</i> is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid.
+A <i>Soft Bounce</i> is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox.
 {% endif %}
 
 {% if include.metric == "Body Click" %}
@@ -23,7 +31,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>Body Clicks</i> occur when someone clicks on any of the following in-app message types: slide-up, modal, or fullscreen that has no buttons.
+<i>Body Clicks</i> occur when someone clicks on any of the following in-app message types: slide-up, modal, or fullscreen that has no buttons. This only applies to messages created with the traditional editor.
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
@@ -70,6 +78,10 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Conversions (B, C, D)</i> are additional conversion events added after the primary conversion event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign.
 {% endif %}
 
+{% if include.metric == "Total Conversions" %}
+<i>Total Conversions</i> is the total number of times a user completes a specific conversion event after viewing an in-app message campaign.
+{% endif %}
+
 {% if include.metric == "Deliveries" %}
 <i>Deliveries</i> is the total number of message requests that are accepted by the receiving server. This doesn’t mean the message was delivered to a device, only that the message was accepted by the server. 
 {% endif %}
@@ -103,11 +115,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Machine Opens" %}
-<i>Machine Opens</i> includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a Machine Opens.
+<i>Machine Opens</i> includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a <i>Machine Opens</i>.
 {% endif %}
 
 {% if include.metric == "Other Opens" %}
-<i>Other Opens</i> includes emails that haven't been identified as Machine Opens. For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an Other Opens.
+<i>Other Opens</i> includes emails that haven't been identified as <i>Machine Opens</i>. For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an <i>Other Opens</i>.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -131,11 +143,15 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Revenue" %}
-<i>Revenue</i> is the total revenue in dollars from campaign recipients within the set [primary conversion window]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+<i>Revenue</i> is the total revenue in dollars from campaign recipients within the set <a href='/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events'>primary conversion window</a>.
 {% endif %}
 
-{% if include.metric == "Sends or Messages Sent" %}
-<i>Sends</i> or <i>Messages Sent</i> is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn’t mean the message was received or delivered to a device, only that the message was sent.
+{% if include.metric == "Messages Sent" %}
+<i>Messages Sent</i> is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn’t mean the message was received or delivered to a device, only that the message was sent.
+{% endif %}
+
+{% if include.metric == "Sends" %}
+<i>Sends</i> is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn’t mean the message was received or delivered to a device, only that the message was sent.
 {% endif %}
 
 {% if include.metric == "Sends to Carrier" %}
@@ -159,7 +175,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered email, card, or message. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered email, card, or AMP HTML message.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -167,37 +183,37 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Total Impressions</i> is the number of times the in-app message has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+<i>Total Impressions</i> is the number of times the message has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
-<i>Total Opens</i> is the total number of messages that were opened. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+<i>Total Opens</i> is the total number of messages that were opened.
 {% endif %}
 
 {% if include.metric == "Total Revenue" %}
-<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports through the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Unique Clicks</i> is the distinct number of recipients who have clicked within a message at least once. This is tracked over a seven-day period for email. This includes clicks on Braze-provided unsubscribe links.
-
-For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+<i>Unique Clicks</i> is the distinct number of recipients who have clicked within a message at least once and is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
 <i>Unique Dismissals</i> is the number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
 {% endif %}
 
-{% if include.metric == "Unique Impressions" %}
-<i>Unique Impressions</i> is the total number of users who received and viewed a given in-app message or card in a day.
-{% endif %}
+<!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
-{% if include.metric == "Unique Opens" %}
-<i>Unique Opens</i> is the total number of delivered emails that have been opened by a single user at least once and are tracked over a seven-day period.
+{% if include.metric == "Unique Impressions" %}
+<i>Unique Impressions</i> is the total number of users who received and viewed a given message in a day.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
 <i>Unique Recipients</i> is the number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze.
+{% endif %}
+
+{% if include.metric == "Unique Opens" %}
+<i>Unique Opens</i> is the total number of delivered messages that have been opened by a single user at least once and are tracked over a seven-day period.
 {% endif %}
 
 {% if include.metric == "Unsubscribers or Unsub" %}
