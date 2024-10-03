@@ -16,11 +16,24 @@ The user alias object consists of two parts: an `alias_name` for the identifier 
 This object is used frequently in all of our endpoints, and oftentimes within other objects.
 
 ## Object body
+
 ```json
 {
   "user_alias" : {
     "alias_name" : (required, string),
     "alias_label" : (required, string)
   }
+}
+```
+
+### Example
+
+```json
+{
+  "user_alias": {
+    "alias_name": "john_doe_123",
+    "alias_label": "email_id"
+  },
+  "external_id": "user_456"
 }
 ```
