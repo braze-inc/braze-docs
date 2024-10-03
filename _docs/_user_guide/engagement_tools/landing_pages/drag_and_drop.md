@@ -72,6 +72,10 @@ We recommend setting up page container-level styles before you customize styles 
 
 ![The page container with options to customize background images, colors, border details, and content styling.][6]{: style="max-width:30%;"}
 
+#### Custom Data
+
+You can log custom and standard profile attributes, and custom events through various form components within the landing page editor. Input field form blocks allow you to log both standard and custom attributes for your users. Phone and email capture form blocks allow you to capture phone and email fields for your users form submissions. Button actions can be logged as either or both custom attributes or events on form submission. 
+
 ### Step 4: Preview your landing page
 
 You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
