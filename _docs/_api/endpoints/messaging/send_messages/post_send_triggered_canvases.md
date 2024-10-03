@@ -164,6 +164,8 @@ The status code `201` could return the following response body. If the Canvas is
 
 If your Canvas is archived, you'll see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you'll see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
 
+If your request encounters a fatal error, refer to [Errors and responses]({{site.baseurl}}/api/errors/#fatal-errors) for the error code and description.
+
 ## Attributes object for Canvas
 
 Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
