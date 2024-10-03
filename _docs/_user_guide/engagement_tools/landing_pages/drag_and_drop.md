@@ -60,6 +60,8 @@ The editor uses two types of components for landing page composition: rows and b
 
 #### Form block
 
+Use various **Form Block** components to log custom and standard profile attributes, and custom events. The **Input Field** form block can log both standard and custom attributes for your users, and the **Phone Capture** and **Email Capture** form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both upon form submission. 
+
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
 ![A form block that registers a new customer and will send a discount code to their email.][5]{: style="max-width:70%;"}
@@ -71,10 +73,6 @@ You can set styles to be applied across all relevent component blocks in your la
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 
 ![The page container with options to customize background images, colors, border details, and content styling.][6]{: style="max-width:30%;"}
-
-#### Custom Data
-
-You can log custom and standard profile attributes, and custom events through various form components within the landing page editor. Input field form blocks allow you to log both standard and custom attributes for your users. Phone and email capture form blocks allow you to capture phone and email fields for your users form submissions. Button actions can be logged as either or both custom attributes or events on form submission. 
 
 ### Step 4: Preview your landing page
 
