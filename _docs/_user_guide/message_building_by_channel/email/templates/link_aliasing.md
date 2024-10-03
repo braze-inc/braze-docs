@@ -3,7 +3,7 @@ nav_title: Link Aliasing
 article_title: Link Aliasing
 alias: /link_aliasing/
 page_order: 3
-description: "This article describes how link aliasing works and what your links will look like."
+description: "This article describes how link aliasing works and provides examples for what your links will look like."
 channel:
   - email
 
@@ -11,14 +11,33 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Link aliasing
  
-> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
+> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics.
+
+## About link aliasing
+
+Link aliasing is the process of creating a unique identifier, also referred to as an alias, for a URL to track user interactions with that link. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
+
+### How it works
+
+In Braze, a `lid` value, also known as "link identifier", is a unique identifier that's appended to a URL to enable tracking and analytics for that specific link. This `lid` value allows Braze to track and monitor user interactions with the link, providing valuable insight into how users engage with the content in your email campaigns.
+
+### Terms to know
+
+The following table includes common terms and definitions to reference as you create your link aliases:
+
+| Term                | Definition                                                                                                                                                                                           |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Capture tag         | A placeholder in a URL that's dynamically replaced with special values when a message is sent. For example, {%raw%}`{{link_alias}}`{%endraw%} can be replaced with a unique identifier for tracking. |
+| Conversion event    | An action performed by a user that's tracked to measure the effectiveness of a campaign. For example, clicking a link and making a purchase are considered conversion events.                        |
+| Tracking parameters | Information appended to a URL, such as UTM parameters, that helps identify the source of traffic and user behavior.                                                                                  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Creating a link alias
 
-Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, follow these steps: 
+To create a link alias, follow these steps: 
 
-1. Open your email body.
-2. Click the **Link Management** tab.
+1. In your campaign or Canvas component, go to your email body.
+2. Select the **Link Management** tab.
 3. Braze automatically generates unique default link aliases for each of your links.
 4. Give the alias a name. Aliases must be uniquely named per email campaign variant or Canvas component. 
 
@@ -28,12 +47,12 @@ You can also set an alias that will be used to reference a specific link when de
 
 Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
-### Managing link aliases
+## Managing link aliases
 
-Follow these steps to view all of your tracked link aliases:
+To view all of your tracked link aliases, do the following:
 
 1. Go to **Settings** > **Email Preferences** under **Workspace Settings**.
-2. Click the **Link Aliasing Settings** tab.
+2. Select the **Link Aliasing Settings** tab.
 
 {% alert important %}
 If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), these settings are under **Manage Settings**.
@@ -43,18 +62,18 @@ Here, you can also sort and search through all link aliases.
 
 ![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
 
-#### Untracking link aliases
+### Untracking link aliases
 
 On the **Link Aliasing Settings** tab, you can turn off tracking for link aliases.
 
 1. Select the link alias.
 2. Click **Turn off tracking**.  
 
-#### Link aliases and user profile data
+### Link aliases and user profile data
 
 In Braze, if you have a link alias in your app or website and a user clicks on it, the event is recorded in the user's profile with the alias. Later, if you decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the the new link alias, it will not include the data from the previous link alias.
 
-### Checking workflows
+## Checking workflows
 
 Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
 
