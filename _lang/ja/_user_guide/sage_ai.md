@@ -5,7 +5,7 @@ page_order: 6.5
 layout: dev_guide
 search_rank: 12
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "Sageとは、Start Anywhere Go Everywhereの頭文字をとったものだ。BrazeAI<sup>TM</sup> は、アクセスしやすく使いやすいツールのコレクションを提供し、クリエイティビティ、パーソナライゼーション、およびエンゲージメント戦略の最適化の面で参入障壁を低下させます。BrazeAI<sup>TM</sup> の機能を使用すると、信頼できるアドバイザーがいるときと同様に、クリエイティビティを導き、より良い意思決定を行い、顧客のユーザー体験を最適化するうえで役立ちます。"
+guide_top_text: "BrazeAI<sup>TM</sup>とは、Start Anywhere Go Everywhereの頭文字をとったものだ。BrazeAI<sup>TM</sup> は、アクセスしやすく使いやすいツールのコレクションを提供し、クリエイティビティ、パーソナライゼーション、およびエンゲージメント戦略の最適化の面で参入障壁を低下させます。BrazeAI<sup>TM</sup> の機能を使用すると、信頼できるアドバイザーがいるときと同様に、クリエイティビティを導き、より良い意思決定を行い、顧客のユーザー体験を最適化するうえで役立ちます。"
 description: "BrazeAI<sup>TM</sup> は、アクセスしやすく使いやすいツールのコレクションを提供し、クリエイティビティ、パーソナライゼーション、およびエンゲージメント戦略の最適化の面で参入障壁を低下させます。"
 
 Tool:
