@@ -15,11 +15,11 @@ channel:
 
 ## About link aliasing
 
-Link aliasing is the process of creating a unique identifier, also referred to as an alias, for a URL to track user interactions with that link. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
+Link aliasing is the process of creating a unique identifier, also referred to as an alias, for a URL to track user interactions with that link. You can use link aliasing in your emails to track engagement and analyze campaign performance. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
 
 ### How it works
 
-In Braze, a `lid` value, also known as "link identifier", is a unique identifier that's appended to a URL to enable tracking and analytics for that specific link. This `lid` value allows Braze to track and monitor user interactions with the link, providing valuable insight into how users engage with the content in your email campaigns.
+In Braze, a `lid` value, also known as "link identifier", is a unique identifier that's appended to a URL to enable tracking and analytics for that specific link. This `lid` value allows Braze to track and monitor user interactions with the link, providing valuable insight into how users engage with the content in your email campaigns. When an email is sent, Braze replaces the capture tag in the URL with the actual alias value.
 
 ### Terms to know
 
@@ -60,7 +60,7 @@ If you are using the [older navigation]({{site.baseurl}}/user_guide/administrati
 
 Here, you can also sort and search through all link aliases.
 
-![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
+![Tracked Link Aliases page that shows two link aliases named "TechPartners" and "Help" that are associated with a campaign named "Email_Survey".][8]
 
 ### Untracking link aliases
 
@@ -180,7 +180,7 @@ Link templates can only be applied for links visible in the **Link Management** 
 
 ## Link segmentation
 
-The retargeting of aliases filters allow you to create segmentation filters based on your customers clicking a specifically tracked alias from either an email campaign or Canvas component. This filter is only available for campaigns or Canvases that have tracked aliases present.
+The retargeting of aliases filters allow you to create segmentation filters based on your users clicking a specifically tracked alias from either an email campaign or Canvas component. This filter is only available for campaigns or Canvases that have tracked aliases present.
 
 ### Tracking links
 
