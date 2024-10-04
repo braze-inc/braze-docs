@@ -889,7 +889,7 @@ This use case takes a customer's subscription state to send personalized content
 
 {% raw %}
 ```liquid
-{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+{% if {{subscribed_state.${subscription_group_id}}} == 'subscribed' %}
 This is an exclusive message for subscribed users!
 {% else %} This is the default message for other users.
 {% endif %}
