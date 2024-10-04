@@ -18,6 +18,10 @@
 <i>Estimated Real Opens</i> is an estimate of how many unique opens there would be if machine opens did not exist, and is the result of a proprietary Braze statistical model.
 {% endif %}
 
+{% if include.metric == "Help" %}
+<i>Help</i> is when a user replied to your message with a <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">HELP keyword</a> and was dispatched a HELP auto-response. 
+{% endif %}
+
 {% if include.metric == "Hard Bounce" %}
 A <i>Hard Bounce</i> is when an email fails to deliver to the recipient due to a permanent delivery error. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. 
 {% endif %}
@@ -43,15 +47,15 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Choices Submitted" %}
-<i>Choices Submitted</i> is the total number of choices selected when the user clicks the submit button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey).
+<i>Choices Submitted</i> is the total number of choices selected when the user clicks the submit button on the survey question page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>..
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>Click-to-Open Rate</i> is the percentage of delivered emails that have been opened by a single user or machine at least once, and is only available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+<i>Click-to-Open Rate</i> is the percentage of delivered emails that have been opened by a single user or machine at least once, and is only available in the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
 {% if include.metric == "Confirmed Deliveries" %}
-<i>Confirmed Deliveries</i> are when the carrier has confirmed the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment. 
+<i>Confirmed Deliveries</i> are when the carrier has confirmed the message was delivered to the target phone number.
 {% endif %}
 
 {% if include.metric == "Confidence" %}
@@ -59,11 +63,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Confirmation Page Button" %}
-<i>Confirmation Page Button</i> is the total clicks on the call to action button on the confirmation page of a [simple survey]({{site.baseurl}}/docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey).
+<i>Confirmation Page Button</i> is the total clicks on the call to action button on the confirmation page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>.
 {% endif %}
 
 {% if include.metric == "Confirmation Page Dismissals" %}
-<i>Confirmation Page Dismissals</i> is the total clicks on the close (x) button on the confirmation page of a [simple survey]({{site.baseurl}}/docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey).
+<i>Confirmation Page Dismissals</i> is the total clicks on the close (x) button on the confirmation page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>.
 {% endif %}
 
 {% if include.metric == "Conversion Rate" %}
@@ -122,6 +126,14 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Other Opens</i> includes emails that haven't been identified as <i>Machine Opens</i>. For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an <i>Other Opens</i>.
 {% endif %}
 
+{% if include.metric == "Opens" %}
+<i>Opens</i> are instances including both <i>Direct Opens</i> and <i>Influenced Opens</i> in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app.
+{% endif %}
+
+{% if include.metric == "Opt-Out" %}
+<i>Opt-Out</i> is when a user replied to your message with an <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">opt-out keyword</a> and was unsubscribed from your SMS program. 
+{% endif %}
+
 {% if include.metric == "Pending Retry" %}
 <i>Pending Retry</i> is the number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the email service provider (ESP). The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
 {% endif %}
@@ -150,16 +162,16 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Messages Sent</i> is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn’t mean the message was received or delivered to a device, only that the message was sent.
 {% endif %}
 
+{% if include.metric == "Sent" %}
+<i>Sent</i> is every time a campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It's possible that the SMS didn't reach a user's device due to errors.
+{% endif %}
+
 {% if include.metric == "Sends" %}
 <i>Sends</i> is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn’t mean the message was received or delivered to a device, only that the message was sent.
 {% endif %}
 
 {% if include.metric == "Sends to Carrier" %}
-{% alert note %}
-<i>Sends to Carrier</i> is deprecated, but will continue to be supported for users that already have it.
-{% endalert %}
-
-<i>Sends to Carrier</i> is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection wasn’t confirmed by the carrier. This includes instances where carriers don’t provide delivery or rejected confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of send.
+<i>Sends to Carrier</i> is deprecated, but will continue to be supported for users that already have it. It's the sum of <i>Confirmed Deliveries</i>, <i>Rejections</i>, and <i>Sends</i> where delivery or rejection wasn’t confirmed by the carrier. This includes instances where carriers don’t provide delivery or rejected confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of send.
 {% endif %}
 
 {% if include.metric == "Spam" %}
@@ -167,15 +179,15 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
-<i>Survey Page Dismissals</i> is the total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+<i>Survey Page Dismissals</i> is the total clicks on the close (x) button on the survey question page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>.
 {% endif %}
 
 {% if include.metric == "Survey Submissions" %}
-<i>Survey Submissions</i> is the total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+<i>Survey Submissions</i> is the total clicks on the submit button of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>.
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered email, card, or AMP HTML message.
+<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered message.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -209,7 +221,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Unique Recipients</i> is the number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze.
+<i>Unique Recipients</i> is the number of unique daily recipients, or users who received a particular message in a day.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

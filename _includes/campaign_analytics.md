@@ -163,7 +163,7 @@ In this view, you can use the **Show Heatmap** toggle to bring up a visual view 
 
 #### Content Card metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Content Cards.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Content Cards.
 
 <style>
     .no-split {
@@ -376,14 +376,36 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 
 #### Push metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the definitions of all push metrics, refer to the [Report Metrics Glossary][1] and filter by push.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all push metrics, refer to the [Report Metrics Glossary][1] and filter by push.
 
-| Term | Description |
-| --------- | --- |
-| Bounces | The push notifications sent to these users were undeliverable. These users have been automatically unsubscribed from all future push notifications. See [Bounced push notifications](#bounced-push). |
-| Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
-| Opens | Instances including both _Direct Opens_ and _Influenced Opens_ in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Bounces</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} See <a href="#bounced-push">Bounced push notifications</a>.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Direct Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Opens</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
 
@@ -418,49 +440,130 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
 #### SMS metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the definitions of all SMS metrics, refer to the [Report Metrics Glossary][1] and filter by SMS.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all SMS metrics, refer to the [Report Metrics Glossary][1] and filter by SMS.
 
-| Term | Definition |
-| -- | -- |
-| Sent | A campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below. |
-| Sends to Carrier | This metric is deprecated, but will continue to be supported for users that already have it. <br><br> Braze has attempted to send the SMS through to the carriers. This stat is the sum of _Confirmed Deliveries_, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending. Note that this metric does not exist for all Braze mobile aggregators. |
-| Delivery Failures | Messages that were not attempted to be sent due to a failed outcome within aggregator logs. This could be due to queue overflow or invalid recipient number, depending on the associated aggregator error code. Reach out to [Braze Support]({{site.baseurl}}/braze_support/) for assistance in understanding the reasons for delivery failures. |
-| Confirmed Delivery | The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment. |
-| Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device or the phone number is no longer in service. As a Braze customer, rejections are charged toward your SMS allotment. |
-| Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
-| Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
-| Total Clicks | The total number (and percentage) of users who clicked within the delivered message. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Sent</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Sends to Carrier</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Delivery Failures</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Confirmed Delivery</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Rejections</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Opt-Out</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Help</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Total Clicks</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 {% elsif include.channel == "webhook" %}
 
 #### Webhook metrics
 
-Here are some key webhook metrics you may see in your analytics. To see the definitions of all webhook metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key webhook metrics you may see in your analytics. To see th full definitions of all webhook metrics used in Braze, refer to our [Report Metrics Glossary][1].
 
-| Term | Definition |
-| --- | --- |
-| Unique Recipients | The total number of users (unique, but only unique per day) that have received the particular webhook. |
-| Sends | _Sends_ (and _Messages Sent_) include all attempted sends, successful and unsuccessful. This metric counts when a webhook was processed and sent to the third party specified in that webhook, and does not signify whether or not the request was received. |
-| Errors | The total number of sends that were not successful. Errors are included in the _Sends_ count but are not included in the _Unique Recipients_ count. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Unique Recipients</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Sends</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Errors</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 {% elsif include.channel == "whatsapp" %}
 
 #### WhatsApp metrics
 
-Here are some key WhatsApp metrics you may see in your analytics. To see the definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key WhatsApp metrics you may see in your analytics. To see the full definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary][1].
 
-| Term | Definition |
-| --- | --- |
-| Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
-| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. | 
-| Delivery rate | The percentage of users who had a delivery over users who had a send. Calculation: (Deliveries) / (Sends)|
-| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. | 
-| Read rate | The percentage of users who read the message over users who had a send. Calculation: (Reads) / (Sends)|
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but not in the _Deliveries_ count. | 
-| Failure rate | The percentage of users who had unsuccessful sends over users who had a successful send. Calculation: (Failures) / (Sends)|
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Sends</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Deliveries</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Reads</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">Failures</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 #### End-user blocking and reporting metrics
 

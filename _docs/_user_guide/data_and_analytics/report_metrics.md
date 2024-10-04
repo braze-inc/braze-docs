@@ -64,9 +64,15 @@ Email, Web Push, iOS Push
 
 {% multi_lang_include metrics.md metric='Bounces' %} This could occur because there isn't a valid push token, the user unsubscribed after the campaign was launched, or the email address is inaccurate or deactivated.
 
+#### Email
+
 An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`).
 
 For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
+
+#### Push
+
+These users have been automatically unsubscribed from all future push notifications. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -170,7 +176,7 @@ Email
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}
+{% multi_lang_include metrics.md metric='Confirmed Deliveries' %} As a Braze customer, deliveries are charged toward your SMS allotment. 
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -320,6 +326,8 @@ SMS
 
 {% multi_lang_include metrics.md metric='Delivery Failures' %}
 
+Reach out to <a href="https://braze.com/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
 {% endapi %}
@@ -360,7 +368,7 @@ Email
 Webhook
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Errors' %}
+{% multi_lang_include metrics.md metric='Errors' %} Errors are included in the <i>Sends</i> count but are not included in the <i>Unique Recipients</i> count.
 
 {% endapi %}
 
@@ -384,7 +392,9 @@ Email
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Failures' %}
+{% multi_lang_include metrics.md metric='Failures' %} Failures are included in the <i>Sends</i> count but not in the <i>Deliveries</i> count.</td>
+
+<span class="calculation-line">Calculation (<i>Failure Rate</i>): (Failures) / (Sends)</span>
 
 {% endapi %}
 
@@ -397,6 +407,18 @@ Email
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Hard Bounce' %} If an email receives a hard bounce, we will stop any future requests to this email address.
+
+{% endapi %}
+
+{% api %}
+
+### Help
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Help' %} A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
 
 {% endapi %}
 
@@ -423,6 +445,30 @@ Email
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+
+{% endapi %}
+
+{% api %}
+
+### Opens
+
+{% apitags %}
+Web Push, iOS Push, Android Push
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Opens' %}
+
+{% endapi %}
+
+{% api %}
+
+### Opt-Out
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Opt-Out' %} A user reply is measured anytime a user sends an inbound message within four hours of receiving your message.
 
 {% endapi %}
 
@@ -531,16 +577,33 @@ Email
 
 {% api %}
 
+### Sent
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Sent' %}
+
+<span class="calculation-line">Calculation: Count</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Sends
 
 {% apitags %}
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Sends' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
+{% multi_lang_include metrics.md metric='Sends' %} This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
 
 {% alert tip %}
-For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/).
+For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+
+- **At launch or step entry:** The number of cards created and available to be seen. This doesn't count whether the users viewed the card.
+- **At first impression:** The number of cards displayed to users.
 {% endalert %}
 
 <span class="calculation-line">Calculation: Count</span>
@@ -576,11 +639,7 @@ For Content Cards, this metric is calculated differently depending on what you s
 SMS
 {% endapitags %}
 
-{% alert note %}
-*Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
-{% endalert %}
-
-{% multi_lang_include metrics.md metric='Sends to Carrier' %}
+{% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -813,7 +872,7 @@ Email, LINE
 All
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.
+{% multi_lang_include metrics.md metric='Unique Recipients' %} This number is received from Braze.<br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.
 
 <span class="calculation-line">Calculation: Count</span>
 
