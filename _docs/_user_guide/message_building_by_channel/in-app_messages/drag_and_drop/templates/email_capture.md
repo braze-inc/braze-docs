@@ -24,12 +24,12 @@ If you want to include text links that do not dismiss the message, users must be
 {% sdk_min_versions swift:6.2.0 android:26.0.0 %}
 
 {% alert warning %}
-If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message, and the user will not be able to return to the message to submit the form.
+If you include a link in your in-app message that redirects to a URL and the user isn't on the minimum SDK versions specified, clicking on the link will close the message, and the user won't be able to return to the message to submit the form.
 {% endalert %}
 
 ## Creating an email sign-up form
 
-When creating a drag-and-drop in-app message, select **Email sign-up** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ### Step 1: Set up your message styles
 
@@ -43,7 +43,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 #### Email validation
 
-If the user enters an email address that includes any unaccepted special characters, they will see a generic error indicator and will not be able to submit the form. This error message is not customizable. You can view the error behavior in the **Preview & Test** tab and on your test device. Learn more about how Braze formats email addresses in [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
+If the user enters an email address that includes any unaccepted special characters, they will see a generic error indicator and won't be able to submit the form. This error message isn't customizable. You can view the error behavior in the **Preview & Test** tab and on your test device. Learn more about how Braze formats email addresses in [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 ### Step 3: Add disclaimer language (optional)
 
@@ -59,18 +59,18 @@ You can customize the look and feel of your message using the drag-and-drop [in-
 
 ## Reporting
 
-Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
+After your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
 
 ## Best practices
 
 ### Double opt-in verification
 
-To make sure that anyone who signed up for your list meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email sign-up form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
+To make sure that anyone who signed up for your list meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up through your email sign-up form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
 
 One of the ways you can set this up is through Canvas Flow:
 
 1. Build a Canvas that is action-based and set it up to trigger when a user adds an email address to Braze. Make sure that you allow for targeting users who are new to the platform (for example, by using a segment with no filters in the Canvas).
-2. Create a message step with a CTA that has a hyperlink to the {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} Liquid tag. This will change the user's email subscription state to `opted_in` when they click the button.
+2. Create an email message step with a CTA that has a hyperlink to the {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} Liquid tag. This will change the user's email subscription state to `opted_in` when they click the button.
 3. Add an [Action Paths step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths#action-paths).
 4. For the first path, trigger an email when a user changes their email subscription status to `opted_in`. This email should inform users that their email has been confirmed.
 5. Set up the other path to exit the Canvas after the window expires.
