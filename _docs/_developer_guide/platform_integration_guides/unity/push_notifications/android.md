@@ -113,3 +113,6 @@ Although Braze can handle standard deep links (such as website URLs, Android URI
 
 For setup guidance, visit [Deep Linking to In-App Resources](https://developer.android.com/training/app-links/deep-linking).
 
+## Adding Braze Push notification icons
+
+To add Push icons to your project, create an AAR plug-in or Android library that contains the icon image files. For steps and information, refer to Unity's documentation: [Android Library Projects and Android Archive plug-ins](https://docs.unity3d.com/Manual/AndroidAARPlugins.html).
