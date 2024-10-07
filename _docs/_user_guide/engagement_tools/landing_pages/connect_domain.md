@@ -3,7 +3,7 @@ nav_title: Connecting Your Domain
 article_title: Connecting Your Domain
 description: "This article covers how to connect your own custom domain to Braze landing pages."
 page_order: 1
-alias: /landing_pages/connect_subdomain/
+alias: /landing_pages/connect_domain/
 ---
 
 # Connecting your domain
