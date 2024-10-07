@@ -108,7 +108,7 @@ table td {
       <td>There are too many requests sent in a given amount of time.</td>
       <td>
         <ul>
-          <li>Lower the rate limit frequency capping on your campaign or Canvas step.</li>
+          <li>Lower the rate limit on your campaign or Canvas step.</li>
         </ul>
       </td>
     </tr>
