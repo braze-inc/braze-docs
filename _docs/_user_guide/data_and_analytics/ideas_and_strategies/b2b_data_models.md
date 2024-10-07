@@ -8,6 +8,10 @@ description: "Learn how to use Braze data tools to create B2B models."
 
 > This collection of use cases demonstrates how you can use Braze data tools to create an effective and efficient B2B data model that helps you target, trigger, personalize, and send messages to your business users. 
 
+{% alert note %}
+These use case recommendations may change over time as Braze builds out our B2B capabilities.
+{% endalert %}
+
 Some of the ways you can use Braze to create B2B data models include:
 
 - [Mapping sales customer relationship management (CRM) IDs to Braze](#mapping-sales-crm-ids-to-braze)
@@ -53,7 +57,7 @@ For this use case, we suggest using the following table to map your sales CRM ID
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 {% alert note %}
-We recommend using [aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) instead of `external_id` to map Salesforce lead and contact identifiers back to Braze. This is because most of our users will create their own (non-CRM specific) UUID for their own users when they log into their profiles to access their platform. This UUID is typically the preferred `external_id` in Braze because it reduces the amount of lookups required when identifying and running product-led growth style initiatives.
+We recommend using [aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) instead of `external_id` to map Salesforce lead and contact identifiers back to Braze. This is because most of our users will create their own (non-CRM specific) Universal Unique Identifier (UUID) for their own users when they log into their profiles to access their platform. This UUID is typically the preferred `external_id` in Braze because it reduces the amount of lookups required when identifying and running product-led growth style initiatives.
 {% endalert %}
 
 ## Use cases for business objects
@@ -191,4 +195,4 @@ To set up connected sources, refer to [Integrating connected sources]({{site.bas
 
 #### Relating business objects to user profiles
 
-One of your connected source’s tables should include a `user_id` that matches the `external_user_id` set in Braze for your users. The user profile setup above will use your lead and `contact_id`s as your `external_id`, so you should ensure your `lead/contact` tables include these IDs. 
+One of your connected source’s tables should include a `user_id` that matches the `external_id` set in Braze for your users. The user profile setup above will use your lead and `contact_id`s as your `external_id`, so you should ensure your `lead/contact` tables include these IDs.
