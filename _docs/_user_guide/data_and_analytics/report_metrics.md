@@ -326,7 +326,7 @@ SMS
 
 {% multi_lang_include metrics.md metric='Delivery Failures' %}
 
-Reach out to <a href="https://braze.com/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
@@ -406,7 +406,9 @@ WhatsApp
 Email
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Hard Bounce' %} If an email receives a hard bounce, we will stop any future requests to this email address.
+{% multi_lang_include metrics.md metric='Hard Bounce' %} 
+
+When this occurs, Braze marks the email address as invalid but does not update the user's [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/). If an email receives a hard bounce, we will stop any future requests to this email address.
 
 {% endapi %}
 

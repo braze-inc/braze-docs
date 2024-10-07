@@ -41,7 +41,9 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/emai
 
 ### Bounces and invalid emails
 
-Hard bounces can happen if the email is invalid or doesn't exist. In this case, Braze will mark the user's email address as invalid and will not attempt to send any further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
+
+If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ### Updating email subscription states
 
