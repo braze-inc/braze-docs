@@ -42,7 +42,7 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to TikTok
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, click **Connect TikTok**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.

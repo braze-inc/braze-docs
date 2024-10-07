@@ -42,7 +42,7 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to Pinterest
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, click **Connect Pinterest**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
