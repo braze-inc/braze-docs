@@ -71,7 +71,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Conversion Rate" %}
-<i>Conversion Rate</i> is the percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
+<i>Conversion Rate</i> is the percentage of times a defined event occurred compared to all recipients of a message. This defined event is determined when you build the campaign.
 {% endif %}
 
 {% if include.metric == "Conversion Window" %}

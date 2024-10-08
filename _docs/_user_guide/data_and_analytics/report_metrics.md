@@ -268,8 +268,6 @@ The metric of total daily <i>Unique Impressions</i> is used to calculate the <i>
 
 Impressions for in-app messages can only be counted once per day. On the other hand, the number of times a user completes a desired action (a "conversion") can increase within a 24-hour period. While conversions can happen more than once per day, impressions cannot. Therefore, if a user completes a conversion multiple times within a day, the <i>Conversion Rate</i> can increase accordingly, but impressions will only be counted once.
 
-<!-- Check the different calculations. They're misaligned on the Docs site.-->
-
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
