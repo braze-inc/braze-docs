@@ -194,7 +194,7 @@ The option to increase the maximum length will not be available if the attribute
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert tip %}
-For more on how to use our regular expressions (regex) filter, check out these resources:
+For more on how to use regular expressions (regex), check out these resources:
 - [Perl compatible regular expressions (PCRE)](https://www.regextester.com/pregsyntax.html)
 - [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [Regex debugger and tester](https://www.regex101.com/)
