@@ -17,7 +17,7 @@ description: "This reference article discusses the concept of rate limiting and 
 Braze allows you to control marketing pressure by rate limiting your campaigns, regulating the amount of outgoing traffic from your platform. You can implement two different types of rate limiting for your campaigns: 
 
 1. [**User-centric rate limiting:**](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
-2. [**Delivery speed rate limiting:**](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers. T
+2. [**Delivery speed rate limiting:**](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
 
 ### User-centric rate limiting
 
@@ -103,9 +103,9 @@ When sending a multi-channel campaign with a speed rate limit, each channel is s
 - Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
     - For example, if you send a campaign that contains an email and a push notification, you may have 10,000 users with valid push tokens and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost nine hours later.
 
-{% alert note %}
-Push campaigns delivering on multiple push platforms (such as iOS or Android) apply the same rate limiting process. For example, let's say we have a push campaign using Android and iOS with a 10,000 rate limit. Braze will send up to 20,000 total push notifications each minute (10,000 for Android and 10,000 for iOS).
-{% endalert %}
+#### Multi-platform push campaigns
+
+For push campaigns delivering on multiple platforms, the selected rate limit will be equally distributed across platforms. A push campaign leveraging Android and iOS with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the two platforms.
 
 #### Canvas delivery speed rate limiting {#canvas-delivery-speed}
 
@@ -129,14 +129,6 @@ Instead of attempting to make up for the delay and send the remaining 4,000 mess
 | 8      | 5,000      | 10,000                    |
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-#### Multichannel campaigns
-
-Keep in mind that the per-minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10,000 per minute, we will send 20,000 total messages each minute (10,000 email and 10,000 push).
-
-#### Multi-platform push campaigns
-
-For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android and iOS with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the two platforms.
 
 ## About frequency capping
 
