@@ -272,7 +272,10 @@ These are use cases of how users can be updated after you follow the setup steps
 
 LINE IDs are automatically received by Braze when a user follows your channel, or when you use the one-time “sync followers” workflow. LINE IDs are also specific to the channel that users follow, so it's unlikely that users can provide their LINE IDs.
 
-To combine a LINE ID with an existing Braze user profile, you can use the LINE login method.
+There are two ways to combine a LINE ID with an existing Braze user profile:
+
+- [LINE login](#line-login)
+- [User account linking](#user-account-linking)
 
 ### LINE Login
 
