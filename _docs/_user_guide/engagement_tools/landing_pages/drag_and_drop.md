@@ -1,9 +1,8 @@
 ---
-nav_title: Drag-and-Drop Landing Pages
+nav_title: Drag-and-Drop Editor
 article_title: Creating Drag-and-Drop Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
-page_order: 31
-hidden: true
+page_order: 0
 alias: /landing_pages/drag_and_drop/
 ---
 
@@ -60,6 +59,8 @@ The editor uses two types of components for landing page composition: rows and b
 ![The "Build" editor section containing "Rows" and "Form Blocks".][4]{: style="max-width:30%;"}
 
 #### Form block
+
+Use various form block components to log custom and standard profile attributes and custom events. The input field form block can log both standard and custom attributes for your users, and the phone capture and email capture form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both on form submission. 
 
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
@@ -121,7 +122,7 @@ No, there aren't any technical requirements.
 
 ### Is there an HTML editor for landing pages?
 
-No, this isn't currently available.
+You can edit the HTML of a landing page using the Custom Code block.
 
 ### Is reporting available for landing pages?
 
@@ -135,12 +136,10 @@ No, this isn’t currently available. You can use the Custom Code block in the e
 
 Because landing pages are currently in beta, additional features are in development. These include:
 
-* Custom subdomain support
 * New Liquid tag for linking a landing page in a Braze messaging channel
 * Basic reporting page
 * Drag-and-drop form blocks for checkboxes and dropdowns
 * Standard event for tracking and retargeting based on form submissions
-
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}

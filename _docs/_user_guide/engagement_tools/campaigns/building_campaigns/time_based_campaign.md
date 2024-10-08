@@ -11,7 +11,9 @@ description: "This reference article covers time-based functionalities for campa
 
 > When using campaigns, you can use the time-based scheduling options to reach your audience. These time-based functionalities include campaigns that are set to scheduled delivery and action-based delivery.
 
-You can also check out our [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course for more on campaign delivery. 
+{% alert tip %}
+For more on campaign delivery, check out our dedicated [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course.
+{% endalert %}
 
 ## Scheduled delivery
 
@@ -30,7 +32,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. To learn more, check out [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. To learn more, check out [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![A campaign with the option "Intelligent Timing" selected to send once at the optimal time on July 13, 2021 with a custom fallback time of 9 am for users without enough data in their profiles to calculate an optimal time.][3]
@@ -76,7 +78,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks. | N/A |
+| Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks. For [in-app message campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), you can set a delay up to two hours only. | N/A |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Schedule Delay set to send campaign after one day after the trigger event occurs.][7]

@@ -102,7 +102,7 @@ In the Android and FireOS SDK, the message center logic is driven by the `class_
 
 {% tabs %}
 {% tab Kotlin %}
-**Using `class_type` for on click behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
 
 ```kotlin
@@ -150,7 +150,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 {% endtab %}
 {% tab Java %}
-**Using `class_type` for on click behavior**<br>
+**Using `class_type` for on-click behavior**<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
 
 ```java

@@ -1,5 +1,5 @@
 ---
-nav_title: "콘텐츠 카드 개체"
+nav_title: "콘텐츠 카드 객체"
 article_title: 콘텐츠 카드 메시징 객체
 page_order: 4
 page_type: reference
@@ -8,9 +8,9 @@ description: "이 참조 문서에서는 Braze 콘텐츠 카드 객체의 다양
 
 ---
 
-# 콘텐츠 카드 개체
+# 콘텐츠 카드 객체
 
-> `content_card` 개체를 사용하면 [메시징 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging) 통해 콘텐츠 카드를 수정하거나 만들 수 있습니다.
+> `content_card` 객체를 사용하면 [메시징 엔드포인트]({{site.baseurl}}/api/endpoints/messaging)를 통해 콘텐츠 카드를 만들 수 있습니다.
 
 ```json
 {
@@ -34,5 +34,5 @@ description: "이 참조 문서에서는 Braze 콘텐츠 카드 객체의 다양
 ```
 
 {% alert important %}
-현재 Braze는 최대 30일의 만료 시간을 지원합니다.
+현재 Braze는 최대 만료 시간을 30일로 지원합니다.
 {% endalert %}

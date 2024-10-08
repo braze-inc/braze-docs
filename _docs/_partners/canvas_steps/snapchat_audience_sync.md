@@ -43,13 +43,13 @@ You must ensure the following items are created, completed and/or accepted befor
 
 ### Step 1: Connect to Snapchat
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. In the Snapchat Audience Export module, click **Connect Snapchat**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. Under Snapchat Audience Sync, select **Connect Snapchat**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Snapchat technology page in Braze that includes an Overview module and Snapchat Audience Sync module with the Connected Snapchat button.][1]{: style="max-width:80%;"}
+![Snapchat technology page in Braze that includes an Overview section and Snapchat Audience Sync section with the Connected Snapchat button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Snapchat OAuth page to authorize Braze for the permissions related to your Audience Sync integration.
 

@@ -229,7 +229,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 {% endtab %}
 {% endtabs %}
 
-## ステップ5: ダッシュボードでジオフェンスを有効にする
+## ステップ 5: ダッシュボードでジオフェンスを有効にする
 
 Android では、1つのアプリに保存できるジオフェンスは100個までとなっています。Braze の位置情報製品は、利用可能であれば最大20のジオフェンススロットを使用します。アプリ内の他のジオフェンス関連機能への偶発的または不要な中断を防ぐため、位置情報ジオフェンスはダッシュボード上で個々のアプリに対して有効にする必要があります。
 
@@ -241,7 +241,7 @@ Braze 位置情報製品が正しく動作するには、アプリが利用可�
 
 ### 設定ページからジオフェンスを有効にする
 
-![Brazeの設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
+![Braze の設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
 ## ステップ 6: ジオフェンスの更新を手動でリクエストする (オプション)
 

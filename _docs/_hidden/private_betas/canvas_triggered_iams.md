@@ -208,7 +208,7 @@ You can choose from the following trigger actions to target your users:
 - **Start Session:** Target users who start a session in any app or a specific app
 - **Perform Custom Event:** Target users who perform the selected custom event
 
-A user has to enter the Canvas step, start a session, and then perform the trigger to receive an in-app message. This means mid-session updates aren't supported.
+A user has to enter the Canvas step, start a session, and then perform the trigger to receive an in-app message. This means mid-session updates aren't supported. For example, if the trigger is to start a session, the user only needs to enter the Canvas step and start a session to receive the in-app message. If the trigger is not to start a session, the user has to enter the Canvas step, start a session, and then perform the trigger to receive the in-app message.
 
 !["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
 

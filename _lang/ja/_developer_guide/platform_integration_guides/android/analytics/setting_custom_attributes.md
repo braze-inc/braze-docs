@@ -57,7 +57,7 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 #### カスタム属性値を設定する
 
 {% tabs local %}
-{% tab 文字列 %}
+{% tab String %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -97,7 +97,7 @@ Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attri
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab ブール %}
+{% tab Boolean %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -115,7 +115,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 長い %}
+{% tab Long %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -133,7 +133,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab フロート %}
+{% tab Float %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -151,7 +151,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab ダブル %}
+{% tab Double %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -263,9 +263,9 @@ REST API を使用してユーザー属性を設定することもできます�
 
 | サブスクリプションステータス | 定義 |
 | ------------------- | ---------- |
-| `OPTED_IN` | 購読し、明示的にオプトインしました |
-| `SUBSCRIBED` | 購読しましたが、明示的にオプトインしていません |
-| `UNSUBSCRIBED` | 購読を解除し、明示的にオプトアウトしました |
+| `OPTED_IN` | 配信登録済み、かつ明示的にオプトイン済み |
+| `SUBSCRIBED` | 配信登録済みだが、明示的なオプトインは未実行 |
+| `UNSUBSCRIBED` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}

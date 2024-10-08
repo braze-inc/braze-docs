@@ -211,12 +211,12 @@ To help manage this, Braze offers tooling and logic that supports a well-integra
 
 | Usage | Description |
 | --- | --- |
-| Only update existing user profiles | All Braze user profiles that have a `native_line_id` that follows the LINE channel will be updated to have a subscription group status of “Subscribed”. |
-| Update existing profile and create new | All Braze user profiles that have a `native_line_id` that follows the LINE channel will be updated to have a subscription group status of “Subscribed”. <br><br> Any follower of the LINE channel that doesn't have a Braze user profile with the `native_line_id` will have:<br> - An anonymous user profile created with `native_line_id` set to the user LINE ID following the channel <br>- A user alias `line_id` set to the user LINE ID following the channel <br>- A subscription group status of “Subscribed”. |
+| Only update existing user profiles | All Braze user profiles that have a `native_line_id` that follows the LINE channel will be updated to have a subscription group status of `subscribed`. |
+| Update existing profile and create new | All Braze user profiles that have a `native_line_id` that follows the LINE channel will be updated to have a subscription group status of `subscribed`. <br><br> Any follower of the LINE channel that doesn't have a Braze user profile with the `native_line_id` will have:<br> - An anonymous user profile created with `native_line_id` set to the user LINE ID following the channel <br>- A user alias `line_id` set to the user LINE ID following the channel <br>- A subscription group status of `subscribed`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {: start="2"}
-2. **Event updates:** These can be used to update a user's subscription status. When Braze receives user event updates for the integrated LINE channel and the event is a follow, the user profile will have a subscription group status of “Subscribed”. If the event is an unfollow, the user profile will have a subscription group status of “Unsubscribed”.<br><br>- All Braze user profiles with a matching `native_line_id` will be automatically updated. <br>- If no matching user profile exists for an event, Braze will [create an anonymous user](https://www.braze.com/docs/line/user_management/).
+2. **Event updates:** These can be used to update a user's subscription status. When Braze receives user event updates for the integrated LINE channel and the event is a follow, the user profile will have a subscription group status of `subscribed`. If the event is an unfollow, the user profile will have a subscription group status of `unsubscribed`.<br><br>- All Braze user profiles with a matching `native_line_id` will be automatically updated. <br>- If no matching user profile exists for an event, Braze will [create an anonymous user](https://www.braze.com/docs/line/user_management/).
 
 ## Use cases
 
@@ -224,20 +224,20 @@ These are use cases of how users can be updated after you follow the setup steps
 
 ##### Existing user profile follows LINE channel 
 
-1. The Braze user profile is updated with a `native_line_id` attribute. Its default subscription status is “Unsubscribed”.
-2. The subscription sync tool is run, finds that the user is following the LINE channel, and then updates the user profile with the subscription status “Subscribed”.
+1. The Braze user profile is updated with a `native_line_id` attribute. Its default subscription status is `unsubscribed`.
+2. The subscription sync tool is run, finds that the user is following the LINE channel, and then updates the user profile with the subscription status `subscribed`.
 3. If any subscription status changes occur (such as the user blocks, unfriends, or refollows the channel), Braze receives the update from LINE and updates the user profile with the `native_line_id` accordingly.
 
 ##### Existing user profile blocks, unfriends, or unfollows LINE channel 
 
-1. The Braze user profile is updated with a `native_line_id` attribute. Its default subscription status is “Unsubscribed”.
-2. The subscription sync tool doesn't find that the user is following the LINE channel and the user’s subscription status remains as “Unsubscribed”.
-3. If the user later follows the channel, Braze receives the update from LINE and updates the user profile with the subscription status “Subscribed”.
+1. The Braze user profile is updated with a `native_line_id` attribute. Its default subscription status is `unsubscribed`.
+2. The subscription sync tool doesn't find that the user is following the LINE channel and the user’s subscription status remains as `unsubscribed`.
+3. If the user later follows the channel, Braze receives the update from LINE and updates the user profile with the subscription status `subscribed`.
 
 ##### User profile creation occurs after LINE follow
 
 1. The channel gets a new LINE follower.
-2. Braze creates an anonymous user profile with the `native_line_id` attribute set to be the follower’s LINE ID, and a user alias of `line_id` set to be the follower’s LINE ID. The profile has a subscription status of “Subscribed”.
+2. Braze creates an anonymous user profile with the `native_line_id` attribute set to be the follower’s LINE ID, and a user alias of `line_id` set to be the follower’s LINE ID. The profile has a subscription status of `subscribed`.
 3. The user is identified as having the LINE ID through [user reconciliation](#user-id-reconciliation).
   - The anonymous user profile can become identified using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint. Subsequent updates (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) to this user profile can target the user by this known `external_id`.
 
@@ -272,7 +272,10 @@ These are use cases of how users can be updated after you follow the setup steps
 
 LINE IDs are automatically received by Braze when a user follows your channel, or when you use the one-time “sync followers” workflow. LINE IDs are also specific to the channel that users follow, so it's unlikely that users can provide their LINE IDs.
 
-To combine a LINE ID with an existing Braze user profile, you can use the LINE login method.
+There are two ways to combine a LINE ID with an existing Braze user profile:
+
+- [LINE login](#line-login)
+- [User account linking](#user-account-linking)
 
 ### LINE Login
 
@@ -295,7 +298,7 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 5. Send the new or updated user information to Braze using the [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 
-#### Use cases
+#### Workflows
 
 ##### Existing follower uses LINE Login
 
@@ -314,7 +317,62 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 3. You either:
   - Update an existing user profile with that email to also have the user’s LINE ID.
   - Create a new user profile with the email and LINE ID.
-4. When the user follows your LINE Official Account, Braze receives a follow event and updates the user’s subscription status to “Subscribed”.
+4. When the user follows your LINE Official Account, Braze receives a follow event and updates the user’s subscription status to `subscribed`.
+
+### User account linking 
+
+This method allows users to link their LINE account to your app’s user account. You can then use Liquid in Braze, such as {% raw %}`{{line_id}}`{% endraw %}, to create a personalized URL for the user that passes the user's LINE ID back to your website or app, which can then be associated with a known user.
+
+1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![][9]
+2. Create a message incentivizing users to log into your website or app, passing the user's LINE ID as a query parameter (through Liquid), such as:
+
+```
+Thanks for following Flash n' Thread on LINE! For personalized offers and 20% off your next purchase, sign-in to your account: https://flashandthread.com/sign_in?line_user_id={{line_id}}
+```
+
+{: start="3"}
+3. Create a follow-up message that delivers the coupon code.
+4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![][10]
+
+#### How it works
+
+After the user logs in, a change is made on your website or app so that the user ID is sent back to Braze to associate it with the LINE ID that was passed as part of the URL, with example code such as:
+
+```json
+const currentUrl = new URL(window.location.href)
+const queryParams = new URLSearchParams(currentUrl.search);
+const lineUserId = queryParams.get("line_user_id")
+
+if (user && isLoggedIn && lineUserId) {
+  post(
+   "https://rest.iad-03.braze.com	/users/identify",
+   {
+     "aliases_to_identify": [
+       {
+   "external_id": user.getUserId(),
+   "user_alias": {
+     "alias_name": lineUserId,
+     "alias_label": "line_id"
+   }
+ }
+      ]
+    }
+  )
+  braze.logCustomEvent("identified_line_user_for_promotion");
+}
+```
+
+#### Workflows
+
+##### Existing user follows your LINE channel
+
+**Scenario:** An existing user in Braze follows your channel on LINE.
+
+1. LINE sends Braze a follow event.
+2. Braze creates an anonymous user profile with the LINE ID, `line_id` user alias, and LINE subscription group status of `subscribed`.
+3. The user receives a LINE message with a link to your website and app and logs in. Their user profile is now known.
+4. The anonymous user profile that was created is identified and is merged through the [/users/identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) onto the user’s known user profile. The known user profile now contains the LINE ID and has a subscription status of `subscribed`.
+5. (Optional) The user receives a LINE message with the coupon code and Braze logs the send to the Braze user profile.
 
 ## Creating LINE test users in Braze
 
@@ -337,3 +395,5 @@ Make sure the Canvas doesn't have global control or control groups preventing se
 [6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
 [7]: {% image_buster /assets/img/line/trigger.png %}
 [8]: {% image_buster /assets/img/line/message.png %}
+[9]: {% image_buster /assets/img/line/account_link_1.png %}
+[10]: {% image_buster /assets/img/line/account_link_2.png %}

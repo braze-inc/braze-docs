@@ -72,26 +72,26 @@ POST 페이로드가 서버에서 수락된 경우 성공적인 메시지에는 
 
 | 오류 코드 | 설명 |
 |---|---|
-| `5XX Internal Server Error` | 지수 백오프를 사용하여 요청을 다시 시도합니다.
-| `400 Bad Request` | 잘못된 구문.
-| `400 No Recipients` | 요청에 외부 ID 또는 세그먼트 ID가 없거나 푸시 토큰이 없습니다.
-| `400 Invalid Campaign ID` | 제공한 캠페인 ID에 대한 메시징 API 캠페인을 찾을 수 없습니다.
-| `400 Message Variant Unspecified` | 캠페인 ID는 제공하지만 메시지 변형 ID는 제공하지 않습니다.
-| `400 Invalid Message Variant` | 유효한 캠페인 ID를 제공했지만 메시지 변형 ID가 해당 캠페인의 메시지 중 어느 것과도 일치하지 않습니다.
-| `400 Mismatched Message Type` | 메시지 중 하나 이상에 대해 잘못된 메시지 유형의 메시지 변형을 제공했습니다.
+| `5XX Internal Server Error` | 지수 백오프를 사용하여 요청을 다시 시도하세요.|
+| `400 Bad Request` | 구문이 잘못되었습니다.|
+| `400 No Recipients` | 요청에 외부 ID 또는 세그먼트 ID가 없거나 푸시 토큰이 없습니다.|
+| `400 Invalid Campaign ID` | 제공한 캠페인 ID에 대한 메시징 API 캠페인을 찾을 수 없습니다.|
+| `400 Message Variant Unspecified` | 캠페인 ID는 제공하지만 메시지 변형 ID는 제공하지 않습니다.|
+| `400 Invalid Message Variant` | 유효한 캠페인 ID를 제공했지만 메시지 변형 ID가 해당 캠페인의 메시지와 일치하지 않습니다.|
+| `400 Mismatched Message Type` | 메시지 중 하나 이상에 잘못된 메시지 유형의 메시지 변형을 제공했습니다.|
 | `400 Invalid Extra Push Payload` | `apple_push` 또는 `android_push` 에 `extra` 키를 제공하지만 사전이 아닙니다.|
-| `400 Max Input Length Exceeded` | `/users/track` 엔드포인트에 도달할 때 75개 이상의 외부 ID를 호출하여 발생했습니다.|
-| `400 The max number of external_ids and aliases per request was exceeded` | 50개 이상의 외부 ID 호출로 인해 발생했습니다.|
-| `400 The max number of ids per request was exceeded` | 50개 이상의 외부 ID 호출로 인해 발생했습니다.|
-| `400 No message to send` | 메시지에 페이로드가 지정되지 않았습니다.
-| `400 Slideup Message Length Exceeded` | 슬라이드업 메시지가 140자를 초과했습니다.
+| `400 Max Input Length Exceeded` | `/users/track` 엔드포인트에 도달할 때 75개 이상의 외부 ID를 호출하여 발생합니다.|
+| `400 The max number of external_ids and aliases per request was exceeded` | 50개 이상의 외부 ID를 호출하여 발생했습니다.|
+| `400 The max number of ids per request was exceeded` | 50개 이상의 외부 ID를 호출하여 발생했습니다.|
+| `400 No message to send` | 메시지에 페이로드가 지정되지 않았습니다.|
+| `400 Slideup Message Length Exceeded` | 슬라이드업 메시지는 140자를 초과할 수 없습니다.|
 | `400 Apple Push Length Exceeded` | JSON 페이로드가 1,912바이트 이상입니다.|
-| `400 Android Push Length Exceeded` | JSON 페이로드가 4,000바이트 이상입니다.
-| `400 Bad Request` | `send_at` datetime.| 구문 분석할 수 없습니다.
-| `400 Bad Request` | 귀하의 요청에서 `in_local_time` 은 맞지만 `time` 은 귀하의 회사 표준 시간대가 지났습니다.
+| `400 Android Push Length Exceeded` | JSON 페이로드가 4,000바이트 이상입니다.|
+| `400 Bad Request` | `send_at` 날짜 시간을 구문 분석할 수 없습니다.|
+| `400 Bad Request` | 요청에서 `in_local_time` 은 맞지만 `time` 은 회사 표준 시간대가 지났습니다.|
 | `401 Unauthorized` | 잘못된 API 키 |
-| `403 Forbidden` | 요금제가 지원되지 않거나 계정이 비활성화되어 있습니다.
-| `403 Access Denied` | 사용 중인 REST API 키에 충분한 권한이 없는 경우 **설정** 페이지에서 API 키 권한을 확인하세요.
+| `403 Forbidden` | 요금제를 지원하지 않거나 계정이 비활성화된 경우.|
+| `403 Access Denied` | 사용 중인 REST API 키에 충분한 권한이 없는 경우 **설정** 페이지에서 API 키 권한을 확인하세요.|
 | `404 Not Found` | 잘못된 URL입니다. |
 | `429 Rate Limited` | 요금 한도 초과. |
 {: .reset-td-br-1 .reset-td-br-2}

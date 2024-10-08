@@ -6,7 +6,7 @@ page_type: reference
 page_order: 4.8
 ---
 
-# 사용 사례
+# API 사용 사례
 
 > [Braze REST API]({{site.baseurl}}/api/basics/)는 고객 참여 전략을 관리하고 최적화하는 데 도움이 되도록 설계된 다양한 엔드포인트를 제공합니다. 이 문서에서는 카탈로그, 이메일 목록 및 주소, 내보내기, 메시지, 환경설정 센터, SMS, 구독 그룹, 템플릿 및 사용자 데이터 등 각 엔드포인트 컬렉션의 여러 사용 사례를 살펴봅니다.<br><br>각 섹션에서는 단계별 가이드, 코드 샘플 및 예상 결과와 함께 시나리오를 소개합니다. 이 글을 마치면 Braze REST API를 사용하여 고객 참여 노력을 강화하는 방법을 더 잘 이해할 수 있을 것입니다.
 
@@ -84,7 +84,7 @@ Siege Valley Health에서 Braze 대시보드를 통해 필터링하지 않고 �
 
 캔버스를 감사하는 첫 번째 작업의 경우 [`/canvas/list` 엔드포인트]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)를 사용하여 이름과 태그가 포함된 캔버스 목록을 내보냅니다. 다음은 요청 예시입니다:
 
-{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
+{% details 시즈 밸리 헬스 마케팅 팀이 받을 수 있는 반응은 다음과 같습니다. %}
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -150,7 +150,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Here’s the response the PoliterWeekly marketing team would receive. %}
+{% details 폴리터위클리 마케팅 팀이 받은 반응은 다음과 같습니다. %}
 
 ```json
 {
@@ -182,7 +182,7 @@ CashBlastr의 주요 목표는 사람들이 빠른 결제를 주고받을 수 �
 - 14235662245
 - 14324567892
 
-[`/sms/invalid_phone_numbers/remove` 엔드포인트로]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) 요청을 보내려면 전화번호는 [e.164 형식](https://en.wikipedia.org/wiki/E.164)의 문자열 배열이어야 하며, 요청당 최대 50개의 전화번호를 입력할 수 있습니다. 전화번호 목록이 50개를 넘지 않으므로 다음은 CashBlastr의 개발팀이 보내는 요청 본문의 예시입니다:
+[`/sms/invalid_phone_numbers/remove` 엔드포인트로]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) 요청을 보내려면 전화 번호는 [e.164 형식의](https://en.wikipedia.org/wiki/E.164) 문자열 배열이어야 하며 요청당 최대 50개의 전화 번호가 포함되어야 합니다. 전화번호 목록이 50개를 넘지 않으므로 다음은 CashBlastr의 개발팀이 보내는 요청 본문의 예시입니다:
 
 ```json
 Content-Type: application/json
@@ -219,7 +219,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 이 시나리오에서 WorkFriends는 지금까지 기존 브랜딩과 함께 단일 HTML 템플릿을 사용해 왔습니다. 브랜드 아이덴티티를 맞추기 위해 WorkFriends는 새 템플릿으로 전환하기 전에 이 HTML 템플릿에 활용할 수 있는 유용한 정보가 있는지 확인하고자 합니다.
 
-{% details Here’s the response that the WorkFriends team would receive. %}
+{% details WorkFriends 팀에서 받을 수 있는 답변은 다음과 같습니다. %}
 
 ```json
 Content-Type: application/json
@@ -239,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-이 템플릿 정보를 검토한 후 WorkFriends는 [`/templates/email/update` 엔드포인트]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)를 사용하여 API를 통해 이메일 템플릿을 업데이트할 수도 있습니다. Braze 대시보드의 이메일 템플릿에 이러한 편집 내용이 반영됩니다.
+이 템플릿 정보를 검토한 후 WorkFriends는 [`/templates/email/update` 엔드포인트를]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) 사용하여 API를 통해 이메일 템플릿을 업데이트할 수도 있습니다. Braze 대시보드의 이메일 템플릿에 이러한 편집 내용이 반영됩니다.

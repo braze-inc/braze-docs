@@ -18,6 +18,7 @@ The following values can be substituted into a message, depending on their avail
 
 - [Basic user information][1] (for example, `first_name`, `last_name`, `email_address`)
 - [Custom attributes][2]
+    - [Nested custom attributes][3]
 - [Custom event properties][11]
 - [Most recently used device information][39]
 - [Target device information][40]
@@ -137,6 +138,7 @@ As long as the Content Block is at the top of your message, every time the varia
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
 [9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information

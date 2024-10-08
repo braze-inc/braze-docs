@@ -32,12 +32,12 @@ noindex: true
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、質の高いユーザー体験を促進するため、アプリ内メッセージは30秒に1回に制限されている。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが30秒に1回に制限されています。
 
 この値は、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内の `ABKMinimumTriggerTimeIntervalKey` を使用してオーバーライドできます。`ABKMinimumTriggerTimeIntervalKey` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
@@ -48,7 +48,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
@@ -59,7 +59,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ## 一致するトリガーが見つからない
 
-Brazeは、特定のイベントに一致するトリガーを見つけられなかった場合、次のメソッドの[noMatingTriggerForEvent:name:](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html#ab4d57b13c51545d487227945a37d4ab8)を呼び出す。 [`ABKInAppMessageControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html).このシナリオを処理するには、デリゲートプロトコルを採用するクラスにこのメソッドを実装します。 
+Braze が特定のイベントに一致するトリガーを検出できない場合、[`ABKInAppMessageControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html) の [noMatchingTriggerForEvent:name:](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html#ab4d57b13c51545d487227945a37d4ab8) メソッドを呼び出します。このシナリオを処理するには、デリゲートプロトコルを採用するクラスにこのメソッドを実装します。 
 
 ## ローカルのアプリ内メッセージ配信
 
@@ -108,14 +108,14 @@ Brazeは、特定のイベントに一致するトリガーを見つけられな
 アプリ内で別の時点でアプリ内メッセージを表示したい場合は、次のメソッドを呼び出してスタックの最上位のアプリ内メッセージを手動で表示できます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
@@ -129,7 +129,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 アプリ内メッセージはアプリ内でローカルに作成し、Braze 経由で表示することもできます。これは、アプリ内でトリガーしたいメッセージをリアルタイムで表示する場合に特に便利です。Braze は、ローカルで作成されたアプリ内メッセージの分析をサポートしていません。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];
@@ -140,7 +140,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
   let customInAppMessage = ABKInAppMessageSlideup.init()

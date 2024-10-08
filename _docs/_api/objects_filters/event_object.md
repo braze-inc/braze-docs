@@ -15,7 +15,7 @@ description: "This reference article goes over the event object, what it is, and
 
 An event object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each event object in the events array represents a single occurrence of a custom event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the **Analytics** tab of the various platforms. We have linked several for you.
+You can check out how to set up custom events for a specific platform by referencing the Platform Integration Guide in the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the **Analytics** tab of the various platforms. We have linked several for you.
 
 Tracking Custom Events article:
 
@@ -27,11 +27,12 @@ Tracking Custom Events article:
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
@@ -43,9 +44,9 @@ Tracking Custom Events article:
 }
 ```
 
-- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [External user ID]({{site.baseurl}}/api/basics/#user-ids)
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 8601 time code][22]
 
 #### Update existing profiles only
 

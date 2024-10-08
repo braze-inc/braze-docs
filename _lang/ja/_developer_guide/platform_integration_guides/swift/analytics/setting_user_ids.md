@@ -20,14 +20,14 @@ description: "この記事では、iOS アプリでユーザー ID を設定す�
 ユーザーが識別されたらすぐに (通常はログイン後)、次の呼び出しを行ってユーザー ID を設定する必要があります。
 
 {% tabs %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze changeUser:@"YOUR_USER_ID_STRING"];

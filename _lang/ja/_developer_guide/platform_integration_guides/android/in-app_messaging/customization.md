@@ -12,7 +12,7 @@ channel:
   - in-app messages
 
 guide_top_header: "Android と FireOS のアプリ内メッセージのカスタマイズ"
-guide_top_text: "すべてのBraze アプリ内メッセージタイプは、メッセージ、\"画像 s、<a href='http://fortawesome.github.io/Font-Awesome/'>フォントアウェソーム</a>アイコン、クリックアクション s、分析、編集可能なスタイル、カスタムディスプレイオプション、およびカスタムデリバリオプションで高度にカスタマイズできます。<a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>から、ダッシュボード</a>内でアプリ内メッセージごとに複数のオプションを設定できます。さらに、Braze は、様々なユースケースとニーズを満たすために、複数のレベルの高度なカスタマイズを提供します。"
+guide_top_text: "Braze のすべてのアプリ内メッセージタイプを、メッセージ、画像、<a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a> アイコン、クリックアクション、分析、編集可能なスタイル指定、カスタム表示オプション、カスタム配信オプションで高度にカスタマイズできます。<a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>ダッシュボード内</a>からアプリ内メッセージごとに複数のオプションを設定できます。さらに、Braze は、様々なユースケースとニーズを満たすために、複数のレベルの高度なカスタマイズを提供します。"
 description: "このランディングページでは、カスタムスタイリング、カスタムリスナー、クリック処理など、Braze Android と FireOS SDK のアプリ内メッセージカスタマイズオプションについて説明します。"
 
 guide_featured_title: "セクションの記事"

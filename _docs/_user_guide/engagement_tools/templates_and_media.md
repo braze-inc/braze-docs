@@ -20,6 +20,9 @@ guide_featured_list:
   - name: Content Blocks
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
+  - name: Canvas Templates
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
+    image: /assets/img/braze_icons/palette.svg
   - name: Managing Templates
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg

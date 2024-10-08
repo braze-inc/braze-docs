@@ -26,7 +26,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 웹 
    "require_interaction": (optional, boolean) whether to require the user to dismiss the notification, supported on Mac Chrome,
    "time_to_live": (optional, integer (seconds)),
    "send_to_most_recent_device_only" : (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used browser, rather than all eligibles browsers,
-   "buttons" : (optional, array of Web Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Web push action button objects) push action buttons to display
 }
 ```
 

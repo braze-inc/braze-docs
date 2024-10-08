@@ -31,5 +31,8 @@ guide_featured_list:
 - name: LINE Reporting
   link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
+- name: LINE Message Types
+  link: /docs/line/create/message_types/
+  image: /assets/img/braze_icons/message-square-02.svg
 ---
 

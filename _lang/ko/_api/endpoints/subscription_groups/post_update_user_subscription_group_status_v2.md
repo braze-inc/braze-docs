@@ -20,23 +20,23 @@ channel:
 
 **구독 그룹**페이지로 이동하여 구독 그룹의 `subscription_group_id`에 액세스할 수 있습니다.
 
-**이메일 구독 그룹**에 대한 예제를 보거나 이 엔드포인트를 테스트하려면 다음을 수행하세요.
+**이메일 구독 그룹에** 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음과 같이 하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-예를 보거나**SMS 구독 그룹**에 대한 이 끝점을 테스트하려면 다음을 수행하십시오.
+예제를 보거나 **SMS 구독 그룹에** 대한 이 엔드포인트를 테스트하려면 다음과 같이 하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-예시를 보거나**WhatsApp 그룹**에 대한 이 엔드포인트를 테스트하려면 다음을 수행하세요.
+**WhatsApp 그룹에** 대한 이 엔드포인트의 예시를 보거나 테스트하려면 다음과 같이 하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-## 전제조건
+## 전제 조건
 
 이 엔드포인트를 사용하려면 `subscription.status.set` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 비율 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
@@ -71,17 +71,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | 필수 | 문자열 | 구독 그룹의 `id`. |
-| `subscription_state`| 필수 | 문자열 | 사용 가능한 값은 다음과 같습니다. `unsubscribed`(구독 그룹에 속하지 않음) 또는 `subscribed`(구독 그룹에서). |
-| `external_ids` | 필수* | 문자열 배열 | 사용자 또는 사용자들의 `external_id`, 최대 50개의 `id`개를 포함할 수 있습니다. |
-| `emails`| 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달될 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>사용자가 여러 명인 경우(`external_id`) 동일한 워크스페이스에서 동일한 이메일 주소를 공유하면 이메일 주소를 공유하는 모든 사용자가 구독 그룹 변경 사항으로 업데이트됩니다. |
-| `phones`| 필수* |[E.164](https://en.wikipedia.org/wiki/E.164)형식의 문자열 | 사용자의 전화번호는 문자열 배열로 전달될 수 있습니다. 전화번호를 하나 이상(최대 50개) 포함해야 합니다. |
+| `subscription_state` | 필수 | 문자열 | 사용 가능한 값은 `unsubscribed` (구독 그룹에 속하지 않음) 또는 `subscribed` (구독 그룹에 속함)입니다. |
+| `external_ids` | 필수* | 문자열 배열 | 사용자(또는 사용자)의 `external_id` 에는 최대 50개의 `id`을 포함할 수 있습니다. |
+| `emails` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우 이메일 주소를 공유하는 모든 사용자에게 구독 그룹 변경 사항이 업데이트됩니다. |
+| `phones` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개까지 가능). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
 `emails` 및 `phones` 매개변수를 모두 포함할 수는 없습니다. 또한, `emails`, `phones`, `external_ids` 모두 개별적으로 보낼 수 있습니다.
 {% endalert %}
 
-### 예시 요청
+### 요청 예시
 
 다음 예제에서는 `external_id`를 사용하여 이메일과 SMS에 대해 하나의 API 호출을 수행합니다.
 

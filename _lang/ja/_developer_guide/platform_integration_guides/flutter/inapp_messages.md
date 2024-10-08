@@ -22,7 +22,7 @@ Flutter のアプリ内メッセージングを iOS と統合するには、[Bra
 `BrazeInAppMessage` を使用して分析をログに記録するには、インスタンスを目的の分析関数に渡します。
 - `logInAppMessageClicked`
 - `logInAppMessageImpression`
-- `logInAppMessageButtonClicked` (ボタンインデックスと共に)
+- - `logInAppMessageButtonClicked` (ボタンインデックスと共に)
 
 以下に例を示します。
 ```dart
@@ -39,7 +39,7 @@ braze.logInAppMessageButtonClicked(inAppMessage, 0);
 アプリ内メッセージの自動表示を無効にするには、ネイティブレイヤーでこれらの更新を行います。
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 1. 自動統合初期化機能を使用していることを確認してください。この機能は、バージョン `2.2.0` 以降でデフォルトで有効になっています。
 2. 次の行を `braze.xml` ファイルに追加することで、アプリ内メッセージ操作のデフォルトを `DISCARD` に設定します。
@@ -87,7 +87,7 @@ inAppMessageStreamSubscription.cancel();
 ステップ 1 の Dart レイヤーでデータを受信するには、次のコードを追加して、ネイティブレイヤーからアプリ内メッセージデータを転送します。
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 アプリ内メッセージデータは Android レイヤーから自動的に転送されます。
 

@@ -16,7 +16,7 @@ description: "このリファレンス記事では、Swift SDK のカスタム�
 ## カスタムイベントの追加
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
@@ -37,7 +37,7 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 `Int`、`Double`、`String`、`Bool`、または `Date` の値が入力された `Dictionary` を渡すことで、カスタムイベントに関するメタデータを追加できます。
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent(

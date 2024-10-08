@@ -43,7 +43,7 @@ noindex: true
 }
 ```
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 ```swift
 // Subscribe to content card updates
 // Note: you should remove the observer where appropriate
@@ -82,48 +82,48 @@ Braze には、バナー、キャプション付き画像、クラシックの3�
 | `dismissible` | このプロパティは、ユーザーがカードを削除できるかどうかを反映します。|
 | `pinned` | このプロパティは、カードがダッシュボードで"pinned"として設定されているかどうかを反映します。|
 | `dismissed` | このプロパティは、ユーザーがカードを削除したかどうかを反映します。|
-| `url` | カードをクリックした後に開封されるURL。これは、HTTP URL またはプロトコルURL にすることができます。|
+| `url` | カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。||
 | `openURLInWebView` | このプロパティは、URL をアプリ内で開封するか、外部Web ブラウザーで開封するかを決定します。|
-| `extras`| `NSString` 値のオプションの`NSDictionary`。|
+| `extras`| `NSString` 値のオプションの `NSDictionary`。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### バナーコンテンツカードのプロパティ - ABKBannerContentCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | このプロパティは、カードの"画像のURL です。|
-| `imageAspectRatio` | このプロパティは、カードの"画像の縦横比であり、"画像 読み込むが完了するまでのヒントとして機能します。ただし、場合によってはプロパティが供給されないことがあります。 |
+| `image` | このプロパティはカードの画像の URL です。|
+| `imageAspectRatio` | このプロパティはカードの画像の縦横比であり、画像の読み込みが完了する前のヒントとして機能します。ただし、場合によってはプロパティが供給されないことがあります。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### キャプション付き画像コンテンツカードのプロパティ-ABKCaptionedImageCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | このプロパティは、カードの"画像のURL です。|
-| `imageAspectRatio` | このプロパティは、カードの"画像の縦横比です。|
+| `image` | このプロパティはカードの画像の URL です。|
+| `imageAspectRatio` | このプロパティはカードの画像の縦横比です。|
 | `title` | カードのタイトルテキスト。|
 | `cardDescription` | カードの本文。|
-| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックしたアクション/方向を示すことができます。|
+| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示され、カードをクリックした時の動作/方向を示すことができます。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### クラシックコンテンツカードのプロパティ - ABKClassicContentCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | (オプション) このプロパティは、カードの"画像のURL です。|
+| `image` | (オプション) このプロパティはカードの画像の URL です。|
 | `title` | カードのタイトルテキスト。 |
 | `cardDescription` | カードの本文。 |
-| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックするアクションと方向を示すことができます。 |
+| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## カードメソッド
 
 |方法|説明|
 |---|---|
-| `logContentCardImpression` | 特定のカードのBrazeへのインプレッションを手動で記録します。 |
-| `logContentCardClicked` | 特定のカードのBrazeを手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。 |
-| `logContentCardDismissed` | 特定のカードのBrazeに、手動で削除を記録します。カードの`dismissed` プロパティがまだ`true` に設定されていない場合にのみ、SDKはカードの削除を記録します。 |
-| `isControlCard` | カードがA/B試験の制御カードかどうかを決定する。 |
+| `logContentCardImpression` | 特定のカードのインプレッションを Braze に手動で記録します。 |
+| `logContentCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。 |
+| `logContentCardDismissed` | 特定のカードの消去を手動で Braze に記録します。カードの`dismissed` プロパティがまだ`true` に設定されていない場合にのみ、SDKはカードの削除を記録します。 |
+| `isControlCard` | カードが A/B テストのコントロールカードであるかどうかを判断します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 詳細については、[クラスリファレンスドキュメント](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)を参照してください。
@@ -134,7 +134,7 @@ Braze には、バナー、キャプション付き画像、クラシックの3�
 
 ### ナビゲーションコンテキスト
 
-ナビゲーションコントローラーにインスタンスをプッシュする例:
+ナビゲーションコントローラーに `ABKContentCardsTableViewController` インスタンスをプッシュする例:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -147,7 +147,7 @@ contentCards.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 let contentCards = ABKContentCardsTableViewController()
@@ -178,7 +178,7 @@ contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 let contentCards = ABKContentCardsViewController()

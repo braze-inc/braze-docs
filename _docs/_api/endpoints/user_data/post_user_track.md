@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
             "email": "test@braze.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
-            "integer_attribute": 25,
+            "integer_attribute": 26,
             "array_attribute": [
                 "banana",
                 "apple"
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, Braze will use the email as the identifier.
+If you include a request with both `email` and `phone`, Braze will use the email as the identifier.
 {% endalert %}
 
 ```
@@ -293,5 +293,15 @@ The segmentation tool will include these users regardless of whether they have e
 ### How does `/users/track` handle duplicate events?
 
 Each event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so "duplicate" events are treated as separate, unique events.
+
+## Monthly Active Users CY 24-25
+For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:
+- Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
+- In addition to the limit on requests per hour, Braze also imposes a burst limit on the number of requests allowed per second.
+- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
+
+Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+
+
 
 {% endapi %}

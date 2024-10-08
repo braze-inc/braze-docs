@@ -173,7 +173,7 @@ We recommend either changing the target audience to include all users, or checki
 ![][51]
 
 [5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}

@@ -3,7 +3,7 @@ nav_title: カスタム属性の設定
 article_title: Webのカスタム属性の設定
 platform: Web
 page_order: 3
-description: "この記事では、Webのカスタム属性を割り当てて設定する方法について説明します。"
+description: "このリファレンス記事では、Web のカスタム属性を割り当てて、設定する方法を説明します。"
 
 ---
 
@@ -13,7 +13,7 @@ description: "この記事では、Webのカスタム属性を割り当てて設
 
 実装前に、カスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例を[ベストプラクティス][7]で確認してください。
 
-属性をユーザーに割り当てるには、`braze.getUser()` メソッドを呼び出して、アプリの現在のユーザーへの参照を取得します。現在のユーザーへの参照を取得した後、定義済みまたはカスタム属性を設定するメソッドを呼び出すことができます。
+ユーザーに属性を割り当てるには、`braze.getUser()` メソッドを呼び出して、アプリの現在のユーザーへの参照を取得します。現在のユーザーへの参照を取得した後、定義済みまたはカスタム属性を設定するメソッドを呼び出すことができます。
 
 ## 定義済みのユーザー属性の割り当て
 
@@ -31,7 +31,7 @@ Brazeは、[`User`クラス][1]内で次のユーザー属性を設定するた�
 
 ### 実装例
 
-#### {設定} a {名}
+#### 名の設定
 
 ```javascript
 braze.getUser().setFirstName("SomeFirstName");
@@ -53,7 +53,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 
 Braze は、定義済みのユーザー属性メソッドに加えて、アプリケーションからのデータを追跡するための[カスタム属性](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)も提供しています。 
 
-カスタム属性の完全なメソッド仕様は、[JSDocs][1]内にあります。
+カスタム属性の完全なメソッドの仕様は、[JSDocs][1] 内にあります。
 
 ### カスタム属性の長さ
 
@@ -120,7 +120,7 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 
 ### カスタム属性の設定解除
 
-カスタム属性は、その値を`null`に設定することで解除できます。
+カスタム属性は、その値を `null` に設定することで設定解除できます。
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
@@ -136,18 +136,18 @@ REST API を使用してユーザー属性を設定することもできます�
 
 | サブスクリプション ステータス | 定義 |
 | ------------------- | ---------- |
-| `braze.User.NotificationSubscriptionTypes.OPTED_IN` | 購読し、明示的にオプトインしました |
-| `braze.User.NotificationSubscriptionTypes.SUBSCRIBED` | 購読しましたが、明示的にオプトインしていません |
-| `braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED` | 購読を解除し、明示的にオプトアウトしました |
+| `braze.User.NotificationSubscriptionTypes.OPTED_IN` | 配信登録済み、かつ明示的にオプトイン済み |
+| `braze.User.NotificationSubscriptionTypes.SUBSCRIBED` | 配信登録済みだが、明示的なオプトインは未実行 |
+| `braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ユーザーがプッシュに登録されると、ブラウザは通知を許可するかブロックするかを選択させ、プッシュを許可することを選択した場合、デフォルトで`OPTED_IN`に設定されます。 
 
 [ユーザーのサブスクリプションの管理][10]を訪れて、サブスクリプションと明示的なオプトインの実装に関する詳細情報をご覧ください。
 
-### 例 コード
+### サンプルコード
 
-#### メールからユーザーの登録を解除する: 
+#### ユーザーのメール登録を解除する:
 ```javascript
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```

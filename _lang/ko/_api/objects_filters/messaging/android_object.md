@@ -8,7 +8,7 @@ platform: Android
 description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Android 객체를 나열하고 설명합니다."
 
 ---
-# Android 개체
+# 안드로이드 개체
 
 > `android_push` 개체를 사용하면 [메시징 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging) 통해 Android 푸시 및 Android 푸시 알림 콘텐츠와 관련된 정보를 정의하거나 요청할 수 있습니다.
 
@@ -35,8 +35,8 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
-   "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
+   "buttons" : (optional, array of Android push action button objects) push action buttons to display
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push.
 }
 ```
 
@@ -44,16 +44,16 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
 
 ### 추가 매개변수 세부 정보
 
-| 매개변수 | 세부 정보
+| 매개변수 | 세부 정보 |
 | --------- | ------- |
-| `priority` | 이 매개변수는 `-2` ~ `2` 의 값을 허용하며, 여기서 `-2`는 "최소" 우선순위를 나타내고 `2`은 "최대"를 나타냅니다. `0`는 "기본" 값입니다. <br> <br> 이 범위를 벗어나는 값은 기본값이 0으로 설정됩니다. 사용할 우선순위에 대한 자세한 내용은 [Android 알림 우선순위]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority)를 참조하세요. |
-| `collapse_key` | FCM은 기기당 최대 4개의 축소 키만 동시에 저장할 수 있습니다. 축소 키를 4개 이상 사용하는 경우 FCM은 어떤 축소 키가 유지될지 보장하지 않습니다. Braze는 캠페인에 기본적으로 이 중 하나를 사용하므로 Android 메시지에는 최대 3개의 추가 축소 키만 지정해야 합니다. |
-| `push_icon_image_url` | 큰 아이콘 매개변수의 값은 이미지가 호스팅되는 위치로 연결되는 URL이어야 합니다. <br> <br> 이미지는 1:1 화면 비율로 잘라야 하며 최소 40x40이어야 합니다. |
-| `notification_channel` | 이 값을 지정하지 않으면 Braze는 [대시보드 폴백][45] 채널 ID로 알림 페이로드를 전송하려고 시도합니다. 자세한 내용은 [알림 채널][44]을 참조하고 통합 중 [알림 채널을 정의하는][43] 단계를 참조하세요. |
-| `send_to_sync` | `send_to_sync` 메시지에 대한 자세한 내용은 [무음 Android 알림][28]을 참조하세요. |
+| `priority` | 이 매개변수는 `-2` ~ `2` 범위의 값을 허용하며, `-2` 은 "최소" 우선순위를 나타내고 `2` 은 "최대"를 나타냅니다. `0` 은 "기본" 값입니다. <br> <br> 이 범위를 벗어나는 값은 기본값이 0으로 설정됩니다. 사용할 우선순위에 대한 자세한 내용은 [Android 알림 우선순위를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority) 참조하세요. |
+| `collapse_key` | FCM은 장치당 최대 4개의 축소 키만 동시에 저장할 수 있습니다. 축소 키를 4개 이상 사용하는 경우 FCM은 어떤 축소 키가 유지될지 보장하지 않습니다. Braze는 기본적으로 캠페인에 이 중 하나를 사용하므로 Android 메시지에는 최대 3개의 추가 축소 키만 지정해야 합니다. |
+| `push_icon_image_url` | 큰 아이콘 매개변수의 값은 이미지가 호스팅되는 위치로 연결되는 URL이어야 합니다. <br> <br> 이미지는 1:1 가로세로 비율로 잘라야 하며 최소 40x40이어야 합니다. |
+| `notification_channel` | 이를 지정하지 않으면 Braze는 [대시보드 폴백][45] 채널 ID로 알림 페이로드를 전송하려고 시도합니다. 자세한 내용은 [알림 채널을][44] 참조하고 통합 중 [알림 채널을 정의하는][43] 단계를 참조하세요. |
+| `send_to_sync` | `send_to_sync` 메시지에 대한 자세한 내용은 [무음 Android 알림을][28] 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Android 푸시 액션 버튼 개체
+## 안드로이드 푸시 액션 버튼 개체
 
 ```json
 {
@@ -89,7 +89,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
 }
 ```
 
-### Android 대화 푸시 사람 개체
+### 안드로이드 대화 푸시 사람 개체
 
 ```json
 {

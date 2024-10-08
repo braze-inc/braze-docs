@@ -14,18 +14,18 @@ platform:
 
 # コンテンツカードの動作のカスタマイズ
 
-> この実装ガイドでは、コンテンツカードの動作の変更、ペイロードへのキーと値のペアなどの追加、一般的なカスタマイズのレシピについて説明します。コンテンツ・カードのカスタマイズ・オプションの基本的な概要については、[カスタマイズの概要を]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)参照のこと。 
+> この実装ガイドでは、コンテンツカードの動作の変更、ペイロードへのキーと値のペアなどの追加、一般的なカスタマイズのレシピについて説明します。コンテンツカードのカスタマイズオプションのタイプの基本的な概要については[カスタマイズの概要]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)を参照してください。 
 
 ## キーと値のペア
 
-Braze では、キーと値のペアを使用して、コンテンツカードを介して追加のデータペイロードをユーザーデバイスに送信することができます。これらは、内部メトリクスの追跡、アプリコンテンツの更新、プロパティのカスタマイズに役立つ。\[ダッシュボード][9] を使ってキーと値のペアを追加する。 
+Braze では、キーと値のペアを使用して、コンテンツカードを介して追加のデータペイロードをユーザーデバイスに送信することができます。これらは、内部指標の追跡、アプリコンテンツの更新、プロパティのカスタマイズに役立ちます。\[ダッシュボードを使用してキーと値のペアを追加する][9]。 
  
 {% alert note %}
 ネストされた JSON 値をキーと値のペアとして送信することは推奨しません。その代わりに、送信する前に JSON を平坦化します。
 {% endalert %}
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 キーと値のペアは、`extras`として<a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。<a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a>を呼び出して、これらの値にアクセスします。
 
@@ -35,7 +35,7 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 キーと値のペアは、`extras`として<a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。<a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a>を呼び出して、これらの値にアクセスします。
 
 {% endtab %}
-{% tab ウェブ %}
+{% tab Web %}
 
 キーと値のペアは、`extras`として<a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。`card.extras`を呼び出して、これらの値にアクセスします。
 
@@ -43,7 +43,7 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 {% endtabs %}
 
 {% alert tip %}
-マーケティング担当者がBrazeダッシュボードに入力するキー・バリュー・ペアは、開発者がアプリのロジックに組み込むキー・バリュー・ペアと正確に一致しなければならないため、マーケティングチームと開発チームが、どのキー・バリュー・ペアを使用するかについて調整することが重要である（たとえば、`feed_type = brand_homepage` ）。
+マーケターが Braze ダッシュボードに入力するキーと値のペアは、開発者がアプリのロジックに組み込むキーと値のペアと正確に一致しなければならないため、マーケティングチームと開発チームが、どのキーと値のペアを使用するか (たとえば、`feed_type = brand_homepage`) について確実に調整することが重要です。
 {% endalert %}
 
 ## 補足コンテンツとしてのコンテンツカード
@@ -61,11 +61,11 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 ![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id"、"tile_deeplink"、"tile_title "のようなカードの異なる側面がLiquidを使って設定されている。][2]{: style="max-width:60%;"}
 
 ## インタラクティブコンテンツとしてのコンテンツカード
-![画面左下には、50％プロモーションを示すインタラクティブなコンテンツカードが表示される。クリック後、カートにプロモーションが適用される。][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![画面左下に50%のプロモーションを示すインタラクティブなコンテンツカードが表示されている。クリックすると、カートにプロモーションが適用されます。][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 コンテンツカードを活用して、ユーザーのための動的でインタラクティブな体験を作成できます。右の例では、コンテンツカードのポップアップがチェックアウト時に表示され、ユーザーに最新のプロモーションを提供しています。このようなカードをうまく配置することで、ユーザーを特定のアクションに「後押し」することができます。 
 
-このユースケースのキーと値のペアには、希望する割引額として設定された`discount_percentage`と、`coupon_code` として設定された`class_type`が含まれます。これらのキーと値のペアによって、チェックアウト画面でタイプ別のコンテンツカードをフィルタリングして表示することができます。キーと値のペアを使用して複数のフィードを管理する方法については、\[Content Cardのデフォルトフィードをカスタマイズする][3] を参照のこと。
+このユースケースのキーと値のペアには、希望する割引額として設定された`discount_percentage`と、`coupon_code` として設定された`class_type`が含まれます。これらのキーと値のペアによって、チェックアウト画面でタイプ別のコンテンツカードをフィルタリングして表示することができます。キーと値のペアを使用して複数のフィードを管理する方法については、\[デフォルトのコンテンツカードフィードのカスタマイズ][3] を参照してください。
 <br>
 <br>
 
@@ -82,7 +82,7 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 コンテンツカードの未読数をバッジとしてアプリのアイコンに表示できます。 
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 未読カードの数は、以下を呼び出していつでもリクエストできます。
 
@@ -147,7 +147,7 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab ウェブ %}
+{% tab Web %}
 
 未読カードの数は、以下を呼び出していつでもリクエストできます。
 
