@@ -73,7 +73,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
 
 +{% alert important %}
-+Specifying a recipient via email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
++Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 +{% endalert %}
 
 {% alert note %}
