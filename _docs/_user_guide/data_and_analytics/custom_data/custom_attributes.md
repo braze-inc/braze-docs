@@ -21,6 +21,10 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
+![Four custom attributes]({% image_buster /assets/img/export_custom_attributes.png %})
+
+The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active. 
+
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
 
 ### Blocklisting
@@ -157,9 +161,9 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% endalert %}
 
 {% alert important %}
-When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
-
-More resources on regular expressions:
+When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.
+<br><br>
+Refer to these resources for more information:<br>
 - [Regular expressions with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [Regular expression debugger and tester](https://regex101.com/)
 - [Regular expression tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
@@ -196,11 +200,11 @@ The option to increase the maximum length will not be available if the attribute
 
 {% alert tip %}
 For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions](http://www.regextester.com/pregsyntax.html) (PCRE).
-<br>
-More resources on regex:
-- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [Regex Debugger and Tester](https://regex101.com/)
-- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+<br><br>
+Refer to these resources for more information:<br>
+- [Regular expressions with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regular expression debugger and tester](https://regex101.com/)
+- [Regular expressions tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Time {#time}
