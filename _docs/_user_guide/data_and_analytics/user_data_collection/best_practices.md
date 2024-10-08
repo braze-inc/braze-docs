@@ -23,18 +23,8 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
 
-- **Check internal database (recommended):** If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to confirm the information hasn't already been captured.<br><br>
-- **[`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/):** Run the following call and check if the returned users array is empty or contains a value:
-  ```json
-  --data-raw '{
-    "email_address": "example@braze.com",
-    "fields_to_export": ["external_id", "user_aliases"]
-  }'
-  ```
-
-{% alert important %}
-We recommend that you lightly use this endpoint when querying a single user, as we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
-{% endalert %}
+- **Check internal database (recommended):** If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to confirm the information hasn't already been captured.
+- **[`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/):** Use `email` as an identifier, and a new user profile will be created if the email address doesn't exist yet.
 
 ### Step 2: Log or update user
 
@@ -69,7 +59,9 @@ As your user data grows, you can merge duplicate user profiles from the Braze da
 
 You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
-Note that after user profiles are merged, this action cannot be undone.
+{% alert note %}
+After user profiles are merged, this action cannot be undone.
+{% endalert %}
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>

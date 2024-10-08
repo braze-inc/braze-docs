@@ -9,12 +9,12 @@ channel:
 
 # Preference center overview
 
-> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>The following article provides instructions on how to build an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
+> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). This article includes steps for building an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
 In the Braze dashboard, go to **Audience** > **Subscriptions** > **Email Preference Center**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups > Email Preference Center**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups** > **Email Preference Center**.
 {% endalert %}
 
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
@@ -23,7 +23,7 @@ This is where you can manage and view each subscription group. Each subscription
 The preference center is intended to be used within the Braze email channel. The preference center links are dynamic based on each user and cannot be hosted externally.
 {% endalert %}
 
-## Create a preference center via API
+## Creating a preference center with API
 
 By using the [Preference Center Braze endpoints]({{site.baseurl}}/api/endpoints/preference_center), you can create a preference center, a website hosted by Braze, that can display your user's subscription state and subscription group statuses. Using HTML and CSS, your developer team can build the preference center using HTML and CSS so that the styling of the page matches your brand guidelines.
 
@@ -43,13 +43,13 @@ Using Liquid enables you to retrieve the names of your subscription groups, and 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
-### Step 1: Create a preference center via API
+### Step 1: Use the Create preference center endpoint
 
 Let's begin building a preference center using the [Create preference center endpoint]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). To customize your preference center, you can include HTML that aligns with your branding in the `preference_center_page_html` field and `confirmation_page_html` field.
 
 The [Generate preference center URL endpoint]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) allows you to grab the preference center URL for a specific user outside of an email that is sent through Braze.
 
-### Step 2: Include in email campaign
+### Step 2: Include in your email campaign
 
 {% multi_lang_include preference_center_warning.md %}
 
@@ -57,7 +57,7 @@ To place a link to the preference center in your emails, use the following Liqui
 
 {% raw %}
 ```liquid
-{{preference_center.${preference_center_name_example}}}
+{{preference_center.${kitchenerie_preference_center_example}}}
 ```
 {%endraw%}
 
@@ -65,7 +65,7 @@ You can also use a combination of HTML that includes Liquid. For example, you ca
 
 {% raw %}
 ```html
-<a href="{{preference_center.${preference_center_name_example}}}">Edit your preferences</a>
+<a href="{{preference_center.${kitchenerie_preference_center_example}}}">Edit your preferences</a>
 ```
 {%endraw%}
 
@@ -117,3 +117,11 @@ This approach does not require query string value-pairs embedded in the URL as t
     "category": offers
 }
 ```
+
+## Frequently asked questions
+
+### I haven't created a preference center. Why am I seeing "PreferenceCenterBrazeDefault" on my dashboard?
+
+This is used to render the preference center when legacy Liquid {%raw%}`${preference_center_url}`{%endraw%} is used, meaning Canvas steps or templates that reference either {%raw%}`${preference_center_url}` or `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} won't work. This also applies to previously sent messages that included the legacy Liquid or "PreferenceCenterBrazeDefault" as part of the message. 
+
+If you reference {%raw%}`${preference_center_url}`{%endraw%} in a new message again, a preference center named "PreferenceCenterBrazeDefault" will be created again.

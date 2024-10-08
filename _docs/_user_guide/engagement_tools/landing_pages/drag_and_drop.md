@@ -60,6 +60,8 @@ The editor uses two types of components for landing page composition: rows and b
 
 #### Form block
 
+Use various form block components to log custom and standard profile attributes and custom events. The input field form block can log both standard and custom attributes for your users, and the phone capture and email capture form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both on form submission. 
+
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
 ![A form block that registers a new customer and will send a discount code to their email.][5]{: style="max-width:70%;"}
