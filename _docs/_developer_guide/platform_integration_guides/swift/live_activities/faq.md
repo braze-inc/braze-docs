@@ -76,7 +76,7 @@ The limits are defined by Apple and can vary based on a number of factors. They 
 
 ### What other things should I watch out for during troubleshooting?
 
-- Check that you are using a `.p8` key for authentication.
+- Ensure that you are using a `.p8` key for authentication instead of a `.p12` or `.pem` file.
 - Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production Apple Push Notification service (APNs) environment. Using a development certificate for a production app or a production certificate for a development app will not work.
 
 
