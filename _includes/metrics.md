@@ -35,7 +35,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>Body Clicks</i> occur when someone clicks on any of the following in-app message types: slide-up, modal, or fullscreen that has no buttons. This only applies to messages created with the traditional editor.
+<i>Body Clicks</i> occur when a user clicks on a message that doesn't have buttons (Button 1, Button 2) and was created with the traditional editor, and when a message created with the HTML editor or drag-and-drop editor uses <code>brazeBridge.logClick()</code> with no arguments.
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}

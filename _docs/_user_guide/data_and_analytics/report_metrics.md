@@ -108,7 +108,7 @@ iOS Push, Android Push
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Body Clicks' %} For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)
+{% multi_lang_include metrics.md metric='Body Clicks' %} For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 
 <span class="calculation-line">Calculation: (Body Clicks) / (Impressions)</span>
 
