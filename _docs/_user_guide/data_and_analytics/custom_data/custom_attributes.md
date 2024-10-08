@@ -195,10 +195,10 @@ The option to increase the maximum length will not be available if the attribute
 
 {% alert tip %}
 For more on how to use our regular expressions (regex) filter, check out these resources:
-- [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html)
+- [Perl compatible regular expressions (PCRE)](https://www.regextester.com/pregsyntax.html)
 - [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [Regex debugger and tester](https://regex101.com/)
-- [Regex tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+- [Regex debugger and tester](https://www.regex101.com/)
+- [Regex tutorial](https://www.medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Time {#time}
