@@ -103,6 +103,10 @@ Feature flags may be refreshed mid-session. There are scenarios where you may wa
 
 To control this, [listen for updates]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates) to feature flags and determine whether to re-render your app based on which feature flags have changed. 
 
+### Why aren't users in my Global Control Group receiving feature flags experiements?
+
+You can't enable feature flags for users in your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/). This means users in your Global Control Group also can't be part of Feature Flag experiments.
+
 ## Additional questions?
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
