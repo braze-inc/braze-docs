@@ -47,7 +47,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Choices Submitted" %}
-<i>Choices Submitted</i> is the total number of choices selected when the user clicks the submit button on the survey question page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>..
+<i>Choices Submitted</i> is the total number of choices selected when the user clicks the submit button on the survey question page of a <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple survey</a>.
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}

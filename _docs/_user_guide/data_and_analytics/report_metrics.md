@@ -734,7 +734,7 @@ Email, Content Cards, SMS, LINE
 Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissials' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -806,7 +806,7 @@ Email, Content Cards, LINE
     Calculation:
     <ul>
         <li><i>Unique Clicks</i>: Count</li>
-        <li><b>Content Cards</b> <i>Unique Clicks</i> % or <i>Unique Clicks Rate</i>:</b> (Unique Clicks) / (Unique Impressions)</li>
+        <li><b>Content Cards</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Unique Impressions)</li>
         <li><b>Email</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Deliveries)</li>
     </ul>
 </span>
