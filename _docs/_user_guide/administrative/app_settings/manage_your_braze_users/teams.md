@@ -131,23 +131,9 @@ Select one or many teams to archive. If the team is not associated with any obje
 
 Braze admins can unarchive a team by selecting the archived team and selecting **Unarchive**.
 
-## How do teams differ from permission sets and roles? 
+## How do teams differ from permission sets and roles?
 
-You can use team, permission sets, and user roles to manage dashboard user access and responsibilities within Braze. Each feature encompasses a different collection of permissions and access-controls.
-
-### Key differences
-
-At a high level, each feature has a different scope:
-- Permission sets control what dashboard users can do across all workspaces.
-- Roles control what dashboard users can do in specific workspaces.
-- Teams control the audiences that dashboard users can message.
-
-| Feature | What you can do |
-| - | - |
-| [Permission sets]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets/) | Bundle permissions related to specific subject areas or actions (such as for “Developers” and “Marketers”), then apply them to dashboard users who need the same permissions across different workspaces. |
-| [Roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#roles/) | Bundle individual custom permissions and workspace-access controls into predefined roles (such as “Marketer - Fashion Brands” and “Marketer - Skincare Brands”), then assign a role to dashboard users to directly grant them the associated workspace access and permissions. |
-| Teams | Limit dashboard user access to resources based on the audience (such as customer base location, language, and custom attributes). |
-{: .reset-td-br-1 .reset-td-br-2 }
+Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

@@ -42,6 +42,10 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
+### How do permission sets and roles differ from teams?
+
+Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
+
 ## Editing a user's permissions
 
 To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
