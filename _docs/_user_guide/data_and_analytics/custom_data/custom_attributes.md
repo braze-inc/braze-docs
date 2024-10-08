@@ -162,11 +162,6 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 
 {% alert important %}
 When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.
-<br><br>
-Refer to these resources for more information:<br>
-- [Regular expressions with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [Regular expression debugger and tester](https://regex101.com/)
-- [Regular expression tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Arrays {#arrays}
@@ -199,12 +194,11 @@ The option to increase the maximum length will not be available if the attribute
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert tip %}
-For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions](http://www.regextester.com/pregsyntax.html) (PCRE).
-<br><br>
-Refer to these resources for more information:<br>
-- [Regular expressions with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [Regular expression debugger and tester](https://regex101.com/)
-- [Regular expressions tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+For more on how to use our regular expressions (regex) filter, check out these resources:
+- [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html)
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex debugger and tester](https://regex101.com/)
+- [Regex tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Time {#time}
