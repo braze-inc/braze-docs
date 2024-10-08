@@ -21,7 +21,7 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
-![Four custom attributes]({% image_buster /assets/img/export_custom_attributes.png %})
+![Four custom attributes that are booleans.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active. 
 
