@@ -115,6 +115,10 @@ Every single API request sent to Braze returns the following information in the 
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to make sure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
+{% alert note %}
+HTTP headers will be returned in all lowercase characters. This behavior aligns with the HTTP/2 protocol that mandates all header field names must be lowercase. This differs from HTTP/1.X where header names were case-insensitive but were commonly written in various capitalizations.
+{% endalert %}
+
 If you have questions about API limits, contact your customer success manager or open a [support ticket][support].
 
 ### Optimal delay between endpoints
