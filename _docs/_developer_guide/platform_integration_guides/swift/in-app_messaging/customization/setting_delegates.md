@@ -97,7 +97,12 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  context.preferredOrientation = BRZInAppMessageRawOrientationPortrait;
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -216,7 +221,40 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  switch (context.message.type) {
+    case BRZInAppMessageRawTypeSlideup: {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+      break;
+    }
+    case BRZInAppMessageRawTypeModal:
+    case BRZInAppMessageRawTypeFull:
+    {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+
+      NSMutableArray *updatedButtons = [NSMutableArray arrayWithCapacity:context.message.buttons.count];
+      for (BRZInAppMessageRawButton *button in context.message.buttons) {
+        BRZInAppMessageRawButtonTheme *lightTheme = BRZInAppMessageRawButtonTheme.defaultLight;
+        BRZInAppMessageRawButton *newButton = [button mutableCopy];
+        newButton.textColor = lightTheme.textColor;
+        newButton.backgroundColor = lightTheme.backgroundColor;
+        newButton.borderColor = lightTheme.borderColor;
+        [updatedButtons addObject:newButton];
+      }
+      context.message.buttons = updatedButtons;
+      break;
+    }
+    default:
+      break;
+  }
+}
+```
 
 {% endtab %}
 {% endtabs %}
