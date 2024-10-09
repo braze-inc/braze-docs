@@ -56,7 +56,15 @@ The following actions do not consume data points:
 An array is an ordered collection of items stored within a custom attribute. In terms of consumption, updating an array costs one data point per API call. If you add values to an array incrementally, it will count as one data point per value. 
 
 {% alert tip %}
-If you set the whole array at once, it will count as a single data point. As such, arrays are a great tool to keep user profiles up-to-date with relevant information and reduce costs. 
+If you set the whole array at once, it will count as a single data point. As such, arrays are a great tool to keep user profiles up-to-date with relevant information and reduce costs.
+{% endalert %}
+
+#### Nested custom attributes
+
+Nested custom attributes is an object that defines a set of attributes as a property of another attribute. Every key in the object will count as a data point.
+
+{% alert note %}
+Updating a custom attribute object to `null` also consumes a data point.
 {% endalert %}
 
 #### CSV
