@@ -17,7 +17,11 @@ description: "This reference article covers using an array of objects as a data 
 - Arrays of objects have no limit on the number of items but do have a maximum size of 50&nbsp;KB.
 - Not all Braze Partners support arrays of objects. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
 
-Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
+Updating or removing items in an array requires identifying the item by key and value, so consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
+
+{% alert tip %}
+For more information on using arrays of objects for user attributes objects, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% endalert %}
 
 ## API example
 
@@ -478,17 +482,17 @@ When segmenting users based on arrays of objects, a user will qualify for the se
 
 Create a new segment and select **Nested Custom Attribute** as your filter. Then search for and select the name of your array of objects.
 
-![Filter by array of objects][1]
+![Filter by array of objects.][1]
 
 Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
 
 For example, if you want to filter the `pets` array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
 
-![Filter by pet type equals snake][3]
+![Filter by pet type equals snake.][3]
 
 Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog so that user qualifies into the segment of "any user who has at least one pet of type dog".
 
-![Filter by pet type equals dog][2]
+![Filter by pet type equals dog.][2]
 
 ### Levels of nesting
 
@@ -528,7 +532,7 @@ You can create a segment with up to one level of array nesting (array within ano
 ```
 {% endraw %}
 
-## Data Points
+## Data points
 
 Data points are consumed differently depending on whether you create, update, or remove a property.
 
