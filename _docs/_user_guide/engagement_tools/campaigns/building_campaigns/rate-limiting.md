@@ -101,7 +101,7 @@ When sending a multi-channel campaign with a speed rate limit, each channel is s
 - The total number of messages sent per minute could be more than the rate limit. 
     - For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze can send a max of 20,000 total messages each minute (10,000 email and 10,000 SMS).
 - Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
-    - For example, if you send a campaign that contains an email and a push notification, you may have 10,000 users with valid push tokens and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost nine hours later.
+    - For example, if you send a campaign that contains an email and an SMS, you may have 10,000 users with valid phone numbers and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the SMS in the first batch of sends and the email in the last batch of sends, almost nine hours later.
 
 #### Multi-platform push campaigns
 
