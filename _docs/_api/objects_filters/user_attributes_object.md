@@ -83,15 +83,30 @@ The following data types can be stored as a custom attribute:
 
 | Data Type | Notes |
 | --- | --- |
-| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays][6]. |
+| Arrays | Custom attribute arrays are supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays][6]. |
+| Array of objects | Array of objects allows you to define a list of objects where each object contains a set of attributes. This can be useful if you need to store multiple sets of related data for a user, such as hotel stays, purchase history, or preferences. <br><br> For example, you can define a custom attribute on a user profile named `hotel_stays`. This custom attribute can be defined as an array where each object represents a separate stay, with attributes such as `hotel_name`, `check_in_date`, `nights_stayed`. For more details, see [this example](#array-of-objects-example). |
 | Booleans | `true` or `false` |
 | Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
 | Floats | Float custom attributes are positive or negative numbers with a decimal point. For example, you can use floats to store account balances or user ratings for products or services. |
 | Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you want to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Nested custom attributes | Nested custom attributes define a set of attributes as a property of another attribute. When you define a custom attribute object, you define a set of additional attributes for that object. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support). |
 | Strings | String custom attributes are sequences of characters used to store text data. For example, you can use strings to store first and last names, email addresses, or preferences. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For information regarding when you should use a custom event versus a custom attribute, see our respective documentation on [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+{% alert tip %}
+For information on when you should use a custom event versus a custom attribute, see our respective documentation on [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+{% endalert %}
+
+##### Array of objects example 
+
+This array of objects allows you to create segments based on specific criteria within the stays, and personalize your messages using the data from each stay with Liquid templates.
+
+```json
+"hotel_stays": [
+  { "hotel_name": "Ocean View Resort", "check_in_date": "2023-06-15", "nights_stayed": 5 },
+  { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
+  ]
+```
 
 #### Braze user profile fields {#braze-user-profile-fields}
 
