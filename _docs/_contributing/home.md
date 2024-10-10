@@ -127,6 +127,12 @@ cd ~
 git clone git@github.com:braze-inc/braze-docs.git
 ```
 
+In GitHub, go to the Braze Docs repository page and select **Pull requests**.
+
+![Braze Docs repository page with navigation menu containing Pull requests.]({% image_buster /assets/img/contributing/github/menu_pull_requests.png %})
+
+Open the pull request that you want to allow commits on, then select the **Allow edits from maintainers** checkbox. This will allow the original maintainers of the Docs repository to make changes to your pull request.
+
 ### Step 2.4: Install Ruby
 
 To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
