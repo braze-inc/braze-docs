@@ -253,8 +253,8 @@ If you haven't captured dates as object properties initially, we recommend resen
     {
       "external_id": "time_with_nca_test",
       "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "birthday": {"$time" : "1980-01-01"},
+        "wedding_anniversary": {"$time" : "2020-05-28"}
       }
     }
   ]

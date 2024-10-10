@@ -1215,4 +1215,6 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_s
 
 validurls['/docs/user_csv_lambda/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion';
 
+validurls['/docs/user_guide/engagement_tools/segments/beacon_support/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/#partnership-support-for-beacon-and-geofence';
+
 // validurls['OLD'] = 'NEW';
