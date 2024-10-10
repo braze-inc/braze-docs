@@ -19,7 +19,7 @@ Combine your beacon or geofence support with Braze's targeting and messaging fea
 - **Audience Insights:** Understand your users' visitation behaviors and further segment based on those learnings.
 
 {% alert note %}
-This will work the same for Gimbal’s beacons as well as their geofence solutions.
+This integration works the same for Gimbal beacons and Gimbal geofence solutions.
 {% endalert %}
 
 ## Prerequisites

@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Partnership support for beacon and geofence
 
-Combining existing beacon or geofence support with our targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly. You can leverage location tracking with some of our partners: 
+Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
 - [Radar][6]
 - [Gimbal][10]
