@@ -1,5 +1,5 @@
 ---
-nav_title: ドキュメントリクエスト
+nav_title: ドキュメントのリクエスト
 permalink: "/request/"
 hide_nav: true
 layout: basic
@@ -413,7 +413,7 @@ hide_toc: true
     });
   </script>
 
-<div id="braze_internal" ><i class="fa-solid fa-lock"></i> 内部 only.顧客と共有しないでください。</div>
+<div id="braze_internal" ><i class="fa-solid fa-lock"></i> 内部専用。顧客と共有しないでください。</div>
 <div class="container-fluid" id="main-container">
 
       <div id="doc_div">
