@@ -21,7 +21,7 @@ guide_featured_list:
 - name: SMSメッセージ送信
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
   image: /assets/img/braze_icons/message-square-02.svg
-- name: SMS購読グループ
+- name: SMS サブスクリプショングループ
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/users-01.svg
   
