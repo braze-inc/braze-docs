@@ -4,7 +4,7 @@ article_title: 生成 AI
 page_order: 20
 layout: dev_guide
 guide_top_header: "生成 AI"
-guide_top_text: "<sup>BrazeAITMは</sup>、効率性と創造性を高める様々なオートメーション生成AI機能を搭載している。定型的なコピーライティング作業、コンテンツの改良、画像写真の作成に費やす時間を減らしながら、魅力的なクロスチャネルのカスタマーエクスペリエンスを創造する。<br><br>詳しくは以下の記事を学習してほしい。"
+guide_top_text: "BrazeAI<sup>TM</sup>は、効率性と創造性を高める様々なオートメーション生成AI機能を搭載している。定型的なコピーライティング作業、コンテンツの改良、画像写真の作成に費やす時間を減らしながら、魅力的なクロスチャネルのカスタマーエクスペリエンスを創造する。<br><br>詳しくは以下の記事を学習してほしい。"
 description: "BrazeAI<sup>TM</sup>は、効率性と創造性を高める様々なオートメーション生成AI機能を搭載している。"
 
 guide_featured_title: "特徴"
