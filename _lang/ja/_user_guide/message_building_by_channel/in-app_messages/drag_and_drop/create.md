@@ -17,7 +17,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
-アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、ドラッグアンドドロップでアプリ内メッセージを作成する手順に進みましょう。
+アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
 
 ## 前提条件
 
@@ -28,7 +28,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 | {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% details 最小SDKに関する詳細情報 %}
+{% details 最小 SDK に関する詳細情報 %}
 
 ドラッグアンドドロップエディタを使用して作成されたメッセージは、最小SDKバージョンのユーザーにのみ送信できます（上記の表を参照）。ユーザーがアプリケーションを更新していない場合（つまり、古いSDKバージョンを使用している場合）、アプリ内メッセージを受信しません。
 
@@ -37,9 +37,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 - メッセージを閉じないテキストリンク
 - プッシュプライマーを要求するためのボタンアクション
 
-次に、これらの機能の個々の最小SDK要件を示します。
+以下に、これらの機能に関する個々の最小 SDK 要件の概要を示します。
 
-| テキストリンク*                                                         | プッシュプライマーをリクエスト                                                           |
+| テキストリンク*                                                         | プッシュプライマーのリクエスト                                                           |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | {::nomarkdown}{% sdk_min_versions swift:6.2.0 android:26.0.0 %}{:/} | {::nomarkdown}{% sdk_min_versions web:4.8.1 swift:6.5.0 android:26.0.0 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -51,13 +51,13 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 ### 追加の前提条件
 
 - Web SDKの場合、初期化オプション[`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)を`true`に設定する必要があります。`enableHtmlInAppMessages`オプションでもこれらのメッセージを機能させることができますが、非推奨であり、`allowUserSuppliedJavascript`に更新する必要があります。
-- Google Tag Managerを使用している場合は、GTM構成で「HTMLインアプリメッセージを許可」を有効にする必要があります。
+- Google Tag Manager を使用している場合は、GTM の構成で「Allow HTML In-App Messages」を有効にする必要があります。
 
-## ステップ 1:アプリ内メッセージを作成する
+## ステップ 1: アプリ内メッセージを作成する
 
 新しいアプリ内メッセージまたはキャンバスステップを作成し、編集体験として**ドラッグアンドドロップエディター**を選択します。
 
-## ステップ 2:テンプレートを選択してください
+## ステップ 2: テンプレートを選択してください
 
 ドラッグアンドドロップエディタを編集体験として選択した後、次のことができます:
 
@@ -65,13 +65,13 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 - Brazeのドラッグアンドドロップアプリ内メッセージテンプレートを使用する
 - 保存されたドラッグアンドドロップのアプリ内メッセージテンプレートを選択
 
-**メッセージを作成**をクリックして、ドラッグアンドドロップエディタでアプリ内メッセージのデザインを開始します。
+\[**メッセージを作成**] をクリックして、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
 ![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
-## ステップ 3:追加のページを追加する（オプション） {#multi-page}
+## ステップ 3: 追加のページを追加する（オプション） {#multi-page}
 
 アプリ内メッセージにページを追加すると、オンボーディングフローやウェルカムジャーニーのように、ユーザーを順次のフローに案内できます。**ページ**セクションの**ビルド**タブからページを管理できます。
 
@@ -82,7 +82,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 アプリ内メッセージはデフォルトで1ページから始まります。新しいページを追加するには:
 
-1. **「+ ページを追加」**をクリックします。
+1. \[**\+ ページを追加**] をクリックします。
 2. カスタムまたはBraze提供のテンプレートから選択します。
 3. ページに意味のある名前を付けてください。これは、ページをつなぐときに役立ちます。
 
@@ -90,10 +90,10 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 アプリ内メッセージごとに最大10ページ追加できます。
 {% endalert %}
 
-既存のページを複製するには:
+既存のページを複製するには: 
 
 1. リスト内のページにカーソルを合わせて<i class="fas fa-ellipsis-vertical"></i>を選択し、さらにオプションを開封します。
-2. **複製**をクリックします。
+2. \[**複製**] をクリックします。
 3. ページに意味のある名前を付けてください。これは、ページをつなぐときに役立ちます。
 
 {% endtab %}
@@ -107,9 +107,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 {% endtab %}
 {% endtabs %}
 
-### ステップ 3a:ページを接続する
+### ステップ 3a: ページを接続する
 
-マルチページのイン{アプリ}メッセージは順次的であり、ユーザーは次のページに進むためにタップまたはクリックしてメッセージと対話します。
+複数ページのアプリ内メッセージはシーケンシャルです。したがって、ユーザーがアプリをタップするかクリックすると、フロー内の次のページに移動します。
 
 ページを接続するには:
 
@@ -127,9 +127,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 ユーザーはいつでもメッセージを終了するために閉じるXボタンを押すことができます。このボタンは削除できません。
 {% endalert %}
 
-## ステップ 4:アプリ内メッセージを構築および設計する
+## ステップ 4: アプリ内メッセージを構築および設計する
 
-ここであなたのメッセージが、あなたのブランドのシグネチャースタイルでランウェイを歩くことになります。
+ここでは、あなたのメッセージをブランドのシグネチャースタイルで演出し、オーディエンスに注目してもらいます。
 
 - 利用可能なエディターブロックとそのプロパティのリストについては、[エディターブロック]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 - メッセージの外観と感触をカスタマイズするためのヘルプについては、[スタイル設定]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)をチェックしてください。
@@ -152,7 +152,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 ### テストチェックリスト
 
-- 異なるデバイスでメッセージをテストしましたか？
+- メッセージをさまざまなデバイスでテストしましたか?
 - 画像やメディアは期待通りに表示され、動作しますか？
 - 液体は期待通りに機能しますか？Liquidが情報を返さない場合に、デフォルト属性値を考慮しましたか？
 - あなたのコピーは明確で簡潔で正しいですか？
@@ -160,7 +160,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 ## よくある質問
 
-#### なぜボディクリックが私の分析ページに表示されないのですか？
+#### 本文クリック数がアプリの分析画面に表示されないのはなぜですか?
 
 ドラッグアンドドロップエディタで作成されたアプリ内メッセージのボディクリックは自動的に収集されません。詳細については、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310)および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)のSDK変更ログを参照してください。
 
@@ -176,7 +176,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 現在、エディターはモーダルおよび全画面メッセージのみに制限されています。**メッセージコンテナ**セクションの**メッセージスタイル**パネルで表示タイプを切り替えることができます。
 
-#### キャンペーンまたはキャンバス内で作成したアプリ内メッセージをテンプレートとして保存できますか？
+#### キャンペーンまたはキャンバス内で作成した後、アプリ内メッセージをテンプレートとして保存できますか?
 
 そうです。将来のキャンペーンやキャンバスステップで再利用したいアプリ内メッセージがある場合は、エディタを終了した後に利用可能な**テンプレートとして保存**ボタンを使用してカスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
 
