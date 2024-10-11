@@ -34,7 +34,8 @@ SEEN offers automated video personalization across the entire the customer journ
 <!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. -->
 ## Integration
 
-In the following example, we will be sending users data to SEEN for video generation, and receiving a unique landing page link and a unique, personalised thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze.
+In the following example, we will be sending users data to SEEN for video generation, and receiving a unique landing page link and a unique, personalised thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
+You can reach out to your Customer Success Manager at SEEN for assistance.
 
 ### Step 1: CREATE A WEBHOOK CAMPAIGN TO SEND DATA TO SEEN
 
@@ -62,6 +63,7 @@ Give your campaign a name, and follow these steps to compose your webhook:
     - Authorization → Token {token}
     - Content-Type → application/json
 >You will receive your Authentication Token from SEEN.
+- Set the "Number of messages per minute" to 10. This ensures that you won't exceed the SEEN's ratelimit of 1000 calls per hour.
 - You can now test the webhook with a user by switching to the “Test” tab.
 - If everything works as intended, you can proceed to finish the webhook setup.
 
