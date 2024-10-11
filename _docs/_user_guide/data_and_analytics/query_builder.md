@@ -96,6 +96,20 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',CURRENT_DATE()));
 ```
 
+The campaign, Canvas, and variant name columns will be included in the results table for these columns: 
+
+- CANVAS_ID
+- CANVAS_VARIATION_API_ID
+- CAMPAIGN_ID
+
+The columns will automatically be added, so you don't need to include them in the `SELECT` query itself.
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### Troubleshooting
 
 Your query may fail for any of the following reasons:
