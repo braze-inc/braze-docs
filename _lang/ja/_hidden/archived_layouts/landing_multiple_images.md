@@ -1,5 +1,5 @@
 ---
-nav_title: MS LP とイメージ
+nav_title: 画像付きの MS LP
 layout: dev_guide
 
 page_order: 1.4
@@ -40,9 +40,9 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 
 guide_top_header: "イメージを使用した複数セクションのランディングページ"
-guide_top_text: "マルチセクションランディングページは、セクション内のページ間を通常トピックで分割する大きなセクションに適しています。このテンプレートでは、'dev_guide' layout YAMLパラメータ('layout: dev_guide')を使用します。これにより、ページの下部に情報を追加できなくなりますが、ボタンの複数のセクションを含めることができます。"
+guide_top_text: "マルチセクションランディングページは、セクション内のページ間を通常トピックで分割する大きなセクションに適しています。この特別なテンプレートは「dev_guide」レイアウト YAML パラメーター ('layout: dev_guide') を使用します。これにより、ページの下部に余分な情報を追加できなくなりますが、ボタンの複数のセクションを持つことができます。"
 
-guide_featured_title: "第一節"
+guide_featured_title: "セクション1"
 guide_featured_list:
   - name: 例 1
     link: /docs/home/templates/landing_single/
