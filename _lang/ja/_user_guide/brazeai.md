@@ -1,6 +1,6 @@
 ---
-nav_title: ブラゼーアイ
-article_title: ブラゼーアイ
+nav_title: BrazeAI
+article_title: BrazeAI
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
