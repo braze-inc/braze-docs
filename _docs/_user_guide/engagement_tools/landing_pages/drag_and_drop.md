@@ -113,7 +113,7 @@ During the beta, each form submission on a landing page will create a new anonym
 When a user submits a form, a new Braze user profile is created with the submitted user data.
 
 {% alert note %}
-During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page.
+During the beta, Braze will create a new user upon every form submission.
 {% endalert %}
 
 ### Are there any technical requirements to publish a landing page?
