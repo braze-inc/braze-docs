@@ -96,13 +96,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',CURRENT_DATE()));
 ```
 
-The campaign, Canvas, and variant name columns will be included in the results table for these columns: 
+If you query for the `CANVAS_ID`, `CANVAS_VARIATION_API_ID`, or `CAMPAIGN_ID`, their associated name columns will automatically be included in the results table. You don’t need to include them in the `SELECT` query itself.
 
-- CANVAS_ID
-- CANVAS_VARIATION_API_ID
-- CAMPAIGN_ID
+| ID name | Associated name column |
+| --- | --- |
+| `CANVAS_ID` | Canvas Name |
+| `CANVAS_VARIATION_API_ID` | Canvas Variant Name |
+| `CAMPAIGN_ID` | Campaign Name |
+{: .reset-td-br-1 .reset-td-br-2 }
 
-The columns will automatically be added, so you don't need to include them in the `SELECT` query itself.
+This query retrieves all three IDs and their associated name columns with a maximum of 100 rows:
 
 ```sql
 SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID
