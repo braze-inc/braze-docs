@@ -9,15 +9,15 @@ hidden: true
 
 # リキッドを含むカタログアイテムのテンプレート化
 
- [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) と同様に、`:rerender` フラグをLiquid タグに含めて、Liquid コンテンツをレンダリングする必要があります。`:rerender` フラグは1 レベルの深さしかないことに注意してください。つまり、入れ子になったリキッドタグ 呼び出しにはアプリされません。
+ [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) と同様に、`:rerender` フラグを Liquid タグに含めて、Liquid コンテンツをレンダリングする必要があります。`:rerender` フラグはレベル1の深さしかないことに注意してください。つまり、階層化 Liquid タグ 呼び出しには適用されません。
 
  {% alert important %}
- 「リキッド」を含むカタログ項目のテンプレート化は、初期段階で実行されます。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
+ Liquid を含むカタログアイテムのテンプレート化は、早期アクセス段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
  {% endalert %}
 
-カタログアイテムにユーザープロファイル フィールドs(液体パーソナライゼーション タグ内)が含まれている場合、これらの値は、液体を適切にレンダリングするために、テンプレートの前に、液体を介してメッセージ内で事前に定義する必要があります。`:rerender` フラグが指定されていない場合、Raw Liquid コンテンツがレンダリングされます。
+カタログアイテムにユーザープロファイルフィールド (Liquid パーソナライゼーションタグ内) が含まれている場合は、Liquid を適切にレンダリングするために、テンプレートの前に Liquid を使用してメッセージ内でこれらの値を事前に定義する必要があります。`:rerender` フラグが指定されていない場合、生の Liquid コンテンツがレンダリングされます。
 
-たとえば、"Messages"という名前のカタログに、このリキッドを含むアイテムがあるとします。
+たとえば、「Messages」という名前のカタログに、この Liquid を含むアイテムがあるとします。
 
 ![][15]{: style="max-width:80%;"}<br>
 
