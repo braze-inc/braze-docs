@@ -1,10 +1,10 @@
 ---
-nav_title: プリファレンス・センター
-article_title: プリファレンス・センター
+nav_title: ユーザー設定センター
+article_title: ユーザー設定センター
 page_order: 8
 layout: dev_guide
-guide_top_header: "プリファレンス・センター"
-guide_top_text: "メールプレファレンスセンターの作成は、ユーザーがメールキャンペーンやニュースレターの通知設定を管理できるようにする簡単な方法である。<a href='/docs/api/endpoints/preference_center/'>Braze Preference Center API</a>またはドラッグアンドドロップエディターでプリファレンスセンターを作成・管理する方法については、以下の記事を参照。"
+guide_top_header: "ユーザー設定センター"
+guide_top_text: "メールユーザー設定センターを作成すると、ユーザーがメールキャンペーンやニュースレターの通知設定を簡単に管理できるようになります。<a href='/docs/api/endpoints/preference_center/'>Braze Preference Center API</a>またはドラッグアンドドロップエディターでプリファレンスセンターを作成・管理する方法については、以下の記事を参照。"
 description: "このランディングページには、BrazeメールプリファレンスセンターとプリファレンスセンターAPIの使用方法に関する記事が含まれている。"
 channel:
   - email
