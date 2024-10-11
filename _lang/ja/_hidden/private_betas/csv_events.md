@@ -2,13 +2,13 @@
 nav_title: ユーザーデータとCSVイベントをインポート
 article_title: ユーザーデータとCSVイベントをインポート
 permalink: "/csv_events/"
-description: "この記事では、CSVファイルを使用してユーザーデータをインポートする方法とカスタムイベントをインポートする方法について説明します。"
+description: "このリファレンス記事では、ユーザーデータのインポート方法と CSV ファイルを使用したカスタムイベントのインポート方法について説明します。"
 page_type: reference
 ---
 
 # ユーザーデータのインポート（CSVイベントの早期アクセス）
 
-> Braze には、次のようにユーザーデータをプラットフォームにインポートするさまざまな方法が用意されています。SDK、API、クラウドデータの取り込み、テクノロジーパートナーの統合、およびCSVファイル。この記事では、ユーザーデータのインポート方法について詳しく説明します。[カスタムイベントをCSVファイル経由でインポートする方法（早期アクセス）](#importing-custom-events)も含まれています。
+> Braze には、次のようにユーザーデータをプラットフォームにインポートするさまざまな方法が用意されています。SDK、API、クラウドデータ取り込み、テクノロジーパートナー連携、CSV ファイル。この記事では、ユーザーデータのインポート方法について詳しく説明します。[カスタムイベントをCSVファイル経由でインポートする方法（早期アクセス）](#importing-custom-events)も含まれています。
 
 {% multi_lang_include email-via-sms-warning.md %}
 
@@ -22,19 +22,19 @@ page_type: reference
 
 CSVファイルから**オーディエンス** > **ユーザーのインポート**を通じてユーザープロフィールをアップロードおよび更新できます。
 
-CSVファイルを使用したユーザーデータのインポートは、名やメールなどのユーザー属性の記録および更新に加えて、靴のサイズなどのカスタム属性もサポートしています。CSV をインポートするには、2 つの一意のユーザー識別子のいずれかを指定できます: `external_id` またはユーザーエイリアス。
+CSV ファイルを使用したユーザーデータのインポートは、靴のサイズなどのカスタム属性に加えて、名やメールアドレスなどのユーザー属性の記録と更新をサポートしています。CSV をインポートするには、2 つの一意のユーザー識別子のいずれかを指定できます: `external_id` またはユーザーエイリアス。
 
 {% alert important %}
-ユーザーインポートは、ユーザーのカスタムイベントの記録と更新もサポートしています。ユーザー属性と同様に、`external_id`、`braze_id`、または`user_alias_name`を`user_alias_label`と一緒にインポートできます。詳細については、[カスタムイベントのインポート](#importing-custom-events)を参照してください。
+ユーザーインポートは、ユーザーのカスタムイベントの記録と更新もサポートしています。ユーザー属性と同様に、`external_id`、`braze_id`、または `user_alias_label` 付きの `user_alias_name` を使用してインポートできます。詳細については、[カスタムイベントのインポート](#importing-custom-events)を参照してください。
 {% endalert %}
 
 {% alert note %}
-ユーザーを`external_id`持つユーザーと持たないユーザーの混合でアップロードする場合は、インポートごとにCSVファイルを作成する必要があります。1つのCSVファイルには`external_ids`とユーザーエイリアスの両方を含めることはできません。
+`external_id` を持つユーザーと持たないユーザーが混在する場合、それらのユーザーの種類別に CSV ファイルを作成してアップロードする必要があります。1つのCSVファイルには`external_ids`とユーザーエイリアスの両方を含めることはできません。
 {% endalert %}
 
 ### external ID を使用するインポート
 
-顧客データをインポートする場合、各顧客の一意の識別子 (`external_id` とも呼ばれる) を指定する必要があります。CSVインポートを開始する前に、開発チームからBrazeでユーザーがどのように識別されるかを理解することが重要です。通常、これは内部データベースIDです。これは、モバイルおよびWeb上のBraze SDKによってユーザーがどのように識別されるかと一致する必要があり、各顧客がデバイス間でBraze内に単一のユーザープロファイルを持つように設計されています。Brazeの\[ユーザープロファイルライフサイクル][13]について詳しく読む。
+顧客データをインポートする場合、各顧客の一意の識別子 (`external_id` とも呼ばれる) を指定する必要があります。CSV インポートの開始前に、Braze によるユーザーの識別方法を開発チームから聞いて理解しておくことが重要です。通常、これは内部データベースIDです。これは、モバイルと Web で Braze SDK がユーザーを識別する方法と一致する必要があり、各顧客がデバイスを問わず Braze 内で単一のユーザープロファイルを持つように設計されています。詳細については、Braze の「\[ユーザープロファイルのライフサイクル][13]」を参照してください。
 
 インポートで `external_id` を指定すると、Braze は、同じ `external_id` を持つ既存のユーザーを更新します。`external_id` が見つからない場合は、その external_id を持つ新規ユーザーを作成します。
 
@@ -52,8 +52,8 @@ CSVファイルを使用したユーザーデータのインポートは、名�
 
 | user_alias_name | user_alias_label | last_name | email | sample_attribute |
 | --- | --- | --- | --- | --- |
-| 182736485 | my_alt_identifier | スミス | smith@user.com | TRUE |
-| 182736486 | my_alt_identifier | グエン | nguyen@user.com | FALSE |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
+| 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 インポート時に `user_alias_name` と`user_alias_label` の両方を指定すると、Braze は同じ `user_alias_name` と`user_alias_label` を使用して既存のユーザーを更新します。ユーザーが見つからない場合、Braze はその `user_alias_name` を設定して新規ユーザーを作成します。
@@ -63,11 +63,11 @@ CSVファイルを使用したユーザーデータのインポートは、名�
 {% endalert %}
 
 - **ダウンロード:** \[CSV エイリアス属性インポートテンプレート]\[template_alias_attributes]
-- **ダウンロード:** \[CSV エイリアス イベント インポート テンプレート]\[\[template_alias_events]
+- **ダウンロード:** \[CSV エイリアスイベントインポートテンプレート]\[template_alias_events]
 
 ### Braze ID を使用するインポート
 
-内部のBraze ID値を使用してBrazeで既存のユーザープロファイルを更新するには、`external_id`または`user_alias_name`および`user_alias_label`の代わりに、列ヘッダーとして`braze_id`を指定します。
+`external_id` または `user_alias_name` および `user_alias_label` 値の代わりに内部 Braze ID 値を使用して、Braze の既存のユーザープロファイルを更新するには、列のヘッダーとして `braze_id` を指定します。
 
 これは、セグメンテーション内のCSVエクスポートオプションを使用してBrazeからユーザーデータをエクスポートし、既存のユーザーに新しいカスタム属性を追加したい場合に役立ちます。
 
@@ -84,39 +84,39 @@ BrazeダッシュボードからのCSVエクスポートでは、`braze_id`値�
 ユーザーのデフォルト属性をインポートするには、**ユーザーのインポート** > **属性** に移動します。デフォルトのユーザー属性は Braze の予約キーです。`first_name`、`email` などがあります。カスタム属性は、お客様のビジネスに合わせてカスタマイズされます。例えば、旅行予約アプリには、`last_destination_searched` というカスタム属性を作成できます。
 
 {% alert important %}
-属性として顧客データをインポートする場合、使用する列ヘッダーはデフォルトのユーザー属性のスペルと大文字小文字が完全に一致している必要があります。一致しない場合、Braze は自動的にそのユーザープロファイルにカスタム属性を作成します。
+顧客データを属性としてインポートするときに、使用する列ヘッダーは、デフォルトのユーザー属性と正確に一致する必要があります (スペル、大文字小文字の区別)。一致しない場合、Braze は自動的にそのユーザープロファイルにカスタム属性を作成します。
 {% endalert %}
 
 #### デフォルトのユーザーデータ列のヘッダー
 
 | ユーザープロファイル フィールド | データ型 | 情報 | 必須 |
 |---|---|---|---|
-| `external_id` | string | 顧客のためのユニークなユーザー識別子。 | はい、[次のメモを見てください](#about-external-ids)。 |
-| `user_alias_name` | string | 匿名ユーザーのユニークなユーザー識別子。別の`external_id`。 | いいえ、[次のメモを参照してください](#about-external-ids)。 |
+| `external_id` | string | 顧客固有のユーザー識別子 | はい。[次の注記](#about-external-ids)を参照してください。 |
+| `user_alias_name` | string | 匿名ユーザーの一意のユーザー識別子。別の`external_id`。 | いいえ、[次のメモを参照してください](#about-external-ids)。 |
 | `user_alias_label` | string | ユーザーのエイリアスをグループ化するための一般的なラベル。 | はい、`user_alias_name`が使用されている場合。 |
-| `first_name` | string | ユーザーが示した名前（例えば、`Jane`）。 | いいえ |
-| `last_name` | string | ユーザーが示した姓（例えば、`Doe`）。 | いいえ |
-| `email` | string | ユーザーが示したメール（例えば、`jane.doe@braze.com`）です。 | いいえ |
+| `first_name` | string | ユーザーが指定したユーザーの名 (例: `Jane`)。 | いいえ |
+| `last_name` | string | ユーザーが指定したユーザーの姓 (例: `Doe`)。 | いいえ |
+| `email` | string | ユーザーが指定したユーザーのメール (例: `jane.doe@braze.com`)。 | いいえ |
 | `country` | string | 国コードは、ISO-3166-1アルファ2標準（例えば、`GB`）でBrazeに渡す必要があります。 | いいえ |
 | `dob` | string | "YYYY-MM-DD"の形式で渡す必要があります（例：`1980-12-21`）。これにより、ユーザーの生年月日がインポートされ、「今日」が誕生日のユーザーをターゲットにすることができます。 | いいえ |
 | `gender` | string | 「M」、「F」、「O」（その他）、「N」（該当なし）、「P」（言いたくない）、またはnil（不明）。 | いいえ |
-| `home_city` | string | ユーザーが示したホーム市区町村（例えば、`London`）。 | いいえ |
-| `language` | string | 言語はISO-639-1標準（例：`en`）でBrazeに渡す必要があります。<br>受け入れ可能な言語のリスト][1]をご参照ください。 | いいえ |
-| `phone` | string | ユーザーが示した電話番号は、`E.164`形式（例えば、`+442071838750`）です。<br> フォーマットのガイダンスについては\[ユーザー電話番号][2]を参照してください。 | いいえ |
+| `home_city` | string | ユーザーが示したユーザーの自宅の市区町村 (例えば、`London`)。 | いいえ |
+| `language` | string | 言語はISO-639-1標準（例：`en`）でBrazeに渡す必要があります。<br>\[受け入れ可能な言語のリスト][1] を参照してください。 | いいえ |
+| `phone` | string | ユーザーが指定した電話番号。`E.164` 形式 (`+442071838750` など)。<br> フォーマットのガイダンスについては\[ユーザー電話番号][2]を参照してください。 | いいえ |
 | `email_open_tracking_disabled` | ブール値 | true または false が受け入れられます。 このユーザーに送信されるすべての将来のメールに開封トラッキングピクセルが追加されないようにするには、trueに設定します。   | いいえ |
 | `email_click_tracking_disabled` | ブール値 | true または false が受け入れられます。 将来のメール内のすべてのリンクに対するクリックトラッキングを無効にするには、trueに設定します。このユーザーに送信されます。 | いいえ |
-| `email_subscribe` | string | 利用可能な値は、`opted_in`（メールメッセージの受信を明示的に登録）、`unsubscribed`（メールメッセージの受信を明示的にオプトアウト）、および`subscribed`（オプトインもオプトアウトもしていない）です。 | いいえ |
-| `push_subscribe` | string | 利用可能な値は`opted_in`（プッシュメッセージを受信するように明示的に登録されている）、`unsubscribed`（プッシュメッセージの受信を明示的にオプトアウトしている）、および`subscribed`（オプトインもオプトアウトもしていない）です。 | いいえ |
+| `email_subscribe` | string | 使用できる値は、`opted_in` (メールメッセージの受信を明示的に登録)、`unsubscribed` (メールメッセージの受信を明示的に拒否)、`subscribed` (明示的に登録も拒否もしていない) です。 | いいえ |
+| `push_subscribe` | string | 使用できる値は、`opted_in` (プッシュメッセージの受信を明示的に登録)、`unsubscribed` (プッシュメッセージの受信を明示的に拒否)、`subscribed` (登録も拒否もしていない) です。 | いいえ |
 | `time_zone` | string | タイムゾーンは、IANAタイムゾーンデータベース（例えば、`America/New_York` または `Eastern Time (US & Canada)`）と同じ形式で Braze に渡す必要があります。  | いいえ |
 | `date_of_first_session`<br><br> `date_of_last_session`| string | 次のISO-8601形式のいずれかで渡される場合があります: {::nomarkdown}<ul> <li> 「YYYY-MM-DD」 </li> <li> 「YYYY-MM-DDTHH:MM:SS+00:00」 </li> <li> 「YYYY-MM-DDTHH:MM:SSZ」 </li> <li> 「YYYY-MM-DDTHH:MM:SS」(2019-11-20T18:38:57 など) </li> </ul> {:/} | いいえ |
 | `subscription_group_id` | string | サブスクリプショングループの`id`。この識別子は、ダッシュボードのサブスクリプショングループページにあります。 | いいえ |
-| `subscription_state` | string | 指定された`subscription_group_id`のサブスクリプショングループのサブスクリプション状態。許可される値は `unsubscribed`（サブスクリプショングループに含まれていない）または `subscribed`（サブスクリプショングループに含まれている）です。 | いいえ、しかし`subscription_group_id`が使用されている場合は強くお勧めします。 |
+| `subscription_state` | string | `subscription_group_id` で指定されたサブスクリプショングループのサブスクリプション状態。許可される値は `unsubscribed`（サブスクリプショングループに含まれていない）または `subscribed`（サブスクリプショングループに含まれている）です。 | いいえ、しかし`subscription_group_id`が使用されている場合は強くお勧めします。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ##### 外部IDについて
 
 `external_id`は必須ではありませんが、**必ず**これらのフィールドのいずれかを含める必要があります: 
-- `external_id`: 顧客のための一意のユーザー識別子、**または**
+- `external_id`: 顧客の一意のユーザー識別子、**または**
 - `braze_id`: 既存のBrazeユーザーのために取得された一意のユーザー識別子、**または**
 - `user_alias_name` と `user_alias_label` :匿名ユーザーの一意のユーザー識別子
 
@@ -141,7 +141,7 @@ BrazeダッシュボードからのCSVエクスポートでは、`braze_id`値�
 
 ### サブスクリプショングループのステータスの更新
 
-ユーザーをメールまたはSMSサブスクリプショングループにユーザーインポートを通じて追加できます。これは特にSMSに役立ちます。なぜなら、ユーザーがSMSチャネルでメッセージを受信するには、SMSサブスクリプショングループに登録されている必要があるからです。詳細については、[SMS サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement)を参照してください。
+ユーザーをメールまたはSMSサブスクリプショングループにユーザーインポートを通じて追加できます。これは特に SMS で便利です。SMS チャネルでメッセージを受信するには、ユーザーが SMS サブスクリプショングループに登録されていなければならないためです。詳細については、[SMS サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement)を参照してください。
 
 サブスクリプショングループのステータスを更新する場合、CSV に以下の 2 列が必要です。
 
@@ -182,7 +182,7 @@ BrazeダッシュボードからのCSVエクスポートでは、`braze_id`値�
 ユーザーインポートでは、1 行につき `subscription_group_id` を 1 つのみ設定できます。異なる行に異なる `subscription_group_id` の値を設定できます。ただし、同じユーザーを複数のサブスクリプショングループに登録する必要がある場合は、複数のインポートを行う必要があります。
 {% endalert %}
 
-### カスタムイベントのインポート（早期アクセス） {#importing-custom-events}
+### カスタムイベントのインポート (早期アクセス） {#importing-custom-events}
 
 {% alert important %}
 カスタムイベントのインポートは現在早期アクセス中です。早期アクセスに参加したい場合は、Brazeのアカウントマネージャーに連絡してください。
@@ -190,7 +190,7 @@ BrazeダッシュボードからのCSVエクスポートでは、`braze_id`値�
 
 ユーザーのカスタムイベントをインポートするには、**ユーザーのインポート** > **イベント**に移動します。
 
-カスタムイベントはあなたのビジネスにカスタムされています。例えば、ストリーミングアプリにはrented_movieというカスタムイベントがあるかもしれません。あなたのCSVには次の列ヘッダーが必要です：
+カスタムイベントは、お客様のビジネスに合わせてカスタマイズされます。例えば、ストリーミングアプリにはrented_movieというカスタムイベントがあるかもしれません。あなたのCSVには次の列ヘッダーが必要です：
 
 - 次のいずれか:
   - `external_id`、**または**
@@ -199,30 +199,30 @@ BrazeダッシュボードからのCSVエクスポートでは、`braze_id`値�
 - 名前
 - 時刻
 
-カスタムイベントにはイベントプロパティが含まれる場合があります。例えば、カスタムイベントrented_movieには、タイトルとジャンルのプロパティが含まれる場合があります。これらのイベントプロパティには、`<event_name>.properties.<property name>`の列ヘッダーが必要です。例は`rented_movie.properties.title`です。
+カスタムイベントにはイベントプロパティが含まれる場合があります。例えば、カスタムイベントrented_movieには、タイトルとジャンルのプロパティが含まれる場合があります。これらのイベントプロパティには、列ヘッダー`<event_name>.properties.<property name>` が必要です。例は`rented_movie.properties.title`です。
 
 | ユーザープロファイル フィールド                      | データ型 | 情報                                                                                                                                                                                                             | 必須                                                                                        |
 |-----------------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| `external_id`                           | string    | あなたのユーザーのための一意のユーザー識別子。                                                                                                                                                                                 | はい、`external_id`、`braze_id`、`user_alias_name`のいずれかと`user_alias_label`が必要です。 |
-| `braze_id`                              | string    | あなたのユーザーのために割り当てられたBraze識別子。                                                                                                                                                                              | はい、`external_id`、`braze_id`、`user_alias_name`のいずれかと`user_alias_label`が必要です。 |
-| `user_alias_name`                       | string    | 匿名ユーザーのユニークなユーザー識別子。外部IDの代替案。                                                                                                                                        | はい、`external_id`、`braze_id`、`user_alias_name`のいずれかと`user_alias_label`が必要です。 |
-| `user_alias_label`                      | string    | ユーザーのエイリアスをグループ化するための一般的なラベル。                                                                                                                                                                          | はい、`external_id`、`braze_id`、`user_alias_name`のいずれかと`user_alias_label`が必要です。 |
+| `external_id`                           | string    | あなたのユーザーのための一意のユーザー識別子。                                                                                                                                                                                 | はい、`external_id`、`braze_id`、`user_alias_name` のいずれかと `user_alias_label` が必要です。 |
+| `braze_id`                              | string    | あなたのユーザーのために割り当てられたBraze識別子。                                                                                                                                                                              | はい、`external_id`、`braze_id`、`user_alias_name` のいずれかと `user_alias_label` が必要です。 |
+| `user_alias_name`                       | string    | 匿名ユーザーの一意のユーザー識別子。外部IDの代替案。                                                                                                                                        | はい、`external_id`、`braze_id`、`user_alias_name` のいずれかと `user_alias_label` が必要です。 |
+| `user_alias_label`                      | string    | ユーザーのエイリアスをグループ化するための一般的なラベル。                                                                                                                                                                          | はい、`external_id`、`braze_id`、`user_alias_name` のいずれかと `user_alias_label` が必要です。 |
 | `name`                                  | string    | ユーザーのカスタムイベント。                                                                                                                                                                                           | はい                                                                                             |
 | `time`                                  | string    | イベントの時間。次のISO-8601形式のいずれかで渡される場合があります: {::nomarkdown}<ul> <li> 「YYYY-MM-DD」 </li> <li> 「YYYY-MM-DDTHH:MM:SS+00:00」 </li> <li> 「YYYY-MM-DDTHH:MM:SSZ」 </li> <li> 「YYYY-MM-DDTHH:MM:SS」(2019-11-20T18:38:57 など) </li> </ul> {:/} | はい                                                                                             |
 | `<event name>.properties.<property name>` | 複数  | カスタムイベントに関連付けられたイベントプロパティ。例は`rented_movie.properties.title`です                                                                                                                        | いいえ                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
-外部ID自体は必須ではありませんが、次のいずれかのフィールドを含める必要があります:<br>- `external_id`: 顧客固有のユーザー識別子 <br>- `braze_id`: 既存の Braze ユーザーについて取得される一意のユーザー識別子 <br>- `user_alias_name`: 匿名ユーザーの一意のユーザー識別子
+external_id 自体は必須ではありませんが、次のいずれかのフィールドを含める必要があります。<br>- `external_id`: 顧客固有のユーザー識別子 <br>- `braze_id`: 既存の Braze ユーザーについて取得される一意のユーザー識別子 <br>- `user_alias_name`: 匿名ユーザーの一意のユーザー識別子
 {% endalert %}
 
 #### CSVサイズ
 
-Brazeは、500 MBまでのファイルから標準CSV形式のユーザーデータを受け付けます。CSVファイルテンプレートの1つをダウンロードするには、[external IDを使用したインポート](#importing-with-external-id)または[ユーザーエイリアスを使用したインポート](#importing-with-user-alias)を参照してください。
+Braze は、最大500 MB のファイルから標準 CSV 形式のユーザーデータを受け入れます。CSVファイルテンプレートの1つをダウンロードするには、[external IDを使用したインポート](#importing-with-external-id)または[ユーザーエイリアスを使用したインポート](#importing-with-user-alias)を参照してください。
 
 #### データポイントの考慮事項
 
-CSV経由でインポートされた各顧客データは、ユーザープロファイルの既存の値を上書きし、外部IDおよび空白の値を除き、データポイントとしてカウントされます。
+CSV を使用してインポートされた各顧客データは、ユーザープロファイルの既存の値を上書きし、external ID および空白の値を除き、1データポイントとしてカウントされます。
 
 - CSVインポートを介してアップロードされた外部IDは、データポイントを消費しません。外部IDのみをアップロードして既存のBrazeユーザーをSegmentするためにCSVファイルをアップロードする場合、データポイントを消費せずにこれを行うことができます。インポートにユーザーのメールや電話番号などの追加データを追加すると、既存のユーザーデータが上書きされ、データポイントが消費されます。
     - セグメンテーション目的のCSVインポート（唯一のフィールドとして`external_id`、`braze_id`、または`user_alias_name`を使用して行われたインポート）は、データポイントを消費しません。
@@ -236,7 +236,7 @@ CSVインポートまたはAPIを介してユーザーの言語や国を設定�
 ## CSV のインポート
 
 CSVファイルをインポートするには:
-1. **オーディエンス** > **ユーザーをインポート**に移動します。 
+1. \[**オーディエンス**] > \[**ユーザーをインポート**] に移動します。 
 2. **ファイルを参照**を選択して、目的のファイルを選択し、**インポートを開始**を選択します。Braze によりファイルがアップロードされ、列ヘッダー、および各列のデータ型がチェックされます。
 
 {% alert important %}
@@ -255,7 +255,7 @@ CSV インポートでは大文字と小文字が区別されます。つまり�
 
 インポートプロセスがエラーに遭遇すると、ファイル内の行の総数の横に警告アイコンが表示されます。アイコンにカーソルを合わせると、特定の行が失敗した理由の詳細が表示されます。インポートが完了すると、すべてのデータが既存のプロファイルに追加されるか、新規プロファイルが作成されます。
 
-![CSVファイルのアップロードは、単一の列に混在するデータ型に関するエラーで完了しました][4]{: style="max-width:70%"}
+![CSV のアップロードが完了しましたが、ある列でデータ型が混在しているエラーが発生しました][4]{: style="max-width:70%"}
 
 ### 考慮事項
 
@@ -318,7 +318,7 @@ Braze では、列の各値が同じデータ型である必要があります�
 \[events_template]: {% image_buster /assets/download_file/braze-csv-events-import-template.csv %}
 \[template_alias_attributes]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}
 \[template_alias_events]: {% image_buster /assets/download_file/braze-events-csv-example-user-alias.csv %}
-エラー]:#一般的なエラー
+\[errors]:#common-errors
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
