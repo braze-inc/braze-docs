@@ -105,7 +105,9 @@ In GitHub, go to the Braze Docs repository page and select **Pull requests**.
 
 ![Braze Docs repository page with navigation menu containing Pull requests.]({% image_buster /assets/img/contributing/github/menu_pull_requests.png %})
 
-Open a the respective pull request, then check **Allow edits from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+Open the relevant pull request, then check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+
+![A Pull Request showing the allow edits from maintainers checkbox.]({% image_buster /assets/img/contributing/github/allow_maintainers_to_edit.png %}){: style="max-width:50%;"}
 
 ## Requesting a review
 
