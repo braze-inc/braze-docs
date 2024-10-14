@@ -39,7 +39,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 {% alert important %}
-Campaign, card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns).
+Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns).
 {% endalert %}
 
 ### Canvas and campaign tag differences 
@@ -118,7 +118,7 @@ Furthermore, for push notifications, it's possible that Braze won't be able to d
 
 ![Example of using a default value of "there" when using a first name variable in a push message.][4]
 
-### Using conditional logic instad of a default value
+### Using conditional logic instead of a default value
 
 In some circumstances, you may opt to use [conditional logic][17] instead of setting a default value. Conditional logic allows you to send messages that differ based on the value of a custom attribute. Additionally, you can use conditional logic to [abort messages][18] to customers with null or blank attribute values. 
 
@@ -272,7 +272,7 @@ Message in default language
 {% endif %}
 ```
 
-In this use case, customers with a most recent locale of `pt_BR` will get a message in Brazilian Portuguese, and customers with a most recent locale of `pt_BR` will get a message in European Portuguese. Customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
+In this use case, customers with a most recent locale of `pt_BR` will get a message in Brazilian Portuguese, and customers with a most recent locale of `pt_PT` will get a message in European Portuguese. Customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
 
 ### Use case: Target users by time zone
 

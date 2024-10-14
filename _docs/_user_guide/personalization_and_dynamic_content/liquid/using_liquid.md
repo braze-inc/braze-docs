@@ -50,12 +50,12 @@ The following values can be substituted into a message, depending on their avail
 You can also pull content directly from a web server through Braze [Connected Content][9].
 
 {% alert important %}
-Braze currently supports Liquid up to and including **Liquid 5 from Shopify**.
+Braze currently supports Liquid up to and including Liquid 5 from Shopify.
 {% endalert %}
 
 ## Using Liquid
 
-After you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. 
+Using [Liquid tags][1], you can elevate the quality of your messages by enriching them with a personal touch. 
 
 ### Liquid syntax
 
