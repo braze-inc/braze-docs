@@ -1191,6 +1191,7 @@ validurls['/docs/partners/message_orchestration/additional_channels/messaging/li
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/messenger/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/messenger/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/regal/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/regal/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/sendbird/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/sendbird/';
+validurls['/docs/partners/message_orchestration/additional_channels/instant_chat/line/'] = '/docs/line/';
 
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/';
 validurls['/docs/canvas_data_retention/'] = '/docs/api/data_retention/';
