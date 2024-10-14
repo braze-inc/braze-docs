@@ -15,15 +15,15 @@ channel:
 
 ## ステップ 1:Huawei 開発者アカウントに登録する
 
-始める前に、[Huawei 開発者アカウント](https://developer.huawei.com/consumer/en/console)への登録と設定が必要です。Huawei アカウントで、**\[My Projects] > \[Project Settings] > \[App Information]** に移動し、`App ID` と`App secret` を書き留めます。
+始める前に、[Huawei 開発者アカウント](https://developer.huawei.com/consumer/en/console)への登録と設定が必要です。Huawei アカウントで、**[My Projects] > [Project Settings] > [App Information]** に移動し、`App ID` と`App secret` を書き留めます。
 
 ![]({% image_buster /assets/img/huawei/huawei-credentials.png %})
 
 ## ステップ 2: Braze ダッシュボードで新しい Huawei アプリを作成する
 
-Braze ダッシュボードで、\[**設定**] ナビゲーションの下にある \[**アプリ設定**] に移動します。
+Braze ダッシュボードで、[**設定**] ナビゲーションの下にある [**アプリ設定**] に移動します。
 
-\[**\+ アプリ**] をクリックし、名前 (My Huawei App など) を入力し、プラットフォームとして `Android` を選択します。
+[**+ アプリ**] をクリックし、名前 (My Huawei App など) を入力し、プラットフォームとして `Android` を選択します。
 
 ![]({% image_buster /assets/img/huawei/huawei-create-app.png %}){: style="max-width:60%;"}
 
@@ -33,9 +33,9 @@ Braze ダッシュボードで、\[**設定**] ナビゲーションの下にあ
 
 ## ステップ 3: Huawei メッセージング SDK をアプリに統合する
 
-Huawei は、Huawei Messaging Service をアプリケーションに統合する \[Android 統合codelab[](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) を提供しています。以下の手順に従って開始してください。
+Huawei は、Huawei Messaging Service をアプリケーションに統合する Android 統合codelab[](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) を提供しています。以下の手順に従って開始してください。
 
-codelab が完了したら、カスタムの \[Huawei Message Service[](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls) を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
+codelab が完了したら、カスタムの [Huawei Message Service[](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls) を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
 
 {% tabs %}
 {% tab Java %}
@@ -100,9 +100,9 @@ class CustomPushService: HmsMessageService() {
 
 ### 新しいプッシュ通知キャンペーンを作成する
 
-\[**キャンペーン**] ページで、新しいキャンペーンを作成し、メッセージタイプとして \[**プッシュ通知**] を選択します。
+[**キャンペーン**] ページで、新しいキャンペーンを作成し、メッセージタイプとして [**プッシュ通知**] を選択します。
 
-キャンペーンに名前を付けたら、プッシュプラットフォームとして \[**Android プッシュ通知**] を選択します。
+キャンペーンに名前を付けたら、プッシュプラットフォームとして [**Android プッシュ通知**] を選択します。
 
 ![使用可能なプッシュプラットフォームを表示するキャンペーン登録コンポーザ。]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
@@ -120,7 +120,7 @@ class CustomPushService: HmsMessageService() {
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 
-Huaweiアプリのみにプッシュを送信するには、\[新しいSegment]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform))を作成し、**Apps**セクションでHuaweiアプリを選択します。
+Huaweiアプリのみにプッシュを送信するには、[新しいSegment]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform)を作成し、**Apps**セクションでHuaweiアプリを選択します。
 
 ![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
 
