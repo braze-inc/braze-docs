@@ -620,7 +620,7 @@ var ticket_lookuptable = {
             },
             'Targeting and Segmentation' : {
               'ShowSubmit': true,
-              'LinksTitle': ['セグメンテーション,'セグメントインサイト',Brazeラーニングコース:セグメンテーション,''],
+              'LinksTitle': ['セグメンテーション','セグメントインサイト','Brazeラーニングコース:セグメンテーション,'],
               'Links' : ['{{site.baseurl}}/user_guide/engagement_tools/segments','{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/','https://learning.braze.com/segmentation-course']
             },
             'Message Composition by Channel' : {
