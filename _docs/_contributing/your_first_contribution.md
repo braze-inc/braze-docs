@@ -187,7 +187,9 @@ These comments will guide you through your PR description. When you're finished,
 
 ![An example pull request showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
 
-In your new pull request, check **Allow edits from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+Finally, check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content during their review later.
+
+![A Pull Request showing the allow edits from maintainers checkbox.]({% image_buster /assets/img/contributing/github/allow_maintainers_to_edit.png %}){: style="max-width:50%;"}
 
 ## Step 4: Review your work
 
