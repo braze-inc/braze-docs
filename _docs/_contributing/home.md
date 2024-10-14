@@ -131,7 +131,7 @@ In GitHub, go to the Braze Docs repository page and select **Pull requests**.
 
 ![Braze Docs repository page with navigation menu containing Pull requests.]({% image_buster /assets/img/contributing/github/menu_pull_requests.png %})
 
-Open the pull request that you want to allow commits on, then select the **Allow edits from maintainers** checkbox. This will allow the original maintainers of the Docs repository to make changes to your pull request.
+Open your new pull request, then check **Allow edits from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
 
 ### Step 2.4: Install Ruby
 
