@@ -99,6 +99,14 @@ When you're finished, select the pull request dropdown, then select **Draft pull
 
 ![The Braze Docs GitHub repository showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
 
+## Allowing changes to pull requests
+
+In GitHub, go to the Braze Docs repository page and select **Pull requests**.
+
+![Braze Docs repository page with navigation menu containing Pull requests.]({% image_buster /assets/img/contributing/github/menu_pull_requests.png %})
+
+Open a the respective pull request, then check **Allow edits from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+
 ## Requesting a review
 
 To request a PR review from a member of the Braze Docs team, open the [PR you previously created](#creating-a-pull-request) and select **Ready for review**.
