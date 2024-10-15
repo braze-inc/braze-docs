@@ -35,7 +35,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 ### Create BrazeManager.swift
 
 {% tabs local %}
-{% tab Create BrazeManager.swift %}
+{% tab Create BrazeManager swift %}
 
 ##### Create BrazeManager.swift
 To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` for SPM (`import Appboy_iOS_SDK` for CocoaPods) and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. `Appboy_iOS_SDK`
@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 ### Initialize the SDK
 
 {% tabs local %}
-{% tab Step 1: Initialize SDK from BrazeManager.swift %}
+{% tab Step 1: Initialize SDK from BrazeManager swift %}
 
 ##### Initialize SDK from BrazeManager.swift
 Next, you must initialize the SDK. This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [workspace SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `Info.plist` file or in `appboyOptions`.

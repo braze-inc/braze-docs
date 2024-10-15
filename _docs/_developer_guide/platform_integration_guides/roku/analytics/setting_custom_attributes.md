@@ -50,7 +50,7 @@ m.Braze.setCustomAttribute("boolAttribute", true)
 m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
-{% tab Float/Double %}
+{% tab Float or Double %}
 ```brightscript
 m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
