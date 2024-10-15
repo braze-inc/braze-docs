@@ -303,7 +303,6 @@ Here are some key email-specific metrics that you won't see in other channels. T
         </tr>
     </tbody>
 </table>
-=======
 Here are some key email-specific metrics that you won't see in other channels. To see the definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
 
 | Metric | Definition |
