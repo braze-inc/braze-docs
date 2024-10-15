@@ -31,14 +31,14 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 ## Use cases
 
 {% tabs local %}
-{% tab Data Capture (Form Submission) %}
+{% tab Data Capture - Form Submission %}
 
 When a user submits a customizable data capture form in Komo, the Komo fields mapped in the Braze integration will be passed to Braze via the `/users/track/` API call.
 
 Data capture forms exist either at the start or end of Cards.
 
 {% endtab %}
-{% tab Market Research (Coming soon) %}
+{% tab Market Research - Coming soon %}
 
 Coming soon, Komo will be adding the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, etc. This data will enable you to enhance a user's profile beyond data captured in form submissions.
 
