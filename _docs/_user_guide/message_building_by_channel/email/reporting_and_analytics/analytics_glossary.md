@@ -16,7 +16,6 @@ channel:
     font-size: 14px;
   }
 </style>
-=======
 glossaries:
   - name: "Variation"
     description: Variation of a campaign, differing as defined by the creator.
