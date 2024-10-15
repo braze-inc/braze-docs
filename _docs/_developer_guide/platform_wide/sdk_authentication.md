@@ -67,8 +67,6 @@ When generating the JWT, the following fields are expected:
 | ----- | -------- | -------------------------------------------------------------------------------------- |
 | `sub` | Yes  | The "subject" should equal the User ID you supply Braze SDK when calling `changeUser`  |
 | `exp` | Yes | The "expiration" of when you want this token to expire.                                |
-| `aud` | No       | The "audience" claim is optional, and if set should equal `braze`                      |
-| `iss` | No       | The "issuer" claim is optional, and if set should equal your SDK API Key.              |
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
