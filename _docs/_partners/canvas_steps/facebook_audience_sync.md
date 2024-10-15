@@ -128,7 +128,7 @@ Starting in July 2023, Meta is rolling out Meta work accounts to a small set of 
  
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Facebook's Marketing API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Facebook. 
 
-Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync isn't possible, these users are listed under the Users Errored metric.
 
 ## Understanding analytics
 
@@ -156,17 +156,17 @@ You can simply disconnect and reconnect your Facebook account on the Facebook pa
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
-- Make sure your system user token is authenticated and has access to the desired ad accounts in Facebook Business Manager
-- Make sure you have selected an ad account, entered a name for the new custom audience, and selected fields to match
+- Make sure your system user token is authenticated and has access to the desired ad accounts in Facebook Business Manager.
+- Make sure you have selected an ad account, entered a name for the new custom audience, and selected fields to match.
 - You may have reached the 500 custom audience limit on Facebook. Go into Facebook Audience Manager to delete some unneeded ones before creating any new Custom Audiences using Canvas.
 {% enddetails %}
 
 {% details How do I know if users have matched after passing users to Facebook? %}
-Facebook does not provide this information for privacy reasons.
+Facebook doesn't provide this information for privacy reasons.
 {% enddetails %}
 
 {% details Does Braze support value-based custom audiences? %}
-At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+At this time, value-based custom audiences aren't supported by Braze. If you're interested in syncing these types of custom audiences, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 {% enddetails %}
 
 {% details How do I resolve an issue with syncing a value-based lookalike custom audience? %}
@@ -182,14 +182,12 @@ At this time, value-based lookalike custom audiences are not supposed by Braze. 
 {% enddetails %}
 
 {% details I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this? %}
-In order to use Audience Sync to Facebook, you will need to ensure that you have accepted these terms of service agreement. 
+To use Audience Sync to Facebook, you need to accept these terms of service agreement. 
 
-If your ad account is directly associated with your personal Facebook account, follow this link and accept the TOS: [https://www.facebook.com/ads/manage/customaudiences/tos.php](https://www.facebook.com/ads/manage/customaudiences/tos.php)
+- If your ad account is directly associated with your personal Facebook account, you can accept the TOS from [within your personal account](https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID).
+- If your ad account is tied to your company's Business Manager account, you need to accept the TOS from [within your business manager account](https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID).
 
-If your ad account is tied to your company's Business Manager account you will also need to accept the TOS from within your business manager account. following this link:<br>
-[https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID](https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID)
-
-Once you have accepted your Facebook custom audiences terms of service, you will need to do the following:
+After you have accepted your Facebook custom audiences terms of service, do the following:
 1. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook account.
 2.  Re-enable your Facebook Audience Sync step by editing and updating your Canvas.
 Braze will then be able to sync users as soon as they reach the Facebook audience step.
