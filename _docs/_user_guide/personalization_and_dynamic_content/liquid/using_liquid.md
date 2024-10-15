@@ -109,13 +109,26 @@ The modal will insert Liquid with your specified default value at the point that
 {% raw %}
 Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters.
 
-For example, let's say you want to add two custom data integers together. You can't use:
+For example, let's say you want to add two custom data integers together. 
+
+#### Incorrect Liquid example
+
+You can't use:
 
 ```liquid
 {{custom_attribute.${one}}} | plus: {{custom_attribute.${two}}}
 ```
 
 This Liquid doesn't work because you can't reference multiple attributes in one line; you need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes would require two lines of Liquid: one to assign the custom attribute to a variable, and one to perform the addition.
+
+#### Correct Liquid example
+
+You can use:
+
+```liquid
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign result = value_one | plus: {{custom_attribute.${two}}} %}
+```
 
 #### Tutorial: Using variables to calculate a balance
 
