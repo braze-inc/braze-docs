@@ -15,9 +15,10 @@ In this article, we'll walk you through a use case for the **Abandoned Intent** 
 
 ## Prerequisites
 
-To successfully use this template:
-- You have a separate post-purchase user journey Canvas since making a purchase in this Canvas will cause users to exit the Canvas.
-- You need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
+To successfully use this template, you'll need the following:
+
+- A separate post-purchase user journey Canvas since making a purchase in this Canvas will cause users to exit the Canvas.
+- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
 To access this template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates** > **Abandoned Intent**. 
 

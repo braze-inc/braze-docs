@@ -17,7 +17,7 @@ This article will walk you through a use case for the **Lapsing User** template,
 
 To successfully use the lapsing user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
-To access the lapsing user template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Lapsing User**. 
+To access this template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Lapsing User**. 
 
 ## Tailoring the template to your needs
 
