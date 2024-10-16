@@ -57,7 +57,7 @@ Shopify ストアを接続したら、ステップ2に進み、統合に含め�
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_2_events.png %}){: style="max-width:70%"}
 
-\[**製品の表示**]、\[**製品のクリック**]、または \[**カート放棄**] イベントを選択する場合、トラッキングのために Braze Web SDKが必要になります。Braze Web SDK を[Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を介して実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features) に直接実装すると、Braze によりトラッキングスクリプトが自動的に生成され、サイトに読み込まれます。Web SDK を[ヘッドレス Shopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)に実装する場合は、これらのイベントのトラッキングを手動でオンにする必要があります。 
+[**製品の表示**]、[**製品のクリック**]、または [**カート放棄**] イベントを選択する場合、トラッキングのために Braze Web SDKが必要になります。Braze Web SDK を[Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を介して実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features) に直接実装すると、Braze によりトラッキングスクリプトが自動的に生成され、サイトに読み込まれます。Web SDK を[ヘッドレス Shopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)に実装する場合は、これらのイベントのトラッキングを手動でオンにする必要があります。 
 
 #### 履歴データのバックフィル(オプション)
 
@@ -66,7 +66,7 @@ Shopify ストアを接続したら、ステップ2に進み、統合に含め�
 ![]({% image_buster /assets/img/Shopify/shop_setup_4.png %}){: style="max-width:70%"}
 
 {% alert warning %}
-バックフィルで注文作成イベントと Braze 購入イベントをインポートするには、\[**注文作成イベント**] と \[**Braze 購入イベント**] を選択し、統合の一部として含める必要があります。
+バックフィルで注文作成イベントと Braze 購入イベントをインポートするには、[**注文作成イベント**] と [**Braze 購入イベント**] を選択し、統合の一部として含める必要があります。
 {% endalert %}
 
 ### ステップ3:サブスクライバーの収集(オプション)
@@ -95,7 +95,7 @@ Shopifyインテグレーションを使用すると、Shopifyストアからメ
 
 ![]({% image_buster /assets/img/Shopify/finish_setup.png %}){: style="max-width:70%"}
 
-以上で操作完了です。\[接続保留中] ステータスが \[接続済み] に更新され、接続が確立された日時のタイムスタンプが表示されます。また、それぞれのShopify機能が正常に有効になっているかどうかも確認します。 
+以上で操作完了です。[接続保留中] ステータスが [接続済み] に更新され、接続が確立された日時のタイムスタンプが表示されます。また、それぞれのShopify機能が正常に有効になっているかどうかも確認します。 
 
 ![]({% image_buster /assets/img/Shopify/shopify_connected_store.png %}){: style="max-width:70%"}
 
@@ -103,7 +103,7 @@ Shopifyインテグレーションを使用すると、Shopifyストアからメ
 
 #### 放棄カート or カート放棄のアップデートとチェックアウトの遅延
 
-デフォルトでは、Braze は`shopify_abandoned_checkout` および`shopify_abandoned_cart` イベントのトリガーの遅延時間を1時間 (何も操作が行われなかった時間) に自動的に設定します。☆\[**カート放棄の遅延**] と \[**チェックアウト放棄遅延**] は、イベントごとに5分から最大24時間までの範囲で設定できます。このためには、Shopify パートナーページでドロップダウンから時間を選択してから、\[**遅延を設定**] を選択します。
+デフォルトでは、Braze は`shopify_abandoned_checkout` および`shopify_abandoned_cart` イベントのトリガーの遅延時間を1時間 (何も操作が行われなかった時間) に自動的に設定します。☆ [**カート放棄の遅延**] と [**チェックアウト放棄遅延**] は、イベントごとに5分から最大24時間までの範囲で設定できます。このためには、Shopify パートナーページでドロップダウンから時間を選択してから、[**遅延を設定**] を選択します。
 
 ![]({% image_buster /assets/img/Shopify/shop_setup_advanced_abandonment.png %}){: style="max-width:30%"}
 
@@ -136,7 +136,7 @@ Shopify 製品 ID の代わりに、SKU または製品タイトルを Shopify �
  - Braze Shopify アプリがShopifyの管理ページから削除された
 
 
-その場合は、\[**設定を再試行**] を選択して、インストールプロセスをやり直すことができます。<br><br>
+その場合は、[**設定を再試行**] を選択して、インストールプロセスをやり直すことができます。<br><br>
 ![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:70%;"}
 {% enddetails %}
 
