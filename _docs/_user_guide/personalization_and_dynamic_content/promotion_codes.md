@@ -62,11 +62,7 @@ You also have the option to set up optional and customized threshold alerts. If 
 Braze does not manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
 
 - Has one code per row.
-- Includes these columns:
-  - **User identification:** This is the unique identifier for each user, such as `external_id` or `email`.
-  - **Promotion code:** This is the actual code you want to apply to the user.
-  - (optional) **Promotion code expiration date:** If applicable, this helps in managing the validity of your promotion codes.
-  - (optional) **Usage limit:** This indicates how many times a promotion code can be used.
+- Includes a column for the promotion code, which is the actual code you want to apply to the user.
 
 You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promotion codes.
 
