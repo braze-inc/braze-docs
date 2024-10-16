@@ -15,7 +15,7 @@ channel:
 
 ## About link aliasing
 
-Link aliasing creates user-generated names to identify and track links sent in emails. This way, you can use these recognizable link aliases in your emails to track engagement and analyze campaign performance, without needing to reference the full link.
+With link aliasing, you can create user-generated names to identify and track links sent in emails. This way, you can efficiently use these recognizable link aliases in your emails to track engagement and analyze campaign performance, without needing to reference the full link.
 
 With link aliasing, you can:
 
