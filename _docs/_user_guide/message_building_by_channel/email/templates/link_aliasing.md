@@ -27,8 +27,6 @@ With link aliasing, you can:
 
 Braze uniquely identifies links within emails by appending an extra `lid` parameter to every link URL. This `lid` value (also known as a link identifier) allows Braze to track and monitor and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide valuable insight into how users engage with the content in your email campaigns.
 
-In Braze, a `lid` value, also known as "link identifier", is a unique identifier that's appended to a URL to enable tracking and analytics for that specific link. This `lid` value allows Braze to track and monitor user interactions with the link, providing valuable insight into how users engage with the content in your email campaigns. When an email is sent, Braze replaces the capture tag in the URL with the actual alias value.
-
 ## Creating a link alias
 
 To create a link alias, follow these steps: 
