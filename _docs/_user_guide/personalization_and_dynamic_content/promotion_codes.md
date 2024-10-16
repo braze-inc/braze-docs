@@ -59,7 +59,7 @@ You also have the option to set up optional and customized threshold alerts. If 
 
 ### Step 4: Promotion code upload
 
-Braze does not manage code creation or redemption. As a result, you'll have to generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
+Braze does not manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
 
 - Has one code per row.
 - Includes these columns:
