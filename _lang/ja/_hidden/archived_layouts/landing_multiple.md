@@ -1,5 +1,5 @@
 ---
-nav_title: MS LP with FA Icons
+nav_title: FA アイコン付き MS LP
 layout: dev_guide
 
 page_order: 1.3
@@ -57,10 +57,10 @@ guide_menu_list:
   - name: 例4
     link: /docs/home/templates/api_glossary/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: 例 5
+  - name: 例5
     link: /docs/home/templates/glossary_test_page/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: 例 6
+  - name: 例6
     link: /docs/home/templates/partner_page_template_video/
     image: /assets/img/braze_icons/heart-hand.svg
 ---

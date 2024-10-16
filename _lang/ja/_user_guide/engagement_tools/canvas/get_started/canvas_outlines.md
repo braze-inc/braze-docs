@@ -17,8 +17,8 @@ tool: Canvas
 Braze ラーニングでは、一般的なキャンバスの概要を解説する専用のキャンバスコースもいくつか提供しています。専門用語や概念に関する重要なインサイトについては、動画、レッスン、インタラクティブな演習を組み合わせたコースをチェックしてください。 
 - [キャンバスフローによるカスタマージャーニーの作成](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [新規ロイヤルティ会員のオンボーディング](https://learning.braze.com/new-loyalty-member-onboarding)
-- [失効したユーザー](https://learning.braze.com/lapsing-users)
-- [放棄されたカートユーザージャーニーの構築](https://learning.braze.com/build-an-abandoned-cart-user-journey)
+- [離脱ユーザー](https://learning.braze.com/lapsing-users)
+- [放棄カートのユーザージャーニーの構築](https://learning.braze.com/build-an-abandoned-cart-user-journey)
 
 {% alert important %}
 2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、従来のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。これは、キャンバスの構築と管理をより良く行う目的で改良された編集エクスペリエンスです。「[キャンバスからキャンバスフローへの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)」を参照してください。

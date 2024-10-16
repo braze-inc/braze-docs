@@ -8,7 +8,7 @@ noindex: true
 
 > オーバービュー・レイアウトは、ページの上部に特定のナビゲーション・オプションを設け、ユーザーがボタンをクリックしてページの特定の部分や、まったく別のページに移動できるようにするのに適している。
 
-セレクタ・レイアウトの典型的な例としては、[SDK Changelogs](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/)ページや[アプリ内メッセージCreative Detailsページが](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)ある。
+セレクタレイアウトの典型的な例は、[SDK Changelogs](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) ページ、または[アプリ内メッセージクリエイティブ詳細ページ](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)です。
 
 ## 必要なコンポーネント
 
@@ -18,22 +18,22 @@ noindex: true
 
 ## 必須パラメータ
 
-|パラメーター | コンテンツ・タイプ | 詳細 |
+|パラメーター | コンテンツタイプ | 詳細 |
 |---|---|---|
-|`page_order`| 数値 | セクション内でページを順番に並べる。この順番は左側のナビゲーションに反映される。 |
+|`page_order`| 数値 | セクション内でページを順番に並べる。この順序は左側のナビゲーションに反映されます。 |
 | `nav-title`| 英数字 | 左側のナビゲーションに表示されるタイトル。 |
 |`layout`| 英数字 - スペースなし | ドキュメントの[レイアウトセクションから](https://github.com/Appboy/braze-docs/tree/develop/_layouts)レイアウトを選択する。 | 
 |`guide_top_header`|英数字 | ページにタイトルをつける。|
-|`guide_top_text`|英数字 | これはボタンとそのタイトルの真上に表示される。内容によっては引用が必要である。 |
-|`guide_featured_title`| 英数字 | カードにタイトルをつける。これはボタンの真上に配置される。
+|`guide_top_text`|英数字 | ページを説明すると、ボタンとそのタイトルの真上に表示されます。内容によっては引用が必要である。 |
+|`guide_featured_title`| 英数字 | カードにタイトルをつける。ボタンの真上に表示されます。
 |`guide_featured_list`| より多くのYAML、英数字 | 下記の[ガイド掲載フォーマットを](#guide-listing-format)参照のこと。 |
 
 ### ガイド掲載フォーマット
 
-|パラメーター | コンテンツ・タイプ | 詳細 |
+|パラメーター | コンテンツタイプ | 詳細 |
 |---|---|---|
-|`name`| 英数字 | 箱に名前をつける。 |
-| `link`| URLまたはパス | 箱が置かれる場所へのリンク。完全なURL、または（内部リンクの場合は）完全なURLを含むこと。 `/docs...`  |
+|`name`| 英数字 | ボックスに名前を付けます。 |
+| `link`| URLまたはパス | ボックスの移動先へのリンク。完全なURL、または（内部リンクの場合は）完全なURLを含むこと。 `/docs...`  |
 |`image`| パス | 画像の場所へのリンク。 |
 
 フォーマットの例：

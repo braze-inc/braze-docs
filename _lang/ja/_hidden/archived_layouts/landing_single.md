@@ -38,7 +38,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 
 guide_top_header: "FAアイコンを使ったシングルセクションのランディングページ"
-guide_top_text: "単一セクションのランディングページは、セクション内のページ間の区分がほとんどない、あるいは全くない大きなセクションに最適である。この特別なテンプレートは、「featured」レイアウトのyamlパラメーター（「layout: dev_guide」）を使っている。追加のセクションが必要な場合、'dev_guide' レイアウト YAML パラメータを使用して、マルチセクションランディングページページタイプを使用する。"
+guide_top_text: "単一セクションのランディングページは、セクション内のページ間の区分がほとんどない、あるいは全くない大きなセクションに最適である。この特定のテンプレートは 'featured' layout yaml パラメーター ('layout: dev_guide') を使用します。これにより、ページの下部に追加情報を追加できます。追加のセクションが必要な場合、'dev_guide' レイアウト YAML パラメータを使用して、マルチセクションランディングページページタイプを使用する。"
 
 guide_featured_title: "セクション"
 guide_featured_list:
@@ -54,7 +54,7 @@ guide_featured_list:
 
 ---
 
-## おまけ
+## エクストラ
 
 必要であれば、一番下に追加コンテンツを加えることもできる。必ず下に改行を入れること。ここに参考資料を追加してはいけない。[その際は、参考テンプレートを使おう]({{site.baseurl}}/home/templates/reference/)。
 

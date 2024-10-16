@@ -1,5 +1,5 @@
 ---
-nav_title: ブレイズのSSL
+nav_title: Braze の SSL
 article_title: SSLの概要
 page_order: 5
 page_type: reference
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# ブレイズのSSL
+# Braze の SSL
 
 {% multi_lang_include video.html id="zP1N_wN0SsQ" align="right" %}
 
@@ -20,7 +20,7 @@ channel: email
 
 ウェブサイトやリンクをSSLで保護することは、機密性の高い顧客情報を直接扱わない企業でも一般的に行われている。SSLで保護されたリンクはユーザーからの信頼度が高く、認証のレイヤーが増えることでデータの保護に役立つ。
 
-### クリックと開封のトラッキングに必要
+### クリックと開封の追跡に必要
 
 Brazeでは、Eメールを送信する際、まずブランド化されたリンク追跡サブドメインを使用してリンクを変換し、ユーザーのクリックと開封を追跡する。デフォルトでは、これらのリンクはHTTPで始まる。つまり、非セキュアなトラフィックを制限するブラウザや拡張機能を使用しているユーザーは、たとえURLがセキュアであったとしても、リダイレクト先のURLに到達する前にリダイレクトを通過することが困難になる可能性がある。このため、画像が壊れたり、メール全体のクリックや開封のトラッキングが不正確になったりする可能性がある。このため、リンク追跡サブドメインにSSLレイヤーを適用し、Eメールでの安全なリダイレクトを確認するのがベストプラクティスである。 
 
@@ -34,7 +34,7 @@ HTTPストリクト・トランスポート・セキュリティ（HSTS）ドメ
 
 ## SSL証明書を取得する
 
-サードパーティ、通常はコンテンツ・デリバリー・ネットワーク（CDN）を利用することで、SSL証明書を取得することができる。CDNはSSL証明書をホストし、リンクがクリックされるたびにブラウザに提供することができる。これは、CDNを経由してトラフィックをリダイレクトし、必要な証明書を適用してから、メール・パートナーのSendGridまたはSparkPostに送信することで行われる。
+サードパーティ、通常はコンテンツ配信ネットワーク (CDN) を利用することで、SSL 証明書を取得することができます。CDNはSSL証明書をホストし、リンクがクリックされるたびにブラウザに提供することができる。これは、CDNを経由してトラフィックをリダイレクトし、必要な証明書を適用してから、メール・パートナーのSendGridまたはSparkPostに送信することで行われる。
 
 SSLセットアップを開始するには、Brazeカスタマーサクセスマネージャーに連絡し、BrazeのフルEメールセットアップを開始する。
 
@@ -42,46 +42,46 @@ Brazeがこのセットアップを開始したら、以下の手順に従う：
 1. Brazeは、ドメインレジストリに追加するDNSレコードを提供する。
 2. Brazeは、レコードがレジストリに正しく追加されているかどうかを確認する。
 3. この後、CDNを選択し、サードパーティーのプロバイダーからSSL証明書を取得する。 
-4. この時点で、CDNを設定する。なお、BrazeではCDN設定のトラブルシューティングはできない。さらなるサポートが必要な場合は、CDNプロバイダーに問い合わせること。
-5. SSLを有効にするには、カスタマー・サクセス・マネージャーに連絡しよう。
+4. この時点で、CDNを設定する。Braze は、CDN 設定のトラブルシューティングに役立ちません。さらなるサポートが必要な場合は、CDNプロバイダーに問い合わせること。
+5. SSL を有効にするには、カスタマーサクセスマネージャーに連絡してください。
 
 ### CDNとは何か、なぜ必要なのか？
 
-コンテンツ・デリバリー・ネットワーク（CDN）とは、複数のメディアにわたる高品質なコンテンツの迅速なロードタイムを保証すると同時に、セキュリティ証明書を扱うサーバーのプラットフォームである。 
+コンテンツ配信ネットワーク (CDN) とは、セキュリティ証明書を処理しながら、複数のメディアにわたる高品質なコンテンツの迅速な読み込みを保証するのに役立つサーバーのプラットフォームです。 
 
 {% alert important %}
-CDNの設定は、常にBrazeによってDNSレコードが検証された後に行われる。まだこのステップを開始していない場合は、カスタマー・サクセス・マネージャーに連絡し、開始方法の詳細を確認する。
+CDNの設定は、常にBrazeによってDNSレコードが検証された後に行われる。このステップをまだ開始していない場合は、カスタマーサクセスマネージャーに問い合わせて開始方法の詳細を確認してください。
 {% endalert %}
 
-Brazeでは、クリックトラッキングとオープントラッキングを行うために、配信パートナーがブランドのサブドメインを使用してリンクを変換し、CDNが新しく変換されたリンクにSSL証明書を適用する。リンクや画像を正しく表示させるために、メール受信者のブラウザに有効で信頼できる証明書を提示する必要がある。Brazeはこのような証明書を要求したり管理したりしないため、CDNを通じてユーザー側で設定する必要がある。 
+Brazeでは、クリックトラッキングとオープントラッキングを行うために、配信パートナーがブランドのサブドメインを使用してリンクを変換し、CDNが新しく変換されたリンクにSSL証明書を適用する。多くの場合、当社の配信パートナーは、リンクや画像を正しく表示できるように、有効で信頼できる証明書をメール受信者のブラウザに提示する必要があります。Braze はこのような証明書の要求や管理を行わないため、これは CDN を通じてユーザー側で設定する必要があります。 
 
 {% alert note %}
-クリックトラッキングとオープントラッキングにSSLを設定する際に、リストアップされたCDNを使用できない、または使用したくない場合は、カスタムSSL設定を行うことができる。代替CDNやカスタムプロキシは、より複雑で微妙なセットアップになる可能性がある。このトピックについては、[SendGridと](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) [SparkPostの](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/)記事を参照のこと。
+クリックトラッキングとオープントラッキングにSSLを設定する際に、リストアップされたCDNを使用できない、または使用したくない場合は、カスタムSSL設定を行うことができる。代替 CDN やカスタムプロキシは、より複雑で細かい設定になる可能性があることに注意してください。このトピックについては、[SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) および [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) の記事を参照してください。
 {% endalert %}
 
 #### その他のリソース
 
 {% alert important %}
-CDNコンフィギュレーションのトラブルシューティングについては、CDNプロバイダーに問い合わせる必要がある。
+CDN の構成のトラブルシューティングについては、CDN プロバイダーに問い合わせる必要があります。
 {% endalert %}
 
 以下の表には、SendGridとSparkPostが書いた、特定のCDNの設定方法に関するステップバイステップのガイドが含まれている。特定のCDNがリストにない場合もあるが、CDNにSSL証明書を適用する機能があることを確認する必要がある。
 
 | SendGrid | SparkPost |
 | -------- | --------- |
-| [AWSクラウドフロント](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[クラウドフレア](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[迅速に](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[キーシーディーエヌ](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWSクラウドフロント](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[クラウドフレア](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[クラウドフロント](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[迅速に](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[グーグル・クラウド・プラットフォーム](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[マイクロソフト・アジュール](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
 
 #### トラブルシューティング
 
-CDNのコンフィギュレーション、証明書、プロキシの問題はCDNで対処すべきだが、SSLクリックトラッキングのセットアップでよくある問題を特定するのに役立つ一般的なトラブルシューティングのヒントをいくつか紹介しよう。
+CDN の構成、証明書、プロキシの問題は CDN で処理する必要がありますが、SSL のクリック追跡の設定でよくある問題を特定するのに役立つ一般的なトラブルシューティングのヒントをいくつか紹介します。
 
 ##### ドメイン・レジストリの問題
 
-digコマンドは、リンク追跡がCDNに向いているかどうかを教えてくれる。これはターミナルで`dig CNAME link_tracking_subdomain` を実行することで行える。コマンドの実行後、`ANSWER SECTION` 、CNAMEが指す場所がリストされるはずである。CDNではなく、選択したメールサービスプロバイダ（SendGridまたはSparkPost）を指している場合は、CDNを指すようにドメインレジストリを再設定してみてほしい。
+digコマンドは、リンク追跡がCDNに向いているかどうかを教えてくれる。これはターミナルで `dig CNAME link_tracking_subdomain` を実行することで行えます。コマンドの実行後、`ANSWER SECTION` の下に、CNAME がどこを指しているかが表示されます。CDN ではなく、選択したメールサービスプロバイダー (SendGrid または SparkPost) を指している場合は、CDN を指すようにドメインレジストリを再設定してみます。
 
 ##### CDNの問題
 
-ライブEメールのリンクがセットアップ中に壊れ始めた場合、これは一般的に、DNSが適切に設定されていないままCDNに向けられたことを意味する。これは「間違ったリンク」エラーとして表示されることがある。CDNプロバイダーに連絡し、CDN設定のトラブルシューティングに役立つドキュメントを確認する。
+ライブEメールのリンクがセットアップ中に壊れ始めた場合、これは一般的に、DNSが適切に設定されていないままCDNに向けられたことを意味する。これは「間違ったリンク」エラーとして表示されることがある。CDN プロバイダーに連絡し、CDN 構成のトラブルシューティングに役立つドキュメントを確認してください。
 
 ##### SSL有効化ステータス
 

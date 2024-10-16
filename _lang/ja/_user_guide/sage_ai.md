@@ -1,12 +1,12 @@
 ---
-nav_title: セージAI by ブレイズ
-article_title: セージAI by ブレイズ
+nav_title: BrazeAI<sup>TM</sup>
+article_title: BrazeAI<sup>TM</sup>
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
-guide_top_header: "セージAI by ブレイズ"
-guide_top_text: "Sageとは、Start Anywhere Go Everywhereの頭文字をとったものだ。Sage AI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。Sage AI by Brazeの機能を使えば、創造性を導き、より良い決断を下し、顧客のユーザー体験を最適化するための信頼できるアドバイザーを持つことができる。"
-description: "Sage AI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。"
+guide_top_header: "BrazeAI<sup>TM</sup>"
+guide_top_text: "BrazeAI<sup>TM</sup>とは、Start Anywhere Go Everywhereの頭文字をとったものだ。BrazeAI<sup>TM</sup> は、アクセスしやすく使いやすいツールのコレクションを提供し、クリエイティビティ、パーソナライゼーション、およびエンゲージメント戦略の最適化の面で参入障壁を低下させます。BrazeAI<sup>TM</sup> の機能を使用すると、信頼できるアドバイザーがいるときと同様に、クリエイティビティを導き、より良い意思決定を行い、顧客のユーザー体験を最適化するうえで役立ちます。"
+description: "BrazeAI<sup>TM</sup> は、アクセスしやすく使いやすいツールのコレクションを提供し、クリエイティビティ、パーソナライゼーション、およびエンゲージメント戦略の最適化の面で参入障壁を低下させます。"
 
 Tool:
   - Dashboard
@@ -19,13 +19,13 @@ guide_featured_list:
 - name: Predictive Suite
   link: /docs/user_guide/sage_ai/predictive_suite/
   image: /assets/img/braze_icons/stars-01.svg
-- name: 生成AI
+- name: 生成 AI
   link: /docs/user_guide/sage_ai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
 
 guide_menu_title: "Other"
 guide_menu_list:
-- name: ウイニング・バリアントとパーソナライズド・バリアント
+- name: 勝者バリアントとパーソナライズされたバリアント
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
 - name: 勝者パス
