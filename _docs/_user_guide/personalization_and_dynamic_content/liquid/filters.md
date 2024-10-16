@@ -10,9 +10,15 @@ description: "This reference page lists filters that can be used to reformat sta
 
 > This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
-{% raw %}
-
 Filters are how you can modify the output of numbers, strings, variables, and objects in Liquid. You can use filters to reformat static or dynamic text, such as changing a string from lowercase to uppercase or to perform mathematical operations, like addition or division.
+
+{% alert important %}
+Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. <br><br>If you have any questions about a filter that is not listed here, reach out to your customer success manager.
+{% endalert %}
+
+## Filter syntax
+
+{% raw %}
 
 Filters must be placed within an output tag `{{ }}` and are denoted by a pipe character `|`.
 
@@ -37,6 +43,8 @@ BIG SALE
 
 In this example, `Big Sale` is a string, and `upcase` is the filter being applied.
 
+### Syntax for multiple filters
+
 You can use multiple filters on one output. They are applied from left to right.
 
 {% tabs local %}
@@ -55,11 +63,6 @@ SALE
 {% endraw %}
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. 
-<br><br>If you have any questions about a filter that is not listed here, reach out to your customer success manager.
-{% endalert %}
 
 ## Array filters
 
@@ -92,7 +95,7 @@ Array filters are used to change the output of arrays.
 
 ## Math filters
 
-Math filters allow you to perform mathematical operations. Remember—if you use multiple filters on one output, they are applied from left to right.
+Math filters allow you to perform mathematical operations. If you use multiple filters on one output, they will be applied from left to right.
 
 | Filter  | Definition      | Supported |
 | :------ |:----------------| :-------- |
@@ -131,13 +134,18 @@ This example wouldn't work because you can't reference multiple custom attribute
 1. One to assign the custom attribute to a variable,
 2. One to perform the addition.
 
-For example, let's say we want to calculate a user's current balance by adding their gift card balance and rewards balance. First, use the `assign` tag to substitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
+#### Use case: Calculate current balance
+
+Let's say we want to calculate a user's current balance by adding their gift card balance and rewards balance.
+
+1. Use the `assign` tag to substitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Next, use the `plus` filter to combine each user's gift card balance with their rewards balance, signified by the `{{balance}}` object. 
+{: start="2"}
+2. Use the `plus` filter to combine each user's gift card balance with their rewards balance, signified by the `{{balance}}` object. 
 {% endraw %}
 {% tabs local %}
 {% tab Input %}
@@ -181,11 +189,11 @@ To properly format a number with the `money` filter, remove any commas in the nu
 ### Shopify money filter versus Braze money filter
 
 {% alert warning %}
-The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the following examples for an accurate depiction of the expected behavior.
+The behavior of the Shopify `money` filter differs from how it's used in Braze. Refer to the following examples for an accurate depiction of the expected behavior.
 {% endalert %}
 
 {% raw %}
-In the event you are inputting a custom attribute (like `account_balance`), you should always use the `money` filter to ensure that your decimals are in the proper place, and zeros are not dropped off the end of any numbers:
+In the event you are inputting a custom attribute (like `account_balance`), you should always use the `money` filter to put your decimals in the proper place and prevent zeros from dropping off the end of any numbers:
 
 ```liquid
 ${{custom_attribute.${account_balance} | money}}
@@ -198,7 +206,7 @@ ${{custom_attribute.${account_balance} | money}}
 | Where `account_balance` is input at `17.8`. | Where `account_balance` is input at `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The `money` filter in Braze differs from Shopify in that it does not automatically apply decimal points according to a preset setting. For example, take the following scenario where `rewards_redeemed` contains a value of `145`:
+The `money` filter in Braze differs from Shopify because it doesn't automatically apply decimal points according to a preset setting. For example, take the following scenario where `rewards_redeemed` contains a value of `145`:
 
 {% tabs local %}
 {% tab Input %}
@@ -241,7 +249,7 @@ $1.45
 String filters are used to manipulate the outputs and variables of strings. Strings are a combination of alphanumeric characters and must be wrapped in straight quotes.
 
 {% alert note %}
-Straight quotes are different from curly quotes in Liquid. Be careful when copying and pasting Liquid from a text editor into Braze, as curly quotes will cause errors with your Liquid. If you are writing your Liquid directly into Braze, straight quotes will be applied automatically.
+Straight quotes are different from curly quotes in Liquid. Be careful when copying and pasting Liquid from a text editor into Braze, as curly quotes will cause errors with your Liquid. If you're writing your Liquid directly into Braze, straight quotes will be applied automatically.
 {% endalert %}
 
 | Filter          | Description     | Supported |
@@ -278,7 +286,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 
 ## Additional filters
 
-The following general filters serve many different purposes, including formatting or converting content.
+The following general filters serve many purposes, including formatting or converting content.
 
 | Filter                | Description                                                                                                                      | Supported |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
@@ -286,7 +294,7 @@ The following general filters serve many different purposes, including formattin
 | [default][7.2]        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.      | ✅  Yes   |
 | [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
 | [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
-| `time_zone`             | Refer to [Time Zone Filter](#time-zone-filter) for more.     | ✅  Yes   |
+| `time_zone`             | Refer to [Time Zone Filter](#time-zone-filter).     | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
