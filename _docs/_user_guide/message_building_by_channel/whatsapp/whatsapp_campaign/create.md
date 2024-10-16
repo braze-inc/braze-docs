@@ -58,6 +58,10 @@ If all of the messages in your campaign are similar or have the same content, co
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels you want to pair with your message.
 
+{% alert tip %}
+If an action-based Canvas is triggered by an inbound WhatsApp message, you can reference WhatsApp properties in any Canvas step until the next action path.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 

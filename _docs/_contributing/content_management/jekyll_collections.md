@@ -1,13 +1,13 @@
 ---
 nav_title: Jekyll Collections
-article_title: Jekyll collections
-description: "Learn how to create a Jekyll collection, so you can add a new primary section on Braze Docs."
+article_title: Jekyll Collections
+description: "Learn how to create a Jekyll collection so you can add a new primary section on Braze Docs."
 page_order: 6
 ---
 
 # Jekyll collections
 
-> Learn how to create a Jekyll collection, so you can add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
+> Learn how to create a Jekyll collection to add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
 {% alert important %}
 It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where you should store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).

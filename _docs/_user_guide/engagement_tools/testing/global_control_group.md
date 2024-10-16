@@ -31,6 +31,10 @@ Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl
 
 Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method.
 
+### Exclude users from feature flags
+
+You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+
 ## Create a Global Control Group
 
 ### Step 1: Navigate to the Global Control Group Settings

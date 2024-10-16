@@ -52,7 +52,7 @@ bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab Double/Float %}
+{% tab Double or Float %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```

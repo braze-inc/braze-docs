@@ -21,7 +21,7 @@ lab_index_name: "DocSearch_French"
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/fr/'
 
 # Collections directory
-collections_dir: _lang/fr/
+collections_dir: _lang/fr_fr/
 
 
 collections:

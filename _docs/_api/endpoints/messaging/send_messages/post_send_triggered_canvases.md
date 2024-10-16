@@ -46,9 +46,11 @@ Authorization: Bearer YOUR-REST-API-KEY
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
     [{
-      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
+      "email": (optional, string) email address of user to receive message,
+      "prioritization": (optional, array) prioritization array; required when using email,
       "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent `canvas_entry_properties`)
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
@@ -69,6 +71,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
+
+{% alert important %}
+Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
 
 {% alert note %}
 If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are both in the API call and qualify for the segment filters.
@@ -163,6 +169,8 @@ The status code `201` could return the following response body. If the Canvas is
 ```
 
 If your Canvas is archived, you'll see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you'll see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
+
+If your request encounters a fatal error, refer to [Errors and responses]({{site.baseurl}}/api/errors/#fatal-errors) for the error code and description.
 
 ## Attributes object for Canvas
 
