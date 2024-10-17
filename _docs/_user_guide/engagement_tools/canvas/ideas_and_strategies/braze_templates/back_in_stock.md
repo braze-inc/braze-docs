@@ -3,7 +3,7 @@ nav_title: Back In Stock
 article_title: Back In Stock
 page_order: 2
 page_type: reference
-description: "This article describes use a Braze Canvas template to drive purchases by notifying your users when an item is back in stock with personalized messaging."
+description: "This article describes how to use a Braze Canvas template to drive purchases by notifying your users when an item is back in stock with personalized messaging."
 tool: Canvas
 ---
 
@@ -39,12 +39,12 @@ Let’s adjust the Canvas details and its assigned conversion events to reflect 
 3. Change the description to explain that this Canvas contains personalized messaging.
 4. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
 
-![][1]
+!["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.][1]
 
 {: start="5"}
 5. Change the **Primary Conversion Event - A** to **Make a specific purchase** and select **Classic Straight Leg** for the product name.
 
-![][2]
+!["Assign Conversion Events" section for the conversion event type of purchasing the Classic Straight Leg product with a conversion deadline of 7 days.][2]
 
 ### Step 2: Tailor the entry schedule
 
@@ -54,12 +54,12 @@ We’ll make two adjustments to this step:
 
 1. Select the catalog that includes information about our Classic Straight Leg jeans, which we’ve named “Straight Leg Pants”. 
 
-![][3]
+!["Entry Schedulde" step for an action-based Canvas.][3]
 
 {: start="2"}
 2. Set the **Start Time (Required)** to our desired start date and time.
 
-![][4]
+!["Entry Window" section with a start time of January 2nd, 2025 at 12 am.][4]
 
 ### Step 3: Select our target audience
 
@@ -68,23 +68,23 @@ We’ll define our target audience as users who we think are more likely to purc
 1. Select our target segment, “Favorited - Classic Straight Leg Jeans”, which consists of users who’ve favorited our Classic Straight Leg jeans on our app or website.
 2. Select a filter to include users who have purchased “Jeans” more than “0” times.
 
-![][5]
+!["Target Audience" step with the segment of "Favorited - Classic Straight Leg Jeans".][5]
 
 {: start="3"}
 3. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas’s maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-![][6]
+!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximun duration of the Canvas.][6]
 
 {: start="4"}
 4. Adjust the exit criteria to remove users who performed the custom event of unfavoriting the Classic Straight Leg jeans.
 
-![][7]
+!["Exit Criteria" section with a exception for users that perform the custom event of "Unfavorited".][7]
 
 ### Step 4: Select your send settings
 
 We’ll keep the default subscription settings, so we only send to users who have subscribed or opted into receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
 
-![][8]
+!["Send Settings" step targeting users who are subscribed or opted in.][8]
 
 ### Step 5: Customize your Canvas
 
@@ -98,7 +98,7 @@ We’ll begin our customization by going through each message component to updat
     - The “In-Product Msg & Email” message that sends after the one-day delay
     - The “Push+Email Alert” messages that send to users who haven’t made a purchase
 
-![][9]
+![Mobile Push Canvas step with a message notifying users that a product is back in stock.][9]
 
 ### Step 6: Launch your Canvas
 
