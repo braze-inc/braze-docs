@@ -2,8 +2,8 @@
 nav_title: アカウント
 page_order: 1
 layout: dev_guide
-guide_top_header: "アカウント・ヘルプ"
-guide_top_text: "ユーザー権限を明確にする以下のヘルプ記事をチェックしてほしい。<br><br> Brazeアカウントとダッシュボードの管理に関する詳細情報をお探しですか？<a href='/docs/user_guide/administrative/'>アドミニストレーション・</a>セクションの記事をお読みいただきたい！"
+guide_top_header: "アカウントヘルプ記事"
+guide_top_text: "ユーザー権限を明確にする以下のヘルプ記事をチェックしてほしい。<br><br> Brazeアカウントとダッシュボードの管理に関する詳細情報をお探しですか？<a href='/docs/user_guide/administrative/'>Administration</a>セクションの記事をお読みください!"
 
 page_type: landing
 description: "このランディングページには、Brazeアカウントに関連するヘルプ記事が掲載されている。"
