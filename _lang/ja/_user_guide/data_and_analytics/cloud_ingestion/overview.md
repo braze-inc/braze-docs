@@ -338,7 +338,7 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 
 ## データポイント使用量
 
-クラウドデータ取り込みのデータポイント請求は、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) を介した更新の請求に相当します。詳細については、「[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)」を参照してください。 
+クラウドデータ取り込みのデータポイント請求は、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) を介した更新の請求に相当します。詳細については、[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)を参照してください。 
 
 {% alert important %}
 Braze のクラウドデータ取り込みは利用可能なレート制限で考慮されるため、別の方法でデータを送信する場合、レート制限は Braze API とクラウドデータ取り込みの和になります。
@@ -369,7 +369,7 @@ PAYLOADオブジェクトには、external IDまたは他のIDタイプを含め
 各属性を内部的に独自の列に格納する場合は、それらの列を JSON 文字列に変換して、Braze との同期を取り込む必要があります。そのために、次のようなクエリを使用できます。
 
 {% tabs local %}
-Snowflake %}
+{% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -391,7 +391,7 @@ SELECT
     )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
 {% endtab %}
-Redshift %}
+{% tab Redshift %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
