@@ -23,4 +23,4 @@ hidden: true
 ニュースフィードを特定のカテゴリからのものとしてマークしても、エンド ユーザーには表示されません。デフォルトでは、特定のカテゴリを表示するようにアプリコードでフィードが特別に構成されていない限り、Braze のニュースフィードにはすべてのカテゴリのカードが表示されます。アプリコードの設定の詳細については、\[ニュースフィードカテゴリの定義][2] を参照してください。
 
 [1]: {% image_buster /assets/img_archive/Newsfeed_category.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/
+/developer_ guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/

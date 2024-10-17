@@ -29,10 +29,10 @@ guide_featured_list:
 - name: MMSキャンペーン
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/channel-sms.svg
-- name: Webフック運動
+- name: Webhook キャンペーン
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
   image: /assets/img/braze_icons/channel-webhook.svg
-- name: マルチチャネル運動
+- name: マルチチャネルキャンペーン
   link: /docs/user_guide/engagement_tools/campaigns/faq/#how-do-you-create-a-multichannel-campaign
   image: /assets/img/braze_icons/plus.svg
 

@@ -3,19 +3,19 @@ nav_title: 2月
 page_order: 11
 noindex: true
 page_type: update
-description: "この記事には2019年2月のリリースノートが含まれている。"
+description: "この記事には、2019年2月のリリースノートが含まれています。"
 ---
 # 2019年2月
 
-## 電子メール購読グループ
+## メールサブスクリプショングループ
 
-[サブスクリプショングループは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)、上記の[グローバルサブスクリプションステートから]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)さらにオーディエンスを絞り込むことができるセグメントフィルタである。これらのグループは、エンドユーザーにより詳細な購読オプションを提示する能力を提供する。
+[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)は、上記の[グローバルサブスクリプションの状態]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)からさらにオーディエンスを絞り込むことができるセグメントフィルタです。これらのグループを使用すると、より詳細なサブスクリプションオプションをエンドユーザーに提示できます。
 
-例えば、複数のカテゴリのメールキャンペーンを配信している場合、[メールプレファレンスセンターを](#email-preference-center)利用することで、1つのページから一括で購読または購読解除を行うことができる。
+例えば、複数のカテゴリのメールキャンペーンを送信する場合は、[メールユーザー設定センター](#email-preference-center)を使用することで、1つのページから一括で配信登録または配信停止するオプションを顧客に登録できます。
 
-[Subscription Group REST APIを]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)使用して、Brazeダッシュボード上の**Subscription Group**ページに保存したSubscription Groupをプログラムで管理する。
+[サブスクリプショングループ REST API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、Braze ダッシュボードの **\[サブスクリプショングループ]** ページに保存したサブスクリプショングループをプログラムで管理します。
 
-## Eメール・プリファレンス・センター
+## メールユーザー設定センター
 
-[メールプレファレンスセンターは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)、どのユーザーが特定のニュースレターグループを受信するかを管理する簡単な方法である。あなたが作成した各購読グループは、プリファレンスセンターのリストに追加される。プリファレンス・センターの名前をクリックすると、インタラクティブなプレビューが表示される。
+[メールユーザー設定センター]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)は、特定のグループのニュースレターを受信するユーザーを簡単に管理できる手段です。作成した各サブスクリプショングループは、ユーザー設定センターのリストに追加されます。ユーザー設定センターの名前をクリックすると、インタラクティブなプレビューが表示されます。
 

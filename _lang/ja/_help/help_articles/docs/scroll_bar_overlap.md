@@ -19,15 +19,15 @@ Mac を使用していて、スクロールバーがBraze Docs 内の内容と�
 <your-bucket-prefix>/dataexport.<cluster-identifier>.S3.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.S3.integration.<integration-id>+<partition>+<offset>.avro
 ```
 
-スクロールバーがコード ブロックと重なる場合は、**スクロールバーを表示する:**設定を**Always**に変更することをお勧めします(**一般設定s**)。これにより、Docs(コード ブロック s など)の機能が拡張され、スクロールバーが常時表示され、読みにくくなります。
+スクロールバーがコード ブロックと重なる場合は、**スクロールバーを表示する:**設定を**Always**に変更することをお勧めします(**一般設定s**)。この場合、ドキュメントの機能 (コードブロックなど) が拡張され、スクロールバーが常時表示されるため、文字を読みにくくなります。
 
 ![MacOSの一般設定][2]
 
-ここでは、更新d スクロールバーの外観を説明します。
+更新されたスクロールバーは、以下のように表示されます。
 
 ![重複のない固定スクロールバーの例][3]
 
-_2019更新3月27日昨日_
+_最終更新日: 2019年3月27日_
 
 {% comment %}
 問題を引き起こす可能性のある長いコードが1 行ある場合に挿入します。

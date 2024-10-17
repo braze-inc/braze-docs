@@ -4,27 +4,27 @@ article_title: キャンペーンとキャンバスの属性は、Brazeのソー
 page_order: 1
 
 page_type: reference
-description: "このヘルプでは、Brazeのソース間でキャンペーンとキャンバスの属性名とIDを比較する。"
+description: "このヘルプでは、キャンペーンとキャンバスの属性の名前とID をBrazeの送信元間で比較します。"
 platform: API
 ---
 
 # キャンペーンとキャンバスの属性は、Brazeのソースによってどのように異なるのか？
 
-キャンペーン、キャンバス、キャンバスステップの名前とIDはすべて、Liquid、REST API、Currentsで利用できる。これらの属性は、3つのソースすべてで同じ値にマッピングされるが、名前は異なる場合がある。このページは、この3つのつながりを描くためのものである。
+キャンペーン、キャンバス、キャンバスステップの名前と ID はすべて、Liquid、REST API、Currents で利用できます。これらの属性は、3 つのソースすべてで同じ値にマッピングされますが、名前は異なる場合があります。このページは、3 つの間の接続を描くのに役立ちます。
 
 ## ユースケース
 
 ### Liquid
 
-キャンペーンとキャンバスのアトリビュートは、ダッシュボードのリキッドタグ{% raw %}(`{{campaign.${api_id}}}`){% endraw %} として利用できる。Liquidを使って、これらの属性をメッセージ自体、Connected Contentの呼び出し、またはキーと値のペアとして渡すことができる。これは通常、トラッキングの目的で行われる。
+キャンペーンおよびキャンバス属性s は、ダッシュボード{% raw %} (`{{campaign.${api_id}}}` など){% endraw %} の流動タグs として使用できます。Liquid を使用して、これらの属性s をメッセージそのもの、接続コンテンツ呼び出し、またはキーと値のペアとして渡すことができます。これは通常、トラッキングの目的で行われる。
 
 ### REST API
 
-キャンペーンとキャンバスの属性は、[キャンペーンの詳細をエクスポートするエンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)または[キャンバスの詳細をエクスポートするエンドポイントでも]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)利用できる。つまり、すべてのキャンバス名とそれに対応するIDのリストだ。
+キャンペーンとキャンバスの属性は、[キャンペーンの詳細をエクスポートするエンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)または[キャンバスの詳細をエクスポートするエンドポイントでも]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)利用できる。REST API を使用して、m 個のアプリリング(すべてのキャンバス名と対応するID の一覧) を構築できます。
 
 ### Currents
 
-キャンペーンとキャンバスの属性は、カレントの[メッセージ・エンゲージメント・イベントと結びついて]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events)いる。これは、プッシュ送信やEメール開封が、どのキャンペーンやキャンバス・コンポーネントに関連付けられているかを判断するために重要である。
+キャンペーンとキャンバスの属性s は、Currents の[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) に関連付けられています。これは、プッシュセンドまたはメール 開封が関連付けられているキャンペーンまたはキャンバスコンポーネントを判断できるようにするために大切です。
 
 ## キャンペーン属性
 
