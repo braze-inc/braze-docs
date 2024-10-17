@@ -27,7 +27,7 @@ Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site
 
 Now, we can go through the template to fit it for our needs.
 
-### Step 1: Tailor the Canvas details and conversion event
+### Step 1: Set up details 
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
@@ -38,12 +38,13 @@ Let’s adjust the Canvas details and its assigned conversion events to reflect 
 
 ![][1]
 
-{: start="5"}
+### Step 2: Assign your conversion events
+
 5. Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Convension Event - B** as the default of making any purchase.
 
 ![][2]
 
-### Step 2: Tailor the entry schedule
+### Step 3: Tailor the entry schedule
 
 Let’s keep the entry schedule as **Scheduled** and the default time-based options, so that the Canvas checks for lapsed users daily.
 
@@ -54,13 +55,13 @@ We’ll make two adjustments to this step:
 
 ![][3]
 
-### Step 3: Select our target audience
+### Step 4: Select our target audience
 
 We’ll keep the default settings for the entry audience, which is set to users who haven’t used our app in over 30 days. We’ll also keep the default entry controls so that users can re-enter the Canvas after four weeks. This means every time a user doesn’t visit our app for over 30 days straight, they’ll be entered into the Canvas.
 
 ![][4]
 
-### Step 4: Select your send settings
+### Step 5: Select your send settings
 
 We’ll keep most of the default subscription settings:
 
@@ -72,7 +73,7 @@ The only setting we’ll change is what to do when a message triggers during qui
 
 ![][5]
 
-### Step 5: Customize your Canvas
+### Step 6: Customize your Canvas
 
 Now, we’ll build our Canvas by customizing the templated steps:
 
@@ -94,7 +95,7 @@ Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagemen
 
 ![][8]{: style="max-width:70%;"}
 
-### Step 6: Launch your Canvas
+### Step 7: Launch your Canvas
 
 After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who haven’t visited our app in over 30 days and have subscribed to our messaging channels will receive emails encouraging them to return!
 
