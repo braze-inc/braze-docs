@@ -8,7 +8,7 @@ page_type: reference
 
 # フィールドレベル暗号化
 
-> フィールドレベルの暗号化を使用すると、AWS Key Management Service (KMS) でメールアドレスをシームレスに暗号化し、Braze で共有される個人を特定できる情報 (PII) を最小限に抑えることができます。暗号化は機密データを暗号文に置き換えます。これは読み取れない暗号化された情報です。
+> フィールドレベルの暗号化を使用すると、AWS Key Management Service (KMS) を使用してメールアドレスをシームレスに暗号化し、Braze で共有される個人を特定できる情報 (PII) を最小限に抑えることができます。暗号化は機密データを暗号文に置き換えます。これは読み取れない暗号化された情報です。
 
 {% alert important %}
 フィールドレベルの暗号化は現在ベータ機能として利用可能です。このベータ版に参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。
@@ -16,28 +16,28 @@ page_type: reference
 
 ## その仕組み
 
-メールアドレスは、Brazeに追加される前にハッシュ化および暗号化される必要があります。メッセージが送信されると、復号化されたメールアドレスのためにAWS KMSに呼び出しが行われます。次に、ハッシュ化されたメールアドレスが配信およびエンゲージメントイベントのメタデータに挿入され、元のユーザーにリンクされます。これがBrazeがメール分析を追跡する方法です。Brazeは含まれているプレーンテキストのメールアドレスを編集し、ユーザーのプレーンテキストのメールアドレスを保存しません。
+メールアドレスは、Brazeに追加される前にハッシュ化および暗号化される必要があります。メッセージが送信されると、復号化されたメールアドレスに対して AWS KMS への呼び出しが行われます。次に、ハッシュ化されたメールアドレスが配信およびエンゲージメントイベントのメタデータに挿入され、元のユーザーにリンクされます。これがBrazeがメール分析を追跡する方法です。Braze は含まれているプレーンテキストのメールアドレスを編集し、ユーザーのプレーンテキストのメールアドレスを保存しません。
 
 ## 前提条件
 
-フィールドレベルの暗号化を使用するには、メールアドレスをBrazeに送信する前にAWS KMSにアクセスして[暗号化](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html)および[ハッシュ化](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html)する必要があります。 
+フィールドレベルの暗号化を使用するには、メールアドレスを Braze に送信する**前に**、AWS KMS へアクセスして、メールアドレスを[暗号化](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html)および[ハッシュする](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html)必要があります。 
 
 次の手順に従って、AWSシークレットキー認証方法を設定します。
 
-1. アクセスキー ID とシークレットアクセスキーを取得するには、[AWS に IAM ユーザーと管理者グループ](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin) を作成し、AWS キーマネジメントサービスの権限ポリシーを設定します。IAMユーザーは[kms:Decrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html)および[kms:GenerateMac](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html)の権限を持っている必要があります。詳細については、[AWS KMS の権限](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)を参照してください。
+1. アクセスキー ID とシークレットアクセスキーを取得するには、AWS Key Management Service のアクセス許可ポリシーを使用して AWS で [IAM ユーザーと管理者グループを作成します](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin)。IAMユーザーは[kms:Decrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html)および[kms:GenerateMac](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html)の権限を持っている必要があります。詳細については、[AWS KMS の権限](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)を参照してください。
 2. **ユーザーのセキュリティ認証情報を表示**を選択して、アクセスキーIDとシークレットアクセスキーを表示します。これらの認証情報をどこかにメモするか、**認証情報をダウンロード**ボタンを選択してください。AWS KMSキーに接続する際にこれらを入力する必要があります。
 3. 次のAWSリージョンでKMSを設定する必要があります:
     - **Braze US クラスター:** `us-east-1`
     - **Braze EU クラスター:** `eu-central-1`
-4. AWS Key Management Serviceで2つのキーを作成し、IAMユーザーがキー使用権限に追加されていることを確認します。
+4. AWS Key Management Service で2つのキーを作成し、IAM ユーザーがキー使用アクセス許可に追加されていることを確認します。
     - **[暗号化/復号化](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):****対称**キータイプを選択し、**暗号化と復号化**キー使用法を選択します。
-    - **[ハッシュ](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):****Symmetric**キータイプと**Generate and Verify MAC**キーの使用を選択します。キー仕様は**HMAC_256**であるべきです。キーを作成した後、HMACキーIDをどこかにメモしておいてください。Brazeに入力する必要があります。
+    - **[ハッシュ](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):**\[**対称**] キータイプと **\[MAC の生成と検証**] キー使用を選択します。キー仕様は**HMAC_256**であるべきです。キーを作成した後、HMAC キー ID をどこかにメモしておいてください。Braze で入力する必要があります。
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
 ## ステップ 1:AWS KMS キーを接続する
 
-AWS KMS設定には、次の内容を入力してください:
+AWS KMS 設定には、次の内容を入力してください:
 
 - アクセスキーID
 - シークレットアクセスキー
@@ -74,8 +74,8 @@ Brazeでメールアドレスを更新する際は、`email`が含まれてい�
 
 - SDKを介してメールアドレスを識別およびキャプチャする
 - アプリ内メッセージメールキャプチャフォーム
-- 受信者ドメインに関するレポート、メールインサイトのメールボックスプロバイダーチャートを含む
-- メールアドレスフィルター正規表現による
+- メールインサイトのメールボックスプロバイダーチャートを含む、受信者ドメインに関するレポート
+- 正規表現によるメールアドレスフィルター
 - オーディエンス同期
 - Shopify統合
 
@@ -93,17 +93,17 @@ Brazeでメールアドレスを更新する際は、`email`が含まれてい�
 暗号化は、データを暗号化および復号化することが可能な双方向機能です。同じ平文の値が複数回暗号化された場合、AWSの暗号化アルゴリズム（AES-256-GCM）は異なる暗号化値を生成します。ハッシュ化は、平文が復号できない方法でスクランブルされる一方向関数です。ハッシュ化は毎回同じ値を生成します。これにより、同じメールアドレスを共有する複数のユーザー間でサブスクリプション状態を維持することができます。
 
 ### テスト送信にどのメールアドレスを使用すればよいですか？
-プレーンテキストのメールアドレスはテスト送信でサポートされています。特定のユーザーに対してメールがどのように見えるかを確認するには、次の手順を実行します。
+プレーンテキストのメールアドレスはテスト送信でサポートされています。特定のユーザーに対してメールがどのように表示されるかを確認するには、次の操作を行います。
 
 1. **プレビュー メッセージをユーザーとして選択**.
-2. **テスト送信**で、**現在のプレビューユーザーの属性で受信者の属性を上書き<2>}を選択します。
+2. \[**テスト送信**] で、\[**受信者の属性を現在のプレビューユーザーの属性で上書きする**] を選択します。
 
 {%raw%}
 ### このメールアドレス Liquid `{{${email_address}}}` を Braze に追加するとどうなりますか？
 
 Brazeはメールを送信する際にプレーンテキストのメールアドレスをレンダリングします。プレビューでは、メールの暗号化されたバージョンを表示します。カスタムワンクリックURLでユーザーを参照する場合は、ユーザーのexternal IDを使用することをお勧めします。
 
-`{{${email_address}}}`は現在、ユーザー設定センターおよび配信停止ページではサポートされていません。
+`{{${email_address}}}` は現在、ユーザー設定センターおよび配信停止ページではサポートされていません。
 {%endraw%}
 
 ### Currentsで確認するメールアドレスは何ですか？

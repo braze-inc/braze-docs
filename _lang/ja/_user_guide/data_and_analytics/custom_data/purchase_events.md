@@ -59,7 +59,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 各フィルターの詳細については、[セグメンテーションフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters)の用語集を参照し、「購入行動」でフィルター処理してください。
 
-![正確に3回仕入れたユーザーのフィルタリング][1]{: style="max-width:80%;"}
+![ちょうど 3 回購入したユーザーのフィルター適用][1]{: style="max-width:80%;"}
 
 {% alert tip %}
 特定の購入の発生回数に基づいてセグメンテーションを行う場合は、その購入を個別に[増分カスタム属性]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage)として記録する必要があります。
@@ -142,7 +142,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 **購入イベントプロパティに基づくトリガーの例:**
 
-![ヘッドフォンマートと同じブランド名でヘッドフォンを購入するユーザーにキャンペーンを送るアクションベースの配信設定s][2]{: style="max-width:80%;margin-left:15px;"}
+![ブランド名が HeadphoneMart に等しいヘッドフォンを購入したユーザーにキャンペーンを送信するアクションベースの配信設定][2]{: style="max-width:80%;margin-left:15px;"}
 
 詳細については、「[購入プロパティオブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object)」を参照してください。
 
@@ -154,7 +154,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 これらのセグメンテーションフィルターには次のようなものがあります。
 - 最後のY 日間に、V X 倍のプロパティ Y でカスタムイベントを実行しました。
-- 最後のY日間に、価値V×倍のプロパティ Yで購入したことがある。
+- 過去 Y 日間に、プロパティ Y とその値 V を持つ購入を X 回行った。
 - 1、3、7、14、21、30 日以内に、セグメントに加えられる条件を満たした。
 
 [セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)とは異なり、使用されるセグメントはリアルタイムで更新され、サポートされるセグメントの数に制限はなく、最大 30 日間の履歴を確認でき、データポイントが使用されます。データポイントが追加で消費されるため、カスタムイベントのイベントプロパティを有効にするように、Braze カスタマーサクセスマネージャーに依頼してください。
@@ -164,7 +164,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 ### キャンバスエントリのプロパティとイベントプロパティ
 
 {% alert important %}
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスを作成または複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
+2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
 {% endalert %}
 
 キャンバスのユーザージャーニーで `canvas_entry_properties` と `event_properties` を活用できます。詳細と例については、「[キャンバスエントリのプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)」を参照してください。
@@ -176,7 +176,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 {% tabs local %}
 {% tab キャンバスエントリのプロパティ %}
 
-[キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 100 KB であることに注意してください。
+[キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 50 KB であることに注意してください。
 
 {% alert important %}
 特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として元のエディターで永続的なエントリプロパティを有効にしている場合、キャンバスフローと元のキャンバスエディターでのみ `canvas_entry_properties` を参照できます。

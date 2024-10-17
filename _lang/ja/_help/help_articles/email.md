@@ -2,8 +2,8 @@
 page_order: 3
 nav_title: メール
 layout: dev_guide
-guide_top_header: "Eメール・ヘルプ"
-guide_top_text: "メールキャンペーンに関するよくある問題や質問については、以下のヘルプ記事をチェックしよう。<br><br> BrazeでパーソナライズされたEメールメッセージを作成する詳細に興味がある？詳しくは<a href='/docs/user_guide/message_building_by_channel/email/'>Eメールの</a>セクションをご覧いただきたい！"
+guide_top_header: "電子メールヘルプ記事"
+guide_top_text: "メールキャンペーンに関するよくある問題や質問については、以下のヘルプ記事をチェックしよう。<br><br> Braze でのパーソナライズされたメールメッセージの構築に関する詳細に興味がありますか?詳しくは、<a href='/docs/user_guide/message_building_by_channel/email/'>Email</a>セクションをご覧ください!"
 
 page_type: landing
 description: "このランディングページには、よくあるEメールの問題についてのヘルプ記事が掲載されている。"

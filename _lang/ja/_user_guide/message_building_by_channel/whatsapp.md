@@ -6,8 +6,8 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージング チャネルは、WhatsApp プラットフォーム上のユーザーs および顧客s に直接到達する方法を提供します。<br><br>** WhatsApp接続は、一部のBrazeでのみ利用できます。開始するには、アカウントマネージャーまたは顧客のサクセスマネージャーに到達してください。**"
-description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイックリプライ、レポートリングなど、すべてのWhatsAppのホームページです。"
+guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>** WhatsApp アクセスは、一部の Braze パッケージでのみ使用できます。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。**"
+description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイック返信、レポートなど、WhatsApp のすべての機能のホームページです。"
 search_rank: 3
 alias: /whatsapp/
 
@@ -22,7 +22,7 @@ guide_featured_list:
 - name: "ユーザーの電話番号"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "WhatsAppの作成"
+- name: "WhatsApp キャンペーンの作成"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "ユーザーのリターゲット"
@@ -34,7 +34,7 @@ guide_featured_list:
 - name: "ユーザーへのメッセージング"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   image: /assets/img/braze_icons/message-chat-circle.svg
-- name: "不明な電話番号を扱う"
+- name: "不明な電話番号の処理"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp販売試験"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/

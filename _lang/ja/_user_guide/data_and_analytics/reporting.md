@@ -4,7 +4,7 @@ article_title: レポート
 page_order: 7
 layout: dev_guide
 guide_top_header: "レポート"
-guide_top_text: "あなたのデータはあなたにとって重要なものなので、Brazeではいくつかのレポートオプションを用意している（<a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currentsを</a>除く）。<br><br> 何から始めたらよいかわからない場合は、<a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>レポート概要を</a>チェックして、マーケティング戦略に関する一般的な質問に答えるためにどのレポートやアナリティクスを使用できるかのガイダンスを得よう。"
+guide_top_text: "貴社のデータは貴社にとって多くの意味を持つため、当社は Braze 内にいくつかのレポート処理のオプションが用意されています (ただし <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>を除く)。<br><br> 何から始めたらよいかわからない場合は、<a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>レポート概要を</a>チェックして、マーケティング戦略に関する一般的な質問に答えるためにどのレポートやアナリティクスを使用できるかのガイダンスを得よう。"
 
 page_type: landing
 description: "このランディングページには、セグメントレポート、エンゲージメントレポート、レポートビルダーなど、Braze (Currents を含まない) で利用可能なレポートオプションに関する記事がまとめられています。"
@@ -42,7 +42,7 @@ guide_menu_list:
   - name: 目標到達プロセスレポート
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: グローバル・コントロール・レポート
+  - name: グローバルコントロールレポート
     link: /docs/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting
     image: /assets/img/braze_icons/globe-04.svg
   - name: リテンションレポート

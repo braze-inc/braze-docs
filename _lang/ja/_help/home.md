@@ -19,13 +19,13 @@ resources_list:
   - name: リリースノート
     link: /docs/help/release_notes/most_recent/
     image: /assets/img/braze_icons/sticker-square.svg
-  - name: ログイン
+  - name: Braze ラーニングログイン
     link: https://learning.braze.com/
     image: /assets/img/braze_icons/user-square.svg
   - name: メディア・リソース
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
-  - name: ブレイズ・サポート
+  - name: Braze支援
     link: /docs/braze_support/
     image: /assets/img/braze_icons/mail-01.svg
 
@@ -34,9 +34,9 @@ popular_topic_list:
     link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
   - name: プッシュトークンの移行
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: カスタムイベント・プロパティを記録する
+  - name: カスタムイベントプロパティのロギング
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-  - name: 派遣ID
+  - name: ディスパッチ ID
     link: /docs/help/help_articles/data/dispatch_id/
   - name: メールバウンス
     link: /docs/help/help_articles/email/email_bounces/

@@ -11,7 +11,7 @@ hidden: true
 ---
 # Windowsオブジェクト仕様
 
-`windows_phone8_push` 、`windows_universal_push` オブジェクトは、[メッセージングエンドポイントを]({{site.baseurl}}/api/endpoints/messaging)経由して、Windows Phone 8 PushおよびWindows Universal Pushコンテンツに関連する情報を定義または要求するために使用される。
+`windows_phone8_push` および `windows_universal_push` オブジェクトは、[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)を介して、Windows Phone 8 Push および Windows Universal Push コンテンツに関連する情報を定義または要求するために使用されます。
 
 ## Windows Phone 8のプッシュオブジェクト
 
@@ -28,7 +28,7 @@ hidden: true
 
 ## Windowsユニバーサル・プッシュ・オブジェクト
 
-`push_type` のオプションの詳細については、Windowsユニバーサル[トーストのテンプレートカタログを][32]参照のこと。
+`push_type` のオプションの詳細については、Windows Universal [トーストテンプレートカタログ][32] を参照してください。
 
 ```json
 {
@@ -42,7 +42,7 @@ hidden: true
 }
 ```
 
-[ディープリンクの][38]ための`extra_launch_string` パラメータの使用に関する詳細は、[Windows Universalでのディープリンクを参照のこと。][37]
+[ディープリンク][38]の `extra_launch_string` パラメーターの使用に関する詳細は、[Windows Universal でのディープリンク][37]を参照してください。
 
 [32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app
