@@ -24,9 +24,9 @@ To access this template, when creating a new Canvas, select **Use a Canvas templ
 
 ## Tailoring the template to your needs
 
-### Step 1: Set up details and assign your conversion events
-
 Let's say you're a marketer at Kitchenerie, a retail brand specializing in kitchenware, and you want to reengage users who have added the latest product "Enormous Paper Plate" to their carts but haven't made their purchases. 
+
+### Step 1: Set up details and assign your conversion events
 
 In the template, we'll do the following:
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Feature Adoption
-article_title: "Tutorial: Feature adoption template"
+article_title: Feature Adoption
 page_order: 3
 page_type: reference
 description: "This article describes use a Braze Canvas template to deliver timely personalized messages to highlight the benefits and usage tips."
@@ -88,7 +88,7 @@ The Action Path lets you define your user paths based on a specific action, incl
 
 Replace the **Action Group Name** to the action that _precedes_ the custom event [you created earlier](#prerequisites), then select the preceding action from the **Perform Custom Event** dropdown.
 
-Since the Cruise Control feature is only available after an order has been added to a cart, we named the first action group "Added to cart" and assigned the `added_to_cart` custom event.
+Since the Cruise Control feature is only available after an order has been added to a cart, we named the first action group **"Added to cart"** and assigned the `added_to_cart` custom event.
 
 ![The action group name set to "Added to cart" and the "Perform Custom Event" set to "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %})
 
