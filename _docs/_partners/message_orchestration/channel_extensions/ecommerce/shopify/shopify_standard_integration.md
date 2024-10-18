@@ -4,7 +4,7 @@ article_title: "Shopify Standard Integration Setup"
 description: "This reference article outlines how to setup the standard Shopify integration."
 page_type: partner
 search_tag: Partner
-alias: "/shopify_overview/"
+permalink: "/shopify_standard_integration/"
 page_order: 1
 hidden: true
 ---
@@ -21,16 +21,16 @@ hidden: true
 If you’re using the older navigation, you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-{: start=”2”}
-2. On the Shopify partner page, select **Begin Setup** to start the integration process.<br><br>![The Shopify partner page with a button to begin setup.][1] 
-3. In the Shopify app store, install the Braze application.<br><br>![The Braze app store page with a button for logging in to install the application.][2] 
+{: start="2"}
+2. On the Shopify partner page, select **Begin Setup** to start the integration process.<br><br>![Shopify integration page with button to begin setup.][1] 
+3. In the Shopify app store, install the Braze application.<br><br>![The Braze app store page with a button for logging in to install the application.][5] 
 
 {% alert note %}
 If your Shopify account is associated with more than one store, you can change the store you’re logged into by selecting the store icon at the top-right of the page and selecting **Switch stores**.
 {% endalert %}
 
-{: start=”4”}
-4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace, then configure your integration.<br><br>![A window asking you to confirm that you’re in the right workspace.][3]
+{: start="4"}
+4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace, then configure your integration.<br><br>![A window asking you to confirm that you’re in the right workspace.][2]
 
 
 ## Step 2: Enable Braze Web SDKs
@@ -38,7 +38,7 @@ If your Shopify account is associated with more than one store, you can change t
 For Shopify online stores, you can select the standard setup to automatically implement the Braze Web SDK and JavaScript SDK.
 
 
-![“Enable Web SDK” step with options to implement through a standard setup or custom setup.][4]
+![“Enable Web SDK” step with options to implement through a standard setup or custom setup.][3]
 
 After you select the standard setup onboarding path, you’ll need to choose when Braze should initialize and load the SDKs from one of the following options: 
 - Upon site visit, such as session start
@@ -55,7 +55,7 @@ The Braze Web SDK and JavaScript SDK versions will automatically be set to v5.3.
 
 Now you’ll select the Shopify data you want to track.
 
-![“Enable Web SDK” step with a checkbox to track behavioral events and user attributes.][5]
+![“Enable Web SDK” step with a checkbox to track behavioral events and user attributes.][6]
 
 The following events will be enabled by default in the standard integration.
 
@@ -70,7 +70,7 @@ For more information on the data tracked through the integration, see [Shopify D
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
 
-![Historical data backfill toggle.][#]
+![Historical data backfill toggle.][4]
 
 This table contains the data that will be initially loaded through the backfill.
 
@@ -92,8 +92,8 @@ If you’re an existing Braze customer with active campaigns or Canvases, review
 With the Braze SDKs, you can track custom events or custom attributes that go beyond standard events for this integration. Custom events capture unique interactions in your store, such as:
 
 | Custom events | Custom attributes |
-|--- | — |
-| {::nomarkdown}<ul><li>Using a custom discount code</li><li>Interacting with a personalized product recommendation</li></ul>{:/} | {::nomarkdown}<ul></li>Favorite brands or products</li><li>Preferred shopping categories</li><li>Membership or loyalty status</li> |
+| --- | --- |
+| {::nomarkdown}<ul><li>Using a custom discount code</li><li>Interacting with a personalized product recommendation</li></ul>{:/} | {::nomarkdown}<ul><li>Favorite brands or products</li><li>Preferred shopping categories</li><li>Membership or loyalty status</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 Tracking custom data helps you gain deeper insights into user behavior and personalize their experience even further. To implement custom events, you’ll need to edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
@@ -118,9 +118,7 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 If you leverage the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. 
 
-![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][#]
-
-![“Collect subscribers” section with expanded fields to select your subscription group name and additional email subscription groups.][#]
+![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][]
 
 ## Step 5: Activate Channels
 
@@ -133,8 +131,18 @@ At this time, we don’t support in-app messages in our standard integration.
 1. After you configure your setup, select **Finish Setup**.
 2. Enable the Braze app embed within your Shopify theme settings. Select **Open Shopify** to be redirected to your Shopify account to enable the app embed within your store’s theme settings. 
 
-![Banner that says you need to active the Braze app embed in Shopify and contains a button to open Shopify.][#]
+![Banner that says you need to active the Braze app embed in Shopify and contains a button to open Shopify.][7]
 
-{: start=”3”}
+{: start="3"}
 3. After you enable the app embed, your setup is complete!
-Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. ![Shopify partner page displaying the integration settings.][#]
+Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. ![Shopify partner page displaying the integration settings.][8]
+
+[1]: {% image_buster /assets/img/Shopify/begin_setup.png %}
+[2]: {% image_buster /assets/img/Shopify/confirm_workspace1.png %}
+[3]: {% image_buster /assets/img/Shopify/sdk_setup.png %}
+[4]: {% image_buster /assets/img/Shopify/tracking_shopify_data1.png %}
+[5]: {% image_buster /assets/img/Shopify/shopify_log_in.png %}
+[6]: {% image_buster /assets/img/Shopify/tracking_shopify_data.png %}
+[7]: {% image_buster /assets/img/Shopify/open_shopify.png %}
+[8]: {% image_buster /assets/img/Shopify/install_complete.png %}
+[9]: {% image_buster /assets/img/Shopify/choose_account.png %}

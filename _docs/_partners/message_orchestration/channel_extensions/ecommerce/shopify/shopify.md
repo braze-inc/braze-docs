@@ -25,10 +25,10 @@ The standard Braze integration with Shopify provides a powerful solution for eco
 ## Requirements
 
 | Requirement | Description |
-| — | — |
+| --- | --- |
 | Shopify store | You have an active Shopify store. <br><br> This beta only supports a single store per workspace. |
-| Shopify store owner or staff member permissions | {::nomarkdown}<ul><li>Access to all General and Online Store settings.</li><li> Additional Admin Permissions:</li><ul>Orders: View</li><li>Customer: ReadWrite</li><li>View Customer Events (Web Pixels)</li><li>Manage Settings</li><li>View Apps Developed by Staff/Collaborators</li><li>Manage/Install Apps and Channels</li><li>Manage/Add Custom Pixels</li></ul></ul>{:/} |
-{ .reset-td-br-1 .reset-td-br-2}
+| Shopify store owner or staff member permissions | {::nomarkdown}<ul><li>Access to all General and Online Store settings.</li><li> Additional Admin Permissions:</li><ul><li>Orders: View</li><li>Customer: ReadWrite</li><li>View Customer Events (Web Pixels)</li><li>Manage Settings</li><li>View Apps Developed by Staff/Collaborators</li><li>Manage/Install Apps and Channels</li><li>Manage/Add Custom Pixels</li></ul></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## How the integration works
 
@@ -42,7 +42,9 @@ After you implement the Shopify integration, Braze will automatically backfill y
 - To see what specific customer data is being backfilled, refer to [Supported Shopify customer data]().
 
 {% alert note %}
-If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]() for important information.
+Note the following:
+- If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]() for important information.
+- Website visits (sessions) count towards your Monthly Active User (MAU) allotments. 
 {% endalert %}
 
 ### User and data syncing
@@ -75,7 +77,7 @@ Messaging channels aren’t included in the default integration at this time. Yo
 Through the Shopify integration, the Braze SDKs will be able to streamline identity management:
 
 | Shopify identifier | In Braze |
-|--- | — |
+| --- | --- |
 | Client ID | Device ID |
 | Customer ID | External ID |
 | Cart token | Added as an alias to attribute cart events |
@@ -110,6 +112,18 @@ Concerning personal data submitted to Braze services by or on behalf of its cust
 
 ## Considerations
 
+### In-app messages
+
+In-app messages are currently not supported through the standard integration at this time. If you wish to see this supported in the future, submit a product request through the [Product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/). 
+
 ### Web Push
 
 Shopify doesn’t support service workers because they can’t be installed in the root folder, which is necessary to enable web push notifications. As a result, web push notifications aren’t supported by default for this integration. However, you can still use service workers by registering them on the app proxy sub-path instead of the root directory.
+
+### Content Cards
+
+Content Cards are currently not supported through the standard integration at this time. If you wish to integrate this channel, refer to [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/). 
+
+### Feature flags 
+
+Feature flags are currently not supported through the standard integration at this time. If you wish to integrate this channel, refer to [Feature Flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/). 
