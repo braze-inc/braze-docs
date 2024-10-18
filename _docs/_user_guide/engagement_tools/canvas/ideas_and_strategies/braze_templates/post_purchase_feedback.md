@@ -20,7 +20,7 @@ To successfully use this template, you'll need the following:
 - A custom attribute to reference. This can be created in the Braze dashboard. For more information, see [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
 - A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
-To access this template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Lapsing User**. 
+To access this template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Post-Purchase Feedback**. 
 
 ## Tailoring the template to your needs
 
@@ -34,7 +34,7 @@ Now, we can go through the template to fit it for our needs.
 
 In the template, we'll do the following:
 
-1. Update the Canvas name to specify that the Canvas is for targeting users who recently used .
+1. Update the Canvas name to specify that the Canvas is for targeting users who recently interacted with your brand.
 2. Update the description to specify that the Canvas is for encouraging users to submit feedback for the new Liquid Mirage video game.
 
 ![The new name and description for the Canvas. The new description states: 'A post-purchase feedback Canvas to gauge interest for the upcoming expansion for PWD3, Liquid Mirage.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %})

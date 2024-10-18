@@ -30,7 +30,7 @@ Before creating the Canvas, we [set up a catalog]({{site.baseurl}}/user_guide/pe
 
 Now, we can go through the template to fit it for our needs.
 
-### Step 1: Tailor the Canvas details and conversion event
+### Step 1: Set up details
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
@@ -41,12 +41,13 @@ Let’s adjust the Canvas details and its assigned conversion events to reflect 
 
 !["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.][1]
 
-{: start="5"}
-5. Change the **Primary Conversion Event - A** to **Make a specific purchase** and select **Classic Straight Leg** for the product name.
+### Step 2: Assign your conversion events
+
+Change the **Primary Conversion Event - A** to **Make a specific purchase** and select **Classic Straight Leg** for the product name.
 
 !["Assign Conversion Events" section for the conversion event type of purchasing the Classic Straight Leg product with a conversion deadline of 7 days.][2]
 
-### Step 2: Tailor the entry schedule
+### Step 3: Tailor the entry schedule
 
 Let’s keep the entry schedule as **Action-Based** so that users will enter our Canvas when they perform an action, which the template already has set to **Perform a Back in Stock Event**.
 
@@ -61,7 +62,7 @@ We’ll make two adjustments to this step:
 
 !["Entry Window" section with a start time of January 2nd, 2025 at 12 am.][4]
 
-### Step 3: Select our target audience
+### Step 4: Select our target audience
 
 We’ll define our target audience as users who we think are more likely to purchase the Classic Straight Leg jeans.
 
@@ -80,13 +81,13 @@ We’ll define our target audience as users who we think are more likely to purc
 
 !["Exit Criteria" section with a exception for users that perform the custom event of "Unfavorited".][7]
 
-### Step 4: Select your send settings
+### Step 5: Select your send settings
 
 We’ll keep the default subscription settings, so we only send to users who have subscribed or opted into receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
 
 !["Send Settings" step targeting users who are subscribed or opted in.][8]
 
-### Step 5: Customize your Canvas
+### Step 6: Customize your Canvas
 
 Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (Mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
 
@@ -100,7 +101,7 @@ We’ll begin our customization by going through each message component to updat
 
 ![Mobile Push Canvas step with a message notifying users that a product is back in stock.][9]
 
-### Step 6: Launch your Canvas
+### Step 7: Launch your Canvas
 
 After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who’ve favorited our Classic Straight Leg jeans and have subscribed to our messaging channels will receive notifications when they’re back in stock!
 
