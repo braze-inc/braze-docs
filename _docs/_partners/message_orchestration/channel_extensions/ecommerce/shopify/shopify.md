@@ -88,3 +88,28 @@ If you’re integrating the SDKs directly, you must manually implement and test 
 
 The integration requires Braze SDKs and Shopify services to work together to appropriately track and attribute Shopify data to the right users in near-real time. To find more details on the data tracked through the integration, see [Shopify data]().
 
+## How to integrate
+
+Braze offers two integration options for Shopify merchants, designed to meet the diverse needs of ecommerce businesses: [Standard integration]({{site.baseurl}}/shopify_standard_integration) and [custom integration]().
+
+### Standard integration
+
+The standard integration is tailored for Shopify online stores, providing a seamless and straightforward setup process. This option allows you to quickly connect your Shopify store to Braze, enabling you to leverage powerful customer engagement tools without extensive technical expertise. With this integration option, you can easily sync customer data, automate personalized messaging, and enhance your marketing efforts through comprehensive Braze features.
+
+Learn how to integrate the standard integration by referring to [Shopify standard integration setup]().
+
+### Custom integration
+
+If you’re using Shopify in a headless architecture or seeking advanced SDK customizations, the custom integration offers a more flexible and composable solution. This option allows developers to implement Braze SDKs directly into your Shopify environment, enabling deeper integration and tailored functionalities. Whether you’re looking to create unique customer experiences or optimize specific workflows, the custom integration provides the tools necessary to fully leverage Braze capabilities in a headless setup.
+
+Learn how to integrate the standard integration by referring to [Shopify custom integration setup]().
+
+## General Data Protection Regulation (GDPR)
+
+Concerning personal data submitted to Braze services by or on behalf of its customers, Braze is the data processor, and our customers are the data controllers. Accordingly, Braze processes such personal data solely at the instruction of our customers and, when applicable, notifies our customers of data subject requests. As the data controllers, our customers respond directly to Data subject requests. As part of the Braze platform’s Shopify integration, Braze automatically receives [Shopify’s GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to data subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance policies]({{site.baseurl}}/help/dp-technical-assistance/).
+
+## Considerations
+
+### Web Push
+
+Shopify doesn’t support service workers because they can’t be installed in the root folder, which is necessary to enable web push notifications. As a result, web push notifications aren’t supported by default for this integration. However, you can still use service workers by registering them on the app proxy sub-path instead of the root directory.
