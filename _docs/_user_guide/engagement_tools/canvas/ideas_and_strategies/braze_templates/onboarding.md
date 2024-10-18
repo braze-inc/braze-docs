@@ -15,25 +15,37 @@ In this article, we'll walk you through a use case for the **Onboarding** templa
 
 ## Prerequisites
 
-Before using this template, we created [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) to reference in this Canvas:
+Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) to reference in the Canvas:
 
 - A welcome email to all users of our app
 - An email with tips on how to use our app
 - A feedback email that includes a user survey
 
-To access this template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates** > **Onboarding**.
-
 ## Tailoring the template to your needs
 
 Let's say you're a marketer at PantsLabyrinth, and your goal is to enhance user engagement, build trust and loyalty with your users, and encourage them to stay engaged. To do so, you want to focus on crafting messages that target new users who have yet to interact with your app. Let's begin to customize this template to fit our use case.
 
-### Step 1: Set up details
+### Step 1: Set up the details 
 
-In the template:
+In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+
+![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
+
+Select **Braze templates**, then next to **Onboarding**, select **Apply Template**.
+
+![The list of Braze Canvas templates with 'Onboarding' highlighted.]()
+
+To edit the Canvas details, select **Edit** next to the existing Canvas name.
+
+![The current title and description of the Canvas.]()
+
+Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
 1. Update the Canvas name to specify that the Canvas is for onboarding new users.
 2. Update the description to specify that the Canvas maps out a user journey that promotes trust and loyalty with users.
 3. Add the tag **Onboarding**, so that we can filter for it on the Canvas home page.
+
+![The new name, description, and tag for the Canvas.]()
 
 ### Step 2: Assign your conversion events
 

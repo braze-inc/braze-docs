@@ -20,19 +20,31 @@ To successfully use this template, you'll need the following:
 - A separate post-purchase user journey Canvas since making a purchase in this Canvas will cause users to exit the Canvas.
 - A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
-To access this template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates** > **Abandoned Intent**. 
-
 ## Tailoring the template to your needs
 
 Let's say you're a marketer at Kitchenerie, a retail brand specializing in kitchenware, and you want to reengage users who have added the latest product "Enormous Paper Plate" to their carts but haven't made their purchases. 
 
-### Step 1: Set up details
+### Step 1: Set up the details
 
-In the template, we'll do the following:
+In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+
+![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
+
+Select **Braze templates**, then next to **Abandoned Intent**, select **Apply Template**.
+
+![The list of Braze Canvas templates with 'Abandoned Intent' highlighted.]()
+
+To edit the Canvas details, select **Edit** next to the existing Canvas name.
+
+![The current title and description of the Canvas.]()
+
+Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
 1. Update the Canvas name to specify that the Canvas is for targeting users with abandoned carts.
 2. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
 3. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
+
+![The new name, description, and tag for the Canvas.]()
 
 ### Step 2: Assign your conversion events
 

@@ -20,8 +20,6 @@ To successfully use the back-in-stock template, you need the following:
 - A [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) containing information about your item
 - [Back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#how-back-in-stock-notifications-work) must be set up for the item you want to message users about
 
-To access the this template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Back in Stock**. 
-
 ## Tailoring the template to your needs
 
 Let’s say we’re working for PantsLabyrinth, a direct-to-consumer clothing retailer that specializes in slacks, jeans, culottes, and many other types of pants. We can use the back in stock template to notify customers on various channels when a popular pair of jeans, the Classic Straight Leg, is back in stock.
@@ -30,14 +28,25 @@ Before creating the Canvas, we [set up a catalog]({{site.baseurl}}/user_guide/pe
 
 Now, we can go through the template to fit it for our needs.
 
-### Step 1: Set up details
+### Step 1: Set up the details
+
+In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+
+![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
+
+Select **Braze templates**, then next to **Back in Stock**, select **Apply Template**.
+
+![The list of Braze Canvas templates with 'Back in Stock' highlighted.]()
+
+To edit the Canvas details, select **Edit** next to the existing Canvas name.
+
+![The current title and description of the Canvas.]()
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
-1. Select **Edit** next to the template name.
-2. Change the Canvas name to specify that the Canvas is for when the Classic Straight Leg is back in stock.
-3. Change the description to explain that this Canvas contains personalized messaging.
-4. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
+1. Update the Canvas name to specify that the Canvas is for when the Classic Straight Leg is back in stock.
+2. Update the description to explain that this Canvas contains personalized messaging.
+3. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
 
 !["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.][1]
 

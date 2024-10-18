@@ -31,7 +31,7 @@ Select **Braze templates**, then next to **Feature Adoption**, select **Apply Te
 
 ![The list of Braze Canvas templates with 'Feature Adoption' highlighted.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_feature_adoption_template.png %}){: style="max-width:90%;"}
 
-To rename the Canvas, select **Edit** next to the existing Canvas name.
+To edit the Canvas details, select **Edit** next to the existing Canvas name.
 
 ![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 

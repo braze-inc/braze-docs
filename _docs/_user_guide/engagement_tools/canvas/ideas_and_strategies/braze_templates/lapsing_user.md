@@ -17,8 +17,6 @@ This article will walk you through a use case for the **Lapsing User** template,
 
 To successfully use the lapsing user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
-To access this template, when creating a new Canvas select **Use a Canvas template** > **Braze templates** > **Lapsing User**. 
-
 ## Tailoring the template to your needs
 
 Let’s say we’re working for MovieCanon, a streaming service that has exclusive content for movies and shows. We can use the lapsing user template to promote perks and premium content for users who haven’t visited our app in 30 days.
@@ -27,20 +25,31 @@ Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site
 
 Now, we can go through the template to fit it for our needs.
 
-### Step 1: Set up details 
+### Step 1: Set up the details 
+
+In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+
+![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
+
+Select **Braze templates**, then next to **Lapsing User**, select **Apply Template**.
+
+![The list of Braze Canvas templates with 'Lapsing User' highlighted.]()
+
+To edit the Canvas details, select **Edit** next to the existing Canvas name.
+
+![The current title and description of the Canvas.]()
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
-1. Select **Edit** next to the template name.
-2. Change the Canvas name to specify that this Canvas will message users with promotions and do an audience sync for those who start a session.
-3. Change the description to explain that this Canvas contains perks and promotions.
-4. Add the tag **Lapsing/Retention**, so that we can filter for this Canvas on the Canvas home page.
+1. Update the Canvas name to specify that this Canvas will message users with promotions and do an audience sync for those who start a session.
+2. Update the description to explain that this Canvas contains perks and promotions.
+3. Add the tag **Lapsing/Retention**, so that we can filter for this Canvas on the Canvas home page.
 
 !["Set Up Canvas Details" step with Canvas name of "Lapsed User - Visit App" and a brief Canvas description][1]
 
 ### Step 2: Assign your conversion events
 
-5. Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Convension Event - B** as the default of making any purchase.
+Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Convension Event - B** as the default of making any purchase.
 
 !["Assign Conversion Events" section with a primary conversion even of a user starting a session in a specific app.][2]
 
