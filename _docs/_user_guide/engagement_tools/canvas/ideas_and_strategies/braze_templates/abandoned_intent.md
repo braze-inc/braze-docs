@@ -32,7 +32,7 @@ In the template, we'll do the following:
 
 1. Update the Canvas name to specify that the Canvas is for targeting users with abandoned carts.
 2. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
-3. Add the tag **Abandon Cart**, so that we can filter for it on the Canvas home page.
+3. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
 
 ### Step 2: Assign your conversion events
 
