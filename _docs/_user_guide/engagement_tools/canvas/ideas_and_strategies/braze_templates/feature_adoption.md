@@ -17,7 +17,7 @@ In this article, we'll walk you through a use case for the **Feature Adoption** 
 
 To successfully use this template, you'll need the following:
 
-- A custom attribute to reference. This can be created in the Braze dashboard. For more information, see [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
+- A custom event named `scheduled_recurring_delivery`. This can be created in the Braze dashboard. For more information, see [Custom event]({{site.baseurl}}https://braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events).
 
 To access this template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates** > **Feature Adoption**. 
 
@@ -36,7 +36,11 @@ In the template, we'll do the following:
 
 ### Step 2: Assign a conversion event
 
-Next, let's assign our conversion event. For **Conversion event type**, select **Performs Custom Event**, choose the event [you created earlier](#prerequisites), then fill out the details of your conversion event.
+Next, let's assign our conversion event.
+
+1. For **Conversion event type**, select **Performs Custom Event**.
+2. Choose `scheduled_recurring_delivery` as the custom event.
+3. Then, fill out the details of your conversion event.
 
 Here's what we filled out for Calorie Rocket:
 

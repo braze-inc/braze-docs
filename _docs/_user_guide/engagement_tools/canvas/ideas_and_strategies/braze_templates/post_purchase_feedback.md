@@ -34,7 +34,7 @@ Now, we can go through the template to fit it for our needs.
 
 In the template, we'll do the following:
 
-1. Update the Canvas name to specify that the Canvas is for targeting users who recently used .
+1. Update the Canvas name to specify that the Canvas is for targeting users who recently interacted with your brand.
 2. Update the description to specify that the Canvas is for encouraging users to submit feedback for the new Liquid Mirage video game.
 
 ![The new name and description for the Canvas. The new description states: 'A post-purchase feedback Canvas to gauge interest for the upcoming expansion for PWD3, Liquid Mirage.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %})
