@@ -61,7 +61,7 @@ If you set the whole array at once, it will count as a single data point. As suc
 
 #### Nested custom attributes
 
-Nested custom attributes is an object that defines a set of attributes as a property of another attribute. Every key in the object will count as a data point.
+Nested custom attributes refer to an object that defines a set of attributes as a property of another attribute. Every key in the object will count as a data point.
 
 {% alert note %}
 Updating a custom attribute object to `null` also consumes a data point.
