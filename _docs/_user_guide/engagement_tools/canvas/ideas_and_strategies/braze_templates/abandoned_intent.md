@@ -32,11 +32,11 @@ In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then selec
 
 Select **Braze templates**, then next to **Abandoned Intent**, select **Apply Template**.
 
-![The list of Braze Canvas templates with 'Abandoned Intent' highlighted.]()
+![The list of Braze Canvas templates with 'Abandoned Intent' highlighted.]({% image_buster /assets/img/canvas_templates/select_abandoned_intent_template.png %}){: style="max-width:90%;"}
 
 To edit the Canvas details, select **Edit** next to the existing Canvas name.
 
-![The current title and description of the Canvas.]()
+![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
@@ -44,7 +44,7 @@ Let’s adjust the Canvas details and its assigned conversion events to reflect 
 2. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
 3. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
 
-![The new name, description, and tag for the Canvas.]()
+![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Step 2: Assign your conversion events
 

@@ -1,25 +1,25 @@
 ---
-nav_title: Lapsing User
-article_title: Lapsing User
+nav_title: Lapsed User
+article_title: Lapsed User
 page_order: 4
 page_type: reference
 description: "This article describes how to use a Braze Canvas template to bring users back to your app with incentives based on their past engagements."
 tool: Canvas
 ---
 
-# Lapsing user
+# Lapsed user
 
-> Use the lapsing user template to remind users of the value your brand brings to them, and encourage their return with exciting offers and incentives based on their past engagements.
+> Use the lapsed user template to remind users of the value your brand brings to them, and encourage their return with exciting offers and incentives based on their past engagements.
 
-This article will walk you through a use case for the **Lapsing User** template, which is designed for the retention and loyalty step of the user lifecycle. When you’re finished, you’ll have created a Canvas that encourages users to return to your app with promotions that vary based on their behavior, such as whether they started a session in your app after receiving a promotional message.
+This article will walk you through a use case for the **Lapsed User** template, which is designed for the retention and loyalty step of the user lifecycle. When you’re finished, you’ll have created a Canvas that encourages users to return to your app with promotions that vary based on their behavior, such as whether they started a session in your app after receiving a promotional message.
 
 ## Prerequisites
 
-To successfully use the lapsing user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
+To successfully use the lapsed user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) with the partners and audiences you use.
 
 ## Tailoring the template to your needs
 
-Let’s say we’re working for MovieCanon, a streaming service that has exclusive content for movies and shows. We can use the lapsing user template to promote perks and premium content for users who haven’t visited our app in 30 days.
+Let’s say we’re working for MovieCanon, a streaming service that has exclusive content for movies and shows. We can use the lapsed user template to promote perks and premium content for users who haven’t visited our app in 30 days.
 
 Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
@@ -31,13 +31,13 @@ In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then selec
 
 ![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
 
-Select **Braze templates**, then next to **Lapsing User**, select **Apply Template**.
+Select **Braze templates**, then next to **Lapsed User**, select **Apply Template**.
 
-![The list of Braze Canvas templates with 'Lapsing User' highlighted.]()
+![The list of Braze Canvas templates with 'Lapsed User' highlighted.]({% image_buster /assets/img/canvas_templates/select_lapsed_user_template.png %}){: style="max-width:90%;"}
 
 To edit the Canvas details, select **Edit** next to the existing Canvas name.
 
-![The current title and description of the Canvas.]()
+![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 

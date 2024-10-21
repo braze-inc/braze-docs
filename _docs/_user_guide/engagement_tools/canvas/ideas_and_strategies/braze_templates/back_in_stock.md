@@ -36,11 +36,11 @@ In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then selec
 
 Select **Braze templates**, then next to **Back in Stock**, select **Apply Template**.
 
-![The list of Braze Canvas templates with 'Back in Stock' highlighted.]()
+![The list of Braze Canvas templates with 'Back in Stock' highlighted.]({% image_buster /assets/img/canvas_templates/select_back_in_stock_template.png %}){: style="max-width:90%;"}
 
 To edit the Canvas details, select **Edit** next to the existing Canvas name.
 
-![The current title and description of the Canvas.]()
+![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
 
 Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
 
