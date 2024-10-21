@@ -39,11 +39,11 @@ After you set up the integration, Braze will automatically download historical d
 After you implement the Shopify integration, Braze will automatically backfill your Shopify customers, orders, and products based on your configuration settings.
 - Braze will import all customers and order placed events from the last 90 days prior to your Shopify integration connection.
 - The Shopify customer ID will be set as the Braze `external_id`. 
-- To see what specific customer data is being backfilled, refer to [Supported Shopify customer data]().
+- To see what specific customer data is being backfilled, refer to [Shopify features]({{site.baseurl}}/shopify_features#shopify-data).
 
 {% alert note %}
 Note the following:
-- If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]() for important information.
+- If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]({{site.baseurl}}/shopify_features#historical-backfill) for important information.
 - Website visits (sessions) count towards your Monthly Active User (MAU) allotments. 
 {% endalert %}
 
@@ -88,23 +88,11 @@ Through the Shopify integration, the Braze SDKs will be able to streamline ident
 If you’re integrating the SDKs directly, you must manually implement and test the setup for proper functionality.
 {% endalert %}
 
-The integration requires Braze SDKs and Shopify services to work together to appropriately track and attribute Shopify data to the right users in near-real time. To find more details on the data tracked through the integration, see [Shopify data]().
+The integration requires Braze SDKs and Shopify services to work together to appropriately track and attribute Shopify data to the right users in near-real time. To find more details on the data tracked through the integration, see [Shopify data]({{site.baseurl}}/shopify_features#shopify-data).
 
 ## How to integrate
 
-Braze offers two integration options for Shopify merchants, designed to meet the diverse needs of ecommerce businesses: [Standard integration]({{site.baseurl}}/shopify_standard_integration) and [custom integration]().
-
-### Standard integration
-
-The standard integration is tailored for Shopify online stores, providing a seamless and straightforward setup process. This option allows you to quickly connect your Shopify store to Braze, enabling you to leverage powerful customer engagement tools without extensive technical expertise. With this integration option, you can easily sync customer data, automate personalized messaging, and enhance your marketing efforts through comprehensive Braze features.
-
-Learn how to integrate the standard integration by referring to [Shopify standard integration setup]().
-
-### Custom integration
-
-If you’re using Shopify in a headless architecture or seeking advanced SDK customizations, the custom integration offers a more flexible and composable solution. This option allows developers to implement Braze SDKs directly into your Shopify environment, enabling deeper integration and tailored functionalities. Whether you’re looking to create unique customer experiences or optimize specific workflows, the custom integration provides the tools necessary to fully leverage Braze capabilities in a headless setup.
-
-Learn how to integrate the standard integration by referring to [Shopify custom integration setup]().
+The [standard integration]({{site.baseurl}}/shopify_standard_integration/) is tailored for Shopify online stores, providing a seamless and straightforward setup process. This option allows you to quickly connect your Shopify store to Braze, enabling you to leverage powerful customer engagement tools without extensive technical expertise. With this integration option, you can easily sync customer data, automate personalized messaging, and enhance your marketing efforts through comprehensive Braze features.
 
 ## General Data Protection Regulation (GDPR)
 

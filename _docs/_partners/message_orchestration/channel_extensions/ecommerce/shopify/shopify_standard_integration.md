@@ -11,7 +11,7 @@ hidden: true
 
 # Shopify standard integration setup
 
-> This page walks you through how to integrate Braze with Shopify using our standard integration for users with a Shopify online store. If you use a Shopify headless site or are looking to implement more tailored solutions, refer to [Shopify custom integration setup]().
+> This page walks you through how to integrate Braze with Shopify using our standard integration for users with a Shopify online store.
 
 ## Step 1: Connect your Shopify store
 
@@ -32,11 +32,9 @@ If your Shopify account is associated with more than one store, you can change t
 {: start="4"}
 4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace, then configure your integration.<br><br>![A window asking you to confirm that you’re in the right workspace.][2]
 
-
 ## Step 2: Enable Braze Web SDKs
 
 For Shopify online stores, you can select the standard setup to automatically implement the Braze Web SDK and JavaScript SDK.
-
 
 ![“Enable Web SDK” step with options to implement through a standard setup or custom setup.][3]
 
@@ -60,11 +58,11 @@ Now you’ll select the Shopify data you want to track.
 The following events will be enabled by default in the standard integration.
 
 | Braze recommended events | Shopify custom events | Shopify custom attributes |
-| — | —| — |
+| --- | --- | --- |
 | {::nomarkdown}<ul><li>Product viewed</li><li>Cart updated</li><li>Checkout started</li><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_account_login</li><li>shopify_paid_order</li><li>shopify_order_canceled</li><li>shopify_order_refunded</li><li>shopify_order_fulfilled</li><li>shopify_order_partially_fulfilled</li></ul>{:/} | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 }
 
-For more information on the data tracked through the integration, see [Shopify Data]().
+For more information on the data tracked through the integration, see [Shopify Data]({{site.baseurl}}/shopify_features#shopify-data).
 
 #### Historical backfill setup
 
@@ -74,17 +72,15 @@ Through the standard setup, you have the option to perform an initial load of yo
 
 This table contains the data that will be initially loaded through the backfill.
 
-
 | Braze recommended events | Shopify custom events | Braze standard attributes | Braze subscription statuses |
-| — | —| — | — |
-| {::nomarkdown}<ul><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>
-shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 .reset-td-br-4 }
+| --- | --- | --- | --- |
+| {::nomarkdown}<ul><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 As your Shopify customer records are loaded into Braze, the Shopify customer ID will be used as the Braze external ID. 
 
 {% alert note %}
-If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]() for more details. 
+If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]({{site.baseurl}}/shopify_features#historical-backfill) for more details. 
 {% endalert %}
 
 #### (Advanced) Custom data tracking setup
@@ -118,7 +114,7 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 If you leverage the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. 
 
-![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][]
+![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][10]
 
 ## Step 5: Activate Channels
 
@@ -146,3 +142,4 @@ Confirm you can view your integration settings, the status of initial data sync,
 [7]: {% image_buster /assets/img/Shopify/open_shopify.png %}
 [8]: {% image_buster /assets/img/Shopify/install_complete.png %}
 [9]: {% image_buster /assets/img/Shopify/choose_account.png %}
+[10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}

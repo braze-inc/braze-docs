@@ -12,7 +12,9 @@ page_order: 2
 
 > This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
 
-## Tracked Shopify events
+## Shopify data
+
+### Tracked Shopify events
 
 {% tabs %}
 {% tab Shopify events %}
@@ -28,12 +30,18 @@ page_order: 2
 **Type**: [Recommended Event]()<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
+
+For Abandoned Cart messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization](). 
+
 {% endsubtab %}
 {% subtab Checkout started %}
 **Event**: `ecommerce.v1.checkout_started`<br>
 **Type**: [Recommended Event]()<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
+
+For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization](). 
+
 {% endsubtab %}
 {% subtab Order placed %}
 **Event**: `ecommerce.v1.order_placed`<br>
@@ -46,30 +54,189 @@ page_order: 2
 **Type**: [Custom Event]()<br>
 **Triggered**: When a user’s order is fulfilled and ready for shipping<br>
 **Use Case**: (Transactional) Fulfillment update 
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Closed Timestamp | `{{event_properties.${closed_at}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillment Shipment Status | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Status | `{{event_properties.${fulfillments}[0].status}}` |
+| Fulfillment Tracking Company | `{{event_properties.${fulfillments}[0].Fulfillment tracking_company}}` |
+| Fulfillment Tracking Number | `{{event_properties.${fulfillments}[0].Fulfillment tracking_number}}` |
+| Fulfillment Tracking Numbers | `{{event_properties.${fulfillments}[0].Fulfillment tracking_numbers}}` |
+| Fulfillment Tracking URL | `{{event_properties.${fulfillments}[0].Fulfillment tracking_url}}` |
+| Fulfillment Tracking URLs | `{{event_properties.${fulfillments}[0].Fulfillment tracking_urls}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Fulfillment Name | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Fulfillment Price | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| Fulfillment Product ID | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Fulfillment Quantity | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Partially fulfilled order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
 **Type**: [Custom Event]()<br>
 **Triggered**: When part of a user’s order is fulfilled and ready for shipping<br> 
 **Use Case**: (Transactional) Fulfillment update 
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Closed Timestamp | `{{event_properties.${closed_at}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillment Shipment Status | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].status}}` |
+| Fulfillment Tracking Company | `{{event_properties.${fulfillments}[0].tracking_company}}` |
+| Fulfillment Tracking Number | `{{event_properties.${fulfillments}[0].tracking_number}}` |
+| Fulfillment Tracking Numbers | `{{event_properties.${fulfillments}[0].tracking_numbers}}` |
+| Fulfillment Tracking URL | `{{event_properties.${fulfillments}[0].tracking_url}}` |
+| Fulfillment Tracking URLs | `{{event_properties.${fulfillments}[0].tracking_urls}}` |
+| Fulfillment Status | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Fulfillment Name | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Fulfillment Price | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| Fulfillment Product ID | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Fulfillment Quantity | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Paid order %}
 **Event**: `shopify_paid_order`<br>
 **Type**: [Custom Event]()<br>
 **Triggered**: When a user’s order is marked as paid within Shopify<br>  
 **Use Case**: (Transactional) Payment confirmation
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Discount Codes | `{{event_properties.${discount_codes}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Order cancelled %}
-**Event**: `shopify_order_cancelled`<br>
+**Event**: `shopify_cancelled_order`<br>
 **Type**: [Custom Event]()<br>
 **Triggered**: When a user’s order is cancelled<br> 
 **Use Case**: (Transactional) Order cancellation confirmation
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Confirmed | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Discount Codes | `{{event_properties.${discount_codes}}}` |
+| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
+| Fulfillments | `{{event_properties.${fulfillments}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Fulfillment Status | `{{event_properties.${line_items}[0].fulfillment_status}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Order refunded %}
 **Event**: `shopify_order_refunded`<br>
 **Type**: [Custom Event]()<br>
 **Triggered**: When a user’s order is refunded<br>
 **Use Case**: (Transactional) Refund confirmation
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Order Note | `{event_properties.${note}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Name | `{{event_properties.${line_items}[0].name}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Account login %}
 **Event**: `shopify_account_login`<br>
@@ -413,7 +580,7 @@ metadata:{
 {% endtab %}
 {% endtabs %}
 
-## Supported Shopify custom attributes
+### Supported Shopify custom attributes
 {% tabs local %}
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
@@ -427,7 +594,7 @@ metadata:{
 | `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Liquid personalization
+#### Liquid personalization
 
 To add Liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
 
@@ -460,7 +627,7 @@ After selecting your custom attribute, input a default value and copy the Liquid
 {% endtab %}
 {% endtabs %}
 
-## Supported Shopify standard attributes
+### Supported Shopify standard attributes
 
 - Email
 - First Name
@@ -473,7 +640,7 @@ After selecting your custom attribute, input a default value and copy the Liquid
 Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you will not be charged a data point.
 {% endalert %}
 
-## SDK Data Collection 
+### SDK data collection 
 
 For more information on what data is collected by the Braze SDKs, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
 
@@ -492,25 +659,6 @@ For the initial data sync, Braze will import customers and order placed from the
 
 ### Considerations
 
-#### Existing customers
-
-For existing Braze customers onboarding the Shopify integration, the historical backfill could result in unintended consequences such as users receiving irrelevant and untimely messages for any affected campaigns or Canvases. Campaigns and Canvases using the following trigger events could be impacted if they're using any of the Shopify data this feature syncs over:
-
-- Change Custom Attribute Value
-- Perform Conversion Event
-- Perform Exception Event for Campaign
-- Update Subscription Status
-- Update Subscription Group Status
-- Add an Email Address
-- Perform Custom Event
-
-{% alert important %}
-We suggest you audit your current active campaigns and Canvases for messages that may trigger the above events using data from our Shopify Historical Backfill.
-
-- For “Make Purchase” and “Perform Custom Event”, you can update the [start time duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration) to any date and time after your Shopify store was connected in Braze. Any past events before this new start time won't trigger any messages.
-- For all other events above, you can [temporarily stop them before activating the backfill]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch#stopping-your-campaign) so that messages won't send.
-{% endalert %}
-
 #### Subscriber collection
 
-This feature will only sync email and SMS subscription states for new users created during the backfill. This won't sync subscription states for existing users in Braze to avoid overriding your users’ current statuses.
+Email and SMS marketing opt-ins will be set for each subscription group associated with the specific store. Be aware that we will only apply the email or SMS marketing opt-in for new customer profiles that are created during the initial historical data sync. Existing customer profiles won't be updated with these opt-in settings.
