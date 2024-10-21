@@ -149,7 +149,8 @@
       margin-left: 0;
     }
 
-    ul.sdk-ab-nav {
+    ul.sdk-ab-nav,
+		ul.sdk-ab-sub_nav {
       margin-bottom: 10px;
       margin-left: 0 !important;
       padding-left: 0;
@@ -190,7 +191,8 @@
       }
     }
 
-    ul.sdk-ab-nav-tabs {
+    ul.sdk-ab-nav-tabs,
+		ul.sdk-ab-sub_nav-sub_tabs{
 
       > li {
         float: left;
@@ -226,8 +228,26 @@
         }
       }
     }
+		ul.sdk-ab-sub_nav-sub_tabs {
+			> li {
+				&.sub_active {
+					color: $blue-scooter;
+          background-color: $white ;
+          border-radius: 5px;
+          border-color: $navy-bay;
+          cursor: default;
+          a {
+            color: $navy-bay;
 
-    .sdk-tab-content {
+            &:hover {
+              color: $blue-scooter;
+              background-color: $white;
+            }
+          }
+				}
+			}
+		}
+    .sdk-tab-content, .sdk-ab_sub_tab-content {
       padding: 20px 20px 0 20px;
       p {
         padding: 0;
@@ -238,6 +258,15 @@
       }
       > .active {
         display: block;
+      }
+    }
+
+		.sdk-ab-sub_tab-content {
+      > .sdk-ab-sub_tab-pane {
+        display: none;
+      }
+      > .sub_active {
+      	display: block;
       }
     }
   }
