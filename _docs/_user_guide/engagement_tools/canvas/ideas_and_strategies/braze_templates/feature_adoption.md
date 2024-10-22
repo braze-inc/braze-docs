@@ -9,7 +9,7 @@ tool: Canvas
 
 # Feature adoption
 
-> This template is designed to drive usage of your new features, existing products, additional offerings, or any other area you'd like your customers to experience. By leveraging personalized communication and a structured set of messages, you can seamlessly introduce new features to users and get valuable feedback from them.
+> This template is designed to drive usage of your new features, existing products, additional offerings, or any other area you'd like your customers to experience. By leveraging personalized communication and a structured set of messages, you can seamlessly introduce new features to users and get valuable feedback from them. 
 
 In this article, we'll walk you through a use case for the **Feature Adoption** template, which is intended for the retention and loyalty stages of the user lifecycle. After this article, you'll have customized a user journey that encourages users to use new features and collects user sentiment.
 
