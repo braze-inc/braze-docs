@@ -59,7 +59,7 @@ If you're actively configuring the integration, we recommend turning this off wh
 
 #### Display customer details
 
-Choose to show or hide the user's details. The details contain data about the user profile in Braze, location, email, phone number, email subscription state, and push notification subscription state.
+Choose to show or hide the user's details. The details contain data about location, email, phone number, email subscription state, push notification subscription state, and the duration of the membership in Braze. 
 
 #### Display the button to change the email subscription state
 
