@@ -31,7 +31,7 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can cre
 
 ## Use cases
 
-Surface Braze data into the customer service agent view when they are communicating with your users on different communication channels, such as email, messenger, or chat.
+Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat.
 
 ## Integration
 
