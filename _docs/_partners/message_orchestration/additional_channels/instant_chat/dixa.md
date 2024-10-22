@@ -35,7 +35,7 @@ Surface Braze data into the customer service agent view while communicating with
 
 ## Integration
 
-You must be a Dixa (System-) Administrator to configure integrations within Dixa. For the Braze integration, in Dixa, go to **Settings** > **Integrations** > **Braze**.
+You must be a Dixa administrator to configure integrations within Dixa. For the Braze integration, in Dixa, go to **Settings** > **Integrations** > **Braze**.
 
 ![][1]{: style="width:450px;"}
 
