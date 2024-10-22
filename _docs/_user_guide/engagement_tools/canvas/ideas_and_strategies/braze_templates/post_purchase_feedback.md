@@ -45,7 +45,7 @@ Let's adjust the Canvas details to reflect our goal.
 
 ### Step 2: Assign conversion events
 
-Next, let's assign our conversion events. Update the **Primary Conversion Event - A** to **Make a specific purchase** and select **Proxy War 3: War of Thirst**.
+Next, let's assign our conversion events. Update the **Primary Conversion Event - A** to **Make a specific purchase** and select **Proxy War**.
 
 !["Assign Conversion Events" section for the conversion event type of purchasing Proxy War game product.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
@@ -53,10 +53,10 @@ We'll keep the template's conversion deadline of three days because we want to t
 
 ### Step 3: Set an entry schedule
 
-We'll keep our Canvas with an action-based entry schedule. We’ll make two adjustments to this step: 
+While this template's entry schedule is set to **Action-Based**, our use case will benefit more by having a scheduled delivery for this Canvas because we want to target users after the launch of our game.
 
-1. For the **Action Based Options**, select **Make A Specific Purchase** because we're only interested in users who have purchased Proxy War 3.
-2. For the **Entry Window**, select a start date and time.
+1. Select **Scheduled** as the entry schedule type.
+2. For **Time-Based Options**, select **Enter users as soon as Canvas is launched**.
 
 ### Step 4: Determine who enters the Canvas
 

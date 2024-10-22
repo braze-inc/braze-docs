@@ -13,11 +13,6 @@ tool: Canvas
 
 In this article, we'll walk you through a use case for the **Feature Adoption** template, which is intended for the retention and loyalty stages of the user lifecycle. After this article, you'll have customized a user journey that encourages users to use new features and collects user sentiment.
 
-In entrance criteria, encourage customers to exclude users from entering who have already used the product. For example, the entrance segment could be defined as Has “custom event” (using feature) for exactly 0 times 
-Define a conversion event in order to use experiment path (ideally, the conversion event is the event that signals feature adoption)
-Fill in Action Path with custom events for Activated Feature and Taken Tour
-Fill in custom attributes in Feedback Survey in-app message to capture sentiment of feedback.
-
 ## Prerequisites
 
 To successfully use this template, you'll need to a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) that references when users have used the feature.
@@ -72,13 +67,12 @@ Now, let's set up our target audience by updating the following details in the t
 
 1. Select the **All Users** segment.
 2. Remove the template's additional filters. 
-3. Create this filter using our custom event: `Has scheduled_delivery for exactly 0 times`. 
+3. Create this filter using our custom event: `Has scheduled_delivery for exactly 0 times`. This allows us to exclude users who have already used the feature from entering our Canvas.
 
-This allows us to exclude users who have already used the feature from entering our Canvas.
+![The segment for all users who have not used Cruise Control.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
-![The segment for all users who have not used .]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_1.png %}){: style="max-width:25%;"}
-
-Keeping in mind that Calorie Rocket previously allowed a few users to beta test the new feature Cruise Control, we'll update the exit criteria to exclude these users from entering the Canvas.
+{: start="4"}
+4. Keeping in mind that Calorie Rocket previously allowed a few users to beta test the new feature Cruise Control, we'll update the exit criteria to exclude these users from entering the Canvas.
 
 ### Step 5: Select your send settings
 

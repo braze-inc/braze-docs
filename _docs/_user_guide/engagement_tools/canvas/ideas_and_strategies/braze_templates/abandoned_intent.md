@@ -59,8 +59,8 @@ While this template's entry schedule is set to **API-Triggered**, our use case w
 
 1. Select **Action-Based** as the entry schedule type.
 2. Select **Abandoned Cart** as the trigger.
-3. For your entry window, select the start time date.
-4. Select the option to allow users to enter in their local time zone. This can keep your messaging relevant and lead to higher engagement if messages are sent at optimal times.
+3. For the entry window, select the start time date.
+4. Select the option to allow users to enter in their local time zone. This can keep our messaging relevant and lead to higher engagement if messages are sent at optimal times.
 
 ![An action-based Canvas that targets users who have abandoned their cart, with the entry window October 15, 2024 3:20 pm at the users' local time zone.][2]
 
@@ -72,7 +72,7 @@ Next, let's define our target audience as users who have shopped exclusively onl
 
 We'll leave the entry controls as is, so users aren't allowed to re-enter this Canvas and there's no limit to the number of people who can potentially enter this Canvas.
 
-For the exit criteria, users will exit the Canvas if they have purchased the "Enormous Paper Plate", that way they won't receive further messages.
+For the exit criteria, users will exit the Canvas if they have purchased the "Enormous Paper Plate". This way they won't receive further messages about an item they've already purchased.
 
 ![Exit criteria that determines users who make a specific purchase for the enormous paper plate will exit the Canvas.][4]
 
