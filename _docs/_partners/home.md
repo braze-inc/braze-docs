@@ -304,4 +304,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
 - name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 ---
