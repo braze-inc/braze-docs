@@ -64,7 +64,7 @@ The following events will be enabled by default in the standard integration.
 
 For more information on the data tracked through the integration, see [Shopify Data]({{site.baseurl}}/shopify_features#shopify-data).
 
-#### Historical backfill setup
+### Historical backfill setup
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
 
@@ -83,7 +83,7 @@ As your Shopify customer records are loaded into Braze, the Shopify customer ID 
 If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify historical backfill]({{site.baseurl}}/shopify_features#historical-backfill) for more details. 
 {% endalert %}
 
-#### (Advanced) Custom data tracking setup
+### (Advanced) Custom data tracking setup
 
 With the Braze SDKs, you can track custom events or custom attributes that go beyond standard events for this integration. Custom events capture unique interactions in your store, such as:
 
@@ -110,13 +110,19 @@ braze.logCustomEvent(
 
 The SDK must be initialized (listening for activity) on a user's device to log events or custom attributes. To learn more about logging custom data, refer to [User object](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) and [logCustomEvent object](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-## Step 4: Configure manage users
+## Step 4: Configure how you manage users
 
 If you leverage the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. 
 
 ![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][10]
 
-## Step 5: Activate Channels
+## Step 5: Sync products (optional)
+
+You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages.
+
+![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][11]{: style="max-width:70%;"}
+
+## Step 6: Activate Channels
 
 {% alert note %}
 At this time, we don’t support in-app messages in our standard integration.
@@ -143,3 +149,4 @@ Confirm you can view your integration settings, the status of initial data sync,
 [8]: {% image_buster /assets/img/Shopify/install_complete.png %}
 [9]: {% image_buster /assets/img/Shopify/choose_account.png %}
 [10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
+[11]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}

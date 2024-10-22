@@ -42,13 +42,13 @@ If you are selecting SKU as your catalog ID, make sure that all your products an
 
 ### Step 3: Sync in progress
 
-You will receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
+After you select **Finish setup**, your products will begin syncing to Braze, and your status will display as “Updating” to indicate the initial sync is starting. Note that the time it takes for the sync to finish depends on how many products and variants Braze needs to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification.
 
-Note that if your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
+If your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
 
 ### Step 4: Sync completed
 
-You will receive a dashboard notification and an email after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Syncing". You can view your products by clicking the catalog name on the Shopify partner page.
+You will receive a dashboard notification after the sync is successful.The Shopify partner page will also update the status under Shopify catalogs to “Active”. You can view your products by selecting the catalog name on the Shopify partner page.
 
 Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
 
