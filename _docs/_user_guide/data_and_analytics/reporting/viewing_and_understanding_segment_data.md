@@ -108,8 +108,6 @@ You won’t be able to access data from time periods prior to when this feature 
 If your company turned on this feature on October 2, and turned on analytics tracking for Segment B on October 3, then you can only see data for Segment B for the campaigns and Canvases that recorded metrics after October 3.
 
 
-
-
 [1]: {% image_buster /assets/img_archive/segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
