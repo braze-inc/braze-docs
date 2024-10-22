@@ -11,23 +11,17 @@ tool:
 
 # Archiving campaigns
 
-> If you'd like to stop a campaign from sending or clear it from your dashboard, you can archive it. Go to the **Campaigns** page, click the gear icon next to the campaign's name and click **Archive**.
+> 
 
-![][1]
+To stop a campaign from sending or clear it from your dashboard, you can archive it. Go to the **Campaigns** page, hover over the campaign's row and select the <i class="fas fa-ellipsis-vertical"></i> menu. Then, select **Archive**.
 
 When you archive a campaign, no further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
 
-There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the relevant button.
-
-![][3]
-
-To view archived messages from the **Campaigns** page, select the **Archived** folder.
-
-![][2]
+There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and selecting the relevant button.
 
 ## Unarchiving campaigns
 
-While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the **Archived** folder and click **Unarchive Selected**.
+While selecting on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You'll need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the **Archived** folder and click **Unarchive Selected**.
 
 ![][4]
 
