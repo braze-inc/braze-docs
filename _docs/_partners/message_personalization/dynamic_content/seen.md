@@ -23,8 +23,8 @@ Before you start, you'll need the following:
 | Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | A SEEN campaign   | A SEEN campaign is required to take advantage of this partnership.                                                                     |
-| Data source   | You'll need to send data to SEEN to personalise your videos. Make sure you have all relevant data available in Braze, and that you pass data with **braze_id** as the identifier.                                                                   |
-
+| Data source   | You'll need to send data to SEEN to personalise your videos. Make sure you have all relevant data available in Braze, and that you pass data with **braze_id** as the identifier. |
+| Braze Data Transformation Webhook URL   | Braze Data Transformation will be used to reformat the incoming data from SEEN so it can be accepted by Braze’s /users/track endpoint. |
 
 <!-- An optional section you can use to outline the typical or atypical use cases for your integration. -->
 ## Use cases
@@ -37,16 +37,14 @@ SEEN offers automated video personalization across the entire the customer journ
 In the following example, we will be sending users data to SEEN for video generation, and receiving a unique landing page link and a unique, personalised thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
 You can reach out to your Customer Success Manager at SEEN for assistance.
 
-### Step 1: CREATE A WEBHOOK CAMPAIGN TO SEND DATA TO SEEN
+### Step 1: Create a Webhook Campaign to Send Data to SEEN
 
-Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze.
+Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, and follow these steps to compose your webhook:
 
-Give your campaign a name, and follow these steps to compose your webhook:
-
-- **Webhook URL**: ht<span>tps://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</span>
+1. **Webhook URL**: ht<span>tps://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</span>
     - You will receive your campaign_slug from SEEN to call the correct endpoint.
-- **HTTP Method**: POST
-- **Request body**: Raw Text
+2. **HTTP Method**: POST
+3. **Request body**: Raw Text
     - You can use the code below as a starting point. Use [SEEN's documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content) as a reference for the payload structure.
 ```json
 [
@@ -59,24 +57,24 @@ Give your campaign a name, and follow these steps to compose your webhook:
 ]
 ```
 >Remember to modify the payload depending on the personalisations in your film.
-- **Request headers**:
+4. **Request headers**:
     - Authorization → Token {token}
     - Content-Type → application/json
 >You will receive your Authentication Token from SEEN.
-- Set the "Number of messages per minute" to 10. This ensures that you won't exceed the SEEN's ratelimit of 1000 calls per hour.
-- You can now test the webhook with a user by switching to the “Test” tab.
-- If everything works as intended, you can proceed to finish the webhook setup.
+5. You can now test the webhook with a user by switching to the **Test** tab.
+6. If everything works as intended, you can proceed to finish the webhook setup.
+    - In Braze, set the rate at which the campaign sends to 10 **messages per minute**. This ensures that you won't exceed the SEEN's rate limit of 1000 calls per hour.
 
-<!-- Use the "Make a post request", "Default behavior," and "Rate limit" sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. -->
-### Step 2: CREATE DATA TRANSFORMATION TO RECEIVE DATA FROM SEEN
+<!-- Use the **Make a post request**, **Default behavior**, and **Rate limit** sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. -->
+### Step 2: Create Data Transformation to Receive Data from SEEN
 
-- Create new [Custom Attribute](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for “landing_page_url” and “email_thumbnail_url”. These are the two attributes we will be using in this example.
-- Open [“Data Transformation”](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) tool under “Data Settings”, and click on “Create transformation”.
-- Give your transformation a name, and choose:
-    - “Start from scratch”
+1. Create new [Custom Attribute](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for **landing_page_url** and **email_thumbnail_url**. These are the two attributes we will be using in this example.
+2. Open [“Data Transformation”](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) tool under **Data Settings**, and click on **Create transformation**.
+3. Give your transformation a name, and choose:
+    - **Start from scratch**
     - Destination → POST: Track users
-- **Share your Webhook URL with SEEN.**
-- You can use the code below as the starting point for the transformation:
+4. **Share your Webhook URL with SEEN.**
+5. You can use the code below as the starting point for the transformation:
 ```javascript
 let brazecall = {
   "attributes": [
@@ -91,7 +89,7 @@ let brazecall = {
 return brazecall;
 ```
 >If you want to include other data, make sure to include those as well. Remember to discuss with SEEN as well so that the callback payload includes all needed fields.
-- Send a test payload to the provided endpoint. If you want to use the callback payload defined in [our documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself via [Postman](https://www.postman.com/) or another similar service:
+6. Send a test payload to the provided endpoint. If you want to use the callback payload defined in [our documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself via [Postman](https://www.postman.com/) or another similar service:
 ```json
 {
         "customer_id": "101",
@@ -103,8 +101,8 @@ return brazecall;
        
 }
 ```
-- Click “Validate” to make sure everything works as intended.
-- If everything worked as intended, click “Save” and “Activate”.
+7. Click **Validate** to make sure everything works as intended.
+8. If everything worked as intended, click **Save** and **Activate**.
 
 #### Rate limit
 
