@@ -13,119 +13,111 @@ tool: Canvas
 
 In this article, we'll walk you through a use case for the **Feature Adoption** template, which is intended for the retention and loyalty stages of the user lifecycle. After this article, you'll have customized a user journey that encourages users to use new features and collects user sentiment.
 
+In entrance criteria, encourage customers to exclude users from entering who have already used the product. For example, the entrance segment could be defined as Has “custom event” (using feature) for exactly 0 times 
+Define a conversion event in order to use experiment path (ideally, the conversion event is the event that signals feature adoption)
+Fill in Action Path with custom events for Activated Feature and Taken Tour
+Fill in custom attributes in Feedback Survey in-app message to capture sentiment of feedback.
+
 ## Prerequisites
 
-To successfully use this template, you'll need to create a custom event named `scheduled_recurring_delivery`. This can be created in the Braze dashboard. For more information, see [Custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events).
+To successfully use this template, you'll need to a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events) that references when users have used the feature.
 
 ## Tailoring the template to your needs
 
-Let's say you're a marketer at Calorie Rocket, a food delivery app, that recently launched Cruise Control, a feature for scheduling recurring food deliveries, and you want to encourage your users to adopt this new feature.
+Let's say you work at Calorie Rocket, a food delivery app, that recently launched Cruise Control, a feature for scheduling recurring food deliveries, and you want to encourage more users to adopt this new feature. In our example, we'll use the custom event `scheduled_delivery` to track when users have tried the Cruise Control feature.
+
+To access the back-in-stock template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Feature Adoption**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
 ### Step 1: Set up the details
 
-In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+Let’s adjust the Canvas details to reflect our goal.
 
-![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
-
-Select **Braze templates**, then next to **Feature Adoption**, select **Apply Template**.
-
-![The list of Braze Canvas templates with 'Feature Adoption' highlighted.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_feature_adoption_template.png %}){: style="max-width:90%;"}
-
-To edit the Canvas details, select **Edit** next to the existing Canvas name.
+1. Select **Edit** next to the template name.
 
 ![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
-Update the Canvas name to specify that the Canvas is for targeting users to collect user feedback. Then, update the description to specify that the Canvas is for encouraging users to submit feedback and track user sentiment for the new Cruise Control feature. When you're finished, select **Save Draft**.
+{:start="2"}
+2. Update the Canvas name to specify that the Canvas is for targeting users to collect user feedback.
+3. Update the description to specify that the Canvas is for encouraging users to submit feedback and track user sentiment for the new Cruise Control feature.
+4. Add the tag **Feature adoption** so that we can filter for it on the Canvas home page.
 
 ![The new name and description for the Canvas. The new description states: 'A feature adoption Canvas to track adoption and user sentiment for Cruise Control, a feature for scheduling recurring food deliveries.']({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### Step 2: Assign a conversion event
 
-Next, let's assign our conversion event. Next to **Conversion Events**, select **Edit**.
+Next, let's add a conversion event for our Canvas to signal feature adoption. This will allow us to tailor the Experiment Path in our user journey later.
 
-![The conversion event window in the Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/edit_conversion_event.png %}){: style="max-width:50%;"}
+1. Under **Assign Conversion Events**, select **Add Conversion Event**.
+2. Under **Primary Conversion Event - A**, select **Performs Custom Event** as the **Conversion event type**.
+3. Select our custom event `scheduled_delivery`.
+4. We'll keep the conversion deadline as three days.
 
-Under **Assign Conversion Events**, select **Add Conversion Event**.
+![The conversion event window in the Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
-![The 'Assign Conversion Events' section in the Canvas details.]({% image_buster /assets/img/canvas_templates/feature_adoption/add_conversion_event.png %})
+### Step 3: Tailor the entry schedule
 
-For **Conversion event type**, select **Performs Custom Event**, choose `scheduled_recurring_delivery` as the custom event, then fill out the details of your conversion event.
+Our goal is to encourage our users to adopt Cruise Control, but we don't want our messaging to be too frequent. So, we'll keep this Canvas as a scheduled delivery and make the following adjustments to the **Time-Based Options** section.
 
-Here's what we filled out for Calorie Rocket:
+1. Update **Entry Frequency** to **Weekly**.
+2. Keep the recurrence as is.
+3. Select **Mon** to target users at the beginning of the week.
+4. Select the start time for our Canvas.
+5. Update the **Ending parameters** to end the Canvas on the last day of the year.
 
-<table>
-  <tr>
-    <td><strong>Conversion event type</strong></td>
-    <td>Performs Custom Event</td>
-  </tr>
-  <tr>
-    <td><strong>Custom event name</strong></td>
-    <td>Scheduled recurring delivery</td>
-  </tr>
-  <tr>
-    <td><strong>Conversion deadline</strong></td>
-    <td>2 days</td>
-  </tr>
-</table>
+We'll keep the option to allow users to enter the Canvas in their local time zone.
 
-### Step 3: Exclude existing users
+### Step 4: Select the target audience
 
-In our scenario, Calorie Rocket previously allowed a few users to beta test their new feature, so we want to exclude these users from entering the Canvas.
+Now, let's set up our target audience by updating the following details in the template:
 
-To do so, go to **Entry Rules** and select **Audience**.
+1. Select the **All Users** segment.
+2. Remove the template's additional filters. 
+3. Create this filter using our custom event: `Has scheduled_delivery for exactly 0 times`. 
 
-![The 'Entry Rules' section of the Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_audience_entry_rules.png %}){: style="max-width:40%;"}
+This allows us to exclude users who have already used the feature from entering our Canvas.
 
-In **Additional Filters**, create a filter using the event [you created earlier](#prerequisites).
+![The segment for all users who have not used .]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_1.png %}){: style="max-width:25%;"}
 
-<table>
-  <tr>
-    <td><strong>Filter</strong></td>
-    <td>Custom Event</td>
-  </tr>
-  <tr>
-    <td><strong>Custom Event</strong></td>
-    <td>Scheduled recurring delivery</td>
-  </tr>
-  <tr>
-    <td><strong>Frequency</strong></td>
-    <td>Exactly 0 times</td>
-  </tr>
-</table>
+Keeping in mind that Calorie Rocket previously allowed a few users to beta test the new feature Cruise Control, we'll update the exit criteria to exclude these users from entering the Canvas.
 
-### Step 4: Customize the Action Path
+### Step 5: Select your send settings
 
-The Action Path lets you define your user paths based on a specific action, including user engagement events and custom events. In **Action Path**, select **Activated Feature**.
+We’ll keep the default subscription settings, so we only send to users who have subscribed or opted into receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
 
-![The action path in the Canvas with 'Activated Feature' and 'Taken Tour' displaying an orange badge to indicate that more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_1.png %}){: style="max-width:25%;"}
+### Step 6: Customize your Canvas
 
-Replace the **Action Group Name** to the action that _precedes_ the custom event [you created earlier](#prerequisites), then select the preceding action from the **Perform Custom Event** dropdown.
+#### Build out the Action Path
 
-Since the Cruise Control feature is only available after an order has been added to a cart, we named the first action group **"Added to cart"** and assigned the `added_to_cart` custom event.
+Next, let's build out the Action Path step. We'll make the following adjustments to the template:
+
+1. Since the Cruise Control feature is only available after an order has been added to a cart, we'll name the first action group **Added to cart** and select `added_to_cart` for the custom event.
 
 ![The action group name set to "Added to cart" and the "Perform Custom Event" set to "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
-Next, select **Taken Tour**. Replace the **Action Group Name** to the custom event [you created earlier](#prerequisites), then select that event from the **Perform Custom Event** dropdown.
+{: start="2"}
+2. Replace the second action group name with **Scheduled recurring delivery**, and select `scheduled_delivery` for the custom event.
 
 ![The action group name set to 'Scheduled recurring delivery' and the 'Perform Custom Event' set to 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_scheduled_recurring_delivery.png %}){: style="max-width:60%;"}
 
-For **Assess Usage**, select **Used Feature >3x**. Next, select the **Preform Custom Event** dropdown, then choose the custom event [you created earlier](#prerequisites).
+{: start="4"}
+4. For the subsequent Action Path named **Assess Usage**, select **Used Feature >3x**. 
+5. Select the **Perform Custom Event** dropdown, then select `scheduled_delivery` for the custom event.
 
 ![The action group name set to 'Used Feature >3x' and the 'Perform Custom Event' set to 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
-### Step 5: Create a feedback survey
+#### Set up feedback survey
 
-Next, create a feedback survey for users to fill out after they've used your new feature for the first time. Under **Feedback Survey**, select **Messages**.
+Next, we'll go to the Message step named **Feedback Survey** to include our feedback survey for our users to fill out after using Cruise Control for the first time. Our survey response options for our are users are:
 
-![The 'Feedback Survey' section in the Canvas with the 'Messages' preview window displaying an orange badge indicating more information is needed before the Canvas can be launched.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_feedback_survey.png %}){: style="max-width:30%;"}
+- **Loved it!**
+- **Not for me.**
 
-In our scenario, we'll remove in-app messages as an option from the feedback survey and only use email. In the **Email** tab, fill out the **Sending info**, then select **Edit message** to start crafting the feedback survey.
+1. For the two survey choices, select **Experience Feedback** as our custom attribute to capture and track feedback on Cruise Control.
+2. Update the attribute values to match the survey options. This will allow us to track a user's response.
 
-Now that you've created your feedback survey, all required steps to test and launch your Canvas are complete.
+### Step 7: Test and launch your Canvas
 
-### Step 6: Test and launch the Canvas
-
-After testing and reviewing our Canvas to make sure it works as expected, select **Launch Canvas** to launch the Canvas. Now, we can mindfully target users with a personalized user journey to encourage them to adopt new features for your app!
+After testing and reviewing our Canvas to make sure it works as expected, select **Launch Canvas** to launch the Canvas. Now, we can target users with a personalized user journey to encourage them to adopt our new feature Cruise Control.
 
 {% alert tip %}
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.

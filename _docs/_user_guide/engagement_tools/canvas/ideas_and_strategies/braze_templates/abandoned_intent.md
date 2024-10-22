@@ -22,27 +22,24 @@ To successfully use this template, you'll need the following:
 
 ## Tailoring the template to your needs
 
-Let's say you're a marketer at Kitchenerie, a retail brand specializing in kitchenware, and you want to reengage users who have added the latest product "Enormous Paper Plate" to their carts but haven't made their purchases. 
+Let's say we work at Kitchenerie, a retail brand specializing in kitchenware, and our goal is to reengage users who have added the latest product "Enormous Paper Plate" to their carts but haven't made their purchases.
+
+Before creating the Canvas, we set up the [Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) integration so that we can add user data from Braze to Facebook Audiences to send advertisements based on behavioral triggers, segmentation, and more.
+
+To access the abandoned intent template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Abandoned Intent**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
 ### Step 1: Set up the details
 
-In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+Let’s adjust the Canvas details to reflect our goal.
 
-![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
-
-Select **Braze templates**, then next to **Abandoned Intent**, select **Apply Template**.
-
-![The list of Braze Canvas templates with 'Abandoned Intent' highlighted.]({% image_buster /assets/img/canvas_templates/select_abandoned_intent_template.png %}){: style="max-width:90%;"}
-
-To edit the Canvas details, select **Edit** next to the existing Canvas name.
+1. Select **Edit** next to the template name.
 
 ![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
-Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
-
-1. Update the Canvas name to specify that the Canvas is for targeting users with abandoned carts.
-2. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
-3. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
+{:start="2"}
+2. Update the Canvas name to specify that the Canvas is for targeting users with abandoned carts.
+3. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
+4. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
 
 ![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
@@ -93,17 +90,17 @@ Now, we’ll build our Canvas by customizing the templated steps:
 !["Made purchase" action group that will exit the Canvas if the user purchases the enormous paper plate.][5]
 
 {: start="3"}
-3. For the Message step, select **Edit message** to customize the email that will be sent to your users, notifying them of the items in their abandoned cart.
+3. For the Message step, select **Edit message** to customize the email that will be sent to our users, notifying them of the items in their abandoned cart.
 4. Keep the Delay step as is.
-5. In the Audience Paths step, customize the email and SMS message that your users will receive. We want to encourage our users to purchase products with personalized messaging.
+5. In the Audience Paths step, we'll customize the email and SMS message that our users will receive. We want to encourage our users to purchase products with personalized messaging.
 
 ![A preview of the SMS message that users will receive: "Hi there, you left the enormous paper plate behind in your cart! Complete your purchase now and step up your hosting game. Use code MYPLATE at checkout for 20 percent off your order!"][6]
 
 {: start="6"}
 6. Keep the Action Paths step as is. This step will determine which users will exit the Canvas after making a purchase and which users will receive further messaging.
-7. Configure the Audience Sync step based on your partner. This will further help with ad retargeting.
+7. Make sure our Audience Sync step is set up to sync to Facebook. This will further help with ad retargeting.
 
-### Step 7: Launch your Canvas
+### Step 7: Test and launch the Canvas
 
 After testing and reviewing our Canvas to make sure it works as expected, select **Launch Canvas** to launch the Canvas. Now, we can mindfully target users with a personalized user journey to encourage them to checkout the product they've added to their carts!
 

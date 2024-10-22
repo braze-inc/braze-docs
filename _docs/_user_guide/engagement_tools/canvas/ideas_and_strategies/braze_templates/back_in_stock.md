@@ -26,31 +26,24 @@ Let’s say we’re working for PantsLabyrinth, a direct-to-consumer clothing re
 
 Before creating the Canvas, we [set up a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) that contains information about our straight leg pants inventory and [set up back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#setting-up-back-in-stock-notifications) for the Classic Straight Leg jeans. We made it so that users will subscribe to notifications after they perform the custom event of favoriting the Classic Straight Leg jeans on the app.
 
-Now, we can go through the template to fit it for our needs.
+To access the back-in-stock template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Back in Stock**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
 ### Step 1: Set up the details
 
-In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+Let’s adjust the Canvas details to reflect our goal.
 
-![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
-
-Select **Braze templates**, then next to **Back in Stock**, select **Apply Template**.
-
-![The list of Braze Canvas templates with 'Back in Stock' highlighted.]({% image_buster /assets/img/canvas_templates/select_back_in_stock_template.png %}){: style="max-width:90%;"}
-
-To edit the Canvas details, select **Edit** next to the existing Canvas name.
+1. Select **Edit** next to the template name.
 
 ![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
 
-Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
-
-1. Update the Canvas name to specify that the Canvas is for when the Classic Straight Leg is back in stock.
-2. Update the description to explain that this Canvas contains personalized messaging.
-3. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
+{:start="2"}
+2. Update the Canvas name to specify that the Canvas is for targeting users when our product Classic Straight Leg is back in stock.
+3. Update the description to explain that this Canvas contains personalized messaging.
+4. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
 
 !["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.][1]
 
-### Step 2: Assign your conversion events
+### Step 2: Assign conversion events
 
 Change the **Primary Conversion Event - A** to **Make a specific purchase** and select **Classic Straight Leg** for the product name.
 
@@ -71,7 +64,7 @@ We’ll make two adjustments to this step:
 
 !["Entry Window" section with a start time of January 2nd, 2025 at 12 am.][4]
 
-### Step 4: Select our target audience
+### Step 4: Select the target audience
 
 We’ll define our target audience as users who we think are more likely to purchase the Classic Straight Leg jeans.
 
@@ -98,7 +91,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 6: Customize your Canvas
 
-Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (Mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
+Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
 
 We’ll begin our customization by going through each message component to update the content.
 
@@ -110,9 +103,9 @@ We’ll begin our customization by going through each message component to updat
 
 ![Mobile Push Canvas step with a message notifying users that a product is back in stock.][9]
 
-### Step 7: Launch your Canvas
+### Step 7: Test and launch your Canvas
 
-After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who’ve favorited our Classic Straight Leg jeans and have subscribed to our messaging channels will receive notifications when they’re back in stock!
+After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who have favorited our Classic Straight Leg jeans and have subscribed to our messaging channels will receive notifications when they’re back in stock!
 
 {% alert tip %}
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.

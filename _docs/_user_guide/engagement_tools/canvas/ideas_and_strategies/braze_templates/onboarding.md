@@ -17,88 +17,83 @@ In this article, we'll walk you through a use case for the **Onboarding** templa
 
 Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) to reference in the Canvas:
 
-- A welcome email to all users of our app
-- An email with tips on how to use our app
+- A welcome email to all users of your app
+- An email with tips on how to use your app
 - A feedback email that includes a user survey
 
 ## Tailoring the template to your needs
 
-Let's say you're a marketer at PantsLabyrinth, and your goal is to enhance user engagement, build trust and loyalty with your users, and encourage them to stay engaged. To do so, you want to focus on crafting messages that target new users who have yet to interact with your app. Let's begin to customize this template to fit our use case.
+Let's say we're working at PantsLabyrinth, and our goal is to enhance user engagement, build trust and loyalty with our users, and encourage them to stay engaged. To do so, we want to focus on crafting messages that target new users who have yet to interact with the app.
 
-### Step 1: Set up the details 
+To access the onboarding template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Onboarding**, select **Apply Template**. Let's begin to customize this template to fit our use case.
 
-In Braze, go to **Messaging** > **Canvas**. Select **Create Canvas**, then select **Use a Canvas Template**.
+### Step 1: Set up the details
 
-![The Canvas page in the Braze dashboard, with 'Use a Canvas Template' highlighted.]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %}){: style="max-width:90%;"}
+Let's adjust the Canvas details to reflect our goal.
 
-Select **Braze templates**, then next to **Onboarding**, select **Apply Template**.
-
-![The list of Braze Canvas templates with 'Onboarding' highlighted.]({% image_buster /assets/img/canvas_templates/select_onboarding_template.png %}){: style="max-width:90%;"}
-
-To edit the Canvas details, select **Edit** next to the existing Canvas name.
+1. Select **Edit** next to the template name.
 
 ![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
-Let’s adjust the Canvas details and its assigned conversion events to reflect our goal.
-
-1. Update the Canvas name to specify that the Canvas is for onboarding new users.
-2. Update the description to specify that the Canvas maps out a user journey that promotes trust and loyalty with users.
-3. Add the tag **Onboarding**, so that we can filter for it on the Canvas home page.
+{:start="2"}
+2. Update the Canvas name to specify that the Canvas is for onboarding new users.
+3. Update the description to specify that the Canvas maps out a user journey that promotes trust and loyalty with users.
+4. Add the tag **Onboarding** so that we can filter for it on the Canvas home page.
 
 ![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Step 2: Assign your conversion events
 
-Next, let's assign our conversion events. Conversion events are a type of success metric that can be used to measure the success of the Canvas. The onboarding template has the following [conversion event]({{site.baseurl}}//user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event) to get you started.
+Next, let's assign our conversion events. Conversion events are a type of metric that can be used to measure the success of the Canvas. We'll keep the template's [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event).
 
 ![Primary Conversion Event - A with the conversion type "Performs Custom Event" with the custom event name "Email Click". There is a 4-day conversion deadline.][1]
 
-So, new users have up to four days to perform the custom event. In this case, you want your new users to feel a sense of urgency to engage with PantsLabyrinth and subscribe to a recurring delivery on seasonal clothing.
+This means new users have up to four days to perform the custom event. In this case, we want our new users to feel a sense of urgency to engage with PantsLabyrinth and subscribe to a recurring delivery on seasonal clothing.
 
 ### Step 3: Set an entry schedule
 
-Because your goal is to target new users of PantsLabyrinth, you'll keep the Canvas as action-based and allow users who start a session in the app to enter the Canvas. However, you could further evaluate if a user has taken any specific actions such as making a purchase.
+Because the goal is to target new users of PantsLabyrinth, we'll keep the Canvas as action-based and allow users who start a session in the app to enter the Canvas. However, we could further evaluate if a user has taken any specific actions such as making a purchase.
 
-Next, adjust the **Entry Window** to determine when users can enter the Canvas. Let's say there's an upcoming PantsLabyrinth subscription launch in late-October. This is where you'll set the start time as **2024/10/28 8:00 am**. Optionally, you can also let users enter the Canvas in their local time zone.
+Next, adjust the **Entry Window** to determine when users can enter the Canvas. Let's say there's an upcoming PantsLabyrinth subscription launch in late-October. This is where we'll set the start time as **2024/10/28 8:00 am**. Optionally, we can also let users enter the Canvas in their local time zone.
 
 ![An entry window with the start time October 28, 2024 at 8 am. Users will enter this message in their local time zone.][4]
 
-### Step 4: Determine who enters the Canvas
+### Step 4: Tailor the entry schedule
 
-By targeting the right audience, you can effectively engage with new users. For example, this template targets all users who first used an app less than one day ago, which is accurate for our use case. So, we'll leave this section as is.
+By targeting the right audience, we can effectively engage with new users. For example, this template targets all users who first used an app less than one day ago, which is accurate for our use case. So, we'll leave this section as is.
 
-### Step 5: Set your send settings
+### Step 5: Set send settings
 
 As the default, this Canvas is sent to users who are subscribed or opted in and follows frequency capping rules. We'll keep these settings as is.
 
 ### Step 6: Customize your Canvas
 
-Now, we’ll build our Canvas by customizing the templated steps.
+Now, let's build the Canvas by customizing the templated steps.
 
-#### Set up your welcome email
+#### Set up the welcome email
 
-1. In the Canvas builder, select the Message step named "Welcome Email".
-2. Select **Edit message** to replace the template's email with your welcome email.
+1. Select the Message step named "Welcome Email".
+2. Select **Edit message** to replace the template's email with our welcome email.
 3. Select **Done**.
 
-Your users will receive this welcome email after they have started a session in your app. As to not overwhelm your users with repeated messaging, we recommend using the Delay step as part of the user journey.
+Now, our users will receive this welcome email after they have started a session in our app. As to not overwhelm users with repeated messaging, we recommend using the Delay step as part of the user journey.
 
-#### Customize your Audience Path
+#### Customize the Audience Path
 
-In the Audience Path step named "Audience Split", you can customizing the filter for your engaged users. In the template, the filter is **Has clicked email for step Welcome Email**, which means users are split into two groups: users who have opened the welcome email and those who haven't.
+In the Audience Path step named **Audience Split**, we can customize the filter for our engaged users. In the template, the filter is **Has clicked email for step Welcome Email**, which means users are split into two groups: users who have opened the welcome email and those who haven't.
 
 ![An Audience Split step with one path for engaged users and one path for everyone else.][2]{: style="max-width:70%;"}
 
-As an online clothing retailer, PantsLabyrinth also has an active group of mobile users. So, in a separate onboarding Canvas, we can also select the following filter to identify and split your mobile users into these segments:
+As an online clothing retailer, PantsLabyrinth also has an active group of mobile users. So, in a separate onboarding Canvas, we can also select the following filter to identify and split our mobile users into these segments:
 
 - **Has clicked content card for step Welcome Content Card**
 - **Everyone Else**
 
 #### Target more users with Audience Paths
 
-From the set of users who haven't interacted with your app, you can further target these users by creating another Audience Paths step. This creates another split for engaged users and everyone else. For the **Everyone Else** group, you can use a Message step to nudge these users to sign up for a subscription to PantsLabyrinth.
+From the set of users who haven't interacted with our app, we can further target these users by creating another Audience Paths step. This creates another split for engaged users and everyone else. For the **Everyone Else** group, use a Message step to nudge these users to sign up for a subscription to our app.
 
-### Step 7: Launch your Canvas
+### Step 7: Test and launch your Canvas
 
 After testing and reviewing our Canvas to make sure it works as expected, select **Launch Canvas** to launch the Canvas. Now, we can provide our new users with a personalized onboarding experience to encourage a lasting relationship!
 
