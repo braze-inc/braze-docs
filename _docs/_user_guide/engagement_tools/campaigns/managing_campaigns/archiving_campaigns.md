@@ -25,7 +25,7 @@ There are also bulk actions you can use by selecting the checkboxes next to the 
 
 ## Unarchiving campaigns
 
-While selecting on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You'll need to unarchive campaign in order to edit it. To unarchive a campaign:
+While selecting an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You'll need to unarchive the campaign to edit it. To unarchive a campaign:
 
 2. Hover over the archived campaign's row and select the <i class="fas fa-ellipsis-vertical"></i> menu. 
 3. Select **Unarchive**.
