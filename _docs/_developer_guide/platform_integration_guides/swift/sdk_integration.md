@@ -7,15 +7,11 @@ page_order: 0.1
 
 # Integrating the Braze Swift SDK
 
-> Learn how to integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM), CocoaPods, or manual integration methods. When you're finished, you'll have access to basic analytics (via session handling) and basic in-app messages.
-
-{% alert tip %}
-For additional information and guidance on the various SDK symbols, see the [Braze Swift SDK reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation").
-{% endalert %}
+> Learn how to integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM), CocoaPods, or manual integration methods. For more information about the various SDK symbols, see [Braze Swift reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation").
 
 ## Prerequisites
 
-Before you start, verify your environment is [supported by the Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk#version-information).
+Before you start, verify your environment is supported by the [latest Braze Swift SDK version](https://github.com/braze-inc/braze-swift-sdk#version-information).
 
 ## Integrating the SDK
 

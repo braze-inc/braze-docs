@@ -1,18 +1,21 @@
 ---
-nav_title: Initial SDK Setup
-article_title: Initial setup for the Braze Web SDK
+nav_title: SDK Integration
+article_title: Integrating the Braze Web SDK
+description: "Learn how to integrate the Braze Web SDK."
 platform: Web
 page_order: 0
 page_type: reference
 ---
 
-# Initial SDK setup for web
+# Integrating the Braze Web SDK
 
-> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs") for a complete technical reference.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. For more information, see [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs").
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Step 1: Install the Braze library
+## Integrating the SDK
+
+### Step 1: Install the Braze library
 
 You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/) before installing the library.
 
@@ -57,15 +60,11 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Initialize the SDK
+### Step 2: Initialize the SDK (optional)
 
-Once the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
-
-{% alert note %}
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
-{% endalert %}
 
-For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+Otherwise, after the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 ```javascript
 // initialize the SDK
@@ -95,15 +94,13 @@ braze.openSession();
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-## Step 3: Set up push notifications (optional)
+## Optional configurations
 
-To set up push notifications for the Braze Web SDK, additional set up is required. For a full walkthrough, see [Push notifications for web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
-
-## Logging
+### Logging
 
 To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#basic-logging) or [custom](#custom-logging) logging.
 
-### Basic logging
+#### Basic logging
 
 {% tabs local %}
 {% tab before initialization %}
@@ -142,7 +139,7 @@ braze.toggleLogging();
 Basic logs are visible to all users, so consider disabling, or switch to [`setLogger`](#custom-logging), before releasing your code to production.
 {% endalert %}
 
-### Custom logging
+#### Custom logging
 
 Use `setLogger` to log custom debugging messages to the javascript console. Unlike basic logs, these logs are not visible to users.
 
@@ -175,7 +172,7 @@ You can keep up-to-date with our latest release [following our release feed](htt
 
 These two files must be updated in coordination with each other for proper functionality.
 
-## Alternative integration methods
+## Other integration methods
 
 ### Server-side rendering frameworks {#ssr}
 
@@ -244,6 +241,7 @@ require(['path/to/braze.min.js'], function(braze) {
   braze.openSession();
 });
 ```
+
 ### Alternative No AMD installation
 
 If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
@@ -251,11 +249,13 @@ If your site uses RequireJS or another AMD module-loader, but you prefer to load
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
+
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
 For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
 
 ### Other tag managers
+
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
 ### Jest framework troubleshooting {#jest}
@@ -269,4 +269,3 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
   ]
 }
 ```
-
