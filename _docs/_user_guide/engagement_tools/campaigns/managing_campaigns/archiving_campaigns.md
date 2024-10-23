@@ -30,7 +30,7 @@ While selecting an archived campaign will allow you to view its past results, yo
 2. Hover over the archived campaign's row and select the <i class="fas fa-ellipsis-vertical"></i> menu. 
 3. Select **Unarchive**.
 
-Unarchiving a campaign does not make it live. This will just update your campaign status to **Active**. At this point, you can edits and review how the campaign is set up, and your campaign will be stopped and won't send any messages.
+Unarchiving a campaign doesn't make it live. This just updates your campaign status to **Active**. At this point, you can edit and review how the campaign is set up, and your campaign will be stopped and won't send any messages.
 
 If you want to resume the campaign and begin sending messages, select the gear icon next to the campaign and select **Resume**.
 
