@@ -21,7 +21,7 @@ To stop a campaign from sending or clear it from your dashboard, you can archive
 
 When you archive a campaign, no further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
 
-There are also bulk actions you can use by checking the boxes next to the campaigns and selecting the relevant option.
+There are also bulk actions you can use by selecting the checkboxes next to the campaigns and selecting the relevant option.
 
 ## Unarchiving campaigns
 
