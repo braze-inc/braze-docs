@@ -103,7 +103,7 @@ function refresh() {
 
 
 {% alert important %}
-The default rate limit for manually refreshing the feed is 3 calls per 10 minutes per device to prevent performance degradation and errors.
+You can make up to five calls in quick succession. After that, one new call will be available every 180 seconds. The system will hold up to five calls for you to use at any time.
 {% endalert %}
 
 ## Customizing displayed card order
