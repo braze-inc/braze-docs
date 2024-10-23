@@ -1,6 +1,6 @@
 ---
-nav_title: Banner Cards
-article_title: Banner Cards
+nav_title: Integration Guide
+article_title: Integration Guide
 page_order: 1
 description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
 platform:
@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# Banner Cards
+# Banner Cards Integration Guide
 
 (intro)
 
@@ -101,6 +101,8 @@ This feature is not currently supported on Roku.
 ```javascript
 import * as braze from "@braze/web-sdk";
 
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
+
 braze.subscribeToBannersUpdates((banners) => {
     console.log(`Banners were updated`);
 })
@@ -166,20 +168,26 @@ This feature is not currently supported on Roku.
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-// get this placement's banner. If it's `null` the user did not qualify for one.
-const globalBanner = braze.getBanner("global_banner");
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 
-// choose where in the DOM you want to insert the banner HTML
-const container = document.getElementById("global-banner-container");
+braze.subscribeToBannersUpdates((banners) => {
+   
+    // get this placement's banner. If it's `null` the user did not qualify for one.
+    const globalBanner = braze.getBanner("global_banner");
 
-// Insert the banner which replacees the innerHTML of that container
-braze.insertBanner(globalBanner, container);
+    // choose where in the DOM you want to insert the banner HTML
+    const container = document.getElementById("global-banner-container");
 
-// Special handling if the user is part of a Control Variant
-if (globalBanner.isControl) {
-    // hide or collapse the container
-    container.style.display = 'none';
-}
+    // Insert the banner which replacees the innerHTML of that container
+    braze.insertBanner(globalBanner, container);
+
+    // Special handling if the user is part of a Control Variant
+    if (globalBanner.isControl) {
+        // hide or collapse the container
+        container.style.display = 'none';
+    }
+
+});
 
 ```
 
@@ -240,6 +248,9 @@ Braze will automatically handle all impression logging when using the SDK method
 
 If for some reason you need to parse and render the HTML yourself, you can use the following method to track impressions:
 
+{% alert warning %}
+You likely don't need to customize your integration, so take care in the following steps
+{% endalert %}
 
 {% tabs %}
 {% tab JavaScript %}
