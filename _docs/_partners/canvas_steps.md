@@ -31,7 +31,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/google.svg
   - name: LinkedIn Audience Sync
     link: /docs/partners/canvas_steps/linkedin_audience_sync
-    image: /assets/img/braze_icons/users-02.svg
+    image: /assets/img/braze_icons/linkedin.svg
   - name: Pinterest Audience Sync
     link: /docs/partners/canvas_steps/pinterest_audience_sync
     image: /assets/img/braze_icons/pinterest.svg
