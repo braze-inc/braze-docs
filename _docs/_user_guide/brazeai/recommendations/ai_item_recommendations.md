@@ -107,7 +107,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
-- The field can be inside an array of products, or the field can end with an array of ids. They will automatically be flattened, as if there were multiple events with the same timestamp.
+- The field can be inside an array of products, or end with an array of IDs. They will automatically be flattened, as if there were multiple events with the same timestamp.
 
 #### Example mappings
 
@@ -201,9 +201,9 @@ If your event properties contain multiple products in an array, they will be aut
 }
 ```
 
-##### Example custom event object with a nested object containing a product id array
+##### Example custom event object with a nested object containing a product ID array
 
-If your product ids are values in an array instead of objects, you can use the same notation and they will be automatically flattened. This can flexibly be combined with nested objects in the following event by configuring the property as `purchase.product_skus` to match the first and third items in the sample catalog.
+If your product IDs are values in an array instead of objects, you can use the same notation and they will be automatically flattened. This can flexibly be combined with nested objects in the following event by configuring the property as `purchase.product_skus` to match the first and third items in the sample catalog.
 
 ```json
 {
