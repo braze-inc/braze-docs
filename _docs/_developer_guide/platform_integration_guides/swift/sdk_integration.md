@@ -7,7 +7,7 @@ page_order: 0.1
 
 # Integrating the Braze Swift SDK
 
-> Learn how to integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM), CocoaPods, or manual integration methods. When you're finished, you'll have access to basic analytics (via session handling) and basic in-app messages. To use the full suite of features, you'll need to integrate each feature separately.
+> Learn how to integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM), CocoaPods, or manual integration methods. When you're finished, you'll have access to basic analytics (via session handling) and basic in-app messages.
 
 {% alert tip %}
 For additional information and guidance on the various SDK symbols, see the [Braze Swift SDK reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation").
@@ -15,7 +15,7 @@ For additional information and guidance on the various SDK symbols, see the [Bra
 
 ## Prerequisites
 
-Before you start, check out the [Braze SDK version information](https://github.com/braze-inc/braze-swift-sdk#version-information) to ensure your environment is supported.
+Before you start, verify your environment is [supported by the Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk#version-information).
 
 ## Integrating the SDK
 
@@ -340,11 +340,9 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 {% endsubtab %}
 {% endsubtabs local %}
 
-## Customization options
+## Optional configurations
 
-These are optional customizations for the basic Swift SDK integration. To implement push notifications, in-app messaging, content cards, or other advanced features, you'll need to integrate them separately.
-
-### Logs
+### Logging
 
 #### Log levels
 
@@ -388,5 +386,3 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 
 {% endtab %}
 {% endtabs %}
-
-

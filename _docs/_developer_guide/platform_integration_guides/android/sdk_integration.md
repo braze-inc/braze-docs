@@ -115,41 +115,18 @@ To enable Braze location collection, update your `braze.xml` file to include `co
 Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
+### Step 6: Test session tracking (optional)
+
+If you experience issues while testing, enable [verbose logging](#enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
+
+1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
+2. Open your app, then refresh the Braze dashboard. Verify that your metrics have increased by 1.
+3. Navigate through your app and verify that only one session has been logged to Braze.
+4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
+
+![]({% image_buster /assets/img_archive/android_sessions.png %})
+
 ## Optional configurations
-
-These are optional configurations for the basic Android SDK integration. To implement push notifications, in-app messaging, content cards, or other advanced features, you'll need to integrate them separately.
-
-### Accessibility
-
-You can implement Android SDK accessibility features such as in-app message talkback into your Android or FireOS application. The Braze Android SDK follows the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility).
-
-#### In-app message talkback
-
-To ensure Android Talkback (also known as "VoiceOver") does not read the contents behind an in-app message during display, enable the following:
-
-{% tabs local %}
-{% tab Braze XML %}
-```xml
-<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
-```
-{% endtab %}
-
-{% tab Kotlin %}
-```kotlin
-val brazeConfigBuilder = BrazeConfig.Builder()
-brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
-Braze.configure(this, brazeConfigBuilder.build())
-```
-{% endtab %}
-
-{% tab Java %}
-```java
-BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
-brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
-Braze.configure(this, brazeConfigBuilder.build());
-```
-{% endtab %}
-{% endtabs %}
 
 ### Google Advertising ID
 
@@ -195,11 +172,11 @@ Thread(Runnable {
 Google requires the Advertising ID to be collected on a non-UI thread.
 {% endalert %}
 
-### Logs
+### Logging
 
 By default, the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
 
-#### Enabling logs {#enabling-logs}
+#### Enabling logs
 
 To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you'll want to enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs.
 
