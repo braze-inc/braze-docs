@@ -872,7 +872,9 @@ Email, LINE
 All
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.  This number is received from Braze and is based on the `user_id`.
+{% multi_lang_include metrics.md metric='Unique Recipients' %}
+
+Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. This number is received from Braze and is based on the `user_id`.
 
 <span class="calculation-line">Calculation: Count</span>
 
