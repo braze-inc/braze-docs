@@ -25,7 +25,7 @@ With link aliasing, you can:
 
 ### How it works
 
-Braze uniquely identifies links within emails by appending an extra `lid` parameter to every link URL. This `lid` value (also known as a link identifier) allows Braze to track and monitor and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide valuable insight into how users engage with the content in your email campaigns.
+Braze uniquely identifies links within emails by appending an extra parameter called the `lid` (also known as the link identifier) to every link URL. This `lid` value allows Braze to track, monitor, and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide insights into how users engage with the content in your email campaigns.
 
 ## Creating a link alias
 
