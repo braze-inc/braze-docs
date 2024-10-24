@@ -118,7 +118,7 @@ If you leverage the email or SMS channels, you can sync your email and SMS marke
 
 ## Step 5: Sync products (optional)
 
-You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages.
+You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product sync]({{site.baseurl}}/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
 
 ![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][11]{: style="max-width:70%;"}
 

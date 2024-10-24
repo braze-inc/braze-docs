@@ -48,7 +48,7 @@ If your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/pe
 
 ### Step 4: Sync completed
 
-You will receive a dashboard notification after the sync is successful.The Shopify partner page will also update the status under Shopify catalogs to “Active”. You can view your products by selecting the catalog name on the Shopify partner page.
+You will receive a dashboard notification after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Active”. You can view your products by selecting the catalog name on the Shopify partner page.
 
 Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
 

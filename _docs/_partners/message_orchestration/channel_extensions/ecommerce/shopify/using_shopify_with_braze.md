@@ -52,13 +52,14 @@ Braze Canvas offers several pre-built templates tailored specifically for ecomme
 ##### Abandoned browse
 
 **Purpose:** Re-engage users who have browsed products but did not add them to their cart or place an order.
+
 **Setup:** 
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **t** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
 
 The following settings are pre-configured in your Canvas:
 - Basics 
-    - Canvas name: <CANVAS NAME>
+    - Canvas name: **CANVAS_NAME**
     - Conversion event: ecommerce.order placed
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -78,20 +79,21 @@ The following settings are pre-configured in your Canvas:
     - 1 hour delay
 - Message step 
     - Uses a Braze email template that you can modify with your team 
-    - To personalize the product within your message, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart)
+    - To personalize the product within your message, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
 {% endtab %}
 
 {% tab Abandoned cart %}
 ##### Abandoned cart
 
 **Purpose:** Recover potential lost sales from customers who added products to their cart but did not continue to checkout or place an order. 
+
 **Setup:** 
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the *** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
 
 The following settings are pre-configured in your Canvas:
 - Basics 
-    - Canvas name: <CANVAS NAME>
+    - Canvas name: **CANVAS_NAME**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -111,21 +113,22 @@ The following settings are pre-configured in your Canvas:
         - 4 hour delay
 - Message step 
     - Uses a Braze email template that you can modify with your team
-    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart)
+    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
 {% endtab %}
 
 {% tab Abandoned checkout %}
 ##### Abandoned checkout
 
 **Purpose:** Target customers who started the checkout process but left before placing their order. 
+
 **Setup:**
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the *** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
 
 The following settings are pre-configured in your Canvas:
 
 - Basics 
-    - Canvas name: <CANVAS NAME>
+    - Canvas name: **CANVAS_NAME**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -145,20 +148,21 @@ The following settings are pre-configured in your Canvas:
         - 4 hour delay
 - Message step 
     - Uses a Braze email template that you can modify with your team
-    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization]()
+    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
 {% endtab %}
 {% tab Order confirmation %}
 ##### Order confirmation
 
 **Purpose:** Confirm successful orders and enhance customer satisfaction.
+
 **Setup:**
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the *** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
 
 The following settings are pre-configured in your Canvas:
 
 - Basics 
-    - Canvas name: <CANVAS NAME>
+    - Canvas name: **CANVAS_NAME**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -183,13 +187,14 @@ The following settings are pre-configured in your Canvas:
 ##### Post-purchase retargeting
 
 **Purpose:** Engage customers after their purchase to encourage repeat business and build loyalty.
+
 **Setup:**  
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the ****** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
 
 The following settings are pre-configured in your Canvas:
 - Basics 
-    - Canvas name: <CANVAS NAME>
+    - Canvas name: **CANVAS_NAME**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -220,7 +225,7 @@ The following settings are pre-configured in your Canvas:
 ### Key features of Liquid
 
 - **Dynamic content:** Insert customer-specific information such as names, order details, and preferences into your messages.
-- **Conditional logic:** Use if/else statements to display different content based on specific conditions (e.g., customer location, purchase history).
+- **Conditional logic:** Use if/else statements to display different content based on specific conditions (such as customer location and purchase history).
 - **Loops:** Iterate over collections of products or customer data to display lists or grids of items.
 
 ### Getting started with Liquid
@@ -229,13 +234,14 @@ To begin personalizing your messages using Liquid tags, you can refer to the fol
 
 - [Shopify data]({{site.baseurl}}/shopify_features/shopify_data/) reference with pre-defined liquid tags
 - [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
-### Abandoned Cart and Abandoned Checkout product personalization {#abandoned-cart}
+
+### Abandoned Cart and Abandoned Checkout product personalization {#abandoned-cart-checkout}
 
 To dynamically add product information into your Abandoned Cart and Abandoned Checkout messages, you need to use the shopping cart Liquid tag like the one below.
 
 {% raw %}
 ```json
-
+INSERT EXAMPLE
 ```
 {% endraw %}
 
@@ -251,13 +257,13 @@ For more information on getting started with segments, check out [About Braze se
 
 ### Shopify integration guidance  
 
-To create a segment based on who has performed a supported event through the integration, you can use our Custom Event filters and specify the [specific event name]({{site.baseurl}}).
+To create a segment based on who has performed a supported event through the integration, you can use our Custom Event filters and specify the [specific event name]({{site.baseurl}}/shopify_features/?tab=shopify%20events&subtab=cart%20updated#supported-shopify-custom-attributes).
 
-![][1]
+![Custom Events segment filters.][1]{: style="max-width:50%;"}
 
 To create a segment based on attributes supported through the integration, you can use Custom Attribute filters and specify the [attribute name](). 
 
-![][2]
+![Custom Attributes segment filters.][2]{: style="max-width:50%;"}
 
 If you need to specify interactions with specific products, like who has placed an order for shoes, you can use one of the following options: 
 - [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-1-navigate-to-segment-extensions)
@@ -283,5 +289,5 @@ For more advanced reporting use cases, you can use the Braze [Query Builder]({{s
 At this time, the Shopify integration doesn’t support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggered, and analytics should use the ecommerce.order_placed event. 
 {% endalert %}
 
-[1]:
-[2]:
+[1]: {% image_buster /assets/img/Shopify/custom_events_segment.png %}
+[2]: {% image_buster /assets/img/Shopify/custom_attributes_segment.png %}

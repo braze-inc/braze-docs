@@ -6,6 +6,7 @@ page_type: partner
 search_tag: Partner
 permalink: "/shopify_features/"
 page_order: 2
+hidden: true
 ---
 
 # Shopify features
@@ -21,37 +22,37 @@ page_order: 2
 {% subtabs global %}
 {% subtab Product viewed %}
 **Event**: `ecommerce.v1.product_viewed`<br>
-**Type**: [Recommended Event]()<br>
+**Type**: Recommended Event<br>
 **Triggered**: When a customer views a product page<br>
 **Use Case**: Browse abandonment
 {% endsubtab %}
 {% subtab Cart updated %}
 **Event**: `ecommerce.v1.cart_updated`<br>
-**Type**: [Recommended Event]()<br>
+**Type**: Recommended Event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
 
-For Abandoned Cart messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization](). 
+For Abandoned Cart messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
 
 {% endsubtab %}
 {% subtab Checkout started %}
 **Event**: `ecommerce.v1.checkout_started`<br>
-**Type**: [Recommended Event]()<br>
+**Type**: Recommended Event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
 
-For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization](). 
+For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
 
 {% endsubtab %}
 {% subtab Order placed %}
 **Event**: `ecommerce.v1.order_placed`<br>
-**Type**: [Recommended Event]()<br>
+**Type**: Recommended Event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
 {% endsubtab %}
 {% subtab Fulfilled order %}
 **Event**: `shopify_fulfilled_order`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user’s order is fulfilled and ready for shipping<br>
 **Use Case**: (Transactional) Fulfillment update 
 
@@ -100,7 +101,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% endsubtab %}
 {% subtab Partially fulfilled order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When part of a user’s order is fulfilled and ready for shipping<br> 
 **Use Case**: (Transactional) Fulfillment update 
 
@@ -149,7 +150,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% endsubtab %}
 {% subtab Paid order %}
 **Event**: `shopify_paid_order`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user’s order is marked as paid within Shopify<br>  
 **Use Case**: (Transactional) Payment confirmation
 
@@ -181,7 +182,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% endsubtab %}
 {% subtab Order cancelled %}
 **Event**: `shopify_cancelled_order`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user’s order is cancelled<br> 
 **Use Case**: (Transactional) Order cancellation confirmation
 
@@ -216,7 +217,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% endsubtab %}
 {% subtab Order refunded %}
 **Event**: `shopify_order_refunded`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user’s order is refunded<br>
 **Use Case**: (Transactional) Refund confirmation
 
@@ -240,7 +241,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% endsubtab %}
 {% subtab Account login %}
 **Event**: `shopify_account_login`<br>
-**Type**: [Custom Event]()<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user logs into their account<br>
 **Use Case**: Welcome series
 {% endsubtab %}
