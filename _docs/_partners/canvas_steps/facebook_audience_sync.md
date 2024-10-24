@@ -2,7 +2,7 @@
 nav_title: Facebook
 article_title: Canvas Audience Sync to Facebook
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 2
+page_order: 1
 alias: "/audience_sync_facebook/"
 
 Tool:

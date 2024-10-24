@@ -2,7 +2,7 @@
 nav_title: Pinterest
 article_title: Canvas Audience Sync to Pinterest
 description: "This reference article will cover how to use Braze Audience Sync to Pinterest, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 5
+page_order: 3
 alias: "/audience_sync_pinterest/"
 
 Tool:

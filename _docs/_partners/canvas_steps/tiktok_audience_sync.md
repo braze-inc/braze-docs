@@ -5,7 +5,7 @@ alias: /tiktok_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to TikTok to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-page_order: 7
+page_order: 5
 
 ---
 
