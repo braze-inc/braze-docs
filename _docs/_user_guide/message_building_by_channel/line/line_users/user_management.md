@@ -6,13 +6,12 @@ description: "This article covers the LINE user ID and how to set it."
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/user_management/
+alias: /line/user_management/
 ---
 
 # LINE user management
 
-> The LINE user ID is stored on the user profile attribute called `native_line_id`. This identifier is used to send messages on a user on the LINE channel. This article covers the `native_line_id` attribute and is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
+> The LINE user ID is stored on the user profile attribute called `native_line_id`, which is used to send messages to a user on the LINE channel. This article covers how to set and find the `native_line_id` attribute.
 
 Customer user data is represented in a [Braze user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/). A user profile stores information and attributes about a company’s users, such as first names and email addresses. 
 
