@@ -38,7 +38,7 @@ To create a link alias, follow these steps:
 
 You can also set an alias that will be used to reference a specific link when dealing with reporting or segmentation. 
 
-![][2]
+![Link Management page with four link aliases.][2]
 
 {% alert note %}
 Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best practice to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
@@ -143,13 +143,11 @@ Braze allows you to select unlimited links to track, though you may only retarge
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
 
-### Untracking links
+### Action-based filters
+ 
+You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
 
-Untracking a link will not reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
-
-For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
-
-![][1]
+![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.][6]
 
 ### Segmentation filters
 
@@ -159,17 +157,19 @@ If you use the "Clicked Alias in Any Campaign or Canvas Step" segmentation filte
 
 If you use the "Clicked Alias in Campaign" or "Clicked Alias in Canvas" segmentation filter, this will filter your users by whether they clicked a specific alias in a specific campaign or Canvas. If multiple users share the same email address and the link alias is clicked, all other users who share the email address will have their user profiles updated. 
 
-The previous segmentation filters apply to click events that are tracked at the time the event is processed. This means untracking links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+The following segmentation filters apply to click events that are tracked at the time the event is processed. This means untracking links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
-### Action-based filters
- 
-You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
+#### Untracking links
 
-![][6]
+Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data.
+
+For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
+
+![Campaign Analytics tab that displays three link aliases and their total clicks.][1]
 
 ### Email clicks event
 
-The [email clicks event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/) occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. There are two additional fields for the email clicks event when link aliasing is enabled: `link_id` and `link_alias`.
+If you export your engagement data with Currents, an email click event will be slightly different if you have link aliasing enabled. It will have two additional fields for the [email clicks event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/) when link aliasing is turned on: `link_id` and `link_alias`.
 
 ```json
 // Email Click: users.messages.email.Click
