@@ -1,5 +1,5 @@
 ---
-nav_title: Adding the JavaScript Interface
+nav_title: HTML Messages
 article_title: Adding the Braze JavaScript Interface to WebViews for Swift
 platform: Swift
 page_order: 5
@@ -7,13 +7,13 @@ description: "This reference article shows how to add the Braze JavaScript Inter
 
 ---
 
-# Adding the Braze JavaScript interface to WebViews
+# HTML in-app messages
 
-> Learn how to add the Braze JavaScript interface to your iOS app, so you can leverage Braze in custom WebViews. After you add the interface, you'll be able to use the API for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) in your custom WebViews.
+> Learn how to add the Braze JavaScript interface to your iOS app, so you can use the Braze API to create [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) in your custom WebViews.
 
-## About the interface
+## How it works
 
-The Braze [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
+With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
 
 1. Injecting the Braze Javascript bridge into your WebView, as outlined in [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
 2. Passing the bridge methods received from your WebView to the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk).
@@ -63,7 +63,7 @@ let webView = WKWebView(frame: .zero, configuration: configuration)
 
 ## Example: Logging a custom event
 
-In the following example, `BrazeBridge` is used to log a custom event from existing web content to the Braze Swift SDK.
+In the following example, `BrazeBridge` logs a custom event from existing web content to the Braze Swift SDK.
 
 ```javascript
 <!DOCTYPE html>

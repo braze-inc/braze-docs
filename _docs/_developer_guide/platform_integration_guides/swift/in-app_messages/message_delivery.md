@@ -1,6 +1,6 @@
 ---
-nav_title: In-App Message Delivery
-article_title: In-App Message Delivery for iOS
+nav_title: Message Delivery
+article_title: In-App Message Delivery for the Braze Swift SDK
 platform: Swift
 page_order: 2
 description: "This article covers iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps for the Swift SDK."

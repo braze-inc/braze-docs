@@ -1,6 +1,6 @@
 ---
-nav_title: Advanced Use Cases
-page_order: 6
+nav_title: Network
+page_order: 5 
 config_only: true
 noindex: true
 layout: blank_config

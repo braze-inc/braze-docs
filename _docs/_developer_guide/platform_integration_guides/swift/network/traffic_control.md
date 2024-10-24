@@ -1,15 +1,17 @@
 ---
-nav_title: Fine Network Traffic Control
-article_title: Fine Network Traffic Control for iOS
+nav_title: Network Traffic Control
+article_title: Fine Network Traffic Control for the Braze Swift SDK
 platform: Swift
-page_order: 2
-description: "This article covers implementing fine network traffic control for the Swift SDK."
+page_order: 0
+description: "This article covers implementing network traffic control for the Swift SDK."
 
 ---
 
-# Fine network traffic control
+# Network traffic control
 
-## Request processing policies
+> Learn how to implement network traffic control for the Braze Swift SDK.
+
+## Requesting processing policies
 
 Braze allows the user the option to control network traffic using the following protocols:
 

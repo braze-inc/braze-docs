@@ -1,25 +1,19 @@
 ---
-nav_title: Integration
-article_title: Push Integration for iOS
+nav_title: Initial Setup
+article_title: Setting up push notifications for the Braze Swift SDK
 platform: Swift
-page_order: 0
+page_order: 0.1
 description: "This reference article covers how to set up iOS push notifications for the Braze Swift SDK."
 channel:
   - push
   
 ---
 
-# Push notifications integration
+# Push notification setup
 
 > This reference article covers how to set up iOS push notifications for the Braze Swift SDK.
 
-[Push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/), being used only to update your app's interface or trigger background work. 
-
-Push notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Push notifications can also be much more efficient than background fetch, as your application only launches when necessary. 
-
-Push notifications are rate-limited, so don't be afraid of sending as many as your application needs. iOS and the Apple Push Notification service (APNs) servers will control how often they are delivered, and you won't get into trouble for sending too many. If your push notifications are throttled, they might be delayed until the next time the device sends a keep-alive packet or receives another notification.
-
-## Initial setup
+## Setting up push notifications
 
 ### Step 1: Upload your APNs certificate
 
@@ -43,29 +37,33 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-## Automatic push integration
+### Step 3: Set up push handling
 
-The Swift SDK provides a configuration-only approach to automate the processing of remote notifications received from Braze. This approach is the simplest way to integrate push notifications and is recommended for most customers.
+You can use the Swift SDK to automate the processing of remote notifications received from Braze. This is the simplest way to handle push notifications and is the recommended handling method.
+
+{% tabs local %}
+{% tab Automatic %}
+#### Step 3.1: Enable automation in the push property
 
 To enable the automatic push integration, set the `automation` property of the `push` configuration to `true`:
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ```swift
 let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}", endpoint: "{YOUR-BRAZE-API-ENDPOINT}")
 configuration.push.automation = true
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"{YOUR-BRAZE-API-KEY}" endpoint:@"{YOUR-BRAZE-API-ENDPOINT}"];
 configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnablingAllAutomations:YES];
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 This instructs the SDK to:
 - Register your application for push notification on the system.
@@ -81,12 +79,12 @@ The SDK must be initialized on the main thread to enable push notification autom
 If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) documentation page.
 {% endalert %}
 
-### Overriding individual configurations
+#### Step 3.2: Override individual configurations (optional)
 
 For more granular control, each automation step can be enabled or disabled individually:
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 
 ```swift
 // Enable all automations and disable the automatic notification authorization request at launch.
@@ -94,8 +92,8 @@ configuration.push.automation = true
 configuration.push.automation.requestAuthorizationAtLaunch = false
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 // Enable all automations and disable the automatic notification authorization request at launch.
@@ -103,22 +101,18 @@ configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initEnab
 configuration.push.automation.requestAuthorizationAtLaunch = NO;
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 See [`Braze.Configuration.Push.Automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class) for all available options and [`automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.property) for more information on the automation behavior.
+{% endtab %}
 
-You can skip the next section and continue to [deep linking](#deep-linking) if you are using the automatic push integration.
-
-## Manual push integration
-
-Push notifications can also be integrated manually. This section describes the steps necessary for this integration. 
-
+{% tab Manual %}
 {% alert note %}
 If you rely on push notifications for additional behavior specific to your app, you may still be able to use automatic push integration instead of manual push notification integration. The [`subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)) method provides a way to be notified of remote notifications processed by Braze.
 {% endalert %}
 
-### Step 1: Register for push notifications with APNs
+#### Step 3.1: Register for push notifications with APNs
 
 Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
@@ -130,8 +124,8 @@ Add the following code to the `application:didFinishLaunchingWithOptions:` metho
 The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
 {% endalert %}
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 
 ```swift
 application.registerForRemoteNotifications()
@@ -147,8 +141,8 @@ center.requestAuthorization(options: options) { granted, error in
 }
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 [application registerForRemoteNotifications];
@@ -167,19 +161,19 @@ if (@available(iOS 12.0, *)) {
 }];
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert warning %}
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. Visit Apple's [`UNUserNotificationCenterDelegate`](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) documentation to learn more.
 {% endalert %}
 
-### Step 2: Register push tokens with Braze
+#### Step 3.2: Register push tokens with Braze
 
 Once APNs registration is complete, pass the resulting `deviceToken` to Braze to enable for push notifications for the user.  
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 
 Add the following code to your app's `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` method:
 
@@ -187,8 +181,8 @@ Add the following code to your app's `application(_:didRegisterForRemoteNotifica
 AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 Add the following code to your app's `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
 
@@ -196,21 +190,21 @@ Add the following code to your app's `application:didRegisterForRemoteNotificati
 [AppDelegate.braze.notifications registerDeviceToken:deviceToken];
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert important %}
 The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `application.registerForRemoteNotifications()` is called. <br><br>If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
 {% endalert %}
 
-### Step 3: Enable push handling
+#### Step 3.3: Enable push handling
 
 Next, pass the received push notifications along to Braze. This step is necessary for logging push analytics and link handling. Ensure that you call all push integration code in your application's main thread.
 
-#### Default push handling
+##### Default push handling
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 To enable Braze's default push handling, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
@@ -234,9 +228,9 @@ if let braze = AppDelegate.braze, braze.notifications.handleUserNotification(
 }
 completionHandler()
 ```
-{% endtab %}
+{% endsubtab %}
 
-{% tab OBJECTIVE-C %}
+{% subtab OBJECTIVE-C %}
 To enable Braze's default push handling, add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
 
 ```objc
@@ -260,13 +254,13 @@ if (processedByBraze) {
 
 completionHandler();
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
-#### Foreground push handling
+##### Foreground push handling
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 To enable foreground push notifications and let Braze recognize them when they're received, implement `UNUserNotificationCenter.userNotificationCenter(_:willPresent:withCompletionHandler:)`. If a user taps your foreground notification, the `userNotificationCenter(_:didReceive:withCompletionHandler:)` push delegate will be called and Braze will log the push click event.
 
 ```swift
@@ -288,9 +282,9 @@ func userNotificationCenter(
   }
 }
 ```
-{% endtab %}
+{% endsubtab %}
 
-{% tab OBJECTIVE-C %}
+{% subtab OBJECTIVE-C %}
 To enable foreground push notifications and let Braze recognize them when they're received, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`. If a user taps your foreground notification, the `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` push delegate will be called and Braze will log the push click event.
 
 ```objc
@@ -310,12 +304,39 @@ To enable foreground push notifications and let Braze recognize them when they'r
   }
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
-## Deep linking
+## Testing notifications {#push-testing}
 
-Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation).
+If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). You will need to replace the following fields with the correct values for your test case:
+
+- `YOUR_API_KEY` - available at **Settings** > **API Keys**.
+- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id) for more information.
+- `YOUR_KEY1` (optional)
+- `YOUR_VALUE1` (optional)
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
+{% endalert %}
+
+In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/) to see which endpoint to make requests to.
+
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "apple_push": {
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
+```
 
 ## Subscribing to push notifications updates
 
@@ -365,35 +386,6 @@ When using the automatic push integration, `subscribeToUpdates(_:)` is the only 
 {% alert tip %}
 Create your push notification subscription in `application(_:didFinishLaunchingWithOptions:)` to ensure your subscription is triggered after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
-
-## Testing {#push-testing}
-
-If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). You will need to replace the following fields with the correct values for your test case:
-
-- `YOUR_API_KEY` - available at **Settings** > **API Keys**.
-- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id) for more information.
-- `YOUR_KEY1` (optional)
-- `YOUR_VALUE1` (optional)
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
-{% endalert %}
-
-In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/) to see which endpoint to make requests to.
-
-```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
-  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
-  "messages": {
-    "apple_push": {
-      "alert":"Test push",
-      "extra": {
-        "YOUR_KEY1":"YOUR_VALUE1"
-      }
-    }
-  }
-}' https://rest.iad-01.braze.com/messages/send
-```
 
 ## Push primers {#push-primers}
 

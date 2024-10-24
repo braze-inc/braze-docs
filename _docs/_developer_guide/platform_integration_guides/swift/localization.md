@@ -1,15 +1,15 @@
 ---
 nav_title: Localization
-article_title: Localization for iOS
+article_title: Localization for Braze Swift SDK
 platform: Swift
-page_order: 5
-description: "This reference article covers iOS localization, listing all the current languages supported by Braze."
+page_order: 6.1
+description: "This reference article covers Swift localization, listing all the current languages supported by Braze."
 
 ---
 
 # Localization
 
-> Localization is supported within the Braze iOS SDK. In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues (for example, "Cannot establish network connection. Please try again later."). 
+> Localization is supported within the Braze Swift SDK. In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues (for example, "Cannot establish network connection. Please try again later."). 
 
 If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 

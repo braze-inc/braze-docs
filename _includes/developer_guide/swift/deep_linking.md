@@ -1,19 +1,10 @@
----
-nav_title: Deep Linking
-article_title: Deep Linking for iOS
-platform: Swift
-page_order: 1
-description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings for the Swift SDK."
-
----
-
 # Deep linking
 
-> Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
+> Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps. For general information about deep links, see [FAQ: Deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). 
 
-For general information on what deep links are, refer to our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). 
+## Handling deep links
 
-## Step 1: Registering a scheme
+### Step 1: Register a scheme
 
 To handle deep linking, a custom scheme must be stated in your `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
 
@@ -40,7 +31,7 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-## Step 2: Adding a scheme allowlist
+### Step 2: Add a scheme allowlist
 
 You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 
@@ -63,7 +54,7 @@ Your example allowlist might look something like:
 
 For more information, refer to [Apple's documentation](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14) on the `LSApplicationQueriesSchemes` key.
 
-## Step 3: Implement a handler
+### Step 3: Implement a handler
 
 After activating your app, iOS will call the method [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). The important argument is the [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL) object.
 
@@ -94,34 +85,39 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 {% endtab %}
 {% endtabs %}
 
-## App transport security (ATS)
+## App Transport Security (ATS)
 
-### ATS requirements
-From [Apple's documentation](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14): "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
+As defined by [Apple](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14), "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
 
 ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35) for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
 
-Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that look something like this:
+Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that are similar to the following.
 
-```
+**Example Error 1:**
+
+```bash
 CFNetwork SSLHandshake failed (-9801)
 Error Domain=NSURLErrorDomain Code=-1200 "An SSL error has occurred, and a secure connection to the server cannot be made."
 ```
 
-```
+**Example Error 2:**
+
+```bash
 NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
 ```
 
 ATS compliance is enforced for links opened within the mobile app (our default handling of clicked links) and does not apply to sites opened externally via a web browser.
 
-### Handling ATS requirements
+### Working with ATS
 
-You can handle ATS in one of the following three ways:
+You can handle ATS in either of the following ways, but we recommend **complying with ATS requirements**.
 
-#### Ensure all links are ATS-compliant (recommended)
+{% tabs local %}
+{% tab Comply %}
 Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, our recommendation is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+{% endtab %}
 
-#### Partially disable ATS
+{% tab Partially disable %}
 You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
 
 To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
@@ -145,9 +141,9 @@ To add a domain as an exception of the ATS, add following to your app's `Info.pl
 ```
 
 Refer to Apple's article on [app transport security keys](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more information.
+{% endtab %}
 
-#### Disable ATS entirely
-
+{% tab Fully disable %}
 You can turn off ATS entirely. Note that this is not recommended practice, due to both lost security protections and future iOS compatibility. To disable ATS, insert the following in your app's `Info.plist` file:
 
 ```html
@@ -157,14 +153,14 @@ You can turn off ATS entirely. Note that this is not recommended practice, due t
     <true/>
 </dict>
 ```
+{% endtab %}
+{% endtabs %}
 
-## URL encoding
+## Decoding URLs
 
 The SDK percent-encodes links to create valid `URL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `String` property [`removingPercentEncoding`](https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding). You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
-
-For example:
+To decode an encoded link, use the `String` property [`removingPercentEncoding`](https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding). You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. For example:
 
 {% tabs %}
 {% tab swift %}
@@ -190,7 +186,6 @@ For example:
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Deep linking to app settings
 
@@ -233,7 +228,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtab %}
 {% endtabs %}
 
-## Customization {#linking-customization}
+## Customization options
 
 ### Default WebView customization
 
@@ -262,7 +257,11 @@ To add support to simulator builds, you can add the application `.entitlements` 
 The SDK does not query your domains' `apple-app-site-association` file. It performs the differentiation between universal links and regular URLs by looking at the domain name only. As a result, the SDK does not respect any exclusion rule defined in the `apple-app-site-association` per [Supporting associated domains](https://developer.apple.com/documentation/xcode/supporting-associated-domains).
 {% endalert %}
 
-### Integration example: BrazeDelegate
+## Examples
+
+### BrazeDelegate
+
+Here's an example using `BrazeDelegate`. For more information, see [Braze Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 {% tabs %}
 {% tab swift %}
@@ -294,7 +293,3 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 
 {% endtab %}
 {% endtabs %}
-
-For more information, see [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
-
-
