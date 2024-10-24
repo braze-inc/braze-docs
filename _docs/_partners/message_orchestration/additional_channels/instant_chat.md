@@ -2,7 +2,6 @@
 nav_title: Instant Chat
 article_title: Instant Chat Partners
 page_order: 2
-
 page_type: landing
 description: "This landing page lists Braze partners (Alloys) who allow you to coordinate your messages with instant chat services."
 
