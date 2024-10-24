@@ -54,7 +54,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 3: Add partner
 
-Add a partner, sometimes called a "Currents connector," by clicking the dropdown at the top of the screen.
+Add a partner, sometimes called a "Currents connector," by selecting the dropdown at the top of the screen.
 
 Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions in their respective pages.
 
