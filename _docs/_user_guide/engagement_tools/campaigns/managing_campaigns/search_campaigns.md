@@ -3,7 +3,7 @@ nav_title: Searching for Campaigns
 article_title: Searching for Campaigns
 page_order: 10
 page_type: reference
-description: "This article describes the various ways you can search for campaigns on the campaign list page."
+description: "This article covers how to use the campaign search to find campaigns."
 tool:
   - Campaigns
 
@@ -11,43 +11,38 @@ tool:
 
 # Searching for campaigns
 
-> As you build more campaigns in your workspace, you can adjust the filters and columns in the campaign list to sort and organize these campaigns. Using a combination of these search methods can help to narrow down your results, especially as your list of campaigns grows.
+> This article covers how you can use the search field of the campaigns list to refine your results.
 
-There are several ways you can search for campaigns on the campaign list page by selecting:
+## Filters
 
-- Status
-- Tags
-- Filters
-- Columns
+Use the filters in the side menu to group results by creator, editor, send dates, or channel, or select **Only Show Mine** to limit your search results to campaigns you've created. You can also filter by status and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) to further narrow down your results.
 
-You can use the search bar to enter keywords and phrases that are related to your campaign name. To do an exact search, use quotation marks ("") to surround your search phrase. For example, to search specifically for webhook test campaigns, enter `"webhook test"` in the search bar.
+![][2]
 
-![The campaign list page with three campaigns listed. The page is organized to show active campaigns. The columns are Name, Status, Stop date, Campaign type, and Sent to organize the view.]({% image_buster /assets/img/campaign_list_example.png %})
+Expand the search dropdown to filter by last editor, target segment, messaging channel, or date.
 
-### Selecting a status
+![][3]
 
-By default, the campaign list will show your active and idle campaigns. You can select the dropdown to view campaigns by their status (active, draft, archived, stopped, and idle).
+## Search syntax
 
-For example, if you want to audit your campaign drafts, select **Status** > **Draft** to focus your campaign list.
+Selecting a campaign filter will automatically add the appropriate syntax to the search field. However, you can manually enter these filters as well. When using manual search, the syntax is the filter name, followed by a colon, followed by your input. For example, to search for push campaigns, enter `channel:push`.
 
-### Searching by tags
+Here's a list of supported search filters:
 
-Searching your campaigns by [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) can further narrow down your results. For example, if you're trying to find all the campaigns you built for targeting new customers, frequent buyers, lapsed customers, you could search these campaigns by their shared tag **Targeting by customer type**.
+| Search for | Filter | Input |
+| --- | --- | --- |
+| Campaign API identifier | `api_id` | A specific [campaign API identifier]({{site.baseurl}}/api/identifier_types#api-identifier-types) |
+| Segment a campaign targets | `segment` | Segment name |
+| Messaging channel that a campaign targets | `channel` | One of the following: <br>-`content_cards` <br>- `email`<br>- `push`<br>- `sms` (returns both SMS and MMS)<br>- `webhook`
+| Status or delivery type | `status` | One of the following: <br>- `one-time` <br>- `recurring` <br>- `triggered` <br>- `multivariate` <br>- `transactional` <br> - `drafts` <br> - `stopped` <br> - `archived` <br> - `all` |
+| Tag | `tag` | - A single tag name <br>- A list of tag names separated by commas |
+| Most recent editor | `edited_by` | A user's email address |
+| Date campaign was created | `created` | - A single date in the format `YYYY/MM/DD`<br> - A range of dates in the format `YYYY/MM/DD-YYYY/MM/DD` |
+| Date campaign was last edited | `edited` | - A single date in the format `YYYY/MM/DD`<br> - A range of dates in the format `YYYY/MM/DD-YYYY/MM/DD` |
+| Date campaign was last sent | `sent` | - A single date in the format `YYYY/MM/DD`<br> - A range of dates in the format `YYYY/MM/DD-YYYY/MM/DD` |
+| Campaigns you created | `created_by_me` | `true` |
 
-### Adjusting filters
 
-Use the filters to group results by the following campaign details:
-
-- Campaign type 
-- Who created the campaign
-- Who last edited the campaign
-- Entry schedule
-- Target segment
-- Teams
-- Campaigns with expired interaction data
-
-You can also search by selecting the date range for when the campaign was last created or last edited. This can be especially useful if you're searching for campaigns used during a promotional period.
-
-### Organizing columns
-
-When you select **Columns**, you can adjust the information of the campaign list page to display relevant campaign details by selecting the respective checkboxes. For example, if  you want to set up the campaign list to show only action-based webhook campaigns by your marketing team, you could select **Campaign type**, **Entry schedule**, and **Teams** as your columns.
+[1]: {% image_buster /assets/img_archive/campaign_search.png %}
+[2]: {% image_buster /assets/img_archive/campaign_search2.png %}
+[3]: {% image_buster /assets/img_archive/campaign_search3.png %}

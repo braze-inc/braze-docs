@@ -1,12 +1,11 @@
 ---
-nav_title: LinkedIn
+nav_title: Audience Sync to LinkedIn
 article_title: Canvas Audience Sync to LinkedIn
-alias: /linkedin_audience_sync/
+permalink: /linkedin_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to LinkedIn to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-page_order: 4
-
+hidden: true
 ---
 
 # Audience Sync to LinkedIn
@@ -39,17 +38,17 @@ You must make sure that you have the following items created, completed, or acce
 
 ### Step 1: Connect to LinkedIn
 
-In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the **LinkedIn Audience Sync** section, select **Connect LinkedIn**.
+In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the LinkedIn Audience Export module, click **Connect LinkedIn**.
 
-![LinkedIn technology page in Braze includes an Overview section and LinkedIn Audience Sync section with the Connected LinkedIn button.][3]{: style="max-width:75%;"}
+![LinkedIn technology page in Braze includes an Overview module and LinkedIn Audience Export module with the Connected LinkedIn button.][3]{: style="max-width:75%;"}
 
 You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. After you have selected **Confirm**, you’ll be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
 
-!["Braze Self Service" is selected as the ad account to connect.][7]{: style="max-width:75%;"}
+![][7]{: style="max-width:75%;"}
 
 Once you have successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![A successfully connected LinkedIn account.][6]{: style="max-width:75%;"}
+![][6]{: style="max-width:75%;"}
 
 Your LinkedIn connection will be applied at the Braze workspace level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
 
@@ -59,7 +58,7 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
-![An entry audience with the filter "Ad Tracking Enabled is true".][5]{: style="max-width:75%;"}
+![][5]{: style="max-width:75%;"}
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
@@ -71,17 +70,17 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select Audience Sync. Click on the **Custom Audience** button to open the component editor.
 
-![The Canvas editor with the list of available components.][2]{: style="max-width:35%;"} ![The selected Audience Sync component.][1]{: style="max-width:29%;"}
+![][2]{: style="max-width:35%;"} ![][1]{: style="max-width:29%;"}
 
 ### Step 4: Sync setup
 
 Select **LinkedIn** as the desired Audience Sync partner.
 
-![The "Set up Audience Sync" details with the multiple partners to choose from.][9]{: style="max-width:70%;"}
+![][9]{: style="max-width:70%;"}
 
 Then select the desired LinkedIn ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
-![Audience Sync to LinkedIn with Braze selected as the ad account.][11]
+![][11]
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -94,11 +93,11 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![An example "leads" audience with the selected Braze ad account, "leads" audience, the action to add users to the audience, and email, Android GAID, and first and last name as fields to match.]({% image_buster /assets/img/linkedin/linkedin10.png %})
+![]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![Confirmation that the "leads" audience was created.]({% image_buster /assets/img/linkedin/linkedin9.png %})
+![]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync component.
 
@@ -125,7 +124,7 @@ You can view the audience on LinkedIn by going into your ad account and selectin
 
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting LinkedIn’s API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to LinkedIn.
 
-LinkedIn’s API rate limit states no more than ten queries per second and 100,000 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to about 13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+LinkedIn’s API rate limit states no more than ten queries per second and 100k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding analytics
 
@@ -147,11 +146,11 @@ Remember that there will be a delay in reporting for users synced and users erro
 {% endalert %}
 
 {% alert important %}
-LinkedIn provides additional metrics around match rates within their platform. To review the match of your specific Audience Sync, select the Audience Sync step metrics to go into the **Canvas Step Details** page. 
+LinkedIn provides additional metrics around match rates within their platform. To review the match of your specific Audience Sync, click the Audience Sync step metrics to go into the **Canvas Step Details** page. 
 <br><br>
 Select the partner as **LinkedIn**, your ad account, and the audience to see the audience size and match rate from LinkedIn.
 
-![An example of Audience Sync step metrics with 10,000 entered users.]({% image_buster /assets/img/linkedin/linkedin11.png %})
+![]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
 ## Troubleshooting

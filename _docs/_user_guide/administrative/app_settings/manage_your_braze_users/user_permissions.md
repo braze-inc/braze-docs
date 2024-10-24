@@ -154,7 +154,4 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 |Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|
 |Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
-|Workspace|Create and Edit Canvas Templates|Allows users to create and edit Canvas templates.|
-|Workspace|View Canvas Templates|Allows users to view Canvas templates.|
-|Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

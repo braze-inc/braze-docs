@@ -5,7 +5,7 @@ alias: /google_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to Google, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-page_order: 3
+page_order: 2
 
 ---
 

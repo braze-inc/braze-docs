@@ -13,37 +13,27 @@ tool:
 
 # Duplicating segments, campaigns, and Canvases
 
-> You can duplicate pre-existing segments, campaigns, and Canvases to continually iterate and build off your successful strategies. You can duplicate these items when viewing them as a list on their respective page in the dashboard (**Segments**, **Campaigns**, or **Canvas**).
+> You can duplicate pre-existing segments, campaigns, and Canvases to continually iterate and build off your successful strategies. You can duplicate these items when viewing them as a list on their respective page in the dashboard (Segments, Campaigns, or Canvas).
 
-{% alert tip %}
-For more on segments and campaigns, check out our [Braze Learning course](https://learning.braze.com/quick-overview-segment-and-campaign-setup).
-{% endalert %}
+For more on segments and campaigns, check out our [Braze Learning course](https://learning.braze.com/quick-overview-segment-and-campaign-setup)!
 
-## Duplicating campaigns and segments
+## Duplicating segments or campaigns
 
-To duplicate a segment or campaign, do the following: 
-1. Go to **Messaging** > **Campaigns** or **Audience** > **Segments**.
-2. Hover over the campaign or segment and select <i class="fas fa-gear"></i> **More actions**.
-3. Select **Duplicate**. 
+To duplicate a segment or campaign, click <i class="fas fa-gear"></i> **More actions** next to the list item and select **Duplicate**. Your new segment or campaign will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of campaigns will remain in drafts until your edit and launch them.
 
-Your new segment or campaign will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of campaigns will remain in drafts until your edit and launch them.
+| ![Duplicate segment]({% image_buster /assets/img_archive/duplicate_segment.png %}) | ![Duplicate campaign]({% image_buster /assets/img_archive/duplicate_campaign.png %})
 
 ## Duplicating Canvases
 
-To duplicate a Canvas, do the following:
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
-1. Go to **Messaging** > **Canvas**.
-2. Hover over the Canvas row and select <i class="fas fa-ellipsis-vertical"></i> **More actions**.
-3. Select **Duplicate**. 
+To duplicate a Canvas, click <i class="fas fa-ellipsis-vertical"></i> **More actions** next to a Canvas and select **Duplicate**. Your new Canvas will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them.
 
-Your new Canvas will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them.
+![Duplicate Canvas][5]
 
-![Canvas list page with the option to duplicate a Canvas named "api_triggered_canvas 3".]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
-{% details Original Canvas editor %}
-
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. 
-
-Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-
-{% enddetails %}
+[3]: {% image_buster /assets/img_archive/duplicate_segment.png %}
+[4]: {% image_buster /assets/img_archive/duplicate_campaign.png %}
+[5]: {% image_buster /assets/img_archive/duplicate_canvas.png %}

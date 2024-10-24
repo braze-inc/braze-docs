@@ -8,12 +8,17 @@ tool:
  - Campaigns
 channel:
  - LINE
-alias: /line/create/message_types/
+hidden: true
+permalink: /line/create/message_types/
 ---
 
 # LINE message types
 
-> This article covers the LINE message types you can compose, including aspects and limitations.
+> This article covers the LINE message types you can compose, including aspects and limitations, and is part of the LINE beta collection. [Return to the main page]({{site.baseurl}}/line/).
+
+{% alert important %}
+LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
+{% endalert %}
 
 When you compose a LINE message, you can drag-and-drop message types into the composer and then customize them.
 
