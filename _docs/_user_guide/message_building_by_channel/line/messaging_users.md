@@ -11,7 +11,7 @@ alias: /line/messaging_users/
 
 # Messaging LINE users
 
-> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases. This article covers the details of messaging users, such as how to set trigger words for inbound messages and unrecongized responses.
+> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases. This article covers the details of messaging users, such as how to set trigger words for inbound messages and unrecognized responses.
 
 There are various methods to converse with users through LINE, such as using LINE trigger words. You can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
 
