@@ -162,7 +162,11 @@ If you make changes to the in-app message priority in **Send Settings** of a dra
 
 ## Advancement behavior
 
-Message components automatically advance all users who enter the step. Note that it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+Message components automatically advance all users who enter the step. Note that it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler.
+
+When a user enters an in-app message step, they advance immediately out of it instead of being held for the expiration window. In this case, having a Delay step in your user journey can be helpful.
+
+If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 
 {% details Original Canvas editor %}
 
