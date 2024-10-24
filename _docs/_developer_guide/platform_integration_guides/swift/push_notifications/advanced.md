@@ -1,6 +1,6 @@
 ---
-nav_title: Advanced features
-article_title: Advanced push notification features for the Braze Swift SDK
+nav_title: Advanced usage
+article_title: Advanced push notification usage for the Braze Swift SDK
 platform: Swift
 page_order: 30
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages with the Swift SDK."
@@ -8,7 +8,7 @@ channel:
   - push
 ---
 
-# Advanced push notification features
+# Advanced push notification usage
 
 > This optional, advanced implementation guide covers ways to leverage notification content app extensions to get the most out of your push messages. 
 
