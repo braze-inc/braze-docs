@@ -23,7 +23,7 @@ Before creating a Banner Card, you must designate areas in your app where you wa
 1. Go to **Settings** > **Banner Card Placements**.
 2. Give your Banner Card placement a name.
 3. (Optional) Add a description to explain where this Banner Card is intended to be placed.
-4. Enter a placement ID. Work with your developer team to determine the dimensions of your Banner Card.
+4. Enter a placement ID. Work with your developer team to define this ID, because they will need to use it during the integration.
 5. Select **Save**.
 
 Each placement can be used in up to 10 campaigns.
