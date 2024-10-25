@@ -2665,6 +2665,13 @@ Column definitions are as follows:
         <td>0.58</td>
         <td>4.35</td>
     </tr>
+    <tr>
+        <td>LINE</td>
+        <td>1</td>
+        <td>All regions</td>
+        <td>0.15</td>
+        <td>0.15</td>
+    </tr>
     </tbody></table>
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
