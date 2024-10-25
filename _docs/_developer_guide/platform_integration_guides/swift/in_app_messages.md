@@ -4,7 +4,7 @@ page_order: 2
 description: "This landing page is home to all things in-app messaging for the Braze Swift SDK."
 ---
 
-# In-app messages
+# About in-app messages
 
 > [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. For in-app message examples, check out our [case studies](https://www.braze.com/customers).
 
@@ -12,7 +12,7 @@ description: "This landing page is home to all things in-app messaging for the B
 
 Before you can use in-app messaging, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/) into your app. However, no additional setup is required.
 
-## Message types and previews
+## Message types
 
 Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery. They are enumerated types of `Braze.InAppMessage`, which defines basic behavior and traits for all in-app messages. For the full list of in-app message properties and usage, see the [`InAppMessage` class](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
 
