@@ -274,7 +274,7 @@ $(document).ready(function() {
             <i class="{{menu_list.fa_icon}}"></i>
             {%- else -%}
               {%- if menu_list.image -%}
-              <img src="{{site.baseurl}}{{ menu_list.image}} " />
+              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
               {%- endif -%}
             {%- endif -%}
             <div class="menu_description">
@@ -287,9 +287,9 @@ $(document).ready(function() {
       {%- endfor -%}
       <b class="glossary_text">  {{ page.glossary_mid_text }} </b>
     </div>
-    <div id="glossary_filter">
+    <fieldset id="glossary_filter">
         <input id="glossary_search" type="search" placeholder="Search" />
-        <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
+        <legend id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</legend>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
           <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="input_filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
@@ -298,7 +298,7 @@ $(document).ready(function() {
         </div>
         {%- endfor -%}
 
-    </div>
+    </fieldset>
 
     <div id="glossary_list" class="flex mx-auto">
       <div class="d-flex" style="width: 100%;">

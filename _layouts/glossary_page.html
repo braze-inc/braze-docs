@@ -288,7 +288,7 @@ $(document).ready(function() {
           <div id="{{ glossary_id }}" class="anchor"></div>
           <div class="content"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
             {%- if glossary['image'] -%}
-            <img src="{{ glossary['image'] }}" />
+            <img src="{{ glossary['image'] }}" alt="{{ glossary['name'] }}" />
             {%- endif -%}
             <p class="desc">{{ glossary['description'] }}</p>
             {%- if glossary['metric'] -%}
