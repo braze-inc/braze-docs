@@ -171,7 +171,7 @@ After you have your IDs in sync, you’ll need to relate your Braze user profile
 
 Now that your opportunity and account details are accounted for as Braze catalogs, you need to create a relationship between those catalogs and the user profiles you want to send messages to. Currently, this requires two steps:
 
-1. Include the account (such as `account_id` (string)), opportunity ID (such as `opportunity_ids (array)`), or both on the user profile as attributes.
+1. Include the account (such as `account_id (string)`), opportunity ID (such as `opportunity_ids (array)`), or both on the user profile as attributes.
 2. Log an event (such as `account_linked`) that includes the account ID as an event property.
 
 ```json
