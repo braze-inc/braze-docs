@@ -10,13 +10,12 @@ description: "SHORT_DESCRIPTION."
 alias: /partners/PARTNER_NAME/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
-<!-- In most cases, the ARTICLE_TITLE will be your company name. If your tool requires several seperate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." -->
+<!-- In most cases, the ARTICLE_TITLE will be your company name. If your tool requires several separate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." -->
 # ARTICLE_TITLE
 
-<!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a consice overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
+<!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a concise overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > DESCRIPTION.
 
 ADDITIONAL_INFORMATION.
@@ -42,7 +41,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 CONTENT.
 
-<!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. -->
+<!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum necessary steps. -->
 ## Integrating TOOL_NAME
 
 CONTENT.
@@ -87,7 +86,7 @@ CONTENT.
 
 CONTENT.
 
-<!-- An optional section you can use to outline additional customization steps. It's important to be concise and only outline the minimum neccesary steps. -->
+<!-- An optional section you can use to outline additional customization steps. It's important to be concise and only outline the minimum necessary steps. -->
 ## Customizing TOOL_NAME
 
 ### Step 1: ACTION_TO_COMPLETE
@@ -98,7 +97,7 @@ CONTENT.
 
 CONTENT.
 
-<!-- A section outlinning how to use your integration with Braze. For example: how to access the data sent to Braze, or how to leverage your integration with Braze messaging. -->
+<!-- A section outlining how to use your integration with Braze. For example: how to access the data sent to Braze, or how to leverage your integration with Braze messaging. -->
 ## Using TOOL_NAME with Braze
 
 ### Step 1: ACTION_TO_COMPLETE
