@@ -50,14 +50,17 @@ todo
 {% endtab %}
 {% tab Java %}
 ```java
-todo
+ArrayList<String> listOfBanners = new ArrayList<>();
+listOfBanners.add("global_banner");
+listOfBanners.add("navigation_square_banner");
+Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 ```
 
 {% endtab %}
 {% tab Kotlin %}
 
 ```kotlin
-todo
+ Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
 ```
 
 {% endtab %}
@@ -117,14 +120,22 @@ todo
 {% endtab %}
 {% tab Java %}
 ```java
-todo
+Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
+  for (Banner banner : banners.getBanners()) {
+    Log.d(TAG, "Received banner: " + banner.getPlacementId());
+  }
+});
 ```
 
 {% endtab %}
 {% tab Kotlin %}
 
 ```kotlin
-todo
+Braze.getInstance(context).subscribeToBannersUpdates { update ->
+    for (banner in update.banners) {
+      Log.d(TAG, "Received banner: " + banner.placementId)
+    }
+}
 ```
 
 {% endtab %}
@@ -199,15 +210,32 @@ todo
 ```
 {% endtab %}
 {% tab Java %}
-```java
-todo
+You can create Banners in your Android views layout by simply including this XML:
+
+```xml
+<com.braze.ui.banners.BannerView
+    android:id="@+id/global_banner_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:placementId="global_banner" />
 ```
 
 {% endtab %}
 {% tab Kotlin %}
+If you're using Android Views, you can use this XML:
+
+```xml
+<com.braze.ui.banners.BannerView
+    android:id="@+id/global_banner_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:placementId="global_banner" />
+```
+
+If you're using Jetpack Compose, you can use this:
 
 ```kotlin
-todo
+Banner(placementId = "global_banner")
 ```
 
 {% endtab %}
@@ -275,14 +303,14 @@ todo
 {% endtab %}
 {% tab Java %}
 ```java
-todo
+Braze.getInstance(context).logBannerImpression(banner.getPlacementId());
 ```
 
 {% endtab %}
 {% tab Kotlin %}
 
 ```kotlin
-todo
+Braze.getInstance(context).logBannerImpression(banner.placementId)
 ```
 
 {% endtab %}
