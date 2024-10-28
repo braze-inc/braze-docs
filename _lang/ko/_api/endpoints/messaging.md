@@ -25,59 +25,59 @@ description: "이 랜딩 페이지에는 Braze 메시징 엔드포인트가 나�
 page_type: landing
 
 guide_top_header: "메시징 엔드포인트"
-guide_top_text: "Braze 메시징 API는 사용자에게 메시지를 보낼 수 있는 두 가지 옵션을 제공합니다. <code class='highlighter-rouge'>/messages/send</code> and `/messages/schedule` 엔드포인트를 사용하여 API 요청에 메시지 내용 및 구성을 제공할 수 있습니다. 또는 Braze 대시보드에서 API 트리거 캠페인으로 메시지의 세부 정보를 관리하고 `/campaigns/trigger/send` 및`/campaigns/trigger/schedule` 엔드포인트를 사용하여 언제, 누구에게 전송되는지 제어할 수 있습니다. 다음 섹션에서는 두 가지 방법에 대한 요청 사양을 자세히 설명합니다. <br> <br> 다른 캠페인과 마찬가지로, 특정 사용자가 메시징 API 캠페인을 수신할 수 있는 횟수를 제한하려면 Braze 대시보드에서 [재자격 설정](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns)을 구성하여 특정 사용자가 메시징 API 캠페인을 수신할 수 있는 횟수를 제한할 수 있습니다. Braze는 전송된 API 요청 수에 관계없이 캠페인에 다시 참여하지 않은 사용자에게는 API 메시지를 전달하지 않습니다. <br> <br> 메시지 보내기 엔드포인트를 사용하면 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다. 세그먼트를 타겟팅하는 경우, 요청 기록이 **메시지 활동 로그**에 저장됩니다. 메시지 예약 엔드포인트를 사용하여 지정된 시간에 메시지를 보내고, 이미 예약한 메시지를 수정하거나 취소할 수 있습니다."
+guide_top_text: "Braze 메시징 API는 사용자에게 메시지를 보낼 수 있는 두 가지 옵션을 제공합니다. API 요청에 메시지 내용 및 구성을 제공하면 됩니다. <code class='highlighter-rouge'>/messages/send</code> 메시지/스케줄` 엔드포인트. 또는 Braze 대시보드에서 API 트리거 캠페인으로 메시지의 세부 정보를 관리하고 `/campaigns/trigger/send` 및`/campaigns/trigger/schedule` 엔드포인트를 사용하여 언제, 누구에게 전송되는지 제어할 수 있습니다. 다음 섹션에서는 두 가지 방법의 요청 사양에 대해 자세히 설명합니다. <br> <br> 다른 캠페인과 마찬가지로, 특정 사용자가 메시징 API 캠페인을 받을 수 있는 횟수를 제한하려면 Braze 대시보드에서 [재자격 설정](/docs/user_guide/참여 도구/캠페인/빌딩 캠페인/전달 유형/api_트리거된 전달/#재자격-with-api-트리거된 캠페인)을 구성하여 특정 사용자가 메시징 API 캠페인을 받을 수 있는 횟수를 제한하면 됩니다. Braze는 API 요청 횟수에 관계없이 캠페인에 다시 참여하지 않은 사용자에게는 API 메시지를 전달하지 않습니다. <br> <br> 메시지 보내기 엔드포인트를 사용하면 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다. 세그먼트를 타겟팅하는 경우, 요청 기록이 **메시지 활동 로그**에 저장됩니다. 메시지 예약 엔드포인트를 사용하여 지정된 시간에 메시지를 보내고, 이미 예약한 메시지를 수정하거나 취소할 수 있습니다."
 
 guide_featured_title: "메시지 엔드포인트 예약"
 guide_featured_list:
-  - name: "GET: List Upcoming Scheduled Campaigns and Canvases"
+  - name: "GET: 예정된 캠페인 및 캔버스 목록 보기"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Delete Scheduled Messages"
+  - name: "POST: 예약된 메시지 삭제"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Delete Scheduled API-Triggered Campaigns"
+  - name: "POST: 예약된 API 트리거 캠페인 삭제하기"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Delete Scheduled API-Triggered Canvases"
+  - name: "POST: 예약된 API 트리거 캔버스 삭제하기"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Schedule Messages"
+  - name: "POST: 메시지 예약"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
     image: /assets/img/braze_icons/calendar-plus-01.svg
-  - name: "POST: Schedule API-Triggered Campaign Messages"
+  - name: "POST: API 트리거 캠페인 메시지 예약하기"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: "POST: Schedule API-Triggered Canvas Messages"
+  - name: "POST: API 트리거 캔버스 메시지 예약하기"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: "POST: Update Scheduled Messages"
+  - name: "POST: 예약된 메시지 업데이트"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Update Scheduled API-Triggered Campaign Messages"
+  - name: "POST: 예약된 API 트리거 캠페인 메시지 업데이트"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Update Scheduled API-Triggered Canvas Messages"
+  - name: "POST: 예약된 API 트리거 캔버스 메시지 업데이트"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "Send messages endpoints"
 guide_menu_list:
-  - name: "POST: Create Send IDs"
+  - name: "POST: ID 보내기 만들기"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
     image: /assets/img/braze_icons/user-square.svg
-  - name: "POST: Send Messages Immediately"
+  - name: "POST: 즉시 메시지 보내기"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     image: /assets/img/braze_icons/send-01.svg
-  - name: "POST: Send API-Triggered Campaign Messages Immediately"
+  - name: "POST: API 트리거 캠페인 메시지 즉시 보내기"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
     image: /assets/img/braze_icons/inbox-01.svg
-  - name: "POST: Send API-Triggered Canvas Messages Immediately"
+  - name: "POST: API 트리거 캔버스 메시지 즉시 보내기"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Live Activity endpoints"
 guide_menu_list2:
-  - name: "POST: Update Live Activity"
+  - name: "POST: 실시간 활동 업데이트"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg
 ---

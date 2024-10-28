@@ -169,7 +169,7 @@ if (featureFlag?.enabled) {
 
 We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate.
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![A feature flag experiment splitting traffic into two 50 percent groups.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -177,7 +177,7 @@ Once we determine our winner, we can stop this campaign and increase the rollout
 
 ### Segmentation
 
-Use the **Feature Flag** filter to create a segment or target messaging at users based on whether they're using a feature flag. For example, let's say we have a feature flag that controls premium content in our app. We could create a segment that filters for users who don't have the feature flag enabled, and then send that segment a message urging them to upgrade their account to view premium content.
+Use the **Feature Flag** filter to create a segment or target messaging at users based on whether they have a feature flag enabled. For example, let's say we have a feature flag that controls premium content in our app. We could create a segment that filters for users who don't have the feature flag enabled, and then send that segment a message urging them to upgrade their account to view premium content.
 
 ![]({% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %})
 

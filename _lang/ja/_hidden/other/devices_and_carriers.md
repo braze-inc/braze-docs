@@ -1,13 +1,13 @@
 ---
-nav_title: デバイスとキャリア
-article_title: デバイスとキャリア
+nav_title: デバイス＆通信事業者
+article_title: デバイス＆通信事業者
 page_type: reference
 permalink: "/device_and_carriers/"
-description: "このリファレンス記事では、ダッシュボードのデバイスおよびキャリアページにどのような情報が表示されるかを説明します。"
+description: "このリファレンス記事では、ダッシュボードのデバイスおよび通信事業者のページで確認できる情報について説明します。"
 hidden: true
 ---
 
-# デバイスとキャリア
+# デバイス＆通信事業者
 
 <!--This article is hidden because it has been deprecated for most customers. Confirm with Reporting PM before fully removing.-->
 

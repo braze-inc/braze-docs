@@ -9,7 +9,7 @@ description: "この記事には2018年12月のリリースノートが含まれ
 
 ## コンテンツブロック
 
-[コンテンツ・ブロックは]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)、再利用可能なクロスチャネルのコンテンツを一元管理することができる。この機能にアクセスするには、Brazeアカウントの**テンプレート＆メディア**セクションの**コンテンツブロックライブラリタブに**入る。 
+[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)を使用すると、再利用可能なクロスチャネルコンテンツを1か所で管理できます。この機能にアクセスするには、Braze アカウントの**Templates & Media** セクションの**Content Blocks Library** タブに移動します。 
 
 コンテンツブロックを使用すると、次のことができます。
  - コンテンツブロックをヘッダーやフッターとして使用することで、メールキャンペーンに一貫性のあるルック＆フィールを作成できる。
@@ -19,4 +19,4 @@ description: "この記事には2018年12月のリリースノートが含まれ
 
 ## Gmailプロモーションツール
 
-Gmailはモバイルプロモーションタブを更新し、マーケティング担当者が件名やプリヘッダー情報だけでなく、「カード」の注釈でより多くの情報を送信できるようにした。[Gmailプロモーションツールを]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/)使えば、Brazeの製品からカードを作ることができる。
+Gmail でモバイルの \[プロモーション] タブが更新され、マーケターが件名やプリヘッダー情報だけでなく、「カード」の注釈をを使用してより多くの情報を送信できるようになりました。[Gmailプロモーションツール]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/)で、Brazeは弊社商品からのカード構築をお手伝いします。

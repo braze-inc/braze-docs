@@ -36,7 +36,7 @@ flutter pub add braze_plugin
 ## ステップ2:ネイティブセットアップを完了する
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 Braze サーバーに接続するには、プロジェクトの `android/res/values` フォルダで `braze.xml` ファイルを作成します。以下のコードを貼り付けて、API 識別子キーとエンドポイントを値で置き換えます。
 
@@ -89,7 +89,7 @@ func application(
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-`AppDelegate.m` ファイルの先頭に`BrazeKit` をインポートする：
+`AppDelegate.m` ファイルの先頭に `BrazeKit` をインポートします。
 ```objc
 @import BrazeKit;
 ```

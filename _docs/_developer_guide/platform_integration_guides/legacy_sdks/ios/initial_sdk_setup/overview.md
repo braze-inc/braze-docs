@@ -12,22 +12,22 @@ description: "This landing page covers Braze SDK integration guides for CocoaPod
 guide_featured_title: "Basic integration options"
 guide_featured_list:
 - name: CocoaPods
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/
+  link: /developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
 - name: Swift Package Manager (SPM)
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
+  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/
   image: /assets/img/braze_icons/swift.svg
 - name: Carthage
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
+  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.png
 - name: Manual
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
+  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   image: /assets/img/braze_icons/tool-01.svg
 - name: "Completing the Integration"
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
+  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/
   image: /assets/img/braze_icons/flag-05.svg
 - name: "Other Optional SDK Customizations"
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
+  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/ios_sdk_integration
   image: /assets/img/braze_icons/user-square.svg
 
 noindex: true

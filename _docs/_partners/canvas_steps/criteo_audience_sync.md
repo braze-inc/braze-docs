@@ -2,7 +2,7 @@
 nav_title: Criteo
 article_title: Canvas Audience Sync to Criteo
 description: "This reference article will cover how to use Braze Audience Sync to Criteo, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 4
+page_order: 1
 alias: "/audience_sync_criteo/"
 
 Tool:
@@ -41,13 +41,13 @@ You will need to ensure that you have the following items created and/or complet
 
 ### Step 1: Connect to Criteo
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. In the Criteo Audience Export module, click **Connect Criteo**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.][5]{: style="max-width:80%;"}
+![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.][5]{: style="max-width:80%;"}
 
 A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
 

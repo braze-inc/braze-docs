@@ -30,7 +30,7 @@ Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイ
   <bool name="com_braze_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-## ステップ2:更新 AndroidManifest.xml
+## ステップ2:AndroidManifest.xml を更新する
 
 アプリのAndroidManifest.xml 、Amazonの名前空間を`<>manifest</>` タグに追加する：
 
@@ -93,7 +93,7 @@ Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイ
 
 ## ステップ 3:ADM API キーを保存する
 
-まず、ADM APIキーを`api_key.txt` という名前のファイルに保存し、プロジェクトの [`Assets/Plugins/Android/assets`][54] ] フォルダーに保存する。次に、[アプリ用のADM API Keyを取得する][11]。
+まず、ADM API キーを `api_key.txt` という名前のファイルに保存し、ファイルをプロジェクトの [`Assets/Plugins/Android/assets`][54] フォルダーに保存します。次に、[アプリの ADM API キーを取得します][11]。
 
 Amazon は、末尾の改行などの空白文字が `api_key.txt` に含まれている場合、キーを認識しません。
 
@@ -126,14 +126,14 @@ Brazeは手動登録の使用を推奨していないが、ADM登録を自分で
 次に [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html)を使って、ユーザーのADM`registration_id` をBrazeに渡す：
 
 {% tabs local %}
-{% tab ジャワ %}
+{% tab Java %}
 
 ```java
 Braze.getInstance(context).setRegisteredPushToken(registration_id);
 ```
 
 {% endtab %}
-{% tab コトリン %}
+{% tab Kotlin %}
 
 ```kotlin
 Braze.getInstance(context).registeredPushToken = registration_id

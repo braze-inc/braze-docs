@@ -35,7 +35,7 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 // For iOS 16.0+

@@ -71,7 +71,7 @@ static NSString *const AppboyAPNSDictionaryAttachmentTypeKey = @"type";
 
 Braze ペイロードで手動でプッシュ通知を表示するには、`AppboyAPNSDictionaryAttachmentURLKey` の下の値からコンテンツをダウンロードし、`AppboyAPNSDictionaryAttachmentTypeKey` キーの下に格納されているファイルタイプのファイルとして保存し、通知添付ファイルに追加します。
 
-### 例コード
+### サンプルコード
 
 サービス拡張は、Objective-C または Swift で記述できます。
 

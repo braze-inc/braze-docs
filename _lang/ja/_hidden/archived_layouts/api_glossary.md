@@ -56,7 +56,7 @@ Post,Email,Create,Template,REST,API
 
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
-#### リクエストボディ
+#### リクエスト本文
 ```
 {
   "template_name": "email_template_name",
@@ -68,7 +68,7 @@ Post,Email,Create,Template,REST,API
 
 ```
 
-#### 例の応答
+#### 応答の例
 ```
 {
   "template_name": "email_template_name",
@@ -105,7 +105,7 @@ Post,Email,Create,Template,REST,API
 
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
-#### リクエストボディ
+#### リクエスト本文
 ```
 GET https://YOUR_REST_API_URL/templates/email/list
 
@@ -120,7 +120,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 ```
 
-#### 例の応答
+#### 応答の例
 ```
 GET https://YOUR_REST_API_URL/templates/email/list
 
@@ -154,7 +154,7 @@ API トリガー配信を使用すると、メッセージの内容を Braze ダ
 
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
-#### リクエストボディ
+#### リクエスト本文
 ```
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
@@ -179,7 +179,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```
 
-#### 例の応答
+#### 応答の例
 ```
 POST https://YOUR_REST_API_URL/canvas/trigger/send
 Content-Type: application/json
@@ -218,11 +218,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% apimethod put %}users/track{% endapimethod %}
 {% apitags %}PUT, キャンペーン, トリガー, 送信{% endapitags %}
 
-このエンドポイントは、カスタムイベント、ユーザー属性、およびユーザーの購入を記録するために使用できます。リクエストごとに最大75の属性、イベント、および購入オブジェクトを含めることができます。つまり、一度に最大75人のユーザーの属性しか投稿できませんが、同じAPI呼び出しで最大75件のイベントと最大75件の購入も提供できます。
+このエンドポイントは、カスタムイベント、ユーザー属性、およびユーザーの購入を記録するために使用できます。リクエストごとに最大75の属性、イベント、購入オブジェクトを含めることができます。つまり、一度に最大75人のユーザーの属性しか投稿できませんが、同じ API 呼び出しで最大75件のイベントと最大75件の購入も提供できます。
 
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
 
-#### リクエストボディ
+#### リクエスト本文
 ```
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -235,7 +235,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```
 
-#### 例の応答
+#### 応答の例
 ```
 {
   // One of "external_id" or "user_alias" or "braze_id" is required
@@ -265,26 +265,26 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | ユーザープロファイル フィールド | データ型仕様 |
 | ---| --- |
-| country | 国コードは\[ISO-3166-1 alpha-2標準][17]でBrazeに渡される必要があります。 |
+| country | (文字列) 国コードは \[ISO-3166-1 alpha-2 規格][17] で Braze に渡す必要があります。 |
 | current_location | (オブジェクト) {"longitude": -73.991443, "latitude": 40.753824} の形式 |
 | date_of_first_session | （ユーザーが初めてアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
 | date_of_last_session | （ユーザーが最後にアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
 | dob | （生年月日）「YYYY-MM-DD」の形式の文字列。例えば、1980-12-21。 |
 | email | (string) |
 | email_subscribe | (文字列) 使用できる値は、「opted_in」 (メールメッセージを受信するように明示的に登録)、「unsubscribed」 (メールメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
-| external_id | （文字列）一意のユーザー識別子。 |
+| external_id | (文字列) 一意のユーザー識別子。 |
 | Facebook | `id`（文字列）、`likes`（文字列の配列）、`num_friends`（整数）のいずれかを含むハッシュ。 |
 | first_name | (string) |
 | gender | (文字列) 「M」、「F」、「O」 (その他)、「N」 (該当なし)、「P」 (言いたくない) または「nil」 (不明)。 |
 | home_city | (string) |
-| 画像_url | （文字列）ユーザープロファイルに関連付ける画像のURL。 |
-| language | (string) 言語はISO-639-1標準][24]でBrazeに渡される必要があります。<br>[受け入れられる言語のリスト][1]|
+| image_url | （文字列）ユーザープロファイルに関連付ける画像のURL。 |
+| language | (文字列) 言語は \[ISO-639-1 規格][24] で Braze に渡す必要があります。<br>[受け入れ可能な言語のリスト][1]|
 | last_name | (string) |
 |marked_email_as_spam_at| （文字列）ユーザーのメールがスパムとしてマークされた日付。ISO 8601形式またはyyyy-MM-dd'T'HH:mm:ss:SSSZ形式で表示されます。|
 | phone | (string) |
 | push_subscribe | (文字列) 使用できる値は、「opted_in」 (プッシュメッセージを受信するように明示的に登録)、「unsubscribed」 (プッシュメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
 | push_tokens | オブジェクトの配列は`app_id`と`token`の文字列です。このトークンが関連付けられているデバイスに`device_id`を任意で提供することができます。例えば、`[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`。提供されない場合は、`device_id`がランダムに生成されます。 |
-| time_zone | IANAタイムゾーンデータベース][26]からのタイムゾーン名（例：「America/New_York」または「Eastern Time (US & Canada)」）。有効なタイムゾーン値のみが設定されます。 |
+| time_zone | (文字列) \[IANA タイムゾーンデータベース][26] (たとえば、「アメリカ/ニューヨーク」または「東部標準時 (アメリカ & カナダ)」) からのタイムゾーン名。有効なタイムゾーン値のみが設定されます。 |
 | ツイッター | `id` (整数)、`screen_name` (文字列、X (旧Twitter) ハンドル)、`followers_count` (整数)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
 {: .reset-td-br-1 .reset-td-br-2}
 

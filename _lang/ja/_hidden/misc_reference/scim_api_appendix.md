@@ -15,7 +15,7 @@ permalink: "/scim_api_appendix/"
 permissionsオブジェクトは、SCIM IDパーミッションを通してユーザーリソースとインターフェースするときに、リクエストとレスポンスの一部に見られるフィールドである。
 
 {% alert note %}
-Brazeでは、アプリグループはワークスペースに改名されたが、このページのキーはまだ古い用語を参照している（例えば、`appGroup` 、`appGroupName` ）。
+Braze では、アプリグループはワークスペースに改名されましたが、このページのキーはまだ古い用語を参照しています (例えば、`appGroup`、`appGroupName`)。
 {% endalert %}
 
 ```
@@ -31,21 +31,21 @@ Brazeでは、アプリグループはワークスペースに改名されたが
 
 | キー | required | データタイプ | 説明 |
 | --- | --- | --- | --- |
-| `companyPermissions` | オプション | 配列 | 文字列の存在は、対応するパーミッションを持つユーザーに対応する[。](#company) |
-| `appGroup` | required | 配列 | [ワークスペース許可オブジェクトの](#workspace-permission-object)配列。 |
+| `companyPermissions` | オプション | 配列 | [会社許可文字列](#company) テーブルからの会社レベルの許可文字列の配列。文字列の存在は、対応する許可を持つユーザに対応します。 |
+| `appGroup` | required | 配列 | [ワークスペース許可オブジェクト](#workspace-permission-object)の配列。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### ワークスペース許可オブジェクト {#workspace-permission-object}
 
-有効なアプリグループ許可オブジェクトは、以下のキーと値のペアを持つJSONオブジェクトである：
+有効なアプリグループ許可オブジェクトは、以下のキーと値のペアを持つ JSON オブジェクトです。
 
 | キー | required | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | `appGroupName`| オプション | string | ワークスペースの名前。このオブジェクトに含まれるパーミッションがどのワークスペースに対するものかを指定するために使用される。 | 
-| `appGroupId` | `appGroupName` がない場合は必須 | string | ワークスペースを指定する代替方法となる。 |
-| `appGroupPermissionSets` | オプション | 配列 | [ワークスペース権限セットオブジェクトを](#workspace-permissions-set-object)1つ持つ配列。 |
-| `appGroupPermissions` | required | 配列 | [ワークスペース・パーミッション文字列](#workspace-strings)テーブルのワークスペース・レベル・パーミッション文字列の配列で、文字列の存在は、指定されたワークスペースの対応するパーミッションを持つユーザーに対応する。 |
-| `team` | オプション | 配列 | [チーム権限オブジェクトの](#team-permissions-object)配列。 |
+| `appGroupId` | `appGroupName` がない場合は必須 | string | ワークスペースの ID。ワークスペースを指定する別の方法として機能します。 |
+| `appGroupPermissionSets` | オプション | 配列 | 単一の[ワークスペース許可セットオブジェクト](#workspace-permissions-set-object)を持つ配列。 |
+| `appGroupPermissions` | required | 配列 | [ワークスペース許可文字列](#workspace-strings)テーブルからのワークスペースレベルの許可文字列の配列。文字列の存在は、指定されたワークスペースに対する対応する許可を持つユーザーに対応します。 |
+| `team` | オプション | 配列 | [チーム許可オブジェクト](#team-permissions-object)の配列。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### ワークスペース権限設定オブジェクト {#workspace-permissions-set-object}
@@ -55,7 +55,7 @@ Brazeでは、アプリグループはワークスペースに改名されたが
 | キー | required | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | `appGroupPermissionSetName` | オプション | string | このワークスペースのユーザーに割り当てられているワークスペース権限セットの名前。 |
-| `appGroupPermissionSetID` | `appGroupPermissionSetName` がない場合は必須 | string | このワークスペースのユーザーに割り当てられているワークスペース権限セットを指定する代替方法として機能する。 |
+| `appGroupPermissionSetID` | `appGroupPermissionSetName` がない場合は必須 | string | ワークスペースの ID。このワークスペースに対してユーザーに割り当てられたワークスペース許可セットを指定する代替方法として機能します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### チーム許可オブジェクト
@@ -66,14 +66,14 @@ Brazeでは、アプリグループはワークスペースに改名されたが
 | --- | --- | --- | --- |
 | `teamName` | オプション | string | チーム名。このオブジェクト内のパーミッションがどのチームのものかを指定するために使用できる。 |
 | `teamId` | `teamName` がない場合は必須 | string | チームのIDで、チームを指定する代替方法となる。 |
-| `teamPermissions` | required | 配列 | この文字列が存在する場合、そのユーザーは指定された[チームの](#team)対応するパーミッションを持っていることになる。 |
+| `teamPermissions` | required | 配列 | [チーム許可文字列](#team) テーブルからのチームレベルの許可文字列の配列。文字列の存在は、指定されたチームに対する対応する許可を持つユーザーに対応します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 付録
 
 ### 会社の許可文字列 {#company}
 
-| UIに表示されている | SCIM API 文字列 |
+| UI に表示 | SCIM API 文字列 |
 | --- | --- |
 | 管理者 | `admin` |
 | 会社の設定を管理できる | `manage_company_settings` |
@@ -97,15 +97,15 @@ Brazeでは、アプリグループはワークスペースに改名されたが
 | 利用データを見る | `view_usage_data` |
 | ユーザーデータのインポートと更新 | `import_update_user_data` |
 | 請求の詳細を見る | `view_billing_details` |
-| デブ・コンソールにアクセスする | `dev_console` |
-| コンテンツ・ブロックを立ち上げる | `launch_content_blocks` |
+| 開発コンソールにアクセス | `dev_console` |
+| コンテンツブロックを開始 | `launch_content_blocks` |
 | 外部統合を管理する | `manage_external_integrations` |
 | アプリを管理する | `manage_apps` |
-| チームを管理する | `manage_teams` |
+| チームを管理 | `manage_teams` |
 | イベント、属性、購入を管理する | `manage_events_attributes_purchases` |
 | タグを管理する | `manage_tags` |
-| Eメールの設定を管理する | `manage_email_settings` |
-| 購読グループを管理する | `manage_subscription_groups` |
+| メール設定を管理 | `manage_email_settings` |
+| サブスクリプショングループを管理 | `manage_subscription_groups` |
 | 承認設定を管理する | `manage_approval_settings` |
 | カタログ・ダッシュボードの権限を管理する | `manage_catalogs_dashboard_permission` |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -127,11 +127,11 @@ Brazeでは、アプリグループはワークスペースに改名されたが
 
 ### 部門の文字列
 
-| UIに表示されている | SCIM API 文字列 |
+| UI に表示 | SCIM API 文字列 |
 | --- | --- |
-| 代理店 / 第三者 | `agency` |
+| 代理店 / サードパーティ | `agency` |
 | BI / アナリティクス | `bi` |
-| Cスイート | `c_suite` |
+| 経営幹部 | `c_suite` |
 | エンジニアリング | `engineering` |
 | ファイナンス | `finance` |
 | マーケティング / 編集 | `marketing` |

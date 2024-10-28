@@ -253,8 +253,8 @@ If you haven't captured dates as object properties initially, we recommend resen
     {
       "external_id": "time_with_nca_test",
       "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "birthday": {"$time" : "1980-01-01"},
+        "wedding_anniversary": {"$time" : "2020-05-28"}
       }
     }
   ]
@@ -437,7 +437,7 @@ If you want to reset the schema for an object array with an existing object, you
 
 If data does not appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
 
-## Data Points
+## Data points
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 

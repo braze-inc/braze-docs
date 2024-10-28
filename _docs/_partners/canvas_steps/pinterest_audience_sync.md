@@ -2,7 +2,7 @@
 nav_title: Pinterest
 article_title: Canvas Audience Sync to Pinterest
 description: "This reference article will cover how to use Braze Audience Sync to Pinterest, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 3
+page_order: 5
 alias: "/audience_sync_pinterest/"
 
 Tool:
@@ -42,13 +42,13 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to Pinterest
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. In the Pinterest Audience Export module, click **Connect Pinterest**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Pinterest technology page in Braze that includes an Overview module and Pinterest Audience Sync module with the Connected Pinterest button.][1]{: style="max-width:80%;"}
+![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.][1]{: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
 

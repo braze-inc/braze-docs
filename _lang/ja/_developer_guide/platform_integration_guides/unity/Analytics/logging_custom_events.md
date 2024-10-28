@@ -6,7 +6,7 @@ platform:
   - iOS
   - Android
 page_order: 1
-description: "この記事では、Unityプラットフォームでカスタムイベントをログに記録する方法について説明します。"
+description: "この参考記事では、Unity プラットフォームでカスタムイベントを記録する方法について説明します。"
 
 ---
 
@@ -14,13 +14,13 @@ description: "この記事では、Unityプラットフォームでカスタム�
 
 > Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。
 
-実装前に、[ベストプラクティス][4]でカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
+実施にあたっては、まずカスタムイベントs、カスタム属性s、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス][4]で検討すること。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ```csharp
 AppboyBinding.LogCustomEvent("event name");
 ```
 
-Brazeは、イベントプロパティの`Dictionary`を渡すことによって、カスタムイベントに関するメタデータの追加もサポートしています。
+Braze では、イベントプロパティの `Dictionary` を渡すことによる、カスタムイベントに関するメタデータの追加もサポートしています。
 
 ```csharp
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));

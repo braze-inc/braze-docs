@@ -47,7 +47,7 @@ yarn add @braze/react-native-sdk
 ## ステップ2:ネイティブセットアップを完了する
 
 {% tabs %}
-{% tab 万博 %}
+{% tab Expo %}
 
 #### ステップ 2.1:Braze Expo プラグインのインストール
 
@@ -57,32 +57,32 @@ Braze React Native SDK のバージョンが1.37.0以降であることを確認
 expo install @braze/expo-plugin
 ```
 
-#### ステップ 2.2:プラグインを app.json
+#### ステップ 2.2:app.json にプラグインを追加する
 
 `app.json` で、Braze Expo プラグインを追加します。次の構成オプションを指定できます。
 
 | 方法                                        | タイプ    | 説明                                                                                                                                              |
 | --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `androidApiKey`                               | ストリング  | 必要だ。Androidアプリケーションの[APIキー]({{site.baseurl}}/api/identifier_types/)。Brazeダッシュボードの**Manage Settingsに**ある。 |
-| `iosApiKey`                                   | ストリング  | 必要だ。iOSアプリケーションの[APIキー]({{site.baseurl}}/api/identifier_types/)。Brazeダッシュボードの**Manage Settingsに**ある。     |
-| `baseUrl`                                     | ストリング  | 必要だ。アプリケーションの[SDKエンド]({{site.baseurl}}/api/basics/#endpoints)ポイントは、Brazeダッシュボードの**Manage Settingsに**ある。    |
+| `androidApiKey`                               | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にある Android アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。 |
+| `iosApiKey`                                   | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にある iOS アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。     |
+| `baseUrl`                                     | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にあるアプリケーションの [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)。    |
 | `enableBrazeIosPush`                          | ブーリアン | iOSのみ。iOS でのプッシュ通知の処理に Braze を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                       |
-| `enableFirebaseCloudMessaging`                | ブーリアン | アンドロイドのみ。プッシュ通知に Firebase Cloud Messaging を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。             |
-| `firebaseCloudMessagingSenderId`              | ストリング  | アンドロイドのみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
-| `sessionTimeout`                              | 整数 | アプリケーションのBrazeセッションタイムアウトを秒単位で指定する。                                                                                               |
+| `enableFirebaseCloudMessaging`                | ブーリアン | Android のみ。プッシュ通知に Firebase Cloud Messaging を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。             |
+| `firebaseCloudMessagingSenderId`              | ストリング  | Android のみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
+| `sessionTimeout`                              | 整数 | アプリケーションの Braze セッションタイムアウト (秒単位)。                                                                                               |
 | `enableSdkAuthentication`                     | ブーリアン | [SDK認証](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication)機能を有効にするかどうか。      |
 | `logLevel`                                    | 整数 | アプリケーションのログレベル。デフォルトのログレベルは8で、最小限の情報をロギングします。デバッグのために冗長ロギングを有効にするには、ログレベル0を使う。    |
-| `minimumTriggerIntervalInSeconds`             | 整数 | トリガー間の最小時間間隔を秒単位で指定する。デフォルトは30秒である。                                                                           |
+| `minimumTriggerIntervalInSeconds`             | 整数 | トリガー間の最小時間間隔 (秒単位)。デフォルトは30秒です。                                                                           |
 | `enableAutomaticLocationCollection`           | ブーリアン | 自動位置情報収集が有効かどうか（ユーザーが許可した場合）。                                                                                  |
-| `enableGeofence`                              | ブーリアン | ジオフェンスが有効かどうか。                                                                                                                           |
-| `enableAutomaticGeofenceRequests`             | ブーリアン | ジオフェンスのリクエストを自動的に行うかどうか。                                                                                                  |
-| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルなアプリ内メッセージを解除するかどうか。                                           |
-| `androidHandlePushDeepLinksAutomatically`     | ブーリアン | アンドロイドのみ。Braze SDKが自動的にプッシュディープリンクを処理するかどうか。                                                                         |
-| `androidPushNotificationHtmlRenderingEnabled` | ブーリアン | アンドロイドのみ。`android.text.Html.fromHtml` を使って、プッシュ通知のテキストコンテンツをHTMLとして解釈し、レンダリングするかどうかを設定する。        |
-| `androidNotificationAccentColor`              | ストリング  | アンドロイドのみ。Android通知のアクセントカラーを設定する。                                                                                                |
-| `androidNotificationLargeIcon`                | ストリング  | アンドロイドのみ。Androidの通知アイコンを大きく設定する。                                                                                                  |
-| `androidNotificationSmallIcon`                | ストリング  | アンドロイドのみ。Androidの通知小アイコンを設定する。                                                                                                  |
-| `iosRequestPushPermissionsAutomatically`      | ブーリアン | iOSのみ。アプリ起動時に自動的にプッシュ許可を求めるプロンプトを表示するかどうか。                                                          |
+| `enableGeofence`                              | ブーリアン | ジオフェンスを有効にするかどうか。                                                                                                                           |
+| `enableAutomaticGeofenceRequests`             | ブーリアン | ジオフェンスリクエストを自動で行うかどうか。                                                                                                  |
+| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルアプリ内メッセージが閉じられるかどうか。                                           |
+| `androidHandlePushDeepLinksAutomatically`     | ブーリアン | Android のみ。Braze SDKが自動的にプッシュディープリンクを処理するかどうか。                                                                         |
+| `androidPushNotificationHtmlRenderingEnabled` | ブーリアン | Android のみ。`android.text.Html.fromHtml` を使って、プッシュ通知のテキストコンテンツをHTMLとして解釈し、レンダリングするかどうかを設定する。        |
+| `androidNotificationAccentColor`              | ストリング  | Android のみ。Android通知のアクセントカラーを設定する。                                                                                                |
+| `androidNotificationLargeIcon`                | ストリング  | Android のみ。Androidの通知アイコンを大きく設定する。                                                                                                  |
+| `androidNotificationSmallIcon`                | ストリング  | Android のみ。Androidの通知小アイコンを設定する。                                                                                                  |
+| `iosRequestPushPermissionsAutomatically`      | ブーリアン | iOSのみ。アプリの起動時にユーザーにプッシュ許可を自動的に求めるかどうか。                                                          |
 | `enableBrazeIosRichPush`                      | ブーリアン | iOSのみ。iOSのリッチプッシュ機能を有効にするかどうか。                                                                                                  |
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
@@ -138,7 +138,7 @@ expo prebuild
 [Expo ドキュメント](https://docs.expo.dev/workflow/customizing/)の指定に従い、アプリケーションを実行します。構成オプションを変更するには、アプリケーションを事前ビルドして再度実行する必要があることに注意してください。
 
 {% endtab %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 #### ステップ 2.1:リポジトリの追加
 
@@ -156,7 +156,7 @@ buildscript {
 
 これにより、Kotlin がプロジェクトに追加されます。
 
-#### ステップ2.2: Braze SDK の構成
+#### ステップ 2.2:Braze SDK の構成
 
 Braze サーバーに接続するには、プロジェクトの `res/values` フォルダで `braze.xml` ファイルを作成します。次のコードを貼り付け、API [キー]({{site.baseurl}}/api/identifier_types/)および[エンドポイント]({{site.baseurl}}/api/basics/#endpoints)を実際の値に置き換えます。
 
@@ -244,7 +244,7 @@ pod 'BrazeUI', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-sw
 pod 'BrazeLocation', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeLocation.podspec'
 ```
 
-#### ステップ2.2: ポッドのインストール
+#### ステップ 2.2:ポッドのインストール
 
 React Native ではライブラリーがネイティブプラットフォームに自動でリンクされるため、CocoaPods を使用して SDK をインストールできます。
 

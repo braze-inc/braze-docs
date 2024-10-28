@@ -50,7 +50,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 {% endalert %}
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 [カスタムマネージャーリスナー]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener)に関する Android の記事で説明されているように、`IInAppMessageManagerListener` を実装します。`beforeInAppMessageDisplayed` 実装では、`inAppMessage` データにアクセスして JavaScript レイヤーに送信し、戻り値に基づいてネイティブメッセージを表示するかどうかを決定できます。
 
@@ -168,7 +168,7 @@ AppDelegate.braze = braze;
 
 ![Brazeのアプリ内メッセージキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストすることができる。][6]
 
-サンプル実装は、BrazeProjectの\[React Native SDK][7].その他のAndroidとiOSの実装サンプルは、\[Android][8] ] と \[iOS][9] SDK]にある。
+サンプル実装は、\[React Native SDK][7] 内の BrazeProject にあります。追加の Android および iOS 実装サンプルは、\[Android][8] および \[iOS][9] SDK にあります。
 
 ## アプリ内メッセージのデータモデル
 
@@ -181,22 +181,22 @@ AppDelegate.braze = braze;
 |プロパティ          | 説明                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------|
 |`inAppMessageJsonString` | メッセージのJSON表現。                                                                                |
-|`message`         | メッセージ文だ。                                                                                                      |
+|`message`         | メッセージテキスト。                                                                                                      |
 |`header`          | メッセージのヘッダーである。                                                                                                    |
 |`uri`             | ボタンをクリックするアクションに関連するURI。                                                                       |
 |`imageUrl`        | メッセージ画像のURL。                                                                                                 |
 |`zippedAssetsUrl` | HTMLコンテンツを表示するために準備されたzip圧縮された資産。                                                                    |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                            |
 |`duration`        | メッセージの表示時間。                                                                                          |
-|`clickAction`     | ボタンをクリックするアクションのタイプ。の3種類である：`NEWS_FEED` `URI` と`NONE` である。                                     |
-|`dismissType`     | メッセージのクローズタイプ。`SWIPE` と`AUTO_DISMISS` である。                                                 |
-|`messageType`     | SDKがサポートするアプリ内メッセージタイプ。の4種類である：`SLIDEUP` `MODAL` `FULL` `HTML_FULL` である。          |
-|`extras`          | メッセージ・エキストラの辞書である。デフォルト値：`[:]`.                                                                   |
+|`clickAction`     | ボタンのクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。                                     |
+|`dismissType`     | メッセージのクローズタイプ。2つのタイプは次のとおりです。`SWIPE` および`AUTO_DISMISS`。                                                 |
+|`messageType`     | SDKがサポートするアプリ内メッセージタイプ。4つのタイプは次のとおりです。`SLIDEUP`、`MODAL`、`FULL` および `HTML_FULL`。          |
+|`extras`          | メッセージエクストラ辞書。デフォルト値：`[:]`.                                                                   |
 |`buttons`         | アプリ内メッセージのボタン一覧。                                                                             |
 |`toString()`      | String表現としてのメッセージ。                                                                                |
 {: .reset-td-br-1 .reset-td-br-2}
 
-アプリ内メッセージモデルの完全なリファレンスについては、\[Android][10] ]と\[iOS][11] ]のドキュメントを参照のこと。
+アプリ内メッセージモデルの完全なリファレンスについては、\[Android][10] および \[iOS][11] のドキュメントを参照してください。
 
 ### アプリ内メッセージボタンモデルのプロパティ
 
@@ -207,12 +207,12 @@ AppDelegate.braze = braze;
 |`text`            | ボタンのテキスト。                                                                                                     |
 |`uri`             | ボタンをクリックするアクションに関連するURI。                                                                            |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                                 |
-|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。の3種類である：`NEWS_FEED` `URI` と`NONE` である。 |
+|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。 |
 |`id`              | メッセージのボタンID。                                                                                               |
 |`toString()`      | String表現としてのボタン。                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-ボタンモデルの完全なリファレンスについては、\[Android][12] ]と\[iOS][13] ]のドキュメントを参照のこと。
+ボタンモデルの完全なリファレンスについては、\[Android][12] および \[iOS][13] のドキュメントを参照してください。
 
 ## GIFサポート
 

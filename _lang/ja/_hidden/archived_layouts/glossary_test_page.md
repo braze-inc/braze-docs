@@ -46,18 +46,18 @@ glossary_filter_text: "Select tags to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:
-  - name: タグ 1
-  - name: タグ 2
-  - name: タグ 3
+  - name: タグ1
+  - name: タグ2
+  - name: タグ3
 
 glossaries:
-  - name: 用語 1
+  - name: 用語1
     image: /docs/assets/img_archive/weeklyreport.png
     description: 用語1の定義。
     calculation: Calculation / Of Term 1
     tags:
       - All
-  - name: ターム2
+  - name: 用語2
     description: 用語2の定義。
     calculation: (Number of Terms) / (Unique Terms)
     tags:

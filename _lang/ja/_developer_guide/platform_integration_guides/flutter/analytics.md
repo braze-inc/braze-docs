@@ -89,13 +89,13 @@ braze.incrementCustomUserAttribute("key", integer);
 ```
 
 {% endtab %}
-{% tab ダブル %}
+{% tab Double %}
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab ストリング %}
+{% tab String %}
 
 ```dart
 braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
@@ -129,7 +129,7 @@ braze.unsetCustomUserAttribute('attribute_key');
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
+Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
 ```dart
 braze.logPurchase(productId, currencyCode, price, quantity, properties: properties);
@@ -144,7 +144,7 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 ```
 
 {% alert tip %}
-値 `10 USD` と数量 `3` を渡すと、10 ドルの購入 3 件、合計 30 ドルがユーザープロファイルに記録されます。数量は 100 以下でなければなりません。購入額がマイナスになることもあります。
+値 `10 USD` と数量 `3` を渡すと、10 ドルの購入 3 件、合計 30 ドルがユーザープロファイルに記録されます。数量は100以下でなければなりません。購入額がマイナスになることもあります。
 {% endalert %}
 
 ### 注文レベルで購入を記録する

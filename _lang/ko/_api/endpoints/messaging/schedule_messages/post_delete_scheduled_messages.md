@@ -39,11 +39,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id`(스케줄 생성에 대한 응답에서 가져옴)입니다. |
+| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 만들기 응답에서 얻은 값)입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

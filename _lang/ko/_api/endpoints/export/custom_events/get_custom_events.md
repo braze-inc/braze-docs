@@ -18,19 +18,19 @@ description: "이 문서에서는 커스텀 이벤트 목록 내보내기 Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `events.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='events list' %}
 
 ## 요청 매개변수
 
-| 매개변수| 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수| 필수 | 데이터 유형 | 설명 |
 | -------- | -------- | --------- | ----------- |
-| `page` | 선택 사항 | 정수 | 반환할 이벤트 이름의 페이지, 기본값은 0입니다(최대 250개의 첫 번째 집합을 반환합니다). |
+| `page` | 선택 사항 | 정수 | 반환할 이벤트 이름 페이지의 기본값은 0입니다(최대 250개의 첫 번째 집합을 반환합니다). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

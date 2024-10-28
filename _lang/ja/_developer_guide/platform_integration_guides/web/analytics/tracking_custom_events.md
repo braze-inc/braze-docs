@@ -12,7 +12,7 @@ description: "この記事では、カスタム・イベントのトラッキン
 
 > Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。
 
-実装する前に、カスタムイベント、カスタム属性、購入イベントによって提供されるセグメンテーションオプションの例を、[ベストプラクティスで]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices)確認してほしい。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices)のカスタムイベント、カスタム属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ```javascript
 braze.logCustomEvent("YOUR-EVENT-NAME");
@@ -22,9 +22,9 @@ braze.logCustomEvent("YOUR-EVENT-NAME");
 
 ## プロパティ {#properties-events} の追加
 
-オプションとして、カスタム・イベントにプロパティ・オブジェクトを渡すことで、カスタム・イベントに関するメタデータを追加することができる。
+カスタムイベントとともにプロパティオブジェクトを渡すことで、カスタムイベントに関するメタデータを追加することもできます。
 
-プロパティはキーと値のペアとして定義されています。キーは文字列で、値は`string` 、`numeric` 、`boolean` 、またはオブジェクトである。 [`Date`][2]オブジェクトである。
+プロパティはキーと値のペアとして定義されています。キーは文字列で、値は `string`、`numeric`、`boolean`、または [`Date`][2] オブジェクトになります。
 
 ```javascript
 braze.logCustomEvent("YOUR-EVENT-NAME", {
@@ -39,7 +39,7 @@ braze.logCustomEvent("YOUR-EVENT-NAME", {
 });
 ```
 
-詳しくは[`logCustomEvent()` のドキュメントを][1]参照のこと。
+詳細については、[`logCustomEvent()` のドキュメント][1]を参照してください。
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent

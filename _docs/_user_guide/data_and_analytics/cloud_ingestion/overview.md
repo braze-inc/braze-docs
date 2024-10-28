@@ -352,11 +352,15 @@ Each time a sync runs, Braze looks for rows that have not previously been synced
 
 Data point consumption is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
 
-### Use a UTC timestamp for the UPDATED_AT column
+### Use a UTC timestamp for the `UPDATED_AT` column
 
 The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
 
-### Separate EXTERNAL_ID from PAYLOAD column
+### Make sure the `UPDATED_AT` time isn't the same time as your sync
+
+Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as your previous sync time. This is because the CDI will choose an "inclusive boundary" when it spots any row that is the same time as the previous sync, and will make the rows viable to sync. The CDI will re-ingest those rows and create duplicate data. 
+
+### Separate `EXTERNAL_ID` from `PAYLOAD` column
 
 The `PAYLOAD` object should not include an external ID or other ID type. 
 
@@ -479,7 +483,7 @@ SELECT
 {% endtab %}
 {% endtabs %}
 
-### Use the UPDATED_AT timestamp
+### Use the `UPDATED_AT` timestamp
 
 We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
 - If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 

@@ -104,9 +104,9 @@ A declared use case means you have chosen one specific non-marketing use case (f
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed/Marketing Use Case %}
+{% tab Mixed Marketing Use Case %}
 
-Mixed/Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
+Mixed marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |

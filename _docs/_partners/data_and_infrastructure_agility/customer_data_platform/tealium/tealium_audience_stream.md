@@ -144,7 +144,7 @@ Not all fields offered are required.
 {% endalert %}
 
 {% tabs local %}
-{% tab Track User (Batch and Non-Batch) %}
+{% tab Track User - Batch and Non-Batch %}
 
 This action allows you to track user, event, and purchase attributes all in one action. Although the Track User action is the same for both AudienceStream and EventStream, Tealium recommends setting user attribute mappings with AudienceStream actions and the event and purchase mappings with EventStream actions.
 
@@ -164,7 +164,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Delete User (Non-Batch) %}
+{% tab Delete User - Non-Batch %}
 
 This action allows you to delete users from the Braze dashboard.
 
@@ -176,7 +176,7 @@ This action allows you to delete users from the Braze dashboard.
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Update User Subscription Group Status (Non-Batch) %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 This action allows you to add or remove users from Braze SMS or email subscription groups.
 
 | Parameters | Description |

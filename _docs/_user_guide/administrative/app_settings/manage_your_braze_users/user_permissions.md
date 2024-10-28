@@ -42,6 +42,10 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
+### How do permission sets and roles differ from teams?
+
+Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
+
 ## Editing a user's permissions
 
 To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
@@ -150,4 +154,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 |Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|
 |Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
+|Workspace|Create and Edit Canvas Templates|Allows users to create and edit Canvas templates.|
+|Workspace|View Canvas Templates|Allows users to view Canvas templates.|
+|Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

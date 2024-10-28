@@ -6,19 +6,14 @@ description: "This reference article covers how chat with users by using templat
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/messaging_users/
+alias: /line/messaging_users/
 ---
 
 # Messaging LINE users
 
-> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
+> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases. This article covers the details of messaging users, such as how to set trigger words for inbound messages and unrecognized responses.
 
 There are various methods to converse with users through LINE, such as using LINE trigger words. You can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
-
-{% alert important %}
-LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
-{% endalert %}
 
 ## Action-based triggers
 

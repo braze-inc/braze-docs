@@ -60,6 +60,8 @@ The editor uses two types of components for landing page composition: rows and b
 
 #### Form block
 
+Use various form block components to log custom and standard profile attributes and custom events. The input field form block can log both standard and custom attributes for your users, and the phone capture and email capture form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both on form submission. 
+
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
 ![A form block that registers a new customer and will send a discount code to their email.][5]{: style="max-width:70%;"}
@@ -111,7 +113,7 @@ During the beta, each form submission on a landing page will create a new anonym
 When a user submits a form, a new Braze user profile is created with the submitted user data.
 
 {% alert note %}
-During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page.
+During the beta, Braze will create a new user upon every form submission.
 {% endalert %}
 
 ### Are there any technical requirements to publish a landing page?

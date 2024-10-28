@@ -97,7 +97,7 @@ These are the available Braze custom attributes. For more detailed information, 
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
 
-{% tab Player Sustain (Player potential risk) %}
+{% tab Player Sustain - Player potential risk %}
 
 | Subcategory | Example | Datatype |
 | ------- | ----------- |----------- |

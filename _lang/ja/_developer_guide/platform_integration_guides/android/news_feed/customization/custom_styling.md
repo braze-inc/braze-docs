@@ -54,7 +54,7 @@ Braze の UI 要素は、Android 標準の UI ガイドラインにマッチし�
 </style>
 ```
 {% endtab %}
-{% tab スタイル・オーバーライドが正しくない %}
+{% tab スタイルのオーバーライドが正しくない %}
 
 ```xml
 <style name="Braze.Feed.List">

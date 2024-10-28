@@ -9,7 +9,7 @@ description: "이 문서에서는 캔버스 데이터 요약 내보내기 분석
 
 ---
 {% api %}
-# Export Canvas 데이터 요약 분석
+# 내보내기 캔버스 데이터 요약 분석
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}
@@ -26,17 +26,17 @@ description: "이 문서에서는 캔버스 데이터 요약 내보내기 분석
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 필수 | 문자열 | [Canvas API 식별자]({{site.baseurl}}/api/identifier_types/)를 참조하세요. |
-| `ending_at` | 필수 | 날짜/시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 내보내기가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
-| `starting_at` | 옵션* | 날짜/시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 내보내기를 시작해야 하는 날짜입니다. <br><br>* `length` 또는 `starting_at` 중 하나는 필수입니다. |
-| `length` | 옵션* | 문자열 | 반환된 계열에 `ending_at`을 포함할 때까지의 최대 일 수입니다. 1에서 14(포함) 사이여야 합니다. <br><br>* `length` 또는 `starting_at` 중 하나는 필수입니다. |
-| `include_variant_breakdown` | 선택 사항 | 부울 | 배리언트 통계를 포함할지 여부(기본값 `false`)입니다.  |
-| `include_step_breakdown` | 선택 사항 | 부울 | 단계 통계를 포함할지 여부(기본값 `false`)입니다. |
-| `include_deleted_step_data` | 선택 사항 | 부울 | 삭제된 단계에 대한 단계 통계를 포함할지 여부(기본값 `false`)입니다. |
+| `canvas_id` | 필수 | 문자열 | [캔버스 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+| `ending_at` | 필수 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 내보내기가 종료되는 날짜입니다. 기본값은 요청 시간입니다. |
+| `starting_at` | 선택 사항* | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 내보내기를 시작해야 하는 날짜입니다. <br><br>* `length` 또는 `starting_at` 중 하나가 필요합니다. |
+| `length` | 선택 사항* | 문자열 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일수입니다. 1에서 14(포함) 사이여야 합니다. <br><br>* `length` 또는 `starting_at` 중 하나가 필요합니다. |
+| `include_variant_breakdown` | 선택 사항 | 부울 | 이형 상품 통계를 포함할지 여부(기본값은 `false`)입니다.  |
+| `include_step_breakdown` | 선택 사항 | 부울 | 걸음 수 통계를 포함할지 여부(기본값은 `false`)입니다. |
+| `include_deleted_step_data` | 선택 사항 | 부울 | 삭제된 단계에 대한 단계 통계를 포함할지 여부(기본값은 `false`)입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

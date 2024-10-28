@@ -7,10 +7,10 @@ description: "この記事には2020年1月のリリースノートが含まれ�
 ---
 # 2020年1月
 
-新しい年、新しい10年へようこそ！ 
+お正月と新10年へようこそ！ 
 
 ## SMS機能を追加
 
-Brazeでは、SMSメッセージの頻度]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) ) に上限を設定できるようになった。追加された\[セグメントフィルター]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS")を実装することもできる。
+Braze では、SMS メッセージの頻度を\[cap the frequency]({{ site.baseurl}}/user_guide/エンゲージメント_tools/campaigns/testing_and_more/rate-limiting/) とすることができます。追加された\[セグメントフィルター]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS")を実装することもできる。
 
 ユーザー設定と動作の詳細については、[SMSキーワード](/docs/user_guide/message_building_by_channel/sms/keywords/)処理を参照のこと。

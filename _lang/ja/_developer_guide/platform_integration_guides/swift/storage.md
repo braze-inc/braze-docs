@@ -15,7 +15,7 @@ description: "このリファレンス記事では、Braze iOS Swift SDKによ�
 
 デフォルトでは、Braze は以下の[デバイスレベルプロパティ][1]を収集し、デバイス、言語、タイムゾーンベースのメッセージのパーソナライズを可能にします。
 
-* デバイスキャリア[（`CTCarrier` 非推奨に関する][2]注記を参照のこと）
+* デバイスの通信事業者 ([`CTCarrier` 非推奨][2]に関する注記を参照)
 * デバイスのロケール
 * デバイスモデル
 * デバイス OS のバージョン
@@ -26,25 +26,25 @@ description: "このリファレンス記事では、Braze iOS Swift SDKによ�
 * デバイスのタイムゾーン
 
 {% alert note %}
-Braze SDK はIDFA を自動的に収集しません。アプリは、以下のメソッドを直接実装することで、オプションでIDFAをBrazeに渡すことができる。アプリは、IDFAをBrazeに渡す前に、App Tracking Transparencyフレームワークを通じてエンドユーザーからトラッキングに対する明示的なオプトインを得なければならない。
+Braze SDK はIDFA を自動的に収集しません。アプリはオプションで、以下のメソッドを直接実装することで IDFA を Braze に渡すことができます。アプリは IDFA を Braze に渡す前に、アプリトラッキングの透明性フレームワークを通じてエンドユーザーによるトラッキングへの明示的なオプトインを取得する必要があります。
 
-1. 広告のトラッキング状態を設定するには [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/).
-2. 広告主の識別子（IDFA）を設定するには、以下を使用する。 [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
+1. 広告のトラッキング状態を設定するには [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/) を使用します。
+2. 広告主の識別子 (IDFA) を設定するには、[`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/) を使用します。
 {% endalert %}
 
-設定可能なデバイスフィールドは、[`Braze.Configuration.DeviceProperty`][1] 列挙で定義されます。許可リストにしたいデバイス・フィールドを無効にしたり指定したりするには、 オブジェクトの [`devicePropertyAllowList`][3]`configuration` プロパティに追加する。
+設定可能なデバイスフィールドは、[`Braze.Configuration.DeviceProperty`][1] 列挙で定義されます。許可リストに登録したいデバイスフィールドを無効化または指定するには、`configuration` オブジェクトの [`devicePropertyAllowList`][3] プロパティにフィールドを追加します。
 
 たとえば、許可リストに登録するタイムゾーンとロケール収集を指定するには、次のように設定します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 configuration.devicePropertyAllowList = [.timeZone, .locale]
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 configuration.devicePropertyAllowList = @[

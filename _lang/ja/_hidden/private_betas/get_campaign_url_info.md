@@ -65,8 +65,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `Missing/Invalid Campaign ID` | キャンペーンAPI IDはAPI識別子でなければなりません。エクスポートキャンペーンリストエンドポイント[}を使用するか、ダッシュボードにログインすることでこれを見つけることができます。]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) |
-| `Missing/Invalid Message Variant ID` | メッセージバリアントAPI IDはAPI識別子でなければなりません。これは、[エクスポートキャンペーンの詳細エンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)を使用するか、ダッシュボードにログインして確認できます。 |
+| `Missing/Invalid Campaign ID` | キャンペーンAPI IDはAPI識別子でなければなりません。これは、[キャンペーンリストのエクスポートエンドポイントを]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)使うか、ダッシュボードにログインすることで確認できます。 |
+| `Missing/Invalid Message Variant ID` | メッセージバリアントAPI IDはAPI識別子でなければなりません。これは、[キャンペーン詳細のエクスポートエンドポイントを]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)使うか、ダッシュボードにログインすることで確認できます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

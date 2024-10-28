@@ -8,7 +8,7 @@ page_type: reference
 
 # ウェブ用SDKの初期セットアップ
 
-> この参考記事では、Braze Web SDKのインストール方法について説明する。Braze Web SDKを使えば、アナリティクスを収集し、リッチなアプリ内メッセージ、プッシュ、コンテンツカードメッセージをウェブユーザーに表示することができる。完全な技術リファレンスは[JavaScriptドキュメントを][9]参照のこと。
+> このリファレンス記事では、Braze Web SDK のインストール方法について説明します。Braze Web SDK を使えば、分析を収集し、豊富なアプリ内メッセージ、プッシュ、コンテンツカードメッセージを Web ユーザーに表示することができます。完全な技術リファレンスは[JavaScriptドキュメントを][9]参照のこと。
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -21,10 +21,10 @@ Brazeライブラリは、以下のいずれかの方法でインストールで
 {% endalert %}
 
 {% tabs local %}
-{% tab パッケージマネージャ %}
+{% tab package manager %}
 あなたのサイトがNPMまたはYarnパッケージマネージャを使用している場合、依存関係として[Braze NPMパッケージを](https://www.npmjs.com/package/@braze/web-sdk)追加することができる。
 
-v3.0.0からタイプスクリプトの定義が含まれるようになった。2.xから3.xへのアップグレードに関する注意事項は、[変更履歴を](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md)参照のこと。
+v3.0.0 からタイプスクリプトの定義が含まれるようになりました。2.x から 3.x へのアップグレードに関する注意事項については、[changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md) を参照してください。
 
 ```bash
 npm install --save @braze/web-sdk
@@ -32,7 +32,7 @@ npm install --save @braze/web-sdk
 # yarn add @braze/web-sdk
 ```
 
-インストールが完了したら、`import` または`require` ライブラリを通常の方法でインストールすることができる：
+インストール後は、通常の方法でライブラリを `import` または `require` できます。
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -41,16 +41,16 @@ const braze = require("@braze/web-sdk");
 ```
 {% endtab %}
 
-{% tab グーグルタグマネージャー %}
-Braze Web SDKは、Google Tag Manager Template Libraryからインストールできる。つのタグがサポートされている：
+{% tab Google Tag Manager %}
+Braze Web SDK は、Google Tag Manager テンプレートライブラリからインストールできます。つのタグがサポートされている：
 
 1. 初期化タグ：Web SDKをウェブサイトにロードし、オプションで外部ユーザーIDを設定する。
-2. Actionsタグ：カスタムイベントのトリガー、購入、ユーザーIDの変更、SDKトラッキングの切り替えに使用する。
+2. アクションタグ： カスタムイベント、購入、ユーザー ID の変更、または SDK トラッキングの切り替えをトリガーするために使用されます。
 
-詳しくは[Google Tag Manager統合ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/)参照。
+詳しくは [Google Tag Manager 統合ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/)参照してください。
 {% endtab %}
 
-{% tab ブレイズCDN %}
+{% tab Braze cdn %}
 Braze Web SDKをHTMLに直接追加するには、当社のCDNホストスクリプトを参照し、ライブラリを非同期で読み込む。
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
@@ -59,13 +59,13 @@ Braze Web SDKをHTMLに直接追加するには、当社のCDNホストスクリ
 
 ## ステップ2:SDK の初期化
 
-WebサイトにBraze Web SDKを追加したら、Brazeダッシュボード内の**Settings**>**App Settingsに**あるAPIキーと[SDKエンドポイントURLで]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)ライブラリを初期化する。
+Braze Web SDK を Web サイトに追加したら、Braze ダッシュボードの \[**設定**] > \[**アプリ設定**] にある API キーと [SDK エンドポイント URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) を使用してライブラリを初期化します。
 
 {% alert note %}
 タグマネージャーでBrazeの初期化オプションを設定している場合は、このステップを省略できる。
 {% endalert %}
 
-他のJavaScriptメソッドとともに、`braze.initialize()` のオプションの完全なリストについては、[JavaScriptのドキュメントを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)参照のこと。
+`braze.initialize()` およびその他の JavaScript メソッドのオプションの完全なリストについては、[JavaScript のドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)を参照してください。
 
 ```javascript
 // initialize the SDK
@@ -92,28 +92,28 @@ braze.openSession();
 ```
 
 {% alert important %}
-モバイルやウェブデバイスの匿名ユーザーは、[MAUに]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users)カウントされる可能性がある。その結果、これらのユーザーをMAUカウントから除外するために、条件付きでSDKをロードするか、初期化したい場合がある。
+モバイルデバイスまたは Web デバイスの匿名ユーザーは、[MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users) にカウントされる場合があります。その結果、これらのユーザーをMAUカウントから除外するために、条件付きでSDKをロードするか、初期化したい場合がある。
 {% endalert %}
 
 ## ステップ 3:プッシュ通知を設定する（オプション）
 
-Braze Web SDKのプッシュ通知を設定するには、追加の設定が必要である。詳しい説明は、[プッシュ通知（ウェブ版]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)）を参照のこと。
+Braze Web SDK のプッシュ通知を設定するには、追加の設定が必要です。詳しい説明は、[プッシュ通知（ウェブ版]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)）を参照のこと。
 
 ## ロギング
 
-素早くロギングを有効にするには、ウェブサイトのURLにパラメータとして`?brazeLogging=true` 。あるいは、[基本](#basic-logging)ロギングまたは[カスタム・](#custom-logging)ロギングを有効にすることもできる。
+ロギングをすばやく有効にするには、`?brazeLogging=true` をパラメーターとして Web サイト URL に追加します。あるいは、[基本](#basic-logging)ロギングまたは[カスタム・](#custom-logging)ロギングを有効にすることもできる。
 
 ### 基本的なロギング
 
 {% tabs local %}
 {% tab 初期化前 %}
-`enableLogging` 、SDKが初期化される前に、基本的なデバッグメッセージをjavascriptコンソールに記録する。
+`enableLogging` を使用して、SDK が初期化される前に基本的なデバッグメッセージを javascript コンソールに記録します。
 
 ```javascript
 enableLogging: true
 ```
 
-あなたのやり方は次のようなものであるべきだ：
+メソッドは次のようになるはずです。
 
 ```javascript
 braze.initialize('API-KEY', {
@@ -125,7 +125,7 @@ braze.openSession();
 {% endtab %}
 
 {% tab 初期化後 %}
-`braze.toggleLogging()` 、SDKが初期化された後、基本的なデバッグメッセージをjavascriptコンソールに記録する。あなたのやり方は次のようなものであるべきだ：
+SDK の初期化後に基本的なデバッグメッセージを javascript コンソールに記録するには、`braze.toggleLogging()` を使用します。メソッドは次のようになるはずです。
 
 ```javascript
 braze.initialize('API-KEY', {
@@ -139,18 +139,18 @@ braze.toggleLogging();
 {% endtabs %}
 
 {% alert important %}
-基本ログはすべてのユーザーが見ることができる。 [`setLogger`](#custom-logging)に切り替えることを検討すること。
+基本ログはすべてのユーザーに表示されるため、コードを本番環境にリリースする前に、無効にすることを検討するか、[`setLogger`](#custom-logging) に切り替えてください。
 {% endalert %}
 
-### カスタム・ロギング
+### カスタムロギング
 
-`setLogger` 、カスタム・デバッグ・メッセージをJavaScriptコンソールに記録する。基本ログとは異なり、これらのログはユーザーには見えない。
+`setLogger` を使用して、カスタムデバッグメッセージを javascript コンソールに記録します。基本ログとは異なり、これらのログはユーザーには見えない。
 
 ```javascript
 setLogger(loggerFunction: (message: STRING) => void): void
 ```
 
-`STRING` 、1つの文字列パラメータとしてあなたのメッセージに置き換える。あなたのやり方は次のようなものであるべきだ：
+`STRING` を1つの文字列パラメーターとしてメッセージに置き換えます。メソッドは次のようになるはずです。
 
 ```javascript
 braze.initialize('API-KEY');
@@ -166,14 +166,14 @@ braze.openSession();
 
 Braze Web SDKを当社のコンテンツデリバリーネットワーク、例えば`https://js.appboycdn.com/web-sdk/a.a/braze.min.js` （当社のデフォルトの統合手順で推奨されている）から参照すると、ユーザーがサイトを更新したときに、マイナーアップデート（バグフィックスと下位互換機能、上記の例ではバージョン`a.a.a` ～`a.a.z` ）を自動的に受け取ることができる。
 
-ただし、弊社が大きな変更をリリースする際には、Braze Web SDKを手動でアップグレードしていただき、お客様のインテグレーションが変更によって影響を受けることがないようにしています。さらに、当社のSDKをダウンロードして自分でホスティングする場合、バージョン・アップデートを自動的に受け取ることはできないので、最新の機能やバグ修正を受け取るには手動でアップグレードする必要がある。
+ただし、当社が大きな変更をリリースする場合は、Braze Web SDK を手動でアップグレードして、統合に重大な変更の影響がないようにする必要があります。さらに、当社のSDKをダウンロードして自分でホスティングする場合、バージョン・アップデートを自動的に受け取ることはできないので、最新の機能やバグ修正を受け取るには手動でアップグレードする必要がある。
 
-RSSリーダーやお好みのサービスを使って[、リリース・フィードをフォローすることで](https://github.com/braze-inc/braze-web-sdk/tags.atom)、最新のリリース情報を入手することができる。また、Web SDKのリリース履歴については、[変更履歴を](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)参照されたい。Braze Web SDKをアップグレードする：
+RSS Reader または任意のサービスを使用して、[リリースフィードに従って](https://github.com/braze-inc/braze-web-sdk/tags.atom)最新のリリースを取得できます。また、Web SDK のリリース履歴の詳細については、[変更ログ](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)を参照してください。Braze Web SDKをアップグレードする：
 
-- `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js` 、またはパッケージマネージャの依存関係のバージョン番号を変更して、Brazeライブラリのバージョンを更新する。
-- ウェブプッシュを統合している場合、サイトのサービスワーカーファイルを更新する。デフォルトでは、このファイルはサイトのルートディレクトリの`/service-worker.js` にあるが、統合によっては場所がカスタマイズされることもある。サービスワーカーファイルをホストするには、ルートディレクトリにアクセスしなければならない。
+- バージョン番号 `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js` を変更するか、パッケージマネージャーの依存関係で、Braze ライブラリのバージョンを更新します。
+- Web プッシュが統合されている場合は、サイトのサービスワーカーファイルを更新します。デフォルトでは、このファイルはサイトのルートディレクトリの`/service-worker.js` にありますが、統合によっては場所がカスタマイズされている場合があります。サービスワーカーファイルをホストするには、ルートディレクトリにアクセスしなければならない。
 
-これら2つのファイルは、適切な機能を発揮するために、互いに連携して更新されなければならない。
+これら2つのファイルを適切に機能させるには、相互に連携して更新する必要があります。
 
 ## 別の統合方法
 
@@ -181,7 +181,7 @@ RSSリーダーやお好みのサービスを使って[、リリース・フィ�
 
 Next.js のようなサーバーサイド・レンダリング・フレームワークを使用している場合、SDKはブラウザ環境で実行されることを想定しているため、エラーが発生する可能性がある。これらの問題は、SDKを動的にインポートすることで解決できる。
 
-その際、SDKの必要な部分を別のファイルにエクスポートし、そのファイルをコンポーネントに動的にインポートすることで、ツリーシェイキングの利点を維持することができる。
+必要な SDK の部分を別のファイルにエクスポートし、そのファイルをコンポーネントに動的にインポートすることで、ツリーシェイクの利点を維持できます。
 
 ```javascript
 // MyComponent/braze-exports.js
@@ -219,7 +219,7 @@ useEffect(() => {
 }, []);
 ```
 
-### バイトサポート {#vite}
+### Vite でのサポート {#vite}
 
 Viteを使用していて、循環依存関係や`Uncaught TypeError: Class extends value undefined is not a constructor or null` に関する警告が表示される場合は、Braze SDKを[依存関係の発見から](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior)除外する必要があるかもしれない：
 
@@ -229,13 +229,13 @@ optimizeDeps: {
 },
 ```
 
-### 電子サポート {#electron}
+### Electron でのサポート {#electron}
 
-Electronは公式にはウェブプッシュ通知をサポートしていない（参照：[GitHub issue](https://github.com/electron/electron/issues/6697)）。Brazeがテストしていない[オープンソースの回避策を](https://github.com/MatthieuLemoine/electron-push-receiver)試すこともできる。
+Electron は公式には Web プッシュ通知をサポートしていません (参照： この [GitHub issue](https://github.com/electron/electron/issues/6697))。Brazeがテストしていない[オープンソースの回避策を](https://github.com/MatthieuLemoine/electron-push-receiver)試すこともできる。
 
 ### AMDモジュール・ローダー
 
-RequireJSや他のAMDモジュールローダーを使用する場合は、我々のライブラリのコピーをセルフホストし、他のリソースと同じように参照することを推奨する：
+RequireJS または他の AMD モジュールローダーを使用する場合は、ライブラリのコピーをセルフホスティングし、他のリソースと同様に参照することをお勧めします。
 
 ```javascript
 require(['path/to/braze.min.js'], function(braze) {
@@ -246,21 +246,21 @@ require(['path/to/braze.min.js'], function(braze) {
 ```
 ### 代替案 AMDを設置しない
 
-あなたのサイトがRequireJSまたは他のAMDモジュールローダーを使用しているが、上記の他のオプションのいずれかを使用してBraze Web SDKをロードすることを好む場合、AMDサポートを含まないバージョンのライブラリをロードすることができる。このバージョンのライブラリーは、以下のCDNの場所からロードできる：
+サイトで RequireJS または別の AMD モジュールローダーを使用しているが、上記の他のオプションのいずれかを使用して Braze Web SDK をロードしたい場合は、AMD サポートを含まないバージョンのライブラリをロードできます。このバージョンのライブラリーは、以下のCDNの場所からロードできる：
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-### ティーリウムiQ
-Tealium iQは、基本的なターンキーBrazeインテグレーションを提供する。統合を設定するには、Tealium Tag ManagementインターフェイスでBrazeを検索し、ダッシュボードからWeb SDK APIキーを提供する。
+### Tealium iQ
+Tealium iQは、基本的なターンキー Braze 統合を提供します。統合を構成するには、Tealium Tag Management インターフェイスで Braze を検索し、ダッシュボードから Web SDK API キーを指定します。
 
-詳細や詳細なTealium設定サポートについては、[統合ドキュメントを]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium)ご覧になるか、Tealiumアカウントマネージャーにお問い合わせいただきたい。
+詳細または Tealium 構成サポートに関する詳細については、[統合ドキュメント]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium)を確認するか、Tealium アカウントマネージャーにお問い合わせください。
 
 ### その他のタグ・マネージャー
 Brazeは、カスタムHTMLタグの中で当社の統合指示に従うことにより、他のタグ管理ソリューションと互換性を持つこともできる。これらのソリューションの評価についてサポートが必要な場合は、Brazeの担当者に連絡すること。
 
 ### Jestフレームワークのトラブルシューティング {#jest}
 
-Jestを使用している場合、`SyntaxError: Unexpected token 'export'` のようなエラーが表示されることがある。これを修正するには、`package.json` の設定を調整して、Braze SDKを無視するようにする：
+Jestを使用している場合、`SyntaxError: Unexpected token 'export'` のようなエラーが表示されることがある。これを修正するには、Braze SDK を無視するように `package.json` の設定を調整します。
 
 ```
 "jest": {

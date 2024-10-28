@@ -248,11 +248,11 @@ REST API を使用してユーザー属性を設定することもできます�
 
 ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType` または `setPushNotificationSubscriptionType` を呼び出します。これらの関数では、いずれも引数として列挙型 `ABKNotificationSubscriptionType` が使用されます。この型には、次の 3 つの状態があります。
 
-| サブスクリプション ステータス | 定義 |
+| サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `ABKOptedin` | 購読し、明示的にオプトインしました |
-| `ABKSubscribed` | 購読しましたが、明示的にオプトインしていません |
-| `ABKUnsubscribed` | 購読を解除し、明示的にオプトアウトしました |
+| `ABKOptedin` | 配信登録済み、かつ明示的にオプトイン済み |
+| `ABKSubscribed` | 購読済み、ただし明示的に選択されていない |
+| `ABKUnsubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 アプリにプッシュ通知の送信を許可するユーザーは、iOS で明示的なオプトインが必要であるため、ステータス `ABKOptedin` にデフォルト設定されます。

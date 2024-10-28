@@ -40,7 +40,7 @@ main() {
 
         # Print the deploy text for each deployment.
         echo "## $COMMIT_BODY"
-        ./scripts/deploy_text.sh "$PREV_COMMIT_DATE" "$COMMIT_DATE"
+        ./scripts/create_deploy_text.sh "$PREV_COMMIT_DATE" "$COMMIT_DATE"
         echo ""
 
         # Get the next range of commits by increasing 'PREV_COMMIT_DATE'.
