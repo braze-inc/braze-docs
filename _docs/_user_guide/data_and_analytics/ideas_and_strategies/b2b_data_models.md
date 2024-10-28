@@ -48,7 +48,7 @@ There are two methods to create and manage your business objects in Braze
 
 Catalogs are data tables that are hosted and managed in Braze. While account and opportunity data originates from your sales CRM system of choice, you would be duplicating these in Braze to be used for marketing purposes: account-based segmentation, account-based marketing, lead management, and more.
 
-For this option, we recommend creating one catalog for your accounts and one for your opportunities, and updating them frequently by sending Braze updates through our catalogs API or catalogs Cloud Data Ingestion (CDI). When creating these catalogs, make sure the `id` (first column) of your catalog matches the `id` in your sales CRM system.
+For this option, we recommend creating one catalog for your accounts and one for your opportunities, and updating them frequently by sending Braze updates through our [catalogs API]({{site.baseurl}}/api/endpoints/catalogs/) or [catalogs Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/). When creating these catalogs, make sure the `id` (first column) of your catalog matches the `id` in your sales CRM system.
 
 #### Map over your CRM fields
 
@@ -137,7 +137,7 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
 
 ### Option 2: Use connected sources for accounts and opportunities
 
-Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze CDI segments. Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
+Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
 
 To set up connected sources, refer to [Integrating connected sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
@@ -145,7 +145,7 @@ To set up connected sources, refer to [Integrating connected sources]({{site.bas
 
 User profiles are the primary object in Braze, which power the majority of your demographic segmentation, triggering and personalization. User profiles include [default user data]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) collected by our SDK and other sources, including [custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), which takes the form of either attributes (demographic data), events (behavioral data) or purchases (transactional data).
 
-### Step 1: Map sales CRM IDs to Braze
+### Step 2.1: Map sales CRM IDs to Braze
 
 First, you’ll want to make sure Braze and your CRM of choice have a common identifier to share data to. We suggest using the following table to map your sales CRM ID fields back to the Braze user object. The table below has Salesforce as the CRM system, but this can be done with any CRM.
 
@@ -165,7 +165,7 @@ We recommend using [aliases]({{site.baseurl}}/user_guide/data_and_analytics/user
 
 After you have your IDs in sync, you’ll need to relate your Braze user profiles with your business objects. 
 
-### Step 2: Create a relationship between user profiles and your business objects
+### Step 2.2: Create a relationship between user profiles and your business objects
 
 #### Option 1: When using Catalogs for business objects
 
