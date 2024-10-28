@@ -73,7 +73,7 @@ You can also use templates in a catalog name. For example, you can use the follo
 ```liquid
 {% assign language = "content_spanish" %}
 
-{% catalog_items language fall_campaign %}
+{% catalog_items {{language}} fall_campaign %}
 {{ items[0].body }}
 ```
 {% endraw %}
