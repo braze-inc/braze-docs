@@ -304,4 +304,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
 - name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
 ---
