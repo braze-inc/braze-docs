@@ -374,12 +374,7 @@
     }
 
     // Hack the sticky header
-    > h1[id],
-    > h2[id],
-    > h3[id],
-    > h4[id],
-    > h5[id],
-    > h6[id] {
+    .anchor {
       pointer-events: none;
 
       > div,
@@ -387,13 +382,10 @@
         pointer-events: auto;
       }
 
-      &::before {
-        display: block;
-        height: $calc_offset_top;
-        margin-top: -$calc_offset_top;
-        visibility: hidden;
-        content: "";
-      }
+      display: block;
+      height: $calc_offset_top;
+      margin-top: -$calc_offset_top;
+      visibility: hidden;
       @media print {
         &::before {
           display: none;
@@ -407,7 +399,6 @@
         }
       }
     }
-
   }
 
 
