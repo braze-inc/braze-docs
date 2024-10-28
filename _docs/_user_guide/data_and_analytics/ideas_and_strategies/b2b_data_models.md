@@ -24,7 +24,7 @@ There are four primary B2B objects that you need to execute B2B campaigns.
 | Accounts | A record of an organization that is a qualified potential customer, an existing customer, a partner, or a competitor who has a relationship of similar significance. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-Within Braze, we think of these as two objects.
+Within Braze, we organize these four objects as two objects.
 
 | Object | Description |
 | --- | --- |
