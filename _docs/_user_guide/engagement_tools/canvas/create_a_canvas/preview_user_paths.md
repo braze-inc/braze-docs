@@ -1,6 +1,7 @@
 ---
 nav_title: Preview User Paths
 article_title: Preview User Paths
+page_order: 0.3
 alias: /preview_user_paths/
 description: "This reference article covers how to preview user paths in Canvas."
 Tool:

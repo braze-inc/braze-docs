@@ -8,9 +8,9 @@ description: "この記事には2021年8月のリリースノートが含まれ�
 
 # 2021年8月
 
-## Google オーディエンス Sync
+## Google オーディエンスの同期
 
-Braze [オーディエンス同期をGoogleに]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)統合により、ブランドはクロスチャネルの顧客ジャーニーの範囲をGoogle検索、Googleショッピング、Gmail、YouTube、およびGoogleディスプレイに拡張できます。ファーストパーティの顧客データを使用して、ダイナミックな行動トリガー、セグメンテーションなどに基づいて安全に広告を配信できます。Braze キャンバスの一部としてメッセージをトリガーするために通常使用する任意の基準（例えば、プッシュ、メール、SMSなど）を使用して、Googleの顧客マッチを介してそのユーザーに広告をトリガーすることができます。
+Braze [オーディエンス同期をGoogleに]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)統合により、ブランドはクロスチャネルの顧客ジャーニーの範囲をGoogle検索、Googleショッピング、Gmail、YouTube、およびGoogleディスプレイに拡張できます。ファーストパーティの顧客データを使用して、ダイナミックな行動トリガー、セグメンテーションなどに基づいて安全に広告を配信できます。通常、Braze キャンバスの一部としてメッセージ (プッシュ、メール、SMS など) をトリガーするために使用する基準は、Google のカスタマーマッチを介してそのユーザーに広告をトリガーするために使用できます。
 
 ## ベストプラクティスiOS SDK統合ガイド
 
@@ -22,11 +22,11 @@ Braze [オーディエンス同期をGoogleに]({{site.baseurl}}/partners/canvas
 
 ## ドラッグアンドドロップエディタ
 
-Brazeメールを使用すると、新しい[ドラッグアンドドロップ編集体験]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/)を使用して、キャンペーンやキャンバスのいずれかで完全にカスタムおよびパーソナライズされたメールメッセージを作成できます。ユーザーはエディターブロックをメールにドラッグできるようになり、より直感的なカスタマイズが可能になりました。 
+Braze メールでは、新しい[ドラッグ＆ドロップ編集エクスペリエンス]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/)を使用して、キャンペーンとキャンバスのいずれかで完全なカスタムメールメッセージおよびパーソナライズされたメールメッセージを作成できます。ユーザーはエディターブロックをメールにドラッグできるようになり、より直感的なカスタマイズが可能になりました。 
 
 ## ユーザーエイリアスインポート
 
-`external_id`を持っていないユーザーをターゲットにするには、[ユーザーのエイリアスを持つユーザーのリストをインポートする]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias)ことができます。エイリアスは、代替の一意のユーザー識別子として機能します。匿名ユーザーにマーケティングしようとしている場合、アカウントを作成していないユーザーに役立ちます。 
+`external_id`を持たないユーザーを対象にするには、[ユーザー別名を持つユーザーの一覧をインポートすることができます]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias)エイリアスは、代替の一意のユーザー識別子として機能します。これは、アプリにサインアップしていないか、アカウントを作成していない匿名ユーザーを対象とするマーケティングを行う場合に役立ちます。 
 
 ## iOS 15 アップグレード ガイド
 
@@ -40,9 +40,9 @@ Brazeメールを使用すると、新しい[ドラッグアンドドロップ�
 
 A2P 10DLCは、企業が標準的な10桁の長いコード（10DLC）電話番号を介してアプリケーションから人（A2P）タイプのメッセージングを送信できる米国のシステムを指します。10 桁の長いコードは、従来、個人間（P2P）トラフィック用に設計されていたため、企業はスループットの制限とフィルタリングの強化に悩まされていました。このサービスはこれらの問題を軽減し、全体的なメッセージの配信率を向上させ、ブランドがリンクやアクションを含むメッセージを大量に送信できるようにし、消費者を望まないメッセージからさらに保護するのに役立ちます。 
 
-現在、米国のロングコードを持っているお客様、または米国のお客様に送信するために米国のロングコードを使用しているお客様は、10DLCのためにロングコードを登録する必要があります。10DLCの詳細とその必要性について詳しくは、専用の[10DLC記事]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/)をご覧ください。
+米国のロングコードを現在所有しているか、米国の顧客に送信するために使用しているすべてのお客様が、10DLC のロングコードを登録する必要があります。10DLCの詳細とその必要性について詳しくは、専用の[10DLC記事]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/)をご覧ください。
 
-## 2 要素認証リセット
+## 2要素認証のリセット
 
 2 要素認証を使用してログインに問題が発生しているユーザーは、会社の管理者に連絡して[2 要素認証をリセット]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset)できます。
 
@@ -50,13 +50,13 @@ A2P 10DLCは、企業が標準的な10桁の長いコード（10DLC）電話番�
 
 ### Hightouch - ワークフローオートメーション
 
-Brazeと[Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/)の統合により、データウェアハウスからの最新の顧客データを使用して、Brazeでより良いキャンペーンを構築できます。お客様に関連性があり、タイムリーなやり取りを提供したいと考えており、そのためにはBrazeアカウントのデータが正確で新鮮であることが非常に重要です。データウェアハウスからBrazeに顧客データを自動的に同期することで、データの一貫性を心配する必要がなくなり、世界クラスの顧客体験の構築に集中できます。
+Brazeと[Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/)の統合により、データウェアハウスからの最新の顧客データを使用して、Brazeでより良いキャンペーンを構築できます。お客様に関連性があり、タイムリーなやり取りを提供したいと考えており、そのためにはBrazeアカウントのデータが正確で新鮮であることが非常に重要です。顧客データをデータウェアハウスから Braze に自動的に同期させることで、データの整合性を心配する必要がなくなり、世界レベルのカスタマーエクスペリエンスの構築に集中して取り組むことができます。
 
 ### Transcend - データプライバシーとコンプライアンス
 
-Brazeと[Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/transcend/)のパートナーシップは、数十のデータシステムにわたるデータを調整することで、ユーザーがプライバシーリクエストを自動化するのに役立ちます。最終的に、これはチームがGDPRやCCPAのような規制に準拠するのを助け、個人が自分のデータに関して主導権を握ることができます。
+Brazeと[Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/transcend/)のパートナーシップは、数十のデータシステムにわたるデータを調整することで、ユーザーがプライバシーリクエストを自動化するのに役立ちます。最終的に、これはチームが GDPR や CCPA などの規制に準拠するのに役立ち、個人が自分のデータに関して主導権を握ることができます。
 
-### Tinyclues - コホート Import
+### Tinyclues - コホートインポート
 
 [Tinyclues]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/tinyclues/)は、カスタマーエクスペリエンスを損なうことなくキャンペーン数と収益を増加させる機能を提供するオーディエンス構築機能であり、オンラインおよびオフラインのCRMキャンペーンのパフォーマンスを追跡するための分析を提供します。一緒に、BrazeとTinycluesの統合はユーザーにより良いCRM計画と戦略へのパスを提供し、ユーザーがよりターゲティングされたキャンペーンを送信し、新しい製品機会を見つけ、非常にユーザーフレンドリーなUIを使用して収益を向上させることを可能にします。
 

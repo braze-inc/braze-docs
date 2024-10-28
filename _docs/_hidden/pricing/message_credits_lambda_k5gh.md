@@ -8,14 +8,14 @@ hide_toc: true
 
 # Message Credits - Lambda (Confidential)
 
-> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page.
+> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. Message Credits provide a flexible and transparent experience when taking advantage of Braze messaging channels. Credits give you access to any of the channels presented in the table on this page.
 
 {% alert note %}
 Different channels will have different units of measure in reporting.<br><br>
 <b>WhatsApp:</b> Conversations<br>
 <b>SMS:</b> Segments<br>
 <b>MMS:</b> Segments<br><br>
-In other words, credits used for WhatsApp messages will be calculated on conversation initiations, and credits used for both SMS and MMS messages will be calculated on segments sent.
+In other words, credits per WhatsApp messages will be calculated on conversation initiations, and credits per for both SMS and MMS messages will be calculated on segments sent.
 <br><br>
 Lastly, carrier fees are billed separately (in arrears) and are not considered as part of this Message Credits SKU.
 {% endalert %}
@@ -28,7 +28,7 @@ Column definitions are as follows:
 | **Channel Credit Ratio** | Baseline credit amount for each channel |
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
-| **Credits Used with 1 Send** | Exact number of Message Credits used to send one message<br> (credits per message = channel credit ratio x destination multiplier)  |
+| **Credits per 1 Send** | Exact number of Message Credit to send one message<br> (credits per message = channel credit ratio x destination multiplier)  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -45,7 +45,7 @@ Column definitions are as follows:
         <th><b>Channel Credit Ratio</b></th>
         <th><b>Destination</b></th>
         <th><b>Multiplier</b></th>
-        <th class="credits-column"><b>Credits Used with 1 Send</b></th>
+        <th class="credits-column"><b>Credits per 1 Send</b></th>
     </tr>
     <tr>
         <td>SMS - US / CA</td>
@@ -2664,6 +2664,13 @@ Column definitions are as follows:
         <td>United Kingdom Utility</td>
         <td>0.58</td>
         <td>5.80</td>
+    </tr>
+    <tr>
+        <td>LINE</td>
+        <td>1</td>
+        <td>All regions</td>
+        <td>0.15</td>
+        <td>0.15</td>
     </tr>
 </table>
 {: .reset-td-br-1 .reset-td-br-2}

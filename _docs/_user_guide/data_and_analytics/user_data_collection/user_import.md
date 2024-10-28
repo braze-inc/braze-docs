@@ -10,8 +10,6 @@ description: "This reference article covers how to import users into your Braze 
 
 > Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
 
-{% multi_lang_include email-via-sms-warning.md %}
-
 Before proceeding, note that Braze does not sanitize (validate or properly format) HTML data during import. This means that script tags must be stripped for all import data meant for web personalization.
 
 When importing data into Braze that is specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  
@@ -267,6 +265,10 @@ User import can also be used to create segments by selecting **Automatically gen
 You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment after the import has been completed.
 
 The filter used to create the segment selects users who were created or updated in a selected import and is available with all other filters in the edit segment page.
+
+## Considerations
+
+{% multi_lang_include email-via-sms-warning.md %}
 
 ## Troubleshooting
 

@@ -3,34 +3,34 @@ nav_title: 7月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事は、2019年7月のリリースノートを含んでいます。"
+description: "この記事には、2019年7月のリリースノートが含まれています。"
 ---
 
 # 2019年7月
 
 {% alert update %}
-Brazeは今月、2回(その通り-**2回**)の商品発売がありました!最新のリリースが最上位に記録され、前のページ[ がさらにこのページ](#earlier-this-month) から始まります!
+Braze には今月、**2回**の製品リリースサイクルがありました。このページでは、最新のリリースが一番上に記載され、それより前のリリースは[その下に記載されています](#earlier-this-month)。
 {% endalert %}
 
 ## SAML/SSO
 
-[シングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) は、企業がBraze ダッシュボードへのアクセスをコントロールするための安全で集中的な方法を提供します。要するに、1 組の認証情報 s を使用して、Braze を含むさまざまなアプリアプリケーションにアクセスできます。
+[シングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) は、Braze ダッシュボードへのアクセスを制御する安全かつ一元化された方法を企業に提供します。つまり、1 組の認証情報を使用して、Braze を含むさまざまなアプリケーションにアクセスできます。
 
-OAuth 2.0 サポート を使用した[Google サインインに加えて、企業はSecurity Assertion Markup Language (SAML) サポートのSSO を希望しています。これにより、[Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) および[Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/) を含む大規模なID プロバイダ(IdP) とシームレスに統合できます。これは、最新の業界標準(SAML 2.0) に対応しています。
+[OAuth 2.0 サポートを使用した Google サインイン](https://developers.google.com/identity/protocols/OAuth2)に加えて、企業は Security Assertion Markup Language (SAML) サポートを使用した SSO を希望しています。これにより、[Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) および[Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/) を含む大規模なID プロバイダ(IdP) とシームレスに統合できます。これは、最新の業界標準(SAML 2.0) に対応しています。
 
-Brazeサポート:
+Braze は以下をサポートしています。
 - [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 - [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
 - [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
-## Adjust行事API キー番組
+## イベント API キー表示を調整する
 
-このAPI キーを顧客 s にアクセスできるようにするために、更新 d Adjust のパートナページがあります。
+Adjust のパートナーページを更新し、お客様がこの API キーにアクセスできるようにしました。
 
 ## 新パートナーズ
 
-いくつかの新しいパートナーが私たちのAlloysプログラムに参加し、私たちのDocsに追加されました！こんにちは。
-- [ファイブトラン]({{site.baseurl}}/partners/fivetran/)
+いくつかの新しいパートナーが Alloys プログラムに参加し、ドキュメントに追加されました。新しいパートナーは以下のとおりです。
+- [FiveTran]({{site.baseurl}}/partners/fivetran/)
 - [Talon.One]({{site.baseurl}}/partners/talonone/)
 - [Voucherify]({{site.baseurl}}/partners/voucherify/)
 
@@ -38,7 +38,7 @@ Brazeサポート:
 
 拡張キャンペーンの詳細が、**キャンペーン**ページの。..wait it...**キャンペーン詳細**セクションに表示されます!
 
-## Segment s & amp; Canvas では地雷のみを表示します
+## セグメントとキャンバスで自分のもののみを表示する
 
 "Show Only Mine" **Campaigns**ページのチェックフィルターは、非常に人気があることが証明されています。その結果、キャンバスとセグメントリストにもこのオプションを追加しています!
 
@@ -62,7 +62,7 @@ Braze ユーザープロファイル s とユーザー 検索で表示されて�
 
 外部サーバへの接続されたコンテンツコールは、カードが実際に送信されたときにアプリします。カードがユーザによって表示されたときではありません。メールと同様に、ダイナミックなの内容は、実際に表示されるときではなく、送信時に計算され決定されます。
 
-## Null & quot; 返信先" 住所
+## Null "; 返信先" 住所
 
 顧客は、メールメッセージの" 返信先" address に`null` 値を設定できるようになりました。Braze の** メール Settings** ページから、または[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification) を使用して設定します。 使用すると、リストされた"From"アドレスに返信が送信されます。 "From"address フィールドを`dan@emailaddress.com`としてパーソナライズできるようになりました。そして、あなたの顧客sは直接Danに返信することができます。
 

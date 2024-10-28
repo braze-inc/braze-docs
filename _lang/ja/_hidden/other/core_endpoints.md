@@ -1,5 +1,5 @@
 ---
-nav_title: コア・エンドポイント
+nav_title: コアエンドポイント
 permalink: "/core_endpoints/"
 hidden: true
 layout: dev_guide
@@ -7,7 +7,7 @@ layout: dev_guide
 
 # Braze Core APIエンドポイント
 
-BrazeのAPIコアエンドポイントは、Brazeアカウントのサービスレベルアグリーメント（SLA）に従って許容されるダウンタイムを持つBrazeのREST APIの特定のエンドポイントである。詳細については、SLAの文書を参照するか、アカウント・マネージャーに問い合わせること。 
+Braze の API コアエンドポイントは、Braze アカウントのサービスレベルアグリーメント (SLA) に従って許容されるダウンタイムを持つ Braze の REST API の特定のエンドポイントです。詳細については、SLA ドキュメントを参照するか、アカウントマネージャーに問い合わせてください。 
 
 核となるエンドポイントは以下の通りである：
 - [`/users/track`][1]

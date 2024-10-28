@@ -11,7 +11,7 @@ page_type: reference
 
 guide_featured_title: "記事"
 guide_featured_list:
-- name: データ保護技術支援
+- name: データ保護のテクニカルサポート
   link: /docs/dp-technical-assistance
   image: /assets/img/braze_icons/database-01.svg
 - name: スパム規制

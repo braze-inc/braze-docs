@@ -1,6 +1,6 @@
 ---
 permalink: /support_contact/
-nav_title: ヘルプ｜ブレイズ
+nav_title: ヘルプ | Braze
 hide_nav: true
 layout: basic
 hide_toc: true
@@ -1332,12 +1332,12 @@ $( document ).ready(function() {
  }
 });
 </script>
-<div id="firefox_warning" style="display:none;">Firefoxユーザーの場合、このサイトを許可リストに入れるか、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">トラッキング保護設定を</a>チェックする。</div>
+<div id="firefox_warning" style="display:none;">Firefox ユーザーの場合、このサイトを許可リストに入れるか、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">トラッキング保護設定</a>にチェックを入れてください。そうしないと、チケットが送信されない場合があります。</div>
 
 <div class="container-fluid" id="main-container">
       <div class="row">
           <div class="col" >
-              <h1 class="h1">お困りですか？</h1>
+              <h1 class="h1">お困りの場合</h1>
               <div class="gradient-line"></div>
           </div>
       </div>

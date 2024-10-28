@@ -361,7 +361,7 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 自動プッシュ統合を使用する場合、Braze によって処理されるリモート通知を受信する唯一の方法は `subscribeToUpdates(_:)` です。`UIAppDelegate` と `UNUserNotificationCenterDelegate` システムメソッドは、通知が Braze によって自動的に処理されるときには呼び出されません。
 {% endalert %}
 
-## {#push-testing} のテスト
+## のテスト {#push-testing}
 
 コマンドラインからアプリ内通知とプッシュ通知をテストする場合は、CURL と \[メッセージング API][29] を介してターミナルから単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 

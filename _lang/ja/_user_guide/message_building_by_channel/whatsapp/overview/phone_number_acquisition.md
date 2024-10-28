@@ -2,7 +2,7 @@
 nav_title: 電話番号取得
 article_title: 電話番号取得
 page_order: 3
-description: "この記事では、TwilioとInfobipから電話番号を取得する方法について説明します。"
+description: "この記事では、Twilio と Infobip から電話番号を取得する方法について説明します。"
 page_type: reference
 channel:
   - WhatsApp
@@ -10,15 +10,15 @@ channel:
 
 # 電話番号の取得
 
-> WhatsAppメッセージングチャネルを使用するには、[Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers)または[On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers)の要件を満たす電話番号が必要です。
+> WhatsApp メッセージングチャネルを使用するには、[Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) または [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers) の要件を満たす電話番号が必要です。
 
-電話番号は自分で取得する必要があります。Brazeは番号を提供しません。ビジネス電話プロバイダーを通じて物理的な電話をSIMカード付きで購入するか、当社のパートナーの1つを使用することができます。トゥイリオまたはインフォブリップ。**TwilioまたはInfobipのアカウントを持っている必要があります。これはBrazeを通じて行うことはできません。**
+電話番号は自分で取得する必要があります。Brazeは番号を提供しません。ビジネス電話プロバイダーを通じて物理的な電話をSIMカード付きで購入するか、当社のパートナーの1つを使用することができます。Twilio または Infoblip。**Twilio または Infobip のアカウントを持っていなければなりません。これは Braze を通じて行うことはできません。**
 
 ## WhatsApp API 要件
 
 お使いの電話番号は、これらのWhatsApp API要件を満たしている必要があります:
 
-- あなたのビジネスが所有 
+- お客様のビジネスが所有する番号である 
 - 国番号と市外局番を持っている（例えば、固定電話と携帯電話番号）
 - 音声通話やSMSを受信可能
 - アカウント設定中にアクセス可能（認証コードを受け取るため）
@@ -28,25 +28,25 @@ channel:
 
 ## Twilioの電話番号を取得する
 
-### ステップ 1:TwilioコンソールまたはAPIから電話番号を購入する
+### ステップ 1: TwilioコンソールまたはAPIから電話番号を購入する
 
 1. Twilioコンソールから、**開発** > **電話番号** > **管理** > **番号を購入** に移動します。このオプションが表示されない場合は、**製品を探す**を選択し、**スーパー ネットワーク**までスクロールして、**電話番号** > **番号を購入**を選択します。<br><br>![「開発」タブが開かれ、「番号を購入」オプションが表示されているTwilioコンソール。][1]{: style="max-width:20%;"}<br><br>
 
-2. ご希望の市外局番または地域（お持ちの場合）を入力してください。数字を見つけて、**購入**を選択します。<br><br> ![記載された電話番号を購入するためのボタン。][2]<br><br>
+2. 目的の市外局番または地域 （該当する場合） を入力します。数字を見つけて、**購入**を選択します。<br><br> ![記載の電話番号を購入するボタン。][2]<br><br>
 
-3. 電話番号を購入した後、**Active Numbers**に移動して、購入したばかりの電話番号を選択します。<br><br>![「アクティブ番号」は購入した電話番号を表示します。][3]{: style="max-width:70%;"}<br><br>
+3. 電話番号を購入した後、**Active Numbers**に移動して、購入したばかりの電話番号を選択します。<br><br>![購入した電話番号を示す「アクティブ番号」。][3]{: style="max-width:70%;"}<br><br>
 
-### ステップ2:電話番号を設定する
+### ステップ 2: 電話番号を設定する
 
-Twilio の指示に従って、[ボイスメールの文字起こしを使用して、確認コードをメールで受信するために Twilio の電話番号を設定します](https://www.twilio.com/docs/whatsapp/self-sign-up#setting-up-your-twilio-phone-number-to-receive-the-verification-code-via-email-using-voicemail-transcription)。**他のステップの指示に従わないでください。それはあなたの電話番号をTwilioに接続し、Brazeには接続しません。**
+Twilio の指示に従って、[ボイスメールの文字起こしを使用して、確認コードをメールで受信するための Twilio の電話番号を設定](https://www.twilio.com/docs/whatsapp/self-sign-up#setting-up-your-twilio-phone-number-to-receive-the-verification-code-via-email-using-voicemail-transcription)します。**それ以外のステップの指示には従わないでください。この電話番号は Braze ではなく Twilio に接続する必要があります。**
 
 {% alert warning %}
 **Twilioの指示に従って確認コードを受け取ってください。**
 
-次の手順に従うと、Twilioの指示に従って、電話番号をTwilioに接続できます。つまり、移行を行うか、別の番号を購入しない限り、その番号をBrazeに接続することはできません。
+Twilio の指示にある以下の手順に従うと、電話番号を Twilio に接続できます。つまり、移行を行うか、別の番号を購入しない限り、その番号をBrazeに接続することはできません。
 {% endalert %}
 
-### ステップ 3:埋め込みサインアップワークフローを完了する
+### ステップ 3: 埋め込みサインアップワークフローを完了する
 
 1. Twilioの設定が完了したら、Brazeのダッシュボード > **Technology Partners** > **WhatsApp** に移動し、**Begin integration** または **Add WhatsApp Business Account** のいずれかが表示された方を選択して、[embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) をトリガーします。<br><br>「**WhatsAppの電話番号を追加する**」ステップで、電話番号の確認方法として「**電話**」を選択します。<br><br>![テキストメッセージまたは電話で電話番号を確認するオプションがあるセクション。][4]{: style="max-width:50%;"}<br><br>
 
@@ -54,7 +54,7 @@ Twilio の指示に従って、[ボイスメールの文字起こしを使用し
 
 ## Infobipの電話番号を取得する 
 
-1. Infobipコンソールで、**チャネルと番号**に移動し、**番号**を選択します。<br><br>![インフォブリップ「チャンネルと番号」セクションに「番号」が記載されています。][5]{: style="max-width:30%;"}<br><br>
+1. Infobipコンソールで、**チャネルと番号**に移動し、**番号**を選択します。<br><br>![Infoblip の「Channels and Numbers」セクションに表示された「Numbers」。][5]{: style="max-width:30%;"}<br><br>
 
 2. **購入番号**を選択 > メッセージを送信したい国を選択 > **SMS**。<br><br>![番号を購入するボタン。][6]<br><br>
 

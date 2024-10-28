@@ -6,7 +6,7 @@ noindex: true
 hide_toc: true
 ---
 
-# メッセージクレジット - デルタ（機密）
+# メッセージクレジット - デルタ (社外秘)
 
 > Message Creditsは、Brazeのクロスチャネルのパッケージ構造で、ネイティブSMS、MMS、およびWhatsAppの提供に対応しています。Brazeメッセージングチャネルを利用する際に柔軟で透明性のある体験を提供するために、メッセージクレジットを使用します。このページの表に示されているすべてのチャネルで購入されたクレジットの割り当てを使用できます。
 
@@ -32,7 +32,7 @@ hide_toc: true
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-## メッセージクレジットのクレジット比率表 - デルタ
+## メッセージクレジットのクレジット比率の表 - デルタ
 
 {% details クリックして展開 %}
 <table>
@@ -42,10 +42,10 @@ hide_toc: true
     </colgroup>
     <tr>
         <th><b>Channel</b></th>
-        <th><b>チャネルのクレジット比率</b></th>
-        <th><b>送信先</b></th>
-        <th><b>乗数</b></th>
-        <th class="credits-column"><b>1 回の送信で使用されるクレジット</b></th>
+        <th>**チャネルのクレジット比率**</th>
+        <th>**送信先**</th>
+        <th>**乗数**</th>
+        <th class="credits-column">**1 回の送信で使用されるクレジット**</th>
     </tr>
     <tr>
         <td>SMS - 米国 / カナダ</td>
@@ -1618,7 +1618,7 @@ hide_toc: true
     <tr>
         <td>SMS / MMS - グローバル</td>
         <td>10</td>
-        <td>七面鳥</td>
+        <td>トルコ</td>
         <td>0.77</td>
         <td>7.70</td>
     </tr>
@@ -2395,7 +2395,7 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>REST of Latin America マーケティング</td>
+        <td>ラテンアメリカ地域のその他諸国 マーケティング</td>
         <td>1.95</td>
         <td>19.50</td>
     </tr>
@@ -2444,7 +2444,7 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>西ヨーロッパの残りの部分 認証</td>
+        <td>西欧地域のその他諸国 認証</td>
         <td>1.00</td>
         <td>10.00</td>
     </tr>
@@ -2661,7 +2661,7 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>イギリスUtility</td>
+        <td>イギリスのユーティリティ</td>
         <td>1.05</td>
         <td>5.80</td>
     </tr>

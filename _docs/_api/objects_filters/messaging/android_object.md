@@ -41,7 +41,7 @@ You must include an Android push object in `messages` if you want users you have
 }
 ```
 
-You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
+You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px.
 
 ### Additional parameter details
 

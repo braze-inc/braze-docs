@@ -990,6 +990,7 @@ validurls['/docs/user_guide/onboarding_with_braze/data_points'] = '/docs/user_gu
 
 validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/developer_guide/platform_wide/getting_started/analytics_overview/';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';
+validurls['/docs/user_guide/engagement_tools/landing_pages/connect_subdomain/'] = '/docs/user_guide/engagement_tools/landing_pages/connect_domain/';
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
 
@@ -1187,10 +1188,11 @@ validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/
 validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
 
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/';
-validurls['/docs/partners/message_orchestration/additional_channels/messaging/line/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/line/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/messenger/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/messenger/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/regal/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/regal/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/sendbird/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/sendbird/';
+validurls['/docs/partners/message_orchestration/additional_channels/instant_chat/line/'] = '/docs/line/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/line/'] = '/docs/line/'; 
 
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/';
 validurls['/docs/canvas_data_retention/'] = '/docs/api/data_retention/';

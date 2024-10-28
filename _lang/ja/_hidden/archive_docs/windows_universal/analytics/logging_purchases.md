@@ -18,7 +18,7 @@ Braze は複数の通貨での購入に対応しています。米ドル以外�
 
 この機能を使用するには、アプリ内購入が正常に完了した後でこのメソッド呼び出しを追加します。
 
-購入履歴は、IAppboyで公開されている`EventLogger` 。`EventLogger` への参照を得るには、`Appboy.SharedInstance.EventLogger` を呼ぶ。
+購入は、`EventLogger` を使用してログに記録されます。これは、IAppboy で公開されているプロパティです。`EventLogger` への参照を取得するには、`Appboy.SharedInstance.EventLogger` を呼び出します。
 
 ```csharp
 bool LogPurchase(string productId, string currencyCode, decimal price)
