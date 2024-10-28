@@ -11,7 +11,7 @@ alias: /landing_pages/drag_and_drop/
 > Using the drag-and-drop editor, you can create and customize a landing page to grow your audience and collect preferences directly in Braze.
 
 {% alert important %}
-Landing pages are currently in Early Access. There is a limit of 5 landing pages on a per company basis.
+Landing pages are currently in early access. There is a limit of five landing pages per company.
 {% endalert %}
 
 ## Creating a landing page (drag-and-drop)
@@ -102,7 +102,7 @@ User merging will be handled automatically via a liquid tag in the future.
 
 ## Considerations
 
-- The landing page body size can be up to 1 MB.
+The landing page body size can be up to 1 MB.
 
 ## Frequently asked questions
 
@@ -128,14 +128,14 @@ No, this isn’t currently available. You can use the Custom Code block in the e
 
 ### Can I create a webhook inside a landing page?
 
-No, this is not currently supported.
+No, this isn't currently supported.
 
 ### What features are on the roadmap for landing pages? {#roadmap}
 
 Additional features are in development. These include:
 
 * New Liquid tag for linking a landing page in a Braze messaging channel
-* Automatic user merging when a landing page is sent via a Braze channel
+* Automatic user merging when a landing page is sent through a Braze channel
 * Basic reporting page
 * Drag-and-drop form blocks for checkboxes and dropdowns
 * Standard event for tracking and retargeting based on form submissions
