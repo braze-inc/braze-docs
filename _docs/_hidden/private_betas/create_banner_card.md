@@ -18,7 +18,9 @@ Banner Cards are currently in early access. Contact your Braze account manager i
 
 ## Prerequisite: determine placement
 
-Before creating a Banner Card, you must designate areas in your app where you want to display the Banner Card. This is also referred to as the placement.
+Before creating a Banner Card, you must designate areas in your app where you want to display the Banner Card. This is also referred to as the placement. Once you create a placement, you can select it when creating your Banner Card campaign. If you already have a placement, skip to [step 1](#step-1-create-your-campaign).
+
+To create a placement:
 
 1. Go to **Settings** > **Banner Card Placements**.
 2. Give your Banner Card placement a name.
@@ -40,19 +42,25 @@ After determining your Banner Card placement, it’s time to build your campaign
 2. Select **Banner Card**.
 3. Name your campaign something clear and meaningful.
 4. Add Teams and Tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
-5. Add and name as many variants as you like for your campaign. You can choose different message types and layouts for each added variant. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+5. Select a [placement](#prerequisite-determine-placement) to associate with your campaign. This is where the Banner Card will appear in your app or site.
+6. Add and name as many variants as you like for your campaign. You can choose different message types and layouts for each added variant. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
-## Step 1: Compose a Banner Card
+## Step 2: Compose a Banner Card
 
-You can edit the details of your message’s content in the Compose tab of the editor.
+To edit the details of your message’s content:
 
-1. Select **Edit Message**.
-2. Select a row style that fits your message.
-3. Drag and drop a block into a row.
+1. Select **Edit message**. The composer will open.
+2. Choose a row style that fits your message. Drag and drop a row into the canvas area.
+3. Drag and drop blocks into the row to build your message.
+4. Define the [style](#styles) of your message.
 
 ### Styles
 
-Select Style to adjust the settings to apply to all blocks in the message. Here, you can provide custom styling such as background properties, border settings, and defaults to your Banner Cards. Note this can be overridden for a specific block or row.
+Select **Style** to adjust the settings to apply to all blocks in the message.
+
+![Style panel of the Banner Card composer.]({% image_buster /assets/img/banner_cards/banner_card_styles.png %})
+
+Here, you can provide custom styling such as background properties, border settings, and defaults to your Banner Cards. Styles applied here can be overridden for a specific block or row. To override styles, select the specific block or row to view its properties and make changes.
 
 ### On-click behavior
 
@@ -64,9 +72,11 @@ You can also choose to log a custom attribute or custom event. This will update 
 
 Next, build the remainder of your campaign. Refer to the next sections for more details on how to best use our tools to build Banner Cards.
 
-### Choose a delivery schedule or trigger
+### Choose a campaign duration
 
-Banner Cards can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to Scheduling your campaign.
+Select the start date and time for the Banner Card campaign. 
+
+By default, Banner Cards last indefinitely. If desired, select **End Time** to specify an end date and time.
 
 ### Choose users to target
 
@@ -88,7 +98,7 @@ By default, Banner Cards do not have an expiration date, but you can add a start
 
 ### Placement management
 
-Placements are unique per workspace. You’ll be able to view the campaigns associated with the placement.
+Placements are unique per workspace. You can view all campaigns associated with a placement.
 
 ### Analytics
 
