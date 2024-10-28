@@ -44,21 +44,47 @@ Create a MyPostcard webhook template to use in future campaigns or Canvases by n
 If you are using the [older navigation]({{site.baseurl}}/navigation/), go to **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
-If you would like to create a one-off MyPostcard webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+If you would like to create a one-off MyPostcard webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign. Fill out the following fields:
 
-In your new Webhook template, fill out the following fields:
-- **Webhook URL**: The webhook URL as shown in the B2B Admin Tool
-- **Request Body**: Raw Text (JSON format found in the B2B Admin Tool)
+| Field         | Description                                               |
+|---------------|-----------------------------------------------------------|
+| **Webhook URL** | The webhook URL as shown in the B2B Admin Tool.             |
+| **Request Body** | Raw Text (JSON format found in the B2B Admin Tool).        |
+{: .reset-td-br-1 .reset-td-br-2}
 
-#### Request headers and method
+#### Request method and headers
 
-MyPostcard requires an HTTP Header for authorization and an HTTP method to be included in the template.
+MyPostcard requires an HTTP method along with the following HTTP headers to be included in the template.
 
-- **HTTP Method**: POST
-- **Request Headers**:
-  - **username**: {% raw %} `{{ '<username>' }}` {% endraw %}
-  - **password**: {% raw %} `{{ '<password>' }}` {% endraw %}
-  - **Content-Type**: application/json
+{% raw %}
+<table>
+  <thead>
+    <tr>
+      <th><strong>Field</strong></th>
+      <th><strong>Details</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HTTP Method</strong></td>
+      <td><code>POST</code></td>
+    </tr>
+    <tr>
+      <td><strong>Username</strong></td>
+      <td><code>{{ '&lt;username&gt;' }}</code></td>
+    </tr>
+    <tr>
+      <td><strong>Password</strong></td>
+      <td><code>{{ '&lt;password&gt;' }}</code></td>
+    </tr>
+    <tr>
+      <td><strong>Content-Type</strong></td>
+      <td><code>application/json</code></td>
+    </tr>
+  </tbody>
+</table>
+{% endraw %}
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Request body
 
