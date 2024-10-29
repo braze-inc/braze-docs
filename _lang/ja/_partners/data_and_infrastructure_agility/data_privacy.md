@@ -16,8 +16,8 @@ partner_top_header: "Data Privacy & Compliance"
 valid_partner_list:
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
-- name: データグレイル
+- name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
-- name: ワントラスト
+- name: OneTrust
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 ---

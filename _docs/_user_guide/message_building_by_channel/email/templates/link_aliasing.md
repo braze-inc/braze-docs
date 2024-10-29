@@ -145,7 +145,7 @@ Braze only tracks up to the last 100 clicked link aliases at the profile level.
 
 ### Action-based filters
  
-You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
+You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component.
 
 ![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.][6]
 
