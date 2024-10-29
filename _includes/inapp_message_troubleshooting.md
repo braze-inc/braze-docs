@@ -80,7 +80,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
   - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
 
 
-### Troubleshooting In-app message display {#troubleshooting-in-app-message-display}
+### Troubleshooting in-app message display {#troubleshooting-in-app-message-display}
 
 If your app is successfully requesting and receiving in-app messages, but they are not being shown, device-side logic may be preventing display:
 
@@ -92,16 +92,13 @@ If your app is successfully requesting and receiving in-app messages, but they a
 - Triggered in-app messages are rate-limited based on the [minimum time interval between triggers]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers), which defaults to 30 seconds.
 {% endif %}
 - Failed image downloads will prevent in-app messages with images from displaying. Check your device logs to ensure that image downloads are not failing.
-{% if include.sdk == "iOS" %}
-- If you have set a delegate to customize in-app message handling, check your delegate to ensure it is not affecting in-app message display.
-{% elsif include.sdk == "Android" %}
+{% case include.sdk %}
+  {% when "iOS", "Android" %}
 - If you have set a delegate to customize in-app message handling, check your delegate to ensure it is not affecting the in-app message display.
-{% elsif include.sdk == "Web" %}
+  {% when "Web" %}
 - If you have custom in-app message handling through `braze.subscribeToInAppMessage` or `appboy.subscribeToNewInAppMessages`, check that subscription to ensure it is not affecting in-app message display.
-{% endif %}
-{% if include.sdk == "iOS" %}
-- If the device orientation did not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
-{% elsif include.sdk == "Android" %}
+{% endcase %}
+{% case include.sdk %}
+  {% when "iOS", "Android" %}
 - If the device orientation does not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
-{% endif %}
-
+{% endcase %}
