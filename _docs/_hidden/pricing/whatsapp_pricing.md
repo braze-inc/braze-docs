@@ -1,49 +1,53 @@
 ---
 nav_title: WhatsApp Pricing Updates
-permalink: "/whatsapp_pricing_updates_october_2024/"
+permalink: "/whatsapp_pricing_updates/"
 hidden: true
 noindex: true
 hide_toc: true
 ---
 
-# Important updates to WhatsApp pricing
+# WhatsApp pricing updates
 
-WhatsApp recently made a series of updates to their pricing, starting in August. Here’s a summary of the changes: 
+Pricing changes from August 2024—November 2024
+
+*Last updated October 29th, 2024*
 
 ## Utility conversations 
 
-On August 1, 2024, Meta lowered rates on utility conversions to encourage brands to facilitate more post-purchase customer journeys on the platform. We have passed through these cost reductions to your Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (August 1). 
+On August 1, 2024, Meta lowered rates on utility conversations to encourage brands to facilitate more post-purchase customer journeys on the platform. We have passed through these cost reductions to your Message Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (August 1). 
 
-### What are utility conversations (as defined by Meta)? 
+#### What are utility conversations? 
 
 Utility conversations enable you to follow-up on specific customer actions or requests. Examples include opt-in confirmation, order updates and confirmations, account updates or alerts (e.g. payment reminders), or feedback surveys.
 
-### How can you benefit from this update? 
+#### How can you benefit from this update? 
 
-We encourage you to take advantage of this update by using WhatsApp for transactional messaging. You can also consider shifting some of your transactional SMS messages to WhatsApp if it makes sense for your brand based on your audience reach and engagement on each channel. For example, this may be a good option for customers in Asia, Latin America, and Europe where WhatsApp is a popular channel. 
+We encourage you to take advantage of this update by using WhatsApp for transactional messaging. You can also consider shifting some of your transactional SMS messages to WhatsApp if it makes sense for your brand (based on your audience reach and engagement on each channel). For example, this may be a good option for customers in Asia, Latin America, and Europe where WhatsApp is a heavily used channel. 
 
 ## Marketing conversations
 
-On October 1, 2024, Meta decreased pricing on United Kingdom marketing Conversations by 25% to reflect current demand. We have passed through these cost reductions to your WhatsApp Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (October 1).
+On October 1, 2024, Meta decreased pricing on United Kingdom marketing conversations by 25% to reflect current demand. We have passed through these cost reductions to your Message Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (October 1).
 
-### What are marketing conversations (as defined by Meta)? 
+#### What are marketing conversations? 
 
 Marketing conversations enable you to achieve a wide range of goals, from generating awareness to driving sales and retargeting customers. Examples include new product announcements, targeted promotions/offers, and cart abandonment campaigns.
 
 ## Service conversations
 
-On November 1, 2024, Meta will make all service conversations free of charge. Service conversations will no longer consume Message Credits entitlements. This change will go into effect on the same day as Meta’s (November 1).
+On November 1, 2024, all service conversations are free of charge. Service conversations will no longer consume Message Credits entitlements. This change will go into effect on the same day as Meta’s (November 1).
 
-### What are service conversations (as defined by Meta)? 
+#### What are service conversations? 
 
 Service conversations enable you to respond to customer inquiries. This includes conversations started by an end-user where the brand replies with a response message instead of a template message.
 
-### How can you benefit from this update? 
+#### How can you benefit from this update? 
 
 Some conversations that were previously charged as "service" will now be free. These include: 
 
 - Unrecognized response campaigns where an end-user sends a message that is unrecognized and the brand replies with a generic message using response messaging. For example, an end-user sends a message without a keyword and the brand responds with “We don’t recognize your message, please reach out to customer support."
 - Conversations that start when an end-user messages the brand a promoted keyword and the brand replies using a response message. Common examples are opting into WhatsApp messaging or participating in a specific promotion.
+
+<br>
 
 Detailed information on the utility conversations decrease below:
 
