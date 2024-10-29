@@ -45,7 +45,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 {% tab Swift %}
 
 ```swift
-todo
+AppDelegate.braze?.banners.requestRefresh(placementIds: ["global_banner", "navigation_square_banner"])
 ```
 {% endtab %}
 {% tab Java %}
@@ -107,7 +107,7 @@ import * as braze from "@braze/web-sdk";
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 
 braze.subscribeToBannersUpdates((banners) => {
-    console.log(`Banners were updated`);
+  console.log(`Banners were updated`);
 })
 ```
 
@@ -115,7 +115,11 @@ braze.subscribeToBannersUpdates((banners) => {
 {% tab Swift %}
 
 ```swift
-todo
+let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
+  banners.forEach { placementId, banner in
+    print("Received banner: \(banner) with placement ID: \(placementId)")
+  }
+}
 ```
 {% endtab %}
 {% tab Java %}
