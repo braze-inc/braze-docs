@@ -84,7 +84,7 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
   </tr>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>OTHER_OBJECTS</code></td>
+    <td><code>account</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
 </table>
@@ -122,7 +122,7 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
     <td><code>Territory</code></td>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>OTHER_OBJECTS</code></td>
+    <td><code>opportunity</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
   </tr>
@@ -151,13 +151,13 @@ First, you’ll want to make sure Braze and your CRM of choice have a common ide
 
 #### Braze object: User
 
-| Braze field | CRM object (Salesforce) | CRM field (Salesforce) |
-| --- | --- | --- |
-| `Aliases.salesforce_lead_id` | Lead | `id` |
-| `Aliases.salesforce_contact_id` | Contact | `id` |
-| `AccountId` | Contact | `AccountId` |
-| `OpportunityId` (optional, scalar) <br>or<br> `Opportunities` (optional, array) | Opportunity | `id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
+| Braze field | CRM object (Salesforce) | CRM field (Salesforce) | Additional information |
+| --- | --- | --- | --- |
+| `Aliases.salesforce_lead_id` | Lead | `id` |  - User alias label: `salesforce_lead_id` <br>- User alias name: `lead_id`|
+| `Aliases.salesforce_contact_id` | Contact | `id` | - User alias label: `salesforce_contact_id` <br>- User alias name: `contact_id` |
+| `AccountId` | Contact | `AccountId` | 
+| `OpportunityId` (optional, scalar) <br>or<br> `Opportunities` (optional, array) | Opportunity | `id` | 
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% alert note %}
 We recommend using [aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) instead of `external_id` to map Salesforce lead and contact identifiers back to Braze. This is because most of our users will create their own (non-CRM specific) Universal Unique Identifier (UUID) for their own users when they log into their profiles to access their platform. This UUID is typically the preferred `external_id` in Braze because it reduces the amount of lookups required when identifying and running product-led growth style initiatives.
