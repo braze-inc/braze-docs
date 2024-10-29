@@ -21,7 +21,7 @@ With the Braze and Extole integration, you can pull customer events and attribut
 | Extole account | An Extole account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with the `users.track` permission. This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze API URL | Your Braze API URL is specific to your [Braze instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -55,7 +55,7 @@ Below are the default events, event properties, and user attributes Extole will 
 | `extole_created_share_link` | A participant creates their share link by entering their email in the Extole Share Experience. | Event name  <br>Event time  <br>Partner (Extole)  <br>Funnel (advocate or friend)  <br>Program | <br>External ID <br>Email  <br>Share link |
 | `extole_shared` | A participant shares their referral link with a friend. | Event name  <br>Event time  <br>Partner (Extole)  <br>External ID  <br>Funnel (advocate or friend)  <br>Program  <br>Share channel | Email <br>First name <br>Last Name |
 | `outcome` - The outcome is dynamic based on the configuration of your program (such as `extole_shipped`, `extole_converted`)| A participant has converted or completed the desired outcome event configured for the program. | Dynamic per program | Email <br>First name <br>Last Name |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Extole subscription states
 
@@ -63,7 +63,7 @@ Below are the default events, event properties, and user attributes Extole will 
 | ----------- | ----------- | ----------- | ----------- |
 | `subscribed` | A participant has opted-in to receive marketing messages. | N/A | Email  <br>List type  <br>External ID  <br>Email subscribe (opted in) |
 | `unsubscribed` | A participant has opted-out of receiving Extole email communications.| Email  <br>External ID  <br>Subscription state (unsubscribed)  <br>Subscription group ID  | List type |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Extole rewards
 
@@ -78,7 +78,7 @@ By default, Extole will send reward events in the `FULFILLED` state to Braze so 
 | `FAILED` | An issue has prevented the reward from being issued or sent, requiring attention. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
 | `CANCELED` | The reward has been deactivated and will return to inventory. | Email <br>Face value  <br>Face value type  | Email <br>First name  <br>Last name |
 | `REVOKED` | The fulfilled reward has been invalidated. For example, Extole requested a supplier gift card and then determined that the card was sent in error. If the supplier supports revoking the reward, Extole will request the funds back, and the reward will no longer be valid. | Email <br>Face value   <br>Face value type  | Email <br>First name  <br>Last name |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 ## Customization

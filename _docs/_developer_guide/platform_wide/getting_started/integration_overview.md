@@ -181,7 +181,7 @@ Make sure your production and testing environments are set up before beginning Q
 |                           | Test that Content Cards are delivered and metrics logged. |
 |                           | Facilitate Connected Content (for example, AccuWeather). |
 |                           | Confirm all message channel integrations are working together properly. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 

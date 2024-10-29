@@ -32,7 +32,7 @@ Before you begin onboarding the integration, please review the following with yo
 |-------------|-------------
 |<i aria-hidden="true" class="fas fa-check" title="Supported"></i><span class="sr-only">Supported</span> | Supported
 |<i aria-hidden="true" class="fas fa-times" title="Not supported"></i><span class="sr-only">Supported</span> | Not supported
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 | Features | Web SDK via Shopify ScriptTag | Direct web SDK integration via theme.liquid | Direct web SDK integration via Shopify Hydrogen
 |-------------|-------------|-------------|------------
@@ -47,7 +47,7 @@ Before you begin onboarding the integration, please review the following with yo
 | Default in-app message support   | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-times" title="Not supported"></i>     
 | Default content cards support   | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>   
 | Default web push support     | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}    
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }    
 
 {% tabs %}
 {% tab Shopify ScriptTag %}

@@ -9,7 +9,7 @@ page_type: reference
 
 # Rate limits
 
-> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per workspace. 
+> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per workspace.
 
 A rate limit is the number of requests the API can receive in a given time period. Many load-based denial-of-service incidents in large systems are unintentional—caused by errors in software or configurations—not malicious attacks. Rate limits check that such errors don't deprive our customers of Braze API resources. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
@@ -44,7 +44,7 @@ Requests not listed in this table share a total default rate limit of 250,000 re
 | [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 16,000 requests per minute shared between the endpoints.                                                                                                                                   |
 | [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints.                                                                                                                                       |
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 5,000 requests per day, per company, shared between the endpoints.                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <!-- Add during CDI endpoints GA
 | [`/cdi/integrations`][46] | 50 requests per minute. |
@@ -64,7 +64,7 @@ REST API rate limit increases are considered based on need for customers who are
 
 Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
-Requests made to this endpoint will generally begin processing in this order: 
+Requests made to this endpoint will generally begin processing in this order:
 
 1. Attributes
 2. Events
@@ -111,7 +111,7 @@ Every single API request sent to Braze returns the following information in the 
 | `X-RateLimit-Limit`     | The maximum number of requests that you can make in a specified interval (your rate limit). |
 | `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.                          |
 | `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.                |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to make sure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 

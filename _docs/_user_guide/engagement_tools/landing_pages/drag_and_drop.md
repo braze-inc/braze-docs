@@ -40,7 +40,7 @@ We suggest following these best practices:
 | Site description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
 | URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 Custom subdomain support is not available during the beta.

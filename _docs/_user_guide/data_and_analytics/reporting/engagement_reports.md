@@ -73,7 +73,7 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 | In-app message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 *Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.

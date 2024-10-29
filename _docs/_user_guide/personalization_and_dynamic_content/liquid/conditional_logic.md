@@ -8,7 +8,9 @@ description: "This reference article covers how tags can and should be used in y
 
 # Conditional messaging logic
 
-> [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
+> [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code. <br><br>This page covers how tags can and should be used, such as how to account for null, nil, and blank attribute values, and how to reference custom attributes.
+
+## Formatting tags
 
 {% raw %}
 A tag must be wrapped in `{% %}`.
@@ -65,7 +67,7 @@ In this example, we use tags with "if", "elsif" and "else" statements to deliver
 {% if ${language} == 'en' %}
 This is a message in English from Braze!
 ```
-If the customer's language is English, the first condition is met and the customer will receive a message in English.
+If the user's language is English, the first condition is met and the user will receive a message in English.
 
 ```liquid
 {% elsif ${language} == 'es' %}
@@ -74,21 +76,20 @@ Este es un mensaje en español de Braze !
 这是一条来自Braze的中文消息。
 ```
 
-You can specify as many conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this example, if a customer's device is not set to English this code will check to see if the customer's device is set to Spanish or Chinese. If the customer's device meets one of these conditions, the customer will receive a message in the relevant language.
+You can specify as many conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this example, if a user's device is not set to English this code will check to see if the user's device is set to Spanish or Chinese. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
+This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
 ```
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a customer's language is not English, Spanish, or Chinese.
+You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a user's language is not English, Spanish, or Chinese.
 
 ```liquid
 {% endif %}
 ```
 
-The `{% endif %}`  tag signals that you've finished your conditional logic. You must include the
-`{% endif %}`  tag in any message with conditional logic. If you do not include an `{% endif %}`  tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
+The `{% endif %}` tag signals that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
 
 {% endraw %}
 
@@ -98,9 +99,9 @@ Conditional logic is a useful way to account for attribute values that aren't se
 
 ### Null and nil attribute values
 
-A null or nil value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name logged in Braze.
+A null or nil value occurs when the value of a custom attribute hasn't been set. For example, a user who hasn't yet set their first name won't have a first name logged in Braze.
 
-In some circumstances, you may wish to send a completely different message to users who have a first name set and users who do not have a first name set.
+In some circumstances, you may wish to send a completely different message to users who have a first name set and users who don't have a first name set.
 
 The following tag allows you to specify a message for users with a null "first name" attribute:
 

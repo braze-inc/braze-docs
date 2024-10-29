@@ -35,7 +35,7 @@ The following table describes the differences between the free and pro version o
 |----|----|----|
 | Active transformations | Up to 5 per company | Up to 55 per company |
 | Per month | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
 To request an upgrade to Data Transformation Pro, contact your Braze account manager or select the **Request Upgrade** button in the Braze dashboard.

@@ -36,7 +36,7 @@ This page serves as a quick reference guide for regular expression, including co
 | End of string | `$` |
 | A word boundary | `\n` |
 | None-word boundary | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab Meta sequence %}
 
@@ -75,7 +75,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Control character Y | `\cY` |
 | Backspace character | `[\b]` |
 | Makes any character literal | `\` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab General tokens %}
 
@@ -85,7 +85,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Carriage return | `\r` |
 | Tab | `\t` |
 | Null character | `\0` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Character class modifiers %}
@@ -107,7 +107,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Lowercase letters | `[:xdigit:]` |
 | Uppercase letters | `[:<:]` |
 | Word characters | `[:>:]` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab Group constants %}
 
@@ -164,7 +164,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Regex engine modifier | `(*LIMIT_RECURSION=d)` |
 | Regex engine modifier | `(*NO_AUTO_POSSESS)` |
 | Regex engine modifier | `(*NO_START_OPT)` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab Quantifiers %}
 
@@ -179,7 +179,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Greedy quantifier | `a*` |
 | Lazy quantifier | `a*?` |
 | Possessive quanitifer | `a*+` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab Anchors %}
 
@@ -193,7 +193,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Absolute end of string | `\z` |
 | A word boundary | `\b` |
 | A non-word boundary | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
 {% tab Flags and modifiers %}
@@ -210,7 +210,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Ungreedy | `U` |
 | Anchor | `A` |
 | Duplicate group names | `J` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Substitution %}
@@ -228,7 +228,7 @@ This page serves as a quick reference guide for regular expression, including co
 | Uppercase transformation | `\U` |
 | Lowercase transformation | `\L` |
 | Terminate any transformation | `\E` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
