@@ -83,7 +83,7 @@ Array filters are used to change the output of arrays.
 | [sort_natural][1.11] | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
 | [uniq][1.12]         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
 | [where][1.13]        | Filters an array to only include items with a specific property value.                                             | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Color filters
 
@@ -110,7 +110,7 @@ Math filters allow you to perform mathematical operations. If you use multiple f
 | [round][4.9]      | Rounds the output to the nearest integer or specified number of decimals.  | ✅  Yes   |
 | [times][4.10]     | Multiplies an output by a number.       | ✅  Yes   |
 | [modulo][4.11]    | Divides an output by a number and returns the remainder.   | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
 When dividing integers (whole numbers) by integers in Liquid, if the answer is a float (number with a decimal), Liquid will automatically round down to the nearest integer. However, dividing integers by floats will always give you a float. That means you can turn your integers into a float (1.0, 2.0, 3.0) to return a float.
@@ -174,7 +174,7 @@ If you're updating a user on their purchase, an account balance, or anything reg
 | [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.   | ✅  Yes   |
 | [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
 | [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
 To properly format a number with the `money` filter, remove any commas in the number and add the `plus: 0` filter before the `money` filter. For example, see the following Liquid:<br><br>
@@ -204,7 +204,7 @@ ${{custom_attribute.${account_balance} | money}}
 | :------------------------------------------ | :------------------------------------------ |
 | ![With money filter][1]                     | ![Without money filter][2]                  |
 | Where `account_balance` is input at `17.8`. | Where `account_balance` is input at `17.8`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The `money` filter in Braze differs from Shopify because it doesn't automatically apply decimal points according to a preset setting. For example, take the following scenario where `rewards_redeemed` contains a value of `145`:
 
@@ -282,7 +282,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [truncate][6.26]    | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.    | ✅  Yes   |
 | [truncatewords][6.27]   | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.    | ✅  Yes   |
 | [upcase][6.28]   | Converts a string into uppercase.      | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Additional filters
 
@@ -295,7 +295,7 @@ The following general filters serve many purposes, including formatting or conve
 | [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
 | [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
 | `time_zone`             | Refer to [Time Zone Filter](#time-zone-filter).     | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
 

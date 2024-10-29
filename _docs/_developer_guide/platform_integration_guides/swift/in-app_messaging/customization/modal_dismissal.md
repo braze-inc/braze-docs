@@ -35,6 +35,6 @@ The default value is `false`. This determines if the modal in-app message will b
 |----------|-------------|
 | `true`         | Modal in-app messages will be dismissed on outside tap.     |
 | `false`        | Default, modal in-app messages will not be dismissed on outside tap. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more details on in-app message customization, refer to this [article](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization).

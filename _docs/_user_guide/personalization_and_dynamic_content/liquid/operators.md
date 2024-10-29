@@ -23,7 +23,7 @@ This table lists the operators that are supported. Note that parentheses are inv
 | or | condition A or condition B|
 | and | condition A and condition B|
 | contains | checks to see if a string or string array contains a string|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

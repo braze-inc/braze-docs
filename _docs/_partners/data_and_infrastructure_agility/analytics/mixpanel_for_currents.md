@@ -21,7 +21,7 @@ The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into B
 |---|---|
 | Mixpanel account | A [Mixpanel account](https://mixpanel.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Mixpanel, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Data export integration
 

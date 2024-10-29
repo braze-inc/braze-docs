@@ -28,7 +28,7 @@ The following table lays out the parameters you can use in your calls to the use
 | `get_cohort_ids` | Optional<br>(Defaults to false) | Return a list of all of the cohort IDs that this user is a part of that have been set up to be tracked. By default cohort membership is not tracked for users for any cohort. |
 | `get_computations` | Optional<br>(Defaults to false) | Return a list of all of the computations that are enabled for this user. |
 | `comp_id` | Optional | Return a single computation that might be enabled for this user. It will return a null value if it does not exist. If `get_computations` is true, all values will be fetched, including this one (unless it is archived or deleted).|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The following table covers the parameters you can most typically expect to see in Amplitude's responses.
 
@@ -40,7 +40,7 @@ The following table covers the parameters you can most typically expect to see i
 | `is_control` | true if this user is part of the control group. |
 | `recommendation_source` | Name of the model that was used to generate this recommendation |
 | `last_updated` | Timestamp of when this recommendation was last generated and synced. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Common Amplitude endpoints
 

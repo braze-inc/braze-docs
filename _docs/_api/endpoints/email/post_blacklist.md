@@ -11,7 +11,7 @@ description: "This article outlines the details about the Blacklist emails Braze
 ---
 {% api %}
 # Blacklist emails
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/blacklist
 {% endapimethod %}
 
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
 | `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -62,5 +62,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 ```
 
 {% endapi %}
-
-

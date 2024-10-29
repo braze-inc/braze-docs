@@ -45,7 +45,7 @@ Creating an MMS message requires your subscription group to be configured for MM
 |--------------------------|----------------------------|
 | Size                     | 600&nbsp;KB maximum        |
 | File Types               | PNG, JPEG, GIF             |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Previewing an MMS message
 

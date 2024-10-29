@@ -30,7 +30,7 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `integration_id` | Required | String | Integration ID. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -61,7 +61,7 @@ The following table lists possible returned errors and their associated troubles
 | `400 Invalid integration ID` | Check that your `integration_id` is valid. |
 | `404 Integration not found` | No integration exists for the given integration ID. Make sure that your integration ID is valid. |
 | `429 Another job is in progress` | There is a sync currently running for this integration. Try again after the sync has completed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 

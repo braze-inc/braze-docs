@@ -154,7 +154,7 @@ In the event that Meta modifies its pricing or packaging for WhatsApp, Braze res
 | WhatsApp - United Kingdom Marketing | 14 |
 | WhatsApp - United Kingdom Service | 10.5 |
 | WhatsApp - United Kingdom Utility | 5.8 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## WhatsApp billing region breakdown
 
