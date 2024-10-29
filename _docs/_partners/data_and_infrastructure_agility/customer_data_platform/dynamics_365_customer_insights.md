@@ -19,7 +19,7 @@ The Braze and Dynamics 365 Customer Insights integration allows you to export cu
 | ----------- | ----------- |
 | Dynamics 365 Customer Insights account | [A Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) account is required to take advantage of this partnership. You will need access as an administrator to view and edit connections within your Dynamics 365 Customer Insights account to access the necessary plugins. |
 | Braze REST API key | A Braze REST API key is required with `users.track` and `users.export.segment` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Matching profile identifiers | Unified customer profiles in the exported segments contain a field representing an email address and a Braze external_id. |
+| Matching profile identifiers | Unified customer profiles in the exported segments contain a field representing an email address and a Braze `external_id`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -40,7 +40,7 @@ In Customer Insights, navigate to **Admin > Connections**. Next, select **Add co
 
 In Customer Insights, navigate to **Admin > Connections**. Next, select **Add connections** and choose **Braze** to configure the connection. 
 
-1. Create a Segment in Braze of the users you would like to Microsoft to update via Dynamics 365 Customer Insights. 
+1. Create a segment in Braze of the users you want Microsoft to update through Dynamics 365 Customer Insights. 
 2. Capture the Segment's **API Identifier**
 
 ### Step 3: Configure an export
@@ -48,21 +48,21 @@ In Customer Insights, navigate to **Admin > Connections**. Next, select **Add co
 You can configure this export if you have access to a connection of this type. For more information, refer to [Exports overview](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#set-up-a-new-export).
 
 1. In Customer Insights, go to **Data > Exports**. To create a new export, select **Add destination**.
-2. In the **Connection for export** field, choose a connection for the Braze section. If you don't see this section name, there are no connections of this type available to you.
-3. Provide the segment API identifier of the segment in Braze
-4. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Braze Customer ID** field, select the field that represents the customer's Braze ID. You can also choose an additional, optional field for matching data.
-  a. Mapping the external_id in Braze to the Braze customer ID field in Customer Insights results in updating existing records in Braze when exporting.
-  b. Mapping a different ID field that doesn't represent the external_id of a record in Braze, or an empty field results in creating new records in Braze when exporting.
-5. Lastly, select the segments you want to export and click **Save**. 
+2. In the **Connection for export** field, select a connection for the Braze section. If you don't see this section name, there are no connections of this type available to you.
+3. Provide the segment API identifier of the segment in Braze.
+4. In the **Data matching** section, in the **Email** field, select the field that represents a customer's email address. Next, in the **Braze Customer ID** field, select the field that represents the customer's Braze ID. You can also select an additional, optional field for matching data.
+  a. If you map the `external_id` in Braze to the Braze customer ID field in Customer Insights, the existing records will be updated in Braze when exporting.
+  b. If you map a different ID field that doesn't represent the `external_id` of a record in Braze, or an empty field, new records will be created in Braze when exporting.
+5. Finally, select the segments you want to export and select **Save**. 
 
 Note that saving an export does not run the export immediately. This export will run with every [scheduled refresh](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab). You can also [export data on demand](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
 
 
 ### Using this integration
 
-Once your segments have successfully exported to Braze, you will be able to find them as custom attributes on user profiles. The custom attribute will be named with the Braze segment identifier input into the Export Connection UI. For example, `"Segment_API_Identifier": "0000-0000-0000"`
+After your segments are successfully exported to Braze, you can find them as custom attributes on user profiles. The custom attribute will be named with the Braze segment API identifier that was entered while configuring the export connection. For example, `"Segment_API_Identifier": "0000-0000-0000"`
 
-To create a segment of these users, In Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 synced custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
+To create a segment of these users in Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 synced custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 {% alert note %}
 For more information on this integration, visit Microsoft's Braze [integration article](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze).
