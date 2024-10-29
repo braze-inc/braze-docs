@@ -8,6 +8,8 @@ description: "This reference article lists advanced filters, examples, and how t
 
 # Advanced filters
 
+> This reference article provides an overview of advanced filters in Liquid and how they can be used.
+
 ## Encoding filters
 
 {% raw %}
