@@ -14,7 +14,7 @@ Pricing changes from August 2024—November 2024
 
 ## Utility conversations 
 
-On August 1, 2024, Meta lowered rates on utility conversations to encourage brands to facilitate more post-purchase customer journeys on the platform. We have passed through these cost reductions to your Message Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (August 1). 
+On August 1, 2024, Meta lowered rates on utility conversations to encourage brands to facilitate more post-purchase customer journeys on the platform. We have passed through these cost reductions to your Message Credits or WhatsApp Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (August 1). 
 
 #### What are utility conversations? 
 
@@ -26,7 +26,7 @@ We encourage you to take advantage of this update by using WhatsApp for transact
 
 ## Marketing conversations
 
-On October 1, 2024, Meta decreased pricing on United Kingdom marketing conversations by 25% to reflect current demand. We have passed through these cost reductions to your Message Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (October 1).
+On October 1, 2024, Meta decreased pricing on United Kingdom marketing conversations by 25% to reflect current demand. We have passed through these cost reductions to your Message Credits or WhatsApp Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (October 1).
 
 #### What are marketing conversations? 
 
@@ -34,7 +34,7 @@ Marketing conversations enable you to achieve a wide range of goals, from genera
 
 ## Service conversations
 
-On November 1, 2024, all service conversations are free of charge. Service conversations will no longer consume Message Credits entitlements. This change will go into effect on the same day as Meta’s (November 1).
+On November 1, 2024, all service conversations are free of charge. Service conversations will no longer consume Message Credits or WhatsApp Credits entitlements. This change will go into effect on the same day as Meta’s (November 1).
 
 #### What are service conversations? 
 
