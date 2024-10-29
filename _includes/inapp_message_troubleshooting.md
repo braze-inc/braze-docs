@@ -10,7 +10,7 @@
 6. Was my device in the correct orientation specified by the campaign?
 7. Was my message suppressed by the default 30-second minimum time interval between triggers, enforced by the SDK?
 
-#### My in-app message wasn't shown all users on this platform
+#### My in-app message wasn't shown to all users on this platform
 
 1. Is your campaign configured to target either Mobile Apps or Web Browsers as appropriate? As an example, if your campaign only targets Web Browsers, it will not send to Android devices.
 2. Did you implement a custom UI, and is it working as intended? Is there other app-side custom handling or suppression that could be intefering with display? 
