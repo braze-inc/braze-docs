@@ -10,7 +10,15 @@ page_type: reference
 
 > This article covers how to create a Banner Card in Braze when you build campaigns.
 
-Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications).
+Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications). 
+
+Banner Cards are great for:
+- Recommending products based on user behavior
+- Sharing updates on loyalty programs
+- Notifying users about upcoming events
+- Highlighting featured content
+
+Because Banner Cards personalize each time a user starts a new session and can be configured to never expire, they’re a helpful tool to add to your engagement strategy.
 
 {% alert important %}
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -25,10 +33,10 @@ To create a placement:
 1. Go to **Settings** > **Banner Card Placements**.
 2. Give your Banner Card placement a name.
 3. (Optional) Add a description to explain where this Banner Card is intended to be placed.
-4. Enter a placement ID. Work with your developer team to define this ID, because they will need to use it during the integration.
+4. Enter a unique placement ID. Work with your developer team to define this ID, because they will need to use it during the integration. Avoid editing your placement ID after launch, as this can break the integration with your app or website.
 5. Select **Save**.
 
-Each placement can be used in up to 10 campaigns.
+Each placement can be used in up to 10 campaigns. 
 
 {% alert important %}
 Placement IDs are unique per workspace.
@@ -94,11 +102,13 @@ After building your campaign, test and review it to make sure your campaign work
 
 ### Banner Cards expiration
 
-By default, Banner Cards do not have an expiration date, but you can add a start date and an optional end date.
+By default, Banner Cards do not have an expiration date, but you can add an optional end date.
 
 ### Placement management
 
-Placements are unique per workspace. You can view all campaigns associated with a placement.
+Placements are unique per workspace. Each placement can be used in up to 10 campaigns.  You can view all campaigns associated with a placement from **Settings** > **Banner Card Placements**. 
+
+Placement IDs must be unique to a workspace, and should not be edited after launch. Work with your developer team to define this ID, because they will need to use it during the integration. 
 
 ### Analytics
 
@@ -110,8 +120,7 @@ The following table defines key Banner Card metrics.
 | **Unique Impressions**    | _Unique Impressions_ is the total number of users who received and viewed a given message in a day; each user is only counted once.                              |
 | **Total Clicks**         | _Total Clicks_ is the total number of clicks within a Banner Card, regardless of whether the same user clicks multiple times.                                     |
 | **Unique Clicks**        | _Unique Clicks_ is the distinct number of recipients who have clicked within a Banner Card at least once and is measured by dispatch_id; each user is only counted once. |
-| **Conversions**          | _Conversions_ are the number of times a user performs a customer-defined action after clicking on the Banner Card; each user is only counted once.                |
-| **Conversion Rate**      | _Conversion Rate_ is the percentage of times a defined event occurred compared to all recipients of a message. This defined event is determined when you build the campaign. <br> _(Conversions) / (Unique Impressions)_ |
+| **Primary Conversions**  | Includes both the count and rate of conversions for the [primary conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event). The primary conversion event is determined when you build the campaign. {::nomarkdown}<ul><li><i>Conversions</i> are the number of times a user performs an event after clicking on the Banner Card. Each user is only counted once.</li><li><i>Conversion Rate</i> is the percentage of times the conversion event occurred compared to all recipients of a message. <br> <i>(Conversions) / (Unique Impressions)</i></li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
