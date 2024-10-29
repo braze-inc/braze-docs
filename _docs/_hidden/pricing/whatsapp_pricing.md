@@ -12,8 +12,6 @@ Pricing changes from August 2024—November 2024
 
 *Last updated October 29th, 2024*
 
-WhatsApp recently made a series of updates to their pricing, starting in August. Here’s a summary of the changes: 
-
 ## Utility conversations 
 
 On August 1, 2024, Meta lowered rates on utility conversations to encourage brands to facilitate more post-purchase customer journeys on the platform. We have passed through these cost reductions to your Message Credits entitlements in equal proportions. This update went into effect on the same day as Meta’s (August 1). 
