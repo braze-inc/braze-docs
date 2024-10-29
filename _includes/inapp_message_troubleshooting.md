@@ -45,7 +45,7 @@ Triggers take time to sync to the device on session start, so there can be a rac
 
 Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, confirm that the [in-app message was delivered to the device](#troubleshooting-in-app-message-delivery), then [troubleshoot message display](#troubleshooting-in-app-message-display).
 
-### Troubleshooting In-app message delivery {#troubleshooting-in-app-message-delivery}
+### Troubleshooting in-app message delivery {#troubleshooting-in-app-message-delivery}
 
 The SDK requests in-app messages from Braze servers on session start. To check if in-app messages are being delivered to your device, you'll need to make sure that in-app messages are being both requested by the SDK and returned by Braze servers.
 
