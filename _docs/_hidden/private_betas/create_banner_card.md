@@ -94,7 +94,7 @@ Next, target users by choosing segments or filters to narrow down your audience.
 
 Braze allows you to track how often users perform specific actions, and conversion events, after receiving a campaign. You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
-## Step 5: Test and deploy
+## Step 4: Test and deploy
 
 After building your campaign, test and review it to make sure your campaign works as expected. Then, you’re ready to launch your Banner Card campaign!
 
