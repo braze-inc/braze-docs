@@ -36,7 +36,7 @@ Marketing conversations enable you to achieve a wide range of goals, from genera
 
 On November 1, 2024, all service conversations are free of charge. Service conversations will no longer consume Message Credits entitlements. This change will go into effect on the same day as Meta’s (November 1).
 
-#### What are service conversations (as defined by Meta)? 
+#### What are service conversations? 
 
 Service conversations enable you to respond to customer inquiries. This includes conversations started by an end-user where the brand replies with a response message instead of a template message.
 
