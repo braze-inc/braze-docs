@@ -126,7 +126,7 @@ table td {
 | **503 Service Unavailable**   | The endpoint is currently unable to handle the request due to a temporary overload or maintenance.                                                    |
 | **504 Gateway Timeout**       | The endpoint didn't receive a timely response from the upstream server.                                                                               |
 | **599 Connection Error**      | Braze experienced a network connect timeout error while trying to establish a connection to the endpoint, meaning the endpoint may be unstable or down. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Resolving 5XX errors
 

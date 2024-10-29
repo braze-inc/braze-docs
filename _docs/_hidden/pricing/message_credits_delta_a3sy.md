@@ -29,7 +29,7 @@ Column definitions are as follows:
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
 | **Credits per 1 Send** | Exact number of Message Credit to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ## Credit ratio table for Message Credits - Delta
@@ -2673,7 +2673,7 @@ Column definitions are as follows:
         <td>0.15</td>
     </tr>
 </table>
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% enddetails %}
 
 ------

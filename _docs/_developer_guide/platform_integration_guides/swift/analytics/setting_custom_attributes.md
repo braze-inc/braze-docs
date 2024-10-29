@@ -246,7 +246,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `optedIn` | Subscribed, and explicitly opted in |
 | `subscribed` | Subscribed, but not explicitly opted in |
 | `unsubscribed` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Users who grant permission for an app to send them push notifications default to the status of `optedIn` as iOS requires an explicit opt-in.
 

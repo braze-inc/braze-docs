@@ -87,7 +87,7 @@ The following is included in your export depending on your selection.
 | unsubscribed_from_emails_at | Email unsubscribe date |
 | opted_in_to_emails_at       | Email opt-in date      |
 | user_aliases                | User aliases, if any   |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.

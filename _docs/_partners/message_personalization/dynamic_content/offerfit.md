@@ -22,7 +22,7 @@ The OfferFit and Braze integration allows you to automatically discover the righ
 | OfferFit License | An active OfferFit license is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with the following permissions: {::nomarkdown}<ul><li><code>users.export.ids</code></li><li><code>users.export.segment</code></li><li><code>messages.send</code></li><li><code>campaigns.trigger.send</code></li> <li><code>campaigns.list</code></li><li><code>campaigns.data_series</code></li><li><code>campaigns.details</code></li><li><code>canvas.trigger.send</code></li><li><code>canvas.list</code></li><li><code>canvas.data_series</code></li><li><code>canvas.details</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>templates.create</code></li><li><code>templates.update</code></li><li><code>templates.info</code></li><li><code>templates.list</code></li></ul>{:/} This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST API endpoint | [Your REST API endpoint URL][1]. Your endpoint depends on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
@@ -53,7 +53,7 @@ Your OfferFit license and use case will determine the Braze REST API endpoints y
 | [POST /templates/email/update]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)      | Update an existing Braze HTML email template. |
 | [GET /templates/email/info]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
 | [GET /templates/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)           | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -81,7 +81,7 @@ The OfferFit AI will learn from every customer interaction and apply those insig
 | **Referral** | Maximize new accounts opened through business credit card referrals from existing customers. | Fixed email sequence for all customers, with extensive A/B testing to determine the best sending times, cadence, etc. for the customer population. | Automate experimentation to determine ideal email, creative, sending time, and credit card to offer specific customers. |
 | **Lead Nurturing & Conversion** | Drive incremental revenue and pay the right amount for each customer. | As privacy policies change at Facebook and other platforms, prior approaches to personalized paid ads become last effective. | Leverage robust first-party data to automatically experiment on customer segments, biding methodology, bid levels, and creative. |
 | **Loyalty & Engagement** | Maximize purchases by new enrollees in customer loyalty program. | Customers received fixed sequence of emails in response to their actions. For example, all new enrollees in the loyalty program receive the same journey. | Experiment automatically with different email offers, creative, sending time, and frequency to maximize purchase and repurchase for each customer. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 ## Integration
