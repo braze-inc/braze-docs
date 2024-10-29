@@ -70,7 +70,7 @@ Hey! Get in here and play this Game!
 
 ![][14]
 
-In this use ase, if you have played a certain game, you'll receive the following message:
+In this use case, if you have played a certain game, you'll receive the following message:
 
 ```
 You played our Game! We're so happy!
