@@ -210,7 +210,21 @@ braze.subscribeToBannersUpdates((banners) => {
 {% tab Swift %}
 
 ```swift
-todo
+// To get access to the Banner model object:
+let globalBanner: Braze.Banner?
+AppDelegate.braze?.banners.getBanner(for: "global_banner", { banner in
+  self.globalBanner = banner
+})
+
+// If you simply want the Banner view, you may initialize a `UIView` with the placement ID:
+if let braze = AppDelegate.braze {
+  let bannerUIView = BrazeBannerUI.BannerUIView(placementId: "global_banner", braze: braze)
+}
+
+// Similarly, if you want a Banner view in SwiftUI, use the corresponding `BannerView` initializer:
+if let braze = AppDelegate.braze {
+  let bannerView = BrazeBannerUI.BannerView(placementId: "global_banner", braze: braze)
+}
 ```
 {% endtab %}
 {% tab Java %}
@@ -292,9 +306,9 @@ import * as braze from "@braze/web-sdk";
 
 const banner = braze.getBanner("global_banner");
 if (banner?.html) {
-    // do something with the html
-    // then log an impression when the HTML is in view
-    braze.logBannerImpressions([banner.id]);
+  // do something with the html
+  // then log an impression when the HTML is in view
+  braze.logBannerImpressions([banner.id]);
 }
 ```
 
@@ -302,7 +316,14 @@ if (banner?.html) {
 {% tab Swift %}
 
 ```swift
-todo
+// First, get the Banner object:
+var globalBanner: Braze.Banner?
+brazeClient.braze()?.banners.getBanner(for: "global_banner", { banner in
+  globalBanner = banner
+})
+
+// Then log the impression on the Banner.
+globalBanner?.context?.logImpression()
 ```
 {% endtab %}
 {% tab Java %}
