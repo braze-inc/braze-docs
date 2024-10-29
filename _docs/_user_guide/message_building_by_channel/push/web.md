@@ -38,7 +38,7 @@ Here are some examples of common web push message use cases.
 | App download | Draw web users to your mobile app to help them get even more value out of your products. Consider leveraging personalization to highlight app benefits based on their current engagement patterns. |
 | Discounts and sales | Increase customer awareness of time-sensitive events and promotions. Message across multiple channels, including web push, to increase awareness of your brand's promotions. |
 | Cart abandonment | Send automated reminders to users who haven't finished their transactions to bring them back to the checkout flow. <br><br>Research conducted by Braze found that web push is 53% more effective than email and 23% more impactful than mobile push at getting recipients to come back and complete a purchase. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Prerequisites to use web push
 

@@ -196,7 +196,7 @@ The following table describes the limitations that apply at a feature flag level
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
 | [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
 | [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Active feature flags
 

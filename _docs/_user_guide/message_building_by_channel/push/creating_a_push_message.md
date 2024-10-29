@@ -75,7 +75,7 @@ There are a few different ways to do this depending on your previous selections:
 | Push notification campaign | Select one or more platforms and devices. If you choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. This provides an editing experience optimized for crafting one message for all selected platforms in a single editor. See [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what's different in this editing experience. |
 | Multichannel campaign | Select **Add Messaging Channel** to add additional push platforms. Because platform selections are specific to each variant, you can try testing message engagement per platform.
 | Canvas | In your Message step, select **+ Add more** to add additional push platforms. Similar to multichannel campaigns, platform selections are specific to each variant. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 3: Select notification type (iOS and Android)
 

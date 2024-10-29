@@ -26,7 +26,7 @@ Replace the following:
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#required-keys) from the following section. |
 | `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your page should be similar to the following:
 
