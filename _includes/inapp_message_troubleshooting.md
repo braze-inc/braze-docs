@@ -14,7 +14,7 @@
 
 1. Is your campaign configured to target either Mobile Apps or Web Browsers as appropriate? As an example, if your campaign only targets Web Browsers, it will not send to Android devices.
 2. Did you implement a custom UI, and is it working as intended? Is there other app-side custom handling or suppression that could be interfering with display? 
-3. Has this particular platform and app version ever showed in-app messages successfully?
+3. Has this particular platform and app version ever shown in-app messages successfully?
 4. Did the trigger take place locally on the device? Note that a REST call can't be used to trigger an in-app message in the SDK.
 
 #### My in-app message wasn't shown for all users
