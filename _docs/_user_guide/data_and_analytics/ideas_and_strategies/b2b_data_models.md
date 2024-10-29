@@ -1,6 +1,8 @@
 ---
 nav_title: B2B Data Models
 article_title: Creating a B2B Data Model
+page_order: 0
+page_type: reference
 description: "Learn how to use Braze data tools to create B2B models."
 ---
 
