@@ -107,10 +107,6 @@ When sending a multi-channel campaign with a speed rate limit, each channel is s
 
 For push campaigns delivering on multiple platforms, the selected rate limit will be equally distributed across platforms. A push campaign leveraging Android and iOS with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the two platforms.
 
-#### Canvas delivery speed rate limiting {#canvas-delivery-speed}
-
-When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
-
 #### Rate limiting and Connected Content retries
 
 When the [Connected Content Retry][19] feature is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of 75,000 messages with a 10,000 per minute rate limit. In the first minute, the call fails or is slow and only sends 4,000 messages.
@@ -129,6 +125,10 @@ Instead of attempting to make up for the delay and send the remaining 4,000 mess
 | 8      | 5,000      | 10,000                    |
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### Canvas delivery speed rate limiting
+
+When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
 
 ## About frequency capping
 
