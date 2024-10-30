@@ -5,6 +5,8 @@ page_order: 6
 tool: Campaigns
 page_type: reference
 description: "This reference article discusses the concept of rate limiting and frequency capping in campaigns, and how you can manage marketing pressure to improve user experience."
+local_redirect:
+  canvas-delivery-speed: '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#canvas-delivery-speed'
 
 ---
 
@@ -126,7 +128,7 @@ Instead of attempting to make up for the delay and send the remaining 4,000 mess
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Canvas delivery speed rate limiting
+### Canvas delivery speed rate limiting {#canvas-delivery-speed}
 
 When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
 
