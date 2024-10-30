@@ -26,7 +26,7 @@ There are four primary B2B objects that you need to execute B2B campaigns.
 | Accounts | A record of an organization that is a qualified potential customer, an existing customer, a partner, or a competitor who has a relationship of similar significance. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-Within Braze, we organize these four objects as two objects.
+Within Braze, these four objects are split and mapped to two concepts: user profiles and business objects.
 
 | Object | Description |
 | --- | --- |
@@ -38,7 +38,7 @@ Within Braze, we organize these four objects as two objects.
 
 Business objects are any non-user centric dataset. In a B2B context, these include your account and opportunity data, and any other pertinent non-user centric dataset that your company tracks.
 
-There are two methods to create and manage your business objects in Braze
+There are two methods to create and manage your business objects in Braze, catalogs and connected sources. 
 
 | Method | Description |
 | --- | --- |
@@ -149,7 +149,7 @@ User profiles are the primary object in Braze, which power the majority of your 
 
 ### Step 2.1: Map sales CRM IDs to Braze
 
-First, you’ll want to make sure Braze and your CRM of choice have a common identifier to share data to. We suggest using the following table to map your sales CRM ID fields back to the Braze user object. The table below has Salesforce as the CRM system, but this can be done with any CRM.
+First, make sure Braze and your CRM of choice have a common identifier to share data to. We suggest using the following table to map your sales CRM ID fields back to the Braze user object. The table below has Salesforce as the CRM system, but this can be done with any CRM.
 
 #### Braze object: User
 
@@ -169,7 +169,7 @@ After you have your IDs in sync, you’ll need to relate your Braze user profile
 
 ### Step 2.2: Create a relationship between user profiles and your business objects
 
-#### Option 1: When using Catalogs for business objects
+#### Option 1: When using catalogs for business objects
 
 Now that your opportunity and account details are accounted for as Braze catalogs, you need to create a relationship between those catalogs and the user profiles you want to send messages to. Currently, this requires two steps:
 
