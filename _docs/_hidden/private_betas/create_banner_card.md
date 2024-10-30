@@ -13,10 +13,10 @@ page_type: reference
 Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications). 
 
 Banner Cards are great for:
-- Recommending products based on user behavior
-- Sharing updates on loyalty programs
-- Notifying users about upcoming events
+
 - Highlighting featured content
+- Notifying users about upcoming events
+- Sharing updates on loyalty programs
 
 Because Banner Cards personalize each time a user starts a new session and can be configured to never expire, they’re a helpful tool to add to your engagement strategy.
 
