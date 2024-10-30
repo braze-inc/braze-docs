@@ -187,6 +187,8 @@ Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).
+Coupon code message templates | These can be opened and edited like other message templates, and are compatible with Liquid and Braze promotion codes. 
+CTA response messages  | Create a response message that includes a call to action button.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Calls to actions {#ctas}
