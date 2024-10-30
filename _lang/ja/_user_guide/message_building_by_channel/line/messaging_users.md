@@ -6,8 +6,7 @@ description: "この記事では、テンプレート化されたキャンペー
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/messaging_users/
+alias: /line/messaging_users/
 ---
 
 # LINE ユーザーへのメッセージング
