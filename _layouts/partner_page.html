@@ -137,7 +137,7 @@ $(document).ready(function() {
         }
     }
 
-    var card_speciality =  $('<h6>').html((cur_partner['partner_specialties'] || []).join(' '));
+    var card_speciality =  cur_partner['partner_specialties'] ? $('<h6>').html((cur_partner['partner_specialties'] || []).join(' ')) : null;
     var card_content =  $('<div>').addClass('hover_content').append($('<p>').html(cur_partner['partner_description']));
 
     var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_speciality).append(card_content);
@@ -200,10 +200,10 @@ $(document).ready(function() {
              var toappend = true;
              var filtered = true;
              for (var k = 0 ; k < filter_select.length; k++ ) {
-               var selected_val = $('#' + filter_select[k] +  " option:selected").val();
+             var selected_val = $('#' + filter_select[k] +  " option:selected").val();
                if (selected_val) {
                  toappend = false;
-                 if (cur_partner[filter_map[k]].indexOf(selected_val) < 0 ) {
+                 if ((cur_partner[filter_map[k]] || []).indexOf(selected_val) < 0 ) {
                    filtered = false;
                  }
                }
