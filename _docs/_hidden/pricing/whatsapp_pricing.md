@@ -38,14 +38,14 @@ On November 1, 2024, all service conversations are free of charge. Service conve
 
 #### What are service conversations? 
 
-Service conversations enable you to respond to customer inquiries. This includes conversations started by an end-user where the brand replies with a response message instead of a template message.
+Service conversations enable you to respond to customer inquiries. This includes conversations started by an end-user where the brand replies with a [response message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) instead of a template message.
 
 #### How can you benefit from this update? 
 
 Some conversations that were previously charged as "service" will now be free. These include: 
 
-- Unrecognized response campaigns where an end-user sends a message that is unrecognized and the brand replies with a generic message using response messaging. For example, an end-user sends a message without a keyword and the brand responds with “We don’t recognize your message, please reach out to customer support."
-- Conversations that start when an end-user messages the brand a promoted keyword and the brand replies using a response message. Common examples are opting into WhatsApp messaging or participating in a specific promotion.
+- [Unrecognized response campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages#unrecognized-responses) where an end-user sends a message that is unrecognized and the brand replies with a generic message using [response messaging]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages). For example, an end-user sends a message without a keyword and the brand responds with “We don’t recognize your message, please reach out to customer support."
+- Conversations that start when an end-user messages the brand a promoted keyword and the brand replies using a [response message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages). Common examples are opting into WhatsApp messaging or participating in a specific promotion.
 
 <br>
 
