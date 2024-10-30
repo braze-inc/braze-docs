@@ -106,7 +106,7 @@ By default, Banner Cards do not have an expiration date, but you can add an opti
 
 ### Placement management
 
-Placements are unique per workspace. Each placement can be used in up to 10 campaigns.  You can view all campaigns associated with a placement from **Settings** > **Banner Card Placements**. 
+Placements are unique per workspace, and each placement can be used in up to 10 campaigns.
 
 Placement IDs must be unique to a workspace, and should not be edited after launch. Work with your developer team to define this ID, because they will need to use it during the integration. 
 
