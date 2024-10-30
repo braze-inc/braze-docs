@@ -4,20 +4,20 @@ noindex: true
 alias: /partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
 layout: dev_guide
 guide_top_header: "Amplitude"
-guide_top_text: "Amplitudeは、強固な商品と行動分析を通じて成長を牽引することができます。強力なターゲティングを知らせるために、ユーザー Segmentの間でどのような行動や形質が一般的であるかを徹底的に把握する。"
-description: "このランディングページには、AmplitudeのCurrents、「Amplitudeのおすすめ」、「Amplitudeと接続されたコンテンツ」を活用する方法など、あらゆるものが掲載されています。"
+guide_top_text: "Amplitude は、堅牢な製品分析と行動分析により、企業の成長を支援しています。ユーザーセグメントに共通する行動や特徴を徹底的に把握し、強力なターゲティングを可能にします。"
+description: "このランディングページは、Amplitude for Currents や Amplitude Recommend の情報、また Amplitude とコネクテッドコンテンツを活用する方法など、Amplitude に関するあらゆる情報のホームページです。"
 
 guide_featured_list:
-- name: Amplitudeコホートインポート
+- name: Amplitude コホートインポート
   link: /docs/partners/data_and_infrastructure_agility/cohort_import/amplitude/
   image: /assets/img/braze_icons/users-01.svg
 - name: Amplitude for Currents
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
   image: /assets/img/braze_icons/building-01.svg
-- name: Amplitudeの推奨
+- name: Amplitude Recommend
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/
   image: /assets/img/braze_icons/lightbulb-02.svg
-- name: Amplitudeと接続内容
+- name: Amplitude とコネクテッドコンテンツ
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
   image: /assets/img/braze_icons/user-circle.svg
 ---

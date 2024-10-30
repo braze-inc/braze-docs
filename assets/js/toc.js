@@ -57,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = " <"+ settings.listType + settings.bootstrapStyling +"><div class='" + settings.toc_header_class + "'>" + settings.toc_header + "</div><div class='" + settings.toc_container_class + "'>";
+      html = " <"+ settings.listType + settings.bootstrapStyling +" aria-label='Table of Content' title='Table of Content'><div class='" + settings.toc_header_class + "'>" + settings.toc_header + "</div><div class='" + settings.toc_container_class + "'>";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
@@ -80,7 +80,7 @@
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
-          html += "<"+ settings.listType + settings.bootstrapStyling +">"
+          html += "<"+ settings.listType + settings.bootstrapStyling +" aria-label='ToC " + header.innerHTML + "'>"
         }
         html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       }

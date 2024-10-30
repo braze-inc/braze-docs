@@ -70,7 +70,7 @@ In the following example, Braze uses the user's external ID to flag duplicate pr
 | alex@company.com     |   A8i3mkd99          |      (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
 | alex@company.com |  |      (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
 | alex@company.com |   |      (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 

@@ -32,7 +32,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Query parameters
 
@@ -41,7 +41,7 @@ Note that each call to this endpoint will return 50 items. For a catalog with mo
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `cursor` | Optional | String | Determines the pagination of the catalog items. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
@@ -146,6 +146,6 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | `catalog-not-found` | Check that the catalog name is valid. |
 | `invalid-cursor` | Check that your `cursor` is valid. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

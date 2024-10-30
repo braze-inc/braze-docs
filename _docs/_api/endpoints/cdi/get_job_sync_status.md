@@ -30,7 +30,7 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `integration_id` | Required | String | Integration ID. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Query parameters
 
@@ -39,7 +39,7 @@ Each call to this endpoint will return 10 items. For an integration with more th
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `cursor` | Optional | String | Determines the pagination of the sync status. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -96,7 +96,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `partial` | Some rows failed to sync due to errors. |
 | `error` | No rows were synced. |
 | `config_error` | There was an error in integration configuration. Check your integration setup. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Troubleshooting
 
@@ -106,7 +106,7 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | `400 Invalid cursor` | Check that your `cursor` is valid. |
 | `400 Invalid integration ID` | Check that your `integration_id` is valid. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 

@@ -62,7 +62,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Reoccurring schedule |  | 
 | Is Transactional |  | 
 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Conversion Behaviors %}
@@ -73,7 +73,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Campaign interaction |  Campaign ID | 
 | Custom event name |  | 
 | Product name |  | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Actions %}
@@ -82,7 +82,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 |---|---|
 | Action types | Send count |
 | Message variations |  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Message Variations %}
@@ -93,7 +93,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Type |  Seed group IDs | 
 |  |  Link template IDs | 
 |  |  Internal user group IDs | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Email Message Variation %}
@@ -105,7 +105,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Title |  BCC | 
 | Subject |  Link template | 
 |  |  Link aliasing |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Email Body %}
@@ -117,7 +117,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Email Templates %}
@@ -128,7 +128,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Content Blocks %}
@@ -139,7 +139,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | API keys | 
 | Content | Territories | 
 | HTML and drag-and-drop content | Tags | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab SMS Message Variation %}
@@ -150,7 +150,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Link shortening | VCF media items | 
 | Click tracking |  | 
 | Media items |  | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
