@@ -12,25 +12,35 @@ platform:
 
 # Banner Cards Integration Guide
 
-(intro)
-
+Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications).
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions  %}
 
-## Dashboard Prerequisites
+## Dashboard prerequisites
 
-### Define Placements {#define-placements}
+### Define placements {#define-placements}
 
-todo
+Before launching a Banner Card campaign in your app, you must set up a placement in the Braze dashboard. Placements are locations that you define in your app that can display Banner Cards.
 
-### Launch a Banner Campaign
+#### Step 1: Create a new placement
 
-todo
+Go to **Settings** > **Banner Cards Placements**, then select **Create Placement**.
 
-## Refresh Placements in your app {#requestBannersRefresh}
+![Banner Card Placements section to create placement IDs.]({% image_buster /assets/img/banner_cards/create_placement.png %})
 
+#### Step 2: Fill in the details
+
+Name your placement and give it a **Placement ID**. Optionally, you can add a description for your placement.
+
+Work with your marketing team to create this ID. This is the ID you'll reference in your app's code, and your marketing team will use the ID to assign a campaign to the location in your app.
+
+![Placement details that designate a Banner Card will display in the left sidebar for spring sale promotion campaigns.]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
+
+For steps on how to launch a Banner Card campaign, refer to [Creating a Banner Card]({{site.baseurl}}/create_banner_card/).
+
+## Refresh placements in your app {#requestBannersRefresh}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -370,18 +380,15 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-## Best Practices
+## Best practices
 
-#### Banner Dimensions and Sizing
+### Banner Card dimensions and sizing
 
-#### Connected Content
+- No dimension info is sent from Braze.
 
-## Roadmap {#roadmap}
+{% alert note %}
+The composer allows a user to preview banners in different dimensions. That information is not saved or sent to the SDK.
+{% endalert %}
 
-#### Sorting banners in priority order
-
-#### Dismissing or collapsing banners
-
-#### Custom Properties or Key-Value Pairs
-
-#### Promo Codes and Catalogs
+- The HTML will take up the full width of the container it is rendered in.
+- As a best practice, we recommend making a fixed dimension element and testing those dimensions in composer.
