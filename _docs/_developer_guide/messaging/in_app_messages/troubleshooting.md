@@ -11,14 +11,14 @@ page_order: 100
 
 {% sdktabs %}
 {% sdktab android %}
-Android test.
+{% multi_lang_include developer_guide/android/messaging/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-Swift test.
+{% multi_lang_include developer_guide/swift/messaging/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-Web test.
+{% multi_lang_include developer_guide/web/messaging/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}

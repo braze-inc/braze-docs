@@ -1,10 +1,10 @@
 ## Impressions
 
-#### Impression or click analytics aren't being logged
+### Impression or click analytics aren't being logged
 
 If you have set an in-app message delegate to manually handle message display or click actions, you'll need to manually log clicks and impressions on the in-app message.
 
-#### Impressions are lower than expected
+### Impressions are lower than expected
 
 Triggers take time to sync to the device on session start, so there can be a race condition if users log an event or purchase right after they start a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
 
@@ -26,7 +26,7 @@ The SDK requests in-app messages from Braze servers on session start. To check i
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
 5. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check if the correct in-app messages are being returned in the response data.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
-#### Troubleshoot messages not being requested
+### Troubleshoot messages not being requested
 
 If your in-app messages are not being requested, your app might not be tracking sessions correctly, as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
@@ -54,4 +54,3 @@ If your app is successfully requesting and receiving in-app messages, but they a
 - If you have set a delegate to customize in-app message handling, check your delegate to ensure it is not affecting the in-app message display.
 - Failed image downloads will prevent in-app messages with images from displaying. Image downloads will always fail if the `BrazeInAppMessageManager` is not registered properly. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation does not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
-

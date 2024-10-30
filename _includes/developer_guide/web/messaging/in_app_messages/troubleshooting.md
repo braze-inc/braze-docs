@@ -1,4 +1,6 @@
-## Impressions are lower than expected
+## Impressions
+
+### Impressions are lower than expected
 
 Triggers take time to sync to the device on session start; this can result in a race condition if users log an event or purchase right after starting a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
 
@@ -46,4 +48,3 @@ If your app is successfully requesting and receiving in-app messages, but they a
 
 - Triggered in-app messages are rate-limited based on the [minimum time interval between triggers]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers), which defaults to 30 seconds.
 - If you have custom in-app message handling through `braze.subscribeToInAppMessage` or `appboy.subscribeToNewInAppMessages`, check that subscription to ensure it is not affecting in-app message display.
-

@@ -124,5 +124,3 @@ XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"http
 ```
 {% endtab %}
 {% endtabs %}
-
-
