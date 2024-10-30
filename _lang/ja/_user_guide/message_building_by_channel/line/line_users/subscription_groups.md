@@ -6,8 +6,7 @@ description: "この記事では、LINE のメッセージサブスクリプシ�
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/subscription_groups/
+alias: /line/subscription_groups/
 ---
 
 # LINE サブスクリプショングループ
