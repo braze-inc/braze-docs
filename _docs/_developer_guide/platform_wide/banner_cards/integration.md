@@ -1,7 +1,7 @@
 ---
-nav_title: Integration Guide
-article_title: Integration Guide
-page_order: 1
+nav_title: Integrating Banner Cards
+article_title: Integrating Banner Cards
+hidden: true
 description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
 platform:
   - iOS
@@ -10,11 +10,15 @@ platform:
   
 ---
 
-# Banner Cards Integration Guide
+# Integrating Banner Cards
 
 Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications).
 
-This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+{% alert important %}
+Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
+This feature is available as of the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions  %}
 
@@ -77,7 +81,7 @@ Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native
+This feature is not currently supported on React Native.
 ```
 
 {% endtab %}
@@ -106,7 +110,6 @@ This feature is not currently supported on Roku.
 {% endtabs %}
 
 ## Listen for updates {#subscribeToBannersUpdates}
-
 
 {% tabs %}
 {% tab JavaScript %}
@@ -156,7 +159,7 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native
+This feature is not currently supported on React Native.
 ```
 
 {% endtab %}
@@ -184,8 +187,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-## Get and Insert a Banner by placement ID {#}
-
+## Get and insert a Banner Card by placement ID {#}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -238,7 +240,7 @@ if let braze = AppDelegate.braze {
 ```
 {% endtab %}
 {% tab Java %}
-You can create Banners in your Android views layout by simply including this XML:
+You can create Banner Cards in your Android views layout by including this XML:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -250,7 +252,7 @@ You can create Banners in your Android views layout by simply including this XML
 
 {% endtab %}
 {% tab Kotlin %}
-If you're using Android Views, you can use this XML:
+If you're using Android Views, use this XML:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -270,7 +272,7 @@ Banner(placementId = "global_banner")
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native
+This feature is not currently supported on React Native.
 ```
 
 {% endtab %}
@@ -300,12 +302,12 @@ This feature is not currently supported on Roku.
 
 ## Analytics
 
-Braze will automatically handle all impression logging when using the SDK methods to insert banners.
+Braze will automatically handle all impression logging when using the SDK methods to insert Banner Cards. 
 
-If for some reason you need to parse and render the HTML yourself, you can use the following method to track impressions:
+If you need to parse and render the HTML, you can use the following method to track impressions:
 
-{% alert warning %}
-You likely don't need to customize your integration, so take care in the following steps
+{% alert important %}
+Customization for your integration is likely unnecessary, so consider the following step carefully.
 {% endalert %}
 
 {% tabs %}
@@ -352,7 +354,7 @@ Braze.getInstance(context).logBannerImpression(banner.placementId)
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native
+This feature is not currently supported on React Native.
 ```
 
 {% endtab %}
@@ -384,11 +386,11 @@ This feature is not currently supported on Roku.
 
 ### Banner Card dimensions and sizing
 
-- No dimension info is sent from Braze.
+- No dimension information is sent from Braze.
 
 {% alert note %}
 The composer allows a user to preview banners in different dimensions. That information is not saved or sent to the SDK.
 {% endalert %}
 
-- The HTML will take up the full width of the container it is rendered in.
+- The HTML will take up the full width of the container it's rendered in.
 - As a best practice, we recommend making a fixed dimension element and testing those dimensions in composer.

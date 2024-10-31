@@ -3,6 +3,7 @@ nav_title: Banner Cards
 article_title: Banner Cards
 page_order: 4
 layout: dev_guide
+hidden: true
 guide_top_header: "Banner Cards"
 guide_top_text: "Banner Cards allow you to create personalized messaging for your users all while extending the reach of other channels, such as email or push notifications."
 description: "This landing page is home to all things Banner Cards, including articles on how to create Banner Cards, and use cases."
@@ -11,12 +12,12 @@ channel:
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: About Banner Cards
-  link: /docs/developer_guide/platform_wide/banner_cards/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
+- name: Creating Banner Cards
+  link: /docs/create_banner_card/
+  image: /assets/img/braze_icons/channel-content-cards.svg
 - name: Integrating Banner Cards
   link: /docs/developer_guide/platform_wide/banner_cards/integration/
-  image: /assets/img/braze_icons/columns-01.svg
+  image: /assets/img/braze_icons/code-01.svg
 ---
 
 <br><br>
