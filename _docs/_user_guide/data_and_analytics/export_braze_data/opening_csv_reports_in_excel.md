@@ -9,6 +9,8 @@ description: "This reference article covers how to open CSV exports in Excel."
 
 # Opening CSV exports in Excel
 
+> This page covers how to open CSV exports into Excel.
+
 ## Set Excel as the default program
 
 While CSV files are usually automatically opened in Excel by default, this may not always be the case. Refer to the [Windows][20] and [Apple][21] troubleshooting articles for steps to set Excel as your default program.
