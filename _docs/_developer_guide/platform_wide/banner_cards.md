@@ -4,7 +4,7 @@ article_title: Banner Cards
 page_order: 4
 layout: dev_guide
 guide_top_header: "Banner Cards"
-guide_top_text: "Banner Cards allow you to ..."
+guide_top_text: "Banner Cards allow you to create personalized messaging for your users all while extending the reach of other channels, such as email or push notifications."
 description: "This landing page is home to all things Banner Cards, including articles on how to create Banner Cards, and use cases."
 channel:
   - Banners
