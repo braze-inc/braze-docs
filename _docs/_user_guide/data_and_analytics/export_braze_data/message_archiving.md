@@ -41,7 +41,7 @@ Braze downcases your push tokens before we hash them. This results in the push t
 
 ## Setting up message archiving
 
-This section walks you through setting up message archiving for your workspace. Before proceeding, confirm that your company has purchased and turned on message archiving.
+This section guides you through setting up message archiving for your workspace. Before proceeding, confirm that your company has purchased and turned on message archiving.
 
 ### Step 1: Connect a cloud storage bucket
 
