@@ -203,7 +203,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Revenue" %}
-<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
+<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window.
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
