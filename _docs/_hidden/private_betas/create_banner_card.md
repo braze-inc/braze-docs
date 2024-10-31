@@ -49,7 +49,7 @@ After determining your Banner Card placement, it’s time to build your campaign
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **Banner Card**.
 3. Name your campaign something clear and meaningful.
-4. Add Teams and Tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
+4. Add teams and tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select a [placement](#prerequisite-determine-placement) to associate with your campaign. This is where the Banner Card will appear in your app or site.
 6. Add and name as many variants as you like for your campaign. You can choose different message types and layouts for each added variant. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
