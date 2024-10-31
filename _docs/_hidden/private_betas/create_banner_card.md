@@ -10,7 +10,7 @@ page_type: reference
 
 > This article covers how to create a Banner Card in Braze when you build campaigns.
 
-Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications). 
+Similar to [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), Banner Cards are embedded directly in your app or website so that you can engage users with an experience that feels natural. They’re a quick and seamless solution to create personalized messaging for your users all while extending the reach of other channels (such as email or push notifications). 
 
 Banner Cards are great for:
 
@@ -24,9 +24,9 @@ Because Banner Cards personalize each time a user starts a new session and can b
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
-## Prerequisite: determine placement
+## Prerequisite: Determine placement
 
-Before creating a Banner Card, you must designate areas in your app where you want to display the Banner Card. This is also referred to as the placement. Once you create a placement, you can select it when creating your Banner Card campaign. If you already have a placement, skip to [step 1](#step-1-create-your-campaign).
+Before creating a Banner Card, you must designate areas in your app where you want to display the Banner Card. This is also referred to as the placement. After you create a placement, you can select it when creating your Banner Card campaign. If you already have a placement, skip to [step 1](#step-1-create-your-campaign).
 
 To create a placement:
 
@@ -119,8 +119,8 @@ The following table defines key Banner Card metrics.
 | **Total Impressions**     | Total Impressions is the number of times a Banner Card is loaded and appears on a user’s screen regardless of prior interaction.                               |
 | **Unique Impressions**    | _Unique Impressions_ is the total number of users who received and viewed a given message in a day; each user is only counted once.                              |
 | **Total Clicks**         | _Total Clicks_ is the total number of clicks within a Banner Card, regardless of whether the same user clicks multiple times.                                     |
-| **Unique Clicks**        | _Unique Clicks_ is the distinct number of recipients who have clicked within a Banner Card at least once and is measured by dispatch_id; each user is only counted once. |
+| **Unique Clicks**        | _Unique Clicks_ is the distinct number of recipients who have clicked within a Banner Card at least once and is measured by `dispatch_id`; each user is only counted once. |
 | **Primary Conversions**  | Includes both the count and rate of conversions for the [primary conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event). The primary conversion event is determined when you build the campaign. {::nomarkdown}<ul><li><i>Conversions</i> are the number of times a user performs an event after clicking on the Banner Card. Each user is only counted once.</li><li><i>Conversion Rate</i> is the percentage of times the conversion event occurred compared to all recipients of a message. <br> <i>(Conversions) / (Unique Impressions)</i></li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
+For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
