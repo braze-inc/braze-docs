@@ -5,8 +5,6 @@
 #
 # Usage: ./bdocs release
 
-source "$PROJECT_ROOT/bdocs"
-
 main() {
     # Run script from the root of the git repository.
     cd "$PROJECT_ROOT"

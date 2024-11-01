@@ -3,7 +3,7 @@
 # Removes unused reference-style links from the bottom of a file, such as:
 #   [1]: {{site.baseurl}}/contributing/your_first_contribution/
 # 
-# Usage: ./bdocs rlinks [FILE|DIRECTORY]
+# Usage: ./bdocs links -r [FILE|DIRECTORY]
 #
 # Options:
 #   FILE              Delete unused reference links in a single file.
