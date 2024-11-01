@@ -787,7 +787,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Revenue' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>
 
 {% endapi %}
 

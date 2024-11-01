@@ -74,6 +74,10 @@ In the following example, Braze uses the user's external ID to flag duplicate pr
 {% endtab %}
 {% endtabs %}
 
+#### Merge behavior
+
+Braze will fill empty fields on the kept profile with values from the merged profile. For a list of the fields that will be filled, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
+
 ### Step 3: Merge your duplicates
 
 If you're satisfied with the results of your preview, select **Merge all duplicates**.
