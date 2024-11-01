@@ -4,7 +4,7 @@ article_title: ヘルプ記事
 page_order: 1
 layout: dev_guide
 guide_top_header: "ヘルプ記事"
-guide_top_text: "私たちには、問題を解決し、キャンペーンの依存関係を明らかにするのに役立つ多くのヘルプ記事があります。新しいヘルプ記事の提案がある場合は、このヘルプ記事ページまたは他のヘルプ記事ページの下部にフィードバックを残してください。または、<a href='https://www.braze.com/docs/contributing/home'>Braze Contributor Guide</a>にアクセスして、自分で記事を書く方法を学ぶことができます。<br> <br>次の人気トピックから選択するか、ナビゲーションパネルに表示されている他の記事をご覧ください。"
+guide_top_text: "問題を解決し、キャンペーンの依存関係を明らかにするのに役立つ多くのヘルプ記事があります。新しいヘルプ記事の提案がある場合は、このヘルプ記事ページまたは他のヘルプ記事ページの下部にフィードバックを残してください。または、<a href='https://www.braze.com/docs/contributing/home'>Braze Contributor Guide</a>にアクセスして、自分で記事を書く方法を学ぶことができます。<br> <br>次の人気トピックから選択するか、ナビゲーションパネルに表示されている他の記事をご覧ください。"
 
 page_type: landing
 description: "このランディングページは、Brazeを使用する際の問題解決や依存関係の明示に役立つヘルプ記事のホームです。"

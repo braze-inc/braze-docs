@@ -6,13 +6,13 @@ page_order: 1
 excerpt_separator: ""
 layout: api_page
 page_type: reference
-description: "この記事では、Get [エンドポイント名] Brazeエンドポイントの使用方法とパラメータについて概説する。"
+description: "この記事では、Get [エンドポイント名] Braze エンドポイントを使用するための使用方法とパラメーターについて説明します。"
 
 noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# クエリーまたはリスト \[項目エンドポイント "Gets"]
+# クエリまたは List \[項目エンドポイント "Gets"]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers

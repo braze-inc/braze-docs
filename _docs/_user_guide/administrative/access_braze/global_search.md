@@ -56,7 +56,7 @@ table td {
 | Move between search results | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
 | Select a search result      | <kbd>Enter</kbd>    |
 | Close the search menu       | <kbd>Esc</kbd>  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Content type and status tags
 

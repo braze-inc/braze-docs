@@ -59,7 +59,7 @@ When generating the JWT, the following fields are expected:
 | `alg` | Yes  | The supported algorithm is `RS256`. |
 | `typ` | Yes  | The type should equal `JWT`.        |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 **JWT Payload**
 
@@ -67,10 +67,8 @@ When generating the JWT, the following fields are expected:
 | ----- | -------- | -------------------------------------------------------------------------------------- |
 | `sub` | Yes  | The "subject" should equal the User ID you supply Braze SDK when calling `changeUser`  |
 | `exp` | Yes | The "expiration" of when you want this token to expire.                                |
-| `aud` | No       | The "audience" claim is optional, and if set should equal `braze`                      |
-| `iss` | No       | The "issuer" claim is optional, and if set should equal your SDK API Key.              |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### JWT libraries
 
@@ -389,7 +387,7 @@ In the dashboard **Manage Settings** page, each app has three SDK Authentication
 | **Disabled** | Braze will not verify the JWT supplied for a user. (Default Setting)|
 | **Optional** | Braze will verify requests for logged-in users, but will not reject invalid requests. |
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/sdk-auth-settings.png %})
 
@@ -419,7 +417,7 @@ Data is available in real-time, and you can hover over points in the chart to se
 | 26 | `MISSING_TOKEN` | No token was provided in the request.|
 | 27 | `NO_MATCHING_PUBLIC_KEYS` | No public keys matched the provided token.|
 | 28 | `PAYLOAD_USER_ID_MISMATCH` | Not all user ids in the request payload match as is required.|
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
 
 ## Frequently asked questions {#faq}
 

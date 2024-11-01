@@ -8,7 +8,7 @@ description: "SHORT_DESCRIPTION."
 alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
 page_type: tutorial
 layout: OPTIONAL_LAYOUT_FILE
-—--
+---
 
 # Tutorial: WHAT_THE_USER_WILL_DO
 

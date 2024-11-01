@@ -40,7 +40,7 @@ We suggest following these best practices:
 | Site description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
 | URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 Custom subdomain support is not available during the beta.
@@ -59,6 +59,8 @@ The editor uses two types of components for landing page composition: rows and b
 ![The "Build" editor section containing "Rows" and "Form Blocks".][4]{: style="max-width:30%;"}
 
 #### Form block
+
+Use various form block components to log custom and standard profile attributes and custom events. The input field form block can log both standard and custom attributes for your users, and the phone capture and email capture form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both on form submission. 
 
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
@@ -111,7 +113,7 @@ During the beta, each form submission on a landing page will create a new anonym
 When a user submits a form, a new Braze user profile is created with the submitted user data.
 
 {% alert note %}
-During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page.
+During the beta, Braze will create a new user upon every form submission.
 {% endalert %}
 
 ### Are there any technical requirements to publish a landing page?

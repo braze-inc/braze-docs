@@ -97,7 +97,12 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  context.preferredOrientation = BRZInAppMessageRawOrientationPortrait;
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -216,7 +221,40 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  switch (context.message.type) {
+    case BRZInAppMessageRawTypeSlideup: {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+      break;
+    }
+    case BRZInAppMessageRawTypeModal:
+    case BRZInAppMessageRawTypeFull:
+    {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+
+      NSMutableArray *updatedButtons = [NSMutableArray arrayWithCapacity:context.message.buttons.count];
+      for (BRZInAppMessageRawButton *button in context.message.buttons) {
+        BRZInAppMessageRawButtonTheme *lightTheme = BRZInAppMessageRawButtonTheme.defaultLight;
+        BRZInAppMessageRawButton *newButton = [button mutableCopy];
+        newButton.textColor = lightTheme.textColor;
+        newButton.backgroundColor = lightTheme.backgroundColor;
+        newButton.borderColor = lightTheme.borderColor;
+        [updatedButtons addObject:newButton];
+      }
+      context.message.buttons = updatedButtons;
+      break;
+    }
+    default:
+      break;
+  }
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -296,7 +334,7 @@ For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status
 | `.auto`                             | The message view decides the status bar hidden state.                                 |
 | `.hidden`                           | Always hide the status bar.                                                           |
 | `.visible`                          | Always display the status bar.                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Customizing display timing 
 
@@ -330,7 +368,7 @@ Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following val
 | `.reenqueue`                        | The message will be not be displayed and will be placed back on the top of the stack.                                       |
 | `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. (Deprecated, please use `.reenqueue`) |
 | `.discard`                          | The message will be discarded and will not be displayed.                                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Implementation samples
 

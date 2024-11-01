@@ -28,8 +28,8 @@ description: "この記事では、CanvasエンドポイントのListリンク�
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `canvas_step_id` | 必須 | string | [キャンバスステップAPI識別子を]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)参照のこと。 |
-| `message_variation_id ` | 必須 | string | メッセージバリアントAPI識別子（そのステップのEメールメッセージバリアント用）。これは、**キャンバスの詳細**ページで**バリアントの分析を**クリックすることで見つけることができる。 |
+| `canvas_step_id` | required | string | [キャンバスステップ API 識別子]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)を参照してください。 |
+| `message_variation_id ` | required | string | メッセージバリアント API 識別子 (そのステップのメールメッセージバリアント用)。これは、\[**キャンバス詳細**] ページで \[**バリアントを分析**] をクリックすることで確認できます。 |
 | `includes_link_id` | オプション | string | 特定のリンク識別子（Brazeによって割り当てられる）または`null` 。これは、特定の`link_id` によって結果をフィルタリングするために使用される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
@@ -66,8 +66,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `Missing/Invalid Canvas ID` | キャンバスAPI IDはAPI識別子でなければならない。これは、[キャンバス・リストのエクスポート・エンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)使うか、ダッシュボードにログインすることで確認できる。 |
-| `Missing/Invalid Message Variant ID` | メッセージバリアントAPI IDはAPI識別子でなければならない。これは、[キャンバスの詳細をエクスポートするエンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)使用するか、ダッシュボードにログインすることで確認できる。 |
+| `Missing/Invalid Canvas ID` | キャンバス API ID はAPI 識別子でなければなりません。これは、[キャンバスリストのエクスポートエンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)使うか、ダッシュボードにログインすることで確認できます。 |
+| `Missing/Invalid Message Variant ID` | メッセージバリアントAPI IDはAPI識別子でなければならない。これは、[キャンバス詳細のエクスポートエンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)使うか、ダッシュボードにログインすることで確認できます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

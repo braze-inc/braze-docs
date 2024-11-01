@@ -46,9 +46,6 @@ guide_menu_list:
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     image: /assets/img/braze_icons/marker-pin-06.svg
-  - name: Beacon and Geofence Support
-    link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg

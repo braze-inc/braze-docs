@@ -21,7 +21,7 @@ The Braze and DataGrail integration allows you to detect consumer data collected
 | DataGrail account | A DataGrail account to take advantage of this partnership.<br>Contact your admin or email support@datagrail.io with any issues or questions regarding the integration. |
 | Braze API key | A Braze REST API key with `events.list`, `users.export.ids`, `users.delete`, and `users.track` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

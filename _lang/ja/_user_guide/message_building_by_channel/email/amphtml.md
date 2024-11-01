@@ -3,15 +3,15 @@ nav_title: メール用AMP
 article_title: メール用AMP
 alias: /amphtml/
 page_order: 11
-description: "このリファレンス記事は、メール用AMPの概要と一般的な使用例を提供します。"
+description: "この記事では、メール用 AMP と一般的なユースケースの概要について説明します。"
 channel:
   - email
 
 ---
 
-# メールのためのAMP
+# メール用 AMP
 
-> メール用[AMP<1>}を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。AMPは、アンケート、フィードバック質問票、投票キャンペーン、レビュー、サブスクリプションセンターなどのエキサイティングなメール提供を構築するのに役立つさまざまなコンポーネントを使用することで、これを可能にします。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
+> メール用[AMP](https://amp.dev/about/email)を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。AMP は、アンケート、フィードバック質問票、投票キャンペーン、レビュー、サブスクリプションセンターなど、エキサイティングなメールオファリングの作成に役立つさまざまなコンポーネントを使用することで、これを可能にします。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
 
 ## 要件
 
@@ -19,21 +19,21 @@ Brazeは、Googleで登録するユーザーや必要なセキュリティ要件
 
 | 要件   | 説明 |
 | --------------| ----------- |
-| AMPがメールでオンになりました | AMPは誰でも利用できます。この機能を有効にしたい場合は、アカウントマネージャーに連絡してください。 |
-| Gmailアカウントイネーブルメント | [Gmailアカウントの有効化](#enabling-gmail-account)を参照してください。 |
-| Google送信者認証 | Gmail [は送信者を認証します](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) AMPメールのDKIM、SPF、およびDMARCを使用します。これらはあなたのアカウントに設定する必要があります。<br><br>[ドメインキー識別メール](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>[送信者ポリシーフレームワーク](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>[ドメインベースのメッセージ認証、報告、および適合](https://en.wikipedia.org/wiki/DMARC)(DMARC)
-| AMP メール要素 | 説得力のあるAMPメールには、さまざまなコンポーネントの戦略的な使用が含まれます。以下の[コンポーネント](#components)セクションの必須タブを参照してください。 |
+| メール用 AMP がオンになっている | AMPは誰でも利用できます。この機能を有効にしたい場合は、アカウントマネージャーに連絡してください。 |
+| Gmail アカウントの有効化 | [Gmailアカウントの有効化](#enabling-gmail-account)を参照してください。 |
+| Google送信者認証 | Gmail は DKIM、SPF、および DMARC を使用して AMP メールの[送信者を認証](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication)します。お客様のアカウントにこれらが設定されている必要があります。<br><br>- [ドメインキー識別メール](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [送信者ポリシーフレームワーク](https://en.wikipedia.org/wiki/Sender_Policy_Framework) (SPF)<br>- [ドメインベースのメッセージ認証、レポート、および準拠](https://en.wikipedia.org/wiki/DMARC) (DMARC)
+| AMP メール要素 | 説得力のある AMP メールでは、さまざまなコンポーネントが戦略的に使用されます。以下の[コンポーネント](#components)セクションの必須タブを参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### サポートされているクライアント
 
-ユーザーにAMPメールを送信する前に、クライアントに登録する必要があります。登録プロセスには、承認を得るためにテストAMP HTMLメールを送信することが含まれます。承認時間はクライアントごとに異なります。詳細については、登録リンクに従ってください。
+ユーザーにAMPメールを送信する前に、クライアントに登録する必要があります。登録プロセスには、承認を得るためにテストAMP HTMLメールを送信することが含まれます。承認の所要時間はクライアントごとに異なります。詳細については、登録リンクに従ってください。
 
 | クライアント | 登録リンク |
 | ------ | -------- |
-| Gmail | [グーグル](https://developers.google.com/gmail/ampemail/register) |
-| フェアメール | [フェアメール](https://email.faircode.eu/) |
-| ヤフー | [ヤフー](https://senders.yahooinc.com/amp/) |
+| Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
+| FairEmail | [FairEmail](https://email.faircode.eu/) |
+| ヤフー | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
 サポートされているプラットフォームの完全なリストについては、[AMPドキュメント](https://amp.dev/support/faq/email-support)を参照してください。 
@@ -48,7 +48,7 @@ Gmailの設定に移動し、**ダイナミックなメールを有効にする*
 
 また、APIを使用してメールにAMPを使用することもできます。Brazeの[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging/)を使用してメールを送信する場合は、以下に示すように`amp_body`をオブジェクト仕様として追加します。
 
-### メール object specification
+### メールオブジェクトの指定
 
 ```json
 {
@@ -69,11 +69,11 @@ Gmailの設定に移動し、**ダイナミックなメールを有効にする*
 }
 ```
 
-## AMPメールを作成する
+## AMP メールの作成
 
-まず、[コンポーネント](#components)を使用してAMPメールを作成します。次に、[Braze API](#api-usage)を使用してメッセージを送信し、AMP `amp_body` HTMLを含めるようにしてください。
+まず、[コンポーネント](#components)を使用して AMP メールを作成します。次に、[Braze API](#api-usage) を使用してメッセージを送信します。AMP HTML の `amp_body` を必ず含めてください。
 
-AMP HTML に加えて、通常の HTML `body` バージョンが必要であり、AMP メールの `plaintext_body` バージョンを提案します。すべてのAMPメールはマルチパートで送信されます。つまり、BrazeはHTML、プレーンテキスト、およびAMP HTMLをサポートするメールを送信します。これは、メールがAMP for emailをまだサポートしていないプロバイダー経由で送信された場合に役立ちます。なぜなら、メールはユーザーとそのデバイスに基づいて適切なバージョンに自動的にデフォルトするからです。
+AMP HTML に加えて、通常の HTML `body` バージョンが必要です。AMP メールの `plaintext_body` バージョンをお勧めします。すべてのAMPメールはマルチパートで送信されます。つまり、BrazeはHTML、プレーンテキスト、およびAMP HTMLをサポートするメールを送信します。これは、メール用 AMP をまだサポートしていないプロバイダー経由でメールが送信された場合に役立ちます。なぜなら、メールはユーザーとそのデバイスに基づいて適切なバージョンに自動的にデフォルト設定されるからです。
 
 {% alert note %}
 AMPメールを作成する際には、AMPコードをHTMLエディタに追加しないように、AMPエディタにいることを確認してください。
@@ -81,26 +81,26 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 
 これらの追加リソースを参照してください:
 
-- [AMPチュートリアル](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email)
+- [AMP チュートリアル](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email)
 - [サンプルコード](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73)が最終製品の見た目を確認するためのものです。 
-- [AMP メール components ライブラリー](https://amp.dev/documentation/components/?format=email/)
+- [AMP メールコンポーネントライブラリ](https://amp.dev/documentation/components/?format=email/)
 
 ### コンポーネント
 
 {% tabs %}
-  {% tab 必需品 %}
+  {% tab 必要なもの %}
 
-これらはAMP HTML email...AMPを作るものです！これらの要素はすべて、AMPメールの本文に必要です。
+これらによって AMP HTML を email...AMP 対応にします。これらの要素はすべて、AMPメールの本文に必要です。
 
 | コンポーネント | 説明 | 例 |
 |---------|--------------|---------|
-| 識別 <br><br> `⚡4email` または `amp4email`| AMP HTML メールとしてメールを識別します。 | `<!doctype html>`<br> `<html ⚡4email>`<br> `<head>` |
-| 読み込む AMP ランタイム <br><br> `<script>` | JavaScriptを使用して、AMPがメール内で機能するようにします。 | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
-| CSSボイラープレート | AMPが読み込まれるまでコンテンツを非表示にします。<br> AMP メールをサポートするメールプロバイダーは、クライアントで審査済みの AMP スクリプトのみが実行されるようにするセキュリティチェックを実施します。 | `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
+| 識別 <br><br> `⚡4email` または `amp4email`| メールを AMP HTML メールとして識別します。 | `<!doctype html>`<br> `<html ⚡4email>`<br> `<head>` |
+| 読み込む AMP ランタイム <br><br> `<script>` | JavaScript を使用して、AMP がメール内で機能するようにします。 | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| CSSボイラープレート | AMPが読み込まれるまでコンテンツを非表示にします。<br> AMP メールをサポートするメールプロバイダーは、クライアントで審査済みの AMP スクリプトのみが実行されるように、セキュリティチェックを実施します。 | `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
   {% endtab %}
-  {% tab ダイナミックな %}
+  {% tab ダイナミック %}
 
 これらのコンポーネントを使用して、メールにダイナミックなレイアウトと動作を作成します。
 
@@ -111,12 +111,12 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-ユーザーを認証する必要があるコンポーネントは、[Googleアクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシ アサーション トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
+ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
 {% endalert %}
   {% endtab %}
   {% tab クリエイティブ %}
 
-  AMP のコンポーネントを使用して、メールをオーディエンスに合わせてカスタマイズしましょう。
+  お客様のメールをオーディエンスに届けるのに役立つ AMP のクリエイティブなコンポーネントの使用をお勧めします。
 
 | コンポーネント | 説明 | 必須スクリプト |
 |---------|--------------|---------|
@@ -126,57 +126,57 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-ユーザーを認証する必要があるコンポーネントは、[Googleアクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシ アサーション トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
+ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
 {% endalert %}
 
   {% endtab %}
-  {% tab 他の %}
+  {% tab その他 %}
 
 | コンポーネント | 説明 |
 |---------|--------------|
-| [データバインディングと式](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-bind`| データバインディングとJavaScriptのような式を介して、AMPページにカスタムのステートフルなインタラクティビティを追加します。 |
+| [データバインディングと式](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-bind`| データバインディングと JavaScript 風の式を介して、AMP ページにカスタムのステートフルなインタラクティビティを追加します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-ユーザーを認証する必要があるコンポーネントは、[Googleアクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシ アサーション トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
+ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-AMPコンポーネントの完全なリストについては、[AMPドキュメント](https://amp.dev/documentation/components/?format=email)を確認してください。  
+AMP コンポーネントの完全なリストについては、[AMP のドキュメント](https://amp.dev/documentation/components/?format=email)を確認してください。  
 
 ### ユースケース
 
 {% tabs local %}
 {% tab インタラクティブアンケート %}
 
-`<amp-form>`コンポーネントを使用すると、メール受信トレイを離れることなく完了できるインタラクティブなアンケートを作成できます。これは、`<amp-form>`を使用して調査の回答を送信し、その後バックエンドがこの集計データを提供することによって行うことができます。 
+`<amp-form>` コンポーネントを使用すると、メール受信トレイを離れずに行えるインタラクティブなアンケートを作成できます。これは、`<amp-form>` を使用して調査の回答を送信し、その後バックエンドがこの集計データを提供することによって行うことができます。 
 
-いくつかの例が含まれます:
-* カンファレンス調査メール
+例としては次のようなものがあります。
+* 会議のアンケートメール
 * フィード内のアイテムを動的に更新する
 * 記事ブックマークメール
 
-このコンポーネントを使用すると、ユーザーはフィールド値を送信またはクリアできます。また、メールの設定方法によっては、調査の送信が成功したかどうかなど、ユーザーに追加のプロンプトを表示したり、ユーザーからの回答を表示して調査の結果（投票キャンペーンなど）を表示することができます。
+このコンポーネントを使用すると、ユーザーはフィールド値を送信したりクリアしたりできます。また、メールの設定方法によっては、調査の送信が成功したかどうかなど、ユーザーに追加のプロンプトを表示したり、調査の結果 (投票キャンペーンなど) を含むユーザーからの回答を表示したりできます。
 
 {% endtab %}
 {% tab 折りたたみ可能なコンテンツ %}
 
-`<amp-accordion>`コンポーネントを使用してコンテンツセクションを拡張します。このコンポーネントを使用すると、折りたたみ可能および展開可能なコンテンツセクションを表示でき、視聴者がコンテンツの概要を一目で確認し、任意のセクションにジャンプする方法を提供します。 
+`<amp-accordion>` コンポーネントを使用してコンテンツのセクションを展開表示します。このコンポーネントを使用すると、折りたたみと展開が可能なコンテンツセクションを表示でき、オーディエンスはコンテンツの概要を一目で確認し、任意のセクションにジャンプできるようになります。 
 
-長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数文を入力するだけでもスクロールが必要なモバイルユーザーにとって特に役立ちます。
+長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数行入力するだけでもスクロールが必要なモバイルユーザーにとって特に便利です。
 {% endtab %}
-{% tab 画像 Heavy Emails %}
+{% tab 画像の多いメール %}
 
-小売ブランドのように多くのプロフェッショナルな写真を含むメールを送信する傾向がある場合、ユーザーが自分に訴求する画像と対話できる`<amp-image-lightbox>`コンポーネントを使用できます。ユーザーが画像をクリックすると、このコンポーネントはメッセージの中央に画像を表示し、ライトボックス効果を作成します。 
+小売ブランドのように多くのプロフェッショナルな写真を含むメールを頻繁に送信する場合、ユーザーにとって魅力のある画像と対話できるように `<amp-image-lightbox>` コンポーネントを使用できます。ユーザーが画像をクリックすると、このコンポーネントはメッセージの中央に画像を表示し、ライトボックス効果を作成します。 
 
-さらに、`<amp-image-lightbox>`コンポーネントにより、ユーザーは詳細な画像の説明を表示できます。同じコンポーネントを複数の画像に使用できます。例えば、メールに複数の画像が含まれている場合、ユーザーがどちらかの画像をクリックすると、画像がライトボックスに表示されます。
+さらに、`<amp-image-lightbox>` コンポーネントを使用すると、ユーザーは画像の詳細な説明を表示できます。同じコンポーネントを複数の画像に使用することができます。例えば、メールに複数の画像が含まれている場合、ユーザーがどちらかの画像をクリックすると、画像がライトボックスに表示されます。
 
 {% endtab %}
 {% tab フォント駆動のメール %}
 
-テキストコピーに主に依存するメールの場合、`<amp-fit-text>`コンポーネントを使用すると、指定された領域内のテキストのサイズとフィット感を管理できます。
+主にテキストコピーに依存するメールの場合、`<amp-fit-text>` コンポーネントを使用すると、指定した領域内のテキストのサイズとフィットを管理できます。
 
 例としては次のようなものがあります:
 
@@ -187,20 +187,20 @@ AMPコンポーネントの完全なリストについては、[AMPドキュメ�
 {% endtab %}
 {% endtabs %}
 
-### アンプ-ムスタッシュを使用する
+### amp-mustache の使用
 
-Liquidと同様に、AMPはより高度なユースケースのためのスクリプト言語をサポートしています。このコンポーネントは[`amp-mustache`](https://amp.dev/documentation/components/amp-mustache/?format=email)と呼ばれます。Liquidの[`raw`](https://shopify.github.io/liquid/tags/raw/)タグで囲む必要があります。LiquidとMustacheは構文スタイルを共有していることに注意してください。 
+Liquidと同様に、AMPはより高度なユースケースのためのスクリプト言語をサポートしています。このコンポーネントは [`amp-mustache`](https://amp.dev/documentation/components/amp-mustache/?format=email) と呼ばれます。Mustache マークアップ言語を含める場合、これを Liquid の [`raw`](https://shopify.github.io/liquid/tags/raw/) タグで囲む必要があります。LiquidとMustacheは構文スタイルを共有していることに注意してください。 
 
 コンテンツを`raw`タグで囲むと、Braze処理エンジンは`raw`タグ間のコンテンツを無視し、チームが必要とするMustache変数を送信します。
 
 ## メトリクスと分析
 
-| メートル法 | 詳細 |
+| 指標 | 詳細 |
 |---|---|
 | 開封数の合計 | AMPメールのHTMLおよびプレーンテキストバージョンの合計オープン数。 |
 | クリック数の合計 | AMPメールのHTMLおよびプレーンテキストバージョンでの総クリック数。 |
 | AMPが開く | AMP HTML メールおよび AMP HTML バージョンのメールの開封総数。 |
-| AMP クリック数 | AMP HTML メールのクリック数の合計、HTML、プレーンテキスト、および AMP HTML バージョンのメールの累積数。 |
+| AMP クリック数 | AMP HTML メールのクリック数の合計、HTML、プレーンテキスト、および AMP HTML バージョンのメールの総計。 |
 {: .reset-td-br-1 .reset-td-br-2}  
 
 ## テストとトラブルシューティング
@@ -209,22 +209,22 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
 
 送信する前に、AMPメールをこれらの[Gmailガイドライン](https://developers.google.com/gmail/ampemail/testing-dynamic-email)に従ってテストすることをお勧めします。
 
-AMPメールを任意のGmailアカウントに配信するには、メールが次の条件を満たしている必要があります:
-- メールのセキュリティ要件のためのAMPを満たす必要があります。
+AMP メールを任意の Gmail アカウントに配信するには、メールが次の条件を満たしている必要があります。
+- メールのセキュリティ要件のための AMP を満たしていること。
 - AMP MIMEパートには有効なAMPドキュメントが含まれている必要があります。
-- メールにはHTML MIMEパートの前にAMP MIMEパートを含める必要があります。
+- メールの HTML MIME 部分の前に AMP MIME 部分が含まれていること。
 - AMP MIME パートは 100 KB 未満である必要があります。
 
 これらの条件のいずれもエラーを引き起こしていない場合は、\[サポート]\[support]に連絡してください。
 
 ### よくある質問
 
-{% details AMPメールでセグメント化すべきですか？ %}
+{% details AMP メールはセグメント化する必要がありますか? %}
 私たちは、すべての異なるタイプのユーザーに送信するためにセグメント化しないことを提唱しています。これは、元のメールに含まれる異なるバージョンを持つマルチパートでAMPメッセージを送信するためです。ユーザーがAMPバージョンを表示できない場合、デフォルトでHTMLに戻ります。
 {% enddetails %}
 
-{% details AMPメールを作成するための追加のヒントはありますか？ %}
-AMP要素を構築するために、開発チームに確認してください。これらの要素が設定された後、デザインリソースや要素を追加して、さらに磨きをかけることをお勧めします。
+{% details AMP メールを作成するための追加のヒントはありますか? %}
+AMP 要素を作成する際は、担当の開発チームと協力してください。これらの要素を設定したら、デザインリソースと要素を含めてさらに磨きをかけることをお勧めします。
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}

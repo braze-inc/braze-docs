@@ -1,18 +1,18 @@
 ---
-nav_title: クビット
-article_title: クビット
-description: "この参考記事では、BrazeとKubitのパートナーシップについて概説している。Kubitは、コード不要のセルフサービス分析プラットフォームで、製品に関する洞察を即座に提供し、Kubitのユーザーコホートをインポートして、Brazeのメッセージングでターゲットを絞ることができる。"
+nav_title: Kubit
+article_title: Kubit
+description: "このリファレンス記事では、Braze と Kubit のパートナーシップについて説明します。Kubit は、製品インサイトを提供するノーコードのセルフサービス分析プラットフォームであり、Kubit ユーザーコホートをインポートして、Braze メッセージングでそれらのコホートをターゲットにできます。"
 alias: /partners/kubit/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# クビット
+# Kubit
 
-> [Kubitは](https://kubit.ai/)コード不要のセルフサービス分析プラットフォームで、製品に関する洞察を即座に提供する。 
+> [Kubit](https://kubit.ai/) はノーコードのセルフサービス分析プラットフォームであり、製品インサイトを瞬時に提供できます。 
 
-BrazeとKubitの統合により、[Kubitユーザーコホートをインポート]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/kubit/)し、Brazeメッセージングでターゲットにすることができる。さらに、[Snowflakeのセキュアなデータ共有を]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)使用することで、Brazeの生のキャンペーンデータとインプレッションデータをKubitの製品アナリティクスと統合し、これらのキャンペーンの効果をリアルタイムで測定することができる。このアプローチは、エンジニアリングの努力を必要とすることなく、ユーザーのライフサイクル全体に対する洞察を提供する。
+BrazeとKubitの統合により、[Kubitユーザーコホートをインポート]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/kubit/)し、Brazeメッセージングでターゲットにすることができる。また、[Snowflake セキュアデータシェアリング]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)を使用することで、Braze の生のキャンペーンおよびインプレッションデータを Kubit の製品分析と統合し、これらのキャンペーンの効果をリアルタイムで測定できます。このアプローチは、エンジニアリングの努力を必要とすることなく、ユーザーのライフサイクル全体に対する洞察を提供する。
 
 ## 前提条件
 
