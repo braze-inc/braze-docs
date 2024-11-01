@@ -78,7 +78,7 @@ The following tables provide examples of links in an email body, link aliasing r
 | Link in Email Body    | Link with Aliasing                     |
 |-----------------------|----------------------------------------|
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link with more query parameters
 
@@ -87,7 +87,7 @@ The following tables provide examples of links in an email body, link aliasing r
 | Link in Email Body                                            | Link with Aliasing                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML link
 
@@ -96,7 +96,7 @@ The following tables provide examples of links in an email body, link aliasing r
 | Link in Email Body                                                | Link with Aliasing                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link with anchor
 
@@ -105,7 +105,7 @@ The following tables provide examples of links in an email body, link aliasing r
 | Link in Email Body                               | Link with Aliasing                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
 | https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link with anchor and capture tag
 
@@ -114,7 +114,7 @@ The following tables provide examples of links in an email body, link aliasing r
 | Link in Email Body                                                                        | Link with Aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Tracking link aliases
 
@@ -145,7 +145,7 @@ Braze only tracks up to the last 100 clicked link aliases at the profile level.
 
 ### Action-based filters
  
-You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
+You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component.
 
 ![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.][6]
 

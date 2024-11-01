@@ -8,8 +8,7 @@ tool:
  - Campaigns
 channel:
  - LINE
-hidden: true
-permalink: /line/create/
+alias: /line/create/
 ---
 
 # LINE メッセージの作成
@@ -29,7 +28,7 @@ LINE メッセージを作成する前に、次の手順を実行します。
 3. [LINE への接続を設定します]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/)。
 
 
-## ステップ 1: メッセージを作成する場所を選択する
+## ステップ 1:メッセージを作成する場所を選択する
 
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
@@ -49,7 +48,7 @@ LINE メッセージを作成する前に、次の手順を実行します。
 4\.必要に応じて、\[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と \[[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
    * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、\[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
-6. \[[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)] を選択して、メッセージを送信するユーザーが適切であることを確認します。サブスクリプショングループを選択すると、Braze によって自動的にセグメンテーションフィルターが追加され、配信登録済みのユーザーのみがキャンペーンを受信できるようになります。そのサブスクリプショングループに属する長いコードと短いコードのみを使用して、対象ユーザーに SMS が送信されます。
+6. \[[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)] を選択して、適切なユーザーに送信していることを確認します。サブスクリプショングループを選択すると、Braze によって自動的にセグメンテーションフィルターが追加され、配信登録済みのユーザーのみがキャンペーンを受信できるようになります。そのサブスクリプショングループに属する長いコードと短いコードのみが、SMS を対象ユーザーに送信するために使用されます。
 
 {% alert tip %}
 キャンペーン内のすべてのメッセージが類似しているか、同じ内容になる場合は、メッセージを作成してからバリアントを追加します。その後、\[**バリアントを追加**] ドロップダウンから \[**バリアントをコピー**] を選択できます。
@@ -70,7 +69,7 @@ LINE メッセージを作成する前に、次の手順を実行します。
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2: LINE メッセージを作成する
+## ステップ 2:LINE メッセージを作成する
 
 必要に応じて、言語とパーソナライゼーション (Liquid またはコネクテッドコンテンツなど) を使用してメッセージを作成します。LINE では、メッセージごとに最大 5 つのメッセージバブルが許可されます。これは、テキストメッセージまたは画像メッセージになります。
 
@@ -80,13 +79,13 @@ LINE メッセージを作成する前に、次の手順を実行します。
 Liquid を使用する場合は、必ずパーソナライゼーションのデフォルト値を含めてください。これにより、不完全なユーザープロファイルを持つ受信者が空のプレースホルダーを受信しないようにできます。例えば、ユーザーは、メッセージ「様」を受信する代わりに、メッセージ「新規に配信登録をいただいたお客様へ」を受信できます。
 {% endalert %}
 
-## ステップ 3: メッセージをプレビューしてテストする
+## ステップ 3:メッセージをプレビューしてテストする
 
 \[**テスト**] タブに切り替えて、コンテンツテストグループまたは個々のユーザーにテスト用の LINE メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
 
 ![\[テスト] タブには、テストメッセージのプレビューが表示されます。][2]
 
-## ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
+## ステップ 4:キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
 {% tab キャンペーン %}
@@ -95,13 +94,13 @@ Liquid を使用する場合は、必ずパーソナライゼーションのデ�
 
 ### 配信スケジュールまたはトリガーを選択する
 
-LINE メッセージは、スケジュールされた時刻、アクション、または API トリガーに基づいて配信できます。スケジュールとトリガーのオプションの詳細については、「[キャンペーンのスケジュール設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)」を参照してください。
+LINE メッセージは、スケジュールされた時刻、アクション、または API トリガーに基づいて配信できます。スケジュールとトリガーの詳細については、「[キャンペーンのスケジュール設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)」を参照してください。
 
 配信コントロールを指定できます。たとえば、ユーザーを[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)してキャンペーンを受信できるようにしたり、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)ルールを有効にしたりできます。アクションベースの配信では、キャンペーンの継続時間と \[[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
 
 ### ターゲットとするユーザーを選択する
 
-セグメントまたはフィルターを選択して \[[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)] し、オーディエンスを絞り込みます。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。 
+セグメントまたはフィルターを選択して \[[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)] し、オーディエンスを絞り込みます。すでにサブスクリプショングループを選択しているため、ユーザーがブランドと希望するコミュニケーションの程度やカテゴリによって、ユーザーが絞り込まれます。
 
 セグメントから大きなオーディエンスを選択し、必要に応じて[フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)でさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 

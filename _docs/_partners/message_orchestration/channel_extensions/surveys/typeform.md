@@ -23,7 +23,7 @@ By integrating Braze and Typeform, you can:
 | ----------- | ----------- |
 | Typeform account | A Typeform account with access to webhooks is required to take advantage of this partnership. |
 | Braze Data Transformation | A [Data Transformation URL]({{site.baseurl}}/data_transformation/) is necessary to receive data from Typeform. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

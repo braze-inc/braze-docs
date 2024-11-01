@@ -92,7 +92,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Send web browser notifications, even if your users aren't currently active on your site. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)* | Directly connect with your users and customers by leveraging the popular peer-to-peer messaging platform: WhatsApp. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>**Available as an add-on feature.*</sup>
 
@@ -156,6 +156,6 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 | [SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs) | Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. |
 | [Braze API Postman Collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Download our Postman collection here.  |
 | [Braze System Status Monitor](https://braze.statuspage.io/) | Our status page is updated whenever there are incidents or outages. Go to this page to subscribe to alerts. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 

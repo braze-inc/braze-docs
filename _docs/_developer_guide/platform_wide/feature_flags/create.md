@@ -31,7 +31,7 @@ To manage feature flags in the dashboard, you'll either need to be an Administra
 |-------------------------------------------------------------------------------|-------------------------------------------|
 | **Manage Feature Flags**                                                      | View, create, and edit feature flags.     |
 | **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** | View the list of available feature flags. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Creating a feature flag
 
@@ -50,7 +50,7 @@ Under **Details**, enter a name, ID, and description for your feature flag.
 | Name         | A human-readable title for your marketers and administrators.                                                                                                                                                       |
 | ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
 | Description  | An optional description that gives some context about your feature flag.                                                                                                                                            |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 3: Create custom properties
 
@@ -860,7 +860,7 @@ Replace the following:
 | `BEHAVIOR`  | The behavior of the feature. In your code, be sure the behavior is disabled by default and avoid using phrases like `disabled` in the feature flag name. |
 | `PRODUCT`   | The product the feature belongs to.                                                                                       |
 | `FEATURE`    | The name of the feature.                                                                                                  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Here's an example feature flag where `show` is the behavior, `animation_profile` is the product, and `driver` is the feature:
 

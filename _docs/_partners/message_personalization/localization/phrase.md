@@ -21,7 +21,7 @@ The Phrase and Braze integration allow you to translate email templates and Cont
 | Phrase TMS account | A Phrase TMS Ultimate or Enterprise account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
