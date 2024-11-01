@@ -1,6 +1,6 @@
 ---
-nav_title: Overview
-article_title: Creating a Drag-And-Drop Email
+nav_title: Creating an Email
+article_title: Creating an Email with Drag-and-Drop
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
@@ -10,9 +10,9 @@ tool:
 - Canvas
 ---
 
-# Creating a drag-and-drop email
+# Creating an email with drag-and-drop
 
-> Using the drag-and-drop editor for email, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
+> Using the drag-and-drop editor, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
 
 Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. 
 
@@ -21,42 +21,51 @@ Once you've selected where to build your message, let's dive into the steps to c
 ## Step 1: Select your template
 
 After selecting the drag-and-drop editor as your editing experience, you can choose to:
+
 - Start with a blank template.
-- Use a Braze drag-and-drop email template.
+- Use a predesigned Braze drag-and-drop email template.
 - Use a saved drag-and-drop email template.
 
 {% alert note %}
-To use an existing custom HTML template or templates created by a third party, you must recreate the template by navigating to **Templates** > **Email Templates** and selecting **Drag-And-Drop Editor** as your editing experience.
+To use an existing custom HTML template or templates created by a third party, you must recreate the template by going to **Templates** > **Email Templates** and selecting **Drag-And-Drop Editor** as your editing experience.
 {% endalert %}
 
 You can also access all templates from the **Templates** section.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), templates are under **Templates & Media**.
 {% endalert %}
 
-After selecting your template, you’ll see an overview of your email under **Email Variants** that includes the sending information and email body. Click **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
+After selecting your template, you’ll see an overview of your email under **Email Variants** that includes the sending information and email body. 
 
-![][8]
+Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
+
+![The "Email Variants" section with an example email body.][8]
 
 ## Step 2: Build your email
 
 The drag-and-drop editing experience is divided into three sections: **Sending Settings**, **Content**, and **Preview & Test**. The magic of building your email body happens in the **Content** section. Before building your email, it’s important to understand the key components that guide your email-building experience.
 
-### Drag-and-drop email components
+### About drag-and-drop email components
 
 The drag-and-drop editor uses **Content** and **Rows** as the two key components to simplify your workflow, without additional use of HTML.
 
-![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
-![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
+![The "Content" tab that includes basic blocks, media, and advanced][10]{: style="float:right;max-width:30%;margin-left:10px;"}
+![The "Rows" tab that includes different structural combinations for your email layout.][9]{: style="float:right;max-width:30%;margin-left:10px;"}
+
+#### Rows
+
+**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
 #### Content
 
 **Content** includes a series of tiles that represent different types of content you can use in your message. These are organized into three categories: basic, media, and advanced. 
 
-##### Basic blocks
+{% tabs %}
+{% tab Basic blocks %}
 
 Basic blocks are the foundation of your email. Using these blocks, you can add any of the following elements into your email body:
+
 - Title
 - Paragraph
 - List
@@ -64,23 +73,23 @@ Basic blocks are the foundation of your email. Using these blocks, you can add a
 - Divider
 - Spacer
 
-##### Media blocks
+{% endtab %}
+{% tab Media %}
 
 With media blocks, you can add different visual content such as images, videos, social media icons and links, and customizable icons.
 
-##### Advanced blocks
+{% endtab %}
+{% tab Advanced %}
 
 Although the drag-and-drop editor simplifies your workflow with these blocks, you can also use advanced blocks to insert HTML or to add a menu to your email body. Note that using your own HTML may affect how the message is rendered.
 
-#### Rows
-
-**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).
-
-Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
+{% endtab %}
+{% endtabs %}
 
 Now that we've reviewed these key components, let's use these blocks to build our drag-and-drop email.
 
-1. Select the **Rows** panel. Drag and drop the row configurations into the main editor. This will map the layout of your email content. Note that new configurations must be dragged to the top or bottom of an existing section.
+1. Select the **Rows** panel. Drag and drop the row configurations into the main editor. This will map the layout of your email content.
+- Note that new configurations must be dragged to the top or bottom of an existing section.
 - When you select a row configuration, the **Row Properties** settings appear for further customization for row background colors, images, and custom column sizes.
 2. Select the **Content** panel. Drag and drop your desired content tiles to the row components.
 - You can also drag any of the **Content** tiles into the main editor. This creates a row for the tile.
@@ -141,7 +150,7 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 
 ### Use Inbox Vision
 
-Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and click **Run Inbox Vision**.
+Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and select **Run Inbox Vision**.
 
 {% alert tip %}
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
@@ -210,7 +219,7 @@ You can choose to include dynamic images in your email messaging by including Li
 
 ### Add HTML attributes to links
 
-![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+![The "Attributes" section with the attribute "clicktracking" turned off for a link.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 When using links, buttons, images, and videos in the drag-and-drop editor, select **Add new attribute** under **Attributes** in the **Content** section to append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling.
 
