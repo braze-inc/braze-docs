@@ -15,7 +15,7 @@ export DEPLOY="$PROJECT_ROOT/scripts/create_deploy_text.sh"
 export RELEASE="$PROJECT_ROOT/scripts/create_release_text.sh"
 export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
 export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
-export CREDIRECTS="$PROJECT_ROOT/scripts/create_redirects.sh"
+export CREDIRECTS="$PROJECT_ROOT/scripts/create_redirects.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_redirect_urls.sh"
 
 # Displays usage for bdocs
