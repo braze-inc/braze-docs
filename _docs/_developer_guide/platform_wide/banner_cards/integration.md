@@ -1,6 +1,7 @@
 ---
 nav_title: Integrating Banner Cards
 article_title: Integrating Banner Cards
+permalink: /developer_guide/banner_card_integration/
 hidden: true
 description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
 platform:
@@ -38,13 +39,23 @@ Go to **Settings** > **Banner Cards Placements**, then select **Create Placement
 
 Name your placement and give it a **Placement ID**. Optionally, you can add a description for your placement.
 
-Work with your marketing team to create this ID. This is the ID you'll reference in your app's code, and your marketing team will use the ID to assign a campaign to the location in your app.
+Work with your marketing team to create this ID. This is the ID you'll reference in your app's code, and your marketing team will use the ID to assign a campaign to the location in your app. 
+
+{% alert important %}
+Avoid editing your placement ID after launch, as this can break the integration with your app or website.
+{% endalert %}
 
 ![Placement details that designate a Banner Card will display in the left sidebar for spring sale promotion campaigns.]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
 
 For steps on how to launch a Banner Card campaign, refer to [Creating a Banner Card]({{site.baseurl}}/create_banner_card/).
 
 ## Refresh placements in your app {#requestBannersRefresh}
+
+Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
+
+{% alert tip %}
+You should refresh placements as soon as possible to avoid delays in downloading or displaying banners.
+{% endalert %}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -110,6 +121,10 @@ This feature is not currently supported on Roku.
 {% endtabs %}
 
 ## Listen for updates {#subscribeToBannersUpdates}
+
+{% alert tip %}
+If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
+{% endalert %}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -304,7 +319,7 @@ This feature is not currently supported on Roku.
 
 Braze will automatically handle all impression logging when using the SDK methods to insert Banner Cards. 
 
-If you need to parse and render the HTML, you can use the following method to track impressions:
+If you need to parse and render the HTML, [contact us](mailto:banners-feedback@braze.com). You can use the following method to track impressions:
 
 {% alert important %}
 Customization for your integration is likely unnecessary, so consider the following step carefully.
