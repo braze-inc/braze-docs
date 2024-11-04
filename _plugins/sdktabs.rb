@@ -1,32 +1,32 @@
 module Tags
-    class TabsBlock < Liquid::Block
+    class SdkTabsBlock < Liquid::Block
       def initialize(tag_name, tabonly = 'false', tokens)
           super
-          @tabclass = 'tab_toggle'
-          @tabid = 'tab_' + (0...12).map { (97 + rand(26)).chr }.join
+          @tabclass = 'sdk-tab_toggle'
+          @tabid = 'sdk-tab_' + (0...12).map { (97 + rand(26)).chr }.join
           if tabonly.downcase.strip == 'local'
-            @tabclass = 'tab_toggle_only'
+            @tabclass = 'sdk-tab_toggle_only'
           end
       end
       def render(context)
-          tabs = super.scan(/data\-tab=\"(.*?)\"/)
-          tabslist = '<ul class="ab-nav ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
+          tabs = super.scan(/data\-sdk\-tab=\"sdk\-(.*?)\"/)
+          tabslist = '<ul class="sdk-ab-nav sdk-ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-')
+              tabslist += '    <li class="sdkrow ' + tab[0].gsub(' ', '-').gsub(/[^\w-]/, '')
               if ind == 0
                 tabslist += ' active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tab[0].gsub(' ', '-') + '">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sdk-tab-target="' + @tabid + '" data-sdk-tab="' + tab[0].gsub(' ', '-').gsub(/[^\w-]/, '') + '">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
-          tabslist + '<div id="' + @tabid + '" class="ab-tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
+          tabslist + '<div id="' + @tabid + '" class="sdk-tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
       end
     end
 
-    class TabBlock < Liquid::Block
+    class SdkTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
           @tab = tab.strip.downcase
@@ -48,41 +48,41 @@ module Tags
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
           content = content.strip # Strip again to avoid "\n"
-          tabslug = @tab.gsub(' ', '-')
+          tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
-          return '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
+          return '<div class="sdk-ab-tab-pane ' + tabslug + '_tab " data-sdk-tab="sdk-' + @tab + '">' + content + "</div>"
       end
     end
 
-    class SubTabsBlock < Liquid::Block
+    class SdkSubTabsBlock < Liquid::Block
       def initialize(tag_name, tabonly = 'false', tokens)
           super
-          @tabclass = 'sub_tab_toggle'
-          @tabid = 'sub_tab_' + (0...12).map { (97 + rand(26)).chr }.join
+          @tabclass = 'sub_sdk-tab_toggle'
+          @tabid = 'sub_sdk-tab_' + (0...12).map { (97 + rand(26)).chr }.join
           if tabonly.downcase.strip != 'global'
-            @tabclass = 'sub_tab_toggle_only'
+            @tabclass = 'sub_sdk-tab_toggle_only'
           end
       end
       def render(context)
-          tabs = super.scan(/data\-sub\_tab=\"(.*?)\"/)
-          tabslist = '<ul class="ab-sub_nav ab-sub_nav-sub_tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
+          tabs = super.scan(/data\-sdk\-sub\_tab=\"(.*?)\"/)
+          tabslist = '<ul class="sdk-ab-sub_nav sdk-ab-sub_nav-sub_tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
 
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-') + '_sub_tab'
+              tabslist += '    <li class="coderow ' + tab[0].gsub(' ', '-') + '_sub_sdk_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tab[0].gsub(' ', '-') + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sdk-sub_tab-target="' + @tabid + '" data-sdk-sub_tab="' + tab[0].gsub(' ', '-') + '_sub_sdk_tab">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
-          tabslist + '<div id="' + @tabid + '" class="ab-sub_tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
+          tabslist + '<div id="' + @tabid + '" class="sdk-ab-sub_tab-content ' + @tabclass + '_sdk_div">' + "\n" + super + "\n</div>\n"
       end
     end
 
-    class SubTabBlock < Liquid::Block
+    class SdkSubTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
           @tab = tab.strip.downcase
@@ -106,12 +106,12 @@ module Tags
           content = content.strip # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-')
 
-          return '<div class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
+          return '<div class="sdk-ab-sub_tab-pane ' + tabslug + '_sub_sdk_tab " data-sdk-sub_tab="' + @tab + '">' + content + "</div>"
       end
     end
 end
 
-Liquid::Template.register_tag("tabs", Tags::TabsBlock)
-Liquid::Template.register_tag("tab",  Tags::TabBlock)
-Liquid::Template.register_tag("subtabs", Tags::SubTabsBlock)
-Liquid::Template.register_tag("subtab",  Tags::SubTabBlock)
+Liquid::Template.register_tag("sdktabs", Tags::SdkTabsBlock)
+Liquid::Template.register_tag("sdktab",  Tags::SdkTabBlock)
+Liquid::Template.register_tag("sdksubtabs", Tags::SdkSubTabsBlock)
+Liquid::Template.register_tag("sdksubtab",  Tags::SdkSubTabBlock)
