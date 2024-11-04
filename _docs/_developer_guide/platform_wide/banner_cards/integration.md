@@ -187,7 +187,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-## Get and insert a Banner Card by placement ID {#}
+## Get and insert a Banner Card by placement ID {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
