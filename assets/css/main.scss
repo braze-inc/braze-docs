@@ -234,12 +234,13 @@ li {
   }
 }
 
-h2.details_title {
-  margin: 15px 0 4px 0;
+div.details_title {
+  margin: -$calc_offset_top 0 4px 0;
   &::before {
     content: none !important;
     display: none !important;
   }
+  height: $calc_offset_top;
 }
 details {
   .detail_div {

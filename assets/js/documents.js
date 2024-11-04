@@ -572,4 +572,20 @@ $(document).ready(function() {
   $('.lang-select').each(function(ind) {
     $(this).val(page_language).prop('selected', true);
   });
+
+  $('[role="tablist"]').each(function(){
+    if (!$(this).attr('tabindex')) {
+      $(this).attr('tabindex', 0)
+    }
+  });
+
+  // assign a role of presentation, and remove the role if it has a th or thead
+  $('table').each(function(){
+    if (!$(this).attr('role')) {
+      $(this).attr('role','presentation');
+    }
+    if (($(this).attr('role') == 'presentation') && (($(this).has('th').length > 0) || ($(this).has('thead').length > 0))){
+      $(this).attr('role',null);
+    }
+  });
 });
