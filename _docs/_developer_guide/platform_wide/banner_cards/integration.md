@@ -20,7 +20,7 @@ Banner Cards are currently in early access. Contact your Braze account manager i
 
 This feature is available as of the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions  %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 %}
 
 ## Dashboard prerequisites
 
