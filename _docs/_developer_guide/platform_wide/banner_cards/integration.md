@@ -1,7 +1,6 @@
 ---
 nav_title: Integrating Banner Cards
 article_title: Integrating Banner Cards
-permalink: /developer_guide/banner_card_integration/
 hidden: true
 description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
 platform:
