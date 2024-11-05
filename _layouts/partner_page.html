@@ -128,7 +128,7 @@ $(document).ready(function() {
     if ((site_language != 'en') && (card_url.indexOf(`/docs/${site_language}/`) < 0)) {
       card_url = card_url.replace('/docs/',`/docs/${site_language}/`);
     }
-    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).addClass('logo');
+    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).attr('alt',title + ' image').addClass('logo');
     var card_title = '';
     if (title) {
       card_title = $('<h5>').html('(' + title + ')');

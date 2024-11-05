@@ -114,13 +114,41 @@ Placement IDs must be unique to a workspace, and should not be edited after laun
 
 The following table defines key Banner Card metrics.
 
-| Metric               | Definition                                                                                                                                                       |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Total Impressions**     | Total Impressions is the number of times a Banner Card is loaded and appears on a user’s screen regardless of prior interaction.                               |
-| **Unique Impressions**    | _Unique Impressions_ is the total number of users who received and viewed a given message in a day; each user is only counted once.                              |
-| **Total Clicks**         | _Total Clicks_ is the total number of clicks within a Banner Card, regardless of whether the same user clicks multiple times.                                     |
-| **Unique Clicks**        | _Unique Clicks_ is the distinct number of recipients who have clicked within a Banner Card at least once and is measured by `dispatch_id`; each user is only counted once. |
-| **Primary Conversions**  | Includes both the count and rate of conversions for the [primary conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event). The primary conversion event is determined when you build the campaign. {::nomarkdown}<ul><li><i>Conversions</i> are the number of times a user performs an event after clicking on the Banner Card. Each user is only counted once.</li><li><i>Conversion Rate</i> is the percentage of times the conversion event occurred compared to all recipients of a message. <br> <i>(Conversions) / (Unique Impressions)</i></li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href='https://braze.com/docs/user_guide/data_and_analytics/report_metrics#total-impressions'>Total Impressions</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href='https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#unique-impressions'>Unique Impressions</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} Each user is only counted once.</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href='https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#total-clicks'>Total Clicks</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href='https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#unique-clicks'>Unique Clicks</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Each user is only counted once.</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href='https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#primary-conversions-a-or-primary-conversion-event'>Primary Conversions</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}<ul><li>{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</li><li>{% multi_lang_include metrics.md metric='Conversion Rate' %}</li></ul></td>
+        </tr>
+    </tbody>
+</table>
 
 For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
