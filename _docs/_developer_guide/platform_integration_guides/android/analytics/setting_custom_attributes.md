@@ -317,7 +317,9 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute_key")
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.unsetCustomUserAttribute("your_attribute_key")
+}
 ```
 
 {% endtab %}
@@ -348,14 +350,21 @@ No explicit opt-in is required by Android to send users push notifications. When
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+  }
+});
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType)
+}
 ```
 
 {% endtab %}
@@ -367,14 +376,21 @@ Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(ema
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+  }
+});
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(pushNotificationSubscriptionType)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setPushNotificationSubscriptionType(pushNotificationSubscriptionType)
+}
 ```
 
 {% endtab %}
