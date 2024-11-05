@@ -40,7 +40,7 @@ table td {
 | Mozart Data account | A Mozart Data account is required to take advantage of this partnership. [Sign up here.](https://app.mozartdata.com/signup)|
 | Snowflake Account<br>Option 1: New Account | Select **Create a New Snowflake Account** during the Mozart Data account creation process for Mozart Data to provision a new Snowflake account for you. |
 | Snowflake Account<br>Option 2: Existing Account | If your organization already has a Snowflake account, you can use the Mozart Data Connected option.<br><br>Select the **Already Have a Snowflake Account** option to connect an existing Snowflake account. To pursue this option, a user with account-level permissions must [follow these steps](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

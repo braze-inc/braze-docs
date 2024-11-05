@@ -19,7 +19,7 @@ search_rank: 2
 | --- | --- |
 | Promotions | Reach users with high-visibility SMS campaigns but also leverage the media aspect of MMS to entice buyers with what you're offering. | 
 | Re-engagement campaigns | Re-engage customers who opted in to receive SMS when all other channels fail to bring them back. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Get to know MMS
 

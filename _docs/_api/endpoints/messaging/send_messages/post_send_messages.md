@@ -10,11 +10,11 @@ description: "This article outlines details about the Send messages immediately 
 ---
 {% api %}
 # Send messages immediately via API only
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate messages to designated users via the Braze API. 
+> Use this endpoint to send immediate messages to designated users via the Braze API.
 
 Be sure to include Messaging Objects in your body to complete your requests.
 
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`override_frequency_capping`| Optional | Boolean | Ignore `frequency_capping` for campaigns, defaults to `false`. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 |`messages`| Optional | Messaging objects | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -160,4 +160,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, meaning the unique ID for each "transmission" sent from Braze. For more information, refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
-

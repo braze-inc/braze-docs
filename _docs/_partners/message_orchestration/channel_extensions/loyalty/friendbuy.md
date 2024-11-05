@@ -21,7 +21,7 @@ Before you start, you'll need the following:
 | A Friendbuy account   | A [Friendbuy account][1] is required to take advantage of this partnership.                                                              |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.        |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
@@ -56,7 +56,7 @@ Go to back to your [Friendbuy account][1] and refresh the page. If your integrat
 | **Friendbuy Coupon Status**      | The status of the most recent coupon code distributed to the customer. Note: status will be 'distributed' or 'redeemed'                            | String    |
 | **Friendbuy Coupon Currency**    | Currency code (USD, CAD, etc.) or percent (%) associated with the most recent coupon code distributed to the customer.                             | String    |
 | **Friendbuy Coupon Campaign ID** | The Campaign ID associated with the coupon code generated for a customer.                                                                          | String    |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Default behavior
 

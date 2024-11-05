@@ -10,11 +10,11 @@ description: "This article outlines details about the Send campaigns via API-tri
 ---
 {% api %}
 # Send campaign messages via API-triggered delivery
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, one-off messages to designated users via API-triggered delivery. 
+> Use this endpoint to send immediate, one-off messages to designated users via API-triggered delivery.
 
 API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
@@ -79,10 +79,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>If `send_to_existing_only` is `false`, an attribute object must be included.<br><br>If `recipients` is not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 |`attachments`| Optional | Array | If `broadcast` is set to true, then `attachments` list cannot be included. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
-- When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. 
+- When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases.
 - When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
 
 {% alert important %}
@@ -167,7 +167,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       "file_name" : "YourFileName",
       "url" : "https://exampleurl.com/YourFileName.pdf"
     }
-  ] 
+  ]
 }'
 ```
 
@@ -179,7 +179,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 
 ## Attributes object for campaigns
 
-Braze has a messaging object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call will process the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze has a messaging object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call will process the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert important %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

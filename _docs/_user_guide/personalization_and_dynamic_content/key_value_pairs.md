@@ -32,7 +32,7 @@ Apple Push Notification service (APNs) supports setting alert preferences and se
 | badge             | number                      | Governs the number that is displayed as the badge on the app icon                                                                                                                              |
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
 | content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
 ##### Alert properties library
@@ -47,7 +47,7 @@ Apple Push Notification service (APNs) supports setting alert preferences and se
 | loc-key        | string or null           | A key that sets the notification message for the current localization from the ```Localizable.strings``` file                                  |
 | loc-args       | array of strings         | String values that can appear in place of the localization format specifiers in loc-key                                                       |
 | launch-image   | strings                  | The name of an image file in the app bundle you wish to be used as the launch image when users tap the action button or move the action slide |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 The Braze message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. 
 

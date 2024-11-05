@@ -62,7 +62,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Braze app identifier key (side-by-side only) | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 | Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (for example, 3.2 not 3.0.1). The code version should be 3.0 or higher. |
 | REST API key (server-to-server only) | A Braze REST API key with `users.track` and `users.delete` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Choose your integration type
 
@@ -70,7 +70,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | ----------- | ------- |
 | [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
 | [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to Braze's REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Side-by-side SDK integration
 
@@ -84,7 +84,7 @@ Tealium offers two ways to integrate Mobile Remote Command, there is no loss of 
 | --- | --- | --- |
 | **Remote command tag** | Easily modify the mappings and data sent to the remote command using the Tealium iQ UI.<br><br>This allows us to send additional data or events to a 3rd party SDK after the app is already in the app store, without the client having to update the app. | The Tag Management module in the app relies on a hidden webview to process JavaScript. |
 | **JSON configuration file**<br>([Recommended](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | Using the JSON method eliminates the need to have a hidden webview in the app and greatly reduces memory consumption.<br><br>The JSON file can be hosted remotely or locally within the customer's app. | At the moment, there is no UI to manage this, so it requires a bit of extra effort.<br><br>Note: Tealium is working on adding a management UI that will solve this issue and bring the same level of flexibility to JSON remote commands as they have with the iQ Tag management version |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Use Braze mobile remote command data mappings to set default user attributes and custom attributes and track purchases and custom events. Refer to the following chart for corresponding Braze methods.
 
@@ -105,7 +105,7 @@ Use Braze mobile remote command data mappings to set default user attributes and
 | useralias | addAlias() |
 | userattribute | ABKUser() |
 | useridentifier | changeUser() |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 You can find more details on how to set up Braze mobile remote command and an overview of supported methods in the Tealium developer documentation:
 - [Remote command](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#json-template)
@@ -205,7 +205,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 | Purchase | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency`, and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
 | Purchase template | Templates can be used to transform data prior to it being sent to Braze.<br>- Define a purchase template if you need nested objects support.<br>- When a purchase template is defined, the configuration set up in the purchases section of your action will be ignored.<br>- Refer to Tealium's [Templates Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) to learn more.|
 | Purchase template variable | Provide product template variables as data input. Refer to Tealium's [Template Variables Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/) to learn more. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
@@ -217,7 +217,7 @@ This action allows you to delete users from the Braze dashboard.
 | Parameters | Description |
 | ---------- | ----------- |
 | User ID | Use this field to map the Tealium User ID field to it's Braze equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name, and Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_delete.png %})
 

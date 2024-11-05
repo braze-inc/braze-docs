@@ -198,7 +198,7 @@ Like other campaigns, Braze tracks the delivery of your webhook campaigns and th
 | 429 (rate limited)  | No | Yes |
 | Other 4xx (client error)  | No | No |
 | 5xx (server error)   | No | Yes |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 For 500-level errors, Braze will retry the webhook send up to 5 times over 30 minutes using exponential backoff. For all other errors, Braze will continue to retry for up to 24 hours.
