@@ -22,7 +22,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
   - name: Using Braze Canvas Templates
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/braze_templates/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
   - name: Localization
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
