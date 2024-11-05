@@ -87,7 +87,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(sApplicationContext).getCurrentUser { brazeUser ->
+Braze.getInstance(context).getCurrentUser { brazeUser ->
   brazeUser.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
 }
 ```
