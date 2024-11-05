@@ -169,7 +169,7 @@ if (featureFlag?.enabled) {
 
 We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate.
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![A feature flag experiment splitting traffic into two 50 percent groups.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -196,7 +196,7 @@ The following table describes the limitations that apply at a feature flag level
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
 | [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
 | [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Active feature flags
 

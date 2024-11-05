@@ -787,7 +787,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Revenue' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>
 
 {% endapi %}
 
@@ -872,9 +872,9 @@ Email, LINE
 All
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %} This number is received from Braze.<br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.
+{% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-The number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze and is based on the `user_id`.
+Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. This number is received from Braze and is based on the `user_id`.
 
 <span class="calculation-line">Calculation: Count</span>
 

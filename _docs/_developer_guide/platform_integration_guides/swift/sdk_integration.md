@@ -156,7 +156,7 @@ The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives y
 | `BrazeUICompat`            | No        | Compatibility library containing all the `ABK*` classes and methods that were available in the `AppboyUI` library from `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/). |
 | `SDWebImage`               | No        | Dependency used only by `BrazeUICompat` in the minimal migration scenario. |
 
-{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2}
+{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Step 1.3: Prepare your files
 
@@ -350,7 +350,7 @@ The default log level for the Braze Swift SDK is `.error`&#8212;it's also the mi
 | `.info`     | `BRZLoggerLevelInfo`     | Log general SDK information (user changes, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Log errors.                                                       |
 | `.disabled` | `BRZLoggerLevelDisabled` | No logging occurs.                                                |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Setting the log level
 

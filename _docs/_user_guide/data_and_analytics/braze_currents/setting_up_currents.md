@@ -30,7 +30,7 @@ The following requirements are the basic, minimum requirements to integrate with
 | Partner API Key or Token | Usually the Partner's dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
 | Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner's dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
 | Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner's dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don't want your data to get lost! | Though this is required for some Partners, it's important to get right when you do need it. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 It's important to keep your Partner Keys/Tokens and authentication details up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
@@ -54,7 +54,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 3: Add partner
 
-Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top of the screen.
+Add a partner, sometimes called a "Currents connector," by selecting the dropdown at the top of the screen.
 
 Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions in their respective pages.
 

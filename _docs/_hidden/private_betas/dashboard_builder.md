@@ -46,7 +46,7 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 | Purchases per Product | A count of all purchases grouped by product. |
 | Revenue by Channel | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by channel. | 
 | Revenue Time Series | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by day in UTC. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Devices and carriers
 
@@ -56,7 +56,7 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 | Device Model | Count of users in the selected date range who opened a push notification, grouped by device model. |
 | Device Operating System | Count of users in the selected date range who opened a push notification, grouped by device operating system. |
 | Device Screen Size | Count of users in the selected date range who opened a push notification, grouped by device screen resolution (size). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Creating a customized dashboard
 

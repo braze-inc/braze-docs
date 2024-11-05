@@ -46,7 +46,7 @@ All US carriers require the below company information for new campaign submissio
 | Full Legal Business Address (Street, City, State, Zip)        |                                                               |                                                              |
 | Company Type (private, non-profit, government, public (please provide ticker symbol)) |                                       |                                                              |
 | If public, provide your ticker symbol                         |                                                               |                                                              |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## SMS campaign information
 
@@ -72,5 +72,5 @@ We'll need to register each SMS subscription group that contains a US long code 
 | Estimated Daily Volume | | Please indicate the estimated average number of messages sent per day for this particular use case/subscription group, for example, 10,000. |
 | Call to Action Checklist | | {::nomarkdown} <p>Call to Action should include the following:</p><ol><li>Product Description</li><li>Message Frequency Disclosure</li><li>Link to Complete Terms and Conditions</li><li>Link to Complete Privacy Policy</li><li>STOP keyword instructions</li><li>HELP keyword instructions</li><li>“Message and Data Rates” may apply disclosure</li></ol> {:/} |
 | Call to Action Example | | ![Example of call-to-action containing all the required details.]({{site.baseurl}}/assets/img_archive/10dlc_cta_example.png) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
