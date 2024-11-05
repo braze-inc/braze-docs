@@ -53,7 +53,7 @@ For steps on how to launch a Banner Card campaign, refer to [Creating a Banner C
 Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
 {% alert tip %}
-Refresh the placements as soon as possible to avoid delays in downloading or displaying banners.
+Refresh placements as soon as possible to avoid delays in downloading or displaying banners.
 {% endalert %}
 
 {% tabs %}
