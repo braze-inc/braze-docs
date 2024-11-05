@@ -20,5 +20,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/code-01.svg
 ---
 
-<br><br>
+{% alert important %}
+Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
 
