@@ -2,7 +2,7 @@
 nav_title: Migrating to Firebase Cloud Messaging
 article_title: Migrating to the Firebase Cloud Messaging API
 platform: Android
-page_order: 29
+page_order: 30 
 description: "This article covers how to migrate from Google's deprecated Cloud Messaging API to Firebase Cloud Messaging (FCM)."
 channel:
   - push

@@ -4,7 +4,7 @@ article_title: Localization for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 1
+page_order: 7
 description: "This reference article covers Android and FireOS localization, listing all the current languages supported by Braze."
 
 ---

@@ -1,29 +1,27 @@
 ---
-nav_title: Standard Integration
-article_title: Standard Push Notification Integration for Android
+nav_title: Android
+article_title: Setting up push notifications for the Braze Android SDK
 platform: Android
-page_order: 0
+page_order: 1
 description: "This article covers how to integrate push notifications in your Android application."
 channel:
   - push
 search_rank: 3
 ---
 
-# Standard Android push integration
+# Push notification setup for Android
 
 > Learn how to integrate push notifications in your Android app.
 
-With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
-
 {% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
+To set up push notifications for Huawei devices instead, see [Push notification setup for Huawei]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/push_notifications/huawei).
 {% endalert %}
 
-## Rate limit
+## Rate limits
 
 Firebase Cloud Messaging (FCM) API has a default rate limit of 600,000 requests per minute. If you reach this limit, Braze will automatically try again in a few minutes. To request an increase, contact [Firebase Support](https://firebase.google.com/support).
 
-## Registering for push
+## Setting up push notifications
 
 In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
@@ -118,10 +116,10 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your `braze.xml` or `BrazeConfig`.
+Next, open your Android Studio project and use your Firebase Sender ID to enable automatic FCM token registration within your [`braze.xml`](#option-1-brazexml) or [`BrazeConfig`](#option-2-brazeconfig).
 
-{% tabs local %}
-{% tab braze.xml %}
+#### Option 1: `braze.xml`
+
 To configure automatic FCM token registration, add the following lines to your `braze.xml` file:
 
 ```xml
@@ -139,29 +137,30 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">603679405392</string>
 </resources>
 ```
-{% endtab %}
-{% tab BrazeConfig %}
+
+#### Option 2: `BrazeConfig`
+
 To configure automatic FCM token registration, add the following lines to  your `BrazeConfig`:
 
-{% subtabs global %}
-{% subtab JAVA %}
+{% tabs local %}
+{% tab JAVA %}
 ```java
 .setIsFirebaseCloudMessagingRegistrationEnabled(true)
 .setFirebaseCloudMessagingSenderIdKey("FIREBASE_SENDER_ID")
 ```
-{% endsubtab %}
-{% subtab KOTLIN %}
+{% endtab %}
+{% tab KOTLIN %}
 ```kotlin
 .setIsFirebaseCloudMessagingRegistrationEnabled(true)
 .setFirebaseCloudMessagingSenderIdKey("FIREBASE_SENDER_ID")
 ```
-{% endsubtab %}
-{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase project settings. Your `BrazeConfig` should look similar to the following:
 
-{% subtabs global %}
-{% subtab JAVA %}
+{% tabs local %}
+{% tab JAVA %}
 ```java
 BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .setApiKey("12345ABC-6789-DEFG-0123-HIJK456789LM")
@@ -174,8 +173,8 @@ BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .build();
 Braze.configure(this, brazeConfig);
 ```
-{% endsubtab %}
-{% subtab KOTLIN %}
+{% endtab %}
+{% tab KOTLIN %}
 ```kotlin
 val brazeConfig = BrazeConfig.Builder()
   .setApiKey("12345ABC-6789-DEFG-0123-HIJK456789LM")
@@ -188,8 +187,6 @@ val brazeConfig = BrazeConfig.Builder()
   .build()
 Braze.configure(this, brazeConfig)
 ```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 

@@ -1,26 +1,30 @@
 ---
-nav_title: Location & Geofences
+nav_title: Geofences
 article_title: Location & Geofences for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 6
+page_order: 8
 description: "This reference article covers how to implement location and geofences in your Android or FireOS application."
 Tool:
   - Location
 
 ---
 
-# Location and geofences
+# Geofences
 
 > [Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/) are only available in select Braze packages. For access, create a [support ticket]({{site.baseurl}}/braze_support/) or speak with your Braze customer success manager.
 
-To support geofences for Android:
+## Prerequisites
+
+To use geofences for Android, you'll need to complete the following:
 
 1. Your integration must support background push notifications.
 2. Braze geofences or location collection must be enabled.
 
-## Step 1: Update build.gradle
+## Setting up geofences
+
+### Step 1: Update `build.gradle`
 
 Add `android-sdk-location` to your app-level `build.gradle`. Also, add the Google Play Services [location package](https://developers.google.com/android/reference/com/google/android/gms/location/package-summary) using the Google Play Services [setup guide](https://developers.google.com/android/guides/setup):
 
@@ -31,7 +35,7 @@ dependencies {
 }
 ```
 
-## Step 2: Update the manifest
+### Step 2: Update the manifest
 
 Add boot, fine location, and background location permissions to your `AndroidManifest.xml`:
 
@@ -55,7 +59,7 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
 </receiver>
 ```
 
-## Step 3: Enable Braze location collection
+### Step 3: Enable Braze location collection
 
 If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and confirm its value is set to `true`:
 
@@ -73,7 +77,7 @@ Braze geofences are enabled if Braze location collection is enabled. If you woul
 <bool name="com_braze_geofences_enabled">true</bool>
 ```
 
-## Step 4: Obtain location permissions from the end user
+### Step 4: Obtain location permissions from the end user
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
 
@@ -229,25 +233,25 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 {% endtab %}
 {% endtabs %}
 
-## Step 5: Enable geofences on the dashboard
+### Step 5: Enable geofences on the dashboard
 
 Android only allows up to 100 geofences to be stored for a given app. Braze locations products will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
 For Braze locations products to work correctly, confirm that your app is not using all available geofence spots.
 
-### Enable geofences from the locations page
+#### Enable geofences from the locations page
 
 ![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-### Enable geofences from the settings page
+#### Enable geofences from the settings page
 
 ![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
-## Step 6: Manually request geofence updates (optional)
+### Step 6: Manually request geofence updates (optional)
 
 By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze geofences instead. To manually request Braze Geofences, you must disable automatic Braze geofence requests and provide a GPS coordinate for requests.
 
-#### Part 1: Disable automatic geofence requests
+#### Step 6.1: Disable automatic geofence requests
 
 Automatic Braze geofence requests can be disabled in your `braze.xml` file by setting `com_braze_automatic_geofence_requests_enabled` to `false`:
 
@@ -278,7 +282,7 @@ Braze.configure(applicationContext, brazeConfigBuilder.build())
 {% endtab %}
 {% endtabs %}
 
-#### Part 2: Manually request Braze geofence with GPS coordinate
+#### Step 6.2: Manually request Braze geofence with GPS coordinate
 
 Braze Geofences are manually requested via the [`requestGeofences()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html) method:
 
@@ -303,9 +307,8 @@ Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 Geofences can only be requested once per session, either automatically by the SDK or manually with this method.
 {% endalert %}
 
-## Push to sync
+### Enabling push-to-sync
 
 Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
-

@@ -15,9 +15,13 @@ channel:
 
 > Showcase a larger image within your Android push notification using inline image push. With this design, users won't have to manually expand the push to enlarge the image. 
 
-No additional integration or SDK changes are required to use this feature. Devices or SDKs which don't meet the minimum version requirements will instead show a standard big image push notification.
+## Platform availability
 
-## Usage requirements
+This feature is only available for Android&#8212;not FireOS.
+
+## Prerequisites
+
+No additional integration or SDK changes are required to use this feature. Devices or SDKs that do not meet the following minimum version requirements will instead show a standard big image push notification.
 
 - This notification type requires the Braze Android SDK v10.0.0+ and Android M+ devices. 
 - Unsupported devices or SDKs will fall back to the standard big image push notification.
@@ -27,7 +31,7 @@ No additional integration or SDK changes are required to use this feature. Devic
 Devices running Android 12 will render differently due to changes in custom push notification styles.
 {% endalert %}
 
-## Dashboard set up
+## Setting up the dashboard
 
 When creating an Android push message, this feature is available in the **Notification Type** dropdown.
 

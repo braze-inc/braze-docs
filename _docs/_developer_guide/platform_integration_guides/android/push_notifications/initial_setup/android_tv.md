@@ -1,20 +1,20 @@
 ---
-nav_title: Android TV Push
-article_title: Android TV Push
+nav_title: Android TV
+article_title: Push notification setup for Android TV
 platform: Android
-page_order: 8
+page_order: 10
 description: "This article shows how to implement and test Android TV Push."
 channel:
   - push
 
 ---
 
-# Android TV push
+# Push notification setup for Android TV
 ![]({% image_buster /assets/img/Television.png %}){: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
 > While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload after it is received.
 
-## Implementation
+## Setting up push notifications
 
 1. **Integrate the Braze Android SDK**<br>
 First, you must integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true) (If not already completed).<br><br>

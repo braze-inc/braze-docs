@@ -1,5 +1,5 @@
 ---
-nav_title: Braze JavaScript Interface
+nav_title: HTML Messages
 article_title: Adding the Braze JavaScript Interface to WebViews for Android and FireOS
 platform: 
   - Android
@@ -9,9 +9,18 @@ description: "This reference article shows how to add the Braze JavaScript Inter
 
 ---
 
-# Braze JavaScript interface
+# HTML in-app messages
 
-> This reference article shows how to add the Braze JavaScript Interface to WebViews.
+> Learn how to add the Braze JavaScript interface to your Android and FireOS apps, so you can use the Braze API to create [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) in your custom WebViews.
+
+## How it works
+
+With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
+
+1. Injecting the Braze Javascript bridge into your WebView, as outlined in [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
+2. Passing the bridge methods received from your WebView to the [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
+
+## Adding the interface to a WebView
 
 Using Braze functionality from a WebView in your app can be done by adding the Braze JavaScript interface to your WebView. After the interface has been added, the same API available for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) will be available within your custom WebView.
 
@@ -39,4 +48,3 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 
 {% endtab %}
 {% endtabs %}
-

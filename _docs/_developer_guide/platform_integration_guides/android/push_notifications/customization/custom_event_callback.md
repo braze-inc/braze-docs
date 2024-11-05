@@ -11,7 +11,13 @@ channel:
 
 # Push event callback {#android-push-listener-callback}
 
-> This reference article covers how to use a callback for Android push events
+> This reference article covers how to use a callback for Android push events.
+
+## Platform availability
+
+This feature is only available for Android&#8212;not FireOS.
+
+## Using a callback for push events
 
 Braze provides a [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
 

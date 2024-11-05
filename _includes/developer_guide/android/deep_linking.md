@@ -1,14 +1,3 @@
----
-nav_title: Deep Linking
-article_title: Deep Linking for Android and FireOS
-platform: 
-  - Android
-  - FireOS
-page_order: 0
-description: "This article covers how to implement the universal deep linking delegate for your Android or FireOS app, as well as examples on how to deep link to app settings."
-
----
-
 # Deep linking
 
 > As part of the [implementation process for your Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links), you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
@@ -224,5 +213,3 @@ Braze.configure(this, brazeConfig)
 
  {% endtab %}
  {% endtabs %}
-
-

@@ -1,25 +1,31 @@
 ---
-nav_title: Huawei Integration
-article_title: Huawei Push Integration for Android
+nav_title: Huawei
+article_title: Push notification setup for Huawei
 platform: Android
-page_order: 9
+page_order: 2
 description: "This article covers how to set up a Huawei Android integration."
 channel:
   - push
 
 ---
 
-# Huawei push integration
+# Push notification setup for Huawei 
 
 > Newer phones manufactured by [Huawei](https://huaweimobileservices.com/) come equipped with Huawei Mobile Services (HMS) - a service used to deliver push instead of Google's Firebase Cloud Messaging (FCM).<br><br>This guide will show you how to set up your Huawei Android integration to send push through Braze and take advantage of all existing Braze features, including segmentation, analytics, Canvas, and more!
 
-## Step 1: Register for a Huawei developer account
+{% alert important %}
+To set up push notifications for Huawei devices instead, see [Push notification setup for Huawei]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/push_notifications/huawei).
+{% endalert %}
+
+## Setting up push notifications
+
+### Step 1: Register for a Huawei developer account
 
 Before getting started, you'll need to register and set up a [Huawei Developer account](https://developer.huawei.com/consumer/en/console). In your Huawei account, go to **My Projects > Project Settings > App Information**, and take note of the `App ID` and `App secret`.
 
 ![]({% image_buster /assets/img/huawei/huawei-credentials.png %})
 
-## Step 2: Create a new Huawei app in the Braze dashboard
+### Step 2: Create a new Huawei app in the Braze dashboard
 
 In the Braze dashboard, go to **App Settings**, listed under the **Settings** navigation.
 
@@ -31,7 +37,7 @@ Once your new Braze app has been created, locate the push notification settings 
 
 ![]({% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %})
 
-## Step 3: Integrate the Huawei messaging SDK into your app
+### Step 3: Integrate the Huawei messaging SDK into your app
 
 Huawei has provided an [Android integration codelab](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) detailing integrating the Huawei Messaging Service into your application. Follow those steps to get started.
 
@@ -92,13 +98,13 @@ After adding your custom push service, add the following to your `AndroidManifes
 </service>
 ```
 
-## Step 4: Send a Huawei push
+### Step 4: Send a Huawei push
 
 At this point, you've created a new Huawei Android app in the Braze dashboard, configured it with your Huawei developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 
 Next, we can test out the integration by testing a new push campaign in Braze.
 
-### Create a new push notification campaign
+#### Create a new push notification campaign
 
 In the **Campaigns** page, create a new campaign, and choose **Push Notification** as your message type.
 
@@ -108,7 +114,7 @@ After you name your campaign, choose **Android Push** as the push platform.
 
 Next, compose your push campaign with a title and message.
 
-### Send a test push
+#### Send a test push
 
 In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), and click **Send Test** to send a test push.
 
@@ -116,7 +122,7 @@ In the **Test** tab, enter your user ID, which you've set in your app using the 
 
 At this point, you should receive a test push notification on your Huawei (HMS) device from Braze.
 
-### Setting up Huawei segmentation (optional)
+#### Setting up Huawei segmentation (optional)
 
 Since your Huawei app in the Braze dashboard is built upon the Android push platform, you have the flexibility to send push to all Android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
 
@@ -129,4 +135,3 @@ Of course, if you want to send the same push to all Android push providers, you 
 ## Analytics
 
 Once your campaign has been launched, you will see analytics for your campaign or Canvas aggregated for Android push. See our [push user guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) for more information on Android push analytics and settings.
-

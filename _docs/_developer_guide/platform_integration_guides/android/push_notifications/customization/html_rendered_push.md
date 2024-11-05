@@ -13,6 +13,12 @@ channel:
 
 > This reference article covers how to implement HTML push notifications in your Android application.
 
+## Platform availability
+
+This feature is only available for Android&#8212;not FireOS.
+
+## Overview
+
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multiplier text in push notifications.
 
 ![An Android push message "Multicolor Push test message" where the letters are different colors, italicized and given a background color.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
@@ -33,7 +39,7 @@ Android OS limits what HTML elements/tags are valid in push notifications. For e
 Note that multicolor text rendering is device-specific and may not display based on Android device or version.
 {% endalert %}
 
-## Implementation
+## Setting up HTML push notifications
 
 To render multicolor text in push notification either:
 
