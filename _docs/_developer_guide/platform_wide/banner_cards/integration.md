@@ -255,6 +255,12 @@ if let braze = AppDelegate.braze {
 ```
 {% endtab %}
 {% tab Java %}
+To get the Banner in Java code, use:
+
+```java
+Banner globalBanner = Braze.getInstance(context).getBanner("global_banner");
+```
+
 You can create Banner Cards in your Android views layout by including this XML:
 
 ```xml
@@ -267,6 +273,11 @@ You can create Banner Cards in your Android views layout by including this XML:
 
 {% endtab %}
 {% tab Kotlin %}
+To get the Banner in Kotlin, use:
+```kotlin
+val banner = Braze.getInstance(context).getBanner("global_banner")
+```
+
 If you're using Android Views, use this XML:
 
 ```xml
