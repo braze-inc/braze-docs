@@ -132,11 +132,12 @@ If you insert banners using the SDK methods in this guide, all analytics events 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
-
 braze.subscribeToBannersUpdates((banners) => {
   console.log(`Banners were updated`);
 })
+
+// always refresh after your subscriber function has been registered
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 ```
 
 {% endtab %}
@@ -210,8 +211,6 @@ This feature is not currently supported on Roku.
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
-
 braze.subscribeToBannersUpdates((banners) => {
    
     // get this placement's banner. If it's `null` the user did not qualify for one.
@@ -228,8 +227,9 @@ braze.subscribeToBannersUpdates((banners) => {
         // hide or collapse the container
         container.style.display = 'none';
     }
-
 });
+
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"])
 
 ```
 
