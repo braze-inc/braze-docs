@@ -248,6 +248,9 @@
     @media (min-width: $window-large-px) {
       margin-bottom: 30px;
     }
+    #glossary_label {
+      width: 100%;
+    }
     #glossary_search {
       border: 1px solid $grey-ghost;
       flex: 1 0 100%;
