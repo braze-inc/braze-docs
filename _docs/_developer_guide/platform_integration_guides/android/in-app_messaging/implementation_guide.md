@@ -332,10 +332,10 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 ```kotlin
     override fun onClick(v: View?) {
         val selectedTeam = spinner.selectedItem as String
+        messageClickableView.performClick()
         Braze.getInstance(ctx).getCurrentUser { brazeUser ->
             brazeUser?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
         }
-        messageClickableView.performClick()
     }
 ```
 {% endtab %}
@@ -346,10 +346,10 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 ```java
     @Override
     public void onClick(View v) {
+        String selectedTeam = (String) spinner.getSelectedItem();
+        messageClickableView.performClick();
         Braze.getInstance(ctx).getCurrentUser(brazeUser -> {
-            String selectedTeam = (String) spinner.getSelectedItem();
             brazeUser.setCustomUserAttribute("FavoriteTeam", selectedTeam);
-            messageClickableView.performClick();
         });
     }
 ```
