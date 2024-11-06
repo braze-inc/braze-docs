@@ -16,7 +16,7 @@ channel:
 
 Use key-value pairs to add structured metadata to messages. These extra data payloads can enrich messages with additional contextual information that can influence how a message is rendered or processed.
 
-Because data in key-value pairs is metadata, this data isn't necessarily visible to the recipient, but can be used by your connected systems or processes to customize message handling. 
+Because key-value pairs are metadata, this data isn't necessarily visible to the recipient, but can be used by your connected systems or processes to customize message handling. 
 
 Each pair consists of:
 
