@@ -14,11 +14,34 @@ channel:
 
 > Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, email, and Content Card messaging channels. 
 
-Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
+Use key-value pairs to add structured metadata to messages. These extra data payloads can enrich messages with additional contextual information that can influence how a message is rendered or processed.
+
+Because data in key-value pairs is metadata, this data isn't necessarily visible to the recipient, but can be used by your connected systems or processes to customize message handling. 
+
+Each pair consists of:
+
+- **Key:** The identifier (Example: `utm_source`)
+- **Value:** The associated data (Example: `newsletter`)
+
+## Examples
+
+Here are some examples of adding metadata with key-value pairs:
+
+1. **Tracking parameters:** Attaching UTM parameters for analytics purposes
+   - Key: `utm_campaign`
+   - Value: `spring_sale`
+2. **Custom tags:** Adding tags for internal routing or categorization
+   - Key: `priority`
+   - Value: `high`
+3. **Behavior triggers:** Metadata used to trigger or customize in-app behaviors
+   - Key: `deep_link`
+   - Value: `app://promo-page`
 
 ## Push notifications
 
-Key-value pairs can also be added to Android, iOS, and web push notifications. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
+Key-value pairs can be added to Android, iOS, and web push notifications. You might use key-value pairs to update internal metrics and app content or customize push notification properties, such as alert prioritization, localization, and sounds.
+
+In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
 
 ### iOS
 
