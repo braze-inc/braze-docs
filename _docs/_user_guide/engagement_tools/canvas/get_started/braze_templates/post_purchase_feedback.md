@@ -82,16 +82,16 @@ For our example, we'll skip the other settings (frequency capping and seed group
 
 Next, we'll build our Canvas by customizing the messaging channels and the content that will send to users. Because we're only seeking feedback using email, in-app message, and webhook channels, we'll go through the template and remove the SMS variants from the Message steps.
 
-{% alert tip %}
-You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
-{% endalert %}
-
-We'll begin our customization by going through each messaging component to update the content. Our custom attribute to reference is `Experience Feedback`. 
+We'll begin our customization by going through each messaging component to update the content. Our custom attribute to reference is `Experience Feedback`.
 
 1. In the Canvas builder, select the first Message step in the user journey.
 2. Select the **Email** variant.
 3. Fill out the **Sending info** with a subject that encourages user feedback. 
 4. Select **Edit message** to replace the template's email message with our feedback survey message. This includes replacing the links for each call-to-action to capture which option is selected, which will be referenced in the Action Path step of our user journey.
+
+{% alert tip %}
+You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+{% endalert %}
 
 #### Set up feedback survey
 
