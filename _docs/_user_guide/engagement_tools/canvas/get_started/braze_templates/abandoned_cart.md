@@ -34,14 +34,14 @@ Let’s adjust the Canvas details to reflect our goal.
 
 1. Select **Edit** next to the template name.
 
-![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_cart_old_name_description.png %}){: style="max-width:60%;"}
+![The current title and description of the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2. Update the Canvas name to specify that the Canvas is for targeting users with abandoned carts.
 3. Update the description to specify that the Canvas is for encouraging users to complete purchases from the latest seasonal kitchenware launch.
 4. Add the tag **Abandon Cart** so we can filter for it on the Canvas home page.
 
-![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_cart_new_name_description.png %}){: style="max-width:60%;"}
+![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Step 2: Assign your conversion events
 
