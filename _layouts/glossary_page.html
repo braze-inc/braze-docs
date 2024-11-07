@@ -267,11 +267,11 @@ $(document).ready(function() {
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
 
     <div id="glossary_filter">
-        <input id="glossary_search" type="search" placeholder="Search" />
+        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" /></label>
         <div id="glossary_filter_title">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
-          <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
+          <label for="filter_{{ tag.name | slugify }}">&#8205;<input type="checkbox" name="filter_{{ tag.name | slugify }}" id="filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
             {{tag.name}}
           </label>
         </div>
@@ -288,7 +288,7 @@ $(document).ready(function() {
           <div id="{{ glossary_id }}" class="anchor"></div>
           <div class="content"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
             {%- if glossary['image'] -%}
-            <img src="{{ glossary['image'] }}" alt="{{ glossary['name'] }}" />
+            <img src="{{ glossary['image'] }}" alt="{{ glossary['name'] }} image" />
             {%- endif -%}
             <p class="desc">{{ glossary['description'] }}</p>
             {%- if glossary['metric'] -%}
