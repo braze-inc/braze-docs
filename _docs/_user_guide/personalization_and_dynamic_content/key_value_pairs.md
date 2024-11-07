@@ -23,9 +23,9 @@ Each pair consists of:
 - **Key:** The identifier (Example: `utm_source`)
 - **Value:** The associated data (Example: `newsletter`)
 
-## Examples
+## Use cases
 
-Here are some examples of adding metadata with key-value pairs:
+Here are some example use cases for adding metadata with key-value pairs:
 
 1. **Tracking parameters:** Attaching UTM parameters for analytics purposes
    - Key: `utm_campaign`
