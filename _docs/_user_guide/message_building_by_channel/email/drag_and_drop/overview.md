@@ -163,7 +163,7 @@ Under the **Preview as a User** tab, you can select the following user types to 
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
-### Use Inbox Vision
+#### Use Inbox Vision
 
 Inbox Vision allows you to view your email campaigns from the perspective of email clients and mobile devices. To test your email message using Inbox Vision, select **Inbox Vision** in the **Preview & Test** section and select **Run Inbox Vision**.
 
