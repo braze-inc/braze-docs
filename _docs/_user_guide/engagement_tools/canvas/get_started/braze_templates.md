@@ -13,21 +13,21 @@ tool: Canvas
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Abandoned Intent
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/abandoned_intent/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_intent/
     image: /assets/img/braze_icons/users-right.svg
   - name: Back In Stock
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/back_in_stock/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock/
     image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Feature Adoption
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/feature_adoption/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption/
     image: /assets/img/braze_icons/flag-02.svg
   - name: Lapsing User
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/lapsed_user/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user/
     image: /assets/img/braze_icons/target-05.svg
   - name: Onboarding
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/onboarding/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Purchase Feedback
-    link: /docs/user_guide/engagement_tools/canvas/getting_started/braze_templates/post_purchase_feedback/
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
