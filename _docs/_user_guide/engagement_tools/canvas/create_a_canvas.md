@@ -26,9 +26,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-02.svg    
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
+    image: /assets/img/braze_icons/clock.svg
   - name: Rate Limiting
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting
-    image: assets/img/braze_icons/alert-triangle.svg
+    image: /assets/img/braze_icons/alert-triangle.svg
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     image: /assets/img/braze_icons/switch-horizontal-01.svg

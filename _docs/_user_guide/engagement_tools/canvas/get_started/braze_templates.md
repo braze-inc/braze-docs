@@ -4,7 +4,7 @@ article_title: Using Braze Templates
 page_order: 2
 layout: dev_guide
 guide_top_header: "Using Braze Templates"
-guide_top_text: "Unlock the potential of your marketing campaigns with Braze Canvas templates. These templates provide a streamlined approach to creating effective user journeys, allowing you to engage users at critical moments. Explore the following use case articles to see how you can build on these Canvas templates for your marketing goals."
+guide_top_text: "Unlock the potential of your marketing campaigns with [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates). These templates provide a streamlined approach to creating effective user journeys, allowing you to engage users at critical moments. Explore the following use case articles to see how you can build on these Canvas templates for your marketing goals."
 
 page_type: landing
 description: "This landing page is home to articles that will guide you on how you can customize and leverage Braze Canvas templates to fit your use cases, from targeting users for feature adoption or personalizing messages for onboarding users."
