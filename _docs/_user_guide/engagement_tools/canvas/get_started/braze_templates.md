@@ -12,8 +12,8 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Abandoned Intent
-    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_intent/
+  - name: Abandoned Cart
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart/
     image: /assets/img/braze_icons/users-right.svg
   - name: Back In Stock
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock/
