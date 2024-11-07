@@ -1,5 +1,5 @@
 ---
-nav_title: B2B Account-Based Segmentation
+nav_title: Account-Based Segmentation
 article_title: Setting Up Account-Based Segmentation
 page_order: 2
 page_type: reference
