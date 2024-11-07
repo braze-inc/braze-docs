@@ -14,10 +14,6 @@ tool:
 
 > Using the drag-and-drop editor, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
 
-Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. 
-
-Once you've selected where to build your message, let's dive into the steps to create a drag-and-drop email.
-
 ## About the editor
 
 The drag-and-drop editor uses [Content](#content) and [Rows](#rows) as the two key components to simplify your workflow, without additional use of HTML.
@@ -73,6 +69,10 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 ## Using the drag-and-drop editor
 
+Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+
+After you've selected where to build your message, let's dive into the steps to create a drag-and-drop email.
+
 ### Step 1: Select your template
 
 After selecting the drag-and-drop editor as your editing experience, you can choose to:
@@ -110,7 +110,7 @@ When you're ready, use the drag-and-drop content blocks to build your email.
 - You can also drag any of the **Content** tiles into the main editor. This creates a row for the tile.
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
 
-Check out [More creative details](#creative-details) for other ways to further customize your drag-and-drop email.
+Check out [Other customizations](#other-customizations) for other ways to further customize your drag-and-drop email.
 
 As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will check that your content is responsive, and you can make any necessary adjustments along the way.
 
@@ -185,7 +185,7 @@ HTML rendering has improved based on the following updates that minimize the num
 - Transparent dividers are automatically converted into content padding
 {% enddetails %}
 
-## Other customizations {#creative-details}
+## Other customizations
 
 As you continue building drag-and-drop emails, you can further customize each email body by using a combination of these creative details to capture your audience's attention and interest in your message.
 
