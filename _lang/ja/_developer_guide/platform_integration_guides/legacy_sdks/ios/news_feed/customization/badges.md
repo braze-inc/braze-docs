@@ -20,14 +20,14 @@ noindex: true
 
 ## 未読のニュースフィードカードカウントのリクエスト
 
-![][45]{: style="float:right;max-width:25%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/newsfeed_badges.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 バッジは、ニュースフィードでユーザーを待っている新しいコンテンツへ注意を喚起する優れた方法です。ニュースフィードにバッジを追加したい場合、Braze SDK には次のクエリを実行するメソッドが用意されています。
 
 - 現在のユーザーの未読のニュースフィードカード
 - 現在のユーザーが閲覧できるニュースフィードカードの合計数
 
-\[`ABKFeedController`][44] の以下のメソッド宣言で、これについて詳しく説明します。
+以下のメソッド宣言は [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィードコントローラ")の以下のメソッド宣言で詳しく説明する：
 
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
@@ -58,7 +58,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)
@@ -77,7 +77,7 @@ func applicationDidEnterBackground(_ application: UIApplication)
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedController.unreadCardCount(forCategories: ABKCardCategory.all) ?? 0
@@ -96,7 +96,7 @@ UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedC
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = 0
@@ -105,9 +105,5 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-詳細については、`Appboy.h` の[ヘッダーファイル][15]を参照してください。
+詳しくは、`Appboy.h` [ヘッダーファイル](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダーファイル") を参照のこと。
 
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダーファイル"
-[42]: {% image_buster /assets/img_archive/badge_example.png %} 「バッジの例」
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィード コントロールler"
-[45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}
