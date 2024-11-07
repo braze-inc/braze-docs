@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Canvas template
-article_title: Creating a Canvas template
+nav_title: Creating a Canvas Template
+article_title: Creating a Canvas Template
 alias: "/canvas_templates/"
 page_order: 0.5
 description: "This reference article covers how to create a template for Canvas."
