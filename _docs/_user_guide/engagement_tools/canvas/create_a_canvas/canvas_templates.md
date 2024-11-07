@@ -130,6 +130,10 @@ Orchestrate personalized experiences that allow you to respond to feedback and b
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
+For a step-by-step guide to creating an example Canvas using these Braze templates, see [Using Braze templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates).
+{% endalert %}
+
 ## Managing Canvas templates
 
 Canvas templates can be duplicated and archived, similar to an actual Canvas. To edit a Canvas template, select the template then **<i class="fas fa-pencil-alt"></i>Edit**.
