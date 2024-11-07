@@ -50,7 +50,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -104,7 +104,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -127,7 +127,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 {% endtab %}
 {% endtabs %}
 
-## ステップ3:ディープリンクハンドラーの設定
+## ステップ3: ディープリンクハンドラーの設定
 
 以下のコードスニペットをディープリンク処理コードの中に入れてください。このディープリンクコードは、プッシュプライマーアプリ内メッセージに対してのみ実行してください。
 
@@ -155,7 +155,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
   // ...

@@ -27,6 +27,5 @@ channel:
 getUnreadCardCount()
 ```
 
-詳細については、[KDoc][17] を参照してください。
+詳細については、[KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-feed-updated-event/get-unread-card-count.html) を参照してください。
 
-[17]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-feed-updated-event/get-unread-card-count.html

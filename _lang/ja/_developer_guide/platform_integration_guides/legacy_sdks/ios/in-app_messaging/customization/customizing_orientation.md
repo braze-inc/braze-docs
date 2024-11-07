@@ -46,7 +46,7 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
 
 ## アプリ内メッセージごとの向きの設定
 
-または、メッセージごとに方向を設定することもできます。これを行うには、[アプリ内メッセージデリゲート][1]を設定します。次に、`beforeInAppMessageDisplayed:` デリゲートメソッドで、`ABKInAppMessage` の `orientation` プロパティを設定します。
+または、メッセージごとに方向を設定することもできます。これを行うには、[アプリ内メッセージデリゲート]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/)を設定します。次に、`beforeInAppMessageDisplayed:` デリゲートメソッドで、`ABKInAppMessage` の `orientation` プロパティを設定します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -83,7 +83,5 @@ iPad の場合、アプリ内メッセージは、実際の画面の向きに関
 
 追加情報については、次のヘッダーファイルを参照してください。
 
-- [`ABKInAppMessage.h`][14]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h

@@ -1,5 +1,5 @@
 ---
-nav_title: コンテンツカードによって促進された
+nav_title: コンテンツカード
 article_title: Xamarin用コンテンツカード
 platform: 
   - Xamarin
@@ -17,7 +17,7 @@ description: "この参考記事では、Xamarin プラットフォームのコ�
 
 Braze SDK には、コンテンツカードを使い始めるためのデフォルトのカードフィードが含まれています。Braze SDKに含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードのすべてのアナリティクスのトラッキング、却下、レンダリングを処理する。
 
-コンテンツカードを Xamarin アプリに統合する方法については、[Android 統合ガイド][1]と [iOS 統合ガイド][2]を参照してください。
+コンテンツカードを Xamarin アプリに統合する方法については、[Android 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/)と [iOS 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/)を参照してください。
 
 ## 前提条件
 
@@ -56,9 +56,9 @@ Braze Xamarin SDKには、ベースモデルを共有する3つのユニーク�
 |`isControlCard`    | このカードがコントロールカードかどうか。コントロールカードをユーザーに表示しないでください。                                |
 |`extras`           | このカードのキー・バリュー・エキストラのマップ。                                                                             |
 |`isTest`           | このカードがテストカードかどうか。                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-ベースカードの完全なリファレンスについては、[Android][3] および [iOS][4] のドキュメントを参照してください。
+ベースカードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) のドキュメントを参照してください。
 
 ### バナー・コンテンツ・カード・モデルのプロパティ
 
@@ -68,9 +68,9 @@ Braze Xamarin SDKには、ベースモデルを共有する3つのユニーク�
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
 |`image`            | カードの画像のURL。                                                                                      |
 |`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。特定の状況ではプロパティが提供されない場合があることに注意してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-バナーカードの完全なリファレンスについては、[Android][5] および [iOS][6] のドキュメント (現在は画像のみに名称変更) を参照してください。
+バナーカードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct) のドキュメント (現在は画像のみに名称変更) を参照してください。
 
 ### キャプション付き画像コンテンツカードモデルのプロパティ
 
@@ -83,9 +83,9 @@ Braze Xamarin SDKには、ベースモデルを共有する3つのユニーク�
 |`title`            | カードのタイトルテキスト。                                                                                      |
 |`cardDescription`  | カードの説明テキスト。                                                                                |
 |`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードの UI に表示され、カードをクリックした時の動作/方向を示すことができます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-キャプション付き画像カードの完全なリファレンスについては、[Android][7] および [iOS][8] のドキュメントを参照してください。
+キャプション付き画像カードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) のドキュメントを参照してください。
 
 ### クラシックコンテンツカードモデルのプロパティ
 
@@ -97,23 +97,11 @@ Braze Xamarin SDKには、ベースモデルを共有する3つのユニーク�
 |`title`            | カードのタイトルテキスト。                                                                                      |
 |`cardDescription`  | カードの説明テキスト。                                                                                |
 |`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードの UI に表示され、カードをクリックした時の動作/方向を示すことができます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-クラシック (テキストアナウンス) コンテンツカードの完全なリファレンスについては、[Android][9] および [iOS][10] のドキュメントを参照してください。クラシック画像 (ショートニュース) カードの完全なリファレンスについては、[Android][11] および [iOS][12] のドキュメントを参照してください。
+クラシック (テキストアナウンス) コンテンツカードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) のドキュメントを参照してください。クラシック画像 (ショートニュース) カードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) のドキュメントを参照してください。
 
 ## GIFサポート
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/
-[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct
-[5]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct
-[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[8]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct
-[9]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[10]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
-[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
-[12]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
