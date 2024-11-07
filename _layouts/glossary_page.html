@@ -267,7 +267,7 @@ $(document).ready(function() {
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
 
     <div id="glossary_filter">
-        <label for="glossary_search">&#8205;<input id="glossary_search" type="search" placeholder="Search" /></label>
+        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" /></label>
         <div id="glossary_filter_title">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">

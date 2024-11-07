@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期セットアップ
+nav_title: SDK の初期設定
 article_title: Roku の SDK 初期設定
 platform: Roku
 page_order: 0
@@ -18,12 +18,12 @@ GitHubのサンプルRokuアプリをチェックしよう：[TorchieTV](https:/
 
 ## ステップ1:ファイルの追加
 
-Braze SDK ファイルは、[Braze Roku SDK リポジトリ][1] の `sdk_files` ディレクトリにあります。
+Braze SDK ファイルは、[Braze Roku SDK リポジトリ](https://github.com/braze-inc/braze-roku-sdk) の `sdk_files` ディレクトリにあります。
 
 1. `source` ディレクトリで、アプリに `BrazeSDK.brs` を追加します。
 2. `components` ディレクトリで、アプリに `BrazeTask.brs` と `BrazeTask.xml` を追加します。
 
-## ステップ2:参照の追加
+## ステップ 2:参照の追加
 
 次の `script` 要素を使用して、メインシーンに `BrazeSDK.brs` への参照を追加します。
 
@@ -65,13 +65,8 @@ Braze 統合をデバッグするため、Braze ログの Roku デバッグコ�
 
 Braze で、Braze Roku SDK を使用してアプリケーションからデータが収集されるようになりました。 
 
-当社のSDKに[属性][2]、[イベント][3]、[購入を][4]記録する方法については、以下の記事を参照のこと。
+当社のSDKに[属性]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)、[イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)、[購入を]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)記録する方法については、以下の記事を参照のこと。
 
-Roku のアプリ内メッセージングについて詳しくは、[アプリ内メッセージ統合ガイド][5]をご覧ください。
+Roku のアプリ内メッセージングについて詳しくは、[アプリ内メッセージ統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)をご覧ください。
 
 
-[1]: https://github.com/braze-inc/braze-roku-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/

@@ -1,7 +1,7 @@
 
 <!---DEFAULT RATE LIMIT-->
 
-{% if include.endpoint == "デフォルト" %}
+{% if include.endpoint == "default" %}
 [API レート制限]({{site.baseurl}}/api/api_limits/)で説明されているように、このエンドポイントにはデフォルトの1時間あたり25万リクエストのBraze レート 制限が適用されます。
 
 <!---PUT /scim/v2/Users/YOUR_ID_HERE--->

@@ -32,7 +32,7 @@ Braze SWIFT SDK には、さまざまなスタンドアロンの XCFramework が
 | `BrazeUICompat`            | いいえ        | `Appboy-iOS-SDK` バージョン4.X.Xの `AppboyUI`ライブラリで使用可能だったすべての`ABK*` クラスとメソッドを含む互換性ライブラリ。使用の詳細については、[移行ガイド](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/)の最小限の移行シナリオを参照してください。 |
 | `SDWebImage`               | いいえ        | 最小限の移行シナリオで `BrazeUICompat` によってのみ使用される依存関係。 |
 
-{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2}
+{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステップ3:ファイルを準備してください
 
@@ -120,7 +120,7 @@ Xcodeプロジェクトでビルドターゲットを選択し、次に**一般*
 GIF サポートを有効にするには、`braze-swift-sdk-prebuilt/static` にある `SDWebImage.xcframework` を追加します。
 {% endalert %}
 
-ビルドターゲットにいる間に、\[**ビルドフェーズ**] を選択します。**Copy Bundle Resources**の下に、以前に準備した[バンドル<3>}をドラッグ＆ドロップします](#step-32-prepare-your-bundles)。
+ビルドターゲットにいる間に、[**ビルドフェーズ**] を選択します。**Copy Bundle Resources**の下に、以前に準備した[バンドル<3>}をドラッグ＆ドロップします](#step-32-prepare-your-bundles)。
 
 ![「バンドルリソースをコピーする」の下にバンドルが追加された Xcode プロジェクトの例。」]({% image_buster /assets/img/swift/sdk_integration/copy-bundle-resources.png %})
 {% endtab %}

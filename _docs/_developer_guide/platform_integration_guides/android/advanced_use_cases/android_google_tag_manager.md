@@ -70,7 +70,7 @@ mFirebaseAnalytics.logEvent("played song", params);
 val params = Bundle()
 params.putString("genre", "pop")
 params.putInt("number of times listened", 42);
-mFirebaseAnalytics!!logEvent("played song", params)
+mFirebaseAnalytics.logEvent("played song", params)
 ```
 
 {% endtab %}
@@ -97,7 +97,7 @@ mFirebaseAnalytics.logEvent("customAttribute", params);
 val params = Bundle()
 params.putString("customAttributeKey", "favorite song")
 params.putString("customAttributeValue", "Private Eyes")
-mFirebaseAnalytics!!.logEvent("customAttribute", params)
+mFirebaseAnalytics.logEvent("customAttribute", params)
 ```
 
 {% endtab %}
@@ -122,7 +122,7 @@ mFirebaseAnalytics.logEvent("changeUser", params);
 ```kotlin
 val params = Bundle()
 params.putString("externalUserId", userId)
-mFirebaseAnalytics!!.logEvent("changeUser", params)
+mFirebaseAnalytics.logEvent("changeUser", params)
 ```
 
 {% endtab %}
@@ -241,28 +241,27 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
     String key = String.valueOf(tagParameterMap.get(CUSTOM_ATTRIBUTE_KEY));
     Object value = tagParameterMap.get(CUSTOM_ATTRIBUTE_VALUE_KEY);
 
-    BrazeUser brazeUser = Braze.getInstance(sApplicationContext).getCurrentUser();
-    if (brazeUser == null) {
-      BrazeLogger.w(TAG, "BrazeUser was null. Returning.");
-      return;
-    }
-
-    if (value instanceof Boolean) {
-      brazeUser.setCustomUserAttribute(key, (Boolean) value);
-    } else if (value instanceof Integer) {
-      brazeUser.setCustomUserAttribute(key, (Integer) value);
-    } else if (value instanceof Long) {
-      brazeUser.setCustomUserAttribute(key, (Long) value);
-    } else if (value instanceof String) {
-      brazeUser.setCustomUserAttribute(key, (String) value);
-    } else if (value instanceof Double) {
-      brazeUser.setCustomUserAttribute(key, (Double) value);
-    } else if (value instanceof Float) {
-      brazeUser.setCustomUserAttribute(key, (Float) value);
-    } else {
-      BrazeLogger.w(TAG, "Failed to parse value into a custom "
-          + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'");
-    }
+    Braze.getInstance(sApplicationContext).getCurrentUser(new IValueCallback<BrazeUser>() {
+      @Override
+      public void onSuccess(BrazeUser brazeUser) {
+        if (value instanceof Boolean) {
+          brazeUser.setCustomUserAttribute(key, (Boolean) value);
+        } else if (value instanceof Integer) {
+          brazeUser.setCustomUserAttribute(key, (Integer) value);
+        } else if (value instanceof Long) {
+          brazeUser.setCustomUserAttribute(key, (Long) value);
+        } else if (value instanceof String) {
+          brazeUser.setCustomUserAttribute(key, (String) value);
+        } else if (value instanceof Double) {
+          brazeUser.setCustomUserAttribute(key, (Double) value);
+        } else if (value instanceof Float) {
+          brazeUser.setCustomUserAttribute(key, (Float) value);
+        } else {
+          BrazeLogger.w(TAG, "Failed to parse value into a custom "
+              + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'");
+        }
+      }
+    });
   }
 
   private void changeUser(Map<String, Object> tagParameterMap) {
@@ -329,21 +328,19 @@ class BrazeGtmTagProvider : CustomTagProvider {
     val key = tagParameterMap[CUSTOM_ATTRIBUTE_KEY].toString()
     val value = tagParameterMap[CUSTOM_ATTRIBUTE_VALUE_KEY]
 
-    val brazeUser = Braze.getInstance(sApplicationContext).currentUser
-    if (brazeUser == null) {
-      BrazeLogger.w(TAG, "BrazeUser was null. Returning.")
-      return
-    }
-
-    when (value) {
-      is Boolean -> brazeUser.setCustomUserAttribute(key, (value as Boolean?)!!)
-      is Int -> brazeUser.setCustomUserAttribute(key, (value as Int?)!!)
-      is Long -> brazeUser.setCustomUserAttribute(key, (value as Long?)!!)
-      is String -> brazeUser.setCustomUserAttribute(key, value as String?)
-      is Double -> brazeUser.setCustomUserAttribute(key, (value as Double?)!!)
-      is Float -> brazeUser.setCustomUserAttribute(key, (value as Float?)!!)
-      else -> BrazeLogger.w(TAG, "Failed to parse value into a custom "
-          + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'")
+    Braze.getInstance(sApplicationContext).getCurrentUser { brazeUser ->
+      when (value) {
+        is Boolean -> brazeUser.setCustomUserAttribute(key, value)
+        is Int -> brazeUser.setCustomUserAttribute(key, value)
+        is Long -> brazeUser.setCustomUserAttribute(key, value)
+        is String -> brazeUser.setCustomUserAttribute(key, value)
+        is Double -> brazeUser.setCustomUserAttribute(key, value)
+        is Float -> brazeUser.setCustomUserAttribute(key, value)
+        else -> BrazeLogger.w(
+          TAG, "Failed to parse value into a custom "
+            + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'"
+        )
+      }
     }
   }
 
@@ -353,7 +350,7 @@ class BrazeGtmTagProvider : CustomTagProvider {
   }
 
   companion object {
-    private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java!!)
+    private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java)
     private val ACTION_TYPE_KEY = "actionType"
 
     // Custom Events
