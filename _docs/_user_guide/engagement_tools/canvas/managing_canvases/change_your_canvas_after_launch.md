@@ -76,7 +76,9 @@ You can edit these Canvas settings and information after a Canvas launches using
 * Quiet Hours
 * Target audience
 
-You can't edit conversion events after a Canvas has launched.
+After a Canvas has launched:
+- Conversion events can't be edited. 
+- [Audience paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [experiment paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) can't be added or removed to these steps and can't be reordered to adjust the ranking. As a workaround, edit the active Canvas and duplicate the step, which will be editable until you launch the draft.
 
 ### Individual steps
 
@@ -112,7 +114,10 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 
 ### Deleting variants
 
-When variants are deleted from a Canvas, the steps within the variant (including those shared by other variants) will be deleted. When the steps are deleted, you won't be able to view their Canvas analytics. Note that users in deleted variants are exited from the steps, and any following messages are not sent. 
+When variants are deleted from a Canvas, the following occurs:
+- Steps within the variant (including those shared by other variants) will be deleted. 
+- The step analytics and the top-level analytics for the Canvas, such as _Total Entries_, _Total Exits_, and _Conversion Rate_, will be deleted.
+- Users in deleted variants are exited from the steps, and any following messages are not sent.
 
 ## Best practices
 
@@ -138,11 +143,11 @@ If you update the delay in a Delay step or evaluation window in the Action Paths
 
 If you delete a step with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay step with a one day delay and redirect those users to a Message step. In this case, the users will only be redirected after the one day delay has been completed.
 
-If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) steps, deleting steps could invalidate the results of this step.
+If your Canvas has one or more Experiment Paths steps, deleting steps could invalidate the results of this step.
 
 ### Stopping Canvases
 
-Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move to the next step. However, if the time that the user should've progressed to the next step has passed, they will instead exit the Canvas. 
+Stopping a Canvas won't exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move to the next step. However, if the time that the user should've progressed to the next step has passed, they will instead exit the Canvas. 
 
 For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay step with a one hour delay that goes into a Message step. 
 

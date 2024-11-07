@@ -12,7 +12,7 @@ hidden: true
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
-すべてのイベントは、`EventLogger` を使用してログに記録されます。これは、IAppboy で公開されるプロパティです。`EventLogger` への参照を取得するには、`Appboy.SharedInstance.EventLogger` を呼び出します。以下の方法で、大切なユーザー アクションs とカスタムイベントs をトラッキングできます。
+すべてのイベントは、`EventLogger` を使用してログに記録されます。これは、IAppboy で公開されるプロパティです。`EventLogger` への参照を取得するには、`Appboy.SharedInstance.EventLogger` を呼び出します。次の方法を使用して、重要なユーザーアクションとカスタムイベントを追跡できます。
 
 ```csharp
 bool LogCustomEvent(string YOUR_EVENT_NAME)

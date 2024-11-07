@@ -26,7 +26,7 @@ The Swift SDK does not capture non-Braze push notifications&#8212;these will con
 {% endalert %}
 
 {% tabs %}
-{% tab Swift (UIKit) %}
+{% tab Swift - UIKit %}
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
   // Prepare the SDK for delayed initialization
@@ -39,7 +39,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 {% endtab %}
 
-{% tab Swift (SwiftUI) %}
+{% tab Swift - SwiftUI %}
 SwiftUI applications require implementing the [@UIApplicationDelegateAdaptor](https://developer.apple.com/documentation/swiftui/uiapplicationdelegateadaptor) property wrapper to call the `prepareForDelayedInitialization()` method.
 
 ```swift

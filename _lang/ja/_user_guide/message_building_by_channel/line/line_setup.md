@@ -7,8 +7,7 @@ search_tag: Partner
 page_order: 0
 channel:
  - LINE
-hidden: true
-permalink: /line/line_setup/
+alias: /line/line_setup/
 ---
 
 

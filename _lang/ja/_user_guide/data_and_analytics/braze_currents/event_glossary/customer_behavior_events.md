@@ -30,7 +30,7 @@ search_rank: 7
 | --- | --- |
 | iOS | `ios` |
 | Android | `android` |
-| ファイヤーTV | `kindle` |
+| FireTV | `kindle` |
 | Kindle | `kindle` |
 | Web | `web` |
 | tvOS | `tvos` |
@@ -40,7 +40,7 @@ search_rank: 7
 {% enddetails %}
 
 {% alert important %}
-ストレージスキーマは、データウェアハウスパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルイベントデータに適用されます。いくつかのイベントと送信先の組み合わせは、まだ一般的に利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
+ストレージスキーマは、データウェアハウスパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルイベントデータに適用されます。ここにリストされているいくつかのイベントと宛先の組み合わせは、まだ一般的には利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
 {% endalert %}
 {% api %}
 
@@ -427,7 +427,7 @@ search_rank: 7
 セッション
 {% endapitags %}
 
-このイベントは、ユーザーがセッションを開始したときに発生します。このデータを使用して、ユーザーがセッションを開始した時点を追跡します。
+このイベントは、ユーザーがセッションを開始したときに発生します。このデータを使用して、ユーザーがいつセッションを開始したかを追跡します。
 
 {% alert tip %}
 ユーザーが最初のセッションを開始すると、`FirstSession` イベントと `SessionStart` イベントの両方がトリガーされます。
@@ -900,7 +900,7 @@ search_rank: 7
 {% endtabs %}
 
 {% alert important %}
-このCurrentsイベントは、「すべてのイベントコネクタ」を購入した顧客のみが利用可能であり、ストレージイベントコネクタ（i.e Amazon S3、Microsoft Azure、Google Cloud Storage）のみで利用可能です。
+この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (i.e Amazon S3、Microsoft Azure、Google Cloud Storage) についてのみ利用できることに注意してください。
 <br><br>このイベントを有効にして、ワークスペース内の既存ユーザーのランダムバケット番号の埋め戻しをスケジュールする方法については、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 

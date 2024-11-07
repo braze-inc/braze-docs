@@ -21,11 +21,11 @@ channel: news feed
 
 ## ニュースフィードの例
 
-<img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="ニュースフィードの例では、フォローリクエスト、更新通知、広告など、いくつかの通知が表示されている。" height="600" />
+<img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="フォローリクエスト、更新通知、広告など、いくつかの通知を表示するニュースフィードの例。" height="600" />
 
 ## 統合
 
-ニュースフィードの表示をBraze Web SDKで切り替えるには、次のように呼び出すだけでよい：
+ニュースフィードの表示を Braze Web SDKで切り替えるには、次のように呼び出すだけです。
 
 ``` javascript
 braze.toggleFeed();
@@ -49,11 +49,11 @@ braze.subscribeToFeedUpdates(function(feed) {
 braze.requestFeedRefresh();
 ```
 
-`showFeed` 、`destroyFeed` 、`toggleFeed` に関する完全なドキュメントは[JSDocsを][2]参照のこと。
+`showFeed`、`destroyFeed`、および `toggleFeed` の完全なドキュメントについては、[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed)を参照してください。
 
 ## カードのタイプ
 
-Braze Web SDKは、ベースモデルである[Cardを][1]共有する[ClassicCard][3]、[Banner][4]、[CaptionedImageの][5]3つのユニークなニュースフィードカードタイプをサポートしている。
+Braze Web SDK は、ベースモデルである[カード](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)を共有する [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html)、[Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html)、[CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) の3つのユニークなニュースフィードカードタイプをサポートしています。
 
 ### 未読カードのカウントを要求する
 
@@ -63,15 +63,15 @@ Braze Web SDKは、ベースモデルである[Cardを][1]共有する[ClassicCa
 braze.getCachedFeed().getUnreadCardCount();
 ```
 
-これは、ニュースフィードの未読カードの数を示すバッジによく使われる。詳細は[JS Reference Docsを][17]参照のこと。Brazeは、フィードを表示するか、次の関数を呼び出すまで、新しいページのロード時にニュースフィードカードを更新しない（そのため、この関数は0を返す）ことに注意。 `braze.requestFeedRefresh();`
+これは、未読のニュースフィードカードの数を示すバッジを起動するためによく使用されます。詳細については、[JS リファレンスドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html)を参照してください。Brazeは、フィードを表示するか、次の関数を呼び出すまで、新しいページのロード時にニュースフィードカードを更新しない（そのため、この関数は0を返す）ことに注意。 `braze.requestFeedRefresh();`
 
 ### キーと値のペア
 
-オプションで、`Card` オブジェクトはキーと値のペアを `extras` として保持できます。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。これらの値にアクセスするには、`card.extras` 。
+オプションで、`Card` オブジェクトはキーと値のペアを `extras` として保持できます。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。これらの値にアクセスするには、`card.extras` を呼び出すだけです。
 
 ## カスタマイズ
 
-BrazeのUI要素には、Brazeダッシュボード内のコンポーザーにマッチし、他のBrazeモバイルプラットフォームとの一貫性を目指したデフォルトのルック＆フィールが付属している。Brazeのデフォルトスタイルは、Braze SDK内のCSSで定義されている。アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準フィードをカスタマイズできます。
+Braze の UI 要素は、Braze ダッシュボード内のコンポーザーと一致するデフォルトのルックアンドフィールを備えており、他の Braze モバイルプラットフォームとの一貫性確保を目的としています。Brazeの既定のスタイルは、Braze SDK内のCSSで定義されます。アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準フィードをカスタマイズできます。
 
 例えば、以下はニュースフィードの幅を800pxにするオーバーライドの例である：
 
@@ -101,7 +101,7 @@ braze.toggleFeed(undefined, undefined, [braze.Card.Category.ANNOUNCEMENTS, braze
 
 Brazeは、ニュースフィードカードに以下の写真のように未読と既読を表示する：
 
-![ニュースフィードのカードに、時計の画像とテキストが表示される。テキストの右上には、カードが読まれたかどうかを示す青かグレーの三角形がある。青い三角形は、カードが読まれたことを示す。][25]
+![ニュースフィードのカードに、時計の画像とテキストが表示される。テキストの右上隅には、カードが読まれたかどうかを示す青色または灰色の三角形があります。青い三角形はカードが読まれたことを示す。]({% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %})
 
 ### インジケーターを無効にする
 
@@ -112,11 +112,3 @@ Brazeは、ニュースフィードカードに以下の写真のように未読
 .ab-read-indicator { display: none; }
 ```
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html
-[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[17]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

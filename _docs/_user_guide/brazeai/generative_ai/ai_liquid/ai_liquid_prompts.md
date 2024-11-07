@@ -1,23 +1,17 @@
 ---
 nav_title: About Prompting
-article_title: About Prompting the AI Liquid Assistant
+article_title: About Prompting the BrazeAI Liquid Assistant
 description: "This article will cover how to prompt the AI Liquid Assistant, including best practices and example prompts."
 page_type: reference
 page_order: 0
-hidden: true
-permalink: /ai_liquid_prompts/
 noindex: true
 ---
 
-# About prompting the AI Liquid Assistant
+# About prompting the BrazeAI<sup>TM</sup> Liquid Assistant
 
-> Prompting is the process of giving the AI Liquid Assistant clear instructions on what you want it to do.
+> Prompting is the process of giving the BrazeAI<sup>TM</sup> Liquid Assistant clear instructions on what you want it to do.
 
-{% alert important %}
-The BrazeAI<sup>TM</sup> Liquid Assistant is currently in beta for a limited number of customers who actively use the push, SMS, or email channels. For the email channel, this works on email messages and **not** templates, and works best on email messages that are already built. <br><br> If you're interested in being considered for the beta, reach out to your customer success manager.
-{% endalert %}
-
-The AI Liquid Assistant is designed to function as a best-in-class marketer who's an expert at using Braze and Liquid to create impactful marketing messages, but it still requires guidance on your particular use cases or questions.
+The BrazeAI<sup>TM</sup> Liquid Assistant is designed to function as a best-in-class marketer who's an expert at using Braze and Liquid to create impactful marketing messages, but it still requires guidance on your particular use cases or questions.
 
 There is no single correct way to prompt the assistant, and you can always add further details to your prompts during your conversation. This means you don't need to spend a lot of time crafting the "perfect" initial prompt. However, you can get the most out of the assistant by following some best practices.
 
@@ -25,11 +19,11 @@ There is no single correct way to prompt the assistant, and you can always add f
 
 ### Use natural language
 
-The AI Liquid Assistant is trained to understand natural language. Chat with it as you would with a coworker when asking for help. This makes it easier for the assistant to comprehend your needs and provide accurate assistance.
+The BrazeAI<sup>TM</sup> Liquid Assistant is trained to understand natural language. Chat with it as you would with a coworker when asking for help. This makes it easier for the assistant to comprehend your needs and provide accurate assistance.
 
 ### Give context
 
-Providing context helps the AI Liquid Assistant understand the bigger picture surrounding your project. It's helpful to include context such as:
+Providing context helps the BrazeAI<sup>TM</sup> Liquid Assistant understand the bigger picture surrounding your project. It's helpful to include context such as:
 
 - Your company name and industry
 - A campaign you're working on, such as Black Friday or holiday sales
@@ -40,7 +34,7 @@ Including context in your prompt helps the assistant tailor its responses to bet
 
 ### Be specific
 
-The AI Liquid Assistant can ask follow-up questions, but providing details upfront can lead to more precise results sooner. Consider including details such as:
+The BrazeAI<sup>TM</sup> Liquid Assistant can ask follow-up questions, but providing details upfront can lead to more precise results sooner. Consider including details such as:
 
 - Any known preferences or requirements for the message
 - Instructions on how to handle situations, such as a lack of responses from the message recipient or fallback message options
@@ -48,7 +42,7 @@ The AI Liquid Assistant can ask follow-up questions, but providing details upfro
 
 ### Get creative
 
-Think outside the box with your prompts to see how the AI Liquid Assistant can enhance your messaging. Experiment with different prompts and ideas, as creativity can lead to more engaging results.
+Think outside the box with your prompts to see how the BrazeAI<sup>TM</sup> Liquid Assistant can enhance your messaging. Experiment with different prompts and ideas, as creativity can lead to more engaging results.
 
 ## Example prompts
 

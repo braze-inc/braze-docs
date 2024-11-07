@@ -31,6 +31,10 @@ Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl
 
 Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method.
 
+### Exclude users from feature flags
+
+You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+
 ## Create a Global Control Group
 
 ### Step 1: Navigate to the Global Control Group Settings
@@ -98,7 +102,7 @@ As you set up your global control groups and view reporting, here are errors you
 | Global Control Group report does not have any data. | If you access the Global Control Group Report without having saved a Global Control Group, you will not see any data in the report. Create and save a Global Control Group and try again. |
 | My conversion rate is 0% or I'm not seeing the graph display, even though there are more than zero events occurring. | If the number of conversions is very small and your control or treatment groups are very large, then the conversion rate may round to 0%, and thus not show up in the graph. You can verify this by checking the Total Number of Events metric. You could compare the effectiveness of your two groups using the incremental uplift percent metric.  |
 | My conversion rate (or other metrics) are changing drastically depending on the time period I'm viewing data for. | If you're viewing data over short time periods, it's possible for your metrics to fluctuate day to day or week to week. We recommend that you view metrics over the course of at least one month. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Things to watch out for {#things-to-watch-for}
 
@@ -145,7 +149,7 @@ How long to run your experiment before reshuffling control group membership depe
 
 To determine the appropriate length of time for your experiment, consider what questions you're hoping to answer. For instance, are you looking to see if there's a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
 
-Or, you might be interested in purchasing behaviors, so your experiment would most likely need to run for longer than an experiment where you're examining sessions since it's likely your users make purchases less frequently.
+Or, you might be interested in a custom event, so your experiment may need to run for longer than an experiment where you're examining sessions if it's likely your users trigger that custom event less frequently.
 
 {% alert tip %}
 The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.

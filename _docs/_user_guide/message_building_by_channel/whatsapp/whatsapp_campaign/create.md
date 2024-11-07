@@ -58,6 +58,10 @@ If all of the messages in your campaign are similar or have the same content, co
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels you want to pair with your message.
 
+{% alert tip %}
+If an action-based Canvas is triggered by an inbound WhatsApp message, you can reference WhatsApp properties in any Canvas step until the next action path.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -183,7 +187,7 @@ Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Calls to actions {#ctas}
 
@@ -191,11 +195,13 @@ You can add the following calls to action in your WhatsApp messages:
 
 CTA type    | Details
 ----------- |---------------- 
-Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
+Visit website | One button maximum (including variable parameters).
 Call phone number | Available for message templates only. <br>One button maximum.
 Custom quick reply buttons | Three buttons maximum. 
 Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
-{: .reset-td-br-1 .reset-td-br-2}
+Coupon code message templates | Available for message templates only. <br>These can be opened and edited like other message templates, and are compatible with Liquid and Braze promotion codes. 
+CTA response messages  | Create a response message that includes a call to action button.
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Inbound messages
 
@@ -209,7 +215,7 @@ Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus
 Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 CTAs | See [Calls to actions](#ctas).
 Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 

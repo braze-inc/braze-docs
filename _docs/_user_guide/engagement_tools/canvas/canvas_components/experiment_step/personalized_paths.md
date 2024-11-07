@@ -61,7 +61,7 @@ When the experiment window passes and the experiment is complete, Braze will sen
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
-{% tab Recurring, action-triggered, or API-triggered Canvas %}
+{% tab Recurring or action-triggered or API-triggered Canvas %}
 
 You can test up to four paths in a single Experiment Path. Add your paths and finish setting up your Canvas as needed, then launch it.  
 

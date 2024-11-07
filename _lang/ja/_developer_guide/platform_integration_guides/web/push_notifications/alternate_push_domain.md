@@ -1,36 +1,36 @@
 ---
-nav_title: 代替Webプッシュドメイン
-article_title: 代替Webプッシュドメイン
+nav_title: 代替 Web プッシュドメイン
+article_title: 代替 Web プッシュドメイン
 platform: Web
 page_order: 20
 page_type: reference
-description: "ここでは、代替ドメイン上のBraze Webプッシュを統合する方法について説明します。"
+description: "この記事では、代替ドメイン上で Braze Web プッシュを統合する方法について説明します。"
 channel: push
 
 ---
 
-# 代替Web プッシュ領域
+# 代替 Web プッシュドメイン
 
-> Web プッシュ を統合するには、ドメインが[secure][2] である必要があります。これは、一般に`https`、`localhost`、および[W3C プッシュ標準][1] で定義されている他の例外を意味します。また、ドメインのルートにサービスワーカーを登録するか、少なくともそのファイルのHTTP ヘッダーs にコントロールできる必要があります。ここでは、代替ドメイン上のBraze Webプッシュを統合する方法について説明します。
+> Web プッシュを統合するには、ドメインが[セキュア](https://w3c.github.io/webappsec-secure-contexts/)である必要があります。一般にこれは、`https`、`localhost`、および [W3C プッシュ標準](https://www.w3.org/TR/service-workers/#security-considerations)で定義されているその他の例外である必要があります。また、ドメインのルートにサービスワーカーを登録するか、少なくともそのファイルの HTTP ヘッダーを制御できる必要もあります。この記事では、代替ドメイン上で Braze Web プッシュを統合する方法について説明します。
 
-_これらの条件をすべて満たすことができない場合は、このガイドを使用して、Web サイトにプッシュプロンプトダイアログを追加できる回避策を設定します。たとえば、ユーザーが`http`(安全でない)Web サイトからオプトインするか、プッシュプロンプトが表示されないブラウザ拡張ポップアップからオプトインする場合に、この記事は役立ちます。
+_これらの条件をすべて満たすことができない場合は_、このガイドを使用して、Web サイトにプッシュプロンプトダイアログを追加できる回避策を設定します。たとえば、ユーザーが`http`(安全でない)Web サイトからオプトインするか、プッシュプロンプトが表示されないブラウザ拡張ポップアップからオプトインする場合に、この記事は役立ちます。
 
 ## 注意事項
 Web上の多くの回避策と同様に、ブラウザは継続的に進化し、将来は意図したとおりに動作しない可能性があることに留意してください。
 
 - これには以下が必要です。
   - 別のセキュア・ドメイン(`https://`)を所有し、そのドメインにサービス・ワーカーを登録するためのアクセス権を持っていること。
-  - Web サイトにログインするユーザは、プッシュトークンが同じプロファイルs に関連付けられていることを確認します。
+  - Web サイトにログインするユーザーは、プッシュトークンが同じプロファイルに関連付けられていることを確認する必要があります。
 
 {% alert note %}
-この方法では、プッシュ・フォー・Shopifyは実装できません。Shopify は、プッシュを配信するために必要なヘッダーs を削除するためにステップs を使用します。
+Shopify のプッシュをこの方法で実装することはできません。Shopify は、プッシュを配信するために必要なヘッダーを削除するためのステップを取ります。
 {% endalert %}
 
 ## 統合
 
-次の例を明確にするために、`http://insecure.com` と`https://secure.com` を2 つのドメインとして使用します。訪問者が`http://insecure.com` にプッシュ登録することを目的としています。この例題は、ブラウザー拡張のポップアップページの`chrome-extension://`スキームにアプリ当てはまるかもしれません。
+次の例をわかりやすくするために、訪問者を `http://insecure.com` でのプッシュに登録させることを目的として、`http://insecure.com` と `https://secure.com` の2つのドメインを使用します。この例題は、ブラウザー拡張のポップアップページの`chrome-extension://`スキームにアプリ当てはまるかもしれません。
 
-### ステップ1:プロンプトフローの開始
+### ステップ1:プロンプトフローを開始する
 
 `insecure.com` で、URL パラメータを使用してセキュアドメインに新しいウィンドウを開封し、現在ログイン中のユーザーのBraze外部ID を渡します。
 
@@ -55,23 +55,23 @@ document.getElementById("opt-in").onclick = function(){
 </script>
 ```
 
-### ステップ2:プッシュ用レジスタ
+### ステップ2:プッシュを登録する
 
 この時点で、`secure.com` はポップアップウィンドウを開封します。ポップアップウィンドウでは、同じユーザー IDのBraze Web SDKを初期化し、Webプッシュに対するユーザーの権限をリクエストできます。
 
 **https://secure.com/push-registration.html**
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-registration.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-registration.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-### ステップ3:ドメイン間の通信(オプション)
+### ステップ3:ドメイン間で通信する (オプション)
 
-ユーザーが`insecure.com` で生成されたこのワークフローからオプトインできるようになったので、ユーザーがすでにオプトインされているかどうかに基づいてサイトを変更することができます。ユーザーに、すでにプッシュを登録しているかどうかを尋ねる意味はありません。
+ユーザーは `insecure.com` から発生したこのワークフローからオプトインできるようになったため、ユーザーがすでにオプトインしているかどうかに基づいてサイトを変更できます。ユーザーがすでにプッシュを登録している場合、それを尋ねることに意味はありません。
 
-iFrames と [`postMessage`][3] API を使用して、2 つのドメイン間で通信できます。 
+iFrames と [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) API を使用して、2つのドメイン間で通信できます。 
 
 **insecure.com**
 
-`insecure.com` ドメインでは、セキュアなドメイン(push は_実際に_ 登録済み) に、カレントユーザーのプッシュ登録に関する情報を問い合わせます。
+`insecure.com` ドメインで、現在のユーザーのプッシュ登録に関する情報を (プッシュが_実際に_登録されている) セキュアドメインに問い合わせます。
 
 ```html
 <!-- Create an iframe to the secure domain and run getPushStatus onload-->
@@ -94,8 +94,5 @@ function getPushStatus(event){
 
 **secure.com/push-status.html**
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-[1]: https://www.w3.org/TR/service-workers/#security-considerations
-[2]: https://w3c.github.io/webappsec-secure-contexts/
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage

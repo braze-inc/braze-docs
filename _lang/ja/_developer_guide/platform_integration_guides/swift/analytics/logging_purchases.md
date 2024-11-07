@@ -13,21 +13,21 @@ description: "このリファレンス記事では、アプリ内購入と売上
 
 Braze では、複数の通貨での購入がサポートされています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
-実装前に、[ベストプラクティス][5]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## 購入と売上のトラッキング
 
 この機能を使用するには、アプリ内購入が正常に完了した後でこのメソッド呼び出しを追加します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logPurchase:"product_id"
@@ -46,25 +46,25 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 ### プロパティ {#properties-purchases} の追加
 `Int`、`Double`、`String`、`Bool`、または `Date` の値が入力されたディクショナリを渡すことで、購入に関するメタデータを追加できます。
 
-詳細については、[iOSクラスのドキュメント][7] を参照してください。
+詳細については、[iOS クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation")を参照してください。
 
 ### 数量の追加
 顧客が 1 回のチェックアウト手続きで同じ購入を複数回行う場合は、購入に数量を追加できます。これを行うには、数量として `Int` を渡します。
 
-* SDKが購入を記録するためには、数量入力は\[0, 100] ] の範囲内でなければならない。
+* SDK で購入を記録するには、数量入力が [0, 100] の範囲内である必要があります。
 * 数量入力のないメソッドは、デフォルトの数量の値が 1 になります。
 
-詳細については、[iOS クラスのドキュメント][7]を参照してください。
+詳細については、[iOS クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation")を参照してください。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logPurchase:productId
@@ -97,9 +97,5 @@ AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: 
 
 ### REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント][4]を参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent:properties documentation"
-[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation"

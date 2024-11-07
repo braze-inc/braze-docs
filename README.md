@@ -39,6 +39,14 @@ rake
 
 To stop your server, reopen the terminal and press **Control**+**C**.
 
+## About `bdocs` wrapper
+
+[`bdocs`](https://github.com/braze-inc/braze-docs/blob/develop/bdocs) is a wrapper script located in the root of this repository that helps you replace links, generate redirect URLs, create deployment descriptions, and more. For an in-depth walkthrough, see [`bdocs` wrapper](https://www.braze.com/docs/contributing/bdocs/). To get started quickly, run the following command to see a list of available commands:
+
+```terminal
+./bdocs
+```
+
 ## Creative Commons license
 
 Braze Docs is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For more information, see [LICENSE](./LICENSE).

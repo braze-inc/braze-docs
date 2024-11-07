@@ -22,11 +22,11 @@ description: "이 문서에서는 스케줄 API 트리거 캠페인 Braze 엔드
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `campaigns.trigger.schedule.create` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -59,15 +59,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|필수| 문자열| [캠페인 식별자 참조|]({{site.baseurl}}/api/identifier_types/)
-| `send_id` | 선택 사항 | 문자열 | [전송 식별자]({{site.baseurl}}/api/identifier_types/) 참조. |
-| `recipients` | 선택 사항 | 수신자 개체의 배열 | [수신자 개체]({{site.baseurl}}/api/objects_filters/recipient_object/) 보기. |
-| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 대상]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때 `broadcast`를 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast` 을 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
-| `trigger_properties` | 선택 사항 | 개체 | 이 전송의 모든 사용자에 대한 개인화 키-값 페어입니다. [트리거 속성]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)을 참조하세요. |
-| `schedule` | 필수 | 일정 개체 | [일정 개체]({{site.baseurl}}/api/objects_filters/schedule_object/) 보기. |
+|`campaign_id`|필수|문자열| [캠페인 식별자]({{site.baseurl}}/api/identifier_types/) 보기|
+| `send_id` | 선택 사항 | 문자열 | [식별자 전송을]({{site.baseurl}}/api/identifier_types/) 참조하세요. | 
+| `recipients` | 선택 사항 | 수신자 객체 배열 | [수신자 거부]({{site.baseurl}}/api/objects_filters/recipient_object/) 참조. |
+| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
+|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+| `trigger_properties` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [트리거 속성을]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 참조하세요. |
+| `schedule` | 필수 | 스케줄 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
@@ -144,7 +144,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## 응답
 
-### 성공 응답 예시
+### 성공 응답의 예
 
 ```json
 Content-Type: application/json

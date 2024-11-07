@@ -11,9 +11,9 @@ description: "この記事では、iOS アプリにユニバーサルディー�
 
 > ディープリンクは、ネイティブアプリを起動したり、特定のコンテンツを表示したり、特定のアクションを実行したりするリンクを提供する手段です。iOS アプリにディープリンクを初めて実装する場合は、次のステップに従ってください。
 
-ディープリンクに関する一般情報については、[よくある質問の記事][4]を参照してください。 
+ディープリンクに関する一般情報については、[よくある質問の記事]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)を参照してください。 
 
-## ステップ1:スキームの登録
+## ステップ 1:スキームの登録
 
 ディープリンクを処理するには、`Info.plist` ファイルにカスタムスキームを記述する必要があります。ナビゲーション構造はディクショナリの配列によって定義されます。これらの各ディクショナリには、文字列の配列が含まれています。
 
@@ -42,7 +42,7 @@ Xcode を使用して `Info.plist` ファイルを編集します。
 
 ## ステップ2:スキーム許可リストの追加
 
-URLスキームを`canOpenURL(_:)`に渡すには、`LSApplicationQueriesSchemes`キーをアプリのInfo.plistファイルに追加する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
+`LSApplicationQueriesSchemes` キーをアプリの Info.plist ファイルに追加して、`canOpenURL(_:)` に渡す URL スキームを宣言する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
@@ -61,11 +61,11 @@ URLスキームを`canOpenURL(_:)`に渡すには、`LSApplicationQueriesSchemes
 </array>
 ```
 
-詳細については、`LSApplicationQueriesSchemes` キーに関する [Apple のドキュメント][12]を参照してください。
+詳細については、`LSApplicationQueriesSchemes` キーに関する [Apple のドキュメント](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14)を参照してください。
 
-## ステップ3:ハンドラの実装
+## ステップ 3: ハンドラの実装
 
-アプリをアクティブにすると、iOS でメソッド [`application:openURL:options:`][13] が呼び出されます。重要な引数は [NSURL][2] オブジェクトです。
+アプリをアクティブにすると、iOS でメソッド [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc) が呼び出されます。重要な引数は [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL) オブジェクトです。
 
 {% tabs %}
 {% tab SWIFT %}
@@ -97,9 +97,9 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 ## アプリトランスポートセキュリティ (ATS)
 
 ### ATS の要件
-[Apple のドキュメント][16]から:「アプリトランスポートセキュリティは、アプリと Web サービス間の接続のセキュリティを向上させる機能です。この機能は、安全な接続のベストプラクティスに準拠したデフォルトの接続要件で構成されています。アプリでこのデフォルト動作を無効にして、トランスポートセキュリティを無効にできます。」
+[Apple のドキュメント](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)から:「アプリトランスポートセキュリティは、アプリと Web サービス間の接続のセキュリティを向上させる機能です。この機能は、安全な接続のベストプラクティスに準拠したデフォルトの接続要件で構成されています。アプリでこのデフォルト動作を無効にして、トランスポートセキュリティを無効にできます。」
 
-ATS はデフォルトで適用されます。すべての接続が HTTPS を使用し、TLS 1.2を使用して暗号化され、前方秘匿性が確保される必要があります。詳細については、[ATS を使用して接続するための要件][14]を参照してください。Braze によりエンドデバイスに提供されるすべての画像は、TLS 1.2をサポートし、ATS と互換性のあるコンテンツ配信ネットワーク (「CDN」) によって処理されます。
+ATS はデフォルトで適用されます。すべての接続が HTTPS を使用し、TLS 1.2を使用して暗号化され、前方秘匿性が確保される必要があります。詳細については、[ATS を使用して接続するための要件](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35)を参照してください。Braze によりエンドデバイスに提供されるすべての画像は、TLS 1.2をサポートし、ATS と互換性のあるコンテンツ配信ネットワーク (「CDN」) によって処理されます。
 
 アプリケーションの `Info.plist` で例外として指定されていない限り、これらの要件に従わない接続は次のようなエラーにより失敗します。
 
@@ -144,7 +144,7 @@ ATS の例外としてドメインを追加するには、アプリの `Info.pli
 </dict>
 ```
 
-詳細については、[アプリトランスポートセキュリティのキー][19]に関する Apple の記事を参照してください。
+詳細については、[アプリトランスポートセキュリティのキー](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33)に関する Apple の記事を参照してください。
 
 #### ATS を完全に無効にする
 
@@ -162,7 +162,7 @@ ATS を完全に無効にできます。ただし、セキュリティ保護が�
 
 SDK では、有効な `URL` を作成するためにリンクをパーセントエンコードします。適切な形式の URL で使用できないリンク文字 (ユニコード文字など) は、すべてパーセントエスケープされます。
 
-エンコードされたリンクをデコードするには、`String` プロパティ [`removingPercentEncoding`][8] を使用します。また、`BrazeDelegate.braze(_:shouldOpenURL:)` で `true` を返す必要があります。アプリによる URL の処理をトリガーするには、アクションの呼び出しが必要です。 
+エンコードされたリンクをデコードするには、`String` プロパティ [`removingPercentEncoding`](https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding) を使用します。また、`BrazeDelegate.braze(_:shouldOpenURL:)` で `true` を返す必要があります。アプリによる URL の処理をトリガーするには、アクションの呼び出しが必要です。 
 
 以下はその例です。
 
@@ -197,8 +197,8 @@ SDK では、有効な `URL` を作成するためにリンクをパーセント
 `UIApplicationOpenSettingsURLString` を利用して、Braze のプッシュ通知、アプリ内メッセージ、ニュースフィードからアプリの設定にユーザーをディープリンクできます。
 
 ユーザーをアプリから iOS 設定に移動させる手順は以下のとおりです。
-1. まず、アプリケーションが[スキームベースのディープリンク][25]または[ユニバーサルリンク][27]用に設定されていることを確認します。
-2. \[**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
+1. まず、アプリケーションが[スキームベースのディープリンク](##step-1-registering-a-scheme)または[ユニバーサルリンク](#universal-links)用に設定されていることを確認します。
+2. [**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
 3. カスタムスキームベースのディープリンクを使用している場合は、`application:openURL:options:` メソッドに次のコードを追加します。
 
 {% tabs %}
@@ -237,7 +237,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 ### デフォルト WebView のカスタマイズ
 
-一般的に Web ディープリンクに対して \[アプリ内で Web URL を開く] が選択されている場合、`Braze.WebViewController` クラスには SDK によって開かれる Web URL が表示されます。
+一般的に Web ディープリンクに対して [アプリ内で Web URL を開く] が選択されている場合、`Braze.WebViewController` クラスには SDK によって開かれる Web URL が表示されます。
 
 `Braze.WebViewController` は、[`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) デリゲートメソッドを使用してカスタマイズできます。
 
@@ -249,9 +249,9 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 Braze では、プッシュ通知、アプリ内メッセージ、コンテンツカードでユニバーサルリンクがサポートされています。ユニバーサルリンクのサポートを有効にするには、[`configuration.forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) を `true` に設定する必要があります。
 
-有効にすると、[`application:continueUserActivity:restorationHandler:`][15] メソッドを使用して Braze からアプリの`AppDelegate` にユニバーサルリンクが転送されます。 
+有効にすると、[`application:continueUserActivity:restorationHandler:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application) メソッドを使用して Braze からアプリの`AppDelegate` にユニバーサルリンクが転送されます。 
 
-また、ユニバーサルリンクを処理するようアプリケーションを設定する必要があります。[Apple のドキュメント][11]を参照し、アプリケーションがユニバーサルリンクに関して正しく設定されていることを確認してください。
+また、ユニバーサルリンクを処理するようアプリケーションを設定する必要があります。[Apple のドキュメント](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app)を参照し、アプリケーションがユニバーサルリンクに関して正しく設定されていることを確認してください。
 
 {% alert warning %}
 ユニバーサルリンクを転送するには、アプリケーション権限にアクセスできる必要があります。アプリケーションをシミュレーターで実行している場合、これらの権限を直接使用できず、ユニバーサルリンクはシステムハンドラに転送されません。
@@ -295,22 +295,6 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 {% endtab %}
 {% endtabs %}
 
-詳細については、[`BrazeDelegate`][23] を参照してください。
+詳細については、[`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) を参照してください。
 
 
-[2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
-[8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
-[11]: https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app
-[12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
-[13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
-[14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
-[15]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application
-[16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
-[19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[25]: ##step-1-registering-a-scheme
-[26]: #linking-customization
-[27]: #universal-links

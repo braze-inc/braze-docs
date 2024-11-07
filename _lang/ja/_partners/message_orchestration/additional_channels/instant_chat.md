@@ -14,11 +14,11 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Instant Chat"
 
 valid_partner_list:
-- name: メッセンジャー
+- name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
-- name: センドバード
+- name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/  
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/  

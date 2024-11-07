@@ -28,30 +28,26 @@ channel:
 
 ### サウンドファイルを変換する
 
-afconvert ツールを使用して、サウンドを変換できます。たとえば、16 ビットリニアPCM システムサウンドSubmarine.aiff をCAF ファイルのIMA4 オーディオに変換するには、ターミナルで次のコマンドを使用します。
+afconvert ツールを使用して、サウンドを変換できます。たとえば、16ビットリニア PCM システムサウンド Submarine.aiff を CAF ファイルの IMA4オーディオに変換するには、ターミナルで次のコマンドを使用します。
 
 ```bash
 afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caff -v
 ```
 
 {% alert tip %}
-QuickTime Player でサウンドを開き、\[**ムービー**] メニューから \[**ムービーインスペクターを表示**] を選択するとサウンドのデータ形式を確認できます。
+QuickTime Player でサウンドを開き、[**ムービー**] メニューから [**ムービーインスペクターを表示**] を選択するとサウンドのデータ形式を確認できます。
 {% endalert %}
 
 ## ステップ2:サウンドのプロトコルURL を指定する
 
-アプリ内のサウンドファイルの場所に送信するプロトコルURL を指定する必要があります。これには2 つの方法があります。
+アプリ内のサウンドファイルの場所にリダイレクトするプロトコル URL を指定する必要があります。これには2 つの方法があります。
 
-* [Appleプッシュオブジェクト][1]の`sound`パラメータを使用して、URLをBrazeに渡します。
-* ダッシュボードで指定します。[push composer][2]で**Settings**を選択し、**Sound**フィールドにプロトコールURLを入力します。 
+* [Appleプッシュオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object)の`sound`パラメータを使用して、URLをBrazeに渡します。
+* ダッシュボードで URL を指定します。[push composer]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android)で**Settings**を選択し、**Sound**フィールドにプロトコールURLを入力します。 
 
-![Braze ダッシュボードのプッシュコンポーザー][8]
+![Braze ダッシュボードのプッシュコンポーザー]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、\[メッセージング API][12] でサウンドを設定することもできます。
+指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、[メッセージング API][12] でサウンドを設定することもできます。
 
-詳細については、\[カスタムアラートサウンドの準備][9]] に関するApple Developer のドキュメントを参照してください。
+詳細については、[カスタムアラートサウンドの準備](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html)に関するApple Developer のドキュメントを参照してください。
 
-[1]: {{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android
-[8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
-[9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html

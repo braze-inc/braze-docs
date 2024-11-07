@@ -9,7 +9,7 @@ channel: in-app messages
 
 ---
 
-# アプリ内メッセージ統合
+# アプリ内メッセージの統合
 
 > React Native を使用すると、ネイティブのアプリ内メッセージが Android および iOS に自動的に表示されます。この記事では、React Native を使用したアプリのアプリ内メッセージの分析のカスタマイズとログ記録について説明します。
 
@@ -50,7 +50,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 {% endalert %}
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 [カスタムマネージャーリスナー]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener)に関する Android の記事で説明されているように、`IInAppMessageManagerListener` を実装します。`beforeInAppMessageDisplayed` 実装では、`inAppMessage` データにアクセスして JavaScript レイヤーに送信し、戻り値に基づいてネイティブメッセージを表示するかどうかを決定できます。
 
@@ -163,12 +163,12 @@ AppDelegate.braze = braze;
 次のステップに従って、サンプルのアプリ内メッセージをテストします。
 
 1. `Braze.changeUserId('your-user-id')` メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. \[**キャンペーン**] に移動し、[このガイド][5]に従って新しいアプリ内メッセージキャンペーンを作成します。
-3. テスト用のアプリ内メッセージングキャンペーンを作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。すぐにデバイスでアプリ内メッセージを起動できるようになるはずです。
+2. [**キャンペーン**] に移動し、[このガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)に従って新しいアプリ内メッセージキャンペーンを作成します。
+3. テスト用のアプリ内メッセージングキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。すぐにデバイスでアプリ内メッセージを起動できるようになるはずです。
 
-![Brazeのアプリ内メッセージキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストすることができる。][6]
+![自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストできることを示すBrazeアプリ内メッセージキャンペーン。]({% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test")
 
-サンプル実装は、BrazeProjectの\[React Native SDK][7].その他のAndroidとiOSの実装サンプルは、\[Android][8] ] と \[iOS][9] SDK]にある。
+サンプル実装は、[React Native SDK](https://github.com/braze-inc/braze-react-native-sdk)内のBrazeProjectにある。その他のAndroidとiOSの実装サンプルは、[Androidと](https://github.com/braze-inc/braze-android-sdk) [iOS](https://github.com/braze-inc/braze-swift-sdk)SDKにある。
 
 ## アプリ内メッセージのデータモデル
 
@@ -181,22 +181,22 @@ AppDelegate.braze = braze;
 |プロパティ          | 説明                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------|
 |`inAppMessageJsonString` | メッセージのJSON表現。                                                                                |
-|`message`         | メッセージ文だ。                                                                                                      |
+|`message`         | メッセージテキスト。                                                                                                      |
 |`header`          | メッセージのヘッダーである。                                                                                                    |
 |`uri`             | ボタンをクリックするアクションに関連するURI。                                                                       |
 |`imageUrl`        | メッセージ画像のURL。                                                                                                 |
 |`zippedAssetsUrl` | HTMLコンテンツを表示するために準備されたzip圧縮された資産。                                                                    |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                            |
 |`duration`        | メッセージの表示時間。                                                                                          |
-|`clickAction`     | ボタンをクリックするアクションのタイプ。の3種類である：`NEWS_FEED` `URI` と`NONE` である。                                     |
-|`dismissType`     | メッセージのクローズタイプ。`SWIPE` と`AUTO_DISMISS` である。                                                 |
-|`messageType`     | SDKがサポートするアプリ内メッセージタイプ。の4種類である：`SLIDEUP` `MODAL` `FULL` `HTML_FULL` である。          |
-|`extras`          | メッセージ・エキストラの辞書である。デフォルト値：`[:]`.                                                                   |
+|`clickAction`     | ボタンのクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。                                     |
+|`dismissType`     | メッセージのクローズタイプ。2つのタイプは次のとおりです。`SWIPE` および`AUTO_DISMISS`。                                                 |
+|`messageType`     | SDKがサポートするアプリ内メッセージタイプ。4つのタイプは次のとおりです。`SLIDEUP`、`MODAL`、`FULL` および `HTML_FULL`。          |
+|`extras`          | メッセージエクストラ辞書。デフォルト値：`[:]`.                                                                   |
 |`buttons`         | アプリ内メッセージのボタン一覧。                                                                             |
 |`toString()`      | String表現としてのメッセージ。                                                                                |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-アプリ内メッセージモデルの完全なリファレンスについては、\[Android][10] ]と\[iOS][11] ]のドキュメントを参照のこと。
+アプリ内メッセージモデルの完全なリファレンスについては、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)ドキュメントを参照のこと。
 
 ### アプリ内メッセージボタンモデルのプロパティ
 
@@ -207,25 +207,14 @@ AppDelegate.braze = braze;
 |`text`            | ボタンのテキスト。                                                                                                     |
 |`uri`             | ボタンをクリックするアクションに関連するURI。                                                                            |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                                 |
-|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。の3種類である：`NEWS_FEED` `URI` と`NONE` である。 |
+|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。 |
 |`id`              | メッセージのボタンID。                                                                                               |
 |`toString()`      | String表現としてのボタン。                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-ボタンモデルの完全なリファレンスについては、\[Android][12] ]と\[iOS][13] ]のドキュメントを参照のこと。
+ボタンモデルの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button)ドキュメントを参照のこと。
 
 ## GIFサポート
 
 {% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[6]: {% image_buster /assets/img/react-native/iam-test.png %} 「アプリ内メッセージングテスト」
-[7]: https://github.com/braze-inc/braze-react-native-sdk
-[8]: https://github.com/braze-inc/braze-android-sdk
-[9]: https://github.com/braze-inc/braze-swift-sdk
-[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html
-[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage
-[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
-[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button

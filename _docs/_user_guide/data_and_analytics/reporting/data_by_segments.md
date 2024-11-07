@@ -134,7 +134,7 @@ Your results will show purchase metrics by segment for the variants or steps you
 - **Columns:** Purchase metrics
 
 {% endtab %}
-{% tab Top/bottom messaging for email engagement %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### Viewing metrics for the top or bottom performers
 
@@ -168,7 +168,7 @@ To view this report, you must specify the following variables in the **Variables
 Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or Message steps).
 
 {% endtab %}
-{% tab Top/bottom messaging for purchases %}
+{% tab Top or bottom messaging for purchases %}
 
 ### Viewing metrics for the top or bottom performers
 
@@ -207,7 +207,7 @@ Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps 
 {% endtab %}
 {% tab Push performance by segment %}
 
-## Viewing push metrics for segments
+### Viewing push metrics for segments
 
 This report in the [Variables](#variables) tab displays push metrics broken down by segments. 
 

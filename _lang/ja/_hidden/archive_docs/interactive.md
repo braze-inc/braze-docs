@@ -41,8 +41,8 @@ justify-content: flex-start;
 padding-top: 0px;
 }
   \#main_content #article-main #swagger-ui .auth-container input\[type=text]{
-というボーダーラインがある：1px solid #f4f4f7;
-幅がある：100%;
+境界線:1px solid #f4f4f7;
+幅:100%;
 
 }
 \#main_content #article-main #swagger-ui .opblock-tag-section a {
@@ -80,7 +80,7 @@ width: 100%;
 width: auto !important;
 }
 \#swagger-ui table thead {
-  背景：透明；
+  バックグラウンド：透明；
 
 }
 \#swagger-ui  table thead tr td, #swagger-ui table thead tr th {

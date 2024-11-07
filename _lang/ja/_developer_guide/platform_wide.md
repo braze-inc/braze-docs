@@ -1,10 +1,10 @@
 ---
-nav_title: プラットフォームワイド機能&amp;アンプ; ビヘイビア
-article_title: プラットフォームワイド機能&amp;アンプ; ビヘイビア
+nav_title: プラットフォーム全体の機能と動作
+article_title: プラットフォーム全体の機能と動作
 layout: dev_guide
 page_order: 1
-guide_top_header: "プラットフォームワイド機能&amp;アンプ; ビヘイビア"
-guide_top_text: "Brazeはたくさんのことができる!開発者な心の中から、私たちの能力をご覧ください。"
+guide_top_header: "プラットフォーム全体の機能と動作"
+guide_top_text: "Braze はたくさんのことができます。開発者の視点から、私たちの機能を確認してください。"
 description: "このランディングページには、ワークスペース設定、分析の概要、テストメッセージの送信、フィーチャーフラグなど、プラットフォームの幅広い機能と動作が一覧表示されます。"
 
 guide_featured_title: "セクションの記事"

@@ -1,6 +1,6 @@
 ---
 nav_title: SDK の初期セットアップ
-article_title: ウィンドウズユニバーサル用の最初のSDK設定
+article_title: Windows Universal 用の SDK 初期設定
 platform: Windows Universal
 page_order: 0
 description: "このリファレンス記事では、Windows ユニバーサルプラットフォームにBraze SDKを統合するための最初のSDKインテグレーションステップについて説明します。"
@@ -11,23 +11,23 @@ hidden: true
 # SDK の初期統合
 {% multi_lang_include archive/windows_deprecation.md %}
 
-Braze SDKは、分析、セグメンテーション、およびエンゲージメントで使用されるレポート情報へのAPI、および通知s のプッシュおよび受信のためのユーザーs の登録機能を提供します。
+Braze SDK は、分析、セグメンテーション、エンゲージメントで使用される情報をレポートするための API と、プッシュ通知と通知の受信用にユーザーを登録する機能を提供します。
 
->  Windows ユニバーサルSDKは、Xamarin Windows アプリと互換性があります。
+>  Windows Universal SDK は、Xamarin Windows アプリとも互換性があります。
 
 ## ステップ 1:NuGet パッケージマネージャーを使用したSDKのインストール
 
 Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用してインストールします。NuGet を使用してBraze Windows SDKをインストールするには:
 
 1. プロジェクトファイルを右クリックする
-2. "Manage NuGet Packages&quotをクリックします。
-3. 左側のドロップダウンメニューで、"Online"をクリックします
-4. &quot で検索;NuGet.org" " Appboy"
-5. "AppboyPlatform.Universal.Release"NuGet Package をクリックし、Install をクリックします
+2. \[Manage NuGet Packages (NuGet パッケージの管理)]をクリックします。
+3. 左側のドロップダウンメニューで、\[オンライン] をクリックします
+4. 「NuGet.org」で「Appboy」を検索
+5. \[AppboyPlatform.Universal.Release] NuGet パッケージをクリックし、\[インストール] をクリックします
 
->  Windows Universal Libraryは、Windows 8.1、Windows Phone 8.1、およびUWP アプリのすべてのアプリケーションで使用する必要があります。
+>  Windows Universal ライブラリは、Windows 8.1、Windows Phone 8.1、および UWP のすべてのアプリケーションで使用する必要があります。
 
-## ステップ2:作成と設定 AppboyConfiguration.xml
+## ステップ2:AppboyConfiguration.xml の作成と設定
 
 プロジェクトのルートディレクトリに`AppboyConfiguration.xml` という名前のファイルを作成し、そのファイルに次のコード スニペットを追加します。
 
@@ -38,19 +38,19 @@ Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用して�
     </AppboyConfig>
 ```
 
->  [ API キー s]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページにあるAPI キーで`YOUR_API_KEY_HERE` を必ず更新してください。
+>  \[[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)] ページにある API キーで `YOUR_API_KEY_HERE` を更新してください。
 
-そのスニペットを追加したら、以下のファイルプロパティを変更してください `AppboyConfiguration.xml`
+そのスニペットを追加したら、以下の `AppboyConfiguration.xml` のファイルプロパティを変更してください。
 
-1. `Build Action` を `Content`
-2. `Copy to Output Directory`を `Copy Always`
+1. `Build Action` を `Content` に設定します
+2. `Copy to Output Directory` を `Copy Always` に設定します
 
-## ステップ 3:設定 package.appxmanifest
+## ステップ 3:package.appxmanifest の設定
 
-"Capabilities タブで、`Internet (Client)` がチェックされていることを確認します。
+\[機能] タブで、`Internet (Client)` がオンになっていることを確認します。
 ![][18]
 
-## ステップ 4:アプリを編集する
+## ステップ 4:アプリクラスの編集
 
 - `App.xaml.cs` ファイルの`usings` に以下を追加します。
 
@@ -72,11 +72,11 @@ Appboy.SharedInstance.OpenSession();
 Appboy.SharedInstance.CloseSession();
 ```
 
-## 基本SDK一体化完了
+## 基本的な SDK 統合の完了
 
-Braze はアプリライセンスからデータを収集するようになりました。[属性 s]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)、[events]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events)、および[purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases)をSDKに記録し、プッシュメッセージングを計測する方法については、次の記事を参照してください。
+これで Braze はアプリケーションからデータを収集するようになるはずです。[属性]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)、[イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events)、および[購入]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases)を SDK に記録する方法と、プッシュメッセージングを実装する方法については、次の記事を参照してください。
 
->  同じアプリでBraze Unity プロジェクトを使用している場合は、Braze の呼び出しを"AppboyPlatform.Universal.Appboy" として完全修飾する必要がある場合があります。
+>  同じアプリで Braze Unity プロジェクトを使用している場合は、Braze への呼び出しを「AppboyPlatform.Universal.Appboy」として完全修飾する必要があります。
 
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

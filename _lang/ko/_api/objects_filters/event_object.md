@@ -45,14 +45,14 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 - [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 타임코드 위키][22]
+- [ISO 8601 타임 코드 위키][22]
 
 #### 기존 프로필만 업데이트
 
 Braze에서 기존 고객 프로필만 업데이트하려면 요청 본문에 `true` 값과 함께 `_update_existing_only` 키를 전달해야 합니다. 이 값을 생략하면 `external_id`가 없는 경우 Braze에서 새 고객 프로필을 생성합니다.
 
 {% alert note %}
-`/users/track` 엔드포인트를 통해 별칭 전용 고객 프로필을 만드는 경우 `_update_existing_only`를 `false`로 설정해야 합니다. 이 값을 생략하면 별칭 전용 프로필이 생성되지 않습니다.
+`/users/track` 엔드포인트를 통해 별칭 전용 사용자 프로필을 만드는 경우 `_update_existing_only` 을 `false` 으로 설정해야 합니다. 이 값을 생략하면 별칭 전용 프로필이 생성되지 않습니다.
 {% endalert %}
 
 ## 이벤트 속성 개체
@@ -60,14 +60,14 @@ Braze에서 기존 고객 프로필만 업데이트하려면 요청 본문에 `t
 
 속성 값은 다음 데이터 유형 중 하나를 사용할 수 있습니다.
 
-| 데이터 유형 | 설명 | 
+| 데이터 유형 | 설명 |
 | --- | --- |
-| [정수](https://en.wikipedia.org/wiki/Integer) 또는 [부동](https://en.wikipedia.org/wiki/Floating-point_arithmetic) 소수점 | 숫자
-| Booleans |  |
-| Datetimes | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열로 지정합니다. 배열 내에서는 지원되지 않습니다. |
+| 숫자 | [정수](https://en.wikipedia.org/wiki/Integer) 또는 [부동 소수점](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| 부울 |  |
+| 데이터 시간 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열로 포맷됩니다. 배열 내에서는 지원되지 않습니다. |
 | 문자열 | 255자 이하. |
 | 배열 | 배열에는 날짜/시간을 포함할 수 없습니다. |
-| 오브젝트 | 오브젝트가 문자열로 수집됩니다. |
+| 개체 | 오브젝트는 문자열로 수집됩니다. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 배열 또는 개체 값을 포함하는 이벤트 속성 개체는 최대 50KB의 이벤트 속성 페이로드를 가질 수 있습니다.
@@ -108,7 +108,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 타임코드 위키][19]
+- [ISO 8601 타임 코드 위키][19]
 
 ## 이벤트 개체
 
@@ -120,7 +120,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 타임코드 위키"
+[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 타임 코드 위키"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 시간 코드"
 [23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

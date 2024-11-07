@@ -24,14 +24,14 @@ noindex: true
 tvOS SDK はニュースフィードデータの取得をサポートしているため、独自のカスタム UI を使用してアプリケーションにニュースフィードを表示できます。ニュースフィードを取得するには、次のメソッドを呼び出し、クラスを調べて各カードを解析します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSArray *feedCards =  [[Appboy sharedInstance].feedController getNewsFeedCards];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 let feedCards = Appboy.sharedInstance()?.feedController.newsFeedCards

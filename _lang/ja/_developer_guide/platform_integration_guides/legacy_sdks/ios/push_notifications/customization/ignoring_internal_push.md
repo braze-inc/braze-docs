@@ -27,12 +27,12 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 
 ## Braze 内部プッシュユーティリティ メソッドの使用
 
-`ABKPushUtils` のユーティリティーメソッドを使用して、アプリが Braze の内部プッシュを受信したか、または Braze の内部プッシュによって起動されたかを確認できます。`isAppboyInternalRemoteNotification:` はすべての Braze 内部プッシュ通知で `YES` を返し、`isUninstallTrackingRemoteNotification:` と `isGeofencesSyncRemoteNotification:` はそれぞれアンインストール追跡とジオフェンス同期通知で `YES` を返します。メソッド宣言については、[`ABKPushUtils.h`][1] を参照してください。
+`ABKPushUtils` のユーティリティーメソッドを使用して、アプリが Braze の内部プッシュを受信したか、または Braze の内部プッシュによって起動されたかを確認できます。`isAppboyInternalRemoteNotification:` はすべての Braze 内部プッシュ通知で `YES` を返し、`isUninstallTrackingRemoteNotification:` と `isGeofencesSyncRemoteNotification:` はそれぞれアンインストール追跡とジオフェンス同期通知で `YES` を返します。メソッド宣言については、[`ABKPushUtils.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKPushUtils.h) を参照してください。
 
 ## 実装例 {#internal-push-implementation-example}
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -53,7 +53,7 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
@@ -78,5 +78,3 @@ func application(_ application: UIApplication,
 {% endtab %}
 {% endtabs %}
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKPushUtils.h
-[4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3

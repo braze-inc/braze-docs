@@ -23,7 +23,7 @@ Braze has three global subscription states for email users (listed in the follow
 | Opted-in | A user has explicitly confirmed they want to receive email. We recommend an explicit opt-in process to get consent from users to send emails. |
 | Subscribed | A user has neither unsubscribed nor explicitly opted-in to receive emails. This is the default subscription state when a user profile is created. |
 | Unsubscribed | A user has explicitly unsubscribed from your emails. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Braze does not count subscription state changes against your data points, globally, and around subscription groups.
@@ -41,7 +41,9 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/emai
 
 ### Bounces and invalid emails
 
-Hard bounces can happen if the email is invalid or doesn't exist. In this case, Braze will mark the user's email address as invalid and will not attempt to send any further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
+
+If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ### Updating email subscription states
 
@@ -135,7 +137,7 @@ The email preference center is an easy way to manage which users receive certain
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. 
+In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive. You must insert a legally-compliant footer with an unsubscribe link at the bottom of every email you send. When users click the unsubscribe URL in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. We recommend including this Liquid tag: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 Note that when a user selects "Unsubscribe from all of the above types of emails" in the email preference center, this updates their global email subscription status to `unsubscribed` and unsubscribes them from all subscription groups.
 

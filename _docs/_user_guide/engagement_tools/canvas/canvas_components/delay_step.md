@@ -37,7 +37,7 @@ You can choose the type of delay before the next message in your Canvas. You can
   Note the difference between how "days" and "calendar days" are calculated. 
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
-    - A "calendar day" defines a day as 24 hours after a specified time, meaning you can choose to delay at company time or at a user's local time. If a time is not specified, the user will be delayed until midnight the next day in company time.
+    - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
   {% endtab %}
   {% tab Until a specific date %}
@@ -75,7 +75,7 @@ Delays have three statistics available in the analytics view of an active or pre
 | `Entered` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a delay step twice, two entries will be recorded. |
 | `Proceeded to Next Step` | Reflects the number of entries that proceeded to the next step in the Canvas. |
 | `Exited Canvas` | Reflects the number of entries that exited the Canvas and did not proceed to the next step. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Time series for these analytics are available in the expanded component view.
 

@@ -2,28 +2,28 @@
 nav_title: 統合の完了
 article_title: Swift SDKの統合を完了する
 platform: Swift
-description: "この参考記事では、Braze Swift SDKを統合オプションの1つを介してインストールした後、統合を完了する方法を示す。"
+description: "この参考記事では、統合オプションの1つを使用して Braze Swift SDK をインストールした後に統合を完了する方法を示します。"
 page_order: 2
 
 ---
 
 # 統合の完了
 
-> これらのステップに従う前に、[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)または[CocoaPodsの]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/)いずれかを使用してiOS用のSwift SDKを統合していることを確認する。
+> これらのステップに従う前に、[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) または [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/) のいずれかを使用して iOS 用の Swift SDK の統合が完了していることを確認してください。
 
 ## アプリデリゲートを更新する
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
-Braze Swift SDKに含まれる機能をインポートするために、`AppDelegate.swift` ファイルに以下のコード行を追加する：
+`AppDelegate.swift` ファイルに以下のコード行を追加して Braze Swift SDK に含まれる機能をインポートします。
 
 ```swift
 import BrazeKit
 ```
 
 
-次に、`AppDelegate` クラスに static プロパティを追加し、アプリケーションのライフタイムを通して Braze インスタンスへの強い参照を保持する：
+次に、`AppDelegate` クラスに static プロパティを追加し、アプリケーションの有効期間を通して Braze インスタンスへの強い参照を保持します。
 
 ```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-最後に、`AppDelegate.swift` 、以下のスニペットを`application:didFinishLaunchingWithOptions:` メソッドに追加する：
+最後に、`AppDelegate.swift` で、`application:didFinishLaunchingWithOptions:` メソッドに次のスニペットを追加します。
 
 ```swift
 let configuration = Braze.Configuration(
@@ -45,7 +45,7 @@ AppDelegate.braze = braze
 **アプリの設定**ページから、`YOUR-APP-IDENTIFIER-API-KEY` と`YOUR-BRAZE-ENDPOINT` を正しい値に更新する。アプリ識別子のAPIキーがどこにあるかについては、[API識別子の種類を]({{site.baseurl}}/api/identifier_types/?tab=app%20ids)チェックしてほしい。
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 次のコード行を `AppDelegate.m` ファイルに追加します。
 
@@ -90,6 +90,5 @@ AppDelegate.braze = braze;
 
 ## その他のリソース
 
-[SDKリファレンス・ドキュメントには][1]、各SDKシンボルに関する追加情報とガイダンスが記載されている。
+[SDKリファレンス・ドキュメントfull](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOSクラス・ドキュメントは")、各SDKシンボルに関する追加情報とガイダンスを提供する。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOS クラスの完全なドキュメント"

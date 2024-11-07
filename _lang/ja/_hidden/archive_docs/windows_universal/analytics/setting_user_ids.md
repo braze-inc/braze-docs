@@ -34,4 +34,4 @@ Appboy.SharedInstance.ChangeUser(YOUR_USER_ID_STRING);
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - ローカライゼーション"
+[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android 開発者のドキュメント - ローカライゼーション"

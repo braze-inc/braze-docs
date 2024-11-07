@@ -1,7 +1,7 @@
 ---
 nav_title: Query Builder
 article_title: Query Builder
-page_order: 100
+page_order: 15
 page_type: reference
 description: "This reference article describes how to build reports using Braze data from Snowflake in the Query Builder."
 tool: Reports
@@ -37,17 +37,17 @@ Results from each report can be generated once a day. If you run the same report
 
 ### Query templates
 
-All query templates surface data from the last 60 days. Access templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
+Access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
 See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
+
+### Data timeframe
+
+All queries surface data from the last 60 days. 
 
 ## Generating SQL with the AI Query Builder
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
-
-{% alert note %}
-The AI Query Builder is currently available as a beta feature. Contact your customer success manager if you’re interested in participating in this beta trial.
-{% endalert %}
 
 ![][2]{: style="max-width:60%;" }
 
@@ -94,6 +94,23 @@ This query retrieves the number of email sends in the last month:
 SELECT COUNT(*) as Sends
 FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('month', -1, date_trunc('day',CURRENT_DATE()));
+```
+
+If you query for the `CANVAS_ID`, `CANVAS_VARIATION_API_ID`, or `CAMPAIGN_ID`, their associated name columns will automatically be included in the results table. You don’t need to include them in the `SELECT` query itself.
+
+| ID name | Associated name column |
+| --- | --- |
+| `CANVAS_ID` | Canvas Name |
+| `CANVAS_VARIATION_API_ID` | Canvas Variant Name |
+| `CAMPAIGN_ID` | Campaign Name |
+{: .reset-td-br-1 .reset-td-br-2 }
+
+This query retrieves all three IDs and their associated name columns with a maximum of 100 rows:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
 ```
 
 ### Troubleshooting
@@ -164,7 +181,7 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 | Start date | Specifies a start date | Requires `start_date` |
 | End date | Specifies an end date | Requires `end_date` |
 | Date range | Specifies both a start and end date | Requires both `start_date` and `end_date` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 - **Replacement value:** Replaces `start_date` and `end_date` with a Unix timestamp in seconds for a specified date in UTC, such as `1696517353`.
 - **Usage example:** For all of relative, start date, end date, and date range variables:

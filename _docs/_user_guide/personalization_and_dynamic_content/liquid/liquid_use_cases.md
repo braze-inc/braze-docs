@@ -31,9 +31,9 @@ This use case shows how to calculate a user's app anniversary based on their ini
 ```liquid
 {% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
-{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
-{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+{% assign anniversary_month = {{custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = {{custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = {{custom_attribute.${registration_date}}} | date: "%Y" %}
 
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
@@ -889,7 +889,7 @@ This use case takes a customer's subscription state to send personalized content
 
 {% raw %}
 ```liquid
-{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+{% if {{subscribed_state.${subscription_group_id}}} == 'subscribed' %}
 This is an exclusive message for subscribed users!
 {% else %} This is the default message for other users.
 {% endif %}

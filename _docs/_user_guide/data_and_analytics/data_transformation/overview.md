@@ -9,9 +9,7 @@ description: "This reference article provides an overview of Braze Data Transfor
 
 # Braze Data Transformation overview
 
-> Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze. This newly integrated user data can then power even more sophisticated marketing use cases.
-
-Braze Data Transformation can expedite your data integration, even if you have very little coding experience. This feature can help replace your team's dependency on manual API calls, third-party integration tools, or even customer data platforms.
+> Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze. This newly integrated user data can then power even more sophisticated marketing use cases. Braze Data Transformation can expedite your data integration, even if you have very little coding experience, and can help replace your team's dependency on manual API calls, third-party integration tools, or even customer data platforms.
 
 ## How it works
 
@@ -37,7 +35,7 @@ The following table describes the differences between the free and pro version o
 |----|----|----|
 | Active transformations | Up to 5 per company | Up to 55 per company |
 | Per month | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
 To request an upgrade to Data Transformation Pro, contact your Braze account manager or select the **Request Upgrade** button in the Braze dashboard.

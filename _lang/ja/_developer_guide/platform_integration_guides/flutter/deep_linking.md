@@ -9,11 +9,11 @@ description: "この記事では、AndroidおよびiOSでFlutterアプリのデ�
 
 # ディープリンク
 
-> Flutterを使用してiOSまたはAndroidアプリにディープリンクを実装する方法を学びます。サンプルアプリをチェックしたい場合は、[GitHubをご覧ください。Braze Flutter SDK 例](https://github.com/braze-inc/braze-flutter-sdk/tree/master/example)。ディープリンクに関する一般的な情報については、[ディープリンクFAQ][1]をご覧ください。
+> Flutterを使用してiOSまたはAndroidアプリにディープリンクを実装する方法を学びます。サンプルアプリをチェックしたい場合は、[GitHub をご覧ください。Braze Flutter SDK 例](https://github.com/braze-inc/braze-flutter-sdk/tree/master/example)。ディープリンクに関する一般的な情報については、[ディープリンクに関する FAQ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking) をご覧ください。
 
 ## 前提条件
 
-ディープリンクをFlutterアプリに実装する前に、ネイティブの[Android][2]または[iOS][3]レイヤーでディープリンクを設定する必要があります。
+ディープリンクをFlutterアプリに実装する前に、ネイティブの[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/)または[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/)レイヤーでディープリンクを設定する必要があります。
 
 ## ディープリンクの実装
 
@@ -23,15 +23,15 @@ description: "この記事では、AndroidおよびiOSでFlutterアプリのデ�
 {% tab iOS %}
 1. Xcodeプロジェクトで、`Info.plist`ファイルを開封します。
 2. 新しいキーと値のペアを追加します。
-3. キーを`FlutterDeepLinkingEnabled`に設定します。
+3. キーを `FlutterDeepLinkingEnabled` に設定します。
 4. タイプを`Boolean`に設定します。
 5. 値を`YES`に設定します。
-    ![追加されたキーと値のペアを持つ`Info.plist`ファイルの例]（{% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %}「XcodeプロジェクトInfo.plistファイル」）
+    ![追加されたキーと値のペアを持つサンプルプロジェクトの `Info.plist` ファイル]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %}「Xcode プロジェクト Info.plist ファイル」)
 {% endtab %}
 
 {% tab Android %}
 1. Android Studio プロジェクトで、`AndroidManifest.xml` ファイルを開封します。
-2. `.MainActivity`タグの`activity`を見つけます。
+2. `activity` タグで `.MainActivity` を見つけます。
 3. `activity`タグ内に、次の`meta-data`タグを追加します:
     ```xml
     <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
@@ -137,8 +137,3 @@ void deepLinkAlert(String link, BuildContext context) {
 }
 ```
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[4]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %}「XcodeプロジェクトInfo.plistファイル」
-[5]: https://github.com/braze-inc/braze-flutter-sdk/tree/master/example

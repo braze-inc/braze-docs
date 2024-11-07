@@ -16,13 +16,13 @@ noindex: true
 
 Braze iOS SDK は、各プッシュアクションボタンの URL 処理サポートなど、デフォルトのプッシュカテゴリーをサポートしています。現在、デフォルトカテゴリーには、`Accept`/`Decline`、`Yes`/`No`、`Confirm`/`Cancel`、および `More` の4セットのプッシュアクションボタンがあります。 
 
-![2つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。][13]
+![プッシュメッセージがプルダウンされ、カスタマイズ可能な2つのアクションボタンが表示されるGIF。]({% image_buster /assets/img_archive/iOS8Action.gif %})
 
 デフォルトのプッシュカテゴリーを登録するには、統合手順に従ってください。
 
 ## ステップ1:Braze のデフォルトプッシュカテゴリーの追加
 
-\[push][36] に登録する] ときに、以下のコードを使用してデフォルトのプッシュカテゴリを登録します。
+以下のコードを使用して、[プッシュ登録]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze)時にデフォルトのプッシュ・カテゴリーに登録する：
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -40,7 +40,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 // For UserNotification.framework (iOS 10+ only)
@@ -58,11 +58,11 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 
 バックグラウンドアクティベーションモードでプッシュアクションボタンをクリックすると、通知が閉じられるだけで、アプリは開きません。ユーザーが次回アプリを開くと、これらのアクションのボタンクリック分析がサーバーにフラッシュされます。
 
-独自のカスタム通知カテゴリを作成する場合は、\[アクションボタンカスタマイズ][37]を参照してください。
+独自の通知カテゴリを作成する場合は、[アクションボタンカスタマイズ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization)を参照してください。
 
-## ステップ2:インタラクティブなプッシュ処理を有効にする
+## ステップ 2:インタラクティブなプッシュ処理を有効にする
 
-`UNNotification`フレームワークを使用し、Braze[delegates][39]を実装した場合、このメソッドはすでに統合されている必要があります。 
+`UNNotification` フレームワークを使用し、Braze[デリゲートを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling)実装している場合、このメソッドはすでに統合されているはずである。 
 
 クリック分析や URL ルーティングを含むプッシュアクションボタンの処理を有効にするには、アプリの `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` デリゲートメソッドに次のコードを追加します。
 
@@ -76,7 +76,7 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
@@ -99,7 +99,7 @@ UnNotification フレームワークを使用していない場合は、プッ�
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
@@ -116,20 +116,12 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 
 ## プッシュカテゴリのカスタマイズ
 
-一連の\[デフォルトプッシュカテゴリ][2]]を提供することに加えて、Brazeはカスタム通知カテゴリとアクションsをサポートします。アプリケーションにカテゴリーを登録すると、Braze ダッシュボードを使用して通知カテゴリーをユーザーに送信できます。
+Brazeは、[デフォルトのプッシュ通知カテゴリーを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/)設定するだけでなく、カスタムの通知カテゴリーやアクションにも対応している。アプリケーションにカテゴリーを登録すると、Braze ダッシュボードを使用して通知カテゴリーをユーザーに送信できます。
 
-`UserNotifications` フレームワークを使用していない場合は、[alternative categories][31] ドキュメントを参照してください。
+`UserNotifications` フレームワークを使用していない場合は、[代替カテゴリーの](https://developer.apple.com/documentation/usernotifications/unnotificationcategory)ドキュメントを参照のこと。
 
 その後、これらのカテゴリーをダッシュボードからプッシュ通知に割り当てて、デザインのアクションボタン構成をトリガーできます。デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-![2 つのプッシュアクションボタンs " unlike" および" like" を表示するプッシュメッセージ。][17]
+!["unlike "と "like "の2つのプッシュアクションボタンを表示するプッシュメッセージ。]({% image_buster /assets/img_archive/push_example_category.png %})
 
 
-[13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "カテゴリDocs"
-[17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/

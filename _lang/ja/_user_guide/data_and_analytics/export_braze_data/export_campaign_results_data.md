@@ -73,19 +73,19 @@ tool:
 
 ## キャンペーン受信者
 
-キャンペーンのすべての受信者のユーザーデータを CSV ファイルとしてエクスポートできます。これを行うには、**キャンペーン詳細**セクションの**ユーザーデータボタンを**選択する。
+キャンペーンのすべての受信者のユーザーデータを CSV ファイルとしてエクスポートできます。そのためには、**Campaign Details**セクションの**User Data**ボタンを選択します。
 
 {% alert note %}
-権限がないと、\[**ユーザーデータ**] ボタンは表示されません。ユーザーデータをエクスポートするには、そのワークスペースの**ユーザーデータのエクスポート**[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions)が必要です。
+権限がないと、**ユーザーデータ** ボタンは表示されません。ユーザーデータをエクスポートするには、そのワークスペースの**ユーザーデータのエクスポート**[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions)が必要です。
 {% endalert %}
 
-![キャンペーン詳細ページのユーザーデータドロップダウン][6]
+![キャンペーン詳細ページの「ユーザデータ」ドロップダウン][6]
 
 CSV 出力には、キャンペーンの各受信者のユーザープロファイルデータが含まれます。Braze はバックグラウンドでレポートを生成し、現在ログインしているユーザーにメールで通知します。
 
-Amazon S3 credentials][26] ] をBrazeにリンクしている場合、CSVはS3バケットにもアップロードされる。それ以外の場合、メールのリンクは数時間で期限切れになります。
+[Amazon S3 認証情報 s][26] を Braze にリンクしている場合、CSV も S3 バケットにアップロードされます。それ以外の場合、メールのリンクは数時間で期限切れになります。
 
-エクスポートされたファイルには、\[セグメントのユーザーデータをエクスポートする]][40] 時に含まれるのと同じユーザーデータフィールドが含まれる。\[すべての受信者データをエクスポート] を選択すると、エクスポートされたファイルには、それらのデータフィールドに加えて各ユーザーの以下のデータも含まれます。
+エクスポートされたファイルには、[Segment][40] のユーザーデータをエクスポート するときに含まれるのと同じユーザーデータ フィールドs が含まれます。すべての受信者データをエクスポートz を選択すると、エクスポートされたファイルには、それらのデータフィールドに加えて各ユーザーの以下のデータも含まれます。
 
 - 受信したキャンペーンバリエーション名
 - 受信したキャンペーンバリエーションの API ID
@@ -96,5 +96,5 @@ CSV および API のエクスポートに関するヘルプについては、�
 {% endalert %}
 
 [6]: {% image_buster /assets/img/campaign_export_example.png %}
-partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/ {{site.baseurl}}/
+[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
 [40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data

@@ -26,21 +26,21 @@ Braze コードを難読化するクライアントアプリでは、Braze が�
 
 ## ロギング
 
-デフォルトでは、Braze Android SDKのログレベルは`INFO` に設定されている。[これらのログを抑止](#suppressing-logs)したり、`VERBOSE` 、`DEBUG` 、`WARN` のような[別のログレベルを設定する](#enabling-logs)ことができる[。](#enabling-logs)
+デフォルトでは、Braze Android SDK のログレベルは `INFO` に設定されています。[これらのログを抑制](#suppressing-logs)したり、[別のログレベルを設定](#enabling-logs) (`VERBOSE`、`DEBUG`、または `WARN` など) したりすることができます。
 
-### ログを有効にする {#enabling-logs}
+### ログの有効化 {#enabling-logs}
 
-アプリ内の問題のトラブルシューティングや、Brazeサポートへの対応時間を短縮するために、SDKの冗長ログを有効にする。Brazeサポートに冗長ログを送信する場合は、アプリケーションを起動したらすぐにログを開始し、問題が発生してからずっと後にログを終了するようにする。
+アプリの問題のトラブルシューティングや、Braze サポートでの所要時間の短縮に役立つように、SDK の詳細ログを有効にします。Brazeサポートに冗長ログを送信する場合は、アプリケーションを起動したらすぐにログを開始し、問題が発生してからずっと後にログを終了するようにする。
 
-冗長なログは開発環境のみを対象としているため、アプリをリリースする前に無効にしておきたい。
+詳細なログは開発環境のみを対象としているため、アプリをリリースする前に無効にする必要があります。
 
 {% alert important %}
-ログが可能な限り完全であることを保証するために、`Application.onCreate()` 、他の呼び出しの前に冗長ログを有効にする。
+`Application.onCreate()` で他の呼び出しを行う前に詳細ログを有効にして、ログが可能な限り完全になるようにします。
 {% endalert %}
 
 {% tabs %}
 {% tab アプリケーション %}
-アプリで直接ログを有効にするには、アプリケーションの`onCreate()` メソッドに、他のメソッドの前に以下を追加する。
+アプリで直接ログを有効にするには、他のメソッドの前に、以下をアプリケーションの `onCreate()` メソッドに追加します。
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -56,9 +56,9 @@ BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 {% endsubtab %}
 {% endsubtabs %}
 
-`MIN_LOG_LEVEL` を、最小ログレベルとして設定したいログレベルの**定数に**置き換える。設定した`MIN_LOG_LEVEL` のレベル`>=` のログはすべて、Androidのデフォルトの [`Log`](https://developer.android.com/reference/android/util/Log)メソッドに転送される。`<` 設定した`MIN_LOG_LEVEL` のログはすべて破棄される。
+`MIN_LOG_LEVEL` を、最小ログレベルとして設定するログレベルの**定数**に置き換えます。設定した`MIN_LOG_LEVEL` のレベル`>=` のログはすべて、Androidのデフォルトの [`Log`](https://developer.android.com/reference/android/util/Log)メソッドに転送される。設定した `MIN_LOG_LEVEL` 未満の (`<`) すべてのログは破棄されます。
 
-| コンスタント    | 価値          | 説明                                                               |
+| コンスタント    | 値          | 説明                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
 | `VERBOSE`   | 2              | デバッグや開発のために最も詳細なメッセージをログに記録する。            |
 | `DEBUG`     | 3              | デバッグや開発のために、説明的なメッセージをログに記録する。                  |
@@ -66,9 +66,9 @@ BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 | `WARN`      | 5              | 潜在的に有害な状況を特定するための警告メッセージをログに記録する。     |
 | `ERROR`     | 6              | アプリケーションの失敗や深刻な問題を示すエラーメッセージを記録する。 |
 | `ASSERT`    | 7              | 開発中に条件が偽の場合にアサーションメッセージをログに記録する。     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-例えば、以下のコードは、ログレベル`2` 、`3` 、`4` 、`5` 、`6` 、`7` を`Log` メソッドに転送する。
+たとえば、以下のコードはログレベル`2`、`3`、`4`、`5`、`6`、`7`を `Log` メソッドに転送します。
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -92,9 +92,9 @@ BrazeLogger.logLevel = Log.VERBOSE
 <integer name="com_braze_logger_initial_log_level">MIN_LOG_LEVEL</integer>
 ```
 
-`MIN_LOG_LEVEL` を、最小ログレベルとして設定したいログレベルの**値に**置き換える。設定した`MIN_LOG_LEVEL` のレベル`>=` のログはすべて、Androidのデフォルトの [`Log`](https://developer.android.com/reference/android/util/Log)メソッドに転送される。`<` 設定した`MIN_LOG_LEVEL` のログはすべて破棄される。
+`MIN_LOG_LEVEL` を、最小ログレベルとして設定するログレベルの**値**に置き換えます。設定した`MIN_LOG_LEVEL` のレベル`>=` のログはすべて、Androidのデフォルトの [`Log`](https://developer.android.com/reference/android/util/Log)メソッドに転送される。設定した `MIN_LOG_LEVEL` 未満の (`<`) すべてのログは破棄されます。
 
-| コンスタント    | 価値          | 説明                                                               |
+| コンスタント    | 値          | 説明                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
 | `VERBOSE`   | 2              | デバッグや開発のために最も詳細なメッセージをログに記録する。            |
 | `DEBUG`     | 3              | デバッグや開発のために、説明的なメッセージをログに記録する。                  |
@@ -102,9 +102,9 @@ BrazeLogger.logLevel = Log.VERBOSE
 | `WARN`      | 5              | 潜在的に有害な状況を特定するための警告メッセージをログに記録する。     |
 | `ERROR`     | 6              | アプリケーションの失敗や深刻な問題を示すエラーメッセージを記録する。 |
 | `ASSERT`    | 7              | 開発中に条件が偽の場合にアサーションメッセージをログに記録する。     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-例えば、以下のコードは、ログレベル`2` 、`3` 、`4` 、`5` 、`6` 、`7` を`Log` メソッドに転送する。
+たとえば、以下のコードはログレベル`2`、`3`、`4`、`5`、`6`、`7`を `Log` メソッドに転送します。
 
 ```xml
 <integer name="com_braze_logger_initial_log_level">2</integer>
@@ -114,15 +114,15 @@ BrazeLogger.logLevel = Log.VERBOSE
 
 ### 冗長ログを検証する
 
-ログが`VERBOSE` に設定されていることを確認するには、ログのどこかに`V/Braze` があるかどうかをチェックする。もしそうなら、冗長ログは正常に有効になっている。以下はその例です。
+ログが `VERBOSE` に設定されていることを確認するには、`V/Braze` がログのどこかで発生するかどうかを確認します。もしそうなら、冗長ログは正常に有効になっている。以下に例を示します。
 
 ```
 2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started
 ```
 
-### ログを抑制する
+### ログの抑制
 
-Braze Android SDK のデフォルトのログレベルは `INFO` です。Braze Android SDKのすべてのログを抑制するには、アプリケーションの`onCreate()` メソッドで、他のメソッドの_前に_ `BrazeLogger.SUPPRESS` を呼び出す。
+Braze Android SDK のデフォルトのログレベルは `INFO` です。Braze Android SDK のすべてのログを抑制するには、他のメソッドの_前_にアプリケーションの `onCreate()` メソッドで `BrazeLogger.SUPPRESS` を呼び出します。
 
 {% tabs local %}
 {% tab JAVA %}

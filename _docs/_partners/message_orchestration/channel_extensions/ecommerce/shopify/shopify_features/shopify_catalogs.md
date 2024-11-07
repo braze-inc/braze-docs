@@ -54,10 +54,6 @@ Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/personaliza
 
 #### Supported Shopify catalog data
 
-{% alert note %}
-To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog.
-{% endalert %}
-
 - `id`
 - `store_name`
 - `shopify_product_id`
@@ -84,6 +80,16 @@ To access and use `product_handle` and `product_url`, disconnect and reconnect y
 Modifying the Shopify catalog in any way may unintentionally interfere with real-time product syncs. Do not make any edits to the Shopify catalog, as these have the potential to be overridden by Shopify. Instead, make the necessary product updates in your Shopify instance.<br><br>To delete your Shopify catalog, go to the Shopify page and deactivate sync. Do not delete the Shopify catalog directly on the catalogs page. 
 {% endalert %}
 
+##### Using `product_handle` or `product_url`
+
+To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog by doing the following.
+
+1. Go to the Shopify integration page > **Edit configuration**.<br><br>![Shopify integration page.]({% image_buster /assets/img/Shopify/edit_config.png %})
+
+{: start="2"}
+2. In the **Sync catalog** step, toggle off the catalog and then update the settings.
+3. Toggle on the catalog and update the settings.<br><br>![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+
 ## Back-in-stock and price-drop use cases 
 
 To set up back-in-stock notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
@@ -109,6 +115,6 @@ If your Shopify product sync runs into an error, it could be a result of the fol
 | Server Error | This occurs if there is a server error on Shopify’s side when we attempt to sync your products. | [Deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
 | Duplicate SKU | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to make sure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. After this is corrected, [deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
 | Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the sync or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created<br><br> After using either of the solutions, the sync must be deactivated and then re-synced. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 [1]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}

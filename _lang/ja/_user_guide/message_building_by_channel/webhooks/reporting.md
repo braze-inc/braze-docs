@@ -2,7 +2,7 @@
 nav_title: レポート
 article_title: ウェブフック・レポート
 page_order: 10
-description: "この参考記事では、Brazeダッシュボードで提供されるさまざまなWebhookレポートメトリクスと分析オプションの概要を説明する。"
+description: "この記事では、Braze ダッシュボードで提供されるさまざまな Webhook レポート指標と分析オプションの概要について説明します。"
 channel:
   - webhooks
 tool:

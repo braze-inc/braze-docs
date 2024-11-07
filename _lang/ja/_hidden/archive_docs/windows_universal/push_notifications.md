@@ -11,24 +11,24 @@ hidden: true
 # プッシュ通知の統合
 {% multi_lang_include archive/windows_deprecation.md %}
 
-![ユニバーサル・プッシュの例である。][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Windows Universal プッシュ通知の例。][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 プッシュ通知は、重要なアップデートが発生したときにユーザーの画面に表示されるアプリ外のアラートです。プッシュ通知は、時間的制約があって関連性の高いコンテンツをユーザーに提供したり、ユーザーをアプリに再エンゲージしたりするための効果的な方法です。
 
 その他のベストプラクティスについては、\[ドキュメント][9] ] を参照のこと。
 
-## ステップ 1:プッシュ用にアプリケーションを設定する
+## ステップ 1:プッシュ通知用にアプリケーションを設定する
 
-`Package.appxmanifest` 、以下の設定がされていることを確認する：
+`Package.appxmanifest` ファイルで、次の設定が構成されていることを確認します。
 
 **アプリケーション**タブで、`Toast Capable` が`YES` に設定されていることを確認する。
 
 ## ステップ2:Brazeダッシュボードを設定する
 
-1. [SIDとクライアントシークレットを検索する][4]
+1. [SID とクライアントシークレットを検索する][4]
 2. Brazeダッシュボードの**設定**ページで、SIDとクライアントシークレットを設定に追加する。<br>![][6]
 
-## ステップ3:バックグラウンド・オープン・ロギングの更新
+## ステップ3:バックグラウンド開封ロギングの更新
 
 `OnLaunched` メソッドで、`OpenSession` をコールした後、以下のコード・スニペットを追加する。
 
@@ -47,7 +47,7 @@ Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);
 - `Appboy.SharedInstance.PushManager.PushReceivedEvent += YourPushReceivedEventHandler;`
 - `Appboy.SharedInstance.PushManager.ToastActivatedEvent += YourToastActivatedEventHandler;`
 
-イベント・ハンドラにはシグネチャが必要だ：
+イベントハンドラには、署名が必要です。
 
 - `void YourPushReceivedEventHandler(PushNotificationChannel sender, AppboyPushNotificationReceivedEventArgs args);`
 - `void YourToastActivatedEventHandler(ToastNotification sender, AppboyToastActivatedEventArgs args);`
@@ -58,23 +58,23 @@ Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);
 
 ディープリンクは、アプリケーションの外部からユーザーをアプリケーションの特定の画面やページに直接ナビゲートするために使用される。通常これは、オペレーティング・システムにURLスキーム（例えば、myapp://mypage ）を登録し、そのスキームを処理するアプリケーションを登録することによって行われる。OSがその形式のURLを開くように要求されると、アプリケーションに制御が移る。
 
-WNSのディープリンクサポートは、ユーザーをどこに送るかについてのデータでアプリケーションを起動するので、これとは異なる。WNSプッシュが作成されると、プッシュがクリックされアプリケーションが開かれたときに、アプリケーションの`OnLaunched` に渡される起動文字列を含めることができる。私たちはすでに、キャンペーン・トラッキングを行うためにこのローンチ文字列を使用しており、アプリが起動したときに解析され、ユーザーをナビゲートするために使用できる独自のデータを追加する能力をユーザーに与えている。
+WNSのディープリンクサポートは、ユーザーをどこに送るかについてのデータでアプリケーションを起動するので、これとは異なる。WNS プッシュが作成されると、プッシュがクリックされアプリケーションが開かれたときに、アプリケーションの `OnLaunched` に渡される起動文字列を含めることができます。私たちはすでに、キャンペーン・トラッキングを行うためにこのローンチ文字列を使用しており、アプリが起動したときに解析され、ユーザーをナビゲートするために使用できる独自のデータを追加する能力をユーザーに与えている。
 
-ダッシュボードやREST APIで追加の打ち上げ文字列を指定すると、作成する打ち上げ文字列の末尾、キー "abextras="の後に追加される。つまり、ローンチ文字列の例は、`ab_cn_id=_trackingid_abextras=page=settings` のようになる。この場合、ローンチ文字列の追加パラメータに`page=settings` を指定することで、それを解析してユーザーを設定ページにナビゲートすることができる。
+ダッシュボードや REST API で追加の起動文字列を指定すると、作成した起動文字列の末尾、キー「abextras=」の後に追加されます。そのため、起動文字列の例は `ab_cn_id=_trackingid_abextras=page=settings` のようになります。この例では、追加の起動文字列パラメータで `page=settings` を指定しているため、これを解析してユーザーを設定ページに移動できます。
 
 ### パート 2:ダッシュボードを使ったディープリンク
 
-プッシュ通知設定の「追加起動文字列設定」フィールドで、起動文字列に追加する文字列を指定する。
+プッシュ通知設定の \[追加の起動文字列設定] フィールドで、起動文字列に追加する文字列を指定します。
 
 ![][15]
 
 ### パート3：REST APIによるディープリンク
 
-Brazeは、REST APIを通じてディープリンクを送信することもできる。\[Windowsユニバーサルプッシュオブジェクト][13] は、オプションの`extra_launch_string` パラメータを受け付ける。
+Braze では、REST API 経由でディープリンクを送信することもできます。\[Windows Universal プッシュ通知オブジェクト][13] は、オプションの `extra_launch_string` パラメータを受け入れます。
 
 [4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
 [6]: {% image_buster /assets/img_archive/windows_sid.png %} 「Windows SIDダッシュボード
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
 [13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} 「ディープリンクのクリックアクション
+[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %}「ディープリンククリックアクション」

@@ -10,64 +10,64 @@ description: "このリファレンス記事では、Unityプラットフォー�
 
 ---
 
-# アンドロイド・プッシュ通知の統合
+# Android プッシュ通知の統合
 
 > このリファレンス記事では、Unityプラットフォーム用のAndroidプッシュ通知統合について説明する。
 
-これらの手順は、[Firebase Cloud Messaging (FCM)][9] とプッシュを統合するためのものである。
+これらの手順は、[Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/) とプッシュを統合するためのものである。
 
-ADM統合の手順については、\[Unity ADM][64] ドキュメント]を参照のこと。
+ADM の統合手順については、[Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/)のドキュメントを参照してください。
 
 ## ステップ 1:Firebaseを有効にする
 
-始めるには、[Firebase Unityのセットアップ・ドキュメントに][11]従う。
+開始するには、[Firebase Unity の設定ドキュメント](https://firebase.google.com/docs/unity/setup)に従ってください。
 
 {% alert note %}
-Firebase Unity SDK を統合すると、`AndroidManifest.xml` がオーバーライドされることがある。その場合は、必ず元に戻すこと。
+Firebase Unity SDK を統合すると、`AndroidManifest.xml` がオーバーライドされる場合があります。その場合は、必ず元に戻すこと。
 {% endalert %}
 
 ## ステップ2:Firebaseの認証情報を設定する
 
-Firebaseサーバーキーと送信者IDをBrazeダッシュボードに入力する必要がある。これを行うには、\[Firebase Developers Console][58] ] にログインし、Firebase プロジェクトを選択する。次に、**「設定**」で**クラウド・メッセージングを**選択し、サーバー・キーと送信者IDをコピーする：<br>![][59]
+Firebase サーバーキーと送信者 ID を Braze ダッシュボードに入力する必要があります。これを行うには、[Firebase Developers Console](https://console.firebase.google.com/)にログインし、Firebase プロジェクトを選択します。次に、[**設定**] で「**クラウドメッセージング**」を選択し、サーバーキーと送信者 ID をコピーします。<br>![]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
-Brazeの**アプリ設定**ページで、**設定の管理から**Androidアプリを選択する。次に、Firebase**Cloud Messaging Server Key**フィールドに Firebase Server Key を、**Firebase Cloud Messaging Sender**ID フィールドに Firebase Sender ID を入力する。
+Braze の**アプリ設定**ページの [**設定の管理**] で Android アプリを選択します。次に、[**Firebase Cloud Messaging サーバーキー**] フィールドに「Firebase サーバーキー」を入力し、「**Firebase Cloud メッセージング送信者**」ID フィールドに「Firebase 送信者 ID」を入力します。
 
-![][15]
+![]({% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey")
 
-## ステップ 3:自動プッシュ統合を導入する
+## ステップ 3: 自動プッシュ統合を導入する
 
-Braze SDKは、Firebase Cloud Messaging Serversへのプッシュ登録を自動的に処理し、デバイスがプッシュ通知を受け取れるようにすることができる。
+Braze SDK は、Firebase Cloud メッセージングサーバーへのプッシュ登録を自動的に処理して、デバイスがプッシュ通知を受信できるようにすることができます。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディタでは、"Automate Unity Android Integration"、"Push Notification Firebase Push"、"Push Configuration Handle Push Deeplinks Automatically"、"Push Configuration Push Notification HTML Rendering Enabled"、"Set PushDeleted/Opened/Received Listeners "を設定する。Firebase Sender ID"、"Small/Large Icon Drawable"、"Default Notification Accent Color "フィールドも用意されている。][62]
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity Android 統合を自動化する」、「プッシュ通知 Firebase プッシュ」、「プッシュ構成によりプッシュディープリンクを自動的に処理する」、「プッシュ構成プッシュ通知 HTML レンダリング有効化」、「プッシュDeleted/Opened/Received リスナーを設定」が設定されています。フィールド"Firebase Sender ID"、"Small/Large Icon Drawable"、"Default Notification Accent Color"も提供されます。]({% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %}"Android Push Settings")
 
-- **Firebaseクラウドメッセージングの自動登録を有効にする**<br> デバイスのFCMプッシュトークンを自動的に取得して送信するようBraze SDKに指示する。 
-- **Firebaseクラウドメッセージング送信者ID**<br> Firebaseコンソールからの送信者ID。
-- **ディープリンクを自動的にプッシュする**<br> プッシュ通知がクリックされたときに、SDKがディープリンクを開くかアプリを開くかを処理するかどうか。
-- **小さな通知アイコン**<br>Drawableは、プッシュ通知を受け取るたびに小さなアイコンとして表示されなければならない。アイコンが提供されていない場合、通知はアプリケーションアイコンをスモールアイコンとして使用する。
+- **Firebase Cloud メッセージングの自動登録が有効に**<br> デバイスの FCM プッシュトークンを自動的に取得して送信するように Braze SDK に指示します。 
+- **Firebase クラウドメッセージング送信者 ID**<br> Firebase コンソールの送信者 ID。
+- **プッシュディープリンクを自動的に処理する**<br> プッシュ通知がクリックされたときに、ディープリンクを開くかアプリを開くかを SDK で処理するかどうか。
+- **描画可能な小さな通知アイコン**<br>Drawable は、プッシュ通知を受け取るたびに小さなアイコンとして表示されなければなりません。アイコンが提供されていない場合、通知はアプリケーションアイコンをスモールアイコンとして使用する。
 
 ## ステップ 4:プッシュリスナーを設定する
 
 プッシュ通知のペイロードをUnityに渡したり、ユーザーがプッシュ通知を受信したときに追加の処理を行いたい場合、Brazeはプッシュ通知リスナーを設定するオプションを提供する。
 
-Brazeの**アプリ設定**ページで、**設定の管理から**Androidアプリを選択する。次に、Firebase Server Keyを**Push Notification Settings**フィールドに、Firebase Sender IDを**Push Notification Settings**IDフィールドに入力する。
+Braze の**アプリ設定**ページの [**設定の管理**] で Android アプリを選択します。次に、Firebase サーバーキーを [**プッシュ通知設定**] フィールドに、Firebase 送信者 ID を [**プッシュ通知設定**] ID フィールドに入力します。
 
 #### プッシュ受信リスナー
 
-プッシュ受信リスナーは、ユーザーがプッシュ通知を受信したときに起動される。Unityにプッシュ・ペイロードを送信するには、ゲーム・オブジェクトの名前を設定し、**Set Push Received Listenerの**下にあるreceived listenerコールバック・メソッドをプッシュする。
+プッシュ受信リスナーは、ユーザーがプッシュ通知を受信したときに起動される。Unity にプッシュペイロードを送信するには、ゲームオブジェクトの名前を設定し、[**プッシュ受信リスナーの設定**] の下にある受信リスナーのコールバックメソッドをプッシュします。
 
-#### プッシュオープンリスナー
+#### プッシュ開封済みリスナー
 
-ユーザーがプッシュ通知をクリックしてアプリを起動すると、プッシュ・オープン・リスナーが起動する。Unityにプッシュペイロードを送信するには、ゲームオブジェクトの名前とプッシュオープンリスナーのコールバックメソッドを**Set Push Opened Listenerで**設定する。
+ユーザーがプッシュ通知をクリックしてアプリを起動すると、プッシュ開封済みリスナーが起動します。Unity にプッシュペイロードを送信するには、ゲームオブジェクトの名前を設定し、[**プッシュ開封済みリスナーを設定する**] の下にある開封済みリスナーのコールバックメソッドをプッシュします。
 
-#### プッシュ削除リスナー（Androidのみ）
+#### プッシュ削除リスナー (Android のみ)
 
-削除されたプッシュ・リスナーは、ユーザーがプッシュ通知をスワイプしたり、削除したりしたときに発行される。Unityにプッシュペイロードを送信するには、ゲームオブジェクトの名前とプッシュ削除リスナーのコールバックメソッドを**Set Push Deleted Listenerで**設定する。
+プッシュ削除リスナーは、ユーザーがプッシュ通知をスワイプして削除したり、無視したときに起動されます。Unity にプッシュペイロードを送信するには、ゲームオブジェクトの名前を設定し、[**プッシュ削除済みリスナーを設定する**] の下にある削除済みリスナーのコールバックメソッドをプッシュします。
 
 #### プッシュ・リスナーの実装例
 
-以下の例では、`PushNotificationReceivedCallback` 、`PushNotificationOpenedCallback` 、`PushNotificationDeletedCallback` のコールバック・メソッド名を使って、`BrazeCallback` ゲーム・オブジェクトを実装している。
+次の例では、コールバックメソッド名 `PushNotificationReceivedCallback`、`PushNotificationOpenedCallback`、および `PushNotificationDeletedCallback` をそれぞれ使用して、`BrazeCallback` ゲームオブジェクトを実装します。
 
-![この実装例の図は、前のセクションで述べたBrazeのコンフィギュレーションオプションと、C#のコードスニペットを示している。][63]
+![この実装例のグラフィックは、前のセクションで説明したブレーズ設定オプションと、C# コードスニペットを示しています。]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %}"Android Full Listener Example")
 
 ```csharp
 public class MainMenu : MonoBehaviour {
@@ -105,24 +105,14 @@ public class MainMenu : MonoBehaviour {
 
 ### 実施例
 
-[Braze Unity SDK][13]リポジトリのサンプルプロジェクトには、FCMを含む完全な動作サンプルアプリが含まれている。
+[Braze Unity SDK](https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples)リポジトリのサンプルプロジェクトには、FCMを含む完全な動作サンプルアプリが含まれている。
 
 ## アプリ内リソースへのディープリンク
 
-Brazeはデフォルトで標準的なディープリンク（ウェブサイトのURL、AndroidのURIなど）を扱うことができるが、カスタムディープリンクを作成するには、追加のマニフェスト設定が必要である。
+Braze はデフォルトで標準的なディープリンク (Web サイトのURL、Android の URI など) を処理できますが、カスタムディープリンクを作成するには、追加のマニフェスト設定が必要です。
 
-設定ガイダンスについては、\[アプリ内リソースへのディープリンク][26] を参照のこと。
+セットアップガイダンスについては、[In-App Resourcesへのディープリンク](https://developer.android.com/training/app-links/deep-linking)をご覧ください。
 
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
-[9]: https://firebase.google.com/docs/cloud-messaging/
-[11]: https://firebase.google.com/docs/unity/setup
-[12]: https://firebase.google.com/docs/android/setup
-[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples
-[15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[26]: https://developer.android.com/training/app-links/deep-linking
-[58]: https://console.firebase.google.com/
-[59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/advanced_use_cases
-[62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} 「アンドロイド・プッシュ設定
-[63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} 「アンドロイド・フルリスナーの例
-[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/
+## ブレーズプッシュ通知アイコンの追加
+
+プロジェクトにプッシュアイコンを追加するには、アイコンイメージファイルを含むAndroid アーカイブ(AAR) プラグインまたはAndroid ライブラリを作成します。手順と情報については、Unityのドキュメントを参照してください。[AndroidライブラリプロジェクトとAndroidアーカイブプラグイン](https://docs.unity3d.com/Manual/AndroidAARPlugins.html)。

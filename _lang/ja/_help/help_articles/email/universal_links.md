@@ -13,7 +13,7 @@ AppleユニバーサルリンクとAndroidアプリリンクは、Webコンテ�
 
 ## ユニバーサルリンクとアプリリンクの仕組み
 
-ユニバーサルリンク（iOS）とアプリンク（Android）は、ウェブページとアプリ内のコンテンツの両方を指す標準的なWebリンク（`http://mydomain.com`）です。
+ユニバーサルリンク (iOS) とアプリリンク (Android) は、Web ページとアプリ内のコンテンツの両方を指す標準的なウェブリンク (`http://mydomain.com`) です。
 
 ユニバーサルリンクまたはアプリリンクが開かれると、オペレーティングシステムはインストールされているアプリがそのドメインに登録されているかどうかを確認します。アプリが見つかった場合、Webページを読み込むことなくすぐに起動されます。アプリが見つからない場合、Web URLはユーザーのデフォルトのWebブラウザで読み込まれます。これもそれぞれApp StoreまたはGoogle Play Storeにリダイレクトするように設定できます。
 
@@ -24,7 +24,7 @@ AppleユニバーサルリンクとAndroidアプリリンクは、Webコンテ�
 |                        | ユニバーサルリンクとアプリリンク                                  | ディープリンク                   |
 | ---------------------- | -------------------------------------------------------------- | ---------------------------- |
 | プラットフォーム互換性 | iOS（バージョン9以降）およびAndroid（バージョン6.0以降）  | さまざまなモバイルOSで使用されます    |
-| 目的                | シームレスにWebとアプリのコンテンツをiOSおよびAndroidデバイスでリンクする | 特定のアプリコンテンツへのリンク |
+| 目的                | iOS および Android デバイスの Web コンテンツとアプリコンテンツをシームレスにリンクする | 特定のアプリコンテンツへのリンク |
 | 機能               | コンテキストに基づいてWebページまたはアプリのコンテンツに誘導します           | 特定のアプリ画面を開きます   |
 | アプリインストール       | アプリがインストールされている場合はアプリを開き、それ以外の場合はWebコンテンツを開きます | アプリのインストールが必要です |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -33,10 +33,10 @@ AppleユニバーサルリンクとAndroidアプリリンクは、Webコンテ�
 
 ユニバーサルリンクとアプリリンクは、メールキャンペーンで最も一般的に使用されます。メールはデスクトップとモバイルの両方のデバイスから開いてクリックすることができます。
 
-いくつかのチャンネルはこれらのリンクではうまく機能しません。例えば、プッシュ通知、アプリ内メッセージ、およびコンテンツカードは、スキームベースのディープリンクを使用する必要があります（`mydomain://`）。
+いくつかのチャンネルはこれらのリンクではうまく機能しません。たとえば、プッシュ通知、アプリ内メッセージ、およびコンテンツカードでは、スキームベースのディープリンク (`mydomain://`) を使用する必要があります。
 
 {% alert note %}
-Androidアプリリンクには、他のWeb URLとは別にドメインからのリンクを処理するためのカスタム`IBrazeDeeplinkHandler`が必要です。他のチャネルではメールではなく、ディープリンクを使用し、リンクの方法を統一する方が簡単かもしれません。
+Android アプリリンクでは、他の Web URL とは別にドメインからのリンクを処理するために、カスタム `IBrazeDeeplinkHandler` ロジックが必要です。他のチャネルではメールではなく、ディープリンクを使用し、リンクの方法を統一する方が簡単かもしれません。
 {% endalert %}
 
 ## 前提条件
@@ -50,7 +50,7 @@ Androidアプリリンクには、他のWeb URLとは別にドメインからの
 
 アプリがユニバーサルリンクまたはアプリリンクをサポートするためには、iOSとAndroidの両方でリンクドメインに特別な権限ファイルをホストする必要があります。このファイルには、どのアプリがそのドメインからのリンクを開封できるか、そしてiOSの場合、これらのアプリが開封できるパスが定義されています。
 
-- **iOS: **Apple アプリ Site Association (AASA) file
+- **iOS: **Apple App Site Association(AASA)ファイル
 - **Android :**デジタル資産リンクファイル
 
 この権限ファイルに加えて、アプリ内で設定されているアプリが開封できるリンクドメインのハードコーディングされた定義があります。
@@ -66,32 +66,32 @@ Androidアプリリンクには、他のWeb URLとは別にドメインからの
 
 これらの手順は、Appleの開発者ドキュメントから適応されています。詳細については、[アプリやウェブサイトがあなたのコンテンツにリンクすることを許可する](https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content?language=objc)を参照してください。
 
-### ステップ 1:アプリの権利を構成する
+### ステップ 1: アプリ資格の設定
 
 {% alert note %}
-[Xcode 13以降](https://developer.apple.com/help/account/reference/provisioning-with-managed-capabilities/)、Xcodeは自動的に権利プロビジョニングを処理できます。おそらく[ステップ 1c](#step-1c)にスキップして、問題が発生した場合はこれらの指示に戻ることができます。
+[Xcode 13 以降](https://developer.apple.com/help/account/reference/provisioning-with-managed-capabilities/)では、Xcode は資格プロビジョニングを自動的に処理できます。おそらく[ステップ 1c](#step-1c)にスキップして、問題が発生した場合はこれらの指示に戻ることができます。
 {% endalert %}
 
-#### ステップ 1a: アプリを登録する {#step-1a}
+#### ステップ 1a: アプリ {#step-1a} の登録
 
 1. developer.apple.comを実行してログインしてください。
 2. **証明書、識別子、プロファイル**をクリックします。
 3. **識別子**をクリックします。
-4. 登録済みのアプリ識別子がまだない場合は、+をクリックして作成してください。
+4. アプリ識別子がまだ登録されていない場合は、+ をクリックして作成します。
    a. **名前**を入力してください。これはあなたが望むものなら何でもかまいません。
-   b. **バンドルID**を入力します。Xcodeプロジェクトの**一般**タブからバンドルIDを見つけることができます。
+   b. **バンドルID**を入力します。適切なビルドターゲットのXコードプロジェクトの**General**タブからバンドルIDを見つけることができます。
 
 #### ステップ 1b: アプリ識別子で関連ドメインをオンにする
 
-1. 既存または新しく作成したアプリ識別子で、**アプリサービス**セクションを見つけます。
-2. **関連ドメイン**を選択します。
+1. 既存または新しく作成したApp Identifier で、**App Services** セクションを見つけます。
+2. \[**関連ドメイン**] を選択します。
 3. \[**保存**] をクリックします。
 
 ![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
-#### ステップ 1c:Xcodeプロジェクトで関連ドメインをオンにする {#step-1c}
+#### ステップ1c: Xcodeプロジェクトで関連ドメインをオンにする {#step-1c}
 
-続行する前に、Xcodeプロジェクトで、アプリ識別子を登録したのと同じチームが選択されていることを確認してください。 
+続行する前に、Xcode プロジェクトで、アプリ識別子を登録した場所と同じチームが選択されていることを確認してください。 
 
 1. Xcode で、プロジェクトファイルの**Capabilities**タブに移動します。
 2. **関連ドメイン**をオンにします。
@@ -101,23 +101,23 @@ Androidアプリリンクには、他のWeb URLとは別にドメインからの
 「識別子 'your-app-id' を持つアプリIDは利用できません」というエラーが表示された場合。別の文字列を入力してください", 次のことを行ってください:
 
 1. 選択したチームが正しいことを確認してください。
-2. XcodeプロジェクトのバンドルID（[ステップ1a](#step-1a)）がアプリ識別子の登録に使用されたものと一致することを確認してください。
+2. Xcode プロジェクトのバンドル ID ([ステップ1a](#step-1a)) が、アプリ識別子の登録に使用されたものと一致していることを確認します。
 
-#### ステップ 1d:ドメインの権利を追加
+#### ステップ1d: ドメイン資格の追加
 
-ドメインセクションで、適切なドメインタグを追加します。`applinks:`それを接頭辞にする必要があります。この場合、`applinks:yourdomain.com`を追加したことがわかります。
+\[ドメイン] セクションで、適切なドメインタグを追加します。`applinks:` をプレフィックスとして使用する必要があります。この場合、`applinks:yourdomain.com`を追加したことがわかります。
 
 ![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
-#### ステップ 1e:ビルド時に権利ファイルが含まれていることを確認してください
+#### ステップ1e: ビルド時に権利ファイルが含まれていることを確認してください
 
-プロジェクトブラウザで、新しい権利ファイルが**ターゲットメンバーシップ**の下に選択されていることを確認してください。
+プロジェクトブラウザで、新しい資格ファイルが \[**ターゲットメンバーシップ**] で選択されていることを確認します。
 
 Xcodeはこれを自動的に処理するはずです。
 
 ### ステップ2:Web サイトをホストするようにAASAファイルを構成する
 
-iOSでネイティブアプリとWebサイトのドメインを関連付けるには、WebサイトにApple App Site Association (AASA)ファイルをホストする必要があります。このファイルは、iOSにドメイン所有権を確認するための安全な方法として機能します。iOS 9以前、開発者は検証なしに任意のURIスキームを登録してアプリを開封することができました。しかし、AASAを使用すると、このプロセスははるかに安全で信頼性が高くなります。
+iOSでネイティブアプリとWebサイトのドメインを関連付けるには、WebサイトにApple App Site Association (AASA)ファイルをホストする必要があります。このファイルは、iOS に対するドメイン所有権を安全に検証する手段となります。iOS 9より前では、開発者は検証なしで任意の URI スキームを登録してアプリを開くことができました。しかし、AASAを使用すると、このプロセスははるかに安全で信頼性が高くなります。
 
 AASAファイルには、アプリのリストと、ユニバーサルリンクとして含めるべきまたは除外するべきドメイン上のURLパスを含むJSONオブジェクトが含まれています。こちらはサンプルのAASAファイルです：
 
@@ -146,7 +146,7 @@ AASAファイルには、アプリのリストと、ユニバーサルリンク�
 
 ### ステップ 3:ドメインにAASAファイルをホストする
 
-AASAファイルの準備ができたら、`https://<<yourdomain>>/apple-app-site-association`または`https://<<yourdomain>>/.well-known/apple-app-site-association`のいずれかのドメインでホストできます。
+AASA ファイルの準備ができたら、ドメインで`https://<<yourdomain>>/apple-app-site-association` または`https://<<yourdomain>>/.well-known/apple-app-site-association` のいずれかでAASA ファイルをホストできます。
 
 `apple-app-site-association`ファイルをHTTPS Webサーバーにアップロードします。ファイルをサーバーのルートまたは`.well-known`サブディレクトリに配置できます。ファイル名に`.json`を追加しないでください。
 
@@ -162,17 +162,17 @@ AASAファイルをホスティングする際は、ファイルがこれらの�
 
 ### ステップ 4:ユニバーサルリンクを処理するためにアプリを準備する
 
-iOSデバイスでユーザーがユニバーサルリンクをタップすると、デバイスはアプリを起動し、[NSUserActivity](https://developer.apple.com/documentation/foundation/nsuseractivity)オブジェクトを送信します。そのアプリは、どのように起動されたかを判断するために、NSUserActivityオブジェクトを照会できます。
+iOSデバイスでユーザーがユニバーサルリンクをタップすると、デバイスはアプリを起動し、[NSUserActivity](https://developer.apple.com/documentation/foundation/nsuseractivity)オブジェクトを送信します。その後、アプリはNSUserActivity オブジェクトを照会して、起動方法を判断できます。
 
-ユニバーサルリンクをアプリでサポートするには、次の手順を実行します:
+アプリでユニバーサルリンクを使用するには、次のステップを実行します。
 
 1. お使いのアプリがサポートするドメインを指定する権利を追加します。
 2. アプリデリゲートを更新して、NSUserActivityオブジェクトを受け取ったときに適切に応答するようにします。
 
-Xcode で、**関連ドメイン** セクションを **機能** タブで開封し、アプリがサポートする各ドメインのエントリを `applinks:` で始めて追加します。例えば、`applinks:www.mywebsite.com`。
+Xコード では、**Capabilities** タブの**Associated Domains** セクションを開封し、`applinks:` の接頭辞を付けたアプリがサポートするドメインごとにエントリを追加します。たとえば `applinks:www.mywebsite.com` です。
 
 {% alert note %}
-Appleは、このリストを20から30のドメインに制限することを推奨しています。
+Apple は、このリストを20～30のドメインに制限することを推奨しています。
 {% endalert %}
 
 ### ステップ 5: ユニバーサルリンクをテストする
@@ -187,7 +187,7 @@ Appleは、このリストを20から30のドメインに制限することを�
 これらの手順は、Android開発者ドキュメントから適応されています。詳細については、[Androidアプリリンクの追加](https://developer.android.com/training/app-links#add-app-links)および[アプリコンテンツへのディープリンクの作成](https://developer.android.com/training/app-links/deep-linking)を参照してください。
 
 {% alert note %}
-Androidアプリリンクには、他のWeb URLとは別にドメインからのリンクを処理するためのカスタム`IBrazeDeeplinkHandler`が必要です。他のチャネルではメールではなく、ディープリンクを使用し、リンクの方法を統一する方が簡単かもしれません。
+Android アプリリンクでは、他の Web URL とは別にドメインからのリンクを処理するために、カスタム `IBrazeDeeplinkHandler` ロジックが必要です。他のチャネルではメールではなく、ディープリンクを使用し、リンクの方法を統一する方が簡単かもしれません。
 {% endalert %}
 
 ### ステップ 1:ディープリンクを作成
@@ -196,11 +196,11 @@ Androidアプリリンクには、他のWeb URLとは別にドメインからの
 
 ### ステップ2:アプリをWebサイトに関連付ける
 
-アプリをWebサイトに関連付ける必要があります。これは、デジタルアセットリンクファイルを作成することで実行できます。このファイルは JSON 形式である必要があり、Web サイトへのリンクを開封できる Android アプリに関する詳細が含まれています。それはあなたのWeb サイトの`.well-known`ディレクトリに配置する必要があります。
+アプリをWebサイトに関連付ける必要があります。そのために、デジタルアセットリンクファイルを作成します。このファイルは JSON 形式である必要があり、Web サイトへのリンクを開封できる Android アプリに関する詳細が含まれています。Web サイトの`.well-known` ディレクトリーに配置する必要があります。
 
 ### ステップ 3:アプリのマニフェストファイルを更新してください
 
-アプリケーション要素内にメタデータ要素を追加するには、`AndroidManifest.xml`ファイルに追加します。メタデータ要素には「asset_statements」の`android:name`属性と、Web サイトのURLを含む文字列配列を持つリソースファイルを指す`android:resource`属性が必要です。
+`AndroidManifest.xml` ファイルで、アプリライケーション要素内にメタデータ要素を追加します。メタデータ要素には、「asset_statements」の `android:name` 属性と、Web サイトの URL が含まれる文字列配列を持つリソースファイルを指す `android:resource` 属性が必要です。
 
 ### ステップ 4:アプリをディープリンクに対応させる準備をする
 
@@ -208,7 +208,7 @@ Androidアプリでは、受信したディープリンクを処理する必要�
 
 ### ステップ 5: ディープリンクのテスト
 
-最後に、ディープリンクをテストできます。メッセージングアプリやメールを通じて自分にリンクを送信し、それをクリックします。すべてが正しく設定されていれば、アプリを開封するはずです。
+最後に、ディープリンクをテストできます。メッセージングアプリやメールを通じて自分にリンクを送信し、それをクリックします。すべてが正しく設定されている場合は、アプリが開かれます。
 
 {% endtab %}
 {% endtabs %}
@@ -216,14 +216,14 @@ Androidアプリでは、受信したディープリンクを処理する必要�
 ## ユニバーサルリンク、アプリリンク、クリックトラッキング
 
 {% alert note %}
-クリック{トラッキング}リンクは通常、{オンボーディング}の一環として{メール}に設定されます。これは顧客オンボーディング中に完了しなかった場合、アカウントマネージャーに連絡して助けを求めてください。
+クリックトラッキングリンクは通常、メールのオンボーディングの一部として設定されます。これがカスタマーオンボーディング中に完了しなかった場合は、アカウントマネージャーに連絡してサポートを受けてください。
 {% endalert %}
 
 私たちのメール送信パートナーであるSendGridとSparkPostは、クリックトラッキングドメインを使用してすべてのリンクをラップし、BrazeのメールでクリックトラッキングのためのURLパラメータを含めます。
 
 例えば、`https://www.example.com`のようなリンクは`https://links.email.example.com/uni/wf/click?upn=abcdef123456…`のようになります。
 
-メールリンクをクリックトラッキングでユニバーサルリンクまたはアプリリンクとして機能させるには、追加の設定が必要です。アプリが開封できるドメインとして、クリックトラッキングドメイン（`links.email.example.com`）を追加してください。さらに、クリックトラッキングドメインは、AASA (iOS) またはデジタルアセットリンク(Android) ファイルを処理する必要があります。これにより、クリックトラッキング付きのメールリンクがシームレスに機能するようになります。
+メールリンクをクリックトラッキングでユニバーサルリンクまたはアプリリンクとして機能させるには、追加の設定が必要です。クリックトラッキングドメイン (`links.email.example.com`) を、アプリを開くことが許可されているドメインとして必ず追加してください。また、クリックトラッキングドメインは、AASA (iOS) またはデジタルアセットリンク (Android) ファイルを提供する必要があります。これにより、クリックトラッキング付きのメールリンクがシームレスに機能するようになります。
 
 すべてのクリックトラッキングリンクをユニバーサルリンクまたはアプリリンクにしたくない場合は、メール送信パートナーに基づいて、どのリンクをユニバーサルリンクにするかを指定できます。詳細については、次のセクションを参照してください。
 
@@ -245,7 +245,7 @@ AMPメールの場合、この属性はdata-universal="true"である必要が�
 ```
 
 {:start="3"}
-3\.アプリがラップされたリンクを適切に処理するように設定されていることを確認してください。SendGrid の記事「[SendGrid のトラッキングリンクの解決](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-sendgrid-click-tracking-links)」を参照し、お使いのオペレーティングシステムに応じた手順に従ってください。この記事には、[iOS](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-links-in-ios)および[Android](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-links-in-android)のサンプルコードが含まれています。
+3\.アプリがラップされたリンクを適切に処理するように設定されていることを確認してください。[SendGrid クリックトラッキングリンクの解決](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-sendgrid-click-tracking-links)に関する SendGrid の記事を参照し、ご使用のオペレーティングシステムのステップに従ってください。この記事には、[iOS](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-links-in-ios)および[Android](https://docs.sendgrid.com/ui/sending-email/universal-links#resolving-links-in-android)のサンプルコードが含まれています。
 
 この構成では、URL パスに `/uni/` が含まれるリンクはユニバーサルリンクとして機能し、それ以外のリンクは Web リンクとして機能します。
 
@@ -261,7 +261,7 @@ SparkPostのクリックトラッキングリンクをユニバーサルリン�
 <a href=”https://www.example.com” data-msys-sublink="open-in-app">
 ```
 
-次に、アプリがカスタムパスを適切に処理するように設定されていることを確認してください。[SparkPost の記事「ディープリンクで SparkPost のクリック トラッキングを使用する」を参照してください](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)。この記事には、[iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost)および[Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)のサンプルコードが含まれています。
+次に、アプリがカスタムパスを適切に処理するように設定されていることを確認してください。[SparkPost クリックトラッキングの使用](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)に関する SparkPost の記事を参照してください。この記事には、[iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost)および[Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)のサンプルコードが含まれています。
 
 ### クリックトラッキングによるユニバーサルリンクのトラブルシューティング
 
@@ -269,16 +269,16 @@ SparkPostのクリックトラッキングリンクをユニバーサルリン�
 
 #### リンクファイルの場所を確認する
 
-AASAファイル（iOS）またはデジタルアセットリンクファイル（Android）が正しい場所にあることを確認してください。
+AASA ファイル(iOS) またはデジタルアセットリンクファイル (Android) が正しい場所にあることを確認してください。
 
 - **iOS:** `https://click.tracking.domain/.well-known/apple-app-site-association`
 - **Android:** `https://click.tracking.domain/.well-known/assetlinks.json`
 
-これらのファイルが常に公開されていることを確認することが重要です。アクセスできない場合は、メールのユニバーサルリンクの設定でステップを見逃した可能性があります。
+これらのファイルが常に公開アクセス可能であることを確認することが重要です。アクセスできない場合は、メールのユニバーサルリンクの設定でステップを見逃した可能性があります。
 
 #### ドメイン定義を確認する
 
-ドメインの正しい定義がアプリに開封することを許可されていることを確認してください。
+アプリを開くことが許可されているドメインの定義が正しいことを確認してください。
 
-- **iOS: **Xcodeでアプリの関連ドメインの設定を確認します（[ステップ1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)）。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
-- **Android :**アプリ情報ページを開封します（アプリアイコンを長押しして、ⓘをクリックします）。アプリ情報メニュー内で、**デフォルトで開封**を見つけてタップします。これは、アプリが開封を許可されているすべての確認済みリンクを表示する画面を表示する必要があります。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
+- **iOS: **アプリ用に Xcode で設定された関連ドメインを確認します ([ステップ1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c))。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
+- **Android :**アプリ情報ページを開封します（アプリアイコンを長押しして、ⓘをクリックします）。アプリ情報メニュー内で、**デフォルトで開封**を見つけてタップします。これにより、アプリを開くことが許可されているすべての検証済みリンクが表示されます。クリックトラッキングドメインがそのリストに含まれていることを確認してください。

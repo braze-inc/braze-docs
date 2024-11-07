@@ -35,7 +35,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Appl
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
 }
 ```
 
@@ -68,15 +68,15 @@ iOS 푸시 액션 버튼을 사용하려면 Apple 푸시 개체에 `category` �
 
 ### Braze 기본 버튼용 Apple 푸시 액션 버튼 개체
 
-| 카테고리 식별자 | 버튼 텍스트 | 버튼 동작 식별자 | 허용된 동작 | 허용된 동작
+| 카테고리 식별자   | 버튼 텍스트 | 버튼 동작 식별자 | 허용된 작업         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | 수락 | `ab_pb_accept` | OPEN\_APP, URI 또는 DEEP\_LINK |
-| `ab_cat_accept_decline` | 거절 | `ab_pb_decline` | 닫기 | 닫기
-| `ab_cat_yes_no` | 예 | `ab_pb_yes` | OPEN\_APP, URI 또는 DEEP\_LINK |
-| `ab_cat_yes_no` | 아니요 | `ab_pb_no` | 닫기 | 닫기
-| `ab_cat_confirm_cancel` | 확인 | `ab_pb_confirm` | OPEN\_APP, URI 또는 DEEP\_LINK |
-| `ab_cat_confirm_cancel` | 취소 | `ab_pb_cancel` | 닫기 | 닫기
-| `ab_cat_more` | 더보기 | `ab_pb_more` | OPEN\_APP, URI 또는 DEEP\_LINK |
+| `ab_cat_accept_decline` | 수락      | `ab_pb_accept`             | OPEN_APP, URI 또는 DEEP_LINK |
+| `ab_cat_accept_decline` | 거부     | `ab_pb_decline`            | 닫기                   |
+| `ab_cat_yes_no`         | 예         | `ab_pb_yes`                | OPEN_APP, URI 또는 DEEP_LINK |
+| `ab_cat_yes_no`         | 아니요          | `ab_pb_no`                 | 닫기                   |
+| `ab_cat_confirm_cancel` | 확인     | `ab_pb_confirm`            | OPEN_APP, URI 또는 DEEP_LINK |
+| `ab_cat_confirm_cancel` | 취소      | `ab_pb_cancel`             | 닫기                   |
+| `ab_cat_more`           | 더 보기        | `ab_pb_more`               | OPEN_APP, URI 또는 DEEP_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```json

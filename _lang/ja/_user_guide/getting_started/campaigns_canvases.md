@@ -7,7 +7,7 @@ description: "この記事では、Braze でメッセージを送信するさま
 
 ---
 
-# はじめに: キャンペーンとキャンバス
+# 開始:キャンペーンとキャンバス
 
 Braze では、[キャンペーン](#campaigns)または[キャンバス](#canvas-flow)を介してメッセージを送信できます。
 
@@ -21,9 +21,9 @@ Braze では、[キャンペーン](#campaigns)または[キャンバス](#canva
 | キャンペーン種別        | 説明                                                                                                                                                                                                                                                                                              |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 通常              | これは最も一般的なキャンペーンです。メッセージの目標に応じて1つまたは複数のチャネルをターゲットに設定し、Braze のビジュアルエディターを使用してコンテンツを Braze 上で直接デザイン、カスタマイズ、テストできます。[ キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) を作成する方法について説明します。 |
-| A/B テスト          | キャンペーン s が1 つのチャネルをターゲットにしている場合、同じキャンペーンの複数のバージョンを送信し、上に表示されるバージョンを確認できます。[多変量 キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) を使用して、最大8 つのさまざまなバージョンのコピー、パーソナライゼーションなどをテストできます。 |
-| API                  | [API キャンペーン s]({{site.baseurl}}/api/api_campaigns/) を使用すると、できるだけ早くタイムリーなメッセージを送信できます。他のキャンペーンタイプとは異なり、Braze ダッシュボードではメッセージ、受信者、スケジュールを指定しません。代わりに、これらの識別子を API 呼び出しに渡します。これらは、通常、リアルタイム・トランス・アクションのメッセージングやニュースの更新に使用されます。  |
-| アクションメールを送信する | Braze [Trans アクション al メール s]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/) は、お客様と顧客との間で合意されたトランスアクションを容易にするために、自動化された非プロモーションメールを送信する目的で構築されています。ビジネスクリティカルな通知を、スピードが最も重要な1人のユーザーに送信します。*選択したパッケージで使用できます。* |
+| A/B テスト          | 1 つのチャネルをターゲットとするキャンペーンの場合、同じキャンペーンの複数のバージョンを送信して、どれが一番効果が上がるかを確認できます。[多変量 キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) を使用して、最大8 つのさまざまなバージョンのコピー、パーソナライゼーションなどをテストできます。 |
+| API                  | [API キャンペーン]({{site.baseurl}}/api/api_campaigns/)では、タイムリーなメッセージをできるだけ早く送信できます。他のキャンペーンタイプとは異なり、Braze ダッシュボードではメッセージ、受信者、スケジュールを指定しません。代わりに、これらの識別子を API 呼び出しに渡します。これらは通常、リアルタイムトランザクションメッセージングや最新ニュースに使用されます。  |
+| トランザクションメール | Braze [トランザクションメール]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)は、お客様とお客様の顧客との間で合意したトランザクションを円滑に進めるために、自動化されたプロモーション以外のメールメッセージを送信することを目的としています。ビジネスクリティカルな通知を、スピードが最も重要な1人のユーザーに送信します。*一部のパッケージでご利用いただけます。* |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -48,7 +48,7 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 
 キャンバスを作成するときは、キャンペーンの設定と同じステップの多くに従います。つまり、オーディエンス全体、応募条件、送信設定を指定します。キャンバスは、誰かがトリガー条件に一致したときに起動します。その後、終了条件を満たすまで、キャンバス内のパス内を移動します。
 
-キャンバスには、[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)、[遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)、[実験]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)などを自由に組み合わせることができます。サポートされているすべてのメッセージングチャネルで送信でき、Facebook、Google、TikTok などの[ソーシャルプラットフォームや広告プラットフォームと統合する]({{site.baseurl}}/partners/canvas_steps/overview/)こともできます。
+キャンバスには、[messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)、[delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)、[experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)などを自由に組み合わせることができます。サポートされているすべてのメッセージングチャネルで送信でき、Facebook、Google、TikTok などの[ソーシャルプラットフォームや広告プラットフォームと統合する]({{site.baseurl}}/partners/canvas_steps/overview/)こともできます。
 
 キャンバスフローの詳細については、以下の追加リソースをご覧ください。
 
@@ -64,16 +64,16 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 
 次の表は、サポートされているチャネルの概要です。
 
-| Channel                                                                                              | 説明                                                                                                                                            |
+| チャネル                                                                                              | 説明                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)                        | パーソナライズされた メールs をユーザーの受信トレイes に送信します。                                                                                                       |
-| [モバイルプッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | ユーザーの携帯電話に通知で送る。                                                                                   |
+| [メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)                        | パーソナライズされたメールをユーザーの受信トレイに送信します。                                                                                                       |
+| [モバイルプッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | メッセージをユーザーのモバイルデバイスに通知として直接配信します。                                                                                   |
 | [Web プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Web サイトでアクティブでない場合でも、通知をユーザーのウェブブラウザに配信します。                                                         |
-| [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | ユーザー s が積極的に使用している間、モバイルアプリ内のメールを表示します。                                                                             |
+| [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | ユーザーがモバイルアプリをアクティブに使用している間に、モバイルアプリ内にメッセージを表示します。                                                                             |
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | ユーザーの携帯電話にメールを送信します。                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 人気のメッセージング プラットフォームであるWhatsAppを通じて、ユーザーsに手を差し伸べ、エンゲージするように伝言を送る。                                                   |
-| [コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | ユーザー s がメッセージを受信して操作したり、バナーとしてカルーセルにメッセージを表示したりできるように、アプリまたはWeb サイト内に受信トレイを提供します。 |
-| [接続したテレビ]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | 接続されたTV プラットフォームでユーザーS を操作します。                                                                                                   |
+| [コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | ユーザーがメッセージを受信して操作したり、カルーセルにメッセージを表示したり、バナーとしてメッセージを表示したりできる受信トレイをアプリや Web サイト内に用意します。 |
+| [コネクテッド TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | コネクテッド TV プラットフォームでユーザーと交流します。                                                                                                   |
 | [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | カスタムHTTPコールバックを使用して、外部システムとのリアルタイム通信および統合を有効にします。                                                    |
 {: .reset-td-br-1 .reset-td-br-2}
 

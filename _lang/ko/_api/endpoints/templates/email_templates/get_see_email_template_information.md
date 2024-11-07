@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 이메일 템플릿 정보 보기"
-article_title: "GET: 이메일 템플릿 정보 보기"
+nav_title: "GET: 이메일 템플릿 정보를 참조하십시오"
+article_title: "GET: 이메일 템플릿 정보를 참조하십시오"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,15 +9,15 @@ description: "이 문서에서는 이메일 템플릿 Braze 엔드포인트 참�
 
 ---
 {% api %}
-# 이메일 템플릿 정보 보기
+# 이메일 템플릿 정보를 참조하십시오
 {% apimethod get %}
 /templates/email/info
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 이메일 템플릿에 대한 정보를 가져옵니다.
+> 이 엔드포인트를 사용하여 이메일 템플릿에 대한 정보를 얻으십시오.
 
 {% alert important %}
-이메일용 드래그 앤 드롭 편집기를 사용하여 작성된 템플릿은 허용되지 않습니다.
+이메일을 위한 드래그 앤 드롭 편집기를 사용하여 작성된 템플릿은 허용되지 않습니다.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
@@ -29,14 +29,14 @@ description: "이 문서에서는 이메일 템플릿 Braze 엔드포인트 참�
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `email_template_id`  | 필수 | 문자열 | [이메일 템플릿 API 식별자]({{site.baseurl}}/api/identifier_types/)를 참조하십시오. |
+| `email_template_id`  | 필수 | 문자열 | [이메일 템플릿 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## 요청 예시
+## 예시 요청
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \

@@ -1,5 +1,5 @@
 ---
-nav_title: "POSTする：[エンドポイント名］"
+nav_title: "POST: [エンドポイント名］"
 article_title: "レイアウト例：POST:ユーザートラック"
 search_tag: Endpoint
 page_order: 4
@@ -31,7 +31,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 <!-- The rate limit of the endpoint. This pulls from /includes/rate_limits/ and displays specific endpoint limits based on the endpoint provided -->
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエスト・ボディ
+## リクエスト本文
 
 <!--This is where you can give more information about your endpoint request body. -->
 

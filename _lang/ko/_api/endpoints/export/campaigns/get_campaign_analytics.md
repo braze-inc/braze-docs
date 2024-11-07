@@ -20,21 +20,21 @@ description: "이 문서에서는 내보내기 캠페인 분석 Braze 엔드포�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `campaigns.data_series` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='export campaign analytics' %}
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자]({{site.baseurl}}/api/identifier_types/) 참조.<br><br> API 캠페인용 `campaign_id`는 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 엔드포인트]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)를 사용할 수도 있습니다. |
-| `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일 수입니다. 1에서 100 사이여야 합니다(포함). |
-| `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 계열이 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
+| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 엔드포인트를]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) 사용할 수도 있습니다. |
+| `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일수입니다. 1에서 100 사이여야 합니다(포함). |
+| `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시 

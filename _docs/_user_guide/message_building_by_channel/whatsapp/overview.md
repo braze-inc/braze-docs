@@ -32,7 +32,7 @@ Acknowledge the following before proceeding with integration:
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
 | WhatsApp phone number | You must acquire a phone number that meets WhatsApp's requirements for [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) or [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers) for use of the messaging channel.  | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -60,10 +60,6 @@ Within this flow, you will:
 1. Create or select your Meta and WhatsApp Business accounts. Make sure to review the [WhatsApp display name guidelines](https://www.facebook.com/business/help/757569725593362). <br><br>It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.<br><br>
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
-
-{% alert note %}
-WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
-{% endalert %}	
 
 After the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
 

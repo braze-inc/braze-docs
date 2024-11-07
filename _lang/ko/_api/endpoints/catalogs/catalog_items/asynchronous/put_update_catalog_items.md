@@ -17,7 +17,7 @@ description: "이 문서에서는 여러 카탈로그 항목 업데이트 Braze 
 
 > 이 엔드포인트를 사용하여 카탈로그의 여러 항목을 업데이트할 수 있습니다. 
 
-카탈로그 항목이 없는 경우 이 엔드포인트는 카탈로그에 항목을 만듭니다. 각 요청은 최대 50개의 카탈로그 항목을 지원할 수 있습니다. 이 엔드포인트는 비동기식입니다.
+카탈로그 항목이 존재하지 않는 경우 이 엔드포인트가 카탈로그에 항목을 생성합니다. 각 요청은 최대 50개의 카탈로그 항목을 지원할 수 있습니다. 이 엔드포인트는 비동기식입니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#ab30a4fc-60bc-4460-885c-1b92af8bc061 {% endapiref %}
 
@@ -29,18 +29,18 @@ description: "이 문서에서는 여러 카탈로그 항목 업데이트 Braze 
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
-## 경로 매개 변수
+## 경로 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `items` | 필수 | 배열 | item 개체를 포함하는 배열입니다. 각 개체에는 ID가 있어야 합니다. 항목 개체에는 카탈로그에 있는 필드가 포함되어야 합니다. 요청당 최대 50개의 항목 개체가 허용됩니다. |
+| `items` | 필수 | 배열 | 항목 객체가 포함된 배열입니다. 각 객체에는 ID가 있어야 합니다. 항목 객체에는 카탈로그에 존재하는 필드가 포함되어야 합니다. 요청당 최대 50개의 항목 개체가 허용됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## 요청 예시
@@ -59,12 +59,20 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
       "id": "restaurant3",
       "City": "San Francisco",
-      "Rating": 2
+      "Rating": 2,
+      "Top_Dishes": [
+        "Hot Dog",
+        "French Fries"
+      ]
     }
   ]
 }'
@@ -72,11 +80,11 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 응답
 
-이 엔드포인트에 대한 세 가지 상태 코드 응답은 `202`, `400`, 및 `404`입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
 
 ### 성공 응답의 예
 
-`202` 상태 코드는 다음 응답 본문을 반환할 수 있습니다.
+`202` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {
@@ -86,7 +94,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### 오류 응답의 예
 
-`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결](#troubleshooting) 을 참조하십시오.
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
 
 ```json
 {
@@ -108,23 +116,23 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 문제 해결
 
-다음 표에는 반환될 수 있는 오류 및 관련 문제 해결 단계가 나와 있습니다.
+다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
 
 | 오류 | 문제 해결 |
 | --- | --- |
-| `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. |
+| `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. | 
 | `ids-not-string` | 각 항목 ID가 문자열인지 확인합니다. |
 | `ids-not-unique` | 각 항목 ID가 고유한지 확인합니다. |
 | `ids-too-large` | 각 항목 ID의 글자 수 제한은 250자입니다. |
-| `item-array-invalid` | `items` 객체의 배열이어야 합니다. |
+| `item-array-invalid` | `items` 는 객체의 배열이어야 합니다. |
 | `items-missing-ids` | 각 항목에 ID가 있는지 확인합니다. |
 | `items-too-large` | 항목 값은 5,000자를 초과할 수 없습니다. |
-| `invalid-ids` | 항목 ID 이름에 지원되는 문자는 문자, 숫자, 하이픈 및 밑줄입니다. |
-| `invalid-fields` | API 요청에서 보내는 모든 필드가 카탈로그에 이미 있는지 확인합니다. 이는 오류에 언급된 ID 필드와 관련이 없습니다. |
-| `invalid-keys-in-value-object` | 항목 객체 키는 `.` 또는 `$`를 포함할 수 없습니다. |
-| `too-deep-nesting-in-value-object` | Item 개체에는 50개 이상의 중첩 수준이 있을 수 없습니다. |
-| `request-includes-too-many-items` | 요청에 항목이 너무 많습니다. 요청당 항목 제한은 50개입니다. |
-| `unable-to-coerce-value` | 항목 유형은 변환할 수 없습니다. |
+| `invalid-ids` | 항목 ID 이름에 지원되는 문자는 문자, 숫자, 하이픈, 밑줄입니다. |
+| `invalid-fields` | API 요청에서 전송하려는 모든 필드가 카탈로그에 이미 존재하는지 확인합니다. 이는 오류에 언급된 ID 필드와는 관련이 없습니다. |
+| `invalid-keys-in-value-object` | 항목 객체 키에는 `.` 또는 `$` 을 포함할 수 없습니다. |
+| `too-deep-nesting-in-value-object` | 아이템 객체는 50개 이상의 중첩 레벨을 가질 수 없습니다. |
+| `request-includes-too-many-items` | 요청에 항목이 너무 많습니다. 요청당 아이템 한도는 50개입니다. |
+| `unable-to-coerce-value` | 아이템 유형은 변환할 수 없습니다. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

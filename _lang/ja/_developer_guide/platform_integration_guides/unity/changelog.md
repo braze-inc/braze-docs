@@ -7,7 +7,7 @@ platform:
   - Unity
   - iOS
   - Android
-description: "このページには、Braze Unity SDKの変更履歴の更新が一覧表示されます。"
+description: "このページでは、Braze Unity SDK 変更ログの更新が一覧で表示されています。"
 
 ---
 

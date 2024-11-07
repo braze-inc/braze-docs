@@ -47,13 +47,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Technology partners
+## Partnership support for beacon and geofence
 
-You can also leverage location tracking with some of our partners: 
+Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
 - [Radar][6]
-- [Foursquare][7]
 - [Gimbal][10]
+- [Foursquare][7]
 
 ## Frequently asked questions
 

@@ -59,9 +59,8 @@ $base_font_size: 16.5px;
 $banner_height: 80px;
 $header_height: 60px;
 $footer_height: 60px;
-$base_off_set: $base_font_size * 1.5;
-$calc_offset_top: $header_height + $base_off_set;
-$calc_offset_view: $header_height  + $base_off_set;
+$calc_offset_top: $header_height;
+$calc_offset_view: $header_height;
 
 // Body variables—Responsive breakpoints and layout dimensions
 $spacing-unit: 30px;
@@ -235,12 +234,13 @@ li {
   }
 }
 
-h2.details_title {
-  margin: 15px 0 4px 0;
+div.details_title {
+  margin: -$calc_offset_top 0 4px 0;
   &::before {
     content: none !important;
     display: none !important;
   }
+  height: $calc_offset_top;
 }
 details {
   .detail_div {
@@ -310,4 +310,3 @@ details {
     color: $text-color;
   }
 }
-

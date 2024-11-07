@@ -55,53 +55,53 @@ description: "이 문서에서는 연결된 오디언스 객체의 다양한 구
 
 사용자 지정 속성의 데이터 유형에 따라 지정된 필터에 유효한 비교가 결정됩니다.
 
-| 사용자 지정 속성 유형 | 허용된 비교 | 사용자 지정 속성 유형
+| 사용자 지정 속성 유형 | 허용된 비교 |
 | ---------------------| --------------- |
 | 문자열 | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | 배열 | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | 숫자 | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | 부울 | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| 시간 | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
+| 시간 | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### 속성 비교 시 주의 사항
 
-| 비교 > 추가 고려 사항 >
+| 비교 | 추가 고려 사항 |
 | --- | --- |
-| `value` | `exists` 또는 `does_not_exist` 비교를 사용하는 경우 `value`는 필요하지 않습니다. `value`는 `before` 및 `after` 비교를 사용하는 경우 ISO 8601 날짜 및 시간 문자열이어야 합니다. |
-|`matches_regex` | `matches_regex` 비교를 사용할 때 전달되는 값은 문자열이어야 합니다. Braze에서 정규표현식을 사용하는 방법에 대해 자세히 알아보려면 [정규표현식]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) 및 [커스텀 속성 데이터 유형]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types)을ㄹ 참조하세요. |
+| `value` | `exists` 또는 `does_not_exist` 비교를 사용하는 경우 `value` 는 필요하지 않습니다. `value` 는 `before` 및 `after` 비교를 사용하는 경우 ISO 8601 날짜/시간 문자열이어야 합니다. |
+|`matches_regex` | `matches_regex` 비교를 사용할 때 전달되는 값은 문자열이어야 합니다. Braze에서 정규식을 사용하는 방법에 대해 자세히 알아보려면 [정규식]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) 및 [사용자 지정 속성 데이터 유형을]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### 사용자 지정 속성 예제
 
-\`\`\`json
+```json
 {
-"custom_attribute":
-{
-"custom_attribute_name": "eye_color",
-"comparison": "equals",
-"value": "blue"
+  "custom_attribute":
+    {
+      "custom_attribute_name": "eye_color",
+      "comparison": "equals",
+      "value": "blue"
+    }
 }
-  }
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "favorite_foods",
-"comparison": "includes_value",
-"value": "pizza"
-}
+  "custom_attribute":
+  {
+    "custom_attribute_name": "favorite_foods",
+    "comparison": "includes_value",
+    "value": "pizza"
   }
+}
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "last_purchase_time",
-"comparison": "less_than_x_days_ago",
-"value": 2
-}
+  "custom_attribute":
+  {
+    "custom_attribute_name": "last_purchase_time",
+    "comparison": "less_than_x_days_ago",
+    "value": 2
   }
-  \`\`\`
+}
+```
 ### 푸시 구독 필터
 
 이 필터를 사용하면 사용자의 푸시 구독 상태를 기준으로 세분화할 수 있습니다.

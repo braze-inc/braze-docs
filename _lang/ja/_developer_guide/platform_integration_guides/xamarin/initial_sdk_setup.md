@@ -1,31 +1,31 @@
 ---
 nav_title: SDK の初期セットアップ
-article_title: ザマリンの初回SDK設定
+article_title: Xamarin の初期 SDK 設定
 platform: 
   - Xamarin
   - iOS
   - Android
 page_order: 0
 toc_headers: h2
-description: "ここでは、Xamarin プラットフォームの最初のiOS、Android、およびFireOS SDKの設定について説明します。"
+description: "この記事では、Xamarin プラットフォームの iOS、Android、および FireOS SDK の初期設定について説明します。"
 search_rank: 1
 ---
 
 # SDK の初期セットアップ
 
-> ザマリンのBraze SDKをインストールする方法について説明します。Braze SDK をインストールすると、基本的な分析機能と、ユーザーs を操作できる作業アプリ内メッセージが提供されます。 
+> Xamarin の Braze SDK をインストールする方法について説明します。Braze SDK をインストールすると、基本的な分析機能と、ユーザーエンゲージメントのためのアプリ内メッセージが提供されます。 
 
 {% alert important %}
-`version 3.0.0` 以降、このSDKでは。NET 6+ を使用する必要があり、Xamarin フレームワークを使用するプロジェクトのサポートが削除されます。
-`version 4.0.0` 以降、このSDKはXamarin & Xamarin.Forms のサポートを削除し、。NET MAUI のサポートを追加しました。
+`version 3.0.0` 以降、この SDK では、NET 6以降を使用する必要があり、Xamarin フレームワークを使用するプロジェクトのサポートが削除されます。
+`version 4.0.0` 以降、この SDK は Xamarin と Xamarin.Forms のサポートを終了し、.NET MAUI のサポートを追加しました。
 Xamarinのサポート終了前後の[Microsoftのポリシー](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin)を参照してください。
 {% endalert %}
 
-## ステップ 1:Xamarin バインディングの取得
+## ステップ1:Xamarin バインディングの取得
 
 {% tabs %}
-{% tab アンドロイド %}
-Xamarin結合は、Xamarin アプリ sでネイティブライブラリを使用する方法です。バインドのインプリメンテーションは、C# インターフェイスをライブラリーに構築し、そのインターフェイスをアプリライセンスで使用することで構成されます。 [Xamarin ドキュメント](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/)を参照してください。Braze SDKバインドを含めるには、NuGet を使用する方法とソースからコンパイルする方法の2 つがあります。
+{% tab android %}
+Xamarin バインディングは、Xamarin アプリでネイティブライブラリを使用する方法です。バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。 [Xamarin ドキュメント](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/)を参照してください。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
 
 {% subtabs local %}
 {% subtab NuGet %}
@@ -33,27 +33,27 @@ Xamarin結合は、Xamarin アプリ sでネイティブライブラリを使用
 {% endsubtab %}
 
 {% subtab Source %}
-2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。[`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) にバインディングソースコードがあります。Xamarin アプリ ライケーションの```BrazeAndroidBinding.csproj``` にプロジェクトリファレンスを追加すると、バインディングがプロジェクトと共に構築され、Braze Android SDKにアクセスできるようになります。
+2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。[`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) にバインディングソースコードがあります。Xamarin アプリ ケーションの ```BrazeAndroidBinding.csproj``` にプロジェクトリファレンスを追加すると、バインディングがプロジェクトと共に構築され、Braze Android SDK にアクセスできるようになります。
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
-{% tab イオス %}
+{% tab ios %}
 {% alert important %}
-Xamarin SDK バージョン4.0.0 以降のiOS バインディングでは、[ Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/) が使用され、以前のバージョンでは[ レガシーAppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk) が使用されます。
+Xamarin SDK バージョン 4.0.0 以降の iOS バインディングでは [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/) が使用されますが、以前のバージョンでは[従来の AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk) が使用されます。
 {% endalert %}
 
-Xamarin結合は、Xamarin アプリ sでネイティブライブラリを使用する方法です。 バインドのインプリメンテーションは、C# インターフェイスをライブラリーに構築し、そのインターフェイスをアプリライセンスで使用することで構成されます。Braze SDKバインドを含めるには、NuGet を使用する方法とソースからコンパイルする方法の2 つがあります。
+Xamarin バインディングは、Xamarin アプリでネイティブライブラリを使用する方法です。 バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
 
 {% subtabs local %}
 {% subtab NuGet %}
-最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 「Braze」を検索し、最新のXamarin iOS パッケージをインストールします: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)、[Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)、\[Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation
+最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 「Braze」を検索し、最新の Xamarin iOS NuGet パッケージ ([Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)、[Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)、および [Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation) をプロジェクトにインストールします。
 
-また、。NET MAUI への移行を容易にするために、互換性ライブラリパッケージ[Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) および[Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) も提供しています。
+.NET MAUI への移行を容易にするために、互換性ライブラリパッケージ [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) および [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) も提供しています。
 {% endsubtab %}
 
 {% subtab Source %}
-2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。[`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding) では、バインディングソースコードが表示されます。Xamarin アプリライケーションの```BrazeiOSBinding.csproj``` にプロジェクトリファレンスを追加すると、バインディングがプロジェクトと共に構築され、Braze iOS SDKにアクセスできるようになります。プロジェクトの"Reference"フォルダに`BrazeiOSBinding.csproj`が表示されていることを確認します。
+2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。[`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding) にバインディングソースコードがあります。Xamarin アプリケーションの ```BrazeiOSBinding.csproj``` にプロジェクトリファレンスを追加すると、バインディングがプロジェクトと共に構築され、Braze iOS SDK にアクセスできるようになります。プロジェクトの「リファレンス」フォルダに `BrazeiOSBinding.csproj` が表示されていることを確認します。
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -62,10 +62,10 @@ Xamarin結合は、Xamarin アプリ sでネイティブライブラリを使用
 ## ステップ2:Brazeインスタンスの設定
 
 {% tabs %}
-{% tab アンドロイド %}
-### ステップ 2.1:Braze SDKの設定 Braze.xml
+{% tab android %}
+### ステップ 2.1:Braze.xmlでBraze SDKを構成する
 
-ライブラリが統合されたので、プロジェクトの`Resources/values` フォルダに`Braze.xml` ファイルを作成する必要があります。そのファイルのコンテンツは、次のコードのスニペットに似ている必要があります。
+ライブラリが統合されたので、プロジェクトの`Resources/values` フォルダに`Braze.xml` ファイルを作成する必要があります。ファイルの内容は、次のコードスニペットのようになります。
 
 {% alert note %}
 Braze ダッシュボードの**Settings**> **API キーs**にあるAPI キーで`YOUR_API_KEY`を必ず置き換えてください。
@@ -84,32 +84,32 @@ Braze ダッシュボードの**Settings**> **API キーs**にあるAPI キー�
     </string-array>
   </resources>
 ```
-バインドソースを手動で含める場合は、`<item>NUGET</item>` をコードから削除します。
+バインディングソースを手動で含める場合は、コードから `<item>NUGET</item>` を削除します。
 
 {% alert tip %}
-例`Braze.xml` を表示するには、[ Android MAUI サンプルアプリ](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml) を確認します。
+`Braze.xml` の例については、[Android MAUI サンプルアプリ](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml)を参照してください。
 {% endalert %}
 
 ### ステップ 2.2:Androidマニフェストに必要な権限を追加する
 
-API キーを追加したので、`AndroidManifest.xml` に次の権限を追加する必要があります。
+API キーを追加したので、次の権限を `AndroidManifest.xml` ファイルに追加する必要があります。
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-`AndroidManifest.xml` のサンプルについては、[ Android MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml) サンプルアプリのライセンスを参照してください。
+`AndroidManifest.xml` の例については、[Android MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml) サンプルアプリケーションを参照してください。
 
 ### ステップ 2.3:ユーザー セッションs の追跡とアプリ内メッセージs の登録
 
-ユーザー セッション "トラッキング を有効にしてアプリをアプリ内メッセージ s に登録するには、アプリの`Application` クラスの`OnCreate()` ライフサイクルメソッドに次の呼び出しを追加します。
+ユーザーセッショントラッキングを有効にし、アプリ内メッセージ用にアプリを登録するには、アプリの `Application` クラスの `OnCreate()` ライフサイクルメソッドに次の呼び出しを追加します。
 
 ```kotlin
 RegisterActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
 ```
 {% endtab %}
 
-{% tab イオス %}
-Brazeインスタンスを設定したら、次のスニペットを追加して、インスタンスを設定します。
+{% tab ios %}
+Braze インスタンスを設定したら、次のスニペットを追加して、インスタンスを設定します。
 
 {% alert note %}
 Braze ダッシュボードの**Settings**> **API キーs**にあるAPI キーで`YOUR_API_KEY`を必ず置き換えてください。
@@ -127,15 +127,15 @@ braze = new Braze(configuration);
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3:統合をテストする
+## ステップ3: 統合をテストする
 
 {% tabs %}
-{% tab アンドロイド %}
-これで、アプリライセンスを起動し、セッションがBraze ダッシュボードに(機器情報や他の分析とともに)記録されていることを確認できます。基本的なSDKインテグレーションのベストプラクティスの詳細については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)を参照してください。
+{% tab android %}
+これで、アプリケーションを起動して、セッションが Braze ダッシュボードに (デバイス情報やその他の分析と共に) 記録されているのを確認できます。基本的なSDKインテグレーションのベストプラクティスの詳細については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)を参照してください。
 {% endtab %}
 
-{% tab イオス %}
-これで、アプリライセンスを起動し、Braze ダッシュボードに記録されているセッションを確認できます。基本的なSDKインテグレーションのベストプラクティスの詳細については、[iOSインテグレーションの手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/)を参照してください。
+{% tab ios %}
+これで、アプリケーションを起動して、セッションが Braze ダッシュボードに記録されているのを確認できます。基本的なSDKインテグレーションのベストプラクティスの詳細については、[iOSインテグレーションの手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/)を参照してください。
 
 {% alert important %}
 現行のiOS SDK向けのパブリックXamarinバインディングはiOS FaceBook SDK(ソーシャルデータのリンク)には接続されず、BrazeへのIDFAの送信は含まれていません。

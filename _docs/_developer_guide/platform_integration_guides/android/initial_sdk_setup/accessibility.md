@@ -18,14 +18,14 @@ description: "This reference article covers how to implement specific Android SD
 In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following SDK configuration:
 
 {% tabs %}
-{% tab braze.xml %}
+{% tab Braze XML %}
 
 ```xml
 <bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab Kotlin %}
 
 ```kotlin
 val brazeConfigBuilder = BrazeConfig.Builder()
@@ -34,7 +34,7 @@ Braze.configure(this, brazeConfigBuilder.build())
 ```
 
 {% endtab %}
-{% tab JAVA %}
+{% tab Java %}
 
 ```java
 BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()

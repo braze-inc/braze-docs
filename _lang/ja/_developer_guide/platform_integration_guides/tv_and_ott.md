@@ -31,7 +31,7 @@ platform:
 <table id="tv-feature-table">
     <thead>
         <tr>
-            <th>デバイスタイプ</th>
+            <th>デバイスのタイプ</th>
             <th>データと分析</th>
             <th>アプリ内メッセージ</th>
             <th>コンテンツカード</th>
@@ -42,7 +42,7 @@ platform:
     </thead>
     <tbody>
         <tr>
-            <td>アマゾンファイヤーTV</td>
+            <td>Amazon Fire TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
@@ -51,7 +51,7 @@ platform:
             <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
-            <td>キンドルファイア</td>
+            <td>Kindle Fire</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
@@ -78,7 +78,7 @@ platform:
             <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
-            <td>サムスンタイゼンテレビ</td>
+            <td>Samsung Tizen TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
@@ -105,7 +105,7 @@ platform:
             <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
        <tr>
-          <td>アップルビジョンプロ</td>
+          <td>Apple Vision Pro</td>
           <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
            <td for="iam"><i class="fas fa-check text-success"></i></td>
           <td for="content-cards"><i class="fas fa-check text-success"></i></td>
@@ -127,23 +127,23 @@ platform:
 
 Amazon Fire TVデバイスと統合するには、Braze Fire OS SDKを使用します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
-- プッシュ通知（「ヘッズアップ通知」として知られる][7]）
+- プッシュ通知([&quot として知られる;Heads Up Notifications"](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup))
   - これらが表示されるためには、優先度を「高」に設定する必要があります。すべての通知はFire TVの設定メニューに表示されます。
 - コンテンツカード
 - フィーチャーフラグ
 - アプリ内メッセージ
-  - タッチ非対応の環境（テレビなど）でHTMLメッセージを表示するには、`com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages`を`false`に設定します（\[Android SDK v23.1.0]\[android-tv-html]から利用可能）
+  - TV などの非タッチ環境でHTML メッセージを表示するには、`com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` を`false` に設定します([Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310) から利用可能)。
 
-詳細については、\[Fire OS 統合ガイド][2]をご覧ください。
+詳細については、[Fire OS統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)を参照してください。
 
 ### Kindle Fire {#kindle-fire}
 
 Amazon Kindle Fireデバイスと統合するには、Braze Fire OS SDKを使用します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
 - プッシュ通知
@@ -151,82 +151,82 @@ Amazon Kindle Fireデバイスと統合するには、Braze Fire OS SDKを使用
 - フィーチャーフラグ
 - アプリ内メッセージ
 
-詳細については、\[Fire OS 統合ガイド][2]をご覧ください。
+詳細については、[Fire OS統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)を参照してください。
 
 ### Android TV {#android-tv}
 
-Braze Android SDK を使用して Android TV デバイスと統合します。
+Braze Android SDK を使用して、Android TV デバイスと統合します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
 - コンテンツカード
 - フィーチャーフラグ
 - アプリ内メッセージ 
-  - タッチ非対応の環境（テレビなど）でHTMLメッセージを表示するには、`com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages`を`false`に設定します（\[Android SDK v23.1.0]\[android-tv-html]から利用可能）
-- プッシュ通知（手動統合が必要）
-  - プッシュ通知はAndroid TVでネイティブにサポートされていません。理由を知るには、Googleの\[デザインガイドライン][5]をご覧ください。ただし、これを実現するには、**プッシュ通知UIの手動統合を行うことができます**。ドキュメント][6]の設定方法については、こちらをご覧ください。
+  - TV などの非タッチ環境でHTML メッセージを表示するには、`com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` を`false` に設定します([Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310) から利用可能)。
+- \* プッシュ通知 (手動での統合が必要)
+  - プッシュ通知はAndroid TVでネイティブにサポートされていません。理由については、Googleの[デザインガイドライン](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html)を参照してください。ただし、これを実現するには、**プッシュ通知UIの手動統合を行うことができます**。この設定方法については、[documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/)を参照してください。
 
-詳細については、\[Android SDK 統合ガイド][2]をご覧ください。
+詳細については、[Android SDK 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)をご覧ください。
 
 {% alert note %}
-ダッシュボードで新しいAndroidアプリを作成して、Android OTT統合を行ってください。
+Android OTT 統合用に、ダッシュボードで新しい Android アプリを作成してください。
 {% endalert %}
 
 ### LG webOS {#lg-webos}
 
 Braze Web SDK を使用して [LG webOS テレビ](https://webostv.developer.lge.com/discover) と統合します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
-- コンテンツカード（[Headless UI](#custom-ui)経由）
+- コンテンツカード ([ヘッドレス UI](#custom-ui) を使用)
 - フィーチャーフラグ
 - アプリ内メッセージ（[Headless UI](#custom-ui)経由）
 
-詳細については、\[Web Smart TV 統合ガイド][8]をご覧ください。
+詳細については、[Web Smart TV 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/)をご覧ください。
 
-### サムスンタイゼン {#tizen}
+### Samsung Tizen {#tizen}
 
 Braze Web SDKを使用して[Samsung Tizen TV](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html)と統合します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
-- コンテンツカード（[Headless UI](#custom-ui)経由）
+- コンテンツカード ([ヘッドレス UI](#custom-ui) を使用)
 - フィーチャーフラグ
 - アプリ内メッセージ（[Headless UI](#custom-ui)経由）
 
-詳細については、\[Web Smart TV 統合ガイド][8]をご覧ください。
+詳細については、[Web Smart TV 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/)をご覧ください。
 
 ### Roku {#roku}
 
 Braze Roku SDKを使用して、[Rokuテレビ](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)と統合します。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
 - アプリ内メッセージ（[Headless UI](#custom-ui)経由）
   - RokuプラットフォームではWebviewがサポートされていないため、アプリ内メッセージのHTMLはサポートされていません。
 - フィーチャーフラグ
 
-詳細については、\[Roku 統合ガイド][3]をご覧ください。
+詳細については、[Roku integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)を参照してください。
 
 ### Apple TV OS {#tvos}
 
-tvOSと統合するにはBraze SWIFT SDKを使用します。覚えておいてください、SWIFT SDKにはtvOS用のデフォルトのUIやビューが含まれていないため、自分で実装する必要があります。
+tvOSと統合するにはBraze SWIFT SDKを使用します。Swift SDK には tvOS のデフォルト UI やビューは含まれていないため、独自に実装する必要があります。
 
-特徴には以下が含まれます:
+以下の機能があります。
 
 - クロスチャネルのエンゲージメントのためのデータと分析の収集
-- コンテンツカード（[Headless UI](#custom-ui)経由）
+- コンテンツカード ([ヘッドレス UI](#custom-ui) を使用)
 - フィーチャーフラグ
 - アプリ内メッセージ（[Headless UI](#custom-ui)経由）
-  - tvOSプラットフォームではWebviewがサポートされていないため、HTMLのアプリ内メッセージはサポートされていません。
-  - tvOS でカスタマイズされたメッセージングのためのヘッドレス UI の使用方法について詳しく知るには、\[サンプルアプリ][9]をご覧ください。
+  - tvOS プラットフォームでは Web ビューはサポートされていないため、HTML アプリ内メッセージもサポートされていません。
+  - tvOS でカスタマイズされたメッセージングにヘッドレスUI を使用する方法の詳細については、[sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui) を参照してください。
 - サイレントプッシュ通知と更新バッジ
 
-詳細については、\[iOS SWIFT SDK 統合ガイド][4]をご覧ください。
+詳細については、[iOS Swift SDK 統合ガイド](https://github.com/braze-inc/braze-swift-sdk)をご覧ください。
 
 {% alert note %}
 TVユーザーにモバイルのアプリ内メッセージを表示しないようにするには、[アプリターゲティング](#app-targeting)を設定するか、キーと値のペアを使用してメッセージをフィルターしてください。例えば、特別な`tv = true`キーと値のペアが含まれている場合にのみtvOSメッセージを表示する。
@@ -243,25 +243,25 @@ Braze SWIFT SDKを使用してvisionOSと統合します。iOSで利用可能な
 - フィーチャーフラグ
 - ロケーション分析
 
-詳細については、\[iOS SWIFT SDK 統合ガイド][4]をご覧ください。
+詳細については、[iOS Swift SDK 統合ガイド](https://github.com/braze-inc/braze-swift-sdk)をご覧ください。
 
 {% alert important %}
 一部のiOS機能は部分的にサポートされているか、サポートされていません。完全なリストについては、[visionOSサポート](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos)を参照してください。
 {% endalert %}
 
-## アプリのターゲティング{#app-targeting}
+## アプリのターゲット指定 {#app-targeting}
 
-メッセージングのためにOTTアプリをターゲットにするには、OTTアプリに特化したSegmentを作成することをお勧めします。
+メッセージングに OTT アプリをターゲット指定する場合、その OTT アプリに固有のセグメントを作成することをお勧めします。
 
-![Android OTTアプリを使用して作成されたセグメント。][1]
+![Android OTT アプリを使用して作成されたセグメント。]({% image_buster /assets/img/android_ott.png %})
 
-## ヘッドレスUI {#custom-ui}
+## ヘッドレス UI {#custom-ui}
 
 {% alert important %}
-アプリ内メッセージやコンテンツカードをヘッドレスUI経由でサポートするプラットフォームには、デフォルトのUIやビューが含まれていないため、独自のカスタムUIを実装してください。
+ヘッドレス UI を介してアプリ内メッセージまたはコンテンツカードをサポートしているプラットフォームは、デフォルトの UI やビューは含まれて**いない**ため、独自のカスタム UI を実装してください。
 {% endalert %}
 
-ヘッドレスUIを使用すると、Brazeはアプリが読み取ってUI内で使用できるデータモデル（JSONなど）を提供します。このデータには、アプリが読み取って表示できるダッシュボード（タイトル、本文、ボタンテキスト、色など）に設定されたフィールドが含まれます。詳細な情報については、カスタム処理メッセージングをご覧ください。
+ヘッドレス UI を使用して、Braze は、アプリが制御する UI 内でアプリが読み取り、使用できる JSON などのデータモデルを提供します。このデータには、ダッシュボードで設定されたフィールド (タイトル、本文、ボタンテキスト、色など) が含まれており、アプリはその設定に従ってそれらを読み取り、表示できます。メッセージングのカスタム処理の詳細については、以下を参照してください。
 
 **Android SDK**
 - [アプリ内メッセージ カスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)
@@ -269,20 +269,10 @@ Braze SWIFT SDKを使用してvisionOSと統合します。iOSで利用可能な
 
 **SWIFT SDK**
 - [アプリ内メッセージ カスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
-- ヘッドレスUIサンプルアプリ][9]
+- [ヘッドレスUI サンプルアプリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
 - [コンテンツカードのカスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**
 - [アプリ内メッセージ カスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
-- [コンテンツカードのカスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
+- [コンテンツカードのカスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
-[1]: {% image_buster /assets/img/android_ott.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
-[4]: https://github.com/braze-inc/braze-swift-sdk
-[5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/
-[7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
-\[Android-tv-HTML]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310
-[9]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui
