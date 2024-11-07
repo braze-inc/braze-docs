@@ -101,7 +101,7 @@
     }
     #partner_search {
       width: 100%;
-      padding: 14px 14px 14px 30px;
+      padding: 16px 14px 14px 30px;
       font-size: 14px;
       line-height: 1.15;
       margin: 0;
@@ -114,6 +114,7 @@
       background-repeat: no-repeat;
       background-color: transparent;
       border-radius: 6px;
+      border: 2px solid black;
     }
 
     .select {
@@ -149,6 +150,9 @@
       }
       @media (min-width: $window-large-px) {
         flex: 0 0 23%;
+      }
+      label {
+        width: 100%;
       }
     }
   }
@@ -240,7 +244,7 @@
     }
 
      h6 {
-      color: #999;
+      color: $text-color;
       font-weight: 600;
       text-transform: uppercase;
       margin: 0;
@@ -250,7 +254,7 @@
       text-align: center;
     }
     h5 {
-     color: #999;
+     color: $text-color;
      font-weight: 600;
      text-transform: uppercase;
      margin: 0;
@@ -268,7 +272,7 @@
       transition: all 0.55s ease;
       p {
         margin: 1.5em 0 0;
-        color: #6e6e70;
+        color: $text-color;
         line-height: 1.4em;
         font-size: 14px;
       }

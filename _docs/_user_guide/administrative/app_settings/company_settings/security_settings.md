@@ -94,104 +94,64 @@ To download this report, do the following:
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
 {% details Reported security events %}
-- Added App
-- Added Campaign
-- Edited Campaign
-- Added Company
-- Added Additional Developer
-- Company Settings Changed
-- Company SAML Configuration Created
-- Company SAML Configuration Updated
-- Company SAML Configuration Deleted
-- Removed Developer
-- Developer Suspended Event
-- Developer Unsuspended Event
-- Updated Account Permission
-- Created App Group Permission Set
-- Updated App Group Permission Set
-- Deleted App Group Permission Set
-- Created Custom Role
-- Updated Custom Role
-- Deleted Custom Role
-- Added News Item
-- Added Card
-- Edited Card
-- Added Segment
-- Edited Segment
-- Added Journey
-- Edited Journey
-- Downloaded SDK
-- Edited Segment Filters
-- Sent Campaign
-- Signed In
-- Signed Up
-- Failed Login
-- Started Elevated Access Flow
-- Completed Elevated Access Flow
-- Failed 2FA Verification For Elevated Access
-- Signed Sandbox TOS
-- Failed Login Non Existent Email
-- Failed Login With Country Code Change
-- Failed Login From Disallowed Country
-- Failed Login From Suspended Developer
-- Failed Switch Not Linked To Company
-- Switched To Linked To Company
-- Switched To Linked To Company Bypassing 2FA Check
-- Two-Factor Auth Setup Completed
-- Two-Factor Auth Reset Completed
-- Password Updated
-- Password Recovery Attempt From Suspended Developer
-- Password Recovery Attempt From Free Trial Developer
-- Linked Twitter
-- Engagement Report Contained Under 10 Campaigns
-- Engagement Report Contained 10 to 50 Campaigns
-- Engagement Report Contained Over 50 Campaigns
-- Downloaded Engagement Report
-- Created Spam Tests
-- Created Inbox Vision Tests
-- Changed Developer Internal Role
-- Added Additional Internal Permission
-- Searched Users
-- Added Funnel Report
-- Edited Funnel Report
-- Removed Funnel Report
-- Added Retention Report
-- Edited Retention Report
-- Removed Retention Report
-- Cleared Developer 2FA
-- Disabled Two Factor Authentication Enforcement
-- Confirmed Account
-- Added App Group
-- Added Push Campaign
-- Added Email Campaign
-- Added Slideup Campaign
-- Added Webhook Campaign
-- Added Content Card Campaign
-- Added Multivariate Campaign
-- Added API Campaign
-- Duplicated Campaign via API
-- Duplicated Canvas via API
-- Added Recurring Campaign
-- Added Optimal Send Time Campaign
-- Added Event-Based Campaign
-- Added In App Message Campaign
-- Added Custom HTML In App Message Campaign
-- Exported data to CSV
-- Exported Segment via API
-- Exported data as Facebook audience
-- Exported subscription group state change data to CSV
-- Added REST API key
-- Removed REST API key
-- Added Basic Auth credential
-- Updated Basic Auth credential
-- Removed Basic Auth credential
-- Added Email Template
-- Updated Email Template
-- Updated Push Credential
-- Removed Push Credential
-- Started SDK Debugger Session
-- Exported SDK Debugger Log
-- Charged Longtail Customer
+### Login and account 
+- REMOVED_DEVELOPER_EVENT
+- ADDED_DEVELOPER_EVENT
+- SIGNED_IN_EVENT
+- FAILED_LOGIN_EVENT
+- TWO_FACTOR_AUTH_SETUP_COMPLETED
+- TWO_FACTOR_AUTH_RESET_COMPLETED
+- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
+- DEVELOPER_SUSPENDED_EVENT
+- DEVELOPER_UNSUSPENDED_EVENT
+
+### Elevated access
+- ELEVATED_ACCESS_FLOW_STARTED_EVENT
+- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
+- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+
+### Campaign
+- ADDED_CAMPAIGN_EVENT
+- EDITED_CAMPAIGN_EVENT
+
+### Canvas
+- ADDED_WORKFLOW_EVENT
+- EDITED_WORKFLOW_EVENT
+
+### Segment
+- ADDED_SEGMENT_EVENT
+- EDITED_SEGMENT_EVENT
+- EXPORTED_SEGMENT_TO_CSV
+- EXPORTED_SEGMENT_VIA_API
+
+### REST API key
+- ADDED_REST_API_KEY
+- REMOVED_REST_API_KEY
+
+### Basic authentication credential
+- ADDED_BASIC_AUTH_CREDENTIAL
+- UPDATED_BASIC_AUTH_CREDENTIAL
+- REMOVED_BASIC_AUTH_CREDENTIAL
+
+### Permission
+- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
+- UPDATED_DEVELOPER_PERMISSION_EVENT
+
+### Company settings
+- ADDED_APP_GROUP
+- ADDED_APP_EVENT
+
+### Email template
+- ADDED_EMAIL_TEMPLATE
+- UPDATED_EMAIL_TEMPLATE
+
+### Push credential
+- UPDATED_PUSH_CREDENTIAL
+- REMOVED_PUSH_CREDENTIAL
+
+### SDK Debugger
+- STARTED_SDK_DEBUGGER_SESSION
+- EXPORTED_SDK_DEBUGGER_LOGS
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
@@ -209,7 +169,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
 | {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes<ul><li>Individual custom attributes can be marked as PII if you don't need to hide all attributes.</li></ul></li> </ul> {:/} |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Limited areas
 
@@ -222,7 +182,7 @@ The following assumes that all fields are set as PII and the users mentioned are
 | {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and customer attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
 | Message activity log | The user won't have access to the preceding standard attributes for any users identified in the message activity log. | |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 When previewing a message, the **View PII** permission isn't applied, so users can see the preceding standard attributes if they were referenced in the message through Liquid.

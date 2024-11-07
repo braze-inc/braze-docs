@@ -20,7 +20,7 @@ The Braze and Kognitiv integration allows you to implement and evaluate your loy
 | Kognitiv account | A [Kognitiv][1] account is required to take advantage of this partnership. |
 | Kognitiv API key | A Kognitiv REST API key. This can be created within the **API Security Tokens** page. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

@@ -58,7 +58,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)

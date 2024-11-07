@@ -50,7 +50,7 @@ You can use pre-defined [segments]({{site.baseurl}}/user_guide/engagement_tools/
 | Marketing Activity | Segment customers based on universal behaviors like last engagement or received campaigns. |
 | User Attributes | Segment customers by their constant attributes and characteristics. |
 | Install Attribution | Segment customers by their first source, ad group, campaign, or ad. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### The "why": Identify conversion events
 

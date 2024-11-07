@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Content Card implementation guide
@@ -460,7 +460,7 @@ Content Cards can be used in a message center format where each message is its o
 For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message.
 
 {% tabs local %}
-{% tab Arbitrary custom view message (full page) %}
+{% tab Arbitrary custom view message - full page %}
 
 The key-value pairs for this use case include:
 
@@ -470,7 +470,7 @@ The key-value pairs for this use case include:
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Webview message (HTML) %}
+{% tab Webview message - HTML %}
 
 The key-value pairs for this use case include:
 

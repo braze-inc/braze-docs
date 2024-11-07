@@ -8,17 +8,12 @@ tool:
  - Campaigns
 channel:
  - LINE
-hidden: true
-permalink: /line/create/
+alias: /line/create/
 ---
 
 # Creating a LINE message
 
-> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
-
-{% alert important %}
-LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
-{% endalert %}
+> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
 ## Prerequisites
 
@@ -28,6 +23,7 @@ Before creating a LINE message, do the following:
 2. Acknolwedge policies, limits, and content rules.
 3. [Set up your LINE connection]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
+Sending LINE messages from Braze will draw from your account's Message Credits.
 
 ## Step 1: Choose where to build your message
 
@@ -47,9 +43,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 2. Select **LINE**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+   * Tags make your campaigns easier to find and build reports out of.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
-6. Select a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -72,9 +67,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Compose your LINE message
 
-Write your message using languages and personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be text or image messages.
+Write your message using personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be any of the available messages layouts: text, image, rich, or card-based.
 
-![LINE composer with a message displayed in the preview.][1]{: style="max-width:70%;"}
+![LINE composer with a message displayed in the preview.][1]
 
 {% alert tip %}
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".

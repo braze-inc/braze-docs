@@ -31,14 +31,14 @@ Braze では、ユーザーに対し、以下のプロトコルを使用して�
 データは、次の方法を使用して、いつでも手動で Braze サーバーにフラッシュできます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] flushDataAndProcessRequestQueue];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -53,19 +53,19 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 - このプロトコルは、次の点を除いて自動リクエスト処理と同じです。
     - カスタム属性とカスタムイベントデータが、ユーザーセッションを通じてサーバーに自動でフラッシュされません。
-- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、[`Appboy.h`][4] で `ABKRequestProcessingPolicy` の宣言を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
+- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、[`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) で `ABKRequestProcessingPolicy` の宣言を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
 
 データは、次の方法を使用して、いつでも手動で Braze サーバーにフラッシュできます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] flushDataAndProcessRequestQueue];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -78,10 +78,10 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### 起動時のリクエストポリシーの設定
 
-これらのポリシーは、アプリの起動時に [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] メソッドから設定できます。`appboyOptions` ディクショナリで、次のコードスニペットに示すように `ABKRequestProcessingPolicyOptionKey` を設定します。
+これらのポリシーは、アプリの起動時に [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) メソッドから設定できます。`appboyOptions` ディクショナリで、次のコードスニペットに示すように `ABKRequestProcessingPolicyOptionKey` を設定します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSDictionary *appboyOptions = @{
@@ -91,7 +91,7 @@ NSDictionary *appboyOptions = @{
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
@@ -108,7 +108,7 @@ let appboyOptions: [AnyHashable: Any] = [
 リクエスト処理ポリシーは、`requestProcessingPolicy` プロパティを `Appboy` で使用することで実行時に設定することもできます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the request processing policy to automatic (the default value)
@@ -116,7 +116,7 @@ let appboyOptions: [AnyHashable: Any] = [
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 // Sets the request processing policy to automatic (the default value)
@@ -131,14 +131,14 @@ Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.au
 「実行中」のサーバー通信を停止する必要がある場合は、次のメソッドを呼び出す必要があります。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] shutdownServerCommunication];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.shutdownServerCommunication();
@@ -149,5 +149,3 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 
 このメソッドを呼び出した後、リクエスト処理モードを自動にリセットする必要があります。そのため、OS がバックグラウンドタスクなどの停止を強制している場合にのみ、これを呼び出すことをお勧めします。
 
-[3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

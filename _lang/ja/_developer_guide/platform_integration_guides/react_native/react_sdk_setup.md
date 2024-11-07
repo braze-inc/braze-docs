@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期セットアップ
+nav_title: SDK の初期設定
 article_title: React Native 向け SDK の初期設定
 platform: React Native
 page_order: 1
@@ -7,7 +7,7 @@ description: "このリファレンスでは、React Native SDK を紹介し、A
 search_rank: 1
 ---
 
-# SDK の初期セットアップ
+# SDK の初期設定
 
 > このリファレンス記事では、React Native 向け Braze SDK のインストール方法について説明します。Braze React Native SDK をインストールすると、基本的な分析機能が提供され、iOS と Android 両方のアプリ内メッセージとコンテンツカードを1つのコードベースで統合できます。
 
@@ -29,7 +29,7 @@ SDKバージョン6.0.0以降、Braze は内部で React Native Turbo Module に
 iOS アプリが `RCTAppDelegate` に準拠し、このドキュメントまたは Braze サンプルプロジェクトの旧 `AppDelegate` 設定に従っていた場合は、Turbo Module でのイベントの購読時にクラッシュが発生しないよう、「[ネイティブ設定の完了](#step-2-complete-native-setup)」のサンプルを必ず参照してください。
 {% endalert %}
 
-## ステップ1:Braze ライブラリーを統合する
+## ステップ 1:Braze ライブラリーを統合する
 
 {% tabs local %}
 {% tab npm %}
@@ -44,10 +44,10 @@ yarn add @braze/react-native-sdk
 {% endtab %}
 {% endtabs %}
 
-## ステップ2:ネイティブセットアップを完了する
+## ステップ 2:ネイティブセットアップを完了する
 
 {% tabs %}
-{% tab 万博 %}
+{% tab Expo %}
 
 #### ステップ 2.1:Braze Expo プラグインのインストール
 
@@ -57,37 +57,37 @@ Braze React Native SDK のバージョンが1.37.0以降であることを確認
 expo install @braze/expo-plugin
 ```
 
-#### ステップ 2.2:プラグインを app.json
+#### ステップ 2.2:app.json にプラグインを追加する
 
 `app.json` で、Braze Expo プラグインを追加します。次の構成オプションを指定できます。
 
 | 方法                                        | タイプ    | 説明                                                                                                                                              |
 | --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `androidApiKey`                               | ストリング  | 必要だ。Androidアプリケーションの[APIキー]({{site.baseurl}}/api/identifier_types/)。Brazeダッシュボードの**Manage Settingsに**ある。 |
-| `iosApiKey`                                   | ストリング  | 必要だ。iOSアプリケーションの[APIキー]({{site.baseurl}}/api/identifier_types/)。Brazeダッシュボードの**Manage Settingsに**ある。     |
-| `baseUrl`                                     | ストリング  | 必要だ。アプリケーションの[SDKエンド]({{site.baseurl}}/api/basics/#endpoints)ポイントは、Brazeダッシュボードの**Manage Settingsに**ある。    |
+| `androidApiKey`                               | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にある Android アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。 |
+| `iosApiKey`                                   | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にある iOS アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。     |
+| `baseUrl`                                     | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にあるアプリケーションの [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)。    |
 | `enableBrazeIosPush`                          | ブーリアン | iOSのみ。iOS でのプッシュ通知の処理に Braze を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                       |
-| `enableFirebaseCloudMessaging`                | ブーリアン | アンドロイドのみ。プッシュ通知に Firebase Cloud Messaging を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。             |
-| `firebaseCloudMessagingSenderId`              | ストリング  | アンドロイドのみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
-| `sessionTimeout`                              | 整数 | アプリケーションのBrazeセッションタイムアウトを秒単位で指定する。                                                                                               |
+| `enableFirebaseCloudMessaging`                | ブーリアン | Android のみ。プッシュ通知に Firebase Cloud Messaging を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。             |
+| `firebaseCloudMessagingSenderId`              | ストリング  | Android のみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
+| `sessionTimeout`                              | 整数 | アプリケーションの Braze セッションタイムアウト (秒単位)。                                                                                               |
 | `enableSdkAuthentication`                     | ブーリアン | [SDK認証](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication)機能を有効にするかどうか。      |
 | `logLevel`                                    | 整数 | アプリケーションのログレベル。デフォルトのログレベルは8で、最小限の情報をロギングします。デバッグのために冗長ロギングを有効にするには、ログレベル0を使う。    |
-| `minimumTriggerIntervalInSeconds`             | 整数 | トリガー間の最小時間間隔を秒単位で指定する。デフォルトは30秒である。                                                                           |
+| `minimumTriggerIntervalInSeconds`             | 整数 | トリガー間の最小時間間隔 (秒単位)。デフォルトは30秒です。                                                                           |
 | `enableAutomaticLocationCollection`           | ブーリアン | 自動位置情報収集が有効かどうか（ユーザーが許可した場合）。                                                                                  |
-| `enableGeofence`                              | ブーリアン | ジオフェンスが有効かどうか。                                                                                                                           |
-| `enableAutomaticGeofenceRequests`             | ブーリアン | ジオフェンスのリクエストを自動的に行うかどうか。                                                                                                  |
-| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルなアプリ内メッセージを解除するかどうか。                                           |
-| `androidHandlePushDeepLinksAutomatically`     | ブーリアン | アンドロイドのみ。Braze SDKが自動的にプッシュディープリンクを処理するかどうか。                                                                         |
-| `androidPushNotificationHtmlRenderingEnabled` | ブーリアン | アンドロイドのみ。`android.text.Html.fromHtml` を使って、プッシュ通知のテキストコンテンツをHTMLとして解釈し、レンダリングするかどうかを設定する。        |
-| `androidNotificationAccentColor`              | ストリング  | アンドロイドのみ。Android通知のアクセントカラーを設定する。                                                                                                |
-| `androidNotificationLargeIcon`                | ストリング  | アンドロイドのみ。Androidの通知アイコンを大きく設定する。                                                                                                  |
-| `androidNotificationSmallIcon`                | ストリング  | アンドロイドのみ。Androidの通知小アイコンを設定する。                                                                                                  |
-| `iosRequestPushPermissionsAutomatically`      | ブーリアン | iOSのみ。アプリ起動時に自動的にプッシュ許可を求めるプロンプトを表示するかどうか。                                                          |
+| `enableGeofence`                              | ブーリアン | ジオフェンスを有効にするかどうか。                                                                                                                           |
+| `enableAutomaticGeofenceRequests`             | ブーリアン | ジオフェンスリクエストを自動で行うかどうか。                                                                                                  |
+| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルアプリ内メッセージが閉じられるかどうか。                                           |
+| `androidHandlePushDeepLinksAutomatically`     | ブーリアン | Android のみ。Braze SDKが自動的にプッシュディープリンクを処理するかどうか。                                                                         |
+| `androidPushNotificationHtmlRenderingEnabled` | ブーリアン | Android のみ。`android.text.Html.fromHtml` を使って、プッシュ通知のテキストコンテンツをHTMLとして解釈し、レンダリングするかどうかを設定する。        |
+| `androidNotificationAccentColor`              | ストリング  | Android のみ。Android通知のアクセントカラーを設定する。                                                                                                |
+| `androidNotificationLargeIcon`                | ストリング  | Android のみ。Androidの通知アイコンを大きく設定する。                                                                                                  |
+| `androidNotificationSmallIcon`                | ストリング  | Android のみ。Androidの通知小アイコンを設定する。                                                                                                  |
+| `iosRequestPushPermissionsAutomatically`      | ブーリアン | iOSのみ。アプリの起動時にユーザーにプッシュ許可を自動的に求めるかどうか。                                                          |
 | `enableBrazeIosRichPush`                      | ブーリアン | iOSのみ。iOSのリッチプッシュ機能を有効にするかどうか。                                                                                                  |
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 構成例:
 
@@ -138,7 +138,7 @@ expo prebuild
 [Expo ドキュメント](https://docs.expo.dev/workflow/customizing/)の指定に従い、アプリケーションを実行します。構成オプションを変更するには、アプリケーションを事前ビルドして再度実行する必要があることに注意してください。
 
 {% endtab %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 #### ステップ 2.1:リポジトリの追加
 
@@ -175,7 +175,11 @@ Braze サーバーに接続するには、プロジェクトの `res/values` フ
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### ステップ 2.3:ユーザーセッショントラッキングの実装
+{% alert tip %}
+Braze SDK バージョン12.2.0 以降では、`importBrazeLocationLibrary=true` を`gradle.properties` ファイルに設定することで、android-sdk-location ライブラリを自動的にプルインできます。
+{% endalert %}
+
+#### ステップ2.3: ユーザーセッショントラッキングの実装
 
 `openSession()` および `closeSession()` への呼び出しは自動的に処理されます。
 `MainApplication` クラスの `onCreate()` メソッドに次のコードを追加します。
@@ -244,7 +248,7 @@ pod 'BrazeUI', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-sw
 pod 'BrazeLocation', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeLocation.podspec'
 ```
 
-#### ステップ2.2: ポッドのインストール
+#### ステップ 2.2:ポッドのインストール
 
 React Native ではライブラリーがネイティブプラットフォームに自動でリンクされるため、CocoaPods を使用して SDK をインストールできます。
 
@@ -352,7 +356,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-## ステップ3:使用
+## ステップ 3: 使用
 
 インストールしたら、 React Native コードでライブラリーを `import` できます。
 
@@ -364,7 +368,7 @@ import Braze from "@braze/react-native-sdk";
 
 ## 基本的な統合のテスト
 
-この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード (\[**概要**] セクション) に新しいセッションが表示されます。
+この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード ([**概要**] セクション) に新しいセッションが表示されます。
 
 アプリで次のコードを呼び出すことで、特定のユーザーのセッションを開始できます。
 
@@ -390,9 +394,6 @@ const App = () => {
   )
 ```
 
-その後、ダッシュボードの \[[ユーザー検索][user-search]] で `some-user-id` を使用してユーザーを検索できます。そこで、セッションとデバイスデータがロギングされていることを確認できます。
+その後、ダッシュボードの [[ユーザー検索]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search)] で `some-user-id` を使用してユーザーを検索できます。そこで、セッションとデバイスデータがロギングされていることを確認できます。
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK のインストール"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK のインストール"
-[user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

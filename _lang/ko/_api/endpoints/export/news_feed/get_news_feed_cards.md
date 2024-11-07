@@ -24,21 +24,21 @@ description: "이 문서에서는 내보내기 뉴스피드 카드 목록 Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `feed.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `page` | 선택 사항 | 정수 | 반환할 카드 페이지, 기본값은 0입니다(최대 100개의 첫 번째 세트를 반환합니다). |
-| `include_archived` | 선택 사항 | 부울 | 보관된 카드를 포함할지 여부, 기본값은 false입니다. |
-| `sort_direction` | 선택 사항 | 문자열 | - 생성 시간을 최신에서 오래된 순으로 정렬: `desc` 값을 전달합니다.<br> \- 생성 시간을 가장 오래된 것부터 가장 최근 것 순으로 정렬: `asc` 값을 전달합니다. <br><br>`sort_direction` 이 포함되지 않은 경우 기본 순서는 가장 오래된 것부터 최신 것까지입니다. |
+| `page` | 선택 사항 | 정수   | 반환할 카드 페이지의 기본값은 0입니다(최대 100개 중 첫 번째 세트를 반환합니다). |
+| `include_archived` | 선택 사항 | 부울   | 보관된 카드를 포함할지 여부는 기본값이 false입니다. |
+| `sort_direction` | 선택 사항 | 문자열 | \- 생성 시간을 최신에서 오래된 순으로 정렬: `desc` 값을 전달합니다.<br> \- 생성 시간을 가장 오래된 것부터 가장 최근 것 순으로 정렬: `asc` 값을 전달합니다. <br><br>`sort_direction` 이 포함되지 않은 경우 기본 순서는 가장 오래된 것부터 최신 것까지입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

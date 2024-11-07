@@ -23,10 +23,9 @@ channel:
 
 ## ステップ 1:ニュースフィードクリックリスナーを実装する
 
-[`IFeedClickActionListener`][37] を実装するクラスを作成します。ユーザーがニュースフィードカードをクリックしたときに呼び出される `onFeedCardClicked()` メソッドを実装します。
+[`IFeedClickActionListener`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java) を実装するクラスを作成します。ユーザーがニュースフィードカードをクリックしたときに呼び出される `onFeedCardClicked()` メソッドを実装します。
 
 ## ステップ 2:ニュースフィードクリックリスナーを使用するよう Braze に指示する
 
 `IFeedClickActionListener` が作成されたら、`BrazeFeedManager.getInstance().setFeedCardClickActionListener()` を呼び出して `BrazeFeedManager` にカスタムの `IFeedClickActionListener` を使用するよう指示します。
 
-[37]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java

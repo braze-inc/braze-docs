@@ -21,7 +21,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 | --- | --- |
 | Subscribed | User has explicitly confirmed that they want to receive WhatsApp messages from a specific company. Users can be subscribed by having their subscription state updated through the Braze subscription API or by deploying an opt-in strategy, as per WhatsApp's guidelines. |
 | Unsubscribed | User either hasn’t explicitly given consent for opt-in or their opt-in status has been explicitly removed. <br><br> Users unsubscribed from a WhatsApp subscription group will no longer receive any WhatsApp messages from sending phone numbers that belong to the subscription group. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Setting users' WhatsApp subscription groups
 
@@ -39,9 +39,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 - **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using Braze's REST API. 
 
-## WhatsApp opt-in process
+## WhatsApp opt-in and opt-out process
 
-Currently, users can subscribe and [opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Note that opt-ins are required.
+Currently, users can subscribe and [opt-in and opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) to WhatsApp messaging in various ways, including [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), through a website, a WhatsApp thread, phone, or in person. Note that opt-ins are required.
 
 Opt-in keywords are not currently supported for the WhatsApp channel, so it will be up to you to maintain a user list. WhatsApp has a retrospective approach to opt-ins and rate limits, where if users start reporting or blocking you, your rate limit will be lowered. 
 

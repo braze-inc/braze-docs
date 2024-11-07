@@ -15,7 +15,7 @@ page_order: 0
 Cordova 6 以降では、GitHub から直接 SDK を追加できます。または、[GitHub リポジトリ](https://github.com/braze-inc/braze-cordova-sdk)の ZIP をダウンロードして、SDK を手動で追加することもできます。
 
 {% tabs local %}
-{% tab ジオフェンス disabled %}
+{% tab ジオフェンス無効 %}
 ロケーションコレクションとジオフェンスを使用する予定がない場合は、GitHub の `master` ブランチを使用してください。
 
 ```bash
@@ -23,8 +23,8 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 {% endtab %}
 
-{% tab ジオフェンス enabled %}
-位置情報の収集とジオフェンスの使用を計画している場合は、GitHub の を使用します `geofence-branch` 。
+{% tab ジオフェンス有効 %}
+位置情報の収集とジオフェンスの使用を計画している場合は、GitHub の `geofence-branch` を使用します。
 
 ```bash
 cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
@@ -36,12 +36,12 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 ステップ 1 を繰り返すことで、いつでも `master` と `geofence-branch` を切り替えることができます。
 {% endalert %}
 
-### ステップ2:プロジェクトを構成する
+### ステップ 2:プロジェクトを構成する
 
 次に、プロジェクトの `config.xml` ファイル内の `platform` 要素に次の環境設定を追加します。
 
 {% tabs %}
-{% tab イオス %}
+{% tab ios %}
 ```xml
 <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.ios_api_endpoint" value="CUSTOM_API_ENDPOINT" />
@@ -66,7 +66,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 `config.xml` ファイルの `platform` 要素は次のようになります。
 
 {% tabs %}
-{% tab イオス %}
+{% tab ios %}
 ```xml
 <platform name="ios">
     <preference name="com.braze.api_key" value="BRAZE_API_KEY" />

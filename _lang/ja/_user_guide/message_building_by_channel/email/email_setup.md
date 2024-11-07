@@ -4,7 +4,7 @@ article_title: オンボーディングメールセットアップ
 layout: dev_guide
 page_order: 1
 guide_top_header: "メール設定"
-guide_top_text: "Brazeは、メールキャンペーンの送信を開始するのに役立ちます。ガイドに従うか、<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>メールオンボーディング</a> Brazeラーニングコースをチェックしてください。"
+guide_top_text: "Brazeは、メールキャンペーンの送信を開始するのに役立ちます。ガイドに従うか、<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>メールオンボーディング</a>の Braze ラーニングコースを参照してください。"
 page_type: landing
 description: "このランディングページには、メールキャンペーンの開始に関するリソースが含まれており、IPやドメインの設定、IPウォーミング、メールの検証などが含まれています。"
 channel: email
@@ -17,7 +17,7 @@ guide_featured_list:
 - name: "IP ウォームアップ"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/
   image: /assets/img/braze_icons/annotation-alert.svg
-- name: "メール Validation"
+- name: "メール検証"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "メール認証"
@@ -43,21 +43,21 @@ guide_featured_list:
 
 | 要件 | 説明 | ソース |
 |---|---|---|
-| 専用IP（インターネットプロトコル）| 専用IPは、単一のホスティングアカウントにのみ提供されるユニークなインターネットアドレスです。 | Brazeは顧客に専用のIPを提供し、メール送信者の評判をコントロールできるようにします。Brazeのオンボーディングがこれを設定します。|
-| ホワイトラベルドメイン | これらはドメインとサブドメインで構成されています。ホワイトラベリングを使用することで、DKIMおよびSPFのメール認証チェックを通過できます。 | Brazeオンボーディングチームはこれらのドメインを生成しますが、名前を選択する必要があります。 |
-| サブドメイン | これは、メールアドレス内のドメイン（「@news.company.com」など）のサブディビジョンです。サブドメインを持つことで、会社の公式メールの評判を損なう可能性のあるエラーを防ぐことができます。 | オンボーディングチームがこれを生成しますが、サブドメインの名前を決めるのはあなたです。Brazeの外部で現在使用されているサブドメインは使用できません。 |
+| 専用IP（インターネットプロトコル）| 専用 IP は、単一のホスティングアカウント用に提供される一意のインターネットアドレスです。 | Brazeは顧客に専用のIPを提供し、メール送信者の評判をコントロールできるようにします。これは Braze のオンボーディングによって設定されます。|
+| ホワイトラベルドメイン | これらはドメインとサブドメインで構成されています。ホワイトラベルを使用することで、DKIM および SPF のメール認証検査を通過できます。 | これらのドメインは Braze オンボーディングチームによって生成されますが、ドメインの名前は選択する必要があります。 |
+| サブドメイン | これは、メールアドレス内のドメイン（「@news.company.com」など）のサブディビジョンです。サブドメインを持つことで、会社の公式メールの評判を損なう可能性のあるエラーを防ぐことができます。 | これはオンボーディングチームによって生成されますが、サブドメインの名前は決定する必要があります。Brazeの外部で現在使用されているサブドメインは使用できません。 |
 | IP プール | これらは、1つのメールの評判が他のメールに影響を与えるのを防ぎ、より高い配信率をサポートするために、異なる種類のメール（「プロモーション」や「トランザクション」など）の評判を分けるために使用されるオプションの設定です。 | オンボーディングチームがプールを設定します。次に、メールを作成するときに、**IP Pool** ドロップダウンからメールのIPプールを選択し、**Target Users** ページで選択します。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## IPウォーミング
 
 {% alert important %}
-IPウォーミングはメール設定プロセスにおける**最も重要なステップ**です。これは最初のステップではありませんが（実際には最後のステップです）、ここでお知らせするのは、IPアドレスをウォームアップしなければ、送信するメールがスパムに送られたり、他の送信障害に遭遇したりする可能性があるためです。
+IP ウォーミングはメール設定のプロセスにおける**最も重要なステップ**です。これは最初のステップではありませんが（実際には最後のステップです）、ここでお知らせするのは、IPアドレスをウォームアップしなければ、送信するメールがスパムに送られたり、他の送信障害に遭遇したりする可能性があるためです。
 {% endalert %}
 
-[IPウォーミング]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)とは、最初のバッチで比較的少数のメールを送信し、その後、次のバッチで徐々に量を増やしていき、通常の1日の量に達するまでのプロセスです。これは、メール設定プロセスの最後に行われます。
+[IPウォーミング]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)とは、最初のバッチで比較的少数のメールを送信し、その後、次のバッチで徐々に量を増やしていき、通常の1日の量に達するまでのプロセスです。これは、メールの設定プロセスの最後に行われます。
 
-少量のメールから始めることで、メールプロバイダーとの信頼関係を築き、関連するユーザーにのみメールを送信していることを示しています。最も関心のあるユーザーに最初のメールを送信することで、プロバイダーとの信頼を早く得ることができます。
+少量のメールから始めることで、メールプロバイダーとの信頼関係を確立し、関連のあるユーザーにのみメールを送信していることを示します。最初のバッチを最もエンゲージメントの高いユーザーに送信することで、プロバイダーの信頼をより迅速に得ることができます。
 
 IPのウォームアップが完了したら、[メールの作成と送信を開始できます]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)！
 

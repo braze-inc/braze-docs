@@ -2,7 +2,7 @@
 nav_title: レポート
 article_title: コンテンツ・カードのレポート
 page_order: 4
-description: "この参考記事では、Brazeダッシュボードで提供されるさまざまなContent Cardレポートメトリクスと分析オプションの概要を説明する。"
+description: "この記事では、Braze ダッシュボードで提供されるさまざまなコンテンツカードレポートの指標と分析オプションの概要を説明します。"
 channel:
   - content cards
 tool:
@@ -12,6 +12,6 @@ tool:
 
 # コンテンツ・カードのレポート
 
-> この参考記事では、Brazeダッシュボードで提供されるさまざまなContent Cardレポートメトリクスと分析オプションの概要を説明する。
+> この記事では、Braze ダッシュボードで提供されるさまざまなコンテンツカードレポートの指標と分析オプションの概要を説明します。
 
 {% multi_lang_include campaign_analytics.md channel="Content Card" %}

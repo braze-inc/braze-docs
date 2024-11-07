@@ -180,7 +180,7 @@ None of this has synced to Braze before, so add all of it to the source table fo
 | 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
 | 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
 | 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 A sync runs, and Braze records that you synced all available data up until “2023-03-16 15:00:00”. Then, on the morning of day 2, you have an ETL that runs and some fields in your users table are updated (highlighted):
 
@@ -247,7 +247,7 @@ Now you need to add only the changed values into the CDI source table. These row
 | 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
 | 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
 | 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 CDI will only sync the new rows, so the next sync that runs will only sync the last five rows.
 
@@ -352,11 +352,15 @@ Each time a sync runs, Braze looks for rows that have not previously been synced
 
 Data point consumption is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
 
-### Use a UTC timestamp for the UPDATED_AT column
+### Use a UTC timestamp for the `UPDATED_AT` column
 
 The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
 
-### Separate EXTERNAL_ID from PAYLOAD column
+### Make sure the `UPDATED_AT` time isn't the same time as your sync
+
+Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as your previous sync time. This is because the CDI will choose an "inclusive boundary" when it spots any row that is the same time as the previous sync, and will make the rows viable to sync. The CDI will re-ingest those rows and create duplicate data. 
+
+### Separate `EXTERNAL_ID` from `PAYLOAD` column
 
 The `PAYLOAD` object should not include an external ID or other ID type. 
 
@@ -479,7 +483,7 @@ SELECT
 {% endtab %}
 {% endtabs %}
 
-### Use the UPDATED_AT timestamp
+### Use the `UPDATED_AT` timestamp
 
 We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
 - If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
@@ -595,6 +599,6 @@ We recommend that queries be completed within one hour for optimal performance a
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <br><br>

@@ -12,7 +12,7 @@ tool:
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
@@ -54,7 +54,7 @@ The following are the differences between these two options:
 | **Building Report** | You will be able to narrow down your campaign list using filters, and then check off specific campaigns. | You will build your report by using the filter options to narrow down your campaign list. |
 | **Saving and Viewing Report** | You can save your report. The next time you view it, you will be able to view the same campaign you previously added, as these campaigns still fall under your "Last Sent" filter. | You can save your report. The next time you view it, the report will automatically update to include all campaigns that currently match your filters. |
 | **Editing Report** | You can click Edit Report to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %} 
 Both **Manual** and **Automated** reports can include a maximum of 250 campaigns in a report. 

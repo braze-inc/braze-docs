@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期セットアップ
+nav_title: SDK の初期設定
 article_title: Roku の SDK 初期設定
 platform: Roku
 page_order: 0
@@ -13,17 +13,17 @@ search_rank: 1
 > このリファレンス記事では、Roku 向け Braze SDK のインストール方法について説明します。Braze Roku SDK をインストールすると、基本的な分析およびセグメンテーション機能が提供されます。
 
 {% alert tip %}
-GitHubのサンプルRokuアプリをチェックしよう：[TorchieTV](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)だ。
+GitHubのサンプルRokuアプリをチェックしよう：[TorchieTV](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)。
 {% endalert %}
 
 ## ステップ1:ファイルの追加
 
-Braze SDKファイルは、[Braze Roku SDK][1]リポジトリの`sdk_files` ディレクトリにある。
+Braze SDK ファイルは、[Braze Roku SDK リポジトリ](https://github.com/braze-inc/braze-roku-sdk) の `sdk_files` ディレクトリにあります。
 
 1. `source` ディレクトリで、アプリに `BrazeSDK.brs` を追加します。
 2. `components` ディレクトリで、アプリに `BrazeTask.brs` と `BrazeTask.xml` を追加します。
 
-## ステップ2:参照の追加
+## ステップ 2:参照の追加
 
 次の `script` 要素を使用して、メインシーンに `BrazeSDK.brs` への参照を追加します。
 
@@ -46,7 +46,7 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
-[SDKエンド]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)ポイントとAPIキーは、Brazeダッシュボードで確認できる。
+[SDK エンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)と API キーは、Braze ダッシュボード内にあります。
 
 ## ステップ4: Braze の初期化
 
@@ -57,21 +57,16 @@ m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```
 
-## ログを有効にする（オプション） {#logging}
+## ロギングを有効にする (オプション) {#logging}
 
-Braze 統合をデバッグするため、Braze ログの Roku デバッグコンソールを表示できます。詳しくはRoku Developersの[Debugging codeを](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md)参照のこと。
+Braze 統合をデバッグするため、Braze ログの Roku デバッグコンソールを表示できます。詳細については、Roku Developers の [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) を参照してください。
 
-## SDKの基本的な統合が完了した
+## 基本的な SDK 統合の完了
 
 Braze で、Braze Roku SDK を使用してアプリケーションからデータが収集されるようになりました。 
 
-当社のSDKに[属性][2]、[イベント][3]、[購入を][4] [記録する][2]方法については、以下の記事を参照のこと。
+当社のSDKに[属性]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)、[イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)、[購入を]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)記録する方法については、以下の記事を参照のこと。
 
-Rokuでのアプリ内メッセージの詳細については、[アプリ内メッセージ統合ガイドを][5]参照のこと。
+Roku のアプリ内メッセージングについて詳しくは、[アプリ内メッセージ統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)をご覧ください。
 
 
-[1]: https://github.com/braze-inc/braze-roku-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/

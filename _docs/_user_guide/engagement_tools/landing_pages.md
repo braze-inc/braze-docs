@@ -11,9 +11,12 @@ alias: /landing_pages/
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Landing Pages
+  - name: Drag-and-Drop Editor
     link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
     image: /assets/img/braze_icons/marker-pin-01.svg
+  - name: Connecting a Subdomain
+    link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
+    image: /assets/img/braze_icons/refresh-cw-02.svg
 ---
 
 {% alert important %}

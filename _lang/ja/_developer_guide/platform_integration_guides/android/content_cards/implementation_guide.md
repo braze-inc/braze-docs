@@ -1,5 +1,5 @@
 ---
-nav_title: 上級実装ガイド (オプション)
+nav_title: 高度な実装ガイド (オプション)
 article_title: Android 用コンテンツカード実装ガイド (オプション) 
 platform: Android
 page_order: 7
@@ -10,7 +10,7 @@ channel:
 ---
 # 高度な実装ガイド (オプション)
 
-> このオプションおよび高度な実装ガイドでは、コンテンツカードコードの考慮事項、当社チームが作成した3つのカスタムユースケース、付随するコードスニペット、およびロギングインプレッション、クリック、および削除に関するガイダンスについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-android-demo-app) Braze Demo リポジトリにアクセスしてください。この実装ガイドは、Kotlin 実装を中心に扱っていますが、興味のある方のために Java のスニペットが提供されています。
+> このオプションおよび高度な実装ガイドでは、コンテンツカードコードの考慮事項、当社チームが作成した3つのカスタムユースケース、付随するコードスニペット、およびロギングインプレッション、クリック、および削除に関するガイダンスについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-android-demo-app) Braze Demo リポジトリにアクセスしてください。この実装ガイドは、Kotlin 実装を中心に扱っていますが、興味のある人のために Java のスニペットが提供されています。
 
 {% alert important %}
 基本的なコンテンツカード開発者統合ガイドをお探しですか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)にあります。<br><br>コンテンツカードのカスタマイズの詳細については、[カスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards)を参照してください。
@@ -172,7 +172,7 @@ public class Tile extends ContentCardable {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab タイプを特定する %}
+{% tab タイプの識別 %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **タイプの識別**<br>
@@ -255,7 +255,7 @@ enum ContentCardClass {
 ## カスタムカードレンダリング{#customizing-card-rendering-for-android}
 
 {% tabs local %}
-{% tab アンドロイド・ビュー・システム %}
+{% tab Android View System %}
 
 次のリストは、`recyclerView`でカードをレンダリングする方法の変更について示しています。`IContentCardsViewBindingHandler`インターフェイスは、すべてのコンテンツカードのレンダリング方法を定義します。これをカスタマイズして、必要なものを変更することができます。
 
@@ -430,7 +430,7 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 {% endsubtab %}
 {% endsubtabs %}
 
-このコードはここにもある \[`DefaultContentCardsViewBindingHandler`][56].
+このコードはここにもある。 [`DefaultContentCardsViewBindingHandler`](https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java).
 
 次に、このクラスの使用方法を示します。
 
@@ -460,7 +460,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 このトピックに関するその他の関連リソースは、[Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4) に関するこの記事で入手できます。
 
 {% endtab %}
-{% tab ジェットパック・コンポーズ %}
+{% tab Jetpack Compose %}
 Jetpack Compose でカードを完全にカスタマイズする場合、カスタムの Composable 関数を作成すると次のようになります。
 
 1. Composable をレンダリングし、`true`を返します。
@@ -502,7 +502,7 @@ ContentCardsList(
 
 ## カードの却下
 
-Swipe-to-Dismiss機能の無効化は、\[`card.isDismissibleByUser()`][9] ]メソッドによってカードごとに行われる。カードは、\[`ContentCardsFragment.setContentCardUpdateHandler()`][8] ]メソッドを使って表示前にインターセプトすることができる。
+Swipe-to-Dismiss機能の無効化は、以下のメソッドによってカードごとに行われる。 [`card.isDismissibleByUser()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html)メソッドで行う。カードは表示される前に [`ContentCardsFragment.setContentCardUpdateHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)メソッドを使う。
 
 ## ダークテーマのカスタマイズ
 
@@ -517,7 +517,7 @@ Swipe-to-Dismiss機能の無効化は、\[`card.isDismissibleByUser()`][9] ]メ�
 #### **実装コンポーネント**<br><br>
 
 {% tabs %}
-{% tab コトリン %}
+{% tab Kotlin %}
 **カスタムオブジェクトによるロギングメソッドの呼び出し**<br>
 `ContentCardable` ベースクラス内で、必要に応じて`BrazeManager`を直接呼び出すことができます。この例では、オブジェクトがコンテンツカードから取得された場合、`cardData`プロパティは NULL 以外になります。 
 
@@ -555,7 +555,7 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
     }
 ```
 {% endtab %}
-{% tab ジャワ %}
+{% tab Java %}
 **カスタムオブジェクトによるロギングメソッドの呼び出し**<br>
 `ContentCardable` ベースクラス内で、必要に応じて`BrazeManager`を直接呼び出すことができます。この例では、オブジェクトがコンテンツ・カードから来たものであれば、`cardData` プロパティが非NULLになることを覚えておいてほしい。 
 ```java
@@ -605,7 +605,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 
 {% details ContentCardKeyヘルパーファイル %}
 {% tabs %}
-{% tab コトリン %}
+{% tab Kotlin %}
 ```kotlin
 companion object Keys{
         const val idString = "idString"
@@ -616,7 +616,7 @@ companion object Keys{
     }
 ```
 {% endtab %}
-{% tab ジャワ %}
+{% tab Java %}
 ```java
 public static final String IDSTRING = "idString";
 public static final String CREATED = "created";
@@ -628,20 +628,3 @@ public static final String DISMISSABLE = "dismissable";
 {% endtabs %}
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/cc_implementation/android_supplemental_content.png %}
-[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
-[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
-[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %}
-[7]: {% image_buster /assets/img/cc_implementation/discount.png %}
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
-[9]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html
-[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[42]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[44]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
-[45]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
-[46]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
-[49]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
-[56]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java

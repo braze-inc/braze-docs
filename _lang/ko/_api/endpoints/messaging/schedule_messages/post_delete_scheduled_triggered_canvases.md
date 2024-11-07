@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: 예약된 API 트리거 캔버스 삭제하기"
-article_title: "POST: 예약된 API 트리거 캔버스 삭제하기"
+nav_title: "POST: 예약된 API-트리거 캔버스 삭제"
+article_title: "POST: 예약된 API-트리거 캔버스 삭제"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "이 문서에서는 예약된 API로 트리거되는 캔버스 Bra
 
 ---
 {% api %}
-# 예약된 API 트리거 캔버스 삭제하기
+# 예약된 API 트리거 캔버스 삭제
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
@@ -20,11 +20,11 @@ description: "이 문서에서는 예약된 API로 트리거되는 캔버스 Bra
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `canvas.trigger.schedule.delete` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -44,14 +44,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| 필수 | 문자열 | [캔버스 식별자]({{site.baseurl}}/api/identifier_types/) 참조. |
-| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 만들기 응답에서 가져온 값)입니다. |
+| `canvas_id`| 필수 | 문자열 | [캔버스 식별자]({{site.baseurl}}/api/identifier_types/) |
+| `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 생성에 대한 응답에서 얻음). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/delete' \
 --header 'Content-Type: application/json' \

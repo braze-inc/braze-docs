@@ -11,7 +11,7 @@ description: "この記事では、Flutter アプリでの基本的な分析の�
 
 > この記事では、Flutter アプリでの基本的な分析の設定方法と追跡方法について説明します。
 
-始める前に、[分析の概要][0]の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則][1]についてもよく理解しておくことをお勧めします。
+始める前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## セッショントラッキング
 
@@ -89,13 +89,13 @@ braze.incrementCustomUserAttribute("key", integer);
 ```
 
 {% endtab %}
-{% tab ダブル %}
+{% tab Double %}
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab ストリング %}
+{% tab String %}
 
 ```dart
 braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
@@ -161,5 +161,3 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

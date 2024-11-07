@@ -19,11 +19,11 @@ description: "이 문서에서는 기존 대시보드 사용자 계정 조회 Br
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 자세한 내용은 [자동 사용자 프로비저닝]({{site.baseurl}}/scim/automated_user_provisioning/)을 참조하세요.
 
-## 비율 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
@@ -31,7 +31,7 @@ description: "이 문서에서는 기존 대시보드 사용자 계정 조회 Br
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `id`| 필수 | 문자열 | 사용자의 리소스 ID입니다. 이 매개변수는 `POST` `/scim/v2/Users/` 또는 `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` 메서드로부터 반환됩니다. |
+| `id` | 필수 | 문자열 | 사용자의 리소스 ID입니다. 이 매개변수는 `POST` `/scim/v2/Users/` 또는 `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` 메서드에서 반환됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## 요청 본문
@@ -41,7 +41,7 @@ X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
-## 예시 요청
+## 요청 예시
 ```json
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \

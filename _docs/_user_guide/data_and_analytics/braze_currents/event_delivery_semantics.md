@@ -3,21 +3,21 @@ nav_title: Event Delivery Semantics
 article_title: Event Delivery Semantics
 page_order: 3
 page_type: reference
-description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse partners."
+description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse Storage partners."
 tool: Currents
 
 ---
 
 # Event delivery semantics
 
-> This article outlines how Currents manages flat file event data we send to Data Warehouse partners.
+> This article outlines how Currents manages flat file event data we send to Data Warehouse Storage partners.
 
 Currents for Data Storage is a continuous streams of data from our platform to a storage bucket on one of our data warehouse [partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
 {% alert important %}
-Note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+Note that this content **only applies to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
 {% endalert %}
 
 
@@ -65,7 +65,7 @@ Can't see the code because of the scroll bar? See how to fix that [here]({{site.
 | `<zone>` | For internal use by Braze. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. Note that different files sent within the same hour will have a different `<offset>` parameter. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.

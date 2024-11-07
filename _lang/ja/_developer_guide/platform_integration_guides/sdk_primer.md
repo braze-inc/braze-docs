@@ -13,9 +13,9 @@ SDK の基本的な概要を探しているマーケターは、代わりに[マ
 
 Braze SDK を簡単に説明すると、次のとおりです。
 * ユーザーデータを収集し、統合ユーザープロファイルに同期します
-* セッション情報、機器情報、プッシュトークンを自動的に収集
-* 業務に固有のマーケティング エンゲージメントデータおよびカスタムデータをキャプチャする
-* s、アプリ内メッセージ s、およびコンテンツカードメッセージング チャネルの電源をプッシュ通知にします
+* セッションデータ、デバイス情報、プッシュトークンを自動的に収集します
+* マーケティングエンゲージメントデータとビジネスに固有のカスタムデータを取得します
+* プッシュ通知、アプリ内メッセージ、コンテンツカード メッセージング チャネルを強化します
 
 ## アプリのパフォーマンス
 
@@ -79,7 +79,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 {% endalert %}
 
 {% endtab %}
-{% tab 迅速なSDK %}
+{% tab Swift SDK %}
 
 `Braze.Configuration` で対象となるフィールドのセットを [`configuration.devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) に割り当て、SDK で収集されるデバイスフィールドの許可リストを指定することができます。フィールドの完全なリストは [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) で定義されます。すべてのデバイスフィールドの収集をオフにするには、このプロパティの値を空のセット (`[]`) に設定します。
 
@@ -96,7 +96,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 
 ダッシュボードを使用して、**\[設定] > \[アプリ設定]** から特定のアプリの SDK バージョンを確認できます。\[**ライブ SDK バージョン**] には、ユーザーの5% 以上を対象とする最新のライブアプリケーションで使用されている最上位の Braze SDK バージョンが一覧にされています。
 
-![ワークスペース内のスウィフティという名前のアプリ。ライブSDKは6.6.0 です。][2]{: style="max-width:80%"} 
+![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0です。][2]{: style="max-width:80%"} 
 
 {% alert tip %}
 iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) を使用していることを確認できます。

@@ -15,7 +15,7 @@ channel:
 
 Braze SDK バージョン3.1.1 では、HTML をデバイスに送信し、プッシュ通知でマルチプライヤーテキストをレンダリングできます。
 
-![アンドロイドのプッシュ・メッセージ「マルチカラー・プッシュ・テスト・メッセージ」は、文字が異なる色で斜体になり、背景色が与えられている。][1]{: style="max-width:40%;"}
+![Android のプッシュメッセージ「マルチカラー・プッシュ・テスト・メッセージ」。文字の色が異なり、イタリック体で、バックグラウンドカラーが与えられている。]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
 この例は、以下の HTML でレンダリングされます。
 
@@ -45,7 +45,7 @@ Android OS では、プッシュ通知で有効な HTML 要素 / タグが制限
 
 **または** 
 
-`BrazeConfig`][2] に以下を追加する：
+以下を追加する。 [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
 
 {% tabs %}
 {% tab JAVA %}
@@ -70,5 +70,3 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/multicolor_android_push.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration

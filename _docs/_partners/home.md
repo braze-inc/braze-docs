@@ -298,8 +298,16 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
 - name: Inbox Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: mypostcard
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 ---

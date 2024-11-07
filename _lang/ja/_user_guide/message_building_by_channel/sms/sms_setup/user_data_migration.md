@@ -24,7 +24,7 @@ noindex: true
 
 ## ユーザーのサブスクリプション状態に関する履歴情報を更新する
 
-ユーザーの\[サブスクリプション状態]\[サブスクリプション状態]の様々なメッセージングチャネルに関する履歴情報がある場合は、この情報をBrazeで更新してください。
+ユーザーの\[サブスクリプション状態]\[サブスクリプション状態] のさまざまなメッセージングチャネルに関する履歴情報がある場合は、必ず Braze でこの情報を更新してください。
 
 ## 例の移行手順
 
@@ -35,7 +35,7 @@ Brazeを通じてSMSキャンペーンを作成し始める前に、すべてが
 1. **ユーザーの電話番号を正しい形式でインポートする** ([E.164][0]) フォーマットにはプラス記号（+）と国コードが必要です。例としては+12408884782です。ユーザーの電話番号のインポート方法の詳細については、[ユーザーの電話番号][userphone]をご覧ください。
     * [`/users/track`エンドポイント][1]を使用して`phone`値を割り当てます。<br><br>
 
-2. **ユーザーのSMSサブスクリプション状態]\[subscriptionstate]**（購読中や購読解除など）を割り当てます。もしこの情報を持っている場合。
+2. 情報がある場合、**ユーザーの SMS \[サブスクリプション状態]\[サブスクリプション状態]を割り当てます** (配信登録済み、配信停止済みなど)。
     * [`/subscription/status/set`エンドポイント][6]を使用して、ユーザーをSMSサブスクリプショングループにサブスクライブまたはサブスクライブ解除として設定します。
 
 {% alert note %}
@@ -50,6 +50,6 @@ Brazeを通じてSMSキャンペーンを作成し始める前に、すべてが
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 [6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
-\[絵]: {% image_buster /assets/img/sms/e164.jpg %}
+\[picture]: {% image_buster /assets/img/sms/e164.jpg %}
 \[customkeyword]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
 \[subscriptionstate]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#sms-subscription-states

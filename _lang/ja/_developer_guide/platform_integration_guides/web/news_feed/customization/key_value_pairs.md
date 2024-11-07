@@ -19,8 +19,5 @@ channel: news feed
 
 オプションで、`Card` オブジェクトはキーと値のペアを `extras` として保持できます。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。`card.extras`を呼び出して、これらの値にアクセスします。
 
-[ClassicCard][3]、[ImageOnly][4]、[CaptionedImageについては][5]JSDocsを参照のこと。
+[ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html)、[ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html)、[CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) については JSDocs を参照してください。
 
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html

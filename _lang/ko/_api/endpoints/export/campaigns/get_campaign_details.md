@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 캠페인 세부 정보 내보내기"
-article_title: "GET: 캠페인 세부 정보 내보내기"
+nav_title: "GET: 내보내기 캠페인 세부 정보"
+article_title: "GET: 내보내기 캠페인 세부 정보"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,9 +9,9 @@ description: "이 문서에서는 캠페인 세부 정보 내보내기 Braze 엔
 
 ---
 {% api %}
-# 캠페인 세부정보 내보내기
+# 캠페인 세부 정보 내보내기
 {% apimethod get %}
-/campaigns/details
+/캠페인/세부정보
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 지정된 캠페인에 대한 관련 정보를 검색할 수 있으며, 이 정보는 `campaign_id`로 식별할 수 있습니다. 
@@ -28,11 +28,11 @@ description: "이 문서에서는 캠페인 세부 정보 내보내기 Braze 엔
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자]({{site.baseurl}}/api/identifier_types/)를 참조하십시오.<br><br> API 캠페인의 `campaign_id` 경우 대시보드의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지 및 **캠페인 세부 정보** 페이지에서 찾을 수 있습니다. 또는 [캠페인 목록 내보내기 엔드포인트](#campaign-list-endpoint)를 사용할 수 있습니다. |
+| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시 
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 채널별 메시지
 
-`messages` 응답에는 각 메시지에 대한 정보가 포함됩니다. 다음은 각 채널에 대한 메시지 응답의 예입니다.
+`messages` 응답에는 각 메시지에 대한 정보가 포함됩니다. 다음은 각 채널에 대한 메시지 응답 예시입니다:
 
 #### 푸시
 
@@ -252,7 +252,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 사용자 지정 이벤트를 수행합니다.
+#### 사용자 지정 이벤트 수행
 
 ```json
 {

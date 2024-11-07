@@ -42,32 +42,32 @@ Braze.requestContentCardsRefresh();
 | 方法                                   | 説明                                                                                            |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `launchContentCards()`                   | コンテンツカードUI要素を起動する。                                                                 |
-| `requestContentCardsRefresh()`           | Braze SDKサーバーから最新のコンテンツカードを要求する。出来上がったカードのリストは、以前に登録された[コンテンツ・カードのイベント・リスナーの](#customization)それぞれに渡される。 |
-| `getContentCards()`                      | Braze SDKからコンテンツカードを取得する。これは、サーバーからの最新のカードリストを解決するプロミスを返す。 |
+| `requestContentCardsRefresh()`           | Braze SDKサーバーから最新のコンテンツカードを要求する。結果として得られるカードのリストは、以前に登録された[コンテンツカードイベントの各リスナー](#customization)に渡されます。 |
+| `getContentCards()`                      | Braze SDKからコンテンツカードを取得する。これは、サーバーからのカードの最新のリストで解決されるプロミスを返します。 |
 | `getCachedContentCards()`                | キャッシュから最新のコンテンツカードの配列を返す。                                            |
-| `logContentCardClicked(cardId)`          | 指定されたコンテンツカードIDのクリックを記録する。この方法は、分析でのみ使用されます。クリックアクションを実行するには、さらに`processContentCardClickAction(cardId)` 。                                                        |
+| `logContentCardClicked(cardId)`          | 指定されたコンテンツカードIDのクリックを記録する。この方法は、分析でのみ使用されます。クリックアクションを実行するには、さらに `processContentCardClickAction(cardId)` を呼び出します。                                                        |
 | `logContentCardImpression(cardId)`       | 与えられたコンテンツカードIDのインプレッションを記録する。                                                      |
-| `logContentCardDismissed(cardId)`        | 指定されたコンテンツカードIDの退会ログを記録する。                                                        |
+| `logContentCardDismissed(cardId)`        | 指定されたコンテンツカード ID が閉じられたことを記録します。                                                        |
 | `processContentCardClickAction(cardId)`  | 特定のカードのアクションを実行する。                                                               |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## コンテンツカードのサンプル表示のテスト
 
 コンテンツカードのサンプルをテストする手順は、次のとおりです。
 
 1. [`Braze.changeUser('your-user-id')`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. \[**キャンペーン**] に移動し、[このガイド][4]に従って新しいコンテンツカードキャンペーンを作成します。
-3. コンテンツカードのテストキャンペーンを作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスでコンテンツカードを起動できるようになります。
+2. [**キャンペーン**] に移動し、[このガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create)に従って新しいコンテンツカードキャンペーンを作成します。
+3. コンテンツカードのテストキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスでコンテンツカードを起動できるようになります。
 
-![Brazeのコンテンツカードキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、コンテンツカードをテストすることができる。][5]
+![]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test") 自分のユーザーIDをテスト受信者として追加して、コンテンツカードをテストできることを示すBrazeコンテンツカードキャンペーン。
 
-その他の統合については、プラットフォームに応じて、[Android 統合手順][2]または、[iOS 統合手順][3]に従ってください。
+その他の統合については、プラットフォームに応じて、[Android 統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/)または、[iOS 統合手順](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui)に従ってください。
 
-これのサンプル実装は、[React Native SDK][1] 内のBrazeProject にあります。
+これのサンプル実装は、[React Native SDK](https://github.com/braze-inc/braze-react-native-sdk) 内のBrazeProject にあります。
 
 ## コンテンツカードデータモデル
 
-コンテンツカードのデータモデルは、React Native SDK で利用できます。コンテンツ・カード・データ・モデルの完全なリファレンスについては、\[Android][6] および\[iOS][7] documentation]を参照のこと。
+コンテンツカードのデータモデルは、React Native SDK で利用できます。コンテンツカードのデータモデルの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard)ドキュメントを参照のこと。
 
 Braze React Native SDK には、**画像のみ**、**キャプション付き画像**、**クラシック**という、ベースモデルを共有する3種類のユニークなコンテンツカードのカードがあります。
 
@@ -81,21 +81,21 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 
 |プロパティ      | 説明                                                                                                            |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
-|`id`          | ブレイズが設定したカードのID。                                                                                            |
+|`id`          | Braze によって設定されたカードの ID。                                                                                            |
 |`created`     | Brazeからのカード作成時間のUNIXタイムスタンプ。                                                             |
 |`expiresAt`   | カードの有効期限を示すUNIXタイムスタンプ。値が0より小さい場合は、カードの有効期限がないことを意味する。      |
 |`viewed`      | カードがユーザーによって読まれているか読まれていないか。これはアナリティクスのログを記録しない。                                           |
 |`clicked`     | カードがユーザーによってクリックされたかどうか。                                                                         |
 |`pinned`      | カードが固定されているかどうか。                                                                                            |
-|`dismissed`   | ユーザーがこのカードを退会したかどうか。すでに退場させられたカードに退場マークを付けることはできない。 |
-|`dismissible` | カードが使用者によって破棄可能かどうか。                                                                           |
+|`dismissed`   | ユーザーがこのカードを退会したかどうか。すでに閉じられたカードに閉じられたマークを付けることは、ノーオペになります。 |
+|`dismissible` | ユーザーがカードを閉じられるかどうか。                                                                           |
 |`url`         | (オプション) カードクリックアクションに関連付けられたurl文字列。                                                       |
 |`openURLInWebView` | このカードのURLをBrazeのWebViewで開くかどうか。                                            |
-|`isControl`   | このカードがコントロールカードであるかどうか。コントロールカードはユーザーに表示すべきではない。                                |
+|`isControl`   | このカードがコントロールカードかどうか。コントロールカードをユーザーに表示しないでください。                                |
 |`extras`      | このカードのキー・バリュー・エキストラのマップ。                                                                             |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-ベースカードの完全なリファレンスは、\[Android][8] ]と\[iOS][9] ]のドキュメントを参照のこと。
+ベースカードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) のドキュメントを参照してください。
 
 ### 画像のみコンテンツカードモデルのプロパティ
 
@@ -103,12 +103,12 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 
 |プロパティ           | 説明                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | コンテンツ・カードのタイプ、`IMAGE_ONLY` 。                                                                              |
+|`type`             | コンテンツカードの種類、`IMAGE_ONLY`                                                                              |
 |`image`            | カードの画像のURL。                                                                                      |
-|`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。なお、状況によっては提供できない場合もある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。特定の状況ではプロパティが提供されない場合があることに注意してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-画像のみのカードの完全なリファレンスは、\[Android][10] ]と\[iOS][11] ]のドキュメントを参照のこと。
+画像onlyカードの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct)ドキュメントを参照のこと。
 
 ### キャプション付き画像コンテンツカードモデルのプロパティ
 
@@ -116,15 +116,15 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 
 |プロパティ           | 説明                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | コンテンツ・カードのタイプ、`CAPTIONED` 。                                                                               |
+|`type`             | コンテンツカードの種類、`CAPTIONED`                                                                               |
 |`image`            | カードの画像のURL。                                                                                      |
-|`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。なお、状況によっては提供できない場合もある。 |
+|`imageAspectRatio` | カード画像のアスペクト比。これは、画像の読み込みが完了する前にヒントとして利用するためです。特定の状況ではプロパティが提供されない場合があることに注意してください。 |
 |`title`            | カードのタイトルテキスト。                                                                                      |
 |`cardDescription`  | カードの説明テキスト。                                                                                |
-|`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードのUIに表示することで、カードをクリックしたときのアクション/方向を示すことができる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードの UI に表示され、カードをクリックした時の動作/方向を示すことができます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-キャプション付き画像カードの完全なリファレンスについては、\[Android][12] および\[iOS][13] documentation]を参照のこと。
+キャプション付き画像カードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) のドキュメントを参照してください。
 
 ### クラシックコンテンツカードモデルのプロパティ
 
@@ -132,44 +132,25 @@ Braze React Native SDK には、**画像のみ**、**キャプション付き画
 
 |プロパティ           | 説明                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | コンテンツ・カードのタイプ、`CLASSIC` 。                                                                                 |
+|`type`             | コンテンツカードの種類、`CLASSIC`                                                                                 |
 |`image`            | (オプション）カードの画像のURL。                                                                           |
 |`title`            | カードのタイトルテキスト。                                                                                      |
 |`cardDescription`  | カードの説明テキスト。                                                                                |
-|`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードのUIに表示することで、カードをクリックしたときのアクション/方向を示すことができる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|`domain`           | (オプ シ ョ ナル） プ ロパテ ィ URL の リ ン ク テキス ト 、 た と えば`"braze.com/resources/"` 。カードの UI に表示され、カードをクリックした時の動作/方向を示すことができます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-クラシック（テキストアナウンス）・コンテンツ・カードの完全なリファレンスについては、\[Android][14] および\[iOS][15] documentation]を参照のこと。クラシックな画像（短いニュース）カードの完全なリファレンスについては、\[Android][16] と\[iOS][17] documentation]を参照のこと。
+クラシック (テキストアナウンス) コンテンツカードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) のドキュメントを参照してください。クラシック画像 (ショートニュース) カードの完全なリファレンスについては、[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) および [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) のドキュメントを参照してください。
 
 ### コントロール・コンテンツ・カードのモデル・プロパティ
 
-コントロール・カードには、基本プロパティのすべてが含まれているが、いくつかの重要な違いがある。最も重要なことだ：
+コントロールカードには、基本プロパティがすべて含まれていますが、いくつかの重要な違いがあります。最も重要な点:
 
 - `isControl` プロパティは`true` であることが保証されている。
-- `extras` の物件は空きが保証されている。
+- `extras` プロパティは空であることが保証されます。
 
-コントロールカードの完全なリファレンスは、\[Android][18] ]と\[iOS][19] ]のドキュメントを参照のこと。
+コントロールカードの詳細については、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct)ドキュメントを参照のこと。
 
 ## GIFサポート
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
 
-[1]: https://github.com/braze-inc/braze-react-native-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
-[5]: {% image_buster /assets/img/react-native/content-card-test.png %} 「コンテンツカードキャンペーンテスト」
-[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
-[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[9]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct
-[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html
-[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct
-[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct
-[14]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
-[16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
-[17]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
-[18]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html
-[19]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct

@@ -12,22 +12,22 @@ description: "この参考記事では、Braze Web SDKで使用されるさま�
 
 > この記事では、Braze Web SDKが使用するさまざまなクッキーについて説明する。
 
-読み進める前に、Braze Web SDKは、ウェブサイトがSDKを[初期化][5]するまで、ブラウザにデータを保存しない（クッキーなど）ことに注意すること。
+読み進める前に、Braze Web SDKは、ウェブサイトがSDKを[初期化](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)するまで、ブラウザにデータを保存しない（クッキーなど）ことに注意すること。
 
-さらに、これらの値は変更される可能性があり、統合を通じて直接アクセスすべきではない。代わりに、パブリックAPIインターフェースについては、[JavaScriptのドキュメントを][1]参照のこと。
+さらに、これらの値は変更される可能性があり、統合を通じて直接アクセスすべきではありません。代わりに、パブリックAPIインターフェースについては、[JavaScriptのドキュメントを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)参照のこと。
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## クッキー {#cookies}
 
-このセクションでは、Braze Web SDKにおけるCookieの設定および管理方法について説明する。Braze Web SDKは、最大限の柔軟性、法令遵守、メッセージング関連性を提供するように構築されている。
+このセクションでは、Braze Web SDKにおけるCookieの設定および管理方法について説明する。Braze Web SDK は、最大限の柔軟性、法令遵守、メッセージングの関連性を提供するように構築されています。
 
-BrazeがCookieを作成する場合、Cookieは1年間の有効期限付きで保存され、新しいセッションで自動的に更新される。
+Braze がCookie を作成すると、新しいセッションで自動的に更新される400 日の有効期限で保存されます。
 
-### クッキーを無効にする {#disable-cookies}
+### Cookie を無効にする {#disable-cookies}
 
-すべてのクッキーを無効にするには、Web SDKを初期化する際に [`noCookies`][6]オプションを使用する。
-クッキーを無効にすると、サブドメイン間を移動する匿名ユーザーを関連付けることができなくなり、各サブドメインで新しいユーザーが発生する。
+すべての Cookie を無効にするには、Web SDK を初期化する際に [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) オプションを使用します。
+Cookie を無効にすると、サブドメイン間を移動する匿名ユーザーを関連付けることができなくなり、各サブドメインで新しいユーザーが発生します。
 
 ```javascript
 import * as braze from"@braze/web-sdk";
@@ -37,18 +37,18 @@ braze.initialize("API-KEY", {
 });
 ```
 
-Brazeのトラッキング全般を停止したり、保存されたブラウザデータをすべて消去するには [`disableSDK`][3]および [`wipeData`][4]SDKメソッドを参照のこと。これらの2つのメソッドは、ユーザーが同意を取り消した場合、またはSDKがすでに初期化された後にBrazeのすべての機能を停止したい場合に役立つ。
+Brazeのトラッキング全般を停止したり、保存されたブラウザデータをすべて消去するには [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK)および [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata)SDKメソッドを参照のこと。これらの2つのメソッドは、ユーザーが同意を取り消した場合、または SDK の初期化後に Braze のすべての機能を停止する場合に役立ちます。
 
 ### クッキー一覧
 
 |クッキー|説明|サイズ|
 |---|----|---|---|
-|`ab.storage.userId.[your-api-key]`|現在ログインしているユーザーが変更されたかどうかを判断し、イベントを現在のユーザーに関連付けるために使用される。|に渡された値のサイズに基づく。 `changeUser`|
+|`ab.storage.userId.[your-api-key]`|現在ログインしているユーザーが変更されたかどうかを判断し、イベントを現在のユーザーに関連付けるために使用される。|`changeUser` に渡された値のサイズに基づく|
 |`ab.storage.sessionId.[your-api-key]`|メッセージを同期し、セッション分析を計算するために、ユーザーが新しいセッションを開始しているか、既存のセッションを開始しているかを判断するために使用されるランダムに生成される文字列。|~200バイト|
 |`ab.storage.deviceId.[your-api-key]`|匿名ユーザーを識別し、ユーザーのデバイスを区別し、デバイスベースのメッセージングを可能にするために使用されるランダムに生成される文字列。|~200バイト|
-|`ab.optOut`|`disableSDK` 、ユーザーのオプトアウト設定を保存するために使用される。|~40バイト|
-|`ab._gd`|SDKがサブドメイン間で適切に動作するように、ルートレベルのクッキー・ドメインを決定するために一時的に作成される(その後削除される)。|該当なし|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+|`ab.optOut`|`disableSDK` が呼び出されたときにユーザーのオプアウト設定を格納するために使用されます|~40バイト|
+|`ab._gd`|ルートレベルの Cookie ドメインを決定するために一時的に作成 (その後削除) されます。これにより、サブドメイン間で SDK が適切に動作できるようになります。|該当なし|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## デバイスのプロパティ
 
@@ -58,11 +58,11 @@ Brazeのトラッキング全般を停止したり、保存されたブラウザ
 * BROWSER_VERSION
 * 言語
 * OS
-* 決議
+* RESOLUTION
 * TIME_ZONE
 * USER_AGENT
 
-`devicePropertyAllowlist` の初期化オプションを以下のリストに設定することで、収集したいプロパティを 無効にしたり、指定したりすることができる。 [`DeviceProperties`][2]. 
+`devicePropertyAllowlist` 初期化オプションを[`DeviceProperties`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html) のリストに設定することで、収集するプロパティを無効にしたり指定したりできます。 
 
 ```javascript
 import * as braze from"@braze/web-sdk";
@@ -74,12 +74,6 @@ braze.initialize("API-KEY", {
 
 デフォルトでは、すべてのフィールドが有効になっています。いくつかのプロパティがないと一部の機能が正しく機能しないことがあるので注意してください。たとえば、ローカルタイムゾーンの配信はタイムゾーンなしでは機能しません。
 
-自動的に収集されるデバイス・プロパティの詳細については、[SDKデータ収集]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)オプションを参照のこと。 
+自動的に収集されるデバイスプロパティの詳細については、[SDK データ収集オプション]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)をご覧ください。 
 
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

@@ -7,15 +7,15 @@ platform:
   - Android
 channel: content cards
 page_order: 4
-description: "このリファレンス記事では、カードsの表示、カードsの解析、分析などのUnity プラットフォームのコンテンツカードインプリメンテーションガイドラインについて説明します。"
+description: "このリファレンス記事では、カードの表示、カードの解析、および分析などの Unity プラットフォームのコンテンツカード実装ガイドラインについて説明します。"
 
 ---
 
 # コンテンツカードの統合
 
-> このリファレンス記事では、カードsの表示、カードsの解析、分析などのUnity プラットフォームのコンテンツカードインプリメンテーションガイドラインについて説明します。
+> このリファレンス記事では、カードの表示、カードの解析、および分析などの Unity プラットフォームのコンテンツカード実装ガイドラインについて説明します。
 
-## コンテンツカードをネイティブで表示する {#unity-content-cards-native-ui}
+## コンテンツカードをネイティブに表示する {#unity-content-cards-native-ui}
 
 次の呼び出しを使用して、コンテンツカードのデフォルトユーザーインターフェイスを表示できます。
 
@@ -25,15 +25,15 @@ Appboy.AppboyBinding.DisplayContentCards();
 
 ## Unityでコンテンツカードデータを受信する
 
-Unityのゲームオブジェクトを登録して、受信したコンテンツカードを通知することができます。Brazeコンフィギュレーションエディタから設定のゲームオブジェクトリスナを使用することをお勧めします。
+Unity ゲームオブジェクトを登録して、コンテンツカードの受信について通知を受けることができます。Brazeコンフィギュレーションエディタから設定のゲームオブジェクトリスナを使用することをお勧めします。
 
-実行時にゲームオブジェクトリスナーを設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.CONTENT_CARDS_UPDATED` を指定します。
+ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.CONTENT_CARDS_UPDATED` を指定します。
 
 さらに、`AppboyBinding.RequestContentCardsRefresh()` を呼び出して、iOS 上のゲームオブジェクトリスナーでデータの受信を開始する必要があります。
 
 ## コンテンツカードの解析
 
-Content Cards ゲームオブジェクトコールバックで受信した受信`string` メッセージは、事前に提供されている[`ContentCard`][17] モデルオブジェクトに構文解析すると便利です。
+Content Cards ゲームオブジェクトコールバックで受信した受信`string` メッセージは、事前に提供されている[`ContentCard`](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) モデルオブジェクトに構文解析すると便利です。
 
 コンテンツカードの解析にはJson 解析が必要です。詳細については、次の例を参照してください。
 
@@ -72,7 +72,7 @@ void ExampleCallback(string message) {
 
 ## コンテンツカードの更新
 
-Brazeからコンテンツカードを更新するには、次のいずれかの方法を呼び出します。
+Braze からコンテンツカードを更新するには、次のいずれかのメソッドを呼び出します。
 
 ```csharp
 // results in a network request to Braze
@@ -87,8 +87,7 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 
 ## 分析
 
-クリックとインプレッションは、Braze によって直接表示されないコンテンツカードに対して手動でログ記録する必要があります。
+Braze によって直接表示されないコンテンツカードについては、クリックとインプレッションを手動でログに記録する必要があります。
 
-[Content カード][17] で`LogClick()` および`LogImpression()` を使用して、特定のカードs のクリックとインプレッションを記録します。
+[Content カード](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) で`LogClick()` および`LogImpression()` を使用して、特定のカードs のクリックとインプレッションを記録します。
 
-[17]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs

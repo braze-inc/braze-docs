@@ -1,9 +1,9 @@
 ---
 nav_title: 手動統合
-article_title: iOSの手動統合
+article_title: iOS 向け手動統合
 platform: Swift
 page_order: 3
-description: "このリファレンス記事では、手動インストールを使用してBraze SWIFT SDKを統合する方法を示します。"
+description: "この参照記事では、手動統合を使用して Braze Swift SDK を統合する方法を説明します。"
 toc_headers: "h2"
 ---
 
@@ -15,38 +15,38 @@ toc_headers: "h2"
 
 [GitHubのBraze SDKリリースページ](https://github.com/braze-inc/braze-swift-sdk/releases)に移動し、`braze-swift-sdk-prebuilt.zip`をダウンロードします。
 
-![「GitHubのBraze SDKリリースページ。」]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+![「GitHub の Braze SDK リリースページ。」]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 ## ステップ2:フレームワークを選択してください
 
-BrazeのSWIFT SDKには、さまざまなスタンドアロンのXCFrameworkが含まれており、すべてを統合する必要はなく、必要な機能を自由に統合できます。次の表を参照して、XCFrameworksを選択してください:
+Braze SWIFT SDK には、さまざまなスタンドアロンの XCFramework が含まれており、すべてを統合する必要はなく、必要な機能を自由に統合できます。次の表を参照して、XCFrameworksを選択してください:
 
-| パッケージ                    | 必要？ | 説明                                                                                                                                                                                                                                                                                                              |
+| パッケージ                    | 必要か | 説明                                                                                                                                                                                                                                                                                                              |
 | -------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BrazeKit`                 | はい       | メインSDKライブラリーは、分析とプッシュ通知をサポートします。                                                                                                                                                                                                                                             |
 | `BrazeLocation`            | いいえ        | 位置情報ライブラリーは、位置情報分析とジオフェンス監視をサポートします。                                                                                                                                                                                                                                   |
 | `BrazeUI`                  | いいえ        | アプリ内メッセージおよびコンテンツカード用のBraze提供のユーザーインターフェイスライブラリー。                                                                                                                                                                                                                                             |
 | `BrazeNotificationService` | いいえ        | リッチプッシュ通知をサポートする通知サービス拡張ライブラリー。このライブラリーを直接メインアプリケーションターゲットに追加しないでください。代わりに[この`BrazeNotificationService`ライブラリーを別々に追加してください](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications)。     |
 | `BrazePushStory`           | いいえ        | 通知コンテンツ拡張ライブラリーは、プッシュストーリーをサポートします。このライブラリーを直接メインアプリケーションターゲットに追加しないでください。代わりに[この`BrazePushStory`ライブラリーを別々に追加してください](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories)。                                     |
-| `BrazeKitCompat`           | いいえ        | 互換性ライブラリーには、バージョン4.X.Xの`Appboy-iOS-SDK`で利用可能だったすべての`Appboy`および`ABK*`クラスとメソッドが含まれています。使用の詳細については、[移行ガイド](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/)の最小限の移行シナリオを参照してください。 |
-| `BrazeUICompat`            | いいえ        | 互換性ライブラリーには、`ABK*`クラスとメソッドがすべて含まれており、`AppboyUI`ライブラリーのバージョン4.X.Xから利用可能です。使用の詳細については、[移行ガイド](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/)の最小限の移行シナリオを参照してください。 |
-| `SDWebImage`               | いいえ        | 最小限の移行シナリオで`BrazeUICompat`のみに使用される依存関係。 |
+| `BrazeKitCompat`           | いいえ        | `Appboy-iOS-SDK` バージョン 4.X.X で使用可能だったすべての `Appboy` および `ABK*` クラスとメソッドを含む互換性ライブラリ。使用の詳細については、[移行ガイド](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/)の最小限の移行シナリオを参照してください。 |
+| `BrazeUICompat`            | いいえ        | `Appboy-iOS-SDK` バージョン4.X.Xの `AppboyUI`ライブラリで使用可能だったすべての`ABK*` クラスとメソッドを含む互換性ライブラリ。使用の詳細については、[移行ガイド](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/)の最小限の移行シナリオを参照してください。 |
+| `SDWebImage`               | いいえ        | 最小限の移行シナリオで `BrazeUICompat` によってのみ使用される依存関係。 |
 
-{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2}
+{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステップ3:ファイルを準備してください
 
-静的なXCFrameworksを使用するかダイナミックなXCFrameworksを使用するかを決定し、ファイルを準備します。
+**静的** XCFrameworks または**動的** XCFrameworks のどちらを使用するかを決定してから、ファイルを準備します。
 
 {% tabs %}
-{% tab ダイナミックな %}
-1. 一時的なディレクトリを作成して、XCFrameworksを保存します。
-2. `braze-swift-sdk-prebuilt`で、`dynamic`ディレクトリを開封し、`BrazeKit.xcframework`を自分のディレクトリに移動します。あなたのディレクトリは次のようになります:
+{% tab 動的 %}
+1. XCFrameworks 用の一時ディレクトリーを作成します。
+2. `braze-swift-sdk-prebuilt` で、`dynamic` ディレクトリを開き、`BrazeKit.xcframework` を自分のディレクトリに移動します。あなたのディレクトリは次のようになります:
     ```bash
     temp_dir
     └── BrazeKit.xcframework
     ```
-3. 選択した各XCFrameworkを一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
+3. [選択した各 XCFramework](#step-2-choose-your-frameworks) を一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
     ```bash
     temp_dir
     ├── BrazeKit.xcframework
@@ -59,13 +59,13 @@ BrazeのSWIFT SDKには、さまざまなスタンドアロンのXCFrameworkが�
 {% tab 静的 %}
 ### ステップ 3.1:フレームワークを準備する
 
-1. 一時的なディレクトリを作成して、XCFrameworksを保存します。
-2. `braze-swift-sdk-prebuilt`で、`static`ディレクトリを開封し、`BrazeKit.xcframework`を自分のディレクトリに移動します。あなたのディレクトリは次のようになります:
+1. XCFrameworks 用の一時ディレクトリーを作成します。
+2. `braze-swift-sdk-prebuilt` で、`static` ディレクトリを開き、`BrazeKit.xcframework` を自分のディレクトリに移動します。あなたのディレクトリは次のようになります:
    ```bash
    temp_frameworks_dir
    └── BrazeKit.xcframework
    ```
-3. 選択した各XCFrameworkを一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
+3. [選択した各 XCFramework](#step-2-choose-your-frameworks) を一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
    ```bash
    temp_frameworks_dir
    ├── BrazeKit.xcframework
@@ -76,13 +76,13 @@ BrazeのSWIFT SDKには、さまざまなスタンドアロンのXCFrameworkが�
 
 ### ステップ 3.2:バンドルを準備する
 
-1. 一時的なディレクトリを作成して、バンドル用に使用します。
-2. 開封 the `bundles` directory and move `BrazeKit.bundle` into your directory.あなたのディレクトリは次のようになります:
+1. バンドル用の一時ディレクトリーを作成します。
+2. `bundles` ディレクトリを開き、`BrazeKit.bundle` を自分のディレクトリに移動します。あなたのディレクトリは次のようになります:
    ```bash
    temp_bundles_dir
    └── BrazeKit.bundle
    ```
-3. XCFrameworks `BrazeLocation`、`BrazeUI`、`BrazeUICompat`、`SDWebImage` を使用している場合は、それらに対応するバンドルを一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
+3. `BrazeLocation`、`BrazeUI`、`BrazeUICompat`、または `SDWebImage` XCFrameworksを使用している場合は、対応するバンドルを一時ディレクトリに移動します。あなたのディレクトリは次のようになります:
    ```bash
    temp_bundles_dir
    ├── BrazeLocation.bundle
@@ -98,31 +98,31 @@ BrazeのSWIFT SDKには、さまざまなスタンドアロンのXCFrameworkが�
 
 ## ステップ4: フレームワークを統合する
 
-次に、**ダイナミックな**または**静的な**XCFrameworksを[以前に準備した](#step-3-prepare-your-files)ものと統合します。
+次に、[以前に準備した](#step-3-prepare-your-files)**動的な** XCFrameworks または**静的な** XCFrameworks を統合します。
 
 {% tabs %}
-{% tab ダイナミックな %}
-Xcodeプロジェクトでビルドターゲットを選択し、次に**一般**を選択します。**フレームワーク、ライブラリ、および埋め込みコンテンツ**の下に、[以前に準備したファイル<6>}をドラッグ＆ドロップします。
+{% tab 動的 %}
+Xcodeプロジェクトでビルドターゲットを選択し、次に**一般**を選択します。**フレームワーク、ライブラリ、および埋め込みコンテンツ**の下に、[以前に準備したファイル](#step-3-prepare-your-files)をドラッグ＆ドロップします。
 
 ![「各Brazeライブラリーが「埋め込みと署名」に設定されたXcodeプロジェクトの例」]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert tip %}
-GIFサポートを有効にするには、`SDWebImage.xcframework`を追加し、`braze-swift-sdk-prebuilt/dynamic`に配置します。
+GIF サポートを有効にするには、`braze-swift-sdk-prebuilt/dynamic` にある `SDWebImage.xcframework` を追加します。
 {% endalert %}
 {% endtab %}
 
 {% tab 静的 %}
-Xcodeプロジェクトでビルドターゲットを選択し、次に**一般**。**フレームワーク、ライブラリ、および埋め込みコンテンツ**の下に、[以前に準備したフレームワーク<5>}をドラッグ＆ドロップします。各フレームワークの横に、**埋め込まない**を選択します。 
+Xcodeプロジェクトでビルドターゲットを選択し、次に**一般**を選択します。**フレームワーク、ライブラリ、および埋め込みコンテンツ**の下に、[以前に準備したフレームワーク](#step-31-prepare-your-frameworks)をドラッグ＆ドロップします。各フレームワークの横に、**埋め込まない**を選択します。 
 
 ![「各Brazeライブラリーが「埋め込まない」に設定されているXcodeプロジェクトの例。」]({% image_buster /assets/img/swift/sdk_integration/do-not-embed-and-sign.png %})
 
 {% alert tip %}
-GIFサポートを有効にするには、`SDWebImage.xcframework`を追加し、`braze-swift-sdk-prebuilt/static`に配置します。
+GIF サポートを有効にするには、`braze-swift-sdk-prebuilt/static` にある `SDWebImage.xcframework` を追加します。
 {% endalert %}
 
-ビルドターゲットにいる間に、**ビルドフェーズ**を選択します。**Copy Bundle Resources**の下に、以前に準備した[バンドル<3>}をドラッグ＆ドロップします。
+ビルドターゲットにいる間に、[**ビルドフェーズ**] を選択します。**Copy Bundle Resources**の下に、以前に準備した[バンドル<3>}をドラッグ＆ドロップします](#step-32-prepare-your-bundles)。
 
-![「'Copy Bundle Resources'の下にバンドルが追加されたXcodeプロジェクトの例。」]({% image_buster /assets/img/swift/sdk_integration/copy-bundle-resources.png %})
+![「バンドルリソースをコピーする」の下にバンドルが追加された Xcode プロジェクトの例。」]({% image_buster /assets/img/swift/sdk_integration/copy-bundle-resources.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -134,7 +134,7 @@ XcodeプロジェクトにOBJECTIVE-Cファイルのみが含まれている場�
 FILE_NAME.swift
 ```
 
-任意のスペースのない文字列で`FILE_NAME`を置き換えます。あなたのファイルは次のようになります:
+任意のスペースのない文字列で`FILE_NAME`を置き換えます。ファイルは次のようになります。
 
 ```bash
 empty_swift_file.swift

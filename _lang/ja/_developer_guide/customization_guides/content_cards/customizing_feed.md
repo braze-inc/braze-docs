@@ -111,7 +111,7 @@ function refresh() {
 コンテンツカードの表示順序を変更できます。これにより、時間的制約のあるプロモーションなど、特定のタイプのコンテンツに優先順位を付けることで、ユーザーエクスペリエンスを微調整できます。
 
 {% tabs %}
-{% tab Androidビューシステム %}
+{% tab Android View System %}
 
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)に依存して、フィードに表示される前にコンテンツカードのソートまたは変更を処理します。カスタム更新ハンドラは、`ContentCardsFragment`の[`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)で設定できます。
 
@@ -253,8 +253,8 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 `ContentCardsFragment`ソースは [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt) にあります。
 
 {% endtab %}
-{% tab Jetpack コンポーズ %}
-Jetpack Compose でコンテンツカードをフィルタリングおよびソートするには、`cardUpdateHandler`パラメータを設定します。次に例を示します。
+{% tab Jetpack Compose %}
+Jetpack Compose でコンテンツカードをフィルタリングおよびソートするには、`cardUpdateHandler`パラメータを設定します。以下に例を示します。
 
 ```kotlin
 ContentCardsList(
@@ -316,7 +316,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endtab %}
 {% tab Web %}
 
-`showContentCards():`の[`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)パラメーターを使用して、フィードのコンテンツカードの表示順序をカスタマイズします。次に例を示します。
+`showContentCards():`の[`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)パラメーターを使用して、フィードのコンテンツカードの表示順序をカスタマイズします。以下に例を示します。
 
 ```javascript
 braze.showContentCards(null, (cards) => {
@@ -331,10 +331,10 @@ braze.showContentCards(null, (cards) => {
 
 ユーザーがコンテンツカードに適格でない場合、SDK は次のような「空のフィード」エラーメッセージを表示します。「更新はありません。後で再度確認してください。」この「空のフィード」エラーメッセージは、次のようにカスタマイズできます。
 
-![&quot を読み込む空のフィード エラーメッセージ。これはカスタム空の状態メッセージです。"][1]
+![「これはカスタムの空状態のメッセージです。」と表示される空のフィードエラーメッセージ][1]
 
 {% tabs %}
-{% tab Androidビューシステム %}
+{% tab Android View System %}
 
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)によって、ユーザがコンテンツカードに対応していないと判断された場合は、空のフィードエラーメッセージが表示されます。
 
@@ -356,7 +356,7 @@ braze.showContentCards(null, (cards) => {
 
 コンテンツカードスタイル要素のカスタマイズの詳細については、[スタイルのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles)を参照してください。
 {% endtab %}
-{% tab Jetpack コンポーズ %}
+{% tab Jetpack Compose %}
 Jetpack Compose で「空のフィード」エラーメッセージをカスタマイズするには、`emptyString`を`ContentCardsList`に渡します。`emptyTextStyle`を`ContentCardListStyling`に渡して、このメッセージをさらにカスタマイズすることもできます。
 
 ```kotlin
@@ -417,24 +417,24 @@ Web SDK では、「空のフィード」の言語をプログラムで置き換
 
 コンテンツカードは、特定のカードのみが表示されるようにアプリでフィルタリングできます。これにより、さまざまなユースケースで複数のコンテンツカードフィードを使用できます。たとえば、トランザクションフィードとマーケティングフィードの両方を維持できます。これを行うには、Braze ダッシュボードでキーと値のペアを設定して、コンテンツカードのさまざまなカテゴリーを作成します。次に、これらのタイプのコンテンツカードを異なる方法で処理し、一部のタイプをフィルタリングして他のタイプを表示するフィードをアプリまたはサイトに作成します。
 
-### ステップ1: カードにキーと値のペアを設定する
+### ステップ 1:カードにキーと値のペアを設定する
 
 コンテンツカードキャンペーンを作成する場合は、各カードで[キーと値のペアデータ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/)を設定します。このキーと値のペアを使用して、カードを分類します。キーと値のペアは、カードのデータモデルの`extras`プロパティに保存されます。
 
 この例では、カードが表示されるコンテンツカードフィードを指定するキー`feed_type`を使用してキーと値のペアを設定します。この値は、`home_screen`や`marketing`など、カスタムフィードの値になります。
 
-### ステップ2: コンテンツカードのフィルタリング
+### ステップ2:コンテンツカードのフィルタリング
 
 キーと値のペアが割り当てられたら、他のタイプのカードを表示およびフィルタリングするカードを表示するロジックを含むフィードを作成します。この例では、`feed_type: "Transactional"`のキーと値のペアが一致するカードのみを表示します。
 
 {% tabs %}
-{% tab Androidビューシステム %}
+{% tab Android View System %}
 
 コンテンツカードのフィルタリングは、[`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html)を介してダッシュボードに設定されたキーと値のペアを読み取り、カスタム更新ハンドラを使用してフィルタリング (または他の必要なロジックを実行) することで実現できます。
 
 詳細に説明すると、コンテンツカードフィードが[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)に表示されます。デフォルトの`IContentCardsUpdateHandler`は、Braze SDK から[`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html)を受け取り、表示するカードのリストを返しますが、カードの並べ替えのみを行い、それ自体は削除やフィルタリングを実行しません。
 
-`ContentCardsFragment`でフィルタリングできるようにするには、カスタムの[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)を作成します。この`IContentCardsUpdateHandler`を変更して、前に設定した`feed_type`の目的の値と一致しないカードをリストから削除します。次に例を示します。
+`ContentCardsFragment`でフィルタリングできるようにするには、カスタムの[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)を作成します。この`IContentCardsUpdateHandler`を変更して、前に設定した`feed_type`の目的の値と一致しないカードをリストから削除します。以下に例を示します。
 
 {% subtabs local %}
 {% subtab Java %}
@@ -522,7 +522,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 
 `IContentCardsUpdateHandler`を作成したら、それを使用する`ContentCardsFragment`を作成します。このカスタムフィードは、他の`ContentCardsFragment`と同様に使用できます。アプリのさまざまな部分で、ダッシュボードに用意されているキーに基づいて、さまざまなコンテンツカードフィードを表示します。各`ContentCardsFragment`フィードには、各フラグメントのカスタム`IContentCardsUpdateHandler`のおかげで一意のカードセットが表示されます。 
 
-次に例を示します。
+以下に例を示します。
 
 {% subtabs local %}
 {% subtab Java %}
@@ -545,8 +545,8 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Jetpack コンポーズ %}
-このフィードに表示されるコンテンツカードをフィルタリングするには、`cardUpdateHandler`を使用します。次に例を示します。
+{% tab Jetpack Compose %}
+このフィードに表示されるコンテンツカードをフィルタリングするには、`cardUpdateHandler`を使用します。以下に例を示します。
 
 ```kotlin
 ContentCardsList(

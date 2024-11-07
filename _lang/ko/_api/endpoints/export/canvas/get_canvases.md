@@ -22,22 +22,22 @@ description: "이 문서에서는 캔버스 목록 내보내기 Braze 엔드포�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `canvas.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `page` | 선택 사항 | 정수 | 반환할 캔버스 페이지, 기본값은 `0` (최대 100개의 첫 번째 집합 반환) |
-| `include_archived` | 선택 사항 | 부울 | 보관된 캔버스를 포함할지 여부, 기본값은 `false`입니다. |
-| `sort_direction` | 선택 사항 | 문자열 | - 생성 시간을 최신에서 오래된 순서로 정렬: `desc` 값을 전달합니다.<br> \- 생성 시간을 가장 오래된 것부터 가장 최근 것 순으로 정렬: `asc` 값을 전달합니다. <br><br>`sort_direction` 이 포함되지 않은 경우 기본 순서는 가장 오래된 것부터 최신 것까지입니다. |
-| `last_edit.time[gt]` | 선택 사항 | 시간 | 결과를 필터링하여 지금까지 제공된 시간보다 더 많이 편집된 캔버스만 반환합니다. 형식은 `yyyy-MM-DDTHH:mm:ss` 입니다. |
+| `page` | 선택 사항 | 정수 | 반환할 캔버스 페이지의 기본값은 `0` (최대 100개 중 첫 번째 세트를 반환)입니다. |
+| `include_archived` | 선택 사항 | 부울 | 보관된 캔버스를 포함할지 여부의 기본값은 `false` 입니다. |
+| `sort_direction` | 선택 사항 | 문자열 | \- 생성 시간을 최신에서 오래된 순으로 정렬: `desc` 값을 전달합니다.<br> \- 생성 시간을 가장 오래된 것부터 가장 최근 것 순으로 정렬: `asc` 값을 전달합니다. <br><br>`sort_direction` 이 포함되지 않은 경우 기본 순서는 가장 오래된 것부터 최신 것까지입니다. |
+| `last_edit.time[gt]` | 선택 사항 | 시간 | 결과를 필터링하여 지금까지 제공된 시간보다 더 많이 편집한 캔버스만 반환합니다. 형식은 `yyyy-MM-DDTHH:mm:ss` 입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

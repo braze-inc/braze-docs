@@ -24,11 +24,11 @@ description: "이 문서에서는 외부 ID 제거 엔드포인트에 대한 자
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `users.external_ids.remove` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 | `external_ids` | 필수 | 문자열 배열 | 사용자가 제거할 외부 식별자. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -80,9 +80,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 ```
 
 `message` 필드에 유효한 요청이 있으면 `success`를 반환합니다. 보다 구체적인 오류는 `removal_errors` 배열에 캡처됩니다. `message` 필드는 다음과 같은 경우 오류를 반환합니다.
-\- 잘못된 API 키
-\- 빈 `external_ids` 배열
-\- 50개 이상의 항목이 있는 `external_ids` 배열
-\- 속도 제한 초과(분당 1,000건 이상의 요청)
+- 잘못된 API 키
+- 빈 `external_ids` 배열
+- `external_ids` 50개 이상의 항목이 있는 배열
+- 속도 제한 초과(분당 1,000건 이상의 요청)
 
 {% endapi %}

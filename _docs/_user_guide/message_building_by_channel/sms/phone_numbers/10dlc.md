@@ -44,7 +44,7 @@ Registering with A2P 10DLC may include several types of fees:
 | Registration Fees | Nominal fees applied when registering your brand and use case across all major US networks. |
 | Secondary Vetting Fees | Brands can appeal their [Brand Trust Score](#trust-score) and request a secondary vetting process to improve their overall throughput; there is a fee associated with this process. |
 | Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users after 10DLC registration. Starting October 1, 2021, carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
 
@@ -61,7 +61,7 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 | High | 75-100 | 75 MPS | 75 MPS | 75 MPS |
 | Medium | 50-74 | 40 MPS | 40 MPS | 40 MPS |
 | Low | 1-49 | 4 MPS | 4 MPS | 4 MPS | 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert tip %}
 Companies listed in the Russel 3000 Index will be granted a high throughput and brand trust score after 10DLC registration and review. 
@@ -90,7 +90,7 @@ Depending on your use case, the trust score needed to achieve the maximum throug
 | 2FA | Any authentication of account verification, such as OTP. | 
 | Security Alerts | Notification of a compromised system. |
 | Fraud Alerts | Messaging about potentially fraudulent activity. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
 {% tab Declared Use Case %}
@@ -101,19 +101,19 @@ A declared use case means you have chosen one specific non-marketing use case (f
 | 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
 | 50-74	 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
 | 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Mixed/Marketing Use Case %}
+{% tab Mixed Marketing Use Case %}
 
-Mixed/Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
+Mixed marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
 | 75-100 | 225 MPS | 75 MPS | 75 MPS | 75 MPS |
 | 50-74 | 120 MPS | 40 MPS | 40 MPS | 40 MPS |
 | 1-49 | 12 MPS | 4 MPS | 4 MPS | 4 MPS| 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
 {% endtabs %}

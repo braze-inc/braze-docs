@@ -24,7 +24,7 @@ noindex: true
 
 ## 配信セマンティクス
 
-ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。1つのイベントによって2つのアプリ内メッセージがトリガーされた場合、優先度の高いアプリ内メッセージが表示されます。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル][45]に関する記事をお読みください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
+ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。1つのイベントによって2つのアプリ内メッセージがトリガーされた場合、優先度の高いアプリ内メッセージが表示されます。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle)に関する記事をお読みください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 
@@ -32,12 +32,12 @@ noindex: true
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、質の高いユーザー体験を促進するため、アプリ内メッセージは30秒に1回に制限されている。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが30秒に1回に制限されています。
 
 この値は、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内の `ABKMinimumTriggerTimeIntervalKey` を使用してオーバーライドできます。`ABKMinimumTriggerTimeIntervalKey` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
@@ -48,7 +48,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
@@ -59,7 +59,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ## 一致するトリガーが見つからない
 
-Brazeは、特定のイベントに一致するトリガーを見つけられなかった場合、次のメソッドの[noMatingTriggerForEvent:name:](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html#ab4d57b13c51545d487227945a37d4ab8)を呼び出す。 [`ABKInAppMessageControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html).このシナリオを処理するには、デリゲートプロトコルを採用するクラスにこのメソッドを実装します。 
+Braze が特定のイベントに一致するトリガーを検出できない場合、[`ABKInAppMessageControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html) の [noMatchingTriggerForEvent:name:](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_in_app_message_controller_delegate-p.html#ab4d57b13c51545d487227945a37d4ab8) メソッドを呼び出します。このシナリオを処理するには、デリゲートプロトコルを採用するクラスにこのメソッドを実装します。 
 
 ## ローカルのアプリ内メッセージ配信
 
@@ -89,14 +89,14 @@ Brazeは、特定のイベントに一致するトリガーを見つけられな
 
 - アプリがバックグラウンドにあるときに、アプリ内メッセージがトリガーされた。
 - 別のアプリ内メッセージが現在表示されている。
-- 非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]は実装されておらず、キーボードが現在表示されています。
-- `beforeInAppMessageDisplayed:` [デリゲートメソッド][30]または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]が `ABKDisplayInAppMessageLater` を返しました。
+- 非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)は実装されておらず、キーボードが現在表示されています。
+- `beforeInAppMessageDisplayed:` [デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate)または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)が `ABKDisplayInAppMessageLater` を返しました。
 
 #### アプリ内メッセージの破棄
 
 トリガーされたアプリ内メッセージは、次の状況では破棄されます。
 
-- `beforeInAppMessageDisplayed:` [デリゲートメソッド][30]または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]が `ABKDiscardInAppMessage` を返しました。
+- `beforeInAppMessageDisplayed:` [デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate)または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)が `ABKDiscardInAppMessage` を返しました。
 - アプリ内メッセージのアセット (画像または ZIP ファイル) のダウンロードに失敗しました。
 - アプリ内メッセージを表示する準備ができていますが、タイムアウト時間が経過しました。
 - デバイスの向きが、トリガーされたアプリ内メッセージの向きと一致しません。
@@ -108,14 +108,14 @@ Brazeは、特定のイベントに一致するトリガーを見つけられな
 アプリ内で別の時点でアプリ内メッセージを表示したい場合は、次のメソッドを呼び出してスタックの最上位のアプリ内メッセージを手動で表示できます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
@@ -129,7 +129,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 アプリ内メッセージはアプリ内でローカルに作成し、Braze 経由で表示することもできます。これは、アプリ内でトリガーしたいメッセージをリアルタイムで表示する場合に特に便利です。Braze は、ローカルで作成されたアプリ内メッセージの分析をサポートしていません。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];
@@ -140,7 +140,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
   let customInAppMessage = ABKInAppMessageSlideup.init()
@@ -153,6 +153,3 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 {% endtab %}
 {% endtabs %}
 
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate
-[45]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle

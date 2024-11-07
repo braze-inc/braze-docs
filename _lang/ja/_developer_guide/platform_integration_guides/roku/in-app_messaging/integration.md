@@ -45,16 +45,16 @@ end sub
 | ------ | ----------- |
 | `buttons` | ボタンのリスト（空のリストである可能性があります）。 |
 | `click_action` | `"URI"` または `"NONE"`。このフィールドを使用して、URI リンクに対してアプリ内メッセージを開くか、クリックしたときにメッセージを閉じるかを指定します。ボタンがない場合、アプリ内メッセージが表示されているときにユーザーが「OK」をクリックすると、これが発生するはずです。 |
-| `dismiss_type` | `"AUTO_DISMISS"` または `"SWIPE"`。このフィールドを使用して、アプリ内メッセージが自動的に消えるか、スワイプして消す必要があるかを示します。 |
+| `dismiss_type` | `"AUTO_DISMISS"` または `"SWIPE"`。このフィールドを使用して、アプリ内メッセージが自動的に閉じられるか、スワイプで消去する必要があるかを指定します。| |
 | `display_delay` | アプリ内メッセージを表示するまでの待機時間（秒）。 |
 | `duration` | `dismiss_type`が`"AUTO_DISMISS"`に設定されている場合、メッセージが表示される時間（ミリ秒）。 |
 | `extras` | キーと値のペア。 |
 | `header` | ヘッダーのテキスト。 |
 | `id` | インプレッションやクリックを記録するために使用されるID。 |
 | `image_url` | アプリ内メッセージ画像URL。 |
-| `message` | メッセージ本文のテキスト。 |
-| `uri` | あなたのURIユーザーは、あなたの`click_action`に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `message` | メッセージ本文テキスト。| |
+| `uri` | URI ユーザーは `click_action` に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 ボタンを含むアプリ内メッセージの場合、ボタンテキストを追加する前にクリックアクションが追加されると、メッセージ `click_action` も最終ペイロードに含まれます。
@@ -70,8 +70,8 @@ end sub
 | `frame_color` | バックグラウンド画面オーバーレイの色。 |
 | `header_text_color` | ヘッダーテキストの色。 |
 | `message_text_color` | メッセージテキストの色。 |
-| `text_align` | 「開始」、「中央」、または「終了」。選択したテキストの配置。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `text_align` | 「START」、「CENTER」、または「END」。選択したテキストの配置。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 また、アプリ内メッセージを実装し、Roku アプリケーション内で標準パレットを使用してそのスタイルを指定することもできます。
 
@@ -82,8 +82,8 @@ end sub
 | `click_action` | `"URI"` または `"NONE"`。このフィールドを使用して、URI リンクに対してアプリ内メッセージを開くか、クリックしたときにメッセージを閉じるかを指定します。 |
 | `id` | ボタン自体のID値。 |
 | `text` | ボタンに表示するテキスト。 |
-| `uri` | あなたのURIユーザーは、あなたの`click_action`に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `uri` | URI ユーザーは `click_action` に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## インタラクションの処理
 
@@ -110,7 +110,7 @@ LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, b
 ```
 
 ##### アプリ内メッセージの処理後
-アプリ内メッセージを処理した後、フィールドをクリアする必要があります。
+アプリ内メッセージの処理後に、フィールドをクリアする必要があります。
 ```brightscript
 m.BrazeTask.BrazeInAppMessage = invalid
 ```

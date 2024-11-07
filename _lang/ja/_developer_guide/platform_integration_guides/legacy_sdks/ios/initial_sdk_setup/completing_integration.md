@@ -86,14 +86,14 @@ Braze 機能を使用するための前提条件であるため、`sharedInstanc
 ### コンパイル時のエンドポイント構成 (推奨)
 
 既存のカスタムエンドポイントが指定されている場合:
-- Braze iOS SDK v3.0.2から、`Info.plist`ファイルを使用してカスタムエンドポイントを設定できます。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` 辞書内で、`Endpoint` 文字列サブエントリを追加し、値をカスタムエンドポイント URL の権限 (たとえば、`https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`) に設定します。Braze iOS SDK v4.0.2 より前では、辞書キー `Appboy` を `Braze` の代わりに使用する必要があります。
+- Braze iOS SDK v 3.0.2以降では、`Info.plist` ファイルを使用してカスタムエンドポイントを設定できます。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` 辞書内で、`Endpoint` 文字列サブエントリを追加し、値をカスタムエンドポイント URL の権限 (たとえば、`https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`) に設定します。Braze iOS SDK v4.0.2 より前では、辞書キー `Appboy` を `Braze` の代わりに使用する必要があります。
 
 Braze 担当者は、[正しいエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)についてすでに通知しているはずです。
 
 ### ランタイムエンドポイント構成
 
 既存のカスタムエンドポイントが指定されている場合:
-- Braze iOS SDK v3.17.0+から、`ABKEndpointKey`内の`appboyOptions`パラメータを介して`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`に渡されるエンドポイントを上書き設定できます。値をカスタムエンドポイント URL 権限 (たとえば、`https://sdk.iad-01.braze.com`ではなく`sdk.iad-01.braze.com`) に設定します。
+- Braze iOS SDK v 3.17.0以降では、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡される `appboyOptions` パラメーター内の `ABKEndpointKey` を使用してエンドポイントの設定をオーバーライドできます。値をカスタムエンドポイント URL 権限 (たとえば、`https://sdk.iad-01.braze.com`ではなく`sdk.iad-01.braze.com`) に設定します。
 
 ## SDK の統合が完了
 
@@ -140,16 +140,14 @@ Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
 - `launchOptions` – `application:didFinishLaunchingWithOptions:` から取得するオプション `NSDictionary`。
 - `appboyOptions` – Braze のスタートアップ構成値を持つオプションの `NSDictionary`。
 
-[Appboy.h][1] の Braze スタートアップキーのリストを参照してください。
+Braze のスタートアップキーのリストについては、[Appboy.h](https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h) を参照してください。
 
-## Appboy.sharedInstance() と SWIFT nullability
+## Appboy.sharedInstance() および Swift の nullability
 一般的な慣例とは多少異なりますが、`Appboy.sharedInstance()` シングルトンはオプションです。これは、`startWithApiKey:` が呼び出さられる前は `sharedInstance` が `nil` であり、遅延初期化を使用できる非標準で無効ではない実装がいくつかあるためです。
 
 Appboy の `sharedInstance` (標準実装) にアクセスする前に `didFinishLaunchingWithOptions:` デリゲートで `startWithApiKey:` を呼び出すと、`Appboy.sharedInstance()?.changeUser("testUser")` のようなオプションのチェーンを使用して、煩雑なチェックを回避できます。これは、非 null `sharedInstance` を想定した Objective-C 実装と同等になります。
 
 ## その他のリソース
 
-[iOS クラスの完全なドキュメント][2] を使用して SDK メソッドに関する追加のガイダンスを提供できます。
+完全な[iOS クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "完全なiOS クラスのドキュメント")は、SDK メソッドに関する追加のガイダンスを提供するために利用できます。
 
-[1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "iOS クラスの完全なドキュメント"

@@ -21,9 +21,9 @@ noindex: true
 
 ## 統合の概要
 
-以下の手順は、プロダクション・コードが呼び出す `BrazeManager` ヘルパー・ファイルの作成に役立ちます。このヘルパーファイルは、リストされている以下の統合トピックのさまざまな拡張機能を追加することで、Braze 関連のすべての依存関係を処理します。各トピックには、Swift と Objective-C の両方の水平タブステップとコードスニペットが含まれます。アプリライセンスでこれらのチャネルを使用する予定がない場合は、インテグレーションにはコンテンツカードとアプリ内メッセージ ステップ s は必要ありません。
+以下の手順は、プロダクション・コードが呼び出す `BrazeManager` ヘルパー・ファイルの作成に役立ちます。このヘルパーファイルは、リストされている以下の統合トピックのさまざまな拡張機能を追加することで、Braze 関連のすべての依存関係を処理します。各トピックには、Swift と Objective-C の両方の水平タブステップとコードスニペットが含まれます。アプリケーションでこれらのチャネルを使用する予定がない場合、統合にはコンテンツカードとアプリ内メッセージのステップは必要ありません。
 
-- [作成 BrazeManager.swift](#create-brazemanagerswift)
+- [BrazeManager.swift の作成](#create-brazemanagerswift)
 - [SDK の初期化](#initialize-the-sdk)
 - [プッシュ通知](#push-notifications)
 - [ユーザー変数とメソッドへのアクセス](#access-user-variables-and-methods)
@@ -32,16 +32,16 @@ noindex: true
 - [コンテンツカード (オプション)](#content-cards)
 - [次のステップ](#next-steps)
 
-### 作成 BrazeManager.swift
+### BrazeManager.swift の作成
 
 {% tabs local %}
-{% tab 作成 BrazeManager.swift %}
+{% tab BrazeManager スウィフトの作成 %}
 
-##### 作成 BrazeManager.swift
+##### BrazeManager.swift の作成
 `BrazeManager.swift` ファイルを作成するには、_BrazeManager_ という名前の新しい Swift ファイルを作成し、目的の場所のプロジェクトに追加します。次に、`import Foundation` を SPM の `import AppboyUI` に置き換えてから (CocoaPods の場合は `import Appboy_iOS_SDK`)、`BrazeManager` クラスを作成します。これは、すべての Braze 関連のメソッドと変数をホストするために使用されます。`Appboy_iOS_SDK`
 
 {% alert note %}
-- `BrazeManager` は`NSObject` クラスであり、struct クラスではないため、`ABKInAppMessageUIDelegate` のようなABK デリゲートに準拠できます。
+- `BrazeManager` は `NSObject` クラスであり、構造体ではないため、`ABKInAppMessageUIDelegate` などの ABK デリゲートに準拠できます。
 - `BrazeManager` は、このクラスのインスタンスが1 つだけ使用されるように設計されたシングルトンクラスです。これは、オブジェクトへの統合されたアクセスポイントを提供するために行われます。
 {% endalert %} 
 
@@ -100,9 +100,9 @@ class BrazeManager: NSObject {
 ### SDK の初期化
 
 {% tabs local %}
-{% tab ステップ 1:SDKの初期化 BrazeManager.swift %}
+{% tab ステップ 1:BrazeManager swift からSDK を初期化する %}
 
-##### SDKの初期化 BrazeManager.swift
+##### BrazeManager.swift から SDK を初期化する
 次に、SDK を初期化する必要があります。このガイドでは、すでに [SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) を Xcode プロジェクトに追加していることを前提としています。また、[ワークスペース SDK エンドポイント]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) および [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) を `Info.plist` ファイルまたは `appboyOptions` に設定する必要があります。
 
 `didFinishLaunchingWithOptions` メソッドを `AppDelegate.swift` ファイルから `BrazeManager.swift` ファイルに戻りタイプなしで追加します。`BrazeManager.swift` ファイルに同様のメソッドを作成すると、`import AppboyUI` ステートメントは `AppDelegate.swift` ファイルにはありません。 
@@ -131,9 +131,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab ステップ 2:Appboy初期化処理 %}
+{% tab ステップ 2:Appboy の初期化処理 %}
 
-##### Appboy初期化処理 AppDelegate.swift
+##### AppDelegate.swift での Appboy の初期化処理
 次に、`AppDelegate.swift` ファイルに戻り、AppDelegate の `didFinishLaunchingWithOptions` メソッドに以下のコードスニペットを追加して、`BrazeManager.swift` ヘルパーファイルから Appboy の初期化を処理します。`AppDelegate.swift` に `import AppboyUI` ステートメントを追加する必要はありません。
 
 {% subtabs global %}
@@ -183,7 +183,7 @@ Braze ダッシュボードで既存のワークスペースに移動します�
 ![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab ステップ 2:通知登録 %}
+{% tab ステップ 2:通知を登録する %}
 
 {% alert important %}
 この手順の最後にある専用チェックポイントをお見逃しなく！
@@ -241,14 +241,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 {% alert checkpoint %}
 コードのコンパイルとアプリケーションの実行に進みます。
-- アプリで、プッシュ通知 s の入力を求められていることを確認してから、さらに進みます。
-- プロンプトが表示されない場合は、アプリを削除して再インストールし、プッシュ通知プロンプトが以前に表示されなかったことを確認します。
+- アプリで、プッシュ通知を求めるプロンプトが表示されていることを確認してから、先に進みます。
+- プロンプトが表示されない場合は、アプリの削除と再インストールを試して、プッシュ通知のプロンプトが以前に表示されていないことを確認します。
 
 プッシュ通知を求めるプロンプトが表示されていることを確認してから、先に進みます。
 {% endalert %}
 
 {% endtab %}
-{% tab ステップ 3:フォワード方式 %}
+{% tab ステップ 3:転送方式 %}
 
 ##### プッシュ通知メソッドの転送
 
@@ -291,9 +291,9 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### ステップ2:リモート通知のサポート
-\[**署名および機能**] タブで、\[**バックグラウンドモード**] サポートを追加し、\[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![サイン& 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+[**署名および機能**] タブで、[**バックグラウンドモード**] サポートを追加し、[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![署名 & 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
-###### ステップ 3:リモート通知処理
+###### ステップ3: リモート通知処理
 Braze SDK は、Braze から発信されるリモートプッシュ通知を処理できます。Braze にリモート通知を転送します。SDK は Braze から発信されたものではないプッシュ通知を自動的に無視します。プッシュ通知拡張子で、`BrazeManager.swift` ファイルに次のメソッドを追加します。
 
 {% subtabs global %}
@@ -321,7 +321,7 @@ func application(
 {% endsubtab %}
 {% endsubtabs %}
 
-###### ステップ4:通知応答の転送
+###### ステップ 4:通知応答の転送
 
 Braze SDK は、Braze から発信されるプッシュ通知の応答を処理できます。通知の応答を Braze に転送します。SDK は、Braze から発信されていないプッシュ通知からの応答を自動的に無視します。以下のメソッドを `BrazeManager.swift` ファイルに追加します。
 
@@ -570,10 +570,10 @@ String, withQuantity quantity: Int) {
 ### アプリ内メッセージ
 
 {% tabs local %}
-{% tab ステップ 1:委譲に適合 %}
+{% tab ステップ 1:デリゲートに適合 %}
 
 {% alert important %}
-以下のアプリ内メッセージは、このチャネルをアプリライセンスで使用する予定がない場合には、インテグレーションには必要ありません。
+アプリケーションでこのチャネルを使用する予定がない場合、以下のアプリ内メッセージセクションは統合には必要ありません。
 {% endalert %}
 
 ##### ABKInAppMessageUIDelegate に準拠する
@@ -615,7 +615,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab ステップ 2:代理メソッドの追加 %}
+{% tab ステップ 2:デリゲートメソッドの追加 %}
 
 ##### デリゲートメソッドの追加
 次に、`ABKInAppMessageUIDelegate` に準拠する拡張子を作成します。
@@ -671,13 +671,13 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 コードのコンパイルとアプリケーションの実行に進みます。<br><br>アプリ内メッセージを送信してみてください。<br><br>`BrazeManager.swift` ファイルで、`ABKInAppMessageUIDelegate` メソッドの例のエントリにブレークポイントを設定します。アプリ内メッセージを送信し、ブレークポイントに到達したことを確認してから、さらに進みます。
 {% endalert %}
 
-### コンテンツカードによって促進された
+### コンテンツカード
 
 {% tabs local %}
 {% tab コンテンツカードの変数とメソッドの作成 %}
 
 {% alert important %}
-このチャネルをアプリライセンスで使用する予定がない場合、以下のコンテンツカードセクションは統合には必要ありません。
+アプリケーションでこのチャネルを使用する予定がない場合、以下のコンテンツカードセクションは統合には必要ありません。
 {% endalert %}
 
 ##### コンテンツカードの変数とメソッドの作成
@@ -731,9 +731,7 @@ extension BrazeManager {
 おめでとうございます！このベストプラクティス統合ガイドを完了しました！`BrazeManager` ヘルパーファイルの例は、[GitHub](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift) にあります。
 
 これで、Braze iOS SDK への依存関係をプロダクションコードの残りの部分から切り離したので、オプションの高度な実装ガイドをいくつかご覧ください。
-- [高度なプッシュ通知インプリメンテーションガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)
-- [先進アプリ内メッセージ導入指針]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
+- [高度なプッシュ通知実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)
+- [高度なアプリ内メッセージ実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [高度なコンテンツカード実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
-[2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %}
-[3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 
