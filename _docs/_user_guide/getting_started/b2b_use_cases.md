@@ -17,5 +17,8 @@ guide_featured_list:
   - name: Lead Scoring
     link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/user-plus-01.svg
+  - name: Landing Pages
+    link: /docs/user_guide/engagement_tools/landing_pages/
+    image: /assets/img/braze_icons/table.svg
 
 ---
