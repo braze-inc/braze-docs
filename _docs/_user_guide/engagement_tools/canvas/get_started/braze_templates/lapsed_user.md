@@ -91,9 +91,9 @@ Now, we’ll build our Canvas by customizing the templated steps:
 {: start="3"}
 3. Keep the default for the Decision Split step called “Sessions?”, which defines the “>1 Session” group as users who’ve used our app more than once in the last calendar day.
 4. Customize the Message step for users who fall into the “>1 Session” group. In our use case, we’ll thank users for visiting our app and highlight perks that they’ve unlocked.
-5. Make sure our Google Audience sync is set up in the User Update step, so that we update and sync the user data of users who had multiple sessions after receiving our first email.
-Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) component called “A/B Test”. This will randomly send one of two promotions (that we will customize in the next step) to users who’ve had fewer than two sessions. Over time, the promotion with the best performance will be sent more often.
-6. Customize the two promotions that will send to users as part of the Experiment Path. In our use case, we’ll make one a 20% promotion for a three-month subscription and the other a 10% promotion for a one-month subscription.
+5. Make sure our Google Audience sync is set up in the Ad Audience Update step, so that we update and sync the user data of users who had multiple sessions after receiving our first email.
+6. Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) component called “A/B Test”. This will randomly send one of two promotions (that we will customize in the next step) to users who’ve had fewer than two sessions.
+7. Customize the two promotions that will send to users as part of the Experiment Path. In our use case, we’ll make one a 20% promotion for a three-month subscription and the other a 10% promotion for a one-month subscription.
 
 ![Canvas steps with branching paths based on how many sessions a user had.][8]{: style="max-width:70%;"}
 

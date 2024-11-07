@@ -49,7 +49,7 @@ Next, let's assign our conversion event. Because our focus is on our "Enormous P
 
 1. For the **Conversion event type**, select **Makes Purchase**.
 2. Select **Make a specific purchase**. This allows us to select a specific product name.
-3. Select **Enourmous Paper Plate**.
+3. Select **Enormous Paper Plate**.
 
 ![Primary Conversion Event - A with the conversion type "Makes Purchase" with the product name "Enormous Paper Plate". There is a 3-day conversion deadline.][1]
 
@@ -92,13 +92,17 @@ Now, we’ll build our Canvas by customizing the templated steps:
 {: start="3"}
 3. For the Message step, select **Edit message** to customize the email that will be sent to our users, notifying them of the items in their abandoned cart.
 4. Keep the Delay step as is.
-5. In the Audience Paths step, we'll customize the email and SMS message that our users will receive. We want to encourage our users to purchase products with personalized messaging.
+5. In the Message steps subsequent to the Audience Path step, we'll customize the email and SMS message that our users will receive. This is where we want to encourage our users to purchase products with personalized messaging.
 
 ![A preview of the SMS message that users will receive: "Hi there, you left the enormous paper plate behind in your cart! Complete your purchase now and step up your hosting game. Use code MYPLATE at checkout for 20 percent off your order!"][6]
 
 {: start="6"}
-6. Keep the Action Paths step as is. This step will determine which users will exit the Canvas after making a purchase and which users will receive further messaging.
+6. In the next Action Paths step, select the **Made purchase** action group. Then, select **Make a specific purchase** and choose **Enormous Paper Plate** for the product. This step will mirror the first Action Paths step by exiting users who have purchased our product so they won't receive further messaging.
 7. Make sure our Audience Sync step is set up to sync to Facebook. This will further help with ad retargeting.
+
+{% alert tip %}
+You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+{% endalert %}
 
 ### Step 7: Test and launch the Canvas
 

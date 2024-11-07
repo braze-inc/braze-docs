@@ -53,10 +53,8 @@ We'll keep the template's conversion deadline of three days because we want to t
 
 ### Step 3: Set an entry schedule
 
-While this template's entry schedule is set to **Action-Based**, our use case will benefit more by having a scheduled delivery for this Canvas because we want to target users after the launch of our game.
-
-1. Select **Scheduled** as the entry schedule type.
-2. For **Time-Based Options**, select **Enter users as soon as Canvas is launched**.
+1. Keep the entry schedule type as **Action-Based**.
+2. Set the **Start Time** for the entry window to the date the game launches.
 
 ### Step 4: Determine who enters the Canvas
 
@@ -83,6 +81,10 @@ For our example, we'll skip the other settings (frequency capping and seed group
 ### Step 6: Customize your Canvas
 
 Next, we'll build our Canvas by customizing the messaging channels and the content that will send to users. Because we're only seeking feedback using email, in-app message, and webhook channels, we'll go through the template and remove the SMS variants from the Message steps.
+
+{% alert tip %}
+You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+{% endalert %}
 
 We'll begin our customization by going through each messaging component to update the content. Our custom attribute to reference is `Experience Feedback`. 
 

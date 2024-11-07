@@ -91,15 +91,20 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 6: Customize your Canvas
 
-Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
+Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any.
 
-We’ll begin our customization by going through each message component to update the content.
+{% alert tip %}
+You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+{% endalert %}
+
+We’ll begin our customization by going through each Message step to update the content.
 
 1. Replace `!!YOURCATALOGHERE!!` with our catalog name (“Straight_Leg_Pants”).
 2. Replace `[0]` with the index number of the Classic Straight Leg jeans, which is “9” because the jeans are tenth item in the the `items` array of our catalog. (Arrays are zero-indexed in Liquid, so the first item is `0` and not `1`.)
-3. Repeat steps 1 and 2 for all remaining message components, including:
+3. Repeat steps 1 and 2 for all remaining Message steps, including:
     - The “In-Product Msg & Email” message that sends after the one-day delay
     - The “Push+Email Alert” messages that send to users who haven’t made a purchase
+4. Update the Action Paths step by selecting the **Purchase** action group. Then, select **Make a specific purchase** and choose Classic Straight Leg jeans for the product.
 
 ![Mobile Push Canvas step with a message notifying users that a product is back in stock.][9]
 

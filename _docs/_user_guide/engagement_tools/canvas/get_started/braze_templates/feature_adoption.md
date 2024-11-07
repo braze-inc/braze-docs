@@ -82,20 +82,16 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 #### Build out the Action Path
 
-Next, let's build out the Action Path step. We'll make the following adjustments to the template:
+Next, let's build out the first Action Path step, which is meant to indicate whether our users have an interest in the new feature. We'll make the following adjustments to the template:
 
 1. Since the Cruise Control feature is only available after an order has been added to a cart, we'll name the first action group **Added to cart** and select `added_to_cart` for the custom event.
 
 ![The action group name set to "Added to cart" and the "Perform Custom Event" set to "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
-2. Replace the second action group name with **Scheduled recurring delivery**, and select `scheduled_delivery` for the custom event.
-
-![The action group name set to 'Scheduled recurring delivery' and the 'Perform Custom Event' set to 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_scheduled_recurring_delivery.png %}){: style="max-width:60%;"}
-
-{: start="4"}
-4. For the subsequent Action Path named **Assess Usage**, select **Used Feature >3x**. 
-5. Select the **Perform Custom Event** dropdown, then select `scheduled_delivery` for the custom event.
+2. Keep the second action group **Taken Tour** as is since we want to evaluate whether users have taken a tour of the app, and if they have, then they'll advance to the second path.
+3. For the subsequent Action Path named **Assess Usage**, replace **Used Feature >3x** with **Viewed Cruise Control settings**.
+4. Select the **Perform Custom Event** dropdown, then select `scheduled_delivery` for the custom event.
 
 ![The action group name set to 'Used Feature >3x' and the 'Perform Custom Event' set to 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
@@ -106,7 +102,7 @@ Next, we'll go to the Message step named **Feedback Survey** to include our feed
 - **Loved it!**
 - **Not for me.**
 
-1. For the two survey choices, select **Experience Feedback** as our custom attribute to capture and track feedback on Cruise Control.
+1. For the two survey choices, select **Experience Feedback** as our custom attribute to capture and track feedback on Cruise Control. This custom attribute will have two values to represent the survey responses (`good` and `bad`).
 2. Update the attribute values to match the survey options. This will allow us to track a user's response.
 
 ### Step 7: Test and launch your Canvas
