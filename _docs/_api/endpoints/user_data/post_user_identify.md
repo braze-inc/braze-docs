@@ -15,7 +15,7 @@ description: "This article outlines details about the Identify users Braze endpo
 /users/identify
 {% endapimethod %}
 
-> Use this endpoint to identify an unidentified (alias-only) user by external ID or email address. 
+> Use this endpoint to identify an unidentified (alias-only or email-only) user using the provided external ID.
 
 {% alert important %}
 Starting August 7, 2023, this endpoint will merge data for all calls. This means [`merge_behavior`](#merge) will be set to `merge` for all calls.
