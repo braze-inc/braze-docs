@@ -226,7 +226,7 @@ In-App Message
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
 
 #### In-app messages
 
@@ -748,7 +748,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %} For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
+{% multi_lang_include metrics.md metric='Total Impressions' %} This number is a sum of the number of impression events that Braze receives from the SDKs. For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
 
 For in-app messages, if there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on an impression is logged for every time that user sees the in-app message.
 
