@@ -129,7 +129,7 @@ This code count can also be found when revisiting a pre-existing promotion code 
 For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
 
 - The same promotion codes are used across channels in a multichannel message.
-- No extra promotion codes are used up if a message fails or aborts.
+- Extra promotion codes are not used if a message fails or aborts.
 
 If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
 
