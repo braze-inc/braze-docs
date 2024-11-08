@@ -9,7 +9,7 @@ description: "이 참조 문서에서는 Braze iOS SDK에서 캡처한 기기 �
 noindex: true
 ---
 
-{% multi_lang_include 사용 중지/목적 -c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 스토리지
 
