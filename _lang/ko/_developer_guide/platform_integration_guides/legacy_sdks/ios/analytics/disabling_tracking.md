@@ -8,7 +8,7 @@ description: "이 문서는 iOS 애플리케이션에 대한 데이터 수집을
 noindex: true
 ---
 
-{% multi_lang_include 사용 중지/목적 -c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS의 데이터 수집 비활성화
 
