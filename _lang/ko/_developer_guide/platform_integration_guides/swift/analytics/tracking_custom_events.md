@@ -23,7 +23,7 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```
 
 {% endtab %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logCustomEvent:@"YOUR_EVENT_NAME"];
