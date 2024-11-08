@@ -32,7 +32,11 @@ The geographic center of the geofence.
 
 ### Radius
 
-The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 200 meters for all geofences.
+The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100–150 meters for all geofences.
+
+Refer to these guides for more guidance based on your platform:
+- [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence)
+- [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5)
 
 ### Cooldown
 
