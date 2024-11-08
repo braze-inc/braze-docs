@@ -11,7 +11,7 @@ alias: /shareplay/
 noindex: true
 ---
 
-{% multi_lang_include 사용 중지/목적 -c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # SharePlay 인앱 메시지 구현 가이드
 

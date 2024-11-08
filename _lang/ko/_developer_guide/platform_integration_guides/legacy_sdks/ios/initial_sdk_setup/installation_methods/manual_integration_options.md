@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 iOS용 Braze SDK를 수동으로 통합
 noindex: true
 ---
 
-{% multi_lang_include 사용 중지/목적 -c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 수동 통합
 
