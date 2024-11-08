@@ -27,7 +27,7 @@ Starting August 7, 2023, this endpoint will merge data for all calls. This means
 
 Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile) or email address (email-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
 
-Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified. You can also identify a user by their email address by including the email address in the `aliases_to_identify` object.
+Identifying a user requires an `external_id` to be included in the `aliases_to_identify` or `emails_to_identify` object. If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
 
 Note the following:
 
@@ -44,7 +44,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 ## Rate limit
 
-A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API limits]({{site.baseurl}}/api/basics/#api-limits).
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## Request body
 
@@ -66,15 +66,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 You can add up to 50 user aliases per request. You can associate multiple additional user aliases with a single `external_id`.
 
 | Parameter             | Required | Data Type                           | Description                                                                                                                                                                 |
-| --------------------- | -------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify` | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify` | Optional | Array of aliases to identify object           | User emails for the users to identify. Refer to [Identifying users by email](#identifying-users-by-email) for more information.                                                             |
+| `emails_to_identify`  | Required | Array of aliases to identify object | See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
 | `merge_behavior`      | Optional | String                              | One of `none` or `merge` is expected.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Merge_behavior field {#merge}
 
-Setting the `merge_behavior` field to `merge` sets the endpoint to merge fields found **exclusively** on the anonymous user to the identified user. Setting the field to `none` will not merge any user data to the identified user profile.
+Setting the `merge_behavior` field to `merge` sets the endpoint to merge the following list of fields found **exclusively** on the anonymous user to the identified user. Setting the field to `none` will not merge any user data to the identified user profile.
 
 {% details List of fields that are merged %}
 - First name
@@ -110,9 +110,7 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge fields 
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 - Session data if the app exists on both user profiles
   - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
-
 {% enddetails %}
-
 
 ### Identifying users by email
 
