@@ -108,7 +108,8 @@ During the beta, each form submission on a landing page will create a new anonym
 
 ## Permissions
 
-You need either admin permissions or the following to access, create and publish landing pages:
+You need either administrator permissions or all of the following permissions to access, create, and publish landing pages:
+
 - Access Landing Pages
 - Create Landing Page Drafts
 - Publish Landing Pages
