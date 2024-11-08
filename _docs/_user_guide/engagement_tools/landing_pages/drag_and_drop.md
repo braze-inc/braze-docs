@@ -106,6 +106,14 @@ During the beta, each form submission on a landing page will create a new anonym
 
 - The landing page body size can be up to 1 MB.
 
+## Permissions
+
+You need either administrator permissions or all of the following permissions to access, create, and publish landing pages:
+
+- Access Landing Pages
+- Create Landing Page Drafts
+- Publish Landing Pages
+
 ## Frequently asked questions
 
 ### What happens when a user submits their information on the landing page?
