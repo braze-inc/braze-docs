@@ -18,6 +18,7 @@ search_tag: Partner
 | Narvar Account        | A Narvar account is required to take advantage of this partnership.                           |
 | Braze REST API key    | A Braze REST API key with `messages.send` permission. This can be created in the Braze dashboard from **Settings** > **API Keys**.                                            |
 | Braze REST endpoint   | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance.         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Supported features
 
@@ -33,7 +34,7 @@ If you’re interested in additional notification types or channels, please cont
 
 ## Integration Details
 
-For each notification event, Narvar initiates a request to Braze’s `/messaging/send` endpoint to deliver a push message to each opted-in consumer.
+For each notification event, Narvar initiates a request to Braze’s [`/messaging/send`]({{site.baseurl}}/api/endpoints/messaging) endpoint to deliver a push message to each opted-in consumer.
 
 Narvar is responsible for configuring the push notification payloads for each message. Currently, Narvar does not have a built-in design interface for push notifications, so their team will collaborate with your team to determine and define payload requirements. These payloads can be customized to the same extent as those sent through your own system, including support for variable content placeholders, such as order data and consumer details.
 
