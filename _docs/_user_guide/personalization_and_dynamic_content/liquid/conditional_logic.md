@@ -45,8 +45,8 @@ Buy now! Would 5% off convince you?
 ## Conditional logic
 
 You can include many types of [intelligent logic within messages][1], such as a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
-{% raw %}
 
+{% raw %}
 ```liquid
 {% if ${language} == 'en' %}
 This is a message in English from Braze!
@@ -58,40 +58,70 @@ Este es un mensaje en español de Braze !
 This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
 {% endif %}
 ```
+{% endraw %}
 
-### Step by step example
+### Tutorial: Deliver internationalized content with conditional logic
 
-In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
+When you’re finished with this tutorial, you’ll be able to use tags with "if", "elsif" and "else" statements to send different content to users based on their language.
 
+1. Write the first condition that, if met, will send an English message to users whose language is English.
+
+{% raw %}
 ```liquid
 {% if ${language} == 'en' %}
 This is a message in English from Braze!
 ```
-If the user's language is English, the first condition is met and the user will receive a message in English.
+{% endraw %}
 
+{: start="2"}
+2. Write two more conditions and messages for Spanish and Chinese.
+
+{% raw %}
 ```liquid
 {% elsif ${language} == 'es' %}
 Este es un mensaje en español de Braze !
 {% elsif ${language} == 'zh' %}
 这是一条来自Braze的中文消息。
 ```
+{% endraw %}
 
-You can specify as many conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this example, if a user's device is not set to English this code will check to see if the user's device is set to Spanish or Chinese. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
+{: start="3"}
+3. Write as many additonal conditional statements as you'd like. Subsequent conditions will be checked if the previous conditions are not met. In this tutorial, if a user's device is not set to English this code will check to see if the user's device is set to Spanish or Chinese. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
+4. Include an optional {% raw %}`{% else %}` statement in your conditional logic. If none of the conditions that you previously set are met, the `{% else %}` {% endraw %} statement will specify the message that should send. In this tutorial, the sent message will default to English if a user's language is not English, Spanish, or Chinese.
 
+{% raw %}
 ```liquid
 {% else %}
 This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
 ```
+{% endraw %}
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a user's language is not English, Spanish, or Chinese.
+{: start="5"}
+5. Add the {% raw %}`{% endif %}` tag to signal that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` {% endraw %} tag in your conditional logic, you'll get an error as Braze won't be able to parse your message.
 
+{% raw %}
 ```liquid
 {% endif %}
 ```
-
-The `{% endif %}` tag signals that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
-
 {% endraw %}
+
+{% details Full Liquid code %}
+
+{% raw %}
+```liquid
+{% if ${language} == 'en' %}
+This is a message in English from Braze!
+{% elsif ${language} == 'es' %}
+Este es un mensaje en español de Braze !
+{% elsif ${language} == 'zh' %}
+这是一条来自Braze的中文消息。
+{% else %}
+This is a message from Braze! This is going to go to anyone who didn't match the other specified languages!
+{% endif %}
+```
+{% endraw %}
+
+{% enddetails %}
 
 ## Accounting for null, nil, and blank attribute values
 
