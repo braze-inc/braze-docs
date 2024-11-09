@@ -5,13 +5,11 @@ description: "Learn how to integrate Narvar with Braze."
 alias: /partners/narvar/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Narvar
 
-> Narvar is a post-purchase platform that enhances customer loyalty through order tracking, delivery updates, and returns management.
-The Braze and Narvar integration enables brands to leverage Narvar’s notification events to trigger messages directly from Braze, keeping customers informed with timely updates.
+> Narvar is a post-purchase platform that enhances customer loyalty through order tracking, delivery updates, and returns management. The Braze and Narvar integration enables brands to leverage Narvar’s notification events to trigger messages directly from Braze, keeping customers informed with timely updates.
 
 ## Prerequisites
 
@@ -21,18 +19,13 @@ The Braze and Narvar integration enables brands to leverage Narvar’s notificat
 | Braze REST API key    | A Braze REST API key with `messages.send` permission. This can be created in the Braze dashboard from **Settings** > **API Keys**.                                            |
 | Braze REST endpoint   | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance.         |
 
-## Integration Scope
+## Supported features
 
-### Supported Notifications:
-
-The integration currently supports the following Narvar notification events:
-- Delivery Anticipation
-- Carrier Delay
-- Delivered Standard
-
-### Supported Channels
-
-- Push Notifications
+|Type|Supported features|
+|-------|----------|
+| Notifications | - Delivery Anticipation<br>- Carrier Delay<br>- Delivered Standard |
+| Channels | Push Notifications |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you’re interested in additional notification types or channels, please contact your Braze and Narvar CSM.
