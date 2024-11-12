@@ -8,7 +8,7 @@ description: "This article describes how to use target population approvals for 
 
 # Target population approval
 
-> Using target population approval, you can set volume thresholds for campaigns and Canvases to require an additional approval for your messaging rules. This way, you can have an additional review when a larger audience is targeted in your messaging.
+> This page covers how to set up target population approvals for your messaging rules. Using target population approval, you can set volume thresholds for campaigns and Canvases to require additional approval for your messaging rules. This way, you can have an additional review when a larger audience is targeted in your messaging.
 
 {% alert important %}
 Target population approval is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
