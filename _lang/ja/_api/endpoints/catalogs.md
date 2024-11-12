@@ -19,7 +19,7 @@ guide_featured_list:
   - name: "取得:リストカタログ"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/
     image: /assets/img/braze_icons/list.svg
-  - name: "POST:カタログの作成"
+  - name: "POST:カタログを作成する"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
     image: /assets/img/braze_icons/check-square-broken.svg
 
@@ -40,7 +40,7 @@ guide_menu_list2:
 
 guide_menu_title3: "Synchronous catalog items endpoints"
 guide_menu_list3:  
-  - name: "DELETE:カタログアイテムの削除"
+  - name: "DELETE:カタログ項目を削除する"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
     image: /assets/img/braze_icons/edit-05.svg
   - name: "取得:カタログ項目の詳細をリスト"
@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST:カタログアイテムの作成"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT:カタログアイテムの更新"
+  - name: "PUT:カタログ項目を更新する"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 
@@ -73,7 +73,7 @@ guide_menu_list5:
   - name: "POST:カタログ選択を作成"
     link: /docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "DELETE:カタログ選択の削除"
+  - name: "DELETE:カタログ選択を削除"
     link: /docs/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection/
     image: /assets/img/braze_icons/edit-05.svg
 
