@@ -17,11 +17,12 @@ description: "이 참조 문서에서는 사용자 속성 개체의 다양한 �
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) see external user ID,
   "user_alias" : (optional, User alias object),
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
@@ -82,15 +83,30 @@ Braze는 한 달에 한 번씩 푸시 토큰이 없으며 `push_token_import` �
 
 | 데이터 유형 | 참고 |
 | --- | --- |
-| 배열 | 사용자 지정 속성 배열은 1차원 집합이며, 다차원 배열은 지원되지 않습니다. 사용자 지정 속성 배열에 요소를 추가하면 해당 요소가 이미 존재하지 않는 한 배열의 끝에 추가되며, 이 경우 현재 위치에서 배열의 끝으로 이동합니다.<br><br>예를 들어 `['hotdog','hotdog','hotdog','pizza']` 배열을 가져온 경우 고유 값만 지원되므로 배열 속성에 `['hotdog', 'pizza']`로 표시됩니다.<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]`와 같이 배열의 값을 설정하는 것 외에도 `"my_array_custom_attribute" : { "add" : ["Value3"] },` 과 같이 기존 배열에 추가하거나 `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`과 같이 배열에서 값을 제거할 수 있습니다<br><br>커스텀 속성 배열의 최대 요소 개수는 기본값이 25개이지만 개별 배열의 경우 최대 100개까지 늘릴 수 있습니다. 자세한 내용은 [배열을][6] 참조하세요. |
+| 배열 | 사용자 지정 속성 배열이 지원됩니다. 사용자 지정 속성 배열에 요소를 추가하면 해당 요소가 이미 존재하지 않는 한 배열의 끝에 추가되며, 이 경우 현재 위치에서 배열의 끝으로 이동합니다.<br><br>예를 들어 `['hotdog','hotdog','hotdog','pizza']` 배열을 가져온 경우 고유 값만 지원되므로 배열 속성에 `['hotdog', 'pizza']`로 표시됩니다.<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]`와 같이 배열의 값을 설정하는 것 외에도 `"my_array_custom_attribute" : { "add" : ["Value3"] },` 과 같이 기존 배열에 추가하거나 `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`과 같이 배열에서 값을 제거할 수 있습니다<br><br>커스텀 속성 배열의 최대 요소 개수는 기본값이 25개이지만 개별 배열의 경우 최대 100개까지 늘릴 수 있습니다. 자세한 내용은 [배열을][6] 참조하세요. |
+| 객체 배열 | 객체 배열을 사용하면 각 객체에 속성 집합이 포함된 객체 목록을 정의할 수 있습니다. 이는 호텔 숙박, 구매 내역, 환경 설정 등 사용자에 대한 여러 관련 데이터 세트를 저장해야 하는 경우에 유용합니다. <br><br> 예를 들어 `hotel_stays` 라는 사용자 프로필에 사용자 지정 속성을 정의할 수 있습니다. 이 사용자 지정 속성은 `hotel_name`, `check_in_date`, `nights_stayed` 과 같은 속성을 사용하여 각 개체가 별도의 숙박을 나타내는 배열로 정의할 수 있습니다. 자세한 내용은 [이 예시를](#array-of-objects-example) 참조하세요. |
 | 부울 | `true` 또는 `false` |
 | 날짜 | [ISO 8601][19] 형식 또는 다음 형식 중 하나로 저장해야 합니다: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>'T'는 자리 표시자가 아닌 시간 지정자이므로 변경하거나 제거해서는 안 됩니다. <br><br>표준 시간대가 없는 시간 속성은 기본값이 자정(UTC)으로 설정됩니다(대시보드에서 회사 표준 시간대의 자정에 해당하는 시간으로 형식이 지정됨). <br><br> 향후 타임스탬프가 있는 이벤트는 기본적으로 현재 시간으로 설정됩니다. <br><br> 일반 사용자 지정 속성의 경우, 연도가 0보다 작거나 3000보다 크면 Braze는 이 값을 사용자에게 문자열로 저장합니다. |
-| 플로트 |  |
+| 플로트 | 플로트 사용자 지정 속성은 소수점이 있는 양수 또는 음수입니다. 예를 들어 플로트를 사용하여 제품이나 서비스에 대한 계정 잔액이나 사용자 평점을 저장할 수 있습니다. |
 | 정수 | 정수 사용자 지정 속성은 'inc' 필드와 증가시킬 값을 가진 객체를 할당하여 양수 또는 음수 정수로 증가시킬 수 있습니다. <br><br>예시: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| 문자열 |  |
-{: .reset-td-br-1 .reset-td-br-2}
+| 중첩된 사용자 지정 속성 | 중첩된 사용자 지정 속성은 속성 집합을 다른 속성의 속성으로 정의합니다. 사용자 지정 속성 개체를 정의할 때 해당 개체에 대한 추가 속성 집합을 정의합니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하세요. |
+| 문자열 | 문자열 사용자 지정 속성은 텍스트 데이터를 저장하는 데 사용되는 문자 시퀀스입니다. 예를 들어 문자열을 사용하여 이름과 성, 이메일 주소 또는 환경설정을 저장할 수 있습니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert tip %}
 사용자 지정 이벤트와 사용자 지정 속성을 언제 사용해야 하는지에 대한 자세한 내용은 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) 및 [사용자 지정 속성에]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) 대한 각 문서를 참조하세요.
+{% endalert %}
+
+##### 객체 배열 예제 
+
+이 개체 배열을 사용하면 숙박 내 특정 기준에 따라 세그먼트를 생성하고 Liquid 템플릿으로 각 숙박의 데이터를 사용하여 메시지를 개인화할 수 있습니다.
+
+```json
+"hotel_stays": [
+  { "hotel_name": "Ocean View Resort", "check_in_date": "2023-06-15", "nights_stayed": 5 },
+  { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
+  ]
+```
 
 #### Braze 고객 프로필 필드 {#braze-user-profile-fields}
 
@@ -120,13 +136,13 @@ Braze는 한 달에 한 번씩 푸시 토큰이 없으며 `push_token_import` �
 | language | (문자열)의 경우 [ISO-639-1 표준에][24] 따라 해당 언어가 Braze에 전달되어야 합니다. 지원되는 언어에 대해서는 [허용되는 언어 목록을][2] 참조하세요.<br><br>CSV 가져오기 또는 API를 통해 사용자에 대해 `language` 을 설정하면 Braze가 SDK를 통해 이 정보를 자동으로 캡처하지 못합니다. |
 | last_name | (문자열) |
 | marked_email_as_spam_at | (문자열) 사용자의 이메일이 스팸으로 표시된 날짜입니다. ISO 8601 형식 또는 다음 형식 중 하나로 표시됩니다: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| 전화 | (문자열) |
+| 전화 | (문자열) 전화 번호를 [E.164](https://en.wikipedia.org/wiki/E.164) 형식으로 제공하는 것이 좋습니다. 자세한 내용은 [사용자 전화번호를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting) 참조하세요.|
 | push_subscribe | (문자열) 사용 가능한 값은 "opted_in"(푸시 메시지를 수신하도록 명시적으로 등록됨), "unsubscribed"(푸시 메시지를 명시적으로 수신 거부함), "subscribed"(수신 동의하지도, 수신 거부하지도 않음) 등입니다.  |
 | push_tokens | `app_id` 및 `token` 문자열이 포함된 객체 배열입니다. 선택적으로 이 토큰이 연결된 기기에 `device_id`를 제공할 수 있습니다(예: `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`). `device_id` 을 제공하지 않으면 무작위로 생성됩니다. |
 | subscription_groups| `subscription_group_id` 및 `subscription_state` 문자열이 포함된 객체 배열(예: `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`) . `subscription_state` 에 사용할 수 있는 값은 "구독" 및 "구독 취소"입니다.|
 | time_zone | (문자열) [IANA 표준 시간대 데이터베이스의][26] 표준 시간대 이름(예: "미국/뉴욕" 또는 "동부 표준시(미국 및 캐나다)"). 유효한 표준 시간대 값만 설정됩니다. |
 | 트위터 | `id` (정수), `screen_name` (문자열, X(이전 트위터) 핸들), `followers_count` (정수), `friends_count` (정수), `statuses_count` (정수) 중 하나를 포함하는 해시입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 이 API를 통해 명시적으로 설정된 언어 값은 Braze가 기기에서 자동으로 수신하는 로캘 정보보다 우선합니다.
 
