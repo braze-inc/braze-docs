@@ -24,6 +24,7 @@ Vous devez inclure un objet Android push dans `messages` si vous voulez que les 
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
    "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
    "priority": (optional, integer) the notification priority value,
+   "android_priority": (optional, string) the FCM sender priority,
    "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
    // Specifying "default" in the sound field will play the standard notification sound
@@ -40,18 +41,19 @@ Vous devez inclure un objet Android push dans `messages` si vous voulez que les 
 }
 ```
 
-Vous pouvez envoyer des notifications « Big Picture » en spécifiant la clé `appboy_image_url` dans l’objet `extra`. La valeur de `appboy_image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées à un rapport hauteur/largeur de 2:1 et doivent avoir une taille minimale de 600 x 300 px. Les images utilisées pour les notifications ne s’afficheront que sur les appareils exécutant Jelly Bean (Android 4.1) ou une version supérieure.
+Vous pouvez envoyer des notifications « Big Picture » en spécifiant la clé `appboy_image_url` dans l’objet `extra`. La valeur de `appboy_image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées à un rapport hauteur/largeur de 2:1 et doivent avoir une taille minimale de 600 x 300 px.
 
 ### Informations relatives aux paramètres supplémentaires
 
 | Paramètre | Détails |
 | --------- | ------- |
 | `priority` | Ce paramètre accepte les valeurs entre `-2` et `2`, où `-2` représente la priorité « MIN » et `2` représente la priorité « MAX ». `0` est la valeur « PAR DÉFAUT ». <br> <br> Toutes les valeurs envoyées en dehors de cette plage prendront la valeur 0 par défaut. Pour plus d'informations sur le niveau de priorité à utiliser, voir [Priorité des notifications Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
+| `android_priority` | Ce paramètre accepte les valeurs "normal" ou "élevé" pour spécifier la priorité de l'expéditeur FCM. Par défaut, les messages de notification sont envoyés avec une priorité élevée et les messages de données avec une priorité normale.<br><br> Pour plus d'informations sur l'impact des différentes valeurs sur la réception/distribution, voir [Priorité des messages Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
 | `collapse_key` | FCM peut stocker simultanément jusqu’à quatre clés de réduction par appareil. Si vous utilisez plus de quatre clés de réduction, FCM ne donne aucune garantie quant à celles qui seront conservées. Braze utilise l’un de ces éléments par défaut pour les campagnes, assurez-vous donc de ne spécifier que jusqu’à trois clés de réduction supplémentaires pour les messages Android. |
 | `push_icon_image_url` | La valeur du paramètre des grandes icônes doit être une URL qui renvoie à l’emplacement où votre image est hébergée. <br> <br> Les images doivent être recadrées selon un apport hauteur/largeur  1:1 et mesurer au moins 40x40. |
 | `notification_channel` | Si cela n'est pas spécifié, Braze tentera d'envoyer la charge utile de la notification avec l'ID du canal de [repli du tableau de bord][45]. Pour en savoir plus, consultez la section [Canaux de notification][44] et reportez-vous aux étapes de [définition des canaux de notification][43] lors de l'intégration. |
 | `send_to_sync` | Pour plus d'informations sur les messages `send_to_sync`, consultez [les notifications Android silencieuses][28]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Objet Bouton d’action push Android
 
