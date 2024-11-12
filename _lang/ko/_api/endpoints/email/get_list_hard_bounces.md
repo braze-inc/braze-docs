@@ -35,15 +35,15 @@ description: "이 문서에서는 하드 바운스된 이메일 주소를 쿼리
 | `limit` | 선택 사항 | 정수 | 결과 수를 제한하는 선택적 필드입니다. 기본값은 100이며 최대값은 500입니다. |
 | `offset` | 선택 사항 | 정수 | 목록에서 검색할 선택적 시작 지점. |
 | `email` | 선택 사항<br>(참고) | 문자열 | 제공된 경우, 사용자가 하드 바운스했는지 여부를 반환합니다. 이메일 문자열이 올바르게 형식화되었는지 확인하십시오. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 귀하는 `start_date` 및 `end_date` 또는 `email` 중 하나를 제공해야 합니다. `start_date`, `end_date`, `email` 세 가지를 모두 제공하면 제공된 이메일의 우선순위를 지정하고 날짜 범위는 무시합니다.
 {% endalert %}
 
-날짜 범위에 하드 바운스 횟수가 `limit`보다 많은 경우, 호출이 `limit`보다 적거나 결과가 0이 될 때까지 매번 `offset`을 증가시키면서 여러 번 API 호출을 수행해야 합니다. `offset` 및 `limit` 매개 변수를 `email`과 함께 포함하면 빈 응답을 반환할 수 있습니다. 
+날짜 범위에 하드 바운스 횟수가 `limit`보다 많은 경우, 호출이 `limit`보다 적거나 결과가 0이 될 때까지 매번 `offset`을 증가시키면서 여러 번 API 호출을 수행해야 합니다. `offset` 및 `limit` 매개 변수를 `email`과 함께 포함하면 빈 응답을 반환할 수 있습니다.
 
-## 예시 요청
+## 요청 예시
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
