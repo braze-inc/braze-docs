@@ -114,6 +114,10 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Replaces the iOS BrazeAppDelegate method call of BrazeReactUtils.populateInitialUrl with BrazeReactUtils.populateInitialPayload.
         - This update resolves an issue where push opened events would not be triggered when clicking on a notification while the application is in a terminated state.
         - To fully leverage this update, replace all calls of Braze.getInitialURL with Braze.getInitialPushPayload in your JavaScript code. The initial URL can now be accessed via the url property of the initial push payload.
+- [Braze Segment Swift Plugin 5.0.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md)
+    - Updates the Braze Swift SDK bindings to require releases from the 11.1.1+ SemVer denomination.
+    - This allows compatibility with any version of the Braze SDK from 11.1.1 up to, but not including, 12.0.0.
+    - Refer to the changelog entry for 11.1.1 for more information on potential breaking changes.
 
 ## October 15, 2024 release
 
