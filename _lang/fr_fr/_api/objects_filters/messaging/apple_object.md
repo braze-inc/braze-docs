@@ -77,7 +77,7 @@ Vous devez inclure le champ `category` dans l’objet Notification push Apple po
 | `ab_cat_confirm_cancel` | Confirmer     | `ab_pb_confirm`            | OPEN_APP, URI ou DEEP_LINK |
 | `ab_cat_confirm_cancel` | Annuler      | `ab_pb_cancel`             | FERMER                   |
 | `ab_cat_more`           | Plus        | `ab_pb_more`               | OPEN_APP, URI ou DEEP_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {
