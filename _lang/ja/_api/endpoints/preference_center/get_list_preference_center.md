@@ -20,17 +20,17 @@ description: "この記事では、「ユーザー設定センターのリスト
 
 ## 前提条件
 
-このエンドポイントを使用するには、`preference_center.list` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`preference_center.list`の権限が必要です。
 
 ## レート制限
 
-このエンドポイントには、1分あたり、ワークスペースあたり、1,000件のリクエストというレート制限があります。
+このエンドポイントには、1 分あたり、ワークスペース あたり、レート制限 1,000 のリクエストがあります。
 
 ## パスとリクエストのパラメータ
 
 このエンドポイントには、パスまたはリクエストパラメータはありません。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/list \
