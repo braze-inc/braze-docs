@@ -33,7 +33,7 @@ description: "이 문서에서는 세그먼트 세부 사항 내보내기 Braze 
 | `segment_id` | 필수 | 문자열 | [세그먼트 API 식별자]({{site.baseurl}}/api/identifier_types/)<br><br> 지정된 세그먼트의 `segment_id`는 Braze 계정 내 [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 찾을 수 있으며, [세그먼트 목록 내보내기 엔드포인트]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)를 사용할 수도 있습니다.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/details?segment_id={{segment_identifier}}' \
