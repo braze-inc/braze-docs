@@ -558,4 +558,8 @@ glossaries:
     description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
+  - name: Sending Phone Number
+    description: Segments by sending phone number, which contains only valid e.164-formatted phone numbers.<br><br>When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having a phone number but not a sending phone number.<br><br>Use cases:<br> - When the sending phone number format is consistent and fits the e.164 format, you can use this filter with a regular expression (regex) that assumes a consistent format, such as matching the country code.<br>- Find all user profiles that have a phone number that hasn't been coerced into the e.164 format and are thus unreachable, so you can resolve them.
+    tags:
+      - Other filters
 ---
