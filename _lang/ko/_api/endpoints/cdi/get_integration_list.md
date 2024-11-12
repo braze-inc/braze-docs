@@ -33,7 +33,7 @@ description: "이 문서에서는 목록 통합 Braze 엔드포인트에 대한 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `cursor` | 선택 사항 | 문자열 | 통합 목록의 페이지 매김을 결정합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -95,7 +95,7 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 | 오류 | 문제 해결 |
 | --- | --- |
 | `400 Invalid cursor` | `cursor` 주소가 유효한지 확인합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 추가 상태 코드 및 관련 오류 메시지는 [심각한 오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하세요.
 
