@@ -30,13 +30,13 @@ description: "この記事では、「外部 ID の名前を変更」エンド�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.external_ids.rename`権限を持つ [API キー]({{site.baseurl}}/api/api_key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.external_ids.rename`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -51,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `external_id_renames` | required | 外部識別子リネームオブジェクトの配列 | 外部識別子の名前変更オブジェクトの構造に対するリクエスト例と次の制限事項を表示します。 |
+| `external_id_renames` | 必須 | 外部識別子リネームオブジェクトの配列 | 外部識別子の名前変更オブジェクトの構造に対するリクエスト例と次の制限事項を表示します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 - `current_external_id` はユーザーのプライマリ ID である必要があり、非推奨 ID にすることはできません
