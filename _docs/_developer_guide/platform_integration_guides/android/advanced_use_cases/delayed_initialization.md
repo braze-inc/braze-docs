@@ -33,14 +33,14 @@ This can additionally be done at runtime via:
 {% tab JAVA %}
 
 ```java
-Braze.enableDelayedInitialization(getApplicationContext());
+Braze.enableDelayedInitialization(context);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.enableDelayedInitialization(applicationContext)
+Braze.enableDelayedInitialization(context)
 ```
 
 {% endtab %}
@@ -54,14 +54,14 @@ Delayed initialization is disabled by default. Delayed initialization can be dis
 {% tab JAVA %}
 
 ```java
-Braze.disableDelayedInitialization(getApplicationContext());
+Braze.disableDelayedInitialization(context);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.disableDelayedInitialization(applicationContext)
+Braze.disableDelayedInitialization(context)
 ```
 
 {% endtab %}
@@ -89,14 +89,14 @@ Additionaly, the push analytics behavior can be set during runtime in the [`Braz
 {% tab JAVA %}
 
 ```java
-Braze.enableDelayedInitialization(getApplicationContext(), DelayedInitializationAnalyticsBehavior.DROP);
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.enableDelayedInitialization(applicationContext, DelayedInitializationAnalyticsBehavior.DROP)
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP)
 ```
 
 {% endtab %}
@@ -106,16 +106,15 @@ Braze.enableDelayedInitialization(applicationContext, DelayedInitializationAnaly
 {% tab JAVA %}
 
 ```java
-Braze.enableDelayedInitialization(getApplicationContext(), DelayedInitializationAnalyticsBehavior.QUEUE);
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.enableDelayedInitialization(applicationContext, DelayedInitializationAnalyticsBehavior.QUEUE)
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE)
 ```
 
 {% endtab %}
 {% endtabs %}
-
