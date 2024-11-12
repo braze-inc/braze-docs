@@ -277,7 +277,7 @@ Se receber o erro "provided external_id is blacklisted and disallowed", sua soli
 
 ## Perguntas frequentes
 
-{% multi_lang_include Envio de e-mail via sms-warning.md %}
+{% multi_lang_include email-via-sms-warning.md %}
 
 ### O que acontece quando são encontrados vários perfis com o mesmo endereço de e-mail?
 Se o site `external_id` existir, o perfil atualizado mais recentemente com um ID externo terá prioridade para atualizações. Se o endereço `external_id` não existir, o perfil atualizado mais recentemente será priorizado para atualizações.
