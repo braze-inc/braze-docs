@@ -37,8 +37,12 @@ Cet endpoint n’a pas de chemin de paramètres.
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
+|`step_id`| Requis | Chaîne de caractères | L'ID de votre étape du canvas. |
+|`message_variation_id`| Requis | Chaîne de caractères | L'ID de votre message. |
 |`locale_id`| Requis | Chaîne de caractères | L'ID de la locale. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+Notez que tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans les paramètres de **prise en charge multilingue** ou dans la réponse à la requête GET.
 
 ## Exemple de demande
 
@@ -96,7 +100,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 |`MULTI_LANGUAGE_NOT_ENABLED`|Les paramètres multilingues ne sont pas activés pour votre espace de travail.|
 |`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Seules les campagnes de communication par e-mail ou les messages canvas contenant des e-mails peuvent être traduits.|
 |`UNSUPPORTED_CHANNEL`| Seuls les messages des campagnes de communication par e-mail ou les envois de canvas par e-mail peuvent être traduits.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
           INVALID_CAMPAIGN_ID = "Invalid campaign or step ID"
