@@ -14,7 +14,7 @@ description: "This article describes how to use target population approvals for 
 Target population approval is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-## Prerequisites
+## Prerequisite
 
 Before you can set up target population approval, both Canvas and campaign approval workflows must be turned on.
 
