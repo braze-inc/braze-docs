@@ -69,7 +69,7 @@ No. You must set up messaging rules for each workspace.
 
 ### Is the target population approval based on the Target Audience step?
 
-Yes. The target population approval doesn't take into account details such as triggering events. For example, a campaign might target all your users, however, it's event triggered, so the actual users who receive it is lower.
+Yes. The target population approval doesn't take into account details such as triggering events. For example, a campaign might target all your users; however, the campaign is event triggered, so the actual users who receive it is lower.
 
 [1]: {% image_buster /assets/img/target_population_approval_example.png %}
 [2]: {% image_buster /assets/img/non_approver_banner.png %}
