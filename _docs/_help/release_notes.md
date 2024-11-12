@@ -95,7 +95,7 @@ You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/ca
  
 ### Improving the developer guide
  
-We're in the process of making major improvements to the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home/). As a first step, we simplified the left-side navigation and reduced the number of nested sections. Be on the lookout for more improvements during the next few months!
+We're in the process of making major improvements to the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home/). As a first step, we simplified the navigation and reduced the number of nested sections. Be on the lookout for more improvements during the next few months!
 
 |Before|After|
 |------|-----|
