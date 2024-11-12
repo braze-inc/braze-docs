@@ -57,7 +57,7 @@ The target population approval controls who can approve the **Target Audience** 
 
 ### Will anything automatically change when this feature is turned on?
 
-No. Once this feature is turned on, you must manually enter a volume threshold and select approvers to use the feature.
+No. After this feature is turned on, you must manually enter a volume threshold and select approvers to use the feature.
 
 ### Do I have to reconfigure my permissions to use this feature?
 
