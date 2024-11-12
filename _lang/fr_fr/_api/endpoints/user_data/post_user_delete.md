@@ -53,16 +53,16 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `external_ids` | Facultatif | Tableau de chaînes de caractères           | Identifiants externes pour les utilisateurs à supprimer.                                                    |
 | `user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
 | `braze_ids`    | Facultatif | Tableau de chaînes de caractères           | Identifiants utilisateur de Braze pour les utilisateurs à supprimer.                                                  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Suppression des utilisateurs par e-mail
 Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. Le `prioritization` est un tableau ordonné et doit spécifier quel utilisateur supprimer si plusieurs utilisateurs sont trouvés. Cela signifie que la suppression des utilisateurs ne se produira pas si plus d'un utilisateur correspond à une priorisation.
 
-Les valeurs autorisées pour le tableau sont : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` fait référence à la priorisation de l'utilisateur mis à jour le plus récemment.
+Les valeurs autorisées pour le tableau sont les suivantes : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est accordée à l'utilisateur ayant effectué la dernière mise à jour.
 
-Une seule des options suivantes peut exister dans le tableau de priorisation à la fois :
-- `identified` fait référence à la priorisation d'un utilisateur avec un `external_id`
-- `unidentified` fait référence à la priorisation d'un utilisateur sans un `external_id`
+Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :
+- `identified` Il s'agit de donner la priorité à un utilisateur ayant une `external_id`
+- `unidentified` Il s'agit de donner la priorité à un utilisateur qui n'a pas de `external_id`
 
 ## Exemple de demande
 ```
