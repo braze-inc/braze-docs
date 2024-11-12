@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) .
 
 Il vous permet de mettre à jour les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe) et le département.
 
@@ -36,7 +36,7 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corps de la demande
 ```
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     {
                          "teamName": "Test Team",
                          "teamPermissions": ["admin"]
-                    } 
+                    }
                 ]
             },
             {
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
    }
 }
@@ -86,7 +86,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
 | `department` | Requis | Chaîne de caractères | Chaîne de [caractères]({{site.baseurl}}/scim_api_appendix/#department-strings) valide du département, tirée de la [documentation sur les chaînes de caractères du département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Requis | Object JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Exemple de demande
@@ -114,7 +114,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -146,7 +146,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -167,4 +167,3 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 {% endapi %}
-
