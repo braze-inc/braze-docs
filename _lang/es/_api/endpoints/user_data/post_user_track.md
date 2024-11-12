@@ -30,7 +30,7 @@ Es posible que los clientes que utilicen la API para llamadas de servidor a serv
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='seguimiento_usuarios' %}
+{% multi_lang_include rate_limits.md endpoint='users track' %}
 
 ## Cuerpo de la solicitud
 
@@ -277,7 +277,7 @@ Si recibes el error "provided external_id is blacklisted and disallowed", es pos
 
 ## Preguntas más frecuentes
 
-{% multi_lang_include correo electrónico-via-sms-warning.md %}
+{% multi_lang_include email-via-sms-warning.md %}
 
 ### ¿Qué ocurre cuando se encuentran varios perfiles con la misma dirección de correo electrónico?
 Si existe `external_id`, el perfil actualizado más recientemente con un ID externo tendrá prioridad para las actualizaciones. Si no existe `external_id`, se dará prioridad al perfil actualizado más recientemente.
