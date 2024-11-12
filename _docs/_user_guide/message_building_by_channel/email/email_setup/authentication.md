@@ -47,7 +47,7 @@ The policy you have in your DMARC record will tell the participating recipient e
 | None | Tell the mailbox provider to perform no actions against messages that fail. |
 | Quarantine | Tell the mailbox provider to send messages that fail to the spam folder. |
 | Reject | Tell the mailbox provider that messages that fail will go to the spam folder and should be blocked. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### How to check your domain's DMARC authentication
 

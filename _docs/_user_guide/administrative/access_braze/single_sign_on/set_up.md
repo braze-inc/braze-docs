@@ -20,7 +20,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> For European Union domains, the ASC URL is `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> For some IdPs, this can also be referred to as the Reply URL, Sign-On URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard` |
 | RelayState API key | Go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
@@ -63,7 +63,7 @@ On the same page, input the following:
 | `SAML Name` | This will appear as the button text on the login screen.<br>This is typically your identity provider's name, like "Okta." |
 | `Target URL` | This is provided after setting up Braze within your IdP.<br> Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
 | `Certificate` | The `x.509` certificate that is provided by your identity provider.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Make sure that your `x.509` certificate follows this format when adding it to the dashboard:
 

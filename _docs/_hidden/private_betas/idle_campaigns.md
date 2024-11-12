@@ -35,7 +35,7 @@ Reference this table for how to keep an idle campaign active:
 | Campaigns that are scheduled one-time sends, and it’s seven days past the send date                 | Schedule a future send                            |
 | Campaigns that are scheduled or action-based, have end dates, and it’s seven days past the end date | Extend the end date                               |
 | Campaigns without an end date that have not sent messages in one year                                | Send one message or make any edit to the campaign |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Idle Canvases
 
@@ -56,7 +56,7 @@ Reference this table for how to keep an idle Canvas active:
 | Canvases that are scheduled one-time sends, and it’s seven days and maximum duration past the send date                 | Schedule a future send                          |
 | Canvases that are scheduled or action-based, have end dates, and it’s seven days and maximum duration past the end date | Extend the end date                             |
 | Canvases without end dates that have not sent messages in one year                                                      | Send one message or make any edit to the Canvas |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Frequently asked questions
 

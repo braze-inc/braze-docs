@@ -17,7 +17,7 @@ Tool:
 
 [位置情報サービスの権限リクエスト](https://developer.apple.com/documentation/corelocation/requesting_authorization_to_use_location_services)に関する記事を参照し、アプリケーションの目的文字列を設定してください。Braze の位置情報機能を使用する場合、アプリケーションでは位置情報サービスを使用するための権限がリクエストされます。 
 
-位置情報の追跡を有効にするには、アプリケーション構成ページの \[**一般**] タブで `BrazeLocation` モジュールを追加します。
+位置情報の追跡を有効にするには、アプリケーション構成ページの [**一般**] タブで `BrazeLocation` モジュールを追加します。
 
 {% tabs %}
 {% tab SWIFT %}
@@ -150,6 +150,5 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 {% endtab %}
 {% endtabs %}
 
-詳細については、[`Braze.User.swift`][5] を参照してください。
+詳細については、[`Braze.User.swift`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/) を参照してください。
 
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/

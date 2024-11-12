@@ -21,7 +21,7 @@ The Braze and Jebbit integration lets you pass user emails and attributes from y
 |Jebbit account | A Jebbit account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all user data permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 |Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

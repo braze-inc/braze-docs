@@ -19,7 +19,7 @@ search_tag: Partner
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
 | [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) | Confirm that link shortening is turned on. | 
 | Contact card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

@@ -8,7 +8,7 @@ description: "SHORT_DESCRIPTION."
 alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
 page_type: reference
 layout: OPTIONAL_LAYOUT_FILE
-—--
+---
 
 # ARTICLE_TITLE
 

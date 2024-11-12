@@ -48,7 +48,7 @@ To stop Braze tracking in general, or to clear all stored browser data, see the 
 |`ab.storage.deviceId.[your-api-key]`|Randomly-generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|~200 bytes|
 |`ab.optOut`|Used to store a user's opt-out preference when `disableSDK` is called|~40 bytes|
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain, which allows the SDK to work properly across sub-domains.|n/a|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Device properties
 

@@ -9,12 +9,12 @@ description: "この記事には2020年3月のリリースノートが含まれ�
 
 ## カスタム属性 フィルタービヘイビア
 
-ダッシュボードは[改善されたフィルターs]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates)を持ち、より直感的な振る舞いを含む。
-特定のカスタム属性s フィルターs の動作には、2 つの重要な変更があります。 
+ダッシュボードの[フィルターが改善され]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates)、より直感的な動作が追加されました。
+特定のカスタム属性フィルターの動作に2つの重要な変更が加えられました。 
 
-カスタム属性 フィルターの変更はフィルターs に反映されます。 
-- **X** Days Ago 未満
-- Less than **X** Days in the Future
+カスタム属性フィルターの変更がフィルターに反映されます。 
+- 過去 **X** 日間以内
+- 未来 **X** 日間以内
 - 定期的なイベントの日<br>
 
 これらのフィルターs をセグメンテーションで使用する場合は、これらの変更を考慮してSegments を再調整することをお勧めします。

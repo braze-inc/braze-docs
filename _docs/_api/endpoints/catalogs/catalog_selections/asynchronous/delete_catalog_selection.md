@@ -34,7 +34,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | ---------------- | -------- | --------- | ------------------------------ |
 | `catalog_name`   | Required | String    | Name of the catalog.           |
 | `selection_name` | Required | String    | Name of the catalog selection. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -80,7 +80,7 @@ The status code `404` could return the following response body. Refer to [Troubl
 }
 ```
 
-## Troubleshooting 
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
@@ -88,6 +88,6 @@ The following table lists possible returned errors and their associated troubles
 | -------------------- | -------------------------------------------------------- |
 | `catalog-not-found`  | Check that the catalog name is valid.                    |
 | `invalid-selection`  | Check that the selection name is valid.                  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

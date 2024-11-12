@@ -19,7 +19,7 @@ The Sisu Data and Braze integration allows you to understand across all campaign
 | ----------- | ----------- |
 | Sisu account | A [Sisu][3] account is required to take advantage of this partnership. |
 | Cloud warehouse | This integration assumes your Braze data is stored in a cloud warehouse (for example, Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

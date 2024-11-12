@@ -13,11 +13,11 @@ description: "このリファレンス記事では、フォントファミリの
 
 > このリファレンス記事では、フォントファミリの定義などのフォントカスタマイズオプションについて説明し、Android または FireOS アプリケーション全体でフォントファミリを参照する方法を説明します。
 
-Braze SDK のフォントは、[XML のフォント][1]に従い、AndroidX ライブラリを使用して XML を介して設定できます。Braze SDK でカスタムフォントを使用するには、最初にフォントファミリを作成する必要があります。
+Braze SDK のフォントは、[XML のフォント](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)に従い、AndroidX ライブラリを使用して XML を介して設定できます。Braze SDK でカスタムフォントを使用するには、最初にフォントファミリを作成する必要があります。
 
 ## フォントファミリの作成
 
-以下は、[フォントファミリガイド][2]を使用したカスタムフォントファミリ定義の例です。この例では、[Bungee Shade フォント][3]を使用します。
+以下は、[フォントファミリガイド](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family)を使用したカスタムフォントファミリ定義の例です。この例では、[Bungee Shade フォント](https://fonts.google.com/specimen/Bungee+Shade)を使用します。
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -62,6 +62,3 @@ Braze SDK のフォントは、[XML のフォント][1]に従い、AndroidX ラ�
 すべての SDK バージョン間で互換性を維持するには、`android:fontFamily`と`fontFamily`両方のスタイル属性を設定する必要があります。
 {% endalert %}
 
-[1]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html
-[2]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family
-[3]: https://fonts.google.com/specimen/Bungee+Shade

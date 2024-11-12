@@ -23,7 +23,7 @@ Use permission sets to bundle permissions related to specific subject areas or a
 |Developers|“Access Dev Console”|
 |Marketers|“Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library Assets”|
 |User Management|“Manage Dashboard Users” <br> “Manage Teams”|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
@@ -38,7 +38,7 @@ Roles allow for more structure by bundling together your individual custom permi
 | Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Center"<br>“Manage Media Library Assets” |
 | Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br>“Manage Media Library Assets” |
 | User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Manage Dashboard Users”<br>“Manage Teams” |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
@@ -78,7 +78,7 @@ To manage the following company-level permissions for a user, check or uncheck t
 |----------|-----------|
 |Manage company settings|Allows users to modify any company setting.|
 |Create and delete workspaces|Allows users to create and delete workspaces.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Workspace
 
@@ -154,4 +154,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 |Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|
 |Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+|Workspace|Create and Edit Canvas Templates|Allows users to create and edit Canvas templates.|
+|Workspace|View Canvas Templates|Allows users to view Canvas templates.|
+|Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

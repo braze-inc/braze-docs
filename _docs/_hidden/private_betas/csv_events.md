@@ -54,7 +54,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 | --- | --- | --- | --- | --- |
 | 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
 | 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn't found, Braze will create a newly identified user with that `user_alias_name` set.
 
@@ -111,7 +111,7 @@ When importing customer data as attributes, the column headers you use must exac
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO-8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) </li> </ul> {:/} | No |
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ##### About external IDs
 
@@ -133,7 +133,7 @@ The following data types are accepted in user import:
 | Number | Integer or float with no spaces or commas, floats must use a period (.) as the decimal separator |
 | String | Can contain commas as long as there are double quotation marks surrounding the column value |
 | Blank | Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Arrays and push tokens are not supported in user import. Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. <br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
@@ -210,7 +210,7 @@ Custom events may have event properties. For example, the custom event rented_mo
 | `name`                                  | String    | A custom event of your users.                                                                                                                                                                                           | Yes                                                                                             |
 | `time`                                  | String    | The time of the event. May be passed in one of the following ISO-8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) </li> </ul> {:/} | Yes                                                                                             |
 | `<event name>.properties.<property name>` | Multiple  | An event property associated with a custom event. An example is `rented_movie.properties.title`                                                                                                                        | No                                                                                              |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 While external_id itself is not mandatory, you must include one of the following fields: <br>- `external_id`: A unique user identifier for your customer <br>- `braze_id`: A unique user identifier pulled for existing Braze users <br>- `user_alias_name`: A unique user identifier for an anonymous user

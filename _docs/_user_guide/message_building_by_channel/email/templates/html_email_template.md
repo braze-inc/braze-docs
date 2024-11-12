@@ -54,7 +54,7 @@ There are several email error messages you may receive when uploading an HTML te
 |Images over 5&nbsp;MB| Reduce the number of images and try uploading again. |
 |Extra Images| There may be additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, then check the content, correct any errors, and try uploading again.|
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Step 4: Finish and save your template
 

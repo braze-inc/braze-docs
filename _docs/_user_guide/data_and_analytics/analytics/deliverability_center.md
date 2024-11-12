@@ -66,7 +66,7 @@ To help understand the ratings for IP reputation, refer to this table:
 | Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
 | Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Domain reputation 
 
@@ -78,7 +78,7 @@ Use the following table to help monitor and understand your domain reputation ra
 | Medium/Fair | Known to generate positive engagement but has occasionally received a low volume of spam complaints. Most of the emails from this domain will reach the inbox (except when there is a notable increase in spam levels). |
 | Low | Known to receive spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
 | Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Authentication
 
@@ -89,7 +89,7 @@ Use the authentication dashboard to review the percentage of emails that have pa
 | SPF | Shows the percentage of emails that passed SPF versus all emails from the domain that attempted SPF. This excludes any spoofed mail. |
 | DKIM | Shows the percentage of emails that passed DKIM versus all emails from the domain that attempted DKIM. |
 | DMARC | Shows the percentage of emails that passed DMARC alignment versus all emails received from the domain that passed either SPF or DKIM. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Encryption
 
@@ -99,7 +99,7 @@ Refer to this table to understand what percentage of your inbound and outbound t
 | ----- | ---------- |
 | TLS Inbound | Shows the percentage of incoming mail (to Gmail) that passed TLS versus all mail received from that domain. |
 | TLS Outbound | Shows the percentage of outgoing mail (from Gmail) accepted over TLS versus all mail sent to that domain. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
@@ -134,7 +134,7 @@ Refer to this table to understand the filter results
 | Green | Judged to be spam by Microsoft’s spam filter up to 10% of the given time frame. |
 | Yellow | Judged to be spam by Microsoft’s spam filter between 10% and 90% of the given time frame. |
 | Red | Judged to be spam by Microsoft’s spam filter up to more than 90% of the given time frame.| 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Complaint rate
 
@@ -147,7 +147,7 @@ To calculate the complaint rate, divide the number of complaints by the number o
 | Less than 0.3% | The ideal complaint rate. |
 | More than 0.3% | Review your sign-up process, and ensure your unsubscribe link is working. Also, consider whether mail could be better personalized to your audience. |
 | More than 100% | Note that SNDS displays complaints for the day they were reported, not retroactively against the day the complained-about mail was delivered. | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Spam trap hits
 

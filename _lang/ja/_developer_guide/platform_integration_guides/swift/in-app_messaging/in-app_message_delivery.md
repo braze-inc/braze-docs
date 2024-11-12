@@ -49,7 +49,7 @@ AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 
-アセットがプリフェッチされていないため、配信 (セッション開始、プッシュクリック) 時にすぐに表示されるアプリ内メッセージには多少の遅延が発生する可能性があります。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル][45]に関する記事をお読みください。
+アセットがプリフェッチされていないため、配信 (セッション開始、プッシュクリック) 時にすぐに表示されるアプリ内メッセージには多少の遅延が発生する可能性があります。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle)に関する記事をお読みください。
 
 ## トリガー間の最小時間間隔
 
@@ -117,7 +117,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 
 トリガーされたアプリ内メッセージは、次の状況では破棄されます。
 
-- `inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)が `.discard` を返した。
+- `inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)が `.discard` を返しました。
 - アプリ内メッセージのアセット (画像または ZIP ファイル) のダウンロードに失敗しました。
 - アプリ内メッセージを表示する準備ができていますが、タイムアウト時間が経過しました。
 - デバイスの向きが、トリガーされたアプリ内メッセージの向きと一致しません。
@@ -191,5 +191,3 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 完全な実装については、 [サンプルアプリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples)でアプリ内メッセージのカスタマイズサンプルを参照してください。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui
-[45]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle

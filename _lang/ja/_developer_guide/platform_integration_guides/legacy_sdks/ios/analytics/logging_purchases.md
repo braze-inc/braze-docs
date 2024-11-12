@@ -14,9 +14,9 @@ noindex: true
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
+Braze では、複数の通貨での購入がサポートされています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
-実装前に、[ベストプラクティス][5]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## 購入と売上のトラッキング
 
@@ -32,7 +32,7 @@ atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
@@ -50,16 +50,16 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 購入に関するメタデータを追加するには、[イベントプロパティ配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects)を渡すか、`NSNumber`、`NSString`、または `NSDate` の値が挿入された `NSDictionary` を渡します。
 
-詳細については、[iOS クラスのドキュメント][8]を参照してください。
+詳細については、[iOS クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/properties クラスのドキュメント")を参照してください。
 
 ### 数量の追加
 顧客が 1 回のチェックアウト手続きで同じ購入を複数回行う場合は、購入に数量を追加できます。これを行うには、数量として `NSUInteger` を渡します。
 
-* SDK で購入を記録するには、数量入力が \[0, 100] の範囲内である必要があります。
+* SDK で購入を記録するには、数量入力が [0, 100] の範囲内である必要があります。
 * 数量入力のないメソッドは、デフォルトの数量の値が 1 になります。
 * 数量入力のあるメソッドにはデフォルト値がないため、SDK で購入を記録するために数量入力を受け取る**必要があります**。
 
-詳細については、[iOS クラスのドキュメント][7]を参照してください。
+詳細については、[iOS クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/quantity クラスのドキュメント")を参照してください。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -72,7 +72,7 @@ withProperties:@{@"key1":"value1"}];
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
@@ -101,11 +101,5 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 ### REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント][4]を参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties のドキュメント"
-[7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity クラスのドキュメント"
-[8]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties クラスのドキュメント"

@@ -1,7 +1,7 @@
 ---
 nav_title: Query Builder
 article_title: Query Builder
-page_order: 100
+page_order: 15
 page_type: reference
 description: "This reference article describes how to build reports using Braze data from Snowflake in the Query Builder."
 tool: Reports
@@ -181,7 +181,7 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 | Start date | Specifies a start date | Requires `start_date` |
 | End date | Specifies an end date | Requires `end_date` |
 | Date range | Specifies both a start and end date | Requires both `start_date` and `end_date` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 - **Replacement value:** Replaces `start_date` and `end_date` with a Unix timestamp in seconds for a specified date in UTC, such as `1696517353`.
 - **Usage example:** For all of relative, start date, end date, and date range variables:

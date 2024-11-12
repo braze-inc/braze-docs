@@ -8,13 +8,13 @@ description: "この記事には2020年11月のリリースノートが含まれ
  
 # 2020年11月
 
-## Tealiumのパートナーシップが開始されました
+## Tealium のパートナーシップが開始
 
-[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) は、サードパーティのソースからモバイル、Web、および代替データを簡単に接続できるデータハブです。Brazeと接続すると、Tealiumはカスタムイベント、ユーザー属性、および購入のデータフローをリアルタイムデータアクションのために可能にします。
+[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) は、サードパーティのソースからモバイル、Web、および代替データを簡単に接続できるデータハブです。Braze に接続すると、Tealium により、カスタムイベント、ユーザー属性、および購入のデータフローがリアルタイムデータアクションで有効になります。
 
 ## Braze プロダクトポータル
 
-[Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)には、Braze製品のロードマップとユーザーがアイデアを提出する機会が含まれています。最近リリースされた機能も確認できます。製品ポータルは、**リソース**のBrazeダッシュボードにあります。
+[Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)には、Braze製品のロードマップとユーザーがアイデアを提出する機会が含まれています。最近リリースされた機能も確認できます。製品ポータルは、Braze ダッシュボードの \[**リソース**] にあります。
 
 ## iOSコンテンツカード実装ガイド
 
@@ -22,4 +22,4 @@ description: "この記事には2020年11月のリリースノートが含まれ
 
 ## Swift Package Manager
 
-[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager) は、Swift ビルドシステムと統合されており、自動的にダウンロード、コンパイル、リンクの依存関係が生成されます。Swiftパッケージマネージャーを介してiOS SDKをインストールすると、インストールプロセスの大部分が自動化されます。
+[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager) は、Swift ビルドシステムと統合されており、依存関係を自動的にダウンロード、コンパイル、およびリンクします。Swiftパッケージマネージャーを介してiOS SDKをインストールすると、インストールプロセスの大部分が自動化されます。

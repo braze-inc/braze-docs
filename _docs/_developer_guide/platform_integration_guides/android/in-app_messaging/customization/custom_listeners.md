@@ -97,7 +97,7 @@ The `InAppMessageOperation()` return value can control when the message should b
 | `DISPLAY_LATER` | The message will be returned to the stack and displayed at the next available opportunity |
 | `DISCARD` | The message will be discarded |
 | `null` | The message will be ignored. This method should **NOT** return `null` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 See [`InAppMessageOperation.java`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html) for more details.
 

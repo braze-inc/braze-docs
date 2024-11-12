@@ -164,7 +164,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 ### キャンバスエントリのプロパティとイベントプロパティ
 
 {% alert important %}
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスを作成または複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
+2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
 {% endalert %}
 
 キャンバスのユーザージャーニーで `canvas_entry_properties` と `event_properties` を活用できます。詳細と例については、「[キャンバスエントリのプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)」を参照してください。

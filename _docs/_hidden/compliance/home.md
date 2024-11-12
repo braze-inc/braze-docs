@@ -31,4 +31,7 @@ guide_menu_list:
 - name: WhatsApp Channel
   link: /docs/compliance_documentation_whatsapp/
   image: /assets/img/braze_icons/channel-whatsapp.svg
+- name: LINE Channel
+  link: /docs/compliance_documentation_line/
+  image: /assets/img/braze_icons/channel-line.svg
 ---

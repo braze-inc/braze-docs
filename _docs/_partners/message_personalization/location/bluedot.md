@@ -19,7 +19,7 @@ The Braze and Bluedot integration allows you to use Bluedot geofence location se
 | Requirement | Description |
 |---|---|
 | Bluedot Account | A Bluedot account is required to take advantage of this integration. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

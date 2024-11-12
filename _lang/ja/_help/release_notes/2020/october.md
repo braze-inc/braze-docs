@@ -20,22 +20,22 @@ iOS 14アップグレードガイドでは、iOS 14で導入されたBraze関連
 
 ## Android 11アップグレードガイド
 
-Android 11ガイドは、Android 11リリースで導入された関連する変更と、Braze Android SDK統合に必要なアップグレード手順について説明している。ディープリンク、HTMLアプリ内メッセージ、ロケーション許可に関する変更もある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)ご覧いただきたい。
+『Android 11 ガイド』では、Android 11 リリースで導入された関連する変更点と、Braze Android SDK インテグレーションに必要なアップグレード ステップs について説明します。ディープリンク、HTMLアプリ内メッセージ、ロケーション許可に関する変更もある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)ご覧いただきたい。
 
 ## アトリビューション・パートナー - クリック追跡ガイド
 
-各アトリビューション・パートナーのページに、オプションでクリックトラッキングのドキュメントが追加された。このドキュメントには、キャンペーンでクリックトラッキングを機能させるためのベストプラクティスと実装ガイドラインが含まれている。詳しくは、[アトリビューション・パートナーの]({{site.baseurl}}/partners/advertising_technologies/attribution/)ページをご覧いただきたい。 
+各アトリビューション・パートナーのページに、オプションでクリックトラッキングのドキュメントが追加された。このドキュメントには、キャンペーンでクリックトラッキングを機能させるためのベストプラクティスと実装ガイドラインが含まれている。詳細については、[アトリビューションパートナー]({{site.baseurl}}/partners/advertising_technologies/attribution/)ページをご覧ください。 
 
 ## 新しい説明フィールド
 
-キャンペーンとキャンバスに説明文を追加できるようになった！この新しいフィールドは、既存のキャンペーンまたはキャンバスを作成または編集する際に、キャンペーンまたはキャンバス名フィールドの下に見つけることができる。 
+キャンペーンとキャンバスに説明文を追加できるようになった！この新しいフィールドは、既存のキャンペーンやキャンバスの作成または編集時に、\[キャンペーンまたはキャンバス名] フィールドの下に表示されます。 
 
 ## キャンバスの例外イベント
 
-Canvasesにおける[例外イベントの]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)期待される動作について説明した新しいドキュメントが追加された。 
+キャンバスにおける[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)の予想される動作を説明する新しいドキュメントが追加されました。 
 
 ## ユーザーが更新を削除する
 
-BrazeはAPIに改良を加え、データ削除を要求しているデータ対象者のエンドユーザープロファイルだけでなく、データ対象者の電話番号や電子メールアドレスに関連する購読状態も、顧客が追加の操作をすることなく同時に削除できるようにした。更新されたドキュメントは[ここに]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)ある。
+Braze は API を改良し、追加のアクションを実行しなくても、データの削除を要求するデータ主体のエンドユーザープロファイルだけでなく、データ主体の電話番号やメールアドレスに関連付けられたサブスクリプションの状態も同時に削除できるようにしました。更新されたドキュメントは[ここで見つかります]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

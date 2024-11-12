@@ -107,7 +107,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
-- The field can be in an array (of multiple catalog items within a single event). It will automatically be flattened.
+- The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings
 
@@ -163,14 +163,61 @@ This event has `"product_sku": "ADI-BL-7"`, which matches the first item in the 
 
 ```json
 {
-  "events" : [
+  "events": [
     {
-      "external_id" : "user1",
-      "app_id" : "your-app-id",
-      "name" : "added_to_cart",
-      "time" : "2024-07-16T19:20:30+01:00",
-      "properties" : {
+      "external_id": "user1",
+      "app_id": "your-app-id",
+      "name": "added_to_cart",
+      "time": "2024-07-16T19:20:30+01:00",
+      "properties": {
         "product_sku": "ADI-BL-7"
+      }
+    }
+  ]
+}
+```
+
+##### Example custom event object with an array of products
+
+If your event properties contain multiple products in an array, each product ID will be treated as a separate, sequential event. This event can use the property `products.sku` to match the first and third items in the sample catalog.
+
+```json
+{
+  "events": [
+    {
+      "external_id": "user1",
+      "app_id": "your-app-id",
+      "name": "added_to_cart",
+      "time": "2024-07-16T19:20:30+01:00",
+      "properties": {
+        "transaction_id": "2ff3f9a9-8803-4c3a-91da-14adbf93dc99",
+        "products": [
+          { "sku": "ADI-BL-7" },
+          { "sku": "ADI-WH-9" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+##### Example custom event object with a nested object containing a product ID array
+
+If your product IDs are values in an array instead of objects, you can use the same notation and each product ID will be treated as a separate, sequential event. This can flexibly be combined with nested objects in the following event by configuring the property as `purchase.product_skus` to match the first and third items in the sample catalog.
+
+```json
+{
+  "events": [
+    {
+      "external_id": "user1",
+      "app_id": "your-app-id",
+      "name": "added_to_cart",
+      "time": "2024-07-16T19:20:30+01:00",
+      "properties": {
+        "transaction_id": "13791e08-7c22-4f6c-8cc6-832c76af3743",
+        "purchase": {
+          "product_skus": ["ADI-BL-7", "ADI-WH-9"]
+        }
       }
     }
   ]
@@ -264,7 +311,7 @@ These metrics are defined in the following table.
 | Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>In past testing, we have seen models perform well with precision numbers ranging from 6-20%. This metric updates when the model next retrains.  |
 | Coverage            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
 | Recommendation type | Percentage of users who will receive personalized or most recent recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized or most recent recommendation. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The next section shows a breakdown of items in the catalog, split into two possible columns:
 

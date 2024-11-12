@@ -31,7 +31,7 @@ guide_featured_list:
 
 Once a prediction is built, users are assigned a [likelihood score]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to perform your selected event. The higher the score, the more likely a user is to perform that event. Users are also sorted by low, medium, and high likelihood categories.
 
-The real value of Predictive Events lies using prediction results to create a segment or campaign. Marketers can build targeted campaigns directly on the **Prediction** page for immediate revenue-boosting results or save a segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_purchases/messaging_users/#strategy) for messaging users based on their likelihood score.
+The real value of Predictive Events lies in using prediction results to create a segment or campaign. Marketers can build targeted campaigns directly on the **Prediction** page for immediate revenue-boosting results or save a segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/#strategy) for messaging users based on their likelihood score.
 
 ## Access Predictive Events
 

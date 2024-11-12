@@ -17,7 +17,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed via API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
+Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -58,7 +58,7 @@ For each request component listed in the following table, one of `external_id`, 
 | `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
 

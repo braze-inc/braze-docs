@@ -1,6 +1,6 @@
 ---
 nav_title: ロイヤルティ
-article_title: ロイヤルティパートナーズ
+article_title: ロイヤルティのパートナー
 page_order: 3
 
 page_type: landing
@@ -14,7 +14,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Loyalty"
 
 valid_partner_list:
-- name: アンタボ
+- name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Talon.One
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/talonone/
@@ -24,11 +24,11 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/jebbit/
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
-- name: エクソール
+- name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/  
-- name: ニフト
+- name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 - name: Kognitiv
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/

@@ -31,7 +31,7 @@ This endpoint has a rate limit of 10 requests per minute, per workspace.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Request body
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`.|
 |`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 

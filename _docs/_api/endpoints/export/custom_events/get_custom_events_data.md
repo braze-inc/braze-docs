@@ -31,7 +31,7 @@ Note that each call to this endpoint will return 50 events. For more than 50 eve
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `cursor` | Optional | String | Determines the pagination of the custom events. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example requests
 

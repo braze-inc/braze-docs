@@ -24,24 +24,24 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: スノープラウ
+- name: Snowplow
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
-- name: クラリサイト
+- name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-- name: アクショナブル.me
+- name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
 - name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
-- name: 神童
+- name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
-- name: テルス
+- name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
-- name: コンテンツスクエア
+- name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-- name: マーキュリー
+- name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: SalesWings
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
-- name: スキューバ
+- name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 ---

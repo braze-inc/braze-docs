@@ -11,14 +11,6 @@ The behavior of these filters will remain largely the same and will be defined b
 - "Days" are defined as in UTC.
 - The current UTC day is defined as "0".
 
-{% details Why has the UTC definition changed from "1" to "0"? %}
-Local time zone scheduling requires that users stay in segments for 24 hours. In the case of Y = 1 day, we were in some cases evaluating less than 24 hours of the user's history when determining who should be processed for the campaign or Canvas.
-
-The change will make the filter more intuitive and more consistent with the behavior of our other calendar functionality, such as our send "in 1 day" scheduling options.
-{% enddetails %}
-
-<br>
-
 ## Use case
 
 The following campaign shown sends at 9 pm on April 16. The audience's segmentation is "Made More than 2 Purchases in the past 3 days".

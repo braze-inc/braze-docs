@@ -41,7 +41,7 @@ In the "one template for all" approach, localization is applied to a single temp
 | --- | --- |
 | - Centralized approach<br>- Reduced email build time, no need to build out an email multiple times | - Manual report building<br>- Campaign report shows aggregated metrics rather than metrics per country<br>- Need to thoroughly test Liquid to ensure it populates as expected<br>- Depending on how you pull in the country value or how many counties you have set up, it could be tricky to test each country<br>- Harder to schedule sends for specific times across time zones<br>- Harder to use if you want to send separate content per country. |
 | --- | --- | --- |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab One template per country %}
@@ -55,7 +55,7 @@ The "one template per country" approach separates templating into different send
 | Advantages | Considerations |
 | --- | --- |
 | - Scalable to multiple locations<br>- Reporting on revenue per country within Braze (such as per campaign)<br>- Flexibility if there is drastically different content per country | - Requires strategic structuring<br>- More build effort required (such as separate campaigns for each country) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -72,7 +72,7 @@ After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{s
 | Advantages | Considerations |
 | --- | --- |
 | - Centralized approach<br>- Reduced email build time - no need to build out an email multiple times. | - Manual report building<br>- Canvas report shows aggregated metrics rather than metrics per country<br>- Need to thoroughly test Liquid to ensure it populates as expected<br>- Depending on how you pull in the country value or how many counties you have set up, it could be tricky to test each country<br>- Harder to schedule sends for specific times across time zones<br>- Harder to use if you want to send separate content per country. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab One journey per country %}
@@ -88,7 +88,7 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 | Advantages | Considerations |
 | --- | --- |
 | - Reporting on revenue per country within Braze (such as per Canvas, variant, or step)<br>- Flexibility if there is drastically different content per country<br>- Can add other channels as part of the journey in the future | - Requires strategic structuring<br>- More build effort required (such as separate message steps for each country)<br>- Canvas can become large and difficult to read if you have custom, complex journeys for each country in a single Canvas. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}

@@ -2,7 +2,7 @@
 nav_title: Criteo
 article_title: Canvas Audience Sync to Criteo
 description: "This reference article will cover how to use Braze Audience Sync to Criteo, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 4
+page_order: 1
 alias: "/audience_sync_criteo/"
 
 Tool:
@@ -35,7 +35,7 @@ You will need to ensure that you have the following items created and/or complet
 | --- | --- | --- |
 | Criteo ad account | [Criteo](https://marketing.criteo.com/) | An active Criteo ad account tied to your brand.<br><br>Ensure that your Criteo admin has granted you the appropriate permissions to access Audiences. |
 | [Criteo Advertising Guidelines](https://www.criteo.com/advertising-guidelines/)<br>and<br>[Criteo Brand Safety Guidelines](https://www.criteo.com/wp-content/uploads/2017/11/Criteo-Brand-Safety-Guidelines-UK-March-2016.pdf) | Criteo | As an active Criteo customer, you must ensure that you can comply with Criteo’s Advertising and Brand Safety Guidelines prior to launching any Criteo campaigns. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration 
 
@@ -140,7 +140,7 @@ The following table includes metrics and descriptions to help you better underst
 | Users Pending | Number of users currently being processed by Braze to sync into Criteo. |
 | Users Errored | Number of users who were not synced to Criteo due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Criteo token or if the audience was deleted on Criteo. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is an Audience Sync component. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.

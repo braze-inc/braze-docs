@@ -103,7 +103,7 @@ In each User Update step’s **Compose** tab, do the following for the respectiv
 | **Attribute Name** | Select the lead score attribute you selected in step 2 (`lead score`).|
 | **Action** | Change the action to **Increment By** if the path increases the score or **Decrement By** if the path decreases the score |
 | **Increment By** or **Decrement By** | Enter the number of points that will be increased or decreased from the lead score.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Step 5: Launch your Canvas
 

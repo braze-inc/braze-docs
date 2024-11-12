@@ -9,7 +9,7 @@ description: "This article outlines details about the Update scheduled API-trigg
 ---
 {% api %}
 # Update scheduled API-triggered campaigns
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/)|
 | `schedule_id` | Required | String | The `schedule_id` to update (obtained from the response to create a schedule). |
 |`schedule` | Required | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

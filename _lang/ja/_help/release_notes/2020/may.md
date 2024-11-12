@@ -17,19 +17,19 @@ Braze API経由でメールアドレスを[ブラックリスト化]({{site.base
 
 ## Braze APIエンドポイントのAPIキー変更
 
-2020年5月より、BrazeはAPIキーの読み取り方法をより安全なものに変更した。APIキーはリクエスト・ヘッダとして渡さなければならない。例は、**API Key Explanationと**同様に、**Example Requestの**下にある個々のエンドポイントのページで見つけることができる。
+2020年5月より、BrazeはAPIキーの読み取り方法をより安全なものに変更した。これで API キーがリクエストヘッダーとして渡されるはずです。\[**リクエスト例**] の下の個々のエンドポイントページや、\[**API キーの説明**] で例を確認できます。
 
-Brazeは、リクエストボディやURLパラメータを通して渡される`api_key` をサポートし続けるが、いずれは廃止される予定である（未定）。**それに応じてAPIコールを更新する。**これらの変更は[Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro)内で更新された。
-{% details APIキーの説明 %}
+Braze は、リクエストボディとURL パラメータに渡される`api_key` を引き続きサポートしますが、最終的にはサンセット(TBD) になります。**API コールを適宜更新します。**これらの変更は[Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro)内で更新された。
+{% details API キーの説明 %}
 {% tabs %}
 {% tab GET Request %}
 この例では、`/email/hard_bounces` エンドポイントを使用している。
 
-**その前だ：リクエスト・ボディのAPIキー**
+**前:リクエスト本文のAPI キー**
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key={YOUR_REST_API_KEY}&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 ```
-**今すぐだ：ヘッダーのAPIキー**
+**現在: ヘッダーのAPIキー**
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -38,7 +38,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 {% tab POST Request %}
 この例では、`/user/track` エンドポイントを使用している。
 
-**その前だ：リクエスト・ボディのAPIキー**
+**前:リクエスト本文のAPI キー**
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
@@ -55,7 +55,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ]
 }'
 ```
-**今すぐだ：ヘッダーのAPIキー**
+**現在: ヘッダーのAPIキー**
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \

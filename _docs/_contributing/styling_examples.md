@@ -151,7 +151,7 @@ Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at l
 | US-07    | `https://dashboard-07.braze.com`                                      | `https://rest.iad-07.braze.com` |
 | US-08    | `https://dashboard-08.braze.com`                                      | `https://rest.iad-08.braze.com` |
 | EU-01    | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu`   | `https://rest.fra-01.braze.eu`  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 {% endtab %}
 {% tab Markdown %}
 ```
@@ -167,22 +167,28 @@ Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at l
 | US-08    | `https://dashboard-08.braze.com`                                      | `https://rest.iad-08.braze.com` |
 | EU-01    | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu`   | `https://rest.fra-01.braze.eu`  |
 | EU-02    | `https://dashboard-02.braze.eu`                                       | `https://rest.fra-02.braze.eu`  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 ```
 {% endtab %}
 {% endtabs %}
 
 #### Resetting Table word-break by column
-For tables columns which word-break should be reset to the default style, use Markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
 
-#### Usage
+To reset the table word-break by column, use the following syntax:
+
+```markdown
+{: .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM role="presentation"}
 ```
+
+Replace `NUM` with the corresponding column number, up to a maximum of 4 columns. If you have less than 4 columns, remove extra `.reset-td-br-NUM` placeholders. Your table should be similar to the following:
+
+```markdown
 | Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
 | ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | In-App Message Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation"}
 
 ```
 {% tabs local %}
@@ -202,7 +208,7 @@ For tables columns which word-break should be reset to the default style, use Ma
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | In-App-Message-Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation"}
 {% endtab %}
 {% endtabs %}
 

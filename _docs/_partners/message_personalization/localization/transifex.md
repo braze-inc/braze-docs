@@ -23,7 +23,7 @@ As of April 7, 2022, Transifex has deprecated their API versions 2 and 2.5 to ma
 | Requirement| Description|
 | ---| ---|
 |Transifex Account | A [Transifex account](https://www.transifex.com/signin/) is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

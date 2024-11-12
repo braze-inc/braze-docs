@@ -9,47 +9,47 @@ channel:
   - Webhook
 ---
 
-# トワイリオ
+# Twilio
 
 {% alert warning %}
-なお、Twilio Webhook Integrationのサポートは2020年1月31日に終了する。BrazeでもSMSサービスにアクセスしたい場合は、[SMSのドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)参照のこと。
+Twilio Webhook Integration のサポートは2020年1月31日に廃止されることにご注意ください。BrazeでもSMSサービスにアクセスしたい場合は、[SMSのドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)参照のこと。
 {% endalert %}
 
-この例では、Twilioの[メッセージ送信APIを介して][20]、ユーザーにSMSとMMSを送信するようにBrazeのWebhookチャンネルを設定する。便宜上、Twilioウェブフック・テンプレートがダッシュボードに含まれている。
+この例では、Twilio の[メッセージ送信API][20] を介して、SMS とMMS をユーザーに送信するようにBraze Webhook チャネルを設定します。便宜上、ダッシュボードには Twilio Webhook テンプレートが含まれています。
 
 ## HTTP URL
 
 WebhookのURLはダッシュボードでTwilioから提供される。このURLにはTwilioアカウントID(`TWILIO_ACCOUNT_SID`)が含まれているため、Twilioアカウントに固有のURLとなる。
 
-Twilioの例では、WebhookのURLは`https://api.twilio.com/2010-04-01/Accounts/TWILIO_ACCOUNT_SID/Messages.json` 。このURLは、Twilioコンソールの*Getting Started*セクションに記載されている。
+Twilio の例では、Webhook URL は `https://api.twilio.com/2010-04-01/Accounts/TWILIO_ACCOUNT_SID/Messages.json` です。このURLは、Twilioコンソールの*Getting Started*セクションに記載されている。
 
 ![Twilio_Console][28]
 
-## リクエスト・ボディ
+## リクエスト本文
 
-Twilio APIはリクエストボディがURLエンコードされていることを期待するので、Braze webhook composerでリクエストタイプを`Raw Text` に変更することから始める必要がある。リクエスト本文に必要なパラメータは、*To*、*From*、*Body*である。
+Twilio API では、リクエスト本文が URL エンコードされていると想定しているため、まず Braze Webhook コンポーザーのリクエストタイプを `Raw Text` に変更する必要があります。リクエスト本文に必要なパラメータは、*To*、*From*、*Body*である。
 
 次のスクリーンショットは、各ユーザーの電話番号に "Hello from Braze!"という本文でSMSを送信する場合のリクエストの例である。
 
-- ターゲットとするユーザーのプロフィールには、有効な電話番号が必要だ。
-- Twilioのリクエストフォーマットを満たすには、メッセージ内容に`url_param_escape` Liquidフィルターを使用する。例えば、電話番号`+12125551212` のプラス文字 (`+`) はURLエンコードされたデータでは禁止されており、`%2B12125551212` に変換される。
+- ターゲットオーディエンスのユーザープロファイルごとに、有効な電話番号が必要です。
+- Twilio のリクエスト形式に対応するため、メッセージコンテンツに `url_param_escape` Liquid フィルターを使用します。このフィルターは文字列をエンコードするため、HTML リクエストですべての文字が許可されます。例えば、電話番号 `+12125551212` のプラス文字 (`+`) はURL エンコードデータでは禁止されており、`%2B12125551212` に変換されます。
 
-![ウェブフック・ボディ][29]
+![Webhook 本文][29]
 
-## リクエスト・ヘッダとメソッド
+## リクエストヘッダーとメソッド
 
-Twilioは2つのリクエストヘッダ、リクエストContent-Typeと\[HTTP Basic Authentication][32] ]ヘッダを要求する。ウェブフック・コンポーザーの横にある歯車のアイコンをクリックし、*「新しいペアを追加*」を2回クリックして、それらをウェブフックに追加する。
+Twilio では、リクエストコンテンツタイプと \[HTTP 基本認証][32] ヘッダーの2つのリクエストヘッダーが必要です。ウェブフック・コンポーザーの横にある歯車のアイコンをクリックし、*「新しいペアを追加*」を2回クリックして、それらをウェブフックに追加する。
 
 ヘッダー名 | ヘッダー値
 --- | ---
 コンテンツタイプ | `application/x-www-form-urlencoded`
-認可 | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
+許可 | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
 
-`TWILIO_ACCOUNT_SID` と`TWILIO_AUTH_TOKEN` は必ずTwilioダッシュボードの値で置き換えること。最後に、TwilioのAPIエンドポイントはHTTP POSTリクエストを想定しているので、*HTTP Methodの*ドロップダウンでそのオプションを選択する。
+`TWILIO_ACCOUNT_SID` と`TWILIO_AUTH_TOKEN` は、必ず Twilio ダッシュボードの値で置き換えてください。最後に、Twilio のAPI エンドポイントはHTTP POST リクエストを期待しているので、*HTTP Method* のドロップダウンでそのオプションを選択します。
 
-![ウェブフック・メソッド][30]
+![Webhook メソッド][30]
 
-## リクエストをプレビューする
+## リクエストのプレビュー
 
 ウェブフックコンポーザーを使って、ランダムなユーザー、または特定の認証情報を持つユーザーのリクエストをプレビューし、リクエストが適切にレンダリングされていることを確認する。
 

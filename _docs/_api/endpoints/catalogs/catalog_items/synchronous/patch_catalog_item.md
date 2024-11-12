@@ -33,14 +33,14 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
 | `item_id` | Required | String | The ID of the catalog item. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `items` | Required | Array | An array that contains item objects. The item objects should contain fields that exist in the catalog except for the `id` field. Only one item object is allowed per request. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -132,6 +132,6 @@ The following table lists possible returned errors and their associated troubles
 | `request-includes-too-many-items` | You can only edit one catalog item per request. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 | `unable-to-coerce-value` | Item types can't be converted. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

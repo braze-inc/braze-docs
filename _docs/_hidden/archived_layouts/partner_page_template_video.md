@@ -58,7 +58,7 @@ The following requirements are typical requirements you might need from Braze. W
 |---|---|---|---|
 |Braze workspace REST API key | Braze platform | **Settings** > **App Settings** page | This description should tell you what to do with the workspace REST API key. |
 |Braze API endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## [Type of Integration] Integration
 
@@ -99,7 +99,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ### Step 3: How Many Steps
@@ -143,7 +143,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ## Use Cases

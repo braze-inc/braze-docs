@@ -59,7 +59,12 @@ You also have the option to set up optional and customized threshold alerts. If 
 
 ### Step 4: Promotion code upload
 
-Braze does not manage code creation or redemption. As a result, you'll have to generate your promotion codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promotion codes. Make sure that there is only one code on each row.
+Braze does not manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
+
+- Includes a column for promotion codes.
+- Has one promotion code per row.
+
+You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) to create and export promotion codes.
 
 {% alert note %}
 The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
@@ -124,7 +129,7 @@ This code count can also be found when revisiting a pre-existing promotion code 
 For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
 
 - The same promotion codes are used across channels in a multichannel message.
-- No extra promotion codes are used up if a message fails or aborts.
+- Extra promotion codes are not used if a message fails or aborts.
 
 If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
 

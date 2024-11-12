@@ -34,7 +34,7 @@ Replace the following:
 |-------------|----------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                  |
 | `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line link should be similar to the following:
 
@@ -60,7 +60,7 @@ Replace the following:
 |-------------|----------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                  |
 | `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line link should be similar to the following:
 

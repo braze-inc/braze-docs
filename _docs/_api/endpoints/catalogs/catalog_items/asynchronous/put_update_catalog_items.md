@@ -15,7 +15,7 @@ description: "This article outlines details about the Update multiple catalog it
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use this endpoint to update multiple items in your catalog. 
+> Use this endpoint to update multiple items in your catalog.
 
 If a catalog item doesn't exist, this endpoint will create the item in your catalog. Each request can support up to 50 catalog items. This endpoint is asynchronous.
 
@@ -34,14 +34,14 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `items` | Required | Array | An array that contains item objects. Each object must have an ID. The item objects should contain fields that exist in the catalog. Up to 50 item objects are allowed per request. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -120,7 +120,7 @@ The following table lists possible returned errors and their associated troubles
 
 | Error | Troubleshooting |
 | --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. | 
+| `catalog-not-found` | Check that the catalog name is valid. |
 | `ids-not-string` | Confirm that each item ID is a string. |
 | `ids-not-unique` | Check that each item ID is unique. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
@@ -133,6 +133,6 @@ The following table lists possible returned errors and their associated troubles
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 | `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 | `unable-to-coerce-value` | Item types can't be converted. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

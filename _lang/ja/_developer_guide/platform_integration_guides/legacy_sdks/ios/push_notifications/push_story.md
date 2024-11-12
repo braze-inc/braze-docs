@@ -16,15 +16,15 @@ noindex: true
 
 Push Story 機能を使用するには、`UNNotification` フレームワークと iOS 10が必要です。この機能は iOS SDK バージョン3.2.1以降でのみ利用可能です。
 
-## ステップ1:アプリでプッシュを有効にする
+## ステップ 1:アプリでプッシュを有効にする
 
-[プッシュ通知統合][1]に従って、アプリでプッシュを有効にします。
+[プッシュ通知統合]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)に従って、アプリでプッシュを有効にします。
 
-## ステップ2:通知コンテンツ拡張ターゲットを追加する
+## ステップ 2:通知コンテンツ拡張ターゲットを追加する
 
-アプリプロジェクトで、メニュー **\[ファイル] > \[新規] > \[ターゲット...]** を選択し、新しい `Notification Content Extension` ターゲットを追加してアクティブ化します。
+アプリプロジェクトで、メニュー **[ファイル] > [新規] > [ターゲット...]** を選択し、新しい `Notification Content Extension` ターゲットを追加してアクティブ化します。
 
-![][2]
+![]({% image_buster /assets/img/ios/push_story/add_content_extension.png %})
 
 Xcode によって新しいターゲットが生成され、次のようなファイルが自動的に作成されるはずです。
 
@@ -44,11 +44,11 @@ Xcode によって新しいターゲットが生成され、次のようなフ�
 {% endtab %}
 {% endtabs %}
 
-## ステップ3:機能を有効にする
+## ステップ 3: 機能を有効にする
 
-Push Story 機能では、メインアプリターゲットの ［**機能**］ セクションのバックグラウンドモードが必要です。バックグラウンドモードをオンにしたら、\[**バックグラウンドフェッチ**] と \[**リモート通知**] を選択します。
+Push Story 機能では、メインアプリターゲットの ［**機能**］ セクションのバックグラウンドモードが必要です。バックグラウンドモードをオンにしたら、[**バックグラウンドフェッチ**] と [**リモート通知**] を選択します。
 
-![][3]
+![]({% image_buster /assets/img/ios/push_story/enable_background_mode.png %})
 
 ### アプリグループの追加
 
@@ -94,15 +94,15 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 ![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-\[**埋め込み**] 列の下で、**AppboyPushStory.xcframework** に対して \[**埋め込まない**] が選択されていることを確認します。
+[**埋め込み**] 列の下で、**AppboyPushStory.xcframework** に対して [**埋め込まない**] が選択されていることを確認します。
 {% endalert %}
 
-**\[ビルド設定] > \[その他のリンカーフラグ]** でプロジェクトの `Notification Content Extension` に `-ObjC` フラグを追加します。
+**[ビルド設定] > [その他のリンカーフラグ]** でプロジェクトの `Notification Content Extension` に `-ObjC` フラグを追加します。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ5:通知ビューコントローラーを更新する
+## ステップ 5:通知ビューコントローラーを更新する
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -181,19 +181,19 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 {% endtab %}
 {% endtabs %}
 
-## ステップ 6:通知コンテンツ拡張ストーリーボードを設定する
+## ステップ 6: 通知コンテンツ拡張ストーリーボードを設定する
 
 `Notification Content Extension` ストーリーボードを開き、通知ビューコントローラーに新しい `UIView` を配置します。クラスの名前を `ABKStoriesView` に変更します。通知ビューコントローラのメインビューフレームに合わせて、ビューの幅と高さを自動サイズ変更可能にします。
 
-![][10]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %})
 
-![][11]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %})
 
 次に、追加された `ABKStoriesView` に通知ビューコントローラーの `storiesView` IBOutlet をリンクします。
 
-![][13]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %})
 
-## ステップ 7: 通知コンテンツ拡張 plist を設定する
+## ステップ 7:通知コンテンツ拡張 plist を設定する
 
 `Notification Content Extension` の `Info.plist` ファイルを開き、`NSExtension \ NSExtensionAttributes` で以下のキーを追加および変更します。
 
@@ -201,9 +201,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 `UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` タイプ)
 `UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` タイプ)
 
-![][12]
+![]({% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %})
 
-## ステップ 8メインアプリでの　Braze 統合のアップデート
+## ステップ 8:メインアプリでの　Braze 統合のアップデート
 
 ##### オプション 1: ランタイム
 
@@ -236,19 +236,10 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ##### オプション2： Info.plist
 
-または、`Info.plist` ファイルから Push Story ワークスペースを構成するには、`Braze` という名前の辞書を `Info.plist` ファイルに追加します。`Braze`辞書内で、文字列型の `PushStoryAppGroup` サブエントリを追加し、値をワークスペース識別子に設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
+または、`Info.plist` ファイルから Push Story ワークスペースを構成するには、`Braze` という名前の辞書を `Info.plist` ファイルに追加します。`Braze`辞書内で、文字列型の `PushStoryAppGroup` サブエントリを追加し、値をワークスペース識別子に設定します。なお、Braze iOS SDK v4.0.2より前のバージョンでは、`Braze` の代わりに辞書キー `Appboy` を使用する必要があります。
 
 ## 次のステップ:
 
 次に、[アクションボタン]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/)を統合する手順を参照してください。これはプッシュストーリーメッセージにボタンを表示するために必要です。
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
-[3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
-[4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-[10]: {% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %}
-[11]: {% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %}
-[12]: {% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %}
-[13]: {% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %}
 

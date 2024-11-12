@@ -23,7 +23,7 @@ To add a new user:
 
 1. Go to **Settings** > **Company Users**.
 2. Click **+ Add New User**.
-3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role.
+3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
 
 {% alert tip %}
 The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
@@ -47,7 +47,7 @@ If your team uses Gmail and you're experiencing issues adding an email address, 
 
 Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
 
-To suspend a user, go to **Settings** > **Company Users**, find their username and click <i class="fa-solid fa-user-lock"></i> **Suspend**.
+To suspend a user, go to **Settings** > **Company Users**, find their username and select <i class="fa-solid fa-user-lock"></i> **Suspend**.
 
 ![Suspend a user][4]
 

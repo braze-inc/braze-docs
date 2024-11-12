@@ -85,7 +85,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 | `updated` | (Read only) The property is the unix timestamp of the card's latest update time from Braze dashboard. |
 | `categories` | The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`.<br><br>Available categories:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
 | `extras` | An optional `NSDictionary` of `NSString` values. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Banner image card properties
 
@@ -94,7 +94,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 | `image` | (Required) This property is the URL of the card's image. |
 | `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card but is hidden in the default Braze News Feed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Captioned image card properties
 
@@ -105,7 +105,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 | `description` (Required) The body text for the card. |
 | `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Text announcement card (captioned image without image) properties
 
@@ -115,7 +115,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 | `description` | (Required) The body text for the card. |
 | `url` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Classic card properties
 
@@ -126,7 +126,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 | `description` | (Required) The body text for the card. |
 | `URL` | (Optional) The URL that will be opened after the card is clicked on. It can be an HTTP(S) URL or a protocol URL. |
 | `domain` | (Optional) The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Card methods
 
@@ -134,7 +134,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 |---|---|
 | `logCardImpression` | Manually log an impression to Braze for a particular card. |
 | `logCardClicked` | Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. All subclasses of `ABKCard` have the `url` property. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Log feed display
 

@@ -35,7 +35,7 @@ The baseline segment can either be a specific segment you select, or a segment c
 | Lifetime Revenue | Average lifetime revenue for segment users | user lifetime spend |
 | Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase – date of first session |
 | Time Since Last Purchase | Average time between segment users' last purchase and now | today – date of last purchase |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 You can easily share specific comparisons with your teammates using the page's unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between workspaces.
 

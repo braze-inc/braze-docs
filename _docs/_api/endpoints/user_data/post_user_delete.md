@@ -53,7 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `external_ids` | Optional | Array of strings           | External identifiers for the users to delete.                                                    |
 | `user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for the users to delete. |
 | `braze_ids`    | Optional | Array of strings           | Braze user identifiers for the users to delete.                                                  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Deleting users by email
 If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` is an ordered array and should specify which user to delete if multiple users are found. This means deleting users will not occur if more than one user matches a prioritization.

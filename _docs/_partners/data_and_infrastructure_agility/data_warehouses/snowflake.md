@@ -41,7 +41,7 @@ If you are interested in this integration, reach out to your Braze Account or cu
 | Requirement | Description |
 | ----------- | ----------- |
 | Snowflake account | A Snowflake account with admin-level permissions is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -79,7 +79,7 @@ Note the following differences between Braze and Snowflake naming conventions fo
 | ----------- | ----------- | ----------- |
 | `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
 | `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Important information and limitations
 

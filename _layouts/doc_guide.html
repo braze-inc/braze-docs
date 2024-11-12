@@ -61,7 +61,7 @@ hide_breadcrumb: true
         <div id="{{ doc_list.name | handle }}" class="doc_item">
           <div class="doc_img">
           {%- if doc_list.image -%}
-          <img src="{{site.baseurl}}{{ doc_list.image}} " />
+          <img src="{{site.baseurl}}{{ doc_list.image}} " alt="{{doc_list.name}} image" />
           {%- endif -%}
           </div>
           <div class="doc_info">
@@ -73,7 +73,7 @@ hide_breadcrumb: true
             </div>
           </div>
           <div class="doc_img arrow">
-            <img src="{{site.baseurl}}/assets/img/braze_icons/arrow-circle-right-pink.svg" />
+            <img src="{{site.baseurl}}/assets/img/braze_icons/arrow-circle-right-pink.svg" alt="Arrow Right" />
           </div>
         </div>
           {%- if doc_list.link -%}
@@ -86,7 +86,7 @@ hide_breadcrumb: true
           <a href="https://learning.braze.com" target="_blank">
 
           <div id="doc_lab">
-            <div id="doc_lab_img"><img src="{{site.baseurl}}/assets/img/braze_learning.png" /></div>
+            <div id="doc_lab_img"><img src="{{site.baseurl}}/assets/img/braze_learning.png" alt="Braze Learning" /></div>
             <div id="doc_lab_info" class="doc_info">
               <div class="doc_name">
                 Braze Learning

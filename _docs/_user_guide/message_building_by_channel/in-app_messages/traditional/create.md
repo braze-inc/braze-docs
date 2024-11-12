@@ -21,11 +21,10 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
-**Steps:**
+1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 
-1. Go to **Messaging** > **Campaigns** and click <i class="fas fa-plus"></i> **Create Campaign**.
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
 
 {:start="2"}
@@ -41,8 +40,6 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
-
-**Steps:**
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
@@ -62,14 +59,14 @@ You can find more Canvas-specific information in [In-app messages in Canvas]({{s
 
 ## Step 2: Specify delivery platforms
 
-Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. For example, you might choose **Web Browsers** for an in-browser message encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform!
+Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. For example, you might choose **Web Browsers** for an in-browser message encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform.
 
-| Platform | Message Delivery |
-|---|---|
-| Mobile Apps | iOS & Android SDKs|
-| Web Browsers | Web SDK|
-| Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
-{: .reset-td-br-1 .reset-td-br-2}
+| Platform                        | Message Delivery        |
+|---------------------------------|-------------------------|
+| Mobile Apps                     | iOS & Android SDKs      |
+| Web Browsers                    | Web SDK                 |
+| Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 3: Specify your message types
 
@@ -185,13 +182,13 @@ If Braze detects that you don't have a close or dismissal button included in you
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![][24]{: style="max-width:85%" }
+![An example brand's in-app message to welcome new customers and prompt them to set up a user profile.][24]{: style="max-width:85%" }
 
 The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
 #### Language
 
-Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
 
 #### Image
 
@@ -233,7 +230,7 @@ When your customer clicks on a button in your in-app message, the following acti
 | Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
 | Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
 | Request Push Permission | Shows the native push permission. Read more about [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/), as well as [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) for priming users for push. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
 
@@ -256,7 +253,7 @@ This setting only applies to the Slideup message type. Choose between having you
 
 #### HTML and assets
 
-This setting only applies to the Custom code message type. Copy and paste HTML into the available space and upload your assets via ZIP.
+This setting only applies to the Custom code message type. Copy and paste HTML into the available space and upload your assets using a ZIP file.
 
 #### Email capture input placeholder
 
@@ -279,12 +276,12 @@ The content of the **Style** tab varies based on your chosen message options in 
 |Background Color | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. This is the background of the entire message and will clearly display behind your text body. |
 |Screen Overlay | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. Only available for newer Braze SDK versions. This is the frame around the entire message. |
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
 {% alert important %}
-Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets via ZIP. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets using a ZIP file. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
 {% endalert %}
 
 ## Step 6: Configure additional settings (optional)
@@ -305,7 +302,7 @@ Build the remainder of your campaign; see the following sections for further gui
 Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
 
 {% alert important %}
-Note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
+Note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent using the SDK.
 {% endalert %}
 
 ![Action-based campaign with the trigger action set to "Start Session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
@@ -314,7 +311,7 @@ In-app message delivery is entirely based on the following action triggers:
 
 - Making a purchase
 - Opening the app/webpage
-- Performing a custom event (only works with events sent via the SDK)
+- Performing a custom event (only works with events sent using the SDK)
 - Opening a specific push message
 - Automatically schedule campaigns to send at a certain time with respect to the local time of each of your users.
 - Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
@@ -343,7 +340,7 @@ You can choose between the following message priorities:
 
 The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
 
-![]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![An example of how priority is set for an in-app message campaign and Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Choose users to target
 
@@ -398,7 +395,7 @@ Braze values reliability and speed. Just like we suggest you send only the data 
 Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
 {% alert important %}
-There is a limit of 200 active, action-based in-app message campaigns per workspace to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.
+You can have up to 200 active, action-based in-app message campaigns per workspace to optimize the speed of message delivery and to prevent timeouts. This doesn't apply to Canvases.
 {% endalert %}
 
 The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.

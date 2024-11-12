@@ -7,7 +7,7 @@ page_type: reference
 channel:
  - LINE
 hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE レポート
@@ -63,14 +63,14 @@ LINE の開封とクリック関連の統計は、1 日にイベントを実行�
 1 日ごとの内訳を確認するには、<i class="fas fa-bars"></i> ハンバーガーメニューを選択し、\[**CSV をダウンロード**] を選択すると、レポートを CSV 形式でエクスポートできます。
 
 ### コンバージョンイベントの詳細
- 
+
 \[**コンバージョンイベントの詳細**] パネルには、キャンペーンのコンバージョンイベントのパフォーマンスが表示されます。詳細については、「[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation)」を参照してください。
 
 ### コンバージョンの相関
 
 \[**コンバージョンの相関**] パネルでは、どのようなユーザー属性と行動が、キャンペーンに設定した結果に役立つか、または悪影響を与えるかを把握できます。詳細については、「[コンバージョンの相関]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation)」を参照してください。
 
-## LINE ユーザー ID 
+## LINE ユーザー ID
 
 LINE ユーザー ID は、プロバイダーごとに各ユーザーに設定されています。LINE ID は、フォローするブランドごとに変わるため、ユーザーが (メールや電話番号とは違って) 自分の LINE ID を知ることはまずありません。
 

@@ -23,7 +23,7 @@ Looking for guidance on creating subscription groups? Check out our articles for
 |---|---|
 | Ketch Account | A [Ketch](https://www.ketch.com) account with admin privileges is required activate this integration. |
 | Braze API key | A Braze REST API key with `users.track`, `subscription.status.get`, `subscription.status.set`, `users.delete`, `users.alias.new`, `users.export.ids`, `email.unsubscribe`, and `email.blacklist` permissions. <br><br> This can be created in the Braze dashboard (**Developer Console** > **REST API Key** > **Create New API Key**). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

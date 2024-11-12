@@ -104,7 +104,7 @@ Refer to the following table for definitions of Message component metrics:
 | Unique Recipients | The number of users who have received messages from this step. |
 | Primary Conversion Event | The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. You define this event when building the campaign. |
 | Revenue | The total revenue in dollars from campaign recipients within the set primary conversion window. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][3]{: style="max-width:20%;"}
 

@@ -103,7 +103,7 @@ To download the time series data, select <i class="fas fa-bars"></i> and then se
 | Upon Click | Total number of conversions that occurred message click | Calculated as (Unique Click Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon email click</li><li>Upon Content Card click</li><li>Upon IAM click</li></ul>{:/} |
 | Upon Impression | Total number of conversions that occurred after an impression | Calculated as (Unique Impression Conversions) / (Unique Recipients) | {::nomarkdown}<ul><li>Upon IAM impression</li><li>Upon Content Card impression</li></ul>{:/} |
 | Upon Last-Touch | Conversions that give all credit to the last-touched or clicked message during the conversion window. | Calculated as (Number of Touches) / (Unique Recipients) | Last-touch attribution is automatically selected if multiple channels are added to the report.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Terms to know
 

@@ -47,7 +47,7 @@ Before you start sending emails, there are some things you need. Refer to the fo
 | Whitelabeled Domains | These consist of a domain and a subdomain. By using whitelabeling, you can pass email authentication checks for DKIM and SPF. | The Braze Onboarding team will generate these domains for you, but you must choose their names. |
 | Subdomains | This is a subdivision of a domain (such as "@news.company.com") within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation. | The Onboarding team will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
 | IP Pools | These are an optional configuration used to separate out the reputation of different types of email (such as "promotional" and "transactional") to prevent the reputation of one from impacting the other and support higher deliverability. | The Onboarding team will set up the pools for you. Then, when composing your email, select your email's IP pool from the **IP Pool** dropdown on the **Target Users** page.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## IP warming
 

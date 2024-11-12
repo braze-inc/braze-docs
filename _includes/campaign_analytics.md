@@ -303,28 +303,12 @@ Here are some key email-specific metrics that you won't see in other channels. T
         </tr>
     </tbody>
 </table>
-Here are some key email-specific metrics that you won't see in other channels. To see the definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
-
-| Metric | Definition |
-| --- | --- |
-| Unique Clicks | The number of recipients that clicked within the email sent. This is tracked over a 7-day period and is measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
-| Unique Opens | The number of recipients that opened your email. This can also include emails that are machine opened and is tracked over a 7-day period. This number should be between 10–20%. Anything greater than 20% is exceptional! |
-| Click to Open Rate | The percentage of unique emails opened that have been clicked at least once. |
-| Spam Rate | The percentage of delivered emails marked or designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy, or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
-| Unsubscribers (Unsubs) | The number of messages resulting in an unsubscription. This occurs when a user clicks the unsubscribe link in your email. |
-| Other Opens | The number of recipients that opened your email, including emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward _Other Opens_ and only once toward _Unique Opens_. |
-| Estimated Real Opens | An estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
-| Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
-| Bounces | The total number of messages that were unsuccessfully delivered to the intended recipients. This could occur because the email addresses were incorrect or deactivated. |
-| Hard Bounces | A hard bounce is when an email fails to deliver to the recipient due to a permanent delivery error. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email receives a hard bounce, we will stop any future requests to this email address. |
-| Soft Bounces | A soft bounce is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver. You can view your hard and soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab). |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
-This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of _Machine Opens_ on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the _Other Opens_ are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
+This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of *Machine Opens* on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the *Other Opens* are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
-Estimated Real Open Rate is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
+_Estimated Real Open Rate_ is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
 
 Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 

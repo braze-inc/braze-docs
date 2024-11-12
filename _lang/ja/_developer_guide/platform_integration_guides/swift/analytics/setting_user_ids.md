@@ -20,7 +20,7 @@ description: "この記事では、iOS アプリでユーザー ID を設定す�
 ユーザーが識別されたらすぐに (通常はログイン後)、次の呼び出しを行ってユーザー ID を設定する必要があります。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
@@ -50,6 +50,3 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="Swift" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser%28userid%3Asdkauthsignature%3Afileid%3Aline%3A%29 "changeuser"

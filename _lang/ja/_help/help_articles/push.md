@@ -2,8 +2,8 @@
 page_order: 5
 nav_title: プッシュ
 layout: dev_guide
-guide_top_header: "プッシュ・ヘルプ"
-guide_top_text: "プッシュメッセージに関する一般的な問題のトラブルシューティングについては、以下のヘルプ記事を参照のこと。"
+guide_top_header: "プッシュに関するヘルプ記事"
+guide_top_text: "プッシュメッセージに関する一般的な問題のトラブルシューティングのサポートについては、以下のヘルプ記事を確認してください。"
 
 page_type: landing
 description: "このランディング・ページには、プッシュ・メッセージに関する一般的な問題に関するヘルプ記事が掲載されている。"
@@ -14,10 +14,10 @@ guide_menu_list:
   - name: 一般的なプッシュ・エラー・メッセージ
     link: /docs/help/help_articles/push/push_error_codes/
     image: /assets/img/braze_icons/alert-circle.svg
-  - name: プッシュ・イネーブルメントの定義
+  - name: プッシュ有効の定義
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: プッシュ通知の欠落
+  - name: プッシュ通知を受信しない
     link: /docs/help/help_articles/push/no_push_notification_was_received/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: プッシュトークンを移行する
@@ -26,7 +26,7 @@ guide_menu_list:
   - name: プッシュ権限をリセットする
     link: /docs/help/help_articles/push/resetting_push_permissions/
     image: /assets/img/braze_icons/check-circle.svg
-  - name: プッシュ配信停止の追跡
+  - name: プッシュの配信停止をトラッキングする
     link: /docs/help/help_articles/push/push_unsubscribes/
     image: /assets/img/braze_icons/users-01.svg
 

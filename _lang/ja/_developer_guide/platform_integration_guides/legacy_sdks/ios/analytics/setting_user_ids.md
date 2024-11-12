@@ -45,7 +45,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 
 このメソッドはアプリケーションのメインスレッドで呼び出してください。メソッドを非同期的に呼び出すと、定義されていない動作が生じる可能性があります。
 
-また、ユーザーがログアウトするときにユーザー ID を変更しないことをお勧めします。変更すると、以前にログインしたユーザーを再エンゲージメントキャンペーンでターゲットにできなくなるためです。同じデバイスに複数のユーザーが存在することが予想されるものの、アプリがログアウト状態の間にそのうちの 1 ユーザーのみをターゲットにする場合は、ログアウト中にターゲットにするユーザー ID を個別に追跡し、アプリのログアウトプロセスの中でそのユーザー ID に戻すことをお勧めします。
+また、ユーザーがログアウトするときにユーザー ID を変更しないでください。変更すると、以前にログインしたユーザーを再エンゲージメントキャンペーンでターゲットにできなくなるためです。同じデバイスに複数のユーザーが存在することが予想されるものの、アプリがログアウト状態の間にそのうちの 1 ユーザーのみをターゲットにする場合は、ログアウト中にターゲットにするユーザー ID を個別に追跡し、アプリのログアウトプロセスの中でそのユーザー ID に戻すことをお勧めします。
 
 ## ユーザー ID 統合のベストプラクティスとメモ
 
@@ -55,6 +55,3 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

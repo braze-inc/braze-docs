@@ -15,7 +15,7 @@ noindex: true
 
 `ABKContentCardsTableViewController` を拡張してすべての UI 要素とコンテンツカードの動作をカスタマイズすることで、独自のコンテンツカードインターフェイスを作成できます。コンテンツカードセルをサブクラス化してからプログラムで使用することも、新しいクラスを登録するカスタムストーリーボードを導入することによって使用することもできます。完全な例については、コンテンツカードの[サンプルアプリ](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp)をご確認ください。 
 
-また、サブクラス化戦略を使用すべきか、完全にカスタムのビューコントローラーを使用して、[データ更新を配信登録]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/)すべきかを検討することも重要です。たとえば、`ABKContentCardsTableViewController` をサブクラス化する場合は、[`populateContentCards` メソッド](#overriding-populated-content-cards)を使用してカードのフィルター処理と順序付けを行うことができます (推奨)。ただし、ビューコントローラーを完全にカスタマイズすると、カルーセルでの表示やインタラクティブ要素の追加など、カードの動作をより詳細に制御できるようになりますが、順序付けとフィルター処理のロジックを実装するためにオブザーバーに頼らなければならなくなります。また、インプレッション数、却下イベント数、クリック数を適切に記録するには、それぞれの分析メソッドを実装する必要もあります。
+また、サブクラス化戦略を使用すべきか、完全にカスタムのビューコントローラーを使用して、[データ更新を配信登録]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/integration/)すべきかを検討することも重要です。たとえば、`ABKContentCardsTableViewController` をサブクラス化する場合は、[`populateContentCards` メソッド](#overriding-populated-content-cards)を使用してカードのフィルター処理と順序付けを行うことができます (推奨)。ただし、ビューコントローラーを完全にカスタマイズすると、カルーセルでの表示やインタラクティブ要素の追加など、カードの動作をより詳細に制御できるようになりますが、順序付けとフィルター処理のロジックを実装するためにオブザーバーに頼らなければならなくなります。また、インプレッション数、却下イベント数、クリック数を適切に記録するには、それぞれの分析メソッドを実装する必要もあります。
 
 ## UI をカスタマイズする
 
@@ -48,7 +48,7 @@ noindex: true
 }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
   super.apply(captionedImageCard)         
@@ -84,7 +84,7 @@ override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
 }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 override func setUpUI() {
   super.setUpUI()
@@ -120,7 +120,7 @@ Braze には、3 つのコンテンツカードテンプレート (バナー、�
 }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 override func registerTableViewCellClasses() {
   super.registerTableViewCellClasses()
@@ -154,7 +154,7 @@ override func registerTableViewCellClasses() {
 }
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 override func populateContentCards() {
   guard let cards = Appboy.sharedInstance()?.contentCardsController.contentCards else { return }

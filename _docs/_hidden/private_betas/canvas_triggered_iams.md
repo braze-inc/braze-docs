@@ -33,7 +33,7 @@ In the in-app message composer, you can choose when the in-app message will expi
 |---|---|---|
 | **A duration after the step is available** | Sets the in-app message to expire relative to when the step becomes available to the user. | An in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
 | **On a specific date and time** | Select a specific date and time when the in-app message will be no longer available. | If you have a sale that ends on November 30, 2024, select this option so that users no longer see the associated in-app message when the sale ends. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Use cases
 
@@ -162,7 +162,11 @@ If you make changes to the in-app message priority in **Send Settings** of a dra
 
 ## Advancement behavior
 
-Message components automatically advance all users who enter the step. Note that it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+Message components automatically advance all users who enter the step. Note that it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler.
+
+When a user enters an in-app message step, they advance immediately out of it instead of being held for the expiration window. In this case, having a Delay step in your user journey can be helpful.
+
+If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 
 {% details Original Canvas editor %}
 
@@ -190,7 +194,7 @@ Steps with an in-app message and another channel have the following advancement 
 |---|---|---|
 | Advance When Message Sent | Users must be sent an email, webhook, or push notification, or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email, webhook, or push, or hasn't viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not. <br> <br> Users must match the step's segment and filter criteria to advance to the next steps. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/push-advancement-behavior.png %})
 

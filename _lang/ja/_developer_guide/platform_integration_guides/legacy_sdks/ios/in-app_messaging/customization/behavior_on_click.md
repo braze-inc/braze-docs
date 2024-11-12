@@ -1,6 +1,6 @@
 ---
 nav_title: クリック時のカスタム動作
-article_title: iOS 用アプリ内メッセージクリック時動作のカスタマイズ
+article_title: iOS 用のアプリ内メッセージオンクリック動作のカスタマイズ
 platform: iOS
 page_order: 5
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージングのカスタムクリック時動作について説明します。"
@@ -14,7 +14,7 @@ noindex: true
 # クリック時のアプリ内メッセージ動作のカスタマイズ
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 `ABKInAppMessage` の`inAppMessageClickActionType` プロパティは、アプリ内メッセージがクリックされた後の動作を定義します。このプロパティは読み取り専用です。アプリ内メッセージのクリック動作を変更する場合は、`ABKInAppMessage` で以下のメソッドを呼び出すことができます。
@@ -27,7 +27,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
@@ -38,12 +38,12 @@ inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withUR
 
 `inAppMessageClickActionType` は次のいずれかの値に設定できます。
 
-| `ABKInAppMessageClickActionType` | クリック時動作 | |
+| `ABKInAppMessageClickActionType` | クリック時動作 |
 | -------------------------- | -------- |
 | `ABKInAppMessageDisplayNewsFeed` | メッセージがクリックされるとニュースフィードが表示され、メッセージは解除される。`uri` パラメータは無視され、`ABKInAppMessage` の `uri` プロパティは nil に設定されます。 |
 | `ABKInAppMessageRedirectToURI` | メッセージがクリックされたときに指定された URIが表示され、メッセージは破棄されます。`uri` パラメータを nil にすることはできないことに注意してください。 |
 | `ABKInAppMessageNoneClickAction` | クリックするとメッセージが却下されます。`uri` パラメータは無視され、`ABKInAppMessage` の `uri` プロパティは nil に設定されます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 ボタンを含むアプリ内メッセージの場合、ボタンテキストを追加する前にクリックアクションが追加されると、メッセージ `clickAction` も最終ペイロードに含まれます。
@@ -51,7 +51,7 @@ inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withUR
 
 ## アプリ内メッセージ本文クリック数のカスタマイズ
 
-アプリ内メッセージがクリックされると、次の [`ABKInAppMessageUIDelegate`][34] デリゲートメソッドが呼び出されます。
+アプリ内メッセージがクリックされると、次の [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) デリゲートメソッドが呼び出されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -61,7 +61,7 @@ inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withUR
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
@@ -72,7 +72,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ## アプリ内メッセージボタンクリックのカスタマイズ
 
-アプリ内メッセージボタンや HTML アプリ内メッセージボタン (リンクなど) のクリックに対して、[`ABKInAppMessageUIDelegate`][34]には次のデリゲートメソッドが含まれています。
+アプリ内メッセージボタンや HTML アプリ内メッセージボタン (リンクなど) のクリックに対して、[`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h)には次のデリゲートメソッドが含まれています。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -87,7 +87,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func onInAppMessageButtonClicked(inAppMessage: ABKInAppMessageImmersive!,
@@ -118,7 +118,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 if inAppMessage is ABKInAppMessageImmersive {
@@ -134,11 +134,9 @@ if inAppMessage is ABKInAppMessageImmersive {
 
 アプリ内メッセージにボタンがある場合、実行されるクリックアクションは `ABKInAppMessageButton` モデルのクリックアクションのみです。`ABKInAppMessage` モデルにデフォルトのクリックアクション (「ニュースフィード」) が割り当てられていても、アプリ内のメッセージ本文はクリックできません。
 
-## メソッド宣言
+## メソッドの宣言
 
 詳細については、次のヘッダー ファイルを参照してください。
 
-- [`ABKInAppMessage.h`][14]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
 
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h

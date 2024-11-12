@@ -21,7 +21,7 @@ The Braze and Adjust integration lets you import non-organic install attribution
 | Adjust account | An Adjust account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
 | Adjust SDK | In addition to the required Braze SDK, you must install the [Adjust SDK](https://dev.adjust.com/en/sdk). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -98,7 +98,7 @@ Assuming you configure your integration as suggested, Braze will map Adjust's da
 | `{campaign_name}` | Attributed Campaign |
 | `{adgroup_name}` | Attributed Adgroup |
 | `{creative_name}` | Attributed Ad |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Facebook and X (formerly Twitter) attribution data
 

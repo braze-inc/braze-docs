@@ -6,7 +6,7 @@ guide_top_header: "コンテンツカードのヘルプ記事"
 guide_top_text: "コンテンツカードのトラブルシューティングについては、次の記事を参照してください。<br><br> <a href='/docs/user_guide/message_building_by_channel/content_cards/'>コンテンツカード</a>セクションで、コンテンツカードをキャンペーンとキャンバスに統合するさまざまな方法について詳しく説明します!"
 
 page_type: landing
-description: "このランディングページは、コンテンツカードに関連する記事を支援するためのホームページです。"
+description: "このランディングページにはコンテンツカードに関連するヘルプ記事がまとめられています。"
 channel: content cards
 noindex: true
 guide_menu_title: ""

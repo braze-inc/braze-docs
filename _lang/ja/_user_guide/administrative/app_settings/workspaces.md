@@ -33,7 +33,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 2\.ワークスペースに名前を付けます。
 
 {% alert tip %}
-社内の他のユーザーがこのワークスペースを簡単に見つけられるように、命名規則を採用することをお勧めします。例えば、「Upon Voyage US - Production」と「On Voyage US - Staging」です。
+社内の他のユーザーがこのワークスペースを簡単に見つけられるように、命名規則を採用することをお勧めします。以下に例を示します。「Upon Voyage US - Production」と「On Voyage US - Staging」です。
 {% endalert %}
 
 {:start="3"}

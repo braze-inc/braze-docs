@@ -33,7 +33,7 @@ Here are some great use cases to get you inspired!
 | Multimedia content | Ease of multimedia content placement that engages users such as videos and images. |
 | Newsletters | Conveniently send monthly or weekly newsletters to maintain user engagement. |
 | Transactions | Notify users of recent purchases and deliver important product and shipping information with [transactional emails][3].
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/

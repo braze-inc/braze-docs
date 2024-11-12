@@ -21,7 +21,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> For some identity providers, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard`|
 | RelayState API key | To enable identity provider login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
@@ -109,7 +109,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), select you
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "Microsoft Entra." |
 | `Target URL` | This is the login URL provided by Microsoft Entra.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.

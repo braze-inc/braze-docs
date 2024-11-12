@@ -1,6 +1,6 @@
 ---
-nav_title: コンテクスチュアル・ロケーション
-article_title: コンテクスチュアル・ロケーション・パートナー
+nav_title: 状況に基づく位置情報
+article_title: 状況に基づく位置情報のパートナー
 page_order: 1
 
 page_type: landing
@@ -14,7 +14,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Contextual Location"
 
 valid_partner_list:
-- name: アキュウェザー
+- name: AccuWeather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/

@@ -14,7 +14,7 @@ description: "This article outlines details about the Export users by identifier
 /users/export/ids
 {% endapimethod %}
 
-> Use this endpoint to export data from any user profile by specifying a user identifier. 
+> Use this endpoint to export data from any user profile by specifying a user identifier.
 
 Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of any identifier can be included per request.
 
@@ -62,7 +62,7 @@ For customers who have onboarded with Braze on or after August 22, 2024, the req
 | `email_address`    | Optional | String                                                        | Email address of user.                                                                       |
 | `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user.                                                                        |
 | `fields_to_export` | Required | Array of strings                                              | Name of user data fields to export.                                                          |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -119,7 +119,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `total_revenue`       | Float           | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `uninstalled_at`      | Timestamp       | Date and time the user uninstalls the app. Omitted if the app has not been uninstalled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `user_aliases`        | Object          | [User aliases object]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) containing the `alias_name` and `alias_label`, if exists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
@@ -232,7 +232,7 @@ User export object (we will include the least data possible - if a field is miss
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -316,10 +316,10 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -379,12 +379,12 @@ User export object (we will include the least data possible - if a field is miss
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },

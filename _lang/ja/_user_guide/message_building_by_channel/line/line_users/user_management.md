@@ -6,15 +6,14 @@ description: "この記事では、LINEのユーザーIDとその設定方法に
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/user_management/
+alias: /line/user_management/
 ---
 
 # LINEユーザーマネージャー
 
 > LINEのユーザーIDは、`native_line_id` というユーザープロファイル属性に格納されている。この識別子は、LINEチャネルでユーザーにメッセージを送信する際に使用される。この記事は、`native_line_id` 属性をカバーし、LINEベータ・コレクションの一部である。[メインページに戻ります](https://www.braze.com/docs/line/)。
 
-顧客ユーザーデータは、[Brazeユーザープロファイルで]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)表される。ユーザープロファイルには、名やメール・アドレスなど、企業のユーザーに関する情報や属性が保存される。 
+顧客ユーザーデータは、[Brazeユーザープロファイルで]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)表される。ユーザープロファイルには、名やメール・アドレスなど、企業のユーザーに関する情報や属性が保存される。
 
 Brazeを通じてLINEメッセージを送信する際、Brazeは`native_line_id` 属性を使用してメッセージを送信するユーザーを識別する。ユーザーがチャネルをフォローしたときやメッセージに返信したときなど、LINEがBrazeのWebhookイベントを送信すると、`native_line_id` 、対応するユーザープロファイルが検索される。
 

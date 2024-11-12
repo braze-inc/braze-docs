@@ -10,20 +10,20 @@ description: "この記事には2019年9月のリリースノートが含まれ�
 
 ## OneLogin内のBrazeアプリ
 
-顧客は、[OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)内でBrazeを検索して選択するだけで、SPまたはIdP Initiatedログインができるようになる。これは、顧客がOneLogin内にカスタムアプリケーションを追加する必要がないことを意味する。その結果、SAML SSOを立ち上げてから見られるようになった、属性のような特定の設定が事前に入力されるはずである。
+[OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/) 内で Braze を検索し、サービスプロバイダーまたは IdP 開始ログイン用に選択できるようになります。これは、顧客がOneLogin内にカスタムアプリケーションを追加する必要がないことを意味する。その結果、SAML SSO の起動後に表示された属性などの特定の設定が事前入力されます。
 
 ## ロクト・カレンダー・パートナーシップ
 
-[Rokt Calendarは]({{site.baseurl}}/partners/additional_channels/calendar/rokt_calendar/)、Brazeの顧客に、パーソナライズされたマーケティングイニシアティブを調整し、パーソナライズされたコンテンツをエンドユーザーのカレンダーに拡張する機能を提供する。こうして、エンドユーザーにとってよりシームレスな体験となり、顧客のサービスに対する愛着がさらに深まる。顧客は...
+[Rokt Calendarは]({{site.baseurl}}/partners/additional_channels/calendar/rokt_calendar/)、Brazeの顧客に、パーソナライズされたマーケティングイニシアティブを調整し、パーソナライズされたコンテンツをエンドユーザーのカレンダーに拡張する機能を提供する。これにより、エンドユーザーのエクスペリエンスがよりシームレスになり、お客様のサービスのスティッキネスがさらに向上します。以下を実行できるようになります。
 
 - Brazeプラットフォーム経由でカレンダーに招待状を送り、「日付を保存」してコミュニケーションを広げる。
 - イベントの内容が変更された場合、既存の招待を更新する。
 
-## パスキット・パートナーシップ
+## Passkit パートナーシップ
 
-[Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/)で、Braze 顧客 sは携帯ウォレットへのカスタマーエンゲージメントを拡張することができます。彼らは、Brazeの強力なセグメンテーションを使いながら、財布キャンペーンをパーソナライズし、プッシュやアプリ内メッセージなどのチャネルと並行してオーケストレーションすることができる。
+[Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/) により、Braze のお客様はカスタマーエンゲージメントをモバイルウォレットに拡張できます。Braze の強力なセグメンテーションを利用しながらウォレットキャンペーンをパーソナライズし、プッシュやアプリ内メッセージなどのチャネルとのオーケストレーションを実現できます。
 
-## メッセージング・エンドポイント経由でディスパッチID値を返す
+## メッセージングエンドポイント経由でのディスパッチ ID 値の返却
 
 メッセージの`dispatch_id` は、以下のメッセージング・エンドポイントのレスポンスに含まれる：
 - [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-via-api-triggered-delivery)
@@ -33,11 +33,11 @@ description: "この記事には2019年9月のリリースノートが含まれ�
 - [`/canvases/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#canvas)
 - [`/canvases/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#api-triggered-canvases)
 
-こうすることで、トランザクショナル・メッセージングを利用する顧客は、カレントを介してコールバックをトレースすることができる。
+これにより、トランザクションメッセージングを使用するお客様は、Currents を介してコールバックをトレースできます。
 
 ## キャンバスの変更履歴
 
-自分のアカウントで誰がキャンバスに取り組んでいるのか、もっと詳しく知りたいと思ったことはないだろうか？もう不思議ではない！キャンバスの変更履歴にアクセスできるようになった。
+自分のアカウントで誰がキャンバスに取り組んでいるのか、もっと詳しく知りたいと思ったことはないだろうか？もうその必要はありません。キャンバス変更ログにアクセスできるようになりました。
 
-![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog1.png %})
-![Canvas Changelogs]({% image_buster /assets/img/canvas-changelog2.png %})
+![キャンバス変更ログ]({% image_buster /assets/img/canvas-changelog1.png %})
+![キャンバス変更ログ]({% image_buster /assets/img/canvas-changelog2.png %})

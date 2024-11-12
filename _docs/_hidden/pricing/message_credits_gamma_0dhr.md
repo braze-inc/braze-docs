@@ -8,14 +8,14 @@ hide_toc: true
 
 # Message Credits - Gamma (Confidential)
 
-> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page.
+> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. Message Credits provide a flexible and transparent experience when taking advantage of Braze messaging channels. Credits give you access to any of the channels presented in the table on this page.
 
 {% alert note %}
 Different channels will have different units of measure in reporting.<br><br>
 <b>WhatsApp:</b> Conversations<br>
 <b>SMS:</b> Segments<br>
 <b>MMS:</b> Segments<br><br>
-In other words, credits used for WhatsApp messages will be calculated on conversation initiations, and credits used for both SMS and MMS messages will be calculated on segments sent.
+In other words, credits per WhatsApp messages will be calculated on conversation initiations, and credits per for both SMS and MMS messages will be calculated on segments sent.
 <br><br>
 Lastly, carrier fees are billed separately (in arrears) and are not considered as part of this Message Credits SKU.
 {% endalert %}
@@ -28,8 +28,8 @@ Column definitions are as follows:
 | **Channel Credit Ratio** | Baseline credit amount for each channel |
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
-| **Credits Used with 1 Send** | Exact number of Message Credits used to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
-{: .reset-td-br-1 .reset-td-br-2}
+| **Credits per 1 send** | Exact number of Message Credit to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ## Credit ratio table for Message Credits - Gamma
@@ -45,7 +45,7 @@ Column definitions are as follows:
         <th><b>Channel Credit Ratio</b></th>
         <th><b>Destination</b></th>
         <th><b>Multiplier</b></th>
-        <th class="credits-column"><b>Credits Used with 1 Send</b></th>
+        <th class="credits-column"><b>Credits per 1 send</b></th>
     </tr>
     <tbody><tr>
         <td>SMS - US / CA</td>
@@ -1772,13 +1772,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Argentina Service</td>
-        <td>0.85</td>
-        <td>8.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Argentina Utility</td>
         <td>0.90</td>
         <td>9.00</td>
@@ -1796,13 +1789,6 @@ Column definitions are as follows:
         <td>Brazil Marketing</td>
         <td>1.65</td>
         <td>16.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Brazil Service</td>
-        <td>0.80</td>
-        <td>8.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -1828,13 +1814,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Chile Service</td>
-        <td>1.20</td>
-        <td>12.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Chile Utility</td>
         <td>0.53</td>
         <td>5.30</td>
@@ -1852,13 +1831,6 @@ Column definitions are as follows:
         <td>Colombia Marketing</td>
         <td>0.35</td>
         <td>3.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Colombia Service</td>
-        <td>0.15</td>
-        <td>1.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -1884,13 +1856,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Egypt Service</td>
-        <td>1.70</td>
-        <td>17.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Egypt Utility</td>
         <td>0.14</td>
         <td>1.40</td>
@@ -1912,13 +1877,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>France Service</td>
-        <td>2.30</td>
-        <td>23.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>France Utility</td>
         <td>0.80</td>
         <td>8.00</td>
@@ -1936,13 +1894,6 @@ Column definitions are as follows:
         <td>Germany Marketing</td>
         <td>3.60</td>
         <td>36.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Germany Service</td>
-        <td>2.15</td>
-        <td>21.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -1975,13 +1926,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>India Service</td>
-        <td>0.10</td>
-        <td>1.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>India Utility</td>
         <td>0.04</td>
         <td>0.40</td>
@@ -2010,13 +1954,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Indonesia Service</td>
-        <td>0.50</td>
-        <td>5.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Indonesia Utility</td>
         <td>0.55</td>
         <td>5.50</td>
@@ -2034,13 +1971,6 @@ Column definitions are as follows:
         <td>Israel Marketing</td>
         <td>0.95</td>
         <td>9.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Israel Service</td>
-        <td>0.50</td>
-        <td>5.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2066,13 +1996,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Italy Service</td>
-        <td>1.00</td>
-        <td>10.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Italy Utility</td>
         <td>0.80</td>
         <td>8.00</td>
@@ -2090,13 +2013,6 @@ Column definitions are as follows:
         <td>Malaysia Marketing</td>
         <td>2.30</td>
         <td>23.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Malaysia Service</td>
-        <td>0.60</td>
-        <td>6.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2122,13 +2038,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Mexico Service</td>
-        <td>0.30</td>
-        <td>3.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Mexico Utility</td>
         <td>0.27</td>
         <td>2.70</td>
@@ -2146,13 +2055,6 @@ Column definitions are as follows:
         <td>Netherlands Marketing</td>
         <td>4.25</td>
         <td>42.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Netherlands Service</td>
-        <td>2.35</td>
-        <td>23.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2178,13 +2080,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Nigeria Service</td>
-        <td>0.80</td>
-        <td>8.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Nigeria Utility</td>
         <td>0.18</td>
         <td>1.80</td>
@@ -2202,13 +2097,6 @@ Column definitions are as follows:
         <td>North America Marketing</td>
         <td>0.65</td>
         <td>6.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>North America Service</td>
-        <td>0.25</td>
-        <td>2.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2234,13 +2122,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Other Service</td>
-        <td>0.40</td>
-        <td>4.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Other Utility</td>
         <td>0.20</td>
         <td>2.00</td>
@@ -2258,13 +2139,6 @@ Column definitions are as follows:
         <td>Pakistan Marketing</td>
         <td>1.25</td>
         <td>12.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Pakistan Service</td>
-        <td>0.40</td>
-        <td>4.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2290,13 +2164,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Peru Service</td>
-        <td>0.50</td>
-        <td>5.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Peru Utility</td>
         <td>0.53</td>
         <td>5.30</td>
@@ -2314,13 +2181,6 @@ Column definitions are as follows:
         <td>Rest of Africa Marketing</td>
         <td>0.60</td>
         <td>6.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Rest of Africa Service</td>
-        <td>0.95</td>
-        <td>9.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2346,13 +2206,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Rest of Asia Pacific Service</td>
-        <td>0.60</td>
-        <td>6.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Rest of Asia Pacific Utility</td>
         <td>0.42</td>
         <td>4.20</td>
@@ -2370,13 +2223,6 @@ Column definitions are as follows:
         <td>Rest of Central &amp; Eastern Europe Marketing</td>
         <td>2.30</td>
         <td>23.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Rest of Central &amp; Eastern Europe Service</td>
-        <td>0.65</td>
-        <td>6.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2402,13 +2248,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Rest of Latin America Service</td>
-        <td>1.10</td>
-        <td>11.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Rest of Latin America Utility</td>
         <td>0.30</td>
         <td>3.00</td>
@@ -2426,13 +2265,6 @@ Column definitions are as follows:
         <td>Rest of Middle East Marketing</td>
         <td>0.90</td>
         <td>9.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Rest of Middle East Service</td>
-        <td>0.60</td>
-        <td>6.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2458,13 +2290,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Rest of Western Europe Service</td>
-        <td>1.05</td>
-        <td>10.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Rest of Western Europe Utility</td>
         <td>0.80</td>
         <td>8.00</td>
@@ -2482,13 +2307,6 @@ Column definitions are as follows:
         <td>Russia Marketing</td>
         <td>2.15</td>
         <td>21.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Russia Service</td>
-        <td>1.05</td>
-        <td>10.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2514,13 +2332,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Saudi Arabia Service</td>
-        <td>0.50</td>
-        <td>5.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Saudi Arabia Utility</td>
         <td>0.31</td>
         <td>3.10</td>
@@ -2538,13 +2349,6 @@ Column definitions are as follows:
         <td>South Africa Marketing</td>
         <td>1.00</td>
         <td>10.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>South Africa Service</td>
-        <td>0.45</td>
-        <td>4.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2570,13 +2374,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>Spain Service</td>
-        <td>1.00</td>
-        <td>10.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>Spain Utility</td>
         <td>0.53</td>
         <td>5.30</td>
@@ -2594,13 +2391,6 @@ Column definitions are as follows:
         <td>Turkey Marketing</td>
         <td>0.30</td>
         <td>3.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
-        <td>Turkey Service</td>
-        <td>0.10</td>
-        <td>1.00</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -2626,13 +2416,6 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>United Arab Emirates Service</td>
-        <td>0.50</td>
-        <td>5.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>United Arab Emirates Utility</td>
         <td>0.42</td>
         <td>4.20</td>
@@ -2654,19 +2437,19 @@ Column definitions are as follows:
     <tr>
         <td>WhatsApp</td>
         <td>10</td>
-        <td>United Kingdom Service</td>
-        <td>1.05</td>
-        <td>10.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>10</td>
         <td>United Kingdom Utility</td>
         <td>0.58</td>
         <td>5.80</td>
     </tr>
+    <tr>
+        <td>LINE</td>
+        <td>1</td>
+        <td>All regions</td>
+        <td>0.15</td>
+        <td>0.15</td>
+    </tr>
 </tbody></table>
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% enddetails %}
 
 ------
@@ -2700,7 +2483,7 @@ Authentication conversations will only be supported on a case-by-case basis and 
 **Service Conversations:** User-initiated conversations that are responded to with a non-templated message.
 
 {% alert note %}
-User-initiated conversations that are responded to with a marketing or utility template will be charged as such.
+As of November 1, 2024, service-type conversations are free and will not deduct from purchased credits allotments.
 {% endalert %}
 
 ## Billing region breakdown

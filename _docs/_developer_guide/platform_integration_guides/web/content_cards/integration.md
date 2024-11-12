@@ -60,7 +60,7 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 |---|---|
 |`parentNode` | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. For example, you should pass in `document.querySelector(".my-container")`.|
 |`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `Card` objects to render for this user. If omitted, all cards will be displayed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
@@ -85,7 +85,7 @@ All Content Cards have these shared properties:
 | `updated` | The UNIX timestamp of when this card was last modified. |
 | `viewed` | This property reflects whether the user viewed the card or not.|
 | `isControl` | This property is `true` when a card is a "control" group within an A/B test.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image only Content Card properties - ImageOnly
 
@@ -102,7 +102,7 @@ All Content Cards have these shared properties:
 | `imageUrl` | The URL of the card's image.|
 | `linkText` | The display text for the URL. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Captioned image Content Card properties - CaptionedImage
 
@@ -120,7 +120,7 @@ All Content Cards have these shared properties:
 | `linkText` | The display text for the URL. |
 | `title` | The title text for this card. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Classic Content Card properties - ClassicCard
 
@@ -139,7 +139,7 @@ The [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.clas
 | `linkText` | The display text for the URL. |
 | `title` | The title text for this card. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Control group 
 
@@ -161,7 +161,7 @@ To determine if a Content Card is in the Control group for an A/B test, check th
 |[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|Get all currently available cards from the last Content Cards refresh.|
 |[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. | 
 |[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)|Dismiss the card programmatically (available in v2.4.1).|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 

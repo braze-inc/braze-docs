@@ -51,33 +51,29 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 SDK のログに記録されたカスタムイベントの記録にプッシュメッセージが使用されているため、Braze はこのソリューションを有効にするには、ユーザーごとにプッシュトークンを格納する必要があります。iOS ユーザーの場合、Braze ではユーザーが OS のプッシュプロンプトを受け取った時点からのトークンのみが保存されます。これ以前では、ユーザーはプッシュを使用して到達できず、先行ソリューションも実行できません。
 {% endalert %}
 
-## ステップ2:サイレントプッシュキャンペーンの作成
+## ステップ 2:サイレントプッシュキャンペーンの作成
 
-サーバー送信イベントを介してトリガーされる[サイレントプッシュキャンペーン][1]を作成します。 
+サーバー送信イベントを介してトリガーされる[サイレントプッシュキャンペーン]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)を作成します。 
 
-![カスタムイベント「server_event」を持つユーザープロファイルのユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンです。][40]
+![ユーザプロファイルにカスタムイベント"server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})があるユーザに配信されるアクションベースの配信アプリ内メッセージキャンペーン
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。「キャンペーン名」を「アプリ内メッセージ名の例」として設定し、「IS_SERVER_EVENT」を「true」に設定します。][41]
+![アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。"CAMPAIGN_NAME"set as "In-app message name example"および"IS_SERVER_EVENT"set to "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内のコードはキー `IS_SERVER_EVENT` をチェックし、SDK カスタムイベントがあればログに記録します。
 
 プッシュペイロードのキーと値のペアエクストラ内で目的の値を送信することで、イベント名またはイベントプロパティのいずれかを変更できます。カスタムイベントを記録する場合、これらのエクストラはイベント名のパラメータまたはイベントプロパティとして使用できます。
 
-## ステップ3:アプリ内メッセージキャンペーンを作成する
+## ステップ3: アプリ内メッセージキャンペーンを作成する
 
 Braze ダッシュボードで、ユーザーに表示されるアプリ内メッセージキャンペーンを作成します。このキャンペーンにはアクションベースの配信があり、`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内から記録されたカスタムイベントからトリガーされる必要があります。
 
 以下の例では、イベントプロパティを最初のサイレントプッシュの一部として送信することで、トリガーされる特定のアプリ内メッセージが設定されています。
 
-![カスタムイベント「アプリ内メッセージトリガー」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンで、「campaign_name」が「IAM Campaign Name Example」と等しい場合に配信されます。][42]
+![カスタムイベント&quot を実行するユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーン。アプリ内メッセージトリガ" where " campaign_name" equals " IAM Campaign Name Example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 なお、これらのアプリ内メッセージは、アプリケーションがフォアグラウンドにある間にサイレントプッシュが受信された場合にのみトリガーされます。
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
-[41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
-[42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

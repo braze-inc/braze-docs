@@ -94,6 +94,6 @@ All of the following error codes indicate that no messages will be sent.
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
 | `404 Not Found` | Invalid URL. |
 | `429 Rate Limited` | Over rate limit. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}

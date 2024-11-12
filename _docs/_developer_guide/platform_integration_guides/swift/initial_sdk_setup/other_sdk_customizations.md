@@ -25,7 +25,7 @@ See the following list of available log levels:
 | `.info`     | `BRZLoggerLevelInfo`     | Log general SDK information (user changes, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Log errors.                                                       |
 | `.disabled` | `BRZLoggerLevelDisabled` | No logging occurs.                                                |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Setting log level
 

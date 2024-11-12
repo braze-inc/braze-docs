@@ -1,6 +1,6 @@
 ---
 nav_title: アンケート
-article_title: 調査パートナー
+article_title: 調査/アンケートのパートナー
 page_order: 9
 
 page_type: landing
@@ -18,10 +18,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-- name: サーヴィケイト
+- name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: タイプフォーム
+- name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

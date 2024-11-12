@@ -23,7 +23,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 | Treasure Data | A [Treasure Data account][0] is required to take advantage of this partnership. |
 | Currents | To export data back into Treasure Data, you need to have [Braze Currents][2] set up for your account. |
 | Treasure Data URL | This can be obtained by navigating to your Treasure Data dashboard and copying the ingestion URL.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Treasure Data logs each event in batches. For more information on how to query Treasure Data to get event counts, refer to [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).

@@ -20,7 +20,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
-- name: パスキー
+- name: Passkit
   url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 - name: Inkit
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
@@ -36,7 +36,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: センドバード
+- name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/      
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/    

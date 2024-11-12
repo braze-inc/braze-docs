@@ -8,19 +8,19 @@ description: "この記事には2016年7月のリリースノートが含まれ�
 
 # 2016年7月
 
-## エラータイプ別にDeveloper Consoleのエラーログをフィルタリングする
+## エラータイプによる開発者コンソールのエラーログのフィルタリング
 
-このアップグレードにより、Developer Consoleのメッセージエラーログを使用して、Brazeの統合に関する問題のトラブルシューティングが容易になる。これはユーザビリティのアップデートであり、メッセージエラーログをタイプ別にフィルタリングすることができる。
+このアップグレードにより、開発者コンソールのメッセージエラーログを使用して、Braze 統合の問題をトラブルシューティングしやすくなります。これは、ユーザビリティ更新で、メッセージエラーログを種類別にフィルターし、具体的なインテグレーションの問題を簡単に見つけて特定することができます。
 
 ## 最後に送信されたアンインストール追跡プッシュのタイムスタンプを追加した。
 
-Brazeは、顧客のアプリにサイレント・プッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検知する。この機能は、アンインストールトラッキングが最後に実行された日時を示すタイムスタンプを控えめに追加する。このタイムスタンプは、アンインストール追跡が設定されている「設定」ページで確認できる。[アンインストール・トラッキングについて]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)もっと知る。
+Brazeは、顧客のアプリにサイレント・プッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検知する。この機能により、アアンインストール追跡が最後に実行された日時を示す、目立たないタイムスタンプが追加されます。このタイムスタンプは、アンインストール追跡が設定されている「設定」ページで確認できる。詳細については、[トラッキングのアンインストール]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)を参照してください。
 
 ![トラッキング・チェックボックスをアンインストールする][6]
 
 ## ウェブフック・テストの機能強化
 
-Brazeからライブウェブフックメッセージをテスト送信できるようになった。テスト・メッセージを送信することで、安全なサンドボックス環境で、メッセージとサーバー・エンドポイントが適切に設定されていることを確認することができる。[ウェブフックについて]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook)もっと知る。
+キャンペーンを本番に設定する前に、Braze からライブ Webhook をテスト送信できるようになりました。テスト・メッセージを送信することで、安全なサンドボックス環境で、メッセージとサーバー・エンドポイントが適切に設定されていることを確認することができる。[webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook) について詳しく説明します。
 
 ## キャンペーン受信者のCSVエクスポートに受信メッセージのバリエーションを追加
 
@@ -28,9 +28,9 @@ Brazeからライブウェブフックメッセージをテスト送信できる
 
 ## インプレッション数のおおよその制限
 
-アプリ内メッセージが一定数のインプレッションを獲得すると、Brazeはユーザーにメッセージを受け取る資格を与えることを停止する。設定 アプリ roximate [インプレッション s]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap) の制限について詳しく説明します。
+アプリ内メッセージが一定数のインプレッションを獲得すると、Brazeはユーザーにメッセージを受け取る資格を与えることを停止する。インプレッションのおおよその制限の設定について詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap)をご覧ください。
 
-![IAMインプレッションキャップ][11]
+![IAM インプレッション上限][11]
 
 [6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
 [11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

@@ -66,7 +66,7 @@ Banner cards consist of:
 |          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
 |          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
 |          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 - PNG files are recommended.
 - A custom image loading library is required to display GIFs on Android. We recommend Glide.

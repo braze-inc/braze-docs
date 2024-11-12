@@ -13,7 +13,7 @@ guide_menu_list:
   - name: カスタム属性またはイベントのデータタイプを変更する
     link: /docs/help/help_articles/data/change_custom_data_type/
     image: /assets/img/braze_icons/table.svg
-  - name: ディスパッチIDの動作
+  - name: ディスパッチ ID の動作
     link: /docs/help/help_articles/data/dispatch_id/
     image: /assets/img/braze_icons/key-01.svg
   - name: ブロックリストと削除の比較

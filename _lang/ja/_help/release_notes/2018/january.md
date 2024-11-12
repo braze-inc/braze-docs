@@ -11,18 +11,18 @@ description: "この記事は、2018年1月のリリースノートを含んで�
 
 [ CSS インライン化][84] を個別のメールメッセージに対してオンまたはオフに切り替えるには、** メール設定** を選択します。
 
-## 新Segment フィルターs
+## 新規セグメントフィルター
 
 次のフィルターs を使用してSegments を作成できるようになりました。
-- 受信キャンバスステップ
+- キャンバスステップを受信しました
 - 開いた/クリックしたキャンバスステップ
 - 最後に受信した特定のキャンバスステップ
 
 {% alert update %}
-2019年3月現在、`Received Canvas Step`は`Received Message from Canvas Step`に、`Last Received Specific Canvas Step`は`Last Received Message from Specific Canvas Step`に名称変更されています。
+2019年3月より、`Received Canvas Step` は `Received Message from Canvas Step` に、`Last Received Specific Canvas Step` は `Last Received Message from Specific Canvas Step` に名称変更されています。
 {% endalert %}
 
-## 機器ID を使用したユーザーs のエクスポート
+## デバイス ID を使用してユーザーをエクスポートする
 
 このエンドポイントでは、パラメータとして装置識別子を受け入れるようになりました。これにより、[匿名ユーザープロファイルs][82]をエクスポートできます。
 

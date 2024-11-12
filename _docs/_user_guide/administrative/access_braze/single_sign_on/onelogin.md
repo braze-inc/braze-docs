@@ -19,7 +19,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 |---|---|
 | Braze Domain | You will need your Braze domain to set up Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br><br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
 | RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
@@ -53,7 +53,7 @@ On this page, input the following:
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "OneLogin". |
 | `Target URL` | This is the `SAML 2.0 Endpoint (HTTP)` URL provided by OneLogin.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your OneLogin. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Opening Security Settings in Braze and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
 

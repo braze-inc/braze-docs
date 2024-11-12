@@ -32,7 +32,7 @@ In the in-app message composer, you can choose when the in-app message will expi
 |---|---|---|
 | Message expires after specified period | The first option allows you to expire the in-app message relative to when the step becomes available to the user. | For example, an in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
 | Message expires by specified date | The second option allows you to choose a specific date and time when the in-app message will be no longer available. | For example, if you have a sale that ended at a specific date and time, you might select this option so that users no longer see the associated in-app message when the sale ends. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Use cases
 
@@ -182,7 +182,7 @@ Steps with an in-app message and another channel have the following advancement 
 |---|---|---|
 | Advance When Message Sent | Users must be sent an email, webhook, or push notification, or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email, webhook, or push, or hasn't viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> Users must match the step's segment and filter criteria to advance to the next steps. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][3]
 

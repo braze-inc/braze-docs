@@ -32,7 +32,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalogs` | Required | Array | An array that contains catalog objects. Only one catalog object is allowed for this request. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Catalog object parameters
 
@@ -41,7 +41,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `name` | Required | String | The name of the catalog that you want to create. |
 | `description` | Required | String | The description of the catalog that you want to create. |
 | `fields` | Required | Array | An array of objects where the object contains keys `name` and `type`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -197,6 +197,6 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-fields` | `fields` is not formatted correctly. |
 | `too-many-catalog-atoms` | You can only create one catalog per request. |
 | `too-many-fields` | Number of fields limit is 500. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

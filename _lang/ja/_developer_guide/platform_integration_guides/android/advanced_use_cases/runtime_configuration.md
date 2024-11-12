@@ -11,13 +11,13 @@ description: "このリファレンス記事では、Android または FireOS �
 
 # ランタイム構成
 
->[ランタイム構成は][1]、`braze.xml`の代わりにランタイム時にアプリを設定する際にオプションとなる方法です。このリファレンス記事では、ランタイム構成を設定する方法について説明します。
+>[ランタイム構成は](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)、`braze.xml`の代わりにランタイム時にアプリを設定する際にオプションとなる方法です。このリファレンス記事では、ランタイム構成を設定する方法について説明します。
 
 ランタイム構成と`braze.xml`構成の両方を使用することは可能です。ランタイムに設定された値は、`braze.xml`の同じ値よりも常に優先されます。Braze SDK がランタイム構成内のすべての値を見つけることができれば、`braze.xml`は不要となるため削除できます。 
 
 ## 使用例
 
-構成では[ビルダーオブジェクトを][2]使用し、それがビルドされ[`Braze.configure()`][1]に渡されます。以下の例では、利用可能なランタイム構成オプションのサブセットを使用しています。オプションの完全なリストについては、[KDoc][1] を参照してください。
+構成では[ビルダーオブジェクトを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html)使用し、それがビルドされ[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)に渡されます。以下の例では、利用可能なランタイム構成オプションのサブセットを使用しています。オプションの完全なリストについては、[KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) を参照してください。
 
 {% tabs %}
 {% tab JAVA %}
@@ -50,8 +50,5 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-別の例については、[Hello Braze のサンプルアプリ][3]で確認することができます。
+別の例については、[Hello Braze のサンプルアプリ](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java)で確認することができます。
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html
-[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
-[3]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java

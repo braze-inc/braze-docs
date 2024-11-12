@@ -1,10 +1,10 @@
 ---
 nav_title: データウェアハウス
-article_title: データウェアハウスパートナー
+article_title: データウェアハウスのパートナー
 page_order: 7
 
 page_type: landing
-description: "このランディングページには、メッセージング キャンペーン s からデータを使用できるようにするために役立つBrazeパートナ(Alloys) が一覧表示されます。"
+description: "このランディングページには、メッセージングキャンペーンのデータを利用可能にできるように支援する Braze パートナー (Alloys) が一覧表示されています。"
 
 layout: partner_page
 search_tag: Partner

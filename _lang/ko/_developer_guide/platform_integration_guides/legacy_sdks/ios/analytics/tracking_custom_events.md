@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 iOS 애플리케이션에 사용자 지
 noindex: true
 ---
 
-{% multi_lang_include 사용 중지/목적 -c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS용 사용자 지정 이벤트 추적
 
@@ -19,7 +19,7 @@ Braze에서 커스텀 이벤트를 기록하여 앱의 사용 패턴에 대해 �
 ## 사용자 지정 이벤트 추가하기
 
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"YOUR_EVENT_NAME"];

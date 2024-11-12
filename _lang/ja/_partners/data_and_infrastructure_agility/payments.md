@@ -1,6 +1,6 @@
 ---
 nav_title: 決済
-article_title: 支払パートナー
+article_title: 決済のパートナー
 layout: partner_page
 page_order: 8
 
@@ -14,8 +14,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Payment Infrastructure"
 
 valid_partner_list:
-- name: レベニューキャット
+- name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
-- name: リカーリー
+- name: Recurly
   url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
 ---

@@ -13,7 +13,7 @@ tool: Location
 
 > この記事では、Web の位置情報の追跡を有効にする方法を説明します。
 
-ユーザーの現在地を設定するには、geolocation APIの [`getCurrentPosition()`][0]メソッドを使用し、位置情報をBrazeに記録する：
+ユーザーの現在地を設定するには、geolocation APIの [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)メソッドを使用し、位置情報をBrazeに記録する：
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -31,7 +31,7 @@ function success(position) {
 navigator.geolocation.getCurrentPosition(success);
 ```
 
-`navigator.geolocation.getCurrentPosition()` を呼び出すと、ユーザーがすでにアクセス許可を付与または拒否していない限り、直ちにユーザーにアクセス許可を要求します。ユーザーの最後の既知のロケーションを設定する方法については、[JSDocs][1] を参照してください。
+`navigator.geolocation.getCurrentPosition()` を呼び出すと、ユーザーがすでにアクセス許可を付与または拒否していない限り、直ちにユーザーにアクセス許可を要求します。ユーザーの最後の既知のロケーションを設定する方法については、[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation) を参照してください。
 
 ## 単一のロケーションをログに記録する
 
@@ -56,8 +56,5 @@ function success(position) {
 navigator.geolocation.watchPosition(success);
 ```
 
-`navigator.geolocation.watchPosition()` を呼び出すと、ユーザーがすでにアクセス許可を付与または拒否していない限り、直ちにユーザーにアクセス許可を要求します。位置情報トラッキングの設定と停止については、[Mozilla開発者向けドキュメントを][2]参照のこと。
+`navigator.geolocation.watchPosition()` を呼び出すと、ユーザーがすでにアクセス許可を付与または拒否していない限り、直ちにユーザーにアクセス許可を要求します。位置情報トラッキングの設定と停止については、[Mozilla開発者向けドキュメントを](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition)参照のこと。
 
-[0]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition

@@ -69,7 +69,7 @@ Here's what we recommend for various ranges of _Prediction Quality_:
 | 40 - 60 | Good. This model will produce accurate predictions, but trying different audience settings may achieve even better results. |
 | 20 - 40| Fair. This model can provide accuracy and value, but consider trying different audience definitions to see if they increase performance. |
 | 0 - 20 | Poor. We recommend you change your audience definitions and try again. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The prediction will be trained again every two weeks and updated alongside the prediction quality metric to keep your prediction updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the predictions list page as well as on your prediction's analytics page. 
 

@@ -3,7 +3,7 @@ nav_title: Wrapper SDKs
 article_title: Wrapper SDKs
 page_order: 200
 
-description: "以下のラッパーSDKは、開発者が複数のプラットフォームでアプリを開発する際に役立つ。"
+description: "以下のラッパー SDK は、複数のプラットフォームにわたるアプリケーション開発で開発者を支援するために使用できます。"
 page_type: partner
 platform: 
   - cordova
@@ -14,22 +14,22 @@ platform:
 layout: dev_guide
  
 guide_top_header: "Wrapper SDKs"
-guide_top_text: "以下のラッパーSDKは、開発者が複数のプラットフォームでアプリを開発する際に役立つ。"
+guide_top_text: "以下のラッパー SDK は、複数のプラットフォームにわたるアプリケーション開発で開発者を支援するために使用できます。"
 
 guide_featured_list:
-  - name: コルドバ Android
+  - name: Cordova Android
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
     image: /assets/img/cordova.png
-  - name: コルドバ iOS
+  - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     image: /assets/img/cordova.png
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
-  - name: ユニティ アンドロイド
+  - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
     image: /assets/img/unity.png
-  - name: ユニティ iOS
+  - name: Unity iOS
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: /assets/img/unity.png
   - name: Xamarin

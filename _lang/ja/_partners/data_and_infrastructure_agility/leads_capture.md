@@ -1,6 +1,6 @@
 ---
 nav_title: リードの獲得
-article_title: リード・キャプチャー・パートナー
+article_title: リード獲得のパートナー
 page_order: 7.5
 
 page_type: landing

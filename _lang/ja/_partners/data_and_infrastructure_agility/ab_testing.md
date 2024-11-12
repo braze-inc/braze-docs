@@ -1,6 +1,6 @@
 ---
 nav_title: A/B テスト
-article_title: A/Bテスト・パートナー
+article_title: AB テストのパートナー
 layout: partner_page
 page_order: 0
 
@@ -14,7 +14,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "A/B Testing"
 
 valid_partner_list:
-- name: ジャカード
+- name: Jacquard
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 
 ---
