@@ -32,7 +32,7 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corps de la demande
 ```json
