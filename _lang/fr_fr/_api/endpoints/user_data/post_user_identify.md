@@ -61,8 +61,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | Paramètre             | Requis | Type de données                           | Description                                                                                                                                                                 |
 | --------------------- | -------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `aliases_to_identify` | Requis | Tableau d’alias pour identifier l’objet | Voir [alias pour identifier l'objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `merge_behavior`      | Facultatif | Chaîne de caractères                              | `none` ou `merge` est attendu.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `merge_behavior`      | Facultatif | Chaîne de caractères                              | `merge` ou  est attendu.                                                                                                                                       |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Champ Merge_behavior {#merge}
 
@@ -106,7 +106,7 @@ Les données de session ne seront fusionnées que si l’application existe sur 
 Configurer le champ sur `none` ne fusionnera aucune donnée utilisateur avec le profil utilisateur identifié.
 
 ### Identifier les utilisateurs par e-mail
-Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner s'il y a plusieurs utilisateurs trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est accordée à l'utilisateur ayant effectué la dernière mise à jour.
 
