@@ -22,13 +22,13 @@ description: "この記事では、「ユーザーのマージ」Braze エンド
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.merge` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.merge`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -43,10 +43,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 |---|---|---|---|
-| `merge_updates` | required | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone_number`、または `email` のいずれかでユーザーを参照する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `merge_updates` | 必須 | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### マージ動作
 
@@ -101,7 +101,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### 電子メールまたは電話番号でユーザーをマージする
 
-識別子として `email` または `phone_number` が指定された場合、識別子にはさらに `prioritization` の値が必要になります。`prioritization` は、複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する配列でなければならない。`prioritization` は順序付き配列である。つまり、優先順位付けから複数のユーザーがマッチした場合、マージは行われない。
+識別子として `email` または `phone` が指定された場合、識別子にはさらに `prioritization` の値が必要になります。`prioritization` は、複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する配列でなければならない。`prioritization` は順序付き配列である。つまり、優先順位付けから複数のユーザーがマッチした場合、マージは行われない。
 
 配列に使用できる値は、`identified`、`unidentified`、`most_recently_updated` です。`most_recently_updated` は、最も最近更新されたユーザーを優先することを意味します。
 
@@ -109,7 +109,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - `identified` を持つユーザーを優先することである。 `external_id`
 - `unidentified` のないユーザーを優先することである。 `external_id`
 
-## リクエスト例
+## 例のリクエスト
 
 ### 基本リクエスト
 
@@ -233,7 +233,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ## 応答
 
-このエンドポイントには、`202` と `400` の2つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `202` と `400`。
 
 ### 成功応答の例
 
@@ -265,6 +265,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 | `a single request may not contain more than 50 merge updates` | 1回のリクエストで指定できるマージ更新は50件までです。 |
 | `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | リクエストの識別子をチェックする。 |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | `merge_updates` に `identifier_to_merge` と `identifier_to_keep` という2つのオブジェクトしか含まれていないことを確認します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
