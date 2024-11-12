@@ -28,7 +28,7 @@ description: "この記事では、新しいダッシュボードユーザーア
 
 {% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
-## Request body
+## 要求本文:
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
@@ -71,16 +71,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データタイプ | 説明 |
+| パラメータ | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | required | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
-| `userName` | 必須 | string | ユーザーのEメールアドレス。 |
-| `name` | required | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
-| `department` | 必須 | string | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
-| `permissions` | required | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
+| `schemas` | 必須 | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
+| `userName` | 必須 | 文字列 | ユーザーのEメールアドレス。 |
+| `name` | 必須 | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
+| `department` | 必須 | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
+| `permissions` | 必須 | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
@@ -146,15 +146,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 ## 応答パラメーター
 
-| パラメーター | データタイプ | 説明 |
+| パラメータ | データタイプ | 説明 |
 | --------- | --------- | ----------- |
 | `schemas` | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
-| `userName` | string | ユーザーのEメールアドレス。 |
+| `userName` | 文字列 | ユーザーのEメールアドレス。 |
 | `name` | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
-| `department` | string | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
+| `department` | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
 | `permissions` | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
-| `id` | string | Brazeが生成するIDで、ユーザーアカウントの検索や管理に使用される。 |
-| `lastSignInAt` | string | 最後にサインオンに成功した日付 (UTC 時間)。 |
+| `id` | 文字列 | Brazeが生成するIDで、ユーザーアカウントの検索や管理に使用される。 |
+| `lastSignInAt` | 文字列 | 最後にサインオンに成功した日付 (UTC 時間)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### エラー状態
