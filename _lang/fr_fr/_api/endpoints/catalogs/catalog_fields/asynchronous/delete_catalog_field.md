@@ -34,7 +34,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | -------------- | -------- | --------- | -------------------------- |
 | `catalog_name` | Requis | Chaîne de caractères    | Nom du catalogue.       |
 | `field_name`   | Requis | Chaîne de caractères    | Nom du champ du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -80,7 +80,7 @@ Le code de statut `404` pourrait renvoyer le corps de réponse suivant. Consulte
 }
 ```
 
-## Résolution des problèmes 
+## Résolution des problèmes
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
@@ -90,6 +90,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `field-referenced-by-selection` | Vérifiez que le champ du catalogue est actuellement utilisé par une sélection. |
 | `field-is-inventory`            | Vérifiez que le champ du catalogue est utilisé comme champ d'inventaire.      |
 | `invalid-field-name`            | Vérifiez que le nom du champ du catalogue est valide.                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
