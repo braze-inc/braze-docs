@@ -36,9 +36,9 @@ Braze 스토어는 전송 후 14일 동안 분석을 전송합니다. 캠페인 
 | `send_id` | 필수 | 문자열 | [API 식별자 보내기를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 | `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일수입니다. 1에서 100 사이여야 합니다(포함). |
 | `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시 
+## 예시 요청
 
 {% raw %}
 ```
