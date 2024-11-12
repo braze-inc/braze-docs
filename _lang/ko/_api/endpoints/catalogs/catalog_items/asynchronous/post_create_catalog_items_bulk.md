@@ -15,7 +15,7 @@ description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 카탈로그에 여러 항목을 생성할 수 있습니다. 
+> 이 엔드포인트를 사용하여 카탈로그에 여러 항목을 생성할 수 있습니다.
 
 각 요청은 최대 50개 항목까지 지원할 수 있습니다. 이 엔드포인트는 비동기식입니다.
 
@@ -34,14 +34,14 @@ description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `items` | 필수 | 배열 | 항목 객체가 포함된 배열입니다. 항목 객체에는 카탈로그의 모든 필드가 포함되어야 합니다. 요청당 최대 50개의 항목 개체가 허용됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -161,6 +161,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `request-includes-too-many-items` | 요청에 항목이 너무 많습니다. 요청당 아이템 한도는 50개입니다. |
 | `too-deep-nesting-in-value-object` | 아이템 객체는 50개 이상의 중첩 레벨을 가질 수 없습니다. |
 | `unable-to-coerce-value` | 아이템 유형은 변환할 수 없습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
