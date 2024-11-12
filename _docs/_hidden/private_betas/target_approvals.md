@@ -35,7 +35,7 @@ You can set up to five messaging rules. When setting up your messaging rule, two
 
 Similarly, if you set up two thresholds for 10,0000 users for Canvas with different approvers, this rule can be saved. This way, you can organize and separate your approvers (such as your legal team and your design team) into specific rules.
 
-Note that you can’t set rules with overlapping volume thresholds for the same object. For example, the following messaging rule can’t be set: one rule with a threshold of 10,000 users for Canvas and another rule with a threshold of 1,000,000 users for Canvas.
+Note that you can’t set rules with overlapping volume thresholds for the same object. For example, the following messaging rule **can’t** be set: one rule with a threshold of 10,000 users for Canvas and another rule with a threshold of 1,000,000 users for Canvas.
 
 ### Selecting approvers
 
