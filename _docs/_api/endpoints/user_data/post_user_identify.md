@@ -19,10 +19,6 @@ description: "This article outlines details about the Identify users Braze endpo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-{% alert important %}
-Starting August 7, 2023, this endpoint will merge data for all calls. This means [`merge_behavior`](#merge) will be set to `merge` for all calls.
-{% endalert %}
-
 ## How it works
 
 Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile) or email address (email-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 

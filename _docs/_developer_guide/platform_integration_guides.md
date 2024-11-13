@@ -1,7 +1,7 @@
 ---
-nav_title: Platform Integration Guides
+nav_title: Platforms
 config_only: true
 noindex: true
 layout: blank_config
-page_order: 2
+page_order: 10
 ---

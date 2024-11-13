@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムスタイリング
+nav_title: カスタムスタイル
 article_title: iOS 向けカスタムコンテンツカードスタイル設定
 platform: iOS
 page_order: 1
@@ -16,7 +16,7 @@ noindex: true
 ## デフォルト画像を上書きする
 
 {% alert important %}
-iOS アプリ内メッセージまたはコンテンツカード内の画像を表示するために Braze UI を使用しようとしている場合は、`SDWebImage` の統合が必要です。
+iOS アプリ内メッセージまたはコンテンツカード内の画像を表示するために Braze UI を使用しようとしている場合は、 の統合が必要です。
 {% endalert %}
 
 Braze では、クライアントが既存のデフォルト画像を独自のカスタム画像に置き換えることができます。そのためには、カスタム画像で新しい `png` ファイルを作成し、アプリの画像バンドルに追加します。次に、ファイルの名前を画像の名前に変更して、ライブラリー内の既定の画像をオーバーライドします。また、さまざまなスマートフォンのサイズに対応できるよう、`@2x` と `@3x` のバージョンの画像を必ずアップロードしてください。コンテンツカードでオーバーライド可能な画像は以下の通りです。
@@ -56,7 +56,7 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
@@ -79,4 +79,3 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches

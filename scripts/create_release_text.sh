@@ -16,7 +16,13 @@ main() {
     LAST_RELEASE_TIMESTAMP=$(git log -1 --pretty=format:"%cI" "$LAST_RELEASE_TAG")
 
     # Convert Git logs to JSON and sort by date.
-    COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/master --pretty=format:'{%n  "commit": "%H",%n  "date": "%cI",%n  "title": "%s",%n  "body": "%b"%n},' | perl -pe 'BEGIN{print "["}; END{print "]\n"}' | perl -pe 's/},]/}]/' | jq -c '. | sort_by(.date)')
+    COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/master \
+    --pretty=format:'{%n  <commit>: <%H>,%n  <date>: <%cI>,%n  <title>: <%s>,%n  <body>: <%b>%n},' \
+    | perl -pe 'BEGIN{print "["}; END{print "]\n"}' \
+    | perl -pe 's/},]/}]/' \
+    | sed 's/"//g' \
+    | sed 's/</"/g; s/>/"/g' \
+    | jq '. | sort_by(.date)')
 
     if [ -z "$COMMIT_LOGS" ]; then
         echo "No commit logs found. Exiting."

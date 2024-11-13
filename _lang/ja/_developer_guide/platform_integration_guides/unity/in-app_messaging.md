@@ -29,7 +29,7 @@ Androidでは、Brazeからのアプリ内メッセージが自動的にネイ�
 {% endtab %}
 {% tab iOS %}
 
-iOSでは、Brazeからのアプリ内メッセージは自動的にネイティブ表示される。この機能を無効にするには、Braze 設定エディターでゲームオブジェクトリスナーを設定し、\[**Braze でアプリ内メッセージを表示する**] が選択されていないことを確認します。
+iOSでは、Brazeからのアプリ内メッセージは自動的にネイティブ表示される。この機能を無効にするには、Braze 設定エディターでゲームオブジェクトリスナーを設定し、[**Braze でアプリ内メッセージを表示する**] が選択されていないことを確認します。
 
 アプリ内メッセージの初期表示動作は、Braze 設定の「アプリ内メッセージマネージャー初期表示動作」で設定できます。
 
@@ -69,7 +69,7 @@ Unity ゲームオブジェクトを登録して、アプリ内メッセージ�
 
 アプリ内メッセージゲームオブジェクトのコールバックで受け取った受信 `string` メッセージは、便宜上、事前に提供されているモデルオブジェクトに解析できます。
 
-`InAppMessageFactory.BuildInAppMessage()` を使ってアプリ内メッセージを解析しよう。結果として得られるオブジェクトはそのタイプに応じて [`IInAppMessage.cs`][13] または [`IInAppMessageImmersive.cs`][12] のインスタンスになります。
+`InAppMessageFactory.BuildInAppMessage()` を使ってアプリ内メッセージを解析しよう。結果として得られるオブジェクトはそのタイプに応じて [`IInAppMessage.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) または [`IInAppMessageImmersive.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) のインスタンスになります。
 
 ### アプリ内メッセージのコールバック例
 
@@ -94,9 +94,9 @@ void InAppMessageReceivedCallback(string message) {
 
 Brazeが直接表示しないアプリ内メッセージについては、クリック数とインプレッション数を手動で記録する必要がある。
 
-[`IInAppMessage`][13] で `LogClicked()` と `LogImpression()` を使用して、メッセージのクリック数とインプレッション数をログに記録します。
+[`IInAppMessage`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) で `LogClicked()` と `LogImpression()` を使用して、メッセージのクリック数とインプレッション数をログに記録します。
 
-[`IInAppMessageImmersive`][12] で `LogButtonClicked(int buttonID)` を使用して、ボタンのクリック数をログに記録します。ボタンは [`InAppMessageButton`][8] インスタンスのリストとして表され、各インスタンスには `ButtonID` が含まれます。
+[`IInAppMessageImmersive`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) で `LogButtonClicked(int buttonID)` を使用して、ボタンのクリック数をログに記録します。ボタンは [`InAppMessageButton`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs) インスタンスのリストとして表され、各インスタンスには `ButtonID` が含まれます。
 
 ## カスタム・アクション・リスナー
 
@@ -133,6 +133,3 @@ public void OnInAppMessageDismissed(IInAppMessage inAppMessage) {
 }
 ```
 
-[8]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs
-[12]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs
-[13]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs

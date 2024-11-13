@@ -38,6 +38,18 @@ function unEncodeURIComponent(str) {
   return decodedStr;
 }
 
+function setAdaTableRole(role='presentation') {
+  // assign a role of presentation, and remove the role if it has a th or thead
+  $('table').each(function(){
+    if (!$(this).attr('role')) {
+      $(this).attr('role',role);
+    }
+    if (($(this).attr('role') == role) && (($(this).has('th').length > 0) || ($(this).has('thead').length > 0))){
+      $(this).attr('role',null);
+    }
+  });
+}
+
 function string_to_slug(str) {
   if (str) {
     str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
@@ -578,14 +590,6 @@ $(document).ready(function() {
       $(this).attr('tabindex', 0)
     }
   });
+  setAdaTableRole()
 
-  // assign a role of presentation, and remove the role if it has a th or thead
-  $('table').each(function(){
-    if (!$(this).attr('role')) {
-      $(this).attr('role','presentation');
-    }
-    if (($(this).attr('role') == 'presentation') && (($(this).has('th').length > 0) || ($(this).has('thead').length > 0))){
-      $(this).attr('role',null);
-    }
-  });
 });

@@ -14,7 +14,7 @@ noindex: true
 
 # アプリ内メッセージ表示のカスタム処理
 
-[`ABKInAppMessageControllerDelegate`][16] を設定すると、アプリ内メッセージが表示される前に次のデリゲートメソッドが呼び出されます。
+[`ABKInAppMessageControllerDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h) を設定すると、アプリ内メッセージが表示される前に次のデリゲートメソッドが呼び出されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -24,7 +24,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMessageDisplayChoice
@@ -33,7 +33,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 {% endtab %}
 {% endtabs %}
 
-[`ABKInAppMessageUIDelegate`][34] を実装しただけの場合は、代わりに次の UI デリゲートメソッドが呼び出されます。
+[`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) を実装しただけの場合は、代わりに次の UI デリゲートメソッドが呼び出されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -43,7 +43,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsUp keyboardIsUp: Bool) -> ABKInAppMessageDisplayChoice
@@ -59,11 +59,11 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsU
 | OBJECTIVE-C： `ABKDisplayInAppMessageNow`<br>SWIFT： `displayInAppMessageNow` | メッセージはすぐに表示される。 |
 | OBJECTIVE-C： `ABKDisplayInAppMessageLater`<br>SWIFT： `displayInAppMessageLater` | メッセージは表示されず、スタックの一番上に戻される。 |
 | OBJECTIVE-C： `ABKDiscardInAppMessage`<br>SWIFT： `discardInAppMessage`| メッセージは破棄され、表示されない。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 `beforeInAppMessageDisplayed:` デリゲートメソッドを使用して、アプリ内メッセージ表示ロジックを追加したり、Braze によって表示される前にアプリ内メッセージをカスタマイズしたり、Braze のアプリ内メッセージ表示ロジックと UI を完全にオプトアウトしたりできます。
 
-実装例については、[サンプルアプリケーション][36]をご覧ください。
+実装例については、[サンプルアプリケーション](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m)をご覧ください。
 
 ## 表示前のアプリ内メッセージの上書き
 
@@ -98,7 +98,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsU
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // ABKInAppMessageControllerDelegate
@@ -140,7 +140,7 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage, withKeyboardIsU
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // Registers that a user has viewed an in-app message with the Braze server.
@@ -163,7 +163,7 @@ func logInAppMessageClicked()
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // Logs button click analytics
@@ -177,16 +177,12 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 
 詳細については、次のヘッダー ファイルを参照してください。
 
-- [`ABKInAppMessage.h`][14]
-- [`ABKInAppMessageControllerDelegate.h`][16]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
+- [`ABKInAppMessageControllerDelegate.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h)
 
 ## 実装サンプル
 
-[`AppDelegate.m`][36] アプリ内メッセージサンプルアプリを参照してください。
+[`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) アプリ内メッセージサンプルアプリを参照してください。
 
 
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h
-[36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
 

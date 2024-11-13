@@ -25,8 +25,8 @@ Braze SDK にはデフォルトのカードフィードが含まれています�
 |`getContentCardsFromCache(successCallback, errorCallback)`|Braze SDKからコンテンツカードを取得する。これは、前回の更新時に更新されたローカルキャッシュから最新のカードリストを返す。|
 |`logContentCardClicked(cardId)`|指定されたコンテンツカードIDのクリックを記録する。|
 |`logContentCardImpression(cardId)`|与えられたコンテンツカードIDのインプレッションを記録する。|
-|`logContentCardDismissed(cardId)`||指定されたコンテンツカード ID が閉じられたことを記録します。||
-{: .reset-td-br-1 .reset-td-br-2}
+|`logContentCardDismissed(cardId)`|指定されたコンテンツカード ID が閉じられたことを記録します。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## GIFサポート
 

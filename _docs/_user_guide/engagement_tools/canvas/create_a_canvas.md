@@ -15,21 +15,27 @@ guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
+  - name: Creating a Canvas Template
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/
+    image: /assets/img/braze_icons/brush-02.svg    
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     image: /assets/img/braze_icons/clock.svg
+  - name: Rate Limiting
+    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting
+    image: /assets/img/braze_icons/alert-triangle.svg
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     image: /assets/img/braze_icons/users-right.svg
-  - name: Preview User Paths
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
-    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     image: /assets/img/braze_icons/user-check-01.svg
