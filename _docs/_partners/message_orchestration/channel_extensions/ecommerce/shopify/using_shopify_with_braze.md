@@ -37,7 +37,7 @@ Disable these emails right before you enable the corresponding flows in Braze. T
 
 Canvas is a powerful tool designed to help marketers create personalized user journeys that engage customers at every stage of their shopping experience. With its flexible and intuitive interface, Canvas allows you to design, automate, and optimize customer interactions seamlessly. Whether you're looking to nurture leads, recover lost sales, or enhance customer loyalty, Braze Canvas provides the tools you need to create impactful marketing campaigns.
 
-### Key Features of Braze Canvas:
+**Key features of Braze Canvas**
 
 - **Flexibility:** Easily customize user journeys to fit your brand’s unique needs. Drag-and-drop functionality allows you to create complex workflows without any coding experience.
 - **Real-time data integration:** Leverage real-time customer data to deliver personalized messages based on user behavior and preferences.
@@ -132,7 +132,7 @@ The following settings are pre-configured in your Canvas:
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
-    - Action-based trigger when a user performs the ecommerce.checkout_started event
+    - Action-based trigger when a user performs the `ecommerce.checkout_started` event
     - Start time is when you create the Canvas template 
 - Target audience 
     - Entry audience 

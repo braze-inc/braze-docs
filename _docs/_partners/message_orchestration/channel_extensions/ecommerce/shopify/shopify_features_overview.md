@@ -328,6 +328,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 ```
 {% endsubtab %}
 {% subtab Order placed %}
+{% raw %}
 ```json
 {
 	name: "ecommerce.order_placed",
@@ -387,6 +388,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 }
 }
 ```
+{% endraw %}
 {% endsubtab %}
 {% subtab Fulfilled order %}
 ```json
