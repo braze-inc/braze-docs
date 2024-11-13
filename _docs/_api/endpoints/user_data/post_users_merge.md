@@ -56,7 +56,7 @@ The behavior documented below is true for all Braze features that *are not* powe
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge any of the following fields if they are not found on the target user:
+This endpoint will merge the following fields if they're not found on the target user.
 
 - First name
 - Last name
@@ -88,8 +88,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Campaign interaction data (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
 - Message and message engagement history
-
-Session data will only be merged if the app exists on both user profiles.
+- Session data will only be merged if the app exists on both user profiles.
 
 {% alert note %}
 When merging users, using the `/users/merge` endpoint works the same way as using the [`changeUser()` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
