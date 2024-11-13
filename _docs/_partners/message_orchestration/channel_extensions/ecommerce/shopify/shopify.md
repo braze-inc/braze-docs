@@ -11,7 +11,7 @@ hidden: true
 
 # Shopify overview
 
-> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
+> [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
 The standard Braze integration with Shopify provides a powerful solution for ecommerce businesses looking to enhance their customer engagement and drive personalized marketing efforts. This integration seamlessly connects Shopify's robust ecommerce capabilities with our advanced customer engagement platform, enabling you to deliver targeted, relevant, and timely messages to your users based on real-time shopping behaviors and transactional data.
 
@@ -54,15 +54,15 @@ After the integration is live, Braze will gather user data from two key sources 
 - **Shopify Web Pixel API and Webhooks:** For eCommerce activity
 
 During integration onboarding, you will need to select when the Braze Web SDK and JavaScript SDK initialize and load onto a Shopify site: 
-- Upon site visit, such as session start
-    - What it unlocks 
-        - **Anonymous user tracking:** For access to more data for deeper personalization 
+- Upon site visit (such as session start)
+    - **What it does:** Anonymous user tracking for access to more data for deeper personalization 
 - Upon account signup (such as account login) 
-    - What it unlocks 
-        - **Prevents anonymous user tracking:** For a more conservative, privacy-oriented approach, so user activity is tracked *after* the user signs into their account
+    - **What it does:** Prevents anonymous user tracking for a more conservative, privacy-oriented approach, so user activity is tracked *after* the user signs into their account
 
 {% alert note %}
-If you’re a Shopify headless customer or require more advanced initialization capabilities, you must implement the Braze Web SDK and JavaScript SDK directly onto your Shopify website. 
+Note the following:
+- If you’re a Shopify headless customer or require more advanced initialization capabilities, you must implement the Braze Web SDK and JavaScript SDK directly onto your Shopify website.
+- Website visits (sessions) count towards your Monthly Active User (MAU) allotments.
 {% endalert %}
 
 The Braze SDKs are designed to elevate your customer engagement by:

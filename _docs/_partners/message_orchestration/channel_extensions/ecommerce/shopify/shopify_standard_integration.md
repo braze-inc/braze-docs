@@ -22,7 +22,7 @@ If you’re using the older navigation, you can find **Technology Partners** und
 {% endalert %}
 
 {: start="2"}
-2. On the Shopify partner page, select **Begin Setup** to start the integration process.<br><br>![Shopify integration page with button to begin setup.][1] 
+2. On the Shopify partner page, select **Begin setup** to start the integration process.<br><br>![Shopify integration page with button to begin setup.][1] 
 3. In the Shopify app store, install the Braze application.<br><br>![The Braze app store page with a button for logging in to install the application.][5] 
 
 {% alert note %}
@@ -30,7 +30,10 @@ If your Shopify account is associated with more than one store, you can change t
 {% endalert %}
 
 {: start="4"}
-4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace, then configure your integration.<br><br>![A window asking you to confirm that you’re in the right workspace.][2]
+4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace.<br><br>![A window asking you to confirm that you’re in the right workspace.][2]
+
+{: start="5"}
+5. Configure your integration.<br><br>![Integration settings page with a button to configure your integration.][12]
 
 ## Step 2: Enable Braze Web SDKs
 
@@ -90,7 +93,7 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
 | Custom events | Custom attributes |
 | --- | --- |
 | {::nomarkdown}<ul><li>Using a custom discount code</li><li>Interacting with a personalized product recommendation</li></ul>{:/} | {::nomarkdown}<ul><li>Favorite brands or products</li><li>Preferred shopping categories</li><li>Membership or loyalty status</li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Tracking custom data helps you gain deeper insights into user behavior and personalize their experience even further. To implement custom events, you’ll need to edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
 
@@ -112,13 +115,13 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 ## Step 4: Configure how you manage users
 
-If you leverage the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. 
+If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
 ![“Collect subscribers” section to select if you want to collect email or SMS subscribers or both.][10]
 
 ## Step 5: Sync products (optional)
 
-You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product sync]({{site.baseurl}}/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
+You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
 
 ![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][11]{: style="max-width:70%;"}
 
@@ -150,3 +153,4 @@ Confirm you can view your integration settings, the status of initial data sync,
 [9]: {% image_buster /assets/img/Shopify/choose_account.png %}
 [10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
 [11]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}
+[12]: {% image_buster /assets/img/Shopify/configure_settings.png %}

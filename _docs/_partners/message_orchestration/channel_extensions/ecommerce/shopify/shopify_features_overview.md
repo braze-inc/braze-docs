@@ -252,100 +252,139 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% subtab Product viewed %}
 ```json
 {
-product_id: "12345",
- 	product_name: "product",
- 	variant_id: "123",
- 	image_url: "www.image-url.com",
- 	product_url: "mystorefront.myshopify.com/product",
- 	price: 10,
-currency: "USD",
-source: "mystorefront.myshopify.com",
-metadata:{
-   		sku: "sku"
- 	}
+	name: "ecommerce.product_viewed",
+	properties: {
+    product_id: "12345",
+    product_name: "product",
+    variant_id: "123",
+    image_url: "www.image-url.com",
+    product_url: "mystorefront.myshopify.com/product",
+    price: 10,
+    currency: "USD",
+    source: "mystorefront.myshopify.com",
+    metadata:{
+        sku: "sku"
+    	}
+   }
 }
 ```
 {% endsubtab %}
 {% subtab Cart updated %}
 ```json
 {
- 	"cart_id": "Z2NwLXVzLWVhc3QxOjAxSjk3UFg4RlFZMjVTVkRHRlc1RlI3SlRY",
- 	"currency": "USD",
- 	"total_value": 2000000,
- 	"products": [
-   		{
-     			"product_id": "8266836345064",
-     			"product_name": "PANTS!!!",
-     			"variant_id": "44610569208040",
-     			"image_url": "https://cdn.shopify.com/s/files/1/0604/4211/6328/files/1200px-Trousers-colourisolated.jpg?v=1689256168",
-     			"product_url": "https://test-store.myshopify.com/products/pants?variant=44610569208040",
-     			"quantity": 2,
-     			"price": 1000000,
-     			"metadata":{
-       			"sku": "007",
-     			},
-   		}
- 	],
- 	"source": "https://test-store.myshopify.com",
- 	"metadata": {},
+	name: "ecommerce.cart_updated",
+	properties: {
+ 		"cart_id": "Z2NwLXVzLWVhc3QxOjAxSjk3UFg4RlFZMjVTVkRHRlc1RlI3SlRY",
+ 		"currency": "USD",
+ 		"total_value": 2000000,
+ 		"products": [
+   			{
+     				"product_id": "8266836345064",
+     				"product_name": "PANTS!!!",
+     				"variant_id": "44610569208040",
+     				"image_url": "https://cdn.shopify.com/s/files/1/0604/4211/6328/files/1200px-Trousers-colourisolated.jpg?v=1689256168",
+     				"product_url": "https://test-store.myshopify.com/products/pants?variant=44610569208040",
+     				"quantity": 2,
+     				"price": 1000000,
+     				"metadata":{
+       					"sku": "007",
+     				},
+   			}
+ 		],
+ 		"source": "https://test-store.myshopify.com",
+ 		"metadata": {},
+}
 }
 ```
 {% endsubtab %}
 {% subtab Checkout started %}
 ```json
 {
- 	"cart_id" => "eeafa272cebfd4b22385bc4b645e762c",
- 	"total_value" => 421.88,
- 	"currency" => "USD",
- 	"products" => [
-   		{
-     			"product_id" => "632910392",
-     			"product_name" => "IPod Nano - 8GB",
-     			"variant_id" => "808950810",
-     			"quantity" => 1,
-     			"price" => 199.0,
-     			"metadata" => {
-       			"sku" => "IPOD2008PINK",
-     			},
-   		},
- 	],
- 	"source" => "braze-mock-storefront.myshopify.com",
- 	"checkout_id" => "123123123",
- 	"metadata" => {
-   		"checkout_url" => "https://checkout.local/548380009/checkouts/123123123/recover?key=example-secret-token",
- 	},
+	name: "ecommerce.checkout_started",
+	time: "2022-05-23T13:52:38-04:00",
+	properties: {
+ 		"cart_id": "eeafa272cebfd4b22385bc4b645e762c",
+ 		"total_value": 421.88,
+ 		"currency": "USD",
+ 		"products": [
+   			{
+     				"product_id": "632910392",
+     				"product_name": "IPod Nano - 8GB",
+     				"variant_id": "808950810",
+     				"quantity": 1,
+     				"price": 199.0,
+     				"metadata": {
+       				"sku": "IPOD2008PINK",
+     				},
+   			},
+ 		],
+ 		"source": "braze-mock-storefront.myshopify.com",
+ 		"checkout_id": "123123123",
+ 		"metadata": {
+ 	  		"checkout_url": "https://checkout.local/548380009/checkouts/123123123/recover?key=example-secret-token",
+ 		},
+}
 }
 ```
 {% endsubtab %}
 {% subtab Order placed %}
 ```json
 {
- 	"cart_id" => "95b935662d1aca07b656fa1be33f5a0a",
- 	"total_value" => 403.0,
- 	"currency" => "USD",
- 	"products" => [
-   		{
-     			"product_id" => "632910392",
-     			"product_name" => "IPodNano-8GB",
-     			"variant_id" => "808950810",
-     			"quantity" => 1,
-     			"price" => 199.0,
-     			"metadata" => {
-       			"sku" => "IPOD2008PINK",
-     			},
-   		},
- 	],
- 	"source" => "braze-mock-storefront.myshopify.com",
- 	"order_id" => "820982911946154508",
- 	"total_discounts" => 5.0,
- 	"discounts" => [],
- 	"metadata" => {
-   		"order_status_url" => "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
-   		"order_number" => 1234,
-   		"tags" => ["heavy", "heavy2"],
-   		"referring_site" => "https://www.google.com",
-   		"payment_gateway_names" => ["visa", "bogus"],
- 	},
+	name: "ecommerce.order_placed",
+	time: "2022-05-23T13:52:38-04:00",
+	properties: {{
+	name: "ecommerce.checkout_started",
+	time: "2022-05-23T13:52:38-04:00",
+	properties: {
+ 		"cart_id": "eeafa272cebfd4b22385bc4b645e762c",
+ 		"total_value": 421.88,
+ 		"currency": "USD",
+ 		"products": [
+   			{
+     				"product_id": "632910392",
+     				"product_name": "IPod Nano - 8GB",
+     				"variant_id": "808950810",
+     				"quantity": 1,
+     				"price": 199.0,
+     				"metadata": {
+       				"sku": "IPOD2008PINK",
+     				},
+   			},
+ 		],
+ 		"source": "braze-mock-storefront.myshopify.com",
+ 		"checkout_id": "123123123",
+ 		"metadata": {
+ 	  		"checkout_url": "https://checkout.local/548380009/checkouts/123123123/recover?key=example-secret-token",
+ 		},
+}
+}
+ 		"cart_id": "95b935662d1aca07b656fa1be33f5a0a",
+ 		"total_value": 403.0,
+ 		"currency": "USD",
+ 		"products": [
+   			{
+     				"product_id": "632910392",
+     				"product_name": "IPodNano-8GB",
+     				"variant_id": "808950810",
+     				"quantity": 1,
+     				"price": 199.0,
+     				"metadata": {
+       				"sku": "IPOD2008PINK",
+     				},
+   			},
+ 		],
+ 		"source": "braze-mock-storefront.myshopify.com",
+ 		"order_id": "820982911946154508",
+ 		"total_discounts": 5.0,
+ 		"discounts": [],
+ 		"metadata": {
+   			"order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
+   			"order_number": 1234,
+   			"tags": ["heavy", "heavy2"],
+   			"referring_site": "https://www.google.com",
+   			"payment_gateway_names": ["visa", "bogus"],
+ 		},
+}
 }
 ```
 {% endsubtab %}
@@ -425,50 +464,78 @@ metadata:{
 ```
 {% endsubtab %}
 {% subtab Partially fulfilled order %}
-**Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
-
-{% raw %}
-| Variable | Liquid Templating |
-| --- | --- |
-| Order ID | `{{event_properties.${order_id}}}` |
-| Total Price | `{{event_properties.${total_price}}}` |
-| Total Discounts | `{{event_properties.${total_discounts}}}` |
-| Confirmed Status | `{{event_properties.${confirmed}}}` |
-| Order Status URL | `{{event_properties.${order_status_url}}}` |
-| Order Number | `{{event_properties.${order_number}}}` |
-| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
-| Closed Timestamp | `{{event_properties.${closed_at}}}` |
-| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
-| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
-| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
-| Item Title | `{{event_properties.${line_items}[0].title}}` |
-| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
-| Item Name | `{{event_properties.${line_items}[0].name}}` |
-| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
-| Item Price | `{{event_properties.${line_items}[0].price}}` |
-| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
-| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
-| Fulfillment Status | `{{event_properties.${fulfillment_status}}}` |
-| Fulfillment Shipment Status | `{{event_properties.${fulfillments}[0].shipment_status}}` |
-| Fulfillment Status | `{{event_properties.${fulfillments}[0].status}}` |
-| Fulfillment Tracking Company | `{{event_properties.${fulfillments}[0].tracking_company}}` |
-| Fulfillment Tracking Number | `{{event_properties.${fulfillments}[0].tracking_number}}` |
-| Fulfillment Tracking Numbers | `{{event_properties.${fulfillments}[0].tracking_numbers}}` |
-| Fulfillment Tracking URL | `{{event_properties.${fulfillments}[0].tracking_url}}` |
-| Fulfillment Tracking URLs | `{{event_properties.${fulfillments}[0].tracking_urls}}` |
-| Fulfillment Status | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
-| Fulfillment Name | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
-| Fulfillment Price | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
-| Fulfillment Product ID | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
-| Fulfillment Quantity | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
-| Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
-| Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
-| Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
-| Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
-| Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
-{% endraw %}
+```json
+{
+ "name": "shopify_partially_fulfilled_order",
+ "time": "2022-05-23T14:43:34-04:00",
+ "properties": {
+   "order_id": 4444668657855,
+   "line_items": [
+     {
+       "quantity": 1,
+       "product_id": 6143032066239,
+       "sku": null,
+       "title": "Dark Denim Top",
+       "variant_id": 40094740549876,
+       "variant_title": "",
+       "vendor": "partners-demo",
+       "name": "Dark Denim Top",
+       "properties": [],
+       "price": "60.00",
+       "fulfillment_status": "fulfilled"
+     }
+   ],
+   "shipping": [
+     {
+       "title": "Standard",
+       "price": "0.00"
+     }
+   ],
+   "total_price": "130.66",
+   "confirmed": true,
+   "total_discounts": "0.00",
+   "discount_codes": [],
+   "order_number": 1093,
+   "order_status_url": "https://test-store.myshopify.com/",
+   "cancelled_at": null,
+   "tags": "",
+   "closed_at": null,
+   "fulfillment_status": "partial",
+   "fulfillments": [
+     {
+       "shipment_status": null,
+       "status": "success",
+       "tracking_company": "Other",
+       "tracking_number": "123",
+       "tracking_numbers": [
+         "123"
+       ],
+       "tracking_url": "https://braze.com",
+       "tracking_urls": [
+         "https://braze.com"
+       ],
+       "line_items": [
+         {
+           "fulfillment_status": "fulfilled",
+           "name": "Dark Denim Top",
+           "price": "60.00",
+           "product_id": 6143032066239,
+           "properties": [],
+           "quantity": 1,
+           "requires_shipping": true,
+           "sku": null,
+           "title": "Dark Denim Top",
+           "variant_id": 40094740549876,
+           "variant_title": "",
+           "vendor": "partners-demo"
+         }
+       ]
+     }
+   ]
+ },
+ "braze_id": "abc123abc123"
+}
+```
 {% endsubtab %}
 {% subtab Paid order %}
 ```json
@@ -586,7 +653,6 @@ metadata:{
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_tags`  | Tags that the shop owner has attached to the customer, formatted as a string of comma-separated values. A customer can have up to 250 tags. Each tag can have up to 255 characters. |
 | `shopify_total_spent` | The total amount of money that the customer has spent across their order history. |
 | `shopify_order_count` | The number of orders associated with this customer. Test and archived orders aren't counted. |
 | `shopify_last_order_id` | The ID of the customer's last order. |
@@ -621,6 +687,16 @@ After selecting your custom attribute, input a default value and copy the Liquid
       "shopify_province": "null"
     }
   ]
+}
+```
+{% endsubtab %}
+{% subtab Account login %}
+```json
+{
+	name: "shopify_account_login",
+	properties: {
+	source: "braze-mock-storefront.myshopify.com"
+  }
 }
 ```
 {% endsubtab %}
