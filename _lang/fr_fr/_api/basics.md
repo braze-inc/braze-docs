@@ -399,7 +399,7 @@ Cette bibliothèque cliente est actuellement en version bêta. Voulez-vous nous 
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-\[support]: {{site.baseurl}}/braze_support/
+[support]: {{site.baseurl}}/braze_support/
 [28]: {% image_buster /assets/img_archive/create-new-key.png %}
 [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}
