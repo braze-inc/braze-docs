@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment.
 
-The Zeotap and Braze integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to map user data to Braze user accounts. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
+The Zeotap and Braze integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
 
 {% alert important %}
 The custom HTTPs connector is currently in beta. If you're interested in setting up this integration, reach out to your customer success manager.
@@ -48,6 +48,10 @@ The custom HTTPs connector is currently in beta. If you're interested in setting
 - The Write Key as the **Bearer Token**<br><br>![Sections to input integration details and credentials.][4]<br><br>
 5. Select the message engagment events that you want to send to Zeotap.<br><br>![The "General Settings" tab with a section to select message engagement events.][5]
 6. Select **Launch Current** to save the changes and start sending events to Zeotap.
+
+{% alert important %}
+The Currents connector doesn't support anonymous users (users without an `external_id`).
+{% endalert %}
 
 [1]: {% image_buster /assets/img/zeotap/cec.png %}
 [2]: {% image_buster /assets/img/zeotap/implementation_details.png %}
