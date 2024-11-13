@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/symphony/
   image: /assets/img/braze_icons/building-01.svg
 - name: Zeotap for Currents
-  link:  /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap_for_currents/
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
 
