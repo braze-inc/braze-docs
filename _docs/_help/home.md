@@ -44,8 +44,6 @@ popular_topic_list:
     link: /docs/help/help_articles/api/delete_user/
   - name: Changing Custom Data Type
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: In-App Messages Not Displaying
-    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
