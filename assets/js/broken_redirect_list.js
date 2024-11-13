@@ -805,6 +805,7 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customiz
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customize/video/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/generations/'] = '/docs/iam_generations/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/';
 validurls['/docs/user_guide/message_building_by_channel/email/css_inline/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/css_inline/';
