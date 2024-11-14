@@ -51,7 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `content` | Requis | Chaîne de caractères | HTML ou contenu texte dans le bloc de contenu. |
 | `state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
 | `tags` | Facultatif | Tableau de chaînes de caractères | Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```json
@@ -102,7 +102,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `Tags must be an array` | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. | |
 | `All tags must be strings` | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | `Some tags could not be found` | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

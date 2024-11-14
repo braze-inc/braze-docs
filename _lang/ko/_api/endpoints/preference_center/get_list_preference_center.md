@@ -30,7 +30,7 @@ description: "이 문서에서는 목록 환경설정 센터 Braze 엔드포인�
 
 이 엔드포인트에는 경로 또는 요청 매개변수가 없습니다.
 
-## 예시 요청
+## 요청 예시
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/list \

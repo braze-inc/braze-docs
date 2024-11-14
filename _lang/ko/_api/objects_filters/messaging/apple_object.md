@@ -77,7 +77,7 @@ iOS 푸시 액션 버튼을 사용하려면 Apple 푸시 개체에 `category` �
 | `ab_cat_confirm_cancel` | 확인     | `ab_pb_confirm`            | OPEN_APP, URI 또는 DEEP_LINK |
 | `ab_cat_confirm_cancel` | 취소      | `ab_pb_cancel`             | 닫기                   |
 | `ab_cat_more`           | 더 보기        | `ab_pb_more`               | OPEN_APP, URI 또는 DEEP_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {

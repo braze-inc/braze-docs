@@ -307,17 +307,37 @@ $(document).ready(function() {
     }
   });
 
-  // set list role attribute for screenreader
-  var list_tabs = $('ul');
-  list_tabs.each(function(k,v){
+  // set tab list attribute for screenreader
+  var list_tabs = $('ul.ab-nav')
+  list_tabs.each(function(i){
     var $this = $(this);
-    $this.attr('role','tablist');
+    if (!$this.attr('role')) {
+      $this.attr('role','tablist');
+    }
   });
-  var list_tab = $('ul > li');
-  list_tab.each(function(k,v){
+  var list_tab = list_tabs.children('li')
+  list_tab.each(function(i){
     var $this = $(this);
-    $this.attr('role','tab');
+    if (!$this.attr('role')) {
+      $this.attr('role','tab');
+    }
   });
+  // set list
+  var list_tabs = $('ul').not('.ab-nav');
+  list_tabs.each(function(i){
+    var $this = $(this);
+    if (!$this.attr('role')) {
+      $this.attr('role','list');
+    }
+  });
+  var list_tab = list_tabs.children('li')
+  list_tab.each(function(i){
+    var $this = $(this);
+    if (!$this.attr('role')) {
+      $this.attr('role','listitem');
+    }
+  });
+
 
   // Footer navigation
   var parent_top = 'nav_top';

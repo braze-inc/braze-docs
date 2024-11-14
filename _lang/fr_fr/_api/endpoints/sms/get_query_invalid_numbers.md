@@ -35,7 +35,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
 | `phone_numbers` | Facultatif <br>(voir la note) | Tableau de chaînes de caractères au format e.164  | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
 | `reason` | Facultatif <br>(voir la note) | Chaîne de caractères | Les valeurs disponibles sont "provider_error" (l'erreur du fournisseur indique que le téléphone ne peut pas recevoir de SMS) ou "deactivated" (le numéro de téléphone a été désactivé). En cas d'omission, tous les motifs sont renvoyés. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Vous devez fournir une `start_date` et une `end_date`, OU un `phone_numbers`. Si vous fournissez les trois, une `start_date`, une `end_date`, et un `phone_numbers`, nous donnerons la priorité aux numéros de téléphone communiqués et ignorerons la plage de dates.

@@ -62,7 +62,7 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 | Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Valeur booléenne | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
 | Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Mises en garde dans la comparaison des attributs
 
@@ -70,7 +70,7 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 | --- | --- |
 | `value` | Le `value` n'est pas nécessaire lors de l'utilisation des comparaisons `exists` ou `does_not_exist`. `value` doit être une chaîne datetime ISO 8601 lors de l'utilisation des comparaisons `before` et `after`. |
 |`matches_regex` | Lors de l’utilisation de la comparaison `matches_regex`, la valeur transmise doit être une chaîne de caractères. Pour en savoir plus sur l'utilisation des expressions régulières avec Braze, consultez [Expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) et [Types de données d'attributs personnalisés]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Exemple d’attribut personnalisé
 
