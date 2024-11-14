@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
 |`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
 |`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Le nom du centre de préférences ne peut pas être modifié après sa création.
@@ -74,7 +74,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 | --------- | ---------|
 |`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed"). |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état abonné du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Saisies de formulaire et action
 
@@ -83,7 +83,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 |`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est abonné avec des données de sélection pour l'état d'abonnement global à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu’un élément de saisie de formulaire particulier correspond à un groupe d’abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier. |
 |`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
@@ -102,7 +102,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 ```
 {% endraw %}
 
-### HTML avec entrées de formulaire 
+### HTML avec entrées de formulaire
 
 {% raw %}
 ```
@@ -179,7 +179,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
       "
     >
       <div class="content" style="margin-left: 20px; margin-right: 20px">
-        
+
         <div>
           <h1
             style="color: #3accdd; font-size: 27px; font-weight: 400; margin-bottom: 40px; margin-top: 0"
@@ -205,7 +205,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 1
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -215,7 +215,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 2
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -225,7 +225,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 3
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 </div>

@@ -33,7 +33,7 @@ Nous appliquons la limitation du débit de 1 000 requêtes par minute à cet e
 <!---/users/track-->
 
 {% elsif include.endpoint == "suivi des utilisateurs" %}
-Nous appliquons une limite de vitesse de base de 50 000 demandes par minute à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
+À partir du 28 octobre 2024, nous appliquons une limite de vitesse de base de 3 000 requêtes par trois secondes à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
 
 Des limites différentes s'appliquent aux clients qui ont acheté le service **Utilisateurs actifs par mois - CY 24-25**. Pour plus de détails sur ces limites, voir [Utilisateurs actifs par mois - Limites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
 
