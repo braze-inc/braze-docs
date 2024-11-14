@@ -61,8 +61,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | 매개변수             | 필수 | 데이터 유형                           | 설명                                                                                                                                                                 |
 | --------------------- | -------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `aliases_to_identify` | 필수 | 객체를 식별하기 위한 별칭 배열 | [객체]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 및 [사용자 별칭 객체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) [식별하려면 별칭을]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 참조하세요. |
-| `merge_behavior`      | 선택 사항 | 문자열                              | `none` 또는 `merge` 중 하나가 예상됩니다.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `merge_behavior`      | 선택 사항 | 문자열                              | `merge` 또는  중 하나가 예상됩니다.                                                                                                                                       |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### 병합_행동 필드 {#merge}
 

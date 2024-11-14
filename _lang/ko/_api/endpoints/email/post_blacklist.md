@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | -----------|----------| --------|------- |
 | `email` | 필수 | 문자열 또는 배열 | 블랙리스트에 추가할 이메일 주소를 문자열로 지정하거나 최대 50개의 이메일 주소 배열을 블랙리스트에 추가합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```
@@ -62,5 +62,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 ```
 
 {% endapi %}
-
-
