@@ -32,12 +32,12 @@ Create an [API triggered campaign](https://www.braze.com/docs/user_guide/engagem
 
 ### Step 2: Create your segment in Braze
 
-Next, create a segment in Braze and share the segment ID attached to the campaign with Notify. 
+Next, create the segment of users that they would like to target with the campaign created in [Step 1](#step-1-create-your-campaign). Then, share the segment ID with Notify.
 
 ### Step 3: Fetch your segment
 
-Then, use the `/users/export/segment` endpoint to fetch the list of contacts in the segment attached to the campaign and share this list with Notify.
+Then, Notify will export the users in the segment attached to the campaign.
 
 ### Step 4: Notify triggers the campaign
 
-Using the `/campaigns/trigger/send` endpoint, Notify’s AI triggers the Braze campaign to send to users at the time they deem most likely to engage.
+Using the `/campaigns/trigger/send` endpoint, Notify’s AI triggers the Braze campaign created in [Step 1](#step-1-create-your-campaign) to send to users at the time they deem most likely to engage.
