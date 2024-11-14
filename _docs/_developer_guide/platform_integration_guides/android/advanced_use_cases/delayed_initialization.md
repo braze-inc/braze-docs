@@ -11,9 +11,9 @@ description: "This article covers how to implement delayed initialization on the
 
 # Delayed initialization for the Braze Android SDK
 
-> Learn how to enable delayed initialization and opt in to preserve push notification analytics when it is enabled. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
+> Learn how to enable delayed initialization and opt in to preserve push notification analytics when it is enabled. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server or waiting for user consent.
 
-While delayed initialization is enabled, all network connections to be canceled, and the Braze SDK will not pass any data to Braze servers.
+While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass any data to Braze servers.
 
 {% alert important %}
 Delayed initialization is available starting in Android SDK version xxxx.
@@ -46,30 +46,9 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
-## Initializing After Delay
-
-To initialize the SDK once the delay period is over, use the [`Braze.disableDelayedInitialization()`](set link after release) method:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-Braze.disableDelayedInitialization(context);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-Braze.disableDelayedInitialization(context)
-```
-
-{% endtab %}
-{% endtabs %}
-
 ## Setting Delayed Initialization Push Analytics Behavior
 
-When delayed initialization is enabled, you have to option to queue or drop push analytics. If push analytics are queued, these events will be logged once delayed initialization is disabled. 
+When delayed initialization is enabled, you have the option to queue or drop push analytics. If push analytics are queued, these events will be logged once delayed initialization is disabled. 
 
 By default, push analytics are queued when delayed initialization is enabled. In order to drop push analytics, update your `braze.xml` file to include `com_braze_delayed_initialization_analytics_behavior` as follows: 
 
@@ -105,6 +84,27 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 
 // Queue push analytics
 Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE)
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Initializing After Delay
+
+To initialize the SDK once the delay period is over, use the [`Braze.disableDelayedInitialization()`](set link after release) method:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.disableDelayedInitialization(context);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.disableDelayedInitialization(context)
 ```
 
 {% endtab %}
