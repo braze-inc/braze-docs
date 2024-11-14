@@ -329,7 +329,7 @@ This feature is not currently supported on Roku.
 
 Braze automatically handles all impression logging when using the SDK methods to insert Banner Cards, so you don't need to worry about tracking impressions manually.
 
-If you need to parse and render the HTML in a custom view, [contact us](mailto:banners-feedback@braze.com)._ 
+If you need to parse and render the HTML in a custom view, [contact us](mailto:banners-feedback@braze.com).
 
 {% details If you emailed us and confirmed you need to manually track impressions... %}
 
