@@ -27,8 +27,12 @@
 ### My in-app message took a lot of time to appear
 
 1. If you are serving large image or video files from your CDN to an HTML based in-app message, verify that your files are optimized to be as small as possible and that your CDN is performant.
-2. Depending on circumstances, in-app messages will either download or load relevant images from disk prior to display. If you are on a slow network connection or a very low performance devices, this process may take time. Ensure that your images are optimized to be as small as possible.
-3. Verify whether you have configured a `delay` for your in-app message on the dashboard.
+2. Verify whether you have configured a `delay` for your in-app message on the dashboard.
+{% if include.sdk == "iOS" %}
+3. Depending on circumstances, in-app messages will either download or load relevant images from disk prior to display. If you are on a slow network connection or a very low performance devices, this process may take time. Ensure that your images are optimized to be as small as possible.
+{% elsif include.sdk == "Android" %}
+3. Depending on circumstances, in-app messages will either download or load relevant images from disk prior to display. If you are on a slow network connection or a very low performance devices, this process may take time. Ensure that your images are optimized to be as small as possible.
+{% endif %}
 
 For more in-depth discussion of these scenarios, visit [the advanced troubleshooting section](#troubleshooting-in-app-advanced).
 
