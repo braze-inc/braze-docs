@@ -331,7 +331,7 @@ You don't need to worry about tracking impressions manually because Braze automa
 
 If you need to parse and render the HTML in a custom view, [contact us](mailto:banners-feedback@braze.com).
 
-{% details If you emailed us and confirmed you need to manually track impressions... %}
+{% details More information for manually tracking impressions %}
 
 {% alert important %}
 Customization for your integration is likely unnecessary, so consider the following step carefully.
