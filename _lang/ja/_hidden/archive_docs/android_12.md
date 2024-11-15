@@ -17,7 +17,7 @@ description: "このリファレンス記事では、Android 12 SDK の更新に
 
 Android 12 の完全な移行ガイドについては、[Android 開発者のドキュメント](https://developer.android.com/about/versions/12)を参照してください。
 
-## Braze SDKの互換性
+## Braze SDK適合性
 
 Android 12 を対象とする場合は、[Braze Android SDK v 13.1.2以降][1]を使用する必要があります。まだ Android 12 を対象にしていない場合でも、アップグレードをお勧めします。
 
