@@ -18,7 +18,7 @@ description: "この記事では、更新されたEメール用HTMLエディタ�
 更新されたHTMLメールエディターで**リンク管理**タブにアクセスするには、[リンクエイリアスを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)オンにしておく必要がある。リンクエイリアスを有効にするには、アカウントマネージャーに連絡する。
 {% endalert %}
 
-\[**古い HTML エディターに切り替える**] をクリックして古い HTML エディターに切り替えることはできますが、古い HTML エディターは2024年初頭に削除されることに注意してください。
+[**古い HTML エディターに切り替える**] をクリックして古い HTML エディターに切り替えることはできますが、古い HTML エディターは2024年初頭に削除されることに注意してください。
 
 詳細については、専用の[ HTMLエディタでメール]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor) を参照してください。
 
