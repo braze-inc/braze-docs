@@ -18,7 +18,7 @@ You can use the BrazeAI<sup>TM</sup> Liquid Assistant when creating:
 - SMS messages
 - Push notifications
 - HTML email messages
-    - The assistant works on email messages and not templates, and works best on email messages that are already built.
+    - The assistant works on email messages and not templates and works best on email messages that are already built.
 - Canvases
 
 ## How it works
