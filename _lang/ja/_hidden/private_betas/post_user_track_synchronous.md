@@ -10,7 +10,7 @@ description: "この記事では、「ユーザー同期追跡」Braze エンド
 ---
 {% api %}
 # ユーザーを追跡する（同期）
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}
 
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `attributes` | オプション | つの属性オブジェクト | 「[ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)」を参照 |
 | `events` | オプション | イベントオブジェクト | [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)を参照してください |
 | `purchases` | オプション | 1つの購入オブジェクト | [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)を参照してください |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 応答
 
