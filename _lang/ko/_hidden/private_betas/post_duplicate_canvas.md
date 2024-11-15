@@ -19,7 +19,7 @@ description: "이 문서에서는 캔버스 복제 엔드포인트에 대한 자
 API를 통한 캔버스 복제는 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
-## 전제 조건
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `canvas.duplicate` 권한으로 API 키를 생성해야 합니다.
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`name`| 필수 | 문자열 | 결과 캔버스의 이름입니다. |
 |`description`| 선택 사항 | 문자열 | 결과 캔버스에 대한 설명 필드입니다. |
 |`tag_names` | 선택 사항 | 문자열 | 결과 캔버스에 대한 태그입니다. 기존 태그여야 합니다. 요청에 새 태그를 추가하면 원래 캔버스에 있던 모든 태그를 덮어쓰게 됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 응답
 
