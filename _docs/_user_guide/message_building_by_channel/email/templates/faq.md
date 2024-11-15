@@ -27,7 +27,7 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 There is a redirection option for the unsubscribe page.
 
-You could change the unsubscribe link in the custom footer from {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} to a link to your own website with a query parameter that includes the user ID. For example, something like: 
+You could change the unsubscribe link in the custom footer from {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} to a link to your own website with a query parameter that includes the user ID. An example is: 
 {% raw %} 
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
