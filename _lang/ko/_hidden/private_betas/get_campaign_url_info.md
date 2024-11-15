@@ -1,5 +1,5 @@
 ---
-nav_title: "가져오기: 캠페인을 위한 링크 별칭 목록"
+nav_title: "GET: 캠페인을 위한 링크 별칭 목록"
 layout: api_page
 page_type: reference
 hidden: true
@@ -30,10 +30,10 @@ description: "이 문서에서는 목록 링크 별칭 Braze 엔드포인트에 
 |---|---|---|---|
 | `campaign_id`  | 필수 | 문자열 | [캠페인 API 식별자]({{site.baseurl}}/api/identifier_types/#campaign-api-identifier)을 참조하십시오.|
 | `message_variation_id `  |  필수 | 문자열 | 메시지 배리언트 API 식별자. 캠페인 세부 정보 페이지에서 캠페인에 대한 **API 식별자** 섹션 아래에서 이를 찾을 수 있습니다. |
-| `includes_link_id` | 선택 사항 | 문자열 | Braze에 의해 할당된 특정 링크 식별자 또는 `null`. 이것은 특정 `link_id`에 의해 결과를 필터하는 데 사용됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `includes_link_id` | 선택 사항 | 문자열 | Braze에서 할당한 특정 링크 식별자 또는 `null`. 이것은 특정 `link_id`에 의해 결과를 필터링하는 데 사용됩니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/url_info/details?campaign_id=4615a404-b2c2-421e-9a04-2233bb3ec4f9&message_variation_id=0ea708fe-36b4-43f7-9f5c-a0650ea2a7a0&includes_link_id=014tk4e0kg97' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --- | --- |
 | `Missing/Invalid Campaign ID` | 캠페인 API ID는 API 식별자여야 합니다. [캠페인 목록 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)를 사용하거나 대시보드에 로그인하여 이를 찾을 수 있습니다. |
 | `Missing/Invalid Message Variant ID` | 메시지 배리언트 API ID는 API 식별자여야 합니다. 대시보드에 로그인하거나 [캠페인 세부 정보 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)를 사용하여 이를 찾을 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}
