@@ -3,7 +3,7 @@
 ### My in-app message wasn't shown for one user
 
 1. Was the user in the segment at session start, when the SDK requests new in-app messages?
-2. Was the user eligible or re-eligible to receive the in-app message per campaign targeting rules? 
+2. Was the user eligible or re-eligible to receive the in-app message per campaign targeting rules?
 3. Was the user affected by a frequency cap?
 4. Was the user in a control group? Check whether your campaign is configured is configured for AB Testing.
 5. Was a different, higher priority in-app message displayed in place of the expected message?
