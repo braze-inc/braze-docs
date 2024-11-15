@@ -59,6 +59,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --- | --- |
 | `401: Unauthorized` | API キーには必要な権限がありません。API キーに`apps.get`の権限があることを確認してください。 |
 | `403: Forbidden` | この会社では機能フリッパーがオンになっていません。サポートが必要な場合は、カスタマーサクセスマネージャーに連絡してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
