@@ -68,7 +68,7 @@ Visiting the app store takes time on the part of your users. To maximize the lik
 
 ## Scheduling your campaigns
 
-When editing campaign schedules or audiences, note the following editing best practices:
+When editing campaign schedules or audiences, note the following best practices:
 
 - **One-time schedule campaigns:** You can edit the campaign up until the scheduled send time.
 - **Recurring scheduled Campaigns:** You can edit the campaign up until the scheduled send time.
