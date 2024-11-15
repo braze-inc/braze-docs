@@ -1,5 +1,5 @@
 ---
-nav_title: "가져오기: 캔버스에 대한 링크 별칭 나열"
+nav_title: "GET: 캔버스에 대한 링크 별칭 나열"
 layout: api_page
 page_type: reference
 hidden: true
@@ -22,7 +22,7 @@ description: "이 문서는 캔버스 엔드포인트에 대한 목록 링크 �
 
 > 이 엔드포인트를 사용하여 특정 이메일 캔버스 단계에서 설정된 링크 별칭을 나열합니다.
 
-{% apiref postman %} {% endapiref %}
+{% apiref postman %}  {% endapiref %}
 
 ## 요청 매개변수
 
@@ -33,7 +33,7 @@ description: "이 문서는 캔버스 엔드포인트에 대한 목록 링크 �
 | `includes_link_id` | 선택 사항 | 문자열 | Braze에서 할당한 특정 링크 식별자 또는 `null`. 이것은 특정 `link_id`에 의해 결과를 필터링하는 데 사용됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-## 예시 요청
+## 요청 예시
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/canvas/url_info/details?campaign_id=4615a404-b2c2-421e-9a04-2233bb3ec4f9&message_variation_id=0ea708fe-36b4-43f7-9f5c-a0650ea2a7a0&includes_link_id=014tk4e0kg97' \
@@ -68,6 +68,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --- | --- |
 | `Missing/Invalid Canvas ID` | 캔버스 API ID는 API 식별자여야 합니다. [캔버스 목록 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)를 사용하거나 대시보드에 로그인하여 찾을 수 있습니다. |
 | `Missing/Invalid Message Variant ID` | 메시지 배리언트 API ID는 API 식별자여야 합니다. 이것은 [캔버스 세부 정보 내보내기 엔드포인트]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)를 사용하거나 대시보드에 로그인하여 찾을 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
