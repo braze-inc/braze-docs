@@ -36,7 +36,7 @@ hidden: true
 | 文字列の最後 | `$` |
 | 単語境界 | `\n` |
 | 非単語境界 | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab メタ・シークエンス %}
 
@@ -75,7 +75,7 @@ hidden: true
 | 制御文字 Y | `\cY` |
 | バックスペース文字 | `[\b]` |
 | 任意の文字をリテラルにする | `\` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 一般トークン %}
 
@@ -85,7 +85,7 @@ hidden: true
 | キャリッジリターン | `\r` |
 | タブ | `\t` |
 | ヌル文字 | `\0` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 文字クラス修飾子 %}
@@ -107,7 +107,7 @@ hidden: true
 | 小文字 | `[:xdigit:]` |
 | 大文字 | `[:<:]` |
 | 単語文字 | `[:>:]` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab グループ定数 %}
 
@@ -164,7 +164,7 @@ hidden: true
 | 正規表現エンジン修飾子 | `(*LIMIT_RECURSION=d)` |
 | 正規表現エンジン修飾子 | `(*NO_AUTO_POSSESS)` |
 | 正規表現エンジン修飾子 | `(*NO_START_OPT)` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 量指定子 %}
 
@@ -179,7 +179,7 @@ hidden: true
 | 貪欲な量指定子 | `a*` |
 | 怠惰な量指定子 | `a*?` |
 | 所有量指定子 | `a*+` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab アンカー %}
 
@@ -193,7 +193,7 @@ hidden: true
 | 文字列の絶対終端 | `\z` |
 | 単語境界 | `\b` |
 | 非単語境界 | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
 {% tab フラグと修飾子 %}
@@ -210,7 +210,7 @@ hidden: true
 | 欲がない | `U` |
 | アンカー | `A` |
 | 重複グループ名 | `J` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 置換 %}
@@ -228,7 +228,7 @@ hidden: true
 | 大文字変換 | `\U` |
 | 小文字変換 | `\L` |
 | あらゆる変換を終了する | `\E` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
