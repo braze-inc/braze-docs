@@ -27,6 +27,19 @@ To edit and manage multi-language support, you must have the "Manage Multi-Langu
 
 For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/).
 
+## Considerations
+
+When setting up a locale, you can either select languages from the default user attributes or custom attributes. You can't select from both.
+
+You can select up to two custom attributes in a single locale, or up to two default user attribute languages. In both cases, the second attribute is optional.
+
+### Support and prioritization
+
+- Users that match a custom attribute locale get prioritized before users that match a default user attribute.
+- Custom attribute support is limited to string types and the `equals` comparison key.
+- If a custom attribute gets deleted by Support or the type gets changed, the user can no longer fall into that locale and will either go down the priority list of locales they fall under or receive default marketing translations.
+- If a locale is invalid (the custom attribute changed or is deleted), the error will appear on the **Multi-Language Support** page.
+
 ## Frequently asked questions
 
 #### How many locales can I add?
@@ -37,8 +50,5 @@ Translation files are stored at a campaign level, meaning each message variant m
 
 #### Does the locale name have to follow a specific pattern or format?
 No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
-
-#### Can I use custom attributes to define a locale?
-Not currently. Contact your account manager or leave [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) with more details on how you would define locales.
 
 [2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}
