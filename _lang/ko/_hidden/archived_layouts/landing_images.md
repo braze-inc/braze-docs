@@ -5,7 +5,7 @@ layout: dev_guide
 page_order: 1.1
 
 #Required
-description: "이것은 Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간단히 유지하세요."
+description: "Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간결하게 작성하세요."
 page_type: landing
 #Use if applicable
 
@@ -44,10 +44,10 @@ guide_top_text: "단일 섹션 랜딩 페이지는 섹션 내 페이지 간에 �
 
 guide_featured_title: "섹션"
 guide_featured_list:
-  - name: 예시 1
+  - name: 예제 1
     link: /docs/home/templates/landing_single/
     image: /assets/img/ISO.png
-  - name: 예시 2
+  - name: 예 2
     link: /docs/home/templates/landing_multiple/
     image: /assets/img/megaphone.png
   - name: 예제 3
