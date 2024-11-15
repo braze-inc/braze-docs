@@ -30,7 +30,7 @@ description: "이 문서에서는 동기식 트랙 사용자 Braze 엔드포인�
 
 예를 들어 동일한 사용자에 대해 짧은 시간 동안 연속적인 요청을 보내는 경우 비동기식 `/users/track` 엔드포인트를 사용하면 경합 조건이 가능하지만 `/users/track/sync` 엔드포인트를 사용하면 `2XX` 응답을 받은 후 각각 요청을 순차적으로 보낼 수 있습니다.
 
-## 전제 조건
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `users.track.sync` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `attributes` | 선택 사항 | 하나의 속성 개체 | [사용자 속성 개체]({{site.baseurl}}/api/objects_filters/user_attributes_object/) 보기 |
 | `events` | 선택 사항 | 하나의 이벤트 객체 | [이벤트 개체]({{site.baseurl}}/api/objects_filters/event_object/) 보기 |
 | `purchases` | 선택 사항 | 하나의 구매 개체 | [구매 개체]({{site.baseurl}}/api/objects_filters/purchase_object/) 보기 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 응답
 
