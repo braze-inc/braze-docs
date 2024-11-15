@@ -9,14 +9,14 @@ description: "この記事では、「キャンバスの複製」エンドポイ
 
 {% api %}
 # API を使用したキャンバスの複製
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 
 > このエンドポイントを使用して、キャンバスを複製します。この API エンドポイントは、[Braze ダッシュボードでのキャンバスの複製][1]に似ています。
 
 {% alert important %}
-API を介したキャンバスの複製は、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
+API を介したキャンバスの複製は、現在、早期アクセスの段階です。早期アクセスに参加したい場合は、Brazeのアカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
@@ -45,13 +45,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| required | string | [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-|`name`| required | string | 作成されるキャンバスの名前。 |
+|`canvas_id`| 必須 | string | [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`name`| 必須 | string | 作成されるキャンバスの名前。 |
 |`description`| オプション | string | 結果のキャンバスの記述フィールド。 |
 |`tag_names` | オプション | string | 作成されるキャンバスのタグ。これらは存在するタグs である必要があります。リクエストに新しいタグs を追加すると、元のキャンバスにあったすべてのタグs が上書きされます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 応答
 
