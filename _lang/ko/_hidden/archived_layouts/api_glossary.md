@@ -88,7 +88,7 @@ excerpt_separator: ""
 | `modified_before`  |  아니요 | ISO 8601의 문자열 | 지정된 시간 또는 그 이전에 업데이트된 템플릿만 검색합니다. |
 | `limit` | 아니요 | 양수 | 검색할 템플릿의 최대 개수, 제공하지 않으면 기본값은 100이며 허용되는 최대 값은 1000입니다. |
 | `offset`  |  아니요 | 양수 | 검색 기준에 맞는 나머지 템플릿을 반환하기 전에 건너뛸 템플릿의 수입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 {% endapi %}
@@ -140,7 +140,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `email_template_id`  | 예 | 문자열 | 이메일 템플릿의 API 식별자입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endapi %}
 
@@ -208,7 +208,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `email_template_id`  | 예 | 문자열 | 이메일 템플릿의 API 식별자입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endapi %}
 
@@ -265,7 +265,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 사용자 프로필 필드 | 데이터 유형 사양 |
 | ---| --- |
-| 국가 | (문자열) \[ISO-3166-1 알파-2 표준][17]에 따라 국가 코드를 Braze에 전달해야 합니다. |
+| 국가 | (문자열) [ISO-3166-1 알파-2 표준][17]에 따라 국가 코드를 Braze에 전달해야 합니다. |
 | current_location | (객체) {"longitude": -73.991443, "latitude": 40.753824} 형식 |
 | date_of_first_session | (사용자가 앱을 처음 사용한 날짜) ISO 8601 형식 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열입니다. |
 | date_of_last_session | (사용자가 마지막으로 앱을 사용한 날짜) ISO 8601 형식 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열입니다. |
@@ -278,7 +278,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 성별 | (문자열) "M", "F", "O"(기타), "N"(해당 없음), "P"(말하지 않음) 또는 nil(알 수 없음)입니다. |
 | home_city | (문자열) |
 | image_url | (문자열) 사용자 프로필과 연결할 이미지의 URL입니다. |
-| 언어 | (문자열) \[ISO-639-1 표준][24]의 언어를 Braze에 전달해야 합니다. <br>[허용되는 언어 목록][1]|
+| 언어 | (문자열) [ISO-639-1 표준][24]의 언어를 Braze에 전달해야 합니다. <br>[허용되는 언어 목록][1]|
 | last_name | (문자열) |
 |marked_email_as_spam_at| (문자열) 사용자의 이메일이 스팸으로 표시된 날짜입니다. ISO 8601 형식 또는 yyyy-MM-dd'T'HH:mm:ss:SSSZ 형식으로 표시됩니다.|
 | 전화 | (문자열) |
@@ -286,7 +286,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | push_tokens | `app_id` 및 `token` 문자열이 포함된 객체 배열입니다. 선택적으로 이 토큰이 연결된 기기에 `device_id`를 제공할 수 있습니다(예: `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`). `device_id`를 제공하지 않으면 무작위로 생성됩니다. |
 | time_zone | (문자열) IANA 표준 시간대 데이터베이스][26]의 표준 시간대 이름(예: "미국/뉴욕" 또는 "동부 표준시(미국 및 캐나다)"). 유효한 표준 시간대 값만 설정됩니다. |
 | 트위터 | `id`(정수), `screen_name`(문자열, X(옛 트위터) 핸들), `followers_count`(정수), `friends_count`(정수), `statuses_count`(정수) 중 하나를 포함하는 해시입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
 
