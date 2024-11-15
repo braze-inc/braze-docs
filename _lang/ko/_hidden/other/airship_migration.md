@@ -14,7 +14,7 @@ page_type: reference
 Braze는 iOS용 Apple의 디바이스 토큰을 사용합니다.
 
 | **Braze 퍼스펙티브:**<br>Airship에서 Braze로 마이그레이션하는 과정(100% Braze로의 하드 컷오버 또는 50% Airship 50% Braze와 같은 세분화된 전환 등)에서 푸시 알림 등을 통해 고객이 사용자와 지속적으로 소통할 수 있도록 보장합니다. |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 #### 푸시 토큰 마이그레이션
 
@@ -44,7 +44,7 @@ Braze를 사용하면 사용자는 여러 개의 푸시 토큰(각 디바이스�
 Braze에는 푸시용 채널이 별도로 필요합니다(iOS용, Android용).
 
 | **Braze 퍼스펙티브:**<br>저희는 고객이 양보하지 않고도 두 가지 장점을 모두 누릴 수 있도록 지원합니다. 개별 채널을 최대한 활용할 수 있으면 마케터에게 더 많은 유연성을 제공하고 사용자 경험을 개선할 수 있습니다. 이를 통해 각 OS의 최신 기능을 채택할 수 있습니다. 예를 들어, Android는 iOS보다 먼저 리치 알림을 지원했습니다. |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 Braze는 Braze SDK를 설치한 상태에서 애플리케이션을 업데이트하지 않은 사용자에게 푸시 알림을 보낼 수 있습니다. Braze에 유효한 푸시 토큰이 있으므로 나머지는 APN이 처리하여 Braze SDK 없이도 푸시 알림을 전송할 수 있습니다. **Braze SDK가 없는 빌드에서는 푸시 메시지 분석을 사용할 수 없다는 점**에 유의해야 합니다.
 
@@ -59,7 +59,7 @@ Airship의 메시지 센터 캠페인 기능을 대체하려면 푸시 알림과
 Braze는 고객에게 풍부한 사용자 경험을 제공하기 위해 다양한 [세분화]({{site.baseurl}}/user_guide/engagement_tools/segments/) 필터를 제공합니다.
 
 | **Braze 퍼스펙티브**:<br> Braze의 세그먼트는 완전히 동적이기 때문에 사용자는 정의된 조건이 변경되면 세그먼트에 들어가고 나가게 됩니다. |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 #### 사용자 세그먼트 마이그레이션
 
