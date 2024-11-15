@@ -72,8 +72,8 @@ When editing campaign schedules or audiences, note the following best practices:
 
 - **One-time schedule campaigns:** You can edit the campaign up until the scheduled send time.
 - **Recurring scheduled Campaigns:** You can edit the campaign up until the scheduled send time.
-- Local send time campaigns: Don't make edits 24 hours prior to the scheduled send time.
-- Optimal send time campaigns: Don't make edits 24 hours prior to midnight of the day the campaign is scheduled to send on.
+- **Local send time campaigns:** Don't make edits 24 hours prior to the scheduled send time.
+- **Optimal send time campaigns:** Don't make edits 24 hours prior to midnight of the day the campaign is scheduled to send on.
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
