@@ -10,7 +10,7 @@ page_type: reference
 
 > Braze propose différentes manières d’importer les données des utilisateurs dans la plate-forme : SDK, API, ingestion de données Cloud, intégrations de partenaires technologiques et fichiers CSV. Cet article fournit des instructions détaillées sur la manière d'importer des données utilisateur, y compris sur l'[importation d'événements personnalisés via des fichiers CSV (accès anticipé).](#importing-custom-events)
 
-{% multi_lang_include e-mail-via-sms-warning.md %}
+{% multi_lang_include email-via-sms-warning.md %}
 
 Avant de poursuivre, notez que Braze ne nettoie pas (valide ou formate correctement) les données HTML lors de l'importation. Cela signifie que les tags de script doivent être supprimés de toutes les données d'importation destinées à la personnalisation du web.
 
@@ -318,9 +318,9 @@ Si vous constatez qu'une donnée utilisateur par défaut (par exemple, `email` o
 [events_template]: {% image_buster /assets/download_file/braze-csv-events-import-template.csv %}
 [template_alias_attributes]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}
 [template_alias_events]: {% image_buster /assets/download_file/braze-events-csv-example-user-alias.csv %}
-[erreurs] :#common-errors
+[errors]:#common-errors
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[2]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/sms/phone_numbers/user_phone_numbers/
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
