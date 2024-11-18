@@ -14,7 +14,7 @@ description: "This article outlines details about the Send Canvases using API-tr
 /canvas/trigger/send
 {% endapimethod %}
 
-> Use this endpoint to send Canvas messages vusinga API-triggered delivery.
+> Use this endpoint to send Canvas messages with API-triggered delivery.
 
 API-triggered Delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.
 
