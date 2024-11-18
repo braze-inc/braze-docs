@@ -13,13 +13,13 @@ Que faites-vous lorsqu'un message de votre campagne par e-mail est renvoyé par 
 
 ## Échecs d'envoi définitifs
 
-{% multi_lang_include metrics.md indicateurs='échec d'envoi définitif' %}
+{% multi_lang_include metrics.md metric='Hard Bounce' %}
 
 Pour plus d'informations, voir l'[échec d'envoi définitif]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#hard-bounce).
 
 ## Soft bounces
 
-{% multi_lang_include metrics.md indicateurs='échec provisoire d'envoi' %} 
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
 Si un e-mail reçoit un rebond temporaire, nous réessayerons généralement dans les 72 heures, mais le nombre de tentatives de réessai varie d'un destinataire à l'autre.
 
