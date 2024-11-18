@@ -97,7 +97,7 @@ LinkedInを[Braze Audience Syncで]({{site.baseurl}}/partners/canvas_steps/)利�
 
 |前|その後|
 |------|-----|
-|!["The old navigation for Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["Braze開発者ガイドの新しいナビゲーション"]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
+|!["The old navigation for the Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["Braze開発者ガイドの新しいナビゲーション"]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
 
 ### 新しいBrazeのパートナーシップ
  
