@@ -145,7 +145,7 @@ Hemos actualizado las [preguntas más frecuentes]({{site.baseurl}}/developer_gui
 
 [Los objetos de propiedades del]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) evento que contienen valores de matrices u objetos ahora pueden tener una carga útil de propiedades del evento de hasta 100 KB.
 
-#### Números de contenedor aleatorios
+#### Números de contenedor aleatorio
 
 Utiliza [la reentrada aleatoria de audiencia con números de contenedor aleatorios]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/#random-audience-re-entry-using-random-bucket-numbers) para las pruebas A/B o para dirigirte a grupos de usuarios específicos en tus campañas.
 
@@ -258,7 +258,7 @@ Welcome to our store, Peter!
 
 {% multi_lang_include release_type.md release="Disponibilidad general" %}
 
-Puedes utilizar [mensajes de respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) para responder a los mensajes entrantes de WhatsApp de tus usuarios. Estos mensajes se crean in-app en Braze durante tu experiencia de composición y pueden editarse en cualquier momento. Puedes utilizar Liquid para adaptar el idioma del mensaje de respuesta a los usuarios adecuados.
+Puedes utilizar [mensajes de respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) para responder a los mensajes entrantes de WhatsApp de tus usuarios. Estos mensajes se crean in-app en Braze durante tu experiencia de composición y pueden editarse en cualquier momento. Puede utilizar Liquid para adaptar el idioma de los mensajes de respuesta a los usuarios adecuados.
 
 #### Plantillas de Canvas
 
@@ -302,7 +302,7 @@ Además del modelo "AI Personalizado", la característica de [recomendaciones de
 
 {% multi_lang_include release_type.md release="Disponibilidad general" %}
 
-[Los roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) permiten una mayor estructuración al agrupar tus permisos personalizados individuales con controles de acceso al espacio de trabajo. Esto es especialmente útil si tienes muchas marcas o espacios de trabajo regionales en un mismo panel. Con los roles, puedes añadir usuarios del panel a los espacios de trabajo adecuados y concederles directamente los permisos asociados. 
+[Los roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) permiten una mayor estructuración al agrupar tus permisos personalizados individuales con controles de acceso al espacio de trabajo. Esto es especialmente útil si tiene muchas marcas o espacios de trabajo regionales en un mismo cuadro de mandos. Con las funciones, puede añadir usuarios del cuadro de mandos a los espacios de trabajo adecuados y concederles directamente los permisos asociados. 
 
 #### Informe de sucesos de seguridad
 
@@ -354,7 +354,7 @@ Se han publicado las siguientes actualizaciones del SDK. Las actualizaciones de 
 
 #### Catálogos
 
-Puedes introducir cualquier tipo de datos en un catálogo. Normalmente, los datos son metadatos sobre ofertas, como productos, descuentos, promociones, eventos y similares. Lee nuestros [casos de uso]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) y descubre cómo puedes utilizar estos datos para dirigirte a los usuarios con mensajes muy relevantes.
+Puede introducir cualquier tipo de datos en un catálogo. Normalmente, los datos son metadatos sobre ofertas, como productos, descuentos, promociones, eventos y similares. Lee nuestros [casos de uso]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) y descubre cómo puedes utilizar estos datos para dirigirte a los usuarios con mensajes muy relevantes.
 
 #### Intelligence Suite
 
@@ -382,7 +382,7 @@ Si encuentras perfiles de usuario duplicados, puedes [fusionarlos en bloque]({{s
 
 {% multi_lang_include release_type.md release="Disponibilidad general" %}
 
-Puedes [exportar la lista de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#exporting-data) como un archivo CSV seleccionando **Exportar todo** en la página **Atributos personalizados**. Se generará el archivo CSV y se te enviará por correo electrónico un enlace de descarga.
+Puedes [exportar la lista de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#exporting-data) como un archivo CSV seleccionando **Exportar todo** en la página **Atributos personalizados**. Se generará el archivo CSV y se le enviará por correo electrónico un enlace de descarga.
 
 #### Lista de IP permitidas Currents
 
@@ -394,17 +394,17 @@ Braze enviará los datos de Currents de las IP incluidas en la lista, que se añ
 
 {% multi_lang_include release_type.md release="Disponibilidad general" %}
 
-Construye un segmento utilizando nuestra [experiencia actualizada]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment). Los segmentos se actualizan en tiempo real a medida que cambian los datos, y puedes crear tantos segmentos como necesites para tus objetivos de segmentación y mensajería.
+Construye un segmento utilizando nuestra [experiencia actualizada]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment). Los segmentos se actualizan en tiempo real a medida que cambian los datos, y usted puede crear tantos segmentos como necesite para sus fines de segmentación y mensajería.
 
 #### Métricas por segmentos
 
-Utiliza las plantillas de informes [del Generador de consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) para desglosar las métricas de rendimiento de las campañas, Canvas, variantes y pasos por segmentos.
+Utilice las plantillas de informes [del Generador de consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) para desglosar las métricas de rendimiento de las campañas, Canvas, variantes y pasos por segmentos.
 
-#### Adquisición de números de teléfono
+#### Adquisición de número de teléfono
 
 Para utilizar el canal de mensajería de WhatsApp, necesitarás un número de teléfono que cumpla los requisitos de WhatsApp para su [API en la nube](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) o [su API local](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers). 
 
-Debes adquirir tu número de teléfono tú mismo, ya que Braze no te lo proporcionará. Puedes comprar un teléfono físico con una tarjeta SIM a través de tu proveedor de telefonía profesional o utilizar uno de nuestros socios: Twilio o Infoblip. **Debes tener tu propia cuenta de Twilio o Infobip porque esto no se puede hacer a través de Braze.**
+Debes adquirir tu número de teléfono tú mismo, ya que Braze no te lo proporcionará. Puede adquirir un teléfono físico con una tarjeta SIM a través de su proveedor de telefonía profesional o recurrir a uno de nuestros socios: Twilio o Infoblip. **Debes tener tu propia cuenta de Twilio o Infobip porque esto no se puede hacer a través de Braze.**
 
 ### Nuevas asociaciones Braze
 
