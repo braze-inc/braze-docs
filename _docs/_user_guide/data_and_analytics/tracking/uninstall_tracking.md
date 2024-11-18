@@ -47,7 +47,7 @@ The **Uninstalled** filter on the **Segments** page selects users who uninstalle
 
 ### App-level analysis
 
-Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. The, scroll down to the **Performance Over Time** graph and do the following:
+Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then, scroll down to the **Performance Over Time** graph and do the following:
 
 1. In the **Statistics For** dropdown, select **Uninstalls**.
 2. In the **Breakdown** dropdown, select **By segment**.
