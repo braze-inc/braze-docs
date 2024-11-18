@@ -25,7 +25,6 @@ if (site_language && (site_language != 'en')){
   for (var url in validurls) {
     var adjusted_url = url;
     var adjusted_destination = validurls[url] || "";
-    console.log(adjusted_destination, url)
     if (!adjusted_url.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
       adjusted_url = adjusted_url.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
     }
