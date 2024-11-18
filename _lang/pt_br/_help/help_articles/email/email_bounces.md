@@ -13,13 +13,13 @@ O que fazer quando uma mensagem da sua campanha de mensagens é devolvida pelos 
 
 ## Hard bounce
 
-{% multi_lang_include metrics.md métrica='Hard Bounce' %}
+{% multi_lang_include metrics.md metric='Hard Bounce' %}
 
 Para saber mais, consulte [Hard bounce]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#hard-bounce).
 
 ## Soft bounces
 
-{% multi_lang_include metrics.md métrica='Soft bounce' %} 
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
 Se um e-mail receber um soft bounce, geralmente tentaremos novamente dentro de 72 horas, mas o número de tentativas varia de acordo com o destinatário.
 
