@@ -43,11 +43,11 @@ To configure uninstall tracking for your iOS application, use a [utility method]
 
 The **Uninstalled** filter on the **Segments** page selects users who uninstalled your app within a time range. Because it's difficult to determine the exact time of an uninstall, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
 
-![Uninstall Segment][5]
+![Uninstall segment.][5]
 
 ### App-level analysis
 
-Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then scroll down to the **Performance Over Time** graph and do the following:
+Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. The, scroll down to the **Performance Over Time** graph and do the following:
 
 1. In the **Statistics For** dropdown, select **Uninstalls**.
 2. In the **Breakdown** dropdown, select **By segment**.
@@ -57,7 +57,7 @@ Daily statistics on uninstalls are on the **Home** page. The graph can be broken
 Apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
 {% endalert %}
 
-![Uninstall Graph Selection][2]
+![Uninstall graph selection.][2]
 
 ## Uninstall tracking for campaigns
 
@@ -65,7 +65,7 @@ Campaign uninstall tracking shows the number of users who received a specific ca
 
 Uninstall statistics for campaigns are located on a specific campaign's **Campaign Analytics** page. For multichannel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
 
-![Uninstall Campaign Level][6]
+![Uninstall at the campaign-level.][6]
 
 ### How it works
 
@@ -83,7 +83,11 @@ For more on using uninstall tracking, see our blog post [Uninstall Tracking: An 
 
 ### Why am I suddenly seeing a spike in uninstalls?
 
-If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency. 
+If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency.
+
+### Why are the number of app uninstalls different from what's in the APNs?
+
+The difference is expected. APNs will start returning a 410 status for these tokens on a fuzzy schedule.
 
 [1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
 [2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"
