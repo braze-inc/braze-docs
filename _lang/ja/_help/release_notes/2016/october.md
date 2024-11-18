@@ -17,7 +17,7 @@ description: "この記事には2016年10月のリリースノートが含まれ
 Braze ユーザーが、最近インポートしたユーザーの CSV を読み込めるようになりました。これにより、システムからのデータ同期の可視性が向上します。CSV インポートについて詳しくは、[こちら]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)をご覧ください。
 
 ## 記念日フィルター
-[バースデーフィルター]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/)に加えて、Brazeは記念日フィルターをサポートするようになりました。これにより、ロイヤルティのマイルストーンのカレンダー日に基づいてユーザーの目標を設定したり、通知を補充したりすることができます!この機能にアクセスするには、\[セグメント] ページで \[カスタム属性の日付] フィルターを選択します。フィルターについて詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters)をご覧ください。
+[バースデーフィルター]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/)に加えて、Brazeは記念日フィルターをサポートするようになりました。これにより、ロイヤルティのマイルストーンのカレンダー日に基づいてユーザーの目標を設定したり、通知を補充したりすることができます!この機能にアクセスするには、[セグメント] ページで [カスタム属性の日付] フィルターを選択します。フィルターについて詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters)をご覧ください。
 
 ## フリークエンシーキャップの更新
 以前は、フリークエンシーキャップの制限を無視したキャンペーンやキャンバスが、フリークエンシーキャップの対象としてカウントされていました。このビヘイビアを変更したのは、新しいキャンペーンや、周波数上限に従わないキャンバスをデフォルトすることで、それらのビヘイビアにも反映されないようにするためです。これはキャンペーンとキャンバスごとに設定できます。フリークエンシーキャップについて詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping)をご覧ください。

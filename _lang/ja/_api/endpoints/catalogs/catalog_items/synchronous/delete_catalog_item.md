@@ -21,7 +21,7 @@ description: "この記事では、「カタログ項目を削除」Braze エン
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete_item`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete_item`の権限が必要です。
 
 ## レート制限
 
@@ -29,17 +29,17 @@ description: "この記事では、「カタログ項目を削除」Braze エン
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-| `item_id` | 必須 | string | カタログ項目のID。 |
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+| `item_id` | 必須 | 文字列 | カタログ項目のID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## リクエストパラメーター
 
 このエンドポイントにはリクエストボディがない。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \

@@ -25,7 +25,7 @@ Braze は、キャンバスステップが「スケジュール」されてい�
 
 ## Liquid でディスパッチ ID をメッセージにテンプレート化する
 
-(URL などで) メッセージ内からのメッセージのディスパッチを追跡する場合は、`dispatch_id` でテンプレート化できます。このための書式設定は、「[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」の一覧の \[キャンバスの属性] で確認できます。
+(URL などで) メッセージ内からのメッセージのディスパッチを追跡する場合は、`dispatch_id` でテンプレート化できます。このための書式設定は、「[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」の一覧の [キャンバスの属性] で確認できます。
 
 これは、`api_id` と同じように動作します。つまり、`api_id` はキャンペーンの作成時に使用できないため、プレースホルダとしてテンプレート化され、`dispatch_id_for_unsent_campaign` としてプレビューされます。ID はメッセージが送信される前に生成され、送信時間として含まれます。
 
@@ -41,4 +41,4 @@ Currents の機能を継続的に強化する取り組みの一環として、�
 
 `dispatch_id` を[パーソナライゼーション タグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags)、[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、または[Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details)、[Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events)、または[Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/) をCurrentsに使用できます。
 
-_最終更新日: 2021年7月15日_
+_最終更新日：2021年7月15日_
