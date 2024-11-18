@@ -3,7 +3,7 @@ nav_title: チュートリアル
 page_order: 6
 
 #Required
-description: "これはGoogle検索の説明です。160文字を超えると切り捨てられるので、簡潔にしてください。"
+description: "これはGoogle検索の説明です。160文字を超えると切り捨てられる。"
 page_type: tutorial
 tool:
   - Dashboard
@@ -77,7 +77,7 @@ noindex: true
 | -------- | ----------- |
 | ページタイトル | ページのタイトルは何でも構いません。これを持っていなければなりません。 |
 | 私の最初の見出し | この内容を大文字で記載することをお勧めします。これはオプションでもあります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステップ2:次のことをする
 

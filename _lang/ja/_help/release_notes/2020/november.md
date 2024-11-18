@@ -14,7 +14,7 @@ description: "この記事には2020年11月のリリースノートが含まれ
 
 ## Braze プロダクトポータル
 
-[Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)には、Braze製品のロードマップとユーザーがアイデアを提出する機会が含まれています。最近リリースされた機能も確認できます。製品ポータルは、Braze ダッシュボードの \[**リソース**] にあります。
+[Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)には、Braze製品のロードマップとユーザーがアイデアを提出する機会が含まれています。最近リリースされた機能も確認できます。製品ポータルは、Braze ダッシュボードの [**リソース**] にあります。
 
 ## iOSコンテンツカード実装ガイド
 

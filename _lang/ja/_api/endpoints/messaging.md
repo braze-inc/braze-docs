@@ -29,7 +29,7 @@ guide_top_text: "Braze メッセージング API でユーザーにメッセー�
 
 guide_featured_title: "「メッセージをスケジュール」エンドポイント"
 guide_featured_list:
-  - name: "GET:今後スケジュールされているキャンペーンとキャンバスをリスト"
+  - name: "取得:今後スケジュールされているキャンペーンとキャンバスをリスト"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
   - name: "POST:スケジュールされたメッセージを削除"

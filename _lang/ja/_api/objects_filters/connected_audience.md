@@ -7,7 +7,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 ---
 
-# 接続された観客オブジェクト
+# 接続されたオーディエンスオブジェクト
 
 > 接続されたオーディエンス・オブジェクトは、メッセージを送信するオーディエンスを特定するセレクタである。 
 
@@ -57,12 +57,12 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 | カスタム属性タイプ | 許容される比較 |
 | ---------------------| --------------- |
-| string | `equals``not_equal`,`matches_regex`,`does_not_match_regex`,`exists` 、 `does_not_exist` |
+| 文字列 | `equals``not_equal`,`matches_regex`,`does_not_match_regex`,`exists` 、 `does_not_exist` |
 | 配列 | `includes_value``does_not_include_value`,`exists` 、 `does_not_exist` |
 | 数値 | `equals``not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists` 、 `does_not_exist` |
 | ブール値 | `equals``does_not_equal`,`exists` 、 `does_not_exist` |
 | 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 属性比較の注意点
 
@@ -70,7 +70,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 | --- | --- |
 | `value` | `exists` または `does_not_exist` の比較を使用する場合、`value` は必要ありません。`before` および `after` の比較を使用する場合、`value` は ISO 8601 日時文字列である必要があります。 |
 |`matches_regex` | `matches_regex` 比較を使う場合、渡される値は文字列でなければならない。Braze での正規表現の使用については、[正規表現]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze)と[カスタム属性のデータ型]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### カスタム属性の例
 

@@ -5,7 +5,7 @@ layout: dev_guide
 page_order: 1.3
 
 #Required
-description: "これはGoogle検索の説明です。160文字を超えると切り捨てられるので、簡潔にしてください。"
+description: "これはGoogle検索の説明です。160文字を超えると切り捨てられる。"
 page_type: landing
 tool:
   - Dashboard

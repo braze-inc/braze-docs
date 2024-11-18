@@ -40,10 +40,10 @@ guide_featured_list:
 
 guide_menu_title: "External ID migration endpoints"
 guide_menu_list:
-  - name: "POST:外部IDの名前を変更する"
+  - name: "POST:外部ID の名前変更"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
     image: /assets/img/braze_icons/users-01.svg
-  - name: "POST:非推奨の外部IDを削除する"
+  - name: "POST:非推奨の外部ID の削除"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
     image: /assets/img/braze_icons/user-minus-01.svg
 ---
