@@ -3,14 +3,14 @@ title: Braze Documentation
 email: success@braze.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
-baseurl: "/docs/pt_br" # the subpath of your site, e.g., /blog
+baseurl: "/docs/pt-br" # the subpath of your site, e.g., /blog
 homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g., http://example.com
 twitter_username: Braze
 github_username:  braze-inc
 
-language: pt_br
+language: pt-br
 
-destination: _site/docs/pt_br
+destination: _site/docs/pt-br
 
 # Source dir
 source: '.'
@@ -44,16 +44,16 @@ collections:
 
 # Image asset pipeline setting for japr
 asset_pipeline:
-  display_path: docs/pt_br/assets
+  display_path: docs/pt-br/assets
 
 # Algolia Search index
 algolia:
   index_name: "DocSearch_PortugueseBrazil"
   files_to_exclude:
-    - _lang/pt_br/_hidden/*
-    - _lang/pt_br/_hidden/*/* #exclude hidden subdirectories from indexing
-    - _lang/pt_br/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
-    - _lang/pt_br/_docs_pages/*
-    - _lang/pt_br/_docs_pages/*/* #exclude hidden subdirectories from indexing
-    - _lang/pt_br/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
-    - _lang/pt_br/_home/Styling_Test_Page.md
+    - _lang/pt-br/_hidden/*
+    - _lang/pt-br/_hidden/*/* #exclude hidden subdirectories from indexing
+    - _lang/pt-br/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/pt-br/_docs_pages/*
+    - _lang/pt-br/_docs_pages/*/* #exclude hidden subdirectories from indexing
+    - _lang/pt-br/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/pt-br/_home/Styling_Test_Page.md
