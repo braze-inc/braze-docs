@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Send Messages Immediately Using API Only"
-article_title: "POST: Send Messages Immediately Using API Only"
+nav_title: "POST: Send Messages Immediately Using the API Only"
+article_title: "POST: Send Messages Immediately Using the API Only"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Send messages immediately 
 
 ---
 {% api %}
-# Send messages immediately using API only
+# Send messages immediately using the API only
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
