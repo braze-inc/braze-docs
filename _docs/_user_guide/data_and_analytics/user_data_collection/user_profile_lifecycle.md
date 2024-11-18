@@ -95,7 +95,7 @@ Having trouble picturing how this may look for the user profile lifecycle of you
 
 You can set a new user alias for existing identified user profiles through our SDK and our API using the [User Data endpoints][27]. However, user aliases can't be set through the API for an existing unknown user profile.
 
-If you try to set a pre-existing `external_id` on an anonymous user profile that shares a matching alias name but has different labels, only the alias label on the pre-existing known user profile will be maintained.
+The user aliases are also merged in the process. However, if both the user to be orphaned and the target user have an alias with the same label, only the alias from the target user is maintained.
 
 Uninstalling and reinstalling an app will generate a new anonymous `braze_id` for that user.
 
