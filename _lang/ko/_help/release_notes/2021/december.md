@@ -25,7 +25,7 @@ alias: "/help/release_notes/2022/january/"
   - 이메일 열람
   - 이메일 클릭
   - 이메일 스팸으로 표시
-- `MACHINE_OPEN`을 다음에 추가:
+- `MACHINE_OPEN`를 다음에 추가:
   - 이메일 열람
 
 ## 새로운 리퀴드 개인화 태그
