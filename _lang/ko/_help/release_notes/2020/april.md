@@ -15,7 +15,7 @@ Movable Ink는 Braze 고객에게 푸시, 인앱 메시지 및 콘텐츠 카드 
 
 ## Intelligent Timing
 
-캠페인을 예약할 때, [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)(이전의 Intelligent Delivery)를 사용하여 각 사용자가 참여할 가능성이 가장 높은 시간에 메시지를 전달할 수 있습니다. 이 시간은 Braze가 결정합니다.
+캠페인을 예약할 때, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)(이전의 Intelligent Delivery)를 사용하여 각 사용자가 참여할 가능성이 가장 높은 시간에 메시지를 전달할 수 있습니다. 이 시간은 Braze가 결정합니다.
 
 이 기능에 대한 업데이트는 다음을 포함합니다:
 - **방해금지 시간에 대한 설명**: 방해금지 시간 기능은 동일하게 유지되지만, UI는 명확성을 위해 조정되었습니다.

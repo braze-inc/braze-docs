@@ -59,6 +59,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --- | --- |
 | `401: Unauthorized` | API 키에 필요한 권한이 없습니다. API 키에 `apps.get` 권한이 있는지 확인하세요. |
 | `403: Forbidden` | 이 회사에서는 기능 플리퍼를 사용하지 않습니다. 고객 성공 관리자에게 도움을 요청하세요. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

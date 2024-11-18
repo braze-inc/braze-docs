@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre des e-m
 {% endapimethod %}
 
 > Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
- 
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
 ## Conditions préalables
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | -----------|----------| --------|------- |
 | `email` | Requis | Chaîne de caractères ou tableau | Adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail à ajouter à la liste de blocage. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

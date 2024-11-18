@@ -1,5 +1,5 @@
 ---
-nav_title: Commenting
+nav_title: Commenting in Canvas
 article_title: Commenting in Canvas
 alias: "/canvas_comments/"
 page_order: 0.5

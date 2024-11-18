@@ -36,7 +36,7 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `userName@example.com` | Requis | Chaîne de caractères | L’adresse e-mail de l’utilisateur. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 

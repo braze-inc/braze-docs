@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Afficher les traductions d'une campagne"
-article_title: "GET : Afficher les traductions d'une campagne"
+nav_title: "GET : Voir les traductions pour une campagne"
+article_title: "GET : Voir les traductions pour une campagne"
 search_tag: Endpoint
 page_order: 1
 

@@ -11,7 +11,7 @@ channel: email
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: 이메일 바운스
+  - name: 이메일 반송
     link: /docs/help/help_articles/email/email_bounces
     image: /assets/img/braze_icons/mail-04.svg
   - name: 클릭률 증가 처리

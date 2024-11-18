@@ -15,13 +15,13 @@ guide_featured_list:
   - name: Canvas Basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     image: /assets/img/braze_icons/list.svg
+  - name: Using Braze Canvas Templates
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
+    image: /assets/img/braze_icons/target-04.svg
   - name: Understanding Canvas Status
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_status/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas Outlines
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     image: /assets/img/braze_icons/git-branch-01.svg
-  - name: Canvas FAQ
-    link: /docs/user_guide/engagement_tools/canvas/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---

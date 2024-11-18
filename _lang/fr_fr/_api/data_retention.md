@@ -58,9 +58,9 @@ Les données envoyées par Braze à certains sous-processeurs peuvent se mainten
 
 #### Conservation des données du Data Lake de Braze
 
-Les données disponibles pour les clients dans le tableau de bord de Braze sont principalement agrégées. Les journaux détaillés sont conservés dans une base de données distincte créée par Braze (le « Data Lake », anciennement appelé « BI Database »). Les données du Data Lake sont utilisées pour l’agrégation de rapports et d’autres fonctionnalités avancées.
+Les données disponibles pour les clients dans le tableau de bord de Braze sont principalement agrégées. Les journaux détaillés sont conservés dans une base de données distincte créée par Braze (le " lac de données "). Les données du Data Lake sont utilisées pour l’agrégation de rapports et d’autres fonctionnalités avancées. Braze supprime les informations personnellement identifiables des données d'événements stockées dans le lac de données au bout de deux ans (voir plus d'informations dans notre page sur la [conservation des données de Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention#snowflake-data-retention/) ).
 
-Si vous utilisez nos API pour supprimer des profils utilisateurs ou bien supprimer ou modifier des attributs des profils utilisateurs, les données peuvent prendre jusqu’à deux semaines pour être supprimées du Data Lake de Braze. Supprimer des données dans le Data Lake n’aura pas d’effet sur la segmentation ou la personnalisation mais garantit que les données sont supprimées de tous les systèmes de Braze.
+Si vous utilisez nos API pour supprimer des profils utilisateurs ou pour supprimer ou modifier des attributs de profils utilisateurs, la suppression de ces données du Data Lake de Braze peut prendre jusqu'à trois semaines. Supprimer des données dans le Data Lake n’aura pas d’effet sur la segmentation ou la personnalisation mais garantit que les données sont supprimées de tous les systèmes de Braze.
 
 #### Serveurs de sauvegarde Braze
 
