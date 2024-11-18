@@ -50,10 +50,10 @@ Se você estiver carregando ou atualizando perfis de usuário que são apenas al
 - `user_alias_name`: Um identificador único de usuário; uma alternativa ao `external_id`
 - `user_alias_label`: Um rótulo comum pelo qual agrupar aliases de usuário
 
-| user_alias_name | user_alias_label | last_name | e-mail | sample_attribute |
+| user_alias_name | user_alias_label | last_name | email | sample_attribute |
 | --- | --- | --- | --- | --- |
-| 182736485 | meu_alt_identificador | Smith | smith@user.com | VERDADEIRO |
-| 182736486 | meu_alt_identificador | Nguyen | nguyen@user.com | FALSO |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | VERDADEIRO |
+| 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSO |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Quando você fornece tanto um `user_alias_name` quanto um `user_alias_label` na sua importação, a Braze atualizará qualquer usuário existente com o mesmo `user_alias_name` e `user_alias_label`. Se um usuário não for encontrado, a Braze criará um novo usuário identificado com esse `user_alias_name` definido.
@@ -89,7 +89,7 @@ Ao importar dados de cliente como atributos, os cabeçalhos das colunas que voc�
 
 #### Cabeçalhos de colunas de dados de usuários padrão
 
-| CAMPO DE PERFIL DO USUÁRIO | TIPO DE DADOS | INFORMAÇÃO | OBRIGATÓRIO |
+| USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
 | `external_id` | String | Um identificador único de usuário para seu cliente. | Sim, veja a [seguinte nota](#about-external-ids). |
 | `user_alias_name` | String | Um identificador de usuário único para usuários anônimos. Uma alternativa ao `external_id`. | Não, veja a [seguinte nota](#about-external-ids). |
@@ -108,7 +108,7 @@ Ao importar dados de cliente como atributos, os cabeçalhos das colunas que voc�
 | `email_subscribe` | String | Os valores disponíveis são `opted_in` (explicitamente registrado para receber e-mail), `unsubscribed` (explicitamente optou por não receber e-mails) e `subscribed` (não optou por receber nem por não receber). | Não |
 | `push_subscribe` | String | Os valores disponíveis são `opted_in` (registrado explicitamente para receber push mensagens), `unsubscribed` (optou explicitamente por não receber push mensagens) e `subscribed` (nem optou por receber nem por não receber). | Não |
 | `time_zone` | String | O fuso horário deve ser passado para a Braze no mesmo formato que o Banco de Dados de Fuso Horário da IANA (por exemplo, `America/New_York` ou `Eastern Time (US & Canada)`).  | Não |
-| `date_of_first_session` <br><br> `date_of_last_session`| String | Pode ser passado em um dos seguintes formatos ISO-8601: {::nomarkdown} <ul> <li> AAAA-MM-DD </li> <li> AAAA-MM-DDTHH:MM:SS+00:00 </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (por exemplo, 2019-11-20T18:38:57) </li> </ul> {:/} | Não |
+| `date_of_first_session` <br><br> `date_of_last_session`| String | Pode ser passado em um dos seguintes formatos ISO-8601: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (por exemplo, 2019-11-20T18:38:57) </li> </ul> {:/} | Não |
 | `subscription_group_id` | String | O `id` do seu grupo de inscrições. Este identificador pode ser encontrado na página do grupo de inscrições do seu dashboard. | Não |
 | `subscription_state` | String | O estado da inscrição para o grupo de inscrições especificado por `subscription_group_id`. Os valores permitidos são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). | Não, mas fortemente recomendado se `subscription_group_id` for usado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -156,7 +156,7 @@ Se você estiver atualizando o status do grupo de inscrições, deve ter as segu
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">id_externo</th>
+    <th class="tg-0pky">external_id</th>
     <th class="tg-0pky">first_name</th>
     <th class="tg-0pky">subscription_group_id</th>
     <th class="tg-0pky">subscription_state</th>
@@ -167,13 +167,13 @@ Se você estiver atualizando o status do grupo de inscrições, deve ter as segu
     <td class="tg-0pky">A8i3mkd99</td>
     <td class="tg-0pky">Colby</td>
     <td class="tg-0pky">6ff593d7-cf69-448b-aca9-abf7d7b8c273</td>
-    <td class="tg-0pky">inscrito</td>
+    <td class="tg-0pky">subscribed</td>
   </tr>
   <tr>
     <td class="tg-0pky">k2LNhj8Ks</td>
     <td class="tg-0pky">Tom</td>
     <td class="tg-0pky">aea02307-a91e-4bc0-abad-1c0bee817dfa</td>
-    <td class="tg-0pky">inscrito</td>
+    <td class="tg-0pky">subscribed</td>
   </tr>
 </tbody>
 </table>
@@ -201,14 +201,14 @@ Eventos personalizados são personalizados para o seu negócio. Por exemplo, um 
 
 Eventos personalizados podem ter propriedades de eventos. Por exemplo, o evento personalizado rented_movie pode ter as propriedades título e gênero. Essas propriedades de evento devem ter um cabeçalho de coluna de `<event_name>.properties.<property name>`. Um exemplo é `rented_movie.properties.title`.
 
-| CAMPO DE PERFIL DO USUÁRIO                      | TIPO DE DADOS | INFORMAÇÃO                                                                                                                                                                                                             | OBRIGATÓRIO                                                                                        |
+| USER PROFILE FIELD                      | DATA TYPE | INFORMATION                                                                                                                                                                                                             | REQUIRED                                                                                        |
 |-----------------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | `external_id`                           | String    | Um identificador único de usuário para seu usuário.                                                                                                                                                                                 | Sim, um de `external_id`, `braze_id`, ou `user_alias_name` e `user_alias_label` é necessário. |
 | `braze_id`                              | String    | Um identificador atribuído pela Braze para o seu usuário.                                                                                                                                                                              | Sim, um de `external_id`, `braze_id`, ou `user_alias_name` e `user_alias_label` é necessário. |
 | `user_alias_name`                       | String    | Um identificador de usuário único para usuários anônimos. Uma alternativa ao external_id.                                                                                                                                        | Sim, um de `external_id`, `braze_id`, ou `user_alias_name` e `user_alias_label` é necessário. |
 | `user_alias_label`                      | String    | Um rótulo comum pelo qual agrupar aliases de usuário.                                                                                                                                                                          | Sim, um de `external_id`, `braze_id`, ou `user_alias_name` e `user_alias_label` é necessário. |
 | `name`                                  | String    | Um evento personalizado dos seus usuários.                                                                                                                                                                                           | Sim                                                                                             |
-| `time`                                  | String    | A hora do evento. Pode ser passado em um dos seguintes formatos ISO-8601: {::nomarkdown} <ul> <li> AAAA-MM-DD </li> <li> AAAA-MM-DDTHH:MM:SS+00:00 </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (por exemplo, 2019-11-20T18:38:57) </li> </ul> {:/} | Sim                                                                                             |
+| `time`                                  | String    | A hora do evento. Pode ser passado em um dos seguintes formatos ISO-8601: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (por exemplo, 2019-11-20T18:38:57) </li> </ul> {:/} | Sim                                                                                             |
 | `<event name>.properties.<property name>` | Múltiplas  | Uma propriedade de evento associada a um evento personalizado. Um exemplo é `rented_movie.properties.title`                                                                                                                        | Não                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -319,10 +319,10 @@ Se você estiver vendo um pedaço de dados de usuários padrão (por exemplo, `e
 [template_alias_attributes]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}
 [template_alias_events]: {% image_buster /assets/download_file/braze-events-csv-example-user-alias.csv %}
 [errors]:#common-errors
-[1]: {{site.baseurl}}/user_guide/dados_e_analytics/user_data_collection/language_codes/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[13]: {{site.baseurl}}/user_guide/dados_e_analytics/user_data_collection/user_profile_lifecycle/
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 [3]: {% image_buster /assets/img/importcsv5.png %}
 [4]: {% image_buster /assets/img/importcsv2.png %}
