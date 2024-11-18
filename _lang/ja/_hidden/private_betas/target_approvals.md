@@ -23,7 +23,7 @@ description: "この記事では、送信量の多いキャンペーンやキャ
 ## ターゲット層の承認設定
 
 1. **設定**＞**承認ワークフロー**＞**メッセージング・ルールに**進む。
-2. **Create ruleを**選択する。
+2. **ルールを作成**選択する。
 3. 一目で識別できるように、ルールに名前を付ける（例えば、"All user subscriptions"）。
 4. **オブジェクト**で、[**キャンペーン**]、[**キャンバス**]、または[**キャンバスとキャンペーンの両方]**を選択し、承認ルールを適用する。
 5. **Reachable Users Thresholdに**数値を入力する。詳しくは[オーディエンス]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics)統計を参照のこと。
