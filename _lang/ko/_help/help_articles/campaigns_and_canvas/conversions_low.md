@@ -1,6 +1,6 @@
 ---
-nav_title: 낮은 캠페인 또는 캔버스 전환율
-article_title: 낮은 캠페인 또는 캔버스 전환율
+nav_title: 낮은 캠페인 또는 캔버스 전환
+article_title: 낮은 캠페인 또는 캔버스 전환
 page_order: 4
 
 page_type: solution
@@ -26,9 +26,9 @@ tool:
 
 ## 전환 마감일
 
-캠페인별로 선택한 각 전환 이벤트에 대해 \[마감일][44]]을 설정합니다. 즉, 전환이 각 캠페인에 포함되기 위해 전환이 발생해야 하는 시간 제한을 설정할 수 있습니다.
+캠페인별로 선택한 각 전환 이벤트에 대해 [마감일][44]]을 설정합니다. 즉, 전환이 각 캠페인에 포함되기 위해 전환이 발생해야 하는 시간 제한을 설정할 수 있습니다.
 
-캠페인 측정기준을 이해하기 위해 \[전환 계산하기][45]에 대한 정보를 검토했는지 확인하세요. 캔버스에서 사용자 전환에 대해서는 [캔버스 FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas)를 참조하세요. 
+캠페인 측정기준을 이해하기 위해 [전환 계산하기][45]에 대한 정보를 검토했는지 확인하세요. 캔버스에서 사용자 전환에 대해서는 [캔버스 FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas)를 참조하세요. 
 
 아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 

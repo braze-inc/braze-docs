@@ -20,6 +20,6 @@ tool: Segments
 - [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)
 - [`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)
 
-아직 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
+아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트 날짜: 2022년 10월 24일_

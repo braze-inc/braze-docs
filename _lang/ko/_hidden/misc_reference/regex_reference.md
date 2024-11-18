@@ -36,7 +36,7 @@ hidden: true
 | 문자열 끝 | `$` |
 | 단어 경계 | `\n` |
 | 단어가 없는 경계 | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 메타 시퀀스 %}
 
@@ -75,7 +75,7 @@ hidden: true
 | 제어 문자 Y | `\cY` |
 | 백스페이스 문자 | `[\b]` |
 | 모든 문자를 리터럴로 만듭니다. | `\` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 일반 토큰 %}
 
@@ -85,7 +85,7 @@ hidden: true
 | 캐리지 리턴 | `\r` |
 | 탭 | `\t` |
 | 눌 문자 | `\0` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 문자 클래스 수정자 %}
@@ -107,7 +107,7 @@ hidden: true
 | 소문자 | `[:xdigit:]` |
 | 대문자 | `[:<:]` |
 | 단어 문자 | `[:>:]` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 그룹 상수 %}
 
@@ -164,7 +164,7 @@ hidden: true
 | 정규식 엔진 수정자 | `(*LIMIT_RECURSION=d)` |
 | 정규식 엔진 수정자 | `(*NO_AUTO_POSSESS)` |
 | 정규식 엔진 수정자 | `(*NO_START_OPT)` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 수량화 %}
 
@@ -179,7 +179,7 @@ hidden: true
 | 그리디 수량화 | `a*` |
 | 레이지 수량화 | `a*?` |
 | 퍼제시브 수량화 | `a*+` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab 앵커 %}
 
@@ -193,7 +193,7 @@ hidden: true
 | 문자열의 절대 끝 | `\z` |
 | 단어 경계 | `\b` |
 | 단어가 아닌 경계 | `\B` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
 {% tab 플래그 및 수정자 %}
@@ -210,7 +210,7 @@ hidden: true
 | 언그리디 | `U` |
 | 앵커 | `A` |
 | 중복된 그룹 이름 | `J` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 대체 %}
@@ -228,7 +228,7 @@ hidden: true
 | 대문자 변환 | `\U` |
 | 소문자 변환 | `\L` |
 | 모든 변환 종료 | `\E` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
