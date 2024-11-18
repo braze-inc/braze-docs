@@ -7,7 +7,7 @@ description: "Este artículo muestra cómo configurar una integración de Baidu 
 hidden: true
 ---
 # Integración con Baidu
-{% multi_lang_include archivo/baidu_deprecacion.md %}
+{% multi_lang_include archive/baidu_deprecation.md %}
 
 Braze puede enviar notificaciones push a dispositivos Android utilizando [Baidu Cloud Push][14]. Ten en cuenta que el uso de Baidu Cloud Push **no** requiere que distribuyas tus aplicaciones a través de Baidu App Store.
 
