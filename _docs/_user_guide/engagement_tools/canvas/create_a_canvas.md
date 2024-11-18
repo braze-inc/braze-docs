@@ -15,9 +15,6 @@ guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
-  - name: Preview User Paths
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
-    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
