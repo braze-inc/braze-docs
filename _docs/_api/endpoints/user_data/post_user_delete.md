@@ -19,7 +19,7 @@ description: "This article outlines details about the Delete users Braze endpoin
 Up to 50 `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request.
 
 {% alert warning %}
-Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
+Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile using the API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}

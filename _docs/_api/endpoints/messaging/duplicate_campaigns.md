@@ -9,7 +9,7 @@ description: "This article outlines details about the Duplicate campaigns endpoi
 
 ---
 {% api %}
-# Duplicate campaigns via API
+# Duplicate campaigns using the API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/duplicate
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "This article outlines details about the Duplicate campaigns endpoi
 > Use this endpoint to duplicate campaigns. This API endpoint is similar to [duplicating campaigns in the Braze dashboard][1].
 
 {% alert important %}
-Duplicating a campaign via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Duplicating a campaign by using the API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
