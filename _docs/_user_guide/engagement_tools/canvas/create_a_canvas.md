@@ -48,12 +48,12 @@ guide_featured_list:
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Preview User Paths
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
-    image: /assets/img/braze_icons/target-04.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
   - name: AI Copywriting Assistant
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
