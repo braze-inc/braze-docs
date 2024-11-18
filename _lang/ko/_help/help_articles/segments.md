@@ -14,7 +14,7 @@ guide_menu_list:
   - name: 필터 옵션 변경
     link: /docs/help/help_articles/segments/my_filter_options_have_changed/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: 세그먼트에 누락된 사용자
+  - name: 세그먼트에서 사용자 누락
     link: /docs/help/help_articles/segments/segment_showing_0_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: 세분화 로직
