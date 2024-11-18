@@ -87,7 +87,7 @@ Pour commencer, consultez notre [documentation LINE.]({{site.baseurl}}/user_guid
  
 #### Synchronisation de l'audience LinkedIn
 
-{% multi_lang_include release_type.md release="Beta" %}
+{% multi_lang_include release_type.md release="Bêta %}
 
 Vous pouvez désormais utiliser LinkedIn avec Braze [Audience Sync]({{site.baseurl}}/partners/canvas_steps/), un outil qui vous aide à étendre la portée de vos campagnes à de nombreuses technologies sociales et publicitaires de premier plan. Pour participer à la version bêta, contactez votre gestionnaire de succès Braze.
  
@@ -165,7 +165,7 @@ Nous avons ajouté [Ajouter des paramètres U]({{site.baseurl}}/user_guide/messa
 
 #### LINE et Braze
 
-{% multi_lang_include release_type.md release="Beta" %}
+{% multi_lang_include release_type.md release="Bêta %}
 
 Nous avons ajouté une nouvelle documentation :
 
@@ -268,7 +268,7 @@ Créez des [modèles Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas
 
 #### Landing pages
 
-{% multi_lang_include release_type.md release="Beta" %}
+{% multi_lang_include release_type.md release="Bêta %}
 
 Les [pages d'atterrissage de Braze]({{site.baseurl}}/user_guide/engagement_tools/landing_pages) sont des pages web autonomes qui peuvent piloter votre stratégie d'acquisition et d'engagement des utilisateurs.
 
@@ -527,7 +527,7 @@ Les autorisations géographiques pour les SMS renforcent la sécurité et protè
 
 #### LINE et Braze
 
-{% multi_lang_include release_type.md release="Beta" %}
+{% multi_lang_include release_type.md release="Bêta %}
 
 [LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf) est l'application de messages la plus populaire au Japon, avec plus de 95 millions d'utilisateurs actifs par mois. Vous pouvez intégrer vos comptes LINE à Braze pour exploiter vos données clients zero-party et first-party afin d'envoyer des messages LINE attrayants aux bons clients en fonction de leurs préférences, de leurs comportements et de leurs interactions cross-canal. Pour commencer, voir [LINE]({{site.baseurl}}/line).
 
@@ -545,7 +545,7 @@ Auparavant, vous pouviez rechercher et fusionner les utilisateurs en double dans
 
 #### Intelligence artificielle Assistant liquide
 
-{% multi_lang_include release_type.md release="Beta" %}
+{% multi_lang_include release_type.md release="Bêta %}
 
 L'assistant liquide de l'intelligence artificielle est un assistant de chat alimenté par <sup>BrazeAITM</sup> qui aide à générer le liquide dont vous avez besoin pour personnaliser le contenu des messages. Vous pouvez générer des liquides à partir de modèles, recevoir des suggestions de liquides personnalisées et optimiser les liquides existants avec l'aide de <sup>BrazeAITM</sup>. L'assistant Liquid de l'intelligence artificielle fournit également des annotations expliquant le Liquid utilisé, ce qui vous permet d'améliorer votre compréhension du Liquid et d'apprendre à écrire le vôtre.
 
