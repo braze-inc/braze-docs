@@ -1,6 +1,6 @@
 ## 基本チェック
 
-#### あるユーザーのアプリ内メッセージが表示されない
+#### あるユーザーにアプリ内メッセージが表示されない
 
 1. SDKが新しいアプリ内メッセージを要求したとき、ユーザーはセッション開始時にセグメンテーションにいたか？
 2. ユーザーはキャンペーンターゲティングルールに従ってアプリ内メッセージを受信する資格があったか、または再資格があったか。
@@ -8,30 +8,30 @@
 4. ユーザーはコントロールグループにいたのか？キャンペーンがABテスト用に設定されているか確認する。
 5. 期待されたメッセージの代わりに、より優先順位の高い別のアプリ内メッセージが表示されたか？
 6. 私のデバイスはキャンペーンで指定された正しい向きになっていたか？
-7. 私のメッセージは、SDKによって強制された、トリガー間のデフォルトの最小時間間隔30秒によって抑制されたのだろうか？
+7. 私のメッセージは、SDK によって適用された、トリガー間のデフォルトの30秒の最小時間間隔によって抑制されたのでしょうか？
 
-#### このプラットフォームでは、アプリ内メッセージがすべてのユーザーに表示されなかった。
+#### このプラットフォームで、アプリ内メッセージがすべてのユーザーに表示されなかった
 
 1. キャンペーンは、モバイルアプリまたはWebブラウザのいずれかを適切にターゲットとするように設定されているか。例として、キャンペーンがWebブラウザのみをターゲットにしている場合、Androidデバイスには送信されない。
 2. カスタムUIを実装し、意図したとおりに機能しているか？他のアプリ側のカスタム処理や抑制が表示を妨げていないか？ 
 3. この特定のプラットフォームとアプリのバージョンで、アプリ内メッセージが正常に表示されたことはあるか？
-4. トリガーはデバイスのローカルで行われたのか？RESTコールはSDKのアプリ内メッセージのトリガーには使えないことに注意。
+4. トリガーはデバイスのローカルで行われたのか？REST コールを使用して SDK のアプリ内メッセージをトリガーすることはできません。
 
 #### アプリ内メッセージがすべてのユーザーに表示されなかった。
 
 1. ダッシュボードやアプリとの連携で、トリガーアクションは適切に設定されたか？
 2. 期待されたメッセージの代わりに、より優先順位の高い別のアプリ内メッセージが表示されたか？
-3. SDKのバージョンは新しいか？アプリ内メッセージの種類によってはSDKのバージョン要件がある。
+3. 使用している SDK のバージョンは新しいですか？アプリ内メッセージの種類によってはSDKのバージョン要件がある。
 4. セッションは適切に統合されているか？このアプリでセッション分析は機能しているか？
 
-これらのシナリオの詳細については、[高度なトラブルシューティングのセクションを](#troubleshooting-in-app-advanced)参照のこと。
+これらのシナリオの詳細については、[高度なトラブルシューティングのセクション](#troubleshooting-in-app-advanced)を参照してください。
 
 ## インプレッションとクリック分析の問題点
 
 {% if include.sdk == "iOS" %}
 #### インプレッションとクリックが記録されない
 
-アプリ内メッセージデリゲートを設定し、メッセージ表示やクリックアクションを手動で処理する場合、アプリ内メッセージの[クリック](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:))数や[インプレッションを](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:))手動で[記録する](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:))必要がある。
+メッセージ表示またはクリックアクションを手動で処理するようにアプリ内メッセージデリゲートを設定している場合は、アプリ内メッセージの[クリック数](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:))と[インプレッション数](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:))を手動で記録しなければなりません。
 {% elsif include.sdk == "Android" %}
 #### インプレッションとクリックが記録されない
 アプリ内メッセージデリゲートを設定し、メッセージ表示やクリックアクションを手動で処理する場合、アプリ内メッセージのクリック数やインプレッションを手動で記録する必要がある。
@@ -51,13 +51,13 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 
 #### メッセージが要求され、返されたかどうかを確認する
 
-1. ダッシュボードの[テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) )として追加する。
+1. ダッシュボードで [テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) として自分自身を追加します。
 2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
 3. アプリケーションで新しいセッションが発生することを確認します。
-4. event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) ) を使って、デバイスがセッション開始時にアプリ内メッセージを要求していることを確認する。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
+4. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
   - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
   - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、[**レスポンスデータ］**] の [**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
-5. event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) ) を使って、レスポンスデータに正しいアプリ内メッセージが返されているかどうかをチェックする。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### リクエストされていないメッセージのトラブルシューティング
 
@@ -70,11 +70,11 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
 
 - セグメントにユーザーが含まれていない。
-  - ユーザーの[\*\*エンゲージメント**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) タブで、**セグメントの**下に正しいセグメンテーションが表示されているか確認する。
+  - ユーザーの [\*\*エンゲージメント**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
 - ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-  - **キャンペーンコンポーザーの** **配信**ステップにある[キャンペーンの再資格設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) )を確認し、再資格設定があなたのテスト設定と一致していることを確認する。
+  - **キャンペーン作成ツール**の**配信**ステップの [キャンペーン再適格性設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) を確認し、再適格性設定がテスト設定と整合していることを確認します。
 - ユーザーがキャンペーンのフリークエンシーキャップに達した。
-  - キャンペーン[フリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) )を確認し、テストの設定と一致していることを確認する。
+  - キャンペーン [フリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) を確認し、テスト設定と整合していることを確認します。
 - キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。
   - キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
   - 統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。
