@@ -1,18 +1,20 @@
 ---
 nav_title: Contenu dynamique
-article_title: Partenaires de contenus dynamiques
+article_title: Partenaires de contenu dynamiques
 page_order: 2
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le contenu dynamique à votre envoi de messages."
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d'inclure du contenu dynamique dans votre envoi de messages."
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Contenu dynamique"
+partner_top_header: "Dynamic Content"
 
 valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
+- name: OfferFit
+  url: /docs/partners/message_personalization/dynamic_content/offerfit/
 - name: Worthy
   url: /docs/partners/message_personalization/dynamic_content/worthy/
 - name: Certona
@@ -31,12 +33,22 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Personalize.AI
+  url: /docs/partners/message_personalization/dynamic_content/personalize/
 - name: Dynamic Yield
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
-
-
+- name: Fresh Relevance
+  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
+- name: Stylitics
+  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+- name: NiftyImages
+  url: /docs/partners/message_personalization/dynamic_content/niftyimages
+- name: "L'hymne du futur"
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: VOIR
+  url: /docs/partners/message_personalization/dynamic_content/seen
 ---
