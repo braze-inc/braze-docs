@@ -43,7 +43,7 @@ ESPによっては、クリックトラッキングされたユニバーサル�
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
-[3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
+[3]: https://help.branch.io/developers-hub/docs/ios-universal-links
 [4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
 [5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
