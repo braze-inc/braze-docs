@@ -1,14 +1,14 @@
 ---
-nav_title: Localisation contextuelle
+nav_title: Emplacement contextuel
 article_title: Partenaires de localisation contextuelle
 page_order: 1
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de récolter des données de localisation dans vos campagnes de communication."
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de collecter des données d'emplacement/localisation à utiliser dans vos campagnes d'envoi de messages."
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Localisation contextuelle"
+partner_top_header: "Contextual Location"
 
 valid_partner_list:
 - name: AccuWeather
@@ -23,5 +23,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: loplat
   url: /docs/partners/message_personalization/location/loplat/
-
+- name: Mandarine
+  url: /docs/partners/message_personalization/location/tangerine/
 ---
