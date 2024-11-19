@@ -1,0 +1,81 @@
+이 템플릿을 사용하여 Braze 문서용 페이지 또는 섹션을 만들 수 있습니다. 예는 [미리 보기 생성]({{site.baseurl}}/contributing/generating_a_preview/)을 참조하세요. 문서 내에서 사용되는 설명서 유형에 대한 가이드라인은 [페이지 유형]({{site.baseurl}}/contributing/page_types/)을 참조하세요.
+
+{% details 템플릿 표시 %}
+{% raw %}
+`````markdown
+---
+nav_title: NAV_TITLE
+article_title: ARTICLE_TITLE
+description: "SHORT_DESCRIPTION."
+alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
+page_type: reference
+layout: OPTIONAL_LAYOUT_FILE
+---
+
+<!-- The title of your page, used to render the in-page title. -->
+# ARTICLE_TITLE
+
+<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
+> DESCRIPTION.
+
+INTRODUCTION.
+
+<!-- The prerequisites for this task. If no prerequisites are required, you can remove this section. -->
+## Prerequisites
+
+Before you start, you'll need to complete the following:
+
+- ACTION_TO_COMPLETE
+- ACTION_TO_COMPLETE
+- ACTION_TO_COMPLETE
+
+<!-- An optional, brief explanation of how the feature workflow looks. -->
+## How it works
+
+CONTENT.
+
+<!-- Walk a user through integrating and turning on the feature. -->
+ ## Integration
+CONTENT.
+
+<!-- A how-to guide with nested steps. -->
+## TASK_TO_COMPLETE
+
+<!-- Optional overview of the task. -->
+CONTENT.
+
+<!-- Action-oriented header that describes the step’s goal. -->
+### Step 1: ACTION_TO_COMPLETE
+
+<!-- Use number bullets or paragraphs to describe how to complete this action -->
+CONTENT.
+
+### Step 2: ACTION_TO_COMPLETE
+
+CONTENT.
+<!-- Optional references, such as supported data types, fields, definitions, and similar. -->
+### REFERENCE_TO_ASSIST_WITH_ACTION
+
+CONTENT.
+
+<!-- For optional steps, add “(optional)” to the end of the header. -->
+### Step 3: OPTIONAL_ACTION_TO_COMPLETE (optional)
+
+CONTENT.
+<!-- An optional section for what is supported. Add nested headers to be more specific. -->
+## Supported data types / Supported attributes / Supported events / Supported ETC.
+CONTENT.
+<!-- An optional section with important considerations for users to review before using the feature. -->
+## Considerations
+
+CONTENT.
+
+<!-- An optional section guiding users through troubleshooting common issues. -->
+## Troubleshooting
+
+### ISSUE_TO_TROUBLESHOOT
+CONTENT.
+
+`````
+{% endraw %}
+{% enddetails %}

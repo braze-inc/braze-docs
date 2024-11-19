@@ -17,12 +17,12 @@ OfferFitとBrazeインテグレーションを使用すると、顧客データ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |-------------|-------------|
 | OfferFit使用許諾 | このパートナーシップを活用するには、有効な OfferFit ライセンスが必要です。 |
 | Braze REST API キー | 次の権限を持つBraze REST API キー。 {::nomarkdown}<ul><li><code>users.export.ids</code></li><li><code>users.export.segment</code></li><li><code>messages.send</code></li><li><code>campaigns.trigger.send</code></li> <li><code>campaigns.list</code></li><li><code>campaigns.data_series</code></li><li><code>campaigns.details</code></li><li><code>canvas.trigger.send</code></li><li><code>canvas.list</code></li><li><code>canvas.data_series</code></li><li><code>canvas.details</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>templates.create</code></li><li><code>templates.update</code></li><li><code>templates.info</code></li><li><code>templates.list</code></li></ul>{:/} これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
 | Braze REST API エンドポイント | [REST API エンドポイントURL][1]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
@@ -53,7 +53,7 @@ OfferFitの使用許諾およびユースケースによって、使用するBra
 | [POST /templates/email/update]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)      | 既存の Braze HTML メールテンプレートを更新します。 |
 | [GET /templates/email/info]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/) | 特定の Braze HTML メールテンプレートの詳細を取得します。 |
 | [GET /templates/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)           | Braze で設定されているすべてのBraze HTML メール テンプレートと`subject line` および`HTML content` の一覧を取得します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -81,7 +81,7 @@ OfferFit人工知能は、あらゆる顧客の相互アクションから学び
 | **紹介** | 既存の顧客からのビジネスクレジットカード紹介による新規アカウントの開設を最大化する。 | すべての顧客に対する固定のメールシーケンスと、顧客群に対する最適な送信時刻、ケイデンスなどを判断するための大規模な AB テスト。 | 特定の顧客に対して理想的なメール、クリエイティブ、送信時刻、クレジットカードを決定するための実験を自動化する。 |
 | **リードナーチャリングとコンバージョン** | 増分収益を促進し、顧客ごとに適切な金額を支払う。 | Facebook などのプラットフォームでのプライバシーポリシーの変更に伴い、パーソナライズされた有料広告に対する以前のアプローチが最後に有効になります。 | 強固なファーストパーティデータを利用して、顧客セグメント、入札方法、入札レベル、クリエイティブに対する実験を自動的に行う。 |
 | **ロイヤルティとエンゲージメント** | 顧客ロイヤルティプログラムの新規登録者による購入を最大化する。 | 顧客のアクションに対して一定の順序でメールが顧客に送信された。たとえば、ロイヤルティプログラムのすべての新規登録者が同じジャーニーを受け取った。 | 各顧客の購入と再購入を最大化するため、さまざまなメールオファー、クリエイティブ、送信時刻、および頻度で実験を行う。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 ## 統合
@@ -96,7 +96,7 @@ Braze で少なくとも1つのセグメントを作成して、ターゲット�
 2. キャンペーンまたはキャンバスにBraze[コントロールグループ]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group)を含めないでください。これにより、OfferFit コントロールグループのみが有効になります。
 3. 寸法に応じて、クリエイティブコンテンツの「リキッドタグ」を設定して、キャンペーンまたはキャンバスにOfferFitの推奨事項をダイナミックな入力できます。OfferFit は、Braze API を介して顧客固有のコンテンツをテンプレートの Liquid タグに渡します。
 
-### ステップ3:OfferFit ユースケース設定をアップデートして、Brazeアクティベーションイベントを調整します
+### ステップ 3:OfferFit ユースケース設定をアップデートして、Brazeアクティベーションイベントを調整します
 
 OfferFitのネイティブアクティベーションインテグレーションをBraze で活用して、対象オーディエンスの1:1 パーソナライズされたの推奨を調整およびスケジュールできます。
 
@@ -104,7 +104,7 @@ OfferFitのネイティブアクティベーションインテグレーション
 
 OfferFit は、Braze でのアクティベーションイベントのオーケストレーションの他に、データ統合機能を提供します。このデータ統合機能により、利用可能な API エンドポイントを介して顧客プロファイル (非PII) とエンゲージメントデータを Braze から取得できます。
 
-## この統合の使用
+## この統合を使う
 
 OfferFitが設定されると、自動化された実験プラットフォームは、対象オーディエンスのユーザーごとに、自動的に1:1 パーソナライズされたアクティベーションイベントをBrazeに送信します。これらのアクティベーションイベントは、[ ステップ 2](#step-2) で設定したBraze キャンペーンs またはキャンバスを介してトリガーされます。
 

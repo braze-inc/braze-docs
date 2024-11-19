@@ -20,9 +20,9 @@ Braze と Merkury の統合により、`MerkuryID` を活用して、Braze の�
 | Merkle アカウント | このパートナーシップを活用するには、Merkle アカウントが必要です。 |
 | Merkleクライアント ID | Merkle の担当者からクライアント ID を取得します。 |
 | マーキュリータグ | Merkle の Merkury タグを Web サイトに配置します。 |
-| Braze RESTおよびSDKエンドポイント | RESTまたはSDKのエンドポイントURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
-| Braze REST API キー | `users.track, users.export.ids, users.export.segment, and segments.list` 権限を持つ Braze REST API キー。<br><br>これは **Brazeダッシュボード > \[開発者コンソール] > \[REST API キー] > \[新しい API キーを作成]** で作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Braze RESTおよびSDKエンドポイント | REST または SDK エンドポイントの URL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
+| Braze REST API キー | `users.track, users.export.ids, users.export.segment, and segments.list`の権限を持つBraze REST APIキー。<br><br>これは **Brazeダッシュボード > [開発者コンソール] > [REST API キー] > [新しい API キーを作成]** で作成できます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
 Braze への Merkury アイデンティティコネクターのリクエストは、Braze API レート制限仕様の範囲内で動作します。ご質問がある場合は、Braze または Merkle アカウントマネージャーにお問い合わせください。<br><br>Merkuryは、適格なセッションの終了時に少なくとも1つのリクエストを送信します。
@@ -48,7 +48,7 @@ Merkuryタグをウェブサイトに配置する。これにより、Merkury �
 | --- | --- | --- |
 | `hmid` | String | Merkle の Merkury ID |
 | `confidence_score` | 数値 | Merkury がどの程度の信頼度で識別できたか (1～8、小さいほど良い) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### ステップ4:Merkle にユーザーメールユニバースを提供する
 

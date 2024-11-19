@@ -20,7 +20,7 @@ Braze と Datadog の統合により、お客様は Datadog で Braze データ�
 | 必要条件 | 説明 |
 |---|---|
 | Datadogアカウント | このパートナーシップを活用するには、Datadog アカウントが必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -30,10 +30,10 @@ Datadog で [API キー](https://docs.datadoghq.com/account_management/api-app-k
 
 ### ステップ2:Braze にキーを追加する
 
-Braze ダッシュボードで \[**パートナー連携**] > \[**テクノロジーパートナー**] に移動し、\[**Datadog**] を探します。Datadog パートナーページで Datadog API キーを指定します。これで、Braze がDatadog にデータを送信するための接続が作成されます。
+Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Datadog**] を探します。Datadog パートナーページで Datadog API キーを指定します。これで、Braze がDatadog にデータを送信するための接続が作成されます。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
 ## Braze のイベント

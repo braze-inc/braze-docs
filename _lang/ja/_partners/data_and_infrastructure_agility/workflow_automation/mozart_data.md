@@ -38,9 +38,9 @@ table td {
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Mozart Data アカウント | このパートナーシップを活用するには、Mozart Data アカウントが必要です。[こちらからご登録ください。](https://app.mozartdata.com/signup)|
-| Snowflake アカウント<br>オプション 1: 新規アカウント | Mozart Data のアカウント作成プロセスで \[**Create a New Snowflake Account**] を選択すると、Mozart Data により新しい Snowflake アカウントがプロビジョニングされます。 |
+| Snowflake アカウント<br>オプション 1: 新規アカウント | Mozart Data のアカウント作成プロセスで [**Create a New Snowflake Account**] を選択すると、Mozart Data により新しい Snowflake アカウントがプロビジョニングされます。 |
 | Snowflake アカウント<br>オプション 2: 既存口座 | 組織がすでに Snowflake アカウントを所有している場合は、Mozart Data Connected オプションを使用できます。<br><br>既存のSnowflakeアカウントに接続するには、**Already Have a Snowflake Account**オプションを選択する。このオプションを使用する場合は、アカウントレベルの権限を持つユーザーが[以下の手順に従って操作する](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount)必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -50,14 +50,14 @@ table td {
 
 #### ステップ1:Braze コネクターを設定する
 
-1. Mozart Data で \[**Connectors**] に移動し、\[**Add Connector**] をクリックします。
+1. Mozart Data で [**Connectors**] に移動し、[**Add Connector**] をクリックします。
 2. 「Braze」を検索し、コネクターカードを選択します。
 3. Brazeから同期されたすべてのデータが保存される保存先スキーマ名を入力する。デフォルトのスキーマ名`braze` を使用することを推奨する。
-4. \[**Add Connector**] をクリックします。
+4. [**Add Connector**] をクリックします。
 
 #### ステップ2:Fivetran コネクターフォームに情報を入力します。
 
-Fivetran コネクターページにリダイレクトされます。このページで所定のフィールドに入力します。次に \[**Continue**] > \[**Save & Test**] をクリックし、Fivetran コネクターを完成させます。
+Fivetran コネクターページにリダイレクトされます。このページで所定のフィールドに入力します。次に [**Continue**] > [**Save & Test**] をクリックし、Fivetran コネクターを完成させます。
 
 Fivetran が、Braze アカウントから Snowflake データウェアハウスへのデータの同期を開始します。コネクターの同期が完了したら、Mozart Data からクエリデータにアクセスできます。 
 
@@ -69,11 +69,11 @@ Fivetran が、Braze アカウントから Snowflake データウェアハウス
 
 #### ステップ2:BrazeでSnowflakeとの統合をセットアップする
 
-Snowflake ウェアハウスの設定後に、Mozart Data の \[**Integration**] ページで \[**Braze**] を選択します。ここで、Braze に提供する必要がある認証情報を確認します。
+Snowflake ウェアハウスの設定後に、Mozart Data の [**Integration**] ページで [**Braze**] を選択します。ここで、Braze に提供する必要がある認証情報を確認します。
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-integrationpage.png %}){: style="max-width:80%;"}
 
-次に、Braze にサインインした状態で **\[統合] > \[テクノロジーパートナー] > \[Snowflake]** に移動し、統合プロセスを開始します。Mozart Data から認証情報をコピーし、Snowflake Data のインポートページに追加します。\[**同期の詳細を設定**] をクリックし、Snowflake アカウントとソーステーブルの情報を入力します。 
+次に、Braze にサインインした状態で **[統合] > [テクノロジーパートナー] > [Snowflake]** に移動し、統合プロセスを開始します。Mozart Data から認証情報をコピーし、Snowflake Data のインポートページに追加します。[**同期の詳細を設定**] をクリックし、Snowflake アカウントとソーステーブルの情報を入力します。 
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png %}){: style="max-width:80%;"}
 
@@ -81,7 +81,7 @@ Snowflake ウェアハウスの設定後に、Mozart Data の \[**Integration**]
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %}){: style="max-width:80%;"}
 
-#### ステップ 3:Braze ユーザーへの公開キーの追加
+#### ステップ3:Braze ユーザーへの公開キーの追加
 この時点で、Snowflake に戻って設定を完了する必要があります。Brazeのダッシュボードに表示される公開鍵を、BrazeがSnowflakeに接続するために作成したユーザーに追加する。
 
 その方法の詳細については、[Snowflake のドキュメント](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。任意の時点でのキーのローテーションを行う場合、Mozart Data は新規のキーペアを生成して、新規の公開キーを提供できます。
@@ -90,9 +90,9 @@ Snowflake ウェアハウスの設定後に、Mozart Data の \[**Integration**]
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 
-#### ステップ 4:テスト接続
+#### ステップ4:テスト接続
 
-ユーザーが公開キーで更新されたら、Braze ダッシュボードに戻って、\[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続に失敗した場合、トラブルシューティングに役立つエラーメッセージが表示される。
+ユーザーが公開キーで更新されたら、Braze ダッシュボードに戻って、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続に失敗した場合、トラブルシューティングに役立つエラーメッセージが表示される。
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-testsyncpublickey.png %}){: style="max-width:80%;"}
 
@@ -100,7 +100,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 連携を下書き状態からアクティブ状態に移行するには、連携のテストに成功する必要があります。作成ページを閉じる必要がある場合は、連携が保存されるので、詳細ページに再度アクセスして変更やテストを行うことができます。  
 {% endalert %}
 
-## この統合を使う
+## この統合を使用する
 
 ### Mozart Data のユーザーとして Braze のデータにアクセスする方法
 Mozart Data アカウントが作成されたら、Mozart Data から Snowflake データウェアハウスに同期された Braze データにアクセスできます。

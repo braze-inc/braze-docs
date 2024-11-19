@@ -9,7 +9,7 @@ description: "この記事には、2018年11月のリリースノートが含ま
 
 ### キャンバスエントリ設定ウィザード
 
-キャンバスUI は、タスクの失敗やエラーの発生を防ぐために簡素化されます。**\[キャンペーン]** ウィザードのデザインと同様に、キャンバス設定がウィザードに表示されます。詳細については、[キャンバスを作成する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)でステップを確認してください!
+キャンバスUI は、タスクの失敗やエラーの発生を防ぐために簡素化されます。**[キャンペーン]** ウィザードのデザインと同様に、キャンバス設定がウィザードに表示されます。詳細については、[キャンバスを作成する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)でステップを確認してください!
 
 この新機能についてより詳しく知りたい場合は、[エントリウィザード](https://learning.braze.com/the-new-canvas-entry-step/264889/scorm/20z5ij5ublxbk)に関する Brazeラーニングコースをご覧ください。
 

@@ -58,7 +58,7 @@ Braze のお客様は、Braze Webhook チャネルを構成してイベントを
 {% alert update %}
 キャンバスとキャンペーンの間で`dispatch_id`の動作が異なるのは、Brazeがキャンバスステップ（スケジュール可能なエントリステップを除く）を「スケジュールされた」場合でもトリガーイベントとして扱うためです。キャンバスやキャンペーンでの[`dispatch_id`動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)について詳しく学びましょう。
 
-_更新は2019年8月に記録されました。_
+_更新は 2019 年 8 月に記録されました。_
 {% endalert %}
 
 Currents の機能を継続的に強化する取り組みの一環として、すべてのコネクタータイプで Currents のメールイベントにフィールドとして `dispatch_id` を追加します。
@@ -102,6 +102,6 @@ _更新は2019年8月に記録されました。_
 
 最もエンゲージされたチャネルフィルターは、選択されたメッセージングチャネルが「最適な」チャネルであるオーディエンスの一部を選択します。この場合、「ベスト」とは「ユーザーの履歴を考慮した場合、エンゲージメントの可能性が最も高い」という意味です。メール、Web プッシュ、またはモバイルプッシュ（利用可能なモバイルOSやデバイスを含む）をチャネルとして選択できます。
 
-この新しいフィルターについては \[セグメンテーションフィルターライブラリ]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/). で確認してください。
+この新しいフィルターについては [セグメンテーションフィルターライブラリ]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/). で確認してください。
 
 [1]: {% image_buster /assets/img/iam_platforms.gif %}

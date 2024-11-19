@@ -12,9 +12,12 @@ guide_menu_list:
   - name: API を使用したユーザーの削除
     link: /docs/help/help_articles/api/delete_user/
     image: /assets/img/braze_icons/user-minus-01.svg
-  - name: ソース間におけるキャンペーンとキャンバスの属性の違い
+  - name: Brazeのキャンペーンとキャンバス属性
     link: /docs/help/help_articles/api/attribute_name_id_across_sources/
     image: /assets/img/braze_icons/info-circle.svg
+  - name: Webhookとコネクテッドコンテンツリクエスト 
+    link: /docs/help/help_articles/api/webhook_connected_content_errors/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 noindex: true
 ---

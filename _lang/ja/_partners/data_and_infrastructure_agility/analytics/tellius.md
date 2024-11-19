@@ -21,7 +21,7 @@ Braze と Tellius の統合により、ユーザーは BI エンジニアに依�
 | Tellius アカウント | このパートナーシップを活用するには、Tellius アカウントが必要です。[無料トライアル](https://www.tellius.com/free-trial/)で Tellius を利用してみることができます。|
 | Snowflake データシェアリングプログラム | 現在Snowflakeをご利用のお客様は、BrazeのデータをSnowflakeインスタンスに取り込むためのSnowflakeデータ共有プログラムについて、Brazeの担当者に問い合わせる。|
 | Snowflake Reader アカウント | Snowflakeをご利用でないお客様は、お客様のBrazeデータにアクセスするためのSnowflake Readerアカウントのプロビジョニングについて、Brazeの担当者にお問い合わせください。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

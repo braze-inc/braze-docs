@@ -18,13 +18,13 @@ BrazeとRadarの統合により、高度なロケーションベースのキャ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | Radar アカウント | このパートナーシップを活用するには、Radar アカウントが必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| アプリ識別子 | [アプリ識別子]({{site.baseurl}}/api/identifier_types/?tab=app%20ids)は、Braze ダッシュボードの \[**設定**] > \[**API キー**] で確認できます。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| アプリ識別子 | [アプリ識別子]({{site.baseurl}}/api/identifier_types/?tab=app%20ids)は、Braze ダッシュボードの [**設定**] > [**API キー**] で確認できます。 |
 | iOS API キー<br>Android API キー | これらのAPI キーsは、**設定**>**アプリ設定**のBraze ダッシュボード内にあります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
@@ -32,7 +32,7 @@ Braze SDK と Radar SDK 間でデータをマッピングするには、両方�
 
 統合を有効にするには:
 
-1. Radar の \[[Integrations](https://radar.com/documentation/integrations)] ページで Braze を見つけます。
+1. Radar の [[Integrations](https://radar.com/documentation/integrations)] ページで Braze を見つけます。
 1. **Enabled**を**Yes**に設定します。
 3. アプリ 識別子とAPI キーs に貼り付けます。
 

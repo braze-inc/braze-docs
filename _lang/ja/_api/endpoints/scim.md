@@ -26,7 +26,7 @@ guide_featured_list:
   - name: "PUT:更新ダッシュボードユーザーアカウント"
     link: /docs/post_update_existing_user_account/
     image: /assets/img/braze_icons/pencil-01.svg
-  - name: "削除:ダッシュボードユーザーアカウントを削除"
+  - name: "DELETE:ダッシュボードのユーザーアカウントを削除する"
     link: /docs/delete_existing_dashboard_user/
     image: /assets/img/braze_icons/trash-01.svg
 ---

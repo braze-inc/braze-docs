@@ -1,22 +1,22 @@
 ---
-nav_title: "POST: Send Campaigns via API-Triggered Delivery"
-article_title: "POST: Send Campaigns via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns Using API-Triggered Delivery"
+article_title: "POST: Send Campaigns Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns using API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
-# Send campaign messages via API-triggered delivery
+# Send campaign messages using API-triggered delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/send
 {% endapimethod %}
 
-> Use this endpoint to send immediate, one-off messages to designated users via API-triggered delivery.
+> Use this endpoint to send immediate, one-off messages to designated users using API-triggered delivery.
 
-API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom using your API.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). To send messages with this endpoint, you must have a [campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
-A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Example request
 ```
@@ -182,7 +182,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 Braze has a messaging object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call will process the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert important %}
-Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
+Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
 {% endalert %}
 
 {% endapi %}

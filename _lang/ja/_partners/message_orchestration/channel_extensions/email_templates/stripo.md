@@ -19,21 +19,21 @@ BrazeとStripoの統合により、カスタマイズしたStripoメールをエ
 | 必要条件 | 説明 |
 | ------------| ----------- |
 | Stripo アカウント | このパートナーシップを利用するには、Stripoアカウントが必要である。 |
-| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| クラスターインスタンス | Braze [クラスターインスタンス]({{site.baseurl}}/api/basics/#endpoints)は、Braze ダッシュボードと REST エンドポイントに対応しています。  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| クラスタインスタンス | Braze [クラスターインスタンス]({{site.baseurl}}/api/basics/#endpoints)は、Braze ダッシュボードと REST エンドポイントに対応しています。  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
 ### ステップ1:StripoのEメールを作成する
 
-Stripo プラットフォームで Stripo メールを作成し、\[**Export**] をクリックします。 
+Stripo プラットフォームで Stripo メールを作成し、[**Export**] をクリックします。 
 
 ![Stripo エクスポート]({% image_buster /assets/img_archive/stripo_export.png %})
 
 ### ステップ2:テンプレートをBrazeにエクスポートする
 
-表示されるダイアログで、エクスポート方法として \[**Braze**] を選択します。 
+表示されるダイアログで、エクスポート方法として [**Braze**] を選択します。 
 
 次に、**アカウント名** (ワークスペース名など)、**API キー**、**クラスタインスタンス**を入力します。
 

@@ -16,11 +16,11 @@ Braze と Playable の統合により、最高のコンテンツ( 高品質動�
 
 ## 前提条件
 
-| 要件 | 説明 | 
+| 必要条件 | 説明 | 
 | ----------- | ----------- |
 | Playable アカウント | このパートナーシップを活用するには、Playable アカウントが必要です。Playable アカウントをまだお持ちでない場合は、[こちら][signup]からご登録ください。
 ビデオコンテンツ | 動画ファイルを Playable にアップロードするか、または Facebook、Instagram、YouTube、X (旧 Twitter)、TikTok などの Web サイトの動画 URL を指定します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 実装
 

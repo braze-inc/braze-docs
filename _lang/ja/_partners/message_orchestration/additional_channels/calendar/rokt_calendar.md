@@ -21,10 +21,10 @@ Braze と Rokt Calendar の統合により、Rokt Calendar のサブスクライ
 | Rokt Calendar アカウント | このパートナーシップを利用するには、クライアント専用のRokt Calendarアカウントが必要である。[sales-calendar@rokt.com](mailto:sales-calendar@rokt.com)に連絡して、アカウント・マネージャーと話す。  |
 | Rokt Calendar の設定 | Roktカレンダーのアカウントマネージャーが、あなたのニーズに合わせて、以下のような設定を含む、最適なカレンダーを設定する：<br>\- マージフラグ<br>\- 加入者IDフォールバックフラグ<br>\- 必要であれば、電子メールのキャプチャ |
 | Rokt Calendar OAuth認証情報 | Roktカレンダーのアカウントマネージャーから提供されるこのキーで、BrazeとRoktカレンダーのアカウントを接続することができる。<br><br>これは、Brazeダッシュボードの**「設定**」>「**接続コンテンツ**」で作成できる。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。このキーを Rokt Calendar アカウントマネージャーに提供する必要があります。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。このキーを Rokt Calendar アカウントマネージャーに提供する必要があります。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
 | [Braze REST エンドポイント]({{site.baseurl}}/api/basics/#endpoints) | RESTエンドポイントのURL。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | 外部サブスクライバー ID | これは、Rokt Calendar サブスクリプションプロセスがカレンダーサブスクライバーと Braze ユーザーを照合するために使用する ID です。これを Rokt Calendar に渡します。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## オーディエンスセグメンテーション {#audience-segmentation}
 
@@ -48,7 +48,7 @@ Rokt Calendar での新規ユーザーの作成時、またはサブスクライ
 | `rokt:subscription_id` | 作成されたサブスクリプションに関連する、一意な識別子としてのサブスクリプションID。 | `06423672-b6ba-4536-aa36-70788a7a0a36` |
 | `rokt:subscription_method` | 作成されたサブスクリプションに関連するサブスクリプションメソッド（webcal/Google）。 | `WebCal/f5733866ade2` |
 | `rokt:tags` | 作成された購読に関連して使用されたカレンダータグ。 | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 また、Rokt Calendar は、ユーザーが Rokt Calendar をサブスクライブするとすぐに `subscribe` カスタムイベントをトリガーします。このカレンダーは、Braze セグメンテーションで使用することも、キャンペーンまたはキャンバスコンポーネントのトリガーとして使用することもできます。
 
@@ -182,7 +182,7 @@ Rokt Calendar では、認証のために Rokt Calendar コネクテッドコン
 | `eventEnd`<br>**\*必須**  | カレンダーに表示されるイベントの開始日時 | `2019-02-21T16:00:00` |
 | `eventTz`<br>**\*必須**  | カレンダーに表示されるイベントのタイムゾーン。適用可能なタイムゾーンのリストは[こちら](https://roktcalendar-api.readme.io/docs/timezones)で確認できます。 | `Eastern Standard Time` |
 | `notifyBefore`<br>**\*必須**  | カレンダーに表示されるイベントのリマインダー時刻。これは分単位で表されます。 | `15` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 

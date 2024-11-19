@@ -1,5 +1,5 @@
 ---
-nav_title: Voucherify推進規程一覧
+nav_title: Voucherifyとプロモーションコード一覧
 article_title: Voucherify と Braze のプロモーションコードリスト
 page_order: 4
 alias: /partners/voucherify/promotion/
@@ -20,10 +20,10 @@ Voucherify で、Voucherify キャンペーンに移動します。次に、**CS
 
 ## ステップ2:プロモーションコードリストを作成する
 
-\[**Data Settings**] > \[**Promotion Codes**] に移動し、\[**Promotion Code List**] をクリックします。
+[**Data Settings**] > [**Promotion Codes**] に移動し、[**Promotion Code List**] をクリックします。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**プロモーションコード** の下に**Integrations** があります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**プロモーションコード**] の下に [**統合**] があります。
 {% endalert %}
 
 Voucherify キャンペーンの名前を使用して、一覧に名前を付け、データコンシステンシーを確認できます。
@@ -44,11 +44,11 @@ Voucherify コードを含む CSV ファイルをアップロードします。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_import_codes.png %})
 
-リストにコードのみが含まれていること (列ヘッダーは含まれていないこと) を確認し、\[**Start Upload**] をクリックします。インポートが完了したら、**Save List**をクリックしてリストの詳細を確認します。
+リストにコードのみが含まれていること (列ヘッダーは含まれていないこと) を確認し、[**Start Upload**] をクリックします。インポートが完了したら、**Save List**をクリックしてリストの詳細を確認します。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## ステップ 4:Braze キャンペーンでのコードスニペットの使用
+## ステップ4:Braze キャンペーンでのコードスニペットの使用
 
 Braze キャンペーン内のリストからコードs を使用するには、スニペットをコピーしてメール本文に追加します。
 

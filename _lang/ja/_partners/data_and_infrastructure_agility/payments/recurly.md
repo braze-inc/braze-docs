@@ -21,11 +21,11 @@ Braze と Recurly の使用に関する追加の詳細については、[Recurly
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Recurly アカウント | このパートナーシップを活用するには、Brazeフィーチャーフラグが有効になっているエリート[Recurly](https://recurly.com/)サブスクリプションプランが必要です。Recurly プラットフォームでクレジット請求書を有効化する必要もあります。|
-| Braze REST API キー | `users.track`の権限を持つBraze REST APIキー。<br><br> これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。Recurly は `users.track` エンドポイントのみを使用するため、この権限のみで Recurly 専用キーをプロビジョニングすることをお勧めします。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1].お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。Recurly は `users.track` エンドポイントのみを使用するため、この権限のみで Recurly 専用キーをプロビジョニングすることをお勧めします。 |
+| Braze RESTエンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 
 ## 統合
 
@@ -33,7 +33,7 @@ Braze と Recurly の使用に関する追加の詳細については、[Recurly
 
 ### RecurlyをBrazeに接続
 
-1. Recurly で \[**Integrations**] > \[**Braze**] に移動します。Recurly の Braze統合設定ページに初めて移動すると、2 つのシステムを接続するように促されます。
+1. Recurly で [**Integrations**] > [**Braze**] に移動します。Recurly の Braze統合設定ページに初めて移動すると、2 つのシステムを接続するように促されます。
 
 2. 以下の認証情報を指定します。
 
