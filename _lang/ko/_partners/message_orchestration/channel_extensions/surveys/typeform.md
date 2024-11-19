@@ -29,7 +29,7 @@ Braze와 Typeform을 통합하면 다음과 같이 할 수 있습니다:
 
 ### 1단계: Typeform의 웹훅을 허용하도록 Braze 데이터 변환 설정 {#step-1}
 
-{% multi_lang_include create_transformation.md 위치="typeform" %}
+{% multi_lang_include create_transformation.md location="typeform" %}
 
 ### 2단계: Typeform 웹훅 설정
 
