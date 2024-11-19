@@ -29,7 +29,7 @@ channel:
 
 すべての国際番号は、`+` で始まり、その後に国別コードと電話番号が続きます(e.g `+442071838750`)。
 
-![]\[picture]{: style="max-width:50%;border: 0;"}
+![][picture]{: style="max-width:50%;border: 0;"}
 
 ただし、国コードや市外局番が異なる複数の地域に送信する場合は、`E.164` 形式を使用することをお勧めします。これは米国ベースの電話番号でも同様です。
 
@@ -44,12 +44,12 @@ channel:
 
 ### サブスクリプショングループをWhatsAppするためのユーザーの追加
 
-顧客が WhatsApp メッセージを受信するには、有効な電話番号を持っていて、サブスクリプショングループにオプトインしている必要があります。詳細については、[WhatsApp サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)を参照してください。
+顧客が WhatsApp メッセージを受信するには、有効な電話番号を持っていて、購読グループにオプトインしている必要があります。詳細については、[WhatsApp 購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)を参照してください。
 
 
 ### 同じ電話番号を持つ複数のユーザー
 
 複数のユーザーが1 つのキャンペーンまたはキャンバスステップのSegment内で同じ電話番号を持つ場合、Braze は送信を重複排除し、その1 つの電話番号に1 つのメッセージのみを送信します。 
 
-\[picture]: {% image_buster /assets/img/sms/e164.png %}
+[picture]: {% image_buster /assets/img/sms/e164.png %}
 
