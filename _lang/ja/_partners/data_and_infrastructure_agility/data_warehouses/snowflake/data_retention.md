@@ -1,5 +1,5 @@
 ---
-nav_title: "データ保持"
+nav_title: "データリテンション"
 article_title: Snowflake データリテンション
 page_order: 3
 description: "このページでは、Brazeのリテンションポリシーが適用されている場合に、フルイベントデータを保持する方法について説明する。"
