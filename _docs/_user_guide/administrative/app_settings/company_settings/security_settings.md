@@ -83,7 +83,7 @@ A reset can solve common authentication issues such as trouble with authenticato
 
 ## Elevated Access
 
-Elevated Access adds an extra layer of security for sensitive actions in your Braze dashboard. To use Elevated Access, go to **Settings** > **Admin Settings** > **Security Settings** and toggle it on. When it’s on, users need to re-verify their account before exporting a segment or viewing an API key.
+Elevated Access adds an extra layer of security for sensitive actions in your Braze dashboard. When active, users need to re-verify their account before exporting a segment or viewing an API key. To use Elevated Access, go to **Settings** > **Admin Settings** > **Security Settings** and toggle it on. 
 
 If a user can’t re-verify, they’ll be redirected to where they left off and won’t be able to continue with the sensitive action. After they successfully re-verify, they won’t need to do so again for the next hour—unless they log out first.
 
