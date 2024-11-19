@@ -1,14 +1,14 @@
 ---
-nav_title: Analyse des incidents
-article_title: Partenaires d’analyse des incidents
+nav_title: Analyse des défaillances
+article_title: "Partenaires d'analyse des défaillances"
 layout: partner_page
 page_order: 4
 
 page_type: landing
-search_tag: Partenaire
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’analyser les données d’incident de votre application."
+search_tag: Partner
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d'analyser les données des défaillances de votre application."
 
-partner_top_header: "Analyse des incidents"
+partner_top_header: "Crash Analytics"
 
 valid_partner_list:
 - name: Apteligent
