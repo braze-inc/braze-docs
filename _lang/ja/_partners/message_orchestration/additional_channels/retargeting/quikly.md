@@ -16,13 +16,13 @@ BrazeとQuiklyのパートナーシップにより、Brazeのカスタマージ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Quikly アカウント | このパートナーシップを利用するには、[Quikly][1]ブランドパートナーアカウントが必要です。 |
-| Braze REST API キー | `users.track`の権限を持つBraze REST APIキー。<br><br> これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][2].お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze REST API キー | `users.track`、`subscription.status.set`、`users.export.ids`、`subscription.status.get` の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][2]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Quikly APIキー（オプション） | クライアントの成功マネージャーによって提供されたQuikly APIキー（Webhookのみ）。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -134,7 +134,7 @@ Webhook を使用して、カスタマージャーニーの特定のイベント
 将来のキャンペーンやキャンバスのためにQuiklyのWebhookテンプレートを作成するには、Brazeプラットフォームの**テンプレート** > **Webhookテンプレート**に移動します。 
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**エンゲージメント** > **テンプレートとメディア** > **Webhookテンプレート**に移動します。
+[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
 {% endalert %}
 
 新しいキャンペーンを作成する際に、QuiklyのWebhookキャンペーンを一度だけ作成するか、既存のテンプレートを使用する場合は、Brazeで**Webhook**を選択してください。
@@ -143,13 +143,13 @@ Webhook を使用して、カスタマージャーニーの特定のイベント
 - **Webhook URL**: https://api.quikly.com/webhook/braze
 - **リクエスト本文**:JSONキー/値のペア
 
-#### リクエストヘッダーとメソッド
+#### リクエストヘッダと方法
 
 Quikly では認証に `HTTP Header` が必要です。
 
-- **HTTPメソッド**:POST
+- **HTTPメソッド**：POST
 - **リクエストヘッダー**:
-  - **Authorization**:ベアラー \[PARTNER_AUTHORIZATION_HEADER]
+  - **Authorization**:ベアラー [PARTNER_AUTHORIZATION_HEADER]
   - **Content-Type**: application/json
 
 #### Request body
@@ -168,7 +168,7 @@ Quikly では認証に `HTTP Header` が必要です。
 **プレビュー** パネルでリクエストをプレビューするか、`Test` タブに移動して、ランダムなユーザー、既存のユーザーを選択するか、Webhookをテストするために独自のユーザーをカスタマイズできます。
 
 {% alert important %}
-ページを離れる前にテンプレートを保存することを忘れないでください！<br>新しい[Webhookキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を作成する際に、更新されたWebhookテンプレートは**保存されたWebhookテンプレート**リストにあります。
+ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
 
 {% endtab %}
