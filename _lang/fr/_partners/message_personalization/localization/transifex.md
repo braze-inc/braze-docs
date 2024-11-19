@@ -2,34 +2,34 @@
 nav_title: Transifex
 article_title: Transifex
 alias: /partners/transifex/
-description: "Cet article de référence présente le partenariat entre Braze et Transifex, une plateforme de localisation qui vous permet d’automatiser la traduction afin que vous puissiez vous concentrer sur la prestation d’expériences client attrayantes."
+description: "Cet article de référence présente le partenariat entre Braze et Transifex, une plateforme de localisation qui vous permet d'automatiser la traduction en libérant vos équipes pour qu'elles se concentrent sur la fourniture d'expériences client brillantes."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Transifex
 
-> Transifex permet une localisation efficace de votre base utilisateur, quelle que soit sa langue.
+> Transifex permet une localisation robuste à travers votre base d'utilisateurs, quelle que soit la langue.
 
-L’intégration Braze et Transifex tire parti du contenu connecté pour vous permettre d’extraire une collection de chaînes de ressources et d’inclure des traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basé sur la langue. Cela automatise la traduction et libère vos équipes pour qu’elles puissent se concentrer sur la prestation d’expériences client exceptionnelles.
+L'intégration de Braze et Transifex s'appuie sur le contenu connecté pour vous permettre d'extraire une collection de chaînes de caractères de ressources et d'inclure les traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basées sur la langue. Cette intégration automatise la traduction et libère vos équipes pour qu'elles se concentrent sur la fourniture d'expériences client brillantes.
 
 {% alert important %}
-À partir du 7 avril 2022, les versions 2 et 2.5 de l’API de Transifex sont devenues obsolètes et sont remplacées par la version 3. Les versions v2 et v2.5 ne sont plus opérationnelles, et les demandes correspondantes n’aboutissent plus. <br><br>Les instructions d’intégration suivantes reflètent la mise à jour à la version 3. Mettez à jour vos appels de Contenu connecté en conséquence.
+Depuis le 7 avril 2022, Transifex a supprimé les versions 2 et 2.5 de son API pour faire place à la version 3\. Les versions 2 et 2.5 ne sont plus prises en charge et les requêtes correspondantes échoueront. <br><br>Les instructions d'intégration suivantes tiennent compte de la mise à jour de la version 3. Mettez à jour vos appels au contenu connecté en conséquence.
 {% endalert %}
 
 ## Conditions préalables
 
 | Condition| Description|
 | ---| ---|
-|Compte Transifex | Un [compte Transifex](https://www.transifex.com/signin/) est nécessaire pour profiter de ce partenariat. |
-{: .reset-td-br-1 .reset-td-br-2}
+|Compte Transifex | Un [compte Transifex](https://www.transifex.com/signin/) est nécessaire pour bénéficier de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
 
-L’intégration de Transifex utilise l’[API de traductions de ressources](https://developers.transifex.com/reference/get_resource-translations) de Transifex. Le cURL suivant vous permettra de voir si votre compte a des valeurs de contenu associées à des traductions. 
+L'intégration de Transifex utilise l’[API de traduction des ressources](https://developers.transifex.com/reference/get_resource-translations) de Transifex. L’outil cURL suivant vous permettra de voir si votre compte a des valeurs de contenu associées à des traductions. 
 
-Tout d’abord, saisissez le `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` et `<RESOURCE_NAME>` trouvés sur votre compte Transifex. Ensuite, remplacez `<LANGUAGE>` par le code de langue par lequel vous souhaitez filtrer les traductions, et `<TRANSIFEX_BEARER_TOKEN>` par votre [jeton porteur](https://developers.transifex.com/reference/api-authentication) Transifex.
+Tout d'abord, saisissez les adresses `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` et `<RESOURCE_NAME>` qui se trouvent dans votre compte Transifex. Ensuite, remplacez `<LANGUAGE>` par le code de la langue par laquelle vous souhaitez filtrer les traductions, et `<TRANSIFEX_BEARER_TOKEN>` par votre [jeton de porteur](https://developers.transifex.com/reference/api-authentication)Transifex.
 
 ```
 curl --request GET \
@@ -38,11 +38,11 @@ curl --request GET \
      --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475ed68d90a2295302'
 ```
 
-Par exemple, si votre projet Transifex est situé à `https://www.transifex.com/appboy-3/french2/french_translationspo/`, le `project_name` sera « french2 » et le `resource_name` sera « french_translationspo ».
+Par exemple, si votre projet Transifex se trouve à l’emplacement `https://www.transifex.com/appboy-3/french2/french_translationspo/`, le `project_name` sera "french2" et le `resource_name` sera "french_translationspo".
 
-## Exemple de message de contenu connecté
+## Exemple de message sur le contenu connecté
 
-Cet exemple d’extrait de code utilise l’API de traduction de ressources de Transifex et l’attribut `language` de l’utilisateur. En fonction de vos besoins, vous pouvez ensuite parcourir les objets de chaîne de caractères et extraire le contenu pertinent en utilisant la logique Liquid suivante : `{{strings.data[X].attributes.strings.other}}`.
+Cet extrait de code utilise l'API de traduction des ressources Transifex et l'attribut `language` de l'utilisateur. En fonction de vos besoins, vous pouvez ensuite parcourir les objets de la chaîne de caractères et en extraire le contenu pertinent à l'aide du Liquid suivant : `{{strings.data[X].attributes.strings.other}}`.
 
 {% raw %}
 ```
