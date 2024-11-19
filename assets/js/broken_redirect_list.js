@@ -1245,4 +1245,6 @@ validurls['/docs/developer_guide/platform_wide/getting_started/platform_overview
 validurls['/docs/developer_guide/platform_integration_guides/sdk_primer'] = '/docs/developer_guide/getting_started/sdk_overview';
 validurls['/docs/developer_guide/platform_wide/sending_test_messages'] = '/docs/developer_guide/sending_test_messages';
 
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/';
+
 // validurls['OLD'] = 'NEW';
