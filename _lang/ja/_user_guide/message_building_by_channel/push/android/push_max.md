@@ -16,21 +16,21 @@ channel:
 > Push Max について、およびこの機能を使用して、[中国のOEM デバイス]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/) へのAndroid プッシュ通知の配信性を向上させる方法について説明します。
 
 
-## プッシュマックスとは。
+## 最大限にプッシュ通知
 
-\[最大限にプッシュ通知] は、失敗したプッシュ通知をトラッキングし、ユーザーがプッシュ通知を受信する可能性が高いときにプッシュ通知を再送信することで、Android プッシュ通知を強化します。
+[最大限にプッシュ通知] は、失敗したプッシュ通知をトラッキングし、ユーザーがプッシュ通知を受信する可能性が高いときにプッシュ通知を再送信することで、Android プッシュ通知を強化します。
 
-Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufacturers(OEM)によって製造されたいくつかのAndroid装置は、バッテリ寿命を延ばすためにロバストなバッテリ最適化方式を採用している。この振る舞いは、バックグラウンド アプリプロセッシングをシャットダウンする意図しない結果をもたらす可能性があり、アプリがフォアグラウンドにない場合、これらの装置上のプッシュ通知sの配信可能性を低下させる。この状況は、アジア太平洋(APAC)市場で最も頻繁に発生する。
+Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufacturers(OEM)によって製造されたいくつかのAndroid装置は、バッテリ寿命を延ばすためにロバストなバッテリ最適化方式を採用している。この動作は、バックグラウンドのアプリ処理をシャットダウンするという意図しない結果をもたらす可能性があります。これにより、アプリがフォアグラウンドにない場合、これらのデバイスでプッシュ通知の配信性が低下します。この状況は、アジア太平洋 (APAC) 市場で最も頻繁に発生します。
 
 ## 可用性
 
-- Android プッシュ通知 sのみ使用可能
+- Android のプッシュ通知にのみ使用できます
 - アクション ベースまたはAPI トリガーメッセージではサポートされません
 - [ユーザーの最後に使用したデバイス]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options)にのみ送信するオプションが選択されている場合はサポートされません
 
 ## 前提条件
 
-プッシュマックスを使用して送信されたプッシュ通知は、少なくとも次の[最小SDKバージョン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)を持つ機器にのみ配信されます。
+最大限にプッシュ通知の機能を使用して送信されたプッシュ通知は、次の[SDK の最小バージョン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)以降を持つデバイスにのみ配信されます。
 
 {% sdk_min_versions android:29.0.1 %}
 
@@ -41,45 +41,45 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 
 キャンペーンでプッシュマックスを使用するには:
 
-1. 押しキャンペーンを作成します。
+1. プッシュキャンペーンを作成します。
 2. ** Android Push** をプラットフォームとして選択します。
 3. **Schedule Delivery**ステップに移動します。
 4. **Send using Push Max**を選択します。
 
-![スケジュール配信ステップのAndroidプッシュ配信セクションで、"Send using Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})を選択します。
+![スケジュール配信ステップの [最大限にプッシュ通知] を使用して送信] オプションを持つ [Android プッシュ通知配信] セクション。]({% image_buster /assets/img_archive/push_max_campaigns.png %}
 
 {% endtab %}
 {% tab キャンバス %}
 
-キャンバスで最大プッシュを使用するには:
+キャンバスで最大限にプッシュ通知の機能を使用するには、次の手順に従います。
 
 1. キャンバスにメッセージステップを追加します。
 2. ** Android Push** をプラットフォームとして選択します。
-3. **Delivery Settings**タブに移動します。
+3. [**配信設定**] タブに移動します。
 4. **Send using Push Max**を選択します。
 
-![Android プッシュメッセージステップの配信設定タブで、"Send using Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})オプションを使用します。
+![Android プッシュ通知メッセージステップの [最大限にプッシュ通知] を使用して送信] オプションを持つ [配信設定] タブ。]({% image_buster /assets/img_archive/push_max_canvas.png %}
 
 {% endtab %}
 {% endtabs %}
 
-以下の2 つの機能(インテリジェントタイミングと生存時間)は、プッシュマックスと同時に使用することで、Android プッシュ通知s の配信機能を向上させることができます。
+インテリジェントタイミングと有効時間の 2 つの機能を最大限にプッシュ通知の機能と組み合わせて使用すると、Android プッシュ通知の配信性が向上する可能性があります。
 
 ### インテリジェントタイミング
 
-Max を押してください。[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) がオンのときに最適です。インテリジェントタイミングでは、ユーザーがアプリを使用している可能性が最も高く、プッシュが配信される可能性が最も高い時点で、プッシュ通知を計算して送信できます。
+[[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)] がオンのときに、最大限にプッシュ通知の効果が最大に発揮されます。インテリジェントタイミングでは、ユーザーがアプリを使用している可能性が最も高く、プッシュが配信される可能性が最も高い時点で、プッシュ通知を計算して送信できます。
 
-### 生存時間(TTL)
+### 有効時間 (TTL) 
 
-Time to Live (TTL) は、障害が発生したプッシュ通知をFirebase Cloud Messaging (FCM) に追跡し、ユーザーが受信する可能性があるときに通知を再試行できます。
+有効時間 (TTL) を使用すると、失敗したプッシュ通知を Firebase Cloud Messaging (FCM) まで追跡し、ユーザーが受信する可能性があるときに通知を再試行できます。
 
-デフォルトでは、Time to Live(生存期間)は最長である28日に設定されています。すべての新しいAndroidプッシュメッセージのデフォルト TTL を**設定**> **ワークスペース設定**> **存続期間へのプッシュ時間(TTL)**から減らすことができます。または、Android プッシュ通知を作成するときに**設定**タブでメッセージごとの日数を設定することができます。
+デフォルトで、[有効時間] は最長の 28 日に設定されています。すべての新しいAndroidプッシュメッセージのデフォルト TTL を**設定**> **ワークスペース設定**> **存続期間へのプッシュ時間(TTL)**から減らすことができます。または、Android プッシュ通知を作成するときに**設定**タブでメッセージごとの日数を設定することができます。
 
-![生存フィールド期間が28 日に設定されます。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![28 日に設定されている [有効時間] フィールド。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
 
 ## 知っておくべきこと
 
-### 推進コード
+### プロモーションコード
 
 Braze [プロモーションコードs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/)は、プッシュマックスが有効になっているメッセージでは使用しないことをお勧めします。
 
@@ -87,4 +87,4 @@ Braze [プロモーションコードs]({{site.baseurl}}/user_guide/personalizat
 
 ### キャンバスイベントのプロパティとエントリのプロパティ
 
-メッセージに[キャンバスのエントリプロパティーまたはイベントプロパティー]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) へのLiquid 参照を含めると、Push Max が期待どおりに機能しない場合があります。これは、プッシュマックスがメッセージを再送信しようとしているときに、エントリおよびイベントプロパティーが使用できないためです。
+メッセージに[キャンバスのエントリプロパティーまたはイベントプロパティー]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) へのLiquid 参照を含めると、Push Max が期待どおりに機能しない場合があります。これは、最大限にプッシュ通知の機能がメッセージの再送信を試行しているときに、エントリおよびイベントのプロパティが使用できないためです。

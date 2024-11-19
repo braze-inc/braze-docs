@@ -4,7 +4,7 @@ article_title: キャンペーン
 page_order: 2
 layout: dev_guide
 guide_top_header: "キャンペーン"
-guide_top_text: "1回のメッセージ送信でユーザーと関わりたい場合は、サポートされている<a href='/docs/user_guide/message_building_by_channel/'>メッセージング・チャンネルを</a>使用してキャンペーンを送信することができる。ほとんどのマルチステップ・ユーザージャーニーは、<a href='/docs/user_guide/engagement_tools/canvas/'>キャンバスとして</a>作成するのが良い。<br> <br>以下のトピックのいずれかを選択すると、興味のある記事が表示される。"
+guide_top_text: "1 つのメッセージステップでユーザーとエンゲージする場合は、サポートされている任意の<a href='/docs/user_guide/message_building_by_channel/'>メッセージングチャネル</a>を使用して、ユーザーにキャンペーンを送信できます。ほとんどのマルチステップ・ユーザージャーニーは、<a href='/docs/user_guide/engagement_tools/canvas/'>キャンバスとして</a>作成するのが良い。<br> <br>以下のトピックのいずれかを選択すると、興味のある記事が表示される。"
 tool: Campaigns
 page_type: landing
 description: "このランディングページは、Braze ダッシュボードキャンペーンのホームです。ここでは、キャンペーンの作成、キャンペーンの管理とテスト、役立つアイデアや戦略に関するリソースを見つけることができます。"

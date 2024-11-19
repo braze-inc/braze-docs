@@ -25,7 +25,7 @@ Brazeでは、エンゲージメントの指標と、メッセージングがど
 
 - 多変量][4] キャンペーンまたはキャンバス]の当選メッセージのバリエーションを計算する。
 - キャンペーンまたはキャンバスの収益を計算する期間を指定します。
-- \[インテリジェントセレクション][5] を使用してキャンペーンやキャンバスのメッセージ配布を調整します。
+- [インテリジェントセレクション][5] を使用してキャンペーンやキャンバスのメッセージ配布を調整します。
 
 {% alert note %}
 Liquid の `abort` タグを使ってメッセージが中止された場合、中止の可能性があるのはバリアントを通過したユーザーだけです。これは、コントロールグループを通過したユーザーへのメッセージが中止されないことを意味し、バリアントグループとコントロールグループ間でコンバージョン率が偏る可能性がある。回避策として、[セグメンテーションを使って]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment)、キャンペーンとキャンバスのエントリー時にユーザーをターゲティングする。
@@ -75,4 +75,4 @@ Liquid の `abort` タグを使ってメッセージが中止された場合、�
 [2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing
-[5]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[5]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/

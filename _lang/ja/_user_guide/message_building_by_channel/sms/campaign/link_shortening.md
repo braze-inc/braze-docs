@@ -28,20 +28,32 @@ URLの長さは、有効になっているトラッキングの種類によっ�
 静的な短縮URLは、作成日から1年間有効です。Liquidパーソナライゼーションを含む短縮URLは2か月間有効です。
 
 {% alert note %}
-Sage AIの[インテリジェントチャネルフィルター]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/)を使用する予定があり、SMSチャネルを選択可能にしたい場合は、高度なトラッキングおよび[クリックトラッキング]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking)を使用してSMSリンクの短縮をオンにしてください。
+BrazeAI<sup>TM</sup>[インテリジェント・チャネル・フィルタ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)を使用し、SMS チャネルを選択できるようにする場合は、SMS リンクの短縮と高度なトラッキング、[クリックトラッキング]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking)をオンにします。
 {% endalert %}
 
-### リンク短縮の有効化
+### リンク短縮の使用
 
-リンク短縮を有効にするには、メッセージ作成画面のリンク短縮トグルが有効になっていることを確認してください。そこから、それぞれのラジアルボタンを選択して、基本的なトラッキングまたは高度なトラッキングを使用するかを選択します。 
+リンク短縮を使用するには、メッセージコンポーザーのリンク短縮トグルがオンになっていることを確認します。次に、ベーシックトラッキングまたはアドバンストトラッキングを使用することを選択します。
 
 ![][1]
 
-BrazeがURLを認識するには、それらは_http://_または_https://_で始まる必要があります。URL が認識されると、**プレビュー** ペインがプレースホルダー URL で更新されます。BrazeはURLを短縮した後の長さを見積もりますが、警告が表示され、テストユーザーを選択してメッセージを下書きとして保存するよう促され、より正確な見積もりが得られます。
+Braze は、`http://` または`https://` で始まるURL のみを認識します。URL が認識されると、**プレビュー** セクションがプレースホルダURL で更新されます。BrazeはURLを短縮した後の長さを見積もりますが、警告が表示され、テストユーザーを選択してメッセージを下書きとして保存するよう促され、より正確な見積もりが得られます。
 
 ![][3]
 
-### URL内のLiquidパーソナライゼーション
+#### UTMパラメータの追加
+
+リンクの短縮により、URL を自動的に追跡できますが、URL にUTM パラメータを追加して、Google Analytics などのサードパーティの分析ツールでキャンペーンのパフォーマンスを追跡することもできます。
+
+URL にUTM パラメータを追加するには、次の手順を実行します。
+
+1. ベースURL から始めます。これは、追跡するページのURL です(`https://www.example.com` など)。
+2. ベースURL の後に疑問符(?) を追加します。
+3. アンパサンド(&) で区切られた各UTM パラメータを追加します。
+
+例は`https://www.example.com?utm_source=newsletter&utm_medium=sms`です。
+
+### URL での Liquid パーソナライゼーション
 
 Brazeコンポーザー内でURLをダイナミックに構築できるため、URLにダイナミックなUTMパラメーターを追加したり、ユーザーにユニークなリンクを送信したりできます（放棄カートや在庫が戻った特定の商品にユーザーを誘導するなど）。
 
@@ -70,28 +82,28 @@ https://example.com/{{url_var}}
 
 LiquidによってレンダリングされるURLは、APIトリガーのプロパティに含まれているものも短縮されます。例えば、{% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %}が有効なURLを表す場合、SMSメッセージを送信する前にそのURLを短縮して追跡します。 
 
-#### メッセージ/送信でURLを短縮する
+#### /messages/send エンドポイントでのURL の短縮
 
-リンクの短縮化は、[`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)エンドポイントを通じてAPI専用メッセージにも対応しています。基本的または高度なトラッキングを有効にするには、`link_shortening_enabled` または `user_click_tracking_enabled` リクエストパラメータを使用します。
+リンク短縮は、[`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を介してAPI 専用メッセージに対しても有効になります。基本的または高度なトラッキングを有効にするには、`link_shortening_enabled` または `user_click_tracking_enabled` リクエストパラメーターを使用します。
 
 | パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`link_shortening_enabled`| オプション | ブール値 | `link_shortening_enabled`を`true`に設定して、リンクの短縮とキャンペーンレベルのクリックトラッキングを有効にします。トラッキングを使用するには、`campaign_id`と`message_variation_id`が存在している必要があります。|
-|`user_click_tracking_enabled`| オプション | ブール値 | `user_click_tracking_enabled`を`true`に設定して、リンクの短縮、キャンペーンレベルおよびユーザーレベルのクリックトラッキングをオンにします。クリックされたURLのユーザーセグメントを作成するために、追跡されたデータを使用できます。トラッキングを使用するには、`campaign_id`と`message_variation_id`が存在している必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`link_shortening_enabled`| オプション | ブール値 | `link_shortening_enabled`を`true`に設定して、リンクの短縮とキャンペーンレベルのクリックトラッキングを有効にします。トラッキングを使用するには、`campaign_id` と `message_variation_id` が存在しなければなりません。|
+|`user_click_tracking_enabled`| オプション | ブール値 | `user_click_tracking_enabled`を`true`に設定して、リンクの短縮、キャンペーンレベルおよびユーザーレベルのクリックトラッキングをオンにします。クリックされたURLのユーザーセグメントを作成するために、追跡されたデータを使用できます。トラッキングを使用するには、`campaign_id` と `message_variation_id` が存在しなければなりません。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-完全なリクエストパラメータのリストについては、[リクエストパラメータ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters)を参照してください。
+リクエストパラメータの完全なリストについては、[リクエストパラメータ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters)を参照してください。
 
 ## テスト
 
-常にメッセージをプレビューおよびテストしてから、キャンペーンまたはキャンバスを開始することをお勧めします。 
+キャンペーンまたはキャンバスを起動する前に、まずメッセージをプレビューしてテストすることをお勧めします。そのためには、**Test**タブをプレビューし、[content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups)または個々のユーザにSMSを送信します。 
 
-**テスト** タブに移動して、プレビューしてSMSを[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups)または個々のユーザーに送信します。プレビューは関連するパーソナライゼーションと短縮URLで更新されます。文字数と[課金対象のセグメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)も、レンダリングされたパーソナライゼーションと短縮URLを反映するように更新されます。 
+このプレビューは、関連するパーソナライゼーションと短縮されたURL で更新されます。文字数と[課金対象のセグメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)も、レンダリングされたパーソナライゼーションと短縮URLを反映するように更新されます。 
 
-テストメッセージを送信する前に、キャンペーンまたはキャンバスを保存して、メッセージに送信される短縮URLの表現を受け取るようにしてください。キャンペーンまたはキャンバスがテスト送信の前に保存されていない場合、テスト送信にはプレースホルダーURLが含まれます。
+テストメッセージを送信する前に、キャンペーンまたはキャンバスを保存して、メッセージに送信される短縮URLの表現を受け取るようにしてください。テスト送信前にキャンペーンまたはキャンバスが保存されていない場合、テスト送信にはプレースホルダURL が含まれます。
 
 {% alert important %}
-アクティブなキャンバス内で下書きが作成された場合、短縮URLは生成されません。キャンバス下書きがアクティブになると、実際の短縮URLが生成されます。
+アクティブなキャンバス内にドラフトが作成された場合、短縮されたURL は生成されません。キャンバスドラフトがアクティブになると、実際の短縮URL が生成されます。
 {% endalert %}
 
 ![][2]
@@ -108,7 +120,7 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 **歴史的パフォーマンス**と**SMS/MMSパフォーマンス**のチャートには、**総クリック数**のオプションも含まれており、クリックイベントの日次時系列が表示されます。クリック数はリダイレクト時（例えば、ユーザーがリンクを訪問したとき）に増加し、ユーザーごとに複数回増加することがあります。
 
-## リターゲティングユーザー
+## ユーザーのリターゲティング
 
 リターゲティングに関するガイダンスについては、[SMSリターゲティング]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)をご覧ください。
 
@@ -122,25 +134,27 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 ### ドメイン要件
 
-- ドメインはあなたが取得し、所有し、管理する必要があります。
+- ドメインは、お客様が調達し、所有し、管理しなければなりません。
 - この機能に使用されるドメインは一意でなければならず（つまり、あなたのWeb サイトのドメインとは異なる必要があります）、そのドメインはWebコンテンツをホストするために使用することはできません。
-  - また、`sms.braze.com`などのユニークなサブドメインを使用することもできます。
+  - また、`sms.braze.com` などの一意のサブドメインを使用することもできます。
 - できるだけ短い文字数のドメインを選択することをお勧めします。これにより、URLの長さを最小限に抑えることができます。
 
 #### カスタムドメインの委任
 
-ドメインをBrazeに委任すると、証明書の更新は自動的に行われ、サービスの中断を防ぎます。 
+ドメインを Braze に委任すると、サービスが失効しないように、証明書の更新が自動的に処理されます。 
 
 Braze にドメインを委任するには、次の手順に従ってください: 
 
-1. 上記の要件を満たすドメインを顧客成功マネージャーに持ってきてください。Brazeは、ドメインの既存のDNS構成を確認し、次のことを確認します。
-- CAAレコードは存在しません OR
-- CAAレコード*do*は存在しますが、{% raw %}`<any number> issue "letsencrypt.org"`{% endraw %}または{% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}のレコードがあります
-2. 新しいAレコードを4つ作成し、それぞれのIPに対して1つずつ作成し、それらがドメインリンクホストに存在する唯一のAレコードであることを確認します。
-- 151.101.130.133
-- 151.101.194.133
-- 151.101.2.133
-- 151.101.66.133
+1. 上記の要件を満たすドメインをカスタマーサクセスマネージャーに渡します。Braze は、ドメインの既存の DNS 設定をチェックし、次のことを確認します。
+
+- CAAレコードが存在しない OR
+- CAAレコード**do**は存在しますが、{% raw %}`<any number> issue "letsencrypt.org"`{% endraw %}または{% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}のレコードがあります
+
+2. 4 つの新しい A レコードを各 IP に 1 つずつ作成し、それ以外にドメインリンクホストに存在する A レコードがないことを確認します。
+- `151.101.130.133`
+- `151.101.194.133`
+- `151.101.2.133`
+- `151.101.66.133`
 
 ### カスタムドメインの使用
 
@@ -164,33 +178,31 @@ Braze にドメインを委任するには、次の手順に従ってくださ�
 
 いいえ。リンクの短縮は、SDKの統合なしで機能します。
 
-#### 私はどの個々のユーザーがURLをクリックしているかを知っていますか？
+#### URL をクリックしている個々のユーザーを特定することはできますか?
 
-そうです。高度なトラッキングがオンになっている場合、[SMSリターゲティングフィルター]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/)やCurrents経由で送信されたSMSクリックイベント（`users.messages.sms.ShortLinkClick`）を活用して、URLをクリックしたユーザーをリターゲティングすることができます。
+はい。**Advanced Tracking**をオンにすると、Currents経由で送信される[SMSリターゲットフィルタ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/)またはSMSクリックイベント(`users.messages.sms.ShortLinkClick`)を利用して、URLをクリックしたユーザーをリターゲットできます。
 
 #### URLを短縮する前にUTMパラメータを追加できますか？
 
-そうです。静的パラメータとダイナミックなパラメータの両方を追加できます。 
+はい。静的パラメータとダイナミックなパラメータの両方を追加できます。 
 
 #### 短縮URLはどのくらいの期間有効ですか？
 
-静的URLは、URL登録時（最初の送信など）から1年間有効です。
+静的URL は、最初に送信するなど、URL 登録時から1 年間有効です。動的URL は、URL 登録時から2 か月間有効です。
 
-ダイナミックなURは、URL登録時から2か月間有効です。
+#### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
 
-#### ディープリンクやユニバーサルリンクでリンク短縮は機能しますか？
-
-リンクの短縮は、_http://_ または _https://_ で始まる静的URLを短縮します。ただし、生成されたユニバーサルリンク（BranchやAppsFlyerなどのプロバイダーからのもの）をさらに短縮することはお勧めしません。これにより、これらのツールのアトリビューションやリダイレクトが壊れる可能性があります。
+リンク短縮は、`http://` または`https://` で始まる静的URL を短縮します。Branch やAppsflyer などのプロバイダから生成されたユニバーサルリンクをさらに短縮しないでください。これにより、属性やリダイレクトが壊れる可能性があります。
 
 ### カスタムドメイン
 
 #### 委任されたドメインは複数のサブスクリプショングループ間で共有できますか？
 
-はい、単一のドメインを複数のサブスクリプショングループで使用できます。そのためには、各サブスクリプショングループが関連付けられるドメインを選択します。
+はい。1 つのドメインを複数のサブスクリプショングループで使用できます。そのためには、各サブスクリプショングループが関連付けられるドメインを選択します。
 
-#### 委任されたドメインは複数のワークスペース間で共有できますか？
+#### 委任されたドメインは複数のワークスペース間で共有できますか?
 
-はい、ドメインは複数のワークスペース内のサブスクリプショングループに関連付けることができます。ワークスペースが同じ会社内に含まれている場合に限ります。
+はい。ドメインは、複数のワークスペース内のサブスクリプショングループに関連付けることができます。ワークスペースが同じ会社内に含まれていることが前提です。
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %}
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %}
