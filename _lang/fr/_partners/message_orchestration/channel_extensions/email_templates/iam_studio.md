@@ -1,66 +1,80 @@
 ---
 nav_title: IAM Studio
 article_title: IAM Studio
-description: "Cet article de référence présente le partenariat entre Braze et IAM Studio, une plateforme de personnalisation des messages qui vous permet de créer des expériences in-app riches et personnalisées et de les diffuser via Braze."
+description: "Cet article de référence décrit le partenariat entre Braze et IAM Studio, une plateforme de personnalisation de message qui vous permet de créer des expériences personnalisées et riches dans l'application et de les diffuser via Braze."
 alias: /partners/iam_studio/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # IAM Studio
 
-> [IAM Studio](https://www.inappmessage.com) est une plateforme de personnalisation de messages sans code qui vous permet de créer des expériences in-app enrichies et personnalisées et de les diffuser via Braze.
+> [IAM Studio](https://www.inappmessage.com) est une plateforme de personnalisation de message sans code qui vous permet de créer des expériences personnalisées et riches dans l'application et de les diffuser via Braze.
 
-Avec l’intégration Braze et IAM Studio, vous pouvez facilement insérer des modèles de messages in-app personnalisables dans vos messages in-app Braze, proposant le remplacement d’image, la modification de texte, les paramètres de lien profond, les attributs personnalisés et les paramètres d’événement. Grâce à IAM Studio, vous pouvez réduire le temps de production des messages et consacrer plus de temps à la planification du contenu. 
+L'intégration de Braze et d’IAM Studio, vous permet de facilement insérer des modèles de message in-app personnalisables dans vos messages in-app Braze, afin de rendre possible le remplacement d'image, la modification de texte, la définition de paramètres de lien profond, d’attributs personnalisés et de paramètres d'événement. En utilisant IAM Studio, vous pouvez réduire le temps de production de message et consacrer plus de temps à la planification du contenu. 
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
-| Compte IAM Studio | Un [compte IAM Studio](https://www.inappmessage.com/register) est requis pour profiter de ce partenariat. |
-{: .reset-td-br-1 .reset-td-br-2}
+| compte IAM Studio | Un [compte IAM Studio](https://www.inappmessage.com/register) est requis pour profiter de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-- Des expériences d'onboarding personnalisées
-- Expériences in-app pour des événements personnalisés et des promotions
-- Collecte de commentaires et notations des clients en fonction du comportement des applications
-- Test rapide des idées potentielles des produits d’application
+- Encourager l'achat de biens
+- Collecte d'informations utilisateur
+- Augmentation du nombre de membres inscrits
+- Informations sur l'émission de coupons
 
 ## Intégration
 
-### Étape 1 : Choisir un modèle
+### Étape 1 : Choisissez un modèle
 
-Connectez-vous à IAM Studio et choisissez un modèle de message in-app que vous souhaitez utiliser dans la galerie de modèles de messages in-app.
+Choisissez un modèle de message in-app que vous souhaitez utiliser dans la galerie de modèles de messages in-app
 
-![La galerie de modèles d’IAM Studio présente différents modèles tels que « modal slick contents », « full survey », « modal full image », et plus encore.][1]
+![La galerie de modèles IAM Studio montre différents modèles tels que « fenêtre modale de diapositive de carrousel », « fenêtre modale d'icône simple », « fenêtre modale pleine image », et plus encore.][1]
 
-### Étape 2 : Personnaliser le modèle
+### Étape 2 : Personnaliser le modèle
 
-Ensuite, remplacez les images, le texte et les boutons par le contenu que vous souhaitez.
+Tout d'abord, personnalisez l'image, le texte et le bouton de votre contenu. Assurez-vous de connecter **Deeplink** pour l'image et le bouton.
 
 {% tabs local %}
-{% tab Customize Image %}
-![L'interface utilisateur d'IAM Studio affichant les options de personnalisation de l'image. Ces options incluent l'image, le rayon de l'image et l'image atténuée.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
+{% tab Image %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser l'image. Ces options incluent l'image, le rayon de l'image et l'image atténuée.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab Customize Text %}
-![L'interface utilisateur d'IAM Studio affiche les options permettant de personnaliser le titre et le sous-titre de votre message. Ces options incluent le texte, la mise en forme et la police.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
+{% tab Texte %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser le titre et le sous-titre de votre message. Ces options incluent le texte, la mise en forme et la police.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab Customize Button %}
-![L'interface utilisateur d'IAM Studio affichant les options de personnalisation des boutons principal, gauche et droit. Ces options incluent la couleur, le lien profond, le texte et la mise en forme.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+{% tab Bouton %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser le bouton principal, gauche et droit. Ces options incluent la couleur, le lien profond, le texte et la mise en forme.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
-### Étape 3 : Exporter le modèle
+Ensuite, créez votre message in-app personnalisé en ajoutant des polices personnalisées et en utilisant des tags liquid. Pour activer la journalisation et le suivi, sélectionnez **Journaliser les données et suivre le comportement des utilisateurs**.
 
-Une fois toutes les modifications terminées, exportez le modèle en cliquant sur **Export (Exporter)**. Après l'exportation, le code HTML du message in-app sera généré. Copiez ce code en cliquant sur le bouton **Copy code (Copier le code)**. 
+{% tabs local %}
+{% tab Polices %}
+![L'interface utilisateur IAM Studio montrant les options pour ajouter du liquid. Ces options incluent la création d'une phrase personnalisée.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+{% endtab %}
+{% tab Liquid %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la journalisation des événements/attributs. Ces options incluent ce journal de comportement des utilisateurs.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+{% endtab %}
+{% tab Journalisation et suivi %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la police. Ces options incluent une option permettant à l'utilisateur de personnaliser le style de police.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+{% endtab %}
+{% endtabs %}
+
+### Étape 3 : Exporter le modèle
+
+Une fois toutes les modifications terminées, exportez le modèle en cliquant sur **Exporter**. Après l'exportation, le code HTML du message in-app sera généré. Copiez ce code en cliquant sur le bouton **Copier le code**. 
 
 ![][2]{: style="max-width:45%;"}
 
-### Étape 4 : Utiliser le code dans Braze 
+### Étape 4 : Utilisez code dans Braze 
 
-Naviguez vers Braze, et dans votre message in-app, collez le code personnalisé dans la zone **HTML Input (Saisie HTML)**. Veillez à tester votre message pour vous assurer qu'il s'affiche correctement.
+Accédez à Braze, et dans votre message in-app, collez le code personnalisé dans la boîte **HTML Input**. Assurez-vous de tester votre message pour vérifier qu'il s'affiche correctement.
 
 ![][3]{: style="max-width:85%;"}
 
