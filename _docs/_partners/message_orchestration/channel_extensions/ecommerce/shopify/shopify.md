@@ -39,7 +39,7 @@ After you set up the integration, Braze will automatically download historical d
 After you implement the Shopify integration, Braze will automatically backfill your Shopify customers, orders, and products based on your configuration settings.
 - Braze will import all customers and order placed events from the last 90 days prior to your Shopify integration connection.
 - The Shopify customer ID will be set as the Braze `external_id`. 
-- To see what specific customer data is being backfilled, refer to [Shopify features]({{site.baseurl}}/shopify_features#shopify-data).
+- To see what specific customer data is being backfilled, refer to [Shopify features]({{site.baseurl}}/shopify_features/#shopify-data).
 
 {% alert note %}
 Note the following:

@@ -240,10 +240,12 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 
 {% endsubtab %}
 {% subtab Account login %}
+
 **Event**: `shopify_account_login`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
 **Triggered**: When a user logs into their account<br>
 **Use Case**: Welcome series
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -646,6 +648,21 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 }
 ```
 {% endsubtab %}
+{% subtab Account login %}
+```json
+{
+	name: "shopify_account_login",
+	properties: {
+	source: "braze-mock-storefront.myshopify.com"
+  }
+}
+```
+
+{% alert note %}
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
+{% endalert %}
+
+{% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
@@ -689,16 +706,6 @@ After selecting your custom attribute, input a default value and copy the Liquid
       "shopify_province": "null"
     }
   ]
-}
-```
-{% endsubtab %}
-{% subtab Account login %}
-```json
-{
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
-  }
 }
 ```
 {% endsubtab %}

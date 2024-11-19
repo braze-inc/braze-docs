@@ -15,7 +15,7 @@ hidden: true
 
 ## Prerequisites
 
-Review [Shopify standard itegration]({{site.baseurl}}/shopify_standard_integration/) for instructions on integrating your Shopify store before proceeding with this article.
+Review [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/) for instructions on integrating your Shopify store before proceeding with this article.
 
 ## Disable abandoned checkout notifications in Shopify 
 
@@ -55,11 +55,11 @@ Braze Canvas offers several pre-built templates tailored specifically for ecomme
 
 **Setup:** 
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Abandoned Browse 11.2024** template. 
 
 The following settings are pre-configured in your Canvas:
 - Basics 
-    - Canvas name: **CANVAS_NAME**
+    - Canvas name: **Abandoned Browse ADD_DATE**
     - Conversion event: ecommerce.order placed
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -70,7 +70,7 @@ The following settings are pre-configured in your Canvas:
         - Has used these apps **more than 0** times 
         - Email **is not blank**
     - Entry controls
-        - Users are eligible to re-enter this Canvas. Only one user can enter this Canvas every day
+        - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
     - Exit criteria 
         - Performs either ecommerce.cart_updated, ecommerce.checkout started, or ecommerce.order_placed
 - Send settings 
@@ -78,8 +78,7 @@ The following settings are pre-configured in your Canvas:
 - Delay step
     - 1 hour delay
 - Message step 
-    - Uses a Braze email template that you can modify with your team 
-    - To personalize the product within your message, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
+    - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference the Liquid variables in [Message personalization](#message-personalization).
 {% endtab %}
 
 {% tab Abandoned cart %}
@@ -89,15 +88,15 @@ The following settings are pre-configured in your Canvas:
 
 **Setup:** 
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Abandoned Cart 11.2024** template. 
 
 The following settings are pre-configured in your Canvas:
 - Basics 
-    - Canvas name: **CANVAS_NAME**
+    - Canvas name: **Abandoned Cart ADD_DATE**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
-    - Action-based trigger when a user performs the ecommerce.cart_updated event
+    - Action-based trigger when a user triggers the **Perform Cart Updated Event** (located in the dropdown)
     - Start time is when you create the Canvas template 
 - Target Audience 
     - Entry audience 
@@ -109,11 +108,10 @@ The following settings are pre-configured in your Canvas:
         - Performs either ecommerce.cart_updated, ecommerce.checkout started, or ecommerce.order_placed
 - Send settings 
     - Users who are subscribed or opted in 
-    - Delay step
-        - 4 hour delay
+- Delay step
+     - 4 hour delay
 - Message step 
-    - Uses a Braze email template that you can modify with your team
-    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
+    - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference the Liquid variables in [Message personalization](#message-personalization).
 {% endtab %}
 
 {% tab Abandoned checkout %}
@@ -123,12 +121,12 @@ The following settings are pre-configured in your Canvas:
 
 **Setup:**
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Abandoned Checkout 11.2024** template. 
 
 The following settings are pre-configured in your Canvas:
 
 - Basics 
-    - Canvas name: **CANVAS_NAME**
+    - Canvas name: **Abandoned Checkout ADD_DATE**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -144,11 +142,10 @@ The following settings are pre-configured in your Canvas:
             - Performs the ecommerce.order_placed events
 - Send settings 
     - Users who are subscribed or opted in 
-    - Delay step
-        - 4 hour delay
+- Delay step
+    - 4 hour delay
 - Message step 
-    - Uses a Braze email template that you can modify with your team
-    - To personalize products within your message, this use case uses a special shopping cart Liquid tag. For more information, check out [Abandoned Cart and Abandoned Checkout product personalization](#abandoned-cart-checkout)
+    - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference the Liquid variables in [Message personalization](#message-personalization).
 {% endtab %}
 {% tab Order confirmation %}
 ##### Order confirmation
@@ -157,44 +154,12 @@ The following settings are pre-configured in your Canvas:
 
 **Setup:**
 
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
+On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Order Confirmation 11.2024** template. 
 
 The following settings are pre-configured in your Canvas:
 
 - Basics 
-    - Canvas name: **CANVAS_NAME**
-    - Conversion event: ecommerce.order_placed 
-        - Conversion deadline: 3 days 
-- Entry schedule 
-    - Action-based trigger when a user performs the ecommerce.cart_updated event
-    - Start time is when you create the Canvas template 
-- Target audience 
-    - Entry audience 
-        - Has used these apps **more than 0** times 
-        - Email **is not blank**
-    - Entry controls
-        - Users are immediately re-eligible for Canvas entry
-        - Exit criteria 
-            - Performs either ecommerce.cart_updated, ecommerce.checkout started, or ecommerce.order_placed
-- Send settings 
-    - Users who are subscribed or opted in 
-- Message step 
-    - Uses a Braze email template that you can modify with your team. 
-    - To personalize products within your message, check out [Message personalization](#message-personalization)
-{% endtab %}
-{% tab Post-purchase retargeting %}
-
-##### Post-purchase retargeting
-
-**Purpose:** Engage customers after their purchase to encourage repeat business and build loyalty.
-
-**Setup:**  
-
-On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **TEMPLATE_NAME** template. 
-
-The following settings are pre-configured in your Canvas:
-- Basics 
-    - Canvas name: **CANVAS_NAME**
+    - Canvas name: **Order Confirmation ADD_DATE**
     - Conversion event: ecommerce.order_placed 
         - Conversion deadline: 3 days 
 - Entry schedule 
@@ -207,14 +172,11 @@ The following settings are pre-configured in your Canvas:
     - Entry controls
         - Users are immediately re-eligible for Canvas entry
     - Exit criteria 
-        - Performs either ecommerce.cart_updated, ecommerce.checkout started, or ecommerce.order_placed
+            - Not applicable
 - Send settings 
     - Users who are subscribed or opted in 
-    - Delay step
-        - 7 days 
 - Message step 
-    - Uses a Braze email template that you can modify with your team. 
-    - To personalize products within your message, check out  [Message personalization](#message-personalization)
+    - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference the Liquid variables in [Message personalization](#message-personalization).
 {% endtab %}
 {% endtabs %}
 
@@ -232,22 +194,47 @@ The following settings are pre-configured in your Canvas:
 
 To begin personalizing your messages using Liquid tags, you can refer to the following resources:
 
-- [Shopify data]({{site.baseurl}}/shopify_features/shopify_data/) reference with pre-defined liquid tags
+- [Shopify data]({{site.baseurl}}/shopify_features/#shopify-data) reference with pre-defined liquid tags
 - [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
 
 ### Abandoned Cart and Abandoned Checkout product personalization {#abandoned-cart-checkout}
 
-To dynamically add product information into your Abandoned Cart and Abandoned Checkout messages, you need to use the shopping cart Liquid tag like the one below.
+Abandoned Cart and Abandoned Checkout user journeys require a special `shopping_cart` liquid tag for product personalization. 
+
+{% alert important %}
+For Abandoned Cart Canvases only, add the following Liquid to your email header. This will determine if the cart isn't abandoned to prevent duplicate email sends to the same user. <br><br>
 
 {% raw %}
-```json
-INSERT EXAMPLE
+```liquid
+{% shopping_cart {{context_properties.${cart_id}}} :abort_if_not_abandoned <true> %}
 ```
 {% endraw %}
-
-{% alert tip %}
-Use this shopping cart abort tag to avoid triggering a message to users without items in their cart.
 {% endalert %}
+
+To dynamically add products to your emails for Abandoned Cart and Abandoned Checkout journeys, use the shopping cart Liquid tag. You can find individual `shopping_cart` Liquid variables [here](). 
+
+Here is an example HTML block that uses your `shopping_cart` Liquid tag to add products into your email.
+
+{% raw %}
+```java
+<table style="width:100%">
+  {% shopping_cart {{context_properties.${cart_id}}} %}
+  <tr>
+    <th><img src="{{ shopping_cart.products[0].image_url }}" width="200" height="200"><img></th>
+    <th align="left">
+      <ul style="list-style-type: none">
+        <li>Item: {{ shopping_cart.products[0].product_name }}</li>
+        <li>Price: ${{ shopping_cart.products[0].price }}</li>
+        <li>Quantity: ${{ shopping_cart.products[0].quantity }}</li>
+        <li>Variant ID: {{ shopping_cart.products[0].variant_id }}</li>
+        <li>Product URL:{{ shopping_cart.products[0].product_url }}</li>
+        <li>SKU: {{ shopping_cart.products[0].metadata[0].sku }}</li>
+        <li>Cart ID: {{ shopping_cart.cart_id }}</li>
+      </ul>
+    </th>
+  </tr>
+```
+{% endraw %}
 
 ## Segments
 
@@ -261,7 +248,7 @@ To create a segment based on who has performed a supported event through the int
 
 ![Custom Events segment filters.][1]{: style="max-width:50%;"}
 
-To create a segment based on attributes supported through the integration, you can use Custom Attribute filters and specify the [attribute name](). 
+To create a segment based on attributes supported through the integration, you can use Custom Attribute filters and specify the [attribute name]({{site.baseurl}}/shopify_features/?tab=shopify%20events&subtab=cart%20updated#supported-shopify-standard-attributes). 
 
 ![Custom Attributes segment filters.][2]{: style="max-width:50%;"}
 
