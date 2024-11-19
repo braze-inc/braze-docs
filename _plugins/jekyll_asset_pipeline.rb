@@ -35,6 +35,7 @@ module JekyllAssetPipeline
     end
 
     def compress
+      puts @content
       # YUI::JavaScriptCompressor.new(:munge => true).compress(@content)
       Uglifier.new(:harmony => true).compile(@content)
     end
