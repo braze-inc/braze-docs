@@ -19,10 +19,10 @@ Braze と Inkit の統合により、文書を生成し、Braze Webhook を使�
 |必要条件| 説明|
 | ---| ---|
 |Inkitアカウント | このパートナーシップを活用するには、[Inkit アカウント](https://www.inkit.com/)が必要です。 |
-| Inkit API キー<br><br>`<INKIT_API_TOKEN>` | このキーは [Inkit Dashboard](https://app.inkit.io/#/account/integrations) の \[**Development**] タブにあります。このキーにより Braze アカウントと Inkit アカウントを接続できるようになります。|
+| Inkit API キー<br><br>`<INKIT_API_TOKEN>` | このキーは [Inkit Dashboard](https://app.inkit.io/#/account/integrations) の [**Development**] タブにあります。このキーにより Braze アカウントと Inkit アカウントを接続できるようになります。|
 | Inkitテンプレート ID<br><br>`<INKIT_TEMPLATE_ID>` | テンプレートを作成した後、**テンプレート**タブからテンプレートIDをコピーしてBrazeのテンプレートで使用することができる。<br><br>たとえば、Inkit 環境にテンプレート ID: `tmpl_3bDScFl9cwr3OAVR1RSdEC` で `invoice_template` というテンプレートを作成できます。
 | HTTPヘッダー | HTTPヘッダーは、BrazeからInkitに送信するAPIリクエストの一部である。この中には、Inkit API の呼び出しを認証および許可するための Inkit API キーが含まれます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
@@ -46,13 +46,13 @@ Inkitウェブフック・テンプレートを選択すると、以下のよう
 - **Webhook URL**:空白
 - **リクエスト本文**:Raw Text
 
-\[Webhook URL] フィールドで、Inkit Webhook URL を[作成](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event)して入力する必要があります。
+[Webhook URL] フィールドで、Inkit Webhook URL を[作成](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event)して入力する必要があります。
 
 ![Braze Webhook ビルダー作成タブに表示されているリクエスト本文のコードと Webhook URL。][5]
 
 #### リクエストヘッダと方法
 
-Inkit の認証には、Base64 でエンコードされた Inkit API キーを含む `HTTP Header` が必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、\[**設定**] タブで `<INKIT_API_TOKEN>` を Inkit API キーに置き換える必要があります。
+Inkit の認証には、Base64 でエンコードされた Inkit API キーを含む `HTTP Header` が必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、[**設定**] タブで `<INKIT_API_TOKEN>` を Inkit API キーに置き換える必要があります。
 
 {% raw %}
 - **HTTPメソッド**：POST
