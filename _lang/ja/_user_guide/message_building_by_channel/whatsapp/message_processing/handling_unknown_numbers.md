@@ -16,7 +16,7 @@ page_order: 50
 
 Brazeはまず、番号の一致するユーザーを探そうとする。何も見つからない場合、Braze は 2 つの方法のいずれかで不明な番号を自動的に処理します。
 
-1. **\[[オプトインキャンバス]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)] のトリガーワードが設定されている場合**
+1. **[[オプトインキャンバス]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)] のトリガーワードが設定されている場合**
 - Braze によって匿名プロファイルが作成される
 - プロファイルに以下の詳細を持つユーザーエイリアスを割り当てる
   - `alias_name` - 値はユーザーが提供した電話番号
@@ -29,5 +29,5 @@ Brazeはまず、番号の一致するユーザーを探そうとする。何も
   - `alias_name` - 値はユーザーが提供した電話番号
   - `alias_label` - 値は `phone`
 - システムによって phone 属性が設定される
-- ユーザーのサブスクリプションステータスは、すべての WhatsApp サブスクリプションググループでデフォルトの `unsubscribed` になる<br><br>
+- ユーザーの購読ステータスは、すべての WhatsApp 購読グループでデフォルトの `unsubscribed` になる<br><br>
 
