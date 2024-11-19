@@ -6,6 +6,7 @@ page_type: reference
 description: "このリファレンス記事では、ニュースフィードデータのエクスポート方法について説明します。"
 tool: Reports
 channel: news feed
+hidden: true
 
 ---
 

@@ -6,7 +6,7 @@ page_order: 3
 description: "このランディング・ページでは、Brazeが提供するドラッグ＆ドロップ・エディターの設定方法と正しい使い方を取り上げた記事を掲載している。"
 layout: dev_guide
 guide_top_header: "メール用ドラッグ＆ドロップ・エディター"
-guide_top_text: "ドラッグ＆ドロップのエディターで、HTMLを使わずに完全にカスタム化されたパーソナライズされたEメールメッセージを作成できる。"
+guide_top_text: "ドラッグ＆ドロップエディターを使用すると、HTML を使用せずに、完全にカスタムでパーソナライズされたメールメッセージを作成できます。"
 channel: email
 tool: Media
 
@@ -18,7 +18,7 @@ guide_featured_list:
 - name: メールテンプレートの作成
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
-- name: エディター・ブロック
+- name: エディターブロック
   link: /docs/dnd/editor_blocks/
   image: /assets/img/braze_icons/align-left.svg
 - name: グローバルスタイル設定

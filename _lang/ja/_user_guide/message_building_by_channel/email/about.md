@@ -33,7 +33,7 @@ channel:
 | マルチメディア・コンテンツ | ビデオや画像など、ユーザーを惹きつけるマルチメディア・コンテンツの配置のしやすさ。 |
 | ニュースレター | ユーザーエンゲージメントを維持するために、月刊や週刊のニュースレターを簡単に送信できます。 |
 | トランザクション | 最近購入した商品をユーザーに通知し、重要な商品情報や配送情報を[トランザクションメールで][3]配信する。
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/

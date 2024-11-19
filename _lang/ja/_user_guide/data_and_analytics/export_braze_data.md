@@ -31,13 +31,10 @@ guide_menu_list:
   - name: 概要データをエクスポートする
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
     image: /assets/img/braze_icons/target-05.svg
-  - name: 輸出収入データ
+  - name: 収益データのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
-  - name: ニュースフィードデータのエクスポート
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    image: /assets/img/braze_icons/announcement-02.svg
-  - name: カスタム・イベント・データをエクスポートする
+  - name: カスタムイベントデータのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg
   - name: エクスポート API

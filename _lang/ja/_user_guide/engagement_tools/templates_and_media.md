@@ -20,6 +20,9 @@ guide_featured_list:
   - name: コンテンツブロック
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
+  - name: キャンバステンプレート
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
+    image: /assets/img/braze_icons/palette.svg
   - name: テンプレートを管理する
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
@@ -30,7 +33,7 @@ guide_featured_list:
 
 ## テンプレートとメディアについて
 
-次の機能の \[**テンプレート」**] セクションで、テンプレートとクリエイティブコンテンツを使用および管理できます。
+次の機能の [**テンプレート」**] セクションで、テンプレートとクリエイティブコンテンツを使用および管理できます。
 
 - **[メールテンプレート][2]**
 - **[コンテントブロック][7]**

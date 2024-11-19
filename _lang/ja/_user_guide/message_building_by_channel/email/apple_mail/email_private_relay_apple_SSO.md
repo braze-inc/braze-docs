@@ -17,7 +17,7 @@ channel:
 
 ## SendGridでメールを送信する
 
-SendGrid をメールプロバイダーとして使用している場合、DNS を変更せずに Apple にメールを送信することができます。\[**Apple Certificate**] ページにアクセスし、Apple のメールリレーサービス経由での送信に使用するメールアドレス (希望の「差出人」アドレス) を許可します。  
+SendGrid をメールプロバイダーとして使用している場合、DNS を変更せずに Apple にメールを送信することができます。[**Apple Certificate**] ページにアクセスし、Apple のメールリレーサービス経由での送信に使用するメールアドレス (希望の「差出人」アドレス) を許可します。  
 
 ![Apple Certificate ページで個々のメールアドレスを許可するオプション。]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
@@ -35,7 +35,7 @@ Apple Private Relayでメールアドレスを追加する際に使用するコ�
 |---|---|
 | UID | この値は、Braze が (SendGrid から) 提供する DNS レコードで提供されます。メールアドレスの UID に「u」の文字を含めることはできません。例えば、あなたのUIDがSendGridで`u1234567.wl134.sendgrid.net` と表示されている場合、`1234567` がUID値である。<br><br> DNSレコードにアクセスできない場合は、Brazeカスタマーサクセスマネージャーに連絡してUIDを提供してもらう。 |
 | ホワイトラベル付きサブドメインとドメイン | SendGridに入力した最初のドメインとサブドメイン。SendGrid の DNS レコードで**HOST 値**を使用することもできます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## SparkPostのメールを送信する
 
