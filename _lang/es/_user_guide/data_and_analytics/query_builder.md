@@ -419,7 +419,7 @@ Para saber si el valor de una variable está lleno. Esto es útil para variables
 - **Ejemplo de uso:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
 
 `type` y `name` se refieren a la variable referenciada. Por ejemplo, para cortocircuitar la siguiente variable opcional: {% raw %}`{{campaigns.${messaging}}` puede utilizar lo siguiente:
-{% endraw %}{% endraw %}
+`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
 
 ## Tiempo de espera del informe
 
