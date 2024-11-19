@@ -108,9 +108,9 @@ COPY INTO
 
 #### ステップ 2: バケットイベントの作成
 
-AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、\[**プロパティ**] タブの \[**イベント**] に移動します。
+AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
 
-![AWSプロパティ」タブ][1]{: height="50%" width="50%"}
+![AWS の [プロパティ] タブ][1]{: height="50%" width="50%"}
 
 必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
