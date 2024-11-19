@@ -1,110 +1,92 @@
 ---
 nav_title: Extole
 article_title: Extole
-description: "Cet article de référence présente le partenariat entre Braze et Extole, une société de marketing de recommandation qui vous permet d’extraire des événements et attributs clients de programmes de parrainage et de croissance dans Braze"
+description: "Cet article décrit le partenariat entre Braze et Extole, une entreprise de marketing de recommandation, qui vous permet de récupérer des événements et attributs client à partir des programmes de parrainage et de croissance dans Braze"
 alias: /partners/extole/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Extole
 
-> [Extole][1], une société Saas, est un leader du secteur du marketing de recommandation, aidant à créer et à optimiser des programmes de marketing de recommandation efficaces pour augmenter l’acquisition des clients.
+> [Extole](https://www.extole.com/), une entreprise SaaS leader de l'industrie du marketing de parrainage permet de créer et d’optimiser des programmes de marketing de recommandation efficaces pour augmenter l'acquisition de clients.
 
-Avec l’intégration entre Braze et Extole, vous pouvez transférer dans Braze les événements et attributs client provenant des programmes Extole de parrainage et de croissance, ce qui vous permet de créer des campagnes de marketing plus personnalisées qui stimulent l’acquisition, l’engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement des attributs de contenu Extole, tels que des codes de partage et des liens personnalisés, dans les communications de Braze.
+Avec l'intégration de Braze et Extole, vous pouvez extraire des événements et attributs client des programmes de parrainage et de croissance d'Extole vers Braze, vous permettant ainsi de créer des campagnes marketing plus personnalisées qui augmentent l'acquisition, l'engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement les attributs de contenu Extole, tels que les liens et codes de partage personnalisés dans les communications Braze.
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Extole | Un compte Extole est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Clé API REST test de Braze (facultatif) | Une clé d’API qui peut être utilisée à des fins de test si vous souhaitez que ces demandes soient envoyées à une instance test de Braze séparée. |
-| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding Braze ou est disponible sur la [page API overview]({{site.baseurl}}/api/basics/#endpoints). |
-| Identité de l’utilisateur | Identifiant unique d’un utilisateur dans Braze et Extole. C’est généralement l’`external_id`. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Clé d'API REST Braze | Une clé API REST Braze avec la permission `users.track`. Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| URL de l'API Braze | Votre URL API Braze est spécifique à votre [instance Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-Les exemples d’utilisation suivants présentent quelques façons de tirer parti de l’intégration d’Extole à Braze. Travaillez avec vos gestionnaires Extole de la mise en œuvre et de la réussite des clients pour développer une option qui répond aux besoins spécifiques de votre entreprise.
-- Transformez chaque client en un partisan en y incluant son lien de partage unique dans les communications de Braze.
-- Poursuivez la conversation avec les visiteurs du site en déclenchant une campagne de bienvenue personnalisée lorsqu’ils s’abonnent pour recevoir des communications marketing dans les programmes optimisés par Extole.
-- Favorisez un engagement supplémentaire en déclenchant une campagne de recommandations produit lorsqu’un partisan partage un produit spécifique avec un ami.
-- Remerciez les partisans de vous apporter de nouveaux clients de qualité en déclenchant une campagne de « surprise et de ravissement » lorsqu’ils sont à l’origine de cinq recommandations ou plus.
-- Déclenchez une campagne de parrainage par e-mail, notification push ou SMS à n’importe quel moment de la journée où le client est ravi, comme un achat ou une expérience positive avec votre marque.
+Les cas d'utilisation suivants montrent quelques façons de tirer parti de l'intégration d'Extole avec Braze. Travaillez avec votre implémentation Extole et vos responsables de la satisfaction client pour développer une option qui répond aux besoins spécifiques de votre entreprise.
+
+- Tirez parti des custom events de vos programmes de recommandation et d'engagement pour déclencher une campagne Braze ou un canvas
+- Créez des segments personnalisés, des tableaux de bord et des rapports en utilisant les données de vos programmes alimentés par Extole
+- Désabonnez ou abonnez automatiquement les utilisateurs à votre liste de marketing dans Braze
 
 ## Intégration
 
-Effectuez les étapes suivantes pour que votre intégration soit rapidement opérationnelle. Vos gestionnaires de l’implémentation et du succès client d’Extole vous soutiendront tout au long de ce processus.
+Complétez les étapes suivantes pour que votre intégration soit rapidement opérationnelle. L’équipe de la mise en œuvre d’Extole et les gestionnaires de la satisfaction client vous accompagneront tout au long de ce processus et répondront à toutes vos questions.
 
-### Étape 1 : Définir les noms et les attributs des événements 
+### Connectez-vous à votre compte Braze
 
-Tout événement suivi par Extole peut être envoyé à Braze. Travaillez avec votre gestionnaire de l’implémentation ou de la réussite client Extole pour identifier les noms d’événements et les attributs utilisateur que vous souhaitez envoyer dans Braze ou sélectionnez parmi les options par défaut dans les tableaux ci-dessous. Votre gestionnaire de la mise en œuvre ou de la réussite des clients Extole mappera et configurera ensuite les noms des événements dans le tableau de bord d’Extole.
+1. Sélectionnez l'intégration Braze sur la page [Partenaires](https://my.extole.com/partners) de votre compte My Extole.
+2. Dans l'intégration Braze, sélectionnez **Installer** pour établir une connexion entre Extole et Braze.
+3. Remplissez les champs obligatoires, en commençant par votre clé API REST Braze. 
+4. Entrez votre URL d'API Braze. Cette URL dépend de l'instance à laquelle votre compte Braze est provisionné.
+5. Ajoutez tous les événements Extole que vous souhaitez envoyer à Braze. Les événements par défaut, les propriétés d'événement et les attributs utilisateur sont décrits dans le [tableau des événements Extole](https://dev.extole.com/docs/braze#extole-program-events).
+6. Ajoutez tous les états de récompense que vous souhaitez envoyer à Braze autre que l'état `FULFILLED`. Reportez-vous au [tableau des récompenses Extole](https://dev.extole.com/docs/braze#extole-rewards) pour obtenir des descriptions des états de récompense disponibles.
+7. Sélectionnez votre clé de mappage d'ID externe Braze. C'est ainsi qu'Extole met à jour les profils utilisateurs dans Braze. Vous pouvez mapper la clé d’ID externe de Braze à `email_address` ou à `partner_user_id` pour l'utilisateur. Nous recommandons d'utiliser le paramètre`external_id` plutôt que le paramètre `email_address` car il est plus sûr.
+8. Enregistrer vos paramètres pour terminer la connexion. Désormais, les événements Extole peuvent être transférés vers votre compte Braze.
 
-#### Noms des événements
+### Événements du programme Extole
 
-| Nom de l’événement | Description |
-| ----------- | ----------- |
-| Lien de partage créé | Un lien de partage est créé pour un client. |
-| Partagé | Un client envoie un lien à son ou ses amis par e-mail, SMS ou canal social. |
-| Parrainé inscrit | Un client parrainé s’inscrit par e-mail ou par SMS dans le cadre du programme. |
-| Parrainé converti | Un client parrainé effectue un achat. Notez que les événements liés aux résultats peuvent être personnalisés pour votre entreprise.|
-| Abonné | Un client s’abonne par e-mail ou SMS. |
-| Non inscrit | Un client se désabonne par e-mail ou SMS. |
-| Récompense gagnée | Un client gagne une récompense. |
-{: .reset-td-br-1 .reset-td-br-2}
+Vous trouverez ci-dessous les événements par défaut, les propriétés d'événement et les attributs utilisateur qu'Extole enverra à Braze. Contactez l’équipe de la mise en œuvre d'Extole ou de la satisfaction client pour identifier et ajouter d’autres événements Extole à votre intégration.
 
-#### Noms des attributs
+| Événement | Description | propriétés d'événement | Attributs de l'utilisateur |
+| ----------- | ----------- | ----------- | ----------- |
+| `extole_created_share_link` | Un participant crée son lien de partage en entrant son e-mail dans l'Expérience de partage Extole. | Nom de l'événement  <br>Heure de l'événement  <br>partenaire (Extole)  <br>Entonnoir (référent ou ami)  <br>Programme | <br>ID externe <br>e-mail  <br>Partager le lien |
+| `extole_shared` | Un participant partage son lien de recommandation avec un ami. | Nom de l'événement  <br>Heure de l'événement  <br>partenaire (Extole)  <br>ID externe  <br>Entonnoir (référent ou ami)  <br>Programme  <br>Partager la chaîne | e-mail <br>Prénom <br>Nom de famille |
+| `outcome` - Le résultat est dynamique en fonction de la configuration de votre programme (comme `extole_shipped`, `extole_converted`)| Un participant a converti ou complété l'événement de résultat souhaité configuré pour le programme. | Dynamique par programme | e-mail <br>Prénom <br>Nom de famille |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-| Nom de l’attribut | Description | Exemple | 
-| -------------- | ----- | ------- |
-| `external_id` (obligatoire) | L’identifiant unique du client, tel qu’un ID utilisateur. | ID utilisateur |
-| `email` | L’adresse e-mail du client. | jsmith@votreentreprise.com |
-| `phone_number` | Le numéro de téléphone du client, y compris l’indicatif du pays. | +15555555555 |
-| `share_link` | Le lien de partage personnel du client. | refer.yourcompany.com/jsmith |
-| `first_name` | Le prénom du client. | John |
-| `last_name` | Le nom du client. | Smith |
-| `city` | La ville du client, en toutes lettres. | Boston |
-| `state` | L’état du client, en abrégé. | MA |
-| `country` | Le pays du client, en abrégé. | US |
-| `funnel` | Le bon type d’entonnoir pour le client. | ami ou partisan |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+### États d'abonnement Extole
 
-### Étape 2 : Connexion à votre compte Braze 
+| État de l'abonnement | Description | propriétés d'événement | Attributs de l'utilisateur |
+| ----------- | ----------- | ----------- | ----------- |
+| `subscribed` | Un participant a choisi de recevoir des messages marketing. | N/A | e-mail  <br>Type de liste  <br>ID externe  <br>Abonné aux e-mails |
+| `unsubscribed` | Un participant a choisi de ne plus recevoir de communications par e-mail d'Extole.| e-mail  <br>ID externe  <br>État de l'abonnement (désabonné)  <br>ID de groupe d'abonnement  | Type de liste |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-Pour commencer à envoyer les données de vos programmes Extole vers Braze, créez une nouvelle intégration de webhook dans le centre de webhooks sortants d’Extole.
+### Récompenses Extole
 
+Par défaut, Extole enverra des événements de récompense dans l'état `FULFILLED` à Braze afin que vous puissiez déclencher des notifications de récompense via une campagne Braze ou Canvas. Reportez-vous au tableau suivant pour les états de récompense supplémentaires.
 
-1. Accédez à **Tech Center > Outbound Webhooks (Centre tech > Wehooks sortants)** dans votre compte My Extole et cliquez sur le bouton **+ New Integration (+ Nouvelle intégration)**.
-2. Entrez un nom de clé (c'est-à-dire la façon dont vous souhaitez faire référence à la clé dans Extole) et sélectionnez **Webhook** comme type de clé. 
-3. Dans le champ ID de clé de partenaire, ajoutez une valeur que vous reconnaîtrez pour cet identifiant (par exemple, votre ID de compte, votre adresse e-mail ou votre ID utilisateur).
-4. Sélectionnez `PASSWORD` dans le menu déroulant de l'algorithme.
-5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key (Créer une clé)**.<br><br>![][4]{: style="max-width:80%;"}
+| État de récompense | Description | propriétés d'événement | Attributs de l'utilisateur |
+| ----------- | ----------- | ----------- | ----------- |
+| `FULFILLED` | L'état par défaut. Une valeur a été attribuée à la récompense (comme un bon de réduction ou une carte-cadeau) par un fournisseur de récompenses Extole. | e-mail <br>Valeur nominale  <br>Code de coupon  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `EARNED` | Une récompense a été créée et associée à une personne. | e-mail <br>Valeur nominale  <br>Code de coupon  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `SENT` | La récompense a été remplie et a été envoyée au destinataire par e-mail ou directement à un appareil. | e-mail <br>Valeur nominale  <br>Code de coupon  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `REDEEMED` | La récompense a été utilisée par le destinataire, comme en témoigne un événement de conversion ou de rachat envoyé à Extole.| e-mail <br>Valeur nominale  <br>Code de coupon  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `FAILED` | Un problème a empêché la récompense d'être émise ou envoyée, nécessitant une attention. | e-mail <br>Valeur nominale  <br>Code de coupon  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `CANCELED` | La récompense a été désactivée et retournera dans l'inventaire. | e-mail <br>Valeur nominale  <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+| `REVOKED` | La récompense remplie a été invalidée. Par exemple, Extole a demandé une carte-cadeau fournisseur, puis a déterminé que la carte avait été envoyée par erreur. Si le fournisseur prend en charge la révocation de la récompense, Extole demandera le remboursement des fonds, et la récompense ne sera plus valide. | e-mail <br>Valeur nominale   <br>Type de valeur nominale  | e-mail <br>Prénom  <br>Nom de famille |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-Ensuite, travaillez avec votre gestionnaire du succès ou de la mise en œuvre d’Extole pour créer un nouveau webhook. Ils configureront le webhook pour vous en utilisant votre clé nouvellement générée et l’URL de votre instance Braze.<br><br>![][5]{: style="max-width:80%;"}
 
 ## Personnalisation
 
-### Configurer une clé d’API pour les tests
+### Rechercher et créer des utilisateurs dans Braze
 
-Si vous ne fournissez qu’une seule clé d’API REST Braze à Extole, seuls les événements de production seront envoyés à Braze. Si vous souhaitez également envoyer des événements de mise à disposition ou de test, créez une autre clé d’API REST Braze et configurez une intégration webhook supplémentaire dans le tableau de bord d’Extole.
+Pour certains cas d'utilisation, tels qu'un nouvel e-mail ou abonnement SMS où Extole n'a pas d'ID externe (ID d’utilisateur), Extole peut vérifier l'identifiant de l'utilisateur à l’aide de l’[endpoint Exporter le profil utilisateur par l’identifiant de Braze]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). Extole ajoutera et mettra à jour tous les attributs de profil si l'utilisateur existe dans Braze. Si la requête ne renvoie pas de profil utilisateur, Extole utilisera l'endpoint `/users/track` pour créer un alias d'utilisateur avec l'adresse e-mail de l'utilisateur comme nom d'alias.
 
-### Création d’un nouvel alias d’utilisateur
+## Grâce à cette intégration
 
-Pour certains cas d’utilisation, tels qu’un nouvel abonnement par e-mail ou SMS pour lequel Extole ne dispose pas d’un ID externe (ID utilisateur), Extole peut vérifier l’identifiant utilisateur en utilisant [l’endpoint d’exportation utilisateur par identifiant ][2] de Braze. Si l’utilisateur existe dans Braze, Extole ajoutera et mettra à jour tous les attributs du profil. Si la demande ne renvoie pas de profil d’utilisateur, Extole utilisera [l’endpoint de suivi utilisateur][3] pour créer un alias d’utilisateur avec l’adresse e-mail de l’utilisateur comme nom d’alias.
-
-## Comment utiliser cette intégration
-
-Après avoir connecté votre compte Braze au tableau de bord Extole, les événements commenceront automatiquement à circuler d’Extole vers Braze. Une vue en direct des événements envoyés à Braze peut être trouvée dans le centre des webhooks sortants d’Extole pour la résolution des problèmes. 
-
-![][6]
-
-Une fois que les événements et les attributs que vous avez configurés arrivent dans Braze, vous pouvez utiliser les données pour générer des audiences Braze et la segmentation des campagnes.
-
-[1]: https://www.extole.com
-[2]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#request-body
-[4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
-[5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
-[6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}
+Après avoir connecté vos comptes, les événements commenceront automatiquement à circuler d'Extole à Braze sans aucune action de votre part. Une vue en temps réel des événements envoyés à Braze est disponible dans le Centre des webhooks sortants d'Extole pour la résolution des problèmes. 
