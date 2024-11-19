@@ -9,7 +9,7 @@ channel:
 search_rank: 2  
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}MMSメッセージについて
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}MMS メッセージについて
 
 > MMSはマルチメディア・メッセージ・サービスとも呼ばれ、マルチメディア資産（JPEG、GIF、PNG）を含むメッセージを携帯電話に送信するために使われる。<br><br>SMSと同様、MMSは緊急性の高いメッセージング・チャネルであり、他のチャネルではできない方法で顧客と即座にコミュニケーションをとることができる。しかし、MMSはSMSの機能を拡張し、テキストだけのSMSにメディアを加えることができる。
 
@@ -18,8 +18,8 @@ search_rank: 2
 | ユースケース | 説明 |
 | --- | --- |
 | プロモーション | 知名度の高いSMSキャンペーンでユーザーを獲得するだけでなく、MMSのメディアとしての側面も活用し、提供する商品で購買意欲をそそる。 | 
-| 再エンゲージメント・キャンペーン | SMSを受信するようにオプトインした顧客を、他のすべてのチャネルで呼び戻すことができなかった場合に、再度エンゲージする。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| 再エンゲージメントキャンペーン | 他のすべてのチャネルで顧客の再誘導に失敗した場合、SMS の受信をオプトインした顧客を再びエンゲージします。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## MMSを知る
 
@@ -29,22 +29,22 @@ search_rank: 2
 
 ### サブスクリプショングループ
 
-サブスクリプショングループ][1] ]は、特定のタイプのメッセージング目的で使用される送信電話番号（ショートコード、ロングコード、英数字の送信者ID）の集まりである。購読グループには、MMSが有効な電話番号が必要である。この機能の有効化については、Brazeのアカウントマネージャーに相談すること。
+[購読グループ][1] は、特定のタイプのメッセージング目的で使用される送信電話番号 (ショートコード、ロングコード、英数字の送信者 ID) の集まりです。購読グループには、MMS が有効にされた電話番号が必要です。この機能の有効化については、Brazeのアカウントマネージャーに相談すること。
 
 ### MMSメッセージの上限とスループット
 
-MMSの場合、メッセージの上限は1MBである（これにはマルチメディア・アセットとメッセージ・ボディのサイズが含まれる）。安全面を考慮し、Brazeではメッセージ本文も含め、マルチメディア資産は600KBを超えないことを推奨している。
+MMS の場合、メッセージの上限は 1 MB です (これにはマルチメディアアセットとメッセージ本文のサイズが含まれます)。安全面を考慮し、Brazeではメッセージ本文も含め、マルチメディア資産は600KBを超えないことを推奨している。
 
 MMSのスループットは、ロングコード経由で1秒間に1セグメントである。
 
 ### インバウンドMMS
 
-ユーザーがメディアアイテムを含むインバウンドメッセージを送信すると、BrazeはLiquidタグを通してLiquidと同様にCurrentsでメディアアイテムのURLを公開する。 {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
+ユーザーがメディアアイテムを含むインバウンドメッセージを送信すると、Braze は Liquid タグ {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%} を介して Currents のメディアアイテムの URL と Liquid を公開します。
 
-### 使用可能なファイルの種類
+### 使用できるファイルタイプ
 
-Brazeは、JPEG、GIF、PNG、VCFファイルに対応しており、MMSメッセージに1つのマルチメディア資産を添付することができる。
+Braze は、JPEG、GIF、PNG、VCF ファイルに対応しており、MMS メッセージに 1 つのマルチメディアアセットを添付できます。
 
 
-\[picture] ： {% image_buster /assets/img/sms/MMS.png %}
+[picture] ： {% image_buster /assets/img/sms/MMS.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement
