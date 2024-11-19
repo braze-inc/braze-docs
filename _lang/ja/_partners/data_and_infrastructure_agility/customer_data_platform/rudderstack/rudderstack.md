@@ -9,7 +9,7 @@ search_tag: Partner
 
 # RudderStack
 
-> \[RudderStack][1] は、顧客イベントデータを収集し、希望するデータウェアハウスや Braze などの他の多数の分析プロバイダーにルーティングするための、オープンソースの顧客データインフラです。これはエンタープライズ対応で、イベントデータを即座に処理するための強力な変換フレームワークを提供します。
+> [RudderStack][1] は、顧客イベントデータを収集し、希望するデータウェアハウスや Braze などの他の多数の分析プロバイダーにルーティングするための、オープンソースの顧客データインフラです。これはエンタープライズ対応で、イベントデータを即座に処理するための強力な変換フレームワークを提供します。
 
 Braze と RudderStack の統合により、Android、iOS、および Web アプリケーションのネイティブ SDK 統合と、バックエンドサービスからのサーバー間統合が提供されます。
 
@@ -18,21 +18,21 @@ Braze と RudderStack の統合により、Android、iOS、および Web アプ�
 | 必要条件 | 説明 |
 | --- | --- |
 | RudderStackアカウント | このパートナーシップを活用するには、[RudderStack アカウント](https://app.rudderstack.com/)が必要です。 |
-| 設定済みのソース | \[ソース][3]は基本的に、Web サイト、モバイルアプリ、バックエンドサーバーなど、RudderStack に送信されるあらゆるデータの提供元です。RudderStack で Braze を宛先として設定する前に、ソースを設定する必要があります。 |
-| Braze REST API キー | `users.track`、`users.identify`、`users.delete`、`users.alias.new` の権限を持つ Braze REST API キー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| 設定済みのソース | [ソース][3]は基本的に、Web サイト、モバイルアプリ、バックエンドサーバーなど、RudderStack に送信されるあらゆるデータの提供元です。RudderStack で Braze を宛先として設定する前に、ソースを設定する必要があります。 |
+| Braze REST API キー | `users.track`、`users.identify`、`users.delete`、`users.alias.new` の権限を持つ Braze REST API キー。<br><br>これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
 | Brazeアプリのキー | Brazeダッシュボードでアプリキーを取得するには、**「設定」**>「**アプリ設定**」>「**識別**」と進み、アプリ名を見つける。関連する識別子文字列を保存する。
-| データセンター | データセンターは、Braze ダッシュボード\[インスタンス][15]]に対応しています。  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| データセンター | データセンターは、Braze ダッシュボード[インスタンス][15]]に対応しています。  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
 ### ステップ1:ソースを追加する
 
-Brazeへのデータ送信を開始するには、まずRudderStackアプリにソースが設定されていることを確認する必要がある。データソースの設定方法については、\[RudderStack][22] ] を参照のこと。
+Brazeへのデータ送信を開始するには、まずRudderStackアプリにソースが設定されていることを確認する必要がある。データソースの設定方法については、[RudderStack][22] ] を参照のこと。
 
 ### ステップ2:宛先を設定する
 
-データソースが設定されたので、RudderStack ダッシュボードで、\[**Destinations**] の下にある \[**ADD DESTINATION**] を選択します。使用可能な宛先のリストから \[**Braze**] を選択し、\[**Next**] をクリックします。
+データソースが設定されたので、RudderStack ダッシュボードで、[**Destinations**] の下にある [**ADD DESTINATION**] を選択します。使用可能な宛先のリストから [**Braze**] を選択し、[**Next**] をクリックします。
 
 Brazeデスティネーションで、アプリキー、Braze REST APIキー、データクラスタ、およびネイティブSDKオプション（デバイスモードのみ）を指定する。ネイティブ SDK オプションをオンにすると、Braze ネイティブ SDK を使用してイベントが送信されます。 
 
@@ -56,12 +56,12 @@ RudderStack の[接続モード](https://www.rudderstack.com/docs/destinations/r
 
 「[サポートされているメソッド](#supported-methods)」で説明するように、Braze の GitHub リポジトリでご使用のプラットフォームに対応した RudderStack SDK へのマッピングを設定します。
 
-- \[Android]\[android]
-- \[iOS]\[ios]
-- \[Swift]\[swift]
-- \[Web]\[web]
-- \[React Native]\[react]
-- \[Flutter]\[flutter]
+- [Android][android]
+- [iOS][ios]
+- [Swift][swift]
+- [Web][web]
+- [React Native][react]
+- [Flutter][flutter]
 
 デバイスモードの統合を完了するには、Rudderstack の[プロジェクトに Brazeを追加する](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration)詳しい手順を参照してください。
 
@@ -117,7 +117,7 @@ Brazeは、RudderStackメソッドのidentify、track、screen、page、group、
 RudderStack[`identify` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#identify)、ユーザーとそのアクションを関連付ける。RudderStackは、一意のユーザーIDと、名前、電子メール、IPアドレスなど、そのユーザーに関連するオプションの特徴をキャプチャする。
 
 **identify 呼び出しの差分管理**<br>
-デバイスモードで Braze にイベントを送信する場合、`identify` 呼び出しを重複排除することでコストを節減できます。そのためには、\[Deduplicate Traits] ダッシュボード設定を有効にします。その後、RudderStack は変更された属性 (特性) のみを Braze に送信します。
+デバイスモードで Braze にイベントを送信する場合、`identify` 呼び出しを重複排除することでコストを節減できます。そのためには、[Deduplicate Traits] ダッシュボード設定を有効にします。その後、RudderStack は変更された属性 (特性) のみを Braze に送信します。
 
 **ユーザーの削除**<br>
 RudderStack [Data Regulation API](https://www.rudderstack.com/docs/api/data-regulation-api/) の[抑制と削除の規則 (Suppression with Delete regulation)](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation) を使用して、Braze のユーザーを削除できます。
@@ -128,7 +128,7 @@ RudderStack [Data Regulation API](https://www.rudderstack.com/docs/api/data-regu
 RudderStackの[`track` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#track)、すべてのユーザー・アクティビティと、それらのアクティビティに関連するプロパティをキャプチャする。
 
 **Order completed**<br>
-\[RudderStack Ecommerce API][20] を使用して `Order Completed` という名前のイベントに対して track メソッドを呼び出すと、RudderStack はそのイベントにリストされている製品を [`purchases`][21] として Braze に送信します。
+[RudderStack Ecommerce API][20] を使用して `Order Completed` という名前のイベントに対して track メソッドを呼び出すと、RudderStack はそのイベントにリストされている製品を [`purchases`][21] として Braze に送信します。
 
 {% endtab %}
 {% tab スクリーン %}
@@ -146,7 +146,7 @@ RudderStack の [`page` メソッド](https://rudderstack.com/docs/destinations/
 RudderStackの[`group` メソッドでは](https://rudderstack.com/docs/destinations/marketing/braze/#group)、ユーザーをグループに関連付けることができる。
 
 **サブスクリプショングループのステータス**<br>
-サブスクリプショングループのステータスを更新するには、RudderStack ダッシュボードの \[Enable subscription groups in group call] 設定を有効にし、グループ呼び出しでサブスクリプショングループのステータスを送信します。
+サブスクリプショングループのステータスを更新するには、RudderStack ダッシュボードの [Enable subscription groups in group call] 設定を有効にし、グループ呼び出しでサブスクリプショングループのステータスを送信します。
 
 {% endtab %}
 {% tab 別名 %}
@@ -158,7 +158,7 @@ RudderStack の [`alias` メソッド](https://www.rudderstack.com/docs/destinat
 
 ## ユーザー特性をネストされたカスタム属性として送信する
 
-ユーザー特性をネストされたカスタム属性としてBrazeに送信し、それに対して追加、更新、削除操作を実行できる。これを行うには、Braze の宛先を設定するときに Rudderstack で \[Use Custom Attributes Operation dashboard] 設定を有効にします。この機能はクラウドモードでのみ利用できる。
+ユーザー特性をネストされたカスタム属性としてBrazeに送信し、それに対して追加、更新、削除操作を実行できる。これを行うには、Braze の宛先を設定するときに Rudderstack で [Use Custom Attributes Operation dashboard] 設定を有効にします。この機能はクラウドモードでのみ利用できる。
 
 次の形式で `identify` イベントでユーザー特性を階層化カスタム属性として送信できます。
 ```javascript
@@ -263,9 +263,9 @@ rudderanalytics.track("Product Viewed", {
 [20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started
-\[android] ： https://github.com/rudderlabs/rudder-integration-braze-android
-\[ios] ： https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
-\[swift] ： https://github.com/rudderlabs/rudder-integration-braze-swift
-\[web] ： https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
-\[react] ： https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
-\[flutter] ： https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter
+[android] ： https://github.com/rudderlabs/rudder-integration-braze-android
+[ios] ： https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
+[swift] ： https://github.com/rudderlabs/rudder-integration-braze-swift
+[web] ： https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
+[react] ： https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
+[flutter] ： https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter
