@@ -18,9 +18,9 @@ Braze とOneTrust の統合により、OneTrust ワークフロービルダー�
 | 要件 | 説明 |
 |---|---|
 | OneTrust アカウント | このパートナーシップを活用するには、[OneTrust](https://www.onetrust.com/) アカウントが必要です。 |
-| Braze API キー | OneTrust アクションが使用するエンドポイントに必要な権限を持つBraze REST API キー。<br><br>これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Brazeインスタンス | Brazeインスタンスは、Braze オンボーディング マネージャーから取得するか、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints) にあります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| BrazeのAPIキー | OneTrust アクションが使用するエンドポイントに必要な権限を持つBraze REST API キー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Brazeインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -30,7 +30,7 @@ Braze とOneTrust の統合により、OneTrust ワークフロービルダー�
 
 OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタンに移動して、**Select System** 画面を表示します。ここで、**Braze**を見つけ、**Next**ボタンをクリックします。
 
-\[**Enter Credential Details**] 画面のプロンプトに従って、次の情報を入力します。完了したら、認証情報を保存します。
+[**Enter Credential Details**] 画面のプロンプトに従って、次の情報を入力します。完了したら、認証情報を保存します。
   - 認証情報名
   - コネクタータイプを**Webアプリ**に設定します。
   - ホスト名: `<your-braze-instance-url>`
@@ -45,14 +45,14 @@ OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタ�
 
 {% tabs %}
 {% tab ユーザー同意の更新 %}
-1. OneTrust 統合メニューで \[**Gallery**] > \[**Braze**] > \[**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. OneTrust 統合メニューで [**Gallery**] > [**Braze**] > [**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. ワークフローモーダルに名前と通知 メールを入力します。**Create**ボタンをクリックします。作成時に Workflow Builder が表示されます。Brazeワークフローには、削除リクエストの処理に使用できるAPI コールとアクションがシードされます。<br><br>
 3. Workflow Builder で、ワークフローでトリガーするアクションを選択します。<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
 {% tab ユーザー削除 %}
 
-1. OneTrust 統合メニューで \[**Gallery**] > \[**Braze**] > \[**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. OneTrust 統合メニューで [**Gallery**] > [**Braze**] > [**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. ワークフローモーダルに名前と通知 メールを入力します。**Create**ボタンをクリックします。作成時に Workflow Builder が表示されます。Brazeワークフローには、削除リクエストの処理に使用できるAPI コールとアクションがシードされます。<br><br>
 3. Workflow Builder で、ワークフローでトリガーするアクションを選択します。<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
@@ -100,7 +100,7 @@ OneTrust ワークフローを使用して Braze でサブスクリプション�
 ![]({% image_buster /assets/img/onetrust/onetrust10.png %})
 
 #### データ主体の要求ワークフローを更新する
-1. \[**Privacy Rights Automation**] メニューで \[**Workflows**] を選択します。 
+1. [**Privacy Rights Automation**] メニューで [**Workflows**] を選択します。 
 2. Brazeインテグレーションで更新するワークフローを選択します。 
 3. **編集**ボタンを選択して編集を有効にします。
 4. 次に、ワークフローステップを選択してBrazeインテグレーションを追加し、**接続の追加**をクリックします。

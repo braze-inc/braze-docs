@@ -24,12 +24,12 @@ Braze と Redpoint の統合により、Redpoint CDP データに基づいて Br
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br>これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Braze REST エンドポイント | [REST エンドポイント URL][1]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Redpoint Data Management アーティファクト | Braze 統合は、一連の Redpoint Data Management アーティファクトによりサポートされています。ご使用の Redpoint Data Management バージョンに対応したアーティファクトをリクエストするには、[Redpoint Support][3] にお問い合わせください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
@@ -46,7 +46,7 @@ Braze と Redpoint の統合により、Redpoint CDP データに基づいて Br
 | `rpi_offers`         | Redpoint Outbound Delivery Braze チャネルの実行でこのユーザーがターゲットとなるオファータグの配列                   |
 | `rpi_contact_ids`    | Redpoint Outbound Delivery Braze チャネルの実行でこのユーザーがターゲットとなるオファー履歴連絡先 ID の配列     |
 | `rpi_channel_exec_ids`| Redpoint Outbound Delivery Braze チャネルの実行でこのユーザーがターゲットとなるチャネル実行 ID の配列       |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][4]{: style="max-width:75%;"}
 
@@ -58,7 +58,7 @@ Braze と Redpoint の統合により、Redpoint CDP データに基づいて Br
 
 Redpointインターアクション(RPI) で、新しいエクスポートテンプレートを作成し、** Braze Onboarding and Upsert** という名前を付けます。このテンプレートでは、Redpoint CDP と Braze ユーザープロファイルの間のコアマッピングと、Braze でユーザープロファイルに追加するカスタム属性を定義します。
 
-Redpoint CDP 属性sを**属性**列にドラッグアンドドロップします。それぞれの**ヘッダー行値**を対応するBraze\[ユーザー 属性][17]]に設定します。 
+Redpoint CDP 属性sを**属性**列にドラッグアンドドロップします。それぞれの**ヘッダー行値**を対応するBraze[ユーザー 属性][17]]に設定します。 
 
 以下のテーブルに、Redpoint CDP 属性と対応するBraze 属性s を示します。
 
@@ -73,9 +73,9 @@ Redpoint CDP 属性sを**属性**列にドラッグアンドドロップしま�
 | 性別             | `gender`         |
 | Primary City       | `home_city`      |
 | Primary Phone      | `phone`          |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\[**Offer History**] テーブルの \[**Offer Name**] 属性を追加します。最後に、Braze にマージするカスタム Redpoint 属性を追加します。たとえば、Education、Income、および Marital Status が属性として追加されている Onboarding and Upsert テンプレートを以下に示します。
+[**Offer History**] テーブルの [**Offer Name**] 属性を追加します。最後に、Braze にマージするカスタム Redpoint 属性を追加します。たとえば、Education、Income、および Marital Status が属性として追加されている Onboarding and Upsert テンプレートを以下に示します。
 
 ![][7]{: style="max-width:75%;"}
 
@@ -95,7 +95,7 @@ Redpoint CDP 属性sを**属性**列にドラッグアンドドロップしま�
 
 ### ステップ2:アウトバウンドチャネルを作成する
 
-RPI で2つの新しいチャネルを作成します。両方のチャネルを \[**Outbound Delivery**] に設定します。1つのチャネルに **Braze Onboarding and Upsert** という名前を付け、もう1つのチャネルに **Braze Append** という名前を付けます。
+RPI で2つの新しいチャネルを作成します。両方のチャネルを [**Outbound Delivery**] に設定します。1つのチャネルに **Braze Onboarding and Upsert** という名前を付け、もう1つのチャネルに **Braze Append** という名前を付けます。
 
 ![][9]{: style="max-width:75%;"}
 
@@ -103,11 +103,11 @@ RPI で2つの新しいチャネルを作成します。両方のチャネルを
 Braze への CDP レコードの最初の登録後に、Braze Onboarding and Upsert チャネルを使用する後続の Redpoint Interaction ワークフローが、最初の登録同期以降に変更されたレコードのみを選択するように設計されているかどうかを確認します。
 {% endalert %}
 
-### ステップ3:チャネルの設定s
+### ステップ 3:チャネルの設定s
 
 #### ステップ3a:テンプレートおよびエクスポートパス形式の設定
 
-チャネルの \[**Configuration**] 画面の \[**General**] タブに移動します。エクスポートテンプレートをそれぞれのチャネルに設定します。 
+チャネルの [**Configuration**] 画面の [**General**] タブに移動します。エクスポートテンプレートをそれぞれのチャネルに設定します。 
 
 次に、Redpoint Interaction と Redpoint Data Management の両方がアクセスできる外部コンテンツプロバイダーの場所、ファイル転送プロトコル、または共有ネットワークを指す両方のチャネルで、**エクスポートパス形式**を定義します。 
 

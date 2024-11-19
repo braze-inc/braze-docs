@@ -20,9 +20,9 @@ SalesWings では、マーケティングチームとマーケティングオペ
 | ----------- | ----------- |
 | SalesWings アカウント | このパートナーシップを活用するには、[SalesWings アカウント][1]が必要です。 |
 | Braze REST API キー | `users.export.ids` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][2]。エンドポイントは、インスタンスのBraze URLに依存する。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][2]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Segment.com アカウント (オプション) | Segment.com をご利用の場合は、リードプロファイリングのために、すべてのリードエンゲージメントおよびプロファイルデータを送信し、Segment.com でイベントを特定することができます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -86,15 +86,15 @@ SalesWings について詳しく知るために、フレンドリーな SalesWin
 
 ### ステップ 3:SalesWingsとBrazeを接続する
 
-[\[**SalesWings Settings**] ページ][6]に移動し、\[**Braze Integration**] セクションを展開します。
+[[**SalesWings Settings**] ページ][6]に移動し、[**Braze Integration**] セクションを展開します。
 
-![\[SalesWings Settings] ページの \[Braze Integration] セクション。][7]
+![[SalesWings Settings] ページの [Braze Integration] セクション。][7]
 
 新しく作成したキーの**Identifier**列の値をコピーし、SalesWings**Braze Integration**セクションの**Braze APIキー**フィールドにペーストする。
 
-\[API と SDK のエンドポイントの記事][8]での説明に従って Braze API エンドポイントを追加し、\[**Braze API endpoint**] フィールドにこのエンドポイントを入力します。**REST Endpoint**列の値をコピーし、SalesWings**Braze Integration**セクションの**Braze API endpoint**フィールドに入力する。
+[API と SDK のエンドポイントの記事][8]での説明に従って Braze API エンドポイントを追加し、[**Braze API endpoint**] フィールドにこのエンドポイントを入力します。**REST Endpoint**列の値をコピーし、SalesWings**Braze Integration**セクションの**Braze API endpoint**フィールドに入力する。
 
-次に、SalesWings 設定で \[**Save Changes**] をクリックします。
+次に、SalesWings 設定で [**Save Changes**] をクリックします。
 
 ### ステップ4:Braze、CRMとの統合など、SalesWingsのリードスコアリングを設定する
 

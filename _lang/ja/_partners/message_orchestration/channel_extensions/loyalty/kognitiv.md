@@ -19,8 +19,8 @@ Braze と Kognitiv の統合により、ロイヤルティ戦略を実装、評�
 |---|---|
 | コグニティブアカウント | このパートナーシップを活用するには、[Kognitiv][1] アカウントが必要です。 |
 | Kognitiv APIキー | Kognitiv REST API キー。これは**API Security Tokens**ページで作成できる。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 

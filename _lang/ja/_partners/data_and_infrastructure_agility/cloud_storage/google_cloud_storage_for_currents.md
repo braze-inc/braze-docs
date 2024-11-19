@@ -21,7 +21,7 @@ Braze と Google Cloud Storage の統合により、Currents データを Google
 | ----------- | ----------- |
 | Google Cloud Storage アカウント | このパートナーシップを活用するには、Google Cloud Storage アカウントが必要です。 |
 | Currents | Google Cloud Storage にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -31,11 +31,11 @@ Google Cloud Storage と統合するには、Braze が書き込み先のスト�
 
 ### ステップ1:役割を作成する
 
-\[**IAM & admin**] > \[**Roles**] > \[**\+ Create Role**] に移動して、Google Cloud Platform Console に新しいロールを作成します。
+[**IAM & admin**] > [**Roles**] > [**\+ Create Role**] に移動して、Google Cloud Platform Console に新しいロールを作成します。
 
 ![][2]
 
-次に、ロールに名前を付け、\[**+Add Permissions**] を選択し、`storage.buckets.get`、`storage.objects.create`、`storage.objects.get` を追加します。次に \[**Create**] を選択します。
+次に、ロールに名前を付け、[**+Add Permissions**] を選択し、`storage.buckets.get`、`storage.objects.create`、`storage.objects.get` を追加します。次に [**Create**] を選択します。
 
 必要に応じて `storage.objects.delete` 権限を追加して、Braze が不完全なファイルをクリーンアップできるようにします。まれに Google Cloud が接続を早期に終了し、Braze が Google Cloud Storage に不完全なファイルを書き込むことがあります。通常の状況では、Braze は再試行し、正しいデータを含む新しいファイルを作成しますが、古いファイルは Google Cloud Storage に残ります。
 
@@ -43,7 +43,7 @@ Google Cloud Storage と統合するには、Braze が書き込み先のスト�
 
 ### ステップ2:サービスアカウントを作成する
 
-\[**IAM & admin**] > \[**Service Accounts**] に移動し、\[**Create Service Account**] を選択して、Google Cloud Platform Console で新しいサービスアカウントを作成します。
+[**IAM & admin**] > [**Service Accounts**] に移動し、[**Create Service Account**] を選択して、Google Cloud Platform Console で新しいサービスアカウントを作成します。
 
 ![][4]
 
@@ -59,9 +59,9 @@ Google Cloud Storage と統合するには、Braze が書き込み先のスト�
 
 ### ステップ3:Braze で Currents を設定する
 
-Braze で \[**Currents**] > \[**\+ Current を作成**] > \[**Google Cloud Storage データのエクスポート**] に移動し、統合名と連絡先メールを入力します。
+Braze で [**Currents**] > [**\+ Current を作成**] > [**Google Cloud Storage データのエクスポート**] に移動し、統合名と連絡先メールを入力します。
 
-次に \[**GCS JSON 認証情報**] で JSON 秘密キーをアップロードし、GCS バケット名と GCS 接頭辞 (オプション) を指定します。 
+次に [**GCS JSON 認証情報**] で JSON 秘密キーをアップロードし、GCS バケット名と GCS 接頭辞 (オプション) を指定します。 
 
 {% alert important %}
 認証情報ファイルを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
@@ -73,7 +73,7 @@ Braze で \[**Currents**] > \[**\+ Current を作成**] > \[**Google Cloud Stora
 
 ### ステップ4:Google Cloud Storage (GCS) エクスポートを設定する
 
-Google Cloud Storage (GCS) エクスポートを設定するには、\[**Technology Partners**] > \[**Google Cloud Storage**] に移動し、GCS 認証情報を入力し、\[**Make this the default data export destination**] を選択します。
+Google Cloud Storage (GCS) エクスポートを設定するには、[**Technology Partners**] > [**Google Cloud Storage**] に移動し、GCS 認証情報を入力し、[**Make this the default data export destination**] を選択します。
 
 {% alert tip %}
 **GCS JSON 認証情報**は、[Google Cloud ドキュメント](https://cloud.google.com/iam/docs/keys-create-delete) の手順に従って生成されます。必ず、生成されたJSON値全体を入力すること。

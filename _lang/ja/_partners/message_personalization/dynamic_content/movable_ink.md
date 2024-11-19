@@ -16,11 +16,11 @@ search_tag: Partner
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | Movable Ink アカウント | このパートナーシップを活用するには、Movable Ink アカウントが必要です。 |
 | データソース | データソースを Movable Ink に接続する必要があります。これは、CSV、Web サイトインポート、または API を使用して実行できます。Braze と Movable Ink の間で統一 ID (`external_id` など) を使用してデータを渡していることを確認します。
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -47,8 +47,8 @@ Intelligent Creative には、Braze のユーザーが利用できる多くの�
 | アプリ | カウントダウンタイマ | ✔* | ✔ | \* プッシュ通知は受信時にキャッシュされ、更新されないため、サポートされますが推奨されません |
 || ポーリング | ✗ | ✔* | \* 投票後、アプリを移動式ランディングページに残す |
 || スクラッチオフ | ✔* | ✔* | \* クリックすると、スクラッチオフエクスペリエンスのためにアプリが終了する |
-|| 動画 | ✔* | ✔* | \* アニメーションGIF のみ。<br>Android の場合、Braze は実装で \[GIF サポート]\[GIF サポート]を必要とする |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|| 動画 | ✔* | ✔* | \* アニメーションGIF のみ。<br>Android の場合、Braze は実装で [GIF サポート][GIF サポート]を必要とする |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
@@ -60,7 +60,7 @@ Intelligent Creative には、Braze のユーザーが利用できる多くの�
 
 {% tabs local %}
 {% tab CSVデータソース %}
-- **CSV データソース**:各行には、少なくとも1つのSegment列と1つの内容列が必要です。CSV がアップロードされたら、コンテンツのターゲットを設定するために使用する列を選択します。\[例: CSV ファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+- **CSV データソース**:各行には、少なくとも1つのSegment列と1つの内容列が必要です。CSV がアップロードされたら、コンテンツのターゲットを設定するために使用する列を選択します。[例: CSV ファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
 ![「CSV」をデータソースとして選択すると表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
@@ -92,9 +92,9 @@ Movable Inkには、テキストや画像などの要素をドラッグアンド
 
 キャンペーンを終了する前に、ダイナミックな画像をプレビューし、クエリパラメーターを試してビューで画像がどのように表示されるかを確認してください。完了すると、ダイナミックな URLが生成され、Brazeに挿入できるようになります。
 
-Movable Ink プラットフォームの使用方法の詳細については、\[Movable Ink サポートセンター]\[サポートを参照してください。]
+Movable Ink プラットフォームの使用方法の詳細については、[Movable Ink サポートセンター][サポートを参照してください。]
 
-### ステップ 3:Movable Ink コンテンツ URL を取得する
+### ステップ3:Movable Ink コンテンツ URL を取得する
 
 Movable Ink のコンテンツを Braze メッセージに含めるには、Movable Ink から提供されたソース URL を確認する必要があります。 
 
@@ -116,13 +116,13 @@ Braze プラットフォームで、クリエイティブなタグをメール�
 1. Braze プラットフォームの場合:
 	- Android プッシュ:**プッシュアイコン画像**と**拡張通知画像**フィールドにURLを貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
 	- iOS プッシュ**Media**リンクフィールドにURLを貼り付け、使用しているファイル形式を示します。<br>![]({% image_buster /assets/img/movable_ink/ios.png %}){: style="max-width:60%"}<br><br>
-	- Web プッシュURL を \[**プッシュ通知アイコンの画像**] と \[**大きな通知画像**] フィールドに貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
+	- Web プッシュURL を [**プッシュ通知アイコンの画像**] と [**大きな通知画像**] フィールドに貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
 2. 画像がキャッシュされないようにするため、メッセージの URL の先頭に空の Liquid タグを追加します。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
 {% tab アプリ中電文 %}
 
-1. Braze プラットフォームで \[**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Braze プラットフォームで [**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. キャッシュの防止に役立つ一意のURL を指定します。Movable Ink のリアルタイム画像が機能し、キャッシュの影響を受けないようにするため、Liquid を使用して、Movable Ink 画像 URL の末尾にタイムスタンプを付加します。
 
 これを行うには、次の構文を使用します。必要に応じて画像 URL を置き換えます。
@@ -140,7 +140,7 @@ Braze プラットフォームで、クリエイティブなタグをメール�
 {% endtab %}
 {% tab Content Card %}
 
-1. Braze プラットフォームで \[**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Braze プラットフォームで [**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. モバイル:iOS および Android のコンテンツカードの画像は、受信時にキャッシュされ、更新されません。 
   - 回避策として、キャンペーンを毎日、毎週、または毎月の定期的なメッセージとしてスケジュールし、対応する有効期限を設定します。これにより、コンテンツカードが再テンプレート化されます。たとえば、1日に1回更新する必要があるコンテンツカードは、有効期間が1日に設定された毎日のスケジュール送信として設定する必要があります。
 3. コンテンツカードが再テンプレート化されたときに、Movable Ink のリアルタイム画像が機能し、キャッシュの影響を受けないようにするため、Liquid を使用して、Movable Ink 画像 URL の末尾にタイムスタンプを付加します。
@@ -162,17 +162,17 @@ Braze プラットフォームで、クリエイティブなタグをメール�
 
 ### 動的画像が正しく表示されませんか?どんなチャネルで苦労していますか？
 - **プッシュ通知**Movable Ink 画像 URL の前に空のロジックがあることを確認します。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **アプリ内メッセージとコンテンツカード**:画像 URL がインプレッションごとに一意であることを確認します。このためには、各URL が異なる URL になるように適切な Liquid を追加します。\[アプリ内メッセージとコンテンツカードメッセージの手順]\[手順]を参照してください。 
+- **アプリ内メッセージとコンテンツカード**:画像 URL がインプレッションごとに一意であることを確認します。このためには、各URL が異なる URL になるように適切な Liquid を追加します。[アプリ内メッセージとコンテンツカードメッセージの手順][手順]を参照してください。 
 - **画像が読み込まれない**:Braze ダッシュボードで、すべての「マージタグ」を対応する Liquid フィールドに必ず置き換えてください。たとえば、{% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} を {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %} に置き換えます。
 
 ### Android で GIF を表示するときに問題がありますか?
-- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android\[アプリ内メッセージ customization]\[GIFsupport] 記事に従ってください。
+- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android[アプリ内メッセージ customization][GIFsupport] 記事に従ってください。
 
 [1]: https://www.movableink.com/
-\[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-\[support]: https://support.movableink.com/
-\[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-\[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
+[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[support]: https://support.movableink.com/
+[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
+[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})

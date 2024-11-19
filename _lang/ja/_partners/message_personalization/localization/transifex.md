@@ -23,7 +23,7 @@ BrazeとTransifexの統合は、Connected Contentを活用することで、リ�
 | 必要条件| 説明|
 | ---| ---|
 |トランシフェックス アカウント | このパートナーシップを活用するには、[Transifexアカウント](https://www.transifex.com/signin/)が必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
