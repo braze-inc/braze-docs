@@ -42,6 +42,7 @@ GEM
     bigdecimal (3.1.8)
     colorator (1.1.0)
     concurrent-ruby (1.3.4)
+    csv (3.3.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -94,6 +95,7 @@ GEM
     mini_portile2 (2.8.8)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    mutex_m (0.2.0)
     nio4r (2.7.4)
     nokogiri (1.16.7)
       mini_portile2 (~> 2.8.2)
@@ -154,11 +156,13 @@ PLATFORMS
 
 DEPENDENCIES
   algolia_html_extractor!
+  csv (~> 3.3)
   jekyll (~> 4.3.3)
   jekyll-algolia (~> 1.0)!
   jekyll_asset_pipeline
   kramdown (>= 2.4)
   kramdown-parser-gfm
+  mutex_m (~> 0.2.0)
   puma
   rack
   rack-jekyll
