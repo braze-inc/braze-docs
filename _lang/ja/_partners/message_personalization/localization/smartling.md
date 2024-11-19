@@ -15,13 +15,13 @@ Braze と Smartling の統合により、メールテンプレートとコンテ
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Smartling アカウント | このパートナーシップを活用するには、[Smartling アカウント][2]が必要です。 |
 | Smartling 翻訳プロジェクト | Braze アカウントを Smartling に接続するには、まずサインアップし、[翻訳プロジェクト][3]を作成する必要があります。 |
-| Braze REST API キー | すべてのテンプレートとコンテンツブロック権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Braze REST エンドポイント | [REST エンドポイント URL][1]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべてのテンプレートとコンテンツブロック権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -42,9 +42,9 @@ Braze と Smartling の統合により、メールテンプレートとコンテ
 
 1. [Smartling][2] で、Smartling アカウントに [Braze Connector][6] プロジェクトタイプを作成します。 
   - 必要なすべてのターゲット言語がプロジェクトに追加されていることを確認します。
-2. このプロジェクト内から、\[**Settings**] > \[**Braze Settings**] > \[**Connect to Braze**] をクリックします。
+2. このプロジェクト内から、[**Settings**] > [**Braze Settings**] > [**Connect to Braze**] をクリックします。
 3. Braze API の URL とBraze API キーを入力します。
-4. \[**保存**] をクリックします。
+4. [**保存**] をクリックします。
 
 #### Braze コネクター設定を完了する
 
@@ -52,7 +52,7 @@ Braze と Smartling の統合により、メールテンプレートとコンテ
 
 以前の翻訳リクエストのオートメーション方法を選択します。
 
-\[**Language Configuration**] でソース言語とターゲット言語を設定します。これは、Smartling TMSにコンテンツを取り込み、翻訳をBrazeに送り返すためにコネクターによって使用されます。
+[**Language Configuration**] でソース言語とターゲット言語を設定します。これは、Smartling TMSにコンテンツを取り込み、翻訳をBrazeに送り返すためにコネクターによって使用されます。
 
 ![][8]
 
@@ -67,7 +67,7 @@ Smartling は、以下の方法でコンテンツを検索および選択する�
 
 ![][9]
 
-### ステップ3:Braze に翻訳を追加する
+### ステップ 3:Braze に翻訳を追加する
 
 翻訳がスマートリングプラットフォームで完了すると、自動的にBrazeに送信されます。スマートリングとBraze間で手動でコンテンツを同期する必要はありません。
 
