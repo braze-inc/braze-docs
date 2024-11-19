@@ -12,12 +12,12 @@ description: "Learn how to use various Braze features to power your B2B account-
 
 You can do B2B account-based segmentation in two ways, depending on how you set up your [B2B data model]({{site. baseurl}}/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models/):
 
-- When using [Catalogs for your business objects](#option-1-when-using-catalogs-for-your-business-objects)
-- When using [Connected Sources for your business objects](#option-2-when-using-connected-sources-for-your-business-objects)
+- When using [catalogs for your business objects](#option-1-when-using-catalogs-for-your-business-objects)
+- When using [connected sources for your business objects](#option-2-when-using-connected-sources-for-your-business-objects)
 
 ## Setting up B2B account-based segmentation
 
-### Option 1: When using Catalogs for your business objects
+### Option 1: When using catalogs for your business objects
 
 #### Basic SQL template segmentation
 
@@ -25,7 +25,7 @@ To help you get started, we created basic SQL templates for simple account-based
 
 Let’s say you want to segment users who are employees of a target enterprise account. 
 
-1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment ptions for events or purchases.][1]<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engaged with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.][2]<br><br>
+1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.][1]<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engage with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.][2]<br><br>
 2. Use the **Variables** tab to provide the necessary fields for your template before generating your segment.<br><br>For Braze to identify users based on their engagement with catalog items, you need to do the following:
 - Select a catalog that contains a catalog field
 - Select a custom event that contains an event property
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: When using connected sources for your business objects
 
-For the basics on how to use Connected Sources in segmentation, refer to [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
+For the basics on how to use connected sources in segmentation, refer to [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
 
 ## Using your account-based extension in a segment
 

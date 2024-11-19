@@ -3,7 +3,7 @@ nav_title: B2B Use Cases
 page_order: 11
 layout: dev_guide
 guide_top_header: "B2B use cases"
-guide_top_text: "Braze has a powerful customer engagement suite that provides unprecedented ways to engage prospects and customers, from lead acquisition strategies to product-led sales and growth initiatives, all the way to churn prevention.<br><br>This section explains how to set up Braze for B2B use cases, including initial data model creation, account-based segmentation, operational campaigns like lead scoring, and more."
+guide_top_text: "Braze has a powerful customer engagement suite that provides unprecedented ways to engage prospects and customers, from lead acquisition strategies to product-led sales and growth initiatives, all the way to churn prevention.<br><br>This section explains how to set up Braze for business-to-business (B2B) use cases, including initial data model creation, account-based segmentation, operational campaigns like lead scoring, and more."
 description: "Check out the different ways you can use Braze to support your B2B use cases."
 
 guide_featured_title: "Featured use cases"
