@@ -1,6 +1,8 @@
 ---
 nav_title: Lead Scoring
 article_title: Creating a Lead-Scoring Workflow
+page_order: 1
+page_type: reference
 description: "Learn how to use Braze to do simple lead scoring, external lead scoring, and lead handoffs."
 ---
 
