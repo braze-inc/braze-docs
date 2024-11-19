@@ -1,18 +1,18 @@
 ---
 nav_title: B.Layer
 article_title: B.Layer
-description: "Cet article de référence décrit le partenariat entre Braze et B.Layer, un générateur de messages in-app, que vous pouvez utiliser pour créer des messages in-app personnalisés simplement, rapidement et sans coder."
+description: "Cet article de référence décrit le partenariat entre Braze et B.Layer, un générateur de messages intégré à l'application, que vous pouvez utiliser pour créer des messages intégrés personnalisés simplement, rapidement et sans codage."
 alias: /partners/blayer-inapps/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # B.Layer
 
-> [B.Layer](https://blayer.phiture.com) est le générateur de messages in-app de Phiture qui aide les équipes CRM des applications mobiles à créer des messages in-app personnalisés simplement, rapidement et sans coder. 
+> [B.Layer](https://blayer.phiture.com) est le générateur de messages intégré de Phiture qui aide les équipes CRM des applications mobiles à créer des messages intégrés personnalisés de manière simple, rapide et sans codage. 
 
-L'intégration Braze et B.Layer vous permet de tirer parti du générateur de messages in-app B.Layer pour vous aider à créer des messages in-app intégrés à la marque qui peuvent être exportés sous forme de fichier zip ou HTML intégré vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
+L'intégration de Braze et de B.Layer vous permet de tirer parti du générateur de messages in-app B.Layer pour vous aider à créer des messages in-app conformes à votre marque et pouvant être exportés sous forme de fichier zip ou de code HTML en ligne vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
 
 ![][2]
 
@@ -20,47 +20,47 @@ L'intégration Braze et B.Layer vous permet de tirer parti du générateur de me
 
 | Condition | Description |
 | ----------- | ----------- |
-| Compte B.Layer | Un compte [B.Layer](https://blayer.phiture.com) est requis pour profiter de ce partenariat. |
-{: .reset-td-br-1 .reset-td-br-2}
+| B.Layer compte | Un [B.Layer](https://blayer.phiture.com)compte est nécessaire pour bénéficier de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-Avec B.Layer, il existe d'innombrables possibilités de création et d'expérimentation, notamment des curseurs de recommandations produit , onboarding multi-écrans ou enquêtes, NPS, capture d'e-mails, offres spéciales, etc.
+B.Layervous fournir d'innombrables possibilités de créer et de tester, entre autres, des curseurs de recommandation de produits, des processus d’onboarding ou des enquêtes multi-écrans, des scores NPS, la capture d'e-mails, des offres spéciales, etc.
 
-Ils travaillent avec des marques comme Lifesum, Blinkist, OnX Hunt et bien d'autres encore pour améliorer leur expérience utilisateur sans ressources supplémentaires. Nous sommes également parmi les finalistes des APS Awards 2022 dans la catégorie innovation d'application.
+Ils travaillent avec des marques telles que Lifesum, Blinkist, OnX Hunt et bien d'autres pour améliorer leur expérience utilisateur sans ressources supplémentaires. Nous figurons également parmi les finalistes des APS Awards 2022 dans la catégorie innovation en matière d'applications.
 
 ## Intégration
 
-### Étape 1 : Créer votre message in-app
+### Étape 1 : Créez votre message in-app
 
-#### Définir les couleurs et les polices de la marque
+#### Définissez les couleurs et les polices de la marque
 
-Dans B.Layer, dans le menu hamburger en haut de la page, cliquez sur **Brand assets > add your brand assets (Actifs de marque > ajoutez vos actifs de marque)**. Vous pourrez attribuer ici la couleur et les polices de votre marque. 
-Vous êtes prêt. Vous pouvez maintenant commencer à concevoir votre message in-app.
+Dans le menu de B.Layer, en haut de la page, cliquez sur **Ressources de la marque > Ajouter des ressources de marque**. Vous pouvez y attribuer la couleur et les polices de caractères de votre marque.
+Tout est prêt. Vous pouvez maintenant commencer à concevoir votre message in-app.
 
 ![][4]
 
-#### Concevoir votre message In-App
+#### Concevez votre message in-app
 
-Pour concevoir votre message In-App, choisissez un seul message in-app. Ensuite, stylisez votre message et ajoutez les composants dont vous avez besoin. Chaque composant peut être ajusté.
+Pour concevoir votre message in-app, sélectionnez un seul message in-app. Ensuite, mettez en forme votre message et ajoutez les éléments dont vous avez besoin. Chaque composant peut être ajusté.
 
 ![][5]
 
-### Télécharger votre message in-app
+### Téléchargez votre message in-app
 
-Une fois que vous avez terminé, téléchargez votre message. Votre message peut être téléchargé au format ZIP ou HTML en ligne. 
+Une fois que vous avez terminé, téléchargez votre message. Votre message peut être téléchargé au format ZIP ou HTML intégré. 
 
-### Étape 2 : Ajouter un code personnalisé B.Layer
+### Étape 2 : Ajouter un code B.Layer personnalisé
 
-Dans Braze, créer un message in-app avec code personnalisé. Si vous avez un fichier ZIP, faites-le glisser et déposez-le dans la zone au-dessus de la section de code. Si vous avez un fichier HTML en ligne, collez le HTML en ligne dans la section HTML.
+Dans Braze, créez un message in-app avec code personnalisé. Si vous possédez un fichier ZIP, faites-le glisser et déposez-le dans la zone située au-dessus de la section du code. Si vous avez un fichier HTML en ligne, collez-le dans la section HTML.
 
 ![][6]
 
 ## Suivi des boutons
 
-Avec B.Layer, vous pouvez enregistrer les interactions des boutons ou la saisie de texte en tant qu'attribut Braze. Cela peut être fait dans l'éditeur. Un exemple populaire est une enquête NPS.
+AvecB.Layer, vous pouvez enregistrer les interactions avec les boutons ou la saisie de texte en tant qu'attribut Braze. Cela peut être fait dans l'éditeur. Un exemple courant est une enquête portant sur le NPS.
 
-B.Layer utilise le suivi des boutons Braze ajouté aux liens que vous entrez, par exemple, `?button=0` - De cette façon, vous pouvez voir les clics réalisés sur les boutons dans la partie analytique de votre campagne.
+B.Layer utilise le suivi des boutons Braze ajoutés aux liens que vous saisissez (par exemple,`?button=0`). De cette façon, vous pouvez voir les clics sur les boutons dans la partie des analyses de votre campagne.
 
 [2]: {% image_buster /assets/img/blayer/blayer2.png %}
 [3]: {% image_buster /assets/img/blayer/blayer3.png %}
