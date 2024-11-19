@@ -26,7 +26,7 @@ Braze と Segment の統合により、ユーザーを追跡し、さまざま�
 | ----------- | ----------- |
 | Segment アカウント | このパートナーシップを活用するには、[Segment アカウント](https://app.segment.com/login)が必要です。 |
 | インストールされたソースと Segment ソースの[ライブラリ](https://segment.com/docs/sources/) | モバイルアプリ、Web サイト、バックエンドサーバーなど、Segment に送信されるデータの提供元。<br><br>適切な `Source > Destination` フローを設定できるようにするには、ライブラリをアプリ、サイト、サーバーにインストールしておく必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -38,9 +38,9 @@ BrazeとSegmentを統合するには、[選択した統合タイプ](#integratio
 
 ### ステップ2:宛先フレームワークと接続タイプを選択する {#integration-options}
 
-Segmentで、**\[Destinations] > \[Braze] > \[Configure Braze] > \[Select your Source] > \[Setup]** の順に移動します。
+Segmentで、**[Destinations] > [Braze] > [Configure Braze] > [Select your Source] > [Setup]** の順に移動します。
 
-![ソースの設定ページ。このページでは、宛先フレームワークを \[Actions] または \[Classic] のいずれかに設定し、接続モードを \[Cloud mode] または \[Device mode] のいずれかに設定します。][42]
+![ソースの設定ページ。このページでは、宛先フレームワークを [Actions] または [Classic] のいずれかに設定し、接続モードを [Cloud mode] または [Device mode] のいずれかに設定します。][42]
 
 Segment のWeb ソース (Analytics.js) およびネイティブクライアントサイドライブラリは、サイドバイサイド (デバイスモード) 統合またはサーバー間 (クラウドモード) 統合のいずれかを使用して、Braze と統合できます。
 
@@ -50,7 +50,7 @@ Segment のWeb ソース (Analytics.js) およびネイティブクライアン�
 | ----------- | ------- |
 | [サイドバイサイド<br>(デバイスモード)](#side-by-side-sdk-integration) |Segment の SDK を使用して、イベントを Braze のネイティブ呼び出し変換します。これにより、サーバー間統合よりも高度な機能にアクセスでき、Braze をより包括的に使用できるようになります。<br><br>Segmentは、すべてのBrazeメソッド（例えば、Content Cards）をサポートしているわけではない。対応するマッピングを通してマッピングされていないBrazeメソッドを使用するには、コードベースにネイティブのBrazeコードを追加してメソッドを呼び出す必要がある。 |
 | [サーバー間<br>(クラウドモード)](#server-to-server-integration) | SegmentからBraze REST APIエンドポイントにデータを転送する。<br><br>アプリ内メッセージ、コンテンツカード、プッシュ通知などのBraze UI機能には対応していない。また、この方法では利用できないデバイスレベルのフィールドなど、自動的に取得されるデータも存在します。<br><br>これらの機能を使いたい場合は、サイド・バイ・サイドの統合を検討しよう。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 2つの統合オプション（接続モード）について、それぞれの利点を含め、詳しくは[セグメントを](https://segment.com/docs/destinations/#connection-modes)ご覧いただきたい。
@@ -79,12 +79,12 @@ Androidデバイスモード統合のソースコードは、Brazeによって�
 | - | ----------- | --------- |
 | 優先 | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
 | レガシー｜[Analytics-Android](https://github.com/segmentio/analytics-android)｜[Braze Segment Android](https://github.com/braze-inc/braze-segment-android)｜
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endalert %}
 
-Android ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして \[**Classic**] を選択し、\[**Save**] をクリックします。 
+Android ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。 
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
@@ -105,10 +105,10 @@ iOSデバイスモード統合のソースコードは、Brazeによって保守
 | - | ----------- | --------- |
 | 優先 | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
 | レガシー｜[Analytics-iOS](https://github.com/segmentio/analytics-ios)｜[Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios)｜
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
-iOS ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして \[**Classic**] を選択し、\[**Save**] をクリックします。 
+iOS ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。 
 
 ![]({% image_buster /assets/img/segment/ios.png %})
 
@@ -121,7 +121,7 @@ iOS ソースのデバイスモードの宛先として Braze を設定するに
 
 Segmentの新しいBraze Web Mode (Actions)フレームワークは、BrazeをWebソースのデバイスモードデスティネーションとして設定するのに推奨される。 
 
-Setup UI で、宛先フレームワークとして \[**Actions**] を選択し、接続モードとして \[**Device Mode**] を選択します。
+Setup UI で、宛先フレームワークとして [**Actions**] を選択し、接続モードとして [**Device Mode**] を選択します。
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
@@ -139,7 +139,7 @@ React Native Segment ソースを Braze に接続する場合は、オペレー�
 React Native アプリがすべてのデバイスで同じ Braze アプリ識別子を使用して Braze を初期化する場合、すべての React Native ユーザーは Braze で Android ユーザーまたは iOS ユーザーとみなされ、すべてのプッシュトークンはそのオペレーティングシステムに関連付けられます。
 {% endalert %}
 
-各ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして \[**Classic**] を選択し、\[**Save**] をクリックします。
+各ソースのデバイスモードの宛先として Braze を設定するには、宛先フレームワークとして [**Classic**] を選択し、[**Save**] をクリックします。
 
 {% endtab %}
 {% endtabs %}
@@ -163,18 +163,18 @@ React Native アプリがすべてのデバイスで同じ Braze アプリ識別
 
 | セッティング | 説明 |
 | ------- | ----------- |
-| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの \[**設定の管理**] で確認できます。 | 
+| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの [**設定の管理**] で確認できます。 | 
 | カスタムAPIエンドポイント<br>(SDKエンドポイント） | インスタンスに対応するBraze SDKエンドポイント（`sdk.iad-01.braze.com` など） | 
 | Endpoint region | あなたのBrazeインスタンス（US 01、US 02、EU 01など） | 
 | Enable automatic in-app message registration | アプリ内メッセージを手動で登録したい場合は、これを無効にする。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Web Device-Mode %}
 
 | セッティング | 説明 |
 | ------- | ----------- |
-| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの \[**設定の管理**] で確認できます。 | 
+| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの [**設定の管理**] で確認できます。 | 
 | カスタムAPIエンドポイント<br>(SDKエンドポイント） | インスタンスに対応するBraze SDKエンドポイント（`sdk.iad-01.braze.com` など） | 
 | Safari website push ID | Safariプッシュをサポートしている場合、Safariプッシュ証明書を作成する際にAppleに提供したWebサイトプッシュID（`web` で始まる、たとえば、`web.com.example.domain` ）をこのオプションに指定する必要がある。 |
 | Braze Web SDKバージョン | 使用したいBraze Web SDKのバージョン |
@@ -202,18 +202,18 @@ React Native アプリがすべてのデバイスで同じ Braze アプリ識別
 | 指定されたページのみを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>これにより、ページ呼び出しとそれに関連付けられている名前のみが Braze に送信されます。 |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>このオプションを有効にすると、収益プロパティを持つすべてのTrackコールが購入イベントをトリガーする。 | 
 | 既知のユーザーのみを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定をマッピングによって有効にできます。<br><br>有効にすると、この新しい設定により、有効な`userId` が存在するまで `window.appboy.initialize` の呼び出しが遅延します。 | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Cloud-Mode %}
 
 | セッティング | 説明 |
 | ------- | ----------- |
-| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの \[**設定の管理**] で確認できます。 | 
+| アプリ識別子 | 特定のアプリを参照するためのアプリ識別子。これは、Braze ダッシュボードの [**設定の管理**] で確認できます。 | 
 | REST APIキー | これは、Brazeダッシュボードの**「設定」**>「**APIキー**」で確認できる。 | 
 | カスタムREST APIエンドポイント | インスタンスに対応するBraze RESTエンドポイント（rest.iad-01.braze.com など）。 | 
 | 既存ユーザーのみを更新する | **Classic Destination Cloud-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Cloud Actions フレームワーク宛先に移行することを推奨しています。Cloud Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>既存のユーザーのみを更新するかどうかを決定する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -231,7 +231,7 @@ Brazeは、[Page](https://segment.com/docs/connections/sources/catalog/libraries
 | `userId` (`external_id`) | すべて |
 | 匿名ユーザー | Device mode の宛先 |
 | ユーザーエイリアス | Cloud mode の宛先 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Cloud Mode (Actions) 宛先にある [Create Alias アクション](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#create-alias)を使用して、エイリアスのみのユーザーを作成したり、既存の `external_id` プロファイルにエイリアスを追加したりできます。[ユーザーの識別（Identify User）アクションは](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#identify-user)、エイリアスの作成（Create Alias）アクションと並行して使用することができ、そのユーザーが使用可能になった後、エイリアスのみのユーザーを`external_id` 。 
 
@@ -239,7 +239,7 @@ Cloud Mode (Actions) 宛先にある [Create Alias アクション](https://segm
 
 Braze に送信される宛先データは、Cloud Mode Actions 内でバッチ処理できます。バッチサイズの上限は75イベントであり、これらのバッチはフラッシュされる前に30秒間蓄積される。リクエストのバッチ処理はアクションごとに実行されます。たとえば、Identify Calls (属性) が1つのリクエストでバッチ処理され、Track Calls (カスタムイベント) が2番目のリクエストでバッチ処理されます。SegmentからBrazeに送信されるリクエストの数を減らすことができるため、Brazeはこの機能を有効にすることを推奨している。その結果、宛先が Braze のレート制限に達してリクエストを再試行するリスクが減少します。 
 
-\[Braze Destination] > \[**Mappings**] に移動して、アクションのバッチ処理をオンにできます。そこから、マッピングの右側にある3つのドットのアイコンをクリックし、\[**Edit Mapping**] を選択します。**Select mappings**セクションの一番下までスクロールし、**Batch Data to Brazeが** **Yesに**設定されていることを確認する。
+[Braze Destination] > [**Mappings**] に移動して、アクションのバッチ処理をオンにできます。そこから、マッピングの右側にある3つのドットのアイコンをクリックし、[**Edit Mapping**] を選択します。**Select mappings**セクションの一番下までスクロールし、**Batch Data to Brazeが** **Yesに**設定されていることを確認する。
 
 
 {% tabs ローカル %}
@@ -260,7 +260,7 @@ Braze に送信される宛先データは、Cloud Mode Actions 内でバッチ�
 | `address.country` | `country` |
 | `address.city` | `home_city` |
 | `gender` | `gender` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 `email_subscribe` や `push_subscribe` などのその他の予約済み Braze プロファイルフィールドを送信するには、これらのフィールドに Braze 命名規則を使用して、identify 呼び出しでこれらを特性として渡します。
 
@@ -271,7 +271,7 @@ traits パラメータの以下のフィールドを使用して、指定され�
 `braze_subscription_groups` という予約済みの Braze プロファイルフィールドを使用します。このフィールドは、オブジェクト配列に関連付けることができます。配列の各オブジェクトに2つの予約キーが含まれている必要があります。
 
 1. `subscription_group_state`:特定のサブスクリプショングループに対してユーザーが `"subscribed"` または`"unsubscribed"` のいずれであるかを示します。
-2. `subscription_group_id`:サブスクリプショングループの一意の ID を表す。この ID は、Braze ダッシュボードの \[**サブスクリプショングループ管理**] で確認できます。
+2. `subscription_group_id`:サブスクリプショングループの一意の ID を表す。この ID は、Braze ダッシュボードの [**サブスクリプショングループ管理**] で確認できます。
 
 {% subtabs %}
 {% subtab Swift %}
@@ -348,7 +348,7 @@ analytics.identify(
 | 予約済み特性で識別する | ユーザー属性を設定する | Segment: `analytics.identify({email: "dawei@braze.com"});`<br> Braze: `Braze.getUser().setEmail("dawei@braze.com");`
 | カスタム特性で識別する | カスタム属性を設定する | Segment: `analytics.identify({fav_cartoon: "Naruto"});`<br>Braze: `Braze.getUser().setCustomAttribute("fav_cartoon": "Naruto")`;
 | ユーザー ID と特性で識別する | Segment:external ID と属性を設定する | 先の方法を組み合わせる。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) 宛先と [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) 宛先では、Update User Profile Action を使用して前述のマッピングを設定できます。
 
@@ -363,16 +363,16 @@ analytics.identify(
 
 あなたがイベントを追跡するとき、私たちは提供された名前を使用して[カスタムイベントとして]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)そのイベントを記録する。 
 
-トラックコールのプロパティオブジェクト内で送信されたメタデータは、関連イベントのカスタムイベントプロパティとしてBrazeに記録される。すべての[カスタムイベントプロパティデータタイプが](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)サポートされている。
+トラックコールのプロパティオブジェクト内で送信されたメタデータは、関連イベントのカスタムイベントプロパティとしてBrazeに記録される。すべての[カスタムイベントプロパティデータタイプが]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)サポートされている。
 
 [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) 宛先と [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event) 宛先では、Track Event Action を使用して前述のマッピングを設定できます。
 
 | Segment での方法 | Braze での方法 | 例 |
 |---|---|---|
-| [追跡](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
+| [Track](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
 | [プロパティを使用した追跡](https://segment.com/docs/spec/track/) | [イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)として記録される | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});`<br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
 | [製品を使用した追跡](https://segment.com/docs/spec/track/) | [購入イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)として記録される。 | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});`<br>Braze: `Braze.logPurchase("ab12", 19);` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ##### 注文完了 {#order-completed}
 
@@ -436,7 +436,7 @@ Segment では、クライアントが送信できるデータエレメントの
 | ----------------- | ------------------ |
 | Braze SDKエンドポイント | カスタムAPIエンドポイント |
 | Braze RESTエンドポイント | カスタムREST APIエンドポイント |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Braze API エンドポイント (Segment では「Custom API Ednpoint」と呼ばれます) は、SDK のために Braze により設定される SDK エンドポイントです (例: `sdk.iad-03.braze.com`)。Braze REST API エンドポイント (Segment では「Custom REST API Endpoint」と呼ばれます) は、REST API エンドポイントです (例: `https://rest.iad-03.braze.com`)。
 {% enddetails %}
@@ -447,7 +447,7 @@ Braze API エンドポイント (Segment では「Custom API Ednpoint」と呼�
 | ----------------- | ------------------ |
 | Braze SDKエンドポイント | カスタムAPIエンドポイント |
 | Braze RESTエンドポイント | カスタムREST APIエンドポイント |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Braze SDK のエンドポイントを正しく入力するには、適切な形式に従う必要があります。Braze SDK エンドポイントには `https://` を含めないでください (例: `sdk.iad-03.braze.com`)。このようにしないと、Braze 統合が機能しなくなります。これは、Segment によりエンドポイントの先頭に `https://` が自動的に付加され、その結果、Braze は無効なエンドポイント `https://https://sdk.iad-03.braze.com` で初期化されことになるためです。
 
