@@ -1,22 +1,22 @@
 ---
-nav_title: "Configuration du pipeline d’événements ETL"
-article_title: Configuration du pipeline d’événements ETL Snowflake
+nav_title: "Configuration du pipeline d'événements ETL"
+article_title: "Configuration du pipeline d'événements ETL Snowflake"
 page_order: 2
-description: "Cette page partenaire présente un exemple de requête E-mail cliqué dont vous pouvez vous servir pour configurer vos propres requêtes."
+description: "Cette page partenaire propose un exemple de configuration d'une requête de clics d'e-mail à consulter lors de la configuration de vos propres requêtes."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
-# Configuration du pipeline d’événements ETL
+# Configuration du pipeline d'événements ETL
 
-> Cette page partenaire présente un exemple de requête E-mail cliqué dont vous pouvez vous servir pour configurer vos propres requêtes.
+> Cette page partenaire propose un exemple de configuration d'une requête de clics d'e-mail à laquelle vous pouvez vous référer lorsque vous configurez vos propres requêtes.
 
-Vous pouvez utiliser cette requête pour analyser les interactions avec des e-mails spécifiques de vos campagnes ou Canvas Braze.
+Vous pouvez utiliser cette requête de clics sur les e-mails pour analyser les interactions avec des e-mails spécifiques dans vos campagnes et canevas Braze.
 
-## Configurer cette requête
+## Créez cette requête
 
-Créez une base de données pour `BRAZE`, puis créez une base de données pour `BRAZE_CURRENTS;` s’il n’en existe aucune :
+Créez une base de données pour `BRAZE`, puis créez une base de données si elle n'existe pas pour `BRAZE_CURRENTS;` :
 
 ```sql
 use schema BRAZE_CURRENTS.public;
@@ -58,7 +58,7 @@ CREATE TABLE
   );
 ```
 
-Utilisez la commande suivante pour créer ou remplacer votre canal :
+Utilisez la commande suivante pour créer ou remplacer votre pipeline :
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -96,16 +96,16 @@ show pipes;
 
 ## Faites-en plus avec cet exemple de requête
 
-Copiez le `notification_channel` dans la sortie de la commande précédente et utilisez-le pour configurer les notifications du compartiment S3.
+Copiez le paramètre `notification_channel` à partir de la sortie de la commande précédente et utilisez-le lors de la configuration des notifications de compartiment S3.
 
-Effectuez une synchronisation manuelle de S3 vers Snowflake pour le nom de canal suivant :
+Synchronisez manuellement S3 vers Snowflake pour le nom de pipeline suivant donné :
 ```sql
 ALTER PIPE
   pipe_users_messages_email_click
   refresh ;
 ```
 
-Vérifiez le statut du canal, qui indiquera quand le message a été transféré de S3 à Snowflake :
+Vérifiez l’état du pipeline, qui indiquera quand le message a été transmis de S3 à Snowflake :
 ```sql
 SELECT
   SYSTEM$PIPE_STATUS(
@@ -113,7 +113,7 @@ SELECT
   )
 ```
 
-Enfin, affichez l’historique des copies du tableau en sélectionnant `*` dans :
+Enfin, affichez l'historique des copies de la table en sélectionnant `*` depuis :
 ```sql
 table(braze_currents.information_schema.copy_history(table_name=>'users_messages_email_click', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
