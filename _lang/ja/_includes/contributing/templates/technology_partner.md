@@ -1,4 +1,4 @@
-このテンプレートを使ってテクノロジーパートナーのドキュメントを作成することができる。例としては、[スキューバ・アナリティクスを]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/)参照のこと。
+このテンプレートを使ってテクノロジーパートナードキュメントを作成できます。例としては、[Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/) を参照してください。
 
 {% details テンプレートを表示する %}
 {% raw %}
