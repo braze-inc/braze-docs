@@ -1,16 +1,20 @@
 ---
-nav_title: Orchestration de messages
-article_title: Partenaires d’orchestration de messages
+nav_title: Orchestration des messages
+article_title: "Partenaires pour l'orchestration des messages"
 page_order: 2
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’orchestrer vos messages avec reciblage, modèles d’e-mails, promotions, attribution, etc. "
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d'orchestrer vos messages grâce au reciblage, à des modèles d'e-mail, à des promotions, à l'attribution, et plus encore."
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Orchestration de messages"
+partner_top_header: "Message Orchestration"
 
 valid_partner_list:
+- name: Alpaco
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
+- name: Antavo
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Jampp
   url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
 - name: Remerge
@@ -23,7 +27,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
 - name: Lob
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
-- name: Messenger
+- name: Messager
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
 - name: Rokt Calendar
   url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
@@ -31,7 +35,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
-- name: Branch
+- name: Branche
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
@@ -47,9 +51,9 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stensul/
 - name: Stripo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stripo/
-- name: Taxi for Email
+- name: Taxi for email
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
-- name: Talon.One
+- name: Talon.one
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/talonone/
 - name: Voucherify
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/
@@ -59,16 +63,16 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
   url: /docs/partners/message_orchestration/learning/edume/
-- name: optilyz
+- name: Optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
-- name: LINE
+- name: LIGNE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
@@ -81,7 +85,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: Studio IAM (NNT)
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
@@ -91,4 +95,22 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 - name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Sendbird
+  url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/  
+- name: Regal
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: Kognitiv
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+- name: Olo
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
+- name: Typeform
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
+- name: Friendbuy
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
+- name: ma carte postale
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---
