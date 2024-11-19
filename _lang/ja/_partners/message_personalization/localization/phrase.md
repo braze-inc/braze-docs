@@ -16,18 +16,18 @@ Phrase と Braze の統合により、Braze インターフェイスを離れる
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | --- | --- |
 | Phrase TMS アカウント | この提携を利用するには、Phrase TMS Ultimate または Enterprise アカウントが必要です。 |
-| Braze REST API キー | すべての権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Braze REST エンドポイント | [REST エンドポイント URL][1]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ## ステップ1:Phrase TMS の設定
 
-Phraseで、**\[Settings] > \[Integrations] > \[Connectors] > \[New]** の順に進みます。
+Phraseで、**[Settings] > [Integrations] > [Connectors] > [New]** の順に進みます。
 
 1. コネクションの名前を指定し、型を**Braze**に変更します。<br><br>
 2. REST API キーとBraze REST エンドポイントを入力します。<br><br>
@@ -70,8 +70,8 @@ Phraseで、**\[Settings] > \[Integrations] > \[Connectors] > \[New]** の順に
     {% elsif {{custom_attribute.${attribute_name}}} == 'de-DE' or {{custom_attribute.${attribute_name}}} == 'de-AT' or {{custom_attribute.${attribute_name}}} == 'de-CH' %}
     {% endraw %}
     ```
-5. \[**Test connection**] をクリックします。接続に成功するとチェックマークが表示されます。アイコンの上にマウスポインタを置くと、詳細が表示されます。<br><br>
-7. 最後に、**Save**をクリックします。このコネクターは \[**Connectors**] ページで使用可能になります。
+5. [**Test connection**] をクリックします。接続に成功するとチェックマークが表示されます。アイコンの上にマウスポインタを置くと、詳細が表示されます。<br><br>
+7. 最後に、**Save**をクリックします。このコネクターは [**Connectors**] ページで使用可能になります。
 
 ## ステップ3:コンテンツを Phrase に送信して Braze に再びエクスポートする
 

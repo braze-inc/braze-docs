@@ -25,15 +25,15 @@ search_tag: Partner
 
 開始する前に、次のものが必要になります。
 
-| 必要条件           | 説明                                                                                                                                          |
+| 要件           | 説明                                                                                                                                          |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MetaRouterアカウント  | [MetaRouter Enterpriseアカウント](https://enterprise.metarouter.io/)。                                                                                |
 | Braze REST API キー    | `users.track` 権限を持つ Braze REST API キー。作成するには、**「設定」**>「**APIキー**」を選択する。                                                |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] で API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] で API キーを作成できます。
 {% endalert %}
 
 ## MetaRouterをセットアップする
@@ -51,12 +51,12 @@ Brazeとの統合用にMetaRouterをセットアップする：
 
 ### ステップ1:Brazeとの統合を追加する
 
-Enterprise MetaRouter で \[**Integrations**] > \[**New Integration**] > \[**Braze**] を選択し、統合に名前を付けます。次に、インスタンスの URL と API キーを入力し、\[**Apply Changes**] を選択します。
+Enterprise MetaRouter で [**Integrations**] > [**New Integration**] > [**Braze**] を選択し、統合に名前を付けます。次に、インスタンスの URL と API キーを入力し、[**Apply Changes**] を選択します。
 
 ![MetaRouter で Braze を統合として追加する。]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
 
 ### ステップ2:イベントマッピングを追加する
 
-各ID出力にイベントマッピングを追加し、Brazeに送信したいイベントを設定する。終了したら、\[**Save as New Revision**] を選択します。
+各ID出力にイベントマッピングを追加し、Brazeに送信したいイベントを設定する。終了したら、[**Save as New Revision**] を選択します。
 
 ![ID 出力ごとにイベントマッピングを追加する。]({% image_buster /assets/img/metarouter/img2.png %})

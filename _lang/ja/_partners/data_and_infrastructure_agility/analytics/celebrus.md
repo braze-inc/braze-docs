@@ -15,7 +15,7 @@ description: "Braze と Celebrus の統合。"
 | Celebrus アカウント | このパートナーシップを活用するには、Celebrus アカウントが必要です。 |
 | データウェアハウス（オプション） | Celebrus コネクターを Braze のカスタム属性に使用する場合は、Braze クラウドデータ取り込み (CDI) 統合でサポートされるデータウェアハウスが必要です。また、Braze ダッシュボードで CDI を設定する必要があります。 |
 | Braze SDKの構成設定（オプション） | Braze SDK に Celebrus コネクターを使用する場合は、SDK エンドポイントと SDK API キーを渡す必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 実装
 Celebrusの実装をインストールした後、Braze用のCelebrusコネクタを使用してCelebrusデータをBrazeに統合する。Braze の Celebrus 統合には、Braze SDK とBraze のカスタム属性という2つの要素があります。Braze の使い方と必要なユースケースに応じて、いずれかまたは両方をデプロイできます。

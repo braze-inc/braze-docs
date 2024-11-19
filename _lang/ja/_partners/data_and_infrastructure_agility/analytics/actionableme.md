@@ -20,16 +20,16 @@ Braze と actionable.me の統合により、Braze の使用状況を監視す�
 | --- | --- |
 | actionable.me アカウント | このパートナーシップを活用するには、actionable.me アカウントが必要です。 |
 | Braze REST API キー | 次のセクションに記載されている権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 Braze とactionable.me を統合するには、actionable.me プラットフォームを設定し、Braze API キーを Braze で作成して actionable.me ダッシュボードで設定する必要があります。
 
-### ステップ 1:BrazeのAPIキーを作成する
+### ステップ1:BrazeのAPIキーを作成する
 
-Braze で \[**設定**] > \[**API キー**] の順に移動します。\[**新しい API キーを作成**] を選択し、次の権限が追加されていることを確認します。
+Braze で [**設定**] > [**API キー**] の順に移動します。[**新しい API キーを作成**] を選択し、次の権限が追加されていることを確認します。
 
 - `campaigns.list`
 - `campaigns.data_series`
@@ -49,7 +49,7 @@ Braze で \[**設定**] > \[**API キー**] の順に移動します。\[**新�
 - `kpi.uninstalls.data_series`
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] から API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
 ### ステップ2:actionable.me チームに情報を提供する

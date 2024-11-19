@@ -20,7 +20,7 @@ BrazeとYotpoの統合により、Braze内のEメールやその他のコミュ�
 | Yotpoアカウント | このパートナーシップを利用するには、Yotpoアカウントが必要である。 |
 | YotpoレビューAPIキー | この API は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Yotpo アプリのキーとシークレットキーの確認方法](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key)を参照してください |
 | YotpoロイヤリティAPIキー | この API キーと GUID は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Loyalty & Referrals API キーと GUID の確認方法](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)を参照してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 続行する前に、YotpoのプロダクトIDが、Brazeから動的に引き出される`product_id` と同じであることを確認する。これは統合が機能するために必須の作業です。 
 
@@ -28,7 +28,7 @@ BrazeとYotpoの統合により、Braze内のEメールやその他のコミュ�
 
 1. ストア Web サイトに移動します。
 2. 製品ページを開く。
-3. 右クリックして \[**Inspect**] を選択します。
+3. 右クリックして [**Inspect**] を選択します。
 4. <kbd>Control</kbd>+<kbd>F</kbd>キーを押し、コード内の`yotpo-main` を検索する。`data-product ID` 変数とその値が Yotpo div に表示されます。
 
 ![調査して yotpo-main を探し、data-product ID 変数を確認する。][1]
@@ -38,9 +38,9 @@ BrazeとYotpoの統合により、Braze内のEメールやその他のコミュ�
 YotpoとBrazeを統合するには、以下のステップを実行する：
 
 1. Brazeのダッシュボードに行く。
-2. **キャンペーン]**ページで\[**キャンペーンを作成]**をクリックし、\[**Eメール]**を選択する。
+2. **キャンペーン]**ページで[**キャンペーンを作成]**をクリックし、[**Eメール]**を選択する。
 3. 好みのテンプレートを選択する。
-4. \[**メール本文を編集**] をクリックし、ユースケースに応じた [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)のスニペットを追加します。
+4. [**メール本文を編集**] をクリックし、ユースケースに応じた [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)のスニペットを追加します。
     - [製品の星評価とレビュー件数を表示する](#star-review-count)
     - [製品の最近の5つ星レビューを表示する](#five-star-review)
     - [製品別にビジュアル UGC を表示する](#visual-ugc)

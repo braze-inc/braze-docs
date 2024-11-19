@@ -18,10 +18,10 @@ Braze と Stylitics の統合により、既存のメールキャンペーンを
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Stylitics アカウント | このパートナーシップを利用するには、[Stylitics](https://stylitics.com/)アカウントが必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 

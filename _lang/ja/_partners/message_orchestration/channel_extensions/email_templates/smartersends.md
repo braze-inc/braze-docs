@@ -19,12 +19,12 @@ Braze と SmarterSends のパートナーシップにより、Braze の機能と
 | --- | --- |
 | SmarterSendsアカウント | このパートナーシップを活用するには、[SmarterSends アカウント][2]が必要です。 |
 | Braze REST API キー | これらの権限を持つBraze REST APIキー： {::nomarkdown}<ul><li><code>users.track</code></li><li><code>users.export.ids</code></li><li><code>messages.schedule.create</code></li><li><code>messages.schedule.update</code></li> <li><code>messages.schedule.delete</code></li><li><code>sends.id.create</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>sends.data_series</code></li></ul>{:/} これは、Brazeダッシュボードの**「設定**」>「**APIキー**」から作成できる。さらなるセキュリティのために、SmarterSendsのIPアドレス（インスタンスで利用可能）を許可リストに入れる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-| Braze APIキャンペーンID | [Braze API キャンペーン ID]({{site.baseurl}}/api/api_campaigns/) は、SmarterSends を介して送信されるすべてのキャンペーンの一意の識別子です。これは Braze ダッシュボードの \[**メッセージング**] > \[**キャンペーン**] で作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
+| Braze APIキャンペーンID | [Braze API キャンペーン ID]({{site.baseurl}}/api/api_campaigns/) は、SmarterSends を介して送信されるすべてのキャンペーンの一意の識別子です。これは Braze ダッシュボードの [**メッセージング**] > [**キャンペーン**] で作成できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] で API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
 {% endalert %}
 
 ## ユースケース
@@ -41,7 +41,7 @@ BrazeとSmarterSendsの統合により、複数のチャネルや場所にまた
 
 ### ステップ1:REST APIキーを作成する
 
-1. Brazeで、**\[Settings**] > \[**API Keys]**に進み、\[**Create New API Key**]をクリックする。
+1. Brazeで、**[Settings**] > [**API Keys]**に進み、[**Create New API Key**]をクリックする。
 2. APIキーの名前を入力する。
 3. SmarterSendsがBrazeワークスペースとやり取りできるように、このキーに以下の権限を選択する。
 - `users.track`
@@ -55,12 +55,12 @@ BrazeとSmarterSendsの統合により、複数のチャネルや場所にまた
 - `segments.details`
 - `sends.data_series`
 4. SmarterSendsのIPアドレスを**Whislist IPs**セクションに追加する。
-5. \[**API キーを保存**] をクリックします。
+5. [**API キーを保存**] をクリックします。
 6. SmarterSendsの**Braze Email Service Provider**設定に、適切なパーミッションを持つAPIキーをコピー＆ペーストする。
 
 ### ステップ2:アプリケーションIDを作成またはコピーする
 
-1. Braze ワークスペースで、\[**設定**] > \[**アプリ設定**] に移動します。 
+1. Braze ワークスペースで、[**設定**] > [**アプリ設定**] に移動します。 
 2. 新しいアプリケーションをセットアップするか、ワークスペース内の既存のアプリケーションのアプリケーションIDを使用する。アプリケーション ID に **API キー**というラベルが付いていることに注意してください。 
 3. このIDをコピーしてSmarterSendsの**App ID**フィールドに貼り付ける。
 

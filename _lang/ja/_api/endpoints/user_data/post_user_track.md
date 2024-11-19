@@ -10,14 +10,14 @@ description: "この記事では、「ユーザーを追跡」Braze エンドポ
 ---
 {% api %}
 # ユーザーを追跡
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
 
 > このエンドポイントを使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を更新します。
 
 {% alert note %}
-Braze は API 経由で渡されたデータを額面通りに処理し、顧客は不要なデータポイントの消費を最小限に抑えるためにデルタ (変更されたデータ) のみを渡す必要があります。続きを読むには、[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)を参照してください。
+BrazeはAPIを通して渡されたデータを額面通りに処理し、顧客は不要なデータポイントの消費を最小限に抑えるために、デルタ（変化するデータ）のみを渡すべきである。続きを読むには、[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)を参照してください。
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -32,7 +32,7 @@ Braze は API 経由で渡されたデータを額面通りに処理し、顧客
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -53,12 +53,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 次のテーブルに記載されている各リクエストコンポーネントには、`external_id`、`user_alias`、`braze_id`、`email`、または `phone` のいずれかが必要です。
 {% endalert %}
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `attributes` | オプション | 属性オブジェクトの配列 | [ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)を参照してください |
 | `events` | オプション | イベントオブジェクトの配列 | [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)を参照してください |
 | `purchases` | オプション | 購入オブジェクトの配列 | [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)を参照してください |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
             "email": "test@braze.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
-            "integer_attribute": 25,
+            "integer_attribute": 26,
             "array_attribute": [
                 "banana",
                 "apple"
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 電話番号を使用して`/users/track`エンドポイントでユーザープロファイルを更新できます。このエンドポイントは、有効な電話番号を含めた場合にのみ機能します。
 
 {% alert important %}
-リクエストにメールと電話の両方を含めると、Brazeはメールを識別子として使用します。
+`email` と`phone` の両方をリクエストに含めると、Brazeはメールを識別子として使用する。
 {% endalert %}
 
 ```
@@ -220,7 +220,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 
-## 応答
+## 回答
 
 これらのAPIリクエストのいずれかを使用する場合、次の3つの一般的な応答のいずれかを受け取るはずです: [成功メッセージ](#successful-message)、[非致命的なエラーを含む成功メッセージ](#successful-message-with-non-fatal-errors)、または[致命的なエラーを含むメッセージ](#message-with-fatal-errors)。
 
@@ -293,5 +293,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ### `/users/track`は重複イベントをどのように処理しますか？
 
 イベント配列内の各イベントオブジェクトは、指定された時間にユーザーによるカスタムイベントの単一の発生を表します。これは、Brazeに取り込まれる各イベントに独自のイベントIDがあることを意味し、「重複」イベントは別々のユニークなイベントとして扱われるということです。
+
+## 月間アクティブユーザー数 CY 24-25
+Monthly Active Users - CY 24-25を購入した顧客に対して、Brazeは`/users/track` エンドポイントで異なるレート制限を管理している：
+- 1時間あたりのレート制限は、お客様のアカウントで予想されるデータ摂取アクティビティに応じて設定される。このアクティビティは、お客様が購入した月間アクティブユーザー数、業界、季節性、またはその他の要因に対応する可能性がある。
+- 時間あたりのリクエスト数の制限に加えて、Brazeは1秒あたりのリクエスト数にバースト制限を課している。
+- 各リクエストは、アトリビューション、イベント、購入オブジェクトを合わせて最大50件の更新をバッチ処理することができる。
+
+予想される摂取量に基づく現在の制限は、ダッシュボードの**「設定」**>「**APIと識別子**」>「**API制限**」で確認できる。当社は、システムの安定性を保護するため、またはお客様のアカウントのデータスループットを向上させるために、レート制限を変更する場合がある。時間単位または秒単位のリクエスト制限やお客様のビジネスのニーズに関するご質問やご不明な点については、Brazeサポートまたはカスタマーサクセスマネージャーにお問い合わせください。
+
+
 
 {% endapi %}
