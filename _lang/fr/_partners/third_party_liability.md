@@ -1,9 +1,9 @@
 ---
-nav_title: Responsabilité envers les tiers
-article_title: Responsabilité envers les tiers
+nav_title: Responsabilité civile
+article_title: Responsabilité civile
 page_order: 8
 page_type: reference
-description: "Cet article de référence décrit les politiques de responsabilité de Braze en référence à ses tiers associés."
+description: "Cet article de référence détaille les politiques de responsabilité de Braze à l'égard des tiers qui lui sont associés."
 
 ---
 
@@ -11,6 +11,6 @@ description: "Cet article de référence décrit les politiques de responsabilit
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Responsabilité envers les tiers
+# Responsabilité civile
 
-Braze ou des tiers peuvent mentionner des produits ou fonctionnalités tiers dans la Documentation en ligne de Braze.  Toute utilisation par un client de tels services ou fonctionnalités de tiers et tout échange de données entre un client et un tel tiers sont uniquement entre ce client et ce tiers.  Braze ne garantit pas les services ou les fonctionnalités de tiers et ne peut être tenu responsable de l’utilisation de ceux-ci par un client.
+Braze ou des tiers peuvent faire référence à des produits ou à des fonctionnalités de tiers dans la Documentation en ligne de Braze.  Toute utilisation par un client de ces services ou fonctionnalités de tiers, et tout échange de données entre un client et ce tiers, se fait uniquement entre ce client et ce tiers.  Braze ne garantit aucun service ou fonctionnalité de tiers et ne saurait être tenu responsable de l'utilisation qui en est faite par un client.
