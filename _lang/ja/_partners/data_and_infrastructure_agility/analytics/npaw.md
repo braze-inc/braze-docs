@@ -20,7 +20,7 @@ hidden: true
 | YOUBORA APIキー |[YOUBORA の設定](https://youbora.nicepeopleatwork.com/users/login)|ユーザー登録時に生成されるAPI キーで、**設定** に配置できます。 |
 | ID |[Braze の設定](https://dashboard.braze.com/sign_in) | YOUBORA では、***Braze ID***、***外部ユーザー ID***、または***ユーザー ID*** のいずれかを使ってソフトウェアを Braze にリンクできます。 |
 | エンドポイント |[Braze の設定](https://dashboard.braze.com/sign_in)| Braze ダッシュボードで設定可能な完全にカスタマイズ可能なURL エンドポイント。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 # 分析の統合
 
@@ -28,7 +28,7 @@ hidden: true
 
 YOUBORA ツールスイートアカウントにログインしたら、ドロップダウンアカウントメニューから**Integrations** オプションを選択してIntegrations ページに移動します。
 
-![NPAW ドロップダウン]({% image_buster /assets/img/npaw_dropdown.png %})
+![NPAWドロップダウン]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## 統合の設定
 
@@ -38,9 +38,9 @@ Integration(統合)ページにアクセスしたら、スクロールダウン�
 ![NPAW 統合]({% image_buster /assets/img/npaw_integration.png %})
 
 前提条件のセクションで確認した適切な情報を使用して詳細を入力します。
-* \[**Connector Name**] は、将来この統合を参照するために使用される**英数字**の文字列です。この値は、文字と数字**のみ**が含まれている限り、任意の値に設定できます。
+* [**Connector Name**] は、将来この統合を参照するために使用される**英数字**の文字列です。この値は、文字と数字**のみ**が含まれている限り、任意の値に設定できます。
 * **ユーザID**は、あなたのYOUBORAソフトとあなたのBrazeアカウントを結びつけるために以前に選ばれたIDです。たとえば、**Braze ID**でリンクを実行する場合は、ドロップダウンから**Braze ID**を選択して、適切なフィールドに値を割り当てます。
-* \[**API Key**] は、\[**API**] セクションの \[**Settings**] にある YOUBORA ツールスイートの API キーです。
+* [**API Key**] は、[**API**] セクションの [**Settings**] にある YOUBORA ツールスイートの API キーです。
 * **エンドポイント** は、以前にBraze ダッシュボード内で設定したカスタマイズ可能なURL エンドポイントです。
 
 すべてのフィールドが入力されたら、**Connect**ボタンをクリックしてコネクションを確立し、変更を保存します。
