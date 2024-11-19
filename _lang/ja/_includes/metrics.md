@@ -1,9 +1,9 @@
 {% if include.metric == "AMP Clicks" %}
-<i>AMP Clicksは</i>、HTML版、プレーンテキスト版、AMP HTML版のメールの累積クリック数である。
+<i>AMP クリック数</i>は、AMP HTML メールのクリック数の合計、HTML、プレーンテキスト、および AMP HTML バージョンのメールの総計です。
 {% endif %}
 
 {% if include.metric == "AMP Opens" %}
-<i>AMP Opensは</i>、AMP HTMLメールとAMP HTMLバージョンのメールの開封数の合計である。
+<i>AMP 開封数</i>は AMP HTML メールおよび AMP HTML バージョンのメールの開封総数です。
 {% endif %}
 
 {% if include.metric == "Audience" %}
@@ -11,7 +11,7 @@
 {% endif %}
 
 {% if include.metric == "Bounces" %}
-<i>バウンスとは</i>、意図した受信者に届かなかったメッセージの総数である。
+<i>バウンス数</i>とは、意図した受信者に届かなかったメッセージの総数です。
 {% endif %}
 
 {% if include.metric == "Estimated Real Opens" %}
@@ -39,15 +39,15 @@
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
-<i>Button 1 Clicksは</i>、メッセージのボタン1がクリックされた総数である。
+<i>ボタン1クリック数</i>とはメッセージのボタン1をクリックした総数です。
 {% endif %}
 
 {% if include.metric == "Button 2 Clicks" %}
-<i>Button 2 Clicksは</i>、メッセージのボタン2がクリックされた総数である。
+<i>ボタン2クリック数</i>とはメッセージのボタン2をクリックした総数です。
 {% endif %}
 
 {% if include.metric == "Choices Submitted" %}
-<i>送信された選択肢は</i>、ユーザーが<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単なアンケートの</a>質問ページで送信ボタンをクリックしたときに選択された選択肢の合計数である。
+<i>送信された選択肢数</i>とは<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単な調査</a>の質問ページでユーザーが送信ボタンをクリックしたときに選択される選択肢の総数です。
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
@@ -55,19 +55,19 @@
 {% endif %}
 
 {% if include.metric == "Confirmed Deliveries" %}
-<i>確認配信とは</i>、キャリアがターゲット電話番号にメッセージが配信されたことを確認した場合である。
+<i>確認配信とは</i>、通信事業者が、ターゲットの電話番号にメッセージが配信されたことを確認した場合のことを言います。
 {% endif %}
 
 {% if include.metric == "Confidence" %}
-<i>信頼度とは</i>、あるメッセージのバリアントが、コントロールグループより優れているという確信度のパーセンテージである。
+<i>信頼度</i>とはメッセージの特定のバリアントのパフォーマンスがコントロールグループよりも優れているという信頼度の割合です。
 {% endif %}
 
 {% if include.metric == "Confirmation Page Button" %}
-<i>確認ページボタンは</i>、<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単な調査の</a>確認ページにあるコールトゥアクションボタンの総クリック数である。
+<i>確認ページボタン</i>とは<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単な調査</a>の確認ページにあるコールトゥアクションボタンのクリック数の合計です。
 {% endif %}
 
 {% if include.metric == "Confirmation Page Dismissals" %}
-<i>確認ページ解散数とは</i>、<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単なアンケートの</a>確認ページで閉じる (x) ボタンをクリックした合計である。
+<i>確認ページ却下数</i>とは<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単な調査</a>の確認ページにある [閉じる] (x) ボタンのクリック数の合計です。
 {% endif %}
 
 {% if include.metric == "Conversion Rate" %}
@@ -79,19 +79,19 @@
 {% endif %}
 
 {% if include.metric == "Conversions (B, C, D)" %}
-<i>コンバージョン（B、C、D</i>）は、1次コンバージョンイベントの後に追加されるコンバージョンイベントである。これは、Brazeキャンペーンから受信したメッセージと対話または閲覧した後に、定義されたイベントが発生した回数である。
+<i>コンバージョン (B, C, D)</i> とは1次コンバージョンイベントの後に追加されるコンバージョンイベントです。これは、Brazeキャンペーンから受信したメッセージと対話または閲覧した後に、定義されたイベントが発生した回数である。
 {% endif %}
 
 {% if include.metric == "Total Conversions" %}
-<i>トータルコンバージョンとは</i>、ユーザーがアプリ内メッセージキャンペーンを閲覧した後、特定のコンバージョンイベントを完了した回数の合計である。
+<i>合計コンバージョン数</i>とは、ユーザーがアプリ内メッセージキャンペーンを閲覧した後、特定のコンバージョンイベントを完了した合計回数です。
 {% endif %}
 
 {% if include.metric == "Deliveries" %}
-<i>Deliveriesは</i>、受信サーバーが受け付けたメッセージリクエストの総数である。これは、メッセージがデバイスに届いたことを意味するのではなく、メッセージがサーバーに受け入れられたことを意味する。
+<i>配信数</i>とは受信サーバーが受け入れたメッセージリクエスト数の合計です。これは、メッセージがデバイスに届いたことを意味するのではなく、メッセージがサーバーに受け入れられたことを意味する。
 {% endif %}
 
 {% if include.metric == "Deliveries %" %}
-<i>Deliveries %は</i>、メール可能な相手に正常に送信され、受信されたメッセージ(Sends)の総数のパーセンテージである。
+<i>配信数%</i>は、メール可能な相手に正常に送受信されたメール (送信) のの合計数に対する割合です。
 {% endif %}
 
 {% if include.metric == "Delivery Failures" %}
@@ -99,31 +99,31 @@
 {% endif %}
 
 {% if include.metric == "Direct Opens" %}
-<i>直接開封は</i>、そのプッシュ通知から直接開封されたプッシュ通知の総数（および割合）である。
+<i>直接開封数</i>とは、プッシュから直接開封されたプッシュ通知の合計数 (および割合)。
 {% endif %}
 
 {% if include.metric == "Emailable" %}
-<i>Eメール可能なユーザーとは</i>、Eメールアドレスが記録されており、明示的にオプトインまたはサブスクライバーになっているユーザーの総数である。
+<i>メール可能なユーザー数</i>とは、レコードにメールアドレスがあり、明示的にオプトインまたは登録を行ったユーザーの合計数です。
 {% endif %}
 
 {% if include.metric == "Errors" %}
-<i>エラーは</i>、Webhookイベントによって返されたエラーの数である（送信プロセス中にインクリメントされる）。
+<i>エラー数</i>とは、Webhook イベントによって返されたエラーの数 (送信プロセス中に増加)。
 {% endif %}
 
 {% if include.metric == "Failures" %}
-WhatsAppメッセージがインターネットサービスプロバイダからハードバウンスされ、送信<i>できなかった</i>。ハードバウンスとは、永続的な配信の失敗です。
+<i>失敗</i>とは、インターネットサービスプロバイダーがハードバウンスを返したため、WhatsApp メッセージを送信できなかった場合のことをいいます。ハードバウンスとは、永続的な配信の失敗です。
 {% endif %}
 
 {% if include.metric == "Influenced Opens" %}
-<i>Influenced Opensは</i>、プッシュ通知が送信された後、プッシュ通知を直接開かずにアプリを開封したユーザーの総数（および割合）である。
+<i>誘発された開封数</i>とはプッシュ通知の送信後に、プッシュを直接開封せずにアプリを開いたユーザーの総数 (および割合) です。
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>生涯収入とは</i> <code>PurchaseEvents</code> 開始以来受け取った価格（米ドル）。
+<i>生涯収益</i>とは開始以降に <code>PurchaseEvents</code> 受け取った価格の合計 (USD) です。
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-<i>ユーザー一人当たりの生涯</i>価値は、ある日のキャンペーンとキャンバスの収益の合計の平均である。
+<i>ユーザーあたりの生涯価値</i>とは、指定された日のキャンペーンとキャンバスの収益の合計の平均です。
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
@@ -131,11 +131,11 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-<i>1日あたりの購入</i>額は、ユニークユーザー数の平均である。 <code>PurchaseEvents</code> を超えた。
+[<i>日割り購入数</i>] は、期間中の一意の を平均した数です。 <code>PurchaseEvents</code>  
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
-<i>Daily Revenue Per Userは</i>、1日のアクティブユーザーあたりの1日平均売上高である。
+[<i>ユーザーあたりの日割り収益</i>] は、日次収益を日次アクティブユーザー数で除算した商の平均です。
 {% endif %}
 
 {% if include.metric == "Machine Opens" %}
@@ -143,11 +143,11 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Other Opens" %}
-<i>その他の開封には</i>、<i>マシン開封として</i>識別されていないメールが含まれる。例えば、ユーザーが別のプラットフォーム (携帯電話の Gmail アプリ、デスクトップブラウザーの Gmail など) でメールを開封すると、これは<i>その他の開封</i>としてログに記録されます。
+<i>その他の開封</i>には、<i>マシン開封</i>として識別されないメールが含まれます。例えば、ユーザーが別のプラットフォーム (携帯電話の Gmail アプリ、デスクトップブラウザーの Gmail など) でメールを開封すると、これは<i>その他の開封</i>としてログに記録されます。
 {% endif %}
 
 {% if include.metric == "Opens" %}
-<i>開封とは</i>、<i>Direct Opensと</i> <i>Influenced Opensの</i>両方を含むインスタンスで、Braze SDKが独自のアルゴリズムを用いて、プッシュ通知によってユーザーがアプリを開封したと判断したものを指す。
+<i>開封</i>とは、<i>直接開封</i>と<i>誘発された開封</i>の両方を含むインスタンスで、Braze SDK が独自のアルゴリズムを用いて、プッシュ通知によってユーザーがアプリを開封したと判断したものを指します。
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
@@ -155,19 +155,19 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
-<i>Pending Retryは</i>、受信サーバーによって一時的に拒否されたが、メールサービスプロバイダー（ESP）によって再配信が試みられたリクエストの数である。メールサービスプロバイダー (ESP) は、タイムアウト期間に達する (通常は 72 時間後) まで配信を再試行します。
+<i>再試行保留中数</i>とは受信サーバーによって一時的に拒否されたが、メールサービスプロバイダー (ESP) によって再配信が試行されたリクエストの数です。メールサービスプロバイダー (ESP) は、タイムアウト期間に達する (通常は 72 時間後) まで配信を再試行します。
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>1次コンバージョン(A)</i>または<i>1次コンバージョンイベントとは</i>、キャンペーンで受信したメッセージに接触または閲覧した後、定義されたイベントが発生した回数のことである。この定義されたイベントは、キャンペーンを構築する際にあなたが決定する。
+<i>1次コンバージョン (A)</i> または <i>1次コンバージョンイベント</i>とは Braze キャンペーンから受信したメッセージの操作後または表示後に、定義されたイベントが発生した回数です。この定義されたイベントは、キャンペーンを作成するときにあなたが決定します。
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Readsは</i>ユーザーがWhatsAppメッセージを読むことである。Brazeが読み取りを追跡するには、ユーザーの読み取りレシートが「オン」になっていなければならない。
+<i>既読</i>とは、ユーザーが WhatsApp メッセージを読んだ時のことをいいます。Braze が既読数を追跡するには、ユーザーの既読レシートが「オン」になっている必要があります。
 {% endif %}
 
 {% if include.metric == "Received" %}
-<i>Receivedは</i>チャネルごとに定義が異なり、ユーザーがメッセージを閲覧したとき、ユーザーが定義されたトリガーアクションを実行したとき、メッセージがメッセージプロバイダに送信されたときのいずれかになる。
+<i>受信済み</i>はチャネルごとに定義が異なり、ユーザーがメッセージを閲覧したとき、ユーザーが定義されたトリガーアクションを実行したとき、またはメッセージがメッセージプロバイダに送信されたときのいずれかのことを言います。
 {% endif %}
 
 {% if include.metric == "Rejections" %}
@@ -175,11 +175,11 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Revenue" %}
-<i>Revenueは</i>、設定された<a href='/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events'>1次コンバージョンウィンドウ</a>内のキャンペーン受信者からの総収入（ドル）である。
+<i>収益</i>とは、設定された<a href='/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events'>1次コンバージョン期間</a>内のキャンペーン受信者からのドル単位の総収益のことを言います。
 {% endif %}
 
 {% if include.metric == "Messages Sent" %}
-<i>Messages Sentは</i>キャンペーンで送信されたメッセージの総数である。スケジュールされたキャンペーンを開始した後、このメトリクスには、レート制限のためにまだ送信されているかどうかに関係なく、送信されたすべてのメッセージが含まれる。これは、メッセージが受信されたり、デバイスに配信されたことを意味するものではなく、メッセージが送信されたことのみを意味する。
+<i>送信済みメッセージ数</i>は、キャンペーンで送信されたメッセージの合計数です。スケジュールされたキャンペーンを開始した後、このメトリクスには、レート制限のためにまだ送信されているかどうかに関係なく、送信されたすべてのメッセージが含まれる。これは、メッセージが受信されたり、デバイスに配信されたことを意味するものではなく、メッセージが送信されたことのみを意味する。
 {% endif %}
 
 {% if include.metric == "Sent" %}
@@ -187,11 +187,11 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Sends" %}
-<i>Sendsは</i>キャンペーンで送信されたメッセージの総数である。スケジュールされたキャンペーンを開始した後、このメトリクスには、レート制限のためにまだ送信されているかどうかに関係なく、送信されたすべてのメッセージが含まれる。これは、メッセージが受信されたり、デバイスに配信されたことを意味するものではなく、メッセージが送信されたことのみを意味する。
+<i>送信数</i>とは、1つのキャンペーンで送信されたメッセージの総数です。スケジュールされたキャンペーンを開始した後、このメトリクスには、レート制限のためにまだ送信されているかどうかに関係なく、送信されたすべてのメッセージが含まれる。これは、メッセージが受信されたり、デバイスに配信されたことを意味するものではなく、メッセージが送信されたことのみを意味する。
 {% endif %}
 
 {% if include.metric == "Sends to Carrier" %}
-<i>キャリアへの送信数</i>は非推奨になりましたが、すでにそれをお持ちのユーザーについては引き続きサポートされます。これは、<i>配達が確認されたもの</i>、<i>拒否された</i>もの、運送会社によって配達または拒否が確認されなかった<i>送信の</i>合計である。これには、運送業者が配達確認を提供しない、あるいは発送時に提供できない場合も含まれる。
+<i>キャリアへの送信数</i>は非推奨になりましたが、すでにそれをお持ちのユーザーについては引き続きサポートされます。これは、<i>確認済み配信数</i>、<i>拒否数</i>、および通信事業者によって配信または拒否が確認されなかった<i>送信数</i>の合計です。これには、一部の通信事業者がこの確認を提供していないか、送信時に提供できないため、通信事業者が配信や拒否された確認を提供していない場合も含まれます。
 {% endif %}
 
 {% if include.metric == "Spam" %}
@@ -199,7 +199,7 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
-<i>アンケートページ解散数とは</i>、<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単なアンケートの</a>質問ページで閉じる (x) ボタンをクリックした合計のことである。
+<i>調査ページ却下数</i>とは<a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>簡単な調査</a>の調査の質問ページにある [閉じる] (x) ボタンのクリック数の合計です。
 {% endif %}
 
 {% if include.metric == "Survey Submissions" %}
@@ -211,7 +211,7 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
-<i>Total Dismissalsは</i>、キャンペーンのコンテンツカードが却下された回数である。あるユーザーがメッセージを 2 回無視しても、1 回のみカウントされます。
+<i>却下数の合計</i>とは、キャンペーンのコンテンツカードが却下された回数です。あるユーザーがメッセージを 2 回無視しても、1 回のみカウントされます。
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
@@ -219,29 +219,29 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
-<i>Total Opensは開封</i>されたメッセージの総数である。
+<i>開封数の合計</i>とは、開封されたメッセージ数の合計です。
 {% endif %}
 
 {% if include.metric == "Total Revenue" %}
-<i>Total Revenueは</i>、設定した1次コンバージョンウィンドウ内のキャンペーン受信者からの総収入（ドル）である。
+<i>総収益</i>とは、設定された1次コンバージョン期間内のキャンペーン受信者からのドル単位の総収益のことを言います。
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Unique Clicks（ユニーク・クリック数</i>）とは、メッセージ内で一度でもクリックした受信者の数で、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_idによって</a>計測される。
+<i>ユニーククリック率</i>とは、メッセージ内で少なくとも1回クリックしたユニーク受信者の数であり <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
-<i>Unique Dismissalsは</i>、キャンペーンからコンテンツカードを却下したユーザーの数である。あるユーザーがキャンペーンからコンテンツカードを複数回却下すると、ユニークな却下 1 回になります。
+<i>ユニーク却下数</i>とは、キャンペーンからコンテンツカードを却下したユーザーの数です。あるユーザーがキャンペーンからコンテンツカードを複数回却下すると、ユニークな却下 1 回になります。
 {% endif %}
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>ユニーク・インプレッションとは</i>、あるメッセージを1日に受信し、閲覧したユーザーの総数である。
+<i>ユニークインプレッション数</i>とは、1日に特定のメッセージを受信して表示したユーザーの総数です。
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Unique Recipients（ユニーク受信者数</i>）とは、1日のユニーク受信者数、つまり1日に特定のメッセージを受信したユーザー数である。
+<i>ユニーク受信者数</i>とは、1日のユニーク受信者数、つまり、1日に特定のメッセージを受信したユーザーの数です。
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
@@ -253,9 +253,9 @@ WhatsAppメッセージがインターネットサービスプロバイダから
 {% endif %}
 
 {% if include.metric == "Unsubscribes" %}
-<i>配信停止は</i>、Brazeが提供する配信停止URLをクリックした結果、サブスクリプションの状態が配信停止に変わった受信者の数である。
+<i>購読解除数</i>とは、Braze が提供する配信停止 URL をクリックした結果、サブスクリプション状態が配信停止に変更された受信者の数です。
 {% endif %}
 
 {% if include.metric == "Variation" %}
-<i>バリエーションは</i>、クリエイターによって定義されたキャンペーンのバリエーションの数である。
+<i>バリエーション数</i>とは、キャンペーンのバリエーションの総数です。作成者の定義によって異なります。
 {% endif %}
