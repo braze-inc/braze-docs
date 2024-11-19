@@ -21,7 +21,7 @@ Braze ラーニングでは、一般的なキャンバスの概要を解説す�
 - [放棄カートのユーザージャーニーの構築](https://learning.braze.com/build-an-abandoned-cart-user-journey)
 
 {% alert important %}
-2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、元のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。これは、キャンバスの構築と管理をより良く行う目的で改良された編集エクスペリエンスです。「[キャンバスからキャンバスフローへの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)」を参照してください。
+2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、従来のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。これは、キャンバスの構築と管理をより良く行う目的で改良された編集エクスペリエンスです。「[キャンバスからキャンバスフローへの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)」を参照してください。
 {% endalert %}
 
 ### オンボーディング
