@@ -15,7 +15,7 @@ description: "この記事では、Braze ダッシュボードの表示言語を
 
 Braze ダッシュボードは、[複数言語](#supported-languages)で使用できます。表示言語はいつでも変更できます。
 
-1. グローバルヘッダーで、\[<i class="fa-solid fa-globe" aria-label="言語を選択"></i>] を選択します。
+1. グローバルヘッダーで、[<i class="fa-solid fa-globe" aria-label="言語を選択"></i>] を選択します。
 2. リストから言語を選択します。
 
 ![][1]{: style="max-width:60%"}
