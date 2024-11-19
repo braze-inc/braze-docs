@@ -1,15 +1,15 @@
 ---
 nav_title: Automatisation des flux de travail
-article_title: Partenaires d’automatisation des flux de travail
+article_title: "Partenaires pour l'automatisation des flux de travail"
 page_order: 10
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’automatiser les flux de travail entre plusieurs services et applications."
+description: "Cette page d'accueil affiche les partenaires de Braze (Alloys) qui vous permettent d'automatiser les flux de travail entre les services et les applications."
 
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Automatisation des flux de travail"
+partner_top_header: "Workflow Automation"
 
 valid_partner_list:
 - name: Fivetran
@@ -24,9 +24,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
 - name: Airbyte
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
-- name: Flywheel
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: GrowthLoop
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
-
+- name: MetaRouter
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 ---
