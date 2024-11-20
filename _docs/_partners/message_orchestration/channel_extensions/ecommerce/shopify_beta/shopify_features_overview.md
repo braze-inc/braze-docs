@@ -300,7 +300,6 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
-
 {% endsubtab %}
 {% subtab Order refunded %}
 **Event**: `shopify_order_refunded`<br>
