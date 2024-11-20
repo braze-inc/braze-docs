@@ -4,6 +4,6 @@
 {% endtab %}
 
 {% tab iOS %}
-デフォルトでは、[Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) はコンテンツカードのアニメーション GIF をサポートしていません。ただし、独自のビューまたはサードパーティのビューを [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider) のインスタンスにラップできます。完全なチュートリアルについては、[チュートリアルを参照のこと：SwiftコンテンツカードのGIFサポート](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/).
+デフォルトでは、[Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) はコンテンツカードのアニメーション GIF をサポートしていません。ただし、独自のビューまたはサードパーティのビューを [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider) のインスタンスにラップできます。完全なチュートリアルについては、[チュートリアル：SwiftコンテンツカードのGIFサポート](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/).
 {% endtab %}
 {% endtabs %}
