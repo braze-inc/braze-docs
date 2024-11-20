@@ -642,7 +642,7 @@ var ticket_lookuptable = {
                     'SelectOption': {
                         'メッセージングのパーソナライゼーション': {
               'ShowSubmit': true,
-              'LinksTitle': ['パーソナライゼーションと動的コンテンツ',''Liquid タグを使用したパーソナライゼーション','Liquid ユースケースライブラリ','接続されたコンテンツ'],
+              'LinksTitle': ['パーソナライゼーションと動的コンテンツ','Liquid タグを使用したパーソナライゼーション','Liquid ユースケースライブラリ','接続されたコンテンツ'],
  
  
  
