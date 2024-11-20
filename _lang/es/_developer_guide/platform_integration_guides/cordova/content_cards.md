@@ -8,7 +8,7 @@ page_order: 2
 
 > Aprende a integrar tarjetas de contenido para el SDK Braze de Cordova.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Fuentes de tarjetas
 
