@@ -39,23 +39,23 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 ![]({% image_buster /assets/img/cc-campaign-details.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
 
 {% elsif include.channel == "email" %}
-![]({% image_buster /assets/img/campaign_details_email.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_email.png %}) 
 
 {% elsif include.channel == "push" %}
-![]({% image_buster /assets/img/campaign_details_push.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_push.png %}) 
 
 {% elsif include.channel == "SMS" %}
-![]({% image_buster /assets/img/campaign_details_sms.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_sms.png %}) 
 
 {% elsif include.channel == "in-app message" %}
-![]({% image_buster /assets/img/campaign_details_iam.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_iam.png %}) 
 
 キャンバスでは、作成したキャンバスにアプリ内メッセージのパフォーマンスがマッピングされます。ページ上部にあるコントロールパネルを使って、他のメッセージングタイプ（チャネル）を消去し、キャンバス内のアプリ内メッセージのみを表示することができる。
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![]({% image_buster /assets/img/campaign_details_webhook.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_webhook.png %}) 
 
 {% endif %}
 
@@ -221,7 +221,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 メッセージの可視性をカバーする指標はいくつかある。これには、_送信メッセー数_、_ユニーク受信者数_、_ユニークインプレッション数_が含まれます。特に、_ユニーク受信者数_と_ユニークインプレッション数_の違いは、少し分かりにくいかもしれません。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
 
-たとえば、今日コンテンツカードを表示し、明日、明後日に同じカードを表示すると、ユニーク受信者として3回カウントされます。ただし、_ユニークインプレッション_は1回のみカウントされます。また、あなたのデバイスでカードが利用可能だったため、「_送信済みメッセージ_」の数にも含まれる。
+たとえば、今日コンテンツカードを表示し、明日、明後日に同じカードを表示すると、_ユニーク受信者_として3回カウントされます。ただし、_ユニークインプレッション_は1回のみカウントされます。また、あなたのデバイスでカードが利用可能だったため、「_送信済みメッセージ_」の数にも含まれる。
 
 別の例として、15万件の_メッセージが送信された_ことを示すコンテンツカードキャンペーンに5つの_ユニークインプレッション_があるとします。つまり、カードは (バックエンドで) 15万人のユーザーに利用可能になったが、その送信後に以下のステップをすべて実行したのは、わずか5人のユーザーのデバイスだけだったということです。
 
