@@ -32,7 +32,7 @@ To use this endpoint, you'll need a SCIM token. For more information, refer to [
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```
 ```
 {
