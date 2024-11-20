@@ -6,6 +6,6 @@
 {% endtab %}
 
 {% tab iOS %}
-ネイティブの[Braze Swift SDKを使って](https://github.com/braze-inc/braze-swift-sdk)、アプリ内メッセージにアニメーションGIFTを追加できる。デフォルトでは、すべてのBrazeアプリ内メッセージはGIFをサポートしている。完全なチュートリアルについては、[チュートリアルを参照のこと：Swiftアプリ内メッセージのGIFサポート](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
+ネイティブの[Braze Swift SDKを使って](https://github.com/braze-inc/braze-swift-sdk)、アプリ内メッセージにアニメーションGIFTを追加できる。デフォルトでは、すべてのBrazeアプリ内メッセージはGIFをサポートしている。完全なチュートリアルについては、[チュートリアル：Swiftアプリ内メッセージのGIFサポート](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)を参照してください。
 {% endtab %}
 {% endtabs %}
