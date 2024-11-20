@@ -12,15 +12,15 @@ tool:
 
 # Export campaign data
 
-> From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
+> From the **Campaigns** page of the dashboard, select the campaign you want to view and scroll down to the historical performance graphs, which can be exported.<br><br>This page covers how to export campaign results data from single, multi-channel, and multivariate campaigns, and how to export user data from the recipients.
 
 ## Multichannel campaigns
 
-For multichannel campaigns, the data that can be exported will depend on which messaging channels were used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
+For multichannel campaigns, the data that can be exported depends on which messaging channels you used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
 
 - Messages Sent by Date
     - Total Messages Sent
-    - Messages Sent Across Campaign's Channels (can include push, email and in-app message)
+    - Messages Sent Across Campaign's Channels (can include push, email, and in-app message)
 - Email Message Engagement by Date
     - Number of Emails Delivered
     - Number of Emails Sent
@@ -45,7 +45,7 @@ For multichannel campaigns, the data that can be exported will depend on which m
 
 ## Multivariate campaigns
 
-For multivariate campaigns, which use just one messaging channel, you'll be able to export data that shows how each variant performed on the specific messaging channel's analytics over time. You can view this data grouped by statistic or grouped by message variant.
+For multivariate campaigns, which use just one messaging channel, you can export data that shows how each variant performed on the specific messaging channel's analytics over time. You can view this data grouped by statistic or grouped by message variant.
 
 Push campaign results contain graphs for the following analytics:
 
@@ -83,16 +83,16 @@ Can't see the **User Data** button? To export user data, you need the **Export U
 
 The CSV output contains user profile data for every recipient of the campaign. Braze will generate the report in the background and email it to the user who is currently logged in.
 
-If you have linked your [Amazon S3 credentials][26] to Braze, then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
+If you've linked your [Amazon S3 credentials][26] to Braze, then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
 
-The exported file includes the same user data fields which are included when you [export user data for a segment][40]. In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
+The exported file includes the same user data fields that are included when you [export user data for a segment][40]. In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
 
 - Name of campaign variation received
 - API ID of campaign variation received
 - Whether user is in control group
 
 {% alert tip %}
-For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 [6]: {% image_buster /assets/img/campaign_export_example.png %}

@@ -57,7 +57,7 @@ Here are some best practices to keep in mind when writing your preheaders:
   | Android Gmail          | 24      |
   | iOS Native             | 82      |
   | iOS Gmail              | 30      |
-  {: .reset-td-br-1 .reset-td-br-2}
+  {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
   |  Desktop Email Client  |  Limit  |
   |:----------------------:|:-------:|
@@ -65,7 +65,7 @@ Here are some best practices to keep in mind when writing your preheaders:
   | Outlook '13            | 38      |
   | Outlook for Mac '15   | 53      |
   | Outlook '16            | 50      |
-  {: .reset-td-br-1 .reset-td-br-2}
+  {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
   |  Webmail Email Client  |  Limit  |
@@ -75,7 +75,7 @@ Here are some best practices to keep in mind when writing your preheaders:
   | Outlook.com            | 49      |
   | Office 365             | 40      |
   | Mail.ru                | 64      |
-  {: .reset-td-br-1 .reset-td-br-2}
+  {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Email size
 
@@ -84,7 +84,7 @@ Make sure to limit your email size. Email bodies larger than 102&nbsp;KB are not
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
 | 25&nbsp;KB maximum |   60&nbsp;KB maximum   | 600 pixels maximum |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Text length
 
@@ -95,7 +95,7 @@ Refer to the following table for recommended text lengths.
 | Subject Line Length | 35 characters maximum (for optimal mobile display) (6 to 10 words) |
 | Sender Name Length | 25 characters maximum (for optimal mobile display) |
 | Preheader Length | 85 characters maximum |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Image size
 
@@ -104,7 +104,7 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |
 |:-----------:|:------------------:|:------------------:|:-------------:|
 | 5&nbsp;MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPEG, GIF |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Deep linking
 

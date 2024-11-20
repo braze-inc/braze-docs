@@ -14,11 +14,34 @@ channel:
 
 > Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, email, and Content Card messaging channels. 
 
-Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
+Use key-value pairs to add structured metadata to messages. These extra data payloads can enrich messages with additional contextual information that can influence how a message is rendered or processed.
+
+Because key-value pairs are metadata, this data isn't necessarily visible to the recipient, but can be used by your connected systems or processes to customize message handling. 
+
+Each pair consists of:
+
+- **Key:** The identifier (Example: `utm_source`)
+- **Value:** The associated data (Example: `newsletter`)
+
+## Use cases
+
+Here are some example use cases for adding metadata with key-value pairs:
+
+1. **Tracking parameters:** Attaching UTM parameters for analytics purposes
+   - Key: `utm_campaign`
+   - Value: `spring_sale`
+2. **Custom tags:** Adding tags for internal routing or categorization
+   - Key: `priority`
+   - Value: `high`
+3. **Behavior triggers:** Metadata used to trigger or customize in-app behaviors
+   - Key: `deep_link`
+   - Value: `app://promo-page`
 
 ## Push notifications
 
-Key-value pairs can also be added to Android, iOS, and web push notifications. In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
+Key-value pairs can be added to Android, iOS, and web push notifications. You might use key-value pairs to update internal metrics and app content or customize push notification properties, such as alert prioritization, localization, and sounds.
+
+In the message composer, select the **Settings** tab, click **Add New Pair**, and specify your key-value pairs.
 
 ### iOS
 
@@ -32,7 +55,7 @@ Apple Push Notification service (APNs) supports setting alert preferences and se
 | badge             | number                      | Governs the number that is displayed as the badge on the app icon                                                                                                                              |
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
 | content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
 ##### Alert properties library
@@ -47,7 +70,7 @@ Apple Push Notification service (APNs) supports setting alert preferences and se
 | loc-key        | string or null           | A key that sets the notification message for the current localization from the ```Localizable.strings``` file                                  |
 | loc-args       | array of strings         | String values that can appear in place of the localization format specifiers in loc-key                                                       |
 | launch-image   | strings                  | The name of an image file in the app bundle you wish to be used as the launch image when users tap the action button or move the action slide |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 The Braze message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. 
 

@@ -41,7 +41,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 | `getUpdated()` | Returns the unix timestamp of the card's latest update time from Braze dashboard. |
 | `getCategories()` | Returns the list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`. |
 | `isInCategorySet(EnumSet)` | Returns true if the card belongs to the given category set. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Banner image card properties
 
@@ -52,7 +52,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 | `getImageUrl()` | Returns the URL of the card's image. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns link text for the property URL. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Captioned image card properties
 
@@ -65,7 +65,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on.  It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns the link text for the property URL. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Text announcement card (captioned image without image) properties
 
@@ -77,7 +77,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns the link text for the property URL. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Short news card properties
 
@@ -90,7 +90,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns the link text for the property URL. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Session analytics
 

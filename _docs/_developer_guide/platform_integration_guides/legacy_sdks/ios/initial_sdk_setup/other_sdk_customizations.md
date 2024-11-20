@@ -27,7 +27,7 @@ See the following list of available log levels:
 | 2        | Warning. Warning and higher log information will be logged to the iOS console.  |
 | 4        | Error. Error and higher log information will be logged to the iOS console.  |
 | 8        | Minimal. Minimal information will be logged to the iOS console. The SDK's default setting. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Verbose logging
 

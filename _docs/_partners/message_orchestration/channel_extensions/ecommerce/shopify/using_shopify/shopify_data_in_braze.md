@@ -803,7 +803,7 @@ After the app installation is complete, Braze automatically creates your webhook
 | `shopify_last_order_name` | The name of the customer's last order. This is directly related to the `name` field on the order resource. |
 | `shopify_zipcode` | The customer's zipcode from their default address. |
 | `shopify_province` | The customer's province from their default address. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Liquid personalization
 

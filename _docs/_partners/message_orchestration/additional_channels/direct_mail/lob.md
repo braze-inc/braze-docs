@@ -20,7 +20,7 @@ The Braze and Lob integration leverages Braze webhooks and the Lob API to send m
 | ---| ---|
 |Lob account | A Lob account is required to take advantage of this partnership. |
 | Lob API key | You Lob API key can be found under the settings section under your name in the Lob dashboard. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -31,7 +31,7 @@ The HTTP URL to request in the webhook is different for each action you can make
 | API endpoint | Available endpoints |
 | ------------ | ------------------- |
 | https://api.lob.com/ | /v1/addresses<br>/v1/addresses/{id}<br>/v1/verify<br>/v1/postcards<br>/v1/postcards/{id}<br>/v1/letter<br>/v1/letter/{id}<br>/v1/checks<br>/v1/checks/{id}<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/areas<br>/v1/areas/{id}<br>/v1/routes/{zip_code}<br>/v1/routes<br>/v1/countries<br>/v1/states|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Step 2: Create your Braze webhook template
 

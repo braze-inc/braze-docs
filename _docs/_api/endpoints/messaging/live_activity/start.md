@@ -66,7 +66,7 @@ To use this endpoint, you'll need to complete the following:
 | `external_user_ids` | Optional if `segment_id` or `audience` is provided | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Optional if `external_user_ids` or `audience` is provided | String    | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Optional if `external_user_ids` or `segment_id` is provided | Connected audience object  | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 

@@ -12,7 +12,7 @@ tool:
 
 # Export Canvas data
 
-> User data can be exported to a CSV. This data can be exported for your entire Canvas or a specific Canvas component.
+> User data can be exported to a CSV. This page covers how to export data for your entire Canvas or a specific Canvas component.
 
 ## Exporting data for a Canvas
 

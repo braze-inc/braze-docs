@@ -142,7 +142,7 @@ Let’s say you have a health food app and want to create a Content Card campaig
 |`YOUR-API-URL` | Replace with the actual URL of your API. |
 |`RECOMMENDED_ITEM_IDS` | Replace with the actual name of your custom attribute that contains the IDs of recommended items. This attribute is expected to be a string of IDs separated by semicolons. |
 |`ITEM_ID` | Replace with the actual name of the attribute in your API response that corresponds to the item ID. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or consult with a developer.
@@ -274,7 +274,7 @@ When deciding which recommendation engine suits your available resources and use
 | Updates to data in the product feed | Not supported | Supported if the recommendations aren’t often updated | Supported if recommendations are updated up to hourly | Supported and recommendations are updated up to real-time |
 | Generate recommendations within Braze UI | Supported | Supported | Supported | Not supported if generated outside of Braze |
 | No hosting, managing, troubleshooting recommendations data | Supported | Supported | Supported | Not supported |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 [1]: {% image_buster /assets/img/recs/catalog_items.png %}
 [2]: {% image_buster /assets/img/recs/content_card_preview.png %}

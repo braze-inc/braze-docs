@@ -46,7 +46,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven't been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
 | Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for a date range) |
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Email insights dashboard 
 
@@ -105,7 +105,7 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Click rate | Rate | (Total number of clicks across each day in the date range) / (Total number of deliveries across each day in the date range) |
 | Total opt-ins | Rate | Total number of inbound message opt-ins across each day in the date range |
 | Total opt-outs | Rate | Total number of inbound message opt-outs across each day in the date range |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Dashboard filters
 

@@ -77,7 +77,7 @@ You must include the `category` field in the Apple push object to use iOS push a
 | `ab_cat_confirm_cancel` | Confirm     | `ab_pb_confirm`            | OPEN_APP, URI, or DEEP_LINK |
 | `ab_cat_confirm_cancel` | Cancel      | `ab_pb_cancel`             | CLOSE                   |
 | `ab_cat_more`           | More        | `ab_pb_more`               | OPEN_APP, URI, or DEEP_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {

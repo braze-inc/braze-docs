@@ -19,7 +19,7 @@ The Sheetlabs and Braze integration allows you to leverage [Connected Content][2
 | Requirement | Description |
 | ----------- | ----------- |
 | Sheetlabs account | A [Sheetlabs account][1] is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

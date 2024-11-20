@@ -9,13 +9,15 @@ description: "This reference article covers how to export segment data to CSV."
 
 # Exporting segment data to CSV
 
-> To request a CSV export of user data from a segment, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
+> This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 
-![][1]
+To export segment data to a CSV, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
+
+![Segment Details section with User Data dropdown showing export options.][1]
 
 You can also request a CSV export from the main **Segments** page by selecting the <i class="fas fa-gear"></i> **Settings** dropdown for a segment:
 
-![][2]
+![Settings dropdown on the main Segments page.][2]
 
 {% alert tip %}
 To export data from all your user profiles, create a segment with no filters, and then request a CSV export.
@@ -27,7 +29,7 @@ The CSV output contains the data from each user profile captured in the segment 
 Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, see [Exporting large segments]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
 {% endalert %}
 
-If you've linked your [Amazon S3 credentials][26] to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting and requires that you are logged into the dashboard for access.
+If you've linked your [Amazon S3 credentials][26] to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting, and requires you to be logged into the dashboard for access.
 
 ## Data included in export
 
@@ -87,7 +89,7 @@ The following is included in your export depending on your selection.
 | unsubscribed_from_emails_at | Email unsubscribe date |
 | opted_in_to_emails_at       | Email opt-in date      |
 | user_aliases                | User aliases, if any   |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.

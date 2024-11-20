@@ -21,7 +21,7 @@ The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's r
 | Requirement | Description |
 | ----------- | ----------- |
 | Dynamic Yield account | A [Dynamic Yield](https://adm.dynamicyield.com/users/sign_in#/r/dashboard) account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

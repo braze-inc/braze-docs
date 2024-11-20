@@ -192,7 +192,7 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 | AI and ML automation   | Updates on AI and machine learning capabilities within the platform.                  |
 | New Braze partnerships | Introduces new integrations with other platforms and services.          |
 | SDK updates            | Lists new SDKs or updates, including breaking changes and new features. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
 

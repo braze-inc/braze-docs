@@ -41,7 +41,7 @@ The following table further outlines the difference in supported features betwee
 | [Available in Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Connected Content][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | Personalization and segmentation | Templated at impression | Templated at send or first impression |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Implementation
 

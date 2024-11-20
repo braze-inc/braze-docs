@@ -56,7 +56,7 @@ The following requirements are typical requirements you might need from Braze. W
 |---|---|---|---|
 |Braze workspace REST API key | Braze platform | **Settings** > **API Key** page | This description should tell you what to do with the workspace REST API key. |
 |Braze API endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | Description pending. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## [Type of Integration] Integration
 

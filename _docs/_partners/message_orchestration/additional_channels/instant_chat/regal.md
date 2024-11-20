@@ -23,7 +23,7 @@ By integrating Regal and Braze, you can create a more consistent and personalize
 | Regal account | A Regal account is required to take advantage of this partnership. |
 | Regal API key | A Regal API key will allow sending events from Braze to Regal.<br><br>Email [support@regal.io](mailto:support@regal.io) to get this key. |
 | Braze Data Transformation | Data transformation is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. This is necessary to receive data from Regal. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration: Sending data from Braze to Regal
 

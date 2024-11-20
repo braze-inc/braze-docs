@@ -24,7 +24,7 @@ The following table describes how you can use each editor block type.
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
 | Spacer | Adds space or padding between other blocks. |
 | Custom Code (early access) | Inserts raw HTML, CSS, and JS.  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Properties
 
@@ -41,7 +41,7 @@ Details for each editor block's properties are provided in the following tables.
 | Align | Moves the text to be aligned left, center, right, or justified |
 | Line Height | Modifies the distance between lines of text |
 | Letter spacing | Modifies the distance in between each character |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image
 
@@ -51,7 +51,7 @@ Details for each editor block's properties are provided in the following tables.
 | Align | Moves the image to be left, center or right-oriented |
 | URL | The hosted address for your image |
 | Alternate text | The written copy that appears in place of an image if the image fails to load. Screen readers announce alt text to explain images, so use plain language to provide key information about an image |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Button
 
@@ -60,7 +60,7 @@ Details for each editor block's properties are provided in the following tables.
 | Corner Radius | Determines how round you would like the corners |
 | On-click Behavior | Determines the action when clicking the button and sets the appropriate link protocol |
 | URL | Dynamic based on the selected On-click behavior |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Spacer
 
@@ -68,11 +68,11 @@ Details for each editor block's properties are provided in the following tables.
 | --- | --- |
 | Background color | Modifies the background color of the spacer |
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Custom Code
 
 | Name | Description |
 | --- | --- |
 | Custom Code | Allows you to add, edit, or delete HTML, CSS, and JavaScript for an in-app message. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

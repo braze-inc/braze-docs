@@ -27,7 +27,7 @@ The Braze and Fresh Relevance integration allows you to:
 | Braze REST API key | A Braze REST API key with permissions sufficient for the endpoints listed below. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze campaign ID | The default Braze campaign that you want to use to send emails. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

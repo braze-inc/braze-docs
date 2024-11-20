@@ -47,7 +47,7 @@ There are two types of editors used to create a Content Block—classic and drag
 | Content Size | Maximum of 50kB (kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML editor or drag-and-drop editor. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 

@@ -20,7 +20,7 @@ The Braze and Transcend partnership helps users automate privacy requests by orc
 |---|---|
 | Transcend account | A [Transcend](https://app.transcend.io/) account with admin privileges is required to take advantage of this partnership. |
 | Braze API key | A Braze REST API key with `users.delete, users.alias.new, users.export.ids, email.unsubscribe,`and `email.blacklist` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

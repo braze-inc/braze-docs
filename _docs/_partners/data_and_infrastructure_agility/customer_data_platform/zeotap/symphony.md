@@ -24,7 +24,7 @@ To create email marketing campaigns, onboard the raw emails to Zeotap by mapping
 | Client Name | This is your client name for your Braze account. You can find it by navigating to the Braze Console. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration
 
@@ -109,7 +109,7 @@ You can find details of all the Braze fields in this section.
 | Language | Dropdown selection | • The accepted format is `ISO-639-1` standard (for example, en).<br>• Onboard correctly formatted language and map to it. |
 | Date of Birth | Dropdown selection | Map to the `Date of Birth` field you are onboarding. |
 | Custom Attribute | Custom Data Input | Map any user attribute to a custom data input, which is then sent to Braze. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Viewing data on Braze console
 

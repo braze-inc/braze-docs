@@ -16,10 +16,10 @@ description: "This article outlines details about the Delete users Braze endpoin
 
 > Use this endpoint to delete any user profile by specifying a known user identifier.
 
-Up to 50 `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request. Only one of `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request.
+Up to 50 `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, or `email_addresses` can be included in a single request.
 
 {% alert warning %}
-Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
+Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile using the API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
@@ -43,28 +43,33 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
   "external_ids" : (optional, array of string) External ids for the users to delete,
   "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete
+  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
+  "email_addresses": (optional, array of string) User emails for the users to delete
 }
 ```
 ### Request parameters
 
-| Parameter      | Required | Data Type                  | Description                                                                                      |
-| -------------- | -------- | -------------------------- | ------------------------------------------------------------------------------------------------ |
-| `external_ids` | Optional | Array of strings           | External identifiers for the users to delete.                                                    |
-| `user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for the users to delete. |
-| `braze_ids`    | Optional | Array of strings           | Braze user identifiers for the users to delete.                                                  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Parameter         | Required | Data Type                  | Description                                                                                      |
+|-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
+| `external_ids`    | Optional | Array of strings           | External identifiers for the users to delete.                                                    |
+| `user_aliases`    | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for the users to delete. |
+| `braze_ids`       | Optional | Array of strings           | Braze user identifiers for the users to delete.                                                  |
+| `email_addresses` | Optional | Array of strings           | User emails for the users to delete. Refer to [Deleting users by email](#deleting-users-by-email) for more information.                                                             |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Deleting users by email
+
 If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` is an ordered array and should specify which user to delete if multiple users are found. This means deleting users will not occur if more than one user matches a prioritization.
 
 The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
 
 Only one of the following options may exist in the prioritization array at a time:
+
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
 
 ## Example request
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \

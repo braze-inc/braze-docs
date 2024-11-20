@@ -14,7 +14,7 @@ description: "This article outlines details about the Remove invalid phone numbe
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-> Use this endpoint to remove "invalid" phone numbers from our invalid list. 
+> Use this endpoint to remove "invalid" phone numbers from our invalid list.
 
 This can be used to re-validate phone numbers after they have been marked as invalid.
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ---------|------ |
 | `phone_number` | Required | Array of strings in e.164 format | An array of up to 50 phone numbers to modify. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 

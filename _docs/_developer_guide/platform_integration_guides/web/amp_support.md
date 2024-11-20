@@ -28,7 +28,7 @@ Add the following async script tag to your head:
 
 ## Step 2: Add a subscription and unsubscription widget
 
-You'll need to add a widget that allows users to subscribe and unsubscribe from push. This should live inside the body of your HTML and can be styled however you see fit. 
+You'll need to add a widget that allows users to subscribe and unsubscribe from push. This should live inside the body of your HTML and can be styled however you see fit.
 
 ```js
 <!-- A subscription widget -->
@@ -44,13 +44,13 @@ You'll need to add a widget that allows users to subscribe and unsubscribe from 
 
 ## Step 3: Download helper iFrame and permission dialog
 
-The AMP Web Push component works by creating a popup that handles the push subscription. As a result, you'll need to include a couple of helper files in your project. Download the [helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) file and [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) file and store them on your site. 
+The AMP Web Push component works by creating a popup that handles the push subscription. As a result, you'll need to include a couple of helper files in your project. Download the [helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) file and [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) file and store them on your site.
 
 ## Step 4: Create a service worker file
 
 Create a `service-worker.js` file with the following content, and place it in the root directory of your website:
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Step 5: Configure the AMP web push HTML element
 
@@ -68,4 +68,4 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 
 In particular, the `service-worker-URL` requires appending your `apiKey` and `baseUrl` (https://dev.appboy.com/api/v3) as query parameters.
 
-You should now be configured for push subscription and unsubscription on your AMP page. 
+You should now be configured for push subscription and unsubscription on your AMP page.

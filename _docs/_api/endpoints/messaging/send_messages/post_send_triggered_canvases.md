@@ -1,22 +1,22 @@
 ---
-nav_title: "POST: Send Canvas Messages via API-Triggered Delivery"
-article_title: "POST: Send Canvas Messages via API-Triggered Delivery"
+nav_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
+article_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Canvases via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send Canvases using API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
-# Send Canvas messages via API-triggered delivery
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+# Send Canvas messages using API-triggered delivery
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/send
 {% endapimethod %}
 
-> Use this endpoint to send Canvas messages via API-triggered delivery. 
+> Use this endpoint to send Canvas messages with API-triggered delivery.
 
-API-triggered Delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom via your API.
+API-triggered Delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.
 
 Before you can send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) (which is created when you build a Canvas).
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the Canvas.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and `canvas_entry_properties` object. Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one. <br><br> When `send_to_existing_only` is `true`, Braze will only send the message to existing users—however this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
 
@@ -158,12 +158,12 @@ Message sending endpoint responses will include the message's `dispatch_id` for 
 
 ### Example success response
 
-The status code `201` could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent through this endpoint. 
+The status code `201` could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent through this endpoint.
 
 ```
 {
-  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.", 
-  "dispatch_id": "example_dispatch_id", 
+  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.",
+  "dispatch_id": "example_dispatch_id",
   "message": "success"
 }
 ```
@@ -177,8 +177,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert note %}
-Looking for the campaigns version of this endpoint? Check out [Sending campaign messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Looking for the campaigns version of this endpoint? Check out [Sending campaign messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 {% endalert %}
 
 {% endapi %}
-

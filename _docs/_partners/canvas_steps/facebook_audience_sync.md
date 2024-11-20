@@ -2,7 +2,7 @@
 nav_title: Facebook
 article_title: Canvas Audience Sync to Facebook
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 1
+page_order: 2
 alias: "/audience_sync_facebook/"
 
 Tool:
@@ -12,7 +12,7 @@ Tool:
 
 # Audience Sync to Facebook
 
-Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
+Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (push, email, SMS, or webhook) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in Facebook using Custom Audiences.
 
 **Common use cases for syncing Custom Audiences include**:
 
@@ -21,7 +21,7 @@ Using the Braze Audience Sync to Facebook, brands can elect to add their own use
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating Lookalike Audiences to acquire new users more efficiently.
 
-This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+This feature allows brands to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 ## Prerequisites
 
@@ -29,10 +29,10 @@ You will need to confirm that you have the following items created and completed
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you either "Manage Campaigns" or "Manage ad accounts" permissions to the Facebook ad accounts you plan to use with Braze. Also ensure that you have accepted your ad account terms and conditions. |
+| Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, and apps). |
+| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you either "Manage Campaigns" or "Manage ad accounts" permissions to the Facebook ad accounts you plan to use with Braze. Also, ensure that you have accepted your ad account terms and conditions. |
 | Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
 
@@ -143,7 +143,7 @@ The following table includes metrics and descriptions to help you better underst
 | Users Pending | Number of users currently being processed by Braze to sync into Facebook. |
 | Users Errored | Number of users who were not synced to Facebook due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Facebook token or if the custom audience was deleted on Facebook. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
@@ -184,12 +184,12 @@ At this time, value-based lookalike custom audiences are not supposed by Braze. 
 {% details I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this? %}
 To use Audience Sync to Facebook, you need to accept these terms of service agreement. 
 
-- If your ad account is directly associated with your personal Facebook account, you can accept the TOS from [within your personal account](https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID).
-- If your ad account is tied to your company's Business Manager account, you need to accept the TOS from [within your business manager account](https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID).
+- If your ad account is directly associated with your personal Facebook account, you can accept the TOS from within your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID`.
+- If your ad account is tied to your company's Business Manager account, you need to accept the TOS from within your business manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID`.
 
-After you have accepted your Facebook custom audiences terms of service, do the following:
+After you have accepted your Facebook custom audience terms of service, do the following:
 1. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook account.
-2.  Re-enable your Facebook Audience Sync step by editing and updating your Canvas.
+2. Re-enable your Facebook Audience Sync step by editing and updating your Canvas.
 Braze will then be able to sync users as soon as they reach the Facebook audience step.
 {% enddetails %}
 

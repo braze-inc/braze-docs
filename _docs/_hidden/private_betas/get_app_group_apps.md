@@ -59,6 +59,6 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | `401: Unauthorized` | API key does not have the required permissions. Make sure your API key has `apps.get` permissions. |
 | `403: Forbidden` | The feature flipper is not on for this company. Contact your customer success manager for assistance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

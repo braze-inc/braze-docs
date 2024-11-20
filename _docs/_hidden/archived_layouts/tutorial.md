@@ -77,7 +77,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 2: Do the next thing
 
