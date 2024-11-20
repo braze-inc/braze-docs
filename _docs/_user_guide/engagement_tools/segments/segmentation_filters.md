@@ -46,6 +46,10 @@ glossaries:
     description: Segments your users based on whether they were a part of a CSV upload or not.
     tags:
       - Segment or CSV membership
+  - name: Created At
+    description: Segment users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+    tags:
+      - Other Filters
   - name: Custom Attributes
     description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
     tags:
