@@ -181,7 +181,7 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">Mensajes enviados</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Mensajes enviados' %} <br><br>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Mensajes enviados' %} <br><br>
                 Se calcula de forma diferente según lo que hayas seleccionado para 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Creación de tarjetas</a>:<br><br>
                 <ul>
@@ -283,7 +283,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimación de Aperturas reales</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md métrica='Aperturas reales estimadas' %} Para más detalles, consulta la sección siguiente.</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Aperturas reales estimadas' %} Para más detalles, consulta la sección siguiente.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Machine Opens (Aperturas automáticas)</a></td>
@@ -346,7 +346,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Clics en botón 2</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Botón 2 clics' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Botón 2 clics' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impresiones únicas</a></td>
@@ -358,7 +358,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Conversiones (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Conversiones (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversiones (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Total de conversiones</a></td>
