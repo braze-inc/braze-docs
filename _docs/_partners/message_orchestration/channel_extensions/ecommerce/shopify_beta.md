@@ -8,7 +8,7 @@ noindex: true
 hidden: true
 guide_top_header: "Shopify beta"
 guide_top_text: "Shopify is a leading global commerce company, providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services that are engineered for reliability while delivering a better shopping experience for consumers everywhere."
-description: "This landing page is home to all things Shopify including a Shopify overview, setting up the Shopify standard integration, Shopify features, and more."
+description: "This landing page is home to all things Shopify including an overview, setting up the Shopify standard integration, Shopify features, and more."
 
 guide_featured_title: "Featured articles"
 guide_featured_list:
