@@ -181,7 +181,7 @@ The **Message Performance** panel outlines how well your message has performed a
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">送信済みメッセージ</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信されたメッセージ' %}<br><br>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %}<br><br>
                 この計算方法は、選択した項目によって異なる。 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">カード作成</a>：<br><br>
                 <ul>
@@ -200,7 +200,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニーク受信者数' %}<br><br> 視聴者は毎日ユニーク受信者になることができるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> 視聴者は毎日ユニーク受信者になることができるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
@@ -208,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">ユニーク却下数</a></td>
-            <td>{% multi_lang_include metrics.md metric='ユニーク却下数' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -254,7 +254,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='ユニーククリック数' %} これは、メールの場合、7日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'> dispatch_id{% multi_lang_include によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} これは、メールの場合、7日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'> dispatch_id{% multi_lang_include によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
             </td>
         </tr>
         <tr>
@@ -265,21 +265,21 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">クリック開封率</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='クリックして開封する率' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">スパム率</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='スパム' %} この指標が0.08を超える場合は、メッセージのコピーがセールス的すぎるか、メールアドレスの収集方法を再検討する必要があることを示している可能性があります (関心のある人にメッセージを送信していることを確認するため) 。
+                {% multi_lang_include metrics.md metric='Spam' %} この指標が0.08を超える場合は、メッセージのコピーがセールス的すぎるか、メールアドレスの収集方法を再検討する必要があることを示している可能性があります (関心のある人にメッセージを送信していることを確認するため) 。
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">配信停止数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配信停止者または配信停止' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">その他の開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='その他の開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">推定実質開封数</a></td>
@@ -287,19 +287,19 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">マシン開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='マシン開封数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='バウンス数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">ハードバウンス</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ハードバウンス' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">ソフトバウンス</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ソフトバウンス' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
     </tbody>
 </table>
@@ -338,35 +338,35 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">本文クリック数 (複数回)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='本文クリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">ボタン 1 のクリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ボタン1のクリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">ボタン 2 のクリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ボタン2クリック' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニークインプレッション数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">インプレッション数の合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='インプレッション数の合計' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">コンバージョン (B、C、D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='コンバージョン数 (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">コンバージョン数合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='コンバージョン数合計' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">コンバージョン率</a></td>
-            <td>{% multi_lang_include metrics.md metric='コンバージョン率' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
         </tr>
     </tbody>
 </table>
@@ -393,15 +393,15 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='バウンス数' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">直接開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ダイレクト開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='開封数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
         </tr>
     </tbody>
 </table>
@@ -457,35 +457,35 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">送信済み</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信済み' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends-to-carrier">キャリアへの送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='キャリアに送る' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">配信失敗数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配信の失敗' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">確認済み配信</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='確認された配達' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">拒否数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='拒否数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">オプトアウト</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='オプトアウト' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">ヘルプ</a></td>
-            <td class="no-split">{% multi_lang_include metric='ヘルプ' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">クリック数の合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='総クリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -512,15 +512,15 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニーク受信者数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">エラー数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='エラー' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
         </tr>
     </tbody>
 </table>
@@ -547,19 +547,19 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用さ
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">配信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配信' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">既読数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='既読数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">失敗数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='失敗数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
         </tr>
     </tbody>
 </table>
