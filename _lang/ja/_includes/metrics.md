@@ -35,7 +35,7 @@
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージをユーザーがクリックしたときに発生する。 <code>brazeBridge.logClick()</code> 引数なしで。
+<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージが引数のない  <code>brazeBridge.logClick()</code>  を使用したときに発生します。
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
@@ -119,7 +119,7 @@
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>生涯収益</i>とは開始以降に <code>PurchaseEvents</code> 受け取った価格の合計 (USD) です。
+<i>生涯収益</i>とは開始以降に受け取った  <code>PurchaseEvents</code>  価格の合計 (USD) です。
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
@@ -131,7 +131,7 @@
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-[<i>日割り購入数</i>] は、期間中の一意の を平均した数です。 <code>PurchaseEvents</code>  
+[<i>日割り購入数</i>] は、期間中のユニークの合計  <code>PurchaseEvents</code>  を平均した数です。
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -139,7 +139,7 @@
 {% endif %}
 
 {% if include.metric == "Machine Opens" %}
-<i>機械開封</i>」には、iOS 15のアップルのメール・プライバシー保護（MPP）の影響を受ける「開封」の割合が含まれる。例えば、ユーザーが Apple デバイスのメールアプリを使用してメールを開封した場合、これは<i>マシン開封</i>としてログに記録されます。
+<i>機械開封</i>」には、iOS 15 の Apple のメール・プライバシー保護（MPP）の影響を受ける「開封」の割合が含まれる。例えば、ユーザーが Apple デバイスのメールアプリを使用してメールを開封した場合、これは<i>マシン開封</i>としてログに記録されます。
 {% endif %}
 
 {% if include.metric == "Other Opens" %}
