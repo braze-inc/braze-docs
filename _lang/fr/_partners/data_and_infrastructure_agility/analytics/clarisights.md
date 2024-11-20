@@ -1,47 +1,46 @@
 ---
 nav_title: Clarisights
 article_title: Clarisights
-page_order: 1
-description: "Cet article de référence décrit le partenariat entre Braze et Clarisights, une plateforme de reporting de performance marketing en libre-service, vous permettant d’importer des données à partir des campagnes et Canvas Braze pour aider à obtenir une interface unifiée de reporting de performance et de marketing CRM/retention."
+description: "Cet article de référence présente le partenariat entre Braze et Clarisights, une plateforme de reporting des performances marketing en libre-service, vous permettant d'importer les données des campagnes Braze et Canvas pour créer une interface unifiée de reporting des performances et de marketing CRM/de rétention."
 alias: /partners/Clarisights/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Clarisights
 
-> [Clarisights][2] est une plateforme de reporting en libre-service pour la performance marketing destinée aux entreprises axées sur les données. Elle intègre, traite et visualise automatiquement toutes vos données provenant de sources marketing, analytiques et d’attribution.
+> [Clarisights][2] est une plateforme de reporting marketing en libre-service pour les entreprises axées sur les données. Elle intègre, traite et visualise automatiquement toutes vos données provenant de sources marketing, analytiques et d'attribution.
 
-L’intégration entre Braze et Clarisights vous permet d’importer des données issues des campagnes et Canvas de Braze pour aider à obtenir une interface unifiée de reporting de performance et de marketing CRM/retention.
+L'intégration de Braze et de Clarisights vous permet d'importer les données des campagnes Braze et Canvas afin d'obtenir une interface de reporting unifiée des performances et du marketing CRM/dde rétention.
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
-| Compte Clarisights | Un espace de travail Clarisights est requis pour profiter de ce partenariat |
-| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations suivantes :  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-| Nom du groupe d’apps Braze | Nom du groupe d’apps associé à la clé API Braze. Ce nom sera utilisé pour identifier l’intégration du groupe d’apps dans Clarisights. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Compte Clarisights | Un espace de travail Clarisights est nécessaire pour profiter de ce partenariat. |
+| Clé API REST de Braze | Une clé API REST de Braze avec les autorisations suivantes :  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. |
+| Endpoint REST de Braze | [L'URL de votre endpoint REST.][1] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Nom de l'espace de travail de Braze | Le nom de l'espace de travail associé à la clé API de Braze. Ce nom sera utilisé pour identifier l'intégration de l'espace de travail sur Clarisights. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-Avec l’intégration de Braze et Clarisights, les utilisateurs peuvent créer différents tableaux et visualisations pour obtenir des informations sur les campagnes qu’ils ont créées. Les cas d’utilisation les plus répandus incluent :
+Grâce à l'intégration de Braze et de Clarisights, les utilisateurs peuvent créer différentes visualisations et tableaux pour obtenir des informations sur les campagnes qu'ils ont créées. Les cas d'utilisation les plus courants sont les suivants :
 
 {% tabs %}
-{% tab Better visibility %}
-Meilleure visibilité sur les campagnes globales et les performances des Canvas.
+{% tab Une meilleure visibilité %}
+Meilleure visibilité sur les performances globales des campagnes et des Canvases.
 
-![Un graphique montrant un exemple de meilleure visibilité sur la plateforme Clarisights. Ce graphique comprend des statistiques sur les ouvertures, les clics, les envois et les conversions relatives aux campagnes et Canvas.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
+![Un graphique montrant un exemple de la meilleure visibilité des performances dans la plateforme Clarisights. Ce graphique comprend des statistiques sur les campagnes et les canvas ouverts, les clics, les envois, les conversions, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab Granular reporting %}
-Rapports granulaires pour les campagnes et les Canvas.
+{% tab Rapports détaillés %}
+Rapports granulaires pour les campagnes et les canevas.
 
-![Graphique montrant des rapports granulaires, comme « total des envois par canal d’envoi » et « taux de conversion ».]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
+![Un graphique montrant des rapports précis, comme le "total des envois par canal d'envoi" et le "taux de conversion".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
-{% tab Unified dashboards %}
-Tableaux de bord unifiés pour les directeurs marketing et les directeurs de l’expérience client.
+{% tab Tableaux de bord unifiés %}
+Tableaux de bord unifiés pour les CMO et les CXO.
 
 ![Un graphique montrant un exemple de tableaux de bord unifiés.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
 {% endtab %}
@@ -49,20 +48,20 @@ Tableaux de bord unifiés pour les directeurs marketing et les directeurs de l�
 
 ## Intégration
 
-Pour synchroniser les données de Braze avec Clarisights, vous devez créer un connecteur Braze et connecter des groupes d’apps Braze.
+Pour synchroniser les données Braze avec Clarisights, vous devez créer un connecteur Braze et connecter les espaces de travail Braze.
 
-1. Dans Clarisights, accédez à la page **Integrations (Intégrations)**, recherchez le connecteur **Braze**, puis sélectionnez **+ Connect (+ Connexion)**.<br>![Liste des connecteurs disponibles sur le marketplace des intégrations de Clarisights.][6]<br><br>
-2. Ensuite, en utilisant le flux d’intégration, connectez votre compte Clarisights à Braze. Pour ce faire, vous pouvez fournir votre clé API REST Braze, le nom du groupe d’apps Braze et l’endpoint REST de Braze.<br>![Connecteur de groupe d’apps Braze dans la plateforme Clarisights. Cette page comporte des champs pour le nom du groupe d’apps Braze, la clé API REST Braze et l’endpoint REST de Braze.][7]<br><br>Avant que l’intégration ne soit effectuée, les utilisateurs verront les groupes d’apps connectés sur la même page.<br>![Vous trouverez une liste des groupes d’apps connectés dans « Comptes Braze ».][9]<br><br>
+1. Dans Clarisights, accédez à la page **Intégrations**, localisez le connecteur **Braze** et sélectionnez **\+ Connecter.**<br>![Une liste des connecteurs disponibles sur le marché des intégrations Clarisights.][6]<br><br>
+2. Ensuite, à l'aide du flux d'intégration, connectez votre compte Clarisights à Braze. Pour ce faire, vous devez fournir la clé API REST de Braze, le nom de l'espace de travail Braze et l'endpoint REST de Braze.<br>![Connecteur d'espace de travail Braze dans la plateforme Clarisights. Cette page contient des champs pour le nom de l'espace de travail de Braze, la clé API REST de Braze et le point d'extrémité REST de Braze.][7]<br><br>Avant une intégration réussie, les utilisateurs verront les espaces de travail connectés sur la même page.<br>![Dans "Comptes Braze", vous trouverez une liste des espaces de travail connectés.][9]<br><br>
 
-## Comment utiliser cette intégration
+## Utilisation de cette intégration
 
-Pour inclure Braze comme source de données dans vos rapports Clarisights, accédez à **Create New Report (Créer un nouveau rapport)**. Nommez votre rapport et sélectionnez **Braze** comme source de données dans l’invite qui apparaît. Vous pouvez également choisir les indicateurs et dimensions à inclure dans le rapport. Une fois terminé, sélectionnez **Create Report (Créer un rapport)**. 
+Pour inclure Braze comme source de données dans vos rapports Clarisights, naviguez vers **Créer un nouveau rapport.** Nommez votre rapport et sélectionnez **Braze** comme source de données dans l'invite qui s'affiche. Vous pouvez également choisir les indicateurs et les dimensions à inclure dans le rapport. Lorsque vous avez terminé, sélectionnez **Créer un rapport**. 
 
-Les données de Braze commenceront à affluer à partir de la prochaine importation de données que vous avez programmée. Contactez votre gestionnaire du succès des clients Clarisights afin de demander des renvois pour des durées supérieures. 
+Les données de Braze commenceront à circuler à partir de la prochaine importation de données planifiée. Contactez votre gestionnaire de satisfaction client Clarisights pour demander des remplissages historiques pour des durées plus longues. 
 
-![Paramètres de rapport Clarisight affichant les champs relatifs au nom et à la source des données. Dans cet exemple, « Braze » est sélectionné comme source de données.][8]
+![Paramètres du rapport Clarisight affichant les champs pour le nom et la source de données. Dans cet exemple, "Braze" est sélectionné comme source de données.][8]
 
-Rendez-vous sur le site Web de Clarisights pour plus d’informations sur les [indicateurs et dimensions][10] disponibles ou la [création de rapports][11].
+Visitez Clarisights pour plus d'informations sur les [indicateurs et dimensions][10] disponibles ou sur la [création de rapports][11].
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://clarisights.com

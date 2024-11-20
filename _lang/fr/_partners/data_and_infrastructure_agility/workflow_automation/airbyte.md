@@ -1,7 +1,7 @@
 ---
 nav_title: Airbyte
 article_title: Airbyte
-description: "Cet article de référence présente l’intégration de Braze et Airbyte. Airbyte est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données, en transmettant des événements en temps réel d’Airbyte à Braze."
+description: "Cet article de référence couvre l'intégration de Braze et Airbyte. Airbyte est un moteur d'intégration de données open-source qui vous aide à consolider vos données dans vos entrepôts de données, lacs et bases de données, en transférant des événements en temps réel d'Airbyte à Braze."
 alias: /partners/airbyte/
 page_type: partner
 search_tag: Airbyte
@@ -10,30 +10,30 @@ search_tag: Airbyte
 
 # Airbyte
 
-> [Airbyte](https://airbyte.com/) est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données.
+> [Airbyte](https://airbyte.com/) est un moteur d'intégration de données open-source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données.
 
-L’intégration de Braze et Airbyte vous permet de créer un pipeline de données pour collecter et analyser les données de Braze en connectant toutes vos applications et bases de données à un entrepôt central. Une fois ces données collectées dans l’entrepôt, les équipes de données peuvent explorer efficacement les données de Braze en utilisant leurs outils d’aide à la décision préférés.
+L'intégration de Braze et Airbyte permet aux utilisateurs de créer un pipeline de données pour collecter et analyser les données de Braze en connectant toutes vos applications et bases de données à un entrepôt central. Une fois les données collectées dans l'entrepôt central, les équipes chargées des données peuvent explorer efficacement les données de Braze à l'aide de leurs outils d'aide à la décision préférés.
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
-| Compte Airbyte Cloud | Un compte [Cloud Airbyte](https://cloud.airbyte.io/workspaces) est requis pour profiter de cette intégration. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+| compte Airbyte Cloud | Un compte [Airbyte Cloud](https://cloud.airbyte.io/workspaces) est requis pour profiter de cette intégration. |
+| Clé d'API REST Braze | Une clé API REST Braze avec toutes les permissions. <br><br> Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| Endpoint REST Braze | Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
 
-1. Dans votre compte Airbyte Cloud, accédez à **Sources > + New Source (+ Nouvelle source) > Set up the Source (Configurer la source)**.
-2. Saisissez « Braze » comme nom source et sélectionnez **Braze** dans la liste déroulante des sources.
-3. Fournissez l’URL de votre endpoint, la clé API REST Braze et la date de démarrage. Cliquez sur **Set up Source (Configurer la source)**.
+1. Dans votre compte Airbyte Cloud, accédez à **Sources > + Nouvelle source > Configurer la source**.
+2. Entrez "Braze" comme nom de source et sélectionnez **Braze** dans le menu déroulant de la source.
+3. Spécifiez l’URL de l'endpoint, la clé API REST Braze et la date de début. Cliquez sur **Configurer la source**.
 
 ### Modes de synchronisation pris en charge
 
-Le connecteur de la source Braze d’Airbyte prend en charge les [modes de synchronisation](https://docs.airbyte.com/cloud/core-concepts#connection-sync-modes) suivants :
-- **Actualisation complète | Écraser** : synchronise tous les enregistrements de la source et remplace les données de la destination en les écrasant.
-- **Synchronisation incrémentielle | Ajouter** : Synchronise les nouveaux enregistrements de la source et les ajoute à la destination sans supprimer de données.
+Le connecteur de source Braze d'Airbyte prend en charge les [modes de synchronisation](https://docs.airbyte.com/cloud/core-concepts#connection-sync-modes) suivants :
+- **Actualisation complète | Remplacer** : synchroniser tous les enregistrements de la source et remplacer les données dans la destination en les écrasant.
+- **Synchronisation incrémentielle | Ajouter**: Synchroniser les nouveaux enregistrements de la source et les ajouter à la destination sans supprimer aucune donnée.
 
 ### Flux pris en charge
 
@@ -52,5 +52,5 @@ Le connecteur de la source Braze d’Airbyte prend en charge les [modes de synch
 - [`segments_analytics`](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e)
 
 {% alert note %}
-Les limites de débit varient en fonction du flux. Consultez le [tableau des limites de débit](https://www.braze.com/docs/api/api_limits/#rate-limits-by-request-type) pour plus d’informations.
+Les limites de débit varient selon le flux. Visitez le [tableau des limites de taux](https://www.braze.com/docs/api/api_limits/#rate-limits-by-request-type) pour plus d'informations.
 {% endalert %}

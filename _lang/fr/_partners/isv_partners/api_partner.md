@@ -6,13 +6,13 @@ hidden: true
 
 # Intégration des partenaires API
 
-Les partenaires ISV (Independent Software Vendor) Alloys sont tenus d’ajouter leur nom de partenaire au champ `partner` dans leurs demandes API, pour permettre à Braze de suivre l’utilisation du partenaire API, comme les demandes entrantes des partenaires. Indiquez la structure d’endpoint suivante [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) lors du développement de votre mise en œuvre.
+Les partenaires ISV Alloys sont tenus d'ajouter le nom de leur partenaire dans le champ `partner` de leurs requêtes d'API, ce qui permet à Braze de suivre l'utilisation des partenaires d'API, telles que les requêtes entrantes des partenaires. Référez-vous à la structure d’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) suivante lorsque vous développez votre implémentation.
 
-## Corps de demande de partenaire
+## Corps de la requête du partenaire
 
 ```
 Content-Type: application/json
-Authorization: Bearer VOTRE-CLÉ-API-REST
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json

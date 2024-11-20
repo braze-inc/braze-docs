@@ -1,15 +1,15 @@
 ---
-nav_title: Analytique
-article_title: Partenaires d’analytique
+nav_title: Analyse
+article_title: Partenaires d’analyse
 page_order: 1
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de recueillir des informations comportementales et commerciales sur les données de vos clients."
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de recueillir des informations comportementales et commerciales à partir des données clients."
 
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Analyse comportementale"
+partner_top_header: "Behavioral Analytics"
 
 valid_partner_list:
 - name: Amplitude
@@ -38,5 +38,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
-
+- name: SalesWings
+  url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
+- name: Scuba
+  url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
+- name: Boîte de réception Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 ---

@@ -1,36 +1,35 @@
 ---
 nav_title: actionable.me
 article_title: actionable.me
-page_order: 1
-description: "Cet article de référence présente le partenariat entre Braze et actionable.me, un logiciel propriétaire et des processus qui vous aident à tirer immédiatement le meilleur parti de votre investissement Braze."
+description: "Cet article de référence présente le partenariat entre Braze et actionable.me, un logiciel et des processus propriétaires, qui vous permettent de tirer immédiatement le meilleur parti de votre investissement dans Braze."
 alias: /partners/actionableme/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # actionable.me
 
-> [actionable.me][2], conçu par l'équipe de Massive Rocket, une agence données et CRM, est une approche standardisée et automatisée de l'exécution de programmes CRM, fournissant des outils et des processus conçus pour permettre aux clients de Braze de créer rapidement de la valeur, de manière cohérente et prévisible. 
+> [actionable.me][2], créé par l'équipe de Massive Rocket, une agence de données et de CRM, est une approche standardisée et automatisée de l'exécution des programmes de CRM, fournissant des outils et des processus conçus pour que les clients de Braze obtiennent de la valeur rapidement, de manière cohérente et prédictive. 
 
-L’intégration Braze et actionable.me vous permet de déployer un service vous permettant de suivre vos progrès dans l’utilisation de Braze. Grâce à une combinaison d’outils et de processus, ils évalueront rapidement vos performances CRM, identifieront de nouvelles opportunités et fourniront des recommandations sur la façon d’améliorer vos performances.
+L'intégration de Braze et de actionable.me vous permet de déployer un service pour suivre vos progrès dans l'utilisation de Braze. Grâce à une combinaison d'outils et de processus, ils évalueront rapidement les performances de votre CRM, identifieront de nouvelles opportunités et fourniront des recommandations sur la manière d'être plus performant.
 
-## Conditions préalables
+## Prérequis
 
 | Condition | Description |
 | --- | --- |
-| Compte actionable.me | Un compte actionable.me est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations répertoriées dans la section suivante.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+| actionable.me compte | Un compte actionable.me est nécessaire pour bénéficier de ce partenariat. |
+| Clé API REST de Braze | Une clé API REST de Braze avec les autorisations énumérées dans la section suivante.<br><br> Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. |
+| Endpoint REST de Braze | [L'URL de votre endpoint REST.][1] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
 
-Pour intégrer Braze et actionable.me, la plateforme actionable.me doit être configurée et une clé API Braze doit être créée dans Braze et être configurée dans le tableau de bord actionable.me.
+Pour intégrer Braze et actionable.me, la plateforme actionable.me doit être configurée et une clé API Braze doit être créée dans Braze et configurée dans le tableau de bord actionable.me.
 
-### Étape 1 : Créez votre clé API Braze
+### Étape 1 : Créez votre clé API Braze
 
-Dans Braze, accédez à la **Developer Console (Console du développeur)** et sélectionnez l'onglet **REST API Keys (Clés API REST)**. Sélectionnez **Create New API Key (Créer une nouvelle clé API)** et assurez-vous que les autorisations suivantes sont ajoutées :
+Dans Braze, accédez à **Paramètres** > **Clés API**. Sélectionnez **Créer une nouvelle clé API** et assurez-vous que les autorisations suivantes sont ajoutées :
 
 - `campaigns.list`
 - `campaigns.data_series`
@@ -49,15 +48,19 @@ Dans Braze, accédez à la **Developer Console (Console du développeur)** et s�
 - `kpi.new_users.data_series`
 - `kpi.uninstalls.data_series`
 
-### Étape 2 : Fournir des informations à l'équipe actionable.me
+{% alert note %}
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
+{% endalert %}
 
-Pour terminer l'intégration, vous devez fournir votre clé d'API REST et l'[URL de l’endpoint REST][1] à votre équipe d'exploitation actionable.me. actionable.me établira ensuite la connexion et vous contactera une fois la configuration terminée et vous contactera pour commencer à partager les insights.
+### Étape 2 : Fournissez des informations à l'équipe actionable.me
 
-![La page actionable.me « add platform » (ajouter une plateforme) que l'équipe d'exploitation actionable.me configurera.][5]
+Pour terminer l'intégration, vous devez fournir votre clé API REST et l'[URL de l'endpoint REST][1] à votre équipe d'exploitation actionable.me. actionable.me établira alors la connexion et vous contactera une fois la configuration terminée pour commencer à partager des informations.
+
+![La page "ajouter une plateforme" actionable.me que l'équipe actionable.me configurera.][5]
 
 ## Résolution des problèmes
 
-Contactez l'équipe actionable.me ou Massive Rocket pour une assistance supplémentaire : [info@massiverocket.com][3]
+Contactez l'équipe actionable.me ou Massive Rocket pour obtenir une aide supplémentaire : [info@massiverocket.com][3]
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://actionable.me

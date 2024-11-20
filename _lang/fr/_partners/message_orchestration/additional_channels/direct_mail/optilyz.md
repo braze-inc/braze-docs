@@ -1,64 +1,69 @@
 ---
 nav_title: optilyz
 article_title: optilyz
-page_order: 1
-description: "Cet article de référence présente le partenariat entre Braze et optilyz, qui vous permet d’exécuter des campagnes de publipostage direct axées sur le client, durables et rentables."
+description: "Cet article de référence décrit le partenariat entre Braze et optilyz, qui vous permet de mener des campagnes de publipostage plus orientées client, durables et rentables."
 alias: /partners/optilyz/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # optilyz
 
-> [optilyz][1] est une plateforme d’automatisation du publipostage qui vous permet de mener des campagnes de publipostage plus axées sur le client, plus durables et plus rentables. 
+> [optilyz][1] est une plateforme d'automatisation du publipostage qui vous permet de mener des campagnes de publipostage plus orientées client, durables et rentables. 
 
-Utilisez l’intégration du webhook d’optilyz et de Braze pour envoyer à vos clients des publipostages tels que des lettres, des cartes postales et des « prêts-à-poster ».
+Utilisez l'intégration du webhook optilyz et Braze pour envoyer à vos clients du publipostage, tel que des lettres, des cartes postales et des envois automatiques.
 
 ## Conditions préalables
 
 | Condition | Description |
 |---|---|
-|compte optilyz | Un compte optilyz est requis pour profiter de ce partenariat. |
-| Clé d’API optilyz<br><br>`<OPTILYZ_API_KEY>`| Votre gestionnaire du succès des clients optilyz vous fournira votre clé d’API optilyz.<br><br>Cette clé d’API vous permet de connecter vos comptes Braze et optilyz. |
-| ID d’automatisation optilyz<br><br>`<OPTILYZ_AUTOMATION_ID>` | L’ID d’automatisation se trouve dans une case dans l’en-tête de la page.<br><br>Lorsque vous êtes connecté à optilyz, vous pouvez naviguer vers l’automatisation vers laquelle vous souhaitez envoyer des données.<br>L’automatisation doit être activée d’abord. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|compte optilyz | Un compte optilyz est nécessaire pour bénéficier de ce partenariat. |
+| clé API optilyz<br><br>`<OPTILYZ_API_KEY>`| Le gestionnaire de la satisfaction client d'Optilyz vous fournira votre clé d’API Optilyz.<br><br>Cette clé API vous permettra de connecter vos comptes Braze et optilyz. |
+| ID d'automatisation optilyz<br><br>`<OPTILYZ_AUTOMATION_ID>` | L'ID d'automatisation se trouve dans une zone de l'en-tête de la page.<br><br>Une fois connecté à optilyz, vous pouvez accéder au processus d’automatisation auquel vous souhaitez envoyer des données.<br>L'automatisme doit d'abord être activé. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-Gérer le publipostage comme un canal numérique signifie s’éloigner des envois de masse et exploiter le canal dans le cadre de vos parcours clients (numériques). Les avantages d’une approche moderne du publipostage sont les suivants :
-- Augmentation des taux de conversion grâce à une pertinence accrue, des cas d’utilisation supplémentaires, des tests A/B plus faciles et des effets cross-canal
-- Réduction des efforts grâce à l’automatisation et à une solution de bout en bout
+Pour gérer le publipostage comme un canal numérique, vous devez abandonner les envois de masse et tirer parti de ce canal dans le cadre de vos parcours clients (numériques). Les avantages d'une approche moderne du publipostage sont les suivants :
+- Meilleurs taux de conversion grâce à une pertinence accrue, à des cas d'utilisation supplémentaires, à des tests A/B simplifiés et à des effets cross-canal
+- Effort réduit grâce à l'automatisation et à une solution de bout en bout
 - Réduction des coûts grâce à des contrats-cadres et à la transparence des coûts
 
 ## Intégration
 
-Pour vous intégrer à optilyz, utilisez l’API [optilyz][2] pour envoyer les données du destinataire au webhook Braze.
+Pour intégrer optilyz, utilisez l'[API optilyz][2] pour envoyer des données du destinataire au webhook Braze.
 
-### Étape 1 : Créer votre modèle de webhook Braze
+### Étape 1 : Créez votre modèle de webhook Braze
 
-Pour créer un modèle de webhook optilyz à utiliser dans les campagnes ou les Canvas, accédez à la section **Templates & Media (Modèles et médias)** dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook optilyz unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
+Pour créer un modèle de webhook Optilyz à utiliser dans de futures campagnes ou Canvases, accédez à **Modèles > Modèles** de **webhook** sur la plateforme Braze. 
 
-Dans votre nouveau modèle de webhook, renseignez les champs suivants :
-- **URL du webhook** : `https://www.optilyz.com/api/v2/automations/<OPTILYZ_AUTOMATION_ID>/recipient`
-- **Corps de la demande** : Texte brut
+{% alert note %}
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
+{% endalert %}
+
+Si vous souhaitez créer une campagne webhook Optilyz unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d'une nouvelle campagne.
+
+Dans votre nouveau modèle de Webhook, renseignez les champs suivants :
+- **URL du webhook** : L'URL du webhook est unique pour chaque client et votre gestionnaire de la satisfaction client optilyz vous la fournira.
+- **Corps de la requête** : Texte brut
 
 #### En-têtes et méthode de la requête
 
-optilyz nécessite également un en-tête HTTP pour l’autorisation et une méthode HTTP. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings (Paramètres)**, vous devez remplacer le `<OPTILYZ_API_KEY>` avec votre clé d’API optilyz. Cette clé doit inclure le caractère « : » directement après la clé et être encodée dans la base 64. 
+optilyz nécessite également un en-tête HTTP pour l'autorisation et une méthode HTTP. Les éléments suivants seront déjà inclus dans le modèle en tant que paire clé-valeur, mais dans l'onglet**Paramètres**, vous devez remplacer `<OPTILYZ_API_KEY>` par votre clé d’API optilyz. Cette clé doit inclure un « : » juste après la clé et être encodée en base 64. 
 
 - **Méthode HTTP** : POST
-- **En-têtes de requête** :
+- **En-têtes de la requête** :
   - **Autorisation** : {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
-  - **Type de contenu** : application/json
+  - **Type de contenu : application/json**
 
-![En-têtes de demande et méthode HTTP affichés dans le générateur de webhooks de Braze.][6]{: style="max-width:50%"}
+![Les en-têtes de requête et la méthode HTTP affichés dans le générateur de webhook Braze.][6]{: style="max-width:50%"}
 
-#### Corps de la demande
+#### Corps de la requête
 
-Dans le corps de demande suivant, vous pouvez utiliser n’importe quelle balise de personnalisation Liquid et créer un modèle de demande personnalisée. Voir la [documentation API][2] d’optilyz.
+[Dans le corps de requête suivant, vous pouvez utiliser n'importe quel tag de personnalisation Liquid et créer un modèle de requête personnalisé conformément à la documentation de l'API d'optilyz.][2]
 
-Le champ `variation` est facultatif et peut définir la conception à utiliser à l’intérieur de l’automatisation. Si une variation est omise, optilyz attribuera l’une des variations définies de manière aléatoire.
+Le champ `variation` est facultatif et permet de définir quelle conception au sein de l'automatisation doit être utilisée. Si une variation est omise, optilyz attribuera l'une des variations définies de manière aléatoire.
 
 {% raw %}
 ```json
@@ -79,16 +84,16 @@ Le champ `variation` est facultatif et peut définir la conception à utiliser �
 ```
 {% endraw %}
 
-![Image du code du corps de la demande et URL du webhook affichés dans l’onglet de composition du constructeur de webhooks dans Braze.][5]
+![Une image du code du corps de la requête et de l'URL du webhook affichés dans l'onglet de composition du générateur de webhooks Braze.][5]
 
-### Étape 2 : Prévisualiser votre demande
+### Étape 2 : Prévisualisez votre requête
 
-Ensuite, prévisualisez votre demande dans le volet **Preview (Prévisualiser)** ou accédez à l’onglet **Test** où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook. N’oubliez pas d’enregistrer votre modèle avant de quitter la page !
+Ensuite, prévisualisez votre requête dans le panneau **Aperçu** ou accédez à l'onglet **Test**, où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser le vôtre pour tester votre webhook. N'oubliez pas d'enregistrer votre modèle avant de quitter la page !
 
-![Différents champs de test disponibles dans l’onglet test du générateur de webhooks de Braze.][7]
+![Différents champs de test sont disponibles dans l'onglet de test du générateur de webhooks Braze.][7]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
 
 [1]: https://optilyz.com
@@ -97,4 +102,4 @@ N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>De
 [5]: {% image_buster /assets/img/optilyz/optilyz_compose.png %}
 [6]: {% image_buster /assets/img/optilyz/optilyz_settings.png %}
 [7]: {% image_buster /assets/img/optilyz/optilyz_testing.png %}
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[9]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/webhooks/creating_a_webhook/

@@ -1,21 +1,19 @@
 ---
-nav_title: RudderStack
+nav_title: Rudderstack
 noindex: true
 alias: /partners/RudderStack/
-page_order: 3
-
 layout: dev_guide
-guide_top_header: "RudderStack"
-guide_top_text: "Avec RudderStack, les ingénieurs données peuvent facilement renforcer les capacités de toutes les composantes de leur organisation en leur apportant des données client enrichies. RudderStack vous permet de transformer votre propre entrepôt de données en un ensemble de données client entièrement équipée sans avoir à vous soucier de l’entretien du pipeline, de sa sécurité ou de hausses subites des coûts liées au volume. Dynamisez les équipes marketing, vente et produit en envoyant les données vers tous les types d’outils, qu’il s’agisse d’e-mail ou d’analyses produit."
+guide_top_header: "Rudderstack"
+guide_top_text: "RuddStack simplifie le travail des ingénieurs de données en leur permettant d'exploiter les données clients à tous les niveaux de leur entreprise. Avec Rudderstack, vous pouvez transformer votre propre entrepôt de données en données clients aux fonctionnalités complètes sans avoir à vous soucier de la plomberie du pipeline, de la sécurité ou des hausses soudaines de coûts dues au volume. Optimisez les équipes de marketing, de vente et de produits en envoyant des données à tous les types d'outils, de l'e-mail à l'analyse des produits."
 
-description: "Cette page d’accueil contient tout ce qui concerne RudderStack, y compris comment intégrer RudderStack et RudderStack pour Currents."
+description: "Cette page d'accueil contient tout ce que vous devez savoir sur RudderStack, notamment la manière d'intégrer RudderStack et RudderStack for Currents."
 
 
 guide_featured_list:
-- name: RudderStack
+- name: Rudderstack
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack
   image: /assets/img/braze_icons/user-circle.svg
-- name: RudderStack pour Currents
+- name: Rudderstack pour Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---

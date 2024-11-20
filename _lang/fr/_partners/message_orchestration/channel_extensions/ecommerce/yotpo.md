@@ -2,53 +2,53 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
+description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme de marketing e-commerce de premier plan qui aide des milliers de marques innovantes à accélérer la croissance de leurs ventes directes aux consommateurs."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 ---
 
 # Yotpo
 
-> [Yotpo](https://www.yotpo.com/), plateforme leader de marketing de commerce en ligne, aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur. L’approche de la plateforme unique de Yotpo intègre des solutions basées sur les données pour les évaluations, la fidélisation, le marketing par SMS, et plus encore, permettant aux marques de créer des expériences client plus intelligentes et ciblées sur les conversions.
+> [Yotpo](https://www.yotpo.com/), une plateforme leader de marketing e-commerce, aide des milliers de marques innovantes à accélérer la croissance de leurs ventes directes aux consommateurs. L'approche de plateforme unique de Yotpo intègre des solutions axées sur les données pour les avis, la fidélisation, le marketing SMS et plus encore, donnant aux marques les moyens de créer des expériences clients plus intelligentes et à plus fort taux de conversion.
 
-Grâce à l’intégration de Braze et de Yotpo, vous pouvez extraire et afficher de manière dynamique les meilleures évaluations, les meilleurs avis et le contenu visuel généré par les utilisateurs (CGU) sur les produits dans les e-mails et autres canaux de communication de Braze. Vous pouvez également inclure les données de fidélisation des clients dans les e-mails et autres méthodes de communication pour créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
+Grâce à l'intégration de Braze et de Yotpo, vous pouvez tirer et afficher de manière dynamique les évaluations par étoiles, les meilleurs avis et le contenu visuel généré par les utilisateurs (CGU) sur les produits dans les e-mails et les autres canaux de communication de Braze. Vous pouvez également inclure les données de fidélisation au niveau du client dans les e-mails et autres méthodes de communication afin de créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
 
-## Conditions préalables
+## Prérequis
 
-| Condition | Description |
+| Condition | Descriptif |
 | ----------- | ----------- |
-| Compte Yotpo | Un compte Yotpo est requis pour profiter de ce partenariat. |
-| Clé d’API des avis Yotpo | Cette API sera mise en œuvre dans l’extrait de code du Contenu connecté.<br><br>Pour plus d’informations, reportez-vous à [trouver votre clé d’application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Clé d’API de fidélisation Yotpo | Cette clé d’API et le GUID seront mis en œuvre dans l’extrait de code du Contenu connecté.<br><br>Pour plus d’informations, reportez-vous à [trouver votre clé d’API et votre GUID de fidélisation et de recommandation](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
-{: .reset-td-br-1 .reset-td-br-2}
+| Compte Yotpo | Un compte Yotpo est nécessaire pour bénéficier de ce partenariat. |
+| Clé API des commentaires Yotpo | Cette API sera mise en œuvre dans l'extrait de code Contenu connecté.<br><br>Pour plus d'informations, reportez-vous à la section [Trouver votre clé d'application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
+| Clé API de fidélisation Yotpo | Cette clé API et ce GUID seront mis en œuvre dans l'extrait de code du contenu connecté.<br><br>Pour plus d'informations, reportez-vous à la section [Trouver votre clé API et votre GUID pour la fidélisation et les recommandations.](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Avant de continuer, confirmez que l’ID du produit Yotpo est le même que le `product_id` qui sera extrait dynamiquement de Braze. Celui-ci est obligatoire pour que l’intégration fonctionne. 
+Avant de continuer, confirmez que l'ID du produit Yotpo est le même que le `product_id` qui sera extrait dynamiquement de Braze. Cette étape est obligatoire pour que l'intégration fonctionne. 
 
-Pour trouver votre ID du produit Yotpo, procédez comme suit :
+Pour trouver votre ID de produit Yotpo, procédez comme suit :
 
-1. Accédez au site Web de votre boutique.
+1. Allez sur le site web de votre magasin.
 2. Ouvrez la page du produit.
-3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspect (Inspecter)**.
-4. Appuyez sur <kbd>Ctrl</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans le div Yotpo.
+3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspecter**.
+4. Appuyez sur <kbd>Control</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans la div Yotpo.
 
-![Inspecter et rechercher yotpo-main pour trouver la variable data-product-id][1]
+![Inspectez et recherchez la valeur yotpo-main pour trouver la variable data-product ID][1]
 
 ## Intégration
 
 Pour intégrer Yotpo et Braze, procédez comme suit :
 
-1. Accédez à votre Tableau de bord de Braze.
-2. Sur la page **Campaign (Campagne)**, cliquez sur **Create Campaign (Créer une campagne)** et sélectionnez **Email (E-mail)**.
-3. Sélectionnez votre modèle préféré.
-4. Cliquez sur **Edit email body (Modifier le corps de l’e-mail)** et ajoutez l’extrait de code de [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour votre cas d’utilisation :
-    - [Afficher le classement par étoiles et le nombre d’avis d’un produit](#star-review-count)
-    - [Afficher un récent avis 5 étoiles pour un produit](#five-star-review)
-    - [Afficher le CGU visuel par produit](#visual-ugc)
-    - [Afficher le solde de fidélisation d’un client dans un e-mail](#loyalty-balance)
+1. Rendez-vous sur votre tableau de bord de Braze.
+2. Sur la page **Campagnes**, cliquez sur **Créer une campagne** et sélectionnez **E-mail**.
+3. Sélectionnez le modèle de votre choix.
+4. Cliquez sur **Modifier le corps de l'e-mail** et ajoutez l'extrait de [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) correspondant à votre cas d'utilisation :
+    - [Afficher le nombre d'étoiles et le nombre d'avis sur un produit](#star-review-count)
+    - [Afficher un récent avis 5 étoiles sur un produit](#five-star-review)
+    - [Afficher les CGU visuels par produit](#visual-ugc)
+    - [Afficher le solde du programme de fidélité d'un client dans un e-mail](#loyalty-balance)
 
-### Afficher le classement par étoiles et le nombre d’avis d’un produit {#star-review-count}
+### Afficher le nombre d'étoiles et le nombre d'avis sur un produit {#star-review-count}
 
-Utilisez cet extrait de code pour fournir la note moyenne publique et le nombre total d’avis pour un produit qui est inclus dans l’e-mail :
+Utilisez cet extrait de code pour fournir la note moyenne publique et le nombre d'avis totaux pour un produit inclus dans l'e-mail :
 
 {% raw %}
 ```liquid
@@ -65,13 +65,13 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` avec votre clé d’API d’avis Yotpo. Le `product_id` sera extrait dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
 
-![Remplacez YOTPO-API-KEY par votre clé d’API d’avis Yotpo][2]
+![Remplacez YOTPO-API-KEY par votre clé API de Yotpo Reviews.][2]
 
-### Afficher un récent avis 5 étoiles pour un produit {#five-star-review}
+### Afficher un récent avis 5 étoiles sur un produit {#five-star-review}
 
-Utilisez cet extrait de code pour fournir le meilleur avis (publié) d’un produit spécifique inclus dans l’e-mail :
+Utilisez cet extrait de code pour fournir un avis de haut niveau (publié) sur un produit spécifique qui est inclus dans l'e-mail :
 
 {% raw %}
 ```liquid
@@ -88,15 +88,15 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` avec votre clé d’API d’avis Yotpo. Le `product_id` sera extrait dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
 
-Voici un exemple d’extrait de code dans l’éditeur d’e-mail :
+Voici à quoi ressemblera l'extrait de code dans votre éditeur d'e-mail :
 
-![Exemple d’éditeur d’e-mail montrant l’extrait de code pour les récents avis 5 étoiles][3]
+![Exemple d'extrait de code dans l'éditeur d'e-mail pour des avis 5 étoiles récents][3]
 
-### Afficher le CGU visuel par produit {#visual-ugc}
+### Afficher les CGU visuels par produit {#visual-ugc}
 
-Utilisez cet extrait de code pour récupérer les images Yotpo balisées et publiées et les ajouter à vos e-mails à la place de l’image de stock ou comme galerie supplémentaire :
+Utilisez cet extrait de code pour récupérer les images Yotpo étiquetées et publiées et les ajouter à vos e-mails à la place de l'image de stock ou en tant que galerie supplémentaire :
 
 {% raw %}
 ```liquid
@@ -117,15 +117,15 @@ Image return NULL
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-API-KEY>` avec votre clé d’API d’avis Yotpo. Le `product_id` sera extrait dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
+Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l'intégration fonctionne, le paramètre `product_id` dans Braze doit correspondre à l'ID du produit dans Yotpo (généralement l'ID du produit parent en ligne).
 
-Exemple d’extrait de code :
+L'extrait de code ressemblera à ceci :
 
-![Exemple d’éditeur d’e-mail montrant un extrait de code d’images publiées dans Yotpo][4]
+![Exemple d'éditeur d'e-mail affichant un extrait de code d'images publiées sur Yotpo.][4]
 
-### Afficher le solde de fidélisation d’un client dans un e-mail {#loyalty-balance}
+### Afficher le solde du programme de fidélité d'un client dans un e-mail {#loyalty-balance}
 
-Utilisez cet extrait de code pour récupérer le solde des points de fidélisation d’un client et l’utiliser dans votre communication par e-mail :
+Utilisez cet extrait de code pour récupérer le solde de points de fidélité d'un client et l'utiliser dans votre envoi de messages e-mail :
 
 {% raw %}
 ```liquid
@@ -147,25 +147,25 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 ```
 {% endraw %}
 
-Remplacez `<YOTPO-LOYALTY-GUID>` et `<YOTPO-LOYALTY-API-KEY>` par vos identifiants de fidélisation Yotpo. Le `email_address` est extrait dynamiquement de Braze. Pour que l’intégration fonctionne, l’e-mail doit être l’adresse e-mail du client qui reçoit l’e-mail.
+Remplacez `<YOTPO-LOYALTY-GUID>` et `<YOTPO-LOYALTY-API-KEY>` par vos identifiants de fidélité Yotpo. Le site `email_address` est tiré dynamiquement de Braze. Pour que l'intégration fonctionne, l'adresse e-mail doit être celle du client qui reçoit l'e-mail.
 
-Exemple d’extrait de code :
+L'extrait de code ressemblera à ceci :
 
-![Exemple d’éditeur d’e-mail montrant un extrait de code du solde des points de fidélisation du client][5]
+![Exemple d'éditeur d'e-mail affichant un extrait de code du solde du programme de fidélité du client][5]
 
-## Foire aux Questions {#faq}
+## Questions fréquemment posées {#faq}
 
-#### Que faire si je n’ai pas d’avis 5 étoiles ?
+#### Que se passe-t-il si je n'ai pas d'avis 5 étoiles ?
 
-Si vous n’avez pas d’avis 5 étoiles (c.-à-d. si la réponse de l’endpoint renvoie NULL pour l’avis 5 étoiles), aucun contenu ne sera affiché.
+Si vous n'avez pas d'avis 5 étoiles (par exemple si la réponse de l'endpoint renvoie NULL pour l'avis 5 étoiles), aucun contenu ne sera affiché.
 
-#### Que faire si je n’ai pas d’image publiée pour un produit ?
+#### Que faire si je n'ai pas d'image publiée pour un produit ?
 
-Si vous n’avez pas d’image du produit (c.-à-d. si la réponse de l’endpoint renvoie NULL pour l’image du produit), aucun contenu ne sera affiché.
+Si vous n'avez pas d'images pour un produit (par exemple si la réponse de l'endpoint renvoie NULL pour l'image du produit), aucun contenu ne sera affiché.
 
-#### Puis-je personnaliser l’aspect et la convivialité, ou extraire d’autres champs de données de Yotpo ?
+#### Puis-je personnaliser l'apparence, ou extraire d'autres champs de données de Yotpo ?
 
-Oui ! Pour découvrir les autres points de données et les options de personnalisation disponibles, reportez-vous à la section [Effectuer un appel API]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Pour ce faire, vous aurez peut-être besoin de l’aide d’un développeur front-end.
+Oui ! Pour découvrir les autres points de données et les options de personnalisation disponibles, reportez-vous à la section [Effectuer un appel API]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Pour ce faire, vous aurez peut-être besoin de l'aide d'un développeur.
 
 {% alert note %}
 Yotpo ne prend pas en charge les exigences personnalisées au-delà de ce qui est décrit dans ce guide.

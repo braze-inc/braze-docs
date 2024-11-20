@@ -1,120 +1,119 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-page_order: 1
-description: "Cet article de référence décrit le partenariat entre Braze et Snowplow, une plateforme de recueil de données open source, qui vous permet de transférer des événements Snowplow à Braze via le balisage côté serveur de Google Tag Manager."
+description: "Cet article de référence décrit le partenariat entre Braze et Snowplow, une plateforme de collecte de données open-source, qui vous permet de transmettre les événements Snowplow à Braze par l'intermédiaire du système de tags côté serveur de Google Tag Manager."
 alias: /partners/snowplow/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Snowplow
 
-> [Snowplow][1] est une plateforme évolutive et open source conçue pour collecter des données enrichies de haute qualité et à faible latence. Cette plateforme collecte des données comportementales complètes et de hautes qualités pour les grandes entreprises.
+> [Snowplow][1] est une plateforme évolutive open-source pour la collecte de données riches, de haute qualité et à faible latence. Elle est conçue pour collecter des données comportementales complètes et de haute qualité pour les entreprises.
 
-L’intégration entre Braze et Snowplow permet aux utilisateurs de transférer des événements de Snowplow vers Braze via le marquage côté serveur de Google Tag Manager. La balise Snowplow Braze vous permet d’envoyer des événements à Braze tout en bénéficiant d’une flexibilité et d’un contrôle accrus :
-- Visibilité totale sur toutes les modifications de données
-- Capacité à évoluer et à se développer au fil du temps
-- Toutes les données restent dans votre cloud privé jusqu’à ce que vous choisissiez de les envoyer
-- Configuration simplifiée grâce à de vastes bibliothèques de balises et à l’interface utilisateur familière de Google Tag Manager
+L'intégration entre Braze et Snowplow permet aux utilisateurs de transmettre les événements de Snowplow à Braze par l'intermédiaire des tags côté serveur de Google Tag Manager. La balise Braze pour Snowplow vous permet d'envoyer des événements à Braze tout en offrant une flexibilité et un contrôle supplémentaires :
+- Visibilité totale de toutes les transformations sur les données.
+- Capacité d'évolution de la sophistication au fil du temps
+- Toutes les données restent dans votre cloud privé jusqu'à ce que vous décidiez de les transmettre
+- Facilité de configuration grâce aux riches bibliothèques d'étiquettes et à l'interface utilisateur familière de Google Tag Manager.
 
-Tirez parti des données comportementales enrichies de Snowplow pour effectuer des interactions client efficaces dans Braze et livrer des messages personnalisés en temps réel.
+Exploitez les riches données comportementales de Snowplow pour favoriser de puissantes interactions centrées sur le client dans Braze et diffuser des messages personnalisés en temps réel.
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
-| Pipeline Snowplow | Un pipeline Snowplow doit être implémenté et opérationnel. |
+| Pipeline Snowplow | Un pipeline Snowplow doit être opérationnel. |
 | Google Tag Manager côté serveur | GTM-SS doit être déployé et le [client Snowplow pour GTM-SS][2] doit être configuré. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
-| Endpoint REST de Braze | [URL de votre endpoint REST][3]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Clé API REST de Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| Endpoint REST de Braze | [L'URL de votre endpoint REST.][3] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-### Livraison personnalisée par événement
-Utilisez l’un des nombreux événements enrichis et collectés automatiquement par défaut par Snowplow, ou définissez vos événements personnalisés pour créer des parcours clients encore plus granulaires qui ont du sens pour votre entreprise. Tirez parti des données comportementales enrichies de Snowplow pour concevoir des entonnoirs de clients et libérer de la valeur pour vos équipes marketing et produit, les aidant ainsi à maximiser le taux de conversion et l’utilisation des produits via Braze.
+### Une distribution personnalisée et axée sur l'action
+Utilisez l'un des nombreux événements riches que Snowplow collecte par défaut, ou définissez des événements personnalisés pour façonner des parcours clients encore plus précis adaptés à votre entreprise. Exploitez les données comportementales de Snowplow pour concevoir des tunnels de clients et débloquer de la valeur pour vos équipes marketing et produits, en les aidant à maximiser la conversion et l'utilisation des produits par le biais de Braze.
 
 ### Segmentation dynamique
-Créez des audiences dynamiques dans Braze en vous basant sur les données comportementales de haute qualité de Snowplow : Lorsque les utilisateurs effectuent des actions dans votre produit, application ou site Web, vous pouvez tirer parti des données comportementales en temps réel collectées par Snowplow pour ajouter ou supprimer automatiquement des utilisateurs dans des segments de Braze.
+Créez des audiences dynamiques dans Braze sur la base des données comportementales de haute qualité de Snowplow : Lorsque les utilisateurs effectuent des actions dans votre produit, application ou site web, vous pouvez exploiter les données comportementales en temps réel que Snowplow collecte pour ajouter ou supprimer automatiquement des utilisateurs des segments pertinents dans Braze.
 
 ## Intégration
 
-### Étape 1 : Installation du modèle
+### Étape 1 : Installation du modèle
 
 #### Installation manuelle
 
 1. Téléchargez le fichier modèle [`template.tpl`][7].
-2. Créez une nouvelle balise dans la section **Modèles** d’un conteneur de serveur Google Tag Manager.
-3. Cliquez sur le menu **More Actions (Plus d’actions)** dans le coin supérieur droit, puis cliquez sur **Import (Importer)**.
-4. Importez le fichier modèle que vous venez de télécharger et enregistrez-le.
+2. Créez une nouvelle balise dans la section **Modèles** d'un conteneur de serveur Google Tag Manager.
+3. Cliquez sur le menu **Autres actions** dans le coin supérieur droit et sélectionnez **Importer.**
+4. Importez votre fichier de modèle téléchargé et enregistrez-le.
 
-#### Galerie de Tag Manager
+#### Galerie du gestionnaire des étiquettes
 
-Bientôt disponible ! Cette balise sera incluse dans la galerie GTM après approbation.
+Bientôt disponible ! Cette balise est en attente d'approbation pour être incluse dans la galerie GTM.
 
-### Étape 2 : Configurer la balise Braze
+### Étape 2 : Configuration de l'étiquette Braze
 
 Une fois le modèle installé, ajoutez la balise Braze à votre conteneur GTM-SS.
 
-1. Depuis l’onglet **Tag (Balise)**, cliquez sur **New (Nouvelle)**, puis **Braze Tag (Balise Braze)** comme configuration pour votre balise.
-2. Sélectionnez un déclencheur pour les événements que vous souhaitez envoyer à Braze.
-3. Saisissez les paramètres requis et configurez votre balise (des informations supplémentaires sont fournies dans la prochaine section : Personnalisation).
-4. Cliquez sur **Save (Enregistrer)**.
+1. Dans l'onglet **Balise**, sélectionnez **Nouveau**, puis sélectionnez le **Balise Braze** comme configuration de balise.
+2. Sélectionnez le déclencheur de votre choix pour les événements que vous souhaitez transmettre à Braze.
+3. Saisissez les paramètres requis et configurez votre étiquette (vous trouverez plus de détails dans la section Personnalisation suivante).
+4. Cliquez sur **Enregistrer**.
 
 ## Personnalisation
 
-### Paramètres requis pour la balise
+### Paramètres requis pour les balises
 
-Le tableau suivant répertorie les paramètres de balise que vous devez inclure dans votre configuration de balise Braze.
+Le tableau suivant répertorie les paramètres requis que vous devez inclure dans la configuration de votre balise Braze.
 
-| Paramètre | Description |
+| Paramètres | Description |
 | --------- | ----------- |
-| Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint][3] REST Braze. |
-| Clé API Braze | Renseignez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
-| `external_id` Braze | Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Point d'endpoint de l'API REST de Braze | Indiquez l'URL de votre [endpoint][3] REST Braze. |
+| Clé API de Braze | Indiquez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
+| `external_id` Braze | Définissez cette clé sur la propriété d'événement du client qui correspond à l'adresse `external_id` de vos utilisateurs et qui sera utilisée comme [identifiant de l'utilisateur de Braze][5]. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Mappage d’événements
+### Mappage d'événements
 
-Le tableau suivant répertorie les options de mappage d’événements pour les événements Snowplow, comme revendiqué par le [client Snowplow][2].
+Le tableau suivant énumère les options de mappage d'événements concernant l'événement Snowplow tel qu'il est revendiqué par le [client Snowplow][2].
 
 | Option de mappage | Description |
 | --------- | ----------- |
-| Inclure un événement auto-descriptif | Cette option activée par défaut indique si les données d’événement auto-descriptif de Snowplow seront incluses dans les objets des propriétés de l’événement envoyés à Braze. |
-| Règles contextuelles des événements Snowflow | Cette option décrit comment la balise Braze utilisera les entités contextuelles associées à un événement Snowplow. |
-| Extraire l’entité du tableau si elle contient un seul élément | Les entités Snowplow sont toujours organisées en tableau, car plusieurs entités peuvent être jointes à un événement. Cette option permet de sélectionner l’élément du tableau s’il ne contient qu’un seul élément. |
-| Inclure toutes les entités dans l’objet Événement | Cette option activée par défaut garantit que toutes les entités d’un événement seront incluses dans l’objet des propriétés de l’événement Braze. Désactivez cette option pour sélectionner et inclure des entités individuelles. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Inclure une description de l'événement | Activé par défaut. Indique si les données d'auto-description de l'événement Snowplow seront incluses dans les objets de propriétés de l'événement envoyés à Braze. |
+| Règles relatives au contexte de l'événement Snowplow | Décrit comment la balise Braze utilisera les entités contextuelles attachées à un événement Snowplow. |
+| Extraire une entité d'un tableau s'il n'y a qu'un seul élément | Les entités Snowplow sont toujours dans des tableaux, car plusieurs entités peuvent être attachées à un événement. Cette option sélectionne l'élément unique du tableau si celui-ci ne contient qu'un seul élément. |
+| Inclure toutes les entités dans l'objet de l'événement | Activé par défaut. Inclut toutes les entités d'un événement dans l'objet des propriétés d'un événement Braze. Désactivez cette option pour sélectionner des entités individuelles à inclure. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Mappage avancé des événements
+### Mappage d'événements avancé
 
-#### Règles des propriétés de l’événement
+#### Propriétés d'événement
 
-Si vous souhaitez inclure d’autres propriétés de l’événement client et les mapper sur l’événement Braze, veuillez consulter les règles énoncées dans le tableau ci-dessous : 
+Si vous souhaitez inclure d'autres propriétés de l'événement client et les mapper sur l'événement Braze, référez-vous aux règles du tableau suivant : 
 
-| Règles des propriétés de l’événement | Description |
+| Propriétés d'événement | Description |
 | --------- | ----------- |
-| Inclure les propriétés de l’événement courantes | Cette option activée par défaut détermine si vous souhaitez inclure automatiquement les propriétés d’événement de la [définition des événements communs][6] dans les propriétés de l’événement Braze. |
-| Règles supplémentaires pour le mappage des propriétés de l’utilisateur et de l’événement | Spécifiez la clé de propriété de l’événement client et la clé d’objet des propriétés que vous souhaitez mapper (ou laissez la clé mappée vide pour conserver le même nom). Vous pouvez utiliser le chemin d’accès à la clé ici (par ex., `x-sp-tp2.p` pour une plateforme d’événements Snowplow ou `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` pour un identifiant de page d’événements Snowplow [dans l’index de la matrice 0]) ou choisir des propriétés non associées à Snowplow si vous utilisez un autre client.<br><br>Les règles de mappage des propriétés de l’événement remplissent l’objet Propriétés de l’événement Braze.|
-| Inclure les propriétés utilisateur courantes| Cette option activée par défaut détermine si vous souhaitez inclure les propriétés `user_data` de la définition d’événement courant dans l’objet Attributs utilisateur de Braze.|
-| Propriété de l’heure de l’événement | Cette option vous permet de spécifier la propriété de l’événement client pour renseigner l’heure de l’événement (au format ISO-8601) ou la laisser vide pour utiliser l’heure actuelle (comportement par défaut). |
-{: .reset-td-br-1 .reset-td-br-2}
+| Inclure les propriétés d'événement communes | Activée par défaut, cette option permet d'inclure automatiquement les propriétés de l'événement de la [définition commune de l'événement][6] dans les propriétés de l'événement Braze. |
+| Règles supplémentaires de mappage des propriétés utilisateur et des propriétés d'événement | Indiquez la clé de propriété de l'événement client et la clé d'objet des propriétés que vous souhaitez mapper (ou laissez la clé mappée vide pour conserver le même nom). Vous pouvez utiliser la notation du chemin d'accès (par exemple, `x-sp-tp2.p` pour une plateforme d'événements Snowplow ou `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` pour un ID de vue de page d'événements Snowplow (dans l'index de tableau 0) ou choisir des propriétés d'autres sources que Snowplow si vous utilisez un autre client.<br><br>Les règles de mappage des propriétés d'événement alimentent l'objet propriétés d'événement de Braze.|
+| Inclure les propriétés communes des utilisateurs| Activée par défaut, cette option permet d'inclure ou non les propriétés `user_data` de la définition de l'événement commun dans l'objet attribut utilisateur Braze.|
+| Propriété de l’heure de l'événement | Cette option vous permet de spécifier la propriété d'événement du client pour renseigner l'heure de l'événement (au format ISO-8601) ou de la laisser vide pour utiliser l'heure actuelle (comportement par défaut). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Mappage d’entité
+### Mappage des entités
 
-À l’aide du tableau de mappage d’entité de Snowplow, les entités peuvent être mappées à nouveau pour avoir des noms différents dans Braze et que ceux-ci soient inclus dans les propriétés de l’événement ou dans les objets des attributs utilisateur. 
+À l'aide de la table de mappage des entités de Snowplow, les entités peuvent être remappées pour porter des noms différents dans Braze et être incluses dans les propriétés d'événement ou les objets d'attributs d'utilisateur. 
 
-L’entité peut être spécifiée sous deux formats différents :
-- Correspondance de version majeure : `x-sp-contexts_com_snowplowanalytics_snowplow_web_page_1` où `com_snowplowanalytics_snowplow` est le fournisseur d’événements, `web_page` est le nom du schéma et `1` est le numéro de version majeure. `x-sp-` peut également être omis si vous le souhaitez.
+L'entité peut être spécifiée dans deux formats différents :
+- Correspondance avec la version majeure : `x-sp-contexts_com_snowplowanalytics_snowplow_web_page_1` où `com_snowplowanalytics_snowplow` est le fournisseur de l'événement, `web_page` est le nom du schéma et `1` est le numéro de la version majeure. `x-sp-` peut également être omis si vous le souhaitez.
 - Correspondance complète du schéma : `iglu:com.snowplowanalytics.snowplow/webPage/jsonschema/1-0-0`
 <br><br>
 
-| Option de mappage d’entité | Description |
+| Option de mappage des entités | Description |
 | --------- | ----------- |
-| Inclure des entités non mappées dans l’événement | Lorsque vous remappez ou déplacez des entités dans des attributs utilisateur avec la personnalisation précédente, cette option vous permet de garantir que toutes les entités non mappées (c.-à-d., toute entité qui ne fait pas partie des [règles de propriété de l’événement](#event-property-rules)) seront incluses dans l’objet des propriétés de l’événement Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Inclure les entités non mappées dans l'événement | Lors du remappage ou du déplacement de certaines entités vers des attributs utilisateur avec la personnalisation précédente, cette option vous permet de vous assurer que toutes les entités non mappées (telles que toutes les entités non trouvées dans les [règles de propriété de l'](#event-property-rules)événement) seront incluses dans l'objet personnalisé de l'événement Braze. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: https://snowplowanalytics.com
 [2]: https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/

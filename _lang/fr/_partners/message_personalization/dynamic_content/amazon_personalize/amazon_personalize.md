@@ -2,109 +2,109 @@
 nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
-description: "Cet article de référence présente une architecture de référence pour l’intégration entre Braze et Amazon Personalize. Cet article de référence vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze."
+description: "Cet article de référence décrit une architecture de référence et une intégration entre Braze et Amazon Personalize. Cet article de référence vous aidera à comprendre les cas d'utilisation proposés par Amazon Personalize, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer à Braze."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 ---
 
 # Amazon Personalize
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> Amazon Personalize c’est comme avoir un système personnel de recommandation de machine learning d’Amazon. Avec ses 20 ans et plus d’expérience en recommandation, Amazon Personalize vous permet d’améliorer l’engagement client en mettant en œuvre des recommandations personnalisées en temps réel sur les produits et le contenu et les promotions marketing ciblées.
+> Amazon Personalize, c'est comme si vous disposiez de votre propre système de recommandation Amazon machine learning ouvert toute la journée. S'appuyant sur plus de 20 ans d'expérience en matière de recommandations, Amazon Personalize vous permet d'améliorer l'engagement client en proposant des recommandations personnalisées de produits et de contenus en temps réel et des promotions marketing ciblées.
 
-Grâce au machine learning et à un algorithme que vous contribuez à définir, Amazon Personalize peut vous aider à former un modèle qui émet des recommandations de haute qualité pour vos sites Web et applications. Ces modèles vous permettront de créer des listes de recommandations basées sur les comportements passés des utilisateurs, de trier les articles par pertinence et de recommander d’autres articles en fonction de la similarité. Les listes obtenues à partir de l’API Amazon Personalize peuvent alors être utilisées dans le Contenu connecté de Braze pour exécuter des campagnes de recommandation Braze personnalisées. En intégrant Amazon Personalize, les clients ont la liberté de contrôler les paramètres utilisés pour former les modèles et définir les objectifs commerciaux facultatifs qui optimisent la sortie de l’algorithme. 
+À l'aide de l'apprentissage automatique et d'un algorithme que vous aidez à définir, Amazon Personalize peut vous aider à créer un modèle qui génère des recommandations de haute qualité pour vos sites Web et applications. Ces modèles vous permettent de créer des listes de recommandations en fonction des comportements antérieurs des utilisateurs, de trier les éléments par pertinence et de recommander d'autres éléments en fonction de leur similitude. Les listes obtenues à l'aide de l'API Amazon Personalize peuvent ensuite être utilisées dans Braze Connected Content pour lancer des campagnes de recommandation Braze personnalisées. Grâce à l'intégration à Amazon Personalize, les clients ont la liberté de contrôler les paramètres utilisés pour entraîner les modèles et de définir des objectifs commerciaux facultatifs qui optimisent les résultats de l'algorithme. 
 
-Cet article de référence vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze.
+Cet article de référence vous aidera à comprendre les cas d'utilisation proposés par Amazon Personalize, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer à Braze.
 
 ## Conditions préalables
 
 | Condition| Description|
 | ---| ---| 
-| Compte Amazon Web Service | Un compte AWS est requis pour profiter de ce partenariat. Une fois que vous avez un compte AWS, vous pouvez accéder à Amazon Personalize via la console Amazon Personalize, l’interface de ligne de commande AWS (AWS CLI) ou les SDK AWS. |
-| Cas d’utilisation définis | Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pour cette intégration. Consultez la liste suivante pour les cas d’utilisation courants. |
-| Jeux de données | Les modèles de recommandation Amazon Personalize nécessitent trois types différents de jeux de données, d’interactions, d’utilisateurs et d’articles. Reportez-vous aux détails suivants pour voir les exigences de chaque jeu de données. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Compte Amazon Web Service | Un compte AWS est nécessaire pour bénéficier de ce partenariat. Une fois que vous avez un compte AWS, vous pouvez accéder à Amazon Personalize via la console Amazon Personalize, l'interface de ligne de commande AWS (AWS CLI) ou les kits SDK AWS. |
+| Cas d'utilisation définis | Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour cette intégration. Consultez la liste suivante pour les cas d'utilisation courants. |
+| Ensembles de données | Les modèles de recommandation Amazon Personalize nécessitent trois types différents de jeux de données, d'interactions, d'utilisateurs et d'éléments. Consultez les informations suivantes pour connaître les exigences de chaque jeu de données. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
-{% tab Use Cases %}
+{% tab Cas d'utilisation %}
 
-**Cas d’utilisation**
+**Cas d'utilisation**
 
-Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pour cette intégration. Parmi les cas d’utilisation courants figurent les situations suivantes :
-- Recommander des articles pour les utilisateurs en fonction de leurs interactions précédentes, créant une expérience réellement personnalisée pour vos utilisateurs.
-- Fournir une liste d’articles ou de résultats de recherche adaptés à chaque utilisateur, augmentant l’engagement en affichant des articles par pertinence à l’utilisateur.
-- Trouver des recommandations pour des articles similaires, aidant les utilisateurs à découvrir de nouvelles choses.
+Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour cette intégration. Parmi les cas d'utilisation courants, citons :
+- Recommandez des articles aux utilisateurs en fonction de leurs interactions précédentes, afin de créer une expérience véritablement personnalisée pour vos utilisateurs.
+- Fournissez une liste d'articles ou de résultats de recherche adaptés à chaque utilisateur, en augmentant l'engagement en présentant les éléments en fonction de leur pertinence pour l'utilisateur.
+- Trouvez des recommandations pour des articles similaires, afin d'aider les utilisateurs à découvrir de nouvelles choses.
 
-Dans le guide suivant, nous allons nous concentrer sur la recette des recommandations personnalisées de l’utilisateur.
+Dans le guide suivant, nous nous concentrerons sur la recette de recommandations personnalisées pour les utilisateurs.
 
 {% endtab %}
-{% tab Datasets %}
+{% tab Ensembles de données %}
 
-**Jeux de données**
+**Ensembles de données**
 
-Pour commencer avec les modèles de recommandation Amazon Personalize, vous avez besoin de trois types de jeux de données :
+Pour commencer à utiliser les modèles de recommandation Amazon Personalize, vous avez besoin de trois types de jeux de données :
 
 - Interactions
-  - Stocke l’historique des interactions entre les utilisateurs et les articles
-  - Nécessite les valeurs `USER_ID`, `ITEM_ID`, `EVENT_TYPE` et `TIMESTAMP`, et accepte éventuellement les métadonnées sur l’événement
-- Utilisateurs
-  - Stocke les métadonnées sur les utilisateurs
-  - Nécessite valeur `USER_ID` et au moins un champ de métadonnées (chaîne de caractères ou numérique), comme le sexe, l’âge, la fidélité
-- Articles
-  - Stocke les métadonnées sur les articles
-  - Nécessite une valeur `ITEM_ID` et au moins un champ de métadonnées (texturé, catégorique ou numérique) qui décrit l’article
+  - Stocke l'historique des interactions entre les utilisateurs et les éléments
+  - Requiert les valeurs `USER_ID``ITEM_ID`, `EVENT_TYPE` et `TIMESTAMP` et accepte éventuellement les métadonnées relatives à l'événement
+- Les utilisateurs
+  - Stocke les métadonnées relatives aux utilisateurs
+  - Nécessite une valeur `USER_ID` et au moins un champ de métadonnées (chaîne de caractères ou numérique) tel que le sexe, l'âge, l'adhésion au programme de fidélité
+- Objets
+  - Stocke les métadonnées relatives aux éléments
+  - Nécessite un champ `ITEM_ID` et au moins un champ de métadonnées (textuelles, catégoriques ou numériques) qui décrit l'élément
 
-Pour une recette de recommandations d’utilisateur, vous devez fournir un jeu de données d’interactions contenant au moins 1 000 points de données d’interaction d’au moins 25 utilisateurs uniques avec au moins deux interactions chacun. Ces jeux de données peuvent être téléchargés en vrac en utilisant des fichiers CSV stockés dans S3 ou incrémentés par l’API.
+Pour une recette de recommandations aux utilisateurs, vous devez fournir un ensemble de données d'interactions contenant au moins 1 000 points de données d'interaction provenant d'au moins 25 utilisateurs uniques ayant chacun au moins deux interactions. Ces ensembles de données peuvent être chargés en masse à l'aide de fichiers CSV stockés dans S3 ou de manière incrémentielle via l'API.
 
 {% endtab %}
 {% endtabs %}
 
 ## Création de modèles
 
-### Étape 1 : Formation
+### Étape 1 : Entraînement
 
-Une fois les jeux de données importés, vous pouvez créer une solution. Une solution utilise l’une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithmes) Amazon Personalize pour former un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de solution (modèle formé) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
+Une fois les ensembles de données importés, vous pouvez créer une solution. Une solution utilise l'une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithmes) d'Amazon Personalize pour entraîner un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de la solution (modèle entraîné) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
 
-Amazon Personalize vous permet d’ajuster les hyperparamètres que le modèle utilise pour la formation. Par exemple :
-- Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br><br>![Paramètre min max du profil utilisateur][3]
-  - `min_user_history_length_percentile` : exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
-  - `max_user_history_length_percentile` : règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
+Amazon Personalize vous permet de régler les hyperparamètres utilisés par le modèle pour l'entraînement. Par exemple :
+- Le paramètre « Percentile de longueur de l'historique utilisateur » de la console Amazon Personalize vous permet d'ajuster le percentile de l'historique utilisateur à inclure dans la formation :<br><br>![Paramètre de profil utilisateur minimal et maximal][3]
+  - `min_user_history_length_percentile`: exclut un pourcentage d'utilisateurs dont l'historique est très court, ce qui peut être utile pour éliminer les articles les plus populaires et créer des recommandations basées sur des modèles sous-jacents plus approfondis.
+  - `max_user_history_length_percentile`: ajustez le pourcentage d'utilisateurs à prendre en compte lors des formations dont l'historique est très long.
 
-Le nombre de dimensions masquées permet de détecter des modèles plus compliqués pour les jeux de données complexes, tandis que la technique de propagation du temps (BPTT) ajuste les récompenses pour un événement précoce après qu’une chaîne d’événements a eu lieu, ce qui a entraîné une action de valeur élevée.
+Le nombre de dimensions cachées permet de détecter des modèles plus complexes pour des ensembles de données complexes, tandis que la technique de rétropropagation dans le temps (BPTT) ajuste les récompenses pour un événement précoce après qu'une chaîne d'événements s'est produite qui a donné lieu à une action de grande valeur.
 
-En outre, Amazon Personalize offre un réglage automatique des hyperparamètres en exécutant plusieurs versions de la solution avec différentes valeurs simultanément. Pour utiliser le réglage, activez **Exécuter HPO** lors de la création d’une solution.
+En outre, Amazon Personalize permet de régler automatiquement les hyperparamètres en exécutant simultanément plusieurs versions de la solution avec différentes valeurs. Pour utiliser le réglage, activez l'option **Perform HPO** lors de la création d'une solution.
 
-### Étape 2 : Évaluer et comparer
+### Étape 2 : Evaluer et comparer
 
-Une fois qu’une solution a terminé la formation, vous êtes prêt à l’évaluer et à comparer différentes versions. Chaque version de solution affiche les indicateurs calculés. Parmi les indicateurs disponibles, citons :
+Une fois la formation terminée, vous êtes prêt à l'évaluer et à comparer les différentes versions. Chaque version de la solution affiche des indicateurs calculés. Parmi les indicateurs disponibles, citons :
 
-- `Normalize discounted cumulative gain` : compare l’ordre recommandé des articles à la liste des articles réels et donne à chaque article un poids correspondant à sa position dans la liste
-- `Precision @k` : la quantité d’articles recommandés correctement divisée par le montant de tous les articles recommandés, où `k` est le nombre d’articles
-- `Mean reciprocal rank` : se concentre sur la première recommandation, la plus élevée classée et calcule le nombre d’articles recommandés avant que la première recommandation correspondante apparaisse
-- `Coverage` : compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données
+- **Normaliser le gain cumulé actualisé :** compare l'ordre recommandé des articles à la liste réelle des articles et attribue à chaque article un poids correspondant à sa position dans la liste
+- **Precision @k :** la quantité d'articles correctement recommandés divisée par la quantité de tous les articles recommandés, où `k` est le nombre d'articles
+- **Rang réciproque moyen :** se concentre sur la première recommandation la mieux classée et calcule le nombre d'éléments recommandés consultés avant l'apparition de la première recommandation correspondante
+- **Couverture :** proportion d'éléments uniques recommandés par rapport au nombre total d'éléments uniques dans l'ensemble de données
 
 ## Obtenir des recommandations
 
-Une fois que vous avez créé une version de solution qui vous satisfait, il est temps de mettre les recommandations en pratique. Il existe deux façons d’accéder aux recommandations :
+Une fois que vous avez créé une version de solution qui vous convient, il est temps de mettre en œuvre les recommandations. Vous pouvez accéder aux recommandations de deux manières :
 
-1. Campagne en temps réel<br>Une campagne est une version de solution déployée avec un débit de transaction minimum défini. Une transaction est un appel API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale d’un. La campagne va mettre à l’échelle les ressources en cas de charge accrue, mais elle ne chutera pas sous votre valeur minimale. Vous pouvez interroger les recommandations de la console, de la CLI AWS ou des SDK AWS dans votre code.<br><br>
-2. Traitement par lot<br>Un traitement par lot exporte les recommandations vers un compartiment S3. Le traitement sélectionne une entrée d’un fichier JSON avec une liste d’ID utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations correctes et la destination de sortie, vous êtes prêt à exécuter le travail. L’exécution dépend de la taille de vos jeux de données et de la longueur de la liste des recommandations.
+1. campagne en temps réel<br>Une campagne est une version de solution déployée avec un débit de transactions minimal défini. Une transaction est un appel d'API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale de un. La campagne ajustera les ressources en cas d'augmentation de la charge, mais celles-ci ne tomberont pas en dessous de votre valeur minimale. Vous pouvez consulter les recommandations dans la console, dans l'interface de ligne de commande AWS ou via les kits SDK AWS dans votre code.<br><br>
+2. Tâche par lots<br>Une tâche par lots exporte les recommandations vers un compartiment S3. La tâche prend une entrée d'un fichier JSON contenant la liste des ID d’utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations appropriées et la destination de sortie, vous êtes prêt à exécuter la tâche. Le temps d'exécution dépend de la taille de vos ensembles de données et de la longueur de la liste des recommandations.
 
 ### Filtres
 
-Les filtres vous permettent d’ajuster la sortie de la recommandation en excluant les éléments en fonction de l’ID, du type d’événement ou des métadonnées de l’article. Vous pouvez également filtrer les utilisateurs en fonction de leurs métadonnées, telles que l’âge ou l’état de fidélité. Les filtres peuvent être pratiques pour éviter de recommander des articles avec lesquels l’utilisateur a déjà interagi.
+Les filtres vous permettent d'ajuster la sortie des recommandations en excluant des éléments en fonction de leur ID, de leur type d'événement ou de leurs métadonnées. Vous pouvez également filtrer les utilisateurs en fonction de leurs métadonnées, telles que leur âge ou leur statut de membre du programme de fidélité. Les filtres peuvent s'avérer utiles pour empêcher de recommander des éléments avec lesquels l'utilisateur a déjà interagi.
 
-## Intégration des résultats à Braze
+## Intégrer les résultats avec Braze
 
-Avec le modèle et la campagne de recommandations créés, vous êtes prêt à exécuter une campagne Braze pour vos utilisateurs utilisant les Cartes de contenu et le Contenu connecté.
-Avant d’exécuter une campagne Braze, vous devez créer un service qui peut transmettre ces recommandations via une API. Vous pouvez suivre [l’étape 3 de l’article de l’atelier][1] pour déployer le service en utilisant les services AWS. Vous pouvez également déployer votre propre service de back-end indépendant qui fournit les recommandations.
+Avec le modèle créé et la campagne de recommandations, vous êtes prêt à lancer une campagne Braze pour vos utilisateurs à l'aide de cartes de contenu et de contenu connecté.
+Avant de lancer une campagne Braze, vous devez créer un service capable de diffuser ces recommandations via une API. Vous pouvez suivre l'[étape 3 de l'article de l'atelier][1] pour déployer le service à l'aide des services AWS. Vous pouvez également déployer votre propre service backend indépendant qui fournit les recommandations.
 
-### Exemple de Campagne de cartes de contenu
+### Cas d'utilisation de la campagne de carte de contenu
 
-Lançons une Campagne de cartes de contenu avec le premier article recommandé de la liste.<br><br>
+Lancez une campagne de cartes de contenu avec le premier élément recommandé de la liste.<br><br>
 Dans les exemples suivants, nous allons interroger
-l’endpoint `GET http://<service-endpoint.com>/recommendations?user_id=user123` avec paramètre `user_id` qui renvoie une liste des articles recommandés :
+l’`GET http://<service-endpoint.com>/recommendations?user_id=user123` endpoint avec un paramètre `user_id` qui renverra une liste d'articles recommandés :
 
 ```json
 [
@@ -126,7 +126,7 @@ l’endpoint `GET http://<service-endpoint.com>/recommendations?user_id=user123`
 ]
 ```
 
-Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). Dans le champ de texte du message, créez un bloc Contenu connecté Liquid pour interroger l’API et enregistrer la réponse dans la variable `recommendations` :
+Dans le tableau de bord de Braze, créez une nouvelle [campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). Dans le champ de texte du message, créez un bloc de contenu connecté Liquid pour interroger l'API et enregistrer la réponse dans la variable `recommendations` :
 
 {% raw %}
 
@@ -134,7 +134,7 @@ Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de con
 {% connected_content https:/<service-endpoint.com>/recommendations?user_id={{${user_id}}} :save recommendations %}
 ```
 
-Vous pouvez ensuite référencer le premier élément dans la matrice résultante et afficher le contenu à l’utilisateur :
+Vous pouvez ensuite référencer le premier élément du tableau obtenu et afficher le contenu à l'utilisateur :
 
 ```liquid
 This seems like a great fit for you:
@@ -144,9 +144,9 @@ This seems like a great fit for you:
 
 {% endraw %}
 
-Y compris le titre, l’image et la liaison de l’URL, voilà ce à quoi ressemblerait l’intégralité de la Carte de contenu :
+En incluant le titre, l'image et le lien vers l'URL, voici à quoi ressemblerait la fiche de contenu complète :
 
-![Image d’une campagne avec Contenu connecté ajoutée au corps du message et au champ « Add Image » (Ajouter une image). Cette image montre également la logique du Contenu connecté ajoutée au champ « Redirect to Web URL » (Redirection vers URL Web), reliant les utilisateurs à une URL de recommandation.][2]
+![Image d'une campagne avec du contenu connecté ajouté au corps du message et au champ « Ajouter une image ». Cette image montre également la logique de contenu connecté ajoutée au champ « Rediriger vers l'URL Web », reliant les utilisateurs à une URL de recommandation.][2]
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}
