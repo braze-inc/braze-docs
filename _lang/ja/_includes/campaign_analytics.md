@@ -254,7 +254,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='ユニーククリック数' %} これは、メールの場合、7日間にわたって追跡され、{% multi_lang_includedispatch_id{% multi_lang_include によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='ユニーククリック数' %} これは、メールの場合、7日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'> dispatch_id{% multi_lang_include によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
             </td>
         </tr>
         <tr>
