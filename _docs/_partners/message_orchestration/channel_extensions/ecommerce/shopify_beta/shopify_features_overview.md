@@ -334,6 +334,17 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Triggered**: When a user logs into their account<br>
 **Use Case**: Welcome series
 
+{% raw %}
+| Variable | Liquid templating |
+| --- | --- |
+| `source` | {{event_properties.${source}}} |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% alert note %}
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
+{% endalert %}
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -745,11 +756,6 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
   }
 }
 ```
-
-{% alert note %}
-The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
-{% endalert %}
-
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
