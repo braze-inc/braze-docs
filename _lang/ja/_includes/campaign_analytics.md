@@ -1,16 +1,16 @@
 ## キャンペーン分析
 
-キャンペーンを開始したら、そのキャンペーンの詳細ページに戻って主要な指標を見ることができる。**キャンペーン**ページに移動し、キャンペーンを選択して詳細ページを開封する。{% if include.channel == "Content Card" %}コンテンツカード{% elsif include.channel == "email" %}メール{% elsif include.channel == "in-app message" %}アプリ内メッセージ{% elsif include.channel == "push" %}プッシュメッセージ{% elsif include.channel == "SMS" %}SMSメッセージ{% elsif include.channel == "whatsapp" %}WhatsAppメッセージ{% elsif include.channel == "webhook" %}Webhooks{% endif %}キャンバスで送信されたものについては、[キャンバス分析を]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)参照のこと。
+キャンペーンを開始したら、そのキャンペーンの詳細ページに戻って主要な指標を見ることができる。**キャンペーン**ページに移動し、キャンペーンを選択して詳細ページを開封する。キャンバスで送信される{% if include.channel == "Content Card" %}コンテンツカード{% elsif include.channel == "email" %}メール{% elsif include.channel == "in-app message" %}アプリ内メッセージ{% elsif include.channel == "push" %}プッシュメッセージ{% elsif include.channel == "SMS" %}SMS メッセージ{% elsif include.channel == "whatsapp" %}WhatsApp メッセージ{% elsif include.channel == "webhook" %}Webhooks{% endif %}については、[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)を参照してください。
 
 {% alert tip %}
-レポートに記載されている用語や指標の定義をお探しですか？を参照されたい。
+レポートに記載されている用語や指標の定義をお探しですか？以下を参照してください。
   {% if include.channel == "email" %}[メール分析用語集]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
   {% elsif include.channel == "Content Card" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)コンテンツカードによるフィルター
-  {% elsif include.channel == "in-app message" %}[レポートメトリクス用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)アプリ内メッセージによるフィルター
-  {% elsif include.channel == "push" %}[レポート指標 用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)フィルター 押す
-  {% elsif include.channel == "SMS" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)SMSによるフィルター
-  {% elsif include.channel == "whatsapp" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)WhatsAppによるフィルター
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)and filter by Webhook{% endif %}.
+  {% elsif include.channel == "in-app message" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)とアプリ内メッセージによるフィルタリング
+  {% elsif include.channel == "push" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)とプッシュによるフィルタリング
+  {% elsif include.channel == "SMS" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と SMS によるフィルタリング
+  {% elsif include.channel == "whatsapp" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と WhatsApp によるフィルタリング
+  {% elsif include.channel == "webhook" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)と Webhook によるフィルタリング{% endif %}
 {% endalert %}
 
 **キャンペーン分析**タブから、一連のパネルでレポートを見ることができる。以下のセクションに列挙されているものよりも多く見たり少なく見たりするかもしれないが、それぞれに有用な目的がある。
@@ -18,20 +18,20 @@
 ### キャンペーンの詳細
 
 **キャンペーンの詳細**パネルには、キャンペーン全体のパフォーマンスのハイレベルな概要が表示される。
-  {% if include.channel == "Content Card" %}コンテンツカードだ。
-  {% elsif include.channel == "email" %}メール.
+  {% if include.channel == "Content Card" %}コンテンツカード
+  {% elsif include.channel == "email" %}メール。
   {% elsif include.channel == "in-app message" %}アプリ内メッセージ.
-  {% elsif include.channel == "push" %}メッセージをプッシュする。
-  {% elsif include.channel == "SMS" %}SMSだ。
-  {% elsif include.channel == "whatsapp" %}WhatAppのメッセージ。
-  {% elsif include.channel == "webhook" %}Webhook.
+  {% elsif include.channel == "push" %}プッシュメッセージ
+  {% elsif include.channel == "SMS" %}SMS
+  {% elsif include.channel == "whatsapp" %}WhatApp メッセージ。
+  {% elsif include.channel == "webhook" %}Webhook。
   {% endif %}
 
 このパネルでは、受信者に送信されたメッセージの数、1 次コンバージョン率、このメッセージによって生み出された総収益などの全体的な指標を確認します。このページから、配信、オーディエンス、コンバージョン設定を確認することもできます。
 
 {% if include.channel == "whatsapp" %}
 {% alert note %}
-WhatsAppチャネルにはリードレートが含まれる。この指標は、読み取りレシートをオンにしているユーザーに対してのみ配信される。
+WhatsAppチャネルにはリードレートが含まれる。この指標は、既読通知がオンになっているユーザーにのみ配信されますが、これは異なる場合があります。
 {% endalert %}
 {% endif %}
 
@@ -39,23 +39,23 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 ![]({% image_buster /assets/img/cc-campaign-details.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
 
 {% elsif include.channel == "email" %}
-![]({% image_buster /assets/img/campaign_details_email.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_email.png %}) 
 
 {% elsif include.channel == "push" %}
-![]({% image_buster /assets/img/campaign_details_push.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_push.png %}) 
 
 {% elsif include.channel == "SMS" %}
-![]({% image_buster /assets/img/campaign_details_sms.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_sms.png %}) 
 
 {% elsif include.channel == "in-app message" %}
-![]({% image_buster /assets/img/campaign_details_iam.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_iam.png %}) 
 
-キャンバスでは、作成したキャンバスにアプリ内メッセージのパフォーマンスがマッピングされる。ページ上部にあるコントロールパネルを使って、他のメッセージングタイプ（チャネル）を消去し、キャンバス内のアプリ内メッセージのみを表示することができる。
+キャンバスでは、作成したキャンバスにアプリ内メッセージのパフォーマンスがマッピングされます。ページ上部にあるコントロールパネルを使って、他のメッセージングタイプ（チャネル）を消去し、キャンバス内のアプリ内メッセージのみを表示することができる。
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![]({% image_buster /assets/img/campaign_details_webhook.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_webhook.png %}) 
 
 {% endif %}
 
@@ -63,7 +63,7 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 
 #### コントロールグループ {#cc-control-group}
 
-個々のコンテンツカードのインパクトを測定するために、A/Bテストに[コントロールグループを][2]追加することができる。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々のコンテンツカードの影響を測定するには、AB テストに[コントロールグループ][2]を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% elsif include.channel == "SMS" %}
 
@@ -81,13 +81,13 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 
 #### コントロールグループ {#webhook-control-group}
 
-個々のWebhookメッセージの影響を測定するには、A/Bテストに[コントロールグループを][2]追加することができる。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々の Webhook メッセージの影響を測定するには、AB テストに[コントロールグループ][2]を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% endif %}
 
 #### 最後に表示してからの変更
 
-あなたのチームの他のメンバーからのキャンペーンへの更新数は、キャンペーン概要ページの*Changes Since Last Viewed*メトリックによってトラッキング, 追跡される。キャンペーンの名前、スケジュール、タグ、メッセージング、オーディエンス、承認ステータス、またはチームアクセス設定の更新の変更履歴を表示するには、[**Changes Since Last Viewed]**を選択する。各更新について、誰がいつ更新を行ったかを見ることができる。この変更ログを使ってキャンペーンの変更を監査することができる。
+あなたのチームの他のメンバーからのキャンペーンへの更新数は、キャンペーン概要ページの*Changes Since Last Viewed*メトリックによってトラッキング, 追跡される。キャンペーンの名前、スケジュール、タグ、メッセージング、オーディエンス、承認ステータス、またはチームアクセス設定の更新の変更履歴を表示するには、[**Changes Since Last Viewed]**を選択する。各更新について、誰がいつ更新を行ったかを見ることができます。この変更ログを使ってキャンペーンの変更を監査することができる。
 
 <!--
 ### Message Performance
@@ -127,7 +127,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 **SMSパフォーマンス・**パネルでは、様々な側面からメッセージのパフォーマンスを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![]({% image_buster /assets/img_archive/sms_message_performance.png %}) コントロールグループ、バリアント1、バリアント2のメトリクスの表を含むSMS/MMSパフォーマンスパネル。
+![コントロールグループ、バリアント1、バリアント2の指標の表を含む SMS/MMS パフォーマンスパネル。]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Webhook のパフォーマンス
@@ -145,15 +145,15 @@ The **Message Performance** panel outlines how well your message has performed a
 
 {% endif %}
 
-表示をシンプルにしたい場合は、<i class="fas fa-plus"></i> **Add/Remove Columnsを**クリックし、必要なメトリクスをクリアする。デフォルトでは、すべての指標が表示されます。
+表示を簡素化する場合は、[<i class="fas fa-plus"></i>**\+ 列を追加/削除**] をクリックし、必要に応じて指標をクリアします。デフォルトでは、すべての指標が表示されます。
 
 {% if include.channel == "email" %}
 
 #### ヒートマップ
 
-ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。**メッセージ分析**セクションから、**メールパフォーマンスパネルに**移動する。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**クリックする。または、バリアント名のハイパーリンクをクリックしてヒートマップを表示することもできる。
+ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**クリックする。または、バリアント名のハイパーリンクをクリックしてヒートマップを表示することもできます。
 
-このビューでは、**ヒートマップを表示する**トグルを使って、キャンペーン期間中のクリックの全体的な頻度と場所を示すメールのビジュアルビューを表示することができる。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーがどこをナビゲートしているのかについてのインサイトが得られる。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンをクリックする。
+このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンをクリックする。
 
 ![メールキャンペーンを含むプレビューとヒートマップページの例と、リンクエイリアスの例とその総クリック数のパネル。]({% image_buster /assets/img_archive/email_heatmap_example.png %})
 
@@ -163,7 +163,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### コンテンツカードの指標
 
-以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのコンテンツカードメトリクスの完全な定義については、[レポートメトリクス用語集を][1]参照し、コンテンツカードでフィルターをかける。
+以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのコンテンツカード指標の完全な定義については、[レポート指標の用語集][1]を参照し、コンテンツカードでフィルタリングを行います。
 
 <style>
     .no-split {
@@ -181,11 +181,11 @@ The **Message Performance** panel outlines how well your message has performed a
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">送信済みメッセージ</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信されたメッセージ' %}<br><br>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %}<br><br>
                 この計算方法は、選択した項目によって異なる。 
-                <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">カードを作成する</a>：<br><br>
+                <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">カード作成</a>：<br><br>
                 <ul>
-                    <li><b>ローンチ時またはステップエントリ時：</b>作成され、見ることができるカードの数。ユーザーがカードを見たかどうかはカウントされない。</li>
+                    <li><b>開始時またはステップエントリ時：</b>作成され、見ることができるカードの数。ユーザーがカードを見たかどうかはカウントされない。</li>
                     <li><b>最初のインプレッション発生時:</b>ユーザーに表示されるカードの枚数。</li>
                 </ul>
             </td>
@@ -200,7 +200,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニーク受信者' %}<br><br> 視聴者は毎日ユニークな受信者になる可能性があるため、これは<i>ユニークインプレッションよりも</i>高くなると予想すべきである。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> 視聴者は毎日ユニーク受信者になることができるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
@@ -208,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">ユニーク却下数</a></td>
-            <td>{% multi_lang_include metrics.md metric='ユニークな解雇' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -217,25 +217,25 @@ The **Message Performance** panel outlines how well your message has performed a
 インプレッションの記録方法については、Web、Android、iOSで若干のニュアンスの違いがある。一般的にBrazeは、ユーザーがフィードの特定のコンテンツカードまでスクロールした後、カードが表示されたときにインプレッションを記録する。
 {% endalert %}
 
-#### ユニーク受信者とユニーク・インプレッションの比較
+#### ユニーク受信者数とユニークインプレッション数
 
-メッセージの可視性をカバーする指標はいくつかある。これには、_送信メッセージ_、_ユニーク受信者_、_ユニークインプレッションが_含まれる。特に、_ユニーク受信_者と_ユニーク・インプレッションの_違いは、少し分かりにくいかもしれない。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
+メッセージの可視性をカバーする指標はいくつかある。これには、_送信メッセー数_、_ユニーク受信者数_、_ユニークインプレッション数_が含まれます。特に、_ユニーク受信者数_と_ユニークインプレッション数_の違いは、少し分かりにくいかもしれません。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
 
-例えば、あなたが今日コンテンツカードを閲覧し、明日も同じカードを閲覧し、明後日もまた_同じ_カードを閲覧したとしよう。ただし、_ユニーク・インプレッションは_1回のみカウントされる。また、あなたのデバイスでカードが利用可能だったため、「_送信済みメッセージ_」の数にも含まれる。
+たとえば、今日コンテンツカードを表示し、明日、明後日に同じカードを表示すると、_ユニーク受信者_として3回カウントされます。ただし、_ユニークインプレッション_は1回のみカウントされます。また、あなたのデバイスでカードが利用可能だったため、「_送信済みメッセージ_」の数にも含まれる。
 
-別の例として、150,000_メッセージが送信された_コンテンツカードキャンペーンで、5つの_ユニークインプレッションが_表示されたとする。つまり、カードは（バックエンドで）15万人のユーザーに利用可能になったが、その送信後に以下のステップをすべて実行したのは、わずか5人のユーザーのデバイスだけだったということだ：
+別の例として、15万件の_メッセージが送信された_ことを示すコンテンツカードキャンペーンに5つの_ユニークインプレッション_があるとします。つまり、カードは (バックエンドで) 15万人のユーザーに利用可能になったが、その送信後に以下のステップをすべて実行したのは、わずか5人のユーザーのデバイスだけだったということです。
 
 1. セッションを開始した、またはアプリが明示的にコンテンツカードの同期を要求した（またはその両方）。
 2. コンテンツカードビューに移動する
-3. SDKがインプレッションを記録し、サーバーにログを記録した。
+3. SDK がインプレッションを記録し、サーバーにログを記録しました
 
-_送信されたメッセージ_」は閲覧可能なコンテンツカードを指し、「_ユニーク受信者_」は実際に閲覧されたコンテンツカードを指す。
+_送信済みメッセージ_」は閲覧可能なコンテンツカードを指し、「_ユニーク受信者_」は実際に閲覧されたコンテンツカードを指します。
 
 {% elsif include.channel == "email" %}
 
 #### メール指標
 
-他のチャネルでは見られない、メール特有の主な指標をいくつか紹介しよう。Brazeで使用されているすべてのメールメトリクスの完全な定義は、[メール分析用語集を]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)参照。
+他のチャネルでは見られない、メール特有の主な指標をいくつか紹介しよう。Braze で使用されているすべてのメール指標の完全な定義については、「[メール分析用語集]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)」を参照してください。
 
 <style>
     .no-split {
@@ -254,73 +254,73 @@ _送信されたメッセージ_」は閲覧可能なコンテンツカードを
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} これはメールの7日間のトラッキングで、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_idによって</a>測定される。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5～10％であるべきだ。10％を超えるものは例外的である！
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} これは、メールの場合、7日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'> dispatch_id</a> によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
             </td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">ユニーク開封数</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Unique Opens</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} メールの場合、これは7日間にわたってトラッキング 追跡される。この数字は10～20％の間であるべきだ。20％を超えるものは例外的である！
+                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は10から20% の範囲内でなければなりません。20%を超えるものは例外です。
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">クリック開封率</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='クリック開封率' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">スパム率</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %} このメトリックが0.08より大きい場合、あなたのメッセージのコピーが営業的すぎるか、メールアドレスの収集方法を再考する（あなたの通信に興味のある人にメッセージングしていることを確認する）必要がある兆候である可能性がある。
+                {% multi_lang_include metrics.md metric='Spam' %} この指標が0.08を超える場合は、メッセージのコピーがセールス的すぎるか、メールアドレスの収集方法を再検討する必要があることを示している可能性があります (関心のある人にメッセージを送信していることを確認するため) 。
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">配信停止数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配信停止または退会' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">その他の開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='その他の開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">推定実質オープン数</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">推定実質開封数</a></td>
             <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 詳細は以下のセクションを参照のこと。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">マシン開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='マシン開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='バウンス' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">ハードバウンス</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ハード・バウンス' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">ソフトバウンス</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ソフトバウンス' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
         </tr>
     </tbody>
 </table>
 
 ##### 推定実質開封率 {#estimated-real-open-rate}
 
-この統計は、Brazeが独自に作成した分析モデルを使用して、機械開封が存在しないかのようにキャンペーン独自の開封率の推定値を再構築する。メール送信者からいくつかの開封イベントに*Machine Opensという*ラベルを受け取るが（上記参照）、これらのラベルはしばしば実際の開封をラベル付けすることがある。言い換えれば、「*その他の開封*」は（実際のユーザーによる）実際の開封を過小評価している可能性が高い。その代わり、Brazeは各キャンペーンのクリックデータを使って、実際の人間がメッセージを開封した率を推測している。これにより、Apple の MPP を含むさまざまなマシン開封メカニズムが補われます。
+この統計は、Brazeが独自に作成した分析モデルを使用して、機械開封が存在しないかのようにキャンペーン独自の開封率の推定値を再構築する。メール送信者からいくつかの開封イベントに *Machine Opens* というラベルを受け取りますが (上記参照)、これらのラベルは、実際の開封を本物の開封としてラベル付けすることができます。言い換えれば、「*その他の開封*」は（実際のユーザーによる）実際の開封を過小評価している可能性が高い。その代わり、Brazeは各キャンペーンのクリックデータを使って、実際の人間がメッセージを開封した率を推測している。これにより、Apple の MPP を含むさまざまなマシン開封メカニズムが補われます。
 
-_推定開封_率はメール送信開始から36時間後に算出され、その後24時間ごとに再計算される。キャンペーンが再発した場合、見積もりは別の送信が発生してから36時間後に再計算される。
+_推定実質開封率_はメール送信開始から36時間後に算出され、その後24時間ごとに再計算されます。キャンペーンが繰り返される場合、推定は別の送信が発生してから36時間後に再計算されます。
 
-クリック率によって異なるが、通常、統計を取るには10,000通前後の配信メールが必要である。統計量が計算できない場合、その列は"--"と表示される。
+通常、統計を正常に計算するには、配信済みのメールが10,000通程度必要ですが、この数はクリック率によって異なります。統計量が計算できない場合、その列は"--"と表示される。
 
 ###### 制限事項
 
-推定実質開封率はキャンペーンでのみ利用可能で、Currentsではレポートされない。この指標は、2023年11月14日以前に開始されたアクティブキャンペーンにのみ遡及して算出される。
+推定実質開封率はキャンペーンでのみ利用可能で、Currents のイベントではレポートされません。この指標は、2023年11月14日以前に開始されたアクティブキャンペーンにのみ遡及して算出される。
 
 {% elsif include.channel == "in-app message" %}
 
-#### アプリ内メッセージ・メトリクス
+#### アプリ内メッセージ指標
 
-以下は、あなたが分析で目にする可能性のある、アプリ内メッセージの主な指標である。Brazeで使用されているすべてのアプリ内メッセージメトリクスの完全な定義については、[レポートメトリクス用語集を][1]参照のこと。
+分析に表示される主なアプリ内メッセージの指標を一部ご紹介します。Braze で使用されているすべてのアプリ内メッセージ指標の完全な定義については、[レポート指標の用語][1]を参照してください。
 
 <style>
     .no-split {
@@ -338,35 +338,35 @@ _推定開封_率はメール送信開始から36時間後に算出され、そ�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">本文クリック数 (複数回)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ボディ・クリック' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">ボタン 1 のクリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ボタン1のクリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">ボタン 2 のクリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ボタン2クリック' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニーク・インプレッション' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">インプレッション数の合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='総インプレッション数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">コンバージョン (B、C、D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='コンバージョン（B、C、D）' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">コンバージョン数合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='総コンバージョン数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">コンバージョン率</a></td>
-            <td>{% multi_lang_include metrics.md metric='コンバージョン率' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
         </tr>
     </tbody>
 </table>
@@ -393,46 +393,46 @@ _推定開封_率はメール送信開始から36時間後に算出され、そ�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスしたプッシュ通知を</a>参照。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">直接開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ダイレクト開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">開封数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='開封' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
         </tr>
     </tbody>
 </table>
 
-プッシュ配信停止はキャンペーン分析の指標には含まれない。この指標を手動で追跡するステップについては、[プッシュ配信停止の追跡を]({{site.baseurl}}/help/help_articles/push/push_unsubscribes)参照のこと。
+プッシュの配信停止は、キャンペーン分析の指標として含まれません。この指標を手動で追跡するステップについては、[プッシュ配信停止の追跡]({{site.baseurl}}/help/help_articles/push/push_unsubscribes)を参照してください。
 
 {% alert tip %}
-_Direct Opensと_ _Influenced Opensには_「開封」という言葉が含まれているが、実際には異なる指標である。_ダイレクト開封とは_、上の表にあるように、プッシュ通知を直接開封することを指す。_Influenced Opensとは_、プッシュ通知を受け取った後、特定の時間内にプッシュ通知を開かずにアプリを開封することを指す。つまり、_Influenced Opensとは_アプリ開封のことであり、プッシュ通知開封のことではない。
+_直接開封数_と_誘発された開封数_には「開封」という言葉が含まれていますが、実際には異なる指標です。_ダイレクト開封とは_、上の表にあるように、プッシュ通知を直接開封することを指す。_誘発された開封数_とは、プッシュ通知を受け取った後、特定の時間内にプッシュ通知を開かずにアプリを開封することを指します。つまり、_Influenced Opensとは_アプリ開封のことであり、プッシュ通知開封のことではない。
 {% endalert %}
 
-> 通知の配信はAPNによる「ベストエフォート」である。アプリにデータを配信することは意図しておらず、ユーザーに新しいデータが利用可能であることを通知することだけを目的としている。重要な違いは、APNへのメッセージ配信に成功した数を表示するのであって、APNからデバイスへの配信に成功した数を表示するとは限らないということだ。
+> 通知の配信は APN による「ベストエフォート」です。アプリにデータを配信することは意図しておらず、ユーザーに新しいデータが利用可能であることを通知することだけを目的としている。重要な違いは、デバイスに正常に配信された APNs の数ではなく、APNs に正常に配信されたメッセージの数が表示されることです。
 
 #### バウンスしたプッシュ通知 {#bounced-push}
 
-##### アップルのプッシュ通知サービス
+##### Apple プッシュ通知サービス
 
-バウンスは、プッシュ通知が、意図したアプリがインストールされていないデバイスに配信しようとしたときにAPNで発生する。APNはまた、デバイスのトークンを恣意的に変更する権利も持っている。ユーザーのプッシュトークンを登録してから送信するまでの間に、ユーザーのプッシュトークンが変更された端末に送信しようとすると、バウンスが発生する。
+バウンスは、プッシュ通知が、意図したアプリがインストールされていないデバイスに配信しようとしたときにAPNで発生する。APNはまた、デバイスのトークンを恣意的に変更する権利も持っている。以前にトークンを登録した時 (ユーザーに対してプッシュトークンを登録する各セッションの開始時など) から送信時刻までの間にプッシュトークンが変更されたユーザーのデバイスに送信しようとすると、バウンスが発生します。
 
-ユーザーが次回アプリ開封時に端末設定でプッシュを無効にした場合、SDKはプッシュが無効にされたことを検知し、Brazeに通知する。この時点で、プッシュ有効状態を無効に更新する。無効化されたユーザーが新しいセッションを持つ前にプッシュキャンペーンを受信すると、キャンペーンは正常に送信され、配信されたように表示される。このユーザーに対してプッシュがバウンスすることはない。その後のセッションで、ユーザーにプッシュ通知を送ろうとしても、Brazeはすでにフォアグラウンド・トークンがあるかどうかを認識しているため、通知は送られない。
+ユーザーが次回アプリ開封時に端末設定でプッシュを無効にした場合、SDKはプッシュが無効にされたことを検知し、Brazeに通知する。この時点で、プッシュ有効状態を無効に更新します。無効化されたユーザーが新しいセッションを持つ前にプッシュキャンペーンを受信すると、キャンペーンは正常に送信され、配信されたように表示される。このユーザーに対してプッシュがバウンスすることはない。その後のセッションで、ユーザーにプッシュを送信しようとすると、Braze はフォアグラウンドトークンがあるかどうかを既に認識しているため、通知は送信されません。
 
 配信前に期限切れとなったプッシュ通知は失敗とはみなされず、バウンスとして記録されることもない。
 
 ##### Firebaseクラウドメッセージング
 
-Firebase Cloud Messaging (FCM)のバウンスは3つのケースで発生する可能性がある：
+Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する可能性があります。
 
 | シナリオ | 説明 |
 | -- | -- |
-| アンインストールされたアプリケーション | メッセージがデバイスに配信されようとして、そのデバイスで意図したアプリがアンインストールされると、メッセージは破棄され、デバイスの登録IDは無効になる。今後、デバイスにメッセージングを試みると、NotRegisteredエラーが返される。 |
-| バックアップされたアプリケーション | アプリケーションがバックアップされると、アプリケーションが復元される前に登録IDが無効になる可能性がある。この場合、FCMはアプリケーションの登録IDを保存しなくなり、アプリケーションはメッセージを受信しなくなる。そのため、アプリケーションのバックアップ時に登録IDを保存すべきでは**ない**。 |
-| 更新申請 | アプリケーションが更新されると、以前のバージョンの登録IDが使えなくなることがある。そのため、更新されたアプリケーションは、既存の登録IDを置き換える必要がある。 |
+| アンインストールされたアプリケーション | メッセージがデバイスに配信されようとして、そのデバイスで意図したアプリがアンインストールされると、メッセージは破棄され、デバイスの登録IDは無効になる。今後デバイスにメッセージを送信しようとすると、NotRegistered エラーが返されます。 |
+| バックアップされたアプリケーション | アプリケーションがバックアップされると、アプリケーションが復元される前に登録 ID が無効になる可能性があります。この場合、FCMはアプリケーションの登録IDを保存しなくなり、アプリケーションはメッセージを受信しなくなる。そのため、アプリケーションのバックアップ時に登録 ID を保存すべきでは**ありません**。 |
+| 更新されたアプリケーション | アプリケーションが更新されると、以前のバージョンの登録IDが使えなくなることがある。そのため、更新されたアプリケーションは、既存の登録 ID を置き換える必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "SMS" %}
@@ -457,35 +457,35 @@ Firebase Cloud Messaging (FCM)のバウンスは3つのケースで発生する�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">送信済み</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信済み' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends-to-carrier">キャリアへの送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='キャリアに送る' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">配信失敗数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配達の失敗' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">配達確認済み</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='確認された配達' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">確認済み配信</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">拒否数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='不合格' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">オプトアウト</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='オプトアウト' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">ヘルプ</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ヘルプ' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">クリック数の合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='総クリック数' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -512,15 +512,15 @@ Firebase Cloud Messaging (FCM)のバウンスは3つのケースで発生する�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユニーク受信者' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">エラー数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='エラー' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
         </tr>
     </tbody>
 </table>
@@ -529,7 +529,7 @@ Firebase Cloud Messaging (FCM)のバウンスは3つのケースで発生する�
 
 #### WhatsApp メトリクス
 
-WhatsAppの主な分析指標をいくつか紹介しよう。Brazeで使用されているすべてのWhatsApp指標の完全な定義については、[レポート指標用語集を][1]参照のこと。
+WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用されているすべてのWhatsApp 指標の完全な定義については、[レポート指標の用語][1]を参照してください。
 
 <style>
     .no-split {
@@ -547,26 +547,26 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Brazeで使用さ�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='送信' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">配信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='配達' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">既読数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='リード' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">失敗数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='失敗' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
         </tr>
     </tbody>
 </table>
 
-#### エンドツーエンドのブロックとレポート指標
+#### エンドユーザーのブロックとレポートの指標
 
-[WhatsApp マネージャーのダッシュボードから](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx)追加メトリクスにアクセスすることも可能だが、利用可能な全てのインサイトにアクセスするには[アクセス権の確認が](https://www.facebook.com/business/help/218116047387456)必要である。 
+追加の指標には [WhatsApp マネージャー](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx)ダッシュボードからアクセスできますが、利用可能なすべてのインサイトにアクセスするには、[アクセス権の確認](https://www.facebook.com/business/help/218116047387456)が必要です。 
 
 {% endif %}
 
@@ -581,7 +581,7 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Brazeで使用さ�
 {% if include.channel == "in-app message" %}
 
 {% alert note %}
-アプリ内メッセージの最新バージョン(Generation 3)を見ることができるユーザーにのみ送信するように選択した場合、**ターゲットオーディエンスは**あなたの選択を反映するように調整されない。
+最新バージョンの Braze のアプリ内メッセージ (第3世代) を表示できるユーザーにのみ送信することを選択した場合、**ターゲットオーディエンス**は選択内容を反映するようには調整されません。
 {% endalert %}
 
 {% endif %}
@@ -590,7 +590,7 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Brazeで使用さ�
 
 ### キーワード応答
 
-**キーワードレスポンスパネルには**、あなたのメッセージを受け取った後にユーザーが返信したインバウンドキーワードのタイムラインが表示される。  
+**キーワード応答**パネルには、メッセージ受信後にユーザーが返信した受信キーワードのタイムラインが表示されます。  
 
 ![キャンペーンレベルのSMS/MMSキーワードレスポンスパネルには、経時的なキーワード分布の折れ線グラフと、オプトイン、オプトアウト、ヘルプ、その他、その他、コーチングのチェックボックスが選択されたキーワードカテゴリーセクションが含まれている。]({% image_buster /assets/img/sms/keyword_responses.png %}).
 
@@ -602,29 +602,29 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Brazeで使用さ�
 
 ### コンバージョンイベントの詳細
 
-[**コンバージョンイベントの詳細**] パネルには、キャンペーンのコンバージョンイベントのパフォーマンスが表示されます。詳しくは[コンバージョンイベントを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results)参照のこと。
+[**コンバージョンイベントの詳細**] パネルには、キャンペーンのコンバージョンイベントのパフォーマンスが表示されます。詳細については、「[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results)」を参照してください。
 
-![コンバージョンイベント詳細パネル]({% image_buster /assets/img/cc-conversion.png %})
+![コンバージョンイベントの詳細パネル。]({% image_buster /assets/img/cc-conversion.png %})
 
 ### コンバージョンの相関
 
 [**コンバージョンの相関**] パネルでは、どのようなユーザー属性と行動が、キャンペーンに設定した結果に役立つか、または悪影響を与えるかを把握できます。詳細については、「[コンバージョンの相関]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/)」を参照してください。
 
-![1次コンバージョンイベントからユーザー属性と行動を分析したコンバージョン相関パネル - A.]({% image_buster /assets/img/convcorr.png %})
+![1次コンバージョンイベントのユーザー属性と行動に関する分析を含むコンバージョン相関パネル - A.]({% image_buster /assets/img/convcorr.png %})
 
 {% if include.channel == "whatsapp" %}
 
 ### メタ分析
 
-Brazeの分析に加え、WhatsAppビジネスマネージャーではテンプレートレベルの分析にもアクセスできる。詳しくは[メタのドキュメントを](https://www.facebook.com/business/help/218116047387456)参照されたい。 
+Brazeの分析に加え、WhatsAppビジネスマネージャーではテンプレートレベルの分析にもアクセスできる。詳細については、[Meta のドキュメント](https://www.facebook.com/business/help/218116047387456)を参照してください。 
 
 {% endif %}
 
 {% if include.channel == "SMS" %}
 
-### SMSカレントのイベント
+### SMS Currents のイベント
 
-メールと同様に、BrazeはSMSメッセージがユーザーに届く過程で、メッセージに関連するユーザーレベルのイベントを受信する。受信SMSイベントはすべて、[SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events)イベントを通してカレントイベントとしても送信される。これにより、ユーザーがBrazeプラットフォーム外でテキスト入力したメッセージに対して、追加のアクションやレポートを実行することができる。 
+メールと同様に、BrazeはSMSメッセージがユーザーに届く過程で、メッセージに関連するユーザーレベルのイベントを受信する。受信SMSイベントはすべて、[SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events)イベントを通して Currents イベントとしても送信される。これにより、ユーザーがBrazeプラットフォーム外でテキスト入力したメッセージに対して、追加のアクションやレポートを実行することができる。 
 
 {% alert note %}
 インバウンドメッセージは1,600文字を超えると切り捨てられる。
@@ -636,13 +636,13 @@ Brazeの分析に加え、WhatsAppビジネスマネージャーではテンプ�
 
 ## リテンションレポート
 
-リテンションレポートは、特定のキャンペーンまたはキャンバスにおいて、ユーザーが選択したリテンションイベントを実行した割合を表示する。詳しくは[リテンションレポートを]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/)参照のこと。
+リテンションレポートには、特定のキャンペーンまたはキャンバスにおいて、指定した期間に選択したリテンションイベントをユーザーが実行した割合が表示されます。詳細については、「[リテンションレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/)」を参照してください。
 
 ## 目標到達プロセスレポート
 
 ファネルレポートは、キャンペーンやキャンバスを受け取った後の顧客のジャーニーを分析できるビジュアルレポートを提供する。キャンペーンやキャンバスでコントロールグループや複数のバリアントを使用している場合、異なるバリアントがコンバージョンファネルにどのような影響を与えたかをより細かいレベルで理解し、このデータに基づいて最適化することができる。
 
-詳細は[ファンネルレポートを]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)参照のこと。
+詳細については、「[目標到達プロセスレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)」を参照してください。
 
 {% endif %}
 

@@ -1,4 +1,4 @@
 <br>
 {% alert warning %}
-[AppboyKit](https://github.com/Appboy/appboy-ios-sdk)(Objective-CSDKとしても知られている)はサポートされなくなり、[Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/). 新しい機能、バグ修正、セキュリティ更新、技術サポートは受けられなくなるが、メッセージングと分析は通常通り機能し続ける。詳しくは、[新しいBraze Swift SDKの学習](https://www.braze.com/)] を参照のこと。resources/articles/introducing-the-new-braze-swift-sdk).
+[AppboyKit](https://github.com/Appboy/appboy-ios-sdk) (Objective-C SDK とも呼ばれます) はサポートされなくなり、[Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/). に置き換えられました。新機能、バグ修正、セキュリティ更新、またはテクニカルサポートは受けられなくなりますが、メッセージングと分析は引き続き通常どおり機能します。詳しくは、[新しい Braze Swift SDK の紹介](https://www.braze.com/resources/articles/introducing-the-new-braze-swift-sdk). を参照してください。
 {% endalert %}

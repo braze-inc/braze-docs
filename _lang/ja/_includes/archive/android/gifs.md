@@ -1,7 +1,7 @@
 {% if include.channel=="in-app messages" %}
 Braze は、HTML アプリ内メッセージのアニメーションGIF およびSVG イメージの表示をデフォルトでサポートしています。他のすべてのアプリ内メッセージには、カスタムイメージライブラリが必要です。
 {% else %}
-Braze には、{{ include.channel }} でアニメーションGIF を表示するための外部イメージライブラリが必要です。
+Braze で、{{ include.channel }} を使ってアニメーションGIF を表示するには外部画像ライブラリが必要です。
 {% endif %}
 
 {% alert note %}
@@ -141,7 +141,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 ### ステップ2:イメージローダーデリゲートの設定
 
-Braze SDK は、[`setBrazeImageLoader`][gifs-66] のカスタムイメージローダーセットを使用します。カスタム・アプリケーション・サブクラスでカスタム・イメージ・ローダーを設定することをお勧めします。
+Braze SDK は、[`setBrazeImageLoader`][gifs-66] で設定された任意のカスタム画像ローダーを使用します。カスタム・アプリケーション・サブクラスでカスタム・イメージ・ローダーを設定することをお勧めします。
 
 {% tabs %}
 {% tab JAVA %}
@@ -173,7 +173,7 @@ class GlideIntegrationApplication : Application() {
 
 ## Jetpack Compose によるカスタムイメージのロード
 
-Jetpack Compose でイメージロードをオーバーライドするには、`imageComposable` に値を渡します。この関数は`Card` を取り、必要な画像と修飾子をレンダリングします。または、`ContentCardsList` の`customCardComposer` を使用してカード全体をレンダリングすることもできます。
+Jetpack Compose で画像の読み込みをオーバーライドするには、`imageComposable` に値を渡します。この関数は`Card` を取り、必要な画像と修飾子をレンダリングします。または、`ContentCardsList` の`customCardComposer` を使用してカード全体をレンダリングすることもできます。
 
 次の例では、`imageComposable` 関数にリストされているカードにGlide のCompose ライブラリが使用されています。
 
