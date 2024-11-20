@@ -8,7 +8,7 @@ page_order: 1
 
 > Estas son las personalizaciones disponibles para el SDK Braze de Cordova.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Opciones de personalización
 
