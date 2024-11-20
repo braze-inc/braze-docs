@@ -14,9 +14,9 @@ Braze SDK をインストールすると、基本的な分析機能{% if include
 $ sudo gem install cocoapods
 ```
 
-**Note**:`rake` 実行可能ファイルを上書きするプロンプトが表示された場合、詳細については [CocoaPods.org の Getting started Directions][apple_initial_setup_3] を参照してください。
+**注**:`rake` 実行可能ファイルを上書きするプロンプトが表示された場合、詳細については [CocoaPods.org の Getting started Directions][apple_initial_setup_3] を参照してください。
 
-**Note**:CocoaPodsに関する問題がある場合は、[CocoaPodsトラブルシューティングガイド][apple__initial_setup_25]]を参照してください。
+**注**:CocoaPodsに関する問題がある場合は、[CocoaPodsトラブルシューティングガイド][apple__initial_setup_25]]を参照してください。
 
 ### ステップ2:ポッドファイルを作成する
 
@@ -30,9 +30,9 @@ target 'YourAppTarget' do
 end
 ```
 
-**Note**:ポッドの更新がマイナー バージョンの更新よりも小さいものを自動的に取得するように、Braze をバージョン管理することをお勧めします。これは次のようになります。'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'大きな変更があっても最新バージョンの Braze SDK を自動的に統合する場合は、Podfileで `pod 'Appboy-{{include.platform}}-SDK'` を使用できます。
+**注**:ポッドの更新がマイナー バージョンの更新よりも小さいものを自動的に取得するように、Braze をバージョン管理することをお勧めします。これは次のようになります。'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'大きな変更があっても最新バージョンの Braze SDK を自動的に統合する場合は、Podfileで `pod 'Appboy-{{include.platform}}-SDK'` を使用できます。
 {% if include.platform == 'iOS' %}
-**Note**:Braze のデフォルトの UI を使用せず、SDWebImage 依存関係を導入したくない場合は、Podfile の `pod 'Appboy-iOS-SDK/Core'` のように、Podfile の Braze 依存関係を Core subspec に指定してください。{% endif %}。
+**注**:Braze のデフォルトの UI を使用せず、SDWebImage 依存関係を導入したくない場合は、Podfile の `pod 'Appboy-iOS-SDK/Core'` のように、Podfile の Braze 依存関係を Core subspec に指定してください。{% endif %}。
 
 ### ステップ 3:Braze SDK のインストール
 
@@ -81,7 +81,7 @@ Swift プロジェクトでの Objective-C コードの使用方法について�
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**Note**:Braze の `sharedInstance` シングルトンは、Braze 機能を使用するための前提条件であるため、`startWithApiKey:` が呼び出される前に nil になります。
+**注**:Braze の `sharedInstance` シングルトンは、Braze 機能を使用するための前提条件であるため、`startWithApiKey:` が呼び出される前に nil になります。
 
 {% endtab %}
 {% endtabs %}
@@ -164,7 +164,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-**Note**:このメソッドは `startWithApiKey:inApplication:withLaunchOptions:` 初期化メソッドを置き換えます。
+**注**:このメソッドは `startWithApiKey:inApplication:withLaunchOptions:` 初期化メソッドを置き換えます。
 
 このメソッドは、次のパラメータを使用して呼び出されます。
 
