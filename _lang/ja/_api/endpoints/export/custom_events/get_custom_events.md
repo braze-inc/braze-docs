@@ -20,7 +20,7 @@ description: "この記事では、カスタムイベントリストBrazeエン�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`events.list` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`events.list`の権限が必要です。
 
 ## レート制限
 
@@ -28,12 +28,12 @@ description: "この記事では、カスタムイベントリストBrazeエン�
 
 ## リクエストパラメーター
 
-| パラメーター| required | データ型 | 説明 |
+| パラメータ| 必須 | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返されるイベント名のページ。デフォルトは0です (最大250の最初のセットを返す)。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 致命的なエラーの応答コード {#fatal-export}
 
-リクエストが致命的なエラーに遭遇した場合に返されるステータスコードと関連するエラーメッセージについては、[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。

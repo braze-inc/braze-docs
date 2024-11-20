@@ -28,7 +28,7 @@ description: "이 문서에서는 식별자 Braze 엔드포인트로 사용자 �
 
 {% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
-## mu요청 본문
+## 요청 본문
 
 ```
 Content-Type: application/json

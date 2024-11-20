@@ -31,7 +31,7 @@ Cet endpoint a une limitation du débit de 10 requêtes par minute, par espace 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Corps de la demande
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
 |`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`.|
 |`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 

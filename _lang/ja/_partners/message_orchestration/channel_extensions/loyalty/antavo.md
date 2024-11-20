@@ -1,43 +1,43 @@
 ---
-nav_title: アンタボ
-article_title: アンタボ・ロイヤリティ・クラウド
-description: "この参考記事では、BrazeとAntavoのパートナーシップについて概説している。"
+nav_title: Antavo
+article_title: Antavo Loyalty Cloud
+description: "このリファレンス記事では、Braze と Antavo のパートナーシップについて説明します。Antavo は、特典付きの購入からさらに進んだ次世代ロイヤルティプログラムです。"
 alias: /partners/antavo/
 page_type: partner
 search_tag: Partner
 ---
 
-# アンタボ・ロイヤリティ・クラウド
+# Antavo Loyalty Cloud
 
 > [Antavo](https://antavo.com/)社は、包括的なロイヤリティ・プログラムを構築し、ブランド愛を育み、顧客の行動を変える、エンタープライズ・グレードのSaaS型ロイヤリティ・テクノロジー・プロバイダーである。
 
-AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。これはAntavoからBrazeへの一方向のデータ同期のみである。この統合は、`external_id` Brazeフィールドをサポートしている。このフィールドは、Antavoがロイヤルティ会員IDを同期するフィールドである。
+AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。Antavo では、2つのプラットフォーム間のロイヤルティデータ同期 (Antavo から Braze への一方向データ同期のみ) がサポートされています。この統合は、`external_id` Brazeフィールドをサポートしている。このフィールドは、Antavoがロイヤルティ会員IDを同期するフィールドである。
 
 ## 前提条件
 
-| 必要条件          | 説明                                                                                                                                                                   |
+| 要件          | 説明                                                                                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
-| アンタボアカウント       | このパートナーシップを利用するには、Brazeとの統合を有効にした[Antavo](https://antavo.com/)アカウントが必要である。                                                |
-| Braze REST API キー   | `users.track` 権限を持つ Braze REST API キー。<br><br>Brazeダッシュボードで新しいAPIキーを作成するには、**Settings**>**API Keysに**進み、**Create New API Keyを**クリックする。  |
-| Braze RESTエンドポイント  | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。                |
-| Brazeアプリの識別子 | アプリの識別子が鍵だ。<br><br>Brazeダッシュボードでこのキーを見つけるには、**設定** **>APIキーと**進み、**識別**セクションを見つける。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Antavo アカウント       | このパートナーシップを利用するには、Brazeとの統合を有効にした[Antavo](https://antavo.com/)アカウントが必要である。                                                |
+| Braze REST API キー   | `users.track` 権限を持つ Braze REST API キー。<br><br>Braze ダッシュボードで新しい API キーを作成するには、[**設定**] >[**API キー**] に移動し、[**新しい API キーを作成**] をクリックします。  |
+| Braze RESTエンドポイント  | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。                |
+| Brazeアプリの識別子 | アプリ識別子キー。<br><br>Braze ダッシュボードでこのキーを確認するには、[**設定**] > [**API キー**] に進み、[**識別**] セクションを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ1:アンタヴォでブレーズをつなぐ
+### ステップ1:Antavo で Braze に接続する
 
-Antavoで、**Modules**>**Brazeに**進み、**Configureを**クリックする。AntavoのBraze統合設定ページに最初に移動すると、2つのシステムを接続するようインターフェイスが促す。
+Antavo で [**Modules**] > [**Braze**] に移動し、[**Configure**] をクリックします。Antavo の Braze 統合設定ページに初めて移動すると、2つのシステムを接続するように促されます。
 
-以下の証明書を提出すること：
+以下の認証情報を指定します。
 
-- **インスタンスのURL：**プロビジョニング先のインスタンスのBraze RESTエンドポイント。
+- **Instance URL:**プロビジョニング先のインスタンスのBraze RESTエンドポイント。
 - **APIトークン（識別子）：**AntavoがBrazeにリクエストを送信する際に使用するBraze REST APIキー。
-- **アプリ識別子：**Brazeアプリの識別子。
+- **App Identifier:**Brazeアプリの識別子。
 
-認証情報を入力したら、**Connectを**クリックする。
+認証情報を入力したら、[**Connect**] をクリックします。
 
-![インスタンスURL、APIトークン、アプリ識別子でAntavoのBraze画面を接続する。][1]
+![「Instance URL」、「API Token」、「App Identifier」が表示されている Antavo の「Connect Braze」画面。][1]
 
 ### ステップ2:フィールドマッピングを設定する
 
@@ -45,9 +45,9 @@ Antavoで、**Modules**>**Brazeに**進み、**Configureを**クリックする�
 
 Antavoでフィールドマッピングを設定する：
 
-1. **Add new field** <i class="fas fa-plus" alt=""></i> をクリックする。
-2. ドロップダウンフィールドを使用して、Brazeに同期させたいAntavo**Loyaltyフィールドを**選択する。
-3. データを入力するBrazeのカスタム属性に相当する**リモートフィールドを**入力する。  
+1. [**Add new field**] をクリックします<i class="fas fa-plus" alt=""></i>。
+2. ドロップダウンフィールドを使用して、Braze に同期する Antavo の**ロイヤルティフィールド**を選択します。
+3. データの取り込み先となる Braze の対応するカスタム属性を表す**リモートフィールド**を入力します。  
 
 {% alert note %}
 カスタム属性のリストは、Brazeの「**データ設定**」＞「**カスタム属性**」で確認できる。入力したフィールドがBrazeで定義されていない場合、最初の同期で新しいフィールドが自動的に生成される。
@@ -55,12 +55,12 @@ Antavoでフィールドマッピングを設定する：
 
 {:start="4"}
 4\.フィールドの組み合わせを追加するには、ステップ1〜3を繰り返す。
-5. 同期データのリストからフィールドを削除するには <i class="fa-solid fa-rectangle-xmark" title="をクリックする。"></i>をクリックする。
-6. \[**保存**] をクリックします。
+5\.同期されるデータのリストからフィールドを削除するには、行の終わりにある <i class="fa-solid fa-rectangle-xmark" title="Delete"></i> をクリックします。
+6\.[**保存**] をクリックします。
 
 Antavoで設定されたフィールドのいずれかの値が変更されると、その単一の値の同期がトリガーされるだけでなく、フィールドマッピングに追加されたすべてのフィールドがリクエストに含まれる。
 
-![AntavoのSync Fieldsページ。][2]
+![Antavo の「Sync Fields」ページ。][2]
 
 {% alert important %}
 データポイントの消費を最小限に抑えるため、Braze内でアクションを起こすフィールドのみをマッピングすることを推奨する。
@@ -68,27 +68,27 @@ Antavoで設定されたフィールドのいずれかの値が変更される�
 
 #### サポートされるデータ型
 
-つまり、数値（整数、浮動小数点）、文字列、配列、ブーリアン、オブジェクト、オブジェクトの配列、日付[で]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage)ある。
+この統合では、Braze のすべてのカスタム属性[データ型]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) (数値 (整数、浮動小数点)、文字列、配列、ブール値、オブジェクト、オブジェクト配列、日付) がサポートされています。
 
-![さまざまなカスタム属性を示すブレイズのプロフィール。][3]
+![さまざまなカスタム属性を示す Braze プロファイル。][3]
 
 データフィールドは、設定されたフィールドマッピングに基づいて入力される。
 
 ## トリガー
 
-フィールドマッピングの設定に加え、Antavoの[ワークフローツールに](https://antavo.atlassian.net/wiki/spaces/AUM/pages/581402629)組み込まれた機能により、統合はさらなる機能を提供する。すべてのBrazeカスタム属性[データタイプと]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) [カスタムイベントプロパティデータタイプは]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#expected-format)、ワークフローを通しても同期できる。
+フィールドマッピングの設定に加え、Antavoの[ワークフローツールに](https://antavo.atlassian.net/wiki/spaces/AUM/pages/581402629)組み込まれた機能により、統合はさらなる機能を提供する。すべての Braze カスタム属性[データ型]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) とカスタムイベントプロパティ[データ型]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#expected-format)も、ワークフローを介して同期できます。
 
-### ロイヤルティ・データを時々同期させる
+### ロイヤルティデータを随時同期する
 
-データがAntavoのロイヤリティフィールドに格納されていない場合、またはデータがマップされたフィールドリストに追加されていない場合は、このオプションを使用する。要求されたデータの同期は、設定されたワークフロー基準が満たされたときにトリガーされる。
+データがAntavoのロイヤリティフィールドに格納されていない場合、またはデータがマップされたフィールドリストに追加されていない場合は、このオプションを使用する。要求されたデータの同期は、設定されたワークフロー条件が満たされたときにトリガーされます。
 
-ステップ・バイ・ステップ・ガイドで、[前回の購入に関連するロイヤリティ・データの](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Sync-data-related-to-the-customer%E2%80%99s-last-purchase)同期を設定する方法を学ぶ。
+[最後の購入に関連するロイヤルティデータ](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Sync-data-related-to-the-customer%E2%80%99s-last-purchase)の同期を設定する方法については、ステップバイステップガイドを参照してください。
 
 ### ロイヤリティ・プログラムのイベントを同期させる
 
-Antavoから同期されたイベントを使用して、アクションベースのBraze Canvasesにロイヤルティ会員を入力する。この統合は、Brazeにカスタムイベントとして表示されるあらゆるAntavoイベント（購入イベントを含む）を同期することができる。
+Antavo から同期されたイベントを使用して、アクションベースの Braze キャンバスにロイヤルティメンバーを入力します。この統合は、Brazeにカスタムイベントとして表示されるあらゆるAntavoイベント（購入イベントを含む）を同期することができる。
 
-ステップ・バイ・ステップ・ガイドで、[ロイヤリティ・プログラム入会イベントの](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)同期と、[ロイヤリティ・プログラム特典獲得イベントの](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)同期の設定方法を学ぶ。
+[ロイヤルティプログラム登録イベント](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)の同期および[ロイヤルティプログラム特典獲得イベント](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!)の同期の設定方法については、ステップバイステップガイドを参照してください。
 
 [1]: {% image_buster /assets/img/antavo/connect_braze.png %}
 [2]: {% image_buster /assets/img/antavo/data_field_mapping.png %}

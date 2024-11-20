@@ -12,12 +12,12 @@ tool: Canvas
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: テストキャンバスの送信
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    image: /assets/img/braze_icons/check-square-broken.svg
   - name: 開始後にキャンバスを編集する
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: キャンバスの承認と権限
+    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: キャンバスの下書きを保存する
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg

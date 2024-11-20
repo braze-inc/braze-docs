@@ -1,7 +1,7 @@
 ---
 nav_title: Lytics
 article_title: Lytics
-description: "この参考記事は、BrazeとLyticsの統合をカバーしている。Lyticsは、マーケティング担当者、アナリスト、技術者のための企業向け顧客データプラットフォームである。この統合により、ブランドはLyticsのデータをBrazeに直接同期し、マッピングすることができる。"
+description: "このリファレンス記事では、Braze と Lytics の統合について説明します。Lytics は、マーケター、アナリスト、技術者向けのエンタープライズ顧客データプラットフォームです。この統合により、ブランドは Lytics のデータを Braze に直接同期およびマッピングできます。"
 alias: /partners/lytics/
 page_type: partner
 search_tag: Partner
@@ -9,45 +9,45 @@ search_tag: Partner
 
 # Lytics
 
-> [Lyticsは][1]、顧客中心の次世代ビジネスに選ばれる顧客データプラットフォーム（CDP）である。Lytics Decision Engine、Conductor、Cloud Connectの各ソリューションは、マーケティング担当者とデータチームに、プライバシーに準拠した方法で、アイデンティティ解決、オーケストレーション、キャンペーン最適化をリアルタイムで実行する機会を提供する。
+> [Lytics][1] は、顧客中心の次世代ビジネスに最適な顧客データプラットフォーム (CDP) です。Lytics Decision Engine、Conductor、Cloud Connectの各ソリューションは、マーケティング担当者とデータチームに、プライバシーに準拠した方法で、アイデンティティ解決、オーケストレーション、キャンペーン最適化をリアルタイムで実行する機会を提供する。
 
-BrazeとLyticsの統合は、顧客の統一されたビューを提供し、強力なパーソナライゼーションを可能にし、次善のアクションオーケストレーションと決定を用いて最適化されたキャンペーンを推進する。
+Braze と Lytics の統合により、顧客を一元的に把握できるため、強力なパーソナライゼーションが可能になり、ネクストベストアクションオーケストレーションと意思決定を使用して最適化されたキャンペーンを推進できます。
 
-この統合により、ブランドは以下のことが可能になる：
+この統合により、ブランドは以下のことができるようになります。
 
-- Lyticsから直接Brazeにオーディエンスをエクスポートする
+- Lytics から直接 Braze にオーディエンスをエクスポートする
 - BrazeのキャンペーンやCanvasesのイベントをリアルタイムでLyticsに送信し、パーソナライズされたキャンペーンやリッチなユーザープロファイルを構築する。
 
 ## ユースケース
 
-BrazeをLyticsに接続して、電子メール、SMS、プッシュのアクティビティを[インポート](#importing-data-from-braze-to-lytics)し、Lyticsのユーザープロファイルを充実させる。BrazeとLyticsを一緒に使えば、Lyticsのクロスチャネル、行動主導型オーディエンスを[エクスポートして](#integration)、ファーストパーティデータを使って高度にパーソナライズされたBrazeカスタマージャーニーを構築することもできる。
+Braze を Lytics に接続して、メール、SMS、プッシュアクティビティを[インポート](#importing-data-from-braze-to-lytics)し、Lytics のユーザープロファイルを充実させます。Braze と Lytics を併用することで、Lytics のクロスチャネル、行動主導型のオーディエンスを[エクスポート](#integration)し、ファーストパーティデータを使用して高度にパーソナライズされた Braze カスタマージャーニーを構築することもできます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Lyticsアカウント | この統合を利用するには、Lyticsのアカウントが必要である。 |
+| Lyticsアカウント | この統合を活用するには、Lytics アカウントが必要です。 |
 | Lyticsアカウント番号 | ウェブフックのエンドポイントURLを設定するには、Lyticsのアカウント番号が必要である。 |
 | Lytics APIトークン | データマネージャー権限を持つLytics REST APIトークン。<br><br> これは、Lyticsダッシュボード内の**「アカウント設定コンソール**」＞「**アクセストークン**」＞「**新しいトークンの作成**」から作成できる。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| ブレイズインスタンス | [ブレイズのインスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)だ。不明な場合は、Brazeのオンボーディング・マネージャーに問い合わせること。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| ブレイズインスタンス | お客様の [Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)。不明な場合は、Brazeのオンボーディング・マネージャーに問い合わせること。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 このセクションでは、LyticsのデータをBrazeにエクスポートする方法を説明する。
 
-### ステップ1:認可を作成する
+### ステップ1:認証を作成する
 
-Lyticsで、ナビゲーションバーの**データ・**コンソール内の**認可**ダッシュボードに移動する。**Create New Authorizationを**選択し、**Brazeを**検索して選択する。
+Lyticsで、ナビゲーションバーの [**Data**] コンソール内の [**Authorization**] ダッシュボードに移動します。[**Create New Authorization**] を選択し、**Braze** を検索して選択します。
 
-表示される**Configure Authorization**プロンプトで、ラベルと説明を入力し、REST APIキーとBrazeインスタンスを入力する。終了したら**Completeを**選択する。
+表示される**Configure Authorization**プロンプトで、ラベルと説明を入力し、REST APIキーとBrazeインスタンスを入力する。完了したら [**Complete**] を選択します。
 
 ![][2]{: style="max-width:80%;"}
 
 ### ステップ2:新しい仕事を作る
 
-Lyticsで、ナビゲーションバーの**データ**コンソール内の**ジョブダッシュボードに**移動する。**Create New Jobを**選択し、**Brazeを**検索して選択する。 表示される**Select Job Type**プロンプトで、**Export Audienceを**選択する。
+Lytics で、ナビゲーションバーの [**Data**] コンソール内の[**Jobs**] ダッシュボードに移動します。[**Create New Job**] を選択し、**Braze** を検索して選択します。 表示される [**Select Job Type**] プロンプトで [**Export Audience**] を選択します。
 
 ![][3]{: style="max-width:80%;"}
 
@@ -57,21 +57,21 @@ Lyticsで、ナビゲーションバーの**データ**コンソール内の**�
 
 ### ステップ3:ジョブを設定する
 
-**Configure Job**プロンプト内で、ラベルとオプションの説明を入力する。次に、**Braze External User ID Field**入力から、Braze外部ユーザーID（`braze_id` ）を含むLyticsのフィールドを選択する。次のステップが最も重要で、Brazeにエクスポートするオーディエンスを選択する。
+**Configure Job**プロンプト内で、ラベルとオプションの説明を入力する。次に [**Braze External User ID Field**] の入力から、Braze 外部ユーザー ID (`braze_id`) を含む Lytics のフィールドを選択します。次は最も重要なステップです。Braze にエクスポートするオーディエンスを選択します。
 
 ![][5]{: style="max-width:80%;"}
 
-最後に、"**Existing Users**"チェックボックスで好ましいオプションを選択する。このボックスにチェックを入れたままにしておくと、選択したLyticsオーディエンスにすでに存在しているユーザーを追加する。チェックを外すと、ワークフロー開始後にオーディエンスに入室または退室するときのみ、ユーザーがBrazeにエクスポートされる。
+最後に、"**Existing Users**"チェックボックスで好ましいオプションを選択する。このボックスをオンのままにすると、選択した Lytics オーディエンスにすでに存在しているユーザーが追加されます。オフにすると、ワークフロー開始後にオーディエンスに追加される時点またはオーディエンスから外される時点でのみ、ユーザーが Braze にエクスポートされます。
 
 {% alert note %}
-このボックスをチェックすることで、選択したオーディエンスのすべての既存ユーザーがBrazeにプッシュされる。この結果、最初の同期では、視聴者1人につきユーザー1人分のデータポイントが発生することになる。
+このボックスをチェックすることで、選択したオーディエンスのすべての既存ユーザーがBrazeにプッシュされる。これにより、最初の同期ではユーザーごと、オーディエンスごとにデータポイントが発生します。
 {% endalert %}
 
-**完了**したら**Completeを**クリックしてエクスポートを開始し、保存する。
+完了したら [**完了**] をクリックしてエクスポートを開始し、保存します。
 
 ![][6]{: style="max-width:80%;"}
 
-エクスポートジョブが設定されると、Lyticsはネイティブ統合を通じて、選択されたオーディエンスをBrazeに送信する。以下は、Brazeに送信されたオーディエンスのJSON構造を示すサンプルオーディエンスである。
+エクスポートジョブの設定が完了したら、Lytics はネイティブ統合を介して、選択されたオーディエンスを Braze に送信します。以下は、Braze に送信されるオーディエンスの JSON 構造を示すサンプルオーディエンスです。
 
 ```json
 {
@@ -99,30 +99,30 @@ Lyticsで、ナビゲーションバーの**データ**コンソール内の**�
 }
 ```
 
-オーディエンスエクスポートに含まれる、Brazeにまだ存在しない`external_id` 、Brazeに新しいユーザーが作成される。 
+オーディエンスのエクスポートに含まれ、Braze にまだ存在していない `external_id` に対し、Braze で新しいユーザーが作成されます。 
 
 ## BrazeからLyticsにデータをインポートする
 
-BrazeからLyticsへのオーディエンスデータのインポートは、以下の方法で行うことができる：
+Braze から Lytics へのオーディエンスデータのインポートは、以下の方法で行うことができます。
 
-- [ウェブフックを使う](#using-webhooks)
+- [Webhook を使用する](#using-webhooks)
 - [CSVファイルから](#from-a-csv-file)
 
-### ウェブフックを使う
+### Webhook を使用する
 
 #### ステップ1:Lytics API トークンを作成する
 
-左下にあるLyticsアカウントメニューに移動し、アカウント名を選択し、ドロップダウンメニューから**Access Tokensを**選択する。次に、**Create API Tokenを**選択する。
+アカウント名を選択して左下にある Lytics Account Menu に移動し、ドロップダウンメニューから [**Access Tokens**] を選択します。次に [**Create API Token**] を選択します。
 
 ![][7]{: style="max-width:80%;"}
 
-名前、オプションの説明、トークンの有効期限を入力する。次に、**Data Managerの**スコープをAPI Permissionsに切り替え、**Generate Tokenを**クリックする。トークンをコピーし、安全な場所に保管する。
+名前、オプションの説明、トークンの有効期限を入力する。次に API 権限の [**Data Manager**] スコープをオンに切り替え、[**Generate Token**] をクリックします。トークンをコピーし、安全な場所に保管する。
 
 ![][8]{: style="max-width:80%;"}
 
 #### ステップ2:LyticsのウェブフックURLを設定する
 
-Lytics webhook URLは、BrazeからLytics APIにメッセージを送信するためにBrazeによって使用される。このメッセージは、Lyticsでキャンペーンをパーソナライズしたり、Lyticsの顧客プロファイルを充実させたりするために使用できる。以下の2つのパラメータは、LyticsウェブフックURL内に追加する必要がある：
+Lytics Webhook URL は、Braze から Lytics API にメッセージを送信するために Braze によって使用されます。このメッセージは、Lytics でキャンペーンをパーソナライズする場合や、Lytics の顧客プロファイルを充実させる場合に使用できます。以下の2つのパラメータは、LyticsウェブフックURL内に追加する必要がある：
 
 - Lyticsアカウント番号
 - Lytics APIトークン
@@ -133,13 +133,13 @@ Lytics webhook URLは、BrazeからLytics APIにメッセージを送信する�
 https://api.lytics.io/c/<ACCOUNT-NUMBER>/braze_users?key=<LYTICS-API-TOKEN>
 ```
 
-`<ACCOUNT-NUMBER>` をあなたのアカウント番号に、`<LYTICS-API-TOKEN>` をあなたの Lytics API トークンに置き換える。
+`<ACCOUNT-NUMBER>` をアカウント番号に置き換え、`<LYTICS-API-TOKEN>` を Lytics API トークンに置き換えます。
 
 #### ステップ3:BrazeでWebhookを作成する 
 
-Brazeで、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成する。**Webhook URL**フィールドにLyticsのWebhook URLを追加する。
+Braze で新しい [Webhook キャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を作成します。**Webhook URL**フィールドにLyticsのWebhook URLを追加する。
 
-リクエストタイプ（HTTP`POST` メソッド）を定義し、残りのウェブフックの詳細を設定したら、ウェブフックのテストとデプロイの準備は完了だ。以下は、BrazeでWebhookを設定した後のPOSTリクエスト本文のサンプルである：
+リクエストタイプ (HTTP `POST` メソッド) を定義し、残りの Webhook の詳細を設定したら、Webhook をテストおよびデプロイできます。以下は、BrazeでWebhookを設定した後のPOSTリクエスト本文のサンプルである：
 
 ```json
 {
@@ -162,11 +162,11 @@ Brazeで、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/m
 
 このセクションでは、BrazeのユーザーデータをセグメントからLyticsにインポートする方法を説明する。
 
-#### ステップ1:認可を作成する
+#### ステップ1:認証を作成する
 
-Lyticsで、ナビゲーションバーの**データ・**コンソール内の**認可**ダッシュボードに移動する。**Create New Authorizationを**選択し、**Custom Integrationsを**検索して選択する。
+Lyticsで、ナビゲーションバーの [**Data**] コンソール内の [**Authorization**] ダッシュボードに移動します。[**Create New Authorization**] を選択し、[**Custom Integrations**] を検索して選択します。
 
-ビジネス要件とセキュリティ要件に基づいて、SFTP認証の優先タイプを選択する。SFTP経由でLyticsにファイルをインポートする場合、以下の認証タイプがサポートされている：
+ビジネス要件とセキュリティ要件に基づいて、使用する SFTP 認証タイプを選択します。SFTP経由でLyticsにファイルをインポートする場合、以下の認証タイプがサポートされている：
 
 - クライアントSFTPサーバー認証
 - PGP秘密鍵によるクライアントSFTPサーバー認証
@@ -176,21 +176,21 @@ Lyticsで、ナビゲーションバーの**データ・**コンソール内の*
 
 ![][9]{: style="max-width:80%;"}
 
-表示された**Configure Authorization**プロンプトで、ラベルと説明を入力し、残りの構成要件を完了する。完了したら**Completeを**クリックする。
+表示された**Configure Authorization**プロンプトで、ラベルと説明を入力し、残りの構成要件を完了する。完了したら [**Complete**] をクリックします。
 
 #### ステップ2:セグメントデータをCSVにエクスポートする
 
-Brazeで、**Audience**>**Segmentsに**移動する。エクスポートしたいセグメントを探し、以下を選択する。 <i class="fas fa-gear" aria-label="設定"></i>を選択し、次に**CSV Export User Dataを**選択する。セグメントで最大50万ユーザーをエクスポートできる。詳しくは、[セグメントデータをCSVにエクスポートするを]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv)参照のこと。
+Braze で [**オーディエンス**] > [**セグメント**] に移動します。エクスポートするセグメントを見つけ、[<i class="fas fa-gear" aria-label="設定"></i>] を選択し、次に [**ユーザーデータを CSV 形式でエクスポート**] を選択します。1つのセグメントで最大50万ユーザーをエクスポートできます。詳細については、「[CSV へのセグメントデータのエクスポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv)」を参照してください。
 
 #### ステップ3:CSVインポートジョブを設定する
 
-Lyticsで、ナビゲーションバーの**データ**コンソール内の**ジョブダッシュボードに**移動する。**Create New Jobを**選択し、**Custom Integrationsを**検索して選択する。
+Lytics で、ナビゲーションバーの [**Data**] コンソール内の[**Jobs**] ダッシュボードに移動します。[**Create New Job**] を選択し、[**Custom Integrations**] を検索して選択します。
 
-次に、ジョブ・タイプを選択する。BrazeのCSVファイルをLyticsにインポートするには、ジョブタイプとして**CSVインポートを**選択する。
+次にジョブタイプを選択します。Braze の CSV ファイルを Lytics にインポートするには、ジョブタイプとして [**Import CSV**] を選択します。
 
 ![][10]{: style="max-width:80%;"}
 
-最後に、仕事のラベルと任意の説明を入力し、その他の必要な詳細を設定する。**Completeを**クリックしてジョブを開始し、保存する。
+最後に、仕事のラベルと任意の説明を入力し、その他の必要な詳細を設定する。[**Complete**] をクリックして、ジョブを開始し、保存します。
 
 [1]: https://www.lytics.com/
 [2]: {% image_buster /assets/img/lytics/braze_authorization.png %}

@@ -33,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `modified_before`  |  Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les modèles mis à jour à l’heure donnée ou avant. |
 | `limit` | Facultatif | Nombre positif | Nombre maximum de modèles à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000. |
 | `offset`  |  Facultatif | Nombre positif | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

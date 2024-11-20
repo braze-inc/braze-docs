@@ -33,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `modified_before`  |  Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les blocs de contenu mis à jour au plus tard à l'heure donnée. |
 | `limit` | Facultatif | Nombre positif | Nombre maximum de blocs de contenu à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000. |
 | `offset`  |  Facultatif | Nombre positif | Nombre de blocs de contenu à ignorer avant de renvoyer le reste des modèles correspondant aux critères de recherche. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -77,6 +77,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `Content Block number limit exceeds maximum of 1000` | Modifier le paramètre `limit` à un entier inférieur à 1 000. |
 | `Offset is invalid` | Le paramètre `offset` doit être un entier supérieur à 0. |
 | Le décalage doit être supérieur à 0 | Modifier le paramètre `offset` à un entier supérieur à 0. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

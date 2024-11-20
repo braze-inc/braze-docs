@@ -52,7 +52,7 @@ bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab Double/Float %}
+{% tab ダブルまたはフロート %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
@@ -119,7 +119,7 @@ REST API を使用してユーザー属性を設定することもできます�
 | `OptedIn` | 配信登録済み、かつ明示的にオプトイン済み |
 | `Subscribed` | 購読済み、ただし明示的に選択されていない |
 | `UnSubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 - `EmailNotificationSubscriptionType`
   - ユーザーは、有効なメールアドレスを取得すると自動的に `Subscribed` に設定されます 。ただし、明示的なオプトインのプロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を `OptedIn` に設定することをお勧めします。

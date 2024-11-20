@@ -11,7 +11,7 @@ guide_featured_list:
 - name: Punchh
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/punchh/
   image: /assets/img/braze_icons/bank-note-02.svg
-- name: ダイナミック・コード生成
+- name: 動的コード生成
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/code_generation/
   image: /assets/img/braze_icons/code-square-01.svg
 

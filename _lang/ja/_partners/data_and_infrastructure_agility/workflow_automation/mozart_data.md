@@ -1,20 +1,20 @@
 ---
-nav_title: モーツァルト・データ
-article_title: モーツァルト・データ
-description: "この参考記事では、Brazeとオールインワンのモダン・データ・プラットフォームであるMozart Dataの提携について概説しており、Fivetranを使用してSnowflakeへのデータのインポート、トランスフォームの作成、データの結合などを行うことができる。"
+nav_title: Mozart Data
+article_title: Mozart Data
+description: "このリファレンス記事では、Braze と Mozart Data のパートナーシップについて説明します。Mozart Data はオールインワンの最新のデータプラットプラットフォームであり、Fivetran を使用して Snowflake へのデータのインポート、トランスフォームの作成、データの結合などを行うことができます。"
 alias: /partners/mozartdata/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# モーツァルト・データ
+# Mozart Data
 
 {% multi_lang_include video.html id="HU6dSOClcQ0" align="right" %}
 
-> [Mozart Dataは](https://mozartdata.com/)、Fivetran、Portable、Snowflakeを搭載したオールインワンの最新データ・プラットフォームである。
+> [Mozart Data](https://mozartdata.com/) は、Fivetran、Portable、Snowflake を利用するオールインワンの最新データプラットフォームです。
 
-BrazeとMozart Dataの統合により、以下のことが可能になる：
+Braze と Mozart Data の統合により、以下のことが可能になります。
 - Fivetranを使ってBrazeのデータをSnowflakeにインポートする
 - Brazeのデータと他のアプリケーションのデータを組み合わせてトランスフォームを作成し、ユーザーの行動を効果的に分析する。
 - SnowflakeからBrazeにデータをインポートし、新たな顧客エンゲージメントの機会を創出する。
@@ -37,43 +37,43 @@ table td {
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| モーツァルト・データ・アカウント | このパートナーシップを利用するには、モーツァルト・データのアカウントが必要である。[登録はこちらから。](https://app.mozartdata.com/signup)|
-| Snowflake アカウント<br>オプション 1: 新規アカウント | Mozart Dataのアカウント作成プロセスで**Create a New Snowflake Accountを**選択すると、Mozart Dataがお客様のために新しいSnowflakeアカウントをプロビジョニングする。 |
-| Snowflake アカウント<br>オプション 2: 既存口座 | 組織がすでにSnowflakeアカウントを持っている場合は、Mozart Data Connectedオプションを使うことができる。<br><br>既存の**Snowflake**アカウントに接続するには、**Already Have a Snowflake Account**オプションを選択する。このオプションを実行するには、アカウントレベルの権限を持つユーザーが[以下のステップに従わなければ](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount)ならない。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Mozart Data アカウント | このパートナーシップを活用するには、Mozart Data アカウントが必要です。[こちらからご登録ください。](https://app.mozartdata.com/signup)|
+| Snowflake アカウント<br>オプション 1: 新規アカウント | Mozart Data のアカウント作成プロセスで [**Create a New Snowflake Account**] を選択すると、Mozart Data により新しい Snowflake アカウントがプロビジョニングされます。 |
+| Snowflake アカウント<br>オプション 2: 既存口座 | 組織がすでに Snowflake アカウントを所有している場合は、Mozart Data Connected オプションを使用できます。<br><br>既存のSnowflakeアカウントに接続するには、**Already Have a Snowflake Account**オプションを選択する。このオプションを使用する場合は、アカウントレベルの権限を持つユーザーが[以下の手順に従って操作する](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount)必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-この統合は、[BrazeからMozart Dataへの](#syncing-data-from-braze-to-mozart-data)データ同期と、[Mozart DataからBrazeへの](#syncing-data-from-mozart-data-to-braze)データ同期の両方でサポートされている。
+この統合は、[Braze から Mozart Data への](#syncing-data-from-braze-to-mozart-data)データ同期と [Mozart Data から Braze への](#syncing-data-from-mozart-data-to-braze)データ同期の両方でサポートされています。
 
 ### BrazeからMozart Dataにデータを同期する
 
-#### ステップ1:ブレイズコネクターをセットアップする
+#### ステップ1:Braze コネクターを設定する
 
-1. Mozart Dataで、**Connectorsに**進み、**Add Connectorを**クリックする。
-2. Braze」を検索し、コネクターカードを選択する。
+1. Mozart Data で [**Connectors**] に移動し、[**Add Connector**] をクリックします。
+2. 「Braze」を検索し、コネクターカードを選択します。
 3. Brazeから同期されたすべてのデータが保存される保存先スキーマ名を入力する。デフォルトのスキーマ名`braze` を使用することを推奨する。
-4. **Add Connectorを**クリックする。
+4. [**Add Connector**] をクリックします。
 
-#### ステップ2:Fivetranコネクタフォームに記入する
+#### ステップ2:Fivetran コネクターフォームに情報を入力します。
 
-Fivetranコネクタのページにリダイレクトされる。このページで、所定の欄に記入する。次に、**Continue**>**Save & Testを**クリックし、Fivetranコネクタを完成させる。
+Fivetran コネクターページにリダイレクトされます。このページで所定のフィールドに入力します。次に [**Continue**] > [**Save & Test**] をクリックし、Fivetran コネクターを完成させます。
 
-Fivetranは、BrazeアカウントからSnowflakeデータウェアハウスへのデータの同期を開始する。コネクタの同期が完了した後、Mozart Dataからクエリデータにアクセスできる。 
+Fivetran が、Braze アカウントから Snowflake データウェアハウスへのデータの同期を開始します。コネクターの同期が完了したら、Mozart Data からクエリデータにアクセスできます。 
 
 ### Mozart DataからBrazeにデータを同期する
 
 #### ステップ1:Snowflakeデータウェアハウスをセットアップする
 
-[Cloud Data Ingestionの]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/?tab=snowflake)手順に従って、Snowflakeインターフェースからテーブル、ユーザー、権限を設定する。このステップには、管理者レベルのSnowflakeアクセスが必要であることに注意。
+「[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/?tab=snowflake)」の手順に従って、Snowflake インターフェイスからテーブル、ユーザー、権限を設定します。このステップには、管理者レベルのSnowflakeアクセスが必要であることに注意。
 
 #### ステップ2:BrazeでSnowflakeとの統合をセットアップする
 
-Snowflake warehouseを設定した後、Mozart Dataで**Integration**ページに行き、**Brazeを**選択する。ここで、Brazeに提供するために必要なクレデンシャルを見つける。
+Snowflake ウェアハウスの設定後に、Mozart Data の [**Integration**] ページで [**Braze**] を選択します。ここで、Braze に提供する必要がある認証情報を確認します。
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-integrationpage.png %}){: style="max-width:80%;"}
 
-次に、Brazeにサインインした状態で、**Integrations > Technology Partners > Snowflakeと**進み、統合プロセスを開始する。Mozart Dataから認証情報をコピーし、Snowflake Dataのインポートページに追加する。**Set up sync detailsを**クリックし、Snowflakeアカウントとソーステーブル情報を入力する。 
+次に、Braze にサインインした状態で **[統合] > [テクノロジーパートナー] > [Snowflake]** に移動し、統合プロセスを開始します。Mozart Data から認証情報をコピーし、Snowflake Data のインポートページに追加します。[**同期の詳細を設定**] をクリックし、Snowflake アカウントとソーステーブルの情報を入力します。 
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png %}){: style="max-width:80%;"}
 
@@ -81,18 +81,18 @@ Snowflake warehouseを設定した後、Mozart Dataで**Integration**ページ�
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %}){: style="max-width:80%;"}
 
-#### ステップ 3:Braze ユーザーへの公開キーの追加
-この時点で、Snowflakeに戻ってセットアップを完了する必要がある。Brazeのダッシュボードに表示される公開鍵を、BrazeがSnowflakeに接続するために作成したユーザーに追加する。
+#### ステップ3:Braze ユーザーへの公開キーの追加
+この時点で、Snowflake に戻って設定を完了する必要があります。Brazeのダッシュボードに表示される公開鍵を、BrazeがSnowflakeに接続するために作成したユーザーに追加する。
 
-その方法の詳細については、[Snowflake のドキュメント](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。鍵のローテーションを行いたい場合は、Mozart Dataが新しい鍵ペアを生成し、新しい公開鍵を提供する。
+その方法の詳細については、[Snowflake のドキュメント](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。任意の時点でのキーのローテーションを行う場合、Mozart Data は新規のキーペアを生成して、新規の公開キーを提供できます。
 
 ```json
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 
-#### ステップ 4:テスト接続
+#### ステップ4:テスト接続
 
-ユーザーが公開鍵で更新されたら、Brazeダッシュボードに戻り、**Test connectionを**クリックする。成功すると、データのプレビューが表示されます。何らかの理由で接続に失敗した場合、トラブルシューティングに役立つエラーメッセージが表示される。
+ユーザーが公開キーで更新されたら、Braze ダッシュボードに戻って、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続に失敗した場合、トラブルシューティングに役立つエラーメッセージが表示される。
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-testsyncpublickey.png %}){: style="max-width:80%;"}
 
@@ -100,18 +100,18 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 連携を下書き状態からアクティブ状態に移行するには、連携のテストに成功する必要があります。作成ページを閉じる必要がある場合は、連携が保存されるので、詳細ページに再度アクセスして変更やテストを行うことができます。  
 {% endalert %}
 
-## この統合を使う
+## この統合を使用する
 
-### Mozart DataのユーザーとしてBrazeのデータにアクセスする方法
-Mozart Dataアカウントの作成に成功すると、Mozart DataからSnowflakeデータウェアハウスに同期されたBrazeデータにアクセスできるようになる。
+### Mozart Data のユーザーとして Braze のデータにアクセスする方法
+Mozart Data アカウントが作成されたら、Mozart Data から Snowflake データウェアハウスに同期された Braze データにアクセスできます。
 
 #### トランスフォーム
-Mozart Dataは、ユーザーがビューやテーブルを作成するためのSQL変換レイヤーを提供している。ユーザーレベルのディメンションテーブル（たとえば、`dim_users` ）を作成し、各ユーザーの製品使用データ、取引履歴、Brazeメッセージとのエンゲージメント活動を要約することができる。 
+Mozart Dataは、ユーザーがビューやテーブルを作成するためのSQL変換レイヤーを提供している。各ユーザーの製品使用データ、取引履歴、エンゲージメントアクティビティを Braze メッセージとともに要約するユーザーレベルのディメンションテーブル (`dim_users` など) を作成できます。 
 
 #### 分析
-Brazeから同期された変換モデルまたは生データを使用して、Brazeメッセージに対するユーザーのエンゲージメントを分析できる。さらに、Brazeのデータを他のアプリケーションのデータと組み合わせて、ユーザーとBrazeのメッセージとのやり取りから得た洞察が、ユーザーについて持っている他のデータとどのように関連しているかを分析することもできる。例えば、デモグラフィック情報、ショッピング履歴、製品の使用状況、カスタマーサービスへの関与などである。 
+Brazeから同期された変換モデルまたは生データを使用して、Brazeメッセージに対するユーザーのエンゲージメントを分析できる。さらに、Braze データを他のアプリケーションのデータと組み合わせて、Braze メッセージに対するユーザーのインタラクションから得たインサイトが、ユーザーに関して所有している他のデータとどのように関連しているかを分析できます。たとえば、顧客のデモグラフィック情報、ショッピング履歴、製品の使用状況、カスタマーサービスエンゲージメントなどです。 
 
 これは、ユーザーのリテンションを向上させるためのエンゲージメント戦略について、より多くの情報に基づいた決定を下すのに役立つ。これはすべて、クエリーツールを使ってMozart Dataのインターフェイス内で行うことができ、結果をGoogleシートやCSVにエクスポートしてプレゼンテーションに備えることができる。
 
 #### ビジネスインテリジェンス（BI）
-自分の洞察を可視化し、他のチームメンバーと共有する準備はできているか？Mozart Dataは、ほとんどすべてのBIツールと統合できる。BIツールをまだ持っていない場合は、Mozart Dataに連絡して無料のMetabaseアカウントをセットアップしてほしい。 
+自分の洞察を可視化し、他のチームメンバーと共有する準備はできているか？Mozart Data は、ほぼすべての BI ツールと統合されています。BI ツールをまだ所有していない場合は、Mozart Data に連絡して無料の Metabase アカウントの設定を依頼してください。 

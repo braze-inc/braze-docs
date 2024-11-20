@@ -1,7 +1,7 @@
 ---
 nav_title: "Playable"
 article_title: Playable
-description: "このリファレンス記事では、Braze とPlayable の連携について説明します。この動画 プラットフォームでは、Braze メール キャンペーンs に動画内容を追加できます。"
+description: "このリファレンス記事では、Braze と Playable のパートナーシップについて説明します。Playable は動画プラットフォームであり、動画コンテンツを Braze メールキャンペーンに追加できます。"
 alias: /partners/playable/
 page_type: partner
 search_tag: Partner
@@ -12,28 +12,28 @@ search_tag: Partner
 
 > [Playable][1] では、自動再生動画をBraze メール キャンペーンs に追加できます。
 
-BrazeとPlayableインテグレーションにより、最高のコンテンツ(高品質の動画)を最高のオーディエンス(メール)に届けることができ、受信トレイ内で自動的に再生される刺激的な高品質のコンテンツで、クリックスルーとポストクリックのメトリクスを向上させることができます。
+Braze と Playable の統合により、最高のコンテンツ( 高品質動画) を最高のオーディエンスに配信でます (メール)。受信トレイで自動的に再生されるエキサイティングな高品質のコンテンツにより、クリックスルーとポストクリックの指標が向上します。
 
 ## 前提条件
 
-| 要件 | 説明 | 
+| 必要条件 | 説明 | 
 | ----------- | ----------- |
-| Playable会計 | この提携の前進タグeを考慮するには、Playableな考慮が必要である。Playable アカウントをまだ持っていない場合は、[ここで][signup] にサインアップします。
-ビデオコンテンツ | Fac eBook、Ins タグ ram、YouTube、X (旧Twitter)、TikTokなどのWeb サイトから動画URLをPlayableしたり、提供したりするための読み込む 動画。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Playable アカウント | このパートナーシップを活用するには、Playable アカウントが必要です。Playable アカウントをまだお持ちでない場合は、[こちら][signup]からご登録ください。
+ビデオコンテンツ | 動画ファイルを Playable にアップロードするか、または Facebook、Instagram、YouTube、X (旧 Twitter)、TikTok などの Web サイトの動画 URL を指定します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 実装
 
-### ステップ1:動画をPlayableに追加する
+### ステップ1:動画を Playable に追加する
 
-Playable プラットフォームでは、Fac eBook、Ins タグ ram、YouTube、X (旧Twitter)、TikTok などの動画のURL を指定して、s をアップロード 動画または追加します。
+Playable プラットフォームで、動画ファイルをアップロードするか、または Facebook、Instagram、YouTube、X (旧 Twitter)、TikTok などの動画の URL を指定して動画を追加します。
 
 ### ステップ2:埋め込みコードをPlayableからコピーする
 
-アップロードが「ed」になると、Playableはコードを生成します。このコードは、Braze キャンペーンに挿入すると、メールに動画が埋め込まれ、開封が鳴ったときに自動再生されます。メールが開封されている場合、Playableサーバーは、メール クライアント、機器、スクリーンサイズ、およびネットワーク状況に応じて、最適な動画を提供します。
+アップロードが完了すると、Playable によりコードが生成されます。このコードが Braze キャンペーンに挿入されると、メールに動画が埋め込まれ、メールを開封すると自動再生されます。メールが開封されると、メールクライアント、デバイス、スクリーンサイズ、およびネットワーク状況に応じて最適な動画が Playable サーバーから配信されます。
 
 {% alert tip %}
-ビデオは、iPhone Mail、Gmail、Apple Mail、Outlook for iOS、Outlook for Android、Outlook for Mac、Outlook 365 for Windowsなど、受信トレイの98%以上で自動再生されます。従来のWindows版のOutlookのユーザには、代わりにスタティック"画像が表示されます。
+動画は、iPhone Mail、Gmail、Apple Mail、Outlook for iOS、Outlook for Android、Outlook for Mac、Outlook 365 for Windows など、受信トレイの 98% 以上で自動再生されます。従来の Outlook for Windows をご利用の場合は、動画の代わりに静止画像が表示されます。
 {% endalert %}
 
 ### ステップ3:埋め込みコードをBrazeに貼り付けます

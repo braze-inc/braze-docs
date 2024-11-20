@@ -163,7 +163,7 @@ App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 
 ## 位置情報の追跡
 
-ログと"トラッキング 分析の例については、[ Android MAUI][4] および[iOS MAUI][5] のサンプルアプリを参照してください。
+ログと"トラッキング 分析の例については、[ Android MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs) および[iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs) のサンプルアプリを参照してください。
 
 {% tabs %}
 {% tab Android %}
@@ -175,5 +175,3 @@ App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 {% endtab %}
 {% endtabs %}
 
-[4]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs
-[5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs

@@ -7,7 +7,7 @@ glossary_top_header: "Glossary Template"
 glossary_top_text: "This is a test Glossary Page."
 
 #Required
-description: "これはGoogle検索の説明です。160文字を超えると切り捨てられるので、簡潔にしてください。"
+description: "これはGoogle検索の説明です。160文字を超えると切り捨てられる。"
 page_type: glossary
 #Use if applicable
 

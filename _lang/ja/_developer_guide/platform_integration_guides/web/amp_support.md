@@ -28,7 +28,7 @@ description: "この参考記事では、Web の AMP サポートと、AMP ペ�
 
 ## ステップ2:サブスクリプションとサブスクリプション解除ウィジェットを追加
 
-プッシュ通知の購読と配信停止をユーザーが行えるウィジェットを追加する必要があります。これはHTMLの本文内に配置され、好きなようにスタイルを適用できます。 
+プッシュ通知の購読と配信停止をユーザーが行えるウィジェットを追加する必要があります。これはHTMLの本文内に配置され、好きなようにスタイルを適用できます。
 
 ```js
 <!-- A subscription widget -->
@@ -44,13 +44,13 @@ description: "この参考記事では、Web の AMP サポートと、AMP ペ�
 
 ## ステップ 3:ダウンロードヘルパーiFrameと許可ダイアログ
 
-AMP Web プッシュコンポーネントは、プッシュサブスクリプションを処理するポップアップを作成することで機能します。その結果、プロジェクトにいくつかのヘルパーファイルを含める必要があります。[helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) ファイルおよび [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) ファイルをダウンロードして、サイトに保存してください。 
+AMP Web プッシュコンポーネントは、プッシュサブスクリプションを処理するポップアップを作成することで機能します。その結果、プロジェクトにいくつかのヘルパーファイルを含める必要があります。[helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) ファイルおよび [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) ファイルをダウンロードして、サイトに保存してください。
 
 ## ステップ 4:サービスワーカーファイルを作成する
 
 次の内容の`service-worker.js`ファイルを作成し、Web サイトのルートディレクトリに配置します:
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## ステップ 5: AMP Web プッシュ HTML 要素を構成する
 
@@ -68,4 +68,4 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 
 特に、`service-worker-URL` はクエリパラメーターして `apiKey` と `baseUrl` (https://dev.appboy.com/api/v3) を追加する必要があります。
 
-AMP ページでプッシュサブスクリプションとサブスクリプション解除の設定が完了しました。 
+AMP ページでプッシュサブスクリプションとサブスクリプション解除の設定が完了しました。

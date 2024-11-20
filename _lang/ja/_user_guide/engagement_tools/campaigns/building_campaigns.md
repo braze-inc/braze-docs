@@ -34,7 +34,7 @@ guide_featured_list:
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AIコピーライティング・アシスタント
-    link: /docs/user_guide/intelligence/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
 
 ---

@@ -31,7 +31,7 @@ description: "이 문서에서는 커스텀 이벤트 목록 내보내기 Braze 
 | 매개변수| 필수 | 데이터 유형 | 설명 |
 | -------- | -------- | --------- | ----------- |
 | `page` | 선택 사항 | 정수 | 반환할 이벤트 이름 페이지의 기본값은 0입니다(최대 250개의 첫 번째 집합을 반환합니다). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

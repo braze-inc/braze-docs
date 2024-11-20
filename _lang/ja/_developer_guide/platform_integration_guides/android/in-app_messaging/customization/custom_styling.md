@@ -15,7 +15,7 @@ channel:
 
 > Braze の UI 要素は、Android 標準の UI ガイドラインにマッチしたデフォルトのルックアンドフィールで提供され、シームレスな体験を提供します。このリファレンス記事では、Android または FireOS アプリケーションのアプリ内メッセージングのカスタムスタイリングについて説明します。
 
-デフォルトのスタイルは、Braze SDK の[`styles.xml`][6]ファイルで確認できます。
+デフォルトのスタイルは、Braze SDK の[`styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml)ファイルで確認できます。
 
 ```xml
   <style name="Braze"/>
@@ -40,7 +40,7 @@ channel:
 
 ## カスタムフォント
 
-Braze では、[フォントファミリガイド][79]を使用してカスタムフォントを設定することができます。使用するには、メッセージテキスト、ヘッダー、ボタンテキストのスタイルをオーバーライドし、`fontFamily`属性を使用して、Braze にカスタムフォントファミリを使用するように指示します。
+Braze では、[フォントファミリガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization)を使用してカスタムフォントを設定することができます。使用するには、メッセージテキスト、ヘッダー、ボタンテキストのスタイルをオーバーライドし、`fontFamily`属性を使用して、Braze にカスタムフォントファミリを使用するように指示します。
 
 例えば、アプリ内メッセージボタンテキストのフォントを更新するには、`Braze.InAppMessage.Button`スタイルをオーバーライドし、カスタムフォントファミリを参照します。属性値は、`res/font`ディレクトリのフォントファミリを指す必要があります。
 
@@ -64,7 +64,7 @@ Braze では、[フォントファミリガイド][79]を使用してカスタ�
 
 ## 方向を固定する
 
-アプリ内メッセージに固定方向を設定するには、最初に[カスタムのアプリ内メッセージマネージャーリスナーを設定][19]します。次に、`beforeInAppMessageDisplayed()`デリゲートメソッドで`IInAppMessage`オブジェクトに対して`setOrientation()`を呼び出します。
+アプリ内メッセージに固定方向を設定するには、最初に[カスタムのアプリ内メッセージマネージャーリスナーを設定]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)します。次に、`beforeInAppMessageDisplayed()`デリゲートメソッドで`IInAppMessage`オブジェクトに対して`setOrientation()`を呼び出します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -89,6 +89,3 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 タブレット端末の場合、アプリ内メッセージは、実際の画面の向きに関係なく、ユーザーが希望する向きのスタイルで表示されます。
 
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-[6]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

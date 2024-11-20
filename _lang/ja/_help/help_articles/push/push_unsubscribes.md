@@ -19,7 +19,7 @@ channel: push
 - `Background or Foreground Push Enabled for App "TEST (Android)" is false`
 - `Has Uninstalled`
 
-![TEST (Android) アプリのフィルター \[アプリのバックグラウンドまたはフォアグラウンドプッシュが有効] を含むセグメントビルダーセクションが false で、フィルター \[アンインストールされました] が選択されているため、到達可能な 2,393 ユーザーが表示されています。]({% image_buster /assets/img/push_unsub_segment_example.png %})
+![TEST (Android) アプリのフィルター [アプリのバックグラウンドまたはフォアグラウンドプッシュが有効] を含むセグメントビルダーセクションが false で、フィルター [アンインストールされました] が選択されているため、到達可能な 2,393 ユーザーが表示されています。]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
 セグメンテーションフィルターは概算であり、日付やキャンペーンに具体的に関連付けることはできません。
 

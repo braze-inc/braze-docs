@@ -15,8 +15,6 @@ destination: _site/docs/fr
 # Source dir
 source: '.'
 
-lab_index_name: "DocSearch_French"
-
 # GitHub config
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/fr/'
 

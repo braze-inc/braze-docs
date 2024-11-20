@@ -5,12 +5,9 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-description: "このランディングページにはすべてのBrazeパートナーが含まれています。技術パートナーを Braze SDK に実装するのに役立つ技術ドキュメントを探索するために使用します。"
+description: "このランディングページにはすべてのBrazeパートナーが含まれています。テクノロジーパートナーを Braze SDK に実装する際に役立つ技術ドキュメントを探すときにご利用ください。"
 
 valid_partner_list:
 - name: Jampp
@@ -19,7 +16,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
-- name: パスキット
+- name: Passkit
   url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 - name: Inkit
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
@@ -43,7 +40,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
-- name: 単数
+- name: Singular
   url: /docs/partners/message_orchestration/attribution/singular/
 - name: Vizbee
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
@@ -73,7 +70,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/zapier/
 - name: Zendesk
   url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
-- name: パイプストリーム
+- name: Pypestream
   url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
 - name: Amazon S3
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
@@ -101,7 +98,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-- name: Census
+- name: 国勢調査
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
 - name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
@@ -131,27 +128,27 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: ジャカード
+- name: Jacquard
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-- name: ネクスラ
+- name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
-- name: Amperity
+- name: アンペア
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
-- name: タイニークルーズ
+- name: Tinyclues
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
-- name: レベニューキャット
+- name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
-- name: ブルーコニック
+- name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
@@ -163,19 +160,19 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
   url: /docs/partners/message_personalization/dynamic_content/worthy/
-- name: ヨトポ
+- name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
-- name: トーヴィオ
+- name: Toovio
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
-- name: 字句解析器
+- name: Lexer
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
-- name: スノープラウ
+- name: Snowplow
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
-- name: クラリサイト
+- name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-- name: サーヴィケイト
+- name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/wyng/
@@ -185,69 +182,69 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
   url: /docs/partners/message_personalization/dynamic_content/personalize/
-- name: クナック
+- name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
-- name: エクストール
+- name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
-- name: バイラルスイープ
+- name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: マイクロソフト ダイナミクス 365
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: アクショナブル・ミー
+- name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-- name: IAMスタジオ（NNT）
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: ストーリーリー
+- name: Storyly
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
 - name: Lokalise
   url: /docs/partners/message_personalization/localization/lokalise/
-- name: データグレイル
+- name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
 - name: Dynamic Yield
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
-- name: オクトリス
+- name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: ソートスポット
+- name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
-- name: 神童
+- name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
-- name: B.レイヤー
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
-- name: テルス
+- name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
-- name: コンテンツスクエア
+- name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-- name: シス
+- name: Sisu
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
-- name: アクションIQ
+- name: ActionIQ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
 - name: Airbyte
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
 - name: GrowthLoop
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/
-- name: モーツァルトデータ
+- name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 - name: loplat
   url: /docs/partners/message_personalization/location/loplat/
-- name: セージフロー
+- name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
-- name: ニフト
+- name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
   url: /docs/partners/message_personalization/localization/phrase/
-- name: マーキュリー
+- name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
@@ -263,7 +260,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
 - name: SalesWings
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
-- name: ワントラスト
+- name: OneTrust
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/onetrust/
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/
@@ -271,36 +268,48 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
-- name: サイモンデータ
+- name: Simon Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
-- name: アンタヴォ
+- name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Lytics
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lytics/
-- name: オロ
+- name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
-- name: リカーリー
+- name: Recurly
   url: /docs/partners/data_and_infrastructure_agility/payments/recurly/
 - name: SmarterSends
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
-- name: タイプフォーム
+- name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
-- name: スキューバ
+- name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
-- name: セレブルス
+- name: Celebrus
   url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
-- name: アルパコ
+- name: Alpaco
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
-- name: メタルーター
+- name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
-- name: ライブランプ
+- name: 未来の賛歌
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: 受信トレイ・モンスター
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: マイポストカード
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: シーン
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: ディクサ
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: ナルヴァル
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

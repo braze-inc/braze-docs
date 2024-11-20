@@ -279,7 +279,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: メールサブスクリプションステータス
-    description: メールのサブスクリプション ステータスによってユーザーをセグメント化します。
+    description: メールの購読ステータスによってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
   - name: メールの配信停止日 
@@ -558,4 +558,8 @@ glossaries:
     description: ユーザーをX (以前のTwitter) フォロワーの数でセグメント化します。
     tags:
       - Social activity
+  - name: 送信電話番号
+    description: "e.164送信電話番号フィールドでユーザーをセグメンテーションする。<br><br>電話番号がBrazeに送信されると、BrazeはそれをSMSやWhatsAppチャネルで使用される<a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164</a>フォーマットに変換しようとする。番号が適切にフォーマットされていない場合、強制処理は失敗する可能性がある。その結果、ユーザープロファイルは電話番号を持つが、送信電話番号は持たないことになる。<br><br>ユースケースだ：<br> - このフィルターで正規表現（regex）を使って、特定の国コードを持つ電話番号をセグメンテーションする。<br>- このフィルターを使用して、e.164強制処理に失敗した電話番号でユーザーをセグメンテーションする。"
+    tags:
+      - Other filters
 ---

@@ -1,35 +1,35 @@
 ---
-nav_title: リマージ
-article_title: リマージ
+nav_title: Remerge
+article_title: Remerge
 alias: /partners/remerge/
-description: "この参考記事では、BrazeとRemergeのパートナーシップについて概説している。Remergeは、大規模なリターゲティングのための専用アプリで、アプリのオーディエンスを効率的にセグメントし、ユーザーをリターゲティングするためのツールを提供する。"
+description: "このリファレンス記事では、Braze と Remerge のパートナーシップについて説明します。Remerge は、大規模なリターゲティングのための専用アプリであり、アプリのオーディエンスを効率的にセグメント化し、ユーザーをリターゲティングするツールを備えています。"
 page_type: partner
 search_tag: Partner
 
 ---
 
-# リマージ
+# Remerge
 
-> [Remergeは](https://www.remerge.io/)、アプリのオーディエンスを効率的にセグメント化し、ユーザーをリターゲティングするためのツールを提供し、大規模なアプリのリターゲティングのために構築されている。
+> [Remerge](https://www.remerge.io/) は、大規模なリターゲティングのための専用アプリであり、アプリのオーディエンスを効率的にセグメント化し、ユーザーをリターゲティングするツールを備えています。
 
-BrazeとRemergeの統合は、Webhookイベントを通じてRemergeにユーザーデータを送信し、モバイルデマンドサイドプラットフォームを通じてユーザーのリターゲティングを支援することで、強固でクロスチャネルのライフサイクルマーケティングキャンペーンの開発を支援する。
+Braze と Remerge の統合により、ユーザーデータを Webhook イベント経由で Remerge に送信し、モバイルデマンドサイドプラットフォームでユーザーのリターゲティングを支援することで、堅牢なクロスチャネルのライフサイクルマーケティングキャンペーンを開発できます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 |---|---|
-| アカウントをリマージする | このパートナーシップを利用するには、リマージ・アカウントが必要である。 |
-| ウェブフック・キーをリマージする | このキーはRemergeが提供する。 |
+| Remerge アカウント | このパートナーシップを活用するには、Remerge アカウントが必要です。 |
+| Remerge Webhook キー | このキーは Remerge から提供されます。 |
 | AndroidアプリID | Android用Brazeアプリケーション固有の識別子（「com.example 」など）。 |
 | iOSアプリID | iOS用のお客様固有のBrazeアプリケーション識別子（"012345678 "など）。 |
 | Braze SDKでIDFAコレクションを有効にする | IDFAコレクションはBraze SDK内ではオプションであり、デフォルトでは無効になっている。 | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:BrazeのWebhookテンプレートを作成する
 
-将来のキャンペーンやCanvas用にRemergeウェブフックテンプレートを作成するには、Brazeプラットフォームの**テンプレート**>**ウェブフックテンプレートに**移動する。 
+今後のキャンペーンまたはキャンバス用の Remerge Ｗebhook テンプレートを作成するには、Braze プラットフォームの [**テンプレート**] > [**Webhook テンプレート**] に移動します。 
 
 {% alert note %}
 [古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
@@ -37,9 +37,9 @@ BrazeとRemergeの統合は、Webhookイベントを通じてRemergeにユーザ
 
 単発のRemergeウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
-新しいWebhookテンプレートで、以下のフィールドに記入する：
-- **リクエスト・ボディ**Raw Text
-- **ウェブフックのURL**：
+新しいWebhookテンプレートに、次のフィールドに記入してください:
+- **リクエスト本文**:Raw Text
+- **Webhook URL**:
 {% raw %}
 ```liquid
 {% assign event_name = 'your_remerge_event_name' %} 
@@ -56,16 +56,16 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 ```
 {% endraw %}
 
-ウェブフックのURLには、次のように記述する：
+Webhook URL で次の操作を行う必要があります。
 - `https://remerge.events/event` APIを使ってウェブフック・イベントを送信する。
-- イベント名を設定する。この名前はダッシュボードに表示される。 [remerge.io][65]ダッシュボードに表示される。
-- リマージには、Android用（"com.example"など）とiOS用（"012345678 "など）のアプリ固有のアプリケーション識別子を渡す。
-- Remergeがこれを提供する。
+- イベント名を設定する。この名前は [remerge.io][65] ダッシュボードに表示されます。
+- Android と iOS のアプリの一意のアプリケーション識別子 (Android:「com.example」、iOS:「012345678」など) を Remergeに渡します。
+- キーを定義します。これは Remerge から提供されます。
 
 ![Brazeウェブフックビルダーに表示されるウェブフックURLとメッセージプレビュー。][67]
 
 {% alert important %}
-BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これらの値を自分で保存する必要がある。このデータを収集するには、ユーザーの同意が必要な場合があることに注意すること。
+BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これらの値を自分で保存する必要がある。このデータを収集するには、ユーザーの同意を必要とする場合があることに注意してください。
 {% endalert %}
 
 #### リクエストヘッダと方法
@@ -73,7 +73,7 @@ BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これら
 RemergeウェブフックはHTTPメソッドとリクエストヘッダを必要とする。
 
 - **HTTPメソッド**：GET
-- **ヘッダーを要求する**：
+- **リクエストヘッダー**:
   - **Content-Type**: application/json
 
 ![リクエストヘッダ、HTTPメソッド、メッセージプレビューがBraze webhookビルダーに表示される。][68]

@@ -1,7 +1,7 @@
 ---
 nav_title: スクーバ
 article_title: Scuba Analytics
-description: "このスキューバおよびBrazeテクニカルリファレンスでは、Brazeセグメントを使用してスキューバのリアルタイムデータインサイトを有効にする方法について説明します。"
+description: "この Scuba と Braze のテクニカルリファレンスでは、Braze Segments を使用して Scuba のリアルタイムデータインサイトをアクティブにする方法を説明します。"
 alias: /partners/scuba/
 page_type: partner
 search_tag: Partner
@@ -9,22 +9,26 @@ search_tag: Partner
 
 # Scuba Analytics
 
->[Scuba Analytics][1] は、高速時系列データ用に設計された、機械学習能力のあるフルスタックのデータ連携プラットフォームです。スクーバでは、ユーザーs(アクターとも呼ばれます)を選択的にエクスポートし、Braze プラットフォームに読み込むできます。Scuba では、カスタムアクタープロパティを使用して動作トレンドを分析し、さまざまなプラットフォーム間でデータを有効化し、マシンラーニングを使用して予測モデリングを実行します。
+>[Scuba Analytics][1] は、高速時系列データ向けに設計された、機械学習を採用したフルスタックのデータコラボレーションプラットフォームです。Scuba では、ユーザー (アクターとも呼ばれます) を選択的にエクスポートし、Braze プラットフォームにそれらのユーザーを読み込むことができます。Scuba では、カスタムアクタープロパティを使用して動作トレンドを分析し、さまざまなプラットフォーム間でデータを有効化し、マシンラーニングを使用して予測モデリングを実行します。
 
 ## 前提条件
 
-Braze でScuba Analytics を使用するには、以下が必要です。
+Braze で Scuba Analytics を使用するには、以下が必要です。
 
-- `users.track` 権限を持つ[Braze REST API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)。
-- `https://{scuba_hostname}/api/create_token` エンドポイントから取得できるScuba API トークン。
+| 必要条件 | 説明 |
+|---|---|
+|スキューバ API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Brazeへのスキューバデータの読み込むアップ
+## Braze への Scuba データのアップロード
 
 {% alert important %}
-以下の要求はcurl を使用します。API リクエストの管理を向上させるには、Postman などのAPI クライアントを使用することをお勧めします。
+以下の要求はcurl を使用します。API リクエストの管理を改善するには、Postman などの API クライアントを使用することをお勧めします。
 {% endalert %}
 
-Braze にScuba データをアップロードするには、`https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation` に対して`application/json` content-type を使用してPOST リクエストを行います。
+Braze に Scuba データをアップロードするには、`https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation` に対して `application/json` content-type を使用して POST リクエストを行います。
 
 ```bash
 curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" \
@@ -46,30 +50,30 @@ curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" 
 
 | placeholder             | 説明                                                                                                                                                                                     |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `BRAZE_API_ENDPOINT`    | カレントBrazeインスタンスのBraze REST エンドポイント URL。詳細については、[休止API キーs]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)を参照してください。 |
+| `BRAZE_API_ENDPOINT`    | 現在の Braze インスタンスの Braze REST エンドポイント URL。詳細については、「[REST API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)」を参照してください。 |
 | `BRAZE_API_KEY`         | `users.track` 権限を持つBraze REST API キー。                                                                                                                                      |
 | `HOSTNAME`              | 現在のScuba インスタンスのホスト名。                                                                                                                                                    |
-| `SCUBA_API_TOKEN`       | スキューバAPI トークン。                                                                                                                                                                           |
-| `TABLE_NAME`            | データセットが属するテーブル。詳細については、[用語集を参照してください。データセットテーブル][3]。                                                                                                      |
-| `ACTOR_PROPERTY_NAME`   | データセットが属するアクタプロパティ。この名前に一致するデータのみが返されます。詳細については、[用語集を参照してください。アクタプロパティ][4]。                                             |
+| `SCUBA_API_TOKEN`       | Scuba API トークン。                                                                                                                                                                           |
+| `TABLE_NAME`            | データセットが属するテーブル。詳細については、[用語集:データセットテーブル][3]。                                                                                                      |
+| `ACTOR_PROPERTY_NAME`   | データセットが属するアクタプロパティ。この名前に一致するデータのみが返されます。詳細については、[用語集:アクタープロパティ ][4]。                                             |
 | `ACTOR_PROPERTY_FILTER` | アクタープロパティのオーディエンス検索フィルター。                                                                                                                                             |
-| `ACTOR_ID`              | データセットが属するアクタプロパティのID。このID は、Braze の`external_id` に一致します。詳細については、[用語集を参照してください。アクタ][5]。                                              |
-| `PERIOD_START`          | BQL 互換の日付としての開始期間。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                 |
-| `PERIOD_END`            | BQL 互換の日付としての終了期間。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                   |
-| `RECORD_LIMIT`          | **オプション**:返されるレコードの最大数。`scuba_record_limit` が省略された場合、Scuba は最大100 レコードを返します。これを変更するには、負でない数値を`scuba_record_limit` に割り当てます。    |
-{: .reset-td-br-1 .reset-td-br-2}
+| `ACTOR_ID`              | データセットが属するアクタプロパティのID。この ID は、Braze の`external_id` に一致します。詳細については、[用語集:Actor][5].を参照してください。                                              |
+| `PERIOD_START`          | BQL 互換の日付としての期間開始日。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                 |
+| `PERIOD_END`            | BQL 互換の日付としての期間終了日。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                   |
+| `RECORD_LIMIT`          | **オプション**:返されるレコードの最大数。`scuba_record_limit` が省略された場合、Scuba は最大100件のレコードを返します。これを変更するには、負でない数値を `scuba_record_limit` に割り当てます。    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### デフォルト動作
 
-デフォルトでは、`update_existing_only` は`false` に設定されています。これにより、Braze内の既存のレコードが更新され、存在しないレコードの新規レコードが作成されます。Scuba が新しいレコードを作成しないようにするには、`update_existing_only` を`true` に設定します。
+デフォルトでは、`update_existing_only` は`false` に設定されています。これにより、Braze内の既存のレコードが更新され、存在しないレコードの新規レコードが作成されます。Scuba が新しいレコードを作成しないようにするには、`update_existing_only` を `true` に設定します。
 
-### レートリミット
+### レート制限
 
-スキューバアプリは、このエンドポイントに対して1分間にレート制限50,000件のリクエストが存在します。
+Scuba は、1分あたり50,000件のリクエストのレート制限をこのエンドポイントに適用します。
 
-## スキューバのビヘイビアーデータを使用したSegmentの作成
+## Scuba の行動データを使用したセグメントの作成
 
-[ データ](#uploading-your-scuba-data-to-braze) をアップロードすると、Scuba のビヘイビアーデータを使用してBraze でユーザー Segmentを作成できます。
+[データをアップロード](#uploading-your-scuba-data-to-braze)したら、Scuba の行動データを使用して Braze でユーザーセグメントを作成できます。
 
 ### ステップ1:新しいSegmentの作成
 
@@ -77,21 +81,21 @@ Braze で、**Audience** > **Segments** に移動し、**Segmentの作成** を�
 
 ![Braze での新しいSegmentの作成。][501]
 
-### ステップ2:スクーバ属性を探して選択する
+### ステップ2:Scuba 属性を探して選択する
 
 **Segment Details** > **Filters**で、**Custom Attributes**を選択します。
 
-![「セグメント詳細」で「カスタム属性」フィルターを選択します。][502]
+![[セグメントの詳細] での「カスタム属性」フィルターの選択。][502]
 
 **検索カスタム属性s**を選択し、前回のPOSTリクエストで使用したアクタープロパティの名前を選択します。
 
 ![アクタープロパティをカスタム属性として選択します。][503]
 
-### ステップ3:属性の設定
+### ステップ 3:属性の設定
 
-アクタープロパティの名前の隣に、演算子と数値(アプリであればライセンス可能)を選択します。これらの値は、Scuba で定義したアクタープロパティによって決定されます。完了したら、\[**保存**] を選択します。
+アクタープロパティ名の横で、演算子と値を選択します (該当する場合)。これらの値は、Scuba で定義したアクタープロパティによって決定されます。完了したら、[**保存**] を選択します。
 
-![選択した操作と値の選択 ][504]
+![選択されているプロパティ名に対する演算子と値の選択。][504]
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table

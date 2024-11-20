@@ -1,40 +1,40 @@
 ---
-nav_title: クラリサイト
-article_title: クラリサイト
-description: "この参考記事では、Brazeとセルフサービス型パフォーマンスマーケティングレポーティングプラットフォームであるClarisightsの提携について概説している。BrazeのキャンペーンとCanvasesからデータをインポートすることで、パフォーマンスマーケティングとCRM/リテンションマーケティングの統一されたレポーティングインターフェースを実現することができる。"
+nav_title: Clarisights
+article_title: Clarisights
+description: "このリファレンス記事では、Braze と Clarisights のパートナーシップについて説明します。Clarisights は、セルフサービスのパフォーマンスマーケティングレポートプラットフォームであり、Braze キャンペーンとキャンバスからデータをインポートできます。これは、パフォーマンスと CRM/リテンションマーケティングの統合レポートインターフェイスを実現するのに役立ちます。"
 alias: /partners/Clarisights/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# クラリサイト
+# Clarisights
 
-> [Clarisightsは][2]、データ主導型企業向けのセルフサービス型パフォーマンス・マーケティング・レポート・プラットフォームである。マーケティング、分析、アトリビューション・ソースからのすべてのデータを自動的に統合、処理、視覚化する。
+> [Clarisightsは][2]、データ主導型企業向けのセルフサービス型パフォーマンス・マーケティング・レポート・プラットフォームである。マーケティング、分析、およびアトリビューションのソースからのすべてのデータを自動的に統合、処理、および視覚化します。
 
-BrazeとClarisightsの統合により、BrazeのキャンペーンとCanvasesからデータをインポートし、パフォーマンスとCRM/リテンションマーケティングの統一されたレポーティングインターフェースを実現できる。
+Braze と Clarisights の統合により、Braze キャンペーンとキャンバスからデータをインポートできます。これは、パフォーマンスおよびCRM/リテンションマーケティングの統合レポートインターフェイスを実現するのに役立ちます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| クラリスツアカウント | このパートナーシップを利用するには、Clarisightsワークスペースが必要である。 |
-| Braze REST API キー | 以下の権限を持つBraze REST APIキー： <br> - `campaigns.list`<br>  - `campaigns.details`<br> - `campaigns.data_series`<br> - `canvas.details`<br> - `canvas.list`<br>  - `canvas.data_series`<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
+| Clarisights アカウント | このパートナーシップを利用するには、Clarisightsワークスペースが必要である。 |
+| Braze REST API キー | 以下の権限を持つBraze REST APIキー： <br> - `campaigns.list`<br>  - `campaigns.details`<br> - `campaigns.data_series`<br> - `canvas.details`<br> - `canvas.list`<br>  - `canvas.data_series`<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 | Brazeワークスペース名 | Braze APIキーに関連付けられたワークスペースの名前。この名前は、Clarisights上のワークスペース統合を識別するために使用される。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
 BrazeとClarisightsの統合により、ユーザーはさまざまなビジュアライゼーションやテーブルを作成し、作成したキャンペーンから洞察を得ることができる。人気のある使用例は以下の通りである：
 
 {% tabs %}
-{% tab より良い視界 %}
+{% tab 可視化の向上 %}
 キャンペーン全体とキャンバスのパフォーマンスの可視性を高める。
 
-![クラリサイト・プラットフォームにおけるより良い実行可能性の例を示すグラフィック。このグラフィックには、キャンペーンとキャンバスの開封、クリック、送信、コンバージョンなどの統計が含まれる。]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
+![Clarisights プラットフォームでの向上した可視化の例。このグラフィックには、キャンペーンとキャンバスの開封、クリック、送信、コンバージョンなどの統計が含まれる。]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab きめ細かいレポート %}
+{% tab 詳細なレポート %}
 キャンペーンとキャンバスの詳細なレポート。
 
 ![送信チャネル別の送信全体」や「コンバージョン率」のような詳細なレポートを示すグラフィック。]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
@@ -48,20 +48,20 @@ CMOとCXOのための統一ダッシュボード。
 
 ## 統合
 
-BrazeデータをClarisightsに同期するには、Brazeコネクタを構築し、Brazeワークスペースを接続する必要がある。
+Braze データを Clarisights に同期するには、Braze コネクターを作成して Braze ワークスペースを接続する必要があります。
 
-1. Clarisightsで、**Integrations**ページに移動し、**Braze**コネクターを見つけ、**\+ Connectを**選択する。<br>![Clarisights統合マーケットプレイスから利用可能なコネクタのリスト。][6]<br><br>
-2. 次に、統合フローを使って、ClarisightsアカウントをBrazeに接続する。これは、Braze REST APIキー、Brazeワークスペース名、およびBraze RESTエンドポイントを提供することによって行うことができる。<br>![ClarisightsプラットフォームのBrazeワークスペースコネクター。このページには、Brazeワークスペース名、Braze REST APIキー、Braze RESTエンドポイントのフィールドがある。][7]<br><br>統合が成功する前は、ユーザーは同じページに接続されたワークスペースを見ることができる。<br>![Braze Accounts "の中に、接続されているワークスペースのリストがある。][9]<br><br>
+1. Clarisights で [**Integrations**] ページに移動し、**Braze** コネクターを見つけ、[**\+ Connect**] を選択します。<br>![Clarisights の統合のマーケットプレイスから入手できるコネクターのリスト。][6]<br><br>
+2. 次に、統合フローを使って、ClarisightsアカウントをBrazeに接続する。これを行うには、Braze REST API キー、Braze ワークスペース名、Braze REST エンドポイントを指定します。<br>![ClarisightsプラットフォームのBrazeワークスペースコネクター。このページには、Braze ワークスペース名、Braze REST API キー、および Braze REST エンドポイントのフィールドが表示されている。][7]<br><br>統合が成功する前は、ユーザーは同じページに接続されたワークスペースを見ることができる。<br>![「Braze Accounts」に、接続されたワークスペースのリストが表示されている。][9]<br><br>
 
 ## この統合を使う
 
-BrazeをClarisightsレポートのデータソースとして含めるには、**Create New Reportに**移動する。レポートに名前を付け、表示されるプロンプトでデータソースとして**Brazeを**選択する。また、レポートに含めるメトリクスとディメンションを選択することもできる。完了したら、**Create Reportを**選択する。 
+Clarisights レポートにデータソースとして Braze を含めるには、[**Create New Report**]に移動します。レポートに名前を付け、表示されるプロンプトでデータソースとして [**Braze**] を選択します。また、レポートに含めるメトリクスとディメンションを選択することもできる。完了したら、[**Create Report**] を選択します。 
 
-Brazeからのデータは、次に予定されているデータインポートの時点から流れ始める。クラリスタイツのカスタマーサクセスマネージャーに連絡し、長期間のバックフィルを依頼する。 
+Braze のデータは、予定されている次回のデータインポートの時点から流入し始めます。Clarisights のカスタマーサクセスマネージャーに連絡して、長期のバックフィルを依頼します。 
 
-![Clarisightのレポート設定で、名前とデータソースのフィールドが表示される。この例では、データソースとして "Braze "が選択されている。][8]
+![Clarisightのレポート設定で、名前とデータソースのフィールドが表示される。この例では「Braze」がデータソースとして選択されている。][8]
 
-利用可能な[メトリクスとディメンション][10]、または[レポート作成の][11]詳細については、Clarisightsを参照のこと。
+利用可能な[指標とディメンション][10]または[レポート作成][11]の詳細については、Clarisights にアクセスしてください。
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://clarisights.com

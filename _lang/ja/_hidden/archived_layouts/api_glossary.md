@@ -5,7 +5,7 @@ layout: api_page
 page_order: 2
 
 #Required
-description: "これはGoogle検索の説明です。160文字を超えると切り捨てられるので、簡潔にしてください。"
+description: "これはGoogle検索の説明です。160文字を超えると切り捨てられる。"
 page_type: glossary
 #Use if applicable
 
@@ -82,13 +82,13 @@ Post,Email,Create,Template,REST,API
 
 #### パラメータの詳細
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `modified_after`  | いいえ | ISO 8601の文字列 | 指定された時刻以降に更新されたテンプレートのみを取得します。 |
 | `modified_before`  |  いいえ | ISO 8601の文字列 | 指定された時刻以前に更新されたテンプレートのみを取得します。 |
 | `limit` | いいえ | 正の数 | 取得するテンプレートの最大数、指定がない場合はデフォルトで100、許容される最大値は1000です。 |
 | `offset`  |  いいえ | 正の数 | 検索条件に一致するテンプレートの残りを返す前にスキップするテンプレートの数。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 {% endapi %}
@@ -137,10 +137,10 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 #### パラメータの詳細
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `email_template_id`  | はい | string | あなたのメールテンプレートのAPI識別子。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endapi %}
 
@@ -205,10 +205,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 #### パラメータの詳細
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `email_template_id`  | はい | string | あなたのメールテンプレートのAPI識別子。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endapi %}
 
@@ -265,7 +265,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | ユーザープロファイル フィールド | データ型仕様 |
 | ---| --- |
-| country | (文字列) 国コードは \[ISO-3166-1 alpha-2 規格][17] で Braze に渡す必要があります。 |
+| country | (文字列) 国コードは [ISO-3166-1 alpha-2 規格][17] で Braze に渡す必要があります。 |
 | current_location | (オブジェクト) {"longitude": -73.991443, "latitude": 40.753824} の形式 |
 | date_of_first_session | （ユーザーが初めてアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
 | date_of_last_session | （ユーザーが最後にアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
@@ -278,15 +278,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 | gender | (文字列) 「M」、「F」、「O」 (その他)、「N」 (該当なし)、「P」 (言いたくない) または「nil」 (不明)。 |
 | home_city | (string) |
 | image_url | （文字列）ユーザープロファイルに関連付ける画像のURL。 |
-| language | (文字列) 言語は \[ISO-639-1 規格][24] で Braze に渡す必要があります。<br>[受け入れ可能な言語のリスト][1]|
+| language | (文字列) 言語は [ISO-639-1 規格][24] で Braze に渡す必要があります。<br>[受け入れ可能な言語のリスト][1]|
 | last_name | (string) |
 |marked_email_as_spam_at| （文字列）ユーザーのメールがスパムとしてマークされた日付。ISO 8601形式またはyyyy-MM-dd'T'HH:mm:ss:SSSZ形式で表示されます。|
 | phone | (string) |
 | push_subscribe | (文字列) 使用できる値は、「opted_in」 (プッシュメッセージを受信するように明示的に登録)、「unsubscribed」 (プッシュメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
 | push_tokens | オブジェクトの配列は`app_id`と`token`の文字列です。このトークンが関連付けられているデバイスに`device_id`を任意で提供することができます。例えば、`[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`。提供されない場合は、`device_id`がランダムに生成されます。 |
-| time_zone | (文字列) \[IANA タイムゾーンデータベース][26] (たとえば、「アメリカ/ニューヨーク」または「東部標準時 (アメリカ & カナダ)」) からのタイムゾーン名。有効なタイムゾーン値のみが設定されます。 |
+| time_zone | (文字列) [IANA タイムゾーンデータベース][26] (たとえば、「アメリカ/ニューヨーク」または「東部標準時 (アメリカ & カナダ)」) からのタイムゾーン名。有効なタイムゾーン値のみが設定されます。 |
 | ツイッター | `id` (整数)、`screen_name` (文字列、X (旧Twitter) ハンドル)、`followers_count` (整数)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
 

@@ -13,7 +13,7 @@ channel:
 
 # HTML による YouTube
 
-> YouTube やその他の HTML5コンテンツは、HTML アプリ内メッセージで再生できます。これには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションが有効になっている必要があります。詳細については、[Android 開発者ガイド][84]を参照してください。ハードウェアアクセラレーションは、Android API バージョン11以降でのみ利用できます。
+> YouTube やその他の HTML5コンテンツは、HTML アプリ内メッセージで再生できます。これには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションが有効になっている必要があります。詳細については、[Android 開発者ガイド](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling)を参照してください。ハードウェアアクセラレーションは、Android API バージョン11以降でのみ利用できます。
 
 以下は、HTML スニペットに YouTube 動画を埋め込んだ例です。
 
@@ -29,4 +29,3 @@ channel:
 </body>
 ```
 
-[84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling

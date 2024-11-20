@@ -1,37 +1,37 @@
 ---
-nav_title: データ・グレイル
-article_title: データ・グレイル
-description: "この参考記事では、Brazeとプライバシー管理プラットフォームであるDataGrailのパートナーシップについて概説しており、Braze内で収集・保存された消費者データを検出してDSRを迅速に処理することができる。"
+nav_title: DataGrail
+article_title: DataGrail
+description: "このリファレンス記事では、Braze と DataGrail のパートナーシップについて説明します。DataGrail はプライバシー管理プラットフォームであり、Braze 内で収集され、保存されている消費者データを検出してDSR を迅速に処理できます。"
 alias: /partners/datagrail/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# データ・グレイル
+# DataGrail
 
-> プライバシー管理プラットフォームである[DataGrailは](https://www.datagrail.io/)、消費者の信頼を築き、リスクの高いビジネスを排除するのに役立つ。継続的なシステム検知と自動化されたデータ対象者要求（DSR）の履行により、DataGrailはプライバシープログラムを強化し、GDPR、CCPA、CPRAのような進化するプライバシー法や規制へのコンプライアンスをサポートする。 
+> [DataGrail](https://www.datagrail.io/) は、消費者の信頼を得て、リスクの高いビジネスを排除するうえで役立つプライバシー管理プラットフォームです。DataGrail は、継続的なシステム検出と自動化されたデータ主体要求 (DSR) の履行により、プライバシープログラムを推進し、GDPR、CCPA、CPRA などの変遷するプライバシー関連の法律や規制に準拠できるように支援します。 
 
-BrazeとDataGrailの統合により、Braze内に収集・保存された消費者データを検出し、DSR（アクセス、削除、販売禁止要求）を迅速に処理することができる。Brazeは、自動化されたデータマッピングによって、消費者データが組織内のどこに存在するかの正確な青写真に追加される。プライバシーフレームワークを維持したり、処理活動の記録（RoPA）を作成したりするための調査やスプレッドシートはもう必要ない。 
+BrazeとDataGrailの統合により、Braze内に収集・保存された消費者データを検出し、DSR（アクセス、削除、販売禁止要求）を迅速に処理することができる。自動化されたデータマッピングにより、消費者データが組織内のどこにあるかを正確に把握できるうえに、Braze が追加されるため、プライバシーフレームワークの維持や処理活動の記録 (RoPA) の作成にアンケートやスプレッドシートは不要になります。 
 
 ## 前提条件
 
 | 要件 | 説明 |
 |---|---|
-| DataGrailアカウント | このパートナーシップを利用するには、DataGrailアカウントが必要である。<br>統合に関する問題や質問があれば、管理者に連絡するか、support@datagrail.io 。 |
-| BrazeのAPIキー | `events.list` 、`users.export.ids` 、`users.delete` 、`users.track` の権限を持つBraze REST APIキー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| ブレイズインスタンス | あなたのBrazeインスタンスは、あなたのBrazeオンボーディングマネージャーから取得するか、[API概要ページで]({{site.baseurl}}/api/basics/#endpoints)見つけることができる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| DataGrailアカウント | このパートナーシップを活用するには、DataGrail アカウントが必要です。<br>統合に関する問題や質問がある場合は、システム管理者にお問い合わせいただくか、または support@datagrail.io までメールでお問い合わせください。 |
+| BrazeのAPIキー | `events.list`、`users.export.ids`、`users.delete`、`users.track` の権限を持つ Braze REST API キー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Brazeインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-DataGrailポータルにログインし、Brazeの統合ページで**Connectを**クリックする。次に、インスタンスとBraze API Keyを入力し、**Connect Brazeを**クリックする。
+DataGrailポータルにログインし、Brazeの統合ページで**Connectを**選択する。次に、インスタンスとBraze API Keyを入力し、**Connect Brazeを**選択する。
 
 統合するBrazeアカウントが追加された場合：
-1. Brazeの統合ページで**Edit Connectionを**クリックする。
-2. ドロップダウンから、**+Add New Connectionを**選択する。
+1. Brazeの統合ページで**Edit Connectionを**選択する。
+2. ドロップダウンから、**「+Add New Connection**」を選択する。
 3. **Connection Name（接続名**）の下に、この別個のアカウントを識別するための新しい名前を入力する（例：Braze Training Account）。
 4. この新しいアカウント用に、別のBrazeインスタンスとAPIキーを入力する。
-5. **コネクトを**クリックする。
+5. **コネクトを**選択する。
 
-統合に関する問題や質問があれば、DataGrail（support@datagrail.io ）までEメールで問い合わせを。
+統合に関する問題やご質問がある場合は、DataGrail (support@datagrail.io) までメールでお問い合わせください。

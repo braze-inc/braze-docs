@@ -26,7 +26,7 @@ description: "이 문서에는 2016년 6월의 릴리스 노트가 포함되어 
 
 ## 오류 로그 개선
 
-\[메시지 오류 로그][5]에서 오류 유형별로 정렬하는 기능을 개선했습니다!
+[메시지 오류 로그][5]에서 오류 유형별로 정렬하는 기능을 개선했습니다!
 
 [4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
 [5]: {% image_buster /assets/img_archive/improved_error_log.png %}

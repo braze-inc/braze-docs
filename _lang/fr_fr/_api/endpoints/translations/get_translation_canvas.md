@@ -33,10 +33,12 @@ Cet endpoint a une limitation du débit de 250 000 requêtes par jour.
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Requis | Chaîne de caractères | L'ID de votre Canvas. |
+|`step_id`| Requis | Chaîne de caractères | L'ID de votre étape du canvas. |
 |`message_variation_id`| Requis | Chaîne de caractères | L'ID de la variation de votre message. |
 |`locale_id`| Requis | Chaîne de caractères | L'ID de la locale. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+Notez que tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans les paramètres de **prise en charge multilingue** ou dans la réponse à la demande.
 
 ## Exemple de demande
 
@@ -97,12 +99,12 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirmez que l'ID de la campagne correspond à la campagne que vous traduisez.                   |
 | `INVALID_LOCALE_ID`                     | Confirmez que votre ID local existe dans la traduction de votre message.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que l'ID de votre message est correct.                                                |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que votre identifiant de message est correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Vérifiez que le message à traduire.                                           |
 | `LOCALE_NOT_FOUND`                      | Confirmez que le paramètre local existe dans vos paramètres multilingues.                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Les paramètres multilingues ne sont pas activés pour votre espace de travail.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes de communication par e-mail ou les messages canvas contenant des e-mails peuvent être traduits.             |
-| `UNSUPPORTED_CHANNEL`                   | Seuls les messages des campagnes de communication par e-mail ou les envois de canvas par e-mail peuvent être traduits. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits.             |
+| `UNSUPPORTED_CHANNEL`                   | Seuls les messages dans les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

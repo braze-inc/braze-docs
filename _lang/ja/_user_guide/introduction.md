@@ -23,14 +23,14 @@ user_menu_list:
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: カスタマージャーニーの構築を始める準備はできているだろうか？私たちが案内する。
+    description: カスタマージャーニーの構築を始める準備はできているだろうか？ガイドはお任せください。
 
 popular_topic_list:
   - name: ユーザーインポート
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
   - name: カスタムイベント
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-  - name: ユーザー購読を管理する
+  - name: ユーザー購読の管理
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/ 

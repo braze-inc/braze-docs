@@ -35,9 +35,9 @@ description: "이 문서에서는 구매 수 Braze 엔드포인트 내보내기�
 | `unit` | 선택 사항 | 문자열 | 데이터 포인트 사이의 시간 단위입니다. 일 또는 시간일 수 있으며 기본값은 일입니다. |
 | `app_id` | 선택 사항 | 문자열 | [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 검색한 앱 API 식별자입니다. 제외하면 작업 공간의 모든 앱에 대한 결과가 반환됩니다. |
 | `product` | 선택 사항 | 문자열 | 응답을 필터링할 제품 이름입니다. 제외하면 모든 앱에 대한 결과가 반환됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/purchases/quantity_series?length=100' \

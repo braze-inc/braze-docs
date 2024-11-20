@@ -39,7 +39,7 @@ Firebase Cloud Messaging (FCM) API には、1分当たりに600,000リクエス�
 
 ### ステップ2:送信者 ID を確認する
 
-まず、Braze を開き、<i class="fa-solid fa-gear"></i>\[**設定**] > \[**アプリ設定**] を選択します。
+まず、Braze を開き、<i class="fa-solid fa-gear"></i>[**設定**] > [**アプリ設定**] を選択します。
 
 ![[アプリ設定] が強調表示された状態で Braze で [設定] メニューが開いています。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %}){: style="max-width:80%;"}
 
@@ -117,7 +117,7 @@ Google Cloud で、Android アプリが使用しているプロジェクトを�
 
 Braze で、<i class="fa-solid fa-gear"></i>[**設定**] > [**アプリの設定**] を選択します。
 
-![\[アプリ設定] が強調表示された状態で Braze で [設定] メニューが開いています。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
+![[アプリ設定] が強調表示された状態で Braze で [設定] メニューが開いています。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
 [**プッシュ通知の設定**] で [**JSON ファイルのアップロード**] を選択し、[先ほど生成した](#step-6-generate-json-credentials)ファイルを選択します。完了したら、[**保存**] を選択します。
 
@@ -133,7 +133,7 @@ Braze で、<i class="fa-solid fa-gear"></i>[**設定**] > [**アプリの設定
 
 - [送信者 ID を確認します](#step-2-verify-your-sender-id)
 - [自分の権限を確認します](#step-5-verify-permissions-optional)
-- [メッセージアクティビティログ](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/)でプッシュ通知エラーを確認する
+- [メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)でプッシュ通知エラーを確認する
 
 お困りの場合は、[資格情報のリセット](#reverting-your-credentials)をご覧ください。
 

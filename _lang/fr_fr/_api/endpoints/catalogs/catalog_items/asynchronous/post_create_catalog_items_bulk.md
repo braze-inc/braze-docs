@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer plusieu
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue. 
+> Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue.
 
 Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
@@ -34,14 +34,14 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produits devraient contenir tous les champs qui existent dans le catalogue. Jusqu’à 50 objets sont autorisés par requête. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -161,6 +161,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
 | `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

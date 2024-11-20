@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /templates/email/update
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour des modèles d’e-mail sur le tableau de bord de Braze. 
+> Utilisez cet endpoint pour mettre à jour des modèles d’e-mail sur le tableau de bord de Braze.
 
 Vous pouvez accéder au site `email_template_id` d'un modèle d'e-mail en naviguant jusqu'à lui sur la page **Modèles et médias.**  L’[endpoint Créer un modèle d’e-mail]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) renvoie également une référence `email_template_id`.
 
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`preheader`|Facultatif|Chaîne de caractères|Accroche d’e-mail utilisée pour générer des aperçus chez certains clients.|
 |`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister.|
 |`should_inline_css`|Facultatif|Valeur booléenne|Active ou désactive la fonction `inline_css` par modèle. Si non renseigné, Braze utilisera le paramètre par défaut de l’AppGroup. `true` ou `false` est attendu.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -90,6 +90,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un modèle d’e-mail, la balise doit déjà exister dans Braze. |
 | Valeur non valide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes (vrai ou faux). Assurez-vous que la valeur de `should_inline_css` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

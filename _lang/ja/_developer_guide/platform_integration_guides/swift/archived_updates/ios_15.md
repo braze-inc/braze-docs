@@ -17,7 +17,7 @@ noindex: true
 
 iOS ベータ版の年次テストの一環として、特定の UI ナビゲーションバーが非透過ではなく透明に表示される Apple によって行われた変更を確認しました。これは iOS 15 でコンテンツカードに Braze のデフォルト UI を使用しているときや、Web ディープリンクを別のブラウザアプリではなくアプリ内で開いたときに表示されます。
 
-iOS 15 でのこのような視覚的な変更を回避するために、ユーザーが新しい iOS 15 オペレーティングシステムへのアップグレードを開始する前に、できるだけ早く [Braze iOS SDK v 4.3.2][1] にアップグレードすることを強くお勧めします。
+iOS 15 でのこのような視覚的な変更を回避するために、ユーザーが新しい iOS 15 オペレーティングシステムへのアップグレードを開始する前に、できるだけ早く [Braze iOS SDK v 4.3.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2) にアップグレードすることを強くお勧めします。
 
 ## 新通知 設定s {#notification-settings}
 
@@ -76,6 +76,3 @@ Apple によると、すでにバックグラウンドでの位置情報への�
 
 iOS 15 では、ユーザーは IP アドレスから特定された位置情報を匿名化または一般化するように Safari を設定できます。ロケーションベースのターゲティングまたはセグメンテーションを使用する場合は、このことに留意してください。
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
-[2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level

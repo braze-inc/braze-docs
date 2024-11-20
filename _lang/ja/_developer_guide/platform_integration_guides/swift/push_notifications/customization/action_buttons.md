@@ -15,7 +15,7 @@ channel:
 
 Braze のデフォルトプッシュカテゴリのデフォルトプッシュアクションボタンには、4つのセット `Accept/Decline`、`Yes/No`、`Confirm/Cancel`、`More` があります。 
 
-![2つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。][13]{: style="max-width:60%"}
+![2 つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
 独自の通知カテゴリを作成する場合は、[アクションボタンカスタマイズ](#push-category-customization)を参照してください。
 
@@ -29,10 +29,10 @@ Braze のデフォルトプッシュカテゴリのデフォルトプッシュ�
 
 ### ステップ1:Braze デフォルトプッシュカテゴリの追加 {#registering}
 
-\[プッシュ登録][36] を行うときに、次のコードを使用してデフォルトのプッシュカテゴリに登録します。
+[register for push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze) の場合、デフォルトのプッシュカテゴリに登録するには、次のコードを使用します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications.categories)
@@ -57,7 +57,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 クリック分析や URL ルーティングを含むプッシュアクションボタンの処理を有効にするには、アプリの `didReceive(_:completionHandler:)` デリゲートメソッドに次のコードを追加します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.notifications.handleUserNotification(response: response, withCompletionHandler: completionHandler)
@@ -74,7 +74,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 {% endtab %}
 {% endtabs %}
 
-`UNNotification` フレームワークを使用して、Braze [通知メソッド][39]を実装している場合は、このメソッドはすでに統合されています。 
+`UNNotification` フレームワークを使用し、Braze [通知メソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling) を実装した場合、このメソッドはすでに統合されている必要があります。 
 
 ## プッシュカテゴリのカスタマイズ
 
@@ -86,14 +86,14 @@ Brazeはデフォルトのプッシュカテゴリのセットを提供するだ
 
 デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-![「いいねを取り消す」と「いいね」の2つのプッシュアクションボタンを表示するプッシュメッセージ][17]
+![2つのプッシュアクションボタン"unlike"および"like".]({% image_buster /assets/img_archive/push_example_category.png %})を表示するプッシュメッセージ
 
 #### ステップ1:カテゴリを登録する
 
 以下のような方法で、アプリにカテゴリを登録します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Braze.Notifications.categories.insert(
@@ -147,14 +147,9 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endalert %}
 
 1. Braze ダッシュボードで、**メッセージング**> **プッシュ通知**を選択し、iOS [プッシュキャンペーン]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/creating_a_push_message)を選択します。
-2. \[**プッシュ通知を作成する**] の下で、\[**アクションボタン**] をオンにします。
-3. \[**iOS 通知カテゴリ**] ドロップダウンで、\[**事前登録されたカスタム iOS カテゴリを入力**] を選択します。
+2. [**プッシュ通知を作成する**] の下で、[**アクションボタン**] をオンにします。
+3. [**iOS 通知カテゴリ**] ドロップダウンで、[**事前登録されたカスタム iOS カテゴリを入力**] を選択します。
 4. 最後に、前に作成したカテゴリのいずれかを入力します。次の例では、カスタムカテゴリ`LIKE_CATEGORY` を使用します。
 
-![カスタムカテゴリの設定を含むプッシュ通知 キャンペーン ダッシュボード。][18]
+![カスタムカテゴリのセットアップを含むプッシュ通知キャンペーンダッシュボード。]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
-[13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[18]: {% image_buster /assets/img_archive/ios-notification-category.png %}
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling

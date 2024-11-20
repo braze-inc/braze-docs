@@ -4,8 +4,8 @@ article_title: メール
 page_order: 2
 layout: dev_guide
 guide_top_header: "メール"
-guide_top_text: "BrazeのEメールなら、キャンペーンやキャンバスで完全にカスタマイズされたパーソナライズされたEメールメッセージを作成することができ、ユーザーの注目を素早く集めることができる。詳しくは以下の記事をご覧いただきたい。"
-description: "このランディングページはBrazeのEメールのホームである。ここでは、メールキャンペーンの作成方法、ドラッグ＆ドロップエディターの使い方、ユーザー購読の管理方法、プリファレンスセンターなどを学ぶことができる。"
+guide_top_text: "Braze のメールでは、キャンペーンとキャンバスのいずれかで、十分にカスタマイズとパーソナライゼーションを行ってメールメッセージを作成でき、ユーザーの関心をただちに引くことができます。詳しくは以下の記事をご覧いただきたい。"
+description: "このランディングページはBrazeのEメールのホームである。ここでは、メールキャンペーンの作成方法、ドラッグ＆ドロップエディターの使用方法、ユーザー購読の管理方法、ユーザー設定センターなどを学ぶことができます。"
 channel:
   - email
 search_rank: 2
@@ -14,7 +14,7 @@ guide_featured_list:
 - name: Eメールについて
   link: /docs/user_guide/message_building_by_channel/email/about/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: ユーザー購読を管理する
+- name: ユーザー購読の管理
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
 - name: リンクのエイリアシング
@@ -41,28 +41,31 @@ guide_menu_list:
 - name: メッセージのロケール
   link: /docs/user_guide/message_building_by_channel/email/using_locales/
   image: /assets/img/braze_icons/users-01.svg
-- name: プリファレンス・センター
+- name: ユーザー設定センター
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: CSSインライン化
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
   image: /assets/img/braze_icons/align-left.svg
-- name: カスタムメールフッター
+- name: メールのカスタムフッター
   link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: 受信トレイビジョン
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   image: /assets/img/braze_icons/inbox-01.svg
-- name: トランザクション・メール
+- name: トランザクションメール
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
+- name: 識別子フィールドレベル暗号化
+  link: /docs/user_guide/data_and_analytics/field_level_encryption/
+  image: /assets/img/braze_icons/database-01.svg
 - name: Gmailプロモーションツール
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
   image: /assets/img/braze_icons/trophy-01.svg
-- name: アップル・プライベート・リレーSSO
+- name: Apple Private Relay SSO
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
   image: /assets/img/braze_icons/apple.svg
-- name: アップル・メールのプライバシー保護
+- name: Apple Mail のプライバシー保護
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
   image: /assets/img/braze_icons/apple.svg
 - name: メール分析用語集
