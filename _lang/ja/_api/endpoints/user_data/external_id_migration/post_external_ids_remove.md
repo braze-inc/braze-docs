@@ -26,13 +26,13 @@ description: "この記事では、Remove external IDs エンドポイントに�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.external_ids.remove` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.external_ids.remove`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -47,10 +47,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | required | 文字列の配列 | ユーザーが削除する外部識別子。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `external_ids` | 必須 | 文字列の配列 | ユーザーが削除する外部識別子。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## リクエスト例
 ```
@@ -83,6 +83,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 - 無効なAPIキー
 - 空の`external_ids` 配列
 - 50を超える項目を持つ `external_ids` 配列
-- レート制限のヒット (1,000リクエスト/分超)
+- レート制限のヒット (1,000 リクエスト/分超)
 
 {% endapi %}

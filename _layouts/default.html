@@ -8,7 +8,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{site.gta_tag_key}}"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {% comment %} End Google Tag Manager (noscript) {% endcomment %}
-
+<main>
 {% include header.html %}
 {% unless page.config_only %}
 <div class="container-fluid" >
@@ -29,5 +29,6 @@
 </script>
 <script type='text/javascript' src='{% image_buster /assets/js/hash_redirect.js %}'></script>
 {% endif %}
+</main>
 </body>
 </html>

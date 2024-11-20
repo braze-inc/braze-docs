@@ -59,7 +59,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Recent devices | How many devices they logged in on, details on each device, and their associated advertising IDs (if any). |
 | Custom events | Which custom events this user has performed, how many times, and when they last performed each event. |
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more information on this data, see [User Data Collection][12].
 
@@ -79,7 +79,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
 | Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][3]
 
@@ -109,7 +109,7 @@ The following message engagement events are available for email, SMS, push, in-a
 | In-app message | Click<br>Impression |
 | Content Cards | Click<br>Dismiss<br>Impression<br>Send |
 | Webhooks | Send |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### Message abort events
 

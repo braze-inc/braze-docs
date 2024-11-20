@@ -5,7 +5,7 @@ alias: /google_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to Google, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 Tool:
   - Canvas
-page_order: 2
+page_order: 3
 
 ---
 
@@ -40,7 +40,7 @@ You must ensure the following items are created and completed before setting up 
 | Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA, UK, and Switzerland end users. |
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet these criteria, then your account is currently ineligible to use Customer Match.<br><br>Connect with your Google Ads representative for more guidance on Customer Match availability for your account. |
 | Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA, UK, and Switzerland end users](#collecting-consent-for-eea-uk-and-switzerland-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When using Braze SDKs to collect consent signals, ensure you meet the following minimum versions:
 
@@ -195,7 +195,7 @@ The following table includes metrics and descriptions to help you better underst
 | *Users Errored* | Number of users who were not synced to Google due to an error, after &#126;13 hours of retries. For specific errors, like Google Ads API service disruptions, Canvas will retry the sync for up to &#126;13 hours. If the sync is still not possible at that point, the *User Not Synced* will be populated. |
 | *Users Pending* | Number of users currently being processed by Braze to sync to Google. |
 | *Exited Canvas* | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Troubleshooting
 

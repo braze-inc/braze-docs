@@ -1,7 +1,7 @@
 ---
 nav_title: WSC Sports
 article_title: WSC Sports
-description: "この参考記事では、BrazeとWSC Sportsの提携について説明しています。WSC Sportsはスポーツ動画プラットフォームであり、Brazeのプッシュ通知に豊かで強力なスポーツメディアを含めることができます。"
+description: "このリファレンス記事では、Braze と WSC Sports のパートナーシップについて説明します。WSC Sports は、リッチで安定したスポーツメディアをBraze のプッシュ通知に組み込むことができるスポーツ動画プラットフォームです。"
 alias: /partners/wsc_sports/
 page_type: partner
 search_tag: Partner
@@ -16,11 +16,11 @@ BrazeとWSC Sportsの統合により、Brazeプッシュ通知にリッチで堅
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | WSCアカウント | このパートナーシップを利用するには、WSCアカウントが必要です。 |
-| Braze REST API キー | `users.track`の権限を持つBraze REST APIキー。<br><br> これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | **メッセージ**、**セグメンテーション**、**キャンペーン**、**キャンバスの**権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -36,7 +36,7 @@ WSC Sportsアプリケーションは、動画の選択からエンドユーザ�
 
 送信されると、WSC Sportsは選択されたオプションに基づいて、次のBrazeエンドポイントを使用して、選択されたユーザーセグメントにプッシュ通知を配信します:
 - [/messages/schedule/create]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages#create-scheduled-messages)
-- /メッセージ/送信
+- [/messages/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#sending-messages-immediately-via-api-only)
 
 メッセージの本文は次のとおりです: 
 ```
@@ -56,4 +56,4 @@ WSC Sportsアプリケーションは、動画の選択からエンドユーザ�
 この時点で、あなたのキャンペーンはテストと送信の準備ができているはずです。エラーに遭遇した場合は、Brazeエラーメッセージログを確認してください。 
 
 [1]: https://wsc-sports.com/
-[2]: {% image_buster /assets/img/wsc_sports/braze_integration.jpg %}「braze_integration.jpg」
+[2]: {% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "braze_integration.jpg"

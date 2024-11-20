@@ -15,7 +15,7 @@ description: "이 문서에서는 차단 목록 이메일 Braze 엔드포인트�
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 사용자의 이메일 수신을 취소하고 하드 바운스로 표시할 수 있습니다.
- 
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
 ## 필수 구성 요소
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | -----------|----------| --------|------- |
 | `email` | 필수 | 문자열 또는 배열 | 차단할 이메일 주소를 문자열로 입력하거나 최대 50개의 이메일 주소 배열을 차단 목록에 추가합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

@@ -46,7 +46,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id`,  `user_alias`, `phone`, or `email`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Merge behavior
 
@@ -56,7 +56,7 @@ The behavior documented below is true for all Braze features that *are not* powe
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge any of the following fields if they are not found on the target user:
+This endpoint will merge the following fields if they're not found on the target user.
 
 - First name
 - Last name
@@ -88,8 +88,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Campaign interaction data (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
 - Message and message engagement history
-
-Session data will only be merged if the app exists on both user profiles.
+- Session data will only be merged if the app exists on both user profiles.
 
 {% alert note %}
 When merging users, using the `/users/merge` endpoint works the same way as using the [`changeUser()` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
@@ -265,6 +264,6 @@ The following table lists possible error messages that may occur.
 | `a single request may not contain more than 50 merge updates` | You can only specify up to 50 merge updates in a single request. |
 | `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Check the identifiers in your request. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Check that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

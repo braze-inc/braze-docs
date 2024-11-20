@@ -31,4 +31,4 @@ noindex: true
 |----------|-------------|
 | `YES`       | モーダルアプリ内メッセージは、外部タップで閉じられます。     |
 | `NO`        | デフォルトでは、モーダルアプリ内メッセージは外部タップをしても閉じられません。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

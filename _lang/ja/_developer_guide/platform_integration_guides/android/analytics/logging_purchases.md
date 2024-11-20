@@ -15,11 +15,11 @@ description: "このリファレンス記事では、Android または FireOS �
 
 Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
-実装する前に、[分析の概要][3]でカスタムイベント、カスタム属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。
+実装する前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)でカスタムイベント、カスタム属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。
 
 ## 購入と売上のトラッキング
 
-この機能を使用するには、アプリで正常な購入後に[`logPurchase()`][6]を呼び出します。製品 ID が空の場合、購入は Braze に記録されません。
+この機能を使用するには、アプリで正常な購入後に[`logPurchase()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html)を呼び出します。製品 ID が空の場合、購入は Braze に記録されません。
 
 {% tabs %}
 {% tab JAVA %}
@@ -54,11 +54,11 @@ Braze.getInstance(context).logPurchase(
 
 ### プロパティの追加
 
-購入に関するメタデータを追加するには、[イベントプロパティ配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects)、または購入情報を含む [Braze プロパティ][4]オブジェクトを渡します。
+購入に関するメタデータを追加するには、[イベントプロパティ配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects)、または購入情報を含む [Braze プロパティ](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html)オブジェクトを渡します。
 
 #### Braze プロパティオブジェクトの書式設定
 
-プロパティはキーと値のペアとして定義されています。キーは `String` オブジェクトで、値は `String`、`int`、`float`、`boolean`、または [`Date`][5] オブジェクトになります。
+プロパティはキーと値のペアとして定義されています。キーは `String` オブジェクトで、値は `String`、`int`、`float`、`boolean`、または [`Date`](http://developer.android.com/reference/java/util/Date.html) オブジェクトになります。
 
 {% tabs %}
 {% tab JAVA %}
@@ -81,7 +81,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 {% endtab %}
 {% endtabs %}
 
-詳細については、[KDoc][6] を参照してください。
+詳細については、[KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) を参照してください。
 
 ### 注文レベルで購入を記録する
 商品レベルではなく、注文レベルで購入を記録したい場合、注文名または注文カテゴリを `product_id` として使用できます。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
@@ -99,10 +99,5 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 
 ### REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント][1]を参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
-[5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

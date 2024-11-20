@@ -34,7 +34,7 @@ To use this endpoint, you'll need a SCIM token. For more information, refer to [
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request body
 

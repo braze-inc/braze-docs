@@ -9,52 +9,52 @@ search_tag: Partner
 ---
 # Zapierとの統合
 
-> [Zapierは][1]自動化ウェブツールで、ウェブアプリ間でデータを共有し、その情報を使ってアクションを自動化することができる。 
+> [Zapier][1] は、Web アプリ間でデータを共有し、その情報を使用してアクションを自動化できるオートメーション Web ツールです。 
 
-BrazeとZapierのパートナーシップは、Braze APIとBraze[webhooksを][3]活用して、Google Workplace、Slack、Salesforce、WordPressなどのサードパーティアプリケーションと接続し、さまざまなアクションを自動化する。
+Braze と Zapier のパートナーシップでは、Braze API と Braze [Webhook][3] を活用してサードパーティアプリケーション (Google Workplace、Slack、Salesforce、WordPress など) に接続し、さまざまなアクションを自動化できます。
 
 ## 前提条件
 
 | 要件 | 説明 |
 |---|---|
-| Zapierアカウント | このパートナーシップを利用するには、Zapierアカウントが必要だ。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントは、[インスタンスのBraze URLに][0]依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Zapierアカウント | このパートナーシップを活用するには、Zapier アカウントが必要です。 |
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][0] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-以下のZapierの例では、POST webhookを使ってWordPressからBrazeに情報を送信する。この情報をもとに、ブレイズ・キャンバスを作成することができる。
+以下のZapierの例では、POST webhookを使ってWordPressからBrazeに情報を送信する。この情報を使用して Braze キャンバスを作成することができます。
 
 ### ステップ1:Zapierトリガーを作成する
 
-Zapierの用語を使えば、"ザップ "とはアプリやサービスをつなぐ自動化されたワークフローのことだ。どのようなザップでも、最初の部分はトリガーを指定することだ。ザップが有効になると、トリガーが検出されるたびにZapierが自動的にそれぞれのアクションを実行する。
+Zapierの用語を使えば、"ザップ "とはアプリやサービスをつなぐ自動化されたワークフローのことだ。どのようなザップでも、最初の部分はトリガーを指定することだ。zap が有効になると、トリガーが検出されるたびにZapier によって対応するアクションが自動的に実行されます。
 
 WordPressの例を使って、Zapierプラットフォームで、WordPressの新しい投稿が追加されたときにトリガーされるようにzapを設定し、**Post Statusと** **Post Typeとして** **Publishedと** **Postsを**選択する。 
 
-![Zapierプラットフォームで、zapの中で、トリガーを "新しいコメント"、"任意のウェブフック"、"新しい投稿 "のいずれかに選択する。この例では、"new post "が選択されている。 ] \[5]
+![Zapierプラットフォームで、zap 内でトリガーとして「new comment」、「any webhook」、「new post」のいずれかを選択する。この例では「new post」が選択されている。] [5]
 
-![Zapierプラットフォームで、ザップ内で、希望の投稿ステータスと投稿タイプを選択してトリガーを設定する。この例では、"Published "と "Posts "が選択されている。] \[6]
+![Zapier プラットフォームで、zap 内で目的の post status と post type を選択してトリガーを設定する。この例では「Publishedと「Posts」が選択されている。] [6]
 
 ### ステップ2:アクションウェブフックを追加する
 
-次に、ザップアクションを定義する。ザップが有効になり、トリガーが検出されると、自動的にアクションが発生する。
+次に zap アクションを定義します。zap が有効になり、トリガーが検出されると、アクションが自動的に発生します。
 
-この例の続きで、BrazeのエンドポイントにJSONとしてPOSTリクエストを送りたい。これは、**Appsの**下にある**Webhooks**オプションを選択することで行うことができる。
+この例の続きで、BrazeのエンドポイントにJSONとしてPOSTリクエストを送りたい。これを行うには、[**Apps**] の下にある [**Webhooks**] オプションを選択します。
 
 ![][7]
 
-### ステップ3:Braze POSTをセットアップする
+### ステップ 3:Braze POSTをセットアップする
 
-Webhookを設定する際は、以下の設定を使用し、Webhook URLにBraze RESTエンドポイントを指定する。完了したら、**Publishを**選択する。
+Webhook を設定するときに、次の設定を使用して Webhook URL に Braze REST エンドポイントを指定します。完了したら [**Publish**] を選択します。
 
 - **方法**：POST
-- **ウェブフックのURL**： `https://rest.iad-01.braze.com/canvas/trigger/send`
-- **データのパススルー**False
-- **アンフラッテン**だ：いいえ
-- **ヘッダーをリクエストする**：
+- **Webhook URL**: `https://rest.iad-01.braze.com/canvas/trigger/send`
+- **Data Pass-Though**:False
+- **Unflatten**:いいえ
+- **リクエストヘッダー**:
   - **Content-Type**: application/json
-  - **認可する**：Bearer YOUR-API-KEY
-- **データ**だ： 
+  - **Authorization**:Bearer YOUR-API-KEY
+- **Data**: 
 
 ```json
 {
@@ -75,7 +75,7 @@ Webhookを設定する際は、以下の設定を使用し、Webhook URLにBraze
 
 ### ステップ4:Brazeのキャンペーンを作成する
 
-ザップの設定が完了したら、リキッドフォーマットを使ってメッセージに情報を表示することで、BrazeのキャンペーンやキャンバスをWordPressのデータでカスタマイズすることができる。
+zap の設定が完了したら、Liquid フォーマットを使用してメッセージの情報を表示することで、WordPress データを使用して Braze キャンペーンまたはキャンバスをカスタマイズできます。
 
 [0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/

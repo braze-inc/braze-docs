@@ -23,11 +23,11 @@ description: "この記事では、アプリ内メッセージを手動で表示
 
 ## 配信セマンティクス
 
-ユーザーが受信可能なアプリ内メッセージはすべて、セッション開始イベントと同時にユーザーのデバイスまたはブラウザに自動的にダウンロードされ、メッセージの配信ルールに従ってトリガーされる。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクルのドキュメント][10]を参照してください。
+ユーザーが受信可能なアプリ内メッセージはすべて、セッション開始イベントと同時にユーザーのデバイスまたはブラウザに自動的にダウンロードされ、メッセージの配信ルールに従ってトリガーされる。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクルのドキュメント]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle)を参照してください。
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、高品質のユーザーエクスペリエンスを確保するために、アプリ内メッセージのレートが 30 秒に 1 回に制限されています。この値をオーバーライドするには、`minimumIntervalBetweenTriggerActionsInSeconds` の設定オプションを [`initialize`][9]関数に渡すことができる：
+デフォルトでは、高品質のユーザーエクスペリエンスを確保するために、アプリ内メッセージのレートが 30 秒に 1 回に制限されています。この値をオーバーライドするには、`minimumIntervalBetweenTriggerActionsInSeconds` の設定オプションを [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)関数に渡すことができる：
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
@@ -64,9 +64,9 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 `braze.showInAppMessage` 呼び出しているときにも Web サイトから `braze.automaticallyShowInAppMessages()` を削除しなければ、メッセージが2回表示される可能性があります。
 {% endalert %}
 
-`inAppMessage` パラメータは [`braze.InAppMessage`][2] サブクラスまたは [`braze.ControlMessage`][8] オブジェクトになり、それぞれにさまざまライフサイクルイベントのサブスクリプション方式があります。完全なドキュメントについては、[JSDocs][2] を参照してください。
+`inAppMessage` パラメータは [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) サブクラスまたは [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html) オブジェクトになり、それぞれにさまざまライフサイクルイベントのサブスクリプション方式があります。完全なドキュメントについては、[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) を参照してください。
 
-つだけである。 [`Modal`][17]または [`Full`][41]アプリ内メッセージは一度に一つしか表示できない。すでに1つのモーダルまたはフル・メッセージが表示されているときに、2つ目のモーダルまたはフル・メッセージを表示しようとすると、`braze.showInAppMessage` はfalseを返し、2つ目のメッセージは表示されない。
+つだけである。 [`Modal`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages)または [`Full`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages)アプリ内メッセージは一度に一つしか表示できない。すでに1つのモーダルまたはフル・メッセージが表示されているときに、2つ目のモーダルまたはフル・メッセージを表示しようとすると、`braze.showInAppMessage` はfalseを返し、2つ目のメッセージは表示されない。
 
 ## ローカルのアプリ内メッセージ
 
@@ -83,7 +83,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 
 Exit-intent アプリ内メッセージは、訪問者がそのサイトから移動しようとしているときに表示されます。ユーザーのサイト体験を邪魔することなく、重要な情報をユーザーに伝えることができます。 
 
-これらのメッセージを送信するには、まず、この[オープンソースライブラリー][50]のような exit intent ライブラリーを Web サイトに追加します。次に、以下のコード・スニペットを使って、カスタム・イベントとして「exit intent」を記録する。アプリ内メッセージキャンペーンは、トリガーのカスタムイベントとして「exit intent」を使用し、ダッシュボードで作成することができます。
+これらのメッセージを送信するには、まず、この[オープンソースライブラリー](https://github.com/carlsednaoui/ouibounce)のような exit intent ライブラリーを Web サイトに追加します。次に、以下のコード・スニペットを使って、カスタム・イベントとして「exit intent」を記録する。アプリ内メッセージキャンペーンは、トリガーのカスタムイベントとして「exit intent」を使用し、ダッシュボードで作成することができます。
 
 ```javascript
   var _ouibounce = ouibounce(false, {
@@ -92,10 +92,3 @@ Exit-intent アプリ内メッセージは、訪問者がそのサイトから�
 ```
 
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[50]: https://github.com/carlsednaoui/ouibounce

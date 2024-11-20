@@ -10,10 +10,6 @@ alias: /landing_pages/connect_domain/
 
 > Connect your own domain to your Braze workspace to customize your landing page URLs with your brand.
 
-{% alert note %}
-Landing pages are currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
-{% endalert %}
-
 To connect a domain or subdomain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
@@ -47,7 +43,7 @@ Listed below are resources for creating and managing DNS records with commonly u
 | Cloudflare | [Manage DNS records](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
 | Squarespace | [Adding custom DNS settings](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Troubleshooting 
 

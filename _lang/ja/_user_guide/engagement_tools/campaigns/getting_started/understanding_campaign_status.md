@@ -21,13 +21,13 @@ description: "この記事では、キャンペーンが持ちうるさまざま
 
 ## 停止した
 
-停止されたキャンペーンは一時停止されていますが、まだ編集可能です。停止したキャンペーンを再開するには、<i class="fas fa-cog"></i> ギアアイコンを選択し、**再開** を選択します。
+停止されたキャンペーンは一時停止されていますが、まだ編集可能です。停止したキャンペーンを再開するには、歯車アイコン <i class="fas fa-cog"></i> を選択し、次に [**再開**] を選択します。
 
 ## アーカイブ済み
 
-アーカイブされたキャンペーンは送信されなくなり、Braze ダッシュボードの \[**すべてアクティブ**] タブから消去されます。これらのキャンペーンは、「**概要**」ページと「**収益**」ページの詳細統計グラフからも削除されます。
+アーカイブされたキャンペーンは送信されなくなり、Braze ダッシュボードの [**すべてアクティブ**] タブから消去されます。これらのキャンペーンは、「**概要**」ページと「**収益**」ページの詳細統計グラフからも削除されます。
 
-[キャンペーンをアーカイブする]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns)には、特定のキャンペーンの<i class="fas fa-cog"></i>ギアアイコンを選択し、**選択したものをアーカイブ**します。
+[キャンペーンをアーカイブする]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns)には、特定のキャンペーンの歯車アイコン <i class="fas fa-cog"></i> を選択し、[**選択した項目をアーカイブ**] を選択します。
 
 ## アイドル
 

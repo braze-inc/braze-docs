@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `campaign_id`| 필수 | 문자열 | [캠페인 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
 | `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 생성에 대한 응답에서 얻음). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## 예시 요청
+## 요청 예시
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/delete' \
 --header 'Content-Type: application/json' \

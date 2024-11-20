@@ -103,7 +103,7 @@ These terms are reinterpreted from [**Shopify's documentation**](https://shopify
 | Conditional logic tag | Used to create logic and control the flow of message content. In Braze, conditional logic tags are used to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
 | Filters | Used to change, narrow, or reformat the output of the Liquid object. It's often used to create mathematical operations. | ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
 | Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | If a user meets the defined criteria in a message tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endraw %}
 

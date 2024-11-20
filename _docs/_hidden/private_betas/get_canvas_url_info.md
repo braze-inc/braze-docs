@@ -68,6 +68,6 @@ The following table lists possible returned errors and their associated troubles
 | --- | --- |
 | `Missing/Invalid Canvas ID` | The Canvas API ID must be an API identifier. You can find this using the [Export Canvas list endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) or by logging into the dashboard. |
 | `Missing/Invalid Message Variant ID` | The message variant API ID must be an API identifier. You can find this using the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) or by logging into the dashboard. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

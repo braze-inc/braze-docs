@@ -10,26 +10,26 @@ search_tag: Partner
 
 # Transifex
 
-> Transifexは、言語に関係なく、ユーザーベース全体で強固なローカリゼーションを可能にする。
+> Transifex は、あらゆる言語で、ユーザー群にわたる強力なローカライゼーションを支援しています。
 
 BrazeとTransifexの統合は、Connected Contentを活用することで、リソース文字列コレクションを引き出し、言語ベースの条件付き書式の行の代わりに、関連する翻訳をメッセージに含めることができる。これにより、翻訳が自動化され、チームは優れたカスタマー・エクスペリエンスの提供に集中することができる。
 
 {% alert important %}
-2022年4月7日をもって、TransifexはAPIバージョン2と2.5を廃止し、バージョン3に移行した。<br><br>以下の統合手順は、バージョン3のアップデートを反映したものである。コネクテッド・コンテンツのコールを適宜更新する。
+2022年4月7日をもって、Transifex は API バージョン2と2.5を廃止し、バージョン3に移行しました。バージョン2と2.5は動作せず、関連するリクエストは失敗します。<br><br>以下の統合手順は、バージョン3のアップデートを反映したものである。コネクテッドコンテンツ呼び出しを適宜更新します。
 {% endalert %}
 
 ## 前提条件
 
 | 必要条件| 説明|
 | ---| ---|
-|トランシフェックス アカウント | このパートナーシップを利用するには、[トランシフェックスのアカウントが](https://www.transifex.com/signin/)必要である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|トランシフェックス アカウント | このパートナーシップを活用するには、[Transifexアカウント](https://www.transifex.com/signin/)が必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-Transifexの統合は、Transifexの[リソース翻訳APIを](https://developers.transifex.com/reference/get_resource-translations)使用する。以下のcURLで、自分のアカウントに翻訳に関連するコンテンツ値があるかどうかを確認できる。 
+Transifex 統合では、Transifex の[リソース翻訳 API](https://developers.transifex.com/reference/get_resource-translations) を使用します。次の cURL を使用すると、翻訳に関連付けられたコンテンツ値がアカウントにあるかどうかを確認できます。 
 
-まず、Transifexアカウントにある`<ORGANIZATION_NAME>` 、`<PROJECT_NAME>` 、`<RESOURCE_NAME>` を入力する。次に、`<LANGUAGE>` を翻訳をフィルタリングしたい言語コードに、`<TRANSIFEX_BEARER_TOKEN>` をTransifexの[ベアラートークンに](https://developers.transifex.com/reference/api-authentication)置き換える。
+まず、Transifexアカウントにある `<ORGANIZATION_NAME>`、`<PROJECT_NAME>`、`<RESOURCE_NAME>` を入力します。次に、`<LANGUAGE>` を翻訳をフィルタリングしたい言語コードに、`<TRANSIFEX_BEARER_TOKEN>` をTransifexの[ベアラートークンに](https://developers.transifex.com/reference/api-authentication)置き換える。
 
 ```
 curl --request GET \
@@ -40,9 +40,9 @@ curl --request GET \
 
 例えば、Transifexプロジェクトが`https://www.transifex.com/appboy-3/french2/french_translationspo/` にある場合、`project_name` は "french2"、`resource_name` は "french_translationspo "となる。
 
-## コネクテッド・コンテンツ・メッセージの例
+## コネクテッドコンテンツメッセージの例
 
-このコード例は、Transifexリソース翻訳APIとユーザーの`language` 属性を利用している。ニーズに応じて、文字列オブジェクトをループし、以下のリキッドを使って関連するコンテンツを取り込むことができる：`{{strings.data[X].attributes.strings.other}}`.
+このコード例は、Transifexリソース翻訳APIとユーザーの`language` 属性を利用している。必要に応じて文字列オブジェクトをループし、Liquid `{{strings.data[X].attributes.strings.other}}` を使用して関連するコンテンツを取得できます。
 
 {% raw %}
 ```

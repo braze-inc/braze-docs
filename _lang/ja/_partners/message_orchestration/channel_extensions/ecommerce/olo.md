@@ -1,15 +1,15 @@
 ---
-nav_title: オロ
-article_title: オロ
+nav_title: Olo
+article_title: Olo
 description: "この記事では、Brazeと、あらゆるタッチポイントでホスピタリティを実現するレストラン向けオープンSaaSプラットフォームのリーディングカンパニーであるOlo社との提携について概説する。"
 alias: /partners/olo/
 page_type: partner
 search_tag: Partner
 ---
 
-# オロ
+# Olo
 
-> [Oloは][1]、あらゆるタッチポイントでホスピタリティを実現する、レストラン向けの主要なオープンSaaSプラットフォームである。
+> [Olo][1] は、あらゆるタッチポイントでの応対を可能にする飲食店向けの大手オープン SaaS プラットフォームです。
 
 OloとBrazeを統合することで、それが可能になる：
 
@@ -20,51 +20,51 @@ OloとBrazeを統合することで、それが可能になる：
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| オロ口座 | このパートナーシップを利用するには、ウェブフックにアクセスできるOloアカウントが必要である。Oloダッシュボード内の[セルフサービスWebhooksツールで](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks)Webhookサブスクリプションを設定する。 |
-| ブレイズデータ変換 | Oloからデータを受け取るには、[データ変換URLが]({{site.baseurl}}/data_transformation/)必要である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Olo アカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるOloアカウントが必要である。Oloダッシュボード内の[セルフサービスWebhooksツールで](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks)Webhookサブスクリプションを設定する。 |
+| Braze Data Transformation | Olo からデータを受信するには、[Data Transformation URL]({{site.baseurl}}/data_transformation/) が必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Webhookとは、OloがBrazeにユーザーとそのアクションに関するイベントドリブンな情報を送信する方法であり、Order Placed（注文の発注）、Guest Opt In（ゲストのオプトイン）、Order Picked Up（注文の受け取り）などのイベントを含む。Olo Webhookは、一般的にアクションが実行されてから数秒以内にBrazeにイベントを配信する。
 
 ## 免責事項
 
-Oloでは、承認されたブランドごとに1環境につき1つのウェブフックに制限され、すべて同じ**宛先**URLに送信される。異なるブランドは異なるURLを持つことができるが、同じブランドのイベントはURLを共有しなければならない。Brazeでは、これはOloで使用するための変身を1つしか作れないことを意味する。
+Oloでは、承認されたブランドごとに1環境につき1つのウェブフックに制限され、すべて同じ**宛先**URLに送信される。異なるブランドは異なるURLを持つことができるが、同じブランドのイベントはURLを共有しなければならない。これは Braze では、Olo で使用するために作成できる変換が1つだけであることを意味します。
 
 この1つの変換で複数のOloイベントを処理するには、各ウェブフックの`X-Olo-Event-Type` ヘッダーを探す。このヘッダーによって、異なるOloイベントを条件付きで処理することができる。
 
 ## 統合
 
-### ステップ1:Oloのテストイベントを受け入れるようにBrazeデータ変換をセットアップする。 {#step-1}
+### ステップ1:Olo のテストイベントを受け入れるように Braze Data Transformation を設定する {#step-1}
 
 {% multi_lang_include create_transformation.md location="default" %}
 
 ### ステップ2:Oloウェブフックを設定する
 
-Oloダッシュボード内の[セルフサービスウェブフックツールを][2]使用して、データ変換に送信するウェブフックを設定する。
+Olo ダッシュボード内の[セルフサービス Webhooks ツール][2]を使用して、Data Transformation に送信する Webhook を設定します。
 
 1. Brazeに送信するイベントを選択する
-2. **宛先URLを**設定する。これは[ステップ](#step-1)1で作成したデータ変換URLになる。
+2. **宛先 URL** を設定します。これは、[ステップ1](#step-1)で作成された Data Transformation URL です。
 
 {% alert note %}
-`OAuth` と`X-Olo-Signature` ヘッダー共有秘密は変換に必要ない。
+`OAuth` と `X-Olo-Signature` ヘッダー共有シークレットは、変換には必要ありません。
 {% endalert %}
 
 {:start="3"}
-3\.[Test Eventを][3]Data Transformationに送信して、Webhookが正しく設定されていることを確認する。テストイベントを送信できるのは、[Developer Tools 権限を][4]持つ Olo Dashboard ユーザのみである。
+3\.[テストイベント][3]を Data Transformation に送信して、Webhook が正しく設定されていることを確認します。テストイベントを送信できるのは、[Developer Tools 権限を][4]持つ Olo Dashboard ユーザのみである。
 
-Olo は、Olo ウェブフック設定プロセスを完了する前に、Test Event ウェブフックからの成功応答を必要とする。
+Olo では、Olo Webhook 設定プロセスを完了する前に、テストイベント Webhook からの正常な応答が必要です。
 
 ### ステップ3:選んだOloイベントを受け入れる変換コードを書く
 
 このステップでは、ソース・プラットフォームから送信されるウェブフック・ペイロードを、JavaScriptオブジェクトの戻り値に変換する。
 
 1. データ変換 URL に、サポートする予定の Olo イベントのサンプルイベントペイロードを添えてリクエストを送信する。リクエストの書式については、[リクエストボディの書式を](#request-body-format)参照のこと。
-2. Data Transformationをリフレッシュし、**Webhook Detailsに**サンプルのイベントペイロードが表示されていることを確認する。
-3. データ変換コードを更新して、選択したOloイベントをサポートする。
-4. **Validateを**クリックすると、コードの出力のプレビューが返され、それが受け入れ可能な`/users/track` リクエストかどうかがチェックされる。
-5. データ変換を保存して有効にする。
+2. Data Transformation を更新し、[**Webhook の詳細**] にサンプルイベントペイロードが表示されていることを確認します。
+3. 選択した Olo イベントをサポートするように Data Transformation コードを更新します。
+4. [**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
+5. Data Transformation を保存して有効化します。
 
-#### リクエスト・ボディのフォーマット
+#### リクエスト本文の形式
 
 この戻り値は、Brazeの `/users/track` リクエストの本文フォーマットに準拠しなければなりません。
 
@@ -78,11 +78,11 @@ Olo は、Olo ウェブフック設定プロセスを完了する前に、Test E
 
 ## Oloウェブフックのデータ変換の例
 
-このセクションには、出発点として使用できるテンプレートの例が含まれている。ゼロから始めるのも、特定のコンポーネントを削除するのも自由だ。
+このセクションには、出発点として使用できるテンプレートの例が含まれている。ゼロから作成するか、必要に応じて特定のコンポーネントを削除することができます。
 
-各テンプレートでは、`/users/track` リクエストを構築するために、`brazecall` という変数を定義している。
+各テンプレートでは、`/users/track` リクエストを作成するための変数 `brazecall` がコードにより定義されます。
 
-`/users/track `リクエストが`brazecall` に割り当てられた後、出力を作成するために明示的に`brazecall` を返す。
+`/users/track ` リクエストが `brazecall` に割り当てられた後、明示的に `brazecall` を返して出力を作成します。
 
 ### 単一イベント変換
 
@@ -143,9 +143,9 @@ return brazecall;
 
 ## マルチイベント変換
 
-Olo は、各 webhook の`X-Olo-Event-Type` ヘッダー内にイベントタイプを送信する。単一の変換内で複数の Olo webhook イベントをサポートするには、条件付きロジックを使用して、このヘッダー型の値に基づいて webhook ペイロードを変換する。  
+Olo は、各Webhookの `X-Olo-Event-Type` ヘッダーにイベントタイプを入れて送信します。単一の変換内で複数の Olo webhook イベントをサポートするには、条件付きロジックを使用して、このヘッダー型の値に基づいて webhook ペイロードを変換する。  
 
-以下の変換例では、JavaScriptは`UserSignedUp` と`OrderPlaced` のイベントに対して特定のペイロードを作成している。さらに、`else` の条件は、`UserSignedUp` と`OrderPlaced` のX-Olo-Event-TypeヘッダーのないBrazeに送られたOloイベントのペイロードを処理する。
+以下の変換例では、JavaScriptは`UserSignedUp` と`OrderPlaced` のイベントに対して特定のペイロードを作成している。さらに `else` 条件により、`UserSignedUp` および `OrderPlaced` の X-Olo-Event-Type ヘッダーなしで Braze に送信されたすべての Olo イベントのペイロードが処理されます。
 
 ```javascript
 // captures the value within the X-Olo-Event-Type header for use in the conditional logic
@@ -240,21 +240,21 @@ if (event_type == "UserSignedUp") {
 return brazecall;
 ```
 
-### ステップ 4:Oloウェブフックを公開する
+### ステップ4:Oloウェブフックを公開する
 
-BrazeでData Transformationを有効化したら、Oloダッシュボード内の[セルフサービスwebhooksツールを使って][2]webhookを公開する。ウェブフックがパブリッシュされると、データ変換はOloウェブフックのイベントメッセージを受信し始める。
+Braze で Data Transformation を有効化したら、Olo ダッシュボード内の[セルフサービス Webhook ツール][2]を使用して Webhook を公開します。Webhook が公開されると、Data Transformation はOlo Webhook イベントメッセージの受信を開始します。
 
 ## 知っておくべきこと
 
-### リトライ
+### 再試行
 
-Oloは、HTTPレスポンスステータスコードが`429 - Too Many Requests` 、または`5xx` （ゲートウェイのタイムアウトやサーバーエラーなど）の範囲になったWebhookコールを、リクエストをドロップする前に、24時間以内に50回まで再試行する。
+Olo は、HTTP 応答ステータスコードが`429 - Too Many Requests`、または`5xx` 範囲内のコード （ゲートウェイのタイムアウトやサーバーエラーなどに起因する） である場合、リクエストをドロップするまで、24時間以内に50回までWebhook 呼び出しを再試行します。
 
-### 少なくとも1回の配達
+### 1回以上の配信
 
-ウェブフック呼び出しの結果、HTTPレスポンスステータスコードが`429 - Too Many Requests` 、または`5xx` （ゲートウェイのタイムアウトやサーバーエラーなど）の範囲になった場合、Oloは24時間以内に50回までメッセージを再試行してからあきらめる。
+Webhook 呼び出しの結果、HTTP 応答ステータスコードが`429 - Too Many Requests` または`5xx` 範囲内のコード (ゲートウェイのタイムアウトやサーバーのエラーなどに起因する) である場合、Olo は24時間以内に最大50回メッセージを再試行してから、処理をあきらめます。
 
-したがって、Webhookはサブスクライバーによって複数回受信される可能性がある。`X-Olo-Message-Id` ヘッダーをチェックすることで、重複を無視するのは購読者次第である。
+したがって、Webhookはサブスクライバーによって複数回受信される可能性がある。サブスクライバーは、`X-Olo-Message-Id` ヘッダーを確認して重複を無視するかどうかを決定します。
 
 
 [1]: https://www.olo.com/

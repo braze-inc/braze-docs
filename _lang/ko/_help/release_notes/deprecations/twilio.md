@@ -12,7 +12,7 @@ channel:
 # Twilio
 
 {% alert warning %}
-Twilio 웹훅 통합에 대한 지원은 2020년 1월 31일에 중단됩니다. SMS 서비스를 Braze와 함께 계속 이용하려면 [SMS 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)를 참조하세요.
+Twilio 웹훅 통합에 대한 지원은 2020년 1월 31일에 중단됩니다. Braze에서 여전히 SMS 서비스에 액세스하려면 [SMS 문서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) 참조하세요.
 {% endalert %}
 
 이 예제에서는 Braze 웹훅 채널을 구성하여 Twilio의 [메시지 전송 API][20]를 통해 사용자에게 SMS 및 MMS를 보냅니다. 사용자의 편의를 위해 대시보드에 Twilio 웹훅 템플릿이 포함되어 있습니다.
@@ -38,7 +38,7 @@ Twilio API는 요청 본문이 URL 인코딩되기를 기대하므로 Braze 웹�
 
 ## 요청 헤더 및 메서드
 
-Twilio는 두 개의 요청 헤더, 요청 콘텐츠-유형 및 \[HTTP 기본 인증][32] 헤더가 필요합니다. 웹훅 작성기 옆에 있는 톱니바퀴 아이콘을 클릭한 다음 *새 쌍 추가*를 두 번 클릭하여 웹훅에 추가하십시오.
+Twilio는 두 개의 요청 헤더, 요청 콘텐츠-유형 및 [HTTP 기본 인증][32] 헤더가 필요합니다. 웹훅 작성기 옆에 있는 톱니바퀴 아이콘을 클릭한 다음 *새 쌍 추가*를 두 번 클릭하여 웹훅에 추가하십시오.
 
 헤더 이름 | 헤더 값
 --- | ---

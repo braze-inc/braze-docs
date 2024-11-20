@@ -1,6 +1,6 @@
 ---
-nav_title: 電流用m粒子
-article_title: 電流用m粒子
+nav_title: mParticle と Currents
+article_title: mParticle と Currents
 alias: /partners/mparticle_for_currents/
 description: "この参考記事では、Braze Currentsと、マーケティング・スタック内のソース間で情報を収集し、ルーティングする顧客データ・プラットフォームであるmParticleとのパートナーシップについて概説している。"
 page_type: partner
@@ -9,71 +9,80 @@ search_tag: Partner
 
 ---
 
-# 電流用m粒子
+# mParticle と Currents
 
-> [mParticleは](https://www.mparticle.com)、複数のソースから情報を収集し、マーケティング・スタックの他のさまざまな場所にルーティングする顧客データ・プラットフォームである。
+> [mParticle](https://www.mparticle.com) は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォームです。
 
-BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。Currentsを使えば、データをmParticleに接続し、成長スタック全体で実行可能にすることもできる。 
+BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)使えば、データをmParticleに接続して、成長スタック全体でアクション可能にすることもできる。 
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| mパーティクルアカウント | このパートナーシップを利用するには、[mParticleのアカウントが](https://app.mparticle.com/login)必要である。 |
-| Currents | データをmParticleにエクスポートするには、アカウントに[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)設定する必要がある。 |
-| mParticleサーバーからサーバーへのキー<br><br>mParticleサーバー間の秘密 | これらは、mParticleのダッシュボードに移動し、mParticleがiOS、Android、およびWebプラットフォーム用のBraze相互作用データを受信できるようにするために[必要なフィードを](#step-1-create-feeds)作成することで取得できる。|
-{: .reset-td-br-1 .reset-td-br-2}
+| Currents | mParticle にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
+| mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
+| mParticleのサーバー間キーとシークレット | これらを取得するには、mParticle ダッシュボードに移動し、mParticle が iOS、Android、および Web プラットフォームの Braze インタラクションデータを受信できるようにするために[必要なフィード](#step-1-create-feeds)を作成します。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## mParticle認証情報について
+
+mParticleには、アプリレベルとワークスペースレベルの認証情報があり、イベントの送信方法に影響を与える。
+
+- **アプリレベル：**mParticleは各アプリごとにイベントを分離するため、iOSアプリに与えるアプリレベルの認証情報は、iOS固有のイベントを送信するためにのみ使用できる。
+- **ワークスペースレベル：**mParticleは、（アプリ固有**ではない**）すべてのイベントをグループ化する。つまり、アプリグループに与えるワークスペースレベルの認証情報は、アプリ固有ではないすべてのイベントの送信に使用される。
+
+これは、mParticleが個々のアプリに基づいた「フィード」をインジェストしていると考えることができる。例えば、iOS用、Android用、Web用のアプリを1つずつ用意すると、イベントがバラバラになってしまう。つまり、各アプリに同じ認証情報を提供すると、1つのmParticleフィードが、重複することなく、すべてのアプリのすべてのデータを受信するために使用される。
 
 ## 統合
 
 ### ステップ1:フィードを作成する
 
-mParticleの管理者アカウントから、**「設定」>「入力**」に移動する。mParticle**ディレクトリで** **Brazeを**見つけ、フィード統合を追加する。
+mParticle 管理者アカウントから、**[Setup] > [Inputs]** に移動します。mParticle**Directory** で **Braze** を見つけ、フィード統合を追加します。
 
-Brazeのフィード統合は、iOS、Android、Web、Unboundの4つのフィードに対応している。バインドされていないフィードは、プラットフォームに接続されていない電子メールなどのイベントに使用できる。各メイン・プラットフォーム・フィードの入力を作成する必要がある。**Setup > Inputsの** **Feed Configurations**タブで追加入力を作成できる。
+Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィードをサポートしています。バインドされていないフィードは、プラットフォームに接続されていない電子メールなどのイベントに使用できる。メインプラットフォームフィードごとに入力を作成する必要があります。[**Feed Configurations**] タブの **[Setup] > [Input]** から追加の入力を作成できます。
 
 ![][1]
 
-各フィードについて、**「Act as Platform**」で、一致するプラットフォームをリストから選択する。**act-as**フィードを選択するオプションが表示されない場合、データは結合されていないものとして扱われるが、データウェアハウスの出力に転送することは可能である。
+フィードごとに、[**Act as Platform**] で対応するプラットフォームをリストから選択します。**act-as**フィードを選択するオプションが表示されない場合、データは結合されていないものとして扱われるが、データウェアハウスの出力に転送することは可能である。
 
-![最初の統合ダイアログボックスが表示され、設定名を入力し、フィードのステータスを決定し、動作するプラットフォームを選択するよう促される。][2]{: style="max-width:40%;"} ![サーバー間キーとサーバー間シークレットを示す2つ目の統合ダイアログボックス。][3]{: style="max-width:37%;"}
+![設定名を入力し、フィードのステータスを決定し、act as platform を選択することを求める最初の統合ダイアログボックス。][2]{: style="max-width:40%;"} ![サーバー間キーとサーバー間シークレットを示す2つ目の統合ダイアログボックス。][3]{: style="max-width:37%;"}
 
-各入力を作成すると、mParticleはキーとシークレットを提供する。これらのクレデンシャルをコピーし、各クレデンシャルのペアがどのフィードのものであるかをメモしておくこと。
+各入力を作成すると、mParticleはキーとシークレットを提供する。これらの認証情報をコピーし、各認証情報のペアがどのフィードのものであるかをメモしておいてください。
 
-### ステップ2:電流を作る
+### ステップ2:Current を作成する
 
-Brazeで、**Current > + Create Current > Create mParticle Exportに**移動する。統合名、連絡先メールアドレス、各プラットフォームのmParticle APIキーとmParticleシークレットキーを入力する。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に、**Launch Currentを**クリックする。
+Braze で **[Currents] > [+ Currents を作成] > [mParticle エクスポートを作成]** に移動します。統合名、連絡先メールアドレス、各プラットフォームの mParticle API キーと mParticle シークレットキーを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
-![BrazeのmParticle Currentsページ。] （{% image_buster /assets/img_archive/currents-mparticle-edit.png %} ）。
+![BrazeのmParticle Currentsページ。統合名、連絡先メール、API キー、シークレットキーのフィールドがある。]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-mParticle API KeyとmParticle Secret Keyを最新の状態に保つことが重要で、コネクタの認証情報が期限切れになると、コネクタはイベントの送信を停止する。この状態のまま **48 時間**を超えると、コネクターのイベントがドロップし、データが永久に喪失します。
+mParticle API キーと mParticle シークレットキーを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。この状態のまま **48 時間**を超えると、コネクターのイベントがドロップし、データが永久に喪失します。
 {% endalert %}
 
-mParticleに送信されるすべてのイベントには、`customerid` としてユーザーの`external_user_id` が含まれる。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータを送信しない。mParticleの`external_user_id` 、デフォルトの`customerid` 以外のIDにマッピングしたい場合は、Braze CSMに連絡すること。 
+mParticleに送信されるすべてのイベントには、ユーザーの `external_user_id` が `customerid` として含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータを送信しない。mParticle で、デフォルトの `customerid` ではない別の ID に `external_user_id` をマッピングする場合は、Braze カスタマーサクセスマネージャーにお問い合わせください。 
 
-## 百花繚乱イベントをサポート
+## サポートされている Currents イベント
 
 Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)および[メッセージエンゲージメントイベントの]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)用語集に記載されている以下のデータをmParticleにエクスポートすることをサポートしている：
 
 ### 行動
-- アンインストールする： `users.behaviors.Uninstall`
-- サブスクリプション（グローバルな状態変更）： `users.behaviors.subscription.GlobalStateChange`
-- サブスクリプション・グループ（状態変更）： `users.behaviors.subscriptiongroup.StateChange`
+- アンインストール: `users.behaviors.Uninstall`
+- サブスクリプション(グローバル状態の変更): `users.behaviors.subscription.GlobalStateChange`
+- サブスクリプショングループ(状態の変更): `users.behaviors.subscriptiongroup.StateChange`
   
 ### キャンペーン
-- 中止する： `users_campaigns_abort`
-- コンバージョンだ： `users.campaigns.Conversion`
-- エンローリンコントロール `users.campaigns.EnrollInControl`
+- 中止: `users_campaigns_abort`
+- コンバージョン: `users.campaigns.Conversion`
+- EnrollinControl: `users.campaigns.EnrollInControl`
   
 ### キャンバス
-- 中止する： `users_canvas_abort`
-- コンバージョンだ： `users.canvas.Conversion`
-- エントリーする： `users.canvas.Entry`
-- 退場（マッチした観客、行われたイベント）
+- 中止: `users_canvas_abort`
+- コンバージョン: `users.canvas.Conversion`
+- エントリ:: `users.canvas.Entry`
+- 離脱 (オーディエンス照合、実行済みのイベント)
   - `users.canvas.exit.MatchedAudience`
   - `users.canvas.exit.PerformedEvent`
-- 実験ステップ（コンバージョン、スプリット・エントリー）
+- 実験ステップ (コンバージョン、分割エントリ)
   - `users.canvas.experimentstep.Conversion`
   - `users.canvas.experimentstep.SplitEntry`
 
@@ -84,12 +93,12 @@ Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_
   - `users.messages.contentcard.Dismiss`
   - `users.messages.contentcard.Impression`
   - `users.messages.contentcard.Send`
-- 電子メール（中止、バウンス、クリック、配信、マークアスパム、開封、送信、ソフトバウンス、購読解除）
+- メール (中止、バウンス、クリック、配信、スパムとしてマーク、開封、送信、ソフトバウンス、配信停止)
 - アプリ内メッセージ（中止、クリック、インプレッション）
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- プッシュ通知（中止、バウンス、開封、送信）
+- プッシュ通知 (中止、バウンス、開封、送信)
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
   - `users.messages.pushnotification.Open`
@@ -114,7 +123,7 @@ Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_
   - `users.messages.whatsapp.Send`
 
 
-mParticleの統合についての詳細は、[こちらの](http://docs.mparticle.com/integrations/braze/feed)ドキュメントを参照されたい。
+mParticle 統合の詳細については、[こちらのドキュメント](http://docs.mparticle.com/integrations/braze/feed)を参照してください。
 
 [1]: {% image_buster /assets/img/braze-feed-inputs.png %}
 [2]: {% image_buster /assets/img/braze-feed-act1.png %}

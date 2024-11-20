@@ -36,7 +36,7 @@ scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `userName@example.com` | 필수 | 문자열 | 사용자의 이메일. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
@@ -46,7 +46,7 @@ X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
-## 예시 요청
+## 요청 예시
 ```json
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \

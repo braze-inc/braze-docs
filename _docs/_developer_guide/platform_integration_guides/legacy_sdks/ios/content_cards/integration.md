@@ -85,7 +85,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `url` | The URL that will be opened after the card is clicked on. It can be an HTTP(s) URL or a protocol URL.|
 | `openURLInWebView` | This property determines whether the URL will be opened within the app or in an external web browser.|
 | `extras`| An optional `NSDictionary` of `NSString` values.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Banner Content Card properties - ABKBannerContentCard
 
@@ -93,7 +93,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 |---|---|
 | `image` | This property is the URL of the card's image.|
 | `imageAspectRatio` | This property is the aspect ratio of the card's image and serves as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Captioned image Content Card properties - ABKCaptionedImageCard
 
@@ -104,7 +104,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `title` | The title text for the card.|
 | `cardDescription` | The body text for the card.|
 | `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Classic Content Card properties - ABKClassicContentCard
 
@@ -114,7 +114,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `title` | The title text for the card. |
 | `cardDescription` | The body text for the card. |
 | `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action and direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Card methods
 
@@ -124,7 +124,7 @@ Braze offers three Content Card types: banner, captioned image, and classic. Eac
 | `logContentCardClicked` | Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. |
 | `logContentCardDismissed` | Manually log a dismissal to Braze for a particular card. The SDK will only log a card dismissal if the card's `dismissed` property is not already set to `true`. |
 | `isControlCard` | Determine if a card is the Control card for an A/B test. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more details, refer to the [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
 

@@ -17,7 +17,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed via API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
+Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -58,7 +58,7 @@ For each request component listed in the following table, one of `external_id`, 
 | `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
 
@@ -286,9 +286,9 @@ If the `external_id` exists, the most recently updated profile with an external 
 A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 

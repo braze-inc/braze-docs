@@ -38,7 +38,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
 | `sort_direction` | Facultatif | Chaîne de caractères | Indiquez la valeur `asc` pour trier les désinscriptions de la plus ancienne à la plus récente. Indiquez la valeur `desc` pour trier de la plus récente à la plus ancienne. Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus récent au plus ancien. |
 | `email` | Facultatif <br>(voir la note) | Chaîne de caractères | S’il est fourni, nous renverrons si l’utilisateur s’est désinscrit ou pas. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Vous devez fournir une `end_date`, ainsi qu’un `email` ou une `start_date`.
@@ -46,7 +46,7 @@ Vous devez fournir une `end_date`, ainsi qu’un `email` ou une `start_date`.
 
 Si votre plage de dates dépasse le nombre `limit` de désinscriptions, vous devrez effectuer plusieurs appels d’API, en augmentant à chaque fois le `offset` jusqu’à ce qu’un appel renvoie un résultat inférieur à `limit` ou égal à zéro.
 
-## Exemple de demande 
+## Exemple de demande
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

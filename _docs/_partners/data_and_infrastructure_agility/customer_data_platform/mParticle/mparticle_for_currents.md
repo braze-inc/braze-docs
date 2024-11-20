@@ -22,7 +22,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | Currents | In order to export data back into mParticle, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
 | mParticle server-to-server key and secret | These can be obtained by navigating to your mParticle dashboard and creating the [necessary feeds](#step-1-create-feeds) that allow mParticle to receive Braze interaction data for iOS, Android, and Web platforms.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## About mParticle credentials
 

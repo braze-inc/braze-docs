@@ -102,7 +102,7 @@ From there, you can paste this code into a message within the dashboard.
 
 Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. 
 
-When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes. 
+When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes.
 
 If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. For example, if a user receives two messages through two channels, they will receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
 
@@ -129,9 +129,11 @@ This code count can also be found when revisiting a pre-existing promotion code 
 For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
 
 - The same promotion codes are used across channels in a multichannel message.
-- No extra promotion codes are used up if a message fails or aborts.
+- Extra promotion codes are not used if a message fails or aborts.
 
 If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
+
+If a user enters a new Canvas step or re-enters a Canvas, and the promotion code Liquid snippet is applied again for a message to that user, a new promotion code will be used.
 
 ### Use case
 
@@ -176,7 +178,6 @@ The same promotion code will be templated for all instances of the Liquid snippe
 If the message should have contained a promotion code from an empty or expired list, the message will be canceled.
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, message will send normally.
-
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}

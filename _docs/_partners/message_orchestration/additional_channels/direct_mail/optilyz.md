@@ -21,7 +21,7 @@ Use the optilyz and Braze webhook integration to send your customers direct mail
 |optilyz account | An optilyz account is required to take advantage of this partnership. |
 | optilyz API key<br><br>`<OPTILYZ_API_KEY>`| Your optilyz customer success manager will provide you with your optilyz API key.<br><br>This API key will enable you to connect your Braze and optilyz accounts. |
 | optilyz automation ID<br><br>`<OPTILYZ_AUTOMATION_ID>` | The automation ID can be found in a box on the page header.<br><br>When logged into optilyz, you can navigate to the automation you want to send data into.<br>The automation must be activated first. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Use cases
 

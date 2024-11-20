@@ -52,9 +52,9 @@ Xcode プロジェクトでアプリの `PrivacyInfo.xcprivacy` ファイルを�
 
 ![コンテキストメニューが開き、「Raw Keys and Values」が強調表示された Xcode プロジェクト。]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
 
-\[**App Privacy Configuration**] で \[**NSPrivacyTracking**] を選択し、値を \[**YES**] に設定します。
+[**App Privacy Configuration**] で [**NSPrivacyTracking**] を選択し、値を [**YES**] に設定します。
 
-![\[NSPrivacyTracking] が \[YES] に設定されて開かれている「PrivacyInfo.xcprivacy」ファイル。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
+![[NSPrivacyTracking] が [YES] に設定されて開かれている「PrivacyInfo.xcprivacy」ファイル。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
 
 **App Privacy Configuration**」で**「NSPrivacyTrackingDomains**」を選択する。ドメイン配列で新しい要素を追加し、その値を、`sdk-tracking` 接頭辞を付けて [`AppDelegate` に以前に追加した]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate)エンドポイントに設定します。
 

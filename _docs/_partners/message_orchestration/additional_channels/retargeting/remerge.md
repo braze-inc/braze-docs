@@ -23,7 +23,7 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 | Android app ID | Your unique Braze application identifier for Android (such as "com.example"). |
 | iOS app ID | Your unique Braze application identifier for iOS (such as "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

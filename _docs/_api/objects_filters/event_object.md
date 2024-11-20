@@ -69,9 +69,9 @@ Property values can be any of the following data types:
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
 | Objects | Objects will be ingested as strings. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
+Event property objects that contain array or object values can have an event property payload of up to 100&nbsp;KB.
 
 ### Event property persistence
 Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events][5], which details the various approaches to storing event property values long-term.

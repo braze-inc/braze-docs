@@ -35,7 +35,7 @@ description: "이 문서에서는 유효하지 않은 전화번호를 조회하�
 | `offset` | 선택 사항 | 정수 | 검색할 목록의 시작점(선택 사항)입니다. |
 | `phone_numbers` | 선택 사항 <br>(참고 참조) | e.164 형식의 문자열 배열 | 제공된 전화번호가 유효하지 않은 것으로 확인되면 해당 전화번호를 반환해 드립니다. |
 | `reason` | 선택 사항 <br>(참고 참조) | 문자열 | 사용 가능한 값은 "provider_error"(제공업체 오류로 인해 휴대폰에서 SMS를 수신할 수 없음) 또는 "deactivated"(휴대폰 번호가 비활성화됨)입니다. 생략하면 모든 사유가 반환됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `start_date` 와 `end_date` 또는 `phone_numbers` 중 하나를 제공해야 합니다. `start_date`, `end_date`, `phone_numbers` 세 가지를 모두 제공하면 주어진 전화번호를 우선적으로 처리하고 날짜 범위는 무시합니다.

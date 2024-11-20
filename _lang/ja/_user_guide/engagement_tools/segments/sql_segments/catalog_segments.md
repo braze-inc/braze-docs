@@ -20,29 +20,29 @@ tool: Segments
 
 ## カタログセグメントの作成
 
-1. \[**セグメントエクステンション**] > \[**エクステンションを新規作成**] > \[**テンプレートで開始**] に移動し、テンプレート \[**カタログセグメント**] を選択します。<br>!["Catalog Segment&quot を使用したモード。作成するテンプレートとして選択されます。][1]{: style="max-width:70%" }
+1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレート [**カタログセグメント**] を選択します。<br>![作成するテンプレートとして「カタログセグメント」を選択したモーダル。][1]{: style="max-width:70%" }
 
 {: start="2"}
 2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前生成されたテンプレートを持つSQL エディタ。][2]{: style="max-width:70%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
 
-3. \[**変数**] タブを使用して、セグメントを生成する前にテンプレートに必要なフィールドを指定します。<br>Braze がカタログアイテムへのエンゲージメントに基づいてユーザーを識別するには、次のことを行う必要があります。<br> \- カタログフィールドを含むカタログを選択します <br> \- イベントプロパティを含むカスタムイベントを選択します <br> \- カタログフィールドとイベントプロパティの値を一致させる
+3. [**変数**] タブを使用して、セグメントを生成する前にテンプレートに必要なフィールドを指定します。<br>Braze がカタログアイテムへのエンゲージメントに基づいてユーザーを識別するには、次のことを行う必要があります。<br> \- カタログフィールドを含むカタログを選択します <br> \- イベントプロパティを含むカスタムイベントを選択します <br> \- カタログフィールドとイベントプロパティの値を一致させる
 
 変数を選択するためのガイドラインを次に示します。
 
 | 可変フィールド | 説明 |
 | --- | --- |
-| `Catalog` | ユーザーs を対象とするために使用しているカタログの名前。 |
-| `Catalog field`| `Custom event property` と同じ値を含むカタログ内のフィールド。これは多くの場合、ID の一種です。e コマース ユースケースでは、これは`shopify_id` です。 |
-| `Custom event` | カスタムイベントの名前。これは、`Catalog field` に一致するプロパティを含む同じイベントです。e コマース ユースケースでは、これは`Made Order` です。 |
-| `Custom event property` | カスタムイベント プロパティの名前。`Catalog field` と一致します。e コマースのサンプルユースケースでは、次のようになります `Shopify_ID.`|
-{: .reset-td-br-1 .reset-td-br-2}
+| `Catalog` | ユーザーのターゲット設定に使用しているカタログの名前。 |
+| `Catalog field`| `Custom event property` と同じ値を含むカタログ内のフィールド。これは多くの場合、ID の一種です。e コマースのユースケースでは `shopify_id` になります。 |
+| `Custom event` | カスタムイベントの名前。これは、`Catalog field` と一致する値を持つプロパティを含む同じイベントです。e コマースのユースケースでは `Made Order` になります。 |
+| `Custom event property` | カスタムイベントプロパティの名前。値を `Catalog field` と一致させます。e コマースのサンプルユースケースでは、`Shopify_ID.` になります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
 4\.必要に応じて、ユースケースの追加のオプションフィールドに入力して、カタログ内の特定のフィールド値でセグメント化します。
 - `Catalog field`:このカタログ内の特定のフィールド (列名)
 - `Value`:そのフィールドまたは列内の特定の値 <br><br> ヘルスケアアプリを例にとると、予約できる各医師のカタログ内に、`vision` や `dental` などの値を含む `specialty` というフィールドがあるとします。値が `dental` の医師を受診したユーザーをセグメント化するには、`Catalog field` として `specialty` を選択し、`Value` として `dental` を選択します。
 
-5. SQL セグメントを作成したら、\[**プレビューの実行**] をクリックして、クエリがユーザーを返すかどうか、またはエラーがあるかどうかを確認することをお勧めします。[クエリ結果のプレビュー]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results)、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions)の管理などの詳細については、「[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)」を参照してください。 
+5. SQL セグメントを作成したら、[**プレビューの実行**] をクリックして、クエリがユーザーを返すかどうか、またはエラーがあるかどうかを確認することをお勧めします。[クエリ結果のプレビュー]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results)、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions)の管理などの詳細については、「[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)」を参照してください。 
 
 ## ユースケース
 
@@ -59,19 +59,19 @@ tool: Segments
 | 変数 | プロパティ |
 | --- | --- |
 | `Catalog`| 医師 |
-| `Catalog field` | 医師ID |
+| `Catalog field` | 医師 ID |
 | `Custom event`| 予約訪問|
-| `Custom event property` | 医師ID |
+| `Custom event property` | 医師 ID |
 | `(Under Filter SQL Results) Catalog field` | スペシャリティ |
 | `(Under Filter SQL Results) Value`| 歯科 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### SaaS プラットフォーム
 
-たとえば、B2B SaaS プラットフォームがあり、現存する顧客の従業員であるs をSegment ユーザーしたいとします。また、次のものもあります。
+たとえば、B2B SaaSプラットフォームがあり、既存の顧客の従業員であるユーザーをセグメント化したいとします。また、次のものもあります。
 
 - 現在SaaS プラットフォームを使用しているさまざまなアカウントを含むカタログ`Accounts`。それぞれに次のように割り当てられます `account ID`
-- "account ID" " "account ID&quotと同じ値を共有するプロパティ;アカウントID" カタログのフィールドを持つカスタムイベント`Event Attendance`
+- カタログの "アカウント ID" フィールドと同じ値を共有する "アカウント ID" プロパティを持つカスタムイベント `Event Attendance`
 - `enterprise` 値を含むカタログ内の`Classification` フィールド
 
 カタログセグメントは、次の変数を使用して設定します。
@@ -80,11 +80,11 @@ tool: Segments
 | --- | --- |
 | `Catalog` | アカウント |
 | `Catalog field `| アカウントID |
-| `Custom event` | イベント出席 |
+| `Custom event` | イベント参加 |
 | `Custom event property` | アカウントID |
 | `(Under Filter SQL Results) Catalog field` | 分類 (Classification) |
 | `(Under Filter SQL Results) Value` | 企業 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## よくある質問
 

@@ -1,6 +1,6 @@
 ---
-nav_title: ダイナミック・コード生成
-article_title: パンチ・ダイナミック・コード生成
+nav_title: 動的コード生成
+article_title: Punchh 動的コード生成
 page_order: 2
 description: "このリファレンス記事では、BrazeにおけるPunchh動的コード生成の使い方を概説している。"
 page_type: partner
@@ -18,25 +18,25 @@ Punchhクーポン・フレームワークとBrazeを使えば、以下のよう
 
 ## 動的なクーポンコード生成を統合する
 
-### ステップ 1:クーポン・キャンペーンを作成する
+### ステップ1:クーポン・キャンペーンを作成する
 
 1. Punchh クーポン・キャンペーンを使って、以下の画像のようにダイナミック・ジェネレーション・クーポン・キャンペーンを作成する。
 2. Punchhクーポン・フレームワークは、ダイナミックなクーポン生成を可能にするために、以下のパラメーターを生成する：
     - 動的クーポン生成トークン：これは、暗号化のためにシステムが生成したセキュリティ・トークンである。
     - 動的クーポン生成URL：このURLは、ビジネスの要求に応じて、リンクまたは画像としてメールに埋め込まれる。
 
-![]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
+![Punchh でクーポンキャンペーンを作成するためのフォーム。]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### ステップ2:署名を生成し、URLを構築する
 
 JWT.IO ライブラリは、JSONウェブトークンをデコード、検証、生成する。これは、2つの当事者間でクレームを安全に表現するための、オープンで業界標準のRFC 7519方式である。 
 
-ゲストとクーポンの一意性を確保するために、以下の`ClaimType` ：
+次の`ClaimType` の名前を使用して、ゲストとクーポンの一意性を確保できます。
 
-- `campaign_id`これはシステムが生成したパンチキャンペーンIDを表す。
-- `email`ユーザーのメールアドレスを表す。 
-- `first_name`ユーザーのファーストネームをキャプチャする。 
-- `last_name`ユーザーの姓をキャプチャする。
+- `campaign_id`: システム生成の Punchh キャンペーン ID を表します。
+- `email`: ユーザーのメールアドレスを表します。 
+- `first_name`:ユーザーの名を取得します。 
+- `last_name`: ユーザーの姓を取得します。
 
 Punchhのダイナミック・クーポン・コードAPIを使用するには、JWTトークンを構築する必要がある。Brazeダッシュボードの使用したいチャンネルのメッセージ本文に、以下のLiquidテンプレートを追加する：
 
@@ -78,11 +78,11 @@ Punchhのダイナミック・クーポン・コードAPIを使用するには�
 | `DYNAMIC_COUPON_GENERATION_TOKEN` | 動的クーポン生成トークン。 |
 | `CAMPAIGN_ID`                     | キャンペーンID                     |
 
-### ステップ3:クーポンコードをメッセージ本文に追加する
+### ステップ 3:クーポンコードをメッセージ本文に追加する
 
-#### パンチ・ウェブページへのリンク
+#### Punchh Web ページへのリンク
 
-Puncchがホストするウェブページにリンクするには、[先ほど作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成URLに`{% raw %}{{jwt}}{% endraw %}` 。リンクは以下のようなものであるべきだ： 
+Puncch がホストする Web ページにリンクするには、[以前に作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成 URLに `{% raw %}{{jwt}}{% endraw %}` を追加します。リンクは以下のようなものであるべきだ： 
 
 {% raw %}
 ```
@@ -96,7 +96,7 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 
 #### JSON経由でコードをプレーンテキストとして抽出する
 
-JSONレスポンスを返すには、[先ほど作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成URLに`{% raw %}{{jwt}}{% endraw %}` 、URL文字列のトークンの後に`.json` 。リンクは以下のようなものであるべきだ：
+JSON 応答を返すには、[以前に作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成 URL に`{% raw %}{{jwt}}{% endraw %}` を追加し、URL 文字列のトークンの後に `.json` を追加します。リンクは以下のようなものであるべきだ：
 
 {% raw %}
 ```liquid
@@ -117,8 +117,8 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json
 
 クーポンコードを画像内にリンクする：
 
-1. [先ほど作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成URLに`{% raw %}{{jwt}}{% endraw %}` を追加する。
-2. URL文字列のトークンの後に`.png` 。
+1. [以前に作成した](#step-1-create-a-coupon-campaign-in-punchh)動的生成 URL に `{% raw %}{{jwt}}{% endraw %}` を追します。
+2. URL 文字列のトークンの後に`.png` を追加します。
 3. リンクをHTML{% raw %}`<img>`{% endraw %} タグに埋め込む。
 
 {% tabs ローカル %}
@@ -139,11 +139,11 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json
 
 | エラーコード | エラーメッセージ | 説明 |
 | --- | --- | --- |
-| `coupon_code_expired` | このプロモーションコードの有効期限は切れている | コードは設定された有効期限後に使用される。 |
+| `coupon_code_expired` | このプロモーションコードの有効期限は切れている | このコードが、設定された有効期限日よりも後に使用されています。 |
 | `coupon_code_success` | おめでとう、プロモコードは正常に適用された。 | コードは正常に使用されている。 |
 | `coupon_code_error` | 有効なプロモーションコードを入力する | 使用されたコードは無効である。 |
-| `coupon_code_type_error` | クーポンの種類が正しくない。このクーポンは`%{coupon_type}` でのみ利用できる。 | POSで使用するはずのコードをモバイルアプリで使用すると、このエラーが発生する。 |
-| `usage_exceeded` | 本クーポンコードのキャンペーンは終了した。次回はぜひ挑戦してほしい。 | コードの使用量が、使用を許可されたユーザー数を超えている。例えば、ダッシュボードのコンフィギュレーションが3,000人のユーザーによるコードの使用を許可しており、ユーザー数が3,000人を超えた場合、このエラーが発生する。 |
-| `usage_exceeded_by_guest` | このプロモコードはすでに処理されている。 | ユーザーによるコードの使用は、ユーザーが使用できる回数を超えている。例えば、ダッシュボードの設定では、1つのコードをユーザーが3回使用することができる。それ以上使用すると、このエラーが発生する。 |
+| `coupon_code_type_error` | Incorrect coupon type.このクーポンは`%{coupon_type}` でのみ利用できる。 | POSで使用するはずのコードをモバイルアプリで使用すると、このエラーが発生する。 |
+| `usage_exceeded` | 本クーポンコードのキャンペーンは終了した。Please try next time. | コードの使用量が、使用を許可されたユーザー数を超えている。例えば、ダッシュボードのコンフィギュレーションが3,000人のユーザーによるコードの使用を許可しており、ユーザー数が3,000人を超えた場合、このエラーが発生する。 |
+| `usage_exceeded_by_guest` | このプロモコードはすでに処理されている。 | ユーザーによるコードの使用は、ユーザーが使用できる回数を超えている。たとえば、ダッシュボード設定ではユーザーが1つのコードを3回使用できます。それ以上使用すると、このエラーが発生します。 |
 | `already_used_by_other_guest` | このプロモコードはすでに他のゲストが使用している。 | 別のユーザーがすでにこのコードを使用している。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

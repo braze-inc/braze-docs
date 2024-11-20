@@ -11,14 +11,14 @@ description: "この参考記事では、Android または FireOS アプリケ�
 
 # アクセシビリティ
 
-> この参考記事では、Android または FireOS アプリケーションへのアプリ内メッセージの読み上げなど、特定の Android SDK アクセシビリティ機能を実装する方法について説明します。Braze Android SDK は、[Android アクセシビリティガイドライン][1]に従っています。
+> この参考記事では、Android または FireOS アプリケーションへのアプリ内メッセージの読み上げなど、特定の Android SDK アクセシビリティ機能を実装する方法について説明します。Braze Android SDK は、[Android アクセシビリティガイドライン](https://developer.android.com/guide/topics/ui/accessibility)に従っています。
 
 ## アプリ内メッセージの読み上げ
 
 Android の読み上げ / 「VoiceOver」で、アプリ内メッセージの表示中にその背後にある内容が読み取られないようにするには、以下の SDK 設定を有効にしてください。
 
 {% tabs %}
-{% tab Braze XML %}
+{% tab ろう付けXML %}
 
 ```xml
 <bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
@@ -46,4 +46,3 @@ Braze.configure(this, brazeConfigBuilder.build());
 {% endtabs %}
 
 
-[1]: https://developer.android.com/guide/topics/ui/accessibility

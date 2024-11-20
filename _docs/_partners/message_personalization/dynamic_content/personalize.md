@@ -20,7 +20,7 @@ The Braze and Personalize.AI integration allows you to export data from Personal
 | Personalize.AI instance | A Personalize.AI instance is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -68,7 +68,7 @@ For example, here is a set of customer attributes as they relate to an example c
 | `C4_Offer_Value` | $3 |
 | `C4_Item_Recom` | "Caesar Salad" |
 | `C4_Subject_Line` | "We miss you" |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

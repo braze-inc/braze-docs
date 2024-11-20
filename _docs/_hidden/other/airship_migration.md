@@ -14,7 +14,7 @@ page_type: reference
 Braze uses Apple's device token for iOS.
 
 | **Braze Perspective:**<br>We ensure customers can continuously communicate with their users (such as push notifications) when in the process of migrating from Airship to Braze (Whether it be a hard cutover to 100% Braze or a granular transition such as 50% Airship 50% Braze, etc.). |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 #### Push token migration
 
@@ -44,7 +44,7 @@ At a high level, Braze is a truly unique tool in the customer engagement space. 
 Braze requires separate channels for push (one for iOS, one for Android).
 
 | **Braze Perspective:**<br>We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS. |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 Braze is able to send push notifications to users who do not update their application with the Braze SDK installed. Given that Braze has a valid push token, Braze can send the push notification without the Braze SDK as APNs will handle the rest. It is crucial to note that push message **analytics will not be available for builds without the Braze SDK**.
 
@@ -59,7 +59,7 @@ To replace Airship's message center campaign functionality, we recommend creatin
 Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/) filters to provide a rich user experience for your customers.
 
 | **Braze Perspective**:<br> Segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. |
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 #### User segment migration
 

@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:キャンペーンの翻訳を表示"
-article_title: "取得:キャンペーンの翻訳を表示"
+nav_title: "取得:キャンペーンの翻訳の表示"
+article_title: "取得:キャンペーンの翻訳の表示"
 search_tag: Endpoint
 page_order: 1
 
@@ -18,12 +18,12 @@ description: "この記事では、「キャンペーンの翻訳を表示」エ
 > キャンペーンの各メッセージバリアントのすべての翻訳を表示するには、このエンドポイントを使用する。
 
 {% alert important %}
-API 経由でキャンペーンメッセージの翻訳を表示することは、現在、早期アクセスの段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
+API 経由でキャンペーンメッセージの翻訳を表示することは、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.translations.get`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.translations.get`の権限が必要です。
 
 ## レート制限
 
@@ -31,12 +31,12 @@ API 経由でキャンペーンメッセージの翻訳を表示することは�
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| キャンペーンの翻訳に必須 | string | キャンペーンのID。 |
+|`campaign_id`| キャンペーンの翻訳に必須 | 文字列 | キャンペーンのID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translations' \

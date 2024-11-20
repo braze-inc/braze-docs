@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`name`| Required | String | The name of the resulting Canvas. |
 |`description`| Optional | String | The description field for the resulting Canvas. |
 |`tag_names` | Optional | String | The tags for the resulting Canvas. These must be existing tags. If you add new tags in the request, they will overwrite any tags that were on the original Canvas. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Response
 

@@ -9,12 +9,12 @@ page_type: update
 # Grouparoo
 
 {% alert update %}
-Grouparoo에 대한 지원은 2022년 4월부로 중단되었습니다.
+Grouparoo에 대한 지원은 2022년 4월부터 중단되었습니다.
 {% endalert %}
 
 > [Grouparoo][1]는 창고에 있는 데이터를 사용하여 마케팅, 영업 및 지원 도구를 쉽게 사용할 수 있게 해주는 오픈 소스 리버스 ETL 도구입니다. 구성은 모델 중심 UI에서 수행되므로 비기술 팀 구성원도 운영을 지원하기 위해 데이터 동기화를 구성하고 예약할 수 있습니다.
 
-Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장된 데이터를 운영하기 쉽게 만듭니다. 자동 동기화 일정을 설정하면 최신 정보로 고객 커뮤니케이션을 지속적으로 향상시킬 수 있습니다.
+Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장된 데이터를 운영하기 쉽게 만듭니다. 자동 동기화 일정을 설정하면 최신 정보로 고객 커뮤니케이션을 일관성 있게 강화할 수 있습니다.
 
 ## 필수 조건
 
@@ -23,7 +23,7 @@ Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장
 | Grouparoo 계정 및 프로젝트 | Grouparoo 계정과 프로젝트가 이 파트너십을 활용하는 데 필요합니다.<br><br>이 통합은 Grouparoo에서 제공하는 무료 커뮤니티 에디션 및 엔터프라이즈 솔루션과 함께 사용할 수 있습니다. 설정은 Grouparoo 구성 사용자 인터페이스에서 이루어집니다. |
 | Braze REST API 키 | 사용자 및 추적 권한이 있는 Braze REST API 키. <br><br> 이는 **설정** > **API 키**에서 Braze 대시보드에서 생성할 수 있습니다. |
 | Braze REST 엔드포인트 | [당신의 REST 엔드포인트 URL][1]. 사용자의 엔드포인트는 인스턴스를 위한 Braze URL에 따라 달라집니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 통합
 

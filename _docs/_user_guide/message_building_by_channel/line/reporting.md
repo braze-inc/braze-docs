@@ -12,7 +12,7 @@ permalink: /line/reporting/
 
 # LINE reporting
 
-> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
+> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics. This article covers where you can find those metrics and what they represent.
 
 {% alert tip %}
 Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
@@ -49,6 +49,7 @@ If you want to simplify your view, select **+ Add/Remove Columns** and clear any
 Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 | Term | Definition |
+| --- | --- |
 | Sends | The total number of sends successfully communicated between Braze and LINE. This does not mean the message was received by the user. |
 | Unique Opens | The total number of LINE messages sent that were opened by users after a minimum threshold of 20 messages per day has been reached. |
 | Total Opens | The total number of times that the LINE messages sent were opened by users after a minimum threshold of 20 messages per day has been reached. |
@@ -69,10 +70,6 @@ The **Conversion Event Details** panel shows you the performance of your convers
 ### Conversion correlation
 
 The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
-
-## LINE user IDs 
-
-LINE user IDs are specific to each user per provider. Users are unlikely to know their LINE ID (unlike their email or phone number), as their LINE ID changes for each brand they follow.
 
 
 [1]: {% image_buster /assets/img/line/line_performance.png %}

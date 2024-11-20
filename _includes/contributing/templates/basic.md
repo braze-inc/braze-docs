@@ -10,7 +10,7 @@ description: "SHORT_DESCRIPTION."
 alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
 page_type: reference
 layout: OPTIONAL_LAYOUT_FILE
-—
+---
 
 <!-- The title of your page, used to render the in-page title. -->
 # ARTICLE_TITLE

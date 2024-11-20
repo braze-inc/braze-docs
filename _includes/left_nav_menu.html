@@ -13,7 +13,7 @@
 {%-assign nav_level = 2 -%}
 {%-endunless -%}
 
-<button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" >
+<button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="Side Navigation Toggle" title="Side Navigation Toggle">
    <i class="fas fa-chevron-left"></i>
 </button>
 {%- unless hide_nav_filter -%}
@@ -31,7 +31,7 @@
 </div>
 {%- endunless -%}
 
-<nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu">
+<nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="Left Navigation" title="Left Navigation">
   {%- unless hide_nav_filter -%}
     <div id="filter-msg"  class="flex-column flex-nowrap d-none"></div>
   {%- endunless -%}

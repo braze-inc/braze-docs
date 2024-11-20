@@ -32,7 +32,7 @@ Swift SDK の `BrazeUI` ライブラリーでは、ナビゲーションとモ�
 ナビゲーションコントローラーは、ナビゲーションインターフェイス内の1つ以上の子ビューコントローラーを管理するビューコントローラーです。以下は、`BrazeContentCardUI.ViewController` インスタンスをナビゲーションコントローラーにプッシュする例です。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func pushViewController() {
@@ -61,10 +61,10 @@ func pushViewController() {
 
 ## モーダルコンテキスト
 
-モーダルプレゼンテーションを使用して、ユーザーに重要情報の入力を求める場合などに、アプリのワークフローを一時的に中断させることができます。このモデルビューでは、上部にナビゲーションバーがあり、バーの横に \[**完了**] ボタンがあります。以下は、`BrazeContentCard.ViewController` インスタンスをモーダルコントローラーにプッシュする例です。
+モーダルプレゼンテーションを使用して、ユーザーに重要情報の入力を求める場合などに、アプリのワークフローを一時的に中断させることができます。このモデルビューでは、上部にナビゲーションバーがあり、バーの横に [**完了**] ボタンがあります。以下は、`BrazeContentCard.ViewController` インスタンスをモーダルコントローラーにプッシュする例です。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func presentModalViewController() {
@@ -115,7 +115,7 @@ Braze には、画像のみ、キャプション付き画像、クラシック�
 | `card.context?.logDismissed()`       | コンテンツカードを閉じたイベントをロギングします。                                                                                                    |
 | `card.context?.logError()`           | コンテンツカードに関するエラーを記録する。                                                                                                |
 | `card.context?.loadImage()`          | 指定されたコンテンツカードの画像をURLから読み込む。コンテンツカードに画像がない場合、このメソッドはゼロになる。                         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 詳細については、[`Context` クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)を参照してください。
 

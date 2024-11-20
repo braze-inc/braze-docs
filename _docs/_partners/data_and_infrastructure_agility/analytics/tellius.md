@@ -21,7 +21,7 @@ The Braze and Tellius integration empowers users to leverage data, without relyi
 | Tellius account | A Tellius account is required to take advantage of this partnership. You can start your Tellius journey with a [free trial](https://www.tellius.com/free-trial/)|
 | Snowflake Data Sharing program | For current Snowflake customers, contact your Braze representative about the Snowflake Data Sharing program to pipe your Braze data into your Snowflake instance.|
 | Snowflake Reader account | For non-Snowflake customers, contact your Braze representative about a Snowflake Reader account that can be provisioned for you to access your Braze data.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

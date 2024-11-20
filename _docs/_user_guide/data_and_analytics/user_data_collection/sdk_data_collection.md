@@ -32,7 +32,7 @@ The following lists the strictly necessary data generated and received by Braze 
 | SDK message interaction data | Push direct opens, in-app message interactions, Content Card interactions | This attribute is used for quality control purposes, like checking that a message was received and that sending isn't duplicated. |
 | SDK version | Current SDK version | This attribute is used to only send messages to compatible devices and avoid service disruption. |
 | Session ID and session timestamp | Session identifier, a randomly generated string and session timestamp | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Calculated metrics
 
@@ -55,7 +55,7 @@ Calculated metrics include the following attributes.
 | Received message from campaign with tag        | Boolean. This filter targets users based on whether they have received a campaign that currently has a tag.                  |
 | Retarget campaign                              | Boolean. This filter targets users based on whether they have opened or clicked on a specific email, push, or in-app message in the past. |
 | Uninstalled                                    | Boolean and time |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 If you're interested in only the minimum integration, and you integrate with mParticle, Segment, Tealium, or GTM, note the following:
@@ -79,7 +79,7 @@ In addition to the minimum integration data, the following attributes are automa
 | Resolution              | Android, iOS, Web | Device or browser resolution                                                          | Optionally used for device-based message targeting. The format of this value is "`<width>`x`<height>`".                                                                 |
 | Time zone               | Android, iOS, Web | Device or browser time zone                                                           | This attribute is used to send messages at the appropriate time, according to each user's local time zone.                                                   |
 | User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
 
@@ -92,7 +92,7 @@ By default, the following attributes aren't collected. Each attribute needs to b
 | Device Ad Tracking Enabled | Android, iOS | On iOS:<br>[`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:))<br><br>On Android:<br>[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) | This property requires additional app-level permissions, which must be granted by the integrator.                                                                                                                                                                                      |
 | Device IDFA                | iOS          | Device identifier for advertisers                                                                                                                                                                                                                                                                                         | This requires the Ad Tracking Transparency framework, which will trigger additional privacy review from the App Store. For more details, see [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)) |
 | Google Advertising ID      | Android      | Identifier for advertising within Google Play apps                                                                                                                                                                                                                                                                        | This requires the app to retrieve the GAID and pass it to Braze. For more details, refer to [Optional Google Advertising ID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection).                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Personalized integration
 

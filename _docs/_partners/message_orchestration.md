@@ -107,4 +107,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
+- name: mypostcard
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

@@ -24,7 +24,7 @@ description: "이 문서에서는 이메일 주소 또는 전화번호별 구독
 | --- | --- | --- | --- |
 | `email` | 예 | 문자열 | 사용자의 이메일 주소(최소 1개, 최대 50개의 주소를 포함해야 함). |
 | `phone` | 예 | 문자열 | 사용자의 전화번호(최소 1개에서 최대 50개의 전화번호를 포함해야 함). E.164 형식으로 제공하는 것이 좋습니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 

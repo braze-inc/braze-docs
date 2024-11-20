@@ -37,6 +37,9 @@ valid_partner_list:
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/      
 - name: Regal
-  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/    
-
+  url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
+- name: MyPostcard
+  url: /docs/partners/message_orchestration/additional_channels/messaging/mypostcard/      
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 ---

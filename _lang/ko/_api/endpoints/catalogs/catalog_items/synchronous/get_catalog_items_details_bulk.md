@@ -32,7 +32,7 @@ description: "이 문서에서는 여러 카탈로그 항목 세부 정보 나�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 쿼리 매개변수
 
@@ -41,7 +41,7 @@ description: "이 문서에서는 여러 카탈로그 항목 세부 정보 나�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `cursor` | 선택 사항 | 문자열 | 카탈로그 항목의 페이지 매김을 결정합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
@@ -146,6 +146,6 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 | --- | --- |
 | `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. |
 | `invalid-cursor` | `cursor` 주소가 유효한지 확인합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

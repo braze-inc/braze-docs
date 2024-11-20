@@ -28,7 +28,7 @@ Leverage Snowplow's rich behavioral data to drive powerful customer-centric inte
 | Google Tag Manager server-side | GTM-SS needs to be deployed and the [Snowplow client for GTM-SS][2] set up. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -73,7 +73,7 @@ The following table lists the required tag parameters you must include in your B
 | Braze REST API endpoint | Set this to the URL of your Braze REST [endpoint][3]. |
 | Braze API key | Set this to your Braze [API key][4] that will be included in each request. |
 | Braze `external_id` | Set this key to the client event property that corresponds to your users' `external_id` and will be used as the [Braze user identifier][5]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Event mapping
 
@@ -85,7 +85,7 @@ The following table lists event mapping options concerning the Snowplow event as
 | Snowplow event context rules | Describes how the Braze tag will use the context entities attached to a Snowplow event. |
 | Extract entity from array if single element | Snowplow entities are always in arrays, as multiple of the same entity can be attached to an event. This option will pick the single element from the array if the array only contains a single element. |
 | Include all entities in the event object | Turned on by default. Includes all entities on an event within the Braze event's properties object. Disable this option to select individual entities for inclusion. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Advanced event mapping
 
@@ -99,7 +99,7 @@ If you want to include other properties from the client event and map them onto 
 | Additional user property and event property mapping rules | Specify the property key from the client event and the properties' object key you would like to map it to (or leave the mapped key blank to keep the same name). You can use key path notation here (for example, `x-sp-tp2.p` for a Snowplow events platform or `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` for a Snowplow events page view id (in array index 0) or pick non-Snowplow properties if using an alternative client.<br><br>Event property mapping rules populate the Braze event properties object.|
 | Include common user properties| Enabled by default, this option sets whether to include the `user_data` properties from the common event definition in the Braze user attributes object.|
 | Event time property | This option lets you specify the client event property to populate the event time (in ISO-8601 format) or leave it empty to use the current time (default behavior). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Entity mapping
 
@@ -113,7 +113,7 @@ The entity can be specified in two different formats:
 | Entity mapping option | Description |
 | --------- | ----------- |
 | Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: https://snowplowanalytics.com
 [2]: https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/

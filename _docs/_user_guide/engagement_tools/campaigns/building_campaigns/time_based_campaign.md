@@ -24,7 +24,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 | Definition | Time Zone |
 | ---------- | --------- |
 | Send message at a designated time, on a specific calendar date. | Company's time zone. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the option "Send at a designated time" selected to send once starting at 9 am on July 13, 2021.][2]
 
@@ -33,7 +33,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 | Definition | Time Zone |
 | ---------- | --------- |
 | User's optimal time. Each user will receive the campaign at the time they are most likely to engage. To learn more, check out [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the option "Intelligent Timing" selected to send once at the optimal time on July 13, 2021 with a custom fallback time of 9 am for users without enough data in their profiles to calculate an optimal time.][3]
 
@@ -42,7 +42,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 | Definition | Time Zone |
 | ---------- | --------- |
 | Allows you to deliver messages to a segment based on a user's [individual time zone]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the option "Send at a designated time" selected to send once starting at 9 am on July 13, 2021 with the checkbox "Send Campaign to users in their local time zone" selected.][4]
 
@@ -51,7 +51,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 | Definition | Time Zone |
 | ---------- | --------- |
 | After a user is messaged by this campaign, specify when they will become re-eligible to receive the campaign again. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns). | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the selected checkbox "Allow users to become re-eligible to receive campaign" after one week.][5]
 
@@ -70,7 +70,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | Definition | Time Zone |
 | ---------- | --------- |
 | Send message immediately after the user performs the trigger action. | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Schedule Delay set to send campaign immediately after the trigger event occurs.][6]
 
@@ -79,7 +79,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | Definition | Time Zone |
 | ---------- | --------- |
 | Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks. For [in-app message campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), you can set a delay up to two hours only. | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Schedule Delay set to send campaign after one day after the trigger event occurs.][7]
 
@@ -88,7 +88,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | Definition | Time Zone |
 | ---------- | --------- |
 | Send message on the next specified day of the week, at a selected time of day. | Select between **user's local time** or **company time** |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For example, suppose you select "Send on the next Saturday at 3:15 pm". If a user performs the trigger event on a Saturday, they would receive that message on the next Saturday in seven days. If they enter on a Friday, the next Saturday would be in one day.
 
@@ -99,7 +99,7 @@ For example, suppose you select "Send on the next Saturday at 3:15 pm". If a use
 | Definition | Time Zone |
 | ---------- | --------- |
 | Send message in a specific number of days at a specified time. | Select between **user's local time** or **company time** |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose the user performs the trigger event on Monday at 9 pm, and the schedule delay is set to "Send campaign in 1 day at 9 am". That message will be delivered on Tuesday at 9 am because Braze calculates the delay as `Monday` + `1 calendar day` and then adds on `9 am`.
 
@@ -110,7 +110,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 | Definition | Time Zone |
 | ---------- | --------- |
 | Prevent messages from being sent during specified hours. If a message triggers during Quiet Hours, you can choose between canceling the message, or sending at the next available time (such as sending at the end of your Quiet Hours). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with Quiet Hours enabled. In this example, messages will not send between 12 am and 8 am in the user's local time. If a message triggers during Quiet Hours, then the message will be sent at the next available time.][10]
 
@@ -119,7 +119,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 | Definition | Time Zone |
 | ---------- | --------- |
 | After a user is messaged by this campaign, specify when they will become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) to receive the campaign again. | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the selected checkbox "Allow users to become re-eligible to receive campaign" after one week.][5]
 
@@ -128,7 +128,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 | Definition | Time Zone |
 | ---------- | --------- |
 | Limit how many times each user should receive the campaign within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. For more information, refer to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 By default, frequency capping is toggled off for new Canvases. Frequency capping is applied at the step level, not at the Canvas entry level.
 
@@ -139,7 +139,7 @@ Frequency capping is based on calendar days, not a 24-hour period. This means th
 | Definition | Time Zone |
 | ---------- | --------- |
 | The maximum amount of time that may pass between a user receiving a campaign and performing the assigned action for it to be considered a conversion. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 

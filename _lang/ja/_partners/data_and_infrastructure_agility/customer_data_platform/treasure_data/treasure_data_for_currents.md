@@ -12,53 +12,44 @@ search_tag: Partner
 
 # Treasure Data for Currents
 
+> [トレジャーデータ][1]は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォーム (CDP) です。
 
-> [Treasure Dataは][1]顧客データプラットフォーム（CDP）であり、複数のソースから情報を収集し、マーケティングスタックの様々な場所にルーティングする。
-
-BrazeとTreasure Dataの統合により、2つのシステム間の情報の流れをシームレスにコントロールすることができる。Currentsを使えば、データをTreasure Dataに接続し、成長スタック全体で実行可能なものにすることもできる。
-
+Braze とトレジャーデータの統合により、2 つのシステム間の情報の流れをシームレスに制御できます。Currents では、データをトレジャーデータに接続し、グローススタック全体で実用的なデータにすることもできます。
 
 ## 前提条件
 
-
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Treasure Data | このパートナーシップを利用するには、[トレジャーデータのアカウントが][0]必要である。 |
-| Currents | データをTreasure Dataにエクスポートするには、アカウントに[Braze Currentsを][2]設定する必要がある。 |
-| トレジャーデータURL | これは、Treasure Dataのダッシュボードに移動し、取り込みURLをコピーすることで取得できる。|
-{: .reset-td-br-1 .reset-td-br-2}
+| トレジャーデータ | このパートナーシップを活用するには、[トレジャーデータのアカウント][0]が必要です。 |
+| Currents | トレジャーデータにデータを再度エクスポートするには、アカウントに [Braze Currents][2] を設定する必要があります。 |
+| トレジャーデータ URL | これは、トレジャーデータのダッシュボードに移動し、取り込み URL をコピーすることで取得できます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+トレジャーデータは各イベントを一括してログに記録する。トレジャーデータに照会してイベント数を取得する方法については、[Braze Currents Import Integrationを](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration)参照。
+{% endalert %}
 
 ## 統合
 
-
-Treasure Dataとの接続には、Postback APIを使用することを推奨する。この方法はデフォルトのコネクターを必要とせず、プッシュ方式でデータを受け取ることができる。1つのデータ・バッチで送信されるすべてのイベントは、JSON配列の1行の1フィールド内にあり、必要なデータを取得するために解析する必要がある。
-
+トレジャーデータとの接続には、Postback API を使用することをお勧めします。この方法はデフォルトのコネクターを必要とせず、プッシュ方式でデータを受け取ることができる。1つのデータバッチで送信されるすべてのイベントは、JSON 配列の1つの行の1つのフィールド内にあり、必要なデータを取得するために解析する必要があります。
 
 {% alert important %}
-現在のところ、イベントコレクターによるTreasure Dataへの取り込みはリアルタイムではなく、5分ほどかかることがある。
+現時点では、イベントコレクターを介したトレジャーデータへの取り込みはリアルタイムでは行われず、最大5分かかることがあります。
 {% endalert %}
 
+### ステップ1:Braze を使用してトレジャーデータの Postback API を設定する
 
-### ステップ1:BrazeでTreasure Data Postback APIをセットアップする
+Postback APIの作成方法は、[トレジャーデータのWeb][3]サイトに掲載されている。Brazeは、event-collectorによる取り込みを例外として、更新イベントをリアルタイムでトレジャーデータに直接送信する。完了すると、トレジャーデータからデータソース URL が提供されます。この URL をコピーして、次のステップで使用します。
 
+### ステップ2:Current を作成する
 
-Postback APIの作成方法は、[Treasure Dataの][3]ウェブサイトに掲載されている。Brazeは、event-collectorを介した取り込みを除き、更新されたイベントをリアルタイムでTreasure Dataに直接送信する。完了すると、Treasure Dataは次のステップで使用するためにコピーするデータソースURLを提供する。
+Braze で [**Currents**] > [**\+ Current を作成**] > [**トレジャーデータのエクスポート**] に移動します。統合名、連絡先メール、およびトレジャーデータ URL を指定します。次に、利用可能なイベントのリストから追跡したいものを選択し、**「Launch Current**」をクリックする。
 
-
-### ステップ2:電流を作る
-
-
-Brazeで、**Current**>**\+ Create Current**>**Treasure Data Exportに**移動する。統合名、連絡先Eメール、Treasure Data URLを入力する。次に、利用可能なイベントのリストから追跡したいものを選択し、**「Launch Current**」をクリックする。
-
-
-Treasure Data に送信されるすべてのイベントには、ユーザーの`external_user_id` が含まれる。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータをTreasure Dataに送信しない。
-
+トレジャーデータに送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。この時点では Braze は、`external_user_id` が設定されていないユーザーのイベントデータをトレジャーデータに送信しません。
 
 {% alert important %}
-トレジャーデータのURLを常に最新の状態に保つ。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が48時間以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+トレジャーデータ URL を最新の状態に保ちます。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が48時間以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
-
 
 #### イベント・フィールドの値の例
 ```json
@@ -92,10 +83,9 @@ Treasure Data に送信されるすべてのイベントには、ユーザーの
 
 ## 統合の詳細
 
+Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) をトレジャーデータにエクスポートできます。
 
-Brazeは、[Currentsイベント用語集に]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)記載されているすべてのデータ（[メッセージエンゲージメントイベントと]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) [顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントの両方のすべてのプロパティを含む）のTreasure Dataへのエクスポートをサポートしている。
-
-エクスポートされたデータのペイロード構造は、カスタムHTTPコネクターのペイロード構造と同じで、[カスタムHTTPコネクターのサンプルリポジトリで](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)見ることができる。
+エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。
 
 
 [0]: https://console.treasuredata.com/users/sign_in

@@ -1,19 +1,19 @@
 ---
-nav_title: タイプフォーム
-article_title: タイプフォーム
+nav_title: Typeform
+article_title: Typeform
 description: "この記事では、データやフィードバックなどを収集するための使いやすいツールであるBrazeとTypeformのパートナーシップについて概説する。"
 alias: /partners/typeform/
 page_type: partner
 search_tag: Partner
 ---
 
-# タイプフォーム
+# Typeform
 
 > [Typeformは](https://www.typeform.com/)、データやフィードバックなどを収集するための使いやすいツールだ。
 
 BrazeとTypeformを統合することで、以下のことが可能になる：
 
-- BrazeのユーザープロフィールをTypeformの回答から収集したデータで更新する
+- Typeform 応答から収集したデータで Braze のユーザープロファイルを更新する
 - ユーザーのタイプフォームへの関与に基づいて、Brazeでメッセージングをトリガーする
 - ユーザーのTypeformの回答に基づいてBrazeのメッセージをパーソナライズする
 
@@ -21,40 +21,40 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Typeformアカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるTypeformアカウントが必要である。 |
-| ブレイズデータ変換 | Typeformからデータを受け取るには、[データ変換URLが]({{site.baseurl}}/data_transformation/)必要である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Typeform アカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるTypeformアカウントが必要である。 |
+| Braze Data Transformation | Typeform からデータを受信するには、[Data Transformation URL]({{site.baseurl}}/data_transformation/) が必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ1:Typeformのウェブフックを受け入れるようにBrazeのデータ変換を設定する {#step-1}
+### ステップ1:Typeformの Webhook を受け入れるように Braze Data Transformation を設定する {#step-1}
 
 {% multi_lang_include create_transformation.md location="typeform" %}
 
 ### ステップ2:Typeformのウェブフックを設定する
 
-[TypeformのWebhookドキュメントの](https://www.typeform.com/help/a/webhooks-360029573471/)手順に従って、Webhookをセットアップする。
+[Typeform の Webhook ドキュメント](https://www.typeform.com/help/a/webhooks-360029573471/)の手順に従って Webhook を設定します。
 
-ステップ4では、**Destination URLとして**Data Transformation webhook URLを追加する。
+ステップ4で **Destination URL** として Data Transformation Webhook URL を追加します。
 
 ![]({% image_buster /assets/img/typeform/typeform_add_webhook.png %}){: style="max-width:50%" }
 
-**View deliveriesを**クリックし、**Send test requestを**クリックして、データ変換にテストイベントを送信する。
+[**View deliveries**] をクリックし、[**Send test request**] をクリックして、Data Transformation にテストイベントを送信します。
 
 ![]({% image_buster /assets/img/typeform/typeform_test_request.png %})
 
-### ステップ 3:選択したTypeformのイベントを受け入れる変換コードを書く
+### ステップ3:選択したTypeformのイベントを受け入れる変換コードを書く
 
 このステップでは、Typeformから送信されるWebhookペイロードをJavaScriptオブジェクトの戻り値に変換する。
 
-1. Data Transformationを更新し、**Webhook Detailsに**Typeformのテストペイロードが表示されていることを確認する。
-2. 選択したTypeformイベントをサポートするようにデータ変換コードを更新する。
-3. **Validateを**クリックすると、コードの出力のプレビューが返され、それが受け入れ可能な`/users/track` リクエストかどうかがチェックされる。
-4. データ変換を保存して有効にする。
+1. Data Transformation を更新し、[**Webhook の詳細**] に Typeform テストペイロードが表示されていることを確認します。
+2. 選択した Typeform イベントをサポートするように Data Transformation コードを更新します。
+3. [**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
+4. Data Transformation を保存して有効化します。
 
 ![]({% image_buster /assets/img/typeform/typeform_test_result.png %})
 
-#### リクエスト・ボディのフォーマット
+#### リクエスト本文の形式
 
 この戻り値は、Brazeの `/users/track` リクエストの本文フォーマットに準拠しなければなりません。
 
@@ -324,11 +324,11 @@ Content-Type: application/json
 
 ## データ変換のユースケース
 
-以下は、[TypeformのWebhookペイロードのサンプルを使って](#example-typeform-webhook-payload)作成したテンプレートの例である。これらのテンプレートは出発点として使用できる。ゼロから始めることも、適当に特定のコンポーネントを削除することもできる。
+以下に、[Typeform の Webhook ペイロードのサンプル](#example-typeform-webhook-payload)を使用して作成したテンプレートの例を示します。これらのテンプレートは出発点として使用できる。ゼロから作成するか、必要に応じて特定のコンポーネントを削除することができます。
 
-これらのテンプレート例では、Brazeプロファイルにカスタムイベントをロギングしている。Typeformのタイトルはカスタムイベント名として渡され、Typeformの結果はイベントプロパティとして渡される。これらのテンプレート例では、TypeformのCalendly、File Upload、Paymentの質問タイプは考慮されていない。
+これらのテンプレート例では、Brazeプロファイルにカスタムイベントをロギングしている。Typeform のタイトルはカスタムイベント名として渡され、Typeform の結果はイベントプロパティとして渡されます。これらのテンプレートの例では、Typeform の質問タイプ Calendly、File Upload、Payment は考慮されていません。
 
-### ユースケース:識別子としての電子メール
+### ユースケース:識別子としてのメール
 
 このテンプレートの例では、メールアドレス（タイプフォーム内のメールアドレスの質問から取得）を識別子として使用している。
 
@@ -472,9 +472,9 @@ return brazecall;
 
 ### ユースケース:隠しフィールドに渡された識別子を使用する
 
-TypeformのHidden Fieldsを使えば、Typeformのレスポンスで情報を渡すことなく、TypeformのウェブフックのペイロードでユーザーのIDなどのデータを渡すことができる。
+Typeform の隠しフィールドを使用して、Typeform の応答でこの情報を渡さずに、Typeform の Webhook ペイロードでユーザーの ID などのデータを渡すことができます。
 
-このテンプレート例では、"user_id "隠しフィールドを使用し、これを`external_id` として`/users/track` リクエストペイロードに渡している。ここでは "user_id "を使用しているが、フィールドは必要に応じて変更することができる。
+このテンプレートの例では、「user_id」隠しフィールドを使用し、これを`external_id` として`/users/track` リクエストペイロードに渡しています。ここでは "user_id "を使用しているが、フィールドは必要に応じて変更することができる。
 
 {% tabs ローカル %}
 {% tab インプット %}
@@ -612,7 +612,7 @@ return brazecall;
 
 ### ステップ4:TypeformのWebhookを公開する
 
-データ変換を書いたら、**Validateを**クリックして、データ変換コードが正しくフォーマットされ、期待通りに動作することを確認する。その後、データ変換を保存してアクティブにする。
+Data Transformation の作成が完了したら、[**検証**] をクリックして、Data Transformation コードが正しくフォーマットされており、期待通りに動作することを確認します。その後、Data Transformation を保存してアクティブ化します。
 
 有効化されると、カスタムイベントデータはユーザーがフォームに入力した際にユーザーのプロフィールに記録される。
 
@@ -620,4 +620,4 @@ return brazecall;
 
 ## モニタリングとトラブルシューティング
 
-[トランスフォーメーションの]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#step-5-monitor-your-transformation)モニタリングとトラブルシューティングの詳細については、[トランスフォーメーションのモニタリングの]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#step-5-monitor-your-transformation)セクションを参照のこと。
+変換のトラブルシューティングと監視については、「[変換の監視]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#step-5-monitor-your-transformation)」セクションを参照してください。

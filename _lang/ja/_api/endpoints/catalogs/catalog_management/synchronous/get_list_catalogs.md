@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:カタログ一覧"
-article_title: "取得:カタログ一覧"
+nav_title: "取得:リストカタログ"
+article_title: "取得:リストカタログ"
 search_tag: Endpoint
 page_order: 2
 
@@ -21,17 +21,17 @@ description: "この記事では、「カタログのリスト」Braze エンド
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.get` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.get`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## パスとリクエスト・パラメーター
+## パスとリクエストのパラメータ
 
-このエンドポイントにはパスもリクエストパラメータもない。
+このエンドポイントには、パスまたはリクエストパラメータはありません。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \

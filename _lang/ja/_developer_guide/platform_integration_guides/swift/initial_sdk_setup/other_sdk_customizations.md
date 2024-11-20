@@ -11,7 +11,7 @@ page_order: 3
 
 > Braze Swift SDK は、Braze インスタンスに付加されている `Braze.Configuration` オブジェクトのメンバープロパティを変更することで設定できます。設定は、`Braze(configuration:)` を使用して Braze インスタンスを初期化する前にのみ行えます。
 
-使用可能な設定の完全なリストについては、[Braze.Configuration クラスのドキュメント][1]を参照してください。
+使用可能な設定の完全なリストについては、[Braze.Configuration クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class)を参照してください。
 
 ## Braze ログレベル
 
@@ -25,7 +25,7 @@ Braze Swift SDK のデフォルトのログレベルは、次の表の `.error` 
 | `.info`     | `BRZLoggerLevelInfo`     | 一般的なSDK情報（ユーザーの変更など）を記録する +`.error` 。 |
 | `.error`    | `BRZLoggerLevelError`    | エラーをロギングする。                                                       |
 | `.disabled` | `BRZLoggerLevelDisabled` | ロギングは行われない。                                                |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### ログレベルの設定
 
@@ -58,7 +58,5 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 {% endtab %}
 {% endtabs %}
 
-Braze Logger のすべての使用法については、[ロガークラスのドキュメント][2]を参照してください。
+Braze Logger のすべての使用法については、[ロガークラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class)を参照してください。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class

@@ -35,7 +35,7 @@ Reference this table for how to keep an idle campaign active:
 | Campaigns that are scheduled one-time sends, and it’s seven days past the send date                 | Schedule a future send                            |
 | Campaigns that are scheduled or action-based, have end dates, and it’s seven days past the end date | Extend the end date                               |
 | Campaigns without an end date that have not sent messages in one year                                | Send one message or make any edit to the campaign |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Idle Canvases
 
@@ -56,7 +56,7 @@ Reference this table for how to keep an idle Canvas active:
 | Canvases that are scheduled one-time sends, and it’s seven days and maximum duration past the send date                 | Schedule a future send                          |
 | Canvases that are scheduled or action-based, have end dates, and it’s seven days and maximum duration past the end date | Extend the end date                             |
 | Canvases without end dates that have not sent messages in one year                                                      | Send one message or make any edit to the Canvas |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Frequently asked questions
 
@@ -66,7 +66,7 @@ This will apply to campaigns and Canvases that already meet the previously liste
 
 #### How do I know if a campaign or Canvas is idle?
 
-Idle campaigns and Canvases will be displayed in the campaign and Canvas list pages under the category Idle. The date on which the campaign or Canvas will be stopped is listed as a column in the list.
+Idle campaigns and Canvases will be displayed in the campaign and Canvas list pages under the category **Idle**. The date on which the campaign or Canvas will be stopped is listed as a column in the list.
 
 #### What happens if an idle campaign or Canvas is updated?
 
@@ -91,3 +91,11 @@ Canvases are only stopped after the Content Cards are stopped, meaning their max
 #### I have a feature flag experiment in my Canvas. After my feature flag is set, will the Canvas remain active?
 
 Canvases with feature flag steps are not automatically stopped and do not become idle.
+
+#### Why am I seeing idle campaigns displayed in my campaigns list when I applied a filter to show active campaigns only?
+
+Idle campaigns are considered active until they're stopped.
+
+#### Would a campaign be listed as idle when it's still sending push notifications?
+
+No. A campaign will be listed as idle when it's no longer actively sending messages. 

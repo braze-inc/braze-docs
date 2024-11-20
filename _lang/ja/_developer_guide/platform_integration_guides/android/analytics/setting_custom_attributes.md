@@ -13,7 +13,7 @@ description: "このリファレンス記事では、Android または FireOS �
 
 > Braze では、ユーザーに属性を割り当てるメソッドが提供されています。ダッシュボードでこれらの属性に基づき、ユーザーをフィルターおよびセグメント化できます。このリファレンス記事では、Android または FireOS アプリケーションのカスタム属性を設定する方法を説明します。
 
-実装前に、[分析の概要][7]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認してください。
+実装前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認してください。
 
 ## ユーザー属性の割り当て
 
@@ -21,7 +21,7 @@ description: "このリファレンス記事では、Android または FireOS �
 
 ### 標準ユーザー属性
 
-Brazeは、[BrazeUser クラス][2]内で以下のユーザー属性を設定するための定義済みメソッドを提供しています。[メソッドの仕様][2]については、KDoc を参照してください。
+Brazeは、[BrazeUser クラス](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)内で以下のユーザー属性を設定するための定義済みメソッドを提供しています。[メソッドの仕様](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)については、KDoc を参照してください。
 
 - 名
 - 姓
@@ -41,14 +41,21 @@ Brazeは、[BrazeUser クラス][2]内で以下のユーザー属性を設定す
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setFirstName("first_name");
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName("first_name");
+  }
+}
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setFirstName("first_name")
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName("first_name")
+}
 ```
 
 {% endtab %}
@@ -62,14 +69,21 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", "your_attribute_value");
+  }
+}
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", "your_attribute_value")
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", "your_attribute_value")
+}
 ```
 
 {% endsubtab %}
@@ -80,18 +94,27 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE);
-// Integer attributes may also be incremented using code like the following:
-Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE);
+    
+    // Integer attributes may also be incremented using code like the following:
+    brazeUser.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
+  }
+}
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE)
-// Integer attributes may also be incremented using code like the following:
-Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_INT_VALUE)
+
+  // Integer attributes may also be incremented using code like the following:
+  brazeUser.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
+}
 ```
 
 {% endsubtab %}
@@ -102,14 +125,21 @@ Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attri
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
+}
 ```
 
 {% endsubtab %}
@@ -120,14 +150,21 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE)
+}
 ```
 
 {% endsubtab %}
@@ -138,14 +175,21 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE)
+}
 ```
 
 {% endsubtab %}
@@ -156,14 +200,21 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE)
+}
 ```
 
 {% endsubtab %}
@@ -174,22 +225,29 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% subtab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
-// This method will assign the current time to a custom attribute at the time the method is called:
-Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
-Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
+    // This method will assign the current time to a custom attribute at the time the method is called:
+    brazeUser.setCustomUserAttributeToNow("your_attribute_key");
+    // This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
+    brazeUser.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
+  }
+});
 ```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE)
-// This method will assign the current time to a custom attribute at the time the method is called:
-Braze.getInstance(context).currentUser?.setCustomUserAttributeToNow("your_attribute_key")
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
-Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE)
+  // This method will assign the current time to a custom attribute at the time the method is called:
+  brazeUser.setCustomUserAttributeToNow("your_attribute_key")
+  // This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
+  brazeUser.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH)
+}
 ```
 
 {% endsubtab %}
@@ -202,29 +260,36 @@ Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch
 {% endtab %}
 {% tab 配列 %}
 
-カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの \[**データ設定**] > \[**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
+カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
 
 {% subtabs global %}
 {% subtab JAVA %}
 
 ```java
-// Setting a custom attribute with an array value
-Braze.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
-// Adding to a custom attribute with an array value
-Braze.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
-// Removing a value from an array type custom attribute
-Braze.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    // Setting a custom attribute with an array value
+    brazeUser.setCustomAttributeArray("your_attribute_key", testSetArray);
+    // Adding to a custom attribute with an array value
+    brazeUser.addToCustomAttributeArray("your_attribute_key", "value_to_add");
+    // Removing a value from an array type custom attribute
+    brazeUser.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
+  }
+});
 ```
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-// Setting a custom attribute with an array value
-Braze.getInstance(context).currentUser?.setCustomAttributeArray("your_attribute_key", testSetArray)
-// Adding to a custom attribute with an array value
-Braze.getInstance(context).currentUser?.addToCustomAttributeArray("your_attribute_key", "value_to_add")
-// Removing a value from an array type custom attribute
-Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  // Setting a custom attribute with an array value
+  brazeUser.setCustomAttributeArray("your_attribute_key", testSetArray)
+  // Adding to a custom attribute with an array value
+  brazeUser.addToCustomAttributeArray("your_attribute_key", "value_to_add")
+  // Removing a value from an array type custom attribute
+  brazeUser.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
+}
 ```
 
 {% endsubtab %}
@@ -240,14 +305,21 @@ Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_att
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().unsetCustomUserAttribute("your_attribute_key");
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.unsetCustomUserAttribute("your_attribute_key");
+  }
+});
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute_key")
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.unsetCustomUserAttribute("your_attribute_key")
+}
 ```
 
 {% endtab %}
@@ -255,7 +327,7 @@ Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute
 
 #### REST API によるカスタム属性
 
-REST API を使用してユーザー属性を設定することもできます。これを行うには、[ユーザー API のドキュメントを][4]参照してください。
+REST API を使用してユーザー属性を設定することもできます。これを行うには、[ユーザー API のドキュメントを]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)参照してください。
 
 ## ユーザーサブスクリプションの設定
 
@@ -264,9 +336,9 @@ REST API を使用してユーザー属性を設定することもできます�
 | サブスクリプションステータス | 定義 |
 | ------------------- | ---------- |
 | `OPTED_IN` | 配信登録済み、かつ明示的にオプトイン済み |
-| `SUBSCRIBED` | 配信登録済みだが、明示的なオプトインは未実行 |
+| `SUBSCRIBED` | 購読済み、ただし明示的に選択されていない |
 | `UNSUBSCRIBED` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Android では、ユーザーにプッシュ通知を送る際に明示的なオプトインは必要ありません。ユーザーがプッシュ登録されると、デフォルトで`OPTED_IN`ではなく`SUBSCRIBED`に設定されます。サブスクリプションと明示的オプトインの実装の詳細については、[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)を参照してください。
@@ -278,14 +350,21 @@ Android では、ユーザーにプッシュ通知を送る際に明示的なオ
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+  }
+});
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType)
+}
 ```
 
 {% endtab %}
@@ -297,20 +376,23 @@ Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(ema
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+  }
+});
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(pushNotificationSubscriptionType)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setPushNotificationSubscriptionType(pushNotificationSubscriptionType)
+}
 ```
 
 {% endtab %}
 {% endtabs %}
 
-[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

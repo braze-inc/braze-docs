@@ -1,6 +1,6 @@
 ---
-nav_title: Shopify ユーザアイデンティティマネジメント
-article_title: "Shopify ユーザアイデンティティマネジメント"
+nav_title: Shopify ユーザーアイデンティティ管理
+article_title: "Shopify ユーザーアイデンティティ管理"
 description: "このリファレンス記事では、Shopify ユーザー アイデンティティマネジメント機能の概要について説明します。"
 page_type: partner
 search_tag: Partner
@@ -10,32 +10,32 @@ page_order: 3
 
 # Shopify ユーザー識別マネジメント
 
-> Braze は、オンサイトの動作やインテグレーションの一部として設定したShopify webhookを聴くことで、Shopify 顧客 s からシグナルを受信します。ヘッドレスでないShopifyサイトの場合、Brazeはチェックアウトページからユーザーを調整するのを支援します。ヘッドレスShopify拠点については、[チェックアウト]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-checkout)からユーザーを調整する方法に関する当社の統合ガイダンスを参照してください。
+> Braze は、Shopify の顧客からのシグナルを受信します。これは、顧客のオンサイトでの行動から受信するか、または統合の一部として設定した Shopify Webhook をリッスンすることで受信します。ヘッドレスではない Shopify サイトの場合、Braze はチェックアウトページからのユーザー照合を支援します。ヘッドレス Shopify サイトについては、[チェックアウトからユーザーを照合する]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-checkout)方法に関する当社の統合ガイダンスを参照してください。
 
 ## ユーザープロファイルのキャプチャ 
 
-### Shopify ユーザー "トラッキング
+### Shopify ユーザー追跡
 
-ストア訪問者がゲスト(つまり匿名) の場合、Braze はこれらの特定の顧客のセッションs の`device_id` をキャプチャします。[Web SDKの実装中にShopifyフォームのユーザー調整を設定すると、顧客がフォームに入力するたびに、顧客 メールsが匿名ユーザープロファイルに追加されます。 
+ストア訪問者がゲスト(つまり匿名) の場合、Braze はこれらの特定の顧客のセッションs の`device_id` をキャプチャします。[Web SDK の実装]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)時に Shopify フォームにユーザー照合を設定すると、顧客がフォームに情報を入力するたびに、顧客のメールが匿名ユーザープロファイルに追加されます。 
 
 店舗訪問者がメールをShopifyニュースレターやメールキャプチャーフォームに入力すると、BrazeはShopify Webhookを受け取り、ユーザープロファイルを作成します。Braze は、このユーザープロファイルをWeb SDKによって追跡される匿名ユーザープロファイルとマージし、ユーザープロファイルのユーザー別名としてShopify 顧客 ID を割り当てます。 
 
 顧客がチェックアウトに進み、電話番号などの他の識別可能な情報を提供するにつれて、BrazeはShopify webhookから関連するユーザーデータを取得し、`device_id`で匿名ユーザーとマージする必要があります。
 - Shopify ScriptTag、ヘッドレスでないShopify サイト、またはGoogle Tag Manager を使用してWeb SDKを実装した場合、Braze はチェックアウトページからのユーザーデータと匿名ユーザープロファイルからのセッションデータが、割り当てられたShopify 顧客 ID でユーザー別名プロファイルにマージされることを自動的に確認します。
-- Web SDKをShopifyヘッドレスサイトに実装した場合は、チェックアウトページ内で送信されたユーザーデータがアプリ適切に、Web SDKまたはAPIのいずれかを介して正しいユーザープロファイルに割り当てられていることを確認する必要があります。詳細については、[Web SDKをヘッドレスShopifyサイト]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-site)に直接実装してください。
+- Shopify ヘッドレスサイトに Web SDK を実装している場合は、チェックアウトページ内で送信されたユーザーデータが、Web SDK または API のいずれかを介して適切なユーザープロファイルに適切に割り当てられていることを確認する必要があります。詳細については、[Web SDK をヘッドレス Shopify サイトに直接実装する]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#headless-site)を参照してください。
 
-顧客がチェックアウト処理を続行すると、Brazeは、入力されたメール住所、電話番号、またはShopify 顧客 IDが存在するユーザープロファイルと一致するかどうかを確認します。一致がある場合、Braze はShopify ユーザーデータをそのプロファイルに同期します。
+顧客がチェックアウトプロセスを続行すると、Braze は、顧客が入力したメールアドレス、電話番号、または Shopify 顧客 IDが、存在するユーザープロファイルと一致するかどうかを確認します。一致がある場合、Braze はShopify ユーザーデータをそのプロファイルに同期します。
 
 メールの住所または電話番号が複数の識別されたユーザープロファイルs に関連付けられている場合、Braze はShopifyデータを最新のアクティビティを持つプロファイルに同期します。
 
 Brazeがメールの住所または電話番号と一致するものを見つけられない場合、サポートされているShopify情報を使用して新しいユーザープロファイルが作成されます。
 
-### Shopify 顧客 s がBraze と同期する場合
+### Shopify の顧客が Braze と同期される場合
 
-Shopifyストアでキャプチャされたリード、サインアップ、およびアカウント登録の既存のユーザープロファイルをBraze 更新するか、新しいものを作成します。Shopifyなどで、以下のメソッドからユーザープロファイルを収集できます。
+Braze は、Shopify ストアでキャプチャされたリード、サインアップ、およびアカウント登録の既存のユーザープロファイルを更新するか、または新しいユーザープロファイルを作成します。Shopify では次の方法でユーザープロファイルデータを収集できます。
 - 顧客がアカウントを作成する
 - お客様のメール住所または電話番号がShopifyキャプチャフォームで収集される
-- お客様メールの住所は、ニュースレターフォームから収集されます
+- 顧客のメールアドレスがニュースレターフォームから収集される
 - お客様のメール先や電話番号は、EcomSendなどのShopifyに接続されたサードパーティ製の機器で収集されます
 
 Brazeは、まず、顧客のメール住所または電話番号を使用して、サポートされているShopifyデータを既存のユーザープロファイルにマッピングしようとします。 
@@ -45,10 +45,10 @@ Brazeは、まず、顧客のメール住所または電話番号を使用して
 ## ユーザプロファイルのマージ 
 
 {% alert note %}
-デフォルト Shopifyインテグレーションは、匿名ユーザープロファイルとShopify別名プロファイルのマージを支援するツールを提供します。ヘッドレスShopifyサイトへの統合を実装する場合は、[ヘッドレスShopifyサイトにWeb SDKを直接的に実装して]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features)を確認し、ユーザーが適切に調整されていることを確認します。<br><br> 重複するユーザープロファイルs が発生した場合は、[バルクマージツール]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging/) を使用して、データの効率化を支援できます。
+デフォルトの Shopify 統合では、匿名ユーザープロファイルと Shopify エイリアスプロファイルのマージを支援するツールが提供されます。ヘッドレス Shopify サイトにこの統合を実装する場合は、「[Web SDK をヘッドレス Shopify サイトに直接実装する]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features)」を確認し、ユーザーが適切に照合されていることを確認します。<br><br> 重複するユーザープロファイルs が発生した場合は、[バルクマージツール]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging/) を使用して、データの効率化を支援できます。
 {% endalert %}
 
-Brazeは、次のいずれかと一致するものが見つかった場合に、匿名ユーザープロファイルのフィールドを識別されたユーザープロファイルにマージします。
+Braze は、次のいずれかの一致が見つかった場合に、匿名ユーザープロファイルのフィールドを、特定されたユーザープロファイルにマージします。
 - Shopify 顧客番号
 - メール
 - 電話番号
@@ -70,7 +70,7 @@ Braze は、匿名ユーザープロファイルの以下のフィールドを�
 - プッシュトークン
 - メッセージ履歴
 - 匿名ユーザープロファイルまたは識別されたユーザープロファイルで検出された以下のフィールド(カスタムイベント、購入イベントカウント、最初の日付と最後の日付のタイムスタンプなど)
-    - これらのマージされたフィールドs は、「Y 日間のX イベント」フィルターs を更新します。購入イベントの場合、これらのフィルターには、「Y 日の購入数」と「Y 日の最後に消費した金額」が含まれます。
+    - マージされたフィールドにより、[Y 日間の X 回のイベント] のフィルターが更新されます。購入イベントの場合、これらのフィルターには、「Y 日の購入数」と「Y 日の最後に消費した金額」が含まれます。
 
 {% alert important %}
 セッションデータは、マージプロセスの一部としてまだサポートされていません。
@@ -78,36 +78,36 @@ Braze は、匿名ユーザープロファイルの以下のフィールドを�
 
 ## Shopify サブスクライバーの同期
 
-Shopify設定処理中、Braze は柔軟なコントロールを提供して、顧客 メールアドレスとSMS オプトイン状態をBraze ユーザープロファイルs のサブスクリプショングループs およびサブスクリプション 状態に同期します。 
+Shopify の設定プロセスでは、Braze は顧客のメールアドレスと SMS オプトイン状態を Braze ユーザープロファイルのサブスクリプショングループおよびサブスクリプション状態と同期するための柔軟なコントロールを提供します。 
 
-### メールやショートサブスクライバーを収集する
+### メールサブスクライバーまたは SMS サブスクライバーの収集
 
-Shopify ストアをBraze に設定する際に、Shopify からBraze にメールとSMS サブスクライバーを同期することができます。 
+Shopify ストアをBraze に設定する際に、Shopify からBraze にメールサブスクライバーと SMS サブスクライバーを同期することができます。 
 
-#### メール サブスクライバーの収集
+#### メールサブスクライバーを収集する
 
-メール サブスクライバー収集を有効にするには、Shopify設定で機能を有効にします。Shopify メール サブスクライバーs など、少なくとも1 つのBraze[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) を割り当てることをお勧めします。Braze は、指定されたサブスクリプショングループs にメール サブスクライバーs を追加し、メッセージを送信するときにオーディエンスターゲットに含まれるようにします。 
+メールサブスクライバー収集を有効にするには、Shopify 設定内でこの機能を有効にします。Shopify メール サブスクライバーs など、少なくとも1 つのBraze[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#subscription-groups) を割り当てることをお勧めします。Braze は、メールサブスクライバーを指定のサブスクリプショングループに追加します。これにより、メッセージの送信時にメールサブスクライバーがオーディエンスターゲティングに含まれるようになります。 
 
 ![]({% image_buster /assets/img/Shopify/collect_email.png %})
 
-有効にすると、Braze は更新 s をShopify メール サブスクライバー s と更新 s をリアルタイムでメール サブスクリプションステートに同期します。上書きオプションを有効にしない場合、Shopify 顧客s はShopifyストアに関連付けられたサブスクリプショングループからサブスクライブまたは配信停止d のいずれかになります。
+有効にすると、Braze は Shopify メールサブスクライバーに対する更新と、メールサブスクリプションの状態に対する更新をリアルタイムで同期します。オーバーライドオプションを有効にしない場合、Shopify の顧客は、Shopify ストアに関連付けられているサブスクリプショングループにサブスクリプション登録されるか、またはサブスクリプショングループからサブスクリプション解除されます。
 
-上書きオプションを有効にすると、Braze はユーザープロファイルの大域サブスクリプションステートを更新します。つまり、顧客s が配信停止 d としてShopifyでマークされている場合、Braze は配信停止 d としてサブスクリプション ステートをユーザープロファイル上でマークし、使用可能なすべてのメール サブスクリプショングループs からユーザープロファイルします。そのため、メールからグローバル配信停止dのユーザーにはメッセージは送信されません。
+上書きオプションを有効にすると、Braze はユーザープロファイルの大域サブスクリプションステートを更新します。つまり、顧客が Shopify でサブスクリプション登録済みとしてマークされている場合、Braze はユーザープロファイルでグローバルサブスクリプション状態をサブスクリプション解除済みとしてマークし、利用可能なすべてのメールサブスクリプショングループから顧客をサブスクリプション解除します。そのため、メールからグローバルサブスクリプション解除されたユーザーにはメッセージは送信されません。
 
-#### SMSサブスクライバーを収集する
+#### SMS サブスクライバーを収集する
 
-Shopify から SMS サブスクライバー s を収集するには、[SMS サブスクリプショングループ s]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) を [SMS セットアップ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup) の一部として作成する必要があります。 
+Shopify から SMS サブスクライバーを収集するには、[SMS 設定]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup)で [SMS サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)を作成する必要があります。 
 
-ShopifyのSMS サブスクライバーを収集する準備ができたら、Shopify設定画面でSMS サブスクライバー収集を有効にします。適切にSMSをアプリして送信できるように、少なくとも1つのSMS サブスクリプショングループを選択する必要があります。 
+ShopifyのSMS サブスクライバーを収集する準備ができたら、Shopify設定画面でSMS サブスクライバー収集を有効にします。適切なターゲティングを行い SMS メッセージを送信できるようにするために、少なくとも1つの SMS サブスクリプショングループを選択する必要があります。 
 
 ![]({% image_buster /assets/img/Shopify/collect_sms.png %})
 
-有効にすると、Braze は更新をShopify SMS サブスクライバーとそのSMS サブスクリプションステートにリアルタイムで同期します。上書きオプションを有効にしない場合、Shopify 顧客s はShopifyストアに関連付けられたサブスクリプショングループからサブスクライブまたは配信停止d のいずれかになります。
+有効にすると、Braze は更新をShopify SMS サブスクライバーとそのSMS サブスクリプションステートにリアルタイムで同期します。オーバーライドオプションを有効にしない場合、Shopify の顧客は、Shopify ストアに関連付けられているサブスクリプショングループにサブスクリプション登録されるか、またはサブスクリプショングループからサブスクリプション解除されます。
 
-SMS サブスクライバーにはグローバルサブスクリプションステートがないため、オーバーライドオプションを使用するときに考慮する必要はありません。ユーザーは、配信停止dまたはSMS サブスクリプショングループへのサブスクライブのみが可能です。
+SMS サブスクライバーにはグローバルサブスクリプション状態がないため、オーバーライドオプションを使用するときにこれらの状態を考慮する必要はありません。SMS サブスクリプショングループに対するユーザーのサブスクリプション解除またはサブスクリプション登録のみが可能です。
 
 #### レガシーカスタム属性
 
-レガシーShopify 顧客s には、`shopify_accepts_marketing` および`shopify_sms_consent` カスタム属性s を介してメール およびSMS サブスクライバーs を収集する従来のメソッドがある場合があります。上の設定s を上書きを有効にして保存すると、Braze はユーザープロファイルs のカスタム属性s を削除し、それぞれのメール サブスクリプショングループとSMS サブスクリプショングループにこれらの値を同期します。
+Shopify を以前から利用している顧客は、カスタム属性 `shopify_accepts_marketing` と`shopify_sms_consent` を使用してメールサブスクライバーと SMS サブスクライバーを収集する従来の方法を使用している可能性があります。上の設定s を上書きを有効にして保存すると、Braze はユーザープロファイルs のカスタム属性s を削除し、それぞれのメール サブスクリプショングループとSMS サブスクリプショングループにこれらの値を同期します。
 
-既存のキャンペーン s またはキャンバスがこれらのレガシーカスタム属性s を使用している場合は、それらの属性s を削除し、キャンペーンs またはキャンバスがアプリの適切なサブスクリプションステート、グループ、またはその両方を使用していることを確認します。
+既存のキャンペーンまたはキャンバスでこれらのレガシーカスタム属性を使用している場合は、それらの属性を削除し、キャンペーンまたはキャンバスが適切なサブスクリプション状態またはサブスクリプショングループ、あるいはこの両方を使用していることを確認します。

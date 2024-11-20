@@ -101,7 +101,7 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO 8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) </li> </ul> {:/} | No |
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 While `external_id` itself is not mandatory, you **must** include one of these fields:
@@ -169,7 +169,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 | --- | --- | --- | --- | --- |
 | 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
 | 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn't found, Braze will create a newly identified user with that `user_alias_name` set.
 

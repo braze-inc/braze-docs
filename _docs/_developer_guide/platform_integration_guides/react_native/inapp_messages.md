@@ -194,7 +194,7 @@ The in-app message model provides the base for all in-app messages.
 |`extras`          | The message extras dictionary. Default value: `[:]`.                                                                   |
 |`buttons`         | The list of buttons on the in-app message.                                                                             |
 |`toString()`      | The message as a String representation.                                                                                |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For a full reference of the in-app message model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage) documentation.
 
@@ -210,7 +210,7 @@ Buttons can be added to in-app messages to perform actions and log analytics. Th
 |`clickAction`     | The type of click action processed when the user clicks on the button. The three types are: `NEWS_FEED`, `URI`, and `NONE`. |
 |`id`              | The button ID on the message.                                                                                               |
 |`toString()`      | The button as a String representation.                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For a full reference of button model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button) documentation.
 

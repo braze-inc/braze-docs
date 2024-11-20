@@ -45,7 +45,7 @@ $(document).ready(function(){
         left_nav.show();
       }
       else {
-        var resultmsg = '<div>Oops! We didn’t find anything for that.</div><div><a href="/docs/search/?query=' + cur_input.val() + '">Try an Advanced Search instead!</a></div>';
+        var resultmsg = '<div>Oops! We didn\'t find anything for that.</div><div><a href="/docs/search/?query=' + cur_input.val() + '">Try an Advanced Search instead!</a></div>';
         filter_msg.html(resultmsg).show();
         left_nav.hide();
       }

@@ -1,32 +1,32 @@
 ---
-nav_title: アクションIQ
-article_title: アクションIQ
+nav_title: ActionIQ
+article_title: ActionIQ
 description: "この参考記事では、BrazeとActionIQの統合について取り上げている。ActionIQは、マーケティング担当者、アナリスト、技術者のための企業向け顧客データ・プラットフォームである。この統合により、ブランドはActionIQのデータをBrazeに直接同期し、マッピングすることができる。"
 alias: /partners/actioniq/
 page_type: partner
 search_tag: ActionIQ
 ---
 
-# アクションIQ
+# ActionIQ
 
-> [ActionIQは][2]カスタマー・エクスペリエンスの混沌に秩序をもたらす。ActionIQカスタマー・エクスペリエンス（CX）ハブは、すべてのチームが顧客データに直接、しかしコントロールされたセルフサービスでアクセスできるようにし、オーディエンスを発見し、規模に応じたエクスペリエンスをオーケストレーションする。
+> [ActionIQ][2]は、混沌としたカスタマーエクスペリエンスに秩序をもたらします。ActionIQ Customer Experience (CX) Hub では、すべてのチームが、直接かつ制御されたセルフサービスで顧客データにアクセスできます。これにより、オーディエンスを発見し、エクスペリエンスを大規模にオーケストレーションできます。
 
-BrazeとActionIQの統合により、ブランドはActionIQデータを直接Brazeと同期させ、マッピングすることができる。この統合により、ユーザーは以下のことが可能になる：
+Braze と ActionIQ の統合により、ブランドは ActionIQ データを直接 Braze に同期してマッピングできます。これにより、幅広い顧客データ全体に基づく卓越したカスタマーエクスペリエンスを提供できるようになります。この統合により、ユーザーは以下のことが可能になる：
 - ActionIQから直接、オーディエンスセグメントやカスタム属性をBrazeにマッピングする
-- ActionIQがトラッキングしたイベントをリアルタイムでBrazeに転送し、パーソナライズされたターゲットキャンペーンをトリガーする。
+- ActionIQ で追跡されたイベントをリアルタイムで Braze に転送し、パーソナライズされ、ターゲットを絞ったキャンペーンをトリガーする
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | ActionIQアカウント | この統合を利用するには、ActionIQアカウントが必要である。 |
-| Braze REST API キー | `users.track` および`user.export.ids` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | `users.track` および `user.export.ids` の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### 観客数
+### オーディエンスのメンバーシップ
 
 この統合は、Brazeのプロファイルがセグメントに属しているかどうかを示すカスタム属性を作成することによって、ActionIQのオーディエンスメンバーシップをBrazeと同期させるために使用される。各ActionIQオーディエンスは、固有のブーリアン・カスタム属性に対応している。
 
@@ -36,9 +36,9 @@ BrazeとActionIQの統合により、ブランドはActionIQデータを直接Br
 
 #### 要件
 
-ActionIQで、REST APIキーとBraze RESTエンドポイントを提供して、Braze接続をセットアップする。 
+ActionIQ で、REST API キーと Braze REST エンドポイントを指定して、Braze 接続を設定します。 
 
-Brazeプラットフォームのコンシューマーにマッチさせるには、アクティベーション設定に以下の識別子を含める必要がある：
+Braze プラットフォームで消費者と一致するためには、アクティベーション設定に次の識別子が含まれている必要があります。
 - `braze_id`
 - `external_id`
 
@@ -56,7 +56,7 @@ ActionIQプラットフォームは、ストリーミング・インジェスト
 - イベント名
 - 消費者識別子（`braze_id` または`external_id` ）。
 - タイムスタンプ
-- イベント・プロパティは、エクスポート設定で追加された属性によって設定される。
+- イベントプロパティ (エクスポート設定で追加の属性により取り込まれる)
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 ---
 {% api %}
 # ユーザーを削除する
-{% apimethod post core_endpoint|{1} %}
+APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/delete
 {% endapimethod %}
 
@@ -26,13 +26,13 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.delete` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.delete`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users delete' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,12 +48,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 ### リクエストパラメーター
 
-| パラメーター      | required | データ型                  | 説明                                                                                      |
+| パラメータ      | 必須 | データ型                  | 説明                                                                                      |
 | -------------- | -------- | -------------------------- | ------------------------------------------------------------------------------------------------ |
 | `external_ids` | オプション | 文字列の配列           | 削除するユーザーの外部識別子。                                                    |
-| `user_aliases` | オプション | ユーザーエイリアスオブジェクトの配列 | 削除するユーザーの[ユーザーのエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
+| `user_aliases` | オプション | ユーザー別名オブジェクトの配列 | 削除するユーザーの[ユーザーのエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
 | `braze_ids`    | オプション | 文字列の配列           | 削除するユーザーの Braze ユーザー ID。                                                  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### メールでユーザーを削除する
 識別子として`email` が指定された場合、識別子にはさらに`prioritization` の値が必要となる。`prioritization` は順序付き配列で、複数のユーザーが見つかった場合、どのユーザーを削除するかを指定する。つまり、複数のユーザーが優先順位に一致する場合、ユーザーの削除は起こらない。
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - `identified` を持つユーザーを優先することである。 `external_id`
 - `unidentified` のないユーザーを優先することである。 `external_id`
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \

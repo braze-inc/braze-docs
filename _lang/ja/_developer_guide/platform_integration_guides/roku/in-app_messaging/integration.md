@@ -54,7 +54,7 @@ end sub
 | `image_url` | アプリ内メッセージ画像URL。 |
 | `message` | メッセージ本文テキスト。| |
 | `uri` | URI ユーザーは `click_action` に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 ボタンを含むアプリ内メッセージの場合、ボタンテキストを追加する前にクリックアクションが追加されると、メッセージ `click_action` も最終ペイロードに含まれます。
@@ -71,7 +71,7 @@ end sub
 | `header_text_color` | ヘッダーテキストの色。 |
 | `message_text_color` | メッセージテキストの色。 |
 | `text_align` | 「START」、「CENTER」、または「END」。選択したテキストの配置。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 また、アプリ内メッセージを実装し、Roku アプリケーション内で標準パレットを使用してそのスタイルを指定することもできます。
 
@@ -83,7 +83,7 @@ end sub
 | `id` | ボタン自体のID値。 |
 | `text` | ボタンに表示するテキスト。 |
 | `uri` | URI ユーザーは `click_action` に基づいて送信されます。このフィールドは`click_action`が`"URI"`のときに含める必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## インタラクションの処理
 

@@ -23,7 +23,7 @@ To add a new user:
 
 1. Go to **Settings** > **Company Users**.
 2. Click **+ Add New User**.
-3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role.
+3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
 
 {% alert tip %}
 The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
@@ -43,11 +43,15 @@ Every email address used in an [instance]({{site.baseurl}}/user_guide/administra
 
 If your team uses Gmail and you're experiencing issues adding an email address, you can create an alias by adding a plus sign (+) like "+1" or "+test" to the email address. For example, `contractor@braze.com` can have an alias of `contractor+1@braze.com`. Emails to `contractor+1@braze.com` will still be delivered to `contractor@braze.com`, but the alias will be recognized as a unique email address.
 
+### Can I change my Braze account's email address?
+
+For security reasons, users cannot change the email address associate with their Braze account. If a user wants to update their email address, an administrator should [create a new account](#adding-braze-users) for them with their preferred email address.
+
 ## Suspending Braze users
 
 Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
 
-To suspend a user, go to **Settings** > **Company Users**, find their username and click <i class="fa-solid fa-user-lock"></i> **Suspend**.
+To suspend a user, go to **Settings** > **Company Users**, find their username and select <i class="fa-solid fa-user-lock"></i> **Suspend**.
 
 ![Suspend a user][4]
 
@@ -77,6 +81,5 @@ After a user is deleted, Braze does not keep any of the following data:
 [3]: {% image_buster /assets/img/add_new_user_3.png %}
 [4]: {% image_buster /assets/img_archive/suspend_user.png %}
 [5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-
 [27]: {% image_buster /assets/img/add-user.gif %} "Add a New User Process"
 [34]: {% image_buster /assets/img_archive/delete_user_new.png %}

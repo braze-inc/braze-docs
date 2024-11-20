@@ -14,7 +14,7 @@ description: "This article outlines details about the Create send IDs Braze endp
 /sends/id/create
 {% endapimethod %}
 
-> Use this endpoint to create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send. 
+> Use this endpoint to create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send.
 
 Using the send identifier to track and send messages is useful if you are planning to programmatically generate and send content.
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Required | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

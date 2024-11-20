@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| 필수 | 문자열 | 확인 페이지의 HTML입니다. |
 |`state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
 |`options` | 선택 사항 | 객체 | 속성: `meta-viewport-content`. 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 환경설정 센터 이름은 생성한 후에는 편집할 수 없습니다.
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------|
 |`{{subscribed_state.${email_global}}}`| 사용자의 글로벌 이메일 구독 상태(예: '옵트인', '구독' 또는 '구독 취소')를 가져옵니다. |
 |`{{subscribed_state.${<subscription_group_id>}}}`| 사용자에 대해 지정된 구독 그룹의 구독 상태(예: "구독됨" 또는 "구독 취소됨"을 표시)를 가져옵니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 양식 입력 및 작업
 
@@ -83,7 +83,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`{% form_field_name :email_global_state %}`| 특정 양식 입력 요소가 사용자의 글로벌 이메일 구독 상태에 해당함을 나타냅니다. 글로벌 이메일 구독 상태에 대한 선택 데이터와 함께 양식을 제출할 때 사용자의 선택 상태는 '옵트인', '구독' 또는 '구독 취소'여야 합니다. 체크박스인 경우 사용자는 '옵트인' 또는 '구독 취소' 상태가 됩니다. 숨겨진 입력의 경우 '구독 중' 상태도 유효합니다. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| 특정 양식 입력 요소가 지정된 구독 그룹에 해당함을 나타냅니다. 특정 구독 그룹에 대한 선택 데이터와 함께 양식을 제출할 때 사용자의 선택 상태는 "구독 중" 또는 "구독 취소" 중 하나여야 합니다. |
 |`{{preference_center_submit_url}}`| 양식 제출을 위한 URL을 생성합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
@@ -102,7 +102,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% endraw %}
 
-### 양식 입력이 있는 HTML 
+### 양식 입력이 있는 HTML
 
 {% raw %}
 ```
@@ -179,7 +179,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "
     >
       <div class="content" style="margin-left: 20px; margin-right: 20px">
-        
+
         <div>
           <h1
             style="color: #3accdd; font-size: 27px; font-weight: 400; margin-bottom: 40px; margin-top: 0"
@@ -205,7 +205,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 1
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -215,7 +215,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 2
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -225,7 +225,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 3
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 </div>

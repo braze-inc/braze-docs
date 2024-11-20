@@ -19,7 +19,7 @@ The Braze and Wunderkind integration allows you to analyze the performance lift 
 | Requirement | Description |
 | ----------- | ----------- |
 | Wunderkind account | A Wunderkind account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

@@ -11,38 +11,29 @@ tool:
 
 # Archiving campaigns
 
-> If you'd like to stop a campaign from sending or clear it from your dashboard, you can archive it. Go to the **Campaigns** page, click the gear icon next to the campaign's name and click **Archive**.
+> Archiving campaigns can be a simple and effective way of organizing your workspace. As you continue building more campaigns, you can make sure your focus is on active and relevant messaging efforts.
 
-![][1]
+To stop a campaign from sending or clear it from your dashboard, you can archive it:
+
+1. Go to **Messaging** > **Campaigns**.
+2. Hover over the campaign's row and select the <i class="fas fa-ellipsis-vertical"></i> menu. 
+3. Select **Archive**.
 
 When you archive a campaign, no further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
 
-There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the relevant button.
-
-![][3]
-
-To view archived messages from the **Campaigns** page, select the **Archived** folder.
-
-![][2]
+There are also bulk actions you can use by selecting the checkboxes next to the campaigns and selecting the relevant option.
 
 ## Unarchiving campaigns
 
-While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the **Archived** folder and click **Unarchive Selected**.
+While selecting an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You'll need to unarchive the campaign to edit it. To unarchive a campaign:
 
-![][4]
+2. Hover over the archived campaign's row and select the <i class="fas fa-ellipsis-vertical"></i> menu. 
+3. Select **Unarchive**.
 
-Unarchiving a campaign does not make it live. This will simply move your campaign to the **Active** campaign folder where you can make edits and review how the campaign is set up. At this point, your campaign will be stopped and won't send any messages. 
+Unarchiving a campaign doesn't make it live. This just updates your campaign status to **Active**. At this point, you can edit and review how the campaign is set up, and your campaign will be stopped and won't send any messages.
 
-If you wish to resume the campaign and begin sending messages, click the gear icon next to the campaign and select **Resume**.
-
-![][5]
+If you want to resume the campaign and begin sending messages, select the gear icon next to the campaign and select **Resume**.
 
 {% alert warning %}
-When you archive a Segment, any campaigns using it will also be archived.
+When you archive a segment, any campaigns using it will also be archived.
 {% endalert %}
-
-[1]: {% image_buster /assets/img_archive/Archiving.png %}
-[2]: {% image_buster /assets/img_archive/Include_archived.png %}
-[3]: {% image_buster /assets/img_archive/Archive_pause_selected.png %}
-[4]: {% image_buster /assets/img_archive/unarchive_selected.png %}
-[5]: {% image_buster /assets/img_archive/resume_unarchived.png %}

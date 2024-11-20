@@ -58,7 +58,7 @@ Braze 고객은 이벤트를 Jampp로 스트리밍하도록 Braze 웹훅 채널�
 {% alert update %}
 `dispatch_id`에 대한 동작은 캔버스와 캠페인 간에 다르며, 이는 Braze가 캔버스 단계(예약 가능한 엔트리 단계 제외)를 "예약된" 경우에도 트리거된 이벤트로 취급하기 때문입니다. 캔버스 및 캠페인의 [`dispatch_id` 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)에 대해 자세히 알아보세요.
 
-_2019년 8월에 업데이트되었습니다._
+_2019년 8월에 업데이트가 기록되었습니다._
 {% endalert %}
 
 커런츠 기능을 지속적으로 개선하기 위해 모든 커넥터 유형에 걸쳐 커런츠 이메일 이벤트에 `dispatch_id` 필드를 추가하고 있습니다.
@@ -102,6 +102,6 @@ _2019년 8월에 업데이트되었습니다._
 
 참여도가 가장 높은 채널 필터는 선택한 메시징 채널이 "최고"의 채널인 오디언스 중 일부를 선택합니다. 이 경우 "최고"는 "사용자의 기록을 고려할 때 인게이지먼트 가능성이 가장 높음"을 의미합니다. 이메일, 웹 푸시 또는 모바일 푸시(사용 가능한 모든 모바일 OS 또는 기기 포함)를 채널로 선택할 수 있습니다.
 
-이 새 필터 확인하기: \[세분화 필터 라이브러리]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
+이 새 필터 확인하기: [세분화 필터 라이브러리]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 [1]: {% image_buster /assets/img/iam_platforms.gif %}

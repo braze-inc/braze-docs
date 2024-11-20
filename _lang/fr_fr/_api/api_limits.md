@@ -9,7 +9,7 @@ page_type: reference
 
 # Limites de débit
 
-> L’infrastructure API Braze est conçue pour gérer des volumes élevés de données sur l’ensemble de notre base de clients. À cette fin, nous appliquons des limites de débit à l’API par espace de travail. 
+> L’infrastructure API Braze est conçue pour gérer des volumes élevés de données sur l’ensemble de notre base de clients. À cette fin, nous appliquons des limites de débit à l’API par espace de travail.
 
 Une limite de débit correspond au nombre de demandes que l’API peut recevoir sur une période donnée. De nombreux incidents de déni de service basés sur la charge dans les grands systèmes sont involontaires, causés par des erreurs dans les logiciels ou les configurations, et non par des attaques malveillantes. Les limites de débit permettent de vérifier que de telles erreurs ne privent pas nos clients des ressources de l'API de Braze. Si trop de demandes sont envoyées dans un délai donné, vous risquez de recevoir des réponses d’erreur avec un code de statut de `429`, qui indique que la limite de débit a été atteinte.
 
@@ -25,26 +25,26 @@ Le tableau suivant répertorie les limites de débit d’API par défaut pour di
 Les requêtes qui ne figurent pas dans ce tableau partagent une limite de débit totale par défaut de 250 000 requêtes par heure.
 {% endalert %}
 
-| Type de demande | Limite de débit par défaut de l’API |
-| --- | --- |
-| [`/users/track`][10] | **Demandes :** 50 000 demandes par minute.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par requête d'API. Pour en savoir plus, consultez la rubrique [Mise en lot des demandes de suivi des utilisateurs](#batch-user-track). |
-| [`/users/export/ids`][11] | 2 500 demandes par minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20 000 demandes par minute, partagées entre les endpoints. |
-| [`/users/external_id/rename`][20] | 1 000 demandes par minute. |
-| [`/users/external_id/remove`][21] | 1 000 demandes par minute. |
-| [`/events/list`][15] | 1 000 demandes par heure, partagées avec l’endpoint `/purchases/product_list`. |
-| [`/purchases/product_list`][16] | 1 000 demandes par heure, partagées avec l’endpoint `/events/list`. |
-| [`/campaigns/data_series`][17.3] | 50 000 demandes par minute. |
-| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]| 250 requêtes par minute pour les appels de diffusion (lorsque vous ne spécifiez qu'un segment ou une audience connectée). Sinon, 250 000 requêtes par heure réparties entre les endpoints. |
-| [`/sends/id/create`][18] | 100 demandes par jour. |
-| [`/subscription/status/set`][19] | 5 000 demandes par minute. |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1 000 demandes par minute, par espace de travail. |
-| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 demandes par minute, par espace de travail. |
-| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 50 demandes par minute, partagées entre les endpoints. |
-| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16 000 requêtes par minute réparties entre les endpoints. |
-| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 demandes par minute, partagées entre les endpoints. |
-| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5 000 demandes par jour, partagées entre les endpoints. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Type de demande                                                                                                                                                                                                                                           | Limite de débit par défaut de l’API                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`/users/track`][10]                                                                                                                                                                                                                                   | **Demandes :** 3 000 demandes par trois secondes.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par requête d'API. Pour en savoir plus, consultez la rubrique [Mise en lot des demandes de suivi des utilisateurs](#batch-user-track).<br><br>**Limites pour les utilisateurs actifs par mois CY 24-25 :** voir [Limites pour les utilisateurs actifs par mois CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25) |
+| [`/users/export/ids`][11]                                                                                                                                                                                                                              | **Si vous avez embarqué à partir du 22 août 2024 :** 250 demandes par minute. <br><br> **Si vous avez embarqué avant le 22 août 2024 :** 2 500 demandes par minute.                                                                                                                                                                   |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44]                                                                                                                    | 20 000 demandes par minute, partagées entre les endpoints.                                                                                                                                  |
+| [`/users/external_id/rename`][20]                                                                                                                                                                                                                      | 1 000 demandes par minute.                                                                                                                                                                 |
+| [`/users/external_id/remove`][21]                                                                                                                                                                                                                      | 1 000 demandes par minute.                                                                                                                                                                 |
+| [`/events/list`][15]                                                                                                                                                                                                                                   | 1 000 demandes par heure, partagées avec l’endpoint `/purchases/product_list`.                                                                                                               |
+| [`/purchases/product_list`][16]                                                                                                                                                                                                                        | 1 000 demandes par heure, partagées avec l’endpoint `/events/list`.                                                                                                                          |
+| [`/campaigns/data_series`][17.3]                                                                                                                                                                                                                       | 50 000 demandes par minute.                                                                                                                                                                |
+| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]                                                                                                                                                          | 250 requêtes par minute pour les appels de diffusion (lorsque vous ne spécifiez qu'un segment ou une audience connectée). Sinon, 250 000 requêtes par heure réparties entre les endpoints.                     |
+| [`/sends/id/create`][18]                                                                                                                                                                                                                               | 100 demandes par jour.                                                                                                                                                                      |
+| [`/subscription/status/set`][19]                                                                                                                                                                                                                       | 5 000 demandes par minute.                                                                                                                                                                 |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28]                                                                            | 1 000 demandes par minute, par espace de travail.                                                                                                                                                  |
+| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30]                                                                                                                                                            | 10 demandes par minute, par espace de travail.                                                                                                                                                     |
+| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33]                                                                                                                                                                             | 50 demandes par minute, partagées entre les endpoints.                                                                                                                                       |
+| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 16 000 requêtes par minute réparties entre les endpoints.                                                                                                                                   |
+| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 demandes par minute, partagées entre les endpoints.                                                                                                                                       |
+| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 5 000 demandes par jour, partagées entre les endpoints.                                                                                                                         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <!-- Add during CDI endpoints GA
 | [`/cdi/integrations`][46] | 50 requests per minute. |
@@ -64,7 +64,7 @@ Selon les besoins des clients qui utilisent les capacités de traitement par lot
 
 Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
 
-Les demandes adressées à cet endpoint commencent généralement à traiter dans cet ordre : 
+Les demandes adressées à cet endpoint commencent généralement à traiter dans cet ordre :
 
 1. Attributs
 2. Événements
@@ -106,14 +106,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 
 Chaque demande API envoyée à Braze renvoie les informations suivantes dans les en-têtes de réponse :
 
-Nom d’en-tête             | Description
------------------------ | -----------------------
-`X-RateLimit-Limit`     | Nombre maximum de demandes que vous pouvez effectuer dans un intervalle spécifié (votre limite de débit).
-`X-RateLimit-Remaining` | Nombre de demandes restant dans la fenêtre de limite de débit actuelle.
-`X-RateLimit-Reset`     | Heure à laquelle la fenêtre de limite de débit actuelle se réinitialise en secondes d’époque UTC.
-{: .reset-td-br-1 .reset-td-br-2}
+| Nom d’en-tête             | Description                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | Nombre maximum de demandes que vous pouvez effectuer dans un intervalle spécifié (votre limite de débit). |
+| `X-RateLimit-Remaining` | Nombre de demandes restant dans la fenêtre de limite de débit actuelle.                          |
+| `X-RateLimit-Reset`     | Heure à laquelle la fenêtre de limite de débit actuelle se réinitialise en secondes d’époque UTC.                |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur de `X-RateLimit-Remaining` passe en dessous d'un certain seuil, vous pouvez ralentir l'envoi pour vous assurer que tous les e-mails transactionnels sont envoyés. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
+
+{% alert note %}
+Les en-têtes HTTP seront retournés en minuscules. Ce comportement est conforme au protocole HTTP/2 qui exige que tous les noms de champs d'en-tête soient en minuscules. Cela diffère de HTTP/1.X où les noms des en-têtes n'étaient pas sensibles à la casse, mais étaient généralement écrits avec différentes majuscules.
+{% endalert %}
 
 Si vous avez des questions sur les limites de l'API, contactez votre gestionnaire satisfaction client ou ouvrez un [ticket d'assistance.][support]
 

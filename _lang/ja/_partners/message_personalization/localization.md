@@ -4,12 +4,9 @@ article_title: ローカライズパートナー
 page_order: 6
 
 page_type: landing
-description: "このランディングには、メッセージング キャンペーンs でローカライゼーションを使用できるBrazeパートナ(Alloys) が一覧表示されます。"
+description: "このランディングページには、メッセージングキャンペーンでローカライゼーションデータを使用できるようにする Braze パートナー (Alloys) が一覧表示されています。"
 layout: partner_page
 search_tag: Partner
-
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Localization"
 

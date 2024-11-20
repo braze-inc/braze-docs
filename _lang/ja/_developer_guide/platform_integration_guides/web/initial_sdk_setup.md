@@ -8,7 +8,7 @@ page_type: reference
 
 # ウェブ用SDKの初期セットアップ
 
-> このリファレンス記事では、Braze Web SDK のインストール方法について説明します。Braze Web SDK を使えば、分析を収集し、豊富なアプリ内メッセージ、プッシュ、コンテンツカードメッセージを Web ユーザーに表示することができます。完全な技術リファレンスは[JavaScriptドキュメントを][9]参照のこと。
+> このリファレンス記事では、Braze Web SDK のインストール方法について説明します。Braze Web SDK を使えば、分析を収集し、豊富なアプリ内メッセージ、プッシュ、コンテンツカードメッセージを Web ユーザーに表示することができます。完全なテクニカルリファレンスについては、[JavaScript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs")を参照してください。
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -53,13 +53,13 @@ Braze Web SDK は、Google Tag Manager テンプレートライブラリから�
 {% tab Braze cdn %}
 Braze Web SDKをHTMLに直接追加するには、当社のCDNホストスクリプトを参照し、ライブラリを非同期で読み込む。
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 {% endtab %}
 {% endtabs %}
 
 ## ステップ2:SDK の初期化
 
-Braze Web SDK を Web サイトに追加したら、Braze ダッシュボードの \[**設定**] > \[**アプリ設定**] にある API キーと [SDK エンドポイント URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) を使用してライブラリを初期化します。
+Braze Web SDK を Web サイトに追加したら、Braze ダッシュボードの [**設定**] > [**アプリ設定**] にある API キーと [SDK エンドポイント URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) を使用してライブラリを初期化します。
 
 {% alert note %}
 タグマネージャーでBrazeの初期化オプションを設定している場合は、このステップを省略できる。
@@ -248,7 +248,7 @@ require(['path/to/braze.min.js'], function(braze) {
 
 サイトで RequireJS または別の AMD モジュールローダーを使用しているが、上記の他のオプションのいずれかを使用して Braze Web SDK をロードしたい場合は、AMD サポートを含まないバージョンのライブラリをロードできます。このバージョンのライブラリーは、以下のCDNの場所からロードできる：
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.url}}/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
 Tealium iQは、基本的なターンキー Braze 統合を提供します。統合を構成するには、Tealium Tag Management インターフェイスで Braze を検索し、ダッシュボードから Web SDK API キーを指定します。
@@ -269,5 +269,3 @@ Jestを使用している場合、`SyntaxError: Unexpected token 'export'` の�
   ]
 }
 ```
-
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"

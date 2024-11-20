@@ -15,8 +15,6 @@ destination: _site/docs/ja
 # Source dir
 source: '.'
 
-lab_index_name: "DocSearch_Japanese"
-
 # GitHub config
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/ja/'
 

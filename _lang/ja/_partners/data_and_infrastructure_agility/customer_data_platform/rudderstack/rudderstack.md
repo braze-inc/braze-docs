@@ -9,102 +9,102 @@ search_tag: Partner
 
 # RudderStack
 
-> \[RudderStack][1] は、顧客のイベントデータを収集し、好みのデータウェアハウスやBrazeのような数多くの分析プロバイダーにルーティングするためのオープンソースの顧客データ基盤である。エンタープライズ対応で、イベントデータをその場で処理するための堅牢な変換フレームワークを提供する。
+> [RudderStack][1] は、顧客イベントデータを収集し、希望するデータウェアハウスや Braze などの他の多数の分析プロバイダーにルーティングするための、オープンソースの顧客データインフラです。これはエンタープライズ対応で、イベントデータを即座に処理するための強力な変換フレームワークを提供します。
 
-BrazeとRudderStackの統合は、Android、iOS、WebアプリケーションのためのネイティブSDK統合と、バックエンドサービスからのサーバー間統合を提供する。
+Braze と RudderStack の統合により、Android、iOS、および Web アプリケーションのネイティブ SDK 統合と、バックエンドサービスからのサーバー間統合が提供されます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | --- | --- |
-| RudderStackアカウント | このパートナーシップを利用するには、[RudderStackのアカウントが](https://app.rudderstack.com/)必要である。 |
-| 設定されたソース | ソース][3] は基本的に、ウェブサイト、モバイルアプリ、バックエンドサーバーなど、RudderStackに送信されるあらゆるデータのオリジンである。RudderStackでBrazeをデスティネーションとして設定する前に、ソースを設定する必要がある。 |
-| Braze REST API キー | `users.track` 、`users.identify` 、`users.delete` 、`users.alias.new` の権限を持つBraze REST APIキー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| RudderStackアカウント | このパートナーシップを活用するには、[RudderStack アカウント](https://app.rudderstack.com/)が必要です。 |
+| 設定済みのソース | [ソース][3]は基本的に、Web サイト、モバイルアプリ、バックエンドサーバーなど、RudderStack に送信されるあらゆるデータの提供元です。RudderStack で Braze を宛先として設定する前に、ソースを設定する必要があります。 |
+| Braze REST API キー | `users.track`、`users.identify`、`users.delete`、`users.alias.new` の権限を持つ Braze REST API キー。<br><br>これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
 | Brazeアプリのキー | Brazeダッシュボードでアプリキーを取得するには、**「設定」**>「**アプリ設定**」>「**識別**」と進み、アプリ名を見つける。関連する識別子文字列を保存する。
-| データセンター | データセンターはBrazeのダッシュボード\[instance][15].  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| データセンター | データセンターは、Braze ダッシュボード[インスタンス][15]]に対応しています。  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
 ### ステップ1:ソースを追加する
 
-Brazeへのデータ送信を開始するには、まずRudderStackアプリにソースが設定されていることを確認する必要がある。データソースの設定方法については、\[RudderStack][22] ] を参照のこと。
+Brazeへのデータ送信を開始するには、まずRudderStackアプリにソースが設定されていることを確認する必要がある。データソースの設定方法については、[RudderStack][22] ] を参照のこと。
 
-### ステップ2:目的地を設定する
+### ステップ2:宛先を設定する
 
-データソースがセットアップされたので、RudderStackのダッシュボードで、**Destinationsの**下にある**ADD DESTINATIONを**選択する。利用可能な宛先リストから**Brazeを**選択し、**Nextを**クリックする。
+データソースが設定されたので、RudderStack ダッシュボードで、[**Destinations**] の下にある [**ADD DESTINATION**] を選択します。使用可能な宛先のリストから [**Braze**] を選択し、[**Next**] をクリックします。
 
-Brazeデスティネーションで、アプリキー、Braze REST APIキー、データクラスタ、およびネイティブSDKオプション（デバイスモードのみ）を指定する。ネイティブSDKオプションをオンにすると、BrazeネイティブSDKを使用してイベントを送信する。 
+Brazeデスティネーションで、アプリキー、Braze REST APIキー、データクラスタ、およびネイティブSDKオプション（デバイスモードのみ）を指定する。ネイティブ SDK オプションをオンにすると、Braze ネイティブ SDK を使用してイベントが送信されます。 
 
 ![][0]{: style="max-width:70%;margin-bottom:15px;border:none;"}
 
 ### ステップ3:統合のタイプを選ぶ
 
-RudderStackのWebおよびネイティブクライアントサイドライブラリをBrazeと統合するには、以下のいずれかの方法を選択する：
+次のいずれかの方法を使用して、RudderStack の Web ライブラリとネイティブクライアント側ライブラリを Braze と統合できます。
 
-- [サイド・バイ・サイド/デバイス・モード](#device-mode)**:**RudderStackは、クライアント（ブラウザまたはモバイルアプリケーション）から直接Brazeにイベントデータを送信する。
-- [サーバー間/クラウドモード](#cloud-mode)**:**Braze SDKはイベントデータを直接RudderStackに送り、それを変換してBrazeにルーティングする。
+- [サイドバイサイド/デバイスモード](#device-mode)**:**RudderStackは、クライアント（ブラウザまたはモバイルアプリケーション）から直接Brazeにイベントデータを送信する。
+- [サーバー間/クラウドモード](#cloud-mode)**:**Braze SDK はイベントデータを RudderStack に直接送信します。イベントデータは変換され、Braze にルーティングされます。
 - [ハイブリッドモード](#hybrid-mode)**:**ハイブリッドモードを使用して、iOSとAndroidの自動生成イベントとユーザー生成イベントを、単一の接続を使用してBrazeに送信する。
 
 {% alert note %}
-RudderStackの[接続モードと](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/)それぞれの利点について詳しく知る。
+RudderStack の[接続モード](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/)と、それぞれの利点について詳しく説明します。
 {% endalert %}
 
-#### サイド・バイ・サイドの統合（デバイス・モード） {#device-mode}
+#### サイドバイサイド統合 (デバイスモード) {#device-mode}
 
-このモードでは、ウェブサイトまたはモバイルアプリに設定したBraze SDKを使用して、イベントをBrazeに送信できる。
+このモードでは、Web サイトまたはモバイルアプリで設定した Braze SDK を使用して、イベントを Braze に送信できます。
 
-BrazeのGitHubリポジトリで、[サポートされる方法の](#supported-methods)説明に従って、お使いのプラットフォーム用のRudderStack SDKへのマッピングを設定する：
+「[サポートされているメソッド](#supported-methods)」で説明するように、Braze の GitHub リポジトリでご使用のプラットフォームに対応した RudderStack SDK へのマッピングを設定します。
 
-- \[アンドロイド]\[アンドロイド]
-- \[iOS]\[ios]
-- \[スウィフト]\[スウィフト]
-- \[Web]\[web]
-- \[リアクト・ネイティブ]\[react]
-- \[フラッター]\[flutter]
+- [Android][android]
+- [iOS][ios]
+- [Swift][swift]
+- [Web][web]
+- [React Native][react]
+- [Flutter][flutter]
 
-デバイスモードの統合を完了するには、[プロジェクトにBrazeを追加](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration)するためのRudderStackの詳しい説明を参照する。
+デバイスモードの統合を完了するには、Rudderstack の[プロジェクトに Brazeを追加する](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration)詳しい手順を参照してください。
 
 #### サーバー間統合（クラウドモード） {#cloud-mode}
 
-このモードでは、SDKはイベントデータを直接RudderStackサーバーに送信する。そして、RudderStackはこのデータを変換し、目的の目的地にルーティングする。この変換は、RudderStackのtransformerモジュールを使ってRudderStackのバックエンドで行われる。
+このモードでは、SDKはイベントデータを直接RudderStackサーバーに送信する。そして、RudderStackはこのデータを変換し、目的の目的地にルーティングする。この変換は、RudderStack のトランスフォーマーモジュールを使用して RudderStack バックエンドで実行されます。
 
-統合を有効にするには、[サポートされるメソッドで](#supported-methods)説明されているように、RudderStackのメソッドをBrazeにマッピングする必要がある。
+統合を有効にするには、[サポートされているメソッド](#supported-methods)で説明されているように、RudderStack メソッドを Braze にマッピングする必要があります。
 
 {% alert note %}
-RudderStackのサーバーサイドSDK（Java、Python、Node.js 、Go、Ruby）は、クラウドモードのみをサポートしている。これは、サーバー側のSDKがRudderStackのバックエンドで動作し、ブレーズ固有のSDKをロードできないためだ。
+RudderStackのサーバーサイドSDK（Java、Python、Node.js 、Go、Ruby）は、クラウドモードのみをサポートしている。これは、サーバー側の SDK が RudderStack バックエンドで動作し、Braze 固有のSDK を読み込むことができないためです。
 {% endalert %}
 
 {% alert important %}
-サーバー間の統合は、プッシュ通知やアプリ内メッセージングなどのBraze UI機能をサポートしていない。しかし、これらの機能は、デバイスモードの統合によってサポートされる。
+サーバー間の統合は、プッシュ通知やアプリ内メッセージングなどのBraze UI機能をサポートしていない。ただし、これらの機能はデバイスモード統合によってサポートされます。
 {% endalert %}
 
-#### ハイブリッド・モード {#hybrid-mode}
+#### ハイブリッドモード {#hybrid-mode}
 
 ハイブリッドモードを使用して、iOSとAndroidのソースからすべてのイベントをBrazeに送信する。 
 
-Brazeにイベントを送信するためにハイブリッドモードを選択した場合、RudderStack：
+ハイブリッドモードで Braze にイベントを送信することを選択した場合、RudderStack により次の操作が行われます。
 1. Braze SDKを初期化する。
 2. ユーザーが生成したすべてのイベント（identify、track、page、screen、group）をクラウドモードからのみBrazeに送信し、デバイスモードからの送信をブロックする。
 3. 自動生成イベント（アプリ内メッセージ、Braze SDKを必要とするプッシュ通知）をデバイスモード経由で送信する。
 
-[ハイブリッドモードでイベントを送信](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-events-in-hybrid-mode)するには、ソースをBrazeデスティネーションに接続する際にハイブリッドモードオプションを使用する。次に、Brazeインテグレーションをプロジェクトに追加する。
+[ハイブリッドモードでイベントを送信する](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-events-in-hybrid-mode)には、ソースを Braze の宛先に接続している状態でハイブリッドモードオプションを使用します。次に、Brazeインテグレーションをプロジェクトに追加する。
 
 ## ステップ4:追加設定を行う
 
 初期設定完了後、Brazeでデータを正しく受信するために以下の設定を行う：
 
-- **グループ通話でサブスクリプショングループを有効にする**：グループイベントで購読グループのステータスを送信するには、この設定を有効にする。詳しくは[グループを](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group)参照のこと。
-- **カスタム属性を使用する**：Brazeの[ネストされたカスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)機能を使用してセグメントを作成し、カスタム属性オブジェクトを使用してメッセージをパーソナライズする場合は、この設定を有効にする。詳細については、[ネストされたカスタム属性としてユーザー特性を送信するを](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes)参照のこと。
-- **匿名ユーザーのイベントを追跡**する：この設定を有効にすると、匿名のユーザーの活動が追跡され、その情報がBrazeに送信される。
+- **グループ通話でサブスクリプショングループを有効にする**：グループイベントでサブスクリプショングループのステータスを送信するには、この設定を有効にします。詳細については、[Group](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group) を参照してください。
+- **Use Custom Attributes Operation**:Brazeの[ネストされたカスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)機能を使用してセグメントを作成し、カスタム属性オブジェクトを使用してメッセージをパーソナライズする場合は、この設定を有効にする。詳細については、[ネストされたカスタム属性としてユーザー特性を送信するを](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes)参照のこと。
+- **Track events for anonymous users**:この設定を有効にすると、匿名のユーザーの活動が追跡され、その情報がBrazeに送信される。
 
 ### デバイスモード設定
 
 以下の設定は、[デバイスモード](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/#device-mode)経由でBrazeにイベントを送信する場合にのみ適用される：
 
-- **クライアント側のイベントフィルタリング**：この設定により、Brazeに流れるイベントをブロックするか、許可するかを指定できる。この設定の詳細については、[クライアント側イベントフィルタリングを](https://www.rudderstack.com/docs/sources/event-streams/sdks/event-filtering/)参照のこと。
-- **形質を重複させない**：この設定を有効にすると、コール内のユーザー形質が重複排除される。 [`identify`](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#identify)を呼び出す。
-- **Brazeのログを表示する**：この設定は、[JavaScript SDKを](https://www.rudderstack.com/docs/sources/event-streams/sdks/rudderstack-javascript-sdk/)ソースとして使用する場合にのみ適用される。Brazeのログをユーザーに表示するには、これを有効にする。
+- **クライアント側のイベントフィルタリング**：この設定により、Brazeに流れるイベントをブロックするか、許可するかを指定できる。この設定の詳細については、[クライアント側のイベントフィルタリング](https://www.rudderstack.com/docs/sources/event-streams/sdks/event-filtering/)を参照してください。
+- **Deduplicate Traits**:この設定を有効にすると、[`identify`](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#identify) 呼び出しでユーザー特性の重複が排除されます。
+- **Show Braze logs**:この設定は、[JavaScript SDKを](https://www.rudderstack.com/docs/sources/event-streams/sdks/rudderstack-javascript-sdk/)ソースとして使用する場合にのみ適用される。Brazeのログをユーザーに表示するには、これを有効にする。
 - **OneTrustクッキーカテゴリー**：この設定により、[OneTrust](https://www.rudderstack.com/docs/sources/event-streams/sdks/onetrust/javascript/)クッキーの同意グループをBrazeに関連付けることができる。
 
 ## サポートされている方法
@@ -112,55 +112,55 @@ Brazeにイベントを送信するためにハイブリッドモードを選択
 Brazeは、RudderStackメソッドのidentify、track、screen、page、group、aliasをサポートしている。
 
 {% tabs %}
-{% tab 特定する %}
+{% tab Identify %}
 
 RudderStack[`identify` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#identify)、ユーザーとそのアクションを関連付ける。RudderStackは、一意のユーザーIDと、名前、電子メール、IPアドレスなど、そのユーザーに関連するオプションの特徴をキャプチャする。
 
-**特定コールのデルタ管理**<br>
-デバイスモード経由でBrazeにイベントを送信する場合、`identify` コールを重複排除することでコストを節約できる。そのためには、ダッシュボードのDeduplicate Traits設定を有効にする。そしてRudderStackは、変更または修正された属性（trait）のみをBrazeに送信する。
+**identify 呼び出しの差分管理**<br>
+デバイスモードで Braze にイベントを送信する場合、`identify` 呼び出しを重複排除することでコストを節減できます。そのためには、[Deduplicate Traits] ダッシュボード設定を有効にします。その後、RudderStack は変更された属性 (特性) のみを Braze に送信します。
 
-**ユーザーを削除する**<br>
-RudderStack[Data Regulation APIの](https://www.rudderstack.com/docs/api/data-regulation-api/) [Suppression with Deleteレギュレーションを](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation)使用して、Brazeでユーザーを削除できる。
+**ユーザーの削除**<br>
+RudderStack [Data Regulation API](https://www.rudderstack.com/docs/api/data-regulation-api/) の[抑制と削除の規則 (Suppression with Delete regulation)](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation) を使用して、Braze のユーザーを削除できます。
 
 {% endtab %}
-{% tab トラック %}
+{% tab Track %}
 
 RudderStackの[`track` メソッドは](https://rudderstack.com/docs/destinations/marketing/braze/#track)、すべてのユーザー・アクティビティと、それらのアクティビティに関連するプロパティをキャプチャする。
 
-**注文完了**<br>
-RudderStack Ecommerce API][20] を使用して、`Order Completed` という名前のイベントの track メソッドを呼び出すと、RudderStack はそのイベントにリストされている商品を [`purchases`][21].
+**Order completed**<br>
+[RudderStack Ecommerce API][20] を使用して `Order Completed` という名前のイベントに対して track メソッドを呼び出すと、RudderStack はそのイベントにリストされている製品を [`purchases`][21] として Braze に送信します。
 
 {% endtab %}
 {% tab スクリーン %}
 
-RudderStackの[`screen` メソッドでは](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen)、ユーザーのモバイル画面表示を、表示画面に関する追加情報とともに記録することができる。
+RudderStack の [`screen` メソッド](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen)を使用して、ユーザーのモバイル画面ビューを、表示されている画面に関する追加情報とともに記録できます。
 
 {% endtab %}
 {% tab ページ %}
 
-RudderStackの[`page` ](https://rudderstack.com/docs/destinations/marketing/braze/#page)、ウェブサイトのページビューを記録することができる。また、そのページに関するその他の関連情報もキャプチャする。
+RudderStack の [`page` メソッド](https://rudderstack.com/docs/destinations/marketing/braze/#page) を使用して、Web サイトのページビューを記録できます。また、そのページに関するその他の関連情報もキャプチャされます。
 
 {% endtab %}
-{% tab グループ %}
+{% tab Group %}
 
 RudderStackの[`group` メソッドでは](https://rudderstack.com/docs/destinations/marketing/braze/#group)、ユーザーをグループに関連付けることができる。
 
-**購読グループのステータス**<br>
-サブスクリプショングループのステータスを更新するには、RudderStackダッシュボードの "Enable subscription groups in group call "設定を有効にし、グループコールでサブスクリプショングループのステータスを送信する。
+**サブスクリプショングループのステータス**<br>
+サブスクリプショングループのステータスを更新するには、RudderStack ダッシュボードの [Enable subscription groups in group call] 設定を有効にし、グループ呼び出しでサブスクリプショングループのステータスを送信します。
 
 {% endtab %}
 {% tab 別名 %}
 
-RudderStackの[`alias` メソッドでは](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#alias)、既知のユーザーの異なるIDをマージすることができる。RudderStackは、クラウドモードでのみBrazeのエイリアス呼び出しをサポートしていることに注意。
+RudderStack の [`alias` メソッド](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#alias) を使用して、既知のユーザーの複数の ID をマージできます。RudderStack は、クラウドモードでのみ Braze のエイリアス呼び出しをサポートしていることに注意してください。
 
 {% endtab %}
 {% endtabs %}
 
 ## ユーザー特性をネストされたカスタム属性として送信する
 
-ユーザー特性をネストされたカスタム属性としてBrazeに送信し、それに対して追加、更新、削除操作を実行できる。そのためには、RudderStackでBrazeデスティネーションを設定する際に、"Use Custom Attributes Operation dashboard "設定を有効にする。この機能はクラウドモードでのみ利用できる。
+ユーザー特性をネストされたカスタム属性としてBrazeに送信し、それに対して追加、更新、削除操作を実行できる。これを行うには、Braze の宛先を設定するときに Rudderstack で [Use Custom Attributes Operation dashboard] 設定を有効にします。この機能はクラウドモードでのみ利用できる。
 
-`identify` 、ネストされたカスタム・アトリビュートとして、以下のフォーマットでユーザーの特徴を送ることができる：
+次の形式で `identify` イベントでユーザー特性を階層化カスタム属性として送信できます。
 ```javascript
 rudderanalytics.identify("1hKOmRA4GRlm", {
   "cars": {
@@ -203,7 +203,7 @@ rudderanalytics.identify("1hKOmRA4GRlm", {
 })
 ```
 
-`track` 、`page` 、`screen` のコールでカスタムユーザー属性としてユーザー特性を送信するには、`traits` をイベントのコンテキストフィールドとして渡す：
+`track`、`page`、または`screen` 呼び出しでユーザー特性をカスタムユーザ属性として送信するには、イベントのコンテキストフィールドとして `traits` を渡します。
 ```javascript
 rudderanalytics.track("Product Viewed", {
     revenue: 8.99,
@@ -253,7 +253,7 @@ rudderanalytics.track("Product Viewed", {
 ```
 
 {% alert note %}
-更新と削除の操作では、`identifier` が必須キーとなる。add、update、remove操作が入れ子配列に存在しない場合、RudderStackはデフォルトでcreate操作を使用してプロパティを作成する。ネストされたカスタム属性の送信に関する詳細は、[オブジェクトの]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)配列を参照のこと。
+更新と削除の操作では、`identifier` が必須キーとなる。add、update、remove操作が入れ子配列に存在しない場合、RudderStackはデフォルトでcreate操作を使用してプロパティを作成する。階層化カスタム属性の送信の詳細については、「[オブジェクト配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)」を参照してください。
 {% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
@@ -263,9 +263,9 @@ rudderanalytics.track("Product Viewed", {
 [20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started
-\[android] ： https://github.com/rudderlabs/rudder-integration-braze-android
-\[ios] ： https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
-\[swift] ： https://github.com/rudderlabs/rudder-integration-braze-swift
-\[web] ： https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
-\[react] ： https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
-\[flutter] ： https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter
+[android] ： https://github.com/rudderlabs/rudder-integration-braze-android
+[ios] ： https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
+[swift] ： https://github.com/rudderlabs/rudder-integration-braze-swift
+[web] ： https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
+[react] ： https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
+[flutter] ： https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter

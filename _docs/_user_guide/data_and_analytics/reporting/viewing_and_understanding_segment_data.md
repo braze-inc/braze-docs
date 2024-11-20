@@ -29,14 +29,42 @@ When you turn [analytics tracking on for a segment][9], Braze will let you view 
 
 You will see the following segment statistics, which update in real-time as you add or delete filters:
 
-| Statistic | Description |
-| --------- | --- |
-| **Total Users** | How many users your app has in total. |
-| **Selected Users** | How many users are in your segment and what percentage of your total user base they are. |
-| **LTV (Paying Users)** | The lifetime value per user (LTV) in this segment and the lifetime value per paying user in this segment. The LTV is calculated by dividing your lifetime revenue by lifetime users. |
-| **Emailable (Opted In)** | Emailable refers to all users who can be reached via email. These users have provided an email address and have not opted out. Opted In refers to users who have explicitly opted in to email. Due to [spam regulations][6], it's often a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at [those who have neither opted in nor out][5]. |
-| **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes. |
-{: .reset-td-br-1 .reset-td-br-2}
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Statistic</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">Total Users</td>
+            <td class="no-split">How many users your app has in total.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Selected Users</td>
+            <td class="no-split">How many users are in your segment and what percentage of your total user base they are.</td>
+        </tr>
+        <tr>
+            <td class="no-split">LTV (Paying Users)</td>
+            <td class="no-split">The lifetime value per user (LTV) in this segment and the lifetime value per paying user in this segment. The LTV is calculated by dividing your lifetime revenue by lifetime users.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Emailable (Opted-In)</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's often a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
+        </tr>
+        <tr>
+            <td class="no-split">Push Enabled (Opted-In)</td>
+            <td class="no-split">Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Segment Insights
 
@@ -106,8 +134,6 @@ Data is available for time periods where both of these conditions are met:
 You won’t be able to access data from time periods prior to when this feature is turned on for your company. For example, if analytics tracking is turned on for Segment A on October 1 and this feature is turned on for your company on October 2, then you can only see data for Segment A for the campaigns and Canvases that recorded metrics after October 2. 
 
 If your company turned on this feature on October 2, and turned on analytics tracking for Segment B on October 3, then you can only see data for Segment B for the campaigns and Canvases that recorded metrics after October 3.
-
-
 
 
 [1]: {% image_buster /assets/img_archive/segments.png %}

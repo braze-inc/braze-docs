@@ -62,7 +62,7 @@ hide_breadcrumb: false
       <div id="{{ user_list.name | handle }}" class="user_item">
         <div class="user_img" style="background-color: {{ user_list.bg_color}}">
         {%- if user_list.image -%}
-        <img src="{{site.baseurl}}{{ user_list.image}} " />
+        <img src="{{site.baseurl}}{{ user_list.image}} " alt="User List" />
         {%- endif -%}
         </div>
         <div class="user_info">

@@ -20,7 +20,7 @@ Dynamic Optimisation, powered by Jacquard X, leverages Braze Currents and Connec
 | Jacquard account | A [Jacquard account][1] is required to take advantage of this partnership. |
 | Jacquard connect server token | A long string of characters that will serve as your Braze campaign's password to access your Jacquard language.<br><br>You can request this from your Jacquard customer success manager if you haven't already been provided it. |
 | Currents | In order to export data to Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

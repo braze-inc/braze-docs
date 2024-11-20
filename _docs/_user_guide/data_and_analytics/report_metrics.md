@@ -226,7 +226,7 @@ In-App Message
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
 
 #### In-app messages
 
@@ -433,6 +433,66 @@ iOS Push, Android Push
 {% multi_lang_include metrics.md metric='Influenced Opens' %}
 
 <span class="calculation-line">Calculation: (Influenced Opens) / (Deliveries)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Lifetime Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Lifetime Value Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}
+
+{% endapi %}
+
+{% api %}
+
+### Average Daily Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS,LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Average Daily Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Purchases
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Purchases' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Revenue Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
 
 {% endapi %}
 
@@ -748,7 +808,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %} For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
+{% multi_lang_include metrics.md metric='Total Impressions' %} This number is a sum of the number of impression events that Braze receives from the SDKs. For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
 
 For in-app messages, if there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on an impression is logged for every time that user sees the in-app message.
 
@@ -787,7 +847,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Revenue' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>
 
 {% endapi %}
 
@@ -872,9 +932,9 @@ Email, LINE
 All
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %} This number is received from Braze.<br><br> Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>.
+{% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-The number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze and is based on the `user_id`.
+Because a viewer can be a unique recipient every day, you should expect this to be higher than <i>Unique Impressions</i>. This number is received from Braze and is based on the `user_id`.
 
 <span class="calculation-line">Calculation: Count</span>
 

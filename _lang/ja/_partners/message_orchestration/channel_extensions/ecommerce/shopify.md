@@ -1,15 +1,15 @@
 ---
-nav_title: ショップファイ
-article_title: ショップファイ
+nav_title: Shopify
+article_title: Shopify
 alias: /shopify/
 alias: /partners/shopify/
 layout: dev_guide
 noindex: true
-guide_top_header: "ショップファイ"
+guide_top_header: "Shopify"
 guide_top_text: "Shopifyは、あらゆる規模の小売ビジネスを開始し、成長させ、マーケティングし、管理するための信頼できるツールを提供する、世界有数のコマース企業である。Shopifyは、信頼性のために設計されたプラットフォームとサービスによって、すべての人にとってより良い商取引を実現し、あらゆる消費者により良いショッピング体験を提供する。"
 description: "このランディングページには、Shopifyの概要、Shopifyの設定、Shopifyのデータ処理など、Shopifyに関するあらゆることが掲載されている。"
 
-guide_featured_title: "特集記事"
+guide_featured_title: "注目の記事"
 guide_featured_list:
 - name: Shopifyの概要
   link: /docs/shopify_overview/
@@ -23,7 +23,7 @@ guide_featured_list:
 - name: BrazeのShopifyデータ
   link: /docs/shopify_data/
   image: /assets/img/braze_icons/settings-01.svg
-- name: Shopifyヒストリカル・バックフィル
+- name: Shopify 履歴バックフィル
   link: /docs/shopify_historical_backfill/
   image: /assets/img/braze_icons/database-01.svg
 - name: Shopify商品同期

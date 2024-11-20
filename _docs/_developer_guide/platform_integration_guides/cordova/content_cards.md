@@ -26,7 +26,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## GIF Support
 

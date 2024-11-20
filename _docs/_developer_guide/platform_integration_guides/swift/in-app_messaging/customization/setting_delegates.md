@@ -334,7 +334,7 @@ For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status
 | `.auto`                             | The message view decides the status bar hidden state.                                 |
 | `.hidden`                           | Always hide the status bar.                                                           |
 | `.visible`                          | Always display the status bar.                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Customizing display timing 
 
@@ -368,7 +368,7 @@ Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following val
 | `.reenqueue`                        | The message will be not be displayed and will be placed back on the top of the stack.                                       |
 | `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. (Deprecated, please use `.reenqueue`) |
 | `.discard`                          | The message will be discarded and will not be displayed.                                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Implementation samples
 

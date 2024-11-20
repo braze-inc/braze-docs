@@ -1,6 +1,6 @@
 ---
-nav_title: Voucherify推進規程一覧
-article_title: Voucherify・Braze推進規程一覧
+nav_title: Voucherifyとプロモーションコード一覧
+article_title: Voucherify と Braze のプロモーションコードリスト
 page_order: 4
 alias: /partners/voucherify/promotion/
 description: "このリファレンス記事では、Brazeプロモーションコードの抜粋を使用してVoucherify コードsを共有する方法について説明します。"
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Voucherify・Braze推進コード一覧
 
-> 接続されたコンテンツおよびカスタム属性s に加えて、Braze プロモコードs スニペットを使用してVoucherify コードs を共有できます。まず、コードsをVoucherifyからエクスポートし、コードsをBrazeにインポートし、プロモーションリストからメール コードの抜粋コードを追加します。 
+> 接続されたコンテンツおよびカスタム属性s に加えて、Braze プロモコードs スニペットを使用してVoucherify コードs を共有できます。最初に Voucherify からコードをエクスポートしてから Braze にコードをインポートし、プロモーションリストからコードを取得するメールコードスニペットを追加します。 
 
 ## ステップ1:Voucherifyからの一意のコードのエクスポート
 
@@ -18,12 +18,12 @@ Voucherify で、Voucherify キャンペーンに移動します。次に、**CS
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_export_codes.png %}){: style="margin-top:15px;"}
 
-## ステップ2:昇格コード一覧の作成
+## ステップ2:プロモーションコードリストを作成する
 
-**Data Settings**> **Promotion Codes**に移動し、**Promotion Code List**をクリックします。
+[**Data Settings**] > [**Promotion Codes**] に移動し、[**Promotion Code List**] をクリックします。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**プロモーションコード** の下に**Integrations** があります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**プロモーションコード**] の下に [**統合**] があります。
 {% endalert %}
 
 Voucherify キャンペーンの名前を使用して、一覧に名前を付け、データコンシステンシーを確認できます。
@@ -40,15 +40,15 @@ Voucherify キャンペーンの名前を使用して、一覧に名前を付け
 
 ## ステップ 3:上読み込む CSVファイル
 
-Voucherify コード s でCSVファイルを読み込むします。
+Voucherify コードを含む CSV ファイルをアップロードします。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_import_codes.png %})
 
-一覧にコードs(列ヘッダーではない)のみが含まれていることを確認し、**スタートアップ読み込む**を押します。インポートが完了したら、**Save List**をクリックしてリストの詳細を確認します。
+リストにコードのみが含まれていること (列ヘッダーは含まれていないこと) を確認し、[**Start Upload**] をクリックします。インポートが完了したら、**Save List**をクリックしてリストの詳細を確認します。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## ステップ 4:Braze キャンペーンでのコードスニペットの使用
+## ステップ4:Braze キャンペーンでのコードスニペットの使用
 
 Braze キャンペーン内のリストからコードs を使用するには、スニペットをコピーしてメール本文に追加します。
 

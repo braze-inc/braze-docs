@@ -16,15 +16,15 @@ channel: push
 
 プッシュ通知は、重要なアップデートが発生したときにユーザーの画面に表示されるアプリ外のアラートです。プッシュ通知は、時間的制約があって関連性の高いコンテンツをユーザーに提供したり、ユーザーをアプリに再エンゲージしたりするための効果的な方法です。
 
-ADM (Amazon Device Messaging) は、Amazon 以外のデバイスではサポートされていません。Kindle プッシュをテストするには、[FireOS デバイス][32]が必要です。その他のベストプラクティスについては、[ヘルプセクションを][8]チェックしてほしい。
+ADM (Amazon Device Messaging) は、Amazon 以外のデバイスではサポートされていません。Kindle プッシュをテストするには、[FireOS デバイス](https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm)が必要です。その他のベストプラクティスについては、[ヘルプセクションを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/)チェックしてほしい。
 
-Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイスにプッシュ通知を送信します。
+Braze は、[Amazon Device Messaging (ADM)](https://developer.amazon.com/public/apis/engage/device-messaging) を使用して Amazon デバイスにプッシュ通知を送信します。
 
-## ステップ1:ADM を有効にする
+## ステップ 1:ADM を有効にする
 
-1. まだ作成していない場合は、[Amazon Apps & Games Developer Portal][10] を使用してアカウントを作成します。
-2. [OAuth 認証情報 (クライアント ID とクライアントシークレット) と ADM API キー][11]を取得します。
-3. \[Unity Braze 設定]ウィンドウで \[**自動 ADM 登録が有効**] を有効にします。 
+1. まだ作成していない場合は、[Amazon Apps & Games Developer Portal](https://developer.amazon.com/public) を使用してアカウントを作成します。
+2. [OAuth 認証情報 (クライアント ID とクライアントシークレット) と ADM API キー](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials)を取得します。
+3. [Unity Braze 設定]ウィンドウで [**自動 ADM 登録が有効**] を有効にします。 
   - または、`res/values/braze.xml` ファイルに次の行を追加して、ADM 登録を有効にすることもできます。
 
   ```xml
@@ -77,7 +77,7 @@ Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイ
 
 ## ステップ3:ADM API キーを保存する
 
-まず、[アプリの ADM API キーを取得][11]します。 次に、ADM API キーを `api_key.txt` という名前のファイルに保存し、そのファイルをプロジェクトの [`Assets/`][54] フォルダーに保存します。
+まず、[アプリの ADM API キーを取得](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials)します。 次に、ADM API キーを`api_key.txt` という名前のファイルに保存し、プロジェクトの[`Assets/`](https://docs.unity3d.com/Manual/AndroidAARPlugins.html) フォルダに保存します。
 
 Amazon は、末尾の改行などの空白文字が `api_key.txt` に含まれている場合、キーを認識しません。
 
@@ -95,22 +95,11 @@ preBuild.dependsOn(copyAmazon)
 
 ## ステップ4: ADMジャーを追加する
 
-必要な ADM Jar ファイルは、\[Unity JAR ドキュメント][53]に従って、プロジェクト内のいずれかの場所に置かれています。
+必要なADM Jar ファイルは、[Unity JAR ドキュメント](https://docs.unity3d.com/Manual/AndroidJARPlugins.html) に従ってプロジェクト内の任意の場所に配置できます。
 
-## ステップ5:クライアントシークレットとクライアント ID を Braze ダッシュボードに追加する
+## ステップ 5:クライアントシークレットとクライアント ID を Braze ダッシュボードに追加する
 
-最後に、[ステップ 1][2] で取得したクライアントシークレットとクライアント ID を Braze ダッシュボードの \[**設定の管理**] ページに追加する必要があります。
+最後に、[ステップ 1](#step-1-enable-adm) で取得したクライアントシークレットとクライアント ID を Braze ダッシュボードの [**設定の管理**] ページに追加する必要があります。
 
-![][34]
+![]({% image_buster /assets/img_archive/fire_os_dashboard.png %})
 
-[2]: #step-1-enable-adm
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/
-[10]: https://developer.amazon.com/public
-[11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
-[12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
-[14]: https://developer.amazon.com/public/apis/engage/device-messaging
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
-[32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
-[34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[53]: https://docs.unity3d.com/Manual/AndroidJARPlugins.html
-[54]: https://docs.unity3d.com/Manual/AndroidAARPlugins.html

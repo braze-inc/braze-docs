@@ -21,7 +21,7 @@ The Braze and Airbyte integration allows users to create a data pipeline to coll
 | Airbyte Cloud account | An [Airbyte Cloud](https://cloud.airbyte.io/workspaces) account is required to take advantage of this integration. |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

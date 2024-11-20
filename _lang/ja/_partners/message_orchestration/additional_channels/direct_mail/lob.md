@@ -1,6 +1,6 @@
 ---
-nav_title: ロブ
-article_title: ロブ 
+nav_title: Lob
+article_title: Lob 
 alias: /partners/lob/
 description: "この参考記事では、BrazeとLob.comの提携について概説している。Lob.comを利用すれば、手紙やはがき、小切手などのダイレクトメールを郵送することができる。"
 page_type: partner
@@ -8,30 +8,30 @@ search_tag: Partner
 
 ---
 
-# ロブ
+# Lob
 
-> \[Lob.com][38] は、ユーザーにダイレクトメールを送ることができるオンラインサービスである。
+> [Lob.com][38] は、ユーザーにダイレクトメールを送ることができるオンラインサービスである。
 
-BrazeとLobの統合は、BrazeのウェブフックとLobのAPIを活用して、手紙、はがき、小切手などのメールをメールで送信する。  
+Braze と Lob の統合では、Braze Webhook と Lob API を使用して、手紙、ポストカード、小切手などを郵送します。  
 
 ## 前提条件
 
 |必要条件| 説明|
 | ---| ---|
-|ロブアカウント | このパートナーシップを利用するには、ロブ・アカウントが必要である。 |
-| ロブAPIキー | LobのAPIキーは、Lobダッシュボードのあなたの名前の下の設定セクションにある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|Lob アカウント | このパートナーシップを活用するには、Lob アカウントが必要です。 |
+| Lob API キー | Lob API キーは、Lob ダッシュボードのお客様の名前の下にある設定セクションで確認できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:Lobエンドポイントを選択する
 
-WebhookでリクエストするHTTP URLは、Lobにできるアクションごとに異なる。以下の例では、postcards APIエンドポイント`https://api.lob.com/v1/postcards` を使っている。完全なエンドポイントリスト][39] ] にアクセスして、ユースケースに適したエンドポイントを選択する。 
+Webhook で要求する HTTP URL は、Lob に対して実行できるアクションごとに異なります。以下の例では、postcards APIエンドポイント`https://api.lob.com/v1/postcards` を使っている。[すべてのエンドポイントのリスト][39]にアクセスして、ユースケースに適したエンドポイントを選択します。 
 
 | APIエンドポイント | 利用可能なエンドポイント |
 | ------------ | ------------------- |
-| https://api.lob.com/ | /v1/アドレス<br>/v1/addresses/{id}<br>/v1/ベリファイ<br>/v1/ポストカード<br>/v1/postcards/{id}<br>/v1/文字<br>/v1/letter/{id}<br>/v1/チェック<br>/v1/checks/{id}である。<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/エリア<br>/v1/areas/{id}である。<br>/v1/ルート/{zip_code}。<br>/v1/ルート<br>/v1/国<br>/v1/ステート|
-{: .reset-td-br-1 .reset-td-br-2}
+| https://api.lob.com/ | /v1/addresses<br>/v1/addresses/{id}<br>/v1/verify<br>/v1/postcards<br>/v1/postcards/{id}<br>/v1/letter<br>/v1/letter/{id}<br>/v1/checks<br>/v1/checks/{id}<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/areas<br>/v1/areas/{id}<br>/v1/routes/{zip_code}<br>/v1/routes<br>/v1/countries<br>/v1/states|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### ステップ2:BrazeのWebhookテンプレートを作成する
 
@@ -44,23 +44,23 @@ WebhookでリクエストするHTTP URLは、Lobにできるアクションご�
 単発のLob Webhookキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeで**Webhookを**選択する。
 
 新しいWebhookテンプレートで、以下のフィールドに記入する：
-- **ウェブフックのURL**： `<LOB_API_ENDPOINT>`
-- **リクエスト・ボディ**Raw Text
+- **Webhook URL**: `<LOB_API_ENDPOINT>`
+- **リクエスト本文**:Raw Text
 
 #### リクエストヘッダと方法
 
-Lobは認可のためのHTTPヘッダーとHTTPメソッドを必要とする。以下はすでにキーと値のペアとしてテンプレート内に含まれているが、**Settings**タブでは、`<LOB_API_KEY>` をあなたのLob APIキーに置き換える必要がある。このキーは、キーの直後に": "を含み、64進数でエンコードされていなければならない。 
+Lob には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、[**設定**] タブで `<LOB_API_KEY>` をご使用の Lob API キーに置き換える必要があります。このキーの直後に「:」が付加されており、またこのキーは64進数でエンコードされている必要があります。 
 
 - **HTTPメソッド**：POST
-- **ヘッダーを要求する**：
-  - **認可する**：ベーシック `{{'<LOB_API_KEY>:' | base64_encode}}`
+- **リクエストヘッダー**:
+  - **Authorization**:Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![Braze webhook builderのcomposeタブに表示されるリクエストボディコードとwebhook URL。][35]
+![Braze Webhook ビルダー作成タブに表示されているリクエスト本文のコードと Webhook URL。][35]
 
 #### Request body
 
-以下は、Lob postcardsエンドポイントのリクエストボディの例である。このリクエストボディは、Brazeの基本Lobテンプレートで提供されているが、他のエンドポイントを使用したい場合は、それに応じてLiquidフィールドを調整する必要がある。
+Lob ポストカードエンドポイントのリクエスト本文の例を次に示します。このリクエスト本文は Braze の 基本 Lobテンプレートで提供されますが、他のエンドポイントを使用する場合は、それに応じて Liquid フィールドを調整する必要があります。
 
 ```json
 {% raw %}"description": "Demo Postcard",
@@ -77,7 +77,7 @@ Lobは認可のためのHTTPヘッダーとHTTPメソッドを必要とする。
 
 ### ステップ3:リクエストをプレビューする
 
-この時点で、キャンペーンはテストと送信の準備ができているはずだ。エラーが発生した場合は、LobダッシュボードとBraze開発者コンソールのエラーメッセージログを確認する。例えば、以下のエラーは、認証ヘッダーのフォーマットが正しくないために発生した。 
+この時点で、あなたのキャンペーンはテストと送信の準備ができているはずです。エラーが発生した場合は、LobダッシュボードとBraze開発者コンソールのエラーメッセージログを確認する。例えば、以下のエラーは、認証ヘッダーのフォーマットが正しくないために発生した。 
 
 ![時間、アプリ名、チャンネル、エラーメッセージを示すメッセージエラーログ。エラーメッセージには、メッセージアラートとステータスコードが含まれる。][36]
 
