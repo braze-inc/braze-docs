@@ -11,7 +11,7 @@ hidden: true
 
 # Using Shopify with Braze
 
-> This page shows you how you can use the Shopify integration in Braze, such as in your campaigns, Canvases, segments, and how to disable checkout notifications in Shopify.
+> This page shows you how you can use the Shopify integration in Braze, such as in your campaigns, Canvases, segments, and how to disable checkout notifications in Shopify.<br><br>This is part of the [Shopify beta collection]({{site.baseurl}}/shopify_beta/).
 
 ## Prerequisites
 
@@ -197,7 +197,7 @@ To begin personalizing your messages using Liquid tags, you can refer to the fol
 - [Shopify data]({{site.baseurl}}/shopify_features/#shopify-data) reference with pre-defined liquid tags
 - [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
 
-### Abandoned Cart and Abandoned Checkout product personalization {#abandoned-cart-checkout}
+### Abandoned Cart and Abandoned Checkout email personalization {#abandoned-cart-checkout}
 
 Abandoned Cart and Abandoned Checkout user journeys require a special `shopping_cart` liquid tag for product personalization. 
 
@@ -210,8 +210,6 @@ For Abandoned Cart Canvases only, add the following Liquid to your email header.
 ```
 {% endraw %}
 {% endalert %}
-
-To dynamically add products to your emails for Abandoned Cart and Abandoned Checkout journeys, use the shopping cart Liquid tag. You can find individual `shopping_cart` Liquid variables [here](). 
 
 Here is an example HTML block that uses your `shopping_cart` Liquid tag to add products into your email.
 

@@ -11,7 +11,7 @@ hidden: true
 
 # Shopify features
 
-> This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
+> This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.<br><br>This is part of the [Shopify beta collection]({{site.baseurl}}/shopify_beta/).
 
 ## Shopify data
 
@@ -25,6 +25,23 @@ hidden: true
 **Type**: Recommended Event<br>
 **Triggered**: When a customer views a product page<br>
 **Use Case**: Browse abandonment
+
+{% raw %}
+| Variable | Liquid templating |
+| --- | --- |
+|------------------|-----------------------------------------------------|
+| `product_id`       | `{{event_properties.${product_id}}}`                |
+| `product_name `    | `{{event_properties.${product_name}}}`              |
+| `variant_id`       | `{{event_properties.${variant_id}}}`                |
+| `image_url `       | `{{event_properties.${image_url}}}`                 |
+| `product_url`      | `<your-store.myshopify.com>{{event_properties.${product_url}}}` <br><br>Add your Shopify site domain before the URL. |
+| `price`            | `{{event_properties.${price}}}`                     |
+| `currency`         | `{{event_properties.${currency}}}`                  |
+| `source`           | `{{event_properties.${source}}}`                    |
+| `sku`              | `{{event_properties.${metadata}[0].sku}}`          |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Cart updated %}
 **Event**: `ecommerce.v1.cart_updated`<br>
@@ -32,7 +49,46 @@ hidden: true
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
 
-For Abandoned Cart messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
+For Abandoned Cart Canvases, use the shopping cart Liquid variable. First, add the following Liquid to the top of your message content to prevent duplicate sends to users whose carts aren't abandoned.
+
+{% raw %}
+```liquid
+{% shopping_cart {{context_properties.${cart_id}}} :abort_if_not_abandoned <true> %}
+```
+{% endraw %}
+
+Then, add the initial shopping cart Liquid tag to gain context of the shopping cart in your message. 
+
+{% raw %}
+```liquid
+{% shopping_cart {{context_properties.${cart_id}}} %}
+```
+{% endraw %}
+
+Now you can add the following shopping cart Liquid tags into your message.
+
+{% raw %}
+| Variable         | Liquid templating                                   |
+|------------------|-----------------------------------------------------|
+| `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
+| `currency`         | `{{ shopping_cart.currency }}`                      |
+| `total_value`      | `{{ shopping_cart.total_value }}`                   |
+| `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
+| `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
+| `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
+| `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
+| `sku`              | `{{ shopping_cart.products[0].metadata[0].sku }}`  |
+| `source`           | `{{ shopping_cart.source }}`                        |
+| `metadata (value)` | `{{ shopping_cart.metadata[0].<add_value_here> }}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% alert tip %}
+For more information on how to build out a Liquid `for` loop to dynamically add all products into your email, refer to [Abandoned Cart and Abandoned Checkout email personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
+{% endalert %}
 
 {% endsubtab %}
 {% subtab Checkout started %}
@@ -41,7 +97,7 @@ For Abandoned Cart messages, use the shopping cart Liquid tags to add products f
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
 
-For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout product personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
+For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout email personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
 
 {% endsubtab %}
 {% subtab Order placed %}
@@ -49,6 +105,33 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Type**: Recommended Event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
+
+{% raw %}
+| Variable                | Liquid templating                                   |
+|-------------------------|-----------------------------------------------------|
+| `cart_id`                 | `{{event_properties.${cart_id}}}`                   |
+| `currency`                | `{{event_properties.${currency}}}`                  |
+| `discounts`               | `{{event_properties.${discounts}}}`                 |
+| `metadata`                | `{{event_properties.${metadata}}}`                  |
+| `order_id`                | `{{event_properties.${order_id}}}`                  |
+| `product_id`              | `{{event_properties.${products[0].product_id}}}`   |
+| `product_name`            | `{{event_properties.${products[0].product_name}}}` |
+| `variant_id`              | `{{event_properties.${products[0].variant_id}}}`   |
+| `quantity`                | `{{event_properties.${products[0].quantity}}}`     |
+| `sku`                     | `{{event_properties.${products[0].metadata[0].sku}}}` |
+| `total_discounts`         | `{{event_properties.${total_discounts}}}`           |
+| `order_status_url`        | `{{event_properties.${metadata[0].order_status_url}}}` |
+| `order_number`            | `{{event_properties.${metadata[0].order_number}}}` |
+| `tags`                    | `{{event_properties.${metadata[0].tags}}}`         |
+| `referring_site`          | `{{event_properties.${metadata[0].referring_site}}}` |
+| `payment_gateway_names`    | `{{event_properties.${metadata[0].payment_gateway_names}}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% alert tip %}
+Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you need to use Catalogs Liquid personalization as mentioned here. 
+{% endalert %}
+
 {% endsubtab %}
 {% subtab Fulfilled order %}
 **Event**: `shopify_fulfilled_order`<br>
@@ -57,7 +140,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Use Case**: (Transactional) Fulfillment update 
 
 {% raw %}
-| Variable | Liquid Templating |
+| Variable | Liquid templating |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -96,6 +179,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 | Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% endsubtab %}
@@ -106,7 +190,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Use Case**: (Transactional) Fulfillment update 
 
 {% raw %}
-| Variable | Liquid Templating |
+| Variable | Liquid templating |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -145,6 +229,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 | Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% endsubtab %}
@@ -155,7 +240,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Use Case**: (Transactional) Payment confirmation
 
 {% raw %}
-| Variable | Liquid Templating |
+| Variable | Liquid templating |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Confirmed Status | `{{event_properties.${confirmed}}}` |
@@ -177,6 +262,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% endsubtab %}
@@ -187,7 +273,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Use Case**: (Transactional) Order cancellation confirmation
 
 {% raw %}
-| Variable | Liquid Templating |
+| Variable | Liquid templating |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -212,6 +298,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 | Shipping Price | `{{event_properties.${shipping}[0].price}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% endsubtab %}
@@ -222,7 +309,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 **Use Case**: (Transactional) Refund confirmation
 
 {% raw %}
-| Variable | Liquid Templating |
+| Variable | Liquid templating |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Order Note | `{event_properties.${note}}}` |
@@ -236,6 +323,7 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% endsubtab %}

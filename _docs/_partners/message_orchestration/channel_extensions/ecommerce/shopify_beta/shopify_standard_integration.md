@@ -11,7 +11,7 @@ hidden: true
 
 # Shopify standard integration setup
 
-> This page walks you through how to integrate Braze with Shopify using our standard integration for users with a Shopify online store.
+> This page walks you through how to integrate Braze with Shopify using our standard integration for users with a Shopify online store.<br><br>This is part of the [Shopify beta collection]({{site.baseurl}}/shopify_beta/).
 
 ## Step 1: Connect your Shopify store
 
