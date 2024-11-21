@@ -50,6 +50,10 @@ glossaries:
     description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom attributes
+  - name: Created At
+    description: Segment users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
     description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
