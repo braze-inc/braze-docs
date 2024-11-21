@@ -51,7 +51,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Created At
-    description: Segment users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+    description: Segments users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
     tags:
       - Other Filters
   - name: Nested Custom Attributes
