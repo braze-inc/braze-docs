@@ -89,11 +89,11 @@ Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
 | `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
 | `400 Bad Request` | Impossible d’analyser l’horodatage `send_at`.|
 | `400 Bad Request` | Dans votre demande, `in_local_time` est vrai, mais `time` est passé dans le fuseau horaire de votre entreprise.|
-| `401 Unauthorized` | Clé API non valide |
+| `401 Unauthorized` | Clé API non valide. |
 | `403 Forbidden` | Le plan tarifaire n'est pas pris en charge ou le compte est désactivé.|
 | `403 Access Denied` | La clé API REST que vous utilisez ne dispose pas d'autorisations suffisantes, vérifiez les autorisations de la clé API sous la page **Paramètres.** |
 | `404 Not Found` | URL non valide. |
 | `429 Rate Limited` | Limite de débit dépassée. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}

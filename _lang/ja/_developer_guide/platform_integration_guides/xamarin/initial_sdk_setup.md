@@ -21,7 +21,7 @@ search_rank: 1
 Xamarinのサポート終了前後の[Microsoftのポリシー](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin)を参照してください。
 {% endalert %}
 
-## ステップ 1:Xamarin バインディングの取得
+## ステップ1:Xamarin バインディングの取得
 
 {% tabs %}
 {% tab android %}
@@ -47,7 +47,7 @@ Xamarin バインディングは、Xamarin アプリでネイティブライブ�
 
 {% subtabs local %}
 {% subtab NuGet %}
-最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 「Braze」を検索し、最新の Xamarin iOS NuGet パッケージ ([Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)、[Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)、および \[Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation) をプロジェクトにインストールします。
+最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 「Braze」を検索し、最新の Xamarin iOS NuGet パッケージ ([Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)、[Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)、および [Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation) をプロジェクトにインストールします。
 
 .NET MAUI への移行を容易にするために、互換性ライブラリパッケージ [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) および [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) も提供しています。
 {% endsubtab %}
@@ -127,7 +127,7 @@ braze = new Braze(configuration);
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3:統合をテストする
+## ステップ3: 統合をテストする
 
 {% tabs %}
 {% tab android %}

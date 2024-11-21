@@ -31,7 +31,7 @@ iOSでは、Brazeコンフィギュレーションエディターからゲーム
 
 ## カードを解析する
 
-ゲームオブジェクトコールバックで受信した受信 `string` メッセージは、事前に指定された[フィード][11]オブジェクトに解析できます。このオブジェクトには、便宜上、[カード][12]オブジェクトの一覧があります。
+ゲームオブジェクトコールバックで受信した受信 `string` メッセージは、事前に指定された[フィード](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs)オブジェクトに解析できます。このオブジェクトには、便宜上、[カード](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs)オブジェクトの一覧があります。
 
 詳細は以下の例を参照のこと：
 
@@ -64,9 +64,7 @@ AppboyBinding.RequestFeedRefreshFromCache()
 
 Braze によって直接表示されないカードについては、クリックとインプレッションを手動でログに記録する必要があります。
 
-`LogClick()` と`LogImpression()` on[Card][12]を使って、特定のカードのクリック数とインプレッション数を記録する。
+`LogClick()` と`LogImpression()` on[Card](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs)を使って、特定のカードのクリック数とインプレッション数を記録する。
 
 ユーザーがフィード全体を閲覧したことを記録するには、`AppboyBinding.LogFeedDisplayed()` をコールする。
 
-[11]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs
-[12]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs

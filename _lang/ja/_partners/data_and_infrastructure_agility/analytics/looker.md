@@ -20,8 +20,8 @@ Braze と Looker の統合により、Braze をご利用のお客様は REST API
 |---|---|
 |Looker アカウント | このパートナーシップを活用するには、[Looker アカウント](https://looker.com/)が必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントは[インスタンスの Braze URL][1] に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### 制限事項
 
@@ -56,7 +56,7 @@ Brazeは[Snowflakeを](https://www.snowflake.com/)データウェアハウスと
 |---|---|
 | メッセージ・エンゲージメント分析ブロック | このブロックには、プッシュ、Eメール、アプリ内メッセージ、ウェブフック、ニュースフィード、コンバージョン、キャンバスエントリー、キャンペーンコントロールグループの登録イベントに関するデータが含まれる。<br><br>この [Looker ブロック](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)の詳細については、[GitHub のコード](https://github.com/llooker/braze_message_engagement_block)をご確認ください。 |
 | ユーザー行動分析ブロック | このブロックには、カスタムイベント、購入、セッション、ロケーションイベント、アンインストールに関するデータが含まれる。<br><br>この [Looker ブロック](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)の詳細については、[GitHub のコード](https://github.com/llooker/braze_retention_block)をご確認ください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Looker Actions
 
@@ -100,11 +100,11 @@ dimension: external_id {
 - 完全なタグは引用符で囲む。例: `tags: ["braze[first_name]"]`。他のタグを割り当てることもできるが、無視される。
 - 追加情報は [GitHub](https://github.com/looker/actions/tree/master/src/actions/braze) で確認できます。
 
-#### ステップ 4:Looker アクションを送信する
+#### ステップ4:Looker アクションを送信する
 
 1. `braze_id` ディメンションが選択されている Look 内で、右上の設定の歯車 (<i class="fas fa-cog"></i>) をクリックし、[**Send...**] を選択します。
 2. カスタム Braze アクションを選択します。
-3. \[**Unique Keｙ**] で Braze アカウントのプライマリユーザーマッピングキー (`external_id` または`braze_id`) を入力します。
+3. [**Unique Keｙ**] で Braze アカウントのプライマリユーザーマッピングキー (`external_id` または`braze_id`) を入力します。
 4. エクスポートに名前をつける。指定されない場合は `LOOKER_EXPORT` が使用されます。
 5. **Advanced Options（詳細オプション）**」で、**「Results in Table（テーブル内の結果**）」または「**All Results（すべての結果）**」を選択し、「**Send（送信）**」を選択する。<br><br>![][13]<br><br>エクスポートが正しく送信された場合、`LOOKER_EXPORT` は、アクションに入力された値を含むカスタム属性としてユーザーのプロファイルに表示されます。<br><br>![][14]
 
@@ -143,14 +143,14 @@ Authorization: Bearer [API_KEY]
 
 ### Braze でユーザーをセグメント化する {#segment-users}
 
-Braze で、これらのフラグが設定されたユーザーのセグメントを作成するには、\[**エンゲージメント**] の下の \[**セグメント**] に移動し、セグメントに名前を付け、フィルターとして \[**Looker_Export**] を選択します。次に、"includes value "オプションを使い、Lookerで割り当てたカスタム属性フラグを指定する。
+Braze で、これらのフラグが設定されたユーザーのセグメントを作成するには、[**エンゲージメント**] の下の [**セグメント**] に移動し、セグメントに名前を付け、フィルターとして [**Looker_Export**] を選択します。次に、"includes value "オプションを使い、Lookerで割り当てたカスタム属性フラグを指定する。
 
-![Braze セグメントビルダーで、フィルター \[looker_export] に \[includes_value] と \[Looker] が設定されている。][15]
+![Braze セグメントビルダーで、フィルター [looker_export] に [includes_value] と [Looker] が設定されている。][15]
 
 一度保存すれば、キャンバスやキャンペーン作成時に、ユーザーをターゲティングするステップでこのセグメントを参照することができる。
 
 ## トラブルシューティング
-Looker アクションに問題がある場合、テストユーザーを\[内部グループ][16]に追加し、以下を確認します。
+Looker アクションに問題がある場合、テストユーザーを[内部グループ][16]に追加し、以下を確認します。
 
 * APIキーには`users.track` の権限がある。
 * 正しい REST エンドポイントが入力されている (例: `https://rest.iad-01.braze.com`)。

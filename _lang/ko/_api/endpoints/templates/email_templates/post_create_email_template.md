@@ -13,7 +13,7 @@ description: "이 문서에서는 이메일 템플릿 만들기 Braze 엔드포�
 /templates/email/create
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 Braze 대시보드에서 이메일 템플릿을 만들 수 있습니다. 
+> 이 엔드포인트를 사용하여 Braze 대시보드에서 이메일 템플릿을 만들 수 있습니다.
 
 이러한 템플릿은 **템플릿 및 미디어** 페이지에서 사용할 수 있습니다. 이 엔드포인트의 응답에는 후속 API 호출에서 템플릿을 업데이트하는 데 사용할 수 있는 필드에 대한 `email_template_id`필드가 포함됩니다.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`preheader`|선택 사항|문자열|일부 클라이언트에서 미리보기를 생성하는 데 사용되는 이메일 프리헤더입니다.|
 |`tags`|선택 사항|문자열|[태그가]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 이미 존재해야 합니다.|
 |`should_inline_css`|선택 사항|부울|템플릿별로 `inline_css` 기능을 사용하거나 사용하지 않도록 설정합니다. 제공하지 않으면 Braze는 앱 그룹에 대한 기본 설정을 사용합니다. `true` 또는 `false` 중 하나가 예상됩니다.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 요청 예시
@@ -88,6 +88,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 | 일부 태그를 찾을 수 없습니다. | 이메일 템플릿을 만들 때 태그를 추가하려면 해당 태그가 이미 Braze에 존재해야 합니다. |
 | 이메일에는 유효한 콘텐츠 블록 이름이 있어야 합니다. | 이메일에 이 환경에 존재하지 않는 콘텐츠 블록이 포함되어 있을 수 있습니다. |
 | `should_inline_css` 에 대한 잘못된 값입니다. `true` 또는 `false` 중 하나가 예상되었습니다. | 이 매개변수는 부울 값(참 또는 거짓)만 허용합니다. `should_inline_css` 값이 따옴표(`""`)로 묶이지 않았는지 확인하여 값이 문자열로 대신 전송되도록 합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

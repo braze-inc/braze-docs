@@ -18,11 +18,11 @@ BrazeとThoughtSpotの統合は、ThoughtSpot TML Blocksを活用し、Brazeユ�
 
 Braze で ThoughtSpot の使用を開始するには、ThoughtSpot がデータに対してライブクエリを実行できるようにするために、そのデータをクラウドデータウェアハウスに送信する必要があります。
 
-| 必要条件 | 説明 |
+| 要件 | 説明 |
 | ----------- | ----------- |
 | ThoughtSpotアカウント | このパートナーシップを利用するには ThoughtSpot アカウントが必要です。 |
 | クラウドデータウェアハウス| Braze のデータは、Braze Currents を使用してクラウドデータウェアハウスに保存されます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## TMLブロック
 

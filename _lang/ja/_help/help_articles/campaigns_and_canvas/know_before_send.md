@@ -84,7 +84,7 @@ alias: /know_before_send/
 - [**レポート条件**]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/): 総インプレッション数、ユニークインプレッション数、ユニーク受信者などの用語を確認してください。定義が混乱を招くことがあります。
 - **コンテンツカードの更新**: デフォルトでは、Braze は、セッション開始時、フィードダウンスワイプ時 (モバイル)、および最後の更新が1分以上前の場合はカードビューが開かれたときに、コンテンツ カードリクエストを同期して更新します。
 - **コンテンツカードのキャッシュ**: コンテンツカードのキャッシュオプションは、当社の[Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android)および[Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards)のドキュメントにあります。 
-- **フリークエンシーキャップ**: フリークエンシーキャップは、コンテンツカードには適用されません。
+- **フリークエンシーキャップ**:フリークエンシーキャップは、コンテンツカードには適用されません。
 - **インプレッション**: 印象は一般的にカードが見られたときに記録されます。例えば、受信トレイがコンテンツカードでいっぱいの場合、ユーザーが特定のコンテンツカードまでスクロールするまでインプレッションは記録されません。Web、Android、iOS の各プラットフォームには若干の違いがあります。  
 
 ## アプリ内メッセージ

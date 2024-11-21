@@ -41,12 +41,12 @@ Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 {% endtabs %}
 
 {% alert warning %}
-**ユーザーがログアウトするときに `changeUser()` を呼び出さないでください。`changeUser()` の呼び出しは、ユーザーがアプリケーションにログインするときにのみ行う必要があります。**`changeUser()`を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
+**ユーザーがログアウトするときに `changeUser()` を呼び出さないでください。`changeUser()` は、ユーザーがアプリケーションにログインするときにのみ呼び出される必要があります。**`changeUser()`を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
 {% endalert %}
 
 また、ユーザーがログアウトするときにユーザー ID を変更**しない**ことをお勧めします。変更すると、以前にログインしたユーザーを再エンゲージメントキャンペーンでターゲットにできなくなるためです。同じデバイスに複数のユーザーが存在することが予想されるものの、アプリがログアウト状態の間にそのうちの1ユーザーのみをターゲットにする場合は、ログアウト中にターゲットにするユーザー ID を個別に追跡し、アプリのログアウトプロセスの中でそのユーザー ID に戻すことをお勧めします。
 
-詳細については、[`changeUser`][4] のドキュメントを参照してください。
+詳細については、[`changeUser` のドキュメント](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html) を参照してください。
 
 ## ユーザー ID 統合のベストプラクティスとメモ
 
@@ -56,6 +56,3 @@ Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
-[1]: {{site.baseurl}}/api/endpoints/user_data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html

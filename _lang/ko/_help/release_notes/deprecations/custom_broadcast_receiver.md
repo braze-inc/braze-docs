@@ -7,7 +7,7 @@ description: "이 참조 문서에서는 Android 푸시 알림을 위한 커스�
 # 브로드캐스트 수신기를 통한 푸시 수신, 열기, 해지 및 키-값 페어에 대한 커스텀 처리 {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
-푸시 알림에 커스텀 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) 대신 사용하세요.
+푸시 알림에 사용자 지정 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) 대신 사용하세요.
 {% endalert %}
 
 또한 Braze는 푸시 알림을 수신, 열거나 해제할 때 커스텀 의도를 브로드캐스트합니다. 이러한 시나리오에 대한 특정 사용 사례(예: 커스텀 키-값 페어를 수신해야 하거나 딥링크를 독점적으로 처리해야 하는 경우)가 있는 경우 커스텀 `BroadcastReceiver`를 생성하여 이러한 의도를 수신해야 합니다.
@@ -40,7 +40,7 @@ description: "이 참조 문서에서는 Android 푸시 알림을 위한 커스�
 자세한 사용자 지정 수신기 예제는 다음 코드 스니펫을 참조하세요:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab 자바 %}
 
 ```java
 public class CustomBroadcastReceiver extends BroadcastReceiver {
@@ -69,7 +69,7 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab 코틀린 %}
 
 ```kotlin
 class CustomBroadcastReceiver : BroadcastReceiver() {
@@ -115,7 +115,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 대시보드 또는 메시징 API를 통해 전송된 커스텀 키-값 페어는 원하는 목적에 따라 커스텀 생방송 수신기에서 액세스할 수 있습니다.
 
 {% tabs %}
-{% tab JAVA %}
+{% tab 자바 %}
 
 ```java
 // intent is the Braze push intent received by your custom broadcast receiver.
@@ -129,7 +129,7 @@ String myExtra = extras.getString("my_key");
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab 코틀린 %}
 
 ```kotlin
 // intent is the Braze push intent received by your custom broadcast receiver.

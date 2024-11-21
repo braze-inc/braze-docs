@@ -13,7 +13,7 @@ description: "このリファレンス記事には、利用可能な Braze イ�
 
 Braze は、ダッシュボード、SDK、REST エンドポイントのさまざまなインスタンスを管理しており、これを「クラスター」と呼びます。Braze のオンボーディングマネージャーが、あなたの所属するクラスターを通知します。
 
-でログインすると [dashboard.braze.com](https://dashboard.braze.com)でログインすると、自動的に正しいクラスタ・アドレスに送られる。
+[dashboard.braze.com](https://dashboard.braze.com) にログインすると、自動的に適切なクラスターアドレスに移動します。
 
 |インスタンス|URL|RESTエンドポイント|SDKエンドポイント|
 |---|---|---|
@@ -27,7 +27,7 @@ Braze は、ダッシュボード、SDK、REST エンドポイントのさまざ
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 SDK を連携する場合は、SDK エンドポイントを使用してください。REST API を呼び出す場合は、REST エンドポイントを使用してください。

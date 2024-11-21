@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 /users/export/global_control_group
 {% endapimethod %}
 
-> Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contrôle global. 
+> Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contrôle global.
 
 Les données des utilisateurs sont exportées sous la forme de plusieurs fichiers d'objets JSON d'utilisateurs séparés par de nouvelles lignes (par exemple, un objet JSON par ligne). Tous les utilisateurs d'un groupe de contrôle global sont inclus à chaque fois que les fichiers sont générés. Braze ne conserve pas l'historique des ajouts et suppressions d'utilisateurs dans un groupe de contrôle global.
 
@@ -48,11 +48,11 @@ Si vous avez ajouté vos identifiants [S3][1] ou [Azure][2] à Braze, alors chaq
 | `RANDOM_UUID` | Un UUID aléatoire généré par Braze au moment de la demande. | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | Heure Unix (secondes depuis 2017-01-01:00:00:00Z) à laquelle l'exportation a été demandée en UTC. | `1556044807` |
 | `filename` | Aléatoire par fichier. | `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
-Nous vous conseillons vivement de configurer vos propres identifiants S3 ou Azure lorsque vous utilisez cet endpoint afin d'appliquer vos propres politiques de compartiment sur l'exportation. Si vous ne disposez pas de vos identifiants de stockage en nuage, la réponse à la demande fournit l'URL où un fichier ZIP contenant tous les fichiers de l'utilisateur peut être téléchargé. L'URL ne deviendra un emplacement/localisation valide qu'une fois l'exportation prête. 
+Nous vous conseillons vivement de configurer vos propres identifiants S3 ou Azure lorsque vous utilisez cet endpoint afin d'appliquer vos propres politiques de compartiment sur l'exportation. Si vous ne disposez pas de vos identifiants de stockage en nuage, la réponse à la demande fournit l'URL où un fichier ZIP contenant tous les fichiers de l'utilisateur peut être téléchargé. L'URL ne deviendra un emplacement/localisation valide qu'une fois l'exportation prête.
 
 Sachez que si vous ne fournissez pas vos informations d’identification pour votre stockage cloud, il existe une limitation de la quantité de données que vous pouvez exporter à partir de cet endpoint. En fonction des champs que vous exportez et du nombre d’utilisateurs, le transfert de fichiers peut échouer si la quantité de données demandées est trop importante. La meilleure pratique consiste à spécifier les champs que vous souhaitez exporter en utilisant `fields_to_export` et à ne spécifier que les champs dont vous avez besoin afin de réduire la taille du transfert. Si vous obtenez des erreurs lors de la génération du fichier, envisagez de diviser votre base d'utilisateurs en plusieurs segments sur la base d'un numéro de compartiment aléatoire (par exemple, créez un segment dans lequel le numéro de compartiment aléatoire est inférieur à 1 000 ou compris entre 1 000 et 2 000).
 
@@ -86,7 +86,7 @@ Les attributs personnalisés individuels ne peuvent pas être exportés. Cependa
 |`callback_endpoint` | Facultatif | Chaîne de caractères | Endpoint auquel publier une URL de téléchargement lorsque l’exportation est disponible. |
 |`fields_to_export` | Obligatoire* | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter des attributs personnalisés. <br><br>\*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
 |`output_format` | Facultatif | Chaîne de caractères | Lorsque vous utilisez votre propre compartiment S3, vous pouvez spécifier le format de fichier `zip` ou `gzip`. Le format de fichier ZIP est défini par défaut. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -133,7 +133,7 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 | `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçus. |
 | `uninstalled_at` | Date/heure | Date et heure de désinstallation de l’application par l’utilisateur. Absent si l’application n’a pas été désinstallée. |
 | `user_aliases` | Objet | [Objet aliasing de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contenant les adresses `alias_name` et `alias_label`, si elles existent. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Réponse
 
@@ -260,7 +260,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "custom_attributes": 
+    "custom_attributes":
       {
         "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
         "loyaltyPoints": "321",

@@ -11,7 +11,11 @@ description: "이 참조 문서에서는 Braze 수신자 객체의 다양한 구
 
 > 수신자 개체를 사용하면 엔드포인트에서 정보를 요청하거나 쓸 수 있습니다.
 
-이 객체에는 `external_user_id` 또는 `user_alias` 이 필요합니다. **요청은 하나만 지정해야 합니다.**
+이 객체에는 `external_user_id`, `user_alias` 또는 `email` 이 필요합니다. **요청은 하나만 지정해야 합니다.**
+
+{% alert important %}
+이메일 주소로 수신자를 지정하는 기능은 현재 얼리 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
+{% endalert %}
 
 수신자 객체를 사용하면 [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/), [트리거 속성 객체]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 및 [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)를 결합할 수 있습니다.
 
@@ -21,13 +25,16 @@ description: "이 참조 문서에서는 Braze 수신자 객체의 다양한 구
 [{
   "user_alias": (optional, User Alias Object) User alias of user to receive message,
   "external_user_id": (optional, string) see External user ID,
+  "email": (optional, string) email address of user to receive message,
+  "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
 
 - [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
+- [우선순위 지정]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 
 ## 수신자 개체 중복 제거
 

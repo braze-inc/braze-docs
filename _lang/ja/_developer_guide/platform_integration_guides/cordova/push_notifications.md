@@ -33,7 +33,7 @@ Cordova プラグインを追加、削除、または更新すると、Cordova �
 
 Xcode プロジェクトで、通知サービス拡張機能を作成します。完全なウォークスルーについては、「[iOS リッチプッシュ通知チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications)」を参照してください。
 
-#### ステップ2:新しいターゲットを追加する
+#### ステップ 2:新しいターゲットを追加する
 
 Podfile を開き、[先ほど作成した](#step-1-create-a-notification-service-extension)通知サービス拡張機能のターゲットに `BrazeNotificationService` を追加します。`BrazeNotificationService` がすでにターゲットに追加されている場合は、続行する前に削除してください。シンボルの重複エラーを防ぐため、静的リンクを使用します。
 
@@ -68,7 +68,7 @@ pod install
 
 Xcode プロジェクトで、通知コンテンツ拡張機能を作成します。完全なウォークスルーについては、「[iOS プッシュ通知ストーリーのチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/)」を参照してください。
 
-#### ステップ2:プッシュ通知アプ​​リグループを構成する
+#### ステップ 2:プッシュ通知アプ​​リグループを構成する
 
 プロジェクトの `config.xml` ファイルで、[先ほど作成した](#step-1-create-a-notification-content-extension)プッシュ通知アプリグループを構成します。
 

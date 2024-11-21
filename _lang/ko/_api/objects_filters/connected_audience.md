@@ -7,7 +7,7 @@ description: "이 문서에서는 연결된 오디언스 객체의 다양한 구
 
 ---
 
-# 연결된 대상 개체
+# 연결된 오디언스 객체
 
 > 연결된 오디언스 객체는 메시지를 보낼 오디언스을 식별하는 선택기입니다. 
 
@@ -62,7 +62,7 @@ description: "이 문서에서는 연결된 오디언스 객체의 다양한 구
 | 숫자 | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | 부울 | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
 | 시간 | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 속성 비교 시 주의 사항
 
@@ -70,7 +70,7 @@ description: "이 문서에서는 연결된 오디언스 객체의 다양한 구
 | --- | --- |
 | `value` | `exists` 또는 `does_not_exist` 비교를 사용하는 경우 `value` 는 필요하지 않습니다. `value` 는 `before` 및 `after` 비교를 사용하는 경우 ISO 8601 날짜/시간 문자열이어야 합니다. |
 |`matches_regex` | `matches_regex` 비교를 사용할 때 전달되는 값은 문자열이어야 합니다. Braze에서 정규식을 사용하는 방법에 대해 자세히 알아보려면 [정규식]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) 및 [사용자 지정 속성 데이터 유형을]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 사용자 지정 속성 예제
 

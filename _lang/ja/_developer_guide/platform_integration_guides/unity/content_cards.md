@@ -33,7 +33,7 @@ Unity ゲームオブジェクトを登録して、コンテンツカードの�
 
 ## コンテンツカードの解析
 
-Content Cards ゲームオブジェクトコールバックで受信した受信`string` メッセージは、事前に提供されている[`ContentCard`][17] モデルオブジェクトに構文解析すると便利です。
+Content Cards ゲームオブジェクトコールバックで受信した受信`string` メッセージは、事前に提供されている[`ContentCard`](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) モデルオブジェクトに構文解析すると便利です。
 
 コンテンツカードの解析にはJson 解析が必要です。詳細については、次の例を参照してください。
 
@@ -89,6 +89,5 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 
 Braze によって直接表示されないコンテンツカードについては、クリックとインプレッションを手動でログに記録する必要があります。
 
-[Content カード][17] で`LogClick()` および`LogImpression()` を使用して、特定のカードs のクリックとインプレッションを記録します。
+[Content カード](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) で`LogClick()` および`LogImpression()` を使用して、特定のカードs のクリックとインプレッションを記録します。
 
-[17]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs

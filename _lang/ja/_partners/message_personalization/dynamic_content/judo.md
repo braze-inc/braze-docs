@@ -20,7 +20,7 @@ Braze と Judo の統合により、キャンペーンとキャンバスで特�
 |---|---|
 | 柔道アカウント | このパートナーシップを活用するには、[Judo](https://www.judo.app/) アカウントが必要です。 |
 | 柔道SDK | Judo SDK は、[iOS](https://github.com/judoapp/judo-ios/) アプリおよび/または[Android](https://github.com/judoapp/judo-android) アプリに統合する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -60,7 +60,7 @@ Judoは、モバイルアプリにJudoとBraze SDKを並べて統合するため
 
 ### ステップ1:カスタムコードのアプリ内メッセージキャンペーンを作成する
 
-Brazeプラットフォームから、**カスタムコードの**メッセージタイプでBrazeアプリ内メッセージキャンペーンを作成する。次に、カスタムタイプとして \[**HTML Upload**] を選択します。メッセージのコンテンツに、ベースのアプリ内メッセージングのフィールドが取り込まれていることを確認してください。このコンテンツはユーザーには表示されません。
+Brazeプラットフォームから、**カスタムコードの**メッセージタイプでBrazeアプリ内メッセージキャンペーンを作成する。次に、カスタムタイプとして [**HTML Upload**] を選択します。メッセージのコンテンツに、ベースのアプリ内メッセージングのフィールドが取り込まれていることを確認してください。このコンテンツはユーザーには表示されません。
 
 ![カスタムコード」メッセージタイプを選択したときのダッシュボードのイメージ。][2]
 
@@ -80,7 +80,7 @@ JudoがこれをJudoエクスペリエンスに書き換えて置き換えるの
 <br><br>
 ### ステップ3:キャンペーンを終える
 
-最後に、キャンペーンを完了し、キャンペーンのトリガーを設定し、\[**配信**] セクションと \[**ターゲットユーザー**] セクションで Segments からユーザーを選択します。Brazeアプリ内メッセージのさまざまな構成要素については、アプリ内メッセージの[記事を]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)参照。
+最後に、キャンペーンを完了し、キャンペーンのトリガーを設定し、[**配信**] セクションと [**ターゲットユーザー**] セクションで Segments からユーザーを選択します。Brazeアプリ内メッセージのさまざまな構成要素については、アプリ内メッセージの[記事を]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)参照。
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}

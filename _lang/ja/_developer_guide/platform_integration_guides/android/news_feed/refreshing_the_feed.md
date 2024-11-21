@@ -25,7 +25,6 @@ channel:
 Braze.requestFeedRefresh()
 ```
 
-詳細については、[KDoc][16] を参照してください。
+詳細については、[KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html) を参照してください。
 
 
-[16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html

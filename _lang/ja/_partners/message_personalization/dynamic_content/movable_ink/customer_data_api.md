@@ -26,7 +26,7 @@ Movable Ink は、Customer Data API を介して Braze から行動イベント�
 | Movable Ink API 認証情報 | Movable Ink のソリューションチームが API 認証情報を生成します。API 認証情報は、以下で構成されます。{::nomarkdown}<ul><li>エンドポイントURL（データの送信先）</li><li>ユーザー名とパスワード（APIの認証に使用される）</li></ul>{:/} 必要に応じて、Movable Ink はユーザー名とパスワードを、基本認証ヘッダー値として使用される base64 でエンコードされた値として指定できます。 |
 | 行動イベント・ペイロード | イベントペイロード をMovable Ink クライアントエクスペリエンスチームと共有する必要があります。詳細については、「Movable Inkと[イベントペイロードを共有する](#event-payloads)」を参照のこと。 |
 | クリエイティブ・アセットとビジネス・ロジック | Movable Ink とクリエイティブアセットを共有する必要があります。これには、ブロックとフォールバックイメージの作成方法を Movable Ink に指示する Adobe Photoshop (PSD) ファイルも含まれます。また、パートナーによってアクティブ化されたコンテンツブロックをいつどのように表示するかについてのビジネスロジックを提供する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -36,32 +36,32 @@ Movable Ink は、Customer Data API を介して Braze から行動イベント�
 
 1. Brazeで、[Webhookキャンペーンを作成する][1]。
 2. キャンペーン名と任意の説明をつける。
-3. テンプレートとして \[**空白のテンプレート**] を選択します。
+3. テンプレートとして [**空白のテンプレート**] を選択します。
 
 #### ステップ 1b: Customer Data API 認証情報を追加する
 
 1. **Webhook URL**フィールドに、Movable InkのエンドポイントURLを入力する。
 
-![Braze の Webhook コンポーザーの「作成」タブ。Movable Ink エンドポイントのURL と、「JSON キーと値のペア」が設定された「リクエスト本文」が表示されている。]\[img1]{: style="max-width:75%" }
+![Braze の Webhook コンポーザーの「作成」タブ。Movable Ink エンドポイントのURL と、「JSON キーと値のペア」が設定された「リクエスト本文」が表示されている。][img1]{: style="max-width:75%" }
 
 {:start="2"}
-2\.\[**設定**] タブを選択します。
+2\.[**設定**] タブを選択します。
 3\.以下のリクエストヘッダーをキーと値のペアとして追加する：
 
 | キー | 値 |
 | --- | --- |
 | コンテンツタイプ | application/json |
 | Authorization | Movable Ink から受け取った基本認証を入力します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![BrazeのWebhookコンポーザーの設定タブ。Content-TypeとAuthorizationのキー・バリュー・ペアがある。]\[img2]{: style="max-width:75%" }
+![BrazeのWebhookコンポーザーの設定タブ。Content-TypeとAuthorizationのキー・バリュー・ペアがある。][img2]{: style="max-width:75%" }
 
 #### ステップ1c: ペイロードを設定する
 
-1. \[**作成**] タブに戻ります。
+1. [**作成**] タブに戻ります。
 2. **リクエスト本文**として、JSON キーと値のペアを使用して独自のリクエスト本文を作成するか、イベントペイロードを生のテキストとして入力します。標準的な e コマースイベントの例については、[サンプルペイロード](#sample-payloads)を参照してください。
 
-![ID、タイムスタンプ、ユーザー ID、およびイベントタイプの JSON キーと値のペアが指定されている、Braze の Webhook コンポーザーの「作成」タブ。]\[img3]{: style="max-width:75%" }
+![ID、タイムスタンプ、ユーザー ID、およびイベントタイプの JSON キーと値のペアが指定されている、Braze の Webhook コンポーザーの「作成」タブ。][img3]{: style="max-width:75%" }
 
 #### ステップ1d: Webhook をテストする {#step-1d}
 
@@ -73,11 +73,11 @@ Movable Ink は、Movable Ink クライアントエクスペリエンスチー�
 
 ウェブフックをテストするには、以下のようにする：
 
-1. \[**テスト**] タブを選択します。
+1. [**テスト**] タブを選択します。
 2. ユーザーとしてメッセージをプレビューし、そのユーザーのイベントペイロードのサンプルを表示する。ランダムユーザー、特定のユーザー、またはカスタムユーザーとしてのプレビューのいずれかを選択できます。
 3. 問題がなければ、**Send testを**クリックしてテストリクエストを送信する。
 
-![200OKレスポンスを示すBrazeのWebhookレスポンスメッセージ。]\[img4]{: style="max-width:75%" }
+![200OKレスポンスを示すBrazeのWebhookレスポンスメッセージ。][img4]{: style="max-width:75%" }
 
 ### ステップ2:キャンペーン設定を確定する
 
@@ -90,11 +90,11 @@ Braze では、スケジュールされたアクションベースのAPI トリ�
 アクションベースの配信の場合:
 
 1. トリガーアクションを指定する。これは、Movable Inkへのウェブフックをトリガーするイベントである。
-2. \[**スケジュールの遅延**] が \[**すぐに実行**] に設定されていることを確認します。イベント発生直後にイベントデータが遅滞なく Movable Ink に送信される必要があります。
+2. [**スケジュールの遅延**] が [**すぐに実行**] に設定されていることを確認します。イベント発生直後にイベントデータが遅滞なく Movable Ink に送信される必要があります。
 3. 開始時間を指定してキャンペーン期間を設定する。終了時刻を適用できない可能性がありますが、ユースケースに必要な場合は設定できます。
 
 {% alert note %}
-データが Movable Ink にリアルタイムでストリーミングされるようにするには、\[**ユーザーのローカルタイムゾーンにあわせてキャンペーンを送信**]を選択しないでください。
+データが Movable Ink にリアルタイムでストリーミングされるようにするには、[**ユーザーのローカルタイムゾーンにあわせてキャンペーンを送信**]を選択しないでください。
 {% endalert %}
 
 #### ステップ 2b: オーディエンスを指定する
@@ -103,7 +103,7 @@ Braze では、スケジュールされたアクションベースのAPI トリ�
 
 **コントロールグループの**チェックボックスをオフにして、キャンペーンでA/Bテストを使用しないことを確認する。コントロールグループが含まれている場合、一定の割合のユーザーのデータが Movable Ink に送信されません。オーディエンス全体を、コントロールグループではなくバリアントに移動する必要があります。
 
-![BrazeキャンペーンにおけるA/Bテストパネル。100％のバリアント分布がバリアント1に割り当てられ、コントロールグループはない。]\[img5]
+![BrazeキャンペーンにおけるA/Bテストパネル。100％のバリアント分布がバリアント1に割り当てられ、コントロールグループはない。][img5]
 
 #### ステップ 2c: コンバージョンイベントを選択する（オプション）
 
@@ -433,8 +433,8 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 [3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-\[img1] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}
-\[img2] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}
-\[img3] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}
-\[img4] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}
-\[img5] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %}
+[img1] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}
+[img2]: {% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}
+[img3]: {% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}
+[img4]: {% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}
+[img5] ： {% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %}

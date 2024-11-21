@@ -36,16 +36,16 @@ description: "이 문서에서는 커스텀 이벤트 분석 Braze 엔드포인�
 | `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
 | `app_id` | 선택 사항 | 문자열 | [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 검색한 앱 API 식별자를 사용하여 특정 앱으로 분석을 제한할 수 있습니다. |
 | `segment_id` | 선택 사항 | 문자열 | [세그먼트 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. 이벤트 분석이 반환되어야 하는 분석이 활성화된 세그먼트를 나타내는 세그먼트 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## 요청 예시
+## 예시 요청
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id={{app_identifier}}&segment_id={{segment_identifier}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
-{% endraw %} 
+{% endraw %}
 
 ## 응답
 

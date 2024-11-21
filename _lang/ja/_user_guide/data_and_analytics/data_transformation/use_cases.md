@@ -25,7 +25,7 @@ description: "このリファレンス記事では、Braze Data Transformation �
 
 ## Brazeとの連携
 
-Braze の[連携]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/)を、顧客のインサイトおよび調査のプラットフォームである Iterate と使用できます。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
+ろう付けは、[Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/)、顧客の洞察と調査プラットフォームとの統合を持っている。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
 
 ## 変換コードの例
 
@@ -36,7 +36,7 @@ Braze の[連携]({{site.baseurl}}/partners/message_orchestration/channel_extens
 {% tabs local %}
 {% tab 基本変換 %}
 
-このユースケースでは、調査の回答を属性として受け取り、調査が完了したことを示すイベントを書き込みます。
+この例では、アンケートの回答を属性として取り、アンケートが完了したことを示すイベントを書き込みます。
 
 ```
 return {
@@ -65,7 +65,7 @@ return {
 {% endtab %}
 {% tab 高度な変換 %}
 
-次の高度なユースケースは基本的なユースケースに基づき、回答の 1 つを使用してユーザーを分類する `if` ステートメントを導入して作成されています。
+基本的なトランスフォーメーションの例をさらに踏まえ、`if` ステートメントを導入して、いずれかの回答でユーザーを分類します。
 
 ```
 let nps_category;

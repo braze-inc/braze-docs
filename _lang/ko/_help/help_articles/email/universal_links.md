@@ -27,7 +27,7 @@ Apple 유니버설 링크와 Android 앱 링크는 웹 콘텐츠와 모바일 �
 | 목적                | iOS 및 Android 기기에서 웹 및 앱 콘텐츠를 원활하게 연결 | 특정 앱 콘텐츠로 연결 |
 | 기능               | 문맥에 따라 웹 페이지 또는 앱 콘텐츠로 이동합니다           | 특정 앱 화면을 엽니다   |
 | 앱 설치       | 앱이 설치되어 있으면 앱을 열고, 그렇지 않으면 웹 콘텐츠를 엽니다 | 앱 설치가 필요합니다 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 사용 사례
 
@@ -261,7 +261,7 @@ SparkPost 클릭 추적 링크를 범용 링크로 처리하려면 이메일의 
 <a href=”https://www.example.com” data-msys-sublink="open-in-app">
 ```
 
-그런 다음, 앱이 커스텀 경로를 올바르게 처리하도록 설정되어 있는지 확인하세요. SparkPost의 [딥링크에서 SparkPost 클릭 추적 사용](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)에 관한 기사를 참조하세요. 이 문서에는 [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) 및 [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)에 대한 예제 코드가 포함되어 있습니다.
+그런 다음, 앱이 커스텀 경로를 올바르게 처리하도록 설정되어 있는지 확인하세요. SparkPost의 [딥링크에서 SparkPost 클릭 추적 사용](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)에 관한 기사를 참조하세요. 이 기사에는 [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) 및 [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)에 대한 예제 코드가 포함되어 있습니다.
 
 ### 클릭-추적으로 유니버셜 링크 문제 해결
 

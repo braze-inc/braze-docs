@@ -9,7 +9,7 @@ description: "この記事には2020年2月のリリースノートが含まれ�
 
 ## リテンションレポート
 
-Brazeは、キャンペーンの[リテンションレポートを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)提供できることを誇りに思う。この機能は、特定のキャンペーンで何らかのメッセージを受け取ったユーザーのリテンションを測定するのに役立つ。リテンションレポートは、ダッシュボード内の \[**キャンペーン分析**] ページで簡単に見つけることができます。 
+Brazeは、キャンペーンの[リテンションレポートを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)提供できることを誇りに思う。この機能は、特定のキャンペーンで何らかのメッセージを受け取ったユーザーのリテンションを測定するのに役立つ。リテンションレポートは、ダッシュボード内の [**キャンペーン分析**] ページで簡単に見つけることができます。 
 
 ![フルレポート][4]
 

@@ -31,8 +31,8 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Requis | Chaîne de caractères | Voir [identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Requis | DateTime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
-| `starting_at` | Optionnel* | DateTime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>Soit `length` ou `starting_at` est requis. |
+| `ending_at` | Requis | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
+| `starting_at` | Optionnel* | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle l’exportation de données doit commencer. <br><br>Soit `length` ou `starting_at` est requis. |
 | `length` | Optionnel* | Chaîne de caractères | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>Soit `length` ou `starting_at` est requis. |
 | `include_variant_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques de variante (par défaut sur `false`).  |
 | `include_step_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques d’étape (par défaut sur `false`). |
