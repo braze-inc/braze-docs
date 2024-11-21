@@ -45,6 +45,8 @@ To view more details for entrance criteria, select **See more**. Steps with segm
 
 Liquid logic will be processed during a test run, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
 
+If your preview sends the last step of your user journey instead of aborting, the preview may be using the current time as the time being tested for Liquid evaluation, not the actual time the user would be in the step based on the Canvas entry time.
+
 ## Previews for timing
 
 For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time. 
@@ -55,12 +57,12 @@ Message and Delay steps show the time at which a user would progress or receive 
 
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
+Test users will enter the preview even if they are not eligible in real life. If they're not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
 
 - If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
 - If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
 - At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
-- Events, API triggers, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps.
+- Events, API triggers, custom attributes, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas.
 
 ## Experiment Paths and Canvas variants
 
