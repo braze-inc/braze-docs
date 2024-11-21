@@ -103,6 +103,10 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
+### What happens to anonymous users during their Canvas journey?
+
+An anonymous user in Braze is defined as a user who hasn't been identified with an external user ID, Braze ID, or a similar unique identifier. This means that while anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
+
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
 It's common for a Canvas variant's conversion total to be greater than the sum of its step total. This occurs because a user can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count toward a Canvas step. So, any user who enters the Canvas, and performs the conversion event before receiving the first Canvas step, will be counted  the variant conversion total, and not toward the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
