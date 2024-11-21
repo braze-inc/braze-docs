@@ -121,13 +121,18 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 ### Deleting variants
 
 When variants are deleted from a Canvas, the following occurs:
+
 - Steps within the variant (including those shared by other variants) will be deleted. 
 - The step analytics and the top-level analytics for the Canvas, such as _Total Entries_, _Total Exits_, and _Conversion Rate_, will be deleted.
 - Users in deleted variants are exited from the steps, and any following messages are not sent.
 
+### Canvas entry properties
+
+Canvas entry properties aren't templated into steps when sent. This means when Canvas entry properties are edited after a Canvas has launched, these changes will only apply to new users who enter the Canvas. If your Canvas allows users to re-enter the Canvas, any users who re-enter will be determined by the updated Canvas entry properties.
+
 ## Best practices
 
-Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched using Canvas Flow.
+Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched.
 
 ### Disconnected steps
 
