@@ -15,13 +15,13 @@ platform: API
 
 ## API로 시작된 캠페인 설정
 
-API로 트리거된 캠페인을 설정하는 데에는 몇 가지 단계가 필요합니다. 먼저, 새로운 다중 채널 또는 단일 채널 캠페인(다변량 테스트 포함)을 만드십시오.
+API로 트리거된 캠페인을 설정하는 데에는 몇 가지 단계가 필요합니다. 먼저, 새로운 다중 채널 또는 단일 채널 캠페인(다변량 테스트 포함)을 만드세요.
 
 {% alert note %}
 API로 시작된 캠페인은 [API 캠페인]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns)과 다릅니다.
 {% endalert %}
 
-다음으로, 예약된 알림에 대해 일반적으로 수행하는 것과 동일한 방식으로 복사본 및 알림을 구성하고 **API-Triggered Delivery**를 선택합니다. 이 서버에서 이러한 캠페인을 트리거하는 방법에 대한 자세한 내용은 이 [API로 트리거된 캠페인 전송]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) 기사를 참조하십시오.
+다음으로, 예약된 알림에 대해 일반적으로 수행하는 것과 동일한 방식으로 복사본 및 알림을 구성하고 **API-Triggered Delivery**를 선택합니다. 이 서버에서 이러한 캠페인을 트리거하는 방법에 대한 자세한 내용은 이 [API로 트리거된 캠페인 전송]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) 기사를 참조하세요.
 
 ![][37]
 
