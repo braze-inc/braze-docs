@@ -21,7 +21,7 @@ While delayed initialization is enabled, all network connections will be cancele
 
 To use this feature, you'll need to Braze Android SDK version XXXX or later.
 
-## Enabling Delayed Initialization
+## Enabling delayed initialization
 
 Delayed initialization is disabled by default. To enable, use one of the following options:
 
@@ -130,7 +130,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 {% endtab %}
 {% endtabs %}
 
-## Initializing After Delay
+## Initializing after the delay
 
 To initialize the SDK after your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method:
 
