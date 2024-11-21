@@ -8,23 +8,23 @@ tool: Reports
 
 # 수익 보고서
 
-> 수익 보고서 페이지에서는 특정 기간 동안의 수익, 특정 제품 수익, 앱의 총 수익에 대한 데이터를 확인할 수 있습니다.
+> 매출 보고서 페이지에서는 특정 기간 동안의 매출, 특정 제품 매출, 앱의 총 매출에 대한 데이터를 확인할 수 있습니다.
 
 대시보드에서 수익에 대한 보고서를 보려면 **애널리틱스** > **수익 보고서로** 이동합니다. 
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **데이터에서** 찾을 수 있습니다.
+[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 이 페이지는 **데이터**에서 찾을 수 있습니다.
 {% endalert %}
 
 ## 수익 보고서 사용자 지정
 
 날짜 범위, 보고할 앱, 매개변수를 선택하여 수익 보고서를 사용자 지정할 수 있습니다.
 
-!['수익 보고서' 페이지에 '수익'을 매개변수로 설정한 '시간 경과에 따른 실적' 그래프가 표시됩니다.][1]
+!["매출 보고서" 페이지에 "매출"을 매개변수로 설정한 "시간 경과에 따른 실적" 그래프가 표시됩니다.][1]
 
 ### 날짜 및 앱별로 필터링하기
 
-수익 보고서의 날짜 범위를 선택하고 원하는 경우 특정 앱 또는 일부 앱을 선택할 수 있습니다.
+매출 보고서의 날짜 범위를 선택하고 원하는 경우 특정 앱 또는 일부 앱을 선택할 수 있습니다.
 
 ### 매개변수별 필터링
 
@@ -43,17 +43,48 @@ tool: Reports
 
 ## 수익 계산 이해
 
-- *평생 수익은* 창립 이후 받은 총 `PurchaseEvents` `price` 가치(USD)입니다. 
-- *사용자당 평생 가치는* *평생 수익을* 총 *사용자* 수로 나눈 값입니다( **홈** 페이지에 있음).
-- *일일* 평균 *수익은* 해당 일의 캠페인 수익과 캔버스 수익의 합계를 평균한 값입니다.
-- *일일 구매는* 해당 기간 동안의 총 고유 *구매* ( `PurchaseEvents` )의 평균입니다.
-- *사용자당 일일 매출은* 일일 활성 사용자당 평균 일일 매출입니다.
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>측정기준</th>
+            <th>정의</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">생애주기 매출</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='평생 매출' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">사용자별 생애주기 가치</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='생애주기 가치 사용자당' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">평균 일일 매출</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='평균 일일 매출' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">일일 구매 수</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='일일 구매' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">사용자당 일일 수익</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='일일 사용자당 매출' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 ## 제품 내역 보기
 
-선택한 기간 동안 구매한 제품 목록, 각 제품의 구매 수량, 각 제품이 창출한 수익은 **제품 분석** 표를 참조하세요.
+선택한 기간 동안 구매한 제품 목록, 각 제품의 구매 수량, 각 제품이 창출한 매출은 **제품 분석** 표를 참조하세요.
 
-!['제품 분석' 테이블에는 '제품 이름', '구매한 제품', '수익' 열이 표시됩니다.][2]
+!["제품 분석" 테이블에는 "제품 이름", "구매한 제품", "매출" 열이 표시됩니다.][2]
 
 
 [1]: {% image_buster /assets/img/revenue_report.png %}
