@@ -14,7 +14,7 @@ description: "이 방법 안내 기사는 위치 타겟팅 설정 방법을 안�
 > Braze [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI)를 사용하면 데이터 웨어하우스 또는 파일 저장 시스템에서 Braze로 직접 연결을 설정하여 관련 사용자 또는 카탈로그 데이터를 정기적으로 동기화할 수 있습니다.
 
 {% alert warning %}
-이 {기능}은 {데이터 웨어하우스}를 직접 쿼리하므로 이러한 쿼리를 {데이터 웨어하우스}에서 실행하는 것과 관련된 모든 비용이 발생합니다. CDI 세그먼트는 [SQL 세그먼트 크레딧]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage)을 사용하지 않으며, 세그먼트 확장 한도에 포함되지 않고, 데이터 포인트를 사용하지 않습니다.
+이 기능은 데이터 웨어하우스에 직접 쿼리하기 때문에 데이터 웨어하우스에서 이러한 쿼리를 실행하는 것과 관련된 모든 비용은 사용자가 부담합니다. CDI 세그먼트는 [SQL 세그먼트 크레딧]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage)을 사용하지 않으며, 세그먼트 확장 한도에 포함되지 않고, 데이터 포인트를 사용하지 않습니다.
 {% endalert %}
 
 ## 필수 조건
@@ -23,7 +23,7 @@ description: "이 방법 안내 기사는 위치 타겟팅 설정 방법을 안�
 
 ## 세그먼트 생성
 
-### 1단계: 소스를 설정하십시오
+### 1단계: 소스 설정
 
 첫 번째 CDI 세그먼트를 만들기 전에 [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)의 단계를 따라 데이터 웨어하우스와 함께 새 연결된 소스를 설정하십시오.
 
@@ -37,7 +37,7 @@ description: "이 방법 안내 기사는 위치 타겟팅 설정 방법을 안�
 
 ![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
 
-CDI 설정의 일부로, CDI 세그먼트에서 사용할 다양한 연결을 선택할 수 있습니다. 각 연결에는 특정 데이터 테이블 세트가 있습니다. 귀하의 개발 팀은 CDI 설정 중에 연결 및 데이터 테이블을 구성할 수 있습니다.
+CDI 설정의 일부로, CDI 세그먼트에서 사용할 다양한 연결을 선택할 수 있습니다. 각 연결에는 특정 데이터 테이블 세트가 있습니다. 개발 팀은 CDI 설정 중에 연결 및 데이터 테이블을 구성할 수 있습니다.
 
 사용 가능한 데이터 테이블을 보려면 **참조**을 선택하십시오. 준비가 되면 연결을 선택하세요.
 
@@ -45,13 +45,13 @@ CDI 설정의 일부로, CDI 세그먼트에서 사용할 다양한 연결을 �
 
 다음으로, [Braze SQL 구문]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql)을 사용하여 세그먼트를 위한 SQL을 작성하십시오.
 
-명심하세요, 모든 CDI 세그먼트는 선택된 열로 `external_user_id`을 사용해야 하며, `external_user_id`는 Braze에 설정된 사용자와 일치해야 합니다. 쿼리 결과에 Braze에 존재하지 않는 사용자가 포함된 경우, 해당 사용자는 무시됩니다. Braze는 귀하의 CDI 세그먼트의 출력에 따라 새로운 사용자를 생성하지 않습니다.
+명심하세요, 모든 CDI 세그먼트는 선택된 열로 `external_user_id`를 사용해야 하며, `external_user_id`는 Braze에 설정된 사용자와 일치해야 합니다. 쿼리 결과에 Braze에 존재하지 않는 사용자가 포함된 경우, 해당 사용자는 무시됩니다. Braze는 귀하의 CDI 세그먼트의 출력에 따라 새로운 사용자를 생성하지 않습니다.
 
 {% alert tip %}
 세그먼트를 미리 보는 방법, 세그먼트를 관리하는 방법 및 자동 멤버십 새로 고침을 실행하는 방법을 알아보려면 [SQL 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)을 참조하십시오.
 {% endalert %}
 
-마침내, 이 세그먼트 확장을 Braze 세그먼트 내에서 사용하여 이 오디언스에게 캠페인 또는 캔버스를 보낼 수 있습니다.
+마침내, [이 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-5-use-your-extension-in-a-segment)을 Braze 세그먼트 내에서 사용하여 이 오디언스에게 캠페인 또는 캔버스를 보낼 수 있습니다.
 
 ## 고려사항
 
@@ -61,4 +61,4 @@ CDI 설정의 일부로, CDI 세그먼트에서 사용할 다양한 연결을 �
 ## 문제 해결
 
 - 쿼리가 최대 런타임에 도달하면 타임아웃될 수 있으며, 이는 **클라우드 데이터 수집** 페이지에서 각 연결 동기화에 대해 설정됩니다. 최대 실행 시간은 60분입니다.
-- 귀하의 데이터 웨어하우스를 위한 적절한 구문을 사용하여 SQL을 작성하십시오. 
+- 데이터 웨어하우스를 위한 적절한 구문을 사용하여 SQL을 작성하세요. 
