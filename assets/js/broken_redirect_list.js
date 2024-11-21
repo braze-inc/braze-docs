@@ -989,6 +989,9 @@ validurls['/docs/user_guide/onboarding_with_braze/terms_to_know'] = '/docs/user_
 validurls['/docs/user_guide/onboarding_with_braze/data_points#data-points'] = '/docs/user_guide/data_and_analytics/data_points/';
 validurls['/docs/user_guide/onboarding_with_braze/data_points'] = '/docs/user_guide/data_and_analytics/data_points/';
 
+validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
+validurls['/docs/user_guide/data_and_analytics/ideas_and_strategies/b2b_data_models'] = '/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models/';
+
 validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/developer_guide/platform_wide/getting_started/analytics_overview/';
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';
 validurls['/docs/user_guide/engagement_tools/landing_pages/connect_subdomain/'] = '/docs/user_guide/engagement_tools/landing_pages/connect_domain/';
@@ -1244,5 +1247,12 @@ validurls['/docs/developer_guide/platform_wide/getting_started/integration_overv
 validurls['/docs/developer_guide/platform_wide/getting_started/platform_overview'] = '/docs/developer_guide/getting_started/platform_overview';
 validurls['/docs/developer_guide/platform_integration_guides/sdk_primer'] = '/docs/developer_guide/getting_started/sdk_overview';
 validurls['/docs/developer_guide/platform_wide/sending_test_messages'] = '/docs/developer_guide/sending_test_messages';
+
+validurls['/docs/pt-br/support_contact/'] = '/docs/support_contact/';
+validurls['/docs/fr/support_contact/'] = '/docs/support_contact/';
+validurls['/docs/ko/support_contact/'] = '/docs/support_contact/';
+validurls['/docs/pt-br/'] = '/docs/';
+validurls['/docs/es/'] = '/docs/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/';
 
 // validurls['OLD'] = 'NEW';

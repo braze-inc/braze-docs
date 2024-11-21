@@ -24,12 +24,12 @@ Braze と Punchh の統合により、2つのプラットフォーム間でギ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | Punchh アカウント | このパートナーシップを活用するには、アクティブなPunchh アカウントが必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Braze REST エンドポイント | \[REST エンドポイント URL][6]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [REST エンドポイント URL][6]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## その他の留意点
 
@@ -119,7 +119,7 @@ curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mob
 {% endtabs %}
 
 {% alert note %}
-**プラットフォーム設定:**Punchh で外部識別子を有効にするには、Punchh ダッシュボードから \[**Cockpit**] > \[**Dashboard**] > \[**External User Identifier**] に移動します。
+**プラットフォーム設定:**Punchh で外部識別子を有効にするには、Punchh ダッシュボードから [**Cockpit**] > [**Dashboard**] > [**External User Identifier**] に移動します。
 {% endalert %}
 
 ### ステップ2:Punchh で Braze アダプターを設定する
@@ -143,7 +143,7 @@ Punchh 実装マネージャーと協力して、このアダプターを設定�
 Braze と Punchh の統合を設定するには、次の手順を実行します。
 
 1. パンチダッシュボードで、**コックピット**> **ダッシュボード**> **主な機能**> **Webフック管理を有効**にし、**Webフック管理を有効**にします。<br><br>
-2. 次に、\[**Settings**] > \[**Webhooks Manager**] > \[**Configurations**] > \[**Show Adapters Tab**] に移動してアダプターを有効にし、\[**Show Adapters Tab**] をオンに切り替えます。<br><br>
+2. 次に、[**Settings**] > [**Webhooks Manager**] > [**Configurations**] > [**Show Adapters Tab**] に移動してアダプターを有効にし、[**Show Adapters Tab**] をオンに切り替えます。<br><br>
 3. **Webフックマネージャ**の**設定**タブに移動し、**アダプタ**タブを選択し、**アダプタの作成**をクリックします。<br><br>![][1]<br><br>
 4. アダプターの名前、説明、および管理メールを入力します。アダプターとして **Braze** を選択し、Braze REST API エンドポイントとBraze API キーを入力します。<br><br>
 5. 次に、有効にするイベントを選択します。これらのイベントのリストは「[同期できるイベント ](#available-events-to-sync)」にあります。<br><br>![][3]<br><br>
@@ -153,7 +153,7 @@ Braze と Punchh の統合を設定するには、次の手順を実行します
 
 Braze は、Punchh カスタムセグメントを使用してWebhook 経由でユーザーを Punchh セグメントに追加できます。
 
-1. Punchh でカスタムセグメントを作成し、以下に示す Punchh セグメントダッシュボード URL に含まれている`custom_segment_id` をメモします。従来のセグメントビルダーまたはベータセグメントビルダーの両方を使用できます。ただし、classic は最終的に非推奨になるため、ベータは推奨されています。<br><br>Punchh プラットフォームで \[**Guest**] > \[**Segment**] > \[**Custom List**] > \[**New Custom List**] に移動します。<br><br>![][8]<br><br>
+1. Punchh でカスタムセグメントを作成し、以下に示す Punchh セグメントダッシュボード URL に含まれている`custom_segment_id` をメモします。従来のセグメントビルダーまたはベータセグメントビルダーの両方を使用できます。ただし、classic は最終的に非推奨になるため、ベータは推奨されています。<br><br>Punchh プラットフォームで [**Guest**] > [**Segment**] > [**Custom List**] > [**New Custom List**] に移動します。<br><br>![][8]<br><br>
 
 2. Braze でWebhook キャンペーンを作成するには、Punchh エンドポイントを使用して、ユーザーをカスタムSegmentにWebhook URL として追加します。ここでは、URL からプルされた`custom_segment_id` と`user_id` をキーと値のペアとして指定できます。<br><br>![][4]<br><br>
 
@@ -180,7 +180,7 @@ Braze に送信される Punchh イベント (リワードイベントやゲス�
 
 #### セグメンテーション
 
-多くの場合、Punchh イベントによってトリガーされる Braze キャンペーンとキャンバスには、「すべてのユーザー」オーディエンスを設定できます。これは、これらのイベントをトリガーするユーザーのセグメンテーションがが Punchh 内で決定するためです。ただし、イベントによってトリガーされる Braze メッセージを受信するユーザーからなるオーディエンスをさらに絞り込む場合は、キャンペーン作成画面の \[**ターゲットオーディエンス**] セクションまたはキャンバス作成画面の \[**エントリオーディエンス**] で、フィルターとセグメントを追加します。 
+多くの場合、Punchh イベントによってトリガーされる Braze キャンペーンとキャンバスには、「すべてのユーザー」オーディエンスを設定できます。これは、これらのイベントをトリガーするユーザーのセグメンテーションがが Punchh 内で決定するためです。ただし、イベントによってトリガーされる Braze メッセージを受信するユーザーからなるオーディエンスをさらに絞り込む場合は、キャンペーン作成画面の [**ターゲットオーディエンス**] セクションまたはキャンバス作成画面の [**エントリオーディエンス**] で、フィルターとセグメントを追加します。 
 
 ### ユースケース
 

@@ -18,14 +18,14 @@ RevenueCat と Braze の統合により、顧客の購入およびサブスク�
 
 RevenueCat と Braze を接続するには、少なくとも RevenueCat ダッシュボードから統合を有効にしておく必要があります。Braze SDK を使用している場合は、RevenueCat SDK と Braze SDK を一緒に使用して、両方のシステムで同じ顧客識別子が使用されるようにすることで、統合を強化できます。
 
-| 必要条件 | 説明 |
+| 要件 | 説明 |
 |---|---|
-| RevenueCatアカウントとアプリ | このパートナーシップを活用するには、\[RevenueCat アカウント][9]が必要です。また、RevenueCat アプリが設定されている必要があります。 |
-| RevenueCat SDK | 必要な Braze SDK に加えて \[RevenueCat SDK][8] をインストールして、RevenueCat にユーザーエイリアスを提供することをお勧めします。 |
+| RevenueCatアカウントとアプリ | このパートナーシップを活用するには、[RevenueCat アカウント][9]が必要です。また、RevenueCat アプリが設定されている必要があります。 |
+| RevenueCat SDK | 必要な Braze SDK に加えて [RevenueCat SDK][8] をインストールして、RevenueCat にユーザーエイリアスを提供することをお勧めします。 |
 | ブレイズインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。<br><br>RevenueCat では、Braze インスタンスが正しいBraze REST エンドポイントにサーバーサイドを送信する必要があります。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
 | Braze test REST APIキー（オプション） | テスト API キーは、テスト購入と本番購入のリクエストを個別の Braze インスタンスに送信する場合に、テスト購入および本番購入に使用できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース 
 
@@ -96,16 +96,16 @@ RevenueCat アプリのユーザー ID とは異なる代替の一意のユー�
 |---|---|
 | `$brazeAliasName` | [ユーザーエイリアスオブジェクトの][2]Braze`alias_name`  |
 | `$brazeAliasLabel` | [ユーザーエイリアスオブジェクトの][2]Braze`alias_label`  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-どちらの属性も、[ユーザーエイリアスオブジェクト][2]をイベントデータとともに送信するために必要です。これらのプロパティは、他の \[RevenueCat サブスクライバー属性][4]と同様に、手動で設定できます。コード・スニペットの例をステップ1に示す。
+どちらの属性も、[ユーザーエイリアスオブジェクト][2]をイベントデータとともに送信するために必要です。これらのプロパティは、他の [RevenueCat サブスクライバー属性][4]と同様に、手動で設定できます。コード・スニペットの例をステップ1に示す。
 
 ### ステップ2:RevenueCat イベントを Braze に送信する
 
 RevenueCat が同じユーザー ID を持つようにRevenueCat purchases SDK と Braze SDK を設定したら、RevenueCat ダッシュボードで統合を有効にしてイベント名を設定できます。
 
-1. RevenueCat ダッシュボードでプロジェクトに移動し、左側のメニューで \[**Integrations**] カードを見つけます。\[**\+ New**] を選択します。
-2. 次に、利用可能な統合から \[**Braze**] を選択し、Braze インスタンスと Braze REST API キーを追加します。 
+1. RevenueCat ダッシュボードでプロジェクトに移動し、左側のメニューで [**Integrations**] カードを見つけます。[**\+ New**] を選択します。
+2. 次に、利用可能な統合から [**Braze**] を選択し、Braze インスタンスと Braze REST API キーを追加します。 
 3. RevenueCatが送信するイベント名を入力するか、デフォルトのイベント名を選択する。利用可能なイベントの詳細については、[ステップ3](#configure-event-names)を参照してください。
 4. RevenueCat で売上 (アプリストアの取り分差し引き後) または収益 (総売上高) を報告するかどうかを選択します。
 
@@ -113,7 +113,7 @@ RevenueCat が同じユーザー ID を持つようにRevenueCat purchases SDK �
 
 ### ステップ3:イベント名を設定する {#configure-event-names}
 
-RevenueCat が送信するイベント名を入力するか、\[**Use Default Event Names**] を選択してデフォルトのイベント名から選択します。RevenueCatが送信をサポートしているイベントは、以下の表の通りである。
+RevenueCat が送信するイベント名を入力するか、[**Use Default Event Names**] を選択してデフォルトのイベント名から選択します。RevenueCatが送信をサポートしているイベントは、以下の表の通りである。
 
 | イベント | 説明 |
 |---|---|
@@ -126,7 +126,7 @@ RevenueCat が送信するイベント名を入力するか、\[**Use Default Ev
 | Non Subscription Purchase | 自動更新サブスクリプションではない製品の購入。 |
 | 有効期限 | サブスクリプションの期限が切れる。 |
 | 課金問題 | ユーザーへの請求時に問題が発生した場合。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 収益を含むイベントの場合、RevenueCatは、トライアルコンバージョンや更新などのイベントとともに、この金額を自動的にBrazeに記録する。
 
@@ -138,7 +138,7 @@ RevenueCat で Braze の設定が完了したら、イベントが RevenueCat �
 
 ### テスト用のサンドボックスAPIキーを追加する
 
-RevenueCat に1つの Braze REST API キーのみを指定すると、本番イベントのみが送信されます。サンドボックステストイベントも送信する場合は、\[別の Braze REST API キー][11]を作成し、RevenueCat の Braze 設定に追加します。
+RevenueCat に1つの Braze REST API キーのみを指定すると、本番イベントのみが送信されます。サンドボックステストイベントも送信する場合は、[別の Braze REST API キー][11]を作成し、RevenueCat の Braze 設定に追加します。
 
 [2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}

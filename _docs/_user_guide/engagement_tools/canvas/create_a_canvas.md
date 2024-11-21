@@ -15,9 +15,6 @@ guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
-  - name: Preview User Paths
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
-    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
@@ -54,6 +51,9 @@ guide_featured_list:
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
   - name: AI Copywriting Assistant
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg

@@ -17,13 +17,13 @@ description: "この記事では、Braze アカウントの SAML シングルサ
 
 | 必要条件 | 詳細 |
 |---|---|
-| アサーション・コンシューマー・サービス（ACS）URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br><br> 欧州連合のドメインの場合、ASCのURLは`https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 。<br><br> IdPによっては、これはReply URL、Sign-On URL、Audience URL、または Audience URIとも呼ばれる。 |
-| エンティティID | `braze_dashboard` |
+| アサーションコンシューマーサービス (ACS) の URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br><br> 欧州連合のドメインの場合、ASCのURLは`https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 。<br><br> IdP によっては、これを応答 URL、サインオン URL、オーディエンス URL、またはオーディエンス URI と呼ぶこともあります。 |
+| エンティティ ID | `braze_dashboard` |
 | RelayState APIキー | **Settings（設定）**＞**API Keys（APIキー**）に進み、`sso.saml.login` 権限を持つAPIキーを作成し、生成されたAPIキーをIdP内の`RelayState` パラメータとして入力する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは \[**開発者コンソール**] > \[**API 設定**] の \[**設定**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
 {% endalert %}
 
 ## SAML SSO の設定
@@ -50,20 +50,20 @@ Braze は SAML アサーションに `email` のみが必要です。
 
 ID プロバイダーでの Braze の設定が完了すると、Braze アカウントに入力するターゲット URL と `x.509` 証明書が ID プロバイダーから提供されます。
 
-アカウントマネージャーがアカウントの SAML SSO をオンにしたら、\[**設定**] > \[**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを \[**オン**] に切り替えます。
+アカウントマネージャーがアカウントの SAML SSO をオンにしたら、[**設定**] > [**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを [**オン**] に切り替えます。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、\[**会社の設定**] > \[**セキュリティ設定**] に移動して、\[SAML SSO] セクションを見つけます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
 {% endalert %}
 
 そのページで、次の項目を入力します。
 
 | 必要条件 | 詳細 |
 |---|---|
-| `SAML Name` | これはログイン画面のボタンテキストとして表示される。<br>これは通常、「Okta」のようなIDプロバイダの名前である。 |
-| `Target URL` | これは、IdP内でBrazeをセットアップした後に提供される。<br> 一部の IdP は、これを SSO URL または SAML 2.0 Endpoint と呼ぶ。 |
+| `SAML Name` | これは、ログイン画面にボタンのテキストとして表示されます。<br>これは通常、「Okta」のような ID プロバイダーの名前です。 |
+| `Target URL` | これは、IdP 内で Braze を設定した後に提供されます。<br> IdP によってはこれを SSO URL または SAML 2.0 エンドポイントと呼びます。 |
 | `Certificate` | ID プロバイダが提供する`x.509` 証明書。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ダッシュボードに `x.509` 証明書を追加するときに、次の形式になっていることを確認してください。
 

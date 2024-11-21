@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Lob
 
-> \[Lob.com][38] は、ユーザーにダイレクトメールを送ることができるオンラインサービスである。
+> [Lob.com][38] は、ユーザーにダイレクトメールを送ることができるオンラインサービスである。
 
 Braze と Lob の統合では、Braze Webhook と Lob API を使用して、手紙、ポストカード、小切手などを郵送します。  
 
@@ -20,18 +20,18 @@ Braze と Lob の統合では、Braze Webhook と Lob API を使用して、手�
 | ---| ---|
 |Lob アカウント | このパートナーシップを活用するには、Lob アカウントが必要です。 |
 | Lob API キー | Lob API キーは、Lob ダッシュボードのお客様の名前の下にある設定セクションで確認できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:Lobエンドポイントを選択する
 
-Webhook で要求する HTTP URL は、Lob に対して実行できるアクションごとに異なります。以下の例では、postcards APIエンドポイント`https://api.lob.com/v1/postcards` を使っている。\[すべてのエンドポイントのリスト][39]にアクセスして、ユースケースに適したエンドポイントを選択します。 
+Webhook で要求する HTTP URL は、Lob に対して実行できるアクションごとに異なります。以下の例では、postcards APIエンドポイント`https://api.lob.com/v1/postcards` を使っている。[すべてのエンドポイントのリスト][39]にアクセスして、ユースケースに適したエンドポイントを選択します。 
 
 | APIエンドポイント | 利用可能なエンドポイント |
 | ------------ | ------------------- |
 | https://api.lob.com/ | /v1/addresses<br>/v1/addresses/{id}<br>/v1/verify<br>/v1/postcards<br>/v1/postcards/{id}<br>/v1/letter<br>/v1/letter/{id}<br>/v1/checks<br>/v1/checks/{id}<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/areas<br>/v1/areas/{id}<br>/v1/routes/{zip_code}<br>/v1/routes<br>/v1/countries<br>/v1/states|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### ステップ2:BrazeのWebhookテンプレートを作成する
 
@@ -49,7 +49,7 @@ Webhook で要求する HTTP URL は、Lob に対して実行できるアクシ�
 
 #### リクエストヘッダと方法
 
-Lob には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、\[**設定**] タブで `<LOB_API_KEY>` をご使用の Lob API キーに置き換える必要があります。このキーの直後に「:」が付加されており、またこのキーは64進数でエンコードされている必要があります。 
+Lob には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、[**設定**] タブで `<LOB_API_KEY>` をご使用の Lob API キーに置き換える必要があります。このキーの直後に「:」が付加されており、またこのキーは64進数でエンコードされている必要があります。 
 
 - **HTTPメソッド**：POST
 - **リクエストヘッダー**:
@@ -77,7 +77,7 @@ Lob ポストカードエンドポイントのリクエスト本文の例を次�
 
 ### ステップ3:リクエストをプレビューする
 
-この時点で、キャンペーンはテストと送信の準備ができているはずだ。エラーが発生した場合は、LobダッシュボードとBraze開発者コンソールのエラーメッセージログを確認する。例えば、以下のエラーは、認証ヘッダーのフォーマットが正しくないために発生した。 
+この時点で、あなたのキャンペーンはテストと送信の準備ができているはずです。エラーが発生した場合は、LobダッシュボードとBraze開発者コンソールのエラーメッセージログを確認する。例えば、以下のエラーは、認証ヘッダーのフォーマットが正しくないために発生した。 
 
 ![時間、アプリ名、チャンネル、エラーメッセージを示すメッセージエラーログ。エラーメッセージには、メッセージアラートとステータスコードが含まれる。][36]
 

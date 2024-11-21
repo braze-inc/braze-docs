@@ -77,7 +77,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert tip %}
-When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
+When creating new users using the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
 
 ## Request parameters

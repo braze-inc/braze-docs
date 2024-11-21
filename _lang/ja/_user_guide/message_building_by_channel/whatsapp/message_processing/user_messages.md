@@ -56,7 +56,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
 
 ### キャンバスでクイック返信エクスペリエンスを設定する
 
-#### ステップ 1:CTA を構築する
+#### ステップ 1: CTA を構築する
 
 まず、[WhatsApp メッセージテンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates/)でメッセージテンプレート内にクイック返信 CTA を設定します。 
 
@@ -68,7 +68,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
 メッセージテンプレートの承認を受ける前にキャンバスを構築することができる。
 {% endalert %}
 
-#### ステップ 2:キャンバスを作成する
+#### ステップ 2: キャンバスを作成する
 
 次に、作成したテンプレートを含むメッセージ・ステップでキャンバスを構築する。 
 

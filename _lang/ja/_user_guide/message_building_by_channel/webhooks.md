@@ -26,4 +26,7 @@ guide_featured_list:
 - name: レポート
   link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
+- name: Webhookリクエストのトラブルシューティング 
+  link: /docs/help/help_articles/api/webhook_connected_content_errors/
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---

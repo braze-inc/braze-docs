@@ -109,7 +109,7 @@ task :ko do
 end
 
 task :pt_br do
-  Rake::Task["lang"].invoke('pt_br')
+  Rake::Task["lang"].invoke('pt-br')
 end
 
 task :es do
@@ -133,7 +133,7 @@ task :ko_build do
 end
 
 task :pt_br_build do
-  Rake::Task["lang:build"].invoke('pt_br')
+  Rake::Task["lang:build"].invoke('pt-br')
 end
 
 task :es_build do

@@ -41,7 +41,7 @@ Snowflakeの[Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/
 | 要件 | 説明 |
 | ----------- | ----------- |
 | Snowflakeアカウント | このパートナーシップを利用するには、管理者レベルの権限を持つSnowflakeアカウントが必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -50,7 +50,7 @@ Brazeアカウントでセキュアデータ共有を設定するには、次の
 1. Brazeダッシュボードの**パートナー統合** > **データ共有**に移動します。
 2. Snowflakeアカウントの詳細を入力してください。Snowflake アカウント ID を確認するには、宛先アカウントで `SELECT CURRENT_ACCOUNT()` を実行します。
 3. CRR 共有をご利用の場合は、クラウドプロバイダーとリージョンを指定してください。
-4. \[**データ共有を作成**] を選択します。
+4. [**データ共有を作成**] を選択します。
 
 数分以内に、データ共有がSnowflakeインスタンスに表示されるはずです。共有からデータベースを作成して、テーブルを表示およびクエリできるようにします。データ共有を見るには、アカウント管理者である必要があることに注意してください。
 
@@ -69,7 +69,7 @@ Currents と同様に、Snowflake セキュアデータシェアリングを使�
 - 生のイベントまたはユーザーデータをCRM（Salesforceなど）にマッピングする
 - さらに
 
-\[生テーブルスキーマをここからダウンロードしてください。]\[schemas]
+[生テーブルスキーマをここからダウンロードしてください。][schemas]
 
 ### ユーザー ID スキーマ
 
@@ -79,7 +79,7 @@ Currents と同様に、Snowflake セキュアデータシェアリングを使�
 | ----------- | ----------- | ----------- |
 | `braze_id` | `"USER_ID"` | Brazeによって自動的に割り当てられる一意の識別子。 |
 | `external_id` | `"EXTERNAL_USER_ID"` | 顧客によって設定されたユーザーのプロファイルの一意の識別子。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 重要な情報と制限
 
@@ -87,17 +87,17 @@ Currents と同様に、Snowflake セキュアデータシェアリングを使�
 
 #### 非破壊的な変更
 非破壊的な変更はいつでも発生する可能性があり、一般的に追加の機能を提供します。非破壊的な変更の例には次のものがあります。
-- 新しいテーブルまたはビューの追加
-- 既存のテーブルまたはビューに列を追加する
+- 新しいテーブルまたはビューを追加する
+- 既存のテーブルやビューにカラムを追加する
 
 {% alert important %}
 新しい列の追加は非破壊的な変更と見なされるため、Braze では `SELECT *` クエリを使用する代わりに、各クエリで関心のある列を明示的に列挙することを強くお勧めします。あるいは、列を明示的に名前付けするビューを作成し、それらのビューを直接テーブルの代わりにクエリすることを検討するかもしれません。
 {% endalert %}
 
 #### 破壊的な変更
-可能な場合には、破壊的な変更の前に通知を行い、移行期間を設けます。破壊的変更の例には次のようなものがあります:
-- テーブルまたはビューの削除
-- 既存のテーブルまたはビューから列を削除する
+可能な場合には、破壊的な変更の前に通知を行い、移行期間を設けます。破壊的な変更の例には次のものがあります。
+- テーブルまたはビューを削除する
+- 既存のテーブルやビューからカラムを削除する
 - 既存の列の型またはnull許容性を変更する
 
 ### Snowflake のリージョン
@@ -144,4 +144,4 @@ Benchmarks は [Braze によって構築されたデータツール](https://www
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
-\[schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}
+[schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}

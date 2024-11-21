@@ -20,30 +20,30 @@ Jacquard Xを利用したDynamic Optimisationは、Braze CurrentsとConnected Co
 | Jacquard アカウント | このパートナーシップを活用するには、[Jacquard アカウント][1]が必要です。 |
 | Jacquard 接続サーバートークン | Jacquard 言語にアクセスするための、Braze キャンペーンのパスワードとして機能する長い文字列。<br><br>このトークンがまだ提供されていない場合は、Jacquard カスタマーサクセスマネージャーにリクエストできます。 |
 | Currents | Currents にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ 1:Jacquard Amazon S3の認証情報をリクエストする
+### ステップ1:Jacquard Amazon S3の認証情報をリクエストする
 
 クリック・トラッキング・イベントをBrazeから受け取るには、Jacquardが専用のAmazon S3バケットをセットアップする必要がある。このプロセスを開始するには、Jacquard カスタマーサクセスマネージャーに連絡してください。バケットが作成されると、Current を作成するための一意の認証情報が提供されます。 
 
 ### ステップ2:Current を作成する
 
-1. Braze で、**\[Currents] > \[新しい Currents を作成] > \[Amazon S3 データのエクスポート]** を選択します。 
+1. Braze で、**[Currents] > [新しい Currents を作成] > [Amazon S3 データのエクスポート]** を選択します。 
 2. 次に Current に名前を付け、連絡先メールを入力します。
 3. 認証情報ボックスに、Jacquard AWS アクセスキー ID とシークレットアクセスキーを追加します。次に、AWS S3バケット名として "frasee-braze-currents-exports "を追加する。 
 4. 最後に、Jacquard カスタマーサクセスマネージャーから受け取った AWS S3バケットフォルダーを追加します。これはお客様の社名である可能性があります。
-5. \[**一般設定**] の \[匿名ユーザーのイベントを含める] ボックスをオンにし、\[**エンゲージイベントの管理**] で \[メールクリック] をオンにします。
-6. 終了したら、\[**Currents を起動**] を選択します。
+5. [**一般設定**] の [匿名ユーザーのイベントを含める] ボックスをオンにし、[**エンゲージイベントの管理**] で [メールクリック] をオンにします。
+6. 終了したら、[**Currents を起動**] を選択します。
 
-### ステップ 3:個人を特定できる情報（PII）の削除を要請すること。
+### ステップ3:個人を特定できる情報（PII）の削除を要請すること。
 
 次に、Braze アカウントチームに連絡し、個人を特定できる情報が Jacquard に送信されないようにします。
 
 デフォルトでは、Current にはメールや住所などの特定の PII 属性が含まれます。JacquardはPIIを受け取ることはできないし、受け取ることもないので、Jacquardに渡されるすべてのイベントデータについてこれをオフにするよう、Brazeのアカウントチームにリクエストすることが重要である。
 
-### ステップ 4:Jacquard X コードスニペット 
+### ステップ4:Jacquard X コードスニペット 
 
 必要なコードスニペットについては、Jacquard アカウントチームにお問い合わせください。
 

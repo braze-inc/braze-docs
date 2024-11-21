@@ -36,7 +36,7 @@ tool:
 - ファイル形式はPNG、JPEG、[GIFのみ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs#gifs)受け付ける。
 - 画像は500KBを推奨する。
 
-{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。\[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 ### ポートレート
 
@@ -44,7 +44,7 @@ tool:
 |--- | --- | --- |
 | 画像とテキスト | アスペクト比6:5<br> 高解像度 1200 x 1000 px<br> 600 x 500 px 以上 | 四方がトリミングされる可能性がありますが、画像は常にビューポートの上部 50% を占めます。 |
 | 画像のみ | アスペクト比 3:5<br> 高解像度 1200 x 2000 px<br> 600 x 1000 px 以上 | 背の高いデバイスでは、左右の端でクロッピングが発生することがある。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### 景観
 
@@ -52,13 +52,13 @@ tool:
 |--- | --- | --- |
 | 画像とテキスト | アスペクト比10:3<br> 高解像度 2000 x 600px<br> 1000 x 300 px 以上 | 四方がトリミングされる可能性がありますが、画像は常にビューポートの上部 50% を占めます。 |
 | 画像のみ | アスペクト比5:3<br> 高解像度 2000 x 1200px<br> 1000 x 600 px 以上 | 背の高いデバイスでは、左右の端でクロッピングが発生することがある。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### 画像セーフゾーン
 
 Brazeプラットフォームでフルスクリーンのアプリ内メッセージをプレビューする際、デバイス間で表示される際にトリミングから保護されるメッセージの領域に対して、イメージセーフゾーンを有効にすることができる。プレビューペインでイメージセーフゾーンをテストするだけでなく、いつも通り[メッセージをテスト]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)することをお勧めする。
 
-![「画像セーフゾーンを表示」を有効にした Braze で、アプリ内メッセージをプレビュー。画像のセーフゾーンは、画像のどの部分が切り抜きから保護されるかを視覚化する画像上のオーバーレイである。]\[3c]
+![「画像セーフゾーンを表示」を有効にした Braze で、アプリ内メッセージをプレビュー。画像のセーフゾーンは、画像のどの部分が切り抜きから保護されるかを視覚化する画像上のオーバーレイである。][3c]
 
 ## 大型スクリーン
 
@@ -77,5 +77,5 @@ Brazeプラットフォームでフルスクリーンのアプリ内メッセー
 {% endtab %}
 {% endtabs %}
 
-\[3b] ： {% image_buster /assets/img/full-screen-large-viewport.png %}
-\[3c] ： {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}
+[3b] ： {% image_buster /assets/img/full-screen-large-viewport.png %}
+[3c] ： {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

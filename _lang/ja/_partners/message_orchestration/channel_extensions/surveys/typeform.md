@@ -23,7 +23,7 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 | ----------- | ----------- |
 | Typeform アカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるTypeformアカウントが必要である。 |
 | Braze Data Transformation | Typeform からデータを受信するには、[Data Transformation URL]({{site.baseurl}}/data_transformation/) が必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -39,17 +39,17 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 
 ![]({% image_buster /assets/img/typeform/typeform_add_webhook.png %}){: style="max-width:50%" }
 
-\[**View deliveries**] をクリックし、\[**Send test request**] をクリックして、Data Transformation にテストイベントを送信します。
+[**View deliveries**] をクリックし、[**Send test request**] をクリックして、Data Transformation にテストイベントを送信します。
 
 ![]({% image_buster /assets/img/typeform/typeform_test_request.png %})
 
-### ステップ 3:選択したTypeformのイベントを受け入れる変換コードを書く
+### ステップ3:選択したTypeformのイベントを受け入れる変換コードを書く
 
 このステップでは、Typeformから送信されるWebhookペイロードをJavaScriptオブジェクトの戻り値に変換する。
 
-1. Data Transformation を更新し、\[**Webhook の詳細**] に Typeform テストペイロードが表示されていることを確認します。
+1. Data Transformation を更新し、[**Webhook の詳細**] に Typeform テストペイロードが表示されていることを確認します。
 2. 選択した Typeform イベントをサポートするように Data Transformation コードを更新します。
-3. \[**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
+3. [**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
 4. Data Transformation を保存して有効化します。
 
 ![]({% image_buster /assets/img/typeform/typeform_test_result.png %})
@@ -612,7 +612,7 @@ return brazecall;
 
 ### ステップ4:TypeformのWebhookを公開する
 
-Data Transformation の作成が完了したら、\[**検証**] をクリックして、Data Transformation コードが正しくフォーマットされており、期待通りに動作することを確認します。その後、Data Transformation を保存してアクティブ化します。
+Data Transformation の作成が完了したら、[**検証**] をクリックして、Data Transformation コードが正しくフォーマットされており、期待通りに動作することを確認します。その後、Data Transformation を保存してアクティブ化します。
 
 有効化されると、カスタムイベントデータはユーザーがフォームに入力した際にユーザーのプロフィールに記録される。
 

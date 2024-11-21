@@ -24,8 +24,8 @@ Facebook Lead Ads は、企業が Facebook で直接リード情報を収集で�
 | <a href="https://www.facebook.com/business/help/195296697183682?id=829106167281625/" target="_blank">Facebook 広告アカウント</a> | あなたのブランドの事業マネージャーと結びついた、有効なFaceBookの広告アカウントが必要になります。<br><br>Braze で使用する予定の各広告アカウントに対する「Manage ad accounts」権限を持っており、広告アカウントの利用規約に同意していることを確認します。 |
 | <a href="https://www.facebook.com/business/help/183277585892925?id=420299598837059/" target="_blank">Facebook ページ</a> | 自社のブランドのビジネスマネージャーに関連付けられているアクティブな Facebook ページが必要になります。<br><br>Braze で使用する Facebook ページごとに、「Manage Pages」権限があることを確認します。 |
 | Braze REST エンドポイント | [ REST エンドポイント URL][1] を確認してください。API エンドポイントは、Brazeインスタンスのダッシュボード URL と一致します。<br><br> たとえば、ダッシュボード URL が`https://dashboard-03.braze.com` の場合、エンドポイントは`dashboard-03` になります。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キーがあることを確認します。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キーがあることを確認します。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -39,7 +39,7 @@ Facebook 広告マネージャから、<a href="https://www.facebook.com/busines
 
 #### ステップ 2a: Zapierで接続方法を選択する
 
-Zapier で \[**Apps**] に移動して利用可能なFacebook アプリを検索します。\[**Facebook Lead Ads**] または \[**Facebook Lead Ads (for Business admins)**] のいずれかを選択します。
+Zapier で [**Apps**] に移動して利用可能なFacebook アプリを検索します。[**Facebook Lead Ads**] または [**Facebook Lead Ads (for Business admins)**] のいずれかを選択します。
 
 Facebook アカウントを Zapier に接続するこの2つの方法の詳細については、以下を参照してください。
 
@@ -50,7 +50,7 @@ Facebook アカウントを Zapier に接続するこの2つの方法の詳細�
 
 #### ステップ 2b: Facebook Business Manager でリードアクセスに Zapier を追加する
 
-Facebook Business Manager で、左側のメニューの \[**Integrations**] > \[**Leads Access**] に移動します。Facebook ページを選択し、\[**CRMs**] をクリックします。\[CRM] タブで、\[**Assign CRMs**] を選択し、\[**Zapier**] を追加します。
+Facebook Business Manager で、左側のメニューの [**Integrations**] > [**Leads Access**] に移動します。Facebook ページを選択し、[**CRMs**] をクリックします。[CRM] タブで、[**Assign CRMs**] を選択し、[**Zapier**] を追加します。
 
 ![][3]{: style="max-width:80%;"}
 
@@ -60,7 +60,7 @@ CRMインテグレーションとしてZapierを割り当てるステップに�
 
 #### ステップ3a:トリガーの作成 
 
-Facebook アカウントを接続したら、Zap の作成に進むことができます。**トリガー**の場合は、ステップ2での選択に基づいて、\[**Facebook Lead Ads**] または \[**Facebook Lead Ads (for Business Admins)**] を選択します。 
+Facebook アカウントを接続したら、Zap の作成に進むことができます。**トリガー**の場合は、ステップ2での選択に基づいて、[**Facebook Lead Ads**] または [**Facebook Lead Ads (for Business Admins)**] を選択します。 
 
 ![][4]{: style="max-width:80%;"}
 
@@ -68,11 +68,11 @@ Facebook アカウントを接続したら、Zap の作成に進むことがで�
 
 ![][5]{: style="max-width:80%;"}
 
-Facebook アカウントを選択し、\[**Continue**] を選択します。 
+Facebook アカウントを選択し、[**Continue**] を選択します。 
 
 ![][6]{: style="max-width:80%;"}
 
-以前に作成した Facebook ページとインスタントフォームを選択し、\[**Continue**] を選択します。
+以前に作成した Facebook ページとインスタントフォームを選択し、[**Continue**] を選択します。
 
 ![][7]{: style="max-width:80%;"}
 
@@ -148,7 +148,7 @@ Webhookを設定した後、**Continue とtest** を選択します。テスト�
 {% details Facebook リードが Braze に同期されないのはなぜですか? %}
 1. 管理者が Facebook ページ、広告アカウント、リードアクセスにアクセスできることを確認します。次に、Zapier でアカウントを再接続します。
 2. Facebook で作成したインスタントフォームが、トリガーステップで選択したフォームにマッピングされていることを確認します。 
-3. \[**Facebook Business Manager**] > \[**Integrations**] > \[**Lead Access**] に移動して、Zapier を Leads Access に割り当てていることを確認します。
+3. [**Facebook Business Manager**] > [**Integrations**] > [**Lead Access**] に移動して、Zapier を Leads Access に割り当てていることを確認します。
 {% enddetails %}
 
 {% details 同じメールが設定されている重複ユーザープロファイルが表示されるのはなぜですか? %}

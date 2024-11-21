@@ -21,7 +21,7 @@ Braze と Microsoft Azure Blob Storage の統合により、データを Azure �
 | ----------- | ----------- |
 | Microsoft AzureとAzureストレージアカウント | このパートナーシップを利用するには、Microsoft Azure と Azure ストレージアカウントが必要です。 |
 | Currents | Currents にデータをエクスポートするには、アカウントに対して [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定しておく必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -29,7 +29,7 @@ Microsoft Azure Blob Storage と統合するには、Braze がデータを Azure
 
 ### ステップ1:ストレージアカウントを作成する
 
-Microsoft Azure で、サイドバーの \[**Storage Accounts**] に移動し、\[**\+ Add**] をクリックして新しいストレージアカウントを作成します。次に、ストレージアカウント名を指定する。その他のデフォルト設定は更新する必要はない。最後に \[**Review + create**] を選択します。 
+Microsoft Azure で、サイドバーの [**Storage Accounts**] に移動し、[**\+ Add**] をクリックして新しいストレージアカウントを作成します。次に、ストレージアカウント名を指定する。その他のデフォルト設定は更新する必要はない。最後に [**Review + create**] を選択します。 
 
 すでにストレージアカウントをお持ちの場合でも、Braze データ専用にストレージアカウントを新規作成することをお勧めします。
 
@@ -37,7 +37,7 @@ Microsoft Azure で、サイドバーの \[**Storage Accounts**] に移動し、
 
 ### ステップ2:接続文字列を取得する
 
-ストレージアカウントが準備できたら、ストレージアカウントから \[**Access Keys**] メニューに移動し、接続文字列を書きとめておきます。
+ストレージアカウントが準備できたら、ストレージアカウントから [**Access Keys**] メニューに移動し、接続文字列を書きとめておきます。
 
 Microsoft は2つのアクセスキーを提供しています。1つのキーを再生成する際に、もう1つのキーを使用して接続を維持します。必要なのはどちらか一方の接続文字列だけだ。
 
@@ -47,7 +47,7 @@ Brazeはキーではなく、このメニューの接続文字列を使用する
 
 ![]({% image_buster /assets/img/azure-currents-step-2.png %})
 
-### ステップ 3:Blob サービスコンテナーを作成する
+### ステップ3:Blob サービスコンテナーを作成する
 
 ストレージアカウントの**Blob Service**セクションにある**Blobs**メニューに移動する。先ほど作成したストレージアカウント内にBlobサービスコンテナを作成する。 
 
@@ -55,9 +55,9 @@ Blobサービスコンテナの名前を指定する。その他のデフォル�
 
 ![]({% image_buster /assets/img/azure-currents-step-3.png %})
 
-### ステップ 4:Currents を設定する
+### ステップ4:Currents を設定する
 
-Brazeで **\[Currents] > \[+ Current を作成] > \[Azure Blob データエクスポート]** に移動し、統合名と連絡先のメールを入力します。
+Brazeで **[Currents] > [+ Current を作成] > [Azure Blob データエクスポート]** に移動し、統合名と連絡先のメールを入力します。
 
 次に、接続文字列、コンテナー名、BlobStorage 接頭辞 (オプション) を指定します。
 
@@ -72,13 +72,13 @@ Brazeで **\[Currents] > \[+ Current を作成] > \[Azure Blob データエク�
 2. CSVエクスポート（キャンペーン、セグメント、キャンバスのユーザーデータをダッシュボード経由でエクスポートする）
 3. エンゲージメントレポート
 
-Braze で \[**パートナー連携**] >\[**テクノロジーパートナー**] > \[**Microsoft Azure**] に移動し、接続文字列、Azure ストレージコンテナー名、Azure ストレージ接頭辞を入力します。
+Braze で [**パートナー連携**] >[**テクノロジーパートナー**] > [**Microsoft Azure**] に移動し、接続文字列、Azure ストレージコンテナー名、Azure ストレージ接頭辞を入力します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-次に、\[**これをデフォルトのデータエクスポート先にする**] ボックスがオンになっていることを確認します。これにより、エクスポートしたデータが確実に Azure に送信されます。完了したら、統合を保存する。
+次に、[**これをデフォルトのデータエクスポート先にする**] ボックスがオンになっていることを確認します。これにより、エクスポートしたデータが確実に Azure に送信されます。完了したら、統合を保存する。
 
 ![BrazeのMicrosoft Azureデータエクスポートページ。このページには、接続文字列、コンテナー名、接頭辞のフィールドがある。]({% image_buster /assets/img/azure_data_export.png %})
 
