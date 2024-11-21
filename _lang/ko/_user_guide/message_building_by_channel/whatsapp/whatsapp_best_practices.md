@@ -31,7 +31,7 @@ WhatsApp에서 사용자에게 처음 메시지를 보내면 이러한 옵션이
 모든 사용자가 WhatsApp 메시지 수신에 적극적으로 동의했는지 확인한 후 WhatsApp에서 커뮤니케이션을 시작하세요. 사용자에게 옵트인을 요청할 때는 WhatsApp을 통해 비즈니스에서 보내는 메시지 수신에 구체적으로 동의한다는 사실을 사용자에게 알려야 합니다.
 
 {% alert note %}
-옵트인 요건 및 유용한 팁에 대한 자세한 내용은 [WhatsApp 옵트인 받기를](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/) 참조하세요.
+옵트인 요건 및 유용한 팁에 대한 자세한 내용은 [WhatsApp 옵트인 받기](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/)를 참조하세요.
 {% endalert %}
 
 ### 메시징 모범 사례 따르기
@@ -44,7 +44,7 @@ WhatsApp에서 사용자에게 처음 메시지를 보내면 이러한 옵션이
 
 옵트아웃은 휴대폰 품질 등급에 영향을 미치지 않으므로 사용자가 차단하거나 신고하는 것보다 WhatsApp 커뮤니케이션 수신을 옵트아웃하는 것이 좋습니다.
 
-권장되는 모범 사례는 사용자에게 보내는 첫 번째 메시지의 바닥글에 아웃아웃 방법에 대한 지침을 제공하는 것입니다. 예를 들어, 사용자가 수신 거부 트리거 단어로 응답하여 WhatsApp 채널의 수신을 거부할 수 있다고 명시할 수 있습니다. 향후 캠페인에 정기적으로 옵트아웃 푸터를 포함할 수도 있습니다. 설정 방법을 알아보려면 [옵트인 및 옵트아웃을]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) 참조하세요.
+권장되는 모범 사례는 사용자에게 보내는 첫 번째 메시지의 바닥글에 아웃아웃 방법에 대한 지침을 제공하는 것입니다. 예를 들어, 사용자가 수신 거부 트리거 단어로 응답하여 WhatsApp 채널의 수신을 거부할 수 있다고 명시할 수 있습니다. 향후 캠페인에 정기적으로 옵트아웃 푸터를 포함할 수도 있습니다. 설정 방법을 알아보려면 [옵트인 및 옵트아웃]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)을 참조하세요.
  
 ![채널 구독을 취소하려면 STOP에 응답하라는 내용의 바닥글이 포함된 WhatsApp 메시지][2]{: style="max-width:35%;"}
 
