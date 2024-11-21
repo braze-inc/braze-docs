@@ -1,20 +1,9 @@
----
-nav_title: Message Usage Dashboard
-article_title: Message Usage Dashboard
-page_order: 0
-page_type: reference
-description: "This reference article covers the message usage dashboard, where you can view self-service insights into your SMS and WhatsApp credit usage."
-tool: Dashboard
-hidden: true
-permalink: /message_usage/
----
+# Message Usage dashboard
 
-# Message usage dashboard
-
-> The message usage dashboard provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+> The Message Usage dashboard provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 {% alert important %}
-The message usage dashboard is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+The Message Usage dashboard is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 The **Message Usage** dashboard is divided into three sections:
