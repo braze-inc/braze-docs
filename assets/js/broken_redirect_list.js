@@ -1255,4 +1255,7 @@ validurls['/docs/pt-br/'] = '/docs/';
 validurls['/docs/es/'] = '/docs/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/';
 
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/google_tag_manager'] = '/docs/developer_guide/platform_integration_guides/android/initialization/google_tag_manager';
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration'] = '/docs/developer_guide/platform_integration_guides/android/initialization/runtime_configuration';
+
 // validurls['OLD'] = 'NEW';
