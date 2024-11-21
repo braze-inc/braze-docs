@@ -13,11 +13,11 @@ channel:
 
 > 이 기사에서는 사용자의 전화번호 또는 고객의 전화번호와 관련된 다양한 주제를 다룰 것입니다.
 
-전화번호는 고객 프로필에 현지 형식으로 표시되지만, 번호를 가져오는 데 사용하는 형식은 아닙니다 (`(724) 123 4567`).
+전화번호는 고객 프로필에 현지 형식으로 표시되지만, 번호를 가져오는 데 사용하는 형식은 아닙니다(`(724) 123 4567`).
 
 ## 전화번호 가져오기
 
-CSV를 [업로드하거나]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) API를 [통해]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) 전화번호를 가져와 사용자를 생성할 수 있습니다.
+CSV를 [업로드]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) 또는 [API를 통해]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) 전화번호를 가져와 사용자를 생성할 수 있습니다.
 
 ### 서식 지정
 
@@ -27,11 +27,11 @@ CSV를 [업로드하거나]({{site.baseurl}}/user_guide/data_and_analytics/user_
 
 모든 U.S. 숫자는 유효한 지역 코드가 있는 10자리 전화번호여야 합니다. `+` 및 국가 코드 없이 입력할 수 있으며, Braze는 모든 유효한 10자리 전화번호를 U.S 번호로 가정하고 매핑합니다.
 
-모든 국제 번호는 `+`로 시작해야 하며, 그 다음에 국가 코드와 전화번호가 와야 합니다. (e.g `+442071838750`)
+모든 국제 번호는 `+`로 시작하고 그 뒤에 해당 국가 코드와 전화번호를 입력해야 합니다. (e.g `+442071838750`)
 
-![]\[그림]{: style="max-width:50%;border: 0;"}
+![][그림]{: style="max-width:50%;border: 0;"}
 
-그러나 여러 지역에 서로 다른 국가 또는 지역 코드를 사용하는 경우 정확성을 보장하기 위해 `E.164` 형식을 사용하는 것이 좋습니다. U.S 기반 전화번호의 경우에도 마찬가지입니다.
+그러나 국가 또는 지역 번호가 다른 여러 지역으로 보내는 경우 정확성을 보장하기 위해 U.S.기반 전화번호라도 `E.164` 형식을 사용하는 것이 좋습니다.
 
 다음 표에서 로컬 숫자 형식과 범용 `E.164` 형식의 차이점을 볼 수 있습니다:
 
@@ -51,5 +51,5 @@ CSV를 [업로드하거나]({{site.baseurl}}/user_guide/data_and_analytics/user_
 
 여러 사용자가 단일 캠페인 또는 캔버스 단계의 세그먼트 내에서 동일한 전화번호를 가지고 있는 경우, Braze는 발송을 중복 제거하고 해당 전화번호로 하나의 메시지만 보냅니다. 
 
-\[picture]: {% image_buster /assets/img/sms/e164.png %}
+[picture]: {% image_buster /assets/img/sms/e164.png %}
 
