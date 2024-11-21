@@ -22,7 +22,7 @@ guide_featured_list:
   link: /docs/shopify_features/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Using Shopify with Braze
-  link: /docs//using_shopify_with_braze/
+  link: /docs/using_shopify_with_braze/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify Product Syncs
   link: /docs/shopify_catalogs/

@@ -67,8 +67,8 @@ The following settings are pre-configured in your Canvas:
     - Start time is when you create the Canvas template 
 - Target audience 
     - Entry audience 
-        - Has used these apps **more than 0** times 
         - Email **is not blank**
+        - Add your Shopify subscription group so you only send emails to opted-in users
     - Entry controls
         - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
     - Exit criteria 
@@ -231,6 +231,29 @@ Here is an example HTML block that uses your `shopping_cart` Liquid tag to add p
       </ul>
     </th>
   </tr>
+```
+{% endraw %}
+
+### Order Placed product personalization for email
+Here is an example of how you would add an HTML product block for your Abandoned Browse email. 
+
+{% raw %}
+```java
+<table style="width:100%">
+  {% for item in {{canvas_entry_properties.${products}}} %}
+  {% catalog_items <add_your_catalog> {{item.variant_id}} %}
+  <tr>
+    <th><img src="{{ items[0].product_image_url }}" width="200" height="200" /></th>
+    <th align="left">
+      <ul style="list-style-type: none">
+        <li>Item: {{item.product_name}}</li>
+        <li>Price: {{item.price}}</li>
+        <li>Quantity: {{item.quantity}}</li>
+      </ul>
+    </th>
+  </tr>
+  {% endfor %}
+</table>
 ```
 {% endraw %}
 

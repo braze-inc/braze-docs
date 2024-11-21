@@ -99,6 +99,25 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 
 For Abandoned Checkout messages, use the shopping cart Liquid tags to add products from your checkout into your messages. For more information see [Abandoned Cart and Abandoned Checkout email personalization]({{site.baseurl}}/using_shopify_with_braze/?tab=post-purchase%20retargeting#abandoned-cart-checkout). 
 
+{% raw %}
+| Variable         | Liquid templating                                   |
+|------------------|-----------------------------------------------------|
+| `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
+| `currency`         | `{{ shopping_cart.currency }}`                      |
+| `total_value`      | `{{ shopping_cart.total_value }}`                   |
+| `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
+| `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
+| `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
+| `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
+| `sku`              | `{{ shopping_cart.products[0].metadata.sku }}`     |
+| `source`           | `{{ shopping_cart.source }}`                        |
+| `checkout_url`     | `{{ shopping_cart.metadata[0].checkout_url }}`     |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
 {% endsubtab %}
 {% subtab Order placed %}
 **Event**: `ecommerce.v1.order_placed`<br>
@@ -109,27 +128,26 @@ For Abandoned Checkout messages, use the shopping cart Liquid tags to add produc
 {% raw %}
 | Variable                | Liquid templating                                   |
 |-------------------------|-----------------------------------------------------|
-| `cart_id`                 | `{{event_properties.${cart_id}}}`                   |
-| `currency`                | `{{event_properties.${currency}}}`                  |
-| `discounts`               | `{{event_properties.${discounts}}}`                 |
-| `metadata`                | `{{event_properties.${metadata}}}`                  |
-| `order_id`                | `{{event_properties.${order_id}}}`                  |
-| `product_id`              | `{{event_properties.${products[0].product_id}}}`   |
-| `product_name`            | `{{event_properties.${products[0].product_name}}}` |
-| `variant_id`              | `{{event_properties.${products[0].variant_id}}}`   |
-| `quantity`                | `{{event_properties.${products[0].quantity}}}`     |
-| `sku`                     | `{{event_properties.${products[0].metadata[0].sku}}}` |
-| `total_discounts`         | `{{event_properties.${total_discounts}}}`           |
-| `order_status_url`        | `{{event_properties.${metadata[0].order_status_url}}}` |
-| `order_number`            | `{{event_properties.${metadata[0].order_number}}}` |
-| `tags`                    | `{{event_properties.${metadata[0].tags}}}`         |
-| `referring_site`          | `{{event_properties.${metadata[0].referring_site}}}` |
-| `payment_gateway_names`    | `{{event_properties.${metadata[0].payment_gateway_names}}}` |
+| cart_id                 | `{{event_properties.${cart_id}}}`                   |
+| currency                | `{{event_properties.${currency}}}`                  |
+| discounts               | `{{event_properties.${discounts}}}`                 |
+| order_id                | `{{event_properties.${order_id}}}`                  |
+| product_id              | `{{event_properties.${products}[0].product_id}}`   |
+| product_name            | `{{event_properties.${products}[0].product_name}}` |
+| variant_id              | `{{event_properties.${products}[0].variant_id}}`   |
+| quantity                | `{{event_properties.${products}[0].quantity}}`     |
+| sku                     | `{{event_properties.${products}[0].metadata.sku}}` |
+| total_discounts         | `{{event_properties.${total_discounts}}}`           |
+| order_status_url        | `{{event_properties.${metadata}.order_status_url}}` |
+| order_number            | `{{event_properties.${metadata}.order_number}}`     |
+| tags                    | `{{event_properties.${metadata}.tags}}`             |
+| referring_site          | `{{event_properties.${metadata}.referring_site}}`   |
+| payment_gateway_names    | `{{event_properties.${metadata}.payment_gateway_names}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% alert tip %}
-Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you need to use Catalogs Liquid personalization as mentioned here. 
+Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you need to use Catalogs Liquid personalization as mentioned in [Abandoned Cart and Abandoned Checkout email personalization]({{site.baseurl}}/using_shopify_with_braze/#abandoned-cart-checkout). 
 {% endalert %}
 
 {% endsubtab %}
