@@ -1,6 +1,6 @@
 ---
-nav_title: 웹훅에 대하여
-article_title: 웹훅에 대하여
+nav_title: 웹훅 소개
+article_title: 웹훅 소개
 page_order: 0
 channel:
   - webhooks
@@ -33,7 +33,7 @@ description: "이 참조 문서에서는 웹훅의 기본 사항, 일반적인 �
 - 웹훅을 사용하여 [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/)와 같은 타사 서비스와 통신함으로써 고객의 인앱 및 웹 활동에 응답하여 다이렉트 메일을 보냅니다.
 - 게이머가 특정 레벨에 도달하거나 특정 포인트를 획득하면 웹훅과 기존 API 설정을 사용하여 캐릭터 업그레이드 또는 코인을 직접 계정으로 보냅니다. 멀티 채널 메시징 캠페인의 일부로 웹훅을 보내는 경우, 푸시 또는 다른 메시지를 보내어 게이머에게 보상에 대해 동시에 알릴 수 있습니다.
 - 항공사인 경우 웹훅과 기존 API 설정을 사용하여 고객이 일정 횟수의 항공편을 예약한 후 고객의 계정에 할인을 적립할 수 있습니다.
-- 끝없는 "If This Then That" ([IFTTT](https://ifttt.com/about)) 레시피—예를 들어, 고객이 이메일을 통해 앱에 로그인하면 해당 주소가 자동으로 Salesforce에 구성될 수 있습니다.
+- 끝없는 "If This Then That"([IFTTT](https://ifttt.com/about)) 레시피. 예를 들어, 고객이 이메일을 통해 앱에 로그인하면 해당 주소가 자동으로 Salesforce에 구성될 수 있습니다.
 
 ## 웹훅의 해부학
 
@@ -43,10 +43,10 @@ description: "이 참조 문서에서는 웹훅의 기본 사항, 일반적인 �
 
 | 웹훅의 일부 | 설명 |
 | --- | --- |
-| [HTTP 메서드](#methods) | API와 마찬가지로 웹훅도 요청 메서드가 필요합니다. 이들은 웹훅이 타격하는 URL에 제공되며, 엔드포인트에 제공된 정보를 어떻게 처리할지 알려줍니다. 지정할 수 있는 네 가지 HTTP 메서드가 있습니다: POST, GET, PUT, 그리고 DELETE. |
+| [HTTP 메서드](#methods) | API와 마찬가지로 웹훅도 요청 메서드가 필요합니다. 이들은 웹훅이 타격하는 URL에 제공되며, 엔드포인트에 제공된 정보를 어떻게 처리할지 알려줍니다. 지정할 수 있는 네 가지 HTTP 메서드가 있습니다: 바로 POST, GET, PUT, 그리고 DELETE입니다. |
 | HTTP URL | 웹훅 엔드포인트의 URL 주소. 엔드포인트는 웹훅에서 캡처한 정보를 보내는 장소입니다. |
-| 요청 본문 | 웹훅의 이 부분에는 엔드포인트에 전달하는 정보가 포함되어 있습니다. 요청 본문은 JSON 키-값 쌍 또는 원시 텍스트일 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+| 요청 본문 | 웹훅의 이 부분에는 엔드포인트에 전달하는 정보가 포함되어 있습니다. 요청 본문은 JSON 키-값 페어 또는 원시 텍스트일 수 있습니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTTP 메서드 {#methods}
 
@@ -55,10 +55,10 @@ description: "이 참조 문서에서는 웹훅의 기본 사항, 일반적인 �
 | HTTP 메서드 | 설명 |
 | ----------- | ----------- |
 | 게시물 | 이 메서드는 수신 서버에 새 정보를 씁니다. 실제 응용 프로그램에서 POST 메서드의 일반적인 예는 웹사이트의 [연락처 양식](https://www.braze.com/company/contact)입니다. 양식에 입력한 모든 정보는 요청 본문의 일부가 되어 수신자에게 전송됩니다. 이것은 데이터를 보낼 때 가장 일반적으로 사용되는 방법입니다.
-| 가져오기 | 이 방법은 새로운 정보를 작성하는 것과 반대로 기존 정보를 검색합니다. 이것은 서버에서 데이터를 요청할 때 가장 일반적으로 사용되는 방법입니다. 예를 들어, [`/segments/list` 엔드포인트]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)를 고려하십시오. GET 요청을 하면 세그먼트 목록이 반환됩니다.
-| 넣다 | 이 메서드는 요청 본문에 있는 정보로 기존 정보를 대체하여 엔드포인트의 정보를 업데이트합니다. 
+| GET | 이 방법은 새로운 정보를 작성하는 것과 반대로 기존 정보를 검색합니다. 이것은 서버에서 데이터를 요청할 때 가장 일반적으로 사용되는 방법입니다. 예를 들어, [`/segments/list` 엔드포인트]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)를 고려하십시오. GET 요청을 하면 세그먼트 목록이 반환됩니다.
+| PUT | 이 메서드는 요청 본문에 있는 정보로 기존 정보를 대체하여 엔드포인트의 정보를 업데이트합니다. 
 | 삭제 | 이 메서드는 HTTP URL의 리소스를 삭제합니다. 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Braze의 웹훅
 
@@ -68,7 +68,7 @@ Braze에서 웹훅을 웹훅 캠페인, API 캠페인 또는 캔버스 구성 �
 {% tab 웹훅 캠페인 %}
 
 1. Braze 대시보드에서 **캠페인**으로 이동하세요.
-2. 클릭 **캠페인 생성** 및 **웹훅** 선택.
+2. **캠페인 생성**을 클릭하고 **웹훅**을 선택합니다.
 
 [웹훅 생성]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)을 참조하십시오.
 
@@ -76,14 +76,14 @@ Braze에서 웹훅을 웹훅 캠페인, API 캠페인 또는 캔버스 구성 �
 {% tab API 캠페인 %}
 
 1. Braze 대시보드에서 **캠페인**으로 이동하세요.
-2. 클릭 **캠페인 생성** 및 **API 캠페인** 선택.
-3. 클릭 **Add Messages** and select **웹훅**.
+2. **캠페인 생성**을 클릭하고 **API 캠페인**을 선택합니다.
+3. **메시지 추가**를 클릭하고 **웹훅**을 선택합니다.
 4. API 호출을 [웹훅 객체]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)로 포함하도록 포맷하십시오.
 
 [웹훅 생성]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)을 참조하십시오.
 
 {% endtab %}
-{% tab 캔버스 Component %}
+{% tab 캔버스 구성요소 %}
 
 1. 귀하의 캔버스에서 새 구성 요소를 만드십시오.
 2. 구성 요소의 **메시지** 섹션에서 **웹훅**을 선택합니다.
