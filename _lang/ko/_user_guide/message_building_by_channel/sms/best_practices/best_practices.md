@@ -23,7 +23,7 @@ Braze에서 SMS/MMS를 설정하여 옵트인 및 옵트아웃을 관리할 때�
 * [SMS 구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/): 구독 그룹과 옵트인/아웃 방법 및 상태.
 * [구독 그룹 REST API]({{site.baseurl}}/api/endpoints/subscription_groups): 메시지에 대한 직접적인 응답이 아닌 다른 출처에서 수신한 옵트인 및 옵트아웃을 처리하는 방법.
 * [키워드 처리]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords): Braze가 키워드 처리 및 관리에 접근하는 방식에 대한 설명입니다.
-* [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/): 사용자가 SMS 메시지를 수신하기 전에 수신 동의 의사를 명시적으로 확인해야 합니다. 일부 국가에서는 SMS 이중 옵트인 설정이 필수이므로 Braze에서 이를 설정할 것을 권장합니다.
+* [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/): 사용자가 SMS 메시지를 수신하기 전에 옵트인 의도를 명시적으로 확인해야 합니다. 일부 국가에서는 SMS 이중 옵트인 설정이 필수이므로 Braze에서 이를 설정할 것을 권장합니다.
 * [SMS 메시지 전송]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/): 구독 그룹의 중요성, SMS 세그먼트 및 메시지 본문에 대한 요구 사항 등 Braze에서 SMS 전송의 기본 사항에 대해 설명합니다.
 
 ### 고려 사항
