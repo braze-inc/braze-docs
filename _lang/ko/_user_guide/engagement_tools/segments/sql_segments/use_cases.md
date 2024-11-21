@@ -50,7 +50,7 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 
 지난 30일 동안 이메일을 세 번 이상 열어본 사용자를 선택합니다.
 
-이는 다양한 채널에서 반응이 높은 사용자 등 사용자의 참여 수준을 파악하는 데도 유용합니다.
+이는 다양한 채널에서 반응이 높은 사용자 등 사용자의 인게이지먼트 수준을 파악하는 데도 유용합니다.
 
 ```sql
 SELECT user_id, COUNT(DISTINCT id) AS num_emails_opened
@@ -157,7 +157,7 @@ AND TO_PHONE_NUMBER NOT IN (SELECT TO_PHONE_NUMBER FROM USERS_MESSAGES_SMS_CARRI
 GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
-`CANVAS_ID` 는 캔버스 URL에서 `/canvas/` 뒤에 오는 숫자입니다.
+`CANVAS_ID`는 캔버스 URL에서 `/canvas/` 뒤에 오는 숫자입니다.
 {% endapi %}
 
 {% api %}
@@ -182,7 +182,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 
 이는 메시지를 받지 못했지만 필요한 오류 코드가 없어 무효로 표시되지 않는 사용자에게 보내는 것을 중지하고 싶은 상황을 해결하는 데 유용합니다. 이러한 사용자를 리타겟팅하여 전화번호를 업데이트하거나 구독을 취소할 수 있습니다. 
 
-이 쿼리는 증분 편집기를 사용하여 지난 90일 동안 전송이 거부된 횟수가 3회 이상이고 배달이 0건인 사용자를 찾습니다.
+이 쿼리는 증분 편집기를 사용하여 지난 90일 동안 전송이 거부된 횟수가 3회 이상이고 전달이 0건인 사용자를 찾습니다.
 
 ```sql
 SELECT
@@ -207,7 +207,7 @@ GROUP BY 1, 2;
 다음 조건을 동시에 충족하는 사용자를 찾습니다:
 
 - 총 금액이 $500 이상(여러 개의 `Transact` 이벤트 합계) 거래된 경우
-- 쇼핑몰에서 거래 `Funan`
+- `Funan` 쇼핑몰에서 거래
 - 지난 90일 동안 3회 이상 거래한 경우
 
 ```sql
@@ -284,7 +284,7 @@ AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 {% endapi %}
 
 {% api %}
-## 속성이 정수인 경우 특정 속성으로 사용자 지정 이벤트를 완료한 사용자를 선택합니다.
+## 속성이 정수인 경우 특정 속성으로 커스텀 이벤트를 완료한 사용자를 선택합니다.
 {% apitags %}
 이벤트, 속성
 {% endapitags %}
@@ -345,7 +345,7 @@ FROM user_daily_average;
 ```
 
 {% alert tip %}
-SMS 메시지의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED` 을 `USERS_MESSAGES_SMS_SEND_SHARED` 으로 바꿉니다. 푸시 알림의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED` 를 `USERS_MESSAGES_SMS_SEND_SHARED` 로 바꿉니다.
+SMS 메시지의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED`를 `USERS_MESSAGES_SMS_SEND_SHARED`로 바꿉니다. 푸시 알림의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED`를 `USERS_MESSAGES_SMS_SEND_SHARED`로 바꿉니다.
 {% endalert %}
 {% endapi %}
 
@@ -383,6 +383,6 @@ SELECT
 FROM user_weekly_average;
 ```
 {% alert tip %}
-SMS 메시지의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED` 을 `USERS_MESSAGES_SMS_SEND_SHARED` 으로 바꿉니다. 푸시 알림의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED` 를 `USERS_MESSAGES_SMS_SEND_SHARED` 로 바꿉니다.
+SMS 메시지의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED`를 `USERS_MESSAGES_SMS_SEND_SHARED`로 바꿉니다. 푸시 알림의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED`를 `USERS_MESSAGES_SMS_SEND_SHARED`로 바꿉니다.
 {% endalert %}
 {% endapi %}
