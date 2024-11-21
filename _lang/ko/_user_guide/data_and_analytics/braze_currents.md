@@ -10,7 +10,7 @@ description: "이 랜딩 페이지는 커런츠라고 불리는 Braze 데이터 
 tool: currents
 search_rank: 9
 guide_top_header: "Braze 커런츠"
-guide_top_text: "귀하의 참여 전략의 영향을 이해하는 것은 사용자와의 커뮤니케이션을 반복하고 최적화하는 데 중요한 정보를 제공합니다. 이 귀중한 참여 데이터를 나머지 운영과 긴밀하게 통합하고 데이터 과학에 대한 투자를 증대시키기 위해, Braze 플랫폼은 분석, 리타겟팅 및 기타 사용 사례를 위해 통합에서 다양한 이벤트 데이터를 추적합니다. <br> <br>커런츠 도구는 Braze 플랫폼에서 가장 강력하면서도 세분화된 참여 이벤트의 실시간 데이터 스트림입니다. Avro 파일 형식으로 데이터를 여러 <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>데이터 파트너</a> 중 하나에 제공하여 Braze가 생성한 고유하고 가치 있는 데이터를 사용하여 다른 최고 수준의 플랫폼에서 BI 및 분석 작업을 수행할 수 있도록 합니다."
+guide_top_text: "인게이지먼트 전략의 영향을 이해하는 것은 사용자와의 커뮤니케이션을 반복하고 최적화하는 데 중요한 정보를 제공합니다. 이 귀중한 인게이지먼트 데이터를 나머지 운영과 긴밀하게 통합하고 데이터 과학에 대한 투자를 증대시키기 위해, Braze 플랫폼은 분석, 리타겟팅 및 기타 사용 사례를 위해 통합에서 다양한 이벤트 데이터를 추적합니다. <br> <br>커런츠 도구는 Braze 플랫폼에서 가장 강력하면서도 세분화된 인게이지먼트 이벤트의 실시간 데이터 스트림입니다. Avro 파일 형식으로 데이터를 여러 <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>데이터 파트너</a> 중 하나에 제공하여 Braze가 생성한 고유하고 가치 있는 데이터를 사용하여 다른 최고 수준의 플랫폼에서 BI 및 분석 작업을 수행할 수 있도록 합니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
@@ -43,7 +43,7 @@ guide_featured_list:
 
 ## 커런츠 기능
 
-커런츠를 사용하면:
+커런츠 기능:
 * 데이터 웨어하우스 또는 자세한 분석을 위해 [분석 파트너]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) 중 하나로 Braze 이벤트 데이터를 스트리밍합니다.
 * 비즈니스 인텔리전스 도구, 머신 러닝 알고리즘 등을 지원하기 위해 Braze 이벤트 데이터를 지속적으로 스트리밍합니다.
 * [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [세그먼트]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) 또는 [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)을 사용하여 Braze 이벤트 데이터 를 다양한 다른 시스템으로 라우팅합니다.
