@@ -54,6 +54,71 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## November 12, 2024 release
+ 
+### Data flexibility
+ 
+#### Speed limit for `/users/track`
+
+The speed limit for the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) has been updated to 3,000 per 3 seconds.
+ 
+### Unlocking creativity
+
+#### Canvas Use Cases
+
+We've put together some use cases showcasing the different ways you can leverage a Braze Canvas. If you're looking for inspiration, choose a use case below to get started.
+
+- [Abandoned Cart]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart/)
+- [Back In Stock]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock/)
+- [Feature Adoption]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption/)
+- [Lapsed User]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user/)
+- [Onboarding]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding/)
+- [Post-Purchase Feedback]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback/)
+
+### Robust channels
+
+#### LINE
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+Braze's LINE integration is now generally available! LINE  is the most popular messaging app in Japan, with over 95 million monthly active users. In addition to messaging, LINE offers its users an “all-in-one” platform for social media, gaming, shopping, and payments.
+
+To get started, see our [LINE documentation]({{site.baseurl}}/user_guide/message_building_by_channel/line/).
+ 
+#### LinkedIn Audience Sync
+
+{% multi_lang_include release_type.md release="Beta" %}
+
+You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
+ 
+### Improving the developer guide
+ 
+We're in the process of making major improvements to the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home/). As a first step, we simplified the navigation and reduced the number of nested sections. 
+
+|Before|After|
+|------|-----|
+|!["The old navigation for the Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["The new navigation for the Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
+
+### New Braze partnerships
+ 
+#### MyPostcard
+
+[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/mypostcard/).
+ 
+### SDK updates
+ 
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+ 
+- [Expo Plugin 3.0.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
+    - This version requires 13.1.0 of the Braze React Native SDK.
+    - Replaces the iOS BrazeAppDelegate method call of BrazeReactUtils.populateInitialUrl with BrazeReactUtils.populateInitialPayload.
+        - This update resolves an issue where push opened events would not be triggered when clicking on a notification while the application is in a terminated state.
+        - To fully leverage this update, replace all calls of Braze.getInitialURL with Braze.getInitialPushPayload in your JavaScript code. The initial URL can now be accessed via the url property of the initial push payload.
+- [Braze Segment Swift Plugin 5.0.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md)
+    - Updates the Braze Swift SDK bindings to require releases from the 11.1.1+ SemVer denomination.
+    - This allows compatibility with any version of the Braze SDK from 11.1.1 up to, but not including, 12.0.0.
+    - Refer to the changelog entry for 11.1.1 for more information on potential breaking changes.
+
 ## October 15, 2024 release
 
 ### Data flexibility
@@ -776,67 +841,3 @@ The following SDK updates have been released. Breaking updates are listed below;
         - This method was originally deprecated in [release 5.14.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/5.14.0).
         - Failing to switch to the new delegate method will not trigger a compiler error; instead, the `BrazeDelegate.braze(_:sdkAuthenticationFailedWithError)` method you define will simply not be called.
 - [Xamarin SDK Version 4.0.3](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#403)
-
-## April 2, 2024 release
-
-### WhatsApp
-
-#### Multiple business accounts
-
-Now you can add multiple WhatsApp Business accounts and subscription groups to each workspace. For a full walkthrough, see [Multiple WhatsApp Business accounts and phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/multiple_subscription_groups/).
-
-#### Read rates
-
-WhatsApp is testing new approaches, starting with consumers in India, to create more valuable experiences and maximize engagement with businesses’ marketing conversations. This may include limiting the number of marketing conversations a person receives from any business in a given period, starting with a small number of conversations that are less likely to be read. For more information, see [Meta resources]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/meta_resources/).
-
-### Data flexibility
-
-#### Sync Amazon S3 buckets to Braze
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-You can now use Cloud Data Ingestion for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. For more information, see [File storage integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_integrations/).
-
-#### Shopify OAuth
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Shopify  is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Now when you set up Shopify for Braze, you can [enable OAuth for your workspace]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/).
-
-#### Use Expo for iOS push notifications
-
-We [added instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/push_notifications/?tab=expo) for integrating rich push notifications and Push Stories into your iOS app using Expo with React Native.
-
-#### Remote start iOS live activities
-
-Now you can remote start your live activities on iOS using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start/) endpoint. For a full walkthrough, see [Live Activities: Start an Activity]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-2-start-the-activity).
-
-### AI and ML automation
-
-#### Item recommendations
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-With BrazeAI<sup>TM</sup>, you can now calculate the most popular products or create personalized AI recommendations for a specific catalog. For more information, see [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/).
-
-#### QA in-app message content
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Previously, you could perform quality assurance on your SMS and push notification content using BrazeAI<sup>TM</sup> in the Braze dashboard. Now, you can [QA in-app message content]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_content_qa/) too.
-
-### New Braze partnerships
-
-#### Census - Cohort Import
-
-You can now [import cohort users from Braze to Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/census/), a data activation platform that connects cloud data warehouses like Snowflake and BigQuery to Braze. Your marketing teams can unlock the power of their first-party data to build dynamic audience segments, sync customer attributes to personalize campaigns, and keep all their data in Braze up-to-date.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [React Native 9.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
-  - Updated the minimum React Native version to 0.71.0.
-  - Updated the minimum iOS version to 12.0.
-  - Updated the iOS bindings to use Braze Swift SDK 8.1.0.
-  - Updated the Android bindings to use Braze Android SDK 30.1.1.
