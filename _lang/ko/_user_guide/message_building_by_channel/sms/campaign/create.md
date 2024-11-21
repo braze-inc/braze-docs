@@ -24,21 +24,21 @@ search_rank: 1
 
 **단계:**
 
-1. **메시징** > **캠페인으로** 이동하여 **캠페인 만들기를** 클릭합니다.
+1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
 {% alert note %}
 [이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
 {% endalert %}
 
 {: start="2"}
-2\. **SMS를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
+2\. **SMS를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가합니다.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 작성기를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
-5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 변형에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 참조하세요.
+4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가하세요.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 6. [구독 그룹을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 선택하여 적절한 사용자에게 메시지를 보낼 수 있도록 하세요. 구독 그룹을 선택할 때 Braze는 자동으로 세그먼트 필터를 추가하여 구독한 사용자만 캠페인을 수신할 수 있도록 합니다. 해당 구독 그룹에 속하는 긴 코드와 짧은 코드만 대상 사용자에게 SMS를 보내는 데 사용됩니다.
 
 {% alert tip %}
-캠페인의 모든 메시지가 비슷하거나 콘텐츠가 동일한 경우, 변형을 추가하기 전에 메시지를 작성하세요. 그런 다음 **이형** 상품 **추가** 드롭다운에서 **이형 상품에서 복사를** 선택할 수 있습니다.
+캠페인의 모든 메시지가 비슷하거나 콘텐츠가 동일한 경우, 변형을 추가하기 전에 메시지를 작성하세요. 그런 다음 **배리언트 상품 추가** 드롭다운에서 **배리언트 상품에서 복사**를 선택할 수 있습니다.
 {% endalert %}
 
 {% endtab %}
@@ -48,31 +48,31 @@ search_rank: 1
 
 1. 캔버스 작성기를 사용하여 [캔버스를 만듭니다]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 2. 캔버스를 설정한 후 캔버스 빌더에서 단계를 추가합니다. 단계에 명확하고 의미 있는 이름을 붙이세요.
-3. [단계 일정을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) 선택하고 필요에 따라 지연을 지정합니다.
-4. 필요에 따라 이 단계의 대상 그룹을 필터링합니다. 세그먼트를 지정하고 필터를 추가하여 이 단계의 수신자를 더욱 세분화할 수 있습니다. 메시지가 전송된 후 지연 시간이 지나면 대상 옵션이 확인됩니다.
-5. [진급 행동을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) 선택하세요.
+3. [단계 스케줄]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)을 선택하고 필요에 따라 지연을 지정합니다.
+4. 필요에 따라 이 단계의 오디언스를 필터링합니다. 세그먼트를 지정하고 필터를 추가하여 이 단계의 수신자를 더욱 세분화할 수 있습니다. 메시지가 전송된 후 지연 시간이 지나면 오디언스 옵션이 확인됩니다.
+5. [진행 동작]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)을 선택하세요.
 6. 메시지와 페어링할 다른 메시징 채널을 선택합니다.
 
 {% endtab %}
 {% endtabs %}
 
-## 2단계: SMS 작성
+## 2단계: SMS 메시지 작성
 
-필요에 따라 언어 및 개인화(리퀴드, 커넥티드 콘텐츠, 이모티콘)를 사용하여 메시지를 작성하세요. 초과 요금이 부과될 가능성을 줄이려면 메시지 사본 한도를 준수해야 합니다.
+필요에 따라 언어 및 개인화(리퀴드, 커넥티드 콘텐츠, 이모티콘)를 사용하여 메시지를 작성하세요. 초과량 요금이 부과될 가능성을 줄이려면 메시지 사본 한도를 준수해야 합니다.
 
 {% alert important %}
 계속 진행하기 전에 [SMS 메시지 세그먼트 및 복사 제한에]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) 대한 가이드라인을 읽어보세요. SMS 메시지 세그먼트는 휴대폰 사업자가 문자 메시지를 측정하는 데 사용하는 문자 일괄 처리입니다. 메시지는 메시지 세그먼트별로 요금이 부과되므로 메시지가 분할되는 방식에 대한 뉘앙스를 이해하는 것이 좋습니다.
 {% endalert %}
 
-!["안녕하세요 첫_이름, 여러분의 성원에 감사드립니다!"라는 메시지가 담긴 Braze의 SMS 작성기! 매장에 들러 이 SMS를 제시하고 특별 할인 혜택을 받아보는 것은 어떨까요? 답장 중지를 통해 메시지 수신을 중지할 수 있습니다."]({% image_buster /assets/img/sms_campaign_compose.png %})
+!["안녕하세요 first_name, 여러분의 성원에 감사드립니다!"라는 메시지가 담긴 Braze의 SMS 빌더! 매장에 들러 이 SMS를 제시하고 특별 할인 혜택을 받아보는 것은 어떨까요? 답장 중지를 통해 메시지 수신을 중지할 수 있습니다."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 {% alert tip %}
 {% raw %}
-리퀴드를 사용하려는 경우 선택한 맞춤 설정의 기본값을 포함해야 수신자의 사용자 프로필이 불완전한 경우 이름이나 일관된 문장 대신 빈 자리 표시자 `Hi, !` 가 표시되지 않습니다.
+Liquid를 사용하려는 경우 선택한 개인화의 기본값을 포함해야 수신자의 고객 프로필이 불완전한 경우 이름이나 일관된 문장 대신 빈 `Hi, !` 입력 안내가 표시되지 않습니다.
 {% endraw %}
 {% endalert %}
 
-멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![SMS 작성기의 메시지 필드에 있는 AI 카피라이터 실행 버튼(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
@@ -99,15 +99,15 @@ SMS를 몇 개의 세그먼트로 분할할 수 있는지 테스트하려면 [SM
 
 #### 배송 일정 또는 트리거 선택
 
-SMS 메시지는 예약된 시간, 작업 또는 API 트리거를 기반으로 전송할 수 있습니다. 자세한 내용은 [캠페인 예약하기를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) 참조하세요.
+SMS 메시지는 예약된 시간, 작업 또는 API 트리거를 기반으로 전송할 수 있습니다. 자세한 내용은 [캠페인 예약하기]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)를 참조하세요.
 
 액션 기반 전달의 경우 캠페인의 기간과 [조용한 시간을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) 설정할 수도 있습니다.
 
-이 단계에서는 사용자가 캠페인을 [다시]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) 수신할 수 있도록 허용하거나 [빈도 제한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) 규칙을 활성화하는 등 전달 제어를 지정할 수도 있습니다.
+이 단계에서는 사용자가 캠페인을 받을 수 있도록 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)을 얻을 수 있도록 허용하거나 [최대 게재빈도 설정]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) 규칙을 활성화하는 등의 전달 제어를 지정할 수 있습니다.
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이미 구독 그룹을 선택했어야 하는데, 이 그룹은 사용자와 소통하고자 하는 수준이나 카테고리에 따라 사용자 범위를 좁혀줍니다. 이 단계에서는 세그먼트에서 더 많은 오디언스를 선택하고, 원하는 경우 필터를 사용하여 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
+다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이미 구독 그룹을 선택했어야 하는데, 이 그룹은 사용자와 소통하고자 하는 수준이나 카테고리에 따라 사용자 범위를 좁혀줍니다. 이 단계에서는 세그먼트에서 더 많은 오디언스를 선택하고 원하는 경우 필터를 사용하여 해당 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지 보여주는 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
 
 {% alert tip %}
 SMS 리타겟팅에 관심이 있으신가요? 자세한 내용은 SMS [리타겟팅 문서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) 참조하세요.
@@ -115,20 +115,20 @@ SMS 리타겟팅에 관심이 있으신가요? 자세한 내용은 SMS [리타�
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 전환 이벤트는 캠페인의 성공 여부를 측정하는 데 도움이 됩니다. 예를 들어, 다음과 같습니다.
 
 - 지역 타겟팅을 사용하여 사용자의 구매를 최종 목표로 하는 SMS 메시지를 트리거하는 경우, 전환 이벤트를 `Purchase` 로 설정합니다.
 - 사용자를 앱으로 유도하려는 경우 전환 이벤트를 `Starts Session` 으로 설정합니다.
 
-특정 사용 사례에 따라 사용자 지정 전환 이벤트를 설정할 수도 있습니다. 창의력을 발휘하여 이 캠페인의 성공을 진정으로 측정할 수 있는 방법을 생각해 보세요.
+특정 사용 사례에 따라 사용자 지정 전환 이벤트를 설정할 수도 있습니다. 창의력을 발휘하여 이 캠페인의 성공을 어떻게 측정하고 싶은지 진지하게 생각해 보세요.
 
 {% endtab %}
 
 {% tab 캔버스 %}
 
-아직 완료하지 않았다면 캔버스 구성 요소의 나머지 섹션을 완료하세요. 캔버스의 나머지 부분을 구성하고, 다변량 테스트 및 지능형 선택을 구현하는 방법 등에 대한 자세한 내용은 캔버스 설명서의 [캔버스 구성]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) 단계를 참조하세요.
+아직 완료하지 않았다면 캔버스 구성 요소의 나머지 섹션을 완료하세요. 자세한 내용은 캔버스의 나머지 부분을 구축하고, 다변량 테스트 및 지능형 선택을 구현하는 방법 등에 대해 설명서의 [캔버스 구축]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) 단계를 참조하세요.
 
 {% endtab %}
 {% endtabs %}
@@ -137,4 +137,4 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 캠페인 또는 캔버스의 마지막 제작을 완료한 후에는 세부 정보를 검토하고 테스트한 다음 전송하세요!
 
-다음으로 [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/) 캠페인 결과에 액세스하는 방법을 알아보려면 [SMS 리포팅을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/) 확인하세요.
+다음으로 SMS 캠페인 결과에 액세스하는 방법을 알아보려면 [SMS 리포팅]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)을 확인하세요.
