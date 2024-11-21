@@ -152,7 +152,7 @@ After adding segments and filters to your target audience, you can test if your 
 
 #### Selecting entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day. For triggered Canvases, the maximum number of users will reset every UTC hour.
+Entry controls determine if users are allowed to re-enter a Canvas. You can use those controls to limit the number of people who would potentially enter a Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day. For triggered Canvases, the maximum number of users will reset every UTC hour.
 
 ![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
