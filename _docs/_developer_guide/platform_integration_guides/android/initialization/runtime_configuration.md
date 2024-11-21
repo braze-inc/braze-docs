@@ -4,7 +4,7 @@ article_title: Runtime Configuration for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 4
+page_order: 10
 description: "This reference article covers how to set up runtime configuration for your Android or FireOS application."
 
 ---
