@@ -1,5 +1,5 @@
 ---
-nav_title: Braze에서 SSL
+nav_title: Braze의 SSL
 article_title: SSL 개요
 page_order: 5
 page_type: reference
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Braze에서 SSL
+# Braze의 SSL
 
 {% multi_lang_include video.html id="zP1N_wN0SsQ" align="right" %}
 
@@ -36,21 +36,21 @@ SSL 프로토콜은 오늘날 Google Chrome과 같은 주요 브라우저가 사
 
 타사, 일반적으로 콘텐츠 전달 네트워크(CDN)를 사용하여 SSL 인증서를 획득할 수 있습니다. CDN은 SSL 인증서를 호스팅하고 링크 중 하나가 클릭될 때마다 브라우저에 제공할 수 있습니다. 이는 트래픽을 CDN을 통해 리디렉션하여 필요한 인증서를 적용한 후 이메일 파트너인 SendGrid 또는 SparkPost로 보내는 방식으로 수행됩니다.
 
-SSL 설정을 시작하려면 Braze 고객 성공 매니저에게 연락하여 전체 Braze 이메일 설정을 시작하십시오.
+SSL 설정을 시작하려면 Braze 고객 성공 매니저에게 연락하여 전체 Braze 이메일 설정을 시작하세요.
 
 Braze가 이 설정을 시작한 후 다음 단계를 따르십시오:
 1. Braze는 도메인 등록부에 추가할 DNS 레코드를 제공합니다.
 2. Braze는 레코드가 레지스트리에 올바르게 추가되었는지 확인할 것입니다.
 3. 이후, CDN을 선택하고 타사 제공업체로부터 SSL 인증서를 발급받게 됩니다. 
-4. 이 시점에서 CDN을 설정합니다. Braze는 CDN 구성 문제를 해결하는 데 도움을 줄 수 없음을 유의하십시오. CDN 제공업체에 추가 지원을 요청하십시오.
+4. 이 시점에서 CDN을 설정합니다. Braze는 CDN 구성 문제를 해결하는 데 도움을 줄 수 없음을 유의하세요. CDN 제공업체에 추가 지원을 요청하십시오.
 5. 귀하의 고객 성공 매니저에게 연락하여 SSL을 켜십시오.
 
 ### CDN이란 무엇이며, 왜 필요한가요?
 
-콘텐츠 전달 네트워크 (CDN)는 여러 매체에서 고품질 콘텐츠의 빠른 로드 시간을 보장하고 보안 인증서를 처리하는 서버 플랫폼입니다. 
+콘텐츠 전달 네트워크(CDN)는 여러 매체에서 고품질 콘텐츠의 빠른 로드 시간을 보장하고 보안 인증서를 처리하는 서버 플랫폼입니다. 
 
 {% alert important %}
-CDN 구성은 항상 Braze에서 DNS 레코드를 검증한 후에 따릅니다. 이 단계를 아직 시작하지 않았다면 고객 성공 매니저에게 연락하여 시작하는 방법에 대한 자세한 정보를 얻으십시오.
+CDN 구성은 항상 Braze에서 DNS 레코드를 검증한 후에 따릅니다. 이 단계를 아직 시작하지 않았다면 고객 성공 매니저에게 연락하여 시작하는 방법에 대한 자세한 정보를 얻으세요.
 {% endalert %}
 
 Braze에서 클릭 및 오픈 추적을 수행하기 위해, 우리의 전달 파트너들은 브랜드 하위 도메인을 사용하여 링크를 변환하고, CDN은 새로 변환된 링크에 SSL 인증서를 적용합니다. 종종, 우리의 전달 파트너는 링크와 이미지가 올바르게 표시되도록 하기 위해 귀하의 이메일 수신자의 브라우저에 유효하고 신뢰할 수 있는 인증서를 제시해야 합니다. Braze는 이러한 인증서를 요청하거나 관리하지 않기 때문에 CDN을 통해 직접 설정해야 합니다. 
@@ -67,9 +67,9 @@ CDN 구성 문제 해결에 대한 추가 지원이 필요하면 CDN 제공업�
 
 다음 표에는 특정 CDN을 구성하는 방법에 대한 SendGrid 및 SparkPost의 단계별 가이드가 포함되어 있습니다. 특정 CDN이 나열되지 않았더라도, CDN이 SSL 인증서를 적용할 수 있는지 확인해야 합니다.
 
-| SendGrid | 스파크포스트 |
+| SendGrid | SparkPost |
 | -------- | --------- |
-| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[클라우드플레어](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[빠르게](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[키CDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[클라우드플레어](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[클라우드프론트](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[빠르게](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[구글 클라우드 플랫폼](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[빠르게](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[빠르게](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[구글 클라우드 플랫폼](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
 
 #### 문제 해결
 
@@ -77,7 +77,7 @@ CDN 구성, 인증서 및 프록시 문제는 CDN에서 처리해야 하지만, 
 
 ##### 도메인 등록 문제
 
-dig 명령은 링크 추적이 CDN을 가리키고 있는지 여부를 알려줄 수 있습니다. 이 작업은 터미널에서 `dig CNAME link_tracking_subdomain`을(를) 실행하여 수행할 수 있습니다. 명령이 실행된 후 `ANSWER SECTION` 아래에 CNAME이 가리키는 위치가 나열되어야 합니다. 선택한 이메일 서비스 제공업체(SendGrid 또는 SparkPost)가 아닌 CDN을 가리키고 있다면, 도메인 레지스트리를 재구성하여 CDN을 가리키도록 해보세요.
+dig 명령은 링크 추적이 CDN을 가리키고 있는지 여부를 알려줄 수 있습니다. 이 작업은 터미널에서 `dig CNAME link_tracking_subdomain`을 실행하여 수행할 수 있습니다. 명령이 실행된 후 `ANSWER SECTION` 아래에 CNAME이 가리키는 위치가 나열되어야 합니다. 선택한 이메일 서비스 공급자(SendGrid 또는 SparkPost)가 아닌 CDN을 가리키고 있다면, 도메인 레지스트리를 재구성하여 CDN을 가리키도록 해보세요.
 
 ##### CDN 문제
 
