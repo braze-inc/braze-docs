@@ -5,16 +5,19 @@ page_type: partner
 search_tag: Partner
 layout: dev_guide
 guide_top_header: "Zeotap"
-guide_top_text: "Zeotapは次世代の顧客データ・プラットフォームだ。ブランドは、顧客のプライバシーとコンプライアンスを前面に押し出しながら、クッキーのない未来において顧客データを統合し、強化し、活性化することができる。"
+guide_top_text: "Zeotap は次世代の顧客データプラットフォームです。Cookie のない未来において、ブランドは顧客のプライバシーとコンプライアンスを最重視しながら、顧客データを統合し、強化し、アクティブ化することができます。"
 
-description: "このランディングページには、Zeotapの統合方法やZeotap Symphonyの使用方法など、Zeotapのすべてが掲載されている。"
+description: "このランディングページは、Zeotap を統合する方法と Zeotap Symphony を使用する方法など、Zeotap に関するあらゆる情報のホームページです。"
 
 guide_featured_list:
 - name: Zeotap
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap/
   image: /assets/img/braze_icons/user-circle.svg
-- name: ゼオタップ交響曲
+- name: Zeotap Symphony
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/symphony/
+  image: /assets/img/braze_icons/building-01.svg
+- name: 電流のためのZeotap
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
 

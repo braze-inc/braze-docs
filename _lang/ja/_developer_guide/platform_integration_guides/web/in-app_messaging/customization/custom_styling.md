@@ -23,11 +23,11 @@ description: "この記事では、Webアプリケーションのアプリ内メ
   }
 ```
 
-詳細については[JSDocs][2]を参照してください。
+詳細については[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)を参照してください。
 
 ## アプリ内メッセージ デフォルト z-index
 
-デフォルトでは、アプリ内メッセージは `z-index: 9001` を使用して表示されます。これは、`inAppMessageZIndex ` [初期化オプション][41]を使用して構成可能であり、あなたのWeb サイトがそれよりも高い値で要素をスタイルするシナリオで使用されます。
+デフォルトでは、アプリ内メッセージは `z-index: 9001` を使用して表示されます。これは、`inAppMessageZIndex ` [初期化オプション](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)を使用して構成可能であり、あなたのWeb サイトがそれよりも高い値で要素をスタイルするシナリオで使用されます。
 
 ```javascript
 braze.initialize("YOUR-API-KEY", {
@@ -40,6 +40,3 @@ braze.initialize("YOUR-API-KEY", {
 このオプションはWeb SDK v3.3.0で導入されました。このオプションを使用するには、従来の SDK をアップグレードする必要があります。
 {% endalert %}
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[15]: https://fontawesome.com/?from=io
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

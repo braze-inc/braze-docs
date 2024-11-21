@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Bluedot
 
-> [ブルードットは](https://bluedot.io/)、正確でわかりやすいジオフェンシングプラットフォームをアプリに提供するロケーションプラットフォームだ。BluedotのSDKを使用して、よりスマートなメッセージを発信し、モバイル注文のチェックインを自動化し、ワークフローを最適化し、摩擦のない体験を生み出す。 
+> [Bluedot](https://bluedot.io/) は、アプリのための正確でシンプルなジオフェンシングプラットフォームを提供するロケーションプラットフォームです。BluedotのSDKを使用して、よりスマートなメッセージを発信し、モバイル注文のチェックインを自動化し、ワークフローを最適化し、摩擦のない体験を生み出す。 
 
 BrazeとBluedotの統合により、Bluedotのジオフェンス位置情報サービスを利用してユーザーイベントを作成し、ジャーニーやキャンペーンの構築、顧客の行動や関心の分析に利用できる。ユーザーがデバイス上で発生させたイベント（入退場）は、すべての関連情報とともに即座にBrazeに送信される。 
 
@@ -18,38 +18,38 @@ BrazeとBluedotの統合により、Bluedotのジオフェンス位置情報サ�
 
 | 必要条件 | 説明 |
 |---|---|
-| ブルードット・アカウント | この統合を利用するには、ブルードット・アカウントが必要である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Bluedot アカウント | この統合を活用するには、Bluedot アカウントが必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
-ブルードットが提供するカスタム・イベント・ロケーション情報は、以下のような一般的なユースケースを達成するためにキャンペーンで使用することができる：
+Bluedot によって提供されるカスタムイベントロケーション情報は、キャンペーンで次のような一般的なユースケースを実現するために使用できます。
 - [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (クイックサービスレストラン)
 - [`Click and Collect`](https://bluedot.io/solutions/click-and-collect/)
 - [`Drive-Thru`](https://bluedot.io/solutions/qsr-drive-thru/) 
 
 ## 統合
 
-### ステップ1:ブルードット・プロジェクトを作成する
-ブルードット・アカウントを設定し、[ブルードット・キャンバスのダッシュボードに](https://docs.bluedot.io/canvas/)ログインする。新規プロジェクトの作成方法については、[ブルードットのドキュメントを](https://docs.bluedot.io/canvas/creating-a-new-project/)参照されたい。
+### ステップ1:Bluedot プロジェクトを作成する
+Bluedot アカウントを設定し、[Bluedot キャンバスダッシュボード](https://docs.bluedot.io/canvas/)にログインします。新しいプロジェクトの作成方法については、[Bluedot のドキュメント](https://docs.bluedot.io/canvas/creating-a-new-project/)を参照してください。
 
 ### ステップ2:SDKを統合する
-[Bluedot-Braze統合](https://docs.bluedot.io/integrations/braze-integration/)ドキュメントに記載されている手順で、アプリにBluedot Point SDKとBraze SDKを統合する。
+[Bluedot と Braze の統合](https://docs.bluedot.io/integrations/braze-integration/)に関するドキュメントに記載されている手順を使用して、Bluedot Point SDK とBraze SDK をアプリに統合します。
 
-### ステップ3:ブルードットSDKを認証する
-ステップ 1 で作成した`projectId` を使用して、Bluedot Point SDK を認証する。
+### ステップ 3:Bluedot SDK を認証する
+ステップ1で作成した `projectId` を使用して Bluedot Point SDK を認証します。
 
-### ステップ4:ブレイズでブルードット・イベントを使う
+### ステップ4:Braze で Bluedot イベントを使用する
 
-#### <b>メッセージのトリガー</b>
+#### メッセージのトリガー
 
-ブルードットSDKによって生成されたロケーション・イベントからアクションを起こすプッシュ・キャンペーンやキャンバスを設定することができる。この統合ルートは、ユーザーが会場や興味のある場所に入った直後のリアルタイムのメッセージングや、ユーザーがその場を離れた後の遅延したフォローアップ・コミュニケーションに最適である。
+Bluedot SDK によって生成されたロケーションイベントから起動するプッシュキャンペーンまたはキャンバスを設定できます。この統合ルートは、ユーザーが会場や興味のある場所に入った直後のリアルタイムのメッセージングや、ユーザーがその場を離れた後の遅延したフォローアップ・コミュニケーションに最適である。
 
 Brazeでアクションベースのキャンペーンを設定し、設定した場所に基づいてメッセージを送信する。トリガーには、以下のスクリーンショットに示すように、`bluedot_entry` または`bluedot_exit` のカスタムイベントを使用する：
 
-![配信ステップにおけるアクションベースのキャンペーン。ここでは、ユーザーがカスタム`bluedot_entry` または`bluedot_exit` イベントを実行した場合にキャンペーンを送信する2つのスケジュールオプションがある。]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![配信ステップでのアクションベースのキャンペーン。ここでは、ユーザーがカスタム`bluedot_entry` または`bluedot_exit` イベントを実行した場合にキャンペーンを送信する2つのスケジュールオプションがある。]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### ユーザーへのターゲット設定
 
 ワークスペースのターゲットが**「すべてのユーザー」**であることを確認する。
-![] （{%image_buster /assets/img_archive/Campaign-Target_users-BD.png %} ）「すべてのユーザー」を希望セグメントとして選択するよう、ターゲットユーザーのステップで促すアクションベースのキャンペーン。{: style="max-width:80%"}
+![セグメントとして「すべてのユーザー」を選択するように促すターゲットユーザーステップを使用したアクションベースのキャンペーン。]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}

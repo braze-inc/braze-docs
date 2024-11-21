@@ -1,16 +1,16 @@
 ---
-nav_title: エアブリッジ
-article_title: エアブリッジ
+nav_title: Airbridge
+article_title: Airbridge
 alias: /partners/airbridge/
-description: "この参考記事では、ピープルベースのアトリビューションとインクリメンタル測定を提供し、デバイス、ID、プラットフォームを横断して真のマーケティング効果を測定するBrazeとAirbridgeのパートナーシップについて概説している。"
+description: "このリファレンス記事では、Braze と Airbridge のパートナーシップについて説明します。Airbridge は、デバイス、ID、プラットフォームにわたり真のマーケティング効果を測定するためのピープルベースドアトリビューションとインクリメンタル測定を提供します。"
 page_type: partner
 search_tag: Partner
 
 ---
 
-# エアブリッジ
+# Airbridge
 
-> [エアブリッジは](https://www.airbridge.io/)、モバイル・アトリビューション、インクリメンタリスト測定、マーケティング・ミックス・モデリングを通じて、真の成長源を発見するのに役立つ統合モバイル測定プラットフォームである。
+> [Airbridge](https://www.airbridge.io/) は、モバイル属性、インクリメンタルリスト測定、マーケティングミックスモデリングを通じて、真の成長の源泉を発見できる統一モバイル測定プラットフォームです。
 
 BrazeとAirbridgeの統合により、パーソナライズされたマーケティングキャンペーンを構築するために、AirbridgeからBrazeにオーガニックインストール以外のアトリビューションデータを渡すことができる。
 
@@ -18,23 +18,23 @@ BrazeとAirbridgeの統合により、パーソナライズされたマーケテ
 
 | 必要条件 | 説明 |
 |---|---|
-| エアブリッジアカウント | このパートナーシップを利用するには、エアブリッジのアカウントが必要である。 |
-| iOSまたはAndroidアプリ | この統合はiOSとAndroidアプリをサポートしている。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
-| エアブリッジSDK | 必要なBraze SDKに加えて、Airbridge[Android](https://help.airbridge.io/en/developers/android-sdk)または[iOS](https://help.airbridge.io/en/developers/ios-sdk)SDKをインストールする必要がある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Airbridge アカウント | このパートナーシップを活用するには、Airbridge アカウントが必要です。 |
+| iOSまたはAndroidアプリ | この統合では、iOS アプリと Android アプリがサポートされています。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
+| Airbridge SDK | 必要なBraze SDKに加えて、Airbridge[Android](https://help.airbridge.io/en/developers/android-sdk)または[iOS](https://help.airbridge.io/en/developers/ios-sdk)SDKをインストールする必要がある。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ1:マップ・デバイスID
+### ステップ1:デバイス ID をマッピングする
 
-サーバー間の統合は、以下のコード・スニペットをアプリに含めることで有効になる。
+サーバー間統合を有効にするには、アプリに次のコードスニペットを組み込みます。
 
 #### Android
 
 Androidアプリをお持ちの場合は、一意のBrazeデバイスIDをAirbridgeに渡す必要がある。
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 {% subtabs %}
 {% subtab Java %}
 
@@ -85,7 +85,7 @@ override fun onCreate() {
 
 #### iOS
 
-iOSアプリの場合、useUUIDAsDeviceIdフィールドをfalseに設定することで、IDFVを収集することができる。設定されていない場合、iOSのアトリビューションはAirbridgeからBrazeに正確にマッピングされない可能性が高い。詳しくは「IDFVの収集」を参照のこと。
+iOSアプリの場合、useUUIDAsDeviceIdフィールドをfalseに設定することで、IDFVを収集することができる。設定されていない場合、iOSのアトリビューションはAirbridgeからBrazeに正確にマッピングされない可能性が高い。詳細については、「IDFV の収集」を参照してください。
 
 {% tabs %}
 {% tab iOS %}
@@ -130,7 +130,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #### React Native
 
 {% tabs %}
-{% tab タイプスクリプト %}
+{% tab TypeScript %}
 
 ```typescript
 Braze.getInstallTrackingId(function (error, brazeID) {
@@ -145,7 +145,7 @@ Braze.getInstallTrackingId(function (error, brazeID) {
 #### Cordova
 
 {% tabs %}
-{% tab タイプスクリプト %}
+{% tab TypeScript %}
 
 ```typescript
 AppboyPlugin.getDeviceId(function (brazeID) {
@@ -160,7 +160,7 @@ AppboyPlugin.getDeviceId(function (brazeID) {
 #### Flutter
 
 {% tabs %}
-{% tab タイプスクリプト %}
+{% tab TypeScript %}
 
 ```typescript
 BrazePlugin.getInstallTrackingId().then((brazeID) {
@@ -188,64 +188,64 @@ AirbridgeUnity.StartTracking()
 
 ### ステップ2:Brazeデータインポートキーを取得する
 
-Brazeで、**Partner Integrations**>**Technology Partnersに**移動し、**Airbridgeを**選択する。
+Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] に移動し、[**Airbridge**] を選択します。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**統合」の**下に**テクノロジー・パートナーが**ある。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。鍵の生成後、新しい鍵を作成したり、既存の鍵を無効にしたりすることができる。データインポートキーとRESTエンドポイントは、エアブリッジのダッシュボードでポストバックを設定する際に、次のステップで使用される。
+ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Airbridge のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。
 
 ![][1]
 
-### ステップ3:エアブリッジのダッシュボードでBrazeを設定する
+### ステップ3:Airbridge のダッシュボードで Braze を設定する
 
-1. Airbridgeで、左サイドバーの**Integrations > Third-party Integrationsに**移動し、**Brazeを**選択する。
+1. Airbridgeで、左サイドバーの **[Integrations] > [Third-party Integrations]** に移動し、[**Braze**] を選択します。
 2. Brazeのダッシュボードで見つけたデータインポートキーとRESTエンドポイントを提供する。
-3. イベントの種類（Install EventまたはInstall & Deeplink Open Event）を選択し、保存する。
+3. イベントタイプ ([Install Event] または [Install & Deeplink Open Event]) を選択し、保存します。
 
 {% alert note %}
 ディープリンクオープンイベントにつながったキャンペーンのアトリビューションデータは、デバイスレベルで更新される。例えば、2人のユーザーが1つのデバイスを使用し、1人のユーザーがディープリンクを開くイベントを行った場合、このイベントのアトリビューションデータはもう1人のユーザーのデータにも反映される。
 {% endalert %}
 
-詳しい説明は[エアブリッジを](https://help.airbridge.io/en/guides/braze)参照のこと。
+詳細な手順については、[Airbridge](https://help.airbridge.io/en/guides/braze)を参照してください。
 
 ### ステップ4:統合を確認する
 
-BrazeがAirbridgeからアトリビューションデータを受信すると、BrazeのAirbridgeテクノロジーパートナーページのステータス接続インジケータが、"Not Connected "から "Connected "に変わる。最後に成功したリクエストのタイムスタンプも含まれる。
+Braze が Airbridge からアトリビューションデータを受信すると、Braze の Airbridge テクノロジーパートナーページのステータス接続インジケーターが [接続されていません] から [接続済み] に変わります。最後に成功したリクエストのタイムスタンプも含まれる。
 
-これは、帰属するインストールに関するデータを受け取るまでは起こらないことに注意してほしい。エアブリッジのポストバックから除外されるべきオーガニックインストールは、APIによって無視され、接続が成功したかどうかを判断する際にカウントされない。
+これは、紐づけられるインストールに関するデータを受け取るまでは発生しないことに注意してください。Airbridge のポストバックから除外する必要があるオーガニックインストールは、Braze の API では無視され、接続の確立が成功したかどうかを判断する際に考慮されません。
 
 ## 利用可能なデータフィールド
 
-Airbridgeは、以下のデータフィールド表に記載されている4種類のアトリビューションデータをBrazeに送信することができる。このデータはエアブリッジのダッシュボードで見ることができ、ユーザーインストールのアトリビューションとフィルタリングに使用される。
+Airbridge は、次のデータフィールドチャートにリストされている4種類のアトリビューションデータを Braze に送信できます。このデータは Airbridge ダッシュボードで確認でき、ユーザーのインストールアトリビューションおよびフィルタリングに使用されます。
 
 提案されたとおりに統合を設定すると、Brazeはインストールデータをセグメントフィルターにマッピングする。
 
-| エアブリッジのデータフィールド | ブレージングセグメントフィルター | 説明 |
+| Airbridge のデータフィールド | Braze セグメントフィルター | 説明 |
 | -------------------- | ---------------------| ---- |
-| `Channel` | 帰属ソースをインストールする | インストールまたはディープリンクが開かれたチャンネルは、以下のチャンネルに帰属する。 |
+| `Channel` | 帰属ソースをインストールする | インストールまたはディープリンクオープンが紐づけられるチャネル |
 | `Campaign` | アトリビューション・キャンペーンをインストールする | インストールまたはディープリンクのオープンが帰属するキャンペーン |
 | `Ad Group` | アトリビューション広告グループをインストールする | インストールまたはディープリンクのオープンが帰属する広告グループ |
 | `Ad Creative` | アトリビューション広告をインストールする | インストールまたはディープリンクが開かれた広告クリエイティブは、以下のものに起因する。 |
 
-ユーザーベースは、BrazeダッシュボードのInstall Attributionフィルタを使用して、アトリビューションデータによってセグメントすることができる。
+ユーザー群は、Braze ダッシュボードで インストールアトリビューションのフィルターを使用して、アトリビューションデータによってセグメント化できます。
 
 ![][2]
 
-## メタビジネス属性データ
+## Meta Business アトリビューションデータ
 
-Meta Businessキャンペーンのアトリビューションデータは、当社のパートナーを通じて入手することはできない。このメディアソースは、パートナーに帰属データを第三者と共有することを許可していないため、パートナーはそのデータをBrazeに送信することができない。
+Meta Businessキャンペーンのアトリビューションデータは、当社のパートナーから入手することはできません。このメディアソースは、パートナーにアトリビューションデータを第三者と共有することを許可していないため、パートナーはそのデータを Braze に送信できません。
 
-## BrazeのAirbridgeクリックトラッキングURL（オプション）
+## Braze での Airbridge クリックトラッキング URL (オプション)
 
-Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROIを最大化するためにどこにリソースを投資すべきか、データに基づいた意思決定ができるようになる。
+Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROI を最大化するためにどこにリソースを投資すべきかについて、データに基づいた意思決定ができるようになります。
 
-エアブリッジのクリック・トラッキング・リンクを利用するには、[エアブリッジを](https://help.airbridge.io/en/guides/creating-a-new-tracking-link)ご覧いただきたい。セットアップが完了したら、エアブリッジのクリックトラッキングリンクをBrazeのキャンペーンに直接挿入することができる。その後、エアブリッジは[確率論的なアトリビューション手法を使って](https://help.airbridge.io/en/guides/identity-matching)、リンクをクリックしたユーザーをアトリビュートする。Brazeキャンペーンからのアトリビューションの精度を高めるために、Airbridgeトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーの属性が決定的になる。
+Airbridge のクリックトラッキングリンクの使用を開始するには、[Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link) にアクセスします。セットアップが完了したら、エアブリッジのクリックトラッキングリンクをBrazeのキャンペーンに直接挿入することができる。その後、Airbridge は[確率的アトリビューション手法](https://help.airbridge.io/en/guides/identity-matching)を使用して、リンクをクリックしたユーザーを紐づけます。Brazeキャンペーンからのアトリビューションの精度を高めるために、Airbridgeトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーの属性が決定的になる。
 
 {% tabs %}
-{% tab アンドロイド %}
-Androidの場合、Brazeは[Google Advertising ID収集（GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)）にオプトインすることができる。GAIDはまた、エアブリッジSDKの統合によってネイティブに収集される。以下のリキッドロジックを利用することで、エアブリッジのクリックトラッキングリンクにGAIDを含めることができる：
+{% tab Android %}
+Android の場合、Braze ではお客様が [Google 広告 ID (GAID) 収集]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Airbridge SDK統合によってネイティブに収集されます。以下のリキッドロジックを利用することで、エアブリッジのクリックトラッキングリンクにGAIDを含めることができる：
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -269,8 +269,8 @@ idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-**この推奨は純粋にオプションである。**<br>
-現在、クリックトラッキングのリンクにIDFVやGAIDなどのデバイス識別子を使用していない場合、または今後使用する予定がない場合でも、エアブリッジは確率的モデリングによってこれらのクリックを識別することができる。
+**この推奨事項の適用は完全に任意です。**<br>
+現在、クリックトラッキングリンクで IDFV やGAID などのデバイス識別子を使用していない場合、または今後使用する予定がない場合でも、Airbridge は確率的モデリングによってこれらのクリックを紐づけることができます。
 {% endalert %}
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}

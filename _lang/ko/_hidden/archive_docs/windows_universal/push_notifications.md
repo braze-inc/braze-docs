@@ -15,7 +15,7 @@ hidden: true
 
 푸시 알림은 중요한 업데이트가 발생하면 사용자 화면에 표시되는 앱 외 알림입니다. 푸시 알림은 사용자에게 시의적절하고 관련성 높은 콘텐츠를 제공하거나 앱에 다시 참여하도록 유도할 수 있는 유용한 방법입니다.
 
-추가 모범 사례는 \[설명서][9]를 참조하세요.
+추가 모범 사례는 [설명서][9]를 참조하세요.
 
 ## 1단계: 푸시를 위한 애플리케이션 구성
 
@@ -70,7 +70,7 @@ WNS 딥링크 지원은 사용자를 전송할 위치에 대한 데이터와 함
 
 ### 3부: REST API를 통한 딥링킹
 
-Braze는 REST API를 통한 딥링크 전송도 허용합니다. \[Windows 유니버설 푸시 객체][13]는 선택 사항 `extra_launch_string` 매개변수를 허용합니다.
+Braze는 REST API를 통한 딥링크 전송도 허용합니다. [Windows 유니버설 푸시 객체][13]는 선택 사항 `extra_launch_string` 매개변수를 허용합니다.
 
 [4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
 [6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID 대시보드"

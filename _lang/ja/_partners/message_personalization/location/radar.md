@@ -2,7 +2,7 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "このリファレンス記事では、位置情報と\"トラッキングをiOSとAndroid アプリsに追加するために、ジオフェンシングプラットフォームであるBrazeとRadarの提携について概説します。"
+description: "このリファレンス記事では、Braze と Radar のパートナーシップについて説明します。Radar は、位置情報コンテキストとトラッキングを iOS アプリと Android アプリに追加するためのジオフェンシングプラットフォームです。"
 page_type: partner
 search_tag: Partner
 
@@ -10,29 +10,29 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) は、先頭のジオフェンシングと位置"トラッキング プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).Brazeの業界をリードするエンゲージメント プラットフォームとRadarの業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い商品・サービス体験を通じて収益とロイヤルティを牽引することができます。これには、集配"トラッキング、場所-トリガーの通知s、文脈に応じた or 状況に即した パーソナライゼーション、場所の確認、店舗のロケーター、住所の自動完了などが含まれます。
+> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Brazeの業界をリードするエンゲージメント プラットフォームとRadarの業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い商品・サービス体験を通じて収益とロイヤルティを牽引することができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
 
-BrazeとRadarの統合により、高度なロケーションベースのキャンペーン トリガーと、豊富なファーストパーティロケーションデータを使用したユーザープロファイルエンリッチメントにアクセスできます。Radar ジオフェンスまたはトリップ"トラッキングが生成されると、カスタムイベントs およびユーザー 属性s がリアルタイムでBrazeに送信されます。これらの事象および属性sは、次いで、位置に基づくキャンペーンsをトリガーし、ラストマイルのピックアップおよび配送オペレーションを駆動し、フリートおよび配送物流を監視し、または位置パターンに基づいてユーザー Segmentsを構築するために使用することができる。 
+BrazeとRadarの統合により、高度なロケーションベースのキャンペーン トリガーと、豊富なファーストパーティロケーションデータを使用したユーザープロファイルエンリッチメントにアクセスできます。Radar のジオフェンスまたは移動追跡イベントが生成されると、カスタムイベントとユーザー属性がリアルタイムで Braze に送信されます。これらの事象および属性sは、次いで、位置に基づくキャンペーンsをトリガーし、ラストマイルのピックアップおよび配送オペレーションを駆動し、フリートおよび配送物流を監視し、または位置パターンに基づいてユーザー Segmentsを構築するために使用することができる。 
 
-さらに、Radar Geo API を活用して、[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) を通じてマーケティング キャンペーンを強化またはパーソナライズできます。 
+さらに、Radar Geo API を活用して、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)を介してマーケティングキャンペーンを強化・パーソナライズできます。 
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
-| Radar勘定 | この提携の前進タグeを考慮するには、Radarな考慮が必要である。 |
-| Braze REST API キー | `users.track` 権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| アプリ識別子 | [アプリ 識別子]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) は、**設定**> **API Keys** のBraze ダッシュボード内にあります。 |
+| Radar アカウント | このパートナーシップを活用するには、Radar アカウントが必要です。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| アプリ識別子 | [アプリ識別子]({{site.baseurl}}/api/identifier_types/?tab=app%20ids)は、Braze ダッシュボードの [**設定**] > [**API キー**] で確認できます。 |
 | iOS API キー<br>Android API キー | これらのAPI キーsは、**設定**>**アプリ設定**のBraze ダッシュボード内にあります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
-Braze とRadar SDK s の間でデータマッピングを行うには、両方のシステムで同じユーザー ID s またはユーザー別名を設定する必要があります。これは、Braze SDKの`changeUser()` メソッドとRadar SDKの`setUserId()` メソッドを使用して実行できます。
+Braze SDK と Radar SDK 間でデータをマッピングするには、両方のシステムで同じユーザー ID またはユーザーエイリアスを設定する必要があります。これは、Braze SDK の`changeUser()` メソッドと、Radar SDK の`setUserId()` メソッドを使用して実行できます。
 
 統合を有効にするには:
 
-1. [Integrations](https://radar.com/documentation/integrations) ページのRadarで、Braze を見つけます。
+1. Radar の [[Integrations](https://radar.com/documentation/integrations)] ページで Braze を見つけます。
 1. **Enabled**を**Yes**に設定します。
 3. アプリ 識別子とAPI キーs に貼り付けます。
 
@@ -42,37 +42,37 @@ Braze とRadar SDK s の間でデータマッピングを行うには、両方�
 
 {:start="4"}
 4\.Braze エンドポイントを選択します。
-5. イベントまたはイベント属性 フィルターを入力して、関連するデータのみがエンゲージメント マーケティングのためにBraze に送信されるようにします。Radar事象が発生するたびに、Radarはカスタムイベントsとユーザー 属性sをBrazeに送信する。iOS デバイスからのイベントはiOS API キー s を使用して送信され、Android デバイスからのイベントおよびユーザー 属性 s はAndroid API キー s を使用して送信されます。
+5. イベントまたはイベント属性フィルタリングを入力して、関連データのみがエンゲージメントマーケティングのために Braze に送信されるようにします。Radar イベントが生成されるたびに、Radar からカスタムイベントとユーザー属性が Braze に送信されます。iOS デバイスからのイベントは iOS API キーを使用して送信され、Android デバイスからのイベントおよびユーザー属性は Android API キーを使用して送信されます。
 
 {% alert note %}
-デフォルトでは、Radar`userId` は、ログインしているユーザーs のBraze`external_id` にマップされます。ただし、ログアウトしたユーザーs を追跡したり、設定 Radar`metadata.brazeAlias` または`metadata.brazeExternalId` でカスタムm アプリ ings を指定したりできます。`metadata.brazeAlias` を設定した場合は、ラベル`radarAlias` のBrazeにも一致する別名を追加する必要があります。
+デフォルトでは、ログインユーザーの Radar `userId` は Braze の `external_id` にマッピングされます。ただし、ログアウトしたユーザーを追跡すること、Radar の `metadata.brazeAlias` または `metadata.brazeExternalId` を設定してカスタムマッピングを指定することはできます。`metadata.brazeAlias` を設定した場合は、Braze でラベル `radarAlias` を使用して一致エイリアスを追加する必要もあります。
 {% endalert %}
 
 ## イベントベースおよび属性ベースのユースケース
 
-カスタムイベント s およびユーザー 属性 s を使用して、ロケーションベースのSegments またはトリガーのロケーションベースのキャンペーンs を構築できます。
+カスタムイベントとユーザー属性を使用して、ロケーションベースのセグメントを作成し、ロケーションベースのキャンペーンをトリガーすることができます。
 
 ### カーブサイドピックアップの店舗到着通知のトリガ 
 
-カーブサイドピックアップのためにあなたのお店に到着した時、到着指示のあるプッシュ通知をユーザーに送ってください。
+ユーザーがカーブサイドピックアップのために店舗に到着したときに、到着の手順を案内するプッシュ通知を送信します。
 
-!["arrived_at_trip_送信先"カスタムイベントが発生し、"trip_metadata"equals "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})が発生したときにキャンペーンが配信されることを示すアクションベースの配信キャンペーン
+![「arrived_at_trip_destination」カスタムイベントが発生し、「trip_metadata"equals "curbside」が「curbside」の場合にキャンペーンが配信されることを示すアクションベースの配信キャンペーン。]({% image_buster /assets/img_archive/radar-campaign.png %})
 
-### 最近の来店者オーディエンス Segmentの構築
+### 最近の来店者のオーディエンスセグメントを作成する
 
 たとえば、購買の有無にかかわらず、過去7日間にあなたの店舗を訪問したユーザーを対象にします。
 
-!["radar_ジオフェンス_タグ s" value my_store と"radar_更新 d_at" が7 日前より少ないSegment。]({% image_buster /assets/img_archive/radar-segment.png %})
+![「radar_geofence_tags」に値 my_store が含まれており、「radar_updated_at」が過去7日以内のセグメント。]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## コネクテッドコンテンツ
 
-次に、ディジタルオファーで近くのユーザー s 店内をドライブするプロモーションを実行する例を示します。 
+次の例は、デジタルオファーを使用して近くにいるユーザーを店舗に引き付けるプロモーションを実行する方法を示しています。 
 
-!["New In Store Deals, Walmart, target near you"を表示するConnected ContentプッシュメッセージのAndroid "画像。][1]{: style="float:right;max-width:30%;border:0;"}
+![Android に表示されている「New In Store Deals, Walmart and target near you」というコネクテッドコンテンツプッシュメッセージ。][1]{: style="float:right;max-width:30%;border:0;"}
 
-開始するには、リクエストURL 内で使用するために、Radarの公開可能なAPI キーを手元に用意する必要があります。
+開始するには、リクエスト URL 内で使用するために、Radar が公開可能な API キーを手元に用意しておく必要があります。
 
-次に、`connected_content` タグ内で、[ Search Places API](https://radar.io/documentation/api#search-places) へのGET リクエストを行います。検索では、[ Radar Places](https://radar.io/documentation/places): ワールドの包括的なビューを提供するプレイス、チェーン、およびカテゴリのロケーションのデータベースに基づいて、API が近くのロケーションを返します。
+次に、`connected_content` タグ内で、[ Search Places API](https://radar.io/documentation/api#search-places) へのGET リクエストを行います。Search Places API は、[Radar Places](https://radar.io/documentation/places) (場所の位置情報、チェーン、カテゴリを収録しており、全世界の包括的なビューを提供する:データベース) に基づいて付近の位置情報を返します。
 
 以下のコード スニペットは、API 呼び出しからJSON オブジェクトとしてRadarが返す例です。
 
@@ -125,7 +125,7 @@ Braze とRadar SDK s の間でデータマッピングを行うには、両方�
 }
 ```
 
-Connected Content ターゲットおよびパーソナライズされた Braze メッセージを作成するには、Braze`most_recent_location` 属性をAPI リクエストのURL の`near` パラメータの入力として活用できます。`most_recent_location` 属性は、RadarイベントインテグレーションまたはBraze SDKを介して収集されます。
+コネクテッドコンテンツのターゲットを絞りパーソナライズされた Braze メッセージを作成するには、Braze の `most_recent_location` 属性を API リクエスト URL の`near` パラメーターの入力として使用できます。`most_recent_location` 属性は、Radar イベント統合から収集されるか、または Braze SDK を介して直接収集されます。
 
 次の例題では、Radarチェーンフィルターのing はTarget とWalmart のロケーションではアプリになり、近くのロケーションの検索範囲は2km に設定されています。
 
@@ -138,7 +138,7 @@ Connected Content ターゲットおよびパーソナライズされた Braze �
 `connect_content` タグからわかるように、JSON オブジェクトはURL の後に`:save nearbyplaces` を追加することで、ローカル変数`nearbyplaces` に保存されます。
 出力内容をテストするには、{% raw %}`{{nearbyplaces.places}}`{% endraw%} を参照します。
 
-ユースケースをまとめると、キャンペーンのシンタックスがどのように見えるかがわかります。以下のコードは、`nearbyplaces.places` オブジェクトを反復処理し、一意の値を抽出し、メッセージの適切な人間が読める区切り文字で連結します。
+ユースケースをまとめると、キャンペーンのシンタックスがどのように見えるかがわかります。以下のコードは、`nearbyplaces.places` オブジェクトを反復処理し、一意の値を抽出し、それらの値を可読可能な区切り文字で連結してメッセージにします。
 
 {% raw %}
 ```

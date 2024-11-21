@@ -12,37 +12,37 @@ search_tag: Partner
 
 # Tealium for Currents
 
-> [Tealiumは](https://www.tealium.com)、複数のソースから情報を収集し、マーケティング・スタックの他のさまざまな場所にルーティングする顧客データ・プラットフォームである。
+> [Tealium](https://www.tealium.com) は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォームです。
 
-BrazeとTealiumの統合により、2つのシステム間の情報の流れをシームレスにコントロールすることができる。Currentsを使えば、データをTealiumに接続し、成長スタック全体で実行可能にすることもできる。 
+BrazeとTealiumの統合により、2つのシステム間の情報の流れをシームレスにコントロールすることができる。Currents では、データを Tealium に接続し、グローススタック全体で実用的なデータにすることもできます。 
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Tealium EventStream or Tealium AudienceStream | このパートナーシップを利用するには、[Tealiumアカウントが](https://my.tealiumiq.com/)必要である。 |
-| Currents | データをTealiumにエクスポートするには、アカウントに[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)設定する必要がある。 |
-| ティーリウムURL | これらは、Tealiumのダッシュボードに移動し、インジェストURLをコピーすることで入手できる。|
-{: .reset-td-br-1 .reset-td-br-2}
+| Tealium EventStream or Tealium AudienceStream | このパートナーシップを活用するには、[Tealium アカウント](https://my.tealiumiq.com/)が必要です。 |
+| Currents | Tealium にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
+| Tealium URL | これは、Tealium のダッシュボードに移動し、取り込み URL をコピーすることで取得できます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:Tealium内にBraze用のデータソースを作成する。
 
-データソースの作成方法は、[Tealiumの](https://docs.tealium.com/server-side/data-sources/webhooks/braze-currents/)サイトに掲載されている。完了すると、TealiumはコピーするデータソースURLを提供するので、次のステップでそれを使用する。
+データソースを作成する手順は、[Tealium](https://docs.tealium.com/server-side/data-sources/webhooks/braze-currents/) サイトにあります。完了すると、Tealium からデータソース URL が提供されます。この URL をコピーして、次のステップで使用します。
 
-### ステップ2:電流を作る
+### ステップ2:Current を作成する
 
-Brazeで、**Current > + Create Current > Tealium Exportに**移動する。統合名、連絡先Eメール、Tealium URLを記入する。次に、利用可能なイベントのリストから追跡したいものを選択する。最後に、**Launch Currentを**クリックする。
+Braze で **[Currents] > [+ Currents を作成] > [Tealium のエクスポート]** に移動します。統合名、連絡先メール、および Tealium URL を指定します。次に、利用可能なイベントのリストから追跡するイベントを選択します。最後に [**Currents を起動**] をクリックします。
 
-Tealiumに送信されるすべてのイベントには、ユーザーの`external_user_id` 。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータをTealiumに送信しない。
+Tealium に送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータをTealiumに送信しない。
 
 {% alert important %}
-TealiumのURLを常に最新の状態に保つことが重要だ。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+Tealium URL を最新の状態に保つことが重要です。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
 ## 統合の詳細
 
-Brazeは、[Currentsイベント用語集に]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)記載されているすべてのデータ（[メッセージエンゲージメントイベントと]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) [顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントの両方のすべてのプロパティを含む）のTealiumへのエクスポートをサポートしている。
+Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) を Tealium にエクスポートできます。
 
-エクスポートされたデータのペイロード構造は、カスタムHTTPコネクターのペイロード構造と同じで、[カスタムHTTPコネクターのサンプルリポジトリで](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)見ることができる。
+エクスポートされたデータのペイロードの構造は、カスタム HTTP コネクターのペイロード構造と同じです。これは、[カスタム HTTP コネクターのサンプルリポジトリ](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors)で確認できます。

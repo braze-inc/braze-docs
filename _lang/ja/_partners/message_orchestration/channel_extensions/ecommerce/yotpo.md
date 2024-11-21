@@ -1,50 +1,50 @@
 ---
-nav_title: ヨットポ
-article_title: ヨットポ
+nav_title: Yotpo
+article_title: Yotpo
 alias: /partners/yotpo/
 description: "この参考記事では、BrazeとYotpoのパートナーシップについて概説している。Yotpoはeコマース・マーケティング・プラットフォームのリーディングカンパニーで、何千もの先進的なブランドが消費者直販の成長を加速させるのを支援している。"
 page_type: partner
 search_tag: Partner
 ---
 
-# ヨットポ
+# Yotpo
 
-> 大手eコマース・マーケティング・プラットフォームの[Yotpoは](https://www.yotpo.com/)、何千もの先進的なブランドが消費者直販の成長を加速させるのを支援している。Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
+> [Yotpo](https://www.yotpo.com/) は大手 e コマースマーケティングプラットフォームであり、何千もの先進的なブランドが消費者直販の成長を加速できるよう支援しています。Yotpoのシングルプラットフォームアプローチは、レビュー、ロイヤルティ、SMSマーケティングなどのデータ主導型ソリューションを統合し、ブランドがよりスマートでコンバージョンの高い顧客体験を創造できるようにする。
 
-BrazeとYotpoの統合により、Braze内のEメールやその他のコミュニケーションチャンネルで、商品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツ（UGC）を動的に取得し、表示することができる。また、顧客レベルのロイヤルティデータをEメールやその他のコミュニケーション手段に含めることで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができる。
+BrazeとYotpoの統合により、Braze内のEメールやその他のコミュニケーションチャンネルで、商品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツ（UGC）を動的に取得し、表示することができる。また、顧客レベルのロイヤルティデータをメールやその他のコミュニケーション手段に組み込むことで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Yotpoアカウント | このパートナーシップを利用するには、Yotpoアカウントが必要である。 |
-| YotpoレビューAPIキー | このAPIは、Connected Contentのコード・スニペット内に実装される。<br><br>詳細については、[Yotpoアプリのキーとシークレットキーの見つけ](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key)方を参照のこと。 |
-| YotpoロイヤリティAPIキー | このAPIキーとGUIDは、Connected Contentのコード・スニペット内に実装される。<br><br>詳細については、[ロイヤリティ＆リファーラルAPIキーとGUIDを見つけるを](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)参照のこと。|
-{: .reset-td-br-1 .reset-td-br-2}
+| YotpoレビューAPIキー | この API は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Yotpo アプリのキーとシークレットキーの確認方法](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key)を参照してください |
+| YotpoロイヤリティAPIキー | この API キーと GUID は、コネクテッドコンテンツのコードスニペット内に実装されます。<br><br>詳細については、[Loyalty & Referrals API キーと GUID の確認方法](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)を参照してください。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-続行する前に、YotpoのプロダクトIDが、Brazeから動的に引き出される`product_id` と同じであることを確認する。これは統合が機能するためには必須である。 
+続行する前に、YotpoのプロダクトIDが、Brazeから動的に引き出される`product_id` と同じであることを確認する。これは統合が機能するために必須の作業です。 
 
 自分のYotpoプロダクトIDを見つけるには、以下のステップを実行する：
 
-1. あなたの店のウェブサイトにアクセスする。
+1. ストア Web サイトに移動します。
 2. 製品ページを開く。
-3. 右クリックして**Inspectを**選択する。
-4. <kbd>Control</kbd>+<kbd>F</kbd>キーを押し、コード内の`yotpo-main` を検索する。`data-product ID` 変数とその値は、Yotpo divに表示される。
+3. 右クリックして [**Inspect**] を選択します。
+4. <kbd>Control</kbd>+<kbd>F</kbd>キーを押し、コード内の`yotpo-main` を検索する。`data-product ID` 変数とその値が Yotpo div に表示されます。
 
-![yotpo-mainを検査して検索し、data-product ID変数を見つける。][1]
+![調査して yotpo-main を探し、data-product ID 変数を確認する。][1]
 
 ## 統合
 
 YotpoとBrazeを統合するには、以下のステップを実行する：
 
 1. Brazeのダッシュボードに行く。
-2. **キャンペーン]**ページで\[**キャンペーンを作成]**をクリックし、\[**Eメール]**を選択する。
+2. **キャンペーン]**ページで[**キャンペーンを作成]**をクリックし、[**Eメール]**を選択する。
 3. 好みのテンプレートを選択する。
-4. **Eメール本文の編集を**クリックし、ユースケースに応じた[コネクテッド・コンテンツ・スニペットを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)追加する：
-    - [商品の星評価とレビュー数を表示する](#star-review-count)
+4. [**メール本文を編集**] をクリックし、ユースケースに応じた [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)のスニペットを追加します。
+    - [製品の星評価とレビュー件数を表示する](#star-review-count)
     - [製品の最近の5つ星レビューを表示する](#five-star-review)
-    - [製品別にビジュアルUGCを表示する](#visual-ugc)
-    - [顧客のポイント残高をEメールに表示する](#loyalty-balance)
+    - [製品別にビジュアル UGC を表示する](#visual-ugc)
+    - [顧客のロイヤルティポイント残高をメールに表示する](#loyalty-balance)
 
 ### 商品の星評価とレビュー数を表示する {#star-review-count}
 
@@ -65,7 +65,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` 、Brazeから動的に引き出される。統合が機能するためには、Brazeの`product_id` 、YotpoのプロダクトID（通常はeコマースの親プロダクトID）と一致する必要がある。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
 
 ![YOTPO-API-KEYをあなたのYotpo Reviews APIキーに置き換える。][2]
 
@@ -88,7 +88,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` 、Brazeから動的に引き出される。統合が機能するためには、Brazeの`product_id` 、YotpoのプロダクトID（通常はeコマースの親プロダクトID）と一致する必要がある。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
 
 メールエディターのスニペットはこんな感じになる：
 
@@ -96,7 +96,7 @@ Recent 5 Star Review for this product:
 
 ### 製品別にビジュアルUGCを表示する {#visual-ugc}
 
-このスニペットを使って、タグ付けされ公開されたYotpoの画像を取得し、ストック画像の代わりに、または追加のギャラリーとしてメールに追加する：
+次のスニペットを使用して、タグ付けされ公開された Yotpo 画像を取得し、ストック画像の代わりに、または追加のギャラリーとしてメールに追加します。
 
 {% raw %}
 ```liquid
@@ -117,15 +117,15 @@ Image return NULL
 ```
 {% endraw %}
 
-`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` 、Brazeから動的に引き出される。統合が機能するためには、Brazeの`product_id` 、YotpoのプロダクトID（通常はeコマースの親プロダクトID）と一致する必要がある。
+`<YOTPO-API-KEY>` をあなたのYotpoレビューAPIキーに置き換える。`product_id` が Braze から動的に取得されます。統合が機能するためには、Braze の`product_id` が Yotpo の製品 ID (通常は e コマース親製品 ID) と一致している必要があります。
 
-スニペットは次のようになる：
+スニペットは次のようになります。
 
 ![Yotpoで公開された画像のスニペットを表示するEメールエディタの例][4]
 
-### 顧客のポイント残高をEメールに表示する {#loyalty-balance}
+### 顧客のロイヤルティポイント残高をメールに表示する{#loyalty-balance}
 
-このスニペットを使って、顧客のポイント残高を取得し、Eメールメッセージに使用する：
+次のスニペットを使用して、顧客のロイヤルティポイント残高を取得してメールメッセージに使用します。
 
 {% raw %}
 ```liquid
@@ -147,15 +147,15 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 ```
 {% endraw %}
 
-`<YOTPO-LOYALTY-GUID>` と`<YOTPO-LOYALTY-API-KEY>` をあなたのYotpoロイヤリティ認証情報に置き換える。`email_address` 、Brazeから動的に引き出される。統合が機能するためには、EメールはEメールを受信する顧客のEメールアドレスでなければならない。
+`<YOTPO-LOYALTY-GUID>` と`<YOTPO-LOYALTY-API-KEY>` をあなたのYotpoロイヤリティ認証情報に置き換える。`email_address` が Braze から動的に取得されます。この統合が機能するためには、メールのアドレスが、このメールを受信する顧客のメールアドレスでなければなりません。
 
-スニペットは次のようになる：
+スニペットは次のようになります。
 
 ![顧客ロイヤルティ残高のスニペットを表示するEメールエディターの例][5]
 
 ## よくある質問 {#faq}
 
-#### もし5つ星のレビューがなかったら？
+#### 5つ星レビューがない場合
 
 5つ星のレビューがない場合（エンドポイントのレスポンスが5つ星のレビューに対してNULLを返した場合など）、コンテンツは表示されない。
 
@@ -165,7 +165,7 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 
 #### ルック＆フィールをカスタマイズしたり、Yotpoから他のデータフィールドを引き出すことは可能か？
 
-はい、できます。その他のデータ・ポイントやカスタマイズ・オプションについては、[APIコールを行うを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)参照のこと。そのためには、フロントエンド開発者の支援が必要かもしれない。
+はい、できます。その他のデータポイントやカスタマイズオプションについては、「[API 呼び出し]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)」を参照してください。そのためには、フロントエンド開発者の支援が必要かもしれない。
 
 {% alert note %}
 Yotpoはこのガイドに記載されている以上のカスタム要件には対応していない。

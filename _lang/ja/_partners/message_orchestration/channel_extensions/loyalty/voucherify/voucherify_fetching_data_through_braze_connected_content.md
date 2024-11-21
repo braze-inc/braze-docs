@@ -1,16 +1,16 @@
 ---
-nav_title: コネクテッドコンテンツを通じてデータを取得する
-article_title: Voucherifyを使用してコネクテッドコンテンツを通じてデータを取得する
+nav_title: コネクテッドコンテンツを使用したデータの取得
+article_title: コネクテッドコンテンツと Voucherify を使用したデータの取得
 page_order: 2
 alias: /partners/voucherify/connected_content/
-description: "このリファレンス記事では、Brazeコネクテッドコンテンツを通じてVoucherify APIからデータを取得し、特定のBrazeセグメントにメッセージを送信する方法について説明します。"
+description: "このリファレンス記事では、Braze コネクテッドコンテンツを使用して Voucherify API からデータを取得し、特定の Braze セグメントにメッセージを送信する方法について説明します。"
 page_type: partner
 search_tag: Partner
 ---
 
-# コネクテッドコンテンツを通じてデータを取得する
+# コネクテッドコンテンツを使用したデータの取得
 
-> Brazeのコネクテッドコンテンツを使用すると、Voucherify APIからデータを取得し、特定のBrazeセグメントにメッセージを送信できます。このリファレンス記事では、コネクテッドコンテンツスクリプトを設定して、Voucherifyクーポンを発行し、新しい紹介者を招待し、ロイヤルティカードの残高を取得する方法などを紹介します。
+> Braze コネクテッドコンテンツを使用して、Voucherify API からデータを取得し、特定の Braze セグメントにメッセージを送信できます。このリファレンス記事では、Voucherify クーポンの発行、新しい紹介者の招待、ロイヤルティカードの残高の取得などのために、コネクテッドコンテンツスクリプトを設定する方法などを紹介します。
 
 スクリプトの基本スキーマは次のようになります:
 {% raw %}
@@ -29,16 +29,16 @@ search_tag: Partner
 ```
 {% endraw %}
 
-Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-connected-content) を訪れて、コネクテッドコンテンツ スクリプトの例を確認してください。
+Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-connected-content)にアクセスして、コネクテッドコンテンツスクリプトの例を参照してください。
 
 ## セキュリティ設定
 
-次の設定を毎回設定しないと、コネクテッドコンテンツメッセージがトリガーされるたびに、少なくとも2回はVoucherify APIを呼び出します。これらの設定により、Brazeに請求されるAPIコールの数が減り、メッセージ配信を妨げる可能性のあるハードブロッキングAPI制限に達するリスクが軽減されます。
+以下の設定が行われてない場合、コネクテッドコンテンツメッセージがトリガーされるたびに、Voucherify API が2回以上呼び出されます。これらの設定により、Brazeに請求されるAPIコールの数が減り、メッセージ配信を妨げる可能性のあるハードブロッキングAPI制限に達するリスクが軽減されます。
 
 {% tabs %}
-{% tab レートリミッター %}
+{% tab レート制限 %}
 
-**レートリミッター**
+**レート制限**
 
 Braze によって送信されるメッセージの数を1分あたり[制限する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting)ようにしてください。これにより、キャンペーンからの過剰なトラフィックに対して、BrazeおよびVoucherifyのAPIの両方が保護されます。キャンペーンの設定中にユーザーをターゲットにする場合、送信率を1分あたり500メッセージに制限してください。
 
@@ -47,9 +47,9 @@ Braze によって送信されるメッセージの数を1分あたり[制限す
 {% endtab %}
 {% tab キャッシュ %}
 
-**POSTコールにおけるキャッシュ**
+**POST 呼び出しでのキャッシュ**
 
-コネクテッドコンテンツの呼び出しは、デフォルトではHTTP POST経由でキャッシュされず、公開された各コードごとに2つのAPIリクエストが行われます。この動作はAPIの制限に負担をかける可能性があります。キャッシングメカニズムにより、バウチャーの公開ごとに1回のAPIコールに制限できます。 
+HTTP POST を使用して実行されるコネクテッドコンテンツ呼び出しは、デフォルトではキャッシュを行わず、発行済みのコードごとに2つの API リクエストを行います。この動作はAPIの制限に負担をかける可能性があります。このキャッシュメカニズムでは、バウチャー発行ごとに1回の API 呼び出しに制限できます。 
 
 {% alert important %}
 このチュートリアルにおけるコネクテッドコンテンツのすべての例には、BrazeによってトリガーされるAPIコールの数を減らすためにデフォルトのキャッシングが含まれています。
@@ -57,28 +57,28 @@ Braze によって送信されるメッセージの数を1分あたり[制限す
 
 POST呼び出しにキャッシュを追加するには:
 
-1. {% raw %}`:cache_max_age`{% endraw %}属性を追加します。デフォルトでは、キャッシュの期間は5分です。秒単位で期間をカスタマイズできます。5分から4時間の間に設定できます。例: {% raw %}`:cache_max_age 3600`{% endraw %} は1時間キャッシュされます。
-2. 送信先エンドポイントクエリパラメータにキャッシュキー{% raw %}`cache_id={{cache_id}}`{% endraw %}を提供して、Brazeが一意の公開を識別できるようにします。まず、変数を定義してから、一意のクエリ文字列をエンドポイントに追加します。これにより、各出版物が{% raw %}`source_id`{% endraw %}によって区別されます。
+1. {% raw %}`:cache_max_age`{% endraw %}属性を追加します。デフォルトでは、キャッシュ期間は5分です。秒単位で期間をカスタマイズできます。5分から4時間の間で設定できます。例: {% raw %}`:cache_max_age 3600`{% endraw %} の場合キャッシュ期間は1時間です。
+2. 宛先エンドポイントクエリパラメーターにキャッシュキー {% raw %}`cache_id={{cache_id}}`{% endraw %} を指定します。これにより、Braze が一意のコード発行を識別できるようになります。最初に変数を定義してから、エンドポイントに一意のクエリ文字列を付加します。これにより、各コード発行が {% raw %}`source_id`{% endraw %} によって区別されます。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_cache.png %})
 
-_結果に注意してください:_BrazeはURLに基づいてAPIコールをキャッシュします。クエリパラメータとして使用される一意の文字列はVoucherifyによって無視されますが、Brazeの異なるAPIリクエストを区別し、各一意の試行を個別にキャッシュすることができます。そのクエリパラメータがないと、すべての顧客はキャッシュ期間中に同じクーポンコードを受け取ります。
+_結果に注意してください。_BrazeはURLに基づいてAPIコールをキャッシュします。クエリパラメーターとして使用される一意の文字列は Voucherify では無視されますが、この文字列により Braze の異なる API リクエストが区別され、一意の試行を個別にキャッシュすることができるようになります。そのクエリパラメータがないと、すべての顧客はキャッシュ期間中に同じクーポンコードを受け取ります。
 
 {% endtab %}
 {% tab リトライ属性 %}
 
-**リトライ属性**
+**retry 属性**
 
-コネクテッドコンテンツはVoucherifyの応答を検証しないため、コネクテッドコンテンツスクリプトに[retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)属性を追加することをお勧めします。コネクテッドコンテンツのロジックは、メッセージを中止する前に5回再試行しようとします（レートリミッターを尊重します）。この方法は、Voucherifyからデータを取得するのに少し時間がかかる場合に、コードの公開が失敗するケースを防ぐのに役立ちます。
+コネクテッドコンテンツは Voucherify 応答を検証しないため、コネクテッドコンテンツスクリプトに [retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries) 属性を追加することを推奨します。コネクテッドコンテンツのロジックは、メッセージを中断する前に5回再試行します (これはレート制限に準拠します)。この方法は、Voucherifyからデータを取得するのに少し時間がかかる場合に、コードの公開が失敗するケースを防ぐのに役立ちます。
 
 {% raw %}`:retry`{% endraw %}を使用しない場合、Voucherifyから返される応答に関係なく、Brazeは配信を送信しようとします。これにより、公開されたコードなしでメールが生成される可能性があります。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_retry.png %})
 
 {% endtab %}
-{% tab ユニークな出版物 %}
+{% tab 一意のコード発行 %}
 
-**顧客ごとのユニークな出版物**
+**顧客ごとの一意のコード発行**
 
 スクリプト本文の{% raw %}`source_id`{% endraw %}パラメータは、各顧客が単一のBrazeキャンペーンで一意のコードを1つだけ受け取ることができるようにします。その結果、たとえBrazeが意図せずリクエストを複数回行ったとしても、各ユーザーは最初のメッセージで彼/彼女に公開されたのと同じ一意のコードを受け取ります。
 
@@ -88,16 +88,16 @@ _結果に注意してください:_BrazeはURLに基づいてAPIコールをキ
 
 | 構成 | 効果 |
 | ------------- | ------ |
-| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | 単一の送信内の顧客は同じ出版物を使用します。 |
-| {% raw %}`{{campaign.${api_id}}}`{% endraw %} | すべての顧客は単一のキャンペーン内で同じ出版物を使用します。 |
-| {% raw %}`{{${user_id}}}`{% endraw %} または {% raw %}`{{${braze_id}}}`{% endraw %} | すべての顧客がどのキャンペーンが送信されても同じ出版物を使用することを確認します（{% raw %}`${user_id}`{% endraw %}は{% raw %}`external_id`{% endraw %}であり、{% raw %}`${braze_id}`{% endraw %}は内部IDです）。 |
-| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} と {% raw %}`{{campaign.${user_id}}}`{% endraw %} | 単一の送信内の各顧客は同じ一意の出版物を使用します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | 1回の送信内の顧客は同じコード発行を使用します。 |
+| {% raw %}`{{campaign.${api_id}}}`{% endraw %} | 1つのキャンペーン内のすべての顧客は同じコード発行を使用します。 |
+| {% raw %}`{{${user_id}}}`{% endraw %} または {% raw %}`{{${braze_id}}}`{% endraw %} | どのキャンペーンが送信されてもすべての顧客が同じコード発行を使用することを確認します ({% raw %}`external_id`{% endraw %}である {% raw %}`${user_id}`{% endraw %}と、内部 ID である {% raw %}`${braze_id}`{% endraw %} を使用できます)。 |
+| {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} と {% raw %}`{{campaign.${user_id}}}`{% endraw %} | 1つの送信内の各顧客は、同じ一意のコード発行を使用します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 一度参加 %}
+{% tab 1回のみの参加 %}
 
-**一度参加**
+**1回のみの参加**
 
 Voucherifyキャンペーンに制限がある場合_顧客は一度しか参加できません_、スクリプト本文から公開ソースIDを削除してください。Voucherifyは、同じ顧客に送信される各Brazeメッセージが最初に公開されたのと同じコードを配信することを確認します。
 
@@ -134,12 +134,12 @@ Voucherifyキャンペーンに制限がある場合_顧客は一度しか参加
 
 ## ユースケース
 
-以下のすべてのユースケースでは、Voucherifyの公開ソースIDとBrazeのキャッシュおよびリトライパラメータを使用して、Brazeキャンペーンによって呼び出されるAPIコールを制限することに留意してください。次の結果について知っておく必要があります:
+以下のすべてのユースケースでは、Voucherify の発行ソース ID と Braze のキャッシュおよび再試行パラメーターを使用して、Braze キャンペーンによって呼び出される API 呼び出しを制限していることに留意してください。次に示す影響に注意する必要があります。
 
 - 同じ顧客に異なるコードを単一のBrazeキャンペーンで公開および送信することはできません。
 - Voucherifyキャンペーンで_一度だけ参加機能_を使用する場合は、上記の一度だけ参加タブに記載されているように、コネクテッドコンテンツ本文から`source_id`を削除する必要があります。
 
-Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-connected-content) を訪れて、コネクテッドコンテンツ スクリプトの例を確認してください。
+Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-connected-content)にアクセスして、コネクテッドコンテンツスクリプトの例を参照してください。
 
 ### 公開してユニークなクーポンコードを送信する
 
@@ -173,7 +173,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
 
 ### 新しい紹介者を招待する
 
-顧客に紹介プログラムに参加してもらうには、その人に紹介コードを割り当てる必要があります。コネクテッドコンテンツは前の例と同じままです。このコネクテッドコンテンツスクリプトを使用すると、選択したBrazeユーザーにユニークな紹介コードを公開して送信できます。各ユーザーは、他のユーザーと共有して新しい紹介を得るための紹介コードを1つだけ受け取ります。 
+顧客に紹介プログラムに参加してもらうには、その人に紹介コードを割り当てる必要があります。コネクテッドコンテンツは前の例と同じです。このコネクテッドコンテンツスクリプトを使用すると、選択したBrazeユーザーにユニークな紹介コードを公開して送信できます。各ユーザーは、他のユーザーと共有して新しい紹介者を獲得するための紹介コードを1つだけ受け取ります。 
 
 {% raw %}
 
@@ -201,7 +201,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
 
 {% endraw %}
 
-### ロイヤルティカード残高を取得
+### ロイヤルティカード残高を取得する
 
 ここに、カスタム属性として事前にBrazeに送信されたロイヤルティカードコードに基づいて現在のロイヤルティ残高を取得するコネクテッドコンテンツスクリプトのユースケースがあります。このスクリプトを使用する前に、ロイヤルティカードコードをBrazeユーザープロファイルにカスタム属性として保存する必要があることに注意してください。
 
@@ -295,7 +295,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
     
     {% endraw %}
 
-その結果、顧客は次のメールを受け取ります:  
+その結果、顧客に次のメールが送信されます。  
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_custom_code_email.png %})
 
@@ -362,12 +362,12 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
     ```
     {% endraw %}
     
-    | 共有クラスタ   | Brazeコネクテッドコンテンツのエンドポイント          |
+    | 共有クラスタ   | Braze コネクテッドコンテンツのエンドポイント          |
     | ---------------- | --------------------------------------------- |
     | ヨーロッパ（デフォルト） | https://api.voucherify.io/v1/publications     |
     | アメリカ合衆国    | https://us1.api.voucherify.io/v1/publications |
     | アジア（シンガポール） | https://as1.api.voucherify.io/v1/publications |
-    {: .reset-td-br-1 .reset-td-br-2}
+    {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
     
 3.  認証のためにAPIキーを追加してください。`Voucherify-App-Id`と`Voucherify-App-Token`は**プロジェクト設定 > 一般 > アプリケーションキー.**で見つけることができます。<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}
@@ -416,15 +416,15 @@ Voucherify API からの応答は、{% raw %}`:save`{% endraw %} パラメータ
 ```
 {% endraw %}
 
-これにより、Voucherifyの応答からデータを取得してBrazeメッセージに表示できます。
+これにより、Voucherify 応答からデータを取得して Braze メッセージに表示できます。
 
 スニペットを作成して、公開されたコード、ロイヤルティカードの残高、有効期限、およびVoucherify APIからのJSON形式のレスポンスに含まれるその他のパラメーターを表示できます。
 
 例えば、メッセージテンプレートに公開されたコードを表示するには、バウチャーオブジェクトからユニークなコードを取得するスニペットを作成する必要があります。
 
-コネクテッドコンテンツ script:
+コネクテッドコンテンツスクリプト:
 
-![コネクテッドコンテンツスクリプトは、コネクテッドコンテンツ呼び出しの最後にVoucherifyの応答を保存することを示しています]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
+![コネクテッドコンテンツ呼び出しの最後に Voucherify 応答を保存することを示しているコネクテッドコンテンツスクリプト]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
 
 Brazeメッセージテンプレートのスニペット:
 
@@ -436,9 +436,9 @@ Brazeメッセージテンプレートのスニペット:
 
 {% endraw %}
 
-その結果、各顧客はプロファイルに自動的に割り当てられたユニークなコードを含むメッセージを受け取ります。ユーザーがコードを受け取るたびに、それはVoucherifyのプロファイルに公開されます。
+その結果、それぞれの顧客は各自のプロファイルに自動的に割り当てられた一意のコードを含むメッセージを受け取ります。ユーザーがコードを受け取るたびに、そのコードは Voucherify のプロファイルに発行されます。
 
-ロイヤルティカードの残高をVoucherify APIから取得して表示するには、次のスニペットを作成する必要があります:
+ロイヤルティカードの残高を Voucherify API から取得して表示するには、次のスニペットを作成する必要があります。
 
 {% raw %}
 
@@ -448,7 +448,7 @@ Brazeメッセージテンプレートのスニペット:
 
 {% endraw %}
 
-メンバーがコネクテッドコンテンツスクリプトの{% raw %}`:save`{% endraw %}パラメータの値である場合。
+ここで member は、コネクテッドコンテンツスクリプトの {% raw %}`:save`{% endraw %}パラメーターの値です。
 
 {% raw %}
 
@@ -458,12 +458,12 @@ Brazeメッセージテンプレートのスニペット:
 
 {% endraw %}
 
-プレビュー
+「プレビューモード」に完全に依存せず、いくつかのテストメッセージを送信して、すべてが正常に動作していることを確認することを強くお勧めします。
 
-### ステップ3:レートリミッターを設定する
+### ステップ3:レート制限を設定する
 
 キャンペーンターゲットを設定する際は、高度な設定を使用して、1分あたりに送信されるメッセージの数を制限します。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
-Brazeの[ドキュメント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting)でレートリミッターとフリークエンシーキャップについて詳しく読む。
+レート制限とフリークエンシーキャップについて詳しくは、Braze の[ドキュメント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting)でご確認ください。

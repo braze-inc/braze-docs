@@ -13,7 +13,7 @@ channel: email
 [테스트 이메일][37]이 이상해 보이면 먼저 HTML 설정을 확인하는 것이 좋습니다. 다음으로, 이러한 문제를 확인할 수 있습니다:
 * [확장 충돌](#check-conflicts)
 * [이메일 렌더링](#check-rendering)
-* [CSS](#switch-css-inlining)
+* [CSS 인라이닝](#switch-css-inlining)
 
 ### 확장 충돌
 
@@ -30,11 +30,11 @@ channel: email
 - [받은편지함 Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision/)을 사용하여 이메일을 미리 보고, 다양한 브라우저와 이메일 클라이언트에서 이메일이 어떻게 보이는지 확인하세요.
 - 어떤 브라우저나 이메일 클라이언트가 문제를 일으키는지 확인한 후, 개발자 팀에게 HTML을 수정하고 해당 브라우저나 이메일 클라이언트를 수용할 수 있도록 편집해야 한다고 알려주세요.
 
-### CSS
+### CSS 인라이닝
 
 받은편지함 비전의 미리보기가 여전히 Braze로 전송된 것과 일치하지 않는 경우가 있습니다. 이것은 Braze 및 기타 도구에 의해 수행되는 CSS 인라인 차이로 인해 발생할 수 있습니다. 이 경우라고 의심되면 Braze 계정 매니저에게 CSS 인라이닝을 끄도록 요청하세요.
 
-아직 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
+아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트 날짜: 2021년 12월 21일_
 

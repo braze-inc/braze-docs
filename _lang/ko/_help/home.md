@@ -34,7 +34,7 @@ popular_topic_list:
     link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
   - name: 푸시 토큰 마이그레이션
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: 사용자 지정 이벤트 속성 로깅
+  - name: 커스텀 이벤트 속성 로깅
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
   - name: 디스패치 ID
     link: /docs/help/help_articles/data/dispatch_id/

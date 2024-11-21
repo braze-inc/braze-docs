@@ -28,9 +28,9 @@ page_order: 1
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | アイテムID｜`{{event_properties.${id}}}` ｜
-| アイテムタイトル｜`{{event_properties.${title}}}` ｜
-| 商品価格｜`{{event_properties.${price}}}` ｜
-| アイテムベンダー｜`{{event_properties.${vendor}}}` ｜
+| アイテムタイトル  | `{{event_properties.${title}}}` |
+| アイテム価格 | `{{event_properties.${price}}}` |
+| アイテムベンダー | `{{event_properties.${vendor}}}` |
 | アイテム画像｜`{{event_properties.${images}}}` ｜
 
 
@@ -47,9 +47,9 @@ page_order: 1
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | アイテムID｜`{{event_properties.${id}}}` ｜
-| アイテムタイトル｜`{{event_properties.${title}}}` ｜
-| 商品価格｜`{{event_properties.${price}}}` ｜
-| アイテムベンダー｜`{{event_properties.${vendor}}}` ｜
+| アイテムタイトル  | `{{event_properties.${title}}}` |
+| アイテム価格 | `{{event_properties.${price}}}` |
+| アイテムベンダー | `{{event_properties.${vendor}}}` |
 | アイテム画像｜`{{event_properties.${images}}}` ｜
 {% endraw %}
 {% endsubtab %}
@@ -63,14 +63,15 @@ page_order: 1
 {% raw %}
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
+| カートID｜`{{event_properties.${cart_id}}}` ｜。
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -83,22 +84,22 @@ page_order: 1
 {% raw %}
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
-| チェックアウトID｜`{{event_properties.${checkout_id}}}` ｜
+| チェックアウト ID | `{{event_properties.${checkout_id}}}` |
 | 放棄されたカートのURL｜`{{event_properties.${abandoned_checkout_url}}}` ｜
 | 割引コード｜`{{event_properties.${discount_code}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
 | 割引額｜`{{event_properties.${applied_discount}[0].amount}}` ｜
-| 割引タイトル｜`{{event_properties.${applied_discount}[0].title}}` ｜
+| 割引タイトル | `{{event_properties.${applied_discount}[0].title}}` |
 | 割引内容｜`{{event_properties.${applied_discount}[0].description}}` ｜
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -113,45 +114,45 @@ page_order: 1
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
-| ステータス確認｜`{{event_properties.${confirmed}}}` ｜
+| 確認ステータス | `{{event_properties.${confirmed}}}` |
 | 注文状況URL｜`{{event_properties.${order_status_url}}}` ｜
 | 注文番号｜`{{event_properties.${order_number}}}` ｜
 | キャンセルされたタイムスタンプ |`{{event_properties.${cancelled_at}}}` |
 | 割引総額｜`{{event_properties.${total_discounts}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
 | タグ: | `{{event_properties.${tags}}}` |
-| 割引コード｜`{{event_properties.${discount_codes}}}` 
+| 割引コード｜`{{event_properties.${discount_codes}}}`
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
-| 配送タイトル |`{{event_properties.${shipping}[0].title}}` 
-| 価格｜送料｜`{{event_properties.${shipping}[0].price}}` 
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
+| 配送タイトル | `{{event_properties.${shipping}[0].title}}` |
+| 価格｜送料｜`{{event_properties.${shipping}[0].price}}`
 |Shopify ストア | `{{event_properties.${shopify_storefront}}}`|
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillment_status}}}` ｜
-| 参照サイト｜`{{event_properties.${referring_site}}}` ｜
-| ペイメントゲートウェイ名｜`{{event_properties.${payment_gateway_names}}}` ｜
+| フルフィルメントステータス | `{{event_properties.${fulfillment_status}}}` |
+| 参照元サイト | `{{event_properties.${referring_site}}}` |
+| 決済ゲートウェイ名｜`{{event_properties.${payment_gateway_names}}}` ｜
 | 発送先住所1行目｜`{{event_properties.${shipping_address[0].address1}}}` ｜
 | 発送先住所 2行目｜`{{event_properties.${shipping_address[0].address2}}}` ｜
-| 配送先住所 都市名`{{event_properties.${shipping_address[0].city}}}` 
+| 配送先住所 都市名`{{event_properties.${shipping_address[0].city}}}`
 | 発送先住所 国｜`{{event_properties.${shipping_address[0].country}}}` ｜
-| 発送先住所 姓名`{{event_properties.${shipping_address[0].first_name}}}` 
+| 発送先住所 姓名`{{event_properties.${shipping_address[0].first_name}}}`
 | 発送先住所 姓｜`{{event_properties.${shipping_address[0].last_name}}}` ｜
-| 発送先住所 都道府県`{{event_properties.${shipping_address[0].province}}}` 
-| 発送先住所 郵便番号`{{event_properties.${shipping_address[0].zip}}}` 
-| 請求書送付先住所1番｜`{{event_properties.${billing_address[0].address1}}}` ｜請求書送付先住所2番｜ ｜ ｜ 
+| 発送先住所 都道府県`{{event_properties.${shipping_address[0].province}}}`
+| 発送先住所 郵便番号`{{event_properties.${shipping_address[0].zip}}}`
+| 請求先住所行1 | `{{event_properties.${billing_address[0].address1}}}` |
 | 請求書送付先住所2行目｜`{{event_properties.${billing_address[0].address2}}}` ｜
-| 請求書送付先住所 都市名`{{event_properties.${billing_address[0].city}}}` 
-| 請求先住所 国名`{{event_properties.${billing_address[0].country}}}` 
-| 請求先住所 姓名`{{event_properties.${billing_address[0].first_name}}}` 
-| 請求先住所 姓名`{{event_properties.${shipping_address[0].last_name}}}` 
-| 請求先住所 都道府県`{{event_properties.${billing_address[0].province}}}` 
-| 請求先住所 郵便番号`{{event_properties.${billing_address[0].zip}}}` 
+| 請求書送付先住所 都市名`{{event_properties.${billing_address[0].city}}}`
+| 請求先住所 国名`{{event_properties.${billing_address[0].country}}}`
+| 請求先住所 姓名`{{event_properties.${billing_address[0].first_name}}}`
+| 請求先住所 姓名`{{event_properties.${shipping_address[0].last_name}}}`
+| 請求先住所 都道府県`{{event_properties.${billing_address[0].province}}}`
+| 請求先住所 郵便番号`{{event_properties.${billing_address[0].zip}}}`
 {% endraw %}
 
 
@@ -160,18 +161,18 @@ page_order: 1
 
 
 **イベント**:購入<br>
-**タイプ**：[ブレイズ購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+**タイプ**：[Braze 購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
 
 
 {% raw %}
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| アイテムタイトル  | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 
 
@@ -185,25 +186,25 @@ page_order: 1
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
-| ステータス確認｜`{{event_properties.${confirmed}}}` ｜
+| 確認ステータス | `{{event_properties.${confirmed}}}` |
 | 注文状況URL｜`{{event_properties.${order_status_url}}}` ｜
 | 注文番号｜`{{event_properties.${order_number}}}` ｜
 | キャンセルされたタイムスタンプ |`{{event_properties.${cancelled_at}}}` |
 | 割引総額｜`{{event_properties.${total_discounts}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
 | タグ: | `{{event_properties.${tags}}}` |
-| 割引コード｜`{{event_properties.${discount_codes}}}` 
+| 割引コード｜`{{event_properties.${discount_codes}}}`
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| 配送タイトル |`{{event_properties.${shipping}[0].title}}` 
-| 価格｜送料｜`{{event_properties.${shipping}[0].price}}` 
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| 配送タイトル | `{{event_properties.${shipping}[0].title}}` |
+| 価格｜送料｜`{{event_properties.${shipping}[0].price}}`
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -219,40 +220,40 @@ page_order: 1
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
 | 割引総額｜`{{event_properties.${total_discounts}}}` ｜
-| ステータス確認｜`{{event_properties.${confirmed}}}` ｜
+| 確認ステータス | `{{event_properties.${confirmed}}}` |
 | 注文状況URL｜`{{event_properties.${order_status_url}}}` ｜
 | 注文番号｜`{{event_properties.${order_number}}}` ｜
 | キャンセルされたタイムスタンプ |`{{event_properties.${cancelled_at}}}` |
 | クローズド・タイムスタンプ｜`{{event_properties.${closed_at}}}` ｜
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
 | アイテム名｜`{{event_properties.${line_items}[0].name}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| 配送タイトル |`{{event_properties.${shipping}[0].title}}` 
-| 価格｜送料｜`{{event_properties.${shipping}[0].price}}` 
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillment_status}}}` ｜
-| フルフィルメント 出荷状況｜`{{event_properties.${fulfillments}[0].shipment_status}}` ｜
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillments}[0].status}}` ｜
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| 配送タイトル | `{{event_properties.${shipping}[0].title}}` |
+| 価格｜送料｜`{{event_properties.${shipping}[0].price}}`
+| フルフィルメントステータス | `{{event_properties.${fulfillment_status}}}` |
+| フルフィルメント出荷ステータス | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| フルフィルメントステータス | `{{event_properties.${fulfillments}[0].status}}` |
 \|`{{event_properties.${fulfillments}[0].tracking_company}}` ｜フルフィルメント・トラッキング・カンパニー｜Fulfillment Tracking Company｜フルフィルメント・トラッキング・カンパニー
 | フルフィルメント追跡番号｜`{{event_properties.${fulfillments}[0].tracking_number}}` ｜
 | フルフィルメント追跡番号｜`{{event_properties.${fulfillments}[0].tracking_numbers}}` ｜
 | フルフィルメント・トラッキングURL｜`{{event_properties.${fulfillments}[0].tracking_url}}` ｜
 | フルフィルメント・トラッキングURL｜`{{event_properties.${fulfillments}[0].tracking_urls}}` ｜
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` ｜
-| フルフィルメント名 |`{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| フルフィルメントステータス | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| フルフィルメント名 | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
 | フルフィルメント価格｜`{{event_properties.${fulfillments}[0].line_items[0].price}}` ｜
 | フルフィルメント・プロダクトID｜`{{event_properties.${fulfillments}[0].line_items[0].product_id}}` ｜
-| フルフィルメント数量｜`{{event_properties.${fulfillments}[0].line_items[0].quantity}}` ｜
-| フルフィルメント発送｜`{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` 
-| フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}` 
-| フルフィルメント・タイトル｜`{{event_properties.${fulfillments}[0].line_items[0].title}}` ｜
-| フルフィルメント・ベンダー｜`{{event_properties.${fulfillments}[0].line_items[0].vendor` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| フルフィルメント数量 | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}` |
+| フルフィルメント配送 | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}`
+| フルフィルメントタイトル| `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -268,40 +269,40 @@ page_order: 1
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
 | 割引総額｜`{{event_properties.${total_discounts}}}` ｜
-| ステータス確認｜`{{event_properties.${confirmed}}}` ｜
+| 確認ステータス | `{{event_properties.${confirmed}}}` |
 | 注文状況URL｜`{{event_properties.${order_status_url}}}` ｜
 | 注文番号｜`{{event_properties.${order_number}}}` ｜
 | キャンセルされたタイムスタンプ |`{{event_properties.${cancelled_at}}}` |
 | クローズド・タイムスタンプ｜`{{event_properties.${closed_at}}}` ｜
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
 | アイテム名｜`{{event_properties.${line_items}[0].name}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| 配送タイトル |`{{event_properties.${shipping}[0].title}}` 
-| 価格｜送料｜`{{event_properties.${shipping}[0].price}}` 
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillment_status}}}` ｜
-| フルフィルメント 出荷状況｜`{{event_properties.${fulfillments}[0].shipment_status}}` ｜
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| 配送タイトル | `{{event_properties.${shipping}[0].title}}` |
+| 価格｜送料｜`{{event_properties.${shipping}[0].price}}`
+| フルフィルメントステータス | `{{event_properties.${fulfillment_status}}}` |
+| フルフィルメント出荷ステータス | `{{event_properties.${fulfillments}[0].shipment_status}}` |
 | ステータス| `{{event_properties.${fulfillments}[0].status}}` |
 \|`{{event_properties.${fulfillments}[0].Fulfillment tracking_company}}` ｜フルフィルメント・トラッキング・カンパニー｜Fulfillment Tracking Company｜フルフィルメント・トラッキング・カンパニー
 | フルフィルメント追跡番号｜`{{event_properties.${fulfillments}[0].Fulfillment tracking_number}}` ｜
 | フルフィルメント追跡番号｜`{{event_properties.${fulfillments}[0].Fulfillment tracking_numbers}}` ｜
 | フルフィルメント・トラッキングURL｜`{{event_properties.${fulfillments}[0].Fulfillment tracking_url}}` ｜
 | フルフィルメント・トラッキングURL｜`{{event_properties.${fulfillments}[0].Fulfillment tracking_urls}}` ｜
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` ｜
-| フルフィルメント名 |`{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| フルフィルメントステータス | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| フルフィルメント名 | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
 | フルフィルメント価格｜`{{event_properties.${fulfillments}[0].line_items[0].price}}` ｜
 | フルフィルメント・プロダクトID｜`{{event_properties.${fulfillments}[0].line_items[0].product_id}}` ｜
-| フルフィルメント数量｜`{{event_properties.${fulfillments}[0].line_items[0].quantity}}` ｜
-| フルフィルメント発送｜`{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` 
-| フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}` 
-| フルフィルメント・タイトル｜`{{event_properties.${fulfillments}[0].line_items[0].title}}` ｜
-| フルフィルメント・ベンダー｜`{{event_properties.${fulfillments}[0].line_items[0].vendor` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| フルフィルメント数量 | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}` |
+| フルフィルメント配送 | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}`
+| フルフィルメントタイトル| `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -322,21 +323,21 @@ page_order: 1
 | 注文番号｜`{{event_properties.${order_number}}}` ｜
 | キャンセルされたタイムスタンプ |`{{event_properties.${cancelled_at}}}` |
 | タグ: | `{{event_properties.${tags}}}` |
-| 割引コード｜`{{event_properties.${discount_codes}}}` 
-| フルフィルメント・ステータス｜`{{event_properties.${fulfillment_status}}}` ｜
-| フルフィルメンツ｜`{{event_properties.${fulfillments}}}` ｜
+| 割引コード｜`{{event_properties.${discount_codes}}}`
+| フルフィルメントステータス | `{{event_properties.${fulfillment_status}}}` |
+| フルフィルメント | `{{event_properties.${fulfillments}}}` |
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
 | アイテム名｜`{{event_properties.${line_items}[0].name}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| フルフィルメント・ステータス｜`{{event_properties.${line_items}[0].fulfillment_status}}` ｜
-| 配送タイトル |`{{event_properties.${shipping}[0].title}}` 
-| 価格｜送料｜`{{event_properties.${shipping}[0].price}}` 
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| フルフィルメントステータス | `{{event_properties.${line_items}[0].fulfillment_status}}` |
+| 配送タイトル | `{{event_properties.${shipping}[0].title}}` |
+| 価格｜送料｜`{{event_properties.${shipping}[0].price}}`
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 
@@ -349,17 +350,17 @@ page_order: 1
 | バリアブル｜リキッド・テンプレーティング
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
-| オーダーノート｜`{event_properties.${note}}}` ｜
+| 注文メモ | `{event_properties.${note}}}` |
 | アイテムID｜`{{event_properties.${line_items}[0].product_id}}` ｜
-| アイテム数量｜`{{event_properties.${line_items}[0].quantity}}` ｜
+| アイテム数量 | `{{event_properties.${line_items}[0].quantity}}` |
 | アイテムSKU｜`{{event_properties.${line_items}[0].sku}}` ｜
-| アイテムタイトル｜`{{event_properties.${line_items}[0].title}}` ｜
-| アイテムベンダー｜`{{event_properties.${line_items}[0].vendor}}` ｜
+| アイテムタイトル | `{{event_properties.${line_items}[0].title}}` |
+| アイテムベンダー | `{{event_properties.${line_items}[0].vendor}}` |
 | アイテム名｜`{{event_properties.${line_items}[0].name}}` ｜
-| 項目プロパティ｜`{{event_properties.${line_items}[0].properties}}` ｜
-| 商品価格｜`{{event_properties.${line_items}[0].price}}` ｜
-| バリアントID｜`{{event_properties.${line_items}[0].variant_id}}` ｜
-| バリアント・タイトル｜`{{event_properties.${line_items}[0].variant_title}}` ｜
+| アイテムプロパティ | `{{event_properties.${line_items}[0].properties}}` |
+| アイテム価格 | `{{event_properties.${line_items}[0].price}}` |
+| バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
+| バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {% endraw %}
 {% endsubtab %}
 {% endsubtabs %}
@@ -793,24 +794,24 @@ page_order: 1
 ## サポートされているShopifyカスタム属性
 {% tabs ローカル %}
 {% tab Shopifyカスタム属性 %}
-| 属性名
+| 属性名 | 説明 |
 | --- | --- |
-\|`shopify_tags` | ショップオーナーが顧客に付けたタグ。カンマで区切られた値の文字列としてフォーマットされる。顧客は最大250個のタグを持つことができる。各タグは255文字まで。|
-\|`shopify_total_spent` | 顧客が注文履歴の中で使った金額の合計。|
+\|`shopify_tags` | ショップオーナーが顧客に付けたタグ。カンマで区切られた値の文字列としてフォーマットされる。顧客には最大250個のタグを付けることができます。各タグの最大文字数は255文字です。 |
+| `shopify_total_spent` | 注文履歴全体で顧客が支払った総額。 |
 ｜`shopify_order_count` ｜この顧客に関連する注文数。テストオーダーとアーカイブオーダーはカウントされない。|
 \|`shopify_last_order_id` | 顧客の最後の注文のID。|
-\|`shopify_last_order_name` | 顧客の最後の注文の名前。これは、注文リソースの`name` フィールドに直接関係する。|
+\|`shopify_last_order_name` | 顧客の最後の注文の名前。これは、注文リソースの `name` フィールドに直接関係しています。 |
 \|`shopify_zipcode` ｜顧客のデフォルト住所の郵便番号。|
-｜`shopify_province` ｜デフォルトの住所から顧客の都道府県を指定する。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `shopify_province` | 顧客のデフォルトの住所の都道府県。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Liquid のパーソナライゼーション
 
-Shopifyカスタム属性にリキッドパーソナライゼーションを追加するには、**+パーソナライゼーションを**選択する。次に、パーソナライズのタイプとして**カスタム属性を**選択する。
+Shopify カスタム属性に Liquid パーソナライゼーションを追加するには、[**\+ パーソナライゼーション**] を選択します。次に、[パーソナライゼーションタイプ] として [**カスタム属性**] を選択します。
 
 ![パーソナライズの追加」セクションの「属性」ドロップダウンが拡張された。]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
-カスタム属性を選択したら、デフォルト値を入力し、リキッドのスニペットをメッセージにコピーする。
+カスタム属性を選択したら、デフォルト値を入力して Liquid スニペットをメッセージにコピーします。
 
 ![リキッドのスニペットをメッセージに貼り付ける。]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 
@@ -866,36 +867,36 @@ Shopifyカスタム属性にリキッドパーソナライゼーションを追�
 - 国
 
 {% alert note %}
-Brazeは、サポートされているShopifyカスタム属性とBraze標準属性を更新するのは、既存のユーザープロファイルとデータに違いがある場合のみである。例えば、Shopifyの受信データにBobという名字が含まれており、BobがBrazeのユーザープロフィールの名字としてすでに存在する場合、Brazeは更新をトリガーせず、データポイントを請求しない。
+Brazeは、サポートされているShopifyカスタム属性とBraze標準属性を更新するのは、既存のユーザープロファイルとデータに違いがある場合のみである。たとえば、インバウンド Shopify データに Bob という名前が含まれており、Bob が Braze のユーザープロファイルに名前としてすでに存在している場合、Braze では更新はトリガーされず、データポイントにつ課金されません。
 {% endalert %}
 
 ## セグメンテーション
 
-Shopifyのイベントは、Segmentationの[既存のカスタムフィルターで]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)フィルタリングできる。 
+Shopify のイベントは、セグメンテーションのすべての[既存のカスタムフィルター]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)を使用してフィルタリングできます。 
 
 ![Shopify_Test セグメントの詳細ページ。カスタムイベント "shopify_checkouts_abandon" のフィルターがハイライトされている。][12]{: style="max-width:80%;"}
 
-さらに、Brazeの購入幅フィルターを使用して、ユーザーのセグメントを作成することもできる：
-- 最初／最後の購入
-- 特定のアプリの最初／最後の購入
-- 過去30日以内に購入した商品
-- 購入した商品の数
+さらに、Braze のさまざまな購入フィルターを利用して、次の条件に基づいてユーザーセグメントを作成することもできます。
+- 最初の購入 / 最後の購入
+- 特定のアプリの最初の購入 / 最後の購入
+- 過去30日以内に購入した製品
+- 購入した製品の数
 
 ![2020年10月17日以降に初めて購入したユーザーを対象としたセグメンテーションフィルター。][13]
 
 ![セグメンテーション・フィルターとして特定の製品IDを検索する。][14]
 
 {% alert note %}
-カスタムイベントプロパティでセグメント化する場合は、カスタマーサクセスマネージャーまたはBraze[サポートと]({{site.baseurl}}/braze_support/)協力して、セグメンテーションとLiquidで使用したいすべての関連イベントプロパティのフィルタリングを有効にしてください。
+カスタムイベントプロパティでセグメント化する場合は、カスタマーサクセスマネージャーまたは Braze[サポート]({{site.baseurl}}/braze_support/)と協力して、セグメンテーションと Liquid で使用するすべての関連イベントプロパティのフィルタリングを有効にしてください。
 {% endalert %} 
 
 ## キャンペーンとキャンバスのトリガー 
 
-BrazeのShopifyカスタムイベントを使えば、他の[カスタムイベントと]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage)同じようにCanvasesやキャンペーンをトリガーすることができる。例えば、Shopify`shopify_checkouts_abandon` イベントをトリガーとしたアクションベースのキャンバスを作成することができる。 
+Braze の Shopify カスタムイベントを使用することで、他の[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage)と同様にキャンバスやキャンペーンをトリガーできます。たとえば、キャンバスのエントリ基準内で Shopify `shopify_checkouts_abandon` イベントをトリガーするアクションベースのキャンバスを作成できます。 
 
 ![カスタムイベント "shopify_checkouts_abandon "を実行したユーザーを入力するアクションベースのキャンバス。][5]
 
-カスタムイベントプロパティのネストされたオブジェクトサポートにより、顧客はネストされたイベントプロパティを使用してキャンペーンやキャンバスをトリガーできるようになった。以下は、`shopify_created_order` カスタムイベントから特定の商品を使用してキャンペーンをトリガーする例である。`list_items[].product_id` 、商品リストのインデックスを作成し、商品IDにアクセスする。
+カスタムイベントプロパティのネストされたオブジェクトサポートにより、顧客はネストされたイベントプロパティを使用してキャンペーンやキャンバスをトリガーできるようになった。以下は、`shopify_created_order` カスタムイベントから特定の商品を使用してキャンペーンをトリガーする例である。`list_items[].product_id` を使用してアイテムリストのインデックスを作成し、製品 ID にアクセスするようにしてください。
 
 ![カスタムイベント "shopify_created_order "を実行し、ネストされたプロパティ "product_id "が特定の数字と等しいユーザーに送信するアクションベースのキャンペーン。][26]
 

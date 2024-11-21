@@ -1,22 +1,22 @@
 ---
 nav_title: カスタム属性を持つディストリビューション
-article_title: Voucherifyを使用したカスタム属性の配布
+article_title: Voucherify でカスタム属性を使用するディストリビューション
 page_order: 3
 alias: /partners/voucherify/custom_attributes/
-description: "このリファレンス記事は、BrazeとVoucherifyの統合について説明しています。Brazeの統合により、BrazeメッセージでVoucherifyコードを送信できます。"
+description: "このリファレンス記事では、Braze と Voucherify の統合について説明しています。Brazeの統合により、BrazeメッセージでVoucherifyコードを送信できます。"
 page_type: partner
 search_tag: Partner
 ---
 
 # カスタム属性を持つディストリビューション
 
-> Brazeの統合により、BrazeメッセージでVoucherifyコードを送信できます。このリファレンス記事では、Brazeのカスタム属性をVoucherifyの配信で使用する方法について説明します。
+> Brazeの統合により、BrazeメッセージでVoucherifyコードを送信できます。このリファレンス記事では、Voucherify ディストリビューションで Braze のカスタム属性を使用する方法について説明します。
 
 {% alert tip %}
-Voucherifyの配布でBrazeのカスタム属性を使用する前に、BrazeユーザーをVoucherifyのダッシュボードに追加する必要があります。Brazeコネクテッドコンテンツを使用して、ユーザーを同期したり、CSVやAPIを通じて顧客をインポートしたりできます。[Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) について詳しく知るには、こちらをご覧ください。
+Voucherify ディストリビューションで Braze のカスタム属性を使用する前に、Braze ユーザーを Voucherify ダッシュボードに追加する必要があります。Braze コネクテッドコンテンツを使用して、ユーザーを同期したり、CSV や API を使用して顧客をインポートしたりできます。[Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) について詳しく知るには、こちらをご覧ください。
 {% endalert %}
 
-Braze のカスタム属性を使用すると、ユーザープロファイルのカスタム属性に Voucherify コードを割り当てることができます。ユニークなクーポン、ギフトカード、ロイヤルティカード、および紹介コードを使用できます。まず、VoucherifyをBrazeに接続し、Voucherifyで配布を作成し、最後にBrazeでカスタム属性スニペットをメッセージテンプレートに含めたキャンペーンを作成します。
+Braze のカスタム属性を使用すると、ユーザープロファイルのカスタム属性に Voucherify コードを割り当てることができます。ユニークなクーポン、ギフトカード、ロイヤルティカード、および紹介コードを使用できます。まず Voucherify を Braze に接続し、Voucherify でディストリビューションを作成し、最後に Braze でメッセージテンプレートのカスタム属性スニペットを使用したキャンペーンを作成します。
 
 ## ステップ1:BrazeにVoucherifyアカウントを接続する
 
@@ -36,7 +36,7 @@ Braze のカスタム属性を使用すると、ユーザープロファイル�
 
 接続されると、Brazeのユーザープロファイルのカスタム属性にコードを割り当てる新しいVoucherify [配布](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work)を開始できます。後で、受け取った属性をコードと一緒にBrazeキャンペーンで使用できます。
 
-配布を設定する前に、BrazeユーザーをVoucherifyダッシュボードに追加する必要があります。[Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) について詳しく知るには、訪問してください。
+ディストリビューションを設定する前に、Braze ユーザーを Voucherify ダッシュボードに追加する必要があります。[Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) について詳しく知るには、こちらをご覧ください。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_distribution.png %})
 
@@ -45,20 +45,20 @@ Braze にコードを配布するには、2 つのモードを使用できます
 - **マニュアルモード**
 - ユーザーがアクションを実行したときにコードの配信をトリガーする**自動化されたワークフロー**を定義します。
 
-手動モードと自動モードの両方で、Voucherifyは固有のコードをその属性とともに送信し、それらをユーザープロファイルのBrazeカスタム属性に割り当てます。
+手動モードと自動モードの両方で、Voucherify は固有のコードをその属性とともに送信し、それらをユーザープロファイルの Braze カスタム属性に割り当てます。
 
 ![カスタム属性にフィールドをマッピングする]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab 手動配布 %}
+{% tab マニュアルディストリビューション %}
 
-マニュアルモードは、選択されたオーディエンスにコードを割り当てる一度限りのアクションです。ダッシュボードの**配布**に移動し、プラスで配布マネージャーを実行し、**手動メッセージ**を選択します。
+マニュアルモードは、選択されたオーディエンスにコードを割り当てる一度限りのアクションです。ダッシュボードの [**Distribution**] に移動し、プラス記号を使ってディストリビューションマネージャーを実行し、[**Manual Message**] を選択します。
 
-1.  あなたの配布物に名前を付けてください。
+1.  ディストリビューションに名前を付けます。
 
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_name_distribution.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}<br>  
     
-    ユニークなコードのソースとなるキャンペーン**(1)**を選択し、ユーザーのセグメントまたは単一の顧客を受信者として選択します**(2)**。[Voucherify](https://support.voucherify.io/article/51-customer-segments) にアクセスして顧客セグメントの詳細をご覧ください。  
+    ユニークなコードのソースとなるキャンペーン**(1)**を選択し、ユーザーのセグメントまたは単一の顧客を受信者として選択します**(2)**。顧客セグメントの詳細については、[Voucherify](https://support.voucherify.io/article/51-customer-segments) にアクセスしてください。  
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_name_distribution_choose_segment.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
 
@@ -72,24 +72,24 @@ Braze にコードを配布するには、2 つのモードを使用できます
     
 4.  完了すると、分布の概要を確認できます。**保存して送信**をクリックして、コードをBrazeのユーザープロファイルに配信します。  
 
-_すべての手動配信は10分遅れで送信されることに注意してください。_
+_すべてのマニュアルディストリビューションは10分遅れで送信されることに注意してください。_
 
 {% endtab %}
 {% tab 自動ワークフロー %}
 
 Voucherifyは、次のトリガーに応じてBrazeにコードを自動的にプッシュできます:
 
-- **顧客 entered/left specific Voucherify Segment**
-- **コードの発行に成功しました** – コードがキャンペーンから顧客に発行（割り当て）されたときに送信されるメッセージです。
-- **注文ステータスが変更されました**（注文が作成されました、注文が更新されました、注文が支払われました、注文がキャンセルされました）
-- **ギフトクレジットが追加されました** – メッセージは、ギフトカードクレジットが顧客のカードに追加されたときに送信されます。
+- **Customer entered/left specific Voucherify segment**
+- **Successful code publish** – Voucherify でキャンペーンのコードが顧客に発行された (割り当てられた) ときに送信されるメッセージです。
+- **Order status changed** (order created、order updated、order has been paid、order canceled)
+- **Gift credits added** – このメッセージは、ギフトカードクレジットが顧客のカードに追加されたときに送信されます。
 - **ロイヤルティポイントが追加されました** – ロイヤルティポイントが顧客のプロファイルに追加されたときに送信されるメッセージです。
-- **バウチャーが引き換えられました** – このメッセージは、バウチャーを正常に引き換えた顧客に送信されます。
-- **バウチャーの償還のロールバック** – メッセージは償還が正常にロールバックされた顧客に送信されます。
-- **報酬引き換え** – メッセージは顧客がロイヤルティまたは紹介報酬を引き換えるときに送信されます。
-- **カスタムイベントが顧客に対して記録されました** \- このメッセージは、Voucherifyが特定のカスタムイベントを記録したときにトリガーされます。
+- **Voucher redeemed** – このメッセージは、バウチャーの引き換えが正常に完了した顧客に送信されます。
+- **Voucher redemption rollback** – このメッセージは引き換えが正常にロールバックされた顧客に送信されます。
+- **Reward redemption** – このメッセージは、顧客がロイヤルティまたは紹介報酬を引き換えるときに送信されます。
+- **Custom event was logged for a customer** \- このメッセージは、Voucherify が特定のカスタムイベントを記録したときにトリガーされます。
 
-BrazeとVoucherifyを使用して自動ワークフローを設定するには、[配布チュートリアルを参照してください](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work)。
+Braze と Voucherify を使用して自動ワークフローを設定するには、[ディストリビューションチュートリアルを参照してください](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work)。
 
 {% endtab %}
 {% endtabs %}
@@ -100,7 +100,7 @@ BrazeとVoucherifyを使用して自動ワークフローを設定するには�
 
 カスタム属性がBrazeの顧客のカスタム属性にコードと共に追加されると、それをキャンペーンで使用できます。
 
-メッセージ本文を編集し、Voucherifyディストリビューションで定義されたカスタム属性を追加します。{% raw %}`{{custom_attribute.${custom_attribute_with_code}}}`{% endraw %}を配置して、ユニークなコードを表示します。
+メッセージ本文を編集し、Voucherifyディストリビューションで定義されたカスタム属性を追加します。一意のコードを表示するため、{% raw %}`{{custom_attribute.${custom_attribute_with_code}}}`{% endraw %} を配置します。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_email_body.png %}){: style="max-width:75%;"}
 

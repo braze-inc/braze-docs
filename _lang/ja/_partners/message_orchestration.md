@@ -8,15 +8,12 @@ description: "このランディングページには、リターゲティング
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Message Orchestration"
 
 valid_partner_list:
-- name: アルパコ
+- name: Alpaco
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
-- name: アンタヴォ
+- name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Jampp
   url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
@@ -24,7 +21,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
-- name: パスキット
+- name: Passkit
   url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 - name: Inkit
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
@@ -42,7 +39,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
-- name: 単数
+- name: Singular
   url: /docs/partners/message_orchestration/attribution/singular/
 - name: Vizbee
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
@@ -76,27 +73,27 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
-- name: ヨトポ
+- name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
-- name: クナック
+- name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-- name: エクストール
+- name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
-- name: バイラルスイープ
+- name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: サーヴィケイト
+- name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: IAMスタジオ（NNT）
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: B.層 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
-- name: セージフロー
+- name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
-- name: ニフト
+- name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/  
@@ -104,10 +101,16 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
-- name: オロ
+- name: Olo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/olo/
-- name: タイプフォーム
+- name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
+- name: マイポストカード
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: ディクサ
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: ナルバー
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

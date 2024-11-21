@@ -24,81 +24,81 @@ page_order: 2
 {% tab 返金 %}
 **Shopify返金イベント** - `shopify_created_refund`
 
-利用者には、一部または全部の払い戻しが行われた。このキャンペーンは、注文が正常に返金されたことをユーザーに知らせます。
+ユーザーに一部または全額が返金されました。このキャンペーンは、注文が正常に返金されたことをユーザーに知らせます。
 
 ![カスタムイベント"shopify_created_refund".]({% image_buster /assets/img/Shopify/refund.png %})を実行するユーザーに入力するアクションベースのキャンペーン{: style="max-width:45%;"}
 
 **メッセージングの例**
 
-![メールに&quot と書かれています; ご注文は返金されています、ご注文にアプリの指摘がなかったことをお詫びします。返金は成功裏にお送りいたしました。ファンドがステートメント&クォートで耳をアプリするまで、3～5営業日お待ちください; " View Account" button.]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
+![テキスト「Your order has been refunded, Sorry that you were disappointed with your order.返金は成功裏にお送りいたしました。Please wait 3-5 business days for the funds to appear in your statement」と「View Account」ボタンが表示されているメール。]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
 {% endtab %}
 {% tab キャンセル %}
 **Shopify キャンセル換算イベント** - `shopify_cancelled_order`
 
-ユーザは、フルフィルメント前に注文をキャンセルすることができました。このキャンペーンにより、ユーザーは自分の購買が正常にキャンセルされたことを認識できます。 
+ユーザーはフルフィルメント前に注文をキャンセルできました。このキャンペーンにより、ユーザーは自分の購買が正常にキャンセルされたことを認識できます。 
 
 ![カスタムイベント"shopify_キャンセル led_order".]({% image_buster /assets/img/Shopify/cancellation.png %}) を実行するユーザーに入力するアクションベースのキャンペーン{: style="max-width:45%;"}
 
 **メッセージングの例**
 
-![メールに&quot と書かれています;ご注文はキャンセルされています、ご覧になれて申し訳ありません!ご注文のキャンセルに成功しました。ファンドがステートメント&クォートで耳をアプリするまで、3～5営業日お待ちください; " View Account" button.]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
+![メールに&quot と書かれています;ご注文はキャンセルされています、ご覧になれて申し訳ありません!We've successfully canceled your order.Please wait 3-5 business days for the funds to appear in your statement」と「View Account」ボタンが表示されているメール。]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
-{% tab 受注完了 %}
-**Shopifyが満たされたイベント** - `shopify_fulfilled_order`
+{% tab フルフィルメントが完了した注文 %}
+**Shopify フルフィルメント完了イベント** - `shopify_fulfilled_order`
 
-ユーザーの注文のすべての品目が正常に実行されました。このキャンペーンは、ユーザーに、注文全体が履行されたことを知らせます。
+ユーザーの注文のすべての品目が正常にフルフィルメントされました。このキャンペーンは、ユーザーに、注文全体が履行されたことを知らせます。
 
 ![カスタムイベント"shopify_fulfilled_order".]({% image_buster /assets/img/Shopify/fulfilled.png %})を実行するユーザーに入力するアクションベースのキャンペーン{: style="max-width:45%;"}
 
 **メッセージングの例**
 
-![テキスト&quot を含むテキストメッセージ;ご注文は完了しました!カートに入っている商品は全て届きました！あなたの口座に入り、領収書を確認してください。フィードバック."]({% image_buster /assets/img/Shopify/fulfilled2.png %})を終了するためのボーナスポイント{: style="max-width:40%;border:0;"}
+![テキスト「Your order's been fulfilled!カートに入っている商品は全て届きました！Please go into your account and confirm receipt.Bonus points for leaving feedback.」が表示されているテキストメッセージ。]({% image_buster /assets/img/Shopify/fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
-{% tab 一部受注完了 %}
-**Shopify部分的に満たされたイベント** - `shopify_partially_fulfilled_order`
+{% tab 部分的にフルフィルメントされた注文 %}
+**Shopify 部分的フルフィルメントイベント** - `shopify_partially_fulfilled_order`
 
-ユーザーの注文の一部の品目が正常に実行されました。このキャンペーンにより、ユーザー s は注文全体の一部が履行されたことを知ることができます。
+ユーザーの注文の一部の品目が正常にフルフィルメントされました。このキャンペーンは、注文全体の一部がフルフィルメントされたことをユーザーに知らせます。
 
 ![カスタムイベント"shopify_partially_fulfilled_order".]({% image_buster /assets/img/Shopify/partially_fulfilled.png %})を実行するユーザーに入るアクションベースのキャンペーン{: style="max-width:45%;"}
 
 **メッセージングの例**
 
-![テキスト&quotを含むテキストメッセージ;ご注文の一部が完了しました!ご注文いただいた商品の一部をお届けし、残りはお待ちしております！配送が完全に完了したら、別のアラートを送信します。"]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
+![テキスト「Your order's been partially fulfilled!ご注文いただいた商品の一部をお届けし、残りはお待ちしております！配送が完全に完了したら、別のアラートを送信します。"]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
-{% tab 有料オーダー %}
-**Shopify有料オーダーイベント** - `shopify_paid_order`
+{% tab 支払い済みの注文 %}
+**Shopify 支払い済みの注文イベント** - `shopify_paid_order`
 
-ユーザは注文に対して支払いを行い、注文ステータスは支払い済みに変更されます。このキャンペーンでは、ユーザーに、クレジットカードの支払いがキャプチャされたか、手動での支払いがあった場合に注文が支払い済みとしてマークされたことを通知します。
+ユーザーが注文に対して支払いを行い、注文ステータスが支払い済みに変わります。このキャンペーンでは、ユーザーに、クレジットカードの支払いがキャプチャされたか、手動での支払いがあった場合に注文が支払い済みとしてマークされたことを通知します。
 
 ![カスタムイベント"shopify_paid_order".]({% image_buster /assets/img/Shopify/paid.png %})を実行するユーザーに入力するアクションベースのキャンペーン{: style="max-width:45%;"}
 
 **メッセージングの例**
 
-![テキスト &quot を含むメール;お支払いを受け取りました!あなたの注文はWoohooで支払われました!私たちが支払いを処理し、あなたの商品を準備するために、1～2営業日待ってください。その後、出荷します!" a "View Account" button.]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
+![テキスト「We've received your Payment!あなたの注文はWoohooで支払われました!私たちが支払いを処理し、あなたの商品を準備するために、1～2営業日待ってください。Then we'll ship it out!」と「View Account」ボタンが表示されているメール。]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
 {% endtabs  %}
 ### Canvases
 
 {% tabs ローカル %}
-{% tab 放棄されたチェックアウトキャンバス %}
+{% tab 購入手続き放棄キャンバス %}
 
-**放棄されたチェックアウトキャンバス**
+**購入手続き放棄キャンバス**
 
-ユーザはチェックアウトフローを破棄し、出発までにトランスアクションを完了できません。このキャンバスでは、トランスアクションを終了していないユーザーに自動リマインダーを送信して、チェックアウトフローに戻すことができます。
+ユーザーが購入手続きフローを放棄し、離れる前に取引を完了できませんでした。このキャンバスでは、取引を完了していないユーザーを購入手続きフローに呼び戻すために、このようなユーザーに自動リマインダーを送信できます。
 
-アクションベースのエントリ `shopify_abandoned_checkout`<br>
+アクションベースのエントリイベント: `shopify_abandoned_checkout`<br>
 例外イベント: `shopify_created_order` または購入
 
 ![]({% image_buster /assets/img/Shopify/abandoned_checkout_canvas.gif %})
 
 {% endtab %}
-{% tab 購入後のキャンバス %}
+{% tab 購入後処理キャンバス %}
 
-**購入後のキャンバス**
+**購入後処理キャンバス**
 
 ユーザーが購入を成功させ、自分の購入がどのように気に入ったかを知りたいと思うようになりました。このキャンバスでは、フォローアップメッセージをユーザーに送信してフィードバックを収集できます。 
 
@@ -109,15 +109,15 @@ page_order: 2
 {% endtab %}
 {% endtabs %}
 
-## 詳細
+## 上級者
 
-プラットフォームに慣れると、より複雑なユースケースs を設定できます。
+プラットフォームに慣れたら、より複雑なユースケースを設定できます。
 
 ### キャンペーン
 
 {% tabs ローカル %}
 {% tab ユーザーの推奨事項 %}
-**ユーザーの推奨事項**
+**ユーザーレコメンデーション**
 ![]({% image_buster /assets/img/Shopify/product_view.png %}){: style="max-width:30%;border:0;float:right;"}
 
 ユーザーはアイテムをクリックまたは表示しましたが、購入しませんでした。このキャンペーンは、同じまたは類似のアイテム(接続されたコンテンツで推奨)を持つユーザーにフォローアップメッセージを送信し、ユーザーにそのうちの1つを購入するように促します。
@@ -138,22 +138,22 @@ page_order: 2
 
 **返金ウィンバックキャンバス**
 
-利用者には、一部または全部の払い戻しが行われた。このキャンバスはフォローアップメッセージを送信して、ユーザーが再び購買するようにします。
+ユーザーに一部または全額が返金されました。このキャンバスは、フォローアップメッセージを送信して、ユーザーが再び購入するように働きかけます。
 
-アクションベースのエントリ `shopify_created_refund`<br>
+アクションベースのエントリイベント: `shopify_created_refund`<br>
 例外イベント: `shopify_created_order` または購入
 
 ![]({% image_buster /assets/img/Shopify/winback_canvas_refund.gif %})
 
 
 {% endtab %}
-{% tab ウィンバック・キャンセル・レイション・キャンバス %}
+{% tab ウィンバックキャンセルキャンバス %}
 
-**ウィンバック・キャンセル・レイション・キャンバス**
+**ウィンバックキャンセルキャンバス**
 
-ユーザは、フルフィルメント前に注文をキャンセルすることができました。このキャンバスはフォローアップメッセージを送信して、ユーザーが再び購買するようにします。
+ユーザーはフルフィルメント前に注文をキャンセルできました。このキャンバスは、フォローアップメッセージを送信して、ユーザーが再び購入するように働きかけます。
 
-アクションベースのエントリ `shopify_cancelled_order`<br>
+アクションベースのエントリイベント: `shopify_cancelled_order`<br>
 例外イベント: `shopify_created_order` または購入
 
 ![]({% image_buster /assets/img/Shopify/winback_canvas_cancel.gif %})

@@ -33,7 +33,7 @@ description: "이 문서에서는 일일 활성 사용자 내보내기 Braze 엔
 | `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 이전 최대 일수입니다. 1에서 100 사이여야 합니다(포함). |
 | `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
 | `app_id` | 선택 사항 | 문자열 | [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 검색한 앱 API 식별자입니다. 제외하면 작업 공간의 모든 앱에 대한 결과가 반환됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 {% raw %}

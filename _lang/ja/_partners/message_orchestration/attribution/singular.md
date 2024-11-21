@@ -1,14 +1,14 @@
 ---
-nav_title: 単数形
-article_title: 単数形
+nav_title: Singular
+article_title: Singular
 alias: /partners/singular/
-description: "この参考記事では、BrazeとSingularのパートナーシップについて概説している。Singularは、統合マーケティング分析プラットフォームで、有料インストーラのアトリビューションデータをインポートすることができる。"
+description: "このリファレンス記事では、Braze と Singular のパートナーシップについて説明します。Singular は、有料インストールアトリビューションデータをインポートできる統合マーケティング分析プラットフォームです。"
 page_type: partner
 search_tag: Partner
 
 ---
 
-# 単数形
+# Singular
 
 > Singularは、アトリビューション、コスト集計、マーケティング分析、クリエイティブレポート、ワークフローの自動化を実現する統合マーケティング分析プラットフォームである。
 
@@ -18,10 +18,10 @@ BrazeとSingularの統合により、有料インストーラのアトリビュ�
 
 | 必要条件 | 説明 |
 |---|---|
-| 単一アカウント | このパートナーシップを利用するには、Singularアカウントが必要である。 |
-| iOSまたはAndroidアプリ | この統合はiOSとAndroidアプリをサポートしている。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。これらの要件の詳細は、統合プロセスのステップ1に記載されている。 |
-| シンギュラーSDK | 必要なBraze SDKに加えて、[Singular SDKを](https://support.singular.net/hc/en-us/articles/360037640172-Getting-Started-with-the-Singular-SDK-S2S)インストールする必要がある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Singular アカウント | このパートナーシップを活用するには、Singular アカウントが必要です。 |
+| iOSまたはAndroidアプリ | この統合では、iOS アプリと Android アプリがサポートされています。ご使用のプラットフォームによっては、アプリケーションでコードスニペットが必要な場合があります。これらの要件の詳細については、統合プロセスのステップ1を参照してください。 |
+| シンギュラーSDK | 必要な Braze SDK に加えて、[Singular SDK](https://support.singular.net/hc/en-us/articles/360037640172-Getting-Started-with-the-Singular-SDK-S2S) をインストールする必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -39,12 +39,12 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-2023年2月以前は、当社のSingularアトリビューション統合は、iOSアトリビューションデータを照合するための主要識別子としてIDFVを使用していた。Objective-Cを使用しているBrazeの顧客が、インストール時にBraze`device_id` を取得し、Singularに送信する必要はない。
+2023年2月までは、Singular アトリビューション統合は、iOS アトリビューションデータを照合するための主な識別子として IDFV を使用していました。Objective-C を使用している Braze のお客様は、サービスが中断されることはないため、インストール時に Braze `device_id` を取得して Singular に送信する必要はありません。
 {% endalert%}
 
-Swift SDK v5.7.0+を使用している場合、相互識別子としてIDFVを引き続き使用したい場合は、`useUUIDAsDeviceId` フィールドが`false` に設定されていることを確認する必要があるため、統合が中断されることはない。 
+Swift SDK v5.7.0+ を使用しているお客様は、相互識別子として IDFV を引き続き使用するには、`useUUIDAsDeviceId` フィールドが `false` に設定されていることを確認する必要があります。これにより、統合が中断されることがなくなります。 
 
-`true` に設定した場合、BrazeがiOSアトリビュートに適切に一致するように、アプリインストール時にSingularにBraze`device_id` を渡すために、Swift用にiOSデバイスIDマッピングを実装する必要がある。
+`true` に設定している場合、Brazeが iOS アトリビューションを適切に照合できるように、アプリのインストール時に Singular に Braze`device_id` を渡すために、Swift用の iOS デバイス ID マッピングを実装する必要があります。
 
 {% tabs ローカル %}
 {% tab Objective-C %}
@@ -70,35 +70,35 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 ### ステップ2:Brazeデータインポートキーを取得する
 
-Brazeで、**Partner Integrations**>**Technology Partnersと**進み、**Singularを**選択する。 
+Brazeで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Singular**] を選択します。 
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**統合」の**下に**テクノロジー・パートナーが**ある。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。鍵の生成後、新しい鍵を作成したり、既存の鍵を無効にしたりすることができる。 
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。 
 
-統合を完了するには、データインポートキーとRESTエンドポイントをSingularアカウントマネージャーに提供する必要がある。<br><br>![この画像は、Singularテクノロジーのページにある「Data Import for Install Attribution」ボックスを示している。このボックスには、データ・インポート・キーとRESTエンドポイントが表示される。][4]{: style="max-width:90%;"}
+統合を完了するには、データインポートキーとRESTエンドポイントをSingularアカウントマネージャーに提供する必要がある。<br><br>![Singular テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][4]{: style="max-width:90%;"}
 
 ### ステップ3:統合を確認する
 
-BrazeがSingularからアトリビューションデータを受信すると、BrazeのSingularテクノロジーパートナーページのステータス接続インジケーターが、"Not Connected "から "Connected "に変わる。最後に成功したリクエストのタイムスタンプも含まれる。 
+Braze が Singular からアトリビューションデータを受信すると、Braze の Singular テクノロジーパートナーページのステータス接続インジケーターが [接続されていません] から [接続済み] に変わります。最後に成功したリクエストのタイムスタンプも含まれる。 
 
-これは、帰属するインストールに関するデータを受け取るまでは起こらないことに注意してほしい。Singularのポストバックから除外されるべきオーガニック・インストールは、APIによって無視され、接続が成功したかどうかを判断する際にカウントされない。
+これは、紐づけられるインストールに関するデータを受け取るまでは発生しないことに注意してください。Singular のポストバックから除外する必要があるオーガニックインストールは、Braze の API では無視され、接続の確立が成功したかどうかを判断する際に考慮されません。
 
 ## FacebookとX（旧Twitter）のアトリビューションデータ
 
-FacebookおよびX（旧Twitter）キャンペーンのアトリビューションデータは、パートナーを通じて入手することはできない。これらのメディアソースは、そのパートナーが帰属データを第三者と共有することを許可していないため、当社のパートナーがそのデータをBrazeに送信することはできない。
+FacebookおよびX（旧Twitter）キャンペーンのアトリビューションデータは、当社のパートナーを通じて利用できません。これらのメディアソースは、そのパートナーが帰属データを第三者と共有することを許可していないため、当社のパートナーがそのデータをBrazeに送信することはできない。
 
 ## Brazeの単一クリックトラッキングURL（オプション）
 
-Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROIを最大化するためにどこにリソースを投資すべきか、データに基づいた意思決定ができるようになる。
+Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROI を最大化するためにどこにリソースを投資すべきかについて、データに基づいた意思決定ができるようになります。
 
 Singularクリック・トラッキング・リンクを使い始めるには、[ドキュメントを](https://support.singular.net/hc/en-us/articles/360030934212-Singular-Links-FAQ?navigation_side_bar=true)参照すること。SingularのクリックトラッキングリンクをBrazeのキャンペーンに直接挿入することができる。その後、Singularは[確率的アトリビューション手法を用いて](https://support.singular.net/hc/en-us/articles/115000526963-Understanding-Singular-Mobile-App-Attribution?navigation_side_bar=true)、リンクをクリックしたユーザーをアトリビュートする。Brazeキャンペーンからの帰属の精度を高めるために、Singularトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーの属性が決定的になる。
 
 {% tabs ローカル %}
-{% tab アンドロイド %}
-Androidの場合、Brazeは[Google Advertising ID収集（GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)）にオプトインすることができる。GAIDはまた、Singular SDKの統合によってネイティブに収集される。以下のLiquidロジックを利用することで、SingularクリックトラッキングリンクにGAIDを含めることができる：
+{% tab Android %}
+Android の場合、Braze ではお客様が [Google 広告 ID (GAID) 収集]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Singular SDK統合によってネイティブに収集されます。以下のLiquidロジックを利用することで、SingularクリックトラッキングリンクにGAIDを含めることができる：
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -122,7 +122,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtabs %}
 
 {% alert note %}
-**この推奨は純粋にオプションである。**<br>
+**この推奨事項の適用は完全に任意です。**<br>
 現在、クリックトラッキングのリンクにIDFVやGAIDのようなデバイス識別子を使用していない場合、または今後使用する予定がない場合でも、Singularは確率的モデリングによってこれらのクリックを識別することができる。
 {% endalert %}
 

@@ -7,7 +7,7 @@ glossary_top_header: "Glossary Template"
 glossary_top_text: "This is a test Glossary Page."
 
 #Required
-description: "이것은 Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간단히 유지하세요."
+description: "Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간결하게 작성하세요."
 page_type: glossary
 #Use if applicable
 

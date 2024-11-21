@@ -16,7 +16,7 @@ description: "この記事では、iOS SWIFT SDK サンプルアプリについ�
 
 ## サンプルのナビゲーション
 
-いくつかのテストアプリケーションは、[SWIFT SDK GitHubリポジトリ][1]の`Examples`フォルダー内で利用できます。READMEには、次のようなサンプル統合のさまざまな組み合わせが記載されています。
+いくつかのテストアプリケーションは、[SWIFT SDK GitHubリポジトリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples)の`Examples`フォルダー内で利用できます。READMEには、次のようなサンプル統合のさまざまな組み合わせが記載されています。
 
 1. 統合タイプ（SWIFTパッケージマネージャー、CocoaPods、手動）
 2. コーディング言語（SWIFTとOBJECTIVE-C）
@@ -28,9 +28,7 @@ description: "この記事では、iOS SWIFT SDK サンプルアプリについ�
 
 以下の手順に従って、テストアプリケーションをビルドして実行します。
 
-1. 新しい[ワークスペース][2]を作成し、アプリ識別子APIキーおよびエンドポイントに注意してください。
+1. 新しい[ワークスペース]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps)を作成し、アプリ識別子APIキーおよびエンドポイントに注意してください。
 2. 統合方法 (Swift Package Manager、CocoaPods、Manual) に基づいて、適切な `xcodeproj` ファイルを選択して開きます。
 3. `Credentials`ファイルの適切なフィールドにAPIキーとエンドポイントを配置します。
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples
-[2]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps

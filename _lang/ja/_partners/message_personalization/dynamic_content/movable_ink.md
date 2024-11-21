@@ -2,7 +2,7 @@
 title: "Movable Ink"
 article_title: Movable Ink
 alias: "/partners/movable_ink/"
-description: "このリファレンス記事は、BrazeとMovable Inkのパートナーシップについて概説しています。これは、デジタルマーケティング担当者に顧客を動かす魅力的でユニークなビジュアル体験を作成する方法を提供するクラウドベースのソフトウェアプラットフォームです。"
+description: "このリファレンス記事では、Braze と Movable Ink のパートナーシップについて説明します。Movable Ink は、顧客に印象づける説得力のある独特なビジュアルエクスペリエンスを作成できるデジタルマーケターに提供するクラウドベースのソフトウェアプラットフォームです。"
 page_type: partner
 search_tag: Partner
 
@@ -10,121 +10,122 @@ search_tag: Partner
 
 # Movable Ink
 
-> [Movable Ink](https://www.movableink.com/) は、デジタルマーケティング担当者に顧客を動かす魅力的でユニークなビジュアル体験を作成する方法を提供するクラウドベースのソフトウェアプラットフォームです。Movable Inkプラットフォームは、キャンペーンに簡単に挿入できる貴重なカスタマイズオプションを提供します。 
+> [Movable Ink](https://www.movableink.com/) は、顧客に印象づける説得力のある独特なビジュアルエクスペリエンスを作成できる手段をデジタルマーケターに提供するクラウドベースのソフトウェアプラットフォームです。Movable Ink プラットフォームは、キャンペーンに簡単に挿入できる有用なカスタマイズオプションを提供します。 
 
-Movable Ink のインテリジェントクリエイティブ機能（投票、カウントダウンタイマー、スクラッチオフなど）を活用して、私たちのクリエイティブ能力を拡大します。Movable InkとBrazeの統合により、ダイナミックなデータドリブン型のメッセージに対するより包括的なアプローチが可能になり、ユーザーにとって重要な事柄に関するリアルタイムの要素が提供されます。
+ポーリング、カウントダウンタイマー、スクラッチオフなど、Movable Ink の Intelligent Creative 機能を利用して Braze のクリエイティブ機能を拡大します。Movable Ink と Braze の統合により、動的なデータドリブン型メッセージへのよりバランスの取れたアプローチを可能にし、重要な事柄に関するリアルタイムの要素をユーザーに提供します。
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
-| Movable Inkアカウント | このパートナーシップを利用するには、Movable Inkアカウントが必要です。 |
-| データソース | データソースをMovable Inkに接続する必要があります。これは、CSV、Web サイトのインポート、またはAPIを通じて行うことができます。BrazeとMovable Inkの間でデータを統一する識別子（例えば、`external_id`）を渡すようにしてください。
-{: .reset-td-br-1 .reset-td-br-2}
+| Movable Ink アカウント | このパートナーシップを活用するには、Movable Ink アカウントが必要です。 |
+| データソース | データソースを Movable Ink に接続する必要があります。これは、CSV、Web サイトインポート、または API を使用して実行できます。Braze と Movable Ink の間で統一 ID (`external_id` など) を使用してデータを渡していることを確認します。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
-- パーソナライズされた月次または年末のまとめ。
-- 最後に知られている行動に基づいて、メール、プッシュ、またはリッチ通知の画像を動的にパーソナライズします。<br>
-	例えば： 
-	- APIからデータを取得してイベントのスケジュールを動的に作成するためにリッチプッシュメッセージを使用します。 
-	- カウントダウンタイマー機能を使用して、大規模なセールが近づいていることをユーザーに通知します（例えば、ブラックフライデー、バレンタインデー、ホリデーセールなど）。
-	- プロモコードを配布する楽しくインタラクティブな方法としてスクラッチオフ機能を使用してください。
 
-## サポートされているMovable Ink機能
+- パーソナライズされた月ごとの要約または年末の要約。
+- 直近の既知の動作に基づいて、メール、プッシュ、またはリッチプッシュ通知に使用される画像をダイナミックにパーソナライズします。<br>
+	以下に例を示します。 
+	- リッチプッシュメッセージを使用して、API からデータを取得してイベントのスケジュールを動的に作成します。 
+	- 大規模なセール (ブラックフライデー、バレンタインデー、祝日セールなど) が近づいているときに、カウントダウンタイマーを使用してユーザーに通知します。
+	- プロモーションコードを配信する楽しくインタラクティブな方法として、Scratch Off 機能を使用します。
 
-インテリジェントクリエイティブには、Brazeユーザーが活用できる多くの提供があります。次のリストは、サポートされている機能を示しています。 
+## サポートされている Movable Ink の機能
 
-| Movable Ink機能 | 特徴 | リッチプッシュ通知 | アプリ内メッセージング / コンテンツカード / メール | 詳細 |
+Intelligent Creative には、Braze のユーザーが利用できる多くのサービスがあります。次のリストに、サポートされている機能を示します。 
+
+| Movable Ink の機能 | 機能 | リッチプッシュ通知 | アプリ内メッセージ/コンテンツカード/メール | 詳細 |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |
-| クリエイティブオプティマイザー | A/Bコンテンツを表示 | ✗ | ✔ | |
-|| 最適化する | ✗ | ✔* | \* Branchのディープリンクソリューションを使用する必要があります |
-| ターゲティングルール | 日付 | ✔* | ✔ | サポートされていますが、推奨されません。プッシュ通知は受信時にキャッシュされ、更新されません。 |
-|| 曜日 | ✔* | ✔ | サポートされていますが、推奨されません。プッシュ通知は受信時にキャッシュされ、更新されません。 |
-|| 時刻 | ✔* | ✔ | サポートされていますが、推奨されません。プッシュ通知は受信時にキャッシュされ、更新されません。 |
-| ストーリー/行動活動 | | ✔* | ✔* | \* Braze に使用される一意のユーザー識別子は、メールサービスプロバイダー (ESP) の識別子にリンクされている必要があります |
-| アプリ内のディープリンク | | ✔* | ✔* | \* お客様にスムーズな体験を提供するために、確立されたディープリンクソリューションをBranch経由で使用するか、Movable Inkのクライアントエクスペリエンスチームによる検証済みのソリューションを使用してください。 |
-| アプリ | カウントダウンタイマー | ✔* | ✔ | サポートされていますが、推奨されません。プッシュ通知は受信時にキャッシュされ、更新されません。 |
-|| 世論調査 | ✗ | ✔* | \* 投票後、アプリをモバイルランディングページにします |
-|| スクラッチオフ | ✔* | ✔* | クリックすると、スクラッチオフ体験のためにアプリを離れます |
-|| 動画 | ✔* | ✔* | アニメーションGIFのみ,<br>Androidの場合、Brazeは実装において[GIFサポート][GIFサポート]を必要とします。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| クリエイティブ・オプティマイザー | A/B コンテンツの表示 | ✗ | ✔ | |
+|| 最適化 | ✗ | ✔* | \* Branch のディープリンクソリューションを使用する必要がある |
+| ターゲティングルール | 日付 | ✔* | ✔ | \* プッシュ通知は受信時にキャッシュされ、更新されないため、サポートされますが推奨されません |
+|| 曜日 | ✔* | ✔ | \* プッシュ通知は受信時にキャッシュされ、更新されないため、サポートされますが推奨されません |
+|| 時刻 | ✔* | ✔ | \* プッシュ通知は受信時にキャッシュされ、更新されないため、サポートされますが推奨されません |
+| ストーリー/行動アクティビティ | | ✔* | ✔* | \* Brazeに使用される一意のユーザー識別子を、メールサービスプロバイダー (ESP) にリンクする必要がある |
+| アプリ内のディープリンク | | ✔* | ✔* | \* 顧客に効率化されたエクスペリエンスを提供するには、Branch で確立されたディープリンクソリューションを使用するか、Movable Ink のクライアントエクスペリエンスチェンジチームによる検証済みソリューションを使用します。 |
+| アプリ | カウントダウンタイマ | ✔* | ✔ | \* プッシュ通知は受信時にキャッシュされ、更新されないため、サポートされますが推奨されません |
+|| ポーリング | ✗ | ✔* | \* 投票後、アプリを移動式ランディングページに残す |
+|| スクラッチオフ | ✔* | ✔* | \* クリックすると、スクラッチオフエクスペリエンスのためにアプリが終了する |
+|| 動画 | ✔* | ✔* | \* アニメーションGIF のみ。<br>Android の場合、Braze は実装で [GIF サポート][GIF サポート]を必要とする |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
-### ステップ1:Movable Inkのデータソースを作成する
+### ステップ1:Movable Inkのデータソースの作成
 
-顧客は、CSV、Web サイトインポート、またはAPI統合のいずれかであるデータソースを作成する必要があります。
+顧客は、CSV、Web サイトのインポート、または API統合のいずれかのデータソースを作成する必要があります。
 
-![表示されるさまざまなデータソースオプション:CSV アップロード、Web サイト、または API 統合。]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![表示されるさまざまなデータソースオプション:CSV アップロード、Web サイト、またはAPI 統合。]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab CSVデータソース %}
-- **CSVデータソース**:各行には少なくとも1つのSegment列と1つのコンテンツ列が必要です。CSVファイルがアップロードされたら、どの列をコンテンツのターゲットに使用するかを選択します。 [例のCSVファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+- **CSV データソース**:各行には、少なくとも1つのSegment列と1つの内容列が必要です。CSV がアップロードされたら、コンテンツのターゲットを設定するために使用する列を選択します。[例: CSV ファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
-![「CSV」をデータソースとして選択する際に表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
+![「CSV」をデータソースとして選択すると表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
-{% tab Web サイト データソース %}
-- **Web サイト データソース**:各行には少なくとも1つのSegment列と1つのコンテンツ列が必要です。CSVをアップロードした後、どの列をコンテンツのターゲットに使用するかを選択します。
-  - このプロセスの中で、次のことをマッピングする必要があります:
-    - どのフィールドがセグメントとして使用されますか
-    - クリエイティブ内で動的にパーソナライズされたデータフィールドとして使用したいフィールドはどれですか（例：ユーザー属性や名、姓、市区町村など）。
+{% tab Web サイトデータソース %}
+- **Web サイトデータソース**:各行には、少なくとも1つのSegment列と1つの内容列が必要です。CSV がアップロードされたら、コンテンツのターゲットを設定するために使用する列を選択します。
+  - このプロセスでは、以下をマップする必要があります。
+    - セグメントとして使用されるフィールドs
+    - クリエイティブでダイナミックにパーソナライズできるデータフィールドとして使用するフィールド (例:ユーザー属性、姓、名、市区町村などのカスタム属性)。
 
-![「データソース」として「Web サイト」を選択したときに表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
+![「Website」をデータソースとして選択すると表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
-{% tab API統合 %}
-- **API統合**:会社のAPIを使用して、API応答から直接コンテンツを提供します。
+{% tab API 統合 %}
+- **API 統合**:自社の API を使用して、API レスポンスから直接ココンテンツを供給します。
 
-![データソースとして「API統合」を選択したときに表示されるフィールド]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
+![「API Integration」をデータソースとして選択すると表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
 {% endtabs %}
 
-### ステップ2:Movable Inkプラットフォームでキャンペーンを作成する
+### ステップ2:Movable Ink プラットフォームでのキャンペーンの作成
 
-Movable Inkのホーム画面から、キャンペーンを作成します。HTML、画像からのメール、またはプッシュ、アプリ内メッセージ、コンテンツカード（推奨）を含む任意のチャネルで使用できるブロックから選択できます。
-また、ブロックを通じて利用できるさまざまなコンテンツオプションを確認することをお勧めします。
+Movable Inkのホームスクリーンから、キャンペーンを作成します。HTML からのメールの開始、画像からのメールの開始、または任意のチャネルで使用できるブロックの作成 (プッシュ、アプリ内メッセージ、コンテンツカード(推奨) など) のいずれかを選択できます。
+また、ブロックを通じて利用できるさまざまなコンテンツオプションを確認することもお勧めします。
 
-![新しいMovable Inkキャンペーンを作成する際のMovable Inkプラットフォームの{画像}です。]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![新しい Movable Ink キャンペーンを作成するときの Movable Ink プラットフォーム。]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
-Movable Inkには、テキスト、画像などの要素をドラッグ＆ドロップできる簡単なエディターがあります。データソースを入力した場合、データプロパティを使用して動的に画像を生成できます。さらに、キャンペーンが送信され、ユーザーがパーソナライゼーションの基準に合わない場合、このフロー内でユーザーのためにフォールバックを作成することもできます。
+Movable Inkには、テキストや画像などの要素をドラッグアンドドロップできる簡単なエディターがあります。データソースを入力した場合は、データプロパティを使用して画像をダイナミックに生成できます。また、このフロー内に、ユーザーs のフォールバックs を作成することもできます。これは、キャンペーンが送信され、ユーザーがパーソナライゼーション基準内に収まらない場合です。
 
-![Movable Inkブロックエディタは、さまざまなカスタマイズ可能な要素を表示します。]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
+![さまざまなカスタマイズ可能な要素を表示するMovable Ink ブロックエディタ。]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-キャンペーンを終了する前に、ダイナミックな画像をプレビューし、クエリパラメータをテストして、画像が表示されるときの見た目を確認してください。完了すると、ダイナミックなURLが生成され、それをBrazeに挿入できます！
+キャンペーンを終了する前に、ダイナミックな画像をプレビューし、クエリパラメーターを試してビューで画像がどのように表示されるかを確認してください。完了すると、ダイナミックな URLが生成され、Brazeに挿入できるようになります。
 
-Movable Inkプラットフォームの使用方法の詳細については、[Movable Inkサポートセンター][サポート]を参照してください。
+Movable Ink プラットフォームの使用方法の詳細については、[Movable Ink サポートセンター][サポートを参照してください。]
 
-### ステップ 3:Movable Ink コンテンツ URL を取得
+### ステップ3:Movable Ink コンテンツ URL を取得する
 
-BrazeメッセージにMovable Inkコンテンツを含めるには、Movable Inkが提供したソースURLを見つける必要があります。 
+Movable Ink のコンテンツを Braze メッセージに含めるには、Movable Ink から提供されたソース URL を確認する必要があります。 
 
-ソースURLを取得するには、Movable Inkダッシュボードでコンテンツを設定し、そこからコンテンツを完成させてエクスポートする必要があります。「完了」ページで、クリエイティブタグからソースURL（`img src`）をコピーします。
+ソース URL を取得するには、Movable Ink ダッシュボードでコンテンツを設定し、完了してコンテンツをエクスポートする必要があります。**Finish**ページで、ソースURL(`img src`)をクリエイティブタグからコピーします。
 
-![Movable Inkキャンペーンを完了した後に表示されるページで、ここにコンテンツURLが表示されます。]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![Movable Ink キャンペーンが完成した後に表示されるページにコンテンツ URLが表示される。]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-次に、Brazeプラットフォームで、適切なフィールドにURLを貼り付けます。ステップ4に、メッセージングチャネルに適したフィールドが見つかります。最後に、マージタグ（{% raw %}```&mi_u=%%email%%```{% endraw %}など）を対応するLiquid変数（{% raw %}```&mi_u={{${email_address}}}```{% endraw %}など）に置き換えます。
+次に Braze プラットフォームで、URL を該当するフィールドに貼り付けます。メッセージングチャネルに適したフィールドは、4ステップに記載されています。最後に、マージタグ ({% raw %}```&mi_u=%%email%%```{% endraw %} など) を対応するLiquid 変数 ({% raw %}```&mi_u={{${email_address}}}```{% endraw %} など) に置き換えます。
 
-### ステップ4:Brazeエクスペリエンス
+### ステップ4:Braze体験
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab メール %}
-Brazeプラットフォームで、クリエイティブタグをメール本文に貼り付けます。![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
+Braze プラットフォームで、クリエイティブなタグをメール本文に貼り付けます。![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
 {% endtab %}
 {% tab プッシュ通知 %}
 
-1. Brazeプラットフォーム内で:
-	- Androidプッシュ:**プッシュアイコン画像**と**拡張通知画像**フィールドにURLを貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
-	- iOSプッシュ:**メディア**リンクフィールドにURLを貼り付け、使用しているファイル形式を示します。<br>![]({% image_buster /assets/img/movable_ink/ios.png %}){: style="max-width:60%"}<br><br>
-	- Web プッシュ:URLを**プッシュアイコン画像**および**大きな通知画像**フィールドに貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
-2. 画像がキャッシュされないようにするには、メッセージ内のURLの前に空のLiquidタグを付けます:<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+1. Braze プラットフォームの場合:
+	- Android プッシュ:**プッシュアイコン画像**と**拡張通知画像**フィールドにURLを貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
+	- iOS プッシュ**Media**リンクフィールドにURLを貼り付け、使用しているファイル形式を示します。<br>![]({% image_buster /assets/img/movable_ink/ios.png %}){: style="max-width:60%"}<br><br>
+	- Web プッシュURL を [**プッシュ通知アイコンの画像**] と [**大きな通知画像**] フィールドに貼り付けます。<br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
+2. 画像がキャッシュされないようにするため、メッセージの URL の先頭に空の Liquid タグを追加します。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
-{% tab アプリ内メッセージ %}
+{% tab アプリ中電文 %}
 
-1. Brazeプラットフォームで、URLを**リッチプッシュ通知メディア**フィールドに貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
-2. キャッシュを防ぐためにユニークなURLを提供してください。Movable Ink のリアルタイム画像が機能し、キャッシュの影響を受けないことを確認するには、Liquid を使用して Movable Ink 画像 URL の末尾にタイムスタンプを追加します。
+1. Braze プラットフォームで [**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+2. キャッシュの防止に役立つ一意のURL を指定します。Movable Ink のリアルタイム画像が機能し、キャッシュの影響を受けないようにするため、Liquid を使用して、Movable Ink 画像 URL の末尾にタイムスタンプを付加します。
 
-これを行うには、必要に応じて画像URLを置き換えて、次の構文を使用します:
+これを行うには、次の構文を使用します。必要に応じて画像 URL を置き換えます。
 {% raw %}
 ```
 {% assign timestamp = "now" | date: "%s" %}
@@ -132,19 +133,19 @@ Brazeプラットフォームで、クリエイティブタグをメール本文
 {{img}}
 ```
 {% endraw %}
-このテンプレートは現在の時間（秒単位）を取得し、それをMovable Ink画像タブの末尾に（クエリパラメータとして）追加して、最終結果を出力します。**テスト** タブでプレビューできます - これによりコードが評価され、プレビューが表示されます。
+このテンプレートは、現在の時刻 (秒単位) を取得し、それを Movable Ink 画像タブの終わりに (クエリパラメーターとして) 付加し、最終結果を出力します。**Test**タブでプレビューできます。これにより、コードが評価され、プレビューが表示されます。
 
-**3\.**最後に、Segmentのメンバーシップを再評価します。これを行うには、`Re-evaluate audience membership and liquid at send-time`オプションを**ターゲットオーディエンス**ステップのキャンペーンで有効にします。このオプションが利用できない場合は、顧客成功マネージャーまたはBrazeサポートに連絡してください。このオプションは、アプリ内メッセージがトリガーされるたびに一意のURLを提供するキャンペーンを再リクエストするようにBraze SDKに指示します。
+**3\.**最後に、セグメントのメンバーシップを再評価します。これを行うには、キャンペーンの**Target Audiences**ステップにある`Re-evaluate audience membership and liquid at send-time`を有効にします。この項目を選択できない場合は、顧客のサクセスマネージャーまたはBrazeサポートに連絡してください。このオプションは、アプリ内メッセージがトリガーされるたびに、一意の URL を指定してキャンペーンを再要求するように Braze SDK に指示します。
 
 {% endtab %}
-{% tab コンテンツカード %}
+{% tab Content Card %}
 
-1. Brazeプラットフォームで、URLを**リッチプッシュ通知メディア**フィールドに貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
-2. モバイルの場合:iOSおよびAndroidのコンテンツカード画像は受信時にキャッシュされ、更新されません。 
-  - 回避策として、キャンペーンを毎日、毎週、または毎月の定期的なメッセージとしてスケジュールし、対応する有効期限を設定してコンテンツカードを再テンプレート化します。例えば、コンテンツカードは1日に1回更新する必要がある場合、1日の有効期限で毎日スケジュールされた送信として設定する必要があります。
-3. Movable Ink のリアルタイム画像が機能し、コンテンツカードが再テンプレート化されたときにキャッシュの影響を受けないようにするために、Liquid を使用して Movable Ink 画像 URL の末尾にタイムスタンプを追加します。
+1. Braze プラットフォームで [**リッチプッシュ通知メディア**] フィールドに URL を貼り付けます。![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+2. モバイル:iOS および Android のコンテンツカードの画像は、受信時にキャッシュされ、更新されません。 
+  - 回避策として、キャンペーンを毎日、毎週、または毎月の定期的なメッセージとしてスケジュールし、対応する有効期限を設定します。これにより、コンテンツカードが再テンプレート化されます。たとえば、1日に1回更新する必要があるコンテンツカードは、有効期間が1日に設定された毎日のスケジュール送信として設定する必要があります。
+3. コンテンツカードが再テンプレート化されたときに、Movable Ink のリアルタイム画像が機能し、キャッシュの影響を受けないようにするため、Liquid を使用して、Movable Ink 画像 URL の末尾にタイムスタンプを付加します。
 
-これを行うには、必要に応じて画像URLを置き換えて、次の構文を使用します:
+これを行うには、次の構文を使用します。必要に応じて画像 URL を置き換えます。
 {% raw %}
 ```
 {% assign timestamp = "now" | date: "%s" %}
@@ -152,26 +153,26 @@ Brazeプラットフォームで、クリエイティブタグをメール本文
 {{img}}
 ```
 {% endraw %}
-このテンプレートは現在の時間（秒単位）を取得し、それをMovable Ink画像タブの末尾に（クエリパラメータとして）追加して、最終結果を出力します。**テスト** タブでプレビューでき、コードを評価してプレビューを表示します。
+このテンプレートは、現在の時刻 (秒単位) を取得し、それを Movable Ink 画像タブの終わりに (クエリパラメーターとして) 付加し、最終結果を出力します。**Test**タブでプレビューできます。これにより、コードが評価され、プレビューが表示されます。
 
 {% endtab %}
 {% endtabs %}
 
 ## トラブルシューティング
- 
-#### ダイナミックな画像が正しく表示されない？どのチャネルに問題がありますか？
-- **押す**:Movable Ink 画像 URL の前に空のロジックがあることを確認してください。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **アプリ内メッセージとコンテンツカード**:各インプレッションの画像URLが一意であることを確認してください。これは、各URLが異なるように適切なLiquidを追加することで実行できます。[アプリ内およびコンテンツカードメッセージの指示][指示]をご覧ください。 
-- **画像 not loading**:必ずすべての「マージタグ」をBrazeダッシュボードの対応するLiquidフィールドに置き換えてください。例えば: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} と {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}。
 
-#### AndroidでGIFを表示するのに問題がありますか？
-- Androidは実装にGIFサポートを必要とします。Androidの[アプリ内メッセージカスタマイズ][GIFサポート]記事に従って、この設定がない場合は設定してください。
+### 動的画像が正しく表示されませんか?どんなチャネルで苦労していますか？
+- **プッシュ通知**Movable Ink 画像 URL の前に空のロジックがあることを確認します。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+- **アプリ内メッセージとコンテンツカード**:画像 URL がインプレッションごとに一意であることを確認します。このためには、各URL が異なる URL になるように適切な Liquid を追加します。[アプリ内メッセージとコンテンツカードメッセージの手順][手順]を参照してください。 
+- **画像が読み込まれない**:Braze ダッシュボードで、すべての「マージタグ」を対応する Liquid フィールドに必ず置き換えてください。たとえば、{% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} を {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %} に置き換えます。
+
+### Android で GIF を表示するときに問題がありますか?
+- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android[アプリ内メッセージ customization][GIFsupport] 記事に従ってください。
 
 [1]: https://www.movableink.com/
-[データソース]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-[サポート]: https://support.movableink.com/
-[GIFサポート]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-[指示]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
+[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[support]: https://support.movableink.com/
+[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
+[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})

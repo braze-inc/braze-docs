@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# 쿼리 또는 목록 \[항목 엔드포인트 "Gets"]
+# 쿼리 또는 목록 [항목 엔드포인트 "Gets"]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -41,7 +41,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 | `limit` | 선택 사항 | 정수 | 반환되는 결과 수를 제한하는 선택적 필드입니다. 기본값은 100, 최대값은 500입니다. |
 | `offset` | 선택 사항 | 정수 | 검색할 목록의 시작점(선택 사항)입니다. |
 | `phone_numbers` | 선택 사항 <br>(참고 참조) | e.164 형식의 문자열 배열 | 제공된 전화번호가 유효하지 않은 것으로 확인되면 해당 전화번호를 반환해 드립니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `start_date` 와 `end_date` 또는 `phone_numbers` 중 하나를 제공해야 합니다. `start_date`, `end_date`, `phone_numbers` 세 가지를 모두 제공하면 주어진 전화번호를 우선시하고 날짜 범위는 무시합니다.

@@ -1,5 +1,5 @@
 ---
-nav_title: 支店
+nav_title: Branch
 config_only: true
 noindex: true
 layout: blank_config

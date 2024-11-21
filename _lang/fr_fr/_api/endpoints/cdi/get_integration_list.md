@@ -33,7 +33,7 @@ Chaque appel à cet endpoint renverra 10 éléments. Pour une liste comportant p
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination de la liste d'intégration. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -95,7 +95,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Erreur | Résolution des problèmes |
 | --- | --- |
 | `400 Invalid cursor` | Vérifiez que votre `cursor` est valide. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Pour connaître les autres codes d'état et les messages d'erreur associés, reportez-vous à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 

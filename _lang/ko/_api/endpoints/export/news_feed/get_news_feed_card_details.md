@@ -35,7 +35,7 @@ description: "이 문서에서는 뉴스피드 카드 세부 정보 내보내기
 | 매개변수 | 필수 | 데이터 유형 | 설명            |
 | --------- | -------- | --------- | ---------------------- |
 | `card_id` | 필수 | 문자열 | [카드 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. <br><br> 지정된 카드의 `card_id`는 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 대시보드 내 카드 세부 정보 페이지에서 찾을 수 있으며, [뉴스피드 카드 목록 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)를 사용할 수도 있습니다.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
 {% raw %}

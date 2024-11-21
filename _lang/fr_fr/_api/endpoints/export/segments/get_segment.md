@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /segments/list
 {% endapimethod %}
 
-> Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son nom, l’identifiant API du segment et s’il a un suivi des analyses activé. 
+> Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son nom, l’identifiant API du segment et s’il a un suivi des analyses activé.
 
 Les segments sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut). Les segments archivés ne sont pas inclus.
 
@@ -34,7 +34,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | -------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier | La page des segments à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
 | `sort_direction` | Facultatif | Chaîne de caractères | \- Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

@@ -60,7 +60,7 @@ Braze Web SDK には、統合作業をスピードアップするコンテンツ
 |---|---|
 |`parentNode` | コンテンツカードをレンダリングするHTMLノード。親ノードがすでに直系の子孫として Braze コンテンツカードビューを持っている場合、既存のコンテンツカードは置き換えられます。たとえば、`document.querySelector(".my-container")` を渡す必要があります。|
 |`filterFunction` | このビューに表示されるカードのフィルターまたはソート機能。`Card` オブジェクトの配列で呼び出され、`{pinned, date}` でソートされます。このユーザーにレンダリングするために、ソートされた `Card` オブジェクトの配列を返す必要があります。省略した場合は、すべてのカードが表示される。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 コンテンツカードの切り替えに関する詳細は、[SDK リファレンスドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)を参照してください。
 
@@ -85,7 +85,7 @@ Braze Web SDK には、3種類のコンテンツカードがあります。[Imag
 | `updated` | このカードが最後に更新されたUNIXタイムスタンプ。 |
 | `viewed` | このプロパティは、ユーザがカードを閲覧したかどうかを反映する。|
 | `isControl` | カードが AB テスト内の「コントロール」グループである場合、このプロパティは `true` です。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 画像のみのコンテンツカード・プロパティ - ImageOnly
 
@@ -102,7 +102,7 @@ Braze Web SDK には、3種類のコンテンツカードがあります。[Imag
 | `imageUrl` | カードの画像のURL。|
 | `linkText` | URLの表示テキスト。 |
 | `url` | カードがクリックされた後に開かれるURL。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### キャプション付き画像 コンテンツカードのプロパティ - CaptionedImage
 
@@ -120,7 +120,7 @@ Braze Web SDK には、3種類のコンテンツカードがあります。[Imag
 | `linkText` | URLの表示テキスト。 |
 | `title` | このカードのタイトルテキスト。 |
 | `url` | カードがクリックされた後に開かれるURL。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### クラシックコンテンツカードのプロパティ - ClassicCard
 
@@ -139,7 +139,7 @@ Braze Web SDK には、3種類のコンテンツカードがあります。[Imag
 | `linkText` | URLの表示テキスト。 |
 | `title` | このカードのタイトルテキスト。 |
 | `url` | カードがクリックされた後に開かれるURL。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 対照群 
 
@@ -161,7 +161,7 @@ Braze Web SDK には、3種類のコンテンツカードがあります。[Imag
 |[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)|前回のコンテンツカードの更新から、現在利用可能なすべてのカードを取得する。|
 |[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| コンテンツカードの更新を購読する。<br> サブスクライバーのコールバックは、コンテンツカードが更新されるたびに呼び出されます。 | 
 |[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)|プログラムでカードを解除する（v2.4.1で利用可能）。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 詳細については、[SDK リファレンスドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)を参照してください。
 

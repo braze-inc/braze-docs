@@ -53,11 +53,11 @@ Braze アプリをインストールした後、Braze にリダイレクトさ�
 
 ### ステップ2:イベントと履歴バックフィルの選択
 
-Shopify ストアを接続したら、ステップ2に進み、統合に含めるイベントを選択します。少なくとも1つのイベントを選択する必要があります。
+Shopify ストアを接続したら、ステップ2に進み、統合の一部として含めるイベントを選択します。少なくとも1つのイベントを選択する必要があります。
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_2_events.png %}){: style="max-width:70%"}
 
-[**製品の表示**]、[**製品のクリック**]、または [**カート放棄**] イベントを選択する場合、トラッキングのために Braze Web SDKが必要になります。Braze Web SDK を[Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を介して実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features) に直接実装すると、Braze によりトラッキングスクリプトが自動的に生成され、サイトに読み込まれます。Web SDK を[ヘッドレス Shopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)に実装する場合は、これらのイベントのトラッキングを手動でオンにする必要があります。 
+[**製品の表示**]、[**製品のクリック**]、または [**カート放棄**] イベントを選択する場合、トラッキングのために Braze Web SDKが必要になります。[Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を使用して Braze Web SDK を実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features) に直接実装すると、Braze によりトラッキングスクリプトが自動的に生成され、サイトに読み込まれます。Web SDK を[ヘッドレス Shopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)に実装する場合は、これらのイベントのトラッキングを手動でオンにする必要があります。 
 
 #### 履歴データのバックフィル(オプション)
 
@@ -75,7 +75,7 @@ Shopifyインテグレーションを使用すると、Shopifyストアからメ
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_3_email.png %}){: style="max-width:70%"}
 
-### ステップ 4:Shopify 製品の同期を設定する (オプション)
+### ステップ4:Shopify 製品の同期を設定する (オプション)
 
 必要に応じて、Shopify ストアから Braze カタログに製品をほぼリアルタイムで同期できます。これにより、メッセージのより細かなパーソナライゼーションのために製品データを取り込むプロセスが自動化されます。詳しくは、[Shopify product syncs]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/) を参照してください。
 
@@ -83,11 +83,11 @@ Shopifyインテグレーションを使用すると、Shopifyストアからメ
 
 ### ステップ 5: ブラウザ内メッセージングを有効にする 
 
-必要に応じて、この機能を有効にすることで、Shopif yストアの追加チャネルをブラウザー内メッセージで使用することができます。これにより、スライドアップ、モーダル、フルスクリーン、シンプルなアンケート、カスタムHTMLなどの基本的なメッセージタイプを使用できます。
+必要に応じて、この機能を有効にすることで、Shopify ストアの追加チャネルをブラウザー内メッセージで使用することができます。これにより、スライドアップ、モーダル、フルスクリーン、シンプルなアンケート、カスタムHTMLなどの基本的なメッセージタイプを使用できます。
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_5_channels.png %}){: style="max-width:70%"}
 
-ブラウザー内メッセージを有効にする場合は、トラッキングのために Braze Web SDKを実装する必要があります。Braze Web SDK を [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を介して実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features)に直接実装すると、Braze により基本的なブラウザー内メッセージ実装スクリプトが自動的に生成され、サイトに読み込まれます。[ヘッドレスShopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)にWeb SDKを実装する場合、またはブラウザ内メッセージにカスタマイズを追加する場合は、[開発者ガイド](/developer_guide/platform_integration_guides/web/in-app_messaging/integration/)を使用して、手動でブラウザ内メッセージをサイトに追加する必要があります。 
+ブラウザー内メッセージを有効にする場合は、トラッキングのために Braze Web SDKを実装する必要があります。[Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) を使用して Braze Web SDK を実装するか、または Shopify サイト [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features)に直接実装すると、Braze により基本的なブラウザー内メッセージ実装スクリプトが自動的に生成され、サイトに読み込まれます。[ヘッドレスShopifyサイト]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk)にWeb SDKを実装する場合、またはブラウザ内メッセージにカスタマイズを追加する場合は、[開発者ガイド](/developer_guide/platform_integration_guides/web/in-app_messaging/integration/)を使用して、手動でブラウザ内メッセージをサイトに追加する必要があります。 
 
 ### ステップ 6: 設定完了
 
@@ -103,7 +103,7 @@ Shopifyインテグレーションを使用すると、Shopifyストアからメ
 
 #### 放棄カート or カート放棄のアップデートとチェックアウトの遅延
 
-デフォルトでは、Braze は`shopify_abandoned_checkout` および`shopify_abandoned_cart` イベントのトリガーの遅延時間を1時間 (何も操作が行われなかった時間) に自動的に設定します。☆ [**カート放棄の遅延**] と [**チェックアウト放棄遅延**] は、イベントごとに5分から最大24時間までの範囲で設定できます。このためには、Shopify パートナーページでドロップダウンから時間を選択してから、[**遅延を設定**] を選択します。
+デフォルトでは、Braze は `shopify_abandoned_checkout` および`shopify_abandoned_cart` イベントのトリガーの遅延時間を、(何も操作が行われなかった) 1時間に自動的に設定します。[**カート放棄の遅延**] と [**チェックアウト放棄遅延**] は、イベントごとに5分から最大24時間までの範囲で設定できます。設定するには、Shopify パートナーページでドロップダウンから時間を選択してから、[**遅延を設定**] を選択します。
 
 ![]({% image_buster /assets/img/Shopify/shop_setup_advanced_abandonment.png %}){: style="max-width:30%"}
 
@@ -145,19 +145,19 @@ Shopify 製品 ID の代わりに、SKU または製品タイトルを Shopify �
 
 ShopifyストアからBrazeをアンインストールするには、次の2 つの方法があります。
 
-1. Shopifyパートナページで、**Disconnect**を選択します。<br><br> ![接続解除のリンクが表示されている \[統合の接続を解除] セクション。]({% image_buster /assets/img/Shopify/disconnect_integration.png %}){: style="max-width:70%;"}
+1. Shopifyパートナページで、**Disconnect**を選択します。<br><br> ![接続解除のリンクが表示されている「統合の接続を解除」セクション。]({% image_buster /assets/img/Shopify/disconnect_integration.png %}){: style="max-width:70%;"}
 
-2. **Apps**にあるShopifyの管理者ページに移動します。その後、Braze アプリケーションを削除するオプションが表示されます。<br><br> ![Braze アプリの削除を確認するモーダル。]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:70%;"}
+2. **Apps**にあるShopifyの管理者ページに移動します。その後、Braze アプリケーションを削除するオプションが表示されます。<br><br> ![Braze アプリの削除操作の確認を求めるモーダル。]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:70%;"}
 {% enddetails %}
 
-{% details ユーザーの調整で苦労しています。その理由は何でしょうか? %}
+{% details ユーザー照合がうまくできません。その理由は何でしょうか? %}
 
-ユーザー調整に必要なサポートの種類は、Web SDK の実装方法によって異なります。詳細については、[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/)の使用開始を参照してください。 
+ユーザー照合に必要なサポートの種類は、Web SDK の実装方法によって異なります。詳細については、[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/)の使用開始を参照してください。 
 
-- Shopify ヘッドレスサイトでは、[ヘッドレス実装]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features)をチェックして、チェックアウトユーザーの調整が有効になっていることを確認します。
+- Shopify ヘッドレスサイトでは、[ヘッドレス実装]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features)をチェックして、チェックアウトユーザーの照合が有効になっていることを確認します。
 - 同じメールや電話番号のユーザープロファイルが重複している場合、以下の Braze ツールを使用して、重複するプロファイルを1つのプロファイルに統合できます。 
     - [`users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) エンドポイント
     - [一括マージ]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging)
-- ScriptTag 統合を使用しており、Shopify ストアでカートをスキップする 「Buy Now」オプションが提供されている場合、Shopify ではカートをスキップしたユーザーにイベントをマップするための `device_id` をスクリプトタグが取得できないため、Braze ではユーザーの調整が難しいことがあります。☆
+- ScriptTag 統合を使用しており、Shopify ストアでカートをスキップする 「Buy Now」オプションが提供されている場合、Shopify ではカートをスキップしたユーザーにイベントをマッピングするための `device_id` をスクリプトタグが取得できないため、Braze ではユーザーの照合が難しいことがあります。
 
 {% enddetails %}

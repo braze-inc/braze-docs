@@ -5,9 +5,9 @@ page_type: partner
 search_tag: Partner
 layout: dev_guide
 guide_top_header: "Adobe"
-guide_top_text: "Adobe Experience Platform上に構築されたアドビのリアルタイム顧客データプラットフォームは、企業が複数の企業ソースから既知および匿名のデータを集めて顧客プロファイルを作成するのを支援する。これらのプロファイルは、リアルタイムですべてのチャネルとデバイスにパーソナライズされた体験を提供するために使用することができる。"
+guide_top_text: "Adobe Experience プラットフォームに基づいて構築されたAdobeのリアルタイム顧客データプラットフォームは、企業が複数のエンタープライズソースからの既知の匿名データをまとめて顧客 プロファイルを作成するのに役立ちます。その後、これらのプロファイルを使用して、パーソナライズされたエクスペリエンスをすべてのチャネルおよびデバイスでリアルタイムで提供できます。"
 
-description: "このランディングページには、アドビの統合方法やイベント転送エクステンションの使用方法など、アドビに関するあらゆる情報が掲載されている。"
+description: "このランディングページは、Adobe を統合してイベント転送拡張機能を使用する方法など、Adobe に関するあらゆる情報のホームページです。"
 
 guide_featured_list:
 - name: Adobe
@@ -16,4 +16,7 @@ guide_featured_list:
 - name: イベント転送エクステンション
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/event_forwarding_extension/
   image: /assets/img/braze_icons/arrow-square-right.svg
+- name: アドビ・フォー・カレンツ
+  link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
+  image: /assets/img/braze_icons/building-01.svg
 ---

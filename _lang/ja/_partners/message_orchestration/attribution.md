@@ -8,8 +8,6 @@ description: "このランディングページには、アプリからデータ
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Deep Linking & Attribution"
 
@@ -22,7 +20,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
-- name: 単数
+- name: Singular
   url: /docs/partners/message_orchestration/attribution/singular/
 - name: Vizbee
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/

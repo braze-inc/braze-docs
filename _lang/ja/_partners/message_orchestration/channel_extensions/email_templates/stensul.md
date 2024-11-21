@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "このリファレンス記事では、Braze とStensul の連携について概説します。これは、チャネル s 間でモバイルレスポンシブ メール テンプレートを簡単に作成できるエンタープライズメール プラットフォームです。"
+description: "このリファレンス記事では、Braze と Stensul のパートナーシップについて説明します。Stensul は、チャネル間でモバイル対応メールテンプレートを簡単に作成できるエンタープライズメールプラットフォームです。"
 page_type: partner
 search_tag: Partner
 
@@ -10,44 +10,44 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) は、メール マーケター s がStensul で簡単にモバイルレスポンシブのオンブランドメールを構築できるようにします。その後、リアルタイムでBraze に送信し、キャンペーンを作成します。
+> [Stensul](https://stensul.com/) では、メールマーケターがキャンペーン作成のためにリアルタイムで Braze にメールをダウンストリーム送信する前に、ブランドらしさのあるモバイル対応のメールを簡単に作成できます。
 
-BrazeとStensulインテグレーションを使用すると、Braze内でHTML形式のStensul メールsをエクスポートし、テンプレートsとしてアップロードできます。
+Braze と Stensul の統合により、HTML 形式の Stensul メールをエクスポートし、Braze 内でテンプレートとしてアップロードできます。
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ------------| ----------- |
-| Stensul勘定 | この提携の前進タグeを考慮するには、Stensulな考慮が必要である。 |
-| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| クラスタインスタンス | Braze[cluster instance]({{site.baseurl}}/api/basics/#endpoints) は、Braze ダッシュボードとREST エンドポイントに合わせます。  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Stensul アカウント | このパートナーシップを活用するには、Stensul アカウントが必要です。 |
+| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| クラスタインスタンス | Braze [クラスターインスタンス]({{site.baseurl}}/api/basics/#endpoints)は、Braze ダッシュボードと REST エンドポイントに対応しています。  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
-Braze REST API キーとクラスターインスタンスをStensul カスタマーサクセスチームに提供します。チームは、最初の統合を設定します。
+Braze REST API キーとクラスターインスタンスをStensul カスタマーサクセスチームに提供します。その後、このチームが初期統合を設定できます。
 
 {% alert important %}
 これは1 回限りの設定であり、今後のエクスポートではこのAPI キーが自動的に使用されます。
 {% endalert %}
 
-### ステップ1:Stensul メールの作成
+### ステップ1:Stensul メールを作成する
 
-Stensul プラットフォームにStensul メールを作成し、**Complete**を押します。
+Stensul プラットフォームで Stensul メールを作成し、[**Complete**] をクリックします。
 
-![Stensul保存オプション]({% image_buster /assets/img_archive/stensul_save_options.png %})
+![Stensul の保存オプション]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### ステップ2:Brazeへのテンプレートのエクスポート
-アプリが完了ページで耳にする新しいダイアログで、<サービスプロバイダー an id="1">Up 読み込む to メールサービスプロバイダー (ESP)</サービスプロバイダー an> を選択します。
+完了ページに表示される新しいダイアログで、[**Upload to ESP**] を選択します。
 
-![Stensulアップ読み込むオプション]({% image_buster /assets/img_archive/stensul_upload_options.png %})
+![Stensul のアップロードオプション]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
-次に、メールの ** テンプレート name**、**subject**、および **preヘッダー** を入力し、**Up読み込む** を選択します。アプリに応じて、アップロードが成功したかどうかの確認と、以前のアップロードの履歴が表示されます。
+次に、メールの ** テンプレート name**、**subject**、および **preヘッダー** を入力し、**Up読み込む** を選択します。アップロードが成功したことを示す確認と、該当する場合はファイルの過去のアップロード履歴が表示されます。
 
-![Stensulアップ読み込む成功]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Stensul アップロード成功]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## 使用
 
-Braze アカウントの ** テンプレート s& Media > E メールテンプレート s** セクションで、アップロードのStensul テンプレートを見つけます。これで、このメール テンプレートを使用してメールを顧客 s に送信できるようになりました。
+アップロードした Stensul テンプレートを、Braze アカウントの**[テンプレートとメディア] > [メールテンプレート]** セクションで確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

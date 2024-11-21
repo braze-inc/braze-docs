@@ -31,7 +31,7 @@ description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 업�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 요청 본문
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`confirmation_page_html`| 필수 | 문자열 | 확인 페이지의 HTML입니다. |
 |`state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다.|
 |`options` | 선택 사항 | 객체 | 속성: `meta-viewport-content`. 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 

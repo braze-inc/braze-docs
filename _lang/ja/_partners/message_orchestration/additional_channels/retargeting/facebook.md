@@ -10,12 +10,12 @@ search_tag: Partner
 
 # Facebookオーディエンス・エクスポート
 
-> BrazeとFacebookの統合により、手動でBrazeのセグメントをFacebookにエクスポートし、Facebookカスタムオーディエンスを作成することができる。これは1回限りの静的オーディエンスエクスポートであり、新しいFacebookカスタムオーディエンスのみを作成する。
+> BrazeとFacebookの統合により、手動でBrazeのセグメントをFacebookにエクスポートし、Facebookカスタムオーディエンスを作成することができる。これは1回限りの静的オーディエンスエクスポートであり、新しい Facebook カスタムオーディエンスのみが作成されます。
 
 Facebookカスタムオーディエンスをエクスポートする一般的なユースケースには、以下のようなものがある：
 - ライフサイクル内の特定のポイントでユーザーをリターゲティングする
 - 除外ターゲットリストの作成
-- [Lookalikeオーディエンスを][4]作成し、新規ユーザーをより効率的に獲得する
+- 新規ユーザーをより効率的に獲得するための[類似オーディエンス][4]を作成する
 <br><br>
 
 {% alert note %}
@@ -24,42 +24,42 @@ Facebookオーディエンス・エクスポートは、**ユーザー・アク�
 {% endalert %}
 
 {% alert note %}
-ベータ版のメタ・ワーク・アカウントのテストに参加している場合は、アカウントを[フェイスブックのパートナー・]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook)ページに切断し、再接続することを確認すること。
+ベータ版の Meta ワークアカウントのテストに参加している場合は、アカウントを接続解除してから[Facebook パートナーページ]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook)に再接続してください。
 {% endalert %}
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| [フェイスブック・ビジネス・マネージャー][1] | ブランドのFacebook資産（広告アカウント、ページ、アプリなど）を一元管理するツール。 |
-| [フェイスブック広告アカウント][2] | Brazeカスタムオーディエンスで使用したい、ブランドのビジネスマネージャーに紐づくアクティブなFacebook広告アカウント。<br><br>Facebookビジネスマネージャー管理者が、Brazeで使用する予定のFacebook広告アカウントの管理者権限を付与していること、および広告アカウントの利用規約に同意していることを確認する。そうしないと、Braze内でFacebook広告アカウントにアクセスできなくなる。 |
-| [Facebookカスタムオーディエンス規約][3]| Brazeで使用する予定のFacebook広告アカウントについて、Facebookのカスタムオーディエンス規約に同意すること。|
-{: .reset-td-br-1 .reset-td-br-2}
+| [Facebook Business Manager][1] | ブランドのFacebook資産（広告アカウント、ページ、アプリなど）を一元管理するツール。 |
+| [Facebook 広告アカウント][2] | Brazeカスタムオーディエンスで使用したい、ブランドのビジネスマネージャーに紐づくアクティブなFacebook広告アカウント。<br><br>Facebookビジネスマネージャー管理者が、Brazeで使用する予定のFacebook広告アカウントの管理者権限を付与していること、および広告アカウントの利用規約に同意していることを確認する。そうしないと、Braze内でFacebook広告アカウントにアクセスできなくなる。 |
+| [Facebook カスタムオーディエンス利用規約][3]| Brazeで使用する予定のFacebook広告アカウントについて、Facebookのカスタムオーディエンス規約に同意すること。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ1:フェイスブックに接続する
+### ステップ1:Facebook に接続する
 
-1. Brazeのダッシュボードで、**Partner Integrations**>**Technology Partnersと**進み、**Facebookを**選択する。 
+1. Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Facebook**] を選択します。 
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**統合」の**下に**テクノロジー・パートナーが**ある。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
 {: start="2"}
-2\.Facebook Audience Exportモジュールで、**Connect Facebookを**クリックする。<br><br>![BrazeプラットフォームのFacebookテクノロジーパートナーのページ。][6]{: style="max-width:70%;"}
+2\.Facebook Audience Export (Facebook オーディエンスエクスポート) モジュールで、[**Facebook に接続**] をクリックします。<br><br>![BrazeプラットフォームのFacebookテクノロジーパートナーのページ。][6]{: style="max-width:70%;"}
 
 {: start="3"}
-3\.Facebook oAuthダイアログウィンドウで、BrazeがFacebook広告アカウントにカスタムオーディエンスを作成することを承認する。<br><br>![最初のフェイスブックのダイアログボックスで、"Connect as X"（Xはフェイスブックのユーザー名）と促される。][8]{: style="max-width:30%;"} ![広告アカウントの広告を管理する許可を求める2つ目のFacebookのダイアログボックス。][7]{: style="max-width:40%;"}
+3\.Facebook oAuthダイアログウィンドウで、BrazeがFacebook広告アカウントにカスタムオーディエンスを作成することを承認する。<br><br>![最初の Facebook ダイアログボックス。[Connect as X] (X は Facebook ユーザー名) で接続するように促される。][8]{: style="max-width:30%;"} ![広告アカウントの広告を管理する許可を求める2つ目のFacebookのダイアログボックス。][7]{: style="max-width:40%;"}
 
 {: start="4"}
-4\.BrazeがFacebookアカウントとリンクされたら、Brazeワークスペース内で同期したい広告アカウントを選択する。<br><br>![Facebookに接続可能な広告アカウントのリスト。][9]{: style="max-width:70%;"}<br><br> 接続後、パートナーページに戻り、どのアカウントが接続されているかを確認したり、既存のアカウントを切断したりできる。<br><br> ![フェイスブックのテクノロジー・パートナーのページが更新され、広告アカウントの接続に成功したことが示されている。][10]{: style="max-width:70%;"}<br>
-<br> Facebookとの接続は、Brazeのワークスペース・レベルで適用される。Facebook管理者があなたをFacebookビジネスマネージャーから削除したり、接続しているFacebookアカウントへのアクセスを削除した場合、Brazeは無効なトークンを検出する。その結果、Facebookオーディエンスステップを使用しているアクティブなCanvasesはエラーが表示され、Brazeはユーザーを同期できなくなる。 
+4\.BrazeがFacebookアカウントとリンクされたら、Brazeワークスペース内で同期したい広告アカウントを選択する。<br><br>![Facebookに接続可能な広告アカウントのリスト。][9]{: style="max-width:70%;"}<br><br> 接続後にパートナーページが再び表示され、どのアカウントが接続されているかを確認したり、既存のアカウントを切断したりできます。<br><br> ![広告アカウントが接続されたことを示す更新後の Facebook テクノロジーパートナーページ。][10]{: style="max-width:70%;"}<br>
+<br> Facebookとの接続は、Brazeのワークスペース・レベルで適用される。Facebook管理者があなたをFacebookビジネスマネージャーから削除したり、接続しているFacebookアカウントへのアクセスを削除した場合、Brazeは無効なトークンを検出する。そのため、Facebook オーディエンスステップを使用しているアクティブなキャンバスにはエラーが表示され、Braze はユーザーを同期できません。 
 
 {% alert important %}
-過去に[広告管理](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management)および[広告管理スタンダード](https://developers.facebook.com/docs/marketing-api/access#standard)アクセスのFacebookアプリ審査プロセスを受けたことがあるお客様については、システムユーザートークンはFacebookオーディエンスステップでも有効である。Facebookのパートナー・ページを通じて、Facebookシステムのユーザートークンを編集したり、取り消したりすることはできない。Brazeワークスペース内でFacebookシステムユーザートークンを置き換えるために、Facebookアカウントを接続することができる。 
+これまでに [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) および [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard) の Facebook アプリレビュープロセスを受けたことがある顧客のシステムユーザートークンは、Facebook オーディエンスコンポーネントに対して引き続き有効です。Facebookのパートナー・ページを通じて、Facebookシステムのユーザートークンを編集したり、取り消したりすることはできない。代わりに Facebook アカウントを接続して、Braze ワークスペース内の Facebook システムユーザートークンを置き換えることができます。 
 
-<br><br>新しいFacebook oAuth設定は、[セグメントを介したFacebookのエクスポートにも]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites)適用される。
+<br><br>新しい Facebook oAuth 設定は、[セグメントを使用した Facebook のエクスポート]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites)にも適用されます。
 {% endalert %}
 
 ### ステップ2:Facebookにユーザーをエクスポートする
@@ -67,10 +67,10 @@ Facebookオーディエンス・エクスポートは、**ユーザー・アク�
 Brazeでは、Facebookオーディエンスのエクスポートは、**セグメント**ページからアクセスできる。 
 
 1. **セグメント**ページで、エクスポートしたいセグメントの横にある歯車をクリックする。
-2. **Facebookオーディエンスとしてエクスポートを**クリックする。<br><br>![ブレイズのセグメント一覧。最初のセグメントでは、設定記号が選択され、「Facebookオーディエンスとしてエクスポート」ボタンが表示される。][11]
+2. [**Facebook オーディエンスとしてエクスポート**] をクリックします。<br><br>![Braze セグメントのリスト。最初のセグメントでは設定シンボルが選択されており、「Facebook オーディエンスとしてエクスポート」ボタンが表示されている。][11]
 
 {: start="3"}
-3\.まだBraze内でFacebookを有効化していない場合は、ダッシュボードのFacebook Technology Partnersページに行くよう促される。**テクノロジー・パートナー**＞**Facebookを通じて**Facebookをすでに有効化している場合は、エクスポートするユーザー・フィールドを選択できるようになり、Facebook広告アカウントを選択するドロップダウンが表示される。<br><br> エクスポートできるユーザーフィールドは3つある：  
+3\.Braze 内で Facebook をまだアクティブにしていない場合は、ダッシュボードで Facebook テクノロジーパートナーページに移動するように促されます。すでに [**テクノロジーパートナー**] > [**Facebook**] で Facebook をアクティブにしている場合は、エクスポートするユーザーフィールドを選択でき、Facebook の広告アカウントを選択するドロップダウンが表示されます。<br><br> エクスポートできるユーザーフィールドは3つある：  
 - メール
 - デバイス IDFA
 - 電話番号
@@ -80,32 +80,32 @@ Brazeでは、Facebookオーディエンスのエクスポートは、**セグ�
 {% endalert %}
 
 {: start="4"}
-4\.ユーザー・フィールドを選択したら、**Exportを**クリックする。CSVエクスポートと同様に、Facebookへのセグメントのエクスポートが完了すると、Eメールが届く。
-5. Facebook Ads Manager][13] でカスタムオーディエンスを表示する。
+4\.ユーザーフィールドを選択したら [**エクスポート**] をクリックします。CSVエクスポートと同様に、Facebookへのセグメントのエクスポートが完了すると、Eメールが届く。
+5. [Facebook 広告マネージャ][13]でカスタムオーディエンスを表示します。
 
 {% alert important %}
-ユーザーのプライバシー保護のため、フェイスブックは閲覧を許可していない：
+ユーザーのプライバシー上の理由により、Facebook では以下の内容を表示できません。
 
-- カスタムオーディエンスに正常に追加された正確なユーザー。[詳細はこちら。](https://www.facebook.com/business/help/112061095610075)
-- カスタム・オーディエンスのサイズ。[詳細はこちら。](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
+- カスタムオーディエンスに正常に追加された正確なユーザー。[詳細をご覧ください。](https://www.facebook.com/business/help/112061095610075)
+- カスタムオーディエンスのサイズ。[詳細をご覧ください。](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
 {% endalert %}
 
 #### オーディエンスのエクスポートを設定する
 
-Facebookオーディエンスを構築する際、ユーザーの嗜好に基づき、また[CCPAに](https://oag.ca.gov/privacy/ccpa)基づく「販売または共有しない」権利などのプライバシー法を遵守するために、特定のユーザーを含めたり除外したりしたい場合がある。マーケティング担当者は、キャンバスのエントリー基準の中で、ユーザーの適格性に関する関連フィルタを実装する必要がある。以下にいくつかの選択肢を挙げる。 
+Facebookオーディエンスを構築する際、ユーザーの嗜好に基づき、また[CCPAに](https://oag.ca.gov/privacy/ccpa)基づく「販売または共有しない」権利などのプライバシー法を遵守するために、特定のユーザーを含めたり除外したりしたい場合がある。マーケターは、キャンバスのエントリ基準の範囲内で、ユーザーの適格性に関する適切なフィルターを実装する必要があります。以下にいくつかの選択肢を挙げる。 
 
-- [Braze SDKを通じてiOS IDFAを]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection)収集した場合、**Ads Tracking Enabled**フィルターを使用できるようになる。ユーザーがオプトインしたAudience Sync送信先にのみユーザーを送信する場合は、`true` 。 
+- [Braze SDKを通じてiOS IDFAを]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection)収集した場合、**Ads Tracking Enabled**フィルターを使用できるようになる。ユーザーがオプトインしたオーディエンス同期の宛先にのみユーザーを送信するには、値を `true` に選択します。 
 
 ![][16]{: style="max-width:75%;"}
 
-- オプトイン、オプトアウト、`Do Not Sell Or Share` 、またはその他の関連するカスタム属性を収集する場合は、キャンバスの入力条件にフィルターとして含める必要がある： 
+- オプトイン、オプトアウト、`Do Not Sell Or Share`、または他の関連するカスタム属性を収集する場合は、キャンバスのエントリ基準にこれらをフィルターとして含める必要があります。 
 
 ![エントリーのオーディエンスが "opted_in_marketing "のキャンバスは、"true "に等しい。][15]{: style="max-width:75%;"}
 
 
-#### そっくりさんオーディエンス
+#### 類似オーディエンス
 
-セグメントをFacebookオーディエンスとしてエクスポートすることに成功したら、Facebook[Lookalike Audiencesを使って][4]さらにグループを作成することができる。この機能は、選択したオーディエンスのデモグラフィック、興味、その他の属性を調べ、同様の属性を持つ人々からなる新しいオーディエンスを作成する。
+Facebook オーディエンスとしてセグメントをエクスポートしたら、Facebook [類似オーディエンス][4]を使用して追加のグループを作成できます。この機能は、選択したオーディエンスのデモグラフィック、興味、その他の属性を調べ、類似する属性を持つ新しいオーディエンスを作成します。
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059

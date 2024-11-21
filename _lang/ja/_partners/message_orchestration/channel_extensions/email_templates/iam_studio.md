@@ -1,7 +1,7 @@
 ---
 nav_title: IAMスタジオ
 article_title: IAMスタジオ
-description: "このリファレンス記事では、Braze とIAM Studio の連携について説明します。これは、メッセージパーソナライゼーション プラットフォームで、Braze を使用してパーソナライズされたを作成し、豊富なアプリ体験を提供することができます。"
+description: "このリファレンス記事では、Braze と IAM Studio のパートナーシップについて説明します。IAM Studio は、パーソナライズされたリッチなアプリ内エクスペリエンスを作成し、Braze を通じてそのエクスペリエンスを提供できるメッセージパーソナライゼーションプラットフォームです。"
 alias: /partners/iam_studio/
 page_type: partner
 search_tag: Partner
@@ -10,16 +10,16 @@ search_tag: Partner
 
 # IAMスタジオ
 
-> [IAM Studio](https://www.inappmessage.com) はno-コード メッセージパーソナライゼーション プラットフォームで、豊富なアプリ体験を作成し、Brazeを通じて配信できます。
+> [IAM Studio](https://www.inappmessage.com) は、カスタマイズされたリッチなアプリ内エクスペリエンスを作成し、Braze を通じてそのエクスペリエンスを提供できる、ノーコードのメッセージパーソナライゼーションプラットフォームです。
 
-Braze とIAM Studio の統合により、カスタマイズ可能なアプリ内メッセージ テンプレートs をBraze アプリ内メッセージに簡単に挿入でき、"画像置換、テキストモディフィケーション、ディープリンク設定s、カスタム属性s、およびイベント設定s を提供できます。IAM Studio を使用すると、メッセージのプロダクション時間を短縮し、コンテンツプランニングにより多くの時間を割くことができます。 
+Braze と IAM Studio の統合により、カスタマイズ可能なアプリ内メッセージテンプレートを Braze アプリ内メッセージに簡単に挿入できます。これにより、画像の置き換え、テキストの変更、ディープリンク設定、カスタム属性、イベント設定が提供されます。IAM Studio を使用すると、メッセージの作成時間を短縮し、コンテンツ計画により多くの時間を費やすことができます。 
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
-| IAM Studioアカウント | この提携の事前タグを行うには、[IAM Studioアカウント](https://www.inappmessage.com/register)が必要です。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| IAM Studioアカウント | このパートナーシップを活用するには、[IAM Studio アカウント](https://www.inappmessage.com/register)が必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## ユースケース
 
@@ -34,32 +34,32 @@ Braze とIAM Studio の統合により、カスタマイズ可能なアプリ内
 
 アプリ内メッセージ テンプレートギャラリーから使用するアプリ内メッセージ テンプレートを選択します
 
-![IAM Studio テンプレートギャラリーには、"carousel slide モーダル", "simple icon モーダル", "モーダル full "画像"など、さまざまなテンプレートが表示されます。][1]
+![IAM Studio テンプレートギャラリーに「carousel slide modal」、「carousel slide modal」、「simple icon modal」、「modal full image」など、さまざまなテンプレートが表示されている。][1]
 
 ### ステップ2:テンプレートのカスタマイズ
 
-まず、内容の"画像、文字、ボタンをカスタマイズします。"画像とボタンは必ず**Deeplink**を接続してください。
+まず、コンテンツの画像、テキスト、ボタンをカスタマイズします。"画像とボタンは必ず**Deeplink**を接続してください。
 
 {% tabs ローカル %}
-{% tab イメージ %}
-!["画像をカスタマイズするためのオプションを示すIAM Studio UI。これらの選択肢には、"画像、半径、および"画像が含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
+{% tab 画像 %}
+![画像をカスタマイズするオプションが表示されている IAM Studio のUI。オプションには、画像、画像半径、淡色表示の画像がある。]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
 {% tab テキスト %}
 ![メッセージのタイトルと字幕をカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、テキスト、書式設定、およびフォントが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
 {% tab ボタン %}
-![IAM Studio のUI には、メイン、左右のボタンをカスタマイズするオプションが表示されます。これらのオプションには、色、ディープリンク、テキスト、およびフォーマットが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+![メインの左および右ボタンをカスタマイズするオプションが表示されている IAM Studio の UI。これらのオプションには、色、ディープリンク、テキスト、およびフォーマットが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
-次に、カスタムフォントを追加し、リキッドタグs を使用してパーソナライズされた アプリ内メッセージを作成します。ログと"トラッキングを有効にするには、**ログデータを選択し、ユーザーの動作を追跡します**。
+次にカスタムフォントを追加し、Liquid タグを使用して、パーソナライズされたアプリ内メッセージを作成します。ログとトラッキングを有効にするには、[**Log data and track user behavior**] を選択します。
 
 {% tabs ローカル %}
 {% tab フォント %}
-![IAM Studio のUI に、Liquid を追加するオプションが表示されます。これらの選択肢には、パーソナライズされた設定が含まれます。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+![Liquid を追加するオプションが表示されている IAM Studio のUI。これらの選択肢には、パーソナライズされた設定が含まれます。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
-{% tab 液体 %}
-![IAM Studio のUI には、イベント/属性のログ記録をカスタマイズするためのオプションが表示されます。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+{% tab Liquid %}
+![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab ロギングとトラッキング %}
 ![フォントをカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、ユーザーがフォントスタイルをカスタマイズできることが含まれます。]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})

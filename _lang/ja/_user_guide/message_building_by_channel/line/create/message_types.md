@@ -8,17 +8,12 @@ tool:
  - Campaigns
 channel:
  - LINE
-hidden: true
-permalink: /line/create/message_types/
+alias: /line/create/message_types/
 ---
 
 # LINEメッセージタイプ
 
-> この記事では、構成可能なLINEメッセージタイプについて説明します。これには、側面と制限事項が含まれ、LINEベータコレクションの一部です。[メインページに戻ります]({{site.baseurl}}/line/)。
-
-{% alert important %}
-LINE アクセスはベータ版であり、一部の Braze パッケージでのみ利用できます。利用を始めるには、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
+> この記事では、構成可能なLINEメッセージタイプについて、その側面と制限事項を含めて説明します。
 
 LINEメッセージを作成するときに、メッセージタイプをコンポーザーにドラッグアンドドロップしてカスタマイズできます。
 
@@ -58,7 +53,7 @@ LINE イメージメッセージは、[メディアライブラリ]({{site.baseu
 | 画像ファイルURL長 | 最大2000 文字  |
 | 画像フォーマット          | PNG、JPEG             |
 | ファイルサイズ     |  最大10 MB |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## リッチメッセージ(イメージマップ)
 
@@ -79,7 +74,7 @@ LINEリッチメッセージは、イメージ上の特定の領域を選択し�
 | 画像フォーマット          | PNG(透過可)、JPEG             |
 | アスペクト比          | 1:1(幅:高さ)
 | ファイルサイズ     |  最大10 MB |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### URIリンク 
 
@@ -87,7 +82,7 @@ LINEリッチメッセージは、イメージ上の特定の領域を選択し�
 |--------------------------|----------------------------|
 | 文字数      | 最大1000 |
 | スキーム              | HTTP, HTTPS, LINE, tel |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### テキスト 
 
@@ -111,7 +106,7 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 | 列                  | 最大10 |
 | アスペクト比             | 矩形:1.51:1 <br> 正方形:1:1  |
 | タイトル                    | 最大40文字
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ### 画像
@@ -122,7 +117,7 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 | 画像フォーマット              | JPEGまたはPNG |
 | 幅                     | 1024ピクセル  |
 | ファイルサイズ                 | 1 MB |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ### テキスト
@@ -131,7 +126,7 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 |-------------------------|----------------------------|
 | 文字              | 最大120件(画像、タイトルなし) <br> 最大60件(画像やタイトルのついたメール)  |
 | アクション                 | 3 最大 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {% image_buster /assets/img/line/line_text_message.png %}

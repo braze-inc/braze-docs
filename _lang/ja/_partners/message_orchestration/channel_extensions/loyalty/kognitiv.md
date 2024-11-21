@@ -1,50 +1,50 @@
 ---
-nav_title: コグニティブ・インスパイア
-article_title: コグニティブ・インスパイア
-description: "コグニティブ・インスパイアは、ロイヤリティ戦略の実施と評価を可能にするロイヤリティ・テクノロジー・システムであり、革新的な機能と会員に合わせたコミュニケーションを提供し、プログラムの効果を高める。"
+nav_title: Kognitiv Inspire
+article_title: Kognitiv Inspire
+description: "Kognitiv Inspire は、お客様が各自のロイヤルティ戦略を実装、評価できるようにし、プログラムの有効性を高めるための革新的な機能とカスタマイズされたメンバーコミュニケーションを提供するロイヤルティテクノロジーシステムです。"
 alias: /partners/kognitiv/
 page_type: partner
 search_tag: Partner
 ---
 
-# コグニティブ・インスパイア
+# Kognitiv Inspire
 
-> [Kognitiv Inspireは][1]ロイヤリティ・テクノロジー・システムであり、顧客エンゲージメントを増幅し、支出を増大させ、忠実な行動を称える結果重視のロイヤリティ・プログラムを通じて、比類ない顧客体験を引き出す手助けをする。
+> [Kognitiv Inspire][1] はロイヤルティテクノロジーシステムであり、カスタマーエンゲージメントを強化し、顧客の支出を増やし、ロイヤルティの高い行動を称賛する、結果に基づくロイヤルティプログラムによって、比類のない顧客体験を実現できるように支援します。
 
-BrazeとKognitivの統合により、ロイヤリティ戦略の実施と評価が可能になり、革新的な機能と会員に合わせたコミュニケーションを提供し、プログラムの効果を高めることができる。
+Braze と Kognitiv の統合により、ロイヤルティ戦略を実装、評価できるようになり、プログラムの有効性を高めるための革新的な機能とカスタマイズされたメンバーコミュニケーションが提供されます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 |---|---|
-| コグニティブアカウント | このパートナーシップを利用するには、[コグニティブの][1]アカウントが必要である。 |
+| コグニティブアカウント | このパートナーシップを活用するには、[Kognitiv][1] アカウントが必要です。 |
 | Kognitiv APIキー | Kognitiv REST API キー。これは**API Security Tokens**ページで作成できる。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントは、[インスタンスの]({{site.baseurl}}/api/basics/#endpoints)Braze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
-- **パーソナライズされたロイヤリティ・プログラムの登録**：シームレスなプログラム登録と、会員が希望するチャネルを通じて配信されるカスタマイズされたウェルカム通知で、会員のロイヤリティ・ジャーニーを促進する。
-- **報酬発行と婚約通知**：各メンバーのマイルストーンを祝うリワードや通知を発行することで、ロイヤリティの火花を絶やさないようにする。
-- **戦略的な会員の階層化とセグメンテーション**：ブランド固有のニーズに合わせて、支出、エンゲージメント、単純または複雑なビジネス・ルールに基づいて会員を階層化およびセグメント化することで、よりパーソナライズされたエンゲージメントを可能にする。
-- **昇格資格をリアルタイムで通知**する：限定プロモーションの参加資格を即座に通知することで、各会員に特別感を与える。
+- **パーソナライズされたロイヤルティプログラムの登録**:シームレスなプログラム登録と、会員が希望するチャネルを通じて配信されるカスタマイズされたウェルカム通知で、会員のロイヤルティジャーニーを促進します。
+- **リワードの発行とエンゲージメント通知**:会員のマイルストーンを祝うリワードの発行や通知により、ロイヤルティを維持します。
+- **戦略的な会員の階層化とセグメンテーション**:ブランド固有のニーズに合わせて、支出、エンゲージメント、単純または複雑なビジネス・ルールに基づいて会員を階層化およびセグメント化することで、よりパーソナライズされたエンゲージメントを可能にする。
+- **リアルタイムでのプロモーション参加資格の通知**:限定プロモーションの参加資格を即時に通知することで、各会員に特別感を与えます。
 
 ## 統合
 
 KognitivのWebhookを使って、ロイヤルティイベント発生時にBrazeにリクエストを送る。以下の例では、KognitivとBrazeを使用して報酬を発行し、KognitivユーザーをBrazeに登録し、ウェルカムメールを送信する方法を説明する。
 
 {% raw %}
-### ブレイズ発行報酬
+### Braze によるリワードの発行
 
-次のコグニティブの例では、会員に報奨金を発行している。Kognitiv Inspireは、その報酬発行イベントをカスタムイベントとしてBrazeにウェブフック経由で伝える。報酬を伝えるフォローアップメールを送信するには、そのカスタムイベントをトリガーとするキャンペーンまたはキャンバスを作成する。
+次の Kognitiv の例では、会員リワードを発行します。Kognitiv Inspire はそのリワード発行イベントを、Webhook を使用して Braze にカスタムイベントとして伝えます。報酬を伝えるフォローアップメールを送信するには、そのカスタムイベントをトリガーとするキャンペーンまたはキャンバスを作成する。
 
-**ウェブフックのURL**：`<braze-api-rest-endpoint>`
-**リクエスト・ボディ** `Raw Text`
+**Webhook URL**:`<braze-api-rest-endpoint>`
+**リクエスト本文**: `Raw Text`
 
 - **HTTPメソッド**：POST
-- **ヘッダーを要求する**：
-  - **認可する**：ベアラー `<Kognitiv-api-key>`
-  - **コンテンツタイプ**application/json
+- **リクエストヘッダー**:
+  - **Authorization**:ベアラー `<Kognitiv-api-key>`
+  - **Content-Type** application/json
 
 #### Request body
 
@@ -66,15 +66,15 @@ KognitivのWebhookを使って、ロイヤルティイベント発生時にBraze
 
 ### ユーザーを作成し、ウェルカムメールを送信する
 
-以下の Kognitiv の例では、KLS への登録時に Braze に新規ユーザーを作成している。このユーザーのウェルカムメールをスケジュールするには、特定のカスタム属性に基づいてトリガーするキャンペーンまたはキャンバスをBrazeで作成する。
+次の Kognitiv の例では、新規ユーザーが KLS に登録すると、Braze に新規ユーザーが作成されます。このユーザーのウェルカムメールをスケジュールするには、特定のカスタム属性に基づいてトリガーするキャンペーンまたはキャンバスをBrazeで作成する。
 
-**ウェブフックのURL**： `<braze-api-rest-endpoint>`<br>
-**リクエスト・ボディ** `Raw Text`
+**Webhook URL**: `<braze-api-rest-endpoint>`<br>
+**リクエスト本文**: `Raw Text`
 
 - **HTTPメソッド**：POST
-- **ヘッダーを要求する**：
-  - **認可する**：ベアラー `<Kognitiv-api-key>`
-  - **コンテンツタイプ**application/json
+- **リクエストヘッダー**:
+  - **Authorization**:ベアラー `<Kognitiv-api-key>`
+  - **Content-Type** application/json
 
 #### Request body
 
@@ -104,26 +104,26 @@ KognitivのWebhookを使って、ロイヤルティイベント発生時にBraze
 
 ## Kognitiv Inspireのドキュメントと統合機能
 
-BrazeをKognitiv Inspireと統合すると、Kognitivの広範なAPIポートフォリオ、最先端のウェブフック機能、シームレスな一括転送のための堅牢なデータのインポートおよびエクスポート機能にアクセスできるようになる。Kognitiv Inspireの機能と統合機能の詳細については、Kognitiv[リソースガイドを][2]参照するか、ガイド付きデモを希望する場合は同社に連絡する。
+Braze を Kognitiv Inspire と統合すると、Kognitiv の広範な API ポートフォリオ、最先端の Webhook 機能、およびシームレスな一括転送のための堅牢なデータインポートおよびエクスポート機能を利用できるようになります。Kognitiv Inspire の機能と統合機能の詳細については、Kognitiv[リソースガイド][2]を参照するか、Kognitive に連絡してガイド付きデモを依頼してください。
 
 ### エンドポイント
 
-**REST APIの認可**
-- 米国地域である： `https://app.kognitivloyalty.com/Auth/connect/token`
-- CA/EMEA地域： `https://ca.kognitivloyalty.com/Auth/connect/token`
-- APAC地域： `https://aus.kognitivloyalty.com/Auth/connect/token`
+**REST API 認証**
+- US 地域: `https://app.kognitivloyalty.com/Auth/connect/token`
+- CA/EMEA 地域: `https://ca.kognitivloyalty.com/Auth/connect/token`
+- APAC 地域： `https://aus.kognitivloyalty.com/Auth/connect/token`
 
-**REST API（ベースURL）**
-- 米国地域である： `https://app.kognitivloyalty.com/api`
-- CA/EMEA地域： `https://ca.kognitivloyalty.com/api`
-- APAC地域： `https://aus.kognitivloyalty.com/api`
+**REST API (ベース URL)**
+- US 地域: `https://app.kognitivloyalty.com/api`
+- CA/EMEA 地域: `https://ca.kognitivloyalty.com/api`
+- APAC 地域： `https://aus.kognitivloyalty.com/api`
 
 **ウェブサービスのエンドポイント（ベースURL）**
-- 米国地域である： `https://app.kognitivloyalty.com/WS`
-- CA/EMEA地域： `https://ca.kognitivloyalty.com/WS`
-- APAC地域： `https://aus.kognitivloyalty.com/WS`
+- US 地域: `https://app.kognitivloyalty.com/WS`
+- CA/EMEA 地域: `https://ca.kognitivloyalty.com/WS`
+- APAC 地域： `https://aus.kognitivloyalty.com/WS`
 
-アクセストークンおよびSFTPエンドポイントの設定に関する詳細については、Kognitivにデモを問い合わせること。
+アクセストークンと SFTP エンドポイントの設定に関する詳細については、Kognitiv にデモを依頼してください。
 
 [1]: http://kognitiv.com
 [2]: https://info.kognitivloyalty.com

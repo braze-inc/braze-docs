@@ -1,17 +1,15 @@
 ---
-nav_title: データウェアハウス
-article_title: データウェアハウスパートナー
+nav_title: データウェアハウス ストレージ
+article_title: データウェアハウス・ストレージ・パートナー
 page_order: 7
 
 page_type: landing
-description: "このランディングページには、メッセージング キャンペーン s からデータを使用できるようにするために役立つBrazeパートナ(Alloys) が一覧表示されます。"
+description: "このランディングページには、メッセージングキャンペーンのデータを利用可能にできるように支援する Braze パートナー (Alloys) が一覧表示されています。"
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Data Warehouses"
+partner_top_header: "Data Warehouse Storage"
 
 valid_partner_list:
 - name: Snowflake

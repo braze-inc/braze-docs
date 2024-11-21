@@ -10,14 +10,14 @@ search_tag: Partner
 
 # サンプルクエリ
 
-> このパートナーページでは、クエリを設定する際に参照するためのいくつかのサンプルクエリを提供しています。
+> このパートナーページでは、クエリを設定する際に参照するための考えられるユースケースのサンプルクエリを紹介します。
 
 {% tabs %}
-{% tab 時間でフィルター%}
+{% tab 時間でのフィルタリング%}
 
 一般的なクエリは、時間でイベントをフィルターすることです。
 
-発生時刻でそれらをフィルターできます。イベントテーブルは`time`によってクラスタリングされるため、`time`によるフィルタリングが最適です:
+発生時刻でイベントをフィルタリングできます。イベントテーブルは`time`によってクラスタリングされるため、`time`によるフィルタリングが最適です:
 ```sql
 -- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
@@ -25,7 +25,7 @@ FROM users_behaviors_customevent_shared
 WHERE time > 1555354920
 LIMIT 10;
 ```
-また、`sf_created_at`を使用して、Snowflakeデータウェアハウスに保存された時刻でイベントをフィルターすることもできます。`sf_created_at`と`time`は同じではありませんが、通常は近いので、このクエリは同様のパフォーマンス特性を持つはずです。
+また、`sf_created_at` を使用して、イベントが Snowflake データウェアハウスで永続化された時刻に基づいてイベントをフィルタリングすることもできます。`sf_created_at` と `time` は同じではありませんが通常は類似しているため、このクエリは同様のパフォーマンス特性を持ちます。
 ```sql
 -- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
 SELECT *
@@ -56,7 +56,7 @@ qualify row_number() over (partition by event.id ORDER BY ccs.time DESC) = 1;
 - Snowflakeの[window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html)機能がここで使用されています。
 - 左結合により、キャンペーンに関連しないイベントも含まれるようになります。
 - イベントに`campaign_id`が表示されるがキャンペーン名が表示されない場合、キャンペーンがデータ共有が製品として存在する前の名前で作成された可能性があります。
-- 同様のクエリを使用して、`CHANGELOGS_CANVAS_SHARED`テーブルと結合することでキャンバス名を確認できます。
+- 代わりに `CHANGELOGS_CANVAS_SHARED` テーブルと結合することで、同様のクエリを使用してキャンバス名を確認できます。
 
 キャンペーンとキャンバスの両方の名前を表示したい場合は、次のサブクエリを使用する必要があるかもしれません:
 ```sql
@@ -75,7 +75,7 @@ qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.t
 {% endtab %}
 {% tab プッシュファネル %}
 
-このプッシュファネルクエリを使用して、プッシュ送信の生データを集計し、配信の生データを通じて、開封の生データを通じて集計できます。このクエリは、各生データが通常別々のテーブルを持つため、すべてのテーブルがどのように結合されるべきかを示しています。
+このプッシュファネルクエリを使用して、プッシュ送信の生イベントデータ、配信の生イベントデータ、開封の生イベントデータの順に集約できます。通常、生イベントごとに個別のテーブルがあるため、このクエリはすべてのテーブルを結合する方法を示します。
 
 ```sql
 
@@ -102,10 +102,10 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab メール Cadence %}
-この日々のメールメッセージングのケイデンスクエリを使用して、ユーザーが受信するメール間の時間を分析できます。
+{% tab メールケイデンス %}
+日次メールメッセージングケイデンスクエリを使用して、ユーザーのメール受信間隔の時間を分析できます。
 
-例えば、ユーザーが1日に2通のメールを受信した場合、それは`0 "days since last received"`に該当します。もし彼らが月曜日に1通のメールを受け取り、火曜日に1通のメールを受け取った場合、彼らは`1 "days since last received"`コホートに入るでしょう。
+例えば、ユーザーが1日に2通のメールを受信した場合、それは`0 "days since last received"`に該当します。月曜日と火曜日にそれぞれメールを1通ずつ受信したユーザーは、`1 "days since last received"` コホートに分類されます。
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS
@@ -145,14 +145,14 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab ユニークメールクリック数 %}
+{% tab ユニークなメールクリック数 %}
 
-指定された時間枠内で一意のメールクリックを分析するために、この一意のメールクリッククエリを使用できます。これを計算するアルゴリズムは次のとおりです:
-  1. キー（`app_group_id`、`message_variation_id`、`dispatch_id`、`email_address`）でイベントを分割します。
+このユニークなメールクリック数のクエリを使用して、指定された時間枠内でのユニークなメールクリックを分析できます。これを計算するアルゴリズムは次のとおりです:
+  1. キー (`app_group_id`、`message_variation_id`、`dispatch_id`、`email_address`) でイベントを分割します。
   2. 各パーティション内で、イベントを時間順に並べ、最初のイベントは常に一意のイベントです。
-  3. その後のすべてのイベントについて、それが前のイベントから7日以上経過して発生した場合、ユニークなイベントと見なされます。
+  3. 後続のすべてのイベントでは、前のイベントから7日以上経過して発生したイベントは、ユニークなイベントと見なされます。
   
-これを達成するために、Snowflakeの[ウィンドウ関数](https://docs.snowflake.com/en/sql-reference/functions-analytic.html)を使用できます。次のクエリは、過去365日間のすべてのメールクリックを示し、`is_unique`列でどのイベントがユニークであるかを示します。
+これを達成するために、Snowflake の[ウィンドウ関数](https://docs.snowflake.com/en/sql-reference/functions-analytic.html)を使用できます。次のクエリは、過去365日間のすべてのメールクリックを示し、`is_unique` 列にどのイベントがユニークであるかを示します。
   
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
@@ -179,7 +179,7 @@ WHERE
   AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
 QUALIFY is_unique = true;
 ```
-メールアドレスごとにグループ化されたユニークなイベント数をさらに確認するには:
+メールアドレスごとにグループ化されたユニークイベントの数をさらに表示するには、:次のようにします。
 ```sql
 WITH unique_events AS(
   SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,

@@ -1,6 +1,6 @@
 ---
-nav_title: 顧客データ・プラットフォーム
-article_title: 顧客データ・プラットフォーム・パートナー
+nav_title: 顧客データプラットフォーム
+article_title: 顧客データプラットフォームのパートナー
 page_order: 5
 
 page_type: landing
@@ -8,8 +8,6 @@ description: "このランディングページには、メッセージングキ
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Customer Data Platform"
 
@@ -28,25 +26,25 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: アンペア
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
-- name: レベニューキャット
+- name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
-- name: ブルーコニック
+- name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
-- name: トゥービオ
+- name: Toovio
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/toovio/
-- name: レクサー
+- name: Lexer
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/lexer/
 - name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
-- name: オクトリス
+- name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
-- name: アクションIQ
+- name: ActionIQ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/
-- name: サイモン・データ
+- name: Simon Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/

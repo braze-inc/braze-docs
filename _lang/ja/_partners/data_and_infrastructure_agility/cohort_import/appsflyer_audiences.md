@@ -1,31 +1,31 @@
 ---
-nav_title: AppsFlyerの利用者
-article_title: AppsFlyerの利用者
+nav_title: AppsFlyer Audiences
+article_title: AppsFlyer Audiences
 alias: /partners/appsflyer_audiences/
-description: "このリファレンス記事では、Braze とAppsFlyer オーディエンス s 間のパートナーシップについて説明します。これは、AppsFlyer プラットフォームの機能で、オーディエンス Segment s を効率的に構築し、パートナーネットワークに接続することができます。"
+description: "このリファレンス記事では、Braze と AppsFlyer Audiences のパートナーシップについて説明します。AppsFlyer Audiences は、オーディエンスセグメントを効率的に作成してパートナーネットワークに接続できる AppsFlyer プラットフォームの機能です。"
 page_type: partner
 search_tag: Partner
 
 ---
 
-# AppsFlyerの利用者
+# AppsFlyer Audiences
 
-> ここでは、[AppsFlyer Audiences][2]統合を使用して、AppsFlyerからBrazeにユーザー コホートを読み込む方法について説明します。AppsFlyerとその他の機能(携帯アトリビューションなど)の統合の詳細については、メインの[AppsFlyerの記事][3]を参照してください。
+> この記事では、[AppsFlyer Audiences][2] 統合を使用して AppsFlyer から Braze にユーザーコホートをインポートする方法について説明します。AppsFlyerとその他の機能(携帯アトリビューションなど)の統合の詳細については、メインの[AppsFlyerの記事][3]を参照してください。
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
-| AppsFlyerアカウント | AppsFlyerアカウントは、この提携の事前タグeを考慮する必要があります。 |
-| iOSやAndroid アプリ | この統合は、iOS とAndroid アプリ s をサポートします。お使いのプラットフォームによっては、アプリのライセンスにコードの抜粋が必要な場合があります。これらの要件の詳細は、インテグレーションプロセスの第1ステップに記載されています。 |
+| AppsFlyerアカウント | このパートナーシップを活用するには、AppsFlyer アカウントが必要です。 |
+| iOSやAndroid アプリ | この統合では、iOS アプリと Android アプリがサポートされています。ご使用のプラットフォームによっては、アプリケーションでコードスニペットが必要な場合があります。これらの要件の詳細については、統合プロセスのステップ1を参照してください。 |
 | AppsFlyer SDK | 必要なBraze SDKに加えて、[AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/articles/207032126-SDK-integration-overview)をインストールする必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## データインポート統合
 
 ### ステップ1:AppsFlyer SDKの設定
 
-この統合を使用するには、AppsFlyer SDKの`setPartnerData()` 関数を使用して、ユーザーのBraze外部ID をAppsFlyer に渡す必要があります。
+この統合を使用するには、AppsFlyer SDK の`setPartnerData()` 関数を使用して、ユーザーの Braze external ID をAppsFlyer に渡す必要があります。
 
 #### Android 
 ```java
@@ -47,25 +47,29 @@ NSDictionary *brazeInfo = @{
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Technology Partners** は**Integrations** にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyerテクノロジページの"Data Import Using Cohort Import"ボックスデータインポートキーとREST エンドポイントが表示されます。][5]{: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyer テクノロジーページの「コホートインポートを使用したデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][5]{: style="max-width:90%;"}
 
 ### ステップ3:AppsFlyer オーディエンスでのBraze コネクションの設定
 
 1. [AppsFlyer Audiences][4]で、**Connections**タブに移動し、**Add partner connection**をクリックします。
 2. パートナーとしてBraze を選択し、コネクションに名前を付けます。
 3. データインポートキーとBraze REST エンドポイントを入力します。
-4. 接続を保存すると、新規または既存のオーディエンスにリンクできるようになります。
+4. 接続を保存します。保存した接続は、新しいオーディエンスまたは既存のオーディエンスにリンクできます。
 
-![AppsFlyer オーディエンスは、プラットフォームパートナ接続設定ページを表示します。"画像sの下部には、Brazeの外部IDがチェックされていることが表示されます。][6]{: style="max-width:80%;"}
+![AppsFlyer Audiences プラットフォームのパートナー接続設定ページ。画像下部で「Braze external ID」ボックスがオンになっている。][6]{: style="max-width:80%;"}
 
-### ステップ 4:Braze でのAppsFlyer オーディエンスコホートの使用
+### ステップ4:Braze でのAppsFlyer オーディエンスコホートの使用
 
 AppsFlyer オーディエンスがアップロードされてBrazeされると、**AppsFlyer Cohorts**フィルターを選択して、BrazeでSegmentsを定義するときにフィルターとして使用できます。
 
-![ユーザ属性s フィルター "AppsFlyer Cohorts"選択。][7]
+![ユーザー属性フィルター「AppsFlyer Cohorts」アが選択されている。][7]
+
+## ユーザーマッチング
+
+識別されたユーザは、`external_id` または`alias` のいずれかで照合できます。匿名ユーザは、`device_id` と照合できます。最初に匿名ユーザーとして作成された識別済みユーザーは、`device_id` で識別できず、`external_id` または`alias` で識別する必要があります。
 
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/

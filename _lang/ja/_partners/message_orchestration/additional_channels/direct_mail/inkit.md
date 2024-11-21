@@ -10,25 +10,25 @@ search_tag: Partner
 
 # Inkit
 
-> [Inkitと][1]Brazeは、デジタルでもダイレクトメールでも、企業が安全に文書を作成・配布できるようにする。
+> [Inkit][1] と Braze により、デジタルでもダイレクトメールでも、企業が安全に文書を作成して配布することができます。
 
-BrazeとInkitの統合により、BrazeのWebhookを使って文書を生成し、Brazeユーザーに直接郵送することができる。
+Braze と Inkit の統合により、文書を生成し、Braze Webhook を使用して Braze ユーザーに直接メールで送信できます。
 
 ## 前提条件
 
 |必要条件| 説明|
 | ---| ---|
-|Inkitアカウント | このパートナーシップを利用するには、[Inkitアカウントが](https://www.inkit.com/)必要である。 |
-| InkitのAPIキー<br><br>`<INKIT_API_TOKEN>` | このキーは、[Inkitダッシュボードの](https://app.inkit.io/#/account/integrations) **開発**タブにあり、BrazeとInkitのアカウントを接続することができる。|
-| InkitテンプレートID<br><br>`<INKIT_TEMPLATE_ID>` | テンプレートを作成した後、**テンプレート**タブからテンプレートIDをコピーしてBrazeのテンプレートで使用することができる。<br><br>例えば、Inkit環境にテンプレートID:`tmpl_3bDScFl9cwr3OAVR1RSdEC` で`invoice_template` というテンプレートを作成する。
-| HTTPヘッダー | HTTPヘッダーは、BrazeからInkitに送信するAPIリクエストの一部である。その中に、Inkit APIへの呼び出しを認証および承認するためのInkit APIキーを含める。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|Inkitアカウント | このパートナーシップを活用するには、[Inkit アカウント](https://www.inkit.com/)が必要です。 |
+| Inkit API キー<br><br>`<INKIT_API_TOKEN>` | このキーは [Inkit Dashboard](https://app.inkit.io/#/account/integrations) の [**Development**] タブにあります。このキーにより Braze アカウントと Inkit アカウントを接続できるようになります。|
+| Inkitテンプレート ID<br><br>`<INKIT_TEMPLATE_ID>` | テンプレートを作成した後、**テンプレート**タブからテンプレートIDをコピーしてBrazeのテンプレートで使用することができる。<br><br>たとえば、Inkit 環境にテンプレート ID: `tmpl_3bDScFl9cwr3OAVR1RSdEC` で `invoice_template` というテンプレートを作成できます。
+| HTTPヘッダー | HTTPヘッダーは、BrazeからInkitに送信するAPIリクエストの一部である。この中には、Inkit API の呼び出しを認証および許可するための Inkit API キーが含まれます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
-### ステップ1:Inkitテンプレートを作成する
+### ステップ1:Inkit テンプレートを作成する
 
-Inkitプラットフォーム上で、Brazeキャンペーンで使用するテンプレートをHTML、Word、PowerPoint、ExcelまたはPDFで作成する。詳しくは[Inkitのドキュメントを](https://docs.inkit.com/docs/create-a-template)参照されたい。
+Inkitプラットフォーム上で、Brazeキャンペーンで使用するテンプレートをHTML、Word、PowerPoint、ExcelまたはPDFで作成する。詳細については、[Inkit のドキュメント](https://docs.inkit.com/docs/create-a-template)を参照してください。
 
 ### ステップ2:BrazeのWebhookテンプレートを作成する
 
@@ -40,30 +40,30 @@ Inkitプラットフォーム上で、Brazeキャンペーンで使用するテ�
 
 単発のInkitウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
-![Templates & MediaセクションのWebhook Templatesタブにある、利用可能なデザイン済みWebhookテンプレートのセレクション。][7]
+![「Templates & Media」セクションの「Webhook Templates」タブにある、一連の利用可能な事前設計済み Webhook テンプレート。][7]
 
 Inkitウェブフック・テンプレートを選択すると、以下のように表示される：
-- **ウェブフックのURL**：空白
-- **リクエスト・ボディ**Raw Text
+- **Webhook URL**:空白
+- **リクエスト本文**:Raw Text
 
-Webhook URLフィールドで、InkitのWebhook URLを[作成](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event)し、入力する必要がある。
+[Webhook URL] フィールドで、Inkit Webhook URL を[作成](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event)して入力する必要があります。
 
-![Braze webhook builderのcomposeタブに表示されるリクエストボディコードとwebhook URL。][5]
+![Braze Webhook ビルダー作成タブに表示されているリクエスト本文のコードと Webhook URL。][5]
 
 #### リクエストヘッダと方法
 
-Inkitは、認証のために、Base 64でエンコードされたInkit APIキーを含む、`HTTP Header` 。以下はすでにキーと値のペアとしてテンプレート内に含まれているが、**「設定」**タブでは、`<INKIT_API_TOKEN>` をあなたのInkit APIキーに置き換える必要がある。
+Inkit の認証には、Base64 でエンコードされた Inkit API キーを含む `HTTP Header` が必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、[**設定**] タブで `<INKIT_API_TOKEN>` を Inkit API キーに置き換える必要があります。
 
 {% raw %}
 - **HTTPメソッド**：POST
-- **ヘッダーをリクエストする**：
-  - **認可する**：ベーシック `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
+- **リクエストヘッダー**:
+  - **Authorization**:Basic `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
   - **Content-Type**: application/json
 {% endraw %}
 
 #### Request body
 
-リキッドが以下の必須フィールドとオプションフィールドに関連する適切なカスタム属性と一致していることを確認する。また、どのリクエストにもカスタムデータフィールドを追加することができる。
+Liquid が、以下の必須フィールドとオプションフィールドに関連付けられている適切なカスタム属性を照合することを確認します。また、どのリクエストにもカスタムデータフィールドを追加できます。
 
 ```json
 {% raw %}{
@@ -86,7 +86,7 @@ Inkitは、認証のために、Base 64でエンコードされたInkit APIキ�
 
 ### ステップ3:リクエストをプレビューする
 
-Brazeタグに該当するテキストは自動的にハイライトされる。`street`このWebhookを送信するには、`unit` 、`state` 、`zip` を[カスタム属性として][3]設定する必要がある。
+生のテキストが適切な Braze タグである場合、このテキストが自動的に強調表示されます。この Webhook を送信するには、`street`、`unit`、`state`、`zip` が[カスタム属性][3]として設定されている必要があります。
 
 **Preview**パネルでリクエストをプレビューするか、**Test**タブに移動して、ランダムなユーザー、既存のユーザーを選択するか、ウェブフックをテストするために自分でカスタマイズする。
 

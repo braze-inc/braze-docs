@@ -1,7 +1,7 @@
 ---
-nav_title: アクショナブル・ドット・ミー
-article_title: アクショナブル・ドット・ミー
-description: "この参考記事では、Brazeと独自のソフトウェアおよびプロセスであるactionable.meとのパートナーシップについて概説している。"
+nav_title: actionable.me
+article_title: actionable.me
+description: "このリファレンス記事では、Braze と actionable.me のパートナーシップについて説明します。actionable.me は、Braze への投資を今すぐ最大限に引き出すことができる専用ソフトウェアおよびプロセスです。"
 alias: /partners/actionableme/
 page_type: partner
 search_tag: Partner
@@ -10,26 +10,26 @@ search_tag: Partner
 
 # actionable.me
 
-> [actionable.me][2]データおよびCRMエージェンシーであるMassive Rocketのチームによって構築された、CRMプログラムを実行するための標準化され、自動化されたアプローチであり、Brazeの顧客が迅速、一貫性、予測可能な価値を得られるように設計されたツールとプロセスを提供する。 
+> [actionable.me][2] は、データおよび CRM エージェンシーである Massive Rocket のチームによって開発された、CRM プログラムを実行するための標準化および自動化されたアプローチです。Braze のお客様に、迅速かつ一貫性があり予測可能な方法で価値を実現するためのツールとプロセスを提供します。 
 
-Brazeとactionable.me の統合により、Brazeの活用状況をモニターするサービスを展開することができる。ツールとプロセスを組み合わせることで、CRMのパフォーマンスを迅速にベンチマークし、新たな機会を特定し、より良いパフォーマンスを実現する方法を提案する。
+Braze と actionable.me の統合により、Braze の使用状況を監視するためのサービスをデプロイできます。ツールとプロセスを組み合わせることで、CRM のパフォーマンスが迅速にベンチマークされ、新しい機会が特定され、パフォーマンスの向上に関する推奨事項が提供されます。
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | --- | --- |
-| actionable.me アカウント | このパートナーシップを利用するには、actionable.me のアカウントが必要である。 |
+| actionable.me アカウント | このパートナーシップを活用するには、actionable.me アカウントが必要です。 |
 | Braze REST API キー | 次のセクションに記載されている権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-Brazeとactionable.me を統合するには、actionable.me プラットフォームを設定し、Braze APIキーをBrazeで作成し、actionable.me ダッシュボードで設定する必要がある。
+Braze とactionable.me を統合するには、actionable.me プラットフォームを設定し、Braze API キーを Braze で作成して actionable.me ダッシュボードで設定する必要があります。
 
-### ステップ 1:BrazeのAPIキーを作成する
+### ステップ1:BrazeのAPIキーを作成する
 
-Brazeで、**Settings**>**API Keysに**移動する。**Create New API Keyを**選択し、以下のパーミッションが追加されていることを確認する：
+Braze で [**設定**] > [**API キー**] の順に移動します。[**新しい API キーを作成**] を選択し、次の権限が追加されていることを確認します。
 
 - `campaigns.list`
 - `campaigns.data_series`
@@ -49,18 +49,18 @@ Brazeで、**Settings**>**API Keysに**移動する。**Create New API Keyを**�
 - `kpi.uninstalls.data_series`
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、**Developer Console**>**API Settingsから**APIキーを作成できる。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
 ### ステップ2:actionable.me チームに情報を提供する
 
-統合を完了するには、REST APIキーと[RESTエンドポイントURLを][1] actionable.me オペレーション・チームに提供する必要がある。actionable.me が接続を確立し、セットアップ完了後に連絡を取り、インサイトの共有を開始する。
+統合を完了するには、REST API キーと [REST エンドポイント URL][1] を actionable.me オペレーションチームに提供する必要があります。その後 actionable.me が接続を確立し、設定完了後に連絡を取り、インサイトの共有を開始します。
 
 ![actionable.me 運営チームが設定するactionable.me 「プラットフォームの追加」ページ。][5]
 
 ## トラブルシューティング
 
-actionable.me またはMassive Rocketチームまでご連絡を。[massiverocket.com][3]
+その他のサポートについては、actionable.me またはMassive Rocket チーム ([info@massiverocket.com][3]) にお問い合わせください。
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://actionable.me

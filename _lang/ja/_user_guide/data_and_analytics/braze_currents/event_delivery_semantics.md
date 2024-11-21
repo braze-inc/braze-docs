@@ -3,21 +3,21 @@ nav_title: イベント配信のセマンティクス
 article_title: イベント配信のセマンティクス
 page_order: 3
 page_type: reference
-description: "このリファレンス記事では、データウェアハウスパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説します。"
+description: "この参考記事では、Currentsがデータウェアハウス・ストレージパートナーに送信するフラットファイルのイベントデータをどのように管理しているかについて概説している。"
 tool: Currents
 
 ---
 
 # イベント配信のセマンティクス
 
-> この記事では、データウェアハウスパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説します。
+> この記事では、Currentsがデータウェアハウス・ストレージパートナーに送信するフラットファイルのイベントデータをどのように管理しているかについて概説する。
 
 データストレージ用の Currents は、弊社のプラットフォームから、データウェアハウスの[パートナー接続]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)の 1 つにあるストレージバケットに送信されるデータの連続ストリームです。
 
 Currents は、通常のしきい値に達するとストレージバケットに Avro ファイルを書き込むので、独自のビジネスインテリジェンスツールセットを使用してイベントデータの処理および分析ができます。
 
 {% alert important %}
-この内容は、**データウェアハウスパートナー (Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage) に送信するフラットファイルのイベントデータにのみ適用されることに注意してください**。<br><br>他のパートナーに適用される内容については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
+このコンテンツは**、データウェアハウス・ストレージ・パートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルのイベントデータにのみ適用される**。<br><br>他のパートナーに適用される内容については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
 {% endalert %}
 
 
@@ -30,6 +30,10 @@ Currents 高スループットのシステムであるため、イベントの�
 ## タイムスタンプ
 
 Currents がエクスポートするすべてのタイムスタンプは、UTC タイムゾーンで送信されます。タイムスタンプを利用可能な一部のイベントでは、イベント発生時のユーザーのローカルタイムゾーンを IANA 形式で提供する、タイムゾーンフィールドも含まれます。
+
+### レイテンシー
+
+SDKまたはAPIを通じてBrazeに送信されたイベントには、過去のタイムスタンプを含めることができる。最も顕著な例は、モバイル接続がない場合など、SDKデータがキューに入れられる場合だ。その場合、イベントのタイムスタンプは、そのイベントがいつ生成されたかを反映する。つまり、イベントの何割かはレイテンシーが高く見えることになる。
 
 ## Apache Avro
 
@@ -49,19 +53,19 @@ Currents は、以下の形式で各イベントタイプのファイルを作�
 スクロールバーがあるために、コードが見えない場合は、[こちら]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)の修正方法を参照してください。
 {% endalert %}
 
-|ファイル名 Segment |定義|
+|ファイル名セグメント |定義|
 |---|---|
 | `<your-bucket-prefix>` | このCurrents統合のために設定されたプレフィックス。 |
-| `<cluster-identifier>` | Brazeによる内部使用のため。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルは同じクラスタ識別子を持ちます。|
+| `<cluster-identifier>` | Braze 内部で使用されます。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルは同じクラスタ識別子を持ちます。|
 | `<connection-type-identifier>` | 接続の種類の識別子。オプションは「S3」、「AzureBlob」、または「GCS」です。 |
 | `<integration-id>` | このCurrents統合の一意のID。 |
 | `<event-type>` | ファイル内のイベントの種類。 |
-| `<date>` | イベントがUTCタイムゾーンで処理のためにシステムにキューされる時間。書式設定された YYYY-MM-DD-HH。 |
-| `<schema-id>` | 後方互換性とスキーマの進化のために`.avro`スキーマのバージョン管理に使用されます。整数。 |
-| `<zone>` | Brazeによる内部使用のため。 |
-| `<partition>` | Brazeによる内部使用のため。整数。 |
-| `<offset>`| Brazeによる内部使用のため。整数。注意: 同じ時間内に送信された異なるファイルには、異なる`<offset>`パラメータが含まれます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `<date>` | イベントがUTCタイムゾーンで処理のためにシステムにキューされる時間。形式は YYYY-MM-DD-HH です。 |
+| `<schema-id>` | `.avro` スキーマの後方互換性とスキーマ進化のために、そのバージョン管理に使用されます。整数。 |
+| `<zone>` | Braze 内部で使用されます。 |
+| `<partition>` | Braze 内部で使用されます。整数。 |
+| `<offset>`| Braze 内部で使用されます。整数。異なるファイルが同一時刻内に送信される場合、`<offset>` パラメーターが異なることに注意してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 ファイルの命名規則は将来変更される可能性があるため、プレフィックスが <your-bucket-prefix> であるすべてのキーをバケットから検索することを Braze ではお勧めします。
@@ -77,7 +81,7 @@ Currents は空のファイルの書き込みを行いません。
 
 ### Avro スキーマの変更
 
-Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。Currentsのイベントは、Azure Blob Storage、Google Cloud Storage、およびAmazon S3に書き込まれ、パスに`<schema-id>`を書き込みます。例えば`<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`。
+Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。Azure Blob Storage、Google Cloud Storage、および Amazon S3 に書き込まれる Currents イベントは、パスに `<schema-id>` を書き込みます。例: `<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`
 
 #### 非破壊的な変更
 

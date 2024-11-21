@@ -1,16 +1,16 @@
 ---
-nav_title: アプテリジェント
-article_title: アプテリジェント
+nav_title: Apteligent
+article_title: Apteligent
 alias: /partners/apteligent/
-description: "この参考記事では、BrazeとApteligentのパートナーシップについて概説している。Apteligentは、クラッシュ報告の詳細を提供するモバイル・アプリケーションで、重要なデータを既存のBrazeソリューションに記録することができる。"
+description: "このリファレンス記事では、Braze と Apteligent のパートナーシップについて説明します。Apteligent は、詳細なクラッシュレポートを作成するモバイルアプリケーションであり、重要なデータを既存の Braze ソリューションに記録できるようにします。"
 page_type: partner
 search_tag: Partner
 
 ---
 
-# アプテリジェント
+# Apteligent
 
-> [Apteligentは](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html)モバイル・アプリケーション・パフォーマンス・プラットフォームで、開発者やプロダクト・マネージャーにツールと洞察を提供している。 
+> [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) は、開発者と製品マネージャーにツールとインサイトを提供するモバイルアプリケーションパフォーマンスプラットフォームです。 
 
 BrazeとApteligentの統合は、詳細なiOSクラッシュレポートを提供し、重要なデータを既存のBrazeソリューションに記録するだけでなく、アプリケーションのクラッシュを経験したユーザーをセグメント化し、理解し、エンゲージすることを可能にする。
 
@@ -18,8 +18,8 @@ BrazeとApteligentの統合は、詳細なiOSクラッシュレポートを提�
 
 | 必要条件 | 説明 |
 |---|---|
-| テストドライブアカウント | このパートナーシップを利用するには、テストドライブのアカウントが必要だ。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| TestDrive アカウント | このパートナーシップを活用するには、TestDrive アカウントが必要です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert warning %}
 この統合は現在iOSでのみサポートされている。
@@ -29,7 +29,7 @@ BrazeとApteligentの統合は、詳細なiOSクラッシュレポートを提�
 
 ### ステップ1:オブザーバーを登録する
 
-まず、オブザーバーを登録しなければならない。これは、Apteligentを初期化する前に行っておくこと。
+最初にオブザーバーを登録する必要があります。Apteligent を初期化する前に、この登録が完了していることを確認してください。
 
 ```objc
 [[NSNotificationCenter defaultCenter] addObserver:self
@@ -38,11 +38,11 @@ BrazeとApteligentの統合は、詳細なiOSクラッシュレポートを提�
                                            object:nil];
 ```
 
-### ステップ2:カスタム・クラッシュ解析を記録する
+### ステップ2:カスタムクラッシュ分析を記録する
 
-Apteligent SDKは、クラッシュが発生した後、ユーザーがアプリケーションをロードすると通知を発する。通知には、クラッシュの名称、理由、発生日が記載される。
+Apteligent SDK は、クラッシュが発生した後、ユーザーがアプリケーションをロードしたときに通知を発行します。通知には、クラッシュの名前、理由、発生日が含まれます。
 
-通知を受信したら、カスタムクラッシュイベントを記録し、Apteligentのクラッシュレポート分析でユーザー属性を更新する：
+通知を受け取ったら、カスタムクラッシュイベントをログに記録し、Apteligent のクラッシュレポート分析を使用してユーザー属性を更新します。
 
 ```objc
 - (void)crashDidOccur:(NSNotification*)notification {
