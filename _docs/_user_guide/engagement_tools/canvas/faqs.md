@@ -105,7 +105,7 @@ The number of users entering a Canvas may differ from your expected number becau
 
 ### What happens to anonymous users during their Canvas journey?
 
-An anonymous user in Braze is defined as a user who hasn't been identified with an external user ID, Braze ID, or a similar unique identifier. This means that while anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
+While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
