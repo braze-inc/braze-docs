@@ -21,17 +21,17 @@ BrazeとFresh Relevanceの統合により、次のことが可能になります
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |-------------| ----------- |
 | Fresh Relevance アカウント  | このパートナーシップを活用するには、Fresh Relevance アカウントが必要です。 |
-| Braze REST API キー | 以下に記載されているエンドポイントに十分な権限を持つBraze REST APIキー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][3]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze REST API キー | 以下に記載されているエンドポイントに十分な権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][3]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 | Braze キャンペーン ID | 送信に使用したいデフォルトのBrazeキャンペーン。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-Fresh Relevance で統合を設定するには、\[**Messaging Channels**] でBraze チャネルを作成し、必要に応じて適切な Fresh Relevance トリガーまたはコンテンツでこのチャネルを使用する必要があります。 
+Fresh Relevance で統合を設定するには、[**Messaging Channels**] でBraze チャネルを作成し、必要に応じて適切な Fresh Relevance トリガーまたはコンテンツでこのチャネルを使用する必要があります。 
 
 ステップバイステップの手順については、Fresh Relevanceにログインして、彼らの[ドキュメント][2]に従ってください。
 

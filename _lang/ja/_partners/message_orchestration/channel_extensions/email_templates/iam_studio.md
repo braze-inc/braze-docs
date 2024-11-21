@@ -16,10 +16,10 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | IAM Studioアカウント | このパートナーシップを活用するには、[IAM Studio アカウント](https://www.inappmessage.com/register)が必要です。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## ユースケース
 
@@ -52,7 +52,7 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 {% endtab %}
 {% endtabs %}
 
-次にカスタムフォントを追加し、Liquid タグを使用して、パーソナライズされたアプリ内メッセージを作成します。ログとトラッキングを有効にするには、\[**Log data and track user behavior**] を選択します。
+次にカスタムフォントを追加し、Liquid タグを使用して、パーソナライズされたアプリ内メッセージを作成します。ログとトラッキングを有効にするには、[**Log data and track user behavior**] を選択します。
 
 {% tabs ローカル %}
 {% tab フォント %}

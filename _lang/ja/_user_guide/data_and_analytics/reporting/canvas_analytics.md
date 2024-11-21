@@ -1,5 +1,5 @@
 ---
-nav_title: キャンバスの分析
+nav_title: キャンバス分析
 page_order: 4.6
 noindex: true
 layout: redirect

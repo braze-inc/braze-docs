@@ -16,12 +16,12 @@ Braze と ViralSweep の統合により、ViralSweep プラットフォームで
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | ViralSweep アカウント | このパートナーシップを活用するためには、ビジネスプランを利用している ViralSweep アカウントが必要です。 |
 | Braze REST API キー | すべてのユーザーデータおよびメール権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-|Braze REST エンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -37,7 +37,7 @@ ViralSweep で、**Integrations > Email & SMS > Add Service** に移動し、**B
 
 ![ユーザーに Braze API キーと Braze ダッシュボード URL の入力を求める ViralSweep サービス統合ページ。][2]{: style="max-width:40%;"}
 
-\[**Connect**] をクリックします。
+[**Connect**] をクリックします。
 
 ### ステップ3 :Braze 認証情報を追加する
 接続が完了しました。プロモーションがBrazeに接続され、ViralSweepによって収集されたすべてのエントリーが自動的にBrazeに送信されます。

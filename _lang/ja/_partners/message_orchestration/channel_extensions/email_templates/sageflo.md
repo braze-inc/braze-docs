@@ -19,9 +19,9 @@ search_tag: Partner
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Sageflo Radiate アカウント | このパートナーシップを活用するには、Sageflo Radiate アカウントが必要です。 |
-| Braze REST API キー | 完全な`templates` および`campaigns` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。APIエンドポイントは、BrazeインスタンスのダッシュボードURLと一致する。<br><br> 例えば、ダッシュボードのURLが`https://dashboard-03.braze.com` の場合、エンドポイントは`dashboard-03` となる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | 完全な`templates` および`campaigns` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze REST エンドポイント | [RESTエンドポイントのURL][1]。API エンドポイントは、Brazeインスタンスのダッシュボード URL と一致します。<br><br> たとえば、ダッシュボード URL が`https://dashboard-03.braze.com` の場合、エンドポイントは`dashboard-03` になります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
