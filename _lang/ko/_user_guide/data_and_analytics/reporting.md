@@ -4,7 +4,7 @@ article_title: 보고서
 page_order: 7
 layout: dev_guide
 guide_top_header: "보고서"
-guide_top_text: "데이터는 사용자에게 중요한 의미를 갖기 때문에 Braze 내에는 여러 가지 보고 옵션이 있습니다( <a href='/docs/user_guide/data_and_analytics/braze_currents/'>커런츠</a> 제외). <br><br> 어디서부터 시작해야 할지 잘 모르겠다면 <a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>보고서 개요에서</a> 일반적인 마케팅 전략 질문에 답하는 데 사용할 수 있는 보고서와 분석에 대한 지침을 확인하세요. "
+guide_top_text: "데이터는 사용자에게 중요한 의미를 갖기 때문에 Braze 내에는 여러 가지 보고 옵션이 있습니다(<a href='/docs/user_guide/data_and_analytics/braze_currents/'>커런츠</a> 제외). <br><br> 어디서부터 시작해야 할지 잘 모르겠다면 <a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>보고서 개요에서</a> 일반적인 마케팅 전략 질문에 답하는 데 사용할 수 있는 보고서와 분석에 대한 지침을 확인하세요. "
 
 page_type: landing
 description: "이 랜딩 페이지에는 세그먼트 보고, 참여 보고서, 보고서 작성기 등 Braze 내에서 사용할 수 있는 보고 옵션(커런츠 제외)에 대한 문서가 있습니다."
