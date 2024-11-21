@@ -19,11 +19,11 @@ tool: Canvas
 
 ## 지연 만들기
 
-지연을 만들려면 먼저 캔버스에 단계를 추가합니다. 사이드바에서 지연 구성 요소를 끌어서 놓거나 단계 하단에 있는 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **지연을** 선택합니다.
+지연을 만들려면 먼저 캔버스에 단계를 추가합니다. 사이드바에서 지연 구성 요소를 끌어서 놓거나 단계 하단에 있는 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **지연**을 선택합니다.
 
 캔버스 여정에서 지연을 만들 때 고려해야 할 몇 가지 세부 사항이 있습니다.
 - 지연 제한은 30일입니다.
-- 지연 컴포넌트는 다음 단계에 하나만 연결할 수 있습니다.
+- 지연 구성요소는 다음 단계에 하나만 연결할 수 있습니다.
 
 ### 시간 지연 옵션
 
@@ -37,7 +37,7 @@ tool: Canvas
   '일'과 '달력 일수'를 계산하는 방법의 차이에 유의하세요. 
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
-    - A "calendar day" defines a day as 24 hours after a specified time, meaning you can choose to delay at company time or at a user's local time. If a time is not specified, the user will be delayed until midnight the next day in company time.
+    - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
   {% endtab %}
   {% tab 특정 날짜까지 %}
@@ -62,7 +62,7 @@ tool: Canvas
 
 먼저 6월 11일에 사용자가 캔버스에 입장하는 즉시 전송하는 전체 단계를 추가합니다. 그런 다음 현지 시간으로 6월 17일 오후 3시까지 사용자를 단계에 머무르게 하는 지연 단계를 만들 수 있습니다. 그런 다음 지연 단계를 즉시 메시지를 전송하는 전체 단계에 연결합니다.
 
-### 캔버스 끝에 있는 지연 컴포넌트 {#delay-as-last-step}
+### 캔버스 끝에 있는 지연 구성요소 {#delay-as-last-step}
 
 캔버스에 지연 구성 요소를 추가했지만 지연 구성 요소 뒤에 더 이상 단계가 없는 경우, 마지막 단계에 도달한 사용자는 자동으로 캔버스 밖으로 진행됩니다. 지연 단계의 시간이 아직 도달하지 않은 경우에도 마찬가지입니다. 즉, 이미 지연 단계에 도달한 사용자의 경우 지연 단계 이후에 추가하는 메시지를 받지 못합니다. 그러나 사용자가 지연 단계에 도달하지 않았는데 메시지가 추가되면 해당 메시지를 받게 됩니다.
 
@@ -70,13 +70,13 @@ tool: Canvas
 
 지연은 활성 캔버스 또는 이전에 활성 캔버스의 분석 보기에서 세 가지 통계를 사용할 수 있습니다.
 
-| Metric | 설명 |
+| 측정기준 | 설명 |
 |---|---|
 | `Entered` | 단계를 입력한 횟수를 반영합니다. 캔버스에 재자격이 있는 사용자가 지연 단계를 두 번 입력하면 두 개의 항목이 기록됩니다. |
 | `Proceeded to Next Step` | 캔버스에서 다음 단계로 진행된 항목 수를 반영합니다. |
 | `Exited Canvas` | 캔버스를 종료하고 다음 단계로 진행하지 않은 항목의 수를 반영합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-이러한 분석에 대한 시계열은 확장된 컴포넌트 보기에서 사용할 수 있습니다.
+이러한 분석에 대한 시계열은 확장된 구성요소 보기에서 사용할 수 있습니다.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
