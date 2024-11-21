@@ -1256,4 +1256,8 @@ validurls['/docs/pt-br/'] = '/docs/';
 validurls['/docs/es/'] = '/docs/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/';
 
+validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/home/';
+validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
+validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
+
 // validurls['OLD'] = 'NEW';
