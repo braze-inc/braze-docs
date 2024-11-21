@@ -19,17 +19,17 @@ channel:
 
 메시지를 분류하여 사용자의 알림 트레이에 그룹화하려면 Braze를 통해 iOS의 알림 그룹 기능을 활용할 수 있습니다.
 
-iOS 푸시 캠페인을 만든 다음 **작성** 탭 상단에 있는 **알림 그룹** 드롭다운에서 **알림 그룹을** 찾습니다.
+iOS 푸시 캠페인을 만든 다음 **작성** 탭 상단에 있는 **알림 그룹** 드롭다운에서 알림 그룹을 찾습니다.
 
 ![][26]{: style="max-width:60%;" }
 
-드롭다운에서 알림 그룹을 선택합니다. 알림 그룹 설정이 잘못되었거나 드롭다운에서 **없음을** 선택하면 워크스페이스에 정의된 모든 사용자에게 정상적으로 메시지가 자동으로 전송됩니다.
+드롭다운에서 알림 그룹을 선택합니다. 알림 그룹 설정이 잘못되었거나 드롭다운에서 **없음**을 선택하면 워크스페이스에 정의된 모든 사용자에게 정상적으로 메시지가 자동으로 전송됩니다.
 
 여기에 나열된 알림 그룹이 없는 경우 iOS 스레드 ID를 사용하여 알림 그룹을 추가할 수 있습니다. 추가하려는 모든 알림 그룹에 대해 하나의 iOS 스레드 ID가 필요합니다. 그런 다음 드롭다운에서 **알림 그룹 관리를** 클릭하고 표시되는 **iOS 푸시 알림 그룹 관리** 창에서 필수 입력란을 작성하여 알림 그룹에 추가합니다.
 
 ![][27]
 
-iOS 푸시 캠페인을 만든 다음 작성기 상단을 확인합니다. **알림 그룹이라는** 레이블이 붙은 드롭다운이 표시됩니다.
+iOS 푸시 캠페인을 만든 다음 작성기 상단을 확인합니다. **알림 그룹**이라는 레이블이 붙은 드롭다운이 표시됩니다.
 
 ### 요약 인수
 
@@ -41,7 +41,7 @@ iOS 푸시 캠페인을 만든 다음 작성기 상단을 확인합니다. **알
 
 **푸시 작성기에서** **알림 옵션** 상자를 선택합니다.
 
-그런 다음 `summary-arg` 및 `summary-arg-count` 을 키로 선택하고 해당 열에 해당 값을 입력합니다. `summary-arg` 에 값을 설정하지 않으면 기본값은 1이 됩니다.
+그런 다음 `summary-arg` 및 `summary-arg-count` 을 키로 선택하고 해당 열에 해당 값을 입력합니다. `summary-arg`에 값을 설정하지 않으면 기본값은 1이 됩니다.
 
 ### 요약 카테고리
 
@@ -63,7 +63,7 @@ UNNotificationCategory *newsCategory = [UNNotificationCategory categoryWithIdent
 {% endalert %}
 
 {% alert tip %}
-`%u` 및 `%@` 은 각각 요약 개수 및 요약 인수의 서식 지정 문자열입니다. 요약이 표시되면 이러한 자리 표시자는 `summary-count` 및 `summary-arg` 의 값으로 대체됩니다 .
+`%u` 및 `%@`은 각각 요약 개수 및 요약 인수의 서식 지정 문자열입니다. 요약이 표시되면 이러한 입력 안내는 `summary-count` 및 `summary-arg`의 값으로 대체됩니다 .
 {% endalert %}
 
 앱에서 설정이 완료되면 **알림 버튼** 상자를 선택하고 **미리 등록된 iOS 카테고리 입력을** 선택하여 요약 카테고리를 사용합니다.
@@ -74,22 +74,22 @@ UNNotificationCategory *newsCategory = [UNNotificationCategory categoryWithIdent
 
 Apple은 브랜드가 공식적으로 명시적으로 옵트인하기 전에 사용자의 알림 센터에 조용한 푸시 알림을 보낼 수 있는 옵션을 제공하여 메시지의 가치를 조기에 입증할 수 있는 기회를 제공합니다. 앱에서 [임시 푸시 알림을 설정하기만](#set-up-provisional-push-notifications) 하면 임시 푸시 토큰이 있는 모든 사용자가 메시지를 받게 됩니다.
 
-기존 iOS 푸시 토큰과 달리 임시 푸시 토큰은 브랜드가 신규 사용자가 Apple의 기본 푸시 옵트인 메시지를 보고 클릭하기 전에 도달할 수 있는 '체험판' 역할을 합니다. 이 기능을 사용하면 푸시 알림이 새 사용자의 알림 트레이로 바로 전달되며, 향후 알림을 '유지' 또는 '끄기'할 수 있는 옵션이 제공됩니다. 사용자는 '옵트인' 여정을 경험하는 대신 '옵트아웃' 여정에 더 가까운 경험을 하게 됩니다.
+기존 iOS 푸시 토큰과 달리 임시 푸시 토큰은 브랜드가 신규 사용자가 Apple의 기본 푸시 옵트인 안내를 보고 클릭하기 전에 도달할 수 있는 "체험판" 역할을 합니다. 이 기능을 사용하면 푸시 알림이 새 사용자의 알림 트레이로 바로 전달되며, 향후 알림을 '유지' 또는 '끄기'할 수 있는 옵션이 제공됩니다. 사용자는 '옵트인' 여정을 경험하는 대신 '옵트아웃' 여정에 더 가까운 경험을 하게 됩니다.
 
 {% alert tip %}
 임시 인증은 옵트인 비율을 크게 높일 수 있는 잠재력이 있지만, 사용자가 메시지에서 가치를 발견할 경우에만 가능합니다. [사용자 세분화]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [위치 타겟팅]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/) 및 [개인화]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) 기능을 사용하여 적절한 사용자가 적시에 '체험판' 알림을 받을 수 있도록 하세요. 그러면 푸시 알림이 사용자의 앱 사용 경험에 가치를 더한다는 사실을 알고 사용자가 푸시 알림을 완전히 옵트인하도록 유도할 수 있습니다.
 {% endalert %}
 
-사용자가 어떤 옵션을 선택하든 사용자 프로필의 **참여** 탭 아래에 있는 [연락처 설정에]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) 적절한 토큰 또는 [구독 상태가]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) 추가됩니다.
+사용자가 어떤 옵션을 선택하든 고객 프로필의 **인게이지먼트** 탭 아래에 있는 [연락처 설정]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)에 적절한 토큰 또는 [구독 상태]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/)가 추가됩니다.
 
 ![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
-[세분화 필터를]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) 사용하여 잠정 승인 여부에 따라 사용자를 타겟팅할 수 있습니다.
+[세분화 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하여 잠정 승인 여부에 따라 사용자를 타겟팅할 수 있습니다.
 
 ![세그먼트 세부 정보 패널에 샘플 세그먼트 필터 "iOS 스톱워치(iOS)에서 잠정적으로 승인됨"을 적용하여 타겟 사용자를 대상으로 합니다.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
-사용자가 임시 푸시를 '끄기'로 선택하면 더 이상 임시 푸시 메시지가 표시되지 않습니다. 이 기능을 사용하여 보내는 메시지 내용과 문장에 신중을 기하세요!
+사용자가 임시 푸시를 "끄기"로 선택하면 더 이상 임시 푸시 메시지가 표시되지 않습니다. 이 기능을 사용하여 보내는 메시지 내용과 문장에 신중을 기하세요!
 {% endalert %}
 
 {% alert important %}
@@ -101,7 +101,7 @@ Apple은 브랜드가 공식적으로 명시적으로 옵트인하기 전에 사
 Braze를 사용하면 다음 스니펫을 예로 들어 Braze iOS SDK 구현 내에서 토큰 등록 스니펫의 코드를 업데이트하여 임시 인증을 등록할 수 있습니다(이를 개발자에게 보내거나 [통합 프로세스 중에 임시 푸시 인증을 구현하도록]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10) 하세요).
 
 {% alert warning %}
-임시 푸시 인증 구현은 iOS 12 이상만 지원하며 배포 대상이 그 이전인 경우 오류가 발생합니다. 이에 대한 자세한 내용은 [여기에서 자세한 구현 문서를]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10) 참조하세요.
+임시 푸시 인증 구현은 iOS 12 이상만 지원하며 배포 대상이 그 이전인 경우 오류가 발생합니다. 이에 대한 자세한 내용은 [여기에서 자세한 구현 설명서]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10)를 참조하세요.
 {% endalert %}
 
 {% tabs local %}
@@ -134,7 +134,7 @@ if (@available(iOS 12.0, *)) {
 
 ![알림이 즉시 전달되도록 설정되어 있고 시간에 민감한 알림이 활성화된 알림을 표시하는 iOS 알림 설정 페이지.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나 진동으로 '방해'할 수 있는 시기를 더 잘 제어할 수 있습니다.
+iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나 진동으로 "방해"할 수 있는 시기를 더 잘 제어할 수 있습니다.
 
 이제 앱에서 알림의 긴급성에 따라 알림에 포함할 중단 수준을 지정할 수 있습니다.
 
@@ -145,16 +145,16 @@ iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나
 |방해 수준|설명|사용 시기|브레이크 스루 포커스 모드|
 |--|--|--|--|
 |[수동적](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)|소리, 진동 또는 화면 켜기 없이 알림을 보냅니다.|즉각적인 주의가 필요하지 않은 알림입니다.|아니요|
-|[활성](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (기본값)|사용자가 초점 모드에 있지 않은 경우에만 소리와 진동을 내고 화면을 켭니다.|사용자가 포커스 모드를 활성화하지 않은 경우 즉각적인 주의가 필요한 알림입니다.|아니요|
-|[시간 민감형](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|초점 모드에 있는 동안에도 소리가 나고 진동이 울리며 화면이 켜집니다. 이를 위해서는 Xcode에서 앱에 **시간 민감 알림 기능을** 추가해야 합니다.|차량 공유 또는 배달 알림과 같이 Focus 모드와 관계없이 사용자에게 방해가 될 수 있는 시기 적절한 알림을 제공합니다.|예|
+|[활성](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (기본값)|사용자가 포커스 모드에 있지 않은 경우에만 소리와 진동을 내고 화면을 켭니다.|사용자가 포커스 모드를 활성화하지 않은 경우 즉각적인 주의가 필요한 알림입니다.|아니요|
+|[시간 민감형](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|포커스 모드에 있는 동안에도 소리가 나고 진동이 울리며 화면이 켜집니다. 이를 위해서는 Xcode에서 앱에 **시간 민감형 알림**을 추가해야 합니다.|차량 공유 또는 배달 알림과 같이 Focus 모드와 관계없이 사용자에게 방해가 될 수 있는 시기 적절한 알림을 제공합니다.|예|
 |[중요](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|휴대폰의 **방해 금지** 스위치가 활성화되어 있어도 소리가 나고 진동이 울리며 화면이 켜집니다. 이를 위해서는 [Apple의 명시적인 승인이 필요합니다](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|악천후 또는 안전 경보와 같은 긴급 상황|예|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 iOS 푸시 알림의 중단 수준을 변경하려면 **설정** 탭을 선택하고 **중단 수준** 드롭다운 메뉴에서 원하는 수준을 선택합니다.
 
-![인터럽트 수준을 활성(기본값)으로 설정하고 사용 가능한 모든 인터럽트 수준을 표시하도록 확장합니다: 패시브, 액티브(기본값), 시간 민감, 크리티컬.][28]
+![방해 수준을 활성(기본값)으로 설정하고 사용 가능한 모든 방해수준을 표시하도록 확장합니다. 패시브, 액티브(기본값), 시간 민감, 크리티컬.][28]
 
-이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 디바이스에만 적용됩니다.
+이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
 
 ### 관련성 점수(iOS 15+) {#relevance-score}
 
@@ -162,17 +162,17 @@ iOS 푸시 알림의 중단 수준을 변경하려면 **설정** 탭을 선택�
 
 iOS 15는 또한 사용자가 하루 중 지정된 시간에 여러 알림을 선택적으로 그룹화하여 다이제스트하도록 예약할 수 있는 새로운 방법을 도입했습니다. 이는 즉각적인 주의가 필요하지 않은 알림으로 인해 하루 종일 알림이 계속 중단되는 것을 방지하기 위한 것입니다.
 
-앱은 **관련성 점수를** 설정하여 가장 관련성이 높은 푸시 알림을 지정할 수 있습니다. Apple은 이 점수를 사용하여 예약된 알림 요약에 어떤 알림을 표시할지, 다른 알림은 사용자가 요약을 클릭하면 사용할 수 있도록 할지를 결정합니다. 
+앱은 **관련성 점수**를 설정하여 가장 관련성이 높은 푸시 알림을 지정할 수 있습니다. Apple은 이 점수를 사용하여 예약된 알림 요약에 어떤 알림을 표시할지, 다른 알림은 사용자가 요약을 클릭하면 사용할 수 있도록 할지를 결정합니다. 
 
 모든 알림은 사용자의 알림 센터에서 계속 액세스할 수 있습니다.
 
-iOS 알림의 관련성 점수를 설정하려면 **설정** 탭에서 `0.0` ~ `1.0` 사이의 값을 입력합니다. 예를 들어 가장 중요한 메시지는 `1.0` 으로 보내고, 중간 정도의 중요도는 `0.5` 으로 보내면 됩니다.
+iOS 알림의 관련성 점수를 설정하려면 **설정** 탭에서 `0.0` ~ `1.0` 사이의 값을 입력합니다. 예를 들어 가장 중요한 메시지는 `1.0`으로 보내고, 중간 정도의 중요도는 `0.5`로 보내면 됩니다.
 
 ![][29]
 
-이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 디바이스에만 적용됩니다.
+이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
 
-다양한 메시지 유형별 최대 메시지 길이에 대한 자세한 내용은 다음 리소스를 참조하세요:
+다양한 메시지 유형별 최대 메시지 길이에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
 - [이미지 및 텍스트 사양]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS 문자 수 가이드라인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
