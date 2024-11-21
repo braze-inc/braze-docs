@@ -1,13 +1,13 @@
 ---
 page_order: 1
 nav_title: Customization
-article_title: Swift Push Customization
+article_title: Customizing push notifications for the Braze Swift SDK
 layout: featured
 platform: Swift
 channel:
   - push
 
-guide_top_header: "Swift Push Customization"
+guide_top_header: "Push notification customization"
 guide_top_text: ""
 description: "This landing page is home to all things related to Swift push customization."
 

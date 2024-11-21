@@ -1,7 +1,7 @@
 ---
-nav_title: FireOS
+nav_title: Network
+page_order: 5 
 config_only: true
 noindex: true
 layout: blank_config
-page_order: 4
 ---
