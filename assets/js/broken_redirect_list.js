@@ -204,6 +204,7 @@ validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/';
 validurls['/docs/sms_double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/';
+validurls['/docs/message_usage/'] = '/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/';
 
 validurls['/docs/user_guide/message_building_by_channel/sms/non_native'] = '/docs/user_guide/message_building_by_channel/sms/keywords';
 validurls['/docs/user_guide/message_building_by_channel/sms/non_native/user_data_migration/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
@@ -1254,5 +1255,9 @@ validurls['/docs/ko/support_contact/'] = '/docs/support_contact/';
 validurls['/docs/pt-br/'] = '/docs/';
 validurls['/docs/es/'] = '/docs/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/';
+
+validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/home/';
+validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
+validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
 
 // validurls['OLD'] = 'NEW';

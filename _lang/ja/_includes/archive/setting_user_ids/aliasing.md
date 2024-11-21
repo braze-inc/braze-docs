@@ -1,11 +1,11 @@
-[ユーザーエイリアスは]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)、代替の一意なユーザー識別子として機能する。エイリアスを使用して、コアユーザーIDとは異なる次元でユーザーを識別することができる：
+[ユーザーエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)は、代替の一意のユーザー識別子として機能します。エイリアスを使用して、コアユーザーIDとは異なる次元でユーザーを識別することができる：
 
-* ユーザーがモバイルアプリやWebサイトにログインする前と後の両方をフォローする分析用の一貫した識別子を設定する。
-* サードパーティーベンダーが使用している識別子を外部ユーザーに追加することで、外部とのユーザーデータの照合をより簡単に行うことができる。
+* モバイルアプリやウェブサイトにログインする前と後の両方で、特定のユーザーを追跡するアナリティクス用の一貫した識別子を設定します。
+* 外部とのデータの照合をより簡単に行うためには、サードパーティベンダーが使用する識別子を Braze ユーザーに追加します。
 
 各エイリアスは、識別子そのものの名前と、エイリアスの種類を示すラベルの2つの部分で構成される。ユーザーは異なるラベルで複数のエイリアスを持つことができるが、1つのラベルにつき1つの名前しか持つことができない。 
 
-ユーザープロファイルに対するユーザーエイリアスの設定については、[ユーザーエイリアスを]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)参照のこと。
+ユーザープロファイルにユーザーエイリアスを設定する方法について詳しくは、[[ユーザーエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)] を参照してください。
 
 {% if include.platform == "iOS" %}
 
