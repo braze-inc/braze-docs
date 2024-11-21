@@ -14,7 +14,7 @@ Braze Landing Pages utilize a version of the Braze Web SDK to track user data on
 
 ### Tracking Mechanisms:
 
-Web SDK:
+#### Web SDK:
 The Braze Web SDK is initialized only when a user submits a form on the landing page. This means that prior to form submission, no personal data is collected and the SDK does not actively track users. Once initialized, the SDK does not store any data in the browser (cookies, local storage, or otherwise).
 
 - When a form is submitted, the SDK will collect the following datapoints:
@@ -24,13 +24,14 @@ The Braze Web SDK is initialized only when a user submits a form on the landing 
 - Device ID (unique ID generated - but not stored - for the device)
 - Country determined by IP Address
 
-### Anonymized Data:
+#### Anonymized Data:
 Before a user submits a form, the data tracked on a landing page consists solely of anonymized, non-identifiable information. This includes standard website tracking metrics like the number of page views (impressions) and clicks that a landing page receives.
 Since this data is not linked to identifiable users, it cannot be used for retargeting or tracking of individual user behavior.
 
 ## Impact on User Tracking and Cookie Consent:
 
 Landing pages were built with an intent to adhere to privacy regulations, but we still recommend reviewing the above information with your legal team to determine if there are any consent collection mechanisms required for your company and use cases. 
+
 By relying on local storage and anonymized data collection, Braze Landing Pages can operate without requiring explicit cookie consent from users prior to form submission as of now. 
 
 {% alert note %}
