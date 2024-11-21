@@ -56,11 +56,11 @@ If you have set an in-app message delegate to manually handle message display or
 
 ### Impressions are lower than they used to be
 
-- Ensure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
+1. Ensure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
 ![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
 
-- Ensure you didn't re-use your trigger event in a separate in-app message campaign with a higher priority.
+2. Ensure you didn't re-use your trigger event in a separate in-app message campaign with a higher priority.
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}
 
