@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 슬라이드업 인앱 메시지의 메
 
 > 슬라이드업은 일반적으로 앱 화면의 상단 또는 하단에 표시됩니다(메시지를 작성할 때 설정할 수 있음). 새로운 서비스 약관, 쿠키 및 기타 정보 스니펫에 대해 사용자에게 알리는 데 유용합니다. 이러한 메시지는 눈에 거슬리지 않으며 사용자가 메시지가 표시되는 동안 앱과 계속 상호 작용할 수 있습니다.
 
-![두 개의 슬라이드업 인앱 메시지가 화면 상단과 하단에 표시되며, 이미지와 텍스트 추천을 자세히 설명합니다. 자세한 내용은 다음 섹션을 참조하세요.]\[2a]{: style="max-width: 40%; border: none;"}
+![두 개의 슬라이드업 인앱 메시지가 화면 상단과 하단에 표시되며, 이미지와 텍스트 추천을 자세히 설명합니다. 자세한 내용은 다음 섹션을 참조하세요.][2a]{: style="max-width: 40%; border: none;"}
 
 ## 이미지 및 복사 동작
 
@@ -24,16 +24,16 @@ description: "이 참조 문서에서는 슬라이드업 인앱 메시지의 메
 - PNG, JPEG, GIF 파일 형식만 허용됩니다.
 - 이미지 크기는 500KB를 권장합니다.
 
-{% alert tip %} 자신 있게 에셋을 제작하세요! 인앱 메시지 이미지 템플릿과 안전 영역 오버레이는 모든 크기의 디바이스에 잘 어울리도록 디자인되었습니다. \[디자인 템플릿 ZIP 다운로드]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} 자신 있게 에셋을 제작하세요! 인앱 메시지 이미지 템플릿과 안전 영역 오버레이는 모든 크기의 디바이스에 잘 어울리도록 디자인되었습니다. [디자인 템플릿 ZIP 다운로드]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-| 레이아웃 | 자산 크기 | 참고 |
+| 레이아웃 | 애셋 크기 | 참고 |
 |--- | --- | --- |
 | 이미지 + 텍스트 | 1:1 화면비<br>고해상도 150 x 150 픽셀<br> 최소 50 x 50 픽셀 | 다양한 가로 세로 비율의 이미지가 잘리지 않고 정사각형 이미지 컨테이너에 들어갑니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-항상 다양한 디바이스에서 [메시지를 미리 보고 테스트하여]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) 이미지와 메시지의 가장 중요한 부분이 예상대로 표시되는지 확인해야 합니다. 작성기에서 메시지를 미리 볼 때 디바이스에서의 실제 렌더링은 다를 수 있다는 점에 유의하세요.
+항상 다양한 기기에서 [메시지를 미리 보고 테스트하여]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) 이미지와 메시지의 가장 중요한 부분이 예상대로 표시되는지 확인해야 합니다. 작성기에서 메시지를 미리 볼 때 기기에서의 실제 렌더링은 다를 수 있다는 점에 유의하세요.
 
-## 모바일 장치
+## 모바일 기기
 
 모바일 디바이스에서는 앱 화면의 상단 또는 하단에 슬라이드업이 표시됩니다. 메시지를 작성할 때 이를 지정할 수 있습니다. 사용자는 스와이프하여 슬라이드업을 해제하거나, 클릭 동작이 포함된 경우 탭하여 열 수 있습니다. 슬라이드업에 클릭 동작이 추가되면 셰브론 ">"가 표시됩니다.
 
@@ -56,4 +56,4 @@ description: "이 참조 문서에서는 슬라이드업 인앱 메시지의 메
 {% endtab %}
 {% endtabs %}
 
-\[2a]: {% image_buster /assets/img/slideup-spec.png %}
+[2a]: {% image_buster /assets/img/slideup-spec.png %}
