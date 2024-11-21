@@ -13,13 +13,13 @@ tool: Canvas
 
 > 캔버스의 의사 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다. 
 
-이 컴포넌트는 사용자가 쿼리와 일치하는지 여부에 따라 캔버스 브랜치를 만드는 데 사용할 수 있습니다.
+이 구성 요소는 사용자가 쿼리와 일치하는지 여부에 따라 캔버스 분기를 만드는 데 사용할 수 있습니다.
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## 의사 결정 분할 만들기 
 
-워크플로에서 의사 결정 분할을 만들려면 먼저 캔버스에 단계를 추가하세요. 사이드바에서 컴포넌트를 끌어다 놓거나 단계 하단의 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **결정 분할을** 선택합니다.
+워크플로에서 의사 결정 분할을 만들려면 먼저 캔버스에 단계를 추가하세요. 사이드바에서 구성 요소를 끌어다 놓거나 단계 하단의 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **결정 분할**을 선택합니다.
 
 ### 분할 정의
 
@@ -51,14 +51,14 @@ tool: Canvas
 
 이 단계의 분석에 대한 설명은 다음 표를 참조하세요:
 
-| Metric | 설명 |
+| 측정기준 | 설명 |
 |---|---|
 | 진입함 | 단계를 입력한 총 횟수입니다. 캔버스에 재자격이 있고 사용자가 결정 분할 단계를 두 번 입력하는 경우 두 개의 항목이 기록됩니다. |
 | 예 | 지정된 기준을 충족하고 '예' 경로로 진행된 항목의 수입니다. |
-| 아니요 | 지정된 기준을 충족하지 못하고 '아니오' 경로로 진행된 항목 수입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+| 아니요 | 지정된 기준을 충족하지 못하고 "아니오" 경로로 진행된 항목 수입니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: {% image_buster /assets/img/decision-split-1.png %}
 [2]: {% image_buster /assets/img/define-split-2.png %}
 [3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[5]: {{site.baseurl}}/user_guide/참여_도구/세그먼트/
+[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/
