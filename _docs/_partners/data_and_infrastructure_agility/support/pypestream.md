@@ -21,7 +21,7 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 | Pypestream account | A [Pypestream account](https://www.pypestream.com/contact-us/) is required to take advantage of this partnership.<br><br>Once subscribed, the Pypestream team will help you set up your dedicated environment to begin building your conversational AI solution to integrate with Braze. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

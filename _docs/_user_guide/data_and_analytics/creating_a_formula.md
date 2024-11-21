@@ -68,7 +68,7 @@ table td {
 | DAU | MAU |
 | Sessions | DAU |
 | | Segment size |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Revenue dashboard
 
@@ -76,7 +76,7 @@ table td {
 | --- | --- |
 | Purchases (all) | DAU |
 | Select purchases (such as a gift card or product ID) | MAU |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Custom event dashboard
 
@@ -85,7 +85,7 @@ table td {
 | Custom event count | MAU |
 |  | DAU |
 |  | Segment size (only segments that have [analytics tracking][17] enabled can be used) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/

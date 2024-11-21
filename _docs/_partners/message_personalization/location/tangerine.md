@@ -21,7 +21,7 @@ The Braze and Tangerine integration allows you to integrate raw campaign and imp
 | Store360 account | A Store360 account is required to take advantage of this partnership. |
 | Braze account ID | Your Braze app group ID. |
 | Matching user IDs | Your customer data in Store360 and Braze must have matching user IDs across the two platforms. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

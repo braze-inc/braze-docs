@@ -22,7 +22,7 @@ There are a few differences between promotion code lists and Data Feeds.
 | Descriptions     | Yes             | No           |
 | Expiration Dates | Yes             | No           |
 | Creation Method  | Uploading a CSV | Pasting text |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## How to migrate
 

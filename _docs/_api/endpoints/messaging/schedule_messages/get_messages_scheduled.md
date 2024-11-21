@@ -33,7 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | Required | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | End date of the range to retrieve upcoming scheduled campaigns and Canvases. This is treated as midnight in UTC time by the API. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

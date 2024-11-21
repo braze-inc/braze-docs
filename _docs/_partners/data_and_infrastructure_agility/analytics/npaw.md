@@ -20,7 +20,7 @@ hidden: true
 | YOUBORA API Key |[YOUBORA Settings](https://youbora.nicepeopleatwork.com/users/login)|An API Key generated on user sign up and can be located under **Settings** |
 | ID |[Braze Settings](https://dashboard.braze.com/sign_in) | YOUBORA gives you the options of whether to link the software to Braze via a ***Braze ID***, an ***external User ID***, or a ***User ID*** |
 | Endpoint |[Braze Settings](https://dashboard.braze.com/sign_in)| A fully customizable URL endpoint configurable through your Braze dashboard. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 # Analytics integration
 

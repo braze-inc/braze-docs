@@ -108,7 +108,7 @@ The following table shows the filters available for segmenting users by custom e
 | Check if the custom event occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 | Check if the custom event occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 | Check if the custom event occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Analytics
 
@@ -159,7 +159,7 @@ Property values can be any of the following data types:
 | Arrays | Arrays cannot include datetimes. |
 | Objects | Objects will be ingested as strings. |
 | Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Event property objects that contain array or object values can have an event property payload up to 100&nbsp;KB.
 

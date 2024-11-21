@@ -59,7 +59,7 @@ You can customize in-app message handling by implementing this delegate method a
 | Objective-C: `ABKDisplayInAppMessageNow`<br>Swift: `displayInAppMessageNow` | The message will be displayed immediately. |
 | Objective-C: `ABKDisplayInAppMessageLater`<br>Swift: `displayInAppMessageLater` | The message will be not be displayed and will be placed back on the top of the stack. |
 | Objective-C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage`| The message will be discarded and will not be displayed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
 

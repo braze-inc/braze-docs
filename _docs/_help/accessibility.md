@@ -114,7 +114,7 @@ For example, consider how you might write a link to view a weather report.
 | Bad  | Better | Best |
 | --- | --- | --- | 
 | Click here | Click here to access today's weather | Today's weather |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 As with all content, keep it straightforward with as few extra words as possible.
 

@@ -36,7 +36,7 @@ Braze can be included in the following areas of your extension:
 | Popup Page | The [Popup](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) page is a dialog that can be shown to users when clicking on your extension's icon in the browser toolbar.| Analytics, in-app messages, and Content Cards |
 | Background Scripts | [Background Scripts](https://developer.chrome.com/extensions/background_pages) (Manifest v2 only) allow your extension to inspect and interact with user navigation or modify webpages (for example, how ad blockers detect and change content on pages). | Analytics, in-app messages, and Content Cards.<br><br>Background scripts aren't visible to users, so for messaging, you would need to communicate with browser tabs or your popup page when displaying messages. |
 | Options Pages | The [Options Page](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) lets your users toggle settings within your extension. It's a standalone HTML page that opens a new tab. | Analytics, in-app messages, and Content Cards |
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
 
 ## Permissions
 

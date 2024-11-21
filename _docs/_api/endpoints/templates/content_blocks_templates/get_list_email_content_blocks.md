@@ -33,7 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 | `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only Content Blocks updated at or before the given time. |
 | `limit` | Optional | Positive Number | Maximum number of Content Blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
 | `offset`  |  Optional | Positive Number | Number of Content Blocks to skip before returning rest of the templates that fit the search criteria. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -77,6 +77,6 @@ The following table lists possible returned errors and their associated troubles
 | `Content Block number limit exceeds maximum of 1000` | Change the `limit` parameter to an integer less than 1000. |
 | `Offset is invalid` | The `offset` parameter must be an integer greater than 0. |
 | Offset must be greater than 0 | Change the `offset` parameter to an integer greater than 0. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -30,7 +30,7 @@ search_tag: Partner
 | --- | --- |
 | [Worthy](https://worthy.ai/) account | A Worthy account is required to take advantage of this partnership. |
 | Braze SDK | You will need to configure the Braze SDK in your mobile application to send rich in-app messages. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration
 

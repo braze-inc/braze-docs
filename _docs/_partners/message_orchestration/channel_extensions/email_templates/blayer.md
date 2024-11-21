@@ -21,7 +21,7 @@ The Braze and B.Layer integration allows you to leverage the B.Layer in-app mess
 | Requirement | Description |
 | ----------- | ----------- |
 | B.Layer account | A [B.Layer](https://blayer.phiture.com) account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

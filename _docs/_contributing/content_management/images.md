@@ -32,7 +32,7 @@ Replace the following:
 |-------------|-------------------------------------------------------------------------------------------|
 | `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
 | `FILE`      | The name of the file including the file extension.                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your image file should be similar to the following:
 
@@ -64,7 +64,7 @@ Replace the following:
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
 | `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line image should be similar to the following:
 
@@ -150,7 +150,7 @@ Replace the following:
 |-------------|-------------------------------------------------------------------------------------------|
 | `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
 | `FILE`      | The name of the file including the file extension.                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your image file should be similar to the following:
 

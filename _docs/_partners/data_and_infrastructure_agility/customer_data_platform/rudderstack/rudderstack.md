@@ -22,7 +22,7 @@ The Braze and RudderStack integration offers a native SDK integration for your A
 | Braze REST API key | A Braze REST API key with `users.track`, `users.identify`, `users.delete`, and `users.alias.new` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze app key | To get your app key in the Braze dashboard go to **Settings** > **App Settings** > **Identification** and find your app name. Save the associated identifier string.
 | Data center | Your data center aligns with your Braze dashboard [instance][15].  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
 

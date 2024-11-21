@@ -241,4 +241,10 @@ $(document).ready(function () {
   $('#header-search-form .aa-Form .aa-Input').focusout(function(e){
       $('#header_nav').removeClass('search_focus');
   });
+  $('.aa-Form').each(function(i){
+    var $this = $(this);
+    if (!$this.attr('aria-label')) {
+      $this.attr('aria-label','aa-Search-'+i);
+    }
+  })
 });

@@ -12,9 +12,9 @@ tool:
 
 # Exporting usage analytics
 
-> The **Home** page of the dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date.
+> This page covers the **Home** page of the dashboard, which contains high-level data of app usage, as well as detailed statistics of different KPIs by date.
 
-To obtain CSVs of information from this page:
+To export CSVs of data from this page:
 
 1. Set the time frame and apps you want to view data for. By default, the dashboard shows the last 30 days of data for all apps.
 
@@ -27,7 +27,7 @@ To obtain CSVs of information from this page:
 ![Performance Over Time graph on the Home dashboard.][2]
 
 {:start="4"}
-4. Click <i class="fas fa-bars" title="Chart context menu"></i> and select your export option.
+4. Select <i class="fas fa-bars" title="Chart context menu"></i> and then select your export option.
 
 ## Available data
 

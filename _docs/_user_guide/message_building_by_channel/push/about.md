@@ -29,7 +29,7 @@ Push notifications are a great tool for attracting new users and making re-engag
 | First Purchases | After users are comfortable using your app, you can use push notifications to help convert them into in-app purchasers. |
 | New Features | Push notifications can be effective in notifying disengaged users about new features that might attract them back to your app. |
 | Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
 
@@ -56,12 +56,12 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |[3.2.2][9] Unacceptable: (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection.| 
 |[4.5.4][7] Push Notifications must not be required for the app to function, and should not be used to send sensitive personal or confidential information. Push Notifications should not be used for promotions or direct marketing purposes unless customers have explicitly opted in to receive them via consent language displayed in your app’s UI, and you provide a method in your app for a user to opt out from receiving such messages.|
 |[4.10](https://developer.apple.com/app-store/review/guidelines/#monetizing-built-in-capabilities) You may not monetize built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services and technologies, such as Apple Music access, iCloud storage, or Screen Time APIs.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 |Google Play Store Policy|
 |---|
 |[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
-{: .reset-td-br-1}
+{: .reset-td-br-1 role="presentation" }
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
 [2]: {% image_buster /assets/img/ios_push.png %}

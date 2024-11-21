@@ -76,7 +76,7 @@ Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_bu
   </tbody>
 </table>
 {% endraw %}
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 You can now test the webhook with a user by switching to the **Test** tab.
 

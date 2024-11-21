@@ -128,7 +128,7 @@ Instead of attempting to make up for the delay and send the remaining 4,000 mess
 | 7      | 10,000     | 10,000                    |
 | 8      | 5,000      | 10,000                    |
 | 9      | 0          | 6,000                     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## About frequency capping
 
@@ -258,7 +258,7 @@ Consider the following campaigns and frequency capping by tag rule:
 |---|---|
 | The `promotional` tag is removed from **Campaign A** after your user received the message, but before **Campaign B has sent.** | Your user will receive **Campaign B**.|
 | The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user will not receive **Campaign B**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Sending at large scales {#sending-at-large-scales}
 

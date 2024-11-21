@@ -19,7 +19,7 @@ The Braze and Tinyclues integration offers users a path to better CRM planning a
 | Requirement | Description |
 |---|---|
 | Tinyclues account | A Tinyclues account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Data import integration
 

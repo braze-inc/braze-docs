@@ -14,7 +14,8 @@ tool:
 
 > This reference article covers what can be changed in a Canvas after the initial launch.
 
-For Canvases launched with Canvas Flow or the original editor, you can edit your Canvases after launch by:
+You can edit your Canvases after launch by:
+
 * Inserting new Canvas steps into the user journey
 * Adding new variants and connections
 * Adjusting variant distribution
@@ -66,7 +67,8 @@ Stopping a Canvas will not exit users who are waiting to receive a message. If y
 
 ## Canvas details
 
-You can edit these Canvas settings and information after a Canvas launches using either editor (the original or Canvas Flow): 
+You can edit the following Canvas settings and information after a Canvas launches:
+
 * Canvas name and description
 * Teams and tags
 * Entry type, schedule, and controls
@@ -77,12 +79,14 @@ You can edit these Canvas settings and information after a Canvas launches using
 * Target audience
 
 After a Canvas has launched:
+
 - Conversion events can't be edited. 
 - [Audience paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [experiment paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) can't be added or removed to these steps and can't be reordered to adjust the ranking. As a workaround, edit the active Canvas and duplicate the step, which will be editable until you launch the draft.
 
 ### Individual steps
 
 For individual Canvas steps, you can edit the following details after launch:
+
 * Name
 * Message content
 * Triggers

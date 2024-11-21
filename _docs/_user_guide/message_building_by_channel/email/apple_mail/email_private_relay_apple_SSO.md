@@ -35,7 +35,7 @@ Refer to this table for the components used when adding email addresses with App
 |---|---|
 | UID | This value is provided in your DNS records that are provided by Braze (from SendGrid). Do not include the letter "u" in your UID in the email address. For example, if your UID is presented in SendGrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br><br> If you don't have access to your DNS records, contact your Braze customer success manager to provide your UID. |
 | Whitelabeled Subdomain and Domain | The initial domain and subdomain you entered into SendGrid. You can also use the **HOST Value** in your DNS records in SendGrid. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Sending emails for SparkPost
 

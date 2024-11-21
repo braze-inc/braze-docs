@@ -28,7 +28,7 @@ When using the integration, BlueConic will send deltas (changing data) on each s
 | S3 authentication | You will need access to an Amazon Web Services (S3) server to export and import the data. |
 | Access key ID<br>Secret access key | The access key ID and secret access key will allow you to authenticate your S3 server for importing and exporting. |
 | AWS bucket | You will need to connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu. This is where files to be imported or exported are stored. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration
 

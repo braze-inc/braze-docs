@@ -45,6 +45,6 @@ Before May 2024, the Global Control Group was excluded from user archival, but t
 | Estimated Group Size | The estimated number of users in your control and treatment groups during selected time period. | The maximum membership size your control and treatment groups reached during the time period you chose for the report. |
 | Total Number of Events | The total number of times the selected event occurred during the chosen time period. This is not unique (for example, if a user performs an event twice during the time period, the event gets incremented twice). | Sum of the number of times an event occurred each day during the chosen time period. |
 | Events Per User | The estimated average number of times users in each group completed your conversion events during the selected time period. | Total events ÷ estimated group size. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [6]: {% image_buster /assets/img/control_group/control_group6.png %}

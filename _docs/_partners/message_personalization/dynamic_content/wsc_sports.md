@@ -20,7 +20,7 @@ The Braze and WSC Sports integration allows you to include rich and robust sport
 | ----------- | ----------- |
 | WSC account | A WSC account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with **Messages**, **Segments**, **Campaigns** and **Canvas** permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

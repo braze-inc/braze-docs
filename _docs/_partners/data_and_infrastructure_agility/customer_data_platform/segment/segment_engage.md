@@ -26,7 +26,7 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 | Braze Cloud destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Braze data import key | To sync Engage audiences to Braze as cohorts, you must generate a Data Import key.<br><br>Cohort import is in early access, contact your Braze customer success manager to get access to this feature. |
 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Cohorts Destination integration
 

@@ -43,7 +43,7 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 | `ABKInAppMessageDisplayNewsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
 | `ABKInAppMessageRedirectToURI` | The given URI will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter cannot be nil. |
 | `ABKInAppMessageNoneClickAction` | The message will be dismissed when clicked. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.

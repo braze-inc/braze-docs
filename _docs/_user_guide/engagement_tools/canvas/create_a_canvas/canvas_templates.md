@@ -1,6 +1,6 @@
 ---
-nav_title: Templates
-article_title: Templates
+nav_title: Creating a Canvas Template
+article_title: Creating a Canvas Template
 alias: "/canvas_templates/"
 page_order: 0.5
 description: "This reference article covers how to create a template for Canvas."
@@ -129,6 +129,10 @@ Orchestrate personalized experiences that allow you to respond to feedback and b
 
 {% endtab %}
 {% endtabs %}
+
+{% alert tip %}
+For a step-by-step guide to creating an example Canvas using these Braze templates, see [Using Braze templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates).
+{% endalert %}
 
 ## Managing Canvas templates
 

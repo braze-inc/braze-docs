@@ -35,6 +35,7 @@ These customer data platforms collect and route information from multiple source
 * [Tealium][8]
 * [Treasure Data][10]
 * [RudderStack][9]
+* [Adobe][12]
 
 ## Behavioral analytics
 
@@ -59,3 +60,4 @@ These partners specialize in product analytics and business intelligence and can
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
 [10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
 [11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
+[12]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/

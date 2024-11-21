@@ -41,7 +41,7 @@ Use this endpoint to pull a list of phone numbers that have been deemed "invalid
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
 | `phone_numbers` | Optional <br>(see note) | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 You must provide either a `start_date` and an `end_date` OR `phone_numbers`. If you provide all three, `start_date`, `end_date`, and `phone_numbers`, we prioritize the given phone numbers and disregard the date range.

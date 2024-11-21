@@ -44,7 +44,7 @@ Finally, your business and the types of emails you send may also affect delivery
 Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
 
 Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full," "server temporarily not available," and more. If a soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
-å
+
 ### What are open tracking pixels?
 
 [Open tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
@@ -65,6 +65,12 @@ You may be seeing more clicks than opens for any of the following reasons:
 Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in users unsubscribing. 
 
 For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/help/help_articles/email/open_rates/).
+
+### How can I remove an email address from the bounce or spam list?
+
+You can remove bounced emails and emails on the spam list with the following endpoints:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)
 
 ### How can I check a user's email subscription group?
 

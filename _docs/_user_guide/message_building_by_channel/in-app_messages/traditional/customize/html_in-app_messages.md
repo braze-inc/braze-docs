@@ -173,7 +173,7 @@ The following file types are supported for upload:
 | SVG Images       | `.svg`                            |
 | JavaScript Files | `.js`                             |
 | CSS Files        | `.css`                            |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Braze recommends uploading assets to the media library for two reasons:
 
@@ -215,7 +215,7 @@ You can track performance within your custom code in-app message using the [`bra
 | Button 2   | `brazeBridge.logClick("1")` |
 | Body click | `brazeBridge.logClick()`    |
 | Custom button tracking |`brazeBridge.logClick("your custom name here")`|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 This method of button tracking replaces the prior automatic click tracking methods (such as `?abButtonId=0`), which have been removed.

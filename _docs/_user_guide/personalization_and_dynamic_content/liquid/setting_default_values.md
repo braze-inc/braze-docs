@@ -10,7 +10,9 @@ description: "This reference article cover how to set default fallback values fo
 
 {% raw %}
 
-> Default fallback values can be set for any personalization attribute that you use in your messages. 
+> Default fallback values can be set for any personalization attribute that you use in your messages. This article covers how default values work, how to set them up, and how to use them in your messages.
+
+## How they work
 
 Default values can be added by specifying a [Liquid Filter][3] (use `|` to distinguish the filter inline, as shown) with the name "default."
 
@@ -18,7 +20,7 @@ Default values can be added by specifying a [Liquid Filter][3] (use `|` to disti
 | default: 'Insert Your Desired Default Here'
 ```
 
-If a default value is not provided and the field is missing or not set on the user, the field will be blank in the message.
+If a default value isn't provided and the field is missing or not set on the user, the field will be blank in the message.
 
 The following example shows the correct syntax for adding a default value. In this case, the words "Valued User" will replace the attribute `{{ ${first_name} }}` if a user's `first_name` field is empty or unavailable.
 

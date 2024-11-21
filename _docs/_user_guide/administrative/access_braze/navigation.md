@@ -192,7 +192,7 @@ The following table lists where each page is located in the new navigation. Some
 | User Import                   | Import Users                | **Audience** > **Import Users**                                  |
 | User Search                   | Search Users                | **Audience** > **Search Users**                                  |
 | Webhook Templates             | N/A                         | **Templates** > **Webhook Templates**                            |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% endtabs %}

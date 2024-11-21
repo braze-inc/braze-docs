@@ -25,7 +25,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `braze.logContentCardClicked(contentCard)`    | Logs a click for the given Content Card object.                                                            |
 | `braze.logContentCardImpression(contentCard)` | Logs an impression for the given Content Card object.                                                      |
 | `braze.logContentCardDismissed(contentCard)`  | Logs a dismissal for the given Content Card object.                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Receiving Content Card data
 

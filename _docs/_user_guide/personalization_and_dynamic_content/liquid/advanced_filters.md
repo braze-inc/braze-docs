@@ -8,6 +8,8 @@ description: "This reference article lists advanced filters, examples, and how t
 
 # Advanced filters
 
+> This reference article provides an overview of advanced filters in Liquid and how they can be used.
+
 ## Encoding filters
 
 {% raw %}
@@ -21,7 +23,7 @@ description: "This reference article lists advanced filters, examples, and how t
 `hmac_sha1_base64` | Returns hmac-sha1 signature, encoded as a base64 string | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= |
 `hmac_sha256_hex` | Returns hmac-sha256 signature, encoded as a hex string | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e |
 `hmac_sha256_base64` | Returns hmac-sha256 signature, encoded as a base64 string | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## URL filters
 
@@ -30,7 +32,7 @@ description: "This reference article lists advanced filters, examples, and how t
 | `url_escape` | Identifies all characters in a string that are not allowed in URLS, and replaces the characters with their escaped variants | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
 | `url_param_escape` | Replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | Encodes a string that is URL friendly | `{{ 'google search' | url_encode }}` | google+search |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endraw %}
 {% alert tip %}
@@ -49,7 +51,7 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 | filter name | filter description |
 |---|---|---|---|
 | `property_accessor` | Takes a hash and hash key and returns the value in that hash at that key |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Example hash:** `{"a" => 42, "b" => 0}`
 **Example input:** `{{hash | property_accessor: 'a'}}`
@@ -70,14 +72,14 @@ There is no way to instantiate a hash as a variable (such as an expression) in L
 | filter name | filter description | example input | example output |
 |---|---|---|---|
 | `number_with_delimiter` | Formats a number with commas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## JSON escape / string escape filter
 
 | filter name | filter description |
 |---|---|---|---|
 | `json_escape` | Escapes any special characters in a string (such as double quote `""` and backslash '\'). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 This filter should always be used when personalizing a string in a JSON dictionary and is useful for webhooks in particular.
 {% endraw %}

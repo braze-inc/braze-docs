@@ -1,5 +1,5 @@
 ---
-nav_title: Commenting
+nav_title: Commenting in Canvas
 article_title: Commenting in Canvas
 alias: "/canvas_comments/"
 page_order: 0.5
@@ -36,7 +36,7 @@ You can also use keyboard shortcuts to add comments:
 | --- | --- |
 | <kbd>⌘</kbd> + <kbd>Enter</kbd> | <kbd>Ctrl</kbd> + <kbd>Enter</kbd>|
 | <kbd>Tab</kbd> + <kbd>Enter</kbd> | <kbd>Tab</kbd> + <kbd>Enter</kbd> |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 To view an existing comment, open the sidebar or select the <i class="fas fa-comment"></i> comment icon next to the step name. You can also reply to existing comments in a thread. 
 

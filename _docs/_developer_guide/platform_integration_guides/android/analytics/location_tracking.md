@@ -75,14 +75,21 @@ Even when automatic tracking is disabled, you can manually log single location d
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+  }
+}
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
+}
 ```
 
 {% endtab %}

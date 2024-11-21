@@ -8,7 +8,9 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 # Operators
 
-Liquid supports many [operators][25] that can be used in your conditional statements. Note that parentheses are invalid characters in Liquid and prevents your tags from working.
+> Liquid supports many [operators][25] that can be used in your conditional statements. This page covers the operators that Liquid supports and provides use cases of how you can use them in your messages.
+
+This table lists the operators that are supported. Note that parentheses are invalid characters in Liquid and prevents your tags from working.
 
 |   Syntax| Operator Description|
 |---------|-----------|
@@ -21,13 +23,13 @@ Liquid supports many [operators][25] that can be used in your conditional statem
 | or | condition A or condition B|
 | and | condition A and condition B|
 | contains | checks to see if a string or string array contains a string|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Operator examples
+## Use cases
 
-Here are some examples of how these operators could be helpful for your marketing campaigns:
+Here are some use cases of how these operators could be helpful for your marketing campaigns:
 
-### Choose message via integer custom attribute
+### Choose message with an integer custom attribute
 
 {% raw %}
 ```liquid
@@ -41,7 +43,7 @@ Buy now! Would 5% off convince you?
 
 ![][13]{: width="100%"}
 
-In this example, if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
+In this use case, if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
 Thanks for purchasing! Here's another 10% off!
@@ -52,7 +54,7 @@ If a customer's "Total Spend" custom attribute does not exist or is equal to `0`
 Buy now! Would 5% off convince you?
 ```
 
-### Choose message via string custom attribute
+### Choose message with a string custom attribute
 
 {% raw %}
 
@@ -68,7 +70,7 @@ Hey! Get in here and play this Game!
 
 ![][14]
 
-In this example, if you have played a certain game, you'll receive the following message:
+In this use case, if you have played a certain game, you'll receive the following message:
 
 ```
 You played our Game! We're so happy!

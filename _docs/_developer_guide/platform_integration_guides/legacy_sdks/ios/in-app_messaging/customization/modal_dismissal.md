@@ -31,4 +31,4 @@ You can also enable the feature at runtime by setting `ABKEnableDismissModalOnOu
 |----------|-------------|
 | `YES`       | Modal in-app messages will be dismissed on outside tap.     |
 | `NO`        | Default, modal in-app messages will not be dismissed on outside tap. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

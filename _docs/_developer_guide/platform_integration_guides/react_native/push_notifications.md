@@ -146,7 +146,7 @@ For a full list of push notification fields, refer to the table below:
 | `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
 | `ios`              | Object    | Represents iOS-specific fields. |
 | `android`          | Object    | Represents Android-specific fields. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 3: Enable deep linking (optional)
 

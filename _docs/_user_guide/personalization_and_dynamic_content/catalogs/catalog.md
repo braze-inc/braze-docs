@@ -50,7 +50,7 @@ To create a catalog, go to **Data Settings** > **Catalogs**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
 {% endalert %}
 
-Click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
+Select **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV
 
@@ -73,7 +73,7 @@ You can also use templates in a catalog name. For example, you can use the follo
 ```liquid
 {% assign language = "content_spanish" %}
 
-{% catalog_items language fall_campaign %}
+{% catalog_items {{language}} fall_campaign %}
 {{ items[0].body }}
 ```
 {% endraw %}
@@ -88,12 +88,12 @@ You can also update the CSV file after selecting to create a catalog in the brow
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
-- Maximum of 250 characters
-- Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
+- Up to 250 characters
+- Can only include numbers, letters, hyphens, and underscores <br> ![A catalog named "my_catalog".][14]{: style="max-width:80%;"} <br><br>
 2. (optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
-5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
+4. Select **Update Catalog** > **Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![Two example fields "rating" and "name".][12]{: style="max-width:50%;"}<br><br>
+5. Select **Update Catalog** > **Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, select **Save Item** or **Save and Add Another** to continue adding your items. <br> ![Add a catalog item.][13]{: style="max-width:50%;"}
 
 You can also upload a CSV file after selecting to create a catalog in the browser.
 
@@ -141,11 +141,11 @@ We'll create the catalog by uploading a CSV file. The data types for `id`, `titl
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-![][9]{: style="max-width:85%;"}
+![Four catalog column names: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
 Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
-![][11]{: style="max-width:85%;"}
+![A catalog named "games_catalog".][11]{: style="max-width:85%;"}
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
@@ -171,7 +171,7 @@ The following table describes the differences between the free and pro version o
 | Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
 | Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
 | Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Catalog storage
 
@@ -181,7 +181,7 @@ The package entitlement shown in the Braze dashboard is rounded to the nearest u
 
 #### Free version
 
-The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
+The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up. There will also be a size mismatch between the CSV catalog data and the representation of that data in our datastore.
 
 #### Catalogs Pro
 

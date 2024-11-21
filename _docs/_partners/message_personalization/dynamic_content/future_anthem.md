@@ -22,7 +22,7 @@ This feature is currently in Early Access. Please reach out to the Future Anthem
 | Future Anthem Account    | A Future Anthem account. |
 | Braze REST API key       | A Braze REST API key with the [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track). This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint      | The Braze [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) that matches your instance, such as `rest.iad-01.com`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use Cases
 
@@ -53,7 +53,7 @@ These are the available Braze custom attributes. For more detailed information, 
 | Accumulator Bet Recommendations | `{"Bet_1": "Halland Goal vs. Manchester United", "Bet_2": "Liverpool vs. Everton"}`| Object |
 | Accumulator Bet Recommendations | `{"Bet_1": 1.5, "Bet_2": 2}` | Object |
 | Bet Builder Bet Recommendations | `{"Sport":"American Football", "Competition":"NFL", "Event":"Seahwaks@Giants", "Market":"MoneyLine", "Selection":"Seahawks"}`| Object |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Bonus Recommendations %}
@@ -70,7 +70,7 @@ These are the available Braze custom attributes. For more detailed information, 
 | Other bonus value recommendations in the future | 0 | Number |
 | Future CLTV  | 3126 | Number |
 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Game Recommendations %}
@@ -86,7 +86,7 @@ These are the available Braze custom attributes. For more detailed information, 
 | Popular Games | Temple of Iris, Fishin’ Frenzy, Rishing Reward, Crazy Time, Fluffy Favourites | Array |
 | Trending Games | Pig Banker, Hyper Gold, Pyramid King, Gold Cash | Array |
 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
 {% tab Player Cluster %}
@@ -94,7 +94,7 @@ These are the available Braze custom attributes. For more detailed information, 
 | Subcategory | Example | Datatype |
 | ------- | ----------- |----------- |
 | Showcase what cluster the player is in | High Value Game Diverse| String |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
 {% tab Player Sustain - Player potential risk %}
@@ -103,6 +103,6 @@ These are the available Braze custom attributes. For more detailed information, 
 | ------- | ----------- |----------- |
 | Risk Score | 0.5| Number |
 | Risky Player | True | Boolean |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}

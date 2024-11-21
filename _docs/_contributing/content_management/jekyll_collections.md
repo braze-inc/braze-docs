@@ -36,7 +36,7 @@ Replace the following:
 | `COLLECTION_KEY`  | A single, unique word that represents your collection's name. Use lowercase letters only. |
 | `COLLECTION_TITLE`| The name of your collection in title case.        |
 | `COLLECTION_URL`  | The default URL for your collections landing page.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Your new collection should be similar to the following:
 

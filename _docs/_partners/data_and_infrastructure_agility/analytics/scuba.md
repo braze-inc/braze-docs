@@ -20,7 +20,7 @@ To use Scuba Analytics with Braze, you'll need the following:
 |Scuba API Token | A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Uploading your Scuba data to Braze
 
@@ -61,7 +61,7 @@ Replace the following:
 | `PERIOD_START`          | The start period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                 |
 | `PERIOD_END`            | The end period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                   |
 | `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. If `scuba_record_limit` is omitted, Scuba will return a maximum of 100 records. To change this, assignin any non-negative number to `scuba_record_limit`.    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Default behavior
 

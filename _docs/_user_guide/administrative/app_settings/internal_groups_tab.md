@@ -39,7 +39,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 | User Event Group| Used for verifying events or logs from your test device.|
 | Content Test Group | A similar concept to Test Lists. Can be used across push, email, and in-app messages to send a rendered copy of the message.|
 | Seed Group | Automatically sends a copy of the email to everyone the Seed Group upon send.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Adding test users
 
@@ -52,7 +52,7 @@ After you create your Internal Group, you can add test users as members of that 
 | Identified Users |Search for the user by their external user ID or email address.|
 |Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) page.|
 |Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. You can only add users that are already known in the dashboard. For more information, refer to [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Content Test Groups
 

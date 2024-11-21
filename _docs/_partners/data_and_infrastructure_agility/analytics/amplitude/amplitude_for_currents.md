@@ -21,7 +21,7 @@ The Braze and Amplitude bi-directional integration allows you to [sync your Ampl
 |---|---|
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Amplitude, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Data export integration
 

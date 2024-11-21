@@ -38,6 +38,18 @@ function unEncodeURIComponent(str) {
   return decodedStr;
 }
 
+function setAdaTableRole(role='presentation') {
+  // assign a role of presentation, and remove the role if it has a th or thead
+  $('table').each(function(){
+    if (!$(this).attr('role')) {
+      $(this).attr('role',role);
+    }
+    if (($(this).attr('role') == role) && (($(this).has('th').length > 0) || ($(this).has('thead').length > 0))){
+      $(this).attr('role',null);
+    }
+  });
+}
+
 function string_to_slug(str) {
   if (str) {
     str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
@@ -295,17 +307,37 @@ $(document).ready(function() {
     }
   });
 
-  // set list role attribute for screenreader
-  var list_tabs = $('ul');
-  list_tabs.each(function(k,v){
+  // set tab list attribute for screenreader
+  var list_tabs = $('ul.ab-nav')
+  list_tabs.each(function(i){
     var $this = $(this);
-    $this.attr('role','tablist');
+    if (!$this.attr('role')) {
+      $this.attr('role','tablist');
+    }
   });
-  var list_tab = $('ul > li');
-  list_tab.each(function(k,v){
+  var list_tab = list_tabs.children('li')
+  list_tab.each(function(i){
     var $this = $(this);
-    $this.attr('role','tab');
+    if (!$this.attr('role')) {
+      $this.attr('role','tab');
+    }
   });
+  // set list
+  var list_tabs = $('ul').not('.ab-nav');
+  list_tabs.each(function(i){
+    var $this = $(this);
+    if (!$this.attr('role')) {
+      $this.attr('role','list');
+    }
+  });
+  var list_tab = list_tabs.children('li')
+  list_tab.each(function(i){
+    var $this = $(this);
+    if (!$this.attr('role')) {
+      $this.attr('role','listitem');
+    }
+  });
+
 
   // Footer navigation
   var parent_top = 'nav_top';
@@ -572,4 +604,12 @@ $(document).ready(function() {
   $('.lang-select').each(function(ind) {
     $(this).val(page_language).prop('selected', true);
   });
+
+  $('[role="tablist"]').each(function(){
+    if (!$(this).attr('tabindex')) {
+      $(this).attr('tabindex', 0)
+    }
+  });
+  setAdaTableRole()
+
 });

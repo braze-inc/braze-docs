@@ -66,7 +66,7 @@ Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set
 | `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
 | `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 
@@ -102,7 +102,7 @@ Replace `MIN_LOG_LEVEL` with the **Value** of the log level you'd like to set as
 | `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
 | `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 

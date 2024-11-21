@@ -79,7 +79,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Conversions (B, C, D)" %}
-<i>Conversions (B, C, D)</i> are additional conversion events added after the primary conversion event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign.
+<i>Conversions (B, C, D)</i> are additional conversion events added after the primary conversion event. This is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign.
 {% endif %}
 
 {% if include.metric == "Total Conversions" %}
@@ -118,6 +118,26 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Influenced Opens</i> is the total number (and percentage) of users who opened the app after the push notification was sent, without directly opening the push.
 {% endif %}
 
+{% if include.metric == "Lifetime Revenue" %}
+<i>Lifetime Revenue</i> is the total <code>PurchaseEvents</code> price value (in USD) received since inception.
+{% endif %}
+
+{% if include.metric == "Lifetime Value Per User" %}
+<i>Lifetime Value Per User</i> is the average of the sum of the campaign and Canvas revenue for a given day.
+{% endif %}
+
+{% if include.metric == "Average Daily Revenue" %}
+<i>Average Daily Revenue</i> is the <i>Lifetime revenue</i> divided by your total <i>Users</i> (located on your home page).
+{% endif %}
+
+{% if include.metric == "Daily Purchases" %}
+<i>Daily Purchases</i> is the average of the total unique <code>PurchaseEvents</code> over the time period.
+{% endif %}
+
+{% if include.metric == "Daily Revenue Per User" %}
+<i>Daily Revenue Per User</i> is the average daily revenue per daily active user. 
+{% endif %}
+
 {% if include.metric == "Machine Opens" %}
 <i>Machine Opens</i> includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a <i>Machine Opens</i>.
 {% endif %}
@@ -139,7 +159,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Pending Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign.
+<i>Primary Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -187,7 +207,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered message.
+<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -195,7 +215,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Total Impressions</i> is the number of times the message has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+<i>Total Impressions</i> is the number of times the message has been loaded and appears on a user's screen, regardless of prior interaction (for example, if a user is shown a message twice, they will be counted twice).
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -203,7 +223,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Revenue" %}
-<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window. This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
+<i>Total Revenue</i> is the total revenue in dollars from campaign recipients within the set primary conversion window.
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}

@@ -81,6 +81,14 @@ Users experiencing issues logging in with two-factor authentication can contact 
 
 A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
 
+## Elevated Access
+
+Elevated Access adds an extra layer of security for sensitive actions in your Braze dashboard. When active, users need to re-verify their account before exporting a segment or viewing an API key. To use Elevated Access, go to **Settings** > **Admin Settings** > **Security Settings** and toggle it on. 
+
+If a user can’t re-verify, they’ll be redirected to where they left off and won’t be able to continue with the sensitive action. After they successfully re-verify, they won’t need to do so again for the next hour—unless they log out first.
+
+![Elevated Access toggle.][5]
+
 ## Downloading a security event report
 
 The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. You can use it to perform internal audits.
@@ -169,7 +177,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
 | {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes<ul><li>Individual custom attributes can be marked as PII if you don't need to hide all attributes.</li></ul></li> </ul> {:/} |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Limited areas
 
@@ -182,7 +190,7 @@ The following assumes that all fields are set as PII and the users mentioned are
 | {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and customer attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
 | Message activity log | The user won't have access to the preceding standard attributes for any users identified in the message activity log. | |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 When previewing a message, the **View PII** permission isn't applied, so users can see the preceding standard attributes if they were referenced in the message through Liquid.
@@ -214,12 +222,12 @@ Set default preferences by checking boxes for any fields that should be removed 
 
 To customize preference by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![Data Deletion Preferences section with turned on toggle for customizing data deletion preferences by workspace.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

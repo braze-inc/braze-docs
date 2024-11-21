@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 | A Dixa account        | A Dixa admin account is required to take advantage of this partnership.                                                                                           |
 | A Braze REST API key  | A Braze REST API key with `users.export.ids` and `email.status` permissions.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.

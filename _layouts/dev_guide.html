@@ -55,7 +55,7 @@ hide_breadcrumb: false
 
 
 
-    <h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>
+    {%- if page.guide_featured_title -%}<h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>{%- endif -%}
     {%- if page.guide_featured_description -%}
     <p>{{ page.guide_featured_description | markdownify }}</p>
     {%- endif -%}
@@ -70,7 +70,7 @@ hide_breadcrumb: false
             <i class="{{menu_list.fa_icon}}"></i>
             {%- else -%}
               {%- if menu_list.image -%}
-              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
               {%- endif -%}
             {%- endif -%}
             <div class="menu_description">
@@ -82,11 +82,11 @@ hide_breadcrumb: false
         {%- endif %}
       {%- endfor -%}
     </div>
-    {%- if page.optional_guide_menu_title -%}
-    <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }} </h2>
+    {%- if page.optional_guide_menu_title and page.optional_guide_menu_title != "" -%}
+    <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }}</h2>
     {%- endif -%}
-    {%- if page.guide_menu_title -%}
-    <h2 class="guide_menu_title"> {{ page.guide_menu_title }} </h2>
+    {%- if page.guide_menu_title  and page.guide_menu_title != "" -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title }}</h2>
     {%- endif -%}
     {%- if page.guide_menu_description -%}
     <p>{{ page.guide_menu_description | markdownify }}</p>
@@ -102,7 +102,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -130,7 +130,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -160,7 +160,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -189,7 +189,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -218,7 +218,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -247,7 +247,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -276,7 +276,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -305,7 +305,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -331,7 +331,7 @@ hide_breadcrumb: false
         <i class="{{menu_list.fa_icon}}"></i>
         {%- else -%}
           {%- if menu_list.image -%}
-          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
           {%- endif -%}
         {%- endif -%}
         <div class="menu_description">
@@ -346,7 +346,7 @@ hide_breadcrumb: false
     {%- endif -%}
     {{content}}
     <div style="clear: left;margin-top: 5rem;"></div>
-    <h1> {{ page.guide_footer_header }} </h1>
+    {%- if page.guide_footer_header and page.guide_footer_header != "" and page.guide_footer_header != " " -%}<h1> {{ page.guide_footer_header }} </h1>{%- endif -%}
     <p>  {{ page.guide_footer_text }} </p>
 
   </div>

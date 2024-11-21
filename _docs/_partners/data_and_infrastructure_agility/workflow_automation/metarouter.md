@@ -30,7 +30,7 @@ Before you start, you'll need the following:
 | A MetaRouter account  | A [MetaRouter Enterprise account](https://enterprise.metarouter.io/).                                                                                |
 | Braze REST API key    | A Braze REST API key with `users.track` permissions. To create one go to **Settings** > **API Keys**.                                                |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.

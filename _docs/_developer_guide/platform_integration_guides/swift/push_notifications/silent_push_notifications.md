@@ -21,7 +21,7 @@ Braze has several features which rely on silent push notifications:
 |---|---|
 |[Uninstall Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/) | User receives a silent, nightly uninstall tracking push.|
 |[Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences) | Silent syncing of geofences from server to device.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Setting up silent push notifications
 

@@ -46,7 +46,7 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 | | Reply Message | This is the initial response that a user will receive after texting an opt-in keyword (for example, “Reply Y to confirm you want to receive messages from this number. Msg&Data Rates may apply.” )
 | Double Opt-In Confirmation | Keywords | These are the keywords a user can reply with to confirm their opt-in intent. At least one keyword is required. These keywords should be specified in the **Opt-In Prompt Reply Message** field.
 | | Reply Message | This is the confirmation response that a user will receive after they have explicitly confirmed their opt-in and are now messageable via SMS. The user’s subscription group status will be set to `Subscribed`.
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When a user receives an opt-in prompt, they have 30 days to confirm their opt-in intent. If a user wants to subscribe after the 30-day window, they need to text an opt-in keyword to start the double opt-in workflow again.
 
@@ -72,7 +72,7 @@ Shopify | Users will not be entered into the SMS double opt-in workflow when the
 User Import | Users will not be entered into the SMS double opt-in workflow when their subscription status is set by User Import.
 [Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | Users will automatically enter into the SMS double opt-in workflow when subscribed via a preference center.
 User Update Step | Users can be entered into the SMS double opt-in workflow when their subscription status is set via the User Update step and the optional parameter `use_double_opt_in_logic` is passed as `true`. If this parameter is omitted, users will not be entered into the SMS double opt-in workflow.
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Multi-language support
 For inbound messages, SMS double opt-in is supported for all languages defined in the subscription group. This means you can define your auto-responses in different languages and Braze will send the auto-response associated with a specific language when a matching keyword is received.

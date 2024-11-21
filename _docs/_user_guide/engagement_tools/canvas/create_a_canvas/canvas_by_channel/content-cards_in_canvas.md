@@ -65,7 +65,7 @@ If a step contains only Content Cards (and no other messaging channel), you can 
 |---|---|
 | Advance When Message Sent | Users will advance to the next steps of the Canvas when the Content Card has been successfully sent. Use this option when you want users to advance only if the card will be sent and not aborted. |
 | Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][2]
 
@@ -77,7 +77,7 @@ Canvas components with a Content Card and another messaging channel have the fol
 |---|---|
 | Advance When Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
 | Immediately Advance Audience | When this option is selected, everyone in the component's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the component's segment and filter criteria to advance to next steps._ |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][3]
 

@@ -22,7 +22,7 @@ To start using ThoughtSpot on Braze, your data needs to be sent to a cloud data 
 | ----------- | ----------- |
 | ThoughtSpot account | A ThoughtSpot account is required to take advantage of this partnership. |
 | Cloud data warehouse| Braze data is stored in Cloud Data Warehouse using Braze Currents. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## TML Blocks
 

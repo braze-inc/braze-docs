@@ -33,7 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 | `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only templates updated at or before the given time. |
 | `limit` | Optional | Positive number | Maximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
 | `offset`  |  Optional | Positive number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

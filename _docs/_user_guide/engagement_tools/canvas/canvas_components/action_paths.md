@@ -75,7 +75,7 @@ If users enter into an action path multiple times and have multiple entries in t
 |---|--------------|
 | **Off** | When a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group. <br><br/> When a relevant action is not performed, all entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 | **On** | All entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
 

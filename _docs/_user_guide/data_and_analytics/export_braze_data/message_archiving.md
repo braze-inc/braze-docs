@@ -10,20 +10,20 @@ description: "This reference article covers message archiving, a feature that al
 
 # Message archiving
 
-> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket.
+> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payloads references, and frequently asked questions.
 
 Message archiving is available as an add-on feature. To get started with message archiving, reach out to your Braze customer success manager.
 
-## Overview
+## How it works
 
 When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS, or push). 
 
-This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
+This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
 If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
 
 {% alert important %}
-Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to maintain accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
 {% endalert %}
 
 The JSON will be saved in your storage bucket using the following key structure:
@@ -41,7 +41,7 @@ Braze downcases your push tokens before we hash them. This results in the push t
 
 ## Setting up message archiving
 
-This section describes how to set up message archiving for your workspace. Before proceeding, confirm that your company has purchased and turned on message archiving.
+This section guides you through setting up message archiving for your workspace. Before proceeding, confirm that your company has purchased and turned on message archiving.
 
 ### Step 1: Connect a cloud storage bucket
 
@@ -55,7 +55,7 @@ To select channels:
 
 1. Go to **Settings** > **Message Archiving**.
 2. Select your channels.
-3. Click **Save changes**.
+3. Select **Save changes**.
 
 ![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
 
@@ -160,7 +160,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 
 ### What templating is not included in the payload?
 
-Modifications done after the message leaves Braze will not be reflected in the file saved to your cloud storage bucket. This will include modifications our mail delivery partners make, like wrapping links for click tracking and inserting tracking pixels.
+Modifications done after the message leaves Braze won't be reflected in the file saved to your cloud storage bucket. This includes modifications our mail delivery partners make, like wrapping links for click tracking and inserting tracking pixels.
 
 ### What are messages under the "unassociated" value in the campaign path?
 
@@ -168,18 +168,18 @@ When a message is sent outside of a campaign or Canvas, the campaign ID in the f
 
 ### How do I find more information about this send?
 
-You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information like the timestamp it was delivered, whether or not the user opened or clicked the message, and more.
+You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information like the timestamp it was delivered, whether the user opened or clicked the message, and more.
 
 ### How are retries handled?
 
-Should your cloud storage bucket be unreachable, Braze will retry up to three times with a [backoff jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/#Jitter). AWS S3 rate limit retries are automatically handled by Braze.
+If your cloud storage bucket is unreachable, Braze will retry up to three times with a [backoff jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/#Jitter). AWS S3 rate limit retries are automatically handled by Braze.
 
 ### What happens if my credentials are invalid?
 
-If your cloud storage credentials become invalid at any point, Braze will not be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring the [AWS credentials errors notification]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences) preference to ensure you receive alerts for any credentials issues.
+If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring the [AWS credentials errors notification]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences) preference so you'll receive alerts for any credentials issues.
 
-### Why does my archive file's "sent_at" timestamp differ slightly from the sent timestamp in Currents?
+### Why does my archive file's `sent_at` timestamp differ slightly from the sent timestamp in Currents?
 
-The rendered copy is uploaded immediately before sending the message to the end user. Because of cloud storage upload times, there may be a delay of a few seconds between the "sent_at" timestamp in the rendered copy versus the actual time the send occurs.
+The rendered copy is uploaded immediately before sending the message to the user. Because of cloud storage upload times, there may be a delay of a few seconds between the `sent_at` timestamp in the rendered copy versus the actual time the send occurs.
 
 [1]: {% image_buster /assets/img/message_archiving_settings.png %}

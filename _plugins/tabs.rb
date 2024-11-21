@@ -14,7 +14,7 @@ module Tags
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li class="coderow ' + tab[0].gsub(' ', '-')
+              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-')
               if ind == 0
                 tabslist += ' active'
               end
@@ -70,7 +70,7 @@ module Tags
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li class="coderow ' + tab[0].gsub(' ', '-') + '_sub_tab'
+              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-') + '_sub_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end

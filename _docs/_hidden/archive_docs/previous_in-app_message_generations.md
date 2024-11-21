@@ -140,7 +140,7 @@ For all of the in-app message types listed in the following table, the following
 | Slideup                            |     1:1      |         140         |
 | Modal (Image Only)                 |     1:1      |         140         |
 | Modal (With Text)                  |    29:10     |         140         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Keeping in-app message file sizes small
 

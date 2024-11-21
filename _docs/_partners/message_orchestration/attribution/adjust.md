@@ -21,7 +21,7 @@ The Braze and Adjust integration lets you import non-organic install attribution
 | Adjust account | An Adjust account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
 | Adjust SDK | In addition to the required Braze SDK, you must install the [Adjust SDK](https://dev.adjust.com/en/sdk). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -52,7 +52,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/android_12/). Otherwise, the IDFV will be used as a fallback identifier to map users.
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Swift %}
@@ -98,7 +98,7 @@ Assuming you configure your integration as suggested, Braze will map Adjust's da
 | `{campaign_name}` | Attributed Campaign |
 | `{adgroup_name}` | Attributed Adgroup |
 | `{creative_name}` | Attributed Ad |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Facebook and X (formerly Twitter) attribution data
 

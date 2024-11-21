@@ -30,7 +30,7 @@ This integration supports iOS and Android apps.
 | iOS app ID | Your unique Braze application identifier for iOS (such as "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
 | Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
 

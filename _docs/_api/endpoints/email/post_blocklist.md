@@ -10,12 +10,12 @@ description: "This article outlines the details about the Blocklist emails Braze
 ---
 {% api %}
 # Blocklist emails
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/blocklist
 {% endapimethod %}
 
 > Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
- 
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
 ## Prerequisites
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
 | `email` | Required | String or array | String email address to blocklist, or an array of up to 50 email addresses to blocklist. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

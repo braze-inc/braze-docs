@@ -34,7 +34,7 @@ Sending LINE messages from Braze will draw from your account's Message Credits.
 | Unverified account | An unreviewed account that can be obtained by anyone (individual or corporate). This account is represented with a gray badge and won't appear in search results within the LINE app. |
 | Verified account | An account that has passed the LINE Yahoo screening. This account is represented with a blue badge and will appear in search results within the LINE app.<br><br>This account is only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.  |
 | Premium account | An account that has passed the LINE Yahoo screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Required account type
 
@@ -91,7 +91,7 @@ After the integration process completes, Braze will automatically pull that chan
 | Channel ID | Select your provider and then go to **Channels** > your channel > **Basic settings** |
 | Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings** |
 | Channel access token | Select your provider and then go to **Channels** > your channel > **Messaging API**. If there isn't a channel access token, select **Issue**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="3"}
 3. Go to your **Settings** page > **Response settings** and do the following:

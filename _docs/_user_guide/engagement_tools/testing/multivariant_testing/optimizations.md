@@ -31,7 +31,7 @@ Sending the Winning Variant is similar to a standard A/B test. Users in this gro
 | Initial test start date | The date and time the initial test starts. |
 | Initial test end date | The date and time the initial test ends. This is when the Winning Variant is sent to the remaining users.<br><br>When sending in users' local time or with Intelligent Timing, the Winning Variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Winning Variant group. |
 | Fallback | What happens if no variant wins by a statistically significant margin. Choose between sending the best performing variant anyway, or ending the test and not sending any further messages. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Personalized Variant
 
@@ -48,7 +48,7 @@ To determine the best variant for each user, Braze will send an initial test to 
 | Initial test start date | The date and time the initial test starts. |
 | Initial test end date | The date and time the initial test ends. This is when Personalized Variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for Personalized Variants shouldn't last any less than 4 hours.<br><br>When sending in users' local time or with Intelligent Timing, Personalized Variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Personalized Variant group. |
 | Fallback | What happens if no Personalized Variants are found. Choose between sending the Winning Variant instead, or ending the test and not sending any further messages. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Analytics
 

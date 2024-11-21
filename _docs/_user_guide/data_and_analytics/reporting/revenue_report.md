@@ -43,11 +43,42 @@ You can view the following data in the **Performance Over Time Graph**:
 
 ## Understanding revenue calculations
 
-- *Lifetime revenue* is the total `PurchaseEvents` `price` value (in USD) received since inception. 
-- *Lifetime value per user* is the *Lifetime revenue* divided by your total *Users* (located on your **Home** page).
-- Average *Daily revenue* is the average of the sum of the campaign and Canvas revenue for a given day.
-- *Daily Purchases* is the average of the total unique `PurchaseEvents` over the time period.
-- *Daily revenue per user* is the average daily revenue per daily active user.
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Lifetime Revenue</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Lifetime Value Per User</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Average Daily Revenue</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Daily Purchases</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Daily Revenue Per User</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Viewing the product breakdown
 

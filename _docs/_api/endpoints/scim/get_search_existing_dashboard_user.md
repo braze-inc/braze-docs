@@ -36,7 +36,7 @@ To use this endpoint, you'll need a SCIM token. For more information, refer to [
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `userName@example.com` | Required | String | The user's email. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 

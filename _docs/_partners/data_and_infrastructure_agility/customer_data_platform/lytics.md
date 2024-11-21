@@ -31,7 +31,7 @@ Connect Braze to Lytics to [import](#importing-data-from-braze-to-lytics) email,
 | Lytics API Token | A Lytics REST API Token with Data Manager permissions. <br><br> This can be created within the Lytics dashboard from **Account Settings Console** > **Access Tokens** > **Create New Token**. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Contact your Braze onboarding manager for this information if you aren't sure. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

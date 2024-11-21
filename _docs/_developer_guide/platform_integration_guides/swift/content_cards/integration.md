@@ -115,7 +115,7 @@ Each card is initialized with a `Context` object, which contains various methods
 | `card.context?.logDismissed()`       | Log the content card dismissed event.                                                                                                    |
 | `card.context?.logError()`           | Log an error related to the content card.                                                                                                |
 | `card.context?.loadImage()`          | Load a given content card image from a URL. This method can be nil when the content card does not have an image.                         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
 

@@ -24,7 +24,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | App identifier | Your [app identifier]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) can be found can be found within the Braze dashboard from **Settings** > **API Keys**. |
 | iOS API key<br>Android API key | These API keys can be found within the Braze dashboard from **Settings** > **App Settings**. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
 

@@ -20,7 +20,7 @@ The Braze and Lokalise integration leverages Connected Content to allow you to e
 | ----------- | ----------- |
 | Lokalise account | A Lokalise account is required to take advantage of this partnership. |
 | Lokalise translation project | A Lokalise translation project should be created before setting up this integration. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Create a new Lokalise project
 

@@ -22,7 +22,7 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [OpenWeatherMap][7] | Provides current weather data, 5 and 16 day forecast, and historical data. |
 | [NYT Article Search][8] | Provides NYT article data which includes headline, topic, URL, date, abstract, etc. |
 | [The Guardian API][9] | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Events and ticketing
 
@@ -33,14 +33,14 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [Eventbrite][19] | Provides data on a variety of public events. |
 | [Eventful][20] | Provides data on a variety of public events |
 | [Ticketmaster][38] | Provides data on public events, venues, and prices |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Food and drink
 
 |  API  | Description |
 | --------- | --- |
 | [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Finance
 
@@ -48,7 +48,7 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | --------- | --- |
 | [Barchart OnDemand][36] | Provides a variety of stock, futures, and foreign exchange data. |
 | [CoinDesk][37] | Provides a variety of cryptocurrency data. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Health
 
@@ -57,7 +57,7 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [AirVisual][42] | Provides Air quality and weather data. |
 | [Nutritionix Worlds][43] | Provides verified nutrition data. |
 | [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Music
 
@@ -68,14 +68,14 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [Bandsintown][13] | Provides local concert information and recommends live music events. |
 | [Songkick][22] | Provides live music information with artists, venues, locations, etc. |
 | [Discogs][21] | Provides information on artists, labels, and recordings. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Product information
 
 |	 API 	| Description |
 | --------- | --- |
 | [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Miscellaneous
 
@@ -85,7 +85,7 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [Clearbit][27] | Provides company logo images. |
 | [London Unified][28] and [NYC MTA][29] | Provide real-time public transit data including line statuses, arrival times, etc. |
 | [Sunrise and Sunset][39] | Provides Sunset and sunrise times for a given latitude and longitude. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [7]: http://openweathermap.org/api
 [8]: https://developer.nytimes.com/docs/articlesearch-product/1/overview

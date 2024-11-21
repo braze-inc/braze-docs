@@ -22,7 +22,7 @@ The Braze and Merkury integration allows you to leverages the `MerkuryID` to inc
 | Merkury tag | Place Merkle's Merkury tag on your website. |
 | Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze REST API key | A Braze REST API key with `users.track, users.export.ids, users.export.segment, and segments.list` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
 The Merkury identity connector requests to Braze operate within Braze API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
@@ -48,7 +48,7 @@ The following fields will be populated by Merkury identity connector and need to
 | --- | --- | --- |
 | `hmid` | String | Merkle's Merkury ID |
 | `confidence_score` | Number | How confident Merkury was able to identify (1-8, lower is better) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 4: Provide Merkle with user email universe
 

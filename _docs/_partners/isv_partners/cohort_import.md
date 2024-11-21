@@ -24,7 +24,7 @@ Braze hosts our application on multiple clusters throughout the US and EU. The U
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Endpoint URLs
 
@@ -61,7 +61,7 @@ The Cohort name endpoint can be used to specify the name of a cohort based on it
 | `cohort_id` | String | Yes | Identifier for the cohort. This identifier should be unique for the specified client. |
 | `name` | String | Yes | Client-specified name for the cohort |
 | `created_at` | String | Yes | Timestamp in ISO-8601 format |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Example request:
 
@@ -86,7 +86,7 @@ The User cohort endpoint allows for specifying which users have been added to or
 | `client_secret` | String | Yes | Data Import Key for the client whose cohort this belongs to. |
 | `cohort_id` | String | Yes | Identifier for the cohort. The identifier should be unique for the specified client. |
 | `cohort_changes` | Array of objects | Yes | Objects can have two fields. One, `user_ids`, is required and can be an array of `external_ids`, `device_ids`, and `aliases`. Each element is an ID for a user whose status in the cohort has changed. The second field, `should_remove`, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. The maximum combined length of the user IDs in a single request is 1,000.<br/><br/>Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. If you pass in a device ID for an identified user, Braze will not add or remove that user. You must use external IDs or aliases for identified users. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Example request:
 
@@ -126,6 +126,6 @@ Refer to the following table for errors codes specific to the Cohort Import endp
 |  | Partner not enabled for client with client secret: **&#60;client secret&#62;** |
 |  | Unauthorized access |
 | `423` | Resource locked |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For additional troubleshooting, refer to [Errors & Responses]({{site.baseurl}}/api/errors/), which covers the various errors and server responses that can come up while using the Braze API.
