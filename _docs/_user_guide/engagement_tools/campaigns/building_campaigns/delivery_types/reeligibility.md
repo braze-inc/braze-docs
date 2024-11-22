@@ -28,7 +28,7 @@ For example, suppose a user without an email address enters a daily recurring Ca
 
 If re-eligibility for a Canvas is set to shorter than the duration of the Canvas, it's possible for users to enter the Canvas more than once, which can lead to misleading behavior for Canvases that use in-app messages with particularly long delays. Since multiple Canvas in-app messages could be triggered by the same session start, the user could potentially have the experience of receiving the same message repeatedly, if a specific component renders faster than others.
 
-For action-based and API-triggered Canvases with re-eligibility enabled, there is a limit of one trigger per user, per second. Braze may deduplicate entries that happen in the same second.
+For action-based and API-triggered Canvases with re-eligibility turned on, there is a limit of one trigger per user, per second. Braze may deduplicate entries that happen in the same second.
 
 ## Campaigns
 
