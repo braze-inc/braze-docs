@@ -4,7 +4,7 @@ article_title: 데이터 변환
 page_order: 0.3
 layout: dev_guide
 guide_top_header: "데이터 변환"
-guide_top_text: "이 섹션에서는 데이터 통합을 신속하게 처리하는 데 도움이 되는 로우코드 솔루션인 Braze 데이터 트랜스포메이션에 관한 기사를 확인할 수 있습니다."
+guide_top_text: "이 섹션에서는 데이터 통합을 신속하게 처리하는 데 도움이 되는 로우코드 솔루션인 Braze 데이터 변환에 관한 기사를 확인할 수 있습니다."
 page_type: landing
 description: "이 랜딩 페이지에는 데이터 변환을 만드는 방법과 사용 사례 등 Braze 데이터 변환에 관한 문서가 있습니다."
 

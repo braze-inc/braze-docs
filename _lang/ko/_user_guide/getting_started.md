@@ -11,7 +11,7 @@ description: "이 글 모음은 플랫폼을 시작하는 데 도움이 되며 B
 
 guide_featured_title: "학습 경로"
 guide_featured_list:
-  - name: 브레이즈 개요
+  - name: Braze 개요
     link: /docs/user_guide/getting_started/overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: 사용자 및 세그먼트
@@ -26,7 +26,7 @@ guide_featured_list:
   - name: 통합
     link: /docs/user_guide/getting_started/integration/
     image: /assets/img/braze_icons/chevron-up-double.svg
-  - name: 알아두어야 할 약관
+  - name: 알아두어야 할 용어
     link: /docs/user_guide/getting_started/terms_to_know/
     image: /assets/img/braze_icons/lightbulb-01.svg
 

@@ -24,7 +24,7 @@ Braze는 다음 키워드를 자동으로 처리하고 모든 인바운드 요�
 |옵트인| `START`<br> `YES`<br> `UNSTOP` | 이러한 `Opt-In` 키워드 중 하나가 포함된 모든 인바운드 요청은 구독 그룹 상태가 `subscribed`로 변경됩니다. 또한 해당 구독 그룹과 관련된 번호 풀은 이제 해당 고객에게 SMS 메시지를 보낼 수 있습니다. <br><br>사용자는 정의된 옵트인 자동 응답을 받게 됩니다.
 |옵트 아웃| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | 이러한 `Opt-Out` 키워드 중 하나가 포함된 모든 인바운드 요청은 구독 그룹 상태가 `unsubscribed`로 변경됩니다. 또한, 해당 구독 그룹과 관련된 번호 풀은 더 이상 해당 고객에게 SMS 메시지를 보낼 수 없습니다.<br><br>사용자는 정의된 옵트 아웃 자동 응답을 받게 됩니다. |
 | 도움 | `HELP`<br> `INFO` | 사용자는 정의된 도움말 자동 응답을 받게 됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 오직 **정확한, 단어 하나로 된 메시지**만 처리됩니다 (대소문자 구분 없음). `STOP PLEASE`와 같은 키워드는 [fuzzy opt-out][fuzzylink]이(가) 켜지지 않는 한 무시됩니다.
 

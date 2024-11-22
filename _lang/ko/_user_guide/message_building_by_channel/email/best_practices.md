@@ -24,7 +24,7 @@ guide_featured_list:
   - name: "이메일 구독 관리"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
     image: /assets/img/braze_icons/list.svg
-  - name: "소독 정보"
+  - name: "정리 정보"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sanitization/
     image: /assets/img/braze_icons/brush-01.svg
   - name: "이메일 서비스"

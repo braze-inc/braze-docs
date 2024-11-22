@@ -23,7 +23,7 @@ description: "이 랜딩 페이지에서는 기념일, 앱 사용량, 카운트�
 - [생일이 있는 달에 사용자에게 캠페인 보내기](#birthday-month)
 - [주요 공휴일에는 메시지 보내지 않기](#holiday-avoid)
 
-### 사용자의 기념일 연도에 따라 메시지 맞춤 설정하기 {#anniversary-year}
+### 사용자의 기념일 연도{#anniversary-year}에 따라 메시지 맞춤 설정하기
 
 이 사용 사례는 사용자의 최초 가입 날짜를 기준으로 앱 기념일을 계산하고 기념일 수에 따라 다른 메시지를 표시하는 방법을 보여줍니다.
 
@@ -31,9 +31,9 @@ description: "이 랜딩 페이지에서는 기념일, 앱 사용량, 카운트�
 ```liquid
 {% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
-{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
-{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+{% assign anniversary_month = {{custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = {{custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = {{custom_attribute.${registration_date}}} | date: "%Y" %}
 
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
@@ -60,9 +60,9 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**설명:** 여기서는 예약 변수 `now` 를 사용하여 현재 날짜와 시간을 [ISO 8601ISO](http://en.wikipedia.org/wiki/ISO_8601 "8601 타임코드 위키") 형식으로 템플릿으로 만듭니다. 필터 `%B` (예: "5월")와 `%d` (예: "18일")은 현재 월과 일의 형식을 지정합니다. 그런 다음 `signup_date` 값에 동일한 날짜 및 시간 필터를 사용하여 조건부 태그와 논리를 사용하여 두 값을 비교할 수 있도록 합니다.
+**설명:** 여기서는 예약 변수 `now`를 사용하여 현재 날짜와 시간을 [ISO 8601ISO](http://en.wikipedia.org/wiki/ISO_8601 "8601 타임코드 위키") 형식으로 템플릿으로 만듭니다. 필터 `%B` (예: "5월")와 `%d`(예: "18일")는 현재 월과 일의 형식을 지정합니다. 그런 다음 `signup_date` 값에 동일한 날짜 및 시간 필터를 사용하여 조건부 태그와 논리를 사용하여 두 값을 비교할 수 있도록 합니다.
 
-그런 다음 변수 문을 세 개 더 반복하여 `signup_date` 에 대해 `%B` 및 `%d` 을 구하고 `%Y` ("2021"과 같은 연도)를 추가합니다. 이렇게 하면 `signup_date` 의 날짜와 시간이 연도로만 구성됩니다. 요일과 월을 알면 사용자의 기념일이 오늘인지 확인할 수 있고, 연도를 알면 몇 년이 지났는지 알 수 있으므로 축하할 수 있습니다!
+그런 다음 변수 문을 세 개 더 반복하여 `signup_date`에 대해 `%B` 및 `%d`을 구하고 `%Y`("2021"과 같은 연도)를 추가합니다. 이렇게 하면 `signup_date`의 날짜와 시간이 연도로만 구성됩니다. 요일과 월을 알면 사용자의 기념일이 오늘인지 확인할 수 있고, 연도를 알면 몇 년이 지났는지 알 수 있으므로 축하할 수 있습니다!
 
 {% alert tip %} 가입 날짜를 수집한 연도만큼 조건을 만들 수 있습니다. {% endalert %}  
 
@@ -89,9 +89,9 @@ No birthday for you!
 ```
 {% endraw %}
 
-**설명:** [기념일 연도](#anniversary-year) 사용 사례와 마찬가지로 여기서는 예약 변수 `now` 를 사용하고 `%W` 필터(예: 1년 52주 중 12주)를 사용하여 사용자의 생일이 속한 연도의 숫자 주를 가져옵니다. 사용자의 생일 주간이 현재 주와 일치하면 축하 메시지를 보내드립니다! 
+**설명:** [기념일 연도](#anniversary-year) 사용 사례와 마찬가지로 여기서는 예약 변수 `now`를 사용하고 `%W` 필터(예: 1년 52주 중 12주)를 사용하여 사용자의 생일이 속한 연도의 숫자 주를 가져옵니다. 사용자의 생일 주간이 현재 주와 일치하면 축하 메시지를 보내드립니다! 
 
-또한 `last_week` 및 `next_week` 에 대한 문구를 포함하여 메시지를 더욱 맞춤화할 수 있습니다.
+또한 `last_week` 및 `next_week`에 대한 문구를 포함하여 메시징을 더욱 맞춤화할 수 있습니다.
 
 ### 생일이 있는 달에 사용자에게 캠페인 보내기 {#birthday-month}
 
@@ -113,7 +113,7 @@ Message body
 
 ### 주요 공휴일에는 메시지 보내지 않기 {#holiday-avoid}
 
-이 사용 사례는 참여도가 낮을 수 있는 주요 공휴일을 피하면서 연휴 기간에 메시지를 보내는 방법을 보여줍니다.
+이 사용 사례는 인게이지먼트가 낮을 수 있는 주요 공휴일을 피하면서 연휴 기간에 메시지를 보내는 방법을 보여줍니다.
 
 {% raw %}
 ```liquid
@@ -126,7 +126,7 @@ Message if today isn't one of the provided holidays.
 ```
 {% endraw %}
 
-**설명:** 여기서는 예약 변수 `now` (현재 날짜 및 시간)에 `%Y` (예: "2023" 같은 연도), `%m` (예: "12" 같은 월), `%d` (예: "25" 같은 일) 필터를 사용하여 `today` 용어를 할당하여 날짜 형식을 지정합니다. 그런 다음 조건문을 실행하여 `today` 변수가 선택한 공휴일과 일치하면 메시지가 중단되도록 합니다. 
+**설명:** 여기서는 예약 변수 `now`(현재 날짜 및 시간)에 `%Y`(예: "2023" 같은 연도), `%m`(예: "12" 같은 월), `%d`(예: "25" 같은 일) 필터를 사용하여 `today` 용어를 할당하여 날짜 형식을 지정합니다. 그런 다음 조건문을 실행하여 `today` 변수가 선택한 공휴일과 일치하면 메시지가 중단되도록 합니다. 
 
 제공된 예제에서는 크리스마스 이브, 크리스마스 당일 및 박싱데이(크리스마스 다음 날)를 사용했습니다.
 
@@ -171,18 +171,18 @@ Has language - Default language
 {% endraw %}
 
 {% raw %}
-**설명:** 여기에서는 그룹화된 `if` 문 두 개를 중첩하여 사용하고 있습니다. 첫 번째 `if` 문은 `last_used_app_date` 이 `nil` 인지 확인하여 사용자가 세션을 시작했는지 확인합니다. 이는 사용자가 세션을 로그인할 때 SDK가 `{{${language}}}` 를 자동으로 수집하기 때문입니다. 사용자가 세션을 로그인하지 않은 경우 아직 해당 언어가 없으므로 언어 관련 사용자 지정 속성이 저장되어 있는지 확인하고 해당 정보를 바탕으로 가능한 경우 해당 언어로 메시지를 표시합니다.
+**설명:** 여기에서는 그룹화된 `if` 문 두 개를 중첩하여 사용하고 있습니다. 첫 번째 `if` 문은 `last_used_app_date`가 `nil`인지 확인하여 사용자가 세션을 시작했는지 확인합니다. 이는 사용자가 세션을 로그인할 때 SDK가 `{{${language}}}`를 자동으로 수집하기 때문입니다. 사용자가 세션을 로그인하지 않은 경우 아직 해당 언어가 없으므로 언어 관련 커스텀 속성이 저장되어 있는지 확인하고 해당 정보를 바탕으로 가능한 경우 해당 언어로 메시지를 표시합니다.
 {% endraw %}
 
-두 번째 `if` 문은 사용자에게 `last_used_app_date` 에 대한 `nil` 이 없기 때문에 표준(기본) 속성만 확인하며, 이는 사용자가 세션을 로그인했고 해당 언어를 가지고 있다는 의미입니다.
+두 번째 `if` 문은 사용자에게 `last_used_app_date`에 대한 `nil`이 없기 때문에 표준(기본) 속성만 확인하며, 이는 사용자가 세션을 로그인했고 해당 언어를 가지고 있다는 의미입니다.
 
 {% alert note %}
-[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) 는 Liquid 코드에 결과가 없을 때 반환되는 예약 변수입니다. `Nil` 는 `if` 블록에서 `false` 로 취급됩니다.
+[`Nil`](https://shopify.github.io/liquid/basics/types/#nil)는 Liquid 코드에 결과가 없을 때 반환되는 예약 변수입니다. `Nil`는 `if` 블록에서 `false`로 취급됩니다.
 {% endalert %}
 
 ### 사용자가 마지막으로 앱을 연 시간에 따라 메시지를 맞춤 설정합니다. {#app-last-opened}
 
-이 사용 사례는 사용자가 마지막으로 앱을 연 시간을 계산하여 그 시간에 따라 다른 맞춤 메시지를 표시합니다.
+이 사용 사례는 사용자가 마지막으로 앱을 연 시간을 계산하여 그 시간에 따라 다른 개인화된 메시지를 표시합니다.
 
 {% raw %}
 ```liquid
@@ -197,9 +197,9 @@ It's been a while; here are some of our latest updates.
 ```
 {% endraw %}
 
-### 사용자가 마지막으로 앱을 사용한 지 3일이 지나지 않은 경우 다른 메시지를 표시합니다. {#app-last-opened-less-than}
+### 사용자가 마지막으로 앱을 사용한 지 {#app-last-opened-less-than} 3일이 지나지 않은 경우 다른 메시지를 표시합니다
 
-이 사용 사례는 사용자가 앱을 사용한 기간을 계산하고, 그 기간에 따라 다른 맞춤 메시지를 표시합니다.
+이 사용 사례는 사용자가 앱을 사용한 기간을 계산하고, 그 기간에 따라 다른 개인화된 메시지를 표시합니다.
 
 {% raw %}
 ```liquid
@@ -231,7 +231,7 @@ Message for a less active user
 - [일, 시간, 분 단위로 카운트다운 만들기](#countdown-dynamic)
 - [특정 날짜까지 남은 일수 표시](#countdown-future-date)
 - [사용자 지정 날짜 속성이 도착할 때까지 남은 일수 표시](#countdown-custom-date-attribute)
-- [남은 시간을 표시하고, 남은 시간이 X시간밖에 남지 않은 경우 메시지를 중단합니다.](#countdown-abort-window)
+- [남은 시간을 표시하고, 남은 시간이 X시간밖에 남지 않은 경우 메시지를 중단합니다](#countdown-abort-window)
 - [사용자의 멤버십이 종료되기 X일 전에 보내는 인앱 메시지](#countdown-membership-expiry)
 - [사용자의 날짜와 언어를 기반으로 인앱 메시지 맞춤 설정하기](#countdown-personalize-language)
 - [지금부터 30일 후 날짜의 템플릿, 월 및 일 형식으로 형식 지정](#countdown-template-date)
@@ -328,7 +328,7 @@ Your order will arrive in {{ difference_days }} days!
 
 ### 일, 시간, 분 단위로 카운트다운 만들기 {#countdown-dynamic}
 
-이 사용 사례는 특정 이벤트와 현재 날짜 사이에 남은 시간을 계산합니다. 이벤트까지 남은 시간에 따라 시간 값(일, 시간, 분)을 변경하여 다양한 맞춤 메시지를 표시합니다.
+이 사용 사례는 특정 이벤트와 현재 날짜 사이에 남은 시간을 계산합니다. 이벤트까지 남은 시간에 따라 시간 값(일, 시간, 분)을 변경하여 다양한 개인화된 메시지를 표시합니다.
 
 예를 들어 고객의 주문이 도착할 때까지 이틀이 남았다면 "주문이 2일 후에 도착할 예정입니다."라고 말할 수 있습니다. 반면 하루 미만인 경우에는 "주문이 17시간 후에 도착합니다."로 변경할 수 있습니다.
 
@@ -372,7 +372,7 @@ There are {{difference_days}} days until your birthday!
 
 이 사용 사례는 현재 날짜와 미래 날짜 사이의 일수 차이를 계산하고 그 차이가 설정된 숫자와 일치하는 경우 메시지를 표시합니다.
 
-이 예에서 사용자는 사용자 지정 날짜 속성을 지정한 후 2일 이내에 메시지를 받게 됩니다. 그렇지 않으면 메시지가 전송되지 않습니다.
+이 예에서 사용자는 커스텀 날짜 속성을 지정한 후 2일 이내에 메시지를 받게 됩니다. 그렇지 않으면 메시지가 전송되지 않습니다.
 
 {% raw %}
 ```liquid
@@ -388,9 +388,9 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 ```
 {% endraw %}
 
-### 남은 시간을 표시하고 남은 시간이 X시간만 남은 경우 메시지를 중단합니다. {#countdown-abort-window}
+### 남은 시간을 표시하고 남은 시간이 {#countdown-abort-window} X시간만 남은 경우 메시지를 중단합니다
 
-이 사용 사례는 특정 날짜까지 남은 기간을 계산하고 그 기간에 따라(날짜가 너무 이르면 메시지 건너뛰기) 다른 개인화된 메시지를 표시합니다. 
+이 사용 사례는 특정 날짜까지 남은 기간을 계산하고 그 기간에 따라(날짜가 너무 이르면 메시징 건너뛰기) 다른 개인화된 메시지를 표시합니다. 
 
 예를 들어, "런던행 티켓을 구매하려면 X시간이 남았습니다"라는 메시지를 보낼 수 있지만 런던행 비행 시간에서 2시간 이내인 경우에는 메시지를 보내지 마세요.
 
@@ -548,7 +548,7 @@ Hi, the offer is only valid today.
 
 ### 일치하는 사용자 지정 속성을 기반으로 메시지 개인화하기 {#attribute-matching}
 
-이 사용 사례는 사용자에게 특정 사용자 지정 속성이 있는지 확인하고, 있다면 다른 개인화된 메시지를 표시합니다. 
+이 사용 사례는 사용자에게 특정 커스텀 속성이 있는지 확인하고, 있다면 다른 개인화된 메시지를 표시합니다. 
 
 {% raw %}
 ```liquid
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### 사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다. {#attribute-first-name}
+### 사용자의 전체 이름이 {#attribute-first-name} first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다
 
 이 사용 사례는 사용자의 이름(이름과 성이 모두 단일 필드에 저장되어 있는 경우)을 캡처한 다음 이 이름을 사용하여 환영 메시지를 표시합니다.
 
@@ -590,7 +590,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 Hi {{name[0]}}, here's your message!
 ```
 
-**설명:** `split` 필터는 `{{${first_name}}}` 에 있는 문자열을 배열로 바꿉니다. `{{name[0]}}` 을 사용하면 배열의 첫 번째 항목, 즉 사용자의 이름만 참조합니다. 
+**설명:** `split` 필터는 `{{${first_name}}}` 에 있는 문자열을 배열로 바꿉니다. `{{name[0]}}`을 사용하면 배열의 첫 번째 항목, 즉 사용자의 이름만 참조합니다. 
 
 {% endraw %}
 {% endapi %}
@@ -609,11 +609,11 @@ Hi {{name[0]}}, here's your message!
 - [지난 한 달 동안 사용자 지정 이벤트가 발생한 횟수 추적하기](#track)
 
 
-### 사용자 지정 이벤트가 2시간 이내인 경우 푸시 알림 중단하기 {#event-abort-push}
+### 커스텀 이벤트가 2시간 이내인 경우 푸시 알림 중단하기 {#event-abort-push}
 
-이 사용 사례는 이벤트까지 남은 시간을 계산하고 남은 시간에 따라 다양한 맞춤 메시지를 표시합니다.
+이 사용 사례는 이벤트까지 남은 시간을 계산하고 남은 시간에 따라 다양한 개인화된 메시지를 표시합니다.
 
-예를 들어 사용자 지정 이벤트 속성이 향후 2시간이 지나면 푸시가 발송되지 않도록 설정할 수 있습니다. 이 예제에서는 기차표를 사기 위해 버려진 카트 시나리오를 사용합니다.
+예를 들어 커스텀 이벤트 속성이 향후 2시간이 지나면 푸시가 발송되지 않도록 설정할 수 있습니다. 이 예제에서는 기차표를 사기 위해 버려진 카트 시나리오를 사용합니다.
 
 {% raw %}
 ```liquid
@@ -630,9 +630,9 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 ```
 {% endraw %}
 
-### 사용자가 사용자 지정 이벤트를 세 번 수행할 때마다 캠페인 보내기 {#event-three-times}
+### 사용자가 커스텀 이벤트를 세 번 수행할 때마다 캠페인 보내기 {#event-three-times}
 
-이 사용 사례는 사용자가 사용자 지정 이벤트를 세 번 수행했는지 확인하고, 수행한 경우 메시지를 표시하거나 캠페인을 전송합니다. 
+이 사용 사례는 사용자가 커스텀 이벤트를 세 번 수행했는지 확인하고, 수행한 경우 메시지를 표시하거나 캠페인을 전송합니다. 
 
 {% raw %}
 ```liquid
@@ -646,7 +646,7 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-{% alert important %} 사용자 지정 이벤트 수의 이벤트 속성이 있거나 Braze 엔드포인트에 웹훅을 사용해야 합니다. 이는 사용자가 이벤트를 수행할 때마다 사용자 지정 속성(`example_event_count`)을 증가시키는 것입니다. 이 예에서는 3(1, 4, 7, 10 등)의 케이던스를 사용합니다. 케이던스를 0(0, 3, 6, 9 등)에서 시작하려면 `minus: 1` 을 제거합니다.
+{% alert important %} 커스텀 이벤트 수의 이벤트 속성정보가 있거나 Braze 엔드포인트에 웹훅을 사용해야 합니다. 이는 사용자가 이벤트를 수행할 때마다 커스텀 속성(`example_event_count`)을 증가시키는 것입니다. 이 예에서는 3(1, 4, 7, 10 등)의 케이던스를 사용합니다. 케이던스를 0(0, 3, 6, 9 등)에서 시작하려면 `minus: 1`을 제거합니다.
 {% endalert %}
 
 ### 한 카테고리에서만 구매한 사용자에게 메시지 보내기 {#event-purchased-one-category}
@@ -665,9 +665,9 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-### 지난 한 달 동안 사용자 지정 이벤트가 발생한 횟수 추적하기 {#track}
+### 지난 한 달 동안 커스텀 이벤트가 발생한 횟수 추적하기 {#track}
 
-이 사용 사례는 현재 월 1일부터 전월 사이에 사용자 지정 이벤트가 기록된 횟수를 계산합니다. 그런 다음 사용자/트랙 호출을 실행하여 이 값을 사용자 지정 속성으로 저장소를 업데이트할 수 있습니다. 이 캠페인은 두 달 연속으로 실행되어야 월별 데이터를 사용할 수 있습니다.
+이 사용 사례는 현재 월 1일부터 전월 사이에 커스텀 이벤트가 기록된 횟수를 계산합니다. 그런 다음 사용자/트랙 호출을 실행하여 이 값을 커스텀 속성으로 저장소를 업데이트할 수 있습니다. 이 캠페인은 두 달 연속으로 실행되어야 월별 데이터를 사용할 수 있습니다.
 
 {% raw %}
 ```liquid
@@ -731,7 +731,7 @@ Did you forget something in your shopping cart?
 
 - [다른 언어로 월 이름 표시](#language-display-month)
 - [사용자의 언어에 따라 이미지 표시하기](#language-image-display)
-- [요일 및 사용자 언어에 따라 메시징을 맞춤 설정하세요.](#language-personalize-message)
+- [요일 및 사용자 언어에 따라 메시징을 개인화하세요](#language-personalize-message)
 
 ### 다른 언어로 월 이름 표시 {#language-display-month}
 
@@ -789,7 +789,7 @@ Fallback image URL
 ```
 {% endraw %}
 
-### 요일 및 사용자 언어에 따라 메시징을 맞춤 설정하세요. {#language-personalize-message}
+### 요일 및 사용자 언어에 따라 메시징을 개인화하세요 {#language-personalize-message}
 
 이 사용 사례는 현재 요일을 확인하고, 요일에 따라 사용자의 언어가 제공된 언어 옵션 중 하나로 설정되어 있는 경우 해당 언어로 특정 메시지를 표시합니다.
 
@@ -861,7 +861,7 @@ tuesday default
 이 사용 사례는 콘텐츠 블록에 저장된 차단된 사용자 목록을 가져와 차단된 사용자가 향후 캠페인이나 캔버스에 전달되거나 타겟팅되지 않았는지 확인합니다.
 
 {% alert important %}
-이 리퀴드를 사용하려면 먼저 차단된 이메일 목록을 콘텐츠 블록에 저장하세요. 목록에는 이메일 주소 사이에 추가 공백이나 문자가 삽입되지 않아야 합니다(예: `test@braze.com,abc@braze.com`).
+이 Liquid를 사용하려면 먼저 차단된 이메일 목록을 콘텐츠 블록에 저장하세요. 목록에는 이메일 주소 사이에 추가 공백이나 문자가 삽입되지 않아야 합니다(예: `test@braze.com,abc@braze.com`).
 {% endalert %}
 
 {% raw %}
@@ -889,7 +889,7 @@ Your message here!
 
 {% raw %}
 ```liquid
-{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+{% if {{subscribed_state.${subscription_group_id}}} == 'subscribed' %}
 This is an exclusive message for subscribed users!
 {% else %} This is the default message for other users.
 {% endif %}
@@ -1077,7 +1077,7 @@ Users are scheduled to enter the journey on day 2.
 
 {% alert important %} 
 
-사용자 지정 이벤트 `reminder_capture` 가 필요하며, 사용자 지정 이벤트 속성에는 최소한 다음이 포함되어야 합니다:
+커스텀 이벤트 `reminder_capture`가 필요하며, 커스텀 이벤트 속성에는 최소한 다음이 포함되어야 합니다.
 
 - `reminder-id`: 사용자 지정 이벤트의 식별자
 - `reminder_date`: 사용자가 제출한 알림 마감일 날짜
@@ -1087,7 +1087,7 @@ Users are scheduled to enter the journey on day 2.
 
 ### 배열 내에서 문자열 찾기 {#misc-string-in-array}
 
-이 사용 사례는 사용자 지정 속성 배열에 특정 문자열이 포함되어 있는지 확인하고, 존재하는 경우 특정 메시지를 표시합니다.
+이 사용 사례는 커스텀 속성 배열에 특정 문자열이 포함되어 있는지 확인하고, 존재하는 경우 특정 메시지를 표시합니다.
 
 {% raw %}
 ```liquid
@@ -1158,7 +1158,7 @@ Your last marketplace search was on {{custom_attribute.${Last marketplace buyer 
 ```
 {% endraw %}
 
-### 여러 조합으로 사용자 지정 속성에서 배열의 값 쿼리하기 {#misc-query-array-values}
+### 여러 조합으로 커스텀 속성에서 배열의 값 쿼리하기 {#misc-query-array-values}
 
 이 사용 사례는 곧 만료될 프로그램 목록을 가져와서 사용자가 좋아하는 프로그램이 목록에 있는지 확인하고, 있다면 곧 만료된다는 메시지를 사용자에게 표시합니다.
 
@@ -1185,7 +1185,7 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 
 ### 문자열을 전화번호로 서식 지정 {#phone-number}
 
-이 사용 사례에서는 `phone_number` 사용자 프로필 필드(기본적으로 정수 문자열로 형식이 지정됨)를 색인하고 현지 전화번호 표준에 따라 다시 포맷하는 방법을 보여 줍니다. 예를 들어 1234567890 에서 (123)-456-7890으로 전화하세요.
+이 사용 사례에서는 `phone_number` 사용자 프로필 필드(기본적으로 정수 문자열로 형식이 지정됨)를 색인하고 현지 전화번호 표준에 따라 다시 포맷하는 방법을 보여 줍니다. 예를 들어 1234567890에서 (123)-456-7890이 있습니다.
 
 {% raw %} 
 ```liquid
@@ -1205,13 +1205,13 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 플랫폼 타겟팅
 {% endapitags %}
 
-- [디바이스 OS별로 복사본 차별화](#platform-device-os)
+- [기기 OS별로 사본 차별화](#platform-device-os)
 - [특정 플랫폼만 타겟팅](#platform-target)
 - [특정 OS 버전의 iOS 기기만 타겟팅](#platform-target-ios-version)
 - [웹 브라우저만 타겟팅](#platform-target-web)
 - [특정 이동통신사 타겟팅](#platform-target-carrier)
 
-### 디바이스 OS별로 복사본 차별화 {#platform-device-os}
+### 기기 OS별로 사본 차별화 {#platform-device-os}
 
 이 사용 사례는 사용자가 어떤 플랫폼을 사용하고 있는지 확인하고, 플랫폼에 따라 특정 메시지를 표시합니다.
 
@@ -1229,14 +1229,14 @@ This is the regular copy and much longer than the short version.
 {% endraw %}
 
 {% alert note %}
-Liquid는 대소문자를 구분하며 `targeted_device.${platform}` 는 모두 소문자로 값을 반환합니다.
+Liquid는 대소문자를 구분하며 `targeted_device.${platform}`는 모두 소문자로 값을 반환합니다.
 {% endalert %}
 
 ### 특정 플랫폼만 타겟팅 {#platform-target}
 
-이 사용 사례는 사용자의 디바이스 플랫폼을 캡처하고 플랫폼에 따라 메시지를 표시합니다.
+이 사용 사례는 사용자의 기기 플랫폼을 캡처하고 플랫폼에 따라 메시지를 표시합니다.
 
-예를 들어 Android 사용자에게만 메시지를 보내고 싶을 수 있습니다. 세분화 도구에서 앱을 선택하는 대신 사용할 수 있습니다.
+예를 들어 Android 사용자에게만 메시지를 보내고 싶을 수 있습니다. 세분화 툴에서 앱을 선택하는 대신 사용할 수 있습니다.
 
 {% raw %}
 ```liquid
@@ -1250,11 +1250,11 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### 특정 OS 버전의 디바이스만 타겟팅 {#platform-target-ios-version}
+### 특정 OS 버전의 기기만 타겟팅 {#platform-target-ios-version}
 
 이 사용 사례는 사용자의 OS 버전이 특정 버전 집합에 해당하는지 확인하고 해당되는 경우 특정 메시지를 표시합니다.
 
-사용된 예에서는 OS 버전 10.0 이하를 사용하는 사용자에게 사용자의 디바이스 OS에 대한 지원이 단계적으로 중단된다는 경고를 보냅니다.
+사용된 예에서는 OS 버전 10.0 이하를 사용하는 사용자에게 사용자의 기기 OS에 대한 지원이 단계적으로 중단된다는 경고를 보냅니다.
 
 {% raw %}
 ```liquid
@@ -1270,7 +1270,7 @@ We are phasing out support for your device's operating system. Be sure to update
 
 ### 웹 브라우저만 타겟팅 {#platform-target-web}
 
-이 사용 사례는 사용자의 대상 디바이스가 Mac 또는 Windows에서 실행되는지 확인하고, 실행되는 경우 특정 메시지를 표시합니다.
+이 사용 사례는 사용자의 대상 기기가 Mac 또는 Windows에서 실행되는지 확인하고, 실행되는 경우 특정 메시지를 표시합니다.
 
 {% raw %}
 ```liquid
@@ -1304,9 +1304,9 @@ Content for Android.
 
 ### 특정 이동통신사 타겟팅 {#platform-target-carrier}
 
-이 사용 사례는 사용자의 디바이스 통신사가 Verizon인지 확인하고, 통신사라면 특정 메시지를 표시합니다.
+이 사용 사례는 사용자의 기기 통신사가 Verizon인지 확인하고, 통신사라면 특정 메시지를 표시합니다.
 
-푸시 알림 및 인앱 메시지 채널의 경우, Liquid를 사용하여 메시지 본문에서 디바이스 이동 통신사를 지정할 수 있습니다. 받는 사람의 디바이스 이동 통신사가 일치하지 않으면 메시지가 전송되지 않습니다.
+푸시 알림 및 인앱 메시지 채널의 경우, Liquid를 사용하여 메시지 본문에서 디바이스 이동 통신사를 지정할 수 있습니다. 수신자의 기기 이동 통신사가 일치하지 않으면 메시지가 전송되지 않습니다.
 
 {% raw %}
 ```liquid
@@ -1334,7 +1334,7 @@ This is a message for Verizon users!
 - [사용자 지정 속성에 CST 표준 시간대 추가하기](#time-append-cst)
 - [타임스탬프 삽입](#time-insert-timestamp)
 - [사용자 현지 시간대의 특정 기간 동안에만 캔버스 푸시를 보냅니다.](#time-canvas-window)
-- [사용자 현지 시간대의 특정 시간대에 반복되는 인앱 메시지 캠페인을 전송합니다.](#time-reocurring-iam-window)
+- [사용자 현지 시간대의 특정 시간대에 반복되는 인앱 메시지 캠페인을 전송](#time-reocurring-iam-window)
 - [사용자의 현지 시간대에 따라 평일과 주말에 서로 다른 메시지 보내기](#time-weekdays-vs-weekends)
 - [사용자의 현지 시간대에 따라 다른 시간대에 다른 메시지 보내기](#time-of-day)
 
@@ -1354,7 +1354,7 @@ Message for time zone yy.
 ```
 {% endraw %}
 
-### 사용자 지정 속성에 CST 표준 시간대 추가하기 {#time-append-cst}
+### 커스텀 속성에 CST 표준 시간대 추가하기 {#time-append-cst}
 
 이 사용 사례는 지정된 시간대의 사용자 지정 날짜 속성을 표시합니다.
 
@@ -1384,7 +1384,7 @@ Message for time zone yy.
 ```
 {% endraw %}
 
-### 사용자 현지 시간대의 특정 기간 동안에만 캔버스 푸시를 보냅니다. {#time-canvas-window}
+### 사용자 현지 시간대의 특정 기간 동안에만 캔버스 푸시를 보냅니다 {#time-canvas-window}
 
 이 사용 사례는 사용자의 현지 시간대를 기준으로 시간을 확인하고, 설정된 시간 내에 해당하면 특정 메시지를 표시합니다.
 
@@ -1400,7 +1400,7 @@ Here's a message that will send between 8 am and 8 pm!
 ```
 {% endraw %}
 
-### 사용자 현지 시간대의 특정 시간대에 반복되는 인앱 메시지 캠페인을 전송합니다. {#time-reoccurring-iam-window}
+### 사용자 현지 시간대의 특정 시간대에 반복되는 인앱 메시지 캠페인을 전송 {#time-reoccurring-iam-window}
 
 이 사용 사례는 사용자의 현재 시간이 설정된 기간 내에 속하는 경우 메시지를 표시합니다.
 
@@ -1466,13 +1466,13 @@ Check out this new bar after work today. HH specials!
 Week/Day/Month
 {% endapitags %}
 
-- [전월의 이름을 메시지로 가져옵니다.](#month-name)
+- [전월의 이름을 메시지로 가져오기](#month-name)
 - [매월 말에 캠페인 보내기](#month-end)
 - [매월 마지막(평일)에 캠페인 보내기](#day-of-month-last)
 - [매월 매일 다른 메시지 보내기](#day-of-month)
 - [요일마다 다른 메시지 보내기](#day-of-week)
 
-### 전월의 이름을 메시지로 가져옵니다. {#month-name}
+### 전월의 이름을 메시지로 가져오기 {#month-name}
 
 이 사용 사례는 현재 월을 가져와 메시징에 사용할 이전 월을 표시합니다.
 
@@ -1520,7 +1520,7 @@ Here's an overview of what your spending looked like in {{month}}.
 ```
 {% endraw %}
 
-### 매월 말에 캠페인 보내기 {#month-end}
+### 매월 말 {#month-end}에 캠페인 보내기
 
 이 사용 사례는 현재 날짜가 날짜 목록에 포함되는지 확인하고 날짜에 따라 특정 메시지를 표시합니다.
 
@@ -1664,7 +1664,7 @@ Default copy
 {% endraw %}
 
 {% alert note %}
-'기본 사본' 줄을 {% raw %}`{% abort_message() %}`{% endraw %} 으로 바꾸면 요일을 알 수 없는 경우 메시지가 전송되지 않도록 할 수 있습니다.
+"기본 사본" 줄을 {% raw %}`{% abort_message() %}`{% endraw %}으로 바꾸면 요일을 알 수 없는 경우 메시지가 전송되지 않도록 할 수 있습니다.
 {% endalert %}
 
 {% endapi %}

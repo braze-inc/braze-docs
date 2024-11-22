@@ -12,7 +12,7 @@ channel: SMS
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-- name: 알아두어야 할 약관
+- name: 알아두어야 할 용어
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/terms/
   image: /assets/img/braze_icons/book-closed.svg
 - name: 전화번호 보내기

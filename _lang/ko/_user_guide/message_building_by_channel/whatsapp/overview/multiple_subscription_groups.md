@@ -10,7 +10,7 @@ channel:
 
 # 여러 개의 WhatsApp 비즈니스 계정 및 전화번호
 
-> 각 작업 공간에 여러 WhatsApp 비즈니스 계정 및 구독 그룹(및 전화번호)을 추가할 수 있습니다. <br><br>각 구독 그룹은 하나의 고유한 전화번호에 연결되므로 동일한 전화번호를 여러 구독 그룹에 연결하거나 여러 전화번호를 하나의 구독 그룹에 연결할 수 없습니다.
+> 각 워크스페이스에 여러 개의 WhatsApp 비즈니스 계정과 구독 그룹(및 전화번호)을 추가할 수 있습니다. <br><br>각 구독 그룹은 하나의 고유한 전화번호에 연결되므로 동일한 전화번호를 여러 구독 그룹에 연결하거나 여러 전화번호를 하나의 구독 그룹에 연결할 수 없습니다.
 
 ## 여러 WhatsApp 비즈니스 계정 
 
@@ -20,18 +20,18 @@ channel:
 
 ### WhatsApp 비즈니스 계정 추가
 
-작업 공간당 최대 10개의 WhatsApp 비즈니스 계정을 추가할 수 있습니다. 계정을 추가하려면:
+워크스페이스당 최대 10개의 WhatsApp 비즈니스 계정을 추가할 수 있습니다. 계정을 추가하려면:
 
 1. **기술 파트너** > **WhatsApp**을 선택하고 **WhatsApp 비즈니스 계정 추가**를 선택하세요. ![WhatsApp 메시징 통합 섹션에는 비즈니스 계정을 추가하거나 구독 그룹 및 번호를 추가할 수 있는 옵션이 있습니다.][1]<br>
 2. 가입 워크플로를 진행하세요. 자세한 단계별 절차는 [WhatsApp 임베디드 가입]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)을 참조하세요.
 
 {% alert important %}
-귀하의 전화번호는 다른 WhatsApp 계정에 등록되지 않은 것을 포함하여 모든 WhatsApp 전화번호 요구 사항을 충족해야 합니다.
+전화번호는 다른 WhatsApp 계정에 등록되지 않은 것을 포함하여 모든 WhatsApp 전화번호 요구 사항을 충족해야 합니다.
 {% endalert %}
 
 ## 다중 구독 그룹 및 전화번호
 
-메시지 템플릿은 동일한 WhatsApp 비즈니스 계정의 모든 전화번호에서 공유됩니다. 자세한 내용은 [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)을(를) 참조하십시오.
+메시지 템플릿은 동일한 WhatsApp 비즈니스 계정의 모든 전화번호에서 공유됩니다. 자세한 내용은 [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)을 참조하세요.
 
 각 WhatsApp 전화번호는 사용자에게 별도의 WhatsApp 채팅으로 표시됩니다. WhatsApp 비즈니스 계정 내의 각 전화번호는 서로 독립적으로 작동하므로 다음에 대해 동일하거나 다른 값을 가질 수 있습니다: 
 - 표시 이름 
@@ -48,7 +48,7 @@ WhatsApp 비즈니스 계정당 최대 20개의 구독 그룹(및 발신 전화�
 
 ### 구독 그룹 및 전화번호 제거 
 
-1. **오디언스** > **구독** 및 구독 그룹을 보관하십시오.
+1. **오디언스** > **구독** 및 구독 그룹을 보관하세요.
 2. Meta Business 매니저로 이동하여 전화번호를 삭제하세요.
 
 [1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 

@@ -6,9 +6,9 @@ page_type: reference
 description: "Braze에서 글로벌 검색에 대해 알아보세요."
 ---
 
-# Braze 대시보드를 검색
+# Braze 대시보드 검색
 
-검색 창을 사용하여 Braze 대시보드 내에서 작업 및 기타 정보를 찾을 수 있습니다. 검색 창은 Braze 대시보드 상단에 있습니다. 클릭 the search bar, or press <kbd>Ctrl</kbd> + <kbd>K</kbd> on Windows or <kbd>⌘</kbd> + <kbd>K</kbd> on a Mac to jump directly to the search bar.
+검색 창을 사용하여 Braze 대시보드 내에서 작업 및 기타 정보를 찾을 수 있습니다. 검색 창은 Braze 대시보드 상단에 있습니다. 검색창을 클릭하거나 Windows에서 <kbd>Ctrl</kbd> + <kbd>K</kbd>를 누르거나 Mac에서 <kbd>⌘</kbd> + <kbd>K</kbd>를 눌러 검색창으로 바로 이동하세요.
 
 ![][3]
 
@@ -24,7 +24,7 @@ description: "Braze에서 글로벌 검색에 대해 알아보세요."
 - [페이지 내 Braze](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
-정확한 텍스트를 검색하려면 검색어를 따옴표("")로 묶으세요. 예를 들어, \[“all users”]를 검색하면 이름에 “all users”라는 정확한 구문이 포함된 모든 항목이 반환됩니다.
+정확한 텍스트를 검색하려면 검색어를 따옴표("")로 묶으세요. 예를 들어, [“모든 사용자”]를 검색하면 이름에 “모든 사용자”라는 정확한 구문이 포함된 모든 항목이 반환됩니다.
 {% endalert %}
 
 ## 주요 기능
@@ -55,8 +55,8 @@ table td {
 | 검색 메뉴 열기        | {::nomarkdown} <ul> <li> 맥: <kbd>⌘</kbd> + <kbd>K</kbd> </li> <li>윈도우: <kbd>Ctrl</kbd> + <kbd>K</kbd> </li> </ul> {:/}  |
 | 검색 결과 간 이동 | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
 | 검색 결과 선택      | <kbd>진입</kbd>    |
-| 검색 메뉴 닫기       | <kbd>탈출</kbd>  |
-{: .reset-td-br-1 .reset-td-br-2}
+| 검색 메뉴 닫기       | <kbd>Esc</kbd>  |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 콘텐츠 유형 및 상태 태그
 
@@ -90,7 +90,7 @@ Search for channels to see quick create options among your top 10 results. For e
 
 ### 이모티콘 검색
 
-Braze에서 작업 이름을 지정할 때 이모지를 사용하나요? 그들을 찾아라! 이모지를 검색어로 사용할 수 있습니다. 😎
+Braze에서 작업 이름을 지정할 때 이모지를 사용하나요? 이모지를 검색해 보세요! 이모지를 검색어로 사용할 수 있습니다. 😎
 
 
 [1]: {% image_buster /assets/img/global_search/global_search.png %}

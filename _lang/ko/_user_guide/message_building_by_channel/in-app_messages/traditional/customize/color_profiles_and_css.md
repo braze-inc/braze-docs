@@ -24,11 +24,11 @@ channel:
 
 HEX 색상 코드를 입력하거나 색상 상자를 클릭하고 색상 선택기로 색상을 선택하여 메시지 템플릿의 색 구성표를 사용자 지정할 수 있습니다.
 
-완료되면 **색상 프로필 저장을** 클릭합니다.
+완료되면 **색상 프로필 저장**을 클릭합니다.
 
 ### 색상 프로필 관리
 
-템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어에서 템플릿과][8] 크리에이티브 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어][8]에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
 ## CSS 템플릿 {#in-app-message-templates}
 
@@ -88,13 +88,13 @@ CSS 템플릿의 이름을 지정하고 태그를 지정한 다음 기본 템플
 
 ### CSS 템플릿 관리
 
-템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어에서 템플릿과][8] 크리에이티브 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어][8]에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
 ## CSS를 사용한 모달(웹 전용) {#web-modal-css}
 
 웹 전용 웹 모달과 CSS 메시지를 사용하기로 선택한 경우 제공된 공간에 자체 템플릿을 적용하거나 자체 CSS를 작성할 수 있습니다. 이 공간은 메시지 미리 보기에 표시된 CSS로 이미 미리 채워져 있지만 필요에 따라 자유롭게 약간 조정할 수 있습니다.
 
-나만의 템플릿을 적용하려면 **템플릿 적용을** 클릭하고 앱 내 메시지 템플릿 갤러리에서 선택합니다. 옵션이 없는 경우 CSS 템플릿 빌더를 사용하여 [CSS 템플릿을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) 업로드할 수 있습니다.
+나만의 템플릿을 적용하려면 **템플릿 적용**을 클릭하고 인앱 메시지 템플릿 갤러리에서 선택합니다. 옵션이 없는 경우 CSS 템플릿 빌더를 사용하여 [CSS 템플릿을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) 업로드할 수 있습니다.
 
 
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
