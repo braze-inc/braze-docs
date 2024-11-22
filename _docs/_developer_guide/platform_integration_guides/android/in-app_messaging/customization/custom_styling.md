@@ -39,7 +39,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all attributes to be correctly set. Note that these custom styles are for changes to individual UI elements, not wholesale changes to layouts. Layout-level changes need to be handled with custom views.
 
 {% alert note %}
-You can customize some colors directly in your Braze campaign without modifying the XML. Keep in mind, colors set in Braze will override the colors you set anywhere else.
+You can customize some colors directly in your Braze campaign without modifying the XML. Keep in mind, colors set in the Braze dashboard will override colors you set anywhere else.
 {% endalert %}
 
 ## Custom font
