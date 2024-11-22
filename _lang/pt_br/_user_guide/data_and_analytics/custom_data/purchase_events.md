@@ -129,7 +129,7 @@ Você pode visualizar esses dados na página do [Relatório de Receitas]({{site.
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Receitas por tempo de vida</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Receita vitalícia' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Receita vitalícia' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de tempo de vida por usuário</a></td>
@@ -137,11 +137,11 @@ Você pode visualizar esses dados na página do [Relatório de Receitas]({{site.
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Receita média diária</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Receita média diária' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Receita média diária' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">Compras diárias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Compras diárias' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Compras diárias' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Receitas diárias por usuário</a></td>
