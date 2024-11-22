@@ -34,11 +34,11 @@ To integrate Braze and Segment, you must set [Braze as a destination](#connectio
 
 ### Step 1: Create a Braze destination {#connection-settings}
 
-After successfully setting up your sources, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) for each source (iOS, Android, web, etc.). You'll have many options to customize the data flow between Braze and Segment using the connection settings.
+After successfully setting up your sources, you'll need to configure Braze as a [destination](https://segment.com/docs/destinations/) for each source (iOS, Android, or web). You'll have many options to customize the data flow between Braze and Segment using the connection settings.
 
 ### Step 2: Choose destination framework and connection type {#integration-options}
 
-In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
+In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
 ![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
 
@@ -84,7 +84,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 {% endalert %}
 
-To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
+To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and select **Save**. 
 
 ![]({% image_buster /assets/img/segment/android.png %})
 
