@@ -219,10 +219,6 @@ Se han publicado las siguientes actualizaciones del SDK. Las actualizaciones de 
 
 Puedes utilizar [Cloud Data Ingestion (CDI) para S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) para integrar directamente uno o varios contenedores de S3 de tu cuenta de AWS con Braze. Cuando se publican nuevos archivos en S3, se envía un mensaje a SQS, y la ingesta de datos en la nube de Braze recoge esos nuevos archivos.
 
-#### Aumento del límite de velocidad
-
-El límite de velocidad para el tipo de solicitud [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) ha aumentado a 2.500 solicitudes por minuto.
-
 #### Usuarios activos al mes CY 24-25
 
 Para los clientes que hayan comprado Usuarios activos al mes - CY 24-25, Braze gestiona diferentes límites de velocidad en su punto final `/users/track`. Para más detalles, consulta [POST: Seguimiento de usuarios]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). 
