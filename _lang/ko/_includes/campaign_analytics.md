@@ -283,7 +283,7 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">추정된 실제 열람</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens'' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">기계 열람</a></td>
