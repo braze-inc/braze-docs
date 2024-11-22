@@ -20,7 +20,7 @@ If you turn on re-eligibility, you override this default behavior and allow qual
 
 To turn on re-eligibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
-![Entry Controls][2]
+![Entry Controls for a Canvas to allow users to re-enter after six days.][2]
 
 Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and don't receive any messages will not be able to re-enter the Canvas unless re-eligibility is turned on. 
 
@@ -28,17 +28,21 @@ For example, suppose a user without an email address enters a daily recurring Ca
 
 If re-eligibility for a Canvas is set to shorter than the duration of the Canvas, it's possible for users to enter the Canvas more than once, which can lead to misleading behavior for Canvases that use in-app messages with particularly long delays. Since multiple Canvas in-app messages could be triggered by the same session start, the user could potentially have the experience of receiving the same message repeatedly, if a specific component renders faster than others.
 
+For action-based and API-triggered Canvases with re-eligibility enabled, there is a limit of one trigger per user, per second. Braze may deduplicate entries that happen in the same second.
+
 ## Campaigns
 
 To turn on re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
-![][1]
+![Delivery Controls for a campaign to allow users to become re-eligible to receive a campaign after three days.][1]
 
 In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. This is because re-eligibility is based on message receipt and not campaign entry. By making users re-eligible for a triggered campaign, you are allowing them to actually receive (and not simply trigger) the message more than once.
 
 Additionally, if you are trying to send a message immediately with a re-eligibility of zero minutes, we will always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
-![][24]
+![Time-based scheduling options to send the campaign as soon as it's launched.][24]
+
+For triggered campaigns with re-eligibility enabled, there's no set limit of triggers per user, per second.
 
 ## Re-eligibility delay calculations
 
