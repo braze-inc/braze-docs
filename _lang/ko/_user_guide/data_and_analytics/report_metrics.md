@@ -713,7 +713,7 @@ SMS
 이메일
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='소프트 반송' %} 이메일이 소프트 반송을 받으면 일반적으로 72시간 이내에 재시도하지만, 재시도 횟수는 수신자마다 다릅니다.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 이메일이 소프트 반송을 받으면 일반적으로 72시간 이내에 재시도하지만, 재시도 횟수는 수신자마다 다릅니다.
 
 {% endapi %}
 
@@ -747,7 +747,7 @@ SMS
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='설문조사 페이지 해지' %}
+{% multi_lang_include metrics.md metric='Survey Page Dismissals' %}
 
 {% endapi %}
 
@@ -759,7 +759,7 @@ SMS
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='설문조사 제출' %}
+{% multi_lang_include metrics.md metric='Survey Submissions' %}
 
 {% endapi %}
 
@@ -771,7 +771,7 @@ SMS
 이메일, Content Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 클릭 수' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP 이메일의 경우, HTML 및 일반 텍스트 버전의 총 클릭 수입니다.
+{% multi_lang_include metrics.md metric='Total Clicks' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP 이메일의 경우, HTML 및 일반 텍스트 버전의 총 클릭 수입니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -794,7 +794,7 @@ SMS
 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 해고 수' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %}
 
 <span class="calculation-line">계산: 카운트</span>
 
@@ -808,7 +808,7 @@ SMS
 인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 노출 수' %} 이 숫자는 Braze가 SDK로부터 받은 노출 이벤트 수를 합산한 것입니다. 콘텐츠 카드의 경우, 특정 콘텐츠 카드에 대해 기록된 총 노출 횟수입니다. 동일한 사용자에 대해 여러 번 증가시킬 수 있습니다.
+{% multi_lang_include metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK로부터 받은 노출 이벤트 수를 합산한 것입니다. 콘텐츠 카드의 경우, 특정 콘텐츠 카드에 대해 기록된 총 노출 횟수입니다. 동일한 사용자에 대해 여러 번 증가시킬 수 있습니다.
 
 인앱 메시지의 경우, 여러 디바이스가 있고 재인증이 꺼져 있는 경우 사용자는 인앱 메시지를 한 번만 볼 수 있습니다. 사용자가 여러 디바이스를 사용하더라도 타겟팅된 첫 번째 디바이스에서만 볼 수 있습니다. 여기서는 프로필에 통합된 디바이스가 있고 사용자가 여러 디바이스에서 로그인하는 하나의 사용자 ID를 가지고 있다고 가정합니다. 사용자가 인앱 메시지를 볼 때마다 노출에 재적격 여부가 기록됩니다.
 
@@ -824,7 +824,7 @@ SMS
 이메일, iOS 푸시, Android 푸시, 웹 푸시, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 오픈 수' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP 이메일의 경우, HTML 및 일반 텍스트 버전의 총 열람 수입니다. 
+{% multi_lang_include metrics.md metric='Total Opens' %} LINE의 경우, 하루 최소 임계치인 20개 메시지에 도달한 후 추적됩니다. AMP 이메일의 경우, HTML 및 일반 텍스트 버전의 총 열람 수입니다. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -847,7 +847,7 @@ SMS
 콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, Android 푸시, 웹훅, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='총 수익' %} 이 지표는 <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더를</a> 통한 캠페인 비교 보고서에서만 사용할 수 있습니다.
+{% multi_lang_include metrics.md metric='Total Revenue' %} 이 지표는 <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더를</a> 통한 캠페인 비교 보고서에서만 사용할 수 있습니다.
 
 {% endapi %}
 
@@ -859,7 +859,7 @@ SMS
 이메일, Content Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='고유 클릭 수' %} 이메일의 경우 7일 동안 추적됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} 이메일의 경우 7일 동안 추적됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -882,7 +882,7 @@ SMS
 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='고유 해제' %}
+{% multi_lang_include metrics.md metric='Unique Dismissals' %}
 
 <span class="calculation-line">계산: (고유 무시 수) / (고유 노출 횟수)</span>
 
@@ -896,7 +896,7 @@ SMS
 인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='고유 노출 수' %} 인앱 메시지의 경우, 재적격성이 켜져 있고 사용자가 트리거 액션을 수행하면 24시간 후에 고유 노출 수가 다시 증가할 수 있습니다. 재자격이 켜져 있으면 <i>고유 노출</i> <i>수</i>= <i>고유 수신자 수입니다</i>. <br><br>콘텐츠 카드의 경우 사용자가 카드를 두 번째로 볼 때마다 카운트가 증가해서는 안 됩니다. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} 인앱 메시지의 경우, 재적격성이 켜져 있고 사용자가 트리거 액션을 수행하면 24시간 후에 고유 노출 수가 다시 증가할 수 있습니다. 재자격이 켜져 있으면 <i>고유 노출</i> <i>수</i>= <i>고유 수신자 수입니다</i>. <br><br>콘텐츠 카드의 경우 사용자가 카드를 두 번째로 볼 때마다 카운트가 증가해서는 안 됩니다. 
 
 <span class="calculation-line">계산: 카운트</span>
 
@@ -910,7 +910,7 @@ SMS
 이메일, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='고유 열람' %} 이메일의 경우, 이는 7일 동안 추적됩니다. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
+{% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다. LINE의 경우 하루에 최소 20개의 메시지가 도달한 후에 추적됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -932,7 +932,7 @@ SMS
 전체
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='고유 수신자' %}
+{% multi_lang_include metrics.md metric='Unique Recipients' %}
 
 시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다. 이 번호는 Braze에서 받은 것으로 `user_id` 을 기준으로 합니다.
 
@@ -948,7 +948,7 @@ SMS
 이메일
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='구독 취소자 또는 구독 취소' %}
+{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -970,7 +970,7 @@ SMS
 이메일
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='구독 취소' %}
+{% multi_lang_include metrics.md metric='Unsubscribes' %}
 
 <span class="calculation-line">계산: (구독 취소 수) / (전달 수)</span>
 
