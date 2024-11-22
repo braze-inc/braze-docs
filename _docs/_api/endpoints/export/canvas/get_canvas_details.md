@@ -211,6 +211,12 @@ The following is an example response that includes Canvas messages sent through 
       }
     }
   ],
+  "entry_criteria": {
+    "segment_id": "new_users_segment"
+  },
+  "exit_criteria": {
+    "event_name": "completed_profile"
+  }
 }
 ```
 
