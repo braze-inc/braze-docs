@@ -288,7 +288,7 @@ SMS
 전체
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversion Window'' %}
+{% multi_lang_include metrics.md metric='Conversion Window' %}
 
 {% endapi %}
 
