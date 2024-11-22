@@ -52,7 +52,7 @@ The following options are available:
 Regardless of your selected option, the Content Card expiration date countdown will begin when the user enters the Canvas step.
 
 {% alert tip %}
-If you want anonymous users to see a Content Card in their very first session, you should use a campaign.
+If you want anonymous users to see a Content Card in their very first session, use a campaign instead of a Canvas.
 {% endalert %}
 
 {% endtab %}
