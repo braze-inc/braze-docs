@@ -117,7 +117,7 @@ tool:
 {% alert tip %}
 멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
-![드래그 앤 드롭 편집기의 스타일 설정 옆 콘텐츠 패널에 있는 카피라이터 버튼.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![드래그 앤 드롭 편집기의 스타일 설정 옆 콘텐츠 패널에 있는 카피라이터 버튼.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### 3단계: 전송 정보 추가
