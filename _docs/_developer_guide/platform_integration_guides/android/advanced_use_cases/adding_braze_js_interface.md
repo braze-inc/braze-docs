@@ -19,7 +19,7 @@ Using Braze functionality from a WebView in your app can be done by adding the B
 {% tab JAVA %}
 
 ```java
-String javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "braze-html-bridge.js");
+String javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js");
 myWebView.loadUrl("javascript:" + javascriptString);
 
 final InAppMessageJavascriptInterface javascriptInterface = new InAppMessageJavascriptInterface(context, inAppMessage);
@@ -30,7 +30,7 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge");
 {% tab KOTLIN %}
 
 ```kotlin
-val javascriptString = context.assets.getAssetFileStringContents("braze-html-bridge.js")
+val javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js")
 myWebView.loadUrl("javascript:" + javascriptString!!)
 
 val javascriptInterface = InAppMessageJavascriptInterface(context, inAppMessage)
