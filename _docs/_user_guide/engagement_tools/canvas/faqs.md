@@ -34,10 +34,12 @@ When you stop a Canvas, the following applies:
 
 #### In-app messages in Canvas
 
-In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they will still receive the in-app message upon their next session start, as long as the in-app message hasn't expired yet.
+In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they'll still receive the in-app message upon their next session start as long as the in-app message hasn't expired yet.
+
+It's possible for a user to start a session before the Canvas is stopped, but not be shown the in-app message immediately. This can occur if the in-app message is triggered by a custom event or is delayed. This means it's possible for a user to log an in-app message impression and "receive" the in-app message after the Canvas is stopped. However, the user would have had to start the session before the Canvas is stopped, but **after** they received the Canvas step.
 
 {% alert note %}
-Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they'll receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
 ### When does an exception event trigger?
