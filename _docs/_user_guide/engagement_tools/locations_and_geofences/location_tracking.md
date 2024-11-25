@@ -22,7 +22,7 @@ To enable location collection on your app, refer to the developer guide for the 
 
 In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's locations. All of these platforms will require users opt-in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their device. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
 
-### SDK user location by IP
+### SDK user location by IP address
 
 As of November 26, 2024, Braze will detect user locations from the geolocated country using the IP address from the start of the first SDK session. 
 
