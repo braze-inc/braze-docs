@@ -1,71 +1,73 @@
 ---
 nav_title: Census
 article_title: Census
-page_order: 9
-description: "Cet article présente de référence le partenariat entre Braze et Census, une plateforme d’intégration de données qui vous permet de créer dynamiquement des segments d’utilisateur ciblés en vous servant des données de votre entrepôt cloud."
+description: "Cet article de référence présente le partenariat entre Braze et Census, une plateforme d'intégration de données qui vous permet de créer dynamiquement des segments d'utilisateurs ciblés avec les données de votre entrepôt cloud."
 alias: /partners/census/
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Census
 
-> [Census][1] est une plateforme d’intégration de données qui vous permet de synchroniser les données client et produit de votre entrepôt cloud vers les applications de vente et de marketing de votre choix, sans faire continuellement appel à votre service technique. 
+> [Census][1] est une plateforme d'activation des données qui connecte les entrepôts de données dans le cloud comme Snowflake et BigQuery à Braze. Les équipes marketing peuvent exploiter la puissance de leurs données first-party pour créer des segments d'audience dynamiques, synchroniser les attributs des clients pour personnaliser les campagnes et maintenir à jour toutes leurs données dans Braze. Il est plus facile que jamais de prendre des mesures grâce à des données fiables et exploitables - pas besoin de télécharger des fichiers CSV ou de faire appel à des ingénieurs.
 
-L’intégration de Braze et de Census vous permet d’importer dynamiquement vos données de produits Census dans Braze pour créer des segments d’utilisateur ciblés. Par exemple, après avoir testé et mis en œuvre l’intégration, Braze peut créer un segment d’utilisateur en utilisant les nouvelles données des « Utilisateurs actifs au cours des 30 derniers jours » pour cibler des utilisateurs spécifiques afin de leur demander de tester une fonctionnalité bêta à venir.
+L'intégration entre Braze et Census vous permet d'importer dynamiquement des audiences ou des données produit dans Braze afin d'envoyer des campagnes personnalisées. Par exemple, vous pouvez créer une cohorte dans Braze pour les "abonnés au bulletin d’information avec CLV > 1000" afin de cibler les clients à forte valeur ajoutée ou les "utilisateurs actifs au cours des 30 derniers jours" afin de cibler des utilisateurs spécifiques pour tester une fonctionnalité bêta à venir.
 
 ## Conditions préalables
 
 | Condition | Description |
 | --- | --- |
-| Compte Census | Un compte [Census][1] est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé API REST de Braze qui inclut toutes les autorisations de données utilisateur (sauf pour `users.delete`) et des autorisations `segments.list`. Les autorisations peuvent changer à mesure que Census prend en charge un plus grand nombre d’objets Braze. Vous pouvez donc choisir d’accorder davantage d’autorisations maintenant ou prévoir de mettre à jour ces autorisations à l’avenir. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][2]. |
-| Entrepôt de données et modèle de données | Avant de commencer l’intégration, vous devez disposer d’un entrepôt de données configuré dans Census et définir un modèle du sous-ensemble de données que vous souhaitez synchroniser avec Braze. Consultez la [documentation Census](https://docs.getcensus.com/destinations/braze) pour obtenir une liste des sources de données disponibles et des conseils pour vous aider à créer un modèle. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| Compte Census | Un [compte Census][1] est nécessaire pour profiter de ce partenariat. |
+| Clé d'API REST Braze | Une clé API REST Braze avec toutes les autorisations relatives aux données utilisateur (à l'exception de `users.delete`) et des autorisations `segments.list`. Le jeu de permissions peut changer au fur et à mesure que Census prend en charge d'autres objets Braze. Vous pouvez donc soit accorder plus de permissions maintenant, soit prévoir de mettre à jour ces permissions à l'avenir. <br><br> Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| Endpoint REST Braze  | L'URL de votre endpoint REST. Votre endpoint dépendra de l'[URL de Braze pour votre instance][2]. |
+| Entrepôt de données et modèle de données | Avant de commencer l'intégration, vous devez disposer d'un entrepôt de données configuré dans Census et définir un modèle du sous-ensemble de données que vous souhaitez synchroniser avec Braze. Consultez la [documentation sur le Census](https://docs.getcensus.com/destinations/braze) pour obtenir une liste des sources de données disponibles et des conseils sur la création de modèles. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Intégration
 
-### Étape 1 : Créer une connexion de service Braze
+### Étape 1 : Créer un branchement de service Braze
 
-Pour intégrer Census, rendez-vous sur la plateforme Census, accédez à l’onglet **Settings (Paramètres)** et sélectionnez **Add Service (Ajouter un service)** afin de créer une nouvelle connexion de service Braze.
+Pour intégrer Census dans la plateforme Census, accédez à l'onglet **Connexions** et sélectionnez **Nouvelle destination** pour créer une nouvelle connexion de service Braze.
 
-Dans l’invite qui apparaît, nommez cette connexion et fournissez votre URL d’endpoint Braze et votre clé API REST Braze.
+Dans l'invite qui s'affiche, donnez un nom à cette connexion et indiquez l'URL de votre endpoint Braze ainsi que la clé API REST de Braze (et, éventuellement, votre clé d'importation des données pour synchroniser les cohortes).
 
 ![][8]{: style="max-width:60%;"}
 
-### Étape 2 : Créer une synchronisation avec Census
+### Étape 2 : Créer une synchronisation Census
 
-Pour synchroniser des clients sur Braze, vous devez créer une synchronisation. Ici, vous définirez où synchroniser les données et comment vous souhaitez que les champs soient mappés sur les deux plateformes.
+Pour synchroniser les clients avec Braze, vous devez créer une synchronisation. Ici, vous définirez où synchroniser les données et comment vous souhaitez que les champs soient mappés entre les deux plateformes.
 
-1. Accédez à l’onglet **Syncs (Synchronisations)** et sélectionnez **Add Sync (Ajouter une synchronisation)**. 
-2. Dans l’invite qui apparaît, sous **Connection (Connexion)**, sélectionnez l’entrepôt de données souhaité.
-3. Ensuite, sélectionnez la source. Il s’agit du modèle de données conçu à l’aide des données de votre entrepôt de données.
-4. Configurez l’emplacement de synchronisation du modèle. Sélectionnez **Braze** comme connexion, et le [type d’objet pris en charge](#supported-objects) à synchroniser.<br>![Dans l’invite « What do you want to sync (Que voulez-vous synchroniser ? ) », « Redshift » est sélectionné comme connexion et « Golden Users - VIP » est défini comme source. Dans l’invite « Where do you want to sync data to? (Où voulez-vous synchroniser les données ?) », « Braze » est sélectionné comme connexion, et « User (Utilisateur) » est défini en tant qu’objet.][10]{: style="max-width:80%;"}<br><br>
-5. Assurez-vous de sélectionner **Update or Create (Mettre à jour ou créer)** comme règle de synchronisation.
-6. Ensuite, pour que les enregistrements correspondent, choisissez l’option souhaitée [dans l’invite « How are source and destination records matched? (Comment les enregistrements de source et de destination sont-ils mis en correspondance ?) », « External User ID (ID utilisateur externe) » est défini comme « id ».](#supported-objects) pour votre type d’objet Braze et le champ de modèle associé.<br>![Dans l’invite « Which fields should be updated? (Quels champs doivent être mis à jour ?) », « External User ID (ID utilisateur externe) » est défini comme « id », « Email » est défini comme « e-mail », « First Name (Prénom) » est défini comme « first_name », et « Last Name (Nom de famille) » est défini comme « last_name ».][9]{: style="max-width:80%;"}<br><br>
-7. Enfin, mappez les champs de données Census aux champs équivalents de Braze.<br>![Mappage de Census][11]{: style="max-width:80%;"}<br><br>
-8. Confirmez les détails et créez la synchronisation. 
+1. Accédez à l'onglet **Syncs** et sélectionnez **New Sync (Nouvelle synchronisation)**.<br><br> 
+2. Dans le compositeur, sélectionnez le modèle de données source de votre entrepôt de données.<br><br>
+3. Configurez l'endroit où le modèle sera synchronisé. Sélectionnez **Braze** comme destination et le [type d'objet pris en charge](#supported-objects) à synchroniser.<br>![Dans l'invite "Sélectionner une destination", "Braze" est sélectionné comme connexion, et divers objets sont répertoriés.][10]{: style="max-width:80%;"}<br><br>
+4. Sélectionnez la règle de synchronisation que vous souhaitez appliquer**(la mise à jour ou la création** est le choix le plus courant, mais vous pouvez choisir des règles plus avancées pour gérer la suppression de données, par exemple).<br><br>
+5. Ensuite, à des fins de mappage des enregistrements, choisissez une clé de synchronisation pour [mapper](#supported-objects) votre objet Braze à un champ de modèle.<br>![Dans l'invite "Sélectionner une clé de synchronisation", le paramètre "External User ID" de Braze correspond au paramètre "user_id" dans la source.][9]{: style="max-width:80%;"}<br><br>
+6. Enfin, mappez les champs de données du Census aux champs équivalents de Braze.<br>![Mappage de Census][11]{: style="max-width:80%;"}<br><br>
+7. Confirmez les détails et créez la synchronisation. 
 
-Une fois la synchronisation créée, les données utilisateur se trouveront déjà dans Braze. Vous pouvez maintenant créer un segment Braze et l’ajouter à de futures campagnes et Canvas Braze pour cibler ces utilisateurs finaux. 
+Après la synchronisation, les données de l'utilisateur existeront dans Braze. Vous pouvez désormais créer et ajouter un segment Braze aux futures campagnes et Canvas Braze afin de cibler ces utilisateurs. 
 
 {% alert note %}
-Si vous utilisez l’intégration de Census et Braze, Census enverra uniquement les deltas (données modifiées) lors de chaque synchronisation à Braze. 
+Lorsque vous utilisez l'intégration de Census et de Braze, Census n'envoie à Braze que les deltas (données modifiées) à chaque synchronisation.
 {% endalert %}
 
 ## Objets pris en charge
 
-Actuellement, Census prend en charge la synchronisation des objets d’utilisateur et d’événement Braze suivants :
+Census prend actuellement en charge la synchronisation des objets suivants de Braze :
 
-| Nom de l’objet | Identifiants |
+| Nom de l'objet | Comportements de synchronisation |
 | --- | --- |
-| Utilisateur | ID utilisateur externe |
-| Événement | ID de l’événement |
+| Utilisateur | Mise à jour, création, miroir, suppression |
+| Cohorte | Mettre à jour, créer, refléter | 
+| Catalogue | Mettre à jour, créer, refléter |
+| Groupe d'abonnement | Miroir |
+| Événement | Ajouter |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-De plus, Census prend en charge l’envoi de [données structurées](https://docs.getcensus.com/destinations/braze#supported-objects) à Braze : 
-- Jetons de notification push utilisateur : Pour envoyer des jetons de notification push, vos données doivent être structurées comme une matrice d’objets comportant deux ou trois valeurs : `app_id`, `token`et `device_id` (facultatif).
-- Attributs personnalisés imbriqués : Les objets et les matrices sont pris en charge. Au mois d’avril 2022, cette fonctionnalité est toujours proposée en accès anticipé. Vous devrez peut-être contacter votre gestionnaire de compte Braze pour y accéder.
+En outre, Census prend en charge l'envoi de [données structurées](https://docs.getcensus.com/destinations/braze#supported-objects) à Braze : 
+- Jetons de poussée de l'utilisateur : Pour envoyer des jetons de notifications push, vos données doivent être structurées comme un tableau d'objets avec 2-3 valeurs : `app_id`, `token` et une valeur facultative `device_id`.
+- Attributs personnalisés imbriqués : Les objets et les tableaux sont pris en charge. En avril 2022, cette fonctionnalité est encore en accès anticipé. Il se peut que vous deviez contacter votre gestionnaire de compte Braze pour y accéder.
 
 [1]: https://www.getcensus.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
