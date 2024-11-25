@@ -62,7 +62,7 @@ If you select multiple devices for mobile platforms, such as both iOS and Androi
 
 ### Device-specific settings
 
-Settings specific to iOS and Android are not supported when multiple platforms or devices are selected. This includes settings like [push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), notification channels and groups, TTL, display priority, sounds, and more.
+You can edit platform-specific settings in the editor. This includes settings like [push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), notification channels and groups, TTL, display priority, sounds, and more.
 
 For more information on device-specific settings, refer to the following article collections:
 
@@ -73,7 +73,6 @@ For more information on device-specific settings, refer to the following article
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios

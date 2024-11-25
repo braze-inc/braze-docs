@@ -36,7 +36,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 ステップ 1 を繰り返すことで、いつでも `master` と `geofence-branch` を切り替えることができます。
 {% endalert %}
 
-### ステップ2:プロジェクトを構成する
+### ステップ 2:プロジェクトを構成する
 
 次に、プロジェクトの `config.xml` ファイル内の `platform` 要素に次の環境設定を追加します。
 

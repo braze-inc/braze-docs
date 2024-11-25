@@ -24,3 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-algolia", "~> 1.0", git: "https://github.com/zzhaobraze/jekyll-algolia", branch: "master"
 end
 
+
+gem "csv", "~> 3.3"
+
+gem "mutex_m", "~> 0.2.0"

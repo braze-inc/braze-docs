@@ -13,7 +13,7 @@ description: "このリファレンス記事では、WebView に Braze JavaScrip
 
 > このリファレンス記事では、WebView に Braze JavaScript インターフェイスを追加する方法を説明します。
 
-アプリの WebView から Braze 機能を使用するには、WebView に Braze JavaScript インターフェイスを追加します。インターフェイスを追加すると、[HTML アプリ内メッセージ][1]に使用できるのと同じ API がカスタム WebView でも使用できるようになります。
+アプリの WebView から Braze 機能を使用するには、WebView に Braze JavaScript インターフェイスを追加します。インターフェイスを追加すると、[HTML アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages)に使用できるのと同じ API がカスタム WebView でも使用できるようになります。
 
 {% tabs %}
 {% tab JAVA %}
@@ -40,4 +40,3 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages

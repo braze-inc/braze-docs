@@ -19,9 +19,9 @@ BrazeとKnakの統合により、何日も何週間もかかることなく、�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Knak アカウント | このパートナーシップを活用するには、Knak アカウントが必要です。 |
-| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST APIキー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][2]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][2]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -34,27 +34,27 @@ Knak は、コーディングや外部からの支援を必要とせずに、メ
 
 ### ステップ1:統合を設定する
 
-Knak で **\[Integrations] > \[Platforms] > \[+ Add New Integration]** に移動します。
+Knak で **[Integrations] > [Platforms] > [+ Add New Integration]** に移動します。
 
 ![統合追加のボタン][5]
 
-次に、**Braze**プラットフォームを選択し、Braze APIキーとRESTエンドポイントを提供する。\[**Create New Integration**] をクリックして統合を完了します。 
+次に、**Braze**プラットフォームを選択し、Braze APIキーとRESTエンドポイントを提供する。[**Create New Integration**] をクリックして統合を完了します。 
 
 ![新しい統合を作成する][6]
 
 ### ステップ2:Knakテンプレートを同期する
 
-Knak で、Braze に同期するメールを見つけて \[**Publish**] を選択し、次に \[**Sync**] を選択します。
+Knak で、Braze に同期するメールを見つけて [**Publish**] を選択し、次に [**Sync**] を選択します。
 
 ![Knak 統合1][8]
 
-次にメール名を確認し、\[**Sync**] をクリックします。
+次にメール名を確認し、[**Sync**] をクリックします。
 
 ![Knak 統合2][9]
 
 ## 統合を利用する
 
-アップロードした Knak メールは、Braze の**\[エンゲージメント] > \[テンプレートとメディア]** にあります。見た目がよく、ブランドらしく、完全にレスポンシブです。クリエイティビティを存分に発揮してください。
+アップロードした Knak メールは、Braze の**[エンゲージメント] > [テンプレートとメディア]** にあります。見た目がよく、ブランドらしく、完全にレスポンシブです。クリエイティビティを存分に発揮してください。
 
 [1]: https://knak.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

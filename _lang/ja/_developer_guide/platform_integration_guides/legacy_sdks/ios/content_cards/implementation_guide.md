@@ -14,12 +14,12 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なコンテンツカード開発者統合ガイドをお探しですか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/). でご確認ください。
+基本的なコンテンツカード開発者統合ガイドをお探しですか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/integration/). でご確認ください。
 {% endalert %}
 
 # コンテンツカード実装ガイド
 
-> このオプションおよび高度な実装ガイドでは、コンテンツカードコードの考慮事項、当社チームが作成した3つのカスタムユースケース、付随するコードスニペット、およびロギングインプレッション、クリック、および削除に関するガイダンスについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-ios-demo-app) Braze Demo リポジトリにアクセスしてください。この実装ガイドは、Swift 実装を中心に扱っていますが、興味のある人のために Objective-C のスニペットが提供されています。
+> このオプションおよび高度な実装ガイドでは、コンテンツカードコードの考慮事項、当社チームが作成した3つのカスタムユースケース、付随するコードスニペット、およびロギングインプレッション、クリック、および削除に関するガイダンスについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-ios-demo-app) Braze Demo リポジトリにアクセスしてください！この実装ガイドは、Swift 実装を中心にしていますが、興味のある人のために Objective-C のスニペットが提供されていることに注意してください。
 
 ## コードに関する考慮事項
 
@@ -434,33 +434,33 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 
 ### 補足コンテンツとしてのコンテンツカード
 
-![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![]({% image_buster /assets/img/cc_implementation/supplementary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
-コンテンツカードを既存のフィードにシームレスにブレンドし、複数のフィードからのデータを同時に読み込むことができます。これにより、Braze コンテンツカードと既存のフィードコンテンツとの一貫性のある、調和のとれたエクスペリエンスが生まれます。
+コンテンツカードを既存のフィードにシームレスにブレンドし、複数のフィードからのデータを同時に読み込むことができます。これにより、Braze コンテンツカードと既存のフィードコンテンツとの一体感のある、調和のとれた体験が生まれます。
 
-右の例は、ローカルデータと Braze を使用したコンテンツカードによって設定された項目のハイブリッドリストを含む `UICollectionView` を示しています。これによって、コンテンツカードは既存のコンテンツと区別がつかなくなります。
+右の例は、ローカルデータと Braze を使用したコンテンツカードによって設定された項目のハイブリッドリストを含む `UICollectionView` を示しています。これにより、既存のコンテンツとコンテンツカードを区別できなくなります。
 
-#### ダッシュボードの構成
+#### ダッシュボード設定
 
 このコンテンツカードは、API トリガーのキーと値のペアを持つ API トリガーキャンペーンによって提供されます。これは、カードの値が外部要因に依存して、ユーザに表示するコンテンツを決定するキャンペーンに最適です。なお、`class_type`はセットアップ時に知っておく必要があります。
 
-![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id"、"tile_deeplink"、"tile_title "のようなカードの異なる側面がLiquidを使って設定されている。][2]{: style="max-width:60%;"}
+![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id"、"tile_deeplink"、および"tile_title"などのカードのさまざまな側面が、Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %})を使用して設定されます。{: style="max-width:60%;"}
 
-##### 分析をログに記録する準備ができましたか。
-[以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データのフローがどうあるべきかを理解してください。
+##### 分析をログに記録する準備ができましたか?
+[以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データフローの外観について理解を深めてください。
 
 ### メッセージセンターのコンテンツカード
 <br>
 コンテンツカードは、各メッセージが独自のカードであるメッセージセンター形式で使用できます。メッセージセンター内の各メッセージは、コンテンツカードペイロードを介して入力され、各カードには、クリック時 UI/UX を起動する追加のキーと値のペアが含まれています。次の例では、1つのメッセージによって任意のカスタムビューが表示され、別のメッセージによってカスタム HTML を表示する Web ビューが開きます。
 
-![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
+![]({% image_buster /assets/img/cc_implementation/message_center.png %}){: style="border:0;"}{: style="max-width:80%;border:0"}
 
-#### ダッシュボードの構成
+#### ダッシュボード設定
 
 次のメッセージタイプでは、キーと値のペア `class_type` をダッシュボード設定に追加する必要があります。ここで割り当てる値は任意ですが、クラス型を区別できるようにする必要があります。これらのキーと値のペアは、ユーザーが簡略化された受信トレイメッセージをクリック際に行き先を決定するときにアプリケーションが参照するキー識別子です。
 
 {% tabs local %}
-{% tab 任意のカスタムビューメッセージ（全ページ） %}
+{% tab 任意のカスタム・ビュー・メッセージ- 全ページ %}
 
 このユースケースのキーと値のペアは、次のとおりです。
 
@@ -470,7 +470,7 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab ウェブビュー・メッセージ（HTML） %}
+{% tab Webview メッセージ- HTML %}
 
 このユースケースのキーと値のペアは、次のとおりです。
 
@@ -526,25 +526,25 @@ func addContentCardToView(with message: Message) {
 {% endtab %}
 {% endtabs %}
 
-##### 分析をログに記録する準備ができましたか。
+##### 分析をログに記録する準備ができましたか?
 [以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データのフローがどうあるべきかを理解してください。
 
-![画面左下に50%のプロモーションを示すインタラクティブなコンテンツカードが表示されている。クリックすると、カートにプロモーションが適用されます。][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![画面左下に50%のプロモーションを示すインタラクティブなコンテンツカードが表示されている。クリックすると、カートにプロモーションが適用されます。]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### インタラクティブコンテンツカード
 <br>
 コンテンツカードを活用して、ユーザーのための動的でインタラクティブな体験を作成できます。右の例では、コンテンツカードのポップアップがチェックアウト時に表示され、ユーザーに最新のプロモーションを提供しています。
 
-このようなカードをうまく配置することで、ユーザーを特定のアクションに「後押し」することができます。
+このように適切に配置されたカードは、ユーザーが特定のユーザーアクションを実行するように「後押し」する優れた方法です。
 <br><br><br>
-#### ダッシュボードの構成
+#### ダッシュボード設定
 
-インタラクティブコンテンツカードのダッシュボード設定は簡単です。このユースケースのキーと値のペアには、希望する割引額として設定された`discount_percentage`と、`coupon_code` として設定された`class_type`が含まれます。これらのキーと値のペアは、タイプ固有のコンテンツカードがどのようにフィルタリングされ、チェックアウト画面に表示される方法です。
+インタラクティブコンテンツカードのダッシュボード設定は簡単です。このユースケースのキーと値のペアには、希望する割引額として設定された `discount_percentage` と、`coupon_code` として設定された `class_type` があります。これらのキーと値のペアは、タイプ固有のコンテンツカードがどのようにフィルタリングされ、チェックアウト画面に表示される方法です。
 
-![][7]{: style="max-width:70%;"} 
+![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:70%;"} 
 
-##### 分析をログに記録する準備ができましたか。
-[以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データのフローがどうあるべきかを理解してください。
+##### 分析をログに記録する準備ができましたか?
+[以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データフローの外観について理解を深めてください。
 
 ## ダークモードのカスタマイズ
 
@@ -646,10 +646,3 @@ static NSString *const ContentCardKeyExtras = @"extras";
 {% endtabs %}
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/cc_implementation/supplementary.png %}
-[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {% image_buster /assets/img/cc_implementation/message_center.png %}
-[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
-[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/discount2.png %}
-[7]: {% image_buster /assets/img/cc_implementation/discount.png %}

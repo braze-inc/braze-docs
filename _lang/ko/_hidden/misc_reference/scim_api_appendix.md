@@ -33,7 +33,7 @@ permalink: "/scim_api_appendix/"
 | --- | --- | --- | --- |
 | `companyPermissions` | 선택 사항 | 배열 | [회사 권한 문자열](#company) 테이블의 회사 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 해당 권한을 가지고 있음을 나타냅니다. |
 | `appGroup` | 필수 | 배열 | [작업 공간 권한 객체](#workspace-permission-object)의 배열. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### 작업 공간 권한 개체 {#workspace-permission-object}
 
@@ -46,7 +46,7 @@ permalink: "/scim_api_appendix/"
 | `appGroupPermissionSets` | 선택 사항 | 배열 | 단일 [워크스페이스 권한 설정 개체](#workspace-permissions-set-object)이 있는 배열. |
 | `appGroupPermissions` | 필수 | 배열 | [워크스페이스 권한 문자열](#workspace-strings) 테이블의 워크스페이스 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 지정된 워크스페이스에 대한 해당 권한을 가지고 있음을 나타냅니다. |
 | `team` | 선택 사항 | 배열 | [팀 권한 객체](#team-permissions-object) 배열. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### 작업 공간 권한 설정 객체 {#workspace-permissions-set-object}
 
@@ -56,7 +56,7 @@ permalink: "/scim_api_appendix/"
 | --- | --- | --- | --- |
 | `appGroupPermissionSetName` | 선택 사항 | 문자열 | 워크스페이스에 대해 사용자에게 할당된 워크스페이스 권한 세트의 이름입니다. |
 | `appGroupPermissionSetID` | `appGroupPermissionSetName`이(가) 없으면 필수 | 문자열 | 워크스페이스의 ID로, 이 워크스페이스에 대해 사용자에게 할당된 워크스페이스 권한 세트를 지정하는 대체 방법으로 사용됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### 팀 권한 객체
 
@@ -67,7 +67,7 @@ permalink: "/scim_api_appendix/"
 | `teamName` | 선택 사항 | 문자열 | 팀의 이름, 이 개체 내의 권한이 어떤 팀을 위한 것인지 지정하는 데 사용할 수 있습니다. |
 | `teamId` | `teamName`이(가) 없으면 필수 | 문자열 | 팀의 ID, 팀을 지정하는 대체 방법으로 사용됩니다. |
 | `teamPermissions` | 필수 | 배열 | [teams permission strings](#team) 테이블의 팀 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 지정된 팀에 대한 해당 권한을 가지고 있음을 나타냅니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 부록
 
@@ -78,7 +78,7 @@ permalink: "/scim_api_appendix/"
 | 관리자 | `admin` |
 | 회사 설정 관리 가능 | `manage_company_settings` |
 | 워크스페이스 추가/제거 가능| `add_remove_app_groups` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 작업 공간 권한 문자열 {#workspace-strings}
 
@@ -108,7 +108,7 @@ permalink: "/scim_api_appendix/"
 | 구독 그룹 관리 | `manage_subscription_groups` |
 | 승인 설정 관리 | `manage_approval_settings` |
 | 카탈로그 대시보드 권한 관리 | `manage_catalogs_dashboard_permission` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 팀 권한 문자열 {#team}
 
@@ -123,7 +123,7 @@ permalink: "/scim_api_appendix/"
 | 사용자 프로필 보기 | `view_user_profile` |
 | 대시보드 사용자 관리 | `manage_dashboard_users` |
 | 미디어 라이브러리 자산 관리 | `manage_media_library` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 부서 문자열
 
@@ -136,4 +136,4 @@ permalink: "/scim_api_appendix/"
 | 재무 | `finance` |
 | 마케팅/편집 | `marketing` |
 | 제품 관리 | `pm` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

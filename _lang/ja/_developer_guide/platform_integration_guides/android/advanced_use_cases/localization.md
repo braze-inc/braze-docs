@@ -11,11 +11,11 @@ description: "このリファレンス記事では、Android と FireOS のロ�
 
 # ローカライゼーション
 
-> ローカライゼーションは Braze Android SDK 内でサポートされています。Braze は英語に加えて、組み込み SDK メッセージ用にいくつかの言語をサポートしています。これらは、接続に問題がある場合など、Braze と統合されたアプリケーションに表示されるデフォルトのメッセージに関連します (例: \[ネットワーク接続を確立できません。後でもう一度やり直してください。])。 
+> ローカライゼーションは Braze Android SDK 内でサポートされています。Braze は英語に加えて、組み込み SDK メッセージ用にいくつかの言語をサポートしています。これらは、接続に問題がある場合など、Braze と統合されたアプリケーションに表示されるデフォルトのメッセージに関連します (例: [ネットワーク接続を確立できません。後でもう一度やり直してください。])。 
 
 電話の言語が、サポートされている言語のいずれかに設定されている場合、統合アプリケーション内でトリガーされた Braze のデフォルト文字列は、自動的にその言語で表示されます。
 
-ユーザーがプロファイルで選択できるサポート言語の完全なリストをお探しの場合は、[ユーザー言語リスト][1]を参照してください。
+ユーザーがプロファイルで選択できるサポート言語の完全なリストをお探しの場合は、[ユーザー言語リスト]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/)を参照してください。
 
 ## サポートされている言語
 
@@ -203,7 +203,5 @@ description: "このリファレンス記事では、Android と FireOS のロ�
 - ザルマ語
 - ズールー語
 
-詳細については、[Android ローカライゼーション][3]の記事を参照してください。
+詳細については、[Android ローカライゼーション](http://developer.android.com/guide/topics/resources/localization.html)の記事を参照してください。
 
-[3]: http://developer.android.com/guide/topics/resources/localization.html
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/

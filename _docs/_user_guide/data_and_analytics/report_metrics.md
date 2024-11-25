@@ -438,6 +438,66 @@ iOS Push, Android Push
 
 {% api %}
 
+### Lifetime Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Lifetime Value Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}
+
+{% endapi %}
+
+{% api %}
+
+### Average Daily Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS,LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Average Daily Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Purchases
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Purchases' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Revenue Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
+
+{% endapi %}
+
+{% api %}
+
 ### Machine Opens
 
 {% apitags %}

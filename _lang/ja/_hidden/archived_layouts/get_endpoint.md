@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# クエリまたは List \[項目エンドポイント "Gets"]
+# クエリまたは List [項目エンドポイント "Gets"]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -41,13 +41,13 @@ This is the description of the endpoint. API descriptions usually start with "Us
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
 | `phone_numbers` | オプション <br>(注を参照) | e.164 形式の文字列の配列 | 提供された場合、電話番号が無効であることが判明した場合は返却する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `start_date` と `end_date`、または `phone_numbers` のいずれかを指定する必要があります。`start_date`、`end_date`、`phone_numbers` の3つすべてを指定した場合、指定された電話番号を優先し、日付の範囲は無視します。
 {% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 <!--The following example demonstrates a request that will pull a list of phone numbers that have been deemed invalid via the API:-->
 ```

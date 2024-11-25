@@ -22,12 +22,12 @@ Braze Windows 통합은 앱이 실행될 때 세션 열림을 기록하고 애�
 
 세션을 고객을 통해 감지하려면 대시보드에서 고객을 찾아 고객 프로필의 "앱 사용"으로 이동하세요. "세션" 메트릭이 예상대로 증가하는지 확인하여 세션 추적 기술이 작동하는지 확인할 수 있습니다.
 
-![앱 사용이 25회 세션으로 표시되었으며 마지막 사용은 두 시간 전, 첫 사용은 20일 전인 고객 프로필]\[session_tracking_7]
+![앱 사용이 25회 세션으로 표시되었으며 마지막 사용은 두 시간 전, 첫 사용은 20일 전인 고객 프로필][session_tracking_7]
 
-\[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview#customizing-braze-on-startup
-\[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-\[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-\[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-\[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-\[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
+[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview#customizing-braze-on-startup
+[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
+[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
+[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
+[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
+[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
 

@@ -32,7 +32,7 @@ Shopifyとの統合は、デフォルトで堅牢な機能を提供している�
 |-------------|-------------
 |<i aria-hidden="true" class="fas fa-check" title="サポート"></i><span class="sr-only">対応</span> | サポートされている
 |<i aria-hidden="true" class="fas fa-times" title="未対応"></i><span class="sr-only">対応</span> | サポートされていない
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 | 特徴 | Shopify ScriptTag経由のWeb SDK | theme.liquid による Web SDK 直接統合 | Shopify Hydrogenを介したWeb SDKの直接統合
 |-------------|-------------|-------------|------------
@@ -47,7 +47,7 @@ Shopifyとの統合は、デフォルトで堅牢な機能を提供している�
 | デフォルトのアプリ内メッセージのサポート   | <i class="fas fa-check" title="サポートされている"></i>  | <i class="fas fa-check" title="サポートされている"></i>  | <i class="fas fa-times" title="サポートされていない"></i>     
 | デフォルトのコンテンツカードをサポート   | <i class="fas fa-times" title="サポートされていない"></i> | <i class="fas fa-times" title="サポートされていない"></i> | <i class="fas fa-times" title="サポートされていない"></i>   
 | デフォルトのWeb プッシュのサポート     | <i class="fas fa-times" title="サポートされていない"></i> | <i class="fas fa-times" title="サポートされていない"></i> | <i class="fas fa-times" title="サポートされていない"></i>
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}    
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }    
 
 {% tabs %}
 {% tab Shopify ScriptTag %}
@@ -170,7 +170,7 @@ Web SDKはShopifyの顧客やゲストのセッションを追跡する。その
 
 {% endtab %}
 
-{% tab theme.liquid %}
+{% tab テーマリキッド %}
 
 ### WebSDKをShopifyサイトに直接実装する theme.liquid
 
@@ -366,7 +366,7 @@ Shopifyウェブフックによって作成されたShopifyエイリアスユー
 5. キャンバスの入力条件を設定したら、キャンバスフローを作成する。キャンバスの最初のステップを**Delay**ステップにして、処理中に起こりうるレースコンディションを防ぐ。<br><br>![キャンバス作成画面の「遅延」ステップ。]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_delay.png %})
 
 {: start="6"}
-6. これらのユーザーは次のステップでマージされるため、\[**ユーザー更新**] ステップを作成して、`do_not_merge` カスタム属性を「true」に更新できます。<br><br>![`do_not_merge` が属性として選択されているキャンバス作成画面の「ユーザー更新」ステップ。]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_userupdate.png %})
+6. これらのユーザーは次のステップでマージされるため、[**ユーザー更新**] ステップを作成して、`do_not_merge` カスタム属性を「true」に更新できます。<br><br>![`do_not_merge` が属性として選択されているキャンバス作成画面の「ユーザー更新」ステップ。]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_userupdate.png %})
 
 {: start="7"}
 7. 次に、ウェブフックを使って**メッセージ・**ステップを作成する。<br><br>![Webhook メッセージングチャネルが使用されているキャンバス作成画面の「メッセージ」ステップ。]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_webhook.png %}) 

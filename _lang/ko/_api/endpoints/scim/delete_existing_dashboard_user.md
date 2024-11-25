@@ -34,7 +34,7 @@ description: "이 문서에서는 대시보드 사용자 계정 Braze 엔드포�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `id` | 필수 | 문자열 | 사용자의 리소스 ID. 이 매개변수는 `POST` `/scim/v2/Users/` 또는 `GET` `/scim/v2/Users?filter=userName eq "user@test.com"` 메서드에 의해 반환됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 본문
 

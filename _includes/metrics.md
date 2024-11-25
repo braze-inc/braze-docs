@@ -118,6 +118,26 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Influenced Opens</i> is the total number (and percentage) of users who opened the app after the push notification was sent, without directly opening the push.
 {% endif %}
 
+{% if include.metric == "Lifetime Revenue" %}
+<i>Lifetime Revenue</i> is the total <code>PurchaseEvents</code> price value (in USD) received since inception.
+{% endif %}
+
+{% if include.metric == "Lifetime Value Per User" %}
+<i>Lifetime Value Per User</i> is the average of the sum of the campaign and Canvas revenue for a given day.
+{% endif %}
+
+{% if include.metric == "Average Daily Revenue" %}
+<i>Average Daily Revenue</i> is the <i>Lifetime revenue</i> divided by your total <i>Users</i> (located on your home page).
+{% endif %}
+
+{% if include.metric == "Daily Purchases" %}
+<i>Daily Purchases</i> is the average of the total unique <code>PurchaseEvents</code> over the time period.
+{% endif %}
+
+{% if include.metric == "Daily Revenue Per User" %}
+<i>Daily Revenue Per User</i> is the average daily revenue per daily active user. 
+{% endif %}
+
 {% if include.metric == "Machine Opens" %}
 <i>Machine Opens</i> includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a <i>Machine Opens</i>.
 {% endif %}

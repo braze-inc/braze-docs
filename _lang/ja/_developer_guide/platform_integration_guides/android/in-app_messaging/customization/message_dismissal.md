@@ -15,9 +15,9 @@ channel:
 
 > このリファレンス記事では、Android または FireOS アプリケーションのアプリ内メッセージ却下について説明します。
 
-## \[戻る] ボタンによる却下の無効化
+## [戻る] ボタンによる却下の無効化
 
-デフォルトでは、ハードウェアの \[戻る] ボタンにより Braze のアプリ内メッセージは閉じます。この動作は、[`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]を使用してメッセージごとに無効にできます。 
+デフォルトでは、ハードウェアの [戻る] ボタンにより Braze のアプリ内メッセージは閉じます。この動作は、[`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html)を使用してメッセージごとに無効にできます。 
 
 次の例にある`disable_back_button`は、アプリ内メッセージに設定されているカスタムのキーと値のペアで、[戻る] ボタンでメッセージを閉じることを許可するかどうかを示します。
 
@@ -63,7 +63,7 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obje
 {% endtabs %}
 
 {% alert note %}
-この機能が無効になっている場合は、代わりにホストアクティビティのハードウェアの \[戻る] ボタンのデフォルト動作が使用されることに注意してください。これにより、\[戻る] ボタンで表示されるアプリ内メッセージではなく、アプリケーションが終了することがあります。
+この機能が無効になっている場合は、代わりにホストアクティビティのハードウェアの [戻る] ボタンのデフォルト動作が使用されることに注意してください。これにより、[戻る] ボタンで表示されるアプリ内メッセージではなく、アプリケーションが終了することがあります。
 {% endalert %}
 
 ## 外側のタップでモーダルを閉じる
@@ -74,4 +74,3 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obje
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-[96]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html

@@ -19,9 +19,9 @@ BrazeとAirbridgeの統合により、パーソナライズされたマーケテ
 | 必要条件 | 説明 |
 |---|---|
 | Airbridge アカウント | このパートナーシップを活用するには、Airbridge アカウントが必要です。 |
-| iOSまたはAndroidアプリ | この統合はiOSとAndroidアプリをサポートしている。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
+| iOSまたはAndroidアプリ | この統合では、iOS アプリと Android アプリがサポートされています。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
 | Airbridge SDK | 必要なBraze SDKに加えて、Airbridge[Android](https://help.airbridge.io/en/developers/android-sdk)または[iOS](https://help.airbridge.io/en/developers/ios-sdk)SDKをインストールする必要がある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -188,10 +188,10 @@ AirbridgeUnity.StartTracking()
 
 ### ステップ2:Brazeデータインポートキーを取得する
 
-Brazeで \[**パートナー連携**] >\[**テクノロジーパートナー**] に移動し、\[**Airbridge**] を選択します。
+Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] に移動し、[**Airbridge**] を選択します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
 ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Airbridge のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。
@@ -200,9 +200,9 @@ Brazeで \[**パートナー連携**] >\[**テクノロジーパートナー**] 
 
 ### ステップ3:Airbridge のダッシュボードで Braze を設定する
 
-1. Airbridgeで、左サイドバーの **\[Integrations] > \[Third-party Integrations]** に移動し、\[**Braze**] を選択します。
+1. Airbridgeで、左サイドバーの **[Integrations] > [Third-party Integrations]** に移動し、[**Braze**] を選択します。
 2. Brazeのダッシュボードで見つけたデータインポートキーとRESTエンドポイントを提供する。
-3. イベントタイプ (\[Install Event] または \[Install & Deeplink Open Event]) を選択し、保存します。
+3. イベントタイプ ([Install Event] または [Install & Deeplink Open Event]) を選択し、保存します。
 
 {% alert note %}
 ディープリンクオープンイベントにつながったキャンペーンのアトリビューションデータは、デバイスレベルで更新される。例えば、2人のユーザーが1つのデバイスを使用し、1人のユーザーがディープリンクを開くイベントを行った場合、このイベントのアトリビューションデータはもう1人のユーザーのデータにも反映される。
@@ -212,7 +212,7 @@ Brazeで \[**パートナー連携**] >\[**テクノロジーパートナー**] 
 
 ### ステップ4:統合を確認する
 
-Braze が Airbridge からアトリビューションデータを受信すると、Braze の Airbridge テクノロジーパートナーページのステータス接続インジケーターが \[接続されていません] から \[接続済み] に変わります。最後に成功したリクエストのタイムスタンプも含まれる。
+Braze が Airbridge からアトリビューションデータを受信すると、Braze の Airbridge テクノロジーパートナーページのステータス接続インジケーターが [接続されていません] から [接続済み] に変わります。最後に成功したリクエストのタイムスタンプも含まれる。
 
 これは、紐づけられるインストールに関するデータを受け取るまでは発生しないことに注意してください。Airbridge のポストバックから除外する必要があるオーガニックインストールは、Braze の API では無視され、接続の確立が成功したかどうかを判断する際に考慮されません。
 

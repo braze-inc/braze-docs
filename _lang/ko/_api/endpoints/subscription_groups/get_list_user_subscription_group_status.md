@@ -47,7 +47,7 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 | `email` | 필수* | 문자열 | 사용자의 이메일 주소입니다. 최대 50개의 문자열 배열로 전달할 수 있습니다.<br><br> 이메일 주소와 전화번호를 모두 제출하면( `external_id` 없이) 오류가 발생합니다. |
 | `phone` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호입니다. 이메일이 포함되지 않은 경우 전화번호를 하나 이상 포함해야 합니다(최대 50개).<br><br> 이메일 주소와 전화번호를 모두 제출하면( `external_id` 없이) 오류가 발생합니다. |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 * `external_id` 또는 `email` 또는 `phone` 중 하나가 사용자당 필요합니다.
 

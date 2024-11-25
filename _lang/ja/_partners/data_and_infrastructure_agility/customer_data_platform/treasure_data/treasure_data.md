@@ -10,7 +10,7 @@ search_tag: Partner
 
 # トレジャーデータ
 
-> \[トレジャーデータ][4]は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォーム (CDP) です。
+> [トレジャーデータ][4]は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォーム (CDP) です。
 
 Braze とトレジャーデータの統合により、トレジャーデータのジョブ結果を Braze に直接書き込むことができます。
 * **external ID をマッピングする**:CRMシステムからBrazeユーザーアカウントにIDをマッピングします。 
@@ -19,12 +19,12 @@ Braze とトレジャーデータの統合により、トレジャーデータ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | --- | --- |
 | トレジャーデータのアカウント | このパートナーシップを活用するには、[トレジャーデータのアカウント](https://www.treasuredata.com/custom-demo/)が必要です。 |
 | Braze REST API キー | `users.track`、`users.delete`、`users.alias.new`、`users.identify`の権限を持つBraze REST APIキー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント  | あなたのRESTエンドポイントURL。エンドポイントは\[インスタンスの Braze URL][1] に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントは[インスタンスの Braze URL][1] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## ユースケース
 
@@ -34,7 +34,7 @@ Braze とトレジャーデータの統合により、トレジャーデータ�
 
 ### ステップ1:新しい接続を作成する
 
-トレジャーデータで、\[**Catalog**] の下にある \[**Integrations Hub**] に移動し、\[**Braze**] を検索して選択します。 
+トレジャーデータで、[**Catalog**] の下にある [**Integrations Hub**] に移動し、[**Braze**] を検索して選択します。 
 
 **新しい認証**プロンプトが表示されたら、接続に名前を付け、Braze REST APIキーとRESTエンドポイントを提供します。完了したら**完了**を選択します。
 
@@ -68,7 +68,7 @@ HIVEを使用してクエリを作成するユーザーの場合、HIVEではア
 | `pre_formatted_fields`    | String | 配列またはJSON列に使用してフォーマットを保持します。 |
 | `track_record_type`       | カスタムイベント<br>購入<br>ユーザープロファイル属性| **User - Track** モードのレコードタイプ |
 | `skip_on_invalid_records` | ブール値 | 有効にした場合、続行してJSON列の無効なレコードを無視します。<br> それ以外の場合は、ジョブが停止します。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 詳細については、[トレジャーデータ](https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration)を訪問してください。事前にフォーマットされたフィールド、サンプルクエリ、パラメータの詳細、およびクエリエクスポートジョブのスケジューリングについて説明します。

@@ -11,17 +11,17 @@ channel:
 
 # アプリ内メッセージ UI デリゲート
 
-> オプションの [`BrazeInAppMessageUIDelegate`][34] を使用してアプリ内メッセージの表示をカスタマイズし、さまざまなライフサイクルイベントに対応します。このデリゲートプロトコルを使用すると、トリガーされたアプリ内メッセージペイロードを受信して​​さらに処理したり、表示ライフサイクルイベントを受信したり、表示タイミングを制御したりできます。 
+> オプションの [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) を使用してアプリ内メッセージの表示をカスタマイズし、さまざまなライフサイクルイベントに対応します。このデリゲートプロトコルを使用すると、トリガーされたアプリ内メッセージペイロードを受信して​​さらに処理したり、表示ライフサイクルイベントを受信したり、表示タイミングを制御したりできます。 
 
 ## 前提条件
 
 `BrazeInAppMessageUIDelegate` を使用するには:
-* デフォルトの [`BrazeInAppMessageUI`][1] 実装を `inAppMessagePresenter` として使用する必要があります。 
+* デフォルトの [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) 実装を `inAppMessagePresenter` として使用する必要があります。 
 * `BrazeUI` ライブラリーをプロジェクトに含める必要があります。
 
 ## アプリ内メッセージデリゲートの設定
 
-次のサンプルコードに従って、Braze インスタンスで [`BrazeInAppMessageUIDelegate`][34] デリゲートオブジェクトを設定します。
+次のサンプルコードに従って、Braze インスタンスで [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) デリゲートオブジェクトを設定します。
 
 {% tabs %}
 {% tab SWIFT %}
@@ -97,7 +97,12 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-`inAppMessage(_:prepareWith:)` メソッドは、Objective-C では利用できません。
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  context.preferredOrientation = BRZInAppMessageRawOrientationPortrait;
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -216,7 +221,40 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-`inAppMessage(_:prepareWith:)` メソッドは、Objective-C では利用できません。
+```objc
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         prepareWith:(BrazeInAppMessageUIPresentationContextRaw *)context {
+  switch (context.message.type) {
+    case BRZInAppMessageRawTypeSlideup: {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+      break;
+    }
+    case BRZInAppMessageRawTypeModal:
+    case BRZInAppMessageRawTypeFull:
+    {
+      NSMutableDictionary *updatedThemes = [context.message.themes mutableCopy];
+      [updatedThemes removeObjectForKey:@"dark"];
+      context.message.themes = updatedThemes;
+
+      NSMutableArray *updatedButtons = [NSMutableArray arrayWithCapacity:context.message.buttons.count];
+      for (BRZInAppMessageRawButton *button in context.message.buttons) {
+        BRZInAppMessageRawButtonTheme *lightTheme = BRZInAppMessageRawButtonTheme.defaultLight;
+        BRZInAppMessageRawButton *newButton = [button mutableCopy];
+        newButton.textColor = lightTheme.textColor;
+        newButton.backgroundColor = lightTheme.backgroundColor;
+        newButton.borderColor = lightTheme.borderColor;
+        [updatedButtons addObject:newButton];
+      }
+      context.message.buttons = updatedButtons;
+      break;
+    }
+    default:
+      break;
+  }
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -296,7 +334,7 @@ func inAppMessage(
 | `.auto`                             | メッセージ・ビューはステータス・バーの非表示状態を決定する。                                 |
 | `.hidden`                           | ステータスバーは常に隠す。                                                           |
 | `.visible`                          | 常にステータスバーを表示する。                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 表示タイミングのカスタマイズ 
 
@@ -330,11 +368,9 @@ func inAppMessage(
 | `.reenqueue`                        | メッセージは表示されず、スタックの一番上に戻される。                                       |
 | `.later`                            | メッセージは表示されず、スタックの一番上に戻される。(非推奨、`.reenqueue` を使用してください) |
 | `.discard`                          | メッセージは破棄され、表示されない。                                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 実装サンプル
 
-[Swift](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) と [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI) のサンプルについては、\[例] フォルダーで `InAppMessageUI` を参照してください。
+[Swift](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) と [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI) のサンプルについては、[例] フォルダーで `InAppMessageUI` を参照してください。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui
-[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate

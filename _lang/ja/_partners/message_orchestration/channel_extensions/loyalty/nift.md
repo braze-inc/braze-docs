@@ -16,12 +16,12 @@ Braze と Nift の統合により、カスタマーライフサイクルにお�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | Nift アカウント | このパートナーシップを活用するには、Nift アカウントが必要です。 |
-| Braze REST API キー | すべてのユーザーデータ権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
-| Braze REST エンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべてのユーザーデータ権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -35,11 +35,11 @@ Braze と Nift の統合により、カスタマーライフサイクルにお�
 
 顧客に送信される紹介リンクの顧客 ID パラメーター名を変更できます。Ｎｉｆｔ は、顧客が Braze のブランドのギフトを選択している場合に、顧客を Braze で処理済みとしてマークします。
 
-\[**Link Account**] をクリックします。
+[**Link Account**] をクリックします。
 
 !["ユーザーに Braze API キーと Braze ダッシュボード URL の入力を求める Nift サービス統合ページ。][5]
 
-## 統合の使用
+## 統合を使用する
 
 インテグレーションを使用するには、メッセージングでリファラルリンクを配布します。顧客が紹介リンクを使用し、当社のブランドの1つからギフトを選択すると、ニフトはそれらをBrazeで処理されたものとしてマークします。
 

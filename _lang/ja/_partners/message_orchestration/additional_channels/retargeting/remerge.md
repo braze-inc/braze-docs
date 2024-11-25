@@ -23,13 +23,13 @@ Braze と Remerge の統合により、ユーザーデータを Webhook イベ�
 | AndroidアプリID | Android用Brazeアプリケーション固有の識別子（「com.example 」など）。 |
 | iOSアプリID | iOS用のお客様固有のBrazeアプリケーション識別子（"012345678 "など）。 |
 | Braze SDKでIDFAコレクションを有効にする | IDFAコレクションはBraze SDK内ではオプションであり、デフォルトでは無効になっている。 | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:BrazeのWebhookテンプレートを作成する
 
-今後のキャンペーンまたはキャンバス用の Remerge Ｗebhook テンプレートを作成するには、Braze プラットフォームの \[**テンプレート**] > \[**Webhook テンプレート**] に移動します。 
+今後のキャンペーンまたはキャンバス用の Remerge Ｗebhook テンプレートを作成するには、Braze プラットフォームの [**テンプレート**] > [**Webhook テンプレート**] に移動します。 
 
 {% alert note %}
 [古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
@@ -37,7 +37,7 @@ Braze と Remerge の統合により、ユーザーデータを Webhook イベ�
 
 単発のRemergeウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
-新しいWebhookテンプレートで、以下のフィールドに記入する：
+新しいWebhookテンプレートに、次のフィールドに記入してください:
 - **リクエスト本文**:Raw Text
 - **Webhook URL**:
 {% raw %}

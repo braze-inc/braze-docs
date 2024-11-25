@@ -14,9 +14,9 @@ description: "この記事では、Web に関して、購入を記録し、そ�
 
 Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
-実装前に、カスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例を[ベストプラクティス][3]で確認してください。
+実施にあたっては、まずカスタムイベントs、カスタム属性s、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)で検討すること。
 
-この機能を使用するには、アプリでの購入が成功した後に[`logPurchase()`][8]呼び出しを追加します。`quantity` は100以下でなければなりません。
+この機能を使用するには、アプリでの購入が成功した後に[`logPurchase()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)呼び出しを追加します。`quantity` は100以下でなければなりません。
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);
@@ -24,7 +24,7 @@ braze.logPurchase(product_id, price, "USD", quantity);
 
 ## プロパティの追加
 
-購入に関する[メタデータ][8]を追加するには、[イベントプロパティ配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects)を渡すか、購入情報を含むキーと値のペアのオブジェクトを渡します。 
+購入に関する[メタデータ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)を追加するには、[イベントプロパティ配列]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects)を渡すか、購入情報を含むキーと値のペアのオブジェクトを渡します。 
 
 #### オブジェクトのフォーマット
 
@@ -39,8 +39,5 @@ braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
 
 ## REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API][1] のドキュメントを参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) のドキュメントを参照してください。
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase

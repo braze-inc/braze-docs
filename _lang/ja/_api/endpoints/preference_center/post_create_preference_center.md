@@ -20,13 +20,13 @@ description: "この記事では、「ユーザー設定センターの作成」
 
 ## 前提条件
 
-このエンドポイントを使用するには、`preference_center.update` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`preference_center.update`の権限が必要です。
 
 ## レート制限
 
 このエンドポイントには、1分あたり、ワークスペースあたり、10件のリクエストというレート制限があります。
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,15 +48,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`name`| 必須 | string | 次の条件を満たすユーザー設定センターの名前。<br>\- 文字、数字、ハイフン、およびアンダースコアのみを含む <br>\- スペースがない |
-|`preference_center_title`| オプション | string | ユーザー設定センターおよび確定ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
-|`preference_center_page_html`| 必須 | string | ユーザー設定センター画面のHTMLです。 |
-|`confirmation_page_html`| 必須 | string | 確定画面のHTML。 |
-|`state` | オプション | string | `active` または`draft` を選択します。指定しない場合、デフォルトは`active` です。 |
+|`name`| 必須 | 文字列 | 次の条件を満たすユーザー設定センターの名前。<br>\- 文字、数字、ハイフン、およびアンダースコアのみを含む <br>\- スペースがない |
+|`preference_center_title`| オプション | 文字列 | ユーザー設定センターおよび確定ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
+|`preference_center_page_html`| 必須 | 文字列 | ユーザー設定センター画面のHTMLです。 |
+|`confirmation_page_html`| 必須 | 文字列 | 確定画面のHTML。 |
+|`state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
 |`options` | オプション | オブジェクト | 属性: `meta-viewport-content`。存在する場合、`viewport` メタタグが`content= <value of attribute>` でページに追加されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 ユーザー設定センター名を作成後に編集することはできません。
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------|
 |`{{subscribed_state.${email_global}}}`| ユーザーのグローバルメールのサブスクリプション状態を取得します ("opted_in"、"subscribed" または "unsubscribed" など)。 |
 |`{{subscribed_state.${<subscription_group_id>}}}`| ユーザーの指定されたサブスクリプショングループのサブスクリプション状態を取得します ("subscribed" や "unsubscribed" など)。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### フォームのインプットとアクション
 
@@ -83,7 +83,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`{% form_field_name :email_global_state %}`| 特定のフォーム入力要素が、ユーザーのグローバルメール購読状態に対応することを示します。ユーザーの選択状態は、グローバルメールのサブスクリプション状態の選択データとともにフォームが送信されるときに、"opted_in"、"subscribed" または "unsubscribed" でなければなりません。これがチェックボックスの場合、ユーザーは "opted_in" または "unsubscribed" のいずれかになります。非表示入力の場合、"subscribed"state も有効になります。 |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| 指定したフォーム入力要素が指定したサブスクリプショングループに対応することを示します。ユーザーの選択状態は、特定のサブスクリプショングループの選択データとともにフォームが送信されるときに、"subscribed" または "unsubscribed" のいずれかでなければなりません。 |
 |`{{preference_center_submit_url}}`| フォーム送信用のURL を生成します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
@@ -102,7 +102,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% endraw %}
 
-### フォーム入力のHTML 
+### フォーム入力のHTML
 
 {% raw %}
 ```
@@ -179,7 +179,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "
     >
       <div class="content" style="margin-left: 20px; margin-right: 20px">
-        
+
         <div>
           <h1
             style="color: #3accdd; font-size: 27px; font-weight: 400; margin-bottom: 40px; margin-top: 0"
@@ -205,7 +205,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 1
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -215,7 +215,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 2
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -225,7 +225,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     Sub Group 3
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 </div>
