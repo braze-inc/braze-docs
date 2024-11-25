@@ -1,5 +1,5 @@
 ---
-nav_title: 캔버스 분석
+nav_title: 캔버스 애널리틱스
 page_order: 4.6
 noindex: true
 layout: redirect
