@@ -16,7 +16,9 @@ When you're ready to start customizing and using Content Cards, see[Content Card
 
 Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/) into your app. However, no additional setup is required.
 
-## View controller contexts
+## Implementation
+
+### View controller contexts
 
 The default Content Cards UI can be integrated from the `BrazeUI` library of the Braze SDK. Create the Content Cards view controller using the `braze` instance. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
@@ -30,7 +32,7 @@ The `BrazeUI` library of the Swift SDK provides two default view controller cont
 To handle control variant Content Cards in your custom UI, pass in your [`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
 
-### Navigation
+##### Navigation
 
 A navigation controller is a view controller that manages one or more child view controllers in a navigation interface. Here is an example of pushing a `BrazeContentCardUI.ViewController` instance into a navigation controller:
 
@@ -62,7 +64,7 @@ func pushViewController() {
 {% endtab %}
 {% endtabs %}
 
-### Modal
+#### Modal
 
 Use modal presentations to create temporary interruptions in your app’s workflow, such as prompting the user for important information. This model view has a navigation bar on top and a **Done** button on the side of the bar. Here is an example of pushing a `BrazeContentCard.ViewController` instance into a modal controller:
 
@@ -96,7 +98,7 @@ func presentModalViewController() {
 
 For example usage of `BrazeUI` view controllers, check out the corresponding Content Cards UI samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
 
-## Data model
+### Data model
 
 The Content Cards data model is available in the `BrazeKit` module of the Braze Swift SDK. This module contains the following Content Card types, which are an implementation of the `Braze.ContentCard` type. For a full list of Content Card properties and their usage, see  [`ContentCard` class](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard). 
 
@@ -112,7 +114,7 @@ To access the Content Cards data model, call `contentCards.cards` on your `braze
 Keep in mind, `BrazeKit` offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
 {% endalert %}
 
-## Methods
+### Methods
 
 Each card is initialized with a `Context` object, which contains various methods for managing your card's state. Call these methods when you want to modify the corresponding state property on a particular card object.
 

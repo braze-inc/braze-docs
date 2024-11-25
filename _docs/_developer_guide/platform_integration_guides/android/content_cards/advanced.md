@@ -1,14 +1,15 @@
 ---
-nav_title: Advanced Implementation Guide (Optional)
-article_title: Content Card Implementation Guide for Android (Optional) 
+nav_title: Implementation examples
+article_title: Content Card implementation examples for the Braze Android SDK 
 platform: Android
-page_order: 7
+page_order: 10
 description: "This advanced implementation guide covers Android Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
 channel:
   - content cards
 
 ---
-# Advanced implementation guide (optional)
+
+# Implementation examples
 
 > This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
 
@@ -20,15 +21,17 @@ Looking for the basic Content Card developer integration guide? Find it [here]({
 
 ### Import statements and helper files
 
-When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your application code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. An example manager implementation can be found [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt).
+When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your application code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. For an example manager implementation, see [`BrazeManager.kt`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) in our demo app on GitHub.
 
 ### Content Cards as custom objects
 
-Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format already understood by your application code. Data source abstractions provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
+You can extend the custom objects already in your app to store Content Card data, so you can abstract your data source into a format already compatible with your code. This allows you the flexibility to work with different data backends interchangeably and in concert.
+
+In the following example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed from a local JSON file) and the new data (fed from the Braze SDK). The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
 
 When initializing `ContentCardable` instances from the Braze SDK, we use the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze dashboard to populate the necessary fields.
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) to start implementing your own custom objects.
+After exploring these code considerations, check out our [use cases](#sample-use-cases) so you can start implementing your own custom objects.
 
 {% tabs local %}
 {% tab No Card Dependencies %}
