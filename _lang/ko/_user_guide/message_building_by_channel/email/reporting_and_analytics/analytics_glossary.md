@@ -25,7 +25,7 @@ channel:
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='변화' %}
+{% multi_lang_include metrics.md metric='Variation' %}
 
 <span class="calculation-line">계산: 카운트</span>
 
@@ -53,7 +53,7 @@ channel:
 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='오디언스' %}
+{% multi_lang_include metrics.md metric='Audience' %}
 
 <span class="calculation-line">계산: (배리언트의 수신자 수) / (고유 수신자 수)</span>
 
@@ -123,7 +123,7 @@ channel:
 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='배달 %' %}
+{% multi_lang_include metrics.md metric='Deliveries %' %}
 
 <span class="calculation-line">계산: (보내기 - 반송) / (보내기) </span>
 
@@ -137,7 +137,7 @@ channel:
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='바운스' %} 
+{% multi_lang_include metrics.md metric='Bounces' %} 
 
 이메일의 경우, *반송 %* 또는 *반송률*은 발송 서비스에서 사용되었거나 의도된 이메일 사용자에게 수신되지 않은 메시지의 비율입니다.
 
@@ -163,7 +163,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='하드 바운스' %} 
+{% multi_lang_include metrics.md metric='Hard Bounce' %} 
 
 <span class="calculation-line">계산: 카운트 </span>
 
@@ -191,7 +191,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='스팸' %}
+{% multi_lang_include metrics.md metric='Spam' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -213,7 +213,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='고유 열람' %} 이메일의 경우, 이는 7일 동안 추적됩니다.
+{% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -235,7 +235,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='고유 클릭' %} 이는 이메일에 대해 7일 동안 추적되며 <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} 이는 이메일에 대해 7일 동안 추적되며 <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -257,7 +257,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='구독 취소자 또는 구독 취소' %}
+{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -279,7 +279,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='매출' %}
+{% multi_lang_include metrics.md metric='Revenue' %}
 
 <span class="calculation-line">계산: 카운트 </span>
 
@@ -293,7 +293,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트, 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='주요 전환 (A) 또는 주요 전환 이벤트' %} 이메일, 푸시 및 웹훅의 경우, 초기 전송 후 전환 추적을 시작합니다.
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 이메일, 푸시 및 웹훅의 경우, 초기 전송 후 전환 추적을 시작합니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -315,7 +315,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='신뢰도' %}
+{% multi_lang_include metrics.md metric='Confidence' %}
 
 {% endapi %}
 
@@ -323,7 +323,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 
 ### 기계 열람
   
-{% multi_lang_include metrics.md metric='기계 열기' %} 이 메트릭은 SendGrid의 경우 2021년 11월 11일부터, SparkPost의 경우 2021년 12월 2일부터 추적됩니다.
+{% multi_lang_include metrics.md metric='Machine Opens' %} 이 메트릭은 SendGrid의 경우 2021년 11월 11일부터, SparkPost의 경우 2021년 12월 2일부터 추적됩니다.
 
 <span class="calculation-line">계산: 카운트 </span>
 
@@ -337,7 +337,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 카운트
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='기타 열기' %} 사용자가 <i>기타 열기</i>에 대한 열기 수가 기록되기 전에 이메일을 열 수 있다는 점에 유의하십시오 (예: <i>기계 열기</i> 카운트가 기록됩니다). 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 <i>기타 열기</i> 횟수에 대해 계산되고 <i>고유 열기</i> 횟수에 대해서는 한 번만 계산됩니다.
+{% multi_lang_include metrics.md metric='Other Opens' %} 사용자가 <i>기타 열기</i>에 대한 열기 수가 기록되기 전에 이메일을 열 수 있다는 점에 유의하십시오 (예: <i>기계 열기</i> 카운트가 기록됩니다). 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 <i>기타 열기</i> 횟수에 대해 계산되고 <i>고유 열기</i> 횟수에 대해서는 한 번만 계산됩니다.
 
 <span class="calculation-line">계산: 카운트 </span>
 
@@ -351,7 +351,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 백분율
 {% endapitags %}
 
-{% multi_lang_include metrics.md 측정기준='클릭-열람율' %}
+{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}
 
 <span class="calculation-line">계산: (고유 클릭 수) / (고유 열람 수) (이메일용)</span>
 
