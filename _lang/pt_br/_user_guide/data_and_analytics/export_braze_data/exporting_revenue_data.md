@@ -45,7 +45,7 @@ Os dados a seguir podem ser visualizados no gráfico **Performance Over Time (De
 
 Você pode visualizar as estatísticas de receita, caso a caso, nas páginas [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) ou [Canva Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/). 
 
-{% multi_lang_include metrics.md métrica='Receita total' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
 Os relatórios de receita não podem ser exportados por meio da API. Para obter ajuda com exportações CSV, consulte a [solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
