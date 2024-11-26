@@ -42,7 +42,7 @@ To use this endpoint, you'll need a SCIM token. For more information, refer to [
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```
 ```json
 {
@@ -54,6 +54,14 @@ Authorization: Bearer YOUR-REST-API-KEY
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -62,7 +70,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     {
                          "teamName": "Test Team",
                          "teamPermissions": ["admin"]
-                    }
+                    } 
                 ]
             },
             {
@@ -72,7 +80,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            }
+            } 
         ]
    }
 }
