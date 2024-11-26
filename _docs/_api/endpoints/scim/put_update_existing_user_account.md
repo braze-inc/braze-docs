@@ -102,7 +102,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "name": {
@@ -112,6 +112,14 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -122,7 +130,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                          "teamPermissions": ["admin"]
                     }
                 ]
-            }
+            } 
         ]
     }
 }
@@ -142,6 +150,43 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role",
+                "roleId": "519dafcdba23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25789fabcded",
+                        "appGroupName": "Some Workspace",
+                        "appGroupPermissions": ["basic_access", "publish_cards"],
+                        "team": [
+                            {
+                                "teamId": "2519dafcdba238ae7",
+                                "teamName": "Some Team",                  
+                                "teamPermissions": ["export_user_data"]
+                            }
+                        ]
+                    } 
+                ]
+            },
+            {
+                "roleName": "Another Test Role",
+                "roleId": "23125dad23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25adfabcded",
+                        "appGroupName": "Production Workspace",
+                        "appGroupPermissionSets": [
+                            {
+                                "appGroupPermissionSetName": "A Permission Set",
+                                "appGroupPermissionSetId": "dfa385109bc38",
+                                "permissions": ["basic_access","publish_cards"]
+                            }
+                        ]
+                    } 
+                ]
+            }
+        ],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
@@ -154,7 +199,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                          "teamPermissions": ["admin"]
                     }
                 ]
-            }
+            } 
         ]
     }
 }
