@@ -23,7 +23,7 @@ This is similar to deleting a user in the **Company Users** section of the Braze
 
 ## Prerequisites
 
-To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+To use this endpoint, you'll need a SCIM token. You'll use your service origin as the `X-Request-Origin header`. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 

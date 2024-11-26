@@ -22,7 +22,7 @@ description: "This article outlines details about the Create new dashboard user 
 
 ## Prerequisites
 
-To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+To use this endpoint, you'll need a SCIM token. You'll use your service origin as the `X-Request-Origin header`. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
