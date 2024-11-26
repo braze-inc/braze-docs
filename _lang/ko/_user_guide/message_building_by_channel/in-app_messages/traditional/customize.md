@@ -1,9 +1,9 @@
 ---
 nav_title: 사용자 지정
-article_title: 맞춤형 인앱 메시지
+article_title: 커스텀 인앱 메시지
 page_order: 2
 layout: dev_guide
-guide_top_header: "맞춤형 인앱 메시지"
+guide_top_header: "커스텀 인앱 메시지"
 guide_top_text: "Braze는 표준 인앱 메시지 템플릿 외에도 사용자 지정 HTML, 사용자 지정 CSS가 포함된 모달, 이메일 캡처 양식, 동영상 등을 허용하는 사용자 지정 메시지 템플릿도 제공합니다."
 description: "이 랜딩 페이지에서는 사용자 지정 HTML, 사용자 지정 CSS가 포함된 모달, 동영상, 이메일 캡처 양식 등을 허용하는 사용자 지정 인앱 메시징 템플릿을 다룹니다."
 

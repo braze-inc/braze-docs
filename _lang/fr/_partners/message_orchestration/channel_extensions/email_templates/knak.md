@@ -2,7 +2,7 @@
 nav_title: Knak
 article_title: Knak
 alias: /partners/knak/
-description: "Cet article de référence présente le partenariat entre Braze et Knak, une plateforme de création de campagnes qui vous permet de créer des e-mails totalement réactifs en quelques minutes ou en heures au lieu de quelques jours ou semaines, et de les exporter comme modèles Braze prêts à l’emploi."
+description: "Cet article de référence décrit le partenariat entre Braze et Knak, une plateforme de création de campagnes qui vous permet de créer des e-mails entièrement réactifs en quelques minutes ou heures au lieu de jours ou de semaines, et de les exporter en tant que modèles Braze prêts à l'emploi."
 page_type: partner
 search_tag: Knak
 
@@ -10,51 +10,51 @@ search_tag: Knak
 
 # Knak
 
-> [Knak][1] est la première plateforme de création de campagnes conçue pour les équipes marketing d’entreprise à utiliser en interne. La plateforme glisser-déposer permet à quiconque de créer des e-mails et des pages de renvoi attrayantes sur la marque en quelques minutes, sans code ni aide extérieure.
+> [Knak][1] est la première plateforme de création de campagne conçue pour les équipes marketing d'entreprise à utiliser en interne. Leur plateforme de glisser-déposer permet à n'importe qui de créer de magnifiques e-mails et pages de destination conformes à leur marque en quelques minutes, sans avoir besoin de coder ni d'aide extérieure.
 
-L’intégration entre Braze et Knak permet de créer des e-mails totalement réactifs en quelques minutes ou en heures au lieu de quelques jours ou semaines, et de les exporter en tant que modèles Braze prêts à l’emploi. Knak est conçu pour les marketeurs qui souhaitent mettre à niveau leur création d’e-mails pour les campagnes gérées dans Braze, sans avoir besoin d’agences extérieures ou de codage manuel. 
+L'intégration de Braze et Knak vous permet de créer des e-mails entièrement réactifs en quelques minutes ou heures au lieu de jours ou de semaines et de les exporter en tant que modèles Braze prêts à l'emploi. Knak est conçu pour les marketeurs qui veulent améliorer la création de leurs e-mails pour les campagnes gérées dans Braze, sans avoir besoin d'agences externes ou de codage manuel. 
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Knak | Un compte Knak est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze | [URL de votre endpoint REST][2]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Clé d'API REST Braze | Une clé API Braze REST avec des autorisations complètes sur les **modèles**. <br><br>Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| Endpoint REST de Braze | [L'URL de votre endpoint REST.][2] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
-Knak est conçu pour les marketeurs qui souhaitent mettre à niveau leur création d’e-mails sans avoir besoin d’une aide externe. Une solution idéale pour ceux qui :
-- Utilisent actuellement des modèles d’e-mails simples et souhaitent les améliorer
-- Comptent sur des agences externes ou des développeurs pour créer des e-mails pour Braze
-- Souhaitent reprendre le contrôle sur la création d’actifs et accélérer considérablement la commercialisation
+Knak est conçu pour les marketeurs qui veulent améliorer leur création d'e-mails, sans avoir besoin de coder ou d'aide extérieure. C'est l’outil idéal pour ceux qui :
+- utilisent actuellement des modèles simples pour les e-mails et souhaitent améliorer leurs performances
+- comptent sur des agences externes ou des développeurs pour créer des e-mails pour Braze
+- veulent reprendre le contrôle créatif de la création de ressource et arriver sur le marché beaucoup plus rapidement
 
 ## Intégration
 
-### Étape 1 : Configurer votre intégration
+### Étape 1 : Configurez votre intégration
 
-Dans Knak, accédez à **Integrations (Intégrations) > Platforms (Plateformes) > + Add New Integration (+ Ajouter une nouvelle intégration)**.
+Dans Knak, accédez à **Intégrations > Plateformes > + Ajouter une nouvelle intégration**.
 
-![Bouton Add integration (Ajouter une intégration)][5]
+![Bouton Ajouter l'intégration][5]
 
-Ensuite, sélectionnez la plateforme **Braze** et saisissez la clé d’API et l’endpoint REST. Cliquez sur **Create New Integration (Créer une nouvelle intégration)** pour terminer votre intégration. 
+Ensuite, sélectionnez la plateforme **Braze** et fournissez la clé API Braze et l'endpoint REST. Cliquez sur **Créer une nouvelle intégration** pour compléter votre intégration. 
 
 ![Créer une nouvelle intégration][6]
 
-### Étape 2 : Synchroniser vos modèles Knak
+### Étape 2 : Synchronisez vos modèles Knak
 
-Dans Knak, identifiez un e-mail que vous souhaitez synchroniser avec Braze et sélectionnez **Publish (Publier)** puis **Sync**.
+Dans Knak, localisez un e-mail que vous souhaitez synchroniser avec Braze et sélectionnez **Publier** puis **Synchroniser**.
 
-![Intégration de Knak 1][8]
+![intégration Knak 1][8]
 
-Ensuite, vérifiez le nom de l’e-mail et cliquez sur **Sync**.
+Ensuite, vérifiez le nom de l'e-mail et cliquez sur **Synchroniser**.
 
-![Intégration de Knak 2][9]
+![intégration Knak 2][9]
 
-## Comment utiliser l’intégration
+## Utilisation de l'intégration
 
-Vous pouvez trouver vos e-mails Knak téléchargés dans Braze sous **Engagement > Templates & Media (Modèles et médias)**. Ils seront attrayants, pertinents à la marque et totalement réactifs. La seule limite est votre créativité !
+Vous pouvez trouver vos e-mails Knak téléchargés dans Braze sous **Engagement > modèles et médias**. Ils seront beaux, conformes à la marque et entièrement réactifs. La seule limite est votre propre créativité !
 
 [1]: https://knak.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

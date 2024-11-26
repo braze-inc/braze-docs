@@ -4,24 +4,24 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Connecteur Currents personnalisé du partenaire
+# connecteur Currents personnalisé Partner
 
 ## Sérialisation et format des données
 
-Le format de données cible sera JSON sur HTTPS. Les événements seront regroupés en lots d’événements, dont la taille est configurable et envoyée à l’endpoint en tant que matrice JSON contenant tous les événements. Les lots seront envoyés au format suivant :
+Le format de données cible sera JSON sur HTTPS. Les événements seront regroupés en lots d'événements, dont la taille est configurable, et envoyés au endpoint sous la forme d'un tableau JSON contenant tous les événements. Les lots seront envoyés dans le format suivant :
 
 `{"events": [event1, event2, event3, etc...]}`
 
-Il y aura un objet JSON de haut niveau avec les « événements » clés qui mappe à un tableau d’objets JSON supplémentaires, chacun représentant un seul événement.
+Il y aura un objet JSON de niveau supérieur avec les « événements » clés qui correspondent à un tableau d'autres objets JSON, chacun représentant un événement unique.
 
-Les exemples suivants concernent des événements _individuels_ (c.-à-d., qu’ils font partie du plus grand tableau d’objets JSON, avec chaque objet JSON représentant un seul événement dans le lot).
+Les exemples suivants concernent des événements _individuels_ (tels qu'ils feraient partie du tableau plus large d'objets JSON, chaque objet JSON représentant un événement unique dans le lot).
 
-### Événements associés à la campagne
+### Événements liés à la campagne
 
-Voici quelques exemples de charges utiles d’événements pour divers événements, comme ils apparaîtraient si associés à une campagne :
+Voici quelques exemples de charges utiles pour différents événements, telles qu'elles apparaîtraient s'ils étaient associés à une campagne :
 
 ```
-// Clics des messages in-app : users.messages.inappmessage.Click
+// In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -30,14 +30,14 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Campagne de test",
+    "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "message_variation_name": "Tester la variation de message",
+    "message_variation_name": "Test Message Variation",
     "platform": "android",
      "os_version": "Android (N)",
     "device_model": "Nexus 5X",
@@ -48,7 +48,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Notification push envoyée : users.messages.pushnotification.Send
+// Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -57,15 +57,15 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Campagne de test",
+    "campaign_name": "Test Campaign",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "message_variation_name": "Tester la variation de message",
+    "message_variation_name": "Test Message Variation",
     "send_id": "f123456789abcdef01234567",
     "dispatch_id": "01234567-89ab-cdef-0123-456789abcdef"
   }
@@ -73,7 +73,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Ouverture des e-mails : users.messages.email.Open
+// Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -81,23 +81,23 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   "user": {
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Campagne de test",
+    "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "message_variation_name": "Tester la variation de message",
+    "message_variation_name": "Test Message Variation",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
-    "user_agent": "Mozilla/5.0 (Macintosh ; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, comme Gecko) Chrome/67.0.3396.99 Safari/537.36"
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
   }
 }
 ```
 
 ```
-// SMS livré : users.messages.sms.Delivery
+// SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -105,14 +105,14 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   "user": {
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Campagne de test",
+    "campaign_name": "Test Campaign",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "message_variation_name": "Tester la variation de message",
+    "message_variation_name": "Test Message Variation",
     "to_phone_number": "+16462345678",
     "subscription_group_id": "41234567-89ab-cdef-0123-456789abcdef",
     "from_phone_number": "+12123470922"
@@ -120,11 +120,12 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 }
 ```
 
-### Événements associés à Canvas
+### Événements associés à CANVAS
 
-Voici quelques exemples de charges utiles d’événements pour divers événements, comme ils apparaîtraient si associés à un Canvas :
+Voici quelques exemples de charges utiles d'événements pour différents événements, telles qu'elles apparaîtraient si elles étaient associées à un Canvas :
+
 ```
-// Clics des messages in-app : users.messages.inappmessage.Click
+// In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -133,7 +134,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
@@ -151,7 +152,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Notification push envoyée : users.messages.pushnotification.Send
+// Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -160,7 +161,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
@@ -176,7 +177,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Ouverture des e-mails : users.messages.email.Open
+// Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -184,7 +185,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   "user": {
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "canvas_id": "11234567-89ab-cdef-0123-456789abcdef",
@@ -194,13 +195,13 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "dispatch_id": "12345qwert",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
-    "user_agent": "Mozilla/5.0 (Macintosh ; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, comme Gecko) Chrome/67.0.3396.99 Safari/537.36"
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
   }
 }
 ```
 
 ```
-// SMS livré : users.messages.sms.Delivery
+// SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -208,7 +209,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   "user": {
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "canvas_id": "11234567-89ab-cdef-0123-456789abcdef",
@@ -225,10 +226,10 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 
 ### Autres événements
 
-Voici quelques exemples de charges utiles d’événements pour divers autres événements qui ne sont pas associés à des campagnes ou à des Canvas :
+Voici quelques exemples de charges utiles d'événements pour divers autres événements qui ne sont associés ni à des campagnes ni à des Canvases :
 
 ```
-// Événement personnalisé : users.behaviors.CustomEvent
+// Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -237,14 +238,14 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id",
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
     "os_version": "iOS 10.3.1",
-    "device_model": "iPhone 7 Plus",
-    "name": "custom nom de l’événement",
+    "device_model": "iPhone 7 Plus",
+    "name": "custom event name",
     "ad_id": "01234567-89ab-cdef-0123-456789abcdef",
     "ad_id_type": "roku_ad_id",
     "ad_tracking_enabled": true,
@@ -258,7 +259,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
-// Événement d’achat : users.behaviors.Purchase
+// Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -267,13 +268,13 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
     "user_id": "0123456789abcdef01234567",
     "external_user_id": "user_id"
     "device_id": "fedcba87-6543-210f-edc-ba9876543210",
-    "timezone": "Amérique/Chicago"
+    "timezone": "America/Chicago"
   },
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
     "os_version": "iOS 10.3.1",
-    "device_model": "iPhone 7 Plus",
+    "device_model": "iPhone 7 Plus",
     "product_id": "1234",
     "price": 12.34,
     "currency": "AED,
@@ -290,7 +291,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
-// Démarrage de la session : users.behaviors.app.SessionStart
+// Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -304,7 +305,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
     "os_version": "iOS 10.3.1",
-    "device_model": "iPhone 7 Plus",
+    "device_model": "iPhone 7 Plus",
     "session_id": "b1234567-89ab-cdef-0123-456789abcdef"
   }
 }
@@ -312,51 +313,51 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 
 ## Authentification
 
-Si nécessaire, l’authentification sera effectuée en passant un jeton dans l’en-tête d’`autorisation`  HTTP, via le schéma d’autorisation `Bearer` (détenteur), comme indiqué dans [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Cela est également automatiquement compatible avec tout schéma d’authentification personnalisé que nous pouvons choisir de mettre en œuvre à l’avenir, à partir du moment où l’utilisation de l’en-tête d’`autorisation` nous permettrait de passer à un schéma d’autorisation de paires clé-valeur personnalisées (uniques dans Braze) conformes à [RFC 7235](https://tools.ietf.org/html/rfc7235) (p. ex., la manière dont le programme d’authentification personnalisé AWS fonctionne) si nous le faisons à l’avenir.
+Si nécessaire, l'authentification sera effectuée en transmettant un jeton dans l'en-tête HTTP `Authorization`, via le schéma d'autorisation `Bearer`, comme spécifié dans le document [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Il est également automatiquement compatible avec tout schéma d'authentification personnalisé que nous pourrions choisir d'implémenter à l'avenir, car l'utilisation de l'`Authorization`en-tête nous permettrait de passer à un schéma d'autorisation personnalisé (unique à Braze) par paires clé-valeur conforme à la [RFC 7235 (](https://tools.ietf.org/html/rfc7235)c'est ainsi que fonctionne, par exemple, le schéma d'authentification personnalisé d'AWS) si nous le souhaitons à l'avenir.
 
-Conformément à la RFC 6750, le jeton sera une valeur encodée Base64 d’au moins un caractère. (Il est évident que nous devons, toutefois, consulter avec nos partenaires et nos clients pour nous assurer qu’ils ne choisissent pas un incroyablement faible tokens.) Une anomalie notable de RFC 6750 est qu’il permet au jeton de contenir les caractères suivants, en plus des caractères Base64 normaux : '-', '.', '_' et '~'. Étant donné que le contenu exact du jeton ne fait absolument aucune différence pour aucun de nos systèmes, nous ne nous soucierons pas de savoir si nos partenaires décident d’inclure ces caractères dans leur jeton ou non.
+Selon le document RFC 6750, le jeton sera une valeur codée en Base64 d'au moins un caractère. (Évidemment, nous devons nous assurer que nos partenaires et clients ne choisissent pas des jetons incroyablement faibles.) Une particularité notable du document RFC 6750 est qu'il permet au jeton de contenir les caractères suivants en plus des caractères Base64 normaux : '-', ' . ',' _ 'et '~'. Étant donné que le contenu exact du jeton n’a aucun impact sur nos systèmes, peu importe que nos partenaires décident d'inclure ces caractères dans leur jeton ou non.
 
-Selon RFC 6750, l’en-tête sera construit en utilisant le format suivant :
+Conformément au document RFC 6750, l'en-tête sera créé en utilisant le format suivant :
 
 `"Authorization: Bearer " + <token>`
 
-Par exemple, si le jeton API est `0p3n5354m3==`, l’en-tête Autorisation ressemblera à ceci :
+Ainsi, par exemple, si le jeton d'API est`0p3n5354m3==`, l'en-tête Authorization ressemblera à ceci :
 
 `Authorization: Bearer 0p3n5354m3==`
 
-## Contrôle des versions
+## Versionnage
 
-Toutes les demandes de nos connecteurs HTTP intégrables seront envoyées avec un en-tête personnalisé désignant la version de la demande Currents effectuée :
+Toutes les requêtes provenant de nos connecteurs HTTP intégrables seront envoyées avec un en-tête personnalisé désignant la version de la requête Currents en cours :
 
 `Braze-Currents-Version: 1`
 
-La version sera toujours 1 à moins que nous fassions des changements substantiels incompatibles avec le passé à la charge utile ou à la sémantique de la demande. Nous ne prévoyons pas d’augmenter ce nombre très souvent, le cas échéant. 
+La version sera toujours 1 à moins que nous n'apportions des modifications gravement incompatibles avec les versions antérieures à la charge utile ou à la sémantique de la requête. Nous prévoyons d'augmenter ce chiffre rarement, voire jamais. 
 
-Les événements individuels suivront les mêmes règles d’évolution que nos schémas Avro existants. Cela signifie que les champs de chaque événement seront rétrocompatibles avec les versions antérieures des charges utiles de l’événement selon la définition Avro de la rétrocompatibilité, y compris les règles suivantes :
+Les événements individuels suivront les mêmes règles d'évolution que nos schémas Avro existants. En d'autres termes, la rétrocompatibilité des champs de chaque événement avec les versions précédentes des charges utiles de l'événement sera garantie conformément à la définition de rétrocompatibilité d'Avro, y compris les règles suivantes :
 
-- Les champs d’événements spécifiques sont garantis de toujours avoir le même type de données dans le temps.
+- Il est garanti que les champs d'événements spécifiques auront toujours le même type de données au fil du temps.
 - Tous les nouveaux champs ajoutés à la charge utile au fil du temps doivent être considérés comme facultatifs par toutes les parties.
 - Les champs obligatoires ne seront jamais supprimés.
-  - Ce qui est considéré comme « requis » sera spécifié par la documentation que nous voulons probablement générer automatiquement de nos schémas Avro comme source centrale de vérité. Cela nous oblige à annoter les champs de schéma Avro avec certaines métadonnées et un script spécial qui peut lire les métadonnées pour générer la documentation.
+  - Ce qui est considéré comme « obligatoire » sera spécifié dans la documentation que nous souhaiterons probablement générer automatiquement à partir de nos schémas Avro en tant que source centrale de vérité. Cela nous obligera à annoter les champs du schéma Avro avec certaines métadonnées et un script spécial capable de lire ces métadonnées pour générer la documentation.
 
 ## Gestion des erreurs et mécanisme de nouvelle tentative
 
-En cas d’erreur, Braze mettra la demande en file d’attente et la réessaiera en fonction du code de retour HTTP reçu.
+En cas d'erreur, Braze mettra la requête en file d'attente et réessaiera en fonction du code de retour HTTP reçu. Tout code d'erreur HTTP non répertorié ci-dessous sera traité comme une erreur HTTP 5XX.
 
 {% alert important %}
-Si notre mécanisme de relance ne parvient pas à livrer des événements à leur endpoint pendant plus de 24 heures, il y aura une perte de données.
+Si notre mécanisme de nouvelle tentative ne parvient pas à transmettre les événements à leur endpoint pendant plus de 24 heures, il y aura une perte de données.
 {% endalert %}
 
-Les codes d’état HTTP suivants seront reconnus par notre client connecteur :
-- **2XX** — Réussite
-  - Les données d’événement ne seront pas renvoyées.<br><br>
+Les codes d'état HTTP suivants seront reconnus par notre client de connecteur :
+- **2XX — Succès**
+  - Les données relatives à l'événement ne seront pas renvoyées.<br><br>
 - **5XX** — Erreur côté serveur
-  - Les données d’événements seront renvoyées dans un modèle de délais exponentiel avec gigue. Si les données n’ont pas été envoyées avec succès dans les 24 heures, elles seront abandonnées.<br><br>
+  - Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. Si les données ne sont pas envoyées avec succès dans les 24 heures, elles seront supprimées.<br><br>
 - **400** — Erreur côté client
-  - Notre connecteur a envoyé au moins un événement malformé. Dans ce cas, les données d’événements seront divisées en lots de taille 1 et renvoyées. Tous les événements de ces lots de taille 1 qui reçoivent une réponse supplémentaire de HTTP 400 seront supprimés de façon permanente. Les partenaires et/ou les clients doivent être encouragés à nous faire savoir s’ils détectent que cela se produit de leur côté.<br><br>
-- **401** (Non autorisé) ou **403** (Interdit)
-  - Le connecteur a été configuré avec des informations d’identification non valides. La tâche du connecteur arrête l’envoi et sera marquée comme « Failed » (Échec). Les données d’événements seront renvoyées après un délai de 2 à 5 minutes (ceci est géré par le rebond de tâche Connect). Si ce problème n’est pas résolu par le client dans les 48 heures, les données de l’événement seront perdues.<br><br>
-- **413** — Charge utile trop grande
-  - Les données d’événements seront divisées en petits lots et renvoyées.<br><br>
-- **429** — Trop de demandes
-  - Indique la limitation du débit. Les données d’événements seront renvoyées dans un modèle de délais exponentiel avec gigue. Si les données n’ont pas été envoyées avec succès dans les 24 heures, elles seront abandonnées.
+  - Notre connecteur a d'une manière ou d'une autre envoyé au moins un événement mal formé. Dans ce cas, les données d'événement seront divisées en lots de taille 1 et renvoyées. Tous les événements de ces lots de taille 1 qui reçoivent une réponse HTTP 400 supplémentaire seront définitivement supprimés. Les partenaires et/ou les clients sont encouragés à nous informer s'ils détectent que cela se produit de leur côté.<br><br>
+- **401** (non autorisé), **403** (interdit), **404**
+  - Le connecteur a été configuré avec des informations d'identification non valides. La tâche du connecteur arrêtera d'être envoyée et sera marquée comme « Échec ». Les données des événements seront renvoyées après un délai compris entre 2 et 5 minutes (ceci est géré par l’outil de redémarrage des tâches de connexion). Si ce problème n'est pas résolu par le client dans les 48 heures, les données relatives à l'événement seront supprimées.<br><br>
+- **413** — Charge utile trop importante
+  - Les données relatives à l'événement seront divisées en lots plus petits et renvoyées.<br><br>
+- **429** — Trop de requêtes
+  - Indique la limite de débit. Les données des événements seront renvoyées selon un schéma de délais exponentiels avec variation aléatoire. Si les données ne sont pas envoyées avec succès dans les 24 heures, elles seront supprimées.

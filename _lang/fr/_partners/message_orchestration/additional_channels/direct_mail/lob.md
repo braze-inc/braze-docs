@@ -2,59 +2,65 @@
 nav_title: Lob
 article_title: Lob 
 alias: /partners/lob/
-description: "Cet article de référence présente le partenariat entre Braze et Lob.com, qui vous permet d’envoyer des publipostages tels que des lettres, des cartes postales et des chèques par le biais du courrier."
+description: "Cet article de référence présente le partenariat entre Braze et Lob.com, qui vous permet d'envoyer des publipostages tels que des lettres, des cartes postales et des chèques par la poste."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Lob
 
-> [Lob.com][38] est un service en ligne qui vous permet d’envoyer directement des publipostages à vos utilisateurs.
+> [Lob.com][38] est un service en ligne qui vous permet d'envoyer un publipostage à vos utilisateurs.
 
-L’intégration de Braze et Lob exploite les webhooks de Braze et de l’API de Lob pour envoyer des lettres, des cartes postales et des chèques par courrier postal.  
+L'intégration Braze et Lob exploite les webhooks Braze et l'API Lob pour envoyer des courriers tels que des lettres, des cartes postales et des chèques par la poste.  
 
 ## Conditions préalables
 
 |Condition| Description|
 | ---| ---|
-|Compte Lob | Un compte Lob est requis pour profiter de ce partenariat. |
-| Clé d’API Lob | Vous pouvez trouver la clé d’API Lob sous la section des paramètres sous votre nom dans le tableau de bord de Lob. |
-{: .reset-td-br-1 .reset-td-br-2}
+|Compte Lob | Un compte Lob est nécessaire pour bénéficier de ce partenariat. |
+| Clé API de Lob | Votre clé API de Lob se trouve dans la section des paramètres, sous votre nom, dans le tableau de bord de Lob. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
 
-### Étape 1 : Sélectionner l’endpoint Lob
+### Étape 1 : Sélectionnez l'endpoint de Lob
 
-L’URL HTTP à demander dans le webhook est différente selon l’action demandée à Lob. L’exemple suivant décrit l’utilisation de l’endpoint de l’API de carte postale`https://api.lob.com/v1/postcards`. Reportez-vous à la [liste complète des endpoints][39] pour sélectionner le plus approprié pour votre scénario. 
+L'URL HTTP à demander dans le webhook est différente pour chaque action que vous pouvez effectuer sur Lob. Dans l'exemple suivant, nous utilisons l'endpoint de l'API d’envoi de cartes postales `https://api.lob.com/v1/postcards`. Consultez la [liste complète des endpoints]][39] pour sélectionner l'endpoint qui convient à votre cas d'utilisation. 
 
-| endpoint de l’API | Endpoints disponibles |
+| Point d'extrémité de l'API | Endpoints disponibles |
 | ------------ | ------------------- |
 | https://api.lob.com/ | /v1/addresses<br>/v1/addresses/{id}<br>/v1/verify<br>/v1/postcards<br>/v1/postcards/{id}<br>/v1/letter<br>/v1/letter/{id}<br>/v1/checks<br>/v1/checks/{id}<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/areas<br>/v1/areas/{id}<br>/v1/routes/{zip_code}<br>/v1/routes<br>/v1/countries<br>/v1/states|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Étape 2 : Créer votre modèle de webhook Braze
+### Étape 2 : Créez votre modèle de webhook Braze à Braze
 
-Pour créer un modèle de webhook Lob à utiliser dans les campagnes ou les Canvas futurs, accédez à la section **Templates & Media (Modèles et médias)** dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook Lob unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
+Pour créer un modèle de webhook Lob à utiliser dans de futures campagnes ou Canvases, naviguez vers **Modèles** > **Modèles de webhook** dans la plateforme Braze. 
 
-Dans votre nouveau modèle de webhook, renseignez les champs suivants :
-- **URL du webhook** : `<LOB_API_ENDPOINT>`
-- **Corps de la demande** : Texte brut
+{% alert note %}
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
+{% endalert %}
 
-#### En-têtes et méthode de la requête
+Si vous souhaitez réaliser une campagne webhook à Braze unique ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne.
 
-Lob nécessite un en-tête HTTP pour l’autorisation et une méthode HTTP. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings (Paramètres)**, vous devez remplacer le `<LOB_API_KEY>` avec votre clé d’API Lob. Cette clé doit inclure le caractère « : » directement après la clé et être encodée dans la base 64. 
+Dans votre nouveau modèle de webhook, remplissez les champs suivants :
+- **URL de webhook** : `<LOB_API_ENDPOINT>`
+- **Corps de la requête** : Texte brut
+
+#### En-têtes de requête et méthode
+
+Lob nécessite un en-tête HTTP pour l'autorisation et une méthode HTTP. Ce qui suit sera déjà inclus dans le modèle en tant que paire clé-valeur, mais dans l'onglet **Paramètres**, vous devez remplacer le `<LOB_API_KEY>` par votre clé API Lob. Cette clé doit comporter un " : " directement après la clé et être codée en base 64. 
 
 - **Méthode HTTP** : POST
-- **En-têtes de requête** :
-  - **Autorisation** : Basiques `{{'<LOB_API_KEY>:' | base64_encode}}`
-  - **Type de contenu** : application/json
+- **En-têtes de la requête** :
+  - **Autorisation**: De base `{{'<LOB_API_KEY>:' | base64_encode}}`
+  - **Content-Type**: application/json
 
-![Code du corps de la demande et URL du webhook affichés dans l’onglet de composition du constructeur de webhooks dans Braze.][35]
+![Code du corps de la requête et URL du webhook affichés dans l'onglet de composition du générateur de webhook Braze.][35]
 
-#### Corps de la demande
+#### Corps de la requête
 
-Voici un exemple de corps de demande pour l’endpoint cartes postales de Lob. Bien que ce corps de demande soit fourni dans le modèle de base de Lob dans Braze, si vous souhaitez utiliser d’autres endpoints, vous devez ajuster vos champs Liquid en conséquence.
+Voici un exemple de corps de requête pour l'endpoint Lob postcards. Bien que ce corps de requête soit fourni dans le modèle de base Lob de Braze, si vous souhaitez utiliser d'autres endpoints, vous devez ajuster vos champs Liquid en conséquence.
 
 ```json
 {% raw %}"description": "Demo Postcard",
@@ -69,14 +75,14 @@ Voici un exemple de corps de demande pour l’endpoint cartes postales de Lob. B
 "back": "https://lob.com/postcardback.pdf"{% endraw %}
 ```
 
-### Étape 3 : Prévisualiser votre demande
+### Étape 3 : Prévisualisez votre requête
 
-À ce stade, votre campagne doit être prête à être testée et envoyée. Vérifiez le tableau de bord de Lob et les journaux des messages d’erreur de la Developer Console de Braze si vous rencontrez des erreurs. Par exemple, l’erreur suivante a été causée par un en-tête d’authentification mal formaté. 
+À ce stade, votre campagne devrait être prête à être testée et envoyée. Consultez le tableau de bord de Lob et les journaux des messages d'erreur de la console de développement de Braze si vous rencontrez des erreurs. Par exemple, l'erreur suivante a été provoquée par un en-tête d'authentification mal formaté. 
 
-![Journal d’erreur indiquant l’heure, le nom de l’application, le canal et le message d’erreur. Le message d’erreur inclut l’alerte de message et le code d’état.][36]
+![Un journal des erreurs indiquant l'heure, le nom de l'application, le canal et le message d'erreur. Le message d'erreur contient l’alerte u message et le code d'état.][36]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
 
 [33]: {% image_buster /assets/img_archive/lob_api_key.png %}
@@ -84,6 +90,6 @@ N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>De
 [35]: {% image_buster /assets/img_archive/lob_full_request.png %}
 [36]: {% image_buster /assets/img_archive/error_log.png %}
 [37]: {% image_buster /assets/img_archive/lob_api_endpoint.png %}
-[38]: https://lob.com
-[39]: https://lob.com/docs#intro
-[40]: https://lob.com/docs#auth
+Il y a [38]: https://lob.com
+Il y a [39]: https://lob.com/docs#intro
+Il y a [40]: https://lob.com/docs#auth

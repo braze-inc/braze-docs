@@ -2,73 +2,79 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "Cet article de référence présente le partenariat entre Braze et Radar, une plateforme de géorepérage, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
+description: "Cet article de référence présente le partenariat entre Braze et Radar, une plateforme de géorepérage permettant d’ajouter un contexte de localisation et un suivi à vos applications iOS et Android."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Radar
 
-> [Radar](https://www.onradar.com/) est la plateforme leader de géorepérage et de suivi de localisation. La plateforme Radar a trois produits principaux : [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) et [API Geo](https://radar.io/product/api). La combinaison de la plateforme d’engagement Braze et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer des revenus et de fidéliser vos clients grâce à une large gamme d’expériences de produits et de services géolocalisés. Cela inclut le suivi des collectes et des livraisons, les notifications déclenchées par emplacement, la personnalisation contextuelle, la vérification des emplacements, les localisateurs de magasin, l’adresse automatique, etc.
+> [Radar](https://www.onradar.com/) est la principale plateforme de géorepérage et de localisation. La plateforme Radar comprend trois produits de base : [Géorepérages](https://radar.io/product/geofencing), [Suivi des déplacements](https://radar.io/product/trip-tracking) et [API de géolocalisation](https://radar.io/product/api). La combinaison de la plateforme d'engagement de premier plan de Braze, et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer des revenus et de renforcer la fidélité grâce à un large éventail d'expériences produits et de services basées sur la localisation. Il s'agit notamment du suivi des retraits ou livraisons des articles, des notifications déclenchées en fonction de l'emplacement, de la personnalisation contextuelle, de la vérification de l'emplacement, des localisateurs de magasins, de la saisie semi-automatique des adresses, et bien plus encore.
 
-L’intégration de Braze et Radar vous permet d’accéder à des déclencheurs de campagne sophistiqués basés sur l’emplacement et à l’enrichissement de profils utilisateur avec des données de localisation riches et de première partie. Lorsque des événements de geofence ou de suivi de parcours sont générés par Radar, les événements personnalisés et les attributs utilisateur sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes de localisation, alimenter les opérations de collecte et de livraison du dernier kilomètre, surveiller la logistique de la flotte et des expéditions, ou créer des segments d’utilisateurs basés sur des modèles de localisation. 
+L'intégration de Braze et Radar vous permet d'accéder à des déclencheurs de campagne sophistiqués basés sur l'emplacement et à l'enrichissement du profil utilisateur grâce à des données d'emplacement/localisation riches et de première partie. Lorsque les événements de géorepérage ou de suivi de trajet de Radar sont générés, les événements personnalisés et les attributs clients sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes basées sur la localisation, alimenter les opérations de distribution sur le dernier kilomètre, surveiller la logistique des flottes et des déclencheurs, ou créer des segments d'utilisateurs basés sur des modèles d'emplacement/localisation. 
 
-De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing via le [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+De plus, les API Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
 ## Conditions préalables
 
 | Condition | Description |
 |---|---|
-| Compte Radar | Un compte Radar est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
-| Identifiant du groupe | L’identifiant de votre groupe se trouve sur la page **Tableau de bord de Braze > Developer Console**. |
-| Clé API iOS<br>Clé API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Compte Radar | Un compte Radar est nécessaire pour bénéficier de ce partenariat. |
+| Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
+| Identifiant de l'application | L'[identifiant de votre application]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) peut être trouvé dans le tableau de bord de Braze en sélectionnant **Paramètres** > **Clés API**. |
+| Clé API iOS<br>Clé API Android | Vous trouverez ces clés API dans le tableau de bord de Braze, sous **Paramètres** > **Paramètres de l'application**. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Intégration
 
-Pour mapper les données entre les SDK Braze et Radar, vous devez définir les mêmes ID utilisateur dans les deux systèmes. Pour ce faire, vous pouvez utiliser la méthode `changeUser()` du SDK Braze et la méthode `setUserId()` du SDK Radar.
+Pour mapper des données entre les SDK Braze et Radar, vous devez définir les mêmes ID ou alias d'utilisateur dans les deux systèmes. Pour ce faire, vous pouvez utiliser la méthode `changeUser()` du SDK Braze ou la méthode `setUserId()` du SDK Radar.
 
-Pour activer l’intégration sur la [page Radar integration (Intégration Radar)](https://radar.com/documentation/integrations) sous Braze :
-  - Définissez **Enabled (Activé)** sur **Yes (Oui)**
-  - Définissez votre endpoint Braze
-  - Collez l’identifiant de votre groupe et les clés d’API
-  - Saisissez tout filtrage d’événements ou d’attributs d’événements pour vous assurer que seules les données pertinentes sont envoyées à Braze pour le marketing d’engagement
+Pour activer l'intégration :
+
+1. Dans Radar, recherchez Braze dans la page [Intégrations](https://radar.com/documentation/integrations).
+1. Réglez l'option **Activé** sur **Oui.**
+3. Collez l'identifiant de votre application et les clés API.
 
 {% alert note %}
-Vous pouvez définir des clés d’API distinctes pour l’environnement de test et l’environnement réel.
+Vous pouvez définir des clés API distinctes pour les environnements de test et de production.
 {% endalert %}
 
-Lorsque les événements Radar sont générés, Radar envoie des événements personnalisés et des attributs utilisateur à Braze. Les événements provenant des appareils iOS seront envoyés à l’aide de vos clés d’API iOS ; les événements et les attributs utilisateur provenant des appareils Android seront envoyés à l’aide de vos clés d’API Android.
+{:start="4"}
+4\. Sélectionnez votre endpoint Braze.
+5\. Saisissez tout filtrage d'événement ou d'attribut d'événement pour vous assurer que seules les données pertinentes sont envoyées à Braze pour le marketing d'engagement. Lorsque des événements Radar sont générés, Radar envoie des événements personnalisés et des attributs clients à Braze. Les événements provenant d'appareils iOS seront envoyés à l'aide de vos clés API iOS ; les événements et les attributs utilisateur provenant d'appareils Android seront envoyés à l'aide de vos clés API Android.
 
-## Cas d’utilisation d’événements et d’attributs
+{% alert note %}
+Par défaut, le paramètre `userId` Radar correspond au paramètre `external_id` Braze pour les utilisateurs connectés. Cependant, vous pouvez suivre les utilisateurs déconnectés ou spécifier des mappages personnalisés en définissant le paramètre `metadata.brazeAlias` ou `metadata.brazeExternalId` dans Radar. Si vous définissez `metadata.brazeAlias`, vous devez également ajouter un alias correspondant dans Braze avec le libellé d'alias `radarAlias`.
+{% endalert %}
 
-Vous pouvez utiliser des événements personnalisés et des attributs utilisateur pour créer des segments basés sur l’emplacement ou déclencher des campagnes basées sur l’emplacement.
+## Cas d'utilisation basés sur les événements et les attributs
 
-### Déclencher une notification d’arrivée en magasin pour la collecte trottoir 
+Vous pouvez utiliser des événements et attributs personnalisés pour créer des segments basés sur l'emplacement ou déclencher des campagnes basées sur l'emplacement.
 
-Envoyez une notification push à l’utilisateur avec les instructions d’arrivée lorsqu’il arrive à votre magasin pour une collecte trottoir.
+### Déclencher une notification d'arrivée en magasin pour le ramassage à domicile. 
 
-![Une campagne de livraison par événement montrant que la campagne sera livrée lorsque l’événement personnalisé « arrived_at_trip_destination » se produit, et que « trip_metadata » est égal à « trottoir ».]({% image_buster /assets/img_archive/radar-campaign.png %})
+Envoyez une notification push à l'utilisateur avec des instructions pour récupérer son article en bordure de rue.
 
-### Construire un segment d’audience des visiteurs de magasin récents
+![Campagne de livraison par action indiquant que la campagne sera livrée lorsque l'événement personnalisé "arrived_at_trip_destination" se produit et que les "trip_metadata" sont "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
-Par exemple, cibler les utilisateurs qui ont visité votre magasin au cours des 7 derniers jours, qu’ils aient effectué un achat ou non.
+### Créez un segment d'audience composé des visiteurs récents de votre magasin.
 
-![Un segment où « radar_geofence_tags » inclue la valeur my_store et où « radar_updated_at » correspond à une durée inférieure à sept jours.]({% image_buster /assets/img_archive/radar-segment.png %})
+Par exemple, ciblez tous les utilisateurs qui ont visité votre magasin au cours des 7 derniers jours, qu'ils aient effectué un achat ou non.
+
+![Un segment où "radar_geofence_tags" inclut la valeur my_store et où "radar_updated_at" date de moins de 7 jours.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Contenu connecté
 
-L’exemple suivant montre comment exécuter une promotion pour attirer les utilisateurs à proximité en magasin avec une offre numérique. 
+L'exemple suivant montre comment configurer une promotion pour inciter les utilisateurs se trouvant à proximité à se rendre en magasin avec une offre numérique. 
 
-![Une image Android d’un message de notification push de Contenu connecté qui affiche « Nouvelles offres en magasin, Walmart et cible près de chez vous ».][1]{: style="float:right;max-width:30%;border:0;"}
+![Image Android d'un message push de contenu connecté qui affiche "New In Store Deals, Walmart and target near you" (Nouvelles offres en magasin, Walmart et Target près de chez vous).][1]{: style="float:right;max-width:30%;border:0;"}
 
-Pour commencer, vous devez disposer de votre clé d’API publiable Radar à utiliser dans vos URL de demande.
+Pour commencer, vous devez disposer de votre clé API publiable Radar, que vous utiliserez dans vos URL de requête.
 
-Ensuite, dans une balise `connected_content`, effectuez une demande GET vers l’[API Search Places (API de recherche de lieux)](https://radar.io/documentation/api#search-places). L’API de recherche de lieux renvoie des emplacements à proximité en se basant sur [Radar Places](https://radar.io/documentation/places) : une base de données d’emplacements pour les lieux, les chaînes et les catégories qui offre une vue complète du monde.
+Ensuite, dans une balise `connected_content`, créez une requête GET vers l'[API Rechercher des emplacements](https://radar.io/documentation/api#search-places). L'API de recherche d'emplacements renvoie les emplacements/localisations proches en se basant sur [Radar Places](https://radar.io/documentation/places): une base de données d'emplacements pour les lieux, les chaînes et les catégories qui offre une vue d'ensemble du monde.
 
-L’extrait de code suivant est un exemple de ce que Radar renvoie en tant qu’objet JSON à partir de l’appel API :
+L'extrait de code suivant est un exemple de ce que Radar renverra comme objet JSON à partir de l'appel API :
 
 ```json
 {
@@ -119,9 +125,9 @@ L’extrait de code suivant est un exemple de ce que Radar renvoie en tant qu’
 }
 ```
 
-Pour construire le message Braze de Contenu connecté ciblé et personnalisé, vous pouvez exploiter l’attribut Braze `most_recent_location` comme entrée pour le paramètre `near` dans l’URL de la demande API. L’attribut `most_recent_location` est collecté via l’intégration des événements Radar ou directement via le SDK Braze.
+Pour créer le contenu connecté ciblé et le message personnalisé de Braze, vous pouvez utiliser l'attribut `most_recent_location` de Braze comme entrée du paramètre `near` dans l'URL de la requête d'API. L'attribut `most_recent_location` est collecté via l'intégration des événements Radar ou directement via le SDK de Braze.
 
-Dans l’exemple suivant, le filtrage de la chaîne Radar est appliqué aux emplacements Target et Walmart, et le rayon de recherche des emplacements proches est fixé à 2 km.
+Dans l'exemple suivant, le filtrage de la chaîne Radar est appliqué aux emplacements/localisations de Target et Walmart, et le rayon de recherche des emplacements proches est fixé à 2 km.
 
 {% raw %}
 ```
@@ -129,10 +135,10 @@ Dans l’exemple suivant, le filtrage de la chaîne Radar est appliqué aux empl
 ```
 {% endraw %}
 
-Comme vous pouvez le voir dans la balise `connect_content`, l’objet JSON est stocké dans la variable locale `nearbyplaces` en ajoutant `:save nearbyplaces` après l’URL.
-Vous pouvez tester la sortie en faisant référence à {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
+Comme vous pouvez le voir dans la balise`connect_content`, l'objet JSON est stocké dans la variable locale `nearbyplaces` en ajoutant `:save nearbyplaces` après l'URL.
+Vous pouvez tester la sortie en vous référant à {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
 
-En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe de la campagne. Le code suivant itère à travers l’objet `nearbyplaces.places`, en extrayant les valeurs uniques et en les concaténant avec des délimiteurs lisibles par un humain pour le message.
+Si l'on configure notre cas d'utilisation, voici à quoi ressemblerait la syntaxe de la campagne. Le code suivant parcourt l'objet `nearbyplaces.places`, extrait les valeurs uniques et les concatène avec des délimiteurs lisibles par l'homme pour le message.
 
 {% raw %}
 ```
@@ -170,7 +176,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Consultez la [documentation de Radar](https://radar.io/documentation/api) pour connaître toutes les API Radar qui peuvent être exploitées dans le Contenu connecté.
+Consultez la [documentation Radar](https://radar.io/documentation/api) pour connaître toutes les API Radar qui peuvent être utilisées dans le contenu connecté.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/radar_example.png %}
