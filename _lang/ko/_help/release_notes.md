@@ -219,10 +219,6 @@ Swift Live Activities에 대한 [자주 묻는 질문]({{site.baseurl}}/develope
 
 [클라우드 데이터 수집 (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions)를 사용하여 AWS 계정의 하나 이상의 S3 버킷을 Braze와 직접 통합할 수 있습니다. 새 파일이 S3에 게시되면 SQS에 메시지가 게시되고 Braze 클라우드 데이터 수집이 해당하는 새 파일을 받습니다.
 
-#### 요금 한도 증가
-
-요청 유형 [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)의 비율 제한이 분당 2,500 요청으로 증가했습니다.
-
 #### 2024-2025년 월간 활성 사용자
 
 월간 활성 사용자 - CY 24-25를 구매한 고객을 위해, Braze는 `/users/track` 엔드포인트에서 서로 다른 속도 제한을 관리합니다. 자세한 내용은 [POST를 참조하십시오. 사용자 추적]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). 
