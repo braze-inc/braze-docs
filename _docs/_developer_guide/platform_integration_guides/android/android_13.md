@@ -1,5 +1,5 @@
 ---
-nav_title: Android 13 Upgrade Guide
+nav_title: Upgrading to Android 13
 article_title: Android 13 Upgrade Guide
 page_order: 9
 platform: 
@@ -9,7 +9,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 ---
 <br>
 
-# Android 13 upgrade guide
+# Upgrading to Android 13
 
 > This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
 
