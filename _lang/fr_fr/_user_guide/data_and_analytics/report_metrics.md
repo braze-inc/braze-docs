@@ -882,7 +882,7 @@ E-mail, cartes de contenu, LINE
 Cartes de contenu
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Dismissals' (licenciements uniques) %}
+{% multi_lang_include metrics.md metric='Unique Dismissals' %}
 
 <span class="calculation-line">Calcul : (Rejets uniques) / (Impressions uniques)</span>
 
