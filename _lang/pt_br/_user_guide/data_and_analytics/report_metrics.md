@@ -932,7 +932,7 @@ Envio de e-mail, LINE
 Tudo
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' (Destinatários únicos) %}
+{% multi_lang_include metrics.md metric='Unique Recipients' %}
 
 Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>. Esse número é recebido da Braze e se baseia no site `user_id`.
 
