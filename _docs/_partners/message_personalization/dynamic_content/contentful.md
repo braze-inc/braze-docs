@@ -1,8 +1,8 @@
 ---
-nav_title: NAV_TITLE
-article_title: ARTICLE_TITLE
-description: "SHORT_DESCRIPTION."
-alias: /partners/PARTNER_NAME/
+nav_title: Contentful
+article_title: Contentful
+description: "How Connected Content allows dynamic content to be retrieved from Contentful to Braze."
+alias: /partners/contentful/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
