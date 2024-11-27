@@ -24,7 +24,7 @@ tool: Reports
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Cliques em AMP' %}
+{% multi_lang_include metrics.md metric='Cliques em AMP' %}
 
 {% endapi %}
 
@@ -36,7 +36,7 @@ E-mail
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='AMP Opens' %}
+{% multi_lang_include metrics.md metric='AMP Opens' %}
 
 {% endapi %}
 
@@ -48,7 +48,7 @@ E-mail
 Tudo
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Público' %}
+{% multi_lang_include metrics.md metric='Público' %}
 
 <span class="calculation-line">Cálculo: (Número de destinatários na variante) / (destinatários únicos)</span>
 
@@ -94,7 +94,7 @@ Esses usuários foram automaticamente cancelados de todas as futuras notificaç�
 iOS Push, Android Push
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Body Click' %}
+{% multi_lang_include metrics.md metric='Body Click' %}
 
 <span class="calculation-line">Cálculo: (Cliques no corpo) / (Impressões)</span>
 
@@ -122,7 +122,7 @@ Mensagem no app
 Mensagem no app
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Cliques no botão 1' %}
+{% multi_lang_include metrics.md metric='Cliques no botão 1' %}
 
 <span class="calculation-line">Cálculo: (Cliques no Botão 1) / (Impressões)</span>
 
@@ -136,7 +136,7 @@ Mensagem no app
 Mensagem no app
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Botão 2 cliques' %}
+{% multi_lang_include metrics.md metric='Botão 2 cliques' %}
 
 <span class="calculation-line">Cálculo: (Botão 2 Cliques) / (Impressões)</span>
 
@@ -150,7 +150,7 @@ Mensagem no app
 Mensagem no app
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Escolhas enviadas' %}
+{% multi_lang_include metrics.md mmetric='Escolhas enviadas' %}
 
 {% endapi %}
 
@@ -190,7 +190,7 @@ SMS
 Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Confiança' %}
+{% multi_lang_include metrics.md metric='Confiança' %}
 
 {% endapi %}
 
@@ -244,7 +244,7 @@ As conversões são atribuídas à mensagem recebida mais recentemente. Se a ree
 Mensagem no app
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Conversions' (métrica = 'Total de conversões') %}
+{% multi_lang_include metrics.md metric='Total Conversions' (metric = 'Total de conversões') %}
 
 Quando um usuário visualiza uma campanha de mensagens no app apenas uma vez, apenas uma conversão é contada, mesmo que ele realize o evento de conversão várias vezes posteriormente. No entanto, se a reelegibilidade estiver ativada e o usuário vir a campanha de mensagens no app várias vezes, *o total de conversões* poderá aumentar uma vez para cada vez que o usuário registrar uma impressão para uma nova instância da campanha de mensagens no app. 
 
@@ -288,7 +288,7 @@ As impressões de mensagens no app só podem ser contadas uma vez por dia. Por o
 Tudo
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Janela de conversão' %}
+{% multi_lang_include metrics.md metric='Janela de conversão' %}
 
 {% endapi %}
 
@@ -322,7 +322,7 @@ E-mail, Web Push, iOS Push, Android Push, WhatsApp
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Falhas na entrega' %}
+{% multi_lang_include metrics.md metric='Falhas na entrega' %}
 
 Entre em contato com o <a href="/docs/braze_support/">suporte da Braze</a> para obter assistência na compreensão dos motivos das falhas de entrega.
 
@@ -338,7 +338,7 @@ Entre em contato com o <a href="/docs/braze_support/">suporte da Braze</a> para 
 Push para iOS
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='aberturas diretas' %}
+{% multi_lang_include metrics.md metric='aberturas diretas' %}
 
 <span class="calculation-line">Cálculo: (aberturas diretas) / (entregas)</span>
 
@@ -378,7 +378,7 @@ Webhook
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Estimativa de aberturas reais' %}
+{% multi_lang_include metrics.md metric='Estimativa de aberturas reais' %}
 
 {% endapi %}
 
@@ -444,7 +444,7 @@ iOS Push, Android Push
 Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Receita vitalícia' %}
+{% multi_lang_include metrics.md metric='Receita vitalícia' %}
 
 {% endapi %}
 
@@ -468,7 +468,7 @@ Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push
 Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push, Webhook, SMS,LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Receita média diária' %}
+{% multi_lang_include metrics.md metric='Receita média diária' %}
 
 {% endapi %}
 
@@ -480,7 +480,7 @@ Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push
 Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Compras diárias' %}
+{% multi_lang_include metrics.md metric='Compras diárias' %}
 
 {% endapi %}
 
@@ -516,7 +516,7 @@ E-mail
 Web push, iOS push, Android push
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Opens' %}
+{% multi_lang_include metrics.md metric='Opens' %}
 
 {% endapi %}
 
@@ -552,7 +552,7 @@ E-mail
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Pending Retry' %}
+{% multi_lang_include metrics.md metric='Pending Retry' %}
 
 {% endapi %}
 
@@ -586,7 +586,7 @@ Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Leituras' %}
+{% multi_lang_include metrics.md metric='Leituras' %}
 
 {% endapi %}
 
@@ -598,7 +598,7 @@ WhatsApp
 E-mail, cartões de conteúdo, mensagem no app, web push, iOS push, Android push, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Received' %} 
+{% multi_lang_include metrics.md metric='Received' %} 
 
 - Cartões de conteúdo: Recebido quando os usuários visualizam o cartão no aplicativo.
 - Push: Recebido quando as mensagens são enviadas do servidor Braze para o provedor push.
@@ -631,7 +631,7 @@ SMS
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Receita' %}
+{% multi_lang_include metrics.md metric='Receita' %}
 
 {% endapi %}
 
@@ -643,7 +643,7 @@ E-mail
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Enviado' %}
+{% multi_lang_include metrics.md metric='Enviado' %}
 
 <span class="calculation-line">Cálculo: Contagem</span>
 
@@ -725,7 +725,7 @@ E-mail
 E-mail
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Spam' %}
+{% multi_lang_include metrics.md metric='Spam' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -794,7 +794,7 @@ Envio de e-mail, cartões de conteúdo, SMS, LINE
 Cartões de conteúdo
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Total Dismissals' (Total de demissões) %}
+{% multi_lang_include metrics.md metric='Total Dismissals' (Total de demissões) %}
 
 <span class="calculation-line">Cálculo: Contagem</span>
 
@@ -882,7 +882,7 @@ Envio de e-mail, cartões de conteúdo, LINE
 Cartões de conteúdo
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Demissões únicas' %}
+{% multi_lang_include metrics.md metric='Demissões únicas' %}
 
 <span class="calculation-line">Cálculo: (Descartes únicos) / (Impressões únicas)</span>
 
@@ -932,7 +932,7 @@ Envio de e-mail, LINE
 Tudo
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Unique Recipients' (Destinatários únicos) %}
+{% multi_lang_include metrics.md metric='Unique Recipients' (Destinatários únicos) %}
 
 Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>. Esse número é recebido da Braze e se baseia no site `user_id`.
 
@@ -984,7 +984,7 @@ E-mail
 Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Variação' %}
+{% multi_lang_include metrics.md metric='Variação' %}
 
 <span class="calculation-line">Cálculo: Contagem</span>
 
