@@ -244,7 +244,7 @@ As conversões são atribuídas à mensagem recebida mais recentemente. Se a ree
 Mensagem no app
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Conversions' (métrica = 'Total de conversões') %}
+{% multi_lang_include metrics.md metric='Total Conversions' %}
 
 Quando um usuário visualiza uma campanha de mensagens no app apenas uma vez, apenas uma conversão é contada, mesmo que ele realize o evento de conversão várias vezes posteriormente. No entanto, se a reelegibilidade estiver ativada e o usuário vir a campanha de mensagens no app várias vezes, *o total de conversões* poderá aumentar uma vez para cada vez que o usuário registrar uma impressão para uma nova instância da campanha de mensagens no app. 
 
@@ -794,7 +794,7 @@ Envio de e-mail, cartões de conteúdo, SMS, LINE
 Cartões de conteúdo
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' (Total de demissões) %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %}
 
 <span class="calculation-line">Cálculo: Contagem</span>
 
