@@ -14,7 +14,7 @@ channel: email
 
 ## Considérations à prendre en compte avant l’importation
 
-{% multi_lang_include e-mail-via-sms-warning.md %}
+{% multi_lang_include email-via-sms-warning.md %}
 
 ### Validez vos listes d’e-mails
 
