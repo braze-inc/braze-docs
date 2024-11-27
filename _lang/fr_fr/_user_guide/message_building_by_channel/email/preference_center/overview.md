@@ -51,7 +51,7 @@ L'[endpoint Générer l'URL du centre de préférences]({{site.baseurl}}/api/end
 
 ### Étape 2 : Inclure dans votre campagne d'e-mailing
 
-{% multi_lang_include centre_de_preference_avertissement.md %}
+{% multi_lang_include preference_center_warning.md %}
 
 Pour placer un lien vers le centre de préférences dans vos e-mails, utilisez l'étiquette Liquid suivante à l'endroit souhaité dans votre e-mail, de la même manière que vous inséreriez des URL de désabonnement.
 
