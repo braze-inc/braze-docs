@@ -219,10 +219,6 @@ Brazeと[Future Anthemの]({{site.baseurl}}/partners/message_personalization/dyn
 
 [S3のCloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions)を使用して、AWSアカウント内の1つ以上のS3バケットをBrazeと直接統合することができる。新規ファイルが S3 にパブリッシュされると、メッセージが SQS に投稿され、Braze のクラウドデータ取り込みがそれらの新規ファイルを取り込みます。
 
-#### レート制限の引き上げ
-
-[users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)リクエストタイプのレート制限が毎分2,500リクエストに増加した[。]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
-
 #### 月間アクティブユーザー数 CY 24-25
 
 Monthly Active Users - CY 24-25を購入した顧客に対して、Brazeは`/users/track` エンドポイントで異なるレート制限を管理している。詳細については、[POSTを参照のこと：ユーザー ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25) を追跡します。 
