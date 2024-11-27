@@ -48,21 +48,21 @@ Todas as imagens carregadas na biblioteca de mídia devem ter menos de 5 MB. Os 
 
 ### Cartões de conteúdo
 
-{% multi_lang_include image_specs.md nome_variável='cartões de conteúdo' %}
+{% multi_lang_include image_specs.md variable_name='content cards' %}
 
 ### E-mail
 
-{% multi_lang_include image_specs.md variable_name="e-mail"  %}
+{% multi_lang_include image_specs.md variable_name="email"  %}
 
 ### Mensagem no app
 
-{% multi_lang_include image_specs.md variable_name="mensagens in-app"  %}
+{% multi_lang_include image_specs.md variable_name="in-app messages"  %}
 
 Para saber mais, consulte os detalhes criativos da [mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ### Push
 
-{% multi_lang_include image_specs.md variable_name="notificações por push"  %}
+{% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
 ##### Mais recursos
 
