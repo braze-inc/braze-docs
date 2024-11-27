@@ -4,18 +4,18 @@ nav_title: In-App Messages
 description: "This landing page is home to all things in-app messaging for the Braze Android SDK."
 ---
 
-# About in-app messages
+# In-app messages
 
 > [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. For in-app message examples, check out our [case studies](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
 ## Prerequisites
 
-Before you can use Content Cards in your app, you'll need to complete the following:
+Before you can use Braze in-app messages, you'll need to complete the following:
 
 1. [Integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/)
 2. [Complete the initial in-app message setup]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in_app_messages/setup/)
 
-## The `IInAppMessage` interface
+## About the interface
 
 The [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) interface defines the basic behavior and traits of all in-app messages through its subclass, [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). It also includes a subinterface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html), which allows you to add close, click-action, and analytics [buttons](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) to your app.
 
@@ -68,6 +68,6 @@ We currently do not support the display of custom HTML in-app messages in an iFr
 {% endtab %}
 {% endtabs %}
 
-## Custom in-app message types
+## Custom message types
 
 You can also define a custom in-app message view for your app. For a full walkthrough, see [Custom view factory]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in_app_messages/customization/custom_listeners/#custom-view-factory).

@@ -4,7 +4,7 @@ article_title: "About Content Cards in the Braze Swift SDK"
 page_order: 3
 ---
 
-# About Content Cards
+# Content Cards
 
 > Learn about Content Cards for the Braze Swift SDK, including the different data models and card-specific properties available for your Swift application.
 

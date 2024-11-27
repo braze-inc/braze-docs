@@ -1,11 +1,11 @@
 ---
-nav_title: Defining a News Feed Category
-article_title: Defining a News Feed Category for Android and FireOS
-page_order: 3
+nav_title: Defining a Category
+article_title: Defining a News Feed category for the Braze Android SDK
+page_order: 2
 platform: 
   - Android
   - FireOS
-description: "This reference article shows how to define a News Feed category in your Android or FireOS application."
+description: "Learn how to define a News Feed category for the Braze Android SDK."
 channel:
   - news feed
   
@@ -13,11 +13,11 @@ channel:
 
 # Defining a News Feed category
 
-This reference article shows how to define a News Feed category in your Android or FireOS application.
+> Learn how to define a News Feed category for the Braze Android SDK.
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
+
+## Defining a category
 
 Instances of the Braze News Feed can be configured to only receive cards from a certain "category". This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature, see our News Feed [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/)
 

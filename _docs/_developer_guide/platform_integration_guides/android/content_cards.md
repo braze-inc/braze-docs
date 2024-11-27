@@ -10,7 +10,7 @@ channel:
 search_rank: 1
 ---
 
-# About Content Cards
+# Content Cards
 
 > Learn about Content Cards for the Braze Android SDK, including the different data models and card-specific properties available for your Swift application.
 
@@ -20,7 +20,7 @@ When you're ready to start customizing and using Content Cards, see[Content Card
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/) into your app. However, no additional setup is required.
 
 ## Google fragments
 
@@ -28,13 +28,11 @@ In Android, the Content Cards feed is implemented as a [fragment](https://develo
 
 To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments").
 
-## Implementation
-
-### Content Card data model {#card-types-for-android}
+## Card types and properties
 
 The Content Cards data model is available in the Android SDK and offers the following unique Content Card types. Each type shares a base model, which allows them to inherit common properties from the base model, in addition to having their own unique properties. For full reference documentation, see [`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html).
 
-#### Base Content Card model properties {#base-card-for-android}
+### Base card model {#base-card-for-android}
 
 The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) model provides foundational behavior for all cards.  
 
@@ -51,7 +49,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### Image only image card properties {#banner-image-card-for-android}
+### Image only {#banner-image-card-for-android}
 
 [Image only cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) are clickable full-sized images.
 
@@ -62,7 +60,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### Captioned image card properties {#captioned-image-card-for-android}
+### Captioned image {#captioned-image-card-for-android}
 
 [Captioned image cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) are clickable, full-sized images with accompanying descriptive text.
 
@@ -75,7 +73,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### Classic card properties {#text-Announcement-card-for-android}
+### Classic {#text-Announcement-card-for-android}
 
 A classic card without an image included will result in a [text announcement card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html). If an image is included, you will receive a [short news card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html).
 
@@ -88,7 +86,7 @@ A classic card without an image included will result in a [text announcement car
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Card methods
+## Card methods
 
 All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) data model objects offer the following analytics methods for logging user events to Braze servers.
 
