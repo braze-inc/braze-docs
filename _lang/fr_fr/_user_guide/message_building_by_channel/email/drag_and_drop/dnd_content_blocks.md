@@ -21,7 +21,7 @@ Les blocs de contenu par glisser-déposer sont uniquement disponibles pour les c
 
 Pour créer un bloc de contenu, procédez comme suit :
 
-{% multi_lang_include créer_bloc_de_contenu.md emplacement="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% alert important %}
 Chaque bloc de contenu glisser-déposer est limité à une seule ligne. Cependant, vous pouvez utiliser des blocs d'éditeur par glisser-déposer pour créer et personnaliser le bloc de contenu afin de répondre à vos besoins en matière de messagerie électronique.
