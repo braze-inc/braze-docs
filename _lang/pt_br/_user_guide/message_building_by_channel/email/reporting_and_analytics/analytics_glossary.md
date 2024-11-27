@@ -293,7 +293,7 @@ Contagem
 Contagem, porcentagem
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric=''Primary Conversions (A) or Primary Conversion Event' %} Para e-mail, push e webhooks, começamos a rastrear as conversões após o envio inicial.
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} Para e-mail, push e webhooks, começamos a rastrear as conversões após o envio inicial.
 
 {::nomarkdown}
 <span class="calculation-line">
