@@ -28,7 +28,7 @@ Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : clas
 {% tabs %}
 {% tab Glisser-déposer %}
 
-{% multi_lang_include créer_bloc_de_contenu.md emplacement="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% endtab %}
 {% tab HTML %}
