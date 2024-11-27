@@ -110,7 +110,7 @@ Lors du lancement du centre de préférences, vous serez invité à confirmer so
 
 ## Utiliser le centre de préférences
 
-{% multi_lang_include centre_de_preference_avertissement.md %}
+{% multi_lang_include preference_center_warning.md %}
 
 Pour placer un lien vers le centre de préférences dans vos e-mails, copiez la balise Liquid du centre de préférences souhaité en sélectionnant l'icône **Copier Liquid**.
 
