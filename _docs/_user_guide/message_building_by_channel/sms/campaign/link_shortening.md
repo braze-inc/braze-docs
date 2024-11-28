@@ -116,7 +116,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 When link shortening is enabled, the SMS and MMS performance table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
-![][4]
+![SMS and MMS performance metrics table.][4]
 
 The **Historical Performance** and **SMS/MMS Performance** charts also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
 
