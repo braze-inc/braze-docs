@@ -91,7 +91,7 @@ The **Message History** tab of the user profile shows recent messaging related e
 If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![][5]
+![The Messaging History tab showing which campaigns and Canvases a user has received.][5]
 
 #### Viewing and understanding events
 
