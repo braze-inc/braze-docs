@@ -1,22 +1,22 @@
 ---
 nav_title: Création de liens profonds et attribution
-article_title: Partenaires de création de liens profonds et d’attribution
+article_title: "Création de liens profonds et partenaires d'attribution"
 page_order: 3
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’établir un lien profond ou d’extraire des données de votre application pour suivre l’attribution."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des liens profonds ou d’extraire des données de votre application pour suivre l'attribution."
 
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Création de liens profonds et attribution"
+partner_top_header: "Deep Linking & Attribution"
 
 valid_partner_list:
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
-- name: Branch
+- name: Branche
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/

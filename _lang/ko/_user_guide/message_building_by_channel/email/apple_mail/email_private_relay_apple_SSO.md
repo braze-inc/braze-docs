@@ -24,22 +24,22 @@ SendGrid를 이메일 공급업체로 사용하는 경우 DNS를 변경하지 �
 주소 형식은 다음과 같아야 합니다: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(e.g, `bounces+1234567@braze.online.docs.com`). 주소가 Apple 인증서 페이지에 추가되면 이 도메인의 이메일은 Apple 개인 릴레이 시스템을 통해 전달됩니다.
 
 {% alert important %}
-원하는 '보낸 사람' 주소가 `abmail` 주소인 경우 하위 도메인에 해당 주소를 포함하세요. 예를 들어 `docs.braze.com` 대신 `abmail.docs.braze.com` 을 사용합니다. 귀하의 주소는 그렇지 않을 수 있습니다. SendGrid에서 DNS 레코드를 확인하세요.
+원하는 "보낸 사람" 주소가 `abmail` 주소인 경우 하위 도메인에 해당 주소를 포함하세요. 예를 들어 `docs.braze.com` 대신 `abmail.docs.braze.com` 을 사용합니다. 귀하의 주소는 그렇지 않을 수 있습니다. SendGrid에서 DNS 레코드를 확인하세요.
 {% endalert %}
 
-### 주소 값에서
+### 보낸 사람 주소
 
 Apple 비공개 릴레이로 이메일 주소를 추가할 때 사용되는 구성 요소는 이 표를 참조하세요.
 
 | 값 | 설명 |
 |---|---|
-| UID | 이 값은 Braze에서 제공하는 DNS 레코드(SendGrid에서 제공)에 제공됩니다. 이메일 주소에 UID에 문자 'u'를 포함하지 마세요. 예를 들어 SendGrid에 UID가 `u1234567.wl134.sendgrid.net` 로 표시되는 경우 `1234567` 이 UID 값입니다. <br><br> DNS 레코드에 액세스할 수 없는 경우 Braze 고객 성공 관리자에게 문의하여 UID를 제공하세요. |
-| 화이트 레이블 하위 도메인 및 도메인 | SendGrid에 입력한 초기 도메인 및 하위 도메인입니다. SendGrid의 DNS 레코드에서 **HOST 값을** 사용할 수도 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+| UID | 이 값은 Braze에서 제공하는 DNS 레코드(SendGrid에서 제공)에 제공됩니다. 이메일 주소에 UID에 문자 "u"를 포함하지 마세요. 예를 들어 SendGrid에 UID가 `u1234567.wl134.sendgrid.net`으로 표시되는 경우 `1234567`이 UID 값입니다. <br><br> DNS 레코드에 액세스할 수 없는 경우 Braze 고객 성공 관리자에게 문의하여 UID를 제공하세요. |
+| 화이트 레이블 하위 도메인 및 도메인 | SendGrid에 입력한 초기 도메인 및 하위 도메인입니다. SendGrid의 DNS 레코드에서 **HOST 값**을 사용할 수도 있습니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## SparkPost용 이메일 보내기
 
-SparkPost용 Apple 비공개 릴레이를 설정하려면 다음 단계를 따르세요: 
+SparkPost용 Apple 비공개 릴레이를 설정하려면 다음 단계를 따르세요. 
 
 1. Apple로 로그인합니다. 
 2. 이메일 도메인을 추가합니다. 

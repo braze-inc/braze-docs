@@ -12,7 +12,7 @@ channel: push
 
 > 이 참고 문서에서는 푸시 알림의 메시지 및 이미지 형식에 대해 설명합니다.
 
-최상의 결과를 얻으려면 푸시 메시지를 작성할 때 다음 이미지 크기 및 메시지 길이 가이드라인을 참조하세요. 이미지의 유무, 사용자 디바이스의 알림 상태(iOS) 및 디스플레이 설정, 디바이스 크기에 따라 약간의 차이가 있을 수 있습니다. 확실하지 않은 경우에는 짧고 간결하게 작성하세요.
+최상의 결과를 얻으려면 푸시 메시지를 작성할 때 다음 이미지 크기 및 메시지 길이 가이드라인을 참조하세요. 이미지의 유무, 사용자 기기의 알림 상태(iOS) 및 디스플레이 설정, 기기 크기에 따라 약간의 차이가 있을 수 있습니다. 확실하지 않은 경우에는 짧고 간결하게 작성하세요.
 
 ## iOS 및 Android 푸시
 
@@ -24,7 +24,7 @@ channel: push
 (iOS) 2:1 *권장* | 500 KB | 5MB | PNG, JPEG, GIF
 (Android) 푸시 아이콘 | 500 KB | 5MB | PNG, JPEG
 (Android) 확장된 알림 | 500 KB | 5MB | PNG, JPEG
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
 {% tab 텍스트 %}
@@ -38,7 +38,7 @@ channel: push
 (Android) 알림 서랍 | 597자 | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-iOS 푸시 알림에서 잘리지 않고 몇 자까지 사용할 수 있는지 궁금하신가요? [iOS 문자 수 가이드라인을]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count) 확인하세요.
+iOS 푸시 알림에서 잘리지 않고 몇 자까지 사용할 수 있는지 궁금하신가요? [iOS 문자 수 가이드라인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)을 확인하세요.
 
 {% endtab %}
 {% tab 페이로드 크기 %}
@@ -48,7 +48,7 @@ iOS 푸시 알림에서 잘리지 않고 몇 자까지 사용할 수 있는지 �
 iOS 8 이전 | 0.256 KB
 포스트 iOS 8 | 2 KB
 Android(FCM) | 4 KB
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 이미지 예시 %}
@@ -95,7 +95,7 @@ Chrome | 192 x 192 ≥
 Firefox | 192 x 192 ≥
 Safari | 192 x 192 ≥ (아이콘은 macOS 13 이상에서 Safari 16을 사용하여 캠페인별로 구성할 수 있습니다.)
 Opera | 192x192 ≥
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 | **브라우저** | **플랫폼** | **큰 이미지 크기**
 | --- | --- | ---
@@ -109,7 +109,7 @@ Safari | macOS | N/A
 Chrome | macOS | N/A
 Firefox | macOS | N/A
 Opera | macOS | N/A
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab 텍스트 %}
@@ -126,7 +126,7 @@ Chrome | macOS | 35 | 50
 Safari | macOS | 38 | 84
 Firefox | macOS | 38 | 42
 Opera | macOS | 38 | 42
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
 {% endtabs %}

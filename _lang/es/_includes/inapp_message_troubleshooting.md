@@ -31,7 +31,7 @@ Para profundizar en estas situaciones, visita [la sección de solución de probl
 {% if include.sdk == "iOS" %}
 #### Las impresiones y los clics no se registran
 
-Si has configurado un delegado de mensajes dentro de la aplicación para que gestione manualmente la visualización del mensaje o las acciones de clic, debes [registrar](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) manualmente [los clics](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) y las [impresiones](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:)) en el mensaje dentro de la aplicación.
+Si has configurado un delegado de mensajes dentro de la aplicación para que gestione manualmente la visualización del mensaje o las acciones de clic, debes [registrar los clics](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) y las [impresiones](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:)) manualmente en el mensaje dentro de la aplicación.
 {% elsif include.sdk == "Android" %}
 #### Las impresiones y los clics no se registran
 Si has configurado un delegado de mensajes dentro de la aplicación para que gestione manualmente la visualización del mensaje o las acciones de clic, debes registrar manualmente los clics y las impresiones en el mensaje dentro de la aplicación.

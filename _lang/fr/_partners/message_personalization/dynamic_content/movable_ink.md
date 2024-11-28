@@ -2,125 +2,130 @@
 title: "Movable Ink"
 article_title: Movable Ink
 alias: "/partners/movable_ink/"
-description: "Cet article de référence présente le partenariat entre Braze et Movable Ink, une plateforme logicielle basée sur le cloud qui offre aux marketeurs numériques un moyen de créer des expériences visuelles convaincantes et uniques qui attirent les clients."
+description: "Cet article de référence présente le partenariat entre Braze et Movable Ink, une plateforme logicielle basée sur le cloud qui permet aux marketeurs numériques de créer des expériences visuelles convaincantes et uniques pour engager les clients."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Movable Ink
 
-> [Movable Ink][1], une plateforme logicielle basée sur le cloud qui offre aux marketeurs numériques un moyen de créer des expériences visuelles convaincantes et uniques qui attirent les clients. La plateforme Movable Ink offre des options de personnalisation précieuses qui peuvent facilement être intégrées à vos campagnes. 
+> [Movable Ink](https://www.movableink.com/) est une plateforme logicielle basée sur le cloud qui permet aux marketeurs numériques de créer des expériences visuelles convaincantes et uniques pour engager les clients. La plateforme Movable Ink offre de précieuses options de personnalisation qui peuvent être facilement insérées dans vos campagnes. 
 
-Développez les capacités créatives de Braze en tirant parti des fonctionnalités Intelligent Creative de Movable Ink telles que le sondage, la minuterie et le grattage. L’intégration de Movable Ink et de Braze donne une approche plus complète aux messages dynamiques axés sur les données, offrant aux utilisateurs des éléments en temps réel sur les choses qui comptent.
+Étendez vos capacités créatives en tirant parti des fonctionnalités de création intelligente de Movable Ink, telles que le sondage, le compte à rebours et le grattage. L'intégration de Movable Ink et de Braze permet une approche plus complète des messages dynamiques axés sur les données, en fournissant aux utilisateurs des éléments en temps réel sur les choses qui comptent.
 
-## Conditions préalables
+## Prérequis
 
-| Condition | Description |
+| Condition | Descriptif |
 |---|---|
-| Compte Movable Ink | Un compte Movable Ink est nécessaire pour tirer parti de ce partenariat. |
-| Source de données | Vous devrez connecter une source de données à Movable Ink. Cela peut être effectué via CSV, importation de site Internet ou API. Assurez-vous de transmettre des données avec un identifiant unique entre Braze et Movable Ink (p. ex., `external_id`).
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| Compte Movable Ink | Un compte Movable Ink est nécessaire pour bénéficier de ce partenariat. |
+| Source des données | Vous devez connecter une source de données à Movable Ink. Cela peut se faire par le biais d'un fichier CSV, de l'importation d'un site web ou d'une API. Veillez à transmettre les données avec un identifiant commun entre Braze et Movable Ink (par exemple, `external_id`).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
-- Récapitulatifs mensuels ou de fin d’année personnalisés.
+## Cas d'utilisation
+
+- Des récapitulatifs mensuels ou de fin d'année personnalisés.
 - Personnalisez dynamiquement les images pour les e-mails, les notifications push ou les notifications riches en fonction du dernier comportement connu.<br>
 	Par exemple : 
-	- Utilisez un message push riche pour créer de façon dynamique une planification des événements en extrayant des données de l’API. 
-	- Utilisez la fonctionnalité Countdown Timer (Compte à rebours) pour avertir les utilisateurs lorsqu’une grosse vente approche (p. ex., Black Friday, Saint-Valentin, offres de dernière minute, etc.)
-	- Utilisez la fonctionnalité Scratch Off (Grattage) comme une façon amusante et interactive de distribuer des codes promotionnels.
+	- Utilisation d'un message push riche pour créer dynamiquement une planification d'événements en tirant des données de l'API. 
+	- Utiliser le compte à rebours pour avertir les utilisateurs de l'imminence d'une grande vente (par exemple, le vendredi noir, la Saint-Valentin ou des offres de vacances).
+	- Utilisez la fonctionnalité de grattage comme un moyen amusant et interactif de distribuer des codes de promotion.
 
-## Fonctions Movable Ink prises en charge
+## Capacités de l'encre mobile prises en charge
 
-Intelligent Creative propose de nombreuses offres dont les utilisateurs de Braze peuvent profiter. La liste suivante indique les fonctions prises en charge. 
+Intelligent Creative propose de nombreuses offres dont les utilisateurs de Braze peuvent profiter. La liste suivante indique les capacités prises en charge. 
 
-| Fonction Movable Ink | Fonctionnalité | Notification push riche | Messages in-app/Cartes de contenu | Détails |
+| Capacité Movable Ink | Fonctionnalité | Notification push enrichie | Message in-app / cartes de contenu / e-mail | Détails |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |
-| Creative Optimizer | Affichage du contenu A/B | ✗ | ✔ | |
-|| Optimize | ✗ | ✔* | * Doit utiliser la solution de création de liens profonds de Branch |
-| Règles de ciblage | Date | ✔* | ✔ | * Pris en charge mais non recommandé, car les notifications push sont mises en cache dès réception et ne sont pas actualisées |
-|| Jour de la semaine | ✔* | ✔ | * Pris en charge mais non recommandé, car les notifications push sont mises en cache dès réception et ne sont pas actualisées |
-|| Heure de la journée | ✔* | ✔ | * Pris en charge mais non recommandé, car les notifications push sont mises en cache dès réception et ne sont pas actualisées |
-| Histoires/Activité de comportement | | ✔* | ✔* | * L’identifiant utilisateur unique utilisé pour Braze doit être lié à l’identifiant de votre fournisseur de services d’e-mail |
-| Création de liens profonds dans l’application | | ✔* | ✔* | * Pour offrir une expérience simplifiée à vos clients, utilisez soit une solution de liens profonds établie via Branch, soit une solution validée avec l’équipe d’expérience client de Movable Ink. |
-| Applications | Countdown Timer | ✔* | ✔ | * Pris en charge mais non recommandé, car les notifications push sont mises en cache dès réception et ne sont pas actualisées |
-|| Polling | ✗ | ✔* | * Après le vote, l’application propose une page d’accueil mobile |
-|| Scratch Off | ✔* | ✔* | * Au clic, l’application propose une expérience de grattage |
-|| Vidéo | ✔* | ✔* | * GIF animés uniquement, <br>Pour Android, Braze requiert [GIF Support][GIFsupport] lors de l'implémentation |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Optimiseur de création | Affichage du contenu des tests A/B | ✗ | ✔ | |
+|| Optimiser | ✗ | ✔* | \* Vous devez utiliser la solution Deeplinking de Branch |
+| Règles de ciblage | Date | ✔* | ✔ | \* Pris en charge mais non recommandé car les notifications push sont mises en cache dès leur réception et ne s'actualisent pas. |
+|| Jour de la semaine | ✔* | ✔ | \* Pris en charge mais non recommandé car les notifications push sont mises en cache dès leur réception et ne s'actualisent pas. |
+|| Heure de la journée | ✔* | ✔ | \* Pris en charge mais non recommandé car les notifications push sont mises en cache dès leur réception et ne s'actualisent pas. |
+| Histoires/activités comportementales | | ✔* | ✔* | \* L'identifiant unique de l'utilisateur utilisé pour Braze doit être lié à l'identifiant de votre ESP. |
+| Création de liens profonds dans l'application | | ✔* | ✔* | \* Pour offrir une expérience personnalisée à vos clients, utilisez une solution de création de liens profonds établie via Branch ou une solution validée avec l'équipe Expérience client de Movable Ink. |
+| Applications | Compte à rebours | ✔* | ✔ | \* Pris en charge mais non recommandé car les notifications push sont mises en cache dès leur réception et ne s'actualisent pas. |
+|| Sondage | ✗ | ✔* | \* Après avoir voté, l’utilisateur quittera l'application pour aller sur une page d'accueil mobile. |
+|| Grattage | ✔* | ✔* | \* En cliquant, l’utilisateur quittera l'application pour afficher l'expérience de grattage. |
+|| Vidéo | ✔* | ✔* | \* Uniquement les GIFs animés, <br>Pour Android, Braze requiert la [prise en charge des GIF][GIFsupport] dans la mise en œuvre |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Intégration
 
-### Étape 1 : Créer une source de données pour Movable Ink
+### Étape 1 : Créer une source de données pour Movable Ink
 
-Les clients devront créer une source de données qui peut soit être via un CSV, une importation de site web ou une intégration API.
+Les clients devront créer une source de données sous la forme d’un fichier CSV, d’un import de site web ou de l’intégration d'une API.
 
-![Les différentes options de source de données proposées : Chargement d’un CSV, site web ou intégration API.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![Différentes options de sources de données apparaissent : Téléchargement CSV, site web ou intégration API.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
-{% tab CSV Data Source %}
-- **Source de données CSV** : Chaque ligne doit comporter au moins une colonne de segment et une colonne de contenu. Une fois votre CSV téléchargé, sélectionnez les colonnes qui doivent être utilisées pour cibler le contenu. [Exemple de fichier CSV]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+{% tab Source de données CSV %}
+- **Source de données CSV**: Chaque ligne doit comporter au moins une colonne de segmentation et une colonne de contenu. Une fois votre fichier CSV téléchargé, sélectionnez les colonnes à utiliser pour le ciblage du contenu. [Exemple de fichier CSV]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
-![Champs affichés en sélectionnant « CSV » comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
+![Les champs qui s'affichent lorsque vous sélectionnez "CSV" comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
-{% tab Website Data Source %}
-- **Source de données site web** : Chaque ligne doit comporter au moins une colonne de segment et une colonne de contenu. Une fois votre CSV téléchargé, sélectionnez les colonnes qui doivent être utilisées pour cibler le contenu.
-  - Dans ce processus, vous devez mapper :
-    - Les champs qui seront utilisés comme segments
-    - Les champs qui seront utilisés comme champs de données et qui peuvent être personnalisés dynamiquement dans la création (p. ex., attributs utilisateur ou attributs personnalisés comme prénom, nom, ville, etc.)
+{% tab Source de données du site web %}
+- **Source de données du site web**: Chaque ligne doit comporter au moins une colonne de segmentation et une colonne de contenu. Une fois votre fichier CSV téléchargé, sélectionnez les colonnes à utiliser pour le ciblage du contenu.
+  - Dans le cadre de ce processus, vous devez établir un mappage :
+    - Quels sont les champs qui seront utilisés comme segmentations ?
+    - Quels sont les champs de données que vous souhaitez voir personnalisés de manière dynamique dans la création (ex : attributs de l'utilisateur ou attributs personnalisés tels que le prénom, le nom de famille, la ville, etc.)
 
-![Champs affichés en sélectionnant « Website » (Site Web) comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
+![Les champs qui s'affichent lorsque vous sélectionnez "Site web" comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
-{% tab API Integrations %}
-- **Intégrations par API** : Utilisez l’API de votre entreprise pour alimenter directement le contenu d’une réponse API.
+{% tab Intégrations API %}
+- **Intégrations API**: Utilisez l'API de votre entreprise pour alimenter le contenu directement à partir d'une réponse d'API.
 
-![Champs affichés en sélectionnant « API Integration » (Intégration par API) comme source de données]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
+![Les champs qui s'affichent lorsque vous sélectionnez "Integration d’API" comme source de données]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
 {% endtabs %}
 
-### Étape 2 : Créer une campagne sur la plateforme Movable Ink
+### Étape 2 : Créez une campagne sur la plateforme Movable Ink
 
-À partir de l’écran d’accueil de Movable Ink, créez une campagne. Les options disponibles incluent e-mails de HTML, e-mail à partir d’image ou bloc qui peut être utilisé dans n’importe quel canal, y compris les notifications push, les messages in-app et les cartes de contenu (recommandé).
-Nous suggérons également de jeter un œil aux différentes options de contenu disponibles par le biais de blocs.
+Dans l'écran d'accueil de Movable Ink, créez une campagne. Vous pouvez choisir entre des e-mails à partir de code HTML, des e-mails à partir d'une image ou d’un bloc pouvant être utilisés dans n'importe quel canal, y compris celui des notifications push, des messages in-app et des cartes de contenu (suggérées).
+Nous vous suggérons également de jeter un coup d'œil aux différentes options de contenu disponibles par le biais des blocs.
 
-![Image de la plateforme Movable Ink lors de la création d’une nouvelle campagne Movable Ink.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![Une image de la plateforme Movable Ink lors de la création d'une nouvelle campagne Movable Ink.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
-Movable Ink dispose d’un éditeur facile pour vous permettre de glisser et de déposer des éléments comme le texte, les images, etc. Si vous avez renseigné votre source de données, vous pouvez générer dynamiquement une image à l’aide des propriétés des données. En outre, vous pouvez également créer des solutions de repli dans ce flux pour les utilisateurs si la campagne est envoyée et qu’un utilisateur ne correspond pas aux critères de personnalisation.
+Movable Ink dispose d'un éditeur par-déposé qui vous permet de glisser-déposer des éléments tels que du texte, des images, etc. Si vous avez rempli votre source de données, vous pouvez générer dynamiquement une image à l'aide des propriétés des données. En outre, vous pouvez également créer des solutions de repli dans ce flux pour les utilisateurs si la campagne est envoyée et qu'un utilisateur ne correspond pas aux critères de personnalisation.
 
-![L’éditeur de blocs Movable Ink affichant les différents éléments personnalisables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
+![L'éditeur de blocs Movable Ink montre les différents éléments personnalisables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Avant de terminer votre campagne, veillez à prévisualiser les images dynamiques et à tester les paramètres de requête pour voir à quoi ressembleront les images à l’affichage. Une fois terminé, une URL dynamique sera générée, puis insérée dans Braze !
+Avant de terminer votre campagne, veillez à prévisualiser les images dynamiques et à tester les paramètres de requête pour voir à quoi ressembleront les images à l'affichage. Une fois l'opération terminée, une URL dynamique sera générée et pourra être insérée dans Braze !
 
-Pour plus d’informations sur l’utilisation de la plateforme Movable Ink, visitez le [centre d’assistance de Movable Ink][support].
+Pour plus d'informations sur l'utilisation de la plateforme Movable Ink, visitez le [centre d'assistance Movable Ink][support]
 
-### Étape 3 : Obtenir l’URL du contenu de Movable Ink
+### Étape 3 : Obtenir l'URL du contenu de Movable Ink
 
-Pour inclure le contenu de Movable Ink dans les messages de Braze, vous devez identifier l’URL source que Movable Ink vous a fournie. 
+Pour inclure le contenu de Movable Ink dans les messages Braze, vous devez localiser l'emplacement de l'URL source que Movable Ink vous a fournie. 
 
-Pour obtenir l’URL source, vous devez avoir configuré le contenu dans le tableau de bord de Movable Ink, puis de là, terminer et exporter votre contenu. Sur la page **Finish (Terminer)**, copiez l’URL source (`img src`) à partir de la balise créative.
+Pour obtenir l'URL source, vous devez avoir configuré le contenu dans le tableau de bord Movable Ink, puis à partir de là, terminer et exporter votre contenu. Sur la page **Terminer**, copiez l'URL source (`img src`) de la balise du contenu créatif.
 
-![La page qui apparaît une fois que vous avez terminé votre campagne Movable Ink, vous y trouvez l’URL de votre contenu.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![La page qui s'affiche une fois que vous avez terminé votre campagne Movable Ink dans laquelle figure l'URL de votre contenu.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-Ensuite, sur la plateforme Braze, collez l’URL dans le champ approprié. Les champs appropriés pour votre canal de communication sont disponibles à l’étape 4. Enfin, remplacez les balises de fusion (c.-à-d. {% raw %}```&mi_u=%%email%%```{% endraw %}) avec la variable Liquid correspondante (c.-à-d. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
+Ensuite, dans la plateforme Braze, collez l'URL dans le champ approprié. Les champs appropriés pour votre canal de communication sont indiqués à l'étape 4. Enfin, remplacez toutes les balises de fusion (telles que {% raw %}```&mi_u=%%email%%```{% endraw %}) par la variable Liquid correspondante (telle que {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
-### Étape 4 : Expérience Braze
+### Étape 4 : Expérience de Braze
 
 {% tabs local %}
-{% tab Push notification %}
+{% tab E-mail %}
+Dans la plateforme Braze, collez votre balise de contenu créatif dans le corps de votre e-mail.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
+
+{% endtab %}
+{% tab Notification push %}
 
 1. Dans la plateforme Braze :
-	- Notification push pour Android : Collez l’URL dans les champs **Push Icon Image** (Image de l’icône de notification push) et **Expanded Notification Image** (Image de notification étendue).<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
-	- Notification push pour iOS : Collez l’URL dans le champ de lien **Media** et indiquez le format de fichier que vous utilisez.<br>![]({% image_buster /assets/img/movable_ink/ios.png %}){: style="max-width:60%"}<br><br>
-	- Notification push pour le Web : Collez l’URL dans les champs **Push Icon Image** (Image de l’icône de notification push) et **Large Notification Image** (Image de notification grande).<br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
-2. Pour vous assurer que les images ne sont pas mises en cache, faites précéder l’URL dans le message par des balises Liquid vides : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+	- Notification push Android : Collez l'URL dans les champs **Image de l'icône push** et **Image de la notification étendue.** <br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
+	- iOS Push : Collez l'URL dans le champ Lien **média** et indiquez le format de fichier que vous utilisez.<br>![]({% image_buster /assets/img/movable_ink/ios.png %}){: style="max-width:60%"}<br><br>
+	- Web Push : Collez l'URL dans les champs **Image de l'icône push** et **Image de la grande notification.** <br>![]({% image_buster /assets/img/movable_ink/web.png %}){: style="max-width:60%"}<br><br>
+2. Pour vous assurer que les images ne sont pas mises en cache, placez dans le message des balises Liquid vides avant l'URL : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
-{% tab In-app message %}
+{% tab Message in-app %}
 
-1. Dans la plateforme Braze, collez l’URL dans le champ **Rich Notification Media (Média de notification enrichie)**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
-2. Fournissez une URL unique pour éviter la mise en cache. Pour vous assurer que les images en temps réel de Movable Ink fonctionnent et ne soient pas affectées par la mise en cache, utilisez Liquid pour ajouter un horodatage à la fin de l’URL de l’image de Movable Ink.
+1. Dans la plateforme Braze, collez l'URL dans le champ **Média de notification enrichie**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+2. Fournissez une URL unique pour éviter la mise en cache. Pour confirmer que les images en temps réel de Movable Ink fonctionnent et ne seront pas affectées par la mise en cache, utilisez Liquid pour ajouter un horodatage à la fin de l'URL de l'image Movable Ink.
 
-Pour ce faire, utilisez la syntaxe suivante, remplaçant l’URL de l’image selon les besoins :
+Pour ce faire, utilisez la syntaxe suivante, en remplaçant l'URL de l'image si nécessaire :
 {% raw %}
 ```
 {% assign timestamp = "now" | date: "%s" %}
@@ -128,19 +133,19 @@ Pour ce faire, utilisez la syntaxe suivante, remplaçant l’URL de l’image se
 {{img}}
 ```
 {% endraw %}
-Ce modèle prend l’heure actuelle (en secondes), l’ajoute à la fin de l’onglet d’image Movable Ink (en tant que paramètre de requête), puis affiche le résultat final. Vous pouvez le prévisualiser avec l’onglet **Test** ; cela évaluera le code et affichera un aperçu.
+Ce modèle prend l'heure actuelle (en secondes), l'ajoute à la fin de l'onglet image de Movable Ink (en tant que paramètre de requête), puis affiche le résultat final. Vous pouvez le prévisualiser à l'aide de l'onglet **Test**, qui évalue le code et affiche un aperçu.
 
-**3.** Enfin, réévaluez l’adhésion du segment. Pour ce faire, activez l’option `Re-evaluate audience membership and liquid at send-time` située à l’étape **Target Audiences (Audiences cibles)** d’une campagne. Si cette option n’est pas disponible, contactez votre gestionnaire du succès des clients ou l’assistance Braze. Cette option demandera aux SDK de Braze de redemander la campagne en fournissant une URL unique chaque fois qu’un message in-app est déclenché.
+**3\.** Enfin, réévaluez l'appartenance à un segment. Pour ce faire, activez l'option `Re-evaluate audience membership and liquid at send-time` située à l'étape **Audiences cibles** d'une campagne. Si cette option n'est pas disponible, contactez votre gestionnaire de la satisfaction client ou le service d'assistance de Braze. Cette option indiquera aux SDK de Braze de redemander la campagne en fournissant une URL unique à chaque fois qu'un message in-app est déclenché.
 
 {% endtab %}
-{% tab Content Card %}
+{% tab Carte de contenu %}
 
-1. Dans la plateforme Braze, collez l’URL dans le champ **Rich Notification Media (Média de notification enrichie)**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
-2. Pour mobile : Les images des cartes de contenu sur iOS et Android sont mises en cache dès leur réception et ne sont pas actualisées. 
-  - Comme solution de contournement, planifiez votre campagne en tant que message récurrent quotidien, hebdomadaire ou mensuel avec une expiration correspondante afin que la carte de contenu soit remodélisée. Par exemple, une carte de contenu qui devrait être actualisée une fois par jour doit être définie comme un envoi planifié quotidien avec une expiration de 1 jour.
-3. Pour vous assurer que les images en temps réel de Movable Ink fonctionnent et ne soient pas affectées par la mise en cache lorsque la carte de contenu est remodélisée, utilisez Liquid pour ajouter un horodatage à la fin de l’URL de l’image de Movable Ink.
+1. Dans la plateforme Braze, collez l'URL dans le champ **Média de notification enrichie**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+2. Pour les mobiles : Les images des cartes de contenu sur iOS et Android sont mises en cache dès leur réception et ne s'actualisent pas. 
+  - Pour contourner ce problème, planifiez votre campagne comme un message récurrent quotidien, hebdomadaire ou mensuel avec une date d'expiration correspondante afin que la carte de contenu soit reformatée. Par exemple, une carte de contenu qui doit être actualisée une fois par jour doit être définie comme un envoi planifié quotidien avec une expiration d'un jour.
+3. Pour garantir que les images en temps réel de Movable Ink fonctionnent et ne seront pas affectées par la mise en cache lorsque la carte de contenu est reformatée, utilisez Liquid pour ajouter un horodatage à la fin de l'URL de l'image Movable Ink.
 
-Pour ce faire, utilisez la syntaxe suivante, remplaçant l’URL de l’image selon les besoins :
+Pour ce faire, utilisez la syntaxe suivante, en remplaçant l'URL de l'image si nécessaire :
 {% raw %}
 ```
 {% assign timestamp = "now" | date: "%s" %}
@@ -148,22 +153,22 @@ Pour ce faire, utilisez la syntaxe suivante, remplaçant l’URL de l’image se
 {{img}}
 ```
 {% endraw %}
-Ce modèle prend l’heure actuelle (en secondes), l’ajoute à la fin de l’onglet d’image Movable Ink (en tant que paramètre de requête), puis affiche le résultat final. Vous pouvez le prévisualiser avec l’onglet **Test**, ce qui évaluera le code et affichera un aperçu.
+Ce modèle prend l'heure actuelle (en secondes), l'ajoute à la fin de l'onglet image de Movable Ink (en tant que paramètre de requête), puis affiche le résultat final. Vous pouvez le prévisualiser à l'aide de l'onglet **Test**, qui évaluera le code et affichera un aperçu.
 
 {% endtab %}
 {% endtabs %}
 
 ## Résolution des problèmes
 
-#### Les images dynamiques ne s’affichent pas correctement ? Avec quel canal rencontrez-vous des difficultés ?
-- **Notification push** : Assurez-vous que vous avez une logique vide avant l’URL de votre image Movable Ink : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **Messages in-app et cartes de contenu** : Assurez-vous que l’URL de l’image est unique pour chaque impression. Cela peut être fait en ajoutant la variable Liquid appropriée de sorte que chaque URL soit différente. Voir [les instructions relatives aux messages in-app et aux cartes de contenu][instructions]. 
-- **L’image n’est pas chargée** : Veillez à remplacer toutes les « balises de fusion » par les champs Liquid correspondants dans le tableau de bord de Braze. Par exemple : {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} avec {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
+### Les images dynamiques ne s'affichent pas correctement ? Quel est le canal qui vous pose problème ?
+- **Notification push** : Veillez à ce que l'URL de votre image Movable Ink soit précédée d'une logique vide : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+- **Messages in-app et cartes de contenu**: Veillez à ce que l'URL de l'image soit unique pour chaque impression. Pour ce faire, il suffit d'ajouter la balise Liquid appropriée pour différencier toutes les URL. Voir les instructions relatives aux messages in-app et aux cartes de contenu][instructions]. 
+- L**'image ne se charge pas**: Veillez à remplacer toutes les "balises de fusion" par les champs Liquid correspondants dans le tableau de bord de Braze. Par exemple : {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} avec {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
-#### Vous avez des difficultés à afficher les GIF sur Android ?
-- Android nécessite la prise en charge GIF dans la mise en œuvre. Reportez-vous à l’article [Personnalisation des messages in-app][GIFsupport] dans Android si vous n’avez pas cette configuration.
+### Vous avez des difficultés à afficher des GIF sur Android ?
+- Android exige la prise en charge du format GIF dans la mise en œuvre. Consultez l'article Android [personnalisation des messages in-app][GIFsupport] ] si vous n'avez pas cette configuration.
 
-[1]: https://movableink.com/
+[1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [support]: https://support.movableink.com/
 [GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
