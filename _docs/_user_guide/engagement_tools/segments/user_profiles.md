@@ -63,7 +63,7 @@ The **Overview** tab contains basic information about a user and their interacti
 
 For more information on this data, see [User Data Collection][12].
 
-![][2]
+![The Overview tab of a user profile.][2]
 
 ### Engagement tab {#engagement-tab}
 
@@ -81,7 +81,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![The Engagement tab of a user profile displaying their contact settings and communication statistics.][3]
 
 ### Messaging History tab
 

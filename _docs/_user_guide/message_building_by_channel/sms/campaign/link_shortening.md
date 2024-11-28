@@ -35,11 +35,11 @@ If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.
 
 To use link shortening, make sure the link shortening toggle in the message composer is turned on. Then, choose to use either basic or advanced tracking.
 
-![][1]
+![Message composer with a toggle for link shortening.][1]
 
 Braze will only recognize URLs that start with `http://` or `https://`. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
 
-![][3]
+![Message composer with a long URL in the "Message" box and a generated shortened link in the preview.][3]
 
 #### Adding UTM parameters
 
@@ -106,7 +106,7 @@ Make sure to save the campaign or Canvas before sending a test message to receiv
 If a draft is created within an active Canvas, a shortened URL won't be generated. The actual shortened URL generates when the Canvas draft is made active.
 {% endalert %}
 
-![][2]
+![Message "Test" tab with fields for selecting test recipients.][2]
 
 {% alert note %}
 Liquid personalization and shortened URLs are templated in the **Test** tab after a user has been selected. Make sure a user is selected to receive an accurate character count.
@@ -164,7 +164,7 @@ Once configured, custom domains can be assigned to one or multiple SMS subscript
 
 Campaigns sent with link shortening enabled will use the assigned domain associated with your SMS subscription group.
 
-![][8]
+![SMS message composer preview with a shortened link domain that is different from the domain in the "Message" box.][8]
 
 ## Frequently asked questions
 
@@ -180,7 +180,7 @@ No. Link shortening works without any SDK integration.
 
 #### Do I know which individual users are clicking on a URL?
 
-Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent via Currents.
+Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
 #### Can I add UTM parameters to a URL before it is shortened?
 

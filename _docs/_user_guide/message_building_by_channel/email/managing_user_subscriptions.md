@@ -121,7 +121,7 @@ Braze will not process any state changes for users in archived groups. For examp
 
 You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to see the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
 
-![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.][10]
+![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows an approximate 10 million increase in the number of users from the 6th to the 7th.][10]
 
 #### Viewing subscription groups in campaign analytics
 

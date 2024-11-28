@@ -173,7 +173,7 @@ Note that:
 
 To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
 
-![Target Population breakdown with option to cacluate exact statistics.][2]
+![Target Population breakdown with option to calculate exact statistics.][2]
 
 ### Step 2d: Select your send settings
 
@@ -255,7 +255,7 @@ You can edit any step in your Canvas Flow workflow by selecting any of the compo
 
 Or you can quickly edit and adjust the **Action Settings** of your [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
 
-![The second step in the canvas, "Action Settings", with an evaluation window set to 1 day.]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![The second step in the Canvas, "Action Settings", with an evaluation window set to 1 day.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 The lightweight components in Canvas allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier. 
 

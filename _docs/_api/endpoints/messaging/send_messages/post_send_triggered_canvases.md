@@ -16,7 +16,7 @@ description: "This article outlines details about the Send Canvases using API-tr
 
 > Use this endpoint to send Canvas messages with API-triggered delivery.
 
-API-triggered Delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.
+API-triggered delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.
 
 Before you can send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) (which is created when you build a Canvas).
 
