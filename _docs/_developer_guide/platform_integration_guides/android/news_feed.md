@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: News Feed
-description: "Learn how to set up a news feeds for the Braze Android SDK."
+description: "Learn about News Feed for the Braze Android SDK."
 platform: 
   - Android
   - FireOS
@@ -11,9 +11,13 @@ channel:
 
 # News Feed
 
-> Learn how to set up News Feed for the Braze Android SDK.
+> Learn about News Feed for the Braze Android SDK, including card types, card properties, and optional configurations.
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
+
+## Prerequisites
+
+Before you can use News Feed, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/). However, no additional setup is required.
 
 ## Google fragments
 

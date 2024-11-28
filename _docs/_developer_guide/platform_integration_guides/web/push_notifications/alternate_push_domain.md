@@ -1,5 +1,5 @@
 ---
-nav_title: Alternate Web Push Domain
+nav_title: Alternate Push Domain
 article_title: Alternate Web Push Domain
 platform: Web
 page_order: 20
@@ -13,20 +13,22 @@ channel: push
 
 > To integrate web push, your domain must be [secure](https://w3c.github.io/webappsec-secure-contexts/), which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations). You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file. This article covers how to integrate Braze Web Push on an alternate domain.
 
-_If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a push prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
+## Use cases
 
-## Caveats
-Keep in mind that like many workarounds on the web, browsers continually evolve, and in the future, this may not work as intended.
+If you can't meet all of the criteria outlined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations), you can use this method to add a push prompt dialog to your website instead. This can be helpful if you want to let your users opt-in from an `http` website or a browser extension popup thats preventing your push prompt from displaying.
 
-- This requires that:
-  - You own a separate secure domain (`https://`) and have access to register a Service Worker on that domain.
-  - Users to be logged in to your website to ensure that push tokens are tied to the same profiles.
+## Considerations
 
-{% alert note %}
-Push for Shopify is unable to be implemented in this way. Shopify takes steps to remove headers that are required to deliver push.
+Keep in mind, like many workarounds on the web, browsers continually evolve, and this method may not be viable in the future. Before continuing, ensure that:
+
+- You own a separate secure domain (`https://`) and permissions to register a Service Worker on that domain.
+- Users are logged in to your website which ensures push tokens are match to the correct profile.
+
+{% alert important %}
+You cannot use this method to implement push notifications for Shopify. Shopify will automatically remove the headers need to deliver push this way.
 {% endalert %}
 
-## Integration
+## Setting up an alternate push domain
 
 To make the following example clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 

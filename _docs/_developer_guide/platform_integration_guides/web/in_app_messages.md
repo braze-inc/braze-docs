@@ -1,38 +1,28 @@
 ---
-nav_title: Integration
-article_title: In-App Message Integration for Web
-platform: Web
-channel: in-app messages
-page_order: 0
-page_type: reference
-description: "This article includes resources on in-app message types and message behavior for your web application."
-search_rank: 2
+page_order: 2
+nav_title: In-App Messages
+description: "Learn how to set up in-app messages for the Braze Web SDK."
 ---
 
-# In-app message integration
+# In-app messages
 
-> This article covers how to set up a in-app messages for the web application.
+> [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-[In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
-
+{% alert tip %}
 Check out our [case studies](https://www.braze.com/customers) to see examples of in-app messages.
+{% endalert %}
 
-## In-app message types
+## Prerequisites
 
-Braze currently offers the following default in-app message types: 
+Before you can use Braze in-app messages, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app. However, no additional setup is required.
 
-- `Slideup`
-- `Modal`
-- `Full`
-- `HTML`
-
-Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
+## Message interface
 
 All in-app messages inherit their prototype from [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html), which defines basic behavior and traits for all in-app messages. The prototypical subclasses are [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html), and [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
 
-## Expected behaviors by message type
+## Message types
 
-These are what it looks like for your users to open one of our default in-app message types.
+Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
 {% tabs %}
 {% tab Slideup %}
@@ -61,9 +51,7 @@ These are what it looks like for your users to open one of our default in-app me
 [`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iFrame and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) for more details.
 
 {% alert important %}
-
 To enable HTML in-app messages through the Web SDK, you **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons. HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
-
 {% endalert %}
 
 The following example shows a paginated HTML in-app message:
@@ -72,8 +60,3 @@ The following example shows a paginated HTML in-app message:
 
 {% endtab %}
 {% endtabs %}
-
-## Integration
-
-By default, in-app messages are automatically displayed as part of our recommended [integration instructions]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). Additional customization can be done by following the steps in this guide.
-

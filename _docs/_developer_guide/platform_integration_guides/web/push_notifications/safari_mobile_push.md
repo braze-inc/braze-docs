@@ -1,21 +1,23 @@
 ---
-nav_title: Safari Mobile Web Push
-article_title: Safari Mobile Web Push
+nav_title: Safari Push for Mobile
+article_title: Safari push notifications for mobile on the Braze Web SDK
 platform: Web
 channel: push
 page_order: 5
 page_type: reference
-description: "This reference article cover how to integrate web push on your iOS and iPad Safari browsers."
+description: "Learn how to send push notifications to iOS and iPadOS users using the Safari web browser."
 search_rank: 3
 ---
 
-# Safari Mobile Web Push (iOS and iPadOS)
+# Safari push for mobile
 
-> [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) supports mobile web push, which means you can now re-engage mobile users with push notifications on iOS and iPadOS.<br><br>This article will guide you through the steps required to set up mobile push for safari.
+> Learn how to send push notifications to iOS and iPadOS users using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
 
-## Integration steps
+## Prerequisites
 
-First, read and follow our standard [web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/). The following steps are only required to support web push on Safari for iOS and iPadOS support.
+Before you can set up Safari push notifications on mobile, you'll need to [set up push notifications for the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/).
+
+## Setting up Safari push for mobile
 
 ### Step 1: Create a manifest file {#manifest}
 
@@ -82,8 +84,6 @@ button.onclick = function(){
 };
 ```
 
-
 ## Next steps
 
 Next, send yourself a [test message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) to optimize your push opt-in rates.
-
