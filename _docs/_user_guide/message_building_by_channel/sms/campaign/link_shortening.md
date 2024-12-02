@@ -190,7 +190,7 @@ Static URLs are valid for one year from the time of URL registration, such as fi
 
 #### Does link shortening work with deep links or universal links?
 
-Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
+Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
 
 ### Custom domains
 
