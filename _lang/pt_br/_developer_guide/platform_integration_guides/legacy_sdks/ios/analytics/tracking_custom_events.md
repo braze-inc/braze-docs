@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-Para saber mais, consulte a [documentação de nossa [classelogcustomevent](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 ":withproperties").
+Para saber mais, consulte a [documentação de nossa classelogcustomevent](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 ":withproperties").
 
 ### Chaves reservadas {#event-reserved-keys}
 
