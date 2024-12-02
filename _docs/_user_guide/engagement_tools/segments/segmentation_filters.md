@@ -247,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. <br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Entered Canvas Variation
