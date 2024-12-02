@@ -6,7 +6,7 @@ description: "This reference article covers how to make a Connected Content API 
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
+# [![Braze Learning course icon.]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
 > Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
 
@@ -70,11 +70,11 @@ If the URL requires basic authentication, Braze can generate a basic authenticat
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Connected Content** under **Manage Settings**.
 {% endalert %}
 
-![][34]
+![The 'Connected Content' settings in the Braze dashboard.][34]
 
 To add a new credential, click **Add Credential**. Give your credential a name and enter the username and password.
 
-![][35]{: style="max-width:30%" }
+![The 'Create New Credential' window with the option to enter a name, username, and password.][35]{: style="max-width:30%" }
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 

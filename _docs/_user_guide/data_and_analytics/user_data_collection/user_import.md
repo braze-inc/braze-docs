@@ -112,9 +112,9 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 
 ### Importing a CSV
 
-To import your CSV file, go to the **User Import** page under the **Audiences** section. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
+To import your CSV file, go to **Audiences** > **User Import**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
-![][3]
+![The 'Import Users' page in the Braze dashboard.][3]
 
 Select **Browse Files** and your file. Braze will upload your file and check the column headers and the data types of each column.
 
