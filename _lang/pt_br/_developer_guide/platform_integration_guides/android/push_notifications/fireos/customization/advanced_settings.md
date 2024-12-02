@@ -60,7 +60,7 @@ Os níveis de prioridade que você pode definir em notificações por push do An
 | Mín.      | Informações contextuais ou de fundo. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Consulte a documentação [de notificação](http://developer.android.com/design/patterns/notifications.html) do [Android](http://developer.android.com/design/patterns/notifications.html) do Google para saber mais.
+Consulte a documentação [de notificação do Android](http://developer.android.com/design/patterns/notifications.html) do Google para saber mais.
 
 ## Sons {#sounds}
 
