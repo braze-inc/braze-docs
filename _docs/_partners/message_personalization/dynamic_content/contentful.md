@@ -12,7 +12,7 @@ layout: dev_guide
 
 >[Contentful](https://www.contentful.com/) is a headless content management system that lets you create, manage, and distribute content to any platform. Unlike a content management system (CMS), Contentful give you total freedom to create your own content model so you can decide which content you want to manage.<br><br>This page provides a step-by-step guide to configure Braze Connected Content to fetch data from Contentful's Content Delivery API. 
 
-After you're integrated, you can use Contentful's RESTful APIs to deliver your content across multiple channels, such as websites, mobile apps (iOS, Android, and Windows), or many other platforms. You'll be able to dynamically pull content from Contentful for use in your Braze campaigns.
+After you're integrated, you can use Contentful's RESTful APIs to deliver your content across multiple channels, such as websites, mobile apps (iOS, Android, and Windows), or many other platforms. You can also dynamically pull content from Contentful for use in your Braze campaigns.
 
 ## Prerequisites
 
