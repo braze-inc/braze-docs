@@ -279,7 +279,7 @@ Adicionar esses atributos lhe daria a capacidade de enviar campanhas para os usu
 Os IDs de usuário devem ser definidos para cada um de seus usuários. Esses devem ser imutáveis e acessíveis quando um usuário abre o app. Recomendamos **fortemente** fornecer este identificador, pois isso permitirá que você:
 
 - Acompanhe seus usuários em dispositivos e plataformas, melhorando a qualidade de seus dados comportamentais e demográficos.
-- Importe dados [de]({{site.baseurl}}/api/endpoints/user_data/) seus usuários usando nossa [API de dados de usuários]({{site.baseurl}}/api/endpoints/user_data/).
+- Importe dados [de seus usuários usando nossa API de dados de usuários]({{site.baseurl}}/api/endpoints/user_data/).
 - Direcione-se a usuários específicos com nossa [API de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) para mensagens gerais e transacionais.
 
 Os IDs de usuário devem ter menos de 512 caracteres e devem ser privados e não facilmente obtidos (por exemplo, não um endereço de e-mail simples ou nome de usuário). Se tal identificador não estiver disponível, a Braze atribuirá um identificador único aos seus usuários, mas você não terá as capacidades listadas para IDs de usuário. Você deve evitar definir IDs de usuário para usuários para os quais você não possui um identificador exclusivo que esteja vinculado a eles como indivíduos. Passar um identificador de dispositivo não oferece nenhum benefício em comparação com o rastreamento anônimo automático de usuários que o Braze oferece por padrão. A seguir estão alguns exemplos de IDs de usuário adequados e inadequados.
