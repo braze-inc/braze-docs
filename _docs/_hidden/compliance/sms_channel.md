@@ -17,11 +17,7 @@ The following additional terms apply in relation to Customer’s use of the SMS 
 
 ## Definitions
 
-**“Aggregators”** shall mean third-party intermediaries that transmit Mobile Messages between Mobile Message Providers and Carriers.
-
-**“Carriers”** or **“Mobile Messages Intermediaries”** shall mean third-party intermediaries that are wireless service providers (e.g., T-Mobile, AT&T, etc.) and/or are involved in the transmissions of RCS Messages from Mobile Message Providers to End Users.
-
-**“SMS/MMS Providers”** or **"Mobile Messages Providers”** shall mean Braze Sub-processors used in the transmission of SMS, MMS, and/or RCS Messages, as identified at [www.braze.com/subprocessors](https://www.braze.com/subprocessors/).
+**“Aggregators”**, **“Carriers”**, or **“Mobile Messages Intermediaries”** shall mean third-party intermediaries (i) that transmit Mobile Messages between Mobile Message Providers and Carriers; (ii) that are wireless service providers (e.g., T-Mobile, AT&T, etc.); and/or (iii) are involved in the transmissions of RCS Messages from Mobile Message Providers to End Users.
 
 **“SMS/MMS Messages”** or **“Mobile Messages”** shall mean SMS, MMS, and/or RCS Messages.
 
