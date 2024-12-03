@@ -37,8 +37,12 @@ API를 통해 캠페인에서 번역을 업데이트하는 기능은 현재 얼�
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
+| `campaign_id` | 필수 | 문자열 | 캠페인의 ID입니다. |
+| `message_variation_id` | 필수 | 문자열 | 메시지의 ID입니다. |
 |`locale_id`| 필수 | 문자열 | 로캘의 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+모든 번역 ID는 **다국어 지원** 설정이나 GET 요청 응답에서 찾을 수 있는 UUID(범용 고유 식별자)로 간주된다는 점에 유의하세요.
 
 ## 요청 예시
 
@@ -97,6 +101,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `MULTI_LANGUAGE_NOT_ENABLED`            | 작업 공간에 대한 다국어 설정이 켜져 있지 않습니다.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 이메일 캠페인 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다.             |
 | `UNSUPPORTED_CHANNEL`                   | 이메일 캠페인의 메시지 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

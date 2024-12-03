@@ -28,7 +28,7 @@ description: "この記事では、Create send IDs Brazeエンドポイントの
 
 {% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -44,13 +44,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | 必須 | string | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-|`send_id`| オプション | string | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `campaign_id` | 必須 | 文字列 | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`send_id`| オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \

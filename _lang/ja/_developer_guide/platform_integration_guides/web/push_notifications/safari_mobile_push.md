@@ -66,7 +66,7 @@ ChromeやFirefoxのような主要ブラウザとは異なり、あなたのウ�
 プロンプトを受け入れるか拒否したら、プロンプトを再び表示できるようにするには、Web サイトを削除してホーム画面に再インストールする必要があります。
 {% endalert %}
 
-!["allow"または"don't allow" Notifications]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %})を要求するプッシュプロンプト{: style="max-width:40%"}
+![通知を「許可する」か「許可しない」かを尋ねるプッシュプロンプト]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 以下に例を示します。
 

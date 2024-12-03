@@ -886,7 +886,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -917,7 +917,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -957,7 +957,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1000,7 +1000,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1040,7 +1040,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1294,7 +1294,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1324,7 +1324,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1363,7 +1363,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1404,7 +1404,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1441,7 +1441,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1487,7 +1487,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1519,7 +1519,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1560,7 +1560,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1603,7 +1603,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1644,7 +1644,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1691,7 +1691,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1723,7 +1723,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1765,7 +1765,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_id" : "(optional, string) API ID of the app on which this event occurred",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1807,7 +1807,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1848,7 +1848,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
@@ -1896,7 +1896,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -1924,7 +1924,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -1958,7 +1958,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -1996,7 +1996,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
 {
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2032,7 +2032,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2076,7 +2076,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "properties" : {
     "$partner_id" : "braze",
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2106,7 +2106,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
 
 {
   "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+  "abort_type" : "(optional, string) Type of abort",
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
@@ -2145,7 +2145,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
       "data" : {
         "custom_attributes" : {
           "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-          "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+          "abort_type" : "(optional, string) Type of abort",
           "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
           "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
           "campaign_name" : "(optional, string) Name of the campaign",
@@ -2186,7 +2186,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -2223,7 +2223,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "messageId" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "abort_log" : "(optional, string) Log message describing abort details (up to 128 chars)",
-    "abort_type" : "(optional, string) Type of abort, one of ['liquid_abort_message', 'message_ttl', 'quiet_hours', 'template_parse_error']",
+    "abort_type" : "(optional, string) Type of abort",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
@@ -7843,7 +7843,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -7875,7 +7875,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(optional, string) Error code from WhatsApp",
+  "provider_error_code" : "(optional, string) Error code from the SMS provider",
   "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -7914,7 +7914,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "provider_error_code" : "(optional, string) Error code from WhatsApp",
+          "provider_error_code" : "(optional, string) Error code from the SMS provider",
           "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
@@ -7958,7 +7958,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
@@ -8001,7 +8001,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
@@ -8051,7 +8051,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -8082,7 +8082,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(optional, string) Error code from WhatsApp",
+  "provider_error_code" : "(optional, string) Error code from the SMS provider",
   "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -8120,7 +8120,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
           "error" : "(optional, string) Error name",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "provider_error_code" : "(optional, string) Error code from WhatsApp",
+          "provider_error_code" : "(optional, string) Error code from the SMS provider",
           "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
           "subscription_group_id" : "(optional, string) Subscription group API ID"
         },
@@ -8163,7 +8163,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "error" : "(optional, string) Error name",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
@@ -8205,7 +8205,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "error" : "(optional, string) Error name",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "provider_error_code" : "(optional, string) Error code from WhatsApp",
+    "provider_error_code" : "(optional, string) Error code from the SMS provider",
     "send_id" : "(optional, string) Message send ID this message belongs to (SMS Sends events only)",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },

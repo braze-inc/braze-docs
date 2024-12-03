@@ -12,7 +12,7 @@ search_rank: 1
 
 > 캠페인 분석을 어디서부터 시작해야 할지 모르시겠어요? 잘 찾아오셨습니다. 이 페이지에서는 일반적인 마케팅 전략 질문에 답하는 데 사용할 수 있는 보고서 및 분석에 대한 지침을 제공합니다.
 
-## 어떤 변형이 이겼나요?
+## 어떤 배리언트가 이겼나요?
 
 {% tabs local %}
 {% tab 캠페인 분석 %}
@@ -25,19 +25,19 @@ search_rank: 1
 {% tab 캔버스 애널리틱스 %}
 **캔버스 애널리틱스**
 
-[Canvas 애널리틱스를]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) 사용하여 캔버스에서 주요 통계를 얻고 메시징 전략의 성과를 확인하세요. 라이브 캔버스를 열어 다음과 같은 주요 성과 통계를 확인합니다:
+[캔버스 애널리틱스]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/)를 사용하여 캔버스에서 주요 통계를 얻고 메시징 전략의 성과를 확인하세요. 라이브 캔버스를 열어 다음과 같은 주요 성과 통계를 확인합니다.
 
 - 캔버스 내에서 전송한 메시지 수
 - 고객이 캔버스에 입장한 총 횟수
 - 전환한 고객 수
 - 캔버스에서 창출한 수익
-- 예상 총 잠재 고객 수
+- 예상 총 오디언스 수
 
 <br>
 
 **변형별 성능**
 
-라이브 캔버스에서 [이형 상품을 분석하여]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) 모든 전환 이벤트에 대해 자동으로 계산된 전환율을 확인할 수 있습니다. 또한 각 이형 상품 및 전환 이벤트에 대한 상승도 및 신뢰도 계산을 비교하기 쉬운 표 형식으로 확인할 수 있습니다.
+라이브 캔버스에서 [배리언트 상품을 분석하여]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) 모든 전환 이벤트에 대해 자동으로 계산된 전환율을 확인할 수 있습니다. 또한 각 이형 상품 및 전환 이벤트에 대한 상승도 및 신뢰도 계산을 비교하기 쉬운 표 형식으로 확인할 수 있습니다.
 
 이 보고서를 통해 더 많은 질문에 답할 수 있습니다:
 
@@ -46,17 +46,17 @@ search_rank: 1
 
 {% endtab %}
 
-{% tab 보고서 작성기 %}
+{% tab 보고서 빌더 %}
 **보고서 빌더**
 
 [보고서 빌더를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용하여 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교하고 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 빠르게 파악할 수 있습니다.
 
-이 페이지를 확인하세요:
+이 페이지를 확인하세요.
 
 - 지난 주 또는 지난 달의 캠페인 및 캔버스에 대한 보고서를 작성하고, 중요한 지표를 계산하고, 팀원들과 공유하세요.
-- 다변량 테스트와 캔버스 모두에 대해 변형 간의 성능을 비교합니다.
+- 다변량 테스트와 캔버스 모두에 대해 배리언트 간의 성능을 비교합니다.
 - 특정 캠페인 또는 캔버스에서 전환 또는 참여가 가장 많이 발생한 메시징 채널을 확인합니다.
-- 캠페인 그룹 또는 캔버스('뉴스레터' 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
+- 캠페인 그룹 또는 캔버스("뉴스레터" 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
 
 이 기능으로 더 많은 질문에 답할 수 있습니다:
 
@@ -75,10 +75,10 @@ search_rank: 1
 
 [캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) 또는 [캔버스에]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/) 대한 리텐션 보고서를 사용하여 특정 캠페인에서 선택한 이벤트를 수행한 사용자의 리텐션을 측정할 수 있습니다.
 
-이 보고서를 확인하세요:
+이 보고서를 확인하세요.
 
 - 캠페인 수신 후 최대 1개월까지 다양한 이벤트 발생을 분석하여 메시지가 장기적으로 사용자 재참여에 얼마나 효과적인지 파악할 수 있습니다.
-- [A/B 테스트의]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 다양한 변형에서 서로 다른 이벤트 발생을 비교합니다.
+- [A/B 테스트의]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 다양한 배리언트에서 서로 다른 이벤트 발생을 비교합니다.
 
 이 보고서를 통해 더 많은 질문에 답할 수 있습니다:
 
@@ -93,9 +93,9 @@ search_rank: 1
 
 [캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) 또는 [캔버스에]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) 대한 퍼널 보고서를 사용하여 고객이 캠페인을 수신한 후 취하는 여정을 분석하세요. 각 퍼널 분석에 포함할 기본 이벤트 또는 사용자 지정 이벤트를 선택한 다음, 선택한 전환 퍼널에 대해 각 변형이 어떻게 수행되는지 자세히 살펴볼 수 있습니다.
 
-이 보고서를 확인하세요:
+이 보고서를 확인하세요.
 
-- 전환 유입 경로에서 사용자가 이탈한 지점을 파악하고 재참여 메시지를 보낼 기회를 파악하세요.
+- 전환 퍼널에서 사용자가 이탈한 지점을 파악하고 재참여 메시지를 보낼 기회를 파악하세요.
 - 캠페인을 설정할 때 원래 전환 이벤트로 포함되지 않은 이벤트의 전환을 확인합니다.
 - 일련의 작업을 사용하여 구매 유입 경로를 분석합니다(예: "이메일을 수신하고 세션을 시작하고 장바구니에 상품을 추가한 후 구매한 고객의 비율은 몇 퍼센트인가요?").
 
@@ -110,15 +110,15 @@ search_rank: 1
 ## 사용자의 참여도는 어느 정도인가요?
 
 {% tabs local %}
-{% tab 보고서 작성기 %}
+{% tab 보고서 빌더 %}
 
 [보고서 빌더를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용하여 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교하고 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 빠르게 파악할 수 있습니다.
 
-이 페이지를 확인하세요:
+이 페이지를 확인하세요.
 
 - 지난 주 또는 지난 달의 캠페인 및 캔버스에 대한 보고서를 작성하고, 중요한 지표를 계산하고, 팀원들과 공유하세요.
 - 특정 캠페인 또는 캔버스에서 전환 또는 참여가 가장 많이 발생한 메시징 채널을 확인합니다.
-- 캠페인 그룹 또는 캔버스('뉴스레터' 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
+- 캠페인 그룹 또는 캔버스("뉴스레터" 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
 
 이 기능으로 더 많은 질문에 답할 수 있습니다:
 
@@ -130,7 +130,7 @@ search_rank: 1
 {% tab 개요 데이터 %}
 **개요 데이터**
 
-[개요]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) 페이지를 사용하여 앱의 성능과 관련된 주요 지표에 대한 개략적인 요약과 앱 사용자 기반에 대한 인사이트를 확인하세요.
+[개요]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) 페이지를 사용하여 앱의 성능과 관련된 주요 측정기준에 대한 개략적인 요약과 앱 사용자 기반에 대한 인사이트를 확인하세요.
 
 이러한 통계는 이 페이지에서 확인하세요:
 
@@ -153,23 +153,23 @@ search_rank: 1
 {% tab 참여 보고서 %}
 **참여 보고서**
 
-[참여 보고서를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/) 사용하여 선택한 캠페인 및 캔버스에 대한 참여 통계의 반복 이메일 내보내기를 설정할 수 있습니다. 이 보고서는 대시보드에서 사용할 수 있는 가장 사용자 지정 가능하고 세분화된 보고서입니다.
+[참여 보고서]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/)를 사용하여 선택한 캠페인 및 캔버스에 대한 인게이지먼트 통계의 반복 이메일 내보내기를 설정할 수 있습니다. 이 보고서는 대시보드에서 사용할 수 있는 가장 사용자 지정 가능하고 세분화된 보고서입니다.
 
 메시지 채널에 따라 다음과 같은 통계를 내보낼 수 있습니다:
 
 | 채널| 사용 가능한 통계|
 | ------| --------------|
 | 이메일 | 전송, 열기, 고유 열기, 클릭, 고유 클릭, 클릭하여 열기, 수신 거부, 반송, 전달됨, 신고된 스팸 |
-| 푸시  | 전송, 열기, 영향받은 열기, 바운스, 본문 클릭 |
-| 웹 푸시 | 보내기, 열기, 반송, 본문 클릭 |
-| 인앱 메시지 | 노출 수, 클릭 수, 첫 번째 버튼 클릭 수, 두 번째 버튼 클릭 수 |
+| 푸시  | 전송, 열람, 영향받은 열람, 반송, 본문 클릭송 수 |
+| 웹 푸시 | 보내기, 열람, 반송, 본문 클릭 |
+| 인앱 메시지 | 노출 횟수, 클릭 수, 첫 번째 버튼 클릭 수, 두 번째 버튼 클릭 수 |
 | 웹훅  |  전송, 오류 |
 | SMS | 전송, 배송업체로 전송, 배송 확인, 배송 실패, 거부 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 이 보고서를 통해 더 많은 질문에 답할 수 있습니다:
 
-- 내 모든 '윈백' 메시지의 실적은 어떻게 되나요?
+- 내 모든 "윈백" 메시지의 실적은 어떻게 되나요?
 - 내 이메일 캠페인의 총 전달률은 얼마인가요?
 - 6월의 모든 Braze 캠페인은 어떻게 진행되었나요? 2021년부터 현재까지?
 - 다변량 테스트에서 어떤 추세를 볼 수 있나요?
@@ -183,11 +183,11 @@ search_rank: 1
 {% tab 세그먼트 데이터 %}
 **세그먼트 데이터**
 
-세그먼트에 대한 [애널리틱스 추적을]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) 사용 설정한 경우 해당 세그먼트를 열어 [세그먼트 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) 확인합니다. 세그먼트 데이터는 해당 사용자의 세션, 사용자 지정 이벤트 및 시간 경과에 따른 수익을 추적합니다.
+세그먼트에 대한 [애널리틱스 추적을]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) 사용 설정한 경우 해당 세그먼트를 열어 [세그먼트 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) 확인합니다. 세그먼트 데이터는 해당 사용자의 세션, 커스텀 이벤트 및 시간 경과에 따른 수익을 추적합니다.
 
 이러한 통계는 이 페이지에서 확인하세요:
 
-- 총 개수입니다:
+- 총 개수:
   - 세그먼트의 사용자 및 전체 사용자 기반에서 차지하는 비율
   - 명시적으로 이메일 수신에 동의한 이메일 수신 가능 사용자
   - 푸시 알림을 명시적으로 옵트인한 푸시 활성화 사용자
@@ -199,7 +199,7 @@ search_rank: 1
 {% tab 세그먼트 인사이트 %}
 **세그먼트 인사이트**
 
-[세그먼트 인사이트를]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/) 사용하면 세그먼트를 서로 비교하여 다음 지표가 수명 주기 길이 및 세션 빈도와 같은 항목에 어떤 영향을 미칠 수 있는지 이해할 수 있습니다:
+[세그먼트 인사이트]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/)를 사용하면 세그먼트를 서로 비교하여 다음 측정기준이 수명 주기 길이 및 세션 빈도와 같은 항목에 어떤 영향을 미칠 수 있는지 이해할 수 있습니다.
 
 - 인구 통계
 - 플랫폼
@@ -216,9 +216,9 @@ search_rank: 1
 {% tab 사용자 지정 이벤트 %}
 **사용자 지정 이벤트**
 
-[사용자]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics) 지정 이벤트 페이지를 사용하여 사용자 지정 이벤트가 발생한 빈도와 각 사용자가 세그먼테이션을 위해 마지막으로 수행한 시간을 모니터링할 수 있습니다.
+[커스텀 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics) 페이지를 사용하여 커스텀 이벤트가 발생한 빈도와 각 사용자가 세그먼테이션을 위해 마지막으로 수행한 시간을 모니터링할 수 있습니다.
 
-이 페이지를 확인하세요:
+이 페이지를 확인하세요.
 
 - 사용자 지정 이벤트 빈도 모니터링
 - 세그먼트별 사용자 지정 이벤트 모니터링
@@ -253,11 +253,11 @@ search_rank: 1
 
 [글로벌 컨트롤 그룹을]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) 설정한 후에는 [글로벌 컨트롤 보고서를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) 사용하여 Braze 마케팅의 전체 영향을 평가하세요. 이 보고서를 사용하면 메시지를 받은 사용자의 행동과 그렇지 않은 사용자의 행동을 비교하여 캠페인과 캔버스가 비즈니스 목표에 어떻게 기여하고 있는지 더 잘 이해할 수 있습니다.
 
-이 페이지를 확인하세요:
+이 페이지를 확인하세요.
 
-- 캠페인과 캔버스가 세션과 사용자 지정 이벤트에 미치는 영향과 점진적인 상승을 쉽게 측정할 수 있습니다.
+- 캠페인과 캔버스가 세션과 커스텀 이벤트에 미치는 영향과 점진적인 상승을 쉽게 측정할 수 있습니다.
 - 대조군 구성원을 자동으로 무작위로 지정하여 메시지 수신에서 제외합니다.
-- 추가 분석을 위해 내보내기 제어 그룹 멤버를 선택합니다.
+- 추가 분석을 위해 내보내기 대조군 멤버를 선택합니다.
 
 보고서로 답변할 수 있는 질문이 더 있습니다:
 
@@ -274,9 +274,9 @@ search_rank: 1
 
 [캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) 또는 [캔버스에]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) 대한 퍼널 보고서를 사용하여 고객이 캠페인을 수신한 후 취하는 여정을 분석하세요. 각 퍼널 분석에 포함할 기본 이벤트 또는 사용자 지정 이벤트를 선택한 다음, 선택한 전환 퍼널에 대해 각 변형이 어떻게 수행되는지 자세히 살펴볼 수 있습니다.
 
-이 보고서를 확인하세요:
+이 보고서를 확인하세요.
 
-- 전환 유입 경로에서 사용자가 이탈한 지점을 파악하고 재참여 메시지를 보낼 기회를 파악하세요.
+- 전환 퍼널에서 사용자가 이탈한 지점을 파악하고 재참여 메시지를 보낼 기회를 파악하세요.
 - 캠페인을 설정할 때 원래 전환 이벤트로 포함되지 않은 이벤트의 전환을 확인합니다.
 - 일련의 작업을 사용하여 구매 유입 경로를 분석합니다(예: "이메일을 수신하고 세션을 시작하고 장바구니에 상품을 추가한 후 구매한 고객의 비율은 몇 퍼센트인가요?").
 
@@ -289,27 +289,27 @@ search_rank: 1
 {% tab 이탈 예측 %}
 **Predictive Churn**
 
-[예측]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) 이탈은 [Braze 예측 제품군의]({{site.baseurl}}/user_guide/predictive_suite/) 첫 번째 모델입니다. 예측 이탈을 사용하여 예측을 정의하고 생성하여 향후 이탈을 최소화하기 위한 사전 예방적 접근 방식을 제공합니다.
+[예측 이탈]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/)은 [Braze 예측 제품군]({{site.baseurl}}/user_guide/predictive_suite/)의 첫 번째 모델입니다. 예측 이탈을 사용하여 예측을 정의하고 생성하여 향후 이탈을 최소화하기 위한 사전 예방적 접근 방식을 제공합니다.
 
-비즈니스마다 이탈과 리텐션에 대한 정의가 다르기 때문에, 고객 이탈 예측에 정의를 입력하기만 하면 나머지는 Braze가 알아서 처리합니다. 또한 캠페인이나 캔버스를 만들어 예측에 따라 행동하거나 추가 분석을 위해 세그먼트를 구축할 수도 있습니다.
+비즈니스마다 이탈과 유지에 대한 정의가 다르기 때문에, 고객 예측 이탈에 정의를 입력하기만 하면 나머지는 Braze가 알아서 처리합니다. 또한 캠페인이나 캔버스를 만들어 예측에 따라 행동하거나 추가 분석을 위해 세그먼트를 구축할 수도 있습니다.
 
 이 기능으로 더 많은 질문에 답할 수 있습니다:
 
-- 이탈 위험이 있는 이상적인 사용자 중 몇 명이나 되나요?
+- 고객이탈 위험이 있는 이상적인 사용자 중 몇 명이나 되나요?
 - 위험에 처한 사용자들의 공통적인 행동이나 속성은 무엇인가요?
 
 {% endtab %}
-{% tab 보고서 작성기 %}
+{% tab 보고서 빌더 %}
 **보고서 빌더**
 
 [보고서 빌더를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용하여 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교하고 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 빠르게 파악할 수 있습니다.
 
-이 페이지를 확인하세요:
+이 페이지를 확인하세요.
 
 - 지난 주 또는 지난 달의 캠페인 및 캔버스에 대한 보고서를 작성하고, 중요한 지표를 계산하고, 팀원들과 공유하세요.
-- 다변량 테스트와 캔버스 모두에 대해 변형 간의 성능을 비교합니다.
+- 다변량 테스트와 캔버스 모두에 대해 배리언트 간의 성능을 비교합니다.
 - 특정 캠페인 또는 캔버스에서 전환 또는 참여가 가장 많이 발생한 메시징 채널을 확인합니다.
-- 캠페인 그룹 또는 캔버스('뉴스레터' 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
+- 캠페인 그룹 또는 캔버스("뉴스레터" 태그와 관련된 모든 메시지 등)의 일반적인 실적 추세를 추적합니다.
 
 이 기능으로 더 많은 질문에 답할 수 있습니다:
 

@@ -31,7 +31,7 @@ Notez que chaque appel à cet endpoint renverra 50 événements. Pour plus de 50
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination des événements personnalisés. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de requêtes
 

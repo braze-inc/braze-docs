@@ -30,7 +30,7 @@ noindex: true
 
 `content-available` フラグは、Braze ダッシュボードおよび[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) の [Apple プッシュオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)内で設定できます。
 
-!["content-available" チェックボックスが表示されているBraze ダッシュボード。"settings" push composer.]({% image_buster /assets/img_archive/remote_notification.png %} "content available") のタブ。
+![プッシュコンポーザーの [設定] タブにある [利用可能なコンテンツ] チェックボックスを表示する Braze ダッシュボード。]({% image_buster /assets/img_archive/remote_notification.png %}「利用可能なコンテンツ」)
 
 ## サイレントプッシュ通知を使用してバックグラウンド作業をトリガーする
 
@@ -38,13 +38,13 @@ noindex: true
 
 サイレントプッシュ通知を使用してバックグラウンド作業をトリガーするには、前述の手順に従って、メッセージやサウンドなしで `content-available` フラグを設定します。アプリのバックグラウンドモードを設定して、プロジェクト設定の [**機能**] タブで `remote notifications` を有効にします。リモート通知は、`content-available` フラグが設定された通常のプッシュ通知です。 
 
-![" remote notifications" mode チェックボックスの下の" capabilities".]({% image_buster /assets/img_archive/background_mode.png %}"background mode enabled")
+![Xcode の [機能] の下に [リモート通知] モードのチェックボックスが表示されています。]({% image_buster /assets/img_archive/background_mode.png %}「バックグラウンドモードが有効になりました」)
 
 [アンインストールトラッキング]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/)では、リモート通知のバックグラウンドモードを有効にする必要があります。
 
 リモート通知バックグラウンドモードが有効になっている場合でも、ユーザーがアプリケーションを強制終了した場合、システムはアプリをバックグラウンドで起動しません。システムによってアプリがバックグラウンドで自動的に起動される前に、ユーザーはアプリケーションを明示的に起動するか、デバイスを再起動する必要があります。
 
-詳細については、[バックグラウンド更新のプッシュ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc)および[`application:didReceiveRemoteNotification:fetchCompletionHandler:`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:)を参照してください。
+詳細については、[[バックグラウンド更新のプッシュ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc)] および [[`application:didReceiveRemoteNotification:fetchCompletionHandler:`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:)] を参照してください。
 
 ## iOS のサイレント通知の制限事項
 

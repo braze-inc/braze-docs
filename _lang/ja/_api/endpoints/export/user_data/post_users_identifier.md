@@ -22,13 +22,13 @@ description: "この記事では、「識別子ごとにユーザーをエクス
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.export.ids` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`users.export.ids`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -49,18 +49,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 |-----|-----|-----|-----|
 |`external_ids` | オプション | 文字列の配列 | エクスポートするユーザーの外部識別子s。 |
 |`user_aliases` | オプション | ユーザー別名オブジェクトの配列 | エクスポートするユーザーの[ユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
-|`device_id` | オプション | string | `getDeviceId` などのさまざまな SDK メソッドによって返されるデバイス識別子。 |
-|`braze_id` | オプション | string | 特定のユーザーのBraze 識別子。 |
-|`email_address` | オプション | string | ユーザーのメールアドレス。 |
+|`device_id` | オプション | 文字列 | `getDeviceId` などのさまざまな SDK メソッドによって返されるデバイス識別子。 |
+|`braze_id` | オプション | 文字列 | 特定のユーザーのBraze 識別子。 |
+|`email_address` | オプション | 文字列 | ユーザーのメールアドレス。 |
 |`phone` | オプション | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。 |
 |`fields_to_export` | オプション | 文字列の配列 | エクスポートするユーザーデータ フィールドの名前。指定されていない場合は、デフォルトでall になります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
@@ -88,30 +88,30 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 | エクスポートするフィールド | データタイプ | 説明 |
 |---|---|---|
 | `apps` | 配列 | このユーザーがセッションを記録したアプリケーション。これには次のフィールドが含まれます。<br><br>-`name`: アプリ名<br>- `platform`: アプリ プラットフォーム(iOS、Android、またはWeb など)<br>- `version`:アプリのバージョン番号または名前 <br>-`sessions`: このアプリの総セッション数<br>-`first_used`: 初回セッションの日付<br>-`last_used`: 最終セッションの日付<br><br>すべてのフィールドsはストリングです。 |
-| `attributed_campaign` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
-| `attributed_source` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
-| `attributed_adgroup` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
-| `attributed_ad` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
-| `braze_id` | string | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
-| `country` | string | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
-| `created_at` | string | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
+| `attributed_campaign` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
+| `attributed_source` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
+| `attributed_adgroup` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
+| `attributed_ad` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
+| `braze_id` | 文字列 | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
+| `country` | 文字列 | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
+| `created_at` | 文字列 | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
 | `custom_attributes` | オブジェクト | このユーザーのカスタム属性キーと値のペア。 |
 | `custom_events` | 配列 | 過去 90 日間にこのユーザーに帰属するカスタム イベント。 |
 | `devices` | 配列 | ユーザーのデバイスに関する情報。プラットフォームに応じて、次の情報が含まれます。<br><br>- `model`:デバイスのモデル名<br>- `os`:装置のオペレーティングシステム<br>- `carrier`:デバイスのサービスキャリア (利用可能な場合)<br>- `idfv`: (iOS) Braze デバイス識別子、ベンダーの Apple 識別子 (存在する場合)<br>- `idfa`: (iOS) Advertising の識別子(存在する場合)<br>- `device_id`:(Android)Braze機器識別子<br>- `google_ad_id`:(Android)グーグルプレイ広告識別子(存在する場合)<br>- `roku_ad_id`:(Roku） Roku 広告識別子<br>- `ad_tracking_enabled`:デバイスで広告"トラッキングが有効になっている場合、真または偽になることがあります |
-| `dob` | string | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
-| `email` | string | ユーザーのメールアドレス。 |
-| `external_id` | string | 識別されたユーザー固有のユーザー識別子。 |
-| `first_name` | string | ユーザーの名。 |
-| `gender` | string | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
-| `home_city` | string | ユーザーの所在地。 |
-| `language` | string | ISO-639-1 規格のユーザー言語。 |
+| `dob` | 文字列 | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
+| `email` | 文字列 | ユーザーのメールアドレス。 |
+| `external_id` | 文字列 | 識別されたユーザー固有のユーザー識別子。 |
+| `first_name` | 文字列 | ユーザーの名。 |
+| `gender` | 文字列 | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
+| `home_city` | 文字列 | ユーザーの所在地。 |
+| `language` | 文字列 | ISO-639-1 規格のユーザー言語。 |
 | `last_coordinates` | 浮動小数点の配列 | `[longitude, latitude]` としてフォーマットされたユーザーの最新のデバイスの場所。 |
-| `last_name` | string | ユーザの姓。 |
-| `phone` | string | E.164 形式のユーザーの電話番号。 |
+| `last_name` | 文字列 | ユーザの姓。 |
+| `phone` | 文字列 | E.164 形式のユーザーの電話番号。 |
 | `purchases` | 配列 | このユーザーは過去90日間に購入しました。 |
 | `push_tokens` | 配列 | アプリの通知の送信先を指定する一意の匿名識別子。 |
 | `random_bucket` | 整数 | ユーザーの[乱数バケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)。乱数ユーザーsの一様分布Segmentsを作成するために使用されます。 |
-| `time_zone` | string | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
+| `time_zone` | 文字列 | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
 | `total_revenue` | フロート | このユーザーに帰属する総収益。総収益は、受領したキャンペーンおよびキャンバスのコンバージョン期間中に行われたユーザーの購入に基づいて計算されます。 |
 | `uninstalled_at` | タイムスタンプ | ユーザーがアプリをアンインストールした日時。アプリがアンインストールされていない場合は省略されます。 |
 | `user_aliases` | オブジェクト | [`alias_name` および`alias_label` を含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) (存在する場合)。 |

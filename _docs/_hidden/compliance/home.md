@@ -22,7 +22,7 @@ guide_top_text3: "<h2>How to find the relevant Compliance Documentation</h2><br>
 
 guide_menu_title: ""
 guide_menu_list:
-- name: SMS Channel
+- name: Mobile Messages Channel
   link: /docs/compliance_documentation_sms/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: Webhooks Channel

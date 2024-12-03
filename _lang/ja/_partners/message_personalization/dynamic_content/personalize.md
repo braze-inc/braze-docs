@@ -18,9 +18,9 @@ Braze とPersonalize.AI の統合により、メッセージのパーソナラ�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Personalize.AI インスタンス | このパートナーシップを利用するには、Personalize.AI インスタンスが必要である。 |
-| Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -38,18 +38,18 @@ Braze とPersonalize.AI の統合により、メッセージのパーソナラ�
 
 ### Personalize.AI で Braze との接続を設定する
 
-1. Personalize.AI で、Personalize.AI インスタンスの \[**Operationalization**] にある \[**Integrations**] タブに移動します。
-2. \[**Braze**] をクリックします。 
+1. Personalize.AI で、Personalize.AI インスタンスの [**Operationalization**] にある [**Integrations**] タブに移動します。
+2. [**Braze**] をクリックします。 
 3. Brazeとの統合を設定する。
     * **Connection Name:**コネクションに名前をつける。これは、Personalize.AI で統合を参照する方法です。
-    * **同期周波数：**同期の頻度により、Personalize.AI が Braze にデータをエクスポートする頻度が制御されます。\[**Daily**]、\[**Weekly**]、\[**Monthly**.] のいずれかを選択します。 
+    * **同期周波数：**同期の頻度により、Personalize.AI が Braze にデータをエクスポートする頻度が制御されます。[**Daily**]、[**Weekly**]、[**Monthly**.] のいずれかを選択します。 
     * **API Key:**BrazeのAPIキーを追加する。
     * **API URL:**Braze RESTエンドポイントURLを追加する。
-4. \[**EXPORT**] をクリックして Braze にデータをエクスポートします。
+4. [**EXPORT**] をクリックして Braze にデータをエクスポートします。
 
 いったんデータがエクスポートされると、Personalize.AI 、統合時に設定した同期頻度によって決められた間隔で、Brazeにデータを渡し続ける。
 
-## この統合を使う
+## この統合を使用する
 
 Personalize.AI により、パーソナライズされたターゲティングに使用される識別子が Braze にエクスポートされます。これらのカスタム属性は、各顧客のタイミング、内容、待遇、オファーを示します。統合によっては、フィールドを顧客のプロファイルに保存する代わりに、イベントとして渡すか、[コネクテッドコンテンツ API][2] に取り込むことができます。Personalize.AI では、`external_id` を識別子として使用することがサポートされています。
 
@@ -68,7 +68,7 @@ Braze にインポートされたデータ属性には、一貫した用語に�
 | `C4_Offer_Value` | $3 |
 | `C4_Item_Recom` | "Caesar Salad" |
 | `C4_Subject_Line` | "We miss you" |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

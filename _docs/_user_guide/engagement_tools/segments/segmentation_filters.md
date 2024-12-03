@@ -50,6 +50,10 @@ glossaries:
     description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom attributes
+  - name: Created At
+    description: Segments users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
     description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
@@ -243,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they fell into the control group in a campaign. <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Entered Canvas Variation
@@ -558,4 +562,8 @@ glossaries:
     description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
+  - name: Sending Phone Number
+    description: Segments your users by the e.164 sending phone number field.<br><br>When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having a phone number but not a sending phone number.<br><br>Use cases:<br> - Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
+    tags:
+      - Other filters
 ---

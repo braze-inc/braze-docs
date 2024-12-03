@@ -19,10 +19,10 @@ Braze と Clarisights の統合により、Braze キャンペーンとキャン�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Clarisights アカウント | このパートナーシップを利用するには、Clarisightsワークスペースが必要である。 |
-| Braze REST API キー | 以下の権限を持つBraze REST APIキー： <br> - `campaigns.list`<br>  - `campaigns.details`<br> - `campaigns.data_series`<br> - `canvas.details`<br> - `canvas.list`<br>  - `canvas.data_series`<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
+| Braze REST API キー | 以下の権限を持つBraze REST APIキー： <br> - `campaigns.list`<br>  - `campaigns.details`<br> - `campaigns.data_series`<br> - `canvas.details`<br> - `canvas.list`<br>  - `canvas.data_series`<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 | Brazeワークスペース名 | Braze APIキーに関連付けられたワークスペースの名前。この名前は、Clarisights上のワークスペース統合を識別するために使用される。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -50,12 +50,12 @@ CMOとCXOのための統一ダッシュボード。
 
 Braze データを Clarisights に同期するには、Braze コネクターを作成して Braze ワークスペースを接続する必要があります。
 
-1. Clarisights で \[**Integrations**] ページに移動し、**Braze** コネクターを見つけ、\[**\+ Connect**] を選択します。<br>![Clarisights の統合のマーケットプレイスから入手できるコネクターのリスト。][6]<br><br>
+1. Clarisights で [**Integrations**] ページに移動し、**Braze** コネクターを見つけ、[**\+ Connect**] を選択します。<br>![Clarisights の統合のマーケットプレイスから入手できるコネクターのリスト。][6]<br><br>
 2. 次に、統合フローを使って、ClarisightsアカウントをBrazeに接続する。これを行うには、Braze REST API キー、Braze ワークスペース名、Braze REST エンドポイントを指定します。<br>![ClarisightsプラットフォームのBrazeワークスペースコネクター。このページには、Braze ワークスペース名、Braze REST API キー、および Braze REST エンドポイントのフィールドが表示されている。][7]<br><br>統合が成功する前は、ユーザーは同じページに接続されたワークスペースを見ることができる。<br>![「Braze Accounts」に、接続されたワークスペースのリストが表示されている。][9]<br><br>
 
 ## この統合を使う
 
-Clarisights レポートにデータソースとして Braze を含めるには、\[**Create New Report**]に移動します。レポートに名前を付け、表示されるプロンプトでデータソースとして \[**Braze**] を選択します。また、レポートに含めるメトリクスとディメンションを選択することもできる。完了したら、\[**Create Report**] を選択します。 
+Clarisights レポートにデータソースとして Braze を含めるには、[**Create New Report**]に移動します。レポートに名前を付け、表示されるプロンプトでデータソースとして [**Braze**] を選択します。また、レポートに含めるメトリクスとディメンションを選択することもできる。完了したら、[**Create Report**] を選択します。 
 
 Braze のデータは、予定されている次回のデータインポートの時点から流入し始めます。Clarisights のカスタマーサクセスマネージャーに連絡して、長期のバックフィルを依頼します。 
 

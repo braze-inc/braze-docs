@@ -4,7 +4,7 @@ article_title: 캠페인 분석
 page_order: 4.5
 layout: dev_guide
 guide_top_header: "캠페인 분석"
-guide_top_text: "캠페인 분석은 각 캠페인 및 해당 캠페인 내의 변형에 대한 높은 수준의 결과와 메시지 수준의 세부 정보를 실시간으로 업데이트합니다. 목록에서 메시징 채널을 선택하면 해당 채널에 맞는 캠페인 분석에 대해 자세히 알아볼 수 있습니다. 또한 이러한 분석에 대한 개요를 보려면 <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>캠페인 설정</a> 브레이즈 학습 과정을 확인하는 것이 좋습니다."
+guide_top_text: "캠페인 분석은 각 캠페인 및 해당 캠페인 내의 변형에 대한 높은 수준의 결과와 메시지 수준의 세부 정보를 실시간으로 업데이트합니다. 목록에서 메시징 채널을 선택하면 해당 채널에 맞는 캠페인 분석에 대해 자세히 알아볼 수 있습니다. 또한 이러한 분석에 대한 개요를 보려면 <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>캠페인 설정</a> Braze 학습 과정을 확인하는 것이 좋습니다."
 
 page_type: landing
 description: "이 랜딩 페이지에서는 각 메시징 채널에 대한 캠페인 보고와 리텐션 및 퍼널 보고서를 다룹니다."

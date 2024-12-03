@@ -89,11 +89,11 @@ POST 페이로드가 서버에서 수락된 경우 성공적인 메시지에는 
 | `400 Android Push Length Exceeded` | JSON 페이로드가 4,000바이트 이상입니다.|
 | `400 Bad Request` | `send_at` 날짜 시간을 구문 분석할 수 없습니다.|
 | `400 Bad Request` | 요청에서 `in_local_time` 은 맞지만 `time` 은 회사 표준 시간대가 지났습니다.|
-| `401 Unauthorized` | 잘못된 API 키 |
+| `401 Unauthorized` | 잘못된 API 키입니다. |
 | `403 Forbidden` | 요금제를 지원하지 않거나 계정이 비활성화된 경우.|
 | `403 Access Denied` | 사용 중인 REST API 키에 충분한 권한이 없는 경우 **설정** 페이지에서 API 키 권한을 확인하세요.|
 | `404 Not Found` | 잘못된 URL입니다. |
 | `429 Rate Limited` | 요금 한도 초과. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}

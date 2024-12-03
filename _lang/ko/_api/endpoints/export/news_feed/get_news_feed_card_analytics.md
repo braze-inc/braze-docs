@@ -37,10 +37,10 @@ description: "이 문서에서는 뉴스피드 카드 분석 내보내기 Braze 
 | `card_id` | 필수 | 문자열 | [카드 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. <br><br> 지정된 카드의 `card_id`는 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 대시보드 내 카드 세부 정보 페이지에서 찾을 수 있으며, [뉴스피드 카드 목록 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)를 사용할 수도 있습니다.|
 | `length` | 필수 | 정수 | `ending_at` 전 반환된 시리즈에 포함할 최대 단위(일 또는 시간) 수. 1에서 100 사이여야 합니다(포함). |
 | `unit` | 선택 사항 | 문자열 | 데이터 포인트 간의 시간 단위. `day` 또는 `hour`일 수 있으며 기본값은 `day`입니다.  |
-| `ending_at` | 선택 사항 | 날짜 시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 시리즈가 종료되어야 하는 날짜. 요청 시점으로 기본 설정됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜입니다. 기본값은 요청 시간입니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id={{card_identifier}}&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \

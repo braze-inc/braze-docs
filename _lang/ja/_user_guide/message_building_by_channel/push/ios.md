@@ -7,10 +7,10 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: iOS
-description: "このランディング・ページには、BrazeのiOSプッシュ機能がすべて掲載されている。"
+description: "このランディングページには、Braze の Android プッシュ通知専用のすべての情報が記載されています。"
 
 guide_top_header: "iOS プッシュ"
-guide_top_text: "以下の記事は、iOSがBrazeをプッシュしているものすべてをリストアップしたものである。"
+guide_top_text: "以下の記事には、Braze の Android プッシュ通知専用のすべての情報が記載されています。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -29,7 +29,7 @@ guide_featured_list:
 - name: "キャンペーンの詳細設定"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
   image: /assets/img/braze_icons/bar-chart-01.svg
-- name: "バッジ・カウントを活用する"
+- name: "バッジ数の活用"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
   image: /assets/img/braze_icons/bell-03.svg
 ---

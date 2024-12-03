@@ -19,9 +19,9 @@ Braze と Extole の統合により、Extole の友人紹介プログラムや�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Extole アカウント | このパートナーシップを活用するには、Extole アカウントが必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定**」>「**APIキー**」から作成できる。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
 | Braze API URL | あなたのBraze API URLは、あなたの[Brazeインスタンスに]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)固有である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -38,7 +38,7 @@ Braze と Extole の統合により、Extole の友人紹介プログラムや�
 ### Brazeアカウントに接続する
 
 1. My Extoleアカウントの[パートナー](https://my.extole.com/partners)ページでBrazeインテグレーションを選択する。
-2. Braze 統合で \[**インストール**] を選択し、Extole と Braze の接続を開始します。
+2. Braze 統合で [**インストール**] を選択し、Extole と Braze の接続を開始します。
 3. Braze REST API キーをはじめとする必須フィールドを入力します。 
 4. Braze API URLを入力する。このURLは、Brazeアカウントがどのインスタンスにプロビジョニングされているかによって異なる。
 5. Brazeに送信したいExtoleイベントを追加する。デフォルトのイベント、イベントプロパティ、およびユーザー属性は、[Extole イベントの表](https://dev.extole.com/docs/braze#extole-program-events)で説明されています。
@@ -55,7 +55,7 @@ Braze と Extole の統合により、Extole の友人紹介プログラムや�
 | `extole_created_share_link` | 参加者は、Extole Share Experience にメールを入力して、共有リンクを作成します。 | イベント名  <br>イベント時間  <br>パートナー (Extole)  <br>ファンネル (アドボケイトまたは友人)  <br>プログラム | <br>external ID <br>メール  <br>リンクを共有する |
 | `extole_shared` | 参加者が自分の紹介リンクを友人にシェアする。 | イベント名  <br>イベント時間  <br>パートナー (Extole)  <br>external ID  <br>ファンネル (アドボケイトまたは友人)  <br>プログラム  <br>シェアチャンネル | メール <br>名 <br>姓 |
 | `outcome` - 結果は、プログラムのコンフィギュレーション（`extole_shipped` や`extole_converted` など）に基づいてダイナミックに変化する。| 参加者が、プログラムに設定されている目的の成果イベントをコンバージョンまたは完了た。 | プログラムごとのダイナミック | メール <br>名 <br>姓 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Extole のサブスクリプション状態
 
@@ -63,7 +63,7 @@ Braze と Extole の統合により、Extole の友人紹介プログラムや�
 | ----------- | ----------- | ----------- | ----------- |
 | `subscribed` | 参加者がマーケティングメッセージの受信をオプトインした。 | 該当なし | メール  <br>リストのタイプ  <br>external ID  <br>メール購読 (オプトイン) |
 | `unsubscribed` | 参加者が Extole メールコミュニケーションの受信をオプトアウトした。| メール  <br>external ID  <br>サブスクリプション状態 (サブスクリプション解除)  <br>サブスクリプショングループ ID  | リストのタイプ |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Extrail のリワード
 
@@ -78,7 +78,7 @@ Braze と Extole の統合により、Extole の友人紹介プログラムや�
 | `FAILED` | 問題が発生したため、リワードを発行または送付できませんでした。注意する必要があります。 | メール <br>額面  <br>クーポンコード  <br>額面タイプ  | メール <br>名  <br>姓 |
 | `CANCELED` | リワードは無効化されました。インベントリに戻されます。 | メール <br>額面  <br>額面タイプ  | メール <br>名  <br>姓 |
 | `REVOKED` | 履行されたリワードが無効化されました。たとえば、Extole がサプライヤーギフトカードを依頼したが、カードが誤って送付されたと判断した場合などです。サプライヤーがリワードの取り消しに対応している場合、Extole は資金の払い戻しを依頼し、リワードは無効になります。 | メール <br>額面   <br>額面タイプ  | メール <br>名  <br>姓 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 ## カスタマイズ

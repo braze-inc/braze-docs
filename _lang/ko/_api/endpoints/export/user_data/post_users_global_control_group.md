@@ -14,7 +14,7 @@ description: "이 문서에서는 글로벌 컨트롤 그룹 Braze 엔드포인�
 /users/export/global_control_group
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 글로벌 컨트롤 그룹 내의 모든 사용자를 내보낼 수 있습니다. 
+> 이 엔드포인트를 사용하여 글로벌 컨트롤 그룹 내의 모든 사용자를 내보낼 수 있습니다.
 
 사용자 데이터는 줄 바꿈으로 구분된 열러 사용자 JSON 객체 파일로 내보내집니다(예: 한 줄에 하나의 JSON 객체). 파일이 생성될 때마다 글로벌 제어 그룹의 모든 사용자가 포함됩니다. Braze는 사용자가 글로벌 컨트롤 그룹에서 추가 및 제거된 시점에 대한 기록을 저장하지 않습니다.
 
@@ -48,11 +48,11 @@ Braze에 [S3][1] 또는 [Azure][2] 자격 증명을 추가한 경우, 각 파일
 | `RANDOM_UUID` | 요청 시점에 Braze에서 생성한 임의의 UUID입니다. | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | 내보내기가 요청된 유닉스 시간(UTC 기준 2017-01-01:00:00:00Z 이후 초)입니다. | `1556044807` |
 | `filename` | 파일당 무작위입니다. | `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
-이 엔드포인트를 사용하여 내보내기에 대한 자체 버킷 정책을 적용하려면 자체 S3 또는 Azure 자격 증명을 설정할 것을 강력히 권장합니다. 클라우드 스토리지 자격 증명을 제공하지 않은 경우 요청에 대한 응답으로 모든 사용자 파일이 포함된 ZIP 파일을 다운로드할 수 있는 URL이 제공됩니다. URL은 내보내기가 준비된 후에만 유효한 위치가 됩니다. 
+이 엔드포인트를 사용하여 내보내기에 대한 자체 버킷 정책을 적용하려면 자체 S3 또는 Azure 자격 증명을 설정할 것을 강력히 권장합니다. 클라우드 스토리지 자격 증명을 제공하지 않은 경우 요청에 대한 응답으로 모든 사용자 파일이 포함된 ZIP 파일을 다운로드할 수 있는 URL이 제공됩니다. URL은 내보내기가 준비된 후에만 유효한 위치가 됩니다.
 
 클라우드 스토리지 자격 증명을 제공하지 않으면 이 엔드포인트에서 내보낼 수 있는 데이터의 양에 제한이 있다는 점에 유의하세요. 내보내는 필드와 사용자 수에 따라 파일 크기가 너무 크면 파일 전송에 실패할 수 있습니다. 가장 좋은 방법은 `fields_to_export`를 사용하여 내보낼 필드를 지정하고 전송 크기를 낮추기 위해 필요한 필드만 지정하는 것입니다. 파일 생성 시 오류가 발생하면 무작위 버킷 번호를 기준으로 사용자 기반을 더 많은 세그먼트로 나누는 것을 고려해 보세요(예: 무작위 버킷 번호가 1,000 미만 또는 1,000~2,000 사이인 세그먼트 생성).
 
@@ -86,7 +86,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`callback_endpoint` | 선택 사항 | 문자열 | 내보내기를 사용할 수 있을 때 다운로드 URL을 게시할 엔드포인트를 설정합니다. |
 |`fields_to_export` | 필수* | 문자열 배열 | 내보낼 사용자 데이터 필드의 이름, 사용자 지정 속성을 내보낼 수도 있습니다. <br><br>\*2021년 4월부터 신규 계정은 내보낼 특정 필드를 지정해야 합니다. |
 |`output_format` | 선택 사항 | 문자열 | 자체 S3 버킷을 사용하는 경우 파일 형식을 `zip` 또는 `gzip` 으로 지정할 수 있습니다. 기본값은 ZIP 파일 형식입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```
@@ -133,7 +133,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 | `total_revenue` | Float | 이 사용자에게 귀속된 총 수익입니다. 총 수익은 사용자가 받은 캠페인 및 캔버스에 대한 전환 기간 동안 구매한 금액을 기준으로 계산됩니다. |
 | `uninstalled_at` | 타임스탬프 | 사용자가 앱을 삭제한 날짜와 시간입니다. 앱이 제거되지 않은 경우 생략됩니다. |
 | `user_aliases` | 객체 | `alias_name` 및 `alias_label` 을 포함하는 [사용자 별칭 개체가]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) 있는 경우. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 응답
 
@@ -260,7 +260,7 @@ URL을 사용할 수 있게 된 후에는 몇 시간 동안만 유효합니다. 
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "custom_attributes": 
+    "custom_attributes":
       {
         "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
         "loyaltyPoints": "321",

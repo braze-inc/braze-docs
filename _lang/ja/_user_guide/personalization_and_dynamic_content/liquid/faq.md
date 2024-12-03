@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: よくある質問
-page_order: 11
+page_order: 12
 description: "この記事では、Liquid に関してよくある質問にお答えします。"
 
 ---

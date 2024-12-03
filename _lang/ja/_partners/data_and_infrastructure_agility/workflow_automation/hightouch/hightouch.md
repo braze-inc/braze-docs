@@ -21,8 +21,8 @@ Braze と Hightouch の統合により、データウェアハウスの最新の
 |---|---|
 | Hightouch アカウント | このパートナーシップを活用するには、Hightouch アカウントが必要です。
 | Braze REST API キー | `users.track` および `users.export.ids` の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL][2] に応じて異なります。<br><br>Hightouch には、Braze インスタンスが配置されているクラスターの名前が必要です。例えば、Brazeのエンドポイントが`https://rest.iad-01.braze.com` の場合、必要なのは`iad-01` だけである。|
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][2] に応じて異なります。<br><br>Hightouch には、Braze インスタンスが配置されているクラスターの名前が必要です。例えば、Brazeのエンドポイントが`https://rest.iad-01.braze.com` の場合、必要なのは`iad-01` だけである。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -35,7 +35,7 @@ Braze と Hightouch の統合により、データウェアハウスの最新の
 
 ### ステップ1:Hightouch Braze 宛先を作成する
 
-1. Hightouch プラットフォームの \[**Destinations**] セクションで \[**Add destination**] をクリックします。
+1. Hightouch プラットフォームの [**Destinations**] セクションで [**Add destination**] をクリックします。
 2. 利用可能な目的地のリストから**Brazeを**選択する。
 3. Braze REST エンドポイント (「https://rest」を除く) と Braze REST API キーを指定します。<br><br>![][3]
 

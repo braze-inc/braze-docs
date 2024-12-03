@@ -8,9 +8,6 @@ page_type: landing
 search_tag: Partner
 description: "このランディングページには、Blaze へのコホートインポート機能を提供する Braze パートナー (Alloys) が一覧表示されています。"
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Cohort Import"
 
 valid_partner_list:

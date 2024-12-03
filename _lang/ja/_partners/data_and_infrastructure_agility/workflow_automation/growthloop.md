@@ -19,9 +19,9 @@ Braze と GrowthLoop の統合により、データウェアハウスから直�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | GrowthLoop の growth アカウントまたは enterprise アカウント | このパートナーシップを利用するには、GrowthLoopのアカウントが必要である。 |
-| Braze Rest APIキー | すべての権限を持つBraze REST APIキー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL][2] に応じて異なります。|
-{: .reset-td-br-1 .reset-td-br-2} 
+| Braze Rest APIキー | すべての権限を持つBraze REST APIキー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][2] に応じて異なります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## ユースケース
 
@@ -35,18 +35,18 @@ Braze と GrowthLoop の統合により、データウェアハウスから直�
 
 ### GrowthLoopでBraze接続を設定する
 
-GrowthLoop の Segmentation Platform にサインインしたら、左サイドバーの \[**Destinations**] タブを開き、右上の \[**New Destination**] をクリックします。
+GrowthLoop の Segmentation Platform にサインインしたら、左サイドバーの [**Destinations**] タブを開き、右上の [**New Destination**] をクリックします。
 
-Braze が見つかるまでスクロールし、\[**Add Braze**] をクリックします。
+Braze が見つかるまでスクロールし、[**Add Braze**] をクリックします。
 
 宛先への接続を設定するポップアップが表示される。
 
 - **Destination name**:これは宛先に指定される名前であり、今後アプリでこの宛先はこの名前で参照されます。
-- **同期周波数**：\[Daily] または \[Hourly] を選択します。これにより、GrowthLoop がオーディエンスを Braze にエクスポートする頻度が制御されます。
+- **同期周波数**：[Daily] または [Hourly] を選択します。これにより、GrowthLoop がオーディエンスを Braze にエクスポートする頻度が制御されます。
 - **APIキー**：要件で作成した、必要な権限を持つ API キー。
 - **API URL**:要件で定義されているURL
 
-\[**Create**] をクリックします。これで最初のオーディエンスを Braze にエクスポートできます。GrowthLoop でオーディエンスを作成するには、[オーディエンスの作成](https://www.growthloop.com/help-center-articles/create-an-audience)を参照してください。
+[**Create**] をクリックします。これで最初のオーディエンスを Braze にエクスポートできます。GrowthLoop でオーディエンスを作成するには、[オーディエンスの作成](https://www.growthloop.com/help-center-articles/create-an-audience)を参照してください。
 
 ### エクスポート後の作業
 

@@ -49,7 +49,7 @@ Amazon Personalizeは、Amazonの機械学習によるレコメンデーショ�
 
 さらに詳しく知りたい方は、[Amazon Personalizeの]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/)新しい記事を参照し、Amazon Personalizeが提供するユースケース、Amazon Personalizeが扱うデータ、サービスの設定方法、Brazeとの統合方法について理解しよう。
 
-## Braze の新しいパートナーシップ
+## 新しいBrazeのパートナーシップ
 
 ### Yotpo - Eコマース
 

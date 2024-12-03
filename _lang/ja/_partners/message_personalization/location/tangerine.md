@@ -16,12 +16,12 @@ Braze と Tangerine の統合により、Braze から Snowflake セキュアデ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Store360 アカウント | このパートナーシップを利用するには、Store360アカウントが必要です。 |
 | BrazeアカウントID | あなたのBrazeアプリグループID。 |
 | ユーザーIDの一致 | Store360とBrazeの顧客データは、両方のプラットフォームで一致するユーザーIDを持っている必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
