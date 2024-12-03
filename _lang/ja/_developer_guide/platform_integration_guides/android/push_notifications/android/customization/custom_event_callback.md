@@ -87,5 +87,5 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 {% endalert %}
 
 {% alert important %}
-`Application.onCreate` でプッシュ通知リスナーを作成し、アプリが終了状態にある間にエンドツーエンドのユーザーが通知をタップした後にリスナーがトリガーされるようにする。
+`Application.onCreate` でプッシュ通知リスナーを作成し、アプリが終了状態にある間にエンドユーザーが通知をタップした後にリスナーがトリガーされるようにします。
 {% endalert %}
