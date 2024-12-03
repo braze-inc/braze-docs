@@ -133,7 +133,12 @@ Triggering a campaign with nested properties from the "Created Playlist" event:
 
 ![A user choosing a nested property for property filters on a custom event.]({% image_buster /assets/img/nested_object2.png %})
 
-The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if **any** item in the traversed array matches the event property.<br>
+The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if **any** item in the traversed array matches the event property.
+
+{% alert important %}
+The **does not equal** filter only matches if none of the properties in your array equal the provided value. <br><br>For example, let's say Canvas A has the action-based custom event nested property filter **equals** "smartwatch", and Canvas B has the action-based custom event nested property filter **does not equal** "simphone". If you have "smartwatch" and "simphone" in your properties, both Canvases will trigger. But if you have "simphone" or "sim only" in any property, neither Canvas will trigger.
+{% endalert %}
+
 {% endtab %}
 {% tab Restaurant Example %}
 
