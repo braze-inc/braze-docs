@@ -16,13 +16,13 @@ channel:
 
 配信可能性センターにアクセスするには、「キャンペーン、キャンバス、カード、セグメント、メディアライブラリーへのアクセス」と「使用状況データの表示」[ユーザー権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)が必要です。
 
-## Googleポストマスターアカウントの設定
+## Google Postmaster アカウントの設定
 
 配信センターに接続するには、Google Postmaster Tools のアカウントを設定する必要があります。仕事用または個人用の Gmail アカウントを使用して Google Postmaster を設定できます。 
 
 1. [Google Postmaster Tools](https://postmaster.google.com/managedomains?pli=1) ダッシュボードに移動します。
 2. 右下の<i class="fas fa-plus-circle"></i> プラスアイコンを選択する。
-3. ルートドメインまたはサブドメインを入力してメールを認証する。ルート ドメインを追加して検証している場合、これにより検証を下流のサブドメインに適用できます。たとえば、`braze.com` を検証することで、`demo.braze.com` やその他のサブドメインを、個別に検証することなく追加することができる。
+3. ルートドメインまたはサブドメインを入力してメールを認証する。ルート ドメインを追加して検証している場合、これにより検証を下流のサブドメインに適用できます。例えば、`braze.com` を検証することで、後に `demo.braze.com` やその他のサブドメインを個別に検証することなく追加できます。
 4. Google では、ドメインの DNS に直接追加できる TXT レコードが生成されます。これは通常、DNS の管理者が所有します。特定の DNS の更新方法に関する情報とガイダンスについては、「[ドメインの所有権を証明する （ドメインホスト別の手順）](https://support.google.com/a/topic/1409901)」を参照してください。
 5. [**次へ**] を選択します。<br>![][9]
 6. TXT レコードが DNS に追加されたら、Google Postmaster Tools ダッシュボードに戻り、[**検証**] を選択します。このステップでは、ドメインの所有者であることが確認されるため、Postmaster アカウントで Gmail の配信到達性指標にアクセスできるようになります。<br> ![][10]
@@ -32,10 +32,10 @@ TXTレコードが、Brazeを通して使用しているサブドメインでは
 {% endalert %}
 
 {% alert note %}
-サブドメインが Google Postmaster の配信センターに含まれていない場合、親ドメインのみを Google Postmaster に追加したことが原因の可能性があります。親ドメインがGoogle Postmasterで検証された後、サブドメインを追加することができ、自動的に検証される。このプロセスにより、Google はサブドメインレベルの指標をレポートできるようになり、その指標を Braze の配信センターに取り込むことができます。
+サブドメインが Google Postmaster の配信センターに含まれていない場合、親ドメインのみを Google Postmaster に追加したことが原因の可能性があります。Google Postmaster で親ドメインが検証された後に、サブドメインを追加できます。サブドメインは自動的に検証されます。このプロセスにより、Google はサブドメインレベルの指標をレポートできるようになり、その指標を Braze の配信センターに取り込むことができます。
 {% endalert %}
 
-## Googleポストマスターを統合する
+## Google Postmaster を連携する
 
 配信センターを設定する前に、ドメインが [Gmail Postmaster Tools に追加][4] されていることを確認します。
 
@@ -43,14 +43,14 @@ TXTレコードが、Brazeを通して使用しているサブドメインでは
 
 1. [**分析**] > **[メールパフォーマンス**] に移動します。
 2. [**配信センター**] タブを選択します。<br>![][3]
-3. **Google Postmasterと接続を**選択する。 
-4. Googleアカウントを選択し、**「許可」を**選択して、ポストマスターツールに登録されているドメインのメールトラフィックメトリクスの表示をBrazeに許可する。 
+3. [**Google Postmaster との接続**] を選択します。 
+4. Google アカウントを選択し、[**許可**] を選択して、Postmaster Tools に登録されているドメインのメールトラフィック指標の表示を Braze に許可します。 
 
 検証済みのドメインが配信センターに表示されます。 
 
 ![][5]
 
-また、Brazeのダッシュボードから、**パートナー連携**>**テクノロジーパートナー**>**Google Postmasterの**順にアクセスして、Google Postmasterにアクセスすることもできる。連携後、Braze は過去 30 日間の信頼度とエラーのデータを取得します。データはすぐには利用できない場合があり、入力されるまで数分かかる場合があります。
+また、Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] > [**Google Postmaster**] に移動して、Google Postmaster にアクセスすることもできます。連携後、Braze は過去 30 日間の信頼度とエラーのデータを取得します。データはすぐには利用できない場合があり、入力されるまで数分かかる場合があります。
 
 ### 指標と定義
 
@@ -82,7 +82,7 @@ IP の信頼度の評価を解釈するには、次の表を参照してくだ�
 
 #### 認証
 
-認証ダッシュボードを使用して、Sender Policy Framework (SPF)、DomainKeys Identified Mail (DKIM)、Domain-based Message Authentication, Reporting and Conformance (DMARC)を通過したメールの割合を確認する。
+認証ダッシュボードを使用して、Sender Policy Framework (SPF)、DomainKeys Identified Mail (DKIM)、および Domain-based Message Authentication, Reporting and Conformance (DMARC) に適合したメールの割合を確認します。
 
 | グラフの種類 | 定義 |
 | ----- | ---------- |
@@ -103,7 +103,7 @@ IP の信頼度の評価を解釈するには、次の表を参照してくだ�
 
 配信到達性を向上させるためのその他のアイデアについては、[配信到達性の落とし穴とスパムトラップ][6] を参照してください。メールキャンペーンを送る前にチェックすべき点については、【メールのベストプラクティス][7] 】を必ず参照しよう。
 
-## マイクロソフト・スマート・ネットワーク・データ・サービス（SNDS）の設定
+## Microsoft Smart Network Data Services (SNDS) の設定
 
 Microsoft がメインのメールボックスプロバイダーである場合、この連携を使用すると Microsoft の信頼度データにアクセスして表示できます。これにより、IP の健全性を監視し、メールの受信状況の判断に役立てることができます。
 
