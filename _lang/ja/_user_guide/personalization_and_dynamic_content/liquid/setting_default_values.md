@@ -12,7 +12,7 @@ description: "このリファレンス記事では、メッセージで使用す
 
 > 既定のフォールバックは、メッセージで使用する任意のパーソナライゼーション 属性に設定できます。この記事では、デフォルト値の仕組み、設定方法、メッセージングでの使用方法について説明する。
 
-## どのように機能するか
+## 仕組み
 
 デフォルト値を追加するには、[Liquid フィルター][3]を「デフォルト」という名前で指定します (インラインでフィルターを区別するには `|` を使用します)。
 
@@ -42,18 +42,18 @@ Hi Valued User, thanks for using the App!
 {% endraw %}
 
 {% alert important %}
-空の値にはデフォルト値が表示されるが、空白の値には表示されない。空の値には何も含まれないが、空白の値には空白文字（スペースなど）が含まれ、他の文字は含まれない。例えば、空の文字列は`""` のように見え、空白の文字列は`" "` のように見える。
+空の値にはデフォルト値が表示されるが、空白の値には表示されない。空の値には何も含まれないが、空白の値には空白文字（スペースなど）が含まれ、他の文字は含まれない。例えば、空の文字列は`""` のようになり、空白からなる文字列は`" "` のようになります。
 {% endalert %}
 
 ## 異なるデータ型にデフォルト値を設定する
 
-上の例は、文字列にデフォルトを設定する方法を示している。`empty` 、`nil` （未定義）、`false` （文字列、ブーリアン、配列、オブジェクト、数値を含む）の値を持つ任意のLiquidデータ型にデフォルト値を設定することができる。
+上の例は、文字列にデフォルトを設定する方法を示している。値が `empty` 、`nil` (未定義)、または `false` の任意の Liquid データ型 (文字列、ブール値、配列、オブジェクト、数値を含む) のデフォルト値を設定できます。
 
 ### ユースケース:ブール値
 
 例えば、`premium_user` というブーリアンカスタム属性があり、ユーザーのプレミアムステータスに基づいてパーソナライズされたメッセージを送信したいとしよう。プレミアムステータスを設定していないユーザーもいるので、そのようなユーザーを捕捉するためにデフォルト値を設定する必要がある。
 
-1. `premium_user` 属性に`is_premium_user` という変数を割り当て、デフォルト値を`false` とする。つまり、`premium_user` が`nil` の場合、`is_premium_user` の値は`false` がデフォルトとなる。 
+1. `premium_user` 属性に`is_premium_user` という変数を割り当て、デフォルト値を `false` とします。つまり、`premium_user` が`nil` の場合、`is_premium_user` のデフォルト値は `false` になります。 
 
 {% raw %}
 ```liquid
@@ -61,7 +61,7 @@ Hi Valued User, thanks for using the App!
 ```
 
 {: start="2"}
-2\.次に、条件付きロジックを使用して、`is_premium_user` が`true` の場合に送信するメッセージを指定する。言い換えれば、`premium_user` が`true` の場合、何を送ればいいのか、ということだ。また、ユーザー名がわからない場合に備えて、ユーザーの名にもデフォルト値を割り当てておく。
+2\.次に、条件付きロジックを使用して、`is_premium_user` が `true` の場合に送信するメッセージを指定します。言い換えれば、`premium_user` が`true` の場合、何を送ればいいのか、ということだ。また、ユーザーの名が不明な場合に備えて、ユーザーの名にもデフォルト値を割り当てます。
 
 ```liquid
 {% if is_premium_user %}
@@ -69,7 +69,7 @@ Hi {{${first_name} | default: 'premium user'}}, thank you for being a premium us
 ```
 
 {: start="3"}
-3\.最後に、`is_premium_user` が`false` の場合（つまり、`premium_user` が`false` または`nil` の場合）に送信するメッセージを指定する。そして条件ロジックを閉じる。
+3\.最後に、`is_premium_user` が`false` の場合（つまり `premium_user` が`false` または`nil` の場合）に送信するメッセージを指定します。その後、条件ロジックを閉じます。
 
 ```liquid
 {% else %}
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details フルリキッドコード %}
+{% details 完全な Liquid コード %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -95,7 +95,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 
 例えば、`reward_points` という数値のカスタム属性があり、ユーザーの報酬ポイントをメッセージとして送信したいとしよう。報酬ポイントが設定されていないユーザーもいるので、そのようなユーザーを考慮してデフォルト値を設定する必要がある。
 
-1. メッセージの冒頭には、ユーザーの名か、名前がわからない場合のデフォルト値`Valued User` を指定する。
+1. メッセージの開始時に、ユーザーの名を指定します。ユーザーの名が不明な場合はデフォルト値 `Valued User` を使用します。
 
 {% raw %}
 ```liquid
@@ -104,7 +104,7 @@ Hi {{${first_name} | default: 'valued user'}},
 {% endraw %}
 
 {: start="2"}
-2\.`reward_points` というカスタム属性を使用し、デフォルト値`0` を使用することで、ユーザーの報酬ポイント数をメッセージの最後に記載する。`reward_points` の値が`nil` であるすべてのユーザーには、`0` の報酬ポイントがメッセージに記載される。
+2\.カスタム属性 `reward_points` とデフォルト値 `0` を使用して、ユーザーのリワードポイント数をメッセージの最後に記載します。`reward_points` の値が `nil` であるすべてのユーザーには、リワードポイントとして `0` がメッセージに記載されます。
 
 {% raw %}
 ```liquid
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details フルリキッドコード %}
+{% details 完全な Liquid コード %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -172,7 +172,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 {% endraw %}
 
 {: start="2"}
-2\.`upcoming_trips` にコンテンツがある場合に送信するメッセージを指定する：<br><br>**2a.**ユーザーの名前を入力し、デフォルト値を含める。<br>**2b.**`upcoming_trips` に含まれる各トリップのプロパティ（または情報）をプルすることを指定するには、`for` タグを使用する。<br>**2c.**メッセージにプロパティを列挙し、`departure_date` が設定されていない場合のデフォルト値を含める。(トリップの作成には`destination` が必要なので、デフォルト値を設定する必要はないとしよう)。<br>**2d.**`for` タグを閉じ、次に条件ロジックを閉じる。
+2\.`upcoming_trips` にコンテンツがある場合に送信するメッセージを指定する：<br><br>**2a.**ユーザーを指定し、ユーザーの名前が不明な場合に備えてデフォルト値を含めます。<br>**2b.**`for` タグを使用して、`upcoming_trips` に含まれる各トリップのプロパティ (または情報) を取得することを指定します。<br>**2c.**メッセージにプロパティを列挙し、`departure_date` が設定されていない場合のデフォルト値を含める。(トリップの作成には`destination` が必要なので、デフォルト値を設定する必要はないとしよう)。<br>**2d.**`for` タグを閉じ、次に条件ロジックを閉じます。
 
 {% raw %}
 ```liquid
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details フルリキッドコード %}
+{% details 完全な Liquid コード %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
