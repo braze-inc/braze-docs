@@ -11,7 +11,7 @@ channel:
 
 # リッチプッシュ通知
 
-> リッチプッシュ通知は、画像、GIF、および動画を持つプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードが表示される前に変更できる拡張機能です。アップルの [`UNNotificationAttachment`](https://developer.apple.com/reference/usernotifications/unnotificationattachment)を参照のこと。
+> リッチプッシュ通知は、画像、GIF、および動画を持つプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードが表示される前に変更できる拡張機能です。サポートされているファイルタイプとサイズのリストについては、Apple の [[`UNNotificationAttachment`](https://developer.apple.com/reference/usernotifications/unnotificationattachment)] を参照してください。
 
 ## ステップ1:サービス拡張の作成
 

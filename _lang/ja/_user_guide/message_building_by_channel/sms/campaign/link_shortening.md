@@ -92,7 +92,7 @@ LiquidによってレンダリングされるURLは、APIトリガーのプロ�
 |`user_click_tracking_enabled`| オプション | ブール値 | `user_click_tracking_enabled`を`true`に設定して、リンクの短縮、キャンペーンレベルおよびユーザーレベルのクリックトラッキングをオンにします。クリックされたURLのユーザーセグメントを作成するために、追跡されたデータを使用できます。トラッキングを使用するには、`campaign_id` と `message_variation_id` が存在しなければなりません。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-リクエストパラメータの完全なリストについては、[リクエストパラメータ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters)を参照してください。
+完全なリクエストパラメーターのリストについては、「[リクエストパラメーター]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters)」を参照してください。
 
 ## テスト
 
@@ -188,7 +188,7 @@ Braze にドメインを委任するには、次の手順に従ってくださ�
 
 #### 短縮URLはどのくらいの期間有効ですか？
 
-静的URL は、最初に送信するなど、URL 登録時から1 年間有効です。動的URL は、URL 登録時から2 か月間有効です。
+静的URLは、URL登録時 (最初の送信など) から1年間有効です。動的URL は、URL 登録時から2 か月間有効です。
 
 #### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
 

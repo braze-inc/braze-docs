@@ -29,7 +29,7 @@ tool:
 {% alert important %}
 このツールはあくまで参考であり、正規表現が Braze プラットフォーム と100% 一致することを保証するものではありません。Braze のセグメンテーションおよびフィルタの正規表現では、`/gi` 修飾子が自動的に追加されます。[gi 修飾子](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)は、文字列中に出現する正規表現を大文字小文字を区別せずに検索するために使われます。  
 <br>
-カスタムイベントトリガープロパティおよびトリガーフィルタの正規表現では、`/g` 修飾子(大文字と小文字の区別あり。[g 修飾子](https://www.w3schools.com/jsref/jsref_regexp_g.asp) を参照)を使用し、`/i` 修飾子は使用しません。カスタムイベントトリガープロパティとトリガーフィルタの大文字と小文字を区別しない場合は、代わりに`(?i)` を使用します。たとえば、`Matches regex (?i)STOP(?-i)` は"STOP" の使用をキャッチします。いずれの場合も("stop" " please stop" および" は、メッセージ" の送信を停止しません)。
+カスタムイベントトリガープロパティおよびトリガーフィルタの正規表現では、`/g` 修飾子(大文字と小文字の区別あり。[g 修飾子](https://www.w3schools.com/jsref/jsref_regexp_g.asp) を参照)を使用し、`/i` 修飾子は使用しません。カスタムイベントトリガープロパティとトリガーフィルタの大文字と小文字を区別しない場合は、代わりに`(?i)` を使用します。例えば `Matches regex (?i)STOP(?-i)` は、いずれの場合 (「stop」、「please stop」および「never stop sending me messages」) でも「STOP」の使用を検出します。
 {% endalert %}
 
 {% tabs %}
@@ -190,7 +190,7 @@ $( document ).ready(function() {
 
 例えば、"San" で始まる都市に住むユーザーをターゲットにする場合、正規表現は `^San \w` とします。この正規表現を使えば、サンフランシスコ、サンディエゴ、サンノゼなどの都市のユーザーをターゲットにできます。
 
-!["^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %}) の正規表現に一致する都市のフィルタ
+![正規表現「^San \\w」に一致する市区町村のフィルター。]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
@@ -206,7 +206,7 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![\\d\\d\\d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %}) の正規表現に一致する電話番号のフィルタ
+![正規表現「^1?718\\d\\d\\d\\d\\d\\d\\d」に一致する電話番号のフィルター。]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
 [regex]: https://regex101.com/

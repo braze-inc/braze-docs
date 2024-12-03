@@ -196,7 +196,7 @@ AppDelegate.braze = braze;
 |`toString()`      | String表現としてのメッセージ。                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-アプリ内メッセージモデルの完全なリファレンスについては、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)ドキュメントを参照のこと。
+アプリ内メッセージモデルの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)] のドキュメントを参照してください。
 
 ### アプリ内メッセージボタンモデルのプロパティ
 
@@ -212,7 +212,7 @@ AppDelegate.braze = braze;
 |`toString()`      | String表現としてのボタン。                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-ボタンモデルの完全なリファレンスは、[Androidと](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) [iOSの](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button)ドキュメントを参照のこと。
+ボタンモデルの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button)] のドキュメントを参照してください。
 
 ## GIFサポート
 
