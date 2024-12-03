@@ -143,5 +143,5 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 
 {% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
 
-![アプリ内メッセージをテストするために、テスト受信者として独自のユーザID を追加できることを示すブレーズアプリ内メッセージキャンペーン。]({% image_buster /assets/img/react-native/iam-test.png %} "アプリ内メッセージングテスト")
+![アプリ内メッセージをテストするため、テスト受信者として自分のユーザー ID を追加できることを示す Braze アプリ内メッセージキャンペーン。]({% image_buster /assets/img/react-native/iam-test.png %}「アプリ内メッセージングテスト」)
 
