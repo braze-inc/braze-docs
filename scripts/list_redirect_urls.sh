@@ -4,10 +4,7 @@
 # base URL to list all old URLs so the user can open old links directly from
 # the terminal to test redirects.
 # 
-# Usage: ./bdocs redirects
-
-# Fetch the latest changes from the remote.
-git fetch origin develop --quiet
+# Usage: ./bdocs lredirects
 
 # Check new redirects by comparing the current branch to develop.
 NEW_REDIRECTS=$(git diff develop -- $PROJECT_ROOT/assets/js/broken_redirect_list.js)
