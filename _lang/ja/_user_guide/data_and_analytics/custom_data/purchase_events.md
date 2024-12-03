@@ -129,18 +129,18 @@ Braze はセグメンテーション用に購入指標を追跡するだけで�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">生涯収益</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='生涯収入' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">ユーザーあたりの生涯価値</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー一人当たりの生涯価値' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">1日の平均収入</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='平均日収' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">毎日の購入</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">日割り購入数</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='1日の購入額' %}</td>
         </tr>
         <tr>
