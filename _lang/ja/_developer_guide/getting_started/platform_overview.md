@@ -29,7 +29,7 @@ Braze はカスタマーエンゲージメントプラットフォームです�
 
 Brazeのより一般的な概要を知りたいマーケティング担当者は、代わりに[マーケティング担当者向けの「Getting Started」セクションを]({{site.baseurl}}/user_guide/getting_started/overview/)チェックしよう。
 
-![Braze にはさまざまなレイヤーがあります。全体として、SDK、API、ダッシュボード、およびパートナー連携から構成されています。これらはそれぞれ、データインジェストレイヤー、分類レイヤー、オーケストレーションレイヤー、パーソナライゼーションレイヤー、およびアクションレイヤーの一部を構成します。アクションレイヤーには、プッシュ、アプリ内メッセージ、Connected Catalog、Webhook、SMS、メールなど様々なチャネルがある。]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
+![Braze にはさまざまなレイヤーがあります。全体として、SDK、API、ダッシュボード、およびパートナー連携から構成されています。これらはそれぞれ、データインジェストレイヤー、分類レイヤー、オーケストレーションレイヤー、パーソナライゼーションレイヤー、およびアクションレイヤーの一部を構成します。アクションレイヤーには、プッシュ、アプリ内メッセージ、コネクテッドカタログ、Webhook、SMS、メールなど、さまざまなチャネルがあります。]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -50,7 +50,7 @@ Brazeのより一般的な概要を知りたいマーケティング担当者は
 
 ダッシュボードは、Brazeプラットフォームの中心にあるすべてのデータとインタラクションを制御するUIである。マーケティング担当者はダッシュボードを使って仕事をし、コンテンツを作成する。開発者はダッシュボードを使い、APIキーやプッシュ通知の認証情報など、アプリを統合するための設定を管理する。
 
-始めたばかりの場合は、チーム管理者が[ダッシュボードで]({{site.baseurl}}/user_guide/administrative/access_braze)あなた（およびBrazeへのアクセスが必要な他のチームメンバー全員）を[ユーザーとして]({{site.baseurl}}/user_guide/administrative/access_braze)追加する必要がある。
+始めたばかりの場合は、チーム管理者がダッシュボードであなた（およびBrazeへのアクセスが必要な他のチームメンバー全員）を[ユーザーとして]({{site.baseurl}}/user_guide/administrative/access_braze)追加する必要がある。
 
 ### REST API
 
@@ -64,7 +64,7 @@ Braze の構成要素については、以下を確認してください。[は�
 
 Braze に保存されたデータは、Braze の顧客である限り保持され、セグメンテーション、パーソナライゼーション、およびターゲティングのために保持され、使用できます。これにより、その情報を非推奨にすることを選択するまで、ユーザープロファイルデータ (たとえば、セッションアクティビティや購入) に対して操作を行うことができます。例えば、ストリーミングサービスは、各サブスクライバーがサービス利用開始日から (それが何年も前であっても) 視聴したコンテンツを追跡し、そのデータを使用して関連するメッセージングを強化できます。
 
-![ダッシュボードの「最近の購入者」というセグメンテーションと、「リンダへの一番のおすすめ」というメールを表示する電話画面を並べたもの。]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Braze のダッシュボードにある「最近の購入者」というセグメントと、「リンダへの一番のおすすめ」というメールが表示された電話画面が隣り合わせになっている。]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### アプリ分析
 
