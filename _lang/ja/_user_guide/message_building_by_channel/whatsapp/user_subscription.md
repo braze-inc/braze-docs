@@ -41,7 +41,7 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 
 ## WhatsAppのオプトインとオプトアウトのプロセス
 
-現在、ユーザーは[SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal)、Webサイト、WhatsAppスレッド、電話、対面など様々な方法でWhatsAppメッセージングのサブスクライバーや[オプトイン、オプトアウトを]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)行うことができる。オプトインは必須である点に注意してください。
+現在、ユーザーは[SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal)、Web サイト、WhatsApp スレッド、電話、対面などさまざまな方法で WhatsApp メッセージングに登録し、[オプトインおよびオプトアウト]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)することができます。オプトインは必須である点に注意してください。
 
 オプトインキーワードは現在WhatsAppチャンネルではサポートされていないため、ユーザーリストの管理はユーザー次第となる。WhatsAppはオプトインとレート制限に遡及的なアプローチを採用しており、ユーザーが報告やブロックを始めるとレート制限が引き下げられる。 
 
