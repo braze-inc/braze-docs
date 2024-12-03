@@ -9,7 +9,7 @@ description: "この記事では、Swift SDK のアンインストール追跡�
 
 # アンインストール追跡
 
-> iOSアプリケーションのアンインストール追跡の設定方法を学習し、Brazeのアンインストール追跡プッシュを受信した際にアプリが不要な自動アクションを取らないようにする。アンインストール追跡では、ペイロードに Braze フラグを含むバックグラウンドプッシュ通知を利用します。一般的な情報については、[アンインストール追跡][6] を参照のこと。
+> iOSアプリケーションのアンインストール追跡の設定方法を学習し、Brazeのアンインストール追跡プッシュを受信した際にアプリが不要な自動アクションを取らないようにする。アンインストール追跡では、ペイロードに Braze フラグを含むバックグラウンドプッシュ通知を利用します。一般情報については、[アンインストール追跡][6]] を参照してください。
 
 {% alert important %}
 アンインストール追跡は不正確な場合があることを覚えておいてほしい。Brazeに表示される指標は、遅れたり不正確であったりする可能性がある。
@@ -17,13 +17,13 @@ description: "この記事では、Swift SDK のアンインストール追跡�
 
 ## ステップ1:バックグラウンドのプッシュを有効にする
 
-Xcodeプロジェクトで、**Capabilitiesに**行き、**Background Modesが**イネーブルメントになっていることを確認する。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)通知を参照のこと。
+Xcode プロジェクトで、[**Capabilities**] に移動し、[**Background Modes**] が有効になっていることを確認します。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)通知を参照のこと。
 
 ## ステップ 2:Braze のバックグラウンドプッシュを確認する
 
 Braze では、バックグラウンドプッシュ通知を使用してアンインストール追跡分析を収集します。アンインストール追跡通知の受信時に、アプリケーションで[不要なアクションが実行されない]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/)ようにしてください。
 
-## ステップ3: ダッシュボードからのテスト
+## ステップ3: Braze ダッシュボードからテストする
 
 次に、Brazeのダッシュボードから自分にテストプッシュを送る。このテストプッシュではユーザープロファイルは更新されないことを覚えておいてほしい。
 
