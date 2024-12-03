@@ -27,7 +27,7 @@ Before setting up the Outgrow and Braze integration, confirm you have the follow
 |-------------|-------------|
 | **Outgrow account** | A registered Outgrow account to configure and manage interactive content and data transfer settings |
 | **Braze account** | A Braze account with access to REST API credentials |
-| **API key** | An API Key from Braze with appropriate permissions (such as `users.track`) to enable user data transfer. |
+| **API key** | An API key from Braze with appropriate permissions (such as `users.track`) to enable user data transfer |
 | **Custom attributes in Braze** | Custom attributes set up in Braze to capture Outgrow responses (such as quiz scores, segments, and others) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -86,7 +86,7 @@ With the integration, you can create Braze segments based on custom attributes p
 You can use the custom segments created from Outgrow data to personalize your Braze campaigns and target users based on their responses to interactive content. To do so and create a more personalized user experience, follow these steps:
 
 1. In Braze, go to **Engagement** > **Campaigns**.
-2. Select **Create Campaign** and choose your campaign type (email, push, in-app message, or others.).
+2. Select **Create Campaign** and choose your campaign type (email, push, in-app message, or others).
 3. In the audience targeting step, select the segment created from Outgrow attributes (such as users with specific quiz scores or segments).
 4. Customize your campaign content and settings, and then launch.
 
@@ -97,7 +97,7 @@ You can use the custom segments created from Outgrow data to personalize your Br
 | **Data isn't transferring to Braze** | Verify that the API key and endpoint URL are correct in your Outgrow integration settings. Make sure the API key has the `users.track` permission turned on. |
 | **Incorrect data mapping** | Make sure that each mapped Outgrow response corresponds to a valid Braze custom attribute and that the attribute names match exactly. |
 | **Segment not filtering correctly** | Make sure that custom attributes in Braze are properly set up and receiving data. Re-check your segment filter logic. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }git
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Additional considerations
 
