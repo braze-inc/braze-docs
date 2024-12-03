@@ -9,12 +9,12 @@ channel:
 
 # ユーザー設定センターの概要
 
-> ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事にはAPIで生成されたユーザー設定センターを構築するステップが含まれているが、[ドラッグ＆ドロップエディターを使って]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)ユーザー設定センターを構築することもできる。
+> ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事では、API で生成されたユーザー設定センターの作成手順を説明しますが、[ドラッグ＆ドロップエディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使ってユーザー設定センターを作成することもできます。
 
 Braze ダッシュボードで、[**オーディエンス**] > [**購読**] > [**メールユーザー設定センター**] に移動します。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは**ユーザー**>**サブスクリプショングループ**> ユーザー設定センターにある。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは [**ユーザー**] > [**購読グループ**] > [**メールユーザー設定センター**] にあります。
 {% endalert %}
 
 ここで各サブスクリプショングループを管理し、見ることができる。作成した各購読グループは、このユーザー設定センターリストに追加されます。複数のユーザー設定センターを作成することができます。
@@ -23,7 +23,7 @@ Braze ダッシュボードで、[**オーディエンス**] > [**購読**] > [*
 ユーザー設定センターは、Braze のメールチャネル内で使用するために用意されています。ユーザー設定センターのリンクは、各ユーザーに基づいて動的に設定されるため、外部でホストすることはできません。
 {% endalert %}
 
-## APIを使ってユーザー設定センターを作成する
+## API を使用してユーザー設定センターを作成する
 
 [ユーザー設定センターの Braze エンドポイント]({{site.baseurl}}/api/endpoints/preference_center)を使用することで、ユーザー設定センター （Braze がホストする Web サイト） を作成し、ユーザーの購読状態や購読グループのステータスを表示することができます。開発者チームは HTML と CSS を使ってユーザー設定センターを作成することにより、ページのスタイルをブランドガイドラインに合わせることができます。
 
@@ -43,7 +43,7 @@ Liquid を使うことで、購読グループの名前と各ユーザーのス�
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
-### ステップ1:ユーザー設定センターを作成するエンドポイントを使用する。
+### ステップ1:ユーザー設定センターの作成エンドポイントを使用する
 
 [ユーザー設定センターの作成エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)を使って、ユーザー設定センターの作成を開始します。ユーザー設定センターをカスタマイズするには、`preference_center_page_html` フィールドと `confirmation_page_html` フィールドにブランディングに沿った HTML を含めることができます。
 
@@ -120,8 +120,8 @@ My encoded string is: {{my_string}}
 
 ## よくある質問
 
-### ユーザー設定センターは作っていない。ダッシュボードに "PreferenceCenterBrazeDefault "が表示されるのはなぜか？
+### ユーザー設定センターをまだ作成していません。ダッシュボードに "PreferenceCenterBrazeDefault "が表示されるのはなぜか？
 
-これは、レガシーリキッド{%raw%}`${preference_center_url}`{%endraw%} が使われているときに、ユーザー設定センターをレンダリングするために使われる。つまり、{%raw%}`${preference_center_url}` または`preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} のどちらかを参照するキャンバスステップやテンプレートは動作しない。これは、レガシーLiquidや "PreferenceCenterBrazeDefault "をメッセージの一部として含む、過去に送信されたメッセージにも適用される。 
+これは、レガシー Liquid {%raw%}`${preference_center_url}`{%endraw%} が仕様されている場合にユーザー設定センターをレンダリングするために使用されます。つまり、{%raw%}`${preference_center_url}` または `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} のいずれかを参照するキャンバスステップまたはテンプレートは機能しません。これは、レガシーLiquidや "PreferenceCenterBrazeDefault "をメッセージの一部として含む、過去に送信されたメッセージにも適用される。 
 
-新しいメッセージで{%raw%}`${preference_center_url}`{%endraw%} を再度参照すると、"PreferenceCenterBrazeDefault "というユーザー設定センターが再度作成される。
+新しいメッセージで {%raw%}`${preference_center_url}`{%endraw%} を再度参照すると、「PreferenceCenterBrazeDefault」という名前のユーザー設定センターが再度作成されます。
