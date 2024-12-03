@@ -19,7 +19,7 @@ In Braze, information about your audience is stored in user profiles. A [user pr
 
 By understanding user profiles, you can gain insights into your audience and engage with them on a personalized and targeted level. A user's profile contains a lot of information, but here are some of the key parts:
 
-- **User Identifier:** Each user profile is uniquely identified by a user ID, called an `external_id`. This identifier allows Braze to track and associate user data across different channels and devices, providing a unified view of each user's interactions with your brand.
+- **User Identifier:** Each user profile is uniquely identified by a user ID, called an `external_id`. This identifier allows Braze to track and associate user data across different channels and devices, providing a unified view of each user's interactions with your brand. [Anonymous user profiles]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/#assigning-user-aliases) as an alternative identifier.
 - [Attributes](#attributes)**:** These are specific pieces of information about the user, such as their name, age, location, or any other demographic information. You can use these attributes to segment your audience and personalize your messaging.
 - [Events](#events)**:** These are actions that the user takes, like making a purchase, clicking on a link, or opening an app. Braze tracks these events to help you understand the user’s behavior and engagement. Similar to attributes, you can also use events to segment and personalize.
 - **Purchases:** This section records the user's purchase history. It's crucial for understanding the user's buying habits and preferences.
@@ -110,26 +110,6 @@ Data points are consumed when a user's profile data is updated or when they perf
 By thoughtfully considering what information to track as data points, you're targeting the highest-impact data for your users' experience. Your Braze account manager will help recommend data best practices to fit your needs.
 
 Visit our dedicated article to learn more about [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
-
-### Anonymous users
-
-Users who visit your website or application without logging in, like a guest visitor, are recognized as anonymous users. These users aren’t known, but they still have data points assigned to them.
-
-When an anonymous user visits your website or application, the Braze SDK creates and assigns them to an “anonymous” user profile with a `braze_id`. While the user browses, the SDK automatically captures data for their anonymous user profile, such as usage information, device information, and more if you’ve set up custom attributes and custom events.
-
-You can do the following with captured anonymous users:
-
-- Message users before they log in.
-- Collect a user’s profile before they log in, so you don’t miss out on relevant data.
-- Encourage profile completion with a message when a user only partially completes their profile.
-- Complete a user’s profile when they log in, so that you can cancel messaging on other platforms (such as not sending a “free shipping on 1st app order” message when the user already has made app orders).
-- Engage with users who show an intent to exit by encouraging them to create a profile, checkout their cart, or take another action.
-
-#### Recognizing and targeting anonymous users
-
-Anonymous users don’t have `external_ids`, which are used to update user profiles with the Braze API. However, you can assign anonymous user profiles with an alternative identifier: user aliases. This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [**External User ID is blank**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
-
-Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
 ## Segments
 
