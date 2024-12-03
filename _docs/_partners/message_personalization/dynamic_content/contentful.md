@@ -70,7 +70,7 @@ Different endpoints may require new variables, for instance the Images API requi
 ### Step 3: Use Connected Content in campaigns and Canvasses
 
 1. In Braze, create a new campaign or edit an existing one.
-2. Use the Connected Content block to insert data fetched from Contentful. Use the data paths you defined during the configuration to dynamically populate campaign content.
+2. Use the Connected Content block to insert data fetched from Contentful. Use the data paths you defined during the configuration to dynamically populate campaign content.<br><br>
 - **Response path:** After including the Content Block in a Braze Campaign or Canvas, the response becomes available when you insert the variable `{response}` into your message.<br><br>JSON dot notation allows you to specify what part of the response body from Contentful you want to include in your message. This will vary based on your use case. For example, you can use the title value ({% raw %}```liquid{{response.items[0].fields.title}}```{% endraw %}) from Contentful's Entry endpoint and receive a response like this:
 
 {% raw %}
