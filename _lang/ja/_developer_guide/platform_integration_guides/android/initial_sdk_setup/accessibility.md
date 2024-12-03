@@ -18,7 +18,7 @@ description: "この参考記事では、Android または FireOS アプリケ�
 Android の読み上げ / 「VoiceOver」で、アプリ内メッセージの表示中にその背後にある内容が読み取られないようにするには、以下の SDK 設定を有効にしてください。
 
 {% tabs %}
-{% tab ろう付けXML %}
+{% tab Braze XML %}
 
 ```xml
 <bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
