@@ -1,16 +1,15 @@
 ---
 nav_title: Contentful
 article_title: Contentful
-description: "How to use Connected Content to dynamicallyvpull content from Contentful into your Braze campaigns."
+description: "This reference article outlines the partnership between Braze and Contentful, a content management system that allows you to dynamically use Connected Content to pull content from Contentful into your Braze campaigns."
 alias: /partners/contentful/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Contentful
 
->[Contentful](https://www.contentful.com/) is a headless content management system that lets you create, manage, and distribute content to any platform. Unlike a content management system (CMS), Contentful give you total freedom to create your own content model so you can decide which content you want to manage.<br><br>This page provides a step-by-step guide to configure Braze Connected Content to fetch data from Contentful's Content Delivery API. 
+>[Contentful](https://www.contentful.com/) is a headless content management system that lets you create, manage, and distribute content to any platform. Unlike a content management system (CMS), Contentful allows you to create your content model so you can decide which content you want to manage.<br><br>This page provides a step-by-step guide to configure Braze Connected Content to fetch data from Contentful's Content Delivery API. 
 
 After you're integrated, you can use Contentful's RESTful APIs to deliver your content across multiple channels, such as websites, mobile apps (iOS, Android, and Windows), or many other platforms. You can also dynamically pull content from Contentful for use in your Braze campaigns.
 
@@ -21,19 +20,19 @@ Before you start, you'll need the following:
 | Prerequisite          | Description                        |
 |-----------------------|------------------------------------|
 | A Contentful account | You need a Contentful account with access to the Content Delivery API. |
-| A Braze Account | You need a Braze account with access to the Connected Content feature. |
+| A Braze account | You need a Braze account with access to the Connected Content feature. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation/), you can create an API key at **Developer Console** > **API Settings**.
+If you're using the [older navigation]({{site.baseurl}}/navigation/), you can create an API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
 ## Integration
 
-### Step 1: Obtain Contentful API credentials
+### Step 1: Get your Contentful API credentials
 
 1. [Log into Contentful](https://app.contentful.com/login) with your credentials.
-2. Create or retrieve API Access Tokens in the Contentful dashboard by going to **Settings** > **API keys**. If you don't already have an API key, create a new one:<br>2.1 Select **Add API key**.<br>2.2 Enter the required details and select the appropriate environment.<br>2.3 Select **Save** and note the **Space ID** and **Content Delivery API - access token**.
+2. Create or retrieve API access tokens in the Contentful dashboard by going to **Settings** > **API keys**. If you don't already have an API key, create a new one:<br>2.1 Select **Add API key**.<br>2.2 Enter the required details and select the appropriate environment.<br>2.3 Select **Save** and note the **Space ID** and **Content Delivery API - access token**.
 3. Identify the content model you want to access through the Contentful API.
 
 ### Step 2: Configure Braze Connected Content
@@ -64,8 +63,8 @@ Different endpoints may require new variables, for instance the Images API requi
 
 {: start="4"}
 4. Use "Test Endpoint" to test that Braze can successfully connect to the Contentful API and retrieve the desired data.
-5. After testing the endpoint and confirming that it works, select **Done** to save your Content Block.
-6. Give your Content Block a descriptive name, such as "Contentful API". Then select **Launch Content Block**.
+5. Select **Done** to save your Content Block.
+6. Give your Content Block a descriptive name, such as "Contentful API", then select **Launch Content Block**.
 
 ### Step 3: Use Connected Content in campaigns and Canvasses
 
@@ -122,16 +121,16 @@ Different endpoints may require new variables, for instance the Images API requi
 {% endraw %}
 
 {: start="3" }
-3. Preview and test your campaign to confirm that the Connected Content data correctly displays.
+3. Preview and test your campaign to confirm that the Connected Content data displays correctly.
 4. After you're satisfied with the setup, launch your campaign.
 
 ## Troubleshooting
 
-### API response issues
+### API response
 
 Make sure that your Contentful API credentials and endpoint URL are correct. Check for any error messages in Braze that might indicate issues with the API call.
 
-### Data mapping problems
+### Data mapping
 
 Verify that the response path mappings are correctly configured and that the API response structure matches your expectations.
 
