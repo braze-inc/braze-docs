@@ -55,7 +55,7 @@ Braze は、**メッセージアクティビティログ**内のプッシュ通�
 
 ![エラーが発生した時刻、アプリ名、チャンネル、エラータイプ、エラーメッセージを表示するプッシュエラーログ。]({% image_buster /assets/img_archive/message_activity_log.png %})
 
-ここに表示される一般的なエラーには、["Received Unregistered Sending to Push Token"](#received-unregistered-sending) などのユーザー固有の通知が含まれます。
+ここでよく見かけるエラーとしては、[[「プッシュトークンへの登録されていない送信の受信」]](#received-unregistered-sending) など、ユーザー固有の通知があります。
 
 さらに、Braze は ［**エンゲージメント**］ タブのユーザープロファイルにプッシュ通知の変更ログも提供します。この変更ログは、トークンの無効化、プッシュ登録エラー、トークンの新規ユーザーへの移動などのプッシュ登録動作に関するインサイトを提供します。
 
@@ -74,7 +74,7 @@ Braze は、**メッセージアクティビティログ**内のプッシュ通�
 - アプリがプッシュ通知を許可するように求めるメッセージを表示していることを確認します。通常、このプロンプトはアプリを初めて起動したときに表示されますが、他の場所に表示されるようにプログラムすることもできます。表示されるべき場所に表示されない場合は、アプリのプッシュ機能の基本構成に問題がある可能性があります。
   - [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)の手順が正常に完了したことを確認します。
   - アプリのビルドに使用されたプロビジョニングプロファイルにプッシュの権限が含まれていることを確認します。Apple 開発者アカウントから利用可能なプロビジョニングプロファイルをすべてプルダウンしていることを確認してください。これを確認するには、次の手順を実行します。
-    1. Xcodeで、**［環境設定］ > ［アカウント］** に移動します (または、キーボードショートカット <kbd>［<kbd>コマンド</kbd>+<kbd>,</kbd>］ を使用します）。
+    1. Xcodeで、**［環境設定］ > ［アカウント］** に移動します (または、キーボードショートカット [<kbd>Command</kbd>+<kbd>,</kbd>] を使用します）。
     2. 開発者アカウントに使用する Apple ID を選択し、［**詳細を表示**］ をクリックします。
     3. 次のページで、[**<i class="fas fa-redo-alt"></i>更新**] をクリックし、使用可能なすべてのプロビジョニングプロファイルをプルしていることを確認します。
 - アプリで[適切に有効なプッシュ機能]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities)があることを確認します。
@@ -116,13 +116,13 @@ Braze は、**メッセージアクティビティログ**内のプッシュ通�
 
 以下は、プッシュ登録に問題があるか、プッシュ後にユーザーのトークンが APNs によって無効として Braze に返されたことを示します。
 
-![ユーザーの連絡先設定を表示するユーザープロファイル。ここでは、プッシュが登録されているアプリを確認できます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![ユーザーの連絡先設定を表示するユーザープロファイル。ここでは、どのアプリがプッシュ通知に登録されているかを確認できます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## メッセージアクティビティログのエラー
 
 #### プッシュトークン {#received-unregistered-sending} への未登録送信を受信した
 
-- メソッド `[[Appboy sharedInstance] registerPushToken:]` から Braze に送信されているプッシュトークンが有効であることを確認してください。**メッセージアクティビティログ**を見ると、プッシュトークンを確認できます。これは `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6` のようになり、文字と数字が混在する長い文字列になります。プッシュトークンが異なるように見える場合は、[code]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze) でプッシュトークンを送信するかどうかを確認します。
+- メソッド `[[Appboy sharedInstance] registerPushToken:]` から Braze に送信されているプッシュトークンが有効であることを確認してください。**メッセージアクティビティログ**を見ると、プッシュトークンを確認できます。これは `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6` のようになり、文字と数字が混在する長い文字列になります。プッシュトークンが異なるように見える場合は、Braze にプッシュトークンを送信するための [[コード]]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze) を確認してください。
 - プッシュプロビジョニングプロファイルがテスト対象の環境と一致することを確認します。ユニバーサル証明書は、開発または実稼働の APNs 環境のいずれかに送信するように Braze ダッシュボードで構成できます。実稼働アプリ用の開発証明書または開発アプリ用の実稼働証明書は動作しません。
  - Braze にアップロードしたプッシュトークンが、プッシュトークンの送信元のアプリのビルドに使用したプロビジョニングプロファイルと一致することを確認します。
 
