@@ -29,7 +29,7 @@ description: "このリファレンス記事では、Braze Android SDK がキャ
 * `TIMEZONE`
 
 {% alert note %}
-`AD_TRACKING_ENABLED` と `TIMEZONE` は `null` または空白の場合は収集されません。`GOOGLE_ADVERTISING_ID` は SDK によって自動的に収集されないため、[ 経由で渡す必要があります。
+`AD_TRACKING_ENABLED` と `TIMEZONE` は `null` または空白の場合は収集されません。`GOOGLE_ADVERTISING_ID` は SDK によって自動的に収集されないため、[`setGoogleAdvertisingId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) 経由で渡す必要があります。
 {% endalert %}
 
 収集するプロパティを無効にしたり指定したりするには、[`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html) と [`BrazeConfig.Builder.setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html) を使用してプロパティを設定します。
