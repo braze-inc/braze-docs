@@ -19,7 +19,7 @@ description: "この参照記事では、iOS 用 CocoaPods を使用して Braze
 $ sudo gem install cocoapods
 ```
 
-CocoaPodsに関して問題がある場合は、CocoaPods[トラブルシューティングガイドCocoaPods](http://guides.cocoapods.org/using/troubleshooting.html "Troubleshooting Guideを")参照する。
+CocoaPods に関して問題がある場合は、CocoaPods [[トラブルシューティングガイド](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods トラブルシューティングガイド")] を参照してください。
 
 ## ステップ 2:Podfile の構築
 

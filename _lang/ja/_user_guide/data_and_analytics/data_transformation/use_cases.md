@@ -25,7 +25,7 @@ description: "このリファレンス記事では、Braze Data Transformation �
 
 ## Brazeとの連携
 
-ろう付けは、[Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/)、顧客の洞察と調査プラットフォームとの統合を持っている。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
+Braze は、顧客インサイトおよび調査のプラットフォームである [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) と連携しています。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
 
 ## 変換コードの例
 
@@ -36,7 +36,7 @@ description: "このリファレンス記事では、Braze Data Transformation �
 {% tabs local %}
 {% tab 基本変換 %}
 
-この例では、アンケートの回答を属性として取り、アンケートが完了したことを示すイベントを書き込みます。
+この例では、調査の回答を属性として取り、調査が完了したことを示すイベントを書き込みます。
 
 ```
 return {

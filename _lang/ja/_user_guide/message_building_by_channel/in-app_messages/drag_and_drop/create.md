@@ -51,7 +51,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 ### 追加の前提条件
 
 - Web SDKの場合、初期化オプション[`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)を`true`に設定する必要があります。`enableHtmlInAppMessages`オプションでもこれらのメッセージを機能させることができますが、非推奨であり、`allowUserSuppliedJavascript`に更新する必要があります。
-- Google Tagマネージャーを使用している場合は、GTMの設定で「HTMLアプリ内メッセージを許可」を有効にする必要がある。
+- Google Tag Manager を使用している場合は、GTM の構成で「Allow HTML In-App Messages」を有効にする必要があります。
 
 ## ステップ1:アプリ内メッセージを作成する
 
@@ -65,9 +65,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 - Brazeのドラッグアンドドロップアプリ内メッセージテンプレートを使用する
 - 保存されたドラッグアンドドロップのアプリ内メッセージテンプレートを選択
 
-**Build messageを**選択し、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始する。
+[**メッセージを作成**] を選択して、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
-![Brazeのテンプレートセクションで、ベーシック、バックグラウンド画像、電話番号キャプチャ、空白のテンプレートを選択できる。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![「基本」、「背景画像」、「電話番号キャプチャ」、「空白」の各テンプレートを選択できる「Braze テンプレート」セクション。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -82,7 +82,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 アプリ内メッセージはデフォルトで1ページから始まります。新しいページを追加するには:
 
-1. **ページの追加を**選択する。
+1. [**\+ ページを追加**] を選択します。
 2. カスタムまたはBraze提供のテンプレートから選択します。
 3. ページに意味のある名前を付けてください。これは、ページをつなぐときに役立ちます。
 
@@ -93,7 +93,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 既存のページを複製するには: 
 
 1. リスト内のページにカーソルを合わせて<i class="fas fa-ellipsis-vertical"></i>を選択し、さらにオプションを開封します。
-2. **複製を**選択する。
+2. [**複製**] を選択します。
 3. ページに意味のある名前を付けてください。これは、ページをつなぐときに役立ちます。
 
 {% endtab %}
@@ -119,12 +119,12 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 4. 開始ページからリンクしたいページを選択します。
 5. すべてのページがリンクされるまで続けます。
 
-![]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %}) ユーザーがアプリ内メッセージの2ページ目に移動するためのプライマリアクションボタンを編集している。
+![ユーザーがアプリ内メッセージの2ページ目に移動するための1次的なアクションボタンを編集している。]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 ページが他のページにリンクされていない場合、メッセージを起動できません。
 
 {% alert note %}
-ユーザーはいつでも閉じるXボタンを選択し、メッセージを終了することができる。このボタンは削除できません。
+ユーザーはいつでも X (閉じる) ボタンを選択してメッセージを閉じることができます。このボタンは削除できません。
 {% endalert %}
 
 ## ステップ 4: アプリ内メッセージを構築および設計する

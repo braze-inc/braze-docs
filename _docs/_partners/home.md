@@ -314,4 +314,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

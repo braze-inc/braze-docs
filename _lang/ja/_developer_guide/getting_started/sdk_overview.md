@@ -96,7 +96,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 
 ダッシュボードを使用して、**[設定] > [アプリ設定]** から特定のアプリの SDK バージョンを確認できます。[**ライブ SDK バージョン**] には、ユーザーの5% 以上を対象とする最新のライブアプリケーションで使用されている最上位の Braze SDK バージョンが一覧にされています。
 
-![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0.]({% image_buster /assets/img/live-sdk-version.png %})です。{: style="max-width:80%"} 
+![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0です。]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
 iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) を使用していることを確認できます。

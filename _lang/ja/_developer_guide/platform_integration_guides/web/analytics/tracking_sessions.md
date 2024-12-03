@@ -34,5 +34,5 @@ braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![セッションが発生した回数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%"}
+![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%"}
 

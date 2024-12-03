@@ -116,7 +116,7 @@ Braze.requestPushPermission(permissionOptions);
 さらに、Braze が受信プッシュ通知を検出して処理したイベントをサブスクライブすることもできます。リスナーキー `Braze.Events.PUSH_NOTIFICATION_EVENT` を使用します。
 
 {% alert important %}
-iOSプッシュ受信イベントは、フォアグラウンド通知および`content-available`バックグラウンド通知に対してのみトリガーされます。終了中に受信した通知や、`content-available` フィールドのないバックグラウンド通知ではトリガーされない。
+iOS プッシュ受信イベントは、フォアグラウンド通知と `content-available` バックグラウンド通知に対してのみトリガーされます。終了中に受信した通知や、`content-available` フィールドのないバックグラウンド通知ではトリガーされない。
 {% endalert %}
 
 ```javascript

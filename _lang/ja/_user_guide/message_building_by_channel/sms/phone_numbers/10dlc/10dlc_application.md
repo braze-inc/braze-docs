@@ -3,7 +3,7 @@ nav_title: 10DLCアプリケーション
 article_title: 10DLC申請に必要な情報
 alias: /10dlc_application/
 page_type: reference
-description: "この記事では、10DLCを登録する際にBrazeが必要とする会社情報とSMSキャンペーン情報について説明する。"
+description: "この記事では、お客様が Braze と協力して 10DLC を登録する際に、Braze が必要とする会社情報と SMS キャンペーン情報について説明します。"
 channel:
   - SMS
 ---
