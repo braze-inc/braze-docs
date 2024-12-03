@@ -27,7 +27,7 @@ Before setting up the Outgrow and Braze integration, confirm you have the follow
 |-------------|-------------|
 | **Outgrow account** | A registered Outgrow account to configure and manage interactive content and data transfer settings |
 | **Braze account** | A Braze account with access to REST API credentials |
-| **API key** | An API key from Braze with appropriate permissions (such as `users.track`) to enable user data transfer |
+| **API key** | An API key from Braze with the `users.track` permission to enable user data transfer |
 | **Custom attributes in Braze** | Custom attributes set up in Braze to capture Outgrow responses (such as quiz scores, segments, and others) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
