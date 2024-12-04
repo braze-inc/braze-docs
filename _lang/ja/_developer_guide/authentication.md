@@ -256,7 +256,7 @@ braze.setSdkAuthenticationSignature("signature")
 - JWTが空か行方不明だった
 - Brazeダッシュボードにアップロードした公開鍵のJWT検証に失敗した。
 
-`subscribeToSdkAuthenticationFailures` を使用して、これらのいずれかの理由で SDK リクエストが失敗したときに通知を受け取るようにサブスクライブできます。コールバック関数は、エラーに関連するオブジェクトを含む。 [`errorCode`](#error-codes)`reason` 、リクエストの`userId` (ユーザーが匿名でない場合)、エラーの原因となった認証`signature` 。 
+`subscribeToSdkAuthenticationFailures` を使用して、これらのいずれかの理由で SDK リクエストが失敗したときに通知を受け取るようにサブスクライブできます。コールバック関数には、関連する [`errorCode`](#error-codes)、エラーの `reason`、リクエストの `userId` (ユーザーが匿名でない場合)、およびエラーの原因となった認証 `signature` を備えたオブジェクトが含まれます。 
 
 失敗したリクエストは、アプリが新しい有効な JWT を提供するまで、定期的に再試行されます。そのユーザーがまだログインしている場合、このコールバックをサーバーに新しいJWTを要求する機会として使用し、この新しい有効なトークンをBraze SDKに供給することができる。
 

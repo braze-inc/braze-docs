@@ -1,23 +1,23 @@
 ---
 nav_title: "Exemples de requêtes"
-article_title: Exemples de requêtes Snowflake
+article_title: "Snowflake Requêtes d'échantillon"
 page_order: 1
-description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes Snowflake."
+description: "Cette page partenaire propose quelques exemples de requêtes de cas d'utilisation possibles à consulter lors de la configuration de vos requêtes Snowflake."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Exemples de requêtes
 
-> Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes.
+> Cette page partenaire propose quelques exemples de requêtes de cas d'utilisation possibles à consulter lors de la configuration de vos requêtes.
 
 {% tabs %}
-{% tab Filter By Time%}
+{% tab Filtrer par temps%}
 
-Un exemple de requête courante peut être de filtrer les événements par heure.
+Une requête courante pourrait être de filtrer les événements par heure.
 
-Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, pour optimiser le filtrage par `time` :
+Vous pouvez les filtrer par le moment de l'occurrence. Les tables d'événements sont regroupées par `time`, ce qui rend le filtrage par `time` optimal :
 ```sql
 -- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
@@ -25,7 +25,7 @@ FROM users_behaviors_customevent_shared
 WHERE time > 1555354920
 LIMIT 10;
 ```
-Vous pouvez également filtrer les événements en fonction de l’heure à laquelle ils ont été conservés dans l’entrepôt de données Snowflake en utilisant `sf_created_at`. `sf_created_at` et `time` ne sont pas identiques, mais sont généralement proches, cette requête devrait donc avoir des caractéristiques de performance similaires :
+Vous pouvez également filtrer les événements selon l'heure à laquelle ils ont été enregistrés dans l'entrepôt de données Snowflake à l’aide du paramètre `sf_created_at`. `sf_created_at` et `time` ne sont pas identiques mais fonctionnent généralement de manière semblable, donc cette requête devrait avoir des caractéristiques de performance similaires :
 ```sql
 -- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
 SELECT *
@@ -34,15 +34,15 @@ WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 {% alert note %}
-La valeur de `sf_created_at` est uniquement fiable pour les événements qui ont été conservés après `Nov 15th, 2019 9:31 pm UTC`.
+La valeur de `sf_created_at` n'est fiable que pour les événements qui ont été enregistrés après `Nov 15th, 2019 9:31 pm UTC`.
 {% endalert %}
 {% endtab %}
 
-{% tab Querying Changelogs%}
+{% tab Interroger les journaux des modifications%}
   
-Les noms des campagnes et Canvas ne sont pas inclus dans les événements eux-mêmes. Ils sont publiés dans un journal de modifications. 
+Les noms de campagne et les noms de canvas ne sont pas présents dans les événements eux-mêmes. Au lieu de cela, ils sont publiés dans un journal des modifications. 
 
-Vous pouvez voir les noms de campagne des événements liés à une campagne en interrogeant le journal de modifications de la campagne à l’aide d’une requête telle que :
+Vous pouvez voir les noms des campagnes des événements liés à une campagne en joignant la table du journal des modifications de la campagne en utilisant une requête comme :
 
 ```sql
 SELECT event.id, event.time, ccs.time, ccs.name, ccs.conversion_behaviors[event.conversion_behavior_index]
@@ -52,13 +52,13 @@ ON ccs.id = event.campaign_id
 AND ccs.time < event.time
 qualify row_number() over (partition by event.id ORDER BY ccs.time DESC) = 1;
 ```
-Voici quelques éléments importants à noter :
-- Les fonctions de la [fenêtre](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) Snowflake sont utilisées ici.
-- La jointure à gauche permet de vous assurer que les événements non liés à une campagne seront également inclus.
-- Si vous voyez des événements avec des `campaign_id`, mais pas de noms de campagne, il se peut que la campagne ait été créée avec un nom alors que Data Sharing n’existait pas encore.
-- Vous pouvez voir les noms de Canvas en utilisant une requête similaire, mais en interrogeant le tableau `CHANGELOGS_CANVAS_SHARED`.
+Quelques points importants à noter :
+- Les fonctions de [fenêtre](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) de Snowflake sont utilisées ici.
+- La jointure gauche garantira que les événements non liés à une campagne seront également inclus.
+- Si vous voyez des événements avec `campaign_id`s mais sans noms de campagne, il est possible que la campagne ait été créée avec un nom avant que le partage de données n'existe en tant que produit.
+- Vous pouvez voir les noms de canvas en utilisant une requête similaire, en joignant la table `CHANGELOGS_CANVAS_SHARED` à la place.
 
-Si vous souhaitez voir les noms des campagnes et Canvas, vous devrez peut-être utiliser la sous-requête suivante :
+Si vous souhaitez voir à la fois les noms de campagne et de canvas, vous pouvez utiliser la sous-requête suivante :
 ```sql
 SELECT campaign_join.*, canvas.name AS canvas_name
 FROM 
@@ -73,9 +73,9 @@ LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
 {% endtab %}
-{% tab Push Funnel %}
+{% tab Entonnoir des notifications push %}
 
-Vous pouvez utiliser cette requête d’entonnoir de notification push pour regrouper les données brutes d’événements d’envoi de notifications push, les données brutes d’événements de livraison et les données brutes d’événements d’ouverture. Cette requête montre comment tous les tableaux doivent être joints, car chaque événement brut dispose généralement d’un tableau séparé :
+Vous pouvez utiliser cette requête d'entonnoir de notifications push pour agréger les données brutes des événements d'envoi de notifications push, jusqu'aux données brutes des événements de livraison, et jusqu'aux données brutes des événements d'ouverture. Cette requête montre comment toutes les tables doivent être jointes car chaque événement brut a généralement une table séparée :
 
 ```sql
 
@@ -102,10 +102,10 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab Email Cadence %}
-Vous pouvez utiliser cette requête de fréquence quotidienne des envois d’e-mail pour analyser le temps écoulé entre les e-mails reçus par un utilisateur.
+{% tab Fréquence des e-mails %}
+Vous pouvez utiliser cette requête de cadence d'envoi de messages par e-mail quotidienne pour analyser le temps entre les e-mails qu'un utilisateur reçoit.
 
-Par exemple, si un utilisateur a reçu deux e-mails en un jour, ils seraient catégorisés comme `0 "days since last received"`. S’ils ont reçu un e-mail le lundi et un autre mardi, ils seraient catégorisés dans la cohorte `1 "days since last received"`.
+Par exemple, si un utilisateur recevait deux e-mails en une journée, ils tomberaient sous `0 "days since last received"`. S'ils recevaient un e-mail lundi et un autre mardi, ils tomberaient dans la cohorte `1 "days since last received"`.
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS
@@ -145,14 +145,14 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab Unique Email Clicks %}
+{% tab Clics d'e-mail uniques %}
 
-Vous pouvez utiliser cette requête pour analyser le nombre de clics sur cet e-mail unique par rapport à une période donnée. L’algorithme utilisé pour ce calcul est le suivant :
-  1. Partitionner les événements en fonction de la clé (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).
-  2. Dans chaque partition, organisez les événements par heure, le premier événement étant toujours un événement unique.
-  3. Pour chaque événement ultérieur, si l’événement se produit plus de sept jours après le dernier, il sera alors considéré comme un événement unique.
+Vous pouvez utiliser cette requête de clics d'e-mail unique pour analyser le clic d'e-mail unique dans une fenêtre de temps donnée. L'algorithme pour calculer cela est le suivant :
+  1. Partitionner les événements par la clé (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).
+  2. Dans chaque partition, ordonnez les événements par temps, et le premier événement est toujours un événement unique.
+  3. Pour chaque événement ultérieur, s'il s'est produit plus de sept jours après son prédécesseur, il est considéré comme un événement unique.
   
-Pour vous aider, vous pouvez utiliser les [fonctions de fenêtrage](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) de Snowflake. La requête suivante indique tous les clics effectués sur l’e-mail au cours des 365 derniers jours et quels événements sont uniques dans la colonne `is_unique` :
+Nous pouvons utiliser les [fonctions de fenêtrage](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) de Snowflake pour nous aider à atteindre cet objectif. La requête suivante nous donne tous les clics d'e-mail des 365 derniers jours et indique quels événements sont uniques dans la colonne `is_unique` :
   
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
@@ -166,7 +166,7 @@ WHERE
   AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600; 
 ```
 
-Si vous souhaitez simplement voir les événements uniques, utilisez la clause `QUALIFY` :
+Si vous voulez simplement voir les événements uniques, utilisez la clause `QUALIFY` :
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
   ROW_NUMBER()       OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number,
@@ -179,7 +179,7 @@ WHERE
   AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
 QUALIFY is_unique = true;
 ```
-Pour voir plus en détail les nombres d’événements uniques regroupés par e-mail :
+Pour afficher les comptes d'événements uniques regroupés par adresse e-mail :
 ```sql
 WITH unique_events AS(
   SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,

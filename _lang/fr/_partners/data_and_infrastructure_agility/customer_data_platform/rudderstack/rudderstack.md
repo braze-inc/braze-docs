@@ -1,103 +1,271 @@
 ---
-nav_title: RudderStack
-article_title: RudderStack
-description: "Cet article présente le partenariat entre Braze et RudderStack, une infrastructure open source de données client qui offre une intégration transparente de Braze pour vos applications Android, iOS et Web. Avec RudderStack, vous pouvez maintenant envoyer les données d’événements client de votre application directement à Braze pour effectuer des analyses contextuelles."
+nav_title: Rudderstack
+article_title: Rudderstack
+description: "Cet article présente le partenariat entre Braze et RudderStack, une infrastructure de données client open-source offrant une intégration fluide de Braze pour vos applications Android, iOS et web. Avec RuddStack, vous pouvez envoyer vos données d'événements personnalisés in-app directement à Braze pour une analyse contextuelle."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
-# RudderStack
+# Rudderstack
 
-> [RudderStack][1] est une infrastructure open source de données client conçue pour collecter et transférer les données d’événements client à votre entrepôt de données préféré et à des dizaines d’autres fournisseurs d’analyse, comme Braze. L’infrastructure est adaptée aux entreprises et offre un cadre de transformation robuste pour traiter vos données d’événements à la volée.
+> [RudderStack][1] est une infrastructure de données clients open-source permettant de collecter et d'acheminer les données d'événements personnalisés vers votre entrepôt de données préféré et des dizaines d'autres fournisseurs d'analyses, tels que Braze. Il est prêt pour l'entreprise et offre un cadre de transformation robuste pour traiter vos données d'événements à la volée.
 
-L’intégration de Braze et RudderStack inclut une intégration SDK native pour vos applications Android, iOS et Web, ainsi qu’une intégration serveur à serveur de vos services de back-end.
+L'intégration entre Braze et Rudderstack offre une intégration SDK native pour vos applications Android, iOS et web, ainsi qu'une intégration de serveur à serveur à partir de vos services backend.
 
 ## Conditions préalables
 
 | Condition | Description |
 | --- | --- |
-| Compte RudderStack | Un [compte Rudderstack](https://app.rudderstack.com/) est requis pour profiter de ce partenariat. |
-| Source configurée | Une [source][3] est essentiellement le point d’origine de toutes les données envoyées à RudderStack, telles que des sites Web, des applications mobiles ou des serveurs de back-end. Vous devez configurer la source avant de configurer Braze en tant que destination dans RudderStack. |
-| Clé d’API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Clé de l’application Braze | Pour obtenir la clé de votre application, naviguez jusqu’à **Tableau de bord de Braze > Developer Console > Identification** et cherchez le nom de votre application. Enregistrez la chaîne de caractères d’identification associée.
-| Centre de données | Votre centre de données s’aligne sur l’[instance][15] de votre tableau de bord de Braze.  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Compte Rudderstack | Un [compte Rudderstack](https://app.rudderstack.com/) est nécessaire pour bénéficier de ce partenariat. |
+| Source configurée | Une [source][3] représente l'origine de toutes les données envoyées à Rudderstack, comme les sites Web, les applications mobiles ou les serveurs dorsaux. Vous devez configurer la source avant de configurer Braze comme destination dans Rudderstack. |
+| Clé API REST de Braze | Une clé API REST de Braze avec les autorisations `users.track`, `users.identify`, `users.delete` et `users.alias.new`.<br><br>Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. |
+| Clé de l'application Braze | Pour obtenir votre clé d'app dans le tableau de bord de Braze, allez dans **Réglages** > **Paramètres de l'app** > **Identification** et trouvez le nom de votre app. Enregistrez la chaîne de caractères de l'identifiant associé.
+| Centre de données | Votre centre de données s'aligne sur votre tableau de bord de Braze [instance][15].  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Intégration
 
-### Étape 1 : Ajouter une source
+### Étape 1 : Ajouter une source
 
-Pour commencer à envoyer des données à Braze, vous devez d’abord vous assurer qu’une source est configurée dans votre application RudderStack. Rendez-vous sur le site Web de [RudderStack][22] pour découvrir comment configurer votre source de données.
+Pour commencer à envoyer des données à Braze, vous devez d'abord vous assurer qu'une source est configurée dans votre application Rudderstack. Visitez le site [Rudderstack][22] ] pour savoir comment configurer votre source de données.
 
-### Étape 2 : Configurer une destination
+### Étape 2 : Configurer la destination
 
-Maintenant que vous avez configuré votre source de données, dans le tableau de bord de RudderStack, sélectionnez **ADD DESTINATION (AJOUTER UNE DESTINATION)** sous **Destinations**. Dans la liste des destinations disponibles, sélectionnez **Braze** et cliquez sur **Next (Suivant)**.
+Maintenant que votre source de données est configurée, dans le tableau de bord de Rudderstack, sélectionnez **ADD DESTINATION** sous **Destinations.** Dans la liste des destinations disponibles, sélectionnez **Braze** et cliquez sur **Suivant.**
 
-Dans la destination Braze, fournissez la clé d’application, la clé API REST de Braze, le cluster de données et l’option du SDK natif (en mode appareil uniquement). L’option du SDK natif utilisera le SDK natif de Braze pour envoyer des événements si elle est activée. 
+Dans la destination Braze, spécifiez la clé de l'application, la clé de l'API REST de Braze, le cluster de données et l'option du SDK natif (mode appareil uniquement). Lorsque l'option du SDK natif est activée, le SDK natif de Braze sera utilisé pour envoyer des événements. 
 
-![][0]{: style="max-width:40%;margin-bottom:15px;"}
+![][0]{: style="max-width:70%;margin-bottom:15px;border:none;"}
 
-## Étape 3 : Choisir le type d’intégration
+### Étape 3 : Choisissez le type d'intégration
 
-Vous pouvez choisir d’intégrer les bibliothèques Web et natives côté client de RudderStack avec Braze en utilisant une intégration côte à côte (mode appareil) ou une intégration serveur vers serveur (mode cloud).
+Vous pouvez choisir d'intégrer les bibliothèques web et natives côté client de Rudderstack avec Braze en utilisant l'une des approches suivantes :
 
-- Type d’intégration
-  - [Mode côte à côte/appareil](#device-mode) : RudderStack enverra les données d’événements à Braze directement à partir de votre client (navigateur ou application mobile).
-  - [Mode serveur à serveur/cloud](#cloud-mode) : Le SDK de Braze envoie les données d’événements directement à RudderStack, qui sont ensuite transformées et transférées vers Braze.
+- [Mode côte à côte / appareil](#device-mode)**:** Rudderstack enverra les données d'événement à Braze directement depuis votre client (navigateur ou application mobile).
+- [Mode serveur à serveur / cloud](#cloud-mode)**:** Le SDK de Braze envoie les données d'événement directement à Rudderstack où elles sont transformées avant d’être acheminées vers Braze.
+- [Mode hybride](#hybrid-mode)**:** Utilisez le mode hybride pour envoyer des événements iOS et Android générés automatiquement et générés par l'utilisateur vers Braze à l'aide d'une seule connexion.
 
-{% alert note %} 
-En savoir plus sur les différents [modes de connexion](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/) de RudderStack et les avantages de chacun d’entre eux.
+{% alert note %}
+Découvrez les [modes de connexion](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/) de Rudderstack et les avantages de chacun d'entre eux.
 {% endalert %}
 
-### Étape 3a : Intégration côte à côte (mode Appareil) {#device-mode}
+#### Intégration côte à côte (mode appareil) {#device-mode}
 
-Avec ce mode, vous pouvez envoyer vos événements à Braze en utilisant le kit SDK de Braze qui est installé sur votre site Internet ou votre application mobile.
+Avec ce mode, vous pouvez envoyer vos événements à Braze en utilisant le SDK de Braze mis en place sur votre site web ou votre application mobile.
 
-Configurez les mappages au SDK de RudderStack pour [Android](https://github.com/rudderlabs/rudder-integration-braze-android), [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios) ou [React Native] sur le référentiel GiThub de Braze, comme décrit à l’étape 4. 
+Configurez les mappages vers le SDK de Rudderstack pour votre plateforme sur le dépôt GitHub de Braze, comme décrit dans les [méthodes prises en charge](#supported-methods) :
 
-Pour terminer l’intégration du mode appareil, reportez-vous aux instructions détaillées de RudderStack pour [ajouter Braze à votre projet](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
+- [Android][android]
+- [iOS][ios]
+- [Swift][swift]
+- [Web][web]
+- [React Native][react]
+- [Flutter][flutter]
 
-### Étape 3b : Intégration serveur à serveur (mode cloud) {#cloud-mode}
+Pour terminer l'intégration du mode appareil, reportez-vous aux instructions détaillées de Rudderstack concernant l'[ajout de Braze à votre projet](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
 
-Avec ce mode, le SDK Braze envoie directement les données d’événement au serveur RudderStack. RudderStack transforme ensuite ces données et les envoie à la destination souhaitée. Cette transformation se fait dans le backend RudderStack, via le module Transformer de RudderStack.
+#### Intégration de serveur à serveur (mode cloud) {#cloud-mode}
 
-Pour activer l’intégration, vous devrez mapper les méthodes RudderStack vers Braze, comme décrit à l’étape 4.
+Dans ce mode, le SDK envoie les données d'événement directement au serveur Rudderstack. Rudderstack transforme ensuite ces données et les achemine vers la destination souhaitée. Cette transformation est effectuée dans le backend de Rudderstack à l'aide du module de transformation de RudderStack.
 
-{% alert note %} 
-Les SDK côté serveur de RudderStack (Java, Python, Node.js, Go et Ruby) prennent uniquement en charge le mode cloud. En effet, les SDK côté serveur fonctionnent dans le back-end de RudderStack et ne peuvent charger aucun SDK spécifique à Braze. 
+Pour permettre l'intégration, vous devrez mapper les méthodes de Rudderstack à Braze, comme décrit dans les [méthodes prises en charge.](#supported-methods)
+
+{% alert note %}
+Les SDK côté serveur de Rudderstack (Java, Python, Node.js, Go, Ruby) ne prennent en charge que le mode cloud. En effet, leurs SDK côté serveur fonctionnent dans le backend de Rudderstack et ne peuvent charger aucun SDK spécifique à Braze.
 {% endalert %}
 
-{% alert important %} L’intégration serveur à serveur ne prend pas en charge les fonctionnalités de l’interface utilisateur de Braze, telles que les notifications push ou les messages in-app. Ces fonctionnalités sont cependant prises en charge par l’intégration du mode appareil. 
+{% alert important %}
+L'intégration de serveur à serveur ne prend pas en charge les fonctionnalités de Braze UI, telles que les notifications push ou l'envoi de messages in-app. Ces fonctionnalités sont toutefois prises en charge par l'intégration du mode appareil.
 {% endalert %}
 
-## Étape 4 : Méthodes SDK
+#### Mode hybride {#hybrid-mode}
 
-Braze prend en charge les méthodes RudderStack suivantes : identification, suivi, page et groupe.
+Utilisez le mode hybride pour envoyer tous les événements à Braze depuis vos sources iOS et Android. 
 
-### Identification
+Lorsque vous choisissez le mode hybride pour envoyer des événements à Braze, Rudderstack :
+1. Initialise le SDK de Braze.
+2. Envoie tous les événements générés par l'utilisateur (identifier, suivre, page, écran et groupe) à Braze uniquement via le mode cloud et bloque leur envoi via le mode appareil.
+3. Envoie les événements générés automatiquement (messages in-app, notifications push qui nécessitent le SDK de Braze) via le mode appareil.
 
-La [méthode `identify`](https://rudderstack.com/docs/destinations/marketing/braze/#identify) de RudderStack associe un utilisateur à ses actions. RudderStack collecte un ID utilisateur unique et des caractéristiques optionnelles associées à cet utilisateur, comme le nom, l’adresse e-mail, l’adresse IP, etc.
+Pour [envoyer des événements via le mode hybride](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-events-in-hybrid-mode), utilisez l'option de mode hybride lors de la connexion de votre source à la destination Braze. Ensuite, ajoutez l'intégration de Braze à votre projet.
 
-### Suivi
+## Étape 4 : Configurer des paramètres supplémentaires
 
-La [méthode `track`](https://rudderstack.com/docs/destinations/marketing/braze/#track) de RudderStack collecte toutes les activités de l’utilisateur, ainsi que les propriétés associées à ces activités.
+Une fois la configuration initiale terminée, configurez les paramètres suivants pour recevoir correctement vos données dans Braze :
+
+- **Activer les groupes d'abonnement dans les appels de groupe**: Activez ce paramètre pour envoyer le statut du groupe d'abonnement dans vos événements de groupe. Pour plus d'informations, consultez la section [Groupe](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group).
+- **Utiliser l'opération d'attributs personnalisés**: Activez ce paramètre si vous souhaitez utiliser la fonctionnalité d'[attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) de Braze pour créer des segments et personnaliser vos messages à l'aide d'un objet d'attribut personnalisé. Pour plus d'informations, consultez la section [Envoyer des caractéristiques d'utilisateur en tant qu'attributs personnalisés imbriqués](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
+- **Suivre les événements pour les utilisateurs anonymes**: Activez ce paramètre pour suivre l'activité de l'utilisateur anonyme et envoyer ces informations à Braze.
+
+### Paramètres du mode appareil
+
+Les paramètres suivants ne s'appliquent que si vous envoyez des événements à Braze via le [mode appareil](https://www.rudderstack.com/docs/destinations/rudderstack-connection-modes/#device-mode):
+
+- **Filtrage des événements côté client**: Ce paramètre vous permet de spécifier quels événements doivent être bloqués ou autorisés à transiter vers Braze. Pour plus d'informations sur ce paramètre, consultez la section [Filtrage des événements côté client](https://www.rudderstack.com/docs/sources/event-streams/sdks/event-filtering/).
+- **Déduplication des caractéristiques** : Activez ce paramètre pour dédupliquer les traits de l'utilisateur dans l'appel [`identify`](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#identify).
+- **Afficher les journaux de Braze**: Ce paramètre ne s'applique que lorsque vous utilisez le [SDK JavaScript](https://www.rudderstack.com/docs/sources/event-streams/sdks/rudderstack-javascript-sdk/) comme source. Activez-la pour afficher les journaux de Braze à vos utilisateurs.
+- **Catégories de cookies OneTrust**: Ce paramètre vous permet d'associer les groupes de consentement aux cookies [OneTrust](https://www.rudderstack.com/docs/sources/event-streams/sdks/onetrust/javascript/) à Braze.
+
+## Méthodes prises en charge
+
+Braze prend en charge les méthodes Rudderstack identify, track, screen, page, group et alias.
+
+{% tabs %}
+{% tab Identifier %}
+
+La méthode Rudderstack [`identify`](https://rudderstack.com/docs/destinations/marketing/braze/#identify) associe les utilisateurs à leurs actions. RuddStack enregistre un ID unique et des données facultatives associées à l'utilisateur, telles que le nom, l'e-mail, l'adresse IP, etc.
+
+**Gestion du delta pour les appels d'identification**<br>
+Si vous envoyez des événements à Braze via le mode appareil, vous pouvez réduire vos coûts en dédupliquant vos appels à `identify`. Pour ce faire, activez le paramètre de déduplication des caractéristiques dans le tableau de bord. Rudderstack n'envoie alors à Braze que les attributs (traits) changés ou modifiés.
+
+**Suppression d'un utilisateur**<br>
+Vous pouvez supprimer un utilisateur dans Braze à l'aide de la [règle Suppression avec Supprimer](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation) [ de l'API de réglementation des données](https://www.rudderstack.com/docs/api/data-regulation-api/) de Rudderstack.
+
+{% endtab %}
+{% tab Suivre %}
+
+La [méthode`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) de Rudderstack capture toutes les activités de l'utilisateur et les propriétés associées à ces activités.
 
 **Commande terminée**<br>
-En utilisant l’[API eCommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze [`purchases`][21].
+En utilisant l'[API RudderStack Ecommerce][20] pour appeler la méthode de suivi d'un événement portant le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze en tant que [`purchases`][21].
 
-### Page
+{% endtab %}
+{% tab Écran %}
 
-La [méthode `page`](https://rudderstack.com/docs/destinations/marketing/braze/#page) de RudderStack vous permet d’enregistrer les vues des pages de votre site Internet. Elle collecte également toute autre information pertinente sur cette page.
+La [méthode`screen` de](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen) Rudderstack vous permet d'enregistrer les vues d'écran mobiles de vos utilisateurs avec toute information supplémentaire sur l'écran visualisé.
 
-### Groupe
+{% endtab %}
+{% tab Page %}
 
-La méthode [`group` de RudderStack](https://rudderstack.com/docs/destinations/marketing/braze/#group) vous permet d’associer un utilisateur à un groupe.
+La méthode [`page`](https://rudderstack.com/docs/destinations/marketing/braze/#page) de Rudderstack vous permet d'enregistrer les pages consultées de votre site web. Il saisit également toute autre information pertinente concernant cette page.
+
+{% endtab %}
+{% tab Groupe %}
+
+La méthode [`group`](https://rudderstack.com/docs/destinations/marketing/braze/#group) de Rudderstack vous permet d'associer un utilisateur à un groupe.
+
+**Statut du groupe d'abonnement**<br>
+Pour mettre à jour le statut du groupe d'abonnement, activez le paramètre "Activer les groupes d'abonnement dans l'appel de groupe" dans le tableau de bord de Rudderstack et envoyez le statut du groupe d'abonnement dans l'appel de groupe.
+
+{% endtab %}
+{% tab Alias %}
+
+La méthode [`alias`](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#alias) de Rudderstack vous permet de fusionner différentes identités d'un utilisateur connu. Notez que Rudderstack prend en charge l'appel d'alias pour Braze uniquement en mode cloud.
+
+{% endtab %}
+{% endtabs %}
+
+## Envoyer les caractéristiques de l'utilisateur sous forme d'attributs personnalisés imbriqués
+
+Vous pouvez envoyer les traits d'utilisateur à Braze sous forme d'attributs personnalisés imbriqués et effectuer des opérations d'ajout, de mise à jour et de suppression sur ces traits. Pour ce faire, activez le paramètre "Utiliser le tableau de bord des opérations sur les attributs personnalisés" dans RudderStack lors de la configuration de la destination Braze. Cette fonctionnalité n'est disponible qu'en mode cloud.
+
+Vous pouvez envoyer les caractéristiques de l'utilisateur sous forme d'attributs personnalisés imbriqués dans vos événements `identify` dans le format suivant :
+```javascript
+rudderanalytics.identify("1hKOmRA4GRlm", {
+  "cars": {
+    "add": [{
+      "age": 27,
+      "id": 1,
+      "name": "Alex Keener"
+    }],
+    "update": [{
+        "age": 30,
+        "id": 2,
+        "identifier": "id",
+        "name": "Rowan"
+      },
+      {
+        "age": 27,
+        "id": 1,
+        "identifier": "id",
+        "name": "Mike"
+      }
+    ]
+  },
+  "country": "USA",
+  "email": "alex@example.com",
+  "firstName": "Alex",
+  "gender": "M",
+  "pets": [{
+      "breed": "beagle",
+      "id": 1,
+      "name": "Scooby",
+      "type": "dog"
+    },
+    {
+      "breed": "calico",
+      "id": 2,
+      "name": "Garfield",
+      "type": "cat"
+    }
+  ]
+})
+```
+
+Pour envoyer les caractéristiques de l'utilisateur sous forme d'attributs personnalisés via les appels `track`, `page` ou `screen`, transmettez `traits` comme champ contextuel dans l'événement :
+```javascript
+rudderanalytics.track("Product Viewed", {
+    revenue: 8.99,
+    currency: "USD",
+ },{
+  "traits": {
+    "cars": {
+      "add": [{
+        "age": 27,
+        "id": 1,
+        "name": "Alex Keener"
+      }],
+      "update": [{
+          "age": 30,
+          "id": 2,
+          "identifier": "id",
+          "name": "Mike"
+        },
+        {
+          "age": 27,
+          "id": 1,
+          "identifier": "id",
+          "name": "Rowan"
+        }
+      ]
+    },
+    "city": "Disney",
+    "country": "USA",
+    "email": "alexa@example.com",
+    "firstName": "Alexa",
+    "gender": "woman",
+    "pets": [{
+        "breed": "beagle",
+        "id": 1,
+        "name": "Scooby",
+        "type": "dog"
+      },
+      {
+        "breed": "calico",
+        "id": 2,
+        "name": "Garfield",
+        "type": "cat"
+      }
+    ]
+  }
+});
+```
+
+{% alert note %}
+Pour les opérations de mise à jour et de suppression, `identifier` est une clé obligatoire. Si les opérations d'ajout, de mise à jour ou de suppression ne sont pas présentes dans le tableau imbriqué, Rudderstack utilise par défaut l'opération de création pour créer les propriétés. Reportez-vous à la section [Tableau d'objets]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) pour plus d'informations sur l'envoi d'attributs personnalisés imbriqués.
+{% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
-[1]: https://rudderstack.com/
-[3]: https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack
-[15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
-[20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
+Il y a [1]: https://rudderstack.com/
+[3]: https://www.rudderstack.com/docs/dashboard-guides/sources/
+[15]: {{site.baseurl}}/api/basics/#endpoints
+[20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started
+[android]: https://github.com/rudderlabs/rudder-integration-braze-android
+[ios]: https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
+[swift]: https://github.com/rudderlabs/rudder-integration-braze-swift
+[web]: https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
+[react]: https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
+[Flutter]: https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter

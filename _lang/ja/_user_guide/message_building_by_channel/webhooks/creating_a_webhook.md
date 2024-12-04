@@ -4,7 +4,7 @@ article_title: Webhookを作成する
 page_order: 1
 channel:
   - webhooks
-description: "このリファレンス記事では、Webhookキャンペーンの作成と設定方法について説明する。"
+description: "このリファレンス記事では、Webhook キャンペーンの作成方法と設定方法について説明します。"
 search_rank: 2
 ---
 
@@ -30,11 +30,11 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、**エンゲージメントの**下に**キャンペーンが**ある。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
 {% endalert %}
 
 {:start="2"}
-2\.**Webhookを**選択するか、複数のチャネルを対象とするキャンペーンの場合は**Multichannelを**選択する。
+2\.[**Webhook**] を選択するか、複数のチャネルをターゲットにしたキャンペーンの場合は [**マルチチャネル**] を選択します。
 3\.キャンペーンに、明確で意味のある名前を付けます。
 4. (オプション）このキャンペーンがどのように使用されるかを説明するために説明を追加する。
 4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加する。
@@ -71,13 +71,13 @@ Webhookをゼロから作成するか、既存のテンプレートを使用す�
 - HTTPメソッド
 - Request body
 
-![FacebookMessengerのWebhookテンプレートの例がある「Compose」タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
+![Facebook MessengerのWebhookテンプレートの例がある「Compose」タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### 言語 {#internationalization}
 
-[国際化][16]は、URLおよびリクエストボディでサポートされています。メッセージを国際化するには、**Add languagesを**選択し、必要なフィールドに記入する。 
+[国際化][16]は、URLおよびリクエストボディでサポートされています。メッセージを複数言語で送信するには、[**言語を追加**] をクリックして、必須フィールドに入力します。 
 
-コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の全リストは、[対応言語を]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)参照のこと。
+コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。利用可能なすべての言語のリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
 #### Webhook URL
 
@@ -97,15 +97,15 @@ Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信する
 
 #### Request body
 
-リクエスト本文は、指定した URL に送信される情報です。Webhookリクエストのボディは、JSONキーと値のペア、または生のテキストで作成できる。
+リクエスト本文は、指定した URL に送信される情報です。JSON キーと値のペアまたは生のテキストを使用して Webhook リクエストの本文を作成する方法は2通りあります。
 
 ##### JSONキーと値のペア
 
 JSONキーと値のペアを使用すると、JSON形式を期待するエンドポイントへのリクエストを簡単に作成できます。JSONリクエストを期待するエンドポイントでのみ使用できる。例えば、キーが `message_body` の場合、対応する値には `Your order just arrived!` があります。キーと値のペアを入力すると、コンポーザーがリクエストをJSON構文で構成し、JSONリクエストのプレビューが自動的に表示されます。
 
-![]({% image_buster /assets/img/webhook_json_1.png %}) JSONのキーと値のペアに設定されたリクエストボディ。
+![JSON キーと値のペアに設定されたリクエスト本文。]({% image_buster /assets/img/webhook_json_1.png %})
 
-リクエストにユーザー属性、[カスタム属性][17]、[イベントプロパティを][18]含めるなど、Liquidを使ってキーと値のペアをパーソナライズすることができる。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を][19]必ず含めること。
+Liquid を使用してキーと値のペアをパーソナライズできます (ユーザー属性、[カスタム属性][17]、または[イベントプロパティ][18]を含めるなど)。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を][19]必ず含めること。
 
 ##### 生のテキスト
 
@@ -113,7 +113,7 @@ JSONキーと値のペアを使用すると、JSON形式を期待するエンド
 
 両方の[パーソナライゼーション][15]と[国際化][16]は、Liquidを使用して生のテキストでサポートされています。
 
-![] （{% image_buster /assets/img_archive/webhook_rawtext.png %} ）。
+![Liquid を使用した生のテキストを含むリクエスト本文の例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 `Content-Type` [リクエストヘッダー](#request-headers-optional) を `application/x-www-form-url-encoded` に設定した場合、リクエストボディは URL エンコードされた文字列としてフォーマットする必要があります。以下に例を示します。
 
@@ -123,15 +123,15 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %}) URLエンコードされた文字列を含むリクエストボディ。
+![URL エンコードされた文字列を含むリクエスト本文。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
 ## ステップ 3:追加設定を構成する
 
 #### リクエストヘッダー (オプション)
 
-特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。**コンポーザーの "Compose "**セクションで、必要なだけヘッダーを追加することができる。
+特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。作成画面の [**作成**] セクションで、ヘッダーを必要な数だけ追加できます。
 
-![Authorization」キーと「Content-type」キーのリクエストヘッダー例]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![リクエストヘッダーの「許可」キーと「コンテンツタイプ」キーの例]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 一般的なリクエストヘッダーは`Content-Type`仕様 (XML や JSON など、本文に含まれるデータのタイプを示す) と、ベンダーやシステムに対する認証情報を含む認証ヘッダーです。 
 
@@ -199,11 +199,11 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ### エラー、リトライロジック、タイムアウト
 
-webhookはBrazeサーバーが外部エンドポイントにリクエストを送信することに依存しており、構文やその他のエラーが発生する可能性があります。Webhookエラーを回避するための最初のステップは、Webhookキャンペーンを構文エラーについてテストし、パーソナライズされた変数にデフォルト値があることを確認することです。ただし、期限切れの API キー、レート制限、予期しないサーバーエラーなどの問題が原因で、Webhook が失敗する場合があります。Webhook の送信に失敗すると、エラーメッセージが[メッセージアクティビティログに][42]記録される。
+webhookはBrazeサーバーが外部エンドポイントにリクエストを送信することに依存しており、構文やその他のエラーが発生する可能性があります。Webhookエラーを回避するための最初のステップは、Webhookキャンペーンを構文エラーについてテストし、パーソナライズされた変数にデフォルト値があることを確認することです。ただし、期限切れの API キー、レート制限、予期しないサーバーエラーなどの問題が原因で、Webhook が失敗する場合があります。Webhook の送信に失敗した場合、エラーメッセージが[メッセージアクティビティログ][42]に記録されます。
 
 この説明には、エラーが発生した時間、アプリ名、およびエラーメッセージが含まれています:
 
-![]({% image_buster /assets/img_archive/webhook-error.png %}) "現在のユーザーに関する情報を照会するには、アクティブなアクセストークンを使用する必要があります "というメッセージのWebhookエラー。
+![Webhook エラーとメッセージ「現在のユーザーに関する情報を照会するには、アクティブなアクセストークンを使用する必要があります」。]({% image_buster /assets/img_archive/webhook-error.png %})
 
 メッセージ本文がエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
 
@@ -213,10 +213,10 @@ webhookはBrazeサーバーが外部エンドポイントにリクエストを�
 
 | 応答コード | 受領済みとしてマークされましたか？ | 再試行? |
 |---------------|-----------|----------|
-| `20x` 成功  | はい |   該当なし  |
+| `20x` (成功)  | はい |   該当なし  |
 | `30x` (リダイレクション）  | いいえ | いいえ |
 | `408` (リクエストタイムアウト）  | いいえ | はい |
-| `429` (レート制限あり）  | いいえ | はい |
+| `429` (レート制限）  | いいえ | はい |
 | `Other 4XX` (クライアントエラー)  | いいえ | いいえ |
 | `5XX` (サーバーエラー)   | いいえ | はい |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

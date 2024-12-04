@@ -1,9 +1,9 @@
 ---
-nav_title: SDK wrapper
-article_title: SDK wrapper
+nav_title: SDK Wrapper
+article_title: SDK Wrapper
 page_order: 200
 
-description: "Les SDK wrapper suivants peuvent être utilisés pour aider les développeurs à concevoir des applications entre plusieurs plateformes."
+description: "Les SDK wrapper suivants peuvent être utilisés pour aider les développeurs à développer des applications sur plusieurs plateformes."
 page_type: partner
 platform: 
   - cordova
@@ -13,8 +13,8 @@ platform:
   - react native
 layout: dev_guide
  
-guide_top_header: "SDK wrapper"
-guide_top_text: "Les SDK wrapper suivants peuvent être utilisés pour aider les développeurs à concevoir des applications entre plusieurs plateformes."
+guide_top_header: "SDK Wrapper"
+guide_top_text: "Les SDK wrapper suivants peuvent être utilisés pour aider les développeurs à développer des applications sur plusieurs plateformes."
 
 guide_featured_list:
   - name: Cordova Android
@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     image: /assets/img/cordova.png
-  - name: React Native
+  - name: React native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: /assets/img/reactnative_icon.png
   - name: Unity Android
@@ -33,10 +33,10 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: /assets/img/unity.png
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/sdk_integration/
+    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
     image: /assets/img/xamarin.png
   - name: Flutter
-    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
+    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
 
 ---

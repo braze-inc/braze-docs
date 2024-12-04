@@ -15,7 +15,7 @@ channel: push
 
 > Aprende a integrar notificaciones push para el SDK Cordova de Braze.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Características básicas de push
 

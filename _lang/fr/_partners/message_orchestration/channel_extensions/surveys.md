@@ -1,15 +1,15 @@
 ---
 nav_title: Enquêtes
-article_title: Partenaires d’enquête
+article_title: "Partenaires d'enquête"
 page_order: 9
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des enquêtes ciblées et conviviales."
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des enquêtes ciblées et conviviales."
 
 layout: partner_page
-search_tag: Partenaire
+search_tag: Partner
 
-partner_top_header: "Enquêtes"
+partner_top_header: "Surveys"
 
 valid_partner_list:
 - name: Iterate
@@ -20,4 +20,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
+- name: Typeform
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 ---

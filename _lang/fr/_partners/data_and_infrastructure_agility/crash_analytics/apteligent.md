@@ -2,34 +2,34 @@
 nav_title: Apteligent
 article_title: Apteligent
 alias: /partners/apteligent/
-description: "Cet article de référence présente le partenariat entre Braze et Apteligent, une application mobile qui fournit des rapports d’incident, ce qui vous permet de consigner des données critiques dans votre solution Braze."
+description: "Cet article de référence décrit le partenariat entre Braze et Apteligent, une application mobile spécialisée dans le reporting d'incidents, qui vous permet de consigner des données critiques dans votre solution Braze."
 page_type: partner
-search_tag: Partenaire
+search_tag: Partner
 
 ---
 
 # Apteligent
 
-> [Apteligent](https://kb.vmtestdrive.com/hc/en-us/articles/360001544114-Apteligent-by-VMware-Walkthrough) est une plateforme de performance des applications mobiles qui fournit des outils et des informations pour les développeurs et les gestionnaires de produits. 
+> [Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) est une plateforme d’évaluation des performances des applications mobiles qui fournit des outils et des informations aux développeurs et aux chefs de produits. 
 
-L’intégration de Braze et Apteligent fournit des rapports détaillés sur les incidents iOS, ce qui vous permet de consigner les données critiques dans votre solution Braze, et de segmenter, comprendre et interagir avec les utilisateurs qui ont subi des blocages d’application.
+L'intégration de Braze et Apteligent fournit des rapports détaillés sur les pannes iOS, ce qui vous permet d'enregistrer des données critiques dans votre solution Braze existante, ainsi que de segmenter, comprendre et interagir avec les utilisateurs qui ont connu des pannes d'applications.
 
 ## Conditions préalables 
 
 | Condition | Description |
 |---|---|
-| Compte TestDrive | Un [Compte TestDrive](https://kb.vmtestdrive.com/hc/en-us/articles/360001372254-Getting-Started-with-TestDrive) est requis pour profiter de ce partenariat. |
-{: .reset-td-br-1 .reset-td-br-2}
+| compte TestDrive | Un compte TestDrive est nécessaire pour bénéficier de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert warning %}
-Actuellement, cette intégration est uniquement prise en charge sur iOS.
+Cette intégration n'est actuellement prise en charge que sur iOS.
 {% endalert %}
 
 ## Intégration {#apteligent-ios-integration}
 
-### Étape 1 : Enregistrer un observateur
+### Étape 1 : Inscrire un observateur
 
-Tout d’abord, vous devez enregistrer un observateur. Assurez-vous que cela est fait avant d’initialiser Apteligent.
+Tout d'abord, vous devez enregistrer un observateur. Assurez-vous que cela est fait avant d'initialiser Apteligent.
 
 ```objc
 [[NSNotificationCenter defaultCenter] addObserver:self
@@ -38,11 +38,11 @@ Tout d’abord, vous devez enregistrer un observateur. Assurez-vous que cela est
                                            object:nil];
 ```
 
-### Étape 2 : Enregistrer les analyses d’incident personnalisées
+### Étape 2 : Enregistrer une analyse personnalisée des incidents
 
-Le SDK de Apteligent envoie une notification lorsque l’utilisateur charge l’application après qu’un incident se soit produit. La notification contiendra le nom de l’incident, le motif et la date à laquelle il est survenu.
+Le SDK Apteligent déclenche une notification lorsque l'utilisateur charge l'application après un incident. La notification contiendra le nom, la raison et la date de l'incident.
 
-Après avoir reçu la notification, enregistrez un événement d’incident personnalisé et mettez à jour les attributs utilisateur avec l’analyse des rapports d’incident d’Apteligent :
+Après réception de la notification, enregistrez un événement d’incident personnalisé et mettez à jour les attributs utilisateur à l'aide de l'analyse des rapports d'incidents d'Apteligent :
 
 ```objc
 - (void)crashDidOccur:(NSNotification*)notification {
@@ -54,4 +54,4 @@ Après avoir reçu la notification, enregistrez un événement d’incident pers
 }
 ```
 
-Une fois terminé, vous pourrez tirer parti des capacités de segmentation et d’analyse de l’engagement de Braze en utilisant les informations sur les incidents de la plateforme Apteligent.
+Une fois terminé, vous serez en mesure d'exploiter la puissance de la segmentation de Braze et de l'analyse de l'engagement à l'aide des informations sur les accidents disponibles sur la plateforme Apteligent.

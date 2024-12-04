@@ -14,14 +14,14 @@ tool: Canvas
 
 > 이 문서에서는 [지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) 및 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 단계를 조합하여 캔버스를 사용하여 타겟팅된 개인화된 메시징을 수행하는 방법을 보여주는 몇 가지 예를 중점적으로 설명합니다.
 
-Braze Learning은 일반적인 캔버스 개요를 다루는 여러 전용 캔버스 강좌도 제공합니다. 동영상, 강의, 대화형 연습을 통해 기술 용어와 개념에 대한 유용한 통찰력을 얻을 수 있습니다. 
+Braze 학습은 일반적인 캔버스 개요를 다루는 여러 전용 캔버스 강좌도 제공합니다. 동영상, 강의, 대화형 연습을 통해 기술 용어와 개념에 대한 유용한 인사이트를 얻을 수 있습니다. 
 - [캔버스 플로우로 고객 여정 만들기](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [신규 로열티 회원 온보딩](https://learning.braze.com/new-loyalty-member-onboarding)
 - [휴면 사용자](https://learning.braze.com/lapsing-users)
-- [이탈한 카트 사용자 여정 구축하기](https://learning.braze.com/build-an-abandoned-cart-user-journey)
+- [유기한 장바구니 사용자 여정 구축하기](https://learning.braze.com/build-an-abandoned-cart-user-journey)
 
 {% alert important %}
-2023년 2월 28일부터 오리지널 캔버스 경험 환경에서는 더 이상 캔버스를 생성하거나 복제할 수 없습니다. 기존 캔버스 환경을 사용하는 고객은 캔버스 플로우로 전환할 것을 권장합니다. 캔버스를 더 잘 만들고 관리할 수 있는 개선된 편집 환경입니다. [캔버스를 캔버스 플로우에 복제하는]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) 방법에 대해 자세히 알아보세요.
+2023년 2월 28일부터 오리지널 캔버스 경험 환경에서는 더 이상 캔버스를 생성하거나 복제할 수 없습니다. Braze는 원래 캔버스 경험을 사용하는 고객이 캔버스 플로우로 이동할 것을 권장합니다. 향상된 편집 경험을 통해 캔버스를 더 잘 구축하고 관리할 수 있습니다. [캔버스를 캔버스 플로우에 복제하는 방법]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)에 대해 자세히 알아보세요.
 {% endalert %}
 
 ### 온보딩
@@ -38,7 +38,7 @@ Braze Learning은 일반적인 캔버스 개요를 다루는 여러 전용 캔�
 
 ### 버려진 카트
 
-리테일 비즈니스는 종종 고객에게 불완전한 구매를 상기시켜야 하는 상황에 처할 수 있습니다. 액션 기반 캔버스를 사용하면 등록된 모든 고객에게 버려진 카트에 있는 품목을 구매하도록 알림을 보낼 수 있습니다. 지연 시간을 달리하여 고객이 메시지를 얼마나 잘 받아들일지 테스트할 수도 있습니다.
+리테일 비즈니스는 종종 고객에게 불완전한 구매를 상기시켜야 하는 상황에 처할 수 있습니다. 실행 기반 캔버스를 사용하면 등록된 모든 고객에게 유기한 장바구니에 있는 품목을 구매하도록 알림을 보낼 수 있습니다. 지연 시간을 달리하여 고객이 메시지를 얼마나 잘 받아들일지 테스트할 수도 있습니다.
 
 ![]({% image_buster /assets/img_archive/canvas_outline_cart.png %}){: style="max-width:90%;"}
 
