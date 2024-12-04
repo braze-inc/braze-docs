@@ -173,7 +173,7 @@ Note that:
 
 To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
 
-![Target Population breakdown with option to cacluate exact statistics.][2]
+![Target Population breakdown with option to calculate exact statistics.][2]
 
 ### Step 2d: Select your send settings
 
