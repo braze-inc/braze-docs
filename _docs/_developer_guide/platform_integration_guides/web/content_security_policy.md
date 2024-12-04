@@ -53,7 +53,7 @@ braze.initialize(apiKey, {
 
 |URL|Information|
 |---|-----------|
-|`img-src: appboy-images.com braze-images.com cdn.braze.eu`|Required when using Braze CDN-hosted images. Hostnames may vary based on dashboard cluster.<br><br>**Important:** If you're using custom fonts, you also need to include:<br>`font-src https://use.fontawesome.com`.|
+|`img-src: appboy-images.com braze-images.com cdn.braze.eu`|Required when using Braze CDN-hosted images. Hostnames may vary based on dashboard cluster.<br><br>**Important:** If you're using custom fonts, you also need to include `font-src`.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Font Awesome {#font-awesome}
