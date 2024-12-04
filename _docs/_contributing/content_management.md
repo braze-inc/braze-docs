@@ -12,7 +12,7 @@ noindex: true
 
 ## Methodology
 
-Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
+Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, view [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
 
 ![The Braze Docs repository's home page on GitHub.]({% image_buster /assets/img/contributing/github/home_page.png %})
 
