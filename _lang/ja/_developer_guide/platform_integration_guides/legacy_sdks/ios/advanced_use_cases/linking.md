@@ -55,7 +55,7 @@ iOS 9 以降では、アプリが開くことを許可されているカスタ�
 
 たとえば、アプリ内メッセージをタップしたときに Facebook アプリが開かれるようにするには、アプリの許可リストに Facebook カスタムスキーム (`fb`) が含まれている必要があります。含まれていないと、ディープリンクが拒否されます。自分のアプリ内のページやビューに誘導するディープリンクでも、アプリのカスタムスキームがアプリの `Info.plist` に含まれている必要があります。
 
-アプリがディープリンクする必要があるすべてのスキームを、キー `Info.plist` を使用してアプリの許可リストに追加する必要があります。以下に例を示します。
+アプリの `Info.plist` がディープリンクする必要があるすべてのスキームを、キー `LSApplicationQueriesSchemes` を使用してアプリの許可リストに追加する必要があります。以下に例を示します。
 
 ```html
 <key>LSApplicationQueriesSchemes</key>
@@ -209,7 +209,7 @@ ATS を完全に無効にできます。ただし、セキュリティ保護が�
 </dict>
 ```
 
-ATS 障害のデバッグ方法の詳細については、[ App Transport Security を使用したアプリの配信](http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213) を参照してください。
+ATS エラーをデバッグする方法の詳細については、[[アプリトランスポートセキュリティを使用したアプリの配布]](http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213) を参照してください。
 
 ## URL エンコーディング
 
@@ -252,7 +252,7 @@ Braze iOS SDK v2.21.0 以降、SDK はリンクをパーセントエンコード
 
 ### リンク処理のカスタマイズ
 
-`ABKURLDelegate` プロトコルを使用して、ディープリンク、Web URL、ユニバーサルリンクなどの URL の処理をカスタマイズできます。Braze の初期化中にデリゲートを設定するには、[`startWithApiKey:inApplication:withAppboyOptions:`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) の`appboyOptions` の`ABKURLDelegateKey` にデリゲートオブジェクトを渡します。その後、URI を処理する前に Braze で `handleAppboyURL:fromChannel:withExtras:` のデリゲートの実装が呼び出されます。
+`ABKURLDelegate` プロトコルを使用して、ディープリンク、Web URL、ユニバーサルリンクなどの URL の処理をカスタマイズできます。Braze の初期化中にデリゲートを設定するには、[[`startWithApiKey:inApplication:withAppboyOptions:`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) の `appboyOptions` の `ABKURLDelegateKey` にデリゲートオブジェクトを渡します。その後、URI を処理する前に Braze で `handleAppboyURL:fromChannel:withExtras:` のデリゲートの実装が呼び出されます。
 
 #### 統合の例:ABKURLDelegate
 

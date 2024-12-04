@@ -9,22 +9,22 @@ description: "このリファレンス記事では、パーソナライズされ
 
 # SDK によるデータ収集
 
-> Braze SDK をお客様のアプリやサイトと連携すると、Braze は特定タイプのデータを自動的に収集します。これらのデータの一部は、私たちのプロセスにとって不可欠なものであり、これらのデータの一部は、あなたのニーズに基づいてオンまたはオフにすることができる。セグメンテーションやメッセージングをさらに強化するために、Brazeを設定して追加タイプのデータを収集することもできる。
+> Braze SDK をお客様のアプリやサイトと連携すると、Braze は特定タイプのデータを自動的に収集します。このデータには、当社のプロセスに必須のものと、お客様が必要に応じてオン / オフを切り替えられるものがあります。セグメンテーションやメッセージングをさらに強化するために、Brazeを設定して追加タイプのデータを収集することもできる。
 
-Brazeは柔軟なデータ収集ができるように設計されているため、Braze SDKを以下の方法で統合することができる：
+Braze は、柔軟にデータ収集ができるように設計されています。このため、Braze SDK を次のように連携できます。
 
-- **[最低限の統合](#minimum-integration)：**Brazeは、Brazeのサービスと通信するために必要なデータを自動的に収集する。
-- **[デフォルトで収集されるオプションデータ](#optional-data-collected-by-default)：**Brazeは、ほとんどのユースケースで幅広く役立つデータを自動的に取得する。Brazeサービスとのコミュニケーションに必要でない場合は、このデータの自動収集を無効にすることができる。
-- **[デフォルトでは収集されないオプションデータ](#data-not-collected-by-default)：**Brazeは、特定のユースケースに有用な一部のデータを収集し、広範なコンプライアンス上の理由から自動的に収集をイネーブルメントにしない。このデータ収集は、ユースケースに合わせて選択することができる。
-- **[パーソナライズされた統合](#personalized-integration)：**Brazeでは、デフォルトのオプションデータに加えて、柔軟にデータを収集することができる。
+- **[最小限の連携](#minimum-integration):**Brazeは、Brazeのサービスと通信するために必要なデータを自動的に収集する。
+- **[デフォルトで収集されるオプションのデータ:](#optional-data-collected-by-default)**Braze は、お客様のほとんどのユースケースで広く役立つデータを自動的に取得します。Brazeサービスとのコミュニケーションに必要でない場合は、このデータの自動収集を無効にすることができる。
+- **[デフォルトで収集されないオプションデータ](#data-not-collected-by-default):**Braze は、特定のユースケースにとって有用なデータを取得しますが、広範なコンプライアンス上の理由から、収集が自動的に有効になることはありません。ユースケースに適している場合にはこのデータを収集することを選択できます。
+- **[パーソナライズされた連携](#personalized-integration):**Braze では、デフォルトのオプションデータに加えて、データを柔軟に収集できます。
 
 ## 最小限の連携
 
-SDK初期化時にBrazeが生成・受信するデータのうち、厳密に必要なものを以下に示す。このデータはコンフィギュレーション不可能で、プラットフォームのコア機能に不可欠である。セッション開始とセッション終了を除き、他のすべての自動トラッキングデータは、データポイントの割り当てにカウントされない。
+以下に、SDKを初期化する際に、Braze が生成して受信する厳密な必須データの一覧を示します。このデータは設定不可能であり、プラットフォームのコア機能に不可欠です。セッション開始とセッション終了を除き、自動トラッキングされるその他すべてのデータは、データポイントの割り当てにカウントされません。
 
 | 属性 | 説明 | なぜ収集されるのか |
 | --------- | ----------- | ------------------ |
-| アプリのバージョン名 / <br> アプリのバージョンコード | アプリの最新バージョン | この属性は、アプリのバージョン互換性に関連するメッセージを適切なデバイスに送信するために使用される。サービスの中断やバグをユーザーに通知するために使用できる。 |
+| アプリのバージョン名 / <br> アプリのバージョンコード | アプリの最新バージョン | この属性は、アプリのバージョン互換性に関連するメッセージを適切なデバイスに送信するために使用される。サービスの中断やバグをユーザーに通知するために使用できます。 |
 | 国 | IPアドレスのジオロケーションによって識別される国 | この属性は、位置に基づいてメッセージをターゲット化するために使用される。 |
 | デバイス ID | デバイス識別子、ランダムに生成される文字列 | この属性は、ユーザーのデバイスを区別し、正しいデバイスにメッセージを送信するために使用される。 |
 | OS と OS バージョン | 現在レポートされているデバイスまたはブラウザと、デバイスまたはブラウザのバージョン | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。また、アプリのバージョンをアップグレードするユーザーをターゲットとするセグメンテーションにも使用できます。 |
@@ -36,7 +36,7 @@ SDK初期化時にBrazeが生成・受信するデータのうち、厳密に必
 
 ### 計算された指標
 
-Brazeは、SDKデータ、SDK以外のメッセージに関連するメッセージインタラクションデータ、および派生情報から計算されたメトリクスを生成する。わかりやすく言うと、この計算されたデータは SDK が追跡するものではなく、Braze サービスによって生成されるデータであり、ユーザープロファイルには追跡されたデータと生成されたデータの両方が表示されます。 
+Braze は、SDK データ、非 SDK メッセージに関連するメッセージインタラクションデータ、および派生情報を計算して指標を生成します。わかりやすく言うと、この計算されたデータは SDK が追跡するものではなく、Braze サービスによって生成されるデータであり、ユーザープロファイルには追跡されたデータと生成されたデータの両方が表示されます。 
 
 計算された指標には、次の属性が含まれます。
 
@@ -58,14 +58,14 @@ Brazeは、SDKデータ、SDK以外のメッセージに関連するメッセー
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-最低限の統合にしか興味がなく、mParticle、セグメンテーション、Tealium、またはGTMと統合する場合は、以下の点に注意すること：
-- **モバイルプラットフォーム**：mParticleとセグメンテーションは、プラットフォームを通じてこれを行う方法を提供していない。 
+最小限の連携のみに関心があり、mParticle、Segment、Tealium、または GTM と連携する場合は、次の点に注意してください。
+- **モバイルプラットフォーム**：これらを構成するコードを手動で更新する必要があります。mParticle と Segment は、そのプラットフォームを通じてこれを行う方法を提供していません。 
 - **Web**: 最小限の連携構成を可能にするために、Braze の連携をネイティブに行う必要があります。タグマネージャーはプラットフォームを通じてこれを行う方法を提供していない。
 {% endalert %} 
 
 ## デフォルトで収集されるオプションのデータ
 
-最小限の統合データに加えて、SDK統合を初期化する際に以下の属性がBrazeによって自動的に取り込まれる。最小限の統合を可能にするために、これらの属性の収集を[オプトアウトする]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection)ことができる。
+SDK 連携を初期化すると、Braze によって、最小限の連携データに加えて次の属性が自動的に取得されます。これらの属性の収集を[オプトアウト]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection)して、最小限の連携を実現できます。
 
 | 属性               | プラットフォーム          | 説明                                                                        | なぜ収集されるのか                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ Brazeは、SDKデータ、SDK以外のメッセージに関連するメッセー
 | ユーザーエージェント              | Web               | [ユーザーエージェント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。また、セグメンテーション内でも使用できます。                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-デバイスレベルプロパティ（デバイスのワイヤレスキャリア、タイムゾーン、解像度など）のトラッキングの詳細については、プラットフォーム固有のドキュメントを参照のこと：[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android の許可リストのドキュメント")、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS の許可リストのドキュメント")、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web の許可リストのドキュメント")。
+デバイスの通信事業者、タイムゾーン、解像度など、デバイスレベルの属性の追跡の詳細については、対応するプラットフォームのドキュメントを参照してください。[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android の許可リストのドキュメント")、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS の許可リストのドキュメント")、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web の許可リストのドキュメント")。
 
 ## デフォルトでは収集されないデータ
 
@@ -96,7 +96,7 @@ Brazeは、SDKデータ、SDK以外のメッセージに関連するメッセー
 
 ## パーソナライズされた連携
 
-Brazeを最大限に活用するために、私たちのSDKインテグレーターは、Braze SDKを実装し、自動収集されたデータに加え、ビジネスに関連する[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes)、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events)、[購入イベントを]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events)ログに記録することがよくあります。
+Braze を最大限に活用するために、SDK インテグレータは多くの場合 Braze SDK を実装し、自動的に収集されたデータに加えて、ビジネスに関連する[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes)、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events)、[購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events)を記録します。
 
 パーソナライズされた連携により、ユーザーエクスペリエンスに関連付けてコミュニケーションをカスタマイズできます。
 

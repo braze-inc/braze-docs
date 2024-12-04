@@ -22,7 +22,7 @@ description: "この記事では、Braze アカウントの取得方法、アク
 [Braze.com](https://www.braze.com) のホームサイトからログインするか、特定の [Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/)に対応するダッシュボード URL を使用する方法もあります。便利なように、Braze には以下のようないくつかのシングルサインオンオプションがあります。
 
 * [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
-* [マイクロソフトEntra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
+* [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 

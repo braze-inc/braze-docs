@@ -62,7 +62,7 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 
 ## ステップ 2:インタラクティブなプッシュ処理を有効にする
 
-`UNNotification` フレームワークを使用し、Braze[デリゲートを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling)実装している場合、このメソッドはすでに統合されているはずである。 
+`UNNotification` フレームワークを使用しており、Braze [[デリゲート]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling)] を実装している場合は、このメソッドがすでに統合されているはずです。 
 
 クリック分析や URL ルーティングを含むプッシュアクションボタンの処理を有効にするには、アプリの `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` デリゲートメソッドに次のコードを追加します。
 
@@ -122,6 +122,6 @@ Brazeは、[デフォルトのプッシュ通知カテゴリーを]({{site.baseu
 
 その後、これらのカテゴリーをダッシュボードからプッシュ通知に割り当てて、デザインのアクションボタン構成をトリガーできます。デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-!["unlike "と "like "の2つのプッシュアクションボタンを表示するプッシュメッセージ。]({% image_buster /assets/img_archive/push_example_category.png %})
+![2つのプッシュアクションボタン"unlike"および"like".]({% image_buster /assets/img_archive/push_example_category.png %})を表示するプッシュメッセージ
 
 

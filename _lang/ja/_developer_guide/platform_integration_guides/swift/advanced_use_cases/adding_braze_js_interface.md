@@ -1,6 +1,6 @@
 ---
 nav_title: JavaScript インタフェースの追加
-article_title: Swift のWebView へのBraze JavaScript インタフェースの追加
+article_title: Swift の WebView に Braze JavaScript インターフェイスを追加する
 platform: Swift
 page_order: 5
 description: "このリファレンス記事では、WebView に Braze JavaScript インターフェイスを追加する方法を説明します。"
@@ -13,14 +13,14 @@ description: "このリファレンス記事では、WebView に Braze JavaScrip
 
 ## インターフェースについて
 
-Braze [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) は以下の原因となります。
+Braze [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) は以下のことを行います。
 
 1. [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) に概説されているように、Braze Javascript ブリッジをWebView にインジェクトします。
 2. WebView から受け取ったブリッジメソッドを[Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) に渡します。
 
 ## WebView へのインターフェースの追加
 
-まず、`WebViewBridge`から[`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler)をアプリに追加します。
+まず、`WebViewBridge` の [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) をアプリに追加します。
 
 ```swift
 let scriptMessageHandler = Braze.WebViewBridge.ScriptMessageHandler(braze: braze)
@@ -63,7 +63,7 @@ let webView = WKWebView(frame: .zero, configuration: configuration)
 
 ## 例: カスタムイベントをログに記録する
 
-次の例では、`BrazeBridge` を使用して、既存のWeb コンテンツからBraze Swift SDK にカスタムイベントを記録します。
+次の例では、`BrazeBridge` を使用して、既存のWeb コンテンツから Braze Swift SDK にカスタムイベントを記録します。
 
 ```javascript
 <!DOCTYPE html>

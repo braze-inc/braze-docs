@@ -33,9 +33,9 @@ Braze ダッシュボードで、[**設定**] ナビゲーションの下にあ�
 
 ## ステップ 3:Huawei メッセージング SDK をアプリに統合する
 
-Huawei は、Huawei Messaging Service をアプリケーションに統合する [Android 統合codelab[](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) を提供しています。以下の手順に従って開始してください。
+Huawei は、Huawei Messaging Service をアプリケーションに統合する [Android 統合 codelab](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) を提供しています。以下の手順に従って開始してください。
 
-codelab が完了したら、カスタムの [Huawei Message Service[](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls) を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
+codelab が完了したら、カスタムの [Huawei Message Service](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls) を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
 
 {% tabs %}
 {% tab JAVA %}
@@ -110,7 +110,7 @@ class CustomPushService: HmsMessageService() {
 
 ### テストプッシュを送信する
 
-**Test]**タブで、[[]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id) method`changeUser(USER_ID_STRING)`]を使ってアプリに設定したユーザーIDを入力し、[**Send Test]**をクリックしてテストプッシュを送信する。
+[**Test**] タブで、[`changeUser(USER_ID_STRING)` method]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id) を使ってアプリに設定したユーザーIDを入力し、[**Send Test**] をクリックしてテストプッシュを送信する。
 
 ![キャンペーン作成コンポーザーのテストタブを見ると、ユーザーIDを入力し、「個人ユーザーを追加」フィールドに入力することで、自分自身にテストメッセージを送信できることがわかる。]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 

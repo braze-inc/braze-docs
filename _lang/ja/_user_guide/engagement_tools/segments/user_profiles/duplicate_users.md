@@ -76,7 +76,7 @@ Braze がプレビューを作成し、CSV ファイルとしてあなたのメ�
 
 #### マージ動作
 
-Brazeは、保持しているプロファイルの空のフィールドを、統合したプロファイルの値で埋める。入力されるフィールドのリストについては、[Merge behaviorを]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior)参照のこと。
+Brazeは、保持しているプロファイルの空のフィールドを、統合したプロファイルの値で埋める。入力されるフィールドのリストについては、「[マージ動作]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior)」を参照してください。
 
 ### ステップ 3:重複を統合する
 

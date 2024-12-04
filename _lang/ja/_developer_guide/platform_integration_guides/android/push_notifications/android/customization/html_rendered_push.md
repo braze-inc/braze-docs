@@ -45,7 +45,7 @@ Android OS では、プッシュ通知で有効な HTML 要素 / タグが制限
 
 **または** 
 
-以下を追加する。 [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
+[`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration) に以下を追加します。
 
 {% tabs %}
 {% tab JAVA %}

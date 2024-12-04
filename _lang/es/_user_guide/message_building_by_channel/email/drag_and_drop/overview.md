@@ -165,7 +165,7 @@ El usuario aleatorio puede o no formar parte de sus criterios de segmentación. 
 
 #### Utilizar Inbox Vision
 
-Inbox Vision le permite ver sus campañas de correo electrónico desde la perspectiva de los clientes de correo electrónico y los dispositivos móviles. Para probar tu mensaje de correo electrónico utilizando **Visión de Bandeja de** Entrada, selecciona **Visión de Bandeja de Entrada** en la sección **Vista previa y prueba** y selecciona **Ejecutar Visión de Bandeja de Entrada**.
+Inbox Vision le permite ver sus campañas de correo electrónico desde la perspectiva de los clientes de correo electrónico y los dispositivos móviles. Para probar tu mensaje de correo electrónico utilizando Visión de Bandeja de Entrada, selecciona **Visión de Bandeja de Entrada** en la sección **Vista previa y prueba** y selecciona **Ejecutar Visión de Bandeja de Entrada**.
 
 {% alert tip %}
 Las imágenes de fondo en los mensajes de correo electrónico pueden provocar a veces la aparición de líneas blancas o desconexiones entre las imágenes, por lo que es importante probar y comprobar los detalles de su mensaje de correo electrónico.
