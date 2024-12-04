@@ -53,8 +53,6 @@ Your website must have a service worker file that imports the Braze service-work
 
 ### Step 4: Add to home screen {#add-to-homescreen}
 
-Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on Safari iOS/iPadOS unless your website has been added to the user's home screen. 
-
 The [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) feature lets users bookmark your website, adding your icon to their valuable home screen real estate.
 
 ![An iPhone showing options to bookmark a website and save to the home screen]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
