@@ -66,9 +66,12 @@ Choose the events you wish to pass to that partner by checking from the availabl
 
 If needed, you can learn more about our events in our [event delivery semantics]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/) article.
 
-## Step 5: Field transformations
+## Step 5: Set up field transformations
 
-Currents field transformations allow you to designate certain string fields in Currents for removal (replace with `[REDACTED]`, as some partners reject events where certain fields are missing or empty) or hashing (applying an SHA-256 hashing algorithm). 
+You can use Currents field transformations to designate a string field for removal or hashing.
+
+- **Removal:** Replaces the string field with `[REDACTED]`. This is helpful if your partner rejects events with missing or empty fields.
+- **Hashing:** Applys an SHA-256 hashing algorithm to the string field.
 
 Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change.
 
