@@ -86,7 +86,6 @@ expo install @braze/expo-plugin
 | `enableBrazeIosRichPush`                      | 불리언 | iOS만 해당. iOS에 리치 푸시 기능을 활성화할지 여부.                                                                                                  |
 | `enableBrazeIosPushStories`                   | 불리언 | iOS만 해당. iOS용 Braze 푸시 스토리를 활성화할지 여부.                                                                                                  |
 | `iosPushStoryAppGroup`                        | 문자열  | iOS만 해당. iOS 푸시 스토리에 사용되는 앱 그룹.                                                                                                       |
-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 예시 구성:
