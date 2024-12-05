@@ -32,7 +32,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
 | `catalogs` | Obrigatória | Vetor | Um vetor que contém objetos de catálogo. Somente um objeto de catálogo é permitido para essa solicitação. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Parâmetros do objeto de catálogo
 
@@ -41,7 +41,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | `name` | Obrigatória | String | O nome do catálogo que você deseja criar. |
 | `description` | Obrigatória | String | A descrição do catálogo que você deseja criar. |
 | `fields` | Obrigatória | Vetor | Um vetor de objetos em que o objeto contém as chaves `name` e `type`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```
@@ -98,7 +98,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `201` e `400`.
+Existem dois códigos de status para este endpoint: `201` e `400`.
 
 ### Exemplo de resposta bem-sucedida
 
@@ -197,6 +197,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `invalid-fields` | `fields` não está formatado corretamente. |
 | `too-many-catalog-atoms` | Você só pode criar um catálogo por solicitação. |
 | `too-many-fields` | O limite de número de campos é 500. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
