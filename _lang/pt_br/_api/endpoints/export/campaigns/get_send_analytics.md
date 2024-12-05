@@ -35,7 +35,7 @@ Esse endpoint é apenas para campanhas de API. Para usar esse endpoint, você pr
 | `campaign_id` | Obrigatória | String | Consulte o [identificador da API da campanha]({{site.baseurl}}/api/identifier_types/). |
 | `send_id` | Obrigatória | String | Consulte [Enviar identificador da API]({{site.baseurl}}/api/identifier_types/). |
 | `length` | Obrigatória | Inteiro | Número máximo de dias antes de `ending_at` para incluir na série retornada. Deve estar entre 1 e 100 (inclusive). |
-| `ending_at` | Opcional | Datetime <br>[(](https://en.wikipedia.org/wiki/ISO_8601) string[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Data em que a série de dados deve terminar. O padrão é a hora da solicitação. |
+| `ending_at` | Opcional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a série de dados deve terminar. O padrão é a hora da solicitação. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -99,7 +99,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Para obter ajuda com exportações de CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
