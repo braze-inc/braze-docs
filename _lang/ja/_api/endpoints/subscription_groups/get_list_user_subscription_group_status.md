@@ -40,7 +40,7 @@ description: "本稿では、List ユーザー のサブスクリプショング
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | 必須 | 文字列 | サブスクリプショングループの`id`。 |
 | `external_id`  |  必須* | 文字列 | ユーザーの `external_id` (少なくとも 1 つ、最大 50 の `external_ids` を含める必要があります)。<br><br>`external_id` と `email`/`phone` の両方が送信されると、指定された `external_id` (s) のみが結果クエリに適用されます。 |
