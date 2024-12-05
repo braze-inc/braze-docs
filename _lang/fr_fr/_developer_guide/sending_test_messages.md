@@ -77,7 +77,7 @@ Vous pouvez envoyer une notification unique par l'intermédiaire du terminal via
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), ces pages se trouvent à un emplacement/localisation différent : <br>\- Les **clés API** sont situées dans la **console de développement** > **Paramètres API**. <br>\- L’option **Rechercher des utilisateurs** est située dans **Utilisateurs** > **Recherche d'utilisateurs**
 {% endalert %}
 
->  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n'êtes pas sur cette instance, reportez-vous à la [documentation de]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) notre [API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) pour savoir à quel endpoint adresser vos requêtes.
+>  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n'êtes pas sur cette instance, reportez-vous à notre [documentation API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) pour savoir à quel endpoint adresser vos requêtes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -102,7 +102,7 @@ Vous pouvez envoyer une notification unique par le biais du terminal via cURL et
 - `YOUR_KEY1` (facultatif)
 - `YOUR_VALUE1` (facultatif)
 
->  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n'êtes pas sur cette instance, reportez-vous à la [documentation de]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) notre [API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) pour savoir à quel endpoint adresser vos requêtes.
+>  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n'êtes pas sur cette instance, reportez-vous à notre [documentation API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) pour savoir à quel endpoint adresser vos requêtes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{

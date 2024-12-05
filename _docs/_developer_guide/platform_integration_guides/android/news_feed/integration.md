@@ -15,9 +15,7 @@ channel:
 
 > This reference article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application.
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 In Android, the News Feed is implemented as a [fragment](http://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. Refer to [Google's documentation on fragments](https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments") for information on adding a fragment to an activity.
 

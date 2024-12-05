@@ -10,7 +10,7 @@ page_order: 13
 > 앱에서 자세한 로깅을 활성화하지 않고도 SDK 기반 채널의 문제를 해결할 수 있도록 Braze SDK에 내장된 디버거를 사용하는 방법을 알아보세요.
 
 {% alert important %}
-현재 이 기능은 기본 iOS 및 Android 앱에서만 사용할 수 있습니다. Braze 웹 SDK에 대한 디버깅을 사용하려면 [URL 매개변수를]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) 대신 [사용할]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) 수 있습니다.
+현재 이 기능은 기본 iOS 및 Android 앱에서만 사용할 수 있습니다. Braze 웹 SDK에 대한 디버깅을 사용하려면 [URL 매개변수를 대신 사용할]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) 수 있습니다.
 {% endalert %}
 
 ## 전제 조건

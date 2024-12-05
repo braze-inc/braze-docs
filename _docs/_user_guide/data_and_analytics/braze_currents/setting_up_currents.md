@@ -36,13 +36,15 @@ The following requirements are the basic, minimum requirements to integrate with
 It's important to keep your Partner Keys/Tokens and authentication details up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
-## Step 1: Choose your partner
+## Setting up Currents
+
+### Step 1: Choose your partner
 
 Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.  
 
 Before you begin your integration, it's best to decide which integration is best for your purposes. For example, if you already utilize mParticle and Segment and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
-## Step 2: Navigate to Currents
+### Step 2: Open Currents
 
 To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
 
@@ -52,13 +54,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 
-## Step 3: Add partner
+### Step 3: Add your partner
 
 Add a partner, sometimes called a "Currents connector," by selecting the dropdown at the top of the screen.
 
 Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions in their respective pages.
 
-## Step 4: Configure events
+### Step 4: Configure your events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) libraries.
 
@@ -66,15 +68,18 @@ Choose the events you wish to pass to that partner by checking from the availabl
 
 If needed, you can learn more about our events in our [event delivery semantics]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/) article.
 
-## Step 5: Field transformations
+### Step 5: Set up field transformations
 
-Currents field transformations allow you to designate certain string fields in Currents for removal (replace with an empty string) or hashing (applying an SHA-256 hashing algorithm). 
+You can use Currents field transformations to remove or hash a string field.
+
+- **Remove:** Replaces the string field with `[REDACTED]`. This is helpful if your partner rejects events with missing or empty fields.
+- **Hash:** Applys an SHA-256 hashing algorithm to the string field.
 
 Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change.
 
 ![Adding field transformations]({% image_buster /assets/img/current3.png %})
 
-## Step 6: Test your integration
+### Step 6: Test your integration
 
 You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
@@ -82,9 +87,10 @@ You may test your integration or take a look at the sample Currents data in our 
 Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
 
-### Test Currents connectors
+#### Testing Currents connectors
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
+
 - No limit to the number of Test Currents connectors you may build.
 - An aggregate maximum of 10,000 events per seven-day rolling period. This event total is updated hourly on the dashboard.
 

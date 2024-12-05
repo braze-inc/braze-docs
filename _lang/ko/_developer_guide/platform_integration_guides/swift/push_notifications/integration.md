@@ -78,7 +78,7 @@ SDK에서 수행하는 자동화 단계는 코드베이스의 기존 푸시 알�
 
 {% alert warning %}
 푸시 알림 자동화를 활성화하려면 기본 스레드에서 SDK를 초기화해야 합니다. SDK 초기화는 애플리케이션 실행이 완료되기 전 또는 AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) 구현에서 수행해야 합니다.
-애플리케이션에 SDK를 [초기화하기]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) 전에 추가 설정이 필요한 경우 [지연된 초기화]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) 문서 페이지를 참조하세요.
+애플리케이션에 SDK를 초기화하기 전에 추가 설정이 필요한 경우 [지연된 초기화]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) 문서 페이지를 참조하세요.
 {% endalert %}
 
 ### 개별 구성 재정의하기

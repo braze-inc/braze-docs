@@ -57,9 +57,9 @@ To set up consistent user updates, bring over existing users' LINE IDs, and sync
 
 1. [Import or update existing known users](#step-1-import-or-update-existing-line-users)
 2. [Integrate the LINE channel](#step-2-integrate-line-channel)
-3. [Request subscription status sync](#step-3-request-a-subscription-status-sync)
-4. [Update user update methods](#step-4-change-your-user-update-methods)
-5. [(Optional) Merge users](#step-5-merge-profiles-optional)
+3. [Reconcile user IDs](#step-3-reconcile-user-ids)
+4. [Change user update methods](#step-4-change-your-user-update-methods)
+5. [(Optional) Merge user profiles](#step-5-merge-profiles-optional)
 
 ## Step 1: Import or update existing LINE users
 

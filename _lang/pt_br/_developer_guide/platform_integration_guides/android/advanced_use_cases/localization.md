@@ -1,0 +1,207 @@
+---
+nav_title: Localização
+article_title: Localização para Android e FireOS
+platform: 
+  - Android
+  - FireOS
+page_order: 1
+description: "Este artigo de referência aborda a localização do Android e do FireOS, listando todos os idiomas atuais compatíveis com a Braze."
+
+---
+
+# Localização
+
+> A localização é compatível com o SDK do Braze para Android. Além do inglês, a Braze oferece vários idiomas para as mensagens de nosso SDK integrado. Elas se referem às mensagens padrão exibidas nos aplicativos integrados ao Braze, como lugares no app quando há problemas de conectividade (por exemplo, "Não é possível estabelecer conexão de rede"). Por favor, tente novamente mais tarde.") 
+
+Se o idioma do telefone for definido como um dos idiomas suportados, qualquer string padrão do Braze disparada em um aplicativo integrado aparecerá automaticamente nesse idioma.
+
+Se estiver procurando uma lista completa dos idiomas suportados que podem ser atribuídos aos seus usuários nos perfis deles, consulte nossa [lista de idiomas do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).
+
+## Idiomas suportados
+
+- Africâner
+- Aghem
+- Acã
+- Albanês
+- Amárico
+- Árabe
+- Armênio
+- Assamês
+- Asu
+- Aimará
+- Azeri
+- Bafia
+- Bambara
+- Basa
+- Basco
+- Bielorrusso
+- Bemba
+- Bena
+- Bengali
+- Bodo
+- Bósnio
+- Bretão
+- Búlgaro
+- Birmanês
+- Quemer
+- Catalão
+- Atlas central tamazight
+- Cherokee
+- Chiga
+- Chinês
+- Congo swahili
+- Córnico
+- Crioulo
+- Croata
+- Tcheco
+- Dinamarquês
+- Dawida
+- Duala
+- Neerlandês
+- Dzonga
+- Ekugusii
+- Inglês
+- Esperanto
+- Estoniano
+- Ewe
+- Ewondo
+- Feroês
+- Persa
+- Filipino
+- Finlandês
+- Francês
+- Galego
+- Luganda
+- Georgiano
+- Alemão
+- Suíço alemão
+- Grego
+- Groenlandês
+- Guarani
+- Guzerate
+- Hauçá
+- Havaiano
+- Hebraico
+- Híndi
+- Húngaro
+- Islandês
+- Igbo
+- Indonésio
+- Inuctitute
+- Irlandês
+- Italiano
+- Japonês
+- Javanês
+- Jola fonyi
+- Cabila
+- Calenjin
+- Camba
+- Canarês
+- Caxemira
+- Cazaque
+- Kîembu
+- Quicuia
+- Quiniaruanda
+- Quirguiz
+- Konkani
+- Coreano
+- Koyraboro senni
+- Curdo
+- Lao
+- Latim
+- Letão
+- Lingala
+- Lituano
+- Luba katanga
+- Luo
+- Luxemburguês
+- Luia
+- Macedônio
+- Machame
+- Makhuwa meetto
+- Maconde
+- Malgaxe
+- Malaio
+- Malaiala
+- Maltês
+- Manês
+- Marata
+- Massai
+- Meru
+- Moldávio
+- Mongol
+- Crioulo mauriciano
+- Mundang
+- Nama
+- Nepalês
+- Norte ndebele
+- Norueguês
+- Nuer
+- Ancolé
+- Nynorsk
+- Oriá
+- Oromo
+- Pachto
+- Fulani
+- Polonês
+- Português
+- Punjabi
+- Quechua
+- Romance Raeto
+- Romeno
+- Rombo
+- Rundi
+- Russo
+- Rwa
+- Samburu
+- Sámi
+- Sango
+- Sânscrito
+- Escocês
+- Sena
+- Sérvio
+- Shambala
+- Xona
+- Sichuan yi
+- Sindi
+- Cingalês
+- Eslovaco
+- Esloveno
+- Soga
+- Somali
+- Songai
+- Espanhol
+- Sundanês
+- Suaíli
+- Sueco
+- Tachelhit
+- Tagalo
+- Tajique
+- Tâmil
+- Tasawaq
+- Tártaro
+- Telugo
+- Ateso
+- Tailandês
+- Tibetano
+- Tigrínia
+- Tonganês
+- Turco
+- Turcomeno
+- Uigur
+- Ucraniano
+- Urdu
+- Uzbeque
+- Vai
+- Vietnamita
+- Vunjo
+- Galês
+- Xhosa
+- Yangben
+- Iídiche
+- Iorubá
+- Zarma
+- Zulu
+
+Para saber mais, consulte nosso artigo sobre [localização do Android](http://developer.android.com/guide/topics/resources/localization.html).
+
