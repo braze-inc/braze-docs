@@ -30,7 +30,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
-| `ending_at` | Opcional | Datetime ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a exportação de dados deve terminar. O padrão é a hora da solicitação. |
+| `ending_at` | Opcional | Datetime ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a exportação de dados deve terminar. Padrões para o momento da solicitação. |
 | `length` | Obrigatória | Inteiro | Número máximo de dias antes de `ending_at` para incluir na série retornada. Deve estar entre 1 e 100 (inclusive). |
 | `unit` | Opcional | String | Unidade de tempo entre os pontos de dados. Pode ser dia ou hora; o padrão é dia. |
 | `app_id` | Opcional | String | Identificador da API do app recuperado da página [Chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/). Se excluído, serão retornados os resultados de todos os apps em um espaço de trabalho. |
@@ -64,5 +64,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-Para obter ajuda com exportações de CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
