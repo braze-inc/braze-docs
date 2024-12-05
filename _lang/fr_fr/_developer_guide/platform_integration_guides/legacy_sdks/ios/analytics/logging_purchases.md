@@ -1,13 +1,16 @@
 ---
 nav_title: Enregistrer les achats
 article_title: Enregistrement des achats pour iOS
-platform: Swift
+platform: iOS
 page_order: 4
-description: "Cet article de référence montre comment effectuer le suivi des achats et des revenus liés aux messages in-app et comment attribuer des propriétés d'achat pour le SDK Swift."
+description: "Cet article de référence montre comment suivre les achats et les revenus dans l’application et attribuer des propriétés d’achat dans votre application iOS."
 
+noindex: true
 ---
 
-# Enregistrer les achats
+{% multi_lang_include deprecations/objective-c.md %}
+
+# Enregistrement des achats pour iOS
 
 Enregistrez les achats réalisés via l’application afin que vous puissiez suivre vos revenus au fil du temps ainsi que les sources de revenus et segmenter vos utilisateurs par leur valeur à vie.
 
@@ -20,19 +23,19 @@ Avant la mise en œuvre, assurez-vous de consulter des exemples des options de s
 Pour utiliser cette fonction, ajoutez cet appel de méthode après un achat réussi dans votre application :
 
 {% tabs %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
-```
-
-{% endtab %}
 {% tab OBJECTIF-C %}
 
 ```objc
-[AppDelegate.braze logPurchase:"product_id"
-                      currency:@"USD"
-                         price:price];
+[[Appboy sharedInstance] logPurchase:@"your product ID"
+inCurrency:@"USD"
+atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
 ```
 
 {% endtab %}
@@ -44,34 +47,35 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 - Notez que si l’identifiant du produit est vide, l’achat ne sera pas enregistré dans Braze.
 
 ### Ajouter des propriétés {#properties-purchases}
-Vous pouvez ajouter des métadonnées sur les achats en transmettant un dictionnaire contenant les valeurs `Int`, `Double`, `String`, `Bool` ou `Date`.
 
-Pour plus de détails, reportez-vous à la [documentation sur les classes iOS ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "(documentation logpurchase)").
+Vous pouvez ajouter des métadonnées sur les achats en passant soit un [tableau de propriétés d'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects), soit en passant un `NSDictionary` rempli avec des valeurs de `NSNumber`, `NSString` ou `NSDate`.
+
+Pour plus de détails, consultez la [documentation de la classe iOS ](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "(documentation sur la classe logpurchase avec propriétés)").
 
 ### Ajout d’une quantité
-Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `Int` pour la quantité.
+Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `NSUInteger` pour la quantité.
 
 * Une entrée de quantité doit être comprise dans la plage de [0, 100] pour que le SDK enregistre un achat.
 * Les méthodes sans entrée de quantité auront une valeur de quantité égale à 1 par défaut.
+* Les méthodes avec une entrée de quantité n'ont pas de valeur par défaut et **doivent** recevoir une entrée de quantité pour que le SDK puisse enregistrer un achat.
 
-Pour plus de détails, reportez-vous à la [documentation sur les classes iOS ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "(documentation logpurchase)").
+Pour plus de détails, reportez-vous à la [documentation de la classe iOS ](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "(documentation de la classe logpurchase avec quantité)").
 
 {% tabs %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
-```
-
-{% endtab %}
 {% tab OBJECTIF-C %}
 
 ```objc
-[AppDelegate.braze logPurchase:productId
-                      currency:@"USD"
-                         price:price
-                      quantity:quantity
-                    properties:@{@"checkout_id" : self.checkoutId}];
+[[Appboy sharedInstance] logPurchase:@"your product ID"
+inCurrency:@"USD"
+atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]
+withProperties:@{@"key1":"value1"}];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
 ```
 
 {% endtab %}
