@@ -104,7 +104,7 @@ To upgrade your Test Currents connector, edit the integration in the dashboard a
 
 ## IP allowlisting
 
-Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
+Braze will send Currents data from the listed IPs.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
 |---|
