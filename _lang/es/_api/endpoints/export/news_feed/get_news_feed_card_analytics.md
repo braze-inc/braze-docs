@@ -16,9 +16,7 @@ description: "En este artículo se describen los detalles del punto final Export
 
 > Utiliza este punto final para recuperar una serie diaria de estadísticas de interacción de una tarjeta a lo largo del tiempo.
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 
@@ -37,7 +35,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `card_id` | Obligatoria | Cadena | Ver [Identificador API de tarjeta]({{site.baseurl}}/api/identifier_types/). <br><br> Puedes encontrar el `card_id` de una tarjeta determinada en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) y en la página de detalles de la tarjeta dentro de tu panel, o puedes utilizar el [punto final Exportar lista de tarjetas de canal de noticias]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 | `length` | Obligatoria | Entero | Número máximo de unidades (días u horas) antes de `ending_at` a incluir en la serie devuelta. Debe estar entre 1 y 100 (ambos inclusive). |
 | `unit` | Opcional | Cadena | Unidad de tiempo entre puntos de datos. Puede ser `day` o `hour`, de forma predeterminada, `day`.  |
-| `ending_at` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe terminar la serie de datos. De forma predeterminada, la hora de la solicitud. |
+| `ending_at` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe finalizar la serie de datos. De forma predeterminada, la hora de la solicitud. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
