@@ -41,7 +41,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External ids for the users to delete,
+  "external_ids" : (optional, array of string) External IDs for the users to delete,
   "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
   "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
   "email_addresses": (optional, array of string) User emails for the users to delete
@@ -100,7 +100,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
-  "deleted" : (required, integer) number of user ids queued for deletion
+  "deleted" : (required, integer) number of user IDs queued for deletion
 }
 ```
 {% endapi %}
