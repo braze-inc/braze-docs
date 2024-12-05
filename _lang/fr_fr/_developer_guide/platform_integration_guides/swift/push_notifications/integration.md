@@ -379,7 +379,7 @@ Si vous souhaitez tester des notifications push et in-app à l’aide de la lign
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), ces pages se trouvent à un emplacement/localisation différent : <br>\- Les **clés API** sont situées dans la **console de développement** > **Paramètres API**. <br>\- L’option **Rechercher des utilisateurs** est située dans **Utilisateurs** > **Recherche d'utilisateurs**
 {% endalert %}
 
-Dans l'exemple suivant, l'instance `US-01` est utilisée. Si vous n'êtes pas sur cette instance, reportez-vous à la [documentation de]({{site.baseurl}}/api/basics/) notre [API]({{site.baseurl}}/api/basics/) pour savoir à quel endpoint adresser vos requêtes.
+Dans l'exemple suivant, l'instance `US-01` est utilisée. Si vous n'êtes pas sur cette instance, reportez-vous à notre [documentation API]({{site.baseurl}}/api/basics/) pour savoir à quel endpoint adresser vos requêtes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
