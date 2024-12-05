@@ -239,7 +239,7 @@ Braze SDK 3.1.1 이전에는 `AppboyFcmReceiver`를 사용하여 FCM 푸시를 �
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-또는 [런타임 구성[]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/)을 통해 설정합니다.
+또는 [런타임 구성]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/)을 통해 설정합니다.
 
 {% tabs %}
 {% tab JAVA %}
