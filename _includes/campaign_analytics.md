@@ -406,7 +406,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
     </tbody>
 </table>
 
-> Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
+> Delivery of notifications is a “best effort” by Apple Push Notification services (APNs). It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
 
 ##### Tracking unsubscribes
 
@@ -429,7 +429,7 @@ The number of _Sends_ may exceed the number of _Unique Recipients_ due to the fo
 {% tabs %}
 {% tab Apple Push Notification service %}
 
-Bounces occur in Apple Push Notification servies (APNs) when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (such as at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
+Bounces occur in Apple Push Notification services (APNs) when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (such as at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
 If a user disables push within their device settings on subsequent app open the SDK will detect that push has been disabled and notify Braze. At this point we will update the push enabled state to be disabled. When a disabled user receives a push campaign before having a new session, the campaign would successfully send and appear as delivered. The push will not bounce for this user. Following a subsequent session, when you attempt to send a push to the user Braze is already aware of whether we have a foreground token as such no notification is sent.
 
