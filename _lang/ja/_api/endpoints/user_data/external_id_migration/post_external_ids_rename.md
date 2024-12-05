@@ -51,10 +51,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | 必須 | 外部識別子リネームオブジェクトの配列 | 外部識別子の名前変更オブジェクトの構造に対するリクエスト例と次の制限事項を表示します。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - `current_external_id` はユーザーのプライマリ ID である必要があり、非推奨 ID にすることはできません
 - `new_external_id` は、プライマリ ID または非推奨 IDとしてすでに使用されているものであってはなりません
