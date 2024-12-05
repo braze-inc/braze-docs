@@ -211,12 +211,6 @@ Voici un exemple de réponse qui inclut les messages Canvas envoyés par différ
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 
