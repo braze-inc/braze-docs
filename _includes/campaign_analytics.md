@@ -406,17 +406,28 @@ Here is a breakdown of some key metrics you may see while reviewing your message
     </tbody>
 </table>
 
-Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
-
-{% alert tip %}
-Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
-{% endalert %}
-
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
 
-#### Bounced push notifications {#bounced-push}
+##### Tracking unsubscribes
 
-##### Apple push notification service
+Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
+
+##### Understanding opens
+
+Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
+
+##### Why push sends can exceed unique recipients
+
+The number of _Sends_ may exceed the number of _Unique Recipients_ due to the following reasons:
+
+- **Re-eligibility is on:** When re-eligibility is enabled in your campaign or Canvas settings, users who meet the segment and delivery criteria can receive the same push notification multiple times. This results in a higher number of total sends.
+- **Users have multiple devices:** If re-eligibility is not enabled, the difference may be explained by users having multiple devices associated with their profile. For instance, a user could have both a smartphone and tablet, and the push notification is being sent to all registered devices. Each delivery counts as a send, but only one unique recipient is recorded.
+- **Users are assigned to multiple apps:** If users are associated with more than one app (such as when testing a new app), they may receive the same push notification on each app. This contributes to a higher number of sends.
+
+##### Why bounces occur {#bounced-push}
+
+{% tabs %}
+{% tab Apple Push Notification service (APNs) %}
 
 Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (such as at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
@@ -424,7 +435,8 @@ If a user disables push within their device settings on subsequent app open the 
 
 Push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
 
-##### Firebase Cloud Messaging
+{% endtab %}
+{% tab Firebase Cloud Messaging (FCM) %}
 
 Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
@@ -434,6 +446,10 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 | Backed up application | When an application is backed up, its registration ID could become invalid before the application is restored. In this case, FCM will no longer store the application's registration ID and the application will no longer receive messages. As such, registration IDs should **not** be saved when an application is backed up. |
 | Updated application | When an application is updated, the previous version's registration ID may no longer work. As such, an updated application should replace its existing registration ID. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 
 {% elsif include.channel == "SMS" %}
 
