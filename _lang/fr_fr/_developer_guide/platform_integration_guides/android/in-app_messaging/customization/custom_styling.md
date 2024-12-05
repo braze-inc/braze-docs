@@ -38,6 +38,10 @@ Si vous préférez, vous pouvez écraser ces styles pour créer un aspect et une
 
 Pour remplacer un style, copiez-le dans son intégralité dans le fichier `styles.xml` dans votre projet et apportez des modifications. Le style entier doit être copié sur votre fichier `styles.xml` local pour que tous les attributs soient correctement définis. Notez que ces styles personnalisés sont destinés aux modifications apportées à des éléments individuels de l’IU et non à des modifications globales sur les mises en page. Les modifications au niveau de la disposition doivent être gérées avec des vues personnalisées.
 
+{% alert note %}
+Vous pouvez personnaliser certaines couleurs directement dans votre campagne Braze sans modifier le XML. N'oubliez pas que les couleurs définies dans le tableau de bord de Braze remplacent celles que vous avez définies ailleurs.
+{% endalert %}
+
 ## Police personnalisée
 
 Braze permet de définir une police personnalisée à l'aide du [guide des familles de polices]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). Pour l’utiliser, remplacez le style du texte du message, des en-têtes et du texte du bouton et utilisez l’attribut `fontFamily` pour indiquer à Braze d’utiliser votre famille de polices personnalisée.
