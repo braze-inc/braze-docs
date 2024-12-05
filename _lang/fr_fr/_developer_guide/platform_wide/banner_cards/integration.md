@@ -18,7 +18,7 @@ Similaires aux [cartes de contenu]({{site.baseurl}}/user_guide/message_building_
 Les cartes bannières sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
 {% endalert %}
 
-Cette fonctionnalité est disponible à partir des [versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) suivantes [du SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+Cette fonctionnalité est disponible à partir des [versions suivantes du SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) :
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 %}
 
@@ -327,9 +327,11 @@ This feature is not currently supported on Roku.
 
 ## Analyse
 
-Braze se chargera automatiquement de l'enregistrement des impressions lorsque vous utiliserez les méthodes du SDK pour insérer des cartes bannières. 
+Vous n'avez pas à vous préoccuper du suivi manuel des impressions car Braze gère automatiquement l'enregistrement des impressions lorsque vous utilisez les méthodes du SDK pour insérer des cartes bannières.
 
-Si vous avez besoin d'analyser et de rendre le HTML, [contactez-nous](mailto:banners-feedback@braze.com). Vous pouvez utiliser la méthode suivante pour suivre les impressions :
+Si vous avez besoin d'analyser et de rendre le HTML dans une vue personnalisée, [contactez-nous](mailto:banners-feedback@braze.com).
+
+{% details Plus d'informations sur le suivi manuel des impressions %}
 
 {% alert important %}
 La personnalisation de votre intégration n'est probablement pas nécessaire, c'est pourquoi il convient d'examiner attentivement l'étape suivante.
@@ -406,6 +408,8 @@ This feature is not currently supported on Roku.
 ```
 {% endtab %}
 {% endtabs %}
+
+{% enddetails %}
 
 ## Bonnes pratiques
 
