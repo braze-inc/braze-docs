@@ -29,7 +29,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
-| `integration_id` | Obrigatória | String | ID de Integração. |
+| `integration_id` | Obrigatória | String | ID de integração. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -54,11 +54,11 @@ O código de status `202` pode retornar o seguinte corpo de resposta:
 
 ## Solução de problemas
 
-A tabela a seguir lista os possíveis erros retornados e suas etapas de solução de problemas associadas.
+A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas.
 
 | Erro | Solução de problemas |
 | --- | --- |
-| `400 Invalid integration ID` | Verifique se o seu `integration_id` é válido. |
+| `400 Invalid integration ID` | Verifique se o site `integration_id` é válido. |
 | `404 Integration not found` | Não existe integração para o ID de integração fornecido. Certifique-se de que seu ID de integração é válido. |
 | `429 Another job is in progress` | Há uma sincronização em execução para esta integração. Tente novamente após a sincronização ser concluída. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
