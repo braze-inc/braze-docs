@@ -149,5 +149,5 @@ Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingW
 
 ## Ressources complémentaires
 
-[Documentation complète [sur les classes i OSUne [](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "documentation complète sur les classes iOS") est disponible pour fournir des conseils supplémentaires sur toutes les méthodes du SDK.
+Une [documentation complète sur les classes iOS ](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "(documentation complète sur les classes iOS)") est disponible pour fournir des conseils supplémentaires sur toutes les méthodes du SDK.
 
