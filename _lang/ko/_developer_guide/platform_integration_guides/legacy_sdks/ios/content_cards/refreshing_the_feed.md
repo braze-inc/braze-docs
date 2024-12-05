@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include deprecations/objective-c.md %}
+{% multi_lang_include 사용 중지/목적 -c.md %}
 
 # 피드 새로 고침
 
