@@ -51,7 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`email_template_id`| 必須 |文字列|[メールテンプレートのAPI識別子]({{site.baseurl}}/api/identifier_types/)|
 |`template_name`|オプション|文字列|メールテンプレートの名前|
