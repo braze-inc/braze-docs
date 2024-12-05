@@ -32,7 +32,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `catalogs` | Requis | Tableau | Un tableau qui contient des objets Catalogue. Un seul objet Catalogue est autorisé pour cette requête. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Paramètres de l’objet Catalogue
 
@@ -41,7 +41,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `name` | Requis | Chaîne de caractères | Le nom du catalogue que vous voulez créer. |
 | `description` | Requis | Chaîne de caractères | La description du catalogue que vous voulez créer. |
 | `fields` | Requis | Tableau | Un tableau d’objets dans lequel l’objet contient les clés `name` et `type`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -197,6 +197,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-fields` | `fields` n’est pas formaté correctement. |
 | `too-many-catalog-atoms` | Vous ne pouvez créer qu’un catalogue par requête. |
 | `too-many-fields` | Le nombre de champs est limité à 500. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
