@@ -10,7 +10,7 @@ tool: Currents
 
 # Available partners
 
-> This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
+> This page lists the data partners you can integrate with Braze Currents, and outlines their use cases. 
 
 {% alert note %}
 Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment is `Email Opened`, while in Mixpanel, it is `Email Open`.
@@ -18,7 +18,7 @@ Naming conventions for events that flow for one partner from Braze may not match
 
 ## Data warehouse storage
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-Data warehouse storage offers a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or used to power business intelligence tools, machine learning algorithms, get insights on marketing performance, and more.
+Data warehouse storage offers a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or be used to power business intelligence tools and machine learning algorithms, get insights on marketing performance, and more.
 
 * [Amazon S3][1]
 * [Google Cloud Storage][2]
