@@ -164,11 +164,8 @@ If opens are being logged, check whether it is an issue with the deep link in ge
 
 _Direct Opens_ are not logged for test sends or silent push notifications. If you have sent an iOS push notification and know at least one user has clicked the notification, but few or no _Direct Opens_ have been logged, this is likely an integration issue. 
 
-- Make sure that the messages are not being sent as [silent push notifications][1]. The message must have text in the title or body to not be considered silent.
+- Make sure that the messages are not being sent as [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). The message must have text in the title or body to not be considered silent.
 - Check that you have set up push notifications according to the integration guide. Any form of click reporting, including _Direct Opens_, requires the following steps to be implemented correctly:
-   - [Step 3][2]: On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
-   - [Step 5][3]: Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
+   - [Step 3]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
+   - [Step 5]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling
