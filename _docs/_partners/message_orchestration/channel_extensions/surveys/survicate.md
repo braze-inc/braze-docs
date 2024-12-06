@@ -18,7 +18,7 @@ With the Braze and Survicate integration, you can embed surveys directly in your
 
 ## Use cases
 
-Survicate and Braze work together to cover a range of feedback use cases, helping you collect actionable user insights and improve the customer experience:
+Braze and Survicate work together to cover a range of feedback use cases, helping you collect actionable user insights and improve the customer experience:
 
 - Measure customer satisfaction (such as CSAT, NPS, or CES)
 - Collect product feedback
@@ -81,5 +81,5 @@ The Survicate and Braze integration offers real-time data syncing, so the most u
 [1]: https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter
 [2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}
 [3]:  {% image_buster /assets/img/survicate/image1.png %}
-[4]:  {% image_buster /assets/img/survicate/image2.png %}
-[5]:  {% image_buster /assets/img/survicate/image3.png %}
+[4]:  {% image_buster /assets/img/survicate/survicate_asset_3.png %}
+[5]:  {% image_buster /assets/img/survicate/survicate_asset_2.png %}
