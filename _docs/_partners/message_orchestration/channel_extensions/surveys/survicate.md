@@ -60,7 +60,7 @@ The Survicate and Braze integration offers real-time data syncing, so the most u
 
 ### Step 3: Connect the integration
 
-1. Then, in the **Connect tab**, find Braze and click **Connect** to integrate. 
+1. Then, in the **Connect tab**, find Braze and select **Connect** to integrate. 
 2. Insert your Braze account Workspace API Key and Braze Instance URL.
 
 ![Fields to enter the workspace API key and Braze instance URL.][3]
