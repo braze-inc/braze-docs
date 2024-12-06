@@ -166,8 +166,8 @@ _Direct Opens_ are not logged for test sends or silent push notifications. If yo
 
 - Make sure that the messages are not being sent as [silent push notifications][1]. The message must have text in the title or body to not be considered silent.
 - Check that you have set up push notifications according to the integration guide. Any form of click reporting, including _Direct Opens_, requires the following steps to be implemented correctly:
-   - [Step 3:][2] On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
-   - [Step 5:][3] Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
+   - [Step 3][2]: On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
+   - [Step 5][3]: Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns
