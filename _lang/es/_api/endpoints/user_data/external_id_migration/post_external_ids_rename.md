@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Obligatoria | Matriz de identificadores externos renombrar objetos | Consulta el ejemplo de solicitud y las limitaciones siguientes para conocer la estructura del objeto renombrar identificador externo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - El `current_external_id` debe ser el ID principal del usuario, y no puede ser un ID obsoleto
 - El `new_external_id` no debe estar ya en uso ni como ID primario ni como ID obsoleto.

@@ -33,16 +33,16 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `canvas_id` | Obligatoria | Cadena | Ver [identificador de API de Canvas]({{site.baseurl}}/api/identifier_types/). |
 | `ending_at` | Obligatoria | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe finalizar la exportación de datos. De forma predeterminada, la hora de la solicitud. |
 | `starting_at` | Opcional\*. | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe comenzar la exportación de datos. <br><br>\* Se requiere `length` o `starting_at`. |
-| `length` | Opcional\*. | Cadena | Número máximo de días antes de `ending_at` a incluir en la serie devuelta. Debe estar entre 1 y 14 (ambos inclusive). <br><br>\* Se requiere `length` o `starting_at`. |
-| `include_variant_breakdown` | Opcional | Booleano | Incluir o no estadísticas de variantes (predeterminado a `false`).  |
-| `include_step_breakdown` | Opcional | Booleano | Incluir o no estadísticas de pasos (predeterminado a `false`). |
-| `include_deleted_step_data` | Opcional | Booleano | Incluir o no las estadísticas de los pasos eliminados (predeterminado a `false`). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `length` | Opcional\*. | Cadena | Número máximo de días antes de `ending_at` a incluir en la serie devuelta. Debe estar comprendido entre 1 y 14 (ambos inclusive). <br><br>\* Se requiere `length` o `starting_at`. |
+| `include_variant_breakdown` | Opcional | Booleano | Incluir o no estadísticas de variantes (por defecto `false`).  |
+| `include_step_breakdown` | Opcional | Booleano | Incluir o no estadísticas de pasos (por defecto `false`). |
+| `include_deleted_step_data` | Opcional | Booleano | Incluir o no las estadísticas de los pasos eliminados (por defecto `false`). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 {% raw %}
 ```
-curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-05:00&starting_at=2018-05-28T23:59:59-05:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
