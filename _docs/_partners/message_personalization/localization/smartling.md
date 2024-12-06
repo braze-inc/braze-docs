@@ -27,18 +27,18 @@ The Braze Connector supports the translation of HTML email templates, Content Bl
 
 The Smartling Braze integration will allow you to translate HTML email templates, Content Blocks, Canvases, and campaign email messages.
 
-### Email templates
+**Email templates**
 * Only HTML email templates are supported.
 * You will need to decide on how your translated emails are delivered to Braze by the connector:
   * **One Email for All Languages:** The connector delivers all languages in the same email as the source.
   * **One Email per Language:** The connector creates a new email for each language in Braze.
 
-### Content Blocks
+**Content Blocks**
 * All Content Blocks are supported.
 * The Content Blocks contain both the original and translated versions.
 * Liquid script determines the correct language for display based on the recipient's language preference.
 
-### Campaigns and Canvases
+**Campaigns and Canvases**
 * Make sure you've added your target languages under **Multi-Language Support** settings in Braze.
 * Refer to [Smartling documentation][3] for details on connector configuration.
 
@@ -66,6 +66,7 @@ Refer to Smartling [documentation][3] for details on connector configuration.
 Once the Braze connector has been connected and set up, you will find Braze content in the **Braze** tab in your Smartling project. Refer to Smartling [documentation][7] to learn more.
 
 Smartling provides advanced features to search and select content by:
+
 * Keyword search
 * Braze content type
 * Braze tagging
