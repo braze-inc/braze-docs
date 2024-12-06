@@ -15,7 +15,7 @@ description: "Este artigo descreve o endpoint da Braze \"Excluir item do catálo
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Use esse ponto de extremidade para excluir um item em seu catálogo. 
+> Use esse ponto de extremidade para excluir um item em seu catálogo.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 |---|---|---|---|
 | `catalog_name` | Obrigatória | String | Nome do catálogo. |
 | `item_id` | Obrigatória | String | A ID do item do catálogo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Parâmetros de solicitação
 
@@ -92,6 +92,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `arbitrary-error` | Ocorreu um erro arbitrário. Tente novamente ou entre em contato com [o suporte]({{site.baseurl}}/support_contact/). |
 | `catalog-not-found` | Verifique se o nome do catálogo é válido. |
 | `item-not-found` | Verifique se o item a ser excluído existe em seu catálogo. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

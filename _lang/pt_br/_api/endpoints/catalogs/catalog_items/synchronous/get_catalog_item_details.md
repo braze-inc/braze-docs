@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Lista Detalhes do item do catálogo"
+nav_title: "OBTER: Listar Detalhes do Item do Catálogo"
 article_title: "OBTER: Lista Detalhes do item do catálogo"
 search_tag: Endpoint
 page_order: 2
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 |---|---|---|---|
 | `catalog_name` | Obrigatória | String | Nome do catálogo. |
 | `item_id` | Obrigatória | String | A ID do item do catálogo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Parâmetros de solicitação
 
@@ -49,7 +49,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `200` e `404`.
+Existem dois códigos de status para este endpoint: `200` e `404`.
 
 ### Exemplo de resposta bem-sucedida
 
@@ -102,6 +102,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | --- | --- |
 | `catalog-not-found` | Verifique se o nome do catálogo é válido. |
 | `item-not-found` | Verifique se o item está no catálogo. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

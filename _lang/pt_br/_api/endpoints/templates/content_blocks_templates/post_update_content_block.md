@@ -53,7 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `content` | Opcional | String | Conteúdo HTML ou de texto em blocos de conteúdo.
 | `state` | Opcional | String | Escolha `active` ou `draft`. O padrão é `active` se não for especificado. |
 | `tags` | Opcional | Matriz de strings | [As tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) já devem existir. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```json
@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "content_block_id" :"content_block_id", 
+  "content_block_id" :"content_block_id",
   "name": "content_block",
   "description": "This is my Content Block",
   "content": "HTML or text content within block",
@@ -91,7 +91,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | --- | --- |
 | `Content cannot be blank` |
 | `Content must be a string` | Certifique-se de que seu conteúdo esteja encapsulado entre aspas (`""`). |
-| `Content must be smaller than 50kb` | O conteúdo em seu bloco precisa ter menos de 50kb no total. |
+| `Content must be smaller than 50kb` | O conteúdo em seu bloco de conteúdo deve ter menos de 50kb no total. |
 | `Content contains malformed liquid` | O Liquid fornecido não é válido ou não pode ser analisado. Tente novamente com um Liquid válido ou entre em contato com o suporte. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
@@ -104,10 +104,10 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `Content Block name cannot be updated for active Content Blocks` |
 | `Content Block state must be either active or draft` |
 | `Active Content Block can not be updated to Draft. Create a new Content Block.` |
-| `Tags must be an array` | As tags precisam ser formatadas como uma matriz de strings, por exemplo, `["marketing", "promotional", "transactional"]`. |
+| `Tags must be an array` | As tags devem ser formatadas como uma matriz de strings, por exemplo, `["marketing", "promotional", "transactional"]`. |
 | `All tags must be strings` | Confira se as tags estão entre aspas (`""`). |
-| `Some tags could not be found` | Para adicionar uma tag ao criar um bloco de conteúdo, ela já precisa existir na Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `Some tags could not be found` | Para adicionar uma tag ao criar um bloco de conteúdo, a tag já deve existir na Braze. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

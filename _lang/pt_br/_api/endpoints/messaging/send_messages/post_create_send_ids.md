@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint \"Criar IDs de envi
 /sends/id/create
 {% endapimethod %}
 
-> Use esse ponto de extremidade para criar IDs de envio que possam ser usados para enviar mensagens e rastrear o desempenho das mensagens programaticamente, sem a criação de campanhas para cada envio. 
+> Use esse ponto de extremidade para criar IDs de envio que possam ser usados para enviar mensagens e rastrear o desempenho das mensagens programaticamente, sem a criação de campanhas para cada envio.
 
 Usar o identificador de envio para rastrear e enviar mensagens é útil se estiver planejando gerar e enviar conteúdo programaticamente.
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obrigatória | String | Consulte [identificador de campanha]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```
