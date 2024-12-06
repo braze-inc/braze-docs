@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Foursquare
 
-{% multi_lang_include video.html id="G2ZoJQZGQru » align="right » %}
+{% multi_lang_include video.html id="G2ZoJqZGqrU" align="right" %}
 
 > [Foursquare](https://foursquare.com/) est une plateforme de données de localisation qui fournit un ciblage des données de localisation dans vos campagnes Braze. Utilisez le SDK Pilgrim de Foursquare sur les applications iOS et Android pour déclencher des événements en temps réel en fonction de l'emplacement/localisation, ce qui vous permet d'exploiter les puissantes capacités de ciblage géographique de Foursquare pour envoyer des messages pertinents et personnalisés avec Braze.
 

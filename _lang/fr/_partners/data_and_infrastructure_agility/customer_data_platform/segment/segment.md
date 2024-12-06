@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Segment
 
-{% multi_lang_include video.html id="RFOHFZ34HYM » align="right » %}
+{% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
 > [Segment][5] est une plateforme de données clients qui vous aide à collecter, nettoyer et activer vos données clients. 
 
