@@ -23,9 +23,7 @@ The Braze Connector supports the translation of HTML email templates, Content Bl
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Integration
-
-The Smartling Braze integration will allow you to translate HTML email templates, Content Blocks, Canvases, and campaign email messages.
+Note the following details depending on what you're translating:
 
 **Email templates**
 * Only HTML email templates are supported.
@@ -41,6 +39,10 @@ The Smartling Braze integration will allow you to translate HTML email templates
 **Campaigns and Canvases**
 * Make sure you've added your target languages under **Multi-Language Support** settings in Braze.
 * Refer to [Smartling documentation][3] for details on connector configuration.
+
+## Integration
+
+The Smartling Braze integration will allow you to translate HTML email templates, Content Blocks, Canvases, and campaign email messages.
 
 ### Step 1: Set up the Braze project in Smartling TMS
 
