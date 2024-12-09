@@ -23,6 +23,40 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp Product Updates
 
+### November 2024: Updates to the per-user marketing template limit for people in the US, ahead of the holiday season
+*Last Updated December 2024*
+
+Since Meta has rolled out the per-user marketing template limit, Meta has seen significant improvements in user read rates and sentiment.
+ 
+Beginning now, ahead of the holiday season, people in the US will receive fewer new marketing conversations. Meta expects this change to create more engaged audiences, which ultimately leads to better outcomes for businesses. This may result in lower delivery rates for your business if you send marketing messages to US phone numbers, which can be monitored with the error code `131049` through Braze Currents and the Message Activity Log.
+
+Businesses in the US can still deliver marketing messages in other geographies, and there is no impact to utility, authentication or service messages, or marketing template messages sent within a user-initiated conversation window (for example, a click-to-WhatsApp ad or product carousel or coupon template that is sent as part of a conversation). 
+
+### November 2024: WhatsApp expanding quality-based account enforcements to include read rates
+*Last Updated December 2024*
+
+WhatsApp is continuously investing in new ways to help businesses create quality experiences for their customers, such as reducing spam-like behavior on their platform. 
+
+On November 22, WhatsApp began to expand their existing account-level quality enforcements on WhatsApp business accounts (WABAs) with extremely low read rates. This change will roll out globally.
+
+When an account's read rate drops significantly (for example, the majority of messages sent by the account are unread), messaging blocks will be enforced on the account. The severity of the block will increase if there are consistently low read rates at scale. 
+
+If the account's read rate is extremely low, the following actions will be taken:
+
+- The account will be blocked from sending business-initiated messages. They can still respond to customer-initiated messages. This initial block is a "soft lock" and may be acknowledged by selecting the acknowledge button in Account Quality to begin messaging again.
+- If read rate continues to drop or remains low after the soft lock, businesses may face a gradual increase in enforcement actions (for example, a few days of messaging restrictions).
+- Businesses will have to wait for the enforced limit to begin messaging again. If the read rate continues to remain low after repeat soft locks, the account will eventually be offboarded.
+
+#### How to stay updated on these warnings and enforcements
+
+Similar to existing platform enforcement, businesses will be notified about these actions and can acknowledge them by using the Account Quality page in the WhatsApp Business Manager. Confirm that you have the correct contact details listed in the WhatsApp Business Manager for all necessary administrators, as the enforcement notification emails will be sent based on that information.
+
+Notifications about severe spam violations will be:
+
+- Surfaced in the WhatsApp Business Manager Notifications Center
+- Displayed in a banner in the WhatsApp Manager
+- Sent as an email to all administrators set in the WhatsApp Business Manager
+
 ### May 2024: Cloud API going live in Türkiye
 *Last Updated May 2024*
 
