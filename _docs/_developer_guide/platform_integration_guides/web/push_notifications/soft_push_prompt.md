@@ -13,15 +13,17 @@ channel: push
 
 > It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This article covers modifying your Web SDK integration to create a push primer campaign for your web application.
 
+{% multi_lang_include archive/web-v4-rename.md %}
+
 {% alert tip %}
 This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). 
 {% endalert %} 
 
 Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use our [triggered in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/):
 
-{% multi_lang_include archive/web-v4-rename.md %}
+## Implementing a soft push prompt
 
-## Step 1: Create a push primer campaign
+### Step 1: Create a push primer campaign
 
 First, you must create a "Prime for Push" in-app messaging campaign in the Braze dashboard:
 
@@ -30,11 +32,11 @@ First, you must create a "Prime for Push" in-app messaging campaign in the Braze
 3. Add a key-value pair to the message where the key is `msg-id`, and the value is `push-primer`.
 4. Assign a custom event trigger action (such as "prime-for-push") to the message. You can create the custom event manually from the dashboard if needed.
 
-## Step 2: Remove calls
+### Step 2: Remove calls
 
 In your Braze SDK integration, find and remove any calls to `automaticallyShowInAppMessages()` from within your loading snippet.
 
-## Step 3: Update integration
+### Step 3: Update integration
 
 Finally, replace the removed call with the following snippet:
 

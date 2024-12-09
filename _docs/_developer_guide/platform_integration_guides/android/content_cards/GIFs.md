@@ -1,7 +1,7 @@
 ---
 nav_title: GIFs
 article_title: Content Card GIFs for Android and FireOS
-page_order: 5
+page_order: 3
 platform: 
   - Android
   - FireOS

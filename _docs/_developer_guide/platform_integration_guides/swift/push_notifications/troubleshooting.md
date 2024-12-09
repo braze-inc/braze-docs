@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 article_title: Push Notification Troubleshooting for iOS
 platform: Swift
-page_order: 28
+page_order: 31
 description: "This article provides several iOS push troubleshooting scenarios for the Swift SDK."
 channel:
   - push
