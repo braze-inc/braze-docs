@@ -8,7 +8,7 @@ page_order: 6
 
 > Estas são as outras integrações suportadas no Cordova Braze SDK.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Envio de mensagens no app
 
