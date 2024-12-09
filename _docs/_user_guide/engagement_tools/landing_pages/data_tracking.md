@@ -26,6 +26,7 @@ When a form is submitted, the SDK will collect the following data:
 
 ### Anonymized data
 
-Before a user submits a form, the data tracked on a landing page consists only of anonymized, non-identifiable information. This includes standard website tracking metrics like the number of page views (impressions) and clicks that a landing page receives.
+Before a user submits a form, the data tracked on a landing page consists only of anonymized, non-identifiable information. This consists of standard website aggregate metrics like the number of page views (impressions) and clicks that a landing page receives.
 
 Because this data isn't linked to identifiable users, it can't be used to retarget or track individual user behavior.
+
