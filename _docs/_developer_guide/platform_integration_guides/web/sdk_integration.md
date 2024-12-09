@@ -15,6 +15,10 @@ page_type: reference
 
 ## Integrating the SDK
 
+{% alert tip %}
+Not sure if the standard integration method is right for you? Check out our [other methods](#other-integration-methods) before continuing.
+{% endalert %}
+
 ### Step 1: Install the Braze library
 
 You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/) before installing the library.
@@ -174,9 +178,106 @@ These two files must be updated in coordination with each other for proper funct
 
 ## Other integration methods
 
-### Server-side rendering frameworks {#ssr}
+### Accelerated Mobile Pages (AMP)
+{% details See more %}
+#### Step 1: Include AMP web push script
 
-If you use a server-side rendering framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
+Add the following async script tag to your head:
+
+```js
+<script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>
+```
+
+#### Step 2: Add subscription widgets
+
+Add a widget to the body of your HTML that allows users to subscribe and unsubscribe from push.
+
+```js
+<!-- A subscription widget -->
+<amp-web-push-widget visibility="unsubscribed" layout="fixed" width="250" height="80">
+  <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
+</amp-web-push-widget>
+
+<!-- An unsubscription widget -->
+<amp-web-push-widget visibility="subscribed" layout="fixed" width="250" height="80">
+  <button on="tap:amp-web-push.unsubscribe">Unsubscribe from Notifications</button>
+</amp-web-push-widget>
+```
+
+#### Step 3: Add `helper-iframe` and `permission-dialog`
+
+The AMP Web Push component creates a popup to handle push subscriptions, so you'll need to add the following helper files to your project to enable this feature:
+
+- [`helper-iframe.html`](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html)
+- [`permission-dialog.html`](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html)
+
+#### Step 4: Create a service worker file
+
+Create a `service-worker.js` file in the root directory of your website and add the following snippet:
+
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+#### Step 5: Configure the AMP web push HTML element
+
+Add the following `amp-web-push` HTML element to your HTML body. Keep in mind, you need to append your [`apiKey` and `baseUrl`](https://documenter.getpostman.com/view/4689407/SVYrsdsG) as query parameters to `service-worker-URL`.
+
+```js
+<amp-web-push
+layout="nodisplay"
+id="amp-web-push"
+helper-iframe-url="FILE_PATH_TO_YOUR_HELPER_IFRAME"
+permission-dialog-url="FILE_PATH_TO_YOUR_PERMISSION_DIALOG"
+service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseUrl={YOUR_BASE_URL}"
+>
+```
+{% enddetails %}
+
+### AMD: Disable support
+
+{% details See more %}
+If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options in this list, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
+
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+{% enddetails %}
+
+### AMD: Module loader
+
+{% details See more %}
+If you use RequireJS or other AMD module-loaders we recommend self-hosting a copy of our library and referencing it as you would with other resources:
+
+```javascript
+require(['path/to/braze.min.js'], function(braze) {
+  braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
+  braze.automaticallyShowInAppMessages();
+  braze.openSession();
+});
+```
+{% enddetails %}
+
+### Electron {#electron}
+
+{% details See more %}
+Electron does not officially support web push notifications (see: this [GitHub issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
+{% enddetails %}
+
+### Jest framework {#jest}
+
+{% details See more %}
+When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration in `package.json` to ignore the Braze SDK:
+
+```
+"jest": {
+  "transformIgnorePatterns": [
+    "/node_modules/(?!@braze)"
+  ]
+}
+```
+{% enddetails %}
+
+### SSR frameworks {#ssr}
+
+{% details See more %}
+If you use a Server-Side Rendering (SSR) framework such as Next.js, you may encounter errors because the SDK is meant to be run in a browser environment. You can resolve these issues by dynamically importing the SDK.
 
 You can retain the benefits of tree-shaking when doing so by exporting the parts of the SDK that you need in a separate file and then dynamically importing that file into your component.
 
@@ -215,9 +316,19 @@ useEffect(() => {
     });
 }, []);
 ```
+{% enddetails %}
 
-### Vite support {#vite}
+### Tealium iQ
 
+{% details See more %}
+Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
+
+For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
+{% enddetails %}
+
+### Vite {#vite}
+
+{% details See more %}
 If you use Vite and see a warning around circular dependencies or `Uncaught TypeError: Class extends value undefined is not a constructor or null`, you may need to exclude the Braze SDK from its [dependency discovery](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior):
 
 ```
@@ -225,47 +336,10 @@ optimizeDeps: {
     exclude: ['@braze/web-sdk']
 },
 ```
-
-### Electron support {#electron}
-
-Electron does not officially support web push notifications (see: this [GitHub issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
-
-### AMD module loader
-
-If you use RequireJS or other AMD module-loaders we recommend self-hosting a copy of our library and referencing it as you would with other resources:
-
-```javascript
-require(['path/to/braze.min.js'], function(braze) {
-  braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
-  braze.automaticallyShowInAppMessages();
-  braze.openSession();
-});
-```
-
-### Alternative No AMD installation
-
-If your site uses RequireJS or another AMD module-loader, but you prefer to load the Braze Web SDK through one of the other options above, you can load a version of the library that does not include AMD support. This version of the library can be loaded from the following CDN location:
-
-<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-
-### Tealium iQ
-
-Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
-
-For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
+{% enddetails %}
 
 ### Other tag managers
 
+{% details See more %}
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
-
-### Jest framework troubleshooting {#jest}
-
-When using Jest, you may see an error similar to `SyntaxError: Unexpected token 'export'`. To fix this, adjust your configuration in `package.json` to ignore the Braze SDK:
-
-```
-"jest": {
-  "transformIgnorePatterns": [
-    "/node_modules/(?!@braze)"
-  ]
-}
-```
+{% enddetails %}
