@@ -67,7 +67,7 @@ La <i>confianza</i> es el porcentaje de confianza en que una determinada variant
 {% endif %}
 
 {% if include.metric == "Confirmation Page Dismissals" %}
-El total de clics en el botón de cierre (x) de la página de confirmación de un <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>cuestionario simple</a> es el total de clics en el botón de cierre (x) de la página de <i>confirmación</i> de un <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>cuestionario simple</a>.
+<i>Los descartes de la página de confirmación</i> es el total de clics en el botón de cierre (x) de la página de confirmación de un <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>cuestionario simple</a>.
 {% endif %}
 
 {% if include.metric == "Conversion Rate" %}
@@ -131,7 +131,7 @@ Los <i>ingresos de toda la vida</i> son el total de <code>PurchaseEvents</code> 
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-<i>Compras diarias</i> es la media del total de <i>compras</i> únicas <code>PurchaseEvents</code> a lo largo del periodo de tiempo.
+<i>Compras diarias</i> es la media del total de compras únicas <code>PurchaseEvents</code> a lo largo del periodo de tiempo.
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -199,7 +199,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
-El total <i>de</i> clics en el botón cerrar (x) de la página de preguntas de un cuestionario <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple</a> es el total de clics en el botón cerrar (x) de la página de preguntas de un cuestionario <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>simple</a>.
+<i>Los descartes de la página del cuestionario</i> es el total de clics en el botón cerrar (x) de la página de preguntas de un <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>cuestionario simple</a>.
 {% endif %}
 
 {% if include.metric == "Survey Submissions" %}

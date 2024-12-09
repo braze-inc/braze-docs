@@ -88,7 +88,7 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 3. コンテンツカードのテストキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。
 4. プッシュ通知をタップすると、デバイスでコンテンツカードが起動します。フィードを表示するには、フィードを更新する必要が生じる場合があります。
 
-![Braze Content Card キャンペーンでは、テスト受信者として独自のユーザーID を追加して、コンテンツカードをテストできます。]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
+![[コンテンツカードをテストするために、テスト受信者として自分のユーザー ID を追加できることを示す Braze コンテンツカードキャンペーン。]({% image_buster /assets/img/react-native/content-card-test.png %}「コンテンツカードキャンペーンテスト」)
 
 各プラットフォームの詳細については、[Android統合]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/)または[iOS統合](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui)ガイドを参照してください。
 

@@ -47,7 +47,7 @@ Cette base de données de profil utilisateur centrée sur la personne permet une
 {% endalert %}
 
 ### Sources de données backend via l'API Braze
-[Braze]({{site.baseurl}}/api/endpoints/user_data) peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
+Braze peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
 
 ### Sources de données frontend via le SDK Braze
 Braze capture automatiquement des données first-party à partir de sources de données frontales, telles que les appareils des utilisateurs, par le biais du [SDK Braze]({{site.baseurl}}/user_guide/getting_started/web_sdk/). Le SDK gère les nouveaux utilisateurs (anonymes) et gère les données de leur profil utilisateur tout au long de leur cycle de vie. 

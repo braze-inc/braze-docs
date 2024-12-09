@@ -39,7 +39,7 @@ Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[B
 
 プッシュ通知で `background mode` を有効にする場合は、[**バックグラウンドプッシュを有効にする**] をオンにします。これにより、プッシュ通知が到着したときにシステムがアプリケーションを `suspended` 状態から復帰させ、アプリケーションがプッシュ通知に応答してコンテンツをダウンロードできるようになります。アンインストールの追跡機能を使用するには、このオプションをオンにする必要があります。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、"Automate Unity iOS integration"、"Integrate push with Braze"、"Enable background push "が有効になっている。]({% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %})
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと Braze の統合」、および「バックグラウンドプッシュの有効化」が有効になっています。]({% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %})
 
 ### 自動登録を無効にする（オプション）
 
@@ -48,7 +48,7 @@ Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[B
 - IOS 12 以降で [**暫定承認を無効にする**] がオンになっていない場合、ユーザーはサイレントプッシュを受信することを暫定的に (サイレントに) 承認されます。チェックした場合、ユーザーにネイティブのプッシュプロンプトが表示される。
 - 実行時にプロンプトが表示されるタイミングを正確に設定する必要がある場合は、Braze 構成エディターから自動登録を無効にし、代わりに `AppboyBinding.PromptUserForPushPermissions()` を使用します。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「UnityのiOS統合を自動化する」、「プッシュをBrazeと統合する」、「自動プッシュ登録を無効にする」がイネーブルメントになっている。]({% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %})
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと Braze の統合」、および「プッシュの自動登録の無効化」が有効になっています。]({% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %})
 
 ## ステップ3: プッシュリスナーを設定する
 
@@ -58,13 +58,13 @@ Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[B
 
 プッシュ受信リスナーは、ユーザーがアプリケーションをアクティブに使用しているとき（アプリがフォアグラウンドになっているときなど）にプッシュ通知を受信すると起動する。Brazeコンフィギュレーションエディターでプッシュ受信リスナーを設定する。ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.PUSH_RECEIVED` を指定します。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、"Set Push Received Listener "オプションが展開され、"Game Object Name"（AppBoyCallback）と "Callback Method Name"（PushNotificationReceivedCallback）が提供される。]({% image_buster /assets/img/unity/ios/unity_ios_push_received.png %})
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「プッシュ受信リスナーの設定」オプションが展開され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationReceivedCallback) が指定されます。]({% image_buster /assets/img/unity/ios/unity_ios_push_received.png %})
 
 ### プッシュ開封済みリスナー
 
 ユーザーがプッシュ通知をクリックしてアプリを起動すると、プッシュ開封済みリスナーが起動します。Unity にプッシュペイロードを送信するには、ゲームオブジェクトの名前を設定し、[**プッシュ開封済みリスナーを設定する**] オプションの下にある開封済みリスナーのコールバックメソッドをプッシュします。
 
-![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、"Set Push Received Listener "オプションが展開され、"Game Object Name"（AppBoyCallback）と "Callback Method Name"（PushNotificationOpenedCallback）が提供される。]({% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %})
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「プッシュ受信リスナーの設定」オプションが展開され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationOpenedCallback) が指定されます。]({% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %})
 
 ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.PUSH_OPENED` を指定します。
 
@@ -72,7 +72,7 @@ Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[B
 
 次の例では、コールバックメソッド名 `PushNotificationReceivedCallback`、および `PushNotificationOpenedCallback` をそれぞれ使用して、`AppboyCallback` ゲームオブジェクトを実装します。
 
-![この実装例の図は、前のセクションで述べたBrazeの設定オプションと、C#のコードスニペットを示している。]({% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %})
+![この実装例の図は、前のセクションで述べた Braze の構成オプションと、C# のコードスニペットを示しています。]({% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %})
 
 ```csharp
 public class MainMenu : MonoBehaviour {

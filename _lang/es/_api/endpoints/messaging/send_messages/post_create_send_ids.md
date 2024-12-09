@@ -14,7 +14,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 /sends/id/create
 {% endapimethod %}
 
-> Utiliza este punto final para crear ID de envío que puedan utilizarse para enviar mensajes y hacer un seguimiento del rendimiento de los mensajes mediante programación, sin necesidad de crear campañas para cada envío. 
+> Utiliza este punto final para crear ID de envío que puedan utilizarse para enviar mensajes y hacer un seguimiento del rendimiento de los mensajes mediante programación, sin necesidad de crear campañas para cada envío.
 
 Utilizar el identificador de envío para el seguimiento y envío de mensajes es útil si piensas generar y enviar contenido mediante programación.
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obligatoria | Cadena | Ver [identificador de campaña]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 ```

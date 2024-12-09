@@ -56,9 +56,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `external_id_renames` | Required | Array of external identifier rename objects | View request example and the following limitations for the structure of the external identifier rename object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- The `current_external_id` must be the user's primary ID, and cannot be a deprecated ID
-- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
-- The `current_external_id` and `new_external_id` cannot be the same
+Note the following:
+
+- The `current_external_id` must be the user's primary ID, and cannot be a deprecated ID.
+- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID.
+- The `current_external_id` and `new_external_id` cannot be the same.
 
 ## Request example
 ```
@@ -75,7 +77,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 }'
 ```
 
-## Response 
+## Response
+
 The response will confirm all successful renames, as well as unsuccessful renames with any associated errors. Error messages in the `rename_errors` field will reference the index of the object in the array of the original request.
 
 ```
@@ -87,26 +90,27 @@ The response will confirm all successful renames, as well as unsuccessful rename
 ```
 
 The `message` field will return `success` for any valid request. More specific errors are captured in the `rename_errors` array. The `message` field returns an error in the case of:
+
 - Invalid API key
 - Empty `external_id_renames` array
 - `external_id_renames` array with more than 50 objects
-- Rate limit hit (more than 1,000 requests/minute)
+- Rate limit hit (more than 1,000 requests per minute)
 
 ## Frequently asked questions
 
-**Does this impact MAU?**<br>
+### Does this impact MAU?
 No, since the number of users will stay the same, they'll just have a new `external_id`.
 
-**Does user behavior change historically?**<br>
+### Does user behavior change historically?
 No, since the user is still the same, and all their historical behavior is still connected to them.
 
-**Can it be run on dev/staging workspaces?**<br>
+### Can it be run on development or staging workspaces?
 Yes. In fact, we highly recommend running a test migration on a staging or development workspace, and ensuring everything has gone smoothly before executing on production data.
 
-**Does this consume data points?**<br>
+### Does this consume data points?
 This feature does not cost data points.
 
-**What is the recommended deprecation period?**<br>
+### What is the recommended deprecation period?
 We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}

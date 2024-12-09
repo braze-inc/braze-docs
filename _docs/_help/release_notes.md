@@ -219,10 +219,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 You can use [Cloud Data Ingestion (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files.
 
-#### Increased rate limit
-
-The rate limit for the [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) request type has increased to 2,500 requests per minute.
-
 #### Monthly active users CY 24-25
 
 For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint. For details, refer to [POST: Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). 

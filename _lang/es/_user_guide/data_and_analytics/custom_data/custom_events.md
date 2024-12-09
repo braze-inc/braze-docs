@@ -26,7 +26,7 @@ Algunos casos habituales de uso de eventos personalizados son:
 
 ## Gestión de eventos personalizados
 
-Puedes gestionar, crear o bloquear eventos personalizados en el panel yendo a **Configuración de datos** > Eventos personalizados.
+Puedes gestionar, crear o bloquear eventos personalizados en el panel yendo a **Configuración de datos** > **Eventos personalizados**.
 
 {% alert note %}
 Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Eventos personalizados** en **Administrar configuración**.
@@ -52,7 +52,7 @@ Puede añadir una descripción a un evento personalizado después de crearlo si 
 
 ## Añadir etiquetas
 
-Puedes añadir etiquetas a un evento personalizado después de crearlo si tienes el permiso de usuario "Gestionar eventos, atributos, compras". Las etiquetas pueden utilizarse para filtrar la lista de eventos. 
+Puedes añadir etiquetas a un evento personalizado después de crearlo si tienes el [permiso de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) "Gestionar eventos, atributos, compras". Las etiquetas pueden utilizarse para filtrar la lista de eventos. 
 
 {% alert important %}
 Esta función se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.

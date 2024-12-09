@@ -399,7 +399,7 @@ Follow the instructions found within the [Android developer documentation](http:
 
 The Braze dashboard supports setting deep links or web URLs in push notifications campaigns and Canvases that will be opened when the notification is clicked.
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![The 'On Click Behavior' setting in the Braze dashboard with 'Deep Link Into Application' selected from the dropdown.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Customizing back stack behavior
 
@@ -464,7 +464,7 @@ The default channel name and description can also be configured in `braze.xml`.
 
 At this point, you should be able to see notifications sent from Braze. To test this, go to the **Campaigns** page on your Braze dashboard and create a **Push Notification** campaign. Choose **Android Push** and design your message. Then click the eye icon in the composer to get the test sender. Enter the user ID or email address of your current user and click **Send Test**. You should see the push show up on your device.
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![The 'Test' tab of a push notification campaign in the Braze dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
 

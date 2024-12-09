@@ -52,7 +52,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 {% tabs %}
 {% tab Snowflake %}
 
-#### Step 1: Set up the table
+#### Step 1.1: Set up the table
 
 ```json
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
@@ -84,7 +84,7 @@ You can name the database, schema, and table as you'd like, but the column names
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
-#### Step 2: Set up the role and database permissions
+#### Step 1.2: Set up the role and database permissions
 
 ```json
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -96,7 +96,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 Update the names as needed, but the permissions should match the preceding example.
 
-#### Step 3: Set up the warehouse and give access to Braze role
+#### Step 1.3: Set up the warehouse and give access to Braze role
 
 ```json
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
@@ -108,7 +108,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant Braze additional `OPERATE` privileges on the warehouse for us to turn it on when it's time to run the query.
 {% endalert %}
 
-#### Step 4: Set up the user
+#### Step 1.4: Set up the user
 
 ```json
 CREATE USER BRAZE_INGESTION_USER;
@@ -122,7 +122,7 @@ After this step, you will share connection information with Braze and receive a 
 When connecting different workspaces to the same Snowflake account, you must create a unique user for each Braze workspace where you are creating an integration. Within a workspace, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across workspaces.
 {% endalert %}
 
-#### Step 5: Allow Braze IPs in Snowflake network policy (optional)
+#### Step 1.5: Allow Braze IPs in Snowflake network policy (optional)
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
@@ -140,7 +140,7 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 {% endtab %}
 {% tab Redshift %}
 
-#### Step 1: Set up the table 
+#### Step 1.1: Set up the table 
 
 Optionally, set up a new Database and Schema to hold your source table
 ```json
@@ -176,7 +176,7 @@ You can name the database, schema, and table as you'd like, but the column names
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
  
-#### Step 2: Create user and grant permissions 
+#### Step 1.2: Create user and grant permissions 
 
 ```json
 CREATE USER braze_user PASSWORD '{password}';
@@ -186,7 +186,7 @@ GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 
 These are the minimum required permissions for this user. If creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
 
-#### Step 3: Allow access to Braze IPs
+#### Step 1.3: Allow access to Braze IPs
 
 If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. An example of the Redshift URL endpoint is "example-cluster.ap-northeast-2.redshift.amazonaws.com".
 
@@ -212,7 +212,7 @@ Allow access from the following IPs corresponding to your Braze dashboard’s re
 {% endtab %}
 {% tab BigQuery %}
 
-#### Step 1: Set up the table 
+#### Step 1.1: Set up the table 
 
 Optionally, set up a new project or dataset to hold your source table.
 
@@ -264,7 +264,7 @@ You can name the project, dataset, and table as you'd like, but the column names
    phone_number varchar,
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
-#### Step 2: Create a Service Account and grant permissions 
+#### Step 1.2: Create a Service Account and grant permissions 
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
 
@@ -275,7 +275,7 @@ Create a service account in GCP for Braze to use to connect and read data from y
 
 After creating the service account and granting permissions, generate a JSON key. See more information on how to do this [here](https://cloud.google.com/iam/docs/keys-create-delete). You will update this to the Braze dashboard later. 
 
-#### Step 3: Allow access to Braze IPs    
+#### Step 1.3: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Big Query instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
@@ -294,7 +294,7 @@ If you have network policies in place, you must give Braze network access to you
 {% endtab %}
 {% tab Databricks %}
 
-#### Step 1: Set up the table 
+#### Step 1.1: Set up the table 
 
 Optionally, set up a new Catalog or Schema to hold your source table.
 
@@ -346,7 +346,7 @@ You can name the schema and table as you'd like, but the column names should mat
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
 - `PAYLOAD` - This is a string or struct of the fields you want to sync to the user in Braze.
 
-#### Step 2: Create a Access Token  
+#### Step 1.2: Create a Access Token  
 
 In order for Braze to access Databricks, a personal access token needs to be created.
 
@@ -358,7 +358,7 @@ In order for Braze to access Databricks, a personal access token needs to be cre
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
-#### Step 3: Allow access to Braze IPs    
+#### Step 1.3: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
@@ -389,13 +389,14 @@ Go to **Partner Integrations** > **Technology Partners**. Find the Snowflake pag
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
 {% endalert %}
 
-#### Step 1: Add Snowflake connection information and source table
+#### Step 2.1: Add Snowflake connection information and source table
 
 Input the information for your Snowflake data warehouse and source table, then proceed to the next step.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
+![The "Create new import sync" page for Snowflake in the Braze dashboard with example data entered into Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
 
-#### Step 2: Configure sync details
+#### Step 2.2: Configure sync details
+
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
 Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
@@ -405,11 +406,12 @@ Contact emails will only receive notifications of global or sync-level errors su
 - Permissions issues
 - (For catalogs syncs only) Catalog tier is out of space
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
+![The "Create new import sync" page for Snowflake in the Braze dashboard with example data added to Step 2: "Set up sync details".]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events, and the data type for a sync cannot be changed after creation. 
 
 #### Add a public key to the Braze user
+
 At this point, you must go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
@@ -426,12 +428,14 @@ Go to **Partner Integrations** > **Technology Partners**. Find the Redshift page
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
 {% endalert %}
 
-#### Step 1: Add Redshift connection information and source table
+#### Step 2.1: Add Redshift connection information and source table
+
 Input the information for your Redshift data warehouse and source table. If you are using a private network tunnel, toggle the slider and input the tunnel information. Then proceed to the next step.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
+![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
-#### Step 2: Configure sync details
+#### Step 2.2: Configure sync details
+
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
 Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
@@ -441,7 +445,7 @@ Contact emails will only receive notifications of global or sync-level errors su
 - Permissions issues
 - (For catalogs syncs only) Catalog tier is out of space
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
+![The "Create new import sync" page for Redshift in the Braze dashboard with some example data added to Step 2: "Set up sync details".]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events, and the data type for a sync cannot be changed after creation. 
 {% endtab %}
@@ -453,12 +457,14 @@ Go to **Partner Integrations** > **Technology Partners**. Find the BigQuery page
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
 {% endalert %}
 
-#### Step 1: Add BigQuery connection information and source table
+#### Step 2.1: Add BigQuery connection information and source table
+
 Upload the JSON key and provide a name for the service account, then input the details of your source table.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
+![The "Create new import sync" page for BigQuery in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
-#### Step 2: Configure sync details
+#### Step 2.2: Configure sync details
+
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
 Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
@@ -468,7 +474,7 @@ Contact emails will only receive notifications of global or sync-level errors su
 - Permissions issues
 - (For catalogs syncs only) Catalog tier is out of space
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
+![The "Create new import sync" page for BigQuery in the Braze dashboard, set to Step 2: "Set up sync details".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, Purchase Events, and User Deletes. The data type for a sync cannot be changed after creation. 
 
@@ -481,12 +487,14 @@ Go to **Partner Integrations** > **Technology Partners**. Find the Databricks pa
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
 {% endalert %}
 
-#### Step 1: Add Databricks connection information and source table
+#### Step 2.1: Add Databricks connection information and source table
+
 Input the information for your Databricks data warehouse and source table, then proceed to the next step.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
+![The "Create new import sync" page for Databricks in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
-#### Step 2: Configure sync details
+#### Step 2.2: Configure sync details
+
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
 Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
@@ -496,7 +504,7 @@ Contact emails will only receive notifications of global or sync-level errors su
 - Permissions issues
 - (For catalogs syncs only) Catalog tier is out of space
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
+![The "Create new import sync" page for Databricks in the Braze dashboard, set to Step 2: "Set up sync details".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are custom attributes, custom events, purchase events, and user deletes. The data type for a sync cannot be changed after creation. 
 
@@ -510,31 +518,35 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 
 Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
+![The "Create new import sync" page for Snowflake in the Braze dashboard with Step 3: "Test connection" displaying an RSA public key.]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
 {% endtab %}
+
 {% tab Redshift %}
 Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
+![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 3: "Test connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endtab %}
+
 {% tab Redshift Private Network %}
 
 Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
+![The "Create new import sync" page for Redshift Private Network in the Braze dashboard, with Step 4: "Test connection" displaying an RSA public key.]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
 {% endtab %}
+
 {% tab BigQuery %}
 
 After all configuration details for your sync are entered, select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
+![The "Create new import sync" page for BigQuery in the Braze dashboard, set to Step 3: "Test connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
+
 {% tab Databricks %}
 
 After all configuration details for your sync are entered, select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
+![The "Create new import sync" page for Databricks in the Braze dashboard, set to Step 3: "Test connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -549,14 +561,14 @@ You must successfully test an integration before it can move from Draft to Activ
 {% tab Snowflake %}
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the Snowflake account.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
+![The "Create new import sync" page for Snowflake in the Braze dashboard, with the "Select credentials" dropdown open in Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
 
 If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again.
 {% endtab %}
 {% tab Redshift %}
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Snowflake or Redshift account.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
+![The "Create new import sync" page for Redshift in the Braze dashboard, with the "Select credentials" dropdown open in Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 {% endtab %}
@@ -564,7 +576,7 @@ If you reuse the same user across integrations, you cannot delete the user in th
 
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same BigQuery account.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
+![The "Create new import sync" page for BigQuery in the Braze dashboard, with the "Select credentials" dropdown open in Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 
@@ -573,7 +585,7 @@ If you reuse the same user across integrations, you cannot delete the user in th
 
 You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Databricks account.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
+![The "Create new import sync" page for Databricks in the Braze dashboard, with the "Select credentials" dropdown open in Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 
@@ -586,27 +598,27 @@ If you reuse the same user across integrations, you cannot delete the user in th
 {% tab Snowflake %}
 When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+![The "Data Import" page for Snowflake in the Braze dashboard displaying the option to "Sync now" from the vertical ellipses menu.]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
 
 {% endtab %}
 {% tab Redshift %}
 When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+![The "Data Import" page for Redshift in the Braze dashboard displaying the option to "Sync now" from the vertical ellipses menu.]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
 
 {% endtab %}
 {% tab BigQuery %}
 
 When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
+![The "Data Import" page for BigQuery in the Braze dashboard displaying the option to "Sync now" from the vertical ellipses menu.]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
 
 {% endtab %}
 {% tab Databricks %}
 
 When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
-![]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
+![The "Data Import" page for Databricks in the Braze dashboard displaying the option to "Sync now" from the vertical ellipses menu.]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
 {% endtab %}
 {% endtabs %}

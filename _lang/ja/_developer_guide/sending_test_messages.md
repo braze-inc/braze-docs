@@ -16,7 +16,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 テストセグメントを設定するには、ダッシュボードの**セグメント**ページに移動し、新しいセグメントを作成します。**フィルターを追加**をクリックして、ドロップダウンメニューの下部にあるテストフィルターのいずれかを選択します。
 
-![ターゲットステップで使用可能なフィルタを表示するろう付けテストキャンペーン。]({% image_buster /assets/img_archive/testmessages1.png %})
+![ターゲットステップで使用可能なフィルターを表示する Braze テストキャンペーン。]({% image_buster /assets/img_archive/testmessages1.png %})
 
 このような2 つのテストフィルタを使用すると、特定のメールアドレスまたは外部[ユーザID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids)を持つユーザを選択できます。
 
@@ -54,7 +54,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 メールをテストするだけの場合は、必ずしもテストSegmentを設定する必要はありません。キャンペーンのメールを作成するキャンペーンコンポーザーの最初のステップで、**Send Test**をクリックし、テストメールを送信したいメールを入力します。 
 
-![Test Send タブが選択されたろう付けキャンペーン]({% image_buster /assets/img_archive/testmessages45.png %})
+![[テスト送信] タブが選択された Braze キャンペーン]({% image_buster /assets/img_archive/testmessages45.png %})
 
 {% alert tip %}
 [TEST (または SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) がテストメッセージに追加されるのを有効または無効にすることもできます。
@@ -66,7 +66,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 ### cURL を使用した iOS アプリでのプッシュのテスト
 
-CURL および[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` - **設定**> **APIキー**で利用可能
 - `YOUR_EXTERNAL_USER_ID` - **Search Users**ページで利用可能
@@ -77,7 +77,7 @@ CURL および[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介�
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- [**API キー**] は [**開発者コンソール**] > [**API 設定**] にあります。<br>\- [**ユーザー検索**]は、[**ユーザー**] > [**ユーザー検索**] にあります。
 {% endalert %}
 
->  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスにいない場合は、[API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を参照して、リクエストを実行するエンドポイントを確認します。
+>  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスを使用していない場合は、[[API のドキュメント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)] を参照して、リクエストを行うエンドポイントを確認してください。
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -95,14 +95,14 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 ### cURL を使用した Android アプリでのプッシュのテスト
 
-cURL と[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` ([**設定**] > [**API キー**]に移動)
 - `YOUR_EXTERNAL_USER_ID` ([**ユーザーを検索**] ページでプロファイルを検索)
 - `YOUR_KEY1` (省略可能)
 - `YOUR_VALUE1` (省略可能)
 
->  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスにいない場合は、[API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を参照して、リクエストを実行するエンドポイントを確認します。
+>  次の例では、`US-01` インスタンスの顧客に適した API エンドポイントを示します。このインスタンスを使用していない場合は、[[API のドキュメント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)] を参照して、リクエストを行うエンドポイントを確認してください。
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -121,7 +121,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 ### Kindle アプリ s によるcURL によるプッシュのテスト
 
-cURL と[Messaging API]({{site.baseurl}}/api/endpoints/messaging/) を介して、ターミナル経由で単一の通知を送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
+cURL と [[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/)] を使用して、端末経由で通知を1回送信できます。次のフィールドをテストケースの正しい値に置き換える必要があります。
 
 - `YOUR_API_KEY` - **Developer Console**ページで利用可能
 - `YOUR_EXTERNAL_USER_ID` - **ユーザー検索**ページで利用可能

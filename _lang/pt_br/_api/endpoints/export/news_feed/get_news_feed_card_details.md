@@ -16,9 +16,7 @@ description: "Este artigo traz informações sobre o o endpoint da Braze \"Expor
 
 > Use este endpoint para recuperar informações relevantes sobre um cartão, que pode ser identificado pelo `card_id`.
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para nosso canal de envio de mensagens Content Cards—é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
@@ -34,7 +32,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` | Obrigatória | String | Consulte [identificador da API do cartão]({{site.baseurl}}/api/identifier_types/). <br><br> O `card_id` para um determinado cartão pode ser encontrado na página [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) e na página de detalhes do cartão dentro do seu dashboard, ou você pode usar o [endpoint de exportação da lista de cartões do feed de notícias]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id` | Obrigatória | String | Consulte [Identificador da API do cartão]({{site.baseurl}}/api/identifier_types/). <br><br> O [endereço]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) `card_id` para um determinado cartão pode ser encontrado na página [Chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) e na página de detalhes do cartão em seu dashboard, ou você pode usar o [endpoint Exportar lista de cartões do feed de notícias]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -68,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Para obter ajuda com exportações de CSV e API, acesse [Solução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

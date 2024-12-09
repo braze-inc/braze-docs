@@ -107,7 +107,7 @@ Amazon は、末尾の改行などの空白文字が `api_key.txt` に含まれ�
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-ディープリンクをカスタムで処理する場合は、Braze からのプッシュ受信およびオープンインテントをリッスンするプッシュコールバックを作成する必要があります。詳細については、[カスタム処理プッシュレシートを参照し、Androidプッシュドキュメントで]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback)を開きます。
+ディープリンクをカスタムで処理する場合は、Braze からのプッシュ受信およびオープンインテントをリッスンするプッシュコールバックを作成する必要があります。詳細については、Android のプッシュに関するドキュメントの [[カスタム処理のプッシュ受信およびオープン]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback)] を参照してください。
 
 ## ステップ5: Braze ダッシュボードにクライアントシークレットとクライアントID を追加する
 

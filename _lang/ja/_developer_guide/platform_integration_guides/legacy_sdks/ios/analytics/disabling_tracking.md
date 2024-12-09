@@ -12,7 +12,7 @@ noindex: true
 
 # iOS のデータ収集を無効にする
 
-データプライバシー規制に準拠するために、iOS SDK のデータトラッキングアクティビティは [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) メソッドを使用して完全に停止できます。このメソッドによってすべてのネットワーク接続がキャンセルされ、Braze SDK は Braze サーバーにデータを渡しません。後でデータ収集を再開する場合は、 メソッドを使用します。
+データプライバシー規制に準拠するために、iOS SDK のデータトラッキングアクティビティは [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) メソッドを使用して完全に停止できます。このメソッドによってすべてのネットワーク接続がキャンセルされ、Braze SDK は Braze サーバーにデータを渡しません。後でデータ収集を再開する場合は、[`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) メソッドを使用します。
 
 また、メソッド [`wipeDataAndDisableForAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8d580f60ec0608cd91240a8a3aa23a3) を使用して、デバイスに保存されているすべてのクライアント側データを完全に消去できます。
 

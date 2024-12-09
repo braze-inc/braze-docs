@@ -8,9 +8,9 @@ channel:
 
 ---
 
-# [![브레이즈 학습 과정]](https://learning.braze.com/messaging-channels-email) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} 이메일 정보
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} 이메일 정보
 
-> 이메일 메시지로 많은 일을 할 수 있습니다! 이메일 메시지는 사용자에게 풍부한 콘텐츠를 전달할 수 있는 좋은 방법입니다. 이메일 메시징은 앱이나 웹사이트 외부에서 사용자와 소통할 수 있는 무한한 유연성을 제공합니다. 대상자 관리부터 눈길을 사로잡는 멀티미디어 콘텐츠 포함까지 이메일 메시지를 맞춤 설정하세요. 이메일 캠페인의 예시를 보려면 [사례 연구를][6] 확인하세요.
+> 이메일 메시지로 많은 일을 할 수 있습니다! 이메일 메시지는 사용자에게 풍부한 콘텐츠를 전달할 수 있는 좋은 방법입니다. 이메일 메시징은 앱이나 웹사이트 외부에서 사용자와 소통할 수 있는 무한한 유연성을 제공합니다. 오디언스 관리부터 눈길을 사로잡는 멀티미디어 콘텐츠 포함까지 이메일 메시지를 맞춤 설정하세요. 이메일 캠페인의 예시를 보려면 [사례 연구][6]를 확인하세요.
 
 ## 이메일 사용자 지정
 
@@ -33,7 +33,7 @@ channel:
 | 멀티미디어 콘텐츠 | 동영상, 이미지 등 사용자의 참여를 유도하는 멀티미디어 콘텐츠를 쉽게 배치할 수 있습니다. |
 | 뉴스레터 | 월간 또는 주간 뉴스레터를 편리하게 전송하여 사용자 참여를 유지하세요. |
 | 거래 | [거래 이메일을][3] 통해 사용자에게 최근 구매를 알리고 중요한 제품 및 배송 정보를 전달하세요.
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/

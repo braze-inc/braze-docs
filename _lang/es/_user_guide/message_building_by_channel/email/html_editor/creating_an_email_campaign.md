@@ -66,7 +66,7 @@ Braze ofrece dos experiencias de edición al crear una campaña de correo electr
 A continuación, puede seleccionar una [plantilla de correo electrónico][10] existente, [cargar una plantilla][18] desde un archivo (sólo editor HTML) o utilizar una plantilla en blanco. 
 
 {% alert tip %}
-Recomendamos seleccionar una experiencia de edición por campaña de correo electrónico. Por ejemplo, elige el **editor** **HTML Clásico** o **Bloque** en una sola campaña de correo electrónico en lugar de cambiar entre editores.
+Recomendamos seleccionar una experiencia de edición por campaña de correo electrónico. Por ejemplo, elige el editor **HTML Clásico** o **Bloque** en una sola campaña de correo electrónico en lugar de cambiar entre editores.
 {% endalert %}
 
 ## Paso 3: Redacte su correo electrónico

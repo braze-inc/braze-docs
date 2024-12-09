@@ -30,11 +30,11 @@ dependencies {
 
 The following example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) for the most up-to-date version of the Braze Android SDK.
 
-![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.]({% image_buster /assets/img_archive/androidstudio2.png %})
+![Android studio displaying the "build.gradle", with the dependency code added to the end of the file.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
-![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
+![A banner in Android Studio stating: "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ### Step 2: Configure the Braze SDK in braze.xml
 
@@ -120,11 +120,10 @@ Starting with Braze Android SDK version 3.6.0, Braze location collection is disa
 If you experience issues while testing, enable [verbose logging](#enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
 
 1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
+    ![The "Overview" page in Braze, with the "Display Data For" field set to "Today".]({% image_buster /assets/img_archive/android_sessions.png %})
 2. Open your app, then refresh the Braze dashboard. Verify that your metrics have increased by 1.
 3. Navigate through your app and verify that only one session has been logged to Braze.
 4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
-
-![]({% image_buster /assets/img_archive/android_sessions.png %})
 
 ## Optional configurations
 

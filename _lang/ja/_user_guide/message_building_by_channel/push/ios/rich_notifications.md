@@ -1,5 +1,5 @@
 ---
-nav_title: "豊富な通知の作成"
+nav_title: "リッチプッシュ通知の作成"
 article_title: "iOSのリッチプッシュ通知の作成"
 page_order: 3
 page_type: tutorial
@@ -35,7 +35,7 @@ iOS のリッチプッシュ通知を作成する前に、次の詳細に注意�
 
 プッシュに含めるべき正確な文字数について厳密なルールを提供することはできないが、iOSのメッセージをデザインする際に考慮すべき[いくつかのガイドラインを提供する]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)。画像の有無、ユーザーの端末の通知状態や表示設定、端末の大きさによって多少の誤差が生じる場合がある。迷ったときには、簡潔にまとめます。
 
-ベストプラクティスとして、Braze では、オプションのタイトルとメッセージ本文のテキストの各行を、モバイルプッシュ通知で約30 ～40 文字に保持することをお勧めします。
+Braze はベストプラクティスとして、モバイルプッシュ通知では、オプションのタイトルとメッセージ本文の両方で、各行のテキストを約30～40文字に抑えることを推奨しています。
 
 #### 通知内容
 
@@ -97,7 +97,7 @@ iOS のリッチプッシュ通知を作成する前に、次の詳細に注意�
 {% endtab %}
 {% tab 中断レベル %}
 
-iOS 15 では、Time Sensitive and Critical denotations はタイトルをタイムスタンプなしで新しい行にプッシュダウンし、もう少しスペースを確保します。
+iOS15では、Time Sensitive とCritical の表記は、タイトルをタイムスタンプのない新しい行に押し下げ、少しスペースを与える。
 
 ![]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %}) 「Time Sensitive」または「Critical」の表記がなく、タイトル文字数が35のプッシュ通知例。
 <br>タイトルの文字数：**35**

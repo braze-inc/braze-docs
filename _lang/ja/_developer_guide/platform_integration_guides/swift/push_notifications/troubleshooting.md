@@ -34,7 +34,7 @@ Apple プッシュ通知サービス (APN) は、Apple のプラットフォー�
 
 ### ステップ 2:デバイスは　APNs に登録し、Braze にプッシュトークンを提供します
 
-ユーザーがアプリを開くと、プッシュ通知を受け入れるように求められます。このプロンプトを受け入れると、APNs はその特定のデバイスのプッシュトークンを生成します。Swift SDK は、デフォルトの[自動フラッシュポリシー]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing) を使用して、アプリのプッシュトークンを直ちに非同期に送信します。ユーザーにプッシュトークンを関連付けると、［**エンゲージメント**］ タブのユーザープロファイルのダッシュボードに「プッシュ登録済み」と表示され、Braze キャンペーンからプッシュ通知を受け取る資格が得られます。
+ユーザーがアプリを開くと、プッシュ通知を受け入れるように求められます。このプロンプトを受け入れると、APNs はその特定のデバイスのプッシュトークンを生成します。Swift SDK は、デフォルトの [[自動フラッシュポリシー]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing)] を使用して、アプリのプッシュトークンを即時かつ非同期に送信します。ユーザーにプッシュトークンを関連付けると、［**エンゲージメント**］ タブのユーザープロファイルのダッシュボードに「プッシュ登録済み」と表示され、Braze キャンペーンからプッシュ通知を受け取る資格が得られます。
 
 {% alert note %}
 macOS 13から、一部のデバイスでは、Xcode 14上で動作するiOS 16シミュレーターでプッシュ通知をテストできるようになった。詳細については、[Xcode 14 リリース ノート](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes)を参照してください。
@@ -54,7 +54,7 @@ macOS 13から、一部のデバイスでは、Xcode 14上で動作するiOS 16�
 
 ![エラーが発生した時刻、アプリ名、チャンネル、エラータイプ、エラーメッセージを表示するプッシュエラーログ。]({% image_buster /assets/img_archive/message_activity_log.png %})
 
-ここに表示される一般的なエラーには、["Received Unregistered Sending to Push Token"](#received-unregistered-sending) などのユーザー固有の通知が含まれます。
+ここでよく見かけるエラーとしては、[[「プッシュトークンへの登録されていない送信の受信」]](#received-unregistered-sending) など、ユーザー固有の通知があります。
 
 さらに、Braze は ［**エンゲージメント**］ タブのユーザープロファイルにプッシュ通知の変更ログも提供します。この変更ログは、トークンの無効化、プッシュ登録エラー、トークンの新規ユーザーへの移動などのプッシュ登録動作に関するインサイトを提供します。
 
@@ -64,7 +64,7 @@ macOS 13から、一部のデバイスでは、Xcode 14上で動作するiOS 16�
 
 #### プッシュトークン {#received-unregistered-sending} への未登録送信を受信した
 
-- メソッド `AppDelegate.braze?.notifications.register(deviceToken:)` から Braze に送信されているプッシュトークンが有効であることを確認してください。**メッセージアクティビティログ**を見ると、プッシュトークンを確認できます。これは `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6` のようになり、文字と数字が混在する長い文字列になります。プッシュトークンが異なるように見える場合は、[code]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze) でプッシュトークンを送信するかどうかを確認します。
+- メソッド `AppDelegate.braze?.notifications.register(deviceToken:)` から Braze に送信されているプッシュトークンが有効であることを確認してください。**メッセージアクティビティログ**を見ると、プッシュトークンを確認できます。これは `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6` のようになり、文字と数字が混在する長い文字列になります。プッシュトークンが異なるように見える場合は、Braze にプッシュトークンを送信するための [[コード]]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze) を確認してください。
 - プッシュプロビジョニングプロファイルがテスト対象の環境と一致することを確認します。ユニバーサル証明書は、開発または実稼働の APNs 環境のいずれかに送信するように Braze ダッシュボードで構成できます。実稼働アプリ用の開発証明書または開発アプリ用の実稼働証明書は動作しません。
  - Braze にアップロードしたプッシュトークンが、プッシュトークンの送信元のアプリのビルドに使用したプロビジョニングプロファイルと一致することを確認します。
 
@@ -138,12 +138,12 @@ macOS 13から、一部のデバイスでは、Xcode 14上で動作するiOS 16�
 
 以下は、プッシュ登録に問題があるか、プッシュ後にユーザーのトークンが APNs によって無効として Braze に返されたことを示します。
 
-![ユーザーの連絡先設定を表示するユーザープロファイル。Push では、"No Apps" が表示されます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![ユーザーの連絡先設定を表示するユーザープロファイル。[プッシュ] の下に、[アプリなし] が表示されます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## プッシュクリックが記録されない {#push-clicks-not-logged}
 
-- [プッシュ積分ステップ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling)に従っていることを確認します。
-- Braze では、フォアグラウンドでサイレント受信したプッシュ通知 (`UserNotifications` フレームワーク以前のデフォルトのフォアグラウンドプッシュ動作) は処理されません。つまり、リンクは開かれず、プッシュクリックも記録されない。アプリケーションが `UserNotifications` フレームワークをまだ統合していない場合、アプリケーション状態が `UIApplicationStateActive` のときに Braze はプッシュ通知を処理しません。アプリが[push 処理メソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling) への呼び出しを遅延しないようにします。遅延しない場合、Swift SDK はプッシュ通知をサイレントフォアグラウンドプッシュイベントとして扱い、処理しないことがあります。
+- [[プッシュ統合のステップ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling)] に従っていることを確認します。
+- Braze では、フォアグラウンドでサイレント受信したプッシュ通知 (`UserNotifications` フレームワーク以前のデフォルトのフォアグラウンドプッシュ動作) は処理されません。つまり、リンクは開かれず、プッシュクリックも記録されない。アプリケーションが `UserNotifications` フレームワークをまだ統合していない場合、アプリケーション状態が `UIApplicationStateActive` のときに Braze はプッシュ通知を処理しません。お使いのアプリで [[プッシュ処理メソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling)] の呼び出しが遅延しないようにしてください。そうしなければ、Swift SDK はプッシュ通知をサイレントフォアグラウンドプッシュイベントとして扱い、それらを処理しない場合があります。
 
 ## ディープリンクが機能しない
 

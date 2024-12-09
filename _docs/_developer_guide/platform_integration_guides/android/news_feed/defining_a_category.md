@@ -37,5 +37,3 @@ You can also populate a feed with a combination of categories as in the followin
 ```xml
 newsFeed.setCategories:EnumSet.of(CardCategory.ANNOUNCEMENTS, CardCategory.NEWS);
 ```
-
-

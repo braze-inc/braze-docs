@@ -150,7 +150,7 @@ search_rank: 1
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
 
-#### エントリコントロールを選択する
+#### エントリコントロールの選択
 
 エントリコントロールは、ユーザーがキャンバスに再エントリできるかどうかを決定します。また、このキャンバスにエントリできる人数を制限することもできます。例えば、[**このキャンバスにエントリする可能性のある最大ユーザー数**] フィールドを 1,000 人に設定し、[**キャンバスがスケジュールされるたびに制限する**] チェックボックスをオンにすると、キャンバスは 1 日あたり 1,000 人のユーザーに送信を行います。
 
@@ -162,9 +162,9 @@ Braze では、IP ウォームアップの目的で**キャンバスがスケジ
 
 [終了条件]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria)を設定すると、キャンバスを退出するユーザーが決まります。ユーザーが例外イベントを実行するか、セグメントとフィルターに一致した場合、それ以降のメッセージを受け取らなくなります。
 
-#### ターゲット層の算出
+#### ターゲット層の計算
 
-**ターゲット層**セクションでは、選択したセグメンテーションや追加フィルターなどのオーディエンスの概要や、メッセージングチャネルごとに到達可能なユーザー数の内訳を表示することができる。デフォルトの推定値ではなく、ターゲットオーディエンスの正確な到達可能ユーザー数を計算するには、[正確な統計値を計算するを]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics)選択する。
+[**ターゲット層**] セクションでは、選択したセグメントや追加フィルターなどのオーディエンスの概要や、メッセージングチャネルごとにリーチ可能なユーザー数の内訳を確認できます。デフォルトの推定値ではなく、ターゲットオーディエンスのリーチ可能なユーザーの正確な数を計算するには、［[正確な統計値を計算する]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics)] を選択します。
 
 注意事項:
 
@@ -200,7 +200,7 @@ Braze では、IP ウォームアップの目的で**キャンバスがスケジ
 ## ステップ 3:キャンバスを作成する
 
 {% alert tip %}
-[Braze キャンバステンプレートを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)使用することで、キャンバス作成の時間を節約し、効率化することができる！事前に作成されたテンプレートのライブラリーから、あなたのユースケースに合ったテンプレートを見つけ、特定のニーズに合わせてカスタマイズしよう。
+[Braze キャンバステンプレート]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)を使用することで、キャンバスの作成にかかるに時間を短縮し、効率化できます。事前に作成されたテンプレートのライブラリーから、あなたのユースケースに合ったテンプレートを見つけ、特定のニーズに合わせてカスタマイズしよう。
 {% endalert %}
 
 ### バリアントを追加する

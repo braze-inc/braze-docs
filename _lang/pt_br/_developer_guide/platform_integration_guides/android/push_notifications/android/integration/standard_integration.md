@@ -29,7 +29,7 @@ Nesta seção, você aprenderá a se registrar para push usando a API do Firebas
 
 ### Etapa 1: Adicione o Firebase ao seu projeto
 
-Primeiro, adicione o Firebase ao seu projeto Android. Para obter instruções passo a passo, consulte [o guia de configuração](https://firebase.google.com/docs/android/setup) do [Firebase](https://firebase.google.com/docs/android/setup) do Google.
+Primeiro, adicione o Firebase ao seu projeto Android. Para obter instruções passo a passo, consulte [o guia de configuração do Firebase](https://firebase.google.com/docs/android/setup) do Google.
 
 ### Etapa 2: Adicione o Cloud Messaging às suas dependências
 
@@ -475,7 +475,7 @@ Para problemas relacionados ao push display, consulte nosso [guia de solução d
 
 Nesse ponto, você também deve ter registro de análise de dados para aberturas de notificações por push. Ao clicar na notificação quando ela chegar, as **aberturas diretas** na página de resultados de sua campanha deverão aumentar em 1. Confira nosso artigo sobre [relatórios push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) para obter informações detalhadas sobre a análise de dados push.
 
-Para problemas relacionados à análise [de dados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/) por push, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+Para problemas relacionados à análise [de dados por push, consulte nosso guia de solução de problemas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
 
 #### Testes a partir da linha de comando
 

@@ -1,111 +1,111 @@
 ---
 nav_title: Facebook
-article_title: Exportation de l’audience Facebook
+article_title: "Exportation de l'audience Facebook"
 alias: /partners/facebook/
-description: "Cet article de référence présente le partenariat entre Braze et Facebook, une plateforme sociale leader pour les marques qui s’engagent à atteindre leurs clients et à s’engager auprès de ceux-ci."
+description: "Cet article de référence décrit le partenariat entre Braze et Facebook, une plateforme de réseau social de premier plan permettant aux marques d'atteindre et d'engager leurs clients."
 page_type: partner
-search_tag: Partenaire
-page_order: 1
+search_tag: Partner
 
 ---
 
-# Exportation de l’audience Facebook
+# Export de l’audience Facebook
 
-> L’intégration Braze et Facebook vous permet d’exporter manuellement vos segments utilisateurs de Braze vers Facebook pour créer des audiences personnalisées dans Facebook. Il s’agit d’une exportation d’audience statique unique qui ne créera que de nouvelles audiences personnalisées dans Facebook.
+> L'intégration de Braze et Facebook vous permet d'exporter manuellement vos segments Braze vers Facebook pour créer des audiences personnalisées Facebook. Il s'agit d'un export d'audience statique ponctuel qui ne crée que de nouvelles audiences personnalisées Facebook.
 
-Les cas d’utilisation courants pour synchroniser les audiences personnalisées dans Facebook comprennent :
-- Recibler les utilisateurs à des points spécifiques de leur cycle de vie
-- Créer des listes de ciblage d’exclusion
-- [Audiences similaires][4] pour acquérir de nouveaux utilisateurs plus efficacement
+Les cas d'utilisation courants pour l'exportation des audiences personnalisées de Facebook incluent :
+- Reciblage des utilisateurs à des points spécifiques de leur cycle de vie
+- Création de listes de ciblage d'exclusion
+- Création d’[audiences similaires][4] pour acquérir de nouveaux utilisateurs plus efficacement
 <br><br>
 
 {% alert note %}
-L’exportation de l’audience Facebook utilise le **Jeton d’accès utilisateur** pour autoriser les demandes.<br><br>
-Si vous utilisez cette fonctionnalité en même temps que la fonctionnalité [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) (actuellement en version bêta), Braze utilisera par défaut le **jeton d’utilisateur système** plus fiable que vous avez déjà généré, pour autoriser les demandes.
+L'export de l'audience Facebook utilise le **jeton d'accès utilisateur** pour autoriser les requêtes.<br><br>
+Si vous utilisez cette fonctionnalité avec la fonctionnalité [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/), Braze utilisera par défaut le **jeton d'utilisateur système** plus fiable que vous avez déjà généré, pour autoriser les requêtes.
+{% endalert %}
+
+{% alert note %}
+Si vous participez au test des comptes de Meta Work en version bêta, assurez-vous de déconnecter et reconnecter votre compte à la [page partenaire Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync#step-1-connect-to-facebook).
 {% endalert %}
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
-| [Facebook Business Manager][1] | Un outil centralisé pour gérer les actifs Facebook de votre marque (p. ex., comptes publicitaires, pages, applications). |
-| [Compte publicitaire Facebook][2] | Un compte publicitaire Facebook actif lié au directeur commercial de votre marque que vous souhaitez utiliser avec l’audience personnalisée de Braze.<br><br>Assurez-vous que votre administrateur commercial Facebook a accordé vos autorisations d’administrateur aux comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze, et que vous avez accepté les conditions générales de votre compte. Sinon, vous ne pourrez accéder à aucun compte publicitaire Facebook au sein de Braze. |
-| [Conditions générales des audiences personnalisées de Facebook][3]| Vous devez accepter les Conditions générales des audiences personnalisées de Facebook pour vos comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze.|
-{: .reset-td-br-1 .reset-td-br-2}
+| [Gestionnaire d’affaires Facebook][1] | Un outil centralisé pour gérer les actifs Facebook de votre marque (par exemple, les comptes publicitaires, les pages, les applications). |
+| [Compte publicitaire Facebook][2] | Un compte publicitaire Facebook actif lié au gestionnaire d'entreprise de votre marque que vous souhaitez utiliser avec les audiences personnalisées de Braze.<br><br>Assurez-vous que votre gestionnaire d'entreprise Facebook vous a accordé les autorisations d'administrateur sur les comptes publicitaires Facebook que vous prévoyez d'utiliser avec Braze, et que vous avez accepté les termes et conditions de votre compte publicitaire. Sinon, vous ne pourrez accéder à aucun compte publicitaire Facebook dans Braze. |
+| [Conditions des audiences personnalisées de Facebook][3]| Vous devez accepter les conditions des audiences personnalisées de Facebook pour vos comptes publicitaires Facebook que vous prévoyez d'utiliser avec Braze.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
 
-### Connectez-vous à Facebook
+### Étape 1 : Connectez-vous à Facebook
 
-Dans le tableau de bord de Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook (Connecter Facebook)**.
+1. Dans le tableau de bord de Braze, allez à **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Facebook**. 
 
-![Page de partenaire technologique de Facebook sur la plateforme Braze.][6]{: style="max-width:70%;"}
-
-Une boîte de dialogue de Facebook oAuth apparaît pour autoriser Braze à créer des audiences personnalisées dans vos comptes publicitaires Facebook.
-
-![La première boîte de dialogue Facebook invitant à se « Connecter comme X », où X est votre nom d’utilisateur Facebook.][8]{: style="max-width:30%;"}  ![La deuxième boîte de dialogue de Facebook vous demandant l’autorisation de gérer les publicités pour vos comptes publicitaires.][7]{: style="max-width:40%;"}
-
-Une fois que vous avez lié Braze à votre compte Facebook, vous pourrez sélectionner les comptes publicitaires que vous souhaitez synchroniser au sein de votre groupe d’apps Braze. 
-
-![Une liste des comptes publicitaires disponibles que vous pouvez connecter à Facebook.][9]{: style="max-width:70%;"}
-
-Une fois que vous vous êtes connecté avec succès, vous serez ramené à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
-
-![Version mise à jour de la page des partenaires de technologies de Facebook montrant les comptes publicitaires connectés avec succès.][10]{: style="max-width:70%;"}
-
-Votre connexion à Facebook sera appliquée au niveau du groupe d’apps dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des étapes d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
-
-{% alert important %}
-Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour l’étape de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
-
-<br><br>La nouvelle configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
+{% alert note %}
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
 {% endalert %}
 
-### Exportation de vos utilisateurs dans Facebook
+{: start="2"}
+2\. Dans le module d'exportation d'audiences Facebook, cliquez sur **Connecter Facebook**. <br><br>![Page des partenaires technologiques Facebook dans la plateforme Braze.][6]{: style="max-width:70%;"}
 
-L’exportation de l’audience Facebook de Braze est accessible via la page **Segments**. Cliquez sur l’engrenage à côté du segment que vous souhaitez exporter. Puis cliquez sur **Export as Facebook Audience (Exporter en tant que Facebook Audience)**.
+{: start="3"}
+3\. Dans la fenêtre de dialogue oAuth de Facebook, autorisez Braze à créer des audiences personnalisées dans vos comptes publicitaires Facebook. <br><br>![La première boîte de dialogue Facebook demandant de "Se connecter en tant que X", où X est votre nom d'utilisateur Facebook.][8]{: style="max-width:30%;"}  ![La deuxième boîte de dialogue Facebook demandant l'autorisation de gérer les publicités pour vos comptes publicitaires.][7]{: style="max-width:40%;"}
 
-![Une liste de segments Braze. Pour le premier segment, le symbole de configuration est sélectionné et le bouton « Export as Facebook Audience » (Exporter en tant que Facebook Audience) est affiché.][11]
+{: start="4"}
+4\. Après avoir lié Braze à votre compte Facebook, sélectionnez les comptes publicitaires que vous souhaitez synchroniser dans votre espace de travail Braze. <br><br>![Une liste de comptes publicitaires disponibles que vous pouvez connecter à Facebook.][9]{: style="max-width:70%;"}<br><br> Après vous être connecté, vous serez redirigé vers la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants. <br><br> ![Une version mise à jour de la page des partenaires technologiques de Facebook montrant les comptes publicitaires connectés avec succès.][10]{: style="max-width:70%;"}<br>
+<br> Votre connexion Facebook est appliquée au niveau de l'espace de travail Braze. Si votre administrateur Facebook vous supprime de votre gestionnaire d'entreprise Facebook ou de l'accès aux comptes Facebook connectés, Braze détectera un jeton invalide. En conséquence, vos Canvases actifs utilisant des étapes d'audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
 
-Si vous n’avez pas encore activé Facebook dans Braze, vous serez invité à vous rendre sur la page de partenaire technologique de Facebook dans le tableau de bord. Si vous avez déjà activé Facebook par le biais de **Technology Partners > Facebook**, vous pourrez sélectionner le champ utilisateur à exporter, et une liste déroulante permettant de sélectionner votre compte publicitaire Facebook s’affichera.
+{% alert important %}
+Pour les clients qui ont déjà suivi le processus de révision de l'application Facebook pour [Gestion des publicités](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Accès standard à la gestion des publicités](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d'utilisateur système sera toujours valide pour l'étape de l'audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d'utilisateur système Facebook via la page partenaire Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d'utilisateur système Facebook dans votre espace de travail Braze. 
 
-Il existe trois champs d’utilisateur possibles que vous pouvez exporter :  
+<br><br>La nouvelle configuration oAuth de Facebook s'appliquera également aux [exportations Facebook via des segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites).
+{% endalert %}
 
-- E-mail
+### Étape 2 : Exportez vos utilisateurs vers Facebook
+
+Dans Braze, l'export de l'audience Facebook est accessible via la page **Segments**. 
+
+1. Sur la page des **Segments**, cliquez sur l'engrenage à côté du segment que vous souhaitez exporter.
+2. Cliquez sur **Exporter en tant qu'audience Facebook**. <br><br>![Une liste de segments Braze. Pour le premier segment, le symbole des paramètres est sélectionné et l’option Exporter en tant qu'audience Facebook est affichée.][11]
+
+{: start="3"}
+3\. Si vous n'avez pas encore activé Facebook dans Braze, vous serez invité à aller à la page des partenaires technologiques de Facebook dans le tableau de bord. Si vous avez déjà activé Facebook via **Technology Partners** > **Facebook**, vous pourrez sélectionner le champ utilisateur à exporter, et un menu déroulant pour sélectionner votre compte publicitaire Facebook apparaîtra. <br><br> Il existe trois champs utilisateur possibles que vous pouvez exporter :  
+- e-mail
 - IDFA de l’appareil
 - Numéro de téléphone
 
 {% alert note %}
-Vous ne pouvez sélectionner qu’un seul champ utilisateur dans une exportation. Si vous choisissez plus d’un type de données, Braze créera une audience personnalisée distincte pour chacun.
+Vous ne pouvez sélectionner qu'un seul champ utilisateur dans une seule exportation. Si vous choisissez plusieurs types de données, Braze créera une audience personnalisée distincte pour chacun de ces types.
 {% endalert %}
 
-Une fois que vous avez sélectionné le champ utilisateur, cliquez sur le bouton **Export (Exporter)**. Comme pour les exportations CSV, vous recevrez un e-mail lorsque l’exportation du segment vers Facebook sera terminée.
-
-Vous pouvez visualiser l’audience personnalisée dans [Facebook Ads Manager (Gestionnaire publicitaire Facebook)][13].
+{: start="4"}
+4\. Après avoir sélectionné le champ utilisateur, cliquez sur **Exporter**. Comme les exportations CSV, vous recevrez un e-mail lorsque le segment aura terminé l'exportation vers Facebook.
+5\. Afficher l'audience personnalisée dans le [gestionnaire de publicités Facebook][13].
 
 {% alert important %}
 Pour des raisons de confidentialité des utilisateurs, Facebook ne vous permet pas de voir :
 
-- Les utilisateurs qui ont été ajoutés avec succès à une audience personnalisée. [En savoir plus.](https://www.facebook.com/business/help/112061095610075)
-- La taille de l’audience personnalisée. [En savoir plus.](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
+- Les utilisateurs exacts qui ont été ajoutés avec succès à une audience personnalisée. [En savoir plus.](https://www.facebook.com/business/help/112061095610075)
+- La taille de l'audience personnalisée. [En savoir plus.](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
 {% endalert %}
 
-#### Configurer l’exportation de votre audience
+#### Configuration de votre exportation d'audience
 
-Lorsque vous créez des audiences Facebook, vous pouvez souhaiter inclure ou exclure certains utilisateurs en fonction de leurs préférences et afin de respecter les lois sur la confidentialité, telles que le droit « Ne pas vendre ou partager » en vertu du [CCPA](https://oag.ca.gov/privacy/ccpa). Les marketeurs doivent mettre en œuvre les filtres pertinents pour l’éligibilité des utilisateurs dans leurs critères d’entrée Canvas. Nous énumérons quelques options ci-dessous. 
+Lors de la création d'audiences Facebook, vous pouvez souhaiter inclure ou exclure certains utilisateurs en fonction de leurs préférences, et afin de respecter les lois sur la confidentialité, telles que le droit « Ne pas vendre ou partager » en vertu du [CCPA](https://oag.ca.gov/privacy/ccpa). Les marketeurs devraient implémenter les filtres pertinents pour l'éligibilité des utilisateurs dans leurs critères d'entrée de canvas. Ci-dessous, nous listons quelques options. 
 
-Si vous avez collecté l’[IDFA iOS via le SDK Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), vous pourrez utiliser le filtre **Ads Tracking Enabled (Suivi des publicités activé)**. Sélectionnez la valeur `true` pour envoyer uniquement les utilisateurs vers les destinations de synchronisation d’audience auxquelles ils sont abonnés. 
+- Si vous avez collecté l'[IDFA iOS via le SDK Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), vous pourrez utiliser le filtre **Suivi des publicités activé**. Sélectionnez la valeur `true` afin d'envoyer uniquement les utilisateurs vers les destinations de synchronisation d'audience où ils ont donné leur consentement. 
 
 ![][16]{: style="max-width:75%;"}
 
-Si vous recueillez des « abonnements », des « désabonnements », des « Ne pas vendre ou partager » ou tout autre attribut personnalisé pertinent, vous devez les inclure dans vos critères d’entrée Canvas comme filtre :
+- Si vous collectez des opt-ins, des opt-outs, `Do Not Sell Or Share`, ou d'autres attributs personnalisés pertinents, vous devez les inclure dans vos critères d'entrée de canvas en tant que filtre : 
 
-![Un Canvas avec une audience d’entrée de « opted_in_marketing » correspond à « true ».][15]{: style="max-width:75%;"}
+![Un canvas avec un public d'entrée de "opted_in_marketing" est égal à "true".][15]{: style="max-width:75%;"}
 
 
 #### Audiences similaires
 
-Une fois que vous avez réussi à exporter un segment en tant qu’audience Facebook, vous pouvez créer des groupes supplémentaires à l’aide des [Audiences similaires][4] de Facebook. Cette fonctionnalité examine les données démographiques, les intérêts et autres attributs de votre audience choisie et crée une nouvelle audience de personnes ayant des attributs similaires.
+Une fois que vous avez exporté avec succès un segment en tant qu'audience Facebook, vous pouvez créer des groupes supplémentaires en utilisant les [audiences similaires][4] de Facebook. Cette fonctionnalité examine les données démographiques, les intérêts et d'autres attributs de votre audience choisie et crée une nouvelle audience de personnes ayant des attributs similaires.
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059
@@ -117,6 +117,6 @@ Une fois que vous avez réussi à exporter un segment en tant qu’audience Face
 [9]: {% image_buster /assets/img/fb/afb_4.png %}
 [10]: {% image_buster /assets/img/fb/afb_5.png %}
 [11]: {% image_buster /assets/img/fb/afb_6.png %}
-[13]: https://www.facebook.com/ads/manager/audiences/manage/
+Il y a [13]: https://www.facebook.com/ads/manager/audiences/manage/
 [15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

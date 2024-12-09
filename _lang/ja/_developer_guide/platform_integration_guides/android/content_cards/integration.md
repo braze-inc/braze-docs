@@ -19,7 +19,7 @@ search_rank: 1
 実装とカスタマイズを開始する準備ができたら、「[コンテンツカードのカスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards)」を参照してください。
 {% endalert %}
 
-Android では、コンテンツカードフィードは Braze Android UI プロジェクトで使用可能な[フラグメント](https://developer.android.com/guide/components/fragments.html)として実装されます。[GoogleのFragmentsAndroid](https://developer.android.com/guide/fragments#Adding "ドキュメントを見る：")フラグメントをアクティビティに追加する方法については、Fragmentsを参照のこと。
+Android では、コンテンツカードフィードは Braze Android UI プロジェクトで使用可能な[フラグメント](https://developer.android.com/guide/components/fragments.html)として実装されます。アクティビティにフラグメントを追加する方法については、[フラグメントに関する Google のドキュメント](https://developer.android.com/guide/fragments#Adding "Android ドキュメント: フラグメント")を参照してください。
 
 この[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)クラスは、コンテンツカードの内容を自動的に更新して表示し、使用状況分析をログに記録します。ユーザーの`ContentCards` カードに表示できるカードは、Braze ダッシュボードで作成されます。
 

@@ -33,9 +33,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can up
 
 ### Step 2: Enable push capabilities
 
-In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane to the main app target.
+In Xcode, go to the **Signing & Capabilities** section of the main app target and add the push notifications capability.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![The 'Signing & Capabilities' section in an Xcode project.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ### Step 3: Set up push handling
 

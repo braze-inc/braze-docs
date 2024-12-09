@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | -----------|----------| --------|------- |
 | `email` | 必須 | 文字列または配列 | ブラックリストに登録するメールアドレス、または最大50件のメールアドレスの配列。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

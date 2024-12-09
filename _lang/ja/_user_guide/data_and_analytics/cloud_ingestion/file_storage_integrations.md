@@ -145,7 +145,7 @@ AWS での設定を完了するには、IAM ロールを作成し、ステップ
 
 1. IAM ポリシーを作成したコンソールの同じ [IAM] セクションで、[**ロール**] > [**ロールの作成**] に移動します。<br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
 
-2. Braze AWS アカウントID をBraze ダッシュボードからコピーします。**Cloud Data Ingestion**に進み、**Create New Data Sync**をクリックし、**S3 Import**を選択します。<br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
+2. Braze AWS アカウントID をBraze ダッシュボードからコピーします。[**クラウドデータ取り込み**] に移動し、［**新しいデータ同期を作成**] をクリックし、［**S3 インポート**] を選択します。<br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
 
 3. AWS で、信頼できるエンティティセレクターのタイプとして [**別の AWS アカウント**] を選択します。Braze のアカウント ID を入力し、[**外部 ID が必要**] チェックボックスをオンにして、Braze で使用する external ID を入力します。完了したら [**次へ**] を選択します。<br><br> ![S3 の [ロールの作成] ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({{site.baseurl}}/assets/img/create_role_2_another.png)
 

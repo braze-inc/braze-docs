@@ -248,7 +248,7 @@ require(['path/to/braze.min.js'], function(braze) {
 
 Si votre site utilise RequireJS ou un autre chargeur de module AMD, mais que vous préférez charger le SDK Braze pour le Web via l’une des autres options ci-dessus, vous pouvez charger une version de la bibliothèque qui n’inclut pas le support AMD. Il est possible de charger cette version de la bibliothèque depuis l’endroit suivant du CDN :
 
-<script src="{{site.url}}/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
 Tealium iQ propose une intégration de base de Braze. Pour configurer l’intégration, recherchez Braze dans l’interface Tealium Tag Management et fournissez la clé API du SDK pour le Web à partir de votre tableau de bord.

@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un p
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
+> Utilisez cet endpoint pour supprimer un produit de votre catalogue.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
@@ -33,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 | `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
@@ -92,6 +92,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l'[assistance.]({{site.baseurl}}/support_contact/) |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 | `item-not-found` | Vérifiez que le produit à supprimer existe dans votre catalogue. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

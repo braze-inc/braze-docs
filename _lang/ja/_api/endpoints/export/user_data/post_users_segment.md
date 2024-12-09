@@ -36,7 +36,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 ## 認証情報ベースの応答の詳細
 
-[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、\[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.zip` ではなく `.gz` になります。
+[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.gz` ではなく `.zip` になります。
 
 {% details ZIP のエクスポートパスの内訳 %}
 **ZIP 形式:**
@@ -84,12 +84,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 |`segment_id` | 必須 | 文字列 | エクスポートするSegmentのID。[セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br>特定のSegmentの`segment_id` は、Braze アカウントの[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから見つけることができます。または、[ Segment一覧エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) を使用することもできます。|
 |`callback_endpoint` | オプション | 文字列 | エクスポートが利用可能になった場合に、ダウンロード URL を投稿するエンドポイント。 |
 |`fields_to_export` | 必須* | 文字列の配列 | エクスポートするユーザーデータ フィールドの名前。また、このパラメータに`custom_attributes` を含めることで、すべてのカスタム属性s をエクスポートすることもできます。<br><br>\*2021 年 4 月以降、新しいアカウントでは、エクスポートする特定のフィールドを指定する必要があります。 |
-| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大500 個のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性の作成および管理を行うには、\[**データ設定**] > \[**カスタム属性**] に移動します。 |
+| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大500 個のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 |
 |`output_format` | オプション | 文字列 | ファイルの出力形式。デフォルトは `zip` ファイル形式です。独自のS3 バケットを使用している場合は、`zip` または`gzip` を指定できます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

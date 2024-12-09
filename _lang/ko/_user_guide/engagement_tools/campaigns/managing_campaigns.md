@@ -15,7 +15,7 @@ guide_featured_list:
   - name: 캠페인 승인
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: 작업 공간 간 복사
+  - name: 워크스페이스 간 복사
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
     image: /assets/img/braze_icons/copy-04.svg
   - name: 론칭 후 캠페인 변경

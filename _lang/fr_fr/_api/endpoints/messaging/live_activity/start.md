@@ -55,18 +55,18 @@ Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 
 | Paramètre | Requis | Type de données| Description  |
 |-----------|----------|----------|--------------|
-| `app_id` | Requis | Chaîne de caractères | [Identifiant de l'API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) de l [']({{site.baseurl}}/api/identifier_types/#the-app-identifier) application récupéré à partir de la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/).  |
+| `app_id` | Requis | Chaîne de caractères | Identifiant [API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) récupéré depuis la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/).  |
 | `activity_id` | Requis | Chaîne de caractères  | Définissez une chaîne de caractères personnalisée comme votre `activity_id`. Vous utiliserez cet ID lorsque vous souhaiterez envoyer des événements de mise à jour ou de fin à votre ligne/en production/instantanée.  |
 | `activity_attributes_type`  | Requis | Chaîne de caractères | Le type d'attributs d'activité que vous définissez à l'adresse `liveActivities.registerPushToStart` dans votre application.  |
 | `activity_attributes` | Requis | Objet  | Les valeurs d'attributs statiques pour le type d'activité (comme les noms des équipes sportives, qui ne changent pas). |
 | `content_state` | Requis | Objet  | Vous définissez les paramètres `ContentState` lorsque vous créez votre activité en direct. Transmettez les valeurs mises à jour pour votre `ContentState` en utilisant cet objet.<br><br>Le format de cette requête doit correspondre à la forme que vous avez initialement définie. |
-| `dismissal_date` | Facultatif | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. |
-| `stale_date` | Facultatif | DateTime <br>([](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
-| `notification` | Requis | Objet | Incluez un objet [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
+| `dismissal_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. |
+| `stale_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
+| `notification` | Requis | Objet | Inclure un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objet pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
 | `external_user_ids` | Facultatif si `segment_id` ou `audience` est fourni | Tableau de chaînes de caractères | Voir [ID externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Facultatif si `external_user_ids` ou `audience` est fourni | Chaîne de caractères    | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Facultatif si `external_user_ids` ou `segment_id` est fourni | Objet Audience connectée  | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -117,7 +117,7 @@ Un code de statut `201` est renvoyé si la requête a été formatée correcteme
 
 ### Exemple de réponse échouée
 
-La classe du code de statut `4XX` indique une erreur client. Reportez-vous à l'[article sur les erreurs et réponses de l'API]({{site.baseurl}}/api/errors/) pour plus d'informations sur les erreurs que vous pouvez rencontrer.
+La classe du code de statut `4XX` indique une erreur client. Reportez-vous à l'article [erreurs et réponses de l'API]({{site.baseurl}}/api/errors/) pour plus d'informations sur les erreurs que vous pouvez rencontrer.
 
 Le code de statut `400` pourrait renvoyer le corps de réponse suivant. 
 

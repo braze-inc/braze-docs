@@ -22,5 +22,5 @@ search_rank: 1
 
 Braze Unreal Engine プラグインの詳細については、[GitHub リポジトリ](https://github.com/braze-inc/braze-unreal-sdk)を参照してください。
 
-![Unreal Engine UI で表示されるBraze Unreal SDK プラグイン。]({% image_buster /assets/img/unreal_engine/EnablePlugin.png %})
+![Unreal Engine UI に表示された Braze Unreal SDK プラグイン。]({% image_buster /assets/img/unreal_engine/EnablePlugin.png %})
 

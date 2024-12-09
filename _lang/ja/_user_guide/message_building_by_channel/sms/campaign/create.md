@@ -76,7 +76,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 ![SMS コンポーザーのメッセージフィールドにある [AI コピーライター] ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### コンタクトカード
+### 連絡先カード
 
 必要に応じて、連絡先カードをSMSメッセージに追加して、顧客がビジネスや連絡先情報を簡単に連絡先に追加できるようにすることができます。これらのカードには、会社名、電話番号、住所、Eメール、小さな写真など、一般的なプロパティを割り当てることができる。詳しくは、[お問い合わせカード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)をご覧ください。
 

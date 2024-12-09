@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 6
 ---
 
-ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルのイベントデータに適用される。他のパートナーに適用されるスキーマについては、 [利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
+ストレージスキーマは、データウェアハウスストレージパートナー (Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage) に送信するフラットファイルイベントデータに適用されます。他のパートナーに適用されるスキーマについては、 [利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
 
 その他のイベントの種類にアクセスする必要がある場合は、アカウントマネージャーに問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。必要な情報がこの記事に見つからない場合は、 [顧客行動イベント ライブラリ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)または [Currents サンプルデータの例](https://github.com/Appboy/currents-examples/tree/master/sample-data)をご覧ください。
 
@@ -56,7 +56,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 {% endalert %}
 
 {% alert note %}
-キャンバスフローに関連するオブジェクトは、グループ化に使用できるIDを持ち、[キャンバスの詳細をエクスポートするエンドポイントを]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)経由して人間が読める名前に変換される。
+キャンバスフローに関連するオブジェクトの ID は、グループ化に使用でき、[「キャンバスの詳細をエクスポートする」エンドポイント]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)によって人間が読める名前に変換されます。
 {% endalert %}
 
 {% alert note %}
@@ -3090,7 +3090,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 - `message_extras` を使用すると、Connected Content からのダイナミックなデータ、カスタム属性 (言語、国など)、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
   {% endapi %}
   {% api %}
@@ -3318,7 +3318,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
 
@@ -3487,7 +3487,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
   {% api %}
 
@@ -3702,7 +3702,7 @@ Abort, Push
 
 #### プロパティの詳細
 
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
   {% endapi %}
   {% api %}
 
@@ -4127,7 +4127,7 @@ Abort, Push
 このイベントは、ユーザーがメールを開封したときに発生します。ユーザーが複数回メールを開封すると、同じキャンペーンについて複数のイベントが生成される場合があります。
 
 {% alert important %}
-メール開封イベントのフィールド`device_model` と`mailbox_provider` が空であることは既知の動作である。今は無視して構わない。
+メール開封イベントのフィールド `device_model` と`mailbox_provider` が空であることは、既知の動作です。現時点ではこれは無視できます。
 {% endalert %}
 
 {% tabs %}
@@ -5272,7 +5272,7 @@ Abort, Push
 このイベントは、エンドユーザーがメールの [配信停止] をクリックしたときに発生します。
 
 {% alert important %}
-`Unsubscribe` イベントは実質的に特殊なクリックイベントであり、ユーザーが配信停止状態に変更したときではなく、ユーザーがメール内の配信停止リンク (メールの本文またはフッターにある通常の配信停止リンク、または [list-unsubscribe ヘッダー]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)を使用したもの) をクリックしたときに発生します。サブスクリプションの状態変更がAPI経由で送信された場合、またはカスタム(非Braze)サブスクリプション解除リンク経由で送信された場合、Currentsのイベントはトリガーされない。
+`Unsubscribe` イベントは実質的に特殊なクリックイベントであり、ユーザーが配信停止状態に変更したときではなく、ユーザーがメール内の配信停止リンク (メールの本文またはフッターにある通常の配信停止リンク、または [list-unsubscribe ヘッダー]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)を使用したもの) をクリックしたときに発生します。サブスクリプションの状態の変更が API またはカスタム (Braze 以外) サブスクリプション解除リンク経由で送信された場合、Currents ではイベントはトリガーされません。
 {% endalert %}
 
 {% tabs %}
@@ -5696,7 +5696,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 {% api %}
@@ -5931,7 +5931,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -6545,7 +6545,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 {% api %}
@@ -6774,7 +6774,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -7004,7 +7004,7 @@ Webhook、送信
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) の設定について詳しく説明します。
-- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` 。
+- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
   {% endapi %}
 
 
@@ -8425,7 +8425,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 FeatureFlags, インプレッション
 {% endapitags %}
 
-このイベントは、ユーザーがあなたの機能とインタラクションする機会があったとき、または機能が無効になっている場合（A/Bテストのコントロールグループの場合）にインタラクションできたときに発生する。
+ユーザーが機能を操作する機会があった場合、または機能が無効になっているとき (AB テストのコントロールグループの場合) にユーザーが操作した可能性がある場合には、常にこのイベントが発生します。
 
 フィーチャーフラグのインプレッションは、1セッションにつき1回のみ記録されます。
 
@@ -9130,10 +9130,10 @@ FeatureFlags, インプレッション
 ## キャンバスのステップ進行イベント
 
 {% apitags %}
-キャンバスステップ、プログレッション
+キャンバスステップ、進行
 {% endapitags %}
 
-このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。現在、スプリットステップ（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）とアドバンス結果のみがステッププログレッションイベントを生成する。
+このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。現在、分岐ステップ (オーディエンスパス、条件分岐、アクションパス、実験) と（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）と Advance の結果のみがステップの進行イベントを生成します。
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9676,7 +9676,7 @@ Subscription
 | 受信メッセージ | ユーザーが更新の場合、エンドユーザーsからSMSなどのチャネルsを経由した着信メッセージ |
 | 移行 | ユーザーが内部移行または保守スクリプトによって更新されている場合 |
 | ユーザーマージ | ユーザー結合処理で更新した場合 |
-| Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップでユーザーが更新された場合 |
+| Canvas ユーザー更新ステップ | キャンバスユーザー更新ステップによってユーザーが更新された場合 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}

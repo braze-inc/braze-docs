@@ -17,7 +17,7 @@ tool:
 
 Para configurar su informe de panel de conversiones:
 
-1. Ve a **Análisis** > Conversiones.
+1. Ve a **Análisis** > **Conversiones**.
 2. Selecciona un **intervalo de fechas** para tu informe, hasta una ventana de 90 días.
 3. Selecciona las campañas o los lienzos (o ambos) que quieras analizar. 
    - (opcional) Filtra campañas y Lienzos seleccionando una etiqueta.  

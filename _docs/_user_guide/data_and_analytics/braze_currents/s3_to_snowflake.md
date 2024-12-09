@@ -3,47 +3,44 @@ nav_title: Transferring Data from Amazon S3 to Snowflake
 article_title: Transferring Data from Amazon S3 to Snowflake
 page_order: 7
 page_type: tutorial
-description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the ETL process."
+description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the Extract, Transform, Load (ETL) process."
 tool: Currents
 
 ---
 
 # Transferring data from Amazon S3 to Snowflake
 
-> If your data currently sits in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT (Extract Load Transform) process.
+> If your data currently sits in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the Extract, Load, Transform (ELT) process. This page covers how to do so.
 
 {% alert note %}
 If you have more specific use cases and would like Braze to service your Currents instance, reach out to your Braze account manager and ask them about Braze Data Professional Services.
 {% endalert %}
 
-## Automated load process
+## How it works
 
-This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and segments.
+The Extract, Load, Transform (ELT) process is an automated process that moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and segments.
 
 After you have a Currents to S3 export set up and are receiving live events data, you can configure your live ELT pipeline in Snowflake by configuring the following components:
 
 -   [AWS SQS queues](#aws-sqs-queues)
 -   [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
 
-### Configuring AWS SQS queues
+## Configuring AWS SQS queues
 
 **Auto-ingest Snowpipes** rely on SQS queues for sending notification from S3 to Snowpipe. This process is managed by Snowflake after configuring SQS.
 
-#### Step 1: Configure the external S3 stage
+### Step 1: Configure the external S3 stage
 
 {% alert note %}
-Tables in your database are created from this stage.
+Tables in your database are created in this stage.
 {% endalert %}
 
-When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
+1. When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-Then, create the following in the listed order:
-
-1. In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization's security requirements.
-
-2. In Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the following example).
-
-3. Create a Snowflake S3 Stage (called `braze_data`):
+2. Create the following in the listed order:
+  2.1 In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization's security requirements.
+  2.2. In Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the following example).
+  2.3. Create a Snowflake S3 Stage (called `braze_data`):
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -53,7 +50,8 @@ CREATE OR REPLACE STAGE
 show stages;
 ```
 
-Next, define the AVRO file format for your stage.
+{: start="3"}
+3. Define the AVRO file format for your stage.
 
 ```sql
 CREATE FILE FORMAT
@@ -104,25 +102,28 @@ COPY INTO
 @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 
-Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL` because this pipe was created as an auto-ingest pipe.
+{: start="4"}
+4. Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL` because this pipe was created as an auto-ingest pipe.
 
-#### Step 2: Create bucket events
+### Step 2: Create bucket events
 
-In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
+1. In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
 
 ![AWS Properties tab][1]{: height="50%" width="50%"}
 
-Create new events for each set of Currents Data, as needed ([Messaging]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User Behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)), or both.
+{: start="2"}
+2. Create new events for each set of Currents Data, as needed ([Messaging]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User Behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)), or both.
 
 ![Creating a new event in AWS][2]{: height="50%" width="50%"}
 
-Check the appropriate box for the object create notifications, as well as the ARN on the bottom of the form (from the notification channel column in Snowflake).
+{: start="3"}
+3. Check the appropriate box for the object create notifications, as well as the ARN on the bottom of the form (from the notification channel column in Snowflake).
 
-### Configuring auto-ingest Snowpipes {#auto-ingest-snowpipes}
+## Configuring auto-ingest Snowpipes {#auto-ingest-snowpipes}
 
-To make sure the AWS SQS configuration produces the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), or both.
+For the AWS SQS configuration to produce the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), or both.
 
-It is critical to structure your tables in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them via specific fields with specific data types. For example, a `user_id` will be loaded as a string and called a `user_id` in Currents data.
+It is critical to structure your tables in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them through specific fields with specific data types. For example, a `user_id` will be loaded as a string and called a `user_id` in Currents data.
 
 {% alert note %}
   Depending on your Currents integration, you may have different events you must set up (such as [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)). You can also write a script for some or all of this process.
@@ -131,7 +132,7 @@ It is critical to structure your tables in accordance with the Braze Currents sc
 {% tabs %}
   {% tab User Behavior Events %}
 
-First, create a table `INTO` which we will continuously load using the following structure from the Currents schema:
+1. Create a table `INTO` which we will continuously load using the following structure from the Currents schema:
 
 ```sql
 CREATE TABLE
@@ -154,9 +155,10 @@ CREATE TABLE
     );
 ```
 
-Then, create the `auto_ingest` pipe and specify:
-1. Which table to load
-2. How to load the following table
+{: start="2"}
+2. Create the `auto_ingest` pipe and specify:
+  2.1. Which table to load
+  2.2 How to load the following table
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -194,7 +196,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
  {% endtab %}
  {% tab Messaging Events %}
 
-First, create a table `INTO` which we will continuously load using the following structure from the Currents schema:
+1. Create a table `INTO` which we will continuously load using the following structure from the Currents schema:
 
 ```sql
 CREATE TABLE
@@ -223,9 +225,10 @@ CREATE TABLE
         );
 ```
 
-Then, create the AUTO continuous load pipe and specify:
-1. Which table to load
-2. How to load the following table
+{: start="2"}
+2. Create the AUTO continuous load pipe and specify:
+  2.1. Which table to load
+  2.2 How to load the following table
 
 ```sql
 CREATE OR REPLACE PIPE

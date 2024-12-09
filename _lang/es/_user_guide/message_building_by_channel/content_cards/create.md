@@ -121,7 +121,7 @@ El tamaño total de los campos de mensaje de la tarjeta de contenido está limit
 
 Puedes utilizar [pares clave-valor][19] para crear categorías para tus tarjetas, crear [múltiples fuentes de tarjetas de contenido]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) y personalizar cómo se ordenan las tarjetas.
 
-Para añadir **pares** clave-valor a tu mensaje, ve a la pestaña **Configuración** y selecciona **Añadir nuevo par**.
+Para añadir pares clave-valor a tu mensaje, ve a la pestaña **Configuración** y selecciona **Añadir nuevo par**.
 
 ## Paso 5: Construye el resto de tu campaña o Canvas
 

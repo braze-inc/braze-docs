@@ -1,6 +1,6 @@
 ---
-nav_title: ろう付けウェブフックの作成
-article_title: ろう付けウェブフックの作成
+nav_title: Braze-to-Braze Webhook の作成
+article_title: Braze-to-Braze Webhook の作成
 page_order: 3
 channel:
   - webhooks
@@ -8,15 +8,15 @@ description: "この記事では、主なユースケースのために Braze-to
 
 ---
 
-# ろう付けウェブフックの作成
+# Braze-to-Braze Webhook の作成
 
-> Webhook を使用して、Braze [REST API][2] と通信することができます。基本的には、API で行えるすべての操作を実行できます。弊社では、このように Braze から Braze へ通信する Webhook のことを Braze-to-Braze Webhook と呼んでいます。このページのユースケースは、あなたが[webhooks work][4] と[webhook][5] をBraze で作成する方法に精通していることを前提としています。
+> Webhook を使用して、Braze [REST API][2] と通信することができます。基本的には、API で行えるすべての操作を実行できます。弊社では、このように Braze から Braze へ通信する Webhook のことを Braze-to-Braze Webhook と呼んでいます。このページのユースケースは、[Webhook の仕組み][4]と [Braze で Webhook を作成する方法][5]をすでに理解していることを前提としています。
 
 ## 前提条件
 
 Braze-to-Braze Webhook を作成するには、目的のエンドポイントの権限を持つ [APIキー][3] が必要です。
 
-## Braze-to-Braze ウェブフックの設定
+## Braze-to-Braze Webhook の設定
 
 Webhook リクエストの詳細はユースケースによって異なりますが、Braze-to-Braze Webhook を作成するための一般的なワークフローは変わりません。
 
@@ -28,7 +28,7 @@ Webhook リクエストの詳細はユースケースによって異なります
 
 ## ユースケース
 
-Braze-to-Braze Webhooks を使用すると多くのことができますが、使用を開始するには以下のユースケースがあります。
+Braze-to-Braze Webhook を使用すると多くのことができますが、使用を開始するには以下のユースケースがあります。
 
 - ユーザがメッセージを受信すると、カウンタのカスタム属性（整数）をインクリメントする。
 - 最初のキャンバスから2番目のキャンバスをトリガーする。
@@ -45,7 +45,7 @@ Braze-to-Braze Webhooks を使用すると多くのことができますが、�
 
 Braze-to-BrazeのWebhookを作成するための一般的な手順に従い、Webhookを設定する際には以下を参照すること：
 
-- **Webhook URL:**[REST エンドポイント URL][7] の後に `/users/track` を続けます。たとえば、`US-06` インスタンスの場合、URL は`https://rest.iad-06.braze.com/users/track` になります。
+- **Webhook URL:**[REST エンドポイント URL][7] の後に `/users/track` を続けます。例えば `US-06` インスタンスの場合、URL は`https://rest.iad-06.braze.com/users/track` になります。
 - **要求本文:**Raw Text
 
 #### リクエストヘッダと方法
@@ -63,11 +63,11 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
-!["Settings"タブには、ウェブフックのリクエストヘッダーが表示されます。][1]
+![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
 
 #### Request body
 
-リクエスト本文にユーザー追跡リクエストと、カウンター変数を代入する Liquid を追加します。詳細は、[`/users/track` endpoint][8] を参照してください。
+リクエスト本文にユーザー追跡リクエストと、カウンター変数を代入する Liquid を追加します。詳細については、[`/users/track`エンドポイント][8]を参照してください。
 
 以下は、このエンドポイントに必要なLiquid とリクエストボディの両方の例です。ここで、`your_attribute_count` は、ユーザーがメッセージを表示した回数を数えるために使用する属性です。
 
@@ -119,7 +119,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
-!["Settings"タブには、ウェブフックのリクエストヘッダーが表示されます。][1]
+![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
 
 #### Request body
 

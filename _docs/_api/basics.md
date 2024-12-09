@@ -343,11 +343,11 @@ The **API Keys** tab includes the following information for each key:
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
-![][30]
+![The list of API key permissions in the Braze dashboard.][30]
 
 Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![][29]{: style="max-width:30%;"}
+![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.][29]{: style="max-width:30%;"}
 
 ### REST API key security
 

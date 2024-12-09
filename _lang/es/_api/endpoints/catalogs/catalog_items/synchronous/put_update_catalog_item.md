@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar un elemento de tu catálogo. 
+> Utiliza este punto final para actualizar un elemento de tu catálogo.
 
 Si no se encuentra `item_id`, este punto final creará el elemento en tu catálogo. Este punto final es síncrono.
 
@@ -27,7 +27,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
+{% multi_lang_include rate_limits.md endpoint='elemento de catálogo síncrono' %}
 
 ## Parámetros de la ruta
 
@@ -35,14 +35,14 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 |---|---|---|---|
 | `catalog_name` | Obligatoria | Cadena | Nombre del catálogo. |
 | `item_id` | Obligatoria | Cadena | El ID del elemento del catálogo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Parámetros de la solicitud
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 |---|---|---|---|
-| `items` | Obligatoria | Matriz | Una matriz que contiene objetos elemento. Los objetos de artículo deben contener campos que existan en el catálogo, excepto el campo `id`. Sólo se permite un objeto artículo por solicitud. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `items` | Obligatoria | Matriz | Un array que contiene objetos item. Los objetos de artículo deben contener campos que existan en el catálogo, excepto el campo `id`. Sólo se permite un objeto por solicitud. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 
@@ -73,7 +73,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 Existen tres respuestas de código de estado para este punto final: `200`, `400` y `404`.
 
-### Ejemplo de respuesta satisfactoria
+### Ejemplo de respuesta positiva
 
 El código de estado `200` podría devolver el siguiente cuerpo de respuesta.
 
@@ -85,7 +85,7 @@ El código de estado `200` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -107,24 +107,24 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error | Solución de problemas |
 | --- | --- |
-| `arbitrary-error` | Se ha producido un error arbitrario. Inténtalo de nuevo o ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
-| `catalog-not-found` | Comprueba que el nombre del catálogo es válido. |
+| `arbitrary-error` | Se ha producido un error arbitrario. Vuelva a intentarlo o póngase en contacto con [el servicio de asistencia]({{site.baseurl}}/support_contact/). |
+| `catalog-not-found` | Compruebe que el nombre del catálogo es válido. |
 | `filtered-set-field-too-long` | El valor del campo se está utilizando en un conjunto filtrado que supera el límite de caracteres de un elemento. |
-| `id-in-body` | Elimina cualquier ID de elemento en el cuerpo de la solicitud. |
+| `id-in-body` | Elimina cualquier ID de artículo en el cuerpo de la solicitud. |
 | `ids-too-large` | El límite de caracteres para cada ID de artículo es de 250 caracteres. |
-| `invalid-ids` | Los caracteres admitidos para los nombres de ID de artículo son letras, números, guiones y guiones bajos. |
-| `invalid-fields` | Confirma que todos los campos que estás enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
-| `invalid-keys-in-value-object` | Las claves de los objetos del artículo no pueden incluir `.` ni `$`. |
+| `invalid-ids` | Los caracteres admitidos para los nombres de ID de artículos son letras, números, guiones y guiones bajos. |
+| `invalid-fields` | Confirme que todos los campos que está enviando en la solicitud API ya existen en el catálogo. Esto no está relacionado con el campo ID mencionado en el error. |
+| `invalid-keys-in-value-object` | Las claves de objeto de artículo no pueden incluir `.` ni `$`. |
 | `item-already-exists` | El artículo ya existe en el catálogo. |
-| `item-array-invalid` | `items` debe ser una matriz de objetos. | 
+| `item-array-invalid` | `items` debe ser un array de objetos. |
 | `items-too-large` | El límite de caracteres para cada elemento es de 5000 caracteres. |
-| `request-includes-too-many-items` | Sólo puedes crear un elemento de catálogo por solicitud. |
-| `too-deep-nesting-in-value-object` | Los objetos elemento no pueden tener más de 50 niveles de anidamiento. |
-| `unable-to-coerce-value` | Los tipos de elementos no se pueden convertir. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `request-includes-too-many-items` | Sólo puede crear un elemento de catálogo por solicitud. |
+| `too-deep-nesting-in-value-object` | Los objetos item no pueden tener más de 50 niveles de anidamiento. |
+| `unable-to-coerce-value` | Los tipos de artículo no se pueden convertir. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

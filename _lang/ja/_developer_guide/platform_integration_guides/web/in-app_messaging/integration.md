@@ -28,7 +28,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 各アプリ内メッセージタイプは、コンテンツ、画像、アイコン、クリックアクション、分析、表示、配信にわたってカスタマイズできます。
 
-すべてのアプリ内メッセージは、そのプロトタイプを継承する。 [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)このプロトタイプは、すべてのアプリ内メッセージの基本動作と特徴を定義する。プロトタイプのサブクラスは以下の通りである。 [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html)および [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
+すべてのアプリ内メッセージは、そのプロトタイプを [[`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)] から継承します。このプロトタイプは、すべてのアプリ内メッセージの基本動作と特徴を定義しています。プロトタイプのサブクラスは以下の通りである。 [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html)および [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
 
 ## メッセージタイプ別に予想される動作
 
@@ -75,5 +75,5 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ## 統合
 
-デフォルトでは、アプリ内メッセージは、私たちが推奨する[統合の説明]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). このガイドのステップに従うことで、追加のカスタマイズが可能である。
+デフォルトでは、アプリ内メッセージは、推奨される [統合手順]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).追加のカスタマイズは、このガイドの手順に従って行うことができます。
 

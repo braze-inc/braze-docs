@@ -60,7 +60,7 @@ Aquí puedes ordenar, buscar y desactivar el seguimiento de aliasing de enlaces.
 ![Página de aliasing de enlaces con seguimiento que muestra dos aliasing de enlaces llamados "TechPartners" y "Ayuda" que están asociados a una campaña llamada "Email_Survey".][8]
 
 {% alert tip %}
-Utiliza el [alias de enlace de lista para campaña]({{site.baseurl}}/get_campaign_link_alias/) y [el alias de enlace de lista para]({{site.baseurl}}/get_canvas_link_alias/) puntos finales de [Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extraer el conjunto `alias` en cada variante de mensaje de una campaña o de un componente Canvas específico de correo electrónico.
+Utiliza el [alias de enlace de lista para campaña]({{site.baseurl}}/get_campaign_link_alias/) y el [ alias de enlace de lista para puntos finales de Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extraer el conjunto `alias` en cada variante de mensaje de una campaña o de un componente Canvas específico de correo electrónico.
 {% endalert %}
 
 Braze recomienda evaluar los enlaces dentro del correo electrónico, añadir plantillas de enlaces y proporcionar una convención de nomenclatura que funcione a efectos de segmentación e informes. Esto le ayudará a realizar un seguimiento de todos los enlaces.

@@ -14,7 +14,7 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 ダイナミックなデータまたは追加のデータをCurrents またはSnowflake Data Sharing の送信イベントに送信するには、適切な Liquid タグをメッセージ本文に挿入します。 
 
-`message_extras` 、標準的なLiquidタグフォーマットの例である：
+以下は `message_extras` の標準 Liquid タグ形式の例です。
 
 {% raw %}
 ```liquid
@@ -36,7 +36,7 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 ## 構文の確認
 
-前述したタグ規格に合致しないその他の入力は、CurrentsやSnowflakeにパスできない可能性がある。次のいずれかが含まれていないことを確認してください: あなたの構文または書式設定
+前述したタグ標準に一致しないその他の入力はすべて、Currents または Snowflake に渡されないことがあります。次のいずれかが含まれていないことを確認してください: あなたの構文または書式設定
 
 - 存在しない、空の、または誤って入力された区切り文字
 - 重複キー（Brazeは最初に見つかったキーと値のペアをデフォルトで送信します）
@@ -49,14 +49,14 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 - キーの値が 1 KB を超える場合、切り詰められます。 
 - 空白は文字数にカウントされます。Brazeは前後の空白を省略します。
 - 結果のJSONは文字列値のみを出力します。
-- Liquid 変数をキーや値として含めることはできるが、`message_extras` 内で他の Liquid タグを使用することはできない。
-  - 例えば、次のLiquidを使うことができる： {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
+- Liquid の変数をキーまたは値として含めることはできますが、`message_extras` 内で他の Liquid タグを使用することはできません。
+  - 例えば、次の Liquid を使用できます： {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
 
 ## よくある質問
 
 #### 送信イベントのmessage_extrasフィールドを、開封やクリックのようなエンゲージメントイベントにどのように関連付けることができますか？ 
 
-`dispatch_id` が生成され、送信イベントで提供されます。これは、特定のクリック、開封、または配信されたイベントに関連付けるための一意の識別子として使用できます。このフィールドは、CurrentsまたはSnowflakeで使用し、照会することができる。[`dispatch_id` 行動]({{site.baseurl}}/help/help_articles/data/dispatch_id/) について詳しく学びます。
+`dispatch_id` が生成され、送信イベントで提供されます。これは、特定のクリック、開封、または配信されたイベントに関連付けるための一意の識別子として使用できます。Currents または Snowflake でこのフィールドを使用およびクエリできます。[`dispatch_id` 行動]({{site.baseurl}}/help/help_articles/data/dispatch_id/) について詳しく学びます。
 
 #### アプリ内メッセージで message_extras を使用できますか? {#iam-sdk}
 

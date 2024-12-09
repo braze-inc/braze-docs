@@ -43,7 +43,7 @@ Buy now! Would 5% off convince you?
 
 ![][13]{: width="100%"}
 
-このユースケースでは、顧客の "Total Spend "カスタム属性が`0` より大きい場合、顧客はメッセージを受け取る：
+このユースケースでは、顧客の「Total Spend」カスタム属性が `0` より大きい場合、次のメッセージが表示されます。
 
 ```
 Thanks for purchasing! Here's another 10% off!
@@ -70,7 +70,7 @@ Hey! Get in here and play this Game!
 
 ![][14]
 
-このユースケースでは、あるゲームをプレーした場合、次のようなメッセージが表示される：
+このユースケースでは、特定のゲームをプレイした場合、次のメッセージが表示されます。
 
 ```
 You played our Game! We're so happy!

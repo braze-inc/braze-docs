@@ -29,7 +29,7 @@ Braze Android SDK は、[Google Tag Manager](https://tagmanager.google.com/) 内
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
-!["event name" equals "played song".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %}) のときに、いくつかのイベントをトリガーするように設定されたGoogle タグマネージャーのカスタムトリガー
+![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 次に、新しいタグ (「Function Call」) を作成し、この記事で後述する[カスタムタグプロバイダー](#adding-android-google-tag-provider)のクラスパスを入力します。
 
@@ -43,13 +43,13 @@ Braze Android SDK は、[Google Tag Manager](https://tagmanager.google.com/) 内
 この例のカスタムタグプロバイダーは、これらのキーを使用して、Google Tag Manager からデータを受信したときに Braze に送信するアクションと送信するイベント名を決定します。
 {% endalert %}
 
-![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、前に作成した"再生したsong" trigger.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})でトリガーするように設定されます。
+![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` で引数を渡します。これは、Google Tag Manager でタグ変数を使用して定義されており、アプリでロギングしたカスタムイベントから取得されます。
 
 `genre` イベントプロパティが、「Firebase - Event Parameter」変数として Google Tag Manager に送信されます。Google Tag Manager for Android では、Firebase がデータレイヤーとして使用されるためです。
 
-!["genre" が" のイベントパラメータとして追加されたGoogle Tag Manager の変数。"Braze - Played Song Event" tag.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
+![Google Tag Manager の変数で、「Braze - Played Song Event」タグのイベントパラメータとして「genre」が追加されます。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
 最後に、ユーザーがアプリで曲を再生すると、タグのトリガー名 `played song` と一致する Firebase 分析イベント名を使用し、Firebase と Google Tag Manager を介してイベントがロギングされます。
 

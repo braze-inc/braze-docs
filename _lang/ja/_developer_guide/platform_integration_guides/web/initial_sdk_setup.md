@@ -248,7 +248,7 @@ require(['path/to/braze.min.js'], function(braze) {
 
 サイトで RequireJS または別の AMD モジュールローダーを使用しているが、上記の他のオプションのいずれかを使用して Braze Web SDK をロードしたい場合は、AMD サポートを含まないバージョンのライブラリをロードできます。このバージョンのライブラリーは、以下のCDNの場所からロードできる：
 
-<script src="{{site.url}}/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### Tealium iQ
 Tealium iQは、基本的なターンキー Braze 統合を提供します。統合を構成するには、Tealium Tag Management インターフェイスで Braze を検索し、ダッシュボードから Web SDK API キーを指定します。
