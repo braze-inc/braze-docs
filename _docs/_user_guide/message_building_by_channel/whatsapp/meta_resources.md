@@ -49,13 +49,13 @@ If the account's read rate is extremely low, the following actions will be taken
 
 #### How to stay updated on these warnings and enforcements
 
-Similar to existing platform enforcement, businesses will be notified about these actions and can acknowledge them by using the Account Quality page in the Business Manager. Confirm that you have the correct contact details listed in the Business Manager for all necessary administrators, as the enforcement notification emails will be sent based on that information.
+Similar to existing platform enforcement, businesses will be notified about these actions and can acknowledge them by using the Account Quality page in the WhatsApp Business Manager. Confirm that you have the correct contact details listed in the WhatsApp Business Manager for all necessary administrators, as the enforcement notification emails will be sent based on that information.
 
 Notifications about severe spam violations will be:
 
-- Surfaced in the Business Manager Notifications Center
+- Surfaced in the WhatsApp Business Manager Notifications Center
 - Displayed in a banner in the WhatsApp Manager
-- Sent as an email to all administrators set in the Business Manager
+- Sent as an email to all administrators set in the WhatsApp Business Manager
 
 ### May 2024: Cloud API going live in Türkiye
 *Last Updated May 2024*
