@@ -22,5 +22,11 @@ guide_menu_list:
 - name: Phone Number Capture
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/
   image: /assets/img/braze_icons/phone-02.svg
+- name: Email Capture
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture/
+  image: /assets/img/braze_icons/email.svg
+- name: Onboarding Flow
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding_Flow/
+  image: /assets/img/braze_icons/list.svg
 ---
 <br><br>

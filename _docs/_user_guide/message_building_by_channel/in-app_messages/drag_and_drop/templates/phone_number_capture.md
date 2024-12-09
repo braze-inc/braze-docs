@@ -2,6 +2,7 @@
 nav_title: SMS and WhatsApp Sign-up Form
 article_title: SMS and WhatsApp Sign-up Form
 alias: "/phone_number_capture/"
+page_order: 1
 description: "This reference page covers how to create an SMS and WhatsApp sign-up form with the in-app message drag-and-drop editor."
 ---
 
@@ -91,7 +92,7 @@ After your campaign has launched, you can analyze results in real-time to see ho
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
