@@ -1,22 +1,22 @@
 ---
-nav_title: Email Sign-up with Discount
-article_title: Email Sign-up with Discount
-alias: "/email_discount/"
-page_order: 3
-description: "This reference page covers how to use the in-app message drag-and-drop editor to build an email sign-up form that offers a discount for new subscribers."
+nav_title: Email Sign-up with Offer
+article_title: Email Sign-up with Special Offer
+alias: "/email_offer/"
+page_order: 5
+description: "This reference page covers how to use the in-app message drag-and-drop editor to build your email list by offering a special discount on sign-up."
 ---
 
-# Email sign-up with discount
+# Email sign-up with special offer
 
-> Use the in-app message drag-and-drop editor to build an email sign-up form that offers a discount for new subscribers.
+> Use the in-app message drag-and-drop editor to build your email list by offering a special discount on sign-up.
 
 {% multi_lang_include templates.md section='SDK requirements' %}
 
-## Creating an email sign-up form with a discount
+## Creating an email sign-up form with a special offer
 
-When creating a drag-and-drop in-app message, select **Email sign-up with welcome discount** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with special offer** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
 
-![The in-app message editor with the template for an email sign-up form with discount.][img1]
+![The in-app message editor with the template for an email sign-up form with a special offer.][img1]
 
 ### Step 1: Set up your message styles
 
@@ -24,7 +24,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up with welcom
 
 ### Step 2: Customize your email sign-up component
 
-To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
+To get started building your email sign-up form, select the **Email sign-up** page, then select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
 You can customize the placeholder text and label text of the email capture element.
 
@@ -40,7 +40,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 ### Step 4: Style your message
 
-Customize the discount and the look and feel of your message using the drag-and-drop [in-app message components][3].
+Customize the special offer and the look and feel of your message using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 
@@ -60,8 +60,7 @@ One of the ways you can set this up is through Canvas Flow:
 4. For the first path, trigger an email when a user changes their email subscription status to `opted_in`. This email should inform users that their email has been confirmed.
 5. Set up the other path to exit the Canvas after the window expires.
 
-
-[img1]: {% image_buster /assets/img/templates/email_capture_discount.png %} 
-[img2]: {% image_buster /assets/img/templates/email_capture_field.png %} 
+[img1]: {% image_buster /assets/img/templates/email_capture_offer.png %} 
+[img2]: {% image_buster /assets/img/templates/email_capture_field_offer.png %} 
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

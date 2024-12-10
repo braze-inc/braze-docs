@@ -1,0 +1,47 @@
+---
+nav_title: Product Announcement
+article_title: Product Announcement
+alias: "/product_announcement/"
+page_order: 7
+description: "This reference page covers how to use the in-app message drag-and-drop editor to boost awareness of new product launches."
+---
+
+# Product announcement
+
+> Use the in-app message drag-and-drop editor to boost awareness of new product launches.
+
+{% multi_lang_include templates.md section='SDK requirements' %}
+
+## Creating a product announcement
+
+When creating a drag-and-drop in-app message, select **Product announement** for your template. This templates is supported for both mobile apps and web browsers.
+
+![The in-app message editor with the template for a product announcement.][img1]
+
+### Step 1: Set up your message styles
+
+{% multi_lang_include templates.md section='message style' %}
+
+### Step 2: Customize your button component
+
+To get started building your product announcement, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specifc page in your app (such as the page of the product that is featured in your announcement).
+
+![The in-app message editor with a side menu for customizing the button element.][img2]
+
+
+You can also add additional messages to your product announcement in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
+
+### Step 3: Style your message
+
+Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
+
+## Reporting
+
+{% multi_lang_include templates.md section='reporting' %}
+
+
+
+[img1]: {% image_buster /assets/img/templates/product_announcement.png %} 
+[img2]: {% image_buster /assets/img/templates/product_announcement_button.png %} 
+
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

@@ -24,9 +24,21 @@ guide_menu_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: Email Capture
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture/
-  image: /assets/img/braze_icons/email.svg
+  image: /assets/img/braze_icons/mail-01.svg
+- name: Email Sign-up with Discount
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_discount/
+  image: /assets/img/braze_icons/sale-03.svg 
+- name: Email Sign-up with Special Offer
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_offer/
+  image: /assets/img/braze_icons/shopping-bag-01.svg
+- name: Email Sign-up with Background Image
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_image/
+  image: /assets/img/braze_icons/image-04.svg
 - name: Onboarding Flow
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding_Flow/
   image: /assets/img/braze_icons/list.svg
+- name: Product Announcement
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/product_announcement/
+  image: /assets/img/braze_icons/announcement-02.svg
 ---
 <br><br>
