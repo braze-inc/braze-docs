@@ -13,11 +13,13 @@ _Revision Date: 9 December 2024_
 
 _(Effective as of the Revision Date; subject to change)_
 
-The following additional terms apply in relation to Customer’s use of the SMS Channel: 
+The following additional terms apply in relation to Customer's use of the Mobile Messages Channel:
 
 ## Definitions
 
 **“Aggregators”**, **“Carriers”**, or **“Mobile Messages Intermediaries”** shall mean third-party intermediaries (i) that transmit Mobile Messages between Mobile Message Providers and Carriers; (ii) that are wireless service providers (e.g., T-Mobile, AT&T, etc.); and/or (iii) that are involved in the transmissions of RCS Messages from Mobile Message Providers to End Users.
+
+**SMS/MMS Providers** or **Mobile Messages Providers** shall mean Braze Sub-processors used in the transmission of SMS, MMS, and/or RCS Messages, as identified at [www.braze.com/subprocessors](http://www.braze.com/subprocessors).
 
 **“SMS/MMS Messages”** or **“Mobile Messages”** shall mean SMS, MMS, and/or RCS Messages.
 
@@ -36,6 +38,10 @@ Notwithstanding the above, in the event that Customer sends Mobile Messages usin
 ## Webhook Use Exception Terms
 
 Applicable to Customers who have subscribed to Message Credits on or after December 9, 2024 (as per the Order Form Effective Date): the restrictions outlined in the Webhooks Channel Compliance Documentation do not apply to the use of webhooks for sending Mobile Messages through a Third Party Provider platform to destinations identified as “SMS/MMS Global” in the applicable Credit Ratio Table for Message Credits.
+
+## Bring Your Own (BYO) SMS Connector
+
+Customers can send Mobile Messages from Braze using third-party providers through the “BYO SMS Connector” model. Notwithstanding the above, Customers shall not use the BYO SMS Connector model to send Mobile Messages to the US and Canada. 
 
 ## Disclaimers
 
