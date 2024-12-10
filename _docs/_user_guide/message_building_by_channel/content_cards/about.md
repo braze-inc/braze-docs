@@ -116,11 +116,11 @@ This section covers the three most common ways to place Content Cards within you
 
 The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards).
 
-![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 example content cards, showing the different placement options: message inbox, carousel, and banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Message inbox
 
-![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![An example content card using the "message inbox" placement.]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. 
 
@@ -142,7 +142,7 @@ Content Cards come with a default style, but you can choose a custom implementat
 
 ### Carousel
 
-![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![An example content card using the "carousel" placement.]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Carousels display multiple pieces of content in a single space that your customers can swipe into view. They can be a slideshow of images, text, video, or a combination of them. This is a custom implementation and requires a bit of work from your developers.
 
@@ -159,7 +159,7 @@ Because this is a custom implementation, you’ll need to work with your develop
 
 ### Banner
 
-![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![An example content card using the "banner" placement.]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages.
 

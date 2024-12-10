@@ -125,7 +125,7 @@ The following table lists possible returned errors and their associated troubles
 | `ids-not-unique` | Check that each item ID is unique. |
 | `ids-too-large` | Character limit for each item ID is 250 characters. |
 | `item-array-invalid` | `items` must be an array of objects. |
-| `items-missing-ids` | Confirm that each item has an ID. |
+| `items-missing-ids` | Some items don't have item IDs. Confirm that each item has an ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
 | `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |

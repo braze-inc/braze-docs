@@ -86,10 +86,10 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | Erro | Solução de problemas |
 | --- | --- |
 | É necessário informar o nome do modelo. | Digite um nome de modelo. |
-| As tags devem ser uma matriz | As tags precisam ser formatadas como uma matriz de strings, por exemplo, `["marketing", "promotional", "transactional"]`. |
-| Todas as tags devem ser strings | Não se esqueça de colocar as tags entre aspas (`""`). |
+| As tags devem ser uma matriz | As tags devem ser formatadas como uma matriz de strings, por exemplo, `["marketing", "promotional", "transactional"]`. |
+| Todas as tags devem ser strings | Confira se as tags estão entre aspas (`""`). |
 | Algumas tags não puderam ser encontradas | Para adicionar uma tag ao criar um modelo de e-mail, a tag já deve existir na Braze. |
-| Valor inválido para `should_inline_css`. Esperava-se`true` ou `false`  | Esse parâmetro aceita apenas valores booleanos (verdadeiro ou falso). Certifique-se de que o valor de `should_inline_css` não esteja encapsulado entre aspas (`""`), o que faz com que o valor seja enviado como uma string. |
+| Valor inválido para `should_inline_css`. Esperava-se`true` ou `false` | Esse parâmetro aceita apenas valores booleanos (verdadeiro ou falso). Certifique-se de que o valor de `should_inline_css` não esteja encapsulado entre aspas (`""`), o que faz com que o valor seja enviado como uma string. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

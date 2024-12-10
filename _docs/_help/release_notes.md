@@ -54,6 +54,82 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## December 10, 2024 release
+
+### SDK user location by IP address
+
+As of November 26, 2024, Braze will detect user locations from the geolocated country using the IP address from the start of the first SDK session. Braze will use the IP address to set the country value on user profiles that are created via the SDK, and that IP based country setting will be available during and after the first session. Refer to [Location tracking]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/location_tracking/) for more details.
+
+### Elevated Access setting
+
+[Elevated Access]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#elevated-access) adds an extra layer of security for sensitive actions in your Braze dashboard. When active, users need to re-verify their account before exporting a segment or viewing an API key. To use Elevated Access, go to **Settings** > **Admin Settings** > **Security Settings** and toggle it on.
+
+### Permission for viewing personally identifiable information (PII)
+
+For admins, you can [allow users to view PII]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) as defined by your company in the dashboard in message previews that use Liquid variables to access user properties. 
+
+For workspaces, you can allow users to view PII as defined by your company in the dashboard, or view user profiles but redact fields your company has identified as PII.
+
+### Data flexibility
+
+#### Data lake schemas
+
+The following schemas have been added to the raw table schemas:
+- `USERS_CANVASSTEP_PROGRESSION_SHARED`: Progression events for a user in a Canvas
+- `CHANGELOGS_GLOBALCONTROLGROUP_SHARED`: Identify which random bucket numbers are in the current and previous Global Control Group
+- `USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED`: Impression events for when a user views an feature flag
+
+#### Account-based segmentation
+
+You can do [business-to-business (B2B) account-based segmentation]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/account_based_segmentation/) in two ways, depending on how you set up your B2B data model:
+
+- When using catalogs for your business objects
+- When using connected sources for your business objects
+
+#### Segmentation filters
+
+Refer to [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) for the full list of segmentation filters and their descriptions.
+
+##### User profile created at
+
+Segment your users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+
+##### Sending phone number
+
+Segment your users by the e.164 phone number field. You can use regular expressions with this filter to segment by phone numbers with a specific country code.
+
+### New Braze partnerships
+
+#### Narvar - Ecommerce
+
+The Braze and [Narvar](https://corp.narvar.com/) integration enables brands to leverage Narvar’s notification events to trigger messages directly from Braze, keeping customers informed with timely updates.
+
+#### Zeotap for Currents - Customer data platform
+
+The Braze and [Zeotap](https://zeotap.com/) integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
+
+#### Notify - Dynamic content
+
+The Braze and [Notify](https://notifyai.io/) integration empowers marketers to effectively drive engagement across various platforms. Instead of relying on traditional marketing methods, a Braze API-triggered campaign can leverage Notify's capabilities to deliver personalized messaging through multiple channels, including email, SMS, push notifications, and more.
+
+#### Contentful - Dynamic content
+
+The Braze and [Contentful](https://www.contentful.com/) integration allows you to dynamically use Connected Content to pull content from Contentful into your Braze campaigns.
+
+#### Outgrow - Leads capture 
+
+The Braze and [Outgrow](https://outgrow.co/) integration lets you automatically transfer user data from Outgrow into Braze, enabling highly personalized and targeted campaigns.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK 5.6.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [Flutter SDK 12.0.0](https://github.com/braze-inc/braze-flutter-sdk/releases/tag/12.0.0)
+    - Updates the native iOS bridge [from Braze Swift SDK 10.3.1 to 11.3.0](https://github.com/braze-inc/braze-swift-sdk/compare/10.3.1...11.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+    - Updates the native Android bridge [from Braze Android SDK 32.1.0 to 33.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v32.1.0...v33.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+- [Swift SDK 11.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/11.0.1/CHANGELOG.md)
+
 ## November 12, 2024 release
  
 ### Data flexibility
@@ -218,10 +294,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 #### Braze Cloud Data Ingestion for S3
 
 You can use [Cloud Data Ingestion (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files.
-
-#### Increased rate limit
-
-The rate limit for the [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) request type has increased to 2,500 requests per minute.
 
 #### Monthly active users CY 24-25
 
@@ -765,79 +837,3 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Web SDK 5.3.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 - Xamarin SDK Version 5.0.0
     - Updated the iOS binding [from Braze Swift SDK 8.4.0 to 9.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/8.4.0...9.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-
-## April 30, 2024 release
-
-### Permissions to create or update promotion code lists
-
-As of April 2024, users will need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission to create or update promotion code lists. Refer to [Managing limited and team role permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) for a list of permission names and their descriptions.
-
-### Data flexibility
-
-#### SAML just-in-time provisioning
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-[Just-in-time provisioning]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit) works with SAML SSO to allow new dashboard users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new dashboard user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
-
-#### Permission sets and roles
-
-Use [permission sets]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets-and-roles) to bundle permissions related to specific subject areas or actions. These permission sets can be applied to dashboard users who need the same access across different workspaces.
-
-#### Cloud Data Ingestion Segments
-
-Braze [Cloud Data Ingestion segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
-
-### Unlocking creativity
-
-### Query Builder templates
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Using Query Builder templates, you can create reports using Braze data from Snowflake. To access [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) templates, select **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.
-
-### Performance data by segment
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can break down [performance data by segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#performance-data-by-segment) in Query Builder report templates for campaigns, variants, and Canvases and Canvas steps by segments.
-
-### Robust channels
-
-#### Automatic link shortening for SMS messaging
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Use [automatic link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/?tab=manage%20responses#managing-keywords-and-auto-responses) to automatically shorten static URLs in your response. This can help shape your response as the character counter will update to show the expected length of the shortened URL.
-
-### New Braze partnerships
-
-#### Friendbuy - Loyalty
-
-Leverage the integration between Braze and [Friendbuy]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/friendbuy/) to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
-
-### NiftyImages - Dynamic Content
-
-The Braze and [NiftyImages]({{site.baseurl}}/partners/message_personalization/dynamic_content/niftyimages/) partnership allows you to create dynamic and personalized images for your email campaigns by mapping your existing Braze personalization tags to your NiftyImages URLs.
-
-### SDK updates
-
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
-
-- [Android SDK 30.4.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-- [Braze Segment Swift Plugin 2.4.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md#240)
-- [Flutter SDK 9.0.0](https://pub.dev/packages/braze_plugin/changelog)
-    - Updates the native iOS bridge from [Braze Swift SDK 7.7.0 to 8.4.0](https://github.com/braze-inc/braze-swift-sdk/compare/7.7.0...8.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-        - The minimum iOS deployment target has been updated to 12.0.
-    - Updates the native Android bridge from [Braze Android SDK 29.0.1 to 30.3.0](https://github.com/braze-inc/braze-android-sdk/compare/v29.0.1...v30.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-    - The minimum supported Dart version is 2.15.0.
-- [React Native SDK 9.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
-- [Swift SDK 8.3.0-8.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-- [Swift SDK 9.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-    - Removes the default privacy tracking domains from the BrazeKit privacy manifest.
-        - If you are using the Braze [data tracking features]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/privacy_manifest/), you will need to manually add your tracking endpoint to your app-level privacy manifest.
-        - Refer to the updated [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking) for integration guidance.
-    - Removes the deprecated `BrazeDelegate.braze(_:sdkAuthenticationFailedWithError) method in favor of BrazeSDKAuthDelegate.braze(_:sdkAuthenticationFailedWithError)`.
-        - This method was originally deprecated in [release 5.14.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/5.14.0).
-        - Failing to switch to the new delegate method will not trigger a compiler error; instead, the `BrazeDelegate.braze(_:sdkAuthenticationFailedWithError)` method you define will simply not be called.
-- [Xamarin SDK Version 4.0.3](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#403)

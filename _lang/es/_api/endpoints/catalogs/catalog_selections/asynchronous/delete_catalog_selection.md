@@ -60,7 +60,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta:
 
 ### Ejemplo de respuesta de error
 
-El código de estado `404` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `404` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
@@ -82,11 +82,11 @@ El código de estado `404` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
+La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
 
 | Error                | Solución de problemas                                          |
 | -------------------- | -------------------------------------------------------- |
-| `catalog-not-found`  | Comprueba que el nombre del catálogo es válido.                    |
+| `catalog-not-found`  | Compruebe que el nombre del catálogo es válido.                    |
 | `invalid-selection`  | Comprueba que el nombre de la selección es válido.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

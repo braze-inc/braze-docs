@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーのメールサブスクリプ
 ---
 {% api %}
 # メールサブスクリプションステータスの変更
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/status
 {% endapimethod %}
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `email` | 必須 | 文字列または配列 | 修正するEメールアドレスを文字列で、または最大50個までの配列で指定する。 |
 | `subscription_state` | 必須 | 文字列 | subscribe"、"unsubscribed"、"opted_in "のいずれかである。 |

@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze Learning Login
     link: https://learning.braze.com/

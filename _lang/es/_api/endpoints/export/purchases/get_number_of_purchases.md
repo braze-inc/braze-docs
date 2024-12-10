@@ -31,8 +31,8 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 |---|---|---|---|
 | `ending_at` | Opcional | Fecha y hora (cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe finalizar la exportación de datos. De forma predeterminada, la hora de la solicitud. |
-| `length` | Obligatoria | Entero | Número máximo de días antes de `ending_at` a incluir en la serie devuelta. Debe estar entre 1 y 100 (ambos inclusive). |
-| `unit` | Opcional | Cadena | Unidad de tiempo entre puntos de datos. Puede ser día u hora, predeterminado a día. |
+| `length` | Obligatoria | Entero | Número máximo de días antes de `ending_at` a incluir en la serie devuelta. Debe estar comprendido entre 1 y 100 (ambos inclusive). |
+| `unit` | Opcional | Cadena | Unidad de tiempo entre puntos de datos. Puede ser día u hora, por defecto día. |
 | `app_id` | Opcional | Cadena | Identificador de API de la aplicación recuperado de la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/). Si se excluye, se mostrarán los resultados de todas las aplicaciones de un espacio de trabajo. |
 | `product` | Opcional | Cadena | Nombre del producto por el que filtrar la respuesta. Si se excluye, se mostrarán los resultados de todas las aplicaciones. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

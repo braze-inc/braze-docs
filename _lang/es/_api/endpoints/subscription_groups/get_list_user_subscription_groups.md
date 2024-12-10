@@ -28,7 +28,7 @@ Si quieres ver ejemplos o probar este punto final para **Grupos de WhatsApp**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Requisitos previos
+## Requisitos
 
 Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `subscription.groups.get`.
 
@@ -45,7 +45,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `phone` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | El número de teléfono del usuario. Debe incluir al menos un número de teléfono (con un máximo de 50). |
 | `limit` | Opcional | Entero | El límite del número máximo de resultados devueltos. `limit` predeterminado (y como máximo) es 100. |
 | `offset`  |  Opcional | Entero | Número de plantillas que saltar antes de devolver el resto de plantillas que se ajustan a los criterios de búsqueda. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert tip %}
 Si hay varios usuarios (varios `external_ids`) que comparten la misma dirección de correo electrónico, todos los usuarios serán devueltos como usuarios separados (aunque tengan la misma dirección de correo electrónico o grupo de suscripción).

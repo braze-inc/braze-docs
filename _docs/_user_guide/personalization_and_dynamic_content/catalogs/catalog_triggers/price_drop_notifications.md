@@ -18,7 +18,9 @@ When a user triggers a custom event for an item, we'll automatically subscribe t
 
 ## How price drop notifications work
 
-You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of a price field, which must be a number-data type. When a selected custom event is performed by a user and has a `type` property that includes `price_drop`, it can be used to create a price drop subscription for a user and a catalog item it occurred for.
+You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of a price field, which must be a number-data type. 
+
+When a selected custom event is performed by a user and has a `type` property that includes `price_drop`, it can be used to create a price drop subscription for a user and a catalog item it occurred for. You can also use this `type` array to set both price-drop and back-in-stock notifications in the same event.
 
 When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas.
 
@@ -48,15 +50,12 @@ Follow these steps to set up price drop notifications in a specific catalog.
                 "properties": {
                     "id": "shirt-xl",
                     "catalog_name": "on_sale_products",
-                    "type": ["price_drop"]
+                    "type": ["price_drop", "back_in_stock"]
                 }
             }
         ]
     }
     ```
-{% alert note %}
-Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification. Create a price drop notification by setting `type` to `price_drop`. You cannot set both a price drop and back in stock notification.
-{% endalert %}
 
 {: start="4"}
 4. Select **Save** and continue to the catalog's **Settings** page.

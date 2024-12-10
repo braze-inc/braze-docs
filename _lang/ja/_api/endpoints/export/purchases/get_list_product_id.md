@@ -28,7 +28,7 @@ description: "この記事では、「プロダクト ID のエクスポート�
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `page` | オプション | 文字列 | 表示したい商品リストのページ。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

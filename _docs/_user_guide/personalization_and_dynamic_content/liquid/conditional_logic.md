@@ -113,7 +113,7 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![An example message in the Braze dashboard, using a null 'first name' attribute.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

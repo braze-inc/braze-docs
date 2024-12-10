@@ -48,7 +48,7 @@ description: "この記事では、ライブ・アクティビティを更新す
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `app_id` | 必須 | 文字列 | アプリ[API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)は[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得されました。  |
 | `activity_id` | 必須 | 文字列 | [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class) を使用してライブアクティビティを登録する場合は、`pushTokenTag` パラメーターを使用して、アクティビティのプッシュトークンにカスタム文字列を名前として付けます。<br><br>`activity_id` をこのカスタム文字列に設定して、更新するライブアクティビティを定義します。 |
