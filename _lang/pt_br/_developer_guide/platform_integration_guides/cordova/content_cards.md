@@ -8,7 +8,7 @@ page_order: 2
 
 > Saiba como integrar os cartões de conteúdo ao Cordova Braze SDK.
 
-{% multi_lang_include Cordova/prerequisites.md %}
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Feeds de cartões
 

@@ -26,30 +26,30 @@ The following requirements are the basic, minimum requirements to integrate with
 
 | Requirement | Origin | Access | Description
 |---|---|---|---|
-| Account with Partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that Partner's site or reach out to that Partner to sign up. | Braze will not send data to a Partner if you don't have access to that data through your company's account.
-| Partner API Key or Token | Usually the Partner's dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
-| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner's dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
-| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner's dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don't want your data to get lost! | Though this is required for some Partners, it's important to get right when you do need it. |
+| Account with partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that partner's site or reach out to that partner to sign up. | Braze will not send data to a partner if you don't have access to that data through your company's account.
+| Partner API Key or Token | Usually the partner's dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the integrations page for that partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys or Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that partner. May also exist in the partner's dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the integrations page for that partner. This gives Braze credentials and authorizes us to write files to your partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the partner's dashboard. | If this is required, be sure to copy the bucket name or file path exactly into the designated space in Braze. We don't want your data to get lost! | Though this is required for some partners, it's important to get right when you do need it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-It's important to keep your Partner Keys/Tokens and authentication details up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your Partner Keys, Partner Tokens, and authentication details updated; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 ## Setting up Currents
 
 ### Step 1: Choose your partner
 
-Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.  
+Braze Currents allows you to integrate through Data Storage using flat files or to our behavioral analytics and customer data partners using a batched JSON payloads to a designated endpoint.  
 
-Before you begin your integration, it's best to decide which integration is best for your purposes. For example, if you already utilize mParticle and Segment and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
+Before you begin your integration, it's best to decide which integration is best for your purposes. For example, if you already use mParticle and Segment and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
 ### Step 2: Open Currents
 
 To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Integrations** > **Currents**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Integrations** > **Currents**.
 {% endalert %}
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
@@ -58,7 +58,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Add a partner, sometimes called a "Currents connector," by selecting the dropdown at the top of the screen.
 
-Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions in their respective pages.
+Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and follow the instructions on their respective pages.
 
 ### Step 4: Configure your events
 
@@ -75,7 +75,7 @@ You can use Currents field transformations to remove or hash a string field.
 - **Remove:** Replaces the string field with `[REDACTED]`. This is helpful if your partner rejects events with missing or empty fields.
 - **Hash:** Applys an SHA-256 hashing algorithm to the string field.
 
-Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change.
+Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change events.
 
 ![Adding field transformations]({% image_buster /assets/img/current3.png %})
 
@@ -84,7 +84,7 @@ Selecting a field for one of these transformations will apply that transformatio
 You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
-Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
+Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
 
 #### Testing Currents connectors
@@ -104,7 +104,7 @@ To upgrade your Test Currents connector, edit the integration in the dashboard a
 
 ## IP allowlisting
 
-Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
+Braze will send Currents data from the listed IPs.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
 |---|

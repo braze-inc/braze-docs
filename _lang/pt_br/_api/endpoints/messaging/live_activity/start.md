@@ -23,7 +23,7 @@ Depois de criar uma atividade ao vivo, você pode fazer uma solicitação POST p
 
 ## Pré-requisitos
 
-Para usar esse endpoint, você precisará concluir o seguinte:
+Para usar este endpoint, você precisará concluir o seguinte:
 
 - Gerar uma chave de API com a permissão `messages.live_activity.start`.
 - [Crie uma atividade ao vivo]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity) usando o Braze Swift SDK.
@@ -55,18 +55,18 @@ Para usar esse endpoint, você precisará concluir o seguinte:
 
 | Parâmetro | Obrigatória | Tipo de dados| Descrição  |
 |-----------|----------|----------|--------------|
-| `app_id` | Obrigatória | String | [Identificador da API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) do app recuperado da página [Chaves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/).  |
+| `app_id` | Obrigatória | String | [Identificador da API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) do app recuperado da página [Chaves da API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/).  |
 | `activity_id` | Obrigatória | String  | Defina uma string personalizada como seu `activity_id`. Você usará esse ID quando desejar enviar eventos de atualização ou encerramento para sua atividade ao vivo.  |
 | `activity_attributes_type`  | Obrigatória | String | O tipo de atribuição de atividade que você define em `liveActivities.registerPushToStart` no seu app.  |
 | `activity_attributes` | Obrigatória | Objeto  | Os valores de atribuição estáticos para o tipo de atividade (como os nomes das equipes esportivas, que não mudam). |
-| `content_state` | Obrigatória | Objeto  | Você define os parâmetros de `ContentState` ao criar sua atividade ao vivo. Passe os valores atualizados para seu `ContentState` usando esse objeto.<br><br>O formato dessa solicitação deve corresponder à forma que você definiu inicialmente. |
-| `dismissal_date` | Opcional | Data e hora <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Esse parâmetro define o tempo para remover a atividade ao vivo da interface do usuário. |
-| `stale_date` | Opcional | Data e hora <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Esse parâmetro informa ao sistema quando o conteúdo do Live Activity é marcado como desatualizado na interface do usuário. |
-| `notification` | Obrigatória | Objeto | Inclua um objeto [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir uma notificação por push. O comportamento dessa notificação por push depende se o usuário está ativo ou se está usando um dispositivo proxy. {::nomarkdown}<ul><li>Se um <code>notification</code> estiver incluída e o usuário estiver ativo no iPhone quando a atualização for entregue, a IU do Live Activity atualizada deslizará para baixo e será exibida como uma notificação por push.</li><li>Se um <code>notification</code> estiver incluído e o usuário não estiver ativo no iPhone, a tela se acenderá para exibir a interface de usuário Live Activity atualizada na tela de bloqueio.</li><li>O <code>notification alert</code> não será exibida como uma notificação por push padrão. Além disso, se um usuário tiver um dispositivo proxy, como um Apple Watch, o <code>alert</code> será exibido lá.</li></ul>{:/} |
+| `content_state` | Obrigatória | Objeto  | Você define os `ContentState` parâmetros quando cria sua Atividade ao Vivo. Passe os valores atualizados para o seu `ContentState` usando este objeto.<br><br>O formato desta solicitação deve corresponder à forma que você definiu inicialmente. |
+| `dismissal_date` | Opcional | Datetime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Esse parâmetro define o tempo para remover a atividade ao vivo da interface do usuário. |
+| `stale_date` | Opcional | Datetime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parâmetro informa ao sistema quando o conteúdo da Atividade ao Vivo é marcado como desatualizado na interface do usuário. |
+| `notification` | Obrigatória | Objeto | Inclua um [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objeto para definir uma notificação por push. Esse comportamento dessa notificação por push depende se o usuário está ativo ou se o usuário está usando um dispositivo proxy. {::nomarkdown}<ul><li>Se um <code>notification</code> está incluído e o usuário está ativo em seu iPhone quando a atualização é entregue, a interface de atividade ao vivo atualizada deslizará para baixo e será exibida como uma notificação por push.</li><li>Se um <code>notification</code> está incluído e o usuário não está ativo em seu iPhone, sua tela acenderá para exibir a interface de Atividade ao Vivo atualizada em sua tela de bloqueio.</li><li>O <code>notification alert</code> não será exibido como uma notificação por push padrão. Além disso, se um usuário tiver um {dispositivo} proxy, como um Apple Watch, o <code>alert</code> será exibido lá.</li></ul>{:/} |
 | `external_user_ids` | Opcional se `segment_id` ou `audience` for fornecido | Matriz de strings | Consulte [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Opcional se `external_user_ids` ou `audience` for fornecido | String    | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
-| `custom_audience` | Opcional se `external_user_ids` ou `segment_id` for fornecido | Objeto do público conectado  | Veja o [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `custom_audience` | Opcional se `external_user_ids` ou `segment_id` for fornecido | Objeto do público conectado  | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 
@@ -103,11 +103,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## Resposta
 
-Há duas respostas de código de status para esse endpoint: `201` e `4XX`.
+Existem dois códigos de status para este endpoint: `201` e `4XX`.
 
 ### Exemplo de resposta bem-sucedida
 
-Um código de status `201` é retornado se a solicitação foi formatada corretamente e nós a recebemos. O código de status `201` poderia retornar o seguinte corpo de resposta.
+Um código de status `201` é retornado se a solicitação foi formatada corretamente e recebemos a solicitação. O código de status `201` pode retornar o seguinte corpo de resposta.
 
 ```json
 {
@@ -117,9 +117,9 @@ Um código de status `201` é retornado se a solicitação foi formatada correta
 
 ### Exemplo de resposta de erro
 
-A classe de código de status `4XX` indica um erro do cliente. Consulte o [artigo Erros e respostas da API]({{site.baseurl}}/api/errors/) para obter mais informações sobre os erros que você pode encontrar.
+A classe de código de status `4XX` indica um erro do cliente. Consulte o artigo [erros e respostas da API]({{site.baseurl}}/api/errors/) para saber mais sobre os erros que você pode encontrar.
 
-O código de status `400` poderia retornar o seguinte corpo de resposta. 
+O código de status `400` pode retornar o seguinte corpo de resposta. 
 
 ```json
 {

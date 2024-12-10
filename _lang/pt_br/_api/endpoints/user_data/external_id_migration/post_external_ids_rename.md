@@ -34,7 +34,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='external id migration' %}
+{% multi_lang_include rate_limits.md endpoint='migração de id externo' %}
 
 ## Corpo da solicitação
 
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Obrigatória | Vetor de objetos de renomeação de identificador externo | Veja o exemplo de solicitação e as seguintes limitações para a estrutura do objeto de renomeação do identificador externo. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - O `current_external_id` deve ser o ID principal do usuário e não pode ser um ID obsoleto
 - O endereço `new_external_id` não deve estar em uso como ID principal ou ID obsoleto
@@ -86,7 +86,7 @@ A resposta confirmará todas as renomeações bem-sucedidas, bem como as renomea
 }
 ```
 
-O campo `message` retornará `success` para qualquer solicitação válida. Erros mais específicos são capturados na matriz `rename_errors`. O campo `message` retorna um erro no caso de:
+O campo `message` retornará `success` para qualquer solicitação válida. Erros mais específicos são capturados no array `rename_errors`. O campo `message` retorna um erro no caso de:
 - Chave de API inválida
 - Matriz `external_id_renames` vazia
 - `external_id_renames` vetor de objetos com mais de 50 objetos

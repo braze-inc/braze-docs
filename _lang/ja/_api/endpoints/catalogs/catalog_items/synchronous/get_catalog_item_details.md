@@ -29,11 +29,11 @@ description: "この記事では、「カタログ項目の詳細をリスト」
 
 ## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
 | `catalog_name` | 必須 | 文字列 | カタログ名。 |
 | `item_id` | 必須 | 文字列 | カタログ項目のID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
@@ -102,6 +102,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 | --- | --- |
 | `catalog-not-found` | カタログ名が有効であることを確認する。 |
 | `item-not-found` | その商品がカタログに掲載されているか確認する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
