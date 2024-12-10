@@ -32,8 +32,6 @@ These are the minimum SDK versions needed to start using feature flags:
 
 ## Use cases
 
-Here's some feature flag use cases to get you started.
-
 ### Gradual rollouts
 
 Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early.
@@ -183,18 +181,16 @@ For more information about filtering on segments, see [Creating a segment]({{sit
 To prevent recursive segments, it is not possible to create a segment that references other feature flags.
 {% endalert %}
 
-## Limitations
+## Plan limitations
 
-The following table describes the limitations that apply at a feature flag level. To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
+These are the feature flag limitations for free and paid plans.
 
-| Limitation area                                                                                                   | Free version     | Paid version      |
+| Feature                                                                                                   | Free version     | Paid version      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
 | [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
 | [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-### Active feature flags
 
 A feature flag is considered active and will count toward your limit if any of the following apply:
 
@@ -204,3 +200,6 @@ A feature flag is considered active and will count toward your limit if any of t
 
 Even if the same feature flag matches multiple criteria, such as if it's used in a Canvas and the rollout is 50%, it will only count as 1 active feature flag toward your limit.
 
+{% alert note %}
+To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
+{% endalert %}
