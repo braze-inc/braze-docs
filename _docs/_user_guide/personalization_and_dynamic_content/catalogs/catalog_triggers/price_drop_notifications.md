@@ -34,10 +34,11 @@ Follow these steps to set up price drop notifications in a specific catalog.
 2. Select the **Price Drop** toggle.<br>
 3. If the global catalog settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger notifications:
     <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
+    - **Fallback Catalog:** The catalog used for the subscription if there isn't a `catalog_name` property in the custom event.
     - **Custom event for subscribing:** The Braze custom event used to subscribe a user for catalog notifications. When this event occurs, the user who performed the event will be subscribed.
     - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications.
     - **Item ID event property:** The property on the above custom event used to determine the item for a subscription or unsubscription. This property on the custom event should contain an item ID that exists in a catalog. The custom event must contain a `catalog_name` property to specify which catalog this item is in.
-    - **Fallback Catalog:** The catalog used for the subscription if there isn't a `catalog_name` property in the custom event.
+   
     - A sample custom event would look like
     ```json
     {
@@ -60,7 +61,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
 4. Select **Save** and continue to the catalog's **Settings** page.
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item's price drops.
-    - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.
+    - **Set notification limits** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.
 6. Set the **Price field in catalog**. This is the catalog field that will be used to determine the item's price. It must be a number type.<br>
 7. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or how much value the price field has changed by.<br>
 8. Select **Save settings**.
