@@ -1,7 +1,6 @@
 ---
 nav_title: Banner Cards
 article_title: Banner Cards
-page_order: 4
 layout: dev_guide
 hidden: true
 guide_top_header: "Banner Cards"
@@ -12,15 +11,17 @@ channel:
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+- name: Creating placements
+  link: /docs/developer_guide/banner_cards/creating_placements/
+  image: /assets/img/braze_icons/compass-01.svg
 - name: Creating Banner Cards
   link: /docs/create_banner_card/
   image: /assets/img/braze_icons/channel-content-cards.svg
 - name: Integrating Banner Cards
-  link: /docs/developer_guide/platform_wide/banner_cards/integration/
+  link: /docs/developer_guide/banner_cards/integration/
   image: /assets/img/braze_icons/code-01.svg
 ---
 
 {% alert important %}
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
-
