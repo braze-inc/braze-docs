@@ -12,7 +12,7 @@ platform:
 
 # Creating Banner Card placements
 
-> Before launching a Banner Card campaign in your app, you must set up a placement in the Braze dashboard. Placements are locations that you define in your app that can display Banner Cards.
+> Before launching a Banner Card campaign in your app, you'll need to create a placement in the Braze dashboard. Placements are locations that you define in your app that can display Banner Cards.
 
 {% alert important %}
 Banner Cards are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
@@ -24,7 +24,7 @@ These are the minimum SDK versions to start using Banner Cards:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 %}
 
-## Creating placements
+## Creating a placement
 
 ### Step 1: Create a new placement
 

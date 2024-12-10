@@ -393,7 +393,7 @@ This feature is not currently supported on Roku.
 
 ## Dimensions and sizing
 
-Here's some things to keep in mind for Banner Card dimensions and sizing:
+Here's some things to know about Banner Card dimensions and sizing:
 
 - While the composer let's you preview banners in different dimensions, that information is not saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.

@@ -1,7 +1,6 @@
 ---
 nav_title: Banner Cards
 article_title: Banner Cards
-page_order: 4
 layout: dev_guide
 hidden: true
 guide_top_header: "Banner Cards"
@@ -14,6 +13,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating placements
   link: /docs/developer_guide/banner_cards/creating_placements/
+  image: /assets/img/braze_icons/compass-01.svg
 - name: Creating Banner Cards
   link: /docs/create_banner_card/
   image: /assets/img/braze_icons/channel-content-cards.svg
