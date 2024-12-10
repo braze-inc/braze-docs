@@ -159,7 +159,7 @@ There will be a delay in reporting for users synced and users errored metrics du
 
 ### How long does it take for my audiences to populate in my Audience Sync partner dashboard?
 
-The time it takes to populate an audience depends on the specific partner. All networks will process the requests from Braze and attempt to match users. This process can typically take anywhere from 6-48 hours.
+The time it takes to populate an audience depends on the specific partner. All networks will process the requests from Braze and attempt to match users. It can take up to 24 hours for custom audiences to be updated.
 
 ### What should I do next if I receive an invalid token error?
 
