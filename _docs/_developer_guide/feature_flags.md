@@ -21,7 +21,7 @@ platform:
 > Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 {% alert tip %}
-When you're ready to create your own feature flags, checkout [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+When you're ready to create your own feature flags, check out [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
 {% endalert %}
 
 ## Prerequisites
@@ -51,7 +51,7 @@ With Braze feature flags, we can instead gradually roll out the feature and miti
 * We will enable this new feature for only 10% of users to determine if we're staffed appropriately.
 * If there are any bugs, we can quickly disable the feature instead of rushing to ship a new release.
 
-To gradually roll out this feature, we can [create]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) a feature flag named "Live Chat Widget."
+To gradually roll out this feature, we can [create a feature flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) named "Live Chat Widget."
 
 ![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -125,7 +125,7 @@ As a result, the next time someone loads the app, they will see the new Thanksgi
 
 Use feature flags to synchronize a feature's rollout and messaging. This will allow you to use Braze as the source of truth for both your user experience and its relevant messaging. To achieve this, target the new feature to a particular segment or filtered portion of your audience. Then, create a campaign or Canvas that only targets that segment. 
 
-Let's say that we're launching a new loyalty rewards program for our users. It can be difficult for Marketing and Product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience and controlling the related messaging to those same users.
+Let's say that we're launching a new loyalty rewards program for our users. It can be difficult for marketing and product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. Feature flags in Canvas let you apply sophisticated logic when it comes to enabling a feature for a select audience and controlling the related messaging to those same users.
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 
