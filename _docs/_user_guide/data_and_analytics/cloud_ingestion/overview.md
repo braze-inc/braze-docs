@@ -26,6 +26,7 @@ Cloud Data Ingestion can sync data from the following sources to Braze:
    - Databricks 
    - Google BigQuery
    - Snowflake
+   - Microsoft Fabric
 
 - File storage sources 
    - Amazon S3
