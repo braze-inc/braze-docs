@@ -321,7 +321,7 @@ validurls['/docs/partners/insights/'] = '/docs/partners/home/';
 validurls['/docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/'] = '/docs/partners/canvas_steps/google_audience_sync/';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/';
 
-validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
+validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/';
 validurls['/docs/help/best_practices/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/reporting/';
 validurls['/docs/help/best_practices/email/import_your_email_list/'] = '/docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list';
