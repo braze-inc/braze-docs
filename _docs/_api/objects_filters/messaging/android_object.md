@@ -30,7 +30,7 @@ You must include an Android push object in `messages` if you want users you have
    // Specifying "default" in the sound field will play the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
-   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to false,
    "summary_text": (optional, string),
    "time_to_live": (optional, integer (maximum of 2,419,200 seconds)),
    "notification_id": (optional, integer),
