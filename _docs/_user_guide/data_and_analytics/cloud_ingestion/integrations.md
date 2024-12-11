@@ -411,7 +411,7 @@ Navigate to the admin portal to set up access for Braze to connect. The relevant
 Braze supports both Tables and Views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
 
 ```json
-CREATE OR REPLACE TABLE [warehouse].[schema].[CDI_table_name] 
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
   PAYLOAD VARCHAR NOT NULL,
