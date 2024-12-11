@@ -12,7 +12,7 @@ description: "This reference article covers how to manage custom data, such as p
 
 ## Pre-populating custom data
 
-There may be times when you'd like to set up campaigns and segments using custom data before your development team has integrated that custom data. Braze allows you to pre-populate custom events and attributes on the dashboard before these pieces of data start tracking so that these events and attributes are available for use in dropdowns and as part of the campaign creation process. All data types (such as strings, numbers, and nested custom attributes) are supported.
+There may be times when you'd like to set up campaigns and segments using custom data before your development team has integrated that custom data. Braze allows you to pre-populate custom events and attributes on the dashboard before these pieces of data start tracking so that these events and attributes are available for use in dropdowns and as part of the campaign creation process.
 
 To pre-populate custom events and attributes, do the following:
 
@@ -84,7 +84,7 @@ Changes to the blocklist may take a few minutes to propagate. You can re-enable 
 
 ## Deleting custom data
 
-As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. 
+As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
 
 To delete a custom event or custom attribute, do the following:
 
