@@ -14,7 +14,7 @@ description: "This reference page covers how to use the in-app message drag-and-
 
 ## Creating a product announcement
 
-When creating a drag-and-drop in-app message, select **Product announement** for your template. This templates is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Product announement** for your template. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a product announcement.][img1]
 
@@ -28,12 +28,11 @@ To get started building your product announcement, select the button component i
 
 ![The in-app message editor with a side menu for customizing the button element.][img2]
 
-
 You can also add additional messages to your product announcement in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
 
 ### Step 3: Style your message
 
-Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your product announcement using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 

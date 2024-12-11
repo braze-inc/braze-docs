@@ -30,7 +30,7 @@ Check that your messages are connected in sequential order so that users move th
 
 ### Step 3: Style your message
 
-Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 

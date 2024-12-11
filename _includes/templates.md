@@ -37,7 +37,13 @@ Deliverability best practices often exceed legal requirements, and our recommend
 
 {% endif %}
 
-{% if include.section == "double opt-in" %}
+{% if include.section == "email validation" %}
+
+If the user enters an email address that includes any unaccepted special characters, they will see a generic error indicator and won't be able to submit the form. This error message isn't customizable. You can view the error behavior in the **Preview & Test** tab and on your test device. Learn more about how Braze formats email addresses in [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
+
+{% endif %}
+
+{% if include.section == "email double opt-in" %}
 
 ### Double opt-in verification
 
