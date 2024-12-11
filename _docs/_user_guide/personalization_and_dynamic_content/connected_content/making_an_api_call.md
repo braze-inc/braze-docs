@@ -47,13 +47,17 @@ If the URL is unavailable and reaches a 404 page, Braze will render an empty str
 
 If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 
-### Circuit breaker
+### Unhealthy host detection
+
+Connected Content employs an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
 
 If the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint, Braze temporarily will halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
 
-This circuit-breaking behavior acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain messaging speeds.
+If requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you wish to ensure that these Connected Content requests are retried when they are halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, please visit [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
-If you believe this circuit breaker mechanism is causing you problems, please contact Braze support. Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#circuit-breaker) to learn more.
+If you believe the unhealthy host detection is causing you problems, please contact Braze support.
+
+Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unreachable-host-detection) to learn more.
 
 ## Performance
 
