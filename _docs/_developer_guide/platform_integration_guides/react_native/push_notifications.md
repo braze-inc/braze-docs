@@ -17,7 +17,7 @@ channel: push
 
 {% tabs %}
 {% tab Expo %}
-If you wish to configure using the Braze Expo plugin, set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively. Refer to the configuration instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/expo) for more details.
+If you wish to configure push notifications using the Braze Expo plugin, first follow ensure that you have completed the [setup steps]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/expo). Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively.
 
 Then, complete your Expo configurations by adding the relevant Android FCM credentials:
 
@@ -37,7 +37,7 @@ Next, open your project's `app.json` file and set your `firebaseCloudMessagingSe
 "firebaseCloudMessagingSenderId": "693679403398"
 ```
 
-### Step 1.3: Add the path to your Google Services JSON
+### Step 1.2: Add the path to your Google Services JSON
 
 In your project's `app.json` file, add the path to your `google-services.json` file. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
 
@@ -78,17 +78,13 @@ If you are not using the Braze Expo plugin, or would like to configure these set
 {% endtab %}
 
 {% tab iOS Native %}
-### Step 1.1: Upload APNs certificates
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native iOS push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/):
 
-Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-upload-your-apns-certificate).
+### Step 1.1: Request for push permissions
 
-### Step 1.2: Choose an integration method
+If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
-If you don't plan on requesting push permissions when the app launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate, then skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
-
-When you're finished, continue to [Step 1.3](#step-13-migrate-your-push-key).
-
-### Step 1.3 (Optional): Migrate your push key
+### Step 1.2 (Optional): Migrate your push key
 
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
 {% endtab %}
