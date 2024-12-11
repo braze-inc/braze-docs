@@ -1,5 +1,5 @@
 ---
-nav_title: Mobile Web Push
+nav_title: iOS Mobile Web Push
 article_title: Mobile Web Push
 platform: Web
 channel: push
@@ -53,7 +53,7 @@ Your website must have a service worker file that imports the Braze service-work
 
 ### Step 4: Add to home screen {#add-to-homescreen}
 
-Popular browsers (such as Safari, Chrome, FireFox, and Edge) support web push notifications in their later versions. To request push permissionon iOS or iPadOS for browsers that don't support web push notifications, your website must be added to the user's home screen by selecting **Share To** > **Add to Home Screen**. [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) lets users bookmark your website, adding your icon to their valuable home screen real estate.
+Popular browsers (such as Safari, Chrome, FireFox, and Edge) all support web push notifications in their later versions. To request push permission on iOS or iPadOS, your website must be added to the user's home screen by selecting **Share To** > **Add to Home Screen**. [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) lets users bookmark your website, adding your icon to their valuable home screen real estate.
 
 ![An iPhone showing options to bookmark a website and save to the home screen]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
