@@ -77,7 +77,7 @@ You can assign a team to Canvases, campaigns, cards, segments, email templates, 
 Consider the following two scenarios for a marketer in Braze named Michelle. Michelle is a member of a team called "Development". She has access to all of the team-level permissions for the Development team.
 
 {% tabs %}
-{% tab Scenario 1: Only team permissions %}
+{% tab Scenario 1 Only team permissions %}
 
 In this scenario, Michelle is a limited user that has no workspace-level permissions. Her permissions look something like this:
 
@@ -88,7 +88,7 @@ Based on Michelle's assigned permissions, whenever she creates a campaign, she c
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab Scenario 2: Team permissions and workspace permissions %}
+{% tab Scenario 2 Team permissions and workspace permissions %}
 
 In this scenario, Michelle is still a member of the Development team, but she also has an additional workspace-level permission.
 
