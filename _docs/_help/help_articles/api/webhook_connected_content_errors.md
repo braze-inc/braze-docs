@@ -125,7 +125,7 @@ table td {
 | **502 Bad Gateway**           | The endpoint received an invalid response from the upstream server.                                                                                   |
 | **503 Service Unavailable**   | The endpoint is currently unable to handle the request due to a temporary overload or maintenance.                                                    |
 | **504 Gateway Timeout**       | The endpoint didn't receive a timely response from the upstream server.                                                                               |
-| **529 Site Overloaded**       | The endpoint host is overloaded and could not respond.
+| **529 Host Overloaded**       | The endpoint host is overloaded and could not respond.
 | **598 Host Unhealthy**        | Braze simulated the response because the endpoint host temporarily is marked as unhealthy. See [Unhealthy host detection](#unhealthy-host-detection) to learn more.
 | **599 Connection Error**      | Braze experienced a network connect timeout error while trying to establish a connection to the endpoint, meaning the endpoint may be unstable or down. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -141,7 +141,7 @@ Here are tips for troubleshooting common `5XX` errors:
 
 Braze webhooks and Connected Content employ an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
 
-In general, if the number of **failures exceeds 3000 in any one-minute moving time window** (per unique combination of host name and app group - _not_ per endpoint), Braze temporarily will halt requests to the target host for one minute, instead simulating responses with a `598` error code to indicate the poor health. After one minute, Braze will resume requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+In general, if the number of **failures exceeds 3000 in any one-minute moving time window** (per unique combination of host name and app group - _not_ per endpoint path), Braze temporarily will halt requests to the target host for one minute, instead simulating responses with a `598` error code to indicate the poor health. After one minute, Braze will resume requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
 
 The following error codes contribute to the unhealthy host detector failure count: `408`, `429`, `502`, `503`, `504`, `529`.
 
