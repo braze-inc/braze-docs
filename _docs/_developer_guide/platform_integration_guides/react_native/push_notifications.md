@@ -21,7 +21,7 @@ If you wish to configure using the Braze Expo plugin, set the `enableBrazeIosPus
 
 Then, complete your Expo configurations by adding the relevant Android FCM credentials:
 
-### Step 1.2: Add your Google Sender ID
+### Step 1.1: Add your Google Sender ID
 
 First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
