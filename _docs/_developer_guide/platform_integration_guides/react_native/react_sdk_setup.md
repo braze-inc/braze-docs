@@ -47,7 +47,7 @@ yarn add @braze/react-native-sdk
 ## Step 2: Complete native setup
 
 {% alert note %}
-For an alternative integration method that does not require writing in the native Objective-C and Kotlin layers, you may use the Braze Expo plugin by following the setup instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/expo).
+For an alternative integration method that does not require writing in the native Objective-C and Kotlin layers, you may use the Braze Expo plugin by following the setup instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/expo). You may skip step 2 if you are using this integration option.
 {% endalert %}
 
 {% tabs %}
