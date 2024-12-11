@@ -1,21 +1,21 @@
 ---
-nav_title: Safari Mobile Web Push
-article_title: Safari Mobile Web Push
+nav_title: Mobile Web Push
+article_title: Mobile Web Push
 platform: Web
 channel: push
 page_order: 5
 page_type: reference
-description: "This reference article cover how to integrate web push on your iOS and iPad Safari browsers."
+description: "This reference article cover how to integrate web push on your iOS and iPad web browsers."
 search_rank: 3
 ---
 
-# Safari Mobile Web Push (iOS and iPadOS)
+# Mobile web push (iOS and iPadOS)
 
-> [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) supports mobile web push, which means you can now re-engage mobile users with push notifications on iOS and iPadOS.<br><br>This article will guide you through the steps required to set up mobile push for safari.
+> This article guides you through the steps required to set up mobile push, which allows you to re-engage mobile users with push notifications on iOS and iPadOS.
 
 ## Integration steps
 
-First, read and follow our standard [web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/). The following steps are only required to support web push on Safari for iOS and iPadOS support.
+First, read and follow our standard [web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/). The following steps are only required to support web push for iOS and iPadOS support.
 
 ### Step 1: Create a manifest file {#manifest}
 
@@ -53,7 +53,7 @@ Your website must have a service worker file that imports the Braze service-work
 
 ### Step 4: Add to home screen {#add-to-homescreen}
 
-Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on Safari iOS/iPadOS unless your website has been added to the user's home screen. 
+Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on iOS or iPadOS unless your website has been added to the user's home screen. 
 
 The [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) feature lets users bookmark your website, adding your icon to their valuable home screen real estate.
 
