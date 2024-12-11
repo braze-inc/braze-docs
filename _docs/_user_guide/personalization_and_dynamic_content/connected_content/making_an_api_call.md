@@ -58,7 +58,7 @@ If requests to the target host are halted by the unhealthy host detector, Braze 
 If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
 
 {% alert tip %}
-Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more.
+Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more on how to troubleshoot common error codes.
 {% endalert %}
 
 ## Performance
