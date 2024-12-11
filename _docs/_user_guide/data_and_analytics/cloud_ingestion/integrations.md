@@ -13,30 +13,30 @@ page_type: reference
 
 ## Product setup
 
-Cloud Data Ingestion integrations require some setup on the Braze side and in your instance. Follow these steps to set up the integration:
+Cloud Data Ingestion integrations require some setup on the Braze side and in your data warehouse instance. Follow these steps to set up the integration:
 
 {% tabs %}
 {% tab Snowflake %}
-1. In your Snowflake instance, set up the table(s) or view(s) you want to sync to Braze.
+1. In your Snowflake instance, set up the tables or views you want to sync to Braze.
 2. Create a new integration in the Braze dashboard.
 3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 4. Test the integration and start the sync.
 {% endtab %}
 {% tab Redshift %}
 1. Make sure Braze access is allowed to the Redshift tables you want to sync. Braze will connect to Redshift over the internet.
-2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze.
+2. In your Redshift instance, set up the tables or views you want to sync to Braze.
 3. Create a new integration in the Braze dashboard.
 4. Test the integration and start the sync.
 {% endtab %}
 {% tab BigQuery %}
 1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
-2. In your BigQuery account, set up the table(s) or view(s) you want to sync to Braze.   
+2. In your BigQuery account, set up the tables or views you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
 4. Test the integration and start the sync.  
 {% endtab %}
 {% tab Databricks %}
 1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
-2. In your Databricks account, set up the table(s) or view(s) you want to sync to Braze.   
+2. In your Databricks account, set up the tables or views you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
 4. Test the integration and start the sync.
 
@@ -47,7 +47,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 {% endtab %}
 {% tab Microsoft Fabric %}
 1. Create a service principal and allow access to the Fabric workspace that will be used for your integration.   
-2. In your Fabric workspace, set up the table(s) or view(s) you want to sync to Braze.   
+2. In your Fabric workspace, set up the tables or views you want to sync to Braze.   
 3. Create a new integration in the Braze dashboard.  
 4. Test the integration and start the sync.
 {% endtab %}
@@ -386,29 +386,30 @@ If you have network policies in place, you must give Braze network access to you
 #### Step 1.1: Set up the service principal and grant access
 Braze will connect to your Fabric warehouse using a service principal with Entra ID authentication. You will create a new service principal for Braze to use, and grant access to Fabric resources as needed. Braze will need the following details to connect:    
 
-* Tenant ID (also called Directory) for your Azure account 
-* Principal ID (also called Application ID) for the service principal 
-* Client Secret for Braze to authenticate
+* Tenant ID (also called directory) for your Azure account 
+* Principal ID (also called application ID) for the service principal 
+* Client secret for Braze to authenticate
 
 1. In the Azure portal, navigate to Microsoft Entra ID 
 2. Select **+ New registration** under **Manage>App registrations** 
-3. Enter a name, and select `Accounts in this organizational directory only` as the supported account type. Then, click register. 
+3. Enter a name, and select `Accounts in this organizational directory only` as the supported account type. Then, select **Register**. 
 4. Select the application (service principal) you just created, then navigate to **Certificates & secrets> + New client secret**
 5. Enter a description for the secret, and set an expiry period for the secret. Then, click add. 
-6. Note the Client Secret created to use in the Braze setup. 
+6. Note the client secret created to use in the Braze setup. 
 
 {% alert note %}
-Azure does not allow Unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.{% endalert %}
+Azure does not allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.
+{% endalert %}
 
 #### Step 1.2: Grant access to Fabric resources 
-Navigate to the admin portal to set up access for Braze to connect. The relevant settings can be found under **Settings > Governance and insights > Admin portal > Tenant settings** in the Fabric dashboard.    
+You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings > Governance and insights > Admin portal > Tenant settings**.    
 
-* In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID
+* In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
 * In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
 
 
 #### Step 1.3: Set up the table
-Braze supports both Tables and Views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
+Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
 
 ```json
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -583,30 +584,32 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab Microsoft Fabric %}
 
-In the Braze Dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Microsoft Fabric Import**.
+#### Step 2.1: Set up a Cloud Data Ingestion sync
 
-#### Step 2.1: Add Microsoft Fabric connection information and source table
+You will create a new data sync for Microsoft Fabric. In the Braze dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Microsoft Fabric Import**.
+
+#### Step 2.2: Add Microsoft Fabric connection information and source table
 
 Input the information for your Microsoft Fabric warehouse credentials and source table, then proceed to the next step.
 
 - Credentials Name is a label for these credentials in Braze, you can set a helpful value here
-- See steps in section 1 for details on how to retrieve Tenant ID, Principal ID, Client Secret, and  Connection String
+- See steps in section 1 for details on how to retrieve Tenant ID, Principal ID, Client Secret, and Connection String
 
 ![The "Create new import sync" page for Microsoft in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
 
-#### Step 2.2: Configure sync details
+#### Step 2.3: Configure sync details
 
 Next, configure the following details for your sync: 
 
 - Sync name 
 - Data type - Supported data types are custom attributes, custom events, purchase events, catalogs, and user deletes. The data type for a sync cannot be changed after creation. 
-- Sync Frequency - frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. 
+- Sync Frequency - Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. 
   - Non-recurring syncs can be triggered manually or via the [API]({{site.baseurl}}/api/endpoints/cdi) 
 
 ![The "Create new import sync" page for Microsoft Fabric in the Braze dashboard, set to Step 2: "Set up sync details".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
 
 
-#### Step 2.3: Configure notification preferences
+#### Step 2.4: Configure notification preferences
 
 Next, input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table, or alert when specific rows fail to update .
 
