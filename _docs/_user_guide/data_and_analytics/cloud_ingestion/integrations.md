@@ -352,7 +352,7 @@ You can name the schema and table as you'd like, but the column names should mat
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
 - `PAYLOAD` - This is a string or struct of the fields you want to sync to the user in Braze.
 
-#### Step 1.2: Create a Access Token  
+#### Step 1.2: Create an Access Token  
 
 In order for Braze to access Databricks, a personal access token needs to be created.
 
