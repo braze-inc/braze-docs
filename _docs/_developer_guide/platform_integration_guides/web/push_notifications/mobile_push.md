@@ -1,6 +1,6 @@
 ---
 nav_title: iOS Mobile Web Push
-article_title: Mobile Web Push
+article_title: iOS Mobile Web Push
 platform: Web
 channel: push
 page_order: 5
