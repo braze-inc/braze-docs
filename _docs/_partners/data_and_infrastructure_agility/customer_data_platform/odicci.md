@@ -1,32 +1,34 @@
 ---
-title: Odicci Braze Integration
-description: Step-by-step guide to integrating Odicci with Braze for personalized marketing campaigns.
+nav_title: Odicci
+article_title: Odicci
+description: "Step-by-step guide to integrating Odicci with Braze for personalized marketing campaigns"
+alias: /partners/odicci/
+page_type: partner
+search_tag: Partner
 ---
 
-# Odicci Braze Integration
 
-## Overview
 The Odicci Braze Integration allows you to connect the Odicci platform with Braze for seamless data sharing and campaign management. With this integration, you can:
 
 - Automatically send audience data collected in Odicci experiences to Braze.
 - Trigger personalized marketing campaigns based on user interactions.
 - Map fields between Odicci and Braze to ensure accurate data synchronization.
 
----
 
 ## Prerequisites
-Before you begin, ensure the following:
 
-1. You have an active Odicci account with access to the **Integrations** section.
-2. You have a Braze account with API access.
-3. Your Braze REST API Key is available.
+Before you start, you'll need the following:
 
----
+| Prerequisite             | Description                                                               |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| An Odicci account            | An Odicci account with access to the **Integrations** section is required to take advantage of this partnership.|
+| Braze REST API key        | A Braze REST API key with the `users.track` permission. |
+
 
 ## Integration Steps
 To set up the Odicci Braze integration, follow these steps:
 
-### 1. Enable the Integration in Odicci
+### Step 1: Enable the Integration in Odicci
 1. Log in to your Odicci account.
 2. Navigate to the **Settings > Integrations** section.
 3. Find the **Braze** integration and click **Connect**.
@@ -36,40 +38,34 @@ To set up the Odicci Braze integration, follow these steps:
 4. Enter your Braze REST API Key into the provided field.
 5. Save the settings to activate the integration at the account level.
 
----
 
-### 2. Obtain Your Braze REST API Key
+
+### Step 2: Obtain Your Braze REST API Key
 1. Log in to your Braze account.
 2. Go to **Developer Console > REST API Keys**.
-3. Create a new API Key or copy an existing one with the required permissions (e.g., user profile management, data import).
+3. Create a new API Key or copy an existing one with the `users.track` permission.
 
-   ![Braze API Key Setup](/assets/img/odicci/braze-endpoint.png)
 
----
-
-### 3. Activate the Integration at the Experience Level
+### Step 3: Activate the Integration at the Experience Level
 1. Create or open an **Experience** in Odicci Studio.
 2. Navigate to **Studio > Settings > Integrations**.
 3. Locate the **Braze** checkbox and tick it to activate the integration for the experience.
 4. Save your changes.
 
----
 
-### 4. Map Fields
+### Step 4: Map Fields
 1. After activating the integration, remain in the **Studio > Settings > Integrations** section.
 2. Map the fields from your Odicci experience (e.g., `Email`, `Name`) to their corresponding fields in Braze.
 3. Save your configuration.
 
    ![Field Mapping Configuration](/assets/img/odicci/braze_field_mapping.png)
 
----
 
-### 5. Test the Integration
+### Step 5: Test the Integration
 1. Run the experience in Odicci to collect test data.
 2. Verify that the data syncs correctly to Braze by checking the Braze dashboard or data logs.
 3. Ensure the mapped fields are correctly populated in Braze.
 
----
 
 ## Example Use Case
 **Scenario**: A retailer uses Odicci’s gamified experiences to collect email addresses for a marketing campaign.
@@ -78,7 +74,6 @@ To set up the Odicci Braze integration, follow these steps:
 2. Odicci automatically syncs this data to Braze.
 3. Braze triggers a personalized "Thank You" email and includes a discount code.
 
----
 
 ## Troubleshooting
 If you experience issues with the integration, consider the following solutions:
