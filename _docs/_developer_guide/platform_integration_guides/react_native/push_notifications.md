@@ -17,7 +17,7 @@ channel: push
 
 {% tabs %}
 {% tab Expo %}
-If you wish to configure push notifications using the Braze Expo plugin, first follow ensure that you have completed the [setup steps]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/expo). Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively.
+If you wish to configure push notifications using the Braze Expo plugin, first follow ensure that you have completed the [setup steps]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/expo). Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively.
 
 Then, complete your Expo configurations by adding the relevant Android FCM credentials:
 
