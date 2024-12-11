@@ -53,17 +53,15 @@ Your website must have a service worker file that imports the Braze service-work
 
 ### Step 4: Add to home screen {#add-to-homescreen}
 
-Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on iOS or iPadOS unless your website has been added to the user's home screen. 
-
-The [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) feature lets users bookmark your website, adding your icon to their valuable home screen real estate.
+Popular browsers (such as Safari, Chrome, FireFox, and Edge) support web push notifications in their later versions. To request push permissionon iOS or iPadOS for browsers that don't support web push notifications, your website must be added to the user's home screen by selecting **Share To** > **Add to Home Screen**. [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) lets users bookmark your website, adding your icon to their valuable home screen real estate.
 
 ![An iPhone showing options to bookmark a website and save to the home screen]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Step 5: Show the native push prompt {#push-prompt}
-Once the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
+After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
 
 {% alert note %}
-Once you accept or decline the prompt, you'll need to delete and reinstall the website to your home screen to be able to show the prompt again.
+After you accept or decline the prompt, you need to delete and reinstall the website to your home screen to be able to show the prompt again.
 {% endalert %}
 
 ![A push prompt asking to "allow" or "don't allow" Notifications]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
@@ -81,7 +79,6 @@ button.onclick = function(){
     });
 };
 ```
-
 
 ## Next steps
 

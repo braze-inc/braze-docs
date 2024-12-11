@@ -1263,6 +1263,6 @@ validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displayi
 validurls['/docs/developer_guide/platform_wide/banner_cards/integration'] = '/docs/developer_guide/banner_cards/integration';
 validurls['/docs/developer_guide/feature_flags/about'] = '/docs/developer_guide/feature_flags';
 
-validurls['/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push'] = '';
+validurls['/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/mobile_push/';
 
 // validurls['OLD'] = 'NEW';validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
