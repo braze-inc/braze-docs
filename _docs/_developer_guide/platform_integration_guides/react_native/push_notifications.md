@@ -213,7 +213,7 @@ At this point, you should be able to send notifications to the devices. Adhere t
 Starting in macOS 13, on certain devices, you can test iOS push notifications on an iOS 16+ simulator running on Xcode 14 or higher. For further details, refer to the [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
-1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
+1. Set an active user in the React Native application by calling `Braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and create a new push notification campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should receive the notification on your device shortly.
 
