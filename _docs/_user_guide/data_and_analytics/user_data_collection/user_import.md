@@ -204,7 +204,7 @@ You can omit an external ID or user alias and just use either an email address o
 If you include both email addresses and phone numbers in your CSV file, the email address is prioritized over the phone number when looking up profiles.
 {% endalert %}
 
-If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the []`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
+If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
 
 If a profile with that email address or phone number doesn't exist, Braze will create a new profile with that identifier. You can use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) to identify this profile later. To delete a user profile, you can also use the [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) endpoint.
 
