@@ -15,7 +15,7 @@ Braze offers ways to configure the SDK behavior via a separate [Expo plugin](htt
 
 ## Setup
 
-#### Step 1: Install the Braze Expo plugin
+### Step 1: Install the Braze Expo plugin
 
 Ensure that your version of the Braze React Native SDK is at least 1.37.0. Refer [here](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support) for the full version support table. Install the Braze Expo plugin with the following command:
 
@@ -23,7 +23,7 @@ Ensure that your version of the Braze React Native SDK is at least 1.37.0. Refer
 expo install @braze/expo-plugin
 ```
 
-#### Step 2: Add the plugin to your app.json
+### Step 2: Add the plugin to your app.json
 
 In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
 
@@ -92,7 +92,7 @@ Example configuration:
 }
 ```
 
-#### Step 3: Build and run your application
+### Step 3: Build and run your application
 
 Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
 
