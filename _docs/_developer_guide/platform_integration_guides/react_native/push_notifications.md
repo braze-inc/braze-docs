@@ -15,7 +15,7 @@ channel: push
 
 ## Step 1: Complete the initial setup
 
-{% tabs %}
+{% tabs local %}
 {% tab Expo %}
 ### Prerequisites
 
@@ -157,7 +157,7 @@ To enable Braze to handle deep links inside React components when a push notific
 
 To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
-{% tabs %}
+{% tabs local %}
 {% tab Android Native %}
 For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links).
 
