@@ -6,7 +6,6 @@ description: "This reference article outlines the partnership between Braze and 
 alias: /partners/optimizely/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Optimizely
@@ -27,18 +26,29 @@ The Braze and Optimizely integration is a two-way integration that allows you to
 | Braze REST API key               | A Braze REST API key with the following permissions: `users.track`,`users.export.segments`,`segments.list`,`campaigns.trigger.send`, and `canvas.trigger.send`. |
 | Currents                         | To export data back into Optimizely, you need to have Braze Currents set up for your account. |
 | Optimizely URL and Token         | This can be obtained by navigating to your Optimizely dashboard and copying the ingestion URL and token. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Step 1: Configure the integration
 
 1. In the **App Directory** of Optimizely Data Platform (ODP), select the **Braze** app and then select **Install App**.
-2. Go to the **Settings** tab and in the **Authorization** section, do the following:
-    2.1 Enter Braze **REST API Key**.
-    2.2 Select your Braze **Instance URL**.
-    2.3 Select **Verify API Key**.
-3. Create a Custom Currents Export in Braze using the endpoint and token provided in ODP. This is required to sync Braze events to ODP. <br><br>![Optimizely authorization.][1]
-4. In the **Segments** section, select the Braze segments you want to sync to ODP from the **Segments to Sync** multi-select list and [add any additional field mappings](https://www.google.com/url?q=https://support.optimizely.com/hc/en-us/articles/29918568615949-Integrate-Braze%23h_01J6Z1P53JVDBFZ758Q78CK1QB&sa=D&source=editors&ust=1733948158380300&usg=AOvVaw3WSAND5ie3LCVuSxUlLanR) you want between Braze and ODP. If you want to sync all segments, select **Import All Customers**. After you complete this, select **Save**.<br><br>![Optimizely Braze segment sync.][2]
+2. Go to the **Settings** tab. In the **Authorization** section, do the following:
+    1. Enter Braze **REST API Key**.
+    2. Select your Braze **Instance URL**.
+    2. Select **Verify API Key**.
+3. In Braze, go to **[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/)**.
+4. Select **Create New Current** > **Custom Currents Export**.
+5. Configure the Current using the endpoint and token provided in ODP. This is required to sync Braze events to ODP. 
+
+![Optimizely authorization.][1]
+
+{:start="6"}
+6. In ODP, expand the **Segments** section and select specific segments from the **Segments to Sync** list, or select **Import All Customers** to sync all segments.
+7. Add any [additional field mappings](https://www.google.com/url?q=https://support.optimizely.com/hc/en-us/articles/29918568615949-Integrate-Braze%23h_01J6Z1P53JVDBFZ758Q78CK1QB&sa=D&source=editors&ust=1733948158380300&usg=AOvVaw3WSAND5ie3LCVuSxUlLanR) you want between Braze and ODP.
+8. Select **Save**.
+
+![Optimizely Braze segment sync.][2]
 
 {% alert tip %} 
 You must select segments to import Braze customer profiles. If you don't select any segments, the integration won't import any customer profiles. 
@@ -52,7 +62,7 @@ The integration has default data field mappings between Braze and ODP. For examp
 
 #### Map additional fields (optional)
 
-If there are additional data fields in Braze that you want to map to ODP, do the following:
+If there are additional data fields in Braze that you want to map to ODP, do the following in ODP:
 
 1. In the **Segments** section of the app, select the Braze field from the **Braze User Data Fields** drop-down list.
 2. Select the ODP field from the **ODP Customer Fields** drop-down list.
@@ -62,7 +72,7 @@ If there are additional data fields in Braze that you want to map to ODP, do the
 
 #### Delete non-required field mappings (optional)
 
-You can also delete any data field mappings that aren't required:
+You can also delete any data field mappings that aren't required. Do the following in ODP:
 
 1. In the **Segments** section of the app, select the field mapping you want to delete from the **Field Map** drop-down list.
 2. Select **Delete Field Map**.
@@ -101,15 +111,19 @@ After you configure the integration, you can set up an activation in ODP to sync
     - **Time Zone:** Select the time zone in which you want to send this data.
 12. Select **Apply**, **Save**, then **Go Live**. Your sync starts at your designated start date and time (or when the trigger event occurs).
 
-## Troubleshoot the data sync
+## Troubleshooting
 
-To properly sync data from ODP to Braze:
+### Inspect events
 
-1. Go to **Account Settings** > **Event Inspector** in ODP.
+To verify that data is properly syncing from ODP to Braze, you can inspect events in ODP.
+
+1. In ODP, go to **Account Settings** > **Event Inspector**.
 2. Select **Start Inspector**.
 3. When data is available in the inspector, a number displays next to **Refresh**. Select to view the data.
 4. The raw data that ODP and Braze sends back and forth displays. Select **View Details** to see the formatted version of that raw data.
 5. Data fields sent from Braze back to ODP start with `_braze`.
+
+### Check activity logs
 
 Each data sync is also logged in the [ODP activity log](https://www.google.com/url?q=https://support.optimizely.com/hc/en-us/articles/4407268804365-Use-the-Activity-Log&sa=D&source=editors&ust=1733948158385124&usg=AOvVaw2tMOxzcTKfL0-oYLT4IMpP):
 
