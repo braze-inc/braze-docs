@@ -42,13 +42,102 @@ yarn add @braze/react-native-sdk
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Complete native setup
+### Step 2: Choose a setup option
 
-{% alert note %}
-For an alternative integration method that does not require writing in the native Objective-C and Kotlin layers, you may use the Braze Expo plugin by following the setup instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/expo). You may skip step 2 if you are using this integration option.
-{% endalert %}
+You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in the any of native layers. Choose whichever option best meets your app's needs.
 
 {% tabs %}
+{% tab Expo %}
+#### Step 2.1: Install the Braze Expo plugin
+
+Ensure that your version of the Braze React Native SDK is at least 1.37.0. For the full list of supported versions, check out the [Braze React Native repository](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support).
+
+To install the Braze Expo plugin, run the following command:
+
+```bash
+expo install @braze/expo-plugin
+```
+
+#### Step 2.2: Add the plugin to your app.json
+
+In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
+
+| Method                                        | Type    | Description                                                                                                                                              |
+| --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `androidApiKey`                               | string  | Required. The [API key]({{site.baseurl}}/api/identifier_types/) for your Android application, located in your Braze dashboard under **Manage Settings**. |
+| `iosApiKey`                                   | string  | Required. The [API key]({{site.baseurl}}/api/identifier_types/) for your iOS application, located in your Braze dashboard under **Manage Settings**.     |
+| `baseUrl`                                     | string  | Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application, located in your Braze dashboard under **Manage Settings**.    |
+| `enableBrazeIosPush`                          | boolean | iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                       |
+| `enableFirebaseCloudMessaging`                | boolean | Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.             |
+| `firebaseCloudMessagingSenderId`              | string  | Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                    |
+| `sessionTimeout`                              | integer | The Braze session timeout for your application in seconds.                                                                                               |
+| `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.      |
+| `logLevel`                                    | integer | The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0.    |
+| `minimumTriggerIntervalInSeconds`             | integer | The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                           |
+| `enableAutomaticLocationCollection`           | boolean | Whether automatic location collection is enabled (if the user permits).                                                                                  |
+| `enableGeofence`                              | boolean | Whether geofences are enabled.                                                                                                                           |
+| `enableAutomaticGeofenceRequests`             | boolean | Whether geofence requests should be made automatically.                                                                                                  |
+| `dismissModalOnOutsideTap`                    | boolean | iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                           |
+| `androidHandlePushDeepLinksAutomatically`     | boolean | Android only. Whether the Braze SDK should automatically handle push deep links.                                                                         |
+| `androidPushNotificationHtmlRenderingEnabled` | boolean | Android only. Sets whether the text content in a push notification should be interpreted and rendered as HTML using `android.text.Html.fromHtml`.        |
+| `androidNotificationAccentColor`              | string  | Android only. Sets the Android notification accent color.                                                                                                |
+| `androidNotificationLargeIcon`                | string  | Android only. Sets the Android notification large icon.                                                                                                  |
+| `androidNotificationSmallIcon`                | string  | Android only. Sets the Android notification small icon.                                                                                                  |
+| `iosRequestPushPermissionsAutomatically`      | boolean | iOS only. Whether the user should automatically be prompted for push permissions on app launch.                                                          |
+| `enableBrazeIosRichPush`                      | boolean | iOS only. Whether to enable rich push features for iOS.                                                                                                  |
+| `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
+| `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Example configuration:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "androidApiKey": "YOUR-ANDROID-API-KEY",
+          "iosApiKey": "YOUR-IOS-API-KEY",
+          "baseUrl": "YOUR-SDK-ENDPOINT",
+          "sessionTimeout": 60,
+          "enableGeofence": false,
+          "enableBrazeIosPush": false,
+          "enableFirebaseCloudMessaging": false,
+          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "androidHandlePushDeepLinksAutomatically": true,
+          "enableSdkAuthentication": false,
+          "logLevel": 0,
+          "minimumTriggerIntervalInSeconds": 0,
+          "enableAutomaticLocationCollection": false,
+          "enableAutomaticGeofenceRequests": false,
+          "dismissModalOnOutsideTap": true,
+          "androidPushNotificationHtmlRenderingEnabled": true,
+          "androidNotificationAccentColor": "#ff3344",
+          "androidNotificationLargeIcon": "@drawable/custom_app_large_icon",
+          "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
+          "iosRequestPushPermissionsAutomatically": false,
+          "enableBrazeIosPushStories": true,
+          "iosPushStoryAppGroup": "group.com.example.myapp.PushStories"
+        }
+      ],
+    ]
+  }
+}
+```
+
+#### Step 2.3: Build and run your application
+
+Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
+
+```bash
+expo prebuild
+```
+
+Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Keep in mind, if you make any changes to the configuration options, you'll be required to prebuild and run the application again.
+{% endtab %}
+
 {% tab Android %}
 
 #### Step 2.1: Add our repository
@@ -269,13 +358,13 @@ static Braze *_braze = nil;
 
 ### Step 3: Import the library
 
-Once installed, you can `import` the library in your React Native code. For more details, check out our [sample project](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
+Next, `import` the library in your React Native code. For more details, check out our [sample project](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
 ```
 
-## Testing the integration
+### Step 4: Test the integration (optional)
 
 To test your SDK integration, start a new session on either platform for a user by calling the following code in your app.
 
@@ -301,4 +390,4 @@ const App = () => {
   )
 ```
 
-In the Braze dashboard, go to [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) and search for the user with `some-user-id`. Here, you can verify that session and device data were logged.
+In the Braze dashboard, go to [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) and look for the user with the ID matching `some-user-id`. Here, you can verify that session and device data were logged.
