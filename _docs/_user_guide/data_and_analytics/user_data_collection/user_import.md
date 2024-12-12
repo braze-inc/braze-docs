@@ -195,10 +195,16 @@ The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Bra
 
 ### Importing with email addresses and phone numbers
 
+You can omit an external ID or user alias and just use either an email address or phone number to import users. If the email address or phone number doesn't exist, Braze will update existing profiles or create new ones.
+
 Before using CSV import with email addresses or phone numbers, check for the following:
 
 - Verify that you don't have any external IDs or user aliases for these profiles.
 - Confirm that your CSV file is formatted properly.
+
+{% alert note %}
+If you include both email addresses and phone numbers in your CSV file, the email address is prioritized over the phone number when looking up profiles.
+{% endalert %}
 
 If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the []`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
 
