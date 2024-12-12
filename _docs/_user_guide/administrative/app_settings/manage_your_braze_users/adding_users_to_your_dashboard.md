@@ -65,7 +65,7 @@ To delete a user, go to **Settings** > **Company Users**, find their username an
 
 ![Delete a user][34]
 
-After a user is deleted, Braze does not keep any of the following data:
+After a user is deleted, Braze does not keep any of the following account data:
 
 - Any attributes that the user had
 - Email address
@@ -75,6 +75,11 @@ After a user is deleted, Braze does not keep any of the following data:
 - Country
 - Language
 - Other similar data
+
+Braze will keep the following account data:
+
+- Custom attributes or test data associated with their account
+- Campaigns or Canvases they created (but the user's name won't appear in them, such as appearing in the **Last edited by** column)
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

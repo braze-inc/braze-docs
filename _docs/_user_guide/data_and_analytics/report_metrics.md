@@ -78,8 +78,8 @@ These users have been automatically unsubscribed from all future push notificati
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><i>Bounces</i> :Count</li>
-        <li><i>Bounce %</i> or <i>Bounce Rate %</i>: (Sends - Bounces) / (Sends)</li>
+        <li><i>Bounces</i>: Count</li>
+        <li><i>Bounce %</i> or <i>Bounce Rate %</i>: (Bounces) / (Sends)</li>
     </ul>
 </span>
 {:/}

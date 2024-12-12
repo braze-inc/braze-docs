@@ -1,6 +1,6 @@
 ---
-nav_title: 調整する
-article_title: 調整する
+nav_title: Adjust
+article_title: Adjust
 alias: /partners/adjust/
 description: "この参考記事では、Brazeとモバイルアトリビューション・アナリティクス企業のAdjustとの提携について概説している。Adjustは、オーガニックインストール以外のアトリビューションデータをインポートし、ライフサイクルキャンペーン内でよりインテリジェントにセグメントすることを可能にする。"
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# 調整する
+# Adjust
 
 > [Adjust](https://www.adjust.com/) は、モバイルアトリビューションおよび分析を扱う企業です。広告ソースのアトリビューションと高度な分析を組み合わせ、総合的なビジネスインテリジェンスを提供しています。
 
