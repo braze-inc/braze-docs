@@ -193,6 +193,17 @@ You can't use a CSV import to create a new user using `braze_id`. This method ca
 The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user, so you can rename this column to `braze_id` when you re-import the CSV.
 {% endalert %}
 
+### Importing with email addresses and phone numbers
+
+Before using CSV import with email addresses or phone numbers, check for the following:
+
+- Verify that you don't have any external IDs or user aliases for these profiles.
+- Confirm that your CSV file is formatted properly.
+
+If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the []`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
+
+If a profile with that email address or phone number doesn't exist, Braze will create a new profile with that identifier. You can use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) to identify this profile later. To delete a user profile, you can also use the [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) endpoint.
+
 ### Importing custom data
 
 Any headers that don't exactly match default user data will create a custom attribute within Braze.
