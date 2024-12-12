@@ -353,7 +353,7 @@ You will provide access for Braze to connect to your Fabric instance. In your Fa
 * In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
 
 #### Step 2.3: Get warehouse connection string 
-You will need the SQL endpoint for your warehouse in order for Braze to connect. In order to retrieve this, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
+You will need the SQL endpoint for your warehouse in order for Braze to connect. To retrieve the SQL endpoint, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
 
 ![The "Fabric Console" page in Microsoft Azure, where users should retrieve the SQL Connection String.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
@@ -516,10 +516,10 @@ Input the information for your Microsoft Fabric credentials, as well as the sour
 
 Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
 
-Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Microsoft Fabrici account. 
+Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Microsoft Fabric account. 
 
 {% alert note %}
-If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or scaling the Fabric capacity
+If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or scaling the Fabric capacity.
 {% endalert %}
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_2.png %})
