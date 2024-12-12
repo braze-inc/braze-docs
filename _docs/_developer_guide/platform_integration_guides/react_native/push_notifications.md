@@ -17,11 +17,18 @@ channel: push
 
 {% tabs %}
 {% tab Expo %}
-If you wish to configure push notifications using the Braze Expo plugin, first follow ensure that you have completed the [setup steps]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/expo). Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively.
+### Prerequisites
 
-Then, complete your Expo configurations by adding the relevant Android FCM credentials:
+Before you can use Expo for push notifications, you'll need to [set up the Braze Expo plugin]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/sdk_integration/?tab=expo).
 
-### Step 1.1: Add your Google Sender ID
+### Step 1.1: Update your `app.json` file
+
+Next update your `app.json` file for Android and iOS:
+
+- **Android:** Add the `enableFirebaseCloudMessaging` option.
+- **iOS:** Add the `enableBrazeIosPush` option.
+
+### Step 1.2: Add your Google Sender ID
 
 First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
@@ -37,7 +44,7 @@ Next, open your project's `app.json` file and set your `firebaseCloudMessagingSe
 "firebaseCloudMessagingSenderId": "693679403398"
 ```
 
-### Step 1.2: Add the path to your Google Services JSON
+### Step 1.3: Add the path to your Google Services JSON
 
 In your project's `app.json` file, add the path to your `google-services.json` file. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
 
