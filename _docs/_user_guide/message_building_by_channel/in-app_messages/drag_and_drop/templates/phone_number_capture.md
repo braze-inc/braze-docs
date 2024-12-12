@@ -3,7 +3,7 @@ nav_title: SMS and WhatsApp Sign-up Form
 article_title: SMS and WhatsApp Sign-up Form
 alias: "/phone_number_capture/"
 page_order: 1
-description: "This reference page covers how to create an SMS and WhatsApp sign-up form with the in-app message drag-and-drop editor."
+description: "This page covers how to create an SMS and WhatsApp sign-up form with the in-app message drag-and-drop editor."
 ---
 
 # SMS and WhatsApp sign-up form
@@ -16,11 +16,9 @@ description: "This reference page covers how to create an SMS and WhatsApp sign-
 
 ## Creating a phone number sign-up form
 
-When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template.
+When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template, then select **Build message**. These templates are supported for both mobile apps and web browsers.
 
 ![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]{: style="max-width:70%"}
-
-These templates are supported for both mobile apps and web browsers.
 
 ### Step 1: Set up your message styles
 

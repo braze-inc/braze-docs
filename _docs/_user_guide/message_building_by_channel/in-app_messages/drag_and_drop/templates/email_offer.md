@@ -3,7 +3,7 @@ nav_title: Email Sign-up with Offer
 article_title: Email Sign-up with Special Offer
 alias: "/email_offer/"
 page_order: 5
-description: "This reference page covers how to use the in-app message drag-and-drop editor to build your email list by offering a special discount on sign-up."
+description: "This page covers how to use the in-app message drag-and-drop editor to build your email list by offering a special discount on sign-up."
 ---
 
 # Email sign-up with special offer
@@ -14,7 +14,7 @@ description: "This reference page covers how to use the in-app message drag-and-
 
 ## Creating an email sign-up form with a special offer
 
-When creating a drag-and-drop in-app message, select **Email sign-up with special offer** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with special offer** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for an email sign-up form with a special offer.][img1]
 

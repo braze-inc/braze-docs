@@ -3,7 +3,7 @@ nav_title: Product Announcement
 article_title: Product Announcement
 alias: "/product_announcement/"
 page_order: 7
-description: "This reference page covers how to use the in-app message drag-and-drop editor to boost awareness of new product launches."
+description: "This page covers how to use the in-app message drag-and-drop editor to boost awareness of new product launches."
 ---
 
 # Product announcement
@@ -14,7 +14,7 @@ description: "This reference page covers how to use the in-app message drag-and-
 
 ## Creating a product announcement
 
-When creating a drag-and-drop in-app message, select **Product announement** for your template. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Product announement** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a product announcement.][img1]
 

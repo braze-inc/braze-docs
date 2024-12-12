@@ -3,7 +3,7 @@ nav_title: Email Sign-up Form
 article_title: Email Sign-up Form
 alias: "/email_capture/"
 page_order: 2
-description: "This reference page covers how to create an email sign-up form with the in-app message drag-and-drop editor."
+description: "This page covers how to create an email sign-up form with the in-app message drag-and-drop editor."
 ---
 
 # Email sign-up form
@@ -14,7 +14,7 @@ description: "This reference page covers how to create an email sign-up form wit
 
 ## Creating an email sign-up form
 
-When creating a drag-and-drop in-app message, select **Email sign-up** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ### Step 1: Set up your message styles
 
@@ -36,7 +36,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 ### Step 4: Style your message
 
-Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 
@@ -44,6 +44,6 @@ Customize the look and feel of your message using the drag-and-drop [in-app mess
 
 ## Best practices
 
-{% multi_lang_include templates.md section='double opt-in' %}
+{% multi_lang_include templates.md section='email double opt-in' %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

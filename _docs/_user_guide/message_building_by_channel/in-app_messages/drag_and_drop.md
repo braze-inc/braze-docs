@@ -38,7 +38,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_confirmation_page/
   image: /assets/img/braze_icons/message-check-square.svg
 - name: Onboarding Flow
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding_Flow/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding/
   image: /assets/img/braze_icons/list.svg
 - name: Product Announcement
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/product_announcement/

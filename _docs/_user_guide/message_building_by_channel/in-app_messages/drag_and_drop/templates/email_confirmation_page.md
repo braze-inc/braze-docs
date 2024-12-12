@@ -8,13 +8,13 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 # Email sign-up with confirmation page
 
-> Use the in-app message drag-and-drop editor to create an email sign-up form that has a confirmation page.
+> Use the in-app message drag-and-drop editor to create an email sign-up form with a confirmation page.
 
 {% multi_lang_include templates.md section='SDK requirements' %}
 
 ## Creating an email sign-up form with a confirmation page
 
-When creating a drag-and-drop in-app message, select **Email sign-up with comfirmation page** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with comfirmation page** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for an email sign-up form with comfirmation page.][img1]
 

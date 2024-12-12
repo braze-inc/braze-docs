@@ -14,7 +14,7 @@ description: "This reference page covers how to use the in-app message drag-and-
 
 ## Creating an email sign-up form with a discount
 
-When creating a drag-and-drop in-app message, select **Email sign-up with welcome discount** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with welcome discount** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for an email sign-up form with discount.][img1]
 

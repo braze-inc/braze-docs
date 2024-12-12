@@ -1,9 +1,9 @@
 ---
 nav_title: "Onboarding Flow"
 article_title: Onboarding Flow
-alias: "/onboarding_flow"
+alias: "/onboarding_flow/"
 page_order: 0
-description: "This reference article covers how to welcome new users, guide them through benefits, and drive action using a compelling call to action."
+description: "This page covers how to welcome new users, guide them through benefits, and drive action using a compelling call to action."
 ---
 
 # Onboarding flow
@@ -14,7 +14,7 @@ description: "This reference article covers how to welcome new users, guide them
 
 ## Creating an onboarding flow
 
-When creating a drag-and-drop in-app message, select **Onboarding flow** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Onboarding flow** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the onboarding flow template.][img1]
 
@@ -22,7 +22,7 @@ When creating a drag-and-drop in-app message, select **Onboarding flow** for you
 
 {% multi_lang_include templates.md section='message style' %}
 
-### Step 2: Customize your onboarding flow
+### Step 2: Customize the order of your onboarding flow
 
 To get started building your onboarding flow, use the **Pages** section to add or delete messages to your flow. After you have your desired number of messages, select the buttons on each page. Then, use the side menu to select where users go when they select the button—whether they exit the flow or go to the next message.
 

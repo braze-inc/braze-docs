@@ -3,7 +3,7 @@ nav_title: Email Sign-up with Image
 article_title: Email Sign-up with Background Image
 alias: "/email_image/"
 page_order: 4
-description: "This reference page covers how to use the in-app message drag-and-drop editor to show off your brand style with one simple message and build your email list."
+description: "This page covers how to use the in-app message drag-and-drop editor to show off your brand style with one simple message and build your email list."
 ---
 
 # Email sign-up with background image
@@ -14,7 +14,7 @@ description: "This reference page covers how to use the in-app message drag-and-
 
 ## Creating an email sign-up form with a background image
 
-When creating a drag-and-drop in-app message, select **Email sign-up with background image** for your template and select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with background image** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for an email sign-up form with a background image.][img1]
 
