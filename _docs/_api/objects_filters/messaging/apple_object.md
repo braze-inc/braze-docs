@@ -27,6 +27,7 @@ description: "This reference article lists and explains the different Apple obje
    "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
    "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
    "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,

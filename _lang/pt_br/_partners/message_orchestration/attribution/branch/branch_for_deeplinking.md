@@ -16,8 +16,6 @@ search_tag: Partner
 
 A integração entre a Braze e a Branch permite oferecer melhores experiências aos seus clientes, pois você pode [atribuir]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) adequadamente o início da jornada do usuário e conectá-los por deep linking ao local pretendido.
 
-Se você incluir um link de chamada (`href=tel:`),
-
 ## Integração
 
 Siga as instruções do [guia de integração de SDKs da Branch](https://help.branch.io/developers-hub/docs/native-sdks-overview) para configurar sua integração. Consulte os casos de uso adicionais a seguir.
@@ -32,7 +30,7 @@ Para obter suporte ao envio de links universais do iOS como deep links na Braze:
 ### Deep linking em e-mails
 
 Consulte nossa documentação sobre [links universais e llinks de app]({{site.baseurl}}/help/help_articles/email/universal_links/)
-ou consulte [a documentação da Branch](https://docs.branch.io/pages/integrations/braze/) para configurar o deep linking a partir de e-mails enviados pela Braze.
+
 
 O vínculo a números de telefone (anexando `tel` a `href`) não é compatível com o aplicativo Gmail para iOS, a menos que o usuário conceda permissões de chamada ao app.
 
