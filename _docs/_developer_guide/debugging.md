@@ -10,15 +10,16 @@ page_order: 13
 > Learn how to use the Braze SDK's built-in debugger, so you can troubleshoot issues for your SDK-powered channels, without needing to enable verbose logging in your app.
 
 {% alert important %}
-The SDK Debugger is currently in beta. Please reach out to your account team to enable on your account. 
+The SDK Debugger is currently in beta. Reach out to your account team to enable it on your account. 
 {% endalert %}
 
 ## Prerequisites
 
 To use the Braze SDK debugger, either ensure your native SDKs are up to date with at least these minimum versions, or your wrapper SDKs point to these minimum versions: 
-To enable debugging for the Braze Web SDK, you can [use a URL parameter]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) instead.
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
+
+To enable debugging for the Braze Web SDK, you can [use a URL parameter]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) instead.
 
 ## Debugging the Braze SDK
 
