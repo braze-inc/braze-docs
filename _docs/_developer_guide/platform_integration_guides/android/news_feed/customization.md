@@ -1,5 +1,5 @@
 ---
-page_order: 2
+page_order: 0
 nav_title: Customization
 article_title: Android and FireOS News Feed Customization
 layout: dev_guide

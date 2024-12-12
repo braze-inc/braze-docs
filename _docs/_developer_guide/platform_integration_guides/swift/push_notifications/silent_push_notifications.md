@@ -1,6 +1,6 @@
 ---
 nav_title: Silent Push Notifications
-article_title: Silent Push Notifications for iOS
+article_title: Silent Push Notifications for the Braze Swift SDK
 platform: Swift
 page_order: 4
 description: "This article covers how to implement silent iOS push notifications for the Swift SDK."
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Silent push notifications for iOS
+# Silent push notifications
 
 > Push notifications allow you to send out notifications from your app when important events occur. 
 
