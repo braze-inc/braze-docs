@@ -1260,4 +1260,6 @@ validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/
 validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
 
+validurls['/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/';
+
 // validurls['OLD'] = 'NEW';
