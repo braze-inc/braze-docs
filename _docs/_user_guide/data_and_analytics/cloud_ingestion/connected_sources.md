@@ -73,6 +73,15 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 {% endalert %}
 
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+1. Create a service principal and allow access to the Fabric workspace that will be used for your integration.   
+2. In your Fabric workspace, set up the source data and grant permissoins to your service principal 
+3. Create a new connected source in the Braze dashboard.
+4. Test the integration.
+5. Use the connected source to create one or more CDI Segments.
+{% endtab %}
+
 {% endtabs %}
 
 ### Step 2: Set up your data warehouse
@@ -317,6 +326,56 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+#### Step 2.1: Grant access to Fabric resources 
+Braze will connect to your Fabric warehouse using a service principal with Entra ID authentication. You will create a new service principal for Braze to use, and grant access to Fabric resources as needed. Braze will need the following details to connect:    
+
+* Tenant ID (also called directory) for your Azure account 
+* Principal ID (also called application ID) for the service principal 
+* Client secret for Braze to authenticate
+
+1. In the Azure portal, navigate to Microsoft Entra admin center, and then App Registrations 
+2. Select **+ New registration** under **Identity > Applications > App registrations** 
+3. Enter a name, and select `Accounts in this organizational directory only` as the supported account type. Then, select **Register**. 
+4. Select the application (service principal) you just created, then navigate to **Certificates & secrets > + New client secret**
+5. Enter a description for the secret, and set an expiry period for the secret. Then, click add. 
+6. Note the client secret created to use in the Braze setup. 
+
+{% alert note %}
+Azure does not allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.
+{% endalert %}
+
+#### Step 2.2: Grant access to Fabric resources 
+You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings > Governance and insights > Admin portal > Tenant settings**.    
+
+* In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
+* In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
+
+#### Step 2.3: Get warehouse connection string 
+You will need the SQL endpoint for your warehouse in order for Braze to connect. To retrieve the SQL endpoint, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
+
+![The "Fabric Console" page in Microsoft Azure, where users should retrieve the SQL Connection String.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+
+
+#### Step 2.4: Allow Braze IPs in Firewall (Optional)
+
+Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
+
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
+
+{% endtab %}
+
 {% endtabs %}
 
 ### Step 3: Create a connected source in the Braze dashboard
@@ -442,6 +501,36 @@ Select **Test Connection** to verify that the list of tables visible to the user
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+#### Step 3.1: Add Microsoft Fabric connection information and source table
+
+Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Microsoft Fabric Import**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Input the information for your Microsoft Fabric credentials, as well as the source warehouse and schema, then proceed to the next step.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_1.png %})
+
+#### Step 3.2: Configure sync details
+
+Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
+
+Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Microsoft Fabric account. 
+
+{% alert note %}
+If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or scaling the Fabric capacity.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_2.png %})
+
+#### Step 3.3: Test the connection
+
+Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI segments.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
+
+{% endtab %}
 {% endtabs %}
 
 ### Step 4: Finalize the data warehouse configuration
@@ -475,6 +564,10 @@ This doesn't apply to BigQuery.
 This doesn't apply to Databricks.
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+This doesn't apply to Microsoft Fabric.
+
+{% endtab %}
 {% endtabs %}
 
 {% alert note %}
@@ -500,6 +593,10 @@ You may set up multiple sources with Braze, but each source should be configured
 
 {% tab Databricks %}
 You may set up multiple sources with Braze, but each source should be configured to connect a different schema. When creating additional sources, you may reuse existing credentials if connecting to the same Databricks account.
+{% endtab %}
+
+{% tab Microsoft Fabric %}
+You may set up multiple sources with Braze, but each source should be configured to connect a different schema. When creating additional sources, you may reuse existing credentials if connecting to the same Azure account.
 {% endtab %}
 {% endtabs %}
 

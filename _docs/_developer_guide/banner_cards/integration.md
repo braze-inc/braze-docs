@@ -190,6 +190,11 @@ This feature is not currently supported on Roku.
 ```javascript
 import * as braze from "@braze/web-sdk";
 
+braze.initialize("sdk-api-key", {
+    baseUrl: "sdk-base-url",
+    allowUserSuppliedJavascript: true, // banners require you to opt-in to user-supplied javascript
+});
+
 braze.subscribeToBannersUpdates((banners) => {
    
     // get this placement's banner. If it's `null` the user did not qualify for one.

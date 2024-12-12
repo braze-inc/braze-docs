@@ -177,7 +177,7 @@ validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/'] = '
 validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics/'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/requirements_and_methodology/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
-validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/'] = '/docs/user_guide/brazeai/intelligence/intelligent_timing/';
 validurls['/docs/hidden/misc_reference/most_engaged_channel/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_channel/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_selection/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
@@ -1261,8 +1261,10 @@ validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_
 validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
 
 validurls['/docs/developer_guide/platform_wide/banner_cards/integration'] = '/docs/developer_guide/banner_cards/integration';
+validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
 validurls['/docs/developer_guide/feature_flags/about'] = '/docs/developer_guide/feature_flags';
 
 validurls['/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/mobile_push/';
+validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
 
-// validurls['OLD'] = 'NEW';validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer_guide/banner_cards';
+// validurls['OLD'] = 'NEW';
