@@ -35,7 +35,7 @@ Primeiro, insira o `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` e `<RESOURCE_NAME>` e
 curl --request GET \
      --url 'https://rest.api.transifex.com/resource_translations?filter\[resource\]=o:<ORGANIZATION_NAME>:p:<PROJECT_NAME>:r:<RESOURCE_NAME>&filter\[language\]=l:<LANGUAGE>' \
      --header 'Accept: application/vnd.api+json' \
-     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475ed68d90a2295302'
+     --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
 Por exemplo, se o seu projeto do Transifex estiver localizado em `https://www.transifex.com/appboy-3/french2/french_translationspo/`, o `project_name` será "french2" e o `resource_name` será "french_translationspo".
