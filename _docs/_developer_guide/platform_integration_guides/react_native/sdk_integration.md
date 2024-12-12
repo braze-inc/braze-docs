@@ -17,7 +17,9 @@ To integrate the SDK, React Native version 0.71 or later is required. For the fu
 
 ## New Architecture compatibility
 
-SDK version 2.0.1 and later is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page).
+The following minimum SDK version is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page):
+
+{% sdk_min_versions reactnative:2.0.1 %}
 
 Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which is compatible with both the New Architecture and legacy bridge architecture&#8212;meaning no additional setup is required.
 
