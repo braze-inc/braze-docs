@@ -103,7 +103,7 @@ After you configure the integration, you can set up an activation in ODP to sync
 
 ## Troubleshoot the data sync
 
-To sync data as expected from ODP to Braze:
+To properly sync data from ODP to Braze:
 
 1. Go to **Account Settings** > **Event Inspector** in ODP.
 2. Select **Start Inspector**.
