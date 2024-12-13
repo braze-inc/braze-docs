@@ -1,7 +1,7 @@
 ---
 nav_title: Antavo
 article_title: Antavo Loyalty Cloud
-description: "This reference article outlines the partnership between Braze and Antavo, a next-gen loyalty programs that goes beyond rewarding purchases."
+description: "This reference article outlines the partnership between Braze and Antavo, a next-gen loyalty program that goes beyond rewarding purchases."
 alias: /partners/antavo/
 page_type: partner
 search_tag: Partner
@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Antavo](https://antavo.com/) is an enterprise-grade SaaS loyalty technology provider that builds comprehensive loyalty programs to foster brand love and change customer behavior.
 
-The Antavo and Braze integration allows you to use loyalty program-related data to build personalized campaigns to enhance the customer experience. Antavo supports loyalty data synchronization between the two platforms—this is a one-way data synchronization only, from Antavo to Braze. The integration supports the `external_id` Braze field, which is the field Antavo synchronizes the loyalty member ID to.
+The Antavo and Braze integration allows you to use loyalty program-related data to build personalized campaigns to enhance the customer experience. Antavo supports loyalty data synchronization between the two platforms—this is a one-way data synchronization only, from Antavo to Braze. The integration supports the `external_id` Braze field, which Antavo uses to synchronize the loyalty member ID.
 
 ## Prerequisites
 
@@ -86,7 +86,7 @@ Visit the step-by-step guide to learn how to configure the synchronization of [l
 
 ### Synchronizing loyalty program events
 
-Use events synchronized from Antavo to enter loyalty members in action-based Braze Canvases. The integration can synchronize any Antavo event (including purchase events) that appear in Braze as custom events.
+Use events synchronized from Antavo to enter loyalty members in action-based Braze Canvases. The integration can synchronize any Antavo event (including purchase events) that appears in Braze as custom events.
 
 Visit the step-by-step guide to learn how to configure the synchronization of the [loyalty program enrollment event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) and the synchronization of the [loyalty program benefit earning event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
