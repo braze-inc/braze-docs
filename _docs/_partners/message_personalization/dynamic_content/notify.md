@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Notify
 
-> [Notify](https://notifyai.io/) is an AI-driven software solution that seamlessly integrates with customer relationship management tools to enhance marketing strategies and facilitate engagement across multiple channels.
+> [Notify](https://fr.notify-group.com/) is an AI-driven software solution that seamlessly integrates with customer relationship management tools to enhance marketing strategies and facilitate engagement across multiple channels.
 
 The Braze and Notify integration empowers marketers to effectively drive engagement across various platforms. Instead of relying on traditional marketing methods, a Braze API-triggered campaign can leverage Notify's capabilities to deliver personalized messaging through multiple channels, including email, SMS, push notifications, and more.
 
