@@ -80,7 +80,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ## Example response
 
-```
+```json
 {
   "success": true,
   "subscription_groups": [
