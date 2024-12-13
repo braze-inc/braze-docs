@@ -267,7 +267,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Feature Flags
-    description: The segment of your users that have a particular <a href="/docs/developer_guide/platform_wide/feature_flags/about">feature flag</a> currently enabled.
+    description: The segment of your users that have a particular <a href="/docs/developer_guide/feature_flags/">feature flag</a> currently enabled.
     tags:
       - Retargeting
   - name: Subscription Group

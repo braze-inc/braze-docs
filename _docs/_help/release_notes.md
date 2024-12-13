@@ -42,7 +42,7 @@ guide_featured_list:
     link: /docs/help/release_notes/deprecations/
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: SDK Changelogs
-    link: /docs/developer_guide/platform_integration_guides/sdk_changelogs/
+    link: /docs/developer_guide/changelogs/
     image: /assets/img/braze_icons/file-code-01.svg
 
 ---
@@ -52,7 +52,7 @@ guide_featured_list:
 > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.
 > <br>
 > <br>
-> For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
+> For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
 
 ## December 10, 2024 release
 
