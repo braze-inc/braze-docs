@@ -27,9 +27,11 @@ Before you start customizing your template, you can set message-level styles for
 {% endif %}
 
 
+<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+
 {% if include.section == "email disclaimer" %}
 
-We recommend including opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes. Be sure to work with your legal team to develop language that is tailored to your specific brand.
+We recommend including opt-in language and links to your brand’s privacy policy and terms and conditions in your message. Be sure to work with your legal team to develop language that is tailored to your specific brand.
 
 {% alert note %}
 Deliverability best practices often exceed legal requirements, and our recommendation is to always obtain explicit consent to send emails and allow users to easily decline.
