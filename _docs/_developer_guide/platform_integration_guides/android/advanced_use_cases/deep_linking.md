@@ -223,4 +223,55 @@ Braze.configure(this, brazeConfig)
  {% endtab %}
  {% endtabs %}
 
+## Deep linking and Jetpack Compose
 
+When using Jetpack Compose with NavHost, you can handle deeplinks by doing the following:
+
+**1.** Ensure that the Activity that handles the deeplink is registered in the Android Manifest.
+
+```xml
+<activity
+  ...
+  <intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data
+        android:host="articles"
+        android:scheme="myapp" />
+  </intent-filter>
+</activity>
+```
+
+**2.** When defining the targets in NavHost, specify the deepLinks it will handle.
+
+```kotlin
+composableWithCompositionLocal(
+    route = "...",
+    deepLinks = listOf(navDeepLink {
+        uriPattern = "myapp://articles/{${MainDestinations.ARTICLE_ID_KEY}}"
+    }),
+    arguments = listOf(
+        navArgument(MainDestinations.ARTICLE_ID_KEY) {
+            type = NavType.LongType
+        }
+    ),
+) { backStackEntry ->
+    val arguments = requireNotNull(backStackEntry.arguments)
+    val articleId = arguments.getLong(MainDestinations.ARTICLE_ID_KEY)
+    ArticleDetail(
+        articleId
+    )
+}
+```
+
+**3.** Depending on how your app is architected, you may need to handle a new Intent coming in for the current Activity.
+```kotlin
+DisposableEffect(Unit) {
+    val listener = Consumer<Intent> {
+        navHostController.handleDeepLink(it)
+    }
+    addOnNewIntentListener(listener)
+    onDispose { removeOnNewIntentListener(listener) }
+}
+```
