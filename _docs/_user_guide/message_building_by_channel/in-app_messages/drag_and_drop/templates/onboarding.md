@@ -10,7 +10,7 @@ description: "This page covers how to welcome new users, guide them through bene
 
 > Use the **Onboarding flow** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Creating an onboarding flow
 
@@ -20,7 +20,7 @@ When creating a drag-and-drop in-app message, select **Onboarding flow** for you
 
 ### Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Step 2: Customize the order of your onboarding flow
 
@@ -34,8 +34,8 @@ Customize the look and feel of your onboarding flow using the drag-and-drop [in-
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/templates/onboarding_editor.png %}
+[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

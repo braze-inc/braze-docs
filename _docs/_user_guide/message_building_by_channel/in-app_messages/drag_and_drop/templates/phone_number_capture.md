@@ -12,7 +12,7 @@ description: "This page covers how to create an SMS and WhatsApp sign-up form wi
 
 ![Three examples of in-app messages created using the phone sign-up form template.][img7]
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Creating a phone number sign-up form
 
@@ -22,7 +22,7 @@ When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsA
 
 ### Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ![Workflow of uploading and selecting a custom font.][img6]
 
@@ -68,7 +68,7 @@ Customize the look and feel of your message using the drag-and-drop [in-app mess
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ![In-App Message Performance panel showing clicks for each link in the in-app message.][img8]
 

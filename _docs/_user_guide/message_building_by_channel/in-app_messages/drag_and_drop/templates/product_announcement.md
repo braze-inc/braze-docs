@@ -10,7 +10,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 > Use the in-app message drag-and-drop editor to boost awareness of new product launches.
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Creating a product announcement
 
@@ -20,7 +20,7 @@ When creating a drag-and-drop in-app message, select **Product announement** for
 
 ### Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Step 2: Customize your button component
 
@@ -36,11 +36,11 @@ Customize the look and feel of your product announcement using the drag-and-drop
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 
 
-[img1]: {% image_buster /assets/img/templates/product_announcement.png %} 
-[img2]: {% image_buster /assets/img/templates/product_announcement_button.png %} 
+[img1]: {% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %} 
+[img2]: {% image_buster /assets/img/drag_and_drop/templates/product_announcement_button.png %} 
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

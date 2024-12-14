@@ -10,7 +10,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 > Use the in-app message drag-and-drop editor to promote a seasonal offer or deal to drive user engagement.
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 # Creating a seasonal promotion with a background image
 
@@ -20,7 +20,7 @@ When creating a drag-and-drop in-app message, select **Seasonal promotion with b
 
 ## Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Step 2: Customize your button component
 
@@ -38,12 +38,12 @@ Customize the look and feel of your seasonal promotion using the drag-and-drop [
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 
-[img1]: {% image_buster /assets/img/templates/seasonal_promo.png %} 
-[img2]: {% image_buster /assets/img/templates/seasonal_promo_button.png %} 
-[img3]: {% image_buster /assets/img/templates/seasonal_promo_image.png %} 
+[img1]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %} 
+[img2]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %} 
+[img3]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %} 
 
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

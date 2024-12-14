@@ -10,7 +10,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 > Use the in-app message drag-and-drop editor to create an email sign-up form with a confirmation page.
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Creating an email sign-up form with a confirmation page
 
@@ -20,7 +20,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up with comfir
 
 ### Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Step 2: Customize your email sign-up component
 
@@ -32,11 +32,11 @@ You can customize the placeholder text and label text of the email capture eleme
 
 #### Email validation
 
-{% multi_lang_include templates.md section='email validation' %}
+{% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
 ### Step 3: Add disclaimer language (optional)
 
-{% multi_lang_include templates.md section='email disclaimer' %}
+{% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
 ### Step 4: Style your message
 
@@ -44,13 +44,13 @@ Customize the look and feel of your email sign-up form and confirmation page usi
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ## Best practices
 
-{% multi_lang_include templates.md section='email double opt-in' %}
+{% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[img1]: {% image_buster /assets/img/templates/email_capture_confirmation.png %} 
-[img2]: {% image_buster /assets/img/templates/email_capture_field_confirmation.png %} 
+[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %} 
+[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %} 
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

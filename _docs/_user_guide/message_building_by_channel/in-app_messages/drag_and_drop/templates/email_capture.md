@@ -10,7 +10,7 @@ description: "This page covers how to create an email sign-up form with the in-a
 
 > Use the drag-and-drop email sign-up in-app message template to collect users' email addresses and grow your subscription groups.
 
-{% multi_lang_include templates.md section='SDK requirements' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Creating an email sign-up form
 
@@ -18,7 +18,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up** for your 
 
 ### Step 1: Set up your message styles
 
-{% multi_lang_include templates.md section='message style' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Step 2: Customize your email sign-up component
 
@@ -32,7 +32,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 ### Step 3: Add disclaimer language (optional)
 
-{% multi_lang_include templates.md section='email disclaimer' %}
+{% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
 ### Step 4: Style your message
 
@@ -40,10 +40,10 @@ Customize the look and feel of your sign-up form using the drag-and-drop [in-app
 
 ## Reporting
 
-{% multi_lang_include templates.md section='reporting' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ## Best practices
 
-{% multi_lang_include templates.md section='email double opt-in' %}
+{% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components
