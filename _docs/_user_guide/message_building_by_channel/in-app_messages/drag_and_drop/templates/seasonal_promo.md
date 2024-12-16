@@ -36,7 +36,7 @@ Customize the look and feel of your seasonal promotion using the drag-and-drop [
 
 ![The in-app message editor with a side menu for selecting the background image.][img3]
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
