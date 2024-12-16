@@ -13,7 +13,7 @@ search_tag: ActionIQ
 
 The Braze and ActionIQ integration allow brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integrations available allow users to:
 
-- Map audience segments or custom attributes to Braze directly from ActionIQ
+- Update user profiles in Braze with audience membership information and any attributes directly from ActionIQ
 - Forward the events tracked by ActionIQ to Braze in real time to trigger personalized and targeted campaigns
 - Deliver API-triggered campaigns in Braze directly from touchpoints in an ActionIQ journey
 
