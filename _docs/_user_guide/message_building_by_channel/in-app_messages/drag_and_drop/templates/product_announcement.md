@@ -24,11 +24,11 @@ When creating a drag-and-drop in-app message, select **Product announement** for
 
 ### Step 2: Customize your button component
 
-To get started building your product announcement, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specifc page in your app (such as the page of the product that is featured in your announcement).
+To get started building your product announcement, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. By default, the template closes the message, but you can choose to navigate to a specific page in your app (such as the page of the product that is featured in your announcement).
 
 ![The in-app message editor with a side menu for customizing the button element.][img2]
 
-You can also add additional messages to your product announcement in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
+You can also add additional messages to your product announcement in the **Pages** section, then link them together sequentially. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
 
 ### Step 3: Style your message
 

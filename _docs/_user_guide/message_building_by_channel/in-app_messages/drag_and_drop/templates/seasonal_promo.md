@@ -14,7 +14,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 # Creating a seasonal promotion with a background image
 
-When creating a drag-and-drop in-app message, select **Seasonal promotion with background image** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Seasonal promotion with background image** for your template, then select **Build message**. This template supports both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a seasonal promotion.][img1]
 
