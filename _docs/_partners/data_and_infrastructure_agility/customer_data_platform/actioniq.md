@@ -22,7 +22,7 @@ The Braze and ActionIQ integration allow brands to sync and map their ActionIQ d
 | Requirement | Description |
 | ----------- | ----------- |
 | ActionIQ account | An ActionIQ account is required to take advantage of this integration. |
-| Braze REST API key | A Braze REST API key with the required permissions. See the [Requirements](#requirements) section for the respective integration. <br><br>This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST API key | A Braze REST API key with the required permissions for the respective integration. See the respective Requirements section for more details. <br><br>This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -55,9 +55,7 @@ To match to consumers in the Braze platform, the following identifiers must be i
 
 ### Events
 
-The ActionIQ platform can be configured to receive event information through its streaming ingest service. This integration option forwards these Events to Braze, for marketers to use for orchestration or the triggering of marketing campaigns.
-
-The event integration is able to send additional ActionIQ attributes as part of the properties within the event payload.
+You can configure the ActionIQ platform to receive event information through their streaming ingest service. This integration option forwards these events to Braze for marketers to use for orchestration or for triggering marketing campaigns. The event integration is able to send additional ActionIQ attributes as part of the properties in the event payload.
 
 #### Requirements
 
@@ -71,9 +69,9 @@ The events integration sends the following information to Braze:
 
 ### Triggered campaigns
 
-This integration will trigger a campaign in Braze for all users in an ActionIQ segment. After you have configured your campaign's copy, multivariate testing, and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by just adding the Braze campaign ID to your export setting.
+This integration will trigger a campaign in Braze for all users in an ActionIQ segment. After you have configured your campaign's copy, multivariate testing, and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by adding the Braze campaign ID to your export setting.
 
-Optionally, you can include any other ActionIQ attributes in your export to populate your campaign copy. Those are sent via the `trigger_properties` object.
+Optionally, you can include any other ActionIQ attributes in your export to populate your campaign copy. Those are sent with the `trigger_properties` object.
 
 #### Requirements
 
