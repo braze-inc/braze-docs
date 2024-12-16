@@ -247,7 +247,7 @@ When using Jetpack Compose with NavHost, you can handle deeplinks by doing the f
 
 ```kotlin
 composableWithCompositionLocal(
-    route = "...",
+    route = "_YOUR_ROUTE_HERE_",
     deepLinks = listOf(navDeepLink {
         uriPattern = "myapp://articles/{${MainDestinations.ARTICLE_ID_KEY}}"
     }),
