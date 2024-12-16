@@ -1,16 +1,16 @@
 {% if include.section == "SDK requirements" %}
 
-## SDK requirements
+## Prerequisites
 
 ### Minimum SDK versions
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites) section of the [Creating an in-app message with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) article for more details and nuances to be aware of.
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. For more information, see [Creating an in-app message with drag-and-drop: Prerequisites]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites).
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 ### SDK versions for text links
 
-If you want to include text links that do not dismiss the message, users must be on the following minimum SDK versions:
+To include text links that do not dismiss the message, the following minimum SDK versions are required:
 
 {% sdk_min_versions swift:6.2.0 android:26.0.0 %}
 

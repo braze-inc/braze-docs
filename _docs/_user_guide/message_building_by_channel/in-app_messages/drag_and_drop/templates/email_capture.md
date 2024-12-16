@@ -40,7 +40,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3].
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 

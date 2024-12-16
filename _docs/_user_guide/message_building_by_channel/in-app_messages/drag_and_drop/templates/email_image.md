@@ -44,7 +44,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3]. Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 

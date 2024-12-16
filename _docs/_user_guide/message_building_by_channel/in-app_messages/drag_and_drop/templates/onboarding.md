@@ -34,7 +34,7 @@ Check that your messages are connected in sequential order so that users move th
 
 Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components][3].
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
