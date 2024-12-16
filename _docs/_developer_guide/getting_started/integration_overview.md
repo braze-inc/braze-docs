@@ -74,7 +74,7 @@ Keep data nomenclature consistent across tools. For example, your data warehouse
 Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/).
 
 ### Customizations planning
-Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview) for more information.
+Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview) for more information.
 
 ### Getting dashboard access
 The Braze dashboard is our web UI interface. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
@@ -124,7 +124,7 @@ When fully integrated with your app or site, the Braze SDK offers a completely-r
 During SDK implementation, you will:
 * Write SDK integration code for each platform you want to support.
 * Activate the messaging channels for each platform, ensuring that the Braze SDK tracks the data from your interactions with your customers across email, SMS, push notifications, and other channels.
-* Create any planned [UI component customizations]({{site.baseurl}}/developer_guide/customization_guides/customization_overview) (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
+* Create any planned [UI component customizations]({{site.baseurl}}/developer_guide/getting_started/customization_overview) (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
 
 
 ### Using the Braze API

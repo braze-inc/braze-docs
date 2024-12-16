@@ -71,7 +71,7 @@ glossaries:
   - name: Monthly Active User (MAU)
     description: Any user who has a session within the last 30 days.
   - name: Multichannel Messaging
-    description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/getting_started/platform_overview/#multichannel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
+    description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/getting_started/platform_overview/#multichannel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: Multivariate Testing
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/">Multivariate testing</a> allows you to test multiple variables by comparing two or more versions of a message to assess which variant performs the best.
   - name: New User

@@ -18,7 +18,7 @@ platform:
 
 Braze provides different [Content Card types]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details): `imageOnly`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
 
-You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
+You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 {% alert note %}
 Each default Content Card type is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the Card class documentation for full details ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)). 
