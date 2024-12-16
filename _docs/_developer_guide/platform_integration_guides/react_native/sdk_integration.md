@@ -1,35 +1,35 @@
 ---
-nav_title: Initial SDK Setup
-article_title: Initial SDK Setup for React Native
+nav_title: SDK Integration
+article_title: Integrating the Braze Reactive Native SDK
 platform: React Native
 page_order: 1
-description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
+description: "Learn how to integrate the Braze Reactive Native SDK on native Android and iOS."
 search_rank: 1
 ---
 
-# Initial SDK setup
+# Integrating the Braze React Native SDK
 
 > This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
-## Prerequisites and compatibility
+## Prerequisites
 
-To set up this SDK, React Native v0.71 or later is required. For the full list of supported versions, see our [React Native SDK GitHub repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+To integrate the SDK, React Native version 0.71 or later is required. For the full list of supported versions, see our [React Native SDK GitHub repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
-### React Native New Architecture Support
+## New Architecture compatibility
+
+The following minimum SDK version is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page):
 
 {% sdk_min_versions reactnative:2.0.1 %}
 
-## Using Braze with the New Architecture
-
-The Braze React Native SDK is compatible with any apps using the [React Native New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page) starting from SDK version 2.0.1+.
-
-As of SDK version 6.0.0, Braze has been upgraded internally to a React Native Turbo Module, which can still be used with either the New Architecture or the legacy bridge architecture. Because the Turbo Module is backwards compatible, no migration steps are required other than the breaking changes mentioned in the [Changelog](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md) and requiring React Native v0.70+.
+Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which is compatible with both the New Architecture and legacy bridge architecture&#8212;meaning no additional setup is required.
 
 {% alert warning %}
-If your iOS app conforms to `RCTAppDelegate` and was following our previous `AppDelegate` setup in this documentation, or in the Braze sample project, be sure to reference the samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
+If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
 {% endalert %}
 
-## Step 1: Integrate the Braze library
+## Integrating the SDK
+
+### Step 1: Integrate the Braze library
 
 {% tabs local %}
 {% tab npm %}
@@ -44,14 +44,17 @@ yarn add @braze/react-native-sdk
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Complete native setup
+### Step 2: Choose a setup option
+
+You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in the any of native layers. Choose whichever option best meets your app's needs.
 
 {% tabs %}
 {% tab Expo %}
-
 #### Step 2.1: Install the Braze Expo plugin
 
-Ensure that your version of the Braze React Native SDK is at least 1.37.0. Then, install the Braze Expo plugin.
+Ensure that your version of the Braze React Native SDK is at least 1.37.0. For the full list of supported versions, check out the [Braze React Native repository](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support).
+
+To install the Braze Expo plugin, run the following command:
 
 ```bash
 expo install @braze/expo-plugin
@@ -128,15 +131,15 @@ Example configuration:
 
 #### Step 2.3: Build and run your application
 
-Prebuilding your application will generate the native files necessary for the Braze SDK to work.
+Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
 
 ```bash
 expo prebuild
 ```
 
-Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Note that making any changes to the configuration options will require you to prebuild and run the application again.
-
+Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Keep in mind, if you make any changes to the configuration options, you'll be required to prebuild and run the application again.
 {% endtab %}
+
 {% tab Android %}
 
 #### Step 2.1: Add our repository
@@ -355,21 +358,17 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Usage
+### Step 3: Import the library
 
-Once installed, you can `import` the library in your React Native code:
+Next, `import` the library in your React Native code. For more details, check out our [sample project](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
 ```
 
-Reference our [sample project](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) for more details.
+### Step 4: Test the integration (optional)
 
-## Test your basic integration
-
-At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
-
-You can start a session for a particular user by calling the following code in your app.
+To test your SDK integration, start a new session on either platform for a user by calling the following code in your app.
 
 ```javascript
 Braze.changeUser("userId");
@@ -393,6 +392,4 @@ const App = () => {
   )
 ```
 
-You can then search for the user with `some-user-id` in the dashboard under [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search). There, you can verify that session and device data have been logged.
-
-
+In the Braze dashboard, go to [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) and look for the user with the ID matching `some-user-id`. Here, you can verify that session and device data were logged.
