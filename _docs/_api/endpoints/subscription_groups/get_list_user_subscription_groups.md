@@ -76,7 +76,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
-{% endapi %}
 
 ## Example response
 
@@ -95,3 +94,5 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
   ]
 }
 ```
+
+{% endapi %}
