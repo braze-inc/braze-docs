@@ -66,7 +66,7 @@ For more information about SMS compliance, see [SMS Laws and Regulations][4].
 
 Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 

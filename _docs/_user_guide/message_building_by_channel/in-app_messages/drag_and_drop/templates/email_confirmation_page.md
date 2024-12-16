@@ -42,7 +42,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 Customize the look and feel of your email sign-up form and confirmation page using the drag-and-drop [in-app message components][3].
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 

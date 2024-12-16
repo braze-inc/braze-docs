@@ -34,7 +34,7 @@ You can also add additional messages to your product announcement in the **Pages
 
 Customize the look and feel of your product announcement using the drag-and-drop [in-app message components][3].
 
-## Reporting
+## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
