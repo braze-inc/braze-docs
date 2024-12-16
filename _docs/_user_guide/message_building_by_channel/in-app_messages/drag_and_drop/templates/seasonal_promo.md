@@ -12,17 +12,19 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 {% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
-# Creating a seasonal promotion with a background image
+## Creating a seasonal promotion with a background image
+
+### Step 1: Choose your template
 
 When creating a drag-and-drop in-app message, select **Seasonal promotion with background image** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a seasonal promotion.][img1]
 
-## Step 1: Set up your message styles
+### Step 2: Set up your message styles
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### Step 2: Customize your button component
+### Step 3: Customize your button component
 
 To get started building your seasonal promotion, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specifc page in your app (such as the product you're promoting).
 
@@ -30,7 +32,7 @@ To get started building your seasonal promotion, select the button component in 
 
 You can also add additional messages to your product announcement in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
 
-## Step 3: Style your message
+### Step 4: Style your message
 
 Customize the look and feel of your seasonal promotion using the drag-and-drop [in-app message components][3]. Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
 
@@ -39,7 +41,6 @@ Customize the look and feel of your seasonal promotion using the drag-and-drop [
 ## Reporting
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
-
 
 [img1]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %} 
 [img2]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %} 

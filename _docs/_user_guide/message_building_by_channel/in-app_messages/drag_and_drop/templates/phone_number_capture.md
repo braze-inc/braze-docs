@@ -16,17 +16,19 @@ description: "This page covers how to create an SMS and WhatsApp sign-up form wi
 
 ## Creating a phone number sign-up form
 
+### Step 1: Choose your template
+
 When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template, then select **Build message**. These templates are supported for both mobile apps and web browsers.
 
 ![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]{: style="max-width:70%"}
 
-### Step 1: Set up your message styles
+### Step 2: Set up your message styles
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ![Workflow of uploading and selecting a custom font.][img6]
 
-### Step 2: Customize your phone number input component
+### Step 3: Customize your phone number input component
 
 To get started building your sign-up form, select the phone number input component in the editor.
 
@@ -44,7 +46,7 @@ By default, we collect numbers globally, however you can limit the number of cou
 
 If your users input a phone number that includes any unaccepted special characters, they will see a generic error indicator that is not customizable and will not be able to submit the form. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers][2].
 
-### Step 3: Add disclaimer language (for SMS sign-up forms)
+### Step 4: Add disclaimer language (for SMS sign-up forms)
 
 For SMS sign-up forms, it's important to clearly communicate the type of SMS you will be sending. Make sure your list growth is compliant by including the following information in your form:
 
@@ -62,7 +64,7 @@ This documentation is not intended to provide, nor may it be relied fully upon, 
 
 For more information about SMS compliance, see [SMS Laws and Regulations][4].
 
-### Step 4: Style your message
+### Step 5: Style your message
 
 Customize the look and feel of your message using the drag-and-drop [in-app message components][3].
 

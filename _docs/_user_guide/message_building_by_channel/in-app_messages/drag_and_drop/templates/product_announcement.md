@@ -14,15 +14,17 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 ## Creating a product announcement
 
+### Step 1: Choose your template
+
 When creating a drag-and-drop in-app message, select **Product announement** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a product announcement.][img1]
 
-### Step 1: Set up your message styles
+### Step 2: Set up your message styles
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### Step 2: Customize your button component
+### Step 3: Customize your button component
 
 To get started building your product announcement, select the button component in the editor. Then, use the side menu to select where users are taken when they select the button. The template default is to close the message, but you can choose to navigate to a specifc page in your app (such as the page of the product that is featured in your announcement).
 
@@ -30,15 +32,13 @@ To get started building your product announcement, select the button component i
 
 You can also add additional messages to your product announcement in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with button that takes users to the product page. Learn how to do that in [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
 
-### Step 3: Style your message
+### Step 4: Style your message
 
 Customize the look and feel of your product announcement using the drag-and-drop [in-app message components][3].
 
 ## Reporting
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
-
-
 
 [img1]: {% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %} 
 [img2]: {% image_buster /assets/img/drag_and_drop/templates/product_announcement_button.png %} 

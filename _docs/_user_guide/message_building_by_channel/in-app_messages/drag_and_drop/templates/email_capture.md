@@ -14,13 +14,15 @@ description: "This page covers how to create an email sign-up form with the in-a
 
 ## Creating an email sign-up form
 
+### Step 1: Choose your template
+
 When creating a drag-and-drop in-app message, select **Email sign-up** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
-### Step 1: Set up your message styles
+### Step 2: Set up your message styles
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### Step 2: Customize your email sign-up component
+### Step 3: Customize your email sign-up component
 
 To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
@@ -30,11 +32,11 @@ You can customize the placeholder text and label text of the email capture eleme
 
 If the user enters an email address that includes any unaccepted special characters, they will see a generic error indicator and won't be able to submit the form. This error message isn't customizable. You can view the error behavior in the **Preview & Test** tab and on your test device. Learn more about how Braze formats email addresses in [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
-### Step 3: Add disclaimer language (optional)
+### Step 4: Add disclaimer language (optional)
 
 {% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
-### Step 4: Style your message
+### Step 5: Style your message
 
 Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3].
 
