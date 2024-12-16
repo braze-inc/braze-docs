@@ -266,6 +266,7 @@ composableWithCompositionLocal(
 ```
 
 **3.** Depending on how your app is architected, you may need to handle a new Intent coming in for the current Activity.
+
 ```kotlin
 DisposableEffect(Unit) {
     val listener = Consumer<Intent> {
