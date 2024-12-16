@@ -1,7 +1,7 @@
 ---
 nav_title: ActionIQ
 article_title: ActionIQ
-description: "This reference article covers the Braze and ActionIQ integration. ActionIQ is a enterprise customer data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their ActionIQ data directly to Braze."
+description: "This reference article covers the Braze and ActionIQ integration. ActionIQ is an enterprise customer data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their ActionIQ data directly to Braze."
 alias: /partners/actioniq/
 page_type: partner
 search_tag: ActionIQ
@@ -11,17 +11,18 @@ search_tag: ActionIQ
 
 > [ActionIQ][2] is a customer data platform for enterprise brands that gives marketers easy and secure ways to activate data anywhere in the customer experience. ActionIQ’s unique composable architecture means data can stay securely where it lives, and marketing teams only use the tools they need.
 
-The Braze and ActionIQ integration allow brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integrations available enable users to:
+The Braze and ActionIQ integration allow brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integrations available allow users to:
+
 - Map audience segments or custom attributes to Braze directly from ActionIQ
 - Forward the events tracked by ActionIQ to Braze in real time to trigger personalized and targeted campaigns
-- Deliver API-Triggered Campaigns in Braze directly from touchpoints in an ActionIQ journey
+- Deliver API-triggered campaigns in Braze directly from touchpoints in an ActionIQ journey
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | ActionIQ account | An ActionIQ account is required to take advantage of this integration. |
-| Braze REST API key | A Braze REST API key with the required permissions; see requirements section of each integration. <br><br> This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST API key | A Braze REST API key with the required permissions. See the [Requirements](#requirements) section for the respective integration. <br><br>This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -33,9 +34,14 @@ This integration is used to sync ActionIQ audience membership to Braze by creati
 
 The standard naming convention for the custom attribute created is: `AIQ_<Audience ID>_<Split ID>`.
 
-To create a segment of these users, in Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the ActionIQ custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
+To create a segment of these users, do the following:
+1. In Braze, navigate to **Segments**.
+2. Create a new segment.
+3. Select **Custom Attributes** as your filter.
+4. From here, choose the ActionIQ custom attribute. 
+5. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-Additionally, this integration will update any Custom or Standard attribute in a user's Braze profile with their ActionIQ attribute values.
+Additionally, this integration will update any custom or standard attribute in a Braze user profile with their ActionIQ attribute values.
 
 #### Requirements
 
@@ -65,13 +71,13 @@ The events integration sends the following information to Braze:
 
 ### Triggered campaigns
 
-This integration will trigger a Campaign in Braze for all users in an ActionIQ segment. Once you have configured your Campaign's copy, multivariate testing and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by just adding the Braze campaign ID to your export setting.
+This integration will trigger a campaign in Braze for all users in an ActionIQ segment. After you have configured your campaign's copy, multivariate testing, and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by just adding the Braze campaign ID to your export setting.
 
 Optionally, you can include any other ActionIQ attributes in your export to populate your campaign copy. Those are sent via the `trigger_properties` object.
 
 #### Requirements
 
-A Braze REST API key with `campaigns.trigger.send` and `campaigns.list` permissions is required. This can be created in the Braze dashboard from **Settings** > **API Keys**. 
+A Braze REST API key with `campaigns.trigger.send` and `campaigns.list` permissions is required. This can be created in the Braze dashboard from **Settings** > **API Keys**.
 
 The following values must be sent in your ActionIQ export to Braze:
 - Consumer identifier (either `braze_id` or `external_id`)
