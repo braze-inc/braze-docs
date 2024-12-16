@@ -8,7 +8,7 @@ hidden: true
 
 ## Serialização e formato de dados
 
-O formato de dados de destino será JSON sobre HTTPS. Os eventos serão agrupados em lotes de eventos, cujo tamanho é configurável, e enviados ao endpoint como um array JSON contendo todos os eventos. Os lotes serão enviados no seguinte formato:
+  Os lotes serão enviados no seguinte formato:
 
 `{"events": [event1, event2, event3, etc...]}`
 
@@ -313,11 +313,11 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários outros even
 
 ## Autenticação
 
-Se necessário, a autenticação será realizada passando um token no cabeçalho HTTP `Authorization`, via o esquema de autorização `Bearer`, conforme especificado em [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Isso também é automaticamente compatível com qualquer esquema de autenticação personalizado que possamos escolher implementar no futuro, já que usar o cabeçalho `Authorization` nos permitiria mudar para um esquema de autorização de par chave-valor personalizado (exclusivo para Braze) conforme [RFC 7235](https://tools.ietf.org/html/rfc7235) (que é como, por exemplo, o esquema de autenticação personalizado da AWS funciona) se assim escolhermos no futuro.
+ 
 
-De acordo com a RFC 6750, o token será um valor codificado em Base64 com pelo menos um caractere (obviamente, porém, precisamos avaliar nossos parceiros e clientes para atestar que é improvável que escolham tokens incrivelmente fracos). Uma peculiaridade notável da RFC 6750 é que ela permite que o token contenha os seguintes caracteres além dos caracteres normais da Base64: "-", ".", "_", e "~". Como o conteúdo exato do token não faz absolutamente nenhuma diferença para nenhum de nossos sistemas, não nos importaremos se nossos parceiros decidirem incluir esses caracteres em seu token ou não.
+ Uma peculiaridade notável da RFC 6750 é que ela permite que o token contenha os seguintes caracteres além dos caracteres normais da Base64: "-", ".", "_", e "~".  
 
-De acordo com a RFC 6750, o cabeçalho será construído usando o seguinte formato:
+
 
 `"Authorization: Bearer " + <token>`
 
@@ -331,14 +331,13 @@ Todas as solicitações de nossos Conectores HTTP Integráveis serão enviadas c
 
 `Braze-Currents-Version: 1`
 
-A versão será sempre 1, a menos que façamos alterações severamente incompatíveis com versões anteriores na carga útil ou na semântica da solicitação. Nós não esperamos incrementar esse número com muita frequência, se é que isso vai acontecer. 
+ Nós não esperamos incrementar esse número com muita frequência, se é que isso vai acontecer.
 
-Eventos individuais seguirão as mesmas regras de evolução que nossos esquemas Avro existentes. Ou seja, os campos de cada evento serão garantidos para serem compatíveis com versões anteriores dos payloads de eventos de acordo com a definição Avro de compatibilidade retroativa, incluindo as seguintes regras:
+ Ou seja, os campos de cada evento serão garantidos para serem compatíveis com versões anteriores dos payloads de eventos de acordo com a definição Avro de compatibilidade retroativa, incluindo as seguintes regras:
 
 - Campos de eventos específicos são garantidos para sempre ter o mesmo tipo de dado ao longo do tempo.
 - Qualquer novo campo que seja adicionado à carga útil ao longo do tempo deve ser considerado opcional por todas as partes.
 - Os campos obrigatórios nunca serão removidos.
-  - O que é considerado "obrigatório" será especificado através da documentação que provavelmente queremos gerar automaticamente a partir de nossos esquemas Avro como a fonte central da verdade. Isso exigirá que anotemos os campos do esquema Avro com alguns metadados e um script especial que possa ler esses metadados para gerar a documentação.
 
 ## Mecanismo de tratamento de erros e novas tentativas
 
@@ -354,9 +353,9 @@ Os seguintes códigos de status HTTP serão reconhecidos pelo nosso cliente cone
 - **5XX** — Erro no servidor
   - Os dados do evento serão reenviados em um padrão de recuo exponencial com jitter. Se os dados não forem enviados com sucesso dentro de 24 horas, eles serão descartados.<br><br>
 - **400** — Erro do lado do cliente
-  - Nosso conector de alguma forma enviou pelo menos um evento malformado. Se isso ocorrer, os dados do evento serão divididos em lotes de tamanho 1 e reenviados. Qualquer evento nesses lotes de tamanho 1 que receber uma resposta HTTP 400 adicional será descartado permanentemente. Os parceiros e/ou clientes devem nos informar se detectarem isso ocorrendo no lado deles.<br><br>
+  - Nosso conector de alguma forma enviou pelo menos um evento malformado. Se isso ocorrer, os dados do evento serão divididos em lotes de tamanho 1 e reenviados. Qualquer evento nesses lotes de tamanho 1 que receber uma resposta HTTP 400 adicional será descartado permanentemente. <br><br>
 - **401** (Não autorizado), **403** (Proibido), **404**
-  - O conector foi configurado com credenciais inválidas. A tarefa do conector parará de enviar e será marcada como "Falhou". Os dados do evento serão reenviados após uma postergação de 2 a 5 minutos (isso é tratado pelo reiniciador de tarefas do conector). Se o problema não for resolvido pelo cliente dentro de 48 horas, os dados do evento serão descartados.<br><br>
+  - O conector foi configurado com credenciais inválidas.  Se o problema não for resolvido pelo cliente dentro de 48 horas, os dados do evento serão descartados.<br><br>
 - **413** — Carga Útil Muito Grande
   - Os dados do evento serão divididos em lotes menores e reenviados.<br><br>
 - **429** — Muitas Solicitações

@@ -79,4 +79,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/seen
 - name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Odicci
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
 ---
