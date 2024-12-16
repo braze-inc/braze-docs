@@ -1,5 +1,5 @@
 ---
-page_order: 1
+page_order: 0
 nav_title: Customization
 article_title: Android Push Customization
 layout: dev_guide
@@ -15,6 +15,9 @@ channel: push
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+  - name: Notification Display
+    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/notification_display
+    image: /assets/img/braze_icons/pencil-01.svg
   - name: Android Inline Image Push
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
     image: /assets/img/braze_icons/message-plus-square.svg
