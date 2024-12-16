@@ -11,39 +11,35 @@ description: "This article covers how to initialize, configure, and implement th
 
 > The Braze Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
-## Configuration options
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-In this example, we'll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for iOS, we can control which of our third-party vendors receive this event and create tags specific to Braze.
+## Setting up Google Tag Manager
 
-### Custom events
+In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for iOS, they can control which of Braze's third-party vendors receive this event and create tags specific to Braze.
 
-Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
+### Step 1: Create a trigger for custom events
 
-To get started, create a trigger that looks for an `eventName` that equals `played song`.
+Custom events are logged with `actionType` set to `logEvent`. In this example, the Braze custom tag provider is expecting the custom event name to be set using `eventName`.
+
+First, create a trigger that looks for an `eventName` that equals `played song`.
 
 ![A custom trigger in Google Tag Manager set to trigger for some events when "eventName" equals "played song".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
-Next, create a new Tag ("Function Call") and enter the class path of your [custom tag provider](#adding-ios-google-tag-provider) described later in this article. 
-
-This tag will be triggered when you log the `played song` event we just created. 
-
-In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song`&mdash;which will be the custom event name logged to Braze.
+Next, create a new Tag (also known as a "Function Call") and enter the class path of your [custom tag provider](#adding-ios-google-tag-provider) described later in this article. This tag will be triggered when you log the `played song` event. Because `eventName` is set to `played song` it will be used as custom event name that's logged to Braze.
 
 {% alert important %}
-When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` as shown in the following example. 
-<br><br>
-The custom tag provider in our example will use these keys to determine what action to take and what event name to send to Braze when it receives data from Google Tag Manager.
+When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` so Braze receives the correct event name and action to take.
 {% endalert %}
 
 ![A tag in Google Tag Manager with classpath and key-value pair fields. This tag is set to trigger with the previously created "played song" trigger.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
-You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In the following example tag, we'll pass in `genre`, which was defined using a tag variable in Google Tag Manager - sourced from the custom event we logged in our app.
+You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In the following example tag, pass in `genre`, which was defined using a tag variable in Google Tag Manager and sourced from the custom event logged in the app.
 
 The `genre` event property is sent to Google Tag Manager as a "Firebase - Event Parameter" variable since Google Tag Manager for iOS uses Firebase as the data layer.
 
 ![A variable in Google Tag Manager where "genre" is added as an event parameter for the "Braze - Played Song Event" tag.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
-Lastly, when a user plays a song in our app, we will log an event through Firebase and Google Tag Manager using the Firebase analytics event name that matches our tag's trigger name, `played song`:
+When a user plays a song in the app, log an event through Firebase and Google Tag Manager using the Firebase analytics event name that matches the tag's trigger name, `played song`:
 
 {% tabs %}
 {% tab SWIFT %}
@@ -66,7 +62,7 @@ NSDictionary *parameters = @{@"genre" : @"pop",
 {% endtab %}
 {% endtabs %}
 
-### Logging custom attributes
+### Step 2: Log custom attributes
 
 Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key-value to be set via `customAttributeKey` and `customAttributeValue`:
 
@@ -90,7 +86,7 @@ NSDictionary *parameters = @{@"customAttributeKey" : @"favoriteSong",
 
 {% endtabs %}
 
-### Calling changeUser
+### Step 3: Call `changeUser()`
 
 Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag:
 
@@ -112,17 +108,17 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 
 {% endtabs %}
 
-## Braze SDK custom tag provider {#adding-ios-google-tag-provider}
+### Step 4: Add a custom tag provider {#adding-ios-google-tag-provider}
 
 With the tags and triggers set up, you will also need to implement Google Tag Manager in your iOS app which can be found in Google's [documentation](https://developers.google.com/tag-manager/ios/v5/).
 
-Once Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager. 
+After Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager.
 
 Be sure to note the "Class Path" to the file - this is what you'll enter when setting up a tag in the [Google Tag Manager](https://tagmanager.google.com/) console.
 
-This example shows one of many ways to structure your custom tag provider, where we determine which Braze SDK method to call based on the `actionType` key-value pair sent down from Google Tag Manager. This example assumes you've assigned the Braze instance as a variable in the AppDelegate.
+This example highlights one of many ways you can structure your custom tag provider. Specifically, it shows how to determine which Braze SDK method to call based on the `actionType` key-value pair sent from the GTM Tag. This example assumes you've assigned the Braze instance as a variable in the AppDelegate.
 
-The `actionType` we've supported in our example are `logEvent`, `customAttribute`, and `changeUser`, but you may prefer to change how your tag provider handles data from Google Tag Manager.
+The `actionType` supported in this example are `logEvent`, `customAttribute`, and `changeUser`, but you may prefer to change how your tag provider handles data from Google Tag Manager.
 {% tabs %}
 {% tab SWIFT %}
 

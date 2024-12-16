@@ -11,6 +11,8 @@ description: "This article covers how to implement the Swift SDK delayed initial
 
 > Learn how to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
 
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
+
 ## Considerations
 
 When you use `Braze.prepareForDelayedInitialization(pushAutomation:)`, you are configuring the SDK to automatically use push notification automation features. Any system delegate methods that handle push notifications will not be called for push notifications originating from Braze.

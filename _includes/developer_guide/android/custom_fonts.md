@@ -2,7 +2,7 @@
 
 > This reference article covers font customization options such as defining a font family and shows how to reference it throughout your Android or FireOS application.
 
-Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html). To use your custom font with the Braze SDK, you'll first need to create a font family.
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Using custom fonts
 

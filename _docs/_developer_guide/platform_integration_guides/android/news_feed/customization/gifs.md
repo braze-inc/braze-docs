@@ -17,5 +17,7 @@ channel:
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-{% multi_lang_include archive/android/gifs.md channel="News Feed" %}
+{% multi_lang_include developer_guide/prerequisites/android.md %}
+
+{% multi_lang_include developer_guide/android/gifs.md channel="News Feed" %}
 

@@ -1,18 +1,10 @@
-{% if include.channel=="in-app messages" %}
-Braze supports displaying animated GIFs and SVG images by default for HTML in-app messages. For all other in-app messages, a custom image library is required.
-{% else %}
-Braze requires an external image library to display animated GIFs with {{ include.channel }}.
-{% endif %}
-
 {% alert note %}
 While the examples in this article are specific to GIFs, you can also follow this guide to display SVGs if the custom image library you're integrating supports SVG files.
 {% endalert %}
 
-## Custom image library integration {#gifs-delegate-integration}
+## Integrating a custom image library {#gifs-delegate-integration}
 
-Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
-
-Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
+Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
 
 ### Step 1: Creating the image loader delegate
 
