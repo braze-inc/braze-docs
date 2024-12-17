@@ -187,17 +187,14 @@ Then, as you set up your push notification campaign (either through the [dashboa
 
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). To change this:
 
-**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt) for an example.<br><br>
-**2.** Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
-
-```xml
-<activity
-    android:name=".MyCustomWebViewActivity"
-    android:exported="false" />
-```
-
-**3.** Set your custom Activity in a `BrazeConfig` [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html). Build the builder and pass it to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())
-
+1. Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. For an example, see [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+2. Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
+    ```xml
+    <activity
+        android:name=".MyCustomWebViewActivity"
+        android:exported="false" />
+    ```
+3. Set your custom Activity in a `BrazeConfig` [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html). Build the builder and pass it to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 
@@ -209,8 +206,8 @@ BrazeConfig brazeConfig = new BrazeConfig.Builder()
 Braze.configure(this, brazeConfig);
 ```
 
- {% endtab %}
- {% tab KOTLIN %}
+{% endtab %}
+{% tab KOTLIN %}
 
 ```kotlin
 val brazeConfig = BrazeConfig.Builder()
@@ -220,59 +217,54 @@ val brazeConfig = BrazeConfig.Builder()
 Braze.configure(this, brazeConfig)
 ```
 
- {% endtab %}
- {% endtabs %}
+{% endtab %}
+{% endtabs %}
 
-## Deep linking and Jetpack Compose
+## Using Jetpack Compose
 
-When using Jetpack Compose with NavHost, you can handle deeplinks by doing the following:
+To handle deeplinks when using Jetpack Compose with NavHost:
 
-**1.** Ensure that the Activity that handles the deeplink is registered in the Android Manifest.
-
-```xml
-<activity
-  ...
-  <intent-filter>
-    <action android:name="android.intent.action.VIEW" />
-    <category android:name="android.intent.category.BROWSABLE" />
-    <category android:name="android.intent.category.DEFAULT" />
-    <data
-        android:host="articles"
-        android:scheme="myapp" />
-  </intent-filter>
-</activity>
-```
-
-**2.** When defining the targets in NavHost, specify the deepLinks it will handle.
-
-```kotlin
-composableWithCompositionLocal(
-    route = "YOUR_ROUTE_HERE",
-    deepLinks = listOf(navDeepLink {
-        uriPattern = "myapp://articles/{${MainDestinations.ARTICLE_ID_KEY}}"
-    }),
-    arguments = listOf(
-        navArgument(MainDestinations.ARTICLE_ID_KEY) {
-            type = NavType.LongType
-        }
-    ),
-) { backStackEntry ->
-    val arguments = requireNotNull(backStackEntry.arguments)
-    val articleId = arguments.getLong(MainDestinations.ARTICLE_ID_KEY)
-    ArticleDetail(
-        articleId
-    )
-}
-```
-
-**3.** Depending on how your app is architected, you may need to handle a new Intent coming in for the current Activity.
-
-```kotlin
-DisposableEffect(Unit) {
-    val listener = Consumer<Intent> {
-        navHostController.handleDeepLink(it)
+1. Ensure that the Activity that handles the deeplink is registered in the Android Manifest.
+    ```xml
+    <activity
+      ...
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data
+            android:host="articles"
+            android:scheme="myapp" />
+      </intent-filter>
+    </activity>
+    ```
+2. When defining the targets in NavHost, specify the deepLinks it will handle.
+    ```kotlin
+    composableWithCompositionLocal(
+        route = "YOUR_ROUTE_HERE",
+        deepLinks = listOf(navDeepLink {
+            uriPattern = "myapp://articles/{${MainDestinations.ARTICLE_ID_KEY}}"
+        }),
+        arguments = listOf(
+            navArgument(MainDestinations.ARTICLE_ID_KEY) {
+                type = NavType.LongType
+            }
+        ),
+    ) { backStackEntry ->
+        val arguments = requireNotNull(backStackEntry.arguments)
+        val articleId = arguments.getLong(MainDestinations.ARTICLE_ID_KEY)
+        ArticleDetail(
+            articleId
+        )
     }
-    addOnNewIntentListener(listener)
-    onDispose { removeOnNewIntentListener(listener) }
-}
-```
+    ```
+3. Depending on how your app is architected, you may need to handle a new Intent coming in for the current Activity.
+    ```kotlin
+    DisposableEffect(Unit) {
+        val listener = Consumer<Intent> {
+            navHostController.handleDeepLink(it)
+        }
+        addOnNewIntentListener(listener)
+        onDispose { removeOnNewIntentListener(listener) }
+    }
+    ```
