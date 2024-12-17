@@ -13,7 +13,7 @@ channel:
 
 > This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
 
-Phone numbers are shown in the user profile in the format you used to import the number (such as `7241234567`, `(724) 123 4567`, or others).
+Phone numbers are shown in the user profile as a string of digits. If you import a number that contains any non-digits (such as `,`, `-`, `(`, or others), the non-digits will be removed. For example, importing `+1 (724) 123-4567` will show as `17241234567`.
 
 ## Importing phone numbers
 
