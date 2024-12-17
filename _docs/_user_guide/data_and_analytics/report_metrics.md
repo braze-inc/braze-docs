@@ -260,7 +260,7 @@ For example, if a user triggers an in-app message twice and converts after each 
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Close message' %}
+{% multi_lang_include metrics.md metric='Close Message' %}
 
 {% endapi %}
 
