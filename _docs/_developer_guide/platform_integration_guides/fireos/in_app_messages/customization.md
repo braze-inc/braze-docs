@@ -45,4 +45,5 @@ guide_featured_list:
 
 
 ---
-<br><br>
+
+{% multi_lang_include developer_guide/android/in_app_messages/customization.md %}

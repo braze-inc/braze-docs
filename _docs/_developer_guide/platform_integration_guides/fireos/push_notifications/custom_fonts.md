@@ -9,4 +9,4 @@ description: "This reference article covers font customization options such as d
 
 ---
 
-{% multi_lang_include developer_guide/android/custom_fonts.md %}
+{% multi_lang_include developer_guide/android/push_notifications/custom_fonts.md %}

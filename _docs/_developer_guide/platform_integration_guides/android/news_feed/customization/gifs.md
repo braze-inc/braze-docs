@@ -19,5 +19,5 @@ channel:
 
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-{% multi_lang_include developer_guide/android/gifs.md channel="News Feed" %}
+{% multi_lang_include developer_guide/android/_global/custom_fonts.md channel="News Feed" %}
 

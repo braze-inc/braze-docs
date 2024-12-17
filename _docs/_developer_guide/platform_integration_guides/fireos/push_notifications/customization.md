@@ -33,4 +33,5 @@ guide_featured_list:
 
 
 ---
-<br><br>
+
+{% multi_lang_include developer_guide/android/push_notifications/customization.md %}

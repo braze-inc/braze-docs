@@ -39,4 +39,5 @@ guide_featured_list:
 
 
 ---
-<br><br>
+
+{% multi_lang_include developer_guide/android/news_feed/customization.md %}
