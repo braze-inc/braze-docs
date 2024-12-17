@@ -1,4 +1,12 @@
 #!/bin/bash
+# This script is a misc. script used to delete all the non-yaml content in a
+# directly recursively and replace it with a link to the relevant include in a
+# platform of your choice in `_includes/developer_guide/`.
+# For example, this was used to migrate all Android and FireOS docs to includes.
+
+# Ask for the platform name
+read -p "Enter the platform name (e.g., android, swift, web, etc.): " PLATFORM
+PLATFORM=$(echo "$PLATFORM" | tr '[:upper:]' '[:lower:]')
 
 # Function to process markdown files
 process_file() {
@@ -16,7 +24,7 @@ process_file() {
             # We found the YAML front matter, so we process the file
             # Keep only the YAML front matter and the first line of content after it
             head -n "$yaml_end_line" "$file_path" > "$file_path.tmp"
-            echo -e "\n{% multi_lang_include developer_guide/android/$relative_path %}" >> "$file_path.tmp"
+            echo -e "\n{% multi_lang_include developer_guide/$PLATFORM/$relative_path %}" >> "$file_path.tmp"
             
             # Replace the original file with the new content
             mv "$file_path.tmp" "$file_path"
