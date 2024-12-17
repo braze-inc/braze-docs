@@ -128,17 +128,6 @@ Select the desired Google ad account. Under the **Choose a New or Existing Audie
 {% tabs %}
 {% tab Create a New Audience %}
 **Create a New Audience**<br>
-Enter a name for the new custom audience, select **Add Users to Audience**, and select which fields you would like to sync with Google. You can select the following fields to match to sync with Google:
-
-- Email 
-- Phone
-- First/Last name
-- City
-- Country
-- Date of birth
-- Gender
-- Mobile Ad IDs
-  - You must opt into either [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) or [GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection#google-advertising-id-android-only) collection through the Braze SDKs.
 
 Enter a name for the new custom audience, select **Add Users to Audience**, and select the first-party user field data to send to with your audience. You can choose either:
 

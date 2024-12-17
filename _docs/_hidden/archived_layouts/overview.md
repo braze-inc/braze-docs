@@ -8,7 +8,7 @@ noindex: true
 
 > The overview layout is good for creating a specific navigation option at the top of a page that allows users to click a button to travel to a specific part of a page or a completely other page.
 
-Classic examples of the Selector Layout are [the SDK Changelogs](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) page, or the [In-app Message Creative Details page](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+Classic examples of the Selector Layout are [the SDK Changelogs](https://www.braze.com/docs/developer_guide/changelogs) page, or the [In-app Message Creative Details page](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ## Required Components
 
