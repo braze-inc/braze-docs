@@ -1,37 +1,23 @@
 ---
-nav_title: Safari Push for Mobile
+nav_title: Safari Push
 article_title: Safari push notifications for mobile on the Braze Web SDK
 platform: Web
 channel: push
 page_order: 5
 page_type: reference
-<<<<<<< HEAD:_docs/_developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push.md
 description: "Learn how to send push notifications to iOS and iPadOS users using the Safari web browser."
 search_rank: 3
 ---
 
-# Safari push for mobile
+# Safari push notifications for mobile
 
 > Learn how to send push notifications to iOS and iPadOS users using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
-=======
-description: "This reference article cover how to integrate web push on your iOS and iPad web browsers."
-search_rank: 3
----
-
-# Mobile web push (iOS and iPadOS)
-
-> This article guides you through the steps required to set up mobile push, which allows you to re-engage mobile users with push notifications on iOS and iPadOS.
->>>>>>> develop:_docs/_developer_guide/platform_integration_guides/web/push_notifications/mobile_push.md
 
 ## Prerequisites
 
-<<<<<<< HEAD:_docs/_developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push.md
 Before you can set up Safari push notifications on mobile, you'll need to [set up push notifications for the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/).
 
 ## Setting up Safari push for mobile
-=======
-First, read and follow our standard [web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/). The following steps are only required to support web push for iOS and iPadOS support.
->>>>>>> develop:_docs/_developer_guide/platform_integration_guides/web/push_notifications/mobile_push.md
 
 ### Step 1: Create a manifest file {#manifest}
 
