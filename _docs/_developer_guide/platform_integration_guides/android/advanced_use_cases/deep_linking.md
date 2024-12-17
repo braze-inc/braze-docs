@@ -224,7 +224,7 @@ Braze.configure(this, brazeConfig)
 
 To handle deeplinks when using Jetpack Compose with NavHost:
 
-1. Ensure that the Activity that handles the deeplink is registered in the Android Manifest.
+1. Ensure that the activity handling your deeplink is registered in the Android Manifest.
     ```xml
     <activity
       ...
@@ -238,7 +238,7 @@ To handle deeplinks when using Jetpack Compose with NavHost:
       </intent-filter>
     </activity>
     ```
-2. When defining the targets in NavHost, specify the deepLinks it will handle.
+2. In NavHost, specify which deeplinks you want it to handle.
     ```kotlin
     composableWithCompositionLocal(
         route = "YOUR_ROUTE_HERE",
@@ -258,7 +258,7 @@ To handle deeplinks when using Jetpack Compose with NavHost:
         )
     }
     ```
-3. Depending on how your app is architected, you may need to handle a new Intent coming in for the current Activity.
+3. Depending on your app architecture, you may need to handle the new intent sent to the current Activity as well.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
