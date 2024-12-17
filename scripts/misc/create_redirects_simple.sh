@@ -6,22 +6,22 @@ GIT_ROOT=$(git rev-parse --show-toplevel)
 # Define the target file
 TARGET_FILE="$GIT_ROOT/assets/js/broken_redirect_list.js"
 
-# Function to process each file
-process_file() {
-  # Get the relative path of the file from the current directory
-  local rel_path="${1#./}"
+# Get the name of the starting directory (excluding './')
+START_DIR=$(basename "$PWD")
+
+# Loop through each .md file in the current directory and subdirectories
+for file in $(find . -type f -name "*.md"); do
+  # Get the relative path of the file from the current directory, excluding './'
+  rel_path="${file#./}"
 
   # Remove the .md extension if it exists
-  local clean_path="${rel_path%.md}"
+  clean_path="${rel_path%.md}"
+
+  # Prepend the starting directory name to the path
+  full_path="$START_DIR/$clean_path"
 
   # Append the required line to the broken_redirect_list.js file
-  echo "validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/$clean_path';" >> "$TARGET_FILE"
-}
-
-# Export the process_file function to be used in the find command
-export -f process_file
-
-# Start the recursive search and process each file
-find . -type f -exec bash -c 'process_file "$0"' {} \;
+  echo "validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/$full_path';" >> "$TARGET_FILE"
+done
 
 echo "Finished processing files."
