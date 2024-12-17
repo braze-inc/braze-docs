@@ -9,4 +9,4 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-{% multi_lang_include developer_guide/android/_global/custom_fonts.md %}
+{% multi_lang_include developer_guide/android/push_notifications/deep_linking.md %}

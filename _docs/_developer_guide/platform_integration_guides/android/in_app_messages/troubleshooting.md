@@ -11,6 +11,4 @@ channel:
 
 ---
 
-# Troubleshooting
-
-{% multi_lang_include inapp_message_troubleshooting.md sdk="Android" %}
+{% multi_lang_include developer_guide/android/in_app_messages/troubleshooting.md %}
