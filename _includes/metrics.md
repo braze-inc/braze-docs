@@ -54,6 +54,10 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Click-to-Open Rate</i> is the percentage of delivered emails that have been opened by a single user or machine at least once, and is only available in the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>Close Message</i> is the total number of clicks on the close button of the message. This only exists for in-app messages created in the drag-and-drop editor, not the traditional editor.
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 <i>Confirmed Deliveries</i> are when the carrier has confirmed the message was delivered to the target phone number.
 {% endif %}
