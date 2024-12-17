@@ -264,9 +264,15 @@ table td {
       <td>Work with the administrators of your ad account to get proper access and permissions.</td>
     </tr>
     <tr>
-      <td><b>Terms of Service</b></td>
-      <td>For some Audience Sync destinations, like Facebook, it's required by the ad network to accept specific terms of services to use the Audience Sync feature. This error will trigger if you have not accepted the appropriate terms.</td>
+      <td><b>Terms of Service Not Accepted</b></td>
+      <td>For some Audience Sync destinations, like Facebook, it's required by the ad network to accept specific terms of services to use the Audience Sync feature. This error will trigger if you haven't accepted the appropriate terms. As a result, you may have also received an email with this subject from Braze: “Your authorization credentials for Facebook are invalid.”</td>
       <td>Check that you accepted Facebook's required terms.</td>
+    </tr>
+    <tr>
+      <td><b>All Users Are Erroring Out</b></td>
+      <td>If all users are erroring on a step despite confirming that these users have values for the selected fields on the step, this could indicate an issue with your Facebook account.</td>
+      <td>Follow the steps in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>this troubleshooting section</a> to check your account for any issues.
+      </td>
     </tr>
     <tr>
       <td><b>Failed to create audience</b></td>
@@ -295,16 +301,26 @@ Accept any pending Terms of Services from Facebook. Facebook periodically will r
 - User TOS for your personal Facebook account: https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID.
 - If your ad account is tied to your company’s Business Manager account, you need to accept the TOS from within your business manager account here for all ad accounts: https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID.
 
-To find your account and business ID, follow these steps:
-1. Go to https://adsmanager.facebook.com/
-2. Ensure you’re on the right ad account first by verifying it in the dropdown menu
-3. In the URL, find the account ID after act= and the business ID after business_id=
-4. Read and select **Accept** for the Custom Audience Terms. In Facebook, it's easy to confuse which account the TOS are being signed for. There's a dropdown at the top of the terms which states which ad account is being signed-off on, and it can be easily overlooked. We advise that it is worth checking that you are accepting the terms for the correct account.
+![An account with full control permissions to manage an ad account.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
 
-1. You must select **Accept** for the terms of services. After, you'll see this message: "You have accepted these terms of service on behalf of Braze".
-2. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook account.
-3. Re-enable your Facebook Audience Sync step by editing and updating your Canvas. Braze will then be able to sync users as soon as they reach the Facebook audience step.
-4. If the issue persists, have a separate user with admin permissions to manually accept the terms through the Ads Manager.
+To find your account and business ID, follow these steps:
+1. Go to your [Facebook Ads Manager account](https://adsmanager.facebook.com/).
+2. Confirm you're using the right ad account by verifying it in the dropdown menu.
+3. In the URL, find the account ID after `act=` and the business ID after `business_id=`
+
+![The URL with the account ID and business ID highlighted.]({% image_buster /assets/img/fb_audience_sync/fb_businessid_url.png %}){: style="max-width:90%;"}
+
+{:start="4"}
+
+4. Read and select **Accept** for the Custom Audience Terms. We recommend confirming which account the terms of services are being signed for by using the dropdown at the top of the terms.
+
+![The dropdown that shows the account that is signing the terms of service.]({% image_buster /assets/img/fb_audience_sync/confirm_accept_tos.png %}){: style="max-width:90%;"}
+
+{:start="5"}
+5. You must select **Accept** for the terms of services. After, you'll see this message: "You have accepted these terms of service on behalf of Braze".
+6. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook account.
+7. Re-enable your Facebook Audience Sync step by editing and updating your Canvas. Braze will then be able to sync users as soon as they reach the Facebook audience step.
+8. If the issue persists, try using a separate user with admin permissions to manually accept the terms through the Ads Manager.
 
 #### Complete any pending tasks 
 
@@ -312,12 +328,12 @@ Check if you have any pending tasks in Facebook that could be blocking you from 
 
 1. [Log into Facebook Ads Manager](https://adsmanager.facebook.com/).
 2. Select the ad account you are having issues with.
-3. In the navigation, select your **Account Overview**. <br> ![]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
-4. Check if there are any alerts that need to be addressed. <br> ![]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})
+3. In the navigation, select your **Account Overview**. <br> ![The navigation with Account Overview selected.]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
+4. Check if there are any alerts that need to be addressed. <br> ![An account with an expired credit card.]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})
 
 {:start="5"}
 
-5. Check if there are any setup tasks that need to be completed. <br> ![]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
+5. Check if there are any setup tasks that need to be completed. <br> ![An account with partially completed account setup.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
 
 #### Connect with a different user
 
