@@ -1,5 +1,3 @@
-<br>
-
 # Upgrading to Android 13
 
 > This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
