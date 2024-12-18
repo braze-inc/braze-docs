@@ -1,6 +1,6 @@
 ---
-nav_title: Advanced usage
-article_title: Advanced push notification usage for the Braze Swift SDK
+nav_title: Example implementations
+article_title: Example push notification implementations for the Braze Swift SDK
 platform: Swift
 page_order: 30
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages with the Swift SDK."
@@ -8,7 +8,7 @@ channel:
   - push
 ---
 
-# Advanced push notification usage
+# Example push notification implementations
 
 > This optional, advanced implementation guide covers ways to leverage notification content app extensions to get the most out of your push messages. 
 
@@ -19,7 +19,9 @@ This guide provides three example implementations of notification content app ex
 
 This article also provides [guidance on logging analytics](#logging-analytics) for these custom implementations.
 
-Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+{% alert note %}
+This implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+{% endalert %}
 
 ## Notification content app extensions
 

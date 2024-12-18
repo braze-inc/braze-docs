@@ -1334,13 +1334,19 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/android/
 
 // SWIFT
 // SDK Integration
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=cocoapods';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#step-2-update-your-app-delegate';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#optional-configurations';
 // Initialization
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/google_tag_manager';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization';
 // Push notifications
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_stories';
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/setup';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/deep_linking';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/advanced';
