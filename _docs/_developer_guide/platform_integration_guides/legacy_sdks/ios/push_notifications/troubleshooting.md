@@ -160,4 +160,12 @@ Most of the code that handles deep links also handles push opens. First, ensure 
 
 If opens are being logged, check whether it is an issue with the deep link in general or with the deep linking push click handling. To do this, test to see if a deep link from an in-app message click works.
 
+#### Few or no direct opens
+
+If at least one user opens your iOS push notification, but few or no _Direct Opens_ are logged to Braze, there may be an issue with your [SDK integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview). Keep in mind, _Direct Opens_ are not logged for test sends or silent push notifications.
+
+- Make sure that the messages are not being sent as [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). The message must have text in the title or body to not be considered silent.
+- Double-check the following steps from the [push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration):
+   - [Register for push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): On every single app launch, preferably within `application:didFinishLaunchingWithOptions:`, the code from step 3 needs to occur. The delegate property of `UNUserNotificationCenter.current()` needs to be assigned to an object that implements `UNUserNotificationCenterDelegate` and contains the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method.
+   - [Enable push handling]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Verify that the `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method has been implemented.
 

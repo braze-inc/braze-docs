@@ -8,6 +8,8 @@ description: "このリファレンス記事には、高度なフィルター、
 
 # 高度なフィルター
 
+> このリファレンス記事では、Liquidの高度なフィルターの概要と使用方法について説明します。
+
 ## エンコーディングフィルター
 
 {% raw %}
@@ -21,7 +23,7 @@ description: "このリファレンス記事には、高度なフィルター、
 `hmac_sha1_base64` | hmac-sha1署名を返し、base64文字列としてエンコードされます | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= |
 `hmac_sha256_hex` | hmac-sha256署名を返し、16進文字列としてエンコードされます | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e |
 `hmac_sha256_base64` | hmac-sha256署名を返し、base64文字列としてエンコードされます | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## URLフィルター
 
@@ -30,7 +32,7 @@ description: "このリファレンス記事には、高度なフィルター、
 | `url_escape` | URLで許可されていない文字列内のすべての文字を識別し、エスケープされたバリアントに置き換えます | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
 | `url_param_escape` | 文字列内の URL で許可されていない文字をすべてエスケープされたバリアントに置き換えます。アンパサンド (&) を含みます。 | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | URL フレンドリーな文字列をエンコードします | `{{ 'google search' | url_encode }}` | google+search |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endraw %}
 {% alert tip %}
@@ -49,10 +51,10 @@ description: "このリファレンス記事には、高度なフィルター、
 | フィルター名 | フィルター 説明 |
 |---|---|---|---|
 | `property_accessor` | ハッシュとハッシュキーを受け取り、そのキーでそのハッシュの値を返します |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-**ハッシュ例:** `{"a" => 42, "b" => 0}`
-**入力例:** `{{hash | property_accessor: 'a'}}`
+**ハッシュ例:**`{"a" => 42, "b" => 0}`
+**入力例:**`{{hash | property_accessor: 'a'}}`
 **出力例:** `42`
 
 さらに、プロパティアクセサフィルターを使用すると、カスタム属性をテンプレート化してハッシュキーに変換し、特定のハッシュ値にアクセスできます。
@@ -70,14 +72,14 @@ Liquid 内の Braze では、ハッシュを変数 （式など） としてイ�
 | フィルター名 | フィルター 説明 | 例の入力 | 例の出力 |
 |---|---|---|---|
 | `number_with_delimiter` | コンマで数字をフォーマットします | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## JSONエスケープ / 文字列エスケープフィルター
 
 | フィルター名 | フィルター 説明 |
 |---|---|---|---|
 | `json_escape` | 文字列内の特殊文字（ダブルクォート`""`やバックスラッシュ''など）をエスケープします。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 このフィルターは、JSON辞書で文字列をパーソナライズする際に常に使用する必要があり、特にwebhookに便利です。
 {% endraw %}

@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `canvas_id`| Requis | Chaîne de caractères | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Exemple de demande

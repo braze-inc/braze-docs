@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `email` | 필수 | 문자열 또는 배열 | 수정할 문자열 이메일 주소 또는 수정할 최대 50개의 이메일 주소 배열. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## 예시 요청
+## 요청 예시
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove' \
 --header 'Content-Type: application/json' \

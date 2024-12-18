@@ -16,11 +16,11 @@ LiftIgniterとBrazeインテグレーションは、Connected Contentを活用�
 
 ## 前提条件
 
-| 要件| 説明|
+| 必要条件| 説明|
 | ---| ---|
 | LiftIgniterアカウント | このパートナーシップを活用するには、[LiftIgniter アカウント](https://console.liftigniter.com/login)が必要です。 |
 | LiftIgniter APIの統合 | ここからレコメンデーションを取得できるようにするには、LiftIgniter をサイトまたはアプリに[統合](https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview)する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 

@@ -14,7 +14,7 @@ noindex: true
 
 ## ステップ1:CocoaPods のインストール
 
-[CocoaPods][apple_initial_setup_1] 経由で iOS SDK をインストールすると、インストールプロセスの大部分が自動化されます。このプロセスを開始する前に、[Ruby バージョン 2.0.0][apple_initial_setup_2] 以降を使用していることを確認してください。この SDK のインストールに Ruby 構文の知識は必要ありませんのでご安心ください。
+[CocoaPods](http://cocoapods.org/) 経由で iOS SDK をインストールすると、インストールプロセスの大部分が自動化されます。このプロセスを開始する前に、[Ruby バージョン 2.0.0](https://www.ruby-lang.org/en/installation/) 以降を使用していることを確認してください。この SDK のインストールに Ruby 構文の知識は必要ありませんのでご安心ください。
 
 開始するには、次のコマンドを実行します。
 
@@ -22,7 +22,7 @@ noindex: true
 $ sudo gem install cocoapods
 ```
 
-CocoaPods に関する問題がある場合は、\[CocoaPods トラブルシューティングガイド]\[apple_initial_setup_25] を参照してください。
+CocoaPodsについて問題がある場合は、CocoaPods [トラブルシューティングガイド](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPodsトラブルシューティングガイド")を参照してください。
 
 {% alert note %}
 `rake` 実行ファイルを上書きするように求められた場合は、CocoaPods.org の「[](http://guides.cocoapods.org/using/getting-started.html "CocoaPods インストール手順")の概要」を参照してください。
@@ -63,9 +63,9 @@ pod install
 
 この時点で、CocoaPods によって作成された新しい Xcode プロジェクトワークスペースを開くことができるはずです。Xcode プロジェクトの代わりに、必ずこの Xcode ワークスペースを使用してください。 
 
-![新しい `AppbpyExample.workspace`.]\[apple_initial_setup_15] を表示するために展開された Appboy Example フォルダ
+![Appboy Example フォルダが展開され、新しい`AppbpyExample.workspace`.]({% image_buster /assets/img_archive/podsworkspace.png %})が表示されます。
 
-## 次のステップ:
+## 次のステップ
 
 指示に従って[統合を完了]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/)します。
 
@@ -77,9 +77,3 @@ CocoaPod を更新するには、プロジェクトディレクトリ内で以�
 pod update
 ```
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods のインストール手順"
-[apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-\[apple_initial_setup_15] ： {% image_buster /assets/img_archive/podsworkspace.png %}
-\[apple_initial_setup_25] ：http://guides.cocoapods.org/using/troubleshooting.html "CocoaPodsトラブルシューティングガイド"

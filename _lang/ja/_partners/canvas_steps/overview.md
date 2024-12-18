@@ -25,7 +25,7 @@ Braze をご利用のすべてのお客様は、Audience Sync to Google と Audi
 
 ## その仕組み
 
-Audience Sync to Google または Audience Sync to Facebook を使用するには、\[**テクノロジー パートナー**] ページでパートナーを探して、広告アカウントを接続します。
+Audience Sync to Google または Audience Sync to Facebook を使用するには、[**テクノロジー パートナー**] ページでパートナーを探して、広告アカウントを接続します。
 
 ![][3]{: style="max-width:35%;"} ![][4]{: style="max-width:35%;"}
 
@@ -49,11 +49,11 @@ Audience Sync to Google または Audience Sync to Facebook を使用するに�
 
 ### Audience Sync Pro
 
-TikTok、Pinterest、Snapchat、Criteo などのAudience Sync Pro パートナーを使用するには、\[**テクノロジーパートナー**] ページの \[**Audience Sync Pro**] セクションで Audience Sync Pro の購入割り当てに基づいてパートナーを選択できます。
+TikTok、Pinterest、Snapchat、Criteo などのAudience Sync Pro パートナーを使用するには、[**テクノロジーパートナー**] ページの [**Audience Sync Pro**] セクションで Audience Sync Pro の購入割り当てに基づいてパートナーを選択できます。
 
 ![][5]{: style="max-width:75%;"}
 
-最初に \[パートナーを選択] を選択して、使用するパートナーを選択します。Audience Sync Pro を購入すると、1回の購入につ3つの Audience Sync Pro 宛先が割り当てられます。これは、ダッシュボードの各ワークスペース内で使用可能になります。
+最初に [パートナーを選択] を選択して、使用するパートナーを選択します。Audience Sync Pro を購入すると、1回の購入につ3つの Audience Sync Pro 宛先が割り当てられます。これは、ダッシュボードの各ワークスペース内で使用可能になります。
 
 ![][6]{: style="max-width:65%;"}
 
@@ -73,7 +73,7 @@ Audience Sync Pro 宛先を選択したら、パートナータイルをクリ�
 
 広告トラッキングのオーディエンスを構築する際、ユーザーの嗜好に基づき、また[CCPAに](https://oag.ca.gov/privacy/ccpa)基づく「販売または共有しない」権利などのプライバシー法を遵守するために、特定のユーザーを含めたり除外したりしたい場合がある。マーケターは、キャンバスのエントリ基準の範囲内で、ユーザーの適格性に関する適切なフィルターを実装する必要があります。以下にいくつかの選択肢を挙げる。
 
-[Braze SDK で iOS IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) を収集した場合、\[広告の追跡が有効] フィルターを使用できます。ユーザーがオプトインしたオーディエンス同期の宛先にのみユーザーを送信するには、値を `true` に選択します。
+[Braze SDK で iOS IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) を収集した場合、[広告の追跡が有効] フィルターを使用できます。ユーザーがオプトインしたオーディエンス同期の宛先にのみユーザーを送信するには、値を `true` に選択します。
 
 ![][2]
 

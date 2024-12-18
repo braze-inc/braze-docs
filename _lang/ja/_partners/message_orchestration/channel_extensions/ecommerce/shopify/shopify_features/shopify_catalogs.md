@@ -48,15 +48,11 @@ Braze カタログに同期された製品は、[カタログ制限]({{site.base
 
 ### ステップ4:同期完了
 
-同期が成功するとダッシュボード通知とメールが届きます。Shopify パートナーページでも、Shopify カタログの下のステータスが \[Syncing] に更新されます。Shopify パートナページでカタログの名前をクリックすると、製品を表示できます。
+同期が成功するとダッシュボード通知とメールが届きます。Shopify パートナーページでも、Shopify カタログの下のステータスが [Syncing] に更新されます。Shopify パートナページでカタログの名前をクリックすると、製品を表示できます。
 
 カタログデータを利用してメッセージをパーソナライズする方法の詳細については、[カタログの追加ユースケースs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases)を参照してください。
 
 #### サポートされている Shopify カタログデータ
-
-{% alert note %}
-`product_handle` および`product_url` にアクセスして使用するには、Shopify カタログを切断してから再接続します。
-{% endalert %}
 
 - `id`
 - `store_name`
@@ -84,6 +80,16 @@ Braze カタログに同期された製品は、[カタログ制限]({{site.base
 Shopify カタログを任意の方法で変更すると、意図せずにリアルタイムのプロダクト同期に干渉する可能性があります。Shopify カタログは、Shopifyによって上書きされる可能性があるため、編集しないでください。代わりに、Shopify インスタンスで必要な製品更新を行います。<br><br>Shopify カタログを削除するには、Shopify ページに移動し、同期を非アクティブにします。カタログページで Shopify カタログを直接削除しないでください。
 {% endalert %}
 
+##### `product_handle` または `product_url`
+
+`product_handle` と`product_url` にアクセスし使用するには、以下の方法で Shopify カタログを切断し、再接続する。
+
+1. Shopifyの統合ページ >**設定を編集する**。<br><br>![Shopifyの統合ページ。]({% image_buster /assets/img/Shopify/edit_config.png %})
+
+{: start="2"}
+2\.**カタログを同期する**ステップで、カタログをオフに切り替えてから設定を更新する。
+3\.カタログを切り替え、設定を更新する。<br><br>![Shopify「カタログを同期」ステップをカタログトグルで切り替える]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+
 ## 再入荷と値下げのユースケース 
 
 再入荷通知を設定するには、[こちら]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications)の手順に従ってください。
@@ -109,6 +115,6 @@ Shopify 製品の同期でエラーが発生した場合は、次のいずれか
 | サーバーエラー | これは、プロダクトを同期しようとしたときに、Shopify側にサーバーエラーがある場合に発生します。 | [同期を非アクティブにし](#deactivate)、製品の在庫全体を再同期します。 |
 | 重複する SKU | これは、カタログアイテム ID としてSKU を使用している場合に、複数の製品に同じ SKU が設定されていると発生します。カタログアイテム ID は一意でなければならないため、すべての製品に一意の SKU が必要です。 | Shopify で製品とバリアントの一覧をすべて監査して、重複するSKU がないことを確認します。SKU が重複している場合は、Shopifyストアアカウントでのみ一意のSKU になるように更新します。これが修正された後、[sync](#deactivate) を非アクティブ化し、製品のインベントリ全体を再同期します。 |
 | カタログ制限の超過 | これは、カタログ制限を超えた場合に発生します。Braze は、利用可能なストレージがないために、同期を終了することや、同期をアクティブな状態で維持することができなくなります。 | この問題には2 つのソリューションがあります。<br><br>1\.アカウントマネージャーに連絡して、ティアをアップグレードしてカタログ制限を引き上げます。<br><br>2\.次のいずれかを削除して、ストレージ領域を解放します。<br>\- 他のカタログsからのカタログアイテム<br>\- 他のカタログ<br>\- 作成されたセレクション<br><br> いずれの解決策を取った場合でも、同期を非アクティブにしてから再同期を実行する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 [1]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}

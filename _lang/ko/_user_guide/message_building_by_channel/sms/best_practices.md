@@ -15,7 +15,7 @@ guide_featured_list:
 - name: "모범 사례"
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "보내기 전에 알아두어야 할 사항"
+- name: "보내기 전에 알아두세요"
   link: /docs/know_before_send/
   image: /assets/img/braze_icons/send-01.svg
 - name: "옵트인"

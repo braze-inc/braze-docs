@@ -19,7 +19,7 @@ tool: Canvas
 
 ## 遅延を作成する
 
-遅延を作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの一番下にある <i class="fas fa-plus-circle"></i> プラスのボタンを押して、\[**延期期間**] を選択します。
+遅延を作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの一番下にある <i class="fas fa-plus-circle"></i> プラスのボタンを押して、[**延期期間**] を選択します。
 
 キャンバスジャーニーに遅延を作成する場合、考慮すべき点がいくつかあります。
 - 遅延制限は 30 日です。
@@ -32,17 +32,17 @@ tool: Canvas
 {% tabs %}
   {% tab 期間より後 %}
 
-  \[**期間より後**] オプションでは、設定した秒数、分数、時間数、日数、週数、および特定の時刻が経過するまでユーザーを遅延させることができます。例えば、ユーザーを 4 時間遅らせたり、1 日遅らせたりできます。 
+  [**期間より後**] オプションでは、設定した秒数、分数、時間数、日数、週数、および特定の時刻が経過するまでユーザーを遅延させることができます。例えば、ユーザーを 4 時間遅らせたり、1 日遅らせたりできます。 
   
   「日」と「暦日」の計算方法の違いに注意してください。 
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
-    - A "calendar day" defines a day as 24 hours after a specified time, meaning you can choose to delay at company time or at a user's local time. If a time is not specified, the user will be delayed until midnight the next day in company time.
+    - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
   {% endtab %}
   {% tab 特定の日まで %}
 
-  \[**特定の日付まで**] オプションでは、ユーザーを特定の日時までステップに留めることができます。
+  [**特定の日付まで**] オプションでは、ユーザーを特定の日時までステップに留めることができます。
 
   {% alert important %}
   延期期間ステップに進んだ時点で、選択した日時がすでに経過している場合、ユーザーはキャンバスを退出します。キャンバスの開始日から「正確な日付まで待つ」ステップで選択した日付までの期間は最大 31 日間です。
@@ -50,7 +50,7 @@ tool: Canvas
   {% endtab %}
   {% tab 特定の曜日まで %}
 
-  \[**特定の曜日まで**] オプションでは、ユーザーを特定の曜日の特定の時刻までステップに留めることができます。例えば、次に会社のタイムゾーンで木曜日の午後 4 時になるまでユーザーを遅らせることができます。 
+  [**特定の曜日まで**] オプションでは、ユーザーを特定の曜日の特定の時刻までステップに留めることができます。例えば、次に会社のタイムゾーンで木曜日の午後 4 時になるまでユーザーを遅らせることができます。 
 
   この設定を成功させるには、ユーザーが選択した曜日 (例えば、木曜日) の、指定された時刻以降にキャンバスに入った場合の動作も選択する必要があります。ユーザーをその日のうちに先に進めるかか、翌週まで留めるかを選択できます。
   {% endtab %}
@@ -75,7 +75,7 @@ tool: Canvas
 | `Entered` | ステップの入力回数を反映する。キャンバスに再適格性があり、ユーザーが延期期間ステップに 2 回入った場合、2 つのエントリが記録されます。 |
 | `Proceeded to Next Step` | キャンバスで次のステップに進んだエントリーの数を反映する。 |
 | `Exited Canvas` | キャンバスを終了し、次のステップに進まなかったエントリの数を示します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 これらの分析の時系列は、展開されたコンポーネントビューに表示されます。
 

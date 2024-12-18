@@ -11,19 +11,19 @@ channel:
 
 # メール用 AMP
 
-> メール用[AMP](https://amp.dev/about/email)を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。AMP は、アンケート、フィードバック質問票、投票キャンペーン、レビュー、サブスクリプションセンターなど、エキサイティングなメールオファリングの作成に役立つさまざまなコンポーネントを使用することで、これを可能にします。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
+> メール用[AMP](https://amp.dev/about/email)を使用すると、メールにインタラクティブな要素を追加し、顧客とのコミュニケーションを向上させ、ユーザーの受信トレイに直接完全な体験を提供できます。AMP は、アンケート、フィードバック質問票、投票キャンペーン、レビュー、購読センターなど、エキサイティングなメールオファリングの作成に役立つさまざまなコンポーネントを使用することで、これを可能にします。このようなツールは、エンゲージメント向上とリテンションの機会を提供することができます。
 
 ## 要件
 
 Brazeは、Googleで登録するユーザーや必要なセキュリティ要件を満たすことに対して責任を負いません。
 
-| 要件   | 説明 |
+| 必要条件   | 説明 |
 | --------------| ----------- |
 | メール用 AMP がオンになっている | AMPは誰でも利用できます。この機能を有効にしたい場合は、アカウントマネージャーに連絡してください。 |
 | Gmail アカウントの有効化 | [Gmailアカウントの有効化](#enabling-gmail-account)を参照してください。 |
 | Google送信者認証 | Gmail は DKIM、SPF、および DMARC を使用して AMP メールの[送信者を認証](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication)します。お客様のアカウントにこれらが設定されている必要があります。<br><br>- [ドメインキー識別メール](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [送信者ポリシーフレームワーク](https://en.wikipedia.org/wiki/Sender_Policy_Framework) (SPF)<br>- [ドメインベースのメッセージ認証、レポート、および準拠](https://en.wikipedia.org/wiki/DMARC) (DMARC)
 | AMP メール要素 | 説得力のある AMP メールでは、さまざまなコンポーネントが戦略的に使用されます。以下の[コンポーネント](#components)セクションの必須タブを参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### サポートされているクライアント
 
@@ -33,7 +33,7 @@ Brazeは、Googleで登録するユーザーや必要なセキュリティ要件
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
-| ヤフー | [Yahoo](https://senders.yahooinc.com/amp/) |
+| ヤフー | [ヤフー](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
 サポートされているプラットフォームの完全なリストについては、[AMPドキュメント](https://amp.dev/support/faq/email-support)を参照してください。 
@@ -95,9 +95,9 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 | コンポーネント | 説明 | 例 |
 |---------|--------------|---------|
 | 識別 <br><br> `⚡4email` または `amp4email`| メールを AMP HTML メールとして識別します。 | `<!doctype html>`<br> `<html ⚡4email>`<br> `<head>` |
-| 読み込む AMP ランタイム <br><br> `<script>` | JavaScript を使用して、AMP がメール内で機能するようにします。 | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| 読み込む AMP ランタイム <br><br> `<script>` | JavaScriptを使用してAMPをメール内で実行できるようにする。 | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
 | CSSボイラープレート | AMPが読み込まれるまでコンテンツを非表示にします。<br> AMP メールをサポートするメールプロバイダーは、クライアントで審査済みの AMP スクリプトのみが実行されるように、セキュリティチェックを実施します。 | `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
   {% endtab %}
   {% tab ダイナミック %}
@@ -108,7 +108,7 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 |---------|--------------|---------|
 | [アコーディオン](https://amp.dev/documentation/components/amp-accordion?format=email)<br><br> `amp-accordion`| ユーザーがコンテンツの概要を表示し、任意のセクションにジャンプできるようにします。 | `<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>` |
 | [フォーム](https://amp.dev/documentation/components/amp-form?format=email)<br><br> `amp-form`| AMPドキュメントで入力フィールドを送信するフォームを作成します。 | `<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
@@ -123,7 +123,7 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 | [アニメーション画像](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-anim`| ランタイムで管理されるアニメーション画像（通常はGIF）を表示します。 | `<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>` |
 | [カルーセル](https://amp.dev/documentation/components/amp-carousel?format=email)<br><br> `amp-carousel`| 水平方向に沿って複数の類似したコンテンツを表示します。 | `<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>` |
 | [画像](https://amp.dev/documentation/components/amp-img?format=email) | HTML `img` タグのランタイム管理された置き換え。<br>  また、画像の[ライトボックスを作成することもできます](https://amp.dev/documentation/components/amp-image-lightbox?format=email)。 | `<amp-img alt="A view of the sea"`<br> `src="images/sea.jpg"`<br> `width="900"`<br>  `height="675"`<br>  `layout="responsive">` <br> `</amp-img>` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
 ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
@@ -135,7 +135,7 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 | コンポーネント | 説明 |
 |---------|--------------|
 | [データバインディングと式](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-bind`| データバインディングと JavaScript 風の式を介して、AMP ページにカスタムのステートフルなインタラクティビティを追加します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
@@ -158,18 +158,18 @@ AMP コンポーネントの完全なリストについては、[AMP のドキ�
 * フィード内のアイテムを動的に更新する
 * 記事ブックマークメール
 
-このコンポーネントを使用すると、ユーザーはフィールド値を送信したりクリアしたりできます。また、メールの設定方法によっては、調査の送信が成功したかどうかなど、ユーザーに追加のプロンプトを表示したり、調査の結果 (投票キャンペーンなど) を含むユーザーからの回答を表示したりできます。
+このコンポーネントを使用すると、ユーザーはフィールド値を送信したりクリアしたりできます。また、メールの設定によっては、アンケートの送信が成功したかどうかなど、ユーザーに追加のプロンプトを表示したり、アンケート結果を示すユーザーからのレスポンスをレンダリングしたりすることもできる（投票キャンペーンなど）。
 
 {% endtab %}
 {% tab 折りたたみ可能なコンテンツ %}
 
 `<amp-accordion>` コンポーネントを使用してコンテンツのセクションを展開表示します。このコンポーネントを使用すると、折りたたみと展開が可能なコンテンツセクションを表示でき、オーディエンスはコンテンツの概要を一目で確認し、任意のセクションにジャンプできるようになります。 
 
-長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数行入力するだけでもスクロールが必要なモバイルユーザーにとって特に便利です。
+長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数行を入力するだけでもスクロールが必要なモバイルユーザーにとって特に便利です。
 {% endtab %}
 {% tab 画像の多いメール %}
 
-小売ブランドのように多くのプロフェッショナルな写真を含むメールを頻繁に送信する場合、ユーザーにとって魅力のある画像と対話できるように `<amp-image-lightbox>` コンポーネントを使用できます。ユーザーが画像をクリックすると、このコンポーネントはメッセージの中央に画像を表示し、ライトボックス効果を作成します。 
+小売（店）ブランドのようにプロフェッショナルな写真を多用したメールを送信する傾向がある場合は、`<amp-image-lightbox>` 、ユーザーが魅力的な画像にエンゲージメントできるコンポーネントを利用できる。ユーザーが画像をクリックすると、このコンポーネントはメッセージの中央に画像を表示し、ライトボックス効果を作成します。 
 
 さらに、`<amp-image-lightbox>` コンポーネントを使用すると、ユーザーは画像の詳細な説明を表示できます。同じコンポーネントを複数の画像に使用することができます。例えば、メールに複数の画像が含まれている場合、ユーザーがどちらかの画像をクリックすると、画像がライトボックスに表示されます。
 
@@ -195,13 +195,38 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
 
 ## メトリクスと分析
 
-| 指標 | 詳細 |
-|---|---|
-| 開封数の合計 | AMPメールのHTMLおよびプレーンテキストバージョンの合計オープン数。 |
-| クリック数の合計 | AMPメールのHTMLおよびプレーンテキストバージョンでの総クリック数。 |
-| AMPが開く | AMP HTML メールおよび AMP HTML バージョンのメールの開封総数。 |
-| AMP クリック数 | AMP HTML メールのクリック数の合計、HTML、プレーンテキスト、および AMP HTML バージョンのメールの総計。 |
-{: .reset-td-br-1 .reset-td-br-2}  
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>指標</th>
+            <th>詳細</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split">開封数の合計</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} AMPメールの HTML およびプレーンテキストバージョンの開封数の合計。</td>
+        </tr>
+        <tr>
+            <td class="no-split">クリック数の合計</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} AMPメールの場合、HTML版とプレーンテキスト版の合計クリック数となる。</td>
+        </tr>
+        <tr>
+            <td class="no-split">AMPが開く</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split">AMP クリック数</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 ## テストとトラブルシューティング
 
@@ -215,7 +240,7 @@ AMP メールを任意の Gmail アカウントに配信するには、メール
 - メールの HTML MIME 部分の前に AMP MIME 部分が含まれていること。
 - AMP MIME パートは 100 KB 未満である必要があります。
 
-これらの条件のいずれもエラーを引き起こしていない場合は、\[サポート]\[support]に連絡してください。
+これらの条件のいずれもエラーを引き起こしていない場合は、[サポート][support]に連絡してください。
 
 ### よくある質問
 
@@ -228,4 +253,4 @@ AMP 要素を作成する際は、担当の開発チームと協力してくだ�
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-\[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

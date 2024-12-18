@@ -10,11 +10,11 @@ description: "この記事では、「ユーザーのメールサブスクリプ
 ---
 {% api %}
 # メールサブスクリプションステータスの変更
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/status
 {% endapimethod %}
 
-> このエンドポイントを使用して、ユーザーのメール購読状態を設定する。 
+> このエンドポイントを使用して、ユーザーのメール購読状態を設定する。
 
 ユーザーは、`opted_in`、`unsubscribed`、または `subscribed` （特にオプトインまたはオプトアウトされていない） になる可能性があります。
 
@@ -24,13 +24,13 @@ Braze内のどのユーザーにもまだ関連付けられていないEメー�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`email.status` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`email.status`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,11 +48,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `email` | required | 文字列または配列 | 修正するEメールアドレスを文字列で、または最大50個までの配列で指定する。 |
-| `subscription_state` | 必須 | string | subscribe"、"unsubscribed"、"opted_in "のいずれかである。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `email` | 必須 | 文字列または配列 | 修正するEメールアドレスを文字列で、または最大50個までの配列で指定する。 |
+| `subscription_state` | 必須 | 文字列 | subscribe"、"unsubscribed"、"opted_in "のいずれかである。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/status' \
 --header 'Content-Type: application/json' \

@@ -33,7 +33,7 @@ description: "이 문서에서는 사용 가능한 콘텐츠 블록 나열 Braze
 | `modified_before`  |  선택 사항 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 형식의 문자열 | 지정된 시간 또는 그 이전에 업데이트된 콘텐츠 블록만 검색합니다. |
 | `limit` | 선택 사항 | 양수 | 검색할 수 있는 최대 콘텐츠 블록 수입니다. 제공하지 않으면 기본값은 100이며, 허용되는 최대 값은 1000입니다. |
 | `offset`  |  선택 사항 | 양수 | 검색 기준에 맞는 나머지 템플릿을 반환하기 전에 건너뛸 콘텐츠 블록의 수입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```
@@ -77,6 +77,6 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Content Block number limit exceeds maximum of 1000` | `limit` 매개 변수를 1000보다 작은 정수로 변경합니다. |
 | `Offset is invalid` | `offset` 매개변수는 0보다 큰 정수여야 합니다. |
 | 오프셋은 0보다 커야 합니다. | `offset` 매개변수를 0보다 큰 정수로 변경합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

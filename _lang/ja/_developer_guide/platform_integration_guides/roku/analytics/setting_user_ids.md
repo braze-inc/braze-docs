@@ -28,5 +28,3 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/

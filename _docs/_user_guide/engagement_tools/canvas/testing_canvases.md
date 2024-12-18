@@ -14,6 +14,9 @@ description: "This landing page is home to resources on Canvas testing including
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg

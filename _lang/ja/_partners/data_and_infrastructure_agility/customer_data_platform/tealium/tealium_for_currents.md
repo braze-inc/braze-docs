@@ -23,7 +23,7 @@ BrazeとTealiumの統合により、2つのシステム間の情報の流れを�
 | Tealium EventStream or Tealium AudienceStream | このパートナーシップを活用するには、[Tealium アカウント](https://my.tealiumiq.com/)が必要です。 |
 | Currents | Tealium にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
 | Tealium URL | これは、Tealium のダッシュボードに移動し、取り込み URL をコピーすることで取得できます。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -33,7 +33,7 @@ BrazeとTealiumの統合により、2つのシステム間の情報の流れを�
 
 ### ステップ2:Current を作成する
 
-Braze で **\[Currents] > \[+ Currents を作成] > \[Tealium のエクスポート]** に移動します。統合名、連絡先メール、および Tealium URL を指定します。次に、利用可能なイベントのリストから追跡するイベントを選択します。最後に \[**Currents を起動**] をクリックします。
+Braze で **[Currents] > [+ Currents を作成] > [Tealium のエクスポート]** に移動します。統合名、連絡先メール、および Tealium URL を指定します。次に、利用可能なイベントのリストから追跡するイベントを選択します。最後に [**Currents を起動**] をクリックします。
 
 Tealium に送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータをTealiumに送信しない。
 

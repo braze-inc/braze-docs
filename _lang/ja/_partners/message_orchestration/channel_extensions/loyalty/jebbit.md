@@ -19,9 +19,9 @@ Braze と Jebbit の統合により、Jebbit キャンペーンのユーザー�
 | 必要条件 | 説明 |
 |---|---|
 |Jebbitアカウント | このパートナーシップを活用するには、Jebbit アカウントが必要です。 |
-| Braze REST API キー | すべてのユーザーデータ権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-|Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべてのユーザーデータ権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+|Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントは、[インスタンス]({{site.baseurl}}/api/basics/#endpoints)のBraze URLによって異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

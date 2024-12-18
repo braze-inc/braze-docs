@@ -19,7 +19,7 @@ description: "この記事では、コンテンツブロック情報を見るBra
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 ## 前提条件
-このエンドポイントを使用するには、`content_blocks.info` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`content_blocks.info`の権限が必要です。
 
 ## レート制限
 
@@ -29,11 +29,11 @@ description: "この記事では、コンテンツブロック情報を見るBra
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `content_block_id`  | 必須 | string | コンテンツブロックの識別子。<br><br>これは、API コールでコンテンツブロックの情報をリストアップするか、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)のページに行き、一番下までスクロールしてコンテンツブロックの API 識別子を検索することで見つけることができます。|
+| `content_block_id`  | 必須 | 文字列 | コンテンツブロックの識別子。<br><br>これは、API コールでコンテンツブロックの情報をリストアップするか、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)のページに行き、一番下までスクロールしてコンテンツブロックの API 識別子を検索することで見つけることができます。|
 | `include_inclusion_data`  | オプション | ブール値 | `true` に設定された場合、API はこのコンテンツブロックが含まれるキャンペーンとキャンバスのメッセージバリエーション API 識別子を返し、以降の呼び出しで使用できるようにします。 結果は、アーカイブまたは削除されたキャンペーンやキャンバスを除外する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=false' \
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Content Block ID is invalid for this workspace` | このコンテンツブロックが存在しないか、別の会社アカウントまたはワークスペースにある。 |
 | `Content Block has been deleted—content not available` | このコンテンツブロックは、以前は存在していたかもしれませんが、削除されました。 |
 | `Include Inclusion Data—error` | このパラメータはブーリアン値（trueまたはfalse）のみを受け付ける。`include_inclusion_data` の値が引用符（`""` ）で囲まれていないことを確認すること。この場合、値は文字列として送信される。詳細については、[リクエストパラメーター](#request-parameters)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

@@ -28,7 +28,7 @@ search_tag: Partner
 | `get_cohort_ids` | オプション<br>(デフォルトは false)。 | このユーザーが所属するコホートIDのうち、追跡するよう設定されているすべてのコホートIDのリストを返す。デフォルトでは、すべてのコホートのユーザーのコホートメンバーシップが追跡されません。 |
 | `get_computations` | オプション<br>(デフォルトは false)。 | このユーザーに対して有効になっているすべての計算のリストを返す。 |
 | `comp_id` | オプション | このユーザーで有効になっている可能性のある計算を1つ返す。存在しない場合はヌル値を返す。`get_computations` がtrueの場合、この値を含むすべての値がフェッチされる（アーカイブまたは削除されていない限り）。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Amplitude の応答で最もよく使用される可能性があるパラメーターを次の表に示します。
 
@@ -40,7 +40,7 @@ Amplitude の応答で最もよく使用される可能性があるパラメー�
 | `is_control` | このユーザーがコントロールグループに属している場合は true。 |
 | `recommendation_source` | この推薦文を作成するために使用されたモデルの名前 |
 | `last_updated` | この推薦文が最後に生成され、同期されたときのタイムスタンプ。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 一般的な Amplitude エンドポイント
 

@@ -22,7 +22,7 @@ OloとBrazeを統合することで、それが可能になる：
 | ----------- | ----------- |
 | Olo アカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるOloアカウントが必要である。Oloダッシュボード内の[セルフサービスWebhooksツールで](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks)Webhookサブスクリプションを設定する。 |
 | Braze Data Transformation | Olo からデータを受信するには、[Data Transformation URL]({{site.baseurl}}/data_transformation/) が必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Webhookとは、OloがBrazeにユーザーとそのアクションに関するイベントドリブンな情報を送信する方法であり、Order Placed（注文の発注）、Guest Opt In（ゲストのオプトイン）、Order Picked Up（注文の受け取り）などのイベントを含む。Olo Webhookは、一般的にアクションが実行されてから数秒以内にBrazeにイベントを配信する。
 
@@ -59,9 +59,9 @@ Olo では、Olo Webhook 設定プロセスを完了する前に、テストイ�
 このステップでは、ソース・プラットフォームから送信されるウェブフック・ペイロードを、JavaScriptオブジェクトの戻り値に変換する。
 
 1. データ変換 URL に、サポートする予定の Olo イベントのサンプルイベントペイロードを添えてリクエストを送信する。リクエストの書式については、[リクエストボディの書式を](#request-body-format)参照のこと。
-2. Data Transformation を更新し、\[**Webhook の詳細**] にサンプルイベントペイロードが表示されていることを確認します。
+2. Data Transformation を更新し、[**Webhook の詳細**] にサンプルイベントペイロードが表示されていることを確認します。
 3. 選択した Olo イベントをサポートするように Data Transformation コードを更新します。
-4. \[**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
+4. [**検証**] をクリックして、コード出力のプレビューを返し、受け入れられる `/users/track` リクエストであるかどうかを確認します。
 5. Data Transformation を保存して有効化します。
 
 #### リクエスト本文の形式
@@ -240,7 +240,7 @@ if (event_type == "UserSignedUp") {
 return brazecall;
 ```
 
-### ステップ 4:Oloウェブフックを公開する
+### ステップ4:Oloウェブフックを公開する
 
 Braze で Data Transformation を有効化したら、Olo ダッシュボード内の[セルフサービス Webhook ツール][2]を使用して Webhook を公開します。Webhook が公開されると、Data Transformation はOlo Webhook イベントメッセージの受信を開始します。
 

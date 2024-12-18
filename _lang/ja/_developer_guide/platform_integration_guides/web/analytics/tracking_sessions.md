@@ -21,7 +21,7 @@ description: "この参考記事では、Web のセッションを追跡する�
 
 ## セッションタイムアウトをカスタマイズする
 
-セッションタイムアウトをカスタマイズするには、`sessionTimeoutInSeconds` オプションを [`initialize`][session_tracking_5] 関数に渡します。`sessionTimeoutInSeconds` の最小値は 1 秒です。
+セッションタイムアウトをカスタマイズするには、`sessionTimeoutInSeconds` オプションを[`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) 関数に渡します。`sessionTimeoutInSeconds` の最小値は 1 秒です。
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30
@@ -32,13 +32,7 @@ braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 
 ## セッショントラッキングをテストする
 
-ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの \[**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
+ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]\[session_tracking_7]{: style="max-width:50%"}
+![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%"}
 
-\[session_tracking_1] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/#customizing-braze-on-startup
-\[session_tracking_3] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-\[session_tracking_5] ： https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-\[session_tracking_6] ： http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-\[session_tracking_7] ： {% image_buster /assets/img_archive/test_session.png %}
-\[session_tracking_8] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

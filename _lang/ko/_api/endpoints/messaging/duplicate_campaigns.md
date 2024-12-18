@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`campaign_id`| 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 |`name`| 필수 | 문자열 | 결과 캠페인의 이름입니다. |
 |`description`| 선택 사항 | 문자열 | 결과 캠페인의 설명 필드입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 응답

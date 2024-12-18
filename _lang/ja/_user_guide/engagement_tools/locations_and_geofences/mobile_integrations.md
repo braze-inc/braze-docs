@@ -21,7 +21,7 @@ tool: Location
 3. iOS バージョン 11 以降のデバイスの場合、ジオフェンスを機能させるには、ユーザーが位置情報へのアクセスを常に許可する必要があります。
 
 {% alert important %}
-Braze SDK バージョン 3.6.0 以降、Braze の位置情報の収集はデフォルトで無効になっています。Android `com_braze_enable_location_collection` で位置情報の収集が有効になっていることを確認するには、`braze.xml` を `true` に設定していることを確認してください。
+Braze SDK バージョン 3.6.0 以降、Braze の位置情報の収集はデフォルトで無効になっています。Android で位置情報の収集が有効になっていることを確認するには、`com_braze_enable_location_collection` を `true` に設定していることを確認してください。`braze.xml`
 {% endalert %}
 
 ## ジオフェンスの設定
@@ -32,11 +32,15 @@ Braze SDK バージョン 3.6.0 以降、Braze の位置情報の収集はデフ
 
 ### 半径
 
-地理的中心から計測されたジオフェンスの半径 (メートル単位)。すべてのジオフェンスで最小半径を 100 メートルに設定することをお勧めします。
+地理的中心から計測されたジオフェンスの半径 (メートル単位)。すべてのジオフェンスで最小半径を100～150 メートルに設定することをお勧めします。
+
+プラットフォームに関する詳しいガイダンスについては、以下のガイドを参照のこと：
+- [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence)
+- [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5)
 
 ### クールダウン
 
-ユーザーは、個々のジオフェンスで出入りを移行した後、ジオフェンスからトリガーされる通知を受け取ります。移行が発生した後、そのユーザーが個々のジオフェンスで同じ移行を繰り返さない期間があらかじめ定義されています。この期間は「クールダウン」と呼ばれ、Braze によって事前に定義されています。その主な目的は、不要なネットワーク要求を防ぐことです。
+ユーザーは、個々のジオフェンスで出入りを移行した後、ジオフェンスからトリガーされる通知を受け取ります。移行が発生した後、そのユーザーが個々のジオフェンスで同じ移行を繰り返さない期間があらかじめ定義されています。この時間は「クールダウン」と呼ばれ、Brazeによってあらかじめ設定されている。その主な目的は、不要なネットワーク要求を防ぐことです。
 
 ### テクノロジーパートナー
 

@@ -30,12 +30,12 @@ description: "この記事では、「リスト統合」Braze エンドポイン
 
 このエンドポイントを呼び出すと、10個のアイテムが返される。10を超える統合のあるリストについては、応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | string | 統合リストのページネーションを決定する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | 統合リストのページネーションを決定する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ### カーソルなし
 
@@ -90,12 +90,12 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `400 Invalid cursor` | `cursor` が有効であることを確認する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 その他のステータスコードと関連するエラーメッセージについては、[致命的なエラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 

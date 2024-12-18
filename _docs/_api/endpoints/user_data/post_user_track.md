@@ -286,9 +286,9 @@ If the `external_id` exists, the most recently updated profile with an external 
 A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 

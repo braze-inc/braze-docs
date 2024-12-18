@@ -22,7 +22,7 @@ description: "この記事では、「今後スケジュールされているキ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`messages.schedule_broadcasts` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`messages.schedule_broadcasts`の権限が必要です。
 
 ## レート制限
 
@@ -30,12 +30,12 @@ description: "この記事では、「今後スケジュールされているキ
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `end_time` | required | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 今後予定されているキャンペーンとキャンバスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `end_time` | 必須 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 今後予定されているキャンペーンとキャンバスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

@@ -35,7 +35,7 @@ noindex: true
 ### BrazeManager.swift の作成
 
 {% tabs local %}
-{% tab BrazeManager.swift の作成 %}
+{% tab BrazeManager swift を作成する %}
 
 ##### BrazeManager.swift の作成
 `BrazeManager.swift` ファイルを作成するには、_BrazeManager_ という名前の新しい Swift ファイルを作成し、目的の場所のプロジェクトに追加します。次に、`import Foundation` を SPM の `import AppboyUI` に置き換えてから (CocoaPods の場合は `import Appboy_iOS_SDK`)、`BrazeManager` クラスを作成します。これは、すべての Braze 関連のメソッドと変数をホストするために使用されます。`Appboy_iOS_SDK`
@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 ### SDK の初期化
 
 {% tabs local %}
-{% tab ステップ 1:BrazeManager.swift から SDK を初期化する %}
+{% tab ステップ 1:BrazeManager swift から SDK を初期化する %}
 
 ##### BrazeManager.swift から SDK を初期化する
 次に、SDK を初期化する必要があります。このガイドでは、すでに [SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) を Xcode プロジェクトに追加していることを前提としています。また、[ワークスペース SDK エンドポイント]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) および [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) を `Info.plist` ファイルまたは `appboyOptions` に設定する必要があります。
@@ -254,7 +254,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 次に、システムのプッシュ通知メソッドを `AppDelegate.swift` から `BrazeManager.swift` に転送し、Braze iOS SDK で処理されるようにします。
 
-###### ステップ 1:プッシュ通知コードの拡張子を作成する
+###### ステップ1:プッシュ通知コードの拡張子を作成する
 
 `BrazeManager.swift` ファイルにプッシュ通知コードの拡張子を作成し、ヘルパーファイルで提供されている目的について、より組織的な方法で読み取るようにします。以下に例を示します。
 
@@ -291,9 +291,9 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### ステップ2:リモート通知のサポート
-\[**署名および機能**] タブで、\[**バックグラウンドモード**] サポートを追加し、\[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![署名 & 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+[**署名および機能**] タブで、[**バックグラウンドモード**] サポートを追加し、[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![署名 & 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
-###### ステップ 3:リモート通知処理
+###### ステップ3: リモート通知処理
 Braze SDK は、Braze から発信されるリモートプッシュ通知を処理できます。Braze にリモート通知を転送します。SDK は Braze から発信されたものではないプッシュ通知を自動的に無視します。プッシュ通知拡張子で、`BrazeManager.swift` ファイルに次のメソッドを追加します。
 
 {% subtabs global %}
@@ -671,7 +671,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 コードのコンパイルとアプリケーションの実行に進みます。<br><br>アプリ内メッセージを送信してみてください。<br><br>`BrazeManager.swift` ファイルで、`ABKInAppMessageUIDelegate` メソッドの例のエントリにブレークポイントを設定します。アプリ内メッセージを送信し、ブレークポイントに到達したことを確認してから、さらに進みます。
 {% endalert %}
 
-### コンテンツカードによって促進された
+### コンテンツカード
 
 {% tabs local %}
 {% tab コンテンツカードの変数とメソッドの作成 %}
@@ -735,5 +735,3 @@ extension BrazeManager {
 - [高度なアプリ内メッセージ実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [高度なコンテンツカード実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
-[2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %}
-[3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 

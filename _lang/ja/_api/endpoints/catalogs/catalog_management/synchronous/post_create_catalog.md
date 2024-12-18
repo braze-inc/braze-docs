@@ -21,7 +21,7 @@ description: "この記事では、「カタログを作成」Braze エンドポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.create`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.create`の権限が必要です。
 
 ## レート制限
 
@@ -32,18 +32,18 @@ description: "この記事では、「カタログを作成」Braze エンドポ
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `catalogs` | required | 配列 | カタログ・オブジェクトを含む配列。このリクエストでは、カタログオブジェクトは 1 つのみ許可されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### カタログ・オブジェクトのパラメータ
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `name` | 必須 | string | 作成したいカタログの名前。 |
-| `description` | 必須 | string | 作成したいカタログの説明。 |
+| `name` | 必須 | 文字列 | 作成したいカタログの名前。 |
+| `description` | 必須 | 文字列 | 作成したいカタログの説明。 |
 | `fields` | required | 配列 | オブジェクトにキー `name` と `type` が含まれるオブジェクト配列。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Content-Type: application/json' \
@@ -98,7 +98,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## 応答
 
-このエンドポイントには、`201` と `400` の 2 つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `201` と `400`。
 
 ### 成功応答の例
 
@@ -180,7 +180,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -197,6 +197,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 | `invalid-fields` | `fields` が正しくフォーマットされていない。 |
 | `too-many-catalog-atoms` | 1つのリクエストにつき1つのカタログしか作成できない。 |
 | `too-many-fields` | フィールド数の上限は500である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:複数のカタログ項目の詳細のリスト"
-article_title: "取得:複数のカタログ項目の詳細のリスト"
+nav_title: "取得:複数のカタログ項目の詳細をリスト"
+article_title: "取得:複数のカタログ項目の詳細をリスト"
 search_tag: Endpoint
 page_order: 3
 
@@ -21,7 +21,7 @@ description: "この記事では、「複数のカタログ項目の詳細をリ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.get_items` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.get_items`の権限が必要です。
 
 ## レート制限
 
@@ -29,25 +29,25 @@ description: "この記事では、「複数のカタログ項目の詳細をリ
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## クエリーパラメーター
 
 このエンドポイントへの各呼び出しにより、50の項目が返されます。50を超える項目のあるカタログについては、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | string | カタログ項目のページネーションを決定する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | カタログ項目のページネーションを決定する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 このエンドポイントにはリクエストボディがない。
 
-## リクエスト例
+## 例のリクエスト
 
 ### カーソルなし
 
@@ -67,7 +67,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 応答
 
-このエンドポイントには、`200`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`200`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
@@ -140,12 +140,12 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
 | `catalog-not-found` | カタログ名が有効であることを確認する。 |
-| `invalid-cursor` | `cursor` が有効であることを確認する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `invalid-cursor` | `cursor` が有効であることを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

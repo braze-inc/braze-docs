@@ -116,9 +116,7 @@ After creating your webhook, you can do a test send to check the webhook respons
 {% endtab %}
 {% tab News Feed %}
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 
@@ -225,7 +223,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

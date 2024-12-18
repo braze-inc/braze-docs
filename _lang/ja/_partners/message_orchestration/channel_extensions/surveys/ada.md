@@ -20,8 +20,8 @@ Braze と Ada の統合により、自動化された Ada の会話から収集�
 | ----------- | ----------- |
 | Ada アカウント | このパートナーシップを利用するには、BrazeとAnswer Utilitiesのアプリケーションを有効にした[Ada](https://ada.cx)アカウントが必要である。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -35,7 +35,7 @@ Braze と Ada を統合するには、まず Ada ダッシュボードで Braze 
 
 ### ステップ1:AdaでBrazeアプリをセットアップする
 
-Ada ダッシュボードで **\[Settings] > \[Integrations] > \[Handoff Integrations]** の順に進みます。
+Ada ダッシュボードで **[Settings] > [Integrations] > [Handoff Integrations]** の順に進みます。
 
 Brazeの横にある「**Connect**」をクリックし、以下の情報を入力する：
 - **RESTエンドポイント**：Braze RESTエンドポイントのURLを入力する。 
@@ -55,11 +55,11 @@ Braze ブロックを使用するには、ブロックをブロックドロワ�
 {% tabs ローカル %}
 {% tab イベントの追跡 %}
 
-#### \[Answer Utilities] ブロック
+#### [Answer Utilities] ブロック
 
-1. ブロックドロワーから \[Answer Utilities] ブロックを Braze ブロックの真上にドラッグします。 
+1. ブロックドロワーから [Answer Utilities] ブロックを Braze ブロックの真上にドラッグします。 
 2. **Format Date**アクションを選択し、**Date**フィールドに`today` 。
-3. \[**Output Format**] フィールドに「`iso`」と入力します。\[**Save Response As Variable**] で `iso_time` という名前の**形式付き日付**の変数を作成します。
+3. [**Output Format**] フィールドに「`iso`」と入力します。[**Save Response As Variable**] で `iso_time` という名前の**形式付き日付**の変数を作成します。
 
 ![前述のテキストで説明されているようにフィールドが入力されている Answer Utilities ブロック。]({% image_buster /assets/img/ada/ada-braze-2.png %})
 
@@ -67,7 +67,7 @@ Braze ブロックを使用するには、ブロックをブロックドロワ�
 
 **4\.**Brazeブロックの**External ID**フィールドに、前のステップでAdaが設定した`external_id` メタ変数を入力する。<br>
 **5\.****Event Name**フィールドに、追跡したいBrazeのイベント名を入力する。<br>
-**6\.**\[**Time of Event**] フィールドに、\[Answer Utilities] ブロックで作成した変数 `iso_time` を入力します。<br>
+**6\.**[**Time of Event**] フィールドに、[Answer Utilities] ブロックで作成した変数 `iso_time` を入力します。<br>
 **7\.**Brazeへのイベント投稿中に問題が発生した場合に表示されるフォールバックアンサーを選択する。
 
 ![前述のテキストで説明されているようにフィールドが入力されている Braze ブロック。]({% image_buster /assets/img/ada/ada-braze-3.png %})
@@ -77,7 +77,7 @@ Braze ブロックを使用するには、ブロックをブロックドロワ�
 
 #### Braze ブロック
 
-1. Brazeブロックの`External ID`external_id`フィールドに、前のステップでAdaが設定した`external_id` メタ変数を入力する。 
+1. Brazeブロックの**External ID**フィールドに、前のステップでAdaが設定した** メタ変数を入力する。 
 2. **Attribute Name（属性名**）フィールドに、追跡したいBraze属性の名前を入力する。 
 3. **属性値**フィールドに、設定したい値を入力する。テキスト、変数、またはテキストと変数の組み合わせである。 
 4. Brazeへの属性の投稿中に問題が発生した場合に表示されるフォールバックアンサーを選択する。

@@ -9,7 +9,7 @@ hidden: true
 # Baidu 통합
 {% multi_lang_include archive/baidu_deprecation.md %}
 
-Braze는 \[Baidu Cloud Push][14]을 사용하여 Android 장치에 푸시 알림을 보낼 수 있습니다. Baidu 클라우드 푸시를 사용하더라도 Baidu 앱 스토어를 통해 앱을 배포할 필요가 **없음**을 유의하세요.
+Braze는 [Baidu Cloud Push][14]을 사용하여 Android 장치에 푸시 알림을 보낼 수 있습니다. Baidu 클라우드 푸시를 사용하더라도 Baidu 앱 스토어를 통해 앱을 배포할 필요가 **없음**을 유의하세요.
 
 ## 1단계: Baidu 계정을 생성하세요
 
@@ -27,7 +27,7 @@ Baidu 계정을 만들려면 [Baidu 포털][7]을 방문하고 **로그인** (�
 
 ## 2단계: Baidu 개발자로 등록하세요
 
-다음으로, Baidu 개발자로 등록해야 합니다. 먼저, \[Baidu 개발자 포털][36]을 방문하여 **注册** (새 개발자 계정 만들기)를 선택하여 등록을 시작하세요.
+다음으로, Baidu 개발자로 등록해야 합니다. 먼저, [Baidu 개발자 포털][36]을 방문하여 **注册** (새 개발자 계정 만들기)를 선택하여 등록을 시작하세요.
 
 ![][37]
 
@@ -37,7 +37,7 @@ Baidu 계정을 만들려면 [Baidu 포털][7]을 방문하고 **로그인** (�
 
 ## 3단계: 귀하의 애플리케이션을 Baidu에 등록하세요
 
-귀하의 애플리케이션을 Baidu에 등록하려면 \[Baidu 프로젝트 포털][11]을 방문하고 **创建工程** (프로젝트 생성)를 클릭하십시오.
+귀하의 애플리케이션을 Baidu에 등록하려면 [Baidu 프로젝트 포털][11]을 방문하고 **创建工程** (프로젝트 생성)를 클릭하십시오.
 
 ![][10]
 
@@ -57,7 +57,7 @@ Baidu 계정을 만들려면 [Baidu 포털][7]을 방문하고 **로그인** (�
 
 ## 4단계: 귀하의 애플리케이션에 Baidu를 추가하십시오
 
-\[Baidu 푸시 SDK 포털][40]을 방문하여 최신 Baidu 클라우드 푸시 Android 소프트웨어 개발 키트를 다운로드하세요.
+[Baidu 푸시 SDK 포털][40]을 방문하여 최신 Baidu 클라우드 푸시 Android 소프트웨어 개발 키트를 다운로드하세요.
 
 ![][41]
 
@@ -164,7 +164,7 @@ Baidu는 JSON 형식으로 푸시 메시지에 추가 키-값 페어를 보내�
   }
   ```
 
-`onNotificationClicked`가 호출될 때마다 Baidu 브로드캐스트는 `customContentString`을 포함하는 \[][44] 의도를 애플리케이션에 보내야 합니다. 귀하의 애플리케이션은 `customContentString`을(를) 사용하여 클릭을 Braze에 기록합니다.
+`onNotificationClicked`가 호출될 때마다 Baidu 브로드캐스트는 `customContentString`을 포함하는 [][44] 의도를 애플리케이션에 보내야 합니다. 귀하의 애플리케이션은 `customContentString`을(를) 사용하여 클릭을 Braze에 기록합니다.
 
 다음 샘플 코드에서는 `customContentString`을 Braze에 전달하고 클릭을 기록합니다:
 
@@ -229,10 +229,10 @@ Baidu API 키 및 Baidu Secret Key를 Braze 대시보드에 입력해야 합니�
 ## 추가 자료
 
 - [Baidu 포털][7]
-- \[Baidu 개발자 포털][36]
-- \[Baidu 프로젝트 포털][11]
-- \[Baidu 푸시 SDK 포털][40]
-- \[Baidu 통합 문서][43]
+- [Baidu 개발자 포털][36]
+- [Baidu 프로젝트 포털][11]
+- [Baidu 푸시 SDK 포털][40]
+- [Baidu 통합 문서][43]
 
 [7]: https://www.baidu.com/
 [10]: {% image_buster /assets/img_archive/baidu_project.png %}

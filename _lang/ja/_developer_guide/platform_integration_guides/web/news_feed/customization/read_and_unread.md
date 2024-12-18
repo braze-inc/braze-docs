@@ -19,15 +19,14 @@ channel: news feed
 
 Brazeは、次の画像に示すように、ニュースフィードカードに未読および既読のインジケーターを提供します:
 
-![ニュースフィードカードが、時計の画像といくつかのテキストを表示しています。テキストの上隅には、カードが読まれたかどうかを示す青色または灰色の三角形があります。青い三角形はカードが読み取られたことを示します。][25]
+![ニュースフィードカードが、時計の画像といくつかのテキストを表示しています。テキストの上隅には、カードが読まれたかどうかを示す青色または灰色の三角形があります。青い三角形はカードが読まれたことを示す。]({% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %})
 
 ## インジケーターを無効にする
 
-この機能を無効にするには、次のスタイルをCSSに追加します:
+この機能を無効にするには、CSSに以下のスタイルを追加する：
 
 ``` css
 .ab-read-dot { display: none; }
 .ab-read-indicator { display: none; }
 ```
 
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

@@ -18,14 +18,14 @@ search_rank: 1
 {% tab キャンペーン分析 %}
 **キャンペーン分析**
 
-\[[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)] を使用すると、各キャンペーンとその中にあるバリアントの結果の概要、およびメッセージレベルのリアルタイムの最新情報を取得できます。期間を調整して経時的なキャンペーンのパフォーマンスを把握したり、メッセージのプレビューを表示して、テストしていた内容を確認したりできます。
+[[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)] を使用すると、各キャンペーンとその中にあるバリアントの結果の概要、およびメッセージレベルのリアルタイムの最新情報を取得できます。期間を調整して経時的なキャンペーンのパフォーマンスを把握したり、メッセージのプレビューを表示して、テストしていた内容を確認したりできます。
 
 {% endtab %}
 
 {% tab キャンバス分析 %}
 **キャンバス分析**
 
-キャンバスの最上位の統計情報を取得し、メッセージング戦略のパフォーマンスを確認するには、\[[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/)] を使用します。ライブのキャンバスを開いて、次のような主要なパフォーマンス統計情報を表示します。
+キャンバスの最上位の統計情報を取得し、メッセージング戦略のパフォーマンスを確認するには、[[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/)] を使用します。ライブのキャンバスを開いて、次のような主要なパフォーマンス統計情報を表示します。
 
 - キャンバス内の送信済みメッセージ数
 - 顧客がキャンバスに入った合計回数
@@ -46,7 +46,7 @@ search_rank: 1
 
 {% endtab %}
 
-{% tab レポートビルダ %}
+{% tab レポートビルダー %}
 **レポートビルダー**
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。
@@ -110,7 +110,7 @@ search_rank: 1
 ## ユーザーのエンゲージメントの把握
 
 {% tabs local %}
-{% tab レポートビルダ %}
+{% tab レポートビルダー %}
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。
 
@@ -130,7 +130,7 @@ search_rank: 1
 {% tab 概要データ %}
 **概要データ**
 
-\[[概要]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/)] ページを使用すると、アプリのパフォーマンスに関する重要な指標の概要と、アプリのユーザー群に関するインサイトが得られます。
+[[概要]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/)] ページを使用すると、アプリのパフォーマンスに関する重要な指標の概要と、アプリのユーザー群に関するインサイトが得られます。
 
 このページには、以下の統計情報があります。
 
@@ -160,12 +160,12 @@ search_rank: 1
 | チャネル| 利用可能な統計|
 | ------| --------------|
 | メール | 送信、オープン、一意のオープン、クリック、一意のクリック、オープン、サブスクライブ解除、バウンス、配信、レポートされたスパム |
-| プッシュ  | センド、オープン、影響を受けるオープン、バウンス、ボディクリック |
-| Web プッシュ | センド、オープン、バウンス、ボディクリック |
+| プッシュ  | 送信数、開封数、誘発された開封数、バウンス数、本文クリック数 |
+| Web プッシュ | 送信数、開封数、バウンス数、本文クリック数 |
 | アプリ内メッセージ | 印象、クリック、第1ボタンクリック、第2ボタンクリック |
 | Webhook  |  送信、エラー |
 | SMS | 運送業者への送付・送付・配達確認・配達不履行・拒否 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 このレポートを使用すると、より多くの質問に答えることができます。
 
@@ -199,7 +199,7 @@ search_rank: 1
 {% tab セグメント洞察 %}
 **セグメントインサイト**
 
-\[[セグメントインサイト]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/)] を使用すると、セグメントを比較して、以下の指標がライフサイクルの長さやセッションの頻度などに与える影響を把握できます。
+[[セグメントインサイト]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/)] を使用すると、セグメントを比較して、以下の指標がライフサイクルの長さやセッションの頻度などに与える影響を把握できます。
 
 - ユーザー層
 - プラットフォーム
@@ -216,7 +216,7 @@ search_rank: 1
 {% tab カスタムイベント %}
 **カスタムイベント**
 
-\[[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics)] ページを使用すると、カスタムイベントが発生した頻度、および各ユーザーがカスタムイベントを最後に実行した時刻を監視して、セグメンテーションに使用できます。
+[[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics)] ページを使用すると、カスタムイベントが発生した頻度、および各ユーザーがカスタムイベントを最後に実行した時刻を監視して、セグメンテーションに使用できます。
 
 このページでは、以下のことができます。
 
@@ -235,7 +235,7 @@ search_rank: 1
 {% tab 収益データ %}
 **収益データ**
 
-\[[収益]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data)] ページを使用すると、特定期間における収益と購入数、またはアプリの総収益または購入数を追跡できます。
+[[収益]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data)] ページを使用すると、特定期間における収益と購入数、またはアプリの総収益または購入数を追跡できます。
 
 このページには、以下の統計情報があります。
 
@@ -286,7 +286,7 @@ search_rank: 1
 - マーケティング戦略をどのように改善すればよいですか?
 
 {% endtab %}
-{% tab 予測チャーン %}
+{% tab 解約予測 %}
 **解約予測**
 
 [解約予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) は [Braze Predictive Suite]({{site.baseurl}}/user_guide/predictive_suite/) の最初のモデルです。解約予測を使用して予測の定義と生成を行うと、将来の解約を最小限に抑えるための先を見越したアプローチを提供できます。
@@ -299,7 +299,7 @@ search_rank: 1
 - 危険のあるユーザーに共通する行動や属性は何ですか?
 
 {% endtab %}
-{% tab レポートビルダ %}
+{% tab レポートビルダー %}
 **レポートビルダー**
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。

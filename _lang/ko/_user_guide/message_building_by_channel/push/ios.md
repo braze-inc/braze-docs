@@ -7,10 +7,10 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: iOS
-description: "이 랜딩 페이지에는 브레이즈에 대한 모든 것이 iOS 푸시 전용으로 나열되어 있습니다."
+description: "이 랜딩 페이지에는 Braze에 대한 모든 것이 iOS 푸시 전용으로 나열되어 있습니다."
 
 guide_top_header: "iOS 푸시"
-guide_top_text: "다음 문서에는 브레이즈에 대한 모든 iOS 푸시 관련 내용이 나열되어 있습니다."
+guide_top_text: "다음 문서에는 Braze에 대한 모든 iOS 푸시 관련 내용이 나열되어 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:

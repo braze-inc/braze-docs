@@ -14,11 +14,11 @@ channel:
 
 # 上級実装ガイド
 
-> このオプションの高度な実装ガイドでは、アプリ内メッセージコードに関する考慮事項、当社のチームが構築した3つのカスタムユースケース、および付属のコードスニペットについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-android-demo-app)Braze Demo リポジトリにアクセスしてください！この実装ガイドは、Kotlin 実装を中心に扱っていますが、興味のある方のために Java のスニペットが提供されています。HTML の実装をお探しですか?Braze の[HTML テンプレートリポジトリ](https://github.com/braze-inc/in-app-message-templates)をご確認ください。
+> このオプションの上級実装ガイドでは、アプリ内メッセージコードに関する考慮事項、Braze チームが作成した 3 つのカスタムユースケース、付属のコードスニペットについて説明します。Braze Demo リポジトリには[こちら](https://github.com/braze-inc/braze-growth-shares-android-demo-app)からアクセスできます。この実装ガイドは、Kotlin 実装を中心に扱っていますが、興味のある方のために Java のスニペットが提供されています。HTML の実装をお探しですか?Braze の[HTML テンプレートリポジトリ](https://github.com/braze-inc/in-app-message-templates)をご確認ください。
 
 ## コードに関する考慮事項
 
-次のガイドでは、デフォルトのアプリ内メッセージに加えて使用する、オプションのカスタムデベロッパーインテグレーションについて説明します。各ユースケースにはカスタムビューコンポーネントとファクトリーが必要に応じて含まれており、機能を拡張したり、アプリ内メッセージの外観をネイティブにカスタマイズしたりするためのサンプルが用意されています。同様の結果を得る方法が複数ある場合があります。最適な実装は、特定のユースケースによって異なります。
+次のガイドでは、デフォルトのアプリ内メッセージに加えてオプションで使用できる、開発者向けカスタム統合機能について説明します。各ユースケースにはカスタムビューコンポーネントとファクトリーが必要に応じて含まれており、機能を拡張したり、アプリ内メッセージの外観をネイティブにカスタマイズしたりするためのサンプルが用意されています。同様の結果を得る方法が複数ある場合があります。最適な実装は、特定のユースケースによって異なります。
 
 ### カスタムファクトリー
 
@@ -327,26 +327,30 @@ private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessa
 {% tabs %}
 {% tab Kotlin %}
 **カスタム属性を割り当てる**<br>
-ユーザーが \[送信] を押した後、ビューサブクラスを使用して、属性とそれに対応する選択済みの値を Braze に渡し、`messageClickableView.performClick()` を呼び出してアプリ内メッセージを閉じます。
+ユーザーが [送信] を押した後、ビューサブクラスを使用して、属性とそれに対応する選択済みの値を Braze に渡し、`messageClickableView.performClick()` を呼び出してアプリ内メッセージを閉じます。
 
 ```kotlin
     override fun onClick(v: View?) {
-        val selectedTeam = spinner.selectedItem as String;
-        Braze.getInstance(ctx).getCurrentUser<BrazeUser>()?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        val selectedTeam = spinner.selectedItem as String
         messageClickableView.performClick()
+        Braze.getInstance(ctx).getCurrentUser { brazeUser ->
+            brazeUser?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        }
     }
 ```
 {% endtab %}
 {% tab Java %}
 **カスタム属性を割り当てる**<br>
-ユーザーが \[送信] を押した後、ビューサブクラスを使用して、属性とそれに対応する選択済みの値を Braze に渡し、`messageClickableView.performClick()` を呼び出してアプリ内メッセージを閉じます。
+ユーザーが [送信] を押した後、ビューサブクラスを使用して、属性とそれに対応する選択済みの値を Braze に渡し、`messageClickableView.performClick()` を呼び出してアプリ内メッセージを閉じます。
 
 ```java
     @Override
     public void onClick(View v) {
-        String selectedTeam = (String)spinner.selectedItem ;
-        Braze.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
-        messageClickableView.performClick()
+        String selectedTeam = (String) spinner.getSelectedItem();
+        messageClickableView.performClick();
+        Braze.getInstance(ctx).getCurrentUser(brazeUser -> {
+            brazeUser.setCustomUserAttribute("FavoriteTeam", selectedTeam);
+        });
     }
 ```
 {% endtab %}
@@ -533,7 +537,6 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 {% endtabs %}
 
 #### アプリ内メッセージタッチのインターセプト
-![Androidデバイスが設定とトグルの行を表示しています。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![Androidデバイスが設定とトグルの行を表示しています。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide_android.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 カスタムフルアプリ内メッセージボタンを正しく機能させるには、アプリ内メッセージのタッチをインターセプトすることが重要です。デフォルトでは、すべてのアプリ内メッセージビューに`onClick`リスナーが追加されるため、ユーザーはボタンなしでメッセージを閉じることができます。カスタムボタンなど、ユーザー入力に応答するカスタムコントロールを追加する場合は、通常どおりビューに`onClick`リスナーを登録できます。カスタムコントロールの外側をタッチすると、通常通りアプリ内メッセージが閉じられ、カスタムコントロールが受け取ったタッチはあなたの`onClick`リスナーを呼び出します。 
 
-[1]: {% image_buster /assets/img/iam_implementation_guide_android.png %}

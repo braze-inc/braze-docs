@@ -32,7 +32,7 @@ Braze SDK では、以下を含むすべてのサーバー通信が自動的に�
 
 このプロトコルは、次の点を除いて自動リクエスト処理と同じです。
 - カスタム属性とカスタムイベントデータが、ユーザーセッションを通じてサーバーに自動でフラッシュされません。
-- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、`Braze.Configuration.Api.RequestPolicy.manual` の[ドキュメント][2]を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
+- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、`Braze.Configuration.Api.RequestPolicy.manual` の[ドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual)を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
 
 ### ユーザーデータの手動フラッシュ
 
@@ -58,7 +58,7 @@ AppDelegate.braze?.requestImmediateDataFlush()
 
 ### 起動時のリクエストポリシーの設定
 
-これらのポリシーは、アプリの起動時に Braze 構成を初期化する際に設定できます。`configuration` オブジェクトで、次のコードスニペットに示すように [`Braze.Configuration.Api.RequestPolicy`][3] を設定します:
+これらのポリシーは、アプリの起動時に Braze 構成を初期化する際に設定できます。`configuration` オブジェクトで、次のコードスニペットに示すように [[`Braze.Configuration.Api.RequestPolicy`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum)] を設定します:
 
 {% tabs %}
 {% tab SWIFT %}
@@ -78,5 +78,3 @@ configuration.api.requestPolicy = BRZRequestPolicyAutomatic;
 {% endtabs %}
 
 
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum

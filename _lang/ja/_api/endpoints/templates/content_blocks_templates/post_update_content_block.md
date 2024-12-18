@@ -19,7 +19,7 @@ description: "この記事では、「コンテンツブロックを更新」Bra
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
 ## 前提条件
-このエンドポイントを使用するには、`content_blocks.update`権限を持つ [API キー]({{site.baseurl}}/api/api_key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`content_blocks.update`の権限が必要です。
 
 ## レート制限
 
@@ -47,21 +47,21 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `content_block_id`|	必須 |	string | コンテンツブロックの API 識別子。|
-| `name` | オプション | string | コンテンツブロックの名前。100 文字未満でなければなりません。 |
-| `description` | オプション | string | コンテンツブロックの説明。250 文字未満でなければなりません。 |
-| `content` | オプション | string | コンテンツブロック内のHTMLまたはテキストコンテンツ。
-| `state` | オプション | string | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
+| `content_block_id`|	必須 |	文字列 | コンテンツブロックの API 識別子。|
+| `name` | オプション | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
+| `description` | オプション | 文字列 | コンテンツブロックの説明。250 文字未満でなければなりません。 |
+| `content` | オプション | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。
+| `state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
 | `tags` | オプション | 文字列の配列 | [タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)はすでに存している必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "content_block_id" :"content_block_id", 
+  "content_block_id" :"content_block_id",
   "name": "content_block",
   "description": "This is my Content Block",
   "content": "HTML or text content within block",
@@ -85,7 +85,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Tags must be an array` | タグは文字列の配列としてフォーマットされなければならない。例えば、`["marketing", "promotional", "transactional"]` 。 |
 | `All tags must be strings` | タグが引用符 (`""`) で囲まれていることを確認すること。 |
 | `Some tags could not be found` | コンテンツブロックの作成時にタグを追加するには、そのタグがすでにBrazeに存在している必要がある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

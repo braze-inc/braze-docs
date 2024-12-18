@@ -11,7 +11,7 @@ channel:
 
 # バッジ
 
-> バッジは小さなアイコンで、ユーザーの注意を引くのに最適です。Brazeのダッシュボードを使用してプッシュ通知を作成する際に、[**設定**][1]タブでバッジカウントを指定できます。アプリケーションの [`applicationIconBadgeNumber`][20] プロパティまたは[リモート通知ペイロード][21]を使用して、バッジ数を手動で更新することもできます。 
+> バッジは小さなアイコンで、ユーザーの注意を引くのに最適です。Brazeのダッシュボードを使用してプッシュ通知を作成する際に、[**設定**]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/)タブでバッジカウントを指定できます。アプリケーションの [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) プロパティまたは[リモート通知ペイロード](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1)を使用して、バッジ数を手動で更新することもできます。 
 
 Brazeは、アプリがフォアグラウンドにあるときにBraze通知を受信すると、バッジカウントを自動的にクリアします。バッジ番号を手動で0に設定すると、通知センターの通知もクリアされます。 
 
@@ -52,6 +52,3 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
-[20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
-[21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1

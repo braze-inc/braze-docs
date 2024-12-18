@@ -27,13 +27,13 @@ description: "この記事では、「ユーザーエイリアスの更新」Bra
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.alias.update` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.alias.update`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -50,8 +50,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | --------- | --------- | ----------- |
-| `alias_updates` | required | 更新ユーザーエイリアスオブジェクトの配列 | [ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。<br><br> `old_alias_name`、`new_alias_name`、`alias_label` の詳細については、「[ユーザーエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)」を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `alias_updates` | 必須 | 更新ユーザーエイリアスオブジェクトの配列 | [ユーザー別名オブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。<br><br> `old_alias_name`、`new_alias_name`、`alias_label` の詳細については、「[ユーザーエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)」を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### 更新ユーザーエイリアスオブジェクト指定のエンドポイントリクエスト本体
 
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/update' \
 --header 'Content-Type: application/json' \

@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_id_renames` | Requis | Tableau des objets Renommer des identifiants externes | Afficher l’exemple de demande et les limitations suivantes pour la structure de l’objet Renommer des identifiants externes. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - Le `current_external_id` doit être l’ID principal de l’utilisateur et ne peut pas être un ID obsolète
 - Le `new_external_id` ne doit pas déjà être utilisé comme ID principal ou ID obsolète

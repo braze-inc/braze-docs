@@ -19,15 +19,15 @@ BrazeとAirbyteの統合により、ユーザーはデータパイプライン�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Airbyte Cloud アカウント | この統合を利用するには、[Airbyte Cloud](https://cloud.airbyte.io/workspaces)アカウントが必要である。 |
-| Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | \[REST エンドポイント URL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Braze RESTエンドポイント | お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-1. Airbyte Cloud アカウントで **\[Sources] > \[+ New Source] > \[Set up the Source]** に移動します。
-2. ソース名として「Braze」を入力し、ソースのドロップダウンから \[**Braze**] を選択します。
-3. エンドポイント URL、Braze REST API キー、および開始日を指定します。\[**Set up Source**] をクリックします。
+1. Airbyte Cloud アカウントで **[Sources] > [+ New Source] > [Set up the Source]** に移動します。
+2. ソース名として「Braze」を入力し、ソースのドロップダウンから [**Braze**] を選択します。
+3. エンドポイント URL、Braze REST API キー、および開始日を指定します。[**Set up Source**] をクリックします。
 
 ### 対応する同期モード
 

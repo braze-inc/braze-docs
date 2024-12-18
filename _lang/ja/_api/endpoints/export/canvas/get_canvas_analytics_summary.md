@@ -28,21 +28,21 @@ description: "この記事では、エクスポートキャンバスデータサ
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | string | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `ending_at` | required | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
+| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `ending_at` | 必須 | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
 | `starting_at` | オプション* | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートを開始する日付。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
-| `length` | オプション* | string | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上14以下でなければなりません。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
+| `length` | オプション* | 文字列 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上14以下でなければなりません。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
 | `include_variant_breakdown` | オプション | ブール値 | バリアント統計を含めるかどうか（デフォルトは`false`）。  |
 | `include_step_breakdown` | オプション | ブール値 | ステップ統計を含めるかどうか（デフォルトは`false`）。 |
 | `include_deleted_step_data` | オプション | ブール値 | 削除されたステップのステップ統計を含めるかどうか（デフォルトは`false`）。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 {% raw %}
 ```
-curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-05:00&starting_at=2018-05-28T23:59:59-05:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
@@ -97,7 +97,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSVおよびAPIエクスポートのヘルプについては、[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

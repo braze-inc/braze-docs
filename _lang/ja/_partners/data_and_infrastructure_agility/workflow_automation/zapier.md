@@ -18,8 +18,8 @@ Braze と Zapier のパートナーシップでは、Braze API と Braze [Webhoo
 | 要件 | 説明 |
 |---|---|
 | Zapierアカウント | このパートナーシップを活用するには、Zapier アカウントが必要です。 |
-| Braze RESTエンドポイント | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL][0] に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][0] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -31,21 +31,21 @@ Zapierの用語を使えば、"ザップ "とはアプリやサービスをつ�
 
 WordPressの例を使って、Zapierプラットフォームで、WordPressの新しい投稿が追加されたときにトリガーされるようにzapを設定し、**Post Statusと** **Post Typeとして** **Publishedと** **Postsを**選択する。 
 
-![Zapierプラットフォームで、zap 内でトリガーとして「new comment」、「any webhook」、「new post」のいずれかを選択する。この例では「new post」が選択されている。] \[5]
+![Zapierプラットフォームで、zap 内でトリガーとして「new comment」、「any webhook」、「new post」のいずれかを選択する。この例では「new post」が選択されている。] [5]
 
-![Zapier プラットフォームで、zap 内で目的の post status と post type を選択してトリガーを設定する。この例では「Publishedと「Posts」が選択されている。] \[6]
+![Zapier プラットフォームで、zap 内で目的の post status と post type を選択してトリガーを設定する。この例では「Publishedと「Posts」が選択されている。] [6]
 
 ### ステップ2:アクションウェブフックを追加する
 
 次に zap アクションを定義します。zap が有効になり、トリガーが検出されると、アクションが自動的に発生します。
 
-この例の続きで、BrazeのエンドポイントにJSONとしてPOSTリクエストを送りたい。これを行うには、\[**Apps**] の下にある \[**Webhooks**] オプションを選択します。
+この例の続きで、BrazeのエンドポイントにJSONとしてPOSTリクエストを送りたい。これを行うには、[**Apps**] の下にある [**Webhooks**] オプションを選択します。
 
 ![][7]
 
-### ステップ3:Braze POSTをセットアップする
+### ステップ 3:Braze POSTをセットアップする
 
-Webhook を設定するときに、次の設定を使用して Webhook URL に Braze REST エンドポイントを指定します。完了したら \[**Publish**] を選択します。
+Webhook を設定するときに、次の設定を使用して Webhook URL に Braze REST エンドポイントを指定します。完了したら [**Publish**] を選択します。
 
 - **方法**：POST
 - **Webhook URL**: `https://rest.iad-01.braze.com/canvas/trigger/send`

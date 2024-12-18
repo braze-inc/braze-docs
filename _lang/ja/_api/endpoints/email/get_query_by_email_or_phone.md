@@ -21,11 +21,11 @@ description: "この記事では、メールアドレスまたは電話番号を
 
 | パラメーター | required | データ型 | 説明 |
 | --- | --- | --- | --- |
-| `email` | はい | string | ユーザーのメールアドレス （最低1個、最大50個のアドレスを含むこと）。 |
-| `phone` | はい | string | ユーザーの電話番号 （最低1個、最大50個の電話番号を含むこと）。これは、E.164 形式で指定することをお勧めします。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `email` | はい | 文字列 | ユーザーのメールアドレス （最低1個、最大50個のアドレスを含むこと）。 |
+| `phone` | はい | 文字列 | ユーザーの電話番号 （最低1個、最大50個の電話番号を含むこと）。これは、E.164 形式で指定することをお勧めします。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions?phone=+12123355555&email=example%40braze.com' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
@@ -33,7 +33,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 
 ## 応答
 
-エントリーは降順で表示される。
+エントリは降順で表示されます。
 
 ```json
 Content-Type: application/json

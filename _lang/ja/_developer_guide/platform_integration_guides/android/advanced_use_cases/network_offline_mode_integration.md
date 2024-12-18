@@ -11,7 +11,7 @@ description: "このリファレンス記事では、Android または FireOS �
 
 # ネットワークオフラインモード
 
-> [ネットワークオフラインモードは][1]、Braze SDK からの送信ネットワークリクエストを、ランタイム中の任意の時点で一時停止または再開するオプション機能です。オフライン状態でもイベントは失われません。このリファレンス記事では、このモードを統合する方法を取り上げます。
+> [ネットワークオフラインモードは](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/outbound-network-requests-offline.html?query=var%20outboundNetworkRequestsOffline:%20Boolean)、Braze SDK からの送信ネットワークリクエストを、ランタイム中の任意の時点で一時停止または再開するオプション機能です。オフライン状態でもイベントは失われません。このリファレンス記事では、このモードを統合する方法を取り上げます。
 
 ## 使用例
 
@@ -34,4 +34,3 @@ Braze.setOutboundNetworkRequestsOffline(true)
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/outbound-network-requests-offline.html?query=var%20outboundNetworkRequestsOffline:%20Boolean

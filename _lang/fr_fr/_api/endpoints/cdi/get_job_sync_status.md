@@ -30,7 +30,7 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `integration_id` | Requis | Chaîne de caractères | ID d'intégration. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de recherche
 
@@ -39,7 +39,7 @@ Chaque appel à cet endpoint renverra 10 éléments. Pour une intégration avec 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination de l'état de synchronisation. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -96,7 +96,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `partial` | Certaines lignes n'ont pas été synchronisées en raison d'erreurs. |
 | `error` | Aucune ligne n'a été synchronisée. |
 | `config_error` | Une erreur s'est produite dans la configuration de l'intégration. Vérifiez votre configuration d'intégration. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Résolution des problèmes
 
@@ -106,7 +106,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | --- | --- |
 | `400 Invalid cursor` | Vérifiez que votre `cursor` est valide. |
 | `400 Invalid integration ID` | Vérifiez que votre `integration_id` est valide. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Pour connaître les autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 

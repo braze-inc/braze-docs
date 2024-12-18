@@ -5,12 +5,12 @@ page_order: 15
 layout: dev_guide
 search_rank: 1
 guide_top_header: "おすすめ"
-guide_top_text: "Brazeで推薦のステップアップを図ろう。ここでは、レコメンデーションエンジンの設定について知っておくべきことをまとめ、ユーザーが実際に欲しいアイテムやコンテンツを提案できるようにする。AIを使ったカスタマーエクスペリエンスのカスタマイズから、リキッドやコネクテッドコンテンツを使った独自のエンジンの開発まで、あらゆるレコメンデーションに必要なすべてが見つかる。"
+guide_top_text: "Brazeで推薦のステップアップを図ろう。ここでは、レコメンデーションエンジンの設定について知っておくべきことをまとめ、ユーザーが実際に欲しいアイテムやコンテンツを提案できるようにする。AI を使ったエクスペリエンスのカスタマイズから、Liquid やコネクテッドコンテンツを使った独自のエンジンの開発まで、すべてのおすすめを価値あるものとするために必要な情報がすべて提供されています。"
 description: "このランディングページでは、Brazeでのレコメンデーションエンジンの構築と使用に関する記事を掲載している。"
 
 guide_featured_title: "記事"
 guide_featured_list:
-- name: 推薦について
+- name: おすすめについて
   link: /docs/user_guide/brazeai/recommendations/about_item_recommendations/
   image: /assets/img/braze_icons/book-closed.svg
 - name: AI 項目のレコメンデーション

@@ -33,14 +33,14 @@ description: "이 문서에서는 카탈로그 선택 Braze 엔드포인트 만�
 | 매개변수      | 필수 | 데이터 유형 | 설명          |
 | -------------- | -------- | --------- | -------------------- |
 | `catalog_name` | 필수 | 문자열    | 카탈로그의 이름입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
 | 매개변수   | 필수 | 데이터 유형 | 설명                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `selection` | 필수 | 객체    | 선택 기준이 포함된 개체입니다. 선택 개체에는 `name`, `description`, `filters`, `results_limit`, `sort_field`, `sort_order` 이 포함될 수 있습니다 . |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -77,7 +77,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `boolean`  | `is`                                                    |
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 응답
 
@@ -133,6 +133,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `invalid-sort-field`                 | 선택 정렬 필드가 유효한지 확인합니다.                                                   |
 | `invalid-sort-order`                 | 선택 정렬 순서가 올바른지 확인합니다.                                                   |
 | `selection-contains-too-many-arrays` | 선택 항목에 `array` 유형이 있는 필드가 두 개 이상 포함되어 있는지 확인합니다. 하나만 지원됩니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

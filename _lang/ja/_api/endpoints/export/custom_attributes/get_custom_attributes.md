@@ -18,7 +18,7 @@ description: "この記事では、BrazeのExport custom attributesエンドポ�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`custom_attributes.get` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`custom_attributes.get`の権限が必要です。
 
 ## レート制限
 
@@ -28,12 +28,12 @@ description: "この記事では、BrazeのExport custom attributesエンドポ�
 
 このエンドポイントへの各コールにより、50の属性が返されます。50を超える属性については、次のレスポンス例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | string | カスタム属性のページネーションを決定する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | カスタム属性のページネーションを決定する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ### カーソルなし
 

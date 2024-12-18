@@ -24,4 +24,7 @@ guide_menu_list:
 - name: WhatsApp 채널
   link: /docs/compliance_documentation_whatsapp/
   image: /assets/img/braze_icons/channel-whatsapp.svg
+- name: LINE 채널
+  link: /docs/compliance_documentation_line/
+  image: /assets/img/braze_icons/channel-line.svg
 ---

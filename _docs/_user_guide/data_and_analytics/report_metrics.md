@@ -78,8 +78,8 @@ These users have been automatically unsubscribed from all future push notificati
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><i>Bounces</i> :Count</li>
-        <li><i>Bounce %</i> or <i>Bounce Rate %</i>: (Sends - Bounces) / (Sends)</li>
+        <li><i>Bounces</i>: Count</li>
+        <li><i>Bounce %</i> or <i>Bounce Rate %</i>: (Bounces) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -226,7 +226,7 @@ In-App Message
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} This defined event is determined by you when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards, this count begins when they view a Content Card for the first time.
 
 #### In-app messages
 
@@ -249,6 +249,18 @@ In-App Message
 When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, *Total Conversions* can increase once for each time the user logs an impression for a new instance of the in-app message campaign. 
 
 For example, if a user triggers an in-app message twice and converts after each in-app message impression (resulting in two conversions), then *Total Conversions* will increase by two. However, if there was only one in-app message impression followed by two conversion events, only one conversion will be logged, and *Total Conversions* will increase by one.
+
+{% endapi %}
+
+{% api %}
+
+### Close Message
+
+{% apitags %}
+In-App Message
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Close Message' %}
 
 {% endapi %}
 
@@ -433,6 +445,66 @@ iOS Push, Android Push
 {% multi_lang_include metrics.md metric='Influenced Opens' %}
 
 <span class="calculation-line">Calculation: (Influenced Opens) / (Deliveries)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Lifetime Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Lifetime Value Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}
+
+{% endapi %}
+
+{% api %}
+
+### Average Daily Revenue
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS,LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Average Daily Revenue' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Purchases
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Purchases' %}
+
+{% endapi %}
+
+{% api %}
+
+### Daily Revenue Per User
+
+{% apitags %}
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, LINE
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
 
 {% endapi %}
 
@@ -748,7 +820,7 @@ Content Cards
 In-App Message, Content Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %} For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
+{% multi_lang_include metrics.md metric='Total Impressions' %} This number is a sum of the number of impression events that Braze receives from the SDKs. For Content Cards, this is the total count of impressions logged for a given Content Card. This can increment multiple times for the same user.
 
 For in-app messages, if there are multiple devices and re-eligibility is off, the user should only see the in-app message once. Even if the user uses multiple devices, they will only see it on the first device that is targeted. This assumes that the profile has consolidated devices and a user has one user ID that they are logged into across devices. If re-eligibility is on an impression is logged for every time that user sees the in-app message.
 

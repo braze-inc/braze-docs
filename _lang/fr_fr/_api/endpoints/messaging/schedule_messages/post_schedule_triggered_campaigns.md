@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> Utilisez cet endpoint pour envoyer des messages de campagne créés dans le tableau de bord via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message. 
+> Utilisez cet endpoint pour envoyer des messages de campagne créés dans le tableau de bord via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message.
 
 Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
@@ -61,14 +61,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Requis|Chaîne de caractères| Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
-| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). | 
+|`campaign_id`|Requis|Chaîne de caractères| Voir [identifiant de la campagne]({{site.baseurl}}/api/identifier_types/)|
+| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `trigger_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir les [propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
 | `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

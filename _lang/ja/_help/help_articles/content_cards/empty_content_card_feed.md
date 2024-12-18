@@ -1,6 +1,6 @@
 ---
-nav_title: 空のコンテンツ・カード・フィード
-article_title: 空のコンテンツ・カード・フィード
+nav_title: 空のコンテンツカードフィード
+article_title: 空のコンテンツカードフィード
 page_order: 0
 
 page_type: solution

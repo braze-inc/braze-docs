@@ -28,13 +28,13 @@ description: "この記事では、「スケジュールされた API トリガ�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`canvas.trigger.schedule.update`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.trigger.schedule.update`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -53,14 +53,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|必須|string| [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `schedule_id` | オプション | string | 更新する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
-|`schedule` | required | オブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
+|`canvas_id`|必須|文字列| [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `schedule_id` | オプション | 文字列 | 更新する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
+|`schedule` | 必須 | オブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/update' \
 --header 'Content-Type: application/json' \

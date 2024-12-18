@@ -16,12 +16,12 @@ Braze と RudderStack の統合により、Braze Currents を利用して Braze 
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | --- | --- |
 | RudderStackアカウント | このパートナーシップを活用するには、[RudderStack アカウント](https://app.rudderstack.com/login)が必要です。 |
 | Braze 宛先 | RudderStack で [Braze を宛先として設定する]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack/#integration)ことをお勧めします。 |
 | Currents | RudderStack にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -33,7 +33,7 @@ Braze と RudderStack の統合により、Braze Currents を利用して Braze 
 
 ### ステップ2:現在の作成
 
-Braze で **\[Currents] > \[+ Currents を作成] > \[RudderStack のエクスポート]** に移動します。統合名、連絡先メール、RudderStack Webhook URL (キーフィールドに表示されます)、およびRudderStack リージョンを指定します。 
+Braze で **[Currents] > [+ Currents を作成] > [RudderStack のエクスポート]** に移動します。統合名、連絡先メール、RudderStack Webhook URL (キーフィールドに表示されます)、およびRudderStack リージョンを指定します。 
 
 ### ステップ3:イベントのエクスポート
 

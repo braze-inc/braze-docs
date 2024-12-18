@@ -22,7 +22,7 @@ Braze は送信後14日間、送信分析を保存します。キャンペーン
 
 ## 前提条件
 
-このエンドポイントはAPIキャンペーン専用である。このエンドポイントを使用するには、`sends.data_series` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントはAPIキャンペーン専用である。このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`sends.data_series`の権限が必要です。
 
 ## レート制限
 
@@ -33,12 +33,12 @@ Braze は送信後14日間、送信分析を保存します。キャンペーン
 | パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- |------------ |
 | `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `send_id` | 必須 | string | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `length` | required | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
-| `ending_at` | オプション | 日時 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | データシリーズが終了する日付。デフォルトはリクエストの時刻です。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `send_id` | 必須 | 文字列 | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例 
+## 例のリクエスト
 
 {% raw %}
 ```

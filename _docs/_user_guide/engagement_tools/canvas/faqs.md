@@ -34,10 +34,12 @@ When you stop a Canvas, the following applies:
 
 #### In-app messages in Canvas
 
-In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they will still receive the in-app message upon their next session start, as long as the in-app message hasn't expired yet.
+In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they'll still receive the in-app message upon their next session start as long as the in-app message hasn't expired yet.
+
+It's possible for a user to start a session before the Canvas is stopped, but not be shown the in-app message immediately. This can occur if the in-app message is triggered by a custom event or is delayed. This means it's possible for a user to log an in-app message impression and "receive" the in-app message after the Canvas is stopped. However, the user would have had to start the session before the Canvas is stopped, but **after** they received the Canvas step.
 
 {% alert note %}
-Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they'll receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
 ### When does an exception event trigger?
@@ -102,6 +104,10 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 ### Why does the number of users entering a Canvas not match the expected number?
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
+
+### What happens to anonymous users during their Canvas journey?
+
+While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 

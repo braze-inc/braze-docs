@@ -8,9 +8,6 @@ page_type: landing
 search_tag: Partner
 description: "このランディングページには、アプリ内決済やサブスクリプションをサポート・管理するインフラをモバイルアプリ開発者に提供するBrazeパートナー（Alloys）のリストが掲載されている。"
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Payment Infrastructure"
 
 valid_partner_list:

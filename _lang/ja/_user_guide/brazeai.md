@@ -5,13 +5,13 @@ page_order: 6.5
 layout: dev_guide
 search_rank: 12
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup>は、エンゲージメント戦略のための創造性、パーソナライゼーション、最適化のための参入障壁を低くする、アクセシブルで使いやすいツールの集合体に力を与えます。BrazeAI<sup>TM</sup> 機能を使用すると、信頼できるアドバイザーを使用して、クリエイティビティを導き、より良い決定を行い、顧客のためにユーザエクスペリエンスを最適化することができます。"
-description: "BrazeAI<sup>TM</sup>は、エンゲージメント戦略のための創造性、パーソナライゼーション、最適化のための参入障壁を低くする、アクセシブルで使いやすいツールの集合体に力を与えます。"
+guide_top_text: "BrazeAI<sup>TM</sup> は、お客様のエンゲージメント戦略のために、創造性、パーソナライゼーション、および最適化の面で参入障壁を低くする、利用可能で使いやすいツールセットを強化するものです。BrazeAI<sup>TM</sup> の信頼できるアドバイザー機能を使用して、自分の創造性を伸ばし、より良い決定を行い、顧客のユーザーエクスペリエンスを最適化することができます。"
+description: "BrazeAI<sup>TM</sup> は、お客様のエンゲージメント戦略のために、創造性、パーソナライゼーション、および最適化の面で参入障壁を低くする、利用可能で使いやすいツールセットを強化するものです。"
 
 Tool:
   - Dashboard
 
-guide_featured_title: "特長"
+guide_featured_title: "機能"
 guide_featured_list:
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/

@@ -35,15 +35,15 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 **ステップ:**
 
-1. \[**キャンペーン**] ページに移動して、<i class="fas fa-plus"></i> \[**キャンペーンを作成**] をクリックします。
-2. \[**WhatsApp**] を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は \[**マルチチャンネルキャンペーン**] を選択します。
+1. [**キャンペーン**] ページに移動して、<i class="fas fa-plus"></i> [**キャンペーンを作成**] をクリックします。
+2. [**WhatsApp**] を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は [**マルチチャンネルキャンペーン**] を選択します。
 3. キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、\[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と \[[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
-   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、\[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
 5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% alert tip %}
-キャンペーン内のすべてのメッセージが類似しているか、同じコンテンツを持っている場合、バリアントを追加する前にメッセージを作成する。その後、\[**バリアントを追加**] ドロップダウンから \[**バリアントをコピー**] を選択できます。
+キャンペーン内のすべてのメッセージが類似しているか、同じコンテンツを持っている場合、バリアントを追加する前にメッセージを作成する。その後、[**バリアントを追加**] ドロップダウンから [**バリアントをコピー**] を選択できます。
 {% endalert %}
 
 {% endtab %}
@@ -51,12 +51,16 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 **ステップ:**
 
-1. キャンバス作成ツールを使用して \[[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
+1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
 2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
-3. \[[ステップスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)] を選択し、必要に応じて遅延を指定します。
+3. [[ステップスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)] を選択し、必要に応じて遅延を指定します。
 4. 必要に応じて、このステップのオーディエンスをフィルターします。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込むことができます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
-5. \[[昇進動作]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)] を選択します。
+5. [[昇進動作]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)] を選択します。
 6. このメッセージと組み合わせる他のメッセージングチャネルを選択します。
+
+{% alert tip %}
+アクションベースのキャンバスがインバウンド WhatsApp メッセージによってトリガーされる場合、次のアクションパスまで、どのキャンバスステップでも WhatsApp プロパティを参照できます。
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -86,7 +90,7 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 #### 変数
 
-Meta Business Manager で WhatsApp テンプレートを作成する際に変数を追加した場合、それらはメッセージ作成画面に空白として表示されます。これらの空白をリキッドまたはプレーンテキストに置き換える。プレーン・テキストを使うには、二重中括弧で囲まれた "text here "という書式を使う。テンプレート作成時に画像を含めることを選択した場合は、メディアライブラリから画像をアップロードするか追加する。
+Meta Business Manager で WhatsApp テンプレートを作成する際に変数を追加した場合、それらはメッセージ作成画面に空白として表示されます。これらの空白をリキッドまたはプレーンテキストに置き換える。プレーン・テキストを使うには、二重中括弧で囲まれた "text here "という書式を使う。テンプレートのビルド時にイメージを含めることを選択した場合は、メディアライブラリからイメージをアップロードまたは追加するか、イメージのURL を参照することができます。
 
 無効化されたテキストフィールド(灰色でハイライト)は、承認されたWhatsAppテンプレートの一部であるため、編集することはできない。無効化されたテキストを更新したい場合は、テンプレートを編集し、再承認を得る必要がある。
 
@@ -104,10 +108,6 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 ### 応答メッセージ
 
-{% alert note %}
-応答メッセージは現在、早期アクセス段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
-
 ユーザーからのインバウンドメッセージに返信するために、応答メッセージを使うことができます。これらのメッセージは、作成中に Braze のアプリ内で作成され、いつでも編集できます。Liquid を使えば、応答メッセージの言語を適切なユーザーに合わせることができます。
 
 使用できるレスポンス・メッセージのレイアウトは3種類ある：
@@ -119,7 +119,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 ## ステップ 3: メッセージをプレビューしてテストする
 
-Brazeでは、メッセージを送信する前にプレビューしてテストすることを常に推奨している。\[**テスト**] タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテスト用の WhatsApp メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
+Brazeでは、メッセージを送信する前にプレビューしてテストすることを常に推奨している。[**テスト**] タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテスト用の WhatsApp メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
 
 ![Suzanne という名前の既存ユーザー用のプレビューメッセージ。][3]{: style="max-width:80%;"}
 
@@ -140,7 +140,7 @@ Brazeでは、メッセージを送信する前にプレビューしてテスト
 
 WhatsApp メッセージは、スケジュールされた時刻、アクション、または API トリガーに基づいて配信することができます。詳細については、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を参照してください。
 
-アクションベースの配信では、キャンペーンの継続時間と \[[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
+アクションベースの配信では、キャンペーンの継続時間と [[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
 
 このステップでは、配信コントロールを指定できます。例えば、ユーザーを[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)してキャンペーンを受信できるようにしたり、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)ルールを有効にしたりできます。
 
@@ -158,7 +158,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% tab キャンバス %}
 
-キャンバスコンポーネントが完成していない場合、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)ステップを参照のこと。
+キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)ステップを参照のこと。
 
 対話ウィンドウはインバウンドメッセージごとに 24 時間しか継続できないため、Braze はインバウンドメッセージと応答メッセージの間に 24 時間を超える遅延がないことを確認します。 
 
@@ -187,7 +187,7 @@ WhatsAppのメッセージで以下の内容をユーザーに送ることがで
 本文テキスト | 可変パラメーターをサポートする
 フッターテキスト | 可変パラメーターをサポートする 
 CTA | [コールトゥアクション](#ctas)を参照してください。
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### コールトゥアクション {#ctas}
 
@@ -195,11 +195,13 @@ WhatsAppメッセージに次のような行動喚起を追加できる：
 
 CTAタイプ    | 詳細
 ----------- |---------------- 
-ウェブサイトを見る | メッセージテンプレートのみで利用可能。<br>最大1ボタン（可変パラメーターを含む）。
+ウェブサイトを見る | 最大1ボタン（可変パラメーターを含む）。
 電話番号にかける | メッセージテンプレートのみで利用可能。<br>ボタンは最大 1 つ。
 カスタムクイック返信ボタン | ボタンは最大 3 つ。 
-マーケティング・オプトアウト・ボタン | このオプションは、サブスクリプションステータスを自動的に更新しません。<br><br>設定方法については、[オプトインとオプトアウト]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)を参照してください。
-{: .reset-td-br-1 .reset-td-br-2}
+マーケティング・オプトアウト・ボタン | このオプションは、購読ステータスを自動的に更新しません。<br><br>設定方法については、[オプトインとオプトアウト]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)を参照してください。
+クーポンコードメッセージテンプレート | メッセージテンプレートのみで利用可能。<br>これらのテンプレートは、他のメッセージテンプレートと同様に開いたり編集したりできます。また、Liquid と Braze のプロモーションコードと互換性があります。 
+CTA応答メッセージ  | アクションへの呼び出しボタンを含む応答メッセージを作成します。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### インバウンドメッセージ
 
@@ -213,7 +215,7 @@ CTAタイプ    | 詳細
 文書 | テキスト/プレーン<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 CTA | [コールトゥアクション](#ctas)を参照してください。
 動画 | ビデオ/MP4、ビデオ/3GP<br><br>H.264 ビデオコーデックと AAC オーディオコーデックのみがサポートされます。オーディオストリームが 1 つだけの動画や、オーディオストリームがない動画もサポートされます。
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 

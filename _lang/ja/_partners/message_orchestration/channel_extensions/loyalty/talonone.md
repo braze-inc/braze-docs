@@ -17,11 +17,11 @@ BrazeとTalon.Oneの統合により、Talon.Oneによって生成されたコー
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 |Talon.One アカウント | このパートナーシップを活用するには、Talon.One アカウントが必要です。 |
 |Talon.One API キー | Talon.One で、**設定** > **開発者設定** の下に、統合のための Braze サードパーティ API キーを作成します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert warning %}
 Talon.One **_には_** 1分あたり2,500メッセージの最大レート制限が必要です。このレート制限はBrazeダッシュボードで[変更できます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting)。

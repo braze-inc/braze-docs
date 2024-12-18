@@ -11,7 +11,7 @@ tool:
 
 # ローカライゼーション
 
-> Braze は SDK を統合した後、ユーザーのデバイスからロケール情報を自動的に収集します。ロケールには、言語と地域識別子が含まれています。この情報は、Braze セグメンテーションツールの \[**国**] と \[**言語**] で確認できます。
+> Braze は SDK を統合した後、ユーザーのデバイスからロケール情報を自動的に収集します。ロケールには、言語と地域識別子が含まれています。この情報は、Braze セグメンテーションツールの [**国**] と [**言語**] で確認できます。
 
 プラットフォームに応じたロケールの受信方法に関する技術的な詳細については、次の [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) および [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) のリソースを参照してください。
 
@@ -39,9 +39,9 @@ tool:
 
 | メリット | 考慮事項 |
 | --- | --- |
-| \- 集中アプローチ<br>\- メールの作成時間を短縮。何度もメールを作成する必要がない。 | \- マニュアル・レポート作成<br>\- キャンペーンレポートには、国ごとの指標ではなく、集計された指標が表示される<br>\- Liquid を徹底的にテストして、期待どおりに事前入力されることを確認する必要がある<br>\- 国の値をどのように引き出すか、または設定した国の数によっては、各国のテストが難しい場合がある<br>\- 複数のタイムゾーンで特定の時間に送信をスケジュールするのが難しくなる<br>\- 国ごとに別々のコンテンツを送りたい場合は使いにくい。 |
+| \- 集中アプローチ<br>\- メールの作成時間を短縮。何度もメールを作成する必要がない。 | \- マニュアル・レポート作成<br>\- キャンペーンレポートには、国ごとの指標ではなく、集計された指標が表示される<br>\- Liquid を徹底的にテストして、期待どおりに事前入力されることを確認する必要がある<br>\- 国の値をどのように引き出すか、または設定した国の数によっては、各国のテストが難しい場合がある<br>\- 複数のタイムゾーンで特定の時間に送信をスケジュールするのが難しくなる<br>\- 国ごとに別々のコンテンツを送信したい場合は使いにくい |
 | \--- | \--- | \--- |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 国ごとに1つのテンプレート %}
@@ -54,8 +54,8 @@ tool:
 
 | メリット | 考慮事項 |
 | --- | --- |
-| \- 複数の拠点に拡張可能<br>\- Braze 内の国ごとの収益に関するレポート (キャンペーンごとなど)<br>\- コンテンツが国ごとに大きく異なる場合の柔軟性 | \- 戦略的な構造化が必要<br>\- 国ごとにキャンペーンを行うなど、より多くの構築作業が必要である。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| \- 複数の場所に拡張可能<br>\- Braze 内の国ごとの収益に関するレポート (キャンペーンごとなど)<br>\- コンテンツが国ごとに大きく異なる場合の柔軟性 | \- 戦略的な構造化が必要<br>\- 国ごとにキャンペーンを行うなど、より多くの構築作業が必要である。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -67,17 +67,17 @@ tool:
 
 「全ユーザーに 1 つのジャーニー」というアプローチでは、ローカライゼーションが[キャンバスジャーニー]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey)と Liquid 内で処理され、各ユーザーへのメッセージングを定義します。 
 
-キャンバスが送信された後、ダッシュボードは集計された[キャンバスアナリティクスを]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)提供し、ユーザーレベルのエンゲージメントは[カスタムセグメントファネルを介して]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/)測定することができる。 [**国**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country)と [**受信キャンバスステップ**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step)フィルタを使用する。
+キャンバスが送信された後、ダッシュボードには集計された[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)が表示され、ユーザーレベルのエンゲージメントは、カスタムの[セグメントファネル]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) ([**国**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country)と[**受信キャンバスステップ**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step)のフィルターの組み合わせなど) で測定できます。
 
 | メリット | 考慮事項 |
 | --- | --- |
-| \- 集中アプローチ<br>\- メール作成時間の短縮 - 何度もメールを作成する必要がない。 | \- マニュアル・レポート作成<br>\- キャンバスレポートには、国ごとの指標ではなく、集計された指標が表示される<br>\- Liquid を徹底的にテストして、期待どおりに事前入力されることを確認する必要がある<br>\- 国の値をどのように引き出すか、または設定した国の数によっては、各国のテストが難しい場合がある<br>\- 複数のタイムゾーンで特定の時間に送信をスケジュールするのが難しくなる<br>\- 国ごとに別々のコンテンツを送りたい場合は使いにくい。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| \- 集中アプローチ<br>\- メール作成時間の短縮 - 何度もメールを作成する必要はありません。 | \- マニュアル・レポート作成<br>\- キャンバスレポートには、国ごとの指標ではなく、集計された指標が表示される<br>\- Liquid を徹底的にテストして、期待どおりに事前入力されることを確認する必要がある<br>\- 国の値をどのように引き出すか、または設定した国の数によっては、各国のテストが難しい場合がある<br>\- 複数のタイムゾーンで特定の時間に送信をスケジュールするのが難しくなる<br>\- 国ごとに別々のコンテンツを送信したい場合は使いにくい |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 国につき1回の旅 %}
 
-国ごとに1つのジャーニー」というアプローチにおいて、[キャンバスジャーニービルダーは]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)、複数の[キャンバスコンポーネントを介して]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)ユーザージャーニーを作成する柔軟性を提供する。これらのコンポーネントは、コンポーネントレベルおよびジャーニー全体で[複製]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)できます。
+「国ごとに 1 つのジャーニー」というアプローチでは、[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)ジャーニービルダーを使って複数の[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)を介してユーザージャーニーを柔軟に作成できます。これらのコンポーネントは、コンポーネントレベルおよびジャーニー全体で[複製]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases)できます。
 
 ローカライゼーションは、次の方法で実行できます。
 - 国ごとにキャンバスを分けることで、複雑なユーザージャーニーがオーディエンスフィルターを使用してファネルの一番上に定義されるようにする。
@@ -87,8 +87,8 @@ tool:
 
 | メリット | 考慮事項 |
 | --- | --- |
-| \- Braze内の国ごとの収益をレポートする（キャンバス、バリアント、ステップごとなど）。<br>\- コンテンツが国ごとに大きく異なる場合の柔軟性<br>\- 将来、旅の一部として他のチャンネルを追加できる | \- 戦略的な構造化が必要<br>\- 追加の構築作業が必要 (国ごとに個別のメッセージステップを設定するなど)<br>\- 1つのキャンバスに国ごとのカスタムで複雑なジャーニーがあると、キャンバスが大きくなり、読みづらくなることがある。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| \- Braze 内の国ごとの収益に関するレポート (キャンバス、バリアント、ステップごとなど)<br>\- コンテンツが国ごとに大きく異なる場合の柔軟性<br>\- 将来のジャーニーの一環として他のチャネルを追加できる | \- 戦略的な構造化が必要<br>\- 追加の構築作業が必要 (国ごとに個別のメッセージステップを設定するなど)<br>\- 1つのキャンバスに国ごとのカスタムで複雑なジャーニーがあると、キャンバスが大きくなり、読みづらくなることがある。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -114,7 +114,7 @@ This is a message from Braze! This will go to anyone who does not match the othe
 {% endraw %}
 
 これは、上記の形式を使用するか、Braze ダッシュボードを使用して実行できます。 
-1. メッセージを作成するときに、\[**言語**] ボタンを選択すると、選択した言語ごとに Liquid の条件付きロジックが生成されます。
+1. メッセージを作成するときに、[**言語**] ボタンを選択すると、選択した言語ごとに Liquid の条件付きロジックが生成されます。
 2. テンプレートテキストをメッセージに挿入したら、言語ごとに異なるバリエーションを入力します。テンプレートを使用するフィールドごとに、テンプレートの中括弧内のセグメントの後にバリエーションを入力する必要があります。バリエーションは、その前の中括弧で参照されている言語コードに対応していなければなりません。
 3. 送信前にユーザーの ID またはメールアドレスを入力してメッセージをテストし、言語に応じてメッセージがどのように表示されるかを確認します。 
 
@@ -122,12 +122,12 @@ This is a message from Braze! This will go to anyone who does not match the othe
 メッセージングには必ず{% raw %}`{% else %}`{% endraw %}ステートメントを含めることをお勧めします。ほとんどのユーザーには特定の言語のメッセージが表示されますが、次のようなユーザーにはこのテキストが表示されます。
 - 言語を選択していない
 - Brazeがサポートしていない言語を持っている
-- 言語が検出されない装置を持つ
+- 言語が認識されないデバイスを使用している
 {% endalert %}
 
 ### オプション 2: コンテンツブロック
 
-Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks)は再利用が可能なコンテンツのブロックです。ブロックが変更されると、そのブロックへの参照もすべて変更される。例えば、Eメールのヘッダーやフッターの更新は、すべてのEメールに反映される。これらのブロックは REST API を使用して[作成]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block)および[更新]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)することもでき、ユーザーはプログラムを使って翻訳をアップロードできます。 
+Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks)は再利用が可能なコンテンツのブロックです。ブロックが変更されると、そのブロックへの参照もすべて変更される。たとえば、メールヘッダーまたはフッターの更新は、すべてのメールまたは翻訳に反映されます。これらのブロックは REST API を使用して[作成]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block)および[更新]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)することもでき、ユーザーはプログラムを使って翻訳をアップロードできます。 
 
 ダッシュボードでキャンペーンを作成する際、{% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %} タグを使用してコンテンツブロックを参照できます。これらのブロックは、オプション1に示すように、各言語の条件ロジック内にすべての翻訳を格納することもできるし、各言語ごとに独立したブロックを使用することもできる。
 
@@ -215,20 +215,20 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% tab CSV %}
 次の形式で CSV を作成します。
 
-| id | 文脈 | language | ボディ |
+| id | コンテキスト | language | 本文 |
 | --- | --- | --- |
-| 1 | 1 | エン | やあ |
+| 1 | 1 | en | Hey |
 | 2 | 1 | エス | Hola |
-| 3 | 1 | pt | オーイ |
-| 4 | 1 | デ | ハロー |
-| 5 | 2 | エン | やあ |
+| 3 | 1 | pt | Oi |
+| 4 | 1 | de | Hallo |
+| 5 | 2 | en | Hey |
 | 6 | 2 | エス | Hola |
-| 7 | 2 | pt | オーイ |
-| 8 | 2 | デ | ハロー |
-| 9 | 3 | エン | やあ |
+| 7 | 2 | pt | Oi |
+| 8 | 2 | de | Hallo |
+| 9 | 3 | en | Hey |
 | 10 | 3 | エス | Hola |
-| 11 | 3 | pt | オーイ |
-| 12 | 3 | デ | ハロー |
+| 11 | 3 | pt | Oi |
+| 12 | 3 | de | Hallo |
 
 {% endtab %}
 {% endtabs %}
@@ -246,7 +246,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 
 ### オプション 4: ロケールを追加する
 
-[メッセージングにロケールを]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales)追加して使用することで、1つのメールキャンペーンやキャンバス内で異なる言語のユーザーをターゲットにすることができる。 
+[メッセージングのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales)を追加して使用することで、1 つのメールキャンペーンやキャンバス内で異なる言語のユーザーをターゲットにすることができます。 
 
 {% alert important %}
 この機能は現在早期アクセス段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
@@ -268,7 +268,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 ```
 {% endraw %}
 {% endtab %}
-{% tab クラウディンの例 %}
+{% tab Crowdin の例 %}
 {% raw %}
 ```liquid
 {% connected_content https://api.crowdin.com/api/project/braze-test/export-file?key=you_api_key&language={{${language}}}&file=test.json&export_translated_only=1 :save response %}
@@ -294,7 +294,7 @@ Google スプレッドシート API には、1 プロジェクトあたり 100 �
 
 Liquid とコネクテッドブロックの依存関係が少ない SheetDB を実装したいユーザーは、大きな条件付きブロックを構築するよりも、GET リクエスト呼び出しに SheetDB の[検索メソッド](https://docs.sheetdb.io/#get-search-in-document)を実装して {% raw %} `{{${language}}}` {% endraw %} Liquid タグに基づいてJSON オブジェクトをフィルタリングして 1 つの言語の結果を自動的に返すことができます。
 
-#### ステップ 1: Google スプレッドシートをフォーマットする
+#### ステップ 1:Google スプレッドシートをフォーマットする
 
 まず、各言語が異なるオブジェクトになるように Google シートを作成します。
 
@@ -304,9 +304,9 @@ Liquid とコネクテッドブロックの依存関係が少ない SheetDB を�
 | pt | Oi | 3 | Oi2 | 7 |
 | de | Hallo | 4 | Hallo2 | 8 |
 
-#### ステップ 2: コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
+#### ステップ 2:コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
 
-次に、{% raw %}`{{${language}}}`{% endraw %} LiquidタグをConnected Contentコール内に実装する。ここで SheetDB はスプレッドシートの作成時に `sheet_id` を自動生成することに注意してください。
+次に、コネクテッドコンテンツの呼び出しに Liquid タグ {% raw %}`{{${language}}}`{% endraw %} を実装します。ここで SheetDB はスプレッドシートの作成時に `sheet_id` を自動生成することに注意してください。
 
 {% raw %}
 ```liquid
@@ -314,7 +314,7 @@ Liquid とコネクテッドブロックの依存関係が少ない SheetDB を�
 ```
 {% endraw %}
 
-#### ステップ 3: メッセージをテンプレート化する
+#### ステップ 3:メッセージをテンプレート化する
 
 最後に、Liquid を使用してメッセージをテンプレート化します。
 

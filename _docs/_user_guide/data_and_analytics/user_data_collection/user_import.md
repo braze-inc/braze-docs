@@ -112,9 +112,9 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 
 ### Importing a CSV
 
-To import your CSV file, go to the **User Import** page under the **Audiences** section. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
+To import your CSV file, go to **Audiences** > **User Import**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
-![][3]
+![The 'Import Users' page in the Braze dashboard.][3]
 
 Select **Browse Files** and your file. Braze will upload your file and check the column headers and the data types of each column.
 
@@ -192,6 +192,21 @@ You can't use a CSV import to create a new user using `braze_id`. This method ca
 {% alert tip %}
 The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user, so you can rename this column to `braze_id` when you re-import the CSV.
 {% endalert %}
+
+### Importing with email addresses and phone numbers
+
+You can omit an external ID or user alias and just use either an email address or phone number to import users. Before importing a CSV file with email addresses or phone numbers, check for the following:
+
+- Verify that you don't have any external IDs or user aliases for these profiles.
+- Confirm that your CSV file is formatted properly.
+
+{% alert note %}
+If you include both email addresses and phone numbers in your CSV file, the email address is prioritized over the phone number when looking up profiles.
+{% endalert %}
+
+If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
+
+If a profile with that email address or phone number doesn't exist, Braze will create a new profile with that identifier. You can use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) to identify this profile later. To delete a user profile, you can also use the [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) endpoint.
 
 ### Importing custom data
 

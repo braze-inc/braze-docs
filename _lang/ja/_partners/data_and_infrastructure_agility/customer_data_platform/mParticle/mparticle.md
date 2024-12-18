@@ -21,13 +21,13 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
-| Brazeインスタンス | Brazeインスタンスは[API概要ページ]({{site.baseurl}}/api/basics/#endpoints)にあります。例えば：US-01、US-02 など) |
+| ブレイズインスタンス | Brazeインスタンスは[API概要ページ]({{site.baseurl}}/api/basics/#endpoints)にあります。例えば：US-01、US-02 など) |
 | Brazeアプリ識別子キー | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > 設定の管理 > API キー**内にあります。 |
 | ワークスペース REST APIキー | （サーバー間）Braze REST APIキー<br><br>これは、**Braze ダッシュボード > 開発者コンソール > API 設定 > API キー**内で作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -105,11 +105,11 @@ mParticleでオーディエンスを作成するには:
 | API キー                  | Brazeのダッシュボードの**設定** > **APIキー**にあります。<br><br>古いナビゲーションを使用している場合は、**開発者コンソール** > **API設定**でAPIキーを見つけることができます。 |
 | API キー オペレーティングシステム | どのオペレーティングシステムがあなたのBraze APIキーに対応しているかを選択してください。この選択は、オーディエンス更新で転送されるプッシュトークンの種類を制限します。                          |
 | セグメントとして送信         | Brazeにオーディエンスを送信する方法。詳細については、セクション[Forwarding audiences](#forwarding-audiences)を参照してください。                                                          |
-| ワークスペース REST APIキー   | すべての権限を持つ Braze REST API キー。これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。                                                        |
+| ワークスペース REST APIキー   | すべての権限を持つ Braze REST API キー。これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。                                                        |
 | External identity type   | external ID として Braze に転送する mParticle のユーザー ID タイプ。これはデフォルト値の Customer ID のままにすることをお勧めします。                                          |
 | Email identity type      | メールとして Braze に転送する mParticle のユーザー ID タイプ。                                                                                                            |
-| Brazeインスタンス           | どのクラスターにBrazeデータを転送するか指定します。                                                                                                                   |
-{: .reset-td-br-1 .reset-td-br-2}
+| ブレイズインスタンス           | どのクラスターにBrazeデータを転送するか指定します。                                                                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {:start="3"}
 3\.最後にオーディエンスを**保存**します。
@@ -120,7 +120,7 @@ mParticleでオーディエンスを作成するには:
 
 Braze でこれらのユーザーのセグメントを作成するには、**Segments** の **エンゲージメント** に移動し、セグメントに名前を付けます。次のものは、**セグメントを送信する**ために選択したオプションに応じた2つのセグメントの例です。各オプションの詳細については、[転送オーディエンス](#forwarding-audiences.)を参照してください。
 
-- **単一配列属性:**`SegmentMembershipArray`をフィルターとして選択します。次に、\[値を含む] オプションを使用して目的のオーディエンス ID を入力します。![「値を含む」とオーディエンス ID が設定されている mParticle セグメントフィルター「SegmentMembershipArray」。][11]<br><br>
+- **単一配列属性:**`SegmentMembershipArray`をフィルターとして選択します。次に、[値を含む] オプションを使用して目的のオーディエンス ID を入力します。![「値を含む」とオーディエンス ID が設定されている mParticle セグメントフィルター「SegmentMembershipArray」。][11]<br><br>
 - **セグメントごとに1つの属性:**カスタム属性をフィルターとして選択します。次に、「等しい」オプションを使用し、適切なロジックを選択します。![mParticle Segment フィルター「in possible parisians」を「等しい」と「true」に設定します。][8]
 
 保存すると、キャンバスやキャンペーンの作成時にターゲットユーザーのステップでこのSegmentを参照できます。
@@ -146,9 +146,9 @@ mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、*
 | Brazeアプリ識別子キー | Brazeアプリ識別子キーは、**設定** > **APIキー**のBrazeダッシュボードで見つけることができます。APIキーは各プラットフォーム（iOS、Android、Web）で異なることに注意してください。 |
 | External identity type | external ID として Braze に転送する mParticle のユーザー ID タイプ。これはデフォルト値の Customer ID のままにすることをお勧めします。 |
 | Email identity type | メールとして Braze に転送する mParticle のユーザー ID タイプ。これはデフォルト値の Email のままにすることをお勧めします。 |
-| Brazeインスタンス | Brazeデータが転送されるクラスター。これは、ダッシュボードがあるクラスターと同じである必要があります。 |
+| ブレイズインスタンス | Brazeデータが転送されるクラスター。これは、ダッシュボードがあるクラスターと同じである必要があります。 |
 | イベントストリーム転送を有効にする | （サーバー間）有効にすると、すべてのイベントがリアルタイムで転送されます。そうでない場合、すべてのイベントが一括で転送されます。イベントストリーム転送を有効にする場合、Braze に渡すデータが[レート制限]({{site.baseurl}}/api/basics/#api-limits)を尊重することを確認してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][10]
 
@@ -180,7 +180,7 @@ mParticle の[Braze イベントキット統合ガイド](https://docs.mparticle
 
 #### ステップ3:Braze 出力の接続の設定
 
-mParticle で **\[Connections] > \[Connect] > \[\[目的のプラットフォーム]] > \[Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。
+mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]] > [Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。
 
 ![][3]
 
@@ -200,7 +200,7 @@ mParticleのサーバーサイドSDK（例えば、Ruby、Pythonなど）を使�
 
 #### Braze 出力の接続の設定
 
-mParticle で **\[Connections] > \[Connect] > \[\[目的のプラットフォーム]] > \[Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。 
+mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]] > [Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。 
 
 ![][4]
 
@@ -228,7 +228,7 @@ Braze は `Time` タイプのカスタム属性で0年以前または3000年以�
 | カスタムイベント | カスタムイベント | mParticleカスタムイベントはBrazeによってカスタムイベントとして認識されます。イベント属性はカスタムイベントプロパティとして転送されます。<br><br>イベントプロパティとしてBrazeに渡されるイベント属性は、文字列、数値、ブール値、または日付オブジェクトをサポートしますが、配列やネストされたオブジェクトはサポートしません。 |
 | 購入コマースイベント | 購入イベント | 購入コマースイベントは Braze の購入イベントにマッピングされます。<br><br>バンドルコマースイベントデータの設定値を切り替えて、注文レベルまたは製品レベルで購入を記録します。たとえば `false` の場合、2つの一意の製品、プロモーション、またはインプレッションを含む1つの受信イベントでは、少なくとも2つの送信 Braze イベントが生成されます。`true` に設定すると、ネストされた製品、プロモーション、またはインプレッションの配列を含む1つの送信イベントが生成されます。<br><br>ログに記録される追加のコマースフィールドの詳細については、[mParticle のドキュメント](https://docs.mparticle.com/integrations/braze/event/#purchase-events)を参照してください。<br><br>「バンドルコマースイベントデータ」を `false` として設定する場合、購入イベントプロパティとして Braze に渡される製品属性では、文字列、数値、ブール値、または日付オブジェクトがサポートされますが、配列やネストされたオブジェクトはサポートされません。|
 | その他のすべてのコマースイベント | カスタムイベント | 他のすべての商取引イベントはカスタムイベントにマッピングされます。<br><br>バンドルコマースイベントデータの設定値を切り替えて、注文レベルまたは製品レベルで購入を記録します。たとえば `false` の場合、2つの一意の製品、プロモーション、またはインプレッションを含む1つの受信イベントでは、少なくとも2つの送信 Braze イベントが生成されます。`true` に設定すると、ネストされた製品、プロモーション、またはインプレッションの配列を含む1つの送信イベントが生成されます。<br><br>特定のデフォルトコマース値に加えて、製品属性が Braze イベントプロパティとして記録されます。ログに記録される追加のコマースフィールドの詳細については、[mParticle のドキュメント](https://docs.mparticle.com/integrations/braze/event/#other-commerce-events)を参照してください。<br><br>「バンドルコマースイベントデータ」を `false` として設定する場合、イベントプロパティとして Braze に渡される製品属性では、文字列、数値、ブール値、または日付オブジェクトがサポートされますが、配列やネストされたオブジェクトはサポートされません。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### ユーザーアイデンティティマッピング
 各mParticle出力について、`external_id`としてBrazeに送信する外部IDタイプを選択できます。デフォルト値は顧客IDですが、`MPID`などの別のIDをBrazeに`external_id`として送信するようにマッピングすることもできます。顧客 ID 以外の識別子を選択すると、Braze でのデータの送信方法に影響する場合があることに注意してください。 

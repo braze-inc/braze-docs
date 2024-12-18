@@ -21,27 +21,27 @@ description: "この記事では、「既存のダッシュボードユーザー
 
 ## 前提条件
 
-このエンドポイントを使用するには、SCIM トークンが必要です。詳細については、[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)を参照してください。
+このエンドポイントを使うには、SCIMトークンが必要だ。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
-## パスパラメータ
+## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須 | データ型 | 説明 |
 |---|---|---|---|
-| `id` | 必須 | string | ユーザーのリソースID。このパラメーターは、`POST` `/scim/v2/Users/` または `GET` `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `id` | 必須 | 文字列 | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Request body
+## 要求本文:
 ```json
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
-## リクエスト例
+## 例のリクエスト
 ```json
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \

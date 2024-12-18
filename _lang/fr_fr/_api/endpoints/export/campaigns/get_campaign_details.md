@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les i
 /campaigns/details
 {% endapimethod %}
 
-> Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. 
+> Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`.
 
 Si vous souhaitez récupérer les données du Canvas, reportez-vous au point de terminaison [Exporter les détails du Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
@@ -33,9 +33,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la campagne.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `campaign_id` pour les campagnes API sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page **Détails de la campagne** dans votre tableau de bord ; vous pouvez également utiliser l'[endpoint Exporter la liste des campagnes.](#campaign-list-endpoint) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Exemple de demande 
+## Exemple de demande
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -83,7 +83,9 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 {
     "channel": (string) the description of the channel, such as "ios_push" or "android_push"
     "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click
 }
 ```
 
@@ -116,17 +118,17 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
     "data": {
         "pages": [
             {
-                "header": 
+                "header":
                     {
                          "text":(string) the display text for the header of the survey,
                     }
                 "choices": [
                     {
                        "choice_id": (string) the choice identifier,
-                       "text": (string) the display text, 
-                       "custom_attribute_key": (string) the custom attribute key, 
+                       "text": (string) the display text,
+                       "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign, 
+                       "deleted": (boolean) deleted from live campaign,
                     },
                     ...
                 ]

@@ -15,15 +15,15 @@ Braze SDK は、分析、セグメンテーション、エンゲージメント�
 
 >  Windows Universal SDK は、Xamarin Windows アプリとも互換性があります。
 
-## ステップ 1:NuGet パッケージマネージャーを使用したSDKのインストール
+## ステップ1:NuGet パッケージマネージャーを使用したSDKのインストール
 
 Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用してインストールします。NuGet を使用してBraze Windows SDKをインストールするには:
 
 1. プロジェクトファイルを右クリックする
-2. \[Manage NuGet Packages (NuGet パッケージの管理)]をクリックします。
-3. 左側のドロップダウンメニューで、\[オンライン] をクリックします
+2. [Manage NuGet Packages (NuGet パッケージの管理)]をクリックします。
+3. 左側のドロップダウンメニューで、[オンライン] をクリックします
 4. 「NuGet.org」で「Appboy」を検索
-5. \[AppboyPlatform.Universal.Release] NuGet パッケージをクリックし、\[インストール] をクリックします
+5. [AppboyPlatform.Universal.Release] NuGet パッケージをクリックし、[インストール] をクリックします
 
 >  Windows Universal ライブラリは、Windows 8.1、Windows Phone 8.1、および UWP のすべてのアプリケーションで使用する必要があります。
 
@@ -38,19 +38,19 @@ Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用して�
     </AppboyConfig>
 ```
 
->  \[[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)] ページにある API キーで `YOUR_API_KEY_HERE` を更新してください。
+>  [[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)] ページにある API キーで `YOUR_API_KEY_HERE` を更新してください。
 
 そのスニペットを追加したら、以下の `AppboyConfiguration.xml` のファイルプロパティを変更してください。
 
 1. `Build Action` を `Content` に設定します
 2. `Copy to Output Directory` を `Copy Always` に設定します
 
-## ステップ 3:package.appxmanifest の設定
+## ステップ3:package.appxmanifest の設定
 
-\[機能] タブで、`Internet (Client)` がオンになっていることを確認します。
+[機能] タブで、`Internet (Client)` がオンになっていることを確認します。
 ![][18]
 
-## ステップ 4:アプリクラスの編集
+## ステップ4:アプリクラスの編集
 
 - `App.xaml.cs` ファイルの`usings` に以下を追加します。
 

@@ -35,7 +35,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Il peut s'agir d'un jour ou d'une heure, la valeur par défaut étant le jour. |
 | `app_id` | Facultatif | Chaîne de caractères | Identifiant de l'API de l'application récupéré à partir de la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/). En cas d'exclusion, les résultats de toutes les applications d'un espace de travail seront renvoyés. |
 | `product` | Facultatif | Chaîne de caractères | Nom du produit par lequel filtrer les réponses. En cas d'exclusion, les résultats de toutes les applications seront renvoyés. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 

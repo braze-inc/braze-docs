@@ -15,7 +15,7 @@ description: "この記事では、「カタログ項目を更新」Braze エン
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログのアイテムを更新する。 
+> このエンドポイントを使用して、カタログのアイテムを更新する。
 
 `item_id` が見つからない場合は、このエンドポイントがカタログにアイテムを作成する。このエンドポイントは同期である。
 
@@ -23,7 +23,7 @@ description: "この記事では、「カタログ項目を更新」Braze エン
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.replace_item`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.replace_item`の権限が必要です。
 
 ## レート制限
 
@@ -31,20 +31,20 @@ description: "この記事では、「カタログ項目を更新」Braze エン
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-| `item_id` | 必須 | string | カタログ項目のID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+| `item_id` | 必須 | 文字列 | カタログ項目のID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `items` | required | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、`id` フィールドを除き、カタログに存在するフィールドを含める必要があります。1つのリクエストにつき、1つのアイテムオブジェクトのみが許可される。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -107,7 +107,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -120,11 +120,11 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 | `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |
 | `invalid-keys-in-value-object` | 項目オブジェクトのキーに `.` または `$` を含めることはできません。 |
 | `item-already-exists` | そのアイテムはすでにカタログに存在する。 |
-| `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 | 
+| `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
 | `items-too-large` | 各項目の文字数制限は5,000文字である。 |
 | `request-includes-too-many-items` | 1つのリクエストにつき1つのカタログ項目しか作成できない。 |
 | `too-deep-nesting-in-value-object` | アイテム・オブジェクトは50レベル以上の入れ子を持つことはできない。 |
 | `unable-to-coerce-value` | 項目タイプは変換できません。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

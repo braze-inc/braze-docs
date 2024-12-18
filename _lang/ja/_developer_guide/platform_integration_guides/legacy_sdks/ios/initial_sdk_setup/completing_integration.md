@@ -140,7 +140,7 @@ Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
 - `launchOptions` – `application:didFinishLaunchingWithOptions:` から取得するオプション `NSDictionary`。
 - `appboyOptions` – Braze のスタートアップ構成値を持つオプションの `NSDictionary`。
 
-Braze のスタートアップキーのリストについては、[Appboy.h][1] を参照してください。
+Braze のスタートアップキーのリストについては、[Appboy.h](https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h) を参照してください。
 
 ## Appboy.sharedInstance() および Swift の nullability
 一般的な慣例とは多少異なりますが、`Appboy.sharedInstance()` シングルトンはオプションです。これは、`startWithApiKey:` が呼び出さられる前は `sharedInstance` が `nil` であり、遅延初期化を使用できる非標準で無効ではない実装がいくつかあるためです。
@@ -149,7 +149,5 @@ Appboy の `sharedInstance` (標準実装) にアクセスする前に `didFinis
 
 ## その他のリソース
 
-[iOS クラスの完全なドキュメント][2] を使用して SDK メソッドに関する追加のガイダンスを提供できます。
+完全な[iOS クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "完全なiOS クラスのドキュメント")は、SDK メソッドに関する追加のガイダンスを提供するために利用できます。
 
-[1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "iOS クラスの完全なドキュメント"

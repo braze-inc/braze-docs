@@ -1,11 +1,11 @@
 ---
 nav_title: カスタマイズ
-article_title: カスタムアプリ内メッセージ
+article_title: カスタムのアプリ内メッセージ
 page_order: 2
 layout: dev_guide
-guide_top_header: "カスタムアプリ内メッセージ"
+guide_top_header: "カスタムのアプリ内メッセージ"
 guide_top_text: "Brazeでは、通常のアプリ内メッセージ テンプレートに加えて、カスタムHTML、カスタムCSSを使用したモーダルs、メールキャプチャフォーム、動画などを使用できるカスタマイズされたメッセージング テンプレートも提供しています。"
-description: "このランディングページでは、カスタムHTML、カスタムCSS付きのモーダル s、動画、キャプチャフォームのメールなど、カスタマイズされたアプリ メッセージング テンプレート内のs を扱います。"
+description: "このランディングページには、カスタム HTML、カスタム CSS 付きのモーダル、動画、メールキャプチャフォームなど、カスタマイズしたアプリ内メッセージングテンプレートの項目があります。"
 
 channel:
   - in-app messages

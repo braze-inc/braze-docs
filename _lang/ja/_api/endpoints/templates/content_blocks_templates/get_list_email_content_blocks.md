@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:利用可能なコンテンツ・ブロックをリストアップする"
-article_title: "取得:利用可能なコンテンツ・ブロックをリストアップする"
+nav_title: "取得:利用可能なコンテンツブロックのリスト"
+article_title: "取得:利用可能なコンテンツブロックのリスト"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -19,7 +19,7 @@ description: "この記事では、「利用可能なコンテンツブロック
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
 ## 前提条件
-このエンドポイントを使用するには、`content_blocks.list` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`content_blocks.list`の権限が必要です。
 
 ## レート制限
 
@@ -33,9 +33,9 @@ description: "この記事では、「利用可能なコンテンツブロック
 | `modified_before`  |  オプション | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 指定された時刻以前に更新されたコンテンツブロックのみを取得します。 |
 | `limit` | オプション | 正の数 | 取得するコンテンツブロックの最大数。指定されない場合、デフォルトの100に設定されます。最大許容値は1000です。 |
 | `offset`  |  オプション | 正の数 | 検索条件に合うテンプレートの残りを返す前にスキップするコンテンツブロックの数。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -77,6 +77,6 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Content Block number limit exceeds maximum of 1000` | `limit` パラメータを1000未満の整数に変更する。 |
 | `Offset is invalid` | `offset` パラメーターは0よりも大きい整数でなければなりません。 |
 | オフセットは0より大きくなければなりません | `offset` パラメータを0以上の整数に変更する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

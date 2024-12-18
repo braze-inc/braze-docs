@@ -22,7 +22,7 @@ description: "この記事では、「カタログセレクションの作成」
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.create_selection` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.create_selection`の権限が必要です。
 
 ## レート制限
 
@@ -30,17 +30,17 @@ description: "この記事では、「カタログセレクションの作成」
 
 ## パスパラメーター
 
-| パラメーター      | required | データ型 | 説明          |
+| パラメータ      | required | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | 必須 | string    | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列    | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 | パラメーター   | required | データ型 | 説明                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | required | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `selection` | 必須 | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエスト例
 
@@ -77,11 +77,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `boolean`  | `is`                                                    |
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 応答
 
-このエンドポイントには、`202`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
@@ -117,7 +117,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー                                | トラブルシューティング                                                                               |
 |--------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -133,6 +133,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `invalid-sort-field`                 | 選択ソートフィールドが有効かどうかをチェックする。                                                   |
 | `invalid-sort-order`                 | 選択のソート順が有効かどうかをチェックする。                                                   |
 | `selection-contains-too-many-arrays` | 選択範囲に`array` 型のフィールドが複数含まれているかどうかをチェックする。サポートされているのは1つのみです。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

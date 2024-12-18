@@ -20,7 +20,7 @@ description: "本稿では、輸出売上データBraze エンドポイントに
 
 ## 前提条件
 
-このエンドポイントを使用するには、`purchases.revenue_series` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`purchases.revenue_series`の権限が必要です。
 
 ## レート制限
 
@@ -28,16 +28,16 @@ description: "本稿では、輸出売上データBraze エンドポイントに
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `ending_at` | オプション | 日時([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。デフォルトはリクエストの時刻です。 |
-| `length` | required | 整数 | 返される系列に含める`ending_at` の前の最大日数。1以上100以下でなければなりません。 |
-| `unit` | オプション | string | データポイント間の時刻の単位。日、または時間を指定できます。デフォルトは日です。 |
-| `app_id` | オプション | string | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから取得したアプリケーションAPI 識別子。除外すると、ワークスペース内のすべてのアプリs の結果が返されます。 |
-| `product` | オプション | string | 応答をフィルタリングする商品の名称。除外すると、すべてのアプリs の結果が返されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `ending_at` | オプション | 日時 ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `unit` | オプション | 文字列 | データポイント間の時間の単位。日または時間にすることができ、デフォルトは日です。 |
+| `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外された場合、ワークスペース内のすべてのアプリの結果が返されます。 |
+| `product` | オプション | 文字列 | 応答をフィルターする製品の名前。除外された場合、すべてのアプリの結果が返されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_series?length=100' \

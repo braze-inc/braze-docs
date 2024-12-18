@@ -15,7 +15,7 @@ search_rank: 2
 
 [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)を使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスが向上し、オーディエンスがアプリから最大限の価値を得るのに役立ちます。アプリ内メッセージでは、さまざまなレイアウトとカスタマイズツールを選択できるため、これまで以上にユーザーの関心を引き付けることができます。
 
-\[ケーススタディ][53] でアプリ内メッセージの例をチェックしましょう。
+アプリ内メッセージの[事例については、ケーススタディを](https://www.braze.com/customers)ご覧いただきたい。
 
 ## アプリ内メッセージのタイプ
 
@@ -28,7 +28,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 各アプリ内メッセージタイプは、コンテンツ、画像、アイコン、クリックアクション、分析、表示、配信にわたってカスタマイズできます。
 
-すべてのアプリ内メッセージは、そのプロトタイプを \[`InAppMessage`][2] から継承します。このプロトタイプは、すべてのアプリ内メッセージの基本動作と特徴を定義しています。典型的なサブクラスは、\[`SlideUpMessage`][3]、\[`ModalMessage`][6]、\[`FullScreenMessage`][7]、\[`HtmlMessage`][12] です。
+すべてのアプリ内メッセージは、そのプロトタイプを [[`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)] から継承します。このプロトタイプは、すべてのアプリ内メッセージの基本動作と特徴を定義しています。プロトタイプのサブクラスは以下の通りである。 [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html)および [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
 
 ## メッセージタイプ別に予想される動作
 
@@ -75,16 +75,5 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ## 統合
 
-デフォルトでは、アプリ内メッセージは推奨される \[統合手順][1] の一部として自動的に表示されます。このガイドのステップに従うことで、さらなるカスタマイズが可能だ。
+デフォルトでは、アプリ内メッセージは、推奨される [統合手順]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).追加のカスタマイズは、このガイドの手順に従って行うことができます。
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html
-[7]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html
-[12]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
-[53]: https://www.braze.com/customers

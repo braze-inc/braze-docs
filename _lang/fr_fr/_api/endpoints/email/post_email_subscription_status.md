@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Modifier le st
 /email/status
 {% endapimethod %}
 
-> Utilisez cet endpoint pour définir l’état de l’abonnement aux e-mails de vos utilisateurs. 
+> Utilisez cet endpoint pour définir l’état de l’abonnement aux e-mails de vos utilisateurs.
 
 Les utilisateurs peuvent avoir le statut `opted_in`, `unsubscribed`, ou `subscribed` (sans confirmation d’abonnement/de désabonnement spécifique).
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
 | `subscription_state` | Requis | Chaîne de caractères | Soit "abonné", "désabonné" ou "opted_in". |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

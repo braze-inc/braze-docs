@@ -11,7 +11,7 @@ channel: push
 
 # 代替 Web プッシュドメイン
 
-> Web プッシュを統合するには、ドメインが[セキュア][2]である必要があります。一般にこれは、`https`、`localhost`、および [W3C プッシュ標準][1]で定義されているその他の例外である必要があります。また、ドメインのルートにサービスワーカーを登録するか、少なくともそのファイルの HTTP ヘッダーを制御できる必要もあります。この記事では、代替ドメイン上で Braze Web プッシュを統合する方法について説明します。
+> Web プッシュを統合するには、ドメインが[セキュア](https://w3c.github.io/webappsec-secure-contexts/)である必要があります。一般にこれは、`https`、`localhost`、および [W3C プッシュ標準](https://www.w3.org/TR/service-workers/#security-considerations)で定義されているその他の例外である必要があります。また、ドメインのルートにサービスワーカーを登録するか、少なくともそのファイルの HTTP ヘッダーを制御できる必要もあります。この記事では、代替ドメイン上で Braze Web プッシュを統合する方法について説明します。
 
 _これらの条件をすべて満たすことができない場合は_、このガイドを使用して、Web サイトにプッシュプロンプトダイアログを追加できる回避策を設定します。たとえば、ユーザーが`http`(安全でない)Web サイトからオプトインするか、プッシュプロンプトが表示されないブラウザ拡張ポップアップからオプトインする場合に、この記事は役立ちます。
 
@@ -61,13 +61,13 @@ document.getElementById("opt-in").onclick = function(){
 
 **https://secure.com/push-registration.html**
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-registration.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-registration.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ### ステップ3:ドメイン間で通信する (オプション)
 
 ユーザーは `insecure.com` から発生したこのワークフローからオプトインできるようになったため、ユーザーがすでにオプトインしているかどうかに基づいてサイトを変更できます。ユーザーがすでにプッシュを登録している場合、それを尋ねることに意味はありません。
 
-iFrames と [`postMessage`][3] API を使用して、2つのドメイン間で通信できます。 
+iFrames と [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) API を使用して、2つのドメイン間で通信できます。 
 
 **insecure.com**
 
@@ -94,8 +94,5 @@ function getPushStatus(event){
 
 **secure.com/push-status.html**
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-[1]: https://www.w3.org/TR/service-workers/#security-considerations
-[2]: https://w3c.github.io/webappsec-secure-contexts/
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage

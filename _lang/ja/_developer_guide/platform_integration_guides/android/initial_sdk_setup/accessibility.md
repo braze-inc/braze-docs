@@ -11,7 +11,7 @@ description: "この参考記事では、Android または FireOS アプリケ�
 
 # アクセシビリティ
 
-> この参考記事では、Android または FireOS アプリケーションへのアプリ内メッセージの読み上げなど、特定の Android SDK アクセシビリティ機能を実装する方法について説明します。Braze Android SDK は、[Android アクセシビリティガイドライン][1]に従っています。
+> この参考記事では、Android または FireOS アプリケーションへのアプリ内メッセージの読み上げなど、特定の Android SDK アクセシビリティ機能を実装する方法について説明します。Braze Android SDK は、[Android アクセシビリティガイドライン](https://developer.android.com/guide/topics/ui/accessibility)に従っています。
 
 ## アプリ内メッセージの読み上げ
 
@@ -46,4 +46,3 @@ Braze.configure(this, brazeConfigBuilder.build());
 {% endtabs %}
 
 
-[1]: https://developer.android.com/guide/topics/ui/accessibility

@@ -9,7 +9,7 @@ search_rank: 1
 
 # SDK の初期セットアップ
 
-> このリファレンス記事では、Flutter 向け Braze SDK のインストール方法について説明します。以下の手順に従って、[Braze Flutter SDK][1] をインストールします。これには、Dart で記述された [Flutter アプリ][2]でインテグレーターが Braze API を使用できるようにするパッケージが含まれています。
+> このリファレンス記事では、Flutter 向け Braze SDK のインストール方法について説明します。以下の手順に従って、[Braze Flutter SDK](https://pub.dev/packages/braze_plugin) をインストールします。これには、Dart で記述された [Flutter アプリ](https://flutter.dev/)でインテグレーターが Braze API を使用できるようにするパッケージが含まれています。
 
 このプラグインには、基本的な分析機能が用意されており、iOS と Android 両方のアプリ内メッセージとコンテンツカードを1つのコードベースで統合できます。
 
@@ -19,11 +19,11 @@ search_rank: 1
 
 ## 前提条件
 
-インストールを完了するには、[アプリ識別子 API キー]({{site.baseurl}}/api/identifier_types/)と [SDK エンドポイント][4]が必要です。どちらもダッシュボードの \[**設定の管理**] の下にあります。
+インストールを完了するには、[アプリ識別子 API キー]({{site.baseurl}}/api/identifier_types/)と [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)が必要です。どちらもダッシュボードの [**設定の管理**] の下にあります。
 
-これらの手順を実行する前に、[Flutter SDK][5] をインストールしてセットアップします。マシンとプロジェクトで、必要な最小限の Flutter バージョンと Dart バージョン ([こちらに記載][7]) が実行されていることを確認します。
+これらの手順を実行する前に、[Flutter SDK](https://docs.flutter.dev/get-started/install) をインストールしてセットアップします。マシンとプロジェクトで、必要な最小限の Flutter バージョンと Dart バージョン ([こちらに記載](https://github.com/braze-inc/braze-flutter-sdk#readme)) が実行されていることを確認します。
 
-## ステップ1:Braze ライブラリーを統合する
+## ステップ 1:Braze ライブラリーを統合する
 
 コマンドラインから Braze Flutter SDK パッケージを追加します。
 
@@ -33,7 +33,7 @@ flutter pub add braze_plugin
 
 これにより、適切な行が`pubspec.yaml` に追加されます。
 
-## ステップ2:ネイティブセットアップを完了する
+## ステップ 2:ネイティブセットアップを完了する
 
 {% tabs %}
 {% tab Android %}
@@ -130,7 +130,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-## ステップ3:使用
+## ステップ 3: 使用
 
 Dart コードにプラグインをインポートするには、以下を使用します。
 
@@ -138,11 +138,11 @@ Dart コードにプラグインをインポートするには、以下を使用
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-次に、[サンプルアプリ][6]のように `new BrazePlugin()` を呼び出して、Braze プラグインのインスタンスを初期化します。
+次に、[サンプルアプリ](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart)のように `new BrazePlugin()` を呼び出して、Braze プラグインのインスタンスを初期化します。
 
 ## 基本的な統合のテスト
 
-この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード (\[**概要**] セクション) に新しいセッションが表示されます。
+この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード ([**概要**] セクション) に新しいセッションが表示されます。
 
 アプリで次のコードを呼び出すことで、特定のユーザーのセッションを開くことができます。
 
@@ -151,16 +151,9 @@ BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
-その後、ダッシュボードの \[**オーディエンス**] > \[**ユーザー検索**] で `{some-user-id}` を使用してユーザーを検索します。そこで、セッションとデバイスデータがロギングされていることを確認できます。
+その後、ダッシュボードの [**オーディエンス**] > [**ユーザー検索**] で `{some-user-id}` を使用してユーザーを検索します。そこで、セッションとデバイスデータがロギングされていることを確認できます。
 
 {% alert note %}
-[以前のナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**ユーザー**] > \[**ユーザー検索**] からユーザーを検索できます。
+[以前のナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**ユーザー**] > [**ユーザー検索**] からユーザーを検索できます。
 {% endalert %}
 
-[1]: https://pub.dev/packages/braze_plugin
-[2]: https://flutter.dev/
-[3]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[4]: {{site.baseurl}}/api/basics/#endpoints
-[5]: https://docs.flutter.dev/get-started/install
-[6]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart
-[7]: https://github.com/braze-inc/braze-flutter-sdk#readme

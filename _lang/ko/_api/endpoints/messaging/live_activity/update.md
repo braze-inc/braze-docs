@@ -57,7 +57,7 @@ description: "이 문서에서는 실시간 활동 업데이트 엔드포인트�
 | `dismissal_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 사용자 UI에서 라이브 활동을 제거할 시간을 정의합니다. 이 시간이 과거이고 `end_activity`가 `true`인 경우, 라이브 활동이 즉시 삭제됩니다.<br><br> `end_activity` 가 `false` 이거나 생략된 경우 이 매개변수는 라이브 활동만 업데이트합니다.|
 | `stale_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 라이브 활동 콘텐츠가 사용자 UI에서 오래된 것으로 표시되는 시점을 시스템에 알려줍니다. |
 | `notification` | 선택 사항 | 객체 | 객체를 포함하여 [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 객체를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 사용자가 프록시 기기를 사용하고 있는지에 따라 달라집니다. {::nomarkdown}<ul><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성화되어 있으면 업데이트된 실시간 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 사용자가 iPhone에서 활성화되어 있지 않으면 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li>그리고 <code>notification alert</code> 는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 디바이스가 있는 경우에는 <code>alert</code> 가 표시됩니다.</li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 

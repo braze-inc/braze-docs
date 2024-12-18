@@ -11,7 +11,7 @@ noindex: true
 
 # iOS 16 SDK アップグレードガイド
 
-> このガイドでは、iOS 16 (2022) で導入された関連する変更と、Braze iOS SDK 統合への影響について説明します。完全な移行ガイドについては、[iOS 16リリースノート][2]を参照してください。
+> このガイドでは、iOS 16 (2022) で導入された関連する変更と、Braze iOS SDK 統合への影響について説明します。完全な移行ガイドについては、[iOS 16リリースノート](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes)を参照してください。
 
 ## iOS 16での変更点
 
@@ -39,10 +39,6 @@ Braze は、追加の変更やアップグレードを必要とせずに、こ�
 
 Braze iOS SDK を iOS 16用にアップグレードする必要はありませんが、他に 2 つの興味深い更新があります。
 
-1. Braze は [新しい Swift SDK][3]をリリースしました。これにより、パフォーマンスの向上、新機能、および多くの改善がもたらされます。
-2. 当社の Braze Swift SDK は、新しい[「コードなし」プッシュプライマー機能][7]をサポートしています。
+1. Braze は [新しい Swift SDK](https://github.com/braze-inc/braze-swift-sdk)をリリースしました。これにより、パフォーマンスの向上、新機能、および多くの改善がもたらされます。
+2. 当社の Braze Swift SDK は、新しい[「コードなし」プッシュプライマー機能]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)をサポートしています。
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-[3]: https://github.com/braze-inc/braze-swift-sdk
-[2]: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/

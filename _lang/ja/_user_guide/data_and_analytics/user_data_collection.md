@@ -17,10 +17,10 @@ guide_featured_list:
   - name: ユーザープロファイルのライフサイクル
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
     image: /assets/img/braze_icons/refresh-ccw-05.svg
-  - name: データ収集ユースケース例
+  - name: データ収集のユースケース例
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
     image: /assets/img/braze_icons/data.svg
-  - name: データ収集ベストプラクティス
+  - name: データ収集のベストプラクティス
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
     image: /assets/img/braze_icons/thumbs-up.svg
   - name: ユーザーインポート

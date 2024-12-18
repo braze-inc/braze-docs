@@ -17,15 +17,15 @@ Braze と Mixpanel の統合により、[Mixpanel コホートを Brazeにイン
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | Mixpanelアカウント | このパートナーシップを活用するには、[Mixpanel アカウント](https://mixpanel.com/)が必要です。 |
 | Currents | Mixpanel にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
-## データエクスポート統合
+## データ・エクスポートの統合
 
-Braze から Mixpanel にエクスポートできるすべてのイベントを以下に示します。Mixpanel に送信されるすべてのイベントには、ユーザーの`external_user_id` が Mixpanel Distict ID として含まれます。このとき、Braze は`external_user_id` が設定されていないユーザーs のイベントデータを送信しません。
+Braze から Mixpanel にエクスポートできるすべてのイベントを以下に示します。Mixpanel に送信されるすべてのイベントには、ユーザーの`external_user_id` が Mixpanel Distict ID として含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータを送信しない。
 
 Mixpanel にエクスポートできるイベントは2種類あります。[メッセージエンゲージメントイベント](#supported-currents-events) (メッセージ送信に直接関連する Braze イベントで構成される) と、[顧客行動イベント](#supported-currents-events) (セッション、カスタムイベント、プラットフォーム経由で追跡された購入などのその他のアプリまたは Web サイトアクティビティを含む) です。すべてのカスタムイベントには、接頭辞として `[Braze Custom Event]` が付いています。カスタムイベントプロパティの接頭辞は `[Custom event property]`、購入イベントプロパティの接頭辞は `[Purchase property]` です。
 
@@ -33,11 +33,11 @@ Mixpanel にエクスポートできるイベントは2種類あります。[メ
 
 ### ステップ1:Mixpanel 認証情報を取得する
 
-Mixpanel ダッシュボードで、新規または既存のプロジェクトの \[**Project Settings**] をクリックします。ここにMixpanel API シークレットとMixpanel トークンがあります。これらの認証情報は、次のステップで Currents 接続を作成するために使用します。 
+Mixpanel ダッシュボードで、新規または既存のプロジェクトの [**Project Settings**] をクリックします。ここにMixpanel API シークレットとMixpanel トークンがあります。これらの認証情報は、次のステップで Currents 接続を作成するために使用します。 
 
 ### ステップ2:Braze Current を作成する
 
-Braze で \*\*\[Currents] > \[**\+ Currents を作成**] > \[**Mixpanel エクスポートを作成**] に移動します。表示されているフィールドに、統合名、連絡先メール、Mixpanel API シークレット、Mixpanel トークンを入力します。次に、追跡するイベントを選択します。使用可能なイベントのリストが表示されます。最後に \[**Currents を起動**] をクリックします。
+Braze で \*\*[Currents] > [**\+ Currents を作成**] > [**Mixpanel エクスポートを作成**] に移動します。表示されているフィールドに、統合名、連絡先メール、Mixpanel API シークレット、Mixpanel トークンを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
 ![Braze Mixpanel Currents ページ。このページには、インテグレーションの名前、連絡先メール、APIシークレット、およびMixpanelエクスポートトークンのフィールドが含まれます。Currents ページの下半分には、送信可能なCurrents イベントが表示されている。]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
@@ -52,15 +52,15 @@ Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/d
 ### 行動
 - カスタムイベント: `users.behaviors.CustomEvent`
 - インストールアトリビューション: `users.behaviors.InstallAttribution`
-- 場所: `users.behaviors.Location`
+- 場所はここだ： `users.behaviors.Location`
 - 購入: `users.behaviors.Purchase`
 - アンインストール: `users.behaviors.Uninstall`
-- アプリ (初回セッション、セッション終了、セッション開始)
+- アプリ（初回セッション、セッション終了、セッション開始）
   - `users.behaviors.app.FirstSession`
   - `users.behaviors.app.SessionEnd`
   - `users.behaviors.app.SessionStart`
-- サブスクリプション(グローバル状態の変更): `users.behaviors.subscription.GlobalStateChange`
-- サブスクリプショングループ(状態変更): `users.behaviors.subscriptiongroup.StateChange`
+- サブスクリプション（グローバルな状態変更）： `users.behaviors.subscription.GlobalStateChange`
+- サブスクリプション・グループ（状態変更）： `users.behaviors.subscriptiongroup.StateChange`
   
 ### キャンペーン
 - 中止: `users_campaigns_abort`
@@ -79,7 +79,7 @@ Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/d
   - `users.canvas.experimentstep.SplitEntry`
 
 ### メッセージ
-- コンテンツカード(中止、クリック、削除、インプレッション、送信)
+- コンテンツカード（中止、クリック、却下、インプレッション、送信）
   - `users.messages.contentcard.Abort`
   - `users.messages.contentcard.Click`
   - `users.messages.contentcard.Dismiss`
@@ -99,13 +99,13 @@ Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/d
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- プッシュ通知 (中止、バウンス、iOSforeground、開封、送信)
+- プッシュ通知（アボート、バウンス、iOSforeground、オープン、送信）
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
   - `users.messages.pushnotification.IosForeground`
   - `users.messages.pushnotification.Open`
   - `users.messages.pushnotification.Send`
-- SMS (中止、通信事業者の送信、配信、配信失敗、インバウンド受信、拒否、送信、ショートリンククリック)
+- SMS（中止、キャリア送信、配信、配信失敗、受信、拒否、送信、ショートリンククリック）
   - `users.messages.sms.Abort`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
@@ -113,10 +113,10 @@ Braze では、Currents の[ユーザーの行動]({{site.baseurl}}/user_guide/d
   - `users.messages.sms.Rejection`
   - `users.messages.sms.Send`
   - `users.messages.sms.ShortLinkClick`
-- Webフック(中止、送信)
+- ウェブフック（中止、送信）
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-- WhatsApp (中止、配信、障害、インバウンド受信、読み取り、送信)
+- WhatsApp (中止、配信、失敗、受信、読み取り、送信)
   - `users.messages.whatsapp.Abort`
   - `users.messages.whatsapp.Delivery`
   - `users.messages.whatsapp.Failure`

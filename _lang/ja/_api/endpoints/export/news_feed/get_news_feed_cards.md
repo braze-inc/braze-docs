@@ -14,19 +14,17 @@ description: "この記事では、「ニュースフィードカードリスト
 /feed/list
 {% endapimethod %}
 
-> このエンドポイントを使用して、ニュースフィードカードの一覧をエクスポートします。それぞれの一覧には、名前とカード API 識別子が含まれます。 
+> このエンドポイントを使用して、ニュースフィードカードの一覧をエクスポートします。それぞれの一覧には、名前とカード API 識別子が含まれます。
 
 カードs は、作成時刻(デフォルトで最も古いものから最新のもの) でソートされた100 の集合で返されます。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`feed.list` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`feed.list`の権限が必要です。
 
 ## レート制限
 
@@ -34,14 +32,14 @@ description: "この記事では、「ニュースフィードカードリスト
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数   | 返されるカードのページ。デフォルトは0です (最大100の最初のセットを返す)。 |
 | `include_archived` | オプション | ブール値   | アーカイブされたカードを含めるかどうか、デフォルトは false です。 |
-| `sort_direction` | オプション | string | \- 作成時刻を新しいものから古いものへとソートする: 値 `desc` を渡す。<br> \- 作成時刻を最も古いものから最新のものにソートするには、`asc` の値を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルト順は最も古い順から最新の順になります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `sort_direction` | オプション | 文字列 | \- 作成時刻を新しいものから古いものへと並べ替える: 値 `desc` を渡します。<br> \- 作成時刻を古いものから新しいものへと並べ替える: 値 `asc` を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/feed/list?page=1&include_archived=true&sort_direction=desc' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

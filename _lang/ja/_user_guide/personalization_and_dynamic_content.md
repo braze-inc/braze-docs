@@ -4,7 +4,7 @@ article_title: "パーソナライゼーションとダイナミックコンテ�
 page_order: 6
 layout: dev_guide
 
-guide_top_header: "パーソナライズメッセージング"
+guide_top_header: "パーソナライズされたメッセージング"
 guide_top_text: "Braze では、ユーザーの名前などのユーザー固有の情報をメールに挿入することで、キャンペーンをカスタマイズできます。"
 description: "このランディングページには、リキッド、コネクテッドコンテンツ、ディープリンク、コンテンツブロック、プロモーションコードなど、Brazeのパーソナライゼーションとダイナミックなの内容が含まれています。"
 
@@ -28,7 +28,7 @@ guide_featured_list:
 - name: プロモーションコード
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
   image: /assets/img/braze_icons/tag-01.svg
-- name: キャンバスの永続的なエントリプロパティ
+- name: キャンバスの永続エントリプロパティ
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: カタログ
@@ -41,4 +41,4 @@ guide_featured_list:
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-属性-values
+[37]:\#accounting-for-null-attribute-values

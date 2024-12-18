@@ -20,7 +20,7 @@ Braze と Certona の統合では、コネクテッドコンテンツを介し�
 | ---| ---|
 | [Certona アカウント](https://manage.certona.com/) | このパートナーシップを活用するには、Certona アカウントが必要です。 |
 | [Certona REST APIエンドポイント](https://manage.certona.com/) | このエンドポイントは、Brazeキャンペーンメッセージで直接使用され、ユーザーIDに基づいて推奨コンテンツを引き出す。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -39,7 +39,7 @@ Certona の REST API を使用して、パーソナライズされたコンテ�
 
 このメッセージを作成画面に追加したら、コネクテッドコンテンツの呼び出しをプレビューし、正しい情報が表示されていることを確認します。
 
-![送信前にメッセージを完全にテストするようにユーザーに促す \[Test] タブ。][2]
+![送信前にメッセージを完全にテストするようにユーザーに促す [Test] タブ。][2]
 
 [1]: {% image_buster /assets/img/certona.png %}
 [2]: {% image_buster /assets/img/certona2.png %}

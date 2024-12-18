@@ -92,7 +92,7 @@ _結果に注意してください。_BrazeはURLに基づいてAPIコールを�
 | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | 1つのキャンペーン内のすべての顧客は同じコード発行を使用します。 |
 | {% raw %}`{{${user_id}}}`{% endraw %} または {% raw %}`{{${braze_id}}}`{% endraw %} | どのキャンペーンが送信されてもすべての顧客が同じコード発行を使用することを確認します ({% raw %}`external_id`{% endraw %}である {% raw %}`${user_id}`{% endraw %}と、内部 ID である {% raw %}`${braze_id}`{% endraw %} を使用できます)。 |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} と {% raw %}`{{campaign.${user_id}}}`{% endraw %} | 1つの送信内の各顧客は、同じ一意のコード発行を使用します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab 1回のみの参加 %}
@@ -367,7 +367,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
     | ヨーロッパ（デフォルト） | https://api.voucherify.io/v1/publications     |
     | アメリカ合衆国    | https://us1.api.voucherify.io/v1/publications |
     | アジア（シンガポール） | https://as1.api.voucherify.io/v1/publications |
-    {: .reset-td-br-1 .reset-td-br-2}
+    {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
     
 3.  認証のためにAPIキーを追加してください。`Voucherify-App-Id`と`Voucherify-App-Token`は**プロジェクト設定 > 一般 > アプリケーションキー.**で見つけることができます。<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}

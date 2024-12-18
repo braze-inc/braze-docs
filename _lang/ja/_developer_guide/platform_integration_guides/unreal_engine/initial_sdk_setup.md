@@ -20,9 +20,7 @@ search_rank: 1
 * Unreal アプリを大規模なキャンバスジャーニーと統合する
 * アプリ内の行動に基づいて、EメールやSMSなどのクロスチャネルメッセージを送信する。
 
-Braze Unreal Engine プラグインの詳細については、[GitHub リポジトリ][1]を参照してください。
+Braze Unreal Engine プラグインの詳細については、[GitHub リポジトリ](https://github.com/braze-inc/braze-unreal-sdk)を参照してください。
 
-![Unreal Engine UI に表示された Braze Unreal SDK プラグイン。][2]
+![Unreal Engine UI に表示された Braze Unreal SDK プラグイン。]({% image_buster /assets/img/unreal_engine/EnablePlugin.png %})
 
-[1]: https://github.com/braze-inc/braze-unreal-sdk
-[2]: {% image_buster /assets/img/unreal_engine/EnablePlugin.png %}

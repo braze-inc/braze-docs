@@ -21,7 +21,7 @@ search_tag: Partner
 | Foursquare アカウント | このパートナーシップを利用するには、Foursquareのアカウントが必要である。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | BrazeのワークスペースとApp ID | Braze ワークスペースと アプリ ID は[開発者コンソール]({{site.baseurl}}/api/api_key/)で確認できます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 

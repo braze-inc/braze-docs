@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`campaign_id`| Requis | Chaîne de caractères | Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
 |`name`| Requis | Chaîne de caractères | Le nom de la campagne résultante. |
 |`description`| Facultatif | Chaîne de caractères | Le champ de description de la campagne résultante. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Réponse

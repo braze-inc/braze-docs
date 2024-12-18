@@ -11,7 +11,7 @@ description: "この記事では、ブラックリストのメールBrazeエン�
 ---
 {% api %}
 # ブラックリストのメール
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/blacklist
 {% endapimethod %}
 
@@ -31,7 +31,7 @@ Brazeは[`/email/blocklist`エンドポイント]({{site.baseurl}}/api/endpoints
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -46,10 +46,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | -----------|----------| --------|------- |
-| `email` | required | 文字列または配列 | ブラックリストに登録するメールアドレス、または最大50件のメールアドレスの配列。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `email` | 必須 | 文字列または配列 | ブラックリストに登録するメールアドレス、または最大50件のメールアドレスの配列。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 ```
@@ -62,5 +62,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 ```
 
 {% endapi %}
-
-

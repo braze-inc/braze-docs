@@ -24,7 +24,7 @@ guide_featured_list:
   - name: "アプリ内メッセージ FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     image: /assets/img/braze_icons/channel-in-app-messages.svg
-  - name: "場所と地理に関するよくある質問"
+  - name: "位置情報とジオフェンスに関する FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "メディアライブラリに関するよくある質問"
@@ -48,13 +48,13 @@ guide_featured_list:
   - name: "APIとCSVエクスポートFAQ"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
-  - name: "機能フラグFAQ"
+  - name: "フィーチャーフラグに関する FAQ"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
-  - name: "ライブ活動FAQ"
+  - name: "ライブアクティビティに関する FAQ"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
     image: /assets/img/braze_icons/swift.svg
-  - name: "液体FAQ"
+  - name: "Liquid に関する FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
 

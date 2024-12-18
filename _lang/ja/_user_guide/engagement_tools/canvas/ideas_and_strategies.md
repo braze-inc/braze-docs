@@ -21,6 +21,9 @@ guide_featured_list:
   - name: キャンバスフローで開始する
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
+  - name: Braze キャンバステンプレートの使用
+    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
+    image: /assets/img/braze_icons/target-04.svg
   - name: ローカライゼーション
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
     image: /assets/img/braze_icons/globe-02.svg

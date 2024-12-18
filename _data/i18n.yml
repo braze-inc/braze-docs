@@ -38,3 +38,23 @@ ko:
   edit_github: GitHub 에서 이 페이지를 편집합니다.
   page_nav_title: 이 페이지에
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
+pt-br:
+  next: PRÓXIMO
+  previous: ANTERIOR
+  popular_topic: Tópicos populares
+  helpful_resources: Recursos úteis
+  braze_status: STATUS DO SISTEMA BRAZE
+  braze_status_check: Verificando o status do Braze
+  edit_github: Editar esta página no GitHub
+  page_nav_title: Nesta página
+  helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
+es:
+  next: SIGUIENTE
+  previous: ANTERIOR
+  popular_topic: Temas populares
+  helpful_resources: Recursos útiles
+  braze_status: ESTADO DEL SISTEMA BRAZE
+  braze_status_check: Verificación del estado de Braze
+  edit_github: Editar esta página en GitHub
+  page_nav_title: En esta página
+  helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"

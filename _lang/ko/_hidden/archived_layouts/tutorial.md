@@ -3,7 +3,7 @@ nav_title: 튜토리얼
 page_order: 6
 
 #Required
-description: "이것은 Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간단히 유지하세요."
+description: "Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간결하게 작성하세요."
 page_type: tutorial
 tool:
   - Dashboard
@@ -77,7 +77,7 @@ noindex: true
 | -------- | ----------- |
 | 페이지 제목 | 당신의 페이지 제목을 무엇이든지 지을 수 있습니다. 이것을 가져야 합니다. |
 | 내 첫 번째 제목 | 이것을 대문자로 쓰는 것을 권장합니다. 이것도 선택 사항입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 2단계: 다음 일을 하세요
 

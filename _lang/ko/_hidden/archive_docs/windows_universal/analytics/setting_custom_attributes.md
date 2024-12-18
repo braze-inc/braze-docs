@@ -52,7 +52,7 @@ bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab 더블/플로트 %}
+{% tab 더블 또는 플로트 %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
@@ -119,7 +119,7 @@ REST API를 사용하여 사용자 속성을 설정할 수도 있습니다. 자�
 | `OptedIn` | 구독하고 명시적으로 동의한 경우 |
 | `Subscribed` | 구독 중이지만 명시적으로 옵트인하지 않은 경우 |
 | `UnSubscribed` | 구독 취소 및/또는 명시적 수신 거부 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 - `EmailNotificationSubscriptionType`
   - 유효한 이메일 주소가 수신되면 자동으로 `Subscribed` 로 설정되지만, 명시적인 옵트인 프로세스를 설정하고 사용자의 명시적인 동의를 받은 후 이 값을 `OptedIn` 으로 설정하는 것이 좋습니다.

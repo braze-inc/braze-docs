@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mes
 /messages/schedule/create
 {% endapimethod %}
 
-> Cet endpoint permet de planifier l'envoi d'une campagne, d'un Canvas ou d'un autre message à une heure donnée et fournit un identifiant permettant de référencer ce message pour les mises à jour. 
+> Cet endpoint permet de planifier l'envoi d'une campagne, d'un Canvas ou d'un autre message à une heure donnée et fournit un identifiant permettant de référencer ce message pour les mises à jour.
 
 Si vous ciblez un segment, un enregistrement de votre demande sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l'envoi de tous les messages planifiés.
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": { 
+  "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
@@ -79,12 +79,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `segment_id` | Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Facultatif|Chaîne de caractères| Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). | 
+| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). |
 | `override_messaging_limits` | Facultatif | Valeur booléenne | Ignorer les limites de débit globales pour les campagnes, définies sur Faux par défaut |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 | `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | Facultatif | Objet Messagerie | Voir les [objets d'envoi de messages disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `messages` | Facultatif | Objet Messagerie | Voir [les objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -178,4 +178,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 {% endapi %}
-

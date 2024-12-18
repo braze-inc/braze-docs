@@ -14,13 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /feed/list
 {% endapimethod %}
 
-> Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte. 
+> Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte.
 
 Les cartes sont renvoyées par groupes de 100 triées par date de création (des plus anciennes aux plus récentes par défaut).
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
@@ -39,7 +37,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `page` | Facultatif | Entier   | La page des cartes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
 | `include_archived` | Facultatif | Valeur booléenne   | S’il faut inclure ou non des cartes archivées, par défaut sur Faux. |
 | `sort_direction` | Facultatif | Chaîne de caractères | \- Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

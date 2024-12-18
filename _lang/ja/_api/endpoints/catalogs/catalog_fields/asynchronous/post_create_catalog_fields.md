@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:カタログ・フィールドを作成する"
-article_title: "POST:カタログ・フィールドを作成する"
+nav_title: "POST:カタログフィールドの作成"
+article_title: "POST:カタログフィールドの作成"
 search_tag: Endpoint
 page_order: 2
 
@@ -22,7 +22,7 @@ description: "この記事では、「カタログフィールドの作成」Bra
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.create_fields` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.create_fields`の権限が必要です。
 
 ## レート制限
 
@@ -30,17 +30,17 @@ description: "この記事では、「カタログフィールドの作成」Bra
 
 ## パスパラメーター
 
-| パラメーター      | required | データ型 | 説明          |
+| パラメータ      | required | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | 必須 | string    | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列    | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 | パラメーター | required | データ型 | 説明                                                                                                  |
 | --------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------ |
 | `fields`  | required | 配列     | フィールドオブジェクトを含む配列。フィールドオブジェクトは、新しいフィールドの名前とタイプを含んでいなければなりません。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエスト例
 
@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 応答
 
-このエンドポイントには、`202`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー                                | トラブルシューティング                                                                                        |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -117,6 +117,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `company-size-limit-already-reached` | カタログのストレージサイズの上限に達しています。                                                             |
 | `request-includes-too-many-fields`   | 各リクエストは最大50の新規フィールドをサポートできる。                                                          |
 | `catalog-exceeds-fields-limit`       | カタログは500以上のフィールドを持つことはできない。                                                              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

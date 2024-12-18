@@ -38,7 +38,7 @@ description: "이 문서에서는 Braze 엔드포인트의 목록 검색 또는 
 | `offset` | 선택 사항 | 정수 | 검색할 목록의 시작점(선택 사항)입니다. |
 | `sort_direction` | 선택 사항 | 문자열 | `asc` 값을 전달하여 구독 취소를 가장 오래된 것부터 최신 것 순으로 정렬합니다. `desc` 을 입력하여 최신에서 오래된 순으로 정렬합니다. `sort_direction` 이 포함되지 않은 경우 기본 순서는 최신에서 오래된 순서입니다. |
 | `email` | 선택 사항 <br>(참고 참조) | 문자열 | 제공된 경우 사용자가 구독을 취소했는지 여부를 반환합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `end_date` 이메일 주소와 `email` 또는 `start_date` 중 하나를 제공해야 합니다.
@@ -46,7 +46,7 @@ description: "이 문서에서는 Braze 엔드포인트의 목록 검색 또는 
 
 날짜 범위에 `limit` 이상의 구독 취소 횟수가 있는 경우, 호출이 `limit`보다 적거나 결과가 0이 될 때까지 매번 `offset`을 늘려가며 여러 번 API 호출을 수행해야 합니다.
 
-## 요청 예시 
+## 예시 요청
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

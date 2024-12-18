@@ -16,12 +16,12 @@ Braze と Amazon S3 の統合では、[Currents]({{site.baseurl}}/user_guide/dat
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Amazon S3 アカウント | このパートナーシップを活用するには、Amazon S3アカウントが必要です。 |
 | 専用 S3 バケット | Amazon S3 と統合するには、アプリ用の S3 バケットを作成する必要があります。<br><br>すでに S3バケットがある場合は、Braze 専用の新しいバケットを作成することをお勧めします。これにより、権限を制限できるようになります。新しいバケットを作成する方法については、次の手順を参照してください。 |
 | Currents | データを Amazon S3 にエクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 新しい S3 バケットを作成する
 
@@ -44,7 +44,7 @@ Braze には、[Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/b
 
 ### ステップ2:認証情報を取得する {#secret-key-2}
 
-新しいユーザーを作成した後、**ユーザーセキュリティクレデンシャルを表示**をクリックして、アクセスキーIDとシークレットアクセスキーを表示します。これらの認証情報は後で Braze ダッシュボードに入力する必要があるため、どこかにメモしておくか、\[**Download Credentials**] ボタンをクリックします。
+新しいユーザーを作成した後、**ユーザーセキュリティクレデンシャルを表示**をクリックして、アクセスキーIDとシークレットアクセスキーを表示します。これらの認証情報は後で Braze ダッシュボードに入力する必要があるため、どこかにメモしておくか、[**Download Credentials**] ボタンをクリックします。
 
 ![][11]
 
@@ -115,7 +115,7 @@ Braze には、[Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/b
 Braze で、**Partner Integrations** > **データエクスポート** に移動します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**Currents**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**Currents**] は [**統合**] にあります。
 {% endalert %}
 
 次に、**Create Current**をクリックし、**Amazon S3 Data Export**を選択します。
@@ -125,7 +125,7 @@ Braze で、**Partner Integrations** > **データエクスポート** に移動
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-AWSのアクセスキーID とシークレットアクセスキーを最新の状態に保ちます。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。これが **48 時間** 以上続く場合、コネクタのイベントはドロップされ、データは永続的に失われます。
+AWSのアクセスキーID とシークレットアクセスキーを最新の状態に保ちます。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
 必要に応じて、次のカスタマイズを追加することもできます。
@@ -143,15 +143,15 @@ AWSのアクセスキーID とシークレットアクセスキーを最新の�
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Amazon S3** をクリックします。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Technology Partners** は**Integrations** にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-AWS 認証情報ページで \[**AWS シークレットアクセスキー**] ラジオボタンが選択されていることを確認してから、AWS アクセス ID、AWS シークレットアクセスキー、AWS S3 バケット名をそれぞれ所定のフィールドに入力します。シークレットキーを入力するときは、まず**テスト認証情報s**をクリックして認証情報が機能することを確認し、成功したら**保存**をクリックします。
+AWS 認証情報ページで [**AWS シークレットアクセスキー**] ラジオボタンが選択されていることを確認してから、AWS アクセス ID、AWS シークレットアクセスキー、AWS S3 バケット名をそれぞれ所定のフィールドに入力します。シークレットキーを入力するときは、まず**テスト認証情報s**をクリックして認証情報が機能することを確認し、成功したら**保存**をクリックします。
 
 ![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
 {% alert tip %}
-新しい認証情報はいつでも取得できます。取得するには、ユーザーに移動して、AWS Console 内の \[**Security Credentials**] タブの \[**Create Access Key**] をクリックします。
+新しい認証情報はいつでも取得できます。取得するには、ユーザーに移動して、AWS Console 内の [**Security Credentials**] タブの [**Create Access Key**] をクリックします。
 {% endalert %}
 
 認証情報が正常に検証されたかどうかを示す通知が表示されます。これで、AWS S3が Braze アカウントに統合されているはずです。
@@ -173,7 +173,7 @@ AWS 認証情報ページで \[**AWS シークレットアクセスキー**] ラ
 「Currents」と「ダッシュボードデータのエクスポート」では必要なポリシーが異なります。
 {% endalert %}
 
-\[**JSON**] タブを開き、\[**ポリシードキュメント**] セクションに以下のコードスニペットを入力します。`INSERTBUCKETNAME` は必ずバケット名に置き換えてください。終了したら、**Review Policy**をクリックします。
+[**JSON**] タブを開き、[**ポリシードキュメント**] セクションに以下のコードスニペットを入力します。`INSERTBUCKETNAME` は必ずバケット名に置き換えてください。終了したら、**Review Policy**をクリックします。
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -237,12 +237,12 @@ Braze アカウントから Braze アカウント ID と external ID を取得�
 - **ダッシュボードデータエクスポート**:Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Amazon S3** をクリックします。ここには、ロールの作成に必要な識別子s があります。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>- **Currents** は**積分**> **Currents** にあります。<br>\- \[**テクノロジーパートナー**] は \[**統合**] の下にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>- **Currents** は**積分**> **Currents** にあります。<br>\- [**テクノロジーパートナー**] は [**統合**] の下にあります。
 {% endalert %}
 
-AWS Console に戻り、信頼できるエンティティセレクターのタイプとして \[**Another AWS Account**] を選択します。BrazeのアカウントID を入力し、**外部ID を要求** をオンにして、Brazeの外部ID を入力します。完了したら、**Next**をクリックします。
+AWS Console に戻り、信頼できるエンティティセレクターのタイプとして [**Another AWS Account**] を選択します。BrazeのアカウントID を入力し、**外部ID を要求** をオンにして、Brazeの外部ID を入力します。完了したら、**Next**をクリックします。
 
-![S3 の \[ロールの作成] ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({{site.baseurl}}/assets/img/create_role_2_another.png)
+![S3 の [ロールの作成] ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
 ### ステップ3:ポリシーをアタッチする {#role-arn-3}
 
@@ -250,9 +250,9 @@ AWS Console に戻り、信頼できるエンティティセレクターのタ�
 
 ![ロールの ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)
 
-ロールに名前と説明を付け、\[**ロールの作成**] をクリックします。
+ロールに名前と説明を付け、[**ロールの作成**] をクリックします。
 
-![ロールの ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)
+![ロールの ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
 これで、新しく作成したロールがリストに表示されます。
 
@@ -271,11 +271,11 @@ Braze アカウントに戻り、提供されたフィールドにロールARN �
 {% tabs %}
 {% tab Braze Currents %}
 
-Braze で、\[**統合**] の \[**Currents**] ページに移動します。次に、**Create Current**をクリックし、**Amazon S3 Data Export**を選択します。
+Braze で、[**統合**] の [**Currents**] ページに移動します。次に、**Create Current**をクリックし、**Amazon S3 Data Export**を選択します。
 
 ![]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
-Current の名前を指定します。次に、\[**認証情報**] セクションで \[**AWS ロール ARN**] ラジオボタンが選択されていることを確認し、ロール ARN と AWS S3バケット名を所定のフィールドに入力します。
+Current の名前を指定します。次に、[**認証情報**] セクションで [**AWS ロール ARN**] ラジオボタンが選択されていることを確認し、ロール ARN と AWS S3バケット名を所定のフィールドに入力します。
 
 必要に応じて、次のカスタマイズを追加することもできます。
 
@@ -297,10 +297,10 @@ Braze で、**Technology Partners** ページの**Integrations** に移動し、
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
-\[**認証情報**] ページで \[**AWS ロール ARN**] ラジオボタンが選択されていることを確認し、ロール ARN と AWS S3バケット名を所定のフィールドに入力します。最初に**テスト認証情報s**をクリックして、認証情報が正しく動作することを確認し、成功したら**保存**をクリックします。
+[**認証情報**] ページで [**AWS ロール ARN**] ラジオボタンが選択されていることを確認し、ロール ARN と AWS S3バケット名を所定のフィールドに入力します。最初に**テスト認証情報s**をクリックして、認証情報が正しく動作することを確認し、成功したら**保存**をクリックします。
 
 {% alert tip %}
-新しい認証情報はいつでも取得できます。取得するには、ユーザーに移動して、AWS Console内の \[**Security Credentials**] タブの \[**Create Access Key**] をクリックします。
+新しい認証情報はいつでも取得できます。取得するには、ユーザーに移動して、AWS Console内の [**Security Credentials**] タブの [**Create Access Key**] をクリックします。
 {% endalert %}
 
 認証情報が正常に検証されたかどうかを示す通知が表示されます。これで、AWS S3が Braze アカウントに統合されているはずです。
@@ -312,7 +312,7 @@ Braze で、**Technology Partners** ページの**Integrations** に移動し、
 
 クラウドデータストレージソリューションを統合しており、API、ダッシュボードレポート、または CSV レポートをエクスポートする場合、次のような状況が発生します。
 
-- すべてのAPI エクスポートでは、レスポンスボディにダウン読み込むURL が返されず、データストレージを介して取得する必要があります。
+- すべての API エクスポートでは、応答本文でダウンロード URL が返されないため、データストレージから取得する必要があります。
 - すべてのダッシュボードレポートと CSV レポートは、ダウンロード用のメールでユーザーに送信され (保存権限は不要です)、Data Storage にバックアップされます。 
 
 ## 複数のコネクター

@@ -32,13 +32,13 @@ Shopify `checkout.liquid` は、2024年8月に非推奨になり、2025年8月�
 
 ### Android用カスタム・プッシュ・ブロードキャスト・レシーバー
 
-**サポートの終了**: 2022年10月
+**サポートの撤回**: 2022年10月
 
 プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
 
-### Grouparooパートナーシップ
+### Grouparoo のパートナーシップ
 
-**サポートの終了**: 2022年4月
+**サポートの撤回**: 2022年4月
 
 Grouparoo のサポートは、2022年4月に終了しました。
 
@@ -56,38 +56,38 @@ Grouparoo のサポートは、2022年4月に終了しました。
 
 ### appboyBridge グローバル変数
 
-**サポートの終了**: 2021年5月<br>
+**サポートの撤回**: 2021年5月<br>
 **置換**: `brazeBridge`
 
 グローバル変数`appboyBridge` は非推奨となり、`brazeBridge` に置き換えられました。`appboyBridge` は既存のお客様は引き続き使用できますが、`appboyBridge` を使用している場合は `brazeBridge` に移行することをお勧めします。
 
 ### Amazon Momentsパートナーシップ
 
-**サポートの終了**: 2020年6月
+**サポートの撤回**: 2020年6月
 
 Amazon Momentsのサポートは2020年6月をもって終了した。Amazon MomentsはAmazon Advertisingに統合され、APIと我々の統合は廃止された。
 
 ### 事実上のパートナーシップ
 
-**サポートの終了**: 2020年6月
+**サポートの撤回**: 2020年6月
 
 Factual のサポートは、2020年6月に終了しました。Factualは最近Foursquareに買収され、Braze Platformとの統合はなくなった。
 
 ### Twilio webhookの統合
 
-**サポートの終了**: 2020年1月
+**サポートの撤回**: 2020年1月
 
 [Twilio Webhookインテグレーション]({{site.baseurl}}/partners/twilio/)の対応は2020年1月31日をもって終了しました。BrazeでもSMSサービスにアクセスしたい場合は、[SMSのドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)参照のこと。
 
-### Apptimizeパートナーシップ
+### Apptimize のパートナーシップ
 
-**サポートの終了**: 2019年8月
+**サポートの撤回**: 2019年8月
 
 現在[Braze]({{site.baseurl}}/help/release_notes/deprecations/apptimize)でApptimizeを使用している場合、サービスの中断は発生しません。Apptimize のカスタム属性を Braze のユーザープロファイルに設定することもできます。ただし、パートナーとの正式なエスカレーションサポートは提供されません。
 
 ### アプリ内オリジナルメッセージ
 
-**サポートの終了**: 2019年2月<br>
+**サポートの終了:**2019年2月<br>
 **置換**: [アプリ内メッセージング]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
 
 Brazeは、最新のUXとUIのベストプラクティスに準拠するため、アプリ内メッセージのルック＆フィールを改善し、オリジナルのアプリ内メッセージのサポートは終了した。
@@ -101,13 +101,13 @@ Braze は、以下の SDK リリースでアプリ内メッセージの新しい
 
 ### フィードバック・ウィジェット
 
-**サポートの終了**: 2019年7月1日
+**サポートの撤回**: 2019年7月1日
 
 Braze SDKは、アプリに追加できるフィードバックウィジェットを提供し、ユーザーが`submitfeedback` メソッドを使ってフィードバックを残し、それをDesk.com またはZendeskに渡し、ダッシュボードで管理できるようにした。
 
 ### Google Cloud Messaging (GCM)
 
-**サポートの終了**: Braze のサポート終了: 2018年7月、Googleによるサポートの削除:2019年5月29日<br>
+**サポートの撤回**: Braze のサポート終了: 2018年7月、Googleによるサポートの削除:2019年5月29日<br>
 **置換**: [Firebase クラウドメッセージング (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
 Google は、2019年5月29日をもって [GCMのサポートを終了](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html)しました。Brazeは2018年7月にAndroid SDKからGCMのサポートを打ち切ったが、これは当社の[Android SDKの変更履歴に](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)記載されている。これは、既存のGCMトークンが引き続き機能し、既存のユーザーにメッセージを送ることができることを意味する。ただし、新規ユーザーにメッセージを送ることはできません。
@@ -118,7 +118,7 @@ FCMに移行していない場合、GCMプッシュトークンの登録はす�
 
 ### Eclipse
 
-**サポートの終了**: 2014～2015年<br>
+**サポートの撤回**: 2014～2015年<br>
 **置換**: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
 Google が Eclipse Android Developer Tools (ADT) プラグインの[サポートを終了](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html)したため、Braze は Eclipse IDE のサポートを中止しました。 
@@ -127,20 +127,20 @@ Google が Eclipse Android Developer Tools (ADT) プラグインの[サポート
 
 ### Raw Event Stream (RES)
 
-**サポートの終了**: 2018年7月<br>
+**サポートの撤回**: 2018年7月<br>
 **置換**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
 
 Raw Event Stream は [Currents]({{site.baseurl}}/partners/braze_currents/about/) の前身であり、Braze データの将来に備えて廃止されました。
 
 ### アイドル時のディレイ - GCM機能
 
-**サポートの終了**: 2016年11月
+**サポートの撤回**: 2016年11月
 
 Delay While Idleパラメータは、以前は[GCMプッシュオプション](https://developers.google.com/cloud-messaging/http-server-ref)の一部でした。Googleは2016年11月15日にこのオプションのサポートを撤回した。以前は、**true**に設定した場合、デバイスがアクティブになるまでメッセージを送信しないことを示していました。
 
 ### カスタムエンドポイント
 
-**サポートの終了**: 2019年12月
+**サポートの撤回**: 2019年12月
 
 カスタムエンドポイントの削除。カスタムエンドポイントを持っている場合は、それを使い続けることができるが、Brazeはもうそれを提供しない。
 

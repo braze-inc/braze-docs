@@ -23,11 +23,11 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 次の場所でアプリケーションの自動アクションを確認し、内部プッシュを無視するようにコードを更新する必要があります。
 
 1. **プッシュレシーバー。**バックグラウンドプッシュ通知により、`UIApplicationDelegate` の `application:didReceiveRemoteNotification:fetchCompletionHandler:` が呼び出されます。
-2. **アプリケーションデリゲート。**バックグラウンドプッシュにより、[中断された][4]アプリがバックグラウンドで起動し、`UIApplicationDelegate` の `application:willFinishLaunchingWithOptions:` および `application:didFinishLaunchingWithOptions:` メソッドがトリガーされます。これらのメソッドの `launchOptions` をチェックして、アプリケーションがバックグラウンドプッシュから起動されたかどうかを判断できます。
+2. **アプリケーションデリゲート。**バックグラウンドプッシュにより、[中断された](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3)アプリがバックグラウンドで起動し、`UIApplicationDelegate` の `application:willFinishLaunchingWithOptions:` および `application:didFinishLaunchingWithOptions:` メソッドがトリガーされます。これらのメソッドの `launchOptions` をチェックして、アプリケーションがバックグラウンドプッシュから起動されたかどうかを判断できます。
 
 ## Braze 内部プッシュユーティリティ メソッドの使用
 
-`ABKPushUtils` のユーティリティーメソッドを使用して、アプリが Braze の内部プッシュを受信したか、または Braze の内部プッシュによって起動されたかを確認できます。`isAppboyInternalRemoteNotification:` はすべての Braze 内部プッシュ通知で `YES` を返し、`isUninstallTrackingRemoteNotification:` と `isGeofencesSyncRemoteNotification:` はそれぞれアンインストール追跡とジオフェンス同期通知で `YES` を返します。メソッド宣言については、[`ABKPushUtils.h`][1] を参照してください。
+`ABKPushUtils` のユーティリティーメソッドを使用して、アプリが Braze の内部プッシュを受信したか、または Braze の内部プッシュによって起動されたかを確認できます。`isAppboyInternalRemoteNotification:` はすべての Braze 内部プッシュ通知で `YES` を返し、`isUninstallTrackingRemoteNotification:` と `isGeofencesSyncRemoteNotification:` はそれぞれアンインストール追跡とジオフェンス同期通知で `YES` を返します。メソッド宣言については、[`ABKPushUtils.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKPushUtils.h) を参照してください。
 
 ## 実装例 {#internal-push-implementation-example}
 
@@ -53,7 +53,7 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
@@ -78,5 +78,3 @@ func application(_ application: UIApplication,
 {% endtab %}
 {% endtabs %}
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKPushUtils.h
-[4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3

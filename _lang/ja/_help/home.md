@@ -34,7 +34,7 @@ popular_topic_list:
     link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
   - name: プッシュトークンの移行
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: カスタムイベントプロパティのロギング
+  - name: カスタムイベントプロパティをロギングする
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
   - name: ディスパッチ ID
     link: /docs/help/help_articles/data/dispatch_id/
@@ -46,7 +46,7 @@ popular_topic_list:
     link: /docs/help/help_articles/data/change_custom_data_type/
   - name: アプリ内メッセージが表示されない
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
-  - name: イベントログを使う
+  - name: イベントロギングを使用する
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
 

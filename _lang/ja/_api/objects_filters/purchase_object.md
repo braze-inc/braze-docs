@@ -19,11 +19,12 @@ description: "この参考記事では、購入オブジェクトのさまざま
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -95,15 +96,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | データ型 | 説明 |
 | --- | --- |
-| 数値 | 整数または浮動小数点数のいずれかとして |
+| 数値 | [整数](https://en.wikipedia.org/wiki/Integer)または[浮動小数点数として](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | ブール値 |  |
-| 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列。配列内ではサポートされていません。 |
+| 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としてフォーマットされる。アレイ内ではサポートされていない。 |
 | 文字列 | 255 文字以下。 |
-| 配列 | 配列には日付時刻を含めることはできません。 |
+| 配列 | 配列に日時を含めることはできない。 |
 | オブジェクト | オブジェクトは文字列として取り込まれます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 100 KB のイベントプロパティペイロードを設定できます。
+配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 50 KB のイベントプロパティペイロードを設定できます。
 
 ### 購入プロパティ
 

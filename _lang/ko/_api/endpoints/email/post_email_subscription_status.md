@@ -14,7 +14,7 @@ description: "이 문서에서는 사용자의 이메일 구독 상태 변경 Br
 /email/status
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 사용자의 이메일 구독 상태를 설정할 수 있습니다. 
+> 이 엔드포인트를 사용하여 사용자의 이메일 구독 상태를 설정할 수 있습니다.
 
 사용자는 `opted_in`, `unsubscribed`, 또는 `subscribed`(특별히 옵트인 또는 옵트아웃하지 않음)일 수 있습니다.
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `email` | 필수 | 문자열 또는 배열 | 수정할 이메일 주소를 문자열로 입력하거나 수정할 이메일 주소를 최대 50개까지 배열할 수 있습니다. |
 | `subscription_state` | 필수 | 문자열 | "구독", "구독 취소" 또는 "옵트인" 중 하나를 선택합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

@@ -45,8 +45,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `merge_updates` | Requis | Tableau | Un tableau d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent chacun référencer un utilisateur par `external_id`, `user_alias`, `phone_number` ou `email`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `merge_updates` | Requis | Tableau | Un tableau d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent chacun référencer un utilisateur par `external_id`, `user_alias`, `phone` ou `email`. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Comportement de fusion
 
@@ -101,7 +101,7 @@ Ces champs fusionnés mettront à jour les filtres « pour X événements en Y�
 
 ### Fusionner les utilisateurs par e-mail ou par numéro de téléphone
 
-Si un identifiant `email` ou `phone_number` est spécifié, une valeur supplémentaire `prioritization` est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner s'il y a plusieurs utilisateurs trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+Si un identifiant `email` ou `phone` est spécifié, une valeur supplémentaire `prioritization` est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner s'il y a plusieurs utilisateurs trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est accordée à l'utilisateur ayant effectué la dernière mise à jour.
 
@@ -265,6 +265,6 @@ Le tableau suivant répertorie les messages d’erreur possibles.
 | `a single request may not contain more than 50 merge updates` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
 | `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Vérifiez les identifiants dans votre requête. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Vérifiez que `merge_updates` ne contient que les deux objets `identifier_to_merge` et `identifier_to_keep`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

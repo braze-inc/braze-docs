@@ -14,7 +14,7 @@ guide_featured_list:
 - name: Apple 비공개 릴레이로 이메일 보내기
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
   image: /assets/img/braze_icons/list.svg
-- name: Apple 메일 개인 정보 보호
+- name: Apple MPP
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
   image: /assets/img/braze_icons/apple.svg
 

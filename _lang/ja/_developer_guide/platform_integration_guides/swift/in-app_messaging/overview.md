@@ -13,7 +13,7 @@ channel:
 
 > [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)を使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスが向上し、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。
 
-アプリ内メッセージの[事例については、ケーススタディを][31]ご覧いただきたい。
+アプリ内メッセージの[事例については、ケーススタディを](https://www.braze.com/customers)ご覧いただきたい。
 
 ## アプリ内メッセージのタイプ
 
@@ -38,7 +38,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 ユーザーが既定のアプリ内メッセージタイプの1つを開くと、次のようになります。
 
 {% tabs %}
-{% tab Slideup %}
+{% tab スライドアップ %}
 
 [`Slideup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/slideup-swift.struct) アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
@@ -89,7 +89,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) アプリ内メッセージには UI コンポーネントは含まれず、主に分析用に使用されます。このタイプは、コントロールグループに送信されたアプリ内メッセージの受信を確認するために使用される。
 
-インテリジェントセレクションとコントロールグループについては、[インテリジェントセレクション]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)を参照してください。
+インテリジェントセレクションとコントロールグループについては、[インテリジェントセレクション]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -100,5 +100,3 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 {% endalert %}
 
 
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

@@ -1,6 +1,6 @@
 ---
 nav_title: "取得:配信停止になっているメールアドレスのリストを照会"
-article_title: "取得:配信停止になっているメールアドレスのリストの照会"
+article_title: "取得:配信停止になっているメールアドレスのリストを照会"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
@@ -30,15 +30,15 @@ description: "この記事では、配信停止になっているメールの照
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ---------|------ |
-| `start_date` | オプション <br>（注を参照） | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日で、end_date よりも前である必要があります。これは API によって UTC 時間の真夜中として扱われます。 |
-| `end_date` | オプション <br>（注を参照） | YYYY-MM-DD形式の文字列 | 配信停止を取得する範囲の終了日。これは API によって UTC 時間の真夜中として扱われます。 |
-| `limit` | オプション | 整数 | 結果の数を制限するためのオプションのフィールド。デフォルトは100で、最大は500です。 |
+| `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日で、end_date よりも前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `end_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列 | 配信停止を取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
-| `sort_direction` | オプション | string | 値 `asc` を渡して、配信停止を最も古いものから最も新しいものへと並べ替えます。`desc`を渡して、最新のものから古いものへ並べ替えます。`sort_direction` が含まれていない場合、デフォルトの順序は新しいものから古いものです。 |
-| `email` | オプション <br>（注を参照） | string | 指定されると、ユーザーが配信停止したかどうかを返します。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `sort_direction` | オプション | 文字列 | 値 `asc` を渡して、配信停止を最も古いものから最も新しいものへと並べ替えます。`desc`を渡して、最新のものから古いものへ並べ替えます。`sort_direction` が含まれていない場合、デフォルトの順序は新しいものから古いものです。 |
+| `email` | オプション <br>（注を参照） | 文字列 | 指定されると、ユーザーが配信停止したかどうかを返します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `end_date` を指定する必要があり、さらに `email` または `start_date` のいずれかを指定する必要があります。
@@ -46,7 +46,7 @@ description: "この記事では、配信停止になっているメールの照
 
 日付範囲に`limit`以上の退会者がいる場合、複数のAPI呼び出しを行う必要があります。そのたびに`offset`を増やして、呼び出しが`limit`未満またはゼロの結果を返すまで繰り返します。
 
-## 例のリクエスト 
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

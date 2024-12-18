@@ -37,7 +37,7 @@ Attributes are specific characteristics or properties associated with a user. Th
 
 #### Standard attributes
 
-Standard attributes are predefined attributes that Braze provides. These are automatically tracked by Braze after the SDK is integrated into your app. They are common pieces of user information that most apps would find useful, such as demographics and device data. Examples of standard attributes include:
+Standard attributes are predefined attributes you can track with Braze after integrating the SDK into your app. They are common pieces of user information that most apps would find useful, such as demographics and device data. Examples include:
 
 - First Name
 - Last Name

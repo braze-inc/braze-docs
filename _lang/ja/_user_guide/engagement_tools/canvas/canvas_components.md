@@ -19,7 +19,7 @@ guide_featured_list:
   - name: 遅延 ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: 条件分岐 ステップ
+  - name: 条件分岐ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     image: /assets/img/braze_icons/dataflow-04.svg
   - name: オーディエンス パス ステップ
@@ -28,7 +28,7 @@ guide_featured_list:
   - name: アクション パス ステップ  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
-  - name: 実験パス ステップ
+  - name: 実験パスステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
   - name: ユーザー 更新 ステップ

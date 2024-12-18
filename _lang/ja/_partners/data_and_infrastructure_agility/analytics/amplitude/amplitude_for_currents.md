@@ -21,7 +21,7 @@ Braze と Amplitude の双方向統合により、[ Amplitude コホート]({{si
 |---|---|
 | Amplitude アカウント | このパートナーシップを活用するには、[Amplitude アカウント](https://amplitude.com/)が必要です。 |
 | Currents | Amplitude にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## データ・エクスポートの統合
 
@@ -53,7 +53,7 @@ Amplitude API Keyを最新の状態に保つ。コネクターの認証情報が
 
 ### ステップ2:Braze Current を作成する
 
-Braze で **\[Currents] > \[+ Currents を作成] > \[Amplitude エクスポートを作成]** に移動します。統合名、連絡先メール、Amplitude エクスポート API キー、および Amplitude リージョンを、リストされているフィールドに入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に \[**Currents を起動**] をクリックします。
+Braze で **[Currents] > [+ Currents を作成] > [Amplitude エクスポートを作成]** に移動します。統合名、連絡先メール、Amplitude エクスポート API キー、および Amplitude リージョンを、リストされているフィールドに入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
 {% alert note %}
 Braze Currents から Amplitude に送信されたイベントは、Amplitude イベントボリューム割り当ての対象となります。

@@ -50,7 +50,7 @@ layout: default
 
 
 
-    <h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>
+    {%- if page.guide_featured_title -%}<h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>{%- endif -%}
     <div id="guide_featured_list">
 
       {%- for menu_list in page.guide_featured_list  -%}
@@ -62,7 +62,7 @@ layout: default
             <i class="{{menu_list.fa_icon}}"></i>
             {%- else -%}
               {%- if menu_list.image -%}
-              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }}" />
+              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
               {%- endif -%}
             {%- endif -%}
             <div class="menu_description">

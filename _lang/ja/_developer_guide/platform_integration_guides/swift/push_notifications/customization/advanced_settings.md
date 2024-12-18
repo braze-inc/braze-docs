@@ -13,7 +13,7 @@ channel:
 
 > ダッシュボードからプッシュキャンペーンを作成する場合、**作成**ステップで**設定**タブをクリックし、利用可能な詳細設定を表示する。
 
-![][1]
+![]({% image_buster /assets/img_archive/ios_advanced_settings.png %})
 
 ## キーと値のペア
 
@@ -25,11 +25,11 @@ Braze を使用すると、`extras` として知られるカスタム定義の�
 
 ## コンテンツ利用可能フラグを追加する
 
-新しいコンテンツをバックグラウンドでダウンロードするようにデバイスに指示するには、\[**コンテンツ利用可能フラグを追加**] チェックボックスをオンにします。通常は、\[サイレント通知]][2] を送信したい場合にオンにします。
+新しいコンテンツをバックグラウンドでダウンロードするようにデバイスに指示するには、[**コンテンツ利用可能フラグを追加**] チェックボックスをオンにします。最も一般的には、これは[サイレント通知]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)の送信に関心がある場合にチェックできます。
 
 ## mutable-content フラグを追加する
 
-**Add Mutable-Content Flag**チェックボックスをチェックして、受信機の高度なカスタマイズを有効にする。このフラグは、このチェックボックスの値に関係なく、\[リッチプッシュ通知][3] の作成時に自動的に送信されます。
+**Add Mutable-Content Flag**チェックボックスをチェックして、受信機の高度なカスタマイズを有効にする。このフラグは、このチェックボックスの値に関係なく、[rich notification]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/)を作成するときに自動的に送信されます。
 
 ## アプリのバッジ数を更新する
 
@@ -41,13 +41,9 @@ Braze を使用すると、`extras` として知られるカスタム定義の�
 
 ## 折りたたみ ID
 
-同様の通知をまとめるには、折りたたみ ID を指定します。同一の折りたたみ ID を使用して複数の通知を送信すると、デバイスには最後に受信した通知のみが表示されます。\[coalesced notifications][4] に関する Apple のドキュメントを参照してください。
+同様の通知をまとめるには、折りたたみ ID を指定します。同一の折りたたみ ID を使用して複数の通知を送信すると、デバイスには最後に受信した通知のみが表示されます。[統合された通知](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)については、Apple のドキュメントを参照してください。
 
 ## 有効期限
 
-\[**有効期限**] チェックボックスをオンにすると、メッセージの有効期限を設定できます。ユーザーのデバイスが接続性を失った場合、Braze は指定された時間までメッセージの送信を試行し続けます。設定されていない場合、プラットフォームの有効期限はデフォルトで30日となります。配信前に有効期限切れとなったプッシュ通知は失敗とはみなされず、バウンスとして記録されないことに注意してください。
+[**有効期限**] チェックボックスをオンにすると、メッセージの有効期限を設定できます。ユーザーのデバイスが接続性を失った場合、Braze は指定された時間までメッセージの送信を試行し続けます。設定されていない場合、プラットフォームの有効期限はデフォルトで30日となります。配信前に有効期限切れとなったプッシュ通知は失敗とはみなされず、バウンスとして記録されないことに注意してください。
 
-[1]: {% image_buster /assets/img_archive/ios_advanced_settings.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
-[4]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

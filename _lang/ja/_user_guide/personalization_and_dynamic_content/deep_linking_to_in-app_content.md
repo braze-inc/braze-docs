@@ -15,7 +15,7 @@ description: "この記事では、アプリ内メッセージのコンテンツ
 これには 3 つの部分があります。
 
 1. 起動するアプリを特定する
-2. どのアクションを実行するかをアプリに指示する
+2. 実行するアクションをアプリに指示します
 3. アクションが必要とする追加データを提供する。
 
 ディープリンクは、アプリの特定の部分にリンクするカスタムURIで、これら3つの部分すべてを含む。キーは、カスタムスキームを定義することです。`http:` は、ほとんどの人が慣れ親しんでいるスキームですが、スキームは任意の単語から始めることができます。スキームは文字で始める必要がありますが、文字、数字、プラス記号、マイナス記号、ドットを含むことができます。現実的に言えば、競合を防ぐための中央レジストリは存在しないので、ドメイン名をスキームに含めるのがベストプラクティスである。例えば、`twitter://` は、X (旧称ツイッター) のモバイルアプリを起動するための iOS 用 URI です。
@@ -23,7 +23,7 @@ description: "この記事では、アプリ内メッセージのコンテンツ
 ディープリンク内のコロン以降はすべて自由形式のテキストである。その構造と解釈の定義はユーザー次第です。`http:` URL の後に、先頭の `//` とクエリパラメーター (`?foo=1&bar=2` など) を含めて、モデル化するのが一般的な方法です。先ほどの例では、`twitter://user?screen_name=[id]` 、アプリ内の特定のプロフィールを起動するために使われる。
 
 {% alert important %}
-Brazeは、Flutterのようなラッパーを使ってディープリンクを送信することはサポートしていない。この機能を使うには、ネイティブ層でディープリンクを設定する必要がある。
+Brazeは、Flutterのようなラッパーを使ってディープリンクを送信することはサポートしていない。この機能を使用するには、ネイティブレイヤでディープリンクを設定する必要があります。
 {% endalert %}
 
 
@@ -45,13 +45,13 @@ UTMタグは、通常のHTTP（ウェブ）リンクとディープリンクの�
 
 通常のHTTP（ウェブ）リンクでUTMタグを使いたい場合（例えば、メールキャンペーンのアトリビューションを行う場合など）、すでにGoogleアナリティクスを使用している組織では、[GoogleのURLビルダーを使って][6]UTMリンクを生成するだけでよい。これらのリンクは、他のリンクと同様に、Brazeのキャンペーンコピーに簡単に埋め込むことができる。
 
-アプリへのディープリンクで UTM タグを使用するには、アプリに適切な [Google Analytics SDK][5] が統合され、[ディープリンクを処理するように正しく設定][7]されている必要があります。不明な点は開発者に確認すること。
+アプリへのディープリンクでUTMタグを使用するには、関連する[Google Analytics SDK][5]が統合され、ディープリンクを処理するように正しく設定されている必要があります。不明な点は開発者に確認すること。
 
-アナリティクスSDKを統合して設定すれば、BrazeのキャンペーンでUTMタグをディープリンクで使用できる。キャンペーンにUTMタグを設定するには、宛先URLまたはディープリンクに必要なUTMタグを含めるだけでよい。以下の例は、プッシュ通知やアプリ内メッセージでUTMタグを使う方法を示している。
+Analytics SDK が統合および設定された後、UTM タグはBraze キャンペーンのディープリンクで使用できます。キャンペーンのUTM タグを設定するには、宛先URL またはディープリンクに必要なUTM タグを含めます。以下の例は、プッシュ通知やアプリ内メッセージでUTMタグを使う方法を示している。
 
 #### UTM タグによるプッシュ開封のアトリビュート指定
 
-プッシュ通知用のディープリンクにUTMタグを含めるには、プッシュメッセージのクリック時の動作をディープリンクに設定し、ディープリンクのアドレスを記述し、以下の方法で目的のUTMタグを含めるだけでよい：
+プッシュ通知用のディープリンクにUTMタグを含めるには、プッシュメッセージのオンクリック動作をディープリンクに設定してから、ディープリンクアドレスを書き込み、目的のUTMタグを次のように含めます。
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
@@ -61,7 +61,7 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 #### UTM タグによるアプリ内メッセージのクリックのアトリビュート指定
 
-アプリ内メッセージに含まれるディープリンクには、以下の方法でUTMタグを含めることができる。
+アプリ内メッセージのディープリンクにUTMタグを含めるには、次を使用します。
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
@@ -75,7 +75,6 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 [4]: https://support.google.com/analytics/answer/1033863?hl=en
 [5]: https://developers.google.com/analytics/devguides/collection/
 [6]: https://support.google.com/analytics/answer/1033867
-[7]: https://developers.google.com/analytics/solutions/mobile-campaign-deep-link
 [8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
 [9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
 [10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}

@@ -114,7 +114,7 @@ description: "이 참고 문서에서는 마케팅 콘텐츠에서 접근성을 
 | 나쁨  | 나음 | 최고 |
 | --- | --- | --- | 
 | 여기를 클릭하세요 | 오늘의 날씨를 확인하려면 여기를 클릭하세요. | 오늘의 날씨 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 모든 콘텐츠와 마찬가지로 추가 단어를 최대한 줄이고 간결하게 작성하세요.
 

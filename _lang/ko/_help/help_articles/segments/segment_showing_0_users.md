@@ -32,7 +32,7 @@ tool: Segments
 Braze 대시보드에서 보는 데이터는 Braze로 보내는 것과 동일한 구문이 아닐 수 있습니다. Ensure that these two match exactly.
 {% endalert %}
 
-아직 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
+아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트 날짜: 2021년 1월 5일_
 

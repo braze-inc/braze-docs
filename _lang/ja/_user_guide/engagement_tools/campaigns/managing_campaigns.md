@@ -18,7 +18,7 @@ guide_featured_list:
   - name: ワークスペース間でのコピー
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
     image: /assets/img/braze_icons/copy-04.svg
-  - name: 起動後のキャンペーンの変更
+  - name: 開始後のキャンペーンの変更
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
   - name: キャンペーンのアーカイブ

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:ライブアクティビティを更新する"
-article_title: "POST:ライブアクティビティを更新する"
+nav_title: "POST:ライブアクティビティを更新"
+article_title: "POST:ライブアクティビティを更新"
 search_tag: Endpoint
 page_order: 1
 
@@ -10,12 +10,12 @@ description: "この記事では、ライブ・アクティビティを更新す
 
 ---
 {% api %}
-# ライブアクティビティを更新する
+# ライブアクティビティを更新
 {% apimethod post %}
 /messages/live_activity/update
 {% endapimethod %}
 
-> このエンドポイントを使用して、iOSアプリが表示する[ライブ・アクティビティを]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/)更新・終了する。このエンドポイントには追加の設定が必要である。
+> このエンドポイントを使用して、iOSアプリが表示する[ライブ・アクティビティを]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/)更新・終了する。このエンドポイントは追加のセットアップが必要です。
 
 ライブ・アクティビティを登録した後、アップル・プッシュ・ノーティフィケーション・サービス（APN）をアップデートするためにJSONペイロードを渡すことができる。詳しくは、[プッシュ通知ペイロードを使ったライブアクティビティの更新](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications)に関する Apple のドキュメントを参照してください。
 
@@ -23,16 +23,16 @@ description: "この記事では、ライブ・アクティビティを更新す
 
 ## 前提条件
 
-このエンドポイントを使用するには、以下を完了する必要がある：
+このエンドポイントを使用するには、次の手順を完了する必要があります:
 
-- `messages.live_activity.update` 権限を持つ API キーを生成する。
+- `messages.live_activity.update` の権限を持つ API キーを生成します。
 - Braze Swift SDK を使用して、[リモート]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity)または[ローカル]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity)でライブアクティビティを登録する。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```json
 {
@@ -50,16 +50,16 @@ description: "この記事では、ライブ・アクティビティを更新す
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `app_id` | 必須 | string | [API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリ [API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)。  |
-| `activity_id` | 必須 | string | [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class) を使用してライブアクティビティを登録する場合は、`pushTokenTag` パラメーターを使用して、アクティビティのプッシュトークンにカスタム文字列を名前として付けます。<br><br>`activity_id` をこのカスタム文字列に設定して、更新するライブアクティビティを定義します。 |
-| `content_state` | required | オブジェクト | ライブアクティビティを作成する際は、`ContentState` パラメーターを定義します。このオブジェクトを使って、`ContentState` の更新値を渡す。<br><br>このリクエストのフォーマットは、最初に定義した形状と一致していなければなりません。 |
+| `app_id` | 必須 | 文字列 | アプリ[API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)は[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得されました。  |
+| `activity_id` | 必須 | 文字列 | [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class) を使用してライブアクティビティを登録する場合は、`pushTokenTag` パラメーターを使用して、アクティビティのプッシュトークンにカスタム文字列を名前として付けます。<br><br>`activity_id` をこのカスタム文字列に設定して、更新するライブアクティビティを定義します。 |
+| `content_state` | 必須 | オブジェクト | ライブアクティビティを作成する際に`ContentState`パラメータを定義します。このオブジェクトを使用して、`ContentState`の更新された値を渡します。<br><br>このリクエストの形式は、最初に定義した形状に一致している必要があります。 |
 | `end_activity` | オプション | ブール値 | `true` の場合、このリクエストはライブアクティビティを終了します。 |
-| `dismissal_date` | オプション | 日付 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | このパラメーターは、ユーザーの UI からライブアクティビティを削除する時間を定義します。この時間が過去のもので、`end_activity` が `true` の場合、ライブアクティビティは直ちに削除されます。<br><br> `end_activity` が`false` であるか、省略された場合、このパラメーターはライブアクティビティのみを更新します。|
-| `stale_date` | オプション | 日付 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | このパラメーターは、ライブアクティビティのコンテンツがユーザーの UI で古いものとしてマークされたときに、システムに通知します。 |
-| `notification` | オプション | オブジェクト | プッシュ通知を定義する [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含める。このプッシュ通知の動作は、ユーザーがアクティブかどうか、またはユーザーがプロキシデバイスを使用しているかどうかに依存する。 {::nomarkdown}<ul><li>もし <code>notification</code> が含まれており、アップデートが配信されたときにユーザーがiPhoneでアクティブになっていると、更新されたライブ・アクティビティUIがスライドダウンし、プッシュ通知のように表示される。</li><li>もし <code>notification</code> が含まれており、ユーザーがiPhoneをアクティブにしていない場合、画面が点灯し、ロック画面に更新されたライブ・アクティビティUIが表示される。</li><li>その <code>notification alert</code> は標準のプッシュ通知としては表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合は <code>alert</code> が表示される。</li></ul>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `dismissal_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ユーザーのUIからライブアクティビティを削除する時間を定義します。この時間が過去のもので、`end_activity` が `true` の場合、ライブアクティビティは直ちに削除されます。<br><br> `end_activity` が`false` であるか、省略された場合、このパラメーターはライブアクティビティのみを更新します。|
+| `stale_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ライブアクティビティのコンテンツがユーザーの UI で古いものとしてマークされたときに、システムに通知します。 |
+| `notification` | オプション | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブであるか、ユーザーがプロキシデバイスを使用しているかによって異なります。{::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
@@ -86,7 +86,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## 応答
 
-このエンドポイントには、`201` と `4XX` の2つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `201` と `4XX`。
 
 ### 成功応答の例
 
@@ -100,7 +100,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ### エラー応答例
 
-`4XX` クラスのステータスコードは、クライアントのエラーを示す。遭遇する可能性のあるエラーの詳細については、[APIエラーとレスポンスの記事を]({{site.baseurl}}/api/errors/)参照のこと。
+ステータスコードの`4XX`クラスはクライアントエラーを示します。エラーに関する詳細は、[APIエラーと応答の記事]({{site.baseurl}}/api/errors/)を参照してください。
 
 ステータスコード `400` は、次の応答本文を返す可能性があります。 
 

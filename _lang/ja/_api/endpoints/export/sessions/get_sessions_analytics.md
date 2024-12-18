@@ -20,7 +20,7 @@ description: "この記事では、「アプリセッション分析の時間ご
 
 ## 前提条件
 
-このエンドポイントを使用するには、`sessions.data_series` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`sessions.data_series`の権限が必要です。
 
 ## レート制限
 
@@ -30,14 +30,14 @@ description: "この記事では、「アプリセッション分析の時間ご
 
 | パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-| `length` | required | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
-| `unit` | オプション | string | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
-| `ending_at` | オプション | 日時 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | データシリーズが終了する日付。デフォルトはリクエストの時刻です。 |
-| `app_id` | オプション | string | 特定のアプリに分析を限定するために、[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。 |
-| `segment_id` | オプション | string | 「[セグメント API 識別子]({{site.baseurl}}/api/identifier_types/)」を参照してください。セッションが返されるべき、分析可能なセグメントを示すセグメント ID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
+| `unit` | オプション | 文字列 | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+| `app_id` | オプション | 文字列 | 特定のアプリに分析を限定するために、[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。 |
+| `segment_id` | オプション | 文字列 | [セグメントAPI 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。セッションが返されるべき、分析可能なセグメントを示すセグメント ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id={{app_identifier}}&segment_id={{segment_identifier}}' \

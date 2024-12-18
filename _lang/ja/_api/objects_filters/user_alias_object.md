@@ -16,11 +16,24 @@ description: "このリファレンス記事では、ユーザーエイリアス
 このオブジェクトはあらゆるエンドポイントで頻繁に使用され、他のオブジェクト中でもよく使用されます。
 
 ## オブジェクト本体
+
 ```json
 {
   "user_alias" : {
     "alias_name" : (required, string),
     "alias_label" : (required, string)
   }
+}
+```
+
+### 例
+
+```json
+{
+  "user_alias": {
+    "alias_name": "john_doe_123",
+    "alias_label": "email_id"
+  },
+  "external_id": "user_456"
 }
 ```

@@ -40,7 +40,7 @@ Braze コネクテッドコンテンツは、AWS で実行されているレコ�
 
 ![使用可能な AWS リージョン。][2]{: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
 
-次の表で \[**AWS Region**] を選択し、\[**Launch Stack**] を選択します。このリストは、プロジェクトをデプロイできるすべてのリージョンを示すものではなく、Retail Demo Store のデプロイのために現在設定されているリージョンのみを示しています。
+次の表で [**AWS Region**] を選択し、[**Launch Stack**] を選択します。このリストは、プロジェクトをデプロイできるすべてのリージョンを示すものではなく、Retail Demo Store のデプロイのために現在設定されているリージョンのみを示しています。
 
 テンプレートのすべてのデフォルトパラメータを受け入れます。すべてのプロジェクトリソースのデプロイには25～30分かかります。
 
@@ -49,9 +49,9 @@ Braze コネクテッドコンテンツは、AWS で実行されているレコ�
 パーソナライズされたのプロダクト推奨事項を提供するには、まずマシンラーニングモデルをトレーニングし、Amazon Personalizeから推奨事項を得るための推論エンドポイントを提供する必要があります。ステップ1でデプロイされた CloudFormation テンプレートには、詳細な手順を含む Jupyter ノートブックを提供する Amazon SageMaker ノートブックインスタンスが含まれています。
 
 1. ステップ 1 でAWS CloudFormation テンプレートをデプロイしたAWS アカウントにサインインします。
-2. Amazon SageMaker コンソールで \[**Notebook instances**] を選択します。
+2. Amazon SageMaker コンソールで [**Notebook instances**] を選択します。
 3. **RetailDemoStore** ノートブックインスタンスが表示されない場合は、ステップ1でプロジェクトをデプロイしたリージョンと同じリージョンにいることを確認してください。
-4. ノートブックインスタンスにアクセスするには、\[**Open Jupyter**] または \[**Open JupyterLab**] を選択します。
+4. ノートブックインスタンスにアクセスするには、[**Open Jupyter**] または [**Open JupyterLab**] を選択します。
 5. Jupyter Web インターフェイスがノートブックインスタンスに読み込まれたら、`workshop/1-Personalization/1.1-Personalize.ipynb` ノートブックを選択します。ノートブックのサブディレクトリを表示するには、`workshop` フォルダーを選択する必要があります。
 6. `1.1-Personalize` ノートブックが開いている場合は、各セルを実行してワークショップを順に実行します。Jupyter ツールバーから**Run** を選択して、セル内のコードを順番に実行できます。ノートブックが完了するまでには約2時間かかります。
 
@@ -62,9 +62,9 @@ Amazon Personalize ソリューションとキャンペーンを導入するこ�
 ステップ 2のパーソナライゼーションワークショップと同様に、次のBraze メッセージングワークショップでは、設定を使用してBrazeとAmazon Personalizeインテグレーションを設定します。
 
 1. ステップ 1 でAWS CloudFormation テンプレートをデプロイしたAWS アカウントにサインインします。
-2. Amazon SageMaker コンソールで \[**Notebook instances**] を選択します。
+2. Amazon SageMaker コンソールで [**Notebook instances**] を選択します。
 3. **RetailDemoStore** ノートブックインスタンスが表示されない場合は、ステップ1でプロジェクトをデプロイした AWS リージョンと同じリージョンにいることを確認してください。
-4. ノートブックインスタンスにアクセスするには、\[**Open Jupyter**] または \[**Open JupyterLab**] を選択します。
+4. ノートブックインスタンスにアクセスするには、[**Open Jupyter**] または [**Open JupyterLab**] を選択します。
 5. Jupyter Web インターフェイスがノートブックインスタンスに読み込まれたら、`workshop/4-Messaging/4.2-Braze.ipynb` ノートブックを選択します。ノートブックのサブディレクトリを表示するには、`workshop` フォルダーを選択する必要があります。
 6. `4.2-Braze` ノートブックが開いている場合は、各セルを実行してワークショップを順に実行します。Jupyter ツールバーから**Run** を選択して、セル内のコードを順番に実行できます。ノートブックが完了するまでには約1時間かかります。
 

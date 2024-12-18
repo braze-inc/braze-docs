@@ -20,9 +20,9 @@ Braze と Vizbee の統合により、モバイルデバイスと CTV デバイ�
 | 必要条件 | 説明 |
 |---|---|
 | Vizbeeアカウント | このパートナーシップを利用するには、[Vizbee][1]アカウントが必要である。Vizbee でアプリを登録し、Vizbee ID を割り当てる必要があります。 |
-| iOSまたはAndroidアプリ | この統合はiOSとAndroidアプリをサポートしている。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
+| iOSまたはAndroidアプリ | この統合では、iOS アプリと Android アプリがサポートされています。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。 |
 | Vizbee SDK | 必要な Braze SDK に加えて、Vizbee SDK をインストールする必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

@@ -156,7 +156,7 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-array-invalid` | `items` must be an array of objects. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-missing-ids` | Some items don't have item IDs. Check that each item has an item ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |

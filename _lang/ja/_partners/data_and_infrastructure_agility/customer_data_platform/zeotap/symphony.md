@@ -24,7 +24,7 @@ BrazeとZoetap Symphonyの統合により、リアルタイムのオーケスト
 | クライアント名 | これは、Braze アカウントのクライアント名です。これを確認するには、Braze コンソールに移動します。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | インスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 統合
 
@@ -53,20 +53,20 @@ BrazeとZoetap Symphonyの統合により、リアルタイムのオーケスト
 データはZeotapから[ユーザートラック](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)APIを使ってBrazeに流れる。データの流れをまとめると以下のようになる：
 
 1. Zeotapはユーザープロファイル属性、カスタム属性、カスタムイベント、購入フィールドを送信する。
-2. 関連するすべての Zeotap Catalogue フィールドを、\[**Data To Send**] タブの Braze フィールドにマッピングします。
+2. 関連するすべての Zeotap Catalogue フィールドを、[**Data To Send**] タブの Braze フィールドにマッピングします。
 3. そのデータはBrazeにアップロードされる。
 
 各属性の詳細は、「[送信するデータ](#data-to-send-tab)」セクションで確認できる。
 
 ## 目的地の設定
 
-Symphony でユーザーにフィルターを適用した後、またはユーザーの条件を追加した後は、\[**Send to Destinations**] で、Braze のユーザーをアクティブ化できます。新しいウィンドウが開き、宛先を設定できます。\[**Available Destination**] リストにある既存の宛先を使用するか、新規の宛先を作成できます。
+Symphony でユーザーにフィルターを適用した後、またはユーザーの条件を追加した後は、[**Send to Destinations**] で、Braze のユーザーをアクティブ化できます。新しいウィンドウが開き、宛先を設定できます。[**Available Destination**] リストにある既存の宛先を使用するか、新規の宛先を作成できます。
 
 #### 新しい宛先を追加する
 新しい宛先を追加するには、次の手順を実行します。
-1. \[**Add New Destination**] をクリックします。
+1. [**Add New Destination**] をクリックします。
 2. **Braze** を検索します。
-3. \[**Client Name**]、\[**API Key**]、および \[**Instance**] を追加し、宛先を保存します。
+3. [**Client Name**]、[**API Key**]、および [**Instance**] を追加し、宛先を保存します。
 
 デスティネーションが作成され、「**Available Destinations（利用可能なデスティネーション）**」で利用できるようになる。
 
@@ -75,10 +75,10 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 1. 検索機能を使って、利用可能な目的地のリストから目的地を選ぶ。
 2. **Client Name（クライアント名）**、**API Key（APIキー）**、**Instance（インスタンス**）フィールドは、宛先作成時に入力した値に基づいて自動的に入力される。
 3. このワークフローノードに対して作成する**オーディエンス名**を入力します。これは**カスタム属性**として Braze に送信されます。
-4. \[**Data To Send**] タグでカタログから宛先へのマッピングを完了します。マッピングの詳細については、下記を参照されたい。
+4. [**Data To Send**] タグでカタログから宛先へのマッピングを完了します。マッピングの詳細については、下記を参照されたい。
 
-#### \[Data to send] タブ
-\[**Data To Send**] タブでは、Zeotap Catalogue のフィールドを、Braze に送信できる Braze のフィールドにマッピングできます。マッピングは以下のいずれかの方法で行うことができる：
+#### [Data to send] タブ
+[**Data To Send**] タブでは、Zeotap Catalogue のフィールドを、Braze に送信できる Braze のフィールドにマッピングできます。マッピングは以下のいずれかの方法で行うことができる：
 - **静的マッピング** \- Zeotap により関連する Braze フィールドに自動的にマッピングされるフィールドがあります (メール、電話番号、名前、性など)。<br>
 - **ドロップダウン選択** \- Zeotap に取り込まれた関連フィールドを、ドロップダウンメニューに示されている Braze フィールドにマッピングします。<br>![言語、都市、誕生日など、Zeotapに設定されたさまざまなユーザー特性。][3]{: style="max-width:70%;"}<br>
 - **カスタムデータ入力**-関連するZeotapフィールドにマッピングされたカスタムデータを追加し、Brazeに送信する。<br>![Zeotapのユーザー特性として「loyalty_points」を選択する。][4]{: style="max-width:70%;"}
@@ -90,7 +90,7 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 | --- | --- | --- |
 | external ID | ドロップダウン選択 | これは、デバイスやプラットフォームを超えてユーザーを追跡するためにBrazeが定義した永続的な`User ID` 。`User ID` を`External ID` にマップすることを推奨する。そうしないと、Zeotapはユーザーエイリアスとして電子メールを送信する可能性がある。<br><br>Zeotap では、Zeotap Catalogue で利用可能な `hashed email` を `External ID` にマッピングすることを推奨しています。|
 | メール | 静的マッピング | これは、Zeotap Catalogueの`Email Raw` にマッピングされます。 |
-| 電話 | 静的マッピング | これは、Zeotap Catalogueの`Mobile Raw` にマッピングされます。<br><br>\- Brazeは`E.164` フォーマットの電話番号を受け付ける。Zeotap は変換を実行しません。このため、電話番号を所定の形式で取り込む必要があります。詳細については、「[ユーザーの電話番号](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/)」を参照してください。 |
+| 電話 | 静的マッピング | これは、Zeotap Catalogueの`Mobile Raw` にマッピングされます。<br><br>\- Brazeは`E.164` フォーマットの電話番号を受け付ける。Zeotap は変換を実行しません。このため、電話番号を所定の形式で取り込む必要があります。詳細については、「[ユーザーの電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/)」を参照してください。 |
 | 名 | 静的マッピング | これは、Zeotap Catalogueの`First Name` にマッピングされます。 |
 | 姓 | 静的マッピング | これは、Zeotap Catalogueの`Last Name` にマッピングされます。 |
 | 性別 | 静的マッピング | これは、Zeotap Catalogueの`Gender` にマッピングされます。 |
@@ -109,7 +109,7 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 | 言語 | ドロップダウン選択 | \- 使用可能なフォーマットは、`ISO-639-1` 標準（例：en）である。<br>• 正しい形式の言語を登録してそれにマッピングします。 |
 | 生年月日 | ドロップダウン選択 | 登録する`Date of Birth` フィールドにマッピングします。 |
 | カスタム属性 | カスタムデータ入力 | 任意のユーザー属性をカスタムデータ入力にマップし、それをBrazeに送信する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Brazeコンソールでデータを見る
 
@@ -120,8 +120,8 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 各種属性は、Braze 内のユーザーダッシュボードのさまざまなセクションに表示されます。
 - **Profile**タブにはユーザー属性が含まれる。
 - **カスタム属性**タブには、ユーザーが定義したカスタム属性が含まれる。
-- \[**カスタムイベント**] タブには、ユーザーが定義したカスタムイベントが表示されます。
-- \[**購入**] タブには、ユーザーが一定期間内に購入したものが表示されます。
+- [**カスタムイベント**] タブには、ユーザーが定義したカスタムイベントが表示されます。
+- [**購入**] タブには、ユーザーが一定期間内に購入したものが表示されます。
 
 ## キャンペーン作成
 

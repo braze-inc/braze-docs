@@ -32,7 +32,7 @@ description: "この記事では、「ライブアクティビティを開始」
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```json
 {
@@ -53,20 +53,20 @@ description: "この記事では、「ライブアクティビティを開始」
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型| 説明  |
+| パラメーター | required | データ型| 説明  |
 |-----------|----------|----------|--------------|
-| `app_id` | 必須 | string | アプリ[API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)は[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得されました。  |
-| `activity_id` | 必須 | string  | カスタム文字列を`activity_id`として定義します。この ID を使用して、ライブアクティビティに更新または終了イベントを送信します。  |
-| `activity_attributes_type`  | 必須 | string | アプリ内の`liveActivities.registerPushToStart`で定義するアクティビティ属性タイプ。  |
-| `activity_attributes` | required | オブジェクト  | アクティビティタイプの静的属性値（スポーツチームの名前など、変更されないもの）。 |
-| `content_state` | required | オブジェクト  | ライブアクティビティを作成する際に`ContentState`パラメータを定義します。このオブジェクトを使用して、`ContentState`の更新された値を渡します。<br><br>このリクエストの形式は、最初に定義した形状に一致している必要があります。 |
+| `app_id` | 必須 | 文字列 | アプリ[API 識別子]({{site.baseurl}}/api/identifier_types/#the-app-identifier)は[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得されました。  |
+| `activity_id` | 必須 | 文字列  | カスタム文字列を`activity_id`として定義します。この ID を使用して、ライブアクティビティに更新または終了イベントを送信します。  |
+| `activity_attributes_type`  | 必須 | 文字列 | アプリ内の`liveActivities.registerPushToStart`で定義するアクティビティ属性タイプ。  |
+| `activity_attributes` | 必須 | オブジェクト  | アクティビティタイプの静的属性値（スポーツチームの名前など、変更されないもの）。 |
+| `content_state` | 必須 | オブジェクト  | ライブアクティビティを作成する際に`ContentState`パラメータを定義します。このオブジェクトを使用して、`ContentState`の更新された値を渡します。<br><br>このリクエストの形式は、最初に定義した形状に一致している必要があります。 |
 | `dismissal_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ユーザーのUIからライブアクティビティを削除する時間を定義します。 |
 | `stale_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ライブアクティビティのコンテンツがユーザーの UI で古いものとしてマークされたときに、システムに通知します。 |
-| `notification` | required | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブであるか、ユーザーがプロキシデバイスを使用しているかによって異なります。{::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
+| `notification` | 必須 | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブであるか、ユーザーがプロキシデバイスを使用しているかによって異なります。{::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
 | `external_user_ids` | `segment_id`または`audience`が提供されている場合は任意 | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。  |
-| `segment_id `  | `external_user_ids`または`audience`が提供されている場合は任意 | string    | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `segment_id `  | `external_user_ids`または`audience`が提供されている場合は任意 | 文字列    | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `custom_audience` | `external_user_ids`または`segment_id`が提供されている場合は任意 | 接続されたオーディエンスオブジェクト  | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -107,7 +107,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ### 成功応答の例
 
-リクエストが正しくフォーマットされ、当社がそのリクエストを受け取った場合、`201` ステータスコードが返されます。ステータスコード `201` は次の応答本文を返す可能性があります。
+リクエストが正しくフォーマットされ、当社がそのリクエストを受け取った場合、`201` ステータスコードが返されます。ステータスコード `201` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -115,11 +115,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 }
 ```
 
-### 例外エラー応答
+### エラー応答例
 
 ステータスコードの`4XX`クラスはクライアントエラーを示します。エラーに関する詳細は、[APIエラーと応答の記事]({{site.baseurl}}/api/errors/)を参照してください。
 
-ステータスコード `400` は次の応答本文を返す可能性があります。 
+ステータスコード `400` は、次の応答本文を返す可能性があります。 
 
 ```json
 {

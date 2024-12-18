@@ -24,11 +24,11 @@ if (site_language && (site_language != 'en')){
   var base_url = '{{ site.baseurl }}';
   for (var url in validurls) {
     var adjusted_url = url;
-    var adjusted_destination = validurls[url];
-    if (!adjusted_url.match(/^\/docs\/\w{2}\//)) {
+    var adjusted_destination = validurls[url] || "";
+    if (!adjusted_url.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
       adjusted_url = adjusted_url.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
     }
-    if (!adjusted_destination.match(/^\/docs\/\w{2}\//)) {
+    if (!adjusted_destination.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
       adjusted_destination = adjusted_destination.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
     }
     validurls[adjusted_url] = adjusted_destination;

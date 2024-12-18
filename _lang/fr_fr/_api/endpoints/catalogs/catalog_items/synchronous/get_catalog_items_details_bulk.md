@@ -32,7 +32,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de recherche
 
@@ -41,7 +41,7 @@ Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogu
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination des produits du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
@@ -146,6 +146,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 | `invalid-cursor` | Vérifiez que votre `cursor` est valide. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

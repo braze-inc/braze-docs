@@ -13,7 +13,7 @@ channel:
 
 > このリファレンス記事では、Android プッシュイベントにコールバックを使用する方法について説明します
 
-Braze には、プッシュ通知が受信されたとき、開かれたとき、または却下されたときのための [`subscribeToPushNotificationEvents()`][1] コールバックが用意されています。アプリケーションが実行されていないときに発生するイベントを見逃さないように、このコールバックを `Application.onCreate()` に配置することをお勧めします。
+Braze には、プッシュ通知が受信されたとき、開かれたとき、または却下されたときのための [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) コールバックが用意されています。アプリケーションが実行されていないときに発生するイベントを見逃さないように、このコールバックを `Application.onCreate()` に配置することをお勧めします。
 
 {% alert note %}
 以前にアプリケーションでこの機能にカスタムブロードキャストレシーバーを使用していた場合は、この統合オプションを優先して、レシーバーを削除しても問題ありません。
@@ -86,4 +86,6 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 通知アクションボタンを使用すると、`opens app` または `deep link` アクションを持つボタンがクリックされると、`BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` インテントが起動します。ディープリンクとエクストラの処理は変わりません。`close` アクション付きのボタンは `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` インテントを起動せず、通知を自動的に閉じます。
 {% endalert %}
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html
+{% alert important %}
+`Application.onCreate` でプッシュ通知リスナーを作成し、アプリが終了状態にある間にエンドユーザーが通知をタップした後にリスナーがトリガーされるようにします。
+{% endalert %}

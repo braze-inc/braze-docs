@@ -2,7 +2,7 @@
 nav_title: 情報開示
 article_title: 情報開示と資格
 layout: dev_guide
-page_order: 4
+page_order: 100
 guide_top_header: "情報開示"
 guide_top_text: "Braze にお任せください。以下の記事をぜひチェックしてみてください。"
 

@@ -20,7 +20,7 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## 前提条件
 
-このエンドポイントを使用するには、`canvas.details` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.details`の権限が必要です。
 
 ## レート制限
 
@@ -30,10 +30,10 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | string | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 {% raw %}
 ```
@@ -101,7 +101,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### チャンネル別メッセージ
+### チャネル別のメッセージ
 
 以下は、異なるチャネル (メール、プッシュ、SMS、アプリ内メッセージ） を通じて送信されたキャンバスメッセージを含む応答の例です。
 
@@ -211,12 +211,6 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 

@@ -16,9 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les i
 
 > Utilisez cet endpoint pour récupérer des informations pertinentes sur une carte, qui peuvent être identifiées par le `card_id`.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
@@ -35,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description            |
 | --------- | -------- | --------- | ---------------------- |
 | `card_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la carte]({{site.baseurl}}/api/identifier_types/). <br><br> Vous trouverez le site `card_id` pour une carte donnée sur la page des [clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page des détails de la carte dans votre tableau de bord, ou vous pouvez utiliser le [point de terminaison Exporter la liste des cartes du fil d'actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 {% raw %}

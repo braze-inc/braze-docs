@@ -14,7 +14,7 @@ description: "この記事では、「キャンペーンリストのエクスポ
 /campaigns/list
 {% endapimethod %}
 
-> このエンドポイントを使用して、それぞれに名前、キャンペーン API 識別子、それが API キャンペーンであるかどうか、キャンペーンに関連付けられたタグが含まれたキャンペーンのリストをエクスポートします。 
+> このエンドポイントを使用して、それぞれに名前、キャンペーン API 識別子、それが API キャンペーンであるかどうか、キャンペーンに関連付けられたタグが含まれたキャンペーンのリストをエクスポートします。
 
 キャンペーンは、作成された時間（デフォルトでは古いものから新しいもの）順にソートされた100のグループで返される。
 
@@ -22,7 +22,7 @@ description: "この記事では、「キャンペーンリストのエクスポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.list` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.list`の権限が必要です。
 
 ## レート制限
 
@@ -34,12 +34,12 @@ description: "この記事では、「キャンペーンリストのエクスポ
 | --------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返すキャンペーンのページ、デフォルトは0（最大100の最初のセットを返す）。 |
 | `include_archived` | オプション | ブール値 | アーカイブされたキャンペーンを含めるかどうか。デフォルトはfalse。 |
-| `sort_direction` | オプション | string | \- 作成時刻を新しいものから古いものへとソートする: 値 `desc` を渡す。<br> \- 作成時刻を古いものから新しいものへとソートする: 値 `asc` を渡す。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
+| `sort_direction` | オプション | 文字列 | \- 作成時刻を新しいものから古いものへと並べ替える: 値 `desc` を渡します。<br> \- 作成時刻を古いものから新しいものへと並べ替える: 値 `asc` を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
 | `last_edit.time[gt]` | オプション | 時刻 | 結果をフィルタリングし、現在までに指定された時間以上編集されたキャンペーンのみを返す。形式は `yyyy-MM-DDTHH:mm:ss` です。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
- 
+## 例のリクエスト
+
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/list?page=0&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "campaigns" : [
         {
             "id" : (string) the Campaign API identifier,
-            "last_edited": (ISO 8601 string) the last edited time for the message 
+            "last_edited": (ISO 8601 string) the last edited time for the message
             "name" : (string) the campaign name,
             "is_api_campaign" : (boolean) whether the campaign is an API campaign,
             "tags" : (array) the tag names associated with the campaign formatted as strings

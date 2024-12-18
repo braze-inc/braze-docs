@@ -31,10 +31,11 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 2. Select the **Back in stock** toggle.
 3. If the global back-in-stock settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger back-in-stock notifications:
     <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
+    - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event.
     - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user for back-in-stock notifications. When this event occurs, the user that performed the event will be subscribed.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications.
     - **Item ID event property** is the property on the above custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an Item ID, that is present in a catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
-    - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event.
+    
     - A sample custom event would look like
     ```json
     {
@@ -53,14 +54,14 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     }
     ```
 {% alert note %}
-Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification. Create a price drop notification by setting `type` to `back-in-stock`. You cannot set both a price drop and back in stock notification.
+Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification, so you can use the `type` array to set both price-drop and back-in-stock notifications in the same event.
 {% endalert %}
 
 {: start="4"}
 4. Select **Save** and continue to the catalog's **Settings** page.
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. 
-    - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
+    - **Set notification limits** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
 6. Set the **Inventory field in catalog**. This catalog field will be used to determine if the item is out of stock. The field must be number type.
 7. Select **Save settings**.
 

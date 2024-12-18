@@ -20,8 +20,8 @@ Braze と Pypestream の統合により、最初のアウトリーチから、�
 |---|---|
 | Pypestreamアカウント | このパートナーシップを活用するには、[Pypestream アカウント](https://www.pypestream.com/contact-us/)が必要です。<br><br>サブスクライブ後は、Pypestream チームが、Braze と統合する会話型 AI ソリューションの構築を開始するための専用の環境の設定を支援します。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/) に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/) に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 

@@ -16,11 +16,24 @@ description: "이 참조 문서에서는 사용자 별칭 객체의 다양한 �
 이 개체는 모든 엔드포인트에서 자주 사용되며, 다른 개체 내에서도 자주 사용됩니다.
 
 ## 개체 본문
+
 ```json
 {
   "user_alias" : {
     "alias_name" : (required, string),
     "alias_label" : (required, string)
   }
+}
+```
+
+### 예시
+
+```json
+{
+  "user_alias": {
+    "alias_name": "john_doe_123",
+    "alias_label": "email_id"
+  },
+  "external_id": "user_456"
 }
 ```

@@ -18,7 +18,7 @@ tool: Media
 {% tabs %}
 {% tab Classic %}
 
-The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
+The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.
 
 ![Image of a classic card with recommended details and a classic card example]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
@@ -94,4 +94,4 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
+[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

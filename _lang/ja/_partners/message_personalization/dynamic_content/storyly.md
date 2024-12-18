@@ -23,8 +23,8 @@ Braze と Storyly の統合により、Braze のセグメントを Storyly プ�
 | Storyly アカウント | このパートナーシップを活用するには、Storyly アカウントが必要です。 |
 | Storyly SDK | [Storyly SDK](https://integration.storyly.io/)をインストールする必要があります。 |
 | Braze REST API キー | 以下の権限を持つBraze REST APIキー。 <br><br> `users.export.ids`<br> `users.export.segments`<br> `segments.list`<br> `segments.details`<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -47,11 +47,11 @@ Storylyインテグレーションがカスタムパラメータを保持して�
 
 ### ステップ1:Storylyダッシュボードで統合を設定する
 
-**Storylyダッシュボード > \[Settings] > \[Integrations] > \[Connect with Braze]** で統合が作成されます。ここでは、Braze REST APIキーとBraze RESTエンドポイントが必要である。 
+**Storylyダッシュボード > [Settings] > [Integrations] > [Connect with Braze]** で統合が作成されます。ここでは、Braze REST APIキーとBraze RESTエンドポイントが必要である。 
 
 ### ステップ2:セグメントを取得する 
 
-次に、Braze セグメントを使用して Storyly オーディエンスを作成できます。これは、**Storylyダッシュボード > \[Settings] > \[Audiences] > \[New Audience] > \[Create Audience with Braze]** で作成できます。
+次に、Braze セグメントを使用して Storyly オーディエンスを作成できます。これは、**Storylyダッシュボード > [Settings] > [Audiences] > [New Audience] > [Create Audience with Braze]** で作成できます。
 
 ここには2つの同期オプションがあります。特定のキャンペーン・ストーリーには**1回限りの同期を**、長期的なストーリーには**毎日の同期を**選択する。
 

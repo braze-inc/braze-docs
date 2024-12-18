@@ -11,7 +11,7 @@ description: "この記事では、React Native アプリで、セッション�
 
 > この記事では、React Native アプリで基本的な分析を設定し、追跡する方法を説明します。
 
-始める前に、[分析の概要][0]の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則][1]についてもよく理解しておくことをお勧めします。
+始める前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## セッショントラッキング
 
@@ -69,7 +69,7 @@ Braze.setFirstName("Name");
 
 ### カスタムユーザー属性
 
-Braze は、定義済みのユーザー属性メソッドに加えて、アプリケーションからのデータを追跡するための[カスタム属性](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)も提供しています。 
+Braze は、定義済みのユーザー属性メソッドに加えて、アプリケーションからのデータを追跡するための[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)も提供しています。 
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
@@ -135,5 +135,3 @@ Braze.logPurchase("product_id", 9.99, "USD", 1, {
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

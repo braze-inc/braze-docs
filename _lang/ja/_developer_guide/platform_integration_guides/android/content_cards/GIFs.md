@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# GIF {#gifs-news-content-cards}
+# GIF{#gifs-news-content-cards}
 
 > この記事は、Braze SDK のデフォルトのコンテンツカードフラグメントまたはビューを使用してコンテンツカードを表示する統合に適用されます。
 

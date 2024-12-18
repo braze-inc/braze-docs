@@ -8,14 +8,14 @@ hide_toc: true
 
 # 메시지 크레딧 - 시그마(기밀)
 
-> 메시지 크레딧은 Braze의 크로스채널 패키징 구조로, 자사 네이티브 SMS, MMS, 및 WhatsApp 제공을 위한 것입니다. 메시지 크레딧을 사용하여 Braze 메시징 채널을 활용할 때 유연하고 투명한 경험을 제공합니다. 이 페이지의 테이블에 제시된 모든 채널에서 구매한 크레딧을 할당량만큼 사용할 수 있습니다.
+> 메시지 크레딧은 Braze의 크로스채널 패키징 구조로, 자사 네이티브 SMS, MMS, 및 WhatsApp 제공을 위한 것입니다. 메시지 크레딧은 Braze 메시징 채널을 활용할 때 유연하고 투명한 경험을 제공합니다. 크레딧을 사용하면 이 페이지의 표에 나와 있는 모든 채널에 액세스할 수 있습니다.
 
 {% alert note %}
 채널마다 보고에서 다른 측정 단위를 가질 것입니다.<br><br>
 <b>WhatsApp:</b> 대화<br>
 <b>SMS:</b> 세그먼트<br>
 <b>MMS:</b> 세그먼트<br><br>
-다시 말해, WhatsApp 메시지에 사용된 크레딧은 대화 시작 시 계산되며, SMS 및 MMS 메시지에 사용된 크레딧은 전송된 세그먼트에 따라 계산됩니다.
+즉, WhatsApp 메시지당 크레딧은 대화 시작 시 계산되며, SMS 및 MMS 메시지 모두에 대한 크레딧은 전송된 세그먼트에 대해 계산됩니다.
 <br><br>
 마지막으로, 통신사 수수료는 별도로 청구되며(연체 시) 이 메시지 크레딧 SKU의 일부로 간주되지 않습니다.
 {% endalert %}
@@ -28,8 +28,8 @@ hide_toc: true
 | **채널 크레딧 비율** | 각 채널에 대한 기준 신용 금액 |
 | **대상** | 특정 최종 지역, 국가 또는 Braze 플랫폼을 통해 전송되는 메시지 유형 |
 | **승수** | 특정 대상의 가격에 따라 채널 크레딧 비율 대비 계수기 |
-| **1회 전송에 사용된 크레딧** | 하나의 메시지를 전송하는 데 사용된 정확한 메시지 크레딧 수<br> (메시지당 크레딧 = 채널 크레딧 비율 x 대상 승수) |
-{: .reset-td-br-1 .reset-td-br-2}
+| **1회 전송당 크레딧** | 하나의 메시지를 전송할 수 있는 정확한 메시지 크레딧 수<br> (메시지당 크레딧 = 채널 크레딧 비율 x 대상 승수) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 ## 메시지 크레딧에 대한 신용 비율표 - 시그마
@@ -45,7 +45,7 @@ hide_toc: true
         <th><b>채널 크레딧 비율</b></th>
         <th><b>대상</b></th>
         <th><b>승수</b></th>
-        <th class="credits-column"><b>1회 전송에 사용된 크레딧</b></th>
+        <th class="credits-column"><b>1회 전송당 크레딧</b></th>
     </tr>
     <tbody><tr>
         <td>SMS - 미국 / 캐나다</td>
@@ -1772,15 +1772,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>아르헨티나 서비스</td>
-        <td>0.85</td>
-        <td>6.38</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>아르헨티나 유틸리티</td>
-        <td>1.10</td>
+        <td>0.90</td>
         <td>6.75</td>
     </tr>
     <tr>
@@ -1800,15 +1793,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>브라질 서비스</td>
-        <td>0.80</td>
-        <td>6.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>브라질 유틸리티</td>
-        <td>0.95</td>
+        <td>0.21</td>
         <td>1.58</td>
     </tr>
     <tr>
@@ -1828,15 +1814,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>칠레 서비스</td>
-        <td>1.20</td>
-        <td>9.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>칠레 유틸리티</td>
-        <td>1.55</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -1856,15 +1835,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>콜롬비아 서비스</td>
-        <td>0.15</td>
-        <td>1.13</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>콜롬비아 유틸리티</td>
-        <td>0.25</td>
+        <td>0.01</td>
         <td>0.08</td>
     </tr>
     <tr>
@@ -1884,15 +1856,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>이집트 서비스</td>
-        <td>1.70</td>
-        <td>12.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>이집트 유틸리티</td>
-        <td>1.80</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -1912,15 +1877,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>프랑스 서비스</td>
-        <td>2.30</td>
-        <td>17.25</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>프랑스 유틸리티</td>
-        <td>2.05</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -1940,15 +1898,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>독일 서비스</td>
-        <td>2.15</td>
-        <td>16.13</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>독일 유틸리티</td>
-        <td>2.25</td>
+        <td>1.46</td>
         <td>10.95</td>
     </tr>
     <tr>
@@ -1975,15 +1926,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>인도 서비스</td>
-        <td>0.10</td>
-        <td>0.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>인도 유틸리티</td>
-        <td>0.10</td>
+        <td>0.04</td>
         <td>0.30</td>
     </tr>
     <tr>
@@ -2010,13 +1954,6 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>인도네시아 서비스</td>
-        <td>0.50</td>
-        <td>3.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>인도네시아 유틸리티</td>
         <td>0.55</td>
         <td>4.13</td>
@@ -2038,15 +1975,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>이스라엘 서비스</td>
-        <td>0.50</td>
-        <td>3.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>이스라엘 유틸리티</td>
-        <td>0.50</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2066,15 +1996,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>이탈리아 서비스</td>
-        <td>1.00</td>
-        <td>7.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>이탈리아 유틸리티</td>
-        <td>1.10</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -2094,15 +2017,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>말레이시아 서비스</td>
-        <td>0.60</td>
-        <td>4.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>말레이시아 유틸리티</td>
-        <td>0.55</td>
+        <td>0.37</td>
         <td>2.78</td>
     </tr>
     <tr>
@@ -2122,15 +2038,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>멕시코 서비스</td>
-        <td>0.30</td>
-        <td>2.25</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>멕시코 유틸리티</td>
-        <td>0.70</td>
+        <td>0.27</td>
         <td>2.03</td>
     </tr>
     <tr>
@@ -2150,15 +2059,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>네덜란드 서비스</td>
-        <td>2.35</td>
-        <td>17.63</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>네덜란드 유틸리티</td>
-        <td>2.10</td>
+        <td>1.33</td>
         <td>9.98</td>
     </tr>
     <tr>
@@ -2178,15 +2080,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>나이지리아 서비스</td>
-        <td>0.80</td>
-        <td>6.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>나이지리아 유틸리티</td>
-        <td>0.85</td>
+        <td>0.18</td>
         <td>1.35</td>
     </tr>
     <tr>
@@ -2206,15 +2101,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>북미 서비스</td>
-        <td>0.25</td>
-        <td>1.88</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>북아메리카 유틸리티</td>
-        <td>0.40</td>
+        <td>0.11</td>
         <td>0.83</td>
     </tr>
     <tr>
@@ -2234,15 +2122,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>기타 서비스</td>
-        <td>0.40</td>
-        <td>3.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>기타 유틸리티</td>
-        <td>0.90</td>
+        <td>0.20</td>
         <td>1.50</td>
     </tr>
     <tr>
@@ -2262,15 +2143,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>파키스탄 서비스</td>
-        <td>0.40</td>
-        <td>3.00</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>파키스탄 유틸리티</td>
-        <td>0.65</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2290,15 +2164,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>페루 서비스</td>
-        <td>0.50</td>
-        <td>3.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>페루 유틸리티</td>
-        <td>1.10</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -2318,15 +2185,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>REST of Africa 서비스</td>
-        <td>0.95</td>
-        <td>7.13</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>아프리카 나머지 유틸리티</td>
-        <td>0.40</td>
+        <td>0.16</td>
         <td>1.20</td>
     </tr>
     <tr>
@@ -2346,15 +2206,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>기타 아시아 태평양 서비스</td>
-        <td>0.60</td>
-        <td>4.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>기타 아시아 태평양 지역 유틸리티</td>
-        <td>1.25</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2374,15 +2227,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>나머지 중앙 및 동유럽 서비스</td>
-        <td>0.65</td>
-        <td>4.88</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>기타 중앙 및 동유럽 유틸리티</td>
-        <td>1.65</td>
+        <td>0.94</td>
         <td>7.05</td>
     </tr>
     <tr>
@@ -2403,14 +2249,7 @@ hide_toc: true
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>기타 라틴 아메리카 유틸리티</td>
-        <td>1.10</td>
-        <td>8.25</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
-        <td>기타 라틴 아메리카 유틸리티</td>
-        <td>1.30</td>
+        <td>0.30</td>
         <td>2.25</td>
     </tr>
     <tr>
@@ -2430,15 +2269,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>기타 중동 서비스</td>
-        <td>0.60</td>
-        <td>4.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>기타 중동 유틸리티</td>
-        <td>0.55</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2458,15 +2290,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>기타 서유럽 서비스</td>
-        <td>1.05</td>
-        <td>7.88</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>기타 서유럽 유틸리티</td>
-        <td>1.10</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -2486,15 +2311,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>러시아 서비스</td>
-        <td>1.05</td>
-        <td>7.88</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>러시아 유틸리티</td>
-        <td>1.25</td>
+        <td>1.06</td>
         <td>7.95</td>
     </tr>
     <tr>
@@ -2514,15 +2332,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>사우디아라비아 서비스</td>
-        <td>0.50</td>
-        <td>3.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>사우디아라비아 유틸리티</td>
-        <td>0.65</td>
+        <td>0.31</td>
         <td>2.33</td>
     </tr>
     <tr>
@@ -2542,15 +2353,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>남아프리카 서비스</td>
-        <td>0.45</td>
-        <td>3.38</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>남아프리카 유틸리티</td>
-        <td>0.55</td>
+        <td>0.20</td>
         <td>1.50</td>
     </tr>
     <tr>
@@ -2570,15 +2374,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>스페인 서비스</td>
-        <td>1.00</td>
-        <td>7.50</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>스페인 유틸리티</td>
-        <td>1.00</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -2598,15 +2395,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>터키 서비스</td>
-        <td>0.10</td>
-        <td>0.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>터키 유틸리티</td>
-        <td>0.25</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2626,15 +2416,8 @@ hide_toc: true
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
-        <td>아랍에미리트 서비스</td>
-        <td>0.50</td>
-        <td>3.75</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
         <td>아랍에미리트 유틸리티</td>
-        <td>0.55</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2648,25 +2431,25 @@ hide_toc: true
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>영국 마케팅</td>
-        <td>1.85</td>
-        <td>13.88</td>
-    </tr>
-    <tr>
-        <td>WhatsApp</td>
-        <td>7.5</td>
-        <td>영국 서비스</td>
-        <td>1.05</td>
-        <td>7.88</td>
+        <td>1.40</td>
+        <td>10.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>영국 유틸리티</td>
-        <td>1.05</td>
+        <td>0.58</td>
         <td>4.35</td>
     </tr>
+    <tr>
+        <td>LINE</td>
+        <td>1</td>
+        <td>모든 지역</td>
+        <td>0.15</td>
+        <td>0.15</td>
+    </tr>
     </tbody></table>
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% enddetails %}
 
 ------
@@ -2700,7 +2483,7 @@ WhatsApp은 양방향 메시징에 중점을 둔 채널이며 개별 메시지 �
 **서비스 Conversations:** 사용자가 시작한 대화에 템플릿이 아닌 메시지로 응답하는 경우.
 
 {% alert note %}
-사용자가 시작한 대화에 마케팅 또는 유틸리티 템플릿으로 응답하는 경우 해당 요금이 부과됩니다.
+2024년 11월 1일부터 서비스형 대화는 무료로 제공되며 구매한 크레딧 할당량에서 차감되지 않습니다.
 {% endalert %}
 
 ## 청구 지역 분석

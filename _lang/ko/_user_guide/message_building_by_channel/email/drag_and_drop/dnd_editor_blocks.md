@@ -37,9 +37,9 @@ tool: Media
 |`Video`| 동영상 콘텐츠에 대한 링크를 생성합니다. |
 |`Social`| 소셜 미디어 플랫폼 아이콘을 삽입합니다. 브랜드별 아이콘에 대한 사용자 지정 이미지를 업로드할 수 있습니다. |
 |`Icons`| 아이콘을 삽입합니다. 사용자 지정 이미지를 업로드할 수 있습니다. 이미지가 업로드될 때까지 대형 플레이스홀더 아이콘이 사용됩니다. |
-|`HTML`| 원시 HTML을 삽입합니다. 커넥티드 콘텐츠 또는 조건문과 같은 고급 리퀴드에 적합합니다. | 
+|`HTML`| 원시 HTML을 삽입합니다. 연결된 콘텐츠 또는 조건문과 같은 고급 Liquid에 적합합니다. | 
 |`Menu`| 디자인 중인 메시지에 맞는 유연한 메뉴를 만듭니다. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## 등록정보
 
@@ -59,7 +59,7 @@ tool: Media
 |`Line height`| 텍스트 줄 사이의 거리를 수정합니다. |
 |`Line spacing`| 각 문자 사이의 거리를 수정합니다. |
 |`Text direction`| 기본값은 왼쪽에서 오른쪽이지만 오른쪽에서 왼쪽으로 편집할 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 단락 
 
@@ -77,7 +77,7 @@ tool: Media
 |`Line height`| 텍스트 줄 사이의 거리를 수정합니다. |
 |`Letter spacing`| 각 문자 사이의 거리를 수정합니다. |
 |`Text direction`| 기본값은 왼쪽에서 오른쪽이지만 오른쪽에서 왼쪽으로 편집할 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 목록
 
@@ -99,7 +99,7 @@ tool: Media
 |`Line height`| 텍스트 줄 사이의 거리를 수정합니다. |
 |`Letter spacing`| 각 문자 사이의 거리를 수정합니다. |
 |`Text direction`| 기본값은 왼쪽에서 오른쪽이지만 오른쪽에서 왼쪽으로 편집할 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 버튼
 
@@ -108,8 +108,8 @@ tool: Media
 | 등록정보 | 설명 |
 |---|---|
 |`Link Type`| 버튼을 클릭할 때의 동작을 결정하고 적절한 링크 프로토콜을 설정합니다. |
-|`URL`| 선택한 `Link Type` 에 따라 동적으로 변경됩니다.|
-{: .reset-td-br-1 .reset-td-br-2}
+|`URL`| 선택한 `Link Type`에 따라 동적으로 변경됩니다.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 구분선
 
@@ -118,10 +118,10 @@ tool: Media
 | 등록정보 | 설명 |
 |---|---|
 |`Transparent`| 활성화하면 '선' 및 '너비' 옵션이 제거됩니다. |
-|`Line`| 점선, 점선, 실선 등 다양한 선 형식을 지원합니다.  또한 디바이더 라인의 두께와 색상을 수정할 수 있습니다. |
-|`Width `| 디바이더의 스프레드를 5 단위로 조정합니다.  |
+|`Line`| 점선, 점선, 실선 등 다양한 선 형식을 지원합니다.  또한 구분선의 두께와 색상을 수정할 수 있습니다. |
+|`Width `| 구분선의 스프레드를 5 단위로 조정합니다.  |
 |`Align`| 선을 왼쪽, 가운데 또는 오른쪽 방향으로 이동합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 공백
 
@@ -130,7 +130,7 @@ tool: Media
 | 등록정보 | 설명 |
 |---|---|
 |`Height`| 스페이서 블록의 높이를 조정합니다. 기본값은 60px입니다.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 이미지
 
@@ -142,11 +142,11 @@ tool: Media
 |`Align`| 이미지를 왼쪽, 가운데 또는 오른쪽 방향으로 이동합니다. |
 |`URL`| 이미지의 호스팅 주소입니다. |
 |`Alternate text`| 이미지가 로드되지 않을 때 이미지 대신 표시되는 서면 사본입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 `Auto Width` 의 경우 자동 이미지 크기 조정은 이미지 너비와 레이아웃의 사용 가능한 공간의 조합에 따라 이미지에 가장 적합한 크기를 선택합니다:
-- 사용 가능한 공간보다 넓은 이미지는 100% 너비로 설정되며 모바일에서는 전체 디바이스 표시 너비를 사용하여 이 비율을 유지합니다.
+- 사용 가능한 공간보다 넓은 이미지는 100% 너비로 설정되며 모바일에서는 전체 기기 표시 너비를 사용하여 이 비율을 유지합니다.
 - 사용 가능한 공간보다 작은 이미지는 이미지의 자연스러운 크기를 사용하여 왜곡 효과나 흐릿한 사진을 방지합니다.
 {% endalert %}
 
@@ -159,12 +159,12 @@ tool: Media
 |`URL`| 동영상의 URL입니다. |
 |`Title`| 동영상 메타 데이터에서 자동 생성되거나 사용자 지정할 수 있습니다.  유튜브와 비메오만 지원된다는 점에 유의하세요. |
 |`Play Icon Style`| 동영상 이미지 상단에 위치한 재생 버튼에 대한 다양한 옵션을 포함합니다. |
-|`Play Icon Color`| 재생 버튼에 **밝게** 또는 **어둡게를** 선택하는 옵션입니다. |
+|`Play Icon Color`| 재생 버튼에 **라이트** 또는 **다크**를 선택하는 옵션입니다. |
 |`Play Icon Size`| 재생 버튼의 픽셀 크기를 선택합니다. 미리 고정된 범위는 50픽셀에서 80픽셀까지입니다(5픽셀씩 증가). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동합니다. Vimeo 내에서 사용할 수 있는 다른 모든 보안 설정(예: " Vimeo.com 에서 숨기기")은 이 콘텐츠 블록에서 지원하지 않는 다른 링크 형식을 생성합니다. 이러한 유형의 링크는 빌더에 의해 변경되므로 Braze에서 썸네일을 생성할 수 없습니다.
+Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동합니다. Vimeo 내에서 사용할 수 있는 다른 모든 보안 설정(예: " Vimeo.com에서 숨기기")은 이 콘텐츠 블록에서 지원하지 않는 다른 링크 형식을 생성합니다. 이러한 유형의 링크는 빌더에 의해 변경되므로 Braze에서 썸네일을 생성할 수 없습니다.
 {% endalert %}
 
 ### 소셜
@@ -177,7 +177,7 @@ Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동
 |`Configure icon collection`| 각 소셜 아이콘의 URL을 설정합니다. 제목 및 대체 텍스트를 편집할 수 있는 **추가 옵션** 토글이 포함되어 있습니다. |
 |`Align`| 소셜 아이콘을 왼쪽, 가운데 또는 오른쪽 방향으로 이동합니다.
 |`Icon spacing`| 각 소셜 아이콘 사이의 간격을 결정합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 아이콘
 
@@ -195,7 +195,7 @@ Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동
 |`Icon size`| 아이콘의 크기를 결정합니다. |
 |`Icon spacing`| 아이콘의 공백을 수정합니다. |
 |`Icon padding`| 아이콘의 패딩을 수정합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML
 
@@ -204,7 +204,7 @@ Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동
 | 등록정보 | 설명 |
 |---|---|
 |`html editor`| 원시 HTML을 입력합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 메뉴
 
@@ -221,16 +221,16 @@ Vimeo에서 호스팅하는 동영상은 공개로 설정된 경우에만 작동
 |`Letter spacing`| 각 문자 사이의 거리를 수정합니다. |
 |`Layout`| 레이아웃을 가로 또는 세로로 결정합니다. |
 |`Separator`| 메뉴 옵션 사이에 문자를 추가합니다. |
-|`Mobile menu`| 모바일 디바이스에 표시될 때 아이콘 크기, 색상 및 아이콘 유형을 수정하는 옵션이 포함되어 있습니다. |
-|`Item padding`| 또는 **-** 버튼을 사용하거나 특정 숫자를 입력하여 패딩을 수정합니다. |
+|`Mobile menu`| 모바일 기기에 표시될 때 아이콘 크기, 색상 및 아이콘 유형을 수정하는 옵션이 포함되어 있습니다. |
+|`Item padding`| **+** 또는 **-** 버튼을 사용하거나 특정 숫자를 입력하여 패딩을 수정합니다. |
 |`All sides`| `Item padding` 이 비활성화되어 있는 경우 일관된 패딩 번호를 설정합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Liquid 개인화 추가
 
-자세한 내용은 다음 표를 참조하세요 `Add Personalization`.
+자세한 내용은 `Add Personalization`에서 다음 표를 참조하세요.
 
 | 이름 | 설명 |
 |---|---|
-| `Add Personalization` | 표준(기본) 속성, 사용자 지정 속성, 콘텐츠 블록 등과 같은 표준 리퀴드 스니펫을 조회할 수 있습니다. | 
-{: .reset-td-br-1 .reset-td-br-2}
+| `Add Personalization` | 표준(기본) 속성, 커스텀 속성, 콘텐츠 블록 등과 같은 표준 Liquid 스니펫을 조회할 수 있습니다. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

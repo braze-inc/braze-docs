@@ -25,6 +25,5 @@ channel: news feed
 braze.getCachedFeed().getUnreadCardCount();
 ```
 
-これは、未読のニュースフィードカードの数を示すバッジを強化するためによく使用されます。詳細については[JSDocs][17]を参照してください。Brazeは、フィードを表示するか、次の関数を呼び出すまで、新しいページのロード時にニュースフィードカードを更新しない（そのため、この関数は0を返す）ことに注意。 `braze.requestFeedRefresh();`
+これは、未読のニュースフィードカードの数を示すバッジを強化するためによく使用されます。詳細については[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html)を参照してください。Brazeは、フィードを表示するか、次の関数を呼び出すまで、新しいページのロード時にニュースフィードカードを更新しない（そのため、この関数は0を返す）ことに注意。 `braze.requestFeedRefresh();`
 
-[17]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html

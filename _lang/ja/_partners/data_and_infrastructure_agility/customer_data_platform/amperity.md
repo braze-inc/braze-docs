@@ -26,11 +26,11 @@ Braze と Amperity の統合により、2つのプラットフォームにわた
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Amperity アカウント | このパートナーシップを活用するには、[Amperity アカウント](https://amperity.com/request-a-demo)が必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br> これは Braze ダッシュボードの \[**開発者コンソール**] > \[**REST API キー**] > \[**新しい API キーを作成**] で作成できます。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br> これは Braze ダッシュボードの [**開発者コンソール**] > [**REST API キー**] > [**新しい API キーを作成**] で作成できます。 |
 | ブレイズインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics#endpoints)でも確認できます。 |
-| Braze RESTエンドポイント | あなたのBrazeエンドポイントURL。エンドポイントはBrazeインスタンスに依存する。 |
+| Braze REST エンドポイント | あなたのBrazeエンドポイントURL。エンドポイントはBrazeインスタンスに依存する。 |
 | Currents コネクター (オプション) | S3 Currents コネクター。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## データマッピング
 
@@ -92,7 +92,7 @@ Amperity は、Braze との同期間に行われた変更と、送信のステ�
 
 ### ステップ1:Brazeの設定の詳細をキャプチャする
 
-1. \[**User Data**] で、`users.track` 権限を持つ Braze ワークスペースの Braze REST APIキーを作成します。`users.track` エンドポイントは、Amperity オーディエンスをカスタム属性として Braze に同期します。
+1. [**User Data**] で、`users.track` 権限を持つ Braze ワークスペースの Braze REST APIキーを作成します。`users.track` エンドポイントは、Amperity オーディエンスをカスタム属性として Braze に同期します。
 2. Brazeインスタンスの[REST APIエンドポイントを]({{site.baseurl}}/api/basics#endpoints)決定する。例えば、BrazeのURLが`https://dashboard-03.braze.com` 、REST APIのエンドポイントが`https://rest.iad-03.braze.com` 、インスタンスが "US-03 "の場合。
 3. Amperity から Braze に送信できる一連の[ユーザープロファイルフィールド]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields)と[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)を決定します。
 
@@ -108,13 +108,13 @@ Amperity の Customer 360 データベース内に、「Braze Customer Attribute
 
 #### ステップ 2c: Braze を宛先として追加する
 
-Amperity プラットフォームで \[**Destinations**] タブに移動します。新しい目的地を追加するオプションを探す。利用可能なオプションから \[**Braze**] を選択します。
+Amperity プラットフォームで [**Destinations**] タブに移動します。新しい目的地を追加するオプションを探す。利用可能なオプションから [**Braze**] を選択します。
 
 ![名前が「Braze API」、説明が「Send audience attributes to Braze」、プラグインが「Braze」である「New Destination」セクション。][3]{: style="max-width:60%;"}
 
 #### ステップ 2d: 宛先の詳細を設定する
 
-[Amperityのドキュメント](https://docs.amperity.com/datagrid/destination_braze.html#add-destination)に示されているように、\[**Braze settings**] で Braze の認証情報と宛先設定を指定します。最後のステップで収集した構成の詳細を入力し、Braze識別子を定義する。マッチング可能な識別子は以下の通りである：
+[Amperityのドキュメント](https://docs.amperity.com/datagrid/destination_braze.html#add-destination)に示されているように、[**Braze settings**] で Braze の認証情報と宛先設定を指定します。最後のステップで収集した構成の詳細を入力し、Braze識別子を定義する。マッチング可能な識別子は以下の通りである：
 - `braze_id`:自動的に割り当てられるBrazeの識別子で、Brazeで作成されたときに特定のユーザーに関連付けられ、変更できない。
 - `external_id`:顧客が割り当てた識別子で、通常はUUIDである。 
 
@@ -122,7 +122,7 @@ Amperity プラットフォームで \[**Destinations**] タブに移動しま�
 
 #### ステップ2e:データ・テンプレートを追加する
 
-\[**Destinations**] タブで Braze 宛先のメニューを開き、\[**Add data template**] を選択します。テンプレートの名前と説明（例えば、"Braze "と "Send custom attributes to Braze"）を入力し、ビジネスユーザーのアクセスを確認し、すべての構成設定をチェックする。 
+[**Destinations**] タブで Braze 宛先のメニューを開き、[**Add data template**] を選択します。テンプレートの名前と説明（例えば、"Braze "と "Send custom attributes to Braze"）を入力し、ビジネスユーザーのアクセスを確認し、すべての構成設定をチェックする。 
 
 必要な設定がデスティネーションの一部として構成されていない場合は、データテンプレートの一部として構成する。データ・テンプレートを保存する。
 
@@ -176,7 +176,7 @@ Amperity のドキュメントで、Braze に送信できるさまざまなセ�
 2. 特に複数のキャンペーンを行っている場合は、後でキャンペーンを識別するのに役立つ、説明的でユニークな名前を付ける。
 3. このキャンペーンでターゲットにする顧客のセグメントを選択します。これは先ほど作成したセグメントです。<br>![ターゲティングから除外するセグメントのドロップダウンフィールド。][6]{: style="max-width:50%;"}<br><br>
 4. キャンペーンの一部として送信したいデータを選択する。これにはさまざまな顧客属性が含まれる可能性があります。![「Edit Campaign Attributes」モーダルでは、宛先とカスタマー属性を選択できる。][7]{: style="max-width:90%;"}<br><br>
-5. キャンペーンデータの送信先として \[**Braze**] を選択します。
+5. キャンペーンデータの送信先として [**Braze**] を選択します。
 6. いつ、どれくらいの頻度でキャンペーンを実施するかを選択する。これは1回限りのイベントでも、定期的なスケジュールでも構わない。
 7. キャンペーンを保存してテストを実行し、期待通りに機能することを確認する。
 

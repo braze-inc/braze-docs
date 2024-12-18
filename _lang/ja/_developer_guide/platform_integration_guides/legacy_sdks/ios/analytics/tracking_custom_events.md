@@ -14,7 +14,7 @@ noindex: true
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。
 
-実装前に、[ベストプラクティス][0]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## カスタムイベントの追加
 
@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-詳細については、[クラスに関するドキュメント][4]を参照してください。
+詳細については、[クラスのドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties のドキュメント")を参照してください。
 
 ### 予約済みのキー {#event-reserved-keys}
 
@@ -89,10 +89,6 @@ Appboy.sharedInstance()?.logCustomEvent(
 
 ## その他のリソース
 
-- `Appboy.h` [ファイル][2]内のメソッドの宣言を参照してください。 
-- 詳細については、[`logCustomEvent`][3] のドキュメントを参照してください。
+- `Appboy.h` [ファイル](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h)内のメソッドの宣言を参照してください。 
+- 詳細については、[`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent のドキュメント")ドキュメントを参照してください。
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent のドキュメント"
-[4]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties のドキュメント"

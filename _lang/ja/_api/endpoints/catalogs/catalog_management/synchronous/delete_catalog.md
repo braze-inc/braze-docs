@@ -1,6 +1,6 @@
 ---
-nav_title: "削除:カタログを削除する"
-article_title: "削除:カタログを削除する"
+nav_title: "DELETE:カタログの削除"
+article_title: "DELETE:カタログの削除"
 search_tag: Endpoint
 page_order: 1
 
@@ -21,7 +21,7 @@ description: "この記事では、「カタログの削除」Braze エンドポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete`の権限が必要です。
 
 ## レート制限
 
@@ -29,12 +29,12 @@ description: "この記事では、「カタログの削除」Braze エンドポ
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants' \
@@ -44,7 +44,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 応答
 
-このエンドポイントには、`200` と `404` の2つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `200` と `404`。
 
 ### 成功応答の例
 
@@ -78,13 +78,13 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-## トラブルシューティング 
+## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
 | `catalog-not-found` | カタログ名が有効であることを確認する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

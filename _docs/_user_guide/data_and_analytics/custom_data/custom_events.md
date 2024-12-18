@@ -224,7 +224,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-![][3]
+![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendary days (720-744 hours)."][3]
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 
@@ -328,5 +328,5 @@ Contact your Braze customer success manager for recommendations on the best appr
 [9]: {% image_buster /assets/img/custom_events_report_filters.png %}
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

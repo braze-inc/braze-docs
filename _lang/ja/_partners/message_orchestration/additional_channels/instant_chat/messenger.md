@@ -12,10 +12,10 @@ search_tag: Partner
 
 > [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) は、世界で最も人気があるインスタントメッセージングプラットフォームの1つで、1か月あたりのアクティブユーザー数は10億にのぼります。ブランドはこのプラットフォームで、顧客とインテリジェントかつ自動的にやり取りするための魅力的なチャットボットを作成します。
 
-Braze とFacebook の統合では、Messenger Platform API を介して Facebook Messenger のユーザーにメッセージを送信するために、Braze Webhook、セグメンテーション、パーソナライゼーション、トリガー機能が利用されます。カスタム Facebook Messenger Webhook テンプレートは、Braze プラットフォームの \[**テンプレート**] > \[**Webhook テンプレート**] にあります。
+Braze とFacebook の統合では、Messenger Platform API を介して Facebook Messenger のユーザーにメッセージを送信するために、Braze Webhook、セグメンテーション、パーソナライゼーション、トリガー機能が利用されます。カスタム Facebook Messenger Webhook テンプレートは、Braze プラットフォームの [**テンプレート**] > [**Webhook テンプレート**] にあります。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**Engagement**> **Templates &Media**> **Webフックテンプレート** に移動します。
+[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
 {% endalert %}
 
 Facebook Messenger プラットフォームは、「既存の取引を促進し、他の顧客サポートアクションを提供し、個人が要求したコンテンツを配信する非プロモーションメッセージ」を対象としています。詳細については、[Facebook のプラットフォームガイドライン](https://developers.facebook.com/docs/messenger-platform)と[許容可能なユースケースの例](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable)を参照してください。
@@ -27,14 +27,14 @@ Facebook Messenger プラットフォームは、「既存の取引を促進し�
 - お客様のページからのメッセージに対するユーザーの明示的な許可が必要になります。 
 - FaceBook アプリのテストユーザーではないユーザーにメッセージを送信するには、アプリがFaceBookの[アプリレビュー](https://developers.facebook.com/docs/messenger-platform/app-review)に合格する必要があります。<br><br>
 
-| 要件| 提供元| アクセス| 説明|
+| 必要条件| 提供元| アクセス| 説明|
 | ---| ---| ---|
 | Facebook Messenger ページ| Facebook| [https://www.facebook.com/pages/create](https://www.facebook.com/pages/create) | Facebook ページがボットの ID として使用されます。アプリとチャットすると、ページ名とプロファイル画像が表示されます。|
 | Facebook Messenger アプリ| Facebook| [https://developers.facebook.com/apps](https://developers.facebook.com/apps) | Facebook アプリには、アクセストークンなどの Messenger ボットの設定が含まれています。
 | アプリボットの審査と承認 | Facebook | [https://developers.facebook.com/docs/messenger-platform/app-review](https://developers.facebook.com/docs/messenger-platform/app-review) | ボットを公開する準備ができたら、審査と承認を受けるために Facebook に提出する必要があります。す。この審査の過程で、皆様のMessengerボットが、私たちの方針と機能を期待どおりに遵守し、Messengerの全員が利用できるようにすることができます。 |
 | ページスコープ ID (PSID) | Facebook | [https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) | Facebook Messenger でメッセージを送信するには、ユーザー PSID が必要です。ユーザーが Messenger を介してアプリとやり取りするときに、Facebook によって PSID が作成されます。このPSID は、ストリングカスタム属性としてBraze に送信できます。
 | ページアクセストークン | Facebook | [https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token) | これらのアクセストークンは、Facebook Page に属するデータの読み取り、書き込み、変更を行う API に権限を付与することを除き、ユーザーアクセストークンと似ています。ページアクセストークンを取得するには、ユーザーアクセストークンを取得し、`manage_pagespermission` を要求する必要があります。ユーザーアクセストークンを取得したら、Graph API を使用してページアクセストークンを取得できます。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合
 
@@ -72,7 +72,7 @@ PSID は、Facebook が提供するさまざまな[エントリポイント](htt
 
 PSID を受信していると確信したら、これを開発者と調整して共有し、[カスタム属性]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes) としてPSID をBraze に送信します。PSID は、[API コール](https://developers.facebook.com/docs/messenger-platform/reference/send-api) でアクセスできる文字列です。
 
-### ステップ3:Webhook テンプレートのセットアップ
+### ステップ 3:Webhook テンプレートのセットアップ
 
 **Templates & Media**から**Webフックテンプレート**に進み、**FaceBook Messenger Webフックテンプレート**を選択します。
 
@@ -89,9 +89,9 @@ Webhookを確認してから送信してください。Messenger ID がBraze に
 
 メッセージが正常に受信された場合は、配信設定s を設定できます。
 
-## この統合の使用
+## この統合を使う
 
-設定が完了したら、この統合を使用して Facebook Messenger ユーザーをターゲットにします。ユーザーの電話番号を使用してメッセージを送信しておらず、Messenger メッセージを繰り返し送信する予定がある場合は、Messenger ID がカスタム属性として存在するすべてのユーザーに対して\[セグメントを作成][62]し、\[分析の追跡][61]をオンにして、Messenger のサブスクリプション率を経時的に追跡する必要があります。 
+設定が完了したら、この統合を使用して Facebook Messenger ユーザーをターゲットにします。ユーザーの電話番号を使用してメッセージを送信しておらず、Messenger メッセージを繰り返し送信する予定がある場合は、Messenger ID がカスタム属性として存在するすべてのユーザーに対して[セグメントを作成][62]し、[分析の追跡][61]をオンにして、Messenger のサブスクリプション率を経時的に追跡する必要があります。 
 
 ![セグメントフィルター「messenger_id」が「is not blank」に設定されている。][63]
 

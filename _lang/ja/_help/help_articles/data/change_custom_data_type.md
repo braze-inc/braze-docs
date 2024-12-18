@@ -1,6 +1,6 @@
 ---
-nav_title: カスタム属性またはイベントデータ型の変更
-article_title: カスタム属性またはイベントデータ型の変更
+nav_title: カスタム属性またはイベントのデータタイプを変更する
+article_title: カスタム属性またはイベントのデータタイプを変更する
 page_order: 1
 
 page_type: solution

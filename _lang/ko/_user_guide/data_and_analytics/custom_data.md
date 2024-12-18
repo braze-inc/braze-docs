@@ -4,7 +4,7 @@ article_title: 커스텀 데이터
 page_order: 4
 layout: dev_guide
 guide_top_header: "커스텀 데이터"
-guide_top_text: "Braze의 가장 좋은 점 중 하나는 유연성입니다. }커스텀 데이터를 }앱에 설정하고 관련 }측정기준을 Braze로 보낼 수 있습니다. 다음 기사를 방문하여 확인하십시오."
+guide_top_text: "Braze의 가장 좋은 점 중 하나는 유연성입니다. 커스텀 데이터를 앱에 설정하고 관련 측정기준을 Braze로 보낼 수 있습니다. 다음 기사를 방문하여 확인하십시오."
 
 page_type: landing
 description: "이 랜딩 페이지는 커스텀 데이터에 대한 기사들의 홈입니다. 여기에서 이벤트 명명 규칙, 커스텀 이벤트 및 속성, 구매 이벤트, 커스텀 데이터 차단 등과 관련된 자료를 찾을 수 있습니다."

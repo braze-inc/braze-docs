@@ -14,7 +14,7 @@ description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 기본 설정 센터의 URL을 생성합니다. 
+> 이 엔드포인트를 사용하여 기본 설정 센터의 URL을 생성합니다.
 
 각 환경설정 센터 URL은 사용자마다 고유합니다.
 
@@ -34,6 +34,7 @@ description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
 |`userID`| 필수 | 문자열 | 사용자 ID입니다. |
+{:  role="presentation" }
 
 ## 요청 매개변수
 
@@ -41,7 +42,7 @@ description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 
 | --------- | ---------| --------- | ----------- |
 |`preference_center_api_id`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
 |`external_id`| 필수 | 문자열 | 사용자의 외부 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -50,7 +51,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-## 응답 
+## 응답
 
 ```json
 {

@@ -14,7 +14,7 @@ guide_featured_list:
   - name: 시작하기
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: 캠페인 구축
+  - name: 캠페인 작성
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
   - name: 캠페인 관리

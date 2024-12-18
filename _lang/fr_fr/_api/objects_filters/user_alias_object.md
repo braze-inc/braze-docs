@@ -16,11 +16,24 @@ L’objet Alias utilisateur se compose de deux parties : un `alias_name` pour l
 Cet objet est fréquemment utilisé dans tous nos endpoints, et souvent dans d’autres objets.
 
 ## Corps de l’objet
+
 ```json
 {
   "user_alias" : {
     "alias_name" : (required, string),
     "alias_label" : (required, string)
   }
+}
+```
+
+### Exemple
+
+```json
+{
+  "user_alias": {
+    "alias_name": "john_doe_123",
+    "alias_label": "email_id"
+  },
+  "external_id": "user_456"
 }
 ```

@@ -20,8 +20,8 @@ Braze と Adikteev の統合により、Braze CRM キャンペーン内で Adikt
 | --- | --- |
 | Adikteev アカウント | このパートナーシップを活用するには、Adikteev アカウントが必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定**」>「**APIと識別子**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze RESTエンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -46,7 +46,7 @@ Braze と Adikteev の統合により、Braze CRM キャンペーン内で Adikt
 
 ### ステップ2:Braze REST APIキーを作成する
 
-Braze で \[**設定**] > \[**API と識別子**] に移動します。\[**新しい API キーを作成**] を選択して使用する API キー名を入力し、次の権限が追加されていることを確認します。
+Braze で [**設定**] > [**API と識別子**] に移動します。[**新しい API キーを作成**] を選択して使用する API キー名を入力し、次の権限が追加されていることを確認します。
 
 - `users.track`
 

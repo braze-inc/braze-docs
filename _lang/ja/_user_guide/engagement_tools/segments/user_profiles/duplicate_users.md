@@ -19,7 +19,7 @@ Braze REST API を使用して重複ユーザーをマージするには、[ ポ
 
 ### ステップ1: 重複するプロファイルを検索する
 
-Braze で、\[**オーディエンス**] > \[**ユーザー検索**] を選択します。
+Braze で、[**オーディエンス**] > [**ユーザー検索**] を選択します。
 
 ![ナビゲーションメニューで強調表示された「ユーザー検索」タイル]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
 
@@ -29,13 +29,13 @@ Braze で、\[**オーディエンス**] > \[**ユーザー検索**] を選択�
 
 ### ステップ2:重複をマージする
 
-マージ処理を開始するには、\[**重複をマージする**] を選択します。
+マージ処理を開始するには、[**重複をマージする**] を選択します。
 
-![] （{% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %} ）。{: style="max-width:55%;"}
+![重複するユーザープロファイルの 1 つ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
 
-保持するユーザープロファイルとマージするユーザープロファイルを選択し、\[**プロファイルをマージする**] を選択します。重複するプロファイルをすべて統合するまで、このプロセスを繰り返します。
+保持するユーザープロファイルとマージするユーザープロファイルを選択し、[**プロファイルをマージする**] を選択します。重複するプロファイルをすべて統合するまで、このプロセスを繰り返します。
 
-![] （{% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %} ）。{: style="max-width:70%;"}
+![個人の重複するプロファイルのマージページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
 
 {% alert warning %}
 マージ後、重複したユーザープロファイルを復元できません。
@@ -45,17 +45,17 @@ Braze で、\[**オーディエンス**] > \[**ユーザー検索**] を選択�
 
 重複ユーザーを一括マージする場合、Braze は一致する識別子 (メールアドレスなど) を持つプロファイルを検索し、そのすべてのデータを、`external_id` を持つ最も新しく更新されたプロファイルにマージします。`external_id` を持つプロファイルがない場合、`external_id` を持たないのない最も最近に更新されたプロファイルが代わりに使用されます。
 
-### ステップ1: \[オーディエンスを管理] に移動する
+### ステップ1: [オーディエンスを管理] に移動する
 
-Braze ダッシュボードで、\[**オーディエンス**] > \[**オーディエンスを管理**] を選択します。
+Braze ダッシュボードで、[**オーディエンス**] > [**オーディエンスを管理**] を選択します。
 
-![ナビゲーション・メニューで「観客管理」タイルがハイライトされる。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![ナビゲーションメニューの強調表示された [オーディエンスを管理] タイル。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
 
 ### ステップ2:結果をプレビューする (オプション)
 
-重複をマージする前に結果をプレビューするには、\[**重複のリストを作成するを**] 選択します。
+重複をマージする前に結果をプレビューするには、[**重複のリストを作成するを**] 選択します。
 
-![]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %}) "Generate list of duplicates "がハイライトされた "Manage Audience "ページ。
+![[重複のリストを生成] が強調表示された [オーディエンスを管理] ページ。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
 
 Braze がプレビューを作成し、CSV ファイルとしてあなたのメールアドレスに送信します。
 
@@ -67,38 +67,42 @@ Braze がプレビューを作成し、CSV ファイルとしてあなたのメ�
 {% tab csvファイルの例 %}
 | メールアドレス｜外部 ID｜電話番号｜Braze ID｜ルールの識別子｜保持するプロファイル｜マージするプロファイル |
 \|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-\|alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | Eメール | TRUE | FALSE | |
+| alex@company.com     |   A8i3mkd99          |      (555) 123-4567 | 65fcaa547f470494d1370 | メール               | TRUE            | FALSE            |
 \|alex@company.com | | (555) 987-6543 | 65fcaa547f47d004d1348 | Eメール | FALSE | TRUE |
 \|alex@company.com | | (555) 321-0987 | 65fcaa547f47d0049135c | Eメール | FALSE | TRUE |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
-### ステップ3 重複を統合する
+#### マージ動作
 
-プレビューの結果に満足したら、\[**すべての重複項目をマージ**] を選択します。
+Brazeは、保持しているプロファイルの空のフィールドを、統合したプロファイルの値で埋める。入力されるフィールドのリストについては、「[マージ動作]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior)」を参照してください。
+
+### ステップ 3:重複を統合する
+
+プレビューの結果に満足したら、[**すべての重複項目をマージ**] を選択します。
 
 {% alert warning %}
 マージ後、重複したユーザープロファイルを復元できません。
 {% endalert %}
 
-![観客の管理」ページで、「重複をすべて統合」が強調表示されている。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![[すべての重複項目をマージ] が強調表示された [オーディエンスを管理] ページ。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
 
 ## ルールベースのマージ
 
-ルールを使用して、マージを実行する際に重複プロフィールがどのように解決されるかを制御し、最も関連性の高いユーザー・プロフィールが保持されるようにすることができる。ルールが設定されると、Brazeは条件に一致するプロフィールを保持する。
+ルールを使用して、マージを実行する際に重複プロファイルの解決方法をコントロールし、最も関連性の高いユーザープロファイルを保持することができます。ルールが設定されると、Brazeは条件に一致するプロフィールを保持する。
 
 ### ステップ 1:ルールを明確にする
 
-1. **Audience**>**Manage Audience**>**Edit rulesに**進む。
-2. **ルールの編集]**パネルの**\[保持するプロファイル]**セクションで、重複をマージする際に保持するプロファイルの**\[識別子]**を選択する。これはメールアドレスでも電話番号でも構わない。
-3. **Resolving ties**セクションで、**Profileからkeepまでの**条件が一致するプロファイル間の結びつきを解決する方法を決定する基準を選択する。以下を選択できる：<br>
-- **を使って同点に追いつく**：作成日、更新日、最終セッション
-- **優先順位をつける**：最新、最古
+1. [**オーディエンス**] > [**オーディエンスを管理**] > [**ルールを編集**] に移動します。.
+2. **ルールの編集]**パネルの**[保持するプロファイル]**セクションで、重複をマージする際に保持するプロファイルの**[識別子]**を選択する。これはメールアドレスでも電話番号でも構わない。
+3. [**同点の解決**] セクションで、[**保持するプロファイル**] の条件が一致する複数のプロファイルからいずれを優先するか解決する方法の決定基準を選択します。以下の項目を選択できます。<br>
+- **解決に使用**: 作成日、更新日、最終セッション
+- **優先基準**: 最新、最古
 
-![ルールの編集」パネルには、「保持するプロフィール」と「しがらみの解消」のオプションを選択するセクションがある。]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![[保持するプロファイル] と [同点の解決] のオプションを選択するセクションを持つ [ルールを編集] パネル。]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
 
-例えば、電話番号のあるプロフィールを残すこともできる。複数のユーザーが同じ電話番号を持っている場合、**更新日**フィールドを使用して結びつきを解決し、最も最近更新されたユーザーを優先することができる。
+例えば、電話番号を持つプロファイルを保持できます。複数のユーザーが同じ電話番号を持っている場合、**更新日**フィールドを使用して結びつきを解決し、最も最近更新されたユーザーを優先することができる。
 
 ### ステップ2:結果をプレビューする (オプション)
 

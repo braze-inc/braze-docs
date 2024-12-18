@@ -11,19 +11,19 @@ channel:
 
 # リッチプッシュ通知
 
-> リッチプッシュ通知は、画像、GIF、および動画を持つプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードが表示される前に変更できる拡張機能です。サポートされているファイルタイプとサイズのリストについては、Apple の\[`UNNotificationAttachment`][28] を参照してください。
+> リッチプッシュ通知は、画像、GIF、および動画を持つプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードが表示される前に変更できる拡張機能です。サポートされているファイルタイプとサイズのリストについては、Apple の [[`UNNotificationAttachment`](https://developer.apple.com/reference/usernotifications/unnotificationattachment)] を参照してください。
 
 ## ステップ1:サービス拡張の作成
 
-[ 通知 サービス拡張][23] を作成するには、Xコード で**File > New > Target** に移動し、** 通知 サービス拡張** を選択します。
+[ 通知 サービス拡張](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension) を作成するには、Xコード で**File > New > Target** に移動し、** 通知 サービス拡張** を選択します。
 
-![][26]{: style="max-width:90%"}
+![]({% image_buster /assets/img_archive/ios10_se_at.png %}){: style="max-width:90%"}
 
-アプリケーションに拡張機能を埋め込むように \[**アプリケーションに埋め込む**] が設定されていることを確認します。
+アプリケーションに拡張機能を埋め込むように [**アプリケーションに埋め込む**] が設定されていることを確認します。
 
 ## ステップ2:通知 保守拡張機能のセットアップ
 
-通知サービスエクステンションは、アプリにバンドルされている独自のバイナリーです。\[Apple Developer Portal][27] で、独自のアプリ ID とプロビジョニングプロファイルを使用して設定する必要があります。
+通知サービスエクステンションは、アプリにバンドルされている独自のバイナリーです。[Apple Developer Portalで](https://developer.apple.com)独自のアプリIDとプロビジョニングプロファイルを設定する必要がある。
 
 通知サービス拡張機能のバンドル ID は、メインアプリターゲットのバンドル ID とは異なる必要があります。たとえば、アプリのバンドル ID が `com.company.appname` の場合、サービス拡張に `com.company.appname.AppNameServiceExtension` を使用できます。
 
@@ -31,7 +31,7 @@ channel:
 
 リッチプッシュ通知s と`BrazeNotificationService` の統合に関するステップガイドについては、[チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) を参照してください。
 
-サンプルを確認するには、サンプルアプリの[`NotificationService`][1] の使用法を参照してください。
+サンプルを確認するには、サンプルアプリの[`NotificationService`](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/PushNotificationsServiceExtension/NotificationService.swift) の使用法を参照してください。
 
 ### アプリへのリッチプッシュフレームワークの追加
 
@@ -110,8 +110,3 @@ class NotificationService: UNNotificationServiceExtension {
 
 マーケティングチームは、ダッシュボードからリッチプッシュ通知を作成することもできます。プッシュコンポーザーを介してプッシュ通知を作成し、単に画像または GIF を添付するか、画像、GIF、または動画をホストする URL を指定します。アセットはプッシュ通知の受信時にダウンロードされるため、コンテンツをホスティングしている場合は、要求が大規模に同期的に急増することを想定する必要があります。
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/PushNotificationsServiceExtension/NotificationService.swift
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

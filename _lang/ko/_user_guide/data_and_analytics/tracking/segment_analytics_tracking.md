@@ -3,7 +3,7 @@ nav_title: 세그먼트 분석 추적
 article_title: 세그먼트 분석 추적
 page_order: 8
 page_type: reference
-description: "이 참조 문서에서는 세그먼트 분석 추적과 시간별 매출 및 구매, 시간별 세션, 시간별 사용자 지정 이벤트를 보는 방법에 대해 설명합니다."
+description: "이 참조 문서에서는 세그먼트 분석 추적과 시간별 매출 및 구매, 시간별 세션, 시간별 커스텀 이벤트를 보는 방법에 대해 설명합니다."
 tool: 
   - Segments
   - Reports
@@ -28,12 +28,12 @@ tool:
 **분석** > **매출 보고서로** 이동하여 [이 세그먼트의 시간별 매출 및 구매][14] 데이터를 확인합니다.
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **수익을** 찾을 수 있습니다.
+[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **매출**을 찾을 수 있습니다.
 {% endalert %}
 
 ![세그먼트별 매출 데이터][17]
 
-사용자 지정 시간 범위에 대한 세그먼트 데이터를 시각적으로 비교하려면 그래프에서 세그먼트를 추가하거나 제거합니다. **분석** 드롭다운에서 **세그먼트별을** 선택한 다음 **분석 값에서** 세그먼트를 선택합니다.
+사용자 지정 시간 범위에 대한 세그먼트 데이터를 시각적으로 비교하려면 그래프에서 세그먼트를 추가하거나 제거합니다. **분석** 드롭다운에서 **세그먼트별**을 선택한 다음 **분석 값**에서 세그먼트를 선택합니다.
 
 그래프 위의 세그먼트 이름을 선택하여 해당 세그먼트의 지표에 대한 표시 여부를 설정하거나 해제할 수 있습니다.
 
@@ -51,11 +51,11 @@ tool:
 
 ## 시간 경과에 따른 사용자 지정 이벤트 보기
 
-**분석** > **사용자 지정 이벤트 보고서로** 이동하여 \[세그먼트에 대한 시간별 사용자 지정 이벤트][20] ]에 대한 데이터를 확인합니다.
+**분석** > **커스텀 이벤트 보고서로** 이동하여 [세그먼트에 대한 시간별 커스텀 이벤트][20]에 대한 데이터를 확인합니다.
 
 ## 쿼리 작성기 템플릿 사용
 
-애널리틱스 추적이 켜져 있으면 쿼리 빌더 보고서 템플릿을 사용하여 캠페인, 캔버스, 이형 상품 및 단계에 대한 성과 지표를 세그먼트별로 세분화할 수 있습니다. 자세히 알아보려면 [세그먼트 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#performance-data-by-segment) 확인하세요.
+분석 추적이 켜져 있으면 쿼리 빌더 보고서 템플릿을 사용하여 캠페인, 캔버스, 배리언트 및 단계에 대한 성과 지표를 세그먼트별로 세분화할 수 있습니다. 자세히 알아보려면 [세그먼트 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#performance-data-by-segment) 확인하세요.
 
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#segment-statistics
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data

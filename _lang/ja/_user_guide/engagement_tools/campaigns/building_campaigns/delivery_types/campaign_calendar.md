@@ -11,10 +11,10 @@ description: "この参考ページでは、コンテンツカレンダーの構
 
 > コンテンツカレンダーには、今後予定されているキャンペーンの概要が表示されます。
 
-メッセージングデータを分析したり、予定されたキャンペーンを表示および管理したりできます。カレンダーを開くには、\[**メッセージング**] > \[**コンテンツカレンダー**] を選択します。
+メッセージングデータを分析したり、予定されたキャンペーンを表示および管理したりできます。カレンダーを開くには、[**メッセージング**] > [**コンテンツカレンダー**] を選択します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**エンゲージメント**] > \[**キャンペーン**] > \[**カレンダー**] を選択します。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**キャンペーン**] > [**カレンダー**] を選択します。
 {% endalert %}
 
 ## メッセージング分析
@@ -26,9 +26,9 @@ description: "この参考ページでは、コンテンツカレンダーの構
 
 レポート内の特定の日の上にカーソルを置くと、レポートの特定の日のメッセージング分析を表示できます。
 
-![]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+![[メッセージング分析] 内の「今後のメッセージタイプ」と「送信済みメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
-データのコピーをダウンロードするには、<i class="fa-solid fa-bars" style="color: #2e7487;"></i>\[**チャートコンテキストメニュー**] を選択し、希望のファイル形式を選択します。
+データのコピーをダウンロードするには、<i class="fa-solid fa-bars" style="color: #2e7487;"></i>[**チャートコンテキストメニュー**] を選択し、希望のファイル形式を選択します。
 
 ## 送信予定表
 
@@ -38,7 +38,7 @@ description: "この参考ページでは、コンテンツカレンダーの構
 アプリ内メッセージは常にアクションベースなので、送信カレンダーにはアプリ内メッセージキャンペーンは表示されません。
 {% endalert %}
 
-<i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i>\[**前月を表示**] または<i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> \[**来月を表示**] を選択して月を変更できます。現在の月に戻るには、\[**今日**] を選択します。
+<i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i>[**前月を表示**] または<i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> [**来月を表示**] を選択して月を変更できます。現在の月に戻るには、[**今日**] を選択します。
 
 ![当月に予定されているすべてのキャンペーンを表示する送信カレンダー]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
@@ -48,4 +48,4 @@ description: "この参考ページでは、コンテンツカレンダーの構
 - **青:**マルチチャネルスケジュールキャンペーン
 - **金:**停止したキャンペーン。過去の参照用にカレンダーに含まれています。
 
-カレンダーでキャンペーンを選択すると、キャンペーンを表示または変更できます。詳細については、\[[キャンペーンの管理]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns)] を参照してください。
+カレンダーでキャンペーンを選択すると、キャンペーンを表示または変更できます。詳細については、[[キャンペーンの管理]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns)] を参照してください。

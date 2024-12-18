@@ -14,7 +14,7 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 /campaigns/details
 {% endapimethod %}
 
-> このエンドポイントを使用して、`campaign_id` で識別できる、指定されたキャンペーンの関連情報を取得します。 
+> このエンドポイントを使用して、`campaign_id` で識別できる、指定されたキャンペーンの関連情報を取得します。
 
 キャンバスデータを取得する場合は、「[キャンバス詳細のエクスポート]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)」エンドポイントを参照してください。
 
@@ -22,7 +22,7 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.details` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.details`の権限が必要です。
 
 ## レート制限
 
@@ -30,12 +30,12 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例 
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -43,7 +43,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ```
 {% endraw %}
 
-## レスポンス
+## 回答
 
 ```json
 Content-Type: application/json
@@ -83,7 +83,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "channel": (string) the description of the channel, such as "ios_push" or "android_push"
     "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click
 }
 ```
 
@@ -116,17 +118,17 @@ Authorization: Bearer YOUR-REST-API-KEY
     "data": {
         "pages": [
             {
-                "header": 
+                "header":
                     {
                          "text":(string) the display text for the header of the survey,
                     }
                 "choices": [
                     {
                        "choice_id": (string) the choice identifier,
-                       "text": (string) the display text, 
-                       "custom_attribute_key": (string) the custom attribute key, 
+                       "text": (string) the display text,
+                       "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign, 
+                       "deleted": (boolean) deleted from live campaign,
                     },
                     ...
                 ]
