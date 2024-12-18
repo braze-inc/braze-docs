@@ -1,9 +1,4 @@
-<br>
-{% alert important %}
-Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
-{% endalert %}
-
-# Advanced implementation guide
+# Implementation examples
 
 > This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 
@@ -50,9 +45,15 @@ public class BrazeDemoApplication extends Application {
 ## Use cases
 
 We've provided three use cases below. Each use case has code snippets and a look into how in-app messages may look and be used in the Braze dashboard:
-- [Custom slideup in-app message](#custom-slideup-in-app-message)
-- [Custom modal in-app message](#custom-modal-in-app-message)
-- [Custom full in-app message](#custom-full-in-app-message)
+- [Implementation examples](#implementation-examples)
+  - [Code considerations](#code-considerations)
+    - [Custom factories](#custom-factories)
+  - [Use cases](#use-cases)
+    - [Custom slide-up in-app message](#custom-slide-up-in-app-message)
+      - [Custom view wrapper](#custom-view-wrapper)
+    - [Custom modal in-app message](#custom-modal-in-app-message)
+    - [Custom full in-app message](#custom-full-in-app-message)
+      - [Intercepting in-app message touches](#intercepting-in-app-message-touches)
 
 ### Custom slide-up in-app message
 

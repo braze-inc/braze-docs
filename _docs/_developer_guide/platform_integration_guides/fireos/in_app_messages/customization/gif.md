@@ -10,4 +10,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/in_app_messages/customization/gifs.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/customization/gif.md %}

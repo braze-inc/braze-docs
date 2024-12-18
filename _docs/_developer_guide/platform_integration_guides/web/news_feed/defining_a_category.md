@@ -1,5 +1,5 @@
 ---
-nav_title: Defining categories
+nav_title: Defining a category
 article_title: Defining a News Feed Category for Web
 platform: Web
 page_order: 3

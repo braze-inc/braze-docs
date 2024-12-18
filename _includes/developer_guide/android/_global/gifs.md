@@ -1,10 +1,8 @@
-{% alert note %}
-While the examples in this article are specific to GIFs, you can also follow this guide to display SVGs if the custom image library you're integrating supports SVG files.
-{% endalert %}
+# GIFs {#gifs-delegate-integration}
 
-## Integrating a custom image library {#gifs-delegate-integration}
+> Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
 
-Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
+## Integrating a custom image library
 
 ### Step 1: Creating the image loader delegate
 
@@ -228,4 +226,3 @@ ContentCardsList(
     )
 )
 ```
-
