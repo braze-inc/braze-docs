@@ -1400,10 +1400,10 @@ validurls['/docs/developer_guide/platform_integration_guides/web/news_feed/defin
 
 // FIREOS
 // Push notifications
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/settings';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/silent';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/integration'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/settings';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/silent_push_notifications'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/silent';
 
 // validurls['OLD'] = 'NEW';
