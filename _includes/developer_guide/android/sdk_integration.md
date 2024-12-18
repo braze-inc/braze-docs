@@ -272,6 +272,36 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/).
 {% endalert %}
 
+### Disable in-app message TalkBack
+
+In adherence to the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility), the Braze Android SDK offers Android Talkback by default. However, to ensure end-user privacy, you may want to disable Talkback so in-app messages are not read automatically.
+
+To disable Talkback for in-app messages:
+
+{% tabs local %}
+{% tab Braze XML %}
+```xml
+<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
+```
+{% endtab %}
+
+{% tab Kotlin %}
+```kotlin
+val brazeConfigBuilder = BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
+Braze.configure(this, brazeConfigBuilder.build())
+```
+{% endtab %}
+
+{% tab Java %}
+```java
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
+Braze.configure(this, brazeConfigBuilder.build());
+```
+{% endtab %}
+{% endtabs %}
+
 ### R8 and ProGuard
 
 [Code shrinking](https://developer.android.com/studio/build/shrink-code) configuration is automatically included with your Braze integration.

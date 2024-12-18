@@ -1274,15 +1274,17 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 // ANDROID
 // SDK Integration
 validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/accessibility'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
+validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration#step-5-test-session-tracking-optional';
+validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration#optional-configurations';
+validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/accessibility'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration/#disable-talkback-for-in-app-messages';
+validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id';
 // Initialization
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager'] = '/docs/developer_guide/platform_integration_guides/android/initialization/google_tag_manager';
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration'] = '/docs/developer_guide/platform_integration_guides/android/initialization/runtime_configuration';
 // Push notifications
-validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=android';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/huawei_integration'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=huawei';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/push_story'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/#built-in-features';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/event_callback';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/advanced_settings';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#customizing-notification-display'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/notification_display';
