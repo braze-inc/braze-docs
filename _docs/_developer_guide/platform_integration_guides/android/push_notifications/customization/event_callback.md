@@ -9,4 +9,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/push_notifications/customization/custom_event_callback.md %}
+{% multi_lang_include developer_guide/android/push_notifications/customization/event_callback.md %}

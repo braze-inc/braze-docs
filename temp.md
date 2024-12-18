@@ -3,7 +3,6 @@
 ## Android & FireOS
 
 ```
-/docs/developer_guide/platform_integration_guides/android/storage
 /docs/developer_guide/platform_integration_guides/android/advanced_use_cases
 /docs/developer_guide/platform_integration_guides/android/news_feed
 /docs/developer_guide/platform_integration_guides/android/changelog

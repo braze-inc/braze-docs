@@ -9,4 +9,4 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-{% multi_lang_include developer_guide/android/content_cards/deep_linking.md %}
+{% multi_lang_include developer_guide/android/_global/deep_linking.md %}

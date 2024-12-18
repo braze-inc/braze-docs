@@ -11,4 +11,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/content_cards/gifs.md %}
+{% multi_lang_include developer_guide/android/_global/gifs.md %}

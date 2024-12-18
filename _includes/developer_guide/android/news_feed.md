@@ -92,3 +92,7 @@ The Android UI fragments do not automatically track session analytics. To ensure
 ### Linking from in-app messages
 
 Linking to the News Feed from an in-app message must be enabled by registering the `BrazeFeedActivity` within your `AndroidManifest.xml`.
+
+## Next steps
+
+If you're ready to create your own News Feed, see [Creating a custom News Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/creating_a_custom_feed/).

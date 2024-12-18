@@ -9,4 +9,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/push_notifications/customization/inline_image_push.md %}
+{% multi_lang_include developer_guide/android/push_notifications/customization/inline_image.md %}
