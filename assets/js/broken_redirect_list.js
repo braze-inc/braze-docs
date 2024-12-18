@@ -1334,27 +1334,18 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/android/
 
 // SWIFT
 // SDK Integration
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
 // Initialization
-// Push notifications
-// In-App Messages
-// Content Cards
-// News Feed
-// Network
-// Analytics
-// Root
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/network';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/localization';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/network/traffic_control';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/geofences';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/google_tag_manager';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages';
+// Push notifications
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_stories';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/setup';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/deep_linking';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/advanced';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
+// In-App Messages
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/behavior_on_click';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/setting_delegates';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/custom_triggering';
@@ -1366,22 +1357,26 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/deep_linking';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/html_messages';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/message_delivery';
+// Content Cards
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/deep_linking';
+// News Feed
+// Network
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/network';
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/network/traffic_control';
+// Analytics
+// Root
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/localization';
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/swift/geofences';
 
 // WEB
 // SDK Integration
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/sdk_integration';
 // Initialization
 // Push notifications
-// In-App Messages
-// Content Cards
-// News Feed
-// Network
-// Analytics
-// Root
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_push';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompts';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/sdk_integration';
+// In-App Messages
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/in-app_message_delivery';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/open_link_in_new_tab';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/custom_styling';
@@ -1390,17 +1385,14 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_a
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/key_value_pairs';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/troubleshooting';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization';
-
-// FIREOS
-// SDK Integration
-// Initialization
-// Push notifications
-// In-App Messages
 // Content Cards
 // News Feed
 // Network
 // Analytics
 // Root
+
+// FIREOS
+// Push notifications
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/advanced_settings';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting';
