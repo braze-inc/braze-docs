@@ -1,15 +1,14 @@
 ---
-nav_title: In-App Message UI Delegate
-article_title: In-App Message UI Delegate for iOS
+nav_title: UI Delegates
+article_title: Custom UI delegates for the Braze Swift SDK
 platform: Swift
-page_order: 2
 description: "This reference article covers setting an iOS in-app messaging delegate for the Swift SDK."
 channel:
   - in-app messages
 
 ---
 
-# In-app message UI delegate
+# Custom UI delegates
 
 > Use the optional [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
@@ -19,7 +18,7 @@ To use `BrazeInAppMessageUIDelegate`:
 * You must be using the default [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) implementation as your `inAppMessagePresenter`. 
 * You must include the `BrazeUI` library in your project.
 
-## Setting the in-app message delegate
+## Customizing the UI delegate
 
 Set your [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate object on the Braze instance by following this sample code:
 
@@ -70,9 +69,9 @@ Not all delegate methods are available in Objective-C due to the incompatibility
 {% endtab %}
 {% endtabs %}
 
-### Step-by-step guide
-
+{% alert tip %}
 For a step-by-step implementation of the in-app message UI delegate, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+{% endalert %}
 
 ## Customizing in-app message orientation for iOS
 

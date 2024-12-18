@@ -1,8 +1,8 @@
 ---
-nav_title: Ignoring Internal Push
+nav_title: Ignoring Internal Notifications
 article_title: Ignoring Braze Internal Push Notifications for iOS
+page_order: 28
 platform: Swift
-page_order: 6
 description: "This article covers how to ignore Braze internal push notifications for the Swift SDK."
 channel:
   - push
@@ -56,4 +56,3 @@ func application(_ application: UIApplication,
 
 {% endtab %}
 {% endtabs %}
-

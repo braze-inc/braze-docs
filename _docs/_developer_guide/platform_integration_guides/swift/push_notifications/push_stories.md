@@ -23,7 +23,9 @@ The following SDK versions is required to receive Push Stories:
 
 Ensure that you have followed the [push notification integration tutorial]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
-## Step 1: Adding the Notification Content Extension target {#notification-content-extension}
+## Setting up Push Stories
+
+### Step 1: Adding the Notification Content Extension target {#notification-content-extension}
 
 In your app project, go to menu **File > New > Target** and add a new `Notification Content Extension` target and activate it.
 
@@ -34,13 +36,13 @@ Xcode should generate a new target for you and create files automatically for yo
 - `NotificationViewController.swift`
 - `MainInterface.storyboard`
 
-## Step 2: Enable capabilities {#enable-capabilities}
+### Step 2: Enable capabilities {#enable-capabilities}
 
 In Xcode, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target. Select both the **Background fetch** and **Remote notifications** checkboxes.
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
-### Adding an App Group
+#### Adding an App Group
 
 Additionally, from the **Signing & Capabilities** pane in Xcode, add the App Groups capability to your main app target as well as the Notification Content Extension targets. Then, click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`.
 
@@ -50,7 +52,7 @@ App Groups in this context refer to Apple's [App Groups Entitlement](https://dev
 
 If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
 
-## Step 3: Adding the Push Story framework to your app {#enable-capabilities}
+### Step 3: Adding the Push Story framework to your app {#enable-capabilities}
 
 {% tabs local %}
 {% tab Swift Package Manager %}
@@ -102,7 +104,7 @@ Make sure that **Do Not Embed** is selected for **BrazePushStory.xcframework** u
 {% endtab %}
 {% endtabs %}
 
-## Step 4: Updating your notification view controller {#enable-capabilities}
+### Step 4: Updating your notification view controller {#enable-capabilities}
 
 In `NotificationViewController.swift`, add the following line to import the header files:
 
@@ -117,6 +119,7 @@ class NotificationViewController: BrazePushStory.NotificationViewController {}
 ```
 
 #### Custom handling push story events
+
 If you want to implement your own custom logic to handle push story notification events, inherit `BrazePushStory.NotificationViewController` as above and override the [`didReceive`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazepushstory/notificationviewcontroller/didreceive(_:)) methods as below.
 
 ```swift
@@ -139,7 +142,7 @@ class NotificationViewController: BrazePushStory.NotificationViewController {
 }
 ```
 
-## Step 5: Setting the Notification Content Extension plist {#notification-content-extension}
+### Step 5: Setting the Notification Content Extension plist {#notification-content-extension}
 
 Open the `Info.plist` file of the `Notification Content Extension`, then add and change the following keys under `NSExtension \ NSExtensionAttributes`:
 
@@ -154,7 +157,7 @@ Your `Info.plist` file should match the following image:
 
 ![]({% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %})
 
-## Step 6: Updating the Braze integration in your main app {#update-braze}
+### Step 6: Updating the Braze integration in your main app {#update-braze}
 
 Before initializing Braze, assign the name of your app group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
 
@@ -164,4 +167,3 @@ let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
 configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
 let braze = Braze(configuration: configuration)
 ```
-

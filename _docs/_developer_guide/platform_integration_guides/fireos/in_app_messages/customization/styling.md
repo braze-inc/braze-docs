@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Styling
+nav_title: Styling
 article_title: In-App Message Custom Styling for Android and FireOS
 platform: 
   - Android
@@ -11,4 +11,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/in_app_messages/customization/custom_styling.md %}
+{% multi_lang_include developer_guide/android/in_app_messages/customization/styling.md %}

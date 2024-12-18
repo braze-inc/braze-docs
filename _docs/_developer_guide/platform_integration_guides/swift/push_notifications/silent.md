@@ -1,5 +1,5 @@
 ---
-nav_title: Silent Push Notifications
+nav_title: Silent Notifications
 article_title: Silent Push Notifications for the Braze Swift SDK
 platform: Swift
 page_order: 4
@@ -12,6 +12,8 @@ channel:
 # Silent push notifications
 
 > Push notifications allow you to send out notifications from your app when important events occur. 
+
+## Overview
 
 You might send a push notification when you have an important alert for a user. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users.
 

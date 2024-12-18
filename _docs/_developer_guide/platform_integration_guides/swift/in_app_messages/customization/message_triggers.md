@@ -1,20 +1,23 @@
 ---
-nav_title: Custom Triggering
-article_title: Customizing In-App Message Triggering for iOS
+nav_title: Message Triggers
+article_title: Custom in-app message triggers for the Braze Swift SDK
 platform: Swift
-page_order: 6
 description: "This reference article covers custom iOS in-app messaging triggering for the Swift SDK."
 channel:
   - in-app messages
 ---
 
-# Custom triggering
+# Custom message triggers
 
 > By default, in-app messages are triggered by events logged by the SDK. Alternatively, you can trigger in-app messages by server-sent events.
 
+## Using server-side events
+
 To trigger in-app messages using server-side events, send a silent push to the device to allow the device to log an SDK-based event. This SDK event can subsequently trigger the user-facing in-app message.
 
-## Step 1: Handle silent push and key-value pairs
+## Customizing message triggers
+
+### Step 1: Handle silent push and key-value pairs
 
 Implement the following function and call it within the [`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`: method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application/):
 
@@ -51,7 +54,7 @@ When the silent push is received, an SDK recorded event "in-app message trigger"
 Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
 {% endalert %}
 
-## Step 2: Create a silent push campaign
+### Step 2: Create a silent push campaign
 
 Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) that is triggered via the server-sent event. 
 
@@ -65,7 +68,7 @@ The code within the `application(_:didReceiveRemoteNotification:fetchCompletionH
 
 You can alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. When logging the custom event, these extras can be used as the parameter of either the event name or as an event property.
 
-## Step 3: Create an in-app message campaign
+### Step 3: Create an in-app message campaign
 
 Create your user-visible in-app message campaign in the Braze dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
@@ -76,4 +79,3 @@ In the following example, the specific in-app message to be triggered has been c
 {% alert note %}
 Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
 {% endalert %}
-

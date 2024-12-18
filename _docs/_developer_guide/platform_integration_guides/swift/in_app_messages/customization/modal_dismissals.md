@@ -1,16 +1,19 @@
 ---
 nav_title: Modal Dismissal
-article_title: In-App Message Modal Dismissal for iOS
+article_title: Custom modal dismissals for the Braze Swift SDK
 platform: Swift
-page_order: 7
 description: "This reference article covers in-app messaging modal dismissal for the Swift SDK."
 channel:
   - in-app messages
 ---
 
-# Modal dismissal
+# Custom modal dismissals
 
-> To enable outside tap dismissals, you can modify the `dismissOnBackgroundTap` property on the `Attributes` struct of the in-app message type you wish to customize. 
+> Learn how to customize the modal dismissals for in-app messages for the Braze Swift SDK.
+
+## Customizing modal dismissals
+
+To enable outside tap dismissals, you can modify the `dismissOnBackgroundTap` property on the `Attributes` struct of the in-app message type you wish to customize. 
 
 For example, if you wish to enable this feature for modal image in-app messages, you can configure the following:
 

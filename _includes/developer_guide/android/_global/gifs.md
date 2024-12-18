@@ -4,19 +4,19 @@ While the examples in this article are specific to GIFs, you can also follow thi
 
 ## Integrating a custom image library {#gifs-delegate-integration}
 
-Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
+Braze offers the ability to use a custom image library to display animated GIFs. Although the example below uses [Glide](https://bumptech.github.io/glide/), any image library that supports GIFs is compatible.
 
 ### Step 1: Creating the image loader delegate
 
 The Image Loader delegate must implement the following methods:
 
-* [`getInAppMessageBitmapFromUrl()`][gifs-71]
-* [`getPushBitmapFromUrl()`][gifs-72]
-* [`renderUrlIntoCardView()`][gifs-73]
-* [`renderUrlIntoInAppMessageView()`][gifs-74]
-* [`setOffline()`][gifs-70]
+* [`getInAppMessageBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html)
+* [`getPushBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html)
+* [`renderUrlIntoCardView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-card-view.html)
+* [`renderUrlIntoInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-in-app-message-view.html)
+* [`setOffline()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html)
 
-The integration example below is taken from the [Glide integration sample app][gifs-65] included with the Braze Android SDK.
+The integration example below is taken from the [Glide integration sample app](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration) included with the Braze Android SDK.
 
 {% tabs %}
 {% tab JAVA %}
@@ -133,7 +133,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 ### Step 2: Setting the image loader delegate
 
-The Braze SDK will use any custom image loader set with [`setBrazeImageLoader`][gifs-66]. We recommend setting the custom image loader in a custom application subclass:
+The Braze SDK will use any custom image loader set with [`setBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html). We recommend setting the custom image loader in a custom application subclass:
 
 {% tabs %}
 {% tab JAVA %}
@@ -229,16 +229,3 @@ ContentCardsList(
 )
 ```
 
-[gifs-56]: http://developer.android.com/reference/android/app/Application.html
-[gifs-59]: https://github.com/braze-inc/braze-android-sdk#version-support
-[gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
-[gifs-61]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
-[gifs-64]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
-[gifs-65]: https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration
-[gifs-66]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html
-[gifs-67]: https://bumptech.github.io/glide/
-[gifs-70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html
-[gifs-71]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html
-[gifs-72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html
-[gifs-73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-card-view.html
-[gifs-74]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-in-app-message-view.html

@@ -2,7 +2,6 @@
 nav_title: Notification display
 article_title: Setting up push notifications for the Braze Android SDK
 platform: Android
-page_order: 1
 description: "This article covers how to integrate push notifications in your Android application."
 channel:
   - push

@@ -4,7 +4,6 @@ article_title: In-App Message Key-Value Pairs for Android and FireOS
 platform: 
   - Android
   - FireOS
-page_order: 6.9
 description: "This reference article covers in-app messaging key-value pairs for your Android or FireOS application."
 channel:
   - in-app messages

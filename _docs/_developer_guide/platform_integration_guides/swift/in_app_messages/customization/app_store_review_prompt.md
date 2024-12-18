@@ -1,26 +1,29 @@
 ---
-nav_title: Example - App Store Review Prompt
-article_title: Example - App Store Review Prompt
+nav_title: App Store Review Prompts
+article_title: Custom Apple app store review prompts for the Braze Swift SDK
 platform: Swift
-page_order: 8
 description: "This reference article provides an iOS example of a custom in-app message to prompt users to provide review for your app."
 channel:
   - in-app messages
 
 ---
 
-# Example - App Store review prompt
+# Custom app store review prompts
+
+> Creating a campaign to ask users for an App Store review is a popular usage of in-app messages. This example walks you through creating a custom in-app message that prompts users to review your app.
+
+## Customizing the app store review prompt
 
 {% alert note %}
 Because this example prompt overrides default behavior of Braze, we cannot automatically track impressions if it is implemented. You must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/#logging-impressions-and-clicks).
 {% endalert %}
 
-> Creating a campaign to ask users for an App Store review is a popular usage of in-app messages. This example walks you through creating a custom in-app message that prompts users to review your app.
+### Step 1: Set the in-app message delegate
 
-## Step 1: Set the in-app message delegate
 First, set the [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/) in your app. 
 
-## Step 2: Disable the default App Store review message
+### Step 2: Disable the default App Store review message
+
 Next, implement the `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to disable the default App Store review message.
 
 {% tabs %}
@@ -56,7 +59,8 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Create a deep link
+### Step 3: Create a deep link
+
 In your deep link handling code, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
 {% tabs %}
@@ -92,7 +96,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 {% raw %}
 
-## Step 4: Set custom on-click behavior
+### Step 4: Set custom on-click behavior
 
 Next, create an in-app messaging campaign with the following:
 
@@ -104,4 +108,3 @@ Next, create an in-app messaging campaign with the following:
 {% alert tip %}
 Apple limits App Store review prompts to a maximum of three times per year for each user, so your campaign should be [rate-limited]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear or directly ask for a review.
 {% endalert %}
-

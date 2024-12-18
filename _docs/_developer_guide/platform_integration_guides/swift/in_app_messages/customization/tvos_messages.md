@@ -1,13 +1,12 @@
 ---
-nav_title: tvOS
-article_title: In-App Messages for tvOS
+nav_title: tvOS Messages
+article_title: Custom tvOS in-app messages for the Braze Swift SDK
 platform: tvOS
 page_type: reference
 description: "Learn how to customize your in-app messages for Apple's tvOS platform."
-page_order: 0
 ---
 
-# Customizing in-app messages for tvOS
+# Custom tvOS in-app messages
 
 > Learn how to customize your in-app messages for Apple's tvOS platform.
 
@@ -15,7 +14,7 @@ page_order: 0
 Keep in mind, you'll need to implement your own custom UI since in-app messaging is supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
 {% endalert %}
 
-## Setting up your tvOS app
+## Customizing in-app messages for tvOS
 
 ### Step 1: Create a new iOS app
 
