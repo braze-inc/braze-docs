@@ -1299,7 +1299,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#displaying-push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/displaying_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/conversation_push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/conversation_push';
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/deep_linking';
-validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/custom_fonts';
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/fonts';
 // In-App Messages
 validurls['/docs/developer_guide/platform_integration_guides/android/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/android/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt'] = '/docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/app_store_review_prompt';

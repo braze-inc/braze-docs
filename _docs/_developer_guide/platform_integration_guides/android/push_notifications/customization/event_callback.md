@@ -1,5 +1,5 @@
 ---
-nav_title: Push Event Callback
+nav_title: Event Callback
 article_title: Push Event Callback for Android
 platform: Android
 description: "This reference article covers how to use a callback for Android push events."

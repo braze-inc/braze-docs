@@ -1,5 +1,5 @@
 ---
-nav_title: Conversation Push
+nav_title: Conversation Notifications
 article_title: Conversation Push for Android
 platform: Android
 page_order: 5.92
@@ -9,4 +9,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/push_notifications/conversation_push.md %}
+{% multi_lang_include developer_guide/android/push_notifications/conversations.md %}

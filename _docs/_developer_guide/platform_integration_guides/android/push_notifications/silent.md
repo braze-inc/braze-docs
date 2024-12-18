@@ -1,5 +1,5 @@
 ---
-nav_title: Silent Push Notifications
+nav_title: Silent Notifications
 article_title: Silent Push Notifications for Android
 platform: Android
 page_order: 3
