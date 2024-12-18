@@ -1,15 +1,14 @@
 ---
-nav_title: Custom Styling
+nav_title: Styling
 article_title: News Feed Custom Styling for Web
 platform: Web
-page_order: 0
 page_type: reference
 description: "This article covers custom News Feeds styling options for your web application."
 channel: news feed
 
 ---
 
-# Custom Styling
+# Custom News Feed styling
 
 > This article covers custom News Feeds styling options for your web application.
 

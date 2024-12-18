@@ -3,7 +3,6 @@ nav_title: Key-Value Pairs
 article_title: In-App Message Key-Value Pairs for Web
 platform: Web
 channel: in-app messages
-page_order: 9
 page_type: reference
 description: "This article covers how to leverage in-app messaging key-value pairs to display information for your web application."
 

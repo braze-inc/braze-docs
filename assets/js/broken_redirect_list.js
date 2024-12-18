@@ -1374,26 +1374,30 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_
 
 // WEB
 // SDK Integration
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/sdk_integration';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/web/sdk_integration';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/amp_support'] = '/docs/developer_guide/platform_integration_guides/web/sdk_integration/#accelerated-mobile-pages-amp';
 // Initialization
 // Push notifications
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_push';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompts';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/integration'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/mobile_push'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/safari_push';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompts';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain'] = '/docs/developer_guide/platform_integration_guides/web/push_notifications/alternate_domains';
 // In-App Messages
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/in-app_message_delivery';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/open_link_in_new_tab';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/custom_styling';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/logging_impressions_and_clicks';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/message_dismissal';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/key_value_pairs';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/troubleshooting';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/delivery';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/open_link_in_new_tab'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/open_link_in_new_tab';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/custom_styling'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/styling';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/logging_impressions_and_clicks'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/logging_impressions_and_clicks';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/message_dismissal'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/message_dismissals';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization/key_value_pairs';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/troubleshooting';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization'] = '/docs/developer_guide/platform_integration_guides/web/in_app_messages/customization';
 // Content Cards
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/integration'] = '/docs/developer_guide/platform_integration_guides/web/content_cards';
 // News Feed
-// Network
-// Analytics
-// Root
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/news_feed/integration'] = '/docs/developer_guide/platform_integration_guides/web/news_feed';
+validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/web/news_feed/customization/custom_styling'] = '/docs/developer_guide/platform_integration_guides/web/news_feed/customization/styling';
+validurls['/docs/developer_guide/platform_integration_guides/web/news_feed/defining_categories/'] = '/docs/developer_guide/platform_integration_guides/web/news_feed/defining_categories/';
 
 // FIREOS
 // Push notifications

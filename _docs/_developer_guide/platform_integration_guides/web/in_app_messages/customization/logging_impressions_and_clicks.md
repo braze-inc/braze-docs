@@ -1,9 +1,8 @@
 ---
-nav_title: Logging Impressions and Clicks
+nav_title: Impressions and Clicks
 article_title: Logging Impressions and Clicks
 platform: Web
 channel: in-app messages
-page_order: 3
 page_type: reference
 description: "This article covers logging in-app message impressions and clicks for your web application."
 

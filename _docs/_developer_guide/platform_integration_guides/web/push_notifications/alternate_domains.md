@@ -1,6 +1,6 @@
 ---
-nav_title: Alternate Push Domain
-article_title: Alternate Web Push Domain
+nav_title: Alternate Domains
+article_title: Alternate Push Notification Domains for the Braze Web SDK
 platform: Web
 page_order: 20
 page_type: reference
@@ -9,7 +9,7 @@ channel: push
 
 ---
 
-# Alternate web push domain
+# Alternate push notification domains
 
 > To integrate web push, your domain must be [secure](https://w3c.github.io/webappsec-secure-contexts/), which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations). You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file. This article covers how to integrate Braze Web Push on an alternate domain.
 

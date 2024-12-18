@@ -1,15 +1,14 @@
 ---
-nav_title: Message Dismissal
-article_title: In-App Message Dismissal for Web
+nav_title: Message Dismissals
+article_title: Custom In-App Message Dismissals for the Braze Web SDK
 platform: Web
 channel: in-app messages
-page_order: 2
 page_type: reference
 description: "This article covers in-app message dismissal for your web application."
 
 ---
 
-# Message dismissal
+# Custom message dismissals
 
 > This article covers how to handle in-app message dismissal for your web application.
 
@@ -22,4 +21,3 @@ braze.initialize("YOUR-API-KEY", {
     requireExplicitInAppMessageDismissal: true
 });
 ```
-
