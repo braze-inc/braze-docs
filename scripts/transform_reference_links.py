@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Converts Markdown reference links to in-line links. Created because 
 # reference links cannot be placed inside Liquid {% tab %} tags.
 #
