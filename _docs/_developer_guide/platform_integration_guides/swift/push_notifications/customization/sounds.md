@@ -10,7 +10,11 @@ channel:
 
 # Custom push notification sounds
 
-## Step 1: Hosting the sound in the app
+> Learn how to customize push notification sounds for the Braze Swift SDK.
+
+## Customizing sounds
+
+### Step 1: Hosting the sound in the app
 
 Custom push notification sounds must be hosted locally within the main bundle of your app. The following audio data formats are accepted:
 
@@ -25,7 +29,7 @@ You can package the audio data in an AIFF, WAV, or CAF file. In Xcode, add the s
 Custom sounds must be under 30 seconds when played. If a custom sound is over that limit, the default system sound is played instead.
 {% endalert %}
 
-### Converting sound files
+#### Converting sound files
 
 You can use the afconvert tool to convert sounds. For example, to convert the 16-bit linear PCM system sound Submarine.aiff to IMA4 audio in a CAF file, use the following command in the terminal:
 
@@ -37,7 +41,7 @@ afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caf
 You can inspect a sound to determine its data format by opening it in QuickTime Player and choosing **Show Movie Inspector** from the **Movie** menu. 
 {% endalert %}
 
-## Step 2: Providing a protocol URL for the sound
+### Step 2: Providing a protocol URL for the sound
 
 You must specify a protocol URL that directs to the location of the sound file in your app. There are two methods for doing this:
 
@@ -49,4 +53,3 @@ You must specify a protocol URL that directs to the location of the sound file i
 If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12].
 
 See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
-

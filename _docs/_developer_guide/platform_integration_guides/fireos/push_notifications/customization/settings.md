@@ -1,6 +1,6 @@
 ---
-nav_title: Advanced Settings
-article_title: Advanced Settings for FireOS
+nav_title: Settings
+article_title: Push Notification Settings for FireOS
 platform: FireOS
 page_order: 4
 page_type: reference
@@ -9,7 +9,7 @@ channel: push
 
 ---
 
-# Advanced settings
+# Push notification settings
 
 > There are many advanced settings available for Android and FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 

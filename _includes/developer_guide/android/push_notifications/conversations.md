@@ -1,4 +1,4 @@
-# Conversation push
+# Conversation push notifications
 
 > This application covers how to implement android conversation push in your Android application.
 

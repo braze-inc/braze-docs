@@ -1286,7 +1286,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/huawei_integration'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=huawei';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/push_story'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/#built-in-features';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/event_callback';
-validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/advanced_settings';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/settings';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#customizing-notification-display'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/notification_display';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/inline_images';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/html_messages';
@@ -1299,7 +1299,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#displaying-push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/displaying_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/conversation_push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/conversation_push';
 validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/deep_linking';
-validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/custom_fonts';
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/customization/fonts';
 // In-App Messages
 validurls['/docs/developer_guide/platform_integration_guides/android/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/android/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt'] = '/docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/app_store_review_prompt';
@@ -1334,42 +1334,43 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/android/
 
 // SWIFT
 // SDK Integration
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=cocoapods';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#step-2-update-your-app-delegate';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#optional-configurations';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=cocoapods';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#step-2-update-your-app-delegate';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations'] = '/docs/developer_guide/platform_integration_guides/swift/sdk_integration/#optional-configurations';
 // Initialization
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/google_tag_manager'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/google_tag_manager';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/google_tag_manager'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/google_tag_manager';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization'] = '/docs/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization';
 // Push notifications
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_stories';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/deep_linking';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/examples';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/ignoring_internal';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/rich';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/sounds';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_stories';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/deep_linking';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/examples';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/ignoring_internal';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/rich';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/silent';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/sounds';
+validurls['/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/settings';
 // In-App Messages
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/overview'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/on_click_behavior';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/ui_delegates';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/message_triggers';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/tvos_messages';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/modal_dismissals';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/app_store_review_prompt';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/troubleshooting';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/adding_braze_js_interface'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/html_messages';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/message_delivery';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/overview'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/on_click_behavior';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/ui_delegates';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/message_triggers';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/tvos_messages';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/modal_dismissals';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/app_store_review_prompt';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/troubleshooting';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/adding_braze_js_interface'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/html_messages';
+validurls['/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery'] = '/docs/developer_guide/platform_integration_guides/swift/in_app_messages/message_delivery';
 // Network
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control'] = '/docs/developer_guide/platform_integration_guides/swift/network/traffic_control';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control'] = '/docs/developer_guide/platform_integration_guides/swift/network/traffic_control';
 // Analytics
 // Root
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/localization'] = '/docs/developer_guide/platform_integration_guides/swift/localization';
-validurls['https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences'] = '/docs/developer_guide/platform_integration_guides/swift/geofences';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/localization'] = '/docs/developer_guide/platform_integration_guides/swift/localization';
+validurls['/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences'] = '/docs/developer_guide/platform_integration_guides/swift/geofences';
 
 // WEB
 // SDK Integration
@@ -1397,7 +1398,7 @@ validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/web/in_a
 // FIREOS
 // Push notifications
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications';
-validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/advanced_settings';
+validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/settings';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization';
 validurls['LATER'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/silent';

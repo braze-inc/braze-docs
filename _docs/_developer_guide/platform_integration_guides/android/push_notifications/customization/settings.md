@@ -1,6 +1,6 @@
 ---
-nav_title: Advanced Settings
-article_title: Advanced Push Notification Settings for Android
+nav_title: Settings
+article_title: Push Notification Settings for the Braze Android SDK
 platform: Android
 description: "This reference article covers advanced Android push notification settings such as TTL, notification IDs, notification priority, and more."
 channel:
@@ -8,4 +8,4 @@ channel:
 
 ---
 
-{% multi_lang_include developer_guide/android/push_notifications/customization/advanced_settings.md %}
+{% multi_lang_include developer_guide/android/push_notifications/customization/settings.md %}
