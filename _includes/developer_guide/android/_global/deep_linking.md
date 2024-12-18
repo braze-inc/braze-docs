@@ -247,7 +247,7 @@ To handle deeplinks when using Jetpack Compose with NavHost:
         )
     }
     ```
-3. Depending on your app architecture, you may need to handle the new intent sent to the current Activity as well.
+3. Depending on your app architecture, you may need to handle the new intent that's sent to your current activity as well.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {

@@ -328,5 +328,5 @@ Contact your Braze customer success manager for recommendations on the best appr
 [9]: {% image_buster /assets/img/custom_events_report_filters.png %}
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

@@ -54,7 +54,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     }
     ```
 {% alert note %}
-Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification. Create a price drop notification by setting `type` to `back-in-stock`. You cannot set both a price drop and back in stock notification.
+Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification, so you can use the `type` array to set both price-drop and back-in-stock notifications in the same event.
 {% endalert %}
 
 {: start="4"}
