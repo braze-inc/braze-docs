@@ -1241,8 +1241,6 @@ validurls['/docs/developer_guide/platform_wide/feature_flags/create'] = '/docs/d
 validurls['/docs/developer_guide/platform_wide/feature_flags/experiments'] = '/docs/developer_guide/feature_flags/experiments';
 validurls['/docs/developer_guide/platform_wide/feature_flags/faq'] = '/docs/developer_guide/feature_flags/faq';
 validurls['/docs/developer_guide/platform_wide/getting_started'] = '/docs/developer_guide/getting_started';
-
-// GOOD EXAMPLE
 validurls['/docs/developer_guide/platform_wide/getting_started/analytics_overview'] = '/docs/developer_guide/getting_started/analytics_overview';
 validurls['/docs/developer_guide/platform_wide/getting_started/architecture_overview'] = '/docs/developer_guide/getting_started/architecture_overview';
 validurls['/docs/developer_guide/customization_guides'] = '/docs/developer_guide/getting_started';
