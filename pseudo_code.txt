@@ -8,7 +8,7 @@ first_line = 0
       if yes:
         check if first_line > 0:
           if yes:
-            write `url_key` and `url_value` to `dict.json` in JSON formatting
+            write `url_key` and `url_value` to `redirects.json` in JSON formatting
             set first_line = 1
             go back to top of for loop.
           else:
@@ -24,23 +24,14 @@ first_line = 0
             if yes:
               check if the current `url_value` is already assigned to this key:
                 if yes:
-                  write the `url_value` to the existing `url_key` in the `dict.json` in JSON formatting.
+                  write the `url_value` to the existing `url_key` in the `redirects.json` in JSON formatting.
                   go back to top of for loop.
                 if no:
                   skip.
                   go back to top of for loop. 
             if no:
-              write `url_key` and `url_value` to `dict.json` in JSON formatting
-              go back to top of for loop. 
-
-
-NOTE FOR ME:
-function to remove duplicates.
-no list generation needed.
-
-
-updated pesudo code:
-i need a script that does the following:
+              write `url_key` and `url_value` to `redirects.json` in JSON formatting
+              go back to top of for loop.
 
 GOAL:
 A script that generates a JSON dictionary of key value pairs to determine the _newest_ link 1 or more _older_ URLs should be redirected to. its always ok for 1 new URL to be linked from several old URLs but not the other way around.
@@ -89,41 +80,118 @@ validurls['/docs/developer_guide/customization_guides/content_cards/logging_anal
 
 PSUDEO CODE:
 
-create `dict.json` file (for now don't delete this later on, so i can check output for testing)
+create `redirects.json` file (for now don't delete this later on, so i can check output for testing)
 if content already exists on `temp` delete it. (i think there is a 1-liner that lets you create/delete simultaneously. this doesn't need an actual if statement)
 `redirect` = `assets/js/broken_redirect_list.js`:
 
-function 1: create_dict 
-  go to `redirect`
-  start in reverse order
-  loop 1: for `line` on `redirect`:
-    set/get `url_key` and `url_value`
-    if `dict.json` not empty:
-      loop 2: for each JSON `stored_key`:
-        loop 3: for each JSON `stored_value`:
-          if current `url_key` == `stored_value`:
-            add current `url_value` to current `stored_key`
-            go back to loop 1.
-          else:
-            continue through loop 2, ending loop 3 for `line`.
-        if current `url_key` == `stored_key`:
-          add current `url_value` to current `stored_key`.
+create_dict()
+  simply map 1:1.
+
+merge_duplicate_keys()
+go to `redirect`
+start in reverse order
+loop 1: for `line` on `redirect`:
+  set/get `url_key` and `url_value`
+  if `redirects.json` not empty:
+    loop 2: for each JSON `stored_key`:
+      loop 3: for each JSON `stored_value`:
+        if current `url_key` == `stored_value`:
+          add current `url_value` to current `stored_key`
           go back to loop 1.
         else:
-          create new entry in `dict.json` with `url_key` set to `stored_key` and `url_value` set to `stored_value`.
+          continue through loop 2, ending loop 3 for `line`.
+      if current `url_key` == `stored_key`:
+        add current `url_value` to current `stored_key`.
+        go back to loop 1.
+      else:
+        create new entry in `redirects.json` with `url_key` set to `stored_key` and `url_value` set to `stored_value`.
 
 
-function 3:
-
- go to `dict.json`
-  start in normal order (i.e. id is the smallest id on the page)
-  for each `key` on `dict.json`:
-    `current_key` = `key`
-    `count = 0`
+merge_descendants()
+go to `redirects.json`
+start in normal order (i.e. id is the smallest id on the page)
+for each `key` on `redirects.json`:
+  `current_key` = `key`
+  for each `listed_key` in `redirects.json`:
     for each `value` in `key`:
       if `current_key` != `value`:
-        continue
+        do nothing
       else:
         add all of `current_key`'s values to `key`, _then_
-        fully remove `current_key` and all directly assigned all values from `dict.json`
-    * go to next `key` in `dict.json`
+        fully remove `current_key` and all directly assigned all values from `redirects.json`
+    * go to next `key` in `redirects.json`
+
+    the loop should go sequentially, ie:
+
+# If A redirects to B, and B to C, both A and B are considered descendants of C.
+# This function, merges all descendants into the newest parent (in this case C), 
+# by starting with the first entry and checking if it exists as a value in the
+# last entry. If it does, all the values assigned to the first entry are 
+# reassigned to the last entry, and then the first entry is removed. If it
+# does not exist in the last entry, it then checks if it exists in the  
+# next-to-last entry. If the first entry can not be found in any entries, it 
+# is not a descendants.
+
+# the old A key. To do this, start with first entry and check to see if 
+
+
+for each 'key' in 'redirects.json', start with the first entry and check to see 
+if it shows up as a 'value' in the last entry. 
+
+then entry 2.
+Then entry 3.
+etc.
+
+but it should always compare in _reverse_ order.
+
+so entry 1 against last entry.
+then if no matches
+entry 1 aginst 2nd to last entry.
+then if no matches
+entry 1 aginst 3rd to last entry.
+if match: merge into 3rd to last. delete entry 1, then go to next evaluation
+
+evaluate entry 2 against last entry
+then if no matches
+evaluate entry 2 against 2nd to last entry
+etc.
+
+
+
+create_new_redirect_file()
+
+1. creates a new file in root called: `broken_redirect_list.js`
+2. at the very top of the file adds:
+
+```
+var validurls = (typeof validurls === "undefined")  ? {} : validurls;
+```
+
+3. starts on first line of redirects.json (i.e. smallest ID) then writes a line to the new redirect file for _each_ value assigned to a key.
+
+i.e. if a key has 2 values like this:
+
+```
+"/docs/best_practices/#email": {
+        "id": 6,
+        "url_values": [
+            "/docs/help/help_articles/email/",
+            "/docs/help/best_practices/email/overview/"
+        ]
+    },
+```
+
+it should write the following lines:
+
+```
+validurls['/docs/help/help_articles/email/'] = '/docs/best_practices/#email';
+validurls['/docs/help/best_practices/email/overview/'] = '/docs/best_practices/#email';
+```
+
+4. then at the very end of the file, print this (note the newlines above and below).
+
+```
+
+// validurls['OLD'] = 'NEW';
+
+```
