@@ -222,9 +222,9 @@ The event property segmentation filters include:
 
 - Has done a custom event with property A with value B, X times in the last Y days.
 - Has made any purchases with property A with value B, X times in the last Y days.
-- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
+- Adds the ability to segment within 1 to 30 days.
 
-![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendary days (720-744 hours)."][3]
+![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendar days.][3]
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 
