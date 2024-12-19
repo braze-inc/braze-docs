@@ -15,6 +15,7 @@ export DEPLOY="$PROJECT_ROOT/scripts/create_deploy_text.sh"
 export RELEASE="$PROJECT_ROOT/scripts/create_release_text.sh"
 export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
 export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
+export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export TREDIRECTS="$PROJECT_ROOT/scripts/test_redirect_urls.sh"
 
 # Displays usage for bdocs
@@ -84,6 +85,10 @@ case $1 in
         "$RLINKS" "$2" # Run rlinks next, to clean up unused reference links.
         ;;
     rlinks)
+        require_path_or_file "$2" 
+        "$RLINKS" "$2"
+        ;;
+    ulinks)
         require_path_or_file "$2" 
         "$RLINKS" "$2"
         ;;
