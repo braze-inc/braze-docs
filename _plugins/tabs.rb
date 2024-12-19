@@ -14,11 +14,11 @@ module Tags
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-')
+              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(/[^0-9a-z]/i, '-')
               if ind == 0
                 tabslist += ' active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tab[0].gsub(' ', '-') + '">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tab[0].gsub(/[^0-9a-z]/i, '-') + '">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
@@ -48,7 +48,7 @@ module Tags
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
           content = content.strip # Strip again to avoid "\n"
-          tabslug = @tab.gsub(' ', '-')
+          tabslug = @tab.gsub(/[^0-9a-z]/i, '-')
 
           '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
       end
@@ -70,11 +70,11 @@ module Tags
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(' ', '-') + '_sub_tab'
+              tabslist += '    <li tabindex="0" class="coderow ' + tab[0].gsub(/[^0-9a-z]/i, '-') + '_sub_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tab[0].gsub(' ', '-') + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tab[0].gsub(/[^0-9a-z]/i, '-') + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
