@@ -1273,6 +1273,6 @@ validurls['/docs/developer_guide/platform_wide/banner_cards'] = '/docs/developer
 
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/'] = '/docs/partners/message_personalization/dynamic_content/odicci/';
 
-validurls['docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
+validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
 // validurls['OLD'] = 'NEW';
