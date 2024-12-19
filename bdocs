@@ -17,6 +17,8 @@ export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
 export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export TREDIRECTS="$PROJECT_ROOT/scripts/test_redirect_urls.sh"
+# Utility scripts that are not directly used in bdocs:
+export MRD="$PROJECT_ROOT/scripts/merge_redirect_descendants.py"
 
 # Displays usage for bdocs
 display_help() {
@@ -89,7 +91,8 @@ case $1 in
         "$RLINKS" "$2"
         ;;
     ulinks)
-        require_path_or_file "$2" 
+        require_path_or_file "$2"
+        "$MRD"
         "$RLINKS" "$2"
         ;;
     tredirects)

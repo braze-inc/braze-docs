@@ -23,12 +23,14 @@ def create_dict():
 
     with open(REDIRECT_FILE, 'r') as f:
         for index, line in enumerate(f, start=1):
-            match = re.match(r"validurls\['([^']+)'\] = '([^']+)';", line.strip())
+            match = re.match(r"validurls\['/docs([^']+)'\] = '/docs([^']+)';", line.strip())
             if match:
                 old_url, new_url = match.groups()
+                old_url = old_url.lstrip('/')
+                new_url = new_url.lstrip('/')
                 data_dict[f"entry_{index}"] = {
-                    "new_url": new_url,
-                    "old_urls": [old_url]
+                    "new_url": f"/{new_url}",
+                    "old_urls": [f"/{old_url}"]
                 }
                 total_old_urls += 1
 
