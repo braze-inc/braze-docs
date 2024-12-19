@@ -51,11 +51,11 @@ def merge_duplicates():
     with open(dict_file, 'r') as f:
         data_dict = json.load(f)
 
-    # Step 1: Merging duplicates (from oldest to newest, based on id)
     with open(dict_file, 'w') as f:
         # Iterate through the original file line by line
-        with open(os.path.join(root_dir, 'assets/js/broken_redirect_list.js'), 'r') as redirect_file:
-            for line in redirect_file:
+        redirect_file = os.path.join(root_dir, 'assets/js/broken_redirect_list.js')
+        with open(redirect_file, 'r') as rf:
+            for line in rf:
                 match = re.match(r"validurls\['([^']+)'\] = '([^']+)';", line.strip())
                 if match:
                     url_key, url_value = match.groups()
@@ -70,21 +70,110 @@ def merge_duplicates():
                             "url_values": [url_value]
                         }
 
-        # Step 2: Remove duplicate values per key
+        # Remove duplicate values per key
         for url_key, data in data_dict.items():
-            # Remove duplicates for each key's url_values
-            data["url_values"] = list(set(data["url_values"]))  # Convert to set and back to list to remove duplicates
+            data["url_values"] = list(set(data["url_values"]))
 
         # Write the updated dictionary back to dict.json
         json.dump(data_dict, f, indent=4)
+
+# Function 3: Final cleanup
+# go to `dict.json`
+# start in normal order (i.e. smallest id first)
+# for each key:
+#   check if this key is listed as a value in any other key
+#   if yes: merge this key's url_values into that other key's url_values
+#   then remove this key from dict.json
+def keep_newest_redirect():
+    root_dir = get_git_root()
+    dict_file = os.path.join(root_dir, 'dict.json')
+
+    # Load the dictionary
+    with open(dict_file, 'r') as f:
+        data_dict = json.load(f)
+
+    # Sort keys by their id in ascending order
+    # data_dict is { url_key: { "id": number, "url_values": [...] } }
+    sorted_keys = sorted(data_dict.keys(), key=lambda k: data_dict[k]["id"])
+
+    # Iterate in ascending order of id
+    # We'll make a copy of sorted_keys since we may remove keys from data_dict
+    for current_key in sorted_keys:
+        if current_key not in data_dict:
+            # Might have been removed already in a previous iteration
+            continue
+
+        # current_key data
+        current_values = data_dict[current_key]["url_values"]
+
+        # Check if current_key appears as a value in any other key
+        for other_key, other_data in data_dict.items():
+            if other_key == current_key:
+                continue
+            # If current_key is found as a url_value in other_key
+            if current_key in other_data["url_values"]:
+                # Merge current_key's values into other_key's values
+                other_data["url_values"].extend(current_values)
+                # Remove duplicates after merging
+                other_data["url_values"] = list(set(other_data["url_values"]))
+
+                # Remove current_key from data_dict
+                del data_dict[current_key]
+                break  # Move to the next current_key
+
+    # Write the updated dictionary back to dict.json
+    with open(dict_file, 'w') as f:
+        json.dump(data_dict, f, indent=4)
+
+# Function 4: Remove self references
+# after all merging and cleanup, remove any case where a key references itself in url_values
+def remove_self_references():
+    root_dir = get_git_root()
+    dict_file = os.path.join(root_dir, 'dict.json')
+
+    # Load the dictionary
+    with open(dict_file, 'r') as f:
+        data_dict = json.load(f)
+
+    # For each key, remove itself from its url_values if it appears
+    for url_key, data in data_dict.items():
+        url_values = data["url_values"]
+        if url_key in url_values:
+            url_values = [v for v in url_values if v != url_key]
+            data["url_values"] = url_values
+
+    # Write the updated dictionary back to dict.json
+    with open(dict_file, 'w') as f:
+        json.dump(data_dict, f, indent=4)
+
+def count_ids():
+    root_dir = get_git_root()
+    dict_file = os.path.join(root_dir, 'dict.json')
+
+    # Load the dictionary
+    with open(dict_file, 'r') as f:
+        data_dict = json.load(f)
+
+    # Number of IDs is the number of keys in the dictionary
+    return len(data_dict)
 
 # Main function to run the entire process
 def main():
     # Step 1: Build the dict.json from the redirects file
     build_dict()
+    print(f"number of IDs after build_dict: {count_ids()}")
 
-    # Step 2: Directly edit and merge the dict.json, removing duplicates
+    # Step 2: Merge duplicates and remove duplicates per key
     merge_duplicates()
+    print(f"number of IDs after merge_duplicates: {count_ids()}")
+
+    # Step 3: Final cleanup
+    keep_newest_redirect()
+    print(f"number of IDs after keep_newest_redirect: {count_ids()}")
+
+    # Step 4: Remove self references
+    remove_self_references()
+    print(f"number of IDs after remove_self_references: {count_ids()}")
 
 # Run the main function
 if __name__ == "__main__":

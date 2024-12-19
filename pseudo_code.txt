@@ -111,3 +111,19 @@ function 1: create_dict
           go back to loop 1.
         else:
           create new entry in `dict.json` with `url_key` set to `stored_key` and `url_value` set to `stored_value`.
+
+
+function 3:
+
+ go to `dict.json`
+  start in normal order (i.e. id is the smallest id on the page)
+  for each `key` on `dict.json`:
+    `current_key` = `key`
+    `count = 0`
+    for each `value` in `key`:
+      if `current_key` != `value`:
+        continue
+      else:
+        add all of `current_key`'s values to `key`, _then_
+        fully remove `current_key` and all directly assigned all values from `dict.json`
+    * go to next `key` in `dict.json`
