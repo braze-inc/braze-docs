@@ -1,0 +1,51 @@
+*note: here is syntax of `assets/js/broken_redirect_list.js`:
+```
+validurls['OLD'] = 'NEW';
+```
+
+meaning these are the vars:
+```
+validurls['url_value'] = 'url_key';
+```
+
+here's an example:
+```
+validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
+'url_key' = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/'
+'url_value' = '/docs/user_guide/getting_started/use_cases/lead_scoring'
+```
+
+pseudo code:
+
+on redirect sheet, start in reverse order
+first_line = 0
+  for line in sheet:
+    check that line starts with `validurls`:
+      if not, skip line.
+      if yes:
+        check if first_line > 0:
+          if yes:
+            write `url_key` and `url_value` to `temp.json` in JSON formatting
+            set first_line = 1
+            go back to top of for loop.
+          else:
+            continue.
+        check if current `url_key` is assigned as a `url_value` for _any_ and _all_ of the other values in `assets/js/broken_redirect_list.js`:
+          if yes:
+            keep track of which `url_key` the _current_ `url_key` is assigned to as a value.
+            don't do anything else with the current 'url_key'.
+            assign the current `url_value` to the same existing `url_key` that the `current_url` key is assigned to.
+            go back to top of for loop.
+          else:
+            check if current `url_key` already exists as a key.
+            if yes:
+              check if the current `url_value` is already assigned to this key:
+                if yes:
+                  write the `url_value` to the existing `url_key` in the `temp.json` in JSON formatting.
+                  go back to top of for loop.
+                if no:
+                  skip.
+                  go back to top of for loop. 
+            if no:
+              write `url_key` and `url_value` to `temp.json` in JSON formatting
+              go back to top of for loop. 
