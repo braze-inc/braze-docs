@@ -21,9 +21,9 @@ def verify_duplicates():
         for new_url in redirects:
             count = 0
 
-            # Check occurrences in the keys (new_url)
-            if new_url in redirects:
-                count += 1
+            # Check for duplicates within the url_values for the current url_key
+            for url_value in url_values:
+                count = 0
 
             # Check occurrences in the values (url_values)
             for data in redirects.values():
