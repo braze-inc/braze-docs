@@ -4,6 +4,7 @@ article: Managing Content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
+last_modified_date: "%b %e %Y at %I:%M %p"
 ---
 
 # About content management
