@@ -22,6 +22,9 @@ gta_tag_key: "GTM-W8DKT4D"
 # Source dir
 source: "."
 
+# Enable or disable heading anchors
+heading_anchors: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
