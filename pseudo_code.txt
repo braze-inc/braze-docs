@@ -1,4 +1,57 @@
-*note: here is syntax of `assets/js/broken_redirect_list.js`:
+pseudo code:
+
+on redirect sheet, start in reverse order
+first_line = 0
+  for line in sheet:
+    check that line starts with `validurls`:
+      if not, skip line.
+      if yes:
+        check if first_line > 0:
+          if yes:
+            write `url_key` and `url_value` to `dict.json` in JSON formatting
+            set first_line = 1
+            go back to top of for loop.
+          else:
+            continue.
+        check if current `url_key` is assigned as a `url_value` for _any_ and _all_ of the other values in `assets/js/broken_redirect_list.js`:
+          if yes:
+            keep track of which `url_key` the _current_ `url_key` is assigned to as a value.
+            don't do anything else with the current 'url_key'.
+            assign the current `url_value` to the same existing `url_key` that the `current_url` key is assigned to.
+            go back to top of for loop.
+          else:
+            check if current `url_key` already exists as a key.
+            if yes:
+              check if the current `url_value` is already assigned to this key:
+                if yes:
+                  write the `url_value` to the existing `url_key` in the `dict.json` in JSON formatting.
+                  go back to top of for loop.
+                if no:
+                  skip.
+                  go back to top of for loop. 
+            if no:
+              write `url_key` and `url_value` to `dict.json` in JSON formatting
+              go back to top of for loop. 
+
+
+NOTE FOR ME:
+function to remove duplicates.
+no list generation needed.
+
+
+updated pesudo code:
+i need a script that does the following:
+
+GOAL:
+A script that generates a JSON dictionary of key value pairs to determine the _newest_ link 1 or more _older_ URLs should be redirected to. its always ok for 1 new URL to be linked from several old URLs but not the other way around.
+
+THINGS TO KNOW:
+script should be in python.
+this is in a git repository. use git to figure out ROOT directory.
+newly created files can be created directly in ROOT.
+script is stored in `./scripts` (for context, but that shouldn't matter for the script itself if you are using git to determine root).
+
+here is syntax of `assets/js/broken_redirect_list.js`:
 ```
 validurls['OLD'] = 'NEW';
 ```
@@ -15,37 +68,46 @@ validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/us
 'url_value' = '/docs/user_guide/getting_started/use_cases/lead_scoring'
 ```
 
-pseudo code:
+here's a slightly bigger snippet:
+```
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection';
 
-on redirect sheet, start in reverse order
-first_line = 0
-  for line in sheet:
-    check that line starts with `validurls`:
-      if not, skip line.
-      if yes:
-        check if first_line > 0:
-          if yes:
-            write `url_key` and `url_value` to `temp.json` in JSON formatting
-            set first_line = 1
-            go back to top of for loop.
+validurls['/docs/user_csv_lambda/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion';
+
+validurls['/docs/user_guide/engagement_tools/segments/beacon_support/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/#partnership-support-for-beacon-and-geofence';
+
+validurls['/docs/developer_guide/platform_wide/sdk_authentication'] = '/docs/developer_guide/authentication';
+validurls['/docs/developer_guide/platform_wide/braze_actions'] = '/docs/developer_guide/braze_actions';
+validurls['/docs/developer_guide/platform_integration_guides/sdk_changelogs'] = '/docs/developer_guide/changelogs';
+validurls['/docs/developer_guide/customization_guides/content_cards'] = '/docs/developer_guide/content_cards';
+validurls['/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards'] = '/docs/developer_guide/content_cards/creating_custom_content_cards';
+validurls['/docs/developer_guide/customization_guides/content_cards/customizing_behavior'] = '/docs/developer_guide/content_cards/customizing_behavior';
+validurls['/docs/developer_guide/customization_guides/content_cards/customizing_feed'] = '/docs/developer_guide/content_cards/customizing_feed';
+validurls['/docs/developer_guide/customization_guides/content_cards/customizing_styles'] = '/docs/developer_guide/content_cards/customizing_styles';
+validurls['/docs/developer_guide/customization_guides/content_cards/logging_analytics'] = '/docs/developer_guide/content_cards/logging_analytics';
+```
+
+PSUDEO CODE:
+
+create `dict.json` file (for now don't delete this later on, so i can check output for testing)
+if content already exists on `temp` delete it. (i think there is a 1-liner that lets you create/delete simultaneously. this doesn't need an actual if statement)
+`redirect` = `assets/js/broken_redirect_list.js`:
+
+function 1: create_dict 
+  go to `redirect`
+  start in reverse order
+  loop 1: for `line` on `redirect`:
+    set/get `url_key` and `url_value`
+    if `dict.json` not empty:
+      loop 2: for each JSON `stored_key`:
+        loop 3: for each JSON `stored_value`:
+          if current `url_key` == `stored_value`:
+            add current `url_value` to current `stored_key`
+            go back to loop 1.
           else:
-            continue.
-        check if current `url_key` is assigned as a `url_value` for _any_ and _all_ of the other values in `assets/js/broken_redirect_list.js`:
-          if yes:
-            keep track of which `url_key` the _current_ `url_key` is assigned to as a value.
-            don't do anything else with the current 'url_key'.
-            assign the current `url_value` to the same existing `url_key` that the `current_url` key is assigned to.
-            go back to top of for loop.
-          else:
-            check if current `url_key` already exists as a key.
-            if yes:
-              check if the current `url_value` is already assigned to this key:
-                if yes:
-                  write the `url_value` to the existing `url_key` in the `temp.json` in JSON formatting.
-                  go back to top of for loop.
-                if no:
-                  skip.
-                  go back to top of for loop. 
-            if no:
-              write `url_key` and `url_value` to `temp.json` in JSON formatting
-              go back to top of for loop. 
+            continue through loop 2, ending loop 3 for `line`.
+        if current `url_key` == `stored_key`:
+          add current `url_value` to current `stored_key`.
+          go back to loop 1.
+        else:
+          create new entry in `dict.json` with `url_key` set to `stored_key` and `url_value` set to `stored_value`.
