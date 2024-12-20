@@ -8,7 +8,7 @@
 # not used by bdocs directly. However, you can use the following command to
 # call it directly and generate a JSON file of merged duplicates.
 #
-# Usage: ./scripts/merge_redirect_descendants.py [FILE|DIRECTORY]
+# Usage: ./scripts/utils/merge_redirect_descendants.py [FILE|DIRECTORY]
 #
 # Options:
 #   FILE              Delete unused reference links in a single file.
