@@ -6,17 +6,11 @@ import os
 import json
 import re
 import subprocess
+import sys
 
 # Get project root
 ROOT_DIR = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
 DICT_FILE = os.path.join(ROOT_DIR, 'redirects.json')
-
-
-def get_user_path():
-    path = input("Please provide a file or directory path: ").strip()
-    while not path:
-        path = input("Please provide a file or directory path: ").strip()
-    return path
 
 
 def gather_files(path):
@@ -78,24 +72,27 @@ def replace_urls_in_file(filepath, redirects):
     return total_replacements
 
 
-def main():
-    user_path = get_user_path()
-    files = gather_files(user_path)
+def main(given_path):
+    files = gather_files(given_path)
     redirects = load_redirects(DICT_FILE)
-
-    # transforms redirects into a list/dict we already have.
-    # no changes needed if we trust the "redirects.json" format as per previous steps.
 
     # Process each file
     total_global_replacements = 0
     for fp in files:
         replacements = replace_urls_in_file(fp, redirects)
         if replacements > 0:
-            print(f"In file '{fp}', made {replacements} replacements.")
+            # Compute relative path so that if given_path == /.../braze-docs/_docs/_developer_guide
+            # and fp == /.../braze-docs/_docs/_developer_guide/platform_integration_guides/...
+            # we print only "platform_integration_guides/legacy_sdks/ios/analytics/uninstall_tracking.md"
+            relative_path = os.path.relpath(fp, start=given_path)
+            print(f"In '{relative_path}', made {replacements} replacements.")
+
         total_global_replacements += replacements
 
     print(f"Total replacements made across all files: {total_global_replacements}")
 
 
 if __name__ == "__main__":
-    main()
+    given_path = sys.argv[1]
+    given_path = os.path.abspath(given_path)
+    main(given_path)

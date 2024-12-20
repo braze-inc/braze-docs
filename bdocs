@@ -92,8 +92,10 @@ case $1 in
         ;;
     ulinks)
         require_path_or_file "$2"
+        touch ./redirects.json
         "$MRD"
-        "$RLINKS" "$2"
+        "$ULINKS" "$2"
+        rm redirects.json
         ;;
     lredirects)
         if [[ $# -eq 2 ]]; then
