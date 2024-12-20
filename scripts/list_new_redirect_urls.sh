@@ -19,7 +19,6 @@ fi
 # Check if a base URL was passed as an argument from bdocs, otherwise prompt the user.
 if [[ -z "$1" ]]; then
     echo "Which base URL would you like to use? Note: You can use a local or deployment base URL."
-    echo ""
     read BASE_URL
 else
     BASE_URL=$1

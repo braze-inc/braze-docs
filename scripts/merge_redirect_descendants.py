@@ -3,15 +3,25 @@
 # This script uses 'assets/js/broken_redirect_list.js' to create a JSON dictionary
 # of merged redirect descendants by finding all ancestors and merging them
 # into the newest descendant. This script is necessary for 'update_old_links.py'.
+#
+# As of now, this script is used by ./scripts/update_old_links.py but is 
+# not used by bdocs directly. However, you can use the following command to
+# call it directly and generate a JSON file of merged duplicates.
+#
+# Usage: ./scripts/merge_redirect_descendants.py [FILE|DIRECTORY]
+#
+# Options:
+#   FILE              Delete unused reference links in a single file.
+#   DIRECTORY         Recursively delete unused reference links in a directory.
 
 import os
 import json
 import re
 import subprocess
 
-ROOT_DIR = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
-REDIRECT_FILE = os.path.join(ROOT_DIR, 'assets/js/broken_redirect_list.js')
-DICT_FILE = os.path.join(ROOT_DIR, 'redirects.json')
+PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
+REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
+REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
 
 
 # Create JSON dictionary from 'assets/js/broken_redirect_list.js' using this syntax:
@@ -34,7 +44,7 @@ def create_dict():
                 }
                 total_old_urls += 1
 
-    with open(DICT_FILE, 'w') as f:
+    with open(REDIRECT_MATCHES, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
     # After building
@@ -46,7 +56,7 @@ def create_dict():
 # highest 'entry_key' number, then delete the other keys.
 def merge_duplicate_keys():
   # print("Running merge_duplicate_keys...")
-    with open(DICT_FILE, 'r') as f:
+    with open(REDIRECT_MATCHES, 'r') as f:
         data_dict = json.load(f)
 
     # Group entries by new_url
@@ -67,7 +77,7 @@ def merge_duplicate_keys():
                 del data_dict[e]
                 merged_count += 1
 
-    with open(DICT_FILE, 'w') as f:
+    with open(REDIRECT_MATCHES, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
     # print(f"# of keys merged: {merged_count}")
@@ -77,7 +87,7 @@ def merge_duplicate_keys():
 # If a key contains more than one identical value, keep one and delete the rest.
 def delete_duplicate_values():
   # print("Running delete_duplicate_values...")
-    with open(DICT_FILE, 'r') as f:
+    with open(REDIRECT_MATCHES, 'r') as f:
         data_dict = json.load(f)
 
     values_deleted = 0
@@ -89,7 +99,7 @@ def delete_duplicate_values():
             values_deleted += diff
             data["old_urls"] = unique
 
-    with open(DICT_FILE, 'w') as f:
+    with open(REDIRECT_MATCHES, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
     # print(f"# of values deleted: {values_deleted}")
@@ -104,7 +114,7 @@ def delete_duplicate_values():
 # If no descendants are found, keep 1st entry, then check 2nd entry, and so on.
 def merge_descendants():
   # print("Running merge_descendants...")
-    with open(DICT_FILE, 'r') as f:
+    with open(REDIRECT_MATCHES, 'r') as f:
         data_dict = json.load(f)
 
     entry_keys = list(data_dict.keys())
@@ -132,7 +142,7 @@ def merge_descendants():
                 merged_count += 1
                 break
 
-    with open(DICT_FILE, 'w') as f:
+    with open(REDIRECT_MATCHES, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
     # print(f"# of descendants merged: {merged_count}")
@@ -142,7 +152,7 @@ def merge_descendants():
 # If a key contains a value of itself, remove that value.
 def remove_self_references():
   # print("Running remove_self_references...")
-    with open(DICT_FILE, 'r') as f:
+    with open(REDIRECT_MATCHES, 'r') as f:
         data_dict = json.load(f)
 
     self_removed = 0
@@ -155,11 +165,11 @@ def remove_self_references():
             new_len = len(data["old_urls"])
             self_removed += (old_len - new_len)
 
-    with open(DICT_FILE, 'w') as f:
+    with open(REDIRECT_MATCHES, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
   # print(f"# of self refs removed: {self_removed}")
-    with open(DICT_FILE, 'r') as f:
+    with open(REDIRECT_MATCHES, 'r') as f:
         data_dict = json.load(f)
     # print_counts(data_dict)
 

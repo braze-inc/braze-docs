@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Converts Markdown reference links to in-line links. Created because 
+# Transforms Markdown reference links to in-line links. Created because
 # reference links cannot be placed inside Liquid {% tab %} tags.
 #
 # For more information, see:
@@ -62,6 +62,7 @@ def replace_links(file_path, link_dict):
         file.writelines(updated_lines)
 
 
+# TODO: Move this to bdocs directly for easier reuse.
 # Recursively convert links for all Markdown files in given directory.
 def process_directory(directory):
     for root, dirs, files in os.walk(directory):

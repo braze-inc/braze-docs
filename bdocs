@@ -9,6 +9,7 @@ set -e
 # The project's root directory and redirect file.
 export PROJECT_ROOT="$(dirname "$(realpath "$0")")"
 export REDIRECT_FILE="./assets/js/broken_redirect_list.js"
+export REDIRECT_MATCHES="./scripts/temp/redirect_matches.json"
 
 # All scripts exported so they can source bdocs and call each other if needed.
 export DEPLOY="$PROJECT_ROOT/scripts/create_deploy_text.sh"
@@ -92,10 +93,10 @@ case $1 in
         ;;
     ulinks)
         require_path_or_file "$2"
-        touch ./redirects.json
+        touch "$REDIRECT_MATCHES"
         "$MRD"
         "$ULINKS" "$2"
-        rm redirects.json
+        rm "$REDIRECT_MATCHES"
         ;;
     lredirects)
         if [[ $# -eq 2 ]]; then

@@ -1,47 +1,30 @@
 #!/usr/bin/env python3
 
-# Script for updating old links. Requires 'update_redirect_list.py'.
+# Uses 'assets/js/broken_redirect_list.js' to determine the newest version of
+# a link, then updates all 'OLD' links with the 'NEW' link for the given
+# page or directory.
+#
+# Requires: 'update_redirect_list.py'
+#
+# Usage: ./bdocs ulinks [FILE|DIRECTORY]
+#
+# Options:
+#   FILE              Updates old links in a single file.
+#   DIRECTORY         Recursively updates old links in a directory.
 
 import os
 import json
 import re
-import subprocess
 import sys
 
 # Get project root
-ROOT_DIR = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
-DICT_FILE = os.path.join(ROOT_DIR, 'redirects.json')
+PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
+REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
 
 
-def gather_files(path):
-    # If directory, walk it recursively
-    if os.path.isdir(path):
-        files = []
-        for root, dirs, filenames in os.walk(path):
-            for fn in filenames:
-                # You can add filters here if needed, e.g., only .md files
-                files.append(os.path.join(root, fn))
-        return files
-    elif os.path.isfile(path):
-        return [path]
-    else:
-        print("The provided path is neither a file nor a directory.")
-        exit(1)
-
-
-def load_redirects(json_file):
-    if not os.path.exists(json_file):
-        print(f"Error: '{json_file}' not found.")
-        exit(1)
-    with open(json_file, 'r') as f:
-        data_dict = json.load(f)
-    return data_dict
-
-
-def replace_urls_in_file(filepath, redirects):
-    # redirects: a list of tuples (new_url, [old_url1, old_url2, ...])
-    # Each entry: { "new_url": ..., "old_urls": [...] }
-    # We replace {{site.baseurl}}old_url with {{site.baseurl}}new_url for all old_urls
+def update_old_links(filepath, redirects):
+    # redirects: { key: { "new_url": str, "old_urls": [str, ...] }, ... }
+    # Replace occurrences of ({{site.baseurl}}old_url) with ({{site.baseurl}}new_url)
     if not os.path.isfile(filepath):
         return 0
 
@@ -49,16 +32,13 @@ def replace_urls_in_file(filepath, redirects):
         content = f.read()
 
     original_content = content
-
-    # For each entry (new_url, old_urls):
-    # if an entry has multiple old_urls, we must replace all old_urls with the single new_url.
     total_replacements = 0
+
     for entry_key, data in redirects.items():
         new_url = data["new_url"]
         old_urls = data["old_urls"]
-        # Replace all occurrences of each old_url
+        # Replace all occurrences of each old_url with the new_url
         for old in old_urls:
-            # Construct pattern to match ({{site.baseurl}}old_url)
             pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
             count_before = len(re.findall(pattern, content))
             if count_before > 0:
@@ -72,27 +52,59 @@ def replace_urls_in_file(filepath, redirects):
     return total_replacements
 
 
-def main(given_path):
-    files = gather_files(given_path)
-    redirects = load_redirects(DICT_FILE)
+def get_redirect_matches(json_file):
+    if not os.path.exists(json_file):
+        print(f"Error: '{json_file}' not found.")
+        exit(1)
+    with open(json_file, 'r') as f:
+        data_dict = json.load(f)
+    return data_dict
 
-    # Process each file
+
+# TODO: Move this to bdocs directly for easier reuse.
+def process_directory(directory, redirects):
     total_global_replacements = 0
-    for fp in files:
-        replacements = replace_urls_in_file(fp, redirects)
-        if replacements > 0:
-            # Compute relative path so that if given_path == /.../braze-docs/_docs/_developer_guide
-            # and fp == /.../braze-docs/_docs/_developer_guide/platform_integration_guides/...
-            # we print only "platform_integration_guides/legacy_sdks/ios/analytics/uninstall_tracking.md"
-            relative_path = os.path.relpath(fp, start=given_path)
-            print(f"In '{relative_path}', made {replacements} replacements.")
+    for root, dirs, files in os.walk(directory):
+        for fn in files:
+            file_path = os.path.join(root, fn)
+            replacements = update_old_links(file_path, redirects)
+            if replacements > 0:
+                # Print relative path from the given directory
+                relative_path = os.path.relpath(file_path, start=directory)
+                print(f"In '{relative_path}', made {replacements} replacements.")
+            total_global_replacements += replacements
+    return total_global_replacements
 
-        total_global_replacements += replacements
 
-    print(f"Total replacements made across all files: {total_global_replacements}")
+# TODO: Move this to bdocs directly for easier reuse.
+def process_single_file(filepath, redirects):
+    replacements = update_old_links(filepath, redirects)
+    if replacements > 0:
+        # When given a single file, just print the filename
+        print(f"In '{os.path.basename(filepath)}', made {replacements} replacements.")
+    return replacements
+
+
+def main(path):
+    redirects = get_redirect_matches(REDIRECT_MATCHES)
+
+    if os.path.isdir(path):
+        # Process directory
+        total_replacements = process_directory(path, redirects)
+        print(f"Total replacements made across all files: {total_replacements}")
+    elif os.path.isfile(path):
+        # Process single file
+        total_replacements = process_single_file(path, redirects)
+        print(f"Total replacements made: {total_replacements}")
+    else:
+        print(f"Invalid path: {path}. Please provide a valid directory or file.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    given_path = sys.argv[1]
-    given_path = os.path.abspath(given_path)
-    main(given_path)
+    if len(sys.argv) < 2:
+        print("Usage: python script.py <directory_or_file>")
+        sys.exit(1)
+    user_path = sys.argv[1]
+    user_path = os.path.abspath(user_path)
+    main(user_path)
