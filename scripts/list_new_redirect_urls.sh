@@ -7,7 +7,7 @@
 # Usage: ./bdocs lredirects
 
 # Check new redirects by comparing the current branch to develop.
-NEW_REDIRECTS=$(git diff develop -- $PROJECT_ROOT/assets/js/broken_redirect_list.js)
+NEW_REDIRECTS=$(git diff develop -- $REDIRECT_FILE)
 
 # If there's no differences, print an error message and exit.
 if [[ -z "$NEW_REDIRECTS" ]]; then

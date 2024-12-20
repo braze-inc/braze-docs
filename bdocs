@@ -16,7 +16,7 @@ export RELEASE="$PROJECT_ROOT/scripts/create_release_text.sh"
 export TLINKS="$PROJECT_ROOT/scripts/transform_reference_links.py"
 export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
-export TREDIRECTS="$PROJECT_ROOT/scripts/test_redirect_urls.sh"
+export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/merge_redirect_descendants.py"
 
@@ -34,7 +34,7 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
-  tredirects     Test new redirects by listing old URLs in this branch
+  lredirects     Test new redirects by listing old URLs in this branch
   help           Display this help message and exit
 
 EOF
@@ -95,11 +95,11 @@ case $1 in
         "$MRD"
         "$RLINKS" "$2"
         ;;
-    tredirects)
+    lredirects)
         if [[ $# -eq 2 ]]; then
-            "$TREDIRECTS" "$2"
+            "$LREDIRECTS" "$2"
         else
-            "$TREDIRECTS"
+            "$LREDIRECTS"
         fi
         ;;
     help)

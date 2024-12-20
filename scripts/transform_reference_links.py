@@ -16,6 +16,7 @@ import os
 import sys
 import re
 
+
 # Create a dictionary with all reference links at the bottom of the file.
 def create_link_dictionary(file_path):
     link_dict = {}
@@ -42,6 +43,7 @@ def create_link_dictionary(file_path):
 
     return link_dict
 
+
 # Use the dictionary to find and replace all references with the full link.
 def replace_links(file_path, link_dict):
     with open(file_path, 'r') as file:
@@ -59,6 +61,7 @@ def replace_links(file_path, link_dict):
     with open(file_path, 'w') as file:
         file.writelines(updated_lines)
 
+
 # Recursively convert links for all Markdown files in given directory.
 def process_directory(directory):
     for root, dirs, files in os.walk(directory):
@@ -67,6 +70,7 @@ def process_directory(directory):
                 file_path = os.path.join(root, file)
                 link_dict = create_link_dictionary(file_path)
                 replace_links(file_path, link_dict)
+
 
 # If arg == directory, convert links for all Markdown files in that directory.
 # If arg == file, convert links for that Markdown file only.

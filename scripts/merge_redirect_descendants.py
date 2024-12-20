@@ -17,7 +17,7 @@ DICT_FILE = os.path.join(ROOT_DIR, 'redirects.json')
 # Create JSON dictionary from 'assets/js/broken_redirect_list.js' using this syntax:
 # validurls['OLD'] = 'NEW';
 def create_dict():
-    print("Running build_dict...")
+  # print("Running build_dict...")
     data_dict = {}
     total_old_urls = 0
 
@@ -38,14 +38,14 @@ def create_dict():
         json.dump(data_dict, f, indent=4)
 
     # After building
-    print(f"# of new_urls: {len(data_dict)}")
-    print(f"# of old_urls: {total_old_urls}\n")
+    # print(f"# of new_urls: {len(data_dict)}")
+    # print(f"# of old_urls: {total_old_urls}\n")
 
 
 # If 2 or more identical keys exist, merge all values into the key with the
 # highest 'entry_key' number, then delete the other keys.
 def merge_duplicate_keys():
-    print("Running merge_duplicate_keys...")
+  # print("Running merge_duplicate_keys...")
     with open(DICT_FILE, 'r') as f:
         data_dict = json.load(f)
 
@@ -70,13 +70,13 @@ def merge_duplicate_keys():
     with open(DICT_FILE, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
-    print(f"# of keys merged: {merged_count}")
-    print_counts(data_dict)
+    # print(f"# of keys merged: {merged_count}")
+    # print_counts(data_dict)
 
 
 # If a key contains more than one identical value, keep one and delete the rest.
 def delete_duplicate_values():
-    print("Running delete_duplicate_values...")
+  # print("Running delete_duplicate_values...")
     with open(DICT_FILE, 'r') as f:
         data_dict = json.load(f)
 
@@ -92,8 +92,8 @@ def delete_duplicate_values():
     with open(DICT_FILE, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
-    print(f"# of values deleted: {values_deleted}")
-    print_counts(data_dict)
+    # print(f"# of values deleted: {values_deleted}")
+    # print_counts(data_dict)
 
 
 # If A redirects to B, and B to C, both A and B are considered descendants of C.
@@ -103,7 +103,7 @@ def delete_duplicate_values():
 # If no match, continue to 2nd-to-last entry and so on.
 # If no descendants are found, keep 1st entry, then check 2nd entry, and so on.
 def merge_descendants():
-    print("Running merge_descendants...")
+  # print("Running merge_descendants...")
     with open(DICT_FILE, 'r') as f:
         data_dict = json.load(f)
 
@@ -135,13 +135,13 @@ def merge_descendants():
     with open(DICT_FILE, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
-    print(f"# of descendants merged: {merged_count}")
-    print_counts(data_dict)
+    # print(f"# of descendants merged: {merged_count}")
+    # print_counts(data_dict)
 
 
 # If a key contains a value of itself, remove that value.
 def remove_self_references():
-    print("Running remove_self_references...")
+  # print("Running remove_self_references...")
     with open(DICT_FILE, 'r') as f:
         data_dict = json.load(f)
 
@@ -158,10 +158,10 @@ def remove_self_references():
     with open(DICT_FILE, 'w') as f:
         json.dump(data_dict, f, indent=4)
 
-    print(f"# of self refs removed: {self_removed}")
+  # print(f"# of self refs removed: {self_removed}")
     with open(DICT_FILE, 'r') as f:
         data_dict = json.load(f)
-    print_counts(data_dict)
+    # print_counts(data_dict)
 
 
 # Debugging: Counts the number of new and old urls current in file when called.
@@ -170,8 +170,8 @@ def print_counts(data_dict):
     new_urls_count = len(data_dict)
     # Count how many old_urls total
     old_urls_count = sum(len(data["old_urls"]) for data in data_dict.values())
-    print(f"# of new_urls: {new_urls_count}")
-    print(f"# of old_urls: {old_urls_count}\n")
+  # print(f"# of new_urls: {new_urls_count}")
+  # print(f"# of old_urls: {old_urls_count}\n")
 
 
 def main():

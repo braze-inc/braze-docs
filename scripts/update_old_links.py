@@ -64,14 +64,12 @@ def replace_urls_in_file(filepath, redirects):
         old_urls = data["old_urls"]
         # Replace all occurrences of each old_url
         for old in old_urls:
-            pattern = re.escape("{{site.baseurl}}") + re.escape(old)
-            # Count occurrences before replacing
+            # Construct pattern to match ({{site.baseurl}}old_url)
+            pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
             count_before = len(re.findall(pattern, content))
             if count_before > 0:
-                # Perform replacement
-                content = re.sub(pattern, "{{site.baseurl}}" + new_url, content)
-                count_after = count_before  # we replaced all occurrences
-                total_replacements += count_after
+                content = re.sub(pattern, "(" + "{{site.baseurl}}" + new_url + ")", content)
+                total_replacements += count_before
 
     if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
