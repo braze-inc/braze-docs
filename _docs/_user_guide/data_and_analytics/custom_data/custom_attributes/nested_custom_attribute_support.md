@@ -9,9 +9,9 @@ description: "This reference article covers using nested custom attributes as a 
 
 # Nested custom attributes
 
-Nested custom attributes allow you to define a set of attributes as a property of another attribute. In other words, when you define a custom attribute object, you can define a set of additional attributes for that object.
+> This page covers nested custom attributes, which allow you to define a set of attributes as a property of another attribute. In other words, when you define a custom attribute object, you can define a set of additional attributes for that object.
 
-For example, let's say you want to define a custom attribute on the user profile called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
+Let's say you want to define a custom attribute on the user profile called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
 
 ```json
 "favorite_book": {
@@ -36,11 +36,11 @@ Custom attribute objects can contain [data types][1], such as:
 
 ## Limitations
 
-- Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
+- Nested custom attributes are intended for custom attributes sent through the Braze SDK or API. 
 - Objects have a maximum size of 50&nbsp;KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
-- Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
+- Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if specific partner integrations support this feature.
 - Nested custom attributes cannot be used as a filter when making a Connected Audience API call.
 
 ## API example
@@ -261,7 +261,7 @@ If you haven't captured dates as object properties initially, we recommend resen
 }
 ```
 
-Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze does not store these values on the user.
+Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
 
 ## Liquid templating
 
@@ -281,7 +281,7 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 
 You can build segments based on nested custom attributes to further target your users. To do so, filter your segment based on the custom attribute object, then specify the path to your property name and associated value you want to segment on. If you're not sure what that path looks like, you can [generate a schema](#generate-schema) and use the nested object explorer to have Braze populate that path for you.
 
-After adding a path to your property, click **Validate** to verify that the value in the path field is valid.
+After adding a path to your property, select **Validate** to verify that the value in the path field is valid.
 
 ![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
@@ -289,7 +289,7 @@ To segment with nested custom attributes, select the **Nested Custom Attributes*
 
 ![][17]{: style="max-width:70%;"}
 
-When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
+When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, because `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
 
@@ -321,7 +321,7 @@ When you select **Copy Liquid for segment**, Braze will automatically generate L
 {% endfor %}
 ```
 
-From here, you can use `segmented_nested_objects` and personalize your message. In our use case, we want to take a goal from the first active taxable account and personalize it:
+From here, you can use `segmented_nested_objects` and personalize your message. In this example, we want to take a goal from the first active taxable account and personalize it:
 
 ```
 Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
@@ -350,13 +350,13 @@ For this example, suppose we have an `accounts` object array that we've just sen
  ]
 ```
 
-In the Braze dashboard, navigate to **Data Settings** > **Custom Attributes**.
+In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
-Search for your object or object array. In the **Attribute Name** column, click **Generate Schema**.
+Search for your object or object array. In the **Attribute Name** column, select **Generate Schema**.
 
 ![][8]
 
@@ -386,11 +386,11 @@ Create a segment and add the filter `Nested Custom Attribute`, then search for a
 
 ![][11]
 
-Click the <i class="fas fa-plus"></i> plus button in the path field. This will bring up a representation of your object or object array. You can select any of the listed items and Braze will insert them into the path field for you. For our use case, we need to get the balance. Select the balance and the path (in this case, `[].balance`) is automatically populated in the path field.
+Select the <i class="fas fa-plus"></i> plus button in the path field. This will bring up a representation of your object or object array. You can select any of the listed items and Braze will insert them into the path field for you. In this example, we need to get the balance. Select the balance and the path (in this case, `[].balance`) is automatically populated in the path field.
 
 ![][12]{: style="max-width:70%" }
 
-You can click **Validate** to verify that the contents of the path field is valid, then build the rest of the filter as needed. Here we've specified that the balance should be less than 100.
+You can select **Validate** to verify that the contents of the path field is valid, then build the rest of the filter as needed. Here we've specified that the balance should be less than 100.
 
 ![][13]
 
@@ -398,7 +398,7 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 ### Trigger nested custom attribute changes
 
-You can trigger when a nested custom attribute object changes. This option is not available for changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
+You can trigger when a nested custom attribute object changes. This option isn't available for changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
 
 ![][16]
 
@@ -426,16 +426,16 @@ To regenerate the schema for your nested custom attribute:
 
 1. Go to **Data Settings** > **Custom Attributes**.
 2. Search for your nested custom attribute.
-3. In the **Attribute Name** column for your attribute, click <i class="fas fa-plus"></i> to manage the schema.
-4. A modal will appear. Click **Regenerate Schema**.
+3. In the **Attribute Name** column for your attribute, select <i class="fas fa-plus"></i> to manage the schema.
+4. A modal will appear. Select **Regenerate Schema**.
 
 The option to regenerate schema will be disabled if it has been less than 24 hours since the schema was last regenerated. Regenerating the schema will only detect new objects and will not delete objects that currently exist in the schema.
 
 {% alert important %}
-If you want to reset the schema for an object array with an existing object, you need to create a new custom attribute. Schema regeneration does not delete existing objects.
+To reset the schema for an object array with an existing object, you need to create a new custom attribute. Schema regeneration doesn't delete existing objects.
 {% endalert %}
 
-If data does not appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
+If data doesn't appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
 
 ## Data points
 

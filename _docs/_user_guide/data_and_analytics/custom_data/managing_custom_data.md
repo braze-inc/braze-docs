@@ -8,7 +8,7 @@ description: "This reference article covers how to manage custom data, such as p
 
 # Managing custom data
 
-> Learn how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.
+> This page covers how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.
 
 ## Pre-populating custom data
 
@@ -19,7 +19,7 @@ To pre-populate custom events and attributes, do the following:
 1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
 {% endalert %}
 
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
@@ -78,7 +78,7 @@ To accomplish this, Braze sends the blocklisting information down to each device
 
 ### Considerations for blocklisting
 
-Something to consider is that blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist. If it appears on the list, it won't be sent up. This operation takes time, and if the list grows big enough, your app could start to slow down. If you have no need to use the event or attribute in the future, it should be removed from your app code during your next release.
+Blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist. If it appears on the list, it won't be sent up. This operation takes time, and if the list grows big enough, your app could start to slow down. If you have no need to use the event or attribute in the future, it should be removed from your app code during your next release.
 
 Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at anytime.
 
@@ -99,7 +99,7 @@ When you delete custom data, the following occurs:
 - **For custom attributes:** Permanently removes the attribute data from every user's profile.
 - **For custom events:** Permanently removes the event metadata from every user's profile.
 
-When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore after 7 days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
+When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
 
 {% alert important %}
 Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.<br><br>Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.

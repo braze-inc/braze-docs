@@ -8,9 +8,9 @@ description: "This article describes how to send nested JSON data as properties 
 
 # Nested objects in custom events
 
-> This article describes how to send nested JSON data as properties of custom events and purchases, and how to use those nested objects in your messaging.
+> This page covers how to send nested JSON data as properties of custom events and purchases, and how to use those nested objects in your messaging.
 
-You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
+You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmentating users.
 
 ## Limitations
 
@@ -27,7 +27,7 @@ The following SDK versions support nested objects:
 
 ## Step 1: Generate a schema
 
-To access the nested data in your custom event, generate a schema for each event with nested event properties. To generate a schema, follow these steps:
+To access the nested data in your custom event, generate a schema for each event with nested event properties. Generate a schema by following these steps:
 
 1. Go to **Data Settings** > **Custom Events**.
 2. Select **Manage Properties** for the events with nested properties.
@@ -50,7 +50,9 @@ After generating a schema, you can reference the nested data during segmentation
 {% tabs %}
 {% tab Music Example %}
 
-The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+The following is a `/users/track` example with a "Created Playlist" custom event. After a playlist has been created, capture the properties of the playlist by sending:
+- An API request that lists "songs" as a property
+- An array of the nested properties of the songs
 
 ```
 ...
@@ -79,7 +81,9 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% endtab %}
 {% tab Restaurant Example%}
 
-The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, capture properties of that order by sending:
+- An API request that lists "r_details" as a property
+- The nested properties of that order
 
 ```
 ...
@@ -100,7 +104,7 @@ The following is a `/users/track` example with an "Ordered" custom event. After 
 
 ### Liquid templating
 
-The following Liquid templating examples show how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
+The following Liquid templating examples demonstrate how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, the template will the nested data to find the specific node you want to include in your messages.
 
 {% tabs %}
 {% tab Music Example %}
@@ -124,7 +128,7 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages, but nested properties in Liquid personalization in the messages will still display.
+To use these properties to trigger a campaign, select your custom event or purchase, then add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages, but nested properties in Liquid personalization in the messages will still display.
 
 {% tabs %}
 {% tab Music Example %}
@@ -152,7 +156,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 {% endtabs %}
 
 {% alert note %}
-If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.
+If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For example, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.
 {% endalert %}
 
 ### Segmentation
@@ -173,7 +177,7 @@ Using the **Add Personalization** modal, select **Advanced Event Properties** as
 
 ### Does using nested objects consume additional data points?
 
-There is no change in how we charge data points as a result of adding this capability. Segmenting based on nested objects uses Segment Extensions, which does not incur additional data point usage.
+There is no change in how we charge data points as a result of adding this capability. Segmenting based on nested objects uses Segment Extensions, which doesn't incur additional data point usage.
 
 ### How much nested data can be sent?
 
