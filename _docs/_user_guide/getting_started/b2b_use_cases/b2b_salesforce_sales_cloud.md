@@ -62,7 +62,7 @@ Use templates to quickly re-use this webhook across the Braze platform.
 | Request Body | JSON Key/Value Pairs |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
-### Body property key values
+#### Body property key values
 
 Select **+ Add New Body Property** for each of the key/value pairs you want to map over from Braze to Salesforce. You can map over any field you want, so the following table is just one example.
 
@@ -76,7 +76,7 @@ Select **+ Add New Body Property** for each of the key/value pairs you want to m
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 {% endraw %}
 
-### Request headers
+#### Request headers
 
 Select **+ Add New Header** for each of the following request headers.
 
@@ -111,7 +111,7 @@ This example specifically demonstrates how to update a lead’s lead stage to �
 2. Provide a name for the template, such as “Salesforce Sales Cloud > Update Lead to MQL”.
 3. In the **Compose** tab, enter the following details:
 
-### Compose webhook 
+#### Compose webhook 
 
 | Field | Details |
 | --- | --- |
@@ -120,7 +120,7 @@ This example specifically demonstrates how to update a lead’s lead stage to �
 | Request Body | JSON Key/Value Pairs |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
-### Body property key values
+#### Body property key values
 
 Select **+ Add New Body Property** for the following key/value pair. Note that `Lead_Stage__c` is an example name. The custom field you use to track MQLs in Salesforce may have a different name, so make sure that they match.
 
@@ -129,7 +129,7 @@ Select **+ Add New Body Property** for the following key/value pair. Note that `
 | Lead_Stage__c | MQL |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
-### Request headers
+#### Request headers
 
 Select **+ Add New Header** for each of the following request headers.
 
