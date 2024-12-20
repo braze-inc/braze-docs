@@ -15,19 +15,19 @@ When an anonymous user visits your website or application, the Braze SDK creates
 
 You can do the following with captured anonymous users:
 
-- Message users before they log in.
-- Collect a user’s profile before they log in, so you don’t miss out on relevant data.
-- Encourage profile completion with a message when a user only partially completes their profile.
-- Complete a user’s profile when they log in, so that you can cancel messaging on other platforms (such as not sending a “free shipping on 1st app order” message when the user already has made app orders).
-- Engage with users who show an intent to exit by encouraging them to create a profile, checkout their cart, or take another action.
+- Message users before they log in
+- Collect a user’s profile before they log in, so you don’t miss out on relevant data
+- Encourage profile completion with a message when a user only partially completes their profile
+- Complete a user’s profile when they log in, so that you can cancel messaging on other platforms (such as not sending a “free shipping on 1st app order” message when the user already has made app orders)
+- Engage with users who show an intent to exit by encouraging them to create a profile, checkout their cart, or take another action
 
 ## Assigning user aliases
 
-Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: user aliases. This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [**External User ID is blank**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
+Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: user aliases. This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
 
 ## Merging anonymous users  
 
-Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
+Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one user profile by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
 ## Use cases
 
