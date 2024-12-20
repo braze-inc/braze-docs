@@ -60,7 +60,7 @@ Use templates to quickly re-use this webhook across the Braze platform.
 | Webhook URL | {% raw %}https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{% endraw %} |
 | HTTP method | POST |
 | Request Body | JSON Key/Value Pairs |
-{ .reset-td-br-1 .reset-td-br-2 role=”presentation” }
+{: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ### Body property key values
 
@@ -116,7 +116,7 @@ This example specifically demonstrates how to update a lead’s `lead_stage` to 
 |Webhook URL | {% raw %}https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}{% endraw %} |
 | HTTP method | PATCH |
 | Request Body | JSON Key/Value Pairs |
-{ .reset-td-br-1 .reset-td-br-2 role=”presentation” }
+{: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ### Body property key values
 
