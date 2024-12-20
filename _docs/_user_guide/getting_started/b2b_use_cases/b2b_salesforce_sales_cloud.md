@@ -39,7 +39,7 @@ As your customer engagement platform, Braze can generate new leads based on user
 
 ### Step 1: Collect your `client_id` and `client_secret`
 
-1. Go to **Platform Tools** > **Apps** > **App Manager**.
+1. In Salesforce, go to **Platform Tools** > **Apps** > **App Manager**.
 2. Find your newly created Braze App and select **View**.
 3. Under **Consumer Key and Secret**, select **Manage Consumer Details**.
 4. On the resulting page, take note of your **Consumer Key** and **Consumer Secret**.
@@ -99,7 +99,7 @@ This example specifically demonstrates how to update a leadâ€™s lead stage to â€
 
 ### Step 1: Collect your `client_id` and `client_secret`
 
-1. Go to **Platform Tools** > **Apps** > **App Manager**.
+1. In Salesforce, go to **Platform Tools** > **Apps** > **App Manager**.
 2. Find your newly created Braze App and select **View**.
 3. Under **Consumer Key and Secret**, select **Manage Consumer Details**.
 4. On the resulting page, take note of your **Consumer Key** and **Consumer Secret**.
