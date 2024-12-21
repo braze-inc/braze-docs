@@ -4,13 +4,10 @@
 # base URL to list all old URLs so the user can open old links directly from
 # the terminal to test redirects.
 # 
-# Usage: ./bdocs redirects
-
-# Fetch the latest changes from the remote.
-git fetch origin develop --quiet
+# Usage: ./bdocs lredirects
 
 # Check new redirects by comparing the current branch to develop.
-NEW_REDIRECTS=$(git diff develop -- $PROJECT_ROOT/assets/js/broken_redirect_list.js)
+NEW_REDIRECTS=$(git diff develop -- $REDIRECT_FILE)
 
 # If there's no differences, print an error message and exit.
 if [[ -z "$NEW_REDIRECTS" ]]; then
@@ -22,7 +19,6 @@ fi
 # Check if a base URL was passed as an argument from bdocs, otherwise prompt the user.
 if [[ -z "$1" ]]; then
     echo "Which base URL would you like to use? Note: You can use a local or deployment base URL."
-    echo ""
     read BASE_URL
 else
     BASE_URL=$1
