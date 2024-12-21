@@ -20,6 +20,7 @@ export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
+export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
 
 # Displays usage for bdocs
 display_help() {
@@ -93,6 +94,7 @@ case $1 in
         ;;
     ulinks)
         require_path_or_file "$2"
+        mkdir "$TEMP_DIR"
         touch "$REDIRECT_MATCHES"
         "$MRD"
         "$ULINKS" "$2"
