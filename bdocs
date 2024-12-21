@@ -94,7 +94,9 @@ case $1 in
         ;;
     ulinks)
         require_path_or_file "$2"
-        mkdir "$TEMP_DIR"
+        if [ ! -d "$TEMP_DIR" ]; then
+            mkdir "$TEMP_DIR"
+        fi
         touch "$REDIRECT_MATCHES"
         "$MRD"
         "$ULINKS" "$2"
