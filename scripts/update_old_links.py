@@ -24,7 +24,7 @@ REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
 
 def update_old_links(filepath, redirects):
     # redirects: { key: { "new_url": str, "old_urls": [str, ...] }, ... }
-    # Replace occurrences of ({{site.baseurl}}old_url) with ({{site.baseurl}}new_url)
+    # Replace ({{site.baseurl}}old_url) with ({{site.baseurl}}new_url)
     if not os.path.isfile(filepath):
         return 0
 
@@ -37,14 +37,29 @@ def update_old_links(filepath, redirects):
     for entry_key, data in redirects.items():
         new_url = data["new_url"]
         old_urls = data["old_urls"]
-        # Replace all occurrences of each old_url with the new_url
+
         for old in old_urls:
-            pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
+            # If there's an anchor (#), match exactly.
+            # Otherwise, match with or without trailing slash.
+            if "#" in old:
+                # Exact match
+                pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
+            else:
+                # old.rstrip('/') removes any trailing slash
+                # The /? makes the slash optional in the pattern
+                old_noslash = old.rstrip('/')
+                pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old_noslash) + r"/?\)"
+
+            # Count how many times the old link appears
             count_before = len(re.findall(pattern, content))
             if count_before > 0:
-                content = re.sub(pattern, "(" + "{{site.baseurl}}" + new_url + ")", content)
+                # Replace all occurrences with the new URL
+                content = re.sub(pattern,
+                                 "(" + "{{site.baseurl}}" + new_url + ")",
+                                 content)
                 total_replacements += count_before
 
+    # If content changed, write the file back out
     if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)

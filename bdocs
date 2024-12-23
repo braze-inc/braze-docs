@@ -42,6 +42,11 @@ OPTIONS:
 EOF
 }
 
+# If no './scripts/temp' directory, create one.
+if [ ! -d "$TEMP_DIR" ]; then
+    mkdir "$TEMP_DIR"
+fi
+
 # If a file or directory is required, pass or fail.
 require_path_or_file() {
     if [[ -z "$1" ]]; then
@@ -94,13 +99,10 @@ case $1 in
         ;;
     ulinks)
         require_path_or_file "$2"
-        if [ ! -d "$TEMP_DIR" ]; then
-            mkdir "$TEMP_DIR"
-        fi
         touch "$REDIRECT_MATCHES"
         "$MRD"
         "$ULINKS" "$2"
-        rm "$REDIRECT_MATCHES"
+        # rm "$REDIRECT_MATCHES"
         ;;
     lredirects)
         if [[ $# -eq 2 ]]; then

@@ -24,7 +24,7 @@ REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
 REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
 
 
-# Create JSON dictionary from 'assets/js/broken_redirect_list.js' using this syntax:
+# Create JSON dictionary from 'assets/js/broken_redirect_list.js'. Syntax:
 # validurls['OLD'] = 'NEW';
 def create_dict():
   # print("Running build_dict...")
@@ -36,12 +36,30 @@ def create_dict():
             match = re.match(r"validurls\['/docs([^']+)'\] = '/docs([^']+)';", line.strip())
             if match:
                 old_url, new_url = match.groups()
+
+                # Remove leading slash
                 old_url = old_url.lstrip('/')
                 new_url = new_url.lstrip('/')
+
+                # 1) If '#' not in old_url, ensure it ends with '/'
+                if '#' not in old_url:
+                    if not old_url.endswith('/'):
+                        old_url += '/'
+
+                # 2) If '#' not in new_url, ensure it ends with '/'
+                if '#' not in new_url:
+                    if not new_url.endswith('/'):
+                        new_url += '/'
+
+                # Put the leading slash back into each
+                old_url = f"/{old_url}"
+                new_url = f"/{new_url}"
+
                 data_dict[f"entry_{index}"] = {
-                    "new_url": f"/{new_url}",
-                    "old_urls": [f"/{old_url}"]
+                    "new_url": new_url,
+                    "old_urls": [old_url]
                 }
+
                 total_old_urls += 1
 
     with open(REDIRECT_MATCHES, 'w') as f:
