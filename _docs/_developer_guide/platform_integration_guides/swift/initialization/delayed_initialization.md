@@ -106,4 +106,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 After you've prepared the SDK for delayed initialization, you can initialize the SDK asynchronously at any time in the future. Then the SDK will process all queued push notifications events originating from Braze.
 
-To initialize the Braze SDK, follow the [standard Swift SDK initialization process]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
+To initialize the Braze SDK, follow the [standard Swift SDK initialization process]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/#step-2-update-your-app-delegate).

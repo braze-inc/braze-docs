@@ -60,7 +60,7 @@ Popular browsers (such as Safari, Chrome, FireFox, and Edge) all support web pus
 ![An iPhone showing options to bookmark a website and save to the home screen]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Step 5: Show the native push prompt {#push-prompt}
-After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
+After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 {% alert note %}
 After you accept or decline the prompt, you need to delete and reinstall the website to your home screen to be able to show the prompt again.
@@ -84,4 +84,4 @@ button.onclick = function(){
 
 ## Next steps
 
-Next, send yourself a [test message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) to optimize your push opt-in rates.
+Next, send yourself a [test message]({{site.baseurl}}/developer_guide/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.

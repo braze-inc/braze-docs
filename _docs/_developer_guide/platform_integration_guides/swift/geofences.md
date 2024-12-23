@@ -22,7 +22,7 @@ As of iOS 14, geofences do not work reliably for users who choose to give their 
 Before you start, you'll need to complete the following:
 
 - Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
-- To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) enabled in addition to completing the standard push integration.
+- To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent/) enabled in addition to completing the standard push integration.
 
 ## Setting up geofences
 
@@ -92,7 +92,7 @@ To prevent battery drain and rate limiting, be sure to configure `distanceFilter
 
 ### Step 3: Verify background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/ignoring_internal/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ### Step 4: Update your `Info.plist`
 

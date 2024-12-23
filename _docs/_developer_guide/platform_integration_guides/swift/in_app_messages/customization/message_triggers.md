@@ -56,7 +56,7 @@ Due to a push message being used to record an SDK logged custom event, Braze wil
 
 ### Step 2: Create a silent push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) that is triggered via the server-sent event. 
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent/) that is triggered via the server-sent event. 
 
 ![An action-based delivery in-app message campaign that will be delivered to users whose user profiles have the custom event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 

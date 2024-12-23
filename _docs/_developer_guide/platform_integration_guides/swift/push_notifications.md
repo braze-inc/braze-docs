@@ -76,7 +76,7 @@ The automation steps performed by the SDK are compatible with pre-existing push 
 
 {% alert warning %}
 The SDK must be initialized on the main thread to enable push notification automation. SDK initialization must happen before the application has finished launching or in your AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) implementation.
-If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) documentation page.
+If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initialization/delayed_initialization/) documentation page.
 {% endalert %}
 
 #### Step 3.2: Override individual configurations (optional)
@@ -389,4 +389,4 @@ Create your push notification subscription in `application(_:didFinishLaunchingW
 
 ## Push primers {#push-primers}
 
-Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).

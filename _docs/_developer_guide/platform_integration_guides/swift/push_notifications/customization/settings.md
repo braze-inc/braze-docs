@@ -24,11 +24,11 @@ Select the **Alert Options** checkbox to see a dropdown of key-values available 
 
 ## Adding content-available flag
 
-Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/).
+Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent/).
 
 ## Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/), regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/rich/), regardless of the value of this checkbox.
 
 ## Update app badge count
 
@@ -36,7 +36,7 @@ Enter the number that you want to update your badge count to or use Liquid synta
 
 ## Sounds
 
-If you want your push notification to be accompanied by a custom sound when it is received, use the **Sound** field to specify the protocol URL of your sound file. For more on customization, refer to our [custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
+If you want your push notification to be accompanied by a custom sound when it is received, use the **Sound** field to specify the protocol URL of your sound file. For more on customization, refer to our [custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/sounds/) article.
 
 ## Collapse ID
 

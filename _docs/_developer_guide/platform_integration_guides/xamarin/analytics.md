@@ -171,7 +171,7 @@ For more information, see the [Android integration instructions]({{site.baseurl}
 {% endtab %}
 
 {% tab ios %}
-To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/).
+To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/geofences/).
 {% endtab %}
 {% endtabs %}
 

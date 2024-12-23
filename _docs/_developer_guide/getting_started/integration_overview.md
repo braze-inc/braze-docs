@@ -71,7 +71,7 @@ As a developer, you'll work with your team to define what additional, custom dat
 Keep data nomenclature consistent across tools. For example, your data warehouse may record "purchase limited time offer" in a particular way. You will need to decide if a custom event in Braze is needed to match this format.
 {% endalert %}
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
 
 ### Customizations planning
 Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview) for more information.

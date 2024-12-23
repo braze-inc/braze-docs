@@ -21,7 +21,7 @@ The following SDK versions is required to receive Push Stories:
 
 {% sdk_min_versions swift:5.0.0 %}
 
-Ensure that you have followed the [push notification integration tutorial]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
+Ensure that you have followed the [push notification integration tutorial]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/) to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
 ## Setting up Push Stories
 
@@ -57,7 +57,7 @@ If you do not add your app to an App Group, your app may fail to populate certai
 {% tabs local %}
 {% tab Swift Package Manager %}
 
-After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/), add `BrazePushStory` to your `Notification Content Extension`:
+After following the [Swift Package Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), add `BrazePushStory` to your `Notification Content Extension`:
 
 ![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.]({% image_buster /assets/img/swift/push_story/spm1.png %})
 

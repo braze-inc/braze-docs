@@ -40,5 +40,5 @@ Braze will support this new iOS and iPadOS Web Push without requiring additional
 While you do not need to upgrade your Braze iOS SDK for iOS 16, there are two other exciting updates:
 
 1. Braze has launched a [new Swift SDK](https://github.com/braze-inc/braze-swift-sdk). This brings improved performance, new features, and many improvements.
-2. Our Braze Swift SDK supports a new ["no-code" push primer feature]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)!
+2. Our Braze Swift SDK supports a new ["no-code" push primer feature]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)!
 

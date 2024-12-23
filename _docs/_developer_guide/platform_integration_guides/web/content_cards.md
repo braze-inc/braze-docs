@@ -14,7 +14,7 @@ channel: content cards
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+Before you can use Content Cards, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/).
 
 ## Standard feed UI
 
@@ -68,7 +68,7 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 The Content Cards data model is available in the Web SDK and offers the following Content Card types: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
 
 {% alert tip %}
-To log Content Card data, see [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics).
+To log Content Card data, see [Logging analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/).
 {% endalert %}
 
 ### Base card model
@@ -144,7 +144,7 @@ The [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.clas
 
 If you use the default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, you need need [log impressions]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
+If you use a custom integration for Content Cards, you need need [log impressions]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
 
 To determine if a Content Card is in the Control group for an A/B test, check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a `ControlCard` instance (`card instanceof braze.ControlCard`).
 
@@ -165,5 +165,5 @@ To determine if a Content Card is in the Control group for an A/B test, check th
 For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 
 {% alert note %}
-Ready to go further? When you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards) to get started with customization.
+Ready to go further? When you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/) to get started with customization.
 {% endalert %}

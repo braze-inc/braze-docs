@@ -9,7 +9,7 @@ page_order: 3
 > Learn about Content Cards for the Braze Swift SDK, including the different data models and card-specific properties available for your Swift application.
 
 {% alert tip %}
-When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).
 {% endalert %}
 
 ## Prerequisites
@@ -108,7 +108,7 @@ The Content Cards data model is available in the `BrazeKit` module of the Braze 
 - Classic image
 - Control
 
-To access the Content Cards data model, call `contentCards.cards` on your `braze` instance. See [Logging analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for more information on subscribing to card data.
+To access the Content Cards data model, call `contentCards.cards` on your `braze` instance. See [Logging analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for more information on subscribing to card data.
 
 {% alert note %}
 Keep in mind, `BrazeKit` offers an alternative [`ContentCardRaw`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw) class for Objective-C compatibility.
@@ -138,4 +138,4 @@ For more details on GIF support, refer to this [tutorial](https://braze-inc.gith
 
 ## Next steps
 
-If you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+If you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).

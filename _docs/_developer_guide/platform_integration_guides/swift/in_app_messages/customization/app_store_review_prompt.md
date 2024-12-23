@@ -20,7 +20,7 @@ Because this example prompt overrides default behavior of Braze, we cannot autom
 
 ### Step 1: Set the in-app message delegate
 
-First, set the [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/) in your app. 
+First, set the [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in_app_messages/customization/ui_delegates/) in your app. 
 
 ### Step 2: Disable the default App Store review message
 
