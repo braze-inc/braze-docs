@@ -9133,7 +9133,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
 CanvasStep, Progression
 {% endapitags %}
 
-This event occurs when a user progresses through a step in a Canvas with some outcome. Currently, only split steps – Audience Paths, Decision Split, Action Paths, Experiment – and Advance outcomes generate Step Progression events.
+This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
 {% tabs %}
 {% tab Mixpanel %}
 ```json
