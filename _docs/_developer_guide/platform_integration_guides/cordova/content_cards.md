@@ -1,14 +1,14 @@
 ---
 nav_title: Content Cards
 article_title: Content Cards integration
-page_order: 2
+page_order: 3
 ---
 
 # Content Cards integration
 
 > Learn how to integrate Content Cards for the Cordova Braze SDK.
 
-{% multi_lang_include cordova/prerequisites.md %}
+{% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
 ## Card Feeds
 

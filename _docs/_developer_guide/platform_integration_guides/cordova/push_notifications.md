@@ -11,29 +11,49 @@ description: "This article covers implementing push notifications on Cordova."
 channel: push
 ---
 
-# Push notification integration
+# Push notifications
 
-> Learn how to integrate push notifications for the Cordova Braze SDK.
+> Learn how to integrate push notifications for the Cordova Braze SDK, including rich push notifications and push stories.
 
-{% multi_lang_include cordova/prerequisites.md %}
+## Prerequisites
 
-## Basic push features
+Before you can use this feature, you'll need to integrate the [Braze Cordova SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/sdk_integration/) into your app.  After you integrate the SDK, basic push notification functionality is enabled by default. To use [rich push notifications](#setting-up-rich-push-notifications) and [push stories](#setting-up-push-stories), you'll need to set them up individually.
 
-By default, basic push notification features are enabled in the Braze Cordova plugin. You can disable these features by [customizing your XML configurations]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/#customization-options). For more in-depth native push notification features, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) push notification guides.
-
-## Extended push features
-
-{% alert important %}
-Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your Xcode project. This means you'll need to repeat this process anytime you modify your Cordova plugins.
+{% alert warning %}
+Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your iOS app's Xcode project. This means you’ll need to set these features up again anytime you modify your Cordova plugins.
 {% endalert %}
 
-### Rich push notifications
+## Disabling basic push notifications
 
-#### Step 1: Create a notification service extension
+After you integrate the Braze Cordova SDK, basic push notification functionality is enabled by default. To disable this functionality, add the following to your `config.xml` file. For more information, see [Optional configurations]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/sdk_integration#optional-configurations).
+
+{% tabs local %}
+{% tab iOS %}
+```xml
+<platform name="ios">
+    <preference name="com.braze.ios_disable_automatic_push_registration" value="NO" />
+    <preference name="com.braze.ios_disable_automatic_push_handling" value="NO" />
+</platform>
+```
+{% endtab %}
+
+{% tab Android %}
+```xml
+<platform name="android">
+    <preference name="com.braze.NAME" value="NO" />
+    <preference name="com.braze.NAME" value="NO" />
+</platform>
+```
+{% endtab %}
+{% endtabs %}
+
+## Setting up rich push notifications
+
+### Step 1: Create a notification service extension
 
 In your Xcode project, create a notification service extension. For a full walkthrough, see [iOS Rich Push Notifications Tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications).
 
-#### Step 2: Add a new target
+### Step 2: Add a new target
 
 Open your Podfile and add `BrazeNotificationService` to the notification service extension target [you just created](#step-1-create-a-notification-service-extension). If `BrazeNotificationService` is already added to a target, remove it before continuing. To avoid duplicate symbol errors, use static linking.
 
@@ -53,7 +73,7 @@ target 'MyAppRichNotificationService' do
 end
 ```
 
-#### Step 3: Reinstall your CocoaPods dependencies
+### Step 3: Reinstall your CocoaPods dependencies
 
 In the terminal, go to your project's iOS directory and reinstall your CocoaPod dependencies.
 
@@ -62,13 +82,13 @@ cd PATH_TO_PROJECT/platform/ios
 pod install
 ```
 
-### Push stories
+## Setting up push stories
 
-#### Step 1: Create a notification content extension
+### Step 1: Create a notification content extension
 
 In your Xcode project, create a notification content extension. For a full walkthrough, see [iOS Push Stories Tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/).
 
-#### Step 2: Configure your push app group
+### Step 2: Configure your push app group
 
 In your project's `config.xml` file, configure the push app group [you just created](#step-1-create-a-notification-content-extension).
 
@@ -82,7 +102,7 @@ Replace `PUSH_APP_GROUP` with the name of your push app group. Your `config.xml`
 <preference name="com.braze.ios_push_app_group" value="MyPushAppGroup" />
 ```
 
-#### Step 3: Add a new target
+### Step 3: Add a new target
 
 Open your Podfile and add `BrazePushStory` to the notification content extension target [you created previously](#step-1-create-a-notification-content-extension). To avoid duplicate symbol errors, use static linking.
 
@@ -102,7 +122,7 @@ target 'MyAppNotificationContentExtension' do
 end
 ```
 
-#### Step 4: Reinstall your CocoaPods dependencies
+### Step 4: Reinstall your CocoaPods dependencies
 
 In the terminal, go to your iOS directory and reinstall your CocoaPod dependencies.
 

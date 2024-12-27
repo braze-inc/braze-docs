@@ -1,16 +1,153 @@
 ---
-nav_title: Customizations
-article_title: Customizing the Cordova Braze SDK
-page_order: 1
+nav_title: SDK Integration
+article_title: Integrating the Cordova Braze SDK
+description: "Learn how to integrate and customize the Braze Cordova SDK."
+page_order: 0
 ---
 
-# Customizing the Cordova Braze SDK
+# Integrating the Braze Cordova SDK
 
-> These are the available customizations for the Cordova Braze SDK.
+> Learn how to integrate and customize the Braze Cordova SDK for iOS and Android.
 
-{% multi_lang_include cordova/prerequisites.md %}
+## Prerequisites
 
-## Customization options
+Before you start, verify your environment is supported by the [latest Braze Cordova SDK version](https://github.com/braze-inc/braze-cordova-sdk?tab=readme-ov-file#minimum-version-requirements).
+
+## Integrating the SDK
+
+### Step 1: Add the SDK to your project
+
+If you're on Cordova 6 or later, you can add the SDK directly from GitHub. Alternatively, you can download a ZIP of the [GitHub repository](https://github.com/braze-inc/braze-cordova-sdk) and add the SDK manually.
+
+{% tabs local %}
+{% tab geofence disabled %}
+If you don't plan on using location collection and geofences, use the `master` branch from GitHub.
+
+```bash
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
+```
+{% endtab %}
+
+{% tab geofence enabled %}
+If you plan on using location collection and geofences, use the `geofence-branch` from GitHub.
+
+```bash
+cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+You can switch between `master` and `geofence-branch` at anytime by repeating this step.
+{% endalert %}
+
+### Step 2: Configure your project
+
+Next, adding the following preferences to the `platform` element in your project's `config.xml` file.
+
+{% tabs %}
+{% tab ios %}
+```xml
+<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.ios_api_endpoint" value="CUSTOM_API_ENDPOINT" />
+```
+{% endtab %}
+
+{% tab android %}
+```xml
+<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.android_api_endpoint" value="CUSTOM_API_ENDPOINT" />
+```
+{% endtab %}
+{% endtabs %}
+
+Replace the following:
+
+| Value                 | Description                                                                                                                      |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| `BRAZE_API_KEY`       | Your [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys).              |
+| `CUSTOM_API_ENDPOINT` | A custom API endpoint. This endpoint is used to route your Braze instance data to the correct App Group in your Braze dashboard. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+The `platform` element in your `config.xml` file should be similar to the following:
+
+{% tabs %}
+{% tab ios %}
+```xml
+<platform name="ios">
+    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
+</platform>
+```
+{% endtab %}
+
+{% tab android %}
+```xml
+<platform name="android">
+    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
+</platform>
+```
+{% endtab %}
+{% endtabs %}
+
+## Platform-specific syntax
+
+The following section covers the platform-specific syntax when using Cordova with iOS or Android.
+
+### Integers
+
+{% tabs %}
+{% tab ios %}
+Integer preferences are read as string representations, like in the following example:
+
+```xml
+<platform name="ios">
+    <preference name="com.braze.ios_flush_interval_seconds" value="10" />
+    <preference name="com.braze.ios_session_timeout" value="5" />
+</platform>
+```
+{% endtab %}
+
+{% tab android %}
+Due to how the Cordova 8.0.0+ framework handles preferences, integer-only preferences (such as sender IDs) must be set to strings prepended with `str_`, like in the following example:
+
+```xml
+<platform name="android">
+    <preference name="com.braze.android_fcm_sender_id" value="str_64422926741" />
+    <preference name="com.braze.android_default_session_timeout" value="str_10" />
+</platform>
+```
+{% endtab %}
+{% endtabs %}
+
+### Booleans
+
+{% tabs %}
+{% tab ios %}
+Boolean preferences are read by the SDK using `YES` and `NO` keywords as a string representation, like in the following example:
+
+```xml
+<platform name="ios">
+    <preference name="com.braze.should_opt_in_when_push_authorized" value="YES" />
+    <preference name="com.braze.ios_disable_automatic_push_handling" value="NO" />
+</platform>
+```
+{% endtab %}
+
+{% tab android %}
+Boolean preferences are read by the SDK using `true` and `false` keywords as a string representation, like in the following example:
+
+```xml
+<platform name="android">
+    <preference name="com.braze.should_opt_in_when_push_authorized" value="true" />
+    <preference name="com.braze.is_session_start_based_timeout_enabled" value="false" />
+</platform>
+```
+{% endtab %}
+{% endtabs %}
+
+## Optional configurations
 
 You can add any of the following preferences to the `platform` element in your project's `config.xml` file:
 
@@ -37,6 +174,7 @@ You can add any of the following preferences to the `platform` element in your p
 | `ios_flush_interval_seconds` | Sets the interval in seconds between automatic data flushes. Defaults to 10 seconds. |
 | `ios_use_automatic_request_policy` | Sets whether the request policy for `Braze.Configuration.Api` should be automatic or manual. |
 | `should_opt_in_when_push_authorized` | Sets if a user’s notification subscription state should automatically be set to `optedIn` when push permissions are authorized. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
 For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/ios/BrazePlugin.m).
@@ -58,7 +196,7 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | `android_fcm_sender_id`                        | Sets the Firebase Cloud Messaging sender ID. |
 | `enable_location_collection`                   | Sets whether the automatic location collection is enabled (if the user permits). |
 | `geofences_enabled`                            | Sets whether geofences are enabled. |
-| `android_disable_auto_session_tracking`        | Sets whether to disable the Android Cordova plugin from automatically tracking sessions. |
+| `android_disable_auto_session_tracking`        | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#disabling-automatic-session-tracking-android-only) |
 | `sdk_authentication_enabled`                   | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature. |
 | `trigger_action_minimum_time_interval_seconds` | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds. |
 | `is_session_start_based_timeout_enabled`       | Sets whether the session timeout behavior to be based either on session start or session end events. |
@@ -72,6 +210,7 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | `is_push_deep_link_back_stack_activity_enabled` | Sets whether Braze will add an activity to the back stack when automatically following deep links for push. |
 | `push_deep_link_back_stack_activity_class_name` | Sets the activity that Braze will add to the back stack when automatically following deep links for push. |
 | `should_opt_in_when_push_authorized` | Sets if Braze should automatically opt-in the user when push is authorized. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
 For more detailed information, see [GitHub: Braze Android Cordova plugin](https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/android/BrazePlugin.kt).
@@ -138,56 +277,14 @@ The following is an example `config.xml` file with additional configurations:
 {% endtab %}
 {% endtabs %}
 
-## Platform-specific syntax
+## Disabling automatic session tracking (Android only)
 
-### Integers
-
-{% tabs %}
-{% tab ios %}
-Integer preferences are read as string representations, like in the following example:
-
-```xml
-<platform name="ios">
-    <preference name="com.braze.ios_flush_interval_seconds" value="10" />
-    <preference name="com.braze.ios_session_timeout" value="5" />
-</platform>
-```
-{% endtab %}
-
-{% tab android %}
-Due to how the Cordova 8.0.0+ framework handles preferences, integer-only preferences (such as sender IDs) must be set to strings prepended with `str_`, like in the following example:
+By default, the Android Cordova plugin automatically tracks sessions. To disable automatic session tracking, add the following preference to the `platform` element in your project's `config.xml` file:
 
 ```xml
 <platform name="android">
-    <preference name="com.braze.android_fcm_sender_id" value="str_64422926741" />
-    <preference name="com.braze.android_default_session_timeout" value="str_10" />
+    <preference name="com.braze.android_disable_auto_session_tracking" value="true" />
 </platform>
 ```
-{% endtab %}
-{% endtabs %}
 
-### Booleans
-
-{% tabs %}
-{% tab ios %}
-Boolean preferences are read by the SDK using `YES` and `NO` keywords as a string representation, like in the following example:
-
-```xml
-<platform name="ios">
-    <preference name="com.braze.should_opt_in_when_push_authorized" value="YES" />
-    <preference name="com.braze.ios_disable_automatic_push_handling" value="NO" />
-</platform>
-```
-{% endtab %}
-
-{% tab android %}
-Boolean preferences are read by the SDK using `true` and `false` keywords as a string representation, like in the following example:
-
-```xml
-<platform name="android">
-    <preference name="com.braze.should_opt_in_when_push_authorized" value="true" />
-    <preference name="com.braze.is_session_start_based_timeout_enabled" value="false" />
-</platform>
-```
-{% endtab %}
-{% endtabs %}
+To start tracking sessions again, call `BrazePlugin.startSessionTracking()`. Keep in mind, only sessions started after the next `Activity.onStart()` will be tracked.
