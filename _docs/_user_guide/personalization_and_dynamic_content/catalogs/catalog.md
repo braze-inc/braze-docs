@@ -65,7 +65,7 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 5. Click **Process Catalog** to create the catalog.
 
 {% alert note %}
-This data type cannot be edited after you set up your catalog.
+This data type cannot be edited after you set up your catalog. In addition, `NULL` value is not supported in CSV upload therefore will be treated as a string.
 {% endalert %}
 
 You can also use templates in a catalog name. For example, you can use the following:
