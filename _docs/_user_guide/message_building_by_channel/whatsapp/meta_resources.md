@@ -33,7 +33,7 @@ Meta recently updated their [opt-in policy](https://developers.facebook.com/docs
 
 Businesses still need to comply with all local laws and follow the below requirements when obtaining opt-in:
 
-Businesses must clearly state that a person is opting in to receive communication from the business
+- Businesses must clearly state that a person is opting in to receive communication from the business
 - Businesses must clearly state the business name that a person is opting in to receive messages from
 - Businesses must comply with applicable law
 
