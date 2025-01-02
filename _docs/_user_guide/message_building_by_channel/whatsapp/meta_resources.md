@@ -34,7 +34,7 @@ Meta recently updated their [opt-in policy](https://developers.facebook.com/docs
 Businesses still need to comply with all local laws and follow the below requirements when obtaining opt-in:
 
 Businesses must clearly state that a person is opting in to receive communication from the business
-Businesses must clearly state the business name that a person is opting in to receive messages from
+- Businesses must clearly state the business name that a person is opting in to receive messages from
 Businesses must comply with applicable law
 
 Although WhatsApp has loosened their policy, Braze still recommends collecting opt-in specific to the WhatsApp channel in order to foster the best customer experience and engagement rates. As always, check with your legal team to see what makes sense for your brand.
