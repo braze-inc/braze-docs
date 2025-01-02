@@ -28,7 +28,7 @@ Review the following Meta documentation for guidance with display names, phone n
 
 Meta recently updated their [opt-in policy](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Instead of requiring channel-specific consent, businesses can now message users on the platform if:
 
-1. The person has given their phone number
+1. The person has given their phone number.
 2. The person provided opt-in permission for general messaging, not just WhatsApp. 
 
 Businesses still need to comply with all local laws and follow the below requirements when obtaining opt-in:
