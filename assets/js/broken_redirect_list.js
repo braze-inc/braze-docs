@@ -267,7 +267,6 @@ validurls['/docs/partners/additional_channels/direct_mail/lob/'] = '/docs/partne
 validurls['/docs/partners/additional_channels/instant_chat/messenger/'] = '/docs/partners/message_orchestration/additional_channels/messaging/messenger/';
 validurls['/docs/partners/technology_partners/additional_channels/instant_chat/messenger/'] = '/docs/partners/message_orchestration/additional_channels/messaging/messenger/';
 validurls['/docs/partners/additional_channels/mobile_wallet/passkit/'] = '/docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/';
-validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/';
 validurls['/docs/partners/additional_channels/support/pypestream/'] = '/docs/partners/data_and_infrastructure_agility/support/pypestream/';
 validurls['/docs/partners/additional_channels/surveys/iterate/'] = '/docs/partners/message_orchestration/channel_extensions/surveys/iterate/';
 validurls['/docs/partners/advertising_technologies/attribution/adjust/'] = '/docs/partners/message_orchestration/attribution/adjust/';
@@ -1273,6 +1272,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
+validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar'] = '/docs/partners/home';
 
 // validurls['OLD'] = 'NEW';
