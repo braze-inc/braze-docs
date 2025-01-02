@@ -1273,4 +1273,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
+validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
+
 // validurls['OLD'] = 'NEW';
