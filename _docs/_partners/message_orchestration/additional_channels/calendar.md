@@ -11,5 +11,6 @@ search_tag: Partner
 
 partner_top_header: "Calendar"
 
-valid_partner_list:
+hidden: true
+noindex: true
 ---

@@ -1273,4 +1273,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
+validurls['/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar'] = '/docs/partners/home';
+
 // validurls['OLD'] = 'NEW';

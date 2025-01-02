@@ -6,6 +6,8 @@ description: "This reference article outlines the partnership between Braze and 
 page_type: partner
 search_tag: Partner
 
+hidden: true
+noindex: true
 ---
 
 # Rokt Calendar
