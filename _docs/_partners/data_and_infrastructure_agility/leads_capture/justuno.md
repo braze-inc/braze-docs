@@ -12,7 +12,6 @@ search_tag: Partner
 
 > [Justuno](https://www.justuno.com/) is...
 
-
 ## Use cases
 
 Braze allows any marketer to collect and take action on any amount of data from any source, so they can creatively engage with customers in real time, across channels from one platform.
@@ -22,12 +21,16 @@ Integrating Justuno and Braze will give you the best of both worlds. Users will 
 ## Prerequisites
 
 | Braze Rest API key | A Braze REST API key with the `users.track` and `custom_attributes.get` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2].|
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integrating Justuno with Braze
 
-### Step 1: Sync lead-capture workflows
+### Step 1: Create custom attributes in Braze
+
+To sync user attributes from Justuno to Braze, you'll need to create those attributes in Braze if you haven't already. You can do so by going to **Data Settings** > **Custom Attributes**, then creating your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+
+### Step 2: Get Braze your subscription group IDs
 
 To send profile data collected with Justuno to a specific Braze Email or SMS Subscription Groups, you'll need the following information from the Braze dashboard.
 
@@ -43,18 +46,30 @@ To locate these IDs:
 2. For each subscription group, note the ID located in the ID column.
 
 {% alert tip %}
-Keep these IDs close by, so you can easily reference them later.
+Save these IDs in a note so you can easily reference them later.
 {% endalert %}
 
-### Step 2: Create custom attributes in Braze
+### Step 3: Add the Braze app to Justuno
 
-Before you can sync any user attributes from Justuno, you'll need to create the equivalent custom attributes in Braze if you haven't already.
+#### Step 3.1: Add it to your account
 
-To create and manage custom attributes in Braze, go to **Data Settings** > **Custom Attributes**, then create your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+To add the Braze app to your Justuno account, go to **Account Settings** > **Apps**, then search for and select the Braze app.
 
-### Step 3: Set up Justuno workflow
+![The "Connect Apps" page in Justuno with the Braze app shown in the list of search results.]({% image_buster /assets/img/justuno/search-for-braze.png %})
 
-After the integration is set up, the following attributes will be automatically synced to Braze from Justuno:
+Enter the API key and base URL [you created previously](#prerequisites), then select **Connect**.
+
+![The Braze Authentication pop-up window asking for a Braze API key and base URL.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
+
+#### Step 3.2: Add it to your workflow
+
+To add the Braze app to your [Justuno workflow](https://hub.justuno.com/knowledge/workflows-overview), add the **Sync to App** action, then choose **Select App** > **Braze**. In the email and SMS subscription group ID fields, enter the IDs [you noted previously](#step-2-get-braze-subscription-group-ids).
+
+![The Braze app opened in a Justuno workflow with the option to add email and SMS subscription group IDs.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
+
+### Step 4: Configure your attributes
+
+The following attributes are automatically synced from Justuno to Braze:
 
 - Email  
 - Phone  
@@ -66,10 +81,12 @@ After the integration is set up, the following attributes will be automatically 
 
 To sync additional attributes:
 
-1. In your Justuno Workflow, select **Sync Another Property**.
+1. In the Braze app within your workflow, select **Sync Another Property**.
+    ![The Braze app opened in a Justuno workflow showing the "Sync Another Property" option.]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
 2. Choose which Braze attributes you'd like to sync.
 3. Match the properties in Justuno with their Braze equivalents (such as social handles, birthday, shopping preferences, survey responses, etc.). Keep in mind, these properties are considered 0 party data or 1st party data. To learn more, see [Justuno: Visitor data collection](https://www.justuno.com/guides/zero-first-party-data/).
 4. In the workflow builder, choose to **Save**, **Preview**, or **Publish** your workflow.
+    ![The "Publish" menu opened with the options to save, preview, or show version history.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
 
 ## Things to know
 
