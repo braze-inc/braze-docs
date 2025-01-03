@@ -65,17 +65,49 @@ The `glossary_page` value is used to apply the glossary page format. In the foll
 {% alert tip %}
 In certain layouts, a value like `"guide_top_text:"` might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. 
 <br>
+<code>
 For example:<br>
 guide_top_text: ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;# This is example Markdown formatting
+</code>
 {% endalert %}
 
 ## Other layouts
 
-### Blank config
+### `blank_config`
 
-The `blank_config` value is combined with `config_only: true` to make the current article a folder. This lets you create subsections without needing a landing page. Because the landing page becomes a folder and has no page content, users who try to visit the URL directly are automatically redirected to `www.braze.com/docs`. For more information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls/?tab=home%20page#redirecting-a-page).
+Use `blank_config` and [`config_only: true`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#navigation-only) to prevent that page's content from being displayed when its selected from the left-side navigation. This is recommended if there's no relevant content worth adding to a [subsection's]({{site.baseurl}}/contributing/content_management/#subsections) landing page.
 
-### Redirect
+```markdown
+---
+layout: blank_config
+config_only: true
+---
+```
 
-The `redirect` value is used to redirect the URL for an in-page heading. For more information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls/#redirecting-a-heading).
+In the following example, the `blank_config` and `config_only` keys are used to prevent the **YAML Front Matter** page from displaying its content&#8212;essentially using the page as a visual seperator only.
+
+![The left-side navigation for the Contributing section on Braze Docs. The "YAML Front Matter" page is selected, but the page content shows the previously selected page still.]()
+
+### `redirect`
+
+The `redirect` value is used to redirect a page from the existing URL to a different URL. If you plan on changing the page's filename or change any of the directory names in its relative path, **do not use this method**&#8212;instead, [create a redirect in the `broken_redirect_list.js` file]({{site.baseurl}}/contributing/content_management/redirecting_urls/#redirecting-a-heading).
+
+```markdown
+---
+layout: redirect
+redirect_to: NEW_URL
+---
+```
+
+Replace `NEW_URL` with the URL you want to redirect to with `https://www.braze.com/` removed from the URL string. In the following example, `_docs/_contributing/content_management/images.md` is set to automatically redirect to `https://www.braze.com/docs/contributing/home`.
+
+```markdown
+nav_title: Images
+article: Managing Images
+description: "Learn how to add, modify, and remove images on Braze Docs."
+page_order: 1
+
+layout: redirect
+redirect_to: /docs/contributing/home
+```
