@@ -30,7 +30,7 @@ Integrating Justuno and Braze will give you the best of both worlds. Users will 
 
 To sync user attributes from Justuno to Braze, you'll need to create those attributes in Braze if you haven't already. You can do so by going to **Data Settings** > **Custom Attributes**, then creating your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
-### Step 2: Get Braze your subscription group IDs
+### Step 2: Get your Braze subscription group IDs
 
 To send profile data collected with Justuno to a specific Braze Email or SMS Subscription Groups, you'll need the following information from the Braze dashboard.
 
