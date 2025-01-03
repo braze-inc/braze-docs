@@ -22,9 +22,15 @@ page_layout: PAGE_LAYOUT_VALUE
 
 ## Visual layouts
 
-### API page
+### `api_page`
 
-The `api_page` value is used to apply the API page format. In the following example, this format is applied to the [List integrations]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/) page:
+The `api_page` layout is used to apply the API page format. In the following example, this format is applied to the [List integrations]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/) page.
+
+```markdown
+---
+layout: api_page
+---
+```
 
 {% tabs local %}
 {% tab example output %}
@@ -32,9 +38,15 @@ The `api_page` value is used to apply the API page format. In the following exam
 {% endtab %}
 {% endtabs %}
 
-### Developer guide
+### `dev_guide`
 
-The `dev_guide` value is used to apply the developer guide format. In the following example, this format is applied to the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs) page: 
+The `dev_guide` layout is used to apply the developer guide format. In the following example, this format is applied to the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs) page.
+
+```markdown
+---
+layout: dev_guide
+---
+```
 
 {% tabs local %}
 {% tab example output %}
@@ -42,9 +54,15 @@ The `dev_guide` value is used to apply the developer guide format. In the follow
 {% endtab %}
 {% endtabs %}
 
-### Featured page
+### `featured`
 
-The `featured` value is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events) page:
+The `featured` layout is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events) page.
+
+```markdown
+---
+layout: featured
+---
+```
 
 {% tabs local %}
 {% tab example output %}
@@ -52,9 +70,15 @@ The `featured` value is used to apply the featured page format. In the following
 {% endtab %}
 {% endtabs %}
 
-### Glossary page
+### `glossary_page`
 
-The `glossary_page` value is used to apply the glossary page format. In the following example, this format is applied to the [Types of push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/types) page:
+The `glossary_page` layout is used to apply the glossary page format. In the following example, this format is applied to the [Types of push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/types) page.
+
+```markdown
+---
+layout: glossary_page
+---
+```
 
 {% tabs local %}
 {% tab example output %}
@@ -63,10 +87,8 @@ The `glossary_page` value is used to apply the glossary page format. In the foll
 {% endtabs %}
 
 {% alert tip %}
-In certain layouts, a value like `"guide_top_text:"` might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. 
-<br>
+In certain layouts, a value like `"guide_top_text:"` might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. For example:<br><br>
 <code>
-For example:<br>
 guide_top_text: ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;# This is example Markdown formatting
 </code>
@@ -76,7 +98,7 @@ guide_top_text: ><br>
 
 ### `blank_config`
 
-Use `blank_config` and [`config_only: true`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#navigation-only) to prevent that page's content from being displayed when its selected from the left-side navigation. This is recommended if there's no relevant content worth adding to a [subsection's]({{site.baseurl}}/contributing/content_management/#subsections) landing page.
+Use the `blank_config` layout with [`config_only: true`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#navigation-only) to prevent a page's content from displaying when its selected from the left-side navigation. This is helpful when you don't plan on adding content to a [subsection's]({{site.baseurl}}/contributing/content_management/#subsections) landing page.
 
 ```markdown
 ---
@@ -85,13 +107,19 @@ config_only: true
 ---
 ```
 
-In the following example, the `blank_config` and `config_only` keys are used to prevent the **YAML Front Matter** page from displaying its content&#8212;essentially using the page as a visual seperator only.
-
-![The left-side navigation for the Contributing section on Braze Docs. The "YAML Front Matter" page is selected, but the page content shows the previously selected page still.]()
+{% tabs local %}
+{% tab example output %}
+![The left-side navigation for the Contributing section on Braze Docs. The "YAML Front Matter" page is selected, but the page content shows the previously selected page still.]({% image_buster /assets/img/contributing/styling_examples/layouts/blank_config.png %})
+{% endtab %}
+{% endtabs %}
 
 ### `redirect`
 
-The `redirect` value is used to redirect a page from the existing URL to a different URL. If you plan on changing the page's filename or change any of the directory names in its relative path, **do not use this method**&#8212;instead, [create a redirect in the `broken_redirect_list.js` file]({{site.baseurl}}/contributing/content_management/redirecting_urls/#redirecting-a-heading).
+The `redirect` layout is used to redirect an existing page from its current URL to a different URL of your choice.
+
+{% alert warning %}
+Do not use this method if you also plan on moving the file, renaming the file, or renaming any of its parent directories. Instead, [create a redirect in the `broken_redirect_list.js` file]({{site.baseurl}}/contributing/content_management/redirecting_urls/#redirecting-a-heading).
+{% endalert %}
 
 ```markdown
 ---
@@ -100,7 +128,9 @@ redirect_to: NEW_URL
 ---
 ```
 
-Replace `NEW_URL` with the URL you want to redirect to with `https://www.braze.com/` removed from the URL string. In the following example, `_docs/_contributing/content_management/images.md` is set to automatically redirect to `https://www.braze.com/docs/contributing/home`.
+Replace `NEW_URL` with the URL you want to redirect to with `https://www.braze.com/` removed from the URL string.
+
+In the following example, `_docs/_contributing/content_management/images.md` is set to automatically redirect to `https://www.braze.com/docs/contributing/home`.
 
 ```markdown
 nav_title: Images
