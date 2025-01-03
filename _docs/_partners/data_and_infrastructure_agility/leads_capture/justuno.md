@@ -30,28 +30,9 @@ Integrating Justuno and Braze will give you the best of both worlds. Users will 
 
 To sync user attributes from Justuno to Braze, you'll need to create those attributes in Braze if you haven't already. You can do so by going to **Data Settings** > **Custom Attributes**, then creating your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
-### Step 2: Get your Braze subscription group IDs
+### Step 2: Add the Braze app to Justuno
 
-To send profile data collected with Justuno to a specific Braze Email or SMS Subscription Groups, you'll need the following information from the Braze dashboard.
-
-| ID Type                          | Required? | Description                                                                                                   |
-|----------------------------------|-----------|---------------------------------------------------------------------------------------------------------------|
-| Braze SMS Subscription Group ID  | Yes       | This ID is used to collect SMS consent from user profiles. If no ID is entered in Justuno, profiles will not have consent when Justuno pushes that profile to Braze. |
-| Braze Email Subscription Group ID | No        | If this ID is not entered in Justuno, Justuno will send the profile data to Braze as a user with no associated subscription groups. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-To locate these IDs:
-
-1. In Braze, go to **Audience** > **Subscriptions**.
-2. For each subscription group, note the ID located in the ID column.
-
-{% alert tip %}
-Save these IDs in a note so you can easily reference them later.
-{% endalert %}
-
-### Step 3: Add the Braze app to Justuno
-
-#### Step 3.1: Add it to your account
+#### Step 2.1: Add it to your account
 
 To add the Braze app to your Justuno account, go to **Account Settings** > **Apps**, then search for and select the Braze app.
 
@@ -61,9 +42,32 @@ Enter the API key and base URL [you created previously](#prerequisites), then se
 
 ![The Braze Authentication pop-up window asking for a Braze API key and base URL.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
 
-#### Step 3.2: Add it to your workflow
+#### Step 2.2: Add it to your workflow
 
-To add the Braze app to your [Justuno workflow](https://hub.justuno.com/knowledge/workflows-overview), add the **Sync to App** action, then choose **Select App** > **Braze**. In the email and SMS subscription group ID fields, enter the IDs [you noted previously](#step-2-get-braze-subscription-group-ids).
+To add the Braze app to your [Justuno workflow](https://hub.justuno.com/knowledge/workflows-overview), drag-and-drop the **Sync to App** action into your workflow, then choose **Select App** > **Braze**.
+
+![The "Select App" option located on the "Sync to App" action.]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
+
+### Step 3: Connect your Braze subscription groups
+
+To send profile data from Justuno to a specific Braze email or SMS Subscription Group, you'll need to add their ID to the Braze app in your Justuno workflow.
+
+| ID Type                          | Required? | Description                                                                                                   |
+|----------------------------------|-----------|---------------------------------------------------------------------------------------------------------------|
+| Braze SMS Subscription Group ID  | Yes       | This ID is used to collect SMS consent from user profiles. If no ID is entered in Justuno, profiles will not have consent when Justuno pushes that profile to Braze. |
+| Braze Email Subscription Group ID | No        | If this ID is not entered in Justuno, Justuno will send the profile data to Braze as a user with no associated subscription groups. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### Step 3.1: Locate the IDs in Braze
+
+To locate these IDs in the Braze dashboard:
+
+1. Go to **Audience** > **Subscriptions**.
+2. For each subscription group, note the ID located in the ID column.
+
+#### Step 3.2: Add the IDs to the Braze app
+
+In your Justuno workflow, open the Braze app, then enter the IDs for each subscription group.
 
 ![The Braze app opened in a Justuno workflow with the option to add email and SMS subscription group IDs.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
 
