@@ -52,7 +52,7 @@ Before you can sync any user attributes from Justuno, you'll need to create the 
 
 To create and manage custom attributes in Braze, go to **Data Settings** > **Custom Attributes**, then create your custom attributes. For a full walkthrough, see [Managing custom attributes in Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 
-### Step 3: Choose attributes to sync
+### Step 3: Set up Justuno workflow
 
 After the integration is set up, the following attributes will be automatically synced to Braze from Justuno:
 
