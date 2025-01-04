@@ -85,10 +85,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 - When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases.
 - When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
 
-{% alert important %}
-Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Example request
