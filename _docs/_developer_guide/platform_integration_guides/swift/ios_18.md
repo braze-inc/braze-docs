@@ -32,7 +32,7 @@ Apple's new [iPhone mirroring](https://www.apple.com/newsroom/2024/06/macos-sequ
 
 [Apple Intelligence](https://developer.apple.com/documentation/Updates/Apple-Intelligence) is now available for devices running iOS 18.1 and later.
 
-As a Braze user, the most important feature for you to be aware of is [notification summaries](https://support.apple.com/en-us/108781), which use on-device processing to automatically group and generate text summaries for related push notifications sent from a single app. End-users can tap to expand an app's summary to view each individual notification in their original format.
+As a Braze user, the most important feature for you to know is [notification summaries](https://support.apple.com/en-us/108781), which use on-device processing to automatically group and generate text summaries for related push notifications sent from a single app. End-users can tap to expand a summary and view each push notification as they were originally sent.
 
 Due to how these summaries are generated, you won't have control over their specific behavior or the generated text. However, this will not impact any analytics or reporting features, such as push-click tracking.
 
