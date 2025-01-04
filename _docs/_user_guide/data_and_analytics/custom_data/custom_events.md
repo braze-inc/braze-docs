@@ -52,11 +52,7 @@ You can add a description to a custom event after it's created if you have the `
 
 ## Adding tags
 
-You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events. 
-
-{% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
+You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events.
 
 ### Viewing usage reports
 
