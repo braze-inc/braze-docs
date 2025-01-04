@@ -15,13 +15,13 @@ description: "This article outlines details about the Identify users Braze endpo
 /users/identify
 {% endapimethod %}
 
-> Use this endpoint to identify an unidentified (alias-only or email-only) user using the provided external ID.
+> Use this endpoint to identify an unidentified (alias-only, email-only, or phone number-only) user using the provided external ID.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
 ## How it works
 
-Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile) or email address (email-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
+Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
 
 Identifying a user requires an `external_id` to be included in the `aliases_to_identify` or `emails_to_identify` object. If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
 
@@ -53,6 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
    "aliases_to_identify" : (required, array of alias to identify objects),
    "email_addresses": (optional, array of string) User emails for the users to identify,
+   "phone_numbers": (optional, array of string) User phone numbers for the users to identify,
    "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
 }
 ```
