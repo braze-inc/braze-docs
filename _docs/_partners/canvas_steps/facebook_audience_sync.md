@@ -302,7 +302,7 @@ Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically 
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<AD_ACCOUNT_ID>`
 - Value-Based Custom Audience TOC:
   - If your ad account is tied to your company’s Business Manager account, you must accept the TOS in your Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
-  - If your ad account is tied to your personal account (not associated with any business), you must accept the TOS here: https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID
+  - If your ad account is tied to your personal account (not associated with any business), you must accept the TOS here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>`
 
 ![An account with full control permissions to manage an ad account.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
 
