@@ -295,15 +295,19 @@ If you experience additional issues with your integration, refer to the followin
 
 #### Accept the terms of service
 
-Accept any pending Terms of Services from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of services.
+Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of services.
 
-1. The connected user needs to accept all terms of services for each of their ads account: 
-- User TOS for your personal Facebook account: https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID.
-- If your ad account is tied to your company’s Business Manager account, you need to accept the TOS from within your business manager account here for all ad accounts: https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID.
+1. The connected user needs to accept all terms of services for each of their ads account:
+- Custom Audience TOS for your personal Facebook account:
+`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<AD_ACCOUNT_ID>`
+- Value-Based Custom Audience TOC:
+  - If your ad account is tied to your company’s Business Manager account, you must accept the TOS in your Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+  - If your ad account is tied to your personal account (not associated with any business), you must accept the TOS here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>`
 
 ![An account with full control permissions to manage an ad account.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
 
 To find your account and business ID, follow these steps:
+
 1. Go to your [Facebook Ads Manager account](https://adsmanager.facebook.com/).
 2. Confirm you're using the right ad account by verifying it in the dropdown menu.
 3. In the URL, find the account ID after `act=` and the business ID after `business_id=`
