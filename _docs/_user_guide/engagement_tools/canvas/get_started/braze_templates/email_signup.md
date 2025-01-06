@@ -9,7 +9,7 @@ tool: Canvas
 
 # Email sign-up with double opt-in
 
-> Use the email sign-up with double opt-in template to expand your reach with verified email sign-ups. Target new users to share their email, confirm their subscription, and receive a promotion code, all in one seamless journey.
+> Use the email sign-up with double opt-in template to expand your reach with verified email sign-ups. Target new users to capture their email, confirm their subscription, and receive a promotion code, all in one seamless journey.
 
 This article will walk you through a use case for the **Email sign-up with double opt-in** template, which is designed for the consideration stage of the user lifecycle. When you’re finished, you’ll have created a Canvas that sends emails and in-app messages to users when they start a session or when they haven't completed their onboarding.
 
@@ -58,7 +58,7 @@ We'll also keep the **Action Based Options** as is so that users only enter the 
 
 ![An action-based entry schedule to enter users who start any session into the Canvas.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
-For the **Entry Window**, we'll update set the **Started Time (Required)** to our desired date and time.
+For the **Entry Window**, we'll update the **Started Time (Required)** to our desired date and time.
 
 ![An entry window with the start time January 16, 2025 at 12:30 pm. Users will enter this message in their local time zone.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
