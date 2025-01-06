@@ -20,10 +20,10 @@ To use locales in your messaging, compose an email campaign or Canvas. Select ei
 {% tabs %}
 {% tab HTML editor %}
 
-1. Highlight the text you want translated. Select **Insert Translation Tag**. This will wrap your text with translation tags. <br>![HTML editor with one selected locale]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. Highlight the text you want translated. Select **Insert Translation Tag**. This will wrap your text with translation tags. <br>![HTML editor with one selected locale.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Save the message as a draft.
 3. Select **Multi-language** and add your locales for the message using the dropdown.
-4. Select **Download template** to download the translation template as a CSV file. Then, fill in the translations in the CSV file. <br>![An example of a translation CSV file]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. Select **Download template** to download the translation template as a CSV file. Then, fill in the translations in the CSV file. <br>![An example of a translation CSV file.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. Select **Upload translations** to upload the CSV file with the completed translations.
 
 {% endtab %}
