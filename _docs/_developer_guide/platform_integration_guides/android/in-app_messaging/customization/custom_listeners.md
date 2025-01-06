@@ -75,14 +75,14 @@ However, if there is no in-app message being displayed, the following delegate m
 {% tab JAVA %}
 ```java
 @Override
-public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessageBase) {
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
   return InAppMessageOperation.DISPLAY_NOW;
 }
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InAppMessageOperation {
+override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
   return InAppMessageOperation.DISPLAY_NOW
 }
 ```
