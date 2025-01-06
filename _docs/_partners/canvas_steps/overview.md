@@ -83,6 +83,16 @@ If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any othe
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
+## Troubleshooting
+
+### Audience Sync error emails
+
+If the error is related to the overall partner integration (such as an authorization issue), the email is only sent to the user who connected the integration. If that user no longer exists, then the administrators will receive the emails. 
+
+If the error is related to issues with the Audience Sync Canvas step (such as "Audience Does Not Exist"), an email notification gets sent to the user who setup the Canvas. If that user no longer exists, then it falls back to the company administrator.
+
+To configure who will receive these emails, reach out to your customer success manager to add recipients under **Notification Preferences**. Because this changes the current behavior, you'll need to immediately add recipients to this new notification preference as Braze doesn't opt-in anyone by default, and to make sure no error emails are missed.
+
 [1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
 [2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}
 [3]: {% image_buster /assets/img/audience_sync/facebook_partner.png %}
