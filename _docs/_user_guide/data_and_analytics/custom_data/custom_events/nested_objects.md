@@ -27,7 +27,7 @@ The following SDK versions support nested objects:
 
 ## Step 1: Generate a schema
 
-To access the nested data in your custom event, generate a schema for each event with nested event properties. Generate a schema by following these steps:
+You can access the nested data in your custom event by generating a schema for each event with nested event properties. To generate a schema:
 
 1. Go to **Data Settings** > **Custom Events**.
 2. Select **Manage Properties** for the events with nested properties.
@@ -104,7 +104,7 @@ The following is a `/users/track` example with an "Ordered" custom event. After 
 
 ### Liquid templating
 
-The following Liquid templating examples demonstrate how to reference the nested properties saved from the preceding API request and use them in your Liquid messaging. Using Liquid and dot notation, the template will the nested data to find the specific node you want to include in your messages.
+The following shows how to create a Liquid template that references the nested properties requested from the [previous API request](#api-request-body).
 
 {% tabs %}
 {% tab Music Example %}

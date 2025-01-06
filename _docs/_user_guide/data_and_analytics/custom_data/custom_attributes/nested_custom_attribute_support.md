@@ -261,7 +261,9 @@ If you haven't captured dates as object properties initially, we recommend resen
 }
 ```
 
-Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
+{% alert note %}
+For nested custom attributes, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
+{% endalert %}
 
 ## Liquid templating
 
