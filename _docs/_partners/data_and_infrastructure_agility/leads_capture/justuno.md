@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Justuno
 
-> [Justuno](https://www.justuno.com/) is...
+> [Justuno](https://www.justuno.com/) let's you create fully optimized visitor experiences for all of your audiences with dynamic segments, offering the most advanced targeting available&#8212;all without impacting site speed or increasing dev work. Analyze conversion rates by viewing custom analytics like the number of profiles created, influenced return visitor rate, and pages per session to maintain a marketing advantage in your industry. Justuno enables you to increase revenue per visitor, establish meaningful customer engagements, and grow your business. Optimize the entire audience journey end-to-end with a connected platform.
 
 ## Use cases
 
