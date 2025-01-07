@@ -62,5 +62,31 @@ Because suppression lists can significantly impact the messages you send, only a
 Though the setup process seems similar to [segment creation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
 {% endalert %}
 
+{: start="4"}
+4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [How it works](#how-it-works) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".
+5. Save or activate your suppression list.
+- When you save, your suppression list will be saved but won't be activated, which means it won't go into effect. Your suppression list will remain inactive until you activate it, and inactive suppression lists won't impact messaging (users won't excluded from messages).
+- When you activate, your suppression list will be saved and immediately go into effect, which means users in your suppression list will immediately be excluded from campaigns or Canvases (except for ones containing an exception tag).
 
+{% alert note %}
+Only admins can save or activate suppression lists. You can have up to five active suppression lists at a time in the beta.
+{% alertend %}
+
+{: start="6"}
+6. You can deactivate or archive suppression lists when you no longer need them. 
+- To deactivate, select an active suppression list and select **Deactivate**. Deactivated suppression lists can be reactivated later.
+- To archive, do so from the **Segment Lists** page.
+
+## Checking suppression list usage
+
+### In a Canvas
+
+Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a Canvas. You can also view applied suppression lists in the **Summary** step.
+
+### In a campaign
+
+Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a campaign.
+
+### If a suppression list causes zero targeted users
+If your applied suppression list results in zero targeted users for a campaign or Canvas, a warning will display on the **Target Audience** and summary pages.
 
