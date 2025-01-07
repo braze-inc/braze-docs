@@ -57,8 +57,8 @@ Use templates to quickly re-use this webhook across the Braze platform.
 
 | Field | Details |
 | --- | --- |
-| Webhook URL | {% raw %}https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{% endraw %} |
-| HTTP method | POST |
+| Webhook URL | {% raw %}`https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/`{% endraw %} |
+| HTTP method | `POST` |
 | Request Body | JSON Key/Value Pairs |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
@@ -66,15 +66,13 @@ Use templates to quickly re-use this webhook across the Braze platform.
 
 Select **+ Add New Body Property** for each of the key/value pairs you want to map over from Braze to Salesforce. You can map over any field you want, so the following table is just one example.
 
-{% raw %}
 | Key | Value |
 | --- | --- |
-| firstName | {{${first_name}}} |
-| lastName | {{${last_name}}} |
-| email | {{${email_address}}} |
-| company | {{custom_attribute.${company}}} |
+| firstName | {% raw %}`{{${first_name}}}`{% endraw %} |
+| lastName | {% raw %}`{{${last_name}}}`{% endraw %} |
+| email | {% raw %}`{{${email_address}}}`{% endraw %} |
+| company | {% raw %}`{{custom_attribute.${company}}}`{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
-{% endraw %}
 
 #### Request headers
 
@@ -82,8 +80,8 @@ Select **+ Add New Header** for each of the following request headers.
 
 | Key | Value |
 | --- | --- |
-| Authorization | {% raw %} {% connected_content https://[insert_instance_name].my.salesforce.com/services/oauth2/token     :method post     :body client_id=[insert_client_id]&client_secret=[insert_client_secret]&grant_type=client_credentials     :save result %}Bearer {{result.access_token}} {% endraw %} |
-| Content-Type | application/json |
+| Authorization | {% raw %}`{% connected_content https://[insert_instance_name].my.salesforce.com/services/oauth2/token     :method post     :body client_id=[insert_client_id]&client_secret=[insert_client_secret]&grant_type=client_credentials     :save result %}Bearer {{result.access_token}}`{% endraw %} |
+| Content-Type | `application/json` |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 {: start="4" }
@@ -115,8 +113,8 @@ This example specifically demonstrates how to update a lead’s lead stage to �
 
 | Field | Details |
 | --- | --- |
-|Webhook URL | {% raw %}https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}{% endraw %} |
-| HTTP method | PATCH |
+|Webhook URL | {% raw %}`https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} |
+| HTTP method | `PATCH` |
 | Request Body | JSON Key/Value Pairs |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
@@ -126,7 +124,7 @@ Select **+ Add New Body Property** for the following key/value pair. Note that `
 
 | Key | Value |
 | --- | --- |
-| Lead_Stage__c | MQL |
+| `Lead_Stage__c` | `MQL` |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 #### Request headers
@@ -135,8 +133,8 @@ Select **+ Add New Header** for each of the following request headers.
 
 | Key | Value |
 | --- | --- |
-| Authorization | {% raw %} {% connected_content https://[insert_instance_name].my.salesforce.com/services/oauth2/token     :method post     :body client_id=[insert_client_id]&client_secret=[insert_client_secret]&grant_type=client_credentials     :save result %}Bearer {{result.access_token}} {% endraw %} |
-| Content-Type | application/json |
+| Authorization | {% raw %}`{% connected_content https://[insert_instance_name].my.salesforce.com/services/oauth2/token     :method post     :body client_id=[insert_client_id]&client_secret=[insert_client_secret]&grant_type=client_credentials     :save result %}Bearer {{result.access_token}}`{% endraw %} |
+| Content-Type | `application/json` |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 {: start="4"}
