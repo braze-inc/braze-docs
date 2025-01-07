@@ -3,7 +3,7 @@ nav_title: Reports Overview
 article_title: Reports Overview
 page_order: 0
 page_type: reference
-description: "This article provides guidance on which reports and analytics you can use to answer common marketing strategy questions."
+description: "This page provides guidance on which reports and analytics you can use to answer common marketing strategy questions."
 tool: Reports
 search_rank: 1
 ---
@@ -37,7 +37,7 @@ Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_s
 
 **Performance by Variant**
 
-[Analyze Variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) in a live Canvas to see automatically calculated conversion rates for every conversion event. You'll also see uplift and confidence calculations for each variant and conversion event in an easy-to-compare table format.
+[Analyze Variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) in a live Canvas to view automatically calculated conversion rates for every conversion event. You can also view uplift and confidence calculations for each variant and conversion event in an easy-to-compare table format.
 
 More questions you can answer with this report:
 
@@ -77,7 +77,7 @@ Use Retention Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_too
 
 Check out this report to:
 
-- Determine how effective a message was for re-engaging users in the long run by analyzing the occurrence of different events up to 1 month after receiving a campaign.
+- Determine how effective a message was for re-engaging users in the long run by analyzing the occurrence of different events up to one month after receiving a campaign.
 - Compare the occurrence of different events across variants of an [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 More questions you can answer with this report:
