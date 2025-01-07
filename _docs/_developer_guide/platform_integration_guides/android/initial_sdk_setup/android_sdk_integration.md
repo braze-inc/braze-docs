@@ -46,12 +46,6 @@ The following example shows where to place the dependency line in your `build.gr
 
 ![Android studio displaying the "build.gradle", with the dependency code added to the end of the file.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
-#### Perform Gradle sync
-
-Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
-
-![A banner in Android Studio stating: "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
-
 ## Step 2: Configure the Braze SDK in braze.xml
 
 {% alert note %}

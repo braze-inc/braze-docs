@@ -77,21 +77,19 @@ For customers who have previously undergone the Facebook App Review process for 
 ### Step 2: Accept custom audiences terms of service
 
 Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
-`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
+`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<YOUR_AD_ACCOUNT_ID>`
 
 ### Step 3: Add a Facebook Audience component in Canvas Flow
 
 Add a component in your Canvas and select **Facebook Audience**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![A list of components to add to the Canvas.][18]{: style="max-width:35%;"} ![The Audience Sync component.][20]{: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
-Click on the **Custom Audience** button to open the component editor.
+Select on the **Custom Audience** button to open the component editor. Then, select **Facebook** as the Audience Sync partner.
 
-Select **Facebook** as the desired Audience Sync partner.
-
-![][19]{: style="max-width:80%;"}
+!["Set up Audience Sync" with options for choosing a partner.][19]{: style="max-width:80%;"}
 
 Select the desired Facebook ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
@@ -102,11 +100,11 @@ Select the desired Facebook ad account. Under the **Choose a New or Existing Aud
 2. Select **Add Users to Audience**, and choose the fields you would like to sync with Facebook. 
 3. Next, select **Create Audience** to save your audience.
 
-![]({% image_buster /assets/img/audience_sync/fb_sync.png %})
+![Audience sync setup for "abandoned-cart" audience with the email, phone, first name, and last name information to match.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
 
 You'll be notified at the top of the step editor if the audience is created successfully or if an error occurs during this process. You can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![]({% image_buster /assets/img/audience_sync/fb_sync2.png %})
+![A success message that the "abandoned_cart" audience was created.]({% image_buster /assets/img/audience_sync/fb_sync2.png %})
 
 When you launch a Canvas with a new audience, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Audience Sync step.
 
@@ -207,8 +205,8 @@ At this time, value-based lookalike custom audiences are not supposed by Braze. 
 
 To use Audience Sync to Facebook, you need to accept these terms of service agreement. 
 
-- If your ad account is directly associated with your personal Facebook account, you can accept the terms of service from in your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID`.
-- If your ad account is tied to your company's Business Manager account, you need to accept the terms of service in your Facebook Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID`.
+- If your ad account is directly associated with your personal Facebook account, you can accept the terms of service from in your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
+- If your ad account is tied to your company's Business Manager account, you need to accept the terms of service in your Facebook Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 After you have accepted your Facebook custom audience terms of service, do the following:
 
@@ -295,15 +293,19 @@ If you experience additional issues with your integration, refer to the followin
 
 #### Accept the terms of service
 
-Accept any pending Terms of Services from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of services.
+Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of services.
 
-1. The connected user needs to accept all terms of services for each of their ads account: 
-- User TOS for your personal Facebook account: https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID.
-- If your ad account is tied to your company’s Business Manager account, you need to accept the TOS from within your business manager account here for all ad accounts: https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID.
+1. The connected user needs to accept all terms of services for each of their ads account:
+- Custom Audience TOS for your personal Facebook account:
+`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<AD_ACCOUNT_ID>`
+- Value-Based Custom Audience TOC:
+  - If your ad account is tied to your company’s Business Manager account, you must accept the TOS in your Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+  - If your ad account is tied to your personal account (not associated with any business), you must accept the TOS here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>`
 
 ![An account with full control permissions to manage an ad account.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
 
 To find your account and business ID, follow these steps:
+
 1. Go to your [Facebook Ads Manager account](https://adsmanager.facebook.com/).
 2. Confirm you're using the right ad account by verifying it in the dropdown menu.
 3. In the URL, find the account ID after `act=` and the business ID after `business_id=`
