@@ -38,25 +38,28 @@ def update_old_links(filepath, redirects):
         new_url = data["new_url"]
         old_urls = data["old_urls"]
 
+        # Replace {{site.baseurl}} references
         for old in old_urls:
-            # If there's an anchor (#), match exactly.
-            # Otherwise, match with or without trailing slash.
             if "#" in old:
-                # Exact match
                 pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
             else:
-                # old.rstrip('/') removes any trailing slash
-                # The /? makes the slash optional in the pattern
                 old_noslash = old.rstrip('/')
                 pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old_noslash) + r"/?\)"
-
-            # Count how many times the old link appears
             count_before = len(re.findall(pattern, content))
             if count_before > 0:
-                # Replace all occurrences with the new URL
-                content = re.sub(pattern,
-                                 "(" + "{{site.baseurl}}" + new_url + ")",
-                                 content)
+                content = re.sub(pattern, "(" + "{{site.baseurl}}" + new_url + ")", content)
+                total_replacements += count_before
+
+        # Replace YAML front matter links (link: /docs...)
+        for old in old_urls:
+            if "#" in old:
+                pattern = r'(link:\s*)' + re.escape('/docs' + old)
+            else:
+                old_noslash = old.rstrip('/')
+                pattern = r'(link:\s*)' + re.escape('/docs' + old_noslash) + r'/?'
+            count_before = len(re.findall(pattern, content))
+            if count_before > 0:
+                content = re.sub(pattern, r'\1' + '/docs' + new_url, content)
                 total_replacements += count_before
 
     # If content changed, write the file back out
@@ -104,11 +107,9 @@ def main(path):
     redirects = get_redirect_matches(REDIRECT_MATCHES)
 
     if os.path.isdir(path):
-        # Process directory
         total_replacements = process_directory(path, redirects)
         print(f"Total replacements made across all files: {total_replacements}")
     elif os.path.isfile(path):
-        # Process single file
         total_replacements = process_single_file(path, redirects)
         print(f"Total replacements made: {total_replacements}")
     else:
