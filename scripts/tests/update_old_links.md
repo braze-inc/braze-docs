@@ -6,7 +6,7 @@ guide_featured_list:
 - name: Good link 1
   link: https://www.braze.com/docs/developer_guide/platform_wide/getting_started/analytics_overview
 - name: Good link 2
-  link: /developer_guide/getting_started/analytics_overview
+  link: /docs/developer_guide/getting_started/analytics_overview
 - name: Bad link 1
   link: /docs/best_practices/#android-push-category
 - name: Bad link 2
