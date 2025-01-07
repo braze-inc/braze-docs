@@ -77,10 +77,6 @@ Feature flag rollouts remain consistent for users across devices and sessions.
 
 This strategy helps ensure that users are shown a consistent experience in your app and don't flip-flop back and forth across sessions. Of course, disabling a feature down to 0% will remove all users from the feature flag, which is helpful if you discover a bug or need to disable the feature altogether.
 
-### Can I create a segment of users who are currently in a feature flag? {#feature-flag-filter}
-
-This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team or email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
-
 ## Technical topics
 
 ### Can feature flags be used to control when the Braze SDK is initialized? {#initialization}

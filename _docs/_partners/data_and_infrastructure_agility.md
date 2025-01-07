@@ -141,5 +141,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
 - name: Optimizely
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/optimizely/
-  
+- name: Justuno
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/ 
 ---

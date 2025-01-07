@@ -43,14 +43,22 @@ new Thread(new Runnable() {
 {% tab KOTLIN %}
 
 ```kotlin
-Thread(Runnable {
-  try {
-    val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext())
-    Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
-  } catch (e: Exception) {
-    e.printStackTrace()
+suspend fun fetchAndSetAdvertisingId(
+  context: Context,
+  scope: CoroutineScope = GlobalScope
+) {
+  scope.launch(Dispatchers.IO) {
+    try {
+      val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
+      Braze.getInstance(context).setGoogleAdvertisingId(
+        idInfo.id,
+        idInfo.isLimitAdTrackingEnabled
+      )
+    } catch (e: Exception) {
+      e.printStackTrace()
+    }
   }
-}).start()
+}
 ```
 
 {% endtab %}
