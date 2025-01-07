@@ -182,4 +182,4 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-There will be at least one entry in the Message Activity Log related to the error that triggered the automated email.
+There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.
