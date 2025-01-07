@@ -143,14 +143,6 @@ Select **+ Add New Header** for each of the following request headers.
 
 ![A filled-out webhook template to update a lead.][7]{: style="max-width:70%;"}
 
-## Troubleshooting
-
-These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) to find out why a Webhook failed and if any errors occurred.
-
-For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
-
-![An error response body stating that the URL isn't a valid URL.][8]
-
 ## Using these webhooks in an operational workflow
 
 You can quickly add your templates to your operational workflows in Braze, such as:
@@ -190,6 +182,14 @@ Add a subsequent step to your user update to check if a user has crossed your de
 Now your Canvas flow will update users who’ve crossed your MQL threshold!
 
 ![A Canvas user update step that checks if a user crosses the MQL threshold and, if the user does pass, updates Salesforce.][5]{: style="max-width:50%;"}
+
+## Troubleshooting
+
+These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) to find out why a Webhook failed and if any errors occurred.
+
+For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
+
+![An error response body stating that the URL isn't a valid URL.][8]
 
 [1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
 [2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
