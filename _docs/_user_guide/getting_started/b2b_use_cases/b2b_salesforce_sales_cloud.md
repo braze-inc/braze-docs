@@ -29,7 +29,7 @@ This integration is purely to update Salesforce from Braze as part of your lead 
 This integration requires you to create a connected app in Salesforce Sales Cloud by following the steps in the Salesforce documentation: [Configure a Connected App for the OAuth 2.0 Client Credentials Flow](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5).
 
 When you configure the necessary OAuth settings for the connected app (step 2 of the Salesforce documentation), keep all oAuth settings with their default values and selections except for the following:
-1. Select **Enable for device** flow.
+1. Select **Enable for device** flow. You can leave **Callback URL** blank, as it will default to a placeholder.
 2. For selected **OAuth Scopes**, add **Manage user data via APIs (api)**.
 3. Select **Enable Client Credentials Flow**.
 
@@ -144,6 +144,14 @@ Select **+ Add New Header** for each of the following request headers.
 
 ![A filled-out webhook template to update a lead.][7]{: style="max-width:70%;"}
 
+## Troubleshooting
+
+These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) to find out why a Webhook failed and if any errors occurred.
+
+For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
+
+![An error response body stating that the URL isn't a valid URL.][8]
+
 ## Using these webhooks in an operational workflow
 
 You can quickly add your templates to your operational workflows in Braze, such as:
@@ -191,3 +199,4 @@ Now your Canvas flow will update users who’ve crossed your MQL threshold!
 [5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
 [6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
 [7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
+[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}
