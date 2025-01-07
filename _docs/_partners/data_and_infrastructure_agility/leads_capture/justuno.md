@@ -16,7 +16,7 @@ search_tag: Partner
 
 Braze allows any marketer to collect and take action on any amount of data from any source, so they can creatively engage with customers in real time, across channels from one platform.
 
-Integrating Justuno and Braze will give you the best of both worlds. Users will be able to combine the customer data saved in Braze with the visitor and customer data saved in Justuno and create more personalized experiences for the all audiences. This will increase the effectiveness of the marketing campaigns and customer engagements.
+Integrating Justuno and Braze gives you the best of both worlds. You can combine the customer data saved in Braze with the visitor and customer data saved in Justuno and create more personalized experiences for all audiences. This increases the effectiveness of your marketing campaigns and customer engagements.
 
 ## Prerequisites
 
@@ -88,13 +88,13 @@ To sync additional attributes:
 1. In the Braze app within your workflow, select **Sync Another Property**.
     ![The Braze app opened in a Justuno workflow showing the "Sync Another Property" option.]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
 2. Choose which Braze attributes you'd like to sync.
-3. Match the properties in Justuno with their Braze equivalents (such as social handles, birthday, shopping preferences, survey responses, etc.). Keep in mind, these properties are considered 0 party data or 1st party data. To learn more, see [Justuno: Visitor data collection](https://www.justuno.com/guides/zero-first-party-data/).
+3. Match the properties in Justuno with their Braze equivalents (such as social handles, birthday, shopping preferences, survey responses, and similar). Keep in mind, these properties are considered 0 party data or 1st party data. To learn more, refer to [Justuno: Visitor data collection](https://www.justuno.com/guides/zero-first-party-data/).
 4. In the workflow builder, choose to **Save**, **Preview**, or **Publish** your workflow.
     ![The "Publish" menu opened with the options to save, preview, or show version history.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
 
 ## Things to know
 
-- Users must manually input the subscription group ID in the app settings.  
+- You must manually input the subscription group ID in the app settings.  
 - The following Braze data types are **not supported**: Object, Object Array.  
 - Implicit SMS consent is provided when Justuno's SMS consent field is not used.  
 - Explicit SMS consent is respected if the Justuno design includes the consent field.
