@@ -14,6 +14,8 @@ description: "Learn how to use Braze webhooks to create and update leads in Sale
 This is a community-submitted integration and isn’t directly supported by Braze. Only official Braze-provided webhook templates are supported by Braze. 
 {% endalert %}
 
+## How it works
+
 The Braze and Salesforce Sales Cloud integration uses Braze webhooks to create and update leads in Salesforce Sales Cloud through the Salesforce [sobjects/Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.html) endpoint.
 
 Braze currently offers two integrations to Salesforce Sales Cloud for the following use cases:
@@ -28,22 +30,21 @@ This integration is purely to update Salesforce from Braze as part of your lead 
 
 This integration requires you to create a connected app in Salesforce Sales Cloud by following the steps in the Salesforce documentation: [Configure a Connected App for the OAuth 2.0 Client Credentials Flow](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5).
 
-When you configure the necessary OAuth settings for the connected app (step 2 of the Salesforce documentation), keep all oAuth settings with their default values and selections except for the following:
+When you configure the necessary OAuth settings for the connected app, keep all oAuth settings with their default values and selections except for the following:
 1. Select **Enable for device** flow. You can leave **Callback URL** blank, as it will default to a placeholder.
 2. For selected **OAuth Scopes**, add **Manage user data via APIs (api)**.
 3. Select **Enable Client Credentials Flow**.
 
 ## Creating a lead in Salesforce Sales Cloud {#creating-lead}
 
-As your customer engagement platform, Braze can generate new leads based on user flows such as filling out a form on a landing page. When that happens, you can use a Braze Salesforce Sales Cloud webhook to create a corresponding lead in Salesforce. This section will teach you how to do so.
+As your customer engagement platform, Braze can generate new leads based on user flows such as filling out a form on a landing page. When that happens, you can use a Braze Salesforce Sales Cloud webhook to create a corresponding lead in Salesforce.
 
 ### Step 1: Collect your `client_id` and `client_secret`
 
 1. In Salesforce, go to **Platform Tools** > **Apps** > **App Manager**.
 2. Find your newly created Braze App and select **View**.
 3. Under **Consumer Key and Secret**, select **Manage Consumer Details**.
-4. On the resulting page, take note of your **Consumer Key** and **Consumer Secret**.
-    - The **Consumer Key** is your `client_id`, and the **Consumer Secret** is your `client_secret`.
+4. On the resulting page, take note of your **Consumer Key** and **Consumer Secret**. The **Consumer Key** is your `client_id`, and the **Consumer Secret** is your `client_secret`.
 
 ### Step 2: Set up your webhook template
 
@@ -172,7 +173,7 @@ Add a subsequent step to your user update to check if a user has crossed your de
 #### Adding Canvas step to check for users who passed the MQL threshold 
 
 1. Add an **Audience Path** step with two groups: “MQL Threshold” and “Everyone Else”.
-2. In the “MQL Threshold” group, look for any users who currently don’t have a status of “MQL” (for example, `lead_stage` equals “Lead”), but have a lead score that is over your defined threshold (for example, `lead_score` > 50). If so, they move forward to the next step, if not, they exit.
+2. In the “MQL Threshold” group, look for any users who currently don’t have a status of “MQL” (for example, `lead_stage` equals “Lead”), but have a lead score that is over your defined threshold (for example, `lead_score` greater than 50). If so, they move forward to the next step, if not, they exit.
 
 ![The “MQL Threshold” Audience Path group with filters for a `lead_stage` equalling “Lead” and a `lead_score` being more than “50”.][2]{: style="max-width:70%;"}
 
@@ -182,7 +183,7 @@ Add a subsequent step to your user update to check if a user has crossed your de
 ![The “Update to MQL” User Update step that updates the `lead_stage` attribute to have a value of “MQL”.][3]{: style="max-width:70%;"}
 
 {: start="4" }
-4. Add a webhook step that updates Salesforce with the new MQL stage
+4. Add a webhook step that updates Salesforce with the new MQL stage.
 
 ![The “Update Salesforce” webhook step with completed details.][4]{: style="max-width:70%;"}
 
