@@ -89,7 +89,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 ## View whether a user is in a Global Control Group
 
-You can view Global Control Group membership by going to the **Engagement** tab of an individual user's profile and scrolling to the **Miscellaneous** section.
+You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
 
 ![A "Miscellaneous" section reporting that the user has a random bucket number is 2030 and is in the Global Control Group.][1]{: style="max-width:60%;"}
 
