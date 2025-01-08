@@ -3,6 +3,7 @@ nav_title: Data Centers
 article_title: Data Centers
 page_order: 0.5
 page_type: reference
+permalink: /data_centers/
 description: "This reference article covers information about data centers, including where they're located and how to sign up for region-specific data centers."
 ---
 
