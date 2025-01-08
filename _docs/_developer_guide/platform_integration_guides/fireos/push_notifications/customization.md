@@ -16,7 +16,7 @@ channel: push
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Advanced Settings
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings/
+    link: /docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/
     image: /assets/img/braze_icons/settings-01.svg
 
 

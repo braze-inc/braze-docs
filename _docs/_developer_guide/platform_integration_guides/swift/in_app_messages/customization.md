@@ -15,19 +15,19 @@ description: "This landing page covers the Braze iOS SDK in-app message customiz
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: In-App Message UI Delegate
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
+    link: /docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/ui_delegates/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Custom On-Click Behavior
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click/
+    link: /docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/on_click_behavior/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Custom Triggering
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/
+    link: /docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/message_triggers/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Modal Dismissal
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal/
+    link: /docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/modal_dismissals/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Example - App Store Review Prompt
-    link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/
+    link: /docs/developer_guide/platform_integration_guides/swift/in_app_messages/customization/app_store_review_prompt/
     image: /assets/img/braze_icons/eye.svg
 
 

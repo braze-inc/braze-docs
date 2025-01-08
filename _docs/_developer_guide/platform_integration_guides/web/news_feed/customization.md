@@ -15,7 +15,7 @@ description: "This landing page covers the Braze Web SDK News Feed customization
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
-    link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/custom_styling/
+    link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/styling/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Key-Value Pairs
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/key_value_pairs/

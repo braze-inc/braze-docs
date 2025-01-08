@@ -18,29 +18,29 @@ description: "This landing page covers the Braze Android and FireOS SDK in-app m
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_styling/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/styling/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Custom Listeners
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/listeners/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/listeners/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Message Dismissal
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/message_dismissals/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Key-Value Pairs
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/key_value_pairs/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/key_value_pairs/
     image: /assets/img/braze_icons/code-square-01.svg
 
   - name: GIFs
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/gif/
     image: /assets/img/braze_icons/image-01.svg
   - name: YouTube in HTML
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/youtube_in_html/
     image: /assets/img/braze_icons/youtube.svg
   - name: Google Review Prompt
-    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt/
+    link: /docs/developer_guide/platform_integration_guides/android/in_app_messages/customization/app_store_review_prompt/
     image: /assets/img/braze_icons/google.svg
 
 

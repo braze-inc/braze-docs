@@ -17,19 +17,19 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
     image: /assets/img/braze_icons/annotation-alert.svg
   - name: Custom Sounds
-    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/sounds/
     image: /assets/img/braze_icons/play-square.svg
   - name: Rich Notifications
-    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/rich/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/
     image: /assets/img/braze_icons/key-01.svg
   - name: Ignoring Internal Push
-    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/ignoring_internal/
     image: /assets/img/braze_icons/eye-off.svg
   - name: Advanced Settings
-    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
+    link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/settings/
     image: /assets/img/braze_icons/settings-01.svg
 
 
