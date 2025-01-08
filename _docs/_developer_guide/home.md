@@ -1,5 +1,6 @@
 ---
 page_order: 0
+nav_title: Home
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
 guide_top_text: "This is where developers can find all the integrations available with Braze. To connect, learn, and get inspired with other developers building with Braze, join the <a href='https://www.braze.com/dev-portal'>Braze developer community</a>."

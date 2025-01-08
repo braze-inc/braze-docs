@@ -1,8 +1,8 @@
 ---
+page_order: 3
 nav_title: Content Cards
 article_title: Content Card Customization
 layout: dev_guide
-page_order: 5
 channel:
   - content cards
 platform:
