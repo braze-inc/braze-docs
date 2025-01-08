@@ -44,6 +44,9 @@ guide_menu_list:
   - name: Multi-Language Settings
     link: /docs/multi_language_support/
     image: /assets/img/braze_icons/list.svg
+  - name: Brand Guidelines
+    link: /docs/user_guide/administrative/app_settings/brand_guidelines/
+    image: /assets/img/braze_icons/edit-05.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
