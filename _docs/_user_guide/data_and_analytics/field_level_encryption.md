@@ -66,7 +66,7 @@ When updating email address in Braze, you should use the hashed email value wher
 - Adding or updating users via CSV
 
 {% alert note %}
-When creating a new user, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created. Similarly, if you're adding an email address to an existing user who doesn't have an email, you must add `email_encrypted`. Otherwise, the user will not be updated.
+When creating a new user with an email address, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created. Similarly, if you're adding an email address to an existing user who doesn't have an email, you must add `email_encrypted`. Otherwise, the user will not be updated.
 {% endalert %}
 
 ## Considerations
