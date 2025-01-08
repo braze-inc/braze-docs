@@ -72,7 +72,7 @@ description: "If you're new to Braze Docs, start with this step-by-step tutorial
 {% endtab %}
 {% endtabs %}
 
-### `navigation title`
+### `nav_title`
 
 The `nav_title` key is used to set the page title on the left-side navigation bar on Braze Docs. This key accepts any `string` less than 30 characters. If the [`hidden`](#hide-page-from-navigation) key is set to `true`, `nav_title` is not required.
 
