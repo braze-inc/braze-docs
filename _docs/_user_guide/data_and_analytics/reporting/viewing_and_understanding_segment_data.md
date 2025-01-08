@@ -3,7 +3,7 @@ nav_title: Segment Data
 article_title: Viewing and Understanding Segment Data
 page_order: 2
 page_type: reference
-description: "This reference article explains the segments section of your Braze dashboard, and includes a summary the statistics provided."
+description: "This page explains the segments section of your Braze dashboard, and includes a summary of the statistics provided."
 tool: 
   - Segments
   - Reports
@@ -11,23 +11,23 @@ tool:
 ---
 # Segment data
 
-> This reference article explains the segments section of your Braze dashboard, and includes a summary of the statistics provided.
+> This page explains the segments section of your Braze dashboard, and includes a summary of the statistics provided.
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
 
 ![Segments page][1]
 
-After clicking on the name of a segment, you'll be able to view segment statistics and filters. You can edit your segment by adding or deleting filters. Be sure to save any changes!
+After selecting the name of a segment, you can view segment statistics and filters, and edit the segment by adding or deleting filters. Be sure to save any changes!
 
 ![Segment data][2]
 
-When you turn [analytics tracking on for a segment][9], Braze will let you view sessions, custom events, and revenue over time by this segment.
+When you turn on [analytics tracking for a segment][9], Braze lets you view sessions, custom events, and revenue over time by this segment.
 
 ### Segment statistics
 
-You will see the following segment statistics, which update in real-time as you add or delete filters:
+You can view the following segment statistics, which update in real-time as you add or delete filters:
 
 <style>
     .no-split {
@@ -57,11 +57,11 @@ You will see the following segment statistics, which update in real-time as you 
         </tr>
         <tr>
             <td class="no-split">Emailable (Opted-In)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's often a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push Enabled (Opted-In)</td>
-            <td class="no-split">Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes.</td>
+            <td class="no-split">Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. "Opted In" refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes.</td>
         </tr>
     </tbody>
 </table>
@@ -92,7 +92,7 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 ![User Preview][8]
 
-## Performance data by segment
+## Viewing performance data by segment
 
 Use [Query Builder report templates]({{site.baseurl}}/user_guide/data_and_analytics/reporting/data_by_segments/) to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
@@ -104,8 +104,8 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_a
 2. Filter templates for those that have metrics that include “segment breakdowns”.
 3. Select the template you want to use.
 4. Fill the variables in your SQL template in the [Variables](#variables) tab.
-5. (optional) Directly edit the SQL in the template.
-6. Click **Run Query**. Your results will display in a table.
+5. (Optional) Directly edit the SQL in the template.
+6. Select **Run Query**. Your results will display in a table.
 
 ## Variables {#variables}
 
@@ -129,9 +129,9 @@ The variables include:
 Data is available for time periods where both of these conditions are met:
 
 1. [Segment analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
-2. The performance data by segment feature is turned on. During the early access phase, we will gradually roll this feature out to customers. 
+2. The performance data by segment feature is turned on.
 
-You won’t be able to access data from time periods prior to when this feature is turned on for your company. For example, if analytics tracking is turned on for Segment A on October 1 and this feature is turned on for your company on October 2, then you can only see data for Segment A for the campaigns and Canvases that recorded metrics after October 2. 
+You can't access data from time periods prior to when this feature is turned on for your company. For example, if analytics tracking is turned on for Segment A on October 1 and this feature is turned on for your company on October 2, then you can only view data for Segment A for the campaigns and Canvases that recorded metrics after October 2. 
 
 If your company turned on this feature on October 2, and turned on analytics tracking for Segment B on October 3, then you can only see data for Segment B for the campaigns and Canvases that recorded metrics after October 3.
 

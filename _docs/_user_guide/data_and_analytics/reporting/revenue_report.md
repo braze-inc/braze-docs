@@ -2,7 +2,7 @@
 nav_title: Revenue Report
 article_title: Revenue Report
 page_type: reference
-description: "This reference article covers the the Revenue Report page."
+description: "This page describes how to use the Revenue Report page to view data on revenue over specific periods of time, a specific product revenue, and your app’s total revenue."
 tool: Reports
 ---
 
@@ -13,7 +13,7 @@ tool: Reports
 To view a report for your revenue from the dashboard, go to **Analytics** > **Revenue Report**. 
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
 {% endalert %}
 
 ## Customizing your revenue report

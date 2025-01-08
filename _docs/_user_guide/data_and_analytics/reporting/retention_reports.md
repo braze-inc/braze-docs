@@ -4,7 +4,7 @@ article_title: Retention Reports for Campaigns and Canvases
 page_order: 5
 tool: Reports
 page_type: reference
-description: "This reference article goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."
+description: "This page goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."
 ---
 
 # Retention reports
@@ -15,7 +15,7 @@ description: "This reference article goes over how to measure user retention for
 Retention Reports are not available for API-triggered campaigns.
 {% endalert %}
 
-## Run a retention report
+## Running a retention report
 
 ### Step 1: Select a date range
 
@@ -25,19 +25,19 @@ Get started by visiting any campaign or Canvas in your Braze dashboard, and sele
 
 This report will include all users who initially entered the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report.
 
-To select a date range, you must navigate to the upper right-hand corner of the campaign or Canvas **Analytics** page. Here you may select various ranges or set a custom range for your report.
+To select a date range, navigate to the campaign or Canvas **Analytics** page and select various ranges or set a custom range for your report.
 
 ### Step 2: Select a retention event
 
 {% tabs %}
 {% tab Campaign %}
 
-Next, scroll down to the **Campaign Retention** section. Campaign retention shows you the rate at which any user who has received this specific campaign has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the campaign.
+Next, go to the **Campaign Retention** section. Campaign retention shows you the rate at which any user who has received this specific campaign has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the campaign.
 
 {% endtab %}
 {% tab Canvas %}
 
-Next, click **Analyze Variants** at the bottom of the page. From here, you can analyze your variants, check out your funnel report, and view your retention report. Canvas retention shows you the rate at which any user who has received this specific Canvas has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the Canvas.
+Next, select **Analyze Variants**. From here, you can analyze your variants, check out your funnel report, and view your retention report. Canvas retention shows you the rate at which any user who has received this specific Canvas has performed a retention event (specified by you on the retention report) over the 30 days from the time they received the Canvas.
 
 {% endtab %}
 {% endtabs %}
@@ -46,13 +46,13 @@ Next, click **Analyze Variants** at the bottom of the page. From here, you can a
 
 ### Step 3: Generate the report
 
-Once you've selected a retention event, click **Run Report** to start the query.
+After you've selected a retention event, select **Run Report** to start the query.
 
 ![Run Report][2]{: style="max-width:80%"}
 
 This query may take a few minutes to run, depending on how much data needs to be retrieved to generate the results. If it takes too long, you'll see a notification asking you to retry loading the report again. You may need to wait up to five minutes before the report will load.
 
-Once the report is generated, it can't be re-run with the same retention event for 24 hours. You will always see a timestamp of when the report was last generated, and an option to regenerate, if it's been more than a day. You can, however, change the retention event and re-run the report to look at the impact of the campaign on different KPIs.
+After the report is generated, it can't be re-run with the same retention event for 24 hours. You will always see a timestamp of when the report was last generated, and an option to regenerate, if it's been more than a day. You can, however, change the retention event and re-run the report to look at the impact of the campaign on different KPIs.
 
 The report will only list days on which the campaign or Canvas was sending messages. For some campaigns and Canvases, that may mean the report only shows one day if it was only sent once. If it's recurring or triggered, you may see multiple days in the table.
 
@@ -75,23 +75,23 @@ The retention report offers both a rolling retention and range retention formula
 
 ### Rolling retention
 
-Rolling retention measures how many users come back and do the retention event on or after any of the days listed across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the campaign or Canvas was sent will be counted under the "30 days" column in that row.
+Rolling retention measures how many users come back and do the retention event on or after any of the days listed across the top of the report. So, if a user started a session between day three and seven, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the campaign or Canvas was sent will be counted under the "30 days" column in that row.
 
-A user who completes the event multiple times during a window of 30+ days will be counted as part of multiple time frames. For instance, a user who completes a session after 1 day will be incremented in the columns for >0 and >1. If they then complete the event after 3 days, they will again be incremented in the prior columns (>0 and >1), which could result in the retention rate exceeding 100%.
+A user who completes the event multiple times during a window of 30+ days will be counted as part of multiple time frames. For example, a user who completes a session after one day will be incremented in the columns for >0 and >1. If they then complete the event after three days, they will again be incremented in the prior columns (>0 and >1), which could result in the retention rate exceeding 100%.
 
 #### How to read rolling retention reports
 
-The way to read the retention report chart for a day 3 column would be Y% or Y number of users (based on units chosen) performed the event 3 or more days after receiving the campaign on day Z.
+The way to read the retention report chart for a day three column would be Y% or Y number of users (based on units chosen) performed the event three or more days after receiving the campaign on day Z.
 
 ![Rolling Report]({% image_buster /assets/img/campaign_retention3.png %})
 
-As another example, referring to the table in the preceding image, on the 25th of March, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after receiving the campaign. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after receiving the campaign.
+As another example, referring to the table in the preceding image, on the 25th of March, a total of 38 users performed the retention event. Day zero retention was 68.42%, meaning that 68.42% of users performed the retention event zero or more days (on day zero or later) after receiving the campaign. Day seven retention was 57.89%, meaning 57.89% of users performed the event seven or more days (on day seven or later) after receiving the campaign.
 
 This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage or number value in the day 30 column tells you the percentage of users who returned on day 30 or after.
 
 ### Range retention
 
-Range retention measures how many users come back in the range of days listed across the top of the report. So, if a user started a session between days 3 and 7 and then again on day 13, they would be counted as retained under both "Day 3-7" and "Day 7-14" ranges.
+Range retention measures how many users come back in the range of days listed across the top of the report. So, if a user started a session between days three and seven and then again on day 13, they would be counted as retained under both "Day 3-7" and "Day 7-14" ranges.
 
 #### How to read range retention reports
 

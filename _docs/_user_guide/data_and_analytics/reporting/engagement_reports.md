@@ -20,8 +20,6 @@ tool:
 You need "Export User Data" permissions to run Engagement Reports.
 {% endalert %}
 
-## Overview
-
 With Engagement Reports, you can manually select campaigns and Canvases to include in your email report, or specify rules to automatically select relevant campaigns and Canvases.
 
 Regardless of the number of campaigns or Canvases you select, up to two CSV files are generated—one for all campaign data and one for all Canvas data. You can access these CSV files from the link embedded inside your report email. Engagement Reports are not saved in the Braze dashboard.
@@ -36,10 +34,10 @@ You can re-run the report to generate updated statistics.
 
 ### Step 1: Create a report
 
-In your dashboard account, navigate to **Analytics** > **Engagement Reports**. Click **+ Create New Report**.
+In your dashboard account, go to **Analytics** > **Engagement Reports**. Select **+ Create New Report**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Engagement Reports** under **Data**.
 {% endalert %}
 
 ### Step 2: Add messages
@@ -61,7 +59,7 @@ This option lets you automatically include all messages that include a specific 
 
 ### Step 3: Add statistics {#add-statistics-to-your-reports}
 
-The **Add Stats** step shows you statistics for the types of campaigns or Canvases you have selected. For example, if you selected email messages, you will only see relevant email statistics. If you picked a combination of email and push, you will see the statistics for those two channels.
+The **Add Stats** step shows you statistics for the types of campaigns or Canvases you have selected. For example, if you selected email messages, you can only view relevant email statistics. If you picked a combination of email and push, you can view the statistics for those two channels.
 
 ![engagement_report_add_stats][3]
 
@@ -98,7 +96,7 @@ By default, the data range shown is based on your company's time zone and will g
 
 #### Select data display
 
-By default, the data displayed in the engagement reports is daily (1 day). If you want to view this data across different intervals, you can choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can look at your engagement by week, month, quarter, etc. Should a time-centric aggregation not suffice, you can also elect to export data at the campaign or Canvas level.
+By default, the data displayed in the engagement reports is daily (one day). To view this data across different intervals, choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can view your engagement by week, month, quarter, or similar. Should a time-centric aggregation not suffice, you can also elect to export data at the campaign or Canvas level.
 
 ![engagement_reports_data_coverage][4]
 
@@ -107,17 +105,17 @@ By default, the data displayed in the engagement reports is daily (1 day). If yo
 There are two options when scheduling your report:
 
 - **Send immediately:** After the report is launched, Braze will send this report immediately.
-- **Send at a designated time:** This option gives you the flexibility to choose how frequently you would like to receive this report. You can choose to send this report every set number of days, weeks or months. You can also define when to stop sending the report.
+- **Send at a designated time:** This option gives you the flexibility to choose how frequently you receive this report. You can choose to send this report every set number of days, weeks or months. You can also define when to stop sending the report.
 
 ![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
 
 ### Step 5: Review and launch
 
-The final step of setting up your report shows a view-only overview of your configured options. Review your report, and when you're satisfied, click **Launch Report**.
+The final step of setting up your report shows a view-only overview of your configured options. Review your report, and when you're satisfied, select **Launch Report**.
 
 ### Step 6: Check your email  
 
-You will receive an email with links to your reports at your chosen time or schedule. **These links expire 1 hour after the report was sent.** When you click on the provided links you will automatically download a ZIP file containing your CSV files-one for all campaigns.
+You will receive an email with links to your reports at your chosen time or schedule. **These links expire 1 hour after the report was sent.** When you select the provided links you will automatically download a ZIP file containing your CSV files-one for all campaigns.
 
 The report contains all statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 
