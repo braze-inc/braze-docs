@@ -299,7 +299,7 @@ validurls['/docs/partners/channel_extensions/support/zendesk/'] = '/docs/partner
 validurls['/docs/partners/data_augmentation/contextual_location/accuweather/'] = '/docs/partners/message_personalization/location/accuweather/';
 validurls['/docs/partners/data_augmentation/contextual_location/bluedot/'] = '/docs/partners/message_personalization/location/bluedot/';
 validurls['/docs/partners/data_augmentation/contextual_location/foursquare/'] = '/docs/partners/message_personalization/location/foursquare/';
-validurls['/docs/partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/message_personalization/location/gimbal/';
+validurls['/docs/partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/message_personalization/location/infillion/';
 validurls['/docs/partners/data_augmentation/contextual_location/neura_actions/'] = '/docs/partners/message_personalization/location/neura_actions/';
 validurls['/docs/partners/data_augmentation/contextual_location/radar/'] = '/docs/partners/message_personalization/location/radar/';
 validurls['/docs/partners/data_augmentation/recommendation/amazon_personalize/'] = '/docs/partners/message_personalization/dynamic_content/amazon_personalize/';
@@ -745,7 +745,7 @@ validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/cu
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/foursquare/'] = '/docs/partners/message_personalization/location/foursquare/';
-validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/message_personalization/location/gimbal/';
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/message_personalization/location/infillion/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/data_and_infrastructure_agility/analytics/neura_insights/';
 validurls['/docs/partners/technology_partners/data_augmentation/recommendation/certona/'] = '/docs/partners/message_personalization/dynamic_content/certona/';
 validurls['/docs/partners/message_personalization/playable'] = '/docs/partners/message_personalization/dynamic_content/playable/';
@@ -1276,5 +1276,7 @@ validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs
 // validurls['/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar'] = '/docs/partners/home';
 
 validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
+
+validurls['/partners/gimbal/'] = '/partners/infillion/';
 
 // validurls['OLD'] = 'NEW';
