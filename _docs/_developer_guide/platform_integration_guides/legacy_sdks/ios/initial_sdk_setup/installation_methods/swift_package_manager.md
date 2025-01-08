@@ -6,6 +6,7 @@ page_order: 3
 description: "This tutorial covers installing the Braze SDK using Swift Package Manager for iOS."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

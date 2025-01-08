@@ -7,6 +7,7 @@ description: "This article covers Content Card feed customization options in you
 channel:
   - content cards
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

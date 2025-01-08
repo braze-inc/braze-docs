@@ -6,6 +6,7 @@ page_order: 3
 description: "This reference article shows how to set custom attributes in your iOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

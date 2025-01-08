@@ -6,6 +6,7 @@ page_order: 1
 description: "This reference article shows how to set user IDs in your iOS app, suggested user ID naming conventions, and some best practices."
  
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

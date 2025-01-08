@@ -6,6 +6,7 @@ page_order: 8
 description: "This article shows how to disable data collection for your iOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

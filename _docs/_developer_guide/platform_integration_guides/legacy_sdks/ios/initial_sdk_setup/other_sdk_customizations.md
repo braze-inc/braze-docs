@@ -6,6 +6,7 @@ description: "This reference article covers SDK customization such as log level,
 page_order: 3
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

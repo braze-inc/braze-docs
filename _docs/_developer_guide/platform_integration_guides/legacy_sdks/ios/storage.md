@@ -7,6 +7,7 @@ page_type: reference
 description: "This reference article describes the device-level properties captured by the Braze iOS SDK."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

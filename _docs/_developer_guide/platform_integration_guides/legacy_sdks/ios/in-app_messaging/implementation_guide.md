@@ -7,6 +7,7 @@ description: "This advanced implementation guide covers iOS in-app message code 
 channel:
   - in-app messages
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

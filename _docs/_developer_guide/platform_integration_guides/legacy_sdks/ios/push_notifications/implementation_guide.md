@@ -7,6 +7,7 @@ description: "This advanced implementation guide covers how to leverage iOS push
 channel:
   - push
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

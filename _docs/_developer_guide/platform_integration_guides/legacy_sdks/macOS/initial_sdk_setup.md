@@ -7,6 +7,7 @@ page_type: reference
 description: "This reference article provides resources for initial integration of the Braze SDK on macOS."
 search_rank: 1
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

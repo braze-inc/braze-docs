@@ -6,6 +6,7 @@ page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

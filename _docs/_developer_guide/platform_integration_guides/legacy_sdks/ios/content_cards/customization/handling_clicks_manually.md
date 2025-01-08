@@ -7,6 +7,7 @@ description: "This article covers how to handle Content Cards clicks manually in
 channel:
   - content cards
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

@@ -25,5 +25,6 @@ guide_featured_list:
 
 
 noindex: true
+hidden: true
 ---
 <br><br>

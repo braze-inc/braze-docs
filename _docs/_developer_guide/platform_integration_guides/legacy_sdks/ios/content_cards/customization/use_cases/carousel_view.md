@@ -7,6 +7,7 @@ description: "This article covers how to implement a Content Card carousel view 
 channel:
   - content cards
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

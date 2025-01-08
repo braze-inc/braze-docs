@@ -31,6 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-square.svg
 
 noindex: true
+hidden: true
 ---
 <br>
 

@@ -6,6 +6,7 @@ description: "This reference article shows how to finish integrating the Braze S
 page_order: 2
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

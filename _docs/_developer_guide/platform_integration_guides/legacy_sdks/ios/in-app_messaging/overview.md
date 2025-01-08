@@ -8,6 +8,7 @@ channel:
   - in-app messages
 search_rank: 4
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

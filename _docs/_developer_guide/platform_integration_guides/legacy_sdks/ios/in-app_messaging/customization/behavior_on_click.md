@@ -7,6 +7,7 @@ description: "This reference article covers custom in-app messaging on-click beh
 channel:
   - in-app messages
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

@@ -6,6 +6,7 @@ page_order: 4
 description: "This article covers logging custom events using Gimbal Beacons for iOS."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

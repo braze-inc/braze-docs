@@ -7,6 +7,7 @@ page_type: reference
 description: "This page describes how to fetch and display News Feed data in your tvOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

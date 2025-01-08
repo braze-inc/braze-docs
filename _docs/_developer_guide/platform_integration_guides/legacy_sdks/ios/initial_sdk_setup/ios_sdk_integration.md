@@ -7,6 +7,7 @@ page_order: 10
 platform: iOS
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

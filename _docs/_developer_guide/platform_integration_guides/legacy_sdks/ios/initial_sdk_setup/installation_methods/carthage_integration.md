@@ -6,6 +6,7 @@ page_order: 1
 description: "This reference article shows how to integrate the Braze SDK using Carthage for iOS."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

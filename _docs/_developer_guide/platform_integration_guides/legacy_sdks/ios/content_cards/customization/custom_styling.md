@@ -7,6 +7,7 @@ description: "This article covers Content Card custom styling options for your i
 channel:
   - content cards
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

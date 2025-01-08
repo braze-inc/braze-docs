@@ -6,6 +6,7 @@ page_order: 9
 description: "This reference article covers iOS sample apps."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

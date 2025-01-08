@@ -6,6 +6,7 @@ page_order: 7
 description: "This article covers how to initialize, configure, and implement the Google Tag manager into your iOS app."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

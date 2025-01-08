@@ -6,6 +6,7 @@ page_order: 1
 description: "This article covers implementing fine network traffic control for your iOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

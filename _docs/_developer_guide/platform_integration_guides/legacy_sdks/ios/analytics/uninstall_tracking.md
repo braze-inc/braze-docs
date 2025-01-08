@@ -6,6 +6,7 @@ page_order: 7
 description: "This article covers how to configure uninstall tracking for your iOS application."
 
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

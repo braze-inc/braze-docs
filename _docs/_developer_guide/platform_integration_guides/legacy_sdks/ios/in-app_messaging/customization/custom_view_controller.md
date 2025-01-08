@@ -7,6 +7,7 @@ description: "This reference article covers how to leverage a custom in-app mess
 channel:
   - in-app messages
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}

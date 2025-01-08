@@ -7,6 +7,7 @@ page_type: reference
 description: "This page covers initial setup steps for the tvOS Braze SDK."
 search_rank: 1
 noindex: true
+hidden: true
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}
