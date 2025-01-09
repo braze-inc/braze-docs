@@ -1,7 +1,7 @@
 ---
 nav_title: Connected Sources
 article_title: Connected Sources
-description: "This reference article covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
+description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
 
@@ -13,7 +13,7 @@ page_type: reference
 
 After adding a connected source to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI segments let you write SQL that directly queries your data warehouse (using data there that’s made available through your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
-For more information on creating a segment with this source, view [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+For more information on creating a segment with this source, refer to [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
 Because connected sources run on your data warehouse directly, you will incur all costs associated with running these queries in your data warehouse. Connected sources don't consume data points, and CDI segments don't consume SQL segment credits.
@@ -141,7 +141,7 @@ When connecting different workspaces to the same Snowflake account, you must cre
 
 #### Step 2.4: Allow Braze IPs in your Snowflake network policy (optional)
 
-Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on doing this, view the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
+Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on doing this, refer to the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
 {% subtabs %}
 {% subtab United States (US) %}
@@ -194,7 +194,7 @@ If you have a firewall or other network policies, you must give Braze network ac
 
 You may also need to change your security groups to allow Braze access to your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
 
-If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, see [AWS: How do I access a private Amazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
+If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, refer to [AWS: How do I access a private Amazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
 {% subtabs %}
 {% subtab United States (US) %}
@@ -241,7 +241,7 @@ You may choose to grant access to all tables in a dataset, or grant privileges o
 
 The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
 
-After creating the service account and granting permissions, generate a JSON key. For more information, view [Google Cloud: Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). You'll upload this to the Braze dashboard later.
+After creating the service account and granting permissions, generate a JSON key. For more information, refer to [Google Cloud: Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). You'll upload this to the Braze dashboard later.
 
 #### Step 2.2: Allow access to Braze IPs    
 
@@ -335,28 +335,28 @@ Braze will connect to your Fabric warehouse using a service principal with Entra
 * Principal ID (also called application ID) for the service principal 
 * Client secret for Braze to authenticate
 
-1. In the Azure portal, navigate to Microsoft Entra admin center, and then App Registrations 
+1. In the Azure portal, navigate to the Microsoft Entra admin center, and then **App Registrations**.
 2. Select **+ New registration** under **Identity > Applications > App registrations** 
 3. Enter a name, and select `Accounts in this organizational directory only` as the supported account type. Then, select **Register**. 
 4. Select the application (service principal) you just created, then navigate to **Certificates & secrets > + New client secret**
-5. Enter a description for the secret, and set an expiry period for the secret. Then, click add. 
+5. Enter a description for the secret, and set an expiry period for the secret. Then, select **Add**. 
 6. Note the client secret created to use in the Braze setup. 
 
 {% alert note %}
-Azure does not allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.
+Azure doesn't allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.
 {% endalert %}
 
 #### Step 2.2: Grant access to Fabric resources 
-You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings > Governance and insights > Admin portal > Tenant settings**.    
+You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings** > **Governance and insights** > **Admin portal** > **Tenant settings**.    
 
 * In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
 * In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
 
 #### Step 2.3: Get warehouse connection string 
+
 You will need the SQL endpoint for your warehouse in order for Braze to connect. To retrieve the SQL endpoint, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
 
 ![The "Fabric Console" page in Microsoft Azure, where users should retrieve the SQL Connection String.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
-
 
 #### Step 2.4: Allow Braze IPs in Firewall (Optional)
 
@@ -602,7 +602,7 @@ You may set up multiple sources with Braze, but each source should be configured
 
 ## Using the connected source
 
-After the source is created, it can be used to create one or more CDI segments. For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+After the source is created, you can use it to create one or more CDI segments. For more information on creating a segment with this source, refer to the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating more compute resources (such as a larger warehouse) to the Braze user.
