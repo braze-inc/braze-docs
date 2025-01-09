@@ -23,6 +23,22 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp Product Updates
 
+### November 2024: Changes to WhatsApp Opt-in policy
+*Last Updated January 2025*
+
+Meta recently updated their [opt-in policy](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Instead of requiring channel-specific consent, businesses can now message users on the platform if:
+
+1. The person has given their phone number.
+2. The person provided opt-in permission for general messaging, not just WhatsApp. 
+
+Businesses still need to comply with all local laws and follow the below requirements when obtaining opt-in:
+
+- Businesses must clearly state that a person is opting in to receive communication from the business
+- Businesses must clearly state the business name that a person is opting in to receive messages from
+- Businesses must comply with applicable law
+
+Although WhatsApp has loosened their policy, Braze still recommends collecting opt-in specific to the WhatsApp channel in order to foster the best customer experience and engagement rates. As always, check with your legal team to see what makes sense for your brand.
+
 ### November 2024: Updates to the per-user marketing template limit for people in the US, ahead of the holiday season
 *Last Updated December 2024*
 
