@@ -30,12 +30,13 @@ USAGE:
   ./bdocs [option]
 
 OPTIONS:
-  deploy       Create the deploy body text for weekly deployments
-  release      Create the release body text for monthly releases
-  tlinks       Transform reference links to inline links on 1 or more pages
-  rlinks       Remove reference links that are not being used on 1 or more pages
-  redirects    List the old URLs for all new redirects in this branch
-  help         Display this help message and exit
+  deploy         Create the deploy body text for weekly deployments
+  release        Create the release body text for monthly releases
+  tlinks         Transform reference links to inline links on 1 or more pages
+  rlinks         Remove unused reference links on 1 or more pages
+  ulinks         Update old links using newest redirect on 1 or more pages
+  lredirects     Test new redirects by listing old URLs in this branch
+  help           Display this help message and exit
 ```
 
 ## Copying to your clipboard

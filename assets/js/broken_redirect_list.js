@@ -248,7 +248,6 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import/';
 validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
-validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels/calendar/rokt_calendar/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
@@ -267,7 +266,6 @@ validurls['/docs/partners/additional_channels/direct_mail/lob/'] = '/docs/partne
 validurls['/docs/partners/additional_channels/instant_chat/messenger/'] = '/docs/partners/message_orchestration/additional_channels/messaging/messenger/';
 validurls['/docs/partners/technology_partners/additional_channels/instant_chat/messenger/'] = '/docs/partners/message_orchestration/additional_channels/messaging/messenger/';
 validurls['/docs/partners/additional_channels/mobile_wallet/passkit/'] = '/docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/';
-validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/';
 validurls['/docs/partners/additional_channels/support/pypestream/'] = '/docs/partners/data_and_infrastructure_agility/support/pypestream/';
 validurls['/docs/partners/additional_channels/surveys/iterate/'] = '/docs/partners/message_orchestration/channel_extensions/surveys/iterate/';
 validurls['/docs/partners/advertising_technologies/attribution/adjust/'] = '/docs/partners/message_orchestration/attribution/adjust/';
@@ -1407,5 +1405,11 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/customization/settings';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/silent_push_notifications'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/silent';
+validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
+validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
+
+// validurls['/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar'] = '/docs/partners/home';
+
+validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
 
 // validurls['OLD'] = 'NEW';

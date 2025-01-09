@@ -85,6 +85,10 @@ Starting with Braze Android SDK version 3.6.0, Braze location collection is disa
 
 ### Step 5: Test session tracking (optional)
 
+{% alert tip %}
+You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
+{% endalert %}
+
 If you experience issues while testing, enable [verbose logging](#enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
 
 1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
@@ -122,14 +126,22 @@ new Thread(new Runnable() {
 {% tab KOTLIN %}
 
 ```kotlin
-Thread(Runnable {
-  try {
-    val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext())
-    Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
-  } catch (e: Exception) {
-    e.printStackTrace()
+suspend fun fetchAndSetAdvertisingId(
+  context: Context,
+  scope: CoroutineScope = GlobalScope
+) {
+  scope.launch(Dispatchers.IO) {
+    try {
+      val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
+      Braze.getInstance(context).setGoogleAdvertisingId(
+        idInfo.id,
+        idInfo.isLimitAdTrackingEnabled
+      )
+    } catch (e: Exception) {
+      e.printStackTrace()
+    }
   }
-}).start()
+}
 ```
 
 {% endtab %}
@@ -304,7 +316,7 @@ Braze.configure(this, brazeConfigBuilder.build());
 
 ### R8 and ProGuard
 
-[Code shrinking](https://developer.android.com/studio/build/shrink-code) configuration is automatically included with your Braze integration.
+[Code shrinking](https://developer.android.com/build/shrink-code) configuration is automatically included with your Braze integration.
 
 Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
 
