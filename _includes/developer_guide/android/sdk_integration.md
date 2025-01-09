@@ -284,11 +284,11 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/).
 {% endalert %}
 
-### Disable in-app message TalkBack
+### Enable exclusive in-app message TalkBack
 
-In adherence to the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility), the Braze Android SDK offers Android Talkback by default. However, to ensure end-user privacy, you may want to disable Talkback so in-app messages are not read automatically.
+In adherence to the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility), the Braze Android SDK offers Android Talkback by default. To ensure that only the contents of in-app messages are read out loud—without including other screen elements like the app title bar or navigation—you can enable exclusive mode for TalkBack.
 
-To disable Talkback for in-app messages:
+To enable exclusive mode for in-app messages:
 
 {% tabs local %}
 {% tab Braze XML %}
