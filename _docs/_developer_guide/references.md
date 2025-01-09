@@ -1,13 +1,13 @@
 ---
-nav_title: Repositories and references
-article_title: Braze SDK repositories and reference documentation
+nav_title: References and Repositories
+article_title: Braze SDK reference documentation and repositories
 page_order: 4.4
-description: "This is a list of GitHub repositories and reference documentation belonging to each Braze SDK."
+description: "This is a list of reference documentation and GitHub repositories belonging to each Braze SDK."
 ---
 
-# Braze SDK repositories and references
+# Braze SDK references and repositories
 
-> This is a list of GitHub repositories and reference documentation belonging to each Braze SDK. An SDK's Github repository provides insight into its function and attribute declarations, code changes, and versioning. While its reference documentation details the available classes, types, functions, and variables for that SDK.
+> This is a list of reference documentation and GitHub repositories belonging to each Braze SDK. An SDK's reference documentation details its available classes, types, functions, and variables. While the Github repository provides insight into that SDK's function and attribute declarations, code changes, and versioning.
 
 {% alert note %}
 Currently, some SDKs do not have dedicated reference documentation&#8212;but we're actively working on it.
