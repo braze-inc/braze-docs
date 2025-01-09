@@ -1,5 +1,5 @@
 ---
-page_order: 90
+page_order: 98
 nav_title: Changelogs
 layout: dev_guide
 guide_top_header: "Braze SDK Changelogs"

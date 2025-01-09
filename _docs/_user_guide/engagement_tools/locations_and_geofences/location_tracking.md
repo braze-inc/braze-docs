@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
 - [Radar][6]
-- [Gimbal][10]
+- [Infillion][10]
 - [Foursquare][7]
 
 ## Frequently asked questions
@@ -74,5 +74,5 @@ Check out our [Locations FAQ][11] for answers to frequently asked questions abou
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

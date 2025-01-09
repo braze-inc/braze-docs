@@ -253,8 +253,8 @@ table td {
     </tr>
     <tr>
       <td><b>Audience Does Not Exist</b></td>
-      <td>The Audience Sync step uses an audience that does not exist or was deleted. This can also be triggered if you don’t have the necessary permission to access the audience anymore.</td>
-      <td>Have an admin check on the partner platform for whether the audience still exists. <br><br>If it exists, confirm whether the user that connected the integration has permission to the audience. If they do not, the user will need to be granted access to that audience. <br><br>If the audience was intentionally removed, add an active audience create a new audience on the step.</td>
+      <td>The Audience Sync step uses an audience that does not exist or was deleted. This can also be triggered if you no longer have the necessary permission to access the audience.</td>
+      <td>Have an admin check on the partner platform to see whether the audience still exists. <br><br>If it exists, confirm whether the user that connected the integration has permission to the audience. If they do not, the user must be granted access to that audience. <br><br>If the audience was intentionally removed, add an active audience and create a new audience on the step.</td>
     </tr>
     <tr>
       <td><b>Ad Account Access Attempt</b></td>
@@ -274,7 +274,7 @@ table td {
     </tr>
     <tr>
       <td><b>Failed to create audience</b></td>
-      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience,  “Failed to create audience "audience name". Authorization of your facebook account failed. Please visit the Technology Partners page to reconnect your account.</td>
+      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience "audience name". Authorization of your Facebook account failed. Please visit the Technology Partners page to reconnect your account.</td>
       <td>Follow the steps in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>this troubleshooting section</a> to check your account for any issues.
       </td>
     </tr>
@@ -293,12 +293,12 @@ If you experience additional issues with your integration, refer to the followin
 
 #### Accept the terms of service
 
-Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of services.
+Accept any pending Terms of Services (TOS) from Facebook. Facebook periodically will require you (the user) and the business manager to re-approve their terms of service.
 
-1. The connected user needs to accept all terms of services for each of their ads account:
+1. The connected user needs to accept all terms of service for each of their ad accounts:
 - Custom Audience TOS for your personal Facebook account:
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<AD_ACCOUNT_ID>`
-- Value-Based Custom Audience TOC:
+- Value-Based Custom Audience TOS:
   - If your ad account is tied to your company’s Business Manager account, you must accept the TOS in your Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
   - If your ad account is tied to your personal account (not associated with any business), you must accept the TOS here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>`
 
@@ -326,7 +326,7 @@ To find your account and business ID, follow these steps:
 
 #### Complete any pending tasks 
 
-Check if you have any pending tasks in Facebook that could be blocking you from using Facebook Ads services:
+Check if you have any pending tasks with Facebook that could be blocking you from using Facebook Ads services:
 
 1. [Log into Facebook Ads Manager](https://adsmanager.facebook.com/).
 2. Select the ad account you are having issues with.
@@ -335,7 +335,7 @@ Check if you have any pending tasks in Facebook that could be blocking you from 
 
 {:start="5"}
 
-5. Check if there are any setup tasks that need to be completed. <br> ![An account with partially completed account setup.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
+5. Check if there are any setup tasks that need to be completed. <br> ![An account with a partially completed account setup.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
 
 #### Connect with a different user
 
