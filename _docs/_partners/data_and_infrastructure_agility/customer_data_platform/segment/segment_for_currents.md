@@ -47,6 +47,10 @@ It's important to keep your Segment write key up to date. If your connector's cr
 
 Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId` and the user's `braze_id` as the `anonymousId`. Braze will only send event data for users who do not have their `external_user_id` set if the "Include events from anonymous users" checkbox at the top of the data configuration section is selected.
 
+{% alert important %}
+Anonymous user export to Segment is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
 ![List of all available message engagement events on the Segment Currents page in Braze.][2]
 
 Lastly, select **Launch Current**.
