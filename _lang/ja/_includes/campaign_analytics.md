@@ -393,7 +393,7 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md 指標='バウンス数' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">直接開封数</a></td>
