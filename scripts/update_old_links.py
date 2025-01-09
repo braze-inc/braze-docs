@@ -52,7 +52,7 @@ def update_old_links(filepath, redirects):
 
             found = len(re.findall(pattern, content))
             if found > 0:
-                content = re.sub(pattern, f"({{site.baseurl}}{new_url})", content)
+                content = re.sub(pattern, f"{{{{site.baseurl}}}}{new_url}", content)
                 total_replacements += found
 
     # 2) YAML front matter lines: between first and second ---
