@@ -1270,6 +1270,8 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 validurls['/docs/user_guide/getting_started/use_cases/lead_scoring'] = '/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/';
 
+validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
+
 // ANDROID
 // SDK Integration
 validurls['/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration'] = '/docs/developer_guide/platform_integration_guides/android/sdk_integration';
@@ -1407,9 +1409,5 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/silent_push_notifications'] = '/docs/developer_guide/platform_integration_guides/fireos/push_notifications/silent';
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
-
-// validurls['/docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar'] = '/docs/partners/home';
-
-validurls['/docs/partners/message_personalization/dynamic_content/fresh_relevance'] = '/docs/partners/home';
 
 // validurls['OLD'] = 'NEW';
