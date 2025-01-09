@@ -1,5 +1,5 @@
 ---
-page_order: 3
+page_order: 2.1
 nav_title: Content Cards
 article_title: Content Card Customization
 layout: dev_guide
