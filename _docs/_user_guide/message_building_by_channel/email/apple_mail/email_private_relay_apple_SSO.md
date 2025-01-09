@@ -11,7 +11,9 @@ channel:
 
 # Sending emails to Apple Private Relay
 
-> Apple's single sign-on (SSO) feature allows their users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) as opposed to their personal email address. To send emails to Apple's private email relay, register your sending domains with Apple.
+> Apple's single sign-on (SSO) feature allows their users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) instead of their personal email address. Apple will then forward messages sent to the relay addresses to the user's actual email address. 
+
+To send emails to Apple's private email relay, register your sending domains with Apple. If you don't configure your domains with Apple, emails sent to relay addresses will result in bounces.
 
 If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. These users can manage apps that use sign-in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)).
 
@@ -28,7 +30,7 @@ If you use SendGrid as an email provider, you can send emails to Apple without m
 2. After the address is added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
 
 {% alert important %}
-If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`. This might not be the case for your address. Check your DNS records in SendGrid. 
+If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
 {% endalert %}
 
 ### From address values
@@ -47,8 +49,8 @@ To set up Apple Private Relay for SparkPost, follow these steps:
 
 1. Sign in with Apple.
 2. Based on [Apple's documentation](https://developer.apple.com/sign-in-with-apple/get-started/), create the necessary verification files, and host these files in an accessible directory for the given domains.
-3. Add an A record to your DNS record that points to the domain where your verification file is hosted. This is a one-time verification process.
-4. Add the email domains.
+3. Add an A record to your DNS settings that points to the domain where your verification file is hosted. This is a one-time verification process.
+4. Add the email domains in Apple.
 5. Apple will automatically check the domains and show which ones are verified, and provide the option to reverify or delete the domains.
 
 {% alert important %}
@@ -59,7 +61,9 @@ Make sure you complete this process within two to three days of the verification
 
 If a sending domain is also used as a bounce domain, you won't be able to store any records and will need to follow these additional steps:
 
-1. If the domain has already been verified on SparkPost, you **must** create MX and TXT records: `MX = smtp.sparkpostmail.comTXT = "v=spf1 redirect=_spf.sparkpostmail.com"`. 
+1. If the domain has already been verified on SparkPost, you **must** create MX and TXT records: 
+- `MX = smtp.sparkpostmail.com`
+- `TXT = "v=spf1 redirect=_spf.sparkpostmail.com"`. 
 
 {% alert important %}
 To avoid SPF failures, you must create the MX and TXT records and have them propogated in the DNS **before** deleting the CNAME record.
