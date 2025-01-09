@@ -14,6 +14,10 @@ search_tag: Contributing
 
 Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you just need a refresher, see [Git and GitHub]({{site.baseurl}}/contributing/git_and_github/).
 
+{% alert note %}
+Community contributions are only accepted in English. English serves as the basis for translations into other supported languages.
+{% endalert %}
+
 ## Step 1: Sign the CLA
 
 Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request.
