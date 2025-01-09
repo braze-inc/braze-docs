@@ -1,4 +1,5 @@
 ---
+page_order: 2.2
 nav_title: Banner Cards
 article_title: Banner Cards
 layout: dev_guide

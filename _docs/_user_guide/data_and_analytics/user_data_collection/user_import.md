@@ -195,6 +195,10 @@ The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Bra
 
 ### Importing with email addresses and phone numbers
 
+{% alert important %}
+Importing a CSV file with email addresses and phone numbers is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
 You can omit an external ID or user alias and just use either an email address or phone number to import users. Before importing a CSV file with email addresses or phone numbers, check for the following:
 
 - Verify that you don't have any external IDs or user aliases for these profiles.
