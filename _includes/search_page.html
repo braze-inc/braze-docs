@@ -192,7 +192,22 @@
 	    if (heading){
 	      url += '#' + string_to_slug(heading);
 	    }
-	    return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${tags_list} </div>${article_path}<div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
+	    var snippet = hit?._highlightResult?.html?.value || '';
+		
+	    return `<div class="hit">
+			<a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} >
+				<div class="hit-content">
+					<div>
+						<div class="hit-name">${title } </div>
+						<div class="hit-subname">${tags_list}</div>
+					</div>
+					${article_path}
+					<div class="hit-description">${ content }</div>
+					${snippet ? `<div class="hit-snippet"> ${ snippet }</div>` : ''}
+				</div>
+			</a>
+			<hr />
+		</div>`;
 	  }
 
 	  function hitLearningTemplate(hit, bindEvent) {
