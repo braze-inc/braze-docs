@@ -15,7 +15,7 @@ For a complete technical reference, check out our [JavaScript Documentation](htt
 
 ## Install the Braze SDK
 
-To get started, follow our [Initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) guide for the Web SDK.
+To get started, follow our [Initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) guide for the Web SDK.
 
 There are two changes required when integrating with Smart TVs:
 
@@ -30,7 +30,7 @@ For a complete guide to tracking custom events, custom attributes, and more, rea
 
 ## In-app messages and Content Cards
 
-The Braze Web SDK supports both [in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/) and [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/) on Smart TVs. Note that you must use the ["Core" Web SDK](https://www.npmjs.com/package/@braze/web-sdk) as rendering in-app messages and Content Cards is not supported using our standard UI display and should instead be customized by your app to fit into your TV App's experience.
+The Braze Web SDK supports both [in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messages/) and [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/) on Smart TVs. Note that you must use the ["Core" Web SDK](https://www.npmjs.com/package/@braze/web-sdk) as rendering in-app messages and Content Cards is not supported using our standard UI display and should instead be customized by your app to fit into your TV App's experience.
 
 Visit [Manual in-app message display]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display) for more information on how your Smart TV App can receive and display in-app messages.
 

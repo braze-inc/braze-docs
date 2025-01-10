@@ -61,7 +61,7 @@ Follow these steps to test a sample Content Card.
 
 ![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
-For more integrations, follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) or the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui), depending on your platform.
+For more integrations, follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/) or the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui), depending on your platform.
 
 A sample implementation of this can be found in BrazeProject within the [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk).
 

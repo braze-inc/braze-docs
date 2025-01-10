@@ -2,7 +2,6 @@
 nav_title: Badges
 article_title: News Feed Badges for Web
 platform: Web
-page_order: 3
 page_type: reference
 description: "This article covers how to request the unread News Feeds card count and use that information to power badges for your web application."
 channel: news feed

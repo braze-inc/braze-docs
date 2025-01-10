@@ -17,14 +17,18 @@ import json
 import re
 import sys
 
-# Get project root
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
 REDIRECT_MATCHES = os.environ.get('REDIRECT_MATCHES')
 
 
+def adjust_url(url):
+    # If URL contains '#' or '?', remove any trailing slash if present
+    if '#' in url or '?' in url:
+        return url.rstrip('/')
+    return url
+
+
 def update_old_links(filepath, redirects):
-    # redirects: { key: { "new_url": str, "old_urls": [str, ...] }, ... }
-    # Replace ({{site.baseurl}}old_url) with ({{site.baseurl}}new_url)
     if not os.path.isfile(filepath):
         return 0
 
@@ -34,35 +38,70 @@ def update_old_links(filepath, redirects):
     original_content = content
     total_replacements = 0
 
+    # 1) site.baseurl replacements in entire file
     for entry_key, data in redirects.items():
-        new_url = data["new_url"]
+        new_url = adjust_url(data["new_url"])
         old_urls = data["old_urls"]
 
         for old in old_urls:
-            # If there's an anchor (#), match exactly.
-            # Otherwise, match with or without trailing slash.
             if "#" in old:
-                # Exact match
                 pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
             else:
-                # old.rstrip('/') removes any trailing slash
-                # The /? makes the slash optional in the pattern
                 old_noslash = old.rstrip('/')
                 pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old_noslash) + r"/?\)"
 
-            # Count how many times the old link appears
-            count_before = len(re.findall(pattern, content))
-            if count_before > 0:
-                # Replace all occurrences with the new URL
-                content = re.sub(pattern,
-                                 "(" + "{{site.baseurl}}" + new_url + ")",
-                                 content)
-                total_replacements += count_before
+            found = len(re.findall(pattern, content))
+            if found > 0:
+                content = re.sub(pattern, f"({{{{site.baseurl}}}}{new_url})", content)
+                total_replacements += found
 
-    # If content changed, write the file back out
-    if content != original_content:
+    # 2) YAML front matter lines: between first and second ---
+    lines = content.split('\n')
+    in_front_matter = False
+    dash_count = 0
+
+    for i in range(len(lines)):
+        line = lines[i].rstrip('\r')
+
+        if line.strip() == "---":
+            dash_count += 1
+            if dash_count == 2:
+                break
+            in_front_matter = True
+            continue
+
+        if in_front_matter and "link: /docs" in line:
+            for entry_key, data in redirects.items():
+                new_url = adjust_url(data["new_url"])
+                old_urls = data["old_urls"]
+
+                for old in old_urls:
+                    # Skip anchor-based old URLs for YAML
+                    if "#" in old:
+                        continue
+
+                    old_noslash = old.rstrip('/')
+                    pattern = (
+                            r'(^[ \t]*link:\s*)/docs'
+                            + re.escape(old_noslash)
+                            + r'(/|$)'
+                    )
+
+                    # If we detect the old URL in line, remove everything from ': /docs...'
+                    # and replace with ': /docs' + the adjusted new_url
+                    if re.search(pattern, lines[i]):
+                        lines[i] = re.sub(
+                            r':\s*/docs.*',
+                            f': /docs{new_url}',
+                            lines[i]
+                        )
+                        total_replacements += 1
+                        break
+
+    new_content = "\n".join(lines)
+    if new_content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(new_content)
 
     return total_replacements
 
@@ -70,13 +109,12 @@ def update_old_links(filepath, redirects):
 def get_redirect_matches(json_file):
     if not os.path.exists(json_file):
         print(f"Error: '{json_file}' not found.")
-        exit(1)
-    with open(json_file, 'r') as f:
+        sys.exit(1)
+    with open(json_file, 'r', encoding='utf-8') as f:
         data_dict = json.load(f)
     return data_dict
 
 
-# TODO: Move this to bdocs directly for easier reuse.
 def process_directory(directory, redirects):
     total_global_replacements = 0
     for root, dirs, files in os.walk(directory):
@@ -84,18 +122,15 @@ def process_directory(directory, redirects):
             file_path = os.path.join(root, fn)
             replacements = update_old_links(file_path, redirects)
             if replacements > 0:
-                # Print relative path from the given directory
-                relative_path = os.path.relpath(file_path, start=directory)
-                print(f"In '{relative_path}', made {replacements} replacements.")
+                rel_path = os.path.relpath(file_path, start=directory)
+                print(f"In '{rel_path}', made {replacements} replacements.")
             total_global_replacements += replacements
     return total_global_replacements
 
 
-# TODO: Move this to bdocs directly for easier reuse.
 def process_single_file(filepath, redirects):
     replacements = update_old_links(filepath, redirects)
     if replacements > 0:
-        # When given a single file, just print the filename
         print(f"In '{os.path.basename(filepath)}', made {replacements} replacements.")
     return replacements
 
@@ -104,11 +139,9 @@ def main(path):
     redirects = get_redirect_matches(REDIRECT_MATCHES)
 
     if os.path.isdir(path):
-        # Process directory
         total_replacements = process_directory(path, redirects)
         print(f"Total replacements made across all files: {total_replacements}")
     elif os.path.isfile(path):
-        # Process single file
         total_replacements = process_single_file(path, redirects)
         print(f"Total replacements made: {total_replacements}")
     else:
@@ -120,6 +153,5 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python script.py <directory_or_file>")
         sys.exit(1)
-    user_path = sys.argv[1]
-    user_path = os.path.abspath(user_path)
+    user_path = os.path.abspath(sys.argv[1])
     main(user_path)

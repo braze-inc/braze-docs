@@ -1,16 +1,15 @@
 ---
-nav_title: iOS 18 Upgrade Guide
-article_title: iOS 18 Upgrade Guide
+nav_title: Upgrading to iOS 18
+article_title: Upgrading to iOS 18
 page_order: 7
 platform: 
   - iOS
 description: "This article covers insights into the iOS 18 release to help you upgrade your SDK seamlessly."
 ---
 
-# iOS 18 upgrade guide
+# Upgrading to iOS 18
 
 > Curious about how Braze is preparing for the upcoming iOS release? This article summarizes our insights into the iOS 18 release to help you create a seamless experience for you and your users.
-
 
 Apple's [WWDC](https://developer.apple.com/wwdc24/) took place June 9th - 11th 2024. Learn more about their announcements in our [blog post](https://www.braze.com/resources/articles/wwdc-announcements-bring-apple-intelligence-rcs-and-more-to-ios-18), or read on to learn how you can leverage iOS 18 with Braze.
 

@@ -69,7 +69,7 @@ The classification, orchestration, and personalization layers are where your mar
 
 Many common types of user attributes, such as name, email, date of birth, country, and others are automatically tracked by the SDK by default. As a developer, you'll work with your team to define what additional, custom data makes sense to track for your use case. Your custom data will impact how your user base will be classified and segmented. You will set this data model up during the implementation process. 
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
 
 ## Orchestration {#orchestration}
 The orchestration layer allows your marketing team to design user journeys based on your user data and prior engagement. This work is mostly done through our dashboard interface, but you also have the option to launch [campaigns through the API]({{site.baseurl}}/api/api_campaigns#api-campaigns). For example, you can have your backend tell Braze when to send the messages and campaigns your marketers designed in the dashboard, and trigger them according to your backend logic. An example of an API-triggered message might be password resets or shipping confirmations. 
@@ -80,7 +80,7 @@ API-triggered campaigns are ideal for more advanced transactional use-cases. The
 
 
 ### Feature flags
-Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/). This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
+Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags]({{site.baseurl}}/developer_guide/feature_flags/). This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 ## Personalization {#personalization}
 The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Connected Content builds on top of Liquid and uses familiar syntax.
