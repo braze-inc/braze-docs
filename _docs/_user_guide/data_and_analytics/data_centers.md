@@ -9,7 +9,7 @@ description: "This reference article covers information about data centers, incl
 
 # Data centers
 
-> At Braze, data centers provide reliable and efficient engagement between you and your users. Braze data centers allow you to host customer data locally. This way, you can set the standard of best practices in customer data management and engagement by reducing risks related to data control, flexibility, and management.
+> At Braze, our data centers are built to provide you with options on where your users' data is processed and stored. This allows you to effectively manage your risks related to data sovereignty, flexibility, and management. When you select a Braze data center, you can be certain that our platform meets or exceeds all local requirements in data management.
 
 ## How it works
 
@@ -23,10 +23,11 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 Refer to the following table for a list of available data centers.
 
-| Data Center Region | Dashboard URL | 
-| --- | --- |
-| Australia | ??? |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+| Data Center Region | Dashboard URL | REST Endpoint | SDK Endpoint
+| --- | --- | --- | --- |
+| Australia | https://dashboard.au-01.braze.com/ | https://rest.au-01.braze.com |sdk.au-01.braze.com |
+
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Signing up for region-specific data centers
 
