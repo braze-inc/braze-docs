@@ -8,7 +8,7 @@ description: "This reference article covers how to manage custom data, such as p
 
 # Managing custom data
 
-> This page covers how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.
+> This page covers how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.<br><br>To learn how to manage custom attributes in particular, refer to [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
 
 ## Pre-populating custom data
 
