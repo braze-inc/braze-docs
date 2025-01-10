@@ -118,7 +118,7 @@ Content Card message fields are limited to 2&nbsp;KB in total size, calculated b
 {% endalert %}
 
 {% alert warning %}
-Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this 250-card limit, meaning a high number of dismissed cards can reduce the space available for new ones.
+Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this 250 card limit, meaning a high number of dismissed cards can reduce the space available for new ones.
 {% endalert %}
 
 ## Step 4: Configure additional settings (optional)
