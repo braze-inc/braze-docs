@@ -1,8 +1,8 @@
 ---
+page_order: 99
 nav_title: Disclosures
 article_title: Disclosures and Qualifications
 layout: dev_guide
-page_order: 100
 guide_top_header: "Disclosures"
 guide_top_text: "Braze has you covered! Check out the following articles!"
 
