@@ -37,7 +37,7 @@ When uninstall tracking is turned on for an app, background push messages will b
 
 ### Configuration
 
-To configure uninstall tracking for your iOS application, use a [utility method][iOS docs]. For your Android application, use [`BrazeNotificationUtils.isUninstallTrackingPush()`][8]. When Braze detects an uninstall, whether from uninstall tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute and can be used to define a segment of users for win-back campaigns.
+To configure uninstall tracking for your iOS application, use a [utility method][iOS docs]. For your Android application, use [`isUninstallTrackingPush()`][8]. When Braze detects an uninstall, whether from uninstall tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute and can be used to define a segment of users for win-back campaigns.
 
 ## Filtering segments by uninstalls
 
@@ -96,4 +96,4 @@ The difference is expected. APNs will start returning a 410 status for these tok
 [6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
 [7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
 [iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/is-uninstall-tracking-push.html
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html

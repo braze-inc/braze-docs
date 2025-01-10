@@ -1,5 +1,5 @@
 ---
-nav_title: Android and FireOS
+nav_title: Android
 config_only: true
 noindex: true
 layout: redirect

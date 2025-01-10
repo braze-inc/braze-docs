@@ -640,16 +640,19 @@ Return to the Braze dashboard and select **Test connection**. If successful, you
 {% endtab %}
 
 {% tab Redshift %}
+{% subtabs local %}
+{% subtab Public Network %}
 Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 3: "Test connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
-{% endtab %}
+{% endsubtab %}
 
-{% tab Redshift Private Network %}
-
+{% subtab Private Network %}
 Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![The "Create new import sync" page for Redshift Private Network in the Braze dashboard, with Step 4: "Test connection" displaying an RSA public key.]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab BigQuery %}

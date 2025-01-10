@@ -1,15 +1,14 @@
 ---
-nav_title: Read and Unread Indicators
+nav_title: Unread Indicators
 article_title: News Feed Read and Unread Indicators for Web
 platform: Web
-page_order: 2
 page_type: reference
 description: "This article covers how to set read and unread indicators in your News Feed cards via the Braze SDK."
 channel: news feed
 
 ---
 
-# Read and unread indicators
+# Unread indicators
 
 > This article covers how to set read and unread indicators in your News Feed cards via the Braze SDK.
 
@@ -27,4 +26,3 @@ In order to disable this functionality add the following style to your CSS:
 .ab-read-dot { display: none; }
 .ab-read-indicator { display: none; }
 ```
-

@@ -6,9 +6,9 @@ page_order: 4
 noindex: true
 ---
 
-# Reusing content
+# Reusing content with includes
 
-> Learn how to reuse content across Braze Docs, so you can improve content consistency and reduce the time for content creation. For general information about content reuse, see [About content management]({{site.baseurl}}/contributing/content_management/#content-reuse).
+> Learn how to reuse content with includes across Braze Docs, so you can improve content consistency and reduce the time for content creation. For general information about content reuse, see [About content management]({{site.baseurl}}/contributing/content_management/#content-reuse).
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
