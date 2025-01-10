@@ -1,6 +1,6 @@
 ---
-nav_title: In-App Messaging
-article_title: In-App Messaging for Unity
+nav_title: In-App Messages
+article_title: In-App Messages for the Braze Unity SDK
 channel: in-app messaging
 platform: 
   - Unity
