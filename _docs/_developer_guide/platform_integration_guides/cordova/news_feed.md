@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: News Feed
-description: "Learn about News Feed for the Braze Android SDK."
+description: "Learn how to set up News Feed for the Braze Android SDK."
 platform: 
   - Cordova
   - Android
@@ -12,13 +12,11 @@ channel:
 
 # News Feed
 
-> Learn about News Feed for the Braze Cordova SDK.
+> Learn how to set up News Feed for the Braze Cordova SDK.
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-## Prerequisites
-
-THIS.
+{% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
 ## Setting up News Feed
 
