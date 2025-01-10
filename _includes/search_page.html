@@ -198,11 +198,10 @@
 			<a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} >
 				<div class="hit-content">
 					<div>
-                                                <div class="hit-name">${title } </div>
 						<div class="hit-subname">${tags_list}</div>
 					</div>
 					${article_path}
-					<div class="hit-description" style="display:none;">${ content }</div>
+					<div class="hit-description">${ content }</div>
 					${snippet ? `<div class="hit-snippet"> ${ snippet }</div>` : ''}
 				</div>
 			</a>
