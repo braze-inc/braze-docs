@@ -11,7 +11,7 @@ tool:
 
 # Export revenue and total revenue data
 
-> This page covers the [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/revenue_report/) page of the dashboard, where you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
+> This page covers the [Revenue Report]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report/) page of the dashboard, where you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
 You can find the **Revenue Report** under **Analytics**.
 
@@ -43,12 +43,12 @@ The following data can be viewed in the **Performance Over Time** graph:
 
 ## Total revenue
 
-You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. 
+You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. 
 
 {% multi_lang_include metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
-Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% comment %}

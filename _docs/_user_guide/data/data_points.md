@@ -29,7 +29,7 @@ To view your data point usage, go to **Settings** > **Billing** and select the *
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon > **Subscriptions and Usage** > **Total Data Points Usage**.
 {% endalert %}
 
-For more information on the data point dashboard components, refer to [Billing]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
+For more information on the data point dashboard components, refer to [Billing]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}
 **Don't waste data points. Only update changing data!**<br><br>

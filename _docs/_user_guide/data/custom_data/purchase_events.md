@@ -249,7 +249,7 @@ To log purchases at the order level instead of the product level, use the order 
 
 You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) to learn more.
 
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.

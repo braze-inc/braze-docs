@@ -94,11 +94,11 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 ## Performance data by segment
 
-Use [Query Builder report templates]({{site.baseurl}}/user_guide/data_and_analytics/reporting/data_by_segments/) to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
+Use [Query Builder report templates]({{site.baseurl}}/user_guide/analytics/reporting/data_by_segments/) to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
 ## Creating a segment breakdown report using Query Builder
 
-To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) template, go to **Query Builder** and do the following:
+To create a report from a [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) template, go to **Query Builder** and do the following:
 
 1. Select **Create SQL Query** > **Query Template**.
 2. Filter templates for those that have metrics that include “segment breakdowns”.
@@ -128,7 +128,7 @@ The variables include:
 
 Data is available for time periods where both of these conditions are met:
 
-1. [Segment analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
+1. [Segment analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
 2. The performance data by segment feature is turned on. During the early access phase, we will gradually roll this feature out to customers. 
 
 You won’t be able to access data from time periods prior to when this feature is turned on for your company. For example, if analytics tracking is turned on for Segment A on October 1 and this feature is turned on for your company on October 2, then you can only see data for Segment A for the campaigns and Canvases that recorded metrics after October 2. 

@@ -73,7 +73,7 @@ If you selected breakdown-level details for campaigns or Canvases when [setting 
 
 ### Conversion funnel
 
-This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) based on the selected channel. The conversions count will be defined as per the selected attribution method.
+This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) based on the selected channel. The conversions count will be defined as per the selected attribution method.
 
 By default, all selected campaigns and Canvases are shown. To deselect a campaign or Canvas, select the name of the campaign or Canvas that you'd like to exclude. For additional details on the engagement event, you can hover over each bar.
 

@@ -20,7 +20,7 @@ There are a few reasons why you would prefer this method over exporting a CSV di
  -  You want to interact with the data programmatically.
 
 {% alert tip %}
-For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 [24]: {{site.baseurl}}/api/endpoints/export/

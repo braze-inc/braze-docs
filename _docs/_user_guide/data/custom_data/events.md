@@ -48,7 +48,7 @@ You can then use this data to segment your users based on their lifetime value, 
 
 Braze also supports purchases in multiple currencies. If a purchase is reported in a currency other than USD, it will be shown in the Braze dashboard in USD, based on the exchange rate at the date the purchase was reported.
 
-To learn more, visit our dedicated [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) article.
+To learn more, visit our dedicated [purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) article.
 
 {% details Example implementation %}
 
@@ -84,7 +84,7 @@ Appboy.sharedInstance()?.logCustomEvent("completed_level")
 
 In this example, "completed_level" is the name of the custom event that gets logged when a user completes a level in a game. That custom event is then recorded on their user profile in Braze, which you can use to trigger campaigns and personalize messaging.
 
-To learn more, visit our dedicated [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) article.
+To learn more, visit our dedicated [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) article.
 
 {% details Example implementation %}
 

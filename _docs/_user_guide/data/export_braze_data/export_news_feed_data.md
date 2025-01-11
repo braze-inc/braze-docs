@@ -26,5 +26,5 @@ When analyzing the performance of a specific News Feed card, you can export the 
     - Unique Clicks
 
 {% alert tip %}
-For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
 {% endalert %}

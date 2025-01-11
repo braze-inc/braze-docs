@@ -64,7 +64,7 @@ After user profiles are merged, this action cannot be undone.
 {% endalert %}
 
 ## Additional resources
-- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>
+- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) for additional context.<br>
 - View our documentation on setting user IDs and calling the `changeUser()` method for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}

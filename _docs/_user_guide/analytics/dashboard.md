@@ -13,16 +13,16 @@ tool: Reports
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Home Dashboard
-    link: /docs/user_guide/data_and_analytics/analytics/home_dashboard/
+    link: /docs/user_guide/analytics/dashboard/home_dashboard/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Channel Performance Dashboard
-    link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
+    link: /docs/user_guide/analytics/dashboard/email_performance_dashboard/
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Conversions Dashboard
-    link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
+    link: /docs/user_guide/analytics/dashboard/conversions_dashboard/
     image: /assets/img/braze_icons/bar-chart-07.svg
   - name: Deliverability Center
-    link: /docs/user_guide/data_and_analytics/analytics/deliverability_center/
+    link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
 ---
 <br><br>

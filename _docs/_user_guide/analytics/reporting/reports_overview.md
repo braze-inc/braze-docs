@@ -18,14 +18,14 @@ search_rank: 1
 {% tab Campaign Analytics %}
 **Campaign Analytics**
 
-Use [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
+Use [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
 
 {% endtab %}
 
 {% tab Canvas Analytics %}
 **Canvas Analytics**
 
-Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) to get top-line statistics on your Canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
+Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to get top-line statistics on your Canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
 
 - Number of messages sent within the Canvas
 - Total number of times customers have entered the Canvas
@@ -49,7 +49,7 @@ More questions you can answer with this report:
 {% tab Report Builder %}
 **Report Builder**
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 
@@ -73,7 +73,7 @@ More questions you can answer with this feature:
 {% tab Retention Reports %}
 **Retention Reports**
 
-Use Retention Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/) to measure retention for users who have performed a selected event in a specific campaign.
+Use Retention Reports for [campaigns]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) or [Canvases]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) to measure retention for users who have performed a selected event in a specific campaign.
 
 Check out this report to:
 
@@ -91,7 +91,7 @@ More questions you can answer with this report:
 {% endtab %}
 {% tab Funnel Report %}
 
-Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) or [Canvases]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
@@ -112,7 +112,7 @@ More questions you can answer with this report:
 {% tabs local %}
 {% tab Report Builder %}
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 
@@ -130,7 +130,7 @@ More questions you can answer with this feature:
 {% tab Overview Data %}
 **Overview Data**
 
-Use the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) page to get a high-level summary of key metrics regarding your app's performance and insight into your app's user base.
+Use the [Overview]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) page to get a high-level summary of key metrics regarding your app's performance and insight into your app's user base.
 
 Check out this page for these statistics:
 
@@ -153,7 +153,7 @@ More questions you can answer with this dashboard:
 {% tab Engagement Reports %}
 **Engagement Reports**
 
-Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
+Use [Engagement Reports]({{site.baseurl}}/user_guide/analytics/reporting/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
 
 You can export the following statistics depending on your message channel:
 
@@ -183,7 +183,7 @@ More questions you can answer with this report:
 {% tab Segment Data %}
 **Segment Data**
 
-If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
+If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
 
 Check out this page for these statistics:
 
@@ -223,7 +223,7 @@ Check out this page to:
 - Monitor custom event frequency
 - Monitor custom events by segment
 - Analyze how campaigns affect custom event activity
-- Create and monitor [KPI Formulas]({{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/)
+- Create and monitor [KPI Formulas]({{site.baseurl}}/user_guide/data/creating_a_formula/)
 - Troubleshoot custom event tracking
 
 {% endtab %}
@@ -235,7 +235,7 @@ Check out this page to:
 {% tab Revenue Data %}
 **Revenue Data**
 
-Use the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data) page to track revenue and purchases over specific periods or your app's total revenue or purchases.
+Use the [Revenue]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) page to track revenue and purchases over specific periods or your app's total revenue or purchases.
 
 Check out this page for these statistics:
 
@@ -251,7 +251,7 @@ Check out this page for these statistics:
 {% tab Global Control Group Report %}
 **Global Control Group Report**
 
-After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/), use the [Global Control Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don't, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
+After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/), use the [Global Control Report]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don't, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
 
 Check out this page to:
 
@@ -272,7 +272,7 @@ More questions you can answer with report:
 {% tabs local %}
 {% tab Funnel Report %}
 
-Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) or [Canvases]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
@@ -289,7 +289,7 @@ More questions you can answer with this report:
 {% tab Predictive Churn %}
 **Predictive Churn**
 
-[Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/predictive_suite/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
+[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
 
 Since every business defines churn and retention differently, you can simply input your definitions into Predictive Churn, and Braze will do the rest. You can also create campaigns or Canvases to act off the predictions or build segments for further analysis.
 
@@ -302,7 +302,7 @@ More questions you can answer with this feature:
 {% tab Report Builder %}
 **Report Builder**
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 

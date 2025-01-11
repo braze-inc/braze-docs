@@ -28,7 +28,7 @@ When generating your report, choose an event—either sessions or any custom eve
 
 Keep in mind that the percentage metrics in your report are rounded. For instance, in cases where the number of conversions is a very low percentage of your overall control or treatment group, the conversion rate may round to 0%.
 
-Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
+Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
 
 ### Group sizes
 

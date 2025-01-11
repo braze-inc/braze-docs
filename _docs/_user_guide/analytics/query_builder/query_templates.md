@@ -10,7 +10,7 @@ tool: Reports
 
 # Query Builder templates
 
-> Access [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) templates by selecting **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.<br><br>For definitions of the metrics that may appear in your Query Builder reports, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics) and filter by the respective channel.
+> Access [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) templates by selecting **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.<br><br>For definitions of the metrics that may appear in your Query Builder reports, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by the respective channel.
 
 ## Channel templates
 

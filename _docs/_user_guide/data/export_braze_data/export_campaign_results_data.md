@@ -92,7 +92,7 @@ The exported file includes the same user data fields that are included when you 
 - Whether user is in control group
 
 {% alert tip %}
-For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 [6]: {% image_buster /assets/img/campaign_export_example.png %}

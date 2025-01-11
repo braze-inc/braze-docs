@@ -9,9 +9,9 @@ tool: Reports
 
 # Query Builder
 
-> The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
+> The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
-Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
+Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 
 ## Running reports in the Query Builder
 
@@ -39,7 +39,7 @@ Results from each report can be generated once a day. If you run the same report
 
 Access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
-See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
+See [Query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) for a list of available templates.
 
 ### Data timeframe
 
@@ -59,7 +59,7 @@ To generate SQL with the AI Query Builder:
 
 ### Tips
 
-- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
 - Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) for this feature. Not following these rules will cause an error.
 - You can send up to 20 prompts per minute with the AI Query Builder.
 
@@ -70,7 +70,7 @@ In order to generate your SQL, Braze will send your prompts to OpenAI’s API Pl
 
 ## Writing custom SQL queries {#custom-sql}
 
-Write your SQL query using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
+Write your SQL query using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference). Consult the [table reference]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
 To view table details within the Query Builder:
 
@@ -304,7 +304,7 @@ For selecting from a list of options.
 
 #### Segments
 
-For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) turned on.
+For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) turned on.
 
 - **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
 - **Usage example:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
@@ -429,7 +429,7 @@ If a report times out or runs into errors even after retrying, contact [Support]
 
 ## Data and results
 
-Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
+Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
 
 ## Monitoring your Query Builder usage
 

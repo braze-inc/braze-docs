@@ -9,7 +9,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-> This article describes custom events and properties, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
+> This article describes custom events and properties, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events]({{site.baseurl}}/user_guide/data/custom_data/events/).
 
 Custom events are actions taken by, or updates about, your users. When custom events are logged, they can trigger any number and type of follow-up campaigns. You can then use [segmentation filters](#segmentation-filters) to segment users based on how recently and frequently those custom events occurred. This makes custom events best suited for tracking high-value user interactions within your application.
 
@@ -19,9 +19,9 @@ Some common custom event use cases include:
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
 - Using dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
-- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/) reports
-- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
-- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)
+- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
+- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
+- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - Setting up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users shouldn't advance to the next step of your Canvas
 
 ## Managing custom events
@@ -305,7 +305,7 @@ For the original Canvas editor, `event_properties` can't be used in scheduled fu
 
 You can use nested objects (objects inside of another object) to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmenting users.
 
-To learn more, refer to our dedicated page on [Nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+To learn more, refer to our dedicated page on [Nested objects]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 ## Custom event property storage
 

@@ -11,13 +11,13 @@ description: "This landing page is home to articles about Braze Data Transformat
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
-    link: /docs/user_guide/data_and_analytics/data_transformation/overview/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/database-01.svg
   - name: Creating a Transformation
-    link: /docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/flip-forward.svg
   - name: Use Cases
-    link: /docs/user_guide/data_and_analytics/data_transformation/use_cases/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/users-01.svg
 ---
 <br><br>

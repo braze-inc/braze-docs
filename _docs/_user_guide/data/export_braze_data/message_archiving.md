@@ -176,7 +176,7 @@ If your cloud storage bucket is unreachable, Braze will retry up to three times 
 
 ### What happens if my credentials are invalid?
 
-If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credentials issues.
+If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credentials issues.
 
 ### Why does my archive file's `sent_at` timestamp differ slightly from the sent timestamp in Currents?
 

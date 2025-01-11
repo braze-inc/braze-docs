@@ -17,7 +17,7 @@ This type of email usually means there's an issue with your CDI setup. Here are 
 
 ### CDI can't access the data warehouse or table using your credentials
 
-This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
 
 ### The table cannot be found
 
@@ -41,7 +41,7 @@ Test Connection is running on your data warehouse, so increasing warehouse capac
 
 ### Error connecting to Snowflake instance: Incoming request with IP is not allowed to access Snowflake
 
-Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
 
 ### Error executing SQL due to customer config: 002003 (42S02): SQL compilation error: does not exist or not authorized
 

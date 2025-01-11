@@ -37,10 +37,10 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Funnel Reports
-    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/flag-02.svg
   - name: Retention Reports
-    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/user-check-01.svg
 
 ---

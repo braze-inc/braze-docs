@@ -9,7 +9,7 @@ description: "This article provides an overview of anonymous users and user alia
 
 # Anonymous users
 
-> Users who visit your website or application without logging in, like a guest visitor, are recognized as anonymous users. These users don't have `external_ids`, which are used to update user profiles with the Braze API, but they still have [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/) assigned to them and can be targeted in your segments.
+> Users who visit your website or application without logging in, like a guest visitor, are recognized as anonymous users. These users don't have `external_ids`, which are used to update user profiles with the Braze API, but they still have [data points]({{site.baseurl}}/user_guide/data/data_points/) assigned to them and can be targeted in your segments.
 
 When an anonymous user visits your website or application, the Braze SDK creates and assigns them to an “anonymous” user profile. While the user browses, the SDK automatically captures data for their anonymous user profile, such as usage information, device information, and more if you’ve set up custom attributes and custom events.
 

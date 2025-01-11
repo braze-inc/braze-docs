@@ -95,8 +95,8 @@ The following data types may be stored as custom attributes:
 - [Strings](#strings)
 - [Arrays](#arrays)
 - [Time](#time)
-- [Objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/)
-- [Arrays of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/)
+- [Objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)
+- [Arrays of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/)
 
 ### Booleans (true/false) {#booleans}
 
@@ -235,11 +235,11 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 ### Objects
 
-You can use nested custom attributes to send objects as a data type for custom attributes. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+You can use nested custom attributes to send objects as a data type for custom attributes. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/).
 
 ### Arrays of objects
 
-Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
+Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/).
 
 ### Consolidated operators
 

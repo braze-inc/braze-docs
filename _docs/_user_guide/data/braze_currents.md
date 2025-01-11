@@ -15,28 +15,28 @@ guide_top_text: "Understanding the impact of your engagement strategy is critica
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up Currents"
-  link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/building-01.svg
 - name: "Available Partners"
-  link: /docs/user_guide/data_and_analytics/braze_currents/available_partners/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/heart-hand.svg
 - name: "Event Delivery Semantics"
-  link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/data.svg
 - name: "Message Engagement Events"
-  link: /docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/message-plus-square.svg
 - name: "Customer Behavior Events"
-  link: /docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/users-01.svg
 - name: "How Braze Uses Currents"
-  link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/expand-05.svg
 - name: "Transfer Data from Amazon"
-  link: /docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/amazon.svg
 - name: "Transfer Data to Redshift"
-  link: /docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/
+  link: /docs/user_guide/analytics/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
@@ -44,14 +44,14 @@ guide_featured_list:
 ## Currents capabilities
 
 Currents allow you to:
-* Stream Braze event data into a data warehouse or to one of our [analytics partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.
+* Stream Braze event data into a data warehouse or to one of our [analytics partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) for detailed analysis.
 * Stream Braze event data continuously to power business intelligence tools, machine learning algorithms, and more.
 * Route Braze event data to a variety of other systems using [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) or [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
 
-There's so much more you can do with event data, accessed by Currents. Trust us—[Braze uses Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) too!
+There's so much more you can do with event data, accessed by Currents. Trust us—[Braze uses Currents]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/) too!
 
 ## How to access Currents
 
-A Currents connector is already included in many of our pro and enterprise-level packages. If you're interested in using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your [Currents setup and integration]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
+A Currents connector is already included in many of our pro and enterprise-level packages. If you're interested in using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your [Currents setup and integration]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/).
 
 <br><br>

@@ -12,25 +12,25 @@ description: "This landing page is home to articles on user data collection. Her
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: SDK Data Collection
-    link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: User Profile Lifecycle
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/refresh-ccw-05.svg
   - name: Data Collection Use Case Example
-    link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/data.svg
   - name: Data Collection Best Practices
-    link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/thumbs-up.svg
   - name: User Import
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/users-01.svg
   - name: Anonymous Users
-    link: /docs/user_guide/data_and_analytics/user_data_collection/anonymous_users/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/user-circle.svg
   - name: User Language Codes
-    link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
+    link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/globe-04.svg
 ---
 
