@@ -64,7 +64,7 @@ Você também pode executar ações em massa. Especificamente, arquivamento em m
 
 ### alterações desde a última visualização
 
-O número de atualizações nos segmentos feitas por outros membros da sua equipe é rastreado pela métrica *Changes Since Last Viewed (Alterações desde a última visualização)* na página de visão geral do segmento. Selecione **Changes Since Last Viewed (Alterações desde a última visualização** ) para ver um changelog de atualizações do nome, da descrição e do público-alvo do segmento. Para cada atualização, você pode ver quem realizou a atualização e quando. Você pode usar esse changelog para auditar as alterações em seu segmento.
+O número de atualizações nos segmentos feitas por outros membros da sua equipe é rastreado pela métrica *Changes Since Last Viewed (Alterações desde a última visualização)* na página de visão geral do segmento. Selecione **Changes Since Last Viewed (Alterações desde a última visualização)** para ver um changelog de atualizações do nome, da descrição e do público-alvo do segmento. Para cada atualização, você pode ver quem realizou a atualização e quando. Você pode usar esse changelog para auditar as alterações em seu segmento.
 
 ## Busca de segmentos
 Pesquise nomes de segmentos inserindo termos no campo de pesquisa. 
