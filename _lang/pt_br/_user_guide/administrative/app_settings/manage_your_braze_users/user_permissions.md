@@ -148,8 +148,8 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Ver informações de faturamento|Permite que os usuários visualizem assinaturas e faturamento.|
 |Espaço de trabalho|Ver Integração do Currents|Permite que os usuários visualizem todas as informações sobre uma conexão Currents, excluindo credenciais. Por padrão, os usuários atribuídos à permissão "Acessar Campanhas, canvas, Cartões, Blocos de Conteúdo, Flags de Recursos, Segmentos, Biblioteca de Mídia, Localizações, Códigos de Promoção e Centros de Preferências" também recebem essa permissão.|
 |Espaço de trabalho|Ver atributos personalizados marcados como IPI|Permite que este usuário visualize atributos personalizados que são marcados como IPI sem ser um administrador.|
-|Espaço de trabalho|Ver IPI|Permite que os usuários visualizem os campos de informações pessoalmente identificáveis conforme definido pela sua empresa no dashboard.|
-|Espaço de trabalho|Ver perfis de usuário em conformidade com IPI|Permite que os usuários vejam perfis de usuários, mas editem campos que a sua empresa definiu como informações pessoalmente identificáveis (IPI).|
+|Espaço de trabalho|Ver IPI|Permite que os usuários visualizem os campos de informações pessoalmente identificáveis (IPI) conforme definido pela sua empresa no dashboard. Os usuários também podem visualizar os campos de IPI na guia **Preview as a User** das prévias de mensagens. |
+|Espaço de trabalho|Ver perfis de usuário em conformidade com IPI|Permite que os usuários vejam perfis de usuários, mas editem campos que a sua empresa definiu como informações pessoalmente identificáveis.|
 |Espaço de trabalho|Ver transformações|Permite que os usuários visualizem [Transformações de Dados do Braze]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Espaço de trabalho|Ver dados de uso|Permite que os usuários visualizem o uso do app, incluindo os painéis de desempenho do canal.|
 |Espaço de trabalho|Mesclar usuários duplicados|Permite que os usuários mesclem perfis de usuário duplicados.|
