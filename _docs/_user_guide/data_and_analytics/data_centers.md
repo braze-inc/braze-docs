@@ -25,7 +25,7 @@ Refer to the following table for a list of available data centers.
 
 | Data Center Region | Dashboard URL | REST Endpoint | SDK Endpoint
 | --- | --- | --- | --- |
-| Australia | https://dashboard.au-01.braze.com/ | https://rest.au-01.braze.com |sdk.au-01.braze.com |
+| Australia | `https://dashboard.au-01.braze.com` | `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
