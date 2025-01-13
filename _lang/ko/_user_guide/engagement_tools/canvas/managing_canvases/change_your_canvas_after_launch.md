@@ -81,7 +81,9 @@ tool:
 캔버스가 시작된 후
 
 - 전환 이벤트는 편집할 수 없습니다. 
-- [대상 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) 및 [실험 경로는]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) 이러한 단계에 추가하거나 제거할 수 없으며 순위를 조정하기 위해 순서를 다시 지정할 수 없습니다. 해결 방법으로 활성 캔버스를 편집하고 단계를 복제하면 초안을 시작할 때까지 편집할 수 있습니다.
+- 다음 단계는 추가하거나 제거할 수 없으며, 순위를 조정하기 위해 재정렬할 수 없습니다. [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [행동 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [실험 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+  - **우회 방법 1:** 새로운 오디언스 경로, 행동 경로 또는 실험 경로를 생성하고 해당 새로운 단계로 경로를 재구성하십시오.
+  - **우회 2:** 캔버스를 복제하여 수정하세요.
 
 ### 개별 단계
 
@@ -119,13 +121,18 @@ tool:
 ### 변형 삭제
 
 캔버스에서 이형 상품이 삭제되면 다음과 같은 일이 발생합니다:
+
 - 이형 상품 내의 단계(다른 이형 상품에서 공유하는 단계 포함)는 삭제됩니다. 
 - 단계 분석과 캔버스에 대한 최상위 분석(예: _총 항목_, _총 종료_, _전환율_)이 삭제됩니다.
 - 삭제된 이형 상품의 사용자는 단계에서 종료되며 다음 메시지는 전송되지 않습니다.
 
+### 캔버스 항목 속성
+
+캔버스 항목 속성은 전송될 때 단계로 템플릿화되지 않습니다. 이것은 캔버스가 시작된 후 캔버스 항목 속성이 편집될 때, 이러한 변경 사항이 캔버스에 들어오는 새로운 사용자에게만 적용된다는 것을 의미합니다. 사용자의 캔버스가 사용자가 캔버스에 다시 들어갈 수 있도록 허용하는 경우, 다시 들어가는 모든 사용자는 업데이트된 캔버스 항목 속성에 의해 결정됩니다.
+
 ## 모범 사례
 
-캔버스 흐름을 사용하여 캔버스를 시작한 후 편집하거나 추가할 때 염두에 두어야 할 모범 사례를 확인하세요.
+출시된 후 캔버스를 편집하거나 추가할 때 염두에 두어야 할 모범 사례를 확인하세요.
 
 ### 연결이 끊긴 단계
 
