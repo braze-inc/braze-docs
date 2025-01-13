@@ -575,7 +575,7 @@ $(document).ready(function() {
     }
     if (is_external){
       $(this).after(' <i class="fas fa-external-link-alt"></i>');
-      $(this).attr('target', '_blank')
+      $(this).attr('target', '_blank');
     }
   });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
