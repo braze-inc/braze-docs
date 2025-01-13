@@ -15,7 +15,7 @@ tool: Canvas
 
 ## 필수 조건
 
-만료된 사용자 템플릿을 성공적으로 사용하려면 사용하는 파트너 및 오디언스와 [Braze]({{site.baseurl}}/partners/canvas_steps) 오디언스 [동기화를]({{site.baseurl}}/partners/canvas_steps) 구성해야 합니다.
+만료된 사용자 템플릿을 성공적으로 사용하려면 사용하는 파트너 및 오디언스와 [Braze 오디언스 동기화를]({{site.baseurl}}/partners/canvas_steps) 구성해야 합니다.
 
 ## 필요에 맞게 템플릿 조정하기
 
@@ -99,7 +99,7 @@ tool: Canvas
 
 ### 7단계: 캔버스 테스트 및 실행
 
-캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 **캔버스 시작을** 선택하여 **캔버스를 실행**합니다. 이제 30일 이상 앱을 방문하지 않았고 메시징 채널을 구독한 사용자에게는 재방문을 유도하는 이메일이 발송됩니다!
+캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 **캔버스 시작을** 선택하여 캔버스를 실행합니다. 이제 30일 이상 앱을 방문하지 않았고 메시징 채널을 구독한 사용자에게는 재방문을 유도하는 이메일이 발송됩니다!
 
 {% alert tip %}
 캔버스를 시작하기 전과 후에 고려해야 할 사항은 출시 전후 [체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
