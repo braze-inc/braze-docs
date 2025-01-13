@@ -50,4 +50,4 @@ Você também pode pesquisar selecionando o intervalo de datas em que a campanha
 
 ### Organização de colunas
 
-Ao selecionar **Colunas**, você pode ajustar as informações da página da lista de campanhas para exibir detalhes relevantes da campanha, marcando as respectivas caixas de seleção. Por exemplo, se quiser configurar a lista de campanhas para mostrar apenas as campanhas de webhook baseadas em ação da sua equipe de marketing, poderá selecionar **Campaign type (Tipo de campanha**), **Entry schedule (Programação de entrada**) e **Teams (Equipes** ) como suas colunas.
+Ao selecionar **Colunas**, você pode ajustar as informações da página da lista de campanhas para exibir detalhes relevantes da campanha, marcando as respectivas caixas de seleção. Por exemplo, se quiser configurar a lista de campanhas para mostrar apenas as campanhas de webhook baseadas em ação da sua equipe de marketing, poderá selecionar **Campaign type (Tipo de campanha)**, **Entry schedule (Programação de entrada)** e **Teams (Equipes)** como suas colunas.
