@@ -50,6 +50,10 @@ glossaries:
     description: "Détermine si un utilisateur correspond ou non à une valeur d'attribut enregistrée personnalisée. (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Custom attributes
+  - name: Créé à
+    description: "Segmentation des utilisateurs en fonction de la date de création de leur profil utilisateur. Si un utilisateur a été ajouté par CSV ou API, ce filtre reflète la date à laquelle il a été ajouté. Si l'utilisateur n'est pas ajouté par CSV ou API et que sa première session est suivie par le SDK, ce filtre reflète la date de cette première session."
+    tags:
+      - Other Filters
   - name: Attributs personnalisés imbriqués
     description: "Les attributs qui sont les propriétés des attributs personnalisés.<br><br>Lors du filtrage d'un attribut personnalisé de temps imbriqué, vous pouvez choisir de filtrer en fonction du \"Jour de l'année\" ou de l'\"Heure\". \"Jour de l'année\" vérifiera uniquement le mois et le jour pour la comparaison. « Time » comparera l'horodatage complet, y compris l'année."
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Dernier message reçu de l’étape du canvas donnée
-    description: Segmentez vos utilisateurs en fonction du moment où ils ont reçu un composant Canvas spécifique.
+    description: "Segmentez vos utilisateurs en fonction du moment où ils ont reçu un composant Canvas spécifique. Ce filtre ne tient pas compte du fait que les utilisateurs ont reçu d'autres composants de Canvas."
     tags:
       - Retargeting
   - name: Dernier message reçu d’une campagne donnée
-    description: Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne donnée.
+    description: "Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne donnée. Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres campagnes."
     tags:
       - Retargeting
   - name: A reçu un message d’une campagne ou d’un canvas avec une balise
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: A reçu un message pour la dernière fois d’une campagne ou d’un canvas avec une balise
-    description: Segmentez vos utilisateurs en fonction du moment où ils ont reçu une campagne ou un Canvas spécifique avec une étiquette spécifique. (période de 24 heures)
+    description: "Segmentez vos utilisateurs en fonction du moment où ils ont reçu une campagne ou un Canvas spécifique avec une étiquette spécifique. Ce filtre ne tient pas compte du fait que les utilisateurs ont reçu d'autres campagnes ou canevas. (période de 24 heures)"
     tags:
       - Retargeting
   - name: N’a jamais reçu un message issu d’une campagne ou d’une étape de canvas
@@ -243,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Dernière inscription dans un groupe de contrôle
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils sont tombés dans le groupe de contrôle d'une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmentez vos utilisateurs par la dernière fois qu'ils sont tombés dans le groupe de contrôle d'une campagne. <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Retargeting
   - name: Entrés dans une variante du Canvas
