@@ -65,7 +65,7 @@ Para saber mais e conhecer as práticas recomendadas, consulte [Testes multivari
 
 O Braze fornece estatísticas detalhadas do público dos canais direcionados no rodapé. 
 
-Quanto maior for a sua base de usuários, maior a probabilidade de o valor de **usuários alcançáveis** ser uma estimativa aproximada. O número de usuários acessíveis pode diminuir se você usar um [grupo de controle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) ou configurar a elegibilidade de mensagens. Selecione [Calculate exact statistics (Calcular estatísticas exatas]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics) ) para determinar um número preciso para seus usuários acessíveis, pois isso pesquisará cada usuário em sua base de usuários. 
+Quanto maior for a sua base de usuários, maior a probabilidade de o valor de **usuários alcançáveis** ser uma estimativa aproximada. O número de usuários acessíveis pode diminuir se você usar um [grupo de controle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) ou configurar a elegibilidade de mensagens. Selecione [Calculate exact statistics (Calcular estatísticas exatas)]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics) para determinar um número preciso para seus usuários acessíveis, pois isso pesquisará cada usuário em sua base de usuários. 
 
 Note que:
 
@@ -74,7 +74,7 @@ Note que:
 
 ![][24]
 
-Para ver qual porcentagem da sua base de usuários está sendo direcionada ou o valor do tempo de vida (LTV) desse segmento, selecione **Show Additional Statistics (Mostrar estatísticas adicionais**).
+Para ver qual porcentagem da sua base de usuários está sendo direcionada ou o valor do tempo de vida (LTV) desse segmento, selecione **Show Additional Statistics (Mostrar estatísticas adicionais)**.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
