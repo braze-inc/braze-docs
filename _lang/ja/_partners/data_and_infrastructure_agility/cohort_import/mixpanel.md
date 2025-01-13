@@ -42,7 +42,7 @@ Mixpanel で **[Data Management] > [Cohorts]** に移動します。Braze に送
 
 ### ステップ4:Brazeのセグメントユーザー
 
-ブレーズでこれらのユーザーのセグメントを作成するには、**Audience**> **Segments**に移動し、セグメントに名前を付け、フィルタとして**Mixpanel_Cohorts**を選択します。次に、「includes」オプションを使い、Mixpanelで作成したコホートを選択する。 
+Braze でこれらのユーザーのセグメントを作成するには、**Audience**> **Segments**に移動し、セグメントに名前を付け、フィルタとして**Mixpanel_Cohorts**を選択します。次に、「includes」オプションを使い、Mixpanelで作成したコホートを選択する。 
 
 ![Braze セグメントビルダーで、ユーザー属性フィルター「Mixpanel cohort」が「次を含む」と「Braze cohort」に設定されている。]{% image_buster /assets/img_archive/mixpanel1.png %}
 
@@ -50,4 +50,4 @@ Mixpanel で **[Data Management] > [Cohorts]** に移動します。Braze に送
 
 ## ユーザーマッチング
 
-識別されたユーザは、`external_id` または`alias` のいずれかで照合できます。匿名ユーザは、`device_id` と照合できます。最初に匿名ユーザーとして作成された識別済みユーザーは、`device_id` で識別できず、`external_id` または`alias` で識別する必要があります。
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。
