@@ -47,6 +47,20 @@ Si l’URL n’est pas disponible et qu’elle atteint une page 404, Braze renv
 
 Si l’endpoint renvoie du JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
 
+### Détection d'un hôte malsain
+
+Le contenu connecté de Braze utilise un mécanisme de détection d'hôte malsain pour détecter lorsque l'hôte cible connaît un taux élevé de lenteur significative ou de surcharge entraînant des dépassements de délai, un trop grand nombre de demandes ou d'autres résultats qui empêchent Braze de communiquer avec succès avec l'endpoint cible. Il agit comme un garde-fou pour réduire la charge inutile qui pourrait être à l'origine des difficultés de l'hôte cible. Il sert également à stabiliser l'infrastructure de Braze et à maintenir des vitesses d'envoi de messages rapides.
+
+Si l'hôte cible connaît un taux élevé de lenteur significative ou de surcharge, Braze interrompt temporairement les requêtes vers l'hôte cible pendant une minute, en simulant à la place des réponses indiquant la défaillance. Au bout d'une minute, Braze vérifie l'état de santé de l'hôte à l'aide d'un petit nombre de requêtes avant de reprendre les requêtes à pleine vitesse si l'hôte s'avère sain. Si l'hôte est toujours en mauvaise santé, Braze attendra encore une minute avant de réessayer.
+
+Si les requêtes adressées à l'hôte cible sont interrompues par le détecteur d'hôte malsain, Braze continuera d'afficher les messages et de suivre votre logique Liquid comme s'il avait reçu un code de réponse d'erreur. Si vous voulez vous assurer que ces demandes de contenu connecté sont relancées lorsqu'elles sont interrompues par le détecteur d'hôte malsain, utilisez l'option `:retry`. Pour plus d'informations sur l'option `:retry`, reportez-vous à la section [Tentatives de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+Si vous pensez que la détection des hôtes malsains peut être à l'origine de problèmes, contactez l'[assistance de Braze]({{site.baseurl}}/support_contact/).
+
+{% alert tip %}
+Consultez la page [Résolution des problèmes des demandes de webhook et de contenu connecté]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) pour en savoir plus sur la manière de résoudre les codes d'erreur courants.
+{% endalert %}
+
 ## Performance
 
 Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite de débit que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
@@ -70,11 +84,11 @@ Si l’URL nécessite une authentification de base, Braze peut générer des inf
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **contenu connecté** sous **Gérer les paramètres.**
 {% endalert %}
 
-![][34]
+![Les paramètres du "contenu connecté" dans le tableau de bord de Braze.][34]
 
 Pour ajouter un nouvel identifiant, cliquez sur **Ajouter un identifiant**. Nommez vos identifiants et saisissez le nom d’utilisateur et le mot de passe.
 
-![][35]{: style="max-width:30%" }
+![La fenêtre "Create New Credential" (Créer un nouvel identifiant) vous permet de saisir un nom, un nom d'utilisateur et un mot de passe.][35]{: style="max-width:30%" }
 
 Vous pouvez alors utiliser ces informations d’identification de base pour l’authentification dans vos appels API en faisant référence au nom du jeton :
 
