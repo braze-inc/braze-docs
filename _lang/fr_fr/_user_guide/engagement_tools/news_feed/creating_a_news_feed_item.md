@@ -12,9 +12,7 @@ hidden: true
 
 # Créer un élément de Fil d’actualité
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web. Mieux encore, le Fil d’actualité peut également cibler des segments individuels comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le fil peut être complètement différent de ce que verrait une autre personne. Les possibilités offertes par le Fil d’actualité sont quasiment illimitées.
 
