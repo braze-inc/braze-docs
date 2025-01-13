@@ -1390,6 +1390,7 @@ validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs
 // validurls['OLD'] = 'NEW';
 validurls['/docs/user_guide/data_and_analytics'] = '/docs/user_guide/analytics';
 validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/analytics/catalogs';
+validurls['/docs/user_guide/data_and_analytics/data_centers'] = '/docs/user_guide/data/data_centers/';
 validurls['/docs/user_guide/data_and_analytics/analytics'] = '/docs/user_guide/analytics/dashboard';
 validurls['/docs/user_guide/data_and_analytics/analytics/conversions_dashboard'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard';
 validurls['/docs/user_guide/data_and_analytics/analytics/deliverability_center'] = '/docs/user_guide/analytics/dashboard/deliverability_center';
