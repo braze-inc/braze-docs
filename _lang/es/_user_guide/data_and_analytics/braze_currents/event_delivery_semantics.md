@@ -3,39 +3,36 @@ nav_title: Semántica de la entrega de eventos
 article_title: Semántica de la entrega de eventos
 page_order: 3
 page_type: reference
-description: "Este artículo de referencia describe cómo Currents gestiona los datos de eventos de archivos planos que enviamos a los socios de Almacenamiento de Datos."
+description: "Este artículo de referencia describe y define cómo Currents gestiona los datos de eventos de archivos planos que enviamos a los socios de Almacenamiento de Datos."
 tool: Currents
 
 ---
 
 # Semántica de la entrega de eventos
 
-> Este artículo describe cómo Currents gestiona los datos de eventos de archivos planos que enviamos a los socios de almacenamiento de almacén de datos.
+> Esta página describe y define cómo Currents gestiona los datos de eventos de archivo plano que enviamos a los socios de Almacenamiento de Datos.
 
-Currents para el almacenamiento de datos es un flujo continuo de datos desde nuestra plataforma a un contenedor de almacenamiento en una de las [conexiones de nuestro socio]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) de almacén de datos.
-
-Currents escribe archivos Avro en su cubo de almacenamiento en umbrales regulares, lo que le permite procesar y analizar los datos de eventos utilizando su propio conjunto de herramientas de Business Intelligence.
+Currents para almacenamiento de datos es una transmisión continua de datos desde nuestra plataforma a un contenedor de almacenamiento en una de las [conexiones de nuestro socio]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) de almacén de datos. Currents escribe archivos Avro en tu contenedor de almacenamiento en umbrales regulares, lo que te permite procesar y analizar los datos de eventos con tu propio conjunto de herramientas de inteligencia empresarial (BI).
 
 {% alert important %}
-Ten en cuenta que este contenido **sólo se aplica a los datos de eventos de archivos planos que enviamos a los socios de almacenamiento de datos (Google Cloud Storage, Amazon S3 y Microsoft Azure Blob Storage)**. <br><br>Para el contenido que se aplica a los demás socios, consulta nuestra lista de [socios disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) y comprueba sus respectivas páginas.
+Este contenido **sólo se aplica a los datos de eventos de archivos planos que enviamos a los socios de almacenamiento de datos (Google Cloud Storage, Amazon S3 y Microsoft Azure Blob Storage)**. <br><br>Para el contenido que se aplica a otros socios, consulta nuestra lista de [socios disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) y comprueba sus respectivas páginas.
 {% endalert %}
-
 
 ## Entrega única
 
-Como sistema de alto rendimiento, Currents garantiza la entrega de eventos "al menos una vez", lo que significa que ocasionalmente pueden escribirse eventos duplicados en su cubo de almacenamiento. Esto puede ocurrir cuando se reprocesan eventos de nuestra cola por cualquier motivo.
+Como sistema de alto rendimiento, Currents proporciona una entrega de eventos "al menos una vez", lo que significa que ocasionalmente pueden escribirse eventos duplicados en tu contenedor de almacenamiento. Esto puede ocurrir cuando se reprocesan eventos de nuestra cola por cualquier motivo.
 
-Si sus casos de uso requieren la entrega exactamente una vez, puede utilizar el campo de identificador único que se envía con cada evento (`id`) para deduplicar los eventos. Dado que el archivo sale de nuestro control cuando se escribe en su cubo de almacenamiento, no tenemos forma de garantizar la deduplicación desde nuestro lado.
+Si tus casos de uso requieren una entrega "exactamente una vez", puedes utilizar el campo identificador único que se envía con cada evento (`id`) para deduplicar los eventos. Como el archivo sale de nuestro control cuando se escribe en tu contenedor de almacenamiento, no tenemos forma de garantizar la deduplicación desde nuestro lado.
 
 ## Marcas de tiempo
 
-Todas las marcas de tiempo exportadas por Currents se envían en la zona horaria UTC. Para algunos eventos en los que está disponible, también se incluye un campo de zona horaria, que proporciona el formato IANA de la zona horaria local del usuario en el momento del evento.
+Todas las marcas de tiempo exportadas por Currents se envían en la zona horaria UTC. Para algunos eventos en los que está disponible, también se incluye un campo de zona horaria, que entrega el formato de la Autoridad de Números Asignados de Internet (IANA) de la zona horaria local del usuario en el momento del evento.
 
 ### Latencia
 
 Los eventos enviados a Braze a través del SDK o la API pueden incluir una marca de tiempo del pasado. El ejemplo más notable es cuando los datos del SDK se ponen en cola, como cuando no hay conectividad móvil. En ese caso, la marca de tiempo del evento reflejará cuándo se generó el evento. Esto significa que un porcentaje de eventos parecerá tener una latencia alta.
 
-## Apache Avro
+## Formato Apache Avro
 
 Las integraciones de almacenamiento de datos Braze Currents emiten datos en el formato `.avro`. Elegimos [Apache Avro](https://avro.apache.org/) porque es un formato de datos flexible que admite de forma nativa la evolución de esquemas y es compatible con una amplia variedad de productos de datos: 
 
@@ -50,7 +47,7 @@ Currents creará un archivo para cada tipo de evento utilizando el siguiente for
 ```
 
 {% alert tip %}
-¿No puede ver el código debido a la barra de desplazamiento? Vea cómo solucionarlo [aquí]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
+¿No puede ver el código debido a la barra de desplazamiento? Aprende a solucionarlo [aquí]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
 {% endalert %}
 
 |Segmento de archivo |Definición|
@@ -68,7 +65,7 @@ Currents creará un archivo para cada tipo de evento utilizando el siguiente for
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Las convenciones de nomenclatura de archivos pueden cambiar en el futuro, Braze recomienda buscar en todas las claves de su bucket que tengan un prefijo de <your-bucket-prefix>.
+Las convenciones para nombrar los archivos pueden cambiar en el futuro. Braze recomienda buscar en todas las claves de tu contenedor que tengan un prefijo <prefijo-tu-contenedor>.
 {% endalert %}
 
 ### Umbral de escritura Avro
@@ -85,7 +82,7 @@ De vez en cuando, Braze puede realizar cambios en el esquema Avro cuando se aña
 
 #### Cambios sin ruptura
 
-Cuando se añade un campo al esquema Avro, lo consideramos un cambio no rupturista. Los campos añadidos serán siempre campos Avro "opcionales" (como con un valor por defecto de `null`), por lo que "coincidirán" con esquemas antiguos según la [especificación de resolución de esquemas Avro](http://avro.apache.org/docs/current/spec.html#schema+resolution). Estas adiciones no deberían afectar a los procesos ETL existentes, ya que el campo simplemente se ignorará hasta que se añada a su proceso ETL. 
+Cuando se añade un campo al esquema Avro, lo consideramos un cambio no rupturista. Los campos añadidos serán siempre campos Avro "opcionales" (como con un valor por defecto de `null`), por lo que "coincidirán" con esquemas antiguos según la [especificación de resolución de esquemas Avro](http://avro.apache.org/docs/current/spec.html#schema+resolution). Estas adiciones no deben afectar a los procesos existentes de Extraer, Transformar, y Cargar (ETL), ya que el campo simplemente se ignorará hasta que se añada a tu proceso ETL. 
 
 {% alert important %}
 Le recomendamos que su configuración ETL sea explícita sobre los campos que procesa para evitar romper el flujo cuando se añadan nuevos campos.
