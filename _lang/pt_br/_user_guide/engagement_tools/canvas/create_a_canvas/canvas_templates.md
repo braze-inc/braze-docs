@@ -12,7 +12,7 @@ page_type: reference
 > Este artigo de referência aborda como criar e gerenciar modelos para o Canva. O uso de modelos pode refinar o envio de mensagens, criando uma estrutura consistente que pode ser facilmente personalizada para atender às suas metas específicas em todas as telas.
 
 {% alert tip %}
-Economize tempo e agilize sua criação de telas usando [os modelos do Braze Canvas](#available-braze-templates)! Navegue em nossa biblioteca de modelos pré-criados para encontrar um que se adapte ao seu caso de uso e personalize-o para atender às suas necessidades específicas.
+Economize tempo e agilize sua criação de telas usando os [modelos do Braze Canvas](#available-braze-templates)! Navegue em nossa biblioteca de modelos pré-criados para encontrar um que se adapte ao seu caso de uso e personalize-o para atender às suas necessidades específicas.
 {% endalert %}
 
 ## Método 1: Criar a partir de um Canvas existente
@@ -87,7 +87,7 @@ Considere o seguinte ao usar este modelo:
 Impulsione as compras notificando seus usuários quando um item estiver de volta ao estoque com envio de mensagens personalizadas. Considere o seguinte ao usar este modelo:
 
 - Em **Entry Schedule**, selecione um catálogo para usar. Isso permite acessar dados, como produtos, descontos e promoções, para direcionar ainda mais seus usuários.
-- Em **Target Audience (Público alvo**), adicione um segmento para direcionar os usuários que indicaram interesse em um determinado item.
+- Em **Target Audience (Público alvo)**, adicione um segmento para direcionar os usuários que indicaram interesse em um determinado item.
 - Nas etapas de mensagens em todo o Canva, atualize o Liquid para fazer referência ao seu catálogo.
 
 {% endtab %}
@@ -101,7 +101,7 @@ Envie mensagens personalizadas em tempo hábil para destacar os benefícios e as
 - Configure os atributos personalizados na etapa de mensagens denominada "Pesquisa de feedback" para capturar o sentimento do feedback.
 
 {% endtab %}
-{% tab Usuário caduco %}
+{% tab Usuários inativos %}
 
 Traga os usuários de volta ao seu app com incentivos baseados em seus engajamentos anteriores. Considere o seguinte ao usar este modelo:
 
