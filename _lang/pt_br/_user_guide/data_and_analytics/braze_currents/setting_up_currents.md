@@ -36,13 +36,15 @@ Os requisitos a seguir são os requisitos básicos e mínimos para a integraçã
 É importante manter suas chaves/tokens de parceiro e detalhes de autenticação atualizados; se as credenciais do conector expirarem, o conector deixará de enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
-## Etapa 1: Escolha seu parceiro
+## Configuração de Currents
+
+### Etapa 1: Escolha seu parceiro
 
 O Braze Currents permite a integração por meio do armazenamento de dados usando arquivos simples ou para nossos parceiros de análise comportamental e dados de clientes usando cargas úteis JSON em lote para um endpoint designado.  
 
 Antes de iniciar sua integração, é melhor decidir qual integração é a melhor para seus objetivos. Por exemplo, se você já utiliza o mParticle e o Segment e gostaria que os dados da Braze fossem enviados para lá, seria melhor usar uma carga útil JSON em lote. Se preferir manipular os dados por conta própria ou tiver um sistema mais complexo de análise de dados, talvez seja melhor usar o armazenamento de dados[(o Braze usa esse método]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
-## Etapa 2: Navegar para Currents
+### Etapa 2: Correntes abertas
 
 Para começar, acesse **Integrações com parceiros** > **Exportação de dados**. Você será levado à página de gerenciamento de integração do Currents.
 
@@ -52,13 +54,13 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 
 ![Página de Currents no dashboard da Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
-## Etapa 3: Adicionar parceiro
+### Etapa 3: Adicione seu parceiro
 
 Adicione um parceiro, às vezes chamado de "Currents connector", selecionando o menu suspenso na parte superior da tela.
 
 Cada parceiro requer um conjunto diferente de etapas de configuração. Para ativar cada integração, consulte nossa lista de [parceiros disponíveis]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) e siga as instruções em suas respectivas páginas.
 
-## Etapa 4: Configurar eventos
+### Etapa 4: Configure seus eventos
 
 Escolha os eventos que você deseja passar para esse parceiro marcando uma das opções disponíveis. Você pode encontrar listas desses eventos em nossas bibliotecas [Eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) e [Eventos de engajamento com mensagem]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
@@ -66,25 +68,29 @@ Escolha os eventos que você deseja passar para esse parceiro marcando uma das o
 
 Se necessário, você pode saber mais sobre nossos eventos em nosso artigo [sobre semântica de entrega de eventos]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/).
 
-## Etapa 5: Transformações de campo
+### Etapa 5: Configurar transformações de campo
 
-As transformações de campo do Currents permitem que você designe determinados campos de string no Currents para remoção (substituir por uma string vazia) ou hashing (aplicar um algoritmo de hashing SHA-256). 
+Você pode usar as transformações de campo do Currents para remover ou colocar em hash um campo de string.
+
+- **Remover** Substitui o campo string por `[REDACTED]`. Isso é útil se o seu parceiro rejeitar eventos com campos ausentes ou vazios.
+- **Hash:** Aplica um algoritmo de hash SHA-256 ao campo string.
 
 A seleção de um campo para uma dessas transformações aplicará essa transformação a todos os eventos em que esse campo aparecer. Por exemplo, ao selecionar `email_address` para hashing, o campo `email_address` será submetido a hashing em Envio de e-mail, Abertura de e-mail, Bounce de e-mail e Alteração de estado do grupo de inscrições.
 
 ![Adição de transformações de campo]({% image_buster /assets/img/current3.png %})
 
-## Etapa 6: Teste sua integração
+### Etapa 6: Teste sua integração
 
 Você pode testar sua integração ou dar uma olhada nos dados de amostra do Currents em nosso [repositório do GitHub](https://github.com/Appboy/currents-examples) de exemplos do Currents.
 
 {% alert important %}
-Observe que o Currents descartará eventos com cargas úteis excessivamente grandes, superiores a 900 KB.
+O Currents descartará eventos com cargas úteis excessivamente grandes, superiores a 900 KB.
 {% endalert %}
 
-### Conectores de correntes de teste
+#### Teste de conectores Currents
 
 Os conectores Test Currents são versões gratuitas de nossos conectores existentes que podem ser usados para testar e experimentar diferentes destinos. As correntes de teste têm:
+
 - Não há limite para o número de conectores Test Currents que você pode construir.
 - Um máximo agregado de 10.000 eventos por período contínuo de sete dias. Esse total de eventos é atualizado de hora em hora no dashboard.
 
@@ -98,7 +104,7 @@ Para fazer upgrade de seu conector de teste do Currents, edite a integração no
 
 ## Lista de permissões de IP
 
-O Braze enviará dados do Currents dos IPs listados, que são automática e dinamicamente adicionados a quaisquer chaves de API que tenham sido aceitas para a listagem de permissões.
+O Braze enviará dados Currents dos IPs listados.
 
 | Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, e `US-07`: |
 |---|
