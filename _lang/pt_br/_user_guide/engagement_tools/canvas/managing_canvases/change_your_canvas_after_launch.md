@@ -81,7 +81,9 @@ Você pode editar as seguintes configurações e informações do Canvas depois 
 Após o lançamento do Canva:
 
 - Os eventos de conversão não podem ser editados. 
-- As jornadas [do público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), as jornadas [de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) e [as jornadas experimentais]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) não podem ser adicionadas ou removidas dessas etapas e não podem ser reordenadas para ajustar a classificação. Como solução alternativa, edite o Canva ativo e duplique a etapa, que será editável até que você inicie o rascunho.
+- Os seguintes passos não podem ser adicionados ou removidos, e não podem ser reordenados para ajustar a classificação: [Jornadas do público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [jornadas experimentais]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+  - **Solução alternativa 1:** Crie uma nova jornada do público, jornada de ação ou jornada experimental e reconfigure os caminhos para essa nova etapa.
+  - **Solução alternativa 2:** Duplique o canva para fazer suas edições.
 
 ### Etapas individuais
 
@@ -119,13 +121,18 @@ Caso pretenda fazer edições maiores que levem à criação de uma nova cópia 
 ### Exclusão de variantes
 
 Quando as variantes são excluídas de um Canva, ocorre o seguinte:
+
 - As etapas dentro da variante (incluindo aquelas compartilhadas por outras variantes) serão excluídas. 
 - A análise de etapas e a análise de dados de nível superior do Canva, como _Total de entradas_, _Total de saídas_ e _Taxa de conversão_, serão excluídas.
 - Os usuários das variantes excluídas são excluídos das etapas e as mensagens seguintes não são enviadas.
 
+### Propriedades de entrada da tela
+
+As propriedades de entrada do canva não estão no formato de modelos em etapas quando enviadas. Isso significa que, quando as propriedades de entrada do canva são editadas após um canva ter sido lançado, essas alterações só se aplicarão a novos usuários que entrarem no canva. Se o seu canva permitir que os usuários reentrem no canva, qualquer usuário que reentrar será determinado pelas propriedades de entrada do canva atualizadas.
+
 ## Melhores práticas
 
-Confira estas práticas recomendadas que você deve ter em mente ao editar ou adicionar ao seu Canvas depois que ele for lançado usando o Canvas Flow.
+Confira estas melhores práticas a serem lembradas ao editar ou adicionar ao seu canva após seu lançamento.
 
 ### Etapas desconectadas
 
