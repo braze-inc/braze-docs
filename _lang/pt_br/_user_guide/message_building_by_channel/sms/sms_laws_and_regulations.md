@@ -43,7 +43,7 @@ Há seis regras que você deve seguir:
 
 Aqui estão alguns links que você pode precisar consultar ao criar sua campanha de SMS:
 
-- [Princípios de envio de mensagens e melhores práticas da CTIA para 2023](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+- [Princípios de envio de mensagens e práticas recomendadas da CTIA para 2023](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Guia do Twilio para conformidade com SMS nos EUA](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - [Conformidade e recursos de SMS da Acoustic nos Estados Unidos](https://help.goacoustic.com/hc/en-us/articles/360043717414-United-States-SMS-compliance-and-resources)
 
