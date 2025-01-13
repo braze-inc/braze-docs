@@ -10,9 +10,9 @@ search_rank: 11
 
 > Le filtre intelligent ou de canal `Most Engaged` sélectionne la partie de votre audience pour laquelle le canal de communication sélectionné est son « meilleur » canal. 
 
-Dans ce cas, « le meilleur » signifie le canal qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner l’e-mail, le SMS, la notification push Web ou mobile (incluant tout système d’exploitation ou appareil mobile disponible) en tant que canal.
+Dans ce cas, « le meilleur » signifie le canal qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner l’e-mail, le SMS, WhatsApp, les notifications push Web ou mobile (incluant tout système d’exploitation ou appareil mobile disponible) en tant que canal.
 
-![][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![Le filtre du canal intelligent avec une liste déroulante pour les différents canaux qui peuvent être sélectionnés.][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 Le canal intelligent calcule le taux d’engagement pour chaque utilisateur pour chacun des trois canaux en prenant le rapport entre les interactions avec le message (ouverture ou clics) et le nombre de messages reçus au cours des six derniers mois d’activité. Les canaux disponibles sont classés selon leurs taux d’engagement respectifs et le canal ayant le rapport le plus élevé est considéré être celui avec « Le plus d’interactions » pour cet utilisateur. 
 
@@ -30,9 +30,9 @@ Pour que Braze détermine quel canal est « le meilleur », il doit posséder 
 
 Si les utilisateurs n’ont pas reçu suffisamment de messages sur les différents canaux, ces utilisateurs basculeront dans l’option « Données insuffisantes » de ce filtre. Cela vous permet d’utiliser n’importe lequel des trois canaux de communication disponibles pour cibler ces utilisateurs.
 
-Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pouvez définir le filtre du canal intelligent sur **Mobile** et utiliser **OR** pour ajouter un second filtre de canal intelligent défini sur **Pas assez de données.** Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
+Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pourriez définir le filtre du canal intelligent sur **Mobile push** et utiliser **OR** pour ajouter un second filtre du canal intelligent défini sur **Not Enough Data.** Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
 
-![][2]
+![Filtres de canaux intelligents pour le push mobile ou les données insuffisantes.][2]
 
 {% alert note %}
 Les campagnes et les étapes du canvas qui ignorent la [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ne seront pas prises en compte par le canal intelligent et ne pourront pas contribuer aux exigences en matière de données.
@@ -63,5 +63,5 @@ Lorsque l’utilisateur dispose de suffisamment de données pour déterminer un 
 Le canal intelligent vous permet de cibler de manière sélective et en avance la part des utilisateurs qui ont une probabilité beaucoup plus élevée d’interagir avec un message que le reste de votre audience. Cela ne représente probablement pas la majorité des utilisateurs d’une audience typique. Au contraire, vous pouvez vous attendre à ce que ce filtre trouve que 5 à 20 % de votre audience habituelle on un bilan clair d’engagement sur un canal particulier.
 
 
-[1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Filtre de canal intelligent"
+[1]: {% image_buster /assets/img/intelligent_channel_filter.png %}
 [2]: {% image_buster /assets/img/intelligent_example.png %}
