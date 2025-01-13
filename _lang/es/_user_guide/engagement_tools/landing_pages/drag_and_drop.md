@@ -11,7 +11,7 @@ alias: /landing_pages/drag_and_drop/
 > Con el editor de arrastrar y soltar, puede crear y personalizar una página de destino para aumentar su audiencia y recopilar preferencias directamente en Braze.
 
 {% alert important %}
-Las páginas de aterrizaje están actualmente en acceso temprano. Hay un límite de cinco páginas de destino por empresa.
+Las páginas de aterrizaje están actualmente en acceso temprano. Hay un límite de cinco páginas de destino por empresa. Las sesiones de usuario final registradas en las páginas de destino cuentan para el cálculo de tus Usuarios Activos Mensuales (MAU).
 {% endalert %}
 
 ## Crear una página de destino (arrastrar y soltar)
@@ -140,13 +140,15 @@ No, actualmente no es compatible.
 
 ### ¿Qué características están en la hoja de ruta de las páginas de destino? {#roadmap}
 
-Se están desarrollando características adicionales. Esto incluye lo siguiente:
+Tenemos previsto lanzar características adicionales para las páginas de destino, que están en desarrollo. Estos pueden incluir:
 
 * Nueva etiqueta de Liquid para enlazar una página de destino en un canal de mensajería Braze
 * Fusión automática de usuarios cuando se envía una página de destino a través de un canal Braze
 * Página de informes básicos
 * Bloques de formulario arrastrar y soltar para casillas de verificación y desplegables
 * Evento estándar de seguimiento y reorientación basado en el envío de formularios
+
+Aunque estas características forman parte de nuestra hoja de ruta, todavía están en desarrollo, y Braze no puede garantizar que alguna o todas estas características estén disponibles de forma general. El acceso a algunas o a todas las características previstas para las páginas de destino puede estar sujeto a tarifas adicionales.
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}
