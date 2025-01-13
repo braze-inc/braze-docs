@@ -23,7 +23,7 @@ Quando você [compõe sua notificação por push]({{site.baseurl}}/user_guide/me
 
 Se quiser categorizar suas mensagens e agrupá-las na bandeja de notificação do usuário, poderá utilizar o recurso Canais de Notificação do Android por meio do Braze.
 
-Primeiro, crie sua campanha de push Android, depois olhe para o topo da **Compor** guia para o **Canal de Notificação** dropdown.
+Primeiro, crie sua campanha de push Android, depois olhe para o topo da guia **Compor** para o menu suspenso **Canal de Notificação**.
 
 ![][28]{: style="max-width:60%;" }
 
