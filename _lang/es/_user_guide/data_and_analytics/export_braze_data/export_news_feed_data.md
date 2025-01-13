@@ -12,9 +12,7 @@ hidden: true
 
 # Exportar datos de noticias
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Al analizar el rendimiento de una tarjeta de noticias específica, puede exportar los datos que se encuentran en los gráficos de desglose del rendimiento:
 
