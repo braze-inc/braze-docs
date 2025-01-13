@@ -8,7 +8,7 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Braze 클라우드 데이터 수집"
-guide_top_text: "<h2>Braze 클라우드 데이터 수집이란 무엇입니까?</h2>Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 저장 솔루션에서 Braze로 직접 연결하여 관련 사용자 또는 카탈로그 데이터를 동기화하고 사용자를 삭제할 수 있습니다. Braze에 동기화되면 이 데이터를 개인화 또는 세분화와 같은 사용 사례에 활용할 수 있습니다. 클라우드 데이터 수집의 유연한 통합은 중첩된 JSON 및 객체 배열을 포함한 복잡한 데이터 구조를 지원합니다. <br><br>**Braze 클라우드 데이터 수집 기능:**<br> 몇 분안에 데이터 웨어하우스 또는 파일 스토리지 솔루션에서 Braze로 직접 단순 통합을 생성합니다.<br>- 데이터 웨어하우스에서 Braze로 속성, 이벤트 및 구매를 포함한 사용자 데이터를 안전하게 동기화합니다.<br>- 클라우드 데이터 수집을 커런츠 또는 Snowflake 데이터 공유와 결합하여 Braze로 데이터 루프를 닫으세요.<br><br>**클라우드 데이터 수집은 데이터를 동기화할 수 있습니다**:<br> Snowflake<br> - Amazon Redshift<br> - Google BigQuery<br> - Databricks<br> - S3"
+guide_top_text: "<h2>Braze 클라우드 데이터 수집이란 무엇입니까?</h2>Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 저장 솔루션에서 Braze로 직접 연결하여 관련 사용자 또는 카탈로그 데이터를 동기화하고 사용자를 삭제할 수 있습니다. Braze에 동기화되면 이 데이터를 개인화 또는 세분화와 같은 사용 사례에 활용할 수 있습니다. 클라우드 데이터 수집의 유연한 통합은 중첩된 JSON 및 객체 배열을 포함한 복잡한 데이터 구조를 지원합니다. <br><br>**Braze 클라우드 데이터 수집 기능:**<br> 몇 분안에 데이터 웨어하우스 또는 파일 스토리지 솔루션에서 Braze로 직접 단순 통합을 생성합니다.<br>- 데이터 웨어하우스에서 Braze로 속성, 이벤트 및 구매를 포함한 사용자 데이터를 안전하게 동기화합니다.<br>- 클라우드 데이터 수집을 커런츠 또는 Snowflake 데이터 공유와 결합하여 Braze로 데이터 루프를 닫으세요.<br><br>**클라우드 데이터 수집은 데이터를 동기화할 수 있습니다**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> Snowflake"
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
