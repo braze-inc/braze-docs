@@ -78,8 +78,8 @@ Esses usuários foram automaticamente cancelados de todas as futuras notificaç�
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Bounces</i>:Count</li>
-        <li><i>Bounce %</i> ou <i>Bounce Rate %</i>: (Envios - Bounces) / (Envios)</li>
+        <li><i>Bounces</i>: Contagem</li>
+        <li><i>Bounce %</i> ou <i>Bounce Rate %</i>: (Bounces) / (Envios)</li>
     </ul>
 </span>
 {:/}
@@ -246,9 +246,9 @@ Mensagem no app
 
 {% multi_lang_include metrics.md metric='Total Conversions' %}
 
-Quando um usuário visualiza uma campanha de mensagens no app apenas uma vez, apenas uma conversão é contada, mesmo que ele realize o evento de conversão várias vezes posteriormente. No entanto, se a reelegibilidade estiver ativada e o usuário vir a campanha de mensagens no app várias vezes, *o total de conversões* poderá aumentar uma vez para cada vez que o usuário registrar uma impressão para uma nova instância da campanha de mensagens no app. 
+Quando um usuário visualiza uma campanha de mensagens no app apenas uma vez, apenas uma conversão é contada, mesmo que ele realize o evento de conversão várias vezes posteriormente. No entanto, se a reelegibilidade estiver ativada e o usuário vir a campanha de mensagens no app várias vezes, o *total de conversões* poderá aumentar uma vez para cada vez que o usuário registrar uma impressão para uma nova instância da campanha de mensagens no app. 
 
-Por exemplo, se um usuário disparar uma mensagem no app duas vezes e converter após cada impressão de mensagem no app (resultando em duas conversões), *o Total de conversões* aumentará em dois. No entanto, se houver apenas uma impressão de mensagem no app seguida de dois eventos de conversão, apenas uma conversão será registrada e *o total de conversões* aumentará em um.
+Por exemplo, se um usuário disparar uma mensagem no app duas vezes e converter após cada impressão de mensagem no app (resultando em duas conversões), o *Total de conversões* aumentará em dois. No entanto, se houver apenas uma impressão de mensagem no app seguida de dois eventos de conversão, apenas uma conversão será registrada e o *total de conversões* aumentará em um.
 
 {% endapi %}
 
@@ -392,7 +392,7 @@ WhatsApp
 
 {% multi_lang_include metrics.md metric='Failures' %} As falhas são incluídas na contagem de <i>envios</i>, mas não na contagem de <i>entregas</i>.</td>
 
-<span class="calculation-line">Cálculo<i>(taxa de falha</i>): (Falhas) / (Envios)</span>
+<span class="calculation-line">Cálculo<i>(taxa de falha)</i>: (Falhas) / (Envios)</span>
 
 {% endapi %}
 
@@ -867,7 +867,7 @@ Envio de e-mail, cartões de conteúdo, LINE
     <ul>
         <li><i>Cliques únicos</i>: Contagem</li>
         <li><b>Cartões de conteúdo</b> <i>% de cliques únicos</i> ou <i>taxa de cliques únicos</i>: (Cliques únicos) / (Impressões únicas)</li>
-        <li><i>% de cliques únicos</i> <b>de e-mail</b> ou <i>taxa de cliques únicos</i>: (Cliques únicos) / (Entregas)</li>
+        <li><i>% de cliques únicos</i> de <b>e-mail</b> ou <i>taxa de cliques únicos</i>: (Cliques únicos) / (Entregas)</li>
     </ul>
 </span>
 {:/}
@@ -917,7 +917,7 @@ Envio de e-mail, LINE
     Cálculo:
     <ul>
         <li><i>Aberturas exclusivas</i>: Contagem</li>
-        <li><i>Unique Opens % (% de aberturas únicas</i> ) ou <i>Unique Open Rate (taxa de abertura única</i>): (Aberturas únicas) / (Entregas)</li>
+        <li><i>Unique Opens % (% de aberturas únicas</i> ) ou <i>Unique Open Rate (taxa de abertura única)</i>: (Aberturas únicas) / (Entregas)</li>
     </ul>
 </span>
 {:/}
@@ -934,7 +934,7 @@ Tudo
 
 {% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>. Esse número é recebido da Braze e se baseia no site `user_id`.
+Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>. Esse número é recebido da Braze e se baseia no `user_id`.
 
 <span class="calculation-line">Cálculo: Contagem</span>
 
