@@ -2,7 +2,7 @@
 nav_title: Global Control Group 
 article_title: Global Control Group Reporting
 page_type: reference
-description: "This reference article covers the reporting metrics found on the Global Control Group Reporting page in the dashboard."
+description: "This page covers the reporting metrics found on the Global Control Group Reporting page in the dashboard."
 tool: 
   - Reports
 
@@ -12,21 +12,23 @@ tool:
 
 > The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of non-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
 
+## Viewing a report
+
 To view a report for your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) from the dashboard, navigate to **Analytics** > **Global Control Group Report**. 
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
 {% endalert %}
 
-Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
+Next, select the parameter you wish to run your report with (sessions or a particular custom event) and select **Run Report**.
 
 ![][6]
 
-## About your report
+## Configuring your report
 
 When generating your report, choose an event—either sessions or any custom event—to compare across your treatment and control groups. Then choose a time period for which to view data for. Keep in mind that if you've saved multiple control group experiments at different time periods, you should avoid including data from more than one experiment in your report.
 
-Keep in mind that the percentage metrics in your report are rounded. For instance, in cases where the number of conversions is a very low percentage of your overall control or treatment group, the conversion rate may round to 0%.
+Keep in mind that the percentage metrics in your report are rounded. For example, in cases where the number of conversions is a very low percentage of your overall control or treatment group, the conversion rate may round to 0%.
 
 Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
 

@@ -3,16 +3,17 @@ nav_title: Sync and Delete Catalog Data
 article_title: Sync and Delete Catalog Data
 page_order: 4
 page_type: reference
-description: "This reference article provides an overview of how to sync catalog data."
+description: "This page provides an overview of how to sync catalog data."
 
 ---
 
 # Sync and delete catalog data
 
+> This page discusses how to sync catalog data.
  
 ## Step 1: Create a new catalog
 
-Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you will need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
+Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
 - Upload a [CSV]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-1-upload-csv)
 - Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser) or during CDI setup.
 - Create a catalog using the [Create catalog endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
@@ -39,7 +40,7 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
          DELETED BOOLEAN
     );
     ```
-2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
+2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -53,13 +54,13 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
     CREATE USER BRAZE_INGESTION_USER;
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
-3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
-4. In the Braze dashboard, navigate to **Technology Partners > Snowflake**, and create a new sync.
+3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. In the Braze dashboard, navigate to **Technology Partners** > **Snowflake**, and create a new sync.
 5. Enter connection details (or reuse existing credentials) and the source table.
 6. Proceed to step 2 of the setup flow, select the “Catalogs” sync type, and input the integration name and schedule. Note that the name of the integration should **exactly match** the name of the catalog you previously created.
 7. Choose a sync frequency and proceed to the next step.
 8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
-9. Click **Test Connection** to ensure everything works as expected. 
+9. Select **Test Connection** so that everything works as expected. 
 10. Save the sync, and use the synced catalog data for all your personalization use cases. 
 {% endtab %}
 {% tab Redshift %}
@@ -78,7 +79,7 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
        deleted boolean
     )
     ```
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
+2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -86,7 +87,7 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
     GRANT SELECT ON TABLE CATALOGS_SYNC TO braze_user;
     ```
     {% endraw %}
-3. If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard’s region. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard’s region. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab BigQuery %}
@@ -118,7 +119,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 {:start="2"}
 
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the catalog source table. 
+2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;but make sure to extend access to the catalog source table. 
 The service account should have the below permissions:
 - BigQuery Connection User: This will allow Braze to make connections.
 - BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
@@ -126,7 +127,7 @@ The service account should have the below permissions:
 - BigQuery Job User: This will provide Braze access to run jobs<br><br>After creating the service account and granting permissions, generate a JSON key. Refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for more information. You'll update this to the Braze dashboard later.
 
 {:start="3"}
-3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab Databricks %}

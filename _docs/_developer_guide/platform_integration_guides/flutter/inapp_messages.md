@@ -135,7 +135,7 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 Follow these steps to test a sample in-app message.
 
 1. Set an active user in the React application by calling `braze.changeUser('your-user-id')` method.
-2. Head to the **Campaigns** page on your dashboard and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) to create a new in-app message campaign.
+2. Head to the **Campaigns** page on your dashboard and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should display the in-app message on your device.
 

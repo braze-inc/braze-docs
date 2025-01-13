@@ -15,7 +15,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/swift/changelog/
     image: /assets/img/braze_icons/apple.svg
   - name: iOS SDK (Objective-C)
-    link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
+    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/changelog/objc_changelog/
     image: /assets/img/braze_icons/apple.svg
   - name: Web SDK
     link: /docs/developer_guide/platform_integration_guides/web/changelog/

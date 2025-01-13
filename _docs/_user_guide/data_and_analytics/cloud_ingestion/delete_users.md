@@ -3,23 +3,25 @@ nav_title: Delete Users with CDI
 article_title: Delete Users with Cloud Data Ingestion
 page_order: 30
 page_type: reference
-description: "This reference article provides an overview of the process for deleting users with Cloud Data Ingestion."
+description: "This pgae provides an overview of the process for deleting users with Cloud Data Ingestion."
 
 ---
 
 # Delete users with Cloud Data Ingestion
 
+> This page discusses the process for deleting users with Cloud Data Ingestion.
+
 User delete syncs are supported for all available Cloud Data Ingestion data sources. 
 
-## Integration configuration 
+## Configuring the integration 
 
-Follow the standard process to [create a new integration in the Braze dashboard]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) for the data warehouse you want to connect to. Ensure that you include a role that can access the delete table. On the **Create import sync** page, set the **Data Type** to **Delete Users**. This will ensure the proper actions are taken during the integration run to delete users.
+Follow the standard process to [create a new integration in the Braze dashboard]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) for the data warehouse you want to connect to. Ensure that you include a role that can access the delete table. On the **Create import sync** page, set the **Data Type** to **Delete Users** so that the proper actions are taken during the integration run to delete users.
 
 ![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
-## Source data configuration 
+## Configuring source data
 
-Source tables for user deletes should include one or more user identifier types and an `UPDATED_AT` timestamp. Payload columns are not supported for user delete data.
+Source tables for user deletes should include one or more user identifier types and an `UPDATED_AT` timestamp. Payload columns aren't supported for user delete data.
 
 ### `UPDATED_AT`
 

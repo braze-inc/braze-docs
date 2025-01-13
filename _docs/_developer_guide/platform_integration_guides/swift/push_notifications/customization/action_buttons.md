@@ -2,14 +2,13 @@
 nav_title: Action Buttons
 article_title: Push Action Buttons for iOS
 platform: Swift
-page_order: 1
 description: "This article covers how to implement action buttons in your iOS push notifications for the Swift SDK."
 channel:
   - push
 
 ---
 
-# Action buttons {#push-action-buttons-integration}
+# Custom action buttons {#push-action-buttons-integration}
 
 > The Braze Swift SDK provides URL handling support for push action buttons. 
 

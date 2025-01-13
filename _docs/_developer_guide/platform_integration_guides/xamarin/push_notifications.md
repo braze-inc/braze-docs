@@ -27,7 +27,7 @@ To use this feature, you'll need to [integrate Braze SDK for the Xamarin platfor
 To see how namespaces change between Java and C#, check out our [Xample sample app on GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp).
 {% endalert %}
 
-To integrate push notifications for Xamarin, you'll need to complete the steps for native Android push notifications. The following steps are only a summary. For a full walkthrough, see the [native push notification guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/).
+To integrate push notifications for Xamarin, you'll need to complete the steps for native Android push notifications. The following steps are only a summary. For a full walkthrough, see the [native push notification guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 
 ### Step 1: Update your project
 
@@ -63,7 +63,7 @@ To prevent Braze from triggering unnecessary network requests every time you sen
 {% tab ios %}
 ### Step 1: Complete the initial setup
 
-See the [Swift integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
+See the [Swift integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
 
 ### Step 2: Request push notifications permission
 
