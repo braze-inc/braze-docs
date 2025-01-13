@@ -24,7 +24,7 @@ Utiliza la integración de MyPostcard y Braze para enviar a tus clientes correos
 | Aprobada la campaña MyPostcard B2B | Para aprovechar esta integración, tienes que configurar una campaña de mailing impreso en la herramienta MyPostcard B2B. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Casos prácticos
+## Ejemplos
 
 Para elevar tus campañas de correo directo, es crucial ir más allá de los envíos masivos tradicionales e integrar fácilmente el correo impreso en tus flujos de trabajo. Este enfoque te permite llegar a clientes específicos que se han dado de baja de tus boletines por correo electrónico o cuyos correos electrónicos están marcados como correo no deseado. Con MyPostcard, puedes enviar sin esfuerzo campañas de correo impreso directamente a través de Braze.
 
