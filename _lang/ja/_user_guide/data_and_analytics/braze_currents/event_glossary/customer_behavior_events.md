@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 7
 ---
 
-その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。必要な情報がこの記事に見つからない場合は、[メッセージエンゲージメントイベントライブラリ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)または [Currents のサンプルデータ例](https://github.com/Appboy/currents-examples/tree/master/sample-data)を参照してください。
+その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。このページで必要なものが見つからない場合は、[メッセージ・エンゲージメント・イベント・ライブラリーや]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) [Currentsのサンプルデータ例を](https://github.com/Appboy/currents-examples/tree/master/sample-data)ご覧いただきたい。
 
 {% details 顧客行動とユーザーイベント構造およびプラットフォームの価値の説明 %}
 
@@ -711,7 +711,7 @@ search_rank: 7
 {% endtabs %}
 
 {% alert important %}
-この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (i.e Amazon S3、Microsoft Azure、Google Cloud Storage) についてのみ利用できることに注意してください。
+この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (Amazon S3、Microsoft Azure、Google Cloud Storage) についてのみ利用できます。
 <br><br>このイベントを有効にして、ワークスペース内の既存ユーザーのランダムバケット番号の埋め戻しをスケジュールする方法については、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
