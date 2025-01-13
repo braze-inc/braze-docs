@@ -17,15 +17,40 @@ Para editar e gerenciar o suporte a vários idiomas, é necessário ter a permis
 ## Adicionar uma localização
 
 1. Acesse **Configurações** > **Suporte a vários idiomas** em **Configurações do espaço de trabalho**.
-2. Selecione **Add locale (Adicionar localização**).
+2. Selecione **Add locale (Adicionar localidade)** e, em seguida, selecione **Default locale (Localidade padrão)** ou **Custom Attributes (Atributos personalizados)**.<br><br>![O menu suspenso "Add locale" (Adicionar localidade) com opções para selecionar a localidade padrão ou atributos personalizados.][1]{: style="max-width:40%;"}
 3. Digite um nome para a localização.
-4. Para as **atribuições do usuário**, selecione o idioma a ser adicionado usando o menu suspenso **Idioma**.
-5. (opcional) Selecione o país a ser associado ao idioma.
-6. Selecione **Add locale (Adicionar localização**). 
+4. Selecione as respectivas atribuições do usuário para a opção de localização escolhida.
 
-![Um exemplo de francês adicionado como localização para usuários cujo país é o Canadá.][2]{: style="max-width:80%;"}
+{% tabs %}
+{% tab Localização padrão %}
+
+Para **Localização padrão**, use os menus suspensos para selecionar o idioma a ser adicionado e, opcionalmente, o país a ser associado ao idioma.<br><br>![Uma janela chamada "Add locale - Default Language and Country" (Adicionar localização - Idioma e país padrão) para especificar o idioma e o país.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% tab Atributos personalizados %}
+
+Para **atributos personalizados**, use o menu suspenso para selecionar o atributo personalizado associado e, no campo de texto, insira o valor.<br><br>![Uma janela chamada "Add locale - Custom Attributes" (Adicionar localidade - Atributos personalizados) para especificar o atributo personalizado e o valor.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
+
+{: start="5"}
+5\. Selecione **Add locale (Adicionar localização)**. 
 
 Para obter as etapas de uso dessas localidades em suas campanhas de e-mail e no Canva, consulte [Uso de localidades]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/).
+
+## Considerações
+
+Ao configurar uma localização, é possível selecionar idiomas nos atributos padrão do usuário ou nos atributos personalizados. Não é possível selecionar entre os dois.
+
+É possível selecionar até dois atributos personalizados em uma única localização ou até dois idiomas padrão de atributos de usuário. Em ambos os casos, o segundo atributo é opcional.
+
+### Suporte e priorização
+
+- Os usuários que correspondem a um atributo personalizado de localização são priorizados antes dos usuários que correspondem a um atributo de usuário padrão.
+- O suporte a atributos personalizados é limitado a tipos de string e à chave de comparação `equals`.
+- Se um atributo personalizado for excluído pelo Suporte ou se o tipo for alterado, o usuário não poderá mais se enquadrar nessa localização e será rebaixado na lista de prioridades de localidades em que se enquadra ou receberá traduções padrão de marketing.
+- Se uma localidade for inválida (o atributo personalizado foi alterado ou excluído), o erro aparecerá na página **Suporte multilíngue**.
 
 ## Perguntas frequentes
 
@@ -38,7 +63,4 @@ Os arquivos de tradução são armazenados no nível da campanha, o que signific
 #### O nome da localização precisa seguir um padrão ou formato específico?
 Não. Você pode usar sua convenção de nomenclatura preferida. O nome da localização é usado ao selecionar a localização no editor e estará nos cabeçalhos do arquivo baixado com os IDs de tradução.
 
-#### Posso usar atributos personalizados para definir uma localidade?
-Atualmente, não. Entre em contato com o gerente da sua conta ou deixe um [feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) com mais detalhes sobre como definir as localizações.
-
-[2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}
+[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}
