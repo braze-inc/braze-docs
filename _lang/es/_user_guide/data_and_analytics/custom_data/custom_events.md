@@ -224,7 +224,7 @@ Los filtros de segmentación de propiedades del evento incluyen:
 - Ha realizado alguna compra con la propiedad A con valor B, X veces en los últimos Y días.
 - Añade la posibilidad de segmentar en 1, 3, 7, 14, 21 y 30 días.
 
-![][3]
+![Un grupo de filtrar que "tiene 'Carrito Abandonado' con propiedad 'número de itmes' y valor '2' 'más de' 1'1 veces en los últimos '30' días naturales (720-744 horas)".][3]
 
 Los datos sólo se registran para una determinada propiedad del evento una vez que ha sido habilitada por tu administrador del éxito del cliente, y las propiedades del evento sólo están disponibles a partir de esa fecha en adelante.
 
