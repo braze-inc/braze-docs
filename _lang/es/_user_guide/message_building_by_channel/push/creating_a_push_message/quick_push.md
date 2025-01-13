@@ -44,11 +44,11 @@ El panel de vista previa muestra una aproximación del aspecto que tendrá tu me
 
 ![Vista de edición única con un campo de título, mensaje y comportamiento al hacer clic para tres tipos de push: iOS, Android y Web.][2]
 
-En la sección **Activos**, seleccione o cargue las imágenes que desea que aparezcan para cada plataforma. Tenga en cuenta que los distintos dispositivos tienen especificaciones diferentes para las imágenes y el recuento de caracteres. Consulte los [formatos de mensajes push e imágenes][3] para obtener ayuda.
+En la sección **Activos**, seleccione o cargue las imágenes que desea que aparezcan para cada plataforma. Tenga en cuenta que los distintos dispositivos tienen especificaciones diferentes para las imágenes y el recuento de caracteres. Consulta [Formatos de mensajes push e imágenes][3] para obtener ayuda.
 
 ![Sección de activos de la vista de edición única con campos para Imagen de icono push, Imagen de notificación iOS, Imagen de notificación Android e Imagen de notificación Web.][4]{:style="max-width:50%"}
 
-Después, termina de configurar tu campaña push normalmente. Consulte [Crear una campaña push][5] para obtener más información.
+Después, termina de configurar tu campaña push normalmente. Consulta [Crear una campaña push][5] para más detalles.
 
 ## Lo que hay que saber
 
@@ -62,18 +62,17 @@ Si selecciona varios dispositivos para plataformas móviles, como iOS y Android,
 
 ### Ajustes específicos del dispositivo
 
-Los ajustes específicos de iOS y Android no son compatibles cuando se seleccionan varias plataformas o dispositivos. Esto incluye ajustes como [pulsadores de acción]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canales y grupos de notificación, TTL, prioridad de visualización, sonidos y mucho más.
+Puedes editar la configuración específica de la plataforma en el editor. Esto incluye ajustes como [pulsadores de acción]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canales y grupos de notificación, TTL, prioridad de visualización, sonidos y mucho más.
 
 Para más información sobre los ajustes específicos de cada dispositivo, consulte las siguientes colecciones de artículos:
 
-- [Opciones de iOS][6]
+- [Opciones iOS][6]
 - [Opciones de Android][7]
 
 
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
