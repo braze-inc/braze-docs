@@ -18,7 +18,7 @@ A integração da Braze e da Lexer permite sincronizar dados entre as duas plata
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta de parceiro | É necessário ter uma conta Lexer para aproveitar essa parceria. |
-| Chave da API REST do Braze | Uma chave da API REST Braze com todas as `user` permissões (excluindo `user.delete`) e `segment.list` permissões. O conjunto de permissões pode mudar à medida que o Lexer adiciona suporte a mais objetos do Braze, portanto, talvez você queira conceder mais permissões agora ou planejar a atualização dessas permissões no futuro.<br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| Chave da API REST do Braze | Uma chave da API REST Braze com todas as permissões `user` (exceto `user.delete`) e permissões `segment.list`. O conjunto de permissões pode mudar à medida que o Lexer adiciona suporte a mais objetos do Braze, portanto, talvez você queira conceder mais permissões agora ou planejar a atualização dessas permissões no futuro.<br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | endpoint REST do Braze | [URL de seu endpoint REST]({{site.baseurl}}/api/basics/#endpoints). Seu endpoint dependerá da URL do Braze para sua instância. |
 | Bucket S3 e credenciais do Amazon AWS | Antes de iniciar a integração, é necessário ter credenciais de acesso para um bucket S3 do AWS conectado ao seu hub da Lexer (pode ser um bucket criado por você ou um que a Lexer crie e gerencie para você). Visite [a Lexer](https://learn.lexer.io/docs/amazon-s3) para obter orientação sobre esse requisito. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -26,7 +26,7 @@ A integração da Braze e da Lexer permite sincronizar dados entre as duas plata
 ## Integração
 
 No Lexer, navegue até **Manage > Integration (Gerenciar > Integração**), selecione o bloco **Braze** e clique em **Integrate Braze (Integrar Braze**). Forneça as seguintes informações:
-- **endpoint REST do Braze**
+- **Endpoint REST  do Braze**
 - **chave da API REST Braze**
 - **Credenciais da AWS**
   - **Nome do bucket S3 do AWS**
