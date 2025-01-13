@@ -13,9 +13,7 @@ hidden: true
 
 # Analyse du fil d’actualité
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Comme pour les campagnes programmées, l’outil Fil d’actualité inclut un tableau de bord analytique qui vous permet de surveiller les impressions, les clics et les taux de clics. Vous pouvez consulter de nombreuses analyses visuelles en cliquant sur un message de fil d’actualité dans votre tableau de bord. 
 
