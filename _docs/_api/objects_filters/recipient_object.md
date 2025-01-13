@@ -13,10 +13,6 @@ description: "This reference article explains the different components of the Br
 
 Either `external_user_id`, `user_alias`, or `email` is required in this object. **Requests must specify only one.**
 
-{% alert important %}
-Specifying a recipient by email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object body
