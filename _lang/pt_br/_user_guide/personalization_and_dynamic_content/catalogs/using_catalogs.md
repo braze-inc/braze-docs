@@ -45,7 +45,7 @@ O resultado é o seguinte:
 
 ### Vários itens
 
-Você não está limitado a apenas um item em uma única mensagem. Você pode usar o modal **Add Personalization** para adicionar até três itens de catálogo por vez. Para adicionar mais itens à sua mensagem, selecione **Add Personalization (Adicionar personalização** ) no criador de mensagens e selecione os itens adicionais do catálogo e as informações a serem exibidas.
+Você não está limitado a apenas um item em uma única mensagem. Você pode usar o modal **Add Personalization** para adicionar até três itens de catálogo por vez. Para adicionar mais itens à sua mensagem, selecione **Add Personalization (Adicionar personalização)** no criador de mensagens e selecione os itens adicionais do catálogo e as informações a serem exibidas.
 
 Veja este exemplo em que adicionamos o endereço `id` de três jogos, Tales, Teslagrad e Acaratus, para **Catalog Items** e selecionamos `title` para **Information to Display**.
 
