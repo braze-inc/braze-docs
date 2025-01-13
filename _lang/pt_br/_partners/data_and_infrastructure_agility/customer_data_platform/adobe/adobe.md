@@ -52,7 +52,7 @@ Na etapa **Conta**, forneça sua chave de API do Braze e selecione **Conectar ao
 
 ### Etapa 3: Autenticação
 
-Em seguida, na etapa **Authentication (Autenticação** ), insira seus detalhes de conexão do Braze:
+Em seguida, na etapa **Authentication (Autenticação)**, insira seus detalhes de conexão do Braze:
 - **Nome**: Digite o nome pelo qual você gostaria de reconhecer esse destino no futuro.
 - **Destino**: Insira uma descrição que o ajude a identificar este destino.
 - **Instância do endpoint**: Insira sua instância de endpoint Braze.
@@ -61,7 +61,7 @@ Em seguida, na etapa **Authentication (Autenticação** ), insira seus detalhes 
 ![][4]{: style="max-width:60%;"}
 
 ### Etapa 4: Criar destino
-Selecione **Criar destinos**. Seu destino foi criado. Você pode selecionar **Save & Exit** para ativar os segmentos mais tarde ou **Next** para continuar o fluxo de trabalho e selecionar os segmentos a serem ativados. 
+clique em **Create destination** (Criar destino). Seu destino foi criado. Você pode selecionar **Save & Exit** para ativar os segmentos mais tarde ou **Next** para continuar o fluxo de trabalho e selecionar os segmentos a serem ativados. 
 
 ### Etapa 5: Ativar segmentos
 Ative os dados que você tem na CDP em tempo real da Adobe mapeando segmentos para o destino da Braze.
@@ -80,9 +80,9 @@ Para enviar corretamente os dados do seu público da Adobe Experience Platform p
 
 1. Na etapa de mapeamento, selecione **Adicionar novo mapeamento**.<br>![][5]{: style="max-width:50%;"}<br><br>
 2. Na seção do campo de origem, selecione o botão de seta ao lado do campo vazio para abrir a janela de seleção do campo de origem.<br>![][6]<br><br>
-3. Na janela, selecione os atributos Adobe para mapear para seus atributos Braze. <br>![][7]{: style="max-width:70%;"}<br><br>Em seguida, selecione o namespace de identidade. Esta opção é usada para mapear um namespace de identidade de plataforma para um namespace Braze.<br>![][8]{: style="max-width:80%;"}<br> Escolha seus campos de origem e selecione **Select (Selecionar**).<br><br>
+3. Na janela, selecione os atributos Adobe para mapear para seus atributos Braze. <br>![][7]{: style="max-width:70%;"}<br><br>Em seguida, selecione o namespace de identidade. Esta opção é usada para mapear um namespace de identidade de plataforma para um namespace Braze.<br>![][8]{: style="max-width:80%;"}<br> Escolha seus campos de origem e selecione **Select (Selecionar)**.<br><br>
 4. Na seção do campo de destino, selecione o ícone de mapeamento ao lado do campo.<br>![][9]{: style="max-width:90%;"} <br><br>
-5. Na janela de seleção de campo-alvo, você pode escolher entre três categorias de campos-alvo:<br><br>• **Selecione o namespace de identidade**: Use esta opção para mapear namespaces de identidade da Plataforma para namespaces de identidade da Braze.<br>• **Selecione atributos personalizados**: Use esta opção para mapear atributos da Adobe XDM para os atributos personalizados da Braze que você definiu na sua conta da Braze. <br><br>![][10]{: style="max-width:60%;"}<br><br>**Você também pode usar esta opção para renomear atributos XDM existentes para a Braze.** Por exemplo, o mapeamento de um atributo XDM `lastname` para um atributo personalizado `Last_Name` na Braze cria o atributo `Last_Name` na Braze caso ele ainda não exista e mapeia o atributo XDM `lastname` para ele. <br><br> Escolha seus campos de direcionamento e selecione **Select (Selecionar**).<br><br>
+5. Na janela de seleção de campo-alvo, você pode escolher entre três categorias de campos-alvo:<br><br>• **Selecione o namespace de identidade**: Use esta opção para mapear namespaces de identidade da Plataforma para namespaces de identidade da Braze.<br>• **Selecione atributos personalizados**: Use esta opção para mapear atributos da Adobe XDM para os atributos personalizados da Braze que você definiu na sua conta da Braze. <br><br>![][10]{: style="max-width:60%;"}<br><br>**Você também pode usar esta opção para renomear atributos XDM existentes para a Braze.** Por exemplo, o mapeamento de um atributo XDM `lastname` para um atributo personalizado `Last_Name` na Braze cria o atributo `Last_Name` na Braze caso ele ainda não exista e mapeia o atributo XDM `lastname` para ele. <br><br> Escolha seus campos de direcionamento e selecione **Select (Selecionar)**.<br><br>
 6. Seu mapeamento de campo deve aparecer na lista.<br>![][11]<br><br>
 7. Para adicionar mapeamentos, repita as etapas de 1 a 6, conforme necessário. 
 
