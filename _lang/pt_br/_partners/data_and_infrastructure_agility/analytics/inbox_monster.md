@@ -30,4 +30,4 @@ Para integrar o Inbox Monster, siga os passos em [Integrando com o Inbox Monster
 
 ## Uso
 
-Para aprender como enviar testes de colocação na caixa de entrada programados através do Inbox Monster, consulte [Testes de Colocação na Caixa de Entrada Programados](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).
+Para aprender como enviar testes de posicionamento na caixa de entrada programados através do Inbox Monster, consulte [Testes de Posicionamento na Caixa de Entrada Programados](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).
