@@ -15,25 +15,23 @@ Check out our [case studies](https://www.braze.com/customers) to see examples of
 
 ![Three images of potential Roku in-app messages that a user could build. These examples include "fullscreen takeover", "homepage banner", and "corner notifier".]({% image_buster /assets/img/roku/Docs-Imagery.png %})
 
-## In-app message types
+## Setting up in-app messages
 
-Create an in-app message for Roku by selecting **Roku Devices** as the in-app message platform.
+### Prerequisites
 
-![]({% image_buster /assets/img/roku/1-Platform-Selector.png %})
-
-## SDK requirements {#supported-sdk-versions}
-
-In-app messages will only be sent to Roku devices running the minimum supported SDK version:
+Before you can use this feature, you'll need to [integrate the Braze Roku SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/sdk_integration/). Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
 {% sdk_min_versions roku:0.1.2 %}
 
-## Setting up in-app messages
+### Step 1: Add an observer
 
 To process in-app messages, you can add an observer on `BrazeTask.BrazeInAppMessage`:
 
 ```brightscript
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
+
+### Step 2: Access triggered messages
 
 Then within your handler, you have access to the highest in-app message that your campaigns have triggered:
 
@@ -44,7 +42,7 @@ sub onInAppMessageReceived()
 end sub
 ```
 
-## In-app message fields
+## Message fields
 
 ### Handling
 
@@ -95,11 +93,11 @@ Alternatively, you could implement the in-app message and style it within your R
 | `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Handling interactions
+## Handling analytics
 
 You will need to make sure certain functions are called to handle the analytics for your campaign.
 
-### When a message is displayed
+### For displayed messages
 
 When a message is displayed or seen, log an impression:
 
@@ -107,14 +105,15 @@ When a message is displayed or seen, log an impression:
 LogInAppMessageImpression(in_app_message.id, brazetask)
 ```
 
-### When a user clicks on a message
+### For clicked messages
+
 Once a user clicks on the message, log a click and then process `in_app_message.click_action`:
 
 ```brightscript
 LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 
-### When a user clicks a button
+### For clicked buttons
 
 If the user clicks on a button, log the button click and then process `inappmessage.buttons[selected].click_action`:
 
@@ -122,9 +121,16 @@ If the user clicks on a button, log the button click and then process `inappmess
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
 ```
 
-### After processing an in-app message
+### After processing a message
 
 After processing an in-app message, you should clear the field:
+
 ```brightscript
 m.BrazeTask.BrazeInAppMessage = invalid
 ```
+
+## Sending a Roku message
+
+Create an in-app message for Roku by selecting **Roku Devices** as the in-app message platform.
+
+![]({% image_buster /assets/img/roku/1-Platform-Selector.png %})
