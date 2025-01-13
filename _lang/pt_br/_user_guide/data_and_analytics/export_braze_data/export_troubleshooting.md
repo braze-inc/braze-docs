@@ -49,4 +49,4 @@ Braze adicionará automaticamente um apóstrofo a um campo na exportação CSV s
 - +
 - @
 
-Por exemplo, o campo "-1943" será exportado como "'-1943". Isso não se aplica a exportações JSON, como as retornadas pelo [ponto de extremidade`/users/export/segment` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).
+Por exemplo, o campo "-1943" será exportado como "'-1943". Isso não se aplica a exportações JSON, como as retornadas pelo [endpoint `/users/export/segment` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).
