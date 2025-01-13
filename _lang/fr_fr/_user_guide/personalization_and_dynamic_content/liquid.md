@@ -59,7 +59,7 @@ Le langage de modélisation Liquid prend en charge l’utilisation d’objets, d
 - [**Les filtres**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) vous permettent de reformater les attributs personnalisés et le contenu dynamique. Par exemple, vous pouvez utiliser le [filtre`date` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#date-filter) pour convertir un horodatage, tel que *2016-09-07 08:43:50 UTC*, en une date, telle que le *7 septembre 2016.*
 
 {% alert warning %}
-Braze ne prend actuellement pas en charge 100 % du liquide de Shopify, mais seulement certaines parties que nous avons tenté de présenter dans notre documentation. Nous recommandons vivement de tester tous les messages utilisant Liquid avant de les envoyer pour réduire le risque d’erreurs ou d’utiliser du Liquid non pris en charge.
+Braze ne prend actuellement pas en charge 100 % du code Liquid de Shopify, mais seulement certaines parties que nous avons tenté de présenter dans notre documentation. Nous recommandons vivement de tester tous les messages utilisant Liquid avant de les envoyer pour réduire le risque d’erreurs ou d’utiliser du Liquid non pris en charge.
 {% endalert %}
 
 ### Soutien au Liquid 5
@@ -84,9 +84,9 @@ Chaque élément Liquid correspond à une couleur, ce qui vous permet de différ
 
 ![]({% image_buster /assets/img/liquid_color_code.png %})
 
-#### Liquide prédictif
+#### Cod Liquid prédictif
 
-Vous pouvez également exploiter le liquide prédictif pour les attributs personnalisés, les noms d'attributs et bien d'autres choses encore lorsque vous créez vos messages personnalisés.
+Vous pouvez également exploiter le code Liquid prédictif pour les attributs personnalisés, les noms d'attributs et bien d'autres choses encore lorsque vous créez vos messages personnalisés.
 
 ![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
