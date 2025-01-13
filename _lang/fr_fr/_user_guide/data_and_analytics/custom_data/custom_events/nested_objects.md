@@ -133,7 +133,12 @@ Déclenchement d’une campagne avec des propriétés imbriquées à partir de l
 
 ![Un utilisateur choisit une propriété imbriquée pour les filtres de propriété sur un événement personnalisé.]({% image_buster /assets/img/nested_object2.png %})
 
-L’état de déclenchement `songs[].album.yearReleased` « is » (est) « 1968 » correspond à un événement où l’une des chansons est dans un album publié en 1968. Nous utilisons la notation entre crochets `[]` pour parcourir les tableaux, et nous vérifions si **un** élément du tableau parcouru correspond à la propriété de l'événement.<br>
+L’état de déclenchement `songs[].album.yearReleased` « is » (est) « 1968 » correspond à un événement où l’une des chansons est dans un album publié en 1968. Nous utilisons la notation entre crochets `[]` pour parcourir les tableaux, et nous vérifions si **un** élément du tableau parcouru correspond à la propriété de l'événement.
+
+{% alert important %}
+Le filtre " **does not equal"** ne s'applique que si aucune des propriétés de votre tableau n'est égale à la valeur fournie. <br><br>Par exemple, disons que le Canvas A a pour filtre de propriété imbriquée d **'** événement personnalisé basé sur l'action "smartwatch", et que le Canvas B a pour filtre de propriété imbriquée d'événement personnalisé basé sur l'action "simphone **".**  Si vous avez "smartwatch" et "simphone" dans vos propriétés, les deux canevas se déclencheront. Mais si vous avez "simphone" ou "sim only" dans une propriété, aucun des deux Canvas ne se déclenchera.
+{% endalert %}
+
 {% endtab %}
 {% tab Exemple de restaurant %}
 
