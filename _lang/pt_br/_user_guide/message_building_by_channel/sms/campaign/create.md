@@ -26,7 +26,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {: start="2"}
@@ -78,7 +78,7 @@ Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copy
 
 ### Cartões de contato
 
-Se desejar, é possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão de suas informações comerciais e de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira [os cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
+Se desejar, é possível adicionar um cartão de contato à sua mensagem SMS para facilitar aos clientes a inclusão de suas informações comerciais e de contato nos contatos deles. É possível atribuir propriedades comuns a esses cartões, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Confira os [cartões de contato]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) para saber mais.
 
 ## Etapa 3: Pré-visualize e teste sua mensagem
 
