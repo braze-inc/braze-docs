@@ -17,6 +17,8 @@ description: "This reference article covers News Feed integration for the Unity 
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
+
 ## Receiving News Feed data in Unity
 
 You may register Unity game objects to be notified of incoming News Feed cards. 

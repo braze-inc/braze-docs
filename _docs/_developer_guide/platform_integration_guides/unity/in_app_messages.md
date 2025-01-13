@@ -8,12 +8,13 @@ platform:
   - Android
 page_order: 2
 description: "This reference article covers in-app messaging configuration guidelines for the Unity platform."
-
 ---
 
 # In-app messaging integration
 
 > This reference article covers in-app messaging configuration guidelines for the Unity platform.
+
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
 
 ## Configuring default in-app message behavior
 
