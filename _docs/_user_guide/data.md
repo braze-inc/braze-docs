@@ -13,6 +13,9 @@ guide_featured_list:
   - name: Data Points Overview
     link: /docs/user_guide/data/data_points/
     image: /assets/img/braze_icons/check-square-broken.svg
+  - name: Data Centers
+    link: /docs/user_guide/data/data_centers/
+    image: /assets/img/braze_icons/database-02.svg
   - name: Report Metrics Glossary
     link: /docs/user_guide/data/report_metrics/
     image: /assets/img/braze_icons/book-closed.svg
