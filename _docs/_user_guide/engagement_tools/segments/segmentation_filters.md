@@ -218,6 +218,10 @@ glossaries:
     description: Segment your users by whether or not their email address has hard bounced (such as the email address is invalid).
     tags:
       - Retargeting
+  - name: Soft Bounced
+    description: Segment your users by whether they soft bounced X times in Y days. Segment filters can only look back 30 days, but you can look back further with Segment Extensions.<br><br>This filter operates differently than a soft bounce event in Currents. The Soft Bounced segment filter counts a soft bounce if there was no successful delivery during the 72 hour retry period. In Currents, every unsuccessful retry is sent as a soft bounce event. 
+    tags:
+      - Retargeting
   - name: Has Marked You As Spam
     description: Segments your users by whether or not they have marked your messages as spam.
     tags:

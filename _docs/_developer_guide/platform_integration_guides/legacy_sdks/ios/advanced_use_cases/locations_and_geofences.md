@@ -58,7 +58,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 ## Step 3: Check for Braze background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [iOS customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [iOS customization]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/ignoring_internal_push/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ## Step 4: Add NSLocationAlwaysUsageDescription to your Info.plist
 

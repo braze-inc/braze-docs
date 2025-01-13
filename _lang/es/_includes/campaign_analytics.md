@@ -181,7 +181,7 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">Mensajes enviados</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Mensajes enviados' %} <br><br>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
                 Se calcula de forma diferente según lo que hayas seleccionado para 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Creación de tarjetas</a>:<br><br>
                 <ul>
@@ -192,11 +192,11 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impresiones totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Impresiones totales' %} Puede incrementarse varias veces para el mismo usuario.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} Puede incrementarse varias veces para el mismo usuario.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impresiones únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Impresiones únicas' %} <span style="white-space: nowrap">Este recuento</span> no se incrementa la segunda vez que un usuario ve una tarjeta.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Este recuento</span> no se incrementa la segunda vez que un usuario ve una tarjeta.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatarios únicos</a></td>
@@ -204,7 +204,7 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Clics únicos' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">Descartes únicos</a></td>
@@ -254,7 +254,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics únicos</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Clics únicos' %} Se realiza un seguimiento durante un periodo de siete días para el correo electrónico y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces para cancelar suscripción proporcionados por Braze. Esta cifra debe estar entre el 5-10%. ¡Todo lo que supere el 10% es excepcional!
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} Se realiza un seguimiento durante un periodo de siete días para el correo electrónico y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces para cancelar suscripción proporcionados por Braze. Esta cifra debe estar entre el 5-10%. ¡Todo lo que supere el 10% es excepcional!
             </td>
         </tr>
         <tr>
@@ -283,7 +283,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimación de Aperturas reales</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Aperturas reales estimadas' %} Para más detalles, consulta la sección siguiente.</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} Para más detalles, consulta la sección siguiente.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Machine Opens (Aperturas automáticas)</a></td>
@@ -346,7 +346,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Clics en botón 2</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Botón 2 clics' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impresiones únicas</a></td>
@@ -358,7 +358,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Conversiones (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversiones (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Total de conversiones</a></td>
@@ -406,25 +406,37 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     </tbody>
 </table>
 
+> Los servicios de notificaciones push de Apple (APN) realizan un "gran esfuerzo" en la entrega de notificaciones. No pretende entregar datos a tu aplicación, sólo notificar al usuario que hay nuevos datos disponibles. La distinción importante es que mostraremos cuántos mensajes hemos entregado con éxito a los APN, no necesariamente cuántos APN hemos entregado con éxito a los dispositivos.
+
+##### Seguimiento de cancelaciones de suscripción
+
 Las cancelaciones de suscripción push no se incluyen como métrica en los análisis de campaña. Consulta [Seguimiento de las cancelaciones de suscripciones push]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) para saber cómo hacer un seguimiento manual de esta métrica.
 
-{% alert tip %}
+##### La comprensión se abre
+
 Aunque _Direct Opens_ e _Influenced Opens_ incluyen la palabra "opens", en realidad son métricas diferentes. _Direct Opens_ se refiere a la apertura directa de una notificación push, como se indica en la tabla anterior. _Influenced Opens_ se refiere a la apertura de una aplicación, sin abrir una notificación push en un plazo de tiempo determinado tras recibirla. Por tanto, _Influenced Opens_ se refiere a las aperturas de la aplicación, no a las aperturas de las notificaciones push.
-{% endalert %}
 
-> La entrega de notificaciones es un "mejor esfuerzo" por parte de los APN. No pretende entregar datos a tu aplicación, sólo notificar al usuario que hay nuevos datos disponibles. La distinción importante es que mostraremos cuántos mensajes hemos entregado con éxito a los APN, no necesariamente cuántos APN hemos entregado con éxito a los dispositivos.
+##### Por qué los envíos push pueden superar los destinatarios únicos
 
-#### Notificaciones push rebotadas {#bounced-push}
+El número de _Envíos_ puede superar el número de _Destinatarios Únicos_ debido a las siguientes razones:
 
-##### Servicio de notificaciones push de Apple
+- **La reelegibilidad está en marcha:** Cuando se habilita la reelegibilidad en la configuración de tu campaña o Canvas, los usuarios que cumplan los criterios de segmento y entrega pueden recibir la misma notificación push varias veces. El resultado es un mayor número de envíos totales.
+- **Los usuarios tienen varios dispositivos:** Si no se habilita la reelegibilidad, la diferencia puede explicarse porque los usuarios tienen varios dispositivos asociados a su perfil. Por ejemplo, un usuario puede tener un smartphone y una tableta, y la notificación push se envía a todos los dispositivos registrados. Cada entrega cuenta como un envío, pero sólo se registra un destinatario único.
+- **Se asignan usuarios a varias aplicaciones:** Si los usuarios están asociados a más de una aplicación (como cuando prueban una aplicación nueva), pueden recibir la misma notificación push en cada aplicación. Esto contribuye a un mayor número de envíos.
 
-Se producen rebotes en los APN cuando una notificación push intenta entregarse a un dispositivo que no tiene instalada la aplicación prevista. APN también tiene derecho a cambiar los tokens de los dispositivos arbitrariamente. Si intentas realizar un envío al dispositivo de un usuario en el que su token de notificaciones push ha cambiado entre el momento en que registramos previamente su token (como al principio de cada sesión, cuando registramos a un usuario para obtener un token push) y el momento del envío, se produciría un rebote.
+##### Por qué se producen los rebotes {#bounced-push}
+
+{% tabs %}
+{% tab Servicio de notificación push de Apple %}
+
+Los rebotes se producen en los servicios de notificaciones push de Apple (APN) cuando una notificación push intenta entregarse a un dispositivo que no tiene instalada la aplicación prevista. APN también tiene derecho a cambiar los tokens de los dispositivos arbitrariamente. Si intentas realizar un envío al dispositivo de un usuario en el que su token de notificaciones push ha cambiado entre el momento en que registramos previamente su token (como al principio de cada sesión, cuando registramos a un usuario para obtener un token push) y el momento del envío, se produciría un rebote.
 
 Si un usuario desactiva push en la configuración de su dispositivo al abrir una aplicación posterior, el SDK detectará que se ha desactivado push y lo notificará a Braze. En este punto actualizaremos el estado de habilitación de push para que esté deshabilitado. Cuando un usuario discapacitado recibe una campaña push antes de tener una nueva sesión, la campaña se enviaría correctamente y aparecería como entregada. El push no rebotará para este usuario. Tras una sesión posterior, cuando intentas enviar un push al usuario, Braze ya sabe si tenemos un token de notificaciones push, por lo que no se envía ninguna notificación.
 
 Las notificaciones push que caducan antes de la entrega no se consideran fallidas y no se registrarán como rebotadas.
 
-##### Mensajería en la nube Firebase
+{% endtab %}
+{% tab Mensajería en la nube Firebase %}
 
 Firebase Cloud Messaging (FCM) puede rebotar en tres casos:
 
@@ -434,6 +446,10 @@ Firebase Cloud Messaging (FCM) puede rebotar en tres casos:
 | Copia de seguridad de la aplicación | Cuando se hace una copia de seguridad de una aplicación, su ID de registro podría dejar de ser válido antes de que se restaure la aplicación. En este caso, FCM dejará de almacenar el ID de registro de la aplicación y ésta dejará de recibir mensajes. Por ello, los ID de registro **no** deben guardarse cuando se hace una copia de seguridad de una aplicación. |
 | Aplicación actualizada | Cuando se actualiza una aplicación, el ID de registro de la versión anterior puede dejar de funcionar. Como tal, una solicitud actualizada debe sustituir a su ID de registro existente. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
 
 {% elsif include.channel == "SMS" %}
 
@@ -624,7 +640,7 @@ Además de los análisis de Braze, se puede acceder a los análisis a nivel de p
 
 ### Eventos SMS de Currents
 
-Al igual que el correo electrónico, Braze recibe eventos a nivel de usuario relacionados con un mensaje SMS a medida que hace su recorrido hasta un usuario. Cualquier evento [SMS entrante]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) también se enviará como evento Currents a través del evento [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Esto te permite realizar acciones adicionales o informes sobre los mensajes que envían tus usuarios fuera de la plataforma Braze. 
+Al igual que el correo electrónico, Braze recibe eventos a nivel de usuario relacionados con un mensaje SMS a medida que hace su recorrido hasta un usuario. Cualquier evento SMS entrante también se enviará como evento Currents a través del evento [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Esto te permite realizar acciones adicionales o informes sobre los mensajes que envían tus usuarios fuera de la plataforma Braze. 
 
 {% alert note %}
 Los mensajes entrantes se truncan a partir de 1.600 caracteres.

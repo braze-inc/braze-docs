@@ -1,7 +1,7 @@
 ---
 nav_title: File Storage Integrations
 article_title: File Storage Integrations
-description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant data from S3 to Braze"
+description: "This page covers Braze Cloud Data Ingestion and how to sync relevant data from S3 to Braze"
 page_order: 3
 page_type: reference
 
@@ -9,7 +9,7 @@ page_type: reference
 
 # File storage integrations
 
-> This article covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
+> This page covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
 
 You can use Cloud Data Ingestion (CDI) for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 
 
@@ -23,7 +23,7 @@ The integration requires the following resources:
 
 ## AWS definitions
 
-First, let's just define some of the terms used during this task.
+First, let's define some of the terms used during this task.
 
 | Word | Definition |
 | --- | --- |
@@ -55,7 +55,7 @@ Create an SQS queue to track when objects are added to the bucket you’ve creat
 Be sure to create this SQS in the same region you created the bucket in. 
 {% endalert %}
 
-Be sure to take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration. 
+Make sure you take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration. 
 <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 <br><br>
 
@@ -194,7 +194,7 @@ Unlike with data warehouse sources, the `UPDATED_AT` column is not required nor 
 {% endalert %}
 
 {% alert note %}
-Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and will not be synced to Braze.
+Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and won't be synced to Braze.
 {% endalert %}
 
 {% tabs %}

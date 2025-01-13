@@ -1,6 +1,6 @@
 ---
-nav_title: tvOS
-article_title: Content Cards for tvOS
+nav_title: tvOS Customizations
+article_title: Customizing Content Cards for tvOS
 platform: tvOS
 page_type: reference
 description: "Learn how to customize your Content Cards for Apple's tvOS platform."

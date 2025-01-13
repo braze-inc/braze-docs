@@ -57,12 +57,12 @@ We’ll make two adjustments to this step:
 
 1. Select the catalog that includes information about our Classic Straight Leg jeans, which we’ve named “Straight Leg Pants”. 
 
-!["Entry Schedulde" step for an action-based Canvas.][3]
+!["Entry Schedule" step for an action-based Canvas.][3]
 
 {: start="2"}
 2. Set the **Start Time (Required)** to our desired start date and time.
 
-!["Entry Window" section with a start time of January 2nd, 2025 at 12 am.][4]
+!["Entry Window" section with a start time of January 2, 2025 at 12 am.][4]
 
 ### Step 4: Select the target audience
 

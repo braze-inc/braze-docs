@@ -1,7 +1,7 @@
 ---
+page_order: 2.3
 nav_title: Feature Flags
 article_title: Feature flags for the Braze SDK
-page_order: 1
 description: "This reference article covers an overview of feature flags including prerequisites and use cases."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 {% alert tip %}
-When you're ready to create your own feature flags, check out [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+When you're ready to create your own feature flags, check out [Creating feature flags]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Prerequisites
@@ -51,7 +51,7 @@ With Braze feature flags, we can instead gradually roll out the feature and miti
 * We will enable this new feature for only 10% of users to determine if we're staffed appropriately.
 * If there are any bugs, we can quickly disable the feature instead of rushing to ship a new release.
 
-To gradually roll out this feature, we can [create a feature flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) named "Live Chat Widget."
+To gradually roll out this feature, we can [create a feature flag]({{site.baseurl}}/developer_guide/feature_flags/create/) named "Live Chat Widget."
 
 ![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -161,7 +161,7 @@ if (featureFlag?.enabled) {
 }
 ```
 
-We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
 Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
@@ -188,7 +188,7 @@ These are the feature flag limitations for free and paid plans.
 | Feature                                                                                                   | Free version     | Paid version      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
-| [Active campaign experiments]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
+| [Active campaign experiments]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
 | [Feature Flag Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

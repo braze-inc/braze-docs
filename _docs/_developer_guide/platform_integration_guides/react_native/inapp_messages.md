@@ -163,7 +163,7 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 Follow these steps to test a sample in-app message.
 
 1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) to create a new in-app message campaign.
+2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.]({% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test")

@@ -3,7 +3,7 @@ nav_title: Metrics by Segments
 article_title: Metrics by Segments
 page_order: 2.5
 page_type: reference
-description: "This reference article shows how you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments."
+description: "This page describes how you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments."
 tool: 
   - Segments
   - Reports
@@ -17,14 +17,13 @@ tool:
 [Analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
 
 To run these reports, do the following:
-1. In **Query Builder**, choose to create a new SQL report via a template. 
-2. Filter templates for those where the metrics include “segment breakdowns”, which are:
+1. In **Query Builder**, choose to create a new SQL report with a template. 
+2. Filter templates for those where the metrics include breakdowns of segment, which are:
 - Email performance metrics by segment
 - Email engagement metrics for variants or steps, by segment
 - Purchases and revenue by segment
 - Purchases and revenue for variants or steps, by segment
 - Push performance by segment
-
 
 ![The Segment breakdown page contains a SQL editor, a side panel with tabs for Variables, Available Data Tables, Query History, and the AI Query Builder, and a results section.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
@@ -86,7 +85,7 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 
 In addition, use the **Variables** tab to specify whether to run the report for one or more campaigns or Canvases, or one or more tags. If no campaigns, Canvases, or tags are chosen, then the report will run for all emails from campaigns or Canvases during your chosen time frame.
 
-Currently, this report pulls metrics from only the email channel. Any revenue or purchase data from channels besides emails will not be reflected in the report. 
+Currently, this report pulls metrics from only the email channel. Any revenue or purchase data from channels besides emails won't be reflected in the report. 
 
 The following metrics are available for emails:
 
@@ -104,7 +103,7 @@ All rate metrics use unique email recipients as the denominator.
 - “Upon receipt” refers to purchase events or revenue that occurred within your specified conversion window, after users received the specified campaigns or Canvases. 
 - “Upon click” refers to the purchase events or revenue that occurred after the purchase events, within your specified conversion window, after users clicked the specified campaigns or Canvases.
 
-For example, let's say a segment contains 10 users and five of them made a purchase after receiving your email. If one of those five made a purchase after clicking your email, your "unique purchases upon receipt" rate would be 50% and your "unique purchases upon click" rate would be 10%.
+For example, let's say a segment contains 10 users and five of them made a purchase after receiving your email. If one of those five made a purchase after clicking your email, your "Unique purchases upon receipt rate" would be 50% and your "Unique purchases upon click rate" would be 10%.
 
 ![The report shows email metrics including unique purchases upon receipt, revenue upon receipt, unique purchases upon click, revenue upon click, unique recipients, and unique email clicks.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 

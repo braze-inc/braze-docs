@@ -65,14 +65,14 @@ You can add up to 50 user aliases per request. You can associate multiple additi
 | Parameter                   | Required | Data Type                           | Description                                                                                                                                                                 |
 |-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify`       | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Required | Array of aliases to identify object | See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
+| `emails_to_identify`        | Required | Array of aliases to identify object | Email addresses to identify users. See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
 | `phone_numbers_to_identify` | Required | Array of aliases to identify object | Phone numbers to identify users.                                                                                                                                            |
 | `merge_behavior`            | Optional | String                              | One of `none` or `merge` is expected.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Merge_behavior field {#merge}
 
-Setting the `merge_behavior` field to `merge` sets the endpoint to merge the following list of fields found **exclusively** on the anonymous user to the identified user. Setting the field to `none` will not merge any user data to the identified user profile.
+Setting the `merge_behavior` field to `merge` sets the endpoint to merge the following list of fields found **exclusively** on the anonymous user to the identified user. Setting the field to `none` will not merge any user data to the identified user profile. By default, this field will set to `merge`.
 
 {% details List of fields that are merged %}
 - First name

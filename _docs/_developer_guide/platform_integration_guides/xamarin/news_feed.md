@@ -16,5 +16,5 @@ channel: news feed
 
 {% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-For information on how to integrate the News Feed into your Xamarin app, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration).
+For information on how to integrate the News Feed into your Xamarin app, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/) and [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration).
 

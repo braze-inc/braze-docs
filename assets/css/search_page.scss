@@ -151,6 +151,14 @@
       display: inline-block;
       color: $braze-purple-dark;
     }
+    .hit-snippet {
+      margin-top: 20px;
+      border-left: solid 4px grey;
+      padding: 16px;
+      background-color: #fffcfc;
+      overflow: hidden;
+      max-height: 100px;
+    }
     .hit-subname {
       display: inline-block;
     }

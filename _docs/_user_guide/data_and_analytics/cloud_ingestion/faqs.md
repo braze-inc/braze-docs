@@ -3,13 +3,13 @@ nav_title: FAQs
 article_title: Cloud Data Ingestion FAQs
 page_order: 100
 page_type: FAQ
-description: "This article answers frequently asked questions about Cloud Data Ingestion."
+description: "This page answers frequently asked questions about Cloud Data Ingestion."
 toc_headers: h2
 ---
 
 # Frequently Asked Questions (FAQ)
 
-> These are the answers to some frequently asked questions for Cloud Data Ingestion.
+> This page contains answers to some frequently asked questions for Cloud Data Ingestion.
 
 ## Why was I emailed: "Error in CDI Sync"?
 
@@ -17,7 +17,7 @@ This type of email usually means there's an issue with your CDI setup. Here are 
 
 ### CDI can't access the data warehouse or table using your credentials
 
-This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, see [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
 
 ### The table cannot be found
 
@@ -25,7 +25,7 @@ Try updating your integration with the correct database configuration or create 
 
 ### The catalog cannot be found
 
-The catalog set up in the integration does not exist in the Braze catalog. A catalog can be removed after the integration was set up. To resolve the issue, either update the integration to use a different catalog or create a new catalog that matches the catalog name in the integration.
+The catalog set up in the integration doesn't exist in the Braze catalog. A catalog can be removed after the integration was set up. To resolve the issue, either update the integration to use a different catalog or create a new catalog that matches the catalog name in the integration.
 
 ## Why was I emailed: "Row errors in your CDI sync"?
 
@@ -41,11 +41,11 @@ Test Connection is running on your data warehouse, so increasing warehouse capac
 
 ### Error connecting to Snowflake instance: Incoming request with IP is not allowed to access Snowflake
 
-Try adding the official Braze IPs to your IP allowlist. For more information, see [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
 
 ### Error executing SQL due to customer config: 002003 (42S02): SQL compilation error: does not exist or not authorized
 
-If the table does not exist, create the table. If the table does exist, verify that the user and role have permissions to read from the table.
+If the table doesn't exist, create the table. If the table does exist, verify that the user and role have permissions to read from the table.
 
 ### Could not use schema
 
@@ -61,7 +61,7 @@ If you receive this error, allow that user access to your Snowflake account.
 
 ### Error connecting to Snowflake instance with current and old key
 
-If you receive this error, make sure the user is using the current public key as seen in your braze dashboard.
+If you receive this error, make sure the user is using the current public key as displayed in your Braze dashboard.
 {% endtab %}
 
 {% tab Redshift %}
@@ -96,7 +96,7 @@ Test Connection is running on your data warehouse, so increasing warehouse capac
 
 ### User does not have permission to query table
 
-If you receive this error, add User permissions to query the table.
+If you receive this error, add user permissions to query the table.
 
 ### Your usage exceeded the custom quota
 

@@ -3,7 +3,7 @@ nav_title: Beacon Integration
 article_title: Beacon Integration for iOS
 platform: iOS
 page_order: 4
-description: "This article covers logging custom events using Gimbal Beacons for iOS."
+description: "This article covers logging custom events using Infillion Beacons for iOS."
 
 noindex: true
 ---
@@ -14,9 +14,9 @@ noindex: true
 
 Here, we will walk through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.
 
-## Gimbal Beacons
+## Infillion Beacons
 
-Once you have your Gimbal Beacons set up and integrated into your app, you can log custom events like a visit starting or ending or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.
+Once you have your Infillion Beacons set up and integrated into your app, you can log custom events like a visit starting or ending or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.
 
 To log a custom event when a user enters a place, input this code into the `didBeginVisit` method:
 
