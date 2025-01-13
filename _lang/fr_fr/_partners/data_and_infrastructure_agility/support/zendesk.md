@@ -108,7 +108,7 @@ Si vous possédez un identifiant commun pour Braze et Zendesk, il est recommand�
 5. (Recommandé) Testez le webhook pour vérifier qu'il fonctionne correctement.<br><br>
 6. Pour les webhooks de déclenchement et d'automatisation, vous devez connecter le webhook à un déclencheur ou à une automatisation avant de terminer la configuration. Reportez-vous à l'étape suivante pour notre exemple de création d'un déclencheur pour le webhook. Une fois le déclencheur créé, vous pouvez revenir à cette page et sélectionner **Terminer la configuration**.
 
-### Étape 2 : Créer un déclencheur ou un automatisme
+### Étape 2 : Créer un déclencheur ou un automatisme
 
 [Suivez les instructions de Zendesk](https://support.zendesk.com/hc/en-us/articles/4408839108378#topic_bwm_1tv_dpb) sur la façon de connecter votre webhook à un déclencheur ou à une automatisation.
 
