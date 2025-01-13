@@ -36,6 +36,8 @@ Quando você interrompe um Canva, aplica-se o seguinte:
 
 Envio de mensagens no app no início da próxima sessão. Isso significa que, se o usuário entrar na etapa do Canva antes de o Canvas ser interrompido, ele ainda receberá a mensagem no app no início da próxima sessão, desde que a mensagem no app ainda não tenha expirado.
 
+É possível que um usuário inicie uma sessão antes que o canva seja interrompido, mas não seja exibida a mensagem no app imediatamente. Isso pode ocorrer se a mensagem no app for acionada por um evento personalizado ou se estiver atrasada. Isso significa que é possível para um usuário registrar uma impressão de mensagem no app e "receber" a mensagem no app após o canva ser interrompido. No entanto, o usuário teria que ter iniciado a sessão antes que o canva fosse interrompido, mas **depois** eles receberam a etapa do canva.
+
 {% alert note %}
 A interrupção de um Canva não fará com que os usuários que estão esperando para receber mensagens saiam da jornada do usuário. Se você reativar o Canva e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
 {% endalert %}
@@ -102,6 +104,10 @@ O segmentador é uma estatística mais precisa para dados de usuários exclusivo
 ### Por que o número de usuários que entram em um Canva não corresponde ao número esperado?
 
 O número de usuários que entram em um Canva pode ser diferente do número esperado devido à forma como o público e os disparadores são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam do Canva se não fizerem parte do público selecionado antes que qualquer ação-gatilho seja avaliada.
+
+### O que acontece com os usuários anônimos durante sua jornada no canva?
+
+Enquanto usuários anônimos podem entrar e sair de Canvases, suas ações não estão associadas a um perfil de usuário específico até que sejam identificados, então suas interações podem não ser totalmente rastreadas em sua análise de dados. Você pode usar o [Construtor de Consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) para gerar um relatório dessas métricas.
 
 ### Por que minha taxa de conversão da etapa do Canva não é igual à taxa de conversão total da variante do Canvas?
 
