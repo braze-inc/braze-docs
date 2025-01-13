@@ -44,11 +44,11 @@ Braze에서 푸시 캠페인을 만들 때 여러 플랫폼과 디바이스를 �
 
 ![iOS, Android, 웹의 세 가지 푸시 유형에 대해 하나의 제목, 메시지, 클릭 시 동작 필드가 포함된 단일 편집 보기를 제공합니다.][2]
 
-**자산** 섹션에서 각 플랫폼에 표시할 이미지를 선택하거나 업로드합니다. 기기마다 이미지와 글자 수에 대한 사양이 다르다는 점에 유의하세요. 도움이 필요하면 [푸시 메시지 및 이미지 형식을][3] 참조하세요.
+**자산** 섹션에서 각 플랫폼에 표시할 이미지를 선택하거나 업로드합니다. 기기마다 이미지와 글자 수에 대한 사양이 다르다는 점에 유의하세요. 푸시 메시지 및 이미지 형식][3] 도움말을 참조하세요.
 
 ![단일 편집 보기의 자산 섹션에 푸시 아이콘 이미지, iOS 알림 이미지, Android 알림 이미지 및 웹 알림 이미지 필드가 있습니다.][4]{:style="max-width:50%"}
 
-그런 다음 평소와 같이 푸시 캠페인 설정을 완료합니다. 자세한 내용은 [푸시 캠페인 만들기를][5] 참조하세요.
+그런 다음 평소와 같이 푸시 캠페인 설정을 완료합니다. 자세한 내용은 [푸시 캠페인 만들기][5] ]를 참조하세요.
 
 ## 알아두어야 할 사항
 
@@ -62,18 +62,17 @@ iOS 및 Android와 같은 모바일 플랫폼에 대해 여러 디바이스를 �
 
 ### 기기별 설정
 
-여러 플랫폼 또는 기기를 선택한 경우 iOS 및 Android 전용 설정은 지원되지 않습니다. 여기에는 [푸시 실행 버튼]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), 알림 채널 및 그룹, TTL, 디스플레이 우선순위, 소리 등의 설정이 포함됩니다.
+편집기에서 플랫폼별 설정을 편집할 수 있습니다. 여기에는 [푸시 실행 버튼]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), 알림 채널 및 그룹, TTL, 디스플레이 우선순위, 소리 등의 설정이 포함됩니다.
 
 기기별 설정에 대한 자세한 내용은 다음 문서 모음을 참조하세요.
 
 - [iOS 옵션][6]
-- [Android 옵션][7]
+- [안드로이드 옵션][7]
 
 
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
