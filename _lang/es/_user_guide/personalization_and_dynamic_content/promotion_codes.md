@@ -179,6 +179,10 @@ Si el mensaje debería haber contenido un código promocional de una lista vací
 
 Si el mensaje contiene Lógica líquida que inserta condicionalmente un código de promoción, el mensaje sólo se cancelará si debería haber contenido un código de promoción. Si el mensaje no debería haber contenido un código de promoción, el mensaje se enviará normalmente.
 
+### ¿Cómo guardo un código promocional en el perfil de un usuario para poder utilizarlo en mensajes de seguimiento?
+
+Para hacer referencia al mismo código promocional en mensajes posteriores, el código debe guardarse en el perfil de usuario como un atributo personalizado. Esto puede hacerse adjuntando un [Webhook Braze to Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) a la misma campaña o paso en Canvas de mensajería.
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
