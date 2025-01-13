@@ -41,13 +41,13 @@ Braze Audience Sync to Criteo は Audience Sync Pro 統合です。この統合�
 
 ### ステップ1:Criteo に接続する
 
-Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Criteo**] を選択します。Criteo Audience Export で、**Connect Criteo** を選択します。
+Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Criteo**] を選択します。[Criteo Audience Export] で、[**Criteo を接続**] を選択します。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-![Overview セクションとConnected Criteo ボタン付きのCriteo セクションを含むBraze のCriteo テクノロジページ。][5]{: style="max-width:80%;"}
+![Braze の Criteo テクノロジーページ。[概要] セクション、[Criteo] セクション、[接続済みの Criteo] ボタンが表示されている。][5]{: style="max-width:80%;"}
 
 次に、Criteo oAuth ページにリダイレクトされ、Braze に Audience Sync 統合に関連するアクセス許可を承認します。
 
