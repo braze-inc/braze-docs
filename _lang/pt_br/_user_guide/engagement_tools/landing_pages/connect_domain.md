@@ -13,7 +13,7 @@ alias: /landing_pages/connect_domain/
 Para conectar um domínio ou subdomínio à sua conta Braze, peça a um administrador que siga as etapas abaixo.
 
 1. Acesse **Configurações** > **Configurações da landing page**.
-2. Digite o domínio ou subdomínio que deseja conectar e selecione **Submit (Enviar**). Por exemplo, `forms.example.com`.
+2. Digite o domínio ou subdomínio que deseja conectar e selecione **Submit (Enviar)**. Por exemplo, `forms.example.com`.
 3. Copie e cole os registros **TXT** e **CNAME** nas configurações de DNS do seu provedor de domínio.
 4. Retorne ao dashboard do Braze para verificar a conexão.
 
