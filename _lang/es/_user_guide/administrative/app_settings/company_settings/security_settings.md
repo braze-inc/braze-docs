@@ -81,6 +81,14 @@ Los usuarios que tengan problemas para iniciar sesión con la autenticación de 
 
 Un restablecimiento puede resolver problemas comunes de autenticación, como problemas con aplicaciones de autenticación, verificación de correo electrónico que no se envía, fallo de inicio de sesión debido a interrupciones de SMS o error del usuario, y más.
 
+## Acceso elevado
+
+El Acceso Elevado añade una capa extra de seguridad para las acciones sensibles en tu panel Braze. Cuando están activos, los usuarios tienen que volver a verificar su cuenta antes de exportar un segmento o ver una clave de API. Para utilizar el Acceso Elevado, ve a **Configuración** > **Configuración de administrador** > **Configuración de seguridad** y altérnalo. 
+
+Si un usuario no puede volver a verificar, será redirigido al punto donde lo dejó y no podrá continuar con la acción sensible. Después de volver a verificar con éxito, no tendrán que volver a hacerlo durante la siguiente hora, a menos que cierren la sesión antes.
+
+![Alterna el Acceso Elevado.][5]
+
 ## Descargar un informe de incidentes de seguridad
 
 El informe de eventos de seguridad es un informe CSV de eventos de seguridad como invitaciones a cuentas, eliminaciones de cuentas, intentos de inicio de sesión fallidos y exitosos, y otras actividades. Puedes utilizarlo para realizar auditorías internas.
@@ -214,12 +222,12 @@ Establezca las preferencias por defecto marcando las casillas de los campos que 
 
 Para personalizar las preferencias por área de trabajo, puede añadir grupos de preferencias con ajustes diferentes de los predeterminados. Aplicamos la configuración predeterminada a todos los espacios de trabajo que no se hayan añadido a un grupo de preferencias adicional, incluidos los espacios de trabajo que se creen en el futuro.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![Sección Preferencias de borrado de datos con alternar activado para personalizar las preferencias de borrado de datos por espacio de trabajo.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "perfil de usuario ofuscado1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "perfil de usuario ofuscado2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "perfil de usuario ofuscado3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
