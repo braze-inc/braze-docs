@@ -4,7 +4,7 @@ article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
+description: "This page covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
 tool: 
   - Reports
 
@@ -12,7 +12,7 @@ tool:
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
@@ -28,20 +28,20 @@ Use this report to answer key engagement questions, for example:
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}
-Try to use the same conversion events for conversion A, B, etc. across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
+Try to use the same conversion events for conversion A, B, and so on across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
 {% endalert %}
 
-## Run a report
+## Running a report
 
 ### Step 1: Create a new report
 
 Within the dashboard, navigate to **Analytics** > **Report Builder**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Data**.
 {% endalert %}
 
-Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
+Select **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
 
 If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
 
@@ -53,7 +53,7 @@ The following are the differences between these two options:
 | ---- | ---------- | ------------- |
 | **Building Report** | You will be able to narrow down your campaign list using filters, and then check off specific campaigns. | You will build your report by using the filter options to narrow down your campaign list. |
 | **Saving and Viewing Report** | You can save your report. The next time you view it, you will be able to view the same campaign you previously added, as these campaigns still fall under your "Last Sent" filter. | You can save your report. The next time you view it, the report will automatically update to include all campaigns that currently match your filters. |
-| **Editing Report** | You can click Edit Report to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
+| **Editing Report** | You can select **Edit Report** to add or delete campaigns from your report | You can edit your report by adjusting your filter criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %} 
@@ -64,7 +64,7 @@ Canvas reports work similarly to a manual campaign report in that Canvas selecti
 
 ### Step 2: Choose your metrics
 
-Once you've created your report, you'll find a blank table containing campaigns in each row. The table will populate after you select **Edit Columns** and choose the metrics you'd like to add.
+After you've created your report, you'll find a blank table containing campaigns in each row. The table will populate after you select **Edit Columns** and choose the metrics you'd like to add.
 
 ![Campaign Options][15]{: style="max-width:80%;"}
 
@@ -74,7 +74,7 @@ You can also toggle calculations for the **Average** of any rate or numerical me
 
 ### Step 3: Choose a time period
 
-You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas component does not have any data for your selected time period, the results for that row will be blank. 
+You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas component doesn't have any data for your selected time period, the results for that row will be blank. 
 
 ![Campaign numerical metric][4]{: style="max-width:60%;"}
 
@@ -84,7 +84,7 @@ Name your report before saving it. If a report is saved without being named, Bra
 
 ![Campaign Note][7]{: style="max-width:60%;"}
 
-When you're ready, click **Save**. Saved reports can be viewed at a later point on the **Report Builder** page.
+When you're ready, select **Save**. Saved reports can be viewed at a later point on the **Report Builder** page.
 
 ## Campaign comparison report with multivariate campaigns
 
@@ -92,10 +92,10 @@ For any multivariate campaigns, you can view these metrics broken down by your v
 
 ![Campaign Note][3]{: style="float:right;max-width:15%;margin-left:15px;"}
 
-The metrics populating the row for your overall campaign will reflect the performance of its variants, but will not include the performance of the control. For instance, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this will not include the Primary Conversion Event A for your control.
+The metrics populating the row for your overall campaign will reflect the performance of its variants, but won't include the performance of the control. For example, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this won't include the Primary Conversion Event A for your control.
 
 {% alert important %} 
-If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report. 
+If you delete a variant from a multivariant campaign, the data from that variant won't be available for use in a future report. 
 {% endalert %}
 
 ## Canvas comparison report breakdown
@@ -104,13 +104,13 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 ### Variant
 
-Selecting **breakdown by variant** will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
+Selecting **breakdown by variant** allows you to view the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by selecting the arrow next to the Canvas name.
 
 ![Variants][12]{: style="max-width:90%;"}
 
 ### Steps 
 
-Selecting **breakdown by steps** will allow you to view step-level metrics, with each row of the report containing the row of a step.
+Selecting **breakdown by steps** allows you to view step-level metrics, with each row of the report containing the row of a step.
 
 ![Steps][13]{: style="max-width:90%;"}
 
@@ -124,19 +124,19 @@ Note that within the Braze dashboard, you can preview the first 50 rows of your 
 
 ## Accessing saved reports
 
-When you access a saved **Manual Report**, you will be able to view the same campaigns you previously added, as these campaigns still fall under your "Last Sent" filter.
+When you access a saved **Manual Report**, you can view the same campaigns you previously added, as these campaigns still fall under your "Last Sent" filter.
 
-When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag "Promotion," then each time you view this report, you will be able to see all campaigns with the "Promotion" tag, even if these campaigns were created after you made this report.
+When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For example, if your report filtered campaigns with the tag "Promotion," then each time you view this report, you will be able to see all campaigns with the "Promotion" tag, even if these campaigns were created after you made this report.
 
 ## Editing reports
 
-In a **Manual Report**, you can edit a report by clicking **Edit**. From there, you can select or deselect campaigns to include in your report.
+In a **Manual Report**, you can edit a report by selecting **Edit**. From there, you can select or deselect campaigns to include in your report.
 
 In an **Automatic Report**, simply toggle your filters to narrow down the results in your report.
 
 ## Exporting reports
 
-You can also click **Export** to download your report to CSV.
+You can also select **Export** to download your report to CSV.
 
 If your report contains any multivariant campaigns, your export will include two CSV files: 
 
@@ -149,7 +149,7 @@ The file containing variant metrics will have `variant_` appended to the beginni
 
 ### Exporting Canvas comparison reports
 
-Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you'll need to navigate to that breakdown first, and click **Export** from there.
+Your CSV export will reflect whichever breakdown view you were on when you selected **Export**. For example, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you'll need to navigate to that breakdown first, and select **Export** from there.
 
 If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
