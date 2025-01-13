@@ -16,7 +16,7 @@ Les noms et ID de campagne, Canvas et l'étape de Canvas sont tous disponibles d
 
 ### Liquid
 
-Les attributs de campagne et de canevas sont disponibles sous forme d'étiquettes Liquid dans notre tableau de bord {% raw %}(comme `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires clé-valeur. C’est généralement fait à des fins de suivi.
+Les attributs de campagne et de canevas sont disponibles sous forme de balises Liquid dans notre tableau de bord {% raw %}(comme `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires clé-valeur. C’est généralement fait à des fins de suivi.
 
 ### API REST
 
