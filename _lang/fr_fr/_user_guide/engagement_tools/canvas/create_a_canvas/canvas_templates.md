@@ -88,7 +88,7 @@ Encouragez les achats en informant vos utilisateurs lorsqu'un article est de nou
 
 - Dans **Entry Schedule**, sélectionnez un catalogue à utiliser. Cela vous permet d'accéder à des données, telles que les produits, les remises et les promotions, afin de mieux cibler vos utilisateurs.
 - Dans **Audience cible**, ajoutez un segment pour cibler les utilisateurs qui ont manifesté de l'intérêt pour un certain article.
-- Dans les étapes du message tout au long du canvas, mettez à jour le liquide pour faire référence à votre catalogue.
+- Dans les étapes du message tout au long du canvas, mettez à jour le code  Liquid pour faire référence à votre catalogue.
 
 {% endtab %}
 {% tab Fonctionnalité Adoption %}
