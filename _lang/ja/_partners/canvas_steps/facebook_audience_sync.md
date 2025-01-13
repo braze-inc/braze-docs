@@ -12,7 +12,7 @@ Tool:
 
 # オーディエンスがFacebookに同期する
 
-Braze Audience Sync to Facebook を使用すると、ブランドは独自のBraze 統合から独自のユーザーデータをFacebook Custom Audiences に追加して、行動トリガー、セグメンテーションなどに基づいて広告を配信することができます。通常、ユーザデータに基づいてBraze Canvas でメッセージ(プッシュ、メール、SMS、またはWebhook)をトリガするために使用する基準をすべて使用して、カスタムオーディエンスを使用してFacebook でそのユーザに広告をトリガすることができます。
+Braze Audience Sync to Facebook を使用すると、ブランドは独自の Braze 統合からのユーザーデータを Facebook のカスタムオーディエンスに追加して、行動トリガーやセグメンテーションなどに基づいて広告を配信できます。ユーザーデータに基づいて Braze キャンバスでメッセージ (プッシュ、メール、SMS、または Webhook) をトリガーするために通常使用する基準を、カスタムオーディエンスを介して Facebook 内の該当ユーザーに対して広告をトリガーするときに使用できるようになりました。
 
 **カスタムオーディエンス同期の一般的なユースケースには次のものがあります。**
 
@@ -30,7 +30,7 @@ Braze Audience Sync to Facebook を使用すると、ブランドは独自のBra
 | 必要条件 | 提供元 | 説明 |
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook][1] | ブランドのFacebook アセット(広告アカウント、ページ、アプリなど) を管理するための集中型ツールです。 |
-| Facebook 広告アカウント | [Facebook][2] | あなたのブランドのビジネス・マネージャーと結びついた、アクティブなFacebook広告アカウント。<br><br>Facebookビジネスマネージャー管理者が、Brazeで使用する予定のFacebook広告アカウントに対して「キャンペーンの管理」または「広告アカウントの管理」のいずれかの権限を付与していることを確認する。また、広告アカウントの利用規約に同意していることを確認してください。 |
+| Facebook 広告アカウント | [Facebook][2] | あなたのブランドのビジネス・マネージャーと結びついた、アクティブなFacebook広告アカウント。<br><br>Facebookビジネスマネージャー管理者が、Brazeで使用する予定のFacebook広告アカウントに対して「キャンペーンの管理」または「広告アカウントの管理」のいずれかの権限を付与していることを確認する。また、広告アカウントの利用規約に同意していることも確認してください。 |
 | Facebook カスタムオーディエンス利用規約 | [Facebook][3] | Brazeで使用する予定のFacebook広告アカウントについて、Facebookのカスタムオーディエンス規約に同意する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -38,13 +38,13 @@ Braze Audience Sync to Facebook を使用すると、ブランドは独自のBra
 
 ### ステップ1:Facebook に接続する
 
-Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Facebook**] を選択します。Facebook Audience Exportで、**Connect Facebook**を選択します。
+Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Facebook**] を選択します。Facebook オーディエンスで、[**Facebook を接続**] を選択します。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-![Braze のFacebook テクノロジーページ。Overview セクションと、Connected Facebook ボタンを持つFacebook Audience Export セクションが含まれます。][4]{: style="max-width:70%;"}
+![[概要] セクションと、[接続済みの Facebook] ボタンのある [Facebook オーディエンスのエクスポート] セクションを含む Braze の Facebook テクノロジーページ。][4]{: style="max-width:70%;"}
 
 Facebook oAuthダイアログウィンドウが表示され、BrazeがFacebook広告アカウントにカスタムオーディエンスを作成することを承認する。
 
@@ -128,7 +128,7 @@ Facebookオーディエンスマネージャーのカスタムオーディエン
  
 ユーザーがオーディエンス同期ステップに達すると、Brazeはほぼリアルタイムでこれらのユーザーを同期し、同時にFacebookのMarketing APIレート制限を尊重する。これが実際に意味するのは、BrazeはFacebookにユーザーを送る前に、5秒ごとにできるだけ多くのユーザーをバッチ処理しようとするということだ。 
 
-Facebook の Marketing API のレート制限では、各広告アカウントで1時間あたり19万件のリクエストを超えないように設定されています。Brazeの顧客がこのレート制限に達した場合、Braze the Canvasは最大13時間まで同期を再試行する。同期が不可能な場合、これらのユーザーは Users Errored メトリクスの下に表示されます。
+Facebook の Marketing API のレート制限では、各広告アカウントで1時間あたり19万件のリクエストを超えないように設定されています。Brazeの顧客がこのレート制限に達した場合、Braze the Canvasは最大13時間まで同期を再試行する。同期が不可能な場合、これらのユーザーはエラーが発生したユーザーメトリックに一覧表示されます。
 
 ## 分析の理解
 
@@ -166,7 +166,7 @@ Facebookはプライバシー上の理由からこの情報を提供していな
 {% enddetails %}
 
 {% details Brazeはバリューベースのカスタムオーディエンスに対応しているか？ %}
-現時点では、価値ベースのカスタムオーディエンスはBraze でサポートされていません。これらのタイプのカスタムオーディエンスを同期する場合は、[製品フィードバック]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)を送信します。
+現時点では、価値ベースのカスタムオーディエンスはBraze でサポートされていません。このようなタイプのカスタムオーディエンスの同期に関心がある場合は、[製品フィードバック]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)をお送りください。
 {% enddetails %}
 
 {% details 値に基づく類似カスタムオーディエンスの同期に関する問題を解決するにはどうしたらよいですか? %}
@@ -182,12 +182,12 @@ Facebookはプライバシー上の理由からこの情報を提供していな
 {% enddetails %}
 
 {% details Facebookのカスタムオーディエンス利用規約に関連するメールを受け取った。これを解決するにはどうすればよいですか? %}
-Audience Sync to Facebook を使用するには、これらの利用規約に同意する必要があります。 
+Facebook へのオーディエンス同期を使用するには、これらの利用規約に同意する必要があります。 
 
-- 広告アカウントが個人のFacebookアカウントに直接関連付けられている場合は、ここで個人アカウント内からTOSを受け入れることができます:`https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID`。
-- 広告アカウントが会社のBusiness Manager アカウントに関連付けられている場合は、ここでビジネスマネージャアカウント内からTOS を受け入れる必要があります。`https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID`。
+- 広告アカウントが個人の Facebook アカウントに直接関連付けられている場合は、個人アカウント内の以下のページから TOS を受け入れることができます:`https://www.facebook.com/ads/manage/customaudiences/tos.php?act=ACCOUNT_ID`。
+- 広告アカウントが会社のビジネスマネージャーアカウントに関連付けられている場合、ビジネスマネージャーアカウント内の以下のページからサービス使用条件に同意する必要があります。`https://business.facebook.com/customaudiences/value_based/tos.php?act=ACCOUNT_ID&business_id=BUSINESS_ID`
 
-Facebookのカスタムオーディエンス利用規約に同意したら、次の手順を実行します。
+Facebook カスタムオーディエンスのサービス使用条件に同意したら、以下を行います。
 1. Facebookアカウントを一旦切断し、再接続することで、BrazeでFacebookアクセストークンをリフレッシュする。
 2. キャンバスを編集して更新することにより、Facebook オーディエンスの同期ステップを再度有効にします。
 Brazeは、ユーザーがFacebookのオーディエンス・ステップに到達すると、すぐに同期できるようになる。
