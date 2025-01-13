@@ -11,9 +11,7 @@ hidden: true
 
 # 뉴스피드 모범 사례
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Braze 뉴스피드는 풍부한 콘텐츠의 타겟팅된 동적 스트림입니다. 추가 개발 작업이 필요 없이 지속적으로 업데이트되는 콘텐츠로 사용자에게 다가갈 수 있는 강력한 방법을 제공합니다. 이 콘텐츠는 다양한 세그먼트를 타겟팅할 수 있으며 다른 Braze 메시지와 동일한 방식으로 예약할 수 있습니다. 각 카드는 제목, 요약, 이미지, 선택 사항으로 URL로 구성됩니다. 또한 피드에는 앱 내에서 딥링킹하거나 App Store, Google Play 등으로 직접 연결하거나 사용자를 웹 보기로 안내하는 기능도 포함되어 있습니다. 이 고유한 Braze UI 요소는 [통합][1] 중에 활성화해야 합니다. 개발자와 반드시 상의하세요.
 
