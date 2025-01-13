@@ -66,16 +66,11 @@ Les types de messages suivants sont exemptés des exigences de l’agent de manu
 
 ### Contenu du message
 
-Les messages qui ne relèvent pas de l’une des exemptions nécessitent un consentement « explicite ou implicite » du destinataire du message.
+Braze demande un consentement explicite pour tous les e-mails et les SMS/MMS.
 
 #### Consentement implicite
 
-Le consentement implicite repose sur l’activité précédente avec un utilisateur par le biais d’une relation commerciale ou non commerciale existante. Les messages peuvent être envoyés sur la base du consentement implicite pendant la période de transition. Après le 1er juillet 2017, le consentement explicite est requis, sauf si le consentement implicite est toujours valable (par exemple, deux ans après l'achat).
-
-- Le destinataire d’un message a acheté ou loué un produit, une marchandise, un service ou effectué d’autres activités avec votre organisation au cours des 2 dernières années
-- L’adresse électronique a été publiée et n’interdit pas explicitement les e-mails non sollicités
-
-Le consentement implicite n’est valable que pendant 6 mois si le destinataire ne devient pas un client.
+Le consentement implicite peut être légalement autorisé dans certaines juridictions, mais n'est pas suffisant pour l'envoi d'e-mails par l'intermédiaire de Braze. Notre politique d'utilisation acceptable va au-delà des exigences légales.
 
 #### Consentement exprès
 
