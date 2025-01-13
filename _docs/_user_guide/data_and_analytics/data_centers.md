@@ -23,10 +23,101 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 Refer to the following table for a list of available data centers.
 
-| Data Center Region | Dashboard URL | REST Endpoint | SDK Endpoint
-| --- | --- | --- | --- |
-| Australia | `https://dashboard.au-01.braze.com` | `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+<style>
+table th:nth-child(1) {
+    width: 10%;
+}
+table th:nth-child(2) {
+    width: 33%;
+}
+table th:nth-child(3) {
+    width: 33%;
+}
+table th:nth-child(4) {
+    width: 24%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Data Center Region</th>
+      <th>Dashboard URL</th>
+      <th>REST Endpoint</th>
+      <th>SDK Endpoint</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Australia</b></td>
+      <td><code>https://dashboard.au-01.braze.com</code></td>
+      <td><code>https://rest.au-01.braze.com</code></td>
+      <td><code>sdk.au-01.braze.com</code></td>
+    </tr>
+    <tr>
+      <td><b>Europe</b></td>
+      <td>
+        <ul>
+          <li><code>https://dashboard-01.braze.eu</code></li>
+          <li><code>https://dashboard-02.braze.eu</code></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>https://rest.fra-01.braze.eu</code></li>
+          <li><code>https://rest.fra-02.braze.eu</code></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>sdk.fra-01.braze.eu</code></li>
+          <li><code>sdk.fra-02.braze.eu</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><b>US</b></td>
+      <td>
+        <ul>
+          <li><code>https://dashboard-01.braze.com</code></li>
+          <li><code>https://dashboard-02.braze.com</code></li>
+          <li><code>https://dashboard-03.braze.com</code></li>
+          <li><code>https://dashboard-04.braze.com</code></li>
+          <li><code>https://dashboard-05.braze.com</code></li>
+          <li><code>https://dashboard-06.braze.com</code></li>
+          <li><code>https://dashboard-07.braze.com</code></li>
+          <li><code>https://dashboard-08.braze.com</code></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>https://rest.iad-01.braze.com</code></li>
+          <li><code>https://rest.iad-02.braze.com</code></li>
+          <li><code>https://rest.iad-03.braze.com</code></li>
+          <li><code>https://rest.iad-04.braze.com</code></li>
+          <li><code>https://rest.iad-05.braze.com</code></li>
+          <li><code>https://rest.iad-06.braze.com</code></li>
+          <li><code>https://rest.iad-07.braze.com</code></li>
+          <li><code>https://rest.iad-08.braze.com</code></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>sdk.iad-01.braze.com</code></li>
+          <li><code>sdk.iad-02.braze.com</code></li>
+          <li><code>sdk.iad-03.braze.com</code></li>
+          <li><code>sdk.iad-04.braze.com</code></li>
+          <li><code>sdk.iad-05.braze.com</code></li>
+          <li><code>sdk.iad-06.braze.com</code></li>
+          <li><code>sdk.iad-07.braze.com</code></li>
+          <li><code>sdk.iad-08.braze.com</code></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Signing up for region-specific data centers
 
