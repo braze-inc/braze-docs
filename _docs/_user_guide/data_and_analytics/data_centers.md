@@ -43,10 +43,10 @@ table td {
 <table>
   <thead>
     <tr>
-      <th>Data Center Region</th>
+      <th>Data center region</th>
       <th>Dashboard URL</th>
-      <th>REST Endpoint</th>
-      <th>SDK Endpoint</th>
+      <th>REST endpoint</th>
+      <th>SDK endpoint</th>
     </tr>
   </thead>
   <tbody>
