@@ -81,6 +81,14 @@ Les utilisateurs qui rencontrent des problèmes de connexion avec l'authentifica
 
 Une réinitialisation peut résoudre des problèmes d'authentification courants tels que des difficultés avec les applications d'authentification, la non-réception de la vérification par e-mail, l'échec de la connexion en raison de pannes de SMS ou d'erreurs de l'utilisateur, et plus encore.
 
+## Accès renforcé
+
+L'accès renforcé ajoute une couche de sécurité supplémentaire pour les actions sensibles dans votre tableau de bord de Braze. Lorsqu'il est actif, l'utilisateur doit revérifier son compte avant d'exporter un segment ou de consulter une clé API. Pour utiliser l'accès renforcé, accédez à **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et basculez sur cette option. 
+
+Si un utilisateur ne peut pas revérifier, il sera redirigé à l'endroit où il s'est arrêté et ne pourra pas poursuivre l'action sensible. Une fois qu'ils ont réussi à s'identifier à nouveau, ils n'ont plus besoin de le faire pendant l'heure qui suit, à moins qu'ils ne se déconnectent avant.
+
+![Basculer l'accès renforcé.][5]
+
 ## Téléchargement d'un rapport d'événement de sécurité
 
 Le rapport d’événement de sécurité est un rapport CSV d’événements de sécurité tels que les invitations de compte, les retraits de compte, les échecs et réussites de connexion, les tentatives de connexion et autres activités. Vous pouvez l'utiliser pour réaliser des audits internes.
@@ -214,12 +222,12 @@ Définissez les préférences par défaut en cochant les cases pour tous les cha
 
 Pour personnaliser les préférences par espace de travail, vous pouvez ajouter des groupes de préférences avec des paramètres différents de ceux par défaut. Nous appliquons les paramètres par défaut à tous les espaces de travail qui ne sont pas ajoutés à un groupe de préférences supplémentaire, y compris les espaces de travail créés à l'avenir.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![La section Préférences de suppression des données est basculée pour personnaliser les préférences de suppression des données par espace de travail.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "profil utilisateur obfusqué1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "profil utilisateur obfusqué2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "profil utilisateur obfusqué3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
