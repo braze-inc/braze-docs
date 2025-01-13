@@ -12,7 +12,7 @@ tool: Currents
 
 > Braze usa Currents! É isso mesmo, gostamos de nosso próprio produto o suficiente para usá-lo em conjunto com alguns de [nossos parceiros]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
-Filtramos os dados de nossas campanhas de envio de e-mail e push em uma ferramenta de insight de negócios, a Looker, mas é preciso seguir um caminho interessante para chegar lá. Usamos uma versão ligeiramente invertida da metodologia ETL (Extrair, Transformar, Carregar) - apenas mudamos a ordem para ELT (Extrair, Carregar, Transformar)!
+Filtramos os dados de nossas campanhas de envio de e-mail e push em uma ferramenta de insight de negócios, a Looker, mas é preciso seguir um caminho interessante para chegar lá. Usamos uma versão ligeiramente invertida da metodologia Extrair, Transformar, Carregar (ETL) - apenas mudamos a ordem para Extrair, Carregar, Transformar (ELT)!
 
 ## Etapa 1: Dados de eventos agregados e de admissão
 
@@ -20,7 +20,7 @@ Depois de lançar campanhas usando qualquer uma de nossas ferramentas de engajam
 
 ## Etapa 2: Enviar dados de eventos para um parceiro de armazenamento de dados
 
-Configuramos o Currents para enviar dados de eventos do Braze para o Amazon S3 para armazenamento e extração. Agora, sabemos que você pode usar o [Athena][2] sobre o S3 para executar consultas. É uma ótima solução de curto prazo. Mas queríamos (e recomendamos a você) uma solução de longo prazo usando um banco de dados relacional e uma ferramenta de business intelligence/análise de dados.
+Configuramos o Currents para enviar dados de eventos do Braze para o Amazon S3 para armazenamento e extração. Agora, sabemos que você pode usar o [Athena][2] sobre o S3 para executar consultas. É uma ótima solução de curto prazo. Mas queríamos (e recomendamos a você) uma solução de longo prazo usando um banco de dados relacional e uma ferramenta de business intelligence/análise de dados. (Recomendamos o mesmo para você).
 
 Consideramos o S3 como nossas chaves do castelo! Ela abre as portas para muitas possibilidades de mover, girar e analisar nossos dados, transferindo-os para onde precisamos. No entanto, tomamos o cuidado de não transformar nossos dados no S3, pois temos uma estrutura muito específica para eles.
 
@@ -28,7 +28,7 @@ Consideramos o S3 como nossas chaves do castelo! Ela abre as portas para muitas 
 
 No S3, escolhemos um warehouse ([Compartilhamento de dados com Snowflake](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) ou Contas de leitores da Snowflake, no nosso caso). Nós o transformamos lá e depois o movemos para o Looker, onde temos blocos configurados que estruturarão e organizarão nossos dados.
 
-O Snowflake não é sua única opção de armazém. Você também pode escolher [Redshift](https://aws.amazon.com/redshift/), [Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE) e muito mais!
+O Snowflake não é a única opção de armazém. Outras opções incluem [Redshift](https://aws.amazon.com/redshift/), [Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE) e muito mais!
 
 ### Contas de leitores da Snowflake
 
@@ -36,14 +36,14 @@ As Contas de Leitor Snowflake oferecem aos usuários acesso aos mesmos dados e f
 
 Para saber mais, entre em contato com seu gerente de sucesso do cliente.
 
-**Recursos adicionais**<br>
+#### Recursos adicionais
 Para obter recursos úteis de monitoramento de uso, confira os artigos [Monitores de recursos](https://docs.snowflake.com/en/user-guide/resource-monitors.html) da Snowflake e [Visualização do uso de crédito do depósito](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account).
 
-## Etapa 4: Use uma ferramenta de BI para manipular seus dados
+## Etapa 4: Use uma ferramenta de Business Intelligence (BI) para manipular seus dados
 
-Por fim, usamos uma ferramenta de BI para analisar nossos dados, transformá-los em gráficos e outras ferramentas visuais, e muito mais, usando [os blocos do Looker e do Looker](https://www.marketplace.looker.com/) para não precisarmos ETL/ELT os dados toda vez que eles são transferidos do Currents.
+Por fim, usamos uma ferramenta de BI para analisar nossos dados, transformá-los em gráficos e outras ferramentas visuais, e muito mais, usando os [blocos do Looker e do Looker](https://www.marketplace.looker.com/) para não precisarmos ETL/ELT os dados toda vez que eles são transferidos do Currents.
 
-Consulte os documentos a seguir para saber mais sobre eles e como usá-los para criar seu banco de dados!
+Está se sentindo inspirado a fazer o mesmo? Consulte os documentos a seguir para saber mais sobre eles e como usá-los para criar seu banco de dados!
 
 - [Bloco de comportamento do usuário](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 - [Bloco de engajamento com mensagens](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
