@@ -37,7 +37,7 @@ Atributos são características ou propriedades específicas associadas a um usu
 
 #### Atributos padrão
 
-Os atributos padrão são atributos predefinidos que a Braze fornece. Estes são rastreados automaticamente pela Braze após o SDK ser integrado ao seu app. Eles são peças comuns de informações do usuário que a maioria dos aplicativos acharia útil, como dados demográficos e de dispositivo. Exemplos de atributos padrão incluem:
+Os atributos padrão são atributos predefinidos que você pode rastrear com o Braze após a integração do SDK em seu app. Eles são peças comuns de informações do usuário que a maioria dos aplicativos acharia útil, como dados demográficos e de dispositivo. Os exemplos incluem:
 
 - Nome
 - Sobrenome
