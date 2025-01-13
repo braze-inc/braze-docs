@@ -17,7 +17,7 @@ Une fois que vous êtes intégré, vous pouvez utiliser les API RESTful de Conte
 
 Avant de commencer, vous avez besoin des éléments suivants :
 
-| Prérequis          | Descriptif                        |
+| Prérequis          | Description                        |
 |-----------------------|------------------------------------|
 | A Contentful débiteur | Vous devez disposer d'un compte Contentful avec accès à l'API de réception/distribution de contenu. |
 | Un compte Braze | Vous devez disposer d'un compte Braze avec accès à la fonctionnalité Contenu connecté. |
@@ -29,17 +29,17 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation/), vous pou
 
 ## Intégration
 
-### Étape 1 : Obtenez vos identifiants API Contentful
+### Étape 1 : Obtenez vos identifiants API Contentful
 
 1. [Connectez-vous à Contentful](https://app.contentful.com/login) avec vos identifiants.
-2. Créez ou récupérez les jetons d'accès à l'API dans le tableau de bord de Contentful en allant dans **Paramètres** > **Clés API**. Si vous n'avez pas encore de clé API, créez-en une nouvelle :<br>2.1 Sélectionnez **Ajouter une clé API**.<br>2.2 Saisissez les informations requises et sélectionnez l'environnement approprié.<br>2.3 Sélectionnez **Enregistrer** et notez l'**ID de l'espace** et le **jeton d'accès à l'API de réception/distribution de contenu**.
+2. Créez ou récupérez les jetons d'accès à l'API dans le tableau de bord de Contentful en allant dans **Paramètres** > **Clés API**. Si vous n'avez pas encore de clé API, créez-en une nouvelle :<br>2.1 Sélectionnez **Ajouter une clé API**.<br>2.2 Saisissez les informations requises et sélectionnez l'environnement approprié.<br>2.3 Sélectionnez **Enregistrer** et notez l'**ID de l'espace** et le **jeton d'accès à l'API de distribution de contenu**.
 3. Identifiez le modèle de contenu auquel vous souhaitez accéder via l'API Contentful.
 
-### Étape 2 : Configurer le contenu connecté de Braze
+### Étape 2 : Configurer le contenu connecté de Braze
 
 1. [Connectez-vous à Braze](https://dashboard.braze.com/sign_in) avec vos identifiants.
 2. Dans le tableau de bord de Braze, allez dans **Modèles** > **Blocs de contenu** > **Créer un bloc de contenu** > **Bloc de contenu HTML**.
-3. Créez une demande de contenu connecté à l' [URL de l'API de réception/distribution de contenu de Content](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links)ful. Un exemple d'URL de Contentful Content Delivery API est ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> L'extraction de différentes ressources nécessite l'inclusion de variables spécifiques. L'exemple de demande d'URL de contenu connecté cible l'endpoint [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) de Contentful. Cet endpoint a besoin de variables telles que `{space_id}` et `{environment_id}`, ou `{entry_id}` et `{access_token}`. Celles-ci peuvent être extraites de votre instance Contentful. Dans cet exemple de bloc de contenu, les variables doivent être remplacées par votre ID d'espace Contentful et votre ID d'environnement.<br><br>L'exemple d'URL de l'API de réception/distribution de contenu n'utilise qu'un seul des endpoints disponibles de Contentful. Différents cas d'utilisation peuvent être réalisés en utilisant différents URL. Par exemple, l'[API Image](https://www.contentful.com/developers/docs/references/images-api/) peut être utilisée pour capturer des images stockées dans Contentful. Pour plus d'informations, consultez l'[API de réception/distribution de contenu](https://www.contentful.com/developers/docs/references/content-delivery-api/).
+3. Créez une demande de contenu connecté à l'[URL de l'API de distribution de contenu de Contentful](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links). Un exemple d'URL de Contentful Content Delivery API est ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> L'extraction de différentes ressources nécessite l'inclusion de variables spécifiques. L'exemple de demande d'URL de contenu connecté cible l'endpoint [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) de Contentful. Cet endpoint a besoin de variables telles que `{space_id}` et `{environment_id}`, ou `{entry_id}` et `{access_token}`. Celles-ci peuvent être extraites de votre instance Contentful. Dans cet exemple de bloc de contenu, les variables doivent être remplacées par votre ID d'espace Contentful et votre ID d'environnement.<br><br>L'exemple d'URL de l'API de distribution de contenu n'utilise qu'un seul des endpoints disponibles de Contentful. Différents cas d'utilisation peuvent être réalisés en utilisant différents URL. Par exemple, l'[API Image](https://www.contentful.com/developers/docs/references/images-api/) peut être utilisée pour capturer des images stockées dans Contentful. Pour plus d'informations, consultez l'[API de réception/distribution de contenu](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 
 {% alert note %}
 Différents endpoints peuvent nécessiter de nouvelles variables, par exemple l'API Images nécessite les variables `{asset_id}`, `{unique_id},` et `{name}`. Pour plus d'informations, contactez Contentful.
@@ -66,7 +66,7 @@ Différents endpoints peuvent nécessiter de nouvelles variables, par exemple l'
 5\. Sélectionnez **Done** pour enregistrer votre bloc de contenu.
 6\. Donnez à votre bloc de contenu un nom descriptif, tel que "Contentful API", puis sélectionnez **Lancer le bloc de contenu**.
 
-### Étape 3 : Utilisez le contenu connecté dans les campagnes et les canevas
+### Étape 3 : Utilisez le contenu connecté dans les campagnes et les canevas
 
 1. Dans Braze, créez une nouvelle campagne ou modifiez une campagne existante.
 2. Utilisez le bloc de contenu connecté pour insérer des données extraites de Contentful. Utilisez les chemins de données que vous avez définis lors de la configuration pour alimenter dynamiquement le contenu de la campagne.<br><br>
