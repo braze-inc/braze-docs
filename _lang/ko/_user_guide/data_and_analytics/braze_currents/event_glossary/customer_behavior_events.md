@@ -9,13 +9,13 @@ tool: Currents
 search_rank: 7
 ---
 
-추가 이벤트 자격에 대한 액세스가 필요한 경우 Braze 담당자에게 문의하거나 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요. 이 문서에서 필요한 내용을 찾을 수 없는 경우 [메시지 인게이지먼트 이벤트 라이브러리]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) 또는 [커런츠 샘플 데이터 예시](https://github.com/Appboy/currents-examples/tree/master/sample-data)를 확인하세요.
+추가 이벤트 자격에 대한 액세스가 필요한 경우 Braze 담당자에게 문의하거나 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요. 이 페이지에서 필요한 정보를 찾을 수 없다면 [메시지 참여 이벤트 라이브러리]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) 또는 [커런츠 샘플 데이터 예시를](https://github.com/Appboy/currents-examples/tree/master/sample-data) 확인하세요.
 
 {% details 고객 행동 및 사용자 이벤트 구조와 플랫폼 가치에 대한 설명 %}
 
 ### 이벤트 구조
 
-이 고객 행동 및 사용자 이벤트 분석은 일반적으로 고객 행동 또는 사용자 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서, 차트를 만들고 기타 유용한 데이터 메트릭을 활용할 수 있습니다.
+이 고객 행동 및 사용자 이벤트 분석은 일반적으로 고객 행동 또는 사용자 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
 
 ![사용자별 속성, 행동별 속성, 기기별 속성별로 그룹화된 구매 이벤트를 보여주는 사용자 이벤트 분석]({% image_buster /assets/img/customer_engagement_event.png %})
 
@@ -239,8 +239,8 @@ search_rank: 7
 {% endtabs %}
 
 #### 부동산 세부 정보
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- 고객 성공 매니저 또는 계정 매니저에게 문의하여 `ad_id`로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 매니저 또는 계정 매니저에게 문의하세요.
+- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- 고객 성공 관리자 또는 계정 관리자에게 문의하여 `ad_id` 으로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 관리자 또는 계정 관리자에게 문의하세요.
 {% endapi %}
 
 
@@ -610,8 +610,8 @@ search_rank: 7
 {% endtabs %}
 
 #### 부동산 세부 정보
-- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled`의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- 고객 성공 매니저 또는 계정 매니저에게 문의하여 `ad_id`로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 매니저 또는 계정 매니저에게 문의하세요.
+- `ad_id`, `ad_id_type` 및 `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 여기에서 자세히 알아보세요: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- 고객 성공 관리자 또는 계정 관리자에게 문의하여 `ad_id` 으로 보내기 위한 기능 플리퍼를 사용하도록 설정하고, Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) 데이터를 수집하는 경우에는 고객 성공 관리자 또는 계정 관리자에게 문의하세요.
 {% endapi %}
 
 {% api %}
@@ -711,8 +711,8 @@ search_rank: 7
 {% endtabs %}
 
 {% alert important %}
-이 커런츠 이벤트는 "모든 이벤트 커넥터"를 구매한 고객에게만 제공되며, 스토리지 이벤트 커넥터(i.e Amazon S3, Microsoft Azure, Google Cloud Storage)에 대해서만 사용할 수 있습니다.
-<br><br>이 이벤트를 사용 설정하고 워크스페이스에서 기존 사용자의 무작위 버킷 번호에 대한 백필을 예약하려면 고객 성공 매니저에게 문의하세요.
+이 Currents 이벤트는 '모든 이벤트 커넥터'를 구매한 고객에게만 제공되며, 스토리지 이벤트 커넥터(Amazon S3, Microsoft Azure 및 Google Cloud Storage)에 대해서만 사용할 수 있습니다.
+<br><br>이 이벤트를 활성화하고 워크스페이스에서 기존 사용자의 무작위 버킷 번호에 대한 백필을 예약하려면 고객 성공 관리자에게 문의하세요.
 {% endalert %}
 
 {% endapi %}
