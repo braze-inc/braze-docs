@@ -77,7 +77,7 @@ Vous pouvez affecter une équipe aux Canvas, campagnes, cartes, segments, modèl
 Envisagez les deux scénarios suivants pour Michelle, une spécialiste du marketing chez Braze. Michelle est membre d'une équipe appelée « Développement ». Elle a accès à toutes les autorisations au niveau de l'équipe pour l'équipe de développement.
 
 {% tabs %}
-{% tab Scénario 1 : Uniquement les autorisations d'équipe %}
+{% tab Scénario 1 - Autorisations pour l'équipe uniquement %}
 
 Dans ce scénario, Michelle est un utilisateur limité qui ne dispose d'aucune autorisation au niveau de l'espace de travail. Ses autorisations ressemblent à peu près à ceci :
 
@@ -88,7 +88,7 @@ Sur la base des autorisations attribuées à Michelle, chaque fois qu'elle crée
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab Scénario 2 : Permissions d'équipe et d'espace de travail %}
+{% tab Scénario 2 - Permissions d'équipe et d'espace de travail %}
 
 Dans ce scénario, Michelle est toujours membre de l'équipe Développement, mais elle dispose également d'une autorisation supplémentaire au niveau de l'espace de travail.
 
