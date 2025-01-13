@@ -20,7 +20,7 @@ A integração entre o Braze e o Heap ativa a [importação de dados do Heap par
 | ----------- | ----------- |
 | Conta do Heap | É necessário ter uma conta [Heap](https://heap.io/about) para aproveitar essa parceria. |
 | Chave de importação de dados do Braze | Isso pode ser capturado no dashboard da Braze, em **Integração com parceiros** > **Parceiros de tecnologia**. Em seguida, selecione **Heap**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 | Braze Currents | Para exportar dados do Braze para o Heap, você precisará ter o [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) ativado na sua conta. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
