@@ -41,7 +41,7 @@ Para guardar este nuevo enlace, la etiqueta de cancelación de suscripción pred
 
 ### ¿Qué ocurre si edito una plantilla de correo electrónico que se está utilizando actualmente en una campaña?
 
-Las modificaciones realizadas en una plantilla existente no se reflejarán en las campañas creadas con versiones anteriores de esa plantilla.
+Las modificaciones realizadas en una plantilla existente no se reflejarán en las campañas creadas con versiones anteriores de esa plantilla. Para las campañas API que utilicen una plantilla en el cuerpo de la API REST, Braze utilizará la última versión de la plantilla en el momento del envío.  
 
 ## Plantillas de enlaces
 
@@ -57,7 +57,7 @@ Desde el panel de vista previa en una nueva pestaña, también puede abrir los e
 
 ### ¿Cómo funciona la plantilla de enlaces con Liquid?
 
-Las plantillas de enlaces se expanden y se añaden a cada URL antes de que se produzca cualquier expansión de Liquid. Si parte de su URL se genera utilizando un fragmento de Liquid, recomendamos que la base de la URL y el signo de interrogación (?) estén codificados para que las plantillas de enlace se expandan correctamente. 
+Las plantillas de enlaces se expanden y se añaden a cada URL antes de que se produzca cualquier expansión de Liquid. Si parte de tu URL se genera utilizando un fragmento de código de Liquid, recomendamos que la base de la URL y el signo de interrogación (?) estén codificados para que las plantillas de enlace se expandan correctamente. 
 
 Evite añadir el signo de interrogación (?) a su Liquid, ya que esto hará que las plantillas de enlace añadan primero un signo de interrogación (?), y más tarde el proceso de expansión de Liquid añadirá un segundo signo de interrogación (?).
 
