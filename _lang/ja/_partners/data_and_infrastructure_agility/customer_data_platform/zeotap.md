@@ -16,7 +16,7 @@ guide_featured_list:
 - name: Zeotap Symphony
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/symphony/
   image: /assets/img/braze_icons/building-01.svg
-- name: 電流のためのZeotap
+- name: Currents の Zeotap
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/zeotap_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
