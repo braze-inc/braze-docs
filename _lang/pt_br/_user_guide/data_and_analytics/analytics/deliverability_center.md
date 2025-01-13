@@ -161,7 +161,7 @@ Se você está procurando por registros relacionados a um dos seus domínios ver
 [1]: https://www.gmail.com/postmaster/
 [2]: https://developers.google.com/gmail/markup/registering-with-google
 [3]: {% image_buster /assets/img_archive/deliverability_center1.png %}
-Daqui a [4]: https://support.google.com/mail/answer/9981691?hl=en
+[4]: https://support.google.com/mail/answer/9981691?hl=en
 [5]: {% image_buster /assets/img_archive/deliverability_center2.png %}
 [6]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
