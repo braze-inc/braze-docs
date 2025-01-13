@@ -48,7 +48,7 @@ Dans la section **Ressources**, sélectionnez ou téléchargez les images que vo
 
 ![Section Ressources de la vue d'édition unique avec des champs pour l'image de l'icône Push, l'image de la notification iOS, l'image de la notification Android et l'image de la notification Web.][4]{:style="max-width:50%"}
 
-Terminez ensuite la création de votre campagne de notifications push comme d'habitude. Pour plus d'informations, consultez la section [Créer une campagne de push.][5] 
+Terminez ensuite la création de votre campagne de notifications push comme d'habitude. Pour plus d'informations, consultez la section [Créer une campagne de push][5].
 
 ## Choses à savoir
 
@@ -62,7 +62,7 @@ Si vous sélectionnez plusieurs appareils pour les plateformes mobiles, comme iO
 
 ### Paramètres spécifiques à l'appareil
 
-Les paramètres spécifiques à iOS et Android ne sont pas pris en charge lorsque plusieurs plateformes ou appareils sont sélectionnés. Cela inclut des paramètres tels que les [boutons d'action push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), les canaux et groupes de notification, le TTL, la priorité d'affichage, les sons, etc.
+Vous pouvez modifier les paramètres spécifiques à la plate-forme dans l'éditeur. Cela inclut des paramètres tels que les [boutons d'action push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), les canaux et groupes de notification, le TTL, la priorité d'affichage, les sons, etc.
 
 Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-vous aux collections d'articles suivantes :
 
@@ -73,7 +73,6 @@ Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-
 [1]: {% image_buster /assets/img_archive/quick_push_1.png %}
 [2]: {% image_buster /assets/img_archive/quick_push_2.png %}
 [4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
