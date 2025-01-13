@@ -33,7 +33,7 @@ iOS 用のリンクプレビュー画像を許可するには、ユーザーが�
 
 #### ステップ1:連絡先カードキャンペーンを作成する
 
-ユーザーが連絡[先カードや]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)その他の方法であなたのブランドを連絡先として保存した後、**Tap to Loadプレビュープロンプトや**Movable Inkリンクを表示できるようになる。
+ユーザーが [連絡先カード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)または別の方法でブランドを連絡先として保存したら、[**タップしてプレビューを読み込む**] プロンプトとMovable Ink リンクが表示されます。
 
 ![1]{: style="max-width:30%;"}
 
@@ -59,7 +59,7 @@ Liquid パーソナライゼーションについて再確認するには、[Liq
 
 ![4]{: style="max-width:30%;"}
 
-### Android（グーグルおよびサムスンのデバイス）
+### Android (Google および Samsung デバイス)
 
 Android ユーザーは、ダイナミック SMS リンクプレビューを受信するためにブランドを連絡先として保存する必要はありません。ただし、デバイスが自動的にリンクプレビューを読み込むことができるように、このように保存することが推奨されます。
 
