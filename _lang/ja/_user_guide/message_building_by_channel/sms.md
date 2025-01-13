@@ -52,6 +52,9 @@ guide_featured_list:
 - name: "SMSレポート"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "メッセージ利用ダッシュボード"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "SMSに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   image: /assets/img/braze_icons/annotation-question.svg
