@@ -13,7 +13,7 @@ channel:
 
 > Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files (VCF)) são um formato de arquivo padronizado para o envio de informações comerciais e de contato que podem ser facilmente importadas para catálogos de endereços ou de contatos. 
 
-Os cartões de contato podem ser criados [de forma programática](https://www.twilio.com/blog/send-vcard-twilio-sms) e feitos upload para a [biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) do Braze ou criados por meio do nosso gerador de cartões de contato integrado. Esses cartões podem atribuir propriedades comuns, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Para começar a criar cartões de contato, primeiro verifique se está configurado para usar MMS no Braze.
+Os cartões de contato podem ser criados de [forma programática](https://www.twilio.com/blog/send-vcard-twilio-sms) e feitos upload para a [biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) do Braze ou criados por meio do nosso gerador de cartões de contato integrado. Esses cartões podem atribuir propriedades comuns, como o nome da empresa, o número de telefone, o endereço, o e-mail e uma pequena foto. Para começar a criar cartões de contato, primeiro verifique se está configurado para usar MMS no Braze.
 
 ## Gerador de cartões de contato
 
@@ -21,7 +21,7 @@ Os cartões de contato podem ser criados [de forma programática](https://www.tw
 
 ### Etapa 1: Atribuir nome
 
-Os cartões de contato podem ser criados a partir do criador de SMS e MMS. Selecione a guia **Contact Card Generator (Gerador de cartão de contato** ) para começar.
+Os cartões de contato podem ser criados a partir do criador de SMS e MMS. Selecione a guia **Contact Card Generator (Gerador de cartão de contato)** para começar.
 
 Em seguida, você deverá inserir o nome ou apelido da sua empresa. Esse é o nome que seus usuários verão quando salvarem o cartão. Um limite de 20 caracteres é aplicado para garantir que o usuário possa ver todo o nome da empresa ou o alias nos contatos e no envio de mensagens no app. 
 
@@ -47,7 +47,7 @@ Outros campos permitem inserir seu nome, subcabeçalho, endereço e outras infor
 
 ### Etapa 4: Como salvar seu cartão de contato
 
-Depois de inserir todos os campos necessários, clique em **Generate Contact Card (Gerar cartão de contato**), e ele será automaticamente anexado à sua campanha ou Canva. A partir daqui, é possível adicionar uma mensagem, testar o cartão de contato e lançar a campanha ou o Canva.
+Depois de inserir todos os campos necessários, clique em **Generate Contact Card (Gerar cartão de contato)**, e ele será automaticamente anexado à sua campanha ou Canva. A partir daqui, é possível adicionar uma mensagem, testar o cartão de contato e lançar a campanha ou o Canva.
 
 O cartão de contato também será salvo na [biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) para ser facilmente reutilizado em futuras campanhas e canvas.
 
