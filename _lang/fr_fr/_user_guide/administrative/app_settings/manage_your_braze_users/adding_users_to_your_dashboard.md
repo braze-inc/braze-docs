@@ -65,7 +65,7 @@ Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'
 
 ![Supprimer un utilisateur][34]
 
-Après la suppression d’un utilisateur, Braze ne conserve aucune des données suivantes :
+Après la suppression d’un utilisateur, Braze ne conserve aucune des données de compt suivantes :
 
 - Tous les attributs de l’utilisateur
 - Adresse e-mail
@@ -75,6 +75,11 @@ Après la suppression d’un utilisateur, Braze ne conserve aucune des données 
 - Pays
 - Langue
 - D’autres données similaires
+
+Braze conservera les données de compte suivantes :
+
+- Attributs personnalisés ou données de test associés à leur compte
+- Les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
