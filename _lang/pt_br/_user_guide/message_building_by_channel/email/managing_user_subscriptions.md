@@ -121,7 +121,7 @@ O Braze não processará nenhuma alteração de estado para usuários em grupos 
 
 É possível fazer referência ao gráfico **Série temporal do grupo de** inscrições na página **Grupos de inscrições** para ver o tamanho do grupo de inscrições com base no número de usuários em um período de tempo. Esses tamanhos de grupos de inscrições também são consistentes com outras áreas do Braze, como o cálculo do tamanho do segmento.
 
-![][10]
+![Um exemplo de gráfico "grupo de inscrições Timeseries" datado de 2 a 11 de dezembro. O gráfico mostra um aumento de ~10 milhões no número de usuários da 6ª para a 7ª.][10]
 
 #### Visualização de grupos de inscrições na análise de dados da campanha
 
@@ -129,7 +129,7 @@ O Braze não processará nenhuma alteração de estado para usuários em grupos 
 
 Na página **Análise de dados** da campanha de sua campanha, role para baixo até a seção **Desempenho de mensagens de e-mail** e clique na seta abaixo de **Grupos de inscrições** para ver a contagem agregada de alterações de estado, conforme enviadas por seus clientes.
 
-![][30]
+![A página "Desempenho da Mensagem de E-mail" exibindo a contagem agregada de mudanças de estado enviadas pelos clientes.][30]
 
 ## Central de Preferências de E-mail
 
