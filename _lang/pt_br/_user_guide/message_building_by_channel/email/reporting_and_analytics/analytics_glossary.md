@@ -220,7 +220,7 @@ Contagem, porcentagem
     Cálculo:
     <ul>
         <li><b><i>Aberturas exclusivas</i>:</b> Contagem</li>
-        <li><b><i>Unique Opens % (% de aberturas únicas</i> ) ou <i>Unique Open Rate (taxa de abertura única</i>):</b> (Aberturas únicas) / (Entregas)</li>
+        <li><b><i>Unique Opens % (% de aberturas únicas)</i> ou <i>Unique Open Rate (taxa de abertura única)</i>:</b> (Aberturas únicas) / (Entregas)</li>
     </ul>
 </span>
 {:/}
