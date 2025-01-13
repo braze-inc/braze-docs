@@ -51,6 +51,10 @@ Les options suivantes sont disponibles :
 
 Quelle que soit l'option choisie, le compte à rebours de la date d'expiration de la carte de contenu commencera lorsque l'utilisateur entrera dans l'étape du canvas.
 
+{% alert tip %}
+Si vous souhaitez que les utilisateurs anonymes voient une carte de contenu lors de leur toute première session, utilisez une campagne au lieu d'un canvas. En effet, lorsqu'un utilisateur anonyme entre dans un canvas, sa session a déjà commencé. Il n'obtiendra donc pas la carte de contenu tant qu'il n'aura pas démarré une nouvelle session.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
