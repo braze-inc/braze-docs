@@ -144,7 +144,7 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 {% endalert %}
 
 {% tabs local %}
-{% tab トラッキングユーザー - バッチと非バッチ %}
+{% tab ユーザーの追跡 (バッチと非バッチ) %}
 
 このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。Track User アクションは AudienceStream と EventStream の両方で同じですが、Tealium はAudienceStream アクションでユーザー属性のマッピングを設定し、EventStream アクションでイベントと購入のマッピングを設定することを推奨しています。
 
