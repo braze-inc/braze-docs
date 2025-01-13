@@ -10,9 +10,9 @@ search_rank: 11
 
 > El filtro de canal inteligente o `Most Engaged` selecciona la parte de tu audiencia para la que el canal de mensajería seleccionado es su "mejor" canal. 
 
-En este caso, mejor significa el canal que tiene la mayor probabilidad de interacción, dado el historial del usuario. Puedes seleccionar como canal el correo electrónico, SMS, notificación push web o push móvil (incluyendo cualquier SO o dispositivo móvil disponible).
+En este caso, mejor significa el canal que tiene la mayor probabilidad de interacción, dado el historial del usuario. Puedes seleccionar como canal correo electrónico, SMS, WhatsApp, web push o mobile push (incluyendo cualquier SO o dispositivo móvil disponible).
 
-![][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![El filtro Canal inteligente con un desplegable para los distintos canales que se pueden seleccionar.][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 El canal inteligente calcula la tasa de interacción de cada usuario para cada uno de los tres canales, tomando la relación entre las interacciones de los mensajes (aperturas o clics) y el número de mensajes recibidos en los últimos seis meses de actividad. Los canales disponibles se clasifican según sus respectivos ratios de interacción, y el canal con el ratio más alto es el "Más interactuado" para ese usuario. 
 
@@ -30,9 +30,9 @@ Para que Braze determine qué canal es "el mejor", tiene que haber datos suficie
 
 Si los usuarios no han recibido suficientes mensajes a través de los canales, esos usuarios entrarán en la opción "Datos insuficientes" de este filtro. Esto te permite utilizar cualquiera de los tres canales de mensajería disponibles para dirigirte a estos usuarios.
 
-Por ejemplo, supongamos que quieres que los usuarios que prefieren los mensajes push reciban un push y que los usuarios que no tienen suficientes datos reciban el mismo mensaje push. En ese caso, podrías establecer el filtro de canal inteligente en **Móvil** y utilizar **O** para añadir un segundo filtro de canal inteligente establecido en **Datos insuficientes**. Una campaña independiente con el filtro de canal inteligente ajustado a correo electrónico podría dirigirse a los usuarios que prefieren el correo electrónico.
+Por ejemplo, supongamos que quieres que los usuarios que prefieren los mensajes push reciban un push y que los usuarios que no tienen suficientes datos reciban el mismo mensaje push. En ese caso, podrías establecer el filtro de canal inteligente en **Push móvil** y utilizar **OR** para añadir un segundo filtro de canal inteligente establecido en **Datos insuficientes**. Una campaña independiente con el filtro de canal inteligente ajustado a correo electrónico podría dirigirse a los usuarios que prefieren el correo electrónico.
 
-![][2]
+![Los canales inteligentes filtran los datos móviles push o insuficientes.][2]
 
 {% alert note %}
 Las campañas y los pasos en Canvas que ignoren la [limitación de frecuencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) no serán tenidos en cuenta por el canal inteligente y no podrán contribuir a los requisitos de datos.
@@ -63,5 +63,5 @@ Cuando el usuario tiene datos suficientes para que se determine una clasificaci�
 El canal inteligente te permite dirigirte selectivamente y por adelantado a la fracción de usuarios que tienen muchas más probabilidades de interactuar con un mensaje que el resto de tu audiencia. No es probable que represente a la mayoría de los usuarios de una audiencia típica. Más bien, puedes esperar que este filtro encuentre el 5-20% de tu audiencia habitual que tiene un historial establecido de interacción en un canal concreto.
 
 
-[1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Filtro de canal inteligente"
+[1]: {% image_buster /assets/img/intelligent_channel_filter.png %}
 [2]: {% image_buster /assets/img/intelligent_example.png %}
