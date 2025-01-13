@@ -10,40 +10,37 @@ tool: Currents
 
 # Transférer des données d’Amazon S3 vers Snowflake
 
-> Si vos données se trouvent actuellement dans Amazon S3, vous pouvez les transférer vers Snowflake ou un autre entrepôt de données relationnel à l'aide du processus ELT (Extract Load Transform).
+> Si vos données se trouvent actuellement dans Amazon S3, vous pouvez les transférer vers Snowflake ou un autre entrepôt de données relationnel à l'aide du processus d'extraction, de chargement et de transformation (ETL). Cette page vous explique comment procéder.
 
 {% alert note %}
 Si vous avez des cas d’utilisation plus spécifiques et souhaitez que Braze serve votre instance Currents, contactez votre gestionnaire de compte Braze et demandez-leur les services de données de Braze Data Professional Services.
 {% endalert %}
 
-## Processus de chargement automatisé
+## Fonctionnement
 
-Ce processus de chargement automatisé déplace les données dans [Snowflake](https://www.snowflake.com/), ce qui vous permettra d'utiliser les [blocs Looker de Braze](https://marketplace.looker.com/marketplace/directory) pour visualiser ces données dans Looker afin d'aider à générer des informations et des retours dans vos campagnes, canvas et segments.
+Le processus d'extraction, de chargement et de transformation (ETL) est un processus automatisé qui déplace les données dans [Snowflake](https://www.snowflake.com/), ce qui vous permettra d'utiliser les [blocs Looker](https://marketplace.looker.com/marketplace/directory) de Braze pour visualiser ces données dans Looker afin d'aider à générer des informations et des retours dans vos campagnes, Canvases et segments.
 
 Une fois que vous avez configuré une exportation Currents vers S3 et que vous recevez des données d'événements en direct, vous pouvez configurer votre pipeline ELT en direct dans Snowflake en configurant les composants suivants :
 
 -   [Fiches d'attente AWS SQS](#aws-sqs-queues)
 -   [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
 
-### Configuration des files d'attente AWS SQS
+## Configuration des files d'attente AWS SQS
 
 Les **snowpipes Auto-ingest** s'appuient sur les files d'attente SQS pour envoyer les notifications de S3 à Snowpipe. Ce processus est géré par Snowflake après avoir configuré SQS.
 
-#### Étape 1 : Configurer l’étage S3 externe
+### Étape 1 : Configurer l’étage S3 externe
 
 {% alert note %}
-Les tables de votre base de données sont créées à partir de ce stage.
+Les tables de votre base de données sont créées à ce stade.
 {% endalert %}
 
-Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Nous utilisons ici ```currents```, le chemin de dossier par défaut.
+1. Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Nous utilisons ici ```currents```, le chemin de dossier par défaut.
 
-Créez ensuite les éléments suivants dans l'ordre indiqué :
-
-1. Dans AWS, créez une nouvelle **paire de clés publique-privée** pour le compartiment S3 souhaité, avec des subventions conformes aux exigences de sécurité de votre organisation.
-
-2. Dans Snowflake, créez une base de données et un schéma de votre choix (nommés ```currents``` et ```public``` dans l'exemple suivant).
-
-3. Créez une zone de préparation S3 Snowflake (appelée `braze_data`) :
+2. Créez les éléments suivants dans l'ordre indiqué :
+  Dans AWS, créez une nouvelle **paire de clés publique-privée** pour le compartiment S3 souhaité, avec des subventions conformes aux exigences de sécurité de votre organisation.
+  2.2. Dans Snowflake, créez une base de données et un schéma de votre choix (nommés ```currents``` et ```public``` dans l'exemple suivant).
+  2.3. Créez une zone de préparation S3 Snowflake (appelée `braze_data`) :
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -53,7 +50,8 @@ CREATE OR REPLACE STAGE
 show stages;
 ```
 
-Définissez ensuite le format de fichier AVRO pour votre stage.
+{: start="3"}
+3\. Définissez ensuite le format de fichier AVRO pour votre stage.
 
 ```sql
 CREATE FILE FORMAT
@@ -104,25 +102,28 @@ COPY INTO
 @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 
-Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le nom de la file d'attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL`, car ce canal a été créé en tant que canal à ingestion automatique.
+{: start="4"}
+4\. Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le nom de la file d'attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL`, car ce canal a été créé en tant que canal à ingestion automatique.
 
-#### Étape 2 : Créer des événements de compartiment
+### Étape 2 : Créer des événements de compartiment
 
-Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l'onglet **Propriétés**, allez dans **Événements**.
+1. Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l'onglet **Propriétés**, allez dans **Événements**.
 
 ![Onglet Propriétés AWS][1]{: height="50%" width="50%"}
 
-Créez de nouveaux événements pour chaque ensemble de données actuelles, selon les besoins[(envoi de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [comportement de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)), ou les deux.
+{: start="2"}
+2\. Créez de nouveaux événements pour chaque ensemble de données actuelles, selon les besoins[(envoi de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [comportement de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)), ou les deux.
 
 ![Création d'un nouvel événement dans AWS][2]{: height="50%" width="50%"}
 
-Cochez la case appropriée pour l’objet Créer des notifications, ainsi que l’ARN au bas du formulaire (dans la colonne de canal de notification dans Snowflake).
+{: start="3"}
+3\. Cochez la case appropriée pour l’objet Créer des notifications, ainsi que l’ARN au bas du formulaire (dans la colonne de canal de notification dans Snowflake).
 
-### Configuration des Snowpipes à ingestion automatique {#auto-ingest-snowpipes}
+## Configuration des Snowpipes à ingestion automatique {#auto-ingest-snowpipes}
 
-Pour vous assurer que la configuration AWS SQS produit les bonnes tables, vous devez définir correctement la structure des données entrantes en utilisant les exemples suivants et les schémas déterminés dans notre documentation Currents pour les [événements d'engagement ou de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), les [événements de comportement des utilisateurs ou des clients]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), ou les deux.
+Pour que la configuration AWS SQS produise les bonnes tables, vous devez définir correctement la structure des données entrantes en utilisant les exemples suivants et les schémas déterminés dans notre documentation Currents pour les [événements d'engagement ou de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), les [événements de comportement des utilisateurs ou des clients]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/), ou les deux.
 
-Il est essentiel de structurer vos tables conformément aux schémas de Braze Currents, car Braze Currents y chargera continuellement des données via des champs spécifiques avec des types de données spécifiques. Par exemple, un `user_id` sera chargé sous forme de chaîne de caractères et appelé `user_id` dans les données de Currents.
+Il est essentiel de structurer vos tables conformément aux schémas de Braze Currents, car Braze Currents y chargera continuellement des données par le biais de champs spécifiques avec des types de données spécifiques. Par exemple, un `user_id` sera chargé sous forme de chaîne de caractères et appelé `user_id` dans les données de Currents.
 
 {% alert note %}
   En fonction de votre intégration Currents, vous pouvez avoir différents événements que vous devez configurer (tels que les [événements d'engagement ou d'envoi de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et les [événements de comportement utilisateur ou client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)). Vous pouvez également écrire un script pour tout ou partie de ce processus.
@@ -131,7 +132,7 @@ Il est essentiel de structurer vos tables conformément aux schémas de Braze Cu
 {% tabs %}
   {% tab Événements liés au comportement de l'utilisateur %}
 
-Commencez par créer un tableau `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
+1. Créez une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
 
 ```sql
 CREATE TABLE
@@ -154,9 +155,10 @@ CREATE TABLE
     );
 ```
 
-Ensuite, créez le canal `auto_ingest` et spécifiez :
-1. Quel tableau charger
-2. Comment charger le tableau suivant
+{: start="2"}
+2\. Créez le canal `auto_ingest` et spécifiez :
+  2.1. Quel tableau charger
+  2.2 Comment charger le tableau suivant
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -194,7 +196,7 @@ Vous devez répéter les commandes `CREATE TABLE` et `CREATE PIPE` pour chaque t
  {% endtab %}
  {% tab Événements de messagerie %}
 
-Commencez par créer un tableau `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
+1. Créez une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
 
 ```sql
 CREATE TABLE
@@ -223,9 +225,10 @@ CREATE TABLE
         );
 ```
 
-Ensuite, créez le canal de charge continue AUTO et spécifiez :
-1. Quel tableau charger
-2. Comment charger le tableau suivant
+{: start="2"}
+2\. Créez le canal de charge continue AUTO et spécifiez :
+  2.1. Quel tableau charger
+  2.2 Comment charger le tableau suivant
 
 ```sql
 CREATE OR REPLACE PIPE
