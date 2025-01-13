@@ -33,7 +33,7 @@ La integración de Braze y Adobe te permite controlar fácilmente el flujo de in
 - En **Grupos de campos**, selecciona **Añadir** y, a continuación, añade el grupo de campos **Evento de usuario de Braze Currents**.
 - Seleccione **Guardar**.
 
-Para más información sobre los [esquemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui), consulta la documentación de Adobe sobre la [creación de esquemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui).
+Para más información sobre los esquemas, consulta la documentación de Adobe sobre la [creación de esquemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui).
 
 ### Paso 2: Conecta Braze a Adobe Experience Platform
 
