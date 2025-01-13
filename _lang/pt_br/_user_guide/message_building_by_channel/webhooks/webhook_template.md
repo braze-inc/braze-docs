@@ -28,7 +28,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 
 A partir daí, você pode optar por criar um novo modelo, usar um dos modelos de webhook predefinidos ou editar um modelo existente.
 
-Por exemplo, se estiver usando [o LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line) como um canal de envio de mensagens, poderá configurar vários webhooks usando os modelos predefinidos para o **LINE Carousel** ou **o LINE Image**.
+Por exemplo, se estiver usando o [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line) como um canal de envio de mensagens, poderá configurar vários webhooks usando os modelos predefinidos para o **LINE Carousel** ou o **LINE Image**.
 
 ## Etapa 3: Preencher os detalhes do modelo
 
@@ -51,7 +51,7 @@ Para ver a aparência do webhook antes de enviá-lo aos usuários, é possível 
 
 ## Etapa 6: Salve seu modelo
 
-Certifique-se de salvar seu modelo selecionando **Save Template (Salvar modelo**). Agora você está pronto para usar esse modelo em qualquer campanha que escolher.
+Certifique-se de salvar seu modelo selecionando **Save Template (Salvar modelo)**. Agora você está pronto para usar esse modelo em qualquer campanha que escolher.
 
 {% alert note %}
 As edições feitas em um modelo existente não são refletidas nas campanhas criadas com versões anteriores desse modelo.
