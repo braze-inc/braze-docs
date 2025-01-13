@@ -16,7 +16,7 @@ Vos messages de notification push doivent être conformes aux directives de l’
 
 ## Composer votre message de notification push
 
-En guise de bonne pratique, Braze recommande de limiter chaque ligne de texte, tant pour le titre optionnel que pour le corps du message, à environ 30-40 caractères dans une notification push mobile. Notez que le compteur de caractères du compositeur ne tient pas compte des caractères liquides. Cela signifie que le nombre final de caractères d'un message dépend du rendu de Liquid pour chaque utilisateur. En cas de doute, gardez le contenu bref et agréable.
+En guise de bonne pratique, Braze recommande de limiter chaque ligne de texte, tant pour le titre optionnel que pour le corps du message, à environ 30-40 caractères dans une notification push mobile. Notez que le compteur de caractères du compositeur ne tient pas compte des caractères Liquid. Cela signifie que le nombre final de caractères d'un message dépend du rendu de Liquid pour chaque utilisateur. En cas de doute, gardez le contenu bref et agréable.
 
 ## Optimiser le ciblage
 
