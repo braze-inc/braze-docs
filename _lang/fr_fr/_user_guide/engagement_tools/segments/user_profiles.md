@@ -63,7 +63,7 @@ L'onglet **Aperçu** contient des informations de base sur un utilisateur et ses
 
 Pour plus d'informations sur ces données, voir [Collecte des données utilisateur][12].
 
-![][2]
+![L'onglet Aperçu d'un profil utilisateur.][2]
 
 ### Onglet Engagement {#engagement-tab}
 
@@ -72,7 +72,7 @@ L'onglet **Engagement** contient des informations sur les interactions d'un util
 | Catégorie d’engagement | Contient |
 | --- | --- |
 | Paramètres de contact | Statut d’abonnement pour les e-mails, les SMS et les notifications push, ainsi que les groupes d’abonnement auxquels cet utilisateur est associé pour ces trois canaux. Cette section comprend également les informations du journal des modifications pour les jetons de notification push. Reportez-vous aux rubriques [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) et [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) pour plus d'informations sur les modalités d'abonnement et d'opt-in. |
-| Campagnes reçues | Campagnes reçues par cet utilisateur et quand il les a reçues. Sélectionnez une campagne dans la liste pour l’afficher. |
+| Campagnes reçues | Les campagnes reçues sont marquées lorsque l'utilisateur reçoit la campagne, ou lorsque nous détectons pour la première fois des données d'interaction pour un utilisateur. Sélectionnez une campagne dans la liste pour l’afficher. |
 | Segments | Segments dans lesquels est inclus cet utilisateur. Sélectionnez un segment dans la liste pour l’afficher. |
 | Statistiques de communication | Quand cet utilisateur a reçu des messages de votre part depuis chaque canal pour la dernière fois. |
 | Attribution d’installation | Informations concernant comment et quand un utilisateur a installé votre application. Apprenez-en plus sur [les installations par les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
@@ -81,7 +81,7 @@ L'onglet **Engagement** contient des informations sur les interactions d'un util
 | Prédictions | Les scores de [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) et de [prédiction des événements]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) pour cet utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![L'onglet Engagement d'un profil utilisateur affichant ses paramètres de contact et ses statistiques de communication.][3]
 
 ### Onglet d’historique d’envoi de messages
 
@@ -91,7 +91,7 @@ L'onglet **Historique des messages** du profil utilisateur montre les événemen
 Si vous avez des commentaires sur ce tableau, ou si vous souhaitez voir des événements spécifiques, veuillez envoyer un e-mail à [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) avec comme ligne d'objet "Messaging History Tab Feedback".
 {% endalert %}
 
-![][5]
+![L'onglet "Historique des messages" indique les campagnes et les canvas qu'un utilisateur a reçues.][5]
 
 #### Afficher et comprendre les événements
 
@@ -149,6 +149,5 @@ Si les statistiques d’ouverture des e-mails peuvent être utiles dans leur ens
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
