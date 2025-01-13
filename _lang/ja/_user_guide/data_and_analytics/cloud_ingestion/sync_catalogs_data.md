@@ -169,6 +169,29 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 3\.ネットワークポリシーを設定している場合は、Brazeに Databricks インスタンスへのネットワークアクセスを許可する必要があります。IP のリストについては、「[クラウド データの取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)」を参照してください。
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+
+次のフィールドを持ち、CDI 連携に使用するテーブルを 1 つ以上作成します。
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. サービスプリンシパルを設定し、適切な権限を与える。既存の同期からの認証情報をすでに持っている場合はそれらを再利用できますが、必ずアクセスをカタログソーステーブルに拡張してください。新しいサービスプリンシパルと認証情報を作成する方法については、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)のページを参照のこと。 
+
+{:start="3"}
+3\.ネットワークポリシーを設定している場合は、BrazeにMicrosoft Fabricインスタンスへのネットワークアクセスを許可する必要がある。IP のリストについては、[「クラウド データの取り込み」]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)を参照してください。
+
+{% endtab %}
 {% endtabs %}
 
 ## 連携の仕組み
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}
