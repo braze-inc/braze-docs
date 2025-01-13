@@ -23,6 +23,40 @@ Consultez la documentation Meta suivante pour obtenir des conseils sur les noms 
 
 ## Mises à jour des produits WhatsApp
 
+### Novembre 2024 : Mise à jour de la limite de modèles marketing par utilisateur pour les personnes résidant aux États-Unis, à l'approche des fêtes de fin d'année.
+*Dernière mise à jour en décembre 2024*
+
+Depuis que Meta a déployé la limite des modèles marketing par utilisateur, Meta a constaté des améliorations significatives dans les taux de lecture et le sentiment des utilisateurs.
+ 
+À partir de maintenant, avant les fêtes de fin d'année, les Américains recevront moins de nouvelles conversations marketeurs. Meta s'attend à ce que ce changement crée des audiences plus engagées, ce qui, en fin de compte, se traduit par de meilleurs résultats pour les entreprises. Cela peut entraîner des taux de distribution inférieurs pour votre entreprise si vous envoyez des messages marketing à des numéros de téléphone américains, ce qui peut être contrôlé avec le code d'erreur `131049` via Braze Currents et le journal d'activité des messages.
+
+Les entreprises aux États-Unis peuvent toujours diffuser des messages marketing dans d'autres zones géographiques, et il n'y a pas d'impact sur les messages d'utilité, d'authentification ou de service, ou sur les messages de modèles marketing envoyés dans une fenêtre de conversation initiée par l'utilisateur (par exemple, une publicité ou un carrousel de produits ou un modèle de coupon cliquable vers WhhatsApp qui est envoyé dans le cadre d'une conversation). 
+
+### Novembre 2024 : WhatsApp étend l'application des règles de compte basées sur la qualité aux taux de lecture
+*Dernière mise à jour en décembre 2024*
+
+WhatsApp investit en permanence dans de nouveaux moyens d'aider les entreprises à créer des expériences de qualité pour leurs clients, notamment en réduisant les comportements de type spam sur sa plateforme. 
+
+Le 22 novembre, WhatsApp a commencé à étendre ses mesures d'application de la qualité au niveau des comptes existants pour les comptes professionnels WhatsApp (WABA) dont le taux de lecture est extrêmement bas. Cette modification sera mise en œuvre à l'échelle mondiale.
+
+Lorsque le taux de lecture d'un compte chute de manière significative (par exemple, la majorité des messages envoyés par le compte ne sont pas lus), des blocages d'envoi de messages seront appliqués au compte. La gravité du bloc augmentera si les taux de lecture à l'échelle sont constamment faibles. 
+
+Si le taux de lecture du compte est extrêmement bas, les mesures suivantes seront prises :
+
+- Le compte sera bloqué pour l'envoi de messages à l'initiative de l'entreprise. Ils peuvent toujours répondre aux messages envoyés par les clients. Ce blocage initial est un "verrouillage doux" et peut être acquitté en sélectionnant le bouton d'acquittement dans la qualité du compte pour recommencer l'envoi des messages.
+- Si le taux de lecture continue à baisser ou reste faible après le verrouillage progressif, les entreprises peuvent être confrontées à une augmentation progressive des mesures d'application (par exemple, quelques jours de restrictions sur les envois de messages).
+- Les entreprises devront attendre la limite imposée pour recommencer à envoyer des messages. Si le taux de lecture reste faible après plusieurs verrouillages progressifs, le compte sera finalement radié.
+
+#### Comment se tenir au courant de ces avertissements et de ces mesures d'exécution ?
+
+À l'instar de l'application de la plateforme existante, les entreprises seront informées de ces mesures et pourront en accuser réception en utilisant la page Qualité du compte dans le gestionnaire WhatsApp. Confirmez que vous disposez des coordonnées correctes répertoriées dans le gestionnaire WhatsApp Business pour tous les administrateurs nécessaires, car les e-mails de notification d'exécution seront envoyés sur la base de ces informations.
+
+Les notifications concernant les violations graves de la législation sur le spam seront envoyées :
+
+- Apparaît dans le centre de notifications du gestionnaire d'entreprise de WhatsApp.
+- Affiché dans une bannière dans le gestionnaire WhatsApp
+- Envoyé sous forme d'e-mail à tous les administrateurs définis dans le WhatsApp Business Manager.
+
 ### Mai 2024: lancement de l’API Cloud en Turquie
 *Dernière mise à jour mai 2024*
 
