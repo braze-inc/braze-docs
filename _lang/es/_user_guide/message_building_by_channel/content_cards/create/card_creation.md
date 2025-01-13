@@ -51,6 +51,10 @@ Existen las siguientes opciones:
 
 Independientemente de la opción seleccionada, la cuenta atrás de la fecha de caducidad de la tarjeta de contenido comenzará cuando el usuario entre en el paso Lienzo.
 
+{% alert tip %}
+Si quieres que los usuarios anónimos vean una tarjeta de contenido en su primera sesión, utiliza una campaña en lugar de un Canvas. Esto se debe a que cuando un usuario anónimo entra en un Canvas, su sesión ya ha comenzado, por lo que no obtendrá la tarjeta de contenido hasta que inicie una nueva sesión.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
