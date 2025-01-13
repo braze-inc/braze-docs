@@ -132,16 +132,8 @@ $(document).ready(function () {
         .replace(/<(.|\n)*?>/g, "");
     }
 
-    if ("description" in item) {
-      description = item.description
-        .replaceUnder()
-        .replace(/<(.|\n)*?>/g, "");
-    }
+    var snippet = item?._highlightResult?.html?.value || '';
 
-    if (description.length > 200) {
-      description = description.substring(0, 200);
-      description += "...";
-    }
     var url = item.url;
 
     result_template += '<hr /><a href="' +
@@ -149,7 +141,7 @@ $(document).ready(function () {
         title + ' <i class="fas fa-external-link-alt"></i> <div class="category">' +
         tags_list +
         '</div></div> <div class="content">' +
-        description +
+        '<div class="hit-snippet">' + snippet + '</div>' +
         "</div>";
     result_template += "</a>";
     return result_template;
