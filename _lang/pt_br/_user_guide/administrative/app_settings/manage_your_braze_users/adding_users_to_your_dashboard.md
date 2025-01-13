@@ -23,7 +23,7 @@ Adicionar um novo usuário:
 
 1. Acessar **Configurações** > **Usuários da Empresa**.
 2. Clique em **\+ Adicionar Novo Usuário**.
-3. Insira as informações solicitadas, incluindo o e-mail, o departamento e [a função do usuário]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
+3. Insira as informações solicitadas, incluindo o e-mail, o departamento e a [função do usuário]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
 
 {% alert tip %}
 O departamento listado no perfil de um usuário determina quais tipos de comunicações eles recebem da Braze. Isso é para que todos recebam apenas as comunicações e alertas que são relevantes para como eles usam Braze.
@@ -75,6 +75,11 @@ Depois que um usuário é excluído, a Braze não mantém nenhum dos seguintes d
 - País
 - Idioma
 - Outros dados semelhantes
+
+Braze manterá os seguintes dados da conta:
+
+- Atributos personalizados ou dados de teste associados à sua conta
+- Campanhas ou Canvases que criaram (mas o nome do usuário não aparecerá nelas, como aparece na **Última edição por** coluna)
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
