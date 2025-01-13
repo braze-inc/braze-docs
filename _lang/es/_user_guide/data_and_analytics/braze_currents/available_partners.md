@@ -10,7 +10,7 @@ tool: Currents
 
 # Socios disponibles
 
-> Esta página resume y describe los casos de uso de los socios de datos que puede utilizar para integrarse con Braze Currents.
+> Esta página enumera los socios de datos que puedes integrar con Braze Currents y describe sus casos de uso. 
 
 {% alert note %}
 Las convenciones de nomenclatura para eventos que fluyen para un socio de Braze pueden no coincidir con otros socios. Por ejemplo, el evento de apertura de correo electrónico de Currents en Segment es `Email Opened`, mientras que en Mixpanel es `Email Open`.
@@ -18,7 +18,7 @@ Las convenciones de nomenclatura para eventos que fluyen para un socio de Braze 
 
 ## Almacenamiento en almacén de datos
 [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-El almacenamiento en almacén de datos ofrece una fuente de recopilación de toda la información transmitida desde Currents. Estos socios pueden actuar como almacenes (para el almacenamiento de archivos planos) o utilizarse para alimentar herramientas de inteligencia empresarial, algoritmos de aprendizaje automático, obtener información sobre el rendimiento del marketing, etc.
+El almacenamiento en almacén de datos ofrece una fuente de recopilación de toda la información transmitida desde Currents. Estos socios pueden actuar como almacenes (para el almacenamiento de archivos planos) o utilizarse para alimentar herramientas de inteligencia empresarial y algoritmos de aprendizaje automático, obtener información sobre el rendimiento del marketing y mucho más.
 
 * [Amazon S3][1]
 * [Google Cloud Storage][2]
