@@ -298,11 +298,11 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
-- name: Hino do futuro
+- name: Hino Futuro
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
-- name: Monstro da caixa de entrada
+- name: Monstro da Caixa de Entrada
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
@@ -312,8 +312,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
-- name: ""
+- name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---
