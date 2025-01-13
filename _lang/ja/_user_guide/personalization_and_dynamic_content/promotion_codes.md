@@ -179,6 +179,10 @@ Brazeでは、使用予定数よりも多くのプロモーションコードを
 
 メッセージに条件付きでプロモーションコードを挿入するリキッドロジックが含まれている場合、メッセージにプロモーションコードが含まれているはずだった場合のみ、メッセージはキャンセルされる。メッセージにプロモーションコードが含まれていなければ、メッセージは正常に送信される。
 
+### プロモーションコードをユーザのプロファイルに保存して、フォローアップメッセージで使用できるようにするにはどうすればよいですか?
+
+後続のメッセージで同じプロモーションコードを参照するには、コードをカスタム属性としてユーザープロファイルに保存する必要があります。これを行うには、[Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) を同じキャンペーンまたはキャンバスメッセージステップにアタッチします。
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
