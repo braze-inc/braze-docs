@@ -121,4 +121,4 @@ table td {
 
 ## Signing up for region-specific data centers
 
-When you set up with Braze, you can sign up for region-specific data centers. Contact your account manager for information and recommendations on which data centers work best for you based on your users' geographical regions.
+When you set up your Braze account, you can sign up for region-specific data centers. Contact your account manager for information and recommendations on which data centers work best for you based on your users' geographical regions.
