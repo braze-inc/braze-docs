@@ -116,9 +116,7 @@ Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour v
 {% endtab %}
 {% tab Fil d'actualité %}
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 L’envoi d’un test de carte de fil d’actualité nécessite de configurer un segment d’essai et d’envoyer ensuite une campagne de test.
 
