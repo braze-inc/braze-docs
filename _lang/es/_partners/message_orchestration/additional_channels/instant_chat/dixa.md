@@ -29,7 +29,7 @@ Antes de empezar, necesitarás lo siguiente:
 Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes crear una clave de API en **Developer Console** > **API Settings**.
 {% endalert %}
 
-## Casos prácticos
+## Ejemplos
 
 Supervisa los datos de Braze en la vista de agente de servicio al cliente mientras te comunicas con tus usuarios en diferentes canales de comunicación, como correo electrónico, mensajería o chat.
 
