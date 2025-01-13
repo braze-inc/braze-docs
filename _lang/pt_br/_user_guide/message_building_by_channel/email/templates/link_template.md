@@ -63,13 +63,13 @@ Você pode ter vários parâmetros anexados ao final de um URL.
 
 Depois que seus modelos de link estiverem configurados, você pode selecionar o modelo a ser usado em seu e-mail.
 
-- **editor de HTML:** Acessar a guia **Gerenciamento de link** na seção **Conteúdo**. Selecione **Add a Link Template (Adicionar um modelo de** link), escolha seu modelo de link e selecione **Add (Adicionar**).
+- **editor de HTML:** Acessar a guia **Gerenciamento de link** na seção **Conteúdo**. Selecione **Add a Link Template (Adicionar um modelo de link)**, escolha seu modelo de link e selecione **Add (Adicionar**).
 
 {% alert important %}
 Para acessar a guia **Gerenciamento de Links** no editor de e-mail HTML atualizado, você deve ter a aliasing de links ativada. Para ativar a vinculação de links, entre em contato com o gerente da sua conta.
 {% endalert %}
 
-- **Editor de arrastar e soltar:** Selecione **Conteúdo** > **Gerenciamento de Links**. Em seguida, selecione **Add a Link Template (Adicionar um modelo de link**). Para acessar os modelos de link no editor de arrastar e soltar, você deve ter [aliasing de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) ativado.
+- **Editor de arrastar e soltar:** Selecione **Conteúdo** > **Gerenciamento de Links**. Em seguida, selecione **Add a Link Template (Adicionar um modelo de link)**. Para acessar os modelos de link no editor de arrastar e soltar, você deve ter [aliasing de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) ativado.
 
 ![Guia de gerenciamento de links no editor de arrastar e soltar com uma lista de exemplo de modelos de links.][1]
 
