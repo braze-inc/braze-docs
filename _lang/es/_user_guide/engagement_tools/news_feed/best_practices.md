@@ -11,9 +11,7 @@ hidden: true
 
 # Mejores prácticas de noticias
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > La fuente de noticias Braze es un flujo dinámico y específico de contenido enriquecido. Ofrece una potente forma de llegar a los usuarios con contenidos continuamente actualizados que no requieren trabajo de desarrollo adicional. Este contenido puede dirigirse a varios segmentos y programarse del mismo modo que otros mensajes Braze. Cada tarjeta consta de un título, un resumen, una imagen y, opcionalmente, una URL. La fuente también incluye la posibilidad de establecer vínculos profundos dentro de la aplicación, enlazar directamente con App Store, Google Play, etc. o dirigir a los usuarios a una vista Web. Este elemento exclusivo de la interfaz de usuario de Braze debe activarse durante [la integración][1]. Asegúrese de comentarlo con sus desarrolladores.
 
