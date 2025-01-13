@@ -45,6 +45,8 @@ Para ver mais detalhes sobre os critérios de entrada, selecione **Ver mais**. A
 
 A lógica Liquid será processada durante uma execução de teste, mesmo que você não esteja enviando uma mensagem de teste real. Isso significa que a [lógica da mensagem de abortar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) e outras lógicas do Liquid são refletidas e podem afetar a jornada do usuário do Canva.
 
+Se a sua prévia enviar a última etapa da jornada do usuário em vez de abortar, a prévia pode estar usando a hora atual como a hora que está sendo testada para a avaliação do Liquid, e não a hora real em que o usuário estaria na etapa com base na hora de entrada do Canvas.
+
 ## Prévias para cronometragem
 
 Para as telas programadas, o usuário teste entrará no próximo horário de entrada programado. Para Canvas baseados em ações com datas de início, o usuário teste entrará na data e hora de início. 
@@ -60,7 +62,7 @@ Os usuários de teste entrarão na prévia mesmo que não sejam elegíveis na vi
 - Se você testar uma jornada de ação com ações que correspondam a critérios de saída (incluindo propriedades de eventos), os critérios de saída serão disparados e a execução do teste será encerrada.
 - Se você testar uma etapa de Mensagem que corresponda aos critérios de saída, os critérios de saída serão disparados e a execução do teste será encerrada.
 - Nesse momento, não é possível selecionar um evento ou uma propriedade específica em uma jornada de ação para disparar os critérios de saída (somente a jornada como um todo). Se um usuário puder atender a vários critérios de saída, o primeiro que for processado e que ele atender será mostrado como resultado.
-- Eventos, disparos de API e propriedades de entrada no canva não são aplicados com base na entrada no canva. Elas não afetarão os resultados das etapas subsequentes.
+- Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas não são aplicados com base na entrada do Canvas. Elas não afetarão os resultados das etapas subsequentes. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow.
 
 ## Caminhos de experimento e variantes do Canva
 
