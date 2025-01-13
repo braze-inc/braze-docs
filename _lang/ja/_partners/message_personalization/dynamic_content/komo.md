@@ -31,7 +31,7 @@ Braze と Komo の統合により、Komo Engagment Hub を通じてファース�
 ## ユースケース
 
 {% tabs local %}
-{% tab データ収集 - フォームの提出 %}
+{% tab データキャプチャ (フォーム送信) %}
 
 ユーザーが Komo でカスタマイズ可能なデータキャプチャフォームを送信すると、Braze 統合でマッピングされている Komo のフィールドが、`/users/track/` API 呼び出しを介して Braze に渡されます。
 
