@@ -11,7 +11,7 @@ alias: /line/user_management/
 
 # GERENCIAMENTO DE USUÁRIOS
 
-> O ID do usuário do LINE é armazenado no atributo do perfil do usuário chamado `native_line_id`, que é usado para enviar mensagens a um usuário no canal LINE. Este artigo aborda como definir e encontrar o `native_line_id` atributo.
+> O ID do usuário do LINE é armazenado no atributo do perfil do usuário chamado `native_line_id`, que é usado para enviar mensagens a um usuário no canal LINE. Este artigo aborda como definir e encontrar o atributo `native_line_id`.
 
 Os dados de usuários do cliente são representados em um [Braze user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/). Um perfil de usuário armazena informações e atributos sobre os usuários de uma empresa, como nomes e e-mails. 
 
@@ -29,7 +29,7 @@ Existem vários cenários onde `native_line_id` está definido no perfil do usu�
 | --- | --- | --- |
 |Um usuário segue um canal LINE | Não| Um perfil de usuário anônimo é criado (a fusão será necessária):<br> `native_line_id` é definido como o ID de LINE do usuário <br>`line_id` o alias do usuário é definido como o ID do LINE do usuário<br>O usuário está inscrito no grupo de inscrições Braze do canal. |
 |Um usuário segue um canal LINE| Sim | Todos os perfis de usuário com o `native_line_id`:<br>Estão inscritos no grupo de inscrições do canal Braze|
-|A empresa usa o upload de CSV do usuário com uma n`ative_line_id` coluna| Não| Se nenhum perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br> Todos os outros atributos especificados no CSV são definidos no perfil do usuário.|
+|A empresa usa o upload de CSV do usuário com uma coluna n `ative_line_id`| Não| Se nenhum perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br> Todos os outros atributos especificados no CSV são definidos no perfil do usuário.|
 |A empresa utiliza o upload de CSV do usuário com uma `native_line_id` coluna | Sim | Se um perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados no CSV são definidos no perfil do usuário.<br>Vários perfis têm o mesmo `native_line_id` |
 | A empresa usa `/users/track` ponto de extremidade e especifica `native_line_id` atributo | Não | Se nenhum perfil de usuário existir para o usuário especificado ([especificado por `external_id`, `user_alias`, `braze_id` ou `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados na solicitação estão definidos no perfil do usuário. |
 | A empresa usa `/users/track` ponto de extremidade e especifica `native_line_id` atributo | Sim | Se um perfil de usuário existir para o usuário especificado ([especificado por `external_id`, `user_alias`, `braze_id` ou `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados na solicitação estão definidos no perfil do usuário.<br>Vários perfis têm o mesmo `native_line_id` |
