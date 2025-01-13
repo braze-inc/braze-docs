@@ -67,7 +67,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Rédigez votre message LINE
 
-Rédigez votre message en utilisant la personnalisation (comme le contenu liquide ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
+Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
 
 ![LINE avec un message affiché dans l'aperçu.][1]
 
