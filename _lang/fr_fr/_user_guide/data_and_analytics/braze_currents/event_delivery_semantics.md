@@ -3,39 +3,36 @@ nav_title: Sémantique des événements de livraison
 article_title: Sémantique des événements de livraison
 page_order: 3
 page_type: reference
-description: "Cet article de référence décrit la manière dont Currents gère les données d'événements en fichier plat que nous envoyons aux partenaires de stockage de l'entrepôt de données."
+description: "Cet article de référence décrit et définit la manière dont Currents gère les données d'événements en fichier plat que nous envoyons aux partenaires de stockage de l'entrepôt de données."
 tool: Currents
 
 ---
 
 # Sémantique des événements de livraison
 
-> Cet article explique comment Currents gère les données d'événements sous forme de fichiers plats que nous envoyons à nos partenaires de stockage d'entrepôts de données.
+> Cette page décrit et définit la manière dont Currents gère les données d'événements sous forme de fichiers plats que nous envoyons aux partenaires de stockage de l'entrepôt de données.
 
-Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos [partenaires d’entrepôt de données]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
-
-Currents écrit les fichiers Avro dans votre compartiment de stockage à des seuils réguliers, ce qui vous permet de traiter et d’analyser les données d’événements en utilisant vos propres outils d’aide à la décision.
+Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos [partenaires d’entrepôt de données]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/). Currents écrit les fichiers Avro dans votre compartiment de stockage à des seuils réguliers, ce qui vous permet de traiter et d’analyser les données d’événements en utilisant vos propres outils d’aide à la décision.
 
 {% alert important %}
-Notez que ce contenu **ne s'applique qu'aux données d'événements des fichiers plats que nous envoyons aux partenaires de Data Warehouse Storage (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage).** <br><br>Pour le contenu qui s'applique aux autres partenaires, reportez-vous à notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et consultez leurs pages respectives.
+Ce contenu **s’applique uniquement aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage)**. <br><br>Pour le contenu qui s'applique aux autres partenaires, reportez-vous à notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et consultez leurs pages respectives.
 {% endalert %}
-
 
 ## Livraison au moins une fois
 
-En tant que système à haut débit, Currents garantit la livraison des événements « au moins une fois » , ce qui signifie que des doublons d’événements peuvent parfois être écrits dans votre compartiment de stockage. Cela peut se produire lorsque des événements sont retraités à partir de notre file d’attente pour une raison ou une autre.
+En tant que système à haut débit, Currents fournit une livraison des événements « au moins une fois » , ce qui signifie que des doublons d’événements peuvent parfois être écrits dans votre compartiment de stockage. Cela peut se produire lorsque des événements sont retraités à partir de notre file d’attente pour une raison ou une autre.
 
 Si vos cas d’utilisation nécessitent une livraison « une seule fois exactement », vous pouvez utiliser le champ Identifiant unique envoyé avec chaque événement (`id`) pour dédupliquer les événements. Étant donné que le fichier échappe à notre contrôle lorsqu'il est écrit dans votre compartiment de stockage, nous n'avons aucun moyen de garantir la déduplication de notre côté.
 
 ## Horodatages
 
-Tous les horodatages exportés par Currents sont envoyés au fuseau horaire UTC. Pour certains événements où il est disponible, un champ "fuseau horaire" est également inclus, qui fournit le format IANA du fuseau horaire local de l'utilisateur au moment de l'événement.
+Tous les horodatages exportés par Currents sont envoyés au fuseau horaire UTC. Pour certains événements où il est disponible, un champ "fuseau horaire" est également inclus, qui fournit le format IANA (Internet Assigned Numbers Authority) du fuseau horaire local de l'utilisateur au moment de l'événement.
 
 ### Temps de latence
 
 Les événements envoyés à Braze par l'intermédiaire du SDK ou de l'API peuvent inclure un horodatage du passé. L'exemple le plus notable est celui des données du SDK qui sont mises en file d'attente, par exemple lorsqu'il n'y a pas de connectivité mobile. Dans ce cas, l'horodatage de l'événement reflétera le moment où l'événement a été généré. Cela signifie qu'un pourcentage d'événements apparaîtra comme ayant une latence élevée.
 
-## Avro Apache
+## Format Apache Avro
 
 Les données de sortie des intégrations de stockage de données Braze Currents au format `.avro`. Nous avons choisi [Apache Avro](https://avro.apache.org/) parce qu'il s'agit d'un format de données flexible qui supporte nativement l'évolution des schémas et qui est pris en charge par une grande variété de produits de données : 
 
@@ -50,7 +47,7 @@ Currents créera un fichier pour chaque type d’événement en utilisant le for
 ```
 
 {% alert tip %}
-Vous ne voyez pas le code à cause de la barre de défilement ? Vous trouverez [ici la]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/) marche à suivre pour y remédier.
+Vous ne voyez pas le code à cause de la barre de défilement ? Apprenez à résoudre ce problème [ici]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
 {% endalert %}
 
 |Segment Nom de fichier |Définition|
@@ -68,7 +65,7 @@ Vous ne voyez pas le code à cause de la barre de défilement ? Vous trouverez 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Les conventions de nommage des fichiers pouvant évoluer, Braze recommande de rechercher toutes les clés de votre compartiment qui ont un préfixe de <votre-préfixe-de-compartiment>.
+Les conventions de dénomination des fichiers peuvent changer à l'avenir. Braze recommande d'effectuer une recherche sur toutes les clés de votre compartiment dont le préfixe est <votre-casier-préfixe>.
 {% endalert %}
 
 ### Seuil d’écriture Avro
@@ -85,7 +82,7 @@ De temps à autre, Braze peut apporter des modifications au schéma Avro lorsque
 
 #### Changements non cassants
 
-Lorsqu’un champ est ajouté au schéma Avro, nous considérons qu’il s’agit d’un changement « qui ne casse pas le schéma ». Les champs ajoutés seront toujours des champs Avro "facultatifs" (par exemple avec une valeur par défaut de `null`), de sorte qu'ils "correspondront" aux anciens schémas conformément à la [spécification de résolution des schémas Avro.](http://avro.apache.org/docs/current/spec.html#schema+resolution) Ces ajouts ne doivent pas affecter les processus ETL existants car le champ sera ignoré jusqu’à ce qu’il soit ajouté à votre processus ETL. 
+Lorsqu’un champ est ajouté au schéma Avro, nous considérons qu’il s’agit d’un changement « qui ne casse pas le schéma ». Les champs ajoutés seront toujours des champs Avro "facultatifs" (par exemple avec une valeur par défaut de `null`), de sorte qu'ils "correspondront" aux anciens schémas conformément à la [spécification de résolution des schémas Avro.](http://avro.apache.org/docs/current/spec.html#schema+resolution) Ces ajouts ne devraient pas affecter les processus d'extraction, de transformation et de chargement (ETL) existants, car le champ sera simplement ignoré jusqu'à ce qu'il soit ajouté à votre processus ETL. 
 
 {% alert important %}
 Nous recommandons que votre configuration ETL soit explicite sur les champs traités pour éviter de rompre le flux si des nouveaux champs sont ajoutés.
