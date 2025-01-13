@@ -304,7 +304,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
 - name: Boîte de réception Monster
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
-- name: ma carte postale
+- name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
   url: /docs/partners/message_personalization/dynamic_content/seen
@@ -314,6 +314,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
-- name: Croissance
+- name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---
