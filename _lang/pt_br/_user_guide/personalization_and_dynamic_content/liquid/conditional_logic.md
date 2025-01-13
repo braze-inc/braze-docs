@@ -113,7 +113,7 @@ A tag a seguir permite especificar uma mensagem para usuários com a atribuiçã
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![Uma mensagem de exemplo no dashboard Braze, usando um atributo 'nome' nulo.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
