@@ -1,18 +1,25 @@
 ---
-nav_title: Integration
-article_title: In-App Message Integration Guide for Roku
-platform: Roku
 page_order: 2
-description: "This reference guide covers how to integrate in-app messages for Roku and relevant code considerations"
-channel:
-  - in-app messages
+nav_title: In-App Messages
+page_title: In-app messages for the Braze Roku SDK
+platform: Roku
+channel: in-app messages
+description: "This article covers an overview of Roku in-app messaging, including best practices and use cases."
 ---
 
-# In-app message integration
+# In-app messages
 
-> This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide sample integration code, you will need to add logic to handle and display triggered messages within your desired UI. 
+> [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-Because your code will be unique to your app, you do not need to handle all situations listed if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
+Check out our [case studies](https://www.braze.com/customers) to see examples of in-app messages.
+
+![Three images of potential Roku in-app messages that a user could build. These examples include "fullscreen takeover", "homepage banner", and "corner notifier".]({% image_buster /assets/img/roku/Docs-Imagery.png %})
+
+## In-app message types
+
+Create an in-app message for Roku by selecting **Roku Devices** as the in-app message platform.
+
+![]({% image_buster /assets/img/roku/1-Platform-Selector.png %})
 
 ## SDK requirements {#supported-sdk-versions}
 
@@ -20,7 +27,7 @@ In-app messages will only be sent to Roku devices running the minimum supported 
 
 {% sdk_min_versions roku:0.1.2 %}
 
-## In-app message setup
+## Setting up in-app messages
 
 To process in-app messages, you can add an observer on `BrazeTask.BrazeInAppMessage`:
 
@@ -38,6 +45,8 @@ end sub
 ```
 
 ## In-app message fields
+
+### Handling
 
 The following lists the fields you will need to handle your in-app messages:
 
@@ -60,7 +69,8 @@ The following lists the fields you will need to handle your in-app messages:
 For in-app messages containing buttons, the message `click_action` will also be included in the final payload if the click action is added prior to adding the button text.
 {% endalert %}
 
-### Styling fields
+### Styling
+
 There are also various styling fields that you could choose to use from the dashboard:
 
 | Fields | Description |
@@ -75,7 +85,7 @@ There are also various styling fields that you could choose to use from the dash
 
 Alternatively, you could implement the in-app message and style it within your Roku application using a standard palette:
 
-### Button fields
+### Buttons
 
 | Fields | Description |
 | ------ | ----------- |
@@ -89,27 +99,31 @@ Alternatively, you could implement the in-app message and style it within your R
 
 You will need to make sure certain functions are called to handle the analytics for your campaign.
 
-##### When a message is displayed
+### When a message is displayed
 
 When a message is displayed or seen, log an impression:
+
 ```brightscript
 LogInAppMessageImpression(in_app_message.id, brazetask)
 ```
 
-##### When a user clicks on a message
+### When a user clicks on a message
 Once a user clicks on the message, log a click and then process `in_app_message.click_action`:
+
 ```brightscript
 LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 
-##### When a user clicks a button
+### When a user clicks a button
+
 If the user clicks on a button, log the button click and then process `inappmessage.buttons[selected].click_action`:
 
 ```brightscript
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)
 ```
 
-##### After processing an in-app message
+### After processing an in-app message
+
 After processing an in-app message, you should clear the field:
 ```brightscript
 m.BrazeTask.BrazeInAppMessage = invalid
