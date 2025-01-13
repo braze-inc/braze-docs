@@ -168,6 +168,15 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 - `3.68.144.188`
 - `3.70.107.88`
 {% endsubtab %}
+{% subtab Australia (AU) %}
+For instance `AU-01`, these are the relevant IP addresses:
+- `13.210.1.145`
+- `13.211.70.159`
+- `13.238.45.54`
+- `52.65.73.167`
+- `54.153.242.239`
+- `54.206.45.213`
+{% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
@@ -221,6 +230,15 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 - `3.68.144.188`
 - `3.70.107.88`
 {% endsubtab %}
+{% subtab Australia (AU) %}
+For instance `AU-01`, these are the relevant IP addresses:
+- `13.210.1.145`
+- `13.211.70.159`
+- `13.238.45.54`
+- `52.65.73.167`
+- `54.153.242.239`
+- `54.206.45.213`
+{% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
@@ -271,6 +289,15 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 - `3.65.88.25`
 - `3.68.144.188`
 - `3.70.107.88`
+{% endsubtab %}
+{% subtab Australia (AU) %}
+For instance `AU-01`, these are the relevant IP addresses:
+- `13.210.1.145`
+- `13.211.70.159`
+- `13.238.45.54`
+- `52.65.73.167`
+- `54.153.242.239`
+- `54.206.45.213`
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -323,6 +350,15 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 - `3.65.88.25`
 - `3.68.144.188`
 - `3.70.107.88`
+{% endsubtab %}
+{% subtab Australia (AU) %}
+For instance `AU-01`, these are the relevant IP addresses:
+- `13.210.1.145`
+- `13.211.70.159`
+- `13.238.45.54`
+- `52.65.73.167`
+- `54.153.242.239`
+- `54.206.45.213`
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
