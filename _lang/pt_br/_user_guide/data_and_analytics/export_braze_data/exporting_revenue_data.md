@@ -27,7 +27,7 @@ Para exportar seus dados de receita, selecione <i class="fas fa-bars" title="Men
 
 ## Gráfico de performance ao longo do tempo
 
-Os dados a seguir podem ser visualizados no gráfico **Performance Over Time (Desempenho ao longo do tempo** ):
+Os dados a seguir podem ser visualizados no gráfico **Performance Over Time (Desempenho ao longo do tempo)**:
 
 - Fórmulas de KPI
 - Compras
