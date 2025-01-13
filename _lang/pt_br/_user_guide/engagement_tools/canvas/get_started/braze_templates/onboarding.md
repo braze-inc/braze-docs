@@ -80,7 +80,7 @@ Agora, nossos usuários receberão esse e-mail de boas-vindas depois de iniciare
 
 #### Personalizar a jornada do público
 
-Na etapa da jornada do público denominada Audience **Split (Divisão do público**), podemos personalizar o filtro para nossos usuários engajados. No modelo, o filtro é **Tem e-mail clicado para a etapa E-mail de boas-vindas**, o que significa que os usuários são divididos em dois grupos: usuários que clicaram no e-mail de boas-vindas e aqueles que não clicaram.
+Na etapa da jornada do público denominada **Audience Split (Divisão do público)**, podemos personalizar o filtro para nossos usuários engajados. No modelo, o filtro é **Tem e-mail clicado para a etapa E-mail de boas-vindas**, o que significa que os usuários são divididos em dois grupos: usuários que clicaram no e-mail de boas-vindas e aqueles que não clicaram.
 
 ![Uma etapa de divisão de público com uma jornada para usuários engajados e outra para todos os outros.][2]{: style="max-width:70%;"}
 
