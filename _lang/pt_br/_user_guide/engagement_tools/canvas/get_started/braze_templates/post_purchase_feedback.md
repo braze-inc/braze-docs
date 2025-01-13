@@ -26,7 +26,7 @@ Digamos que estejamos trabalhando para a Decorumsoft, uma desenvolvedora de vide
 
 Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
-Para acessar o modelo de feedback pós-compra, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Post-Purchase Feedback**, selecione **Apply Template (Aplicar modelo**). Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
+Para acessar o modelo de feedback pós-compra, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Post-Purchase Feedback**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
 ### Etapa 1: Configure os detalhes do Canva
 
@@ -85,21 +85,21 @@ Em seguida, criaremos nosso Canva personalizando os canais de envio de mensagens
 Começaremos nossa personalização passando por cada componente de envio de mensagens para atualizar o conteúdo. Nosso atributo personalizado para referência é `Experience Feedback`.
 
 1. No construtor de canvas, selecione a primeira etapa do canva na jornada do usuário.
-2. Selecione a variante **de e-mail**.
+2. Selecione a variante de **e-mail**.
 3. Preencha as **informações de envio** com um assunto que incentive o feedback do usuário. 
 4. Selecione **Editar mensagem** para substituir a mensagem de e-mail do modelo pela nossa mensagem de pesquisa de feedback. Isso inclui a substituição dos links de cada call-to-action para capturar a opção selecionada, que será referenciada na etapa Action Path da jornada do usuário.
 
 {% alert tip %}
-Você pode usar [as propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens no seu Canvas com base no produto ao qual está se referindo.
+Você pode usar as [propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens no seu Canvas com base no produto ao qual está se referindo.
 {% endalert %}
 
 #### Configure a pesquisa de feedback
 
 Em seguida, precisaremos preencher os detalhes da variante **In-App Message**. É aqui que precisamos especificar nosso atributo personalizado `Experience Feedback` que indica o sentimento do feedback do usuário. (Também faremos referência a isso na etapa subsequente das jornadas de ação).
 
-1. Na mesma etapa da primeira mensagem, selecione a variante **In-App Messages (Mensagens no app** ). Manteremos os controles de mensagens como estão. 
+1. Na mesma etapa da primeira mensagem, selecione a variante **In-App Messages (Mensagens no app)**. Manteremos os controles de mensagens como estão. 
 2. Para o cabeçalho e o corpo, usaremos uma linguagem que incentive os usuários a serem honestos sobre sua experiência com o Proxy War 3.
-3. Como queremos que as respostas da pesquisa sejam registradas com seus perfis, manteremos a pesquisa como **seleção de escolha única** e **atribuições de registro no envio**.
+3. Como queremos que as respostas da pesquisa sejam registradas com seus perfis, manteremos a pesquisa como **Seleção de escolha única** e **Atribuições de registro no envio**.
 4. Para cada uma das três opções de pesquisa, selecione **Experience Feedback** como nosso atributo personalizado. 
 5. Manteremos os valores de atribuição no perfil do usuário como estão, pois esses valores estão alinhados com nosso atributo personalizado.
 
@@ -113,7 +113,7 @@ Usando nosso atributo personalizado `Experience Feedback` e os valores de atribu
 
 ### Configure o redirecionamento de anúncios
 
-Vamos nos certificar de que a sincronização com o público do Google esteja configurada em nossa etapa **de redirecionamento de anúncios**. Isso incluirá a seleção de nossa conta de anúncios, um público existente e a opção de adicionar usuários ao público.
+Vamos nos certificar de que a sincronização com o público do Google esteja configurada em nossa etapa de **redirecionamento de anúncios**. Isso incluirá a seleção de nossa conta de anúncios, um público existente e a opção de adicionar usuários ao público.
 
 ### Configurar casos de suporte de webhook
 
