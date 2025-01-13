@@ -77,4 +77,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: 본
   url: /docs/partners/message_personalization/dynamic_content/seen
+- name: 콘텐츠
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---
