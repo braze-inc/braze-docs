@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Zendesk Chat
 
-> [O Zendesk Chat](https://www.zendesk.com/service/messaging/) usa webhooks de cada plataforma para configurar uma conversa bidirecional por SMS. Quando um usuário solicita suporte, um ticket é criado no Zendesk. As respostas dos agentes são encaminhadas ao Braze por meio de uma campanha de SMS disparada pela API, e as respostas dos usuários são enviadas de volta ao Zendesk.
+> O [Zendesk Chat](https://www.zendesk.com/service/messaging/) usa webhooks de cada plataforma para configurar uma conversa bidirecional por SMS. Quando um usuário solicita suporte, um ticket é criado no Zendesk. As respostas dos agentes são encaminhadas ao Braze por meio de uma campanha de SMS disparada pela API, e as respostas dos usuários são enviadas de volta ao Zendesk.
 
 ## Pré-requisitos
 
@@ -32,7 +32,7 @@ Aumente a eficiência do suporte ao cliente combinando os recursos do Braze SMS 
 1. No console de desenvolvedor do Zendesk, acesse webhooks: {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. Em **Create Webhook**, selecione **Trigger ou automação**.
 3. Para o **URL do endpoint**, adicione o endpoint **/campaign/trigger/send**.
-4. Em **Authentication (Autenticação**), selecione **Bearer token (Token do portador** ) e adicione a chave da API REST do Braze com as permissões `campaigns.trigger.send`.
+4. Em **Authentication (Autenticação**), selecione **Bearer token (Token do portador)** e adicione a chave da API REST do Braze com as permissões `campaigns.trigger.send`.
 
 ![Um exemplo de webhook do Zendesk.][1]{: style="max-width:70%;"}
 
@@ -80,7 +80,7 @@ Por fim, em **Controles de entrega**, ative a reelegibilidade.
 
 ### Etapa 3: Criar um disparo no Zendesk para encaminhar as respostas do agente para o Braze
 
-Acesse **Objetos e regras** > **Regras de negócios** > Acionadores.
+Acesse **Objetos e regras** > **Regras de negócios** > **Acionadores**.
 
 1. Crie uma nova **categoria** (por exemplo, **Disparar uma mensagem**).
 2. Crie um novo **disparador** (por exemplo, **Responder via SMS Braze**).
@@ -121,7 +121,7 @@ Se quiser notificar o usuário de que o ticket foi fechado, crie uma nova campan
 
 ![Atualize um usuário quando o ticket for fechado.][8]{: style="max-width:70%;"}
 
-Selecione **API Triggered delivery (Entrega disparada pela API**) e copie o ID da campanha.
+Selecione **API Triggered delivery (Entrega disparada pela API)** e copie o ID da campanha.
 
 Em seguida, configure um disparo para notificar o Braze quando o tíquete for fechado:
 - Categoria: **Disparar uma mensagem**
