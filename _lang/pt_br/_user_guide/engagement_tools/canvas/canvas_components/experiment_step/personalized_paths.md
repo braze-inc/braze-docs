@@ -61,7 +61,7 @@ Quando a janela do experimento passa e o experimento é concluído, a Braze envi
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
-{% tab Canvas recorrente ou acionado por ação ou acionado por API %}
+{% tab Canva recorrente ou acionado por ação ou acionado por API %}
 
 Você pode testar até quatro jornadas em uma única jornada experimental. Adicione suas jornadas e termine de configurar seu canva conforme necessário, depois lance-o.  
 
