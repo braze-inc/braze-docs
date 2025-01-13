@@ -10,7 +10,7 @@ description: "Esta página contiene artículos sobre el producto de datos Braze 
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"
-guide_top_text: "Comprender el impacto de su estrategia de compromiso es fundamental para informar la iteración y optimización de sus comunicaciones con los usuarios. Para garantizar que estos valiosos datos de participación estén estrechamente integrados con el resto de sus operaciones y ayudar a amplificar su inversión en ciencia de datos, la plataforma Braze rastrea una amplia gama de datos de eventos de su integración para análisis, retargeting y otros casos de uso en otros lugares dentro de sus propios sistemas. <br> <br>La herramienta Currents es un flujo de datos en tiempo real de sus eventos de participación que es la exportación más sólida y granular de la plataforma Braze. Le proporciona datos en un tipo de archivo Avro a uno de nuestros muchos <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>socios de datos</a>, lo que le permite utilizar los datos únicos y valiosos que crea Braze para potenciar sus esfuerzos de BI y análisis en otras plataformas de primera clase."
+guide_top_text: "Comprender el impacto de su estrategia de compromiso es fundamental para informar la iteración y optimización de sus comunicaciones con los usuarios. Para integrar estrechamente estos valiosos datos de interacción con el resto de tus operaciones y ayudar a amplificar tu inversión en ciencia de datos, la plataforma Braze realiza un seguimiento de una amplia gama de datos de eventos de tu integración para su análisis, reorientación y otros casos de uso en otros lugares dentro de tus propios sistemas. <br> <br>La herramienta Currents es un flujo de datos en tiempo real de sus eventos de participación que es la exportación más sólida y granular de la plataforma Braze. Te proporciona datos en un tipo de archivo Avro a uno de nuestros muchos <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>socios de datos</a>, lo que te permite utilizar los datos únicos y valiosos que crea Braze para potenciar tus esfuerzos de inteligencia empresarial (BI) y análisis en otras plataformas de primera clase."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
@@ -50,7 +50,7 @@ Currents te permite:
 
 Hay mucho más que puedes hacer con los datos de eventos, a los que accede Currents. Confíe en nosotros: ¡Braze también[usa Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
 
-## Corrientes de acceso
+## Cómo acceder a Currents
 
 Muchos de nuestros paquetes profesionales y empresariales ya incluyen un conector Currents. Si está interesado en utilizar Currents, póngase en contacto con su gestor de cuenta. Su gestor de cuenta y nuestros especialistas en datos pueden ayudarle a [configurar e integrar Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 
