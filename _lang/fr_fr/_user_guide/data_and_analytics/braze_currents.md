@@ -50,7 +50,7 @@ Currents vous permet de :
 
 Il y a tant de choses que vous pouvez faire avec les données d’événements, accessibles via Currents. Faites-nous confiance, [Braze utilise aussi Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) !
 
-## Accéder à Currents
+## Comment accéder à Currents
 
 Un connecteur Currents est déjà inclus dans beaucoup de nos offres pro et entreprise. Si vous souhaitez utiliser Currents, contactez votre gestionnaire de compte. Votre gestionnaire de compte et nos spécialistes des données peuvent vous aider dans la [configuration et l'intégration de Currents.]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/)
 
