@@ -12,15 +12,17 @@ tool: Canvas
 
 > Au fur et à mesure que vous créez et lancez des Canvases, vous pouvez modifier un Canvas actif et l'enregistrer en tant que brouillon, ce qui vous permet de tester vos modifications avant un autre lancement. 
 
-Si vous avez un Canvas actif qui nécessite des modifications à grande échelle, vous pouvez utiliser cette fonctionnalité pour créer des brouillons pour ces modifications. Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la fois.
+Si vous avez un Canvas actif qui nécessite des modifications à grande échelle, vous pouvez utiliser cette fonctionnalité pour créer, enregistrer et effectuer un contrôle qualité **avant** de lancer ces modifications dans le Canvas actif. 
+
+Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la fois, et un canvas ne peut avoir qu'un seul brouillon à la fois. Ces brouillons n'ont aucune analyse car les modifications du brouillon n'ont pas encore été lancées.
 
 ![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page dispose d’options pour revenir à l’affichage analytique, enregistrer en tant qu’ébauche ou lancer l’ébauche.][1]
 
-Vous pouvez créer des brouillons dans un Canvas actif pour construire, enregistrer et vérifier la qualité **avant** de lancer ces modifications dans le Canvas actif. Un Canvas ne peut avoir qu'un seul brouillon à la fois. Ces brouillons n'ont aucune analyse car les modifications du brouillon n'ont pas encore été lancées.
-
-Pour créer un brouillon, allez sur un Canvas actif et sélectionnez le bouton **Enregistrer comme brouillon** dans le pied de page du Canvas. Prenez en compte le fait que vous ne pouvez pas modifier le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez mettre à jour le Canvas pour appliquer les modifications ou abandonner le brouillon. 
+Pour créer un brouillon, allez sur un Canvas actif et sélectionnez le bouton **Enregistrer comme brouillon** dans le pied de page du Canvas. Prenez en compte le fait que vous ne pouvez pas modifier le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez mettre à jour le Canvas pour appliquer les modifications ou abandonner le brouillon.
 
 Pour référencer le Canvas actif, sélectionnez **Afficher le Canvas actif** dans le pied de page depuis la vue analytique ou l'en-tête du Canvas depuis le brouillon. Pour revenir à un Canvas actif, sélectionnez **Modifier le brouillon** depuis la vue analytique ou la vue Canvas active.
+
+Vous ne pouvez faire référence qu'à des étapes qui ont déjà été lancées avant la création du projet. Cela signifie que si vous avez créé une étape ou un canal **après la** création du projet, il ne peut pas être référencé dans votre projet.
 
 ### Priorisation des messages dans l'application
 
