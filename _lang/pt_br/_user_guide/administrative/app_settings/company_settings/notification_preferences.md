@@ -73,6 +73,6 @@ Pronto! Você deve começar a receber notificações sobre sua empresa neste can
 [63]: {% image_buster /assets/img_archive/slack_f.png %}
 [64]: {% image_buster /assets/img_archive/copy_url.png %}
 [65]: {% image_buster /assets/img_archive/click_edit_f.png %}
-Daqui a [67]: https://my.slack.com/services/new/incoming-webhook/
+[67]: https://my.slack.com/services/new/incoming-webhook/
 [61]: {% image_buster /assets/img_archive/notification_preferences.png %}
 Daqui a [62]: https://api.slack.com/incoming-webhooks
