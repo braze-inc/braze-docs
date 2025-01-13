@@ -41,7 +41,7 @@ Para salvar esse novo link, a tag de cancelar inscrição padrão da Braze {%raw
 
 ### O que acontece se eu editar um modelo de e-mail que está sendo usado em uma campanha?
 
-As edições feitas em um modelo existente não serão refletidas em campanhas que foram criadas usando versões anteriores desse modelo.
+As edições feitas em um modelo existente não serão refletidas em campanhas que foram criadas usando versões anteriores desse modelo. Para campanhas de API que usam um modelo no corpo da API REST, o Braze usará a versão mais recente do modelo no momento do envio.  
 
 ## Modelos de links
 
@@ -57,7 +57,7 @@ No painel de prévia em uma nova guia, você também pode abrir os links para vi
 
 ### Como funciona a modelagem de links com Liquid?
 
-Os modelos de link são expandidos e adicionados a cada URL antes de qualquer expansão de Liquid acontecer. Se parte do seu URL for gerada usando um snippet Liquid, recomendamos que a base do URL e o ponto de interrogação (?) sejam codificados manualmente para que os templates de link sejam expandidos corretamente. 
+Os modelos de link são expandidos e adicionados a cada URL antes de qualquer expansão de Liquid acontecer. Se parte de seu URL for gerada usando um snippet do Liquid, recomendamos que a base do URL e o ponto de interrogação (?) sejam codificados para que os modelos de link sejam expandidos corretamente. 
 
 Evite adicionar o ponto de interrogação (?) ao Liquid, pois isso fará com que os modelos de link adicionem primeiro um ponto de interrogação (?), e depois o processo de expansão do Liquid adicionará um segundo ponto de interrogação (?).
 
