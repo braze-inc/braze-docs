@@ -16,7 +16,7 @@ guide_featured_list:
 - name: 이벤트 전달 확장
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/event_forwarding_extension/
   image: /assets/img/braze_icons/arrow-square-right.svg
-- name: 전류용 Adobe
+- name: Adobe for 커런츠
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
   image: /assets/img/braze_icons/building-01.svg
 ---
