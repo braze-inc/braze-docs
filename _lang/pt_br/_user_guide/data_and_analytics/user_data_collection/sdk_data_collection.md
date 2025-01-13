@@ -65,7 +65,7 @@ Se estiver interessado apenas na integração mínima e fizer a integração com
 
 ## Dados opcionais coletados por padrão
 
-Além dos dados mínimos de integração, as seguintes atribuições são capturadas automaticamente pelo Braze quando você inicializa a integração de SDK. É possível fazer [a aceitação]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) da coleta dessas atribuições para permitir uma integração mínima.
+Além dos dados mínimos de integração, as seguintes atribuições são capturadas automaticamente pelo Braze quando você inicializa a integração de SDK. É possível fazer a [aceitação]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) da coleta dessas atribuições para permitir uma integração mínima.
 
 | Atributo               | Plataforma          | Descrição                                                                        | Por que é coletado                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ Além dos dados mínimos de integração, as seguintes atribuições são captur
 | Agente do usuário              | Web               | [Agente do usuário](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Esse atributo é usado para enviar mensagens apenas para dispositivos compatíveis. Também pode ser usado dentro da segmentação.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
+Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: [Android do Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Documentação da lista de permissões"), [iOS do iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "documentação da lista de permissões"), [Web Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "documentação da lista de permissões da").
 
 ## Dados não coletados por padrão
 
