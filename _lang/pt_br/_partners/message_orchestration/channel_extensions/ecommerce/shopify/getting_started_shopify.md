@@ -170,7 +170,7 @@ O SDK da Web rastreia sessões de seus clientes e convidados do Shopify. Como re
 
 {% endtab %}
 
-{% tab tema líquido %}
+{% tab tema liquid %}
 
 ### Como implementar o SDK para Web diretamente no seu site da Shopify theme.liquid
 
