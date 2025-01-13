@@ -20,7 +20,7 @@ Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), vaya a **Usua
 
 Aquí se mostrará una lista de centros de preferencias personalizados. Seleccione **Crear nuevo** para crear un nuevo centro de preferencias o seleccione el nombre de uno existente para realizar cambios.
 
-![][1]
+![Una lista de centros de preferencias personalizados con el nombre, descripción, tipo, estado, fecha de última edición y creado por el usuario.][1]
 
 ## Paso 2: Nombre del centro de preferencias de correo electrónico
 
@@ -28,7 +28,7 @@ Los nombres de los centros de preferencias sólo pueden contener caracteres alfa
 
 Esta etiqueta Liquid puede incluirse en cualquier campaña de correo electrónico saliente o en los pasos de Canvas y dirigirá a los usuarios al centro de preferencias.
 
-![][2]
+![Un ejemplo de Liquid para un centro de preferencias.][2]
 
 ## Paso 3: Añadir grupos de suscripción al centro de preferencias
 
@@ -45,7 +45,7 @@ Puede configurar aún más los grupos de suscripción seleccionados seleccionand
 - Añada o elimine una casilla de verificación **Suscribirse a todo** que suscribirá al usuario a todos los grupos de suscripción mostrados en este bloque
 - Añada o elimine una casilla de verificación **Cancelar suscripción a todo** que cancelará la suscripción del usuario a todos los grupos de suscripción mostrados en este bloque.
 
-![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![Un ejemplo de un centro de preferencias con las opciones de suscribirse a todos los mensajes, la mensajería, el boletín y los correos electrónicos semanales, o cancelar la suscripción a todos.][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
 
 El botón **Darse de baja de todo**, situado en la parte inferior de la plantilla, es inamovible y [dará de baja globalmente]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) al usuario de la recepción de cualquier mensaje de correo electrónico.
 
@@ -55,7 +55,7 @@ El botón **Darse de baja de todo**, situado en la parte inferior de la plantill
 
 En la pestaña **Estilos comunes** puede establecer que determinados estilos se apliquen a todos los bloques relevantes de su centro de preferencias. Los estilos definidos en esta sección se utilizan en todo el mensaje, excepto cuando se anulan para un bloque específico. Para facilitar el diseño, recomendamos configurar los estilos a nivel de página antes de personalizar los estilos a nivel de bloque.
 
-![][5]{: style="max-width:45%;"}
+![Un ejemplo de configuración de estilo común para texto, botones y enlaces.][5]{: style="max-width:45%;"}
 
 {% alert tip %}
 Para volver a los estilos comunes, seleccione el botón "X" en las propiedades de cada bloque. A continuación, selecciona el contenedor de mensajes, el botón "X" de mensaje o el fondo del editor.
@@ -70,13 +70,11 @@ El editor de arrastrar y soltar utiliza dos componentes clave para que la compos
 
 Las filas son unidades estructurales que definen la composición horizontal de una sección del mensaje mediante celdas.
 
-![]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
+![Opción para seleccionar el tipo de fila de tu mensaje.]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
 
-Cuando se selecciona una fila, puede añadir o eliminar el número de columnas que necesite en la sección Personalización de columnas para colocar diferentes elementos de contenido uno al lado del otro.
+Cuando se selecciona una fila, puede añadir o eliminar el número de columnas que necesite en la sección Personalización de columnas para colocar diferentes elementos de contenido uno al lado del otro. También puede deslizar para ajustar el tamaño de las columnas existentes.
 
-También puede deslizar para ajustar el tamaño de las columnas existentes.
-
-![]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
+![Opciones para personalizar las propiedades de tu columna, incluyendo el color de fondo, el estilo del borde, el radio del borde y el relleno.]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
 
 Como práctica recomendada, formatee las propiedades de fila y columna antes de formatear los bloques dentro de las filas. Puedes ajustar el espaciado y la alineación en muchos sitios, así que empezar desde la base facilita la edición sobre la marcha.
 
@@ -85,7 +83,7 @@ Como práctica recomendada, formatee las propiedades de fila y columna antes de 
 
 Los bloques representan distintos tipos de contenido que puedes utilizar en tu mensaje. Arrastre uno dentro de un segmento de fila existente, que se ajustará automáticamente a la anchura de la celda.
 
-![]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+![Opción para seleccionar bloques, incluyendo título, párrafo, botón, imagen y espaciador.]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 Cada bloque tiene sus propios ajustes, como el control granular del relleno. El panel de la derecha cambia automáticamente a un panel de estilos para el elemento de contenido seleccionado. Para más información, consulta [Propiedades del bloque de editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 
@@ -98,7 +96,7 @@ Si está utilizando el bloque de código personalizado en su centro de preferenc
 
 No olvides personalizar la página de confirmación. Puede editar esta página seleccionando **Página de confirmación** en la parte superior de la ventana del editor de arrastrar y soltar. Esta página se mostrará a los usuarios después de actualizar sus preferencias utilizando el centro de preferencias. Las mismas posibilidades de estilo anteriores se aplican también a esta página.
 
-![][9]{: style="max-width:65%;"}
+![Un ejemplo de página de confirmación para comunicar que se han actualizado las preferencias del usuario.][9]{: style="max-width:65%;"}
 
 ## Paso 6: Vista previa e inicio del centro de preferencias
 
@@ -114,9 +112,9 @@ Al iniciar el centro de preferencias, se le pedirá que confirme el nombre, ya q
 
 Para colocar un enlace al centro de preferencias en sus correos electrónicos, copie la etiqueta Liquid del centro de preferencias deseado seleccionando el icono **Copiar Liquid**.
 
-![][10]{: style="max-width:75%;"}
+![La opción Copiar Liquid en la fila de un centro de preferencias.][10]{: style="max-width:75%;"}
 
-Añada la etiqueta Liquid en el lugar deseado de su correo electrónico, de forma similar a como se insertan [las URL de cancelación de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer).
+Añada la etiqueta Liquid en el lugar deseado de su correo electrónico, de forma similar a como se insertan [las URL de cancelación de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link).
 
 ## Tratamiento de errores
 
