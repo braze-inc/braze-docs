@@ -169,6 +169,29 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 3\. Se você tiver políticas de rede em vigor, deve conceder acesso à rede da Braze à sua instância do Databricks. Para uma lista de IPs, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+
+Crie uma ou mais tabelas para usar na sua integração CDI com os seguintes campos:
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. Configure um diretor de serviço e conceda as permissões adequadas. Se você já possui credenciais de uma sincronização existente, pode reutilizá-las—apenas certifique-se de estender o acesso à tabela de origem do catálogo. Para saber mais sobre como criar uma nova entidade de serviço e credenciais, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+
+{:start="3"}
+3\. Se você tiver políticas de rede em vigor, deverá conceder à Braze acesso de rede à sua instância do Microsoft Fabric. Para uma lista de IPs, consulte a [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
 {% endtabs %}
 
 ## Como a integração funciona
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}
