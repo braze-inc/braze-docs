@@ -11,12 +11,12 @@ search_rank: 2
 
 > Este artigo descreve eventos e propriedades personalizados, filtros de segmentação relacionados, propriedades de entrada do Canva, análises de dados relevantes e muito mais. Para saber mais sobre os eventos do Braze em geral, consulte [Eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
 
-Os eventos personalizados são ações realizadas por seus usuários ou atualizações sobre eles. Quando os eventos personalizados são registrados, eles podem disparar qualquer número e tipo de campanhas de acompanhamento. Em seguida, é possível usar [os filtros de segmentação](#segmentation-filters) para segmentar os usuários com base na frequência e na frequência com que esses eventos personalizados ocorreram recentemente. Isso faz com que os eventos personalizados sejam mais adequados para o rastreamento de interações de alto valor com o usuário dentro do seu aplicativo.
+Os eventos personalizados são ações realizadas por seus usuários ou atualizações sobre eles. Quando os eventos personalizados são registrados, eles podem disparar qualquer número e tipo de campanhas de acompanhamento. Em seguida, é possível usar os [filtros de segmentação](#segmentation-filters) para segmentar os usuários com base na frequência e na frequência com que esses eventos personalizados ocorreram recentemente. Isso faz com que os eventos personalizados sejam mais adequados para o rastreamento de interações de alto valor com o usuário dentro do seu aplicativo.
 
 ## Casos de uso
 
 Alguns casos de uso comuns de eventos personalizados incluem:
-- Acionamento de uma campanha ou Canva com base em um evento personalizado usando [a entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
+- Acionamento de uma campanha ou Canva com base em um evento personalizado usando a [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmentação de usuários por quantas vezes eles realizaram um evento personalizado, quando foi a última vez que o evento ocorreu e similares
 - Usar a [análise de eventos personalizada]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) do dashboard para visualizar um agregado da frequência com que cada evento ocorreu
 - Encontrar análises de dados adicionais usando relatórios de [funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) e [retenção]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/) 
@@ -118,7 +118,7 @@ O Braze nota o número de vezes que os eventos personalizados ocorreram e a últ
 Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o relatório **Eventos personalizados** em **Dados**.
 {% endalert %}
 
-Na página **Custom Events Report (Relatório de eventos personalizados** ) no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade do evento personalizado.
+Na página **Custom Events Report (Relatório de eventos personalizados)** no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade do evento personalizado.
 
 ![Gráfico de contagens de eventos personalizados na página Eventos personalizados no dashboard, mostrando as tendências de um evento personalizado][8]
 
@@ -224,7 +224,7 @@ Os filtros de segmentação de propriedades de eventos incluem:
 - Fez compras com a propriedade A no valor B, X vezes nos últimos Y dias.
 - Adiciona a capacidade de segmentar em 1, 3, 7, 14, 21 e 30 dias.
 
-![][3]
+![Um grupo de filtros que "tem 'Abandono de carrinho' com a propriedade 'número de vezes' e valor '2' 'mais de' 1'1 vez nos últimos '30' dias corridos (720-744 horas)".][3]
 
 Os dados só são registrados para uma determinada propriedade de evento depois que ela é ativada pelo gerente de sucesso do cliente, e as propriedades de evento só ficam disponíveis a partir dessa data.
 
