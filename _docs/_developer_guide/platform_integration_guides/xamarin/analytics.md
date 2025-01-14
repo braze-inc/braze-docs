@@ -10,7 +10,7 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ---
  
-# Xamarin Analytics
+# Analytics
 
 > Learn how to generate and review analytics for the Xamarin platform.
 
