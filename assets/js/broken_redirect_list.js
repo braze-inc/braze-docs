@@ -1390,6 +1390,12 @@ validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integrati
 validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/android'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
+
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/overview'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/roku/sdk_integration';
+
 validurls['/docs/developer_guide/platform_integration_guides/cordova/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/cordova/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
@@ -1566,4 +1572,3 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_import'
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/user_data_collection/user_profile_lifecycle';
 
 // validurls['OLD'] = 'NEW';
-
