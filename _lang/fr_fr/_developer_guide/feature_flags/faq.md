@@ -103,9 +103,9 @@ Les indicateurs de fonctionnalité peuvent être actualisés en cours de session
 
 Pour contrôler cela, [écoutez les mises à jour]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates) des indicateurs de fonctionnalités et déterminez si vous devez générer ou non un nouveau rendu de votre application en fonction des indicateurs de fonctionnalités qui ont changé. 
 
-### Pourquoi les utilisateurs de mon groupe de contrôle global ne reçoivent-ils pas les expérimentations de drapeaux de fonctionnalité ?
+### Pourquoi les utilisateurs de mon groupe de contrôle global ne reçoivent-ils pas les expérimentations d’indicateurs de fonctionnalité ?
 
-Vous ne pouvez pas activer les drapeaux de fonctionnalité pour les utilisateurs de votre [groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/). Cela signifie que les utilisateurs de votre groupe de contrôle global ne peuvent pas non plus participer à des expériences d'indicateur de fonctionnalité.
+Vous ne pouvez pas activer les indicateurs de fonctionnalité pour les utilisateurs de votre [groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/). Cela signifie que les utilisateurs de votre groupe de contrôle global ne peuvent pas non plus participer à des expériences d'indicateur de fonctionnalité.
 
 ## Des questions supplémentaires ?
 

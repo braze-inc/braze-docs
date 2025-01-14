@@ -99,12 +99,12 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirmez que l'ID de la campagne correspond à la campagne que vous traduisez.                   |
 | `INVALID_LOCALE_ID`                     | Confirmez que votre ID local existe dans la traduction de votre message.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que votre identifiant de message est correct.                                                |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que l'ID de votre message est correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Vérifiez que le message à traduire.                                           |
 | `LOCALE_NOT_FOUND`                      | Confirmez que le paramètre local existe dans vos paramètres multilingues.                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Les paramètres multilingues ne sont pas activés pour votre espace de travail.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits.             |
-| `UNSUPPORTED_CHANNEL`                   | Seuls les messages dans les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits. |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes de communication par e-mail ou les messages canvas contenant des e-mails peuvent être traduits.             |
+| `UNSUPPORTED_CHANNEL`                   | Seuls les messages des campagnes de communication par e-mail ou les envois de canvas par e-mail peuvent être traduits. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

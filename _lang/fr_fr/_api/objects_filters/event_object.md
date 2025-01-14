@@ -71,7 +71,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 50 Ko.
+Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 100 Ko.
 
 ### Persistance des propriétés de l’événement
 Les propriétés de l’événement sont conçues pour filtrer et personnaliser avec Liquid les messages déclenchés par leurs événements parents. Par défaut, elles ne sont pas persistantes sur le profil utilisateur Braze. Pour utiliser les valeurs des propriétés d'événement dans la segmentation, reportez-vous aux [événements personnalisés][5], qui détaillent les différentes approches de stockage à long terme des valeurs des propriétés d'événement.
@@ -109,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 8601 Time Code Wiki][19]
 
 ## Objets Événement
 

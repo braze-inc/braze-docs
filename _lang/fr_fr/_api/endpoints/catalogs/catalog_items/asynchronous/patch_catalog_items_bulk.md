@@ -137,7 +137,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-ids` | Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement. |
 | `invalid-fields` | Confirmez que tous les champs que vous envoyez dans la requête API existent déjà dans le catalogue. Cela n'a rien à voir avec le champ ID mentionné dans l'erreur. |
 | `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
-| `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
+| `items-missing-ids` | Certains articles n'ont pas d'ID. Vérifiez que chaque produit possède un ID de produit. |
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
