@@ -184,6 +184,8 @@ $(document).ready(function () {
                     attributesToSnippet: ["description:24"],
                     snippetEllipsisText: " ...",
                     clickAnalytics: true,
+                    highlightPreTag: "<mark>",
+                    highlightPostTag: "</mark>",
                   },
                 },
                 {
@@ -194,6 +196,8 @@ $(document).ready(function () {
                     attributesToSnippet: ["description:24"],
                     snippetEllipsisText: " ...",
                     clickAnalytics: true,
+                    highlightPreTag: "<mark>",
+                    highlightPostTag: "</mark>",
                   },
                 },
               ],
