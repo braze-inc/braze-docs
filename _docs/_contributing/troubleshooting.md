@@ -53,3 +53,71 @@ Learn how to use Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endr
 </code>
 {% endtab %}
 {% endtabs %}
+
+## Rake says destination is shared by multiple files
+
+If you run `rake` to build a local docs server and get the following error, this means two or more files are using the same URL in their [`permalink` YAML key]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#permalink).
+
+```bash
+Conflict: The following destination is shared by multiple files.
+                    The written file may end up with unexpected contents.
+                    /Users/USERNAME/braze-docs/_site/api_usage/index.html
+                     - /Users/USERNAME/braze-docs/_docs/_developer_guide/platforms/android.md
+                     - /Users/USERNAME/braze-docs/_docs/_developer_guide/platforms/firos.md
+```
+
+To fix this issue, change the `permalink` URL value in one of the files, so they are no longer pointing to the same location. For example:
+
+{% tabs local %}
+{% tab Before %}
+In `_docs/_developer_guide/platforms/android.md`:
+```markdown
+---
+nav_title: Android
+permalink: /docs/developer_guide/best_sdk
+---
+
+# The Android Braze SDK
+
+> Get started with the Braze Android SDK!
+```
+
+In `_docs/_developer_guide/platforms/fireos.md`:
+```markdown
+---
+nav_title: FireOS
+permalink: /docs/developer_guide/best_sdk
+---
+
+# The FireOS Braze SDK
+
+> Get started with the Braze Android SDK!
+```
+{% endtab %}
+
+{% tab After %}
+In `_docs/_developer_guide/platforms/android.md`:
+```markdown
+---
+nav_title: Android
+permalink: /docs/developer_guide/best_sdk
+---
+
+# The Android Braze SDK
+
+> Get started with the Braze Android SDK!
+```
+
+In `_docs/_developer_guide/platforms/fireos.md`:
+```markdown
+---
+nav_title: FireOS
+permalink: /docs/developer_guide/second_best_sdk
+---
+
+# The FireOS Braze SDK
+
+> Get started with the Braze Android SDK!
+```
+{% endtab %}
+{% endtabs %}
