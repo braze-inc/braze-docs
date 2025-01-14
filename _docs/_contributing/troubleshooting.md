@@ -54,7 +54,7 @@ Learn how to use Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endr
 {% endtab %}
 {% endtabs %}
 
-## Rake says destination is shared by multiple files
+## Rake states destination is shared by multiple files
 
 If you run `rake` to build a local docs server and get the following error, this means two or more files are using the same URL in their [`permalink` YAML key]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#permalink).
 
