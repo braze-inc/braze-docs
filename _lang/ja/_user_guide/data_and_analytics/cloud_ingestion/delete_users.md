@@ -89,6 +89,24 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | `ALIAS_LABEL`| 文字列 | NULL 許容 |
 | `BRAZE_ID`| 文字列 | NULL 許容 |
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  --at least one of external_id, alias_name and alias_label, or braze_id is required  
+  EXTERNAL_ID VARCHAR,
+  --if using user alias, both alias_name and alias_label are required
+  ALIAS_NAME VARCHAR,
+  ALIAS_LABEL VARCHAR,
+  --braze_id can only be used to update existing users created through the Braze SDK
+  BRAZE_ID VARCHAR,
+)
+GO
+```
+{% endtab %}
+
 {% endtabs %}
 
 ### CDI の仕組み

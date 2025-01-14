@@ -77,7 +77,7 @@ Braze 管理者と、会社レベルの権限「会社の設定を管理可能�
 Braze の Michelle という名前のマーケターについて、次の 2 つのシナリオを考えてみます。Michelle は「Development」というチームのメンバーです。彼女は、Development チームのチームレベルのすべての権限にアクセスできます。
 
 {% tabs %}
-{% tab シナリオ1：チーム権限のみ %}
+{% tab シナリオ1 - チーム権限のみ %}
 
 このシナリオでの Michelle は、ワークスペースレベルの権限を持たない限定ユーザーです。彼女の権限は次のようになります。
 
@@ -88,7 +88,7 @@ Braze の Michelle という名前のマーケターについて、次の 2 つ�
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab シナリオ2：チーム権限とワークスペース権限 %}
+{% tab シナリオ2 - チーム権限とワークスペース権限 %}
 
 このシナリオでの Michelle は引き続き Development チームのメンバーですが、さらにワークスペースレベルの権限も持っています。
 
