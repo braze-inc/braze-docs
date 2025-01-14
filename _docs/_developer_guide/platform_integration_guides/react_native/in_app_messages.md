@@ -9,15 +9,19 @@ channel: in-app messages
 
 ---
 
-# In-app message integration
+# In-app messages
 
 > Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
-## Accessing in-app message data
+{% multi_lang_include developer_guide/prerequisites/react_native.md %}
+
+## Accessing message data
 
 In most cases, you can use the `Braze.addListener` method to register event listeners to handle data coming from in-app messages. 
 
 Additionally, you can access the in-app message data in the JavaScript layer by calling the `Braze.subscribeToInAppMessage` method to have the SDKs publish an `inAppMessageReceived` event when an in-app message is triggered. Pass a callback to this method to execute your own code when the in-app message is triggered and received by the listener.
+
+### Basic customization
 
 To customize the default behavior further, or if you don't have access to customize the native iOS or Android code, we recommend that you disable the default UI while still receiving in-app message events from Braze. To disable the default UI, pass `false` to the `Braze.subscribeToInAppMessage` method and use the in-app message data to construct your own message in JavaScript. Note that you will need to [manually log analytics](#analytics) on your messages if you choose to disable the default UI.
 
@@ -41,7 +45,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 });
 ```
 
-## Advanced customization
+### Advanced customization
 
 To include more advanced logic to determine whether or not to show an in-app message using the built-in UI, implement in-app messages through the native layer.
 
@@ -74,7 +78,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 ```
 {% endtab %}
 {% tab iOS %}
-### Overriding the default UI delegate
+#### Overriding the default UI delegate
 
 By default, [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/) is created and assigned when you initialize the `braze` instance. `BrazeInAppMessageUI` is an implementation of the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and comes with a `delegate` property that can be used to customize the handling of in-app messages that have been received.
 
@@ -128,7 +132,7 @@ To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after i
 {% endsubtab %}
 {% endsubtabs %}
 
-### Overriding the default native UI
+#### Overriding the default native UI
 
 If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following the sample below:
 
@@ -145,7 +149,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-## Analytics and action methods
+### Analytics and action methods
 
 You can use these methods by passing your `BrazeInAppMessage` instance to log analytics and perform actions:
 
@@ -158,9 +162,9 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 | `performInAppMessageAction(inAppMessage)`                 | Performs the action for an in-app message.                                            |
 | `performInAppMessageButtonAction(inAppMessage, buttonId)` | Performs the action for an in-app message button.                                     |
 
-## Test displaying a sample in-app message
+## Testing an in-app message
 
-Follow these steps to test a sample in-app message.
+To test a sample in-app message:
 
 1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to create a new in-app message campaign.
@@ -174,7 +178,7 @@ A sample implementation can be found in BrazeProject, within the [React Native S
 
 The in-app message model is available in the React Native SDK. Braze has four in-app message types that share the same data model: **slideup**, **modal**, **full** and **HTML full**.
 
-### In-app message model properties
+### Message model
 
 The in-app message model provides the base for all in-app messages.
 
@@ -198,7 +202,7 @@ The in-app message model provides the base for all in-app messages.
 
 For a full reference of the in-app message model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage) documentation.
 
-### In-app message button model properties
+### Button model
 
 Buttons can be added to in-app messages to perform actions and log analytics. The button model provides the base for all in-app message buttons.
 

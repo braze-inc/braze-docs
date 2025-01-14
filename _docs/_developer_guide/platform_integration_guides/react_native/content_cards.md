@@ -9,13 +9,13 @@ channel: content cards
 
 ---
 
-# Content Card integration
+# Content Cards
 
-> This article covers how to set up Content Cards for React Native.
+> This article covers how to set up Content Cards for React Native. The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
-The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+{% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## Customization
+## Customizing Content Cards
 
 To build your own UI, you can get a list of available cards, and listen for updates to cards:
 
@@ -51,9 +51,9 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Test displaying sample Content Card
+## Testing a Content Card
 
-Follow these steps to test a sample Content Card.
+To test a sample Content Card:
 
 1. Set an active user in the React application by calling the [`Braze.changeUser('your-user-id')`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
 2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create) to create a new Content Card campaign.
@@ -67,15 +67,13 @@ A sample implementation of this can be found in BrazeProject within the [React N
 
 ## Content Card data model
 
-The Content Cards data model is available in the React Native SDK. For a full reference of the Content Card data model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) documentation.
+The Content Cards data model is available in the React Native SDK and offers the following Content Cards card types: [Image Only](#image-only), [Captioned Image](#captioned-image), and [Classic](#classic). There's also a special [Control](#control) card type, which is returned to users that are in the control group for a given card. Each type inherits common properties from a base model in addition to its own unique properties.
 
-The Braze React Native SDK has three unique Content Cards card types that share a base model: **image only**, **captioned image**, and **classic**.
+{% alert tip %}
+For a full reference of the Content Card data model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) documentation.
+{% endalert %}
 
-There is also a special **control** card type, which is returned to users that are in the control group for a given card.
-
-Each type inherits common properties from a base model and has the following additional properties.
-
-### Base Content Card model properties
+### Base card model
 
 The base card model provides foundational behavior for all cards.
 
@@ -97,7 +95,7 @@ The base card model provides foundational behavior for all cards.
 
 For a full reference of the base card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) documentation.
 
-### Image only Content Card model properties
+### Image only
 
 Image only cards are clickable, full-sized images.
 
@@ -110,7 +108,7 @@ Image only cards are clickable, full-sized images.
 
 For a full reference of the image only card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct) documentation.
 
-### Captioned image Content Card model properties
+### Captioned image
 
 Captioned image cards are clickable, full-sized images with accompanying descriptive text.
 
@@ -126,7 +124,7 @@ Captioned image cards are clickable, full-sized images with accompanying descrip
 
 For a full reference of the captioned image card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) documentation.
 
-### Classic Content Card model properties
+### Classic
 
 Classic cards have a title, description, and an optional image on the left of the text.
 
@@ -139,9 +137,9 @@ Classic cards have a title, description, and an optional image on the left of th
 |`domain`           | (Optional) The link text for the property URL, for example, `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For a full reference of the classic (text announcement) Content Card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) documentation. For a full reference of the classic image (short news) card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) documentation.
+For a full reference of the classic (text announcement) Content Card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) documentation. For the classic image (short news) card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) documentation.
 
-### Control Content Card model properties
+### Control
 
 Control cards include all of the base properties, with a few important differences. Most importantly:
 
@@ -153,4 +151,3 @@ For a full reference of the control card, see the [Android](https://braze-inc.gi
 ## GIF Support
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
-
