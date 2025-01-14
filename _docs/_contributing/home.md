@@ -154,6 +154,24 @@ Next, install the dependencies for Braze Docs. These are small programs used to 
 bundle install
 ```
 
+### Step 2.6: Start your local server
+
+To verify your installation and start your local docs server on localhost `http://127.0.0.1:4000`, run:
+
+```bash
+# for 'en' language:
+rake
+
+# for other langauges:
+rake es
+rake fr
+rake ja
+rake ko
+rake pt_br
+```
+
+To stop your server, reopen the terminal and press **Control+C**.
+
 ## Next steps
 
 If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following.
