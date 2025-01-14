@@ -14,6 +14,8 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 > Learn how to generate and review analytics for the Xamarin platform.
 
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
+
 ## Session tracking
 
 The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
