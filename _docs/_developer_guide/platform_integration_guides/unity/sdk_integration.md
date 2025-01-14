@@ -206,9 +206,9 @@ cd C:\PATH\TO\DIRECTORY\braze-unity-sdk
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Export packages from repository
+### Step 2: Export package from repository
 
-First, launch Unity and keep it running in the background. Then, in the repository root, run the following command to export the relevant packages to `braze-unity-sdk/unity-package/`.
+First, launch Unity and keep it running in the background. Then, in the repository root, run the following command to export the package to `braze-unity-sdk/unity-package/`.
 
 {% tabs local %}
 {% tab MacOS %}
@@ -228,11 +228,11 @@ First, launch Unity and keep it running in the background. Then, in the reposito
 If you experience any issues after running these commands, refer to [Unity: Command Line Arguments](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
 {% endalert %}
 
-### Step 3: Import packages into Unity
+### Step 3: Import package into Unity
 
 1. In Unity, import the desired package into your Unity project by navigating to **Assets** > **Import Package** > **Custom Package**.
 2. If there's any files you don't want want to import, deselect them now.
-3. To customize the exported Unity package, in `Assets/Editor/Build.cs`, edit both `generate_package.sh` and the export script located at .
+3. Customize the exported Unity package located in `Assets/Editor/Build.cs`.
 
 ## Switch to an automated integration (Swift only)
 
