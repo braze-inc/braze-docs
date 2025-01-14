@@ -3,7 +3,7 @@ nav_title: Overview
 article_title: Cloud Data Ingestion Overview 
 page_order: 0
 page_type: reference
-description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
+description: "This page provides an overview of Cloud Data Ingestion, best practices, and product limitations."
 
 ---
 
@@ -13,9 +13,9 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 ## How it works
 
-With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
 
-When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
 
 ## Supported data sources
 
@@ -391,7 +391,7 @@ However, when Request 2 occurs, Braze starts with the original attribute values 
 
 When the requests are finished, Request 2 will overwrite the update from Request 1. Due to this, it's best to stagger your updates so you can prevent requests from being overwritten.
 
-### Create JSON string from another table
+### Create a JSON string from another table
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
 
@@ -508,7 +508,7 @@ FROM [braze].[users] ;
 ### Use the `UPDATED_AT` timestamp
 
 We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
-- If you are setting up a sync against a `VIEW`, do not use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
+- If you're setting up a sync against a `VIEW`, don't use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
 - If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
 - Use a transaction to write all rows that have the same timestamp.
 

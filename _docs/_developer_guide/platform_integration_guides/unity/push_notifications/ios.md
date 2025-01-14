@@ -19,7 +19,7 @@ description: "This reference article covers iOS push notification integration fo
 
 Braze provides a native Unity solution for automating iOS push integrations.
 
-- If you would prefer to complete the integration manually by modifying your built Xcode project, follow our [native iOS push instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
+- If you would prefer to complete the integration manually by modifying your built Xcode project, follow our [native iOS push instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/).
 - If you are transitioning from a manual integration to an automated one, follow the instructions on [Transitioning to an automated integration]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios).
 - Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
 
@@ -27,7 +27,7 @@ Braze provides a native Unity solution for automating iOS push integrations.
 
 ### Configure push notifications
 
-Follow our [iOS push notification configuration documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) to configure Braze using a `.p8` file.
+Follow our [iOS push notification configuration documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/) to configure Braze using a `.p8` file.
 
 ### Enable automatic push integration
 
@@ -108,5 +108,5 @@ To receive a copy of Braze device tokens from the OS, set a delegate using `Appb
 
 ### Other features
 
-To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS push instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
+To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS push instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/).
 

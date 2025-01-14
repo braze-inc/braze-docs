@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 article_title: Push Notification Troubleshooting for iOS
 platform: Swift
-page_order: 28
+page_order: 31
 description: "This article provides several iOS push troubleshooting scenarios for the Swift SDK."
 channel:
   - push
@@ -87,14 +87,14 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ### No push registration prompt
 
-If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
+If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
 
 ### No "push registered" users showing in the dashboard (prior to sending messages)
 
 Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
 
 - Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
-  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) were successfully completed.
+  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/) were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.

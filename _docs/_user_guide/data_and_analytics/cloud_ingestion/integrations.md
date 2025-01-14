@@ -1,7 +1,7 @@
 ---
 nav_title: Data Warehouse Integrations
 article_title: Data Warehouse Integrations
-description: "This reference article covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
+description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
 
@@ -9,9 +9,9 @@ page_type: reference
 
 # Data warehouse storage integrations
 
-> This article covers how to use Braze Cloud Data Ingestion (CDI) to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration.
+> This page covers how to use Braze Cloud Data Ingestion (CDI) to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration.
 
-## Product setup
+## Setting up data warehouse integrations
 
 Cloud Data Ingestion integrations require some setup on the Braze side and in your data warehouse instance. Follow these steps to set up the integration:
 
@@ -111,7 +111,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 ```
 
 {% alert note %}
-The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant Braze additional `OPERATE` privileges on the warehouse for us to turn it on when it's time to run the query.
+The warehouse needs to have the **auto-resume** flag on. If not, you will need to grant Braze additional `OPERATE` privileges on the warehouse for us to turn it on when it's time to run the query.
 {% endalert %}
 
 #### Step 1.4: Set up the user
@@ -354,7 +354,7 @@ You can name the schema and table as you'd like, but the column names should mat
 
 #### Step 1.2: Create an Access Token  
 
-In order for Braze to access Databricks, a personal access token needs to be created.
+For Braze to access Databricks, a personal access token needs to be created.
 
 1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the dropdown.
 2. On the Access tokens tab, select **Generate new token**.
@@ -391,18 +391,18 @@ Braze will connect to your Fabric warehouse using a service principal with Entra
 * Client secret for Braze to authenticate
 
 1. In the Azure portal, navigate to Microsoft Entra admin center, and then App Registrations 
-2. Select **+ New registration** under **Identity > Applications > App registrations** 
-3. Enter a name, and select `Accounts in this organizational directory only` as the supported account type. Then, select **Register**. 
-4. Select the application (service principal) you just created, then navigate to **Certificates & secrets > + New client secret**
-5. Enter a description for the secret, and set an expiry period for the secret. Then, click add. 
+2. Select **+ New registration** under **Identity** > **Applications** > **App registrations**.
+3. Enter a name, and then select `Accounts in this organizational directory only` as the supported account type. Then, select **Register**. 
+4. Select the application (service principal) you just created, then navigate to **Certificates & secrets** > **+ New client secret**.
+5. Enter a description for the secret, and set an expiry period for the secret. Then, select **Add**. 
 6. Note the client secret created to use in the Braze setup. 
 
 {% alert note %}
-Azure does not allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire in order to maintain the flow of data to Braze.
+Azure doesn't allow unlimited expiry on service principal secrets. Remember to refresh the credentials before they expire to maintain the flow of data to Braze.
 {% endalert %}
 
 #### Step 1.2: Grant access to Fabric resources 
-You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings > Governance and insights > Admin portal > Tenant settings**.    
+You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings** > **Governance and insights** > **Admin portal** > **Tenant settings**.    
 
 * In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
 * In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
@@ -430,7 +430,7 @@ CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name]
 GO
 ```
 
-You can name the warehouse, schema, and table/view as you'd like, but the column names should match the preceding definition.
+You can name the warehouse, schema, and table or view as you'd like, but the column names should match the preceding definition.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `phone`, or `email`). A source table may have columns for one or more identifier types. 
@@ -472,7 +472,7 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 {% tabs %}
 {% tab Snowflake %}
 
-In the Braze Dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Snowflake Import**.
+In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Snowflake Import**.
 
 #### Step 2.1: Add Snowflake connection information and source table
 
@@ -507,11 +507,11 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-In the Braze Dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Amazon Redshift Import**.
+In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Amazon Redshift Import**.
 
 #### Step 2.1: Add Redshift connection information and source table
 
-Input the information for your Redshift data warehouse and source table. If you are using a private network tunnel, toggle the slider and input the tunnel information. Then proceed to the next step.
+Input the information for your Redshift data warehouse and source table. If you're using a private network tunnel, toggle the slider and input the tunnel information. Then proceed to the next step.
 
 ![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
@@ -532,7 +532,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-In the Braze Dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Google BigQuery Import**.
+In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Google BigQuery Import**.
 
 #### Step 2.1: Add BigQuery connection information and source table
 
@@ -544,7 +544,7 @@ Upload the JSON key and provide a name for the service account, then input the d
 
 Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors, such as unexpected removal of access to the table.
 
-Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They will not receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
+Contact emails will only receive notifications of global or sync-level errors such as missing tables, permissions, and others. They won't receive row-level issues. Global errors indicate critical problems with the connection that prevent syncs from running. Such problems can include the following:
 
 - Connectivity issues
 - Lack of resources
@@ -558,7 +558,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab Databricks %}
 
-In the Braze Dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Databricks Import**.
+In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Databricks Import**.
 
 #### Step 2.1: Add Databricks connection information and source table
 
@@ -586,7 +586,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 
 #### Step 2.1: Set up a Cloud Data Ingestion sync
 
-You will create a new data sync for Microsoft Fabric. In the Braze dashbord, go to **Data Settings > Cloud Data Ingestion**, click **Create New Data Sync**, and select **Microsoft Fabric Import**.
+You will create a new data sync for Microsoft Fabric. In the Braze dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Microsoft Fabric Import**.
 
 #### Step 2.2: Add Microsoft Fabric connection information and source table
 

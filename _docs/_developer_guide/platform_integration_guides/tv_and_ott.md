@@ -137,7 +137,7 @@ Features include:
 - In-app messages
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 
-For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/).
 
 ### Kindle Fire {#kindle-fire}
 
@@ -151,7 +151,7 @@ Features include:
 - Feature Flags
 - In-app messages
 
-For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/).
 
 ### Android TV {#android-tv}
 
@@ -165,9 +165,9 @@ Features include:
 - In-app messages 
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 - &#42; Push Notifications (Manual Integration Required)
-  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html). You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/) on how to set this up.
+  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html). You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv/) on how to set this up.
 
-For more information, visit the [Android SDK integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+For more information, visit the [Android SDK integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/).
 
 {% alert note %}
 Make sure to create a new Android app in the dashboard for your Android OTT integration.

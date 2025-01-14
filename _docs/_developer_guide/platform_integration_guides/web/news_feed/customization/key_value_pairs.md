@@ -2,7 +2,6 @@
 nav_title: Key-Value Pairs
 article_title: News Feed Key-Value Pairs for Web
 platform: Web
-page_order: 1
 page_type: reference
 description: "This article covers how to use key-value pairs in your News Feeds cards via the Braze SDK."
 channel: news feed

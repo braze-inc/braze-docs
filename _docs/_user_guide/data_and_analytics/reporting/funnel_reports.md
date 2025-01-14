@@ -3,7 +3,7 @@ nav_title: Funnel Reports
 article_title: Funnel Reports for Campaigns and Canvases
 page_order: 6
 page_type: reference
-description: "This reference article covers the benefits of funnel reports, how to set them up, and how to interpret your report."
+description: "This page covers the benefits of funnel reports, how to set them up, and how to interpret your report."
 tool: Reports
 ---
 
@@ -15,7 +15,7 @@ If your campaign or Canvas uses a control group or multiple variants, you can un
 
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 
-## Funnel report setup
+## Setting up funnel reports
 
 ![Funnel Report 5][5]{: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
@@ -24,7 +24,7 @@ You can run funnel reports for existing active campaigns and Canvases. These rep
 Funnel reporting is available from the following locations in the dashboard:
 
 - The **Campaign Analytics** page for a specific campaign
-- The **Canvas Details** page for a specific Canvas, via the **Analyze Variants** button 
+- The **Canvas Details** page for a specific Canvas, by selecting the **Analyze Variants** button 
 
 {% alert important %}
 Funnel Reports are not available for [API campaigns]({{site.baseurl}}/api/api_campaigns/).
@@ -32,10 +32,10 @@ Funnel Reports are not available for [API campaigns]({{site.baseurl}}/api/api_ca
 
 ### Step 1: Select a date range
 
-You can select a time frame for your report (within the past 6 months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the following example, your funnel would look for users who received this campaign or Canvas in the last 7 days and completed the funnel within 3 days.
+You can select a time frame for your report (within the past six months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the following example, your funnel would look for users who received this campaign or Canvas in the last seven days and completed the funnel within three days.
 
 {% alert note %}
-If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is counted as calendar days in the company time zone.
+If you set the window to complete the funnel to one day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is counted as calendar days in the company time zone.
 {% endalert %}
 
 ![Funnel Report 5][6]{: style="max-width:90%;"}
@@ -52,7 +52,7 @@ For example, if you select a 14-day report time window, followed by the events `
 
 As another example, you may want to see the percentage of users that converted on an email after clicking on it. To calculate this, you could create a report where the second event is clicking your email and the third event is performing your conversion event.
 
-After clicking **Build Report**, the funnel report may take several minutes to generate. During this time, you can navigate away from the report to other pages in the dashboard. You'll receive an in-dashboard notification when your report is ready.
+After selecting **Build Report**, the funnel report may take several minutes to generate. During this time, you can navigate away from the report to other pages in the dashboard. You'll receive an in-dashboard notification when your report is ready.
 
 ## Interpreting your funnel report
 

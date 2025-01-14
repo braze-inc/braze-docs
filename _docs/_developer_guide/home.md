@@ -9,34 +9,34 @@ description: "This landing page is where developers can find all the integration
 
 guide_featured_title: "Featured integrations"
 guide_featured_list:
-- name: Android and FireOS
+- name: Android
   image: /assets/img/braze_icons/android.svg
-  link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+  link: /docs/developer_guide/platform_integration_guides/android/sdk_integration/
   nav_link: android
 - name: Swift
-  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platform_integration_guides/swift/sdk_integration/
   image: /assets/img/braze_icons/swift.svg
 - name: Web
-  link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+  link: /docs/developer_guide/platform_integration_guides/web/sdk_integration/
   image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
-  - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+  - name: FireOS
+    link: /docs/developer_guide/platform_integration_guides/fireos/sdk_integration
+    image: /assets/img/fire-os-bw.png
+    nav_link: cordova
+  - name: Cordova
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/
     image: /assets/img/cordova.png
     nav_link: cordova
-  - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    image: /assets/img/cordova.png
-    nav_link: cordova
-  - name: Flutter Android and iOS
+  - name: Flutter
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    link: /docs/developer_guide/platform_integration_guides/react_native/sdk_integration/
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
   - name: Unity Android
