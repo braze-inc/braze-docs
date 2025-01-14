@@ -202,8 +202,7 @@
 						<div class="hit-subname">${tags_list}</div>
 					</div>
 					${article_path}
-					<div class="hit-description" style="display:none;">${ content }</div>
-					${snippet ? `<div class="hit-snippet"> ${ snippet }</div>` : ''}
+					${snippet ?`<div class="hit-snippet">${snippet}</div>` : `<div class="hit-description">${content}</div>`}
 				</div>
 			</a>
 			<hr />
