@@ -186,24 +186,53 @@ If your application is already using another `UnityAppController` subclass, you 
 
 ## Customizing the Unity package
 
-You can choose to customize and export the Braze Unity package using the provided scripts.
+### Step 1: Clone the repository
 
-1. Launch Unity and keep it running while completing the following steps. 
-2. In your terminal, clone the [Braze Unity SDK GitHub repository](https://github.com/braze-inc/braze-unity-sdk), then navigate to that folder:
+In your terminal, clone the [Braze Unity SDK GitHub repository](https://github.com/braze-inc/braze-unity-sdk), then navigate to that folder:
 
-	```bash
-	git clone git@github.com:braze-inc/braze-unity-sdk.git
-    cd ~/PATH/TO/DIRECTORY/braze-unity-sdk
-	```
+{% tabs local %}
+{% tab MacOS %}
+```bash
+git clone git@github.com:braze-inc/braze-unity-sdk.git
+cd ~/PATH/TO/DIRECTORY/braze-unity-sdk
+```
+{% endtab %}
 
-3. In root, run the `generate_package.sh` located in the `scripts` directory. Packages will be exported to `braze-unity-sdk/unity-package/`.
+{% tab Windows Powershell %}
+```powershell
+git clone git@github.com:braze-inc/braze-unity-sdk.git
+cd C:\PATH\TO\DIRECTORY\braze-unity-sdk
+```
+{% endtab %}
+{% endtabs %}
 
-	```bash
-	./scripts/generate_package.sh
-	```
-5. In Unity, import the desired package into your Unity project by navigating to **Assets** > **Import Package** > **Custom Package**.
-6. If there's any files you don't want want to import, deselect them now.
-7. To customize the exported Unity package, in `Assets/Editor/Build.cs`, edit both `generate_package.sh` and the export script located at .
+### Step 2: Export packages from repository
+
+First, launch Unity and keep it running in the background. Then, in the repository root, run the following command to export the relevant packages to `braze-unity-sdk/unity-package/`.
+
+{% tabs local %}
+{% tab MacOS %}
+```bash
+/Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -nographics -projectPath "$(pwd)" -executeMethod Appboy.Editor.Build.ExportAllPackages -quit
+```
+{% endtab %}
+
+{% tab Windows Powershell %}
+```powershell
+"%UNITY_PATH%" -batchmode -nographics -projectPath "%PROJECT_ROOT%" -executeMethod Appboy.Editor.Build.ExportAllPackages -quit	
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+If you experience any issues after running these commands, refer to [Unity: Command Line Arguments](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
+{% endalert %}
+
+### Step 3: Import packages into Unity
+
+1. In Unity, import the desired package into your Unity project by navigating to **Assets** > **Import Package** > **Custom Package**.
+2. If there's any files you don't want want to import, deselect them now.
+3. To customize the exported Unity package, in `Assets/Editor/Build.cs`, edit both `generate_package.sh` and the export script located at .
 
 ## Switch to an automated integration (Swift only)
 
