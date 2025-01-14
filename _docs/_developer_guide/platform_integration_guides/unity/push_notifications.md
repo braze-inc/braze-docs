@@ -287,7 +287,16 @@ public class MainMenu : MonoBehaviour {
 {% endtab %}
 
 {% tab Amazon Device Messaging %}
-TODO.
+By updating your `AndroidManifest.xml` in the [previous step](#step-21-update-androidmanifestxml), push listeners were automatically set up when you added the following lines. So, no further setup is required.
+
+```xml
+<action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+```
+
+{% alert note %}
+To learn more about ADM push listeners, see [Amazon: Integrate Amazon Device Messaging](https://developer.amazon.com/docs/video-skills-fire-tv-apps/integrate-adm.html).
+{% endalert %}
 {% endtab %}
 {% endtabs %}
 
