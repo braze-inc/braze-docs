@@ -19,7 +19,7 @@ Execute o seguinte comando para começar:
 $ sudo gem install cocoapods
 ```
 
-Se você tiver problemas com o CocoaPods, consulte o [Guia de solução de problemas do CocoaPods do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html "Guia de solução de problemas").
+Se você tiver problemas com o CocoaPods, consulte o [](http://guides.cocoapods.org/using/troubleshooting.html "Guia de solução de problemas do CocoaPods").
 
 ## Etapa 2: Construindo o arquivo de pod
 
