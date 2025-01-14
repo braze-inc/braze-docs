@@ -56,7 +56,7 @@ El comportamiento que se documenta a continuación es válido para todas las car
 El punto final no garantiza la secuencia de actualización de los objetos de `merge_updates`.
 {% endalert %}
 
-Este punto final fusionará cualquiera de los siguientes campos si no se encuentran en el usuario de destino:
+Este punto final fusionará los siguientes campos si no se encuentran en el usuario de destino.
 
 - Nombre
 - Apellido
@@ -88,8 +88,7 @@ Este punto final fusionará cualquiera de los siguientes campos si no se encuent
 - Datos de interacción de la campaña (Braze elegirá los campos de fecha más recientes)
 - Resúmenes del flujo de trabajo (Braze elegirá los campos de fecha más recientes)
 - Historial de interacción de mensajes y mensajería
-
-Los datos de la sesión solo se fusionarán si la aplicación existe en ambos perfiles de usuario.
+- Los datos de la sesión solo se fusionarán si la aplicación existe en ambos perfiles de usuario.
 
 {% alert note %}
 Al fusionar usuarios, el uso del punto final `/users/merge` funciona del mismo modo que el [método `changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
@@ -247,7 +246,7 @@ El código de estado `202` podría devolver el siguiente cuerpo de respuesta.
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulta la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puedas encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
 
 ```json
 {
