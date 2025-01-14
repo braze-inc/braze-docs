@@ -10,18 +10,18 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Atualiza
 ---
 {% api %}
 # Atualizar telas programadas disparadas pela API
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/update
 {% endapimethod %}
 
-> Use esse endpoint para atualizar as telas programadas disparadas pela API que foram criadas no dashboard. 
+> Use esse endpoint para atualizar as telas programadas disparadas pela API que foram criadas no dashboard.
 
 Isso permite que você decida qual ação deve disparar a mensagem a ser enviada. Você pode passar o endereço `trigger_properties` que será modelado na própria mensagem.
 
 Note que, para enviar mensagens com esse ponto de extremidade, você deve ter um ID do Canvas, criado quando você constrói um [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-Qualquer programação substituirá completamente a que você forneceu na solicitação de criação de programação ou em solicitações anteriores de atualização de programação. 
-  - Por exemplo, se você originalmente forneceu `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e, em sua atualização, forneceu `"schedule" : {"time" : "2015-02-20T14:14:47"}`, sua mensagem será enviada no horário fornecido em UTC, e não no fuso local do usuário. 
+Qualquer programação substituirá completamente a que você forneceu na solicitação de criação de programação ou em solicitações anteriores de atualização de programação.
+  - Por exemplo, se você originalmente forneceu `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e, em sua atualização, forneceu `"schedule" : {"time" : "2015-02-20T14:14:47"}`, sua mensagem será enviada no horário fornecido em UTC, e não no fuso local do usuário.
   - Os disparos programados que forem atualizados muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços, de modo que as alterações de último segundo poderão ser aplicadas a todos, alguns ou nenhum dos usuários direcionados.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
@@ -55,10 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Obrigatória|String| Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
+|`canvas_id`|Obrigatória|String| Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Opcional | String | O endereço `schedule_id` a ser atualizado (obtido da resposta para criar cronograma). |
-|`schedule` | Obrigatória | Objeto | Consulte [objeto de programação]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`schedule` | Obrigatória | Objeto | Consulte [objeto de agendamento]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 ```

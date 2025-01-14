@@ -78,8 +78,8 @@ Estos usuarios se han dado de baja automáticamente de todas las notificaciones 
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Rebotes</i>:Contar</li>
-        <li><i>% de rebote</i> o <i>tasa de rebote %</i>: (Envíos - Rebotes) / (Envíos)</li>
+        <li><i>Rebota</i>: Recuento</li>
+        <li><i>% de rebote</i> o <i>tasa de rebote %</i>: (Rebota) / (Envía)</li>
     </ul>
 </span>
 {:/}

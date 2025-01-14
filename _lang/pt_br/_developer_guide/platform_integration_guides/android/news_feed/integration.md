@@ -15,11 +15,9 @@ channel:
 
 > Este artigo de referência aborda diferentes tipos de cartões do Feed de notícias, as diferentes propriedades específicas do cartão disponíveis e um exemplo de integração personalizada para seu aplicativo Android ou FireOS.
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Para saber mais, consulte o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-No Android, o feed de notícias é implementado como um [fragmento](http://developer.android.com/guide/components/fragments.html) disponível no projeto Braze Android UI. Consulte [ a documentação do Google sobre fragmentos ](https://developer.android.com/guide/fragments#Adding " Documentação do Android: Fragmentos ") para obter informações sobre como adicionar um fragmento a uma atividade.
+No Android, o feed de notícias é implementado como um [fragmento](http://developer.android.com/guide/components/fragments.html) disponível no projeto Braze Android UI. Consulte a [documentação do Google sobre fragmentos ](https://developer.android.com/guide/fragments#Adding " Documentação do Android: Fragmentos ") para obter informações sobre como adicionar um fragmento a uma atividade.
 
 A classe `BrazeFeedFragment` será atualizada automaticamente e exibirá o conteúdo do feed de notícias e a análise de dados de uso do registro. Os cartões que podem aparecer no feed de notícias de um usuário são definidos no dashboard do Braze.
 

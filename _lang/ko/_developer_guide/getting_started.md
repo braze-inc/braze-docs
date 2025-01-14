@@ -10,18 +10,24 @@ description: "이 섹션은 귀사와 귀사 마케팅 팀이 Braze를 사용하
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
+  - name: SDK 개요
+    link: /docs/developer_guide/getting_started/sdk_overview/
+    image: /assets/img/braze_icons/edit-04.svg
   - name: 플랫폼 개요
-    link: /docs/developer_guide/platform_wide/getting_started/platform_overview/
+    link: /docs/developer_guide/getting_started/platform_overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: 통합 개요
-    link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
+    link: /docs/developer_guide/getting_started/integration_overview/
     image: /assets/img/braze_icons/chevron-up-double.svg
   - name: 아키텍처 개요
-    link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
+    link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
   - name: 분석 개요
-    link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
+    link: /docs/developer_guide/getting_started/analytics_overview/
     image: /assets/img/braze_icons/check-done-02.svg
+  - name: 사용자 지정 개요
+    link: /docs/developer_guide/getting_started/customization_overview/
+    image: /assets/img/braze_icons/announcement-01.svg
 
 search_rank: 4
 ---

@@ -60,7 +60,7 @@ Se tiver certificados push de desenvolvimento e produção separados, desmarque 
 
 O exemplo de código apropriado deve ser incluído no método delegado `application:didFinishLaunchingWithOptions:` do seu app para que o dispositivo dos seus usuários se registre com APNs. Chame todo o código de integração push na thread principal do app.
 
-Braze também fornece categorias de push padrão para suporte ao botão de ação por push, que devem ser adicionadas manualmente ao seu código de registro de push. Consulte [os botões de ação por push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/) para obter etapas adicionais de integração.
+Braze também fornece categorias de push padrão para suporte ao botão de ação por push, que devem ser adicionadas manualmente ao seu código de registro de push. Consulte os [botões de ação por push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/) para obter etapas adicionais de integração.
 
 {% alert warning %}
 Se você implementou um prompt de push personalizado, conforme descrito em nossas [práticas recomendadas de push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), certifique-se de chamar o seguinte código **toda vez que o aplicativo for executado** após a concessão de permissões de push ao seu aplicativo. **Os apps precisam se registrar novamente no APNs, pois [os tokens de dispositivos podem mudar arbitrariamente](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**

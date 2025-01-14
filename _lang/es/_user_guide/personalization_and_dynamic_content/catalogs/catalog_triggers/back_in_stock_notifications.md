@@ -31,10 +31,11 @@ Siga estos pasos para configurar las notificaciones de agotado en un catálogo e
 2. Seleccione la opción **Volver a existencias**.
 3. Si no se han configurado los ajustes globales de reposición de existencias, se le pedirá que configure los eventos y propiedades personalizados que se utilizarán para activar las notificaciones de reposición de existencias:
     <br> ![Cajón de configuración del catálogo.][2]{: style="max-width:70%;"}
+    - **Catálogo alternativo** Éste es el catálogo que se utilizará para la suscripción de reserva, si no hay ninguna propiedad `catalog_name` presente en el evento personalizado.
     - **Evento personalizado para suscripciones** es el evento personalizado Braze que se utilizará para suscribir a un usuario a las notificaciones de reposición de existencias. Cuando se produzca este evento, se suscribirá el usuario que lo haya realizado.
     - **Evento personalizado para darse de baja** es el evento personalizado Braze que se utilizará para dar de baja a un usuario de las notificaciones de reposición de existencias.
     - **La propiedad del evento ID del artículo** es la propiedad del evento personalizado anterior que se utilizará para determinar el artículo para una suscripción o desuscripción de nuevo en stock. Esta propiedad del evento personalizado debe contener un ID de artículo, que esté presente en un catálogo. El evento personalizado también debe contener una propiedad `catalog_name`, para especificar en qué catálogo se encuentra este artículo.
-    - **Catálogo alternativo** Éste es el catálogo que se utilizará para la suscripción de reserva, si no hay ninguna propiedad `catalog_name` presente en el evento personalizado.
+    
     - Un ejemplo de evento personalizado sería el siguiente
     ```json
     {
@@ -60,7 +61,7 @@ Los desencadenadores de reserva y de bajada de precio utilizan el mismo evento p
 4\. Seleccione **Guardar** y continúe en la página **Configuración** del catálogo.
 5\. Establezca su regla de notificación. Hay dos opciones:
     - **Notificar a todos los usuarios suscritos** notifica a todos los clientes que están esperando cuando el artículo vuelve a estar disponible.
-    - **Notificar a un número determinado de usuarios por un número determinado de minutos** notifica a un número determinado de clientes por tu periodo de notificación configurado. Braze notificará al número especificado de clientes en incrementos hasta que no haya más clientes a los que notificar o hasta que el artículo se agote. El ritmo de notificación no puede superar los 10.000 usuarios por minuto.
+    - **Establecer límites de notificación** notifica a un número determinado de clientes según el periodo de notificación que hayas configurado. Braze notificará al número especificado de clientes en incrementos hasta que no haya más clientes a los que notificar o hasta que el artículo se agote. El ritmo de notificación no puede superar los 10.000 usuarios por minuto.
 6\. Establezca el **campo Inventario en el catálogo**. Este campo del catálogo se utilizará para determinar si el artículo está agotado. El campo debe ser de tipo numérico.
 7\. Selecciona **Guardar configuración**.
 

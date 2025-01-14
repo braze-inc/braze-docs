@@ -16,13 +16,13 @@ description: "Cet article présente en détail l’endpoint Braze Créer un nouv
 /scim/v2/Users
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour créer un nouveau compte utilisateur de tableau de bord en spécifiant l'e-mail, les prénoms et noms de famille, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe). 
+> Utilisez ce point de terminaison pour créer un nouveau compte utilisateur de tableau de bord en spécifiant l'e-mail, les prénoms et noms de famille, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3 {% endapiref %}
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
+Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Vous utiliserez l'origine de votre service comme en-tête de `X-Request-Origin`. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de débit
 
@@ -32,7 +32,7 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```
 ```
 {
@@ -45,6 +45,14 @@ Authorization: Bearer YOUR-REST-API-KEY
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -73,19 +81,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
+| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l'objet utilisateur. |
 | `userName` | Requis | Chaîne de caractères | L’adresse e-mail de l’utilisateur. |
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
-| `department` | Requis | Chaîne de caractères | Chaîne de département valide de la [documentation de chaîne de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Requis | Object JSON | Objet des autorisations comme décrit dans la [documentation de l'objet des autorisations]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `department` | Requis | Chaîne de caractères | Chaîne de [caractères]({{site.baseurl}}/scim_api_appendix/#department-strings) valide du département, tirée de la [documentation sur les chaînes de caractères du département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Facultatif | Object JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-SCIM–TOKEN-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "userName": "user@test.com",
@@ -96,6 +104,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -109,7 +125,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
             } 
         ]
     }
-}
+}'
 ```
 
 ## Réponse
@@ -126,6 +142,43 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role",
+                "roleId": "519dafcdba23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25789fabcded",
+                        "appGroupName": "Some Workspace",
+                        "appGroupPermissions": ["basic_access", "publish_cards"],
+                        "team": [
+                            {
+                                "teamId": "2519dafcdba238ae7",
+                                "teamName": "Some Team",                  
+                                "teamPermissions": ["export_user_data"]
+                            }
+                        ]
+                    } 
+                ]
+            },
+            {
+                "roleName": "Another Test Role",
+                "roleId": "23125dad23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25adfabcded",
+                        "appGroupName": "Production Workspace",
+                        "appGroupPermissionSets": [
+                            {
+                                "appGroupPermissionSetName": "A Permission Set",
+                                "appGroupPermissionSetId": "dfa385109bc38",
+                                "permissions": ["basic_access","publish_cards"]
+                            }
+                        ]
+                    } 
+                ]
+            }
+        ],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
@@ -138,6 +191,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
+            },
+            {
+                "appGroupName": "Other Test Workspace",
+                "appGroupPermissionSets": [
+                    {
+                        "appGroupPermissionSetName":  "Test Permission Set"
+                    }
+                ]
             } 
         ]
     }
@@ -148,18 +209,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 | Paramètre | Type de données | Description |
 | --------- | --------- | ----------- |
-| `schemas` | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
+| `schemas` | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l'objet utilisateur. |
 | `userName` | Chaîne de caractères | L’adresse e-mail de l’utilisateur. |
-| `name` | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
-| `department` | Chaîne de caractères | Chaîne de département valide de la [documentation de chaîne de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Object JSON | Objet des autorisations comme décrit dans la [documentation de l'objet des autorisations]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
+| `name` | Object JSON | Cet objet contient le prénom et le nom de famille de l'utilisateur. |
+| `department` | Chaîne de caractères | Chaîne de [caractères]({{site.baseurl}}/scim_api_appendix/#department-strings) valide du département, tirée de la [documentation sur les chaînes de caractères du département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Object JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
 | `id` | Chaîne de caractères | ID généré par Braze qui est utilisé pour rechercher et gérer les comptes utilisateurs. |
 | `lastSignInAt` | Chaîne de caractères | Date de la dernière connexion réussie en temps UTC. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### États relatifs aux d’erreur
 
-Si un utilisateur avec cette adresse e-mail existe déjà dans Braze, l’endpoint répondra avec :
+Si un utilisateur ayant cette adresse `userName` ou e-mail existe déjà dans Braze, l'endpoint répondra par :
 
 ```json
 HTTP/1.1 409 Conflict
@@ -174,6 +235,3 @@ Content-Type: text/json;charset=UTF-8
 ```
 
 {% endapi %}
-
-
-

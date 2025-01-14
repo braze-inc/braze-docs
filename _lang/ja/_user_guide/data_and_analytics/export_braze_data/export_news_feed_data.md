@@ -12,9 +12,7 @@ hidden: true
 
 # ニュースフィードデータのエクスポート
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 特定のニュースフィードカードのパフォーマンスを分析する場合、パフォーマンスの内訳グラフにある以下のデータをエクスポートできます。
 

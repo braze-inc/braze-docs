@@ -179,6 +179,10 @@ Braze는 예상 사용량보다 더 많은 프로모션 코드를 업로드할 �
 
 메시지에 조건부로 프로모션 코드를 삽입하는 Liquid 로직이 포함된 경우, 메시지에 프로모션 코드가 포함되어 있어야 하는 경우에만 메시지가 취소됩니다. 메시지에 프로모션 코드가 포함되어 있지 않아야 하는 경우 메시지가 정상적으로 전송됩니다.
 
+### 후속 메시지에 사용할 수 있도록 프로모션 코드를 사용자 프로필에 저장하려면 어떻게 해야 하나요?
+
+이후 메시지에서 동일한 프로모션 코드를 참조하려면 코드를 사용자 프로필에 사용자 지정 속성으로 저장해야 합니다. 이는 동일한 캠페인 또는 캔버스 메시지 단계에 [Braze-to-Braze 웹훅을]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) 연결하여 수행할 수 있습니다.
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
