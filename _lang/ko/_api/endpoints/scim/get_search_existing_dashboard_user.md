@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 이메일로 기존 대시보드 사용자 계정 검색 Braze 엔드포인트에 대해 자세히 설명합니다."
+description: "이 기사에서는 이메일 Braze 엔드포인트로 기존 대시보드 사용자 계정을 검색하는 방법에 대한 세부 정보를 설명합니다."
 ---
 
 {% api %}
@@ -15,7 +15,7 @@ description: "이 문서에서는 이메일로 기존 대시보드 사용자 계
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 필터 쿼리 매개 변수에 이메일을 지정하여 기존 대시보드 사용자 계정을 조회할 수 있습니다. 
+> 이 엔드포인트를 사용하여 필터 쿼리 매개변수에 이메일을 지정하여 기존 대시보드 사용자 계정을 조회하십시오. 
 
 쿼리 매개변수가 URL로 인코딩될 때 다음과 같이 읽힙니다:
 
@@ -25,7 +25,7 @@ scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 
 ## 필수 구성 요소
 
-이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 자세한 내용은 [자동 사용자 프로비저닝]({{site.baseurl}}/scim/automated_user_provisioning/)을 참조하세요.
+이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 서비스 출처를 `X-Request-Origin` 헤더로 사용합니다. 자세한 내용은 [자동화된 사용자 프로비저닝을]({{site.baseurl}}/scim/automated_user_provisioning/) 참조하세요.
 
 ## 사용량 제한
 
