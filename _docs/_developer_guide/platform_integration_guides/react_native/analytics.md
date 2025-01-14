@@ -7,7 +7,7 @@ description: "This article covers how to set up and track basic analytics like s
 
 ---
  
-# React Native Analytics
+# Analytics
 
 > This article covers how to set up and track basic analytics in your React Native app. To learn more about Braze analytics and what is already tracked by default, see [Analytics Overview]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/). We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
