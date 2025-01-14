@@ -39,9 +39,9 @@ Braze를 사용하여 iOS 푸시 알림을 보내려면 먼저 Apple에서 제�
 
 ### 2단계: 푸시 기능 사용
 
-Xcode에서 **서명 및 기능** 창을 사용하여 푸시 알림 기능을 기본 앱 대상에 추가합니다.
+Xcode에서 기본 앱 대상의 **서명 및 기능** 섹션으로 이동하여 푸시 알림 기능을 추가합니다.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Xcode 프로젝트의 '서명 및 기능' 섹션]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## 자동 푸시 통합
 

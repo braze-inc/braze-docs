@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: dev_guide
 
-description: "이 랜딩 페이지는 Braze 이메일 목록과 주소 엔드포인트를 설명하고 나열합니다."
+description: "이 랜딩 페이지는 Braze 이메일 목록 및 주소 엔드포인트를 설명하고 나열합니다."
 page_type: landing
 
 guide_top_header: "이메일 목록 및 주소 엔드포인트"
