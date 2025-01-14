@@ -24,5 +24,8 @@ guide_featured_list:
   - name: Deliverability Center
     link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
+  - name: API Usage Dashboard
+    link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
+    image: /assets/img/braze_icons/trend-up-01.svg
 ---
 <br><br>
