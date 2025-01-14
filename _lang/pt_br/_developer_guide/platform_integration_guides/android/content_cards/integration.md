@@ -19,7 +19,7 @@ search_rank: 1
 Quando estiver pronto para começar a implementação e a personalização, consulte o [Guia de personalização do cartão de conteúdo]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 {% endalert %}
 
-No Android, o feed de Cartões de Conteúdo é implementado como um [fragmento](https://developer.android.com/guide/components/fragments.html) disponível no projeto de UI do Braze para Android. Consulte [a documentação do FragmentsAndroid do Google](https://developer.android.com/guide/fragments#Adding ": Fragmentos") para obter informações sobre como adicionar um fragmento a uma atividade.
+No Android, o feed de Cartões de Conteúdo é implementado como um [fragmento](https://developer.android.com/guide/components/fragments.html) disponível no projeto de UI do Braze para Android. Consulte a [documentação do Fragments Android do Google](https://developer.android.com/guide/fragments#Adding ": Fragments") para obter informações sobre como adicionar um fragmento a uma atividade.
 
 A classe [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) será atualizada automaticamente e exibirá o conteúdo dos cartões de conteúdo e a análise de dados de uso do registro. Os cartões que podem aparecer no `ContentCards` de um usuário são criados no dashboard do Braze.
 

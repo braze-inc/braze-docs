@@ -90,7 +90,7 @@ Siga estas etapas para testar um cartão de conteúdo de amostra.
 
 ![Uma campanha do Braze Content Card mostrando que você pode adicionar seu próprio ID de usuário como destinatário de teste para testar seu Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
-Para obter mais detalhes sobre cada plataforma, siga os guias [de integração do Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) ou [do iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui).
+Para obter mais detalhes sobre cada plataforma, siga os guias de [integração do Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) ou [integração do iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui).
 
 ## Suporte a GIFs
 

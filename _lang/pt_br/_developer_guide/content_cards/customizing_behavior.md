@@ -56,7 +56,7 @@ O exemplo à direita mostra um feed com uma lista híbrida de itens que são pre
 
 ### Pares de valores-chave disparados pela API
 
-[As campanhas disparadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) são uma boa estratégia a ser empregada quando os valores de um cartão dependem de fatores externos para determinar o conteúdo a ser exibido para o usuário. Por exemplo, para exibir conteúdo suplementar, defina pares de valores-chave usando o Liquid. É preciso saber qual é o `class_type` no momento da configuração.
+As [campanhas disparadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) são uma boa estratégia a ser empregada quando os valores de um cartão dependem de fatores externos para determinar o conteúdo a ser exibido para o usuário. Por exemplo, para exibir conteúdo suplementar, defina pares de valores-chave usando o Liquid. É preciso saber qual é o `class_type` no momento da configuração.
 
 ![Os pares de valores-chave para o caso de uso de cartões de conteúdo suplementar. Neste exemplo, diferentes aspectos do cartão, como "tile_id", "tile_deeplink" e "tile_title", são definidos usando o Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 

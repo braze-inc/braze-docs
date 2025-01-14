@@ -28,7 +28,7 @@ Atualmente, a Braze oferece os seguintes tipos de mensagens padrão no app:
 
 Cada tipo de mensagem no app é personalizável em termos de conteúdo, imagens, ícones, ações de clique, análise de dados, exibição e entrega.
 
-Todas as mensagens no app herdam seu protótipo de [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)que define o comportamento básico e as características de todas as mensagens no app. As subclasses prototípicas são [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html), e [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
+Todas as mensagens no app herdam seu protótipo de [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html), que define o comportamento básico e as características de todas as mensagens no app. As subclasses prototípicas são [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html), e [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
 
 ## Comportamentos esperados por tipo de mensagem
 
