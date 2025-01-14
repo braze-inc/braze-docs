@@ -7,4 +7,4 @@ description: "Este artículo de referencia cubre el panel de uso de mensajes, do
 tool: Dashboard
 ---
 
-{% multi_lang_include uso_del_mensaje.md %}
+{% multi_lang_include message_usage.md %}
