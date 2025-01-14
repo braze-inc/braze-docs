@@ -130,7 +130,7 @@ Use o SDK Braze Fire OS para integrar com dispositivos Amazon Fire TV.
 Os recursos incluem:
 
 - Coleta e análise de dados para engajamento entre canais
-- Notificações por push (conhecidas como ["Heads Up Notifications")](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup)
+- Notificações por push (conhecidas como ["Heads Up Notifications"](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup))
   - A prioridade deve ser definida como "ALTA" para que estes apareçam. Todas as notificações aparecem no menu de configurações do Fire TV.
 - Cartões de conteúdo
 - Feature Flags
@@ -269,7 +269,7 @@ Com a Headless UI, a Braze fornecerá um modelo de dados, como JSON, que seu app
 
 **SWIFT SDK**
 - [Customização de mensagem no app](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
-- [Aplicativo de amostra de interface do usuário sem cabeça](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
+- [App de amostra de Headless UI](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
 - [Personalização de Cartões de Conteúdo](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **SDK para Web**
