@@ -106,7 +106,7 @@ case $1 in
         "$ULINKS" "$2"
         # rm "$REDIRECT_MATCHES"
         ;;
-    mredirects
+    mredirects)
         "$MREDIRECTS"
         ;;
     lredirects)
