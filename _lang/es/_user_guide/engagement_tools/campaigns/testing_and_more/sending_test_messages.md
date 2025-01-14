@@ -116,9 +116,7 @@ Después de crear tu webhook, puedes hacer un envío de prueba para comprobar la
 {% endtab %}
 {% tab Canal de noticias %}
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta News Feed que se pasen a nuestro canal de mensajería Content Cards: es más flexible, personalizable y fiable. Consulta la [guía de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) migración para obtener más información.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Para enviar una tarjeta de noticias de prueba es necesario configurar un segmento de prueba y enviar una campaña de prueba.
 
