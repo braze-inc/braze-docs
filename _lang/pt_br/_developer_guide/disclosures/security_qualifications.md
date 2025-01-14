@@ -23,9 +23,9 @@ Para saber mais sobre isso, dê uma olhada no [Braze Perspectives](https://www.b
 
 ![Gráfico de certificação ISO]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze tem certificação de conformidade com [ISO 27001](https://www.iso.org/isoiec-27001-information-security.html) a partir de 18 de dezembro de 2018, e renovada a partir de 20 de agosto de 2024. Expira em 15 de dezembro de 2027._
+_Braze tem certificação de conformidade com [ISO 27001](https://www.iso.org/isoiec-27001-information-security.html) desde 18 de dezembro de 2018, e renovada a partir de 20 de agosto de 2024. Expira em 15 de dezembro de 2027._
 
-Qualquer terceiro que deseje verificar independentemente o status da certificação da Braze pode ver o [Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8) ou [veja nosso certificado aqui]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf).
+Qualquer terceiro que deseje verificar de forma independente o status da certificação da Braze poderá consultar o [diretório de certificação Schellman](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8) ou [consultar nossa certificação aqui]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf).
 
 ## Conformidade com o SOC 2
 
@@ -33,7 +33,7 @@ Qualquer terceiro que deseje verificar independentemente o status da certificaç
 
 _Data/Período da última revisão: 1 de julho de 2023 a 30 de junho de 2024_
 
-O processo de brasagem concluiu com sucesso o exame SOC 2 Tipo 2 para _Segurança_ e _Disponibilidade_, realizado pela firma de contabilidade independente [Schellman & Company, LLC](https://www.schellman.com/).
+A Braze concluiu com êxito o processo de verificação da conformidade com o padrão SOC 2 Tipo 2 para _segurança_ e _disponibilidade_, realizado pela empresa independente de CPA [Schellman & Company, LLC](https://www.schellman.com/).
 
 ## HIPAA
 
