@@ -40,7 +40,7 @@ description: "이 문서에서는 사용자 식별 Braze 엔드포인트에 대�
 
 ## 사용량 제한
 
-{% multi_lang_include rate_limits.md 엔드포인트='사용자가 식별' %}
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
 
 ## 요청 본문
 
