@@ -1382,4 +1382,9 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/overview'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/roku/sdk_integration';
+
 // validurls['OLD'] = 'NEW';
