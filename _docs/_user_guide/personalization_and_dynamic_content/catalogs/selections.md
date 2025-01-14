@@ -28,7 +28,7 @@ To create a selection, do the following.
 1. Go to **Catalogs** and select your catalog from the list.
 2. Select the **Selection** tab and click **Create Selection**.
 3. Give your selection a name and optional description.
-4. For **Filter Field**, select the catalog column you want to filter by. String fields with more than 1,000 characters cannot be selected for filters.
+4. For **Filter Field**, select the catalog column you want to filter by. String fields with more than 1,000 characters can't be selected for filters.
 5. Finish defining your filter criteria by selecting the relevant operator (for example, "equals" or "does not equal") and attribute.
 6. In the **Sort type** section, determine how results are sorted. By default, results are returned in no particular order. To specify sorting by a specific field, turn off **Randomize Sort Order** and specify the **Sort Field** and **Sort Order** (ascending or descending).
 7. In the **Results limit** section, enter the results (up to 50).
