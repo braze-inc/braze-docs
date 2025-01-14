@@ -1387,7 +1387,6 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_set
 validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/other_integrations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 
-// validurls['OLD'] = 'NEW';
 validurls['/docs/user_guide/data_and_analytics'] = '/docs/user_guide/analytics';
 validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/analytics/catalogs';
 validurls['/docs/user_guide/data_and_analytics/data_centers'] = '/docs/user_guide/data/data_centers/';
@@ -1557,3 +1556,6 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/language_cod
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_import'] = '/docs/user_guide/data/user_data_collection/user_import';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/user_data_collection/user_profile_lifecycle';
+
+// validurls['OLD'] = 'NEW';
+
