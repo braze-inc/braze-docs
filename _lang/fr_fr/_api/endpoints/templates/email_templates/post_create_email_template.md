@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mod
 
 Ces modèles seront disponibles sur la page **Modèles et médias.**  La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
 
-Le statut de l’abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré via Braze à l’aide d’une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
+L'état de l'abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré avec Braze à l'aide d'une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
