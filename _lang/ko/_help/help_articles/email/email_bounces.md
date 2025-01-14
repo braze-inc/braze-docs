@@ -13,13 +13,13 @@ channel: email
 
 ## 하드 바운스
 
-{% multi_lang_include metrics.md metric='하드 바운스' %}
+{% multi_lang_include metrics.md metric='Hard Bounce' %}
 
 자세한 내용은 [하드 바운스를]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#hard-bounce) 참조하세요.
 
 ## 소프트 바운스
 
-{% multi_lang_include metrics.md metric='소프트 바운스' %} 
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
 이메일이 소프트바운스되면 일반적으로 72시간 이내에 재시도하지만, 재시도 횟수는 수신자마다 다릅니다.
 

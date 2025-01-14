@@ -137,7 +137,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `invalid-ids` | Os IDs de itens só podem conter letras, números, hifens e underscores. |
 | `invalid-fields` | Confirme se todos os campos que está enviando na solicitação de API já existem no catálogo. Isso não está relacionado ao campo ID mencionado no erro. |
 | `invalid-keys-in-value-object` | As chaves de objeto do item não podem incluir `.` ou `$`. |
-| `items-missing-ids` | Há itens que não têm IDs de item. Verifique se cada item tem um ID de item. |
+| `items-missing-ids` | Alguns itens não têm IDs de item. Verifique se cada item tem um ID de item. |
 | `item-array-invalid` | `items` deve ser um vetor de objetos. |
 | `items-too-large` | Os valores dos itens não podem exceder 5.000 caracteres. |
 | `request-includes-too-many-items` | Sua solicitação tem muitos itens. O limite de itens por solicitação é de 50. |

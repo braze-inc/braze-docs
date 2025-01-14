@@ -177,10 +177,6 @@ Liquid currently can't be used inside catalogs. If Liquid personalization is lis
 
 Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
 
-{% alert important %}
-Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined in Liquid earlier in the message and before the templating in order to render the Liquid properly. If the `:rerender` flag isn't provided, it will render the raw Liquid content.
 
 For example, if a catalog named "Messages" has an item with this Liquid:

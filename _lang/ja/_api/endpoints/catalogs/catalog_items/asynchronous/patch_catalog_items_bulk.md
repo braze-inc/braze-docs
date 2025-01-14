@@ -137,7 +137,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 | `invalid-ids` | 項目 ID には、英字、数字、ハイフン、アンダースコアのみを使用できます。 |
 | `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |
 | `invalid-keys-in-value-object` | 項目オブジェクトのキーに `.` または `$` を含めることはできません。 |
-| `items-missing-ids` | アイテムIDを持たないアイテムがある。各項目が項目 ID を持っていることを確認します。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目が項目 ID を持っていることを確認します。 |
 | `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
 | `items-too-large` | 項目値は5000 文字を超えることはできません。 |
 | `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |

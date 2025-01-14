@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "이 문서에서는 글로벌 컨트롤 그룹 Braze 엔드포인트의 사용자 내보내기에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 글로벌 제어 그룹 Braze 엔드포인트의 사용자 내보내기에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 글로벌 컨트롤 그룹 Braze 엔드포인�
 /users/export/global_control_group
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 글로벌 컨트롤 그룹 내의 모든 사용자를 내보낼 수 있습니다.
+> 이 엔드포인트를 사용하여 글로벌 제어 그룹 내의 모든 사용자를 내보낼 수 있습니다.
 
 사용자 데이터는 줄 바꿈으로 구분된 열러 사용자 JSON 객체 파일로 내보내집니다(예: 한 줄에 하나의 JSON 객체). 파일이 생성될 때마다 글로벌 제어 그룹의 모든 사용자가 포함됩니다. Braze는 사용자가 글로벌 컨트롤 그룹에서 추가 및 제거된 시점에 대한 기록을 저장하지 않습니다.
 
@@ -30,13 +30,13 @@ description: "이 문서에서는 글로벌 컨트롤 그룹 Braze 엔드포인�
 
 ## 자격 증명 기반 응답 세부 정보
 
-Braze에 [S3][1] 또는 [Azure][2] 자격 증명을 추가한 경우, 각 파일은 버킷에 `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`과 같은 키 형식의 ZIP 파일로 업로드됩니다. Azure를 사용하는 경우, Braze의 Azure 파트너 개요 페이지에서 **기본 데이터 내보내기 대상으로** 설정 확인란이 선택되어 있는지 확인하세요. 일반적으로 처리를 최적화하기 위해 사용자 5,000명당 1개의 파일을 생성합니다. 워크스페이스큰 내에서 더 작은 세그먼트를 내보내면 파일이 여러 개 생성될 수 있습니다. 그런 다음 파일을 추출하고 필요한 경우 모든 `json` 파일을 단일 파일로 연결할 수 있습니다. `gzip`의 `output_format`을 지정하면 파일 확장자가 `.zip` 대신 `.gz`가 됩니다.
+Braze에 [S3][1] 또는 [Azure][2] 자격 증명을 추가한 경우, 각 파일은 버킷에 `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` 와 같은 키 형식의 ZIP 파일로 업로드됩니다. Azure를 사용하는 경우, Braze의 Azure 파트너 개요 페이지에서 **이것을 기본 데이터 내보내기 대상으로 설정** 확인란이 선택되어 있는지 확인하세요. 일반적으로 처리를 최적화하기 위해 사용자 5,000명당 1개의 파일을 생성합니다. 큰 작업 공간 내에서 작은 세그먼트를 내보내면 여러 개의 파일이 생성될 수 있습니다. 그런 다음 파일을 추출하고 필요한 경우 모든 `json` 파일을 하나의 파일로 연결할 수 있습니다. `gzip`의 `output_format`을 지정하면 파일 확장자가 `.zip` 대신 `.gz`가 됩니다.
 
 {% details ZIP에 대한 내보내기 경로 분석 %}
 **ZIP 형식:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
-**ZIP 예:**
+**ZIP 예시:**
 `braze.docs.bucket/segment-export/abc56c0c-rd4a-pb0a-870pdf4db07q/2019-04-25/d9696570-dfb7-45ae-baa2-25e302r2da27-1556044807/114f0226319130e1a4770f2602b5639a.zip`
 
 | 등록정보 | 세부 정보 | 예제에서는 다음과 같이 표시됩니다. |
@@ -54,11 +54,11 @@ Braze에 [S3][1] 또는 [Azure][2] 자격 증명을 추가한 경우, 각 파일
 
 이 엔드포인트를 사용하여 내보내기에 대한 자체 버킷 정책을 적용하려면 자체 S3 또는 Azure 자격 증명을 설정할 것을 강력히 권장합니다. 클라우드 스토리지 자격 증명을 제공하지 않은 경우 요청에 대한 응답으로 모든 사용자 파일이 포함된 ZIP 파일을 다운로드할 수 있는 URL이 제공됩니다. URL은 내보내기가 준비된 후에만 유효한 위치가 됩니다.
 
-클라우드 스토리지 자격 증명을 제공하지 않으면 이 엔드포인트에서 내보낼 수 있는 데이터의 양에 제한이 있다는 점에 유의하세요. 내보내는 필드와 사용자 수에 따라 파일 크기가 너무 크면 파일 전송에 실패할 수 있습니다. 가장 좋은 방법은 `fields_to_export`를 사용하여 내보낼 필드를 지정하고 전송 크기를 낮추기 위해 필요한 필드만 지정하는 것입니다. 파일 생성 시 오류가 발생하면 무작위 버킷 번호를 기준으로 사용자 기반을 더 많은 세그먼트로 나누는 것을 고려해 보세요(예: 무작위 버킷 번호가 1,000 미만 또는 1,000~2,000 사이인 세그먼트 생성).
+클라우드 스토리지 자격 증명을 제공하지 않으면 이 엔드포인트에서 내보낼 수 있는 데이터의 양에 제한이 있다는 점에 유의하세요. 내보내는 필드와 사용자 수에 따라 파일 크기가 너무 크면 파일 전송이 실패할 수 있습니다. 가장 좋은 방법은 `fields_to_export` 을 사용하여 내보낼 필드를 지정하고 전송 크기를 낮추기 위해 필요한 필드만 지정하는 것입니다. 파일 생성 시 오류가 발생하면 무작위 버킷 번호를 기준으로 사용자 기반을 더 많은 세그먼트로 나누는 것을 고려해 보세요(예: 무작위 버킷 번호가 1,000 미만 또는 1,000~2,000 사이인 세그먼트 생성).
 
-두 시나리오 모두 내보내기가 준비되면 선택 사항으로 알림을 받으려면 `callback_endpoint`를 제공할 수 있습니다. `callback_endpoint`가 제공되면 다운로드가 준비되었을 때 제공된 주소로 게시 요청을 보냅니다. 게시물의 본문은 "성공":true입니다. Braze에 클라우드 스토리지 자격 증명을 추가하지 않은 경우, 글 본문에 다운로드 URL이 값으로 포함된 `url` 속성이 추가로 표시됩니다.
+두 시나리오 모두 선택적으로 내보내기가 준비되면 알림을 받으려면 `callback_endpoint` 을 입력할 수 있습니다. `callback_endpoint` 주소가 제공된 경우 다운로드가 준비되면 제공된 주소로 우편 요청을 보내드립니다. 게시물의 본문은 "성공":true입니다. Braze에 클라우드 스토리지 자격 증명을 추가하지 않은 경우, 글 본문에 다운로드 URL이 값으로 포함된 `url` 속성이 추가로 표시됩니다.
 
-사용자 기반이 클수록 내보내기 시간이 길어집니다. 예를 들어 사용자가 2,000만 명인 앱은 한 시간 이상 걸릴 수 있습니다.
+사용자 기반이 클수록 내보내기 시간이 길어집니다. 예를 들어 사용자가 2천만 명인 앱의 경우 1시간 이상 걸릴 수 있습니다.
 
 ## 요청 본문
 
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-개별 사용자 지정 속성은 내보낼 수 없습니다. 그러나 모든 커스텀 속성은 fields_to_export 배열에 custom_attributes를 포함시켜 내보낼 수 있습니다(예: `['first_name', 'email', 'custom_attributes']`).
+개별 사용자 지정 속성은 내보낼 수 없습니다. 그러나 모든 사용자 정의 속성은 fields_to_export 배열에 custom_attributes를 포함시켜 내보낼 수 있습니다(예: `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## 요청 매개변수
@@ -102,7 +102,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 
 ## 내보낼 필드
 
-다음은 유효한 `fields_to_export`의 목록입니다. `fields_to_export`를 사용하여 반환되는 데이터를 최소화하면 이 API 엔드포인트의 응답 시간을 개선할 수 있습니다.
+다음은 유효한 `fields_to_export` 목록입니다. `fields_to_export`를 사용하여 반환되는 데이터를 최소화하면 이 API 엔드포인트의 응답 시간을 개선할 수 있습니다.
 
 | 내보낼 필드 | 데이터 유형 | 설명 |
 |---|---|---|
@@ -116,7 +116,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 | `created_at` | 문자열 | 사용자 프로필이 생성된 날짜와 시간(ISO 8601 형식)입니다. |
 | `custom_attributes` | 객체 | 이 사용자에 대한 사용자 지정 속성 키-값 쌍입니다. |
 | `custom_events` | 배열 | 지난 90일 동안 이 사용자에 의해 발생한 사용자 지정 이벤트입니다. |
-| `devices` | 배열 | 플랫폼에 따라 다음을 포함할 수 있는 사용자 디바이스에 대한 정보입니다:<br><br>- `model`: 기기의 모델 이름<br>- `os`: 기기의 운영 체제<br>- `carrier`: 디바이스의 서비스 통신사(가능한 경우)<br>- `idfv`: (iOS) Braze 기기 식별자, 공급업체의 Apple 식별자(있는 경우)<br>- `idfa`: (iOS) 광고용 식별자(있는 경우)<br>- `device_id`: (Android) Braze 기기 식별자<br>- `google_ad_id`: (Android) Google Play 광고 식별자(있는 경우)<br>- `roku_ad_id`: (Roku) Roku 광고 식별자<br>- `ad_tracking_enabled`: 기기에서 광고 추적이 활성화된 경우 참 또는 거짓일 수 있습니다. |
+| `devices` | 배열 | 플랫폼에 따라 다음을 포함할 수 있는 사용자 디바이스에 대한 정보입니다:<br><br>- `model`: 디바이스 모델명<br>- `os`: 디바이스의 운영 체제<br>- `carrier`: 디바이스의 서비스 통신사(가능한 경우)<br>- `idfv`: (iOS) Braze 장치 식별자, 공급업체용 Apple 식별자(있는 경우)<br>- `idfa`: (iOS) 광고용 식별자(있는 경우)<br>- `device_id`: (Android) Braze 디바이스 식별자<br>- `google_ad_id`: (Android) Google Play 광고 식별자(있는 경우)<br>- `roku_ad_id`: (로쿠) 로쿠 광고 식별자<br>- `ad_tracking_enabled`: 기기에서 광고 추적이 활성화된 경우 참 또는 거짓일 수 있습니다. |
 | `dob` | 문자열 | 사용자의 생년월일 형식 `YYYY-MM-DD`. |
 | `email` | 문자열 | 사용자의 이메일 주소. |
 | `external_id` | 문자열 | 식별된 사용자를 위한 고유 사용자 식별자입니다. |

@@ -35,7 +35,7 @@ Hightouch セグメントを使用するには、Braze キャンペーンまた�
 
 ## ユーザーマッチング
 
-識別されたユーザーは、`external_id` または`alias` のどちらかによって照合することができる。匿名ユーザーは、`device_id` 。元々匿名ユーザーとして作成された識別子ユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければならない。
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。
 
 [1]: https://hightouch.io
 [6]: {% image_buster /assets/img/hightouch/data_import_key.png %}

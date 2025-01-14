@@ -9,13 +9,13 @@ tool: Currents
 search_rank: 7
 ---
 
-Póngase en contacto con su representante de Braze o abra un [ticket de soporte]({{site.baseurl}}/braze_support/) si necesita acceder a derechos de eventos adicionales. Si no encuentra lo que necesita en este artículo, consulte nuestra [Biblioteca de eventos de compromiso de mensajes]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) o nuestros [ejemplos de datos de muestra Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Póngase en contacto con su representante de Braze o abra un [ticket de soporte]({{site.baseurl}}/braze_support/) si necesita acceder a derechos de eventos adicionales. Si no encuentras lo que necesitas en esta página, consulta nuestra [Biblioteca de Eventos de Interacción con Mensajes]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) o nuestros [ejemplos de datos de muestra Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explicación del comportamiento del cliente y de la estructura de eventos del usuario y valores de la plataforma %}
 
 ### Estructura del evento
 
-Este desglose del comportamiento del cliente y de los eventos del usuario muestra qué tipo de información se incluye generalmente en un comportamiento del cliente o en un evento del usuario. Con una sólida comprensión de sus componentes, sus desarrolladores y su equipo de estrategia de inteligencia empresarial pueden utilizar los datos de eventos entrantes de Currents para elaborar informes basados en datos, gráficos y aprovechar otras valiosas métricas de datos.
+Este desglose del comportamiento del cliente y de los eventos del usuario muestra qué tipo de información se incluye generalmente en un comportamiento del cliente o en un evento del usuario. Con una sólida comprensión de sus componentes, tus desarrolladores y el equipo de estrategia de inteligencia empresarial pueden utilizar los datos de eventos Currents entrantes para elaborar informes y gráficos basados en datos, y aprovechar otras valiosas métricas de datos.
 
 ![Desglose de un evento de usuario que muestra un evento de compra con las propiedades enumeradas agrupadas por propiedades específicas del usuario, propiedades específicas del comportamiento y propiedades específicas del dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
 
@@ -239,8 +239,8 @@ Las compras son eventos personalizados especiales y vienen con una cadena codifi
 {% endtabs %}
 
 #### Detalles de la propiedad
-- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, tendrá que recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), ponte en contacto con tu administrador del éxito del cliente o director de cuentas para habilitar la función de aleteo para el envío de `ad_id`.
+- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), ponte en contacto con tu director del éxito del cliente o tu administrador de cuentas para habilitar la función para el envío de `ad_id`.
 {% endapi %}
 
 
@@ -610,8 +610,8 @@ Este evento se activa cuando un usuario visita un lugar determinado. Utilícelo 
 {% endtabs %}
 
 #### Detalles de la propiedad
-- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, tendrá que recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), ponte en contacto con tu administrador del éxito del cliente o director de cuentas para habilitar la función de aleteo para el envío de `ad_id`.
+- Para `ad_id`, `ad_id_type` y `ad_tracking_enabled`, necesitas recopilar explícitamente el IDFA de iOS y el ID de anuncios de Google de Android a través de los SDK nativos. Más información aquí: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si utilizas Kafka para la ingesta de datos [de Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), ponte en contacto con tu director del éxito del cliente o tu administrador de cuentas para habilitar la función para el envío de `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -711,8 +711,8 @@ Este evento de usuario se produce cada vez que se crea un nuevo usuario dentro d
 {% endtabs %}
 
 {% alert important %}
-Tenga en cuenta que este evento Currents sólo está disponible para clientes que hayan adquirido un "conector de todos los eventos" y sólo está disponible para conectores de eventos de almacenamiento (i.e Amazon S3, Microsoft Azure, Google Cloud Storage).
-<br><br>Para activar este evento y programar el relleno de los números de cubo aleatorios de los usuarios existentes en su espacio de trabajo, póngase en contacto con su gestor de éxito de clientes.
+Este evento de Currents sólo está disponible para clientes que hayan adquirido un "conector para todos los eventos" y sólo está disponible para conectores de eventos de almacenamiento (Amazon S3, Microsoft Azure y Google Cloud Storage)
+<br><br>Para habilitar este evento y programar el relleno de los números de contenedor aleatorios de los usuarios existentes en tu espacio de trabajo, ponte en contacto con tu administrador del éxito del cliente.
 {% endalert %}
 
 {% endapi %}

@@ -10,7 +10,7 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 ---
 {% api %}
 # APIトリガーのキャンバスをスケジュールする
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
@@ -60,9 +60,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|必須|文字列| [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`canvas_id`|必須|string| [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `recipients` | オプション | 受信者s オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
 | `audience` | オプション | 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
 |`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
