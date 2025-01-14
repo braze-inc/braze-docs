@@ -124,9 +124,7 @@ For guidance on retargeting, visit [SMS retargeting]({{site.baseurl}}/user_guide
 
 ## Custom domains
 
-Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
-
-Learn how to use custom domains with link shortening by referring to [Custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image. For more information, refer to [Custom domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
 
 ## Frequently asked questions
 

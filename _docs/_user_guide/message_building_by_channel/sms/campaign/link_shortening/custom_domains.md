@@ -13,7 +13,7 @@ channel:
 
 # Custom domains
 
-> This page covers how to use custom domains with link shortening to personalize the look and feel of your shortened URLs, and portray a consistent brand image. 
+> This page covers how to use custom domains with [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) to personalize the look and feel of your shortened URLs, and portray a consistent brand image. 
 
 {% alert note %}
 Contact your Braze account manager if you're interested in getting started with custom domains.
