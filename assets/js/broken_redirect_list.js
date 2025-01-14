@@ -1382,4 +1382,9 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 
+validurls['/docs/developer_guide/platform_integration_guides/cordova/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/cordova/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/customizations'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/other_integrations'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
+
 // validurls['OLD'] = 'NEW';
