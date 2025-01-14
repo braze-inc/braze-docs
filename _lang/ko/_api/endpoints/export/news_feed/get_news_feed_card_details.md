@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 뉴스피드 카드 세부 정보 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 뉴스 피드 카드 세부 정보 내보내기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,11 +14,9 @@ description: "이 문서에서는 뉴스피드 카드 세부 정보 내보내기
 /feed/details
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 카드의 관련 정보를 검색하면 `card_id`로 식별할 수 있습니다.
+> 이 엔드포인트를 사용하여 카드의 관련 정보를 검색하면 `card_id` 으로 식별할 수 있습니다.
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객이 더 유연하고, 맞춤화 가능하며, 신뢰할 수 있는 콘텐츠 카드 메시징 채널로 이동할 것을 권장합니다. [마이그레이션 가이드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)를 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
@@ -37,7 +35,7 @@ description: "이 문서에서는 뉴스피드 카드 세부 정보 내보내기
 | `card_id` | 필수 | 문자열 | [카드 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. <br><br> 지정된 카드의 `card_id`는 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 대시보드 내 카드 세부 정보 페이지에서 찾을 수 있으며, [뉴스피드 카드 목록 엔드포인트 내보내기]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)를 사용할 수도 있습니다.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/details?card_id={{card_identifier}}' \
@@ -68,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}
