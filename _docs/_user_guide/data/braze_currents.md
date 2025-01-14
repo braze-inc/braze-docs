@@ -15,28 +15,28 @@ guide_top_text: "Understanding the impact of your engagement strategy is critica
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up Currents"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/setting_up_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: "Available Partners"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/available_partners/
   image: /assets/img/braze_icons/heart-hand.svg
 - name: "Event Delivery Semantics"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/event_delivery_semantics/
   image: /assets/img/braze_icons/data.svg
 - name: "Message Engagement Events"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/
   image: /assets/img/braze_icons/message-plus-square.svg
 - name: "Customer Behavior Events"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events/
   image: /assets/img/braze_icons/users-01.svg
 - name: "How Braze Uses Currents"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/how_braze_uses_currents/
   image: /assets/img/braze_icons/expand-05.svg
 - name: "Transfer Data from Amazon"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/s3_to_snowflake/
   image: /assets/img/braze_icons/amazon.svg
 - name: "Transfer Data to Redshift"
-  link: /docs/user_guide/analytics/
+  link: /docs/user_guide/data/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
