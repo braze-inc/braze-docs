@@ -27,13 +27,13 @@ With the Braze Unreal SDK plugin, you can:
 
 ### Step 1: Add the Braze plugin
 
-Clone the Braze GitHub repository:
+In your terminal, clone the [Unreal Engine Braze SDK GitHub repository](https://github.com/braze-inc/braze-unreal-sdk).
 
 ```bash
 git clone git@github.com:braze-inc/braze-unreal-sdk.git
 ```
 
-Copy the `BrazeSample/Plugins/Braze` directory, and add it into your app's Plugin folder.
+Then, copy the `BrazeSample/Plugins/Braze` directory, and add it into your app's Plugin folder.
 
 ### Step 2: Enable the plugin
 
