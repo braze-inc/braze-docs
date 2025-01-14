@@ -10,7 +10,7 @@ page_order: 2
 description: "This reference article covers in-app messaging configuration guidelines for the Unity platform."
 ---
 
-# In-app messaging integration
+# In-app messages
 
 > This reference article covers in-app messaging configuration guidelines for the Unity platform.
 
