@@ -9,7 +9,7 @@ channel: content cards
 
 ---
 
-# Content Card integration
+# Content Cards
 
 > This article covers how to set up Content Cards for your Flutter app.
 

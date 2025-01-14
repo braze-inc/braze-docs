@@ -7,7 +7,7 @@ description: "Learn how to integrate the Braze Flutter SDK natively on Android a
 search_rank: 1
 ---
 
-# Initial SDK setup
+# Integrating the Braze Flutter SDK
 
 > Learn how to integrate the Braze Flutter SDK natively on Android and iOS. After integrating, you'll be able to use the Braze API within [Flutter apps](https://flutter.dev/) written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 

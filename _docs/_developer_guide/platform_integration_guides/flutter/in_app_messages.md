@@ -9,7 +9,7 @@ channel: in-app messages
 
 ---
 
-# In-app messages integration
+# In-app messages
 
 > Learn how to integrate and customize in-app messages for Android and iOS using Flutter.
 

@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Push notifications integration
+# Push notifications
 
 > This reference article covers how to set push notifications for Flutter. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
