@@ -23,30 +23,6 @@ Before you can use this feature, you'll need to integrate the [Braze Cordova SDK
 Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your iOS app's Xcode project. This means you’ll need to set these features up again anytime you modify your Cordova plugins.
 {% endalert %}
 
-## Disabling basic push notifications
-
-After you integrate the Braze Cordova SDK, basic push notification functionality is enabled by default. To disable this functionality, add the following to your `config.xml` file. For more information, see [Optional configurations]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/sdk_integration#optional-configurations).
-
-{% tabs local %}
-{% tab iOS %}
-```xml
-<platform name="ios">
-    <preference name="com.braze.ios_disable_automatic_push_registration" value="NO" />
-    <preference name="com.braze.ios_disable_automatic_push_handling" value="NO" />
-</platform>
-```
-{% endtab %}
-
-{% tab Android %}
-```xml
-<platform name="android">
-    <preference name="com.braze.NAME" value="NO" />
-    <preference name="com.braze.NAME" value="NO" />
-</platform>
-```
-{% endtab %}
-{% endtabs %}
-
 ## Setting up rich push notifications
 
 ### Step 1: Create a notification service extension
@@ -129,4 +105,15 @@ In the terminal, go to your iOS directory and reinstall your CocoaPod dependenci
 ```bash
 cd PATH_TO_PROJECT/platform/ios
 pod install
+```
+
+## Disabling basic push notifications (iOS only)
+
+After you integrate the Braze Cordova SDK for iOS, basic push notification functionality is enabled by default. To disable this functionality in your iOS app, add the following to your `config.xml` file. For more information, see [Optional configurations]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/sdk_integration#optional-configurations).
+
+```xml
+<platform name="ios">
+    <preference name="com.braze.ios_disable_automatic_push_registration" value="NO" />
+    <preference name="com.braze.ios_disable_automatic_push_handling" value="NO" />
+</platform>
 ```
