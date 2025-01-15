@@ -47,7 +47,7 @@ Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará a
 {% endalert %}
 
 {: start="2"}
-2\. En el módulo Exportación de audiencias de Facebook, haz clic en **Conectar Facebook**. <br><br>![Página de socios tecnológicos de Facebook en la plataforma Braze.][6]{: style="max-width:70%;"}
+2\. En el módulo Exportar audiencia de Facebook, selecciona **Conectar Facebook**. <br><br>![Página de socios tecnológicos de Facebook en la plataforma Braze.][6]{: style="max-width:70%;"}
 
 {: start="3"}
 3\. En la ventana de diálogo oAuth de Facebook, autoriza a Braze a crear Públicos personalizados en tus cuentas de anuncios de Facebook. <br><br>![El primer cuadro de diálogo de Facebook te pide "Conectarte como X", donde X es tu nombre de usuario de Facebook.][8]{: style="max-width:30%;"}  ![El segundo cuadro de diálogo de Facebook que solicita permiso para gestionar los anuncios de tus cuentas publicitarias.][7]{: style="max-width:40%;"}
@@ -66,21 +66,21 @@ Para los clientes que hayan pasado previamente por el proceso de revisión de la
 
 En Braze, se puede acceder a la exportación de público de Facebook a través de la página **Segmentos**. 
 
-1. En la página **Segmentos**, haga clic en el engranaje situado junto al segmento que desea exportar.
-2. Haz clic en **Exportar como público de Facebook**. <br><br>![Una lista de segmentos Braze. Para el primer segmento, se selecciona el símbolo de configuración y se muestra el botón "Exportar como audiencia de Facebook".][11]
+1. En la página **Segmentos**, selecciona el segmento que deseas exportar.
+2. Selecciona **Datos de usuario** y, a continuación, **Exportar como audiencia de Facebook**. <br><br>![La sección "Detalles del segmento" de un segmento con "Datos de usuario" seleccionados para mostrar un desplegable de opciones que incluye "Exportar como audiencia de Facebook".][11]
 
 {: start="3"}
-3\. Si aún no has activado Facebook en Braze, se te pedirá que vayas a la página de socios tecnológicos de Facebook en el panel. Si ya has activado Facebook a través de **Socios tecnológicos** > **Facebook**, podrás seleccionar el campo de usuario a exportar, y se mostrará un desplegable para seleccionar tu cuenta de anuncios de Facebook. <br><br> Hay tres posibles campos de usuario que puede exportar:  
-- Correo electrónico
+3\. Si aún no has activado Facebook en Braze, se te pedirá que vayas a la página de socios tecnológicos de Facebook en el panel. Si ya has activado Facebook a través de **Socios tecnológicos** > **Facebook**, podrás seleccionar tu cuenta de anuncios de Facebook y los campos de usuario para exportar. <br><br> Hay tres posibles campos de usuario que puede exportar:
 - Identificador para anunciantes (IDFA) del dispositivo
-- Número de teléfono
+- Número de teléfono 
+- Correo electrónico
 
 {% alert note %}
 Sólo puede seleccionar un campo de usuario en una única exportación. Si elige más de un tipo de datos, Braze creará un público personalizado distinto para cada uno.
 {% endalert %}
 
 {: start="4"}
-4\. Después de seleccionar el campo de usuario, haz clic en **Exportar**. Al igual que las exportaciones CSV, recibirás un correo electrónico cuando el segmento haya terminado de exportarse a Facebook.
+4\. Después de seleccionar el campo del usuario, selecciona **Exportar segmento**. Al igual que las exportaciones CSV, recibirás un correo electrónico cuando el segmento haya terminado de exportarse a Facebook.
 5\. Ver el público personalizado en el [Facebook Ads Manager][13].
 
 {% alert important %}

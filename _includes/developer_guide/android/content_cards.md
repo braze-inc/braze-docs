@@ -3,7 +3,7 @@
 > Learn about Content Cards for the Braze Android SDK, including the different data models and card-specific properties available for your Swift application.
 
 {% alert tip %}
-When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+When you're ready to start customizing and using Content Cards, see [Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 {% endalert %}
 
 ## Prerequisites

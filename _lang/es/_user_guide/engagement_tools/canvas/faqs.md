@@ -34,10 +34,12 @@ Cuando detienes un Canvas, se aplica lo siguiente:
 
 #### Mensajes in-app en Canvas
 
-Los mensajes de la aplicación se envían al iniciar la siguiente sesión. Esto significa que si el usuario entra en el paso Canvas antes de que el Canvas se detenga, seguirá recibiendo el mensaje in-app en su siguiente inicio de sesión, siempre y cuando el mensaje in-app no haya caducado todavía.
+Los mensajes de la aplicación se envían al iniciar la siguiente sesión. Esto significa que si el usuario entra en el paso en Canvas antes de que se detenga el Canvas, seguirá recibiendo el mensaje dentro de la aplicación al iniciar su próxima sesión, siempre que el mensaje dentro de la aplicación no haya caducado todavía.
+
+Es posible que un usuario inicie una sesión antes de que se detenga el Canvas, pero que no se le muestre el mensaje dentro de la aplicación inmediatamente. Esto puede ocurrir si el mensaje dentro de la aplicación se desencadena por un evento personalizado o se retrasa. Esto significa que es posible que un usuario registre una impresión de mensaje dentro de la aplicación y "reciba" el mensaje dentro de la aplicación después de que se detenga el Canvas. Sin embargo, el usuario tendría que haber iniciado la sesión antes de que se detuviera el Canvas, pero **después** de haber recibido el paso en Canvas.
 
 {% alert note %}
-Detener un Canvas no hará que los usuarios que están esperando recibir mensajes salgan del recorrido del usuario. Si vuelves a activar el Canvas y los usuarios siguen esperando el mensaje, lo recibirán (a menos que haya pasado el tiempo en el que se les debería haber enviado el mensaje, entonces no lo recibirán).
+Detener un Canvas no hará que los usuarios que están esperando recibir mensajes salgan del recorrido del usuario. Si vuelves a habilitar el Canvas y los usuarios siguen esperando el mensaje, lo recibirán (a menos que haya pasado el tiempo en que se les debería haber enviado el mensaje, entonces no lo recibirán).
 {% endalert %}
 
 ### ¿Cuándo se desencadena un evento de excepción?
@@ -102,6 +104,10 @@ El segmentador es una estadística más precisa para los datos de usuario único
 ### ¿Por qué el número de usuarios que entran en un lienzo no coincide con el número esperado?
 
 El número de usuarios que entran en un Canvas puede diferir del número esperado debido a cómo se evalúan las audiencias y los activadores. En Braze, un público se evalúa antes del desencadenante (a menos que se utilice un desencadenante de [cambio de atributo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Esto hará que los usuarios abandonen el Canvas si no forman parte de su audiencia seleccionada antes de que se evalúe cualquier acción desencadenante.
+
+### ¿Qué ocurre con los usuarios anónimos durante su viaje por Canvas?
+
+Aunque los usuarios anónimos pueden entrar y salir de los Lienzos, sus acciones no se asocian a un perfil de usuario específico hasta que se identifican, por lo que es posible que sus interacciones no se sigan completamente en tus análisis. Puedes utilizar el [Generador de consultas]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) para generar un informe de estas métricas.
 
 ### ¿Por qué mi tasa de conversión de pasos de Canvas no es igual a mi tasa de conversión total de variantes de Canvas?
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "Android 객체"
+nav_title: "안드로이드 개체"
 article_title: Android 메시징 개체
 page_order: 0
 page_type: reference
@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
 
 ## Android 푸시 개체
 
-타겟팅한 사용자가 Android 기기에서 푸시를 수신하도록 하려면 `messages` 에 Android 푸시 객체를 포함해야 합니다. `alert` 문자열과 `extra` 객체의 총 바이트 수는 4,000개를 초과하지 않아야 합니다. 메시징 API는 Google에서 허용하는 메시지 크기를 초과하면 오류를 반환합니다.
+타겟팅한 사용자가 Android 디바이스에서 푸시를 수신하도록 하려면 `messages` 에 Android 푸시 개체를 포함해야 합니다. `alert` 문자열과 `extra` 객체의 총 바이트 수는 4,000개를 초과하지 않아야 합니다. 메시징 API는 Google에서 허용하는 메시지 크기를 초과하면 오류를 반환합니다.
 
 ```json
 {

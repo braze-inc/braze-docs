@@ -1,5 +1,5 @@
 ---
-nav_title: "캔버스 항목 속성 객체"
+nav_title: "캔버스 항목 속성 개체"
 article_title: API 캔버스 엔트리 속성 객체
 page_order: 2
 page_type: reference
@@ -26,5 +26,5 @@ description: "이 문서에서는 Braze 캔버스 항목 속성 개체에 대해
 ```
 
 {% raw %}
-예를 들어, ```{{canvas_entry_properties.${product_name}}}```가 있는 요청은 요청에 `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}`을 추가하여 메시지에 "shoes"라는 단어를 추가할 수 있습니다.
+예를 들어 `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` 요청에 ```{{canvas_entry_properties.${product_name}}}``` 을 추가하여 메시지에 '신발'이라는 단어를 추가할 수 있습니다.
 {% endraw %}
