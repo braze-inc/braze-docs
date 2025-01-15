@@ -62,7 +62,7 @@ Test users will enter the preview even if they are not eligible in real life. If
 - If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
 - If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
 - At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
-- Events, API triggers, custom attributes, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas.
+- Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change. 
 
 ## Experiment Paths and Canvas variants
 
