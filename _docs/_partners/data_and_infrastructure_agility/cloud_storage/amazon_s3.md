@@ -299,7 +299,7 @@ If you receive an "S3 credentials are invalid" error, this may be due to integra
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-In Braze, navigate to the **Technology Partners** page under **Integrations** and select **Amazon S3**.
+In Braze, go to the **Technology Partners** page under **Integrations** and select **Amazon S3**.
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
