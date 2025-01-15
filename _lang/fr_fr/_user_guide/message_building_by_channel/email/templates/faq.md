@@ -41,7 +41,7 @@ Pour enregistrer ce nouveau lien, le tag de désabonnement Braze par défaut {%r
 
 ### Que se passe-t-il si je modifie un modèle d’e-mail actuellement utilisé dans une campagne ?
 
-Les modifications apportées à un modèle existant ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle.
+Les modifications apportées à un modèle existant ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle. Pour les campagnes API qui utilisent un modèle dans le corps de l'API REST, Braze utilisera la dernière version du modèle au moment de l'envoi.  
 
 ## Modèles de lien
 
@@ -57,7 +57,7 @@ Vous pouvez ouvrir les liens depuis le volet d’aperçu dans un nouvel onglet p
 
 ### Comment le modèle de lien fonctionne-t-il avec Liquid ?
 
-Les modèles de lien sont étendus et ajoutés à chaque URL avant toute extension de Liquid. Si une partie de votre URL est générée à l'aide d'un extrait Liquid, nous recommandons que la base de l'URL et le point d'interrogation (?) soient codés en dur pour que les modèles de lien soient correctement développés. 
+Les modèles de lien sont étendus et ajoutés à chaque URL avant toute extension de Liquid. Si une partie de votre URL est générée à l'aide d'un extrait de code Liquid, nous vous recommandons de coder en dur la base de l'URL et le point d'interrogation ( ?) pour que les modèles de liens soient correctement développés. 
 
 Évitez d’ajouter un point d’interrogation (?) à votre Liquid, sinon les modèles de liens ajouteront un point d’interrogation (?) et le processus d’extension de Liquid en ajoutera un deuxième.
 

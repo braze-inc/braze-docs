@@ -258,7 +258,7 @@ Pour les opérations de mise à jour et de suppression, `identifier` est une cl�
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
 Il y a [1]: https://rudderstack.com/
-[3]: https://www.rudderstack.com/docs/dashboard-guides/sources/
+Il y a [3]: https://www.rudderstack.com/docs/dashboard-guides/sources/
 [15]: {{site.baseurl}}/api/basics/#endpoints
 [20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data

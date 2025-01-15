@@ -113,7 +113,7 @@ Braze offre également la possibilité d'ajouter des utilisateurs aux audiences 
 {% endtab %}
 {% endtabs %}
 
-### Étape 5 : Lancer le canvas
+### Étape 5 : Lancer le canvas
 
 Une fois que vous avez configuré la synchronisation d’audience avec Criteo, lancez simplement le canvas ! La nouvelle audience sera créée, et les utilisateurs qui passent par l'étape de synchronisation de l'audience seront transférés dans cette audience dans Criteo. Si votre canvas contient des composants ultérieurs, vos utilisateurs passeront ensuite à l'étape suivante de leur parcours utilisateur.
 

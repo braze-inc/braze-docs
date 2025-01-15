@@ -57,9 +57,9 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 
 1. [Importation d'utilisateurs connus ou mise à jour de ceux-ci](#step-1-import-or-update-existing-line-users)
 2. [Intégrer le canal LINE](#step-2-integrate-line-channel)
-3. [Demande de synchronisation de l'état de l'abonnement](#step-3-request-a-subscription-status-sync)
-4. [Méthodes de mise à jour de l'utilisateur](#step-4-change-your-user-update-methods)
-5. [(Facultatif) Fusionner les utilisateurs](#step-5-merge-profiles-optional)
+3. [Rapprocher les ID des utilisateurs](#step-3-reconcile-user-ids)
+4. [Modifier les méthodes de mise à jour des utilisateurs](#step-4-change-your-user-update-methods)
+5. [(Facultatif) Fusionner les profils utilisateurs](#step-5-merge-profiles-optional)
 
 ## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
 

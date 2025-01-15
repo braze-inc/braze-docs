@@ -139,7 +139,7 @@ L'intégration serveur à serveur ne prend pas en charge les fonctionnalités de
 
 Si vous souhaitez utiliser cette donnée et ces fonctionnalités, envisagez notre [intégration SDK]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) côte à côte.
 
-### Étape 1 : Configurer une source
+### Étape 1 : Configurer une source
 
 Tealium exige que vous configuriez d'abord une source de données valide pour que votre connecteur puisse s'en servir.
 1. Depuis la barre latérale dans Tealium sous **serveur**, accédez à **Sources > Sources de données > + Ajouter une source de données**.

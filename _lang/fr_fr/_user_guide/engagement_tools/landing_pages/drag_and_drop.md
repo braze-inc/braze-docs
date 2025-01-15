@@ -11,7 +11,7 @@ alias: /landing_pages/drag_and_drop/
 > Grâce à l'éditeur par glisser-déposer, vous pouvez créer et personnaliser une page d'atterrissage pour développer votre audience et recueillir vos préférences directement dans Braze.
 
 {% alert important %}
-Les pages d'atterrissage sont actuellement en accès anticipé. Le nombre de pages d'atterrissage est limité à cinq par entreprise.
+Les pages d'atterrissage sont actuellement en accès anticipé. Le nombre de pages d'atterrissage est limité à cinq par entreprise. Les sessions d'utilisateurs finaux enregistrées sur les pages de renvoi comptent dans le calcul de vos Utilisateurs actifs mensuels / MAU.
 {% endalert %}
 
 ## Création d’une page d'accueil (glisser-déposer)
@@ -140,13 +140,15 @@ Non, cela n'est pas possible actuellement.
 
 ### Quelles sont les fonctionnalités prévues pour les pages d'atterrissage ? {#roadmap}
 
-D'autres fonctionnalités sont en cours de développement. Il s'agit notamment de
+Nous prévoyons de lancer des fonctionnalités supplémentaires pour les pages d’accueil, qui sont en cours de développement. Il peut s'agir de :
 
 * Nouvelle étiquette Liquid pour lier une page d'atterrissage dans un canal de messages de Braze.
 * Fusion automatique des utilisateurs lorsqu'une page de renvoi est envoyée via un canal Braze.
 * Page de rapport de base
 * Blocs de formulaire à glisser-déposer pour les cases à cocher et les listes déroulantes
 * Événement standard pour le suivi et le reciblage basés sur les soumissions de formulaires.
+
+Bien que ces fonctionnalités fassent partie de notre feuille de route, elles sont encore en cours de développement et Braze ne peut pas garantir qu'une partie ou la totalité de ces fonctionnalités sera mise à disposition de tous. L'accès à tout ou partie des fonctionnalités prévues pour les pages d'atterrissage peut être soumis à des frais supplémentaires.
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}

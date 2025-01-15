@@ -23,7 +23,7 @@ Lorsque vous utilisez l'intégration de Braze et Outgrow pour un contenu interac
 
 Avant de configurer l'intégration d'Outgrow et de Braze, confirmez que vous disposez des éléments suivants :
 
-| Condition | Descriptif |
+| Condition | Description |
 |-------------|-------------|
 | **Dépasser le compte** | Un compte Outgrow enregistré pour configurer et gérer le contenu interactif et les paramètres de transfert de données. |
 | **Compte Braze** | Un compte Braze avec accès aux identifiants de l'API REST |
@@ -35,13 +35,13 @@ Avant de configurer l'intégration d'Outgrow et de Braze, confirmez que vous dis
 
 Suivez ces étapes pour configurer l'intégration de Braze et Outgrow :
 
-### Étape 1 : Générer la clé API de Braze
+### Étape 1 : Générer la clé API de Braze
 
 1. Dans votre compte Braze, accédez à la **console de développement** > **Paramètres de l'API**.
 2. Sélectionnez **Créer une nouvelle clé API**.
 3. Donnez un nom à votre clé API, activez l'autorisation `users.track` et enregistrez la clé API.
 
-### Étape 2 : Configurer l'intégration de Braze dans Outgrow
+### Étape 2 : Configurer l'intégration de Braze dans Outgrow
 
 1. Connectez-vous à votre compte Outgrow.
 2. Dans le tableau de bord, allez dans **Intégrations**.
@@ -51,7 +51,7 @@ Suivez ces étapes pour configurer l'intégration de Braze et Outgrow :
    - **URL de l'endpoint REST**: Saisissez l'endpoint de votre instance Braze (par exemple, `https://rest.iad-01.braze.com`).
 5. Sélectionnez **Enregistrer** pour activer l'intégration.
 
-### Étape 3 : Mappez les données de l'Outgrow sur les attributs de Braze
+### Étape 3 : Mappez les données de l'Outgrow sur les attributs de Braze
 
 Dans Outgrow, vous pouvez mapper les réponses du contenu interactif (comme les résultats de quiz, les segments personnalisés ou les scores d'engagement) aux attributs personnalisés de Braze.
 

@@ -711,8 +711,8 @@ Cet événement utilisateur se produit chaque fois qu'un nouvel utilisateur est 
 {% endtabs %}
 
 {% alert important %}
-Notez que cet événement Currents n'est disponible que pour les clients qui ont acheté un « connecteur tous événements » et n'est disponible que pour les connecteurs d'événements de stockage (i.e Amazon S3, Microsoft Azure, Google Cloud Storage).
-<br><br>Pour activer cet événement et planifier le remplissage des numéros de compartiment aléatoire des utilisateurs existants dans votre espace de travail, contactez votre gestionnaire de satisfaction client.
+Cet événement Currents n'est disponible que pour les clients qui ont acheté un « connecteur tous événements » et n'est disponible que pour les connecteurs d'événements de stockage (Amazon S3, Microsoft Azure et Google Cloud Storage).
+<br><br>Pour activer cet événement et planifier le remplissage des numéros de compartiment aléatoire des utilisateurs existants dans votre espace de travail, contactez votre gestionnaire satisfaction client.
 {% endalert %}
 
 {% endapi %}

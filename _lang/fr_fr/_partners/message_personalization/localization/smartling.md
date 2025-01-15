@@ -42,7 +42,7 @@ L'intégration de Smartling Braze vous permet de traduire des modèles d'e-mail 
 
 ## Intégration
 
-### Étape 1 : Configurez le projet Braze dans Smartling TMS
+### Étape 1 : Configurez le projet Braze dans Smartling TMS
 
 #### Connexion de Braze à Smartling
 
@@ -61,7 +61,7 @@ Reportez-vous à la [documentation][3] de Smartling pour plus de détails sur la
 
 ![Configuration de la langue du connecteur.][8]
 
-### Étape 2 : Envoyer le contenu à Smartling
+### Étape 2 : Envoyer le contenu à Smartling
 
 Une fois que le connecteur Braze a été connecté et configuré, vous trouverez le contenu Braze dans l'onglet **Braze** de votre projet Smartling. Consultez la [documentation][7] de Smartling pour en savoir plus.
 

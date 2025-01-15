@@ -1,13 +1,13 @@
 ---
-nav_title: Zeotap pour les courants
-article_title: Zeotap pour les courants
+nav_title: Zeotap pour Currents
+article_title: Zeotap pour Currents
 description: "Cet article de référence présente le partenariat entre Braze Currents et Zeotap, une plateforme de données client de nouvelle génération qui vous aide à découvrir et à comprendre votre audience mobile en fournissant une résolution d'identité, des informations et un enrichissement des données."
 page_type: partner
 tool: Currents
 search_tag: Partner
 ---
 
-# Zeotap pour les courants
+# Zeotap pour Currents
 
 > [Zeotap](https://zeotap.com/) est une plateforme de données clients de nouvelle génération qui vous aide à découvrir et à comprendre votre audience mobile grâce à des outils de résolution d'identité, des informations exploitables et des données enrichies.
 
@@ -27,7 +27,7 @@ Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souh
 
 ## Mise en œuvre
 
-### Étape 1 : Créer une source de courants
+### Étape 1 : Créer une source de courants
 
 1. Dans Zeotap, allez dans **Sources** sous **Intégrer**.
 2. Sélectionnez **Créer une source**.
@@ -38,7 +38,7 @@ Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souh
 7. Sélectionnez **Créer une source**.
 8. Accédez à l'onglet **Détails de la mise en œuvre** et notez l'**URL de l'API** et la **clé d'écriture**.<br><br>![Détails de la mise en œuvre pour Braze Currents qui contient l'URL de l'API et la clé d'écriture.][2]
 
-### Étape 2 : Configurer le flux de données en continu dans Currents
+### Étape 2 : Configurer le flux de données en continu dans Currents
 
 1. Dans Braze, allez dans **Intégrations partenaires** > **Exportation de données**.
 2. Sélectionnez **Créer un nouveau courant** et **Exporter des courants personnalisés**.<br><br>![Le bouton "Créer un nouveau courant" avec un menu déroulant qui contient "Exportation de courants personnalisés".][3]{: style="max-width:60%;"}<br><br>

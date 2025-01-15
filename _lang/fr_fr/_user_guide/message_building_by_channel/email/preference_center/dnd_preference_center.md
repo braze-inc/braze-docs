@@ -20,7 +20,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), allez dan
 
 Ici, une liste de centres de préférences personnalisés s’affiche. Sélectionnez **Créer Nouveau** pour créer un nouveau centre de préférences, ou sélectionnez le nom d'un centre existant pour apporter des modifications.
 
-![][1]
+![Une liste de centres de préférences personnalisés avec le nom, la description, le type, le statut, la date de dernière modification et la date de création par l'utilisateur.][1]
 
 ## Étape 2 : Nommez le centre de préférences d’e-mail
 
@@ -28,7 +28,7 @@ Les noms des centres de préférences ne peuvent contenir que des caractères al
 
 Cette balise Liquid peut être incluse dans toutes les campagnes par e-mail sortantes ou les étapes Canvas et dirigera les utilisateurs vers le centre de préférences.
 
-![][2]
+![Un exemple de Liquid pour un centre de préférences.][2]
 
 ## Étape 3 : Ajouter des groupes d'abonnement au centre de préférences
 
@@ -45,7 +45,7 @@ Vous pouvez configurer davantage les groupes d'abonnement sélectionnés en sél
 - Ajouter ou supprimer une case à cocher **Abonner à tout** qui abonnera l'utilisateur à tous les groupes d'abonnement affichés dans ce bloc
 - Ajouter ou supprimer une case à cocher **Se désabonner de tout** qui désabonnera l'utilisateur de tous les groupes d'abonnement affichés dans ce bloc
 
-![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![Un exemple de centre de préférences avec les options pour s'abonner à tous les messages, marketing, newsletter, et e-mails hebdomadaires, ou pour se désabonner de tous.][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
 
 Le bouton **Désabonner de tout** en bas du modèle est non amovible et [dèsabonnera globalement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) l'utilisateur de la réception de tout message électronique.
 
@@ -55,7 +55,7 @@ Le bouton **Désabonner de tout** en bas du modèle est non amovible et [dèsabo
 
 Vous pouvez définir certains styles à appliquer à tous les blocs pertinents dans votre centre de préférences à partir de l'onglet **Styles communs**. Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Pour une expérience de conception plus facile, nous vous recommandons de configurer des styles au niveau de la page avant de personnaliser les styles au niveau des blocs.
 
-![][5]{: style="max-width:45%;"}
+![Exemple de paramètres de style communs pour le texte, les boutons et les liens.][5]{: style="max-width:45%;"}
 
 {% alert tip %}
 Pour revenir aux styles communs, cliquez sur le bouton « X » sur les propriétés de chaque bloc. Sélectionnez ensuite le conteneur du message, le bouton « X » du message ou l’arrière-plan de l’éditeur.
@@ -70,13 +70,11 @@ L'éditeur de glisser-déposer utilise deux composants clés pour rendre la comp
 
 Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des cellules.
 
-![]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
+![Option permettant de sélectionner le type de ligne dans votre message.]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
 
-Lorsque vous sélectionnez une ligne, vous pouvez ajouter ou supprimer autant de colonnes que nécessaire de la section de personnalisation des colonnes pour disposer plusieurs éléments de contenu côte à côte.
+Lorsque vous sélectionnez une ligne, vous pouvez ajouter ou supprimer autant de colonnes que nécessaire de la section de personnalisation des colonnes pour disposer plusieurs éléments de contenu côte à côte. Vous pouvez également faire glisser pour ajuster la taille des colonnes existantes.
 
-Vous pouvez également faire glisser pour ajuster la taille des colonnes existantes.
-
-![]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
+![Options permettant de personnaliser les propriétés de votre colonne, notamment la couleur d'arrière-plan, le style de bordure, le rayon de la bordure et l'espacement.]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
 
 En tant que bonne pratique, formatez vos propriétés de ligne et de colonne avant de formater l’un des blocs à l’intérieur des lignes. Vous pouvez ajuster l’espacement et l’alignement à de nombreux endroits. Il est plus facile de le modifier au fur et à mesure en commençant à la base.
 
@@ -85,7 +83,7 @@ En tant que bonne pratique, formatez vos propriétés de ligne et de colonne ava
 
 Les blocs représentent divers types de contenu que vous pouvez utiliser dans votre message. Faites glisser l'un à l'intérieur d'un segment de ligne existant, qui s'ajustera automatiquement à la largeur de la cellule.
 
-![]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+![Option permettant de sélectionner des blocs, y compris le titre, le paragraphe, le bouton, l'image et l'espacement.]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de style pour l’élément de contenu sélectionné. Pour plus d'informations, voir [Propriétés du bloc éditeur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 
@@ -98,7 +96,7 @@ Si vous utilisez le bloc de code personnalisé dans votre centre de préférence
 
 N’oubliez pas de personnaliser la page de confirmation ! Vous pouvez modifier cette page en sélectionnant **Page de confirmation** en haut de la fenêtre de l'éditeur par glisser-déposer. Cette page s’affichera pour les utilisateurs après la mise à jour de leurs préférences à l’aide du centre de préférences. Les mêmes capacités de style ci-dessus s’appliquent également à cette page.
 
-![][9]{: style="max-width:65%;"}
+![Exemple de page de confirmation indiquant que les préférences de l'utilisateur ont été mises à jour.][9]{: style="max-width:65%;"}
 
 ## Étape 6 : Prévisualisez et lancez votre centre de préférences
 
@@ -114,9 +112,9 @@ Lors du lancement du centre de préférences, vous serez invité à confirmer so
 
 Pour placer un lien vers le centre de préférences dans vos e-mails, copiez la balise Liquid du centre de préférences souhaité en sélectionnant l'icône **Copier Liquid**.
 
-![][10]{: style="max-width:75%;"}
+![L'option Copier le code Liquid dans la ligne d'un centre de préférences.][10]{: style="max-width:75%;"}
 
-Ajoutez l’étiquette Liquid à l'endroit souhaité dans votre e-mail, comme pour les [URL de désabonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer).
+Ajoutez l’étiquette Liquid à l'endroit souhaité dans votre e-mail, comme pour les [URL de désabonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link).
 
 ## Gestion des erreurs
 

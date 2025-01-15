@@ -147,5 +147,5 @@ Si vous ne fournissez qu'une seule clé API REST de Braze à RevenueCat, seuls l
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [8]: https://docs.revenuecat.com/docs/configuring-sdk
-[9]: https://app.revenuecat.com/login
+Il y a [9]: https://app.revenuecat.com/login
 [11]: {{site.baseurl}}/api/basics/#app-group-rest-api-keys

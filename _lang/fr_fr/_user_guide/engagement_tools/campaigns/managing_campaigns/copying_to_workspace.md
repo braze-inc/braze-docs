@@ -138,7 +138,7 @@ Notez que ce qui suit ne constitue pas une liste exhaustive de ce qui est copié
 {% endtab %}
 {% endtabs %}
 
-### Copier des campagnes contenant du liquide
+### Copier des campagnes contenant du code Liquid
 
 Pour les corps de message qui incluent des références Liquid, les références sont copiées dans l'espace de travail de destination, mais il se peut qu'elles ne fonctionnent pas comme prévu. Cela signifie que si une campagne de l'espace de travail A est copiée dans l'espace de travail B, l'espace de travail B ne peut pas faire référence aux détails de l'espace de travail A, y compris aux références Liquid. Par exemple, les champs tels que les actions de déclenchement et les filtres d'audience ne sont pas copiés.
 

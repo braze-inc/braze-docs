@@ -169,6 +169,29 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 3\. Si vous avez mis en place des politiques réseau, vous devez donner à Braze un accès réseau à votre instance Databricks. Pour obtenir une liste des adresses IP, consultez la page [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+
+Créez une ou plusieurs tables à utiliser pour votre intégration CDI avec les champs suivants :
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. Créez un service principal et accordez-lui les autorisations nécessaires. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source du catalogue. Pour en savoir plus sur la création d'un nouveau principal de service et d'informations d'identification, consultez la page sur l'[ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+
+{:start="3"}
+3\. Si vous avez mis en place des politiques de réseau, vous devez donner à Braze un accès réseau à votre instance Microsoft Fabric. Pour obtenir une liste des adresses IP, consultez la rubrique [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
 {% endtabs %}
 
 ## Comment fonctionne l'intégration
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}

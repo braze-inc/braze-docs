@@ -1,6 +1,6 @@
 ---
-nav_title: Adobe pour les courants
-article_title: Adobe pour les courants
+nav_title: Adobe pour Currents
+article_title: Adobe pour Currents
 alias: /partners/adobe_for_currents/
 description: "Cet article de référence présente le partenariat entre Braze Currents et Adobe, une plateforme de données client qui permet aux marques de connecter et de mapper leurs données Adobe (attributs et segments personnalisés) à Braze en temps réel."
 page_type: partner
@@ -8,7 +8,7 @@ tool: Currents
 search_tag: Partner
 ---
 
-# Adobe pour les courants
+# Adobe pour Currents
 
 > [Adobe](https://www.adobe.com/) est une plateforme de données client qui permet aux marques de connecter et de mapper leurs données Adobe (attributs et segments personnalisés) à Braze en temps réel.
 

@@ -179,6 +179,10 @@ Si le message aurait dû contenir un code de promotion provenant d'une liste vid
 
 Si le message contient une logique conditionnelle d'insertion d'un code promotionnel, le message ne sera annulé que s'il aurait dû contenir un code promotionnel. Si le message n'aurait pas dû contenir de code de promotion, le message sera envoyé normalement.
 
+### Comment enregistrer un code de promotion dans le profil d'un utilisateur afin de pouvoir l'utiliser dans des messages de suivi ?
+
+Pour référencer le même code de promotion dans les messages suivants, le code doit être enregistré dans le profil de l'utilisateur en tant qu'attribut personnalisé. Pour ce faire, vous pouvez attacher un [webhook Braze à Braze à]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) la même campagne ou à la même étape du message canvas.
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
