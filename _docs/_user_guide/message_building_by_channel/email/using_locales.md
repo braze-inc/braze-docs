@@ -54,6 +54,9 @@ Make the edit in the CSV, then upload the file again to make a change to the tra
 #### Can I nest translation tags?
 No.
 
+#### Can I use locales in my email templates?
+No. Locales are only supported in the email editor for campaigns and Message steps in Canvas only.
+
 #### Can I add HTML styling in the translation tags?
 Yes. However, be sure to check that the HTML styling is not translated with the content.
 

@@ -133,7 +133,12 @@ Lanzamiento de una campaña con propiedades anidadas desde el evento "Lista de r
 
 ![Un usuario que elige una propiedad anidada para filtros de propiedades en un evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
 
-La condición de activación `songs[].album.yearReleased` "is" "1968" coincidirá con un evento en el que cualquiera de las canciones tenga un álbum publicado en 1968. Utilizamos la notación de corchetes `[]` para recorrer matrices y comprobar si **algún** elemento de la matriz recorrida coincide con la propiedad del evento.<br>
+La condición de activación `songs[].album.yearReleased` "is" "1968" coincidirá con un evento en el que cualquiera de las canciones tenga un álbum publicado en 1968. Utilizamos la notación de corchetes `[]` para recorrer matrices y comprobar si **algún** elemento de la matriz recorrida coincide con la propiedad del evento.
+
+{% alert important %}
+El filtro **no es igual** sólo coincide si ninguna de las propiedades de tu matriz es igual al valor proporcionado. <br><br>Por ejemplo, digamos que el Canvas A tiene el filtro de propiedades anidadas evento personalizado basado en acciones **igual a** "smartwatch", y el Canvas B tiene el filtro de propiedades anidadas evento personalizado basado en acciones **no igual a** "simphone". Si tienes "smartwatch" y "simphone" en tus propiedades, se desencadenarán ambos Lienzos. Pero si tienes "simphone" o "sólo sim" en alguna propiedad, no se desencadenará ningún Canvas.
+{% endalert %}
+
 {% endtab %}
 {% tab Ejemplo de restaurante %}
 

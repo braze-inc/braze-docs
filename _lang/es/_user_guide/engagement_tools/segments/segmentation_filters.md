@@ -50,6 +50,10 @@ glossaries:
     description: "Determina si un usuario coincide o no con un valor de atributo registrado personalizado. (período de 24 horas) <br><br>Zona horaria:<br>Zona horaria de la empresa"
     tags:
       - Custom attributes
+  - name: Creado el
+    description: "Segmenta a los usuarios en función de cuándo se creó su perfil de usuario. Si un usuario se añadió por CSV o API, este filtro refleja la fecha en que se añadió. Si el usuario no está añadido por CSV o API y tiene su primera sesión seguida por el SDK, entonces este filtro refleja la fecha de esa primera sesión."
+    tags:
+      - Other Filters
   - name: Atributos personalizados anidados
     description: "Atributos que son las propiedades de los atributos personalizados.<br><br>Al filtrar un atributo personalizado de hora anidado, puede elegir filtrar en función del \"Día del año\" o de la \"Hora\". \"Día del año\" comprobará sólo el mes y el día para la comparación. \"Hora\" comparará la marca de tiempo completa, incluido el año."
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Último mensaje recibido de un paso de Canvas concreto
-    description: Segmenta a sus usuarios según el momento en que recibieron un componente Canvas específico.
+    description: Segmenta a sus usuarios según el momento en que recibieron un componente Canvas específico. Este filtro no tiene en cuenta si los usuarios han recibido otros componentes Canvas.
     tags:
       - Retargeting
   - name: Último mensaje recibido de una campaña concreta
-    description: Segmenta a tus usuarios en función de si han recibido o no una campaña concreta.
+    description: Segmenta a tus usuarios en función de si han recibido o no una campaña concreta. Este filtro no tiene en cuenta si los usuarios han recibido otras campañas.
     tags:
       - Retargeting
   - name: Mensaje recibido de una campaña o Canvas con etiqueta
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Último mensaje recibido de una campaña o de Canvas con una etiqueta concreta
-    description: Segmenta a tus usuarios en función de cuándo recibieron una campaña o un Canvas concreto con una etiqueta específica. (período de 24 horas)
+    description: Segmenta a tus usuarios en función de cuándo recibieron una campaña o un Canvas concreto con una etiqueta específica. Este filtro no tiene en cuenta si los usuarios han recibido otras campañas o Lienzos. (período de 24 horas)
     tags:
       - Retargeting
   - name: Jamás recibió un mensaje de campaña o de paso en Canvas
@@ -243,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Últimos inscritos en cualquier grupo de control
-    description: "Segmenta a tus usuarios por la última vez que cayeron en el grupo de control en una campaña. (período de 24 horas)<br><br>Zona horaria:<br>Zona horaria de la empresa"
+    description: "Segmenta a tus usuarios por la última vez que cayeron en el grupo de control en una campaña. <br><br>Zona horaria:<br>Zona horaria de la empresa"
     tags:
       - Retargeting
   - name: Variación de Canvas ingresada

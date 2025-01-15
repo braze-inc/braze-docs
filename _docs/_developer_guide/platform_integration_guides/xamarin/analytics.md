@@ -10,9 +10,11 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ---
  
-# Xamarin Analytics
+# Analytics
 
 > Learn how to generate and review analytics for the Xamarin platform.
+
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Session tracking
 

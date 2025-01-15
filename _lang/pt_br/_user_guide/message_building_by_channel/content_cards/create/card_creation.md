@@ -51,6 +51,10 @@ As seguintes opções estão disponíveis:
 
 Independentemente da opção selecionada, a contagem regressiva da data de expiração do Content Card começará quando o usuário entrar na etapa do canva.
 
+{% alert tip %}
+Se quiser que usuários anônimos vejam um cartão de conteúdo logo na primeira sessão, use uma campanha em vez de um Canva. Isso ocorre porque, quando um usuário anônimo entra em uma tela, sua sessão já começou, portanto, ele não receberá o cartão de conteúdo até que inicie uma nova sessão.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 

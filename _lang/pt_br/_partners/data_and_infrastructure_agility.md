@@ -133,8 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
-- name: Monstro da caixa de entrada
+- name: Monstro da Caixa de Entrada
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
-- name: ""
+- name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

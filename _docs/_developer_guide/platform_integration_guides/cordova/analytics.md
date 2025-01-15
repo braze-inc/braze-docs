@@ -1,14 +1,14 @@
 ---
 nav_title: Analytics
 article_title: Analytics integration
-page_order: 3
+page_order: 5
 ---
 
 # Analytics integration
 
 > Learn how to integrate analytics for the Cordova Braze SDK.
 
-{% multi_lang_include cordova/prerequisites.md %}
+{% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
 ## Logging custom events
 

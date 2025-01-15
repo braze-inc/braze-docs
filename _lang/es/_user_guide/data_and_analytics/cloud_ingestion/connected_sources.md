@@ -73,6 +73,15 @@ Puede haber de dos a cinco minutos de tiempo de calentamiento cuando Braze se co
 {% endalert %}
 
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+1. Crea un principal de servicio y permite el acceso al espacio de trabajo de Fabric que se utilizará para tu integración.   
+2. En tu espacio de trabajo de Fabric, configura los datos de origen y concede permisos a tu director de servicio 
+3. Crea una nueva fuente conectada en el panel de Braze.
+4. Pruebe la integración.
+5. Utilice la fuente conectada para crear uno o más segmentos CDI.
+{% endtab %}
+
 {% endtabs %}
 
 ### Paso 2: Configure su almacén de datos
@@ -317,6 +326,56 @@ Para las instancias `EU-01` y `EU-02`, estas son las direcciones IP correspondie
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab Microsoft Fabric %}
+#### Paso 2.1: Conceder acceso a los recursos de Fabric 
+Braze se conectará a tu almacén Fabric utilizando un principal de servicio con autenticación Entra ID. Crearás un nuevo principal de servicio para que lo utilice Braze, y concederás acceso a los recursos de Fabric según sea necesario. Braze necesitará los siguientes datos para conectarse:    
+
+* Tenant ID (también llamado directorio) de tu cuenta Azure 
+* ID de la entidad de seguridad (también llamado ID de aplicación) para la entidad de seguridad del servicio 
+* Secreto de cliente para que Braze se autentique
+
+1. En el portal de Azure, ve al centro de administración de Microsoft Entra y, a continuación, a Registros de aplicaciones. 
+2. Selecciona **\+ Nuevo registro** en **Identidad > Aplicaciones > Registros de aplicaciones** 
+3. Introduce un nombre y selecciona `Accounts in this organizational directory only` como tipo de cuenta admitido. A continuación, selecciona **Registro**. 
+4. Selecciona la aplicación (servicio principal) que acabas de crear y, a continuación, ve a **Certificados y secretos > + Nuevo secreto de cliente**
+5. Introduce una descripción para el secreto y establece un periodo de caducidad para el secreto. Después, haz clic en añadir. 
+6. Toma nota del secreto de cliente creado para utilizarlo en la configuración de Braze. 
+
+{% alert note %}
+Azure no permite la caducidad ilimitada de los secretos de principal de servicio. Recuerda actualizar las credenciales antes de que caduquen para mantener el flujo de datos a Braze.
+{% endalert %}
+
+#### Paso 2.2: Conceder acceso a los recursos de Fabric 
+Proporcionarás acceso para que Braze se conecte a tu instancia de Fabric. En tu portal de administración de Fabric, ve a **Configuración > Gobierno e información > Portal de administración > Configuración de inquilinos**.    
+
+* En la **configuración del desarrollador** habilita "Los principales del servicio pueden utilizar APIs de Fabric" para que Braze pueda conectarse utilizando Microsoft Entra ID.
+* En la **configuración de OneLake** habilita "Los usuarios pueden acceder a los datos almacenados en OneLake con aplicaciones externas a Fabric" para que el principal del servicio pueda acceder a los datos de una aplicación externa.
+
+#### Paso 2.3: Obtener cadena de conexión al almacén 
+Necesitarás el punto final SQL de tu almacén para que Braze pueda conectarse. Para recuperar el punto final SQL, ve al **espacio de trabajo** en Fabric y, en la lista de elementos, pasa el ratón por encima del nombre del almacén y selecciona **Copiar cadena de conexión SQL**.
+
+![La página "Fabric Console" de Microsoft Azure, donde los usuarios deben recuperar la cadena de conexión SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+
+
+#### Paso 2.4: Permitir IPs Braze en Firewall (Opcional)
+
+Dependiendo de la configuración de tu cuenta Microsoft Fabric, puede que tengas que permitir las siguientes direcciones IP en tu cortafuegos para permitir el tráfico desde Braze. Para más información sobre cómo habilitarlo, consulta la documentación correspondiente sobre el [Acceso Condicional Entra](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
+
+| Para las instancias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para las instancias `EU-01` y `EU-02` |
+|---|---|
+| `23.21.118.191`| `52.58.142.242`
+| `34.206.23.173`| `52.29.193.121`
+| `50.16.249.9`| `35.158.29.228`
+| `52.4.160.214`| `18.157.135.97`
+| `54.87.8.34`| `3.123.166.46`
+| `54.156.35.251`| `3.64.27.36`
+| `52.54.89.238`| `3.65.88.25`
+| `18.205.178.15`| `3.68.144.188`
+|   | `3.70.107.88`
+
+{% endtab %}
+
 {% endtabs %}
 
 ### Paso 3: Crea una fuente conectada en el panel de Braze
@@ -442,6 +501,36 @@ Selecciona **Probar conexión** para comprobar que la lista de tablas visibles p
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+#### Paso 3.1: Añadir información de conexión Microsoft Fabric y tabla de origen
+
+Crea una fuente conectada en el panel de Braze. Ve a **Configuración de datos** > **Ingesta de datos en la nube** > **Fuentes conectadas** y, a continuación, selecciona **Crear nueva sincronización de datos** > **Importar Microsoft Fabric**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Introduce la información de tus credenciales de Microsoft Fabric, así como el almacén de origen y el esquema, y pasa al siguiente paso.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_1.png %})
+
+#### Paso 3.2: Configurar los detalles de sincronización
+
+Elige un nombre para la fuente conectada. Este nombre se utilizará en la lista de fuentes disponibles cuando crees un nuevo segmento CDI. 
+
+Configure un tiempo máximo de ejecución para esta fuente. Braze abortará automáticamente cualquier consulta que supere el tiempo máximo de ejecución cuando esté creando o actualizando un segmento. El tiempo máximo de ejecución permitido es de 60 minutos; un tiempo de ejecución inferior reducirá los costes incurridos en tu cuenta Microsoft Fabric. 
+
+{% alert note %}
+Si las consultas se interrumpen constantemente y has establecido un tiempo máximo de ejecución de 60 minutos, considera la posibilidad de intentar optimizar el tiempo de ejecución de la consulta o de ampliar la capacidad del Tejido.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_mf_2.png %})
+
+#### Paso 3.3: Prueba la conexión
+
+Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para ser utilizada en segmentos CDI.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
+
+{% endtab %}
 {% endtabs %}
 
 ### Paso 4: Finalizar la configuración del almacén de datos
@@ -475,6 +564,10 @@ Esto no se aplica a BigQuery.
 Esto no se aplica a los Databricks.
 
 {% endtab %}
+{% tab Microsoft Fabric %}
+Esto no se aplica a Microsoft Fabric.
+
+{% endtab %}
 {% endtabs %}
 
 {% alert note %}
@@ -500,6 +593,10 @@ Puede configurar varias fuentes con Braze, pero cada fuente debe estar configura
 
 {% tab Databricks %}
 Puede configurar varias fuentes con Braze, pero cada fuente debe configurarse para conectar un esquema diferente. Al crear fuentes adicionales, puede reutilizar las credenciales existentes si se conecta a la misma cuenta de Databricks.
+{% endtab %}
+
+{% tab Microsoft Fabric %}
+Puede configurar varias fuentes con Braze, pero cada fuente debe configurarse para conectar un esquema diferente. Al crear fuentes adicionales, puedes reutilizar las credenciales existentes si te conectas a la misma cuenta de Azure.
 {% endtab %}
 {% endtabs %}
 

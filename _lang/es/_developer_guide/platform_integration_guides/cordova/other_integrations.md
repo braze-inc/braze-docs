@@ -20,9 +20,7 @@ De manera predeterminada, el SDK Cordova admite mensajes dentro de la aplicació
 
 ## Canal de noticias
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Consulta las instrucciones de integración en [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) e [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration/) para obtener información sobre cómo integrar la fuente de noticias en tu aplicación Cordova. Alternativamente, nuestro plugin Cordova proporciona un método, `launchNewsFeed`, que lanzará un canal de noticias modal sin más integración.
 

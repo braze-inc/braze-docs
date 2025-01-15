@@ -52,6 +52,6 @@ Depois de importar coortes para o Braze, você pode usá-los como filtros para c
 
 ![No criador de segmentos da Braze, o atributo de usuário "Kubit cohorts" é definido como "includes_value" e mostra uma lista de coortes disponíveis.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
-## Correspondência de Usuário
+## Correspondência de usuários
 
-Usuários identificados podem ser correspondidos pelo seu `external_id` ou `alias`. Usuários anônimos podem ser correspondidos pelo seu `device_id`. Usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo seu `device_id`, e devem ser identificados pelo seu `external_id` ou `alias`.
+Os usuários identificados podem ser combinados pelo endereço `external_id` ou `alias`. Os usuários anônimos podem ser combinados pelo site `device_id`. Os usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo endereço `device_id` e devem ser identificados pelo endereço `external_id` ou `alias`.

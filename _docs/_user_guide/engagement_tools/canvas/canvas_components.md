@@ -46,13 +46,9 @@ guide_featured_list:
 
 With Canvas components, you can unlock new user journeys to improve your process and increase the effectiveness of your audience outreach.
 
-{% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 ### Customizing user journeys
 
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Example of a Canvas user journey with a Decision Split step followed by Delay steps and Message steps.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
 
@@ -61,9 +57,11 @@ Use [Action Paths][1] to split your user journey based on actions and engagement
 [Delay][4] components allow you to delay a single step in your Canvas. This stand-alone delay step in your Canvas is best used for communicating messages to your users at a specific time. Additionally, Delay components may also increase your audience outreach by allowing more time for your audience to meet the component's criteria. 
 
 ### Testing
-When creating your user journeys, you may want to also test for the most effective Canvas path. With [Experiment Paths][5], you can test multiple Canvas paths at any step. 
 
-### Integration 
+When creating your user journeys, you may want to also test for the most effective Canvas path. With [Experiment Paths][5], you can test multiple Canvas paths at any step. You can also use the connections between steps as a high-level preview. Orange connections indicate the prior step will immediately advance users to the next step.
+
+### Integration
+
 Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths

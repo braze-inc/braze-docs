@@ -24,7 +24,7 @@ search_rank: 2
 - **コンプライアンス:**適用されるすべての Braze および Meta の文書と、適用される [Meta のポリシー](https://www.whatsapp.com/legal/?lang=en)に従います。
 - **24 時間の会話制限:**企業が最初にテンプレート化されたメッセージを送信した後、あるいはユーザーがメッセージを送信した後、両者がメッセージをやり取りできる24時間のウィンドウが発生する。 
 - **会話を始める:**ユーザーはいつでも会話を始めることができる。企業は、承認されたメッセージテンプレートによってのみ会話を開始することができる。
-- **アカウントの制限:**Brazeの各ワークスペースには1つのWhatsApp Businessアカウント、サブスクリプショングループ、電話番号を保存できる。さらに、WhatsApp Business アカウント 1 つにつき、[サードパーティとの統合は 1 つ](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047)しか行えません。
+- **アカウントの制限:**Brazeの各ワークスペースには1つのWhatsApp Businessアカウント、サブスクリプショングループ、電話番号を保存できる。さらに、WhatsApp Business アカウント 1 つにつき、[サードパーティとの統合は 1 つ](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047)しか行えません。WhatsApp Businessアカウントは、1つのワークスペースにしか存在できず、ワークスペース間で共有することはできません。
 <br><br>
 
 | 必要条件| 説明|

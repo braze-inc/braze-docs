@@ -18,7 +18,7 @@ tool: Canvas
 이 템플릿을 성공적으로 사용하려면 다음이 필요합니다:
 
 - 이 캔버스에서 구매하면 사용자가 캔버스에서 나가게 되므로 별도의 구매 후 사용자 여정 캔버스가 필요합니다.
-- 구성된 [Braze 오]({{site.baseurl}}/partners/canvas_steps) 디언스는 사용하는 파트너 및 오디언스와 [동기화됩니다]({{site.baseurl}}/partners/canvas_steps).
+- 구성된 [Braze 오디언스]({{site.baseurl}}/partners/canvas_steps)는 사용하는 파트너 및 오디언스와 동기화됩니다.
 
 ## 필요에 맞게 템플릿 조정하기
 

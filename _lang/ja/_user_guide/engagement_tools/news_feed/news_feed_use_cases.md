@@ -11,9 +11,7 @@ hidden: true
 
 # ニュースフィードのユースケース {#news-feed-use-cases}
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Braze は、ニュースフィードがもつカスタマイズ性を高く評価しています。ここでは、Braze を最大限に活用する方法についてのアイデアを得るために、お気に入りのユースケースをいくつか紹介します。
 

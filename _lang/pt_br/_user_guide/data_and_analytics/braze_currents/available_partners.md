@@ -10,7 +10,7 @@ tool: Currents
 
 # Parceiros disponíveis
 
-> Esta página descreve os casos de uso dos parceiros de dados que você pode usar para se integrar ao Braze Currents.
+> Esta página lista os parceiros de dados com os quais você pode se integrar ao Braze Currents e descreve seus casos de uso. 
 
 {% alert note %}
 As convenções de nomes para eventos que fluem para um parceiro do Braze podem não corresponder a outros parceiros. Por exemplo, o evento de abertura de e-mail Currents no Segment é `Email Opened`, enquanto no Mixpanel é `Email Open`.

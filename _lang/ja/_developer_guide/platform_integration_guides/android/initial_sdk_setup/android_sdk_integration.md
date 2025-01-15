@@ -44,13 +44,13 @@ dependencies {
 
 次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、[[Braze Android SDK リリース](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)] にアクセスしてください。
 
-![Android Studioが「build.gradle」を表示しています。このスクリーンショットでは、依存コードがファイルの下部に追加されます。]({% image_buster /assets/img_archive/androidstudio2.png %})
+!["build.gradle" を表示するAndroid studio。ファイルの末尾に依存コードが追加されます。]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Gradle 同期を実行する
 
 Gradle 同期を実行してプロジェクトをビルドし、[依存関係の追加](#add-braze-dependency)を組み込んでください。
 
-![Android Studioがアプリケーションの上部にバナーとボタンを表示して、「Gradleファイルが最後のプロジェクト同期以降に変更されました」と表示しています。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。"]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Android Studio のバナーで、次のように記述されています。「前回のプロジェクトの同期以降、Gradle ファイルが変更されました。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。"]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## ステップ 2:braze.xmlでBraze SDKを構成する
 

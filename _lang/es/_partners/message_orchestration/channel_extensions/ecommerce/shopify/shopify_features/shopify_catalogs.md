@@ -8,7 +8,7 @@ description: "Este artículo de referencia explica cómo importar tus productos 
 
 # Sincronización de productos en Shopify 
 
-> Puedes sincronizar los productos de tu tienda de Shopify en un [catálogo de]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) Braze, automatizando la forma en que introduces los datos de los productos para una mayor personalización de tus mensajes. 
+> Puedes sincronizar todos los productos de tu tienda Shopify con un [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) Braze para una mayor personalización de la mensajería. 
 
 Los catálogos de Shopify se actualizarán casi en tiempo real a medida que realices ediciones y cambios en los productos de tu tienda Shopify. Puedes enriquecer tu carrito abandonado, la confirmación del pedido y mucho más con los detalles y la información más actualizados sobre los productos.
 
@@ -84,13 +84,17 @@ Modificar el catálogo de Shopify de cualquier forma puede interferir involuntar
 
 Para acceder y utilizar `product_handle` y `product_url`, desconecta y vuelve a conectar tu catálogo de Shopify haciendo lo siguiente.
 
-1. Ve a la página de integración de Shopify > **Editar configuración**.<br><br>![Página de integración de Shopify.]({% image_buster /assets/img/Shopify/edit_config.png %})
+1. Ve a la página de integración de Shopify y selecciona **Editar configuración**.
+
+![Página de integración de Shopify.]({% image_buster /assets/img/Shopify/edit_config.png %})
 
 {: start="2"}
 2\. En el paso **Sincronizar catálogo**, alterna entre desactivar el catálogo y actualizar la configuración.
-3\. Alterna el catálogo y actualiza la configuración.<br><br>![Paso "Sincronizar catálogo" de Shopify con alternar catálogo.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+3\. Alterna el catálogo y actualiza la configuración.
 
-## Casos de uso de existencias remanentes y bajada de precios 
+![Paso "Sincronizar catálogo" de Shopify con alternar catálogo.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+
+## Casos de uso de existencias remanentes y bajada de precios
 
 Para configurar las notificaciones de falta de existencias, sigue los pasos que se [indican aquí]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
 
@@ -98,14 +102,13 @@ Para configurar las notificaciones de bajada de precios, sigue los pasos que se 
 
 Ten en cuenta que con la integración de Shopify, tendrás que crear un evento personalizado que capture el estado de suscripción de un usuario en tu catálogo para cada caso de uso. El evento personalizado requerirá una propiedad del evento que mapee el [SKU o el ID de variante de Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier) que hayas seleccionado como parte de la sincronización de tu producto de Shopify. 
 
-
 ## Cambiar el ID del catálogo
 
-Para cambiar el identificador de producto de tu catálogo de Shopify, tendrás que desactivar la sincronización. Confirma primero que has detenido cualquier envío que utilice estos datos del catálogo de Shopify. Vuelve a ejecutar la sincronización inicial del catálogo de Shopify y selecciona el identificador de producto que desees siguiendo los pasos de [sincronización de productos](#setting-up).
+Para cambiar el identificador de producto de tu catálogo de Shopify, tendrás que desactivar la sincronización. Confirma primero que has dejado de enviar mensajes utilizando los datos de este catálogo de Shopify. Vuelve a ejecutar la sincronización inicial del catálogo de Shopify y selecciona el identificador de producto que desees siguiendo los pasos de [sincronización de productos](#setting-up).
 
 ## Desactivar la sincronización de tu producto {#deactivate}
 
-Desactivar la característica de sincronización de productos de Shopify eliminará todo tu catálogo y productos. Esto también puede afectar a cualquier envío que pueda estar utilizando activamente los datos de producto de este catálogo. Confirma que has actualizado o puesto en pausa estos envíos antes de la desactivación, ya que esto podría hacer que tu mensajería no enviara los detalles del producto. No elimines el catálogo de Shopify directamente en la página de catálogos.
+Desactivar la característica de sincronización de productos de Shopify eliminará todo tu catálogo y productos. Esto también puede afectar a cualquier mensaje que pueda estar utilizando activamente los datos de producto de este catálogo. Confirma que has actualizado o pausado estas campañas o Lienzos antes de la desactivación, ya que esto podría dar lugar al envío de mensajes sin detalles del producto. No elimines el catálogo de Shopify directamente en la página de catálogos.
 
 ## Solución de problemas
 Si la sincronización de tu producto de Shopify se encuentra con un error, podría ser el resultado de los siguientes errores. Sigue las instrucciones para corregir el problema y resolver la sincronización:

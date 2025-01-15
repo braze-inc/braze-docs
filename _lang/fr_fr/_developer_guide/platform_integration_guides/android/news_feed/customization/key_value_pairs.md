@@ -15,9 +15,7 @@ channel:
 
 > Cet article de référence explique comment utiliser les paires clé-valeur de fil d'actualité dans votre application Android ou FireOS.
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Les objets `Card` peuvent éventuellement porter des paires clé-valeur comme `extras`. Elles peuvent être utilisées pour envoyer des données avec une `Card` pour une manipulation ultérieure par l’application.
 

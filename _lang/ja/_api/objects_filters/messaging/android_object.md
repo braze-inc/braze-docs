@@ -48,7 +48,7 @@ description: "このリファレンス記事では、Brazeで使用されてい�
 | パラメータ | 詳細 |
 | --------- | ------- |
 | `priority` | このパラメーターには `-2` から `2` までの値を指定できます。`-2` は「MIN」優先度を表し、`2` は「MAX」を表します。`0` は「デフォルト」値です。<br> <br> その範囲外の値が送信された場合、デフォルトは0となる。どの優先度を使うかについては、[Android の通知優先度]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority)を参照してください。 |
-| `android_priority` | このパラメータは、FCM送信者の優先順位を指定するために、"normal "または "high "のいずれかの値を受け付ける。デフォルトでは、通知メッセージは高い優先度で送信され、データメッセージは通常の優先度で送信される。<br><br> 値の違いによる配信への影響については、[Androidメッセージの優先](https://firebase.google.com/docs/cloud-messaging/android/message-priority)度を参照のこと。 |
+| `android_priority` | このパラメーターは、FCM 送信者の優先順位を指定するために、「normal」または「high」のいずれかの値を受け入れます。デフォルトでは、通知メッセージは高い優先度で送信され、データメッセージは通常の優先度で送信される。<br><br> 値の違いが配信に与える影響の詳細については、[Android メッセージの優先度](https://firebase.google.com/docs/cloud-messaging/android/message-priority)を参照してください。 |
 | `collapse_key` | FCM で同時に保存できるのは、1つのデバイスにつき最大4つの折りたたみキーのみです。4つを超える折りたたみキーを使用する場合、FCM でどの折りたたみキーが保持されるかについては保証されません。Braze はデフォルトでこれらのうちの1つをキャンペーンに使用するため、Android メッセージ用に指定する追加の折りたたみキーは3つまでにしてください。 |
 | `push_icon_image_url` | large icon パラメーターの値は、画像がホストされている場所にリンクする URL である必要があります。<br> <br> イメージは1:1のアスペクト比にトリミングする必要があり、40x40以上にする必要があります。 |
 | `notification_channel` | これが指定されない場合、Brazeは[ダッシュボードのフォールバック][45]チャンネルIDで通知ペイロードを送信しようとする。詳細については、「[通知チャネル][44]」を参照し、統合中に「[通知チャネルを定義する][43]」ステップを参照してください。 |

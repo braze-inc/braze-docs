@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 기존 대시보드 사용자 계정 조회 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 기존 대시보드 사용자 계정 Braze 엔드포인트 조회에 대한 자세한 내용을 설명합니다."
 ---
 
 {% api %}
@@ -21,7 +21,7 @@ description: "이 문서에서는 기존 대시보드 사용자 계정 조회 Br
 
 ## 필수 구성 요소
 
-이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 자세한 내용은 [자동 사용자 프로비저닝]({{site.baseurl}}/scim/automated_user_provisioning/)을 참조하세요.
+이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 서비스 출처를 `X-Request-Origin` 헤더로 사용합니다. 자세한 내용은 [자동화된 사용자 프로비저닝을]({{site.baseurl}}/scim/automated_user_provisioning/) 참조하세요.
 
 ## 사용량 제한
 
@@ -63,6 +63,25 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Another Test Role",
+                "roleId": "23125dad23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25adfabcded",
+                        "appGroupName": "Production Workspace",
+                        "appGroupPermissionSets": [
+                            {
+                                "appGroupPermissionSetName": "A Permission Set",
+                                "appGroupPermissionSetId": "dfa385109bc38",
+                                "permissions": ["basic_access","publish_cards"]
+                            }
+                        ]
+                    } 
+                ]
+            }
+        ],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
