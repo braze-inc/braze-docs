@@ -54,9 +54,9 @@ Learn how to use Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endr
 {% endtab %}
 {% endtabs %}
 
-## Rake states destination is shared by multiple files
+## Rake: Destination is shared by multiple files
 
-If you run `rake` to build a local docs server and get the following error, this means two or more files are using the same URL in their [`permalink` YAML key]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#permalink).
+If `rake` throws the following error, this means that two or more files are sharing the same [`permalink` YAML value]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#permalink).
 
 ```bash
 Conflict: The following destination is shared by multiple files.
@@ -66,7 +66,7 @@ Conflict: The following destination is shared by multiple files.
                      - /Users/USERNAME/braze-docs/_docs/_developer_guide/platforms/firos.md
 ```
 
-To fix this issue, change the `permalink` URL value in one of the files, so they are no longer pointing to the same location. For example:
+To fix this, change the `permalink` value of one of the files, so they're no longer set to the same URL. For example:
 
 {% tabs local %}
 {% tab Before %}
