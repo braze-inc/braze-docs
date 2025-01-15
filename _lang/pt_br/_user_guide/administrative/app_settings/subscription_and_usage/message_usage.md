@@ -54,7 +54,7 @@ Filtros estão disponíveis permitindo que você filtre por **País** ou **tipo 
 
 ![Uso de Créditos SMS/MSS com blocos para dados de alto nível e uma seção para consumo por conta.][2]{: style="max-width:80%;"}
 
-Ao contrário do **Visão Geral do Uso de Créditos de Mensagem**, esta seção contém dados históricos de períodos contratuais anteriores. 
+Ao contrário da **Visão Geral do Uso de Créditos de Mensagem**, esta seção contém dados históricos de períodos contratuais anteriores. 
 
 {% alert note %}
 É possível selecionar um intervalo de datas que contenha tanto o uso de não créditos quanto o uso de créditos de mensagem. Neste caso, o consumo que ocorreu fora dos créditos de mensagem será exibido `—` (nulo) nas colunas **Relação de créditos** e **Créditos**.
@@ -64,7 +64,7 @@ Ao contrário do **Visão Geral do Uso de Créditos de Mensagem**, esta seção 
 
 ## WhatsApp
 
-**Uso de Créditos do WhatsApp** mostra a divisão de uso para o canal do WhatsApp. Os azulejos exibem o uso total de crédito do WhatsApp, que pode ser detalhado na **Uso por conta** seção, aplicando filtros para limitar os resultados da tabela de dados a um espaço de trabalho.
+**Uso de Créditos do WhatsApp** mostra a divisão de uso para o canal do WhatsApp. Os azulejos exibem o uso total de crédito do WhatsApp, que pode ser detalhado na seção **Uso por conta**, aplicando filtros para limitar os resultados da tabela de dados a um espaço de trabalho.
 
 ### Filtros
 
@@ -80,7 +80,7 @@ Você pode filtrar seus dados por:
 ## Coisas para saber
 
 {% alert important %}
-Os dados mostrados no **Uso de Mensagens** dashboard estão no nível do contrato e não estão restritos a uma empresa de dashboard individual ou espaço de trabalho. Estes dados refletem o uso de todos os espaços de trabalho dentro do seu dashboard e, potencialmente, em todos os dashboards (se você tiver múltiplos).
+Os dados mostrados no dashboard **Uso de Mensagens** estão no nível do contrato e não estão restritos a uma empresa de dashboard individual ou espaço de trabalho. Estes dados refletem o uso de todos os espaços de trabalho dentro do seu dashboard e, potencialmente, em todos os dashboards (se você tiver múltiplos).
 {% endalert %}
 
 - Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. 

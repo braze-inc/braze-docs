@@ -11,6 +11,10 @@ search_rank: 1
 
 > This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
+## Sample app
+
+To see a React Native app running the Braze SDK, checkout [our sample app on GitHub](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). For usage examples of the Braze Expo plugin, checkout [our Expo sample on GitHub](https://github.com/braze-inc/braze-expo-plugin/tree/main/example).
+
 ## Prerequisites
 
 To integrate the SDK, React Native version 0.71 or later is required. For the full list of supported versions, see our [React Native SDK GitHub repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).

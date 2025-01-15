@@ -160,4 +160,12 @@ La plupart du code qui gère les liens profonds gère également les ouvertures 
 
 Si les ouvertures sont enregistrées, vérifiez s’il s’agit d’un problème avec le lien profond en général ou avec la gestion des clics sur les notifications push du lien profond. Pour ce faire, testez si un lien profond d’un message in-app fonctionne.
 
+#### Peu ou pas d'ouvertures directes
+
+Si au moins un utilisateur ouvre votre notification push iOS, mais que peu ou pas d'_ouvertures directes_ sont enregistrées dans Braze, il se peut qu'il y ait un problème avec votre [intégration SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview). Gardez à l'esprit que les _ouvertures directes_ ne sont pas enregistrées pour les envois de test ou les notifications push silencieuses.
+
+- Assurez-vous que les messages ne sont pas envoyés en tant que [notifications push silencieuses]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). Le message doit comporter du texte dans le titre ou le corps du message pour ne pas être considéré comme silencieux.
+- Vérifiez à nouveau les étapes suivantes du [guide d'intégration push]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration):
+   - [Inscrivez-vous pour pousser]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): À chaque lancement d'application, de préférence sur `application:didFinishLaunchingWithOptions:`, le code de l'étape 3 doit être exécuté. La propriété delegate de `UNUserNotificationCenter.current()` doit être assignée à un objet qui implémente `UNUserNotificationCenterDelegate` et contient la méthode `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:`.
+   - [Activer la gestion de la poussée]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Vérifiez que la méthode `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` a été mise en œuvre.
 

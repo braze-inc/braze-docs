@@ -17,13 +17,13 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Remover
 
 > Use esse endpoint para excluir permanentemente um usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/). 
 
-Isso é semelhante à exclusão de um usuário na seção **Company Users (Usuários da empresa** ) do dashboard do Braze. Para obter informações sobre como obter um token SCIM, visite [Provisionamento automatizado de usuários]({{site.baseurl}}/scim/automated_user_provisioning/).
+Isso é semelhante à exclusão de um usuário na seção **Company Users (Usuários da empresa** ) do dashboard do Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
 ## Pré-requisitos
 
-Para usar esse endpoint, você precisará de um token SCIM. Para saber mais, consulte [Provisionamento automatizado de usuários]({{site.baseurl}}/scim/automated_user_provisioning/).
+Para usar esse endpoint, você precisará de um token SCIM. Você usará a origem de seu serviço como o cabeçalho `X-Request-Origin`. Para saber mais, consulte [Provisionamento automatizado de usuários]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de taxa
 
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Para saber mais, con
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
-| `id` | Obrigatória | String | A ID do recurso do usuário. Esse parâmetro é retornado pelos métodos `POST` `/scim/v2/Users/` ou `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Obrigatória | String | A ID do recurso do usuário. Este parâmetro é retornado pelos métodos `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corpo da solicitação

@@ -63,16 +63,16 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 ## Push registration issues
 
-To add verification for your application's push registration logic, implement [push unit testing]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/).
+To add verification for your application's push registration logic, implement [push unit testing]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/).
 
 #### No push registration prompt
 
-If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
+If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
 
 #### No "push registered" users showing in the dashboard
 
 - Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
-  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) were successfully completed.
+  - Verify the steps for [push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/) were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (Or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.
@@ -143,7 +143,7 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ## Issues after push delivery
 
-To add verification for your application's push handling, implement [push unit tests]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/) .
+To add verification for your application's push handling, implement [push unit tests]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/unit_tests/) .
 
 #### Push clicks not logged {#push-clicks-not-logged}
 

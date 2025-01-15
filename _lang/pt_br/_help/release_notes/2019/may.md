@@ -56,9 +56,9 @@ Tornamos mais fácil selecionar para onde suas mensagens no app estão indo e pa
 ## Campo de Correntes de ID de despacho para e-mail
 
 {% alert update %}
-O comportamento para `dispatch_id` difere entre canva e campanhas porque a Braze trata as etapas do canva (exceto as etapas de entrada, que podem ser agendadas) como eventos acionados, mesmo quando estão "agendadas". Saiba mais sobre o [`dispatch_id` comportamento]({{site.baseurl}}/help/help_articles/data/dispatch_id/) no canva e nas campanhas.
+O comportamento para `dispatch_id` difere entre canva e campanhas porque a Braze trata as etapas do canva (exceto as etapas de entrada, que podem ser agendadas) como eventos acionados, mesmo quando estão "agendadas". Saiba mais sobre o [comportamento `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) no canva e nas campanhas.
 
-_Atualização notada em agosto de 2019._
+_Atualização registrada em agosto de 2019._
 {% endalert %}
 
 No esforço para continuar aprimorando nossas capacidades de Currents, estamos adicionando `dispatch_id` como um campo para eventos de e-mail do Currents em todos os tipos de conector.
@@ -88,9 +88,9 @@ Qualquer usuário que também use o Mailjet verá um aumento nesses números, j�
 Você pode procurar por esses termos atualizados em nosso [glossário de métricas de relatórios]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert update %}
-O comportamento para `dispatch_id` difere entre canva e campanhas porque a Braze trata as etapas do canva (exceto as Etapas de Entrada, que podem ser agendadas) como eventos disparados, mesmo quando estão "agendadas". [Saiba mais sobre [`dispatch_id` comportamento]({{site.baseurl}}/help/help_articles/data/dispatch_id/) em canvas e campanhas.
+O comportamento para `dispatch_id` difere entre canva e campanhas porque a Braze trata as etapas do canva (exceto as Etapas de Entrada, que podem ser agendadas) como eventos disparados, mesmo quando estão "agendadas". [Saiba mais sobre o [comportamento `dispatch_id` ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) em canvas e campanhas.
 
-_Atualização observada em agosto de 2019._
+_Atualização registrada em agosto de 2019._
 {% endalert %}
 
 

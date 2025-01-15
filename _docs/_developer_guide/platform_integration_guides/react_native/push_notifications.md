@@ -3,32 +3,35 @@ nav_title: Push Notifications
 article_title: Push Notifications for React Native
 platform: React Native
 page_order: 2
-toc_headers: h2
 description: "This article covers implementing push notifications on React Native."
 channel: push
 
 ---
 
-# Push notification integration
+# Push notifications
 
 > This reference article covers how to set push notifications for React Native. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
-## Step 1: Complete the initial setup
+{% multi_lang_include developer_guide/prerequisites/react_native.md %}
+
+## Setting up push notifications
+
+### Step 1: Complete the initial setup
 
 {% tabs local %}
 {% tab Expo %}
-### Prerequisites
+#### Prerequisites
 
 Before you can use Expo for push notifications, you'll need to [set up the Braze Expo plugin]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/sdk_integration/?tab=expo).
 
-### Step 1.1: Update your `app.json` file
+#### Step 1.1: Update your `app.json` file
 
 Next update your `app.json` file for Android and iOS:
 
 - **Android:** Add the `enableFirebaseCloudMessaging` option.
 - **iOS:** Add the `enableBrazeIosPush` option.
 
-### Step 1.2: Add your Google Sender ID
+#### Step 1.2: Add your Google Sender ID
 
 First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
@@ -44,7 +47,7 @@ Next, open your project's `app.json` file and set your `firebaseCloudMessagingSe
 "firebaseCloudMessagingSenderId": "693679403398"
 ```
 
-### Step 1.3: Add the path to your Google Services JSON
+#### Step 1.3: Add the path to your Google Services JSON
 
 In your project's `app.json` file, add the path to your `google-services.json` file. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
 
@@ -75,7 +78,7 @@ Note that you will need to use these settings instead of the native setup instru
 {% endtab %}
 
 {% tab Android Native %}
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/):
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/):
 
 1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
 2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
@@ -85,19 +88,19 @@ If you are not using the Braze Expo plugin, or would like to configure these set
 {% endtab %}
 
 {% tab iOS Native %}
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native iOS push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/):
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native iOS push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/):
 
-### Step 1.1: Request for push permissions
+#### Step 1.1: Request for push permissions
 
 If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
-### Step 1.2 (Optional): Migrate your push key
+#### Step 1.2 (Optional): Migrate your push key
 
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Request push notifications permission
+### Step 2: Request push notifications permission
 
 Use the `Braze.requestPushPermission()` method (available on v1.38.0 and up) to request permission for push notifications from the user on iOS and Android 13+. For Android 12 and below, this method is a no-op.
 
@@ -114,7 +117,7 @@ const permissionOptions = {
 Braze.requestPushPermission(permissionOptions);
 ```
 
-### Step 2.1: Listen for push notifications (optional)
+#### Step 2.1: Listen for push notifications (optional)
 
 You can additionally subscribe to events where Braze has detected and handled an incoming push notification. Use the listener key `Braze.Events.PUSH_NOTIFICATION_EVENT`.
 
@@ -129,7 +132,7 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 });
 ```
 
-#### Push notification event fields
+##### Push notification event fields
 
 For a full list of push notification fields, refer to the table below:
 
@@ -143,7 +146,7 @@ For a full list of push notification fields, refer to the table below:
 | `summary_text`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
 | `badge_count`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
-| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
+| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent/). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent/). |
 | `is_braze_internal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as geofences sync, Feature Flag sync, or uninstall tracking. The payload is received silently for the user. |
 | `image_url`        | String    | Specifies the URL associated with the notification image. |
 | `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
@@ -151,7 +154,7 @@ For a full list of push notification fields, refer to the table below:
 | `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Step 3: Enable deep linking (optional)
+### Step 3: Enable deep linking (optional)
 
 To enable Braze to handle deep links inside React components when a push notification is clicked, first implement the steps described in [React Native Linking](https://reactnative.dev/docs/linking) library, or with your solution of choice. Then, follow the additional steps below.
 
@@ -165,7 +168,7 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 
 {% endtab %}
 {% tab iOS Native %}
-### Step 3.1: Add deep linking capabilities
+#### Step 3.1: Add deep linking capabilities
 {% alert note %}
 If you are using the Braze Expo plugin, step 3.1 is handled automatically, and you may skip to step 3.2.
 {% endalert %}
@@ -191,7 +194,7 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
 }
 ```
 
-### Step 3.2: Configure deep link handling
+#### Step 3.2: Configure deep link handling
 
 In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method to account for deep links from push notifications that open your app when it isn't running. For example:
 
@@ -212,7 +215,7 @@ Braze provides this workaround since React Native's Linking API does not support
 {% endtab %}
 {% endtabs %}
 
-## Step 4: Test displaying push notifications
+### Step 4: Send a test push notification
 
 At this point, you should be able to send notifications to the devices. Adhere to the following steps to test your push integration.
 
@@ -226,9 +229,9 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
 
-## Advanced configurations with the Expo plugin
+## Using the Expo plugin
 
-For certain advanced cases that need to be configured in the native Android and iOS SDKs, Braze provides special configurations via the Expo plugin to handle those push notifications behaviors.
+After you [set up push notifications for Expo](#setting-up-push-notifications), you can use it to handle the following push notifications behaviors&#8212;without needing to write any code in the native Android or iOS layers.
 
 ### Forwarding Android push to additional FMS
 
@@ -250,6 +253,12 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
   }
 }
 ```
+
+### Using app extensions with Expo Application Services {#app-extensions}
+
+If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
+
+One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
 
 ### Enabling rich push notifications for iOS
 
@@ -309,10 +318,3 @@ Lastly, add the bundle identifier for this app extension to your project's crede
 {% alert warning %}
 If you are using Push Stories with Expo Application Services, be sure to use the `EXPO_NO_CAPABILITY_SYNC=1` flag when running `eas build`. There is a known issue in the command line which removes the App Groups capability from your extension's provisioning profile.
 {% endalert %}
-
-### Using app extensions with Expo Application Services {#app-extensions}
-
-If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
-
-One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
-

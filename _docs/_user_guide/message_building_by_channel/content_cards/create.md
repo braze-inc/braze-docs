@@ -117,6 +117,10 @@ The following actions are available to take for Content Card links:
 Content Card message fields are limited to 2&nbsp;KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key-Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}
 
+{% alert warning %}
+Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this 250 card limit, meaning a high number of dismissed cards can reduce the space available for new ones.
+{% endalert %}
+
 ## Step 4: Configure additional settings (optional)
 
 You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.

@@ -26,7 +26,7 @@ Certifique-se de que **Embed In Application** esteja definido para incorporar a 
 
 ## Configuração da extensão de serviço
 
-O `Notification Service Extension` é um binário próprio que acompanha seu app. Ele deve ser configurado no [Apple Developer Portal](https://developer.apple.com) com seu próprio ID de app e perfil de provisionamento.
+O `Notification Service Extension` é um binário próprio que acompanha seu app. Ele deve ser configurado no [Portal Apple Developer](https://developer.apple.com) com seu próprio ID de app e perfil de provisionamento.
 
 O ID do pacote do `Notification Service Extension` deve ser diferente do ID do pacote do direcionamento do seu aplicativo principal. Por exemplo, se o ID do pacote do seu app for `com.company.appname`, você poderá usar `com.company.appname.AppNameServiceExtension` para a extensão do serviço.
 

@@ -45,6 +45,8 @@ Para ver más detalles sobre los criterios de entrada, seleccione **Ver más**. 
 
 La lógica Liquid se procesará durante una ejecución de prueba, aunque no envíes un mensaje de prueba real. Esto significa que la [lógica del mensaje de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) y otra lógica de Liquid se reflejan y podrían afectar al recorrido del usuario de Canvas.
 
+Si tu vista previa envía el último paso de tu recorrido de usuario en lugar de abortarlo, es posible que la vista previa esté utilizando la hora actual como la hora que se está probando para la evaluación de Liquid, y no la hora real en la que el usuario estaría en el paso según la hora de entrada en Canvas.
+
 ## Vistas previas para la sincronización
 
 Para los lienzos programados, el usuario de la prueba entrará a la siguiente hora de entrada programada. Para los lienzos basados en acciones con fechas de inicio, el usuario de la prueba entrará en la fecha y hora de inicio. 
@@ -55,12 +57,12 @@ Los pasos de Mensaje y Retraso muestran el momento en el que un usuario progresa
 
 ## Cuando los usuarios entran y salen
 
-Los usuarios de prueba entrarán en la vista previa aunque no sean elegibles en la vida real. Si no reúnen los requisitos, se puede entender por qué no habrían cumplido los criterios. Puede ver los resultados en la barra lateral para cuando los usuarios entran y salen del Canvas.
+Los usuarios de prueba entrarán en la vista previa aunque no sean elegibles en la vida real. Si no son elegibles, puedes ver por qué no habrían cumplido los criterios. Puede ver los resultados en la barra lateral para cuando los usuarios entran y salen del Canvas.
 
 - Si prueba una Ruta de Acción con acciones que corresponden a criterios de salida (incluyendo propiedades de eventos), se activarán los criterios de salida y finalizará la ejecución de la prueba.
 - Si prueba un paso de Mensaje que corresponde a criterios de salida, se activarán los criterios de salida y finalizará la ejecución de la prueba.
 - En este momento, no puede seleccionar un evento o propiedad específicos dentro de una ruta de acción para activar los criterios de salida (sólo la ruta en su conjunto). Si un usuario puede cumplir varios criterios de salida, se mostrará como resultado el primero que se procese y que cumpla.
-- Los eventos, los activadores de la API y las propiedades de la entrada del lienzo no se aplican en función de la entrada del lienzo. No afectarán a los resultados de los pasos siguientes.
+- Los eventos, desencadenantes de la API, atributos personalizados y propiedades de entrada en el Canvas no se aplican en función de la entrada en el Canvas. No afectarán a los resultados de los pasos siguientes. La ejecución de la prueba simula el recorrido del usuario sin aplicar estos elementos para cambiar el perfil de usuario real o el flujo del Canvas.
 
 ## Rutas de experimentos y variantes en Canvas
 

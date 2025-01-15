@@ -13,35 +13,33 @@ channel:
 
 # Acortamiento de enlaces
 
-> El acortamiento de enlaces y el seguimiento de clics te permiten acortar automáticamente las URL contenidas en los mensajes SMS y recopilar datos analíticos sobre el porcentaje de clics, lo que proporciona métricas de participación adicionales para ayudarte a comprender cómo se relacionan tus usuarios con tus campañas por SMS. 
+> El acortamiento de enlaces y el seguimiento de clics te permiten acortar automáticamente las URL contenidas en los mensajes SMS y recopilar datos analíticos sobre el porcentaje de clics, lo que proporciona métricas de participación adicionales para ayudarte a comprender cómo se relacionan tus usuarios con tus campañas por SMS. <br><br> Esta página explica cómo activar el acortamiento de enlaces en tus mensajes SMS, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces acortados y mucho más.
 
-## Resumen
+El acortamiento de enlaces y el seguimiento de clics pueden activarse [a nivel de variante de mensaje]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign), tanto en campañas como en Lienzos. 
 
-El acortamiento de enlaces y el seguimiento de clics pueden activarse a [nivel de variante de mensaje]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) tanto en campañas como en lienzos. 
-
-La longitud de la URL vendrá determinada por el tipo de seguimiento activado:
+La longitud de la URL viene determinada por el tipo de seguimiento activado:
 - **El seguimiento básico** permite realizar un seguimiento de los clics a nivel de campaña. Las URL estáticas tendrán una longitud de 20 caracteres, y las dinámicas de 25 caracteres.
 - **El seguimiento avanzado** permite realizar un seguimiento de los clics a nivel de campaña y a nivel de usuario. Los clics también generarán un [evento de clic SMS]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) enviado a través de Currents. Las URL estáticas con seguimiento avanzado tendrán una longitud de 27-28 caracteres, lo que le permitirá crear segmentos de usuarios que han hecho clic en las URL. Para las URL dinámicas, tendrán una longitud de 32-33 caracteres.
 
 Los enlaces se acortarán utilizando nuestro dominio corto compartido (`brz.ai`). Un ejemplo de URL puede ser el siguiente: `https://brz.ai/8jshX` (básica, estática) o `https://brz.ai/8jshX/2dj8d` (avanzada, dinámica). Consulte la sección [Pruebas](#testing) para obtener más información.
 
-Las URL acortadas estáticas serán válidas durante un año a partir de la fecha de su creación. Las URL acortadas que contengan la personalización Liquid serán válidas durante dos meses.
+Todas las URL estáticas que empiecen por `http://` o `https://` se acortarán. Las URL acortadas estáticas serán válidas durante un año a partir de la fecha de su creación. Las URL acortadas que contengan la personalización Liquid serán válidas durante dos meses.
 
 {% alert note %}
 Si piensas utilizar el [filtro de canal inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) <sup>BrazeAITM</sup> y quieres que el canal SMS sea seleccionable, activa el acortamiento de enlaces SMS con seguimiento avanzado y [seguimiento de clics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
 {% endalert %}
 
-### Utilizar el acortamiento de enlaces
+## Utilizar el acortamiento de enlaces
 
 Para utilizar el acortamiento de enlaces, asegúrate de que está activado el alternador de acortamiento de enlaces en el creador de mensajes. A continuación, elige utilizar el seguimiento básico o el avanzado.
 
-![][1]
+![Creador de mensajes con un botón alternativo para acortar enlaces.][1]
 
 Braze sólo reconocerá las URL que empiecen por `http://` o `https://`. Cuando se reconoce una URL, la sección **Vista previa** se actualiza con una URL de marcador de posición. Braze estimará la longitud de la URL después de acortarla, pero una advertencia le pedirá que seleccione un usuario de prueba y guarde el mensaje como borrador para obtener una estimación más precisa.
 
-![][3]
+![Creador de mensajes con una URL larga en la casilla "Mensaje" y un enlace acortado generado en la vista previa.][3]
 
-#### Añadir parámetros UTM
+### Añadir parámetros UTM
 
 Aunque el acortamiento de enlaces te permite hacer un seguimiento automático de tus URL, también puedes añadir parámetros UTM a tus URL para hacer un seguimiento del rendimiento de las campañas en herramientas de análisis de terceros, como Google Analytics.
 
@@ -53,11 +51,11 @@ Para añadir parámetros UTM a tu URL, haz lo siguiente:
 
 Un ejemplo es `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
 
-### Personalización líquida en las URL
+## Personalización líquida en las URL
 
 Puede construir dinámicamente su URL directamente dentro del compositor Braze, lo que le permite añadir parámetros UTM dinámicos a sus URL o enviar a los usuarios enlaces únicos (como dirigir a los usuarios a su carrito abandonado o a un producto específico que vuelve a estar en stock).
 
-#### Crear una URL con etiquetas de personalización de Liquid compatibles
+### Crear una URL con etiquetas de personalización de Liquid compatibles
 
 Las URL pueden generarse dinámicamente mediante el uso de cualquiera de las [etiquetas de personalización de Liquid admitidas]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -69,7 +67,7 @@ https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom
 
 También admitimos el acortamiento de variables Liquid definidas a medida. A continuación se muestran varios ejemplos:
 
-#### Crear una URL utilizando variables Liquid
+### Crear una URL utilizando variables Liquid
 
 {% raw %}
 ```liquid
@@ -78,18 +76,18 @@ https://example.com/{{url_var}}
 ```
 {% endraw %}
 
-#### Acortar las URL generadas por las variables de Liquid
+### Acortar las URL generadas por las variables de Liquid
 
 Acortamos las URL generadas por Liquid, incluso las incluidas en las propiedades de activación de API. Por ejemplo, si {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} representa una URL válida, acortaremos y rastrearemos esa URL antes de enviar el mensaje SMS. 
 
-#### Acortar URLs en el punto final /messages/send
+### Acortar URLs en el punto final /messages/send
 
-El acortamiento de enlaces también está habilitado para mensajes exclusivos de la API a través del [punto final`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). Para activar también el seguimiento básico o avanzado, utilice los parámetros de solicitud `link_shortening_enabled` o `user_click_tracking_enabled`.
+El acortamiento de enlaces también está activado para los mensajes exclusivos de la API a través del [punto final`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). Para activar también el seguimiento básico o avanzado, utiliza los parámetros de solicitud `link_shortening_enabled` o `user_click_tracking_enabled`.
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 |`link_shortening_enabled`| Opcional | Booleano | Establezca `link_shortening_enabled` en `true` para activar el acortamiento de enlaces y el seguimiento de clics a nivel de campaña. Para utilizar el seguimiento, deben estar presentes `campaign_id` y `message_variation_id`.|
-|`user_click_tracking_enabled`| Opcional | Booleano | Establezca `user_click_tracking_enabled` en `true` para activar el acortamiento de enlaces y el seguimiento de clics a nivel de campaña y a nivel de usuario. Puede utilizar los datos rastreados para crear segmentos de usuarios que hicieron clic en las URL. Para utilizar el seguimiento, deben estar presentes `campaign_id` y `message_variation_id`. |
+|`user_click_tracking_enabled`| Opcional | Booleano | Establezca `user_click_tracking_enabled` en `true` para activar el acortamiento de enlaces y el seguimiento de clics a nivel de campaña y a nivel de usuario. Puede utilizar los datos rastreados para crear segmentos de usuarios que hicieron clic en las URL.<br><br> Para utilizar este parámetro, `link_shortening_enabled` debe ser `true`, y deben estar presentes `campaign_id` y `message_variation_id`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Para obtener una lista completa de los parámetros de solicitud, ve a [Parámetros de solicitud]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
@@ -106,7 +104,7 @@ Asegúrese de guardar la campaña o el Canvas antes de enviar un mensaje de prue
 Si se crea un borrador dentro de un Canvas activo, no se generará una URL acortada. La URL acortada real se genera cuando se activa el borrador de Canvas.
 {% endalert %}
 
-![][2]
+![Pestaña "Prueba" de mensajes con campos para seleccionar destinatarios de prueba.][2]
 
 {% alert note %}
 La personalización líquida y las URL acortadas se planifican en la pestaña **Prueba** después de seleccionar un usuario. Asegúrese de que se selecciona un usuario para recibir un recuento preciso de caracteres.
@@ -116,7 +114,7 @@ La personalización líquida y las URL acortadas se planifican en la pestaña **
 
 Cuando el acortamiento de enlaces está activado, la tabla de rendimiento de SMS y MMS incluye una columna titulada **Clics totales** que muestra un recuento de eventos de clic por variante y una tasa de clics asociada. Para más detalles sobre las métricas de SMS, consulte [Rendimiento de los mensajes SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
-![][4]
+![Tabla de métricas de rendimiento de SMS y MMS.][4]
 
 Los gráficos de **Rendimiento histórico** y **Rendimiento SMS/MMS** también incluyen una opción para **Clics totales** y muestran una serie temporal diaria de eventos de clic. Los clics se incrementan en la redirección (como cuando un usuario visita un enlace), y pueden incrementarse más de una vez por usuario.
 
@@ -162,9 +160,9 @@ Una vez configurados, los dominios personalizados pueden asignarse a uno o vario
 
 ![La configuración de los grupos de suscripción permite seleccionar un dominio de acortamiento de enlaces.][7]
 
-Las campañas enviadas con el acortamiento de enlaces activado utilizarán el dominio asignado asociado a su grupo de suscripción SMS.
+Las campañas enviadas con el acortamiento de enlaces activado utilizarán el dominio asignado asociado a tu grupo de suscripción SMS.
 
-![][8]
+![Vista previa del creador de mensajes SMS con un dominio de enlace acortado que es diferente del dominio del cuadro "Mensaje".][8]
 
 ## Preguntas más frecuentes
 
@@ -172,7 +170,7 @@ Las campañas enviadas con el acortamiento de enlaces activado utilizarán el do
 
 #### ¿Los enlaces que recibo al realizar el envío de prueba son URL reales?
 
-Si la campaña se ha guardado como borrador antes del envío de prueba, sí. De lo contrario, se trata de un enlace de marcador de posición. Tenga en cuenta que la URL exacta enviada en una campaña lanzada puede diferir de la enviada a través de un envío de prueba.
+Si la campaña se ha guardado como borrador antes del envío de prueba, sí. De lo contrario, se trata de un enlace de marcador de posición. Ten en cuenta que la URL exacta enviada en una campaña lanzada puede diferir de la enviada en un envío de prueba.
 
 #### ¿Es necesario instalar el SDK de Braze para acortar enlaces?
 
@@ -180,7 +178,7 @@ No. El acortamiento de enlaces funciona sin ninguna integración SDK.
 
 #### ¿Sé qué usuarios individuales hacen clic en una URL?
 
-Sí. Cuando **el seguimiento avanzado** está activado, puedes reorientar a los usuarios que han hecho clic en las URL aprovechando los [filtros de reorientación]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) por SMS o los eventos de clic por SMS (`users.messages.sms.ShortLinkClick`) enviados a través de Currents.
+Sí. Cuando **el seguimiento avanzado** está activado, puedes reorientar a los usuarios que han hecho clic en las URL aprovechando los [filtros de reorientación]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) por SMS o los eventos de clic por SMS (`users.messages.sms.ShortLinkClick`) enviados por Currents.
 
 #### ¿Puedo añadir parámetros UTM a una URL antes de acortarla?
 
@@ -192,7 +190,7 @@ Las URL estáticas son válidas durante un año desde el momento del registro de
 
 #### ¿Funciona el acortamiento de enlaces con enlaces profundos o universales?
 
-El acortamiento de enlaces acorta cualquier URL estática que empiece por `http://` o `https://`. Evita acortar aún más los enlaces universales generados por proveedores como Branch o Appsflyer, ya que esto puede romper la atribución o la redirección.
+El acortamiento de enlaces no funciona con los vínculos profundos. Puedes acortar enlaces universales de proveedores como Branch o Appsflyer, pero Braze no puede solucionar los problemas que puedan surgir al hacerlo (como romper la atribución o provocar una redirección).
 
 ### Dominios personalizados
 

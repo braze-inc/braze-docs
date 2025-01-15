@@ -25,7 +25,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 ![Navegue até Atributos personalizados, Eventos personalizados ou Produtos.][21]{: style="max-width:90%;" }
 
 {: start="2"}
-2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados** ) ou **Add Custom Events (Adicionar eventos personalizados** ) ou **Add Products (Adicionar produtos**).<br><br>Para atributos personalizados, selecione um [tipo de dados][20] para esse atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento][22]{: style="max-width:80%;" }
+2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados)** ou **Add Custom Events (Adicionar eventos personalizados)** ou **Add Products (Adicionar produtos)**.<br><br>Para atributos personalizados, selecione um [tipo de dados][20] para esse atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento][22]{: style="max-width:80%;" }
 3\. Selecione **Salvar**.
 
 ### Nomeação de eventos personalizados e atributos personalizados
@@ -84,7 +84,7 @@ As alterações na lista de bloqueio podem levar alguns minutos para serem propa
 
 ## Exclusão de dados personalizados
 
-À medida que você cria campanhas e segmentos direcionados, pode descobrir que não precisa mais de um evento personalizado ou atributo personalizado. Por exemplo, se você usou um atributo personalizado específico como parte de uma campanha única, poderá excluir esses dados depois de [colocá-los na lista de bloqueio](#blocklisting-custom-attributes-custom-events-and-products) e remover suas referências do app. 
+À medida que você cria campanhas e segmentos direcionados, pode descobrir que não precisa mais de um evento personalizado ou atributo personalizado. Por exemplo, se você usou um atributo personalizado específico como parte de uma campanha única, poderá excluir esses dados depois de [colocá-los na lista de bloqueio](#blocklisting-custom-attributes-custom-events-and-products) e remover suas referências do app. Você pode excluir qualquer tipo de dados (como strings, números e atributos personalizados aninhados).
 
 Para excluir um evento personalizado ou atributo personalizado, faça o seguinte:
 
@@ -116,7 +116,7 @@ Ao excluir dados personalizados, lembre-se dos seguintes detalhes:
 
 ## Forçar comparações de tipos de dados
 
-A Braze reconhece automaticamente os tipos de dados para os dados de atribuição que nos são enviados. No entanto, caso vários tipos de dados sejam aplicados a uma única atribuição, é possível forçar o tipo de dados de qualquer atributo para que saibamos o que ele realmente é. Selecione na lista suspensa da coluna **Data Type (Tipo de dados** ).
+A Braze reconhece automaticamente os tipos de dados para os dados de atribuição que nos são enviados. No entanto, caso vários tipos de dados sejam aplicados a uma única atribuição, é possível forçar o tipo de dados de qualquer atributo para que saibamos o que ele é. Selecione na lista suspensa da coluna **Data Type (Tipo de dados)**.
 
 {% alert note %}
 Forçar tipos de dados não se aplica a propriedades de eventos ou propriedades de compra.

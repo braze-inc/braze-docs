@@ -17,7 +17,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Criar m
 
 Esses modelos estarão disponíveis na página **Modelos e mídias**. A resposta desse endpoint incluirá um campo para `email_template_id`, que pode ser usado para atualizar o modelo em chamadas subsequentes da API.
 
-O status de inscrição de e-mail dos usuários pode ser atualizado e recuperado pela Braze usando uma API RESTful. Você pode usar a API para configurar a sincronização bidirecional entre o Braze e outros sistemas de e-mail ou seu próprio banco de dados. Todas as solicitações de API são feitas por HTTPS.
+O status de inscrição de e-mail dos usuários pode ser atualizado e recuperado com o Braze usando uma API REST de e-mail. Você pode usar a API para configurar a sincronização bidirecional entre o Braze e outros sistemas de e-mail ou seu próprio banco de dados. Todas as solicitações de API são feitas por HTTPS.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -87,7 +87,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | Todas as tags devem ser strings | Confira se as tags estão entre aspas (`""`). |
 | Algumas tags não puderam ser encontradas | Para adicionar uma tag ao criar um modelo de e-mail, a tag já deve existir na Braze. |
 | O e-mail deve ter nomes de blocos de conteúdo válidos | O e-mail pode conter blocos de conteúdo que não existem nesse ambiente. |
-| Valor inválido para `should_inline_css`. Esperava-se`true` ou `false`  | Esse parâmetro aceita apenas valores booleanos (verdadeiro ou falso). Certifique-se de que o valor de `should_inline_css` não esteja encapsulado entre aspas (`""`), o que faz com que o valor seja enviado como uma string. |
+| Valor inválido para `should_inline_css`. Esperava-se`true` ou `false` | Esse parâmetro aceita apenas valores booleanos (verdadeiro ou falso). Certifique-se de que o valor de `should_inline_css` não esteja encapsulado entre aspas (`""`), o que faz com que o valor seja enviado como uma string. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

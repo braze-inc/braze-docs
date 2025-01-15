@@ -20,7 +20,7 @@ Esse recurso está em beta. Para saber mais, entre em contato com os representan
 | ----------- | ----------- |
 | Conta do Treasure Data | É necessário ter uma conta do [Treasure Data](https://www.treasuredata.com/) para usar a parceria. |
 | Chave de importação de dados do Braze | Isso pode ser capturado no dashboard da Braze, em **Integração com parceiros** > **Parceiros de tecnologia**. Em seguida, selecione **Heap**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Seu endpoint dependerá do URL do Braze para sua instância. |
 | Endereço IP estático dos dados do Treasure | O endereço IP estático do Treasure Data é o ponto de acesso e a fonte da vinculação para essa integração. Para determinar o endereço IP estático, fale com o representante de sucesso do cliente do Treasure Data ou com o suporte técnico do Treasure Data. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -226,8 +226,8 @@ Defina o cronograma de sincronização desejado e salve a ativação.
 
 No Braze, navegue até **Segments (Segmentos**), crie um novo segmento e selecione **Treasure Data Cohorts (Coortes de dados do Tesouro** ) como seu filtro. Nessa tela, você pode escolher qual coorte do Treasure Data deseja incluir. Depois que o segmento de coorte da Treasure Data for criado, você poderá selecioná-lo como um filtro de público ao criar uma campanha ou canva.
 
-![Catálogo do Hub de Integrações de Dados do Tesouro]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Catálogo do Hub de Integrações de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
-## Correspondência de Usuário
+## Correspondência de usuários
 
-Usuários identificados podem ser correspondidos pelo seu `external_id` ou `alias`. Usuários anônimos podem ser correspondidos pelo seu `device_id`. Usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo seu `device_id`, e devem ser identificados pelo seu `external_id` ou `alias`.
+Os usuários identificados podem ser combinados pelo endereço `external_id` ou `alias`. Os usuários anônimos podem ser combinados pelo site `device_id`. Os usuários identificados que foram originalmente criados como usuários anônimos não podem ser identificados pelo endereço `device_id` e devem ser identificados pelo endereço `external_id` ou `alias`.

@@ -62,5 +62,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-Esse endpoint gera apenas URLs para o novo centro de preferências (como centros de preferências criados via API ou pelo editor de arrastar e soltar).
+Este endpoint gera apenas URLs para o novo Central de Preferências (como Central de Preferências criadas usando nossa API ou o editor de arrastar e soltar).
 {% endalert %}

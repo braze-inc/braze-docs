@@ -37,7 +37,7 @@ Los atributos son características o propiedades específicas asociadas a un usu
 
 #### Atributos estándar
 
-Los atributos estándar son atributos predefinidos que proporciona Braze. Braze realiza un seguimiento automático una vez integrado el SDK en su aplicación. Se trata de información común sobre los usuarios que la mayoría de las aplicaciones consideran útil, como datos demográficos y del dispositivo. Algunos ejemplos de atributos estándar son:
+Los atributos estándar son atributos predefinidos que puedes seguir con Braze tras integrar el SDK en tu aplicación. Se trata de información común sobre los usuarios que la mayoría de las aplicaciones consideran útil, como datos demográficos y del dispositivo. Algunos ejemplos son:
 
 - Nombre
 - Apellido

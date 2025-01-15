@@ -14,5 +14,6 @@ partner_top_header: "Leads Captures"
 valid_partner_list:
 - name: Facebook Lead Ads a través de Zapier
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
-
+- name: Supera a
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

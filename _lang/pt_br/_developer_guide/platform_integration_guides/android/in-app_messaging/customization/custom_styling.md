@@ -38,6 +38,10 @@ Se preferir, você pode substituir esses estilos para criar uma aparência que s
 
 Para substituir um estilo, copie-o integralmente para o arquivo `styles.xml` em seu projeto e faça as modificações. Todo o estilo deve ser copiado para seu arquivo local `styles.xml` para que todas as atribuições sejam definidas corretamente. Observe que esses estilos personalizados são para alterações em elementos individuais da interface do usuário, não para alterações em massa nos layouts. As alterações no nível do layout precisam ser tratadas com exibições personalizadas.
 
+{% alert note %}
+Você pode personalizar algumas cores diretamente em sua campanha do Braze sem modificar o XML. Lembre-se de que as cores definidas no dashboard do Braze substituirão as cores que você definir em qualquer outro lugar.
+{% endalert %}
+
 ## Fonte personalizada
 
 O Braze permite a configuração de uma fonte personalizada usando a [guia de família de fontes]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). Para usá-lo, substitua o estilo do texto da mensagem, dos cabeçalhos e do texto do botão e use o atributo `fontFamily` para instruir o Braze a usar sua família de fontes personalizada.
