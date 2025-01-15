@@ -19,7 +19,7 @@ description: "이 참조 문서에서는 나중에 Braze 플랫폼 내에서 사
 Braze 대시보드에서 **템플릿** > **웹훅 템플릿**로 이동합니다.
 
 {% alert note %}
-이전 탐색을 사용하고 있다면, 이 페이지는 참여 > 템플릿 및 미디어 > 웹훅 템플릿 아래에서 찾을 수 있습니다.
+[이전 탐색]({{site.baseurl}}/navigation)을 사용하고 있다면, 이 페이지는 **참여** > **템플릿 및 미디어** > **웹훅 템플릿** 아래에서 찾을 수 있습니다.
 {% endalert %}
 
 ![웹훅 템플릿이 미리 디자인되고 저장된 "웹훅 템플릿" 페이지입니다.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})

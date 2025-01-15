@@ -29,7 +29,7 @@ Para ativar manualmente esses botões de ação por push, primeiro registre-se p
 
 ### Etapa 1: Adição de categorias push padrão do Braze {#registering}
 
-Use o seguinte código para se registrar nas categorias push padrão ao [se registrar no push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze):
+Use o seguinte código para se registrar nas categorias push padrão ao se [registrar no push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze):
 
 {% tabs %}
 {% tab swift %}

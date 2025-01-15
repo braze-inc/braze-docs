@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Resumen
 
-![Gráfico titulado "Cómo funcionan los eventos de predicción". A la izquierda se muestran los datos de usuario que se introducen en el modelo de aprendizaje automático. La etiqueta dice "Entrena con datos históricos, compara el comportamiento de los usuarios que sí realizaron el evento en un periodo determinado con los que no". A la derecha se muestran los resultados del aprendizaje automático, donde los usuarios se clasifican de menor a mayor probabilidad de realizar el evento. La etiqueta dice "Predecir la probabilidad de sucesos futuros, asignar una puntuación de probabilidad a los usuarios para una orientación precisa y conveniente."][1]
+![Gráfico titulado "Cómo funcionan los eventos de predicción", que muestra los datos de usuario embudados en el modelo de aprendizaje automático. La etiqueta dice "Entrena con datos históricos, compara el comportamiento de los usuarios que sí realizaron el evento en un periodo determinado con los que no". También muestra los resultados del aprendizaje automático, donde se clasifica a los usuarios de menor a mayor probabilidad de realizar el evento. La etiqueta dice "Predecir la probabilidad de sucesos futuros, asignar una puntuación de probabilidad a los usuarios para una orientación precisa y conveniente."][1]
 
 > Los Eventos Predictivos proporcionan a los especialistas en marketing una potente herramienta para identificar y enviar mensajes a los usuarios en función de su probabilidad de realizar un evento. Cuando creas una predicción de eventos, Braze entrena un modelo de aprendizaje automático utilizando [árboles de decisión con gradiente reforzado](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender de la actividad previa y predecir la actividad futura.
 

@@ -66,16 +66,11 @@ Os seguintes tipos de mensagens estão isentos dos requisitos da CASL:
 
 ### Consentimento de mensagens
 
-Os envios de mensagens que não se enquadram em uma das isenções exigem o consentimento "expresso ou implícito" do destinatário da mensagem.
+A Braze exige consentimento explícito para todos os envios de e-mail e mensagens SMS/MMS.
 
 #### Consentimento implícito
 
-O consentimento implícito é baseado em atividades anteriores com um usuário por meio de um relacionamento comercial ou não comercial existente. As mensagens podem ser enviadas com base no consentimento implícito durante o período de transição. Após 1º de julho de 2017, o consentimento expresso é necessário, a menos que o consentimento implícito ainda seja válido (por exemplo, 2 anos após a realização de uma compra).
-
-- O destinatário de uma mensagem comprou ou alugou um produto, mercadoria, serviço ou fez outros negócios com sua organização nos últimos dois anos
-- O endereço eletrônico foi publicado e não proíbe explicitamente o envio de e-mails não solicitados
-
-O consentimento implícito só é válido por 6 meses se o destinatário não se tornar um cliente.
+O consentimento implícito pode ser legalmente permitido em algumas jurisdições, mas não é suficiente para o envio de e-mails pelo Braze. Nossa Política de Uso Aceitável vai além dos requisitos legais.
 
 #### Consentimento expresso
 

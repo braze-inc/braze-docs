@@ -12,9 +12,7 @@ hidden: true
 
 # Criação de um item do feed de notícias
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > Os itens do feed de notícias permitem inserir conteúdo permanente diretamente em seu app a partir do dashboard da Web. Melhor ainda, o Feed de notícias também pode ser direcionado a segmentos individuais, assim como todos os nossos outros tipos de mensagens. Isso significa que o que você vê no feed pode ser completamente diferente de outra pessoa. As possibilidades para o feed de notícias são quase ilimitadas.
 
@@ -122,7 +120,7 @@ Você pode reordenar seus cartões na página do Feed de notícias.
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
 [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %}
-Daqui a [13]: https://www.braze.com/customers
+[13]: https://www.braze.com/customers
 [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
 [15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

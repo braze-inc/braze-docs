@@ -19,7 +19,7 @@ A integração Dyspatch e Braze permite simplificar o ciclo de vida da criação
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta da Dyspatch | Uma [conta Dyspatch][3] com uma [função de proprietário ou administrador][4] é necessária para aproveitar esta parceria. |
-| chave da API REST Braze | Uma chave da API REST da Braze com permissões completas de **Templates**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| chave da API REST Braze | Uma chave da API REST da Braze com permissões completas de **modelos**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integração

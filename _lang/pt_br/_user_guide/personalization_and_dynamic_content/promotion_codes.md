@@ -179,6 +179,10 @@ Se a mensagem deveria ter contido um código de promoção de uma lista vazia ou
 
 Se a mensagem contiver lógica Liquid que insere condicionalmente um código de promoção, a mensagem só será cancelada se ela deveria ter contido um código de promoção. Se a mensagem não deveria conter um código de promoção, a mensagem será enviada normalmente.
 
+### Como faço para salvar um código promocional no perfil de um usuário para que ele possa ser usado em mensagens de acompanhamento?
+
+Para fazer referência ao mesmo código de promoção em mensagens subsequentes, o código deve ser salvo no perfil do usuário como um atributo personalizado. Isso pode ser feito anexando um [webhook Braze-to-Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) à mesma campanha ou etapa do Canva Message.
+
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}

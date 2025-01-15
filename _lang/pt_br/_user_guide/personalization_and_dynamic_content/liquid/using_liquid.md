@@ -55,7 +55,7 @@ Atualmente, o Braze suporta o Liquid até o Liquid 5 da Shopify, inclusive.
 
 ## Usando Liquid
 
-Usando [as Liquid tags][1], você pode elevar a qualidade de suas mensagens, enriquecendo-as com um toque pessoal. 
+Usando as [Liquid tags][1], você pode elevar a qualidade de suas mensagens, enriquecendo-as com um toque pessoal. 
 
 ### Sintaxe Liquid
 
@@ -94,7 +94,7 @@ Se usar o Liquid em seus envios de e-mail, certifique-se de usá-lo:
 
 ### Inserção de variáveis pré-formatadas
 
-Você pode inserir variáveis pré-formatadas com padrões por meio do modal **Add Personalization (Adicionar personalização** ), localizado no canto superior direito de qualquer campo de texto modelado.
+Você pode inserir variáveis pré-formatadas com padrões por meio do modal **Add Personalization (Adicionar personalização)**, localizado no canto superior direito de qualquer campo de texto modelado.
 
 ![O modal Add Personalization que aparece após a seleção de inserir personalização. O modal tem campos para o tipo de personalização, atribuição, valor padrão opcional e exibe uma prévia da sintaxe do Liquid][44]{: style="max-width:70%;"}
 
@@ -153,7 +153,7 @@ Está atribuindo as mesmas variáveis em todas as mensagens? Em vez de escrever 
 
 1. [Criar um bloco de conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. Dê um nome ao seu bloco de conteúdo (sem espaços ou caracteres especiais).
-3. Selecione **Edit (Editar** ) na parte inferior da página.
+3. Selecione **Edit (Editar)** na parte inferior da página.
 4. Digite suas tags `assign`.
 
 Desde que o bloco de conteúdo esteja na parte superior da mensagem, toda vez que a variável for inserida na mensagem como um objeto, ela fará referência ao atributo personalizado escolhido!

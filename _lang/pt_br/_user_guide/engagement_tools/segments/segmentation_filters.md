@@ -50,6 +50,10 @@ glossaries:
     description: "Determina se um usuário corresponde ou não a um valor de atributo registrado personalizado. (período de 24 horas) <br><br>Fuso horário:<br>Fuso Horário da Empresa"
     tags:
       - Custom attributes
+  - name: Criação às
+    description: "Segmenta os usuários de acordo com a data de criação do perfil de usuário. Se um usuário tiver sido adicionado por CSV ou API, esse filtro refletirá a data em que ele foi adicionado. Se o usuário não for adicionado por CSV ou API e tiver sua primeira sessão rastreada pelo SDK, esse filtro refletirá a data dessa primeira sessão."
+    tags:
+      - Other Filters
   - name: Atributos personalizados aninhados
     description: "Atributos que são as propriedades de atributos personalizados.<br><br>Ao filtrar um atributo personalizado de tempo aninhado, você pode escolher filtrar com base em \"Dia do Ano\" ou \"Hora\". \"Dia do Ano\" verificará apenas o mês e o dia para comparação. \"Tempo\" irá comparar o carimbo de data/hora completo, incluindo o ano."
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Última mensagem recebida de uma etapa de canva específica
-    description: Segmenta seus usuários por quando eles receberam um componente específico da canva.
+    description: Segmenta seus usuários por quando eles receberam um componente específico da canva. Esse filtro não considera quando os usuários receberam outros componentes do Canva.
     tags:
       - Retargeting
   - name: Última mensagem recebida de uma campanha específica
-    description: Segmenta seus usuários por terem ou não recebido uma campanha específica.
+    description: Segmenta seus usuários por terem ou não recebido uma campanha específica. Esse filtro não considera quando os usuários receberam outras campanhas.
     tags:
       - Retargeting
   - name: Recebeu mensagem de campanha ou canva com tag
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Recebeu mensagem de campanha ou canva com tag pela última vez
-    description: Segmenta seus usuários por quando eles receberam uma campanha específica ou canva com uma tag específica. (período de 24 horas)
+    description: Segmenta seus usuários por quando eles receberam uma campanha específica ou canva com uma tag específica. Esse filtro não considera quando os usuários receberam outras campanhas ou Canvas. (período de 24 horas)
     tags:
       - Retargeting
   - name: Nunca recebeu mensagem de campanha ou etapa do canva
@@ -243,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Ultima inscrição em qualquer grupo de controle
-    description: "Segmenta seus usuários pela última vez que eles caíram no grupo de controle em uma campanha. (período de 24 horas)<br><br>Fuso horário:<br>Fuso Horário da Empresa"
+    description: "Segmenta seus usuários pela última vez que eles caíram no grupo de controle em uma campanha. <br><br>Fuso horário:<br>Fuso Horário da Empresa"
     tags:
       - Retargeting
   - name: Entrou na variação do canva

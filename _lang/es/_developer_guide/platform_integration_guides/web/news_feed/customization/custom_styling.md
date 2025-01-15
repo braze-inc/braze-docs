@@ -13,9 +13,7 @@ channel: news feed
 
 > Este artículo trata de las opciones de estilo personalizado de las fuentes de noticias para tu aplicación Web.
 
-{% alert note %}
-Vamos a dejar de usar el canal de noticias. Braze recomienda a los clientes que utilizan nuestra herramienta de fuente de noticias que se pasen a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. Para más información, consulta la [guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Los elementos de la interfaz de usuario Braze vienen con un aspecto predeterminado que coincide con los compositores del panel Braze y busca la coherencia con otras plataformas móviles Braze. Los estilos predeterminados en Braze se definen en CSS dentro del SDK de Braze. Anulando los estilos seleccionados en tu aplicación, es posible personalizar nuestra fuente estándar con tus propias imágenes de fondo, familias de fuentes, estilos, tamaños, animaciones y mucho más.
 

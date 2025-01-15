@@ -21,7 +21,7 @@ Este recurso está atualmente em Acesso Antecipado. Por favor, entre em contato 
 |--------------------------|--------------------------------------------------------|
 | Conta do Anthem Futuro    | Uma conta do Future Anthem. |
 | Chave da API REST do Braze       | Uma chave da API REST Braze com o [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track). Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Ponto de extremidade REST do Braze      | O Braze [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) que corresponde à sua instância, como `rest.iad-01.com`. |
+| Ponto de extremidade REST do Braze      | O [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) do Braze que corresponde à sua instância, como `rest.iad-01.com`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
@@ -97,7 +97,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Sustentação do Jogador - Potencial risco do jogador %}
+{% tab Sustentação do Jogador - risco potencial do jogador %}
 
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |

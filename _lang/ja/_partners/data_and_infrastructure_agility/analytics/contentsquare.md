@@ -19,7 +19,7 @@ BrazeとContentsquareの統合により、Brazeのカスタムイベントとし
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Contentsquare アカウント | このパートナーシップを活用するには、Contentsquare アカウントが必要です。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。Braze ダッシュボードで新しいキーを作成するには、**Settings** > **API Keys** に移動します。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。Braze ダッシュボードで新しいキーを作成するには、[**設定**] > [**API キー**] に移動します。 |
 | Braze RESTエンドポイント | [REST エンドポイント URL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -11,7 +11,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 > O objeto recipients permite que você solicite ou grave informações em nossos endpoints.
 
-É necessário ter `external_user_id`, `user_alias` ou `email` nesse objeto. **As solicitações devem especificar apenas uma.**
+É necessário que `external_user_id`, `user_alias` ou `email` estejam presentes neste objeto. **As solicitações devem especificar apenas uma.**
 
 {% alert important %}
 A especificação de um destinatário por endereço de e-mail está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.

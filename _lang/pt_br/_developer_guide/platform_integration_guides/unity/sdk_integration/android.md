@@ -98,7 +98,7 @@ Em seu `AndroidManifest.xml`, todas as instâncias de `REPLACE_WITH_YOUR_PACKAGE
 
 ## Etapa 4: Adicionar dependências do gradle {#unity-android-gradle-configuration}
 
-Para adicionar dependências do Gradle ao seu projeto Unity, primeiro ative [ a opção "Custom Main Gradle Template"](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) em suas configurações de publicação. Isso criará um arquivo gradle modelo que será usado em seu projeto. Um arquivo gradle lida com as dependências de configuração e outras configurações de projeto durante o desenvolvimento. Para saber mais, consulte o aplicativo de amostra do Braze Unity [mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle).
+Para adicionar dependências do Gradle ao seu projeto Unity, primeiro ative a opção ["Custom Main Gradle Template"](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) em suas configurações de publicação. Isso criará um arquivo gradle modelo que será usado em seu projeto. Um arquivo gradle lida com as dependências de configuração e outras configurações de projeto durante o desenvolvimento. Para saber mais, consulte o aplicativo de amostra do Braze Unity [mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle).
 
 As seguintes dependências são necessárias:
 
