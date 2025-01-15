@@ -277,9 +277,15 @@ If you are updating subscription group statuses, you must have the following two
 Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you'll need to do multiple imports.
 {% endalert %}
 
+## Creating a retargeting filter from a user import
+
+User import can be used to turn the CSV file into a retargeting filter by selecting **Import users in this CSV and make it possible to retarget this specific batch of users as a group**. To filter by the file in a segment or wherever filtering is an option, select the **Updated/Imported from CSV** filter and then search for the file's exact name.
+
+![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".][5]
+
 ## Creating segments from a user import
 
-User import can also be used to create segments by selecting **Automatically generate a segment from the users who are imported from this CSV** before starting the import.
+User import can also be used to create segments by selecting **Import users in this CSV and make it possible to retarget this specific batch of users as a group** and checking **Automatically generate a segment from the users who are imported from this CSV** before starting the import.
 
 You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment after the import has been completed.
 
@@ -324,6 +330,7 @@ If a piece of default user data (such as `email` or `first_name`) is imported as
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
 [3]: {% image_buster /assets/img/importcsv5.png %}
 [4]: {% image_buster /assets/img/importcsv2.png %}
+[5]: {% image_buster /assets/img/csvfilter.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
 [9]: {% image_buster /assets/img/subscription_group_import.png %}
