@@ -3,7 +3,7 @@ nav_title: Preview User Paths
 article_title: Preview User Paths
 page_order: 0.3
 alias: /preview_user_paths/
-description: "This reference article covers how to preview user paths in Canvas."
+description: "This page covers how you can preview user paths in Canvas."
 Tool:
   - Canvas
 ---
@@ -72,13 +72,13 @@ Test users will enter the preview even if they are not eligible in real life. If
 
 ## Test sends
 
-You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
+You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their attributes by default, but you can override these with the test user’s attributes.
 
-To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab.
+To send all test messages in a Canvas at once, regardless of the path, and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab.
 
 ## Responsiveness
 
-Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow, but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
+Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
 Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path.
 
@@ -86,11 +86,13 @@ Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/cre
 
 ## Connected Content
 
-Connected Content will be executed if it’s included in the Canvas. If your Canvas includes Connected Content, remove the Connected Content that is configured to alter user profiles or data that is referenced in other Canvases or campaigns. Or, you can opt to not preview the user journey.
+Connected Content will be executed if it’s included in the Canvas. This means if you test a Canvas that has Connected Content calls or Content Blocks that contain Connected Content, the Canvas may send the Connected Content calls, which would modify the data referenced in other campaigns or Canvases.
+
+When previewing user paths, consider removing the Connected Content that alters user profiles or data referenced in other Canvases or campaigns.
 
 ## Webhooks
 
-Webhooks will execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that are configured to alter user profiles or data that is referenced in other Canvases or campaigns.
+Webhooks will execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that alter user profiles or data referenced in other Canvases or campaigns.
 
 ## Use case
 
