@@ -23,7 +23,7 @@ Cloud Data Ingestion integrations require some setup on the Braze side and in yo
 4. Test the integration and start the sync.
 
 {% alert tip %}
-The [Snowflake quickstart guide](https://quickstarts.snowflake.com/guide/braze_cdi/index.html)  provides sample code and walks through the required steps to create an automated pipeline using Snowflake Streams and CDI to sync data to Braze. 
+The [Snowflake quickstart guide](https://quickstarts.snowflake.com/guide/braze_cdi/index.html) provides sample code and walks through the required steps to create an automated pipeline using Snowflake Streams and CDI to sync data to Braze. 
 {% endalert %}
 {% endtab %}
 {% tab Redshift %}
