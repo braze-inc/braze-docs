@@ -139,7 +139,7 @@ Para mensagens "STOP", inverta a etapa da mensagem que confirma a aceitação e 
 ![Etapa de uma mensagem do WhatsApp em que o corpo da mensagem é "START".][13]{: style="max-width:70%;"}
 
 {: start="2"}
-2\. No Canvas, crie uma etapa **do tipo Configurar atualização do usuário** e, para **Ação**, selecione **Advanced JSON Editor**. <br><br>![Etapa de atualização do usuário com uma ação de "Advanced JSON Editor".][14]<br><br>
+2\. No Canva, crie uma etapa do tipo **Configurar atualização do usuário** e, para **Ação**, selecione **Advanced JSON Editor**. <br><br>![Etapa de atualização do usuário com uma ação de "Advanced JSON Editor".][14]<br><br>
 3\. Preencha o **objeto User Update** com a seguinte carga útil JSON, substituindo `XXXXXXXXXXX` pelo ID do seu grupo de inscrições:
 
 {% raw %}
@@ -175,7 +175,7 @@ Não é necessário usar esse método para mensagens STOP. A mensagem de confirm
 {% endalert %}
 
 1. Crie uma campanha ou um Canva com uma etapa baseada em ação **Envie uma mensagem de entrada do WhatsApp**. Selecione **Onde o corpo da mensagem** e digite "START" para **Is**.<br><br>![Etapa da mensagem do WhatsApp em que o corpo da mensagem é "INICIAR".][13]{: style="max-width:70%;"}<br><br>
-2. Na campanha ou no Canva, crie uma etapa do Webhook Message e altere o **Request Body (Corpo da solicitação** ) para **Raw Text (Texto bruto**).<br><br>![Etapa da mensagem para um webhook.][16]<br><br>
+2. Na campanha ou no Canva, crie uma etapa do Webhook Message e altere o **Request Body (Corpo da solicitação)** para **Raw Text (Texto bruto)**.<br><br>![Etapa da mensagem para um webhook.][16]<br><br>
 3. Digite o [URL do endpoint]({{site.baseurl}}/api/basics/) do cliente no **URL do Webhook**, seguido pelo link do endpoint `campaigns/trigger/send`. Por exemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![Campo URL do webhook na seção "Criador de webhook".][19]{: style="max-width:70%;"}<br><br>
 4. No texto bruto, insira a seguinte carga útil JSON e substitua `XXXXXXXXXXX` pelo ID do seu grupo de inscrições. Você precisará substituir o endereço `campaign_id` depois de criar sua segunda campanha.
 
@@ -206,7 +206,7 @@ Não é necessário usar esse método para mensagens STOP. A mensagem de confirm
 #### Considerações
 
 - Ainda não há suporte para atualizações de atribuições na carga útil JSON do acionador da API do Canvas, portanto, você só pode disparar uma campanha do WhatsApp para a mensagem de resposta do WhatsApp (como na etapa 2).
-- Um modelo do WhatsApp deve ser aprovado para ser enviado como uma mensagem de resposta. Isso ocorre porque uma resposta rápida exige que o disparo da mensagem de entrada esteja dentro da mesma campanha ou Canva. Se você usar uma [etapa de atualização do usuário](#user-update-step), poderá enviar uma mensagem de resposta rápida sem a aprovação da Meta.
+- Um modelo do WhatsApp deve ser aprovado para ser enviado como uma mensagem de resposta. Isso ocorre porque uma resposta rápida exige que o disparo da mensagem de entrada esteja dentro da mesma campanha ou Canva. Se você usar uma [Etapa de atualização do usuário](#user-update-step), poderá enviar uma mensagem de resposta rápida sem a aprovação da Meta.
 
 ## Entendendo a diferença entre os modificadores "regex" e "is"
 

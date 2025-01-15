@@ -62,7 +62,7 @@ Para adicionar um ink de cancelamento de inscrição personalizado, é possível
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
 
-Em seguida, chame o [endpoint`/email/status` ]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) para atualizar o status da inscrição do usuário. Para saber mais, consulte nossa documentação sobre como [alterar o status da inscrição de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+Em seguida, chame o [endpoint `/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) para atualizar o status da inscrição do usuário. Para saber mais, consulte nossa documentação sobre como [alterar o status da inscrição de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 Em seguida, salve esse novo link. A tag padrão do Braze para cancelamento de inscrição {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} deve estar no rodapé. Isso significa que você precisa incluir o link padrão "ocultando-o" ao colocar a tag em um comentário ou em uma tag `<div>` oculta.
 
@@ -93,7 +93,7 @@ Como prática recomendada, a Braze recomenda incluir um ink de cancelamento de i
 
 Você também pode optar por definir um rodapé personalizado para e-mails em texto simples na guia **Páginas de inscrição e rodapés** na página **Preferências de e-mail**, que segue as mesmas regras do rodapé personalizado para e-mails em HTML. 
 
-Se você não incluir um rodapé em texto simples, a Braze criará automaticamente um a partir do rodapé em HTML. Quando os rodapés personalizados estiverem de acordo com suas preferências, selecione **Save (Salvar**).
+Se você não incluir um rodapé em texto simples, a Braze criará automaticamente um a partir do rodapé em HTML. Quando os rodapés personalizados estiverem de acordo com suas preferências, selecione **Save (Salvar)**.
 
 ![E-mail com a opção Set Custom Plaintext Footer (Definir rodapé de texto simples personalizado) selecionada.][23]{: style="max-width:70%" }
 

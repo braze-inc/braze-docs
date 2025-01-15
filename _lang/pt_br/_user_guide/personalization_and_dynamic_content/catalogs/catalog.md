@@ -143,7 +143,7 @@ Esse tipo de dados não pode ser editado após a configuração do catálogo.
 
 ![Quatro nomes de colunas de catálogo: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Em seguida, nomearemos esse catálogo como "games_catalog" e clicaremos no botão **Process Catalog (Processar catálogo** ). Em seguida, a Braze verificará se há erros no catálogo antes da criação do catálogo.
+Em seguida, nomearemos esse catálogo como "games_catalog" e clicaremos no botão **Process Catalog (Processar catálogo)**. Em seguida, a Braze verificará se há erros no catálogo antes da criação do catálogo.
 
 ![Um catálogo chamado "games_catalog".][11]{: style="max-width:85%;"}
 

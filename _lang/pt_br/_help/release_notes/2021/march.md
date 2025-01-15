@@ -17,4 +17,4 @@ A2P 10DLC refere-se a um sistema nos Estados Unidos que permite que as empresas 
 
 ## Grupos de controle global
 
-[Os grupos de controle globais]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) permitem analisar o impacto geral dos seus esforços de envio de mensagens ao longo do tempo. Esses grupos podem ajudá-lo a entender como suas campanhas de marketing e Canvas resultam em um aumento nas sessões e nos eventos personalizados, comparando os comportamentos dos usuários que recebem mensagens com os que não recebem. 
+Os [grupos de controle globais]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) permitem analisar o impacto geral dos seus esforços de envio de mensagens ao longo do tempo. Esses grupos podem ajudá-lo a entender como suas campanhas de marketing e Canvas resultam em um aumento nas sessões e nos eventos personalizados, comparando os comportamentos dos usuários que recebem mensagens com os que não recebem. 

@@ -11,7 +11,7 @@ description: "Este artigo de referência aborda como exportar dados de segmento 
 
 > Esta página aborda como solicitar uma exportação CSV de dados de usuários de um segmento e os dados incluídos na exportação.
 
-Para exportar dados de segmento para um CSV, selecione o menu suspenso **User Data (Dados do usuário** ) ao editar um segmento e selecione para exportar os dados do usuário ou os endereços de e-mail do segmento.
+Para exportar dados de segmento para um CSV, selecione o menu suspenso **User Data (Dados do usuário)** ao editar um segmento e selecione para exportar os dados do usuário ou os endereços de e-mail do segmento.
 
 ![Seção Detalhes do segmento com o menu suspenso Dados de usuários mostrando opções de exportação.][1]
 

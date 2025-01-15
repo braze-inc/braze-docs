@@ -22,16 +22,16 @@ O rastreamento de pixel de abertura e o rastreamento de cliques agora podem ser 
 
 ## Opções de coleta de dados do SDK
 
-Saiba mais sobre como o SDK da Braze pode ser integrado para permitir a coleta flexível de dados em nossa nova documentação sobre [as opções de coleta de dados do SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Saiba mais sobre como o SDK da Braze pode ser integrado para permitir a coleta flexível de dados em nossa nova documentação sobre as [opções de coleta de dados do SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
 ## Visão geral do SSL
 
-Saiba mais sobre o SSL no Braze, por que o SSL é importante e como você pode adquirir um certificado SSL em nosso novo artigo [de Visão Geral do SSL]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/).
+Saiba mais sobre o SSL no Braze, por que o SSL é importante e como você pode adquirir um certificado SSL em nosso novo artigo de [Visão Geral do SSL]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/).
 
 ## Pontos de extremidade da API do perfil de usuário do Amplitude
 
-A API de perfil de usuário do Amplitude atende aos perfis de usuário do Amplitude. Isso inclui propriedades do usuário, propriedades computadas do usuário, uma lista de IDs de coortes que incluem o usuário e recomendações. Consulte [os endpoints da API de perfil de usuário do Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) para saber mais.
+A API de perfil de usuário do Amplitude atende aos perfis de usuário do Amplitude. Isso inclui propriedades do usuário, propriedades computadas do usuário, uma lista de IDs de coortes que incluem o usuário e recomendações. Consulte os [endpoints da API de perfil de usuário do Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) para saber mais.
 
 ## Ponto de extremidade de detalhes da campanha 
 
-O [endpoint`/campaigns/details` ]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) adicionou uma resposta `message` dedicada para o canal de envio de mensagens no app. A documentação sobre isso pode ser encontrada [aqui]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+O [endpoint `/campaigns/details` ]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) adicionou uma resposta `message` dedicada para o canal de envio de mensagens no app. A documentação sobre isso pode ser encontrada [aqui]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).

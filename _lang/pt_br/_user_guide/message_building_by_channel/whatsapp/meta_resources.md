@@ -23,6 +23,40 @@ Consulte a seguinte documentação da Meta para saber mais sobre nomes de exibi�
 
 ## Atualizações de produtos do WhatsApp
 
+### Novembro de 2024: Atualizações no limite do modelo de marketing por usuário para pessoas nos EUA, antes da temporada de festas
+*Última atualização Dezembro 2024*
+
+Desde que a Meta implementou o limite de modelo de marketing por usuário, a Meta viu melhorias significativas nas taxas de leitura e no sentimento dos usuários.
+ 
+A partir de agora, antes da temporada de festas, as pessoas nos EUA receberão menos novas conversas de marketing. A Meta espera que essa mudança crie públicos mais engajados, o que, em última análise, leva a melhores resultados para os negócios. Isso pode resultar em taxas de entrega mais baixas para o seu negócio se você enviar mensagens de marketing para números de telefone dos EUA, que podem ser monitorados com o código de erro `131049` através dos Braze Currents e do registro de Atividade de Mensagens.
+
+As empresas nos EUA ainda podem enviar mensagens de marketing em outras geografias, e não há impacto nas mensagens de utilidade, autenticação ou serviço, ou mensagens de modelo de marketing enviadas dentro de uma janela de conversa iniciada pelo usuário (por exemplo, um anúncio de clique para o WhatsApp ou carrossel de produtos ou modelo de cupom que é enviado como parte de uma conversa). 
+
+### Novembro de 2024: WhatsApp expandindo as imposições de contas baseadas em qualidade para incluir taxas de leitura
+*Última atualização Dezembro 2024*
+
+O WhatsApp está continuamente investindo em novas maneiras de ajudar as empresas a criar experiências de qualidade para seus clientes, como reduzir comportamentos semelhantes a spam em sua plataforma. 
+
+No dia 22 de novembro, o WhatsApp começou a expandir suas medidas de qualidade em nível de conta existentes nas contas comerciais do WhatsApp (WABAs) com taxas de leitura extremamente baixas. Essa mudança será implementada globalmente.
+
+Quando a taxa de leitura de uma conta cai significativamente (por exemplo, a maioria das mensagens enviadas pela conta não são lidas), blocos de envio de mensagens serão aplicados à conta. A gravidade do bloqueio aumentará se houver consistentemente baixas taxas de leitura em escala. 
+
+Se a taxa de leitura da conta for extremamente baixa, as seguintes ações serão tomadas:
+
+- A conta será bloqueada de enviar mensagens iniciadas por negócios. Eles ainda podem responder a mensagens iniciadas pelos clientes. Este bloco inicial é um "bloqueio suave" e pode ser reconhecido selecionando o botão de reconhecimento na Qualidade da Conta para começar o envio de mensagens novamente.
+- Se a taxa de leitura continuar a cair ou permanecer baixa após o bloqueio suave, as empresas podem enfrentar um aumento gradual nas ações de fiscalização (por exemplo, alguns dias de envio de mensagens restritas).
+- As empresas terão que esperar o limite imposto para começar o envio de mensagens novamente. Se a taxa de leitura continuar baixa após bloqueios suaves repetidos, a conta será eventualmente desativada.
+
+#### Como se manter atualizado sobre esses avisos e imposições
+
+Semelhante à aplicação existente da plataforma, as empresas serão notificadas sobre essas ações e poderão reconhecê-las usando a página de Qualidade da Conta no WhatsApp Business Manager. Confirme se você tem os detalhes de contato corretos listados no WhatsApp Business Manager para todos os administradores necessários, pois os e-mails de notificação de aplicação serão enviados com base nessas informações.
+
+Notificações sobre graves violações de spam serão:
+
+- Apareceu no Centro de Notificações do WhatsApp Business Manager
+- Exibido em um banner no Gerenciador do WhatsApp
+- Enviado como um e-mail para todos os administradores definidos no WhatsApp Business Manager
+
 ### Maio de 2024: Lançamento da API de Nuvem na Turquia
 *Última atualização em maio de 2024*
 
