@@ -108,7 +108,7 @@ To run a SAML trace, you'll need a SAML tracer. Here are two possible options ba
 
 Select the SAML tracer from your browser's navigation bar. Be sure **Pause** isn't selected as this will prevent the SAML tracer from capturing what's sent in the SAML requests. When the SAML tracer is open, you'll see it populate the trace.
 
-![SAML tracer for Google Chrome.]{% image_buster /assets/img/saml_tracer_example.png %}
+![SAML tracer for Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
 
 ### Step 2: Sign into Braze using SSO
 
@@ -118,4 +118,4 @@ Go to your Braze dashboard and attempt to sign in using SSO. If you encounter an
 
 Select **Export**. For **Select cookie-filter profile**, select **None**. Then, select **Export**. This will generate a JSON file that you can send to Braze Support for further troubleshooting.
 
-!["Export SAML-trace preferences" menu with option "None" selected.]{% image_buster /assets/img/export_saml_trace_preferences.png %}
+!["Export SAML-trace preferences" menu with option "None" selected.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
