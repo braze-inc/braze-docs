@@ -11,9 +11,11 @@ description: "This reference article covers Content Card implementation guidelin
 
 ---
 
-# Content Card integration
+# Content Cards
 
 > This reference article covers Content Card implementation guidelines for the Unity platform such as displaying cards, parsing cards, and analytics.
+
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
 
 ## Displaying Content Cards natively {#unity-content-cards-native-ui}
 

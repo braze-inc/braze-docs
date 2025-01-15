@@ -1,6 +1,6 @@
 ---
-nav_title: In-App Messaging
-article_title: In-App Messaging for Unity
+nav_title: In-App Messages
+article_title: In-App Messages for the Braze Unity SDK
 channel: in-app messaging
 platform: 
   - Unity
@@ -8,12 +8,13 @@ platform:
   - Android
 page_order: 2
 description: "This reference article covers in-app messaging configuration guidelines for the Unity platform."
-
 ---
 
-# In-app messaging integration
+# In-app messages
 
 > This reference article covers in-app messaging configuration guidelines for the Unity platform.
+
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
 
 ## Configuring default in-app message behavior
 
