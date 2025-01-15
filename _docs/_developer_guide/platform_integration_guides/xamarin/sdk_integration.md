@@ -1,17 +1,16 @@
 ---
-nav_title: Initial SDK Setup
-article_title: Initial SDK Setup for Xamarin
+nav_title: SDK Integration
+article_title: Integrating the Braze Xamarin SDK
 platform: 
   - Xamarin
   - iOS
   - Android
 page_order: 0
-toc_headers: h2
 description: "This article covers the initial iOS, Android, and FireOS SDK setup for the Xamarin platform."
 search_rank: 1
 ---
 
-# Initial SDK setup
+# Integrating the Braze Xamarin SDK
 
 > Learn how to install the Braze SDK for Xamarin. Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
 
@@ -21,7 +20,9 @@ Starting in `version 4.0.0`, this SDK dropped support for Xamarin & Xamarin.Form
 See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
 {% endalert %}
 
-## Step 1: Get the Xamarin binding
+## Integrating the SDK
+
+### Step 1: Get the Xamarin binding
 
 {% tabs %}
 {% tab android %}
@@ -47,7 +48,7 @@ A Xamarin binding is a way to use native libraries in Xamarin apps.  The impleme
 
 {% subtabs local %}
 {% subtab NuGet %}
-The simplest integration method involves getting the Braze SDK from the [NuGet.org](https://www.nuget.org/) central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), and [Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation into your project.
+The simplest integration method involves getting the Braze SDK from the [NuGet.org](https://www.nuget.org/) central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), and [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation) into your project.
 
 We also provide the compatibility libraries packages: [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) and [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat), to help make your migration to .NET MAUI easier.
 {% endsubtab %}
@@ -59,11 +60,11 @@ The second integration method is to include the [binding source](https://github.
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Configure your Braze instance
+### Step 2: Configure your Braze instance
 
 {% tabs %}
 {% tab android %}
-### Step 2.1: Configure the Braze SDK in Braze.xml
+#### Step 2.1: Configure the Braze SDK in Braze.xml
 
 Now that the libraries have been integrated, you have to create an `Braze.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:
 
@@ -90,7 +91,7 @@ If you are including the binding source manually, remove `<item>NUGET</item>` fr
 To see an example `Braze.xml`, check out our [Android MAUI sample app](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml).
 {% endalert %}
 
-### Step 2.2: Add required permissions to Android manifest
+#### Step 2.2: Add required permissions to Android manifest
 
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml` file:
 
@@ -99,7 +100,7 @@ Now that you've added your API key, you need to add the following permissions to
 ```
 For an example of your `AndroidManifest.xml`, see the [Android MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml) sample application.
 
-### Step 2.3: Track user sessions and registering for in-app messages
+#### Step 2.3: Track user sessions and registering for in-app messages
 
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
 
@@ -127,7 +128,7 @@ See the `App.xaml.cs` file in the [iOS MAUI](https://github.com/braze-inc/braze-
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Test the integration
+### Step 3: Test the integration
 
 {% tabs %}
 {% tab android %}

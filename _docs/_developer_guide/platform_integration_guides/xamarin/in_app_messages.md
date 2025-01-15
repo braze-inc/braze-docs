@@ -1,6 +1,6 @@
 ---
-nav_title: In-App Messaging
-article_title: In-App Messaging for Xamarin
+nav_title: In-App Messages
+article_title: In-App Messages for the Braze Xamarin SDK
 platform: 
   - Xamarin
   - iOS
@@ -11,15 +11,13 @@ channel: in-app messages
 toc_headers: h2
 ---
 
-# In-app messaging integration
+# In-app messages
 
 > Learn how to set up iOS, Android, and FireOS In-App Messages (IAM) for the Xamarin platform.
 
-## Prerequisites
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-To use this feature, you'll need to [integrate the Braze SDK for Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/).
-
-## Integrating in-app messaging
+## Setting up in-app messages
 
 {% tabs %}
 {% tab android %}

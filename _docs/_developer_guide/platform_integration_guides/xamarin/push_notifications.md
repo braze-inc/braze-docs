@@ -1,6 +1,6 @@
 ---
 nav_title: Push Notifications
-article_title: Push Notifications for Xamarin
+article_title: Push Notifications for the Braze Xamarin SDK
 platform: 
   - Xamarin
   - iOS
@@ -11,15 +11,13 @@ channel: push
 toc_headers: h2
 ---
 
-# Push notifications integration
+# Push notifications
 
 > Learn how to set up Android, FireOS, and iOS push notifications for Xamarin.
 
-## Prerequisites
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-To use this feature, you'll need to [integrate Braze SDK for the Xamarin platform]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/).
-
-## Integrating push notifications
+## Setting up push notifications
 
 {% tabs %}
 {% tab android %}

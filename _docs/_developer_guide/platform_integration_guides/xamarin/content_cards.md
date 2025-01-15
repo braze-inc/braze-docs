@@ -11,17 +11,11 @@ description: "This reference article covers Content Card implementation guidelin
 
 ---
 
-# Content Card integration
+# Content Cards
 
-> Learn how to set up iOS, Android, and FireOS Content Cards for the Xamarin platform.
+> Learn how to set up iOS, Android, and FireOS Content Cards for the Xamarin platform. The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
-The Braze SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
-
-For information on how to integrate the Content Cards into your Xamarin app, see our [Android integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/) and [iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/).
-
-## Prerequisites
-
-To use this feature, you'll need to [integrate Braze SDK for the Xamarin platform]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/).
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Content Card methods
 
@@ -37,9 +31,9 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 ## Content Card data model
 
-The Braze Xamarin SDK has three unique Content Cards card types that share a base model: **banner**, **captioned image**, and **classic**. Each type inherits common properties from a base model and has the following additional properties.
+The Braze Xamarin SDK has three unique Content Cards card types that share a base model: [Banner](#banner), [Captioned Image](#captioned-image), and [Classic](#classic). Each type inherits common properties from a base model and has the following additional properties.
 
-### Base Content Card model properties
+### Base card model
 
 |Property           | Description                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +54,7 @@ The Braze Xamarin SDK has three unique Content Cards card types that share a bas
 
 For a full reference of the base card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) documentation.
 
-### Banner Content Card model properties
+### Banner
 
 Banner cards are clickable, full-sized images.
 
@@ -72,7 +66,7 @@ Banner cards are clickable, full-sized images.
 
 For a full reference of the banner card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct) documentation (now renamed to image only).
 
-### Captioned image Content Card model properties
+### Captioned image
 
 Captioned image cards are clickable, full-sized images with accompanying descriptive text.
 
@@ -87,7 +81,7 @@ Captioned image cards are clickable, full-sized images with accompanying descrip
 
 For a full reference of the captioned image card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) documentation.
 
-### Classic Content Card model properties
+### Classic
 
 Classic cards have a title, description, and an optional image on the left of the text.
 
