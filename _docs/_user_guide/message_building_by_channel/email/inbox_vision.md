@@ -22,8 +22,6 @@ In general, your email won't work with Inbox Vision if your email content relies
 
 Your email must include a subject line and a valid sending domain in order to see these previews. Be mindful of how your email can render different on the desktop versus on mobile devices. As you view these previews, you can review your content and ensure that your email is displaying as intended.
 
-Inbox Vision works when **Random User** is selected for **Preview as a User** and doesn't persist any custom user or other preview user settings. This means if you select **Custom User** and run Inbox Vision, what's shown in Inbox Vision may differ from the message preview elsewhere.
-
 To test your email message in Inbox Vision, do the following:
 
 1. Go to your drag-and-drop editor or HTML email editor.
@@ -37,6 +35,10 @@ To test your email message in Inbox Vision, do the following:
 {: start="6"}
 6. Make changes to a template, if necessary.
 7. Select **Re-run Test** to see the updated previews.
+
+### Previewing as a user
+
+When you preview the email as a random user, any specific settings or attributes associated with a user, such as their name or preferences, aren't saved for current or future previews. When you select a custom user, the preview shown in Inbox Vision may differ from the message preview elsewhere since this option uses specific user data to create the preview.
 
 ## Code analysis
 
