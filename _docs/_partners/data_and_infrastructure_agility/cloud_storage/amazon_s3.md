@@ -303,7 +303,7 @@ In Braze, go to the **Technology Partners** page under **Integrations** and sele
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
-On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is selected, then input your role ARN and AWS S3 bucket name in the designated fields. Select **Test Credentials** first to ensure your credentials work properly, then select **Save** when successful.
+On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is selected, then input your role ARN and AWS S3 bucket name in the designated fields. Select **Test Credentials** first to confirm your credentials work properly, then select **Save** when successful.
 
 {% alert tip %}
 You can always retrieve new credentials by navigating to your user, and selecting **Create Access Key** on the **Security Credentials** tab within the AWS Console.
