@@ -21,7 +21,7 @@ Review the following Meta documentation for guidance with display names, phone n
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
 - [Quality Rating](https://www.facebook.com/business/help/896873687365001)
 
-WhatsApp product updates
+## WhatsApp product updates
 
 ### January 2025: WhatsApp pausing marketing message sending to US users starting April 1
 *Last Updated January 2025*
