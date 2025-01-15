@@ -62,8 +62,12 @@ Make sure you complete this process within two to three days of the verification
 If a sending domain is also used as a bounce domain, you won't be able to store any records and will need to follow these additional steps:
 
 1. If the domain has already been verified on SparkPost, you **must** create MX and TXT records: 
-- `MX = smtp.sparkpostmail.com`
-- `TXT = "v=spf1 redirect=_spf.sparkpostmail.com"`. 
+- For US instances:
+  - `MX = smtp.sparkpostmail.com`
+  - `TXT = "v=spf1 redirect=_spf.sparkpostmail.com"`. 
+- For EU instances:
+  - `MX = smtp.eu.sparkpostmail.com`
+  - `TXT = "v=spf1 redirect=_spf.eu.sparkpostmail.com`
 
 {% alert important %}
 To avoid SPF failures, you must create the MX and TXT records and have them propogated in the DNS **before** deleting the CNAME record.
