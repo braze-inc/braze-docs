@@ -8,7 +8,7 @@ description: "This reference article covers how to import users into your Braze 
 ---
 # User import
 
-> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
+> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, Cloud Data Ingestion, technology partner integrations, and CSV files.
 
 Before proceeding, note that Braze does not sanitize (validate or properly format) HTML data during import. This means that script tags must be stripped for all import data meant for web personalization.
 
@@ -199,9 +199,9 @@ The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Bra
 Importing a CSV file with email addresses and phone numbers is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
-You can omit an external ID or user alias and just use either an email address or phone number to import users. Before importing a CSV file with email addresses or phone numbers, check for the following:
+You can omit an external ID or user alias and use either an email address or phone number to import users. Before importing a CSV file with email addresses or phone numbers, check for the following:
 
-- Verify that you don't have any external IDs or user aliases for these profiles.
+- Verify that you don’t have any external IDs or user aliases for these profiles in your CSV file. If you do, Braze will prioritize using the external ID or user alias before the email address to identify profiles.
 - Confirm that your CSV file is formatted properly.
 
 {% alert note %}
@@ -224,7 +224,7 @@ The following data types are accepted in user import:
 - **Blank:** Blank values won't overwrite existing values on the user profile, and you don't need to include all existing user attributes in your CSV file
 
 {% alert important %}
-Arrays, push tokens, and custom event data types are not supported in user import.
+Arrays, push tokens, and custom event data types aren't supported in user import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors in parsing the file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).
 {% endalert %}
 
@@ -236,12 +236,12 @@ Estimated execution times for a file with 1,000,000 rows should be around five m
 
 ### Updating subscription group status
 
-You can add users into email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+You can add users to email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
 
-If you are updating subscription group status, you must have the following two columns in your CSV:
+If you are updating subscription group statuses, you must have the following two columns in your CSV:
 
 - `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
-- `subscription_state`: Available values are `unsubscribed` (not in subscription group) or `subscribed` (in the subscription group).
+- `subscription_state`: Available values are `unsubscribed` (not in the subscription group) or `subscribed` (in the subscription group).
 
 <style type="text/css">
 .tg td{word-break:normal;}
