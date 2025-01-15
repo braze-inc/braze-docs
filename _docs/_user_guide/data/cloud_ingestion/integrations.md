@@ -21,6 +21,10 @@ Cloud Data Ingestion integrations require some setup on the Braze side and in yo
 2. Create a new integration in the Braze dashboard.
 3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 4. Test the integration and start the sync.
+
+{% alert tip %}
+The [Snowflake quickstart guide](https://quickstarts.snowflake.com/guide/braze_cdi/index.html)  provides sample code and walks through the required steps to create an automated pipeline using Snowflake Streams and CDI to sync data to Braze. 
+{% endalert %}
 {% endtab %}
 {% tab Redshift %}
 1. Make sure Braze access is allowed to the Redshift tables you want to sync. Braze will connect to Redshift over the internet.
