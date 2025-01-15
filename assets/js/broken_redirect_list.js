@@ -1383,5 +1383,6 @@ validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 
 validurls['/docs/developer_guide/platform_integration_guides/react_native/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/react_native/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/react_native/sample_app'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration';
 
 // validurls['OLD'] = 'NEW';
