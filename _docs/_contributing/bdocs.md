@@ -36,6 +36,7 @@ OPTIONS:
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
   lredirects     Test new redirects by listing old URLs in this branch
+  syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
 ```
 
@@ -238,5 +239,54 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/
 https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
 ```
+{% endtab %}
+{% endtabs %}
+
+### `syntax`
+
+`syntax` prints all the unique Braze Docs syntax to the terminal. Keep in mind, this doesn't include any standard Markdown syntax, only _unique_ syntax. This is helpful for two reasons:
+
+1. You no longer need to leave your text-editor to verify the syntax of a unique Braze Markdown implementation.
+2. Even if you're offline, you can easily review the unique Braze Docs syntax&#8212;making it easier when working on airplane mode.
+
+{% tabs local %}
+{% tab usage example %}
+{% raw %}
+<pre style="font-family: 'Roboto Mono', monospace; font-size: 14px; line-height: 16px; background-color: #f4f4f7; color: #666666; padding: 10px; overflow-x: auto; white-space: pre; word-break: inherit; word-wrap: inherit; min-height: 36px;">
+$ ./bdocs syntax
+This is all of the unique Markdown syntax supported by Braze Docs.
+
+ALERTS
+  {% alert TYPE %}
+  {% endalert %}
+
+IMAGE LINK
+  ![ALT_TEXT.]({% image_buster /assets/img/DIRECTORY/IMAGE.png %})
+
+IMAGE RESIZING
+  {: style="max-width:NUMBER%;"}
+
+INCLUDES
+  {% multi_lang_include PATH_TO_INCLUDE %}
+
+LIQUID RAW TAGS
+  &#123;% raw %}&#123;% endraw %}
+
+TABS
+  {% tabs %}
+  {% tab NAME %}
+  {% endtab %}
+  {% endtabs %}
+
+SUBTABS
+  {% subtabs %}
+  {% subtab NAME %}
+  {% endsubtab %}
+  {% endsubtabs %}
+
+TABLE WORD-BREAK
+  {: .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM .reset-td-br-NUM role="presentation"}
+</pre>
+{% endraw %}
 {% endtab %}
 {% endtabs %}
