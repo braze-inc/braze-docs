@@ -13,7 +13,7 @@ channel:
 
 # Custom domains
 
-> This page covers how to use custom domains with [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) to personalize the look and feel of your shortened URLs, and portray a consistent brand image. 
+> This page covers how to use custom domains with [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) to personalize the look and feel of your shortened URLs and portray a consistent brand image. 
 
 {% alert note %}
 Contact your Braze account manager if you're interested in getting started with custom domains.
@@ -37,6 +37,7 @@ To delegate your domain to Braze, do the following:
 - No CAA records exist OR
 - CAA records **do** exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
 
+{:start="2"}
 2. Create four new A records, one for each IP, and confirm that they are the only A records that exist for the domain link host:
 - `151.101.130.133`
 - `151.101.194.133`
@@ -45,7 +46,7 @@ To delegate your domain to Braze, do the following:
 
 ## Using custom domains
 
-Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
+After they're configured, custom domains can be assigned to one or multiple SMS subscription groups. 
 
 ![Subscription groups settings that allow you to select a link-shortening domain.][7]
 
