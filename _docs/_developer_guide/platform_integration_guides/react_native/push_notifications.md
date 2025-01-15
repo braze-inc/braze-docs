@@ -168,7 +168,7 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 
 {% endtab %}
 {% tab iOS Native %}
-#### Step 3.1: Add deep linking capabilities
+#### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
 If you are using the Braze Expo plugin, step 3.1 is handled automatically, and you may skip to step 3.2.
 {% endalert %}
@@ -194,9 +194,9 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
 }
 ```
 
-#### Step 3.2: Configure deep link handling
+#### Step 3.2: Handle deep links from a closed state
 
-In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method to account for deep links from push notifications that open your app when it isn't running. For example:
+In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
 
 ```javascript
 // Handles deep links when an iOS app is launched from a hard close via push click.
