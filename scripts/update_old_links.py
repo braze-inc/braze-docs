@@ -38,70 +38,48 @@ def update_old_links(filepath, redirects):
     original_content = content
     total_replacements = 0
 
-    # 1) site.baseurl replacements in entire file
     for entry_key, data in redirects.items():
         new_url = adjust_url(data["new_url"])
         old_urls = data["old_urls"]
 
+        #
+        # 1) Replace '{{site.baseurl}}' links in page
+        #
         for old in old_urls:
             if "#" in old:
                 pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old) + r"\)"
             else:
-                old_noslash = old.rstrip('/')
-                pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(old_noslash) + r"/?\)"
+                no_trailing_slash = old.rstrip('/')
+                pattern = r"\(" + re.escape("{{site.baseurl}}") + re.escape(no_trailing_slash) + r"/?\)"
 
             found = len(re.findall(pattern, content))
             if found > 0:
                 content = re.sub(pattern, f"({{{{site.baseurl}}}}{new_url})", content)
                 total_replacements += found
 
-    # 2) YAML front matter lines: between first and second ---
-    lines = content.split('\n')
-    in_front_matter = False
-    dash_count = 0
+        #
+        # 2) Replace 'link:' references in YAML with /docs + new_url
+        #
+        for old in old_urls:
+            #print(f'{new_url}')
+            if "#" in old:
+                # If there's a '#' in old, we build a pattern with old (including the #).
+                pattern = r'link: /docs' + re.escape(old)
+            else:
+                # If no '#', use the no_trailing_slash version
+                no_trailing_slash = old.rstrip('/')
+                pattern = r'link: /docs' + re.escape(no_trailing_slash)
 
-    for i in range(len(lines)):
-        line = lines[i].rstrip('\r')
+            found = len(re.findall(pattern, content))
+            if found > 0:
+                # Replace with: link: /docs + new_url
+                content = re.sub(pattern, f'link: /docs{new_url}', content)
+                total_replacements += found
 
-        if line.strip() == "---":
-            dash_count += 1
-            if dash_count == 2:
-                break
-            in_front_matter = True
-            continue
-
-        if in_front_matter and "link: /docs" in line:
-            for entry_key, data in redirects.items():
-                new_url = adjust_url(data["new_url"])
-                old_urls = data["old_urls"]
-
-                for old in old_urls:
-                    # Skip anchor-based old URLs for YAML
-                    if "#" in old:
-                        continue
-
-                    old_noslash = old.rstrip('/')
-                    pattern = (
-                            r'(^[ \t]*link:\s*)/docs'
-                            + re.escape(old_noslash)
-                            + r'(/|$)'
-                    )
-
-                    # If we detect the old URL in line, remove everything from ': /docs...'
-                    # and replace with ': /docs' + the adjusted new_url
-                    if re.search(pattern, lines[i]):
-                        lines[i] = re.sub(
-                            r':\s*/docs.*',
-                            f': /docs{new_url}',
-                            lines[i]
-                        )
-                        total_replacements += 1
-                        break
-
-    new_content = "\n".join(lines)
-    if new_content != original_content:
+    # If content changed, write the file back out
+    if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+            f.write(content)
 
     return total_replacements
 
