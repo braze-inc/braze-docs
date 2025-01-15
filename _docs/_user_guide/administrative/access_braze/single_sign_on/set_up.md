@@ -95,7 +95,7 @@ By turning on restrictions, your company's Braze users will no longer be able to
 
 ## Obtaining a SAML trace
 
-If you experience login issues related to SSO, obtaining a SAML trace can help to troubleshooting your SSO connection by identifying what's sent in the SAML requests.
+If you experience login issues related to SSO, obtaining a SAML trace can help you troubleshoot your SSO connection by identifying what's sent in the SAML requests.
 
 ### Prerequisites
 
