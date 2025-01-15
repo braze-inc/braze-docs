@@ -55,7 +55,7 @@ Para adicionar um bloco de conteúdo usando o Liquid, faça o seguinte:
 Ao fazer a prévia do envio de mensagens por e-mail, o snippet do Liquid será exibido como o bloco de conteúdo do editor de arrastar e soltar. 
 
 {% alert important %}
-Quando um bloco de conteúdo é adicionado ao editor de e-mail com o Liquid, esse bloco de conteúdo é vinculado ao bloco de conteúdo original criado em **Modelos e mídias.** Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
+Quando um bloco de conteúdo é adicionado ao editor de e-mail com o Liquid, esse bloco de conteúdo é vinculado ao bloco de conteúdo original criado em **Modelos e mídias**. Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
 {% endalert %}
 
 ## Atualização de blocos de conteúdo

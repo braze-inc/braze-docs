@@ -81,6 +81,14 @@ Os usuários que tiverem problemas para registrar a autenticação de dois fator
 
 Uma redefinição pode resolver problemas comuns de autenticação, como problemas com apps de autenticação, envio de e-mail não enviado, falha de login devido a interrupções de SMS ou erro do usuário e muito mais.
 
+## Elevated Access
+
+O Elevated Access adiciona uma camada extra de segurança para ações confidenciais em seu dashboard do Braze. Quando ativo, os usuários precisam verificar novamente sua conta antes de exportar um segmento ou visualizar uma chave de API. Para usar o Acesso elevado, acesse **Configurações** > **Configurações administrativas** > **Configurações de segurança** e ative-o. 
+
+Se um usuário não puder verificar novamente, ele será redirecionado para o ponto em que parou e não poderá continuar com a ação sensível. Depois de se verificarem novamente com sucesso, não precisarão fazer isso novamente na próxima hora, a menos que se desconectem primeiro.
+
+![Alternância de acesso elevado.][5]
+
 ## Baixando um relatório de evento de segurança
 
 O relatório de eventos de segurança é um relatório CSV de eventos de segurança, como convites para contas, remoções de contas, tentativas de login bem-sucedidas e com falha e outras atividades. Você pode usá-lo para realizar auditorias internas.
@@ -214,12 +222,12 @@ Defina as preferências padrão marcando as caixas dos campos que devem ser remo
 
 Para personalizar as preferências por espaço de trabalho, você pode adicionar grupos de preferências com configurações diferentes das padrão. Aplicamos as configurações padrão a todos os espaços de trabalho não adicionados a um grupo de preferências adicional, incluindo espaços de trabalho criados no futuro.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![Seção Preferências de exclusão de dados com alternância ativada para personalizar as preferências de exclusão de dados por espaço de trabalho.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "perfil de usuário ofuscado1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "perfil de usuário ofuscado2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "perfil de usuário ofuscado3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

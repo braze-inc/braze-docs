@@ -200,6 +200,7 @@ validurls['/docs/user_guide/onboarding_with_braze/sms_setup/importing_numbers/']
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/'] = '/docs/report_builder/';
 validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/user_guide/message_building_by_channel/sms/campaign/create/';
 validurls['/docs/updated_link_shortening/'] = '/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/';
+validurls['/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/#custom_domains'] = '/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/';
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/'] = '/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/'] = '/docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/';
@@ -1382,6 +1383,23 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 
+validurls['/docs/developer_guide/platform_integration_guides/flutter/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/flutter/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration'] = '/docs/developer_guide/platform_integration_guides/flutter/sdk_integration';
+
+validurls['/docs/developer_guide/platform_integration_guides/unity/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/unity/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/android'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/troubleshooting'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
+validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/android'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
+validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/unity/push_notifications';
+
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/overview'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/in-app_messaging/integration'] = '/docs/developer_guide/platform_integration_guides/roku/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/roku/sdk_integration';
+
 validurls['/docs/developer_guide/platform_integration_guides/cordova/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/cordova/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
@@ -1559,5 +1577,7 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile
 
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/xamarin/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/xamarin/sdk_integration';
+
+validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration/';
 
 // validurls['OLD'] = 'NEW';

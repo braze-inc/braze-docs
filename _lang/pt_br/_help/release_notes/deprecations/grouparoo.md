@@ -12,7 +12,7 @@ page_type: update
 O suporte ao Grouparoo foi descontinuado a partir de abril de 2022.
 {% endalert %}
 
-> [O Grouparoo][1] é uma ferramenta de ETL reversa de código aberto que facilita a alimentação de suas ferramentas de marketing, vendas e suporte usando os dados de seu data warehouse. A configuração é feita em uma interface de usuário centrada no modelo, possibilitando que membros não técnicos da equipe configurem e programem sincronizações de dados para apoiar as operações.
+> O [Grouparoo][1] é uma ferramenta de ETL reversa de código aberto que facilita a alimentação de suas ferramentas de marketing, vendas e suporte usando os dados de seu data warehouse. A configuração é feita em uma interface de usuário centrada no modelo, possibilitando que membros não técnicos da equipe configurem e programem sincronizações de dados para apoiar as operações.
 
 A integração da Braze com o Grouparoo facilita a operacionalização dos dados armazenados em um data warehouse, enviando-os para a Braze. Quando você configura agendas de sincronização automática, pode melhorar consistentemente as comunicações com os clientes com informações atualizadas.
 
@@ -22,7 +22,7 @@ A integração da Braze com o Grouparoo facilita a operacionalização dos dados
 | ----------- | ----------- |
 | Conta e projeto do Grouparoo | É necessário ter uma conta e um projeto do Grouparoo para aproveitar essa parceria.<br><br>Essa integração pode ser usada com a edição comunitária gratuita e com as soluções empresariais fornecidas pelo Grouparoo. A instalação ocorrerá na interface de usuário de configuração do Grouparoo. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com usuários e permissões de rastreamento. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
@@ -41,7 +41,7 @@ Essa integração requer que você tenha um modelo existente e uma fonte de dado
 
 #### Selecionar o modo de sincronização
 
-No Grouparoo, selecione seu modelo na barra de navegação. Em seguida, vá até a seção **Destinations (Destinos** ) e clique em **Add new Destination (Adicionar novo destino**).
+No Grouparoo, selecione seu modelo na barra de navegação. Em seguida, vá até a seção **Destinations (Destinos)** e clique em **Add new Destination (Adicionar novo destino)**.
 
 Em seguida, selecione o app **Braze** que você criou, nomeie os destinos e selecione o modo de sincronização desejado entre os seguintes:
 - **Sincronização**: Adicione, atualize e remova usuários do Braze conforme necessário. Essa opção procura novos registros, alterações em registros existentes e exclusões.
@@ -54,11 +54,11 @@ Em seguida, você deve mapear os campos de propriedade do Grouparoo para os camp
 
 ![Exemplo de campos de mapeamento de propriedades. O userID do Grouparoo é definido para mapear para external_id. e-mail, firstName e lastName são definidos como campos equivalentes de "e-mail", "first_name" e "last_name" do Grouparoo.][3]{: style="max-width:80%;"}
 
-Certifique-se de que o campo Braze `external_id` esteja mapeado para a chave primária em sua tabela de origem. Mapeie o restante dos campos conforme necessário para seu caso de uso.
+Certifique-se de que o campo `external_id` do Braze esteja mapeado para a chave primária em sua tabela de origem. Mapeie o restante dos campos conforme necessário para seu caso de uso.
 
 **Enviar seção Propriedades do registro**: Uma lista de campos de perfil de usuário predefinidos disponíveis para mapear dados. Qualquer um deles pode ser sincronizado a partir das propriedades do Grouparoo.
 
-Seção de **campos opcionais do perfil de usuário do Braze**: Crie campos de perfil de usuário Braze personalizados opcionais. Se você clicar em **Add New Braze User Profile Field (Adicionar novo campo de perfil de usuário Braze**), verá todas as propriedades disponíveis que podem ser mapeadas para o Braze. O nome de qualquer novo campo que você criar será o mesmo da propriedade Grouparoo, mas poderá ser renomeado.
+Seção de **campos opcionais do perfil de usuário do Braze**: Crie campos de perfil de usuário Braze personalizados opcionais. Se você clicar em **Add New Braze User Profile Field (Adicionar novo campo de perfil de usuário Braze)**, verá todas as propriedades disponíveis que podem ser mapeadas para o Braze. O nome de qualquer novo campo que você criar será o mesmo da propriedade Grouparoo, mas poderá ser renomeado.
 
 #### Grupos Grouparoo
 

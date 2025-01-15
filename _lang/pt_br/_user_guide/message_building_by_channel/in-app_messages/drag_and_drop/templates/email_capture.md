@@ -70,7 +70,7 @@ Para ter certeza de que quem se inscreveu na sua lista quis se inscrever nela e 
 Uma das maneiras de configurar isso é por meio do Canvas Flow:
 
 1. Crie uma tela baseada em ação e configure-a para disparar quando um usuário adicionar um endereço de e-mail ao Braze. Certifique-se de permitir o direcionamento de usuários que são novos na plataforma (por exemplo, usando um segmento sem filtros na tela).
-2. Crie uma etapa de envio de e-mail com uma CTA que tenha um hiperlink para a tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} Liquid. Isso mudará o estado da inscrição de e-mail do usuário para `opted_in` quando ele clicar no botão.
+2. Crie uma etapa de envio de e-mail com uma CTA que tenha um hiperlink para a Liquid tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %}. Isso mudará o estado da inscrição de e-mail do usuário para `opted_in` quando ele clicar no botão.
 3. Adicione uma [etapa de jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths#action-paths).
 4. Para a primeira jornada, dispare um e-mail quando um usuário alterar seu status de inscrição de e-mail para `opted_in`. Esse e-mail deve informar aos usuários que seu e-mail foi confirmado.
 5. Configure a outra jornada para sair do Canva depois que a janela expirar.
