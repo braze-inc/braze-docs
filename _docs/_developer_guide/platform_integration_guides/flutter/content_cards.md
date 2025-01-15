@@ -9,13 +9,15 @@ channel: content cards
 
 ---
 
-# Content Card integration
+# Content Cards
 
 > This article covers how to set up Content Cards for your Flutter app.
 
 The Braze SDK includes a default card feed to get you started with Content Cards. To show the card feed, you can use the `braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
-## Customization
+{% multi_lang_include developer_guide/prerequisites/flutter.md %}
+
+## Customizing Content Cards
 
 You can use these additional methods to build a custom Content Cards Feed within your app by using the following methods available on the [plugin public interface](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart):
 
@@ -79,7 +81,7 @@ To store any Content Cards triggered before the callback is available and replay
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
-## Test displaying sample Content Card
+## Testing a sample Content Card
 
 Follow these steps to test a sample Content Card.
 
@@ -95,4 +97,3 @@ For more details on each platform, follow the [Android integration]({{site.baseu
 ## GIF Support
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
-

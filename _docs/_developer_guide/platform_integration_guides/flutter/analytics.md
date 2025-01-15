@@ -7,7 +7,7 @@ description: "This article covers how to set up and track basic analytics in the
 
 ---
  
-# Flutter analytics
+# Analytics
 
 > This article covers how to set up and track basic analytics in your Flutter app.
 

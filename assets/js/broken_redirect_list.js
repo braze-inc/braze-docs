@@ -1383,6 +1383,9 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/home';
 validurls['/docs/partners/additional_channels/calendar/rokt_calendar/'] = '/docs/partners/home';
 
+validurls['/docs/developer_guide/platform_integration_guides/flutter/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/flutter/in_app_messages';
+validurls['/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration'] = '/docs/developer_guide/platform_integration_guides/flutter/sdk_integration';
+
 validurls['/docs/developer_guide/platform_integration_guides/unity/in-app_messaging'] = '/docs/developer_guide/platform_integration_guides/unity/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration/android'] = '/docs/developer_guide/platform_integration_guides/unity/sdk_integration/';

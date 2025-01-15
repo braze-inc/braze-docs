@@ -8,15 +8,19 @@ channel: push
 
 ---
 
-# Push notifications integration
+# Push notifications
 
 > This reference article covers how to set push notifications for Flutter. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
-## Step 1: Complete the initial setup
+{% multi_lang_include developer_guide/prerequisites/flutter.md %}
+
+## Setting up push notifications
+
+### Step 1: Complete the initial setup
 
 {% tabs %}
 {% tab Android %}
-### Step 1.1: Register for push
+#### Step 1.1: Register for push
 
 Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/):
 
@@ -26,7 +30,7 @@ Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a ful
 4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
 5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
 
-### Step 1.2: Get your Google Sender ID
+#### Step 1.2: Get your Google Sender ID
 
 First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
@@ -36,7 +40,7 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-### Step 1.3: Update your `braze.xml`
+#### Step 1.3: Update your `braze.xml`
 
 Add the following to your `braze.xml` file. Replace `FIREBASE_SENDER_ID` with the sender ID you copied previously.
 
@@ -48,18 +52,18 @@ Add the following to your `braze.xml` file. Replace `FIREBASE_SENDER_ID` with th
 {% endtab %}
 
 {% tab iOS %}
-### Step 1.1: Upload APNs certificates
+#### Step 1.1: Upload APNs certificates
 
 Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-upload-your-apns-certificate).
 
-### Step 1.2: Add push notification support to your app
+#### Step 1.2: Add push notification support to your app
 
 Follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Listen for push notification events (optional)
+### Step 2: Listen for push notification events (optional)
 
 To listen for push notification events that Braze has detected and handled, call `subscribeToPushNotificationEvents()` and pass in an argument to execute.
 
@@ -80,7 +84,7 @@ pushEventsStreamSubscription = braze.subscribeToPushNotificationEvents((BrazePus
 pushEventsStreamSubscription.cancel();
 ```
 
-#### Push notification event fields
+##### Push notification event fields
 
 {% alert note %}
 Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS after a user has interacted with a push.
@@ -106,7 +110,7 @@ For a full list of push notification fields, refer to the table below:
 | `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Step 3: Test displaying push notifications
+### Step 3: Test displaying push notifications
 
 To test your integration after configuring push notifications in the native layer:
 
