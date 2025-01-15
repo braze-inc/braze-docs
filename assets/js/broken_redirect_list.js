@@ -1575,4 +1575,6 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_col
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_import'] = '/docs/user_guide/data/user_data_collection/user_import';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/user_data_collection/user_profile_lifecycle';
 
+validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration/';
+
 // validurls['OLD'] = 'NEW';
