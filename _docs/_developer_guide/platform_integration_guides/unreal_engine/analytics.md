@@ -47,6 +47,6 @@ The Braze Unreal SDK supports the following analytics classes and functions.
 
 ## Creating `FBrazeProperties` in Blueprint
 
-The Blueprint Library `BrazePropertiesLibrary` includes helper functions to make creating BrazeProperties easier. Use the `Make FBrazeAny*` Nodes with a `MakeMap` when using the `MakeBrazeProperties` node. For example:
+The Blueprint Library `BrazePropertiesLibrary` includes helper functions to make creating Braze properties easier. Use the `Make FBrazeAny*` Nodes with a `MakeMap` when using the `MakeBrazeProperties` node. For example:
 
 ![A Blueprint project using Make Braze Properties.]({% image_buster /assets/img/unreal_engine/MakeBrazeProperties.png %})
