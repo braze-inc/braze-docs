@@ -241,7 +241,7 @@ if let braze = AppDelegate.braze {
             // Adjust the visibility and/or height.
           }
         case .failure(let error):
-          // Handle the error
+          // Handle the error.
       }
     }
   )
@@ -261,7 +261,7 @@ if let braze = AppDelegate.braze {
             // Adjust the visibility and/or height according to your parent controller.
           }
         case .failure(let error):
-          // Handle the error
+          // Handle the error.
       }
     }
   )
