@@ -236,12 +236,12 @@ if let braze = AppDelegate.braze {
     // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
-        case .success(let updates):
-          if let height = updates.height {
-            // Adjust the visibility and/or height.
-          }
-        case .failure(let error):
-          // Handle the error.
+      case .success(let updates):
+        if let height = updates.height {
+          // Adjust the visibility and/or height.
+        }
+      case .failure(let error):
+        // Handle the error.
       }
     }
   )
@@ -256,12 +256,12 @@ if let braze = AppDelegate.braze {
     // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
-        case .success(let updates):
-          if let height = updates.height {
-            // Adjust the visibility and/or height according to your parent controller.
-          }
-        case .failure(let error):
-          // Handle the error.
+      case .success(let updates):
+        if let height = updates.height {
+          // Adjust the visibility and/or height according to your parent controller.
+        }
+      case .failure(let error):
+        // Handle the error.
       }
     }
   )
