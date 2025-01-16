@@ -171,7 +171,7 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 The endpoint errors are:
 
 - **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
-- **`5XX`:** `500`, `502`, `503`, `504`, `599`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
 
 These emails are only sent once per day at the workspace level. If no users sign up for these emails, then all company administrators will be notified.
 

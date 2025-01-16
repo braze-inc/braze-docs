@@ -180,7 +180,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 
 ```bash
 $ ./bdocs ulinks _docs/_developer_guide/content_cards/creating_custom_content_cards.md
-In 'update_old_links.md', made 1 replacement.
+Made 1 replacements in _docs/_developer_guide/content_cards/creating_custom_content_cards.md
 Total replacements made: 1
 ```
 

@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST: Create Dashboard User Account"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "GET: Look Up Existing Dashboard User Account"
+  - name: "GET: Look Up Existing Dashboard User Account by Resource ID"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "GET: Search Existing Dashboard User Account by Email"

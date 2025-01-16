@@ -11,54 +11,54 @@ guide_featured_title: "Featured integrations"
 guide_featured_list:
 - name: Android
   image: /assets/img/braze_icons/android.svg
-  link: /docs/developer_guide/platform_integration_guides/android/sdk_integration/
+  link: /docs/developer_guide/platforms/android/sdk_integration/
   nav_link: android
 - name: Swift
-  link: /docs/developer_guide/platform_integration_guides/swift/sdk_integration/
+  link: /docs/developer_guide/platforms/swift/sdk_integration/
   image: /assets/img/braze_icons/swift.svg
 - name: Web
-  link: /docs/developer_guide/platform_integration_guides/web/sdk_integration/
+  link: /docs/developer_guide/platforms/web/sdk_integration/
   image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
   - name: FireOS
-    link: /docs/developer_guide/platform_integration_guides/fireos/sdk_integration
+    link: /docs/developer_guide/platforms/fireos/sdk_integration/
     image: /assets/img/fire-os-bw.png
-    nav_link: cordova
+    nav_link: fireos
   - name: Cordova
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/
+    link: /docs/developer_guide/platforms/cordova/sdk_integration/
     image: /assets/img/cordova.png
     nav_link: cordova
   - name: Flutter
-    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+    link: /docs/developer_guide/platforms/flutter/sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/sdk_integration/
+    link: /docs/developer_guide/platforms/react_native/sdk_integration/
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
-  - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+  - name: Unity
+    link: /docs/developer_guide/platforms/unity/sdk_integration
     image: /assets/img/unity.png
     nav_link: unity
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    link: /docs/developer_guide/platforms/xamarin/sdk_integration/
     image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: Roku
-    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    link: /docs/developer_guide/platforms/roku/sdk_integration/
     image: /assets/img/roku.png
     nav_link: roku
   - name: Unreal Engine
-    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    link: /docs/developer_guide/platforms/unreal_engine/sdk_integration/
     image: /assets/img/unreal.png
     nav_link: unrealengine
+  - name: TV & OTT
+    link: /docs/developer_guide/platforms/tv_and_ott/
+    image: /assets/img/braze_icons/tv-03.svg
+    nav_link: tv_and_ott
 
 guide_footer_header: " "
 guide_footer_text: " "

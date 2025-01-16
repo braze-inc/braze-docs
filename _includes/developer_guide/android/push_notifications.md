@@ -3,7 +3,7 @@
 > With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
 {% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
+If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/).
 {% endalert %}
 
 {% multi_lang_include developer_guide/prerequisites/android.md %}
@@ -406,7 +406,7 @@ In your `braze.xml`, specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration:]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/)
+or set via [runtime configuration:]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/)
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -492,7 +492,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
+This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
 
 {% tabs %}
 {% tab JAVA %}
@@ -533,7 +533,7 @@ The Braze dashboard supports setting deep links or web URLs in push notification
 
 The Android SDK, by default, will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
-For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
+For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
 
 {% tabs %}
 {% tab JAVA %}
@@ -594,13 +594,13 @@ At this point, you should be able to see notifications sent from Braze. To test 
 
 ![The 'Test' tab of a push notification campaign in the Braze dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
-For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
 
 #### Testing analytics
 
 At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) article for a break down on push analytics.
 
-For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
 
 #### Testing from command line
 
