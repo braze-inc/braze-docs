@@ -61,19 +61,30 @@ def update_old_links(filepath, redirects):
         # 2) Replace 'link:' references in YAML with /docs + new_url
         #
         for old in old_urls:
-            #print(f'{new_url}')
+            no_trailing_slash = old.rstrip('/')
             if "#" in old:
-                # If there's a '#' in old, we build a pattern with old (including the #).
-                pattern = r'link: /docs' + re.escape(old)
+                # If there's a '#' in old, build the pattern with it.
+                pattern = re.compile(
+                    r"^([ \t]*)link:\s*/docs"  # Group 1: leading spaces + "link: /docs"
+                    + re.escape(old)  # The old URL with '#'
+                    + r"/?[ \t]*$",  # Optional slash, optional spaces, line end
+                    flags=re.MULTILINE
+                )
             else:
                 # If no '#', use the no_trailing_slash version
-                no_trailing_slash = old.rstrip('/')
-                pattern = r'link: /docs' + re.escape(no_trailing_slash)
+                pattern = re.compile(
+                    r"^([ \t]*)link:\s*/docs"  # Group 1: leading spaces + "link: /docs"
+                    + re.escape(no_trailing_slash)
+                    + r"/?[ \t]*$",  # Optional slash, optional spaces, line end
+                    flags=re.MULTILINE
+                )
 
             found = len(re.findall(pattern, content))
             if found > 0:
-                # Replace with: link: /docs + new_url
-                content = re.sub(pattern, f'link: /docs{new_url}', content)
+                # Replace with:
+                #   \1 => the leading spaces captured by group 1
+                #   then "link: /docs{new_url}"
+                content = re.sub(pattern, rf"\1link: /docs{new_url}", content)
                 total_replacements += found
 
     # If content changed, write the file back out
