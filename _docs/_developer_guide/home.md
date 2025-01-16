@@ -56,7 +56,7 @@ guide_menu_list:
     image: /assets/img/unreal.png
     nav_link: unrealengine
   - name: TV & OTT
-    link: /docs/developer_guide/platform_integration_guides/tv_and_ott
+    link: /docs/developer_guide/platforms/tv_and_ott/
     image: /assets/img/braze_icons/tv-03.svg
     nav_link: tv_and_ott
 
