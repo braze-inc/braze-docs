@@ -16,6 +16,7 @@ search_tag: Partner
 > [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
+
 - Sync [Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to Braze's REST APIs
 - [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
@@ -38,7 +39,7 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 ### Step 2: Choose destination framework and connection type {#integration-options}
 
-In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
+In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
 ![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
 
@@ -84,9 +85,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 {% endalert %}
 
-To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
-
-![]({% image_buster /assets/img/segment/android.png %})
+To set up Braze as a device-mode destination for your Android source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
 
@@ -108,9 +107,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
-To set up Braze as a device-mode destination for your iOS source, choose **Classic** as the Destination framework and click **Save**. 
-
-![]({% image_buster /assets/img/segment/ios.png %})
+To set up Braze as a device-mode destination for your iOS source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze Segment pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
@@ -119,9 +116,9 @@ The source code for the [iOS device mode](https://github.com/braze-inc/braze-seg
 {% endtab %}
 {% tab Web or JavaScript %}
 
-Segment's new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
+Segment's Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your web source. 
 
-Within the setup UI, choose **Actions** as your destination framework and **Device Mode** as your Connection mode.
+In Segment, select **Actions** as your destination framework and **Device Mode** as your connection mode.
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
@@ -139,14 +136,14 @@ When a push token is registered from a device and sent to Braze, it is associate
 If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
 {% endalert %}
 
-To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
+To set up Braze as a device-mode destination for each source, choose **Actions** as the **Destination framework**, then select **Save**.
 
 {% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
 
-Also called cloud-mode, this integration forwards data from Segment to Braze's REST APIs. Use Segment's new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
+Also called cloud-mode, this integration forwards data from Segment to Braze's REST APIs. Use Segment's [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
 
 Unlike the side-by-side integration, the server-to-server integration does not support Braze's UI features, such as in-app messaging, Content Cards, or automatic push token registration. There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as anonymous users and device-level fields) that are not available through cloud-mode.
 
