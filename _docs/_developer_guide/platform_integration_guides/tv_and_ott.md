@@ -1,6 +1,6 @@
 ---
 nav_title: TV and OTT
-article_title: TV and OTT integrations for Braze
+article_title: TV and OTT Integrations for Braze
 page_order: 15
 
 description: "This article will give you details on Braze TV and OTT features, integrations, available platforms, and other capabilities."
