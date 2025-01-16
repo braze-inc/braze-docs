@@ -114,6 +114,16 @@ You need either administrator permissions or all of the following permissions to
 
 ## Frequently asked questions
 
+## Plan limitations
+
+These are the Landing Page limitations for free and paid tiers.
+
+| Feature                                                                                                   | Free Tier     | Paid Increments     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Landing Pages                                                                 | 5 per company | 20 Additional |
+| Custom Domains          | 1 per company | 5 Additional |
+
+
 ### What happens when a user submits their information on the landing page?
 
 When a user submits a form, a new Braze user profile is created with the submitted user data.
