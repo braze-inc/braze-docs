@@ -4,7 +4,7 @@ article_title: Suppression Lists
 page_order: 8
 page_type: reference
 tool: Segments
-description: "This page covers how to use suppression lists to specify which users should never receive your messages.."
+description: "This page covers how to use suppression lists to specify which users should never receive your messages."
 
 ---
 
@@ -18,11 +18,11 @@ Suppression lists are currently in beta. If you're interested in being part of t
 
 ## How it works
 
-Suppression lists automatically apply to all forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from these campaigns or Canvases will still reach any suppression list users that are part of your target segments.
+Suppression lists automatically apply to certain forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
 
-### Messages that users will recieve
+### Messages not affected by suppression lists
 
-Users on the suppression list **will** receive messages from any campaign or Canvases that contain exception tags, unless that campaign or Canvas falls under any of these use cases: 
+As part of the beta, suppression lists will not apply to the following message types (in other words, suppression list users **will still** receive messages that belong to the following):
 - Feature Flags
 - Transactional use cases
 - API campaigns
@@ -77,7 +77,7 @@ Only admins can save or activate suppression lists. You can have up to five acti
 {: start="6"}
 6. You can deactivate or archive suppression lists when you no longer need them. 
 - To deactivate, select an active suppression list and select **Deactivate**. Deactivated suppression lists can be reactivated later.
-- To archive, do so from the **Segment Lists** page.
+- To archive, do so from the **Suppression Lists** page.
 
 ## Checking suppression list usage
 
@@ -88,9 +88,6 @@ Check the **Suppression List** section on the **Target Audience** page to view w
 ### In a campaign
 
 Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a campaign.
-
-### If a suppression list causes zero targeted users
-If your applied suppression list results in zero targeted users for a campaign or Canvas, a warning will display on the **Target Audience** and summary pages.
 
 [1]: {% image_buster /assets/img/suppression_lists_home.png %}
 [2]: {% image_buster /assets/img/create_suppression_list.png %}
