@@ -229,12 +229,42 @@ AppDelegate.braze?.banners.getBanner(for: "global_banner", { banner in
 
 // If you simply want the Banner view, you may initialize a `UIView` with the placement ID:
 if let braze = AppDelegate.braze {
-  let bannerUIView = BrazeBannerUI.BannerUIView(placementId: "global_banner", braze: braze)
+  let bannerUIView = BrazeBannerUI.BannerUIView(
+    placementId: "global_banner",
+    braze: braze,
+    // iOS does not perform automatic resizing or visibility changes.
+    // Use the `processContentUpdates` parameter to adjust the Banner size and visibility of your Banner Card according to your use case.
+    processContentUpdates: { result in
+      switch result {
+        case .succes(let updates):
+          if let height = updates.height {
+            // Adjust the visibility and/or height.
+          }
+        case .failure(let error):
+          // Handle the error
+      }
+    }
+  )
 }
 
 // Similarly, if you want a Banner view in SwiftUI, use the corresponding `BannerView` initializer:
 if let braze = AppDelegate.braze {
-  let bannerView = BrazeBannerUI.BannerView(placementId: "global_banner", braze: braze)
+  let bannerView = BrazeBannerUI.BannerView(
+    placementId: "global_banner",
+    braze: braze,
+    // iOS does not perform automatic resizing or visibility changes.
+    // Use the `processContentUpdates` parameter to adjust the Banner size and visibility of your Banner Card according to your use case.
+    processContentUpdates: { result in
+      switch result {
+        case .succes(let updates):
+          if let height = updates.height {
+            // Adjust the visibility and/or height according to your parent controller.
+          }
+        case .failure(let error):
+          // Handle the error
+      }
+    }
+  )
 }
 ```
 {% endtab %}
