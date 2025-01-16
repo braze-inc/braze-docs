@@ -43,7 +43,7 @@ Os detalhes do contrato listam a data de início e de término de seu contrato a
 
 ## Eventos e atribuições mais usados por aplicativo
 
-Em **Most Used Events and Attributes By App (Eventos e atributos mais usados por aplicativo**), você pode verificar os drivers de seu atributo e o consumo de pontos de dados de eventos personalizados. 
+Em **Most Used Events and Attributes By App (Eventos e atributos mais usados por aplicativo)**, você pode verificar os drivers de seu atributo e o consumo de pontos de dados de eventos personalizados. 
 
 ![Eventos e atribuições mais usados por aplicativo][4]
 

@@ -21,9 +21,9 @@ tool:
 
 Antes de criar uma notificação por push avançada para iOS, observe os seguintes detalhes:
 
-- Para garantir que seu aplicativo possa enviar notificações [por push][1], siga as instruções de integração de push do iOS, pois o desenvolvedor precisará adicionar uma extensão de serviço ao seu aplicativo.
+- Para garantir que seu aplicativo possa enviar notificações por push, siga as instruções de [integração de push do iOS][1], pois o desenvolvedor precisará adicionar uma extensão de serviço ao seu aplicativo.
 - Os tipos de arquivo que suportamos atualmente para fazer upload direto em nosso dashboard incluem JPEG, PNG ou GIF. Esses arquivos também podem ser inseridos no campo de URL de modelo, juntamente com esses tipos de arquivos adicionais: AIF, M4A, MP3, MP4 ou WAV.
-- Consulte [a documentação da Apple][2] para conhecer as limitações e especificações da mídia.
+- Consulte a [documentação da Apple][2] para conhecer as limitações e especificações da mídia.
 - As notificações Rich do iOS não estão disponíveis ao criar uma campanha push rápida.
 - O iOS dimensionará as imagens para que caibam na tela e dimensionará as imagens ricas para a exibição ativa ou bloqueada.
 

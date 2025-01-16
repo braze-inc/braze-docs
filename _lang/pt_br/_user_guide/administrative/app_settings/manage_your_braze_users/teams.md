@@ -77,7 +77,7 @@ Para ver as descrições do que cada permissão de usuário inclui e como usá-l
 Considere os dois cenários a seguir para uma profissional de marketing no Braze chamada Michelle. Michelle é membro de uma equipe chamada "Desenvolvimento". Ela tem acesso a todas as permissões de nível de equipe para a equipe de desenvolvimento.
 
 {% tabs %}
-{% tab Cenário 1: Somente permissões de equipe %}
+{% tab Cenário 1 - Apenas permissões da equipe %}
 
 Nesse cenário, Michelle é uma usuária limitada que não tem permissões no nível do espaço de trabalho. Suas permissões são mais ou menos assim:
 
@@ -88,7 +88,7 @@ Com base nas permissões atribuídas a Michelle, sempre que ela criar uma campan
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
-{% tab Cenário 2: Permissões de equipe e permissões de espaço de trabalho %}
+{% tab Cenário 2 - Permissões da equipe e permissões do espaço de trabalho %}
 
 Nesse cenário, Michelle ainda é um membro da equipe de desenvolvimento, mas também tem uma permissão adicional no nível do espaço de trabalho.
 

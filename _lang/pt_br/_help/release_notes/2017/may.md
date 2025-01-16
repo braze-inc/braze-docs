@@ -14,7 +14,7 @@ Adicionamos uma nova funcionalidade aos Grupos internos para grupos de teste, fa
 
 ## Atualização das tags
 
-Agora você pode aninhar suas tags de segmento para ajudar a organizar melhor seu dashboard. Saiba mais sobre [as tags de segmento][42].
+Agora você pode aninhar suas tags de segmento para ajudar a organizar melhor seu dashboard. Saiba mais sobre as [tags de segmento][42].
 
 ## Atualização da configuração das mensagens no app
 
@@ -38,11 +38,11 @@ Agora, você verá apenas as estatísticas relevantes para você com uma tabela 
 
 ## Novos alertas de cota para aquecimento de IP
 
-Agora temos um alerta para informar quando você atingir sua cota, dependendo do seu cronograma de aquecimento de IP, garantindo que você nunca saia dos trilhos. Saiba mais sobre [o aquecimento de IP][36].
+Agora temos um alerta para informar quando você atingir sua cota, dependendo do seu cronograma de aquecimento de IP, garantindo que você nunca saia dos trilhos. Saiba mais sobre o [aquecimento de IP][36].
 
 ## Dados do Canva nos relatórios de engajamento
 
-Os dados da canva e da campanha agora podem ser exportados juntos no Relatório de engajamento, simplificando sua análise de dados. Saiba mais sobre [os relatórios de engajamento][35].
+Os dados da canva e da campanha agora podem ser exportados juntos no Relatório de engajamento, simplificando sua análise de dados. Saiba mais sobre os [relatórios de engajamento][35].
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports

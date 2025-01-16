@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use News Feed, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/). However, no additional setup is required.
+Before you can use News Feed, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/). However, no additional setup is required.
 
 ## Google fragments
 
@@ -87,7 +87,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 
 ### Tracking session analytics
 
-The Android UI fragments do not automatically track session analytics. To ensure that sessions are [tracked correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), call `IBraze.openSession()` when your app is opened.
+The Android UI fragments do not automatically track session analytics. To ensure that sessions are [tracked correctly]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), call `IBraze.openSession()` when your app is opened.
 
 ### Linking from in-app messages
 
@@ -95,4 +95,4 @@ Linking to the News Feed from an in-app message must be enabled by registering t
 
 ## Next steps
 
-If you're ready to create your own News Feed, see [Creating a custom News Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/creating_a_custom_feed/).
+If you're ready to create your own News Feed, see [Creating a custom News Feed]({{site.baseurl}}/developer_guide/platforms/android/news_feed/creating_a_custom_feed/).

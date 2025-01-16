@@ -46,7 +46,7 @@ As atribuições Campaign, Card e Canva são compatíveis apenas com seus modelo
 
 O comportamento das seguintes tags difere entre o Canva e as campanhas:
 {% raw %}
-- `dispatch_id` O comportamento é diferente porque o Braze trata as etapas do Canva como eventos disparados, mesmo quando são "programadas" (exceto as etapas de entrada, que podem ser programadas). Para saber mais, consulte [Comportamento da ID de despacho][50].
+- O comportamento `dispatch_id` é diferente porque o Braze trata as etapas do Canva como eventos disparados, mesmo quando são "programadas" (exceto as etapas de entrada, que podem ser programadas). Para saber mais, consulte [Comportamento do Dispatch ID][50].
 - O uso da tag `{{campaign.${name}}}` com o canvas exibirá o nome do componente do canvas. Ao usar essa tag com campanhas, ela exibirá o nome da campanha.
 {% endraw %}
 

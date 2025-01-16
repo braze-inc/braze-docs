@@ -3,7 +3,7 @@ nav_title: Custom Attributes
 article_title: Custom Attributes
 page_order: 10
 page_type: reference
-description: "This reference article describes custom attributes, and explains the various custom attribute data types."
+description: "This page describes custom attributes and explains the various custom attribute data types."
 search_rank: 1
 ---
 
@@ -23,7 +23,11 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can fin
 
 ![Four custom attributes that are booleans.]({% image_buster /assets/img/export_custom_attributes.png %})
 
-The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active. 
+The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
+
+{% alert important %}
+For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute.
+{% endalert %}
 
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
 

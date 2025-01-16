@@ -133,7 +133,12 @@ Acionando uma campanha com propriedades aninhadas do evento "Playlist Criada":
 
 ![Um usuário escolhendo uma propriedade aninhada para filtros de propriedade em um evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
 
-A condição de disparo `songs[].album.yearReleased` "é" "1968" corresponderá a um evento onde qualquer uma das músicas tenha um álbum lançado em 1968. Usamos a notação de colchetes `[]` para percorrer matrizes e correspondemos se **qualquer** item na matriz percorrida corresponder à propriedade do evento.<br>
+A condição de disparo `songs[].album.yearReleased` "é" "1968" corresponderá a um evento onde qualquer uma das músicas tenha um álbum lançado em 1968. Usamos a notação de colchetes `[]` para percorrer matrizes e correspondemos se **qualquer** item na matriz percorrida corresponder à propriedade do evento.
+
+{% alert important %}
+O filtro **does not equal** só corresponde se nenhuma das propriedades em sua matriz for igual ao valor fornecido. <br><br>Por exemplo, digamos que o Canvas A tenha o filtro de propriedade aninhada de evento personalizado baseado em ação **igual a** "smartwatch" e o Canvas B tenha o filtro de propriedade aninhada de evento personalizado baseado em ação **não igual a** "simphone". Se você tiver "smartwatch" e "simphone" em suas propriedades, ambas as telas serão disparadas. Mas se você tiver "simphone" ou "sim only" em qualquer propriedade, nenhum dos Canvas será disparado.
+{% endalert %}
+
 {% endtab %}
 {% tab Exemplo de Restaurante %}
 

@@ -6,11 +6,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Look up an existing dashboard user account Braze endpoint."
+description: "This article outlines details about the Look up an existing dashboard user account resource ID Braze endpoint."
 ---
 
 {% api %}
-# Look up an existing dashboard user account
+# Look up an existing dashboard user account by resource ID
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}

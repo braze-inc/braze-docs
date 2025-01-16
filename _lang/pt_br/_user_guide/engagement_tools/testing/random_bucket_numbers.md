@@ -44,7 +44,7 @@ Talvez você queira usar esses tipos de segmentos se quiser executar um teste de
 
 Dependendo do número de segmentos desejados e da distribuição de usuários em cada segmento, seu plano pode ser diferente.
 
-Para cada um dos segmentos de números aleatórios, incluindo o grupo de controle, ative [o rastreamento da análise de dados]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). Ao avaliar o sucesso das variantes em relação ao grupo de controle, é possível acessar a página de [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) e visualizar a frequência com que cada segmento concluiu determinados eventos personalizados.
+Para cada um dos segmentos de números aleatórios, incluindo o grupo de controle, ative o [rastreamento da análise de dados]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). Ao avaliar o sucesso das variantes em relação ao grupo de controle, é possível acessar a página de [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) e visualizar a frequência com que cada segmento concluiu determinados eventos personalizados.
 
 ### Reentrada aleatória do público usando números de baldes aleatórios
 
@@ -52,7 +52,7 @@ O reingresso aleatório do público pode ser útil para [Testes A/B]({{site.base
 
 1. [Crie seu segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 2. Defina os compartimentos aleatórios. Em sua campanha ou no Canva, use o filtro de intervalo aleatório para dividir seu público em diferentes grupos. Por exemplo, você pode especificar exatamente dois grupos aleatórios para dividir seu público (50% dos usuários por grupo).
-3. Na seção **Direcionamento** do público-alvo da sua campanha ou Canva, especifique as configurações do compartimento aleatório. Isso permite que o Braze atribua automaticamente os usuários aos compartimentos apropriados com base nas porcentagens definidas.
+3. Na seção **Direcionamento do público-alvo** da sua campanha ou Canva, especifique as configurações do compartimento aleatório. Isso permite que o Braze atribua automaticamente os usuários aos compartimentos apropriados com base nas porcentagens definidas.
 4. Configure a lógica que permite que os usuários entrem novamente no segmento. Por exemplo, você pode permitir que os usuários entrem novamente no segmento se não tiverem se engajado com um app por 15 dias.
 5. Lance sua campanha e monitore a performance de cada pacote. É possível analisar métricas como taxas de engajamento e taxas de conversão para determinar a eficácia da reentrada aleatória do público no seu caso de uso.
 

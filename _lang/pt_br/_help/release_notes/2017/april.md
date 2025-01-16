@@ -10,7 +10,7 @@ description: "Este artigo contém notas de versão de abril de 2017."
 
 ## Mensagens no navegador em HTML
 
-Agora, oferecemos suporte a tipos de mensagens interativas no navegador, incluindo HTML personalizado e formatos de captura de e-mail, o que o capacita a alcançar seus clientes onde quer que eles estejam. Saiba mais sobre [as mensagens no app][48].
+Agora, oferecemos suporte a tipos de mensagens interativas no navegador, incluindo HTML personalizado e formatos de captura de e-mail, o que o capacita a alcançar seus clientes onde quer que eles estejam. Saiba mais sobre as [mensagens no app][48].
 
 ## Mensagem personalizada no app com conteúdo conectado
 
@@ -18,11 +18,11 @@ Adicionamos os blocos {% raw %} {%connected_content%} {% endraw %} nas mensagens
 
 ## Navegação aprimorada para cartões do feed de notícias
 
-Melhoramos a interface do usuário para a criação de cartões do Feed de notícias, facilitando a navegação e a criação de suas campanhas. Saiba mais sobre [os cartões do Feed de notícias][33].
+Melhoramos a interface do usuário para a criação de cartões do Feed de notícias, facilitando a navegação e a criação de suas campanhas. Saiba mais sobre os [cartões do Feed de notícias][33].
 
 ## Prévia aprimorada das notificações Rich do iOS
 
-Nossas notificações prévias no iOS agora exibem notificações Rich, oferecendo uma visão clara do que exatamente está sendo enviado aos seus clientes, até o tamanho da fonte. Saiba mais sobre [as notificações Rich do iOS][32].
+Nossas notificações prévias no iOS agora exibem notificações Rich, oferecendo uma visão clara do que exatamente está sendo enviado aos seus clientes, até o tamanho da fonte. Saiba mais sobre as [notificações Rich do iOS][32].
 
 ## Adição de "aberturas por influência" às estatísticas de push
 
@@ -30,7 +30,7 @@ Adicionamos "aberturas por influência" à nossa lista de estatísticas padrão 
 
 ## Fazer upgrade para grupos internos
 
-Agora é possível criar vários grupos internos e atribuir propriedades que indicam se o grupo será usado para registro de SDK, registro de API REST ou teste de conteúdo de mensagens. Saiba mais sobre [os registros de usuários de eventos][30].
+Agora é possível criar vários grupos internos e atribuir propriedades que indicam se o grupo será usado para registro de SDK, registro de API REST ou teste de conteúdo de mensagens. Saiba mais sobre os [registros de usuários de eventos][30].
 
 > Atualizar: Os grupos internos também podem ser usados para o [envio de e-mails de teste]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#seed-groups).
 

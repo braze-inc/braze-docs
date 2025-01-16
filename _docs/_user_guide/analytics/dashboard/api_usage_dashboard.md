@@ -10,11 +10,13 @@ description: "This article provides an overview of the API usage dashboard."
 
 > The API usage dashboard lets you monitor your incoming REST API traffic into Braze to understand your trends within your usage of our REST APIs and to troubleshoot any potential issues.
 
-The default dashboard is a view of all incoming REST API requests for your workspace over the last day (24 hours). Depending on your use case, you can adjust the dashboard controls to filter or group traffic and also configure the time range of the dashboard.
+View your API usage dashboard by going to **Settings** > **APIs and Identifers** and selecting **Dashboard**. The default dashboard is a view of all incoming REST API requests for your workspace over the last day (24 hours). Depending on your use case, you can adjust the dashboard controls to filter or group traffic and also configure the time range of the dashboard.
 
 ![API Usage Dashboard with 130 total requests, with a 70 percent success rate and 30 percent failure rate.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
 
-## Summary statistics
+## Summary details
+
+The API usage dashboard includes the following statistics:
 
 - **Total requests:** The total number of requests sent to Braze for your current workspace, given the filters and controls applied to the dashboard.
 - **Success rate:** The percentage of total requests where Braze issued a `2XX` success response.
@@ -26,15 +28,15 @@ The default dashboard is a view of all incoming REST API requests for your works
 
 ### Filters
 
-Apply filters to narrow the view of REST API traffic for your workspace. Available filters include:
+Select **Filters** to apply filters to narrow the view of REST API traffic for your workspace, including:
 
-- API endpoint
 - API key
+- Endpoint
 - Response code
 
 ### Group data
 
-Group data into various data series to explore different patterns in your usage. Available grouping options are:
+You can group data into various data series to explore different patterns in your usage, including:
 
 - Response codes (default)
 - API endpoint
@@ -43,7 +45,7 @@ Group data into various data series to explore different patterns in your usage.
 
 ### Date
 
-Adjust the date filter to show a smaller or greater time range as needed. Available date options include:
+Adjust the date filter to show a smaller or greater time range as needed. This includes:
 
 - Today (default)
 - Custom
