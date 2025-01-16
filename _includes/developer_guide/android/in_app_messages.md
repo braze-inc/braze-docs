@@ -61,7 +61,7 @@ You can also define custom in-app message views for your app. For a full walkthr
 
 ### Prerequisites
 
-Before you can set up in-app messages, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/).
+Before you can set up in-app messages, you'll need to [integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/).
 
 ### Step 1: Braze in-app message manager registration
 

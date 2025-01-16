@@ -98,7 +98,7 @@ You would handle each of the values. Keys like `body`, `title`, and `buttonText`
 
 {% details Further explanation for Android %}
 
-In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/examples/) method, you can filter and identify these class types.
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) method, you can filter and identify these class types.
 
 {% tabs %}
 {% tab Kotlin %}
