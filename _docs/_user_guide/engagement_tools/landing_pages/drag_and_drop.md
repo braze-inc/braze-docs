@@ -120,7 +120,7 @@ These are the Landing Page limitations for free and paid tiers.
 
 | Feature                                                                                                   | Free Tier     | Paid Increments     |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Landing Pages                                                                 | 5 per company | 20 Additional |
+| Published Landing Pages                                                                 | 5 per company | 20 Additional |
 | Custom Domains          | 1 per company | 5 Additional |
 
 
@@ -139,10 +139,6 @@ You can edit the HTML of a landing page using the Custom Code block.
 ### Is reporting available for landing pages?
 
 No, this isn't currently available.
-
-### Is there an HTML editor for landing pages?
-
-No, this isn’t currently available. You can use the Custom Code block in the editor.
 
 ### Can I create a webhook inside a landing page?
 
