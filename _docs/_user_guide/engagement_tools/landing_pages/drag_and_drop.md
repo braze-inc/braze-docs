@@ -112,17 +112,16 @@ You need either administrator permissions or all of the following permissions to
 - Create Landing Page Drafts
 - Publish Landing Pages
 
-## Frequently asked questions
+## Plan tiers
 
-## Plan limitations
+The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
 
-These are the Landing Page limitations for free and paid tiers.
-
-| Feature                                                                                                   | Free Tier     | Paid Increments     |
+| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Published Landing Pages                                                                 | 5 per company | 20 Additional |
-| Custom Domains          | 1 per company | 5 Additional |
+| Published landing pages                                                                 | Five per company | 20 additional |
+| Custom domains          | One per company | Five additional |
 
+## Frequently asked questions
 
 ### What happens when a user submits their information on the landing page?
 
