@@ -233,7 +233,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the Banner size and visibility of your Banner Card according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
         case .succes(let updates):
@@ -253,7 +253,7 @@ if let braze = AppDelegate.braze {
     placementId: "global_banner",
     braze: braze,
     // iOS does not perform automatic resizing or visibility changes.
-    // Use the `processContentUpdates` parameter to adjust the Banner size and visibility of your Banner Card according to your use case.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
     processContentUpdates: { result in
       switch result {
         case .succes(let updates):
