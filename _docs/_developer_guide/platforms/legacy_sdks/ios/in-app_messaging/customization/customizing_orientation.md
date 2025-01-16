@@ -46,7 +46,7 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 ## Setting orientation per in-app message
 
-You may alternatively set orientation on a per-message basis. To do this, set an [in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/). Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`:
+You may alternatively set orientation on a per-message basis. To do this, set an [in-app message delegate]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/). Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

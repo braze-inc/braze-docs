@@ -14,7 +14,7 @@ noindex: true
 
 # Unit tests {#unit-tests}
 
-This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in our [push integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/). 
+This optional guide describes how to implement some unit tests that will verify whether your app delegate correctly follows the steps described in our [push integration instructions]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/). 
 
 If all the tests pass, generally, this means the code-based part of your push setup is functional. If a test fails, this might mean that you incorrectly followed a step, or it may result from a valid customization that doesn't align precisely with our default instructions.
 
@@ -28,7 +28,7 @@ In your app project, go to menu **File > New > Target** and add a new "Unit Test
 
 ## Step 2: Add the Braze SDK to your unit tests
 
-Using the same method you used initially to [install the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/), make sure the same SDK installation is also available to your unit tests target. For example, using CocoaPods:
+Using the same method you used initially to [install the Braze SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/), make sure the same SDK installation is also available to your unit tests target. For example, using CocoaPods:
 
 ```
 target 'YourAppTarget' do

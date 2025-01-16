@@ -10,7 +10,7 @@ description: "This landing page is home to all things in-app messaging for the B
 
 ## Prerequisites
 
-Before you can use in-app messaging, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use in-app messaging, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) into your app. However, no additional setup is required.
 
 ## Message types
 

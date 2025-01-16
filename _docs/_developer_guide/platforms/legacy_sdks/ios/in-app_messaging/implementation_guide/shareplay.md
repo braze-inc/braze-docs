@@ -31,7 +31,7 @@ With synced media playback, if one person pauses the SharePlay video, it will be
 
 ## Integration
 
-The in-app message used in this integration is a subclassed modal in-app message view controller. A guide for setup can be found in the iOS in-app message advanced use case [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/implementation_guide/). Before integrating, make sure to add the `GroupActivities` entitlement to your Xcode project.
+The in-app message used in this integration is a subclassed modal in-app message view controller. A guide for setup can be found in the iOS in-app message advanced use case [implementation guide]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/). Before integrating, make sure to add the `GroupActivities` entitlement to your Xcode project.
 
 {% alert important %}
 We recommend opening the [Apple SharePlay documentation](https://developer.apple.com/documentation/avfoundation/media_playback_and_selection/supporting_coordinated_media_playback) side-by-side by this guide to complete the integration.

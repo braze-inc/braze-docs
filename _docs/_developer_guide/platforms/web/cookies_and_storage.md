@@ -74,6 +74,6 @@ braze.initialize("API-KEY", {
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-To read more about the automatically collected device properties, visit [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
+To read more about the automatically collected device properties, visit [SDK data collection options]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). 
 
 

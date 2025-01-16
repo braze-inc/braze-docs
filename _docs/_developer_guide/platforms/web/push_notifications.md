@@ -18,7 +18,7 @@ Web push notifications are implemented using the [W3C push standard](http://www.
 
 ### Prerequisites
 
-Before you can set up push notifications, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app.
+Before you can set up push notifications, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) into your app.
 
 ### Step 1: Configure your service worker
 
@@ -37,7 +37,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 For a browser to receive push notifications, you must register it for push by calling `braze.requestPushPermission()`. This will immediately request push permission from the user. 
 
-If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with `braze.isPushSupported()`. Refer to the [soft push prompt example]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompts/) using in-app messages.
+If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with `braze.isPushSupported()`. Refer to the [soft push prompt example]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/soft_push_prompts/) using in-app messages.
 
 If you wish to unsubscribe a user, you can do so by calling `braze.unregisterPush()`.
 

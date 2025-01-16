@@ -67,7 +67,7 @@ At this point, you should be able to open the new Xcode project workspace create
 
 ## Next steps
 
-Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/).
+Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/completing_integration/).
 
 ## Updating the Braze SDK via CocoaPods
 

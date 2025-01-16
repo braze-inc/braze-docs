@@ -28,7 +28,7 @@ To set a user ID or start a session, use the `ChangeUser` method, which takes a 
 Braze.GetInstance(this).ChangeUser("user_id");
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
 
 {% endtab %}
 {% tab iOS %}
@@ -36,7 +36,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 App.braze?.ChangeUser("user_id");
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
 
 {% endtab %}
 {% endtabs %}
@@ -51,7 +51,7 @@ You can record custom events in Braze using `LogCustomEvent` to learn more about
 Braze.GetInstance(this).LogCustomEvent("event_name");
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 
 {% endtab %}
 {% tab iOS %}
@@ -59,7 +59,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 App.braze?.LogCustomEvent("event_name");
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 
 {% endtab %}
 {% endtabs %}
@@ -76,7 +76,7 @@ Braze supports purchases in multiple currencies. Purchases that you report in a 
 Braze.GetInstance(this).LogPurchase("product_id", "USD", new Java.Math.BigDecimal(3.50));
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 
 {% endtab %}
 {% tab iOS %}
@@ -84,7 +84,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 App.braze?.LogPurchase("product_id", "USD", 3.50);
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 
 {% endtab %}
 {% endtabs %}
@@ -149,7 +149,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
 
 {% endtab %}
 {% tab iOS %}
@@ -158,7 +158,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
 
 {% endtab %}
 {% endtabs %}
@@ -169,11 +169,11 @@ For an example of logging and tracking analytics, refer to our [Android MAUI](ht
 
 {% tabs %}
 {% tab android %}
-For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/).
+For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/analytics/location_tracking/).
 {% endtab %}
 
 {% tab ios %}
-To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/geofences/).
+To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platforms/swift/geofences/).
 {% endtab %}
 {% endtabs %}
 

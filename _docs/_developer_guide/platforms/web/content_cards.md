@@ -14,7 +14,7 @@ channel: content cards
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/).
+Before you can use Content Cards, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/).
 
 ## Standard feed UI
 

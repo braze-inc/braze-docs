@@ -88,7 +88,7 @@ body .ab-feed {
 ```
 
 {% alert tip %}
-For a full walkthrough, see [News Feed Customization]({{site.baseurl}}/developer_guide/platform_integration_guides/web/news_feed/customization/).
+For a full walkthrough, see [News Feed Customization]({{site.baseurl}}/developer_guide/platforms/web/news_feed/customization/).
 {% endalert %}
 
 ## Adding multiple feeds in one app

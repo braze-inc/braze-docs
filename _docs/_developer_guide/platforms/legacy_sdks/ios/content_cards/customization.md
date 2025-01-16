@@ -16,22 +16,22 @@ description: "This landing page covers the Braze iOS SDK Content Card customizat
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/custom_styling/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/custom_styling/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Customizing Feed
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/customizing_feed/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/customizing_feed/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/handling_clicks_manually/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/handling_clicks_manually/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Read & Unread Indicators
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/read_unread_indicators/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/read_unread_indicators/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/badges/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/badges/
     image: /assets/img/braze_icons/key-01.svg
   - name: Carousel View Use Case
-    link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/customization/use_cases/carousel_view/
+    link: /docs/developer_guide/platforms/legacy_sdks/ios/content_cards/customization/use_cases/carousel_view/
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 

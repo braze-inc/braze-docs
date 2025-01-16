@@ -14,7 +14,7 @@ Check out our [case studies](https://www.braze.com/customers) to see examples of
 
 ## Prerequisites
 
-Before you can use Braze in-app messages, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Braze in-app messages, you'll need to [integrate the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) into your app. However, no additional setup is required.
 
 ## Message interface
 

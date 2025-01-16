@@ -15,19 +15,19 @@ guide_featured_list:
   link: /developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
 - name: Swift Package Manager (SPM)
-  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/
   image: /assets/img/braze_icons/swift.svg
 - name: Carthage
-  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/
   image: /assets/img/carthage.png
 - name: Manual
-  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/
   image: /assets/img/braze_icons/tool-01.svg
 - name: "Completing the Integration"
-  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/
   image: /assets/img/braze_icons/flag-05.svg
 - name: "Other Optional SDK Customizations"
-  link: /docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/
+  link: /docs/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/
   image: /assets/img/braze_icons/user-square.svg
 
 noindex: true
@@ -42,6 +42,6 @@ Installing the Braze iOS SDK will provide you with basic analytics functionality
 The iOS SDK will add 1&nbsp;MB to 2&nbsp;MB to the app IPA file, in addition to an APP File, and 30&nbsp;MB for the framework.
 {% endalert %}
 
-After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
+After you have integrated using one of the listed options, followed the steps for [completing the integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/completing_integration/), and enabled other SDK customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
 
 <br>

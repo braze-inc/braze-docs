@@ -16,19 +16,19 @@ channel: push
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Notification Display
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/notification_display
+    link: /docs/developer_guide/platforms/android/push_notifications/customization/notification_display/
     image: /assets/img/braze_icons/pencil-01.svg
   - name: Android Inline Image Push
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/inline_images/
+    link: /docs/developer_guide/platforms/android/push_notifications/customization/inline_images/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: HTML Push Notifications
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/html_messages/
+    link: /docs/developer_guide/platforms/android/push_notifications/customization/html_messages/
     image: /assets/img/braze_icons/pencil-01.svg
   - name: Advanced Settings
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/settings/
+    link: /docs/developer_guide/platforms/android/push_notifications/customization/settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Push Event Callback
-    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/customization/event_callback/
+    link: /docs/developer_guide/platforms/android/push_notifications/customization/event_callback/
     image: /assets/img/braze_icons/settings-01.svg
 
 

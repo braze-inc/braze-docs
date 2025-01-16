@@ -21,7 +21,7 @@ Not sure if the standard integration method is right for you? Check out our [oth
 
 ### Step 1: Install the Braze library
 
-You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/) before installing the library.
+You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) before installing the library.
 
 {% alert important %}
 While most ad blockers will not block the Braze Web SDK, some more restrictive ad blockers are known to cause issues.
@@ -54,7 +54,7 @@ The Braze Web SDK can be installed from the Google Tag Manager Template Library.
 1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
 2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
 
-Visit the [Google Tag Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/) for more information.
+Visit the [Google Tag Manager integration guide]({{site.baseurl}}/developer_guide/platforms/web/google_tag_manager/) for more information.
 {% endtab %}
 
 {% tab braze cdn %}

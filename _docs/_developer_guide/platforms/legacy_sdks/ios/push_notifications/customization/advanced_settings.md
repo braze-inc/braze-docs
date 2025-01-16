@@ -28,19 +28,19 @@ Check the **Alert Options** checkbox to see a dropdown of key-values available t
 
 ## Adding content-available flag
 
-Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/silent_push_notifications/).
+Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
 ## Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/rich_notifications/), regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/rich_notifications/), regardless of the value of this checkbox.
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to, or use Liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the push notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/badges/) article.
+Enter the number that you want to update your badge count to, or use Liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the push notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/badges/) article.
 
 ## Sounds
 
-Here you can enter a path to a sound file in your app bundle to specify a sound to be played when the push message is received. If the specified sound file does not exist or should the keyword "default" be entered, Braze will use the default device alert sound. For more on customization, refer to our dedicated [Custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/customization/custom_sounds/) article.
+Here you can enter a path to a sound file in your app bundle to specify a sound to be played when the push message is received. If the specified sound file does not exist or should the keyword "default" be entered, Braze will use the default device alert sound. For more on customization, refer to our dedicated [Custom sounds]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/custom_sounds/) article.
 
 ## Collapse ID
 

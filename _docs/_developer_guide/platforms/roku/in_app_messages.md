@@ -19,7 +19,7 @@ Check out our [case studies](https://www.braze.com/customers) to see examples of
 
 ### Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Braze Roku SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/sdk_integration/). Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
+Before you can use this feature, you'll need to [integrate the Braze Roku SDK]({{site.baseurl}}/developer_guide/platforms/roku/sdk_integration/). Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
 {% sdk_min_versions roku:0.1.2 %}
 

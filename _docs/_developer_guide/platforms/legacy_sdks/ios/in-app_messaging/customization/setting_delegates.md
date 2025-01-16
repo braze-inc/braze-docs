@@ -43,7 +43,7 @@ Check out our in-app message [sample app](https://github.com/Appboy/appboy-ios-s
 
 ## Core in-app message delegate
 
-If you are not including the Braze UI library in your project and want to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/) protocol.
+If you are not including the Braze UI library in your project and want to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/customization/setting_delegates/) protocol.
 
 Set your `ABKInAppMessageControllerDelegate` delegate object on the Braze instance by calling:
 

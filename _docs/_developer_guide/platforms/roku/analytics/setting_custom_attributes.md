@@ -12,7 +12,7 @@ description: "This reference article describes methods to assign custom attribut
 
 > Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, user attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection). We also recommend familiarizing yourself with our [Event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, user attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection). We also recommend familiarizing yourself with our [Event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 

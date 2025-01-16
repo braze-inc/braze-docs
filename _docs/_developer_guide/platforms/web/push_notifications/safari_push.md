@@ -15,7 +15,7 @@ search_rank: 3
 
 ## Prerequisites
 
-Before you can set up Safari push notifications on mobile, you'll need to [set up push notifications for the Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/).
+Before you can set up Safari push notifications on mobile, you'll need to [set up push notifications for the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
 
 ## Setting up Safari push for mobile
 

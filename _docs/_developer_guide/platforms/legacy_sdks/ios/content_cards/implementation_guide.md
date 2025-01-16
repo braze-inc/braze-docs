@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/integration/).
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Content Card implementation guide

@@ -52,7 +52,7 @@ When the silent push is received, an SDK recorded event "in-app message trigger"
 
 ## Step 2: Create a push campaign
 
-Create a silent push campaign that is triggered via the server sent event. For details on creating a silent push campaign, refer to [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/silent_push_notifications/).
+Create a silent push campaign that is triggered via the server sent event. For details on creating a silent push campaign, refer to [silent push notifications]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
 ![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 

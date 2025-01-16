@@ -83,4 +83,4 @@ In your project's **Build Settings**, add the relative path of your header file 
 
 ## Next steps
 
-Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/completing_integration/).
+Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/completing_integration/).

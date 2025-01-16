@@ -18,7 +18,7 @@ channel:
 In-app messages are triggered by events logged by the SDK. You can trigger an in-app message off of the following event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, the `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) article to learn more. 
+Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/) article to learn more. 
 {% endalert %}
 
 ## Enabling in-app messages

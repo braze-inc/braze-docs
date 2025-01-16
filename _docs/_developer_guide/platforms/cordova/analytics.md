@@ -12,7 +12,7 @@ page_order: 5
 
 ## Logging custom events
 
-To log custom events, use the `logCustomEvent()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) guides for logging custom events.
+To log custom events, use the `logCustomEvent()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/) guides for logging custom events.
 
 ```javascript
 var properties = {};
@@ -22,7 +22,7 @@ BrazePlugin.logCustomEvent("CUSTOM_EVENT_WITH_PROPERTIES", properties);
 
 ## Logging purchases
 
-To log purchases, use the `logPurchase()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) guides for logging purchases.
+To log purchases, use the `logPurchase()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/) guides for logging purchases.
 
 ```javascript
 var properties = {};
@@ -36,7 +36,7 @@ If you want to log purchases at the order level instead of the product level, yo
 
 ## Setting custom attributes
 
-To set custom attributes, use the `setCustomUserAttribute()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) guides setting custom attributes.
+To set custom attributes, use the `setCustomUserAttribute()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/) guides setting custom attributes.
 
 ```javascript
 BrazePlugin.setCustomUserAttribute("KEY", "VALUE");
@@ -44,7 +44,7 @@ BrazePlugin.setCustomUserAttribute("KEY", "VALUE");
 
 ## Setting user IDs
 
-To set user IDs, use the `changeUser()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) guides for setting user IDs.
+To set user IDs, use the `changeUser()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) guides for setting user IDs.
 
 ```javascript
 BrazePlugin.changeUser("USER_ID");
