@@ -126,8 +126,10 @@ def process_directory(directory, redirects):
             file_path = os.path.join(root, fn)
             replacements = update_old_links(file_path, redirects)
             if replacements > 0:
-                rel_path = os.path.relpath(file_path, start=directory)
-                print(f"In '{rel_path}', made {replacements} replacements.")
+                # Convert the file path to a relative path from the current directory
+                rel_path = os.path.relpath(file_path, start=os.getcwd())
+                # Prepend './'
+                print(f"Made {replacements} replacements in ./{rel_path}")
             total_global_replacements += replacements
     return total_global_replacements
 
@@ -136,7 +138,10 @@ def process_directory(directory, redirects):
 def process_single_file(filepath, redirects):
     replacements = update_old_links(filepath, redirects)
     if replacements > 0:
-        print(f"In '{os.path.basename(filepath)}', made {replacements} replacements.")
+        # Convert the file path to a relative path from the current directory
+        rel_path = os.path.relpath(filepath, start=os.getcwd())
+        # Prepend './'
+        print(f"Made {replacements} replacements in ./{rel_path}")
     return replacements
 
 
