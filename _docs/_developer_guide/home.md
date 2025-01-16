@@ -26,7 +26,7 @@ guide_menu_list:
   - name: FireOS
     link: /docs/developer_guide/platform_integration_guides/fireos/sdk_integration
     image: /assets/img/fire-os-bw.png
-    nav_link: cordova
+    nav_link: fireos
   - name: Cordova
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/
     image: /assets/img/cordova.png
@@ -39,12 +39,8 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/react_native/sdk_integration/
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
-  - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+  - name: Unity
+    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration
     image: /assets/img/unity.png
     nav_link: unity
   - name: Xamarin
@@ -59,6 +55,10 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
     image: /assets/img/unreal.png
     nav_link: unrealengine
+  - name: TV & OTT
+    link: /docs/developer_guide/platform_integration_guides/tv_and_ott
+    image: /assets/img/braze_icons/tv-01.svg
+    nav_link: tv_and_ott
 
 guide_footer_header: " "
 guide_footer_text: " "
