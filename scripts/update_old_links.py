@@ -129,7 +129,7 @@ def process_directory(directory, redirects):
                 # Convert the file path to a relative path from the current directory
                 rel_path = os.path.relpath(file_path, start=os.getcwd())
                 # Prepend './'
-                print(f"Made {replacements} replacements in ./{rel_path}")
+                print(f"Made {replacements} replacements in {rel_path}")
             total_global_replacements += replacements
     return total_global_replacements
 
@@ -141,7 +141,7 @@ def process_single_file(filepath, redirects):
         # Convert the file path to a relative path from the current directory
         rel_path = os.path.relpath(filepath, start=os.getcwd())
         # Prepend './'
-        print(f"Made {replacements} replacements in ./{rel_path}")
+        print(f"Made {replacements} replacements in {rel_path}")
     return replacements
 
 
