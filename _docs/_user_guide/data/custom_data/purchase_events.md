@@ -245,6 +245,12 @@ In the first Message step following an Action Path, you can use `event_propertie
 
 To log purchases at the order level instead of the product level, use the order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
+### Product ID naming conventions
+
+At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
+
+This helps make products easy to identify for segmentation and triggering. 
+
 ## Blocklisting purchase events
 
 You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
