@@ -1,6 +1,6 @@
 ---
-nav_title: TV and OTT Integrations
-article_title: TV and OTT Integrations
+nav_title: TV and OTT
+article_title: TV and OTT integrations for Braze
 page_order: 15
 
 description: "This article will give you details on Braze TV and OTT features, integrations, available platforms, and other capabilities."
@@ -14,7 +14,7 @@ platform:
 
 # TV and OTT integrations
 
-> As technology evolves to new platforms and devices, so can your messaging with Braze! Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
+> As technology evolves to new platforms and devices, so can your messaging with Braze! Braze offers different engagement channels for a number of different TV Operating Systems and Over-the-Top (OTT) content delivery methods.
 
 ## Platforms and features
 
