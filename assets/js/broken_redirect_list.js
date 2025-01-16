@@ -641,7 +641,8 @@ validurls['/docs/api/endpoints/templates/content_blocks_templates/post_update_em
 
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#advanced-settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback';
-validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/'] = '/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/'] = '/docs/user_guide/data/cloud_ingestion/';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/'] = '/docs/user_guide/data/cloud_ingestion/';
 
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/'] = '/docs/user_guide/data_and_analytics/analytics/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/';
