@@ -21,7 +21,7 @@ Os endereços de e-mail devem ser criptografados e transformados em hash antes d
 
 ## Pré-requisitos
 
-Para usar a criptografia em nível de campo do identificador, você deve ter acesso ao AWS KMS para [criptografar](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) e fazer [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) dos endereços de e-mail **antes de** enviá-los ao Braze. 
+Para usar a criptografia em nível de campo, você deve ter acesso ao AWS KMS para [criptografar](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) e [fazer hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) dos endereços de e-mail **antes** de enviá-los à Braze. 
 
 Siga estas etapas para configurar seu método de autenticação de chave secreta da AWS.
 

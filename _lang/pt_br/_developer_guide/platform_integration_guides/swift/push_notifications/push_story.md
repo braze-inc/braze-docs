@@ -11,7 +11,7 @@ channel:
 
 # Stories por push
 
-> [As Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/) permitem que os profissionais de marketing usem a funcionalidade de carrossel de fotos para criar uma sequência de páginas em uma notificação por push. Estas páginas consistem em uma imagem, ação de clique, título e descrição. 
+> As [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/) permitem que os profissionais de marketing usem a funcionalidade de carrossel de fotos para criar uma sequência de páginas em uma notificação por push. Estas páginas consistem em uma imagem, ação de clique, título e descrição. 
 
 Configurar Push Stories para o seu app iOS requer etapas adicionais além de integrar notificações por push padrão, que estão descritas neste artigo.
 

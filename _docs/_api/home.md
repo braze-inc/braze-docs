@@ -439,7 +439,7 @@ glossaries:
     tags:
       - SCIM
   - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
-    description: Look up an existing dashboard user account by specifying their email.
+    description: Look up an existing dashboard user account by specifying their resource ID.
     tags:
       - SCIM
   - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>

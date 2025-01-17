@@ -16,7 +16,7 @@ description: "이 문서에서는 스케줄 API 트리거 캠페인 Braze 엔드
 
 > 이 엔드포인트를 사용하면 대시보드에서 생성한 캠페인 메시지를 API 트리거 전달을 통해 전송할 수 있으며, 어떤 작업을 트리거하여 메시지를 전송할지 결정할 수 있습니다.
 
-메시지 자체에 템플릿이 지정된 `trigger_properties`를 전달할 수 있습니다.
+메시지 자체에 템플릿이 지정된 `trigger_properties` 을 전달할 수 있습니다.
 
 이 엔드포인트로 메시지를 보내려면 [API 트리거 캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)을 만들 때 생성한 [캠페인 ID]({{site.baseurl}}/api/identifier_types/)가 있어야 합니다.
 
@@ -62,15 +62,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|필수|문자열| [캠페인 식별자]({{site.baseurl}}/api/identifier_types/) 보기|
-| `send_id` | 선택 사항 | 문자열 | [식별자 전송을]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `recipients` | 선택 사항 | 수신자 객체 배열 | [수신자 거부]({{site.baseurl}}/api/objects_filters/recipient_object/) 참조. |
-| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+| `send_id` | 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
+| `recipients` | 선택 사항 | 수신자 객체 배열 | 수신자 객체를 참조하십시오. |
+| `audience` | 선택 사항 | 연결된 오디언스 객체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
+|`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 `broadcast: true`을 설정할 때 주의하십시오. 이 플래그를 의도치 않게 설정하면 메시지를 예상보다 더 많은 오디언스에게 보낼 수 있습니다. |
 | `trigger_properties` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [트리거 속성을]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 참조하세요. |
 | `schedule` | 필수 | 스케줄 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \

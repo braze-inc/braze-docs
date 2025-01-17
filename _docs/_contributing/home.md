@@ -14,6 +14,10 @@ search_tag: Contributing
 
 Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you just need a refresher, see [Git and GitHub]({{site.baseurl}}/contributing/git_and_github/).
 
+{% alert note %}
+We can only accept contributions in English. English serves as the basis for translations into other supported languages.
+{% endalert %}
+
 ## Step 1: Sign the CLA
 
 Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request.
@@ -149,6 +153,24 @@ Next, install the dependencies for Braze Docs. These are small programs used to 
 ```bash
 bundle install
 ```
+
+### Step 2.6: Start your local server
+
+To verify your installation and start your local docs server on localhost `http://127.0.0.1:4000`, run:
+
+```bash
+# for 'en' language:
+rake
+
+# for other langauges:
+rake es
+rake fr
+rake ja
+rake ko
+rake pt_br
+```
+
+To stop your server, reopen the terminal and press **Control+C**.
 
 ## Next steps
 

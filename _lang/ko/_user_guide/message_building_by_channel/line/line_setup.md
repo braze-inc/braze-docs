@@ -57,15 +57,15 @@ Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감�
 
 1. [기존 알려진 사용자 가져오기 또는 업데이트](#step-1-import-or-update-existing-line-users)
 2. [LINE 채널 통합](#step-2-integrate-line-channel)
-3. [구독 상태 동기화 요청](#step-3-request-a-subscription-status-sync)
-4. [사용자 업데이트 방법 업데이트](#step-4-change-your-user-update-methods)
-5. [(선택 사항) 사용자 병합](#step-5-merge-profiles-optional)
+3. [사용자 ID 조정](#step-3-reconcile-user-ids)
+4. [사용자 업데이트 방법 변경](#step-4-change-your-user-update-methods)
+5. [사용자 프로필 병합(선택 사항)](#step-5-merge-profiles-optional)
 
 ## 1단계: 기존 LINE 사용자 가져오기 또는 업데이트
 
 이 단계는 기존에 식별된 LINE 사용자가 있는 경우 반드시 필요한데, 나중에 Braze가 자동으로 구독 상태를 가져와 올바른 사용자 프로필을 업데이트하기 때문입니다. 이전에 LINE ID로 사용자를 조정하지 않았다면 이 단계를 건너뛰세요. 
 
-Braze가 지원하는 방법 중 하나를 사용하여 사용자를 가져오거나 업데이트할 수 있습니다. [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트, [CSV 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) 또는 [클라우드 데이터 수집을]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/) 포함하여 지원하는 방법을 사용하여 사용자를 [가져올]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) 수 있습니다. 
+Braze가 지원하는 방법 중 하나를 사용하여 사용자를 가져오거나 업데이트할 수 있습니다. [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트, [CSV 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) 또는 [클라우드 데이터 수집을]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/) 포함하여 지원하는 방법을 사용하여 사용자를 가져올 수 있습니다. 
 
 어떤 방법을 사용하든 `native_line_id` 을 업데이트하여 사용자의 LINE ID를 제공하세요. 자세한 내용은 `native_line_id`, [사용자 설정을](#user-setup) 참조하세요.
 

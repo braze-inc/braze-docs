@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: Envio imediato de mensagens somente via API"
-article_title: "POST: Envio imediato de mensagens somente via API"
+nav_title: "POST: Envio de mensagens imediatamente usando somente a API"
+article_title: "POST: Envio de mensagens imediatamente usando somente a API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o endpoint da Braze \"Envio imediato de mensagens somente via API\"."
+description: "Este artigo descreve detalhes sobre o endpoint Enviar mensagens imediatamente usando somente a API do Braze."
 
 ---
 {% api %}
-# Envio imediato de mensagens somente via API
+# Envio imediato de mensagens usando apenas a API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> Use esse endpoint para enviar mensagens imediatas a usuários designados por meio da API do Braze.
+> Use esse endpoint para enviar mensagens imediatas a usuários designados usando a API do Braze.
 
 Não se esqueça de incluir objetos de envio de mensagens em seu corpo para completar suas solicitações.
 
@@ -70,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como true ao enviar uma mensagem para um segmento inteiro que uma campanha ou Canva direciona. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois a definição não intencional desse sinalizador pode fazer com que sua mensagem seja enviada a um público maior do que o esperado. |
+|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 |`external_user_ids` | Opcional | Matriz de strings | Consulte [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Opcional | Vetor de objetos de alias de usuário| Consulte o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
-|`audience`| Opcional | Objeto do público conectado | Veja o [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`audience`| Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`campaign_id`| Opcional* | String | Para saber mais, consulte o [identificador de campanha]({{site.baseurl}}/api/identifier_types/). <br><br>\*Necessário se você deseja rastrear as estatísticas da campanha (por exemplo, envios, cliques, bounces etc.) no dashboard do Braze. |
 |`send_id`| Opcional | String | Ver [identificador de envio]({{site.baseurl}}/api/identifier_types/) |
 |`override_frequency_capping`| Opcional | Booleano | Ignore `frequency_capping` para campanhas, o padrão é `false`. |

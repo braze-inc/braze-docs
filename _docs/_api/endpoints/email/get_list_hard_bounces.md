@@ -59,15 +59,15 @@ Authorization: Bearer YOUR-REST-API-KEY
   "emails": [
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"

@@ -112,6 +112,15 @@ You need either administrator permissions or all of the following permissions to
 - Create Landing Page Drafts
 - Publish Landing Pages
 
+## Plan tiers
+
+The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
+
+| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Published landing pages                                                                 | Five per company | 20 additional |
+| Custom domains          | One per company | Five additional |
+
 ## Frequently asked questions
 
 ### What happens when a user submits their information on the landing page?
@@ -129,10 +138,6 @@ You can edit the HTML of a landing page using the Custom Code block.
 ### Is reporting available for landing pages?
 
 No, this isn't currently available.
-
-### Is there an HTML editor for landing pages?
-
-No, this isn’t currently available. You can use the Custom Code block in the editor.
 
 ### Can I create a webhook inside a landing page?
 

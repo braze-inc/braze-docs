@@ -25,7 +25,7 @@ Não tem certeza se deve usar uma campanha ou um Canva? As campanhas são melhor
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **Notificações por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
 3. Dê à sua campanha um nome claro e significativo.
-4. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário. **Dica:** As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário. **Dica:** As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Decidir entre uma campanha push regular ou multicanal %}
@@ -53,8 +53,8 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
-1. [Crie seu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
+{% tab Canva %}
+1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
 3. Escolha uma [programação de etapas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) e especifique uma postergação, conforme necessário.
 4. Filtre seu público para esta etapa conforme necessário. Você pode refinar ainda mais os destinatários dessa etapa especificando segmentos e adicionando filtros adicionais. As opções de público serão verificadas após a postergação no momento em que as mensagens forem enviadas.
@@ -144,7 +144,7 @@ Para obter mais orientações sobre o uso de imagens em suas notificações por 
 
 #### Comportamento ao clicar
 
-Especifique o que acontece quando um usuário seleciona o corpo de uma notificação por push com o **comportamento ao clicar**. Por exemplo, você pode solicitar que os clientes abram o aplicativo, redirecionar os clientes para um URL da Web especificado ou até mesmo abrir uma página específica do aplicativo com um [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
+Especifique o que acontece quando um usuário seleciona o corpo de uma notificação por push com o **comportamento ao clicar**. Por exemplo, você pode solicitar que os clientes abram o aplicativo, redirecionar os clientes para um URL da Web especificado ou até mesmo abrir uma página específica do aplicativo com um [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Aqui, você também pode configurar avisos de botão na notificação por push, como, por exemplo
 
@@ -186,7 +186,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais**).
+Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
 
 {% details Por que minha métrica Total Reachable Users não corresponde à soma de todos os canais? %}
 
@@ -207,8 +207,8 @@ Opcionalmente, também é possível limitar a entrega a um número especificado 
 Para campanhas em vários canais direcionadas tanto para e-mail quanto para canais de envio de mensagens, talvez você queira limitar sua campanha para que somente os usuários com aceitação explícita recebam a mensagem (excluindo usuários inscritos ou cancelados). Por exemplo, digamos que você tenha três usuários com diferentes status de aceitação:
 
 - **O usuário A** está inscrito no e-mail e tem a capacitação push ativada. Esse usuário não recebe o e-mail, mas receberá o push.
-- **O usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
-- **O usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
+- O **usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
+- O **usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
 
 Para fazer isso, em **Resumo do público**, selecione enviar essa campanha apenas para "usuários com aceitação". Essa opção garantirá que apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que estiverem ativados para push por padrão.
 
@@ -242,7 +242,7 @@ Em seguida, confira [Relatórios push]({{site.baseurl}}/user_guide/message_build
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
 [7]: {% image_buster /assets/img_archive/push_3.png %}
-Daqui a [8]: https://www.braze.com/customers
+[8]: https://www.braze.com/customers
 [9]: {% image_buster /assets/img_archive/push_recent_device.png %}
 [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported

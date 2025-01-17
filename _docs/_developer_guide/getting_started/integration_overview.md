@@ -71,7 +71,7 @@ As a developer, you'll work with your team to define what additional, custom dat
 Keep data nomenclature consistent across tools. For example, your data warehouse may record "purchase limited time offer" in a particular way. You will need to decide if a custom event in Braze is needed to match this format.
 {% endalert %}
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
 
 ### Customizations planning
 Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview) for more information.
@@ -141,7 +141,7 @@ While using the API, ensure you batch your requests and only send delta values. 
 ### Setting up product analytics
 Braze is all about data. Data in Braze is stored on the user profile. 
 
-Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points).
+Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data/data_points/).
 
 ### Migrating legacy user data
 You can use the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to migrate historical data that was recorded outside of Braze. Examples of commonly imported data include push tokens and past purchases. This endpoint can be used for one-off imports or regular batch updates. 
@@ -149,13 +149,13 @@ You can use the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/use
 You can also import users and update customer attribute values through a one-time [CSV upload]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#importing-a-csv) to the dashboard. Uploading CSVs can be helpful for marketers, while our REST API allows for greater flexibility.
 
 ### Setting up session tracking
-The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/)).
+The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)).
 
 ### Tracking custom events, attributes, and purchase events
-Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
+Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
 
 {% alert tip %}
-User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) article for best practices.
+User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) article for best practices.
 {% endalert %}
 
 ### Other tools

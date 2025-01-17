@@ -52,6 +52,9 @@ guide_featured_list:
 - name: "Relatórios de SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "Painel de Uso de Mensagens"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "Perguntas frequentes sobre SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

@@ -22,7 +22,7 @@ Para registrar nossas categorias de push padrão, siga as instruções de integr
 
 ## Etapa 1: Adicionando categorias de push padrão do Braze
 
-Use o código a seguir para se registrar em nossas categorias push padrão ao [se registrar no push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze):
+Use o código a seguir para se registrar em nossas categorias push padrão ao se [registrar no push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze):
 
 {% tabs %}
 {% tab OBJECTIVE C %}

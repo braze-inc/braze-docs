@@ -39,7 +39,7 @@ Esta etapa é opcional, mas recomendamos enviar um webhook de teste da sua plata
 - Se a sua plataforma de origem solicitar um tipo de solicitação, selecione **POST**.
 - Se a sua plataforma de origem fornecer opções de autenticação, selecione **Sem autenticação**.
 - Se a sua plataforma de origem pedir segredos, selecione **Nenhum segredo**.
-3. Atualize sua página no dashboard do Braze para ver se o webhook foi recebido. Se tiver sido recebido, você deverá ver uma carga útil de webhook em **Most recent webhook (Webhook mais recente**).
+3. Atualize sua página no dashboard do Braze para ver se o webhook foi recebido. Se tiver sido recebido, você deverá ver uma carga útil de webhook em **Most recent webhook (Webhook mais recente)**.
 
 Aqui está como fica para o Typeform:
 
@@ -56,7 +56,7 @@ Se você tem pouca ou nenhuma experiência com código JavaScript ou prefere ins
 Se você é um desenvolvedor ou tem experiência significativa com código JavaScript, siga o **Avançado - POST: Acompanhe os usuários** guia para instruções de alto nível sobre como escrever seu código de transformação.
 
 {% alert tip %}
-A Transformação de Dados da Braze tem um copiloto de IA que pede ao ChatGPT para ajudar você a escrever seu código. Para acessar o copiloto IA, selecione <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code (Gerar código de transformação**). Para usar isso, um webhook deve ser enviado para sua transformação. Você também pode acessar a biblioteca de modelos selecionando **Inserir código** > **Inserir modelo**.
+A Transformação de Dados da Braze tem um copiloto de IA que pede ao ChatGPT para ajudar você a escrever seu código. Para acessar o copiloto IA, selecione <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code (Gerar código de transformação)**. Para usar isso, um webhook deve ser enviado para sua transformação. Você também pode acessar a biblioteca de modelos selecionando **Inserir código** > **Inserir modelo**.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -116,7 +116,7 @@ return brazecall;
 2\. Para incluir atributos personalizados, eventos personalizados e compras em suas chamadas de transformação, pule para a etapa 3. Caso contrário, exclua as seções que você não precisa.<br><br>
 3\. Cada atributo, evento e objeto de compra requer um identificador de usuário, seja um `external_id`, `user_alias`, `braze_id`, `email` ou `phone`. Encontre o identificador do usuário na carga útil do webhook recebido e modele esse valor no seu código de transformação através de uma linha de carga útil. Use a notação de ponto para acessar as propriedades do objeto carga útil. <br><br>
 4\. Encontre os valores do webhook que você gostaria de representar como atributos, eventos ou compras, e modele esses valores em seu código de transformação via uma carga útil LINE. Use a notação de ponto para acessar as propriedades do objeto carga útil.<br><br>
-5\. Para cada atributo, evento e objeto de compra, examine o `_update_existing_only` valor. Defina isso para `false` se você quiser que a transformação crie um novo usuário que pode não existir. Deixe isso como `true` para atualizar apenas perfis existentes.<br><br>
+5\. Para cada atributo, evento e objeto de compra, examine o valor `_update_existing_only`. Defina isso para `false` se você quiser que a transformação crie um novo usuário que pode não existir. Deixe isso como `true` para atualizar apenas perfis existentes.<br><br>
 6\. Clique em **Validar** para retornar uma prévia da saída do seu código e verificar se é uma solicitação `/users/track` aceitável.<br><br>
 7\. Ative sua transformação. Para obter ajuda adicional com seu código antes de ativá-lo, entre em contato com seu gerente de conta da Braze.<br><br>
 7\. Faça com que sua plataforma de origem comece a enviar webhooks. Seu código de transformação será executado para cada webhook recebido, e os perfis dos usuários começarão a ser atualizados. 
@@ -189,7 +189,7 @@ return brazecall;
 {:start="2"}
 2\. As transformações para destinos `/catalogs` requerem um `catalog_name` para definir o catálogo específico a ser atualizado. Você pode codificar esse campo ou modelar o campo com um campo de webhook por meio de uma linha de carga útil. Use a notação de ponto para acessar as propriedades do objeto carga útil.<br><br>
 3\. Defina quais itens você gostaria de atualizar no catálogo com os campos `id` na matriz de itens. Você pode codificar esses campos ou modelar em um campo de webhook via uma linha de carga útil. <br><br> Lembre-se de que `catalog_column` é um valor de espaço reservado. Certifique-se de que os objetos de item contenham apenas campos que existam no catálogo.<br><br>
-4\. Selecione **Validar** para retornar uma prévia da saída de seu código e verificar se é uma solicitação aceitável para o [ponto de extremidade Atualizar vários itens de catálogo]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
+4\. Selecione **Validar** para retornar uma prévia da saída de seu código e verificar se é uma solicitação aceitável para o [endpoint Atualizar vários itens de catálogo]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
 5\. Ative sua transformação. Para obter ajuda adicional com seu código antes de ativá-lo, entre em contato com seu gerente de conta da Braze.<br><br>
 6\. Certifique-se de verificar se sua plataforma de origem possui uma configuração para começar a enviar webhooks. Seu código de transformação será executado para cada webhook recebido, e os itens do catálogo começarão a ser atualizados.
 
@@ -198,7 +198,7 @@ Sua integração de webhook está completa!
 {% endtab %}
 {% tab Avançado - Rastreamento de usuários %}
 
-Nesta etapa, você transformará a carga útil do webhook da plataforma de origem em um valor de retorno de objeto JavaScript. Esse valor de retorno deve seguir o formato do corpo da solicitação do ponto de extremidade `/users/track`:
+Nesta etapa, você transformará a carga útil do webhook da plataforma de origem em um valor de retorno de objeto JavaScript. Esse valor de retorno deve seguir o formato do corpo da solicitação do endpoint `/users/track`:
 
 - O código de transformação é aceito na linguagem de programação JavaScript. Qualquer fluxo de controle JavaScript padrão, como a lógica if/else, é aceito.
 - O código de transformação acessa o corpo da solicitação do webhook através da variável `payload`. Esta variável é um objeto populado pela análise do corpo da solicitação JSON.

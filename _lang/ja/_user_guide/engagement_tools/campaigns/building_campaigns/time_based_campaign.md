@@ -12,7 +12,7 @@ description: "この参考記事では、スケジュール配信、インテリ
 > キャンペーンを利用する際には、時間ベースのスケジュール設定オプションを使用してオーディエンスにリーチできます。これらの時間ベースの機能には、スケジュール配信とアクションベースの配信に設定されたキャンペーンが含まれます。
 
 {% alert tip %}
-キャンペーン配信の詳細については、当社専用の[キャンペーンセットアップ](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)ブレーズラーニングコースをご覧ください。
+キャンペーン配信の詳細については、当社専用の[キャンペーンセットアップ](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze ラーニングコースをご覧ください。
 {% endalert %}
 
 ## スケジュール配信
