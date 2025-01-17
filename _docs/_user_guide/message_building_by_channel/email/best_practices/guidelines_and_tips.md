@@ -68,6 +68,8 @@ We recommend keeping preheaders short (under 85 characters) to properly display 
 
 ![The "Preheader (optional)" field with a checked "Add whitespace after preheader".][1]
 
+For more information about styling your emails, refer to [Email styling]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/email_styling/).
+
 ## Checking HTML details
 
 Keep in mind that some HTML tags and attributes are not allowed as they may potentially let malicious code run in the browser.
