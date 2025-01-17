@@ -96,7 +96,7 @@ You can personalize your webhook URLs using [Liquid][15]. At times, certain endp
 The [HTTP method]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/#methods) that you should use will vary depending on the endpoint to which you are sending information. In most cases, you'll use POST.
 
 {% alert important %}
-If you change the HTTP request method to GET in the Webhook Composer, any existing content in the request body will be automatically cleared
+If you change the HTTP request method to GET in the Webhook Composer, any existing content in the request body will be automatically cleared.
 {% endalert %}
 
 #### Request body
