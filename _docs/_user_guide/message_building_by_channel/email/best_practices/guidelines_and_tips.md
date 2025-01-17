@@ -22,11 +22,11 @@ Here are some quick tips to keep in mind while building your content:
 - Avoid using JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
 
-### Implementing alternative text
+## Implementing alternative text
 
 Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
 
-### Email validation
+## Email validation
 
 {% alert important %}
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
@@ -56,11 +56,19 @@ Email addresses targeted via the Braze servers must be validated per [RFC 2822](
 - ,
 {% enddetails %}
 
-### Setting from and reply-to addresses
+## Setting from and reply-to addresses
 
 When setting your "from" addresses, make sure your "from" email domain matches your sending domain (such as `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
-### Checking HTML details
+## Using preheaders
+
+At Braze, a preheader is the text that appears after the subject line in your email inbox. When email senders don't include a preheader, your inbox will automatically generate preview text based on the email. This could result in unintended text getting pulled into the preview, such as "View in your browser" or sentences that are awkwardly cut off.
+
+We recommend keeping preheaders short (under 85 characters) to properly display them on various devices. Otherwise, use compelling text to encourage your users to open the email. To prevent email inboxes from pulling content from your email to fill the remaining space after a short preheader, check **Add whitespace after preheader**. This will add whitespaces after the preheader so that it appears by itself.
+
+![The "Preheader (optional)" field with a checked "Add whitespace after preheader".][1]
+
+## Checking HTML details
 
 Keep in mind that some HTML tags and attributes are not allowed as they may potentially let malicious code run in the browser.
 
@@ -228,6 +236,6 @@ Check out the following lists for HTML tags and attributes that aren't allowed i
 - `<transitionend>`
 {% enddetails %}
 
-
+[1]: {% image_buster /assets/img/preheader_whitespace.png %}
 [24]: http://tools.ietf.org/html/rfc2822
 
