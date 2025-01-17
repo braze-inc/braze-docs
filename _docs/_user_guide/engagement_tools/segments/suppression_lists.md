@@ -56,7 +56,7 @@ Because suppression lists can significantly impact the messages you send, only a
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.][1]<br><br>
 2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.][2]{: style="max-width:80%;"}<br><br>
-3. Use segment filters to identify the users in your suppression lists. 
+3. Use segment filters to identify the users in your suppression lists. You must select at least one.
 
 {% alert important %}
 Though the setup process seems similar to [segment creation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
