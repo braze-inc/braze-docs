@@ -65,11 +65,11 @@ In the following example, Braze uses the user's external ID to flag duplicate pr
 
 {% tabs local %}
 {% tab example csv file %}
-| Email Address        | External ID | Phone Number | Braze ID                 | Identifier for rule | Profile to keep | Profile to merge |
-|----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com     |   A8i3mkd99          |      (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
-| alex@company.com |  |      (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
-| alex@company.com |   |      (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
+| Email Address    | External ID | Phone Number   | Braze ID              | Identifier for rule | Profile to keep | Profile to merge |
+| ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
+| alex@company.com | A8i3mkd99   | (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
+| alex@company.com |             | (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
+| alex@company.com |             | (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -111,6 +111,19 @@ After saving your rules, you can preview how they'll work by selecting **Generat
 ### Step 3: Merge duplicates
 
 If you're satisfied with the results of your preview, return to the **Manage Audience** page and select **Merge all duplicates**.
+
+{% alert warning %}
+Duplicate user profiles cannot be recovered after merging.
+{% endalert %}
+
+## Scheduled merging
+
+Similar to rules-based merging, the scheduled users merging feature allows you to automate the merging of user profiles on a daily basis using pre-configured rules.
+
+![The "Manage Audience" page with "schedule" button.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+
+Once the feature is enabled, Braze will automatically assign a timeslot to perform the merge process daily. You can disable schedule merging at any time if needed. Braze will notify the admins of your app group 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
+
 
 {% alert warning %}
 Duplicate user profiles cannot be recovered after merging.
