@@ -1,7 +1,7 @@
 ---
 nav_title: Suppression Lists
 article_title: Suppression Lists
-page_order: 8
+page_order: 2.5
 page_type: reference
 tool: Segments
 description: "This page covers how to use suppression lists to specify which users should never receive your messages."
@@ -65,7 +65,7 @@ Though the setup process seems similar to [segment creation]({{site.baseurl}}/us
 ![A suppression list builder with a filter for users who last opened an email more than 90 days ago.][3]
 
 {: start="4"}
-4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [How it works](#how-it-works) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".
+4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [How it works](#how-it-works) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".<br><br>![The "Shipping List Details" section with an exception tag applied called "Shipping confirmation".][4]<br><br>
 5. Save or activate your suppression list.
 - When you save, your suppression list will be saved but won't be activated, which means it won't go into effect. Your suppression list will remain inactive until you activate it, and inactive suppression lists won't impact messaging (users won't excluded from messages).
 - When you activate, your suppression list will be saved and immediately go into effect, which means users in your suppression list will immediately be excluded from campaigns or Canvases (except for ones containing an exception tag).
@@ -81,14 +81,18 @@ Only admins can save or activate suppression lists. You can have up to five acti
 
 ## Checking suppression list usage
 
+### In a campaign
+
+![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".][5]
+
+Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a campaign.
+
 ### In a Canvas
 
 Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a Canvas. You can also view applied suppression lists in the **Summary** step.
 
-### In a campaign
-
-Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a campaign.
-
 [1]: {% image_buster /assets/img/suppression_lists_home.png %}
 [2]: {% image_buster /assets/img/create_suppression_list.png %}
-[3]: {% image_buster /assets/img/suppression_list_details.png %}
+[3]: {% image_buster /assets/img/suppression_list_filters.png %}
+[4]: {% image_buster /assets/img/exception_tags.png %}
+[5]: {% image_buster /assets/img/active_suppression_list.png %}
