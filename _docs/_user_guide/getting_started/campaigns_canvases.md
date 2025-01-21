@@ -30,7 +30,7 @@ While campaigns can be built uniquely depending on the channel, there are four m
 Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/data_and_analytics/reporting) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 
 Check out these additional resources to learn more about campaigns at Braze:
 
@@ -73,7 +73,7 @@ The following table outlines our supported channels.
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | Send text messages to users' mobile phones.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
 | [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
-| [Connected TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
+| [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

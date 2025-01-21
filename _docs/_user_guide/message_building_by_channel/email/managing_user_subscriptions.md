@@ -36,7 +36,7 @@ Braze will automatically unsubscribe any user who manually unsubscribes from you
 If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
 
 {% alert tip %}
-Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
+Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
 {% endalert %}
 
 ### Bounces and invalid emails
@@ -133,7 +133,7 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ## Email preference center
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/).
+The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 

@@ -13,7 +13,7 @@ tool: Canvas
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Editing Canvases After Launch
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
+    link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Canvas Approvals and Permissions
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/

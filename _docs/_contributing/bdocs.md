@@ -123,7 +123,7 @@ Before continuing, [create your SSH token][2]. When you're finished, see [Step 2
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
@@ -152,7 +152,7 @@ After you run `tlinks`, `rlinks` will be automatically run against the same file
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: {{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
@@ -163,7 +163,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
+Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 ```
 {% endraw %}
@@ -188,7 +188,7 @@ Total replacements made: 1
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 

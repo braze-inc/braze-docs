@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
 
-The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
+The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
 
 ## Integration
 

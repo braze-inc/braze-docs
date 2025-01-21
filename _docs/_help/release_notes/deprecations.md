@@ -128,9 +128,9 @@ If you need assistance with your Eclipse integration prior to migration, contact
 ### The Raw Event Stream (RES)
 
 **Support withdrawn**: July 2018<br>
-**Replaced by**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Replaced by**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and was deprecated to make room for the future of Braze data.
 
 ### Delay while idle - GCM feature
 

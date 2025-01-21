@@ -31,7 +31,7 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 ### Step 2: Add a template
 
-Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/templates/).
+Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 #### Basic template
 

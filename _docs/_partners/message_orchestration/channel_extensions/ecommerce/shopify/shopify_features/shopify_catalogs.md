@@ -98,7 +98,7 @@ To access and use `product_handle` and `product_url`, disconnect and reconnect y
 
 To set up back-in-stock notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
 
-To set up price drop notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications).
+To set up price drop notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/).
 
 Note that with the Shopify integration, you'll need to create a custom event that captures a user's subscription status in your catalog for each use case. The custom event will require an event property that maps to either the [SKU or Shopify variant ID]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier) that you have selected as part of your Shopify product sync. 
 

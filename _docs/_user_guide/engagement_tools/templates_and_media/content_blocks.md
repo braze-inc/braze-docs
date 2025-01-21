@@ -81,7 +81,7 @@ After making edits to a Content Block, you can save and launch the updated Conte
 
 ![][2]
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block. This creates a draft copy of the Content Block.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) a Content Block. This creates a draft copy of the Content Block.
 
 ### Previewing Content Blocks
 
@@ -105,7 +105,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ![Expanded Settings dropdown menu that shows three options: Archive, Duplicate, and Copy to workspace.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
 
 #### Best practices
 

@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Custom Keyword Handing
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Handling Unknown Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/

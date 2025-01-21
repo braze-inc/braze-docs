@@ -22,7 +22,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
 
-Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) filter.
+Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
 
 ### What happens when you stop a Canvas?
 
@@ -54,7 +54,7 @@ Stopping a Canvas won't cause users who are waiting to receive messages to exit 
 
 If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
 
-For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/post-launch_edits/).
 
 ### How are user conversions tracked in a Canvas?
 
@@ -95,7 +95,7 @@ There is a one-step Canvas with Quiet Hours enabled:
 
 ### What's the difference between a component and a step?
 
-A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### How can I view analytics for each of my Canvas components?
 
@@ -111,7 +111,7 @@ The number of users entering a Canvas may differ from your expected number becau
 
 ### What happens to anonymous users during their Canvas journey?
 
-While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder) to generate a report of these metrics.
+While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 

@@ -17,7 +17,7 @@ Beginning December 2021, the following changes take effect for the [Export users
 
 ## New properties for Currents message engagement events
 
-New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
+New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
 
 - Add `LINK_ID`, `LINK_ALIAS` to:
   - Email Click (all destinations)

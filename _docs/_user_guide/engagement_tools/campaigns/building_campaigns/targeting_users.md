@@ -45,7 +45,7 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 ## Testing your audience
 
-After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 

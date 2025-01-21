@@ -22,7 +22,7 @@ Segmentation filters help prevent your messaging from appearing like spam by let
 - Will you deliver any special campaigns to users before excluding them from your segments?
 - Which messaging channels will your sunset policy apply to? 
 
-For example, if you have users who opt in to [Apple's Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/), consider how this may impact your email campaigns and deliverability metrics and determine how to best structure your sunset policy.
+For example, if you have users who opt in to [Apple's Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/), consider how this may impact your email campaigns and deliverability metrics and determine how to best structure your sunset policy.
 
 To incorporate sunset policies into your campaigns, create a [segment][19] that automatically excludes users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
 

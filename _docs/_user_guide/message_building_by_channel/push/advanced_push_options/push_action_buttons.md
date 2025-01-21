@@ -38,7 +38,7 @@ To use action buttons in your iOS push messages, do the following:
 ![iOS Notification Category dropdown menu.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/). In particular, you need to either configure iOS Categories or select from certain default button options. For Android integrations, these buttons will work automatically.
+Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/). In particular, you need to either configure iOS Categories or select from certain default button options. For Android integrations, these buttons will work automatically.
 {% endalert %}
 
 ### Android {#android}

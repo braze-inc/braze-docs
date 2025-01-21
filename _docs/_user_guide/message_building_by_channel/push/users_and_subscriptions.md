@@ -133,7 +133,7 @@ As a result, you should ask for permission only when a user clicks somewhere on 
 There are two ways a [push token][push-tokens] can be classified that are essential to understanding how a push notification can be sent to your users.
 
 1. **Foreground push** provides the ability to send regular visible push notifications to the foreground of a user's device.
-2. **Background push** is available regardless of whether a particular device has opted-in to receive push notifications from that brand. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/).
+2. **Background push** is available regardless of whether a particular device has opted-in to receive push notifications from that brand. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
 When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Push Enabled for App,` to help identify these users.
 

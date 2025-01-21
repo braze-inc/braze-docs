@@ -337,7 +337,7 @@ analytics.identify(
 
 ##### Custom attributes
 
-All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 
 | Segment method | Braze method | Example |
 |---|---|---|
@@ -368,7 +368,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segment: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
 | [Track with properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
+| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ##### Order completed {#order-completed}
@@ -455,7 +455,7 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
 
   {% alert note %}
   Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.

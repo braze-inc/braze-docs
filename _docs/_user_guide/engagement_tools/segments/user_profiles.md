@@ -76,9 +76,9 @@ The **Engagement** tab contains information about a user's interactions with the
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
+| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![The Engagement tab of a user profile displaying their contact settings and communication statistics.][3]
@@ -99,7 +99,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Channel | Engagement events available |
 | --- | --- |
