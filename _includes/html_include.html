@@ -171,7 +171,9 @@
   var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
   var algolia_doc_index = '{{ site.algolia.index_name }}';
   var algolia_learning_index = '{{ site.learning_index_name }}';
+  var max_redirects = 10;
 
+  var query_params = new URLSearchParams(window.location.search);
 </script>
 
 <!-- Adds LaTeX support -->

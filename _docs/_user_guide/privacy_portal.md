@@ -46,7 +46,7 @@ guide_featured_list:
   link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
   image: /assets/img/braze_icons/clock-rewind.svg
 - name: Default and Minimum SDK Data Collection
-  link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
+  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations

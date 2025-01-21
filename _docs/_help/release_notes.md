@@ -91,7 +91,7 @@ Segment your users by whether they soft bounced X times in Y days. For more info
 
 #### Anonymous users overview
 
-[Anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
+[Anonymous users]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/) provides an overview of anonymous users and user aliases, outlining their significance and how they can be leveraged in your messages.
 
 #### Global Control Group membership
 
@@ -105,7 +105,7 @@ You can [view Global Control Group membership]({{site.baseurl}}/user_guide/engag
 
 #### Odicci - Customer data platform
 
-Integrate Braze with [Odicci]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/odicci/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
+Integrate Braze with [Odicci]({{site.baseurl}}/partners/message_personalization/dynamic_content/odicci/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
 
 #### Optimizely - A/B testing
 
@@ -167,7 +167,7 @@ The Braze and [Narvar](https://corp.narvar.com/) integration enables brands to l
 
 #### Zeotap for Currents - Customer data platform
 
-The Braze and [Zeotap](https://zeotap.com/) integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
+The Braze and [Zeotap](https://zeotap.com/) integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
 
 #### Notify - Dynamic content
 
@@ -272,7 +272,7 @@ For more information on how different values impact delivery, see [Android messa
 
 #### SDK
 
-Use the [Braze SDK's built-in debugger]({{site.baseurl}}/developer_guide/platform_wide/debugging/) to troubleshoot issues for your SDK-powered channels without needing to enable verbose logging in your app.
+Use the [Braze SDK's built-in debugger]({{site.baseurl}}/developer_guide/debugging/) to troubleshoot issues for your SDK-powered channels without needing to enable verbose logging in your app.
 
 #### Live Activities
 
@@ -325,7 +325,7 @@ The Braze and [Future Anthem]({{site.baseurl}}/partners/message_personalization/
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Using [identifier field-level encryption]({{site.baseurl}}/user_guide/data_and_analytics/field_level_encryption/), you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+Using [identifier field-level encryption]({{site.baseurl}}/user_guide/analytics/field_level_encryption/), you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 ### SDK updates
 
@@ -445,13 +445,13 @@ We added a complete list of the [security events]({{site.baseurl}}/user_guide/ad
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-The [message usage dashboard]({{site.baseurl}}/message_usage/) provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+The [message usage dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/) provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 ### SDK
 
 #### Delayed initialization for the Braze Swift SDK
 
-Set up [delayed initialization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
+Set up [delayed initialization]({{site.baseurl}}/developer_guide/platforms/swift/initialization/delayed_initialization/) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
 
 ### SDK updates
 
@@ -519,7 +519,7 @@ You can [export the list of custom attributes]({{site.baseurl}}/user_guide/data_
 
 #### Currents IP allowlisting
 
-Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for [allowlisting]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents).
+Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for [allowlisting]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/).
 
 ### Robust channels
 
@@ -531,7 +531,7 @@ Build a segment using our [updated experience]({{site.baseurl}}/user_guide/engag
 
 #### Metrics by segments
 
-Use [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
+Use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
 #### Phone number acquisition
 
@@ -668,7 +668,7 @@ SMS Geographic Permissions enhance security and protect against fraudulent SMS t
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Now with Shopify, you can create custom notifications for [price drops]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications) and [back-in-stock items]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications).
+Now with Shopify, you can create custom notifications for [price drops]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/) and [back-in-stock items]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/).
  
 ### AI and ML automation
  
@@ -692,11 +692,11 @@ We overhauled the [logging docs for the Braze Android SDK]({{site.baseurl}}/deve
 
 #### iOS SDK foreground push notifications
 
-The `subscribeToUpdates` method in the Braze iOS SDK can now detect if a foreground push notification is received. To learn more, see [iOS push notification integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration).
+The `subscribeToUpdates` method in the Braze iOS SDK can now detect if a foreground push notification is received. To learn more, see [iOS push notification integration]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/).
  
 #### Updating the Xamarin docs
  
-Since [version 4.0.0](https://github.com/braze-inc/braze-xamarin-sdk/releases/tag/4.0.0), the Braze Xamarin SDK uses the Swift SDK binding, so we updated the code snippets and reference material. We also restructured the section to make it easier to read and understand. To check it out, see [the Xamarin docs]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup).
+Since [version 4.0.0](https://github.com/braze-inc/braze-xamarin-sdk/releases/tag/4.0.0), the Braze Xamarin SDK uses the Swift SDK binding, so we updated the code snippets and reference material. We also restructured the section to make it easier to read and understand. To check it out, see [the Xamarin docs]({{site.baseurl}}/developer_guide/platforms/xamarin/sdk_integration/).
 
 #### SDK updates
 
@@ -727,7 +727,7 @@ The [`/campaigns/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messagin
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Braze [Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources) now supports BigQuery, Databricks, Redshift, and Snowflake.
+Braze [Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) now supports BigQuery, Databricks, Redshift, and Snowflake.
 
 #### WhatsApp phone number migration
 
@@ -739,7 +739,7 @@ Migrate your WhatsApp phone number between WhatsApp Business Accounts by using M
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-The new **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. Learn more about [the report and the Email Performance Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/email_performance_dashboard).
+The new **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. Learn more about [the report and the Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
 
 #### WhatsApp and SMS Liquid properties in Canvas flow
 
@@ -798,7 +798,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 #### tvOS documentation
 
-A few months ago, the articles for [tvOS Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/tvos) and [in-app messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos) were deprecated by mistake. These docs have now been republished under the Swift section in Braze Docs.
+A few months ago, the articles for [tvOS Content Cards]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/tvos/) and [in-app messaging]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/tvos_messages/) were deprecated by mistake. These docs have now been republished under the Swift section in Braze Docs.
 
 {% alert note %}
 [Contributors]({{site.baseurl}}/contributing/home) to Braze Docs should note that the site now runs on Ruby 3.3.0. Please upgrade your Ruby version as necessary.

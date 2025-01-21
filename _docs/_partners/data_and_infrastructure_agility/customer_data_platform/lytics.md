@@ -180,7 +180,7 @@ In the **Configure Authorization** prompt that appears, provide a label and a de
 
 #### Step 2: Export your segment data to CSV
 
-In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv).
+In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 #### Step 3: Configure a CSV Import Job
 

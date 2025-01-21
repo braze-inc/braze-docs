@@ -35,7 +35,7 @@ The connector deploys and configures the Braze SDK in your channel, so you will 
 ```
 
 {% alert important %}
-The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) or take advantage of other Braze SDK-supported features. 
+The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) or take advantage of other Braze SDK-supported features. 
 {% endalert%}
 
 ### Celebrus connector for Braze custom attributes
@@ -46,7 +46,7 @@ The Celebrus connector for Braze custom attributes sends custom attributes to an
 
 #### Step 2: Configure Cloud Data Ingestion in your Braze dashboard
 
-This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) according to the type of warehouse you are using. 
+This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) according to the type of warehouse you are using. 
 
 #### Step 3: Sync data from Celebrus to Braze
 

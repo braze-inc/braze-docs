@@ -14,7 +14,7 @@ search_tag: Partner
 
 The Braze and Amazon S3 integration features two integration strategies:
 
-- Leverage [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), enabling you to store data there until you want to connect it to other platforms, tools, and locations.
+- Leverage [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), enabling you to store data there until you want to connect it to other platforms, tools, and locations.
 - Use dashboard data exports (such as CSV exports and engagement reports).
 
 ## Prerequisites
@@ -37,7 +37,7 @@ To create a bucket for your app, do the following:
 
 ## Integration
 
-Braze has two different integration strategies with Amazon S3—one for [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) and one for all dashboard data exports (such as CSV exports or engagement reports). Both integrations support two different authentication or authorization methods:
+Braze has two different integration strategies with Amazon S3—one for [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and one for all dashboard data exports (such as CSV exports or engagement reports). Both integrations support two different authentication or authorization methods:
 
 - [AWS secret access key method](#aws-secret-key-auth-method)
 - [AWS role ARN method](#aws-role-arn-auth-method)

@@ -19,7 +19,7 @@ Link shortening and click tracking can be turned on at the [message variant-leve
 
 The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and dynamic URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For dynamic URLs, they will have a length of 32–33 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For dynamic URLs, they will have a length of 32–33 characters.
 
 Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/8jshX/2dj8d` (advanced, dynamic). Refer to [Testing](#testing) for more information.
 

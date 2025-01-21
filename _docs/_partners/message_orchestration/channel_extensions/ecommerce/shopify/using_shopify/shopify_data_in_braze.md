@@ -21,7 +21,7 @@ After the app installation is complete, Braze automatically creates your webhook
 {% subtabs global %}
 {% subtab Product Viewed %}
 **Event**: `shopify_product_viewed`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -40,7 +40,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Product Clicked %}
 **Event**: `shopify_product_clicked`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -57,7 +57,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Abandoned Cart %}
 **Event**: `shopify_abandoned_cart`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -78,7 +78,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Abandoned Checkout %}
 **Event**: `shopify_abandoned_checkout`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -108,7 +108,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 
 **Event**: `shopify_created_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -161,7 +161,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 
 **Event**: Purchase<br>
-**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/)
 
 
 {% raw %}
@@ -179,7 +179,7 @@ After the app installation is complete, Braze automatically creates your webhook
 {% endsubtab %}
 {% subtab Paid Order %}
 **Event**: `shopify_paid_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -211,7 +211,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Partially Fulfilled Order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -260,7 +260,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Fulfilled Order %}
 **Event**: `shopify_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -309,7 +309,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Cancelled Order %}
 **Event**: `shopify_cancelled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -343,7 +343,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Created Refund %}
 **Event**: `shopify_created_refund`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -872,7 +872,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 ## Segmentation
 
-You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
+You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in Segmentation. 
 
 ![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.][12]{: style="max-width:80%;"}
 

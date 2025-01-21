@@ -128,7 +128,7 @@ The variables include:
 
 Data is available for time periods where both of these conditions are met:
 
-1. [Segment analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
+1. [Segment analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) is turned on for the segments that you want to see data for.
 2. The performance data by segment feature is turned on.
 
 You can't access data from time periods prior to when this feature is turned on for your company. For example, if analytics tracking is turned on for Segment A on October 1 and this feature is turned on for your company on October 2, then you can only view data for Segment A for the campaigns and Canvases that recorded metrics after October 2. 

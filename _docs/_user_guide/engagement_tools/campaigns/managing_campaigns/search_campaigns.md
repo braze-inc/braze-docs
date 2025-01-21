@@ -32,7 +32,7 @@ For example, if you want to audit your campaign drafts, select **Status** > **Dr
 
 ### Searching by tags
 
-Searching your campaigns by [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) can further narrow down your results. For example, if you're trying to find all the campaigns you built for targeting new customers, frequent buyers, lapsed customers, you could search these campaigns by their shared tag **Targeting by customer type**.
+Searching your campaigns by [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) can further narrow down your results. For example, if you're trying to find all the campaigns you built for targeting new customers, frequent buyers, lapsed customers, you could search these campaigns by their shared tag **Targeting by customer type**.
 
 ### Adjusting filters
 

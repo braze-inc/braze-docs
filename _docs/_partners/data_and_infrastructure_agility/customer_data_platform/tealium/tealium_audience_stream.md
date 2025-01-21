@@ -237,6 +237,6 @@ Users integrating with Tealium using the Braze Web SDK tag may see a dramatic in
 
 [1]: https://docs.tealium.com/server-side/attributes/about/
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [21]: https://docs.tealium.com/server-side/connectors/trace/about/
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}

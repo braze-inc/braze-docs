@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
-The Braze and mParticle integration allows you to seamlessly control the flow of information between the two systems. With [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), you can also connect data to mParticle to make it actionable across the entire growth stack. 
+The Braze and mParticle integration allows you to seamlessly control the flow of information between the two systems. With [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), you can also connect data to mParticle to make it actionable across the entire growth stack. 
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ All events sent to mParticle will include the user's `external_user_id` as the `
 
 ## Supported Currents events
 
-Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to mParticle:
+Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) event glossaries to mParticle:
 
 ### Behaviors
 - Uninstall: `users.behaviors.Uninstall`

@@ -40,7 +40,7 @@ From the **Locations** page, click **+ Create Geofence Set**.
 
 ![Geofence set of German airports with a user drawing a radius of two thousand meters on the map for Hamburg Airport.][1]
 
-Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
+Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### Creating sets via bulk upload {#creating-geofence-sets-via-bulk-upload}
 
