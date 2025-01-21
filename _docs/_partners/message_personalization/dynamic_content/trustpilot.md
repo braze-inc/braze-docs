@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 | Prerequisite | Description |
 | --- | --- |
 | A Trustpilot account | You need a Trustpilot account with access to Trustpilot's API. |
-| A Trustpilot Authentication key | You will need to set up API key and request access token. |
+| A Trustpilot authentication key | You will need to set up an API key and request an access token. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Integration
@@ -39,12 +39,12 @@ Before you start, you'll need the following:
 
 ### Step 1: Set up a Braze webhook campaign 
 
-Set up an action-based Braze webhook campaign to trigger the Trustpilot APIs to send email review invitations to users. For example, you could send a review invitation after a user places an order. Webhook details:  
+Set up an action-based Braze webhook campaign to trigger the Trustpilot APIs to send email review invitations to users. For example, you could send a review invitation after a user places an order with the following webhook details:
    * [Webhook URL](https://developers.trustpilot.com/invitation-api?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..#create-invitation(s)): `https://invitations-api.trustpilot.com/v1/private/business-units/{businessUnitId}/email-invitations`  
    * Method: POST  
    * Add the relevant customer information as key-value pairs
 
-### Step 2: Retrieve the Access Token
+### Step 2: Retrieve the access token
 
 1. Use [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content) to make a request to [Trustpilot’s Authentication endpoint](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) to retrieve the Access Token.
 2. Use the **client_credentials** grant type, and enter your API key and secret into a Connected Content tag to retrieve a token. The Connected Content request can be entered into the request header. The Connected Content may look like this:
@@ -68,7 +68,7 @@ https://api.trustpilot.com/v1/oauth/oauth-business-users-for-applications/access
 {% endraw %}
 
 {: start="3"}
-3. Add the access token to the request header of your webhook campaign 
+3. Add the access token to the request header of your webhook campaign.
 
 {% alert tip %}
 Refer to [Trustpilot’s documentation](https://support.trustpilot.com/hc/en-us/community/posts/11947443933074-Braze-Trustpilot-Setup-Instructions-for-triggering-API-invites) for more detailed instructions. 
@@ -76,7 +76,7 @@ Refer to [Trustpilot’s documentation](https://support.trustpilot.com/hc/en-us/
 
 ## Personalizing messages with product review insights
 
-In your Braze campaign, make a Connected content call to request data from Trustpilot’s [Get product reviews summary endpoint](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). This method retrieves product reviews for specific SKUs from the business unit. The example below specifies the specific product SKU and filters for five star reviews.
+In your Braze campaign, make a Connected Content call to request data from Trustpilot’s [Get product reviews summary endpoint](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). This method retrieves product reviews for specific SKUs from the business unit. The following example specifies the specific product SKU and filters for five-star reviews.
 
 {% raw %}
 ```liquid
