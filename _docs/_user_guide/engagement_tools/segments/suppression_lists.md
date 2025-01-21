@@ -33,7 +33,7 @@ As part of the beta, suppression lists will not apply to the following message t
 You don't need to add an exception tag for any of these use cases, as suppression lists automatically won't apply to them. To exclude a group of users from a message within these use cases, you need to create a target segment that excludes these users.
 
 {% alert important %}
-During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transational use cases.
+During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional use cases.
 {% endalert %}
 
 ### Channels affected by suppression lists
@@ -75,7 +75,7 @@ Only admins can save or activate suppression lists. You can have up to five acti
 {% endalert %}
 
 {: start="6"}
-6. You can deactivate or archive suppression lists when you no longer need them. 
+You can deactivate or archive suppression lists when you no longer need them. 
 - To deactivate, select an active suppression list and select **Deactivate**. Deactivated suppression lists can be reactivated later.
 - To archive, do so from the **Suppression Lists** page.
 
