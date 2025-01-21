@@ -19,11 +19,66 @@ API rate limits are subject to change depending on the proper usage of our syste
 
 ## Rate limits by request type
 
-The following table lists the default API rate limits for different request types. These default limits can be increased upon request. Reach out to your customer success manager for more information.
+Refer to the following for the default API rate limits of different request types. These default limits can be increased upon request. Reach out to your customer success manager for more information.
 
-{% alert note %}
-Requests not listed in this table share a total default rate limit of 250,000 requests per hour.
-{% endalert %}
+### Requests with shared rate limits
+
+The following requests have a rate limit of 250,000 requests per hour, shared between them.
+
+- `/campaigns/details`
+- `/campaigns/list`
+- `/campaigns/trigger/schedule/create`
+- `/campaigns/trigger/schedule/delete`
+- `/campaigns/trigger/schedule/update`
+- `/canvas/data_series`
+- `/canvas/data_summary`
+- `/canvas/details`
+- `/canvas/list`
+- `/canvas/trigger/schedule/create`
+- `/canvas/trigger/schedule/delete`
+- `/canvas/trigger/schedule/update`
+- `/content_blocks/create`
+- `/content_blocks/info`
+- `/content_blocks/list`
+- `/content_blocks/update`
+- `/email/blocklist`
+- `/email/blacklist`
+- `/email/bounce/remove`
+- `/email/hard_bounces`
+- `/email/spam/remove`
+- `/email/status`
+- `/email/unsubscribes`
+- `/events/data_series`
+- `/feed/data_series`
+- `/feed/details`
+- `/feed/list`
+- `/kpi/dau/data_series`
+- `/kpi/mau/data_series`
+- `/kpi/new_users/data_series`
+- `/kpi/uninstalls/data_series`
+- `/messages/live_activity/start`
+- `/messages/live_activity/update`
+- `/messages/schedule/create`
+- `/messages/schedule/delete`
+- `/messages/schedule/update`
+- `/messages/scheduled_broadcasts`
+- `/segments/data_series`
+- `/segments/details`
+- `/segments/list`
+- `/sends/data_series`
+- `/sessions/data_series`
+- `/sms/invalid_phone_numbers`
+- `/sms/invalid_phone_numbers/remove`
+- `/subscription/status/get`
+- `/subscription/user/status`
+- `/templates/email/create`
+- `/templates/email/info`
+- `/templates/email/list`
+- `/templates/email/update`
+- `/users/export/global_control_group`
+- `/users/export/segment`
+
+### Requests with different rate limits
 
 | Request Type                                                                                                                                                                                                                                           | Default API Rate Limit                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -44,13 +99,10 @@ Requests not listed in this table share a total default rate limit of 250,000 re
 | [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 16,000 requests per minute shared between the endpoints.                                                                                                                                   |
 | [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints.                                                                                                                                       |
 | [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 5,000 requests per day, per company, shared between the endpoints.                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-<!-- Add during CDI endpoints GA
 | [`/cdi/integrations`][46] | 50 requests per minute. |
 | [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
 | [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
--->
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Batching API requests
 
@@ -60,9 +112,9 @@ Braze APIs are built to support batching. With batching, Braze can take in as mu
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities.
 {% endalert %}
 
-### Batching User Track requests {#batch-user-track}
+### Batching requests for Track users endpoint {#batch-user-track}
 
-Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means up to 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 Requests made to this endpoint will generally begin processing in this order:
 
