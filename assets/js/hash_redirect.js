@@ -14,8 +14,6 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
     }
     return rstr;
   }
-
-
   function redirecturl(ky,uh,redirect) {
     var val_urls = validurls[ky];
     var hashes = val_urls.split('#');
@@ -30,14 +28,14 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
   }
   var urlhash = window.location.hash;
   var urlsearch = window.location.search;
-
-  if (window.location.href.indexOf('redirected=true') == -1) {
+  var queryparams = getQueryParams();
+  var redirected_count = parseInt(query_params.get('redirected'),10) || 0;
+  if (!redirected_count) {
     if (urlhash) {
+      redirected_count++;
       urlhash = urlhash.replace('#','')
-      var redirected  = '?redirected=true' ;
-      if (urlsearch.indexOf('?') > -1 ) {
-        redirected = urlsearch + '&redirected=true';
-      }
+      query_params.set('redirected',redirected_count );
+      var redirected  = '?' + query_params.toString();
       if (validurls[urlhash] ) {
         window.location  =  redirecturl(urlhash,urlhash,redirected);
       }
