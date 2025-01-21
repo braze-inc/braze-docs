@@ -49,6 +49,9 @@ guide_menu_list:
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg
+  - name: Suppression Lists
+    link: /docs/user_guide/engagement_tools/segments/suppression_lists/
+    image: /assets/img/braze_icons/list.svg 
   - name: Troubleshooting
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
