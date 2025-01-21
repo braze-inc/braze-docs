@@ -309,7 +309,7 @@ UNREDEEMED
 [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
 [4]: {% image_buster /assets/img/passkit/passkit4.png %}
 [5]: {% image_buster /assets/img/passkit/passkit5.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
