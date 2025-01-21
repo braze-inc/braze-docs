@@ -74,7 +74,6 @@ Though the setup process seems similar to [segment creation]({{site.baseurl}}/us
 Only admins can save or activate suppression lists. You can have up to five active suppression lists at a time in the beta.
 {% endalert %}
 
-{: start="6"}
 You can deactivate or archive suppression lists when you no longer need them. 
 - To deactivate, select an active suppression list and select **Deactivate**. Deactivated suppression lists can be reactivated later.
 - To archive, do so from the **Suppression Lists** page.
