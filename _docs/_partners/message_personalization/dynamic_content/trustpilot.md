@@ -1,11 +1,10 @@
 ---
 nav_title: Trustpilot
 article_title: Trustpilot
-description: This page covers how to integrate Trustpilot with Braze.
+description: This page covers how to integrate Trustpilot with Braze, send review invitations, and personalize messages with product review insights.
 alias: /partners/trustpilot/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Trustpilot
@@ -36,7 +35,7 @@ Before you start, you'll need the following:
    1. Go to **Application Name** > **Create Application**  
    2. Copy your API key and secret, which will be used to authenticate your Connected Content requests.
 
-## Send Trustpilot review invitations
+## Sending Trustpilot review invitations
 
 ### Step 1: Set up a Braze webhook campaign 
 
@@ -77,9 +76,7 @@ Refer to [Trustpilot’s documentation](https://support.trustpilot.com/hc/en-us/
 
 ## Personalizing messages with product review insights
 
-### Step 1: Set up a Braze Campaign
-
-1. In your Braze campaign, make a Connected content call to request data from Trustpilot’s [Get product reviews summary endpoint](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). This method retrieves product reviews for specific SKUs from the business unit. The example below specifies the specific product SKU and filters for five star reviews.
+In your Braze campaign, make a Connected content call to request data from Trustpilot’s [Get product reviews summary endpoint](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). This method retrieves product reviews for specific SKUs from the business unit. The example below specifies the specific product SKU and filters for five star reviews.
 
 {% raw %}
 ```liquid
@@ -90,7 +87,7 @@ Refer to [Trustpilot’s documentation](https://support.trustpilot.com/hc/en-us/
 ```
 {% endraw %}
 
-![Connected Content in email using Liquid to pull in information.]({% image_buster /assets/img/trustpilot_connected_content_example.png %})
+![Connected Content in email using Liquid to pull in information.]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
 
 The Connected Content request will return the product reviews.
 
@@ -120,4 +117,4 @@ The Connected Content request will return the product reviews.
 {: start="2"}
 2. Use Liquid syntax to pull the relevant content into your message. For example, to pull in the product review's content, use the Liquid tag {% raw %}`{{result.productReviews[0].content}}`{% endraw %}.
 
-![Personalized email with a review of a toy truck that the user left in their cart.]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:50%;"}
+![Personalized email with a review of a toy truck that the user left in their cart.]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:38%;"}
