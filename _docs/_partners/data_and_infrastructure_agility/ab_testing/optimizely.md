@@ -37,7 +37,7 @@ The Braze and Optimizely integration is a two-way integration that allows you to
     1. Enter Braze **REST API Key**.
     2. Select your Braze **Instance URL**.
     2. Select **Verify API Key**.
-3. In Braze, go to **[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/)**.
+3. In Braze, go to **[Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/)**.
 4. Select **Create New Current** > **Custom Currents Export**.
 5. Configure the Current using the endpoint and token provided in ODP. This is required to sync Braze events to ODP. 
 

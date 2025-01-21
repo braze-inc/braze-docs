@@ -16,7 +16,7 @@ table td {
 
 # SQL table reference
 
-This page is a reference of tables and columns available to be queried in the [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) or when generating [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+This page is a reference of tables and columns available to be queried in the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or when generating [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 ## Table of contents
 

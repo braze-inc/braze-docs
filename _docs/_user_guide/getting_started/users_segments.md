@@ -52,7 +52,7 @@ Standard attributes are predefined attributes you can track with Braze after int
 
 #### Custom attributes
 
-[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. 
+[Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) are attributes that you define based on your specific business needs. They allow you to track information that is unique to your app or business. 
 
 For example, a music streaming app might track custom attributes like:
 
@@ -87,7 +87,7 @@ Events represent specific actions or behaviors performed by users within your ap
 
 #### Custom events
 
-[Custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) are events that you define based on the specific actions you want to track within your app or site. For example, a music streaming app might track custom events like:
+[Custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) are events that you define based on the specific actions you want to track within your app or site. For example, a music streaming app might track custom events like:
 
 - Song Played
 - Playlist Created
@@ -109,7 +109,7 @@ Data points are consumed when a user's profile data is updated or when they perf
 
 By thoughtfully considering what information to track as data points, you're targeting the highest-impact data for your users' experience. Your Braze account manager will help recommend data best practices to fit your needs.
 
-Visit our dedicated article to learn more about [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Visit our dedicated article to learn more about [data points]({{site.baseurl}}/user_guide/data/data_points/).
 
 ## Segments
 

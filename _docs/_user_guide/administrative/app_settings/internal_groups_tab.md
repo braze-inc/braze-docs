@@ -50,8 +50,8 @@ After you create your Internal Group, you can add test users as members of that 
 | Addition Method | Description |
 | :------------- | :------------- |
 | Identified Users |Search for the user by their external user ID or email address.|
-|Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) page.|
-|Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. You can only add users that are already known in the dashboard. For more information, refer to [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).|
+|Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) page.|
+|Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. You can only add users that are already known in the dashboard. For more information, refer to [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Content Test Groups

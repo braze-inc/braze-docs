@@ -17,7 +17,7 @@ channel:
 
 ### Select your subscription group
 
-SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
+SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
 ### Input message body
 

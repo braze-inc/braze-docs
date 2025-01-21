@@ -29,7 +29,7 @@ Keep in mind the following permissible post-launch Canvas edits depending on whi
 
 You can delete any of the following in your user journey:
 
-- [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Canvas variants 
 - Connections between Canvas steps
 

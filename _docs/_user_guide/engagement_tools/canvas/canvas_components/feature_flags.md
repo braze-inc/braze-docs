@@ -13,7 +13,7 @@ local_redirect:
 
 > Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas][1] and track the impact of feature rollout on conversions. Moreover, [Experiment Paths][2] allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
-Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/) articles.
+Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/) articles.
 
 ## Creating a feature flag
 

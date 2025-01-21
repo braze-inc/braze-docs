@@ -70,7 +70,7 @@ For string properties, you can enter in multiple values at once. In the example 
 
 ![Segmenting based on datetime objects.][15]
 
-We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 ![Segmenting based on nested event properties.][18]
 

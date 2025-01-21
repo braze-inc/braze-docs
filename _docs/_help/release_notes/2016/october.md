@@ -14,7 +14,7 @@ We've added enhanced security features to Braze, including password expiration r
 > Update: Braze's **Security Settings**, accessed from your **Company Settings** page, also includes rules for password reusability and expiration.
 
 ## CSV download after import
-Braze users can now download CSVs of recently imported users. This gives you more visibility in the data sync from your systems. Learn more on [CSV importing]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
+Braze users can now download CSVs of recently imported users. This gives you more visibility in the data sync from your systems. Learn more on [CSV importing]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
 ## Anniversary filter
 In addition to the [birthday filter]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze now supports an anniversary filter which gives you the ability to target users based on a calendar date for loyalty milestones, refill notices, and more! Access this feature by selecting the "Date of Custom Attribute" filter on the Segments page. Learn more about [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).
