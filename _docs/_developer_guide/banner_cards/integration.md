@@ -207,7 +207,7 @@ braze.subscribeToBannersUpdates((banners) => {
     braze.insertBanner(globalBanner, container);
 
     // Special handling if the user is part of a Control Variant
-    if (globalBanner.isControl) {
+    if (globalBanner?.isControl) {
         // hide or collapse the container
         container.style.display = 'none';
     }
