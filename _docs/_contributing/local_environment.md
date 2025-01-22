@@ -107,7 +107,26 @@ cd ~
 git clone git@github.com:braze-inc/braze-docs.git
 ```
 
-### Step 4: Install Ruby
+### Step 4: Add a remote for `braze-inc/braze-docs`
+
+To ensure that your changes are pushed to the official Braze Docs repository, instead of your fork, you'll need to set up a new remote branch in Git.
+
+```bash
+cd ~/braze-docs
+git remote add upstream git@github.com:braze-inc/braze-docs.git
+```
+
+To verify that your new `upstream` remote was added successfully, list your remotes using the `remote` command's `-v` option.
+
+```bash
+$ git remote -v
+origin    git@github.com:internetisaiah/braze-docs.git (fetch)
+origin    git@github.com:internetisaiah/braze-docs.git (push)
+upstream  git@github.com:braze-inc/braze-docs.git (fetch)
+upstream  git@github.com:braze-inc/braze-docs.git (push)
+```
+
+### Step 5: Install Ruby
 
 To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
 
@@ -122,7 +141,7 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
-### Step 5: Install dependencies
+### Step 6: Install dependencies
 
 Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site.
 
@@ -130,7 +149,7 @@ Next, install the dependencies for Braze Docs. These are small programs used to 
 bundle install
 ```
 
-### Step 6: Start your local server
+### Step 7: Start your local server
 
 To verify your installation and start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
