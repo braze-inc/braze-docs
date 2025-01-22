@@ -64,9 +64,20 @@ When you're finished, select **Commit changes**.
 
 #### Step 2.3: Propose your changes
 
-In the next window, select **Propose changes**.
+In the next window, choose **Create a new branch for this commit and start a pull request**. If you choose the first option, your changes will not be sent to the correct location, so double-check that the correct option is selected before continuing.
+
+After confirming, select **Propose changes**.
 
 ![The "Propose changes" window after selecting "Commit changes" in GitHub.]({% image_buster /assets/img/contributing/github/propose_changes.png %}){: style="max-width:65%;"}
+
+In the next window, select **compare across forks**.
+
+![The "Comparing changes" window with "compare across forks" highlighted.]({% image_buster /assets/img/contributing/github/compare_across_forks.png %})
+
+From the base repository dropdown, choose **braze-inc/braze-docs**, then select **Create pull request**. You'll learn how to fill out the draft in the next step.
+
+![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %})
+
 {% endtab %}
 
 {% tab local environment %}
@@ -185,14 +196,16 @@ To github.com:braze-inc/braze-docs.git
  * [new branch]      fixing-typo-in-recommended-software -> fixing-typo-in-recommended-software
 branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
 ```
+
+#### Step 2.5: Create your pull request
+
+Go back to the [repository homepage](https://github.com/braze-inc/braze-docs) and select **Compare & pull request**. You'll learn how to fill out the draft in the next step.
+
+![The Braze Docs GitHub repository homepage showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Create a pull request (PR)
-
-If you are not already there, go back to the [repository homepage](https://github.com/braze-inc/braze-docs) and select **Compare & pull request**.
-
-![The Braze Docs GitHub repository homepage showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
+### Step 3: Fill out your pull request (PR)
 
 In the PR description, you'll see Markdown comments similar to the following:
 
