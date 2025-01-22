@@ -360,7 +360,7 @@ glossaries:
     description: 환경설정 센터를 만들어 사용자가 이메일 캠페인에 대한 알림 환경설정을 관리할 수 있도록 합니다.
     tags:
       - Preference Center
-  - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
+  - name: "<a href='/docs/api/endpoints/preference_center/put_update_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
     description: 환경설정 센터를 업데이트합니다.
     tags:
       - Preference Center
@@ -372,11 +372,11 @@ glossaries:
     description: 카탈로그 항목과 세부 정보를 나열합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: 카탈로그에서 여러 항목을 편집합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: 카탈로그에 여러 항목을 생성합니다.
     tags:
       - Catalogs
@@ -388,27 +388,27 @@ glossaries:
     description: 카탈로그를 만듭니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/'>/catalogs</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>"
     description: 워크스페이스에 카탈로그를 나열합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: 카탈로그에서 품목을 생성합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: 카탈로그에서 품목을 편집합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>"
     description: 여러 카탈로그 항목과 해당 콘텐츠를 반환합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: 카탈로그에서 품목을 삭제합니다.
     tags:
       - Catalogs
-  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>"
+  - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
     description: 카탈로그에서 품목을 업데이트합니다.
     tags:
       - Catalogs
@@ -440,11 +440,11 @@ glossaries:
     description: 이메일을 지정하여 기존 대시보드 사용자 계정을 조회합니다.
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
     description: "이메일, 주어진 이름 및 가족 이름, 권한(회사, 워크스페이스 및 팀 수준에서 권한을 설정하기 위한)을 지정하여 기존 대시보드 사용자 계정을 업데이트합니다."
     tags:
       - SCIM
-  - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
+  - name: "<a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>"
     description: 기존 대시보드 사용자를 영구 삭제합니다.
     tags:
       - SCIM
