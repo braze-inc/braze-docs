@@ -5470,6 +5470,10 @@ In-App Messages, Impressions
 
 This event occurs when a user views an in-app message.
 
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -5708,6 +5712,10 @@ In-App Messages, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks on an in-app message.
+
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -6134,6 +6142,10 @@ Content Cards, Sends
 
 This event occurs when a Content Card gets sent to a user.
 
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6327,6 +6339,10 @@ Content Cards, Impressions
 {% endapitags %}
 
 This event occurs when a user views a Content Card.
+
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -6557,6 +6573,10 @@ Content Cards, Clicks
 
 This event occurs when a user clicks a Content Card.
 
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6786,6 +6806,10 @@ Content Cards, Dismissal
 {% endapitags %}
 
 This event occurs when a user dismisses a Content Card.
+
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -8643,6 +8667,10 @@ This event occurs when a user does an action that has been set as a conversion e
 Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9308,6 +9336,10 @@ Campaign, Entry
 {% endapitags %}
 
 This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
+
+{% alert note %}
+`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
