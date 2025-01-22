@@ -125,7 +125,9 @@ If the determined optimal time falls within Quiet Hours, Braze finds the nearest
 
 #### Can I use Intelligent Timing and rate-limiting?
 
-Braze doesn’t recommend using Intelligent Timing and rate-limiting because there is no guarantee about when the message will be delivered.
+Rate limiting can be used on a campaign that uses Intelligent Timing. However, the nature of rate limiting means that some users may receive their message at a less-than-optimal time, particularly if a large number of users relative to the rate limit size are scheduled at the fallback time because of insufficient data. 
+
+We recommend using rate limiting on an Intelligent Timing campaign only when there are technical requirements that must be met using rate limiting.
 
 #### Can I use Intelligent Timing while IP warming?
 
