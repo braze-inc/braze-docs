@@ -53,7 +53,7 @@ $ git checkout fixing-typo-in-metadata
 Switched to branch 'fixing-typo-in-metadata'
 ```
 
-Add your changes and stage your commit.
+Add your changes and stage your commit. LKJSHDKBLSKDBKD TEST
 
 ```bash
 git add --all
