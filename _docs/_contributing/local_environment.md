@@ -109,7 +109,7 @@ git clone git@github.com:braze-inc/braze-docs.git
 
 ### Step 4: Add a remote for `braze-inc/braze-docs`
 
-To ensure that your changes are pushed to the official Braze Docs repository, instead of your fork, you'll need to set up a new remote branch in Git.
+To ensure that your changes are pushed to the official Braze Docs repository, instead of your fork, you'll need to set up a new remote in Git.
 
 ```bash
 cd ~/braze-docs
