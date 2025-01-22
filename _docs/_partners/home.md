@@ -1,6 +1,6 @@
 ---
 page_order: 0
-article_title: Technology Partners
+article_title: Technology Partners Test
 alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
