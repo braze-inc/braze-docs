@@ -6,7 +6,7 @@ platform: Swift
 description: "Learn how to declare your Braze tracking data in your app's privacy manifest."
 ---
 
-# Privacy manifest
+# Privacy manifest TEST
 
 > If your Braze SDK collects tracking data, Apple requires you to add a privacy manifest that describes your reason and method for collecting tracking data.
 
