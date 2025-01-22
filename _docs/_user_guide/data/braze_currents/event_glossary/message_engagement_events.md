@@ -5471,7 +5471,7 @@ In-App Messages, Impressions
 This event occurs when a user views an in-app message.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -5714,7 +5714,7 @@ In-App Messages, Clicks
 This event occurs when a user clicks on an in-app message.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -6143,7 +6143,7 @@ Content Cards, Sends
 This event occurs when a Content Card gets sent to a user.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -6341,7 +6341,7 @@ Content Cards, Impressions
 This event occurs when a user views a Content Card.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -6574,7 +6574,7 @@ Content Cards, Clicks
 This event occurs when a user clicks a Content Card.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -6808,7 +6808,7 @@ Content Cards, Dismissal
 This event occurs when a user dismisses a Content Card.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -8668,7 +8668,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {% endalert %}
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
@@ -9338,7 +9338,7 @@ Campaign, Entry
 This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
 
 {% alert note %}
-`dispatch_id` is an invalid field (in terms of having meaningful data) and will be removed from this event type in a future release.
+`dispatch_id` is deprecated and will be removed in the next Currents release.
 {% endalert %}
 
 {% tabs %}
