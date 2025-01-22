@@ -12,6 +12,8 @@ search_rank: 3
 
 > Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
+## TESTING
+
 ## Step 1: Navigate to the segments section
 
 Go to **Audience** > **Segments**.
