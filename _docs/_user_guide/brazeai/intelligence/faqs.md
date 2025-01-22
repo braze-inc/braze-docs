@@ -3,6 +3,7 @@ nav_title: FAQ
 article_title: Intelligence FAQ
 page_order: 191
 description: "This article provides answers to frequently asked questions about Intelligent Channel, Intelligent Selection, and Intelligent Timing."
+toc_headers: "h3, h4"
 ---
 
 # Frequently asked questions
