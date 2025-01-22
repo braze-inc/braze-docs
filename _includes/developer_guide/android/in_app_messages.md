@@ -69,7 +69,7 @@ In-app message display is managed by the [`BrazeInAppMessageManager`](https://br
 
 #### Automatic registration (recommended)
 
-The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) handles in-app message registration automatically; no extra integration is required. This is the recommended method for handling in-app message registration. If you plan on using this method, you can [skip to the next step](#step-2-in-app-message-manager-blocklist-optional).
+The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#step-3-enable-user-session-tracking) handles in-app message registration automatically; no extra integration is required. This is the recommended method for handling in-app message registration. If you plan on using this method, you can [skip to the next step](#step-2-in-app-message-manager-blocklist-optional).
 
 #### Manual registration
 
@@ -156,7 +156,7 @@ public override fun onPause() {
 
 ### Step 2: In-app message manager blocklist (optional)
 
-In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) provides an easy way to accomplish this.
+In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#step-3-enable-user-session-tracking) provides an easy way to accomplish this.
 
 The following sample code adds two activities to the in-app message registration blocklist, `SplashActivity` and `SettingsActivity`:
 
