@@ -7,7 +7,7 @@ noindex: true
 ---
 
 # Git and GitHub
-
+asdfasdf
 > Learn how to use Git and GitHub, so you can contribute to Braze Docs.
 
 {% alert tip %}
