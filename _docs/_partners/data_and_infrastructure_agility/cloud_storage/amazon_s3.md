@@ -63,7 +63,7 @@ Navigate to **Policies** > **Get Started** > **Create Policy** to add permission
 ![][12]
 
 {% alert note %}
-Different policies are required for "Currents" and "Dashboard Data Export". The "s3:GetObject" action is required for error handling.
+Different policies are required for "Currents" and "Dashboard Data Export". The "s3:GetObject" action is required to allow Braze's backend to perform error handling.
 {% endalert %}
 
 Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
