@@ -78,21 +78,21 @@ To calculate the optimal time, Intelligent Timing:
 
 #### Are Machine Opens included when calculating optimal time?
 
-No, machine opens—automated system interactions—are excluded from calculations for optimal time. This ensures that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
+No, machine opens—automated system interactions—are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
 
 #### How precise is the optimal time?
 
-Intelligent Timing schedules messages during each user’s “most engaged hour” based on their session starts and message open events. Within that hour, the message timing is rounded to the nearest 5 minutes. For example, if a user’s optimal time is calculated as 4:58 PM, the message will be scheduled for 5:00 PM. There may be slight delays in delivery due to system activity during busy periods.
+Intelligent Timing schedules messages during each user’s “most engaged hour” based on their session starts and message open events. Within that hour, the message timing is rounded to the nearest five minutes. For example, if a user’s optimal time is calculated as 4:58 PM, the message will be scheduled for 5:00 PM. There may be slight delays in delivery due to system activity during busy periods.
 
 #### What are the fallback calculations if there is not enough data?
 
-If there are fewer than 5 relevant events for a user, Intelligent Timing uses the [fallback time][1] in your message settings. 
+If there are fewer than five relevant events for a user, Intelligent Timing uses the [fallback time][1] in your message settings. 
 
 ### Campaign management
 
 #### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
-Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to ensure that everyone in the world who uses your app will get it successfully delivered.
+Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to successfully deliver to everyone in the world who uses your app.
 
 #### Why is my Intelligent Timing campaign showing little to no sends?
 
@@ -117,7 +117,7 @@ Be careful when filtering based on other campaign sends to avoid targeting ineli
 
 #### Can I use Quiet Hours in my Intelligent Timing campaign?
 
-Quiet Hours can be used on a campaign that uses Intelligent Timing. The Intelligent Timing algorithm will avoid Quiet Hours to ensure the message is still sent to all eligible users. That said, we recommend turning Quiet Hours off unless there are policy, compliance, or other legal implications to when messages can and can't be sent.
+Quiet Hours can be used on a campaign that uses Intelligent Timing. The Intelligent Timing algorithm will avoid Quiet Hours so that it still sends the message to all eligible users. That said, we recommend turning Quiet Hours off unless there are policy, compliance, or other legal implications to when messages can and can't be sent.
 
 #### What happens if the optimal time for a user is within the Quiet Hours? 
 
