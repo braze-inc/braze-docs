@@ -118,11 +118,11 @@ Duplicate user profiles cannot be recovered after merging.
 
 ## Scheduled merging
 
-Similar to rules-based merging, the scheduled users merging feature allows you to automate the merging of user profiles on a daily basis using pre-configured rules.
+Similar to rules-based merging, scheduled merging allows you to automate the merging of user profiles on a daily basis using preconfigured rules.
 
 ![The "Manage Audience" page with "schedule" button.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
-Once the feature is enabled, Braze will automatically assign a timeslot to perform the merge process daily. You can disable schedule merging at any time if needed. Braze will notify the admins of your app group 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
+After the feature is turned on, Braze will automatically assign a timeslot to perform the merge process daily. You can turn off scheduled merging at any time. Braze will notify the admins of your workspace 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
 
 
 {% alert warning %}
