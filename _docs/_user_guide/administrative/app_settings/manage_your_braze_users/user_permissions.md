@@ -42,9 +42,9 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
-### How do permission sets and roles differ from teams?
+## How do permission sets and roles differ from teams?
 
-Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## Editing a user's permissions
 
