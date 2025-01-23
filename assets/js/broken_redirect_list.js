@@ -1964,4 +1964,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/sdk_integration'] = '/docs/developer_guide/platforms/xamarin/sdk_integration';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshooting'] = '/docs/developer_guide/platforms/xamarin/troubleshooting';
 
+validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
+
 // validurls['OLD'] = 'NEW';
