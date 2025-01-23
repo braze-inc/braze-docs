@@ -73,6 +73,7 @@ if (base === 'docs'){
     hash: window.location.hash,
     anchor: window.location.hash.split('?')[0]
   });
+  braze.requestImmediateDataFlush();
 }
 
 })();
