@@ -141,7 +141,7 @@ public class GlideIntegrationApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Braze.getInstance(context).setBrazeImageLoader(new GlideBrazeImageLoader());
+    Braze.getInstance(context).setImageLoader(new GlideBrazeImageLoader());
   }
 }
 ```
@@ -153,7 +153,7 @@ public class GlideIntegrationApplication extends Application {
 class GlideIntegrationApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    Braze.getInstance(context).appboyImageLoader = GlideBrazeImageLoader()
+    Braze.getInstance(context).imageLoader = GlideBrazeImageLoader()
   }
 }
 ```
