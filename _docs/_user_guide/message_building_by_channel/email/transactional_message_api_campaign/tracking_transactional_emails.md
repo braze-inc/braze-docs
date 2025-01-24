@@ -19,7 +19,7 @@ When you send transactional emails—like order confirmations or password resets
 Use this feature to:
 
 - **Monitor your emails in real-time:** Immediately see if messages are sent, processed, delivered, or encounter issues.
-- **Respond proactively:** Retry messages, switch to another channel like SMS, or use fallback systems to ensure your communications are delivered.
+- **Respond proactively:** Retry messages, switch to another channel like SMS, or use fallback systems to make sure your communications are delivered.
 
 ## How it works
 
