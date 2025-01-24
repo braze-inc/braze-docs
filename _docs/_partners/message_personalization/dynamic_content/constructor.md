@@ -54,7 +54,7 @@ You can use Constructor’s Offsite Discovery API URL to render product images a
 | `ui` | Represents the user's identifier, crucial for personalizing recommendation results. Set the `ui` parameter as the customer’s `external_id` in Braze. If omitted, Constructor will return general recommendations instead of user-specific ones. |
 | `pod_id` | Identifier for the pod containing strategy and searchandising rules for recommendations (for example, a pod with a bestseller strategy generates personalized bestseller). |
 | `key` | Constructor API key identifying a customer. |
-| `style_id` | Determines which images are displayed for the product card. Example: Different style_ids display unique product card images. <br>![A style example named "GREENIES" in uppercase letters.]({% image_buster /assets/img/constructor/constructor_style1.png %}) ![A style example named "Greenies" in sentence-case.]({% image_buster /assets/img/constructor/constructor_style2.png %}) |
+| `style_id` | Determines which images are displayed for the product card. For example, different `style_ids` display unique product card images. <br>![A style example named "GREENIES" in uppercase letters.]({% image_buster /assets/img/constructor/constructor_style1.png %}) ![A style example named "Greenies" in sentence-case.]({% image_buster /assets/img/constructor/constructor_style2.png %}) |
 | `campaign_id` | Unique ID for the email campaign. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
