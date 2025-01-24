@@ -50,19 +50,13 @@ You can use Constructor’s Offsite Discovery API URL to render product images a
 
 | Parameters | Description |
 |-------------|-------------|
-| `position` | Refers to the ranking of the specific recommended item within the suggested list (for example, `position = 2`). |
+| `position` | Refers to the ranking of the specific recommended item within the suggested list (for example, `position = 2`). <br>![Position ranking of item.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
 | `ui` | Represents the user's identifier, crucial for personalizing recommendation results. Set the `ui` parameter as the customer’s `external_id` in Braze. If omitted, Constructor will return general recommendations instead of user-specific ones. |
 | `pod_id` | Identifier for the pod containing strategy and searchandising rules for recommendations (for example, a pod with a bestseller strategy generates personalized bestseller). |
 | `key` | Constructor API key identifying a customer. |
-| `style_id` | Determines which images are displayed for the product card. Example: Different style_ids display unique product card images. |
+| `style_id` | Determines which images are displayed for the product card. Example: Different style_ids display unique product card images. <br>![A style example named "GREENIES" in uppercase letters.]({% image_buster /assets/img/constructor/constructor_style1.png %}) ![A style example named "Greenies" in sentence-case.]({% image_buster /assets/img/constructor/constructor_style2.png %}) |
 | `campaign_id` | Unique ID for the email campaign. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![Position ranking of item.]({% image_buster /assets/img/constructor/constructor_position.png %})
-
-![Style 1.]({% image_buster /assets/img/constructor/constructor_style1.png %})
-
-![Style 2.]({% image_buster /assets/img/constructor/constructor_style2.png %})
 
 ### Optional inputs
 
@@ -72,5 +66,5 @@ You can use Constructor’s Offsite Discovery API URL to render product images a
 | `num_results` | Number of products to be added to the email. The default is 10, up to 100. For example, `num_results = 3` means three recommendations are added. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Optional Inputs.]({% image_buster /assets/img/constructor/constructor_optional.png %})
+![An example with optional inputs.]({% image_buster /assets/img/constructor/constructor_optional.png %})
 
