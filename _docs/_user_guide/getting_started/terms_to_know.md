@@ -11,7 +11,7 @@ description: "This glossary covers important terms to know as you go through the
 
 glossaries:
   - name: Active User
-    description: Braze defines an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> for a given period as any user who has a session at that time.
+    description: In Braze, an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> is defined as any user who has a session at a given period.
   - name: A/B Multivariate Testing
     description: This is a type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing">A/B Testing</a> can be done in dashboard campaigns.
   - name: App Instances
@@ -43,7 +43,7 @@ glossaries:
   - name: Custom Events
     description: <a href="https://www.braze.com/docs/user_guide/data/custom_data/custom_events">Custom events</a> are actions taken by your users; they're best suited for tracking high-value user interactions with your application.
   - name: Data Point
-    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/">custom attribute</a> is set or updated (even if you're updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data/custom_data/custom_events">custom event</a> or purchase event is logged, any standard data (for example, email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/">custom attribute</a> is set or updated (even if you're updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data/custom_data/custom_events">custom event</a> or purchase event is logged, any standard data (for example, <code>email</code>, <code>first_name</code>, <code>last_name</code>, <code>country</code>, or <code>home_city</code>) is logged, when a session starts, and when a session ends.
   - name: Deep Linking
     description: <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/">Deep links</a> are used to direct customers to their next action or engagement. Using deep links, you can connect a message with a targeted piece of content within a website or mobile app.
   - name: Dormant Users
@@ -53,23 +53,23 @@ glossaries:
   - name: Exception Events
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/">Exception events</a> occur when a user has reached the desired goal and do not receive a triggered message. This ensures that the triggered message is still relevant to the user.
   - name: Frequency Capping
-    description: An automated limit on messages to ensure users don't receive too many communications in a short period of time. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping">Frequency capping</a> allows you to manage communication without overwhelming your audience. 
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping">Frequency capping</a> allows you to manage communication without overwhelming your audience. It's an automated limit on messages to ensure users don't receive too many communications in a short period of time.
   - name: HIPAA
-    description: An acronym for Health Insurance Portability and Accountability Act. Braze is <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA compliant</a>. HIPAA requirements involve administrative, physical, and technical security.
+    description: HIPAA is an acronym for Health Insurance Portability and Accountability Act. Braze is <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA compliant</a>. HIPAA requirements involve administrative, physical, and technical security.
   - name: In-App Messages
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/">In-app messages</a> are mobile messages that appear within your application. They help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app.
   - name: Inactive Users
     description: A user is considered <a href="https://www.braze.com/docs/user_archival/#inactive-users">inactive</a> when they reach certain criteria like no longer receiving email or push messages and have not been active for over 6 months.
   - name: IP Warming
-    description: The practice of gradually increasing the amount of mail sent out from a dedicated IP. <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming">IP warming</a> helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.
+    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming">IP warming</a> is the practice of gradually increasing the amount of mail sent out from a dedicated IP. This helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.
   - name: Key-Value Pairs
-    description: Two linked data items where the key is a unique identifier and the value is the content. <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/">Key-value pairs</a> can be used to send extra data payloads to user devices.
+    description: <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/">Key-value pairs</a> are linked data items where the key is a unique identifier and the value is the content. They can be used to send extra data payloads to user devices.
   - name: Liquid
-    description: A commonly-used, customer-facing template language created by Shopify and written in Ruby, <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
+    description: Liquid is a commonly-used, customer-facing template language created by Shopify and written in Ruby. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
   - name: Messaging Channel
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers–through push notifications on their phone or web browser, email, in-app messages, and so much more!
   - name: Monthly Active User (MAU)
-    description: Any user who has a session within the last 30 days.
+    description: These are users who have a session within the last 30 days.
   - name: Multichannel Messaging
     description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/getting_started/platform_overview/#multichannel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: Multivariate Testing
@@ -91,7 +91,7 @@ glossaries:
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.
   - name: Segmentation
-    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, etc.
+    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, and more.
   - name: Software Development Kit (SDK)
     description: <a href="https://www.braze.com/docs/developer_guide/getting_started/sdk_overview/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platforms/swift/sdk_integration/#integrating-the-sdk/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platforms/android/sdk_integration/#step-1-configure-brazexml">Android</a>.
   - name: Sunsetting
