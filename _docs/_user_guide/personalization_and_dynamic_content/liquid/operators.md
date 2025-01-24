@@ -25,9 +25,9 @@ This table lists the operators that are supported. Note that parentheses are inv
 | contains | checks to see if a string or string array contains a string|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Use cases
+## Tutorials
 
-Here are some use cases of how these operators could be helpful for your marketing campaigns:
+Let's go through a few tutorials to learn how use these operators for your marketing campaigns:
 
 ### Choose message with an integer custom attribute
 
