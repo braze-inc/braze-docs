@@ -53,13 +53,13 @@ glossaries:
   - name: Exception Events
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/">Exception events</a> occur when a user has reached the desired goal and do not receive a triggered message. This ensures that the triggered message is still relevant to the user.
   - name: Frequency Capping
-    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping">Frequency capping</a> allows you to manage communication without overwhelming your audience. It's an automated limit on messages to ensure users don't receive too many communications in a short period of time.
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping">Frequency capping</a> allows you to manage communication without overwhelming your audience. It's an automated limit on messages to prevent users from receiving too many communications in a short period of time.
   - name: HIPAA
     description: HIPAA is an acronym for Health Insurance Portability and Accountability Act. Braze is <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA compliant</a>. HIPAA requirements involve administrative, physical, and technical security.
   - name: In-App Messages
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/">In-app messages</a> are mobile messages that appear within your application. They help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app.
   - name: Inactive Users
-    description: A user is considered <a href="https://www.braze.com/docs/user_archival/#inactive-users">inactive</a> when they reach certain criteria like no longer receiving email or push messages and have not been active for over 6 months.
+    description: A user is considered <a href="https://www.braze.com/docs/user_archival/#inactive-users">inactive</a> when they reach certain criteria like no longer receiving email or push messages and have not been active for over six months.
   - name: IP Warming
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming">IP warming</a> is the practice of gradually increasing the amount of mail sent out from a dedicated IP. This helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.
   - name: Key-Value Pairs
