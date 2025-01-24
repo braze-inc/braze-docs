@@ -1966,4 +1966,6 @@ validurls['/docs/developer_guide/platform_integration_guides/xamarin/troubleshoo
 
 validurls['/docs/user_guide/data/user_data_collection/data_collected_by_default'] = '/docs/user_guide/data/user_data_collection/sdk_data_collection';
 
+validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/unlisted_docs/post_duplicate_canvases/';
+
 // validurls['OLD'] = 'NEW';
