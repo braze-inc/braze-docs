@@ -59,6 +59,10 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ![Suspend a user when editing the user details.][5]
 
+## Assigning user access and responsibilities
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Deleting Braze users
 
 To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
