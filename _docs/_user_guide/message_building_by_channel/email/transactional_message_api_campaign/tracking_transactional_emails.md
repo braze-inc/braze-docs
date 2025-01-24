@@ -14,7 +14,7 @@ channel: email
 
 > This page describes how to set up real-time tracking for [transactional email campaigns][1]. For more information about the endpoint itself, refer to [Send transactional emails using API-triggered delivery][2].
 
-When you send transactional emails—like order confirmations or password resets—it’s essential to know whether they reach your customers. With Braze’s transactional HTTP event postbacks, you’ll get real-time insights into the status of every transactional email, so you can act quickly if there’s an issue.
+When you send transactional emails—like order confirmations or password resets—it’s essential to know whether they reach your customers. With Braze transactional HTTP event postbacks, you’ll get real-time insights into the status of every transactional email, so you can act quickly if there’s an issue.
 
 Use this feature to:
 
