@@ -59,6 +59,6 @@ No, you currently can only connect one subdomain to a workspace.
 
 ### Can I use the same subdomain that I currently use for my main website or my sending domain?
 
-No, you can't use subdomains that you're already using. While these are valid subdomains to use, they can't be used for landing pages if they're already in use or have records that would conflict with the necessary CNAME records.
+No, you can't use subdomains that are already in use. While these subdomains are valid, they cannot be used for landing pages if they are already assigned to other purposes or have DNS records that conflict with the required CNAME records.
 
 [1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}
