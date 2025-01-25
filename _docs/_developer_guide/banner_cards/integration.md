@@ -199,6 +199,9 @@ braze.subscribeToBannersUpdates((banners) => {
    
     // get this placement's banner. If it's `null` the user did not qualify for one.
     const globalBanner = braze.getBanner("global_banner");
+    if (!globalBanner) {
+        return;
+    }
 
     // choose where in the DOM you want to insert the banner HTML
     const container = document.getElementById("global-banner-container");
