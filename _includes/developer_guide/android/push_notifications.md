@@ -631,3 +631,17 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+## Setting up alerts for exceeding FCM rate limit
+
+The FCM API has a default rate limit of 600,000 requests per minute. When this limit is exceeded, Braze will retry sending messages within a few minutes, but a high volume of these errors can lead to varying sending times. To monitor that your push notifications deliver, you can sign up to receive notification if this rate limit may be exceeded.
+
+{% alert important %}
+Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
+We recommend these best practices to keep these error volumes low:
+
+- If you reach the FCM API rate limit, contact [Firebase Support](https://firebase.google.com/support) to request an increase.
+- Stagger campaigns or Canvases so that they don't send Android push notifications at the same time. For example, you can update campaign start times or rate limit individual campaigns.
+- You can request Braze to limit all Android push notification sends in your workspace by [contacting Support]({{site.baseurl}}/help/support#access-the-support-portal).
