@@ -1,6 +1,6 @@
 ---
-nav_title: mParticle
-article_title: mParticle
+nav_title: mParticle by Rokt
+article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# mParticle
+# mParticle by Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
