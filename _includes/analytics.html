@@ -49,7 +49,8 @@ braze.initialize('{{ site.api_key }}', {
   allowUserSuppliedJavascript: true,
   sessionTimeoutInSeconds: 300,
   baseUrl: 'sdk.iad-01.braze.com',
-  doNotLoadFontAwesome: true
+  doNotLoadFontAwesome: true,
+  serviceWorkerLocation: '/docs/service-worker.js'
 });
 braze.subscribeToContentCardsUpdates(function(updates) {
   if (updates.cards.length > 0) {
