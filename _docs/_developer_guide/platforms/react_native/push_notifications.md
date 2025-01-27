@@ -167,7 +167,7 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 If you are using the Braze Expo plugin, step 3.1 is handled automatically, and you may skip to step 3.2.
 {% endalert %}
 
-##### Step 3.1.1: Add BrazeReactDelegate
+##### Step 3.1.1: Add `BrazeReactDelegate`
 
 Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST}` with your actual domain host, such as `braze.com`!
 
@@ -209,7 +209,7 @@ Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST
 @end
 ```
 
-##### Step 3.1.2: Update your AppDelegate
+##### Step 3.1.2: Update your `AppDelegate`
 
 Add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method, and register your `BrazeReactDelegate`. For example:
 
