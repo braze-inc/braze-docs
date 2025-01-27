@@ -195,10 +195,10 @@ The following table describes the benefits and drawbacks of these two approaches
         <td>Subscription statuses across app instances are combined for a user profile.<br><br><b>Tip:</b> You could use custom attributes to manage subscriptions instead.</td>
     </tr>
     <tr>
-        <td>User permissions</td>
+        <td>Braze user permissions</td>
         <td>N/A</td>
-        <td>Updating user permissions for a dashboard user must be done separately for each workspace the user needs access to.</td>
-        <td>User permissions can be set once for a dashboard user and they will have the same permissions for all app instances in the workspace.</td>
+        <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
+        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
         <td>N/A</td>
     </tr>
     <tr>
