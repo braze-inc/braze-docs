@@ -632,7 +632,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
 
-## Setting up alerts for exceeding FCM rate limit
+## FCM quota exceeded errors
 
 When the [default rate limit](#rate-limits) for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
 
