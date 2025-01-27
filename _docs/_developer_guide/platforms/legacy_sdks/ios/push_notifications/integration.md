@@ -46,6 +46,10 @@ Before you can send an iOS push notification using Braze, you must provide your 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
 {% endalert %}
 
+{% alert important %}
+For step 7, you must indicate whether to send notifications to the production or development (sandbox) environment. The app’s environment is defined by its provisioning profile.
+{% endalert %}
+
 ## Step 2: Enable push capabilities
 
 In your project settings, ensure that under the **Capabilities** tab, your **Push Notifications** capability is toggled on.
