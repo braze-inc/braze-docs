@@ -78,13 +78,7 @@ Note that you will need to use these settings instead of the native setup instru
 {% endtab %}
 
 {% tab Android Native %}
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/):
-
-1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
-2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
-3. [Create a service account]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-3-create-a-service-account).
-4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
-5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 {% endtab %}
 
 {% tab iOS Native %}
