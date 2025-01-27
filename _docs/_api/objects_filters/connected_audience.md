@@ -160,5 +160,4 @@ This filter allows you to segment based on when was the last time the user used 
 
 ### Considerations
 
-Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. However, you can further specify predefined segments by using connected audience filters with a message's segment parameter or schedule an API call.
-
+Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. However, you can further specify predefined segments by using connected audience filters within a message segment parameter or scheduled API call.
