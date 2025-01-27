@@ -1,6 +1,6 @@
 ---
-nav_title: Integrate the SDK
-article_title: Integrate the Braze SDK
+nav_title: Integrating the SDK
+article_title: Integrating the Braze SDK
 description: "Learn how to integrate the Braze SDK."
 page_order: 2
 toc_headers: h2
@@ -8,7 +8,7 @@ toc_headers: h2
 
 # Integrate the Braze SDK
 
-> DESCRIPTION.
+> Learn how to integrate the Braze SDK into your mobile app.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -23,6 +23,10 @@ toc_headers: h2
 {% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
+{% sdktab fireos %}
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
+{% endsdktab %}
+
 {% sdktab cordova %}
 {% multi_lang_include developer_guide/cordova/sdk_integration.md %}
 {% endsdktab %}
@@ -32,22 +36,22 @@ toc_headers: h2
 {% endsdktab %}
 
 {% sdktab react native %}
-Android test.
+{% multi_lang_include developer_guide/react_native/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-Android test.
+{% multi_lang_include developer_guide/roku/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-Android test.
+{% multi_lang_include developer_guide/unity/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-Android test.
+{% multi_lang_include developer_guide/unreal_engine/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-Android test.
+{% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
 {% endsdktabs %}
