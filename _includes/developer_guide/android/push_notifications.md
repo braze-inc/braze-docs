@@ -634,7 +634,7 @@ This example uses the `US-01` instance. If you are not on this instance, replace
 
 ## Setting up alerts for exceeding FCM rate limit
 
-The FCM API has a default rate limit of 600,000 requests per minute. When this limit is exceeded, Braze will retry sending messages within a few minutes, but a high volume of these errors can lead to varying sending times. To monitor that your push notifications deliver, you can sign up to receive notification if this rate limit may be exceeded.
+When the [default rate limit](#rate-limits) is exceeded, Google returns "quota exceeded" errors. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
 
 {% alert important %}
 Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
