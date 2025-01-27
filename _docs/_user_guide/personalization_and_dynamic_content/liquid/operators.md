@@ -31,27 +31,47 @@ Let's go through a few tutorials to learn how use these operators for your marke
 
 ### Choose message with an integer custom attribute
 
+Let's send personalized promotional discounts to users who have and haven't made purchases.
+
+1. Begin a conditional statement that checks if a user's total spend is greater than `0` to capture users who've made purchases. Then, create a message to send to those users.
+
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+```
+{% endraw %}
+
+{: start="2"}
+2. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users whose total spend equals `0` or doesn't exist. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
 {% else %}
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+```
+{% endraw %}
+
+{: start="3"}
+3. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
 ![][13]{: width="100%"}
 
-In this use case, if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
+Now if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
-Thanks for purchasing! Here's another 10% off!
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
 ```
 If a customer's "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
 
 ```
-Buy now! Would 5% off convince you?
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
 ### Choose message with a string custom attribute
