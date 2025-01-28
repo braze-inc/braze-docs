@@ -10,7 +10,8 @@ _Your reason here..._
 ### Related PRs, issues, or features (optional)
 <!--
 For related GitHub issues and features, add "Fixes #ISSUE_NUMBER".
-For Jira tickets, add the ticket number and a link to the ticket, like: [BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER).
+For Jira tickets, add the ticket number and a link to the ticket, like:
+[BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
 -->
 - N/A
 
@@ -32,7 +33,7 @@ For Jira tickets, add the ticket number and a link to the ticket, like: [BD-NUMB
 ### Submitting for review
 
 If your PR meets the above requirements, select **Ready for review**, then add a reviewer:
-- **Non-Braze contributors:** Add `braze-inc/docs-team` as the reviewer.
+- **Non-Braze contributors:** Tag `@braze-inc/docs-team` in a comment below.
 - **Braze employees:** Have any relevant subject matter experts (like engineers or product managers) review your work first, then add the [tech writer assigned to your specific vertical](https://confluence.braze.com/pages/viewpage.action?pageId=75039896). If you're not sure which tech writer to add, you can add `braze-inc/docs-team` instead. 
 
 Thanks for contributing! We look forward to reading your work.
