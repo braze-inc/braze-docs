@@ -169,7 +169,7 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 - Links to the Message Activity Log and related documentation
 
 {% alert note %}
-The 100,000 webhook or Connected Content endpoint error threshold is configurable per workspace. To change this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
 {% endalert %}
 
 The endpoint errors are:
