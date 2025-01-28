@@ -32,3 +32,19 @@ In order to render the Liquid passback properly, you must put the {% raw %}`${la
 {% alert important %}
 Remember that the `:rerender` flag option is only one level deep. If the Connected Content response itself has more Connected Content tags, Braze will not re-render those additional tags.
 {% endalert %}
+
+## Best practices
+
+### Use `json_escape` with Liquid tags that could break the JSON format
+
+When using `:rerender`, add the `json_escape` filter to any Liquid tag that could potentially break the JSON format. This is becuase if your Liquid tags contains characters that break the JSON format, the response will be interpreted as text and be templated into the message as is.
+
+For example, this Liquid will break the JSON format and template the response into the message:
+
+{% raw %}
+```liquid
+[{
+"message":"{{event_properties.${message} | json_escape}}"
+}]
+```
+{% endraw %}
