@@ -1,6 +1,6 @@
 ## About the Android Braze SDK
 
-Learn how to integrate the Braze Android SDK. To learn more about the SDK in general, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Learn how to integrate the Braze Android SDK.
 
 ## Integrating the SDK
 

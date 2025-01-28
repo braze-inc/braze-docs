@@ -3,12 +3,11 @@ nav_title: Integrating the SDK
 article_title: Integrating the Braze SDK
 description: "Learn how to integrate the Braze SDK."
 page_order: 2
-toc_headers: h2
 ---
 
-# Integrate the Braze SDK
+# Integrating the Braze SDK
 
-> Learn how to integrate the Braze SDK into your mobile app.
+> Learn how to integrate the Braze SDK into your mobile app. To learn more about the SDK in general, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 {% sdktabs %}
 {% sdktab android %}
