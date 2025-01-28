@@ -31,7 +31,7 @@ Let's go through a few tutorials to learn how use these operators for your marke
 
 ### Choose message with an integer custom attribute
 
-Let's send personalized promotional discounts to users who have and haven't made purchases.
+Let's send push notifications with personalized promotional discounts to users who have and haven't made purchases. This will use an integer custom attribute called `total_spend` to check a user's total spend.
 
 1. Begin a conditional statement that checks if a user's total spend is greater than `0` to capture users who've made purchases. Then, create a message to send to those users.
 
@@ -61,14 +61,26 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![][13]{: width="100%"}
+![A push notification composer with the full Liquid code from the tutorial.][13]{: width="100%"}
 
-Now if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${total_spend}}} >0 %}
+Surprise! We added a 15% discount code to your account that automatically applies to your next order.
+{% else %}
+Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+Now if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
 ```
-If a customer's "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
+If a user's "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
 
 ```
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
@@ -76,36 +88,78 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 
 ### Choose message with a string custom attribute
 
-{% raw %}
+Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use an string custom attribute called `recent_game` to check which game a user has last played.
 
+1. Begin a conditional statement that checks if a user's most recent game is Awkward Dinner Party. Then, create a message to send to those users.
+
+{% raw %}
 ```liquid
-{% if {{custom_attribute.${Game}}} == 'Game1' %}
-You played our Game! We're so happy!
-{% elsif{{custom_attribute.${Game}}} == 'Game2' %}
-You played our other Game! Woop!{% else %}
-Hey! Get in here and play this Game!
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+```
+{% endraw %}
+
+{: start="2"}
+2. Use the `eslif` tag to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+```
+{% endraw %}
+
+{: start="3"}
+3. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users whose recent game isn't Awkward Dinner Party or Proxy War 3: War of Thirst, and users who don't have a recent game. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+```
+{% endraw %}
+
+{: start="4"}
+4. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
 {% endif %}
 ```
 {% endraw %}
 
-![][14]
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
+{% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+{% else %}
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
 
-In this use case, if you have played a certain game, you'll receive the following message:
+![A push notification composer with the full Liquid code from the tutorial.][14]
+
+Now, if a user last played Awkward Dinner Party, they'll receive this message:
 
 ```
-You played our Game! We're so happy!
+You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 ```
 
-If you played another specified game:
+If a user's most recent game is Proxy War 3: War of Thirst, they will receive this message:
 
 ```
-You played our other Game! Woop!
+Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-If you haven't played any games, or that custom attribute doesn't exist on your profile, you'd get the following message:
+If a user hasn't played any games, or that custom attribute doesn't exist on their profile, they'll get this message:
 
 ```
-Hey! Get in here and play this Game!
+Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 
 ### Abort message based on location
@@ -122,7 +176,7 @@ Stream now!
 ```
 {% endraw %}
 
-![][26]
+![A push notification composer with the full Liquid code from the tutorial.][26]
 
 You can also [abort messages][1] based on Connected Content.
 
