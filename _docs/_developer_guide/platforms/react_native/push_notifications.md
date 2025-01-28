@@ -164,12 +164,10 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 {% tab iOS Native %}
 #### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
-If you are using the Braze Expo plugin, step 3.1 is handled automatically, and you may skip to step 3.2.
+Skip this step if you're using the Braze Expo plugin, as this is functionality is handled automatically.
 {% endalert %}
 
-##### Step 3.1.1: Add `BrazeReactDelegate`
-
-Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST}` with your actual domain host, such as `braze.com`!
+In your `iOS` directory, create `BrazeReactDelegate.h` and add the following code snippet to the file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
 
 ```objc
 // BrazeReactDelegate.h
@@ -180,6 +178,8 @@ Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST
 
 @end
 ```
+
+Next, create `BrazeReactDelegate.m` and add the following code snippet to the file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
 
 ```objc
 // BrazeReactDelegate.m
@@ -192,7 +192,7 @@ Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST
 ///
 /// Reference the `BRZURLContext` object to get additional details about the URL payload.
 - (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
-  if ([[context.url.host lowercaseString] isEqualToString:@"{YOUR_DOMAIN_HOST}"]) {
+  if ([[context.url.host lowercaseString] isEqualToString:@"YOUR_DOMAIN_HOST"]) {
     // Sample custom handling of universal links
     UIApplication *application = UIApplication.sharedApplication;
     NSUserActivity* userActivity = [[NSUserActivity alloc] initWithActivityType:NSUserActivityTypeBrowsingWeb];
@@ -209,9 +209,9 @@ Create two new files in your `iOS` folder. Be sure to replace `{YOUR_DOMAIN_HOST
 @end
 ```
 
-##### Step 3.1.2: Update your `AppDelegate`
+In your project's `AppDelegate`, add `populateInitialPayloadFromLaunchOptions` to your `didFinishLaunchingWithOptions` method, then register your `BrazeReactDelegate`.
 
-Add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method, and register your `BrazeReactDelegate`. For example:
+When you're finished, your `AppDelegate` should be similar to the following:
 
 ```objc
 [...]
