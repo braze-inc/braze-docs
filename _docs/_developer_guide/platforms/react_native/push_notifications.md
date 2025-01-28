@@ -167,7 +167,7 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 Skip this step if you're using the Braze Expo plugin, as this is functionality is handled automatically.
 {% endalert %}
 
-In your `iOS` directory, create `BrazeReactDelegate.h` and add the following code snippet to the file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
+In your `iOS` directory, create `BrazeReactDelegate.h`, then add the following code snippet to your file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
 
 ```objc
 // BrazeReactDelegate.h
@@ -179,7 +179,7 @@ In your `iOS` directory, create `BrazeReactDelegate.h` and add the following cod
 @end
 ```
 
-Next, create `BrazeReactDelegate.m` and add the following code snippet to the file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
+Next, create `BrazeReactDelegate.m`, then add the following code snippet to your file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
 
 ```objc
 // BrazeReactDelegate.m
