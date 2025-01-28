@@ -37,9 +37,9 @@ Remember that the `:rerender` flag option is only one level deep. If the Connect
 
 ### Use `json_escape` with Liquid tags that could break the JSON format
 
-When using `:rerender`, add the `json_escape` filter to any Liquid tag that could potentially break the JSON format. This is becuase if your Liquid tags contains characters that break the JSON format, the entire Connected Content response will be interpreted as text and be templated into the message, and none of the variables will be saved.
+When using `:rerender`, add the `json_escape` filter to any Liquid tag that could potentially break the JSON format. If your Liquid tags contain characters that break the JSON format, the entire Connected Content response will be interpreted as text and be templated into the message, and none of the variables will be saved.
 
-For example, if the "message" event property in the example below contains characters that could break the JSON format, add the `json_escape` filter like in this example:
+For example, if the `message` event property in the example below contains characters that could break the JSON format, add the `json_escape` filter like in this example:
 
 {% raw %}
 ```liquid
