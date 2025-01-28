@@ -69,7 +69,6 @@ print("|------|-------|")
 for md_file, blog_urls in file_blogs.items():
     article_title = page_titles[md_file]
     
-    # Build docs_url by removing "_docs/" once, removing ".md", then prepending the domain
     docs_url = md_file
     if "_docs/_" in docs_url:
         docs_url = docs_url.replace("_docs/_", "", 1)
