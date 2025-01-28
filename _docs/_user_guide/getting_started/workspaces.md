@@ -188,11 +188,11 @@ The following table describes the benefits and drawbacks of these two approaches
         <td>Frequency capping applies to all campaigns, not on a per-app basis, which makes it harder to prevent over-messaging customers.</td>
     </tr>
     <tr>
-        <td>Subscription status</td>
-        <td>Subscription status for each user profile is unique to each app instance.</td>
+        <td>Subscription status for user profiles</td>
+        <td>Each user profile's subscription status is unique to each app instance.</td>
         <td>N/A</td>
         <td>N/A</td>
-        <td>Subscription statuses across app instances are combined for a user profile.<br><br><b>Tip:</b> You could use custom attributes to manage subscriptions instead.</td>
+        <td>A user profile's subscription statuses are combined across app instances.<br><br><b>Tip:</b> You could use <a href='/docs/user_guide/data/custom_data/custom_attributes'>custom attributes</a> to manage your users' subscriptions instead.</td>
     </tr>
     <tr>
         <td>Braze user permissions</td>
