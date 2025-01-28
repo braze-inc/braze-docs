@@ -32,6 +32,12 @@ Starting with iOS 17.2, Apple will block all declared tracking endpoints in your
 For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
 {% endalert %}
 
+### Prerequisites
+
+The following Braze SDK version is required to implement this feature:
+
+{% sdk_min_versions swift:9.0.0 %}
+
 ### Step 1: Review your current policies
 
 Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
