@@ -168,6 +168,10 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 - Time the error was last observed
 - Links to the Message Activity Log and related documentation
 
+{% alert note %}
+The 100,000 webhook or Connected Content endpoint error threshold is configurable per workspace. To change this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
 The endpoint errors are:
 
 - **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
@@ -179,8 +183,6 @@ To sign up to receive these emails, do the following:
 
 1. Go to **Settings** > **Admin Settings** > **Notification Preferences**.
 2. Select **Connected Content Errors** and **Webhook Errors** in the **Canvas & Campaigns** section.
-
-The 100,000 threshold is configurable per workspace. If you wish to change the threshold contact [Braze Support]({{site.baseurl}}/support_contact/).
 
 ### Message Activity Log entries
 
