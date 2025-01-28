@@ -140,7 +140,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
 
 {% alert important %}
-Be sure to allocate and use only one instance of the `BrazePlugin` in your Dart code to avoid undefined behaviors.
+To avoid undefined behaviors, only allocate and use a single instance of the `BrazePlugin` in your Dart code.
 {% endalert %}
 
 ## Testing the integration
