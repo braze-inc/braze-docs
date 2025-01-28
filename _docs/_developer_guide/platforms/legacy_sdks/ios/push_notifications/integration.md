@@ -30,7 +30,7 @@ noindex: true
 
 # Push integration
 
-### Step 1: Upload your APNs certificate
+## Step 1: Upload your APNs certificate
 
 {% multi_lang_include developer_guide/swift/apns_certificate.md %}
 
