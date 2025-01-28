@@ -4,6 +4,8 @@
 # blog posts. This is a misc. utility script used to automate the content found 
 # on this confluence page:
 # https://confluence.braze.com/display/PDT/List+of+pages+linking+to+Braze+blog+posts
+# 
+# Usage: ./scripts/utils/get_blog_links.py
 
 import os
 import re
@@ -17,11 +19,8 @@ SEARCH_DIR = PROJECT_ROOT+"/_docs"
 # Regex: non-image Markdown links with "learning.braze.com"
 LINK_PATTERN = re.compile(r"(?<!\!)\[([^\]]+)\]\(([^)]*learning\.braze\.com/[^)]*)\)")
 
+# Gets the article title from the page's YAML front matter.
 def get_article_title(file_content):
-    """
-    Returns the first 'article_title:' value from the file content,
-    or None if not found.
-    """
     for line in file_content.splitlines():
         stripped = line.strip()
         if stripped.startswith("article_title:"):
@@ -30,9 +29,7 @@ def get_article_title(file_content):
             return val if val else None
     return None
 
-# 1. Collect data
-#    - page_titles: file_path -> article_title (fallback to filename if missing)
-#    - file_blogs: file_path -> set of blog_urls found
+# 1. Collect data into dictionary
 page_titles = {}
 file_blogs = defaultdict(set)
 
