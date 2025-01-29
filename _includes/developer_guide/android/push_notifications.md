@@ -650,12 +650,5 @@ We recommend these best practices to keep these error volumes low:
         3. Select **Edit Quota**, enter a new value and submit your request.
         4. Alternatively, contact [Firebase Support](https://firebase.google.com/support) directly.
 
-- Reduce campaign sending speed
-    - Rate limit individual campaigns or canvases in the Target Audience tab or Send Settings tabs respectively.  
-
-- Space out one-time and periodic campaigns 
-    - Stagger campaign start times.
-    - Use Braze’s rate-limiting options for individual campaigns.
-
 - Request global rate limiting via Braze
     - To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).  
