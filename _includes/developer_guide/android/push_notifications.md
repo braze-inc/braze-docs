@@ -642,22 +642,20 @@ Setting up alerts for exceeding FCM rate limit for Android push notifications is
 
 We recommend these best practices to keep these error volumes low:
 
-- **Request a rate limit increase from FCM**
-    - Go to your **Google Cloud Console** > **APIs & Services** > **Firebase Cloud Messaging API** > **Quotas & System Limits**, or visit the [Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
-    - The default rate limit is [default rate limit](#rate-limits).
-    - **To request an increase**:
+- Request a rate limit increase from FCM
+    - Go to your *Google Cloud Console* > *APIs & Services* > *Firebase Cloud Messaging API* > *Quotas & System Limits*, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+    - To request an increase:
         1. On the quotas page, locate the **Send requests per minute** quota.
-        2. Click the **(⋮)** next to the quota.
+        2. Click the **⋮** next to the quota.
         3. Select **Edit Quota**, enter a new value and submit your request.
         4. Alternatively, contact [Firebase Support](https://firebase.google.com/support) directly.
 
-- **Reduce campaign sending speed**
-  Rate limit individual campaigns or canvases in the Target Audience tab or Send Settings tabs respectively.  
+- Reduce campaign sending speed
+    - Rate limit individual campaigns or canvases in the Target Audience tab or Send Settings tabs respectively.  
 
-- **Space out one-time and periodic campaigns**  
-  Avoid scheduling multiple campaigns to send simultaneously. Instead:
+- Space out one-time and periodic campaigns 
     - Stagger campaign start times.
     - Use Braze’s rate-limiting options for individual campaigns.
 
-- **Request global rate limiting via Braze**  
-  To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).  
+- Request global rate limiting via Braze
+    - To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).  
