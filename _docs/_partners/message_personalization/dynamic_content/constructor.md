@@ -53,8 +53,8 @@ You can use Constructor’s Offsite Discovery API URL to render product images a
 | `position` | Refers to the ranking of the specific recommended item within the suggested list (for example, `position = 2`). <br>![Position ranking of item.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
 | `ui` | Represents the user's identifier, crucial for personalizing recommendation results. Set the `ui` parameter as the customer’s `external_id` in Braze. If omitted, Constructor will return general recommendations instead of user-specific ones. |
 | `pod_id` | Identifier for the pod containing strategy and searchandising rules for recommendations (for example, a pod with a bestseller strategy generates personalized bestseller). |
-| `key` | Constructor API key identifying a customer. |
-| `style_id` | Determines which images are displayed for the product card. For example, different `style_ids` display unique product card images. <br>![A style example named "GREENIES" in uppercase letters.]({% image_buster /assets/img/constructor/constructor_style1.png %}) ![A style example named "Greenies" in sentence-case.]({% image_buster /assets/img/constructor/constructor_style2.png %}) |
+| `key` | The Constructor API key identifying a customer. |
+| `style_id` | Determines which images are displayed for the product card. For example, different `style_ids` display unique product card images. |
 | `campaign_id` | Unique ID for the email campaign. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -65,6 +65,4 @@ You can use Constructor’s Offsite Discovery API URL to render product images a
 | `item_id` | Represents the seed item. Necessary for item-item based strategies, such as alternative, complementary, bundles. For example, the first item in an email is the seed item, with subsequent items as alternatives. |
 | `num_results` | Number of products to be added to the email. The default is 10, up to 100. For example, `num_results = 3` means three recommendations are added. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![An example with optional inputs.]({% image_buster /assets/img/constructor/constructor_optional.png %})
 
