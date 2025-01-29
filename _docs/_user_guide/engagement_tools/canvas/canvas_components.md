@@ -54,7 +54,7 @@ Use [Action Paths][1] to split your user journey based on actions and engagement
 
 [Decision Split][3] components use a simple "yes or no" logic to create two mutually exclusive paths for your user journeys that are based on an action or a user attribute. This can help identify and target your user groups.
 
-[Delay][4] components allow you to delay a single step in your Canvas. This stand-alone delay step in your Canvas is best used for communicating messages to your users at a specific time. Additionally, Delay components may also increase your audience outreach by allowing more time for your audience to meet the component's criteria. 
+[Delay][4] components allow you to delay a single step in your Canvas. This stand-alone delay step in your Canvas is best used for communicating messages to your users at a specific time. Additionally, Delay components may also increase your audience outreach by allowing more time for your audience to meet the component's criteria.
 
 ### Testing
 
@@ -62,7 +62,7 @@ When creating your user journeys, you may want to also test for the most effecti
 
 ### Integration
 
-Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7]. <br><br>
+Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

@@ -95,13 +95,9 @@ You can personalize your webhook URLs using [Liquid][15]. At times, certain endp
 
 The [HTTP method]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/#methods) that you should use will vary depending on the endpoint to which you are sending information. In most cases, you'll use POST.
 
-{% alert important %}
-If you update the HTTP request method to GET in the webhook editor, the request body form will be hidden, and any previously entered content will be lost.
-{% endalert %}
-
 #### Request body
 
-The request body is the information that will be sent to the URL that you specified. You can create the body of your webhook request with JSON key-value pairs or raw text.
+The request body is the information that will be sent to the URL that you specified. You can  create the body of your webhook request with JSON key-value pairs or raw text.
 
 ##### JSON key-value pairs
 

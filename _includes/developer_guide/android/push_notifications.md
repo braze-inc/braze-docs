@@ -631,3 +631,17 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+## FCM quota exceeded errors
+
+When the [default rate limit](#rate-limits) for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
+
+{% alert important %}
+Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
+We recommend these best practices to keep these error volumes low:
+
+- If you reach the FCM API rate limit, contact [Firebase Support](https://firebase.google.com/support) to request an increase.
+- Stagger campaigns or Canvases so that they don't send Android push notifications at the same time. For example, you can update campaign start times or rate limit individual campaigns.
+- You can request Braze to limit all Android push notification sends in your workspace by [contacting Support]({{site.baseurl}}/help/support#access-the-support-portal).
