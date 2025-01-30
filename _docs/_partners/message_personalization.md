@@ -81,4 +81,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
 - name: Trustpilot
   url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+- name: Constructor
+  url: /docs/_partners/message_personalization/dynamic_content/constructor/
 ---
