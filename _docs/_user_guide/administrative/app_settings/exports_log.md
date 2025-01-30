@@ -7,7 +7,7 @@ description: "This page covers the exports log, which lets you view the status o
 
 # Exports log
 
-> Use the **Export Logs** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, export logs only support segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
+> Use the **Exports Log** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, export logs only support segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 {% alert important %}
 The exports log is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
