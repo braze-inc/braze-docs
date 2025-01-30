@@ -634,21 +634,27 @@ This example uses the `US-01` instance. If you are not on this instance, replace
 
 ## FCM quota exceeded errors
 
-When your limit for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. FCM's default limit is 600,000 per minute. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
+When your limit for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. The default limit for FCM is 600,000 requests per minute. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
 
-To check your current limit, go to your *Google Cloud Console* > *APIs & Services* > *Firebase Cloud Messaging API* > *Quotas & System Limits*, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+To check your current limit, go to your **Google Cloud Console** > **APIs & Services** > **Firebase Cloud Messaging API** > **Quotas & System Limits**, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 
 {% alert important %}
 Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
-We recommend these best practices to keep these error volumes low:
+### Best practices
 
-- Request a rate limit increase from FCM
-    1. On the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas), locate the **Send requests per minute** quota.
-    2. Click the **⋮** next to the quota.
-    3. Select **Edit Quota**, enter a new value and submit your request.
-    4. Alternatively, contact [Firebase Support](https://firebase.google.com/support) directly.
+We recommend these best practices to keep these error volumes low.
 
-- Request global rate limiting via Braze
-    - To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).  
+#### Request a rate limit increase from FCM
+
+To request a rate limit increase from FCM, you can contact [Firebase Support](https://firebase.google.com/support) directly or do the following:
+
+1. Go to the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+2. Locate the **Send requests per minute** quota.
+3. Select **Edit Quota**. 
+4. Enter a new value and submit your request.
+
+#### Request global rate limiting via Braze
+
+To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).
