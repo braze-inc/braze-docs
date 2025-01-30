@@ -1,7 +1,7 @@
 ---
 nav_title: Constructor
 article_title: Constructor
-description: "Learn how to integrate Constructor with Braze."
+description: "This reference article outlines the partnership between Braze and Constructor. This partnership allows you to leverage Constructor's Offsite Product Discovery to dynamically generate and deliver personalized product recommendations in Braze messages."
 alias: /partners/constructor/
 page_type: partner
 search_tag: Partner
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Constructor
 
-> [Constructor](https://constructor.com/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for e-commerce and retail websites.
+> [Constructor](https://constructor.com/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
 
 With the Braze and Constructor integration, you can use Constructor’s Offsite Product Discovery to dynamically generate and deliver personalized product recommendations in Braze messages.
 
