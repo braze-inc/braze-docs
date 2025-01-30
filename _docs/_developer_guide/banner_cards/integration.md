@@ -28,7 +28,7 @@ In addition, these are the minimum SDK versions needed to start using Banner Car
 
 ## Integrating Banner Cards
 
-### Step 2: Refresh placements in your app {#requestBannersRefresh}
+### Step 1: Refresh placements in your app {#requestBannersRefresh}
 
 Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
@@ -71,7 +71,7 @@ Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native.
+Braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -99,7 +99,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Listen for updates {#subscribeToBannersUpdates}
+### Step 2: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
 If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
@@ -154,7 +154,16 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native.
+const bannerCardsSubscription = Braze.addListener(
+  Braze.Events.BANNER_CARDS_UPDATED,
+  data => {
+    const banners = data.banners;
+    console.log(
+      `Received ${banners.length} Banner Cards with placement IDs:`,
+      banners.map(banner => banner.placementId),
+    );
+  },
+);
 ```
 
 {% endtab %}
@@ -182,7 +191,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Insert cards by placement ID {#insertBanner}
+### Step 3: Insert cards by placement ID {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -282,7 +291,10 @@ Banner(placementId = "global_banner")
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native.
+
+<Braze.BrazeBannerView
+  placementID='dynamic-height'
+/>
 ```
 
 {% endtab %}
