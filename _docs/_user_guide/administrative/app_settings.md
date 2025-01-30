@@ -62,5 +62,8 @@ guide_menu_list3:
   - name: Custom Data
     link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/database-01.svg
+  - name: Export Logs
+    link: /docs/user_guide/administrative/app_settings/exports_log/
+    image: /assets/img/braze_icons/file-download-02.svg
 
 ---
