@@ -16,11 +16,10 @@ description: "This reference article covers how tags can and should be used in y
 A tag must be wrapped in `{% %}`.
 {% endraw %}
 
-{% alert tip %}
 To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you've correctly formatted your Liquid syntax. Green formatting can help identify tags, while purple formatting highlights areas that contain personalization.
-<br><br>
+
 If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
-<br><br>
+
 For example, add the following into the message field first:  
 {% raw %}
 ```liquid
@@ -40,7 +39,6 @@ Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
-{% endalert %}
 
 ## Conditional logic
 
