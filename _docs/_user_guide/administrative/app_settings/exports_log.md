@@ -7,7 +7,7 @@ description: "This page covers the exports log, which lets you view the status o
 
 # Exports log
 
-> Use the **Exports Log** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, export logs only support segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
+> Use the **Exports Log** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, the exports log only supports segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 {% alert important %}
 The exports log is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
@@ -19,9 +19,9 @@ You can find the exports log by going to **Settings** > **Exports Log**. Here, y
 
 ## Cancelling a pending export
 
-You can cancel pending exports directly from the **Export Logs** page by selecting the vertical three dot icon and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
+You can cancel pending exports directly from the **Exports Log** page by selecting the vertical three dot icon and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
 
-![The export logs showing a pending export and the option to "Cancel Export".][2]
+![The expors log showing a pending export and the option to "Cancel Export".][2]
 
 ## Sharing a specific export log
 
@@ -30,7 +30,7 @@ Share an export log by selecting the **Export ID** and then selecting **Share Lo
 ![A dropdown window with the link to share the page.][3]{: style="max-width:45%;"}
 
 {% alert note %}
-If you have feedback on export logs, feel free to share it with your customer success manager.
+If you have feedback on exports log, feel free to share it with your customer success manager.
 {% endalert %} 
 
 [1]: {% image_buster /assets/img/export_logs.png %}
