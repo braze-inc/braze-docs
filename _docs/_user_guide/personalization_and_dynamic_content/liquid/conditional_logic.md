@@ -63,11 +63,11 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 #### `if` and `elsif`
 
-Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English this code will check to see if the user's device is set to Spanish, and if that fails, will check if the device is set to. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
+Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English, this code will check to see if the user's device is set to Spanish, and if that fails, it will check if the device is set to. If the user's device meets one of these conditions, the user will receive a message in the relevant language.
 
 #### `else`
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}` statement specifies the message that should send. In this example, we default to English if a user’s language is not English, Spanish, or Chinese.
+You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}` statement specifies the message that should be sent. In this example, we default to English if a user’s language is not English, Spanish, or Chinese.
 
 #### `endif`
 
@@ -75,9 +75,9 @@ The `{% endif %}` tag signals that you've finished your conditional logic. You m
 
 ### Tutorial: Deliver location-based content
 
-When you're finished with this tutorial, you'll be able to use tags with "if", "elsif" and "else" statements to deliver content based on a user's location.
+When you're finished with this tutorial, you'll be able to use tags with "if", "elsif", and "else" statements to deliver content based on a user's location.
 
-1. Begin with an `if` tag to establish what message should send when the user's city is in New York. If the user's city is New York, this first condition is met and the user will receive a message specifying their New Yorker identity.
+1. Begin with an `if` tag to establish what message should be sent when the user's city is in New York. If the user's city is New York, this first condition is met and the user will receive a message specifying their New Yorker identity.
 
 ```liquid
 {% if ${city} == "New York" %}
@@ -87,7 +87,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 ```
 
 {: start="2"}
-2. Next, use the `elseif` tag to establish what message should send if the user's city is in Los Angeles.
+2. Next, use the `elseif` tag to establish what message should be sent if the user's city is in Los Angeles.
 
 ```liquid
 {% elsif ${city} == "Los Angeles" %}
@@ -96,7 +96,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 ```
 
 {: start="3"}
-3. Let's use another `elseif` tag to establish what message should send if the user's city is in Chicago.
+3. Let's use another `elseif` tag to establish what message should be sent if the user's city is in Chicago.
 
 ```liquid
 {% elsif ${city} == "Chicago" %}
@@ -106,7 +106,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 ```
 
 {: start="4"}
-4. Now, let's use the `{% else %}` tag to specify what message should send if the user's city isn't in San Francisco, New York, or Chicago.
+4. Now, let's use the `{% else %}` tag to specify what message should be sent if the user's city isn't in San Francisco, New York, or Chicago.
 
 ```liquid
 {% else %}
