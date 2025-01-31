@@ -32,7 +32,7 @@ guide_featured_list:
   - name: "GET: Enumerar próximas campañas y Canvas programados"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Eliminar mensajes programados"
+  - name: "POST: Borrar mensajes programados"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST: Eliminar campañas programadas desencadenadas por API"

@@ -15,11 +15,13 @@ module Tags
           tabslist = '<ul class="sdk-ab-nav sdk-ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
+              itemid = (0...12).map { (97 + rand(26)).chr }.join
+
               tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
               tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
 
               # scan returns array of results, only care about first match
-              tabslist += '    <li class="sdkrow ' + tabslug
+              tabslist += '    <li id="sdkt_' + itemid + '" class="sdkrow ' + tabslug
               if ind == 0
                 tabslist += ' active'
               end
@@ -49,6 +51,7 @@ module Tags
           match ? match[1].size : 0
           end
           indentation = indentation.min
+          contentid = (0...12).map { (97 + rand(26)).chr }.join
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
@@ -56,7 +59,7 @@ module Tags
           tabslug = @tab.gsub(/[^0-9a-z]/i, '')
           tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          return '<div class="sdk-ab-tab-pane ' + tabslug + '_tab " data-sdk-tab="sdk-' + @tab + '">' + content + "</div>"
+          return '<div id="sdkc_' + contentid + '"  class="sdk-ab-tab-pane ' + tabslug + '_tab " data-sdk-tab="sdk-' + @tab + '">' + content + "</div>"
       end
     end
 
@@ -75,11 +78,13 @@ module Tags
 
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
+
+              itemid = (0...12).map { (97 + rand(26)).chr }.join
               tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
               tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
 
               # scan returns array of results, only care about first match
-              tabslist += '    <li class="coderow ' + tabslug + '_sub_sdk_tab'
+              tabslist += '    <li id="sdkst_' + itemid + '" class="coderow ' + tabslug + '_sub_sdk_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end
@@ -109,6 +114,7 @@ module Tags
           match ? match[1].size : 0
           end
           indentation = indentation.min
+          contentid = (0...12).map { (97 + rand(26)).chr }.join
 
           content = indentation ? super.gsub(/^#{' |\t' * indentation}/, '') : super
           content = converter.convert(content)
@@ -116,7 +122,7 @@ module Tags
           tabslug = @tab.gsub(/[^0-9a-z]/i, '')
           tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          return '<div class="sdk-ab-sub_tab-pane ' + tabslug + '_sub_sdk_tab " data-sdk-sub_tab="' + @tab + '">' + content + "</div>"
+          return '<div id="sdksc_' + contentid + '"  class="sdk-ab-sub_tab-pane ' + tabslug + '_sub_sdk_tab " data-sdk-sub_tab="' + @tab + '">' + content + "</div>"
       end
     end
 end

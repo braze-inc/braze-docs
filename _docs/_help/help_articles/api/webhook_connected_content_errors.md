@@ -159,7 +159,7 @@ Automated emails and Message Activity Log entries are currently in early access.
 
 ### Setting up automated emails
 
-If you experience more than 100,000 webhook or Connected Content endpoint errors in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
 
 - Name of the workspace
 - A link to the Canvas or campaign
@@ -167,6 +167,10 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 - Error code
 - Time the error was last observed
 - Links to the Message Activity Log and related documentation
+
+{% alert note %}
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
 
 The endpoint errors are:
 
