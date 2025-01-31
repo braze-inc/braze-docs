@@ -164,71 +164,12 @@ If you are using the Expo plugin and want Braze to handle push deep links automa
 {% tab iOS Native %}
 #### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
-Skip this step if you're using the Braze Expo plugin, as this is functionality is handled automatically.
+Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is handled automatically.
 {% endalert %}
 
-In your `iOS` directory, create `BrazeReactDelegate.h`, then add the following code snippet to your file.
+For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
 ```objc
-// BrazeReactDelegate.h
-#import <Foundation/Foundation.h>
-#import <BrazeKit/BrazeKit-Swift.h>
-
-@interface BrazeReactDelegate: NSObject<BrazeDelegate>
-
-@end
-```
-
-Next, create `BrazeReactDelegate.m`, then add the following code snippet to your file. Replace `YOUR_DOMAIN_HOST` with your actual domain, such as `braze.com`.
-
-```objc
-// BrazeReactDelegate.m
-#import "BrazeReactDelegate.h"
-#import <UIKit/UIKit.h>
-
-@implementation BrazeReactDelegate
-
-/// This delegate method determines whether to open a given URL.
-///
-/// Reference the `BRZURLContext` object to get additional details about the URL payload.
-- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
-  if ([[context.url.host lowercaseString] isEqualToString:@"YOUR_DOMAIN_HOST"]) {
-    // Sample custom handling of universal links
-    UIApplication *application = UIApplication.sharedApplication;
-    NSUserActivity* userActivity = [[NSUserActivity alloc] initWithActivityType:NSUserActivityTypeBrowsingWeb];
-    userActivity.webpageURL = context.url;
-    // Routes to the `continueUserActivity` method, which should be handled in your `AppDelegate`.
-    [application.delegate application:application
-                 continueUserActivity:userActivity restorationHandler:^(NSArray<id<UIUserActivityRestoring>> * _Nullable restorableObjects) {}];
-    return NO;
-  }
-  // Let Braze handle links otherwise
-  return YES;
-}
-
-@end
-```
-
-In your project's `AppDelegate`, add `populateInitialPayloadFromLaunchOptions` to your `didFinishLaunchingWithOptions` method, then register your `BrazeReactDelegate`.
-
-When you're finished, your `AppDelegate` should be similar to the following:
-
-```objc
-[...]
-#import "BrazeReactUtils.h"
-#import "BrazeReactDelegate.h"
-
-[...]
-
-@interface AppDelegate ()
-
-// Keep a strong reference to the BrazeDelegate to ensure it is not deallocated.
-@property (nonatomic, strong) BrazeReactDelegate *brazeDelegate;
-
-@end
-
-[...]
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.moduleName = @"BrazeProject";
@@ -238,8 +179,6 @@ When you're finished, your `AppDelegate` should be similar to the following:
   configuration.triggerMinimumTimeInterval = 1;
   configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
-  self.brazeDelegate = [[BrazeReactDelegate alloc] init];
-  braze.delegate = self.brazeDelegate;
   AppDelegate.braze = braze;
 
   [self registerForPushNotifications];
@@ -267,6 +206,72 @@ Braze.getInitialPushPayload(pushPayload => {
 {% alert note %}
 Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
 {% endalert %}
+
+#### Step 3.3 Enable Universal Links (optional)
+
+To enable [universal linking](https://www.braze.com/docs/developer_guide/platforms/swift/push_notifications/deep_linking/#linking-handling-customization) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
+
+```objc
+#import <Foundation/Foundation.h>
+#import <BrazeKit/BrazeKit-Swift.h>
+
+@interface BrazeReactDelegate: NSObject<BrazeDelegate>
+
+@end
+```
+
+Next, create a `BrazeReactDelegate.m` file and then add the following code snippet. Replace `YOUR_DOMAIN_HOST` with your actual domain.
+
+```objc
+#import "BrazeReactDelegate.h"
+#import <UIKit/UIKit.h>
+
+@implementation BrazeReactDelegate
+
+/// This delegate method determines whether to open a given URL.
+///
+/// Reference the `BRZURLContext` object to get additional details about the URL payload.
+- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
+  if ([[context.url.host lowercaseString] isEqualToString:@"YOUR_DOMAIN_HOST"]) {
+    // Sample custom handling of universal links
+    UIApplication *application = UIApplication.sharedApplication;
+    NSUserActivity* userActivity = [[NSUserActivity alloc] initWithActivityType:NSUserActivityTypeBrowsingWeb];
+    userActivity.webpageURL = context.url;
+    // Routes to the `continueUserActivity` method, which should be handled in your `AppDelegate`.
+    [application.delegate application:application
+                 continueUserActivity:userActivity restorationHandler:^(NSArray<id<UIUserActivityRestoring>> * _Nullable restorableObjects) {}];
+    return NO;
+  }
+  // Let Braze handle links otherwise
+  return YES;
+}
+
+@end
+```
+
+Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.m` file.
+
+```objc
+#import "BrazeReactUtils.h"
+#import "BrazeReactDelegate.h"
+
+@interface AppDelegate ()
+
+// Keep a strong reference to the BrazeDelegate to ensure it is not deallocated.
+@property (nonatomic, strong) BrazeReactDelegate *brazeDelegate;
+
+@end
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  // Other setup code
+
+  self.brazeDelegate = [[BrazeReactDelegate alloc] init];
+  braze.delegate = self.brazeDelegate;
+}
+```
+
+For an example integration, reference our sample app [here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
 {% endtab %}
 {% endtabs %}
 
