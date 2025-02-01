@@ -78,13 +78,7 @@ Note that you will need to use these settings instead of the native setup instru
 {% endtab %}
 
 {% tab Android Native %}
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/):
-
-1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
-2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
-3. [Create a service account]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-3-create-a-service-account).
-4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
-5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 {% endtab %}
 
 {% tab iOS Native %}
@@ -162,15 +156,15 @@ To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/
 
 {% tabs local %}
 {% tab Android Native %}
-For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links).
+If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
 
-If you are using the Expo plugin and want Braze to handle push deep links automatically, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
+To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#step-4-add-deep-links).
 
 {% endtab %}
 {% tab iOS Native %}
 #### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
-If you are using the Braze Expo plugin, step 3.1 is handled automatically, and you may skip to step 3.2.
+Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is handled automatically.
 {% endalert %}
 
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
@@ -212,6 +206,72 @@ Braze.getInitialPushPayload(pushPayload => {
 {% alert note %}
 Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
 {% endalert %}
+
+#### Step 3.3 Enable Universal Links (optional)
+
+To enable [universal linking](https://www.braze.com/docs/developer_guide/platforms/swift/push_notifications/deep_linking/#linking-handling-customization) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
+
+```objc
+#import <Foundation/Foundation.h>
+#import <BrazeKit/BrazeKit-Swift.h>
+
+@interface BrazeReactDelegate: NSObject<BrazeDelegate>
+
+@end
+```
+
+Next, create a `BrazeReactDelegate.m` file and then add the following code snippet. Replace `YOUR_DOMAIN_HOST` with your actual domain.
+
+```objc
+#import "BrazeReactDelegate.h"
+#import <UIKit/UIKit.h>
+
+@implementation BrazeReactDelegate
+
+/// This delegate method determines whether to open a given URL.
+///
+/// Reference the `BRZURLContext` object to get additional details about the URL payload.
+- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
+  if ([[context.url.host lowercaseString] isEqualToString:@"YOUR_DOMAIN_HOST"]) {
+    // Sample custom handling of universal links
+    UIApplication *application = UIApplication.sharedApplication;
+    NSUserActivity* userActivity = [[NSUserActivity alloc] initWithActivityType:NSUserActivityTypeBrowsingWeb];
+    userActivity.webpageURL = context.url;
+    // Routes to the `continueUserActivity` method, which should be handled in your `AppDelegate`.
+    [application.delegate application:application
+                 continueUserActivity:userActivity restorationHandler:^(NSArray<id<UIUserActivityRestoring>> * _Nullable restorableObjects) {}];
+    return NO;
+  }
+  // Let Braze handle links otherwise
+  return YES;
+}
+
+@end
+```
+
+Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.m` file.
+
+```objc
+#import "BrazeReactUtils.h"
+#import "BrazeReactDelegate.h"
+
+@interface AppDelegate ()
+
+// Keep a strong reference to the BrazeDelegate to ensure it is not deallocated.
+@property (nonatomic, strong) BrazeReactDelegate *brazeDelegate;
+
+@end
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  // Other setup code
+
+  self.brazeDelegate = [[BrazeReactDelegate alloc] init];
+  braze.delegate = self.brazeDelegate;
+}
+```
+
+For an example integration, reference our sample app [here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
 {% endtab %}
 {% endtabs %}
 
