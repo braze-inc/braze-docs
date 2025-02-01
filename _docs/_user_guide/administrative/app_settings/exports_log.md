@@ -1,6 +1,7 @@
 ---
 nav_title: Exports Log
 article_title: Exports Log
+page_order: 15
 page_type: reference
 description: "This page covers the exports log, which lets you view the status of export jobs and cancel ongoing exports."
 ---
@@ -13,13 +14,13 @@ description: "This page covers the exports log, which lets you view the status o
 The exports log is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
-You can find the exports log by going to **Settings** > **Exports Log**. Here, you can view previous exports, the name of exported segments, the status for each export, the source of each export, and when each export started and finished. 
+You can find the exports log by going to **Settings** > **Exports Log**. Here, you can view previous exports, the name of exported segments, the status of each export, the source of each export, and when each export started and finished. 
 
 ![The export logs with a list of completed exports.][1]
 
 ## Cancelling a pending export
 
-You can cancel pending exports directly from the **Exports Log** page by selecting the vertical three dot icon and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
+You can cancel pending exports directly from the **Exports Log** page by selecting the <i class="fas fa-ellipsis-vertical"></i> menu and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
 
 ![The expors log showing a pending export and the option to "Cancel Export".][2]
 
