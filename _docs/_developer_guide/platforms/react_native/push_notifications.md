@@ -156,9 +156,9 @@ To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/
 
 {% tabs local %}
 {% tab Android Native %}
-For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links).
+If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
 
-If you are using the Expo plugin and want Braze to handle push deep links automatically, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
+To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#step-4-add-deep-links).
 
 {% endtab %}
 {% tab iOS Native %}
