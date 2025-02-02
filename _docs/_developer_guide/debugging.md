@@ -70,3 +70,9 @@ It may take a few minutes to generate your logs depending on your session length
 After your session, you can export your session logs as a CSV file. Additionally, others can use your **Session ID** to search for your debug session, so you don't need to send them your logs directly.
 
 ![The debugging page with "Export Logs" and "Copy Session ID" shown after the session.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+
+## Permissions
+You either need administrator permissions or all of the following permissions to use the SDK Debugger:
+
+- View PII
+- Export User Data
