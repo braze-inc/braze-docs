@@ -290,8 +290,22 @@ Banner(placementId = "global_banner")
 {% endtab %}
 {% tab React Native %}
 
-```javascript
+If you're using the React Native's new architecture, you need to register the BrazeBanner as a Fabric component in your AppDelegate.mm
 
+```swift
+#ifdef RCT_NEW_ARCH_ENABLED
+/// Register the `BrazeBannerView` for use as a Fabric component.
+- (NSDictionary<NSString *,Class<RCTComponentViewProtocol>> *)thirdPartyFabricComponents {
+  NSMutableDictionary * dictionary = [super thirdPartyFabricComponents].mutableCopy;
+  dictionary[@"BrazeBannerView"] = [BrazeBannerView class];
+  return dictionary;
+}
+#endif
+```
+
+In your React Native application, use the following code:
+
+```javascript
 <Braze.BrazeBannerView
   placementID='dynamic-height'
 />
