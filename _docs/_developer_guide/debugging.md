@@ -15,13 +15,15 @@ The SDK Debugger is currently in beta. Reach out to your account team to enable 
 
 ## Prerequisites
 
-To use the Braze SDK debugger, either ensure your native SDKs are up to date with at least these minimum versions, or your wrapper SDKs point to these minimum versions: 
+To use the Braze SDK debugger, you'll need `View PII` and `Export User Data` permissions. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
-To enable debugging for the Braze Web SDK, you can [use a URL parameter]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) instead.
-
 ## Debugging the Braze SDK
+
+{% alert tip %}
+To enable debugging for the Braze Web SDK, you can [use a URL parameter]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
+{% endalert %}
 
 ### Step 1: Close your app
 
