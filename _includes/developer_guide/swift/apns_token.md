@@ -1,4 +1,4 @@
-Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file provided by Apple. As described in [Apple's developer documentation](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns):
+Before you can send an iOS push notification using Braze, you need to upload your `.p8`  push notification file, as described in [Apple's developer documentation](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns):
 
 1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
 2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
