@@ -17,7 +17,7 @@ Utilisez l'intégration de MyPostcard et de Braze pour envoyer sans effort des m
 
 ## Conditions préalables
 
-| Condition                      | Descriptif                                                                                                             |
+| Condition                      | Description                                                                                                             |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Compte MyPostcard B2B           | L'inscription à MyPostcard est nécessaire pour profiter de cette intégration.                                          |
 | Clé API B2B et informations d'identification        | Vous trouverez votre clé API et les informations d'identification dans l'outil d'administration de MyPostcard B2B.                                         |
@@ -36,7 +36,7 @@ Pour améliorer vos campagnes de publipostage, il est essentiel d'aller au-delà
 
 Pour intégrer MyPostcard, [connectez-vous ou inscrivez-vous][2] et créez votre première campagne pour l'utiliser via les [webhooks de Braze][3].
 
-### Étape 1 : Créez votre modèle de webhook Braze à Braze
+### Étape 1 : Créez votre modèle de webhook Braze à Braze
 
 Créez un modèle de webhook MyPostcard à utiliser dans de futures campagnes ou Canvases en naviguant vers **Modèles** > **Modèles de webhook à** Braze dans la plateforme Braze.
 
@@ -46,7 +46,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation/), allez da
 
 Si vous souhaitez créer une campagne webhook MyPostcard ponctuelle ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne. Remplissez les champs suivants :
 
-| Champ         | Descriptif                                               |
+| Champ         | Description                                               |
 |---------------|-----------------------------------------------------------|
 | **URL du webhook** | L'URL du webhook telle qu'elle apparaît dans l'outil d'administration B2B.             |
 | **Corps de la demande** | Texte brut (format JSON trouvé dans l'outil d'administration B2B).        |
@@ -92,7 +92,7 @@ Copiez le corps de la demande affiché dans l'outil d'administration B2B, puis r
 
 ![Onglet Compose affichant le corps JSON et les informations relatives au webhook.][4]
 
-### Étape 2 : Prévisualiser votre requête
+### Étape 2 : Prévisualiser votre requête
 
 Ensuite, prévisualisez votre demande dans le panneau **Aperçu** ou allez dans l'onglet **Test**, où vous pouvez choisir un utilisateur aléatoire, un utilisateur existant ou créer un utilisateur personnalisé pour tester votre webhook. N'oubliez pas d'enregistrer votre modèle avant de quitter la page !
 

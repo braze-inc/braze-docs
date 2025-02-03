@@ -81,7 +81,7 @@ Ici, vous nommerez votre Canvas, assignerez [des équipes]({{site.baseurl}}/user
 Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lors de l'utilisation de [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer par des balises particulières.
 {% endalert %}
 
-![][53]
+![La page de détails du canvas, avec des champs pour le nom du canvas, la description, l'emplacement/localisation et les tags.][53]
 
 #### Sélectionner des événements de conversion
 
@@ -103,7 +103,7 @@ Vous pouvez sélectionner l’un des trois modes d’accès à votre Canvas par 
 
     In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
 
-    ![]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Livraison basée sur l'action %}
     Avec une livraison basée sur l'action, les utilisateurs entreront dans le Canvas et commenceront à recevoir des messages lorsqu'ils effectueront des actions particulières, telles que l'ouverture de votre application, l'achat ou le déclenchement d'un événement personnalisé.
@@ -148,13 +148,13 @@ Sous **Contrôles d'entrée**, vous pouvez limiter le nombre d'utilisateurs chaq
 
 Après avoir ajouté des segments et des filtres à votre audience cible, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s'ils correspondent aux critères de l'audience.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
+![Le champ "Recherche d'utilisateurs", qui vous permet d'effectuer une recherche par ID externe ou ID Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
 
 #### Sélection des contrôles d'entrée
 
 Les contrôles d'entrée déterminent si les utilisateurs sont autorisés à entrer de nouveau dans un canvas. Vous pouvez également limiter le nombre de personnes qui pourraient potentiellement entrer dans ce Canvas. Par exemple, si vous définissez le champ **Nombre maximum d'utilisateurs pouvant potentiellement entrer dans ce Canvas** à 1 000 utilisateurs, et sélectionnez la case à cocher **Limiter chaque fois que le Canvas est programmé**, alors le Canvas sera envoyé à 1 000 utilisateurs par jour.
 
-![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+![La page "Contrôles d'entrée" affiche des cases à cocher pour "Autoriser les utilisateurs à entrer à nouveau dans le Canvas" et "Limiter le nombre de personnes qui pourront potentiellement entrer dans ce Canvas". Ce dernier vous permet de définir le nombre maximum d'utilisateurs et d'indiquer si vous souhaitez limiter chaque fois que le canvas est planifié.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
 Braze ne recommande pas d'utiliser la fonctionnalité **Limite appliquée à chaque planification du canvas** pour le réchauffement d’adresses IP, car cela peut entraîner une augmentation des volumes d'envoi.
 
@@ -173,7 +173,7 @@ Remarques :
 
 Pour afficher des statistiques supplémentaires, telles que le chiffre d'affaires moyen sur la durée de vie des utilisateurs ciblés, sélectionnez **Afficher les statistiques supplémentaires.**
 
-![Ventilation de la population cible avec possibilité d'obtenir des statistiques exactes.][2]
+![Ventilation de la population cible avec possibilité de calculer des statistiques exactes.][2]
 
 ### Étape 2d : Sélectionner vos paramètres d’envoi
 
@@ -195,7 +195,7 @@ Avec cette configuration, n'incluez aucun filtre dans l'étape **Utilisateurs ci
 
 Si vous le souhaitez, spécifiez les heures de silence (la période pendant laquelle vos messages ne seront pas envoyés) pour votre Canvas. Cochez **Activer les heures calmes** dans vos **paramètres d'envoi**. Puis sélectionnez vos Heures calmes dans l’heure locale de vos utilisateurs et l’action qui suivra si le message se déclenche pendant ces heures calmes.
 
-![][50]
+![La page "Heures calmes" affiche une case à cocher permettant d'activer les heures calmes. Si elle est activée, l'heure de début, l'heure de fin et le comportement de repli peuvent être définis.][50]
 
 ## Étape 3 : Créer votre Canvas
 
@@ -205,13 +205,13 @@ Enregistrez votre temps et rationalisez votre création de canvas en utilisant l
 
 ### Ajouter une variante
 
-![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Un gif qui montre un utilisateur sélectionnant "Ajouter une variante", puis sélectionnant à nouveau "Ajouter une variante" à partir du menu contextuel.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 Sélectionnez **Ajouter une variante**, puis ajoutez une nouvelle variante à votre Canvas. Les variantes représentent un parcours que vos utilisateurs emprunteront et peuvent contenir plusieurs étapes et branches.
 
 Vous pouvez ajouter des variantes supplémentaires en sélectionnant le bouton <i class="fas fa-plus-circle"></i> plus. Lorsque vous ajoutez de nouvelles variantes, vous pourrez ajuster la façon dont elles seront réparties parmi vos utilisateurs de sorte que vous puissiez comparer et analyser l’efficacité des différentes stratégies d’engagement.
 
-![][12]
+![Deux exemples de variantes d'un canvas Braze.][12]
 
 {% alert tip %}
 Par défaut, l'assignation de variante de Canvas est verrouillée lorsque les utilisateurs entrent dans le Canvas, ce qui signifie que si un utilisateur entre d'abord dans une variante, ce sera sa variante à chaque fois qu'il rentrera dans le Canvas. Cependant il existe des façons d’éviter ce comportement. <br><br>Pour ce faire, vous pouvez créer un générateur de nombres aléatoires à l’aide de Liquid, l’exécuter chaque fois qu’un utilisateur accède à Canvas, archiver la valeur comme attribut personnalisé puis utiliser cet attribut pour diviser les utilisateurs de manière aléatoire.
@@ -235,7 +235,7 @@ Vous pouvez ajouter plus d'étapes à votre flux de travail Canvas en faisant gl
 Au fur et à mesure que vous commencez à ajouter plus d'étapes, vous pouvez changer le niveau de zoom pour vous concentrer sur les détails ou pour avoir une vue d'ensemble du parcours utilisateur. Zoomer avec <kbd>Shift</kbd> + <kbd>+</kbd> ou dézoomer avec <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
+![La fenêtre de recherche de composants ajoutant une étape du canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %})
 
 {% alert warning %}
 Un Canvas créé en utilisant Canvas Flow peut comprendre jusqu’à 200 étapes. Des erreurs de chargement se produiront si votre Canvas a plus de 200 étapes.
@@ -251,11 +251,11 @@ Vous désirez modifier une étape dans votre parcours utilisateur ? Regardez co
 
 Vous pouvez modifier n'importe quelle étape de votre flux de travail Canvas Flow en sélectionnant n'importe lequel des composants. Par exemple, disons que vous souhaitez modifier votre première étape, un composant de [Retard]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), dans votre flux de travail à un jour spécifique. Sélectionnez l'étape pour afficher ses paramètres et ajustez votre délai sur le 1er mars. Ceci signifie que le 1er mars, vos utilisateurs passeront à l’étape suivante de votre Canvas.
 
-![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
+![Exemple d'étape "Délai" avec le délai réglé sur "Jusqu'à un jour précis".]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
 Ou vous pouvez rapidement modifier et ajuster les **Paramètres d'Action** de votre [Chemins d'Action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) étape pour retenir les utilisateurs pendant une période de temps. Leur parcours suivant est donc priorisé selon les actions intervenant durant cette période d’évaluation.
 
-![]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![La deuxième étape du canvas, "Paramètres des actions", avec une fenêtre d'évaluation fixée à 1 jour.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 Les composants légers de Canvas permettent une expérience d’édition facilitée. Ajuster les détails les plus précis de votre Canvas en est d’autant plus simple. 
 
@@ -270,7 +270,7 @@ Utilisez la balise Liquid `campaign.${name}` dans Canvas pour afficher le nom du
 
 Le composant de message gère les messages envoyés aux utilisateurs. Vous pouvez sélectionner vos **canaux de messagerie** et ajuster les **paramètres de livraison** pour optimiser votre messagerie Canvas. Pour plus de détails sur ce composant, consultez la section [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+![L'étape "Configurer les messages", avec "Canaux d'envoi" sélectionné, affiche la liste des canaux de communication disponibles, tels les notifications push Android, les cartes de contenu, l'e-mail, et plus encore.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 Sélectionnez **Terminé** après avoir terminé la configuration de votre composant Canvas.
 
@@ -313,7 +313,7 @@ Pour modifier la diffusion de vos messages, double-cliquez sur les en-têtes **N
 
 Dans cet exemple, notre Canvas est réparti en deux variantes. La variante 1 concerne 70 % des consommateurs. La seconde variante est un groupe de contrôle qui rassemble les 30 % de consommateurs restants.
 
-![]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
+![Un exemple de variante dans un canvas Braze, où 70 % vont à la "variante 1", qui retarde d'un jour dans la première étape, puis envoie un message dans la deuxième étape. Les 30 % restants sont dirigés vers un "contrôle" qui ne prévoit aucune mesure de suivi.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
 ### Sélection intelligente pour Canvas
 
@@ -321,7 +321,7 @@ Les fonctionnalités de sélection intelligente sont désormais disponibles dans
 
 N’oubliez pas que les Canvas multivariés vous permettent plutôt de tester que de copier, mais le calendrier et les canaux également. La sélection intelligente vous permet de tester des Canvas de manière plus efficace et de garantir que vos utilisateurs seront dirigés vers le meilleur parcours Canvas.
 
-![][18b]
+![L'option "Sélection intelligente" est activée dans la page "Modifier la répartition des variantes". Au fur et à mesure qu'il analyse et optimise le canvas, il affiche une barre horizontale en travers de la page qui est divisée en plusieurs sections, chacune variant en couleur et en taille. Il s'agit uniquement d'une représentation visuelle qui ne correspond à aucune analyse spécifique.][18b]
 
 La sélection intelligente pour Canvas optimise vos résultats Canvas en effectuant des ajustements progressifs en temps réel à la distribution des utilisateurs triés dans chaque variante. Lorsque l'algorithme statistique détermine un gagnant décisif parmi vos variantes, il exclura les variantes sous-performantes et attribuera tous les futurs destinataires éligibles du Canvas aux variantes gagnantes. 
 
@@ -329,11 +329,11 @@ En ce sens, la sélection intelligente fonctionne mieux sur des Canvas auxquels 
 
 ## Étape 5 : Enregistrer et lancer votre Canvas
 
-Une fois que vous avez terminé de créer votre Canvas, sélectionnez **Lancer Canvas** pour enregistrer et lancer votre Canvas. Après avoir lancé votre Canvas, vous pourrez consulter les analyses de votre parcours au fur et à mesure qu'elles arrivent sur la page **Canvas Details**. 
+Une fois la création de votre canvas terminée, sélectionnez **Lancer le canvas** pour enregistrer et lancer votre canvas. Après avoir lancé votre Canvas, vous pourrez consulter les analyses de votre parcours au fur et à mesure qu'elles arrivent sur la page **Canvas Details**. 
 
 Vous pouvez également enregistrer votre Canvas en tant que brouillon si vous souhaitez le retravailler un peu plus tard.
 
-![][19]
+![Un exemple de canvas dans Braze.][19]
 
 {% alert tip %}
 Vous avez besoin de modifier votre Canvas après son lancement ? C’est tout à fait possible. Consultez [Modification des toiles après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) pour plus d'informations.

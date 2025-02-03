@@ -45,6 +45,8 @@ Pour afficher plus de détails sur les critères d'entrée, sélectionnez **Affi
 
 La logique Liquid sera traitée au cours d'un test, même si vous n'envoyez pas de message de test proprement dit. Cela signifie que la [logique du message d'abandon]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) et d'autres logiques de liquidité sont reflétées et peuvent avoir un impact sur le parcours de l'utilisateur de Canvas.
 
+Si votre aperçu envoie la dernière étape de votre parcours utilisateur au lieu de l'interrompre, il se peut que l'aperçu utilise l'heure actuelle comme heure testée pour l'évaluation du liquide, et non l'heure réelle à laquelle l'utilisateur se trouverait dans l'étape sur la base de l'heure d'entrée dans le Canvas.
+
 ## Prévisualisation du timing
 
 Pour les canvas planifiés, l'utilisateur test entrera à la prochaine heure d'entrée planifiée. Pour les canevas basés sur l'action avec des dates de début, l'utilisateur test entrera la date et l'heure de début. 
@@ -60,7 +62,7 @@ Les utilisateurs test entreront dans la prévisualisation, même s'ils ne sont p
 - Si vous testez un parcours d'action avec des actions qui correspondent à des critères de sortie (y compris des propriétés d'événement), les critères de sortie seront déclenchés et l'exécution du test se terminera.
 - Si vous testez une étape du message qui correspond à des critères de sortie, ces derniers seront déclenchés et l'exécution du test prendra fin.
 - À ce stade, vous ne pouvez pas sélectionner un événement ou une propriété spécifique au sein d'un parcours d'action pour déclencher des critères de sortie (uniquement le parcours dans son ensemble). Si un utilisateur peut potentiellement répondre à plusieurs critères de sortie, le premier qui est traité et auquel il répond est affiché comme résultat.
-- Les événements, les déclencheurs API et les propriétés d'entrée du canvas ne sont pas appliqués en fonction de l'entrée du canvas. Elles n'affecteront pas les résultats des étapes suivantes.
+- Les événements, les déclencheurs API, les attributs personnalisés et les propriétés de l'entrée Canvas ne sont pas appliqués en fonction de l'entrée Canvas. Elles n'affecteront pas les résultats des étapes suivantes. Le test simule le parcours de l'utilisateur sans appliquer ces éléments pour modifier le profil utilisateur réel ou le flux du Canvas.
 
 ## Chemins d'expérience et variantes du canvas
 

@@ -113,7 +113,7 @@ Braze offre également la possibilité d'ajouter des utilisateurs à des audienc
 {% endtab %}
 {% endtabs %}
 
-### Étape 5 : Lancer le canvas
+### Étape 5 : Lancer le canvas
 
 Une fois que vous avez configuré votre synchronisation d’audience avec LinkedIn, il vous suffit de lancer le canvas ! La nouvelle audience sera créée, et les utilisateurs qui passent par l'étape de synchronisation de l'audience seront transférés dans cette audience sur LinkedIn. Si votre Canvas contient des composants subséquents, vos utilisateurs passeront à l’étape suivante de leur parcours utilisateur.
 

@@ -37,7 +37,7 @@ Les attributs sont des caractéristiques ou des propriétés spécifiques associ
 
 #### Attributs standard
 
-Les attributs standard sont des attributs prédéfinis fournis par Braze. Ceux-ci sont automatiquement suivis par Braze après l'intégration du SDK dans votre application. Il s'agit d'éléments communs d'information sur les utilisateurs que la plupart des apps trouveraient utiles, comme les données démographiques et les données sur les appareils. Voici quelques exemples d'attributs standard :
+Les attributs standard sont des attributs prédéfinis que vous pouvez suivre avec Braze après avoir intégré le SDK dans votre application. Il s'agit d'éléments communs d'information sur les utilisateurs que la plupart des apps trouveraient utiles, comme les données démographiques et les données sur les appareils. En voici quelques exemples :
 
 - Prénom
 - Nom
