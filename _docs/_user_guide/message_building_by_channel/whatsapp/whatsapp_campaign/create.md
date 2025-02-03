@@ -179,7 +179,8 @@ Message feature    | Details
 ----------- |---------------- 
 Headers | 
 Text | Supports variable parameters
-Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
+Videos | Currently, must be hosted on a URL and less than sixteen MB. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).
