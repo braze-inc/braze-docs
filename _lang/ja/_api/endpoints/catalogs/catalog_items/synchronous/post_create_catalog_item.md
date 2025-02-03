@@ -42,7 +42,7 @@ description: "この記事では、Create catalog item Brazeエンドポイン�
 | `items` | required | 配列 | アイテム・オブジェクトを含む配列。アイテムオブジェクトは、`id` フィールドを除く、カタログのすべてのフィールドを含むべきである。1つのリクエストにつき、1つのアイテムオブジェクトのみが許可される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
