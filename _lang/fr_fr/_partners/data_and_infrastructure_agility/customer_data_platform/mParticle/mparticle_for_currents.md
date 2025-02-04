@@ -17,7 +17,7 @@ L'intégration de Braze et mParticle vous permet de contrôler de façon fluide 
 
 ## Conditions préalables
 
-| Condition | Descriptif |
+| Condition | Description |
 | ----------- | ----------- |
 | Currents | Pour pouvoir exporter des données dans mParticle, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 | Compte mParticle | Un [compte mParticle](https://app.mparticle.com/login) est nécessaire pour profiter de ce partenariat. |
@@ -29,7 +29,7 @@ L'intégration de Braze et mParticle vous permet de contrôler de façon fluide 
 mParticle dispose d'informations d'identification au niveau de l'application et de l'espace de travail, qui ont une incidence sur la manière dont vos événements sont envoyés.
 
 - **Au niveau de l'application :** mParticle séparera les événements par chaque application individuelle, ce qui signifie que les informations d'identification au niveau de l'application que vous donnez à votre application iOS ne peuvent être utilisées que pour envoyer des événements spécifiques à iOS.
-- **Au niveau de l'espace de travail :** mParticle regroupe tous les événements (qui **ne** sont **pas** spécifiques à une application), ce qui signifie que les informations d'identification au niveau de l'espace de travail que vous donnez à votre groupe d'applications seront utilisées pour envoyer tous vos événements non spécifiques à une application.
+- **Au niveau de l'espace de travail :** mParticle regroupe tous les événements (qui ne sont **pas** spécifiques à une application), ce qui signifie que les informations d'identification au niveau de l'espace de travail que vous donnez à votre groupe d'applications seront utilisées pour envoyer tous vos événements non spécifiques à une application.
 
 Vous pouvez considérer que mParticle ingère un "flux" basé sur chaque application individuelle. Par exemple, si vous avez une application pour iOS, une pour Android et une pour le Web, vos événements seront décousus. Cela signifie que si vous fournissez les mêmes données d'identification pour chaque application, un seul flux mParticle sera utilisé pour recevoir toutes les données de toutes vos applications, sans duplication.
 

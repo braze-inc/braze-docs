@@ -113,7 +113,7 @@ La balise suivante vous permet de spécifier un message pour les utilisateurs ay
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut null 'first name'.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

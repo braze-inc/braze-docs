@@ -69,10 +69,6 @@ If an action-based Canvas is triggered by an inbound WhatsApp message, you can r
 
 Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window.
 
-{% alert note %}
-WhatsApp templates currently don't support coupon code buttons.
-{% endalert %}
-
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 
 ### Template messages
@@ -183,7 +179,8 @@ Message feature    | Details
 ----------- |---------------- 
 Headers | 
 Text | Supports variable parameters
-Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
+Videos | Currently, must be hosted on a URL and less than sixteen MB. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).

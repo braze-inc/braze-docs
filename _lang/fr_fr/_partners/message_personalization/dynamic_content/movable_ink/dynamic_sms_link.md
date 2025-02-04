@@ -31,7 +31,7 @@ Suivez les étapes respectives ci-dessous pour envoyer des liens SMS dynamiques 
 Pour autoriser les aperçus de liens pour iOS, les utilisateurs doivent ajouter votre marque (l'expéditeur) en tant que contact.
 {% endalert %}
 
-#### Étape 1 : Créez une campagne de cartes de contact
+#### Étape 1 : Créez une campagne de cartes de contact
 
 Une fois que les utilisateurs auront enregistré votre marque en tant que contact, que ce soit par le biais d'une [carte de contact]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) ou d'une autre méthode, ils pourront voir les invites de **prévisualisation Tap to Load** et les liens Movable Ink.
 

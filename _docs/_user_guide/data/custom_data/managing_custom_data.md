@@ -78,13 +78,17 @@ To accomplish this, Braze sends the blocklisting information down to each device
 
 ### Considerations for blocklisting
 
-Blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist. If it appears on the list, it won't be sent up. This operation takes time, and if the list grows big enough, your app could start to slow down. If you have no need to use the event or attribute in the future, it should be removed from your app code during your next release.
+Blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist.
 
-Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at anytime.
+Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than 300 items, this data will be sent from the SDK. If you do not need to use the event or attribute in the future, consider removing it from your app code during your next release. Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at any time.
 
 ## Deleting custom data
 
 As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
+
+{% alert important %}
+You must be a [Braze admin]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to delete custom data.
+{% endalert %}
 
 To delete a custom event or custom attribute, do the following:
 
@@ -99,7 +103,7 @@ When you delete custom data, the following occurs:
 - **For custom attributes:** Permanently removes the attribute data from every user's profile.
 - **For custom events:** Permanently removes the event metadata from every user's profile.
 
-When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
+When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore it after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
 
 {% alert important %}
 Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
@@ -139,7 +143,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 | Number | Integers or Floats (such as `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting][43]. For more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
 Data sent to Braze is immutable and cannot be deleted or modified after we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.

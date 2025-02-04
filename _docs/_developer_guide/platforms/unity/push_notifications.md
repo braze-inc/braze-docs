@@ -78,9 +78,9 @@ The Braze SDK can automatically handle push registration with the Firebase Cloud
 {% endtab %}
 
 {% tab Swift %}
-#### Step 2.1: Upload your APNs certificate
+#### Step 2.1: Upload your APNs token
 
-{% multi_lang_include developer_guide/swift/apns_certificate.md %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 #### Step 2.2: Enable automatic push
 
