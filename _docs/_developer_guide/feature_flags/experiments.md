@@ -52,7 +52,7 @@ You can choose to overwrite the default properties you initially set up for user
 
 To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**. When a variant is disabled, the SDK will return an empty properties object for the given feature flag.
 
-![]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![The 'Experiment Variants' section with the 'link' variable key overwritten with '/sales'.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### Step 4: Choose users to target
 
