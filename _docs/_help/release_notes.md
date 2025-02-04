@@ -57,13 +57,6 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
 
----
-nav_title: February 4, 2025
-page_order: 11
-noindex: true
-page_type: update
-description: "This article contains release notes for 2/4/2025."
----
 
 ## February 4, 2025 release
 
@@ -124,7 +117,6 @@ We added [steps on how to obtain a SAML trace]({{site.baseurl}}/user_guide/admin
  
 #### Region-specific data centers
 As Braze is growing to serve new areas, we've added an [article about Braze data centers]({{site.baseurl}}/user_guide/data/data_centers) to clarify our operational approach.
-
  
 ### Unlocking creativity
  
@@ -169,7 +161,6 @@ One way B2B marketers can use Braze is through an integration with the Salesforc
  
 #### Trustpilot - Dynamic content
 [Trustpilot]({{site.baseurl}}/partners/message_personalization/dynamic_content/trustpilot) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
-
 
 ### SDK updates
  
