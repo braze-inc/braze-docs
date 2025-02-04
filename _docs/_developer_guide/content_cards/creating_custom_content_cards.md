@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Custom Content Cards
+nav_title: Custom Content Cards
 article_title: Creating Custom Content Cards
 page_order: 5
 description: "This article covers components of creating a custom Content Card UI"
@@ -12,9 +12,11 @@ platform:
   - Web
 ---
 
-# Creating custom Content Cards
+# Custom Content Cards
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It is especially to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
+
+## About Content Cards
 
 Braze provides different [Content Card types]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details): `imageOnly`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
 
@@ -64,13 +66,15 @@ Content Cards can be used in many different ways. Three common implementations a
 
 Content Cards can be used to simulate a message center. In this format, each message is its own card that contains [key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) that power on-click events. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an inbox message. The values of the key-value pairs are arbitrary. 
 
-For example, you may want to create two message cards: one is a call-to-action for users to opt-in to receive targeted reading recommendations, and the other gifts a coupon code to a segment of new subscribers.
+#### Example
 
-![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps.png %}){: style="max-width:20%;float:right;margin-left:15px;border:0px;"}
+For example, you may want to create two message cards: a call-to-action for users enable to reading recommendations and a coupon code given to your new subscriber segment.
+
+Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `class_type` on your app or site. 
 
 {% tabs local %}
-{% tab Example: Reading recommendations %}
-Example key-value pairs for the reading recommendation card could be:
+{% tab Reading recommendations %}
+Key-value pairs for the reading recommendation card:
 
 | Key         | Value                                                                |
 |------------|----------------------------------------------------------------------|
@@ -78,10 +82,11 @@ Example key-value pairs for the reading recommendation card could be:
 | `style`      | info                                                                 |
 | `class_type` | notification_center                                                 |
 | `card_priority` | 1                                                                 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab Example: New subscriber coupon %}
-Example key-value pairs for a new subscriber coupon could be:
+{% tab New subscriber coupon %}
+Key-value pairs for a new subscriber coupon:
 
 | Key         | Value                                                            |
 |------------|------------------------------------------------------------------|
@@ -92,15 +97,11 @@ Example key-value pairs for a new subscriber coupon could be:
 | `class_type` | notification_center                                              |
 | `card_priority` | 2                                                              |
 | `terms`      | new_subscribers_only                                             |
-
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-Your marketers could make this Content Card available only for a segment of new users.
-
-You would handle each of the values. Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. You would decide how to render `style` and `class_type` on your app or site. 
-
-{% details Further explanation for Android %}
+{% details Additional information for Android %}
 
 In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) method, you can filter and identify these class types.
 
@@ -225,13 +226,16 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ### Carousel
 
-Content Cards can be set in a carousel feed where a user can swipe horizontally to view additional featured cards. 
+You can set Content Cards your fully-custom carousel feed, allowing users to swipe and view additional featured cards. By default, Content Cards are sorted by created date (newest first), and your users will see all the cards they're eligible for.
 
-To create a Content Card carousel, implement logic that observes for [changes in your Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#refreshing-the-feed) and handles Content Card arrival. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for. Implement client-side logic to display a specific number of cards in the carousel at any one time.
+To implement a Content Card carousel:
 
-With that said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array or introduce key-value pairs to build conditional logic around.
+1. Create custom logic that observes for [changes in your Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#refreshing-the-feed) and handles Content Card arrival.
+2. Create custom client-side logic to display a specific number of cards in the carousel any one time. For example, you could select the first five Content Card objects from the array or introduce key-value pairs to build conditional logic around.
 
-If you're implementing a carousel as a secondary Content Cards feed, refer to [Customizing the default Content Card feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) to learn how to sort cards into the correct feed based on key-value pairs.
+{% alert tip %}
+If you're implementing a carousel as a secondary Content Cards feed, be sure to [sort cards into the correct feed using key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
+{% endalert %}
 
 ### Banner
 
