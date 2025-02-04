@@ -10,7 +10,7 @@ description: "This page covers how to use suppression lists to specify which use
 
 # Suppression lists
 
-> Suppression lists specify groups of users who will never receive messages. Admins can create suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
+> Suppression lists specify groups of users who will never receive messages. Admins can create dynamic suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
 
 {% alert important %}
 Suppression lists are currently in beta. If you're interested in being part of this beta, reach out to your customer success manager. During the beta, functionality may change, and you can have up to five active suppression lists at a time, but let your customer success manager know if you need more. 
@@ -18,7 +18,7 @@ Suppression lists are currently in beta. If you're interested in being part of t
 
 ## How it works
 
-Suppression lists automatically apply to certain forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
+Suppression lists are dynamic and automatically apply to certain forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
 
 ### Messages not affected by suppression lists
 
@@ -38,7 +38,7 @@ During the beta, we collect customer feedback to help improve our product. Tell 
 
 ### Channels affected by suppression lists
 
-Suppression lists will automatically apply to all of the following channels (unless the campaign or Canvas contains an exception tag): 
+Suppression lists are dynamic and will automatically apply to all of the following channels (unless the campaign or Canvas contains an exception tag): 
 - SMS
 - Email
 - Push
@@ -78,17 +78,34 @@ You can deactivate or archive suppression lists when you no longer need them.
 - To deactivate, select an active suppression list and select **Deactivate**. Deactivated suppression lists can be reactivated later.
 - To archive, do so from the **Suppression Lists** page.
 
-## Checking suppression list usage
+## Suppression list usage
 
 ### In a campaign
 
 ![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".][5]
 
-Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a campaign.
+If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Messages not affected by suppression lists](#messages-not-affected-by-suppression-lists) for cases when a suppression list won't apply.
+
+#### Checking which suppression lists are applied
+
+To check for suppression list usage within a campaign, go to the **Suppression List** section on the **Target Audience** page to view which suppression lists are being applied to that campaign.
 
 ### In a Canvas
 
-Check the **Suppression List** section on the **Target Audience** page to view whether suppression lists are being applied to a Canvas. You can also view applied suppression lists in the **Summary** step.
+If a user is in a suppression list, they will still enter the Canvas but won't be able to receive Message steps within the Canvas. When they advance to a Message step, they will be exited from the Canvas. However, a user in a suppression list is still able to receive non-Message steps prior to a Message step. 
+
+#### Preventing segments from entering a Canvas
+
+For a segment to not be entered into a Canvas **at all**, you can configure that Canvas' Target settings to exclude that segment by following these steps:
+
+1. Build a segment using the same filters and criteria as your supression list.
+2. In the **Target** step, use the **Segment Membership** filter to target users who aren't included in your segment.
+
+For example, let’s say you have a Canvas with an applied suppression list. The Canvas has a User Update step followed by a Message step. In this scenario, suppression list users will enter the Canvas, proceed through the User Update step (where the user may be updated, based on how that step is configured), and then exit at the Message step (at which point the user will be included in the “Exited” metrics). 
+
+#### Checking which suppression lists are applied
+
+To check for suppression list usage within a Canvas, go to the **Suppression List** section on the **Target Audience** page to view which suppression lists are being applied to that Canvas. You can also view applied suppression lists in the **Summary** step.
 
 [1]: {% image_buster /assets/img/suppression_lists_home.png %}
 [2]: {% image_buster /assets/img/create_suppression_list.png %}
