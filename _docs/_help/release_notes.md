@@ -57,6 +57,127 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
 
+---
+nav_title: February 4, 2025
+page_order: 11
+noindex: true
+page_type: update
+description: "This article contains release notes for 2/4/2025."
+---
+
+## February 4, 2025 release
+
+### Braze Docs improvements
+
+#### Contributing Guide
+Our recent updates to the [Contributing Guide]({{site.baseurl}}/contributing/your_first_contribution) makes it easier for non-technical users to contribute to Braze Docs.
+
+#### Data and Analytics revamp
+To make it easier for you to find what you're looking for, we separated the articles formerly nested under "Data & Analytics" into [Data]({{site.baseurl}}/user_guide/data) and [Analytics]({{site.baseurl}}/user_guide/analytics). 
+
+#### Developer Guide
+We've done a huge cleanup of all docs across the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home), which included merging "how-to's" split across multiple pages into a single page.
+
+There's also a new [SDK reference page]({{site.baseurl}}/developer_guide/references) that lists all of the reference documentation and repositories for each Braze SDK.
+
+##### Unreal Engine Braze SDK
+We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/platforms/unreal_engine/sdk_integration).
+
+### Data flexibility
+
+#### API usage dashboard
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+The [API usage dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard) lets you monitor your incoming REST API traffic into Braze to understand your trends within your usage of our REST APIs and to troubleshoot any potential issues.
+
+#### Adding tags to custom attributes
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can [add tags to a custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes#adding-tags) after it's created if you have the "Manage Events, Attributes, Purchases" permission. The tags can then be used to filter the list of attributes.
+
+#### Catalog selections and async catalog fields endpoints 
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+The following endpoints are now generally available:
+* [POST: Create Catalog Fields]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields)
+* [DELETE: Delete Catalog Field]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field)
+* [DELETE: Delete Catalog Selection]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection)
+* [POST: Create Catalog Selection]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections)
+
+#### Using an email address to trigger campaigns or Canvases
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
+
+#### Using a phone number to identify a user via the API
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now use a phone number, in addition to an alias and email address, to identify a user through the [`/users/identify` API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify)
+
+#### Getting a SAML trace
+We added [steps on how to obtain a SAML trace]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up#obtaining-a-saml-trace), which helps you resolve issues about SAML SSO with Support more efficiently.
+ 
+#### Region-specific data centers
+As Braze is growing to serve new areas, we've added an [article about Braze data centers]({{site.baseurl}}/user_guide/data/data_centers) to clarify our operational approach.
+
+ 
+### Unlocking creativity
+ 
+#### Price drop notifications and back-in-stock notifications
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can now notify customers when an item is back-in-stock by setting up [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) through a Canvas and catalog.
+
+You can also create [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications) to notify customers when an item's price has decreased by setting up price drop notifications in a catalog and Canvas.
+
+#### Preview for selection 
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+After creating a selection, you can [view what a selection would return]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview) for either a random user or a specific user.
+
+#### Templating catalog items including Liquid 
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can [template catalog items that include Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+
+#### Canvas templates
+We added new Canvas templates for [onboarding users with a preferences survey]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey) and [creating an email sign-up with double opt-in]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup).
+
+#### Managing leads with Salesforce Sales Cloud for B2B
+One way B2B marketers can use Braze is through an integration with the Salesforce Sales Cloud. Read more about how to implement this [use case]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud).
+ 
+### Robust channels
+
+#### Suppression lists
+
+{% multi_lang_include release_type.md release="Beta" %}
+ 
+[Suppression lists]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists) specify groups of users who will never receive messages. Admins can create suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
+
+### New Braze partnerships
+
+#### Constructor - Dynamic content
+[Constructor]({{site.baseurl}}/partners/message_personalization/dynamic_content/constructor) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
+ 
+#### Trustpilot - Dynamic content
+[Trustpilot]({{site.baseurl}}/partners/message_personalization/dynamic_content/trustpilot) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
+
+
+### SDK updates
+ 
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+ 
+- [Braze Android SDK 34.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3400)
+    - Updated the minimum SDK version from 21 (Lollipop) to 25 (Nougat).
+
 ## January 7, 2025 release
 
 ### Unlocking creativity
@@ -706,100 +827,3 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Web SDK 5.3.2](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#532)
     - Fixed a regression introduced in 5.2.0 that could cause HTML In-App Messages to render incorrectly when an external script is loaded synchronously.
 - [Web SDK 5.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#540)
-
-## June 25, 2024 release
-
-### Japanese docs
-
-We now support the Japanese language for Braze Docs!
-
-![The Braze Docs site displaying the Japanese interface]({% image_buster /assets/img/braze-docs-japan.png %}){: style="max-width:70%;"}
- 
-### Data flexibility
-
-#### Attachments for API-triggered campaigns
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-The [`/campaigns/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) now supports attachments (just like the `/messages/send` endpoint supports attachments for emails). 
-
-#### Additional data warehouse support
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-Braze [Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) now supports BigQuery, Databricks, Redshift, and Snowflake.
-
-#### WhatsApp phone number migration
-
-Migrate your WhatsApp phone number between WhatsApp Business Accounts by using Meta's Embedded Signup. Read more about [WhatsApp phone number migration]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/phone_number_migration).
- 
-### Unlocking creativity
-
-#### Engagement by Device
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-The new **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. Learn more about [the report and the Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
-
-#### WhatsApp and SMS Liquid properties in Canvas flow
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-We added support for [WhatsApp and SMS Liquid properties in Canvas flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties). Now, when an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvas Flow. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
- 
-#### Personalized Paths in recurring Canvases
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-Personalized Paths in Canvases let you personalize any point of a Canvas journey for individual users based on conversion likelihood. Now, Personalized Paths are available for recurring Canvases. Learn more about [Personalized Variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths).
-
-#### Segments troubleshooting
-
-Working with segments? Here are some [troubleshooting steps and considerations]({{site.baseurl}}/user_guide/engagement_tools/segments/troubleshooting) to keep in mind.
-
-#### Liquid highlighting
-
-We improved the [color-coding that Liquid uses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) to better support accessibility guidelines.
-
-![]({% image_buster /assets/img/liquid_color_code.png %})
- 
-### Robust channels
-
-#### SMS geographic permissions
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-SMS geographic permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. Admins can now specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. For more information, see [SMS Geographic Permissions]({{site.baseurl}}/sms_geographic_permissions). 
-
-![The "Country allowlist" dropdown with the most common countries displaying at the top.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
-
-#### Best practices for SMS/MMS
-
-Learn more about [best practices for SMS/MMS with Braze]({{site.baseurl}}/user_guide/message_building_by_channel/sms/best_practices/best_practices), including our recommendations for opt-out monitoring and traffic pumping. 
-
-#### Tracking push unsubscribes
-
-Check out our new [help article]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for some tips to track push unsubscribes.
-
-#### Shopify `checkout.liquid` deprecation
-
-Please note that support for Shopify `checkout.liquid` will begin deprecation in August 2024 and finish in August 2025. Read more about how Braze will [handle this transition]({{site.baseurl}}/help/release_notes/deprecations/shopify_checkout). 
-
-### SDK updates
- 
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
- 
-- [Swift SDK 9.3.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/9.3.0)
-    - Deprecates the existing Feature Flag APIs, to be removed in a future version:
-        - `Braze.FeatureFlag.jsonStringProperty(key:)` has been deprecated.
-        - `Braze.FeatureFlag.jsonObjectProperty(key:)` has been deprecated in favor of `Braze.FeatureFlag.jsonProperty(key:)`.
-- [Roku SDK 2.2.0](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md)
-- [Braze Expo Plugin 2.1.2](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-
-#### tvOS documentation
-
-A few months ago, the articles for [tvOS Content Cards]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/tvos/) and [in-app messaging]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/tvos_messages/) were deprecated by mistake. These docs have now been republished under the Swift section in Braze Docs.
-
-{% alert note %}
-[Contributors]({{site.baseurl}}/contributing/home) to Braze Docs should note that the site now runs on Ruby 3.3.0. Please upgrade your Ruby version as necessary.
-{% endalert %}
