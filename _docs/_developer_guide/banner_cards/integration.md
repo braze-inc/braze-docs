@@ -429,6 +429,13 @@ This feature is not currently supported on Roku.
 
 {% enddetails %}
 
+## Handling test sends
+
+Test banners are a way to verify Banner Card integrations before launching a campaign. They are temporary, stored in-memory, and do not persist across app restarts. No extra setup is needed—-test banners work automatically.
+
+### How Test Banners Work
+Banners with ""is_test_send": true" in the payload are classified as test banners. Test banners are stored in a separate in-memory cache and cleared on app restart. The SDK prioritizes test banners from the cache before standard banners. New test banners automatically update and re-render existing ones.
+
 ## Dimensions and sizing
 
 Here's some things to know about Banner Card dimensions and sizing:
