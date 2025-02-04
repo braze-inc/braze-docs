@@ -27,7 +27,7 @@ First, add Firebase to your Android project. For step-by-step instructions, see 
 {% endtab %}
 
 {% tab iOS %}
-{% multi_lang_include developer_guide/swift/apns_certificate.md %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 {% endtab %}
 {% endtabs %}
 
