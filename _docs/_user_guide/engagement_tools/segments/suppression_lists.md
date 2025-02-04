@@ -80,7 +80,7 @@ You can deactivate or archive suppression lists when you no longer need them.
 
 ## Suppression list usage
 
-### In a campaign
+### For campaigns
 
 ![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".][5]
 
@@ -90,7 +90,7 @@ If a user is in a suppression list, they won't receive a campaign for which that
 
 To check for suppression list usage within a campaign, go to the **Suppression List** section on the **Target Audience** page to view which suppression lists are being applied to that campaign.
 
-### In a Canvas
+### For Canvases
 
 If a user is in a suppression list, they will still enter the Canvas but won't be able to receive Message steps within the Canvas. When they advance to a Message step, they will be exited from the Canvas. However, a user in a suppression list is still able to receive non-Message steps prior to a Message step. 
 
