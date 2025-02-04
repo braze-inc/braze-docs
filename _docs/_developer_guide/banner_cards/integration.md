@@ -434,7 +434,7 @@ This feature is not currently supported on Roku.
 Use test sends to verify Banner Card integrations before launching a campaign. Test Banner Cards are stored in a separate in-memory cache and do not persist across app restarts. While no extra setup is needed, the device must be able to receive foreground push notifications to display test Banner Cards.
 
 {% alert important %}
-A test banner is treated like any other banner except it's removed at the next app session. You must have a placement set up in your app to display the test banner.
+A test banner is treated like any other banner except it's removed at the next app session. You must have its placement set up in your app for the test banner to display.
 {% endalert %}
 
 ## Dimensions and sizing
