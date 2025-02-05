@@ -8,27 +8,43 @@ hide_toc: true
 
 <div id="feedback">
     <div id="feedback_section">
-    <div id="feedback_title">Please rate how useful the Braze documentation is for you</div>
-    <br />
-      <div id="feedback_answer_star">
-        <ul class="list-inline rating-list">
-          <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i></li>
-          <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
-          <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i></li>
-          <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
-          <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
-        </ul>
-      </div>
-      <div>
-          <textarea id="feedback_comment" placeholder="How can we improve this page?"></textarea>
-      </div>
-      <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit" role="button"> SUBMIT FEEDBACK </button>
+    Have ideas to improve our docs or noticed something wrong? We’d love to hear from you! Our team reviews every submission to keep making things better.
+
+    <h3 style="margin-top: 15px; font-size: 22px;">How useful do you find Braze docs, on average?</h3>
+    <div id="feedback_answer_star">
+      <ul class="list-inline rating-list">
+        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very useful</li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Helpful" title="Helpful"></i></li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat useful</li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not useful</li>
+      </ul>
     </div>
-    <div id="feedback_msg">
+    <div style="margin-top: 15px;">
+      <b>Share your feedback</b> <br />
+      <textarea id="feedback_comment" placeholder="I couldn’t find any information about this error message"></textarea><br />
+        Have questions? Contact our support team for assistance.
     </div>
+    <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> SUBMIT FEEDBACK </button>
+  </div>
+  <div id="feedback_msg">
+  </div>
+
+  <hr style="border: 1px solid grey;margin-top:30px;"/>
+
+  <h3> Help us make these docs great</h3>
+
+  Braze Docs is an open source project that everyone is welcome to contribute to. Join 288+ contributors and submit your first pull request today. <br /><br />
+
+
+  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn">Start Contributing</button>
+
 </div>
 
 <style type="text/css">
+#feedback {
+  font-size: 16px;
+}
 #feedback_answer_star {
   display: inline-block;
 }
@@ -40,9 +56,8 @@ hide_toc: true
 }
 #feedback_answer_star > ul > li {
   list-style: none;
-  color: #ddd;
   padding: 10px 5px;
-  width: 50px;
+  width: 65px;
 }
 #feedback_answer_star > ul > li > i {
   font-size: 35px;
@@ -52,19 +67,24 @@ hide_toc: true
   margin-top: 15px;
   width: 100%;
   max-width: 680px;
-  height: 300px;
+  height: 140px !important;
   border: 2px solid grey !important;
   border-radius: 3px;
 }
 #feedback_msg {
   margin-top: 10px;
 }
-  
+
 #feedback_msg.error {
   color: red;
   font-weight: bold;
 }
-
+.feedback-star {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 5px;
+  line-height: 1em;
+}
 </style>
 <script type="text/javascript">
   var feedback_site = '{{site.baseurl}}{{page.url}}';
@@ -82,14 +102,19 @@ hide_toc: true
       var is_sel = false;
       lis.each(function (f,c){
         var el = $(this)
-        if (el.children('i').attr('data-value') == feedback_helpful){
+        var star = el.children('i');
+        star.removeClass('fa-regular');
+        star.removeClass('fas');
+        if (star.attr('data-value') == feedback_helpful){
           is_sel = true;
         }
         if (is_sel){
           el.addClass('active');
+          star.addClass('fas');
         }
         else {
           el.removeClass('active');
+          star.addClass('fa-regular');
         }
       })
   });
