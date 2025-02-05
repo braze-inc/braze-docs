@@ -21,7 +21,7 @@ Use this feature to:
 - **Monitor your emails in real-time:** Immediately see if messages are sent, processed, delivered, or encounter issues.
 - **Respond proactively:** Retry messages, switch to another channel like SMS, or use fallback systems to make sure your communications are delivered.
 
-## How it works
+## Tracking your transactional emails
 
 {% multi_lang_include http_event_postback.md %}
 
