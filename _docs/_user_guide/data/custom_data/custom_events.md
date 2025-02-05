@@ -167,7 +167,7 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an ecommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 

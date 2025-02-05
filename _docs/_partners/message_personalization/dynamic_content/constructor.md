@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Constructor
 
-> [Constructor](https://constructor.com/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
+> [Constructor](https://constructor.com/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for eCommerce and retail websites.
 
 With the Braze and Constructor integration, you can use Constructor’s Offsite Product Discovery to dynamically generate and deliver personalized product recommendations in Braze messages.
 

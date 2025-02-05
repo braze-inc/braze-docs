@@ -73,7 +73,7 @@ Unlike an `external_id`, an alias can be updated with a new name for a given lab
 
 ### Tagging anonymous users
 
-User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your ecommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
+User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your eCommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
 
 ### Behavior of aliases on anonymous user profiles
 
