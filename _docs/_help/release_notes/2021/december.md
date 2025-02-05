@@ -51,7 +51,7 @@ If you'd like to learn more, visit our new [Amazon Personalize]({{site.baseurl}}
 
 ## New Braze partnerships
 
-### Yotpo – Ecommerce
+### Yotpo – eCommerce
 
 The [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) and Braze integration allows you to dynamically pull and display star ratings, top reviews, and visual user-generated content on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 

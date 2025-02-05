@@ -18,7 +18,7 @@ Workspaces serve two key purposes:
 - **Separating distinct activities:** Workspaces also provide a means to keep distinct brands or activities separate. For instance, if you have multiple sub-brands with different user bases, it's beneficial to create separate workspaces for each.
 
 {% alert tip %} 
-This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or ecommerce sites that want separate workspaces for each region they operate in. 
+This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or eCommerce sites that want separate workspaces for each region they operate in. 
 {% endalert %}
 
 ## Planning workspaces

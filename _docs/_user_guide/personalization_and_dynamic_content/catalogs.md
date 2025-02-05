@@ -36,7 +36,7 @@ guide_featured_list:
 
 You can bring in any type of data into a catalog. Typically, the data is metadata about offerings, such as products, discounts, promotions, events, and similar. See the use cases below for a few examples of how you can use this data to target users with highly relevant messaging.
 
-### Retail and ecommerce
+### Retail and eCommerce
 
 - **Seasonal promotions:** Import seasonal product collections and personalize messages to reflect current trends.
 - **Localized messages:** Import your physical location addresses, hours, and services, then personalize notifications based on user locations.
