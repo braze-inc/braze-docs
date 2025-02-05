@@ -15,7 +15,7 @@ tool: Segments
 Segment Extensions allow you to build more precise segments over an extended period of a user's history. Using Segment Extensions, you can identify and reach users who have completed any custom event or purchase event any number of times in the past two years (730 days). You can refine this audience by using event properties to make targeting all the more granular.
 
 {% alert note %}
-The use of nested event properties for [action-based delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
+The use of nested event properties for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 {% endalert %}
 
 ## Why use Segment Extensions?
@@ -177,6 +177,5 @@ Now you can proceed as usual with [creating your segment][11].
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
 [21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
