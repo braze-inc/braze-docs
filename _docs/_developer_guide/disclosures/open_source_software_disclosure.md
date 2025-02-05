@@ -13,7 +13,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Open source software disclosure for the Braze services
 
-_(effective as of August 29, 2018; subject to change)_
+_(effective as of February 5, 2025; subject to change)_
 
 The Braze Services include third-party code licensed to Braze for use and redistribution under open-source licenses. Below is a list of disclosures and disclaimers in connection with such open-source licensed software that has been incorporated into the Braze Services. Notwithstanding any of the terms and conditions of your subscription or license agreement with Braze, the terms of certain open-source licenses may be applicable to your use of the Braze Services, as set forth below.
 
