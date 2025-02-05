@@ -64,7 +64,7 @@ Use various form block components to log custom and standard profile attributes 
 
 If you include a form block, each button will have the option to submit the form. However, you'll need to create a separate landing page for the [confirmation state](#confirmation-state).
 
-![A form block that registers a new customer and will send a discount code to their email.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![ALT_TEXT]()
 
 #### Page container styles
 
