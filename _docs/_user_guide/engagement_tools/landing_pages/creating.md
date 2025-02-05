@@ -99,3 +99,9 @@ If a user inputs an invalid form value (such as unaccepted special characters), 
 Each form submission on a landing page creates a new anonymous user profile in Braze. If a user with the same email address already exists, you can merge the new user profile into the existing profile using the [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user) endpoint. To learn about the different ways to deduplicate users in Braze, see [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
 
 User merging will be handled automatically via a liquid tag in the future. 
+
+## Viewing analytics
+
+To analyze the effectiveness of your landing page, go to **$PAGE/SECTION**. Here, you can track the number of page views, page clicks, page submissions, and the submission rates for your landing page.
+
+![ALT_TEXT]()
