@@ -1971,4 +1971,6 @@ validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/unlisted_docs
 validurls['/docs/developer_guide/platform_integration_guide/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/'
 validurls['/docs/developer_guide/platforms/android/push_notifications/displaying_notifications/'] = '/docs/developer_guide/platforms/android/push_notifications/'
 
+validurls['/docs/user_guide/engagement_tools/landing_pages/drag_and_drop/'] = '/docs/user_guide/engagement_tools/landing_pages/creating/';
+
 // validurls['OLD'] = 'NEW';
