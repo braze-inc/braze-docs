@@ -10,7 +10,7 @@ description: "This reference article describes how to create, manage, and use br
 
 > Tailor the style of your AI-generated copy to match your brand’s voice, tone, and personality with customized brand guidelines.
 
-You can create and manage your brand guidelines by navigating to **Settings** > **Brand Guidelines**. You can also create them in the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
+You can create and manage your brand guidelines by going to **Settings** > **Brand Guidelines**. You can also create them in the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
 
 ## Creating brand guidelines
 
@@ -47,7 +47,7 @@ Test your guidelines to see how they perform. Expand **Test your guidelines** to
 When you're happy with your guidelines, select **Save brand guideline**. Your new guidelines will be saved in your workspace for future use.
 
 {% alert important %}
-You can change the output language regardless of what language your copy is in, but neither Braze nor OpenAI guarantee the quality of translation. Always test and verify translations before using them.
+You can change the output language regardless of what language your copy is in, but neither Braze nor OpenAI guarantees the quality of translation. Always test and verify translations before using them.
 {% endalert %}
 
 ## Managing brand guidelines
@@ -58,13 +58,13 @@ You can edit brand guidelines by selecting them on the **Brand Guidelines** page
 
 ## Using brand guidelines
 
-When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) and select your brand guideline in the **Apply brand guideline** dropdown. If you designated a specific brand guideline as the default, it will automatically be selected in the dropdown, but you can choose a different guideline. 
+When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, it will automatically be selected in the dropdown, but you can choose a different guideline. 
 
 !["AI copywriting assistant with "Important Alerts!!" selected as the brand guideline.][2]
 
 ## How is my data used and sent to OpenAI?
 
-In order to generate copy using a brand guideline, Braze will send your query including the content of your guideline to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide or in your past campaign data when enabling the option labeled "Reference past campaign data". Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
+To generate copy using a brand guideline, Braze will send your query including the content of your guideline to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide or in your past campaign data when enabling the option labeled "Reference past campaign data". Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API using Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
 
 [1]: {% image_buster /assets/img/guidelines_create.png %}
 [2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
