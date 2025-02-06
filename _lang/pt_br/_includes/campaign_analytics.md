@@ -151,11 +151,15 @@ Se você quiser simplificar sua visualização, clique <i class="fas fa-plus"></
 
 #### Mapas de calor
 
-Usando mapas de calor, você pode ver quão bem-sucedidos são os diferentes links em uma única campanha de e-mail. Da seção **análise de dados**, acesse o painel **performance de e-mail**. Clique **Prévia & Mapa de Calor** para ver uma prévia da sua campanha de e-mail e o mapa de calor. Alternativamente, você pode clicar no hyperlink no nome da variante para ver o mapa de calor.
+Usando mapas de calor, você pode ver quão bem-sucedidos são os diferentes links em uma única campanha de e-mail. Da seção **análise de dados**, acesse o painel **performance de e-mail**. Selecione **Prévia e mapa de calor** para visualizar uma prévia da sua campanha de e-mail e o mapa de calor. Alternativamente, você pode selecionar o hyperlink no nome da variante para ver o mapa de calor.
 
-Nesta visualização, você pode usar o **Mostrar mapa de calor** para trazer uma visão visual do seu e-mail que mostra a frequência geral e o local dos cliques durante a duração da campanha. No painel **Link Table by Total Clicks**, você pode ver todos os links na sua campanha de e-mail e classificar por total de cliques. Isso pode fornecer um insight adicional sobre onde seus usuários navegam. Para salvar uma cópia do mapa de calor para referência, clique no botão de download.
+Nesta visualização, você pode usar o **Mostrar mapa de calor** para trazer uma visão visual do seu e-mail que mostra a frequência geral e o local dos cliques durante a duração da campanha. No painel **Link Table by Total Clicks**, você pode ver todos os links na sua campanha de e-mail e classificar por total de cliques. Isso pode fornecer um insight adicional sobre onde seus usuários navegam. Para salvar uma cópia do mapa de calor para referência, selecione o botão de baixar.
 
 ![Exemplo da página de Prévia e Mapa de Calor que inclui uma campanha de e-mail, e um painel com exemplos de alias de link com seus cliques totais.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### Imagens
+
+Sugerimos habilitar CORS para suas URLs de imagem para ajudar a evitar que as imagens quebrem nas prévias e exportações do mapa de calor.
 
 {% endif %}
 
@@ -260,7 +264,7 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Aberturas únicas projetadas</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} Para e-mail, isso é rastreado ao longo de um período de 7 dias. Este número deve estar entre 10% e 20%. Qualquer coisa acima de 20% é excepcional!
+                {% multi_lang_include metrics.md metric='Unique Opens' %} Para e-mail, isso é rastreado ao longo de um período de 7 dias. Este número deve estar entre 30–40%. Qualquer coisa acima de 40% é excepcional!
             </td>
         </tr>
         <tr>
@@ -366,7 +370,11 @@ Aqui estão algumas métricas chave de mensagem no app que você pode ver na an�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Taxa de conversão</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Fechar mensagem</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
