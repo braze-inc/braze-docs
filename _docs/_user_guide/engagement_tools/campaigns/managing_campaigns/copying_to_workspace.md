@@ -18,9 +18,9 @@ Copying campaigns across workspaces is generally available for the following sup
 
 ## How to copy a campaign to a different workspace
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu with "Copy to workspace" option.][1]{: style="float:right;max-width:70%;margin-left:15px;"}
 
-Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to Workspace**. After copying, we recommend reviewing and testing your campaign to confirm that all fields work properly.
+Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to workspace**. After copying, we recommend reviewing and testing your campaign to confirm that all fields work properly.
 
 When you copy a campaign across workspaces, fields such as campaign name and description, variants, delivery schedule type, and conversion behaviors are copied. For email campaigns, fields such as email body, subject, and preheader are also copied over to the destination workspace. 
 
