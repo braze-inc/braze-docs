@@ -157,4 +157,5 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Create and Edit Canvas Templates|Allows users to create and edit Canvas templates.|
 |Workspace|View Canvas Templates|Allows users to view Canvas templates.|
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
+|Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -16,6 +16,7 @@ Custom events are actions taken by, or updates about, your users. When custom ev
 ## Use cases
 
 Some common custom event use cases include:
+
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
 - Using dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
@@ -208,11 +209,16 @@ For a full list of Liquid tags that will cause in-app messages to deliver as tem
 
 Use event property segmentation to target users based on custom events taken and the properties associated with those events. This increases your filtering options when segmenting by purchase and custom events.
 
-Event properties for custom events are updated in real-time for any segment that uses them. You can manage properties by going to **Data Settings** > **Custom Events** and selecting **Manage Properties** for the associated custom event. Custom event properties used in certain segment filters have a maximum look-back history of 30 days.
+Event properties for custom events are updated in real-time for any segment that uses them. You can manage properties by going to **Data Settings** > **Custom Events** and selecting **Manage properties** for the associated custom event. Custom event properties used in certain segment filters have a maximum look-back history of 30 days.
 
-{% alert note %}
-If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting.
-{% endalert %}
+##### Adding event properties for segmentation
+
+You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+To add event properties for segmentation, do the following:
+
+1. Go to your custom event and select **Manage properties**.
+2. Select the **Enable segmentation** toggle to add the event property for segmentation. You can access additional filtering options when segmenting.
 
 The event property segmentation filters include:
 
