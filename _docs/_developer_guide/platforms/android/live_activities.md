@@ -1,9 +1,9 @@
 ---
 nav_title: Live Activities
 article_title: Live Activities for the Android Braze SDK
-platform: Swift
+platform: Android
 page_order: 6
-description: "This article covers using Braze to manage your Live Activities tokens for the Swift SDK."
+description: "This article covers using Braze to manage your Live Activities tokens for the Android Braze SDK."
 
 ---
 
@@ -13,7 +13,7 @@ description: "This article covers using Braze to manage your Live Activities tok
 
 ## About Live Activities
 
-![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![ALT_TEXT]()
 
 Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity would have your company's name as static information, as well as a dynamic "Time to delivery" that would be updated as the delivery driver approaches its destination.
 
