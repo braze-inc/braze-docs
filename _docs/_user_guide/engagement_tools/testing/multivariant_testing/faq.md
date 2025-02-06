@@ -53,7 +53,9 @@ The only way to redistribute users in Canvases is to use [Randomized Paths in Ex
 
 ### Does confidence increase over time?
 
-No, confidence doesn’t necessarily increase over time. Confidence is a measurement of how confident Braze is that the variant is different from the control. As more messages are sent,  the conversion rates can get closer across variants and control, which would reduce the confidence.
+Confidence increases over time if all else holds constant. Holding constant means there aren’t other marketing factors that could influence variants, such as Variant A talking about a 25% off sale that ends midway through the test.
+
+Confidence is a measurement of how confident Braze is that the variant is different from the control. As more messages are sent, the statistical power of the test increases, which would increase the confidence that measured differences in performance are not due to random chance. Generally, a larger sample size increases our confidence in identifying smaller differences in performance between variants and control.
 
 ### Can control and test group assignments introduce bias to testing?
 
