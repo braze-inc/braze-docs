@@ -374,7 +374,7 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">メッセージを閉じる</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric=「メッセージを閉じる」 %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
