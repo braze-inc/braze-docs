@@ -151,11 +151,15 @@ Si quieres simplificar la vista, haz clic en <i class="fas fa-plus"></i> **Añad
 
 #### Mapas de calor
 
-Con los mapas de calor, puedes ver el éxito de los distintos enlaces de una misma campaña de correo electrónico. En la sección **Análisis de mensajes**, ve al panel **Rendimiento del correo electrónico**. Haz clic en **Vista previa y** mapa de calor para ver una vista previa de tu campaña de correo electrónico y el mapa de calor. También puedes hacer clic en el hipervínculo del nombre de la variante para ver el mapa de calor.
+Con los mapas de calor, puedes ver el éxito de los distintos enlaces de una misma campaña de correo electrónico. En la sección **Análisis de mensajes**, ve al panel **Rendimiento del correo electrónico**. Selecciona **Vista previa y** mapa de calor para ver una vista previa de tu campaña de correo electrónico y el mapa de calor. También puedes seleccionar el hipervínculo del nombre de la variante para ver el mapa de calor.
 
-En esta vista, puedes alternar la opción **Mostrar mapa de calor** para obtener una vista visual de tu correo electrónico que muestre la frecuencia general y la ubicación de los clics dentro de la duración de la campaña. En el panel **Tabla de enlaces por clics totales**, puedes ver todos los enlaces de tu campaña de correo electrónico y ordenarlos por clics totales. Esto puede proporcionar información adicional sobre por dónde navegan tus usuarios. Para guardar una copia del mapa de calor como referencia, haz clic en el botón de descarga.
+En esta vista, puedes alternar la opción **Mostrar mapa de calor** para obtener una vista visual de tu correo electrónico que muestre la frecuencia general y la ubicación de los clics dentro de la duración de la campaña. En el panel **Tabla de enlaces por clics totales**, puedes ver todos los enlaces de tu campaña de correo electrónico y ordenarlos por clics totales. Esto puede proporcionar información adicional sobre por dónde navegan tus usuarios. Para guardar una copia del mapa térmico como referencia, selecciona el botón de descarga.
 
 ![Ejemplo de la página Vista previa y mapa de calor que incluye una campaña de correo electrónico, y un panel con ejemplos de alias de enlaces con sus clics totales.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### Imágenes
+
+Te sugerimos que habilites CORS en las URL de tus imágenes para evitar que se rompan en las previsualizaciones y exportaciones de mapas térmicos.
 
 {% endif %}
 
@@ -260,7 +264,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Aperturas únicas</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} En el caso del correo electrónico, se realiza un seguimiento durante un periodo de 7 días. Esta cifra debe estar entre el 10 y el 20%. ¡Todo lo que supere el 20% es excepcional!
+                {% multi_lang_include metrics.md metric='Unique Opens' %} En el caso del correo electrónico, se realiza un seguimiento durante un periodo de 7 días. Esta cifra debe estar entre el 30-40%. ¡Todo lo que supere el 40% es excepcional!
             </td>
         </tr>
         <tr>
@@ -366,7 +370,11 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Tasa de conversión</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Cerrar mensaje</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md métrica='Cerrar mensaje' %}</td>
         </tr>
     </tbody>
 </table>
