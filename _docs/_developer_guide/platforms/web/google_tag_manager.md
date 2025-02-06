@@ -97,7 +97,7 @@ Use the **Add Row** button to add event properties.
 
 ![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
 
-### Ecommerce events {#ecommerce}
+### eCommerce events {#ecommerce}
 
 If your site logs purchases using the standard [ecommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 

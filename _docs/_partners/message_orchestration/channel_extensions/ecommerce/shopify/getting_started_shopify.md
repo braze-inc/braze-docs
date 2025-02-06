@@ -301,7 +301,7 @@ Make sure that your Web SDK integration includes the following:
 
 #### Setting up Shopify forms for user reconciliation
 
-Ecommerce brands likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
+eCommerce brands likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
 
 The Web SDK tracks Shopify onsite behavior and anonymous users with the `device_id`. To confirm that email addresses are added to the anonymous user profile, add the following to either a newsletter or email capture form: 
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) 

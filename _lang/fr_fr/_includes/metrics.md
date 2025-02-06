@@ -54,6 +54,10 @@ Le terme <i>Clics du bouton 1</i> désigne le nombre total de clics sur le bout
 Le <i>taux de clics à l'ouverture</i> est le pourcentage d'e-mails livrés qui ont été ouverts au moins une fois par un seul utilisateur ou une seule machine. Il n'est disponible que dans le <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>générateur de rapports.</a>
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>Fermer le message</i> est le nombre total de clics sur le bouton de fermeture du message. Cela n'existe que pour les messages in-app créés dans l'éditeur par glisser-déposer, et non dans l'éditeur traditionnel.
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 On parle de <i>réceptions confirmées</i> lorsque l'opérateur a confirmé que le message a été délivré au numéro de téléphone cible.
 {% endif %}

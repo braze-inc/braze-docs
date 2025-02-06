@@ -273,7 +273,7 @@ Segment your users by the e.164 phone number field. You can use regular expressi
 
 ### New Braze partnerships
 
-#### Narvar - Ecommerce
+#### Narvar - eCommerce
 
 The Braze and [Narvar](https://corp.narvar.com/) integration enables brands to leverage Narvar’s notification events to trigger messages directly from Braze, keeping customers informed with timely updates.
 
