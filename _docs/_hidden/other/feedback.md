@@ -22,7 +22,7 @@ hide_toc: true
     </div>
     <div style="margin-top: 15px;">
       <b>Share your feedback</b> <br />
-      <textarea id="feedback_comment" placeholder="I couldn’t find any information about this error message"></textarea><br />
+      <textarea id="feedback_comment" placeholder="&quot;I couldn’t find any information about this error message&quot;"></textarea><br />
         Have questions? Contact our support team for assistance.
     </div>
     <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> SUBMIT FEEDBACK </button>
