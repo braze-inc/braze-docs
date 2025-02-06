@@ -12,7 +12,7 @@ Tool:
 
 > Experience the Canvas journey you've created for your users. This includes previewing the timing and messages they will receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending your Canvas.
 
-## Starting a test run
+## Creating a test run
 
 Follow these steps to preview your user journey:
 
