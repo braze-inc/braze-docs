@@ -2,20 +2,14 @@
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
 
 (function(){
-
-
-  var urlpath = removeleadingslash(window.location.pathname);
-
-  //lower case name => path name
-  function removeleadingslash(str){
-    var rstr = str;
-    if (rstr.slice(-1) === "/") {
-      rstr = rstr.slice(0, -1);
-    }
-    return rstr;
-  }
   function redirecturl(ky,uh,redirect) {
     var val_urls = validurls[ky];
+    if (site_language && (site_language != 'en')){
+      if (!val_urls.match(/^\/docs\/(\w{2}|\w{2}\-\w{2})\//)) {
+        val_urls = val_urls.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
+      }
+    }
+
     var hashes = val_urls.split('#');
     var returl = hashes[0] + redirect;
     if (hashes[1]) {
@@ -28,7 +22,6 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
   }
   var urlhash = window.location.hash;
   var urlsearch = window.location.search;
-  var queryparams = getQueryParams();
   var redirected_count = parseInt(query_params.get('redirected'),10) || 0;
   if (!redirected_count) {
     if (urlhash) {
