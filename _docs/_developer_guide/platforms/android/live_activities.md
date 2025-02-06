@@ -13,86 +13,160 @@ description: "This article covers using Braze to manage your Live Activities tok
 
 ## About Live Activities
 
-![ALT_TEXT]()
+![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity would have your company's name as static information, as well as a dynamic "Time to delivery" that would be updated as the delivery driver approaches its destination.
 
 As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as soon as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption.
 
-## Prerequisites 
+## About `IBrazeNotificationFactory`
 
-_$TODO_
+You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed.
+
+If you extend `IBrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass one `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent through the Braze dashboard or REST API.
 
 ## Implementing a Live Activity
 
-### Step 1: Add configuration files
+#{% multi_lang_include developer_guide/prerequisites/android.md %}
 
-Open your terminal and clone the [$TODO-REPOSITORY-LINK]():
+### Step 1: Add a custom layout
 
-```bash
-git clone git@github.com:braze-inc/$TODO.git
-```
-
-Move the following files to your Android project:
-
-- Place [`FullyCustomNotificationFactory.kt`]() in your application.
-- Place [`liveupdate_large.xml`]() and [`liveupdate_small.xml`]() in your layout resources.
-
-Your directory structure should be similar to the following:
+You can add one or more custom Live Activity layouts to your project. These are helpful for handling how notifications are displayed when collapsed or expanded. Your directory structure should be similar to the following:
 
 ```plaintext
-Your-Android-Project/
+.
 ├── app/
-│   └── src/
-│       └── main/
-│           └── java/
-│               └── com/
-│                   └── yourcompany/
-│                       └── yourapp/
-│                           └── FullyCustomNotificationFactory.kt
 └── res/
     └── layout/
         ├── liveupdate_large.xml
         └── liveupdate_small.xml
 ```
 
-In _$TODO_, update `FullyCustomNotificationFactory.getTeamInfo()` to return the drawables already being used in your app.
+In your XML file, create your custom layout. For example, in `liveupdate_small.xml`: 
 
-{% tabs %}
-{% tab Java %}
-```java
-$TODO
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live Activity Update"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+</LinearLayout>
 ```
-{% endtab %}
-{% tab Kotlin %}
+
+### Step 2: Create a custom notification factory
+
+In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) and handles how your Braze Live Activities are displayed.
+
 ```kotlin
-$TODO
+package com.appboy.sample
+
+import android.app.Notification
+import android.widget.RemoteViews
+import androidx.core.app.NotificationCompat
+import com.braze.models.push.BrazeNotificationPayload
+import com.braze.push.BrazeNotificationFactory
+import com.braze.push.BrazeNotificationUtils.getOrCreateNotificationChannelId
+
+class MyCustomNotificationFactory : BrazeNotificationFactory() {
+    override fun createNotification(payload: BrazeNotificationPayload): Notification? {
+        // Check if this is a Live Activity update
+        if (payload.extras.containsKey("live_update")) {
+            val context = payload.context ?: return null
+            val channelId = getOrCreateNotificationChannelId(payload)
+            val data = payload.extras
+
+            // Extract relevant data (e.g., the two teams, score, time)
+            val team1 = data["team1"] ?: "WBF"
+            val team2 = data["team2"] ?: "OWL"
+            val score1 = data["score1"] ?: "0"
+            val score2 = data["score2"] ?: "0"
+            val time = data["time"] ?: "0:00"
+            val quarter = data["quarter"] ?: "1st half"
+
+            // Set up small (collapsed) and large (expanded) layouts
+            val smallLayout = RemoteViews(context.packageName, R.layout.liveupdate_small)
+            val largeLayout = RemoteViews(context.packageName, R.layout.liveupdate_large)
+
+            // Example: updating the small layout text
+            smallLayout.setTextViewText(
+                R.id.notification_title,
+                "$team1 $score1 - $score2 $team2\n$time $quarter"
+            )
+
+            // Example: updating the large layout with more details
+            largeLayout.setTextViewText(R.id.notification_title, "WBF vs OWL")
+            largeLayout.setTextViewText(R.id.details, "$score1 - $score2 • $time $quarter")
+
+            // Build and return the Live Activity notification
+            return NotificationCompat.Builder(context, channelId)
+                .setSmallIcon(R.drawable.ic_notification) // Replace with your icon
+                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
+                .setCustomContentView(smallLayout)
+                .setCustomBigContentView(largeLayout)
+                .build()
+        }
+
+        // Otherwise, fall back to the default Braze notification handling
+        return super.createNotification(payload)
+    }
+}
 ```
-{% endtab %}
-{% endtabs %}
 
-### Step 2: Set the custom notification factory
+### Step 3: Create a method to retrieve data
 
-In _$TODO_, add the [`customBrazeNotificationFactory` method](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/custom-braze-notification-factory.html?query=var%20customBrazeNotificationFactory:%20IBrazeNotificationFactory?) to your application class.
+In `MyCustomNotificationFactory.kt`, create a new method for retrieving relevant data or drawables when displaying a Live Activity.
 
-{% tabs %}
-{% tab Java %}
-```java
-// Set the custom notification factory
-$TODO
-```
-{% endtab %}
-{% tab Kotlin %}
 ```kotlin
-// Set the custom notification factory
-Braze.customBrazeNotificationFactory = FullyCustomNotificationFactory()
+class CustomNotificationFactory : BrazeNotificationFactory() {
+    override fun createNotification(payload: BrazeNotificationPayload): Notification? {
+        // Your existing code
+        return super.createNotification(payload)
+    }
+
+    // Your new method
+    private fun getTeamInfo(team: String?): Pair<String, Int> {
+        return when (team) {
+            "WBF" -> Pair("WBF Wildlife Fund", R.drawable.nba_wbf)
+            "OWL" -> Pair("Owl Rehab", R.drawable.nba_owl)
+            else  -> Pair("Unknown", R.drawable.notification_small_icon)
+        }
+    }
+}
 ```
-{% endtab %}
-{% endtabs %}
 
-### Step 3: Call the `/messages/send` endpoint
+### Step 4: Set the custom notification factory
 
-The following curl command uses the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) to deliver a push notification to the chosen user's Android device. While curl commands are helpful for testing, we recommend handling this call in your backend where you already handle your [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/).
+In your application class, use [`customBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/custom-braze-notification-factory.html?query=var%20customBrazeNotificationFactory:%20IBrazeNotificationFactory?)to set your custom notification factory.
+
+```kotlin
+import com.braze.Braze
+
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Tell Braze to use your custom factory for notifications
+        Braze.customBrazeNotificationFactory = MyCustomNotificationFactory()
+    }
+}
+```
+
+### Step 5: Call the `/messages/send` endpoint
+
+The following curl command uses the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to the chosen user's Android device.
+
+{% alert tip %}
+While curl commands are helpful for testing, we recommend handling this call in your backend where you're already handling your [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/).
+{% endalert %}
 
 #### Example curl command
 
@@ -134,6 +208,6 @@ curl -X POST "https://{BRAZE_REST_ENPOINT}/messages/send" \
 | `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to that user's live notification. The ID must be unique to this game, and must be used in order to [update the existing notification](#step-4-update-data-with-the-braze-rest-api). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Step 4: Update the activity
+### Step 6: Update the activity
 
-To update the existing Live Activity with new data, modify the relevant key-value pairs assigned to `messages.extra`, then use the same `notification_id` and call the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) again.
+To update the existing Live Activity with new data, modify the relevant key-value pairs assigned to `messages.extra`, then use the same `notification_id` and call the `/messages/send` endpoint again.
