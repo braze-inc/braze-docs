@@ -79,11 +79,11 @@ Braze のセグメントがユーザーのターゲット設定にどのよう�
 
 #### セグメント拡張ユースケースs
 
-[Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用して、ユーザープロファイルの存続期間中に保存されたカスタムイベントまたは購買行動に基づいてユーザーs を対象にすることで、Segments をさらに絞り込むことができます。
+[Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用して、ユーザープロファイルの存続期間中に保存されたカスタムイベントまたは購買行動に基づいてユーザーを対象にすることで、Segments をさらに絞り込むことができます。
 
 - **過去の購入:**過去 2 年間に特定の色の特定製品を 2 回以上購入したかどうかによって、ユーザーをセグメント化します。
 - **イベントとメッセージのインタラクション:**過去 30 日間に購入を行ったかどうか、また特定のアプリ内メッセージと対話したかどうかによって、ユーザーをセグメント化します。
 - **データのクエリ:** 
-  - **Snowflake のクエリ:**[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を使用してSnowflakeを照会することにより、BrazeおよびCRMやデータウェアハウスなどの外部ソースから結合されたデータを含むセグメントユーザーs。
+  - **Snowflake のクエリ:**[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を使用してSnowflakeを照会することにより、BrazeおよびCRMやデータウェアハウスなどの外部ソースから結合されたデータを含むセグメントユーザー。
   - **データウェアハウスとの同期:**[CDI セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)により、データウェアハウスまたはファイルストレージシステムから Braze に直接同期されたデータを使用して、ユーザーをセグメント化します。
 

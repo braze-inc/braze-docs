@@ -9,9 +9,9 @@ tool: Reports
 
 # クエリビルダー
 
-> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
+> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートsを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
 
-クエリビルダーでは一部の顧客データに直接アクセスできるため、「PII を表示」[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/)がある場合にのみ、クエリビルダーにアクセスできます。
+クエリビルダーでは一部の顧客データに直接アクセスできるため、「PII を表示」[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)がある場合にのみ、クエリビルダーにアクセスできます。
 
 ## クエリービルダーでのレポートの実行
 
@@ -39,7 +39,7 @@ tool: Reports
 
 クエリテンプレートにアクセスするには、最初にレポートを作成するときに [**SQL クエリを作成**] > [**クエリテンプレート**] を選択します。
 
-使用可能なテンプレートの一覧については、[クエリーテンプレートs]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/)を参照してください。
+使用可能なテンプレートの一覧については、[クエリーテンプレートs]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/)を参照してください。
 
 ### データの期間
 
@@ -59,7 +59,7 @@ AI クエリビルダーで SQL を生成するには、次の手順に従いま
 
 ### ヒント
 
-- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
+- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
 - この機能の [SQL 記述ルール]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql)をよく理解してください。このルールに従わないと、エラーが発生します。
 - AI クエリビルダーでは、1 分あたり最大 20 個のプロンプトを送信できます。
 
@@ -70,7 +70,7 @@ SQL を生成するために、Braze はプロンプトを OpenAI の API プラ
 
 ## カスタム SQL クエリの作成{#custom-sql}
 
-[ Snowflake構文](https://docs.snowflake.com/en/sql-reference) を使用してSQL クエリーを記述します。クエリ可能なテーブルとカラムの全リストについては、[テーブルのリファレンス]({{site.baseurl}}/sql_segments_tables/)を参照してください。
+[ Snowflake構文](https://docs.snowflake.com/en/sql-reference) を使用してSQL クエリーを記述します。クエリ可能なテーブルとカラムの全リストについては、[テーブルのリファレンス]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)を参照してください。
 
 クエリービルダー内でテーブルの詳細を表示するには次の手順に従います。
 
@@ -304,7 +304,7 @@ LIMIT 100
 
 #### セグメント
 
-[Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/)が有効になっているSegmentを選択します。
+[Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)が有効になっているSegmentを選択します。
 
 - **置換する値:**この列が使用可能なテーブルの`user_segment_membership_ids` 列に格納されているID に対応するSegment 分析 ID。
 - **使用例:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
@@ -429,7 +429,7 @@ LIMIT 100
 
 ## データと結果
 
-結果および結果のエクスポートは、最大 1,000 行のテーブルです。大量のデータを必要とするレポートには、[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) や Braze の[エクスポート API]({{site.baseurl}}/api/endpoints/export) など、他のツールを使用してください。
+結果および結果のエクスポートは、最大 1,000 行のテーブルです。大量のデータを必要とするレポートには、[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) や Braze の[エクスポート API]({{site.baseurl}}/api/endpoints/export) など、他のツールを使用してください。
 
 ## クエリービルダーの使用量の監視
 
