@@ -1,6 +1,6 @@
 ---
 nav_title: Live Activities
-article_title: Live Activities for iOS
+article_title: Live Activities for the Swift Braze SDK
 platform: Swift
 page_order: 6
 description: "This article covers using Braze to manage your Live Activities tokens for the Swift SDK."
