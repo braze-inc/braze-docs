@@ -151,11 +151,15 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### ヒートマップ
 
-ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**クリックする。または、バリアント名のハイパーリンクをクリックしてヒートマップを表示することもできます。
+ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**選択する。または、バリアント名のハイパーリンクを選択してヒートマップを表示することもできます。
 
-このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンをクリックする。
+このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンを選択する。
 
 ![メールキャンペーンを含むプレビューとヒートマップページの例と、リンクエイリアスの例とその総クリック数のパネル。]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### 画像
+
+ヒートマップのプレビューやエクスポートで画像が壊れるのを防ぐために、画像URLのCORSをイネーブルメントにすることをお勧めする。
 
 {% endif %}
 
@@ -260,7 +264,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Unique Opens</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は10から20% の範囲内でなければなりません。20%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は30から40% の範囲内でなければなりません。40%を超えるものは例外です。
             </td>
         </tr>
         <tr>
@@ -366,7 +370,11 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">コンバージョン率</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">メッセージを閉じる</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric=「メッセージを閉じる」 %}</td>
         </tr>
     </tbody>
 </table>
