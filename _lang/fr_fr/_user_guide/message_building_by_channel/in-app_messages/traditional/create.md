@@ -188,7 +188,7 @@ Le contenu de l'onglet **Composer** varie en fonction des options de message que
 
 #### Langue
 
-Sélectionnez **Ajouter des langues** et sélectionnez les langues de votre choix dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
+Sélectionnez **Ajouter des langues** et sélectionnez les langues souhaitées dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
 
 #### Image
 
@@ -395,7 +395,7 @@ Braze accorde de l’importance à la fiabilité et à la vitesse. Tout comme no
 Le traitement des campagnes de messages in-app par événement, qui sont toujours actives mais n’envoient plus de messages ou qui sont devenues inutiles, ralentit la performance globale des services de Braze pour vous et d’autres clients. Ce temps supplémentaire nécessaire pour traiter ces nombreuses campagnes inactives ralentit l’affichage de tous les messages in-app sur les appareils de l’utilisateur final, ce qui affecte l’expérience de ce dernier.
 
 {% alert important %}
-Vous pouvez avoir jusqu'à 200 campagnes de messages in-app actives et basées sur des actions par espace de travail afin d'optimiser la vitesse de réception/distribution des messages et d'éviter les dépassements de délai. Cela ne s'applique pas aux toiles.
+Vous pouvez avoir jusqu'à 200 campagnes de messages in-app actives, basées sur des actions, par espace de travail afin d'optimiser la vitesse de réception/distribution des messages et d'éviter les dépassements de délai. Cela ne s'applique pas aux toiles.
 {% endalert %}
 
 Cette limite de 200 inclut des campagnes de communication in-app actives qui n’ont pas encore atteint l’heure de fin et celles qui n’en possèdent pas. Les campagnes de communication in-app actives qui ont dépassé leur heure de fin ne sont pas comptabilisées. Le client Braze standard possédant un total de 26 campagnes actives simultanées, vous ne risquez pas d’être affecté par cette limitation.
