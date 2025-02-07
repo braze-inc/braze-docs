@@ -9,7 +9,11 @@ description: "Learn how to implement Live Activities for the Android Braze SDK."
 
 # Live Activities
 
-> Learn how to implement Live Activities for the Android Braze SDK. Live Activities are persistent, interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
+> Learn how to implement Live Activities for the Android Braze SDK. Live Activities are interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
+
+{% alert note %}
+At this time, Live Activities are not officially supported for Android. However, this guide will show you how to emulate a similar behavior to our [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities).
+{% endalert %}
 
 ## About `IBrazeNotificationFactory`
 
