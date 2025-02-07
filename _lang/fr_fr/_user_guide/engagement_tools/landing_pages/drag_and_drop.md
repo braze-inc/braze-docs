@@ -1,5 +1,5 @@
 ---
-nav_title: Éditeur par glisser-déposer
+nav_title: Editeur par glisser-déposer
 article_title: "Créer des pages d'accueil au moyen du glisser-déposer"
 description: "Cet article explique comment créer et personnaliser les pages d'atterrissage de Braze à l'aide de l'éditeur par glisser-déposer."
 page_order: 0
@@ -112,6 +112,15 @@ Vous devez disposer d'autorisations d'administrateur ou de toutes les autorisati
 - Créer des ébauches de page d’accueil
 - Publier les pages d’accueil
 
+## Paliers de régime
+
+Le nombre de pages de destination publiées et de domaines personnalisés que vous pouvez utiliser dépend de votre type de plan : gratuit ou payant (incrémental).
+
+| Fonctionnalité                                                                                                   | Tiercé libre     | Niveau payant (incrémental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Pages d'atterrissage publiées                                                                 | Cinq par entreprise | 20 supplémentaires |
+| Domaines personnalisés          | Un par entreprise | Cinq autres |
+
 ## Foire aux questions
 
 ### Que se passe-t-il lorsqu'un utilisateur soumet ses informations sur la page d'accueil ?
@@ -129,10 +138,6 @@ Vous pouvez modifier le code HTML d'une page de destination à l'aide du bloc Co
 ### Des rapports sont-ils disponibles pour les pages d'atterrissage ?
 
 Non, ce service n'est pas disponible actuellement.
-
-### Existe-t-il un éditeur HTML pour les pages d'atterrissage ?
-
-Non, ce service n'est pas disponible actuellement. Vous pouvez utiliser le bloc Code personnalisé dans l'éditeur.
 
 ### Puis-je créer un webhook à l'intérieur d'une page d'atterrissage ?
 
