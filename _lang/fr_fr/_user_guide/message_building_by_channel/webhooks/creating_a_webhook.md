@@ -60,7 +60,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 {% endtab %}
 {% endtabs %}
 
-## Étape 2 : Créez votre webhook
+## Étape 2 : Créez votre webhook
 
 Vous pouvez choisir de créer un webhook à partir de zéro, d'utiliser un modèle existant ou d'utiliser l'un de nos modèles existants. Ensuite, créez votre webhook dans l'onglet **Compose** de l'éditeur.
 
@@ -125,7 +125,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 ![Corps de la requête avec une chaîne de caractères codée en URL.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
-## Étape 3 : Configurer des paramètres supplémentaires
+## Étape 3 : Configurer des paramètres supplémentaires
 
 #### En-têtes de requête (optionnel)
 
@@ -213,7 +213,7 @@ Le tableau suivant résume les différentes réponses que le serveur peut envoye
 
 | Code de réponse | Marqué comme reçu ? | Nouvel essai ? |
 |---------------|-----------|----------|
-| `20x` (succès)  | Oui |   S.O.  |
+| `20x` (succès)  | Oui |   N/A  |
 | `30x` (redirection)  | Non | Non |
 | `408` (délai d'attente de la demande)  | Non | Oui |
 | `429` (limite de débit)  | Non | Oui |

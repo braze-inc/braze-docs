@@ -47,7 +47,7 @@ Maintenant, passons à la technique. En coulisses, une carte de contenu comporte
 - **Voir :** À quoi ressemble la carte
 - **Contrôleur :** Comment l’utilisateur interagit avec la carte
 
-Dans le cas d'une implémentation par défaut, vous ajoutez le contenu de la carte - le modèle - à partir du tableau de bord ou par le biais d'API, et la vue et le contrôleur sont gérés par ce que l'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
+Dans le cas d'une implémentation par défaut, vous ajoutez le contenu de la carte - le modèle - à partir du tableau de bord ou par l'intermédiaire d'API, et la vue et le contrôleur sont gérés par ce que l'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
 
 ## Cas d’utilisation
 
@@ -60,7 +60,7 @@ Pour plus d'inspiration, nous vous recommandons vivement de consulter notre [Gui
 {% tabs %}
 {% tab Onboarding et étapes suivantes %}
 
-Lorsque de nouveaux utilisateurs explorent votre application et votre site web, faites-leur découvrir les valeurs et les avantages de ce que vous proposez à l'aide de cartes de contenu placées à des endroits stratégiques. Encouragez les utilisateurs à s'abonner à d'autres canaux de communication avec une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en suspens dans un onglet dédié à l'onboarding alimenté par des cartes de contenu. N'oubliez pas de retirer une carte lorsque l'utilisateur a accompli la tâche souhaitée !
+Lorsque de nouveaux utilisateurs explorent votre application et votre site web, faites-leur découvrir les valeurs et les avantages de ce que vous proposez grâce à des cartes de contenu placées à des endroits stratégiques. Encouragez les utilisateurs à s'abonner à d'autres canaux de communication avec une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en suspens dans un onglet dédié à l'onboarding alimenté par des cartes de contenu. N'oubliez pas de retirer une carte lorsque l'utilisateur a accompli la tâche souhaitée !
 
 <style>
   .imgDiv {

@@ -24,7 +24,6 @@ Pour modifier et gérer la prise en charge multilingue, vous devez disposer de l
 {% tabs %}
 {% tab Paramètres régionaux par défaut %}
 
-
 Pour les **Paramètres régionaux par défaut**, utilisez les menus déroulants pour sélectionner la langue à ajouter et, éventuellement, le pays à associer à la langue.<br><br>![Une fenêtre intitulée "Ajouter des paramètres régionaux - Langue et pays par défaut" permet de spécifier la langue et le pays.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}

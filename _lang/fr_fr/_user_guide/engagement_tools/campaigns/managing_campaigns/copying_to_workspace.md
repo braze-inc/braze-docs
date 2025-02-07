@@ -28,7 +28,7 @@ Notez que les campagnes multicanales dont les canaux ne sont pas pris en charge 
 
 ### Ce qui est copié dans les espaces de travail
 
-Notez que ce qui suit ne constitue pas une liste exhaustive de ce qui est copié entre les espaces de travail et de ce qui est omis. En tant que meilleure pratique, vérifiez les détails de la campagne et testez pour confirmer que votre campagne fonctionne comme prévu.
+Notez que ce qui suit ne constitue pas une liste exhaustive de ce qui est copié entre les espaces de travail et de ce qui est omis. En guise de bonne pratique, vérifiez les détails de la campagne et testez pour confirmer que votre campagne fonctionne comme prévu.
 
 {% tabs %}
 {% tab Campagnes %}

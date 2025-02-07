@@ -18,7 +18,7 @@ Avant d'aborder la manière dont vous pouvez mettre en place votre modèle de do
 
 Il y a quatre objets principaux B2B dont vous avez besoin pour exécuter des campagnes B2B.
 
-| Objet | Descriptif |
+| Objet | Description |
 | --- | --- |
 | Prospects | Registre des clients potentiels qui ont manifesté de l'intérêt pour un produit ou un service mais qui n'ont pas encore été qualifiés d'opportunité. |
 | Contacts | Il s'agit généralement de personnes qui ont été qualifiées et converties d'une piste à un contact pour poursuivre une opportunité de vente. |
@@ -28,19 +28,19 @@ Il y a quatre objets principaux B2B dont vous avez besoin pour exécuter des cam
 
 Dans Braze, ces quatre objets sont combinés et réduits en deux objets : les profils utilisateurs et les objets métiers.
 
-| Braze objet B2B | Descriptif | Objets B2B originaux  |
+| Braze objet B2B | Description | Objets B2B originaux  |
 | --- | --- | --- |
 | Profils utilisateur | Ceux-ci mappent directement les pistes et les contacts dans votre système CRM de vente. Parce que les leads sont capturés par Braze, ils sont automatiquement créés en tant que leads dans votre système CRM de vente. Au fur et à mesure qu'ils sont convertis en contacts, les ID et les détails des contacts sont synchronisés avec Braze. |Prospects<br> Contacts |
 | Objets de gestion | Ceux-ci mappent tous les objets non-utilisateurs de votre système CRM de vente. Cela inclut vos objets spécifiques aux ventes, tels que les objets de compte et les objets d'opportunité. | Comptes<br> Opportunités |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Étape 1 : Créez vos objets de gestion dans Braze
+## Étape 1 : Créez vos objets de gestion dans Braze
 
 Les objets de gestion sont tous les ensembles de données non centrés sur l'utilisateur. Dans un contexte B2B, il s'agit notamment des données relatives aux comptes et aux opportunités, ainsi que de tout autre ensemble de données pertinent non centré sur l'utilisateur que votre entreprise suit.
 
 Il existe deux méthodes pour créer et gérer vos objets de gestion dans Braze, les catalogues et les sources connectées. 
 
-| Méthode | Descriptif |
+| Méthode | Description |
 | --- | --- |
 | [Catalogues]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Il s'agit d'objets de données indépendants (objets de données supplémentaires) sur le profil utilisateur principal dans Braze. Dans un contexte B2B, vous aurez probablement des catalogues pour vos comptes et vos opportunités. |
 | [Sources connectées]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | Ceux-ci permettent à Braze d'interroger directement votre entrepôt de données. Il est probable que vous synchronisiez déjà régulièrement vos prospects, contacts, opportunités et comptes avec votre entrepôt de données. Vous pouvez donc faire pointer la segmentation de Braze directement vers cet entrepôt et l'activer dans un environnement sans copie. |
@@ -143,7 +143,7 @@ Les sources connectées sont des tables de données que vous hébergez dans votr
 
 Pour configurer les sources connectées, reportez-vous à la section [Intégration des sources connectées]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
-## Étape 2 : Relier vos objets d'entreprise aux profils utilisateurs
+## Étape 2 : Relier vos objets d'entreprise aux profils utilisateurs
 
 Les profils utilisateurs sont l'objet principal de Braze, qui alimente la majorité de votre segmentation démographique, de vos déclencheurs et de votre personnalisation. Les profils utilisateurs comprennent les [données utilisateur par défaut]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) collectées par notre SDK et d'autres sources, y compris les [données personnalisées]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), qui prennent la forme soit d'attributs (données démographiques), soit d'événements (données comportementales), soit d'achats (données transactionnelles).
 

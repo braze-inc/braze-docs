@@ -107,7 +107,7 @@ Faites revenir les utilisateurs sur votre application en leur proposant des inci
 
 - Dans **Basics**, sélectionnez une app spécifique pour laquelle vous souhaitez suivre les conversions.
 - Dans l'éditeur de canvas, ajoutez des applications spécifiques pour les étapes des parcours d'action.
-- Configurez l'étape de synchronisation des audiences avec les partenaires et les audiences correspondant à votre cas d'utilisation.
+- Configurez l'étape de synchronisation de l'audience avec les partenaires et les audiences correspondant à votre cas d'utilisation.
 
 {% endtab %}
 {% tab Onboarding %}
@@ -147,7 +147,7 @@ Pour n'autoriser que certains utilisateurs à accéder à des modèles Canvas sp
 Si vous attribuez l'une des autorisations suivantes au niveau de l'équipe, mais pas au niveau de l'espace de travail, vous ne pouvez effectuer que les opérations suivantes attribuées à votre équipe :
 
 - Créer et modifier des modèles de canvas
-- Voir les modèles Canvas
+- Voir les modèles de Canvas
 - Archiver les modèles de Canvas
 
 Si des autorisations sont accordées à la fois au niveau de l'espace de travail et au niveau des Teams, les autorisations au niveau de l'espace de travail seront prioritaires.

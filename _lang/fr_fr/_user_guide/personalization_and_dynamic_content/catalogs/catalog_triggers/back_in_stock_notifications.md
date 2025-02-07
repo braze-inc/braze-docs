@@ -9,10 +9,6 @@ description: "Cet article de référence décrit comment créer des notification
 
 > En combinant les notifications de retour en stock via les catalogues Braze et un canvas, vous pouvez avertir les clients lorsqu'un produit est de nouveau disponible. Chaque fois qu'un client effectue un événement personnalisé sélectionné, il peut être automatiquement abonné pour être informé du réapprovisionnement du produit.
 
-{% alert important %}
-Les notifications de rupture de stock pour les catalogues sont actuellement en accès anticipé. Contactez votre gestionnaire de compte si vous souhaitez participer à cet accès anticipé.
-{% endalert %}
-
 Lorsqu'un utilisateur déclenche un événement personnalisé pour un produit, nous l'abonnons automatiquement pour qu'il reçoive des notifications de retour en stock pour ce produit. Lorsque la quantité d'inventaire du produit correspond à votre règle d'inventaire (par exemple, un inventaire supérieur à 100), tous les abonnés pourront recevoir des notifications par le biais d'une campagne ou d’un canvas. Cependant, seuls les utilisateurs ayant opté pour les notifications recevront des notifications. 
 
 ## Comment fonctionnent les notifications de rupture de stock ?
@@ -54,7 +50,7 @@ Suivez ces étapes pour configurer les notifications de rupture de stock dans un
     }
     ```
 {% alert note %}
-Les déclencheurs de rupture de stock et de baisse de prix utilisent le même événement pour abonner l'utilisateur à la notification. Créez une notification de baisse de prix en paramétrant `type` sur `back-in-stock`. Vous ne pouvez pas définir à la fois une baisse de prix et une notification de retour en stock.
+Les déclencheurs de rupture de stock et de baisse de prix utilisent le même événement pour abonner l'utilisateur à la notification. Vous pouvez donc utiliser le tableau `type` pour définir les notifications de rupture de stock et de baisse de prix dans le même événement.
 {% endalert %}
 
 {: start="4"}
