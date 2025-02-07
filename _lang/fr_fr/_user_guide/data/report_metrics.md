@@ -260,7 +260,7 @@ Par exemple, si un utilisateur déclenche un message in-app deux fois et se conv
 in-app Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Close Message' (message de fermeture) %}
+{% multi_lang_include metrics.md metric='Close Message' %}
 
 {% endapi %}
 
