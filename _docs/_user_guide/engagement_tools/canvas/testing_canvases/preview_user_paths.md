@@ -55,7 +55,7 @@ While the default starts times still apply, the entrance time is configurable in
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
 
-## When users enter
+## When users enter and exit
 
 Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
