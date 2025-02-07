@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 A combinação do suporte a beacon ou geofence existente com nossos recursos de direcionamento e envio de mensagens fornece mais informações sobre as ações físicas dos usuários para que você possa enviar mensagens de acordo com elas. Você pode aproveitar o monitoramento de localização com alguns de nossos parceiros: 
 
 - [Radar][6]
-- [Gimbal][10]
+- [Infillion][10]
 - [Foursquare][7]
 
 ## Perguntas frequentes
@@ -74,5 +74,5 @@ Consulte nossas Perguntas [frequentes sobre][11] locais para obter respostas às
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
