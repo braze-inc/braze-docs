@@ -25,7 +25,7 @@ Avant de créer un message LINE, faites ce qui suit :
 
 L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte.
 
-## Étape 1 : Choisissez où créer votre message
+## Étape 1 : Choisissez où créer votre message
 
 Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
 
