@@ -17,9 +17,9 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 
 ## Implementing a Live Activity
 
-In this section, you'll partner with Superb Owl, the host of a gameshow where two different wildlife rescue teams compete to see who can save the most number of owls. They're looking to leverage Live Activities in their Android app, so they can show the status of an on-going match and make dynamic updates to their notifications in realtime.
+In this section, you'll partner with Superb Owl, the hosts of a game show where two wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can show the status of an on-going match and make dynamic updates to their notifications in realtime.
 
-![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the 1st half and the score is 2-4 with OWL in the lead.]()
+![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
@@ -113,7 +113,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5:30 - 1st Half" />
+            android:text="1:33 - Q4" />
 
     </LinearLayout>
 
@@ -181,7 +181,7 @@ class MyCustomNotificationFactory : BrazeNotificationFactory() {
             val score1 = kvp["score1"]
             val score2 = kvp["score2"]
             val time = kvp["time"]
-            val half = kvp["half"]
+            val quarter = kvp["quarter"]
 
             // Superb Owl will define the 'getTeamInfo' method in the next step.
             val (team1name, team1icon) = getTeamInfo(team1)
@@ -194,13 +194,13 @@ class MyCustomNotificationFactory : BrazeNotificationFactory() {
             // Very simple notification for the small layout
             notificationLayoutCollapsed.setTextViewText(
                 R.id.notification_title,
-                "$team1 $score1 - $score2 $team2\n$time $half"
+                "$team1 $score1 - $score2 $team2\n$time $quarter"
             )
 
             notificationLayoutExpanded.setTextViewText(R.id.score, "$score1 - $score2")
             notificationLayoutExpanded.setTextViewText(R.id.team1name, team1name)
             notificationLayoutExpanded.setTextViewText(R.id.team2name, team2name)
-            notificationLayoutExpanded.setTextViewText(R.id.timeInfo, "$time - $half")
+            notificationLayoutExpanded.setTextViewText(R.id.timeInfo, "$time - $quarter")
             notificationLayoutExpanded.setImageViewResource(R.id.team1logo, team1icon)
             notificationLayoutExpanded.setImageViewResource(R.id.team2logo, team2icon)
 
@@ -278,15 +278,15 @@ curl -X POST "https://BRAZE_REST_ENPOINT/messages/send" \
     "messages": {
       "android_push": {
         "title": "WBF vs OWL",
-        "alert": "2 to 4 5:30 1st half",
+        "alert": "2 to 4 1:33 Q4",
         "extra": {
           "live_update": "true",
           "team1": "WBF",
           "team2": "OWL",
           "score1": "2",
           "score2": "4",
-          "time": "5:30",
-          "quarter": "1st half"
+          "time": "1:33",
+          "quarter": "Q4"
         },
         "notification_id": ASSIGNED_NOTIFICATION_ID
       }
