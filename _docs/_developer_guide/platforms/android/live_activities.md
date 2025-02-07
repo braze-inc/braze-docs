@@ -17,7 +17,9 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 
 ## Implementing a Live Activity
 
-In this section, you'll partner with $TODO-ESPORTS-COMPANY, an ESports company looking to leverage Live Activities in their Android app, so they can show the status of an on-going match and make dynamic updates in realtime.
+In this section, you'll partner with Superb Owl, the host of a gameshow where two different wildlife rescue teams compete to see who can save the most number of owls. They're looking to leverage Live Activities in their Android app, so they can show the status of an on-going match and make dynamic updates to their notifications in realtime.
+
+![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the 1st half and the score is 2-4 with OWL in the lead.]()
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
@@ -34,7 +36,7 @@ You can add one or more custom Live Activity layouts to your project. These are 
         └── liveupdate_expanded.xml
 ```
 
-In each XML file, create a custom layout. $TODO-ESPORTS-COMPANY created the following layouts for collapsed and expanded Live Activities:
+In each XML file, create a custom layout. Superb Owl created the following layouts for their collapsed and expanded Live Activities:
 
 {% tabs local %}
 {% tab  Example: Collapsed layout %}
@@ -148,7 +150,7 @@ In each XML file, create a custom layout. $TODO-ESPORTS-COMPANY created the foll
 
 In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Activities are displayed.
 
-In the following example, $TODO-ESPORTS-COMPANY created a custom notification factory for... In the [next step](#step-3-map-custom-data), they'll create a new method for mapping this data.
+In the following example, Superb Owl created a custom notification factory to display a Live Activity for on-going matches. In the [next step](#step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
 {% details Show the sample code %}
 ```kotlin
@@ -181,7 +183,7 @@ class MyCustomNotificationFactory : BrazeNotificationFactory() {
             val time = kvp["time"]
             val half = kvp["half"]
 
-            // $TODO-ESPORTS-COMPANY will define the 'getTeamInfo' method in the next step.
+            // Superb Owl will define the 'getTeamInfo' method in the next step.
             val (team1name, team1icon) = getTeamInfo(team1)
             val (team2name, team2icon) = getTeamInfo(team2)
 
@@ -222,7 +224,7 @@ class MyCustomNotificationFactory : BrazeNotificationFactory() {
 
 In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Activities are displayed.
 
-$TODO-ESPORTS-COMPANY created the `getTeamInfo` method to map a team's name and logo when a Live Activity is expanded:
+Superb Owl created the following method to map each team's name and logo to expanded Live Activities:
 
 ```kotlin
 class CustomNotificationFactory : BrazeNotificationFactory() {
@@ -261,13 +263,11 @@ class MyApplication : Application() {
 
 ### Step 5: Call the `/messages/send` endpoint
 
-You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to the chosen user's Android device. 
-
-{% alert tip %}
-While curl commands are helpful for testing, we recommend handling this call in your backend where you're already handling your [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/).
-{% endalert %}
+You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to a user's Android device.
 
 #### Example curl command
+
+Superb Owl sent their request using the following curl command:
 
 ```bash
 curl -X POST "https://BRAZE_REST_ENPOINT/messages/send" \
@@ -293,6 +293,10 @@ curl -X POST "https://BRAZE_REST_ENPOINT/messages/send" \
     }
   }'
 ```
+
+{% alert tip %}
+While curl commands are helpful for testing, we recommend handling this call in your backend where you're already handling your [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/).
+{% endalert %}
 
 #### Request parameters
 
