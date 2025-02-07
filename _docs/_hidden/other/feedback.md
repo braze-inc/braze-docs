@@ -4,20 +4,21 @@ permalink: /feedback/
 hide_toc: true
 ---
 
-# Documentation Feedback
-
+<fieldset style="margin-top: 60px;">
+<legend style="font-size: 2.5rem;color: #212123;font-weight:bold;">Documentation Feedback</legend>
 <div id="feedback">
     <div id="feedback_section">
-    Have ideas to improve our docs or noticed something wrong? We’d love to hear from you! Our team reviews every submission to keep making things better.
+    Have ideas to improve our docs or noticed something wrong? We’d love to hear from you! Our team reviews every submission to keep making things better.<br /><br />
 
-    <h3 style="margin-top: 15px; font-size: 22px;">How useful do you find Braze docs, on average?</h3>
+    <b>How useful do you find Braze docs, on average?</b><br />
+
     <div id="feedback_answer_star">
       <ul class="list-inline rating-list">
-        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very useful</li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Helpful" title="Helpful"></i></li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat useful</li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fa-regular fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not useful</li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very useful</li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat useful</li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
+        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not useful</li>
       </ul>
     </div>
     <div style="margin-top: 15px;">
@@ -40,6 +41,7 @@ hide_toc: true
   <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn">Start Contributing</button>
 
 </div>
+</fieldset>
 
 <style type="text/css">
 #feedback {
@@ -58,6 +60,14 @@ hide_toc: true
   list-style: none;
   padding: 10px 5px;
   width: 65px;
+  color: #999999 !important;
+}
+#feedback_answer_star > ul > li:hover,
+#feedback_answer_star .rating-list li:hover~li {
+  color: #000000 !important;
+}
+#feedback_answer_star > ul > li.active {
+  color: #000000 !important;
 }
 #feedback_answer_star > ul > li > i {
   font-size: 35px;
@@ -103,18 +113,14 @@ hide_toc: true
       lis.each(function (f,c){
         var el = $(this)
         var star = el.children('i');
-        star.removeClass('fa-regular');
-        star.removeClass('fas');
         if (star.attr('data-value') == feedback_helpful){
           is_sel = true;
         }
         if (is_sel){
           el.addClass('active');
-          star.addClass('fas');
         }
         else {
           el.removeClass('active');
-          star.addClass('fa-regular');
         }
       })
   });
