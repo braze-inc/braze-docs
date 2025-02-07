@@ -218,6 +218,10 @@ glossaries:
     description: "Segmente a sus usuarios en función de si su dirección de correo electrónico ha rebotado o no (por ejemplo, si la dirección de correo electrónico no es válida)."
     tags:
       - Retargeting
+  - name: Rebote blando
+    description: "Segmenta a tus usuarios en función de si han rebotado blando X veces en Y días. Los filtros de segmento sólo pueden mirar 30 días atrás, pero puedes mirar más atrás con las extensiones de segmento.<br><br>Este filtro funciona de forma diferente a un evento de rebote blando en Currents. El filtro de segmento Rebote blando contabiliza un rebote blando si no hubo una entrega correcta durante el periodo de reintento de 72 horas. En Currents, cada reintento fallido se envía como un evento de rebote blando." 
+    tags:
+      - Retargeting
   - name: Te marcó como correo no deseado
     description: Segmenta a tus usuarios en función de si han marcado o no tus mensajes como spam.
     tags:
@@ -267,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Conmutador de características
-    description: "Segmento de usuarios que tienen activada una determinada <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">función</a>."
+    description: "Segmento de usuarios que tienen activada una determinada <a href=\"/docs/developer_guide/feature_flags/\">función</a>."
     tags:
       - Retargeting
   - name: Grupo de suscripción

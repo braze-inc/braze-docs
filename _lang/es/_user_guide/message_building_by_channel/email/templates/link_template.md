@@ -12,29 +12,36 @@ channel:
 
 # Plantillas de enlaces
 
-> Las plantillas de enlaces te permiten añadir parámetros o anexar URL al principio de todos los enlaces en un mensaje de correo electrónico.
-
-Las plantillas de enlaces se utilizan con mayor frecuencia en los siguientes casos de uso:
-
-1. Aplicación de parámetros de consulta de Google Analytics a todos los enlaces de un mensaje de correo electrónico determinado
-2. Añadir una URL a todos los enlaces de un mensaje de correo electrónico determinado
+> Con las plantillas de enlaces, puedes crear enlaces dinámicos y reutilizables para tus campañas de correo electrónico añadiendo parámetros o URLs. Esto puede crear coherencia en las URL de tus campañas y mensajes. 
 
 {% alert note %}
 Las plantillas de enlaces son opcionales. Si en la sección **Plantillas** no aparece **Plantillas de enlaces de correo electrónico**, póngase en contacto con su gestor de cuenta para activar la función.
 {% endalert %}
 
+## Cómo funciona
+
+Las plantillas de enlaces se utilizan con mayor frecuencia en los siguientes casos de uso:
+
+- Aplicación de parámetros de consulta de Google Analytics a todos los enlaces de un mensaje de correo electrónico determinado
+- Añadir una URL a todos los enlaces de un mensaje de correo electrónico determinado
+
+Supongamos que estás realizando una campaña promocional por correo electrónico para el lanzamiento de un nuevo producto. Puedes utilizar una plantilla de enlace que dirija a los usuarios a la página del producto y personalizar el enlace para que incluya el nombre de tu usuario o un código promocional específico. Esto puede permitirte hacer un seguimiento de cuántos usuarios han hecho clic en el enlace y han realizado una compra. De este modo, puedes crear coherencia entre tus enlaces y realizar un mejor seguimiento de tus análisis.
+
 ## Creación de una plantilla de enlace
 
-![][11]{: style="float:right;max-width:20%;"}
-
-Puede crear un número ilimitado de plantillas de enlaces para satisfacer sus distintas necesidades. Para crear una plantilla de enlace:
+Puede crear un número ilimitado de plantillas de enlaces para satisfacer sus distintas necesidades. Para crear una plantilla de enlace, haz lo siguiente:
 
 1. Vaya a **Plantillas** > **Plantillas de enlaces de correo electrónico**. 
-2. Haga clic en **Crear plantilla de enlace**.
+2. Selecciona **Crear plantilla de enlace de correo electrónico**.
 
 {% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Compromiso** > **Plantillas y medios** > **Plantillas de enlaces**.
+Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Interacción** > **Plantillas y medios** > **Plantillas de enlaces**.
 {% endalert %}
+
+{:start="3"}
+3\. Dale un nombre a tu plantilla de enlaces.
+4\. (opcional) Añade una descripción, un equipo o una etiqueta para añadir detalles sobre la plantilla del enlace.
+5\. (opcional) Selecciona la opción de alternar para añadir automáticamente la plantilla de enlace a los enlaces en campañas de correo electrónico y Lienzos. Esto se aplica al añadir un nuevo enlace a cualquier correo electrónico nuevo o existente.
 
 Puede crear dos tipos de plantillas de enlaces:
 
@@ -45,7 +52,11 @@ Al utilizar plantillas de enlace y [Liquid]({{site.baseurl}}/user_guide/personal
 
 ### Anteponer: Crear una plantilla de enlace que se inserta antes de una URL {#prepend-link-template}
 
-Si desea añadir una cadena o URL antes de los enlaces en su mensaje de correo electrónico, cree una nueva plantilla de enlace y establezca la **Posición de la plantilla** en **Antes de URL**. A continuación, introduzca una cadena que se añadirá siempre a su URL. 
+Para añadir una cadena o URL antes de los enlaces en tu mensaje de correo electrónico, haz lo siguiente:
+
+1. Crea una nueva plantilla de enlace.
+2. Configura la **Posición de la plantilla** en **Antes de URL**. 
+3. Introduce una cadena que siempre se añadirá a tu URL. 
 
 Se proporciona una sección de vista previa para darle un ejemplo del proceso de inserción.
 
@@ -53,9 +64,11 @@ Se proporciona una sección de vista previa para darle un ejemplo del proceso de
 
 ### Anexar: Crear una plantilla de enlace que se inserta después de una URL {#append-link-template}
 
-Si desea añadir parámetros de consulta después de una URL en su mensaje de correo electrónico, cree una nueva plantilla de enlace y establezca la **Posición de la plantilla** en **Después de URL**. A continuación, introduce parámetros de consulta (`value=something`) al final de cada URL.
+Si quieres añadir parámetros de consulta después de una URL en tu mensaje de correo electrónico:
 
-Puede añadir varios parámetros al final de una URL.
+1. Crea una nueva plantilla de enlace.
+2. Configura la **Posición de la plantilla** en **Después de la URL**. 
+3. Introduce los parámetros de consulta (`value=example`) al final de cada URL. Puede añadir varios parámetros al final de una URL.
 
 ![Campos Posición de la plantilla, Parámetros de consulta y Vista previa de la plantilla para el proceso de inserción de plantillas de enlace tras una URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 

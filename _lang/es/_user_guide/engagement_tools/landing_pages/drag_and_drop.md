@@ -112,6 +112,15 @@ Necesitas permisos de administrador o todos los permisos siguientes para acceder
 - Crear borradores de página de inicio
 - Publicar páginas de inicio
 
+## Niveles del plan
+
+El número de páginas de destino publicadas y dominios personalizados que puedes utilizar depende de tu tipo de plan: gratuito o de pago (incremental).
+
+| Característica                                                                                                   | Grada libre     | Nivel de pago (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Páginas de destino publicadas                                                                 | Cinco por empresa | 20 adicionales |
+| Dominios personalizados          | Uno por empresa | Cinco adicionales |
+
 ## Preguntas más frecuentes
 
 ### ¿Qué ocurre cuando un usuario envía sus datos en la página de destino?
@@ -129,10 +138,6 @@ Puedes editar el HTML de una página de destino utilizando el bloque Código per
 ### ¿Hay informes disponibles para las páginas de destino?
 
 No, actualmente no está disponible.
-
-### ¿Existe un editor HTML para las páginas de destino?
-
-No, actualmente no está disponible. Puede utilizar el bloque Código personalizado en el editor.
 
 ### ¿Puedo crear un webhook dentro de una página de destino?
 
