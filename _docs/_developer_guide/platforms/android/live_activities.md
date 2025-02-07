@@ -11,19 +11,13 @@ description: "This article covers using Braze to manage your Live Activities tok
 
 > Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
 
-## About Live Activities
-
-Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity would have your company's name as static information, as well as a dynamic "Time to delivery" that would be updated as the delivery driver approaches its destination.
-
-As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as soon as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption.
-
 ## About `IBrazeNotificationFactory`
 
-You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed.
-
-If you extend `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass one `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent through the Braze dashboard or REST API.
+You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed. By extending `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass one `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent through the Braze dashboard or REST API.
 
 ## Implementing a Live Activity
+
+In this section, you'll partner with $TODO-ESPORTS-COMPANY, an ESports company looking to leverage Live Activities in their Android app, so they can show the status of an on-going match and make dynamic updates in realtime.
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
@@ -36,12 +30,34 @@ You can add one or more custom Live Activity layouts to your project. These are 
 ├── app/
 └── res/
     └── layout/
-        ├── liveupdate_expanded.xml
-        └── liveupdate_collapsed.xml
+        ├── liveupdate_collapsed.xml
+        └── liveupdate_expanded.xml
 ```
 
-In your XML file, create your custom layout. For example, in `liveupdate_expanded.xml`: 
+In each XML file, create a custom layout. $TODO-ESPORTS-COMPANY created the following layouts for collapsed and expanded Live Activities:
 
+{% tabs local %}
+{% tab  Example: Collapsed layout %}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notification_title"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Collapsed notification, showing only a title" />
+</LinearLayout>
+```
+{% endtab %}
+
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -62,7 +78,7 @@ In your XML file, create your custom layout. For example, in `liveupdate_expande
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:src="@drawable/team_wbf"/>
+            android:src="@drawable/team_default1"/>
 
         <TextView
             android:id="@+id/team1name"
@@ -72,13 +88,69 @@ In your XML file, create your custom layout. For example, in `liveupdate_expande
             android:text="Team 1 Name" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.6"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2-4"
+            android:textColor="#555555"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timeInfo"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5:30 - 1st Half" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/team2logo"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/team_default2"/>
+
+        <TextView
+            android:id="@+id/team2name"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Team 2 Name" />
+
+    </LinearLayout>
 </LinearLayout>
 ```
+{% enddetails %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Create a custom notification factory
 
-In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html), handling how your Braze Live Activities are displayed.
+In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Activities are displayed.
 
+In the following example, $TODO-ESPORTS-COMPANY created a custom notification factory for... In the [next step](#step-3-map-custom-data), they'll create a new method for mapping this data.
+
+{% details Show the sample code %}
 ```kotlin
 package com.appboy.sample
 
@@ -88,55 +160,69 @@ import androidx.core.app.NotificationCompat
 import com.braze.models.push.BrazeNotificationPayload
 import com.braze.push.BrazeNotificationFactory
 import com.braze.push.BrazeNotificationUtils.getOrCreateNotificationChannelId
+import com.braze.support.BrazeLogger.brazelog
 
 class MyCustomNotificationFactory : BrazeNotificationFactory() {
     override fun createNotification(payload: BrazeNotificationPayload): Notification? {
-        // Check if this is a Live Activity update
         if (payload.extras.containsKey("live_update")) {
-            val context = payload.context ?: return null
-            val channelId = getOrCreateNotificationChannelId(payload)
-            val data = payload.extras
+            val kvp = payload.extras
+            val notificationChannelId = getOrCreateNotificationChannelId(payload)
+            val context = payload.context
 
-            // Extract relevant data (e.g., the two teams, score, time)
-            val team1 = data["team1"]
-            val team2 = data["team2"]
-            val score1 = data["score1"]
-            val score2 = data["score2"]
-            val time = data["time"]
-            val half = data["half"]
+            if (context == null) {
+                brazelog { "BrazeNotificationPayload has null context. Not creating notification" }
+                return null
+            }
 
-            // Set up collapsed and expanded layouts
-            val collapsedLayout = RemoteViews(context.packageName, R.layout.liveupdate_collapsed)
-            val expandedLayout = RemoteViews(context.packageName, R.layout.liveupdate_expanded)
+            val team1 = kvp["team1"]
+            val team2 = kvp["team2"]
+            val score1 = kvp["score1"]
+            val score2 = kvp["score2"]
+            val time = kvp["time"]
+            val half = kvp["half"]
 
-            // Updating the collapsed layout text
-            collapsedLayout.setTextViewText(
+            // $TODO-ESPORTS-COMPANY will define the 'getTeamInfo' method in the next step.
+            val (team1name, team1icon) = getTeamInfo(team1)
+            val (team2name, team2icon) = getTeamInfo(team2)
+
+            // Get the layouts to use in the custom notification.
+            val notificationLayoutCollapsed = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_collapsed)
+            val notificationLayoutExpanded = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_expanded)
+
+            // Very simple notification for the small layout
+            notificationLayoutCollapsed.setTextViewText(
                 R.id.notification_title,
                 "$team1 $score1 - $score2 $team2\n$time $half"
             )
 
-            // Updating the expanded layout with more details
-            expandedLayout.setTextViewText(R.id.notification_title, "$team1 vs $team2")
-            expandedLayout.setTextViewText(R.id.details, "$score1 - $score2 • $time $half")
+            notificationLayoutExpanded.setTextViewText(R.id.score, "$score1 - $score2")
+            notificationLayoutExpanded.setTextViewText(R.id.team1name, team1name)
+            notificationLayoutExpanded.setTextViewText(R.id.team2name, team2name)
+            notificationLayoutExpanded.setTextViewText(R.id.timeInfo, "$time - $half")
+            notificationLayoutExpanded.setImageViewResource(R.id.team1logo, team1icon)
+            notificationLayoutExpanded.setImageViewResource(R.id.team2logo, team2icon)
 
-            // Build and return the Live Activity notification
-            return NotificationCompat.Builder(context, channelId)
-                .setSmallIcon(R.drawable.notification_icon_collapsed)
+            val customNotification = NotificationCompat.Builder(context, notificationChannelId)
+                .setSmallIcon(R.drawable.notification_small_icon)
                 .setStyle(NotificationCompat.DecoratedCustomViewStyle())
-                .setCustomContentView(collapsedLayout)
-                .setCustomBigContentView(expandedLayout)
+                .setCustomContentView(notificationLayout)
+                .setCustomBigContentView(notificationLayoutExpanded)
                 .build()
+            return customNotification
+        } else {
+            // Use the BrazeNotificationFactory for all other notifications
+            return super.createNotification(payload)
         }
-
-        // Otherwise, fall back to the default Braze notification handling
-        return super.createNotification(payload)
     }
 }
 ```
+{% enddetails %}
 
-### Step 3: Define custom data handling
+### Step 3: Map custom data
 
-In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Activities are displayed. In the following example, `getTeamInfo` is used to map the team's name and logo when the Live Activity is expanded. 
+In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Activities are displayed.
+
+$TODO-ESPORTS-COMPANY created the `getTeamInfo` method to map a team's name and logo when a Live Activity is expanded:
 
 ```kotlin
 class CustomNotificationFactory : BrazeNotificationFactory() {
@@ -175,7 +261,7 @@ class MyApplication : Application() {
 
 ### Step 5: Call the `/messages/send` endpoint
 
-The following curl command uses the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to the chosen user's Android device.
+You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to the chosen user's Android device. 
 
 {% alert tip %}
 While curl commands are helpful for testing, we recommend handling this call in your backend where you're already handling your [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/).
