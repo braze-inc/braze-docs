@@ -32,11 +32,15 @@ Cuando detienes un Canvas, se aplica lo siguiente:
 - No se enviarán más mensajes, sin importar dónde se encuentre el usuario en el flujo.
 - **Excepción:** Los lienzos con correos electrónicos no se detendrán inmediatamente. Después de que las solicitudes de envío vayan a SendGrid, no hay nada que podamos hacer para evitar que se entreguen al usuario.
 
+### ¿Debo crear un solo Canvas o Canvas separados por ciclo de vida del usuario?
+
+Dependiendo de lo que quieras conseguir con tu Canvas, puede que necesites diferentes enfoques en la forma de construir tu recorrido del usuario. La flexibilidad de Canvas te permite mapear recorridos de usuario para cualquier etapa del ciclo de vida del usuario. Echa un vistazo a nuestras [plantillas Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para ver varios ejemplos de enfoques simplificados para crear recorridos de usuario eficaces.
+
 #### Mensajes in-app en Canvas
 
-Los mensajes de la aplicación se envían al iniciar la siguiente sesión. Esto significa que si el usuario entra en el paso en Canvas antes de que se detenga el Canvas, seguirá recibiendo el mensaje dentro de la aplicación al iniciar su próxima sesión, siempre que el mensaje dentro de la aplicación no haya caducado todavía.
+Los mensajes dentro de la aplicación se envían al iniciar la siguiente sesión. Esto significa que si el usuario entra en el paso en Canvas antes de que se detenga el Canvas, seguirá recibiendo el mensaje dentro de la aplicación al iniciar su próxima sesión, siempre que el mensaje dentro de la aplicación no haya caducado todavía.
 
-Es posible que un usuario inicie una sesión antes de que se detenga el Canvas, pero que no se le muestre el mensaje dentro de la aplicación inmediatamente. Esto puede ocurrir si el mensaje dentro de la aplicación se desencadena por un evento personalizado o se retrasa. Esto significa que es posible que un usuario registre una impresión de mensaje dentro de la aplicación y "reciba" el mensaje dentro de la aplicación después de que se detenga el Canvas. Sin embargo, el usuario tendría que haber iniciado la sesión antes de que se detuviera el Canvas, pero **después** de haber recibido el paso en Canvas.
+Es posible que un usuario inicie una sesión antes de que se detenga el Canvas, pero que no se le muestre el mensaje dentro de la aplicación inmediatamente. Esto puede ocurrir si el mensaje dentro de la aplicación se desencadena por un evento personalizado o se retrasa. Esto significa que es posible que un usuario registre una impresión de mensaje dentro de la aplicación y "reciba" el mensaje dentro de la aplicación después de que se detenga el Canvas. Sin embargo, el usuario tendría que haber iniciado la sesión antes de que se detuviera el Canvas, pero **después de** haber recibido el paso en Canvas.
 
 {% alert note %}
 Detener un Canvas no hará que los usuarios que están esperando recibir mensajes salgan del recorrido del usuario. Si vuelves a habilitar el Canvas y los usuarios siguen esperando el mensaje, lo recibirán (a menos que haya pasado el tiempo en que se les debería haber enviado el mensaje, entonces no lo recibirán).
@@ -65,7 +69,7 @@ Hay una ruta de Canvas con 10 notificaciones push y el evento de conversión es 
 - El usuario A abre la aplicación después de entrar pero antes de recibir el primer mensaje.
 - El usuario B abre la aplicación después de cada notificación push.
 
-**Resultado:** El resumen mostrará dos conversiones, mientras que los pasos individuales mostrarán una conversión de uno en el primer paso y cero en todos los pasos posteriores.
+**Resultado:** El resumen mostrará dos conversiones, mientras que los pasos individuales mostrarán una conversión de uno en el primer paso y cero en todos los pasos siguientes.
 
 {% alert note %}
 Si las Horas de Silencio están activas cuando se produce el evento de conversión, se aplican las mismas reglas.
@@ -85,7 +89,7 @@ Hay un lienzo de un solo paso con las horas de silencio activadas:
 
 ### ¿Cuál es la diferencia entre los distintos tipos de tasa de conversión?
 
-- El total de conversiones de Canvas refleja cuántos usuarios únicos completaron un evento de conversión, no cuántas conversiones completó cada uno. 
+- El total de conversiones en Canvas refleja cuántos usuarios únicos completaron un evento de conversión, no cuántas conversiones completó cada uno. 
 - La tasa de conversión variante o bloque resumen al principio de un Canvas refleja todas las conversiones realizadas por los usuarios dentro de esa ruta, hayan recibido o no un mensaje, como un total agregado. 
 - La tasa de conversión de pasos refleja cuántas personas recibieron ese paso del mensaje y completaron alguno de los eventos de conversión descritos.
 
@@ -131,11 +135,11 @@ Canvas Flow es la experiencia de edición mejorada que simplifica el modo en que
 
 Puedes [clonar tu Canvas a Canvas Flow]({{site.baseurl}}/cloning_canvases/). Esto crea una copia de tu Canvas original en el flujo de trabajo del Flujo del Canvas.
 
-### ¿Qué pasará con mis lienzos creados con el editor original?
+### ¿Qué pasará con los lienzos que creé con el editor original?
 
 Todos los lienzos existentes y el editor de lienzos original seguirán existiendo y serán compatibles con Braze. Los clientes que decidan unirse a Canvas Flow para el acceso anticipado tendrán la opción de crear un Canvas utilizando el flujo de trabajo original o Flow.
 
-### ¿Hay algún límite para el número de pasos que puedo incluir?
+### ¿Hay algún límite en el número de pasos que puedo incluir?
 
 Sí. Un lienzo creado con el flujo del lienzo puede contener hasta 200 pasos.
 
