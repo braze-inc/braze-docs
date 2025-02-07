@@ -12,17 +12,15 @@ tool: Campaigns
 
 > As campanhas enviadas usando a entrega programada com base no tempo são entregues em dias específicos.
 
-![][3]
-
 ## Opção 1: Envie assim que a campanha for lançada
 
 Se você optar por enviar uma mensagem assim que ela for lançada, sua mensagem começará a ser enviada assim que você terminar de criar sua campanha.
 
-![][10]
+![A seção Entrega com a opção Programada selecionada e a opção de programação baseada em tempo de envio assim que a campanha for lançada.][10]
 
 Esse tipo de programação foi criado para campanhas únicas que você deseja enviar imediatamente, como mensagens sobre um evento atual. Um app de esportes, por exemplo, pode programar notificações por push sobre atualizações de pontuação usando essa opção. Além disso, ao enviar mensagens de teste destinadas apenas a você ou à sua equipe, essa opção permite que você as entregue imediatamente. 
 
-Se planeja editar a campanha e reenviá-la após a visualização do teste, marque a caixa que torna os usuários [reelegíveis][24] para receber a campanha. Por padrão, o Braze envia uma campanha para um usuário apenas uma vez, a menos que essa caixa esteja marcada.
+Se planeja editar a campanha e reenviá-la depois de visualizar o teste, certifique-se de marcar a caixa que torna os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) para receber a campanha. Por padrão, o Braze envia uma campanha para um usuário apenas uma vez, a menos que essa caixa esteja marcada.
 
 ## Opção 2: Enviar em um horário determinado
 
@@ -30,7 +28,7 @@ O agendamento de uma campanha para um horário determinado permite que você esp
 
 Se selecionar **Entrega programada** e não optar por enviar no horário local do usuário, sua campanha será enviada de acordo com o fuso horário especificado na página **Configurações da empresa**.
 
-![][9]
+![As opções de agendamento baseadas em tempo para enviar uma campanha em um horário designado.][9]
 
 ### Campanhas de fuso local
 
@@ -46,7 +44,7 @@ Os cronogramas designados são mais adequados para mensagens programadas com ant
 
 [Intelligent Timing][8] permite que você entregue uma campanha a cada usuário em um momento diferente. O Braze calcula o tempo de cada indivíduo com base no momento em que esse usuário normalmente se engaja com seu app e suas notificações. Você também pode especificar que as campanhas do Intelligent Timing sejam enviadas apenas durante uma determinada parte do dia. Por exemplo, se estiver notificando os usuários sobre uma promoção que termina à meia-noite, talvez queira que as mensagens sejam enviadas até as 22h, no máximo.
 
-![][14]
+![As opções de agendamento com base no tempo para usar o Intelligent Timing para enviar uma campanha no horário mais popular de uso do app entre todos os usuários.][14]
 
 ### Regras de entrega
 
@@ -63,6 +61,5 @@ As campanhas do Intelligent Timing funcionam melhor para mensagens únicas e rec
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
 [25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}

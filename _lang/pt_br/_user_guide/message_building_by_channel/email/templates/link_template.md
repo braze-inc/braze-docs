@@ -12,29 +12,36 @@ channel:
 
 # Modelos de links
 
-> Os modelos de link permitem adicionar parâmetros e prefixar URLs a todos os links em uma mensagem de e-mail.
-
-Modelos de link são mais frequentemente usados nos seguintes casos:
-
-1. Anexando parâmetros de consulta do Google análise de dados a todos os links em uma determinada mensagem de e-mail
-2. Adicionar um URL a todos os links em uma determinada mensagem de e-mail
+> Com os modelos de links, você pode criar links dinâmicos e reutilizáveis para suas campanhas de e-mail anexando parâmetros ou URLs. Isso pode criar consistência nos URLs de suas campanhas e mensagens. 
 
 {% alert note %}
 Os modelos de link são um recurso opcional. Se **Modelos de Link de E-mail** estiver ausente na seção **Modelos**, entre em contato com o gerente da sua conta para ativar o recurso.
 {% endalert %}
 
+## Como funciona?
+
+Modelos de link são mais frequentemente usados nos seguintes casos:
+
+- Anexando parâmetros de consulta do Google análise de dados a todos os links em uma determinada mensagem de e-mail
+- Adicionar um URL a todos os links em uma determinada mensagem de e-mail
+
+Digamos que esteja realizando uma campanha promocional por e-mail para o lançamento de um novo produto. É possível usar um modelo de link que direciona os usuários para a página do produto e personalizar o link para incluir o nome do usuário ou um código promocional específico. Isso pode permitir o rastreamento de quantos usuários clicaram no link e fizeram uma compra. Dessa forma, é possível criar consistência entre seus links e rastrear melhor sua análise de dados.
+
 ## Criar um modelo de link
 
-![][11]{: style="float:right;max-width:20%;"}
-
-Você pode criar um número ilimitado de modelos de link para suportar suas várias necessidades. Para criar um modelo de link:
+Você pode criar um número ilimitado de modelos de link para suportar suas várias necessidades. Para criar um modelo de link, faça o seguinte:
 
 1. Acessar **Modelos** > **Enviar modelo de link por e-mail**. 
-2. Clique em **Criar Modelo de Link**.
+2. Selecione **Criar modelo de link de e-mail**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **engajamento** > **modelos e mídias** > **Modelos de Link**.
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página está localizada em **Engajamento** > **Modelos e mídias** > **Modelos de links**.
 {% endalert %}
+
+{:start="3"}
+3\. Dê um nome ao seu modelo de link.
+4\. (opcional) Adicione uma descrição, equipe ou tag para adicionar detalhes sobre o modelo de link.
+5\. (opcional) Selecione o botão de alternância para adicionar automaticamente o modelo de link a links em campanhas de e-mail e Canvas. Isso se aplica ao adicionar um novo link a qualquer e-mail novo ou existente.
 
 Existem dois tipos de modelos de link que você pode criar:
 
@@ -45,7 +52,11 @@ Ao usar modelos de link e [Liquid]({{site.baseurl}}/user_guide/personalization_a
 
 ### Prepend: Crie um modelo de link para inserir antes de um URL {#prepend-link-template}
 
-Se você quiser adicionar uma string ou URL antes dos links na sua mensagem de e-mail, crie um novo modelo de link e defina a **Posição do Modelo** para **Antes da URL**. Em seguida, insira uma string que sempre será adicionada ao início do seu URL. 
+Para adicionar uma string ou URL antes dos links em sua mensagem de e-mail, faça o seguinte:
+
+1. Criar um novo modelo de link.
+2. Defina a **posição do modelo** como **Antes da URL**. 
+3. Insira uma string que sempre será anexada ao seu URL. 
 
 Uma seção de prévia é fornecida com um exemplo do processo de inserção.
 
@@ -53,9 +64,11 @@ Uma seção de prévia é fornecida com um exemplo do processo de inserção.
 
 ### Anexar: Crie um modelo de link para inserir após um URL {#append-link-template}
 
-Se você quiser adicionar parâmetros de consulta após um URL na sua mensagem de e-mail, crie um novo modelo de link e defina a **Posição do Modelo** para **Após URL**. Em seguida, insira os parâmetros de consulta (`value=something`) no final de cada URL.
+Se quiser adicionar parâmetros de consulta após um URL em sua mensagem de e-mail:
 
-Você pode ter vários parâmetros anexados ao final de um URL.
+1. Criar um novo modelo de link.
+2. Defina a **posição do modelo** como **Após a URL**. 
+3. Insira os parâmetros de consulta (`value=example`) ao final de cada URL. Você pode ter vários parâmetros anexados ao final de um URL.
 
 ![Posição do Modelo, Parâmetros de Consulta e campos de Prévia do Modelo para o processo de inserção de modelo de link após um URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 

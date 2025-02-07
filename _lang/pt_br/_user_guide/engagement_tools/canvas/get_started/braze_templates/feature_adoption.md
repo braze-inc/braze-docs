@@ -105,7 +105,7 @@ Em seguida, iremos acessar a etapa da Mensagem chamada **Feedback Survey** para 
 1. Para as duas opções da pesquisa, selecione **Feedback de Experiência** como nosso atributo personalizado para capturar e rastrear feedback sobre o Controle de Cruzeiro. Este atributo personalizado terá dois valores para representar as respostas da pesquisa (`good` e `bad`).
 2. Atualize os valores dos atributos para corresponder às opções da pesquisa. Isso nos permitirá acompanhar a resposta de um usuário.
 
-### Etapa 7: Teste e lance seu canva
+### Etapa 7: Teste e inicie seu Canva
 
 Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme o esperado, selecione **Launch Canvas** para iniciar o Canvas. Agora, podemos direcionar os usuários com uma jornada personalizada para incentivá-los a adotar nosso novo recurso Controle de Cruzeiro.
 
