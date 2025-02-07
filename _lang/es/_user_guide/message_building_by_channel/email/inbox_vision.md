@@ -2,7 +2,7 @@
 nav_title: Inbox Vision
 article_title: Inbox Vision
 page_order: 9
-description: "Este artículo de referencia explica cómo configurar Inbox Vision, una función que permite a los profesionales del marketing ver sus correos electrónicos desde la perspectiva de varios clientes de correo electrónico y dispositivos móviles."
+description: "Esta página explica cómo configurar Inbox Vision, una característica que permite a los especialistas en marketing ver sus correos electrónicos desde la perspectiva de varios clientes de correo electrónico y dispositivos móviles."
 tool:
   - Dashboard
 channel:
@@ -12,34 +12,33 @@ channel:
 
 # Inbox Vision
 
-> Inbox Vision te permite ver tus correos electrónicos desde la perspectiva de varios clientes de correo electrónico y dispositivos móviles. 
+> Inbox Vision te permite ver tus correos electrónicos desde la perspectiva de varios clientes de correo electrónico y dispositivos móviles. Por ejemplo, puedes utilizar Inbox Vision para comprobar si hay diferencias entre los modos oscuro y claro y confirmar que tus correos electrónicos son correctos.
+
+{% alert important %}
+En general, tu correo electrónico no funcionará con Inbox Vision si el contenido de tu correo electrónico depende de la información de la plantilla, como la información del perfil de usuario. Esto se debe a que las plantillas de Braze en un usuario vacío cuando enviamos correos electrónicos utilizando esta característica.
+{% endalert %}
 
 ## Pruebe su correo electrónico en Inbox Vision
 
-Inbox Vision funciona cuando se selecciona **Usuario aleatorio** para **Vista previa como usuario** y no persiste ningún usuario personalizado ni ninguna otra configuración de usuario de vista previa. Esto significa que si selecciona **Usuario Personalizado** y ejecuta Visión de Bandeja de Entrada, lo que se muestra en Visión de Bandeja de Entrada puede diferir de la vista previa del mensaje en otro lugar. 
+Su correo electrónico debe incluir una línea de asunto y un dominio de envío válido para poder ver estas vistas previas. Tenga en cuenta que su correo electrónico puede tener un aspecto diferente en el escritorio y en los dispositivos móviles. Al ver estas vistas previas, puede revisar su contenido y asegurarse de que su correo electrónico se muestra como es debido.
 
 Para probar su mensaje de correo electrónico en Inbox Vision, haga lo siguiente:
 
-1. Vaya a su editor de arrastrar y soltar o a su editor de correo electrónico HTML. 
-2. Abra la pestaña **Vista previa y prueba**.
-3. Selecciona **Visión de bandeja de entrada** y haz clic en **Ejecutar Visión de bandeja de entrada**. <br><br> ![][3]{: style="max-width:80%;"} <br><br> A continuación, Braze envía una versión HTML de su correo electrónico a varios clientes de correo electrónico utilizados en todo el mundo, lo que puede tardar entre dos y diez minutos en completarse. <br><br> Las vistas previas HTML renderizadas se dividirán en tres secciones: 
-- **Clientes web** 
-- **Clientes de la aplicación** 
-- **Clientes móviles** <br><br>
-4. Seleccione un mosaico para ver la vista previa con más detalle. <br><br> Su correo electrónico debe incluir una línea de asunto y un dominio de envío válido para poder ver estas vistas previas. Tenga en cuenta que su correo electrónico puede tener un aspecto diferente en el escritorio y en los dispositivos móviles. Al ver estas vistas previas, puede revisar su contenido y asegurarse de que su correo electrónico se muestra como es debido.
-
-{% alert tip %}
-Utiliza Inbox Vision para comprobar las diferencias entre los modos oscuro y claro y confirmar que recibes los correos electrónicos correctamente.
-{% endalert %}
+1. Vaya a su editor de arrastrar y soltar o a su editor de correo electrónico HTML.
+2. En tu editor, selecciona **Vista previa y Prueba**.
+3. Selecciona **Visión de buzón de entrada**. 
+4. Selecciona **Ejecutar Visión de Buzón de Entrada**. Esto puede llevar entre dos y diez minutos.
+5. A continuación, selecciona una baldosa para ver la vista previa con más detalle. Estas vistas previas están agrupadas en estas secciones: **Clientes Web**, **Clientes de Aplicación** y **Clientes Móviles**.
 
 ![Visión general de Inbox Vision para el editor HTML.][1]
 
-{: start="5"}
-5\. Realice cambios en una plantilla, si es necesario, y haga clic en **Reejecutar prueba** para ver las vistas previas actualizadas.
+{: start="6"}
+6\. Haz cambios en una plantilla, si es necesario.
+7\. Selecciona **Volver a ejecutar la prueba** para ver las vistas previas actualizadas.
 
-{% alert important %}
-En general, su correo electrónico no funcionará con Inbox Vision si su contenido se basa en información de plantillas, como la información del perfil de usuario. Esto se debe a que las plantillas de Braze en un usuario vacío cuando enviamos correos electrónicos utilizando esta característica.
-{% endalert %}
+### Vista previa como usuario
+
+Cuando previsualizas el correo electrónico como un usuario aleatorio, cualquier configuración o atributo específico asociado a un usuario, como su nombre o preferencias, no se guarda para las previsualizaciones actuales o futuras. Cuando seleccionas un usuario personalizado, la vista previa mostrada en la Visión de la bandeja de entrada puede diferir de la vista previa de mensajes en otros lugares, ya que esta opción utiliza datos de usuario específicos para crear la vista previa.
 
 ## Análisis del código
 
@@ -61,11 +60,15 @@ Las pruebas de spam intentan predecir si su correo electrónico llegará a las c
 
 ### Ver los resultados de las pruebas de correo no deseado
 
-Para comprobar los resultados de la prueba de spam, haz clic en la pestaña **Prueba de spam** de la sección **Visión de la bandeja de entrada**. La tabla de **resultados de la prueba de spam** muestra el nombre, el estado y el tipo del filtro de spam.
+Para comprobar los resultados de tus pruebas de correo no deseado, haz lo siguiente:
+
+1. Selecciona la pestaña **Pruebas de correo no deseado** en la sección **Visión de la bandeja de entrada**. La tabla de **resultados de la prueba de spam** muestra el nombre, el estado y el tipo del filtro de spam.
 
 ![Tabla de resultados de la prueba de spam con tres columnas: Nombre, estado y tipo. Hay una lista de filtros de correo no deseado y filtros ISP que han superado las pruebas de correo no deseado, lo que indica que la campaña de correo electrónico no caerá en la carpeta de correo no deseado.][4]
 
-Después de revisar estos resultados y realizar cualquier ajuste en su campaña de correo electrónico, haga clic en **Reejecutar prueba** para volver a cargar los resultados de la prueba de spam.
+{: start="2"}
+2\. Revisa estos resultados y haz los ajustes necesarios en tu campaña de correo electrónico.
+3\. Selecciona **Reejecutar prueba** para volver a cargar los resultados de tus pruebas de correo no deseado.
 
 ## Precisión de las pruebas
 
