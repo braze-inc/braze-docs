@@ -55,15 +55,17 @@ While the default starts times still apply, the entrance time is configurable in
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
 
-## When users enter and exit
+## When users enter
 
-Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. You can also view the results in the sidebar for when users enter and exit the Canvas.
-
-When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
-
-If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end. At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
+Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
 Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change.
+
+### Consideration
+
+If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered and the test run will end. 
+
+At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
 ## Experiment Paths and Canvas variants
 
