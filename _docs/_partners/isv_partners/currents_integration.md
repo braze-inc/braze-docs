@@ -325,6 +325,8 @@ So for example, if the API token is `0p3n5354m3==`, the Authorization header wil
 
 `Authorization: Bearer 0p3n5354m3==`
 
+In the case where the downstream endpoint receives either a payload with zero events, or an empty request body, the result should be considered a no-op, and no downstream effects should happen as a result of this call. However, the request's Authorization header should be checked anyway as if it were a normal API call, and an appropriate HTTP response should be given (401 or 403) if the credentials are not valid. This will enable us to use this mechanism to verify that our connector is configured with the proper credentials.
+
 ## Versioning
 
 All requests from our Integratable HTTP Connectors will be sent with a custom header designating the version of the Currents request being made:
