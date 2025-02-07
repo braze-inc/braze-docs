@@ -218,6 +218,10 @@ glossaries:
     description: "이메일 주소가 하드 반송되었는지 여부(예: 이메일 주소가 유효하지 않은 경우)에 따라 사용자를 세분화하세요."
     tags:
       - Retargeting
+  - name: 소프트 바운스
+    description: Y일 동안 소프트 바운스 횟수별로 사용자를 세분화하세요. 세그먼트 필터는 30일만 되돌아볼 수 있지만 세그먼트 확장을 사용하면 더 오래 되돌아볼 수 있습니다.<br><br>이 필터는 커런츠의 소프트 바운스 이벤트와는 다르게 작동합니다. 소프트 반송 세그먼트 필터는 72시간의 재시도 기간 동안 배달에 성공하지 못한 경우 소프트 반송으로 계산합니다. Currents에서는 재시도에 실패할 때마다 소프트 바운스 이벤트로 전송됩니다. 
+    tags:
+      - Retargeting
   - name: 발송자를 스팸으로 표시함
     description: 사용자가 메시지를 스팸으로 표시했는지 여부에 따라 사용자를 분류합니다.
     tags:
@@ -267,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: 피처 플래그
-    description: "현재 특정 <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">기능 플래그가</a> 활성화된 사용자 세그먼트입니다."
+    description: "현재 특정 <a href=\"/docs/developer_guide/feature_flags/\">기능 플래그가</a> 활성화된 사용자 세그먼트입니다."
     tags:
       - Retargeting
   - name: 구독 그룹
@@ -562,8 +566,8 @@ glossaries:
     description: 사용자가 보유한 팔로워 수 X(옛 트위터)에 따라 사용자를 세분화합니다.
     tags:
       - Social activity
-  - name: 전화번호 전송
-    description: "사용자의 세그먼트를 e.164 발신 전화번호 필드로 나눕니다.<br><br>전화번호가 Braze로 전송되면, Braze는 SMS 및 WhatsApp 채널을 통해 전송되는 <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164 형식</a>으로 강제 변환하려고 시도합니다. 강제 변환 프로세스는 숫자가 올바르게 형식화되지 않으면 실패할 수 있으며, 이로 인해 고객 프로필에는 전화번호가 있지만 발신 전화번호는 없는 결과가 발생합니다.<br><br>사용 사례:<br> - 이 필터로 정규식을 사용하여 특정 국가 코드로 전화번호를 세그먼트합니다. <br>- 이 필터를 사용하여 e.164 강제 변환 프로세스에 실패한 전화번호로 사용자를 세그먼트합니다."
+  - name: 전화번호 보내기
+    description: "e.164 발신 전화번호 필드를 기준으로 사용자를 세분화합니다.<br><br>전화번호가 Braze로 전송되면 Braze는 SMS 및 WhatsApp 채널에서 전송하는 데 사용되는 <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164 형식으로</a> 강제로 전송하려고 합니다. 번호 형식이 제대로 지정되지 않은 경우 강제 프로세스가 실패하여 사용자 프로필에 전화번호는 있지만 발신 전화번호가 없는 결과가 발생할 수 있습니다.<br><br>사용 사례:<br> - 이 필터와 함께 정규식(정규식)을 사용하여 특정 국가 코드가 포함된 전화번호를 기준으로 세분화할 수 있습니다. <br>- 이 필터를 사용하여 e.164 강제 프로세스에 실패한 전화번호를 기준으로 사용자를 분류할 수 있습니다."
     tags:
       - Other filters
 ---
