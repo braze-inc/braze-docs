@@ -9,7 +9,7 @@ description: "이 문서에서는 Braze 계정에 SAML SSO을 활성화하는 �
 
 # 서비스 공급자(SP)가 로그인 시작
 
-> 이 문서에서는 Braze 계정에 SAML SSO을 활성화하는 방법을 안내합니다.
+> 이 문서에서는 Braze 계정에 SAML 싱글 사인온을 활성화하는 방법과 SAML 추적을 얻는 방법을 안내합니다.
 
 ## 요구 사항
 
@@ -92,3 +92,30 @@ SSO를 사용하기로 선택한 회원은 더 이상 이전처럼 비밀번호�
 ![보안 설정 페이지의 인증 규칙 섹션]({% image_buster /assets/img/sso3.png %})
 
 제한을 설정하면 이전에 비밀번호로 로그인한 적이 있더라도 회사의 Braze 사용자는 더 이상 비밀번호를 사용하여 로그인할 수 없게 됩니다.
+
+## SAML 추적 얻기
+
+SSO와 관련된 로그인 문제가 발생하는 경우 SAML 추적을 받으면 SAML 요청에서 전송된 내용을 파악하여 SSO 연결 문제를 해결하는 데 도움이 될 수 있습니다.
+
+### 필수 조건
+
+SAML 추적을 실행하려면 SAML 추적기가 필요합니다. 다음은 브라우저에 따라 가능한 두 가지 옵션입니다:
+
+- [Google Chrome](https://chromewebstore.google.com/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/saml-tracer/)
+
+### 1단계: SAML 추적기 열기
+
+브라우저 탐색 모음에서 SAML 추적기를 선택합니다. **일시 중지를** 선택하지 않으면 SAML 추적기가 SAML 요청에서 전송된 내용을 캡처할 수 없으므로 반드시 일시 중지를 선택하지 마세요. SAML 추적기가 열리면 추적이 채워지는 것을 볼 수 있습니다.
+
+![]({% image_buster /assets/img/saml_tracer_example.png %})
+
+### 2단계: SSO를 사용하여 Braze에 로그인
+
+Braze 대시보드로 이동하여 SSO를 사용하여 로그인을 시도합니다. 오류가 발생하면 SAML 추적기를 열고 다시 시도하세요. `https://dashboard-XX.braze.com/auth/saml/callback` 같은 URL과 주황색 SAML 태그가 있는 행이 있으면 SAML 추적이 성공적으로 수집된 것입니다.
+
+### 3단계: 내보내기 및 Braze로 보내기
+
+**내보내기를** 선택합니다. **쿠키 필터 프로필 선택에서** **없음을** 선택합니다. 그런 다음 **내보내기를** 선택합니다. 이렇게 하면 추가 문제 해결을 위해 Braze 지원팀에 보낼 수 있는 JSON 파일이 생성됩니다.
+
+!["SAML 추적 환경설정 내보내기" 메뉴에서 "없음" 옵션을 선택합니다.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
