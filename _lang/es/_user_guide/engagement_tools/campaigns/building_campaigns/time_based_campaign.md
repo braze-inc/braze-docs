@@ -17,7 +17,7 @@ Para más información sobre la entrega de campañas, consulta nuestro curso de 
 
 ## Entrega programada
 
-Esta sección cubre la programación basada en el tiempo y las opciones de entrega para las campañas de [entrega programada]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/).
+Esta sección cubre la programación basada en el tiempo y las opciones de entrega para las campañas de [entrega programada]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/).
 
 ### Enviar a una hora determinada
 
@@ -50,19 +50,19 @@ Esta sección cubre la programación basada en el tiempo y las opciones de entre
 
 | Definición | Zona horaria |
 | ---------- | --------- |
-| Después de que un usuario reciba un mensaje de esta campaña, especifique cuándo volverá a ser elegible para recibir la campaña de nuevo. [Más información]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns). | N/A |
+| Después de que un usuario reciba un mensaje de esta campaña, especifique cuándo volverá a ser elegible para recibir la campaña de nuevo. [Más información]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Una campaña con la casilla de verificación "Permitir que los usuarios vuelvan a ser elegibles para recibir la campaña" seleccionada después de una semana.][5]
 
 ## Entrega basada en la acción
 
-En esta sección se tratan las opciones de retraso y entrega para las campañas de [entrega basadas en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/).
+En esta sección se tratan las opciones de retraso y entrega para las campañas de [entrega basadas en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
 ### Planificar retraso
 
 {% alert important %}
-Al elegir la duración del retraso, tenga en cuenta que si establece un retraso superior a la [Duración de la campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), los usuarios no recibirán la campaña.
+Cuando elijas la duración del retraso, ten en cuenta que si estableces un retraso superior a [la duración de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration) la campaña, tus usuarios no recibirán tu campaña.
 {% endalert %}
 
 #### Enviar campaña inmediatamente
@@ -118,7 +118,7 @@ Braze calcula el retraso como `day of the week` + `calendar days`, y luego añad
 
 | Definición | Zona horaria |
 | ---------- | --------- |
-| Después de que un usuario reciba un mensaje de esta campaña, especifique cuándo [volverá a ser elegible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) para recibir la campaña de nuevo. | N/A |
+| Después de que un usuario reciba un mensaje de esta campaña, especifique cuándo [volverá a ser elegible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) para recibir la campaña de nuevo. | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Una campaña con la casilla de verificación "Permitir que los usuarios vuelvan a ser elegibles para recibir la campaña" seleccionada después de una semana.][5]
