@@ -25,13 +25,13 @@ tool: Canvas
 
 離脱ユーザーテンプレートにアクセスするには、新しいキャンバスを作成するときに [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択します。次に、**Lapsing User**の横にある**Apply Template**を選択します。これで、テンプレートを使用して、ニーズに合わせてテンプレートを調整できます。
 
-### ステップ 1: 詳細を設定する 
+### ステップ1:詳細を設定する 
 
 キャンバスの詳細を調整して、目標を反映しましょう。
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
+![]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:45%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスはプロモーションを使用してユーザーにメッセージを送信し、セッションを開始するユーザーに対してオーディエンス同期を実行することを示すようにします。

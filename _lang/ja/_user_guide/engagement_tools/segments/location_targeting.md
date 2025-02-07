@@ -46,9 +46,9 @@ description: "この記事では、ロケーションターゲティングを設
 
 既存のビーコンやジオフェンスのサポートを Braze のターゲティング機能やメッセージング機能と組み合わせることで、ユーザーの物理的な行動に関する詳細な情報が判明し、それに応じてユーザーにメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
 
-- [Radar][6]
-- [Gimbal][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [インフィリオン]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

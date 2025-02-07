@@ -17,7 +17,7 @@ description: "この参考記事では、スケジュール配信、インテリ
 
 ## スケジュール配信
 
-このセクションでは、 [スケジュール配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) キャンペーンの時間ベースのスケジュール設定と配信オプションについて説明します。
+このセクションでは、 [スケジュール配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/) キャンペーンの時間ベースのスケジュール設定と配信オプションについて説明します。
 
 ### 指定した時刻に送信
 
@@ -50,19 +50,19 @@ description: "この参考記事では、スケジュール配信、インテリ
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取る資格を再び得ることができる時期を指定します。[詳細]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) | 該当なし |
+| このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取る資格を再び得ることができる時期を指定します。[詳細]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![1 週間後に [ユーザーがキャンペーンを再度受信できるようにする] チェックボックスをオンにしたキャンペーン。][5]
 
 ## アクションベースの配信
 
-このセクションでは、 [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/)キャンペーンのスケジュール、遅延、および配信オプションについて説明します。
+このセクションでは、 [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)キャンペーンのスケジュール、遅延、および配信オプションについて説明します。
 
 ### スケジュールの遅延
 
 {% alert important %}
-遅延時間を選択する際に、 [キャンペーン期間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration)よりも長い遅延を設定すると、ユーザーはキャンペーンを受け取れないことに注意してください。
+ディレイの長さを設定する際は、[キャンペーン期間よりも]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration)長いディレイを設定した場合、ユーザーにキャンペーンが届かなくなることに留意すること。
 {% endalert %}
 
 #### キャンペーンをすぐに送信
@@ -118,7 +118,7 @@ Braze は遅延を `day of the week` + `calendar days` として計算し、`tim
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取る[資格]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)を再び得ることができる時期を指定します。 | 該当なし |
+| このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取る[資格]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)を再び得ることができる時期を指定します。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![1 週間後に [ユーザーがキャンペーンを再度受信できるようにする] チェックボックスをオンにしたキャンペーン。][5]
