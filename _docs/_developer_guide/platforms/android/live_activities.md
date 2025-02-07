@@ -3,13 +3,13 @@ nav_title: Live Activities
 article_title: Live Activities for the Android Braze SDK
 platform: Android
 page_order: 6
-description: "This article covers using Braze to manage your Live Activities tokens for the Android Braze SDK."
+description: "Learn how to implement Live Activities for the Android Braze SDK."
 
 ---
 
 # Live Activities
 
-> Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
+> Learn how to implement Live Activities for the Android Braze SDK. Live Activities are persistent, interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
 
 ## About `IBrazeNotificationFactory`
 
@@ -17,7 +17,7 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 
 ## Implementing a Live Activity
 
-In this section, you'll partner with Superb Owl, the host of a popular game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
+In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
 
 ![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
