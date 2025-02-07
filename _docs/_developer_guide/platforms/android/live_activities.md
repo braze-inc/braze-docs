@@ -17,7 +17,7 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 
 ## Implementing a Live Activity
 
-In this section, you'll partner with Superb Owl, the host of a popular game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
+In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
 
 ![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
