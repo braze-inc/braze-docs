@@ -46,13 +46,9 @@ guide_featured_list:
 
 Com os componentes do Canva, é possível desbloquear novas jornadas de usuário para melhorar seu processo e aumentar a eficácia do alcance do público.
 
-{% alert important %}
-A partir de 28 de fevereiro de 2023, você não poderá mais criar ou duplicar canvas usando a experiência original do canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para melhor construir e gerenciar canvas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 ### Personalizar as jornadas do usuário
 
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Exemplo de uma jornada do usuário do Canva com uma etapa de divisão de decisão seguida por etapas de postergação e etapas de mensagens.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Use [jornadas de ação][1] para dividir a jornada do usuário com base em ações e eventos de engajamento, como a realização de uma compra. Se quiser filtrar e direcionar seu público, [os Audience Paths][2] ajudam a simplificar o direcionamento de usuários, enviando-os por diferentes jornadas do público com base nos critérios do público.
 
@@ -61,9 +57,11 @@ Os componentes de [divisão de decisão][3] usam uma lógica simples de "sim ou 
 Os componentes de [atraso][4] permitem a postergação de uma única etapa do Canva. Essa etapa autônoma de postergação no seu Canva é melhor usada para o envio de mensagens aos seus usuários em um momento específico. Além disso, os componentes de postergação também podem aumentar o alcance de seu público, permitindo mais tempo para que ele atenda aos critérios do componente. 
 
 ### Testes
-Ao criar as jornadas do usuário, convém testar também a jornada mais eficaz do canva. Com o [Experiment Paths][5], você pode testar vários caminhos do Canva em qualquer etapa. 
 
-### Integração 
+Ao criar as jornadas do usuário, convém testar também a jornada mais eficaz do canva. Com o [Experiment Paths][5], você pode testar vários caminhos do Canva em qualquer etapa. Você também pode usar as conexões entre as etapas como uma prévia de alto nível. As conexões em laranja indicam que a etapa anterior fará com que os usuários avancem imediatamente para a próxima etapa.
+
+### Integração
+
 Deseja sincronizar-se com os dados primários de usuários da sua marca? Aproveite as opções de sincronização de público disponíveis para o [Facebook][6] e [o Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
