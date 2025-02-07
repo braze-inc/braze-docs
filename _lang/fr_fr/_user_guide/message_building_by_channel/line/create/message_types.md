@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Lorsque vous composez un message LINE, vous pouvez glisser-déposer des types de messages dans le compositeur et les personnaliser.
 
-![Panneau des types de messages avec les types de messages à glisser dans l'éditeur du compositeur, y compris le texte, l'image, le message riche et le message basé sur une carte.][5]{: style="max-width:40%;"}
+![Panneau des types de messages avec les types de messages à faire glisser dans l'éditeur du compositeur, y compris le texte, l'image, le message riche et le message basé sur une carte.][5]{: style="max-width:40%;"}
 
 ## Texte
 
