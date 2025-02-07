@@ -302,7 +302,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![Recommendation audience example with 21.1% precision and 83% coverage.][5]
+![Recommendation audience metrics showing precision (21.1%), coverage (83.0%), and recommendation types split between personalized and most popular items.][5]
 
 These metrics are defined in the following table. 
 
@@ -318,11 +318,11 @@ The next section shows a breakdown of items in the catalog, split into two possi
 - **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
 - **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user.
 
-![An example of personalized items and most popular items to show the number of users who were assigned a recommendation.][6]
+![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.][6]
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![An example of a personalized recommendation.][7]{: style="max-width:45%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:45%" }
 
 ## Using recommendations in messaging
 
@@ -362,9 +362,9 @@ This happens under a few specific conditions:
 - Relevant items are no longer available or in stock.
 - Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
 
-### Are previous recommendations automatically trained weekly if I upgrade to Item Recommendations Pro?
+### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
-Any existing recommendations don't automatically get updated to train weekly or predict daily. You can view the next train and prediction times on the **Recommendation** section when selecting a recommendation. We recommend recreating the same recommendation to have the updated schedules.
+No, existing recommendations won’t automatically update to train weekly or predict daily after upgrading. You can check the next training and prediction times in the **Recommendation** section by selecting a recommendation. For updated schedules, we suggest recreating your recommendations.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
