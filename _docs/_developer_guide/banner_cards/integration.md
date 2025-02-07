@@ -187,6 +187,13 @@ This feature is not currently supported on Roku.
 {% tabs %}
 {% tab JavaScript %}
 
+First, you should have a container element for the banner. Ensure you have set its width and height.
+```html
+<div id="global-banner-container" style="width: 100%; height: 450px;"></div>
+```
+
+Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of that container element.
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
