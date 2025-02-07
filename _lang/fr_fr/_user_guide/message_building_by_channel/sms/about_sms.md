@@ -50,4 +50,4 @@ Pour obtenir une liste complète des termes, consultez nos [termes à connaître
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-[2]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy
