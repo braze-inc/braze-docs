@@ -23,6 +23,33 @@ Consultez la documentation Meta suivante pour obtenir des conseils sur les noms 
 
 ## Mises à jour des produits WhatsApp
 
+### Janvier 2025 : WhatsApp met en pause l'envoi de messages marketing aux utilisateurs américains à partir du 1er avril.
+*Dernière mise à jour janvier 2025*
+
+WhatsApp mettra en pause l'envoi de messages marketing aux utilisateurs américains (personnes ayant un numéro de téléphone américain) à partir du 1er avril 2025. [Les messages d'utilité, de service, d'authentification](https://developers.facebook.com/docs/whatsapp/pricing/) et de [réponse]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) seront toujours autorisés aux États-Unis. 
+
+L'envoi de messages marketing (ainsi que tous les autres types de messages) vers tous les autres pays ou régions reste autorisé et ne sera pas affecté.
+
+Meta nous a informés qu'ils font cette mise à jour pour maintenir la santé de l'écosystème WhatsApp aux États-Unis, où WhatsApp se développe rapidement, mais est encore à un stade précoce (par exemple, les messages marketeurs voient un engagement plus faible que dans d'autres régions). Ils continueront à évaluer le moment où le marché américain sera prêt à reprendre les messages marketing.
+
+La réception/distribution de messages marketing à des numéros de téléphone avec des codes régionaux américains sera rejetée par WhatsApp et renverra un code d'erreur de 131049. 
+
+### Novembre 2024 : Modifications de la politique d'abonnement de WhatsApp
+*Dernière mise à jour janvier 2025*
+
+Meta a récemment mis à jour sa [politique d'abonnement](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Au lieu d'exiger un consentement spécifique à chaque canal, les entreprises peuvent désormais envoyer des messages aux utilisateurs sur la plateforme si.. :
+
+1. La personne a donné son numéro de téléphone.
+2. La personne a fourni une autorisation d'abonnement pour l'envoi de messages en général, et pas seulement pour WhatsApp. 
+
+Les entreprises doivent toujours se conformer à toutes les lois locales et suivre les exigences ci-dessous lorsqu'elles obtiennent un abonnement :
+
+- Les entreprises doivent clairement indiquer qu'une personne accepte de recevoir des communications de l'entreprise.
+- Les entreprises doivent indiquer clairement le nom de l'entreprise à laquelle la personne s'est abonnée pour recevoir des messages.
+- Les entreprises doivent se conformer à la législation en vigueur
+
+Bien que WhatsApp ait assoupli sa politique, Braze recommande toujours de collecter des abonnements personnalisés spécifiques au canal WhatsApp afin de favoriser la meilleure expérience client et les meilleurs taux d'engagement. Comme toujours, vérifiez avec votre équipe juridique ce qui est judicieux pour votre marque.
+
 ### Novembre 2024 : Mise à jour de la limite de modèles marketing par utilisateur pour les personnes résidant aux États-Unis, à l'approche des fêtes de fin d'année.
 *Dernière mise à jour en décembre 2024*
 
