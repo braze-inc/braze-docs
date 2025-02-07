@@ -96,11 +96,11 @@ Vous pouvez également choisir d’envoyer la campagne soit un jour spécifique 
 
 ### Étape 3 : Sélectionner des événements d’exception
 
-Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les événements d'exception peuvent être un achat, le début d'une session, l'exécution de l'un des événements de conversion désignés d'une campagne][18], ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/).
+Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les événements d'exception peuvent être un achat, le début d'une session, l'exécution de l'un des événements de conversion désignés d'une campagne][18], ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
 
 ![][20]
 
-Vous pouvez en savoir plus sur la façon d'utiliser les événements d'exception dans notre section sur les [cas d'utilisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
+Vous pouvez en savoir plus sur la façon d'utiliser les événements d'exception dans notre section sur les [cas d'utilisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
 > Si vous envoyez une campagne avec un événement déclencheur qui correspond à l'événement d'exception, Braze annulera la campagne et reprogrammera automatiquement une nouvelle campagne en fonction de l'heure de livraison du message de l'événement d'exception. Par exemple, si votre premier événement déclencheur commence à cinq minutes et que l'événement d'exception commence à 10 minutes, vous vous fieriez aux 10 minutes de l'événement d'exception comme heure officielle de livraison du message de la campagne.
 
@@ -114,7 +114,7 @@ Attribuez la durée de la campagne en spécifiant une heure de début et une heu
 
 ![][21]
 
-Si un utilisateur effectue un événement déclencheur pendant la période spécifiée, mais qu’il est éligible pour le message en dehors du délai imparti en raison d’un délai planifié, il ne recevra pas la campagne. Par conséquent, si vous définissez un délai plus long que la durée du message, aucun utilisateur ne recevra votre campagne. De plus, vous pouvez choisir d'envoyer le message dans les [fuseaux horaires locaux des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
+Si un utilisateur effectue un événement déclencheur pendant la période spécifiée, mais qu’il est éligible pour le message en dehors du délai imparti en raison d’un délai planifié, il ne recevra pas la campagne. Par conséquent, si vous définissez un délai plus long que la durée du message, aucun utilisateur ne recevra votre campagne. De plus, vous pouvez choisir d'envoyer le message dans les [fuseaux horaires locaux des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
 ### Étape 5 : Sélectionner la fenêtre temporelle
 
@@ -126,7 +126,7 @@ Dans le cas où un utilisateur effectue l’événement déclencheur dans la fen
 
 ![][31]
 
-Si un utilisateur ne reçoit pas le message parce qu’il manque la fenêtre temporelle, il sera toujours éligible pour la recevoir la prochaine fois qu’il effectuera l’événement déclencheur, même si vous ne choisissez pas de rendre les utilisateurs [rééligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/). Si vous choisissez d’autoriser les utilisateurs à devenir rééligibles, ils peuvent recevoir la campagne chaque fois qu’ils effectuent l’événement déclencheur, en supposant qu’ils sont admissibles pendant la période spécifiée.
+Si un utilisateur ne reçoit pas le message parce qu’il manque la fenêtre temporelle, il sera toujours éligible pour la recevoir la prochaine fois qu’il effectuera l’événement déclencheur, même si vous ne choisissez pas de rendre les utilisateurs [rééligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). Si vous choisissez d’autoriser les utilisateurs à devenir rééligibles, ils peuvent recevoir la campagne chaque fois qu’ils effectuent l’événement déclencheur, en supposant qu’ils sont admissibles pendant la période spécifiée.
 
 Si vous avez également attribué une certaine durée à la campagne, un utilisateur doit être admissible à la fois à la durée et au moment spécifique de la journée pour recevoir le message.
 
@@ -189,7 +189,7 @@ Nous recommandons soit de changer le public cible pour inclure tous les utilisat
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
