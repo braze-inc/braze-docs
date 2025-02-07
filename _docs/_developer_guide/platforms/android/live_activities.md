@@ -52,8 +52,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
         style="@style/TextAppearance.Compat.Notification.Title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Collapsed notification, showing only a title" />
+        android:layout_weight="1" />
 </LinearLayout>
 ```
 {% endtab %}
@@ -86,8 +85,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
             android:id="@+id/team1name"
             android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team 1 Name" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -112,8 +110,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
             android:id="@+id/timeInfo"
             android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1:33 - Q4" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -136,8 +133,7 @@ In each XML file, create a custom layout. Superb Owl created the following layou
             android:id="@+id/team2name"
             android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team 2 Name" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </LinearLayout>
@@ -154,8 +150,6 @@ In the following example, Superb Owl created a custom notification factory to di
 
 {% details Show the sample code %}
 ```kotlin
-package com.appboy.sample
-
 import android.app.Notification
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
@@ -261,9 +255,9 @@ class MyApplication : Application() {
 }
 ```
 
-### Step 5: Call the `/messages/send` endpoint
+### Step 5: Send the activity
 
-You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to deliver a push notification to a user's Android device.
+You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to send a push notification to a user's Android device.
 
 #### Example curl command
 
