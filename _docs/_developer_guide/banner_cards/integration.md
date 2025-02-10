@@ -290,7 +290,7 @@ Banner(placementId = "global_banner")
 {% endtab %}
 {% tab React Native %}
 
-If you're using the React Native's new architecture, you need to register the BrazeBanner as a Fabric component in your AppDelegate.mm
+If you're using React Native's new architecture, you need to register `BrazeBannerView` as a Fabric component in your `AppDelegate.mm`
 
 ```swift
 #ifdef RCT_NEW_ARCH_ENABLED
