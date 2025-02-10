@@ -268,7 +268,7 @@ You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send
 Superb Owl sent their request using the following curl command:
 
 ```bash
-curl -X POST "https://BRAZE_REST_ENPOINT/messages/send" \
+curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
   -H "Authorization: Bearer {REST_API_KEY}" \
   -H "Content-Type: application/json" \
   --data '{
@@ -301,7 +301,7 @@ While curl commands are helpful for testing, we recommend handling this call in 
 | Key                          | Description |
 |------------------------------|------------|
 | `REST_API_KEY`               | A Braze REST API key with `$TODO` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| `BRAZE_REST_ENPOINT`         | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
+| `BRAZE_REST_ENDPOINT`         | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | `USER_ID`                    | The ID of the user you are sending the notification to. |
 | `messages.android_push.title` | The message's title. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
 | `messages.android_push.alert` | The message's body. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
