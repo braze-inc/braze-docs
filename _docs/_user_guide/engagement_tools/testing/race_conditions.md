@@ -10,7 +10,7 @@ description: "This article covers best practices to avoid race conditions from a
 
 # Race conditions
 
-> A race condition is a concept where an outcome is dependent on the sequence or timing of other events. 
+> A race condition occurs when an outcome depends on the sequence or timing of multiple events. For example, if the desired sequence of events is “Event A” then “Event B”, but sometimes “Event A” comes first, and other times “Event B” comes first—that is known as a race condition. This can lead to unexpected results or errors because these events compete to access shared resources or data.
 
 For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
 
