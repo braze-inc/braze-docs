@@ -309,7 +309,7 @@ To get the Banner in React Native, use:
 const banner = await Braze.getBanner("global_banner");
 ```
 
-In your React Native application, use the following code:
+In your React Native application, insert the following JSX into your view hierarchy:
 
 ```javascript
 <Braze.BrazeBannerView
