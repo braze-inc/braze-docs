@@ -6,6 +6,22 @@ hidden: true
 
 # Partner custom Currents connector
 
+## Integration Overview
+Braze will invoke a REST API (JSON over HTTPS) that conforms to the specification in this document. To configure a new Custom Currents Connector on the Braze side, a customer need only provide an endpoint URL and an optional Authentication Token. Note that Currents Connectors are configured at the App Group level, so customers with multiple App Groups will need to configure at least one Custom Currents Connector per App Group. They can all point to the same endpoint, or to an endpoint with an additional GET parameter (e.g. customer_app_group_key=”Brand A”).
+
+Braze batches events based on a combination of number of queued events (e.g. if batch size is configured for 200 events and there are 200 events in the queue) and time (we typically won’t queue events for more than 15 minutes). Each event type has a separate queue, so latency will vary across event types..
+
+## Non-Functional Requirements
+Braze makes every reasonable effort to prevent data loss. For many types of errors (e.g. server errors, network connection errors), we will continue to retry event transmission. Braze will continue to queue and retry transmission for up to 24 hours, after which we will drop untransmitted events. Connectors displaying consistently poor uptime/error rates will be automatically suspended.
+
+To avoid data loss and service interruption, it is strongly recommended that customers monitor their endpoints 24x7 and aim to address hard errors or downtime within 24 hours.
+
+## Change Resilience
+Braze may, from time to time, make non-breaking changes to Currents schemas. A non-breaking change is a new nullable column, or a new event type. We typically aim to provide at least 2 weeks’ notice for such changes but don’t guarantee it. As such, Braze strongly recommends that customer implementations are resilient to unrecognized fields and event types. 
+
+A brittle integration that isn’t properly monitored will likely lead to data loss at some point. Please refer to the Non-Functional Requirements section.
+
+
 ## Serialization and data format
 
 The target data format is JSON over HTTPS. Events will be grouped into batches of 100 events by default, and sent to the endpoint as a JSON array containing all of the events. The batches will be sent in the following format:
@@ -329,6 +345,8 @@ Per RFC 6750, the header, if present, will be constructed using the following fo
 So for example, if the API token is `0p3n5354m3==`, the Authorization header will look like this:
 
 `Authorization: Bearer 0p3n5354m3==`
+
+Note that authentication must be validated even if there are no events in the payload. Braze may make such calls to confirm credentials are up to date.
 
 ## Versioning
 
