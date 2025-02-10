@@ -97,7 +97,7 @@ In your Xcode project, select your app name, then **General**. Under **Framework
 In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` string to your attributes model.
 
 {% alert important %}
-This property will be mapped directly to the `"brazeActivityId"` field in the Live Activity push-to-start payload, which is inserted automatically by the Braze sender service. It should not be renamed or assigned to any other value.
+The `brazeActivityId` property will be mapped directly to its corresponding field in the Live Activity push-to-start payload, which is inserted automatically by the Braze sender service. It should not be renamed or assigned to any other value.
 {% endalert %}
 
 ```swift
