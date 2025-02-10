@@ -50,7 +50,7 @@ There are a few scenarios where multiple API endpoints can also result in this r
 - Using separate API endpoints to create users and trigger Canvases or campaigns
 - Making multiple separate calls to the `/users/track` endpoint to update custom attributes, events, or purchases
 
-When user information is sent to Braze using the `/users/track` endpoint, it may occasionally take a few seconds to process. This means when requests are simultaneously made to the `/users/track` and Messaging endpoints like `/campaign/trigger/send`, there’s no guarantee that the user information will be updated before a message is sent.
+When user information is sent to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), it may occasionally take a few seconds to process. This means when requests are simultaneously made to the `/users/track` and Messaging endpoints like `/campaign/trigger/send`, there’s no guarantee that the user information will be updated before a message is sent.
 
 {% alert note %}
 If user attributes and events are sent in the same request (either from `/users/track` or from the SDK), then Braze will process attributes before events or attempting to send any message.
@@ -62,19 +62,11 @@ If user attributes and events are sent in the same request (either from `/users/
 
 If you’re using multiple endpoints, you can try staggering your requests so that each request is completed before the next one starts. This can reduce the chance of a race condition. For example, if you need to update user attributes and send a message, first wait for the user profile to be updated completely before sending a message using an endpoint.
 
-Note that if you're sending a scheduled message API request, these requests must be separate, and a user must be created before sending the scheduled API request.
+If you're sending a scheduled message API request, these requests must be separate, and a user must be created before sending the scheduled API request.
 
-#### Add a delay
+#### Use API trigger properties and user attribute objects to include key data with the trigger
 
-One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your Canvas or campaign, or attempting to log an attribute or event to that user profile.
-
-#### Use the attributes object
-
-Similarly, you can use the [`attributes`][1] object to add, create, or update a user, and then target them using either the [`/canvas/trigger/send` endpoint][2] or [`/campaign/trigger/send` endpoint][3]. This API request will process the `attributes` object before targeting the users.
-
-Attributes that are included in this object will be processed before Braze begins to send the campaign. 
-
-If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in the Braze database, we'll create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user. The `send_to_existing_only` flag can't be used with user aliases.
+Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call for the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). When these objects are included with the trigger, we guarantee that the attributes will be processed first, before the message is triggered, eliminating potential race conditions.
 
 ## Scenario 3: Matching action-based triggers and audience filters
 
