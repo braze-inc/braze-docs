@@ -547,6 +547,21 @@ $(document).ready(function() {
     if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
       setTabClass(tabtype,'', '_tab', curtab)
     }
+    else if (tab_track[curtab_name]){
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdktab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', curtab)
+        }
+      }
+    }
+
   });
 
   $('.tab_toggle_only, .sdk-tab_toggle_only').each(function(e,v){
@@ -557,6 +572,20 @@ $(document).ready(function() {
     var curtab_name = $this.text().toLowerCase();
     if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
       setTabOnlyClass(tabtype,'', '_tab', partab, curtab)
+    }
+    if (tab_track[curtab_name]){
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdktab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', partab, curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', partab,  curtab)
+        }
+      }
     }
   });
 
@@ -571,9 +600,17 @@ $(document).ready(function() {
       setTabClass(tabtype,'sub_','', curtab)
     }
     else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie)){
-        setTabClass(tabtype,'sub_','', curtab)
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdksubtab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','', curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','', curtab)
+        }
       }
     }
   });
@@ -592,9 +629,17 @@ $(document).ready(function() {
       setTabOnlyClass(tabtype,'sub_','', partab, curtab)
     }
     else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie)) {
-        setTabOnlyClass(tabtype,'sub_','', partab, curtab)
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdksubtab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','',partab, curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','',partab, curtab)
+        }
       }
     }
   });
