@@ -286,7 +286,7 @@ curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
           "time": "1:33",
           "quarter": "Q4"
         },
-        "notification_id": ASSIGNED_NOTIFICATION_ID
+        "notification_id": "ASSIGNED_NOTIFICATION_ID"
       }
     }
   }'
