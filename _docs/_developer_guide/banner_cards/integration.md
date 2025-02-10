@@ -303,6 +303,12 @@ If you're using React Native's New Architecture, you need to register `BrazeBann
 #endif
 ```
 
+To get the Banner in React Native, use:
+
+```javascript
+const banner = await Braze.getBanner("global_banner");
+```
+
 In your React Native application, use the following code:
 
 ```javascript
