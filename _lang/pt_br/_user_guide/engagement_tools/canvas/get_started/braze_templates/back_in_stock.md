@@ -57,12 +57,12 @@ Faremos dois ajustes nesta etapa:
 
 1. Selecione o catálogo que inclui informações sobre nossos jeans Classic Straight Leg, que chamamos de "Straight Leg Pants". 
 
-![Etapa do "Entry Schedulde" para um Canva baseado em ações.][3]
+!["Cronograma de Entrada" etapa para um canva baseado em ação.][3]
 
 {: start="2"}
 2\. Defina a **Hora de início (obrigatório)** para a data e hora de início desejadas.
 
-![Seção "Janela de entrada" com horário de início em 2 de janeiro de 2025 às 12 horas.][4]
+![Seção "Janela de Entrada" com um horário de início em 2 de janeiro de 2025 às 12h.][4]
 
 ### Etapa 4: Selecione o público-alvo
 

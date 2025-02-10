@@ -12,7 +12,7 @@ Tool:
 
 > Experience the Canvas journey you've created for your users. This includes previewing the timing and messages they will receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending your Canvas.
 
-## Start a test run
+## Creating a test run
 
 Follow these steps to preview your user journey:
 
@@ -57,12 +57,15 @@ Message and Delay steps show the time at which a user would progress or receive 
 
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they're not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
+Test users will enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-- If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
-- If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
-- At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
-- Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change. 
+Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change.
+
+### Consideration
+
+If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered and the test run will end. 
+
+At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
 ## Experiment Paths and Canvas variants
 
@@ -98,11 +101,11 @@ Webhooks will execute when test messages are sent, but not during the test run. 
 
 In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
 
-![][1]{:style="max-width:70%"}
+![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.][1]{:style="max-width:70%"}
 
 Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
-![][2]
+![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.][2]
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

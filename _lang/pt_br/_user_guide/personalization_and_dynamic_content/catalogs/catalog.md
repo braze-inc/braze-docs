@@ -65,7 +65,7 @@ Selecione **Criar novo catálogo** e, em seguida, escolha fazer **upload de CSV*
 5. Clique em **Processar catálogo** para criar o catálogo.
 
 {% alert note %}
-Esse tipo de dados não pode ser editado após a configuração do catálogo.
+Esse tipo de dados não pode ser editado após a configuração do catálogo. Além disso, o valor `NULL` não é compatível com o upload de CSV e será tratado como uma string.
 {% endalert %}
 
 Também é possível usar modelos em um nome de catálogo. Por exemplo, você pode usar o seguinte:

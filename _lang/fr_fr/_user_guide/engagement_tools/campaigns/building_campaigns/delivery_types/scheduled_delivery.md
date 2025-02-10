@@ -12,17 +12,15 @@ tool: Campaigns
 
 > Les campagnes envoyées à l’aide d’une livraison planifiée temporellement sont livrées à des jours spécifiés.
 
-![][3]
-
 ## Option 1 : Envoyer dès que la campagne est lancée
 
 Si vous choisissez d’envoyer un message dès qu’elle est lancée, il commencera à se lancer dès que vous aurez fini de créer votre campagne.
 
-![][10]
+![La section "Réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle d'envoi dès que la campagne est lancée.][10]
 
 Ce type de planification est conçu pour les campagnes ponctuelles que vous souhaitez envoyer immédiatement, telles que les messages concernant un événement en cours. Une application sportive, par exemple, peut planifier des notifications push basées sur les mises à jour des scores en utilisant cette option. En outre, lorsque vous envoyez des messages de test destinés à vous-même ou à votre équipe, cette option vous permet de les livrer immédiatement. 
 
-Si vous prévoyez de modifier la campagne et de la réexpédier après avoir affiché le test, assurez-vous de cocher la case qui rend les utilisateurs [rééligibles][24] pour recevoir la campagne. Par défaut, Braze envoie une seule fois une campagne à un utilisateur à moins que cette case ne soit cochée.
+Si vous envisagez de modifier la campagne et de l'envoyer à nouveau après avoir vu le test, veillez à cocher la case qui rend les utilisateurs à [nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) pour recevoir la campagne. Par défaut, Braze envoie une seule fois une campagne à un utilisateur à moins que cette case ne soit cochée.
 
 ## Option 2 : Envoyer à un moment spécifié
 
@@ -30,7 +28,7 @@ La planification d’une campagne à un moment spécifié vous permet de stipule
 
 Si vous sélectionnez la **réception/distribution planifiée** et que vous ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur la page **Paramètres de l'entreprise**.
 
-![][9]
+![Les options de planification basées sur le temps permettent d'envoyer une campagne à une heure donnée.][9]
 
 ### Campagnes dans le fuseau horaire local
 
@@ -46,7 +44,7 @@ Les planifications temporelles spécifiées conviennent mieux aux messages plani
 
 [Timing intelligent][8] vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
 
-![][14]
+![Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment où l'utilisation de l'appli est la plus populaire parmi tous les utilisateurs.][14]
 
 ### Règles de livraison
 
@@ -63,6 +61,5 @@ Les campagnes au timing intelligent fonctionnent mieux pour les messages ponctue
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
 [25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}

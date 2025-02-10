@@ -15,6 +15,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Avec l’éditeur par glisser-déposer, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les canvas à l’aide de l’expérience de modification par glisser-déposer.
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou des modèles créés par un tiers, ils doivent être recréés dans l'éditeur par glisser-déposer.
 
 Vous ne savez pas si votre message in-app doit être envoyé à l'aide d'une campagne ou d'un [canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes. Une fois que vous avez choisi l'endroit où créer votre message, passons aux étapes permettant de créer un message in-app par glisser-déposer.
@@ -53,7 +55,7 @@ Vous trouverez ci-dessous les exigences minimales du SDK pour ces fonctionnalit�
 - Pour le SDK Web, l'option d'initialisation [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) doit être définie sur `true`. L’option `enableHtmlInAppMessages` permettra aussi à ces messages de fonctionner, mais elle est obsolète et devrait être mise à jour vers `allowUserSuppliedJavascript`.
 - Si vous utilisez Google Tag Manager, vous devez activer l'option "Autoriser les messages in-app HTML" dans la configuration de GTM.
 
-## Étape 1 : Créer un message in-app
+## Étape 1 : Créer un message in-app
 
 Créez un nouveau message in-app ou une étape de canvas, puis sélectionnez l'**éditeur par glisser-déposer** comme expérience d’édition.
 
@@ -73,7 +75,7 @@ Vous pouvez également accéder à tous les modèles à partir de la section **M
 
 ## Étape 3 : Ajouter des pages supplémentaires (facultatif) {#multi-page}
 
-L'ajout de pages à votre message in-app vous permet de guider les utilisateurs à travers un flux séquentiel, comme un flux d'onboarding ou un parcours de bienvenue. Vous pouvez gérer les pages à partir de la section **Pages** de l'onglet **Créer.** 
+L'ajout de pages à votre message in-app vous permet de guider les utilisateurs à travers un flux séquentiel, comme un flux d'onboarding ou un parcours de bienvenue. Vous pouvez gérer les pages à partir de la section **Pages** de l'onglet **Créer.**
 
 ![Un message in-app pour une entreprise de soins de santé composé de trois pages.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 

@@ -104,7 +104,7 @@ Lorsque vous sélectionnez des mots-clés déclencheurs, incluez des mots comme 
 
 ![Étape du message pour envoyer un message entrant WhatsApp dont le corps du message est "STOP" ou "NO MESSAGE".][7]
 
-#### Étape 2 : Mettre à jour le profil de l’utilisateur
+#### Étape 2 : Mettre à jour le profil de l’utilisateur
 
 Mettez à jour le profil de l'utilisateur en utilisant l'une des méthodes décrites dans [Groupes d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 

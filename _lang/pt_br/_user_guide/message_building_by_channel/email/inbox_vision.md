@@ -2,7 +2,7 @@
 nav_title: Inbox Vision
 article_title: Inbox Vision
 page_order: 9
-description: "Este artigo de referência aborda como configurar o Inbox Vision, um recurso que permite que os profissionais de marketing visualizem seus e-mails a partir da perspectiva de vários clientes de e-mail e dispositivos móveis."
+description: "Esta página cobre como configurar o Inbox Vision, um recurso que permite aos profissionais de marketing visualizar seus e-mails a partir da perspectiva de vários clientes de e-mail e dispositivos móveis."
 tool:
   - Dashboard
 channel:
@@ -12,34 +12,33 @@ channel:
 
 # Inbox Vision
 
-> O Inbox Vision permite visualizar seus e-mails a partir da perspectiva de vários clientes de e-mail e dispositivos móveis. 
+> O Inbox Vision permite visualizar seus e-mails a partir da perspectiva de vários clientes de e-mail e dispositivos móveis. Por exemplo, você pode usar o Inbox Vision para testar as diferenças entre os modos escuro e claro para confirmar que seus e-mails estão exatamente certos.
+
+{% alert important %}
+Em geral, seu e-mail não funcionará com o Inbox Vision se o conteúdo do seu e-mail depender de informações de modelagem, como informações do perfil do usuário. Isso ocorre porque o Braze cria modelos em um usuário vazio quando enviamos e-mails usando esse recurso.
+{% endalert %}
 
 ## Teste seu envio de e-mail no Inbox Vision
 
-O Inbox Vision funciona quando **o Usuário aleatório** é selecionado para **Pré-visualização como usuário** e não persiste nenhum usuário personalizado ou outras configurações de usuário de pré-visualização. Isso significa que se você selecionar **Usuário personalizado** e executar o Inbox Vision, o que é mostrado no Inbox Vision pode ser diferente da prévia da mensagem em outro lugar. 
+Seu e-mail deve incluir uma linha de assunto e um domínio de envio válido para que possa ver essas prévias. Lembre-se de como seu e-mail pode ser renderizado de forma diferente no desktop e nos dispositivos móveis. Ao visualizar essas prévias, é possível revisar o conteúdo e garantir que o e-mail esteja sendo exibido como pretendido.
 
 Para testar sua mensagem de e-mail no Inbox Vision, faça o seguinte:
 
-1. Acesse o editor de arrastar e soltar ou o editor de e-mail HTML. 
-2. Abra a guia **Pré-visualização e teste**.
-3. Selecione **Inbox Vision** e clique em **Executar Inbox Vision**. <br><br> ![][3]{: style="max-width:80%;"} <br><br> Em seguida, o Braze envia uma versão HTML de seu e-mail para vários clientes de e-mail usados em todo o mundo, o que pode levar de dois a dez minutos para ser concluído. <br><br> As prévias HTML renderizadas serão divididas em três seções: 
-- **Clientes Web** 
-- **Aplicativos clientes** 
-- **Clientes móveis** <br><br>
-4. Selecione um bloco para ver a prévia em mais detalhes. <br><br> Seu e-mail deve incluir uma linha de assunto e um domínio de envio válido para que possa ver essas prévias. Lembre-se de como seu e-mail pode ser renderizado de forma diferente no desktop e nos dispositivos móveis. Ao visualizar essas prévias, é possível revisar o conteúdo e garantir que o e-mail esteja sendo exibido como pretendido.
-
-{% alert tip %}
-Use o Inbox Vision para testar as diferenças entre os modos escuro e claro para confirmar que seus e-mails estão corretos!
-{% endalert %}
+1. Acesse o editor de arrastar e soltar ou o editor de e-mail HTML.
+2. No seu editor, selecione **Ver prévia e testar**.
+3. Selecione **Inbox Vision**. 
+4. Selecione **Executar Inbox Vision**. Isso pode levar entre dois a dez minutos para ser concluído.
+5. Em seguida, selecione um tile para visualizar a prévia com mais detalhes. Essas prévias estão agrupadas nessas seções: **Clientes Web**, **Clientes de Aplicativo** e **Clientes Móveis**.
 
 ![Visão geral do Inbox Vision para o editor de HTML.][1]
 
-{: start="5"}
-5\. Faça alterações em um modelo, se necessário, e clique em **Reexecutar teste** para ver as prévias atualizadas.
+{: start="6"}
+6\. Faça alterações em um modelo, se necessário.
+7\. Selecione **Refazer teste** para ver as prévias atualizadas.
 
-{% alert important %}
-Em geral, seu e-mail não funcionará com o Inbox Vision se o conteúdo do e-mail depender de informações de modelo, como informações de perfil de usuário. Isso ocorre porque o Braze cria modelos em um usuário vazio quando enviamos e-mails usando esse recurso.
-{% endalert %}
+### Visualizando como um usuário
+
+Quando você faz uma prévia do e-mail como um usuário aleatório, quaisquer configurações ou atributos específicos associados a um usuário, como seu nome ou preferências, não são salvos para prévias atuais ou futuras. Quando você seleciona um usuário personalizado, a prévia exibida no Inbox Vision pode diferir da prévia da mensagem em outros lugares, uma vez que esta opção utiliza dados de usuários específicos para criar a prévia.
 
 ## Análise de código
 
@@ -61,11 +60,15 @@ Os testes de spam tentam prever se seu e-mail chegará às pastas de spam ou às
 
 ### Exibição dos resultados do teste de spam
 
-Para verificar os resultados do teste de spam, clique na guia **Spam Testing (Teste de spam** ) na seção **Inbox Vision (Visão da caixa de entrada** ). A tabela **Spam Test Result (Resultado do teste de spam** ) lista o nome, o status e o tipo do filtro de spam.
+Para verificar os resultados do seu teste de spam, faça o seguinte:
+
+1. Selecione a guia de **Teste de spam** na seção **Inbox Vision**. A tabela **Spam Test Result (Resultado do teste de spam** ) lista o nome, o status e o tipo do filtro de spam.
 
 ![Tabela "Spam Test Result" com três colunas: Nome, status e tipo. Há uma lista de filtros de spam e de provedores de acesso à internet que foram aprovados nos testes de spam, indicando que a campanha de e-mail não cairá na pasta de spam.][4]
 
-Depois de analisar esses resultados e fazer os ajustes necessários em sua campanha de e-mail, clique em **Reexecutar teste** para recarregar os resultados do teste de spam.
+{: start="2"}
+2\. Revise esses resultados e faça os ajustes necessários na sua e-mail campanha.
+3\. Selecione **Refazer teste** para recarregar os resultados do seu teste de spam.
 
 ## Precisão do teste
 

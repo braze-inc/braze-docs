@@ -75,6 +75,10 @@ Also, as subscription state changes do not consume data points, updating the `em
 
 ## Data points
 
+{% alert note %}
+The following tables are intended to be illustrative. For exact naming conventions, capitalization, and accepted values for certain fields, refer to the relevant documentation for your ingestion method.
+{% endalert %}
+
 {% tabs %}
 {% tab Non-billable %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

@@ -56,10 +56,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Apoyo a la asociación para balizas y geovallas
 
-La combinación de la baliza o geovalla existente con nuestras características de segmentación y mensajería te proporciona más información sobre las acciones físicas de tus usuarios para que puedas enviarles mensajes en consecuencia. Puedes aprovechar el seguimiento de ubicación con algunos de nuestros socios: 
+La combinación de la beacon o geovalla existente con nuestras características de segmentación y mensajería te proporciona más información sobre las acciones físicas de tus usuarios para que puedas enviarles mensajes en consecuencia. Puedes aprovechar el seguimiento de ubicación con algunos de nuestros socios: 
 
 - [Radar][6]
-- [Gimbal][10]
+- [Infillion][10]
 - [Foursquare][7]
 
 ## Preguntas más frecuentes
@@ -74,5 +74,5 @@ Consulte nuestras [FAQ sobre][11] ubicaciones para obtener respuestas a las preg
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

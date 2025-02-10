@@ -374,7 +374,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Cerrar mensaje</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Close Message' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>

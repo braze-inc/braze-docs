@@ -13,7 +13,7 @@ alias: /line/line_setup/
 
 # Configuration de la ligne
 
-> Cet article explique comment configurer le canal LINE dans Braze, notamment comment configurer les utilisateurs, rapprocher les ID utilisateurs et créer des utilisateurs test LINE dans Braze.
+> Cet article explique comment configurer le canal LINE dans Braze, notamment comment configurer des utilisateurs, rapprocher les ID utilisateurs et créer des utilisateurs test LINE dans Braze.
 
 ## Conditions préalables
 
@@ -61,7 +61,7 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 4. [Modifier les méthodes de mise à jour des utilisateurs](#step-4-change-your-user-update-methods)
 5. [(Facultatif) Fusionner les profils utilisateurs](#step-5-merge-profiles-optional)
 
-## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
+## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
 
 Cette étape est nécessaire si vous avez un utilisateur LINE existant et identifié, car Braze récupérera ensuite automatiquement l'état de son abonnement et mettra à jour le profil utilisateur correct. Si vous n'avez pas encore rapproché les utilisateurs avec leur ID LINE, sautez cette étape. 
 
@@ -73,7 +73,7 @@ Quelle que soit la méthode utilisée, mettez à jour le site `native_line_id` p
 L'état du groupe d'abonnement ne doit pas être spécifié et sera ignoré. LINE est la source de vérité pour l'état de l'abonnement des utilisateurs, qui sera synchronisé avec Braze soit par l'outil de synchronisation des abonnements, soit par des mises à jour d'événements.
 {% endalert %}
 
-## Étape 2 : Intégration du canal LINE
+## Étape 2 : Intégration du canal LINE
 
 Une fois que le processus d'intégration est terminé, Braze intègre automatiquement les followers LINE de ce canal dans Braze. Pour tous les LINE ID qui sont déjà associés à un profil d'utilisateur Braze, chaque profil sera mis à jour avec le statut "abonné", et tous les LINE ID restants généreront des utilisateurs anonymes. En outre, les nouveaux adeptes de votre chaîne LINE verront des profils utilisateurs non identifiés créés lorsqu'ils suivront la chaîne.
 
@@ -116,7 +116,7 @@ Une fois que le processus d'intégration est terminé, Braze intègre automatiqu
 
 ![Section des groupes d'abonnement LINE affichant un groupe d'abonnement pour le canal "LINE".][4]{: style="max-width:80%;"}
 
-## Étape 3 : Rapprocher les ID des utilisateurs
+## Étape 3 : Rapprocher les ID des utilisateurs
 
 Combinez les LINE ID de vos utilisateurs avec leurs profils utilisateurs Braze existants en suivant les étapes de la rubrique [Rapprochement des ID utilisateur.](#user-id-reconciliation)
 
@@ -200,7 +200,7 @@ Pour en savoir plus sur la gestion des utilisateurs en double dans Braze, consul
 
 LINE est la source de vérité pour les états d'abonnement des utilisateurs. Même si vous disposez de l'ID LINE d'un utilisateur (`native_line_id`), si cet utilisateur n'a pas suivi le canal LINE à partir duquel vous envoyez des messages, LINE ne lui enverra pas de messages.
 
-Pour vous aider à gérer cela, Braze propose des outils et une logique qui prennent en charge une base d'utilisateurs bien intégrée, y compris la synchronisation des abonnements et les mises à jour des événements pour les suivis et les désuivis de LINE.
+Pour vous aider à gérer cela, Braze propose des outils et une logique qui prennent en charge une base d'utilisateurs bien intégrée, notamment la synchronisation des abonnements et les mises à jour d'événements pour les suivis et les désuivis de LINE.
 
 ### Synchronisation des abonnements et logique des événements
 
@@ -360,7 +360,7 @@ if (user && isLoggedIn && lineUserId) {
 **Scénario :** Un utilisateur existant à Braze suit votre chaîne sur LINE.
 
 1. LINE envoie à Braze un événement de suivi.
-2. Braze crée un profil utilisateur anonyme avec l'ID LINE, l'alias utilisateur `line_id` et le statut du groupe abonnement LINE de `subscribed`.
+2. Braze crée un profil utilisateur anonyme avec l'ID LINE, l'alias utilisateur `line_id` et le statut du subscription group d'`subscribed`.
 3. L'utilisateur reçoit un message LINE avec un lien vers votre site web et votre app et se connecte. Leur profil utilisateur est désormais connu.
 4. Le profil d'utilisateur anonyme qui a été créé est identifié et est fusionné, via l'[endpoint /users/identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), avec le profil d'utilisateur connu de l'utilisateur. Le profil utilisateur connu contient désormais l'ID LINE et l'état de l'abonnement est `subscribed`.
 5. (Facultatif) L'utilisateur reçoit un message LINE avec le code du coupon et Braze enregistre l'envoi dans le profil utilisateur Braze.

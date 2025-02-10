@@ -218,6 +218,10 @@ glossaries:
     description: "Segmente vos utilisateurs selon que leur adresse e-mail a subi ou non un échec d’envoi définitif (par exemple, adresse e-mail non valide)."
     tags:
       - Retargeting
+  - name: "Échec provisoire d'envoi"
+    description: "Segmentez vos utilisateurs en fonction du nombre d'échecs provisoires d'envoi X fois en Y jours. Les filtres Segment ne peuvent remonter que 30 jours en arrière, mais vous pouvez remonter plus loin grâce aux extensions de segments.<br><br>Ce filtre fonctionne différemment d'un échec provisoire d'envoi dans Currents. Le filtre de segment Soft Bounced comptabilise un échec provisoire d'envoi s'il n'y a pas eu de réception/distribution réussie pendant la période de réessai de 72 heures. Dans Currents, chaque tentative infructueuse est envoyée sous la forme d'un échec provisoire d'envoi." 
+    tags:
+      - Retargeting
   - name: Vous a marqué comme spam
     description: Segmente vos utilisateurs selon s’ils ont marqué vos messages comme spam.
     tags:
@@ -267,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Indicateurs de fonctionnalité
-    description: "Le segment de vos utilisateurs qui ont actuellement activé un <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">flag de fonctionnalité</a> particulier."
+    description: "Le segment de vos utilisateurs qui ont actuellement activé un <a href=\"/docs/developer_guide/feature_flags/\">flag de fonctionnalité</a> particulier."
     tags:
       - Retargeting
   - name: Groupe d’abonnement

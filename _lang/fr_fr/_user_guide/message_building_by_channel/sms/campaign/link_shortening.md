@@ -124,45 +124,7 @@ Pour obtenir des conseils sur le reciblage, consultez la page sur [le reciblage 
 
 ## Domaines personnalisés
 
-Le raccourcissement de lien vous permet également d’utiliser votre propre domaine pour personnaliser l’apparence de vos URL raccourcies et présenter une image de marque cohérente.
-
-{% alert note %}
-Contactez votre gestionnaire de compte Braze pour commencer à utiliser des domaines personnalisés.
-{% endalert %}
-
-### Exigences du domaine
-
-- Les domaines doivent être achetés, détenus et gérés par vous.
-- Le domaine utilisé pour cette fonctionnalité doit être unique (c'est-à-dire différent du domaine de votre site Web) et il ne peut pas être utilisé pour héberger du contenu Web.
-  - Vous pouvez également utiliser des sous-domaines uniques, tels que `sms.braze.com`.
-- Nous vous recommandons de choisir un domaine avec le moins de caractères possible pour minimiser la longueur de vos URL.
-
-#### Déléguer votre domaine personnalisé
-
-Lorsque vous déléguez votre domaine à Braze, nous nous chargeons automatiquement du renouvellement du certificat afin d'éviter toute interruption de service. 
-
-Pour déléguer votre domaine à Braze, procédez comme suit : 
-
-1. Présentez à votre gestionnaire de la satisfaction client un domaine qui répond aux exigences susmentionnées. Braze vérifie alors la configuration DNS existante pour le domaine et s’assure que :
-
-- Il n'existe pas d’enregistrements CAA OU
-- Des enregistrements CAA **existent** mais ont un enregistrement pour {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} ou {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
-
-2. Créez quatre nouveaux enregistrements A, un pour chaque adresse IP, et vérifiez qu'il s'agit des seuls enregistrements A qui existent pour l'hôte du lien de domaine :
-- `151.101.130.133`
-- `151.101.194.133`
-- `151.101.2.133`
-- `151.101.66.133`
-
-### Utilisation de domaines personnalisés
-
-Une fois configurés, les domaines personnalisés peuvent être attribués à un ou plusieurs groupes d’abonnement SMS. 
-
-![Paramètres des groupes d’abonnement vous permettant de sélectionner un domaine de raccourcissement de lien.][7]
-
-Les campagnes envoyées avec le raccourcissement de lien activé utiliseront le domaine attribué associé à votre groupe d'abonnement SMS.
-
-![Aperçu du compositeur de messages SMS avec un domaine de lien raccourci qui est différent du domaine dans la boîte "Message".][8]
+Le raccourcissement de lien vous permet également d’utiliser votre propre domaine pour personnaliser l’apparence de vos URL raccourcies et présenter une image de marque cohérente. Pour plus d'informations, reportez-vous à la section [Domaines personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
 
 ## Foire aux questions
 
@@ -191,16 +153,6 @@ Les URL statiques sont valables un an à compter de la date d'enregistrement de 
 #### Le raccourcissement des liens fonctionne-t-il avec des liens profonds ou des liens universels ?
 
 La fonction de raccourcissement de liens ne fonctionne pas avec les liens profonds. Vous pouvez raccourcir les liens universels à partir de fournisseurs tels que Branch ou Appsflyer, mais Braze n'est pas en mesure de résoudre les problèmes qui peuvent survenir lors de cette opération (comme la rupture de l'attribution ou la cause d'une redirection).
-
-### Domaines personnalisés
-
-#### Les domaines délégués peuvent-ils être partagés entre plusieurs groupes d’abonnement ?
-
-Oui. Un seul domaine peut être utilisé avec plusieurs groupes d'abonnement. Pour ce faire, sélectionnez le domaine de chaque groupe d’abonnement auquel il doit être associé.
-
-#### Les domaines délégués peuvent-ils être partagés entre plusieurs espaces de travail ?
-
-Oui. Les domaines peuvent être associés à des groupes d'abonnement dans plusieurs espaces de travail, à condition que les espaces de travail soient situés dans la même entreprise.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %}
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %}

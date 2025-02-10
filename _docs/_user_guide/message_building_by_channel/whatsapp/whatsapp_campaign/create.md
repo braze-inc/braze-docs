@@ -180,7 +180,9 @@ Message feature    | Details
 Headers | 
 Text | Supports variable parameters
 Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
-Videos | Currently, must be hosted on a URL and less than sixteen MB. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Videos | Currently, must be hosted on a URL and less than sixteen MB. Must also have a video type of 3GPP or MP4. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Audio | Supported only for response messaging. Must be AAC, AMR, MP3, MP4 audio, or OGG, hosted on a URL, and less than sixteen MB. <br><br>Audio messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Documents | Must be hosted on a URL and less than 100 MB. Must also have a document type of text (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`), or PDF (`.pdf`). <br><br>Document messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).

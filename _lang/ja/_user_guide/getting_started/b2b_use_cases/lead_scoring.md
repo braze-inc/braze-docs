@@ -182,7 +182,7 @@ Braze のリードステータスを使用して営業チームのリードレ�
 
 | ヘッダー | コンテンツ |
 | --- | --- |
-| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content <mem_deec0e0f-4908-4b4a-bb83-8ce8c483fca7/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content <mem_a8279fc7-4858-44ec-944d-1c7c2eb01fa5/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 既存のビーコンやジオフェンスのサポートを Braze のターゲティング機能やメッセージング機能と組み合わせることで、ユーザーの物理的な行動に関する詳細な情報が判明し、それに応じてユーザーにメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
 
 - [Radar][6]
-- [Gimbal][10]
+- [インフィリオン][10]
 - [Foursquare][7]
 
 ## よくある質問
@@ -74,5 +74,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

@@ -14,7 +14,7 @@ tool:
 
 > Les notifications push sont idéales pour les appels à l’action urgents, ainsi que pour le ré-engagement des utilisateurs qui n’ont pas utilisé l’application depuis un certain temps. Les campagnes de notifications push réussies amènent l’utilisateur directement au contenu et démontrent la valeur de votre application. Pour voir des exemples de notifications push, consultez nos [études de cas][8].
 
-## Étape 1 : Choisir où créer votre message {#create-new-campaign-push}
+## Étape 1 : Choisir où créer votre message {#create-new-campaign-push}
 
 {% alert tip %}
 Vous ne savez pas s'il faut utiliser une campagne ou un canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages simples et uniques, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
@@ -122,7 +122,7 @@ Commencez à taper dans la boîte de message et voyez un aperçu apparaître dan
 Pour que votre push soit personnalisé et ciblé, vous pouvez inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert important %}
-Vous **ne pouvez pas** envoyer un message push Android sans titre. Toutefois, vous pouvez saisir un simple espace à la place. Gardez à l'esprit que si votre message ne contient qu'un seul espace, il sera envoyé sous forme de notification push silencieuse. Pour plus d'informations, reportez-vous à la section [Notifications push silencieuses]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+Vous **ne pouvez pas** envoyer un message push Android sans titre. Vous pouvez toutefois saisir un simple espace à la place. Gardez à l'esprit que si votre message ne contient qu'un seul espace, il sera envoyé sous forme de notification push silencieuse. Pour plus d'informations, reportez-vous à la section [Notifications push silencieuses]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
 {% endalert %}
 {% endtab %}
 {% endtabs %}

@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 En combinant la prise en charge des balises ou des géorepérages existants avec nos fonctionnalités de ciblage et d'envoi de messages, vous obtenez davantage d'informations sur les actions physiques de vos utilisateurs, ce qui vous permet de leur envoyer des messages en conséquence. Vous pouvez tirer parti de l'emplacement/localisation avec certains de nos partenaires : 
 
 - [Radar][6]
-- [Gimbal][10]
+- [Infillion][10]
 - [Foursquare][7]
 
 ## Foire aux questions
@@ -74,5 +74,5 @@ Consultez notre [FAQ sur les emplacements][11] pour obtenir des réponses aux qu
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

@@ -9,10 +9,6 @@ description: "Este artículo de referencia describe cómo crear notificaciones d
 
 > Mediante una combinación de notificaciones de reposición de existencias a través de los catálogos Braze y un Canvas, puede notificar a los clientes cuándo un artículo vuelve a estar disponible. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reponga el artículo.
 
-{% alert important %}
-Las notificaciones de agotamiento de existencias de los catálogos se encuentran actualmente en fase de acceso anticipado. Póngase en contacto con su gestor de cuenta si está interesado en participar en este acceso anticipado.
-{% endalert %}
-
 Cuando un usuario active un evento personalizado para un artículo, lo suscribiremos automáticamente para que reciba notificaciones de reposición de existencias de ese artículo. Cuando la cantidad de inventario del artículo cumpla tu regla de inventario (como un inventario superior a 100), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
 
 ## Cómo funcionan las notificaciones de reposición de existencias
@@ -54,7 +50,7 @@ Siga estos pasos para configurar las notificaciones de agotado en un catálogo e
     }
     ```
 {% alert note %}
-Los desencadenadores de reserva y de bajada de precio utilizan el mismo evento para suscribir al usuario a la notificación. Crea una notificación de bajada de precio configurando `type` en `back-in-stock`. No puedes establecer tanto una notificación de bajada de precio como de reabastecimiento.
+Los desencadenadores de reposición de existencias y de bajada de precios utilizan el mismo evento para suscribir al usuario a la notificación, por lo que puedes utilizar la matriz `type` para establecer tanto las notificaciones de bajada de precios como las de reposición de existencias en el mismo evento.
 {% endalert %}
 
 {: start="4"}

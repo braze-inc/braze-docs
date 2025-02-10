@@ -11,7 +11,7 @@ alias: /landing_pages/
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Éditeur par glisser-déposer
+  - name: Editeur par glisser-déposer
     link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Connecter un sous-domaine

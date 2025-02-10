@@ -137,7 +137,7 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Gerenciar configurações de e-mail|Permite que os usuários salvem as alterações de configuração de e-mail (**Configurações** > **Preferências de e-mail**).|
 |Espaço de trabalho|Gerenciar eventos, atributos, compras|Permite que os usuários editem atributos personalizados (usuários sem essa capacidade ainda podem visualizar atributos personalizados), editem e visualizem propriedades de eventos personalizados e editem e visualizem propriedades de produtos em **Configurações de Dados**.|
 |Espaço de trabalho|Gerenciar integrações externas|Permite acesso a todas as guias em **Tecnologia Parceiros** e a capacidade de sincronizar a Braze com outras plataformas.|
-|Espaço de trabalho|Gerenciar Feature Flags|Permite que os usuários criem ou editem [flags de recursos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
+|Espaço de trabalho|Gerenciar Feature Flags|Permite que os usuários criem ou editem [flags de recursos]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Espaço de trabalho|Gerenciar ativos da biblioteca de mídia|Permite que os usuários adicionem, editem e excluam ativos da biblioteca de mídia.|
 |Espaço de trabalho|Gerenciar grupos de inscrição|Permite que os usuários criem e gerenciem grupos de inscrição.|
 |Espaço de trabalho|Gerenciar tags|Permite que os usuários editem ou excluam tags (sob **Gerenciamento de Tag**). Você não precisa dessa permissão para adicionar {tags} a campanhas ou segmentos.|

@@ -65,7 +65,7 @@ Sélectionnez **Créer un catalogue**, puis choisissez de **charger un fichier C
 5. Cliquez sur **Traiter le catalogue** pour créer le catalogue.
 
 {% alert note %}
-Ce type de données ne peut pas être modifié après la configuration de votre catalogue.
+Ce type de données ne peut pas être modifié après la configuration de votre catalogue. En outre, la valeur `NULL` n'est pas prise en charge dans le téléchargement CSV et sera traitée comme une chaîne de caractères.
 {% endalert %}
 
 Vous pouvez également utiliser des modèles dans le nom d'un catalogue. Par exemple, vous pouvez utiliser les éléments suivants :

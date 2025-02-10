@@ -416,6 +416,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/']
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/'] = '/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/';
 
 validurls['/docs/help/best_practices/client_integration_gallery/'] = '/customers';
+validurls['/docs/user_guide/message_building_by_channel/email/best_practices/sanitization/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/';
 validurls['/docs/help/best_practices/email/'] = '/docs/message_building_by_channel/email/best_practices';
 validurls['/docs/help/best_practices/email/use_cases/'] = '/docs/message_building_by_channel/email/#email-use-cases';
 validurls['/docs/help/best_practices/email/technical_guidelines_and_tips/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#technical-guidelines';
@@ -887,10 +888,10 @@ validurls['/docs/user_guide/sage_ai/generative_ai/ai_liquid/'] = '/docs/user_gui
 validurls['/docs/ai_liquid_prompts/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/ai_liquid_prompts/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_content_qa/'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/#churn_score';
-validurls['/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters'] = '/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters';
-validurls['/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection'] = '/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection';
-validurls['/user_guide/predictive_suite/predictive_churn/messaging_users/#filters'] = '/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters';
-validurls['/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
+validurls['/docs/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters'] = '/docs/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters';
+validurls['/docs/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection'] = '/docs/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/messaging_users/#filters'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
 
 validurls['/docs/user_guide/predictive_suite'] = '/docs/user_guide/brazeai/predictive_suite/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/';

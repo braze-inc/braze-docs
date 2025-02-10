@@ -32,7 +32,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode encontrar **Campanhas** sob **engajamento**.
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {:start=“2"}

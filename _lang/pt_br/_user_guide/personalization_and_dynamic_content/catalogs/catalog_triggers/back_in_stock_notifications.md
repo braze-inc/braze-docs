@@ -9,10 +9,6 @@ description: "Este artigo de referência descreve como criar notificações de f
 
 > Usando uma combinação de notificações de falta de estoque por meio dos catálogos da Braze e de um canva, você pode notificar os clientes quando um item estiver em falta. Sempre que um cliente realiza um evento personalizado selecionado, ele pode se inscrever automaticamente para ser notificado quando o item for reabastecido.
 
-{% alert important %}
-As notificações de estoque em espera para catálogos estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta se estiver interessado em participar deste acesso antecipado.
-{% endalert %}
-
 Quando um usuário dispara um evento personalizado para um item, nós o inscrevemos automaticamente para receber notificações de falta de estoque desse item. Quando a quantidade de estoque do item atender à sua regra de estoque (por exemplo, um estoque maior que 100), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou do canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
 ## Como funcionam as notificações de estoque em espera
@@ -54,7 +50,7 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
     }
     ```
 {% alert note %}
-Os disparos de reposição de estoque e de queda de preço usam o mesmo evento para inscrever o usuário na notificação. Crie uma notificação de queda de preço definindo `type` como `back-in-stock`. Não é possível definir uma notificação de queda de preço e de volta ao estoque.
+Os disparadores de queda de preço e de volta ao estoque usam o mesmo evento para inscrever o usuário na notificação, portanto, é possível usar a matriz `type` para definir notificações de queda de preço e de volta ao estoque no mesmo evento.
 {% endalert %}
 
 {: start="4"}
