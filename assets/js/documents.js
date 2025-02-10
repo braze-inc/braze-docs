@@ -468,6 +468,11 @@ $(document).ready(function() {
         $('#' + last_active_content[el.attr('id')]).addClass(prefix + 'active');
       }
     });
+    // Refresh Toc
+    $('#toc').toc({
+      headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+      minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+    });
   }
 
   function setTabOnlyClass(tabtype, prefix, postfix, partab, curtab){
