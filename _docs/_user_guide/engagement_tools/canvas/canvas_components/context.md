@@ -61,11 +61,13 @@ Let's say we want to remind our customers to purchase toothpaste 30 days from no
 - **Data type:** Time
 - **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-![The "product_reminder_interval" and its value.]{% image_buster /assets/img/context_step1.png %}
+![The "product_reminder_interval" and its value.][2]
 
 Next, because we want to remind our customers 30 days from now, we'll select Until a specific day as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context property.
 
-![Example of using context properties with a Delay step to delay users based on the "product_reminder_interval".]{% image_buster /assets/img/context_step2.png %}
+![Example of using context properties with a Delay step to delay users based on the "product_reminder_interval".][3]
 
 
 [1]: {% image_buster /assets/img/context_step3.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}
