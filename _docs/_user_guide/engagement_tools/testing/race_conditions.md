@@ -39,7 +39,9 @@ However, in some cases, the second event will trigger first. This means a messag
 
 #### Introduce delays
 
-After a new user is created, you can introduce a short delay before sending any targeted campaigns or Canvases. This allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message. For example, after a user registers for your app, you can add a 24-hour delay before sending a promotional offer.
+After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message. 
+
+For example, after a user registers for your app, you can send a promotional offer after 24 hours. Or, if you're creating a user or logging a custom attribute, you can add a one-minute delay before proceeding in your process to avoid this race condition.
 
 ## Scenario 2: Using multiple API endpoints
 
