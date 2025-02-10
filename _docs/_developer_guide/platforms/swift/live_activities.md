@@ -94,7 +94,7 @@ In your Xcode project, select your app name, then **General**. Under **Framework
 
 #### Step 2.2: Add the BrazeLiveActivityAttributes protocol {#brazeActivityAttributes}
 
-In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` string to your attributes model.
+In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` property to your attributes model.
 
 {% alert important %}
 The `brazeActivityId` property will be mapped directly to its corresponding field in the Live Activity push-to-start payload, which is inserted automatically by the Braze sender service. It should not be renamed or assigned to any other value.
@@ -108,6 +108,7 @@ import BrazeKit
 #endif
 
 @available(iOS 16.1, *)
+// 1. Add the `BrazeLiveActivityAttributes` conformance to your `ActivityAttributes` struct.
 struct SportsActivityAttributes: ActivityAttributes, BrazeLiveActivityAttributes {
   public struct ContentState: Codable, Hashable {
     var teamOneScore: Int
@@ -116,6 +117,8 @@ struct SportsActivityAttributes: ActivityAttributes, BrazeLiveActivityAttributes
 
   var gameName: String
   var gameNumber: String
+
+  // 2. Add the `String?` property to represent the activity ID.
   var brazeActivityId: String?
 }
 ```
