@@ -343,7 +343,7 @@ Individual events will follow the same evolution rules as our existing S3 Avro s
 
 In the event of an error, Braze will queue and retry the request based on the HTTP return code received. The retries will continue as long as data is buffered in our system. This is currently a minimum of two days, and on-call engineers are alerted to investigate if data appears to be stuck for more than a day. The backoff strategy is currently to retry periodically.
 
-If your Currents integration starts returning 400 errors (such as 401 or 403), the integration will go into a bad credentials state, which will trigger our system to send you a notification email and automatically extend the retention period to at least seven days.
+If your Currents integration starts returning `400` errors (such as `401` or `403`), the integration will go into a bad credentials state, which will trigger our system to send you a notification email and automatically extend the retention period to at least seven days.
 
 {% alert important %}
 If our retry mechanism fails to deliver events to their endpoint for more than 24 hours, there will be data loss.
@@ -351,7 +351,7 @@ If our retry mechanism fails to deliver events to their endpoint for more than 2
 
 ### Recongized HTTP status codes
 
-The following HTTP status codes will be recognized by our connector client. Any HTTP error code not listed will be treated as an HTTP 5XX error.
+Our connector client will recognize the following HTTP status codes. Any HTTP error code not listed will be treated as an HTTP `5XX` error.
 
 - **2XX** — Success
   - Event data will not be re-sent.<br><br>
