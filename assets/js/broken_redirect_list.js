@@ -416,6 +416,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/']
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/'] = '/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/';
 
 validurls['/docs/help/best_practices/client_integration_gallery/'] = '/customers';
+validurls['/docs/user_guide/message_building_by_channel/email/best_practices/sanitization/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/';
 validurls['/docs/help/best_practices/email/'] = '/docs/message_building_by_channel/email/best_practices';
 validurls['/docs/help/best_practices/email/use_cases/'] = '/docs/message_building_by_channel/email/#email-use-cases';
 validurls['/docs/help/best_practices/email/technical_guidelines_and_tips/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#technical-guidelines';
