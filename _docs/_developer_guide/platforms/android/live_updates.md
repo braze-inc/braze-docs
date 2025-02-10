@@ -1,35 +1,35 @@
 ---
-nav_title: Live Activities
-article_title: Live Activities for the Android Braze SDK
+nav_title: Live Updates
+article_title: Emulating Live Updates in the Android Braze SDK
 platform: Android
 page_order: 6
-description: "Learn how to implement Live Activities for the Android Braze SDK."
+description: "Learn how to emulate Live Updates in the Android Braze SDK."
 
 ---
 
-# Live Activities
+# Live Updates
 
-> Learn how to implement Live Activities for the Android Braze SDK. Live Activities are interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
-
-{% alert note %}
-At this time, Live Activities are not officially supported for Android. However, this guide will show you how to emulate a similar behavior to our [iOS Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities).
-{% endalert %}
+> Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html), this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/platforms/swift/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
 
 ## About `IBrazeNotificationFactory`
 
 You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed. By extending `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass a payload containing custom key-value pairs sent through the Braze dashboard or REST API.
 
-## Implementing a Live Activity
+## Emulating a Live Update
 
-In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Activities in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
+{% alert important %}
+Live Updates won't be officially available until [Android 16](https://android-developers.googleblog.com/2025/01/first-beta-android16.html). The following section only shows you how to emulate their general behavior.
+{% endalert %}
 
-![The Live Activity that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Updates in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
+
+![The Live Update that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ### Step 1: Add a custom layout
 
-You can add one or more custom Live Activity layouts to your project. These are helpful for handling how notifications are displayed when collapsed or expanded. Your directory structure should be similar to the following:
+You can add one or more custom Live Update layouts to your project. These are helpful for handling how notifications are displayed when collapsed or expanded. Your directory structure should be similar to the following:
 
 ```plaintext
 .
@@ -40,7 +40,7 @@ You can add one or more custom Live Activity layouts to your project. These are 
         └── liveupdate_expanded.xml
 ```
 
-In each XML file, create a custom layout. Superb Owl created the following layouts for their collapsed and expanded Live Activities:
+In each XML file, create a custom layout. Superb Owl created the following layouts for their collapsed and expanded Live Updates:
 
 {% tabs local %}
 {% tab  Example: Collapsed layout %}
@@ -148,9 +148,9 @@ In each XML file, create a custom layout. Superb Owl created the following layou
 
 ### Step 2: Create a custom notification factory
 
-In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Activities are displayed.
+In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Updates are displayed.
 
-In the following example, Superb Owl created a custom notification factory to display a Live Activity for on-going matches. In the [next step](#step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
+In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
 {% details Show the sample code %}
 ```kotlin
@@ -220,9 +220,9 @@ class MyCustomNotificationFactory : BrazeNotificationFactory() {
 
 ### Step 3: Map custom data
 
-In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Activities are displayed.
+In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Updates are displayed.
 
-Superb Owl created the following method to map each team's name and logo to expanded Live Activities:
+Superb Owl created the following method to map each team's name and logo to expanded Live Updates:
 
 ```kotlin
 class CustomNotificationFactory : BrazeNotificationFactory() {
@@ -311,4 +311,4 @@ While curl commands are helpful for testing, we recommend handling this call in 
 
 ### Step 6: Update the activity
 
-To update the existing Live Activity with new data, modify the relevant key-value pairs assigned to `messages.extra`, then use the same `notification_id` and call the `/messages/send` endpoint again.
+To update the existing Live Update with new data, modify the relevant key-value pairs assigned to `messages.extra`, then use the same `notification_id` and call the `/messages/send` endpoint again.
