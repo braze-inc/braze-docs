@@ -30,7 +30,7 @@ There are two ways to set context properties:
 
 ## Creating a Context step
 
-To create a Context step, add add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Context**.
+To create a Context step, add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Context**.
 
 ### Defining context properties
 
@@ -63,7 +63,7 @@ Let's say we want to remind our customers to purchase toothpaste 30 days from no
 
 ![The "product_reminder_interval" and its value.][2]
 
-Next, because we want to remind our customers 30 days from now, we'll select Until a specific day as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context property.
+Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context property.
 
 ![Example of using context properties with a Delay step to delay users based on the "product_reminder_interval".][3]
 
