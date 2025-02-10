@@ -75,7 +75,7 @@ If available, the user profile also displays a timestamp for when the user's sub
 There are two ways you can check a user's email subscription state with Braze:
 
 1. **REST API export:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page, then select the **Engagement** tab to view and manually update a user's subscription state. 
+2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state. 
 
 When a user updates their email address, their subscription state will be set to subscribed, unless the updated email address already exists elsewhere in a Braze workspace.
 
@@ -98,7 +98,7 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), this page i
 {: start="2"}
 2. Select **Create email subscription group**. 
 3. Give your subscription group a name and description.
-4. Slick **Save**. 
+4. Select **Save**. 
 
 All subscription groups are automatically added to your preference center.
 
