@@ -21,6 +21,8 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 Each Context step is composed of a property name and associated data type, or context properties (previously referred to as Canvas entry properties). These properties will follow a user through a Canvas. These properties can be accessed using the Liquid `canvas_properties`.
 
+![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+
 There are two ways to set context properties:
 
 - **At Canvas entry:** Properties of events or API calls that trigger a user's entry into a Canvas are stored as context properties.
@@ -64,3 +66,6 @@ Let's say we want to remind our customers to purchase toothpaste 30 days from no
 Next, because we want to remind our customers 30 days from now, we'll select Until a specific day as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context property.
 
 ![Example of using context properties with a Delay step to delay users based on the "product_reminder_interval".]{% image_buster /assets/img/context_step2.png %}
+
+
+[1]: {% image_buster /assets/img/context_step3.png %}
