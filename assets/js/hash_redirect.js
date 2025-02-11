@@ -11,7 +11,8 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
     }
 
     var hashes = val_urls.split('#');
-    var returl = hashes[0] + redirect;
+    var redirect_params = ((hashes[0].indexOf('?') > -1 ) ? '&' : '?') + redirect;
+    var returl = hashes[0] + redirect_params;
     if (hashes[1]) {
       returl += '#' + hashes[1];
     }
@@ -28,9 +29,9 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
       redirected_count++;
       urlhash = urlhash.replace('#','')
       query_params.set('redirected',redirected_count );
-      var redirected  = ((urlsearch.indexOf('?') > -1 ) ? '?' : '&') + query_params.toString();
+      var redirected  = query_params.toString();
       if (validurls[urlhash] ) {
-        window.location  =  redirecturl(urlhash,urlhash,redirected);
+        window.location = redirecturl(urlhash,urlhash,redirected);
       }
       else {
 
