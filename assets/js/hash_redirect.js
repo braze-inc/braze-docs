@@ -35,7 +35,7 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
       redirected_count++;
       urlhash = urlhash.replace('#','')
       query_params.set('redirected',redirected_count );
-      var redirected  = '?' + query_params.toString();
+      var redirected  = ((urlsearch.indexOf('?') > -1 ) ? '?' : '&') + query_params.toString();
       if (validurls[urlhash] ) {
         window.location  =  redirecturl(urlhash,urlhash,redirected);
       }

@@ -81,7 +81,8 @@ if (site_language && (site_language != 'en')){
   if (redirected_count < max_redirects) {
     redirected_count++
     query_params.set('redirected',redirected_count );
-    var redirected  = '?' + query_params.toString();
+
+    var redirected  = ((urlsearch.indexOf('?') > -1 ) ? '?' : '&') + query_params.toString();
     if (validurls[urlpath.toLowerCase() + '/' + urlhash] ) {
       return location.href = redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
     }
