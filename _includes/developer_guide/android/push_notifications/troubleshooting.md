@@ -74,7 +74,7 @@ If `com_braze_handle_push_deep_links_automatically` is set to its default of `fa
 
 ### Push notifications bounced
 
-If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
+If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/#utilizing-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
 
 #### Error: MismatchSenderID
 

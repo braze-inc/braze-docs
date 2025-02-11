@@ -272,7 +272,7 @@ See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoin
 
 #### What platforms support Live Activities?
 
-Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites) for managing Live Activities through the Braze Swift SDK.
+Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) for managing Live Activities through the Braze Swift SDK.
 
 #### Do React Native apps support Live Activities?
 
