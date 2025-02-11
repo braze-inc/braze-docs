@@ -13,11 +13,13 @@ tool:
 
 > When you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. Re-eligibility means users can enter the campaign or Canvas multiple times based on the trigger.
 
+## How it works
+
 By default, Braze sends a message to a user only once, even if they re-qualify multiple times—as re-eligibility needs to be turned on separately.
 
 If you turn on re-eligibility, you override this default behavior and allow qualified members to receive messages again after they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
-## Campaigns
+### For campaigns
 
 To turn on re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
@@ -25,7 +27,7 @@ In the case of triggered campaigns with re-eligibility turned on, users who [did
 
 Additionally, if you're trying to send a message immediately with a re-eligibility of zero minutes, we'll always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
-## Canvas
+### For Canvas
 
 To turn on re-eligibility for a Canvas, select **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
@@ -58,7 +60,7 @@ If the campaign is set to send daily at 8 am with re-eligibility of 1 day and th
 
 ## Multivariate testing
 
-With regards to multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:
+For multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:
 
 - When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
 - If the variant percentages change, users may be redistributed to other variants.

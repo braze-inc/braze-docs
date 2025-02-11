@@ -9,6 +9,6 @@ tool:
     - Canvas
 ---
 
-# Scheduling your campaign or Canvas
+# Scheduling your message
 
 > 

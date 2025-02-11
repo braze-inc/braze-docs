@@ -13,9 +13,11 @@ tool:
 
 > You can duplicate pre-existing campaigns and Canvases to continually iterate and build off your successful strategies. Duplicating campaigns and Canvases helps minimize the time you would spend reconfiguring delivery details and audience segments.
 
+## How it works
+
 After you duplicate a campaign or Canvas, the new message will be automatically titled "Copy of [Original Name]" and you'll be brought to its editing page. These duplicates will remain as drafts until you edit and launch them.
 
-## For campaigns
+### For campaigns
 
 To duplicate a campaign, do the following:
 
@@ -23,7 +25,7 @@ To duplicate a campaign, do the following:
 2. Hover over the campaign and select <i class="fas fa-gear"></i> **More actions**.
 3. Select **Duplicate**. 
 
-## For Canvas
+### For Canvas
 
 To duplicate a Canvas, do the following:
 
