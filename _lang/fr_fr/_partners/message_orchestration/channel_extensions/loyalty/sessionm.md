@@ -13,7 +13,7 @@ search_tag: Partner
 
 ## Conditions préalables
 
-| Source | Condition | Descriptif |
+| Source | Condition | Description |
 | --- | --- | --- |
 | Braze | Une clé de l'API REST de Braze | Une clé API REST de Braze avec des autorisations `trigger_send`. Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
 | Braze | Un endpoint REST Braze | L'URL de votre endpoint REST. Votre endpoint dépendra de l'URL de Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
@@ -43,13 +43,13 @@ Les cas d'utilisation suivants illustrent quelques façons de tirer parti de l'i
 
 ## Intégration de SessionM avec Braze
 
-### Étape 1 : Créer un segment en Braze
+### Étape 1 : Créer un segment en Braze
 
 Dans Braze, créez un segment d'utilisateurs à cibler avec des promotions et des offres de SessionM. 
 
 ![Générateur de segments avec le filtre "Attributs personnalisés" sélectionné.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
-### Étape 2 : Importer des segments Braze dans SessionM
+### Étape 2 : Importer des segments Braze dans SessionM
 
 #### Option 1 : Exporter vers l'endpoint Tag de SessionM (recommandé)
 
@@ -107,7 +107,7 @@ L'intégration de SessionM avec Braze permet d'extraire en temps réel les donn�
 
 L'exemple suivant montre l'utilisation du contenu connecté pour intégrer les données du portefeuille d'offres dans un message. Cependant, le contenu connecté peut être utilisé avec n'importe quel endpoint Connect de SessionM. 
 
-### Étape 1 : Offre d'émission dans la SessionM
+### Étape 1 : Offre d'émission dans la SessionM
 
 SessionM émet des offres aux clients à partir de plusieurs leviers internes différents qui peuvent être configurés. Après avoir été émises, les offres sont placées dans un état que SessionM appelle le "portefeuille d'offres".
 
@@ -115,7 +115,7 @@ Le client doit effectuer l'action requise ou répondre au ciblage et reçoit l'o
 
 SessionM ajoute ensuite l'offre au portefeuille du client dans l'état émis.
 
-### Étape 2 : Appeler l'API du portefeuille de l'offre SessionM
+### Étape 2 : Appeler l'API du portefeuille de l'offre SessionM
 
 Dans la campagne ou l'étape du canvas avec les offres de SessionM, utilisez le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) pour faire un appel API au [endpoint de SessionM `get_user_offers` ](https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers/).
 
@@ -142,7 +142,7 @@ Dans le corps de la demande, `culture` est remplacé par défaut par `en-US`, ma
 ```
 {% endraw %}
 
-### Étape 3 : Remplir le portefeuille d'offres à l'envoi de messages de Braze
+### Étape 3 : Remplir le portefeuille d'offres à l'envoi de messages de Braze
 
 Lorsqu'une demande est adressée à l'endpoint, SessionM renvoie la liste complète des offres dans l'état émis, ainsi que les détails complets de chaque offre. Voici un exemple de réponse renvoyée :
 
@@ -187,7 +187,7 @@ Lorsqu'une demande est adressée à l'endpoint, SessionM renvoie la liste compl�
 ```
 {% endraw %}
 
-En utilisant la notation par points liquides, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}`{% endraw %}, qui renvoie `100`.
+En utilisant la notation par points Liquid, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}`{% endraw %}, qui renvoie `100`.
 
 {% alert note %}
 Il s'agit d'une API individuelle. Si vous avez l'intention d'envoyer un lot de plus de 500 utilisateurs, contactez votre équipe de compte SessionM pour savoir comment incorporer les données en vrac dans l'intégration.
@@ -197,7 +197,7 @@ Il s'agit d'une API individuelle. Si vous avez l'intention d'envoyer un lot de p
 
 L'intégration entre SessionM et Braze permet aux données du profil de l'utilisateur, aux détails de l'offre et aux soldes de points d'être dynamiquement intégrés dans les messages et envoyés en temps réel au client au point d'action.
 
-### Étape 1 : L'équipe de réception/distribution de SessionM configure les modèles
+### Étape 1 : L'équipe de réception/distribution de SessionM configure les modèles
 
 Collaborez avec votre équipe de réception/distribution de SessionM pour développer des modèles à utiliser dans vos envois de messages déclenchés. SessionM insérera les données du profil de l'utilisateur, les détails de l'offre et les soldes de points dans le message et les déclenchera dans Braze pour un envoi de messages personnalisés en temps réel.
 
@@ -221,7 +221,7 @@ Des champs supplémentaires peuvent être configurés en fonction des besoins sp
 
 Les champs supplémentaires sont envoyés à Braze comme `trigger_properties` pour la personnalisation du message. 
 
-### Étape 2 : Créer une campagne ou un canvas de Braze
+### Étape 2 : Créer une campagne ou un canvas de Braze
 
 Créez dans Braze une campagne ou un canvas déclenché par l'API qui sera déclenché par SessionM. Si des champs supplémentaires ont été configurés, tels que `offer_id` ou `offer title`, utilisez Liquid (tel que {% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) pour ajouter les champs personnalisés dans votre message.
 
@@ -233,7 +233,7 @@ Dans l'onglet **Réception/distribution de la planification**, notez l'ID de la 
 
 Finalisez les détails de votre campagne ou de votre canvas et sélectionnez **Lancer**. 
 
-### Étape 3 : Créer une campagne de promotion ou d'envoi de messages pour la SessionM
+### Étape 3 : Créer une campagne de promotion ou d'envoi de messages pour la SessionM
 
 Ensuite, créez votre campagne dans SessionM.
 

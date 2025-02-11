@@ -99,7 +99,7 @@ Esta seção descreve as principais diferenças entre a criação de cartões no
   <tr>
     <td class="leftHeader">Análise de dados</td>
     <td class="tg-0pky">O <em>envio de mensagens</em> refere-se ao número de cartões criados e disponíveis para serem vistos. Isso não conta se os usuários visualizaram o cartão.</td>
-    <td class="tg-0pky">O <em>envio de mensagens</em> refere-se ao número de cartões exibidos aos usuários. <br><br>Embora os usuários alcançáveis e as impressões não mudem, é de se esperar uma diminuição no volume de envio<em>(mensagens enviadas</em>) quando um cartão é criado na primeira impressão, em comparação com se o mesmo cartão fosse criado no lançamento da campanha ou na etapa do Canva.</td>
+    <td class="tg-0pky">O <em>envio de mensagens</em> refere-se ao número de cartões enviados a um usuário após o início de uma sessão. No Canva, os usuários que entrarem na etapa sem iniciar uma sessão não terão um cartão enviado, e é por isso que essa métrica pode não estar alinhada com o número de usuários que entram em uma etapa.<br><br>Embora os usuários alcançáveis e as impressões não mudem, é de se esperar uma diminuição no volume de envio<em>(mensagens enviadas</em>) quando um cartão é criado na primeira impressão, em comparação com se o mesmo cartão fosse criado no lançamento da campanha ou na etapa do Canva.</td>
   </tr>
   <tr>
     <td class="leftHeader">Tempo de processamento</td>

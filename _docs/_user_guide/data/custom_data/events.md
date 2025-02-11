@@ -131,7 +131,7 @@ You might prefer to use custom events to track purchases if you need to capture 
 
 #### Use case 1
 
-Let's say you have an ecommerce app, and you want to track the purchase itself and the product category. The standard purchase event in Braze does not capture this level of detail, so you could use a custom event instead.
+Let's say you have an eCommerce app, and you want to track the purchase itself and the product category. The standard purchase event in Braze does not capture this level of detail, so you could use a custom event instead.
 
 Here's an example of how you might do this in an iOS app using Swift:
 

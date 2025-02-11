@@ -71,9 +71,9 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 | エンゲージメントカテゴリー | 含有 |
 | --- | --- |
-| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループsは、これら3つのチャネルsに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプション s およびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
+| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
 | 受信したキャンペーン | 受信したキャンペーンは、ユーザーがキャンペーンを受け取ったとき、またはユーザーとのインタラクションデータを最初に検出したときにマークされます。一覧からキャンペーンを選択して表示します。 |
-| セグメント | このユーザーはセグメントに含まれています。一覧からSegmentを選択して表示します。 |
+| セグメント | このユーザーはセグメントに含まれています。一覧からセグメントを選択して表示します。 |
 | コミュニケーション統計 | このユーザーが各チャネルから御社からのメッセージを最後に受信した時期。 |
 | アトリビューションのインストール | ユーザーがアプリをインストールした方法と日時に関する情報。[ユーザーインストールの理解]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)について詳しく説明します。 |
 | その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)。 |

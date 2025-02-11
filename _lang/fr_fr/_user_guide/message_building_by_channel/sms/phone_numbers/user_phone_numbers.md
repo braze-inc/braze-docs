@@ -13,7 +13,7 @@ channel:
 
 > Le présent article abordera différents sujets autour des numéros de téléphone de vos utilisateurs ou clients. Si vous cherchez des informations sur vos propres numéros, consultez notre article sur l' [envoi de numéros de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
 
-Les numéros de téléphone sont affichés dans le profil utilisateur en format local, mais ne seront pas au format que vous utilisez pour importer le numéro (`(724) 123 4567`).
+Les numéros de téléphone apparaissent dans le profil utilisateur sous la forme d'une chaîne de caractères. Si vous importez un nombre qui contient des non chiffres (tels que `,`, `-`, `(`, ou autres), les non chiffres seront supprimés. Par exemple, l'importation de `+1 (724) 123-4567` s'affichera sous la forme `17241234567`.
 
 ## Importation de numéros de téléphone
 

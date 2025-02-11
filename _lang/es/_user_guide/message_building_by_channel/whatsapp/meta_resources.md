@@ -21,7 +21,34 @@ Revisa la siguiente documentación de Meta para obtener orientación sobre nombr
 - [Límites de mensajería](https://developers.facebook.com/docs/whatsapp/messaging-limits)
 - [Puntuación de calidad](https://www.facebook.com/business/help/896873687365001)
 
-## Actualizaciones de productos WhatsApp
+## Actualizaciones de productos de WhatsApp
+
+### Enero de 2025: WhatsApp pausa el envío de mensajes de marketing a usuarios de EE.UU. a partir del 1 de abril
+*Última actualización Enero 2025*
+
+WhatsApp interrumpirá el envío de mensajes de marketing a usuarios estadounidenses (personas con números de teléfono estadounidenses) a partir del 1 de abril de 2025. [Los mensajes de utilidad, servicio, autenticación](https://developers.facebook.com/docs/whatsapp/pricing/) y [respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) seguirán estando permitidos en EEUU. 
+
+El envío de mensajes de marketing (además de todos los demás tipos de mensajes) a todos los demás países o regiones sigue estando permitido y no se verá afectado.
+
+Meta nos ha informado de que están realizando esta actualización para mantener la salud del ecosistema de WhatsApp en EE.UU., donde WhatsApp está creciendo rápidamente, pero aún se encuentra en una fase inicial (por ejemplo, los mensajes de mensajería tienen menos interacción que en otras regiones). Seguirán evaluando cuándo el mercado estadounidense está preparado para reanudar los mensajes de mensajería.
+
+La entrega de mensajes de marketing a números de teléfono con códigos de área de EE.UU. será rechazada por WhatsApp y devolverá un código de error de 131049. 
+
+### Noviembre de 2024: Cambios en la política de adhesión voluntaria de WhatsApp
+*Última actualización Enero 2025*
+
+Meta ha actualizado recientemente su [política de adhesión voluntaria](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). En lugar de requerir el consentimiento específico del canal, ahora las empresas pueden enviar mensajes a los usuarios de la plataforma si:
+
+1. La persona ha dado su número de teléfono.
+2. La persona dio su permiso de adhesión voluntaria para mensajería general, no sólo para WhatsApp. 
+
+Las empresas siguen teniendo que cumplir todas las leyes locales y seguir los siguientes requisitos al obtener la adhesión voluntaria:
+
+- Las empresas deben indicar claramente que una persona está dando su adhesión voluntaria para recibir comunicaciones de la empresa.
+- Las empresas deben indicar claramente el nombre de la empresa de la que una persona está optando por recibir mensajes
+- Las empresas deben cumplir la legislación aplicable
+
+Aunque WhatsApp ha flexibilizado su política, Braze sigue recomendando recopilar adhesiones voluntarias específicas para el canal de WhatsApp con el fin de fomentar la mejor experiencia del cliente y las mejores tasas de interacción. Como siempre, consulta con tu equipo jurídico para ver qué tiene sentido para tu marca.
 
 ### Noviembre de 2024: Actualizaciones del límite de la plantilla de marketing por usuario para los habitantes de EE.UU., antes de la temporada de vacaciones
 *Última actualización diciembre 2024*

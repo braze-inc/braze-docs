@@ -51,6 +51,10 @@ Les options suivantes sont disponibles :
 
 Quelle que soit l'option choisie, le compte à rebours de la date d'expiration de la carte de contenu commencera lorsque l'utilisateur entrera dans l'étape du canvas.
 
+{% alert tip %}
+Si vous souhaitez que les utilisateurs anonymes voient une carte de contenu lors de leur toute première session, utilisez une campagne au lieu d'un canvas. En effet, lorsqu'un utilisateur anonyme entre dans un canvas, sa session a déjà commencé. Il n'obtiendra donc pas la carte de contenu tant qu'il n'aura pas démarré une nouvelle session.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -95,7 +99,7 @@ Cette section décrit les principales différences entre la création de cartes 
   <tr>
     <td class="leftHeader">Analyse</td>
     <td class="tg-0pky"><em>Messages envoyés</em> fait référence au nombre de cartes créées et disponibles pour être consultées. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.</td>
-    <td class="tg-0pky"><em>Messages envoyés</em> fait référence au nombre de cartes affichées aux utilisateurs. <br><br>Alors que vos utilisateurs atteignables et vos impressions ne changeront pas, vous pouvez vous attendre à une diminution du volume d'envoi<em>(messages envoyés</em>) lorsqu'une carte est créée lors de la première impression par rapport à la même carte créée lors du lancement de la campagne ou de l'entrée dans l'étape du canvas.</td>
+    <td class="tg-0pky">Les <em>messages envoyés</em> correspondent au nombre de cartes envoyées à un utilisateur après le démarrage d'une session. Dans Canvas, les utilisateurs qui entrent dans l'étape sans démarrer de session n'auront pas de carte envoyée, c'est pourquoi cette mesure peut ne pas correspondre au nombre d'utilisateurs entrant dans une étape.<br><br>Alors que vos utilisateurs atteignables et vos impressions ne changeront pas, vous pouvez vous attendre à une diminution du volume d'envoi<em>(messages envoyés</em>) lorsqu'une carte est créée lors de la première impression par rapport à la même carte créée lors du lancement de la campagne ou de l'entrée dans l'étape du canvas.</td>
   </tr>
   <tr>
     <td class="leftHeader">Temps de traitement</td>

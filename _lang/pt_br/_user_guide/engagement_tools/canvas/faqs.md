@@ -32,11 +32,15 @@ Quando você interrompe um Canva, aplica-se o seguinte:
 - Nenhuma outra mensagem será enviada, independentemente de onde um usuário esteja no fluxo.
 - **Exceção:** As telas com e-mails não serão interrompidas imediatamente. Depois que as solicitações de envio acessam o SendGrid, não há nada que possamos fazer para impedir que elas sejam entregues ao usuário.
 
+### Devo construir um canva ou canvas separados por ciclo de vida do usuário?
+
+Dependendo do que você está procurando realizar com seu canva, pode ser necessário adotar diferentes abordagens em como você constrói a jornada do usuário. A flexibilidade do canva permite que você mapeie jornadas de usuários para qualquer estágio do ciclo de vida do usuário. Confira nossos [modelos de canva Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para vários exemplos de abordagens simplificadas para criar jornadas de usuário eficazes.
+
 #### Mensagens no app no Canva
 
-Envio de mensagens no app no início da próxima sessão. Isso significa que, se o usuário entrar na etapa do Canva antes de o Canvas ser interrompido, ele ainda receberá a mensagem no app no início da próxima sessão, desde que a mensagem no app ainda não tenha expirado.
+Mensagens no app são enviadas na próxima sessão. Isso significa que, se o usuário entrar na etapa do Canva antes de o Canvas ser interrompido, ele ainda receberá a mensagem no app no início da próxima sessão, desde que a mensagem no app ainda não tenha expirado.
 
-É possível que um usuário inicie uma sessão antes que o canva seja interrompido, mas não seja exibida a mensagem no app imediatamente. Isso pode ocorrer se a mensagem no app for acionada por um evento personalizado ou se estiver atrasada. Isso significa que é possível para um usuário registrar uma impressão de mensagem no app e "receber" a mensagem no app após o canva ser interrompido. No entanto, o usuário teria que ter iniciado a sessão antes que o canva fosse interrompido, mas **depois** eles receberam a etapa do canva.
+É possível que um usuário inicie uma sessão antes que o canva seja interrompido, mas não seja exibida a mensagem no app imediatamente. Isso pode ocorrer se a mensagem no app for acionada por um evento personalizado ou se estiver atrasada. Isso significa que é possível para um usuário registrar uma impressão de mensagem no app e "receber" a mensagem no app após o canva ser interrompido. No entanto, o usuário teria que ter iniciado a sessão antes que o canva fosse interrompido, mas **depois** que eles receberam a etapa do canva.
 
 {% alert note %}
 A interrupção de um Canva não fará com que os usuários que estão esperando para receber mensagens saiam da jornada do usuário. Se você reativar o Canva e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
@@ -85,7 +89,7 @@ Há uma etapa do Canva com o Horário de silêncio ativado:
 
 ### Qual é a diferença entre os diferentes tipos de taxa de conversão?
 
-- O total de conversões do Canva reflete quantos usuários únicos concluíram um evento de conversão, não quantas conversões cada um deles concluiu. 
+- Total canva conversões refletem quantos usuários únicos completaram um evento de conversão, não quantas conversões cada um completou. 
 - A taxa de conversão da variante ou o bloco de resumo no início de uma Canva reflete todas as conversões realizadas pelos usuários nessa jornada, independentemente de terem recebido ou não uma mensagem, como um total agregado. 
 - A taxa de conversão da etapa reflete quantos indivíduos receberam essa etapa da mensagem e concluíram qualquer um dos eventos de conversão descritos.
 
@@ -99,7 +103,7 @@ Para visualizar a análise de dados de um componente do Canvas, acesse seu Canva
 
 ### Ao analisar o número de usuários únicos, a análise de dados do Canva ou o segmentador é mais preciso?
 
-O segmentador é uma estatística mais precisa para dados de usuários exclusivos em comparação com as estatísticas do Canva ou da campanha. Isso ocorre porque as estatísticas de canva e campanha são números que a Braze incrementa quando algo acontece—o que significa que há variáveis que podem resultar nesse número ser diferente do segmentador. Por exemplo, os usuários podem converter mais de uma vez em um Canva ou em uma campanha.
+O segmentador é uma estatística mais precisa para dados de usuários exclusivos em comparação com as estatísticas do Canva ou da campanha. Isso ocorre porque canva e as estatísticas de campanha são números que Braze incrementa quando algo acontece—o que significa que existem variáveis que podem resultar nesse número sendo diferente daquele do segmentador. Por exemplo, os usuários podem converter mais de uma vez em um Canva ou em uma campanha.
 
 ### Por que o número de usuários que entram em um Canva não corresponde ao número esperado?
 
@@ -131,11 +135,11 @@ O Canvas Flow é a experiência de edição aprimorada que simplifica a forma co
 
 Você pode [clonar seu Canvas para o Canvas Flow]({{site.baseurl}}/cloning_canvases/). Isso cria uma cópia de seu Canvas original no fluxo de trabalho do Canvas Flow.
 
-### O que acontecerá com minhas telas que criei usando o editor original?
+### O que acontecerá com os canvas que criei usando o editor original?
 
 Todas as suas canvas existentes e o editor de canvas original continuarão a existir e serão suportados pela Braze. Os clientes que optarem por participar do Canvas Flow para acesso antecipado terão a opção de criar um Canvas usando o fluxo de trabalho original ou do Flow.
 
-### Há um limite para o número de etapas que posso incluir?
+### Há um limite para quantos passos posso incluir?
 
 Sim. Um canva criado com o Canvas Flow pode conter até 200 etapas.
 
@@ -191,4 +195,4 @@ Para segmentos e filtros, o componente Canvas Flow Message tem um novo recurso c
 
 ##### Configuração de programação "In" ou "On the next"
 
-Os eventos de exceção no Canvas Flow são criados usando jornadas de ação. As jornadas de ação somente suportam "após uma janela de tempo X" e não "em um tempo X" ou "no próximo tempo X".
+Os eventos de exceção no Canvas Flow são criados usando jornadas de ação. As jornadas de ação suportam apenas "após uma janela de tempo X" e não "em X tempo" ou "na próxima vez X".

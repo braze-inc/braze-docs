@@ -373,7 +373,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 ##### Order completed {#order-completed}
 
-When you track an event with the name `Order Completed` using the format described in Segment's [Ecommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the Track Purchase Action.
 

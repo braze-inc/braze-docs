@@ -48,7 +48,7 @@ If you are interested in this integration, reach out to your Braze Account or cu
 To set Secure Data Sharing with your Braze account, follow these steps.
 
 1. Navigate to **Partner Integrations** > **Data Sharing** in the Braze dashboard.
-2. Enter your Snowflake account details. You can find your Snowflake account ID by executing `SELECT CURRENT_ACCOUNT()` in the destination account.
+2. Enter your Snowflake account details and locator. To get your account locator, run `SELECT CURRENT_ACCOUNT()` in the destination account.
 3. If you're using a CRR share, specify the cloud provider and region.
 4. Select **Create Datashare**.
 
@@ -60,7 +60,7 @@ In the context of data sharing, Braze is a [data provider](https://docs.snowflak
 
 ## Usage and visualization
 
-Once the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
+After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
 
 Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Create complex reports
@@ -125,7 +125,7 @@ Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benc
 
 The initial industries include:
 - Delivery services
-- Ecommerce
+- eCommerce
 - Education
 - Entertainment
 - Finance

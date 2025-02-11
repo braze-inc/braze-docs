@@ -3,7 +3,7 @@ nav_title: Prévia das jornadas do usuário
 article_title: Prévia das jornadas do usuário
 page_order: 0.3
 alias: /preview_user_paths/
-description: "Este artigo de referência aborda como fazer a prévia das jornadas do usuário nos canvas."
+description: "Esta página aborda como é possível fazer a prévia das jornadas do usuário no Canva."
 Tool:
   - Canvas
 ---
@@ -62,7 +62,7 @@ Os usuários de teste entrarão na prévia mesmo que não sejam elegíveis na vi
 - Se você testar uma jornada de ação com ações que correspondam a critérios de saída (incluindo propriedades de eventos), os critérios de saída serão disparados e a execução do teste será encerrada.
 - Se você testar uma etapa de Mensagem que corresponda aos critérios de saída, os critérios de saída serão disparados e a execução do teste será encerrada.
 - Nesse momento, não é possível selecionar um evento ou uma propriedade específica em uma jornada de ação para disparar os critérios de saída (somente a jornada como um todo). Se um usuário puder atender a vários critérios de saída, o primeiro que for processado e que ele atender será mostrado como resultado.
-- Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas não são aplicados com base na entrada do Canvas. Elas não afetarão os resultados das etapas subsequentes. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow.
+- Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas são aplicados com base na entrada do Canvas. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow. Por exemplo, durante os testes, quando um atributo personalizado é usado como um disparador do Canvas, os critérios do disparador são aplicados à prévia do usuário **como se** ele tivesse disparado a alteração do atributo personalizado. 
 
 ## Caminhos de experimento e variantes do Canva
 
@@ -72,9 +72,9 @@ Os usuários de teste entrarão na prévia mesmo que não sejam elegíveis na vi
 
 ## Envios de teste
 
-É possível fazer a aceitação do envio de mensagens de teste para um grupo de teste interno ou para um usuário individual à medida que a execução do teste for preenchida. Isso significa que apenas as mensagens que o usuário encontrar ao longo da jornada de teste serão enviadas. Os destinatários receberão mensagens com suas próprias atribuições por padrão, mas você pode substituí-las pelas atribuições do usuário teste.
+É possível fazer a aceitação do envio de mensagens de teste para um grupo de teste interno ou para um usuário individual à medida que a execução do teste for preenchida. Isso significa que apenas as mensagens que o usuário encontrar ao longo da jornada de teste serão enviadas. Os destinatários receberão mensagens com suas atribuições por padrão, mas você pode substituí-las pelas atribuições do usuário teste.
 
-Para enviar todas as mensagens de teste em uma tela de uma só vez, independentemente da jornada e sem prévia da jornada, você pode selecionar **Enviar todas as mensagens de teste** na guia **Envios de teste**.
+Para enviar todas as mensagens de teste em uma tela de uma só vez, independentemente da jornada, e sem prévia da jornada, você pode selecionar **Enviar todas as mensagens de teste** na guia **Envios de teste**.
 
 ## Capacidade de resposta
 
@@ -86,11 +86,13 @@ Consulte [os Critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/
 
 ## Conteúdo conectado
 
-O Connected Content será executado se estiver incluído no Canva. Se o seu Canvas incluir Conteúdo Conectado, remova o Conteúdo Conectado configurado para alterar perfis de usuários ou dados de usuários que são referenciados em outros Canvas ou campanhas. Ou pode optar por não fazer uma prévia da jornada do usuário.
+O Connected Content será executado se estiver incluído no Canva. Isso significa que, se você testar um Canvas que tenha chamadas de Connected Content ou blocos de conteúdo que contenham Connected Content, o Canvas poderá enviar as chamadas de Connected Content, o que modificaria os dados referenciados em outras campanhas ou Canvas.
+
+Ao fazer a prévia das jornadas do usuário, considere a remoção do Conteúdo conectado que altera os perfis de usuário ou os dados referenciados em outras Canvas ou campanhas.
 
 ## Webhooks
 
-Os webhooks serão executados quando as mensagens de teste forem enviadas, mas não durante a execução do teste. Semelhante ao Connected Content, considere a remoção de webhooks configurados para alterar perfis de usuários ou dados de usuários que são referenciados em outros Canvas ou campanhas.
+Os webhooks serão executados quando as mensagens de teste forem enviadas, mas não durante a execução do teste. Semelhante ao Connected Content, considere a remoção de webhooks que alteram perfis de usuários ou dados de usuários referenciados em outros Canvas ou campanhas.
 
 ## Caso de uso
 

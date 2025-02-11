@@ -147,7 +147,7 @@ Braze에서 비즈니스 개체를 만들고 관리하는 방법에는 카탈로
 
 사용자 프로필은 대부분의 인구통계학적 세분화, 트리거링 및 개인화를 지원하는 Braze의 주요 객체입니다. 사용자 프로필에는 속성(인구통계 데이터), 이벤트(행동 데이터) 또는 구매(트랜잭션 데이터)의 형태를 취하는 [사용자 지정 데이터를]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/) 포함하여 SDK 및 기타 소스에서 수집한 [기본 사용자 데이터가]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) 포함됩니다.
 
-### 2.1 단계: 영업 CRM ID를 Braze에 매핑
+### 2.1단계: 영업 CRM ID를 Braze에 매핑
 
 먼저, Braze와 선택한 CRM에 데이터를 공유할 수 있는 공통 식별자가 있는지 확인합니다. 다음 표를 사용하여 영업 CRM ID 필드를 Braze 사용자 개체에 다시 매핑하는 것이 좋습니다. 아래 표에는 Salesforce가 CRM 시스템으로 표시되어 있지만 이 작업은 모든 CRM에서 수행할 수 있습니다.
 

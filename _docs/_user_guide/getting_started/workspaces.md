@@ -18,7 +18,7 @@ Workspaces serve two key purposes:
 - **Separating distinct activities:** Workspaces also provide a means to keep distinct brands or activities separate. For instance, if you have multiple sub-brands with different user bases, it's beneficial to create separate workspaces for each.
 
 {% alert tip %} 
-This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or ecommerce sites that want separate workspaces for each region they operate in. 
+This approach is particularly useful for companies like mobile gaming firms that can manage individual workspaces for each of their games or eCommerce sites that want separate workspaces for each region they operate in. 
 {% endalert %}
 
 ## Planning workspaces
@@ -204,8 +204,8 @@ The following table describes the benefits and drawbacks of these two approaches
     <tr>
         <td>Duplicating content</td>
         <td>N/A</td>
-        <td>Cannot duplicate segments, campaigns, or Canvases across workspaces.</td>
-        <td>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
+        <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
+        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
         <td>N/A</td>
     </tr>
     <tr>

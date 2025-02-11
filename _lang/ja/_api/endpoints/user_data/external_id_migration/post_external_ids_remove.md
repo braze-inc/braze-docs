@@ -53,6 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## リクエスト例
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \
@@ -64,11 +65,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
   ]
 }'
 ```
+
 {% alert important %}
 削除できるのは非推奨 ID のみです。1次外部 ID を削除しようとするとエラーになります。
 {% endalert %}
 
-## 応答 
+## 応答
+
 この応答は、成功したすべての削除と、関連するエラーを伴って失敗した削除を確認します。`removal_errors` フィールドのエラーメッセージは、元のリクエストの配列のインデックスを参照する。
 
 ```

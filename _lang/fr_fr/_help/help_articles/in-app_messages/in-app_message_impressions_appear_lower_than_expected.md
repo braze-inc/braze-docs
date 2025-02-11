@@ -50,5 +50,5 @@ _Dernière mise à jour le 6 mai 2021_
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [10]: {% image_buster /assets/img_archive/trouble4.png %}
 [11]: {% image_buster /assets/img_archive/trouble5.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
+guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/ {{site.baseurl}}/developer_
+ [13]:{{site.baseurl}}guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/

@@ -8,7 +8,7 @@ description: "This reference article covers how to create catalogs that referenc
 
 # Creating a catalog
 
-> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
 Some common use cases for catalogs include:
 

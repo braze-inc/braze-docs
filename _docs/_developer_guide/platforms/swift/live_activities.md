@@ -1,15 +1,15 @@
 ---
 nav_title: Live Activities
-article_title: Live Activities for iOS
+article_title: Live Activities for the Swift Braze SDK
 platform: Swift
 page_order: 6
-description: "This article covers using Braze to manage your Live Activities tokens for the Swift SDK."
+description: "Learn how to implement Live Activities for the Swift Braze SDK."
 
 ---
 
 # Live Activities
 
-> Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
+> Learn how to implement Live Activities for the Swift Braze SDK. Live Activities are persistent, interactive notifications that are displayed directly on the lock screen, allowing users to get dynamic, realtime updates&#8212;without unlocking their device.
 
 ## About Live Activities
 

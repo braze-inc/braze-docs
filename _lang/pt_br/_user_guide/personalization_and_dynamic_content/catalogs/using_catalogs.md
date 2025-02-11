@@ -177,10 +177,6 @@ Atualmente, o Liquid não pode ser usado dentro de catálogos. Se a personaliza�
 
 Semelhante ao [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), você deve usar o sinalizador `:rerender` em uma tag Liquid para renderizar o conteúdo Liquid de um item de catálogo. Observe que o sinalizador `:rerender` tem apenas um nível de profundidade, o que significa que não se aplicará a nenhuma chamada de tag Liquid aninhada.
 
-{% alert important %}
-O modelo de itens de catálogo com Liquid está em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
-
 Se um item de catálogo contiver campos de perfil de usuário (dentro de uma tag de personalização do Liquid), esses valores deverão ser definidos no Liquid no início da mensagem e antes do modelo para que o Liquid seja renderizado corretamente. Se o sinalizador `:rerender` não for fornecido, ele renderizará o conteúdo bruto do Liquid.
 
 Por exemplo, se um catálogo chamado "Messages" tiver um item com este Liquid:

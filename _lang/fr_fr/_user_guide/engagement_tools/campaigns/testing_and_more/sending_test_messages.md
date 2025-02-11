@@ -116,9 +116,7 @@ Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour v
 {% endtab %}
 {% tab Fil d'actualité %}
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 L’envoi d’un test de carte de fil d’actualité nécessite de configurer un segment d’essai et d’envoyer ensuite une campagne de test.
 
@@ -225,7 +223,7 @@ Sinon, si vous enregistrez des ID utilisateur personnalisés, vous pouvez égale
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

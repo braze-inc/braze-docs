@@ -81,7 +81,9 @@ Vous pouvez modifier les paramètres et les informations suivants de Canvas apr�
 Après le lancement d'une toile :
 
 - Les événements de conversion ne peuvent pas être modifiés. 
-- Les [parcours audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) et les [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) ne peuvent pas être ajoutés ou supprimés à ces étapes et ne peuvent pas être réorganisés pour ajuster le classement. En guise de solution de contournement, modifiez le canvas actif et dupliquez l'étape, qui restera modifiable jusqu'à ce que vous lanciez le brouillon.
+- Les étapes suivantes ne peuvent pas être ajoutées ou supprimées, et ne peuvent pas être réordonnées pour ajuster le classement : [Les parcours d'audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) et les [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+  - **Solution 1 :** Créez un nouveau parcours d'audience, un nouveau parcours d'action ou un nouveau chemin d'expérience et reconfigurez les chemins vers cette nouvelle étape.
+  - **Solution 2 :** Dupliquez le canvas pour le modifier.
 
 ### Démarches individuelles
 
@@ -119,13 +121,18 @@ Si vous prévoyez d’apporter des modifications plus importantes entraînant la
 ### Suppression de variantes
 
 Lorsque des variantes sont supprimées d'un Canvas, il se produit ce qui suit :
+
 - Les étapes de la variante (y compris celles qui sont partagées par d'autres variantes) seront supprimées. 
 - Les analyses d'étapes et les analyses de haut niveau pour le canvas, telles que le _nombre total d'entrées_, le _nombre total de sorties_ et le _taux de conversion_, seront supprimées.
 - Les utilisateurs des variantes supprimées sont exclus des étapes et les messages suivants ne sont pas envoyés.
 
+### Propriétés d’entrées de Canvas
+
+Les propriétés d'entrée des canvas ne sont pas modélisées en étapes lors de l'envoi. Cela signifie que lorsque les propriétés d'entrée d'un canvas sont modifiées après le lancement d'un canvas, ces changements ne s'appliqueront qu'aux nouveaux utilisateurs qui entrent dans le canvas. Si votre Canvas permet aux utilisateurs d'entrer à nouveau dans le Canvas, tous les utilisateurs qui entrent à nouveau dans le Canvas seront déterminés par les propriétés d'entrée du Canvas mises à jour.
+
 ## Bonnes pratiques
 
-Consultez ces bonnes pratiques à garder en mémoire lorsque vous éditez ou ajoutez des éléments à votre Canvas après qu’il ait été lancé en utilisant Canvas Flow.
+Consultez ces bonnes pratiques à garder à l'esprit lorsque vous modifiez ou ajoutez des éléments à votre Canvas après son lancement.
 
 ### Étapes déconnectées
 

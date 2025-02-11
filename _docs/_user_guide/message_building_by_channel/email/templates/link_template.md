@@ -90,7 +90,7 @@ To access the **Link Management** tab in the updated HTML email editor, you must
 Link templates aren't applied to plain text. This means Currents may show clicks that don't include the parameters from the link templates as those clicks may come from the plain text version of the email.
 {% endalert %}
 
-As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added.
+As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added. If existing links within an email already have a link template added, newly added links will also have the link template added by default.
 
 ## Managing link templates
 

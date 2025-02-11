@@ -41,7 +41,7 @@ tool: Canvas
 3\. 설명을 업데이트하여 캔버스가 사용자의 피드백 제출을 장려하는 용도로 사용된다는 점을 명시합니다.
 4\. Canvas 홈 페이지에서 **피드백** 태그를 추가하여 필터링합니다.
 
-![캔버스의 새 이름과 설명입니다. 새 설명에는 다음과 같이 명시되어 있습니다: '곧 출시될 PWD3의 확장팩인 Liquid Mirage에 대한 관심을 측정하기 위한 구매 후 피드백 캔버스입니다.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
+![캔버스의 새 이름과 설명입니다. 새 설명에는 다음과 같이 명시되어 있습니다: '곧 출시될 PWD3 확장팩인 Liquid Mirage에 대한 관심을 측정하기 위한 구매 후 피드백 캔버스입니다.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
 ### 2단계: 전환 이벤트 할당
 
@@ -70,9 +70,9 @@ tool: Canvas
 
 ### 5단계: 전송 설정을 선택하세요
 
-기본 구독 설정을 유지하여 구독을 신청했거나 메시지 또는 알림 수신을 선택한 사용자에게만 전송합니다. 
+기본 구독 설정을 유지하여 구독을 신청했거나 메시지 또는 알림 수신에 동의한 사용자에게만 전송합니다. 
 
-전송에 신중을 기하기 위해 **조용한 시간 사용을** 선택하여 사용자의 시간대인 오후 11시부터 오전 10시 사이에는 피드백을 요청하지 않고 다음 가능한 시간에만 전송합니다.
+전송에 신중을 기하기 위해 **조용한 시간 사용을** 선택하여 사용자의 시간대인 오후 11시부터 오전 10시 사이에는 피드백을 요청하지 않고 다음 사용 가능한 시간에만 전송합니다.
 
 !['설정 보내기' 단계는 구독 또는 옵트인한 사용자를 대상으로 합니다. 콰이어트 아워가 켜져 있습니다.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
@@ -119,7 +119,7 @@ tool: Canvas
 
 다음으로 잠재적인 지원 사례를 트리거하도록 웹훅을 설정해 보겠습니다. 이는 사용자 피드백 분석과 함께 사용하면 특히 유용한 인사이트를 얻을 수 있습니다.
 
-**지원 사례 생성이라는** 이름의 메시지 단계에서는 구매에 불만족하고 환불을 원하는 사용자를 위한 웹훅을 작성하도록 템플릿을 업데이트합니다.
+**지원 사례 생성이라는** 이름의 메시지 단계에서는 구매에 불만족하여 환불을 원하는 사용자를 위한 웹훅을 작성하도록 템플릿을 업데이트합니다.
 
 ![프록시 워 3 구매에 대해 부정적인 감정을 가지고 환불을 원하는 고객을 위한 지원 사례를 생성하는 웹훅입니다.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
@@ -128,5 +128,5 @@ tool: Canvas
 캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 캔버스 **시작을** 선택하여 캔버스를 실행합니다. 이제 개인화된 사용자 여정으로 사용자를 세심하게 타겟팅하여 최근 프록시 워 3 구매를 기반으로 한 피드백 설문조사에 응답하도록 유도할 수 있습니다!
 
 {% alert tip %}
-캔버스를 시작하기 전과 후에 고려해야 할 사항은 출시 전후 [체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
+캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}

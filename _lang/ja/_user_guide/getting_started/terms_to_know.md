@@ -16,7 +16,7 @@ glossaries:
     description: "テストの一種で、1つまたは複数の変数を変更し、どの変更が最適かをテストする。<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing\">A/Bテストは</a>、ダッシュボードのキャンペーン内で行うことができる。"
   - name: アプリ・インスタンス
     description: ワークスペース内に集められたさまざまなサイトやアプリ。
-  - name: 合金
+  - name: Alloys
     description: "Alloys は Braze の<a href=\"https://www.braze.com/docs/partners/home/\">テクノロジーパートナー</a>です。"
   - name: 匿名ユーザー
     description: "SDK 経由でユーザープロファイルが認識されると、関連付けられた <a href=\"https://www.braze.com/docs/api/basics/#braze-user-id-explanation\">Braze ユーザー ID</a> で匿名ユーザープロファイルが作成されます。" 
@@ -71,7 +71,7 @@ glossaries:
   - name: 月間アクティブユーザー数 (MAU)
     description: 過去30日以内にセッションを行ったユーザー。
   - name: マルチチャンネル・メッセージング
-    description: "電子メール、ウェブプッシュ、モバイルプッシュ通知の組み合わせなど、さまざまな媒体でユーザーにメッセージを送る。<a href=\"https://www.braze.com/docs/developer_guide/platform_wide/getting_started/platform_overview/#multichannel-messaging\">メッセージングチャンネル</a>は、失われたユーザーを再びエンゲージし、アクティブユーザーを維持し、ブランドアンバサダーを活性化するために、協調して定期的に使用するのが最適です。"
+    description: "電子メール、ウェブプッシュ、モバイルプッシュ通知の組み合わせなど、さまざまな媒体でユーザーにメッセージを送る。<a href=\"https://www.braze.com/docs/developer_guide/getting_started/platform_overview/#multichannel-messaging\">メッセージングチャンネル</a>は、失われたユーザーを再びエンゲージし、アクティブユーザーを維持し、ブランドアンバサダーを活性化するために、協調して定期的に使用するのが最適です。"
   - name: 多変量テスト
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/\">多変量テストでは</a>、2つ以上のバージョンのメッセージを比較することで、複数の変数をテストし、どのバリアントが最もパフォーマンスが高いかを評価することができる。"
   - name: 新規ユーザー

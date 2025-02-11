@@ -151,11 +151,15 @@ Si vous souhaitez simplifier votre vue, cliquez sur <i class="fas fa-plus"></i> 
 
 #### Cartes thermiques
 
-Grâce aux cartes thermiques, vous pouvez connaître le succès des différents liens d'une même campagne d'e-mailing. Dans la section **Analyse/analytique des messages**, accédez au panneau **Performance des e-mails.**  Cliquez sur **Aperçu et carte thermique** pour afficher un aperçu de votre campagne e-mail et la carte thermique. Vous pouvez également cliquer sur le lien hypertexte dans le nom de la variante pour afficher la carte thermique.
+Grâce aux cartes thermiques, vous pouvez connaître le succès des différents liens d'une même campagne d'e-mailing. Dans la section **Analyse/analytique des messages**, accédez au panneau **Performance des e-mails.**  Sélectionnez **Aperçu et carte thermique** pour afficher un aperçu de votre campagne e-mail et la carte thermique. Vous pouvez également sélectionner le lien hypertexte dans le nom de la variante pour afficher la carte thermique.
 
-Dans cette vue, vous pouvez utiliser la bascule **Afficher la carte thermique** pour afficher une vue visuelle de votre e-mail qui montre la fréquence globale et l'emplacement/localisation des clics au cours de la durée de vie de la campagne. Dans le panneau **Tableau des liens par nombre total de clics**, vous pouvez afficher tous les liens de votre campagne e-mail et les trier par nombre total de clics. Cela peut fournir des informations supplémentaires sur les endroits où vos utilisateurs naviguent. Pour enregistrer une copie de la carte thermique à des fins de référence, cliquez sur le bouton de téléchargement.
+Dans cette vue, vous pouvez utiliser la bascule **Afficher la carte thermique** pour afficher une vue visuelle de votre e-mail qui montre la fréquence globale et l'emplacement/localisation des clics au cours de la durée de vie de la campagne. Dans le panneau **Tableau des liens par nombre total de clics**, vous pouvez afficher tous les liens de votre campagne e-mail et les trier par nombre total de clics. Cela peut fournir des informations supplémentaires sur les endroits où vos utilisateurs naviguent. Pour enregistrer une copie de la carte thermique à des fins de référence, sélectionnez le bouton de téléchargement.
 
 ![Exemple de page de prévisualisation et de carte thermique comprenant une campagne d'e-mail et un panneau avec des exemples d'alias de liens avec leur nombre total de clics.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+
+#### Images
+
+Nous vous conseillons d'activer CORS pour vos URL d'images afin d'éviter que les images ne se cassent dans les aperçus et les exportations de cartes thermiques.
 
 {% endif %}
 
@@ -260,7 +264,7 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Ouvertures uniques</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} Pour les e-mails, le suivi est effectué sur une période de 7 jours. Ce nombre doit être compris entre 10 et 20 %. Tout ce qui est supérieur à 20 % est exceptionnel !
+                {% multi_lang_include metrics.md metric='Unique Opens' %} Pour les e-mails, le suivi est effectué sur une période de 7 jours. Ce chiffre devrait se situer entre 30 et 40 %. Tout ce qui est supérieur à 40 % est exceptionnel !
             </td>
         </tr>
         <tr>
@@ -366,7 +370,11 @@ Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vo
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Taux de conversion</a></td>
-            <td>{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Fermer le message</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' (message de fermeture) %}</td>
         </tr>
     </tbody>
 </table>

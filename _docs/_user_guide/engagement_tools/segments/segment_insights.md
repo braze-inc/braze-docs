@@ -68,7 +68,7 @@ To improve conversions among speakers of languages other than English, a good fi
 
 ### Understanding indicators of higher revenue
 
-Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an ecommerce app.
+Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an eCommerce app.
 
 ![][7]
 

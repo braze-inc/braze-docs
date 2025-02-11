@@ -128,7 +128,7 @@ You can delete a user in Braze using the [Suppression with Delete regulation](ht
 RudderStack's [`track` method](https://rudderstack.com/docs/destinations/marketing/braze/#track) captures all the user activities and the properties associated with those activities.
 
 **Order completed**<br>
-On using the [RudderStack Ecommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
+On using the [RudderStack eCommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
 
 {% endtab %}
 {% tab Screen %}

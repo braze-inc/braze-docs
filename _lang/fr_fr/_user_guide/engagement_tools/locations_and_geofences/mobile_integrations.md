@@ -21,7 +21,7 @@ Des campagnes déclenchées par géorepérage sont disponibles sur iOS et Androi
 3. Pour les appareils iOS version 11 et ultérieure, les utilisateurs doivent toujours permettre l’accès aux données de localisation pour que les géorepérages fonctionnent.
 
 {% alert important %}
-À partir de la version 3.6.0 du SDK de Braze, la collecte des emplacements/localisations est désactivée par défaut. Pour vérifier qu'elle est activée sur Android, confirmez que `com_braze_enable_location_collection` est défini sur `true` dans votre `braze.xml`.
+À partir de la version 3.6.0 du SDK de Braze, la collecte des emplacements/localisations est désactivée par défaut. Pour vérifier qu'il est activé sur Android, confirmez que `com_braze_enable_location_collection` est défini sur `true` dans votre `braze.xml`.
 {% endalert %}
 
 ## Configuration des géorepérages

@@ -15,6 +15,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > ドラッグ＆ドロップエディタを使用すると、キャンペーンやキャンバスのいずれかでドラッグ＆ドロップ編集体験を使用して、完全にカスタムおよびパーソナライズされたアプリ内メッセージを作成できます。
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
 アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。

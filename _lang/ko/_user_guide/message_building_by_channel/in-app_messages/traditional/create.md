@@ -281,7 +281,7 @@ Braze에서 코드에 닫기 또는 종료 버튼이 포함되어 있지 않다�
 메시지를 보내기 전에 항상 [미리 보고 테스트하세요]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/).
 
 {% alert important %}
-일부 인앱 메시지 유형에는 사용자 지정 HTML(또는 CSS 또는 JavaScript) 및 ZIP 파일을 사용하여 에셋을 업로드하는 것 외에 스타일 지정 옵션이 없습니다. [CSS가 포함된 웹 모달을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) 사용하면 사용자 지정 CSS를 업로드하거나 작성하여 모든 기능을 갖춘 멋진 사용자 지정 스타일의 메시지를 만들 수 있습니다.
+일부 인앱 메시지 유형에는 ZIP 파일을 사용하여 사용자 지정 HTML(또는 CSS 또는 JavaScript) 및 에셋을 업로드하는 것 외에 스타일 지정 옵션이 없습니다. [CSS가 포함된 웹 모달을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) 사용하면 사용자 지정 CSS를 업로드하거나 작성하여 모든 기능을 갖춘 멋진 사용자 지정 스타일의 메시지를 만들 수 있습니다.
 {% endalert %}
 
 ## 6단계: 추가 설정 구성(선택 사항)
@@ -340,7 +340,7 @@ Braze에서 코드에 닫기 또는 종료 버튼이 포함되어 있지 않다�
 
 트리거된 메시지 우선순위의 높음, 중간, 낮음 옵션은 버킷이며, 따라서 여러 메시지의 우선순위가 동일하게 선택될 수 있습니다. 이러한 버킷 내에서 우선순위를 설정하려면 **정확한 우선순위 설정을** 클릭하고 캠페인을 끌어서 놓아 올바른 우선순위로 정렬할 수 있습니다.
 
-![인앱 메시지 캠페인과 캔버스에 대한 우선순위를 설정하는 방법의 예.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![인앱 메시지 캠페인 및 캔버스에 대한 우선순위를 설정하는 방법의 예.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### 타겟팅할 사용자 선택
 

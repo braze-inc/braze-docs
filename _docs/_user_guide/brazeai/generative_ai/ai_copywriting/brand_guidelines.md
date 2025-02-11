@@ -11,7 +11,7 @@ description: "This reference article covers the brand guidelines for AI copywrit
 
 ## Creating brand guidelines {#steps}
 
-Follow these steps to create brand guidelines in the AI copywriting assistant.
+Follow these steps to create brand guidelines in the AI copywriting assistant. You can also create brand guidelines on the [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/) settings page.
 
 ### Step 1: Create a brand guideline
 
@@ -20,6 +20,7 @@ Follow these steps to create brand guidelines in the AI copywriting assistant.
 2. Select **Apply brand guideline** and then **Create a brand guideline**.
 3. Enter a name for this guideline. It will be the label you see in the previous selection.
 4. For **When will you use these brand guidelines?**, add details to help your colleagues (and future you) understand the context for using this guideline.
+5. If you want this to be the default brand guideline for the current workspace, check **Use as default brand guideline**.
 
 ![Brand guideline creation view.][1]
 

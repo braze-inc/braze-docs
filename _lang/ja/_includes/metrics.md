@@ -54,6 +54,10 @@
 <i>クリック開封率とは</i>、配信されたメールのうち、ユーザーまたはマシンが一度でも開封したメールの割合であり、<a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>レポートビルダーでのみ</a>利用できる。
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>メッセージを閉じる</i>とはメッセージの [閉じる] ボタンをクリックした合計回数です。これは、従来のエディターではなく、ドラッグ＆ドロップエディターで作成されたアプリ内メッセージにのみ存在します。
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 <i>確認配信とは</i>、通信事業者が、ターゲットの電話番号にメッセージが配信されたことを確認した場合のことを言います。
 {% endif %}
