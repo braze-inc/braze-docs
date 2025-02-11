@@ -1,18 +1,4 @@
----
-nav_title: SDK Integration
-article_title: Integrating the Unreal Engine Braze SDK
-platform: Unreal Engine
-page_order: 0
-page_type: reference
-description: "Learn how to integrate the Unreal Engine Braze SDK."
-search_rank: 1
----
-
-# Integrating the Unreal Engine Braze SDK
-
-> Learn how to integrate the Unreal Engine Braze SDK into your Android or iOS app.
-
-## About the SDK
+## About the Unreal Engine Braze SDK
 
 With the Braze Unreal SDK plugin, you can:
 
@@ -23,7 +9,7 @@ With the Braze Unreal SDK plugin, you can:
 * Integrate your Unreal apps with larger Canvas journeys
 * Send cross-channel messaging, like email or SMS, based on in-app behavior
 
-## Integrating the SDK
+## Integrating the Unreal Engine SDK
 
 ### Step 1: Add the Braze plugin
 
