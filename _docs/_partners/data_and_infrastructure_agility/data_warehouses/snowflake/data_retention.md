@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake data retention
 
-> Braze anonymizes—removes personally identifiable information (PII)—from all events data stored in Snowflake that is older than two years old. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
+> Braze anonymizes—removes personally identifiable information (PII)—from all events data that is older than two years old. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
 
 This page presents two ways you can retain non-anonymized data: 
 
@@ -20,7 +20,7 @@ This page presents two ways you can retain non-anonymized data:
 Braze automatically anonymizes events data for users that are deleted from Braze, as described in [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/). Any data copied outside of the shared database will not be included in this process, as Braze no longer manages it. 
 {% endalert %}
 
-## Copying all data to another Snowflake database
+## Copy all data to another Snowflake database
 
 You can retain non-anonymized data by copying your data from the shared `BRAZE_RAW_EVENTS` schema to another database and schema in Snowflake. To do so, follow these steps:
 
@@ -158,7 +158,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 Repeatedly running the procedure won't create duplicate records because this procedure checks the most recent `SF_CREATED_AT` and only backs up data newer than that. 
 {% endalert %}
 
-## Unloading data to stage
+## Unload data to stage
 
 You can retain non-anonymized data by unloading data from the shared `BRAZE_RAW_EVENTS` schema to a stage. To do so, follow these steps:
 

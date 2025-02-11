@@ -1,8 +1,18 @@
-## Sample app
+---
+nav_title: SDK Integration
+article_title: Integrating the Braze Roku SDK
+platform: Roku
+page_order: 0
+page_type: reference
+description: "This page describes initial setup steps for the Braze Roku SDK."
+search_rank: 1
+---
 
-To see a Roku app running the Braze SDK, checkout [our sample app on GitHub](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv).
+# Integrating the Braze Roku SDK
 
-## Integrating the Roku SDK
+> Learn how to integrate and customize the Braze Roku SDK. To see our Roku sample app,checkout [TorchieTV](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv) on GitHub.
+
+## Integrating the SDK
 
 ### Step 1: Add files
 

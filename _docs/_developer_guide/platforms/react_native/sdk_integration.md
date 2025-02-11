@@ -1,10 +1,23 @@
-## About the Reactive Native Braze SDK
+---
+nav_title: SDK Integration
+article_title: Integrating the Braze Reactive Native SDK
+platform: React Native
+page_order: 1
+description: "Learn how to integrate the Braze Reactive Native SDK on native Android and iOS."
+search_rank: 1
+---
 
-Integrating the React Native Braze SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
+# Integrating the Braze React Native SDK
+
+> This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
 ## Sample app
 
 To see a React Native app running the Braze SDK, checkout [our sample app on GitHub](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). For usage examples of the Braze Expo plugin, checkout [our Expo sample on GitHub](https://github.com/braze-inc/braze-expo-plugin/tree/main/example).
+
+## Prerequisites
+
+To integrate the SDK, React Native version 0.71 or later is required. For the full list of supported versions, see our [React Native SDK GitHub repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
 ## New Architecture compatibility
 
@@ -18,11 +31,7 @@ Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which i
 If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
 {% endalert %}
 
-## Integrating the React Native SDK
-
-### Prerequisites
-
-To integrate the SDK, React Native version 0.71 or later is required. For the full list of supported versions, see our [React Native SDK GitHub repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+## Integrating the SDK
 
 ### Step 1: Integrate the Braze library
 
