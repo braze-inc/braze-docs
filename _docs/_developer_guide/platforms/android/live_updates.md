@@ -300,7 +300,7 @@ While curl commands are helpful for testing, we recommend handling this call in 
 
 | Key                          | Description |
 |------------------------------|------------|
-| `REST_API_KEY`               | A Braze REST API key with `$ADD_PERMISSION_HERE` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| `REST_API_KEY`               | A Braze REST API key with `messages.send` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | `BRAZE_REST_ENDPOINT`         | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | `USER_ID`                    | The ID of the user you are sending the notification to. |
 | `messages.android_push.title` | The message's title. By default, this is not used for the custom notification factory's live notifications, but it may be used as a fallback. |
