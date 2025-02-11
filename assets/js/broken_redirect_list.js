@@ -183,8 +183,7 @@ validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivar
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
 validurls['/docs/user_guide/intelligence/multivariate_testing/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/'] = '/docs/message_events_glossary/';
-validurls['/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/'] = '/docs/message_events_glossary/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 validurls['/docs/user_guide/message_building_by_channel/sms/compliance/'] = '/docs/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios_customizable_app_icon_feature/'] = '/docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/';
@@ -196,7 +195,7 @@ validurls['/docs/user_guide/message_building_by_channel/push/notification_option
 validurls['/docs/user_guide/message_building_by_channel/push/notification_options_ios/'] = '/docs/user_guide/message_building_by_channel/push/ios/notification_options/';
 validurls['/docs/user_guide/message_building_by_channel/push/push_action_buttons/'] = '/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/';
 validurls['/docs/user_guide/message_building_by_channel/push/push_stories/'] = '/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/#push-notification-events'] = '/docs/message_events_glossary/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/#push-notification-events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/importing_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/'] = '/docs/report_builder/';
 validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/user_guide/message_building_by_channel/sms/campaign/create/';
@@ -261,7 +260,7 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/data_import/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/#data-import';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/';
-validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/message_events_glossary/';
+validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/partners/additional_channels/direct_mail/inkit/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/inkit/';
 validurls['/docs/partners/additional_channels/direct_mail/lob/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/lob/';
@@ -1445,7 +1444,7 @@ validurls['/docs/user_guide/data_and_analytics/braze_currents/available_partners
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics'] = '/docs/user_guide/data/braze_currents/event_delivery_semantics';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary'] = '/docs/user_guide/data/braze_currents/event_glossary';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events'] = '/docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events'] = '/docs/message_events_glossary/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events'] = '/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents'] = '/docs/user_guide/data/braze_currents/how_braze_uses_currents';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake'] = '/docs/user_guide/data/braze_currents/s3_to_snowflake';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents'] = '/docs/user_guide/data/braze_currents/setting_up_currents';
@@ -1529,7 +1528,7 @@ validurls['/docs/user_guide/data_and_analytics/braze_currents/available_partners
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics'] = '/docs/user_guide/data/braze_currents/event_delivery_semantics';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary'] = '/docs/user_guide/data/braze_currents/event_glossary';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events'] = '/docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events'] = '/docs/message_events_glossary/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events'] = '/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents'] = '/docs/user_guide/data/braze_currents/how_braze_uses_currents';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake'] = '/docs/user_guide/data/braze_currents/s3_to_snowflake';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents'] = '/docs/user_guide/data/braze_currents/setting_up_currents';
