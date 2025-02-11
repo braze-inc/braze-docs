@@ -1978,10 +1978,10 @@ validurls['/docs/developer_guide/platforms/web/sdk_integration/'] = '/docs/devel
 validurls['/docs/developer_guide/platforms/cordova/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=cordova';
 validurls['/docs/developer_guide/platforms/fireos/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=fireos';
 validurls['/docs/developer_guide/platforms/flutter/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=flutter';
-validurls['/docs/developer_guide/platforms/react_native/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=react_native';
+validurls['/docs/developer_guide/platforms/react_native/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=react%20native';
 validurls['/docs/developer_guide/platforms/unity/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/xamarin/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=xamarin';
 validurls['/docs/developer_guide/platforms/roku/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=roku';
-validurls['/docs/developer_guide/platforms/unreal_engine/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unreal_engine';
+validurls['/docs/developer_guide/platforms/unreal_engine/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unreal%20engine';
 
 // validurls['OLD'] = 'NEW';
