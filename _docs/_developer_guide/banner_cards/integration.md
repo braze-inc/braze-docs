@@ -188,6 +188,7 @@ This feature is not currently supported on Roku.
 {% tab JavaScript %}
 
 Create a container element for the banner. Be sure to set its width and height.
+
 ```html
 <div id="global-banner-container" style="width: 100%; height: 450px;"></div>
 ```
