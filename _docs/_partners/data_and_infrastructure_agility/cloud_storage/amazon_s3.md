@@ -35,7 +35,7 @@ To create a bucket for your app, do the following:
 3. Select **Create Bucket** on the next screen. 
 4. You'll be prompted to create your bucket and select a region.
 
-Note that Currents does not support buckets with Object Lock configured.
+Note that Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
 
 ## Integration
 
