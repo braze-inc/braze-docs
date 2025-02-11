@@ -1,12 +1,8 @@
-## About the Cordova Braze SDK
+## Integrating the Cordova SDK
 
-Learn how to integrate and customize the Braze Cordova SDK for iOS and Android.
-
-## Prerequisites
+### Prerequisites
 
 Before you start, verify your environment is supported by the [latest Braze Cordova SDK version](https://github.com/braze-inc/braze-cordova-sdk?tab=readme-ov-file#minimum-version-requirements).
-
-## Integrating the SDK
 
 ### Step 1: Add the SDK to your project
 

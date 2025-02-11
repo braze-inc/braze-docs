@@ -1,13 +1,13 @@
 ## About the Web Braze SDK
 
-This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. For more information, see [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs").
+The Web Braze SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. For more information, see [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs").
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Integrating the SDK
+## Integrating the Web SDK
 
 {% alert tip %}
-Not sure if the standard integration method is right for you? Check out our [other methods](#other-integration-methods) before continuing.
+Not sure if the standard integration method is right for you? Check out our [other integration methods](#other-integration-methods) before continuing.
 {% endalert %}
 
 ### Step 1: Install the Braze library

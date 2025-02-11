@@ -1,15 +1,13 @@
-## About the Xamarin Braze SDK
+## Integrating the Xamarin SDK
 
-Learn how to install the Braze SDK for Xamarin. Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
+Integrating the Braze Xamarin SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
 
-## Prerequisites
+### Prerequisites
 
 Before you can integrate the Xamarin Braze SDK, be sure you meet the following requirements:
 
 - Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xamarin framework.
 - Starting in `version 4.0.0`, this SDK dropped support for Xamarin & Xamarin.Forms and added support for .NET MAUI. See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
-
-## Integrating the SDK
 
 ### Step 1: Get the Xamarin binding
 

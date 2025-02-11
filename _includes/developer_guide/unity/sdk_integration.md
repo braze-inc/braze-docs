@@ -1,16 +1,16 @@
 ## About the Unity Braze SDK
 
-Learn how to integrate and customize the Braze Unity SDK. For a full list of types, functions, variables, and more, see [Unity Declaration File](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+For a full list of types, functions, variables, and more, see [Unity Declaration File](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
 
 {% alert tip %}
-If you already set up a manual Unity integration for iOS, you can choose to use an automated integration instead. For a full walkthrough, see [Switch to an automated integration](#switch-to-an-automated-integration-swift-only).
+If you've already integrated Unity manually for iOS, you can switch to an automated integration instead. For a full walkthrough, see [Switch to an automated integration](#switch-to-an-automated-integration-swift-only).
 {% endalert %}
 
-## Prerequisites
+## Integrating the Unity SDK
+
+### Prerequisites
 
 Before you start, verify your environment is supported by the [latest Braze Unity SDK version](https://github.com/braze-inc/braze-unity-sdk/releases).
-
-## Integrating the SDK
 
 ### Step 1: Choose your Braze Unity package
 

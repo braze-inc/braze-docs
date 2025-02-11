@@ -9,7 +9,7 @@ With the Braze Unreal SDK plugin, you can:
 * Integrate your Unreal apps with larger Canvas journeys
 * Send cross-channel messaging, like email or SMS, based on in-app behavior
 
-## Integrating the SDK
+## Integrating the Unreal Engine SDK
 
 ### Step 1: Add the Braze plugin
 
