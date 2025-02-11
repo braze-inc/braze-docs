@@ -1,38 +1,39 @@
 require 'digest/md5'
 
 module Tags
-    class TabsBlock < Liquid::Block
+    class SdkTabsBlock < Liquid::Block
       def initialize(tag_name, tabonly = 'false', tokens)
           super
-          @tabclass = 'tab_toggle'
-          @tabid = 'tab_' + (0...12).map { (97 + rand(26)).chr }.join
+          @tabclass = 'sdk-tab_toggle'
+          @tabid = 'sdk-tab_' + (0...12).map { (97 + rand(26)).chr }.join
           if tabonly.downcase.strip == 'local'
-            @tabclass = 'tab_toggle_only'
+            @tabclass = 'sdk-tab_toggle_only'
           end
       end
       def render(context)
-          tabs = super.scan(/data\-tab=\"(.*?)\"/)
-          tabslist = '<ul class="ab-nav ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
+          tabs = super.scan(/data\-sdk\-tab=\"sdk\-(.*?)\"/)
+          tabslist = '<ul class="sdk-ab-nav sdk-ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
               itemid = (0...12).map { (97 + rand(26)).chr }.join
+
               tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
               tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
 
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" id="mt_' + itemid + '" class="coderow ' + tabslug
+              tabslist += '    <li id="sdkt_' + itemid + '" class="sdkrow ' + tabslug
               if ind == 0
                 tabslist += ' active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-tab-target="' + @tabid + '" data-tab="' + tabslug + '">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sdk-tab-target="' + @tabid + '" data-sdk-tab="' + tabslug + '">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
-          tabslist + '<div id="' + @tabid + '" class="ab-tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
+          tabslist + '<div id="' + @tabid + '" class="sdk-tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
       end
     end
 
-    class TabBlock < Liquid::Block
+    class SdkTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
           @tab = tab.strip.downcase
@@ -58,43 +59,44 @@ module Tags
           tabslug = @tab.gsub(/[^0-9a-z]/i, '')
           tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          return '<div id="mc_' + contentid + '" class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
+          return '<div id="sdkc_' + contentid + '"  class="sdk-ab-tab-pane ' + tabslug + '_tab " data-sdk-tab="sdk-' + @tab + '">' + content + "</div>"
       end
     end
 
-    class SubTabsBlock < Liquid::Block
+    class SdkSubTabsBlock < Liquid::Block
       def initialize(tag_name, tabonly = 'false', tokens)
           super
-          @tabclass = 'sub_tab_toggle'
-          @tabid = 'sub_tab_' + (0...12).map { (97 + rand(26)).chr }.join
+          @tabclass = 'sub_sdk-tab_toggle'
+          @tabid = 'sub_sdk-tab_' + (0...12).map { (97 + rand(26)).chr }.join
           if tabonly.downcase.strip != 'global'
-            @tabclass = 'sub_tab_toggle_only'
+            @tabclass = 'sub_sdk-tab_toggle_only'
           end
       end
       def render(context)
-          tabs = super.scan(/data\-sub\_tab=\"(.*?)\"/)
-          tabslist = '<ul class="ab-sub_nav ab-sub_nav-sub_tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
+          tabs = super.scan(/data\-sdk\-sub\_tab=\"(.*?)\"/)
+          tabslist = '<ul class="sdk-ab-sub_nav sdk-ab-sub_nav-sub_tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
+
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
-              itemid = (0...12).map { (97 + rand(26)).chr }.join
 
+              itemid = (0...12).map { (97 + rand(26)).chr }.join
               tabslug = tab[0].gsub(/[^0-9a-z]/i, '')
               tabslug = Digest::MD5.hexdigest(tab[0]) if tabslug.empty?
 
               # scan returns array of results, only care about first match
-              tabslist += '    <li tabindex="0" id="st_' + itemid + '" class="coderow ' + tabslug + '_sub_tab'
+              tabslist += '    <li id="sdkst_' + itemid + '" class="coderow ' + tabslug + '_sub_sdk_tab'
               if ind == 0
                 tabslist += ' sub_active'
               end
-              tabslist += '"><a class="' + @tabclass + '" data-sub_tab-target="' + @tabid + '" data-sub_tab="' + tabslug + '_sub_tab">' + tab[0] + '</a></li>' + "\n"
+              tabslist += '"><a class="' + @tabclass + '" data-sdk-sub_tab-target="' + @tabid + '" data-sdk-sub_tab="' + tabslug + '_sub_sdk_tab">' + tab[0] + '</a></li>' + "\n"
             end
           end
           tabslist += '</ul>'  + "\n"
-          tabslist + '<div id="' + @tabid + '" class="ab-sub_tab-content ' + @tabclass + '_div">' + "\n" + super + "\n</div>\n"
+          tabslist + '<div id="' + @tabid + '" class="sdk-ab-sub_tab-content ' + @tabclass + '_sdk_div">' + "\n" + super + "\n</div>\n"
       end
     end
 
-    class SubTabBlock < Liquid::Block
+    class SdkSubTabBlock < Liquid::Block
       def initialize(tag_name, tab, tokens)
           super
           @tab = tab.strip.downcase
@@ -120,12 +122,12 @@ module Tags
           tabslug = @tab.gsub(/[^0-9a-z]/i, '')
           tabslug = Digest::MD5.hexdigest(@tab) if tabslug.empty?
 
-          return '<div id="sc_' + contentid + '" class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
+          return '<div id="sdksc_' + contentid + '"  class="sdk-ab-sub_tab-pane ' + tabslug + '_sub_sdk_tab " data-sdk-sub_tab="' + @tab + '">' + content + "</div>"
       end
     end
 end
 
-Liquid::Template.register_tag("tabs", Tags::TabsBlock)
-Liquid::Template.register_tag("tab",  Tags::TabBlock)
-Liquid::Template.register_tag("subtabs", Tags::SubTabsBlock)
-Liquid::Template.register_tag("subtab",  Tags::SubTabBlock)
+Liquid::Template.register_tag("sdktabs", Tags::SdkTabsBlock)
+Liquid::Template.register_tag("sdktab",  Tags::SdkTabBlock)
+Liquid::Template.register_tag("sdksubtabs", Tags::SdkSubTabsBlock)
+Liquid::Template.register_tag("sdksubtab",  Tags::SdkSubTabBlock)
