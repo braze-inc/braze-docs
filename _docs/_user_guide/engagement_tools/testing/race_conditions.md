@@ -68,6 +68,14 @@ If you're sending a scheduled message API request, these requests must be separa
 
 Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call for the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). When these objects are included with the trigger, we guarantee that the attributes will be processed first, before the message is triggered, eliminating potential race conditions.
 
+#### Use the POST: Track users (bulk) endpoint
+
+Use the [`/users/track/sync/` endpoint](https://www.braze.com/unlisted_docs/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
+
+{% alert important %}
+This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in the beta.
+{% endalert %}
+
 ## Scenario 3: Matching action-based triggers and audience filters
 
 Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won’t receive the campaign or enter the Canvas.
