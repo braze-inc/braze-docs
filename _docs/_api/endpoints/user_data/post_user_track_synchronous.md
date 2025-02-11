@@ -13,7 +13,7 @@ description: "This article outlines details about the synchronous Track user Bra
 /users/track/sync
 {% endapimethod %}
 
-> Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
+> Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
 This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta. 
@@ -31,7 +31,7 @@ For example, if you're sending consecutive requests for the same user over a sho
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key](https://www.braze.com/docs/api/api_key/) with the `users.track.sync` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.track.sync` permission.
 
 Customers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they're behind a firewall.
 
@@ -62,9 +62,9 @@ For each request component listed in the following table, one of `external_id`, 
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Optional | One attributes object | See [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object/) |
-| `events` | Optional | One event object | See [events object](https://www.braze.com/docs/api/objects_filters/event_object/) |
-| `purchases` | Optional | One purchase object | See [purchases object](https://www.braze.com/docs/api/objects_filters/purchase_object/) |
+| `attributes` | Optional | One attributes object | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `events` | Optional | One event object | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
+| `purchases` | Optional | One purchase object | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Responses
