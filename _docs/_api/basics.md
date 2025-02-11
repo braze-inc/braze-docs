@@ -384,7 +384,7 @@ If you're implementing Braze using Ruby, you can use our [Ruby client library](h
 
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
-{% alert note %}
+{% alert important %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
