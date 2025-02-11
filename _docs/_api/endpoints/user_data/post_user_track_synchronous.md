@@ -3,6 +3,7 @@ nav_title: "POST: Track Users (Synchronous)"
 article_title: "POST: Track Users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page
+page_order: 4.5
 page_type: reference
 description: "This article outlines details about the synchronous Track user Braze endpoint."
 
