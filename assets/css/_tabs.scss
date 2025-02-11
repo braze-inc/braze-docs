@@ -76,7 +76,7 @@
 		ul.ab-nav-tabs {
 			> li {
 				&.active {
-					color: $blue-scooter;
+					color: $braze-purple;
 					background-color: $white;
 					border: 1px solid $grey-ghost;
 					border-radius: 4px 4px 0 0;
@@ -204,7 +204,7 @@
           line-height: 25px;
           text-transform: uppercase;
           &:hover {
-            color: $blue-scooter;
+            color: $braze-purple;
             background-color: $white;
           }
         }
@@ -212,16 +212,16 @@
 
       > li {
         &.active {
-          color: $blue-scooter;
+          color: $braze-purple;
           background-color: $white ;
           border-radius: 5px;
-          border-color: $navy-bay;
+          border-color: $braze-purple;
           cursor: default;
           a {
-            color: $navy-bay;
+            color: $braze-purple;
 
             &:hover {
-              color: $blue-scooter;
+              color: $braze-purple;
               background-color: $white;
             }
           }
@@ -231,16 +231,16 @@
 		ul.sdk-ab-sub_nav-sub_tabs {
 			> li {
 				&.sub_active {
-					color: $blue-scooter;
+					color: $braze-purple;
           background-color: $white ;
           border-radius: 5px;
-          border-color: $navy-bay;
+          border-color: $braze-purple;
           cursor: default;
           a {
-            color: $navy-bay;
+            color: $braze-purple;
 
             &:hover {
-              color: $blue-scooter;
+              color: $braze-purple;
               background-color: $white;
             }
           }
