@@ -7,7 +7,7 @@ description: "This page answers frequently asked questions about Cloud Data Inge
 toc_headers: h2
 ---
 
-# Frequently Asked Questions (FAQ)
+# Frequently asked questions
 
 > This page contains answers to some frequently asked questions for Cloud Data Ingestion.
 
