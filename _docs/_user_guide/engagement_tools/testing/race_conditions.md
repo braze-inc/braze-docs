@@ -70,7 +70,7 @@ Instead of using multiple endpoints, you can include the [user attributes]({{sit
 
 #### Use the POST: Track users (bulk) endpoint
 
-Use the [`/users/track/sync/` endpoint](https://www.braze.com/unlisted_docs/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
+Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
 {% alert important %}
 This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in the beta.
