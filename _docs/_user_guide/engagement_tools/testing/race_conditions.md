@@ -66,7 +66,7 @@ If you're sending a scheduled message API request, these requests must be separa
 
 #### Use API trigger properties and user attribute objects to include key data with the trigger
 
-Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call for the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). When these objects are included with the trigger, we guarantee that the attributes will be processed first, before the message is triggered, eliminating potential race conditions.
+Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call for the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). When these objects are included with the trigger, the attributes will be processed first, before the message is triggered, eliminating potential race conditions.
 
 #### Use the POST: Track users (bulk) endpoint
 
