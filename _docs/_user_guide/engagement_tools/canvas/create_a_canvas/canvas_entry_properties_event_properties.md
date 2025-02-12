@@ -1,41 +1,55 @@
 ---
-nav_title: Canvas Entry Properties and Event Properties
-article_title: Canvas Entry Properties and Event Properties
+nav_title: Canvas Context Properties and Event Properties
+article_title: Canvas Context Properties and Event Properties
 page_order: 4.2
 page_type: reference
-description: "This reference article describes the differences between Canvas entry properties and event properties, and when to use each property."
+description: "This reference article describes the differences between Canvas context properties and event properties, and when to use each property."
 tool: Canvas
 ---
 
-# Canvas entry properties and event properties
+# Canvas context properties and event properties
 
-> This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+> Learn about Canvas context properties and event properties, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
+Canvas context properties refer to Canvas entry properties. Canvas context properties are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
-Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
+## How these properties work
 
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
+Canvas context properties and event properties function differently within your Canvas workflows. 
 
-Behavior also varies between workflows built with Canvas Flow versus the original editor. For example, in the original Canvas editor, you can use `event_properties` in the first full step if it's an action-based step. In Canvas Flow, full steps aren't supported, so this does not apply.
+- **Canvas context properties** are properties of events or API calls that trigger a user's entry into a Canvas.
+- **Event properties** are properties of events that occur as a user moves through a Canvas journey are known as event properties.
 
-Refer to the following table for a summary of differences between `canvas_entry_properties` and `event_properties`.
+The key difference here is Canvas context properties focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
-| | Canvas Entry Properties | Event Properties
+Note that for the lead Message step, event properties aren't supported. Instead, you can use Canvas context properties or add an Action Paths step with the corresponding event **before** the Message step that includes the event properties.
+
+{% details Original Canvas editor details %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
+{% enddetails %}
+
+### Summary of differences
+
+Refer to the following table for a summary of differences between Canvas context properties and event properties.
+
+| | Canvas context properties | Event properties
 |----|----|----|
-| **Liquid** | `canvas_entry_properties` | `event_properties` |
 | **Persistence** | Can be referenced by all [Message][1] steps for the duration of a Canvas built using Canvas Flow. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
-| **Original Canvas behavior** | - Must have persistent entry properties turned on. <br> - Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered. | - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas. <br> - Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component][2], the behavior follows the Canvas Flow rules for `event_properties`. |
+| **Original Canvas behavior** | - Can only reference `canvas_entry_properties` in the first full step of a Canvas. The Canvas must be action-based or API triggered. | - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas. <br> - Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component][2], the behavior follows the Canvas Flow rules for `event_properties`. |
 | **Canvas Flow behavior** | Can reference `canvas_entry_properties` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths][3] step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message Canvas components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
-
 {% alert note %}
-For in-app message channels, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) enabled in the original editor as part of the previous early access. However, `event_properties` cannot be used for in-app message channels.
+Note that Canvas context properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 {% endalert %}
+
+### In-app message channels
+
+For in-app message channels, Canvas context properties can only be referenced in the Canvas editor if you have [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) turned on as part of the previous early access. However, event properties cannot be used for in-app message channels.
+
+### Action paths
 
 When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvas Flow. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 

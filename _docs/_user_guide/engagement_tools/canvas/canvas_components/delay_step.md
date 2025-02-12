@@ -57,6 +57,14 @@ You can choose the type of delay before the next message in your Canvas. You can
   {% endtab %}
 {% endtabs %}
 
+#### Extended delays
+
+You can extend delays past 30 days. 
+
+{% alert important %}
+Extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
 ## Using Delay steps
 
 Let's say that it's June 10. On June 11, you'd like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3 pm local time. At 3 pm local time on June 17, you want to send users a reminder message about the promotion.
