@@ -59,7 +59,7 @@ You can choose the type of delay before the next message in your Canvas. You can
 
 #### Extended delays
 
-You can extend delays past 30 days. 
+You can extend delays past 30 days. This allows you to streamline your long-term messaging.
 
 {% alert important %}
 Extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
