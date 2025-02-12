@@ -31,17 +31,17 @@ Braze will use your landing page's URL handle to generate its unique liquid tag.
 If you change the URL handle after sending your message, any user that attempts to visit your landing page using the old URL will be sent to a `404` page.
 {% endalert %}
 
-![An example URL handle for a landing page in Braze.]()
+![An example URL handle for a landing page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
 ### Step 2: Generate the liquid tag
 
-Go to **Messaging** > **Campaigns**, then choose a campaign. In the **Compose Messages** step, select **Drag-and-drop editor**.
+Go to **Messaging** > **Campaigns**, then choose a campaign. Under **Message content**, select **Drag-and-drop editor**.
 
-![The 'Compose Messages' step in Braze with the 'Drag-and-drop editor' option shown.]()
+![The 'Compose Messages' step in Braze with the 'Drag-and-drop editor' option shown.]({% image_buster /assets/img/landing_pages/message-content-options.png %})
 
-In the editor, select **Add personalization**.
+In the editor, select **Personalization**.
 
-![The 'Add personalization' button in the drag-and-drop editor.]()
+![The 'Add personalization' button in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:35%;"}
 
 Braze will automatically generate a liquid tag using your [landing page's URL handle](#step-1-verify-your-url-handle). Refer to the following table to generate your tag:
 
