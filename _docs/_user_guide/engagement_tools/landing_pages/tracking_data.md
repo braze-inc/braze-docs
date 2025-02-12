@@ -1,14 +1,18 @@
 ---
-nav_title: Data Tracking
-article_title: Data Tracking
-description: "This article covers the data that is tracked on landing pages."
-page_order: 4
+nav_title: About Tracking Data
+article_title: About landing page tracking data
+description: "Learn about tracking and anonymized data for landing pages in Braze."
+page_order: 10
 alias: /landing_pages/data_tracking/
 ---
 
-# Data tracking
+# About landing page tracking data
 
-> Braze landing pages use a version of the Braze web SDK to track user data only when a landing page form is submitted. Information that isn't associated with a specific user, including page views and button click aggregate counts, is collected without the web SDK.<br><br>This page covers the web SDK data and anonymized data that is tracked on landing pages.
+> Learn about tracking and anonymized data for landing pages in Braze.
+
+## About the Web Braze SDK
+
+On the backend, landing pages use a version of the Braze Web SDK to track a user's data after they submit a form from your landing page. However, the Braze Web SDK is not used for any data that is not associated with a specific user, such as page views or button-click aggregate counts.
 
 ## Tracking methods
 
