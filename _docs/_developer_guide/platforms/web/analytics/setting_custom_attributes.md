@@ -57,7 +57,7 @@ Full method specifications for custom attributes can be found here within the [J
 
 ### Custom attribute length
 
-Custom attribute keys and values have a maximum length of 255 characters. Refer to the [full technical documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) for details about valid custom attribute values.
+Custom attribute keys and values can have up to 255 characters. Refer to the [full technical documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) for details about valid custom attribute values.
 
 ### Implementation examples
 
@@ -106,7 +106,9 @@ braze.getUser().setCustomUserAttribute(
 
 #### Setting a custom attribute with an array value
 
-The maximum number of elements in custom attribute arrays defaults to 25. Individual arrays can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your customer service manager. [Arrays]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+You can have up to 25 elements in custom attribute arrays. Individual arrays that are manually set (not automatically detected) for **Data Type** can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your Braze account manager.
+
+[Arrays]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
@@ -132,7 +134,7 @@ You can also use our REST API to set user attributes. Refer to the [users API]({
 
 ## Setting up user subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the `enum` type `braze.User.NotificationSubscriptionTypes` as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both functions take the `enum` type `braze.User.NotificationSubscriptionTypes` as arguments. This type has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
