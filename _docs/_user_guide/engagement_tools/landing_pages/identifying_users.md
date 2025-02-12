@@ -11,7 +11,7 @@ page_order: 3
 
 ## How it works
 
-You can add a landing page liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link the form's data to their user profile, as well as the messaging channel used to submit the form.
+You can add a landing page liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link that data to their user profile.
 
 {% alert tip %}
 You can also use landing pages for lead generation by embedding its page URL into your external channels. After you create a landing page, go to **Landing Page Details** to get the unique URL of a landing page.
@@ -58,6 +58,6 @@ Select **Copy Liquid** to copy the snippet to your clipboard. Your snippet will 
 ```
 {% endraw %}
 
-### Step 4: Finalize and send your message
+### Step 3: Finalize and send your message
 
 Embed the liquid snippet in your message, then finalize the rest of your message. When you're ready, you can send the message to start tracking users through your landing page.
