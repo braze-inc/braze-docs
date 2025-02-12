@@ -13,9 +13,9 @@ page_order: 0
 
 ### Step 1: Create a new draft
 
-Go to **Messaging** > **Landing Pages** and select **Create landing page**, or select the name of an existing one to duplicate it or make changes to it.
+Go to **Messaging** > **Landing Pages**, then select **Create landing page**. You can also click the name of an existing landing page to duplicate or make changes to it.
 
-![The landing pages section in the Braze dashboard.]()
+![The landing pages section in the Braze dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Step 2: Enter the page details
 
@@ -39,15 +39,19 @@ We suggest following these best practices:
 
 ### Step 3: Customize the page
 
-Select **Launch Editor** to start designing your landing page in the drag-and-drop editor. The editor will preload with a default template that you can customize to fit your use case.
+If you haven't already, select **Save as draft**. To start customizing your page, select **Edit landing page**.
 
-![An example landing page being created in the drag-and-drop editor.]()
+![The landing page previewing showing the option to edit the page.]({% image_buster /assets/img/landing_pages/select-edit-landing-page.png %})
+
+The drag-and-drop editor will preload with a default template that you can customize to fit your use case.
+
+![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/editor.png %})
 
 #### Drag-and-drop blocks
 
 The editor uses two types of components for landing page composition: rows and blocks. All blocks must be placed in a row.
 
-![The 'Build' section containing 'Rows' and 'Form Blocks'.]()
+![The 'Build' section containing 'Rows' and 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 #### Form block
 
@@ -55,7 +59,7 @@ Use various form block components to log custom and standard profile attributes 
 
 If you include a form block, each button will have the option to submit the form. However, you'll need to create a separate landing page for the [confirmation state](#confirmation-state).
 
-![An example form block in the drag-and-drop editor.]()
+![A form block that registers a new customer and will send a discount code to their email.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 After creating a landing page with a form, be sure to embed its [landing page liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
@@ -77,7 +81,7 @@ If you added a [form](#form-block) to your landing page in the previous step, cr
 
 You can preview your landing page in the editor's **Preview** tab. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
 
-![A landing page with the menu open to show the "Copy URL" option.]()
+![A landing page with the menu open to show the "Copy URL" option.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 When you're ready, select **Publish Landing Page**.
 
@@ -91,6 +95,6 @@ If a user inputs an invalid form value (such as unaccepted special characters), 
 
 ## Viewing analytics
 
-To analyze the effectiveness of your landing page, go to **$PAGE/SECTION**. Here, you can track the number of page views, page clicks, page submissions, and the submission rates for your landing page.
+To analyze the effectiveness of your landing page, go to **Messaging** > **Landing Pages**, then selected a landing page you've published. Here, you can track the number of page views, page clicks, page submissions, and the submission rates for your landing page.
 
-![The analytics section for a landing page.]()
+![The analytics section for a landing page.]({% image_buster /assets/img/landing_pages/analytics.png %})

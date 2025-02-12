@@ -10,10 +10,6 @@ alias: /landing_pages/data_tracking/
 
 > Learn about tracking and anonymized data for landing pages in Braze.
 
-## About the Web Braze SDK
-
-On the backend, landing pages use a version of the Braze Web SDK to track a user's data after they submit a form from your landing page. However, the Braze Web SDK is not used for any data that is not associated with a specific user, such as page views or button-click aggregate counts.
-
 ## Tracking methods
 
 ### Web SDK

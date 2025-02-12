@@ -35,13 +35,9 @@ If you change the URL handle after sending your message, any user that attempts 
 
 ### Step 2: Generate the liquid tag
 
-Go to **Messaging** > **Campaigns**, then choose a campaign. Under **Message content**, choose an editor.
+Go to **Messaging** > **Campaigns**, then choose a campaign. In your message editor, select **Personalization**.
 
-![The 'Compose Messages' step with all message content options listed.]({% image_buster /assets/img/landing_pages/message-content-options.png %})
-
-In the editor, select **Personalization**.
-
-![The 'Add personalization' button in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:35%;"}
+![The 'Add personalization' button in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
 Braze will automatically generate a liquid tag using your [landing page's URL handle](#step-1-verify-your-url-handle). Refer to the following table to generate your tag:
 
@@ -49,7 +45,11 @@ Braze will automatically generate a liquid tag using your [landing page's URL ha
 |**Landing page**|Choose the landing page [you previously created](#prerequisites).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-To add the liquid tag to your message, you can either select **Insert**, or add it manually after copying the snippet to your clipboard. Your snippet will be similar to the following:
+To add the liquid tag to your message, you can either select **Insert**, or copy the snippet to your clipboard and add it manually.
+
+![An auto-generated liquid tag for the selected landing page.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+
+Your snippet will be similar to the following:
 
 {% raw %}
 ```ruby
