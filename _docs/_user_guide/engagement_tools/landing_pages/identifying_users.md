@@ -1,11 +1,11 @@
 ---
 nav_title: Identifying Users
-article_title: Identifying users through a landing page
+article_title: Identifying users through a form
 description: "Learn how to identify users who submit a form through your landing page by adding a Liquid tag to your messages."
 page_order: 3
 ---
 
-# Identifying users through a landing page
+# Identifying users through a form
 
 > Learn how to identify users who submit a form through your landing page by adding a {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more.
 

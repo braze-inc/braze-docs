@@ -35,7 +35,7 @@ We suggest following these best practices:
 | Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Meta description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
-| URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
+| URL handle | This is the link users will click to navigate to your landing page. This link is also used to generate [landing page liquid tags]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) that you can embed in a message to automatically identify when they submit your form.| This handle must be unique. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 3: Customize the page
@@ -56,7 +56,11 @@ Use various form block components to log custom and standard profile attributes 
 
 If you include a form block, each button will have the option to submit the form. However, you'll need to create a separate landing page for the [confirmation state](#confirmation-state).
 
-![ALT_TEXT]()
+![An example form block in the drag-and-drop editor.]()
+
+{% alert tip %}
+After creating a landing page with a form, be sure to embed its [landing page liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
+{% endalert %}
 
 #### Page container styles
 
@@ -90,4 +94,4 @@ If a user inputs an invalid form value (such as unaccepted special characters), 
 
 To analyze the effectiveness of your landing page, go to **$PAGE/SECTION**. Here, you can track the number of page views, page clicks, page submissions, and the submission rates for your landing page.
 
-![ALT_TEXT]()
+![The analytics section for a landing page.]()
