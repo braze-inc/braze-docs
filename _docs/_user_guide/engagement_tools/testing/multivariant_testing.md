@@ -67,7 +67,7 @@ Variant A has a consistently higher count of *Unique Recipients* than Variant C.
 
 ## Tips for multivariate and A/B testing
 
-Multivariate and A/B testing can unveil powerful insights regarding your users. To recieve test results that are truly reflective of your users' behaviors, follow these guidelines.
+Multivariate and A/B testing can unveil powerful insights regarding your users. To receive test results that are truly reflective of your users' behaviors, follow these guidelines.
 
 #### Run the test on a large number of users
 
@@ -87,9 +87,12 @@ Before you begin the test, decide how long it will run for and stick to it. Mark
 
 #### Add your test to campaigns before they launch, not after
 
-If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to launched campaign that allows re-entry, the users who re-entry will go down the same path every time to prevent data issues with the test. Additionally, if you change any of the variants while the test is running, the change will invalidate your test and restart it.
+If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to a launched campaign that allows re-entry, users who re-enter the campaign will always go through the same path to prevent data inaccuracies with the test. Additionally, if you change any of the variants while the test is running, the change will invalidate your test and restart it.
 
-For accurate test results, clone the launched campaign, stop the original campaign, and then add the test to the cloned campaign. 
+For accurate test results:
+1. Clone the launched campaign.
+2. Stop the original campaign.
+3. Then, add the test to the cloned campaign. 
 
 #### If possible, include a control group
 
