@@ -93,6 +93,8 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+
 ### Step 3a: Add your sending information
 
 After you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.

@@ -1,3 +1,11 @@
+---
+nav_title: Right-to-Left Messages
+article_title: Creating Right-to-Left Messages
+page_order: 1
+Page_type: reference
+description: "This page covers best practices for crafting messages in Braze that read from right-to-left."
+---
+
 # Creating right-to-left messages
 
 > The final appearance of right-to-left messages depends largely on how service providers (such as Apple, Android, and Google) render them. This page covers best practices for crafting right-to-left messages so that your messages display accurately as much as possible.
@@ -22,7 +30,8 @@ The most common way to craft right-to-left messages in Braze is:
 1. Create a left-to-right message in a Braze editor.
 2. Copy the message text from Braze and then use a localization tool to localize it to a right-to-left message.
 3. Confirm the alignment is properly formatted by using a word processor (such as Word).
-- You can skip this step if you’re creating a drag-and-drop or HTML email message. The drag-and-drop editor allows you to change text direction by selecting a button, and the HTML editor allows you to customize right-to-left alignment. ![The button to toggle between right-to-left and left-to-right text direction in the email drag-and-drop composer.][1]{: style="max-width:50%;"}
+- You can skip this step if you’re creating a drag-and-drop or HTML email message. The drag-and-drop editor allows you to change text direction by selecting a button, and the HTML editor allows you to customize right-to-left alignment. <br><br>![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.][1]{: style="max-width:50%;"}
+
 {: start="4"}
 4. Paste the formatted text into Braze.
 
