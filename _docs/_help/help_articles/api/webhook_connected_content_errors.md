@@ -153,10 +153,6 @@ If you believe the unhealthy host detection may be causing issues, contact [Braz
 
 ## Automated emails and Message Activity Log entries
 
-{% alert important %}
-Automated emails and Message Activity Log entries are currently in early access. Contact your customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 ### Setting up automated emails
 
 If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 

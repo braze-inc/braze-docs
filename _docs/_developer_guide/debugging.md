@@ -9,10 +9,6 @@ description: "Learn how to use the Braze SDK debugger, so you can troubleshoot i
 
 > Learn how to use the Braze SDK's built-in debugger, so you can troubleshoot issues for your SDK-powered channels, without needing to enable verbose logging in your app.
 
-{% alert important %}
-The SDK Debugger is currently in beta. Reach out to your account team to enable it on your account. 
-{% endalert %}
-
 ## Prerequisites
 
 To use the Braze SDK debugger, you'll need `View PII` and `Export User Data` permissions. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
