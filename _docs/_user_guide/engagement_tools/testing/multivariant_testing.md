@@ -87,7 +87,9 @@ Before you begin the test, decide how long it will run for and stick to it. Mark
 
 #### Add your test to campaigns before they launch, not after
 
-If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to launched campaign that allows re-entry, the users who re-entry will go down the same path every time to prevent data issues with the test. For accurate test results, clone the launched campaign, stop the original campaign, and then add the test to the cloned campaign.
+If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to launched campaign that allows re-entry, the users who re-entry will go down the same path every time to prevent data issues with the test. Additionally, if you change any of the variants while the test is running, the change will invalidate your test and restart it.
+
+For accurate test results, clone the launched campaign, stop the original campaign, and then add the test to the cloned campaign. 
 
 #### If possible, include a control group
 
