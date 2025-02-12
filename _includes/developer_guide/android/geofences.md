@@ -1,6 +1,6 @@
 # Geofences
 
-> Learn how to set up geofences for the Braze Android SDK. A [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences) is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
+> Learn how to set up geofences for the Braze Android SDK. A [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences) is a virtual geographic area that forms a circle around a specific global position, and is represented by combining latitude, longitude, and a radius.
 
 ## Prerequisites
 
