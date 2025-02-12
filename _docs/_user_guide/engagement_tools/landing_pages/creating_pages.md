@@ -15,7 +15,7 @@ page_order: 0
 
 Go to **Messaging** > **Landing Pages** and select **Create landing page**, or select the name of an existing one to duplicate it or make changes to it.
 
-![The "Landing Pages" homepage.]({% image_buster /assets/img/landing_pages/create.png %}){: style="max-width:90%;"}
+![The landing pages section in the Braze dashboard.]()
 
 ### Step 2: Enter the page details
 
@@ -41,13 +41,13 @@ We suggest following these best practices:
 
 Select **Launch Editor** to start designing your landing page in the drag-and-drop editor. The editor will preload with a default template that you can customize to fit your use case.
 
-![Landing page template with a form for customer sign-up.]({% image_buster /assets/img/landing_pages/template.png %}){: style="max-width:90%;"}
+![An example landing page being created in the drag-and-drop editor.]()
 
 #### Drag-and-drop blocks
 
 The editor uses two types of components for landing page composition: rows and blocks. All blocks must be placed in a row.
 
-![The "Build" editor section containing "Rows" and "Form Blocks".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:30%;"}
+![The 'Build' section containing 'Rows' and 'Form Blocks'.]()
 
 #### Form block
 
@@ -67,7 +67,7 @@ You can set styles to be applied across all relevent component blocks in your la
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 
-![The page container with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
+![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
 
 ### Step 4: Create a confirmation page
 
@@ -77,9 +77,9 @@ If you added a [form](#form-block) to your landing page in the previous step, cr
 
 You can preview your landing page in the editor's **Preview** tab. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
 
-If you're satisfied with the landing page, select **Publish Landing Page**.
+![A landing page with the menu open to show the "Copy URL" option.]()
 
-![A landing page with the menu open to show the "Copy URL" option.]({% image_buster /assets/img/landing_pages/url_handle.png %}){: style="max-width:90%;"}
+When you're ready, select **Publish Landing Page**.
 
 ## Linking to your landing page
 

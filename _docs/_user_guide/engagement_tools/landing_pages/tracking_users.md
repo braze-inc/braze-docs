@@ -35,9 +35,9 @@ If you change the URL handle after sending your message, any user that attempts 
 
 ### Step 2: Generate the liquid tag
 
-Go to **Messaging** > **Campaigns**, then choose a campaign. Under **Message content**, select **Drag-and-drop editor**.
+Go to **Messaging** > **Campaigns**, then choose a campaign. Under **Message content**, choose an editor.
 
-![The 'Compose Messages' step in Braze with the 'Drag-and-drop editor' option shown.]({% image_buster /assets/img/landing_pages/message-content-options.png %})
+![The 'Compose Messages' step with all message content options listed.]({% image_buster /assets/img/landing_pages/message-content-options.png %})
 
 In the editor, select **Personalization**.
 
@@ -49,7 +49,7 @@ Braze will automatically generate a liquid tag using your [landing page's URL ha
 |**Landing page**|Choose the landing page [you previously created](#prerequisites).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Select **Copy Liquid** to copy the snippet to your clipboard. Your snippet will be similar to the following:
+To add the liquid tag to your message, you can either select **Insert**, or add it manually after copying the snippet to your clipboard. Your snippet will be similar to the following:
 
 {% raw %}
 ```ruby
