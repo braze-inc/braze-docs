@@ -1973,6 +1973,6 @@ validurls['/docs/developer_guide/platforms/android/push_notifications/displaying
 
 validurls['/docs/user_guide/engagement_tools/landing_pages/drag_and_drop/'] = '/docs/user_guide/engagement_tools/landing_pages/creating_pages/';
 validurls['/docs/user_guide/engagement_tools/landing_pages/connect_domain'] = '/docs/user_guide/engagement_tools/landing_pages/customizing_urls/';
-validurls['/docs/user_guide/engagement_tools/landing_pages/data_tracking'] = '/docs/user_guide/engagement_tools/landing_pages/tracking_data/';
+validurls['/docs/user_guide/engagement_tools/landing_pages/data_tracking'] = '/docs/user_guide/engagement_tools/landing_pages/about_tracking_data/';
 
 // validurls['OLD'] = 'NEW';
