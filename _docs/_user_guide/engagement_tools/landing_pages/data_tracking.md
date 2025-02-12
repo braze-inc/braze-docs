@@ -2,7 +2,7 @@
 nav_title: Data Tracking
 article_title: Data Tracking
 description: "This article covers the data that is tracked on landing pages."
-page_order: 3
+page_order: 4
 alias: /landing_pages/data_tracking/
 ---
 
