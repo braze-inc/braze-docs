@@ -85,10 +85,6 @@ You can preview your landing page in the editor's **Preview** tab. After saving 
 
 When you're ready, select **Publish Landing Page**.
 
-## Linking to your landing page
-
-You can include a link to the landing page in any channel by copying and pasting the link into a Braze message or social media campaign.
-
 ## Handling form submission errors
 
 If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior on the landing page preview.
