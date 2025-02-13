@@ -39,4 +39,7 @@ guide_menu_list:
   - name: Add-to-Calendar Links
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
     image: /assets/img/braze_icons/calendar-date.svg
+  - name: Creating Right-to-Left Messages
+    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/
+    image: /assets/img/braze_icons/globe-02.svg
 ---
