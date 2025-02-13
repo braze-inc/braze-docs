@@ -2,7 +2,7 @@
 nav_title: Right-to-Left Messages
 article_title: Creating Right-to-Left Messages
 page_order: 1
-Page_type: reference
+page_type: reference
 description: "This page covers best practices for crafting messages in Braze that read from right-to-left."
 ---
 
@@ -39,7 +39,7 @@ The most common way to craft right-to-left messages in Braze is:
  
 ### Long push notifications
 
-The copy and paste method for push messages can be challenging to use with longer push notifications because longer content may render into multiple lines on a mobile device. If you copy your message text from outside of Braze (such as a Word document) and directly paste it into Braze, the sentence alignment and word placement may change. To avoid this scenario, you should copy and paste in installments and add a line break. For example, copy and paste the first five words, add a line break, copy the next five words, add a line break, and so on.
+The copy-and-paste method for push messages can be challenging to use with longer push notifications because longer content may render into multiple lines on a mobile device. If you copy your message text from outside of Braze (such as a Word document) and directly paste it into Braze, the sentence alignment and word placement may change. To avoid this scenario, copy and paste in installments and add a line break. For example, copy and paste the first five words, add a line break, copy the next five words, add a line break, and so on.
 
 The preview and test functions are built for left-to-right messages, so right-to-left messages won’t render properly in the **Preview & Test** section but will render properly on user devices if their settings are configured for it. We suggest sending messages to yourself in a live environment to confirm that they render properly based on device settings.
 
