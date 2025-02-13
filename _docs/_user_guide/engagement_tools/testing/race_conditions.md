@@ -64,9 +64,11 @@ If you’re using multiple endpoints, you can try staggering your requests so th
 
 If you're sending a scheduled message API request, these requests must be separate, and a user must be created before sending the scheduled API request.
 
-#### Use API trigger properties and user attribute objects to include key data with the trigger
+#### Include key data with the trigger
 
-Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call for the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). When these objects are included with the trigger, the attributes will be processed first, before the message is triggered, eliminating potential race conditions.
+Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call using the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). 
+
+When these objects are included with the trigger, the attributes will be processed first, before the message is triggered, eliminating potential race conditions. Note that trigger properties don't update the user profile, but are used in the context of the message only.
 
 #### Use the POST: Track users (bulk) endpoint
 
@@ -96,7 +98,7 @@ For example, if your campaign trigger is “Has made a purchase” and your audi
 
 #### Avoid audience filters that assume the trigger event has been updated
 
-This best practice is similar to avoiding redundant filters with the trigger event. Usually, a filter that assumes the trigger event is updated to the user profile will fail. In some cases, the user might be part of the audience as intended, but usually will not be.
+This best practice is similar to avoiding redundant filters with the trigger event. Usually, a filter that assumes the trigger event is updated to the user profile will fail.
 
 #### Use Liquid aborts (attributes only)
 
