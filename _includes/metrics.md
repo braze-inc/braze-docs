@@ -127,11 +127,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-<i>Lifetime Value Per User</i> is the average of the sum of the campaign and Canvas revenue for a given day.
+<i>Lifetime Value Per User</i> is the <i>Lifetime revenue</i> divided by your total <i>Users</i> (located on your home page).
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
-<i>Average Daily Revenue</i> is the <i>Lifetime revenue</i> divided by your total <i>Users</i> (located on your home page).
+<i>Average Daily Revenue</i> is the average of the sum of the campaign and Canvas revenue for a given day.
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}

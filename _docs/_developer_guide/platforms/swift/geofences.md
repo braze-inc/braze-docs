@@ -21,7 +21,6 @@ As of iOS 14, geofences do not work reliably for users who choose to give their 
 
 Before you start, you'll need to complete the following:
 
-- Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
 - To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/silent/) enabled in addition to completing the standard push integration.
 
 ## Setting up geofences

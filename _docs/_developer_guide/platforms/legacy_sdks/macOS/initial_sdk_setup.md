@@ -25,7 +25,7 @@ Once your app supports Catalyst, follow [these instructions to use Swift Package
 
 ## Supported features
 
-Braze supports [push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/#content-cards-data-model), [in-app messages]({{site.baseurl}}/developer_guide/platforms/swift/analytics/location_tracking/), and [automatic location collection]({{site.baseurl}}/developer_guide/platforms/swift/analytics/location_tracking/) when running on Mac Catalyst.
+Braze supports [push notifications]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/), [Content Cards]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/#content-cards-data-model), [in-app messages]({{site.baseurl}}/developer_guide/platforms/swift/analytics/location_tracking/), and [automatic location collection]({{site.baseurl}}/developer_guide/platforms/swift/analytics/location_tracking/) when running on Mac Catalyst.
 
 Note that Push Stories, rich push, and geofences are not supported on macOS.
 

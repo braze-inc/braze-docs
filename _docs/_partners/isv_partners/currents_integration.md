@@ -418,9 +418,13 @@ Just like our [data warehouse storage schemas]({{site.baseurl}}/user_guide/data/
 
 ## Error handling and retry mechanism
 
-If an error occurs, Braze will queue and retry the request based on the HTTP return code received. Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
+If an error occurs, Braze will queue and retry the request based on the HTTP return code received. It will continue to retry for at least two days, as long as data is buffered in the system. If data is stuck for more than 24 hours, our on-call engineers will be alerted automatically. At this time, our backoff strategy is to retry periodically.
 
-{% alert important %}
+If your Currents integration starts returning `4XX` errors, Braze will automatically send you a notification email and automatically extend the retention period to a minimum of seven days.
+
+Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
+
+{% alert warning %}
 If Braze's retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
 {% endalert %}
 

@@ -68,7 +68,7 @@ After creating your Content Block, you can insert it in your messages by followi
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
 {% alert note %}
-Canvas entry properties and event properties are only supported in a Canvas, not in the Content Block.
+Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 {% endalert %}
 
 ### Updating and copying Content Blocks
@@ -77,9 +77,9 @@ If you choose to update a Content Block, it will update in all messages the Cont
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
+After making edits to a Content Block, you can save and launch the updated Content Block by selecting **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
 
-![][2]
+![A Content Block that reads "Welcome to our newsletter".][2]
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) a Content Block. This creates a draft copy of the Content Block.
 
@@ -89,7 +89,7 @@ After adding a Content Block in an active campaign or Canvas, you can preview th
 
 This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
 
-![][7]{: style="max-width:60%;"} 
+![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.][7]{: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
@@ -110,8 +110,8 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 #### Best practices
 
 - When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
-- When your block only has a typo or needs a minor change, we do not recommend archiving the block. Just update and get sending!
-- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
+- When your block only has a typo or needs a minor change, we do not recommend archiving the block. Instead, update the block and get sending!
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. This will ensure no outdated information is included in any newly sent emails.
 - If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace][4]
