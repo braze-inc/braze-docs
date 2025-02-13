@@ -6,6 +6,22 @@ hidden: true
 
 # Partner custom Currents connector
 
+## Integration Overview
+Braze will invoke a REST API (JSON over HTTPS) that conforms to the specification in this document. To configure a new Custom Currents Connector on the Braze side, a customer need only provide an endpoint URL and an optional Authentication Token. Note that Currents Connectors are configured at the App Group level, so customers with multiple App Groups will need to configure at least one Custom Currents Connector per App Group. They can all point to the same endpoint, or to an endpoint with an additional GET parameter (e.g. customer_app_group_key=”Brand A”).
+
+Braze batches events based on a combination of number of queued events (e.g. if batch size is configured for 200 events and there are 200 events in the queue) and time (we typically won’t queue events for more than 15 minutes). Each event type has a separate queue, so latency will vary across event types..
+
+## Non-Functional Requirements
+Braze makes every reasonable effort to prevent data loss. For many types of errors (e.g. server errors, network connection errors), we will continue to retry event transmission. Braze will continue to queue and retry transmission for up to 24 hours, after which we will drop untransmitted events. Connectors displaying consistently poor uptime/error rates will be automatically suspended.
+
+To avoid data loss and service interruption, it is strongly recommended that customers monitor their endpoints 24x7 and aim to address hard errors or downtime within 24 hours.
+
+## Change Resilience
+Braze may, from time to time, make non-breaking changes to Currents schemas. A non-breaking change is a new nullable column, or a new event type. We typically aim to provide at least 2 weeks’ notice for such changes but don’t guarantee it. As such, Braze strongly recommends that customer implementations are resilient to unrecognized fields and event types. 
+
+A brittle integration that isn’t properly monitored will likely lead to data loss at some point. Please refer to the Non-Functional Requirements section.
+
+
 ## Serialization and data format
 
 The target data format is JSON over HTTPS. Events will be grouped into batches of 100 events by default, and sent to the endpoint as a JSON array containing all of the events. The batches will be sent in the following format:
@@ -15,6 +31,11 @@ The target data format is JSON over HTTPS. Events will be grouped into batches o
 There will be a top-level JSON object with the key "events" that maps to an array of further JSON objects, each representing a single event.
 
 The following examples are for _individual_ events (such as they would be part of the larger array of JSON objects, with each JSON object representing a single event in the batch).
+
+Note that Braze may add fields to events and new events from time to time. Customers should design their integrations to be resilient to such changes and refer to our [documentation](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events) for up-to-date event schemas. Note that, per the below examples, the structure for Custom Connector events is slightly different from the flat structure in the general documentation linked above. In particular, there are two sub-objects, “user”, which contains user properties such as user_id, external_user_id, device_id, and timezone, and “properties”, which contains attributes of an event, like the app/campaign/canvas/platform to which it applies. 
+
+In the case where the downstream endpoint receives either a payload with zero events, or an empty request body, the result should be considered a no-op, and no downstream effects should happen as a result of this call. However, the request's Authorization header should be checked anyway as if it were a normal API call, and an appropriate HTTP response should be given (401 or 403) if the credentials are not valid. This will enable us to use this mechanism to verify that our connector is configured with the proper credentials.
+
 
 ### Campaign-associated events
 
@@ -324,6 +345,8 @@ Per RFC 6750, the header, if present, will be constructed using the following fo
 So for example, if the API token is `0p3n5354m3==`, the Authorization header will look like this:
 
 `Authorization: Bearer 0p3n5354m3==`
+
+Note that authentication must be validated even if there are no events in the payload. Braze may make such calls to confirm credentials are up to date.
 
 ## Versioning
 
