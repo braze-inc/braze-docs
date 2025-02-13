@@ -68,7 +68,7 @@ After creating your Content Block, you can insert it in your messages by followi
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
 {% alert note %}
-Canvas event properties are only supported in a Canvas, not in the Content Block. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
+Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 {% endalert %}
 
 ### Updating and copying Content Blocks
