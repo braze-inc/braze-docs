@@ -27,7 +27,7 @@ This table lists the operators that are supported. Note that parentheses are inv
 
 ## Tutorials
 
-Let's go through a few tutorials to learn how use these operators for your marketing campaigns:
+Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
 
 ### Choose message with an integer custom attribute
 
@@ -88,7 +88,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 
 ### Choose message with a string custom attribute
 
-Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use an string custom attribute called `recent_game` to check which game a user has last played.
+Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
 1. Begin a conditional statement that uses the equals (`==`) operator to check if a user's most recent game is Awkward Dinner Party. Then, create a message to send to those users.
 
@@ -100,7 +100,7 @@ You are formally invited to our next dinner party. Log on next week for another 
 {% endraw %}
 
 {: start="2"}
-2. Use the `eslif` tag with the equals (`==`) operator to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
+2. Use the `elsif` tag with the equals (`==`) operator to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
