@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3. Use the `eslif` tag with the does not equal (`=!`) operator to check if user has a most recent game that isn't Awkward Dinner Party or Proxy War 3: War of Thirst. Then, create a message to send to those users.
+3. Use the `elsif` tag with the does not equal (`!=`) operator to check if user has a most recent game that isn't Awkward Dinner Party or Proxy War 3: War of Thirst. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} =! 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -188,7 +188,7 @@ You can abort a message based on just about anything. Let's abort a message if a
 
 {% raw %}
 ```liquid
-{% if {{${time_zone.$}}} == 'America/Los_Angeles' %}
+{% if {{${time_zone}}} == 'America/Los_Angeles' %}
 Stream now!
 ```
 {% endraw %}
@@ -207,7 +207,7 @@ Stream now!
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
-{% if {{${time_zone.$}}} =='America/Los_Angeles' %}
+{% if {{${time_zone}}} =='America/Los_Angeles' %}
 Stream now!
 {% else %}
 {% abort_message () %}
