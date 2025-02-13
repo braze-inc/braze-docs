@@ -35,6 +35,10 @@ To create a bucket for your app, do the following:
 3. Select **Create Bucket** on the next screen. 
 4. You'll be prompted to create your bucket and select a region.
 
+{% alert note %}
+Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
+{% endalert %}
+
 ## Integration
 
 Braze has two different integration strategies with Amazon S3—one for [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and one for all dashboard data exports (such as CSV exports or engagement reports). Both integrations support two different authentication or authorization methods:

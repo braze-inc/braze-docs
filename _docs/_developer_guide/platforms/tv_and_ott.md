@@ -264,8 +264,8 @@ Platforms that support in-app messages or Content Cards via headless UI **do not
 With headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. For more information about custom handling messaging, see the following:
 
 **Android SDK**
-- [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)
-- [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)
+- [In-App Message Customization]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/listeners/)
+- [Content Cards Customization]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
