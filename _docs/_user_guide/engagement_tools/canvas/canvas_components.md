@@ -13,24 +13,27 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Message Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    image: /assets/img/braze_icons/message-square-02.svg
-  - name: Delay Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: Decision Split Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Audience Paths Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    image: /assets/img/braze_icons/users-01.svg 
   - name: Action Paths Step  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
+  - name: Audience Paths Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Context Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
+    image: /assets/img/braze_icons/user-circle.svg
+  - name: Decision Split Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    image: /assets/img/braze_icons/dataflow-04.svg
+  - name: Delay Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Experiment Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
+  - name: Message Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
