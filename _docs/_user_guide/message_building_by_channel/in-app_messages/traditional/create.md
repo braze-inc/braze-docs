@@ -186,27 +186,33 @@ The **Compose** tab allows you to edit all aspects of your message's content and
 
 The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
-#### Language
+### Language
 
 Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
 
-#### Image
+### Image
 
 Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch!
 
-#### Header and body
+### Header and body
 
 Write anything you want! Include completely custom copy (often with custom HTML capabilities) with the options to include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) and other types of personalization. The faster you can get your message across and get your customer clicking—the better! We recommend clear and concise headers and message content.
 
 Some message types do not need and therefore do not ask for headers.
 
-{% alert tip %}
+#### Tips 
+
+##### Generating AI copy
+
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Message field of the in-app message composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
-{% endalert %}
 
-#### Button text {#buttons}
+##### Creating right-to-left messages
+
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+
+### Button text {#buttons}
 
 When available for your message type, you can have up to two buttons appear under your body of text. You can create and edit custom button text and color. You can also add Terms of Service Link within email capture forms.
 
@@ -214,11 +220,11 @@ When available for your message type, you can have up to two buttons appear unde
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message instead of leaving room for an additional button.
 
-##### Choosing a primary button
+#### Choosing a primary button
 
 If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
 
-#### On-click behavior {#button-actions}
+### On-click behavior {#button-actions}
 
 When your customer clicks on a button in your in-app message, the following actions are available. 
 
@@ -236,26 +242,26 @@ Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom At
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-#### iOS device options
+### iOS device options
 
 If desired, you can restrict your in-app message to only send to iOS devices. To do so, click **Change** and select **Only send to iOS devices**.
 
-#### Message close
+### Message close
 
 Choose between the following options:
  
 - **Dismiss Automatically:** Select how many seconds the message will remain on the screen.
 - **Wait for User Swipe or Touch:** Requires a dismissal or close option.
 
-#### Slide up position
+### Slide up position
 
 This setting only applies to the Slideup message type. Choose between having your slideup appear **From Bottom of App Screen** or **From Top of App Screen**.
 
-#### HTML and assets
+### HTML and assets
 
 This setting only applies to the Custom code message type. Copy and paste HTML into the available space and upload your assets using a ZIP file.
 
-#### Email capture input placeholder
+### Email capture input placeholder
 
 This setting only applies to the email capture form message type. Enter custom copy that will appear as the placeholder text for the email input field. This defaults to "Enter your email address".
 
