@@ -33,7 +33,7 @@ Let's go through a few tutorials to learn how use these operators for your marke
 
 Let's send push notifications with personalized promotional discounts to users who have and haven't made purchases. This will use an integer custom attribute called `total_spend` to check a user's total spend.
 
-1. Begin a conditional statement that checks if a user's total spend is greater than `0` to capture users who've made purchases. Then, create a message to send to those users.
+1. Begin a conditional statement that uses the greater than (`>`) operator checks if a user's total spend is greater than `0` to capture users who've made purchases. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -90,7 +90,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 
 Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use an string custom attribute called `recent_game` to check which game a user has last played.
 
-1. Begin a conditional statement that checks if a user's most recent game is Awkward Dinner Party. Then, create a message to send to those users.
+1. Begin a conditional statement that uses the equals (`==`) operator to check if a user's most recent game is Awkward Dinner Party. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -100,7 +100,7 @@ You are formally invited to our next dinner party. Log on next week for another 
 {% endraw %}
 
 {: start="2"}
-2. Use the `eslif` tag to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
+2. Use the `eslif` tag with the equals (`==`) operator to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -110,7 +110,17 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users whose recent game isn't Awkward Dinner Party or Proxy War 3: War of Thirst, and users who don't have a recent game. Then, create a message to send to those users.
+3. Use the `eslif` tag with the does not equal (`=!`) operator to check if user has a most recent game that isn't Awkward Dinner Party or Proxy War 3: War of Thirst. Then, create a message to send to those users.
+
+{% raw %}
+```liquid
+{% elsif {{custom_attribute.${recent_game}}} =! 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+{% endraw %}
+
+{: start="4"}
+4. Add the {% raw %}`{% else %}`{% endraw %} tag to capture users who don't have a recent game. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -119,8 +129,8 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{: start="4"}
-4. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+{: start="5"}
+5. Close the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
 
 {% raw %}
 ```liquid
@@ -135,6 +145,8 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
+{% elsif {{custom_attribute.${recent_game}}} =! 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endif %}
@@ -156,7 +168,13 @@ If a user's most recent game is Proxy War 3: War of Thirst, they will receive th
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-If a user hasn't played any games, or that custom attribute doesn't exist on their profile, they'll get this message:
+If a user has recently played a game that wasn't Awkward Dinner Party or Proxy War 3: War of Thirst, they'll get this message:
+
+```
+Limited Time Deal! Get 15% off our best-selling classics!
+```
+
+If a user hasn't played any games or that custom attribute doesn't exist on their profile, they'll get this message:
 
 ```
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -164,8 +182,29 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 
 ### Abort message based on location
 
-You can abort a message based on just about anything. The following example shows how you can abort a message if a user is not based in a specified area, as they might not qualify for the promotion, show, or delivery.
+You can abort a message based on just about anything. Let's abort a message if a user isn't based in a specified area, as they might not qualify for the promotion, show, or delivery.
 
+1. Begin a conditional statement with the equals (`==`) operator that checks if the user's time zone is `America/Los_Angeles`, then create a message to send to those users. 
+
+{% raw %}
+```liquid
+{% if {{${time_zone.$}}} == 'America/Los_Angeles' %}
+Stream now!
+```
+{% endraw %}
+
+{: start="2"}
+2. Now use the {% raw %}`{% else %}`{% endraw %} tag to capture users who are outside the `America/Los_Angeles` time zone, follow with {% raw %}`{% abort_message () %}`{% endraw %} to specify that those users shouldn't receive any message, and end the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+
+{% raw %}
+```liquid
+{% else %}
+{% abort_message () %}
+{% endif %}
+```
+{% endraw %}
+
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone.$}}} =='America/Los_Angeles' %}
@@ -175,6 +214,7 @@ Stream now!
 {% endif %}
 ```
 {% endraw %}
+{% enddetails %}
 
 ![A push notification composer with the full Liquid code from the tutorial.][26]
 
