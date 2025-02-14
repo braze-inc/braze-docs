@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments becuase it would create a cycle (segment A includes segment B which includes segment A) that may increase the time it takes to calculate exact statistics and complete related actions. You must recreate the segment you're trying to include by using the same filters.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments because double-nested segments may create a cycle (segment A includes segment B which includes segment A) resulting in impossible criteria. Further nesting introduces complexity that may increase the time it takes to calculate exact statistics and complete related actions. You must recreate the segment you're trying to include by using the same filters.
     tags:
       - Segment or CSV membership
   - name: Braze Segment Extensions
