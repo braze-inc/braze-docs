@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Context Properties and Event Properties
+nav_title: Context Properties and Event Properties
 article_title: Canvas Context Properties and Event Properties
 page_order: 4.2
 page_type: reference
@@ -12,7 +12,7 @@ tool: Canvas
 > Learn about Canvas context properties and event properties, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
-Canvas context properties refer to Canvas entry properties. Canvas context properties are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
+Canvas context properties include Canvas entry properties. <br><br>Canvas context properties are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
 ## How these properties work
