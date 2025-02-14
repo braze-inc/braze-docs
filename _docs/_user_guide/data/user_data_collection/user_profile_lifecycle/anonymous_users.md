@@ -21,9 +21,21 @@ You can do the following with captured anonymous users:
 - Complete a user’s profile when they log in, so that you can cancel messaging on other platforms (such as not sending a “free shipping on 1st app order” message when the user already has made app orders)
 - Engage with users who show an intent to exit by encouraging them to create a profile, checkout their cart, or take another action
 
+## How it works
+
+When a user first uses Braze on a device, they are considered "anonymous". This user will remain anonymous until an `external_id` is assigned to that user's profile by a `changeuser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)), and then will become known. Once an anonymous user becomes known, they can't reverted to an anonymous user, but uninstalling and reinstalling an app will generate a new anonymous user ID for that user. 
+
+### When users are identified on new devices
+
+If a user is identified on a device where they **have never** been identified before, all their previous activity on that device as an anonymous user will be saved and linked to their newly identified profile. This means that all their attributes, events, and history will be attributed to them, even though they were anonymous at the time.
+
+### When users are identified on old devices
+
+If a user is identified on a device where they **have been** identified before, any previous activity that was already sent to the server from the anonymous user on that device will become "orphaned". In other words, that activity won't be linked to any future users. These "orphaned" users aren't included in user counts and won't receive any messages. This is because their activity isn't associated with an identified user, so there's no way to attribute their actions to a specific user.
+
 ## Assigning user aliases
 
-Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: user aliases. This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
+Anonymous users don’t have `external_ids`, but you can assign anonymous user profiles with an alternative identifier: [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases). This allows you to take the same actions on an anonymous user profile as if they were identified by `external_ids`. For example, you can use the Braze API to log events and attributes associated with anonymous users, and target those users in your messaging with the segmentation filter [External User ID is blank]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#external-user-id).
 
 ## Merging anonymous users  
 

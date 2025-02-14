@@ -997,7 +997,8 @@ validurls['/docs/user_guide/onboarding_with_braze/learning_to_use_braze/'] = '/d
 validurls['/docs/user_guide/onboarding_with_braze/web_sdk/'] = '/docs/user_guide/getting_started/web_sdk/';
 validurls['/docs/user_guide/onboarding_with_braze/integration/'] = '/docs/user_guide/getting_started/integration/';
 validurls['/docs/user_guide/onboarding_with_braze/terms_to_know'] = '/docs/user_guide/getting_started/terms_to_know/';
-validurls['/docs/user_guide/getting_started/users_segments/anonymous_users/'] = '/docs/user_guide/data/user_data_collection/anonymous_users/';
+validurls['/docs/user_guide/getting_started/users_segments/anonymous_users/'] = '/docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/';
+validurls['/docs/user_guide/data/user_data_collection/anonymous_users/'] = '/docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/';
 
 validurls['/docs/user_guide/onboarding_with_braze/data_points#data-points'] = '/docs/user_guide/data_and_analytics/data_points/';
 validurls['/docs/user_guide/onboarding_with_braze/data_points'] = '/docs/user_guide/data_and_analytics/data_points/';
