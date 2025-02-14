@@ -80,7 +80,9 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 ![Segmenter filter groups with the AND operator.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This is because double-nested segments may create a cycle (segment A includes segment B which includes segment A) resulting in impossible criteria. Further nesting introduces complexity that may increase the time it takes to calculate exact statistics and complete related actions. You must recreate the segment you're trying to include by using the same filters.
+Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
+
+Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
 {% endalert %}
 
 #### Exclusion groups (optional) {#exclusion}
