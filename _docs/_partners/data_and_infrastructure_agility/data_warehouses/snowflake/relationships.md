@@ -16,7 +16,7 @@ search_tag: Partner
 {% sdktab Content Cards %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -26,7 +26,7 @@ search_tag: Partner
 {% sdktab Email %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -36,7 +36,7 @@ search_tag: Partner
 {% sdktab Feature Flags %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -46,7 +46,7 @@ search_tag: Partner
 {% sdktab In-App Messages %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -56,7 +56,7 @@ search_tag: Partner
 {% sdktab News Feed %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -66,7 +66,7 @@ search_tag: Partner
 {% sdktab Push Notifications %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -76,7 +76,7 @@ search_tag: Partner
 {% sdktab SMS %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -86,7 +86,7 @@ search_tag: Partner
 {% sdktab Webhook %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -96,7 +96,7 @@ search_tag: Partner
 {% sdktab unity %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -106,7 +106,7 @@ search_tag: Partner
 {% sdktab unreal engine %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
@@ -116,7 +116,7 @@ search_tag: Partner
 {% sdktab WhatsApp %}
 ## Entity Relationship Diagram (ERD)
 
-![ALT_TEXT.]()
+![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
 
 ## Relationship tables
 
