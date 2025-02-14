@@ -7,7 +7,7 @@ description: "This reference article describes how to create back-in-stock notif
 
 # Back-in-stock notifications
 
-> Using a combination of back-in-stock notifications through Braze catalogs and a Canvas, you can notify customers when an item is back-in-stock. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item is replenished.
+> Use a combination of back-in-stock notifications through Braze catalogs and a Canvas to notify customers when an item is back in stock. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item is replenished.<br><br>This page covers how back-in-stock notifications work and how you can set up and use them.
 
 When a user triggers a custom event for an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. When the item's inventory quantity meets your inventory rule (such as an inventory larger than 100), all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 
