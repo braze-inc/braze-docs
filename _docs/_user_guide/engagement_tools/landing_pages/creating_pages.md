@@ -44,7 +44,7 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 The drag-and-drop editor will preload with a default template that you can customize to fit your use case.
 
-![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/editor.png %})
+![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/template.png %})
 
 #### Drag-and-drop blocks
 
