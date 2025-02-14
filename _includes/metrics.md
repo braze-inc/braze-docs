@@ -175,7 +175,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
-<i>Read Rate</i> The percentage of sends that resulted in a read. This is only given for users who have read receipts turned on.
+<i>Read Rate</i> is the percentage of sends that resulted in a read. This is only given for users who have read receipts turned on.
 {% endif %}
 
 {% if include.metric == "Received" %}
@@ -207,7 +207,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Sends to Carrier Rate" %}
-<i>Sends to Carrier Rate</i> is the percentage of total messages sent that were classified as <i>Sends to Carrier</i>. This includes instances where carriers don’t provide delivery or rejected confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of send. This metric is deprecated, but will continue to be supported for users that already have it.
+<i>Sends to Carrier Rate</i> is the percentage of total messages sent that were classified as <i>Sends to Carrier</i>. This includes instances where carriers don’t provide delivery or reject confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of sending. This metric is deprecated but will continue to be supported for users who already have it.
 {% endif %}
 
 {% if include.metric == "Spam" %}
