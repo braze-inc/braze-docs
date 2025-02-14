@@ -41,7 +41,6 @@ We suggest following these best practices:
 
 If you haven't already, select **Save as draft**. To start customizing your page, select **Edit landing page**.
 
-![The landing page previewing showing the option to edit the page.]({% image_buster /assets/img/landing_pages/select-edit-landing-page.png %})
 
 The drag-and-drop editor will preload with a default template that you can customize to fit your use case.
 
