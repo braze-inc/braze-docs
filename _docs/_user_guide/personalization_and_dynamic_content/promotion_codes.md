@@ -9,7 +9,7 @@ description: "This reference article covers how to create promotion code lists a
 
 # Promotion codes
 
-> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases.
+> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases.<br><br>This page covers how to create promotion code lists and add them to your campaigns and Canvases.
 
 With Braze Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
@@ -59,7 +59,7 @@ You also have the option to set up optional and customized threshold alerts. If 
 
 ### Step 4: Promotion code upload
 
-Braze does not manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
+Braze doesn't manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. Make sure the CSV file follows these guidelines:
 
 - Includes a column for promotion codes.
 - Has one promotion code per row.
@@ -81,7 +81,7 @@ After selecting save, a new row will appear in the **Import History**. To refres
 ![][8]
 
 {% alert note %}
-Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import is finished, you will see the status change to **Complete** in the table.
+Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import finishes, the status will change to **Complete** in the table.
 {% endalert %}
 
 #### Updating a promotion code list
