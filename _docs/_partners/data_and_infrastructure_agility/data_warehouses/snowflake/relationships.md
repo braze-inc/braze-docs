@@ -2,10 +2,8 @@
 nav_title: "Relationships"
 article_title: Snowflake and Braze Relationships
 page_order: 10
-description: "TODO."
 page_type: partner
 search_tag: Partner
-
 ---
 
 # Snowflake and Braze Relationships
@@ -91,26 +89,6 @@ search_tag: Partner
 ## Relationship tables
 
 {% multi_lang_include snowflake_users_messages/webhook.md %}
-{% endsdktab %}
-
-{% sdktab unity %}
-## Entity Relationship Diagram (ERD)
-
-![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
-
-## Relationship tables
-
-{% multi_lang_include snowflake_users_messages/CONTENTCARD.md %}
-{% endsdktab %}
-
-{% sdktab unreal engine %}
-## Entity Relationship Diagram (ERD)
-
-![ALT_TEXT.]({% image_buster /assets/img/placeholder_entity_relationship_diagram.jpg %}){: style="max-width:70%;"}
-
-## Relationship tables
-
-{% multi_lang_include snowflake_users_messages/CONTENTCARD.md %}
 {% endsdktab %}
 
 {% sdktab WhatsApp %}
