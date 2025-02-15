@@ -39,28 +39,45 @@ We suggest following these best practices:
 
 ### Step 3: Customize the page
 
-If you haven't already, select **Save as draft**. To start customizing your page, select **Edit landing page**.
-
-
-The drag-and-drop editor will preload with a default template that you can customize to fit your use case.
+If you haven't already, select **Save as draft**. To start customizing your page, select **Edit landing page**. The drag-and-drop editor will preload with a default template that you can customize to fit your use case.
 
 ![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/template.png %})
 
-#### Drag-and-drop blocks
-
-The editor uses two types of components for landing page composition: rows and blocks. All blocks must be placed in a row.
+The editor uses two types of components for landing page composition: [basic blocks](#basic-blocks) and [form blocks](#form-blocks). All blocks must be placed in a row.
 
 ![The 'Build' section containing 'Rows' and 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
-#### Form block
+#### Basic blocks
 
-Use various form block components to log custom and standard profile attributes and custom events. The input field form block can log both standard and custom attributes for your users, and the phone capture and email capture form blocks can capture phone and email fields for your users' form submissions. Button actions can be logged as custom attributes, custom events, or both on form submission. 
+You can use these blocks to add content and customize the layout of your landing page.
 
-If you include a form block, each button will have the option to submit the form. However, you'll need to create a separate landing page for the [confirmation state](#confirmation-state).
+| Block Type   | Description |
+|-------------|-------------|
+| Title       | A text block for adding a heading or title to your content. Useful for structuring sections and improving readability. |
+| Paragraph   | A text block for longer descriptions or additional context. Supports rich text formatting. |
+| Button      | A clickable element that directs users to a specified action, such as opening a link or submitting a form. |
+| Image       | A block for displaying images. You can upload an image or provide a URL to reference an external source. |
+| Link        | A hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
+| Spacer      | An invisible block that adds vertical spacing between elements for improved layout and readability. |
+| Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Form blocks
+
+You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the [confirmation state](#confirmation-state).
 
 ![A form block that registers a new customer and will send a discount code to their email.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
-{% alert tip %}
+| Block Type     | Description |
+|---------------|-------------|
+| Email Capture | A form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
+| Phone Capture | A form field for phone numbers. When submitted, the user is subscribed to your SMS or Whatsapp subscription group. |
+| Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
+| Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
+| Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert important %}
 After creating a landing page with a form, be sure to embed its [landing page liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
 
