@@ -19,7 +19,7 @@ guide_featured_list:
   - name: 遅延 ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: 条件分岐 ステップ
+  - name: 条件分岐ステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     image: /assets/img/braze_icons/dataflow-04.svg
   - name: オーディエンス パス ステップ
@@ -28,7 +28,7 @@ guide_featured_list:
   - name: アクション パス ステップ  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
-  - name: 実験パス ステップ
+  - name: 実験パスステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
   - name: ユーザー 更新 ステップ
@@ -46,13 +46,9 @@ guide_featured_list:
 
 キャンバスコンポーネントを使用すると、新しいユーザージャーニーを開拓してプロセスを改善し、オーディエンスへの働きかけの効果を高めることができます。
 
-{% alert important %}
-2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、従来のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。これは、キャンバスの構築と管理をより良く行う目的で改良された編集エクスペリエンスです。「[キャンバスからキャンバスフローへの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)」を参照してください。
-{% endalert %}
-
 ### ユーザージャーニーのカスタマイズ
 
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![条件分岐ステップの後に遅延ステップとメッセージステップが続くキャンバスユーザー体験の例]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [アクションパス][1]を使用すると、アクションや購入などのエンゲージメントイベントに基づいてユーザージャーニーを分岐させることができます。オーディエンスをフィルタリングしでターゲティングしたい場合、[オーディエンスパス][2]を利用すると、オーディエンスの条件に基づいてユーザーをさまざまなキャンバスパスに誘導できるため、ユーザーのターゲット設定が簡単になります。
 
@@ -61,9 +57,11 @@ guide_featured_list:
 [延期期間][4]コンポーネントを使うと、キャンバス内の 1 つのステップを延期することができます。キャンバスのこのスタンドアロンの延期期間ステップは、特定の時刻にユーザーにメッセージを伝えるのに最適です。さらに、延期期間コンポーネントを使用すると、オーディエンスがコンポーネントの条件を満たすまでの時間を長くできるので、オーディエンスへの働きかけを増やすこともできます。 
 
 ### テスト
-ユーザージャーニーを作成するときは、最も効果的なキャンバスパスもテストすることをお勧めします。[実験パス][5]を使用すると、任意のステップで複数のキャンバスパスをテストできます。 
 
-### 統合 
+ユーザージャーニーを作成するときは、最も効果的なキャンバスパスもテストすることをお勧めします。[実験パス][5]を使用すると、任意のステップで複数のキャンバスパスをテストできます。ステップ間の接続をハイレベルのプレビューとして使用することもできます。オレンジ色の接続は、直前のステップがユーザーを次のステップに進ませることを示します。
+
+### 統合
+
 貴社ブランドのファーストパーティユーザーデータとの同期をご希望の場合には、[Facebook][6] と [Google][7] で利用できるオーディエンス同期オプションをご活用ください。<br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths

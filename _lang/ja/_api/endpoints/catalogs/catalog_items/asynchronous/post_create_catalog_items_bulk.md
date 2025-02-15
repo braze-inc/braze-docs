@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:複数のカタログアイテムを作成"
-article_title: "POST:複数のカタログアイテムを作成"
+nav_title: "POST:複数のカタログ項目を作成"
+article_title: "POST:複数のカタログ項目を作成"
 search_tag: Endpoint
 page_order: 3
 
@@ -15,9 +15,9 @@ description: "この記事では、複数のカタログアイテムを作成す
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログに複数のアイテムを作成します。 
+> このエンドポイントを使用して、カタログに複数のアイテムを作成します。
 
-各リクエストは最大50個の項目まで対応できます。このエンドポイントは非同期です。
+各リクエストは最大50個の項目まで対応できます。このエンドポイントは非同期である。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
 
@@ -29,19 +29,19 @@ description: "この記事では、複数のカタログアイテムを作成す
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
-## パスパラメータ
+## パスパラメーター
 
 | パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログの名前。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `items` | required | 配列 | アイテムオブジェクトを含む配列。アイテムオブジェクトには、カタログのすべてのフィールドが含まれている必要があります。リクエストごとに最大50個の項目オブジェクトが許可されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `items` | required | 配列 | アイテム・オブジェクトを含む配列。アイテムオブジェクトには、カタログのすべてのフィールドが含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -108,11 +108,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 応答
 
-このエンドポイントには、`202`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
-ステータスコード `202` は次の応答本文を返す可能性があります。
+ステータスコード `202` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -120,9 +120,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 }
 ```
 
-### 例外エラー応答
+### エラー応答例
 
-ステータスコード `400` は次の応答本文を返す可能性があります。エラーに関する詳細は[トラブルシューティング](#troubleshooting)を参照してください。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -148,19 +148,19 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `catalog-not-found` | カタログ名が有効であることを確認してください。 |
-| `ids-not-strings` | アイテムIDは文字列でなければなりません。 |
-| `ids-not-unique` | リクエスト内のアイテムIDは一意でなければなりません。 |
+| `catalog-not-found` | カタログ名が有効であることを確認する。 |
+| `ids-not-strings` | 項目 ID は文字列型でなければなりません。 |
+| `ids-not-unique` | 項目 ID はリクエスト内で一意でなければなりません。 |
 | `ids-too-large` | 項目 ID は250文字以内にする必要があります。 |
-| `invalid-ids` | アイテムIDには、文字、数字、ハイフン、アンダースコアのみを含めることができます。 |
-| `invalid-fields` | APIリクエストで送信しているすべてのフィールドがカタログに既に存在することを確認してください。これはエラーで言及されているIDフィールドとは関係ありません。 |
-| `invalid-keys-in-value-object` | アイテムオブジェクトのキーには`.`または`$`を含めることはできません。 |
-| `item-array-invalid` | `items` はオブジェクトの配列でなければなりません。 |
-| `items-missing-ids` | アイテムIDがないアイテムがあります。各項目が項目 ID を持っていることを確認します。 |
-| `items-too-large` | アイテムの値は5,000文字を超えることはできません。 |
-| `request-includes-too-many-items` | リクエストの項目が多すぎます。リクエストごとの項目の上限は50個です。 |
-| `too-deep-nesting-in-value-object` | アイテムオブジェクトは50レベル以上のネストを持つことはできません。 |
-| `unable-to-coerce-value` | アイテムタイプは変換できません。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `invalid-ids` | 項目 ID には、英字、数字、ハイフン、アンダースコアのみを使用できます。 |
+| `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |
+| `invalid-keys-in-value-object` | 項目オブジェクトのキーに `.` または `$` を含めることはできません。 |
+| `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目が項目 ID を持っていることを確認します。 |
+| `items-too-large` | 項目値は5000 文字を超えることはできません。 |
+| `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |
+| `too-deep-nesting-in-value-object` | アイテム・オブジェクトは50レベル以上の入れ子を持つことはできない。 |
+| `unable-to-coerce-value` | 項目タイプは変換できません。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

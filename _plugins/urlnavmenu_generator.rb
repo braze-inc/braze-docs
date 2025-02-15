@@ -199,7 +199,7 @@ module Jekyll
 
             # if less then 2, then always show
             if (level < @minlevel)
-                navclass = ' show'
+              navclass = ' show'
             end
 
             nextlevel = level + 1
@@ -241,7 +241,7 @@ module Jekyll
                 end
 
                 # if it's an auto expand page, set to expanded
-                if (@nav_expand_list.include?(ma[@page_id_index]))
+                if (@nav_expand_list.include?(ma[@page_id_index]) || is_currentpage)
                   item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, (@minlevel - 1))
                 else
                   item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, nextlevel)
@@ -250,7 +250,7 @@ module Jekyll
                 ariaexpanded = false
                 # only set upto min level
 
-                if level  < (@minlevel - 1)
+                if level < (@minlevel - 1)
                   ariaexpanded = true
                 end
 
@@ -271,7 +271,7 @@ module Jekyll
                   end
                 end
                 # if it's an auto expand page, set to expanded
-                if (@nav_expand_list.include?(ma[@page_id_index]))
+                if (@nav_expand_list.include?(ma[@page_id_index]) || is_currentpage)
                   ariaexpanded = true
                 end
                 # build menu based on if item has a page or not. if it has no page, just show title, else add link
@@ -290,14 +290,14 @@ module Jekyll
                   items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
                   # If last item, doesn't need to be collapsible
                   unless item.empty?
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} '  aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'> "
+                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a tabindex='-1' href='##{@nav_prefix}_#{parent_page_key}' aria-label='#{page_title}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} '  aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'> "
                   else
                     items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'> "
                   end
                   if is_active
                     items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title} </div>"
                   else
-                    items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}'> <div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                    items << "<a tabindex='-1' href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'> <div class='#{@nav_title_class}'>#{page_title}</div></a>"
                   end
                   items << "</div></div>\n</div>\n"
 
@@ -310,7 +310,7 @@ module Jekyll
                     items << " <div class='#{ @nav_title_block}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_active_basic_class } #{@nav_title_class}'>"
                     items << "#{page_title}"
                   else
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} ' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a tabindex='-1' href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} ' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
                   end
                   items << "</div></div></div>\n"
                 end

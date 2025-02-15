@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 7
 ---
 
-その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。必要な情報がこの記事に見つからない場合は、[メッセージエンゲージメントイベントライブラリ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)または [Currents のサンプルデータ例](https://github.com/Appboy/currents-examples/tree/master/sample-data)を参照してください。
+その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。このページで必要なものが見つからない場合は、[メッセージ・エンゲージメント・イベント・ライブラリーや]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) [Currentsのサンプルデータ例を](https://github.com/Appboy/currents-examples/tree/master/sample-data)ご覧いただきたい。
 
 {% details 顧客行動とユーザーイベント構造およびプラットフォームの価値の説明 %}
 
@@ -35,12 +35,12 @@ search_rank: 7
 | Web | `web` |
 | tvOS | `tvos` |
 | Roku | `roku` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% enddetails %}
 
 {% alert important %}
-ストレージスキーマは、データウェアハウスパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage）に送信するフラットファイルイベントデータに適用されます。ここにリストされているいくつかのイベントと宛先の組み合わせは、まだ一般的には利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
+ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storageなど）に送信するフラットファイルのイベントデータに適用される。ここにリストされているいくつかのイベントと宛先の組み合わせは、まだ一般的には利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
 {% endalert %}
 {% api %}
 
@@ -53,36 +53,6 @@ search_rank: 7
 このイベントは、特定のカスタムイベントがトリガーされたときに発生します。これを使用して、ユーザーがアプリケーションでカスタムイベントを実行したタイミングを追跡します。
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// [Braze Custom Event] custom event name: users.behaviors.CustomEvent
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "name" : "(required, string) Name of the custom event",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "timezone" : "(optional, string) Time zone of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // [Braze Custom Event] custom event name: users.behaviors.CustomEvent
@@ -109,7 +79,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // [Braze Custom Event] custom event name: users.behaviors.CustomEvent
 
@@ -117,6 +87,7 @@ search_rank: 7
   "ad_id" : "(optional, string) Advertising identifier",
   "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
@@ -181,37 +152,6 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Purchase: users.behaviors.Purchase
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "currency" : "(required, string) Currency of the purchase",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "price" : "(required, float) Price of the purchase",
-    "product_id" : "(required, string) ID of the product purchased"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Purchase: users.behaviors.Purchase
@@ -241,7 +181,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Purchase: users.behaviors.Purchase
 
@@ -249,6 +189,7 @@ search_rank: 7
   "ad_id" : "(optional, string) Advertising identifier",
   "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "currency" : "(required, string) Currency of the purchase",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
@@ -318,33 +259,6 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// First Session: users.behaviors.app.FirstSession
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "timezone" : "(optional, string) Time zone of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // First Session: users.behaviors.app.FirstSession
@@ -369,17 +283,18 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // First Session: users.behaviors.app.FirstSession
 
 {
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
   "country" : "(optional, string) Country of the user",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
   "external_user_id" : "(optional, string) External ID of the user",
-  "gender" : "(optional, string) Gender of the user",
+  "gender" : "(optional, string) Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
   "id" : "(required, string) Globally unique ID for this event",
   "language" : "(optional, string) Language of the user",
   "os_version" : "(optional, string) Version of the operating system of the device",
@@ -434,32 +349,6 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Session Start: users.behaviors.app.SessionStart
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Session Start: users.behaviors.app.SessionStart
@@ -484,11 +373,12 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Session Start: users.behaviors.app.SessionStart
 
 {
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
@@ -544,33 +434,6 @@ search_rank: 7
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Session End: users.behaviors.app.SessionEnd
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Session End: users.behaviors.app.SessionEnd
@@ -596,11 +459,12 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Session End: users.behaviors.app.SessionEnd
 
 {
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
@@ -654,39 +518,6 @@ search_rank: 7
 このイベントは、ユーザーが特定のロケーションに移動したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Location: users.behaviors.Location
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Location: users.behaviors.Location
@@ -718,7 +549,7 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Location: users.behaviors.Location
 
@@ -728,6 +559,7 @@ search_rank: 7
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
   "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
   "altitude" : "(optional, float) Altitude of recorded location",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "app_id" : "(required, string) API ID of the app on which this event occurred",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "device_model" : "(optional, string) Model of the device",
@@ -793,28 +625,6 @@ search_rank: 7
 このイベントは、アプリのインストールがソースに起因する場合に発生します。これを使用して、アプリのインストール元を追跡します。
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Install Attribution: users.behaviors.InstallAttribution
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "source" : "(optional, string) The source of the attribution"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Install Attribution: users.behaviors.InstallAttribution
@@ -835,11 +645,12 @@ search_rank: 7
 ```
 {% endtab %}
 
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Install Attribution: users.behaviors.InstallAttribution
 
 {
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
@@ -882,7 +693,7 @@ search_rank: 7
 このユーザーイベントは、ワークスペース内で新規ユーザーが作成されるたびに発生します。このイベントの間、新規ユーザーのそれぞれにランダムなバケット番号が割り当てられます。このバケット番号を使用して、ランダムなユーザーの一様分布セグメントを作成できます。これを使用して、ランダムバケット番号値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。
 
 {% tabs %}
-{% tab クラウドストレージ (S3/Azure Blob/Google Cloud Storage) %}
+{% tab クラウド・ストレージ %}
 ```json
 // Random Bucket Number Update: users.RandomBucketNumberUpdate
 
@@ -900,7 +711,7 @@ search_rank: 7
 {% endtabs %}
 
 {% alert important %}
-この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (i.e Amazon S3、Microsoft Azure、Google Cloud Storage) についてのみ利用できることに注意してください。
+この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (Amazon S3、Microsoft Azure、Google Cloud Storage) についてのみ利用できます。
 <br><br>このイベントを有効にして、ワークスペース内の既存ユーザーのランダムバケット番号の埋め戻しをスケジュールする方法については、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 

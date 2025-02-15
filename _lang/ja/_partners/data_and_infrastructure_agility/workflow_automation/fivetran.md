@@ -17,14 +17,14 @@ Braze とFivetran の統合により、ユーザーはメンテナンス不要�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Fivetranアカウント | このパートナーシップを利用するには、[Fivetran](https://fivetran.com/login?next=%2Fdashboard)アカウントが必要です。 |
-| Braze REST API キー | 次の権限を持つBraze REST APIキー:<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get<br><br> これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント  | あなたのRESTエンドポイントURL。エンドポイントは、[BrazeインスタンスのURL][1]によって異なります。 |
+| Braze REST API キー | 以下の権限を持つBraze REST APIキー：<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントは、[BrazeインスタンスのURL][1]によって異なります。 |
 | Braze Currents | [Braze Currents](https://www.braze.com/product/data-agility-management/currents/) は Amazon S3 または Google Cloud Storage のいずれかに接続する必要があります。 |
 | Amazon S3 または Google Cloud Storage | この統合では、1つの Amazon S3または Google Cloud Storage にアクセスできる必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## 統合
 
@@ -74,7 +74,7 @@ Braze とFivetran の統合により、ユーザーはメンテナンス不要�
 ```
 {% endraw %}
 
-最後に、**ポリシーを確認**をクリックし、ポリシーに一意の名前と説明を付けます。\[**Create Policy**] をクリックしてポリシーを作成します。 
+最後に、**ポリシーを確認**をクリックし、ポリシーに一意の名前と説明を付けます。[**Create Policy**] をクリックしてポリシーを作成します。 
 
 ![]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
@@ -84,15 +84,15 @@ AWS で、**ロール** に移動し、**新しいロールを作成** を選択
 
 ![]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
-\[**Another AWS Account**] を選択し、FivetranアカウントID `834469178297` を入力します。必ず**Require external ID**チェックボックスを確認してください。ここでは、ステップ1で見つかったexternal IDを提供します。
+[**Another AWS Account**] を選択し、FivetranアカウントID `834469178297` を入力します。必ず**Require external ID**チェックボックスを確認してください。ここでは、ステップ1で見つかったexternal IDを提供します。
 
 ![]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
-次に、\[**Next:権限**を選択して、作成したポリシーを選択します。
+次に、[**Next:権限**を選択して、作成したポリシーを選択します。
 
 ![]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
-\[**Next:Review**] をクリックして、新しいロールに名前を付け (Fivetran など)、\[**Create Role**] をクリックします。ロールが作成された後、それをクリックして表示されるロールARNをメモします。
+[**Next:Review**] をクリックして、新しいロールに名前を付け (Fivetran など)、[**Create Role**] をクリックします。ロールが作成された後、それをクリックして表示されるロールARNをメモします。
 
 ![ロールに記載されているAmazon S3 ARNです。]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
@@ -102,12 +102,12 @@ Fivetran に指定するロール ARN の権限を指定できます。このロ
 
 #### ステップ3:Fivetran コネクターの設定を完了する
 
-Fivetranで \[**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
+Fivetranで [**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
 - `Destination schema`:一意のスキーマ名。
 - `API URL`:あなたのBraze REST APIエンドポイント。
 - `API Key`:あなたのBraze REST APIキー。 
 - `External ID`:Currentsセットアップ手順の[ステップ2](#step-two)で設定されたexternal ID。このIDは固定値です。
-- `Bucket`:これは、**\[Integration] > \[Currents] > \[Your Currents name]> \[Bucket Name]** に移動して、Braze アカウントで確認できます。
+- `Bucket`:これは、**[Integration] > [Currents] > [Your Currents name]> [Bucket Name]** に移動して、Braze アカウントで確認できます。
 - `Role ARN`:現在のセットアップ手順の[ステップ1](#step-one)にロールARNが見つかります。
 
 {% alert important %}
@@ -134,14 +134,14 @@ Fivetranで \[**+Connector**]をクリックし、**Braze** コネクターを�
 
 ![]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
-#### ステップ 3:Fivetran コネクターの設定を完了する
+#### ステップ3:Fivetran コネクターの設定を完了する
 
-Fivetranで \[**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
+Fivetranで [**+Connector**]をクリックし、**Braze** コネクターを選択して設定フォームを起動します。フォーム内で、指定されたフィールドに適切な値を入力してください:
 - `Destination schema`:一意のスキーマ名。
 - `API URL`:あなたのBraze REST APIエンドポイント。
 - `API Key`:あなたのBraze REST APIキー。 
-- `Bucket Name`:これは、**\[Integration] > \[Currents] > \[Your Currents name]> \[Bucket Name]** に移動して、Braze アカウントで確認できます。
-- `Folder`:Brazeアカウントで、**Integration > Currents > \[Your Current name] > Prefix**に移動して見つけることができます。
+- `Bucket Name`:これは、**[Integration] > [Currents] > [Your Currents name]> [Bucket Name]** に移動して、Braze アカウントで確認できます。
+- `Folder`:Brazeアカウントで、**Integration > Currents > [Your Current name] > Prefix**に移動して見つけることができます。
 
 {% alert important %}
 **Google Cloud Storage** が **Cloud Storage** の選択肢として選択されていることを確認してください。

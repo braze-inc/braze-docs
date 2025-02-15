@@ -1,5 +1,5 @@
 ---
-nav_title: "Android 객체"
+nav_title: "안드로이드 개체"
 article_title: Android 메시징 개체
 page_order: 0
 page_type: reference
@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
 
 ## Android 푸시 개체
 
-타겟팅한 사용자가 Android 기기에서 푸시를 수신하도록 하려면 `messages` 에 Android 푸시 객체를 포함해야 합니다. `alert` 문자열과 `extra` 객체의 총 바이트 수는 4,000개를 초과하지 않아야 합니다. 메시징 API는 Google에서 허용하는 메시지 크기를 초과하면 오류를 반환합니다.
+타겟팅한 사용자가 Android 디바이스에서 푸시를 수신하도록 하려면 `messages` 에 Android 푸시 개체를 포함해야 합니다. `alert` 문자열과 `extra` 객체의 총 바이트 수는 4,000개를 초과하지 않아야 합니다. 메시징 API는 Google에서 허용하는 메시지 크기를 초과하면 오류를 반환합니다.
 
 ```json
 {
@@ -24,6 +24,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
    "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
    "priority": (optional, integer) the notification priority value,
+   "android_priority": (optional, string) the FCM sender priority,
    "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
    // Specifying "default" in the sound field will play the standard notification sound
@@ -40,18 +41,19 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
 }
 ```
 
-`extra` 객체에 `appboy_image_url` 키를 지정하여 “큰 그림” 알림을 보낼 수 있습니다. `appboy_image_url` 값은 이미지가 호스팅되는 위치로 연결되는 URL이어야 합니다. 이미지는 2:1 가로세로 비율로 잘라야 하며 최소 600 x 300픽셀이어야 합니다. 알림에 사용되는 이미지는 젤리빈(Android 4.1) 이상을 실행하는 기기에서만 표시됩니다.
+`extra` 객체에 `appboy_image_url` 키를 지정하여 “큰 그림” 알림을 보낼 수 있습니다. `appboy_image_url` 값은 이미지가 호스팅되는 위치로 연결되는 URL이어야 합니다. 이미지는 2:1 가로세로 비율로 잘라야 하며 최소 600 x 300픽셀이어야 합니다.
 
 ### 추가 매개변수 세부 정보
 
 | 매개변수 | 세부 정보 |
 | --------- | ------- |
 | `priority` | 이 매개변수는 `-2` ~ `2` 범위의 값을 허용하며, `-2` 은 "최소" 우선순위를 나타내고 `2` 은 "최대"를 나타냅니다. `0` 은 "기본" 값입니다. <br> <br> 이 범위를 벗어나는 값은 기본값이 0으로 설정됩니다. 사용할 우선순위에 대한 자세한 내용은 [Android 알림 우선순위를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority) 참조하세요. |
+| `android_priority` | 이 매개변수에는 '보통' 또는 '높음' 값을 사용하여 FCM 발신자 우선순위를 지정할 수 있습니다. 기본적으로 알림 메시지는 높은 우선순위로 전송되고 데이터 메시지는 일반 우선순위로 전송됩니다.<br><br> 다양한 값이 배달에 미치는 영향에 대한 자세한 내용은 [Android 메시지 우선순위를](https://firebase.google.com/docs/cloud-messaging/android/message-priority) 참조하세요. |
 | `collapse_key` | FCM은 장치당 최대 4개의 축소 키만 동시에 저장할 수 있습니다. 축소 키를 4개 이상 사용하는 경우 FCM은 어떤 축소 키가 유지될지 보장하지 않습니다. Braze는 기본적으로 캠페인에 이 중 하나를 사용하므로 Android 메시지에는 최대 3개의 추가 축소 키만 지정해야 합니다. |
 | `push_icon_image_url` | 큰 아이콘 매개변수의 값은 이미지가 호스팅되는 위치로 연결되는 URL이어야 합니다. <br> <br> 이미지는 1:1 가로세로 비율로 잘라야 하며 최소 40x40이어야 합니다. |
 | `notification_channel` | 이를 지정하지 않으면 Braze는 [대시보드 폴백][45] 채널 ID로 알림 페이로드를 전송하려고 시도합니다. 자세한 내용은 [알림 채널을][44] 참조하고 통합 중 [알림 채널을 정의하는][43] 단계를 참조하세요. |
 | `send_to_sync` | `send_to_sync` 메시지에 대한 자세한 내용은 [무음 Android 알림을][28] 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 안드로이드 푸시 액션 버튼 개체
 

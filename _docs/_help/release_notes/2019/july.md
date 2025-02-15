@@ -48,7 +48,7 @@ You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement
 
 ### In-app messages in Canvas
 
-[In-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) are now available in Canvas! Add a Canvas step and browse the available channels to add an in-app message.
+[In-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) are now available in Canvas! Add a Canvas step and browse the available channels to add an in-app message.
 
 # Earlier this month
 
@@ -58,7 +58,7 @@ We are removing the user profile pictures displayed in Braze user profiles and u
 
 ## Connected Content in Content Cards
 
-You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
+You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/).
 
 Connected Content calls to external servers will happen when a Card is actually sent, not when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
 
@@ -70,7 +70,7 @@ To set a `null` value for an email message's "reply-to-" address from Braze, go 
 
 ## Campaign comparisons
 
-Look at [multiple campaigns at one time to compare their relative performance]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), side-by-side in Braze - in one window!
+Look at [multiple campaigns at one time to compare their relative performance]({{site.baseurl}}/report_builder/), side-by-side in Braze - in one window!
 
 ## Template dispatch ID into messages with Liquid
 
@@ -92,4 +92,4 @@ The "Show Only Mine" filter on the campaign grid will remain on any time you vis
 
 ## A/B testing updates
 
-You can send a one-time [A/B test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
+You can send a one-time [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) with up to eight variants (and optional control) to a user-specified percentage of a campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.

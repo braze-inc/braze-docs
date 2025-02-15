@@ -54,7 +54,7 @@ Si vous avez ajouté vos identifiants [S3][1], [Azure][2] ou [Google cloud stora
 | `RANDOM_UUID` | Un UUID aléatoire généré par Braze au moment de la demande. | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | Heure Unix (secondes depuis 2017-01-01:00:00:00Z) à laquelle l'exportation a été demandée en UTC. | `1556044807` |
 | `filename` | Aléatoire par fichier. | `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
@@ -91,7 +91,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`fields_to_export` | Obligatoire* | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter tous les attributs personnalisés en incluant `custom_attributes` dans ce paramètre. <br><br>\*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
 | `custom_attributes_to_export` | Facultatif | Tableau de chaînes de caractères | Nom de l'attribut personnalisé spécifique à exporter. Il est possible d'exporter jusqu'à 500 attributs personnalisés. Pour créer et gérer des attributs personnalisés dans le tableau de bord, allez dans **Paramètres des données** > Attributs personnalisés. |
 |`output_format` | Facultatif | Chaîne de caractères | Le format de sortie de votre fichier. Format de fichier `zip` par défaut. Si vous utilisez votre propre compartiment S3, vous pouvez spécifier `zip` ou `gzip`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Si `custom_attributes` est inclus dans le paramètre `fields_to_export`, tous les attributs personnalisés sont exportés, quel que soit le contenu de `custom_attributes_to_export`. Si votre objectif est d’exporter des attributs spécifiques, `custom_attributes` ne doit pas être inclus dans le paramètre `fields_to_export`. Utilisez plutôt le paramètre `custom_attributes_to_export`.
@@ -158,7 +158,7 @@ Voici une liste des `fields_to_export` valides. L'utilisation de `fields_to_expo
 | `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçus. |
 | `uninstalled_at` | Date/heure | Date et heure de désinstallation de l’application par l’utilisateur. Absent si l’application n’a pas été désinstallée. |
 | `user_aliases` | Objet | [Objet aliasing de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contenant les adresses `alias_name` et `alias_label`, si elles existent. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Rappels importants
 
@@ -245,7 +245,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -253,7 +253,9 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -274,16 +276,16 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
         "last_received" : (string) date,
         "engaged" : 
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -294,7 +296,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {

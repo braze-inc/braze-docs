@@ -5,14 +5,14 @@ alias: /google_audience_sync/
 description: "このリファレンス記事では、Brazeオーディエンス同期をGoogleに使用して、行動トリガー、セグメンテーションなどに基づいて広告を配信する方法について説明します。"
 Tool:
   - Canvas
-page_order: 2
+page_order: 3
 
 ---
 
 # オーディエンスをGoogleに同期する
 
 {% alert important %}
-Googleは、2024年3月6日から施行される[デジタル市場法（DMA）](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)の変更に対応して、[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を更新しています。この新しい変更により、広告主は EEA および英国のエンドユーザーに特定の情報を開示し、必要な同意を得る必要があります。次のドキュメントを確認して、詳細を学んでください。
+Googleは、2024年3月6日から施行される[デジタル市場法（DMA）](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)の変更に対応して、[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を更新しています。この新しい変更により、広告主は EEA および英国およびスイスのエンドユーザーに特定の情報を開示し、必要な同意を得る必要があります。次のドキュメントを確認して、詳細を学んでください。
 {% endalert %}
 
 Braze Audience Sync to Google 統合により、ブランドは、クロスチャネルのカスタマージャーニーの範囲を Google 検索、Google ショッピング、Gmail、YouTube、および Google ディスプレイに拡大できます。ファーストパーティの顧客データを使用して、ダイナミックな行動トリガー、セグメンテーションなどに基づいて安全に広告を配信できます。Braze キャンバスの一部としてメッセージ（例えば、プッシュ、メール、またはSMS）をトリガーするために通常使用する任意の基準を使用して、Googleの[顧客マッチ](https://support.google.com/google-ads/answer/6379332?hl=en)を介してそのユーザーに広告をトリガーすることができます。
@@ -37,25 +37,25 @@ Braze Audience Sync to Google 統合により、ブランドは、クロスチ�
 | 要件 | 提供元 | 説明 |
 | ----------- | ------ | ----------- |
 | Google 広告アカウント | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | あなたのブランドのためのアクティブなGoogle 広告アカウント。<br><br>複数の管理対象アカウントでオーディエンスを共有する場合は、[マネージャーアカウント](https://support.google.com/google-ads/answer/6139186)にオーディエンスをアップロードできます。 |
-| Google 広告規約とGoogle 広告ポリシー | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | Braze Audience Syncを使用するにあたり、[Googleの広告利用規約](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40)および[Googleの広告ポリシー](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC)、該当する場合には[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を受け入れ、遵守する必要があります。<br><br>Google の新しい EU ユーザー同意ポリシーについて法務チームに相談し、EEA/英国のエンドユーザーに Google 広告のサービスを利用するために適切な同意を得ていることを確認してください。 |
+| Google 広告規約とGoogle 広告ポリシー | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | Braze Audience Syncを使用するにあたり、[Googleの広告利用規約](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40)および[Googleの広告ポリシー](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC)、該当する場合には[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を受け入れ、遵守する必要があります。<br><br>Googleの新しいEUユーザー同意ポリシーについて法務チームと相談し、EEA、英国、スイスのエンドユーザーに対してGoogle広告のサービスを利用するために適切な同意を収集していることを確認する。 |
 | Google カスタマーマッチ | [Google](https://support.google.com/google-ads/answer/6299717) |  すべての広告主がカスタマーマッチを利用できるわけではありません。<br><br>**カスタマーマッチを使用するには、アカウントが以下の条件を満たしている必要があります。**<br>• これまでポリシーを遵守してきた実績があること<br>• これまで支払いに関して問題が発生していないこと<br>• Google 広告で 90 日以上の利用実績があること<br>• 利用金額が通算5万米ドルを超えていること米ドル以外の通貨でアカウントを管理している広告主の利用金額は、その通貨の月別平均為替レートで米ドルに換算されます。<br><br>アカウントが上記の要件を満たしていない場合、現時点ではそのアカウントではカスタマーマッチを利用できません。<br><br>Google 広告の担当者に連絡して、アカウントでのカスタマーマッチの利用可能性について詳しいガイダンスを受けてください。 |
-| Google の同意シグナル | [Google](https://support.google.com/google-ads/answer/14310715) |  EEAのエンドユーザーにGoogleの顧客マッチサービスを使用して広告を配信したい場合、GoogleのEUユーザー同意ポリシーの一環として、次のカスタム属性（ブール値）をBrazeに渡す必要があります。詳細については、[EEAおよび英国のエンドユーザーの同意を収集する](#collecting-consent-for-eea-and-uk-end-users)の下にあります。<br> `$google_ad_user_data`<br> `$google_ad_personalization` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Google の同意シグナル | [Google](https://support.google.com/google-ads/answer/14310715) |  EEAのエンドユーザーにGoogleの顧客マッチサービスを使用して広告を配信したい場合、GoogleのEUユーザー同意ポリシーの一環として、次のカスタム属性（ブール値）をBrazeに渡す必要があります。詳細は、「[EEA、英国、スイスのエンドユーザーに対する同意の収集](#collecting-consent-for-eea-uk-and-switzerland-end-users)」に記載されている：<br> - `$google_ad_user_data`<br> - `$google_ad_personalization` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Braze SDK を使用して同意シグナルを収集する場合は、以下の最小バージョン要件を満たしていることを確認します。
 
 {% sdk_min_versions swift:7.6.0 android:1.3.2 web:3.0.0 %}
 
-### EEA および英国のエンドユーザーの同意の収集
+### EEA、英国、スイスのエンドユーザーの同意の収集
 
-Google の EU ユーザー同意ポリシーでは、広告主が EEA および英国のエンドユーザーに以下の内容を開示し、その同意を得ることが求められています。
+Google の EU ユーザー同意ポリシーでは、広告主が EEA および英国およびスイスのエンドユーザーに以下の内容を開示し、その同意を得ることが求められています。
 
 * 法的に義務付けられている場合の Cookie やその他のローカルストレージの使用
 * 広告のパーソナライゼーションのための個人データの収集、共有、および使用。
 
-これは、米国のエンドユーザーやEEAまたは英国以外に所在する他のエンドユーザーには影響しません。Google の新しい EU ユーザー同意ポリシーについてお客様の法務部門に相談し、EEA および英国のエンドユーザー向けの Google 広告のサービスを使用するために適切な同意を収集していることを確認してください。
+これは米国のエンドユーザーや、EEA、英国、スイス以外の国のエンドユーザーには影響しません。Googleの新しいEUユーザー同意ポリシーについて法務チームと相談し、EEA、英国、スイスのエンドユーザーに対してGoogle広告のサービスを利用するために適切な同意を収集していることを確認する。
 
-2024年3月6日から施行されるデジタル市場法（DMA）の要件に基づき、広告主はGoogleとデータを共有する際に、EEAのエンドユーザー（英国を除く）の同意を得る必要があります。この変更の一環として、次のブール値カスタム属性としてBrazeで両方の同意シグナルを収集できます:
+2024年3月6日から施行されるデジタル市場法（DMA）の要件により、広告主はグーグルとデータを共有する際、EEA、英国、スイスのエンドユーザーの同意を得なければならない。この変更の一環として、次のブール値カスタム属性としてBrazeで両方の同意シグナルを収集できます:
 
 * `$google_ad_user_data`
 * `$google_ad_personalization`
@@ -78,7 +78,16 @@ EEA のエンドユーザーがオーディエンスリストに追加され、�
 * ユーザーを指定なしとして明示的に設定することはできませんが、`null` 値または`nil` 値、あるいは `true` と`false` 以外の値を送信すると、Braze はこのユーザーを `UNSPECIFIED` として Google に渡します。
 * 新しいユーザーが追加または更新され、いずれかの同意属性が指定されていない場合、それらの同意属性が未指定としてマークされてGoogleと同期されます。
 
-必要な同意フィールドと付与されたステータスなしでEEAユーザーを同期しようとすると、Googleはこれを拒否し、このエンドユーザーに広告を配信しません。さらに、EEAユーザーに明示的な同意なしに広告が配信された場合、あなたは責任を負う可能性があり、財政的なリスクにさらされる可能性があります。顧客マッチアップロードパートナー向けのEUユーザー同意ポリシーの詳細については、Googleの[FAQ](https://support.google.com/google-ads/answer/14310715)をご覧ください。 
+必要な同意フィールドとステータスが付与されていないEEAユーザーを同期しようとすると、Googleはこれを拒否し、このユーザーには広告を配信しない。さらに、EEAユーザーに明示的な同意なしに広告が配信された場合、あなたは責任を負う可能性があり、財政的なリスクにさらされる可能性があります。これを避けるには、`true` Google の同意属性を持つ EEA、英国、スイスのユーザーのみを含むセグメントフィルターを使ってキャンペーンを送信することをお勧めします。顧客マッチアップロードパートナー向けのEUユーザー同意ポリシーの詳細については、Googleの[FAQ](https://support.google.com/google-ads/answer/14310715)をご覧ください。
+
+### キャンバスの設定
+
+Braze に同期すると、次の同意属性がユーザープロファイルとセグメンテーションで使用できるようになります。
+
+- `$google_ad_user_data`
+- `$google_ad_personalization`
+
+ユーザーをオーディエンスに追加するために Google オーディエンス同期を使用して EEA、英国、スイスのエンドユーザーをターゲットにしているキャンバスでは、両方の同意属性が `true` でない値である場合は常に、これらのユーザーを除外する必要があります。これは、同意値が`true` に設定されているときに、これらのユーザーをセグメンテーションすることで達成できる。また、Googleがこれらのユーザーをオーディエンスから拒否することがわかっているため、より正確なユーザー分析が同期される。オーディエンスからユーザーを削除するためにGoogle オーディエンス同期を使用している場合、同意属性は必要ないことに注意してください。
 
 ## 統合
 
@@ -87,7 +96,7 @@ EEA のエンドユーザーがオーディエンスリストに追加され、�
 開始するには、**パートナー統合** > **テクノロジーパートナー** > **Google 広告** に移動し、**Google 広告を接続** を選択します。その後モーダルが表示され、Google 広告アカウントに関連付けられているメールを選択し、Google 広告アカウントに Braze アクセスを付与することが促されます。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
 Google 広告アカウントに接続したら、Google 広告パートナーページが再び表示されます。次に、Brazeワークスペース内でアクセスしたい広告アカウントを選択するように求められます。
@@ -95,26 +104,26 @@ Google 広告アカウントに接続したら、Google 広告パートナーペ
 ![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
 {% alert important %}
-オーディエンス同期内でiOS IDFAまたはGoogle広告IDをエクスポートする予定がある場合、Googleはリクエスト内にiOSアプリIDおよびAndroidアプリIDを要求します。Google オーディエンス同期モジュール内で、**モバイル広告IDを追加**を選択し、iOSアプリIDとAndroidアプリID（アプリパッケージ名）を入力して、それぞれ保存します。
+オーディエンス同期内でiOS IDFAまたはGoogle広告IDをエクスポートする予定がある場合、Googleはリクエスト内にiOSアプリIDおよびAndroidアプリIDを要求します。Google オーディエンス同期の下で、[**モバイル広告 ID を追加**] を選択し、iOS アプリ ID と Android アプリ ID (アプリパッケージ名) を入力して、それぞれ保存します。
 <br><br>
 ![更新されたGoogle 広告技術ページには、接続された広告アカウントが表示され、アカウントの再同期やモバイル広告IDの追加が可能です。]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
 ### ステップ2:キャンバスフローに Google オーディエンスステップを追加する
 
-キャンバスにコンポーネントを追加し、\[**オーディエンスの同期**] を選択します。
+キャンバスにコンポーネントを追加し、[**オーディエンスの同期**] を選択します。
 
 ![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
 
-### ステップ3:同期設定
+### ステップ3:同期セットアップ
 
-\[**カスタムオーディエンス**] ボタンをクリックしてコンポーネントエディターを開きます。
+[**カスタムオーディエンス**] ボタンをクリックしてコンポーネントエディターを開きます。
 
 希望するオーディエンス同期パートナーとして**Google**を選択します。
 
 ![][19]{: style="max-width:80%;"}
 
-希望するGoogle広告アカウントを選択してください。\[**新規または既存のオーディエンスを選択**] ドロップダウンで、新しいオーディエンスまたは既存のオーディエンスの名前を入力します。 
+希望するGoogle広告アカウントを選択してください。[**新規または既存のオーディエンスを選択**] ドロップダウンで、新しいオーディエンスまたは既存のオーディエンスの名前を入力します。 
 
 {% tabs %}
 {% tab 新規オーディエンスの作成 %}
@@ -131,7 +140,7 @@ Google 広告アカウントに接続したら、Google 広告パートナーペ
 - モバイル広告ID
   - Braze SDKを通じて[IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection)または[GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection#google-advertising-id-android-only)の収集にオプトインする必要があります。
 
-新しいカスタムオーディエンスの名前を入力し、\[**ユーザーをオーディエンスに追加**] を選択し、オーディエンスに送信するファーストパーティユーザーフィールドデータを選択します。次のいずれかを選択できます。
+新しいカスタムオーディエンスの名前を入力し、[**ユーザーをオーディエンスに追加**] を選択し、オーディエンスに送信するファーストパーティユーザーフィールドデータを選択します。次のいずれかを選択できます。
 
 - **お客様の連絡先情報**:Brazeに存在する場合、ユーザーのメールまたは電話番号、またはその両方が含まれます
 - **モバイル広告主 ID**:iOS IDFA または Android GAID のいずれかを選択してください
@@ -152,7 +161,7 @@ Google のカスタマーマッチの要件のため、顧客の連絡先情報�
 {% endtab %}
 {% tab 既存のオーディエンスと同期する %}
 **既存のオーディエンスとの同期**<br>
-Braze では、これらのオーディエンスが最新の状態であるようにするために、既存の Google 顧客リストからユーザーを追加または削除することもできます。既存のオーディエンスと同期するには、同期する既存のカスタムオーディエンスを選択し、\[**ユーザーをオーディエンスに追加**] または \[**オーディエンスからユーザーを削除**] のいずれかを選択します。Brazeは、ユーザーがGoogle オーディエンス ステップに入ると、ほぼリアルタイムでユーザーを追加または削除します。 
+Braze では、これらのオーディエンスが最新の状態であるようにするために、既存の Google 顧客リストからユーザーを追加または削除することもできます。既存のオーディエンスと同期するには、同期する既存のカスタムオーディエンスを選択し、[**ユーザーをオーディエンスに追加**] または [**オーディエンスからユーザーを削除**] のいずれかを選択します。Brazeは、ユーザーがGoogle オーディエンス ステップに入ると、ほぼリアルタイムでユーザーを追加または削除します。 
 
 Google オーディエンス ステップを構成したら、**完了**を選択します。Google オーディエンスステップには、新しいオーディエンスに関する詳細情報が含まれます。
 
@@ -186,7 +195,7 @@ Google オーディエンス ステップを構成したら、**完了**を選�
 | *エラーが発生したユーザー数* | エラーのためにGoogleと同期されなかったユーザーの数、約13時間の再試行後。特定のエラー (Google 広告 API サービスの中断など) が発生すると、キャンバスは最大13時間にわたって同期を再試行します。その時点で同期がまだ不可能な場合、*ユーザー未同期*が入力されます。 |
 | *保留中のユーザー* | Braze が Google と同期するために現在処理されているユーザーの数。 |
 | *終了済みのキャンバス* | キャンバスを終了したユーザーの人数。これは、キャンバスの最後のステップがGoogleステップである場合に発生します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## トラブルシューティング
 

@@ -16,7 +16,7 @@ Braze には 3 世代のアプリ内メッセージが用意されています�
 | **第1世代** | • アプリ トリガー内フルスクリーン、モダル、およびスライドアップメッセージタイプ | カスタムHTMLメッセージ <br> • Web メールキャプチャフォーム <br> • カスタムCSS付きWebモーダル |
 | **第2世代** | • テキストの配置コントロール <br> • モーダルの背後にあるオーバーレイ <br> • プレビュー画面のイメージセーフゾーン | ボタンの境界線 |
 | **第3世代** | • ボタンの境界線 <br> • すべてのメッセージタイプに対応した洗練されたルックアンドフィール <br> • 第1世代、第2世代、第3世代の概念 <br> • 新しいクローズ X アセット <br> • Web のアクセシビリティの向上 <br> • Notched Devices のサポートが向上しました | (最新のGenerationには常にフル機能がサポートされています!) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ![世代間の違い]({% image_buster /assets/img/iam-generations-of-modals.png %})
 

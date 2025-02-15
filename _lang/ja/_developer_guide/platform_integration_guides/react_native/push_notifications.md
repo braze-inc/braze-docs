@@ -13,7 +13,7 @@ channel: push
 
 > この参考記事では、React Native のプッシュ通知を設定する方法について説明します。プッシュ通知を統合するには、各ネイティブプラットフォームを個別に設定する必要があります。リストされているそれぞれのガイドに従って、インストールを完了します。
 
-## ステップ 1:初期設定を完了する
+## ステップ1:初期設定を完了する
 
 {% tabs %}
 {% tab Expo %}
@@ -35,13 +35,13 @@ Google の Firebase Cloud Messaging (FCM) API を使用してプッシュに登�
 
 ### ステップ1.2：Google の送信者 ID を追加する
 
-まず Firebase Console に移動し、プロジェクトを開いて、<i class="fa-solid fa-gear"></i>\[**設定**] > \[**プロジェクト設定**] を選択します。
+まず Firebase Console に移動し、プロジェクトを開いて、<i class="fa-solid fa-gear"></i>[**設定**] > [**プロジェクト設定**] を選択します。
 
-![\[設定] メニューが開いた状態の Firebase プロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+![[設定] メニューが開いた状態の Firebase プロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
-\[**Cloud Messaging**] 選択し、\[**Firebase Cloud Messaging API (V1)**] の下にある \[**送信者 ID**] をクリップボードにコピーします。
+[**Cloud Messaging**] 選択し、[**Firebase Cloud Messaging API (V1)**] の下にある [**送信者 ID**] をクリップボードにコピーします。
 
-![\[送信者 ID] が強調表示されている Firebase プロジェクトの「Cloud Messaging」ページ。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![[送信者 ID] が強調表示されている Firebase プロジェクトの「Cloud Messaging」ページ。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 次に、プロジェクトの`app.json` ファイルを開き、`firebaseCloudMessagingSenderId` プロパティをクリップボード内の送信者IDに設定する。以下に例を示します。
 
@@ -94,7 +94,7 @@ Appleプッシュ通知サービス（APNs）証明書を生成し、Brazeダッ
 {% endtab %}
 {% endtabs %}
 
-## ステップ2:プッシュ通知の許可をリクエストする
+## ステップ 2:プッシュ通知の許可をリクエストする
 
 iOS および Android 13以降のユーザーにプッシュ通知の許可を要求するには、`Braze.requestPushPermission()` メソッド (v 1.38.0以降で使用可能) を使用します。Android 12以前の場合、このメソッドは何も実行しません。
 
@@ -115,8 +115,8 @@ Braze.requestPushPermission(permissionOptions);
 
 さらに、Braze が受信プッシュ通知を検出して処理したイベントをサブスクライブすることもできます。リスナーキー `Braze.Events.PUSH_NOTIFICATION_EVENT` を使用します。
 
-{% alert note %}
-Braze プッシュ通知イベントは、Android と iOS の両方で利用できます。プラットフォームが異なるため、iOS はユーザーが通知を操作した場合にのみ Braze プッシュイベントを検出します。
+{% alert important %}
+iOS プッシュ受信イベントは、フォアグラウンド通知と `content-available` バックグラウンド通知に対してのみトリガーされます。終了中に受信した通知や、`content-available` フィールドのないバックグラウンド通知ではトリガーされない。
 {% endalert %}
 
 ```javascript
@@ -128,15 +128,11 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 #### プッシュ通知イベントフィールド
 
-{% alert note %}
-iOS のプラットフォーム制限のため、Braze SDK はアプリがフォアグラウンドにあるときにのみプッシュペイロードを処理できます。リスナーは、ユーザーがプッシュを操作した後、iOSで `push_opened` イベントタイプに対してのみトリガーされます。
-{% endalert %}
-
 プッシュ通知フィールドの完全なリストについては、以下の表を参照してください。
 
 | フィールド名         | タイプ      | 説明 |
 | ------------------ | --------- | ----------- |
-| `payload_type`     | 文字列    | 通知ペイロードのタイプを指定します。Braze React Native SDK から送信される2つの値は `push_opened` と `push_received` です。 iOS では、`push_opened` イベントのみがサポートされています。 |
+| `payload_type`     | 文字列    | 通知ペイロードのタイプを指定します。Braze React Native SDK から送信される2つの値は `push_opened` と `push_received` です。 |
 | `url`              | 文字列    | 通知によって開かれたURLを指定する。 |
 | `use_webview`      | ブール値   | `true` の場合、URLはアプリ内のモーダルウェブビューで開かれる。`false` の場合、URLは端末のブラウザーで開かれる。 |
 | `title`            | 文字列    | 通知のタイトルを表す。 |
@@ -150,9 +146,9 @@ iOS のプラットフォーム制限のため、Braze SDK はアプリがフォ
 | `braze_properties` | オブジェクト    | キャンペーンに関連するBrazeのプロパティ（キーと値のペア）を表す。 |
 | `ios`              | オブジェクト    | iOS固有のフィールドを表す。 |
 | `android`          | オブジェクト    | Android固有のフィールドを表す。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## ステップ 3:ディープリンクを有効にする (オプション)
+## ステップ3: ディープリンクを有効にする (オプション)
 
 プッシュ通知がクリックされたときに Braze が React コンポーネント内のディープリンクを処理できるようにするには、追加の手順に従います。
 
@@ -228,10 +224,10 @@ macOS 13以降の特定のデバイスでは、Xcode 14以降で実行されて�
 {% endalert %}
 
 1. `Braze.changeUserId('your-user-id')` メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. \[**キャンペーン**] に移動し、新しいプッシュ通知キャンペーンを作成します。テストしたいプラットフォームを選択します。
-3. テスト通知を作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスに通知が届くはずです。
+2. [**キャンペーン**] に移動し、新しいプッシュ通知キャンペーンを作成します。テストしたいプラットフォームを選択します。
+3. テスト通知を作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスに通知が届くはずです。
 
-![Brazeのプッシュキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、プッシュ通知をテストすることができる。][1]
+![テスト受信者として独自のユーザID を追加して、プッシュ通知をテストできることを示す Braze プッシュキャンペーン。]({% image_buster /assets/img/react-native/push-notification-test.png %}"Push Campaign Test")
 
 ## Androidプッシュを追加FMSに転送する
 
@@ -288,7 +284,7 @@ Expo を使用して iOS でリッチプッシュ通知を有効にするには�
 プッシュ ストーリーは Android でデフォルトで利用可能です。
 {% endalert %}
 
-Expoを使ってiOSでプッシュストーリーズを有効にするには、アプリケーションにアプリグループが定義されていることを確認する。詳細については、\[アプリグループの追加][4] を参照してください。
+Expoを使ってiOSでプッシュストーリーズを有効にするには、アプリケーションにアプリグループが定義されていることを確認する。詳細については、[アプリグループの追加]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group)を参照してください。
 
 次に、`enableBrazeIosPushStories` プロパティを `true` に構成し、`app.json` の `expo.plugins` オブジェクトの `iosPushStoryAppGroup` にアプリグループ ID を割り当てます。
 
@@ -321,7 +317,3 @@ Expo Application Services（EAS）を使用していて、`enableBrazeIosRichPus
 
 一つの方法は、Expo の[アプリ拡張ドキュメント](https://docs.expo.dev/build-reference/app-extensions/)に従って、`app.json` ファイルで `appExtensions` 設定を使用することです。あるいは、Expo の[ローカル認証情報ドキュメント](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project)に従って、`credentials.json` ファイルで `multitarget` 設定を行うこともできます。
 
-[1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
-https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/ 
- https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group

@@ -1,6 +1,6 @@
 ---
-nav_title: "PUT:ユーザー設定センターを更新"
-article_title: "PUT:ユーザー設定センターを更新"
+nav_title: "PUT:ユーザー設定センターの更新"
+article_title: "PUT:ユーザー設定センターの更新"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
@@ -26,15 +26,15 @@ description: "この記事では、「ユーザー設定センターの更新」
 
 このエンドポイントには、1分あたり、ワークスペースあたり、10件のリクエストというレート制限があります。
 
-## パスパラメータ
+## パスパラメーター
 
 | パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| 必須 | string | ユーザー設定センターの ID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`preferenceCenterExternalID`| 必須 | 文字列 | ユーザー設定センターの ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,21 +48,32 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "unknown macro": {links-tags}
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of: "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values: "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_page_html`| 必須 | string | ユーザー設定センターページのHTML。 |
-|`preference_center_title`| オプション | string | ユーザー設定センターと確認ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
-|`confirmation_page_html`| 必須 | string | 確認ページのHTML。 |
-|`state` | オプション | string | `active` または `draft` を選択してください。|
-|`options` | オプション | オブジェクト | 属性: `meta-viewport-content`.存在する場合、`viewport`メタタグが`content= <value of attribute>`と共にページに追加されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`preference_center_page_html`| 必須 | 文字列 | ユーザー設定センター画面のHTMLです。 |
+|`preference_center_title`| オプション | 文字列 | ユーザー設定センターおよび確定ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
+|`confirmation_page_html`| 必須 | 文字列 | 確定画面のHTML。 |
+|`state` | オプション | 文字列 | `active` または`draft` を選択する。|
+|`options` | オプション | オブジェクト | 属性:<br>`meta-viewport-content`:存在する場合、`viewport` メタタグが`content= <value of attribute>` でページに追加されます。<br><br> `link-tags`:ページのファビコンを設定します。設定すると、rel 属性を持つ`<link>` タグがページに追加されます。  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 

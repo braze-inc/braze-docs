@@ -10,12 +10,12 @@ tool: Reports
 
 # 커스텀 이벤트 집계 내보내기
 
-> 대시보드의 **커스텀 이벤트** 보고서 페이지를 통해 시간 경과에 따른 하나 이상의 커스텀 이벤트 발생을 확인할 수 있습니다. 사용자 정의 이벤트 또는 시간별 사용자 정의 이벤트에 대한 자세한 통계를 보면 특정 세그먼트별로 데이터를 볼 수 있는 옵션도 있습니다.
+> 이 페이지에서는 대시보드의 **사용자** 지정 이벤트 보고서 페이지에서 시간 경과에 따른 하나 이상의 사용자 지정 이벤트 발생 현황을 볼 수 있습니다. 사용자 지정 이벤트 또는 시간별 사용자 지정 이벤트에 대한 자세한 통계를 보는 경우 특정 세그먼트별로도 데이터를 볼 수 있는 옵션이 있습니다.
 
 **커스텀 이벤트 보고서**는 **분석**에서 찾을 수 있습니다.
 
 {% alert note %}
-[이전 탐색<2>을 사용하는 경우 **커스텀 이벤트** 보고서 페이지를 **데이터<4> 아래에서 찾을 수 있습니다.
+[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **사용자 지정 이벤트** 보고서 페이지를 찾을 수 있습니다.
 {% endalert %}
 
 ![커스텀 이벤트][14]
@@ -23,16 +23,16 @@ tool: Reports
 다음 CSV를 내보낼 수 있습니다:
 
 - 날짜별 커스텀 이벤트
-    - (Optional) 커스텀 이벤트 for Different Segments
+    - (선택 사항) 항세그먼트별 커스텀 이벤트
 - 시간대별 사용자 지정 이벤트
-    - (Optional) 커스텀 이벤트 for Different Segments
+    - (선택 사항) 항세그먼트별 커스텀 이벤트
 - MAU당 사용자 지정 이벤트
 - 다른 세그먼트를 위한 커스텀 이벤트
 - KPI 공식당 커스텀 이벤트
-    - (Optional) 커스텀 이벤트 for Different Segments
+    - (선택 사항) 항세그먼트별 커스텀 이벤트
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 문서를 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 [14]: {% image_buster /assets/img_archive/Export_events.png %}

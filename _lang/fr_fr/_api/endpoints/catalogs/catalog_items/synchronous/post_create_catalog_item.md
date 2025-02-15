@@ -33,14 +33,14 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 | `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -121,11 +121,11 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-fields` | Confirmez que tous les champs que vous envoyez dans la requête API existent déjà dans le catalogue. Cela n'a rien à voir avec le champ ID mentionné dans l'erreur. |
 | `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
 | `item-already-exists` | Ce produit existe déjà dans le catalogue. |
-| `item-array-invalid` | `items` doit être un tableau d’objets. | 
+| `item-array-invalid` | `items` doit être un tableau d’objets. |
 | `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
 | `request-includes-too-many-items` | Vous ne pouvez créer qu’un produit de catalogue par requête. |
 | `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

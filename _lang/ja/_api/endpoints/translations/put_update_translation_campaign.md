@@ -18,12 +18,12 @@ description: "この記事では、「キャンペーン内の翻訳を更新」
 > キャンペーンの複数の翻訳を更新するには、このエンドポイントを使用する。
 
 {% alert important %}
-API経由でキャンペーン内の翻訳を更新することは、現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
+API経由でキャンペーン内の翻訳を更新することは、現在早期アクセス中である。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.translations.update` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.translations.update`の権限が必要です。
 
 ## レート制限
 
@@ -31,14 +31,18 @@ API経由でキャンペーン内の翻訳を更新することは、現在早�
 
 ## パスパラメーター
 
-このエンドポイントにはパスパラメーターがない。
+このエンドポイントにはパスパラメータがありません。
 
 ## リクエストパラメーター
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`locale_id`| 必須 | string | ロケールのID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `campaign_id` | 必須 | 文字列 | キャンペーンのID。 |
+| `message_variation_id` | 必須 | string | メッセージのID。 |
+|`locale_id`| 必須 | 文字列 | ロケールのID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+すべての翻訳IDは、**多言語サポート**設定またはGETリクエストレスポンスで見つけることができるユニバーサルユニーク識別子（UUID）とみなされることに注意。
 
 ## リクエスト例
 
@@ -90,13 +94,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `INVALID_CAMPAIGN_ID`                   | キャンペーン ID が翻訳するキャンペーンと一致していることを確認します。                   |
 | `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
 | `INVALID_MESSAGE_VARIATION_ID`          | メッセージIDが正しいことを確認する。                                                |
-| `INVALID_TRANSLATION_OBJECT`            | 翻訳IDが不一致であるか、翻訳テキストが制限を超えている。                  |
+| `INVALID_TRANSLATION_OBJECT`            | 翻訳IDが一致しないか、翻訳されたテキストが制限を超えています。                  |
 | `MESSAGE_NOT_FOUND`                     | メッセージが翻訳されていることを確認します。                                           |
 | `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
-| `MISSING_TRANSLATIONS`                  | 翻訳IDはメッセージと一致しなければならない。                                         |
+| `MISSING_TRANSLATIONS`                  | メッセージに一致する翻訳IDでなければなりません。                                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | メールキャンペーンまたはメールが含まれているキャンバスメッセージのみを翻訳できます。             |
 | `UNSUPPORTED_CHANNEL`                   | メールキャンペーン内のメッセージ、またはメールが含まれているキャンバスメッセージのみを翻訳できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

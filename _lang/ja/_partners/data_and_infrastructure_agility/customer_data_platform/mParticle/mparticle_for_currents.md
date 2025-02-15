@@ -13,28 +13,37 @@ search_tag: Partner
 
 > [mParticle](https://www.mparticle.com) は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォームです。
 
-BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。Currents では、データを mParticle に接続し、グローススタック全体で実用的なデータにすることもできます。 
+BrazeとmParticleの統合により、2つのシステム間の情報の流れをシームレスに制御できる。[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) では、データを mParticle に接続し、グローススタック全体で実用的なデータにすることもできます。 
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| mParticle アカウント | このパートナーシップを活用するには、[mParticle アカウント](https://app.mparticle.com/login)が必要です。 |
 | Currents | mParticle にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-| mParticleサーバーからサーバーへのキー<br><br>mParticle サーバー間シークレット | これらを取得するには、mParticle ダッシュボードに移動し、mParticle が iOS、Android、および Web プラットフォームの Braze インタラクションデータを受信できるようにするために[必要なフィード](#step-1-create-feeds)を作成します。|
-{: .reset-td-br-1 .reset-td-br-2}
+| mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
+| mParticle のサーバー間キーとシークレット | これらを取得するには、mParticle ダッシュボードに移動し、mParticle が iOS、Android、および Web プラットフォームの Braze インタラクションデータを受信できるようにするために[必要なフィード](#step-1-create-feeds)を作成します。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## mParticle認証情報について
+
+mParticleには、アプリレベルとワークスペースレベルの認証情報があり、イベントの送信方法に影響を与える。
+
+- **アプリレベル：**mParticleは各アプリごとにイベントを分離するため、iOSアプリに与えるアプリレベルの認証情報は、iOS固有のイベントを送信するためにのみ使用できる。
+- **ワークスペースレベル：**mParticle は、(アプリ固有**ではない**) すべてのイベントをグループ化します。つまり、アプリグループに与えるワークスペースレベルの認証情報は、アプリ固有ではないすべてのイベントの送信に使用されます。
+
+これは、mParticle が個々のアプリに基づいて「フィード」を取り込んでいると考えることができます。例えば、iOS用、Android用、Web用のアプリを1つずつ用意すると、イベントがバラバラになってしまう。つまり、各アプリに同じ認証情報を提供すると、1つのmParticleフィードが、重複することなく、すべてのアプリのすべてのデータを受信するために使用される。
 
 ## 統合
 
 ### ステップ1:フィードを作成する
 
-mParticle 管理者アカウントから、**\[Setup] > \[Inputs]** に移動します。mParticle**Directory** で **Braze** を見つけ、フィード統合を追加します。
+mParticle 管理者アカウントから、**[Setup] > [Inputs]** に移動します。mParticle**Directory** で **Braze** を見つけ、フィード統合を追加します。
 
-Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィードをサポートしています。バインドされていないフィードは、プラットフォームに接続されていない電子メールなどのイベントに使用できる。メインプラットフォームフィードごとに入力を作成する必要があります。\[**Feed Configurations**] タブの **\[Setup] > \[Input]** から追加の入力を作成できます。
+Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィードをサポートしています。バインドされていないフィードは、プラットフォームに接続されていない電子メールなどのイベントに使用できる。メインプラットフォームフィードごとに入力を作成する必要があります。[**Feed Configurations**] タブの **[Setup] > [Input]** から追加の入力を作成できます。
 
 ![][1]
 
-フィードごとに、\[**Act as Platform**] で対応するプラットフォームをリストから選択します。**act-as**フィードを選択するオプションが表示されない場合、データは結合されていないものとして扱われるが、データウェアハウスの出力に転送することは可能である。
+フィードごとに、[**Act as Platform**] で対応するプラットフォームをリストから選択します。**act-as**フィードを選択するオプションが表示されない場合、データは結合されていないものとして扱われるが、データウェアハウスの出力に転送することは可能である。
 
 ![設定名を入力し、フィードのステータスを決定し、act as platform を選択することを求める最初の統合ダイアログボックス。][2]{: style="max-width:40%;"} ![サーバー間キーとサーバー間シークレットを示す2つ目の統合ダイアログボックス。][3]{: style="max-width:37%;"}
 
@@ -42,7 +51,7 @@ Braze フィード統合は、iOS、Android、Web、Unbound の4つのフィー�
 
 ### ステップ2:Current を作成する
 
-Braze で **\[Currents] > \[+ Currents を作成] > \[mParticle エクスポートを作成]** に移動します。統合名、連絡先メールアドレス、各プラットフォームの mParticle API キーと mParticle シークレットキーを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に \[**Currents を起動**] をクリックします。
+Braze で **[Currents] > [+ Currents を作成] > [mParticle エクスポートを作成]** に移動します。統合名、連絡先メールアドレス、各プラットフォームの mParticle API キーと mParticle シークレットキーを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
 ![BrazeのmParticle Currentsページ。統合名、連絡先メール、API キー、シークレットキーのフィールドがある。]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
@@ -58,8 +67,8 @@ Brazeは、Currentsの[ユーザー行動]({{site.baseurl}}/user_guide/data_and_
 
 ### 行動
 - アンインストール: `users.behaviors.Uninstall`
-- サブスクリプション（グローバルな状態変更）： `users.behaviors.subscription.GlobalStateChange`
-- サブスクリプション・グループ（状態変更）： `users.behaviors.subscriptiongroup.StateChange`
+- サブスクリプション(グローバル状態の変更): `users.behaviors.subscription.GlobalStateChange`
+- サブスクリプショングループ(状態の変更): `users.behaviors.subscriptiongroup.StateChange`
   
 ### キャンペーン
 - 中止: `users_campaigns_abort`

@@ -13,7 +13,7 @@ description: "このリファレンス記事では、クラウドデータ取り
 
 ## 連携の設定 
 
-標準のプロセスに従って、接続するデータウェアハウスの Braze ダッシュボードで[新規の連携を作成]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)します。削除テーブルにアクセスできるロールが含まれていることを確認します。\[**インポート同期の作成**] ページで、\[**データのタイプ**] を \[**ユーザーを削除**] に設定します。これにより、連携の実行中にユーザーを削除する適切なアクションが確実に実行されます。
+標準のプロセスに従って、接続するデータウェアハウスの Braze ダッシュボードで[新規の連携を作成]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)します。削除テーブルにアクセスできるロールが含まれていることを確認します。[**インポート同期の作成**] ページで、[**データのタイプ**] を [**ユーザーを削除**] に設定します。これにより、連携の実行中にユーザーを削除する適切なアクションが確実に実行されます。
 
 ![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
@@ -51,7 +51,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 );
 ```
 {% endtab %}
-{% tab レッドシフト %}
+{% tab Redshift %}
 ```json
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
@@ -72,10 +72,10 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | フィールド名 | タイプ | モード |
 |---|---|---|
 | `UPDATED_AT`| タイムスタンプ | 必須 |
-| `EXTERNAL_ID`| 文字列 | NULLABLE |
-| `ALIAS_NAME`| 文字列 | NULLABLE |
-| `ALIAS_LABEL`| 文字列 | NULLABLE |
-| `BRAZE_ID`| 文字列 | NULLABLE |
+| `EXTERNAL_ID`| 文字列 | NULL 許容 |
+| `ALIAS_NAME`| 文字列 | NULL 許容 |
+| `ALIAS_LABEL`| 文字列 | NULL 許容 |
+| `BRAZE_ID`| 文字列 | NULL 許容 |
 {% endtab %}
 
 {% tab Databricks %}
@@ -84,11 +84,29 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | フィールド名 | タイプ | モード |
 |---|---|---|
 | `UPDATED_AT`| タイムスタンプ | 必須 |
-| `EXTERNAL_ID`| 文字列 | NULLABLE |
-| `ALIAS_NAME`| 文字列 | NULLABLE |
-| `ALIAS_LABEL`| 文字列 | NULLABLE |
-| `BRAZE_ID`| 文字列 | NULLABLE |
+| `EXTERNAL_ID`| 文字列 | NULL 許容 |
+| `ALIAS_NAME`| 文字列 | NULL 許容 |
+| `ALIAS_LABEL`| 文字列 | NULL 許容 |
+| `BRAZE_ID`| 文字列 | NULL 許容 |
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  --at least one of external_id, alias_name and alias_label, or braze_id is required  
+  EXTERNAL_ID VARCHAR,
+  --if using user alias, both alias_name and alias_label are required
+  ALIAS_NAME VARCHAR,
+  ALIAS_LABEL VARCHAR,
+  --braze_id can only be used to update existing users created through the Braze SDK
+  BRAZE_ID VARCHAR,
+)
+GO
+```
+{% endtab %}
+
 {% endtabs %}
 
 ### CDI の仕組み

@@ -24,9 +24,9 @@ TealiumのAudienceStreamsとEventStreamsは、バッチと非バッチの両方�
 | 名前 | 説明 |
 | ---- | ----------- |
 | Tealiumアカウント | サーバー側にアクセスできる[Tealiumアカウントが](https://my.tealiumiq.com/)必要である。このパートナーシップを活用するために、クライアント側のインテグレーションも利用することをお勧めする。 |
-| REST APIキー | `users.track`,`users.delete`,および `subscription.status.set` の権限を持つ Braze REST API キー。<br><br>これは **Brazeダッシュボード > \[開発者コンソール] > \[REST API キー] > \[新しい API キーを作成]** で作成できます|
-| \[Braze RESTエンドポイント][6] | RESTエンドポイントのURL。エンドポイントは[インスタンスの Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| REST APIキー | `users.track`,`users.delete`,および `subscription.status.set` の権限を持つ Braze REST API キー。<br><br>これは **Brazeダッシュボード > [開発者コンソール] > [REST API キー] > [新しい API キーを作成]** で作成できます|
+| [Braze RESTエンドポイント][6] | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
@@ -72,15 +72,15 @@ AudienceStreamを使う最初のステップは、属性を作成することだ
 
 すべての完了した注文 (購入イベント) での顧客の累積支出額 (`order_total`) を計算する訪問者属性「Lifetime Order Value」を作成します。Tealium アカウントで生涯注文額を設定するには、次の手順に従います。
 
-1. **\[AudienceStream] > \[Visitor/Visit Attributes]** に移動して \[**Add Attribute**] をクリックします。
-2. スコープとして \[**Visitor**] を選択して \[**Continue**] をクリックします。
-3. データ型として \[**Number**] を選択して \[**Continue**] をクリックします。
+1. **[AudienceStream] > [Visitor/Visit Attributes]** に移動して [**Add Attribute**] をクリックします。
+2. スコープとして [**Visitor**] を選択して [**Continue**] をクリックします。
+3. データ型として [**Number**] を選択して [**Continue**] をクリックします。
 4. 属性名として「Lifetime Order Value」を入力します。
-5. \[**Add Enrichmentを**] をクリックし、\[**Increment or Decrement Number**] を選択します。
+5. [**Add Enrichmentを**] をクリックし、[**Increment or Decrement Number**] を選択します。
 6. インクリメントする値を含む属性を選択する（`order_total` ）。
-7. \[WHEN] は \[Any Event] のままにしておき、\[**Create a New Rule**] をクリックします。
+7. [WHEN] は [Any Event] のままにしておき、[**Create a New Rule**] をクリックします。
 8. 購入イベントがいつ発生したかを識別するルールを作成する。
-9. \[**Save**] をクリックし、\[**Finish**] をクリッします。
+9. [**Save**] をクリックし、[**Finish**] をクリッします。
 
 これで、すべての顧客に生涯注文額属性が関連付けられます。
 
@@ -89,21 +89,21 @@ AudienceStreamを使う最初のステップは、属性を作成することだ
 
 バッジを作成することで、ユーザーが共有する特定の属性によってユーザーを分類し、ターゲットを絞ることができる。次の例では、「Lifetime Order Value」が$500を超えるユーザーに対して VIP バッジを作成します。
 
-1. **\[AudienceStream] > \[Visitor/Visit Attributes]** に移動して \[**Add Attribute**] をクリックします。
-2. スコープとして \[**Visitor**] を選択して \[**Continue**] をクリックします。
-3. データ型として \[**Badge**] を選択して \[**Continue**] をクリックします。
+1. **[AudienceStream] > [Visitor/Visit Attributes]** に移動して [**Add Attribute**] をクリックします。
+2. スコープとして [**Visitor**] を選択して [**Continue**] をクリックします。
+3. データ型として [**Badge**] を選択して [**Continue**] をクリックします。
 4. バッジの名前「VIP」を入力する。
-5. \[**Add Enrichment**] をクリックし、\[**Assign Badge**] を選択します。
+5. [**Add Enrichment**] をクリックし、[**Assign Badge**] を選択します。
 6. WHEN "は "Any Event "のままにしておく。
-7. \[**Create Rule**] を選択して、バッジ割り当てのルールを作成します。このルールにタイトルを割り当て、前回作成した属性を使用して、ルールを「...属性 "Lifetime Order Value greater than 500 "を持つ」と設定する。
-8. \[**Save**] をクリックし、\[**Finish**] をクリックします。
+7. [**Create Rule**] を選択して、バッジ割り当てのルールを作成します。このルールにタイトルを割り当て、前回作成した属性を使用して、ルールを「...属性 "Lifetime Order Value greater than 500 "を持つ」と設定する。
+8. [**Save**] をクリックし、[**Finish**] をクリックします。
 
 {% endtab %}
 {% endtabs %}
 
 ### ステップ2:オーディエンスを作成する
 
-Tealium のホームページから、サイドバーナビゲーションの \[**AudienceStream**] の \[**Audiences**] を選択します。ここでは、共通の属性を持つユーザーのオーディエンスを作成できます。このオーディエンスへのユーザーの出入りが、次のステップで設定する Connector Action のトリガーとなり、この情報が Braze のユーザープロファイルに渡されます。 
+Tealium のホームページから、サイドバーナビゲーションの [**AudienceStream**] の [**Audiences**] を選択します。ここでは、共通の属性を持つユーザーのオーディエンスを作成できます。このオーディエンスへのユーザーの出入りが、次のステップで設定する Connector Action のトリガーとなり、この情報が Braze のユーザープロファイルに渡されます。 
 
 まず、オーディエンスに名前を付けてから、作成するオーディエンスのタイプに適用する属性を検討します。たとえば VIP ユーザーのオーディエンスを作成するには、**VIP バッジ**を持つ訪問者のオーディエンスを作成することができます。
 
@@ -113,9 +113,9 @@ Tealium のホームページから、サイドバーナビゲーションの \[
 
 コネクターとは、Tealium と他のベンダーの間でデータを伝送するために使用される統合です。これらのコネクターには、パートナーがサポートするAPIを表すアクションが含まれている。 
 
-1. Tealium のサイドバーの \[**Server-Side**] から **\[AudienceStream] > \[Audience Connectors]** に移動します。
-2. 青色の \[**＋Add Connector**] ボタンを選択して、コネクターマーケットプレースを参照します。表示された新しいダイアログボックスで、スポットライト検索を使って**Braze**コネクタを探す。
-3. このコネクタを追加するには、**Braze**コネクタタイルをクリックする。クリックすると、接続の概要と、必要な情報、サポートされているアクション、設定手順のリストが表示される。この設定は、ソース、設定、アクションの3つのステップで構成されています。
+1. Tealium のサイドバーの [**Server-Side**] から **[AudienceStream] > [Audience Connectors]** に移動します。
+2. 青色の [**＋Add Connector**] ボタンを選択して、コネクターマーケットプレースを参照します。アプリが耳にする新しいダイアログボックスで、スポットライト検索を使用して**Braze** コネクターを見つけます。
+3. このコネクターを追加するには、**Braze**コネクタータイルを選択します。クリックすると、接続の概要と、必要な情報、サポートされているアクション、設定手順のリストが表示される。この設定は、ソース、設定、アクションの3つのステップで構成されています。
 
 #### ソース
 
@@ -125,58 +125,58 @@ Tealium のホームページから、サイドバーナビゲーションの \[
 
 #### 構成
 
-次に、**設定**ダイアログが表示される。ページ下部の \[**Add Connector**] を選択します。コネクタに名前を付け、Braze APIエンドポイントとBraze REST APIキーをここに入力する。
+次に、**設定**ダイアログが表示される。ページ下部の [**Add Connector**] を選択します。コネクタに名前を付け、Braze APIエンドポイントとBraze REST APIキーをここに入力する。
 
 ![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
 以前にコネクターを作成したことがある場合は、利用可能なコネクターのリストにある既存のコネクターを使用し、鉛筆アイコンでニーズに合わせて変更するか、ゴミ箱アイコンでコネクターを削除することができます。 
 
-このオーディエンスをリンクするコネクターを作成または選択したら、\[Done] をクリックして続行します。
+このオーディエンスをリンクするコネクターを作成または選択したら、[Done] をクリックして続行します。
 
 #### アクション (Action)
 
 次に、コネクターアクションに名前を付け、設定したマッピングに従ってデータを送信するアクションタイプを選択する。ここでは、Brazeの属性をTealiumの属性名にマッピングする。選択するアクションタイプに応じて、Tealium で必要となるフィールドは異なります。以下は、これらのフィールドの例と説明である。
 
 {% alert important %}
-すべての項目が必須というわけではない。
+提供されるすべてのフィールドが必要なわけではありません。
 
 ![]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:90%"}
 {% endalert %}
 
-{% tabs ローカル %}
-{% tab Track User (Batch および Non-Batch) %}
+{% tabs local %}
+{% tab ユーザーの追跡 (バッチと非バッチ) %}
 
-このアクションでは、ユーザー、イベント、購入の属性を1つのアクションですべて追跡できる。Track User アクションは AudienceStream と EventStream の両方で同じですが、Tealium はAudienceStream アクションでユーザー属性のマッピングを設定し、EventStream アクションでイベントと購入のマッピングを設定することを推奨しています。
+このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。Track User アクションは AudienceStream と EventStream の両方で同じですが、Tealium はAudienceStream アクションでユーザー属性のマッピングを設定し、EventStream アクションでイベントと購入のマッピングを設定することを推奨しています。
 
 | パラメーター | 説明 |
 | ---------- | ----------- |
-| ユーザー ID | このフィールドを使用して、TealiumユーザーIDフィールドとBrazeユーザーIDフィールドを対応させる。1つ以上のユーザーID属性をマップする。複数のIDが指定された場合、以下の優先順位に基づいて、空白でない最初の値が選ばれる：External ID、Braze ID、エイリアス名、エイリアスラベル。<br><br>\- プッシュトークンをインポートする場合、外部IDとBraze IDを指定すべきではない。<br>\- ユーザーエイリアスを指定する場合は、エイリアス名とエイリアスラベルを設定する必要がある。<br><br>詳細については、Braze [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)をご確認ください。 |
-| ユーザー属性 | Brazeの既存のユーザープロファイルのフィールド名を使用して、Brazeダッシュボードのユーザープロファイル値を更新するか、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加する。<br><br>\- デフォルトでは、ユーザーが存在しない場合、新しいユーザーが作成される。<br>\- \[**Update Existing Only**] を `true` に設定すると、既存のユーザーのみが更新され、新規ユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
-| ユーザー属性を変更する | このフィールドを使用して、特定のユーザー属性をインクリメントまたはデクリメントする。<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列の属性は、既存の配列に値を追加したり削除したりすることで変更できる。 |
-| イベント | イベントは、タイムスタンプにおける、特定のユーザーによるカスタムイベントの単一発生を表す。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、イベントが存在しない場合、新しいイベントが作成される。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新しいイベントは作成されない。<br>\- 配列タイプの属性をマップして、複数のイベントを追加する。配列型の属性は同じ長さでなければならない。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
-| イベントテンプレート | ボディデータで参照されるイベントテンプレートを提供する。Brazeにデータを送る前に、テンプレートを使ってデータを変換することができる。詳細については、Tealium の[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
-| イベントテンプレート変数 | イベントテンプレート変数をデータ入力として提供する。詳細については、Tealium の[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
-| 購入 | このフィールドは、Braze [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)の属性と同様に購入属性を追跡、マッピングする場合に使用します。<br><br>\- 購入属性 `Product ID`、`Currency`、`Price` は、マッピングされたすべての購入に必要です。<br>\- 購入属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新規購入が存在しない場合は作成されます。`Update Existing Only` を`true` に設定すると、既存の購入のみが更新され、新規購入は作成されません。<br>\- 複数の購入項目を追加するために、配列タイプの属性をマップする。配列型の属性は同じ長さでなければならない。<br>\- 単一値属性を使用することができ、各項目に適用される。|
-| テンプレート購入 | テンプレートは、Brazeに送信する前にデータを変換するために使用できる。<br>\- ネストされたオブジェクトのサポートが必要な場合は、購入テンプレートを定義する。<br>\- 購入テンプレートが定義されると、アクションの購入セクションで設定されたコンフィギュレーションは無視される。<br>詳細については、Tealium の[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。|
-| 購入テンプレート変数 | 製品テンプレートの変数をデータ入力として提供する。詳細については、Tealium の[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| ユーザー ID | このフィールドを使用して、Tealium のユーザー ID フィールドを Braze の対応するフィールドにマッピングします。1 つ以上のユーザー ID 属性をマップします。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br><br>\- プッシュトークンs をインポートする場合は、外部ID とBraze ID を指定しないでください。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を参照してください。 |
+| ユーザ属性 | Braze の既存のユーザープロファイルのフィールド名を使用して、Braze ダッシュボードのユーザープロファイル値を更新するか、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加します。<br><br>\- デフォルトでは、新規ユーザーが存在しない場合は作成されます。<br>\- 設定では、** 更新 Existing Only** to `true` で、存在するユーザーs のみが更新d になり、新しいユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
+| Modify user attributes | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
+| イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
+| Event template | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
+| Event template variable | イベントテンプレート変数をデータ入力として指定します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
+| 購入 | このフィールドは、Braze [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)の属性と同様に購入属性を追跡、マッピングする場合に使用します。<br><br>\- 購入属性 `Product ID`、`Currency`、`Price` は、マッピングされたすべての購入に必要です。<br>\- 購入属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新規購入が存在しない場合は作成されます。`Update Existing Only` を`true` に設定すると、既存の購入のみが更新され、新規購入は作成されません。<br>\- 配列型属性s をマップして、複数の購入アイテムを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各アイテムに適用されます。|
+| 購買テンプレート | テンプレートを使用して、Brazeに送信する前にデータを変換できます。<br>\- ネストされたオブジェクトサポートが必要な場合は、購入テンプレートを定義します。<br>\- 購入テンプレートを定義すると、アクションの購入セクションで設定された設定は無視されます。<br>\- 詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。|
+| 購買テンプレート変数 | 商品テンプレートの項目を入力します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Delete User (Non-Batch) %}
+{% tab ユーザーの削除 - 非バッチ %}
 
 このアクションでは、Braze ダッシュボードからユーザーを削除できます。
 
-| パラメーター | 説明 |
+| パラメータ | 説明 |
 | ---------- | ----------- |
-| ユーザー ID | このフィールドを使用して、TealiumユーザーIDフィールドとBrazeユーザーIDフィールドを対応させる。<br><br>\- 1つ以上のユーザーID属性をマップする。複数のIDが指定された場合、以下の優先順位に基づいて、空白でない最初の値が選ばれる：External ID、Braze ID、エイリアス名、エイリアスラベル。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳しくは、Braze [`/users/delete` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| ユーザー ID | このフィールドを使用して、TealiumユーザーIDフィールドとBrazeユーザーIDフィールドを対応させる。<br><br>\- 1つ以上のユーザーID属性をマップする。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/delete` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Update User Subscription Group Status (Non-Batch) %}
+{% tab ユーザーサブスクリプショングループステータスの更新 - 非バッチ %}
 この操作により、Braze SMSまたはEメール購読グループからユーザーを追加または削除することができる。
 
 | パラメーター | 説明 |
@@ -184,18 +184,18 @@ Tealium のホームページから、サイドバーナビゲーションの \[
 | Group type | このフィールドを使用して、SMS購読グループかEメール購読グループかを示す。 |
 | 更新タイプ | このアクションを購読解除または購読イベントにマッピングする 
 | 属性 | \- Subscription group ID (required):前のフィールドでマップされたグループタイプに関連するサブスクリプショングループのID。<br>\- 外部ID：ユーザーの外部ID。<br><br>メールグループ固有:<br>\- Email:ユーザーのEメールアドレス。<br>**external ID が定義されていない場合はメールが必須です。**<br><br>SMS グループ固有:<br>\- Phone:E.164 形式の電話番号。 +14155552671 などです。<br>**external ID が定義されていない場合は電話番号が必須です。** |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/update_subscription.png %}){: style="max-width:90%"}
 
 {% endtab %}
 {% endtabs %}
 
-\[**Finish**] を選択します。
+[**Finish**] を選択します。
 
 #### まとめ
 
-作成したコネクタの概要を表示する。選択したオプションを変更する場合は、\[**Back**] を選択して編集するか、\[**Finish**] を選択して完了します。
+作成したコネクタの概要を表示する。選択したオプションを変更する場合は、[**Back**] を選択して編集するか、[**Finish**] を選択して完了します。
 
 コネクターが Tealium ホームページのコネクターリストに表示されます。
 
@@ -205,13 +205,13 @@ Tealium のホームページから、サイドバーナビゲーションの \[
 
 コネクターが稼動したら、正常に動作していることを確認するため、コネクターをテストする必要があります。最も簡単なテスト方法は、Tealium **Trace ツール**を使用する方法です。Traceを使い始めるには、Tealium Toolsブラウザ拡張機能を追加していることを確認する。
 
-1. 新しいトレースを開始するには、サイドバーの \[**Server-Side**] のオプションから \[**Trace**] を選択します。\[**Start**] をクリックし、トレース ID をキャプチャします。
+1. 新しいトレースを開始するには、サイドバーの [**Server-Side**] のオプションから [**Trace**] を選択します。[**Start**] をクリックし、トレース ID をキャプチャします。
 2. ブラウザー拡張機能を開き、AudienceStream Trace にトレース ID を入力します。
-3. リアルタイムのログを調べる。
-4. **Actions Triggered（トリガーされたアクション）」の**エントリーをクリックして展開し、検証したいアクションをチェックする。
-5. 検証したいアクションを探し、ログのステータスを見る。 
+3. リアルタイムログを調べます。
+4. 展開する **Actions Triggered** エントリをクリックして、検証するアクションを確認します。
+5. 検証するアクションを探して、ログステータスを表示します。 
 
-Tealium の Trace ツールの詳しい実装手順については、Tealium の \[Trace ドキュメント][21]を参照してください。
+Tealium の Trace ツールの詳しい実装手順については、Tealium の [Trace ドキュメント][21]を参照してください。
 
 ## 統合デモ
 
@@ -219,21 +219,21 @@ Tealium の Trace ツールの詳しい実装手順については、Tealium の
   <iframe width="560" height="315" src="https://drive.google.com/file/d/1m2JI4vdFt3fDePBdVvVcQWEjbC82ApGA/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## データポイントの超過料金発生の可能性
+## 潜在データポイント 超過料金s
 
-Tealiumを通じてBrazeを統合する際に、誤ってデータ超過に見舞われる可能性のある主な方法は3つある：
+Tealium から Braze を統合するときに、誤ってデータ超過料金が生じる主な状況が3つあります。
 
 #### 重複したデータを送信する - 属性のBraze差分のみを送信する
 Tealiumはユーザー属性のBrazeデルタを送信しない。例えば、ユーザーのファーストネーム、Eメール、携帯電話番号を追跡するEventStreamアクションがある場合、Tealiumはアクションがトリガーされるたびに、3つの属性すべてをBrazeに送信する。Tealium は、変更された内容や更新された内容を探してその情報のみを送信することはありません。<br><br> 
-**解決策**:<br>バックエンドをチェックして属性が変更されたかどうかを評価し、変更された場合はTealiumの関連メソッドを呼び出してユーザープロファイルを更新することができる。**これは、Braze を直接統合するユーザーが通常行う作業です。**<br>**または**<br> 自分自身のユーザープロファイルをバックエンドに保存しておらず、属性が変更されたかどうかを判断できない場合は、AudienceStream を使用して[リッチメントを作成し](https://docs.tealium.com/server-side/attributes/manage-enrichments/add-enrichment/)、値が変更された場合にのみユーザー属性を送信するようにできます。 
+**解決策**:<br>バックエンドを確認して、属性が変更されているかどうかを評価し、変更されている場合は、Tealium の関連メソッドを呼び出してユーザープロファイルを更新できます。**これは、Braze を直接統合するユーザーが通常行う作業です。**<br>**または**<br> 自分自身のユーザープロファイルをバックエンドに保存しておらず、属性が変更されたかどうかを判断できない場合は、AudienceStream を使用して[リッチメントを作成し](https://docs.tealium.com/server-side/attributes/manage-enrichments/add-enrichment/)、値が変更された場合にのみユーザー属性を送信するようにできます。 
 
 #### 無関係なデータを送信したり、不必要にデータを上書きしたりする。
 同じイベントフィードをターゲットとする複数の EventStream がある場合、1つのアクションがトリガーされるたびに、**そのコネクターで有効になっているすべてのアクション**が自動的に起動します。**その結果、Braze でデータが上書きされる可能性があります。**<br><br>
-**解決策**:<br>各アクションを追跡するために、個別のイベント仕様またはフィードを設定する。<br>**または**<br> Tealium ダッシュボードのトグルを使用して、起動しないアクション (またはコネクター) を無効にします。
+**解決策**:<br>それぞれのアクションを追跡するために、個別のイベント指定またはフィードを設定します。<br>**または**<br> Tealium ダッシュボードのトグルを使用して、起動しないアクション (またはコネクター) を無効にします。
 
 #### Brazeの初期化が早すぎる
-Braze Web SDK タグを使用して Tealium と統合するユーザーの場合、MAU が大幅に増加する可能性があります。**Brazeがページ読み込み時に初期化される場合、Brazeは、ウェブユーザーが初めてウェブサイトに移動するたびに匿名プロファイルを作成する。**MAUカウントを下げるために、ユーザーが「サインイン」や「ビデオ視聴」など、何らかのアクションを完了した時だけ、ユーザーの行動をトラッキングしたいと考える人もいるだろう。<br><br>
-**解決策**:<br>タグがサイトで読み込まれるタイミングと位置を正確に決定する[読み込みルール](https://docs.tealium.com/iq-tag-management/load-rules/about/)を設定します。
+Braze Web SDK タグを使用して Tealium と統合するユーザーの場合、MAU が大幅に増加する可能性があります。**Braze がページ読み込むで初期化されている場合、Web ユーザーが初めてWeb サイトに移動するたびに、Braze によって匿名プロファイルが作成されます。**ユーザーが"Signed In"または"Watched Video"など、いくつかのアクションを完了したときにのみ、MAU数を減らすためにユーザーの挙動を追跡することを望む人もいるかもしれません。<br><br>
+**解決策**:<br>[ 読み込む規則](https://docs.tealium.com/iq-tag-management/load-rules/about/) を設定して、タグ 読み込むがいつどこにあるかを正確に判断します。
 
 [1]: https://docs.tealium.com/server-side/attributes/about/
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}

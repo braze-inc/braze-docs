@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1
 {% endapimethod %}
 
-> Utilisez cet endpoint pour créer un centre de préférences permettant aux utilisateurs de gérer leurs préférences en matière de notification pour vos campagnes d'e-mail. Reportez-vous à la section [Créer un centre de préférences via l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api) pour savoir comment créer un centre de préférences généré par l'API.
+> Utilisez cet endpoint pour créer un centre de préférences permettant aux utilisateurs de gérer leurs préférences en matière de notification pour vos campagnes d'e-mail. Reportez-vous à la section [Créer un centre de préférences avec l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) pour savoir comment créer un centre de préférences généré par l'API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -41,9 +41,18 @@ Authorization: Bearer YOUR-REST-API-KEY
   "confirmation_page_html": "string",
   "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of the following "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values include "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Paramètres de demande
@@ -55,8 +64,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Requis | Chaîne de caractères | L’HTML de la page du centre de préférences. |
 |`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
 |`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
-|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`options` | Facultatif | Objet | Attributs : <br>`meta-viewport-content` : Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`.<br><br> `link-tags` : Définissez un favicon pour la page. Lorsque cette option est activée, une étiquette `<link>` avec un attribut rel est ajoutée à la page.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Le nom du centre de préférences ne peut pas être modifié après sa création.
@@ -74,7 +83,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 | --------- | ---------|
 |`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed"). |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état abonné du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Saisies de formulaire et action
 
@@ -83,7 +92,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 |`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est abonné avec des données de sélection pour l'état d'abonnement global à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu’un élément de saisie de formulaire particulier correspond à un groupe d’abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier. |
 |`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
@@ -102,7 +111,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 ```
 {% endraw %}
 
-### HTML avec entrées de formulaire 
+### HTML avec entrées de formulaire
 
 {% raw %}
 ```
@@ -179,7 +188,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
       "
     >
       <div class="content" style="margin-left: 20px; margin-right: 20px">
-        
+
         <div>
           <h1
             style="color: #3accdd; font-size: 27px; font-weight: 400; margin-bottom: 40px; margin-top: 0"
@@ -205,7 +214,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 1
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -215,7 +224,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 2
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 <div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
@@ -225,7 +234,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
     Sub Group 3
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
-    
+
   </p>
 </div>
 </div>

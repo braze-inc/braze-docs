@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments. You must recreate the segment you're trying to include by using the same filters.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments because this may create a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it. Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
     tags:
       - Segment or CSV membership
   - name: Braze Segment Extensions
@@ -50,6 +50,10 @@ glossaries:
     description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom attributes
+  - name: Created At
+    description: Segments users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
     description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
@@ -135,11 +139,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Message from Specific Canvas Step
-    description: Segments your users by when they received a specific Canvas component.
+    description: Segments your users by when they received a specific Canvas component. This filter doesn't consider when users received other Canvas components.
     tags:
       - Retargeting
   - name: Last Received Message from Specific Campaign
-    description: Segments your users by whether or not they have received a specific campaign.
+    description: Segments your users by whether or not they have received a specific campaign. This filter doesn't consider when users received other campaigns.
     tags:
       - Retargeting
   - name: Received Message from Campaign or Canvas with Tag
@@ -147,7 +151,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Message from Campaign or Canvas With Tag
-    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)
+    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. This filter doesn't consider when users received other campaigns or Canvases. (24-hour period)
     tags:
       - Retargeting
   - name: Has Never Received a Message from Campaign or Canvas Step
@@ -214,6 +218,10 @@ glossaries:
     description: Segment your users by whether or not their email address has hard bounced (such as the email address is invalid).
     tags:
       - Retargeting
+  - name: Soft Bounced
+    description: Segment your users by whether they soft bounced X times in Y days. Segment filters can only look back 30 days, but you can look back further with Segment Extensions.<br><br>This filter operates differently than a soft bounce event in Currents. The Soft Bounced segment filter counts a soft bounce if there was no successful delivery during the 72 hour retry period. In Currents, every unsuccessful retry is sent as a soft bounce event. 
+    tags:
+      - Retargeting
   - name: Has Marked You As Spam
     description: Segments your users by whether or not they have marked your messages as spam.
     tags:
@@ -243,7 +251,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they fell into the control group in a campaign. <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Entered Canvas Variation
@@ -263,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Feature Flags
-    description: The segment of your users that have a particular <a href="/docs/developer_guide/platform_wide/feature_flags/about">feature flag</a> currently enabled.
+    description: The segment of your users that have a particular <a href="/docs/developer_guide/feature_flags/">feature flag</a> currently enabled.
     tags:
       - Retargeting
   - name: Subscription Group
@@ -558,4 +566,8 @@ glossaries:
     description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
+  - name: Sending Phone Number
+    description: Segments your users by the e.164 sending phone number field.<br><br>When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having a phone number but not a sending phone number.<br><br>Use cases:<br> - Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
+    tags:
+      - Other filters
 ---

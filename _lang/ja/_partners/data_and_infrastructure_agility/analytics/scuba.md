@@ -15,8 +15,12 @@ search_tag: Partner
 
 Braze で Scuba Analytics を使用するには、以下が必要です。
 
-- `users.track` 権限を持つ[Braze REST API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)。
-- `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。
+| 必要条件 | 説明 |
+|---|---|
+|Scuba API トークン | `https://{scuba_hostname}/api/create_token` エンドポイントから取得できる Scuba API トークン。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL][1] に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Braze への Scuba データのアップロード
 
@@ -53,11 +57,11 @@ curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" 
 | `TABLE_NAME`            | データセットが属するテーブル。詳細については、[用語集:データセットテーブル][3]。                                                                                                      |
 | `ACTOR_PROPERTY_NAME`   | データセットが属するアクタプロパティ。この名前に一致するデータのみが返されます。詳細については、[用語集:アクタープロパティ ][4]。                                             |
 | `ACTOR_PROPERTY_FILTER` | アクタープロパティのオーディエンス検索フィルター。                                                                                                                                             |
-| `ACTOR_ID`              | データセットが属するアクタプロパティのID。この ID は、Braze の`external_id` に一致します。詳細については、[用語集を参照してください。Actor][5].を参照してください。                                              |
+| `ACTOR_ID`              | データセットが属するアクタプロパティのID。この ID は、Braze の`external_id` に一致します。詳細については、[用語集:Actor][5].を参照してください。                                              |
 | `PERIOD_START`          | BQL 互換の日付としての期間開始日。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                 |
 | `PERIOD_END`            | BQL 互換の日付としての期間終了日。詳細については、[BQL構文および使用法][6]を参照してください。                                                                                                   |
 | `RECORD_LIMIT`          | **オプション**:返されるレコードの最大数。`scuba_record_limit` が省略された場合、Scuba は最大100件のレコードを返します。これを変更するには、負でない数値を `scuba_record_limit` に割り当てます。    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### デフォルト動作
 
@@ -81,15 +85,15 @@ Braze で、**Audience** > **Segments** に移動し、**Segmentの作成** を�
 
 **Segment Details** > **Filters**で、**Custom Attributes**を選択します。
 
-![\[セグメントの詳細] での「カスタム属性」フィルターの選択。][502]
+![[セグメントの詳細] での「カスタム属性」フィルターの選択。][502]
 
 **検索カスタム属性s**を選択し、前回のPOSTリクエストで使用したアクタープロパティの名前を選択します。
 
 ![アクタープロパティをカスタム属性として選択します。][503]
 
-### ステップ3:属性の設定
+### ステップ 3:属性の設定
 
-アクタープロパティ名の横で、演算子と値を選択します (該当する場合)。これらの値は、Scuba で定義したアクタープロパティによって決定されます。完了したら、\[**保存**] を選択します。
+アクタープロパティ名の横で、演算子と値を選択します (該当する場合)。これらの値は、Scuba で定義したアクタープロパティによって決定されます。完了したら、[**保存**] を選択します。
 
 ![選択されているプロパティ名に対する演算子と値の選択。][504]
 

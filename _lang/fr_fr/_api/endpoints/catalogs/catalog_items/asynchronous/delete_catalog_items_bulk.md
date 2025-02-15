@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer plus
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Utilisez cet endpoint pour supprimer plusieurs produits de votre catalogue. 
+> Utilisez cet endpoint pour supprimer plusieurs produits de votre catalogue.
 
 Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
@@ -34,14 +34,14 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produit doivent contenir un `id` faisant référence aux produits que Braze doit supprimer. Jusqu’à 50 objets sont autorisés par requête. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -100,9 +100,9 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `ids-too-large` | Les ID de produit ne peuvent pas contenir plus de 250 caractères. |
 | `ids-not-unique` | Vérifiez que les ID de produit dans la requête sont uniques. |
 | `ids-not-strings` | Les ID de produit doivent être de type chaîne de caractères. |
-| `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
+| `items-missing-ids` | Certains articles n'ont pas d'ID. Vérifiez que chaque produit possède un ID de produit. |
 | `invalid-ids` | Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement. |
 | `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

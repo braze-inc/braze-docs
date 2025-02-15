@@ -16,11 +16,11 @@ description: "이 문서에는 2019년 7월의 릴리스 노트가 포함되어 
 
 [싱글 사인온]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO)을 통해 기업들은 Braze 대시보드에 대한 액세스를 안전하고 중앙 집중화된 방식으로 제어할 수 있습니다. 즉, 하나의 자격 증명 세트를 사용하여 Braze를 포함한 다양한 애플리케이션에 액세스할 수 있습니다.
 
-[OAuth 2.0 지원을 사용하는 Google 로그인](https://developers.google.com/identity/protocols/OAuth2) 외에도 기업들은 SAML(Security Assertion Markup Language)이 지원되는 SSO를 원합니다. 이를 통해 최신 업계 표준(SAML 2.0)을 지원하는 [Azure 액티브 디렉토리]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) 및 [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)를 비롯한 대규모 ID 공급자(IdP)와 원활하게 통합할 수 있습니다.
+[OAuth 2.0 지원을 사용하는 Google 로그인](https://developers.google.com/identity/protocols/OAuth2) 외에도 기업들은 SAML(Security Assertion Markup Language)이 지원되는 SSO를 원합니다. 이를 통해 최신 업계 표준(SAML 2.0)을 지원하는 [Azure 액티브 디렉토리]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/) 및 [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)를 비롯한 대규모 ID 공급자(IdP)와 원활하게 통합할 수 있습니다.
 
 Braze 지원:
 - [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
-- [Azure 액티브 디렉토리]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
+- [Azure 액티브 디렉토리]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 - [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
 ## 이벤트 API 키 표시 조정

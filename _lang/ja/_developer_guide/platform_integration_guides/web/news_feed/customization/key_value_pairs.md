@@ -13,14 +13,9 @@ channel: news feed
 
 > この記事では、Braze SDKを介してニュースフィードカードでキーバリューペアを使用する方法について説明する。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 オプションで、`Card` オブジェクトはキーと値のペアを `extras` として保持できます。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。`card.extras`を呼び出して、これらの値にアクセスします。
 
-[ClassicCard][3]、[ImageOnly][4]、[CaptionedImage][5] については JSDocs を参照してください。
+[ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html)、[ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html)、[CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) については JSDocs を参照してください。
 
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html

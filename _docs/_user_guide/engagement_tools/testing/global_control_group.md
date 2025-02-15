@@ -79,17 +79,23 @@ After disabling your Control Group, you can save a new one. When you enter a per
 
 ## Export your control group members {#export-group-members}
 
-If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. 
+If you'd like to see which users are in your Global Control Group, you can export your Group's members by CSV or API. 
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export by API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
 {% endalert %}
 
+## View whether a user is in a Global Control Group
+
+You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
+
+![A "Miscellaneous" section reporting that the user has a random bucket number is 2030 and is in the Global Control Group.][1]{: style="max-width:60%;"}
+
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 
@@ -163,6 +169,7 @@ You should decide how long to run your experiment before beginning it, and then 
 
 Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

@@ -29,7 +29,7 @@ search_rank: 3
 
 ## 購入データの表示
 
-購入イベントを設定してログ記録を開始したら、この購入データを [\[概要] タブ]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab)のユーザープロファイルに表示できます。
+購入イベントを設定してログ記録を開始したら、この購入データを [[概要] タブ]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab)のユーザープロファイルに表示できます。
 
 ## 購入データの使用
 
@@ -91,7 +91,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 一般的なユースケースは、ユーザーが購入したときにメールなどのメッセージを自動送信することです。例えば、お礼のメッセージや、今後の購入に向けた割引コードを送信できます。
 
-そのためには、アクションベースのキャンペーンまたはキャンバスを作成し、トリガーアクションを \[**購入**] に設定します。購入した製品や購入金額など、トリガーに追加条件を指定することもできます。
+そのためには、アクションベースのキャンペーンまたはキャンバスを作成し、トリガーアクションを [**購入**] に設定します。購入した製品や購入金額など、トリガーに追加条件を指定することもできます。
 
 トリガーメッセージを Liquid でパーソナライズすることもできます。
 
@@ -109,7 +109,46 @@ Thank you for your purchase of ${purchase_product_name}! As a token of our appre
 
 Braze はセグメンテーション用に購入指標を追跡するだけでなく、経時的な各製品の購入数とそれによる収益も記録します。これは、最も人気のある製品を確認したり、プロモーションキャンペーンが収益に与える影響を測定したりするときに役立ちます。
 
-このデータは \[[収益レポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data)] ページで確認できます。
+このデータは [[収益レポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data)] ページで確認できます。
+
+### 収益計算の理解
+
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>指標</th>
+            <th>定義</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">生涯収益</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">ユーザーあたりの生涯価値</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー一人当たりの生涯価値' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='平均日収' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">日割り購入数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='1日の購入額' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">ユーザーあたりの日割り収益</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー1人あたりの日次収益' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 #### 生涯収益の計算
 
@@ -159,7 +198,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 [セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)とは異なり、使用されるセグメントはリアルタイムで更新され、サポートされるセグメントの数に制限はなく、最大 30 日間の履歴を確認でき、データポイントが使用されます。データポイントが追加で消費されるため、カスタムイベントのイベントプロパティを有効にするように、Braze カスタマーサクセスマネージャーに依頼してください。
 
-承認されると、\[**プロパティの管理**] をクリックして、ダッシュボードの \[**データ設定**] > \[**カスタムイベント**] でプロパティを追加できます。その後、これらのイベントプロパティをキャンペーンビルダーまたはキャンバスビルダーのターゲットステップで使用できます。
+承認されると、[**プロパティの管理**] をクリックして、ダッシュボードの [**データ設定**] > [**カスタムイベント**] でプロパティを追加できます。その後、これらのイベントプロパティをキャンペーンビルダーまたはキャンバスビルダーのターゲットステップで使用できます。
 
 ### キャンバスエントリのプロパティとイベントプロパティ
 
@@ -211,10 +250,10 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 たまに、購入イベントについて、データポイントの消費量が多いもの、マーケティング戦略に不要になったもの、または誤って記録されたものが見つかることがあります。開発チームがアプリや Web サイトのバックエンドからこのデータを削除する作業をしている間、このデータが Braze に送信されないようにするために、カスタムデータオブジェクトを禁止リストに入れておくことができます。
 
-Braze ダッシュボードでは、\[**データ設定**] > \[**製品**] から禁止リストを管理できます。詳細については、「[カスタムデータの管理]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/)」を参照してください。
+Braze ダッシュボードでは、[**データ設定**] > [**製品**] から禁止リストを管理できます。詳細については、「[カスタムデータの管理]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/)」を参照してください。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**製品**] は \[**設定の管理**] の下にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**製品**] は [**設定の管理**] の下にあります。
 {% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}

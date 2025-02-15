@@ -17,7 +17,7 @@ tool:
 
 常にさまざまなデバイスで[メッセージをプレビューしてテストし]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)、画像とメッセージの最も重要な領域が期待どおりに表示されることを確認する必要があります。
 
-{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。\[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
+{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
 {% multi_lang_include image_specs.md variable_name='payload size' %}
 

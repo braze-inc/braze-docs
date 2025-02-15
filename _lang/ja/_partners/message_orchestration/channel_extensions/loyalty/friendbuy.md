@@ -19,21 +19,21 @@ search_tag: Partner
 | 前提条件          | 説明                                                                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Friendbuyアカウント   | このパートナーシップを活用するには、[Friendbuy アカウント][1]が必要です。                                                              |
-| Braze REST API キー  | `users.track` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定**」>「**APIキー**」から作成できる。        |
+| Braze REST API キー  | `users.track` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。        |
 | Braze RESTエンドポイント | [REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。これは Braze インスタンスの URL に応じて異なります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] で API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
 {% endalert %}
 
 ## Friendbuy の統合
 
-[Friendbuy][1] で \[**Developer Center**] > \[**Integrations**] に移動し、Braze 統合カードで \[**Add integration**] を選択します。
+[Friendbuy][1] で [**Developer Center**] > [**Integrations**] に移動し、Braze 統合カードで [**Add integration**] を選択します。
 
 ![Friendbuy の Braze 統合カード。][100]{: style="max-width:75%;"}
 
-フォームに REST エンドポイントと API キーを入力し、\[**Install Integration**] を選択します。
+フォームに REST エンドポイントと API キーを入力し、[**Install Integration**] を選択します。
 
 ![Friendbuy 統合フォーム。][101]{: style="max-width:55%;"}
 
@@ -56,9 +56,9 @@ search_tag: Partner
 | **Friendbuy Coupon Status**      | 顧客に配布された最新のクーポンコードのステータス。注：ステータスは「distributed」または「redeemed」です。                            | String    |
 | **Friendbuy Coupon Currency**    | 顧客に配布された最新のクーポンコードに関連する通貨コード（USD、CADなど）またはパーセント（%）。                             | String    |
 | **FriendbuyクーポンキャンペーンID** | 顧客のために生成されたクーポンコードに関連するキャンペーンID。                                                                          | String    |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## デフォルトの動作
+## デフォルト動作
 
 顧客データを Braze に送信する前に、顧客は紹介ウィジェットで以下の1つ以上のボックスをオンにして、オプトインする必要があります。
 

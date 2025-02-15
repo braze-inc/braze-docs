@@ -45,7 +45,7 @@ func inAppMessage(
 | `.url(URL, useWebView: Bool)` | 指定されたURLを外部ブラウザで開く。`useWebView` が`true` に設定されていれば、ウェブビューで開く。 |
 | `.newsFeed` | メッセージがクリックされるとニュースフィードが表示され、メッセージは解除される。<br><br>**注:**ニュースフィードは非推奨になります。詳しくは[マイグレーション・ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)チェックしてほしい。 |
 | `.none` | クリックするとメッセージが却下されます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 ボタンを含むアプリ内メッセージの場合、ボタンテキストを追加する前にクリックアクションが追加されると、メッセージ `clickAction` も最終ペイロードに含まれます。
@@ -53,7 +53,7 @@ func inAppMessage(
 
 ## アプリ内メッセージとボタンクリックのカスタマイズ
 
-アプリ内メッセージがクリックされると、次の [`BrazeInAppMessageUIDelegate`][34] デリゲートメソッドが呼び出されます。アプリ内メッセージボタンと HTML アプリ内メッセージボタン（リンク）のクリックについては、ボタン ID がオプションのパラメータとして提供されます。
+アプリ内メッセージがクリックされると、次の [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) デリゲートメソッドが呼び出されます。アプリ内メッセージボタンと HTML アプリ内メッセージボタン（リンク）のクリックについては、ボタン ID がオプションのパラメータとして提供されます。
 
 {% tabs %}
 {% tab SWIFT %}
@@ -85,4 +85,3 @@ func inAppMessage(
 
 このメソッドは、Braze がクリックアクションを実行し続けるかどうかを示すブール値を返します。
 
-[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate

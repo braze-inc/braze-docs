@@ -163,7 +163,7 @@ If you're having issues with the Looker Action, add a test user to [internal gro
 * The `looker_export` field is set as `Automatically Detect` under `Braze Platform > Settings > Manage Settings > Custom Attributes`.
 * The changes are commit to production. Looker Action works on production settings.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
+[1]: {{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
 [4]: {{site.baseurl}}//user_guide/onboarding_with_braze/integration/

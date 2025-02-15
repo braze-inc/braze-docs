@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Interroger ou 
 {% api %}
 # Extraire les e-mails ayant reçu un échec d'envoi définitif
 {% apimethod get %}
-/email/rebonds_durs
+/email/hard_bounces
 {% endapimethod %}
 
 > Utilisez cet endpoint pour extraire une liste d’adresses e-mail ayant rejeté définitivement vos e-mails au cours d'une certaine période.
@@ -35,13 +35,13 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
 | `email` | Facultatif<br>(voir la note) | Chaîne de caractères | S’il est fourni, nous enverrons un message indiquant si l’utilisateur a reçu un échec d'envoi définitif ou non. Vérifiez que les chaînes d'e-mails sont correctement formatées. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Vous devez fournir une `start_date` et une `end_date`, OU un `email`. Si vous fournissez les trois, une `start_date`, une `end_date`, et un `email`, nous donnerons la priorité aux e-mails communiqués et ignorerons la plage de dates.
 {% endalert %}
 
-Si votre plage de dates dépasse le nombre `limit` d'échecs d'envoi définitifs, vous devrez effectuer plusieurs appels d’API, en augmentant à chaque fois le `offset` jusqu’à ce qu’un appel renvoie un résultat inférieur à `limit` ou égal à zéro. L'inclusion des paramètres `offset` et `limit` avec `email` peut renvoyer une réponse vide. 
+Si votre plage de dates dépasse le nombre `limit` d'échecs d'envoi définitifs, vous devrez effectuer plusieurs appels d’API, en augmentant à chaque fois le `offset` jusqu’à ce qu’un appel renvoie un résultat inférieur à `limit` ou égal à zéro. L'inclusion des paramètres `offset` et `limit` avec `email` peut renvoyer une réponse vide.
 
 ## Exemple de demande
 ```

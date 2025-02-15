@@ -9,11 +9,11 @@ description: "이 참조 문서는 클라우드 데이터 수집, 모범 사례 
 
 # Braze 클라우드 데이터 수집 개요
 
-> Braze 클라우드 데이터 인제스천을 사용하면 데이터 웨어하우스 또는 파일 저장 시스템에서 Braze로 직접 연결하여 관련 사용자 또는 카탈로그 데이터를 동기화할 수 있습니다. Braze에 동기화되면 이 데이터는 개인화, 트리거링 또는 세분화와 같은 사용 사례에 활용될 수 있습니다. 
+> Braze 클라우드 데이터 수집을 사용하면 데이터 웨어하우스 또는 파일 저장 시스템에서 Braze로 직접 연결하여 관련 사용자 또는 카탈로그 데이터를 동기화할 수 있습니다. Braze에 동기화되면 이 데이터는 개인화, 트리거링 또는 세분화와 같은 사용 사례에 활용될 수 있습니다. 
 
 ## 작동 방식
 
-Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우스 인스턴스와 Braze 워크스페이스 간의 통합을 설정하여 데이터를 정기적으로 동기화할 수 있습니다. 이 동기화는 사용자가 설정한 일정에 따라 실행되며, 각 통합은 다른 일정을 가질 수 있습니다. 동기화는 15분마다 자주 실행되거나 한 달에 한 번씩 드물게 실행될 수 있습니다. 15분보다 더 자주 동기화가 필요한 고객은 고객 성공 매니저와 상담하거나 실시간 데이터 수집을 위해 REST API 호출을 사용하는 것을 고려하십시오.
+Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우스 인스턴스와 Braze 워크스페이스 간의 통합을 설정하여 데이터를 정기적으로 동기화할 수 있습니다. 이 동기화는 사용자가 설정한 일정에 따라 실행되며, 각 통합은 다른 일정을 가질 수 있습니다. 동기화는 15분마다 자주 실행되거나 한 달에 한 번씩 드물게 실행될 수 있습니다. 15분보다 더 자주 동기화가 필요한 고객은 고객 성공 매니저와 상담하거나 실시간 데이터 수집을 위해 REST API 호출을 사용하는 것을 고려하세요.
 
 동기화가 실행되면 Braze는 데이터 웨어하우스 인스턴스에 직접 연결하여 지정된 테이블의 모든 새 데이터를 검색하고 Braze 대시보드의 해당 데이터를 업데이트합니다. 동기화가 실행될 때마다 업데이트된 데이터는 Braze에 반영됩니다.
 
@@ -25,14 +25,15 @@ Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우�
    - Amazon Redshift
    - Databricks 
    - Google BigQuery
+   - Microsoft Fabric
    - Snowflake
 
-- 파일 저장소 소스 
+- 파일 스토리지 소스 
    - Amazon S3
 
 ## 지원되는 데이터 유형 
 
-클라우드 데이터 수집은 다음 데이터 유형을 지원합니다: 
+클라우드 데이터 수집은 다음 데이터 유형을 지원합니다. 
 - 사용자 속성, 포함: 
    - 중첩된 커스텀 속성
    - 객체 배열
@@ -46,17 +47,17 @@ Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우�
 
 ## 무엇이 동기화됩니까
 
-동기화가 실행될 때마다 Braze는 이전에 동기화되지 않은 행을 찾습니다. 우리는 귀하의 테이블 또는 뷰에서 `UPDATED_AT` 열을 사용하여 이를 확인합니다. `UPDATED_AT`가 마지막 동기화된 행보다 나중인 모든 행이 선택되어 Braze로 가져옵니다.
+동기화가 실행될 때마다 Braze는 이전에 동기화되지 않은 행을 찾습니다. Braze는 테이블 또는 뷰에서 `UPDATED_AT` 열을 사용하여 이를 확인합니다. `UPDATED_AT`이 마지막 동기화된 행보다 나중인 모든 행이 선택되어 Braze로 가져옵니다.
 
-데이터 웨어하우스에 다음 사용자 및 속성을 테이블에 추가하고 `UPDATED_AT` 시간을 이 데이터를 추가하는 시간으로 설정하십시오:
+데이터 웨어하우스에 다음 사용자 및 속성을 테이블에 추가하고 `UPDATED_AT` 시간을 이 데이터를 추가하는 시간으로 설정하세요:
 
-| UPDATED_AT | 외부_ID | 페이로드 |
+| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
 | --- | --- | --- |
-| `2022-07-19 09:07:23` | `customer_1234` | {<br>    "attribute_1":"abcdefg"<br>    "속성_2": {<br>        "attribute_a":"예시_값_2"<br>        "attribute_b":"예시_값_2"<br>    },<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-19 09:07:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg"<br>    "속성_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>    "attribute_5":"테스팅"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_4":참, <br>    속성_5":"테스트_123<br>} |
+| `2022-07-19 09:07:23` | `customer_1234` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_2": {<br>        "attribute_a":"예시_값_2"<br>        "attribute_b":"예시_값_2"<br>    },<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
+| `2022-07-19 09:07:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>    "attribute_5":"테스팅"<br>} |
+| `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
 
-다음 예정된 동기화 중에 가장 최근 타임스탬프보다 `UPDATED_AT` 타임스탬프가 나중인 모든 행이 Braze 사용자 프로필에 동기화됩니다. 필드는 업데이트되거나 추가될 것이므로 매번 전체 고객 프로필을 동기화할 필요는 없습니다. 동기화 후, 사용자는 새로운 업데이트를 반영할 것입니다:
+다음 예정된 동기화 중에 가장 최근 타임스탬프보다 `UPDATED_AT` 타임스탬프가 나중인 모든 행이 Braze 고객 프로필에 동기화됩니다. 필드는 업데이트되거나 추가될 것이므로 매번 전체 고객 프로필을 동기화할 필요는 없습니다. 동기화 후, 사용자는 새로운 업데이트를 반영할 것입니다:
 
 ```json
 {
@@ -97,7 +98,7 @@ Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우�
 
 ### 사용 사례: 첫 번째 동기화 및 이후 업데이트
 
-이 예제는 데이터를 처음으로 동기화하는 일반적인 프로세스를 보여주며, 이후 업데이트에서는 변경된 데이터(델타)만 업데이트합니다. 우리가 일부 사용자 데이터가 포함된 테이블 `EXAMPLE_DATA`이 있다고 가정해 봅시다. 첫째 날에는 다음과 같은 값이 있습니다:
+이 예제는 데이터를 처음으로 동기화하는 일반적인 프로세스를 보여주며, 이후 업데이트에서는 변경된 데이터(델타)만 업데이트합니다. Braze가 일부 사용자 데이터가 포함된 테이블 `EXAMPLE_DATA`가 있다고 가정해 봅시다. 첫째 날에는 다음과 같은 값이 있습니다:
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -108,7 +109,7 @@ Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우�
 <table>
     <thead>
         <tr>
-            <th>외부 ID</th>
+            <th>external_id</th>
             <th>속성_1</th>
             <th>속성_2</th>
             <th>속성_3</th>
@@ -132,14 +133,14 @@ Braze 클라우드 데이터 수집(CDI)을 사용하면 데이터 웨어하우�
         </tr>
         <tr>
             <td>34567</td>
-            <td>이백삼십사</td>
+            <td>234</td>
             <td>파란색</td>
             <td>384</td>
             <td>진실</td>
         </tr>
         <tr>
             <td>45678</td>
-            <td>이백사십오</td>
+            <td>245</td>
             <td>빨간</td>
             <td>349</td>
             <td>진실</td>
@@ -171,23 +172,23 @@ SELECT
 FROM EXAMPLE_DATA;
 ```
 
-이 중 어느 것도 이전에 Braze에 동기화되지 않았으므로 모든 것을 CDI의 소스 테이블에 추가하십시오:
+이 중 어느 것도 이전에 Braze에 동기화되지 않았으므로 모든 것을 CDI의 소스 테이블에 추가하세요.
 
-| UPDATED_AT          | 외부_ID | 페이로드                                                                                   |
+| UPDATED_AT          | EXTERNAL_ID | PAYLOAD                                                                                   |
 | :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
 | 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
 | 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
 | 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
 | 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
 | 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-동기화가 실행되고 Braze는 사용 가능한 모든 데이터를 “2023-03-16 15:00:00”까지 동기화했다고 기록합니다. 그런 다음, <b>2일째 아침에</b> ETL이 실행되고 사용자 테이블의 일부 필드가 업데이트됩니다 (강조 표시됨):
+동기화가 실행되고 Braze는 사용 가능한 모든 데이터를 “2023-03-16 15:00:00”까지 동기화했다고 기록합니다. 그런 다음, 2일째 아침에 ETL이 실행되고 사용자 테이블의 일부 필드가 업데이트됩니다(강조 표시됨).
 
 <table>
     <thead>
         <tr>
-            <th>외부 ID</th>
+            <th>external_id</th>
             <th>속성_1</th>
             <th>속성_2</th>
             <th>속성_3</th>
@@ -211,14 +212,14 @@ FROM EXAMPLE_DATA;
         </tr>
         <tr>
             <td>34567</td>
-            <td>이백삼십사</td>
+            <td>234</td>
             <td>파란색</td>
             <td style="background-color: #FFFF00;">495</td>
             <td style="background-color: #FFFF00;">거짓</td>
         </tr>
         <tr>
             <td>45678</td>
-            <td>이백사십오</td>
+            <td>245</td>
             <td style="background-color: #FFFF00;">녹색</td>
             <td>349</td>
             <td>진실</td>
@@ -235,7 +236,7 @@ FROM EXAMPLE_DATA;
 
 이제 변경된 값만 CDI 소스 테이블에 추가하면 됩니다. 이 행들은 이전 행을 업데이트하는 대신 추가할 수 있습니다. 그 테이블은 이제 이렇게 보입니다:
 
-| UPDATED_AT          | 외부_ID | 페이로드                                                                                   |
+| UPDATED_AT          | EXTERNAL_ID | PAYLOAD                                                                                   |
 | :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
 | 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
 | 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
@@ -247,7 +248,7 @@ FROM EXAMPLE_DATA;
 | 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
 | 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
 | 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 CDI는 새 행만 동기화하므로 다음 동기화가 실행되면 마지막 다섯 행만 동기화됩니다.
 
@@ -266,7 +267,7 @@ Create table BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list (
 );
 ```
 
-이 예제에서는 각 사용자에 의해 소유된 애완동물 배열을 추가하고자 합니다. 이는 `owner_id`에 해당합니다. 구체적으로, 우리는 식별, 품종, 유형 및 이름을 포함하고자 합니다. 다음 쿼리를 사용하여 테이블 또는 뷰를 채울 수 있습니다:
+이 예제에서는 각 사용자에 의해 소유된 애완동물 배열을 추가하고자 합니다. 이는 `owner_id`에 해당합니다. 구체적으로, 우리는 식별, 품종, 유형 및 이름을 포함하고자 합니다. 다음 쿼리를 사용하여 테이블 또는 뷰를 채울 수 있습니다.
 
 ```json
 SELECT 
@@ -302,7 +303,7 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 2023-10-02 19:56:17.377 +0000	12335345	{"_merge_objects":"true","pets":{"$add":[{"breed":"corgi","id":3,"name":"Doug","type":"dog"},{"breed":"salmon","id":4,"name":"Larry","type":"fish"}]}}
 ```
 
-다음으로, 각 소유자의 업데이트된 이름 필드와 새로운 나이 필드를 보내기 위해, 다음 쿼리를 사용하여 테이블 또는 뷰를 채울 수 있습니다:
+다음으로, 각 소유자의 업데이트된 이름 필드와 새로운 나이 필드를 보내기 위해, 다음 쿼리를 사용하여 테이블 또는 뷰를 채울 수 있습니다.
 
 ```json
 SELECT 
@@ -338,37 +339,63 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 
 ## 데이터 포인트 사용량
 
-클라우드 데이터 수집에 대한 데이터 포인트 청구는 [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track)를 통한 업데이트에 대한 청구와 동일합니다. [데이터 points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)에 대한 자세한 내용은 참조하십시오. 
+클라우드 데이터 수집에 대한 데이터 포인트 청구는 [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track)를 통한 업데이트에 대한 청구와 동일합니다. [데이터 포인트]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)에 대한 자세한 내용은 참조하세요. 
 
 {% alert important %}
-Braze 클라우드 데이터 수집은 사용 가능한 속도 제한에 포함되므로 다른 방법으로 데이터를 전송하는 경우 Braze API와 클라우드 데이터 수집 간에 속도 제한이 결합됩니다.
+Braze 클라우드 데이터 수집은 사용 가능한 속도 제한에 포함되므로 다른 방법으로 데이터를 전송하는 경우 Braze API와 클라우드 데이터 수집 간에 사용량 제한이 결합됩니다.
 {% endalert %}
 
 ## 데이터 설정 권장 사항
 
 ### 영어에서 한국어로 번역된 텍스트
 
-동기화가 실행될 때마다 Braze는 이전에 동기화되지 않은 행을 찾습니다. 우리는 귀하의 테이블 또는 뷰에서 `UPDATED_AT` 열을 사용하여 이를 확인합니다. `UPDATED_AT`가 마지막 동기화된 행보다 나중인 모든 행은 현재 고객 프로필에 있는 것과 동일한지 여부에 관계없이 Braze로 선택되어 가져옵니다. 그렇기 때문에 추가하거나 업데이트하려는 속성만 동기화할 것을 권장합니다.
+동기화가 실행될 때마다 Braze는 이전에 동기화되지 않은 행을 찾습니다. Braze는 테이블 또는 뷰에서 `UPDATED_AT` 열을 사용하여 이를 확인합니다. `UPDATED_AT`이 마지막 동기화된 행보다 나중인 모든 행은 현재 고객 프로필에 있는 것과 동일한지 여부에 관계없이 Braze로 선택되어 가져옵니다. 그렇기 때문에 추가하거나 업데이트하려는 속성만 동기화할 것을 권장합니다.
 
 데이터 포인트 소비는 REST API 또는 SDK와 같은 다른 수집 방법과 마찬가지로 CDI를 사용하여 동일하므로 소스 테이블에 새 속성이나 업데이트된 속성만 추가하도록 해야 합니다.
 
-### UPDATED_AT 열에 UTC 타임스탬프를 사용하십시오
+### `UPDATED_AT` 열에 UTC 타임스탬프 사용
 
-`UPDATED_AT` 열은 일광 절약 시간 문제를 방지하기 위해 UTC로 설정해야 합니다. 가능한 경우 `SYSDATE()` 대신 `CURRENT_DATE()`와 같은 UTC 전용 기능을 선호하십시오.
+`UPDATED_AT` 열은 일광 절약 시간 문제를 방지하기 위해 UTC로 설정해야 합니다. 가능한 경우 `SYSDATE()` 대신 `CURRENT_DATE()`와 같은 UTC 전용 기능을 선호하세요.
 
-### PAYLOAD 열에서 EXTERNAL_ID 분리
+### `UPDATED_AT` 시간이 동기화 시간과 같지 않은지 확인하세요.
 
-PAYLOAD 객체에는 외부 ID 또는 다른 ID 유형이 포함되어서는 안 됩니다. 
+`UPDATED_AT` 필드가 이전 동기화 시간과 정확히 같은 시간인 경우 CDI 동기화에 데이터가 중복될 수 있습니다. 이는 CDI가 이전 동기화와 같은 시간대에 있는 행을 발견하면 '포괄적 경계'를 선택하여 해당 행을 동기화할 수 있도록 하기 때문입니다. CDI는 해당 행을 다시 수집하여 중복 데이터를 생성합니다. 
 
-### 속성을 제거
+### `EXTERNAL_ID` 열과 `PAYLOAD` 열을 구분합니다.
 
-사용자의 프로필에서 속성을 완전히 제거하려면 `null`로 설정할 수 있습니다. 속성을 변경하지 않은 상태로 유지하려면 업데이트될 때까지 Braze에 보내지 마십시오.
+`PAYLOAD` 객체에는 외부 ID 또는 다른 ID 유형이 포함되어서는 안 됩니다. 
+
+### 속성 제거
+
+사용자 프로필에서 속성을 생략하려면 `null` 으로 설정하면 됩니다. 속성을 변경하지 않은 상태로 유지하려면 업데이트될 때까지 Braze에 보내지 마세요. 속성을 완전히 제거하려면 `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))` 을 사용합니다.
+
+### 점진적 업데이트 수행
+
+데이터를 점진적으로 업데이트하여 동시 업데이트 시 의도치 않은 덮어쓰기를 방지할 수 있습니다.
+
+다음 예제에서는 사용자에게 두 가지 속성이 있습니다:
+- 색상: "녹색"
+- 크기: "대형"
+
+그러면 Braze는 해당 사용자에게 다음 두 가지 업데이트를 동시에 수신합니다:
+- 요청 1: 색상을 "빨간색"으로 변경
+- 요청 2: 크기를 "중간"으로 변경
+
+요청 1이 먼저 발생하므로 사용자의 속성이 다음과 같이 업데이트됩니다:
+- 색상: "Red"
+- 크기: "대형"
+
+그러나 요청 2가 발생하면 Braze는 원래 속성 값("녹색" 및 "큰")으로 시작한 다음 사용자의 속성을 다음과 같이 업데이트합니다:
+- 색상: "녹색"
+- 크기: "Medium"
+
+요청이 완료되면 요청 2가 요청 1의 업데이트를 덮어씁니다. 따라서 요청을 덮어쓰는 것을 방지하기 위해 업데이트 시차를 두는 것이 가장 좋습니다.
 
 ### 다른 테이블에서 JSON 문자열 생성
 
 각 속성을 내부적으로 자체 열에 저장하려면 해당 열을 JSON 문자열로 변환하여 Braze와 동기화해야 합니다. 그렇게 하려면 다음과 같은 쿼리를 사용할 수 있습니다:
 
-{% tabs 지역 %}
+{% tabs 로컬 %}
 {% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
@@ -391,7 +418,7 @@ SELECT
     )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
 {% endtab %}
-{% tab 레드쉬프트 %}
+{% tab Redshift %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -413,7 +440,7 @@ SELECT
     ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
 {% endtab %}
-{% tab 빅쿼리 %}
+{% tab BigQuery %}
 ```json
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
@@ -433,7 +460,7 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
-{% tab 데이터브릭스 %}
+{% tab Databricks %}
 ```json
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
@@ -455,13 +482,34 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE TABLE [braze].[users] (
+    attribute_1 VARCHAR,
+    attribute_2 VARCHAR,
+    attribute_3 VARCHAR,
+    attribute_4 VARCHAR,
+    user_id VARCHAR
+)
+GO
+
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    user_id as EXTERNAL_ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[users] ;
+```
+{% endtab %}
+
 {% endtabs %}
 
-### UPDATED_AT 타임스탬프를 사용하십시오
+### `UPDATED_AT` 타임스탬프 사용
 
-우리는 `UPDATED_AT` 타임스탬프를 사용하여 어떤 데이터가 Braze에 성공적으로 동기화되었는지 추적합니다. 동기화가 실행되는 동안 동일한 타임스탬프로 많은 행이 작성되면 Braze에 중복 데이터가 동기화될 수 있습니다. 중복 데이터를 피하기 위한 몇 가지 제안:
-- 동기화를 `VIEW`에 대해 설정하는 경우 `CURRENT_TIMESTAMP`를 기본값으로 사용하지 마십시오. 이로 인해 동기화가 실행될 때마다 모든 데이터가 동기화됩니다. 왜냐하면 `UPDATED_AT` 필드가 우리의 쿼리가 실행되는 시간으로 평가되기 때문입니다. 
-- 매우 오랜 시간 실행되는 파이프라인이나 쿼리가 소스 테이블에 데이터를 쓰는 경우, 이를 동기화와 동시에 실행하거나 삽입된 모든 행에 동일한 타임스탬프를 사용하는 것을 피하십시오.
+Braze는 `UPDATED_AT` 타임스탬프를 사용하여 어떤 데이터가 Braze에 성공적으로 동기화되었는지 추적합니다. 동기화가 실행되는 동안 동일한 타임스탬프로 많은 행이 작성되면 Braze에 중복 데이터가 동기화될 수 있습니다. 중복 데이터를 피하기 위한 몇 가지 제안:
+- 동기화를 `VIEW`에 대해 설정하는 경우 `CURRENT_TIMESTAMP`를 기본값으로 사용하지 마세요. 이로 인해 동기화가 실행될 때마다 모든 데이터가 동기화됩니다. 왜냐하면 `UPDATED_AT` 필드가 우리의 쿼리가 실행되는 시간으로 평가되기 때문입니다. 
+- 매우 오랜 시간 실행되는 파이프라인이나 쿼리가 소스 테이블에 데이터를 쓰는 경우, 이를 동기화와 동시에 실행하거나 삽입된 모든 행에 동일한 타임스탬프를 사용하는 것을 피하세요.
 - 동일한 타임스탬프를 가진 모든 행을 쓰려면 트랜잭션을 사용하십시오.
 
 ### 테이블 구성
@@ -470,7 +518,7 @@ SELECT
 
 ### 데이터 형식화
 
-Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 Cloud Data Ingestion을 통해 지원되며, 중첩된 커스텀 속성 업데이트, 구독 상태 추가 및 커스텀 이벤트 또는 구매 동기화가 포함됩니다. 
+Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 클라우드 데이터 수집을 통해 지원되며, 중첩 커스텀 속성 업데이트, 구독 상태 추가 및 커스텀 이벤트 또는 구매 동기화가 포함됩니다. 
 
 페이로드 내의 필드는 해당 `/users/track` 엔드포인트와 동일한 형식을 따라야 합니다. 자세한 형식 요구 사항은 다음을 참조하십시오:
 
@@ -480,11 +528,11 @@ Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 Cloud 
 | `events` | [이벤트 객체]({{site.baseurl}}/api/objects_filters/event_object/) 보기 |
 | `purchases` | [구매 객체]({{site.baseurl}}/api/objects_filters/purchase_object/)을 참조하십시오 |
 
-중첩된 속성에서 [날짜를 캡처하는]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) 특별 요구 사항에 유의하십시오. 
+중첩된 속성에서 [날짜를 캡처하는]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) 특별 요구 사항에 유의하세요. 
 
-{% tabs 지역 %}
+{% tabs 로컬 %}
 {% tab 중첩 커스텀 속성 %}
-페이로드 열에 중첩된 커스텀 속성을 포함할 수 있습니다 커스텀 속성 동기화. 
+커스텀 속성 동기화용 페이로드 열에 중첩 커스텀 속성을 포함할 수 있습니다. 
 
 ```json
 {
@@ -518,7 +566,7 @@ Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 Cloud 
 
 {% endtab %}
 {% tab 구매 %}
-구매 이벤트를 동기화하려면 이벤트 이름, `product_id`, `currency`, 및 `price`이(가) 필요합니다. `time` 필드는 선택 사항이며 ISO 8601 문자열 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식으로 형식화해야 합니다. `time` 필드가 없으면 `UPDATED_AT` 열 값이 이벤트 시간으로 사용됩니다. 기타 필드, `app_id`, `quantity` 및 `properties`을(를) 포함하여 선택 사항입니다. 
+구매 이벤트를 동기화하려면 이벤트 이름, `product_id`, `currency`, 및 `price`가 필요합니다. `time` 필드는 선택 사항이며 ISO 8601 문자열 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식으로 형식화해야 합니다. `time` 필드가 없으면 `UPDATED_AT` 열 값이 이벤트 시간으로 사용됩니다. 기타 필드, `app_id`, `quantity` 및 `properties`를 포함하여 선택 사항입니다. 
 
 ```json
 {
@@ -560,7 +608,7 @@ Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 Cloud 
 
 ### 데이터 웨어하우스 쿼리에 대한 시간 초과 방지
 
-쿼리가 최적의 성능과 잠재적인 오류를 피하기 위해 한 시간 이내에 완료되도록 권장합니다. 쿼리가 이 시간 프레임을 초과하면 데이터 웨어하우스 구성을 검토하십시오. 창고에 할당된 자원을 최적화하면 쿼리 실행 속도를 향상시킬 수 있습니다. 
+쿼리가 최적의 성능과 잠재적인 오류를 피하기 위해 한 시간 이내에 완료되도록 권장합니다. 쿼리가 이 시간 프레임을 초과하면 데이터 웨어하우스 구성을 검토하세요. 창고에 할당된 자원을 최적화하면 쿼리 실행 속도를 향상시킬 수 있습니다.
 
 ## 제품 제한
 
@@ -573,6 +621,6 @@ Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 Cloud 
 | 데이터 유형              | 클라우드 데이터 수집을 통해 사용자 속성, 이벤트 및 구매를 동기화할 수 있습니다.                                                                                                  |
 | Braze 지역           | 이 제품은 모든 Braze 지역에서 사용할 수 있습니다. 어떤 Braze 지역이든 어떤 소스 데이터 지역에든 연결할 수 있습니다.                                                                              |
 | 출처 지역       | Braze는 모든 지역 또는 클라우드 제공업체의 데이터 웨어하우스 또는 클라우드 환경에 연결됩니다.                                                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <br><br>

@@ -23,7 +23,7 @@ description: "このリファレンス記事では、Braze で使用されるさ
    "custom_uri": (optional, string) a web URL,
    "image_url": (optional, string) URL for image to show,
    "large_image_url": (optional, string) URL for large image, supported on Chrome Windows/Android,
-   "require_interaction": (optional, boolean) whether to require the user to dismiss the notification, supported on Mac Chrome,
+   "require_interaction": (optional, boolean) whether to require the user to dismiss the notification. for a list of supported platforms, see: "https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction#browser_compatibility",
    "time_to_live": (optional, integer (seconds)),
    "send_to_most_recent_device_only" : (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used browser, rather than all eligibles browsers,
    "buttons" : (optional, array of Web push action button objects) push action buttons to display

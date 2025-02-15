@@ -94,7 +94,9 @@ This allows you to:
 
 ### Steps
 
-1. Target users that meet archival criteria and that you'd like to retain.<br><br>
+1. Target users that meet your brand's archival criteria and that you'd like to retain. For example, you might retain users who:
+    - Last received a message more then 23 weeks ago or have never received a message<br>AND<br>
+    - Last used your app more than 23 weeks ago or had zero sessions in your app<br><br>
       ![Target users that last received any message more than 23 weeks ago, have never received a message from a campaign or Canvas step, last used these apps more than 23 weeks ago, and have used these apps exactly zero times.][2]<br><br>
 2. Set re-eligibility to be a little less than 6 months long.<br><br>
       ![Entry controls with re-eligibility turned on and the re-eligibility window set to 23 weeks.][3]<br><br>

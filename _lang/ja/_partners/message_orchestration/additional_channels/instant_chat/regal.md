@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Regal
 
-> \[Regal.io][6] は、より多くの会話を促進するために構築された電話および SMS セールスソリューションです。これにより、成長目標をより短期間で達成できるようになります。
+> [Regal.io][6] は、より多くの会話を促進するために構築された電話および SMS セールスソリューションです。これにより、成長目標をより短期間で達成できるようになります。
 
 Regal と Braze の統合により、すべての顧客タッチポイントでより一貫性がありパーソナライズされたエクスペリエンスを作成できます。
 - Regal での電話による会話の内容に基づいて、Braze から適切なネクストベストのメールまたはプッシュ通知を送信します。
@@ -18,12 +18,12 @@ Regal と Braze の統合により、すべての顧客タッチポイントで�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Regal アカウント | このパートナーシップを活用するには、Regal アカウントが必要です。 |
 | リーガル API キー | RegalのAPIキーを使用すると、BrazeからRegalにイベントを送信できます。<br><br>このキーを取得するには、[support@regal.io](mailto:support@regal.io) までメールでご連絡ください。 |
 | Braze Data Transformation | Data Transformation は現在早期アクセス段階です。早期アクセスへの参加に興味がある場合は、Braze カスタマーサクセスマネージャーにお問い合わせください。これは、Regal からデータを受信するために必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合:BrazeからRegalにデータを送信する
 
@@ -41,11 +41,11 @@ Braze で作成される新しい連絡先を Regal でのコールやテキス�
    - **Webhook URL**: <https://events.regalvoice.com/events>
    - **リクエスト本文**:Raw Text
 
-#### リクエストヘッダーとメソッド
+#### リクエストヘッダと方法
 
 Regal.io には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。次の内容は、**設定**タブのキーと値のペアとして既にテンプレートに含まれています:
 {% raw %}
-- **HTTPメソッド**:POST
+- **HTTPメソッド**：POST
 - **リクエストヘッダー**:
     - **Authorization**: `{{<REGAL_API_KEY>}}`
     - **Content-Type**: application/json
@@ -99,11 +99,11 @@ Regal.io には、認証用の HTTP ヘッダーと HTTP メソッドが必要�
    - **Webhook URL**: <https://events.regalvoice.com/events>
    - **リクエスト本文**:Raw Text
 
-#### リクエストヘッダーとメソッド
+#### リクエストヘッダと方法
 
 Regal.io には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。次の内容は、テンプレート内にキーと値のペアとして既に含まれていますが、**設定**タブにあります:
 {% raw %}
-- **HTTPメソッド**:POST
+- **HTTPメソッド**：POST
 - **リクエストヘッダー**:
     - **Authorization**: `{{<REGAL_API_KEY>}}`
     - **Content-Type**: application/json
@@ -149,11 +149,11 @@ Regal.io には、認証用の HTTP ヘッダーと HTTP メソッドが必要�
    - **Webhook URL**: <https://events.regalvoice.com/events>
    - **リクエスト本文**:Raw Text
 
-#### リクエストヘッダーとメソッド
+#### リクエストヘッダと方法
 
 Regal.io には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。次の内容は、テンプレート内にキーと値のペアとして既に含まれていますが、**設定**タブにあります:
 {% raw %}
-- **HTTPメソッド**:POST
+- **HTTPメソッド**：POST
 - **リクエストヘッダー**:
     - **Authorization**: `{{<REGAL_API_KEY>}}`
     - **Content-Type**: application/json
@@ -228,7 +228,7 @@ Data Transformation を作成するには、次のようにします。
 #### 再試行
 現在、これらのイベントに再試行はありません。応答が5秒以内に受信されない場合、イベントは破棄され、再試行されません。Regal は今後のリリースで再試行を追加する予定です。
 #### イベント
-Regalの \[Reporting Webhooks ガイド][7]には、公開する Reporting イベントの完全なリストが含まれています。そこでは、プロパティの定義やサンプルペイロードも見ることができます。
+Regalの [Reporting Webhooks ガイド][7]には、公開する Reporting イベントの完全なリストが含まれています。そこでは、プロパティの定義やサンプルペイロードも見ることができます。
 
 ### ステップ3:Regal イベントを Braze イベントに変換する
 
@@ -244,7 +244,7 @@ Braze の [Data Transformation]({{site.baseurl}}/data_transformation) 機能を�
    - `traits.email` - イベントにのみ設定されますが、この識別子を以前に連絡先に送信した場合に限ります
 
 #### Braze対応の識別子
-- Brazeは識別子として電話番号をサポートしていません。これを識別子として使用するには、Braze で電話番号を\[ユーザーエイリアス][8]として設定できます。
+- Brazeは識別子として電話番号をサポートしていません。これを識別子として使用するには、Braze で電話番号を[ユーザーエイリアス][8]として設定できます。
 - Braze Data Transformation を使用する場合、メールアドレスを識別子として使用できます。メールアドレスがBraze内のプロファイルとして存在する場合、既存のプロファイルが更新されます。メールアドレスがBraze内にまだ存在しない場合、メール専用のプロファイルが作成されます。
 
 ## ユースケース

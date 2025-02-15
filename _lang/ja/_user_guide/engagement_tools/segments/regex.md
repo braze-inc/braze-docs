@@ -14,7 +14,7 @@ tool:
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
-> 正規表現は、一般に「regex」として知られ、検索パターンを定義する文字のシーケンスです。正規表現では、テキストのグループ化を検証し、検索と置換を実行できます。Braze では、正規表現を活用し、ターゲットのセグメンテーションやキャンペーンのフィルタリングにおいて、より柔軟な文字列マッチングソリューションを提供します。
+> 正規表現は、一般に「regex」として知られ、検索パターンを定義する文字のシーケンスです。正規表現では、テキストのグループ化を検証し、検索と置換を実行できます。Braze では、正規表現を活用し、ターゲットのセグメンテーションやキャンペーンのフィルタリングにおいて、より柔軟な文字列マッチングソリューションを提供します。<br><br>このページでは、正規表現(regex)、その使用方法、よくある質問、正規表現をテストするための正規表現デバッガーについて説明します。
 
 リンク先の Braze Learning コースでは、[Regex101][regex] で正規表現がどのように使用され、テストされるかを紹介しています。また、[社内の正規表現テスター](#regex-debugger)、役立つ参考ページ、正規表現 Braze ラーニングビデオで参照されているサンプルデータ、よくある質問も提供しています。
 
@@ -22,19 +22,21 @@ tool:
 
 - [正規表現の基礎](https://learning.braze.com/regular-expression-basics-for-braze) Braze ラーニングコース 
 - [正規表現チートシート]({{site.baseurl}}/regex_cheat_sheet/)
-- \[サンプルデータ RTF]\[dummydata]
+- [サンプルデータ RTF][dummydata]
 
-## 正規表現デバッガ
+## 正規表現デバッガー
+
+{% alert important %}
+このツールはあくまで参考であり、正規表現が Braze プラットフォーム と100% 一致することを保証するものではありません。Braze のセグメンテーションおよびフィルタの正規表現では、`/gi` 修飾子が自動的に追加されます。[gi 修飾子](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)は、文字列中に出現する正規表現を大文字小文字を区別せずに検索するために使われます。  
+<br>
+カスタムイベントトリガープロパティおよびトリガーフィルタの正規表現では、`/g` 修飾子(大文字と小文字の区別あり。[g 修飾子](https://www.w3schools.com/jsref/jsref_regexp_g.asp) を参照)を使用し、`/i` 修飾子は使用しません。カスタムイベントトリガープロパティとトリガーフィルタの大文字と小文字を区別しない場合は、代わりに`(?i)` を使用します。例えば `Matches regex (?i)STOP(?-i)` は、いずれの場合 (「stop」、「please stop」および「never stop sending me messages」) でも「STOP」の使用を検出します。
+{% endalert %}
 
 {% tabs %}
-{% tab 正規表現デバッガ %}
-
+{% tab 正規表現デバッガー %}
+<div>
 このフォームでは、基本的な検証と正規表現のテストを行うことができます。
 ​
-<div class="alert alert-important" role="alert"><div class="alert-msg"> <b>重要:</b><br />
-<p>このツールはあくまで参考であり、正規表現が Braze プラットフォーム と100% 一致することを保証するものではありません。Brazeのセグメンテーションとフィルター用の正規表現は、自動的に <code>/gi</code> という修飾語がある。<a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi 修飾子</a>は、文字列中に出現する正規表現を大文字小文字を区別せずに検索するために使われます。<br><br>カスタムイベントトリガープロパティの正規表現では <code>/g</code> <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>修飾</a>子（大文字と小文字は区別される。 <code>/i</code> という修飾語がある。カスタム・イベント・トリガーのプロパティの大文字と小文字を区別しないようにするには、以下を使用する。 <code>(?i)</code> その代わりだ。</p>
-</div></div>
-<div>
 正規表現:
 ​
 <div class="input-group">
@@ -160,9 +162,9 @@ $( document ).ready(function() {
 
 #### 特定のドメインに関連するメールアドレスをフィルタリングする方法を教えてください。
 
-例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使い、`matches regex` に設定し、正規表現フィールドに"@braze.com" と入力する。他のメールドメインでも同様です。
+例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使用して `matches regex` に設定し、正規表現フィールドに「@braze.com」と入力します。他のメールドメインでも同様です。
 
-![]({% image_buster /assets/img/regex/regeximg1.png %})
+!["@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})の正規表現に一致するメールアドレスのフィルタ
 
 #### 値 ≥x または ≤x の場合、フィルターの番号文字列はどのように使用できますか？
 
@@ -172,7 +174,7 @@ $( document ).ready(function() {
 ^([x-y]|\d{z,})$
 ```
 
-ここで、`x-y` は最初の桁の数字（0～9）の範囲であり、`z` は x の桁数以上の数字です。例えば、50 以上の値の場合、正規表現は`^([5-9][0-9]|\d{3,})$` となります。
+ここで、`x-y` は最初の桁の数字（0～9）の範囲であり、`z` は x の桁数以上の数字です。例えば、50 以上の値の場合、正規表現は`^([5-9][0-9]|\d{3,})$` になります。
 
 (≤) x 以下の値を検索する場合は、以下の正規表現を使います:
 
@@ -188,15 +190,15 @@ $( document ).ready(function() {
 
 例えば、"San" で始まる都市に住むユーザーをターゲットにする場合、正規表現は `^San \w` とします。この正規表現を使えば、サンフランシスコ、サンディエゴ、サンノゼなどの都市のユーザーをターゲットにできます。
 
-![]({% image_buster /assets/img/regex/regeximg2.png %})
+![正規表現「^San \\w」に一致する市区町村のフィルター。]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
-正規表現を使用して電話番号をフィルターするには、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でユーザープロファイルs に記録された番号を[ユーザー電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) に記録する必要があります。
+正規表現を使用して電話番号をフィルター処理するには、ユーザープロファイルに記録されている番号が、「[ユーザーの電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/)」で指定されているように、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でなければいけません。
 
 米国の電話番号を検索すると仮定すると、正規表現フォーマット `1?\d\d\d\d\d\d\d\d\d\d` を使用します。`\d` の各繰り返しは、指定したい桁数です。最初の 3 桁は市外局番です。
 
-同様に、英国の電話番号の書式は `^\+4\d\d\d\d\d\d\d\d\d\d\d` です。その他の国は、それぞれの国番号の後に、残りの各桁について必要な数の `\d` を繰り返します。つまり、国番号が "3" のリトアニアの場合、正規表現は`^\+3\d\d\d\d\d\d\d\d\d\d` となります。
+同様に、英国の電話番号の書式は `^\+4\d\d\d\d\d\d\d\d\d\d\d` です。その他の国は、それぞれの国番号の後に、残りの各桁について必要な数の `\d` を繰り返します。つまり、国番号が "3" のリトアニアの場合、正規表現は `^\+3\d\d\d\d\d\d\d\d\d\d` になります。
 
 例えば、特定の市外局番 "718" の電話番号でユーザーをフィルタリングしたいとします。電話番号フィルターを使い、`matches regex` に設定し、以下の正規表現を入力します: 
 
@@ -204,8 +206,8 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![]({% image_buster /assets/img/regex/regeximg3.png %})
+![正規表現「^1?718\\d\\d\\d\\d\\d\\d\\d」に一致する電話番号のフィルター。]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
 [regex]: https://regex101.com/
-\[dummydata] ： {% image_buster /assets/download_file/regex-dummy-data.rtf %}
+[dummydata] ： {% image_buster /assets/download_file/regex-dummy-data.rtf %}

@@ -16,29 +16,29 @@ Brazeとタクシーの融合は、タクシーのシンプルでパワフルな
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ------------| ----------- |
 | Taxi for Email アカウント | このパートナーシップを活用するには、Taxi for Email アカウントが必要です。 |
-| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
+| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze エンドポイント | [あなたのBraze エンドポイント]({{site.baseurl}}/api/basics/#endpoints)はあなたのBraze ダッシュボード URLに合わせます。<br><br> たとえば、ダッシュボード URL が`https://dashboard-03.braze.com` の場合、エンドポイントは`dashboard-03` になります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
 ### ステップ1:タクシーメール テンプレートの作成
 
-Taxi プラットフォームで Taxi テンプレートを作成します。テンプレートが作成されたら、\[**Organization Settings**] に移動して \[**ESP Connectors**] タブを選択します。
+Taxi プラットフォームで Taxi テンプレートを作成します。テンプレートが作成されたら、[**Organization Settings**] に移動して [**ESP Connectors**] タブを選択します。
 
 ### ステップ2:Brazeコネクターの作成
 
-1. アプリが表示されるダイアログで、**新規**ボタンをクリックし、ドロップダウンから**Braze**を選択します。 
-2. **Braze**を押して、Brazeコネクターの設定を変更します。
+1. 表示されるダイアログで、**新規**ボタンを選択し、ドロップダウンから**Braze**を選択します。 
+2. [**Braze**] を選択して、Braze コネクターの設定を編集します。
 3. Braze エンドポイントとBraze API キーを入力します。
 
 正しい権限を含む詳細が指定された後に、コネクターフィールドの色が変わります。このフィールドが変わらない場合は、フィールドがリストされている条件に合っていることを確認します。
 
 ## 使用
 
-Braze アカウントの **\[テンプレートとメディア] > \[メールテンプレート]** セクションで、アップロードされた Taxi テンプレートを確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
+Braze アカウントの **[テンプレートとメディア] > [メールテンプレート]** セクションで、アップロードされた Taxi テンプレートを確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

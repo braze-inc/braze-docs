@@ -15,9 +15,9 @@ description: "このリファレンス記事では、Google Tag Manager を初�
 
 ## SDK の初期化{#initializing-android-google-tag-provider}
 
-Braze Android SDK は、\[Google Tag Manager][5] 内で設定されたタグによって初期化および制御できます。
+Braze Android SDK は、[Google Tag Manager](https://tagmanager.google.com/) 内に設定されたタグによって初期化および制御できます。
 
-この実装の前提条件として、[Android SDK の統合][1]が完了している必要があります。
+この実装の前提条件として、[Android SDK の統合]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration)が完了している必要があります。
 
 ## Google Tag Manager の設定 {#configuring-android-google-tag-manager}
 
@@ -29,7 +29,7 @@ Braze Android SDK は、\[Google Tag Manager][5] 内で設定されたタグに�
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
-![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。][3]
+![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 次に、新しいタグ (「Function Call」) を作成し、この記事で後述する[カスタムタグプロバイダー](#adding-android-google-tag-provider)のクラスパスを入力します。
 
@@ -43,13 +43,13 @@ Braze Android SDK は、\[Google Tag Manager][5] 内で設定されたタグに�
 この例のカスタムタグプロバイダーは、これらのキーを使用して、Google Tag Manager からデータを受信したときに Braze に送信するアクションと送信するイベント名を決定します。
 {% endalert %}
 
-![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
+![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` で引数を渡します。これは、Google Tag Manager でタグ変数を使用して定義されており、アプリでロギングしたカスタムイベントから取得されます。
 
 `genre` イベントプロパティが、「Firebase - Event Parameter」変数として Google Tag Manager に送信されます。Google Tag Manager for Android では、Firebase がデータレイヤーとして使用されるためです。
 
-![Google Tag Managerの変数で、「Braze - Played Song Event」タグのイベントパラメータとして「genre」が追加されます。][6]
+![Google Tag Manager の変数で、「Braze - Played Song Event」タグのイベントパラメータとして「genre」が追加されます。]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
 最後に、ユーザーがアプリで曲を再生すると、タグのトリガー名 `played song` と一致する Firebase 分析イベント名を使用し、Firebase と Google Tag Manager を介してイベントがロギングされます。
 
@@ -70,7 +70,7 @@ mFirebaseAnalytics.logEvent("played song", params);
 val params = Bundle()
 params.putString("genre", "pop")
 params.putInt("number of times listened", 42);
-mFirebaseAnalytics!!logEvent("played song", params)
+mFirebaseAnalytics.logEvent("played song", params)
 ```
 
 {% endtab %}
@@ -97,7 +97,7 @@ mFirebaseAnalytics.logEvent("customAttribute", params);
 val params = Bundle()
 params.putString("customAttributeKey", "favorite song")
 params.putString("customAttributeValue", "Private Eyes")
-mFirebaseAnalytics!!.logEvent("customAttribute", params)
+mFirebaseAnalytics.logEvent("customAttribute", params)
 ```
 
 {% endtab %}
@@ -122,7 +122,7 @@ mFirebaseAnalytics.logEvent("changeUser", params);
 ```kotlin
 val params = Bundle()
 params.putString("externalUserId", userId)
-mFirebaseAnalytics!!.logEvent("changeUser", params)
+mFirebaseAnalytics.logEvent("changeUser", params)
 ```
 
 {% endtab %}
@@ -130,11 +130,11 @@ mFirebaseAnalytics!!.logEvent("changeUser", params)
 
 ## Braze SDK カスタムタグプロバイダー {#adding-android-google-tag-provider}
 
-タグとトリガーが設定されたら、Android アプリに Google Tag Manager を実装する必要もあります。これについては、Google の[ドキュメント][2]に記載されています。
+タグとトリガーが設定されたら、Android アプリに Google Tag Manager を実装する必要もあります。これについては、Google の[ドキュメント](https://developers.google.com/tag-manager/android/v5/)に記載されています。
 
 Google Tag Manager がアプリにインストールされたら、カスタムタグプロバイダーを追加し、Google Tag Manager 内で設定したタグに基づいて Braze SDK メソッドを呼び出します。
 
-ファイルへの「クラスパス」を必ずメモしてください - これは\[Google Tag Manager][5]コンソールでタグを設定する際に入力するものです。
+[Google Tag Manager](https://tagmanager.google.com/)コンソールでタグを設定するときに入力するのは、ファイルに"Class Path"を必ず書き留めておいてください。
 
 この例は、カスタムタグプロバイダーを構築する多くの方法の 1 つを示しています。ここでは、GTM タグから送信されたキーと値のペア `actionType` に基づいて、呼び出す Braze SDK メソッドを決定します。
 
@@ -241,28 +241,27 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
     String key = String.valueOf(tagParameterMap.get(CUSTOM_ATTRIBUTE_KEY));
     Object value = tagParameterMap.get(CUSTOM_ATTRIBUTE_VALUE_KEY);
 
-    BrazeUser brazeUser = Braze.getInstance(sApplicationContext).getCurrentUser();
-    if (brazeUser == null) {
-      BrazeLogger.w(TAG, "BrazeUser was null. Returning.");
-      return;
-    }
-
-    if (value instanceof Boolean) {
-      brazeUser.setCustomUserAttribute(key, (Boolean) value);
-    } else if (value instanceof Integer) {
-      brazeUser.setCustomUserAttribute(key, (Integer) value);
-    } else if (value instanceof Long) {
-      brazeUser.setCustomUserAttribute(key, (Long) value);
-    } else if (value instanceof String) {
-      brazeUser.setCustomUserAttribute(key, (String) value);
-    } else if (value instanceof Double) {
-      brazeUser.setCustomUserAttribute(key, (Double) value);
-    } else if (value instanceof Float) {
-      brazeUser.setCustomUserAttribute(key, (Float) value);
-    } else {
-      BrazeLogger.w(TAG, "Failed to parse value into a custom "
-          + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'");
-    }
+    Braze.getInstance(sApplicationContext).getCurrentUser(new IValueCallback<BrazeUser>() {
+      @Override
+      public void onSuccess(BrazeUser brazeUser) {
+        if (value instanceof Boolean) {
+          brazeUser.setCustomUserAttribute(key, (Boolean) value);
+        } else if (value instanceof Integer) {
+          brazeUser.setCustomUserAttribute(key, (Integer) value);
+        } else if (value instanceof Long) {
+          brazeUser.setCustomUserAttribute(key, (Long) value);
+        } else if (value instanceof String) {
+          brazeUser.setCustomUserAttribute(key, (String) value);
+        } else if (value instanceof Double) {
+          brazeUser.setCustomUserAttribute(key, (Double) value);
+        } else if (value instanceof Float) {
+          brazeUser.setCustomUserAttribute(key, (Float) value);
+        } else {
+          BrazeLogger.w(TAG, "Failed to parse value into a custom "
+              + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'");
+        }
+      }
+    });
   }
 
   private void changeUser(Map<String, Object> tagParameterMap) {
@@ -329,21 +328,19 @@ class BrazeGtmTagProvider : CustomTagProvider {
     val key = tagParameterMap[CUSTOM_ATTRIBUTE_KEY].toString()
     val value = tagParameterMap[CUSTOM_ATTRIBUTE_VALUE_KEY]
 
-    val brazeUser = Braze.getInstance(sApplicationContext).currentUser
-    if (brazeUser == null) {
-      BrazeLogger.w(TAG, "BrazeUser was null. Returning.")
-      return
-    }
-
-    when (value) {
-      is Boolean -> brazeUser.setCustomUserAttribute(key, (value as Boolean?)!!)
-      is Int -> brazeUser.setCustomUserAttribute(key, (value as Int?)!!)
-      is Long -> brazeUser.setCustomUserAttribute(key, (value as Long?)!!)
-      is String -> brazeUser.setCustomUserAttribute(key, value as String?)
-      is Double -> brazeUser.setCustomUserAttribute(key, (value as Double?)!!)
-      is Float -> brazeUser.setCustomUserAttribute(key, (value as Float?)!!)
-      else -> BrazeLogger.w(TAG, "Failed to parse value into a custom "
-          + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'")
+    Braze.getInstance(sApplicationContext).getCurrentUser { brazeUser ->
+      when (value) {
+        is Boolean -> brazeUser.setCustomUserAttribute(key, value)
+        is Int -> brazeUser.setCustomUserAttribute(key, value)
+        is Long -> brazeUser.setCustomUserAttribute(key, value)
+        is String -> brazeUser.setCustomUserAttribute(key, value)
+        is Double -> brazeUser.setCustomUserAttribute(key, value)
+        is Float -> brazeUser.setCustomUserAttribute(key, value)
+        else -> BrazeLogger.w(
+          TAG, "Failed to parse value into a custom "
+            + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'"
+        )
+      }
     }
   }
 
@@ -353,7 +350,7 @@ class BrazeGtmTagProvider : CustomTagProvider {
   }
 
   companion object {
-    private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java!!)
+    private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java)
     private val ACTION_TYPE_KEY = "actionType"
 
     // Custom Events
@@ -408,9 +405,3 @@ BrazeGtmTagProvider.setApplicationContext(this.applicationContext)
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration
-[2]: https://developers.google.com/tag-manager/android/v5/
-[3]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %}
-[4]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %}
- https://tagmanager.google.com/
-[6]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %}

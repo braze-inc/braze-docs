@@ -18,27 +18,27 @@ Braze と Segments の統合により、Braze Currents を利用して Braze イ
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Segment アカウント | このパートナーシップを活用するには、[Segment アカウント](https://app.segment.com/login)が必要です。 |
 | Braze 宛先 | セグメントインテグレーションでは、すでに[Brazeを送信先]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/)として設定しておく必要があります。<br><br>これには、[接続設定s]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings)に正しいBrazeデータセンターとREST API キーを提供することも含まれます。 |
 | Currents | Segment にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:セグメント書き込みキーの取得
 
-Segment ダッシュボードで、Segment ソースを選択します。** \[設定] > \[API キー]** に移動します。ここで **Segment Write Key** を確認します。
+Segment ダッシュボードで、Segment ソースを選択します。** [設定] > [API キー]** に移動します。ここで **Segment Write Key** を確認します。
 
 {% alert warning %}
-Segment Write Key を最新の状態に保つことが重要です。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。これが **48 時間** 以上続く場合、コネクタのイベントはドロップされ、データは永続的に失われます。
+Segment Write Key を最新の状態に保つことが重要です。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
 ### ステップ2:新しいCurrentsコネクターを作成する
 
 1. Braze で、**Partner Integrations** > **データエクスポート** に移動します。
-2. \[**\+ 新しい Currents を作成**] > \[**セグメントデータのエクスポート**] をクリックします。
+2. [**\+ 新しい Currents を作成**] > [**セグメントデータのエクスポート**] をクリックします。
 3. 次に、統合名、連絡先メール、Segment Write Key、および Segment リージョンを指定します。
 
 ![Braze の Segment Currents ページ。統合名、連絡先メール、Segment リージョン、API キーのフィールドがある。][3]
@@ -49,7 +49,7 @@ Segment Write Key を最新の状態に保つことが重要です。コネク�
 
 ![Braze の Segment Currents ページの利用可能なすべてのメッセージエンゲージイベントのリスト。][2]
 
-最後に \[**Currents を起動**] を選択します。
+最後に [**Currents を起動**] を選択します。
 
 {% alert warning %}
 同じCurrentsコネクターを複数作成する場合(たとえば、2 つのメッセージエンゲージメントイベントコネクター)、それらは別々のワークスペースにする必要があります。Braze Segment Currents の統合では、1つのワークスペース内で異なるアプリケーションごとにイベントを分離することはできないため、そのようにできない場合、不必要なデータの重複排除やデータの損失が発生します。
@@ -87,7 +87,7 @@ Braze は、Currents [ユーザー動作]({{site.baseurl}}/user_guide/data_and_a
   - `users.canvas.experimentstep.SplitEntry`
 
 ### メッセージ
-- コンテンツカード(中止、クリック、削除、インプレッション、送信)
+- コンテンツカード（中止、クリック、却下、インプレッション、送信）
   - `users.messages.contentcard.Abort`
   - `users.messages.contentcard.Click`
   - `users.messages.contentcard.Dismiss`
@@ -107,13 +107,13 @@ Braze は、Currents [ユーザー動作]({{site.baseurl}}/user_guide/data_and_a
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- プッシュ通知 (中止、バウンス、iOSforeground、開封、送信)
+- プッシュ通知（アボート、バウンス、iOSforeground、オープン、送信）
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
   - `users.messages.pushnotification.IosForeground`
   - `users.messages.pushnotification.Open`
   - `users.messages.pushnotification.Send`
-- SMS (中止、通信事業者の送信、配信、配信失敗、インバウンド受信、拒否、送信、ショートリンククリック)
+- SMS（中止、キャリア送信、配信、配信失敗、受信、拒否、送信、ショートリンククリック）
   - `users.messages.sms.Abort`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
@@ -121,10 +121,10 @@ Braze は、Currents [ユーザー動作]({{site.baseurl}}/user_guide/data_and_a
   - `users.messages.sms.Rejection`
   - `users.messages.sms.Send`
   - `users.messages.sms.ShortLinkClick`
-- Webフック(中止、送信)
+- ウェブフック（中止、送信）
   - `users.messages.webhook.Abort`
   - `users.messages.webhook.Send`
-- WhatsApp (中止、配信、障害、インバウンド受信、読み取り、送信)
+- WhatsApp (中止、配信、失敗、受信、読み取り、送信)
   - `users.messages.whatsapp.Abort`
   - `users.messages.whatsapp.Delivery`
   - `users.messages.whatsapp.Failure`

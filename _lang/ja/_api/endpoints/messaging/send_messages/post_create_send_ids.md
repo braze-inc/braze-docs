@@ -14,7 +14,7 @@ description: "この記事では、Create send IDs Brazeエンドポイントの
 /sends/id/create
 {% endapimethod %}
 
-> このエンドポイントを使用して、送信ごとにキャンペーンを作成することなく、プログラムでメッセージを送信し、メッセージのパフォーマンスを追跡するために使用できる送信IDを作成する。 
+> このエンドポイントを使用して、送信ごとにキャンペーンを作成することなく、プログラムでメッセージを送信し、メッセージのパフォーマンスを追跡するために使用できる送信IDを作成する。
 
 送信識別子を使用してメッセージを追跡・送信することは、プログラムでコンテンツを生成・送信する場合に便利である。
 
@@ -28,7 +28,7 @@ description: "この記事では、Create send IDs Brazeエンドポイントの
 
 {% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -46,11 +46,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | 必須 | string | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-|`send_id`| オプション | string | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `campaign_id` | 必須 | 文字列 | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`send_id`| オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \

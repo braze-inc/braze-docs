@@ -44,7 +44,7 @@ glossary_tags:
   - name: KPI
   - name: ニュースフィード
   - name: 購入
-  - name: ユーザー設定センター
+  - name: 環境設定センター
   - name: メッセージをスケジュール
   - name: SCIM
   - name: セグメント

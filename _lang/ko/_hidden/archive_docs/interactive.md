@@ -40,7 +40,7 @@ justify-content: flex-start;
 \#main_content #article-main #swagger-ui .dialog-ux .modal-ux-content {
 padding-top: 0px;
 }
-  \#main_content #article-main #swagger-ui .auth-container input\[type=text]{
+  \#main_content #article-main #swagger-ui .auth-container input[type=text]{
 border: 1px solid #f4f4f7;
 너비: 100%;
 

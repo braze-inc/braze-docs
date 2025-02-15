@@ -4,14 +4,14 @@ article_title: 설정(이전 개발자 콘솔)
 page_order: 3
 layout: dev_guide
 guide_top_header: "설정"
-guide_top_text: "여기에서 작업 공간의 전역 설정과 관련된 주제를 찾을 수 있습니다."
+guide_top_text: "여기에서 워크스페이스의 전역 설정과 관련된 주제를 찾을 수 있습니다."
 
 page_type: landing
 description: "이 랜딩 페이지에는 앱 및 워크스페이스 설정과 관련된 주제가 나열되어 있습니다."
 
 guide_featured_title: "설정 및 테스트"
 guide_featured_list:
-  - name: 작업 공간 관리
+  - name: 워크스페이스 관리
     link: /docs/user_guide/administrative/app_settings/app_group_management/
     image: /assets/img/braze_icons/briefcase-01.svg
   - name: API 키
@@ -26,6 +26,9 @@ guide_featured_list:
   - name: 내부 그룹
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
+  - name: 식별자 필드 수준 암호화
+    link: /docs/user_guide/data_and_analytics/field_level_encryption/
+    image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
 guide_menu_list:

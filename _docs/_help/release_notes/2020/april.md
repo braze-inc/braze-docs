@@ -11,7 +11,7 @@ description: "This article contains release notes for April 2020."
 
 Movable Ink provides Braze customers the ability to use Intelligent Creative features like countdown timers, polls, and scratch offs in their push, in-app message and Content Card campaigns. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
-Start [integrating Movable Ink]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/) into your campaigns!
+Start [integrating Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) into your campaigns!
 
 ## Intelligent Timing
 

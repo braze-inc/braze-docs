@@ -17,7 +17,7 @@ For more on campaign delivery, check out our dedicated [Campaign Setup](https://
 
 ## Scheduled delivery
 
-This section covers time-based scheduling and delivery options for [scheduled delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) campaigns.
+This section covers time-based scheduling and delivery options for [scheduled delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/) campaigns.
 
 ### Send at a designated time
 
@@ -50,19 +50,19 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| After a user is messaged by this campaign, specify when they will become re-eligible to receive the campaign again. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns). | N/A |
+| After a user is messaged by this campaign, specify when they will become re-eligible to receive the campaign again. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the selected checkbox "Allow users to become re-eligible to receive campaign" after one week.][5]
 
 ## Action-based delivery
 
-This section covers the schedule delay and delivery options for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) campaigns.
+This section covers the schedule delay and delivery options for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) campaigns.
 
 ### Schedule delay
 
 {% alert important %}
-When choosing your delay length, keep in mind that if you set a delay that is longer than the [Campaign Duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), your users will not receive your campaign.
+When choosing your delay length, keep in mind that if you set a delay that is longer than the [campaign duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-4-assign-duration), your users will not receive your campaign.
 {% endalert %}
 
 #### Send campaign immediately
@@ -118,7 +118,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| After a user is messaged by this campaign, specify when they will become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) to receive the campaign again. | N/A |
+| After a user is messaged by this campaign, specify when they will become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign again. | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A campaign with the selected checkbox "Allow users to become re-eligible to receive campaign" after one week.][5]
@@ -138,7 +138,7 @@ Frequency capping is based on calendar days, not a 24-hour period. This means th
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| The maximum amount of time that may pass between a user receiving a campaign and performing the assigned action for it to be considered a conversion. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/A |
+| The maximum amount of time that may pass between a user receiving a campaign and performing the assigned action for it to be considered a conversion. For more information, refer to [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/A |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

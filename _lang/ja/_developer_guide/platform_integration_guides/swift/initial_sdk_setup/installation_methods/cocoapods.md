@@ -11,7 +11,7 @@ description: "この参照記事では、iOS 用 CocoaPods を使用して Braze
 
 ## ステップ1:CocoaPods のインストール
 
-[CocoaPods][apple_initial_setup_1] 経由で iOS SDK をインストールすると、インストールプロセスの大部分が自動化されます。CocoaPods をインストールするには、CocoaPods の[入門ガイド][cocoapods_getting_started]を参照してください。
+[CocoaPods](http://cocoapods.org/) 経由で iOS SDK をインストールすると、インストールプロセスの大部分が自動化されます。CocoaPods をインストールするには、CocoaPods の[入門ガイド](https://guides.cocoapods.org/using/getting-started.html)を参照してください。
 
 開始するには、次のコマンドを実行します。
 
@@ -19,14 +19,14 @@ description: "この参照記事では、iOS 用 CocoaPods を使用して Braze
 $ sudo gem install cocoapods
 ```
 
-CocoaPods に関する問題がある場合は、\[CocoaPods トラブルシューティングガイド]\[apple_initial_setup_25] を参照してください。
+CocoaPods に関して問題がある場合は、CocoaPods [[トラブルシューティングガイド](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods トラブルシューティングガイド")] を参照してください。
 
-## ステップ2:Podfile の構築
+## ステップ 2:Podfile の構築
 
 CocoaPods Ruby Gem をインストールしたら、Xcode プロジェクトのディレクトリに `Podfile` という名前のファイルを作成する必要があります。
 
 {% alert note %}
-バージョン7.4.0以降、Braze Swift SDK には[静的 XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) と[動的 XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic) として追加の配布チャネルがあります。これらのフォーマットのいずれかを代わりに使いたい場合は、それぞれのリポジトリからインストール手順に従ってほしい。
+バージョン7.4.0から、Braze SWIFT SDKには、[静的XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static)および[ダイナミックなXCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)としての追加の配布チャネルがあります。これらの形式のいずれかを使用したい場合は、それぞれのリポジトリのインストール手順に従ってください。
 {% endalert %}
 
 次の行を Podfile に追加します。
@@ -47,8 +47,8 @@ Braze Swift SDK は、開発者がどの機能をプロジェクトにインポ�
 
 | 図書館 | 詳細 |
 | ------- | ------- |
-| `pod 'BrazeLocation'` | ロケーションライブラリーは、ロケーション分析とジオフェンスモニタリングのサポートを提供しています。 |
-| `pod 'BrazeUI'` | Brazeが提供するアプリ内メッセージやコンテンツカード用のユーザーインターフェイスライブラリ。 |
+| `pod 'BrazeLocation'` | 位置情報ライブラリーは、位置情報分析とジオフェンス監視をサポートします。 |
+| `pod 'BrazeUI'` | アプリ内メッセージおよびコンテンツカード用のBraze提供のユーザーインターフェイスライブラリー。 |
 {: .ws-td-nw-1}
 
 ##### 拡張ライブラリ
@@ -57,8 +57,8 @@ Braze Swift SDK は、開発者がどの機能をプロジェクトにインポ�
 
 | 図書館 | 詳細 |
 | ------- | ------- |
-| `pod 'BrazeNotificationService'` | リッチなプッシュ通知をサポートする通知サービス拡張ライブラリ。 |
-| `pod 'BrazePushStory'` | プッシュストーリーをサポートする通知コンテンツ拡張ライブラリ。 |
+| `pod 'BrazeNotificationService'` | リッチプッシュ通知をサポートする通知サービス拡張ライブラリー。 |
+| `pod 'BrazePushStory'` | プッシュストーリーをサポートする通知コンテンツ拡張ライブラリーを提供します。 |
 {: .ws-td-nw-1}
 
 ## ステップ3:Braze SDK のインストール
@@ -70,9 +70,9 @@ pod install
 
 この時点で、CocoaPods によって作成された新しい Xcode プロジェクトワークスペースを開くことができるはずです。Xcode プロジェクトの代わりに、必ずこの Xcode ワークスペースを使用してください。
 
-![新しい `BrazeExample.workspace`.]\[apple_initial_setup_15] を表示するために展開された Braze Example フォルダ
+![新しい`BrazeExample.workspace` を表示するために拡張された Braze Example フォルダ]({% image_buster /assets/img/braze_example_workspace.png %})
 
-## 次のステップ:
+## 次のステップ
 
 指示に従って[統合を完了]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/)します。
 
@@ -84,10 +84,3 @@ CocoaPod を更新するには、プロジェクトディレクトリ内で以�
 pod update
 ```
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[cocoapods_getting_started]: https://guides.cocoapods.org/using/getting-started.html
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods のインストール手順"
-[apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-\[apple_initial_setup_15]: {% image_buster /assets/img/braze_example_workspace.png %}
-\[apple_initial_setup_25]:http://guides.cocoapods.org/using/troubleshooting.html "CocoaPodsトラブルシューティングガイド"

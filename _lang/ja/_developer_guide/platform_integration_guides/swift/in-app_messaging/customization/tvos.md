@@ -17,9 +17,9 @@ page_order: 0
 
 ## tvOSアプリを設定する
 
-### ステップ 1:新しいiOSアプリを作成する
+### ステップ1:新しいiOSアプリを作成する
 
-Braze で、\[**設定**] > \[**アプリの設定**] を選択し、\[**アプリの追加**] を選択します。tvOS アプリの名前を入力し、_tvOS ではなく_、**iOS** を選択し、**アプリの追加**を選択します。
+Braze で、[**設定**] > [**アプリの設定**] を選択し、[**アプリの追加**] を選択します。tvOS アプリの名前を入力し、_tvOS ではなく_、**iOS** を選択し、**アプリの追加**を選択します。
 
 ![ALT_TEXT.]({% image_buster /assets/img/tvos.png %}){: style="width:70%"}
 
@@ -33,7 +33,7 @@ Braze で、\[**設定**] > \[**アプリの設定**] を選択し、\[**アプ�
 
 ![ALT_TEXT]({% image_buster /assets/img/tvos1.png %}){: style="width:70%"}
 
-### ステップ 3:BrazeKitを統合する
+### ステップ3: BrazeKitを統合する
 
 アプリの API キーを使用して、Xcode で [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) を tvOS プロジェクトに統合します。Braze Swift SDK から BrazeKit を統合するだけでよいです。
 

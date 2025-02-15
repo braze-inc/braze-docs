@@ -8,9 +8,6 @@ description: "このランディングページには、リターゲティング
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Message Orchestration"
 
 valid_partner_list:
@@ -24,7 +21,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
-- name: パスキット
+- name: Passkit
   url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 - name: Inkit
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
@@ -92,7 +89,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
@@ -110,4 +107,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
+- name: マイポストカード
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

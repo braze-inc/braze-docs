@@ -18,10 +18,10 @@ iOS 14.5以降、**IDFAの**収集と[特定のデータ共有には](https://de
 
 #### iOS 14の変更点のまとめ
 
-- iOS 14 / Xcode 12 を対象とするアプリは、[公式 iOS 14 リリース][1]を使用する必要があります。
-- iOS では、新しい「_おおよその位置情報」_パーミッションを選択したユーザーのジオフェンスは[サポートされなくなった][4]。
+- iOS 14 / Xcode 12 を対象とするアプリは、[公式 iOS 14 リリース](https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0)を使用する必要があります。
+- iOS では、新しい「_おおよその位置情報」_パーミッションを選択したユーザーのジオフェンスは[サポートされなくなった](https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization)。
 - Last Known Location」ターゲティング機能の使用には、_おおよその位置情報_許可との互換性のため、Braze iOS SDK v3.26.1+へのアップグレードが必要。Xcode 12 を使っている場合は、v3.27.0 以降にアップグレードする必要があります。
-- iOS 14.5以降、IDFAの収集と[特定のデータ共有には][5]、新しい[AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency)フレームワークの許可プロンプトが必要となる。
+- iOS 14.5以降、IDFAの収集と[特定のデータ共有には](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track)、新しい[AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency)フレームワークの許可プロンプトが必要となる。
 - キャンペーンターゲティングやアナリティクスのために "Ad Tracking Enabled "フィールドを使用する場合、Xcode 12にアップグレードし、ユーザーのオプトインステータスを報告するために新しいAppTrackingTransparencyフレームワークを使用する必要がある。
 
 ## アップグレードの概要
@@ -40,7 +40,7 @@ table td {
 
 |あなたのアプリが使用する場合：|アップグレードの推奨|説明|
 |------|--------|---|
-|Xcode 12|**iOS SDK v3.27以降にアップグレードする。**|Xcode 12 を使用している顧客は、互換性を確保するために v3.27.0 以降を使用する必要があります。iOS 14 の互換性に関連する問題や質問が生じた場合は、新しい [GitHub issue][2] を開いてください。|
+|Xcode 12|**iOS SDK v3.27以降にアップグレードする。**|Xcode 12 を使用している顧客は、互換性を確保するために v3.27.0 以降を使用する必要があります。iOS 14 の互換性に関連する問題や質問が生じた場合は、新しい [GitHub issue](https://github.com/Appboy/appboy-ios-sdk/issues) を開いてください。|
 |最新の位置情報| **iOS SDK v3.26.1以降にアップグレードする。**|最新の位置情報ターゲティング機能を使用し、まだ Xcode 11 を使用している場合は、新しい_おおよそのロケーション_機能をサポートする iOS SDK v3.26.1 以降にアップグレードする必要があります。古いSDKは、ユーザーがiOS 14にアップグレード_し、_"おおよその位置 "を選択した場合、確実に位置情報を収集することができない。<br><br>あなたのアプリがiOS 14をターゲットにしていなくても、ユーザーがiOS 14にアップグレードし、新しい位置情報精度オプションを使い始めるかもしれない。iOS SDK v3.26.1+にアップグレードしていないアプリは、iOS 14デバイスでユーザーが_おおよその位置情報を_提供した場合、位置情報を確実に収集することができない。|
 |IDFA広告トラッキングID| **Xcode 12とiOS SDK v3.27へのアップグレードが必要な場合がある。**|2021年のある時点で、Apple は IDFA の収集に許可プロンプトを要求し始める予定です。その時点で、IDFA の収集を続行するには、アプリを Xcode 12 にアップグレードし、新しい `AppTrackingTransparency` フレームワークを使用する必要があります。IDFA を Braze SDK に渡す場合は、その時点で v3.27.0 以降にアップグレードする必要もあります。<br><br>新しいiOS 14のAPIを使用していないアプリは、2021年にアップルがこの変更を実施し始めた後、IDFAを収集することができなくなり、代わりに空白のID（`00000000-0000-0000-0000-000000000000` ）を収集することになる。アプリに適用されるかどうかの詳細については、[IDFA の詳細](#idfa)を参照してください。|
 
@@ -57,7 +57,7 @@ table td {
 
 #### ジオフェンス  {#geofences}
 
-iOS では、新しい「_おおよその位置情報」_パーミッションを選択したユーザーのジオフェンスは[サポートされなくなった][4]。Braze SDKの統合にアップデートは必要ないが、ジオフェンスに依存するキャンペーンについては、[ロケーションベースのマーケティング戦略を](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/)調整する必要があるかもしれない。
+iOS では、新しい「_おおよその位置情報」_パーミッションを選択したユーザーのジオフェンスは[サポートされなくなった](https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization)。Braze SDKの統合にアップデートは必要ないが、ジオフェンスに依存するキャンペーンについては、[ロケーションベースのマーケティング戦略を](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/)調整する必要があるかもしれない。
 
 #### ロケーションターゲティング {#location-tracking}
 
@@ -140,7 +140,3 @@ Brazeの使用を通じて任意に収集される可能性のあるデータ：
 
 この機能の詳細については、[Apple のプライバシーとデータ利用](https://developer.apple.com/app-store/user-privacy-and-data-use/)を参照してください。
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
-[2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
-[5]: https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track

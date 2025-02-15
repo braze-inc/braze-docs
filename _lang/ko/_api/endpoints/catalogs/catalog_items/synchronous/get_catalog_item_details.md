@@ -6,7 +6,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -33,7 +33,7 @@ description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
 | `item_id` | 필수 | 문자열 | 카탈로그 항목의 ID입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
@@ -49,7 +49,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `200` 및 `404` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `200` 와 `404` 두 가지입니다.
 
 ### 성공 응답의 예
 
@@ -74,7 +74,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### 오류 응답의 예
 
-`404` 상태 코드는 다음 응답을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
+상태 코드 `404` 는 다음과 같은 응답을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
 
 ```json
 {
@@ -102,6 +102,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 | --- | --- |
 | `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. |
 | `item-not-found` | 해당 품목이 카탈로그에 있는지 확인합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -28,7 +28,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.export.segment` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`users.export.segment`の権限が必要です。
 
 ## レート制限
 
@@ -36,7 +36,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 ## 認証情報ベースの応答の詳細
 
-[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、\[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.zip` ではなく `.gz` になります。
+[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.gz` ではなく `.zip` になります。
 
 {% details ZIP のエクスポートパスの内訳 %}
 **ZIP 形式:**
@@ -54,7 +54,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 | `RANDOM_UUID` | リクエスト時にBrazeによって生成されるランダムUUID。 | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | UTC でエクスポートが要求された Unix 時間 (2017-01-01:00:00:00Z からの秒数)。 | `1556044807` |
 | `filename` | ファイルごとにランダム。 | `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
@@ -66,7 +66,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 ユーザー群s を大きくすると、エクスポート時間が長くなります。例えば、2,000 万人のユーザーを持つアプリの場合、1 時間以上かかることもあります。
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -84,14 +84,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-|`segment_id` | 必須 | string | エクスポートするSegmentのID。[Segment 識別子]({{site.baseurl}}/api/identifier_types/)を参照。<br><br>特定のSegmentの`segment_id` は、Braze アカウントの[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから見つけることができます。または、[ Segment一覧エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) を使用することもできます。|
-|`callback_endpoint` | オプション | string | エクスポートが利用可能になった場合に、ダウンロード URL を投稿するエンドポイント。 |
+|`segment_id` | 必須 | 文字列 | エクスポートするSegmentのID。[セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br>特定のSegmentの`segment_id` は、Braze アカウントの[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから見つけることができます。または、[ Segment一覧エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) を使用することもできます。|
+|`callback_endpoint` | オプション | 文字列 | エクスポートが利用可能になった場合に、ダウンロード URL を投稿するエンドポイント。 |
 |`fields_to_export` | 必須* | 文字列の配列 | エクスポートするユーザーデータ フィールドの名前。また、このパラメータに`custom_attributes` を含めることで、すべてのカスタム属性s をエクスポートすることもできます。<br><br>\*2021 年 4 月以降、新しいアカウントでは、エクスポートする特定のフィールドを指定する必要があります。 |
-| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大500 個のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性の作成および管理を行うには、\[**データ設定**] > \[**カスタム属性**] に移動します。 |
-|`output_format` | オプション | string | ファイルの出力形式。デフォルトは `zip` ファイル形式です。独自のS3 バケットを使用している場合は、`zip` または`gzip` を指定できます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大500 個のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 |
+|`output_format` | オプション | 文字列 | ファイルの出力形式。デフォルトは `zip` ファイル形式です。独自のS3 バケットを使用している場合は、`zip` または`gzip` を指定できます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 `fields_to_export` パラメーターに `custom_attributes` が含まれている場合、`custom_attributes_to_export` の内容に関係なく、すべてのカスタム属性がエクスポートされます。特定の属性をエクスポートすることが目的の場合は、`custom_attributes` を `fields_to_export` パラメーターに含めないでください。代わりに、`custom_attributes_to_export` パラメータを使用します。
@@ -131,34 +131,34 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 | エクスポートするフィールド | データタイプ | 説明 |
 |---|---|---|
 | `apps` | 配列 | このユーザーがセッションを記録したアプリケーション。これには次のフィールドが含まれます。<br><br>-`name`: アプリ名<br>- `platform`: アプリ プラットフォーム(iOS、Android、またはWeb など)<br>- `version`:アプリのバージョン番号または名前 <br>-`sessions`: このアプリの総セッション数<br>-`first_used`: 初回セッションの日付<br>-`last_used`: 最終セッションの日付<br><br>すべてのフィールドsはストリングです。 |
-| `attributed_campaign` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
-| `attributed_source` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
-| `attributed_adgroup` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
-| `attributed_ad` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
-| `braze_id` | string | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
-| `country` | string | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
-| `created_at` | string | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
+| `attributed_campaign` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
+| `attributed_source` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
+| `attributed_adgroup` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
+| `attributed_ad` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
+| `braze_id` | 文字列 | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
+| `country` | 文字列 | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
+| `created_at` | 文字列 | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
 | `custom_attributes` | オブジェクト | このユーザーのカスタム属性キーと値のペア。 |
 | `custom_events` | 配列 | 過去 90 日間にこのユーザーに帰属するカスタム イベント。 |
 | `devices` | 配列 | ユーザーのデバイスに関する情報。プラットフォームに応じて、次の情報が含まれます。<br><br>- `model`:デバイスのモデル名<br>- `os`:装置のオペレーティングシステム<br>- `carrier`:デバイスのサービスキャリア (利用可能な場合)<br>- `idfv`: (iOS) Braze デバイス識別子、ベンダーの Apple 識別子 (存在する場合)<br>- `idfa`: (iOS) Advertising の識別子(存在する場合)<br>- `device_id`:(Android)Braze機器識別子<br>- `google_ad_id`:(Android)グーグルプレイ広告識別子(存在する場合)<br>- `roku_ad_id`:(Roku） Roku 広告識別子<br>- `ad_tracking_enabled`:デバイスで広告"トラッキングが有効になっている場合、真または偽になることがあります |
-| `dob` | string | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
-| `email` | string | ユーザーのメールアドレス。 |
-| `external_id` | string | 識別されたユーザー固有のユーザー識別子。 |
-| `first_name` | string | ユーザーの名。 |
-| `gender` | string | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
-| `home_city` | string | ユーザーの所在地。 |
-| `language` | string | ISO-639-1 規格のユーザー言語。 |
+| `dob` | 文字列 | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
+| `email` | 文字列 | ユーザーのメールアドレス。 |
+| `external_id` | 文字列 | 識別されたユーザー固有のユーザー識別子。 |
+| `first_name` | 文字列 | ユーザーの名。 |
+| `gender` | 文字列 | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
+| `home_city` | 文字列 | ユーザーの所在地。 |
+| `language` | 文字列 | ISO-639-1 規格のユーザー言語。 |
 | `last_coordinates` | 浮動小数点の配列 | `[longitude, latitude]` としてフォーマットされたユーザーの最新のデバイスの場所。 |
-| `last_name` | string | ユーザの姓。 |
-| `phone` | string | E.164 形式のユーザーの電話番号。 |
+| `last_name` | 文字列 | ユーザの姓。 |
+| `phone` | 文字列 | E.164 形式のユーザーの電話番号。 |
 | `purchases` | 配列 | このユーザーは過去90日間に購入しました。 |
 | `push_tokens` | 配列 | ユーザーのプッシュトークンについての説明。 |
 | `random_bucket` | 整数 | ユーザーの[乱数バケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)。乱数ユーザーsの一様分布Segmentsを作成するために使用されます。 |
-| `time_zone` | string | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
+| `time_zone` | 文字列 | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
 | `total_revenue` | フロート | このユーザーに帰属する総収益。総収益は、受領したキャンペーンおよびキャンバスのコンバージョン期間中に行われたユーザーの購入に基づいて計算されます。 |
 | `uninstalled_at` | タイムスタンプ | ユーザーがアプリをアンインストールした日時。アプリがアンインストールされていない場合は省略されます。 |
 | `user_aliases` | オブジェクト | [`alias_name` および`alias_label` を含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) (存在する場合)。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 重要なお知らせ
 
@@ -245,7 +245,7 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -253,7 +253,9 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -274,16 +276,16 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
         "last_received" : (string) date,
         "engaged" : 
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -294,7 +296,7 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {

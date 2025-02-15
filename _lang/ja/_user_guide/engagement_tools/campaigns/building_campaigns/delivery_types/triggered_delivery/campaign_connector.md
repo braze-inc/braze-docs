@@ -64,13 +64,13 @@ description: "このハウツー記事では、キャンペーンコネクター
 
 #### キャンペーンにインタラクションしたユーザーをターゲットにする
 
-Action-Based Delivery][7] ]を選択し、"Interact with Campaign "トリガーを追加する。次に、トリガーとなるインタラクションを選択します。その後、ターゲットにしたいアクティブなキャンペーンを選択します。
+[アクションベース配信][7] を選択し、「キャンペーンとのインタラクション」トリガーを追加します。次に、トリガーとなるインタラクションを選択します。その後、ターゲットにしたいアクティブなキャンペーンを選択します。
 
 ![][4]
 
 #### ニュースフィードカードにインタラクションしたユーザーをターゲットにする (非推奨)
 
-\[**アクションベース配信**] を選択し、「カードとのインタラクション」トリガーを追加します。次に、ニュースフィードカードを見たユーザーをターゲットにするか、ニュースフィードカードをクリックしたユーザーをターゲットにするかを選択します。対象としたいアクティブなニュースフィードカードを選択します。
+[**アクションベース配信**] を選択し、「カードとのインタラクション」トリガーを追加します。次に、ニュースフィードカードを見たユーザーをターゲットにするか、ニュースフィードカードをクリックしたユーザーをターゲットにするかを選択します。対象としたいアクティブなニュースフィードカードを選択します。
 
 ![][5]
 
@@ -99,4 +99,4 @@ Action-Based Delivery][7] ]を選択し、"Interact with Campaign "トリガー�
 [4]: {% image_buster /assets/img_archive/Campaign_Connector1.png %}
 [5]: {% image_buster /assets/img_archive/Campaign_Connector2.png %}
 [6]: {% image_buster /assets/img_archive/Campaign_Connector3.png %}
-[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/

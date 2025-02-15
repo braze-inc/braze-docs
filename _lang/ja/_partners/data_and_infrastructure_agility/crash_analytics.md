@@ -8,10 +8,6 @@ page_type: landing
 search_tag: Partner
 description: "このランディングページには、アプリケーションのクラッシュデータを分析できるようにする Braze パートナー (Alloys) が一覧表示されています。"
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
-
 partner_top_header: "Crash Analytics"
 
 valid_partner_list:

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Synchronisation des déclencheurs"
-article_title: "POST : Synchronisation des déclencheurs"
+nav_title: "POST : Déclencher la synchronisation"
+article_title: "POST : Déclencher la synchronisation"
 search_tag: Endpoint
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
@@ -30,7 +30,7 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `integration_id` | Requis | Chaîne de caractères | ID d'intégration. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -61,7 +61,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `400 Invalid integration ID` | Vérifiez que votre `integration_id` est valide. |
 | `404 Integration not found` | Il n'existe pas d'intégration pour l'ID d'intégration donné. Assurez-vous que votre ID d'intégration est valide. |
 | `429 Another job is in progress` | Une synchronisation est actuellement en cours pour cette intégration. Réessayez une fois la synchronisation terminée. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Pour connaître les autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 

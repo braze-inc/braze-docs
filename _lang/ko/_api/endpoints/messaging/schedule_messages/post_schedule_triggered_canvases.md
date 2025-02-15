@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 브레이즈 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,9 +14,9 @@ description: "이 문서에서는 스케줄 API로 트리거되는 캔버스 Bra
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 API 트리거 배달을 통해 Canvas 메시지를 예약하여 어떤 작업을 트리거하여 메시지를 전송할지 결정할 수 있습니다. 
+> 이 엔드포인트를 사용하면 API 트리거 배달을 통해 Canvas 메시지를 예약하여 어떤 작업을 트리거하여 메시지를 전송할지 결정할 수 있습니다.
 
-Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `canvas_entry_properties`를 전달할 수 있습니다.
+Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정된 `canvas_entry_properties` 을 전달할 수 있습니다.
 
 이 엔드포인트로 메시지를 보내려면 캔버스를 만들 때 생성한 [캔버스 ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)가 있어야 합니다.
 
@@ -63,12 +63,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|필수|문자열| [캔버스 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `recipients` | 선택 사항 | 수신자 객체 배열 | [수신자 거부]({{site.baseurl}}/api/objects_filters/recipient_object/) 참조. |
-| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+| `recipients` | 선택 사항 | 수신자 객체 배열 | 수신자 객체를 참조하십시오. |
+| `audience` | 선택 사항 | 연결된 오디언스 객체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
+|`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 `broadcast: true`을 설정할 때 주의하십시오. 이 플래그를 의도치 않게 설정하면 메시지를 예상보다 더 많은 오디언스에게 보낼 수 있습니다. |
 | `canvas_entry_properties` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [캔버스 항목 속성 개체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object) 참조하십시오. |
 | `schedule` | 필수 | 스케줄 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

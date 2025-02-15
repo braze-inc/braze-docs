@@ -28,14 +28,14 @@ description: "この記事では、購入数のエクスポートに関するBra
 
 ## リクエストパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
 | `ending_at` | オプション | 日時 ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
-| `length` | required | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
-| `unit` | オプション | string | データポイント間の時間単位。日または時間にすることができ、デフォルトは日です。 |
-| `app_id` | オプション | string | [API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリ API 識別子。除外された場合、ワークスペース内のすべてのアプリの結果が返されます。 |
-| `product` | オプション | string | 応答をフィルターする製品の名前。除外された場合、すべてのアプリの結果が返されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `unit` | オプション | 文字列 | データポイント間の時間の単位。日または時間にすることができ、デフォルトは日です。 |
+| `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外された場合、ワークスペース内のすべてのアプリの結果が返されます。 |
+| `product` | オプション | 文字列 | 応答をフィルターする製品の名前。除外された場合、すべてのアプリの結果が返されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -64,5 +64,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-CSVおよびAPIエクスポートのヘルプについては、[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}

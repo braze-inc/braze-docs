@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 콘텐츠 블록 Braze 만들기 엔드포인트에 대해 간략하게 설명합니다."
+description: "이 문서에서는 콘텐츠 블록 만들기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `content` | 필수 | 문자열 | 콘텐츠 블록 내의 HTML 또는 텍스트 콘텐츠. |
 | `state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
 | `tags` | 선택 사항 | 문자열 배열 | [태그가]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 이미 존재해야 합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```json
@@ -102,7 +102,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Tags must be an array` | 태그의 형식은 문자열 배열로 지정해야 합니다(예: `["marketing", "promotional", "transactional"]`). | |
 | `All tags must be strings` | 태그가 따옴표로 묶여 있는지 확인합니다(`""`). |
 | `Some tags could not be found` | 콘텐츠 블록을 만들 때 태그를 추가하려면 해당 태그가 Braze에 이미 존재해야 합니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

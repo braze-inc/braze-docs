@@ -1,21 +1,21 @@
 ---
-nav_title: "POST : Envoyer des e-mails transactionnels via une livraison déclenchée par API"
-article_title: "POST : Envoyer des e-mails transactionnels via une livraison déclenchée par API"
+nav_title: "POST : Envoyez des e-mails transactionnels à l'aide de la réception/distribution déclenchée par l'API"
+article_title: "POST : Envoyez des e-mails transactionnels à l'aide de la réception/distribution déclenchée par l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des e-mails transactionnels via une livraison déclenchée par API."
+description: "Cet article présente les détails du point de terminaison Braze Send transactional e-mail messages using API-triggered delivery (Envoyer des messages e-mail transactionnels en utilisant la réception/distribution déclenchée par l'API)."
 
 ---
 
 {% api %}
-# Envoyer des e-mails transactionnels via une livraison déclenchée par API
+# Envoyez des e-mails transactionnels en utilisant la réception/distribution déclenchée par l'API.
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-> Utilisez cet endpoint pour envoyer des messages transactionnels immédiats et ponctuels à un utilisateur désigné. 
+> Utilisez cet endpoint pour envoyer des messages transactionnels immédiats et ponctuels à un utilisateur désigné.
 
 Cet endpoint est utilisé parallèlement à la création d'une [campagne d'e-mails transactionnels de]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) Braze et de l'ID de campagne correspondant.
 
@@ -40,7 +40,7 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `campaign_id` | Requis | Chaîne de caractères | ID de la campagne |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corps de la demande
 
@@ -70,7 +70,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`external_send_id`| Facultatif | Chaîne de caractères |  Une chaîne de caractères compatible Base64. Validé par rapport aux expressions régulières suivantes :<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Ce champ facultatif vous permet de transmettre un identifiant interne pour cet envoi particulier, qui sera inclus dans les événements envoyés à partir du postback de l’événement HTTP transactionnel. Lorsqu’il est communiqué, cet identifiant est également utilisé comme clé de déduplication, que Braze conservera pendant 24 heures. <br><br>Le fait d’indiquer le même identifiant à une autre demande n’entraînera pas de nouvelle instance d’envoi par Braze pendant 24 heures.|
 |`trigger_properties`|Facultatif|Objet|Voir les [propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur de cette demande. |
 |`recipient`|Requis|Objet| L’utilisateur que vous ciblez avec ce message. Peut contenir des `attributes` et un seul `external_user_id` ou `user_alias`.<br><br>Notez que si vous fournissez un ID utilisateur externe qui n’existe pas déjà dans Braze, la transmission d’un des champs à l’objet `attributes` aura pour effet de créer ce profil utilisateur dans Braze et d’envoyer ce message à l’utilisateur nouvellement créé. <br><br>Si vous envoyez plusieurs demandes au même utilisateur avec des données différentes dans l'objet `attributes`, les attributs `first_name`, `last_name` et `email` seront mis à jour de manière synchrone et intégrés dans votre message. Les attributs personnalisés n’ont pas cette même protection, procédez donc avec prudence lors de la mise à jour d’un utilisateur via cette API et de la transmission des différentes valeurs d’attributs personnalisés en succession rapide.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -91,7 +91,7 @@ curl -X POST \
   https://rest.iad-01.braze.com/transactional/v1/campaigns/{campaign_id}/send
 ```
 
-## Réponse 
+## Réponse
 
 L'endpoint d'envoi d'e-mail transactionnel répondra avec le message `dispatch_id` qui représente l'instance de cet envoi de message. Cet identifiant peut être utilisé avec les événements du postback de l’événement HTTP transactionnel pour tracer le statut d’un e-mail individuel envoyé à un utilisateur unique.
 
@@ -117,10 +117,10 @@ L’endpoint peut renvoyer également, dans certains cas, un code d’erreur et 
 | `The campaign is archived. Unarchive the campaign in order for trigger requests to take effect.` | L’ID de campagne fourni correspond à une campagne archivée. |
 | `The campaign is paused. Resume the campaign in order for trigger requests to take effect.` | L’ID de campagne fourni correspond à une campagne en pause. |
 | `campaign_id must be a string of the campaign api identifier` | L’ID fourni pour la campagne n’est pas dans un format valide. |
-| `Error authenticating credentials` | La clé API fournie est invalide | 
-| `Invalid whitelisted IPs `| L'adresse IP qui envoie la demande ne figure pas sur la liste blanche des adresses IP (si elle est utilisée). | 
+| `Error authenticating credentials` | La clé API fournie est invalide |
+| `Invalid whitelisted IPs `| L'adresse IP qui envoie la demande ne figure pas sur la liste blanche des adresses IP (si elle est utilisée). |
 | `You do not have permission to access this resource` | La clé API n’a pas la permission d’effectuer cette action |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 La plupart des endpoints Braze ont une implémentation de limites de débit qui renverra un code de réponse 429 si vous avez effectué trop de requêtes. L'endpoint d'envoi transactionnel fonctionne différemment : si vous dépassez la limite de débit qui vous a été attribuée, notre système continuera d'ingérer les appels API, de renvoyer les codes de réussite et d'envoyer les messages, mais ces derniers ne seront peut-être pas soumis à l'accord de niveau de service (SLA) contractuel pour la fonctionnalité. Veuillez nous contacter si vous désirez plus d’informations concernant cette fonctionnalité.
 
@@ -170,7 +170,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette pag
 | `aborted` | Braze n’a pas réussi à envoyer le message, car l’adresse de l’utilisateur ne permet pas de recevoir des e-mails ou la logique d’interruption de Liquid a été appelée dans le corps du message. Tous les événements abandonnés comprennent un champ `reason` dans l’objet de métadonnées indiquant pourquoi le message a été abandonné |
 |`delivered`| Le message a été accepté par le fournisseur de messagerie de l’utilisateur |
 |`bounced`| Le message a été rejeté par le fournisseur de messagerie de l’utilisateur. Tous les événements renvoyés comprennent un champ `reason` dans l’objet de métadonnées reflétant le code d’erreur de rebond indiqué par le fournisseur de messagerie |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Exemple de postback
 ```json
@@ -239,4 +239,3 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette pag
 
 
 {% endapi %}
-

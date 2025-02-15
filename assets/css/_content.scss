@@ -671,6 +671,17 @@ table td code.highlighter-rouge {
 	}
 }
 
+code {
+  font-size: 14px;
+  font-family: $braze-code;
+  font-weight: bold;
+  color: $grey-dust;
+  background-color: $grey-athens;
+  border: 1px solid $grey-ghost;
+}
+legend {
+	font-size: 15px;
+}
 .highlight table {
 	margin-bottom: 0;
 }

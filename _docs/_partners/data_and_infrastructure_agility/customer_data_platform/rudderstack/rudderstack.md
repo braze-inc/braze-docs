@@ -95,7 +95,7 @@ To [send events via hybrid mode](https://www.rudderstack.com/docs/destinations/s
 After completing the initial setup, configure the following settings to correctly receive your data in Braze:
 
 - **Enable subscription groups in group call**: Enable this setting to send the subscription group status in your group events. For more information, see [Group](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#group).
-- **Use Custom Attributes Operation**: Enable this setting if you want to use the [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) functionality in Braze to create segments and personalize your messages using a custom attribute object. For more information, see [Send user traits as nested custom attributes](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
+- **Use Custom Attributes Operation**: Enable this setting if you want to use the [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) functionality in Braze to create segments and personalize your messages using a custom attribute object. For more information, see [Send user traits as nested custom attributes](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#send-user-traits-as-nested-custom-attributes).
 - **Track events for anonymous users**: Enable this setting to track anonymous user activity and send this information to Braze.
 
 ### Device mode settings
@@ -128,7 +128,7 @@ You can delete a user in Braze using the [Suppression with Delete regulation](ht
 RudderStack's [`track` method](https://rudderstack.com/docs/destinations/marketing/braze/#track) captures all the user activities and the properties associated with those activities.
 
 **Order completed**<br>
-On using the [RudderStack Ecommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
+On using the [RudderStack eCommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
 
 {% endtab %}
 {% tab Screen %}
@@ -253,7 +253,7 @@ rudderanalytics.track("Product Viewed", {
 ```
 
 {% alert note %}
-For the update and remove operations, `identifier` is a required key. If add, update, or remove operations are not present in the nested array, RudderStack uses the create operation to create the properties by default. Refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) for more information on sending nested custom attributes.
+For the update and remove operations, `identifier` is a required key. If add, update, or remove operations are not present in the nested array, RudderStack uses the create operation to create the properties by default. Refer to [Array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) for more information on sending nested custom attributes.
 {% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}

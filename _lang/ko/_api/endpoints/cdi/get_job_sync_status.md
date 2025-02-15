@@ -6,7 +6,7 @@ page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
-description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 > 이 엔드포인트를 사용하여 주어진 통합에 대한 과거 동기화 상태 목록을 반환합니다.
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한이 있는 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한으로 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -30,7 +30,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `integration_id` | 필수 | 문자열 | 통합 ID. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 쿼리 매개변수
 
@@ -39,11 +39,11 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `cursor` | 선택 사항 | 문자열 | 동기화 상태의 페이지 매김을 결정합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
-### 커서 없이
+### 커서 없음
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status' \
@@ -51,7 +51,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-### 커서와 함께
+### 커서 포함
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cursor=c2tpcDow' \
@@ -66,7 +66,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 `200` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 {% alert note %}
-총 동기화가 10개 이하인 경우 `Link` 헤더가 존재하지 않습니다. 커서가 없는 통화의 경우 `prev`가 표시되지 않습니다. 항목의 마지막 페이지를 보면 `next`가 표시되지 않습니다.
+총 동기화 횟수가 10개 이하인 경우 `Link` 헤더는 존재하지 않습니다. 커서가 없는 통화의 경우 `prev`가 표시되지 않습니다. 항목의 마지막 페이지를 보면 `next` 이 표시되지 않습니다.
 {% endalert %}
 
 ```
@@ -96,7 +96,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `partial` | 일부 행이 오류로 인해 동기화되지 않았습니다. |
 | `error` | 행이 동기화되지 않았습니다. |
 | `config_error` | 통합 구성에 오류가 있었습니다. 통합 설정을 확인하십시오. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 문제 해결
 
@@ -104,10 +104,10 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 
 | 오류 | 문제 해결 |
 | --- | --- |
-| `400 Invalid cursor` | 귀하의 `cursor`이(가) 유효한지 확인하십시오. |
-| `400 Invalid integration ID` | 귀하의 `integration_id`이(가) 유효한지 확인하십시오. |
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid cursor` | `cursor` 주소가 유효한지 확인합니다. |
+| `400 Invalid integration ID` | `integration_id` 주소가 유효한지 확인합니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는[심각한 오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% endapi %}

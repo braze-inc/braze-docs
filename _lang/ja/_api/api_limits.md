@@ -9,7 +9,7 @@ page_type: reference
 
 # レート制限
 
-> BrazeのAPIインフラストラクチャは、顧客ベース全体で大量のデータを処理できるように設計されている。このため、ワークスペースごとにAPIレートの制限を設けている。 
+> BrazeのAPIインフラストラクチャは、顧客ベース全体で大量のデータを処理できるように設計されている。このため、ワークスペースごとにAPIレートの制限を設けている。
 
 レート制限とは、APIが一定時間内に受け取れるリクエスト数のことである。大規模システムにおける負荷ベースのサービス拒否インシデントの多くは、悪意のある攻撃ではなく、ソフトウェアや設定のエラーによって引き起こされる意図的でないものである。レート制限は、このようなエラーがBraze APIのリソースをお客様から奪うことがないようにチェックする。一定時間内に多くのリクエストが送信された場合、ステータスコード`429` のエラー応答が表示されることがある。これは、レート制限にヒットしたことを示す。
 
@@ -25,26 +25,26 @@ API レート制限は、システムの適切な使用状況に応じて変更�
 この表に記載されていないリクエストは、合計で 1 時間あたり 250,000 件のリクエストというデフォルトのレート制限を共有します。
 {% endalert %}
 
-| リクエストのタイプ | デフォルトの API レート制限 |
-| --- | --- |
-| [`/users/track`][10] | **リクエスト:**1 分あたり 50,000 件のリクエスト。<br><br>**バッチ処理:**1 件の API リクエストあたり、75 件のイベント、75 件の購入、75 個の属性。詳細については、「[ユーザー追跡リクエストのバッチ処理](#batch-user-track)」を参照してください。 |
-| [`/users/export/ids`][11] | 毎分2500リクエスト。 |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 1 分あたり 20,000 件のリクエストをエンドポイント間で共有します。 |
-| [`/users/external_id/rename`][20] | 1 分あたり 1,000 件のリクエスト。 |
-| [`/users/external_id/remove`][21] | 1 分あたり 1,000 件のリクエスト。 |
-| [`/events/list`][15] | 1 時間あたり 1,000 件のリクエスト、`/purchases/product_list` エンドポイントと共有されます。 |
-| [`/purchases/product_list`][16] | 1 時間あたり 1,000 件のリクエスト、`/events/list` エンドポイントと共有されます。 |
-| [`/campaigns/data_series`][17.3] | 1 分あたり 50,000 件のリクエスト。 |
-| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]| ブロードキャストコールの場合、1 分あたり 250 リクエスト (セグメントまたはコネクテッドオーディエンスのみを指定した場合)。それ以外の場合は、エンドポイント間で 1 時間あたり 250,000 件のリクエストが共有されます。 |
-| [`/sends/id/create`][18] | 1 日あたり 100 件のリクエスト。 |
-| [`/subscription/status/set`][19] | 毎分5000リクエスト。 |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | ワークスペースごとに毎分1,000リクエスト。 |
-| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | ワークスペースごとに 1 分あたり 10 件のリクエスト。 |
-| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 1 分あたり 50 件のリクエストをエンドポイント間で共有します。 |
-| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 1 分あたり 16,000 件のリクエストをエンドポイント間で共有します。 |
-| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 1 分あたり 50 件のリクエストをエンドポイント間で共有します。 |
-| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 1 分あたり 5,000 件のリクエストをエンドポイント間で共有します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| リクエストのタイプ                                                                                                                                                                                                                                           | デフォルトの API レート制限                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`/users/track`][10]                                                                                                                                                                                                                                   | **リクエスト:**3000リクエスト/3秒。<br><br>**バッチ処理:**1 件の API リクエストあたり、75 件のイベント、75 件の購入、75 個の属性。詳細については、「[ユーザー追跡リクエストのバッチ処理](#batch-user-track)」を参照してください。<br><br>**CY24-25の月間アクティブユーザーの制限：** [CY24-25の月間アクティブユーザーの制限]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25)を参照してください。 |
+| [`/users/export/ids`][11]                                                                                                                                                                                                                              | **2024年8月22日以降にオンボーディングした場合：**毎分250リクエスト。<br><br> **2024年8月22日以前にオンボーディングした場合：**毎分2500リクエスト。                                                                                                                                                                   |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44]                                                                                                                    | 1 分あたり 20,000 件のリクエストをエンドポイント間で共有します。                                                                                                                                  |
+| [`/users/external_id/rename`][20]                                                                                                                                                                                                                      | 1 分あたり 1,000 件のリクエスト。                                                                                                                                                                 |
+| [`/users/external_id/remove`][21]                                                                                                                                                                                                                      | 1 分あたり 1,000 件のリクエスト。                                                                                                                                                                 |
+| [`/events/list`][15]                                                                                                                                                                                                                                   | 1 時間あたり 1,000 件のリクエスト、`/purchases/product_list` エンドポイントと共有されます。                                                                                                               |
+| [`/purchases/product_list`][16]                                                                                                                                                                                                                        | 1 時間あたり 1,000 件のリクエスト、`/events/list` エンドポイントと共有されます。                                                                                                                          |
+| [`/campaigns/data_series`][17.3]                                                                                                                                                                                                                       | 1 分あたり 50,000 件のリクエスト。                                                                                                                                                                |
+| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]                                                                                                                                                          | ブロードキャストコールの場合、1 分あたり 250 リクエスト (セグメントまたはコネクテッドオーディエンスのみを指定した場合)。それ以外の場合は、エンドポイント間で 1 時間あたり 250,000 件のリクエストが共有されます。                     |
+| [`/sends/id/create`][18]                                                                                                                                                                                                                               | 1 日あたり 100 件のリクエスト。                                                                                                                                                                      |
+| [`/subscription/status/set`][19]                                                                                                                                                                                                                       | 毎分5000リクエスト。                                                                                                                                                                 |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28]                                                                            | ワークスペースごとに毎分1,000リクエスト。                                                                                                                                                  |
+| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30]                                                                                                                                                            | ワークスペースごとに 1 分あたり 10 件のリクエスト。                                                                                                                                                     |
+| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33]                                                                                                                                                                             | 1 分あたり 50 件のリクエストをエンドポイント間で共有します。                                                                                                                                       |
+| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 1 分あたり 16,000 件のリクエストをエンドポイント間で共有します。                                                                                                                                   |
+| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 1 分あたり 50 件のリクエストをエンドポイント間で共有します。                                                                                                                                       |
+| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 1 分あたり 5,000 件のリクエストをエンドポイント間で共有します。                                                                                                                         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <!-- Add during CDI endpoints GA
 | [`/cdi/integrations`][46] | 50 requests per minute. |
@@ -64,7 +64,7 @@ REST API のレート制限の増加は、API バッチ処理機能を利用し�
 
 `/users/track` の各リクエストには、最大 75 個のイベントオブジェクト、75 個の属性オブジェクト、75 個の購買オブジェクトを含めることができます。各オブジェクト（イベント、アトリビュート、購入アレイ）は、それぞれ1人のユーザーを更新することができる。合計すると、1 回の呼び出しで最大 225 人のユーザーを更新できることになります。さらに、単一のユーザープロファイルを複数のオブジェクトによって更新することもできます。
 
-このエンドポイントへのリクエストは通常、この順番で処理を開始する： 
+このエンドポイントへのリクエストは通常、この順番で処理を開始する：
 
 1. 属性
 2. イベント
@@ -106,14 +106,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 
 Brazeに送信されたすべてのAPIリクエストは、レスポンスヘッダに以下の情報を返す：
 
-ヘッダー名             | 説明
------------------------ | -----------------------
-`X-RateLimit-Limit`     | 指定された間隔内に実行できるリクエストの最大数 (レート制限)。
-`X-RateLimit-Remaining` | 現在のレート制限期間内に残っているリクエストの数。
-`X-RateLimit-Reset`     | 現在のレート制限期間が UTC エポック秒でリセットされる時刻。
-{: .reset-td-br-1 .reset-td-br-2}
+| ヘッダー名             | 説明                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | 指定された間隔内に実行できるリクエストの最大数 (レート制限)。 |
+| `X-RateLimit-Remaining` | 現在のレート制限期間内に残っているリクエストの数。                          |
+| `X-RateLimit-Reset`     | 現在のレート制限期間が UTC エポック秒でリセットされる時刻。                |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 この情報は、Brazeダッシュボードではなく、APIリクエストに対するレスポンスのヘッダーに意図的に含まれている。これにより、あなたのシステムは、あなたが私たちのAPIとやりとりしているときにリアルタイムでよりよく反応することができる。例えば、`X-RateLimit-Remaining` の値がある閾値を下回った場合、すべてのトランザクションメールが送信されるように、送信を遅くしたいかもしれない。あるいは、ゼロになったら、`X-RateLimit-Reset` で指定された時間が経過するまで、すべての送信を一時停止することもできる。
+
+{% alert note %}
+HTTPヘッダーはすべて小文字で返される。この動作は、すべてのヘッダーフィールド名を小文字にすることを義務付けたHTTP/2プロトコルと一致している。これは、HTTP/1.Xではヘッダー名の大文字小文字は区別されないが、一般的に 様々な大文字で書かれていたのとは異なる。
+{% endalert %}
 
 API の制限についてご質問がある場合は、カスタマーサクセスマネージャーにお問い合わせいただくか、[サポートチケット][support]を開いてください。
 

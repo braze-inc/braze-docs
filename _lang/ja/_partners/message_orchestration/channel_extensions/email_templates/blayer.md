@@ -21,7 +21,7 @@ Braze と B.Layer の統合により、B.Layer アプリ内メッセージビル
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | B.Layer アカウント | このパートナーシップを活用するには、[B.Layer](https://blayer.phiture.com) アカウントが必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -35,7 +35,7 @@ Lifesum、Blinkist、OnX Hunt などの多数のブランドと協力し、追�
 
 #### ブランドカラーとフォントを設定する
 
-B.Layer で、ページ上部のハンバーガーメニューから、**\[Brand assets] > \[add your brand assets]** をクリックします。ここで、ブランドカラーとフォントを割り当てることができる。
+B.Layer で、ページ上部のハンバーガーメニューから、**[Brand assets] > [add your brand assets]** をクリックします。ここで、ブランドカラーとフォントを割り当てることができる。
 これで準備万端だ。これでアプリ内メッセージのデザインを開始できます。
 
 ![][4]

@@ -26,8 +26,8 @@ Braze と Voucherify の統合により、以下の機能を使用して独自�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 |Voucherifyアカウント | このパートナーシップを利用するには、Voucherifyのアカウントが必要である。 |
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

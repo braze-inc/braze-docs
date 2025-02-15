@@ -1,7 +1,7 @@
 ---
 nav_title: SEEN
 article_title: SEEN
-description: "SEEN’s personalized videos has helped companies reach unmatched attention and engagement, throughout their customer journey."
+description: "This reference article outlines the partnership between Braze and SEEN, a platform to design personalized videos to increase engagement throughout the customer journey."
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
@@ -9,11 +9,11 @@ search_tag: Partner
 
 # SEEN
 
-> [SEEN’s](https://seen.io/) personalized videos has helped companies reach unmatched attention and engagement, throughout their customer journey. Personalize videos with SEEN in three simple steps:<br>1. Design a video around your data.<br>2. Personalize it at scale in the cloud.<br>3. Distribute it where it works best.
+> [SEEN](https://seen.io/) is a personalization video platform that allows companies to create and build videos around their customers to deliver a more engaging experience. With SEEN, you can design a video around your data, personalize it at scale in the cloud, then distribute it where it works best.
 
 ## Use cases
 
-SEEN offers automated video personalization across the entire the customer journey. Common uses include Onboarding, Loyalty, Sign-ups/Conversion, and Win-back/Anti-churn.
+SEEN offers automated video personalization across the entire customer journey. Common uses include onboarding, loyalty, sign-ups and conversion, and win-back and anti-churn.
 
 ## Prerequisites
 
@@ -27,19 +27,19 @@ Before you start, you'll need the following:
 
 ## Rate limit
 
-The SEEN API currently accepts 1000 calls per hour.
+The SEEN API currently accepts 1,000 calls per hour.
 
 ## Integrating SEEN with Braze
 
-In the following example, we will be sending users data to SEEN for video generation, and receiving a unique landing page link and a unique, personalized thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
+In the following example, we'll send users' data to SEEN for video generation, and receive a unique landing page link and a unique, personalized thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
 
 {% alert tip %}
-If you experience any issues, you can reach out to your Customer Success Manager at SEEN for assistance.
+If you experience any issues, reach out to your SEEN customer success manager for assistance.
 {% endalert %}
 
 ### Step 1: Create a webhook campaign
 
-Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
+Create a new [webhook campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
 
 {% raw %}
 <table>
@@ -80,12 +80,12 @@ Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_bu
 
 You can now test the webhook with a user by switching to the **Test** tab.
 
-If everything works as intended, go to Braze and set the rate at which the campaign sends to 10 **messages per minute**. This ensures that you won't exceed the SEEN's rate limit of 1000 calls per hour.
+If everything works as intended, go to Braze, then set the rate at which the campaign sends to 10 **messages per minute**. This way you won't exceed the SEEN's rate limit of 1,000 calls per hour.
 
 ### Step 2: Create data transformation
 
-1. Create new [Custom Attribute](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
-2. Open [Data Transformation](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) tool under **Data Settings**, and select **Create transformation**.
+1. Create new [custom attribute](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
+2. Open [Data Transformation](https://www.braze.com/docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
 3. Give your transformation a name, then choose **Start from scratch** and set **Destination** to **POST: Track users**.
 4. Select **Share your Webhook URL with SEEN**.
 5. You can use the code below as the starting point for the transformation:
@@ -108,7 +108,7 @@ If you want to include other data, make sure to include those as well. Remember 
 {% endalert %}
 
 {: start="6"}
-6. Send a test payload to the provided endpoint. If you want to use the callback payload defined in [the SEEN documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself via [Postman](https://www.postman.com/) or another similar service:
+6. Send a test payload to the provided endpoint. If you want to use the callback payload defined in the [SEEN documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself with [Postman](https://www.postman.com/) or another similar service:
 
 ```json
 {
@@ -124,4 +124,4 @@ If you want to include other data, make sure to include those as well. Remember 
 
 {: start="7"}
 7. Select **Validate** to make sure everything works as intended.
-8. If everything worked as intended, select **Save** and **Activate**.
+8. Select **Save** and **Activate**.

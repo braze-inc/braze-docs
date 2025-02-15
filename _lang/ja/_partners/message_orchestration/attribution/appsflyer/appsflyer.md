@@ -22,32 +22,33 @@ BrazeとAppsFlyerの統合により、AppsFlyerのモバイルインストール
 
 | 必要条件 | 説明 |
 |---|---|
-| AppsFlyerアカウント | このパートナーシップを利用するには、AppsFlyerアカウントが必要である。 |
-| iOSまたはAndroidアプリ | この統合はiOSとAndroidアプリをサポートしている。プラットフォームによっては、アプリケーションにコード・スニペットが必要になるかもしれない。これらの要件の詳細については、統合プロセスのステップ1を参照してください。 |
+| AppsFlyerアカウント | このパートナーシップを活用するには、AppsFlyer アカウントが必要です。 |
+| iOSやAndroid アプリ | この統合では、iOS アプリと Android アプリがサポートされています。ご使用のプラットフォームによっては、アプリケーションでコードスニペットが必要な場合があります。これらの要件の詳細については、統合プロセスのステップ1を参照してください。 |
 | AppsFlyer SDK | 必要な Braze SDK に加えて、[AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started) をインストールする必要があります。
 | Eメールドメインのセットアップ完了 | Braze オンボーディング時にメールを設定するには、[IP とドメインの設定ステップ]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/)を完了している必要があります。 |
 | SSL証明書 | [SSL 証明書]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) を設定する必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### ステップ1:デバイス ID をマッピングする
 
-#### Android
-
+{% tabs local %}
+{% tab Android %}
 Androidアプリをお持ちの場合、AppsFlyerに固有のBrazeデバイスIDを渡す必要がある。 
 
 次のコード行が正しい位置に挿入されていることを確認します。これは、Braze SDK の起動と AppsFlyer SDK の初期化コードの間です。詳細については、AppsFlyer の [Android SDK 統合ガイド](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk)を参照してください。
 
-```java
-HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
-customData.put("brazeCustomerId", deviceId);
-AppsFlyerLib.setAdditionalData(customData);
+```kotlin
+val customData = HashMap<String, Any>()
+Braze.getInstance(context).getDeviceIdAsync { deviceId ->
+   customData["brazeCustomerId"] = deviceId
+   setAdditionalData(customData)
+}
 ```
+{% endtab %}
 
-#### iOS
-
+{% tab ios %}
 {% alert important %}
 2023年2月以前は、AppsFlyerのアトリビューション統合は、iOSアトリビューションデータを照合するための主要な識別子としてIDFVを使用していた。Objective-C を使用している Braze のお客様は、サービスが中断されることはないため、インストール時に Braze `device_id` を取得してAppsFlyer に送信する必要はありません。
 {% endalert%}
@@ -56,51 +57,34 @@ Swift SDK v5.7.0+ を使用しているお客様は、相互識別子として I
 
 `true` に設定している場合、Brazeが iOS アトリビューションを適切に照合できるように、アプリのインストール時に AppsFlye に Braze`device_id` を渡すために、Swift用の iOS デバイス ID マッピングを実装する必要があります。
 
-{% tabs ローカル %}
-{% tab Objective-C %}
+{% subtabs local %}
+{% subtab Swift %}
 
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
+```
+{% endsubtab %}
+
+{% subtab Objective-C %}
 ```objc
 BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
 [configurations setUseUUIDAsDeviceId:NO];
 Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
-[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
-    NSLog(@">>[BRZ]: %@", brazeDeviceId);
-    [[AppsFlyerLib shared] setAdditionalData:@{
-        @"brazeDeviceId": brazeDeviceId
-    }];
+[[AppsFlyerLib shared] setAdditionalData:@{
+    @"brazeDeviceId": braze.deviceId
 }];
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab Swift %}
 
-##### スイフト完了ハンドラ
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-braze.deviceId {
-    brazeDeviceId in
-    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-}
-```
-##### 迅速な対応
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-let brazeDeviceId = await braze.deviceId()
-AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-```
-
-{% endtab %}
-{% endtabs %}
-
-#### Unity
+{% tab Unity %}
+UnityでデバイスIDをマッピングするには、次を使用します。
 
 ```
 Appboy.AppboyBinding.getDeviceId()
@@ -108,27 +92,29 @@ Dictionary<string, string> customData = new Dictionary<string, string>();
 customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
+{% endtab %}
+{% endtabs %}
 
-### ステップ2:Brazeデータインポートキーを取得する
+### ステップ2:Braze データインポートキーを取得する
 
-Brazeで \[**パートナー連携**] >\[**テクノロジーパートナー**] に移動し、\[**AppsFlyer**] を選択します。 
+Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、AppsFlyerのダッシュボードでポストバックを設定する際に、次のステップで使用される。<br><br>![AppsFlyer テクノロジーページで利用可能な「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][4]{: style="max-width:70%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、AppsFlyerのダッシュボードでポストバックを設定する際に、次のステップで使用される。<br><br>![AppsFlyer テクノロジーページで利用可能な「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][4]{: style="max-width:70%;"}
 
-### ステップ3:AppsFlyerのダッシュボードでBrazeを設定する
+### ステップ 3:AppsFlyerのダッシュボードでBrazeを設定する
 
-1. AppsFlyer で、左側のバーの \[**Integrated Partners**] ページに移動します。次に **Braze** を検索し、Braze のロゴをクリックして設定ウィンドウを開きます。
-2. \[**Integration**] タブで \[**Activate Partner**] をオンにします。
+1. AppsFlyer で、左側のバーの [**Integrated Partners**] ページに移動します。次に **Braze** を検索し、Braze のロゴをクリックして設定ウィンドウを開きます。
+2. [**Integration**] タブで [**Activate Partner**] をオンにします。
 3. Brazeのダッシュボードで見つけたデータインポートキーとRESTエンドポイントを提供する。 
-4. \[**Advanced Privacy**] をオフに切り替え、設定を保存します。
+4. [**Advanced Privacy**] をオフに切り替え、設定を保存します。
 
-これらの手順に関する追加情報は、\[AppsFlyer のドキュメント][16]に掲載されています。
+これらの手順に関する追加情報は、[AppsFlyer のドキュメント][16]に掲載されています。
 
-### ステップ 4:統合を確認する
+### ステップ4:統合を確認する
 
 BrazeがAppsFlyerからアトリビューションデータを受信すると、BrazeのAppsFlyerテクノロジーパートナーページのステータス接続インジケータが「未接続」から「接続済み」に変わる。最後に成功したリクエストのタイムスタンプも含まれる。 
 
@@ -146,7 +132,7 @@ BrazeがAppsFlyerからアトリビューションデータを受信すると、
 | `campaign` | 紐づけられるキャンペーン |
 | `af_adset` | 紐づけられる広告グループ |
 | `af_ad` | 紐づけられる広告 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ユーザー群は、Braze ダッシュボードで インストールアトリビューションのフィルターを使用して、アトリビューションデータによってセグメント化できます。
 
@@ -271,7 +257,7 @@ SendGrid 用にデジタルアセットリンクファイルを設定し、カ�
 {% endtab %}
 {% endtabs %}
 
-### ステップ3:ディープリンクをサポートするようにAppsFlyer SDKを設定する
+### ステップ 3:ディープリンクをサポートするようにAppsFlyer SDKを設定する
 
 {% tabs ローカル %}
 {% tab SendGrid %}
@@ -281,9 +267,9 @@ SendGrid 用にデジタルアセットリンクファイルを設定し、カ�
 クリックレコーディングドメインで AASA ファイルをホストした後で、AASA ファイルをサポートするように AppsFlyer SDK を設定します。
 
 1. Xcodeでプロジェクトを選択する。
-2. \[**Capabilities**] を選択します。
-3. \[**Associated Domains.**] をオンにします。
-4. \[**+**] をクリックし、クリックドメインを入力します。たとえば `applinks:click.example.com` です。
+2. [**Capabilities**] を選択します。
+3. [**Associated Domains.**] をオンにします。
+4. [**+**] をクリックし、クリックドメインを入力します。たとえば `applinks:click.example.com` です。
 ユニバーサルリンクがクリックされると、アプリが開き、SDK が開始されます。アプリがクリックドメインの背後にあるOneLinkを抽出し、ディープリンクを解決できるようにするには、以下を実行する：
 
 #### ステップ3b:ディープリンクのデータを扱う
@@ -325,9 +311,9 @@ Android マニフェストで、ディープリンクのリンク先にするア
 クリックレコーディングドメインで AASA ファイルをホストした後で、AASA ファイルをサポートするように SDK を設定します。
 
 1. Xcodeでプロジェクトを選択する。
-2. \[**Capabilities**] を選択します。
-3. \[**Associated Domains.**] をオンにします。
-4. \[**+**] をクリックし、クリックドメインを入力します。たとえば `applinks:click.example.com` です。
+2. [**Capabilities**] を選択します。
+3. [**Associated Domains.**] をオンにします。
+4. [**+**] をクリックし、クリックドメインを入力します。たとえば `applinks:click.example.com` です。
 
 #### ステップ3b:ディープリンクのデータを扱う
 ユニバーサルリンクがクリックされると、アプリが開き、SDK が開始されます。クリックドメインの背後にある OneLink を SDK が抽出できるようにするには、次の手順を実行します。

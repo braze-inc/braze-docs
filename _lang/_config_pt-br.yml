@@ -1,0 +1,59 @@
+# Site settings
+title: Braze Documentation
+email: success@braze.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
+baseurl: "/docs/pt-br" # the subpath of your site, e.g., /blog
+homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g., http://example.com
+twitter_username: Braze
+github_username:  braze-inc
+
+language: pt-br
+
+destination: _site/docs/pt-br
+
+# Source dir
+source: '.'
+
+# GitHub config
+github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/pt_br/'
+
+# Collections directory
+collections_dir: _lang/pt_br/
+
+
+collections:
+  home:
+    title: Documentation
+  user_guide:
+    title: Guia do usuário
+  developer_guide:
+    title: Guia do desenvolvedor
+  api:
+    title: API
+    default_nav_url: basics/
+  partners:
+    title: Parceiros de tecnologia
+  help:
+    title: Ajuda
+  hidden: # Hidden pages not directly linked via navigation
+    title: Braze
+  docs_pages: # Site specific pages. ie main redirects and search
+    title: Braze
+
+
+# Image asset pipeline setting for japr
+asset_pipeline:
+  display_path: docs/pt-br/assets
+
+# Algolia Search index
+algolia:
+  index_name: "DocSearch_PortugueseBrazil"
+  files_to_exclude:
+    - _lang/pt-br/_hidden/*
+    - _lang/pt-br/_hidden/*/* #exclude hidden subdirectories from indexing
+    - _lang/pt-br/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/pt-br/_docs_pages/*
+    - _lang/pt-br/_docs_pages/*/* #exclude hidden subdirectories from indexing
+    - _lang/pt-br/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/pt-br/_home/Styling_Test_Page.md

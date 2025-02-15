@@ -21,7 +21,7 @@ Braze と Toovio のパートナーシップにより、ほぼリアルタイム
 | Toovio アカウント | このパートナーシップを活用するには、Toovio アカウントが必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze Currents | Braze Currents により、Brazeクライアントは、Brazeプラットフォーム外部での処理のためにイベントまたは行動データを Braze データパートナー (AWS S3、Google Cloud Storage、または Microsoft Azure Blob Storage) にストリーミングできます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

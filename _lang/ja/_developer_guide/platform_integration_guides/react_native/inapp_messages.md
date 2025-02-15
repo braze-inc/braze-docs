@@ -9,7 +9,7 @@ channel: in-app messages
 
 ---
 
-# アプリ内メッセージ統合
+# アプリ内メッセージの統合
 
 > React Native を使用すると、ネイティブのアプリ内メッセージが Android および iOS に自動的に表示されます。この記事では、React Native を使用したアプリのアプリ内メッセージの分析のカスタマイズとログ記録について説明します。
 
@@ -163,12 +163,12 @@ AppDelegate.braze = braze;
 次のステップに従って、サンプルのアプリ内メッセージをテストします。
 
 1. `Braze.changeUserId('your-user-id')` メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. \[**キャンペーン**] に移動し、[このガイド][5]に従って新しいアプリ内メッセージキャンペーンを作成します。
-3. テスト用のアプリ内メッセージングキャンペーンを作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。すぐにデバイスでアプリ内メッセージを起動できるようになるはずです。
+2. [**キャンペーン**] に移動し、[このガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)に従って新しいアプリ内メッセージキャンペーンを作成します。
+3. テスト用のアプリ内メッセージングキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。すぐにデバイスでアプリ内メッセージを起動できるようになるはずです。
 
-![Brazeのアプリ内メッセージキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストすることができる。][6]
+![自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストできることを示すBrazeアプリ内メッセージキャンペーン。]({% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test")
 
-サンプル実装は、\[React Native SDK][7] 内の BrazeProject にあります。追加の Android および iOS 実装サンプルは、\[Android][8] および \[iOS][9] SDK にあります。
+サンプル実装は、[React Native SDK](https://github.com/braze-inc/braze-react-native-sdk)内のBrazeProjectにある。その他のAndroidとiOSの実装サンプルは、[Androidと](https://github.com/braze-inc/braze-android-sdk) [iOS](https://github.com/braze-inc/braze-swift-sdk)SDKにある。
 
 ## アプリ内メッセージのデータモデル
 
@@ -194,9 +194,9 @@ AppDelegate.braze = braze;
 |`extras`          | メッセージエクストラ辞書。デフォルト値：`[:]`.                                                                   |
 |`buttons`         | アプリ内メッセージのボタン一覧。                                                                             |
 |`toString()`      | String表現としてのメッセージ。                                                                                |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-アプリ内メッセージモデルの完全なリファレンスについては、\[Android][10] および \[iOS][11] のドキュメントを参照してください。
+アプリ内メッセージモデルの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)] のドキュメントを参照してください。
 
 ### アプリ内メッセージボタンモデルのプロパティ
 
@@ -210,22 +210,11 @@ AppDelegate.braze = braze;
 |`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。 |
 |`id`              | メッセージのボタンID。                                                                                               |
 |`toString()`      | String表現としてのボタン。                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-ボタンモデルの完全なリファレンスについては、\[Android][12] および \[iOS][13] のドキュメントを参照してください。
+ボタンモデルの完全なリファレンスについては、[[Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html)] および [[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button)] のドキュメントを参照してください。
 
 ## GIFサポート
 
 {% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[6]: {% image_buster /assets/img/react-native/iam-test.png %} 「アプリ内メッセージングテスト」
-[7]: https://github.com/braze-inc/braze-react-native-sdk
-[8]: https://github.com/braze-inc/braze-android-sdk
-[9]: https://github.com/braze-inc/braze-swift-sdk
-[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html
-[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage
-[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
-[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button

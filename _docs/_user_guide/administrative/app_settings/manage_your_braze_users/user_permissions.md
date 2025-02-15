@@ -42,9 +42,9 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
-### How do permission sets and roles differ from teams?
+## How do permission sets and roles differ from teams?
 
-Refer to [Company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) for a breakdown of the differences among teams, permission sets, and roles.
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## Editing a user's permissions
 
@@ -137,7 +137,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
 |Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
-|Workspace|Manage Feature Flags|Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).|
+|Workspace|Manage Feature Flags|Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Workspace|Manage Media Library Assets|Allows users to add, edit, and delete media library assets.|
 |Workspace|Manage Subscription Groups|Allows users to create and manage subscription groups.|
 |Workspace|Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
@@ -148,13 +148,14 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
 |Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows this user to view custom attributes that are marked as PII without being an admin.|
-|Workspace|View PII|Allows users to view the personally identifiable information fields as defined by your company within the dashboard.|
-|Workspace|View User Profiles PII Compliant|Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII).|
-|Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
+|Workspace|View PII|Allows users to view the personally identifiable information (PII) fields as defined by your company within the dashboard. Users can also view PII fields in the **Preview as a User** tab of message previews. |
+|Workspace|View User Profiles PII Compliant|Allows users to view user profiles but redacts fields your company has defined as personally identifiable information.|
+|Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 |Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|
 |Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
 |Workspace|Create and Edit Canvas Templates|Allows users to create and edit Canvas templates.|
 |Workspace|View Canvas Templates|Allows users to view Canvas templates.|
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
+|Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

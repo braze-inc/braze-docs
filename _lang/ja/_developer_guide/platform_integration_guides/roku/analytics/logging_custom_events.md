@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムイベントの追跡
+nav_title: カスタムイベントのトラッキング
 article_title: Roku のカスタムイベントのトラッキング
 platform: Roku
 page_order: 2
@@ -10,7 +10,7 @@ description: "このページでは、Roku のカスタムイベントを Braze 
 
 # カスタムイベントのトラッキング
 
-> Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
+> Braze でカスタムイベントを記録して、アプリの使用パターンの詳細を確認したり、ダッシュボードでのアクションによってユーザーをセグメント化したりすることができます。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## カスタムイベントの追加
 

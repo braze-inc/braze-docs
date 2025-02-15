@@ -15,8 +15,11 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Connecting a Subdomain
-    link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
+    link: /docs/user_guide/engagement_tools/landing_pages/connect_domain/
     image: /assets/img/braze_icons/refresh-cw-02.svg
+  - name: Data Tracking
+    link: /docs/user_guide/engagement_tools/landing_pages/data_tracking/
+    image: /assets/img/braze_icons/data.svg
 ---
 
 {% alert important %}

@@ -19,7 +19,7 @@ BrazeとBluedotの統合により、Bluedotのジオフェンス位置情報サ�
 | 必要条件 | 説明 |
 |---|---|
 | Bluedot アカウント | この統合を活用するには、Bluedot アカウントが必要です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -36,7 +36,7 @@ Bluedot アカウントを設定し、[Bluedot キャンバスダッシュボー
 ### ステップ2:SDKを統合する
 [Bluedot と Braze の統合](https://docs.bluedot.io/integrations/braze-integration/)に関するドキュメントに記載されている手順を使用して、Bluedot Point SDK とBraze SDK をアプリに統合します。
 
-### ステップ3:Bluedot SDK を認証する
+### ステップ 3:Bluedot SDK を認証する
 ステップ1で作成した `projectId` を使用して Bluedot Point SDK を認証します。
 
 ### ステップ4:Braze で Bluedot イベントを使用する

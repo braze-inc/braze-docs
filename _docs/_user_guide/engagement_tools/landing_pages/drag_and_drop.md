@@ -11,7 +11,7 @@ alias: /landing_pages/drag_and_drop/
 > Using the drag-and-drop editor, you can create and customize a landing page to grow your audience and collect preferences directly in Braze.
 
 {% alert important %}
-Landing pages are currently in beta. Contact your Braze account manager if you're interested in participating in this beta.
+Landing pages are currently in early access. There is a limit of five landing pages per company. End user sessions recorded on landing pages count towards your Monthly Active Users (MAU) calculation.
 {% endalert %}
 
 ## Creating a landing page (drag-and-drop)
@@ -41,10 +41,6 @@ We suggest following these best practices:
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
 | URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% alert note %}
-Custom subdomain support is not available during the beta.
-{% endalert %}
 
 ### Step 3: Customize your landing page
 
@@ -76,7 +72,7 @@ We recommend setting up page container-level styles before you customize styles 
 
 ### Step 4: Preview your landing page
 
-You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
+You can preview your landing page in the editor's **Preview** tab. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
 
 ![A landing page with the menu open to show the "Copy URL" option.][7]{: style="max-width:90%;"}
 
@@ -92,7 +88,7 @@ If you include a [form](#form-block) on your landing page, don't forget to creat
 
 ## Linking to your landing page
 
-In beta, you can include a link to the landing page in any channel by copying and pasting the link into a Braze message or social media campaign.
+You can include a link to the landing page in any channel by copying and pasting the link into a Braze message or social media campaign.
 
 ## Handling form submission errors
 
@@ -100,21 +96,36 @@ If a user inputs an invalid form value (such as unaccepted special characters), 
 
 ## Merging users created from your landing page
 
-During the beta, each form submission on a landing page will create a new anonymous user profile in Braze. If a user with the same email address already exists, you can merge the new user profile into the existing profile using the [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user) endpoint. To learn about the different ways to deduplicate users in Braze, see [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+Each form submission on a landing page will create a new anonymous user profile in Braze. If a user with the same email address already exists, you can merge the new user profile into the existing profile using the [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user) endpoint. To learn about the different ways to deduplicate users in Braze, see [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+
+User merging will be handled automatically via a liquid tag in the future. 
 
 ## Considerations
 
-- The landing page body size can be up to 1 MB.
+The landing page body size can be up to 1 MB.
+
+## Permissions
+
+You need either administrator permissions or all of the following permissions to access, create, and publish landing pages:
+
+- Access Landing Pages
+- Create Landing Page Drafts
+- Publish Landing Pages
+
+## Plan tiers
+
+The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
+
+| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Published landing pages                                                                 | Five per company | 20 additional |
+| Custom domains          | One per company | Five additional |
 
 ## Frequently asked questions
 
 ### What happens when a user submits their information on the landing page?
 
 When a user submits a form, a new Braze user profile is created with the submitted user data.
-
-{% alert note %}
-During the beta, Braze will create a new user upon every form submission.
-{% endalert %}
 
 ### Are there any technical requirements to publish a landing page?
 
@@ -128,18 +139,21 @@ You can edit the HTML of a landing page using the Custom Code block.
 
 No, this isn't currently available.
 
-### Is there an HTML editor for landing pages?
+### Can I create a webhook inside a landing page?
 
-No, this isn’t currently available. You can use the Custom Code block in the editor.
+No, this isn't currently supported.
 
 ### What features are on the roadmap for landing pages? {#roadmap}
 
-Because landing pages are currently in beta, additional features are in development. These include:
+We plan to release additional features for landing pages, which are in development. These may include:
 
 * New Liquid tag for linking a landing page in a Braze messaging channel
+* Automatic user merging when a landing page is sent through a Braze channel
 * Basic reporting page
 * Drag-and-drop form blocks for checkboxes and dropdowns
 * Standard event for tracking and retargeting based on form submissions
+
+While these features are part of our roadmap, they are still in development, and Braze cannot guarantee that any or all of these features will be made generally available. Access to some or all of the planned features for landing pages may be subject to additional fees.
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}

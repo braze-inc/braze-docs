@@ -1,20 +1,20 @@
 ---
-nav_title: "POST:APIのみでメッセージを即座に送信する"
-article_title: "POST:APIのみでメッセージを即座に送信する"
+nav_title: "POST:APIのみを使用してメッセージを即座に送信する"
+article_title: "POST:APIのみを使用してメッセージを即座に送信する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「API のみでメッセージを即座に送信する」Braze エンドポイントに関する詳細を説明します。"
+description: "この記事では、APIのみを使用したBrazeエンドポイントによるメッセージの即時送信についての詳細を概説する。"
 
 ---
 {% api %}
-# APIのみでメッセージを即座に送信する
-{% apimethod post core_endpoint|{1} %}
+# APIのみを使用してメッセージを即座に送信する
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> このエンドポイントを使用して、Braze API経由で指定したユーザーに即時メッセージを送信する。 
+> このエンドポイントを使用して、Braze APIを使用して指定したユーザーに即時メッセージを送信する。
 
 リクエストを完了させるために、必ずメッセージング・オブジェクトを本文に含めること。
 
@@ -30,7 +30,7 @@ description: "この記事では、「API のみでメッセージを即座に�
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -53,15 +53,15 @@ Authorization: Bearer YOUR-REST-API-KEY
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
    "messages": {
-     "apple_push": (optional, apple push object),
      "android_push": (optional, android push object),
+     "apple_push": (optional, apple push object),
+     "content_card": (optional, content card object),
+     "email": (optional, email object),
      "kindle_push": (optional, kindle/fireOS push object),
      "web_push": (optional, web push object),
-     "email": (optional, email object),
      "webhook": (optional, webhook object),
-     "content_card": (optional, content card object),
-     "sms": (optional, SMS object),
-     "whats_app": (optional, WhatsApp object)
+     "whats_app": (optional, WhatsApp object),
+     "sms": (optional, SMS object)
    }
  }
 ```
@@ -70,19 +70,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| オプション | ブール値 | キャンペーンやキャンバスがターゲットとするセグメント全体にメッセージを送信する場合は、`broadcast` を true に設定する必要がある。このパラメータはデフォルトで false です (2017年8月31日現在)。<br><br> `broadcast` をtrueに設定すると、`recipients` リストを含めることはできない。ただし、`broadcast: true` 、意図せずこのフラグを設定してしまうと、予想以上に多くの読者にメッセージを送ってしまう可能性があるため、設定には注意が必要である。 |
-|`external_user_ids` | オプション | 文字列の配列 | [外部ユーザー ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) を参照してください。 |
-|`user_aliases`| オプション | ユーザーエイリアスオブジェクトの配列| [ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。 |
-|`segment_id `| オプション | string | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-|`audience`| オプション | 接続された観客オブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-|`campaign_id`| オプション | string | 詳細は[キャンペーン識別子を]({{site.baseurl}}/api/identifier_types/)参照のこと。<br><br>\*Brazeのダッシュボードでキャンペーンの統計情報（送信、クリック、バウンスなど）を追跡したい場合に必要。 |
-|`send_id`| オプション | string | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
+|`external_user_ids` | オプション | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。 |
+|`user_aliases`| オプション | ユーザー別名オブジェクトの配列| [ユーザー別名オブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。 |
+|`segment_id `| オプション | 文字列 | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`audience`| オプション | 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
+|`campaign_id`| オプション* | 文字列 | 詳細は[キャンペーン識別子を]({{site.baseurl}}/api/identifier_types/)参照のこと。<br><br>\*Brazeのダッシュボードでキャンペーンの統計情報（送信、クリック、バウンスなど）を追跡したい場合に必要。 |
+|`send_id`| オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 |`override_frequency_capping`| オプション | ブール値 | キャンペーンでは`frequency_capping` を無視する。デフォルトは`false` 。 |
-|`recipient_subscription_state`| オプション | string | これを使用して、オプトインしたユーザーのみ (`opted_in`)、配信登録済みかオプトインしているユーザーのみ (`subscribed`)、または配信停止済みのユーザーを含むすべてのユーザー (`all`) にメッセージを送信します。<br><br>`all` ユーザーは、トランザクションメールメッセージングに使用すると便利です。デフォルトは `subscribed` です。 |
-|`messages`| オプション | メッセージング・オブジェクト | [利用可能なメッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`recipient_subscription_state`| オプション | 文字列 | これを使用して、オプトインしたユーザーのみ (`opted_in`)、配信登録済みかオプトインしているユーザーのみ (`subscribed`)、または配信停止済みのユーザーを含むすべてのユーザー (`all`) にメッセージを送信します。<br><br>`all` ユーザーは、トランザクションメールメッセージングに使用すると便利です。デフォルトは `subscribed` です。 |
+|`messages`| オプション | メッセージングオブジェクト | [利用可能なメッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 --data-raw '{
@@ -155,9 +155,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 }'
 ```
 
-## 応答の詳細
+## 対応内容
 
-メッセージ送信エンドポイントのレスポンスには、メッセージのディスパッチに参照できるように、メッセージの`dispatch_id` が含まれる。`dispatch_id` は、メッセージディスパッチの ID です。つまり、Braze から送信される「送信」ごとに固有の ID です。詳しくは、[ディスパッチ ID の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)を参照してください。
+メッセージ送信エンドポイントの応答には、メッセージのディスパッチを参照できるように、メッセージの `dispatch_id` が含まれます。`dispatch_id` は、メッセージディスパッチの ID です。つまり、Braze から送信される「送信」ごとに固有の ID です。詳しくは、[ディスパッチ ID の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)を参照してください。
 
 {% endapi %}
-

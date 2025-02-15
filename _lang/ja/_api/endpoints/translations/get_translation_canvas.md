@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:キャンバスの翻訳を表示する"
-article_title: "取得:キャンバスの翻訳を表示する"
+nav_title: "取得:キャンバスの翻訳を表示"
+article_title: "取得:キャンバスの翻訳を表示"
 search_tag: Endpoint
 page_order: 1
 
@@ -18,12 +18,12 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 > このエンドポイントを使用して、翻訳されたメッセージを表示し、このメッセージがユーザーにとってどのように見えるかを確認する。
 
 {% alert important %}
-API 経由でキャンバスに翻訳されたメッセージを表示することは、現在、早期アクセスの段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
+API 経由でキャンバスに翻訳されたメッセージを表示することは、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`canvas.translations.get` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.translations.get`の権限が必要です。
 
 ## レート制限
 
@@ -31,12 +31,14 @@ API 経由でキャンバスに翻訳されたメッセージを表示するこ�
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| 必須 | string | キャンバスのID。 |
-|`message_variation_id`| 必須 | string | メッセージバリエーションのID。 |
-|`locale_id`| 必須 | string | ロケールのID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`step_id`| 必須 | 文字列 | キャンバスのステップのID。 |
+|`message_variation_id`| 必須 | 文字列 | メッセージバリエーションのID。 |
+|`locale_id`| 必須 | 文字列 | ロケールのID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
 
 ## リクエスト例
 
@@ -48,11 +50,11 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 
 ## 応答
 
-このエンドポイントには、`200`、`400`、`404`、`429`という4つのステータスコードの応答があります。
+このエンドポイントには、`200`、`400`、`404`、`429` という 4 つのステータスコードの応答があります。
 
 ## 成功応答の例
 
-ステータスコード`200`は、次の応答ヘッダーと本文を返す可能性があります。
+ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
 Content-Type: application/json
@@ -77,7 +79,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### エラー応答例
 
-ステータスコード`400`は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -103,6 +105,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | メールキャンペーンまたはメールが含まれているキャンバスメッセージのみを翻訳できます。             |
 | `UNSUPPORTED_CHANNEL`                   | メールキャンペーン内のメッセージ、またはメールが含まれているキャンバスメッセージのみを翻訳できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

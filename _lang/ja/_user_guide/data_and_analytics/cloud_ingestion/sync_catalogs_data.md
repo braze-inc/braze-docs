@@ -10,20 +10,20 @@ description: "このリファレンス記事では、カタログデータを同
 # カタログデータの同期と削除
 
  
-## ステップ 1: 新規カタログの作成
+## ステップ 1:新規カタログの作成
 
 [カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)用の新しいクラウドデータ取り込み (CDI) の連携を作成する前に、連携に使用する新規カタログを作成するか、既存のカタログを指定する必要があります。新規カタログを作成する方法はいくつかあり、いずれも CDI 連携に使用できます。
-- [CSVを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-1-upload-csv)アップロードする
+- [CSV]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-1-upload-csv) をアップロードする。
 - [Brazeダッシュボード]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)またはCDIセットアップ中にカタログを作成する。
-- [カタログ作成エンドポイントを]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)使用してカタログを作成する
+- [カタログ作成エンドポイント]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)を使用してカタログを作成する。
 
 カタログスキーマへの変更（例えば、新しいフィールドの追加やフィールドタイプの変更）は、更新されたデータがCDIを通じて同期される前に、カタログダッシュボードを通じて行われなければならない。データウェアハウスのデータと Braze のスキーマとの競合を避けるために、同期が一時停止されているとき、または実行がスケジュールされていないときにこれらの更新を行うことをお勧めします。
 
-## ステップ 2: クラウドデータ取り込みとカタログデータの連携
+## ステップ2:クラウドデータ取り込みとカタログデータの連携
 カタログ同期の設定は、[ユーザーデータ CDI 連携]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup)のプロセスに厳密に従います。 
 
 {% tabs %}
-{% tab スノーフレーク %}
+{% tab Snowflake %}
 
 1. Snowflake でソーステーブルを設定します。次の例の名前を使用することも、独自のデータベース、スキーマ、およびテーブルの名前を選択することもできます。テーブルの代わりに、ビューまたはマテリアライズドビューを使用することもできます。
   ```json
@@ -112,24 +112,24 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 | フィールド名 | タイプ | モード |
 | --- | --- | --- |
 | UPDATED_AT | タイムスタンプ | 必須 |
-| ペイロード | JSON | 必須 |
-| ID | ストリング | 必須 |
-| 削除された | ブーリアン | オプション |
+| PAYLOAD | JSON | 必須 |
+| ID | STRING | 必須 |
+| 削除された | BOOLEAN | オプション |
 
 {:start="2"}
 
 2. ユーザーを設定し、適切な権限を付与します。既存の同期からの認証情報をすでに持っている場合はそれらを再利用できますが、必ずアクセスをカタログソーステーブルに拡張してください。
 サービスアカウントには次の権限が必要です。
-- BigQuery 接続ユーザー: これでブレイズはコネクションを作ることができる。
-- BigQuery ユーザー: クエリの実行、データセットメタデータの読み取り、およびテーブルの一覧表示を行うためのアクセスを Braze に提供します。
-- BigQuery データビューアー: データセットとその内容を表示するためのアクセスを Braze に提供します。
-- BigQuery ジョブユーザー: ジョブを実行するためのアクセスを Braze に提供します。<br><br>サービスアカウントを作成して権限を付与したら、JSON キーを生成します。詳細については、[キーの作成と削除](https://cloud.google.com/iam/docs/keys-create-delete)を参照してください。後でBrazeのダッシュボードに更新する。
+- BigQuery 接続ユーザー:Braze に接続を許可します。
+- BigQuery ユーザー:クエリの実行、データセットメタデータの読み取り、およびテーブルの一覧表示を行うためのアクセスを Braze に提供します。
+- BigQuery データビューアー:データセットとその内容を表示するためのアクセスを Braze に提供します。
+- BigQuery ジョブユーザー:ジョブを実行するためのアクセスを Braze に提供します。<br><br>サービスアカウントを作成して権限を付与したら、JSON キーを生成します。詳細については、[キーの作成と削除](https://cloud.google.com/iam/docs/keys-create-delete)を参照してください。後でBrazeのダッシュボードに更新する。
 
 {:start="3"}
-3. ネットワークポリシーを設定している場合は、Braze に Big Query インスタンスへのネットワークアクセスを許可する必要があります。IP のリストについては、[「クラウド データの取り込み」]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)を参照してください。
+3\.ネットワークポリシーを設定している場合は、Braze に Big Query インスタンスへのネットワークアクセスを許可する必要があります。IP のリストについては、[「クラウド データの取り込み」]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)を参照してください。
 
 {% endtab %}
-{% tab データブリック %}
+{% tab Databricks %}
 
 1. Databricks でソース テーブルを設定します。以下の例の名前を使うこともできるし、カタログ名、スキーマ名、テーブル名を選ぶこともできる。テーブルの代わりにビューやマテリアライズド・ビューを使うこともできる。
 
@@ -150,23 +150,46 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 | フィールド名 | タイプ | モード |
 | --- | --- | --- |
 | UPDATED_AT | タイムスタンプ | 必須 |
-| ペイロード | JSON | 必須 |
-| ID | ストリング | 必須 |
-| 削除された | ブーリアン | NULLABLE |
+| PAYLOAD | JSON | 必須 |
+| ID | STRING | 必須 |
+| 削除された | BOOLEAN | NULLABLE |
 
 {:start="2"}
 
 2. Databricks ワークスペースでパーソナルアクセストークンを作成します。
 
-- a. Databricks ユーザー名を選択し、ドロップダウンメニューから \[**ユーザー設定**] を選択します。
-- b. \[**アクセストークン**] タブで、\[**新しいトークンの生成**] を選択します。
+- a. Databricks ユーザー名を選択し、ドロップダウンメニューから [**ユーザー設定**] を選択します。
+- b. [**アクセストークン**] タブで、[**新しいトークンの生成**] を選択します。
 - c. 「Braze CDI」など、このトークンの識別に役立つコメントを入力します。 
-- d. \[**有効期間 (日)**] ボックスを空白のままにして、トークンの有効期間を有効期間なしに変更します。\[生成] を選択します。
-- e. 表示されたトークンをコピーして、\[**完了**] を選択します。 
-- f. トークンは、Brazeダッシュボードのクレデンシャル作成ステップで入力する必要が生じるまで、安全な場所に保管する。
+- d. [**有効期間 (日)**] ボックスを空白のままにして、トークンの有効期間を有効期間なしに変更します。[**生成**] を選択します。
+- e. 表示されたトークンをコピーして、[**完了**] を選択します。 
+- f. 認証情報の作成ステップで Braze ダッシュボードへの入力が必要になるまで、トークンを安全な場所に保管してください。
 
 {:start="3"}
-3. ネットワークポリシーを設定している場合は、Brazeに Databricks インスタンスへのネットワークアクセスを許可する必要があります。IP のリストについては、「クラウド データの取り込み」を参照してください。
+3\.ネットワークポリシーを設定している場合は、Brazeに Databricks インスタンスへのネットワークアクセスを許可する必要があります。IP のリストについては、「[クラウド データの取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)」を参照してください。
+
+{% endtab %}
+{% tab Microsoft Fabric %}
+
+次のフィールドを持ち、CDI 連携に使用するテーブルを 1 つ以上作成します。
+
+```json
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. サービスプリンシパルを設定し、適切な権限を与える。既存の同期からの認証情報をすでに持っている場合はそれらを再利用できますが、必ずアクセスをカタログソーステーブルに拡張してください。新しいサービスプリンシパルと認証情報を作成する方法については、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)のページを参照のこと。 
+
+{:start="3"}
+3\.ネットワークポリシーを設定している場合は、BrazeにMicrosoft Fabricインスタンスへのネットワークアクセスを許可する必要がある。IP のリストについては、[「クラウド データの取り込み」]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -175,7 +198,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 同期が実行されるたびに、Braze は、`UPDATED_AT` が最後に同期されたタイムスタンプ以降にあるすべての行を取得します。カタログデータからデータウェアハウスにビューを作成し、同期が実行されるたびに完全にリフレッシュされるソーステーブルを設定することをお勧めする。ビューを使えば、クエリーを毎回書き直す必要はない。
 
-例えば、商品データのテーブル（`product_catalog_1` ）があり、`product_id` 、さらに3つの属性がある場合、以下のようなビューを同期させることができる：
+例えば、`product_id` と 3 つの追加属性を含む製品データテーブル (`product_catalog_1`) がある場合、以下のビューを同期できます。
 
 {% tabs %}
 {% tab Snowflake %}
@@ -240,6 +263,17 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
       )
     ) as PAYLOAD 
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
 ```
 {% endtab %}
 {% endtabs %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "削除:複数のカタログ項目を削除する"
-article_title: "削除:複数のカタログ項目を削除する"
+nav_title: "DELETE:複数のカタログ項目を削除する"
+article_title: "DELETE:複数のカタログ項目を削除する"
 search_tag: Endpoint
 page_order: 1
 
@@ -15,7 +15,7 @@ description: "この記事では、複数のカタログ項目を削除するBra
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> カタログの複数の項目を削除するには、このエンドポイントを使用する。 
+> カタログの複数の項目を削除するには、このエンドポイントを使用する。
 
 各リクエストは最大50個の項目まで対応できます。このエンドポイントは非同期である。
 
@@ -23,7 +23,7 @@ description: "この記事では、複数のカタログ項目を削除するBra
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete_items` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete_items`の権限が必要です。
 
 ## レート制限
 
@@ -31,19 +31,19 @@ description: "この記事では、複数のカタログ項目を削除するBra
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `items` | required | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、Braze が削除すべき項目を参照する `id` が含まれている必要があります。1回のリクエストにつき、アイテムオブジェクトは50個まで認められる。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `items` | required | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、Braze が削除すべき項目を参照する `id` が含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -60,7 +60,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 応答
 
-このエンドポイントには、`202`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
@@ -92,7 +92,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -100,9 +100,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | `ids-too-large` | 項目 ID は250文字以内にする必要があります。 |
 | `ids-not-unique` | 項目 ID がリクエスト内で一意であることを確認します。 |
 | `ids-not-strings` | 項目 ID は文字列型でなければなりません。 |
-| `items-missing-ids` | アイテムIDを持たないアイテムがある。各項目に項目 ID があることを確認します。 |
+| `items-missing-ids` | アイテム ID を持たないアイテムもあります。各項目が項目 ID を持っていることを確認します。 |
 | `invalid-ids` | 項目 ID には、英字、数字、ハイフン、アンダースコアのみを使用できます。 |
-| `request-includes-too-many-items` | リクエスト内の項目が多すぎますリクエストごとの項目の上限は50個です。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

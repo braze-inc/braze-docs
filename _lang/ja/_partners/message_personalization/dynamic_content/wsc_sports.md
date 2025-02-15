@@ -16,11 +16,11 @@ BrazeとWSC Sportsの統合により、Brazeプッシュ通知にリッチで堅
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | WSCアカウント | このパートナーシップを利用するには、WSCアカウントが必要です。 |
-| Braze REST API キー | `users.track`の権限を持つBraze REST APIキー。<br><br> これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | **メッセージ**、**セグメント**、**キャンペーン**、**キャンバス**の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

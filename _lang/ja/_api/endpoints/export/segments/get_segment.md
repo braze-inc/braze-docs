@@ -14,7 +14,7 @@ description: "この記事では、セグメントリストBrazeエンドポイ�
 /segments/list
 {% endapimethod %}
 
-> このエンドポイントを使用して、名前、セグメント API 識別子、分析の追跡が有効かどうかがそれぞれに含まれているセグメントのリストをエクスポートします。 
+> このエンドポイントを使用して、名前、セグメント API 識別子、分析の追跡が有効かどうかがそれぞれに含まれているセグメントのリストをエクスポートします。
 
 セグメントは100のグループに分けられ、作成日順にソートされて返される（デフォルトでは古いものから新しいものへ）。アーカイブされたセグメントは含まれません。
 
@@ -22,7 +22,7 @@ description: "この記事では、セグメントリストBrazeエンドポイ�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`segments.list` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`segments.list`の権限が必要です。
 
 ## レート制限
 
@@ -33,10 +33,10 @@ description: "この記事では、セグメントリストBrazeエンドポイ�
 | パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返すセグメントのページ。デフォルトは0（最大100の最初のセットを返す）。 |
-| `sort_direction` | オプション | string | \- 作成時刻を新しいものから古いものへとソートする: 値 `desc` を渡す。<br> \- 作成時刻を古いものから新しいものへとソートする: 値 `asc` を渡す。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `sort_direction` | オプション | 文字列 | \- 作成時刻を新しいものから古いものへと並べ替える: 値 `desc` を渡します。<br> \- 作成時刻を古いものから新しいものへと並べ替える: 値 `asc` を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/segments/list?page=1&sort_direction=desc' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

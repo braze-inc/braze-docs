@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: 예약된 메시지 삭제"
-article_title: "POST: 예약된 메시지 삭제"
+nav_title: "POST: 예정된 메시지 삭제"
+article_title: "POST: 예정된 메시지 삭제"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 예약된 메시지 삭제 Braze 엔드포인트에 대해 자세히 설명합니다."
+description: "이 기사는 삭제된 예약 메시지 Braze 엔드포인트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | 필수 | 문자열 | 삭제할 `schedule_id` (일정 만들기 응답에서 얻은 값)입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

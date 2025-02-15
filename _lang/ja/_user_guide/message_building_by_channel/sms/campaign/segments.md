@@ -13,25 +13,25 @@ channel:
 
 # メッセージコピーとセグメント計算機
 
-> BrazeのSMSメッセージは、メッセージセグメントごとに課金される。何がセグメントを定義し、どのようにメッセージが分割されるかを理解することは、メッセージの請求方法を理解する上で重要であり、偶発的な過剰請求を防ぐのに役立つ。
+> Braze の SMS メッセージは、メッセージセグメントごとに課金されます。何がセグメントを定義し、どのようにメッセージが分割されるかを理解することは、メッセージの請求方法を理解するうえで重要であり、偶発的な超過料金の防止に役立ちます。
 
 ## SMSセグメントとは何か？
 
-ショートメッセージングサービス（SMS）は、標準化された通信プロトコルで、デバイスが短いテキストメッセージを送受信できるようにするものである。SMSは、他の信号プロトコルの「中間に収まる」ように設計されており、そのため、SMSメッセージの長さは、1120ビット（140バイト）のような160個の7ビット文字に制限されている。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことである。メッセージはメッセージセグメントごとに課金されるため、SMSを活用するクライアントは、メッセージの分割方法のニュアンスを理解することで大きな利益を得ることができる。 
+ショートメッセージングサービス (SMS) は、標準化された通信プロトコルであり、デバイスが短いテキストメッセージを送受信できるようにするものです。SMSは、他の信号プロトコルの「中間に収まる」ように設計されており、そのため、SMSメッセージの長さは、1120ビット（140バイト）のような160個の7ビット文字に制限されている。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことである。メッセージはメッセージセグメントごとに課金されるため、SMS を活用するクライアントは、メッセージの分割方法の微妙な差異を理解すると多大なメリットを享受できます。 
 
-Brazeを使ってSMSキャンペーンやキャンバスを作成する際、コンポーザーで作成したメッセージは、ユーザーが携帯電話にメッセージを配信した際に表示される代表的なものであるが、**メッセージがどのようにセグメントに分割され、最終的にどのように課金されるかを示すものではない**。どれだけのセグメントが送信されるかを理解し、発生する可能性のある超過分を認識することは、あなたの責任である。社内の[セグメント計算機を](#segment-calculator)チェックしてみよう。
+Braze を使用して SMS のキャンペーンやキャンバスを作成するときに作成画面で作成したメッセージは、ユーザーの携帯電話にメッセージが配信されたときに表示される代表的なものですが、**メッセージがどのようにセグメントに分割され、最終的にどのように課金されるかを示すものではありません**。送信されるセグメント数を理解し、発生する可能性のある超過料金を認識することはお客様の責任ですが、当社では理解を容易にするためのいくつかのリソースを提供しています。当社独自の[セグメント計算ツール](#segment-calculator)を確認してください。
 
 ![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
-### セグメント別内訳
+### セグメントの内訳
 
-**スタンドアロンSMSセグメントの**文字数制限は、エンコーディングのタイプに基づき、160文字[（GSM-7](https://en.wikipedia.org/wiki/GSM_03.38)エンコーディング）または70文字[（UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set)エンコーディング）である。しかし、ほとんどの携帯電話やネットワークは連結をサポートしており、1530文字（GSM-7）または670文字（UCS-2）までの長い形式のSMSメッセージを提供している。そのため、ひとつのメッセージが複数のセグメントを含んでいても、連結の制限を超えなければ、ひとつのメッセージとみなされ、そのように報告される。
+**スタンドアロン SMS セグメント**の文字数制限は、エンコーディングのタイプに基づき、160 文字 ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) エンコーディング)、または 70 文字 （[ UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) エンコーディング) です。しかし、ほとんどの携帯電話やネットワークは連結をサポートしており、1530 文字 (GSM-7) または 670 文字 (UCS-2) までの長い形式の SMS メッセージを提供します。そのため、ひとつのメッセージが複数のセグメントを含んでいても、連結の制限を超えなければ、ひとつのメッセージとみなされ、そのように報告される。
 
 重要なのは、**最初のセグメントの文字数制限を過ぎると、追加の文字によってメッセージ全体が分割され、新しい文字数制限に基づいてセグメント化される**ことだ：
 - **GSM-7エンコーディング**
-    - 160文字の制限を超えたメッセージは、153文字のセグメントに分割されて個別に送信され、受信者の端末で再構築される。例えば、161文字のメッセージは、153文字と8文字の2つのメッセージとして送信される。 
+    - 160 文字の制限を超えるメッセージは、153 文字のセグメントに分割されて個別に送信され、受信者のデバイスで再構成されます。例えば、161 文字のメッセージは、153 文字と 8 文字の 2 つのメッセージとして送信されます。 
 - **UCS-2エンコーディング**
-    - SMSメッセージに絵文字、中国語、韓国語、日本語などの非GSM文字を含める場合、それらのメッセージはUCS-2エンコーディングで送信されなければならない。最初のセグメント制限である70文字を超えるメッセージは、メッセージ全体が67文字のメッセージセグメントに連結される。例えば、71文字のメッセージは、67文字と4文字の2つのメッセージとして送信される。 
+    - SMSメッセージに絵文字、中国語、韓国語、日本語などの非GSM文字を含める場合、それらのメッセージはUCS-2エンコーディングで送信されなければならない。最初のセグメント制限である70文字を超えるメッセージは、メッセージ全体が67文字のメッセージセグメントに連結される。例えば、71 文字のメッセージは、67 文字と 4 文字の 2 つのメッセージとして送信されます。 
 
 エンコーディングの種類に関係なく、Brazeから送信される各SMSメッセージは最大10セグメントまでで、[Liquidテンプレート]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、絵文字、リンクに対応している。
 
@@ -39,17 +39,17 @@ Brazeを使ってSMSキャンペーンやキャンバスを作成する際、コ
 {% tab GSM-7エンコーディング %}
 | 文字数｜セグメント数|
 | -------------------- | ----------------- |
-| 0 - 160 文字 | 1セグメント
+| 0 ～ 160 文字 | 1 セグメント
 | 161〜306文字｜2セグメント
 | 307〜459文字｜3セグメント
 | 460文字～612文字｜4セグメント
 | 全角613～765文字｜5セグメント｜英語
 | 766文字～918文字｜6セグメント
 | 919文字〜1071文字｜7セグメント
-| 1072〜1224文字｜8セグメント
+| 1072 〜 1224 文字｜8 セグメント
 | 文字数｜1225～1377文字｜9セグメント
 | 1378～1530文字｜10セグメント｜英語
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% tab UCS-2エンコーディング %}
 | 文字数｜セグメント数|
@@ -64,35 +64,35 @@ Brazeを使ってSMSキャンペーンやキャンバスを作成する際、コ
 | 470～536文字｜8セグメント
 | 537～603文字｜9セグメント｜英語
 | 全角604～670文字｜10分割
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
 ## コピーを作成する際に留意すべきこと
 
 - **セグメントごとの文字数制限**
-    - [GSM-7では](https://en.wikipedia.org/wiki/GSM_03.38)、1つのSMSセグメントに160文字の制限がある。160文字を超えるメッセージについては、すべてのメッセージが153文字制限でセグメンテーションされる。
-    - [UCS-2には](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set)、メッセージセグメントあたり70文字の制限がある。70文字を超えるメッセージについては、すべてのメッセージが67文字制限でセグメンテーションされる。<br><br>
-- **メッセージごとのセグメント制限**
-    - 媒体の制限上、送信できるセグメント数には上限がある。1つのBraze SMSメッセージで送信できるメッセージの**セグメントは10個までと**する。
+    - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) では、1 つの SMS セグメントに 160 文字の制限があります。160文字を超えるメッセージについては、すべてのメッセージが153文字制限でセグメンテーションされる。
+    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) には、メッセージセグメントあたり 70 文字の制限があります。70文字を超えるメッセージについては、すべてのメッセージが67文字制限でセグメンテーションされる。<br><br>
+- **メッセージあたりのセグメント制限**
+    - 媒体の制限上、送信できるセグメント数には上限があります。Braze の 1 件の SMS メッセージにつき、**セグメントが 10 個**を超えるメッセージは送信できません。
     - これらの10セグメントは、1530文字（GSM-7エンコーディング）または670文字（UCS-2エンコーディング）に制限される。<br><br>
-- **Liquidテンプレート、コネクテッド・コンテンツ、絵文字、リンクに対応している。**
-    - リキッドテンプレートとコネクテッドコンテンツは、あなたのメッセージがエンコードタイプの文字数制限を超える危険性がある。リキッドがメッセージに持ち込む単語の数を制限するために、[単語を切り捨てるフィルターを](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords)使うことができるかもしれない。
+- **Liquid テンプレート、コネクテッドコンテンツ、絵文字、リンクに対応**
+    - リキッドテンプレートとコネクテッドコンテンツは、あなたのメッセージがエンコードタイプの文字数制限を超える危険性がある。Liquid からメッセージに持ち込まれる単語の数を制限するために、[単語切り詰めフィルター](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords)を使用できます。
     - 絵文字には、すべての絵文字に共通する標準的な文字数がないため、メッセージが正しくセグメント化され、表示されていることを必ずテストすること。
     - リンクは多くの文字を使用するため、意図した以上のメッセージセグメントとなる可能性がある。リンクショートナーの使用は可能だが、ショートコードと併用するのがベストだ。詳しくは[SMS FAQを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/)ご覧いただきたい。<br><br>
 - **テスト**
-    - 特にリキッドやコネクテッド・コンテンツを使用する場合は、メッセージやコピーの制限を超えると追加料金が発生する可能性があるため、SMSメッセージの送信前に必ずテストを行うこと。テストメッセージは、メッセージの上限にカウントされることに注意。
+    - 必ず、送信前に SMS メッセージをテストしてください。特に Liquid やコネクテッドコンテンツを使用する場合が該当します。メッセージやコピーの制限を超えると追加料金が発生する可能性があるためです。テストメッセージは、メッセージの上限にカウントされることに注意。
 
 ## SMSセグメント計算機 {#segment-calculator}
 ---
 
 {% alert tip %}
 
-**SMSコピーの長さをテストする**
+**SMS コピーの長さのテスト**
 
 <br>
 
-メッセージのセグメント数を確認したい場合は、計算機にコピーを入力する。リキッドコンテンツやコネクテッドコンテンツの出力を処理したり予測したりすることはできない。
+メッセージのセグメント数を確認したい場合は、計算機にコピーを入力する。これは、Liquid のコンテンツやコネクテッドコンテンツの出力を処理したり予測したりしない点に注意してください。
 <style>
   .segment_data_hide {
     display: none;
@@ -124,14 +124,14 @@ Brazeを使ってSMSキャンペーンやキャンバスを作成する際、コ
   }
 </style>
 <form id="sms_split">
-  <textarea id="sms_message_split" placeholder="SMSのコピーをここに入力する" style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
+  <textarea id="sms_message_split" placeholder="SMS のコピーをここに入力..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
   <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> 自動検出</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
   <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7エンコーディング</label><br />
   <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">UCS-2エンコーディング</label><br />
   <br />
-  メッセージの長さ：<span id="sms_length" style="padding-left: 5px;">0</span>文字。<br />
+  メッセージの長さ: <span id="sms_length" style="padding-left: 5px;">0</span>文字。<br />
   SMSセグメント数：<span id="sms_segments" style="padding-left: 5px;">0</span>セグメント。<br />
-  メッセージを出力する： <span id="sms_output" style="padding-left: 5px;"></span><br />
+  メッセージの出力： <span id="sms_output" style="padding-left: 5px;"></span><br />
   <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">セグメントを表示する： </label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
@@ -392,19 +392,19 @@ ucs2: smsutil._segmentWith(140, 134, smsutil.encodeCharUtf16),
 auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
 }
 
-関数 countLength(type, s) { {.
+function countLength(type, s) {
   const t = (type === "auto") ?smsutil.pickencoding(s) : type；
 
   if (t === "gsm") {.
-    returns.length \+ (s.match(/^|€|{|}|\[|]|~|/g) || \[]).length；
+    returns.length \+ (s.match(/^|€|{|}|[|]|~|/g) || []).length；
   } else {
-    s.length を返す；
+    return s.length;
   }
 }
 
-関数 updateSMSSplit(){
+function updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
-    var sms_type = $('#sms_split input\[name=sms_type]:checked').val();
+    var sms_type = $('#sms_split input[name=sms_type]:checked').val();
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = encoder[sms_type](sms_text);
     var smsSegments = segmenter[sms_type](unicodeinput);
@@ -419,7 +419,7 @@ auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
 if($(this).is(":checked")) {
 $("#sms_segments_data").show();
 }
-      そうでなければ、 {
+      else {
         $("#sms_segments_data").hide();
       }
       })
@@ -427,9 +427,9 @@ $("#sms_segments_data").show();
       const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
     $(hover_id).mouseover(function(e){
 var input_id = e.target.id;
-var index = input_id.split(input_id_prefix)\[1];
-  if(!index) { とする。
-    を返す；
+var index = input_id.split(input_id_prefix)[1];
+  if(!index) {
+    return;
     }
     var output_id = `#${output_id_prefix}${index}`;
       $(`${output_id}, #${input_id}`).addClass("hover_segment");
@@ -444,11 +444,11 @@ implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_
 implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
 $('#sms_message_split').on("input", function(e){
 $('#auto_encoding').html("");
-updateSMSSplit()を使用する；
+updateSMSSplit();
 });
-  $('#sms_split input\[name=sms_type]').change(function(e){
+  $('#sms_split input[name=sms_type]').change(function(e){
   $('#auto_encoding').html("");
-updateSMSSplit()を使用する；
+updateSMSSplit();
 });
     </script>
 

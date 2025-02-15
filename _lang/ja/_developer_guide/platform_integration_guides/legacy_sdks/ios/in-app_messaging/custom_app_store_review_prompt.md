@@ -20,7 +20,7 @@ noindex: true
 
 アプリ内メッセージの一般的な用途として、ユーザーに App Store でのレビューを依頼するキャンペーンの作成があります。
 
-まず、アプリで[アプリ内メッセージのデリゲート][30]を設定します。次に、次のデリゲートメソッドを実装して、デフォルトの App Store レビューメッセージを無効にします。
+まず、アプリで[アプリ内メッセージのデリゲート](#in-app-message-controller-delegate)を設定します。次に、次のデリゲートメソッドを実装して、デフォルトの App Store レビューメッセージを無効にします。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -37,7 +37,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
@@ -70,7 +70,7 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMess
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -99,4 +99,3 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 Appleは、App Storeのレビュープロンプトをユーザーごとに年間最大3回に制限しているため、キャンペーンの[レートは]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)ユーザーごとに年間3回に制限する必要があります。<br><br>ユーザーは、App Store のレビュープロンプトをオフにできます。そのため、カスタムレビュープロンプトでは、App Store のネイティブレビュープロンプトが表示されることを約束したり、直接のレビューを求めたりしないでください。
 {% endalert %}
 
-[30]: #in-app-message-controller-delegate

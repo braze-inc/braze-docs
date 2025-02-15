@@ -21,8 +21,8 @@ Braze と ActionIQ の統合により、ブランドは ActionIQ データを直
 | ----------- | ----------- |
 | ActionIQアカウント | この統合を利用するには、ActionIQアカウントが必要である。 |
 | Braze REST API キー | `users.track` および `user.export.ids` の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 

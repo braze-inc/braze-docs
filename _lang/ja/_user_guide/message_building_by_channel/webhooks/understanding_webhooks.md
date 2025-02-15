@@ -1,28 +1,28 @@
 ---
-nav_title: ウェブフックについて
-article_title: ウェブフックについて
+nav_title: Webhook について
+article_title: Webhook について
 page_order: 0
 channel:
   - webhooks
-description: "このリファレンス記事では、一般的な使用例、Webhookの解剖学、Brazeでの使用方法など、Webhookの基本をカバーしている。"
+description: "このリファレンス記事では、一般的なユースケース、Webhook の構造、Braze での使用方法など、Webhook の基本について説明します。"
 
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}webhookについて
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}Webhook について
 
-> このリファレンス記事では、Webhookの基本をカバーし、独自のWebhookを作成するために必要な構成要素を提供する。BrazeでWebhookを作成する手順をお探し？[ウェブフックの作成][1]」を参照のこと。
+> このリファレンス記事では、Webhook の基礎を説明し、独自に作成する必要のある構成要素を示します。BrazeでWebhookを作成する手順をお探し？[ウェブフックの作成][1]」を参照のこと。
 
-Webhookは、アプリケーションがリアルタイムでデータを共有するための一般的な通信手段だ。今の時代、1つのスタンドアローン・アプリケーションですべてをこなせることはほとんどない。ほとんどの場合、特定のタスクを実行するために特化した多くの異なるアプリやシステムで作業しており、これらのアプリはすべて互いに通信できる必要がある。そこでウェブフックの出番だ。
+Webhook は、アプリケーションがリアルタイムでデータを共有するための一般的な通信方法です。今の時代、1つのスタンドアローン・アプリケーションですべてをこなせることはほとんどない。ほとんどの場合、特定のタスクを実行するために特化した多くの異なるアプリやシステムで作業しており、これらのアプリはすべて互いに通信できる必要がある。そこでウェブフックの出番だ。
 
 ウェブフックとは、ある基準が満たされた後に、あるシステムから別のシステムへ自動送信されるメッセージのことである。Brazeでは、この基準は通常、カスタムイベントのトリガーとなる。
 
-Webhookは、リアルタイムで送信されるデータに基づいて、2つの別々のシステムが効果的なアクションを起こすためのイベントベースの手法である。そのメッセージには、いつ、どのように特定のタスクを実行するかを受信システムに伝える指示が含まれている。このため、Webhookはデータやプログラム機能によりダイナミックで柔軟なアクセスを提供し、プロセスを合理化するカスタマージャーニーの設定を可能にする。
+根本的に、Webhook は 2 つの個別システムがリアルタイムで送信されるデータに基づいて効果的なアクションを実行するための、イベントベースの方法です。そのメッセージには、特定のタスクをいつ、どのように実行するかを受信側システムに伝える指示が含まれています。そのため、Webhook を使用すると、データおよびプログラム機能へのよりダイナミックで柔軟なアクセスが可能になり、プロセスを合理化するカスタマージャーニーを設定できます。
 
 ## ユースケース
 
-Webhookはシステム同士を接続する優れた方法である-結局のところ、Webhookはアプリが通信する方法なのだ。ウェブフックが特に役立つ一般的なシナリオをいくつか紹介しよう：
+Webhook は、複数のシステムを接続するための優れた方法です。結局、Webhook はアプリの通信方法です。ウェブフックが特に役立つ一般的なシナリオをいくつか紹介しよう：
 
-- Brazeとデータを送受信する
+- Braze とデータを送受信する
 - Brazeが直接サポートしていないチャネル経由で顧客にメッセージを送信する
 - Braze APIに投稿する
 
@@ -30,8 +30,8 @@ Webhookはシステム同士を接続する優れた方法である-結局のと
 
 - ユーザーがメール配信を停止した場合、WebhookでアナリティクスデータベースやCRMに同じ情報を更新させることができ、ユーザーの行動を全体的に把握することができる。
 - FacebookメッセンジャーやLINE内でユーザーに[トランザクションメッセージを]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/)送信する。
-- Webhooksを使用して、以下のようなサードパーティ・サービスと通信することで、アプリ内やWebでのアクティビティに応じて顧客にダイレクトメールを送信する。 [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
-- ゲーマーのレベルが一定に達したり、ポイントが一定数に達したら、ウェブフックと既存のAPIセットアップを使って、キャラクターのアップグレードやコインを直接アカウントに送る。マルチチャネル・メッセージング・キャンペーンの一環としてウェブフックを送信する場合、プッシュやその他のメッセージを送信して、ゲーマーに報酬を同時に知らせることができる。
+- Webhook を使用して[Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/) などのサードパーティサービスと通信し、アプリ内および Web のアクティビティに応じて顧客にダイレクトメールを送信する。
+- ゲーマーのレベルが一定に達したり、ポイントが一定数に達したら、ウェブフックと既存のAPIセットアップを使って、キャラクターのアップグレードやコインを直接アカウントに送る。マルチチャネルメッセージングキャンペーンの一環として Webhook を送信する場合は、プッシュ通知やその他のメッセージを送信して、同時にゲーマーに報酬を通知できる。
 - もしあなたが航空会社なら、ウェブフックと既存のAPIセットアップを利用して、顧客が一定数のフライトを予約した後、顧客のアカウントに割引をクレジットすることができる。
 - 無限の "If This Then That"[（IFTTT](https://ifttt.com/about)）レシピ-例えば、顧客がEメールでアプリにサインインすると、そのアドレスが自動的にSalesforceに設定される。
 
@@ -43,10 +43,10 @@ Webhookはシステム同士を接続する優れた方法である-結局のと
 
 | Webhookの一部 | 説明 |
 | --- | --- |
-| [HTTPメソッド](#methods) | APIと同様に、ウェブフックにはリクエスト・メソッドが必要だ。これらは、ウェブフックがヒットするURLに与えられ、与えられた情報で何をすべきかをエンドポイントに伝える。指定できるHTTPメソッドは4つある：POST、GET、PUT、DELETEである。 |
-| HTTP URL | ウェブフック・エンドポイントのURLアドレス。エンドポイントは、ウェブフックに取り込んだ情報を送信する場所だ。 |
-| Request body | Webhookのこの部分には、エンドポイントに伝える情報が含まれている。リクエスト・ボディはJSONキー・バリュー・ペアか生のテキストである。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| [HTTP メソッド](#methods) | API と同様に、Webhook にはリクエストメソッドが必要です。これらは、ウェブフックがヒットするURLに与えられ、与えられた情報で何をすべきかをエンドポイントに伝える。指定できるHTTPメソッドは4つある：POST、GET、PUT、および DELETE。 |
+| HTTP URL | ウェブフック・エンドポイントのURLアドレス。エンドポイントは、Webhook でキャプチャしている情報の送信先にする場所です。 |
+| Request body | Webhookのこの部分には、エンドポイントに伝える情報が含まれている。リクエスト本文には、JSON キーと値のペア、または生のテキストを使用できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTTPメソッド {#methods}
 
@@ -55,40 +55,40 @@ Webhookはシステム同士を接続する優れた方法である-結局のと
 | HTTPメソッド | 説明 |
 | ----------- | ----------- |
 | POST | このメソッドは、受信サーバーに新しい情報を書き込む。実際のアプリケーションでPOSTメソッドを使う一般的な例としては、ウェブサイトの[問い合わせフォームが](https://www.braze.com/company/contact)ある。フォームに入力した情報はすべてリクエストボディの一部となり、レシーバーに送信される。これはデータを送信する際に最もよく使われる方法である。
-| GET | この方法は、新しい情報を書き込むのではなく、既存の情報を検索する。これは、サーバーにデータを要求するときに使われる最も一般的な方法である。例えば、[`/segments/list` ]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) 。GETリクエストをすると、セグメントのリストが返される。
-| プット | このメソッドは、エンドポイント上の情報を更新し、既存の情報をリクエスト・ボディの内容と置き換える。 
+| GET | このメソッドは、新しい情報を書き込むのではなく、既存の情報を取得します。これは、サーバーにデータを要求するときに使われる最も一般的な方法である。例えば、[`/segments/list` エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).があるとします。GETリクエストをすると、セグメントのリストが返される。
+| PUT: | このメソッドはエンドポイントの情報を更新し、既存の情報をリクエストボディの内容に置き換えます。 
 | 削除 | このメソッドはHTTP URLのリソースを削除する。 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## BrazeのWebhooks
 
-Brazeでは、Webhookキャンペーン、APIキャンペーン、またはCanvasコンポーネントとしてWebhookを作成できる。
+Braze では、Webhook を、Webhook キャンペーン、API キャンペーン、またはキャンバスコンポーネントとして作成できます。
 
 {% tabs %}
-{% tab ウェブフックキャンペーン %}
+{% tab Webhook キャンペーン %}
 
-1. Brazeのダッシュボードで、**Campaignsに**行く。
-2. **Create Campaignを**クリックし、**Webhookを**選択する。
+1. Braze ダッシュボードの [**キャンペーン**] に移動します。
+2. [**キャンペーンを作成**] をクリックし、[**Webhook**] を選択します。
 
-詳しくは[ウェブフックの]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成を参照のこと。
+詳細については、[Webhook の作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
 
 {% endtab %}
 {% tab APIキャンペーン %}
 
-1. Brazeのダッシュボードで、**Campaignsに**行く。
-2. **Create Campaignを**クリックし、**API Campaignを**選択する。
-3. **Add Messagesを**クリックし、**Webhookを**選択する。
-4. [Webhookオブジェクトを]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)含むようにAPIコールをフォーマットする。
+1. Braze ダッシュボードの [**キャンペーン**] に移動します。
+2. [**キャンペーンを作成**] をクリックし、[**API キャンペーン**] を選択します。
+3. [**メッセージを追加**] をクリックし、[**Webhook**] を選択します。
+4. [Webhookオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)を含むように API 呼び出しをフォーマットします。
 
-詳しくは[ウェブフックの]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成を参照のこと。
+詳細については、[「Webhook の作成」]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
 
 {% endtab %}
-{% tab キャンバス・コンポーネント %}
+{% tab キャンバスコンポーネント %}
 
-1. キャンバスで、新しいコンポーネントを作成する。
-2. コンポーネントの**Message**セクションで、**Webhookを**選択する。
+1. キャンバスで、新しいコンポーネントを作成します。
+2. コンポーネントの [**メッセージ**] セクションで、[**Webhook**] を選択します。
 
-詳しくは[ウェブフックの]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成を参照のこと。
+詳細については、[「Webhook の作成」]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
 
 {% endtab %}
 {% endtabs %}

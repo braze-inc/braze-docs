@@ -54,15 +54,15 @@ Tealium は、デフォルトでは同意イベント (サブスクリプショ�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Tealium アカウント | この提携を進めるには、サーバーおよび/またはクライアントサイドアクセスを持つ[Tealiumアカウント](https://my.tealiumiq.com/)が必要です。 | 
 | インストールされたソースと Tealium ソースの[ライブラリ](https://docs.tealium.com/platforms/) | モバイルアプリ、Web サイト、バックエンドサーバーなど、Tealium に送信されるデータの提供元。<br><br>適切な Tealium コネクターを設定できるようにするには、ライブラリをアプリ、サイト、サーバーにインストールしておく必要があります。 |
 | Braze RESTとSDKエンドポイント | REST または SDK エンドポイントの URL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
-| Braze アプリ 識別子鍵(横並びのみ) | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > \[設定の管理] > \[API キー]** で確認できます。 |
+| Braze アプリ 識別子鍵(横並びのみ) | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > [設定の管理] > [API キー]** で確認できます。 |
 | コードバージョン(並列のみ) | SDK バージョンに対応し、major.minor 形式である必要があります (3.0.1ではなく3.2など)。コードバージョンは3.0以上である必要があります。 |
-| REST API キー(サーバ間のみ) | `users.track` および`users.delete` 権限を持つBraze REST API キー。<br><br>これは **Brazeダッシュボード > \[開発者コンソール] > \[REST API キー] > \[新しい API キーを作成]** で作成できます。|
-{: .reset-td-br-1 .reset-td-br-2}
+| REST API キー(サーバ間のみ) | `users.track` および`users.delete` 権限を持つBraze REST API キー。<br><br>これは **Brazeダッシュボード > [開発者コンソール] > [REST API キー] > [新しい API キーを作成]** で作成できます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合タイプを選択する
 
@@ -70,7 +70,7 @@ Tealium は、デフォルトでは同意イベント (サブスクリプショ�
 | ----------- | ------- |
 | [サイドバイサイド](#side-by-side-sdk-integration) | Tealium の SDK を使用して、イベントを Braze のネイティブ呼び出し変換します。これにより、サーバー間統合よりも高度な機能にアクセスでき、Braze をより包括的に使用できるようになります。<br><br>Brazeのリモートコマンドを使用する場合は、TealiumがすべてのBraze方法(コンテンツカードなど)に対応しているわけではないことに注意してください。対応するリモートコマンドにマッピングされていない Braze メソッドを使用するには、ネイティブ Braze コードをコードベースに追加してメソッドを呼び出す必要があります。|
 | [サーバー間](#server-to-server-integration) | Tealium からBraze のREST API エンドポイントにデータを転送します。<br><br>アプリ メッセージング内、コンテンツカード、プッシュ通知などのBrazeのユーザーインターフェイス機能には対応していません。また、この方法では利用できないデバイスレベルのフィールドなど、自動的に取得されるデータも存在します。<br><br>これらの機能を使用する場合は、並列統合を検討してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## サイドバイサイドの SDK 統合
 
@@ -84,7 +84,7 @@ Tealium には、モバイルリモートコマンドを統合する2 つの方�
 | --- | --- | --- |
 | **リモートコマンドタグ** | Tealium iQ UI を使用して、リモートコマンドに送信されるデータとマッピングを簡単に変更できます。<br><br>これにより、アプリがすでにアプリストアに入った後、クライアントがアプリを更新する必要なく、追加のデータまたはイベントをサードパーティSDKに送信できます。 | アプリのタグマネジメントモジュールは、非表示のWeb ビューに依存してJavaScript を処理します。 |
 | **JSON構成ファイル**<br>([推奨](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#how-it-works)) | JSONメソッドを使用すると、アプリで非表示のWebビューを使用する必要がなくなり、メモリー使用量が大幅に削減されます。<br><br>JSON ファイルは、顧客のアプリ内でリモートまたはローカルにホストできます。 | 現時点では、これを管理するUIがないため、少し手間がかかります。<br><br>注:Tealium は、この問題を解決し、iQ Tag Management バージョンと同じレベルの柔軟性を JSON リモートコマンドに取り入れる Management UIの追加に取り組んでいます |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Braze モバイルリモートコマンドのデータマッピングを使用して、デフォルトのユーザー属性とカスタム属性を設定し、購入とカスタムイベントを追跡します。対応するBraze方法については、次の表を参照してください。
 
@@ -105,7 +105,7 @@ Braze モバイルリモートコマンドのデータマッピングを使用�
 | useralias | addAlias() |
 | userattribute | ABKUser() |
 | useridentifier | changeUser() |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Braze モバイルリモートコマンドの設定方法の詳細と、サポートされている方法の概要については、Tealium 開発者 ドキュメントを参照してください。
 - [リモートコマンド](https://docs.tealium.com/platforms/remote-commands/integrations/braze/#json-template)
@@ -119,11 +119,11 @@ Braze モバイルリモートコマンドは、すべての Braze メソッド�
 
 Braze Web SDK タグを使用して、Braze の Web SDK を Web サイトにデプロイします。[Tealium iQ Tag Management](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/) により、顧客は訪問者のアクティビティを追跡するために Tealium ダッシュボード内でタグとして Braze を追加できます。タグは一般的に、オンライン広告、メールマーケティング、およびサイトのパーソナライゼーションの効果を理解する目的でマーケターにより使用されます。
 
-1. Tealium で **\[iQ] > \[Tags] > \[+ Add Tag] > \[Braze Web SDK]** に移動します。
-2. \[Tag Configuration] ダイアログボックスで、API キー (Braze アプリ識別子キー)、ベース URL (Braze SDK エンドポイント)、および[Braze Web SDK コードバージョン](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) を入力します。また、ロギングを有効にして、デバッグ目的で Web コンソールに情報を記録することもできます。
-3. \[[Load Rules](https://docs.tealium.com/iq-tag-management/load-rules/about/)] ダイアログボックスで \[Load on All Pages] を選択するか、または \[**Create Rule**] を選択して、サイトでこのタグのインスタンスをいつどこに読み込むかを決定します。
-4. **[Data Mアプリings](https://docs.tealium.com/iq-tag-management/data-mappings/about/)**ダイアログボックスで、**Create Mアプリings**を選択してTealiumデータをBrazeにマッピングします。Braze Web SDK タグの宛先変数は、タグの \[**Data Mapping**] タブに組み込まれています。[これらの表](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/)に、使用可能な宛先カテゴリと、それぞれの宛先名の説明が示されています。
-5. \[**Finish**] を選択します。
+1. Tealium で **[iQ] > [Tags] > [+ Add Tag] > [Braze Web SDK]** に移動します。
+2. [Tag Configuration] ダイアログボックスで、API キー (Braze アプリ識別子キー)、ベース URL (Braze SDK エンドポイント)、および[Braze Web SDK コードバージョン](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) を入力します。また、ロギングを有効にして、デバッグ目的で Web コンソールに情報を記録することもできます。
+3. [[Load Rules](https://docs.tealium.com/iq-tag-management/load-rules/about/)] ダイアログボックスで [Load on All Pages] を選択するか、または [**Create Rule**] を選択して、サイトでこのタグのインスタンスをいつどこに読み込むかを決定します。
+4. **[Data Mアプリings](https://docs.tealium.com/iq-tag-management/data-mappings/about/)**ダイアログボックスで、**Create Mアプリings**を選択してTealiumデータをBrazeにマッピングします。Braze Web SDK タグの宛先変数は、タグの [**Data Mapping**] タブに組み込まれています。[これらの表](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/)に、使用可能な宛先カテゴリと、それぞれの宛先名の説明が示されています。
+5. [**Finish**] を選択します。
 
 ### サイドバイサイド統合のリソース
 
@@ -139,13 +139,13 @@ Braze Web SDK タグを使用して、Braze の Web SDK を Web サイトにデ�
 
 このデータとこれらの機能を使用する場合は、[並列]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration)SDKインテグレーションを検討してください。
 
-### ステップ1:ソースの設定
+### ステップ1: ソースを設定する
 
 Tealium では最初に、コネクターの取得元となる有効なデータソースを設定する必要があります。
-1. Tealium のサイドバーの \[**Server-Side**] から **\[Sources] > \[Data Sources] > \[+ Add Data Source]** に移動します。
+1. Tealium のサイドバーの [**Server-Side**] から **[Sources] > [Data Sources] > [+ Add Data Source]** に移動します。
 2. 使用可能なカテゴリ内で目的のプラットフォームを見つけ、ソースに名前を付けます。これは必須フィールドです。<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
-3. **Event Specifications**オプションから、含める[イベント仕様](https://docs.tealium.com/server-side/event-specifications/about/)を選択します。イベント仕様は、インストールで追跡するイベント名と必須属性を特定するのに役立ちます。これらの仕様は受信イベントに適用されます。<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>時間をとって、お客様にとって最も価値のあるデータと、ユースケースに最も適切であると思われる仕様について検討します。\[カスタムイベント仕様][19]も利用可能です。<br>
-4. 次に、**Get Code**ステップに進みます。ここで提供されるベースコードとイベント追跡コードは、インストールガイドとして機能します。これらの指示を共有したい場合は、提供されたPDF を読み込むします。完了したら \[**Save & Continue**] を選択します。<br>
+3. **Event Specifications**オプションから、含める[イベント仕様](https://docs.tealium.com/server-side/event-specifications/about/)を選択します。イベント仕様は、インストールで追跡するイベント名と必須属性を特定するのに役立ちます。これらの仕様は受信イベントに適用されます。<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>時間をとって、お客様にとって最も価値のあるデータと、ユースケースに最も適切であると思われる仕様について検討します。[カスタムイベント仕様][19]も利用可能です。<br>
+4. 次に、**Get Code**ステップに進みます。ここで提供されるベースコードとイベント追跡コードは、インストールガイドとして機能します。これらの指示を共有したい場合は、提供されたPDF を読み込むします。完了したら [**Save & Continue**] を選択します。<br>
 5. これで、保存したソースを表示し、イベント仕様を追加または削除することができます。<br>![][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>詳細なデータソースビューから、次のアクションを実行できます。
 - データソース鍵の表示と複製
 - インストール手順を表示する
@@ -161,15 +161,15 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 
 コネクターとは、Tealium と他のベンダーの間でデータを伝送するために使用される統合です。これらのコネクターには、パートナーがサポートするAPI を表すアクションが含まれています。 
 
-1. Tealium のサイドバーの \[**Server-Side**] から **\[EventStream] > \[Event Connectors]** に移動します。
-2. 青色の \[**＋Add Connector**] ボタンを選択して、コネクターマーケットプレースを参照します。アプリが耳にする新しいダイアログボックスで、スポットライト検索を使用して**Braze** コネクターを見つけます。
+1. Tealium のサイドバーの [**Server-Side**] から **[EventStream] > [Event Connectors]** に移動します。
+2. 青色の [**＋Add Connector**] ボタンを選択して、コネクターマーケットプレースを参照します。アプリが耳にする新しいダイアログボックスで、スポットライト検索を使用して**Braze** コネクターを見つけます。
 3. このコネクターを追加するには、**Braze**コネクタータイルを選択します。クリックすると、接続の概要と、必要な情報、サポートされるアクション、および設定手順の一覧が表示されます。この設定は、ソース、設定、アクションの3つのステップで構成されています。
 
 #### ソース
 
-ソースの設定が完了したら、**\[EventStream] > \[Event Connectors] > \[+ Add Connector] > \[Braze]** の Braze コネクタページに戻ります。 
+ソースの設定が完了したら、[**EventStream**] > [**Event Connectors**] > [**\+ Add Connector**] > [**Braze**] の Braze コネクタページに戻ります。 
 
-開封が作成したデータソースを選択し、**Event Feed**で**All Events**または特定のイベント仕様を選択して、変更された値のみをBrazeに送信する推奨パスを選択します。**Continue**をクリックします。
+作成したデータソースを選択し、**Event Feed**で**All Events**または特定のイベント仕様を選択して、変更された値のみをBrazeに送信する推奨パスを選択します。**Continue**を選択します。
 
 #### 構成
 
@@ -189,8 +189,8 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 ![]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:90%"}
 {% endalert %}
 
-{% tabs ローカル %}
-{% tab Track User (Batch および Non-Batch) %}
+{% tabs local %}
+{% tab ユーザーの追跡 (バッチと非バッチ) %}
 
 このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。
 
@@ -205,19 +205,19 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 | 購入 | このフィールドは、Braze [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)の属性と同様に購入属性を追跡、マッピングする場合に使用します。<br><br>\- 購入属性 `Product ID`、`Currency`、`Price` は、マッピングされたすべての購入に必要です。<br>\- 購入属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新規購入が存在しない場合は作成されます。`Update Existing Only` を`true` に設定すると、既存の購入のみが更新され、新規購入は作成されません。<br>\- 配列型属性s をマップして、複数の購入アイテムを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各アイテムに適用されます。|
 | 購買テンプレート | テンプレートを使用して、Brazeに送信する前にデータを変換できます。<br>\- ネストされたオブジェクトサポートが必要な場合は、購入テンプレートを定義します。<br>\- 購入テンプレートを定義すると、アクションの購入セクションで設定された設定は無視されます。<br>\- 詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。|
 | 購買テンプレート変数 | 商品テンプレートの項目を入力します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab Delete User (Non-Batch) %}
+{% tab ユーザーの削除 - 非バッチ %}
 
 このアクションでは、Braze ダッシュボードからユーザーを削除できます。
 
 | パラメータ | 説明 |
 | ---------- | ----------- |
 | ユーザー ID | このフィールドを使用して、Tealium のユーザー ID フィールドを Braze の対応するフィールドにマッピングします。<br><br>\- 1 つ以上のユーザー ID 属性をマップします。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/delete` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img/tealium/track_user_delete.png %})
 
@@ -230,19 +230,19 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 
 コネクターが Tealium ホームページのコネクターリストに表示されます。<br>![][13]{: style="max-width:80%;"}
 
-終了したら、必ず**Save / Publish**コネクタを使用してください。設定したアクションは、トリガー接続が満たされたときに実行されます。 
+完了したら、コネクタの [**保存 / 公開**] を選択してください。設定したアクションは、トリガー接続が満たされたときに実行されます。 
 
 ### ステップ3:Tealium コネクターをテストする
 
 コネクターが稼動したら、正常に動作していることを確認するため、コネクターをテストする必要があります。これを検証する最も簡単な方法は、Tealium**トレースツール**を使用することです。Trace の使用を開始するには、Tealium Tools ブラウザー拡張機能が追加されていることを確認します。
 
-1. 新しいトレースを開始するには、サイドバーの \[**Server-Side**] のオプションから \[**Trace**] を選択します。\[**Start**] をクリックし、トレース ID をキャプチャします。
+1. 新しいトレースを開始するには、サイドバーの [**Server-Side**] のオプションから [**Trace**] を選択します。[**開始**] を選択し、トレース ID をキャプチャします。
 2. ブラウザー拡張機能を開き、AudienceStream Trace にトレース ID を入力します。
 3. リアルタイムログを調べます。
-4. 展開する **Actions Triggered** エントリをクリックして、検証するアクションを確認します。
+4. **Actions Triggered**エントリを選択して展開し、検証したいアクションをチェックする。
 5. 検証するアクションを探して、ログステータスを表示します。 
 
-Tealium の Trace ツールの詳しい実装手順については、Tealium の \[Trace ドキュメント][21]を参照してください。
+Tealium の Trace ツールの詳しい実装手順については、Tealium の [Trace ドキュメント][21]を参照してください。
 
 ## 統合デモ
 
@@ -255,16 +255,22 @@ Tealium の Trace ツールの詳しい実装手順については、Tealium の
 Tealium から Braze を統合するときに、誤ってデータ超過料金が生じる主な状況が3つあります。
 
 #### 重複データの送信- Brazeの属性の差分のみを送信します
-Tealium はユーザー属性の Braze 差分を送信しません。たとえば、EventStream アクションでユーザーの名、メール、および携帯電話番号を追跡している場合、このアクションがトリガーされると、Tealium は3つの属性すべてを Braze に送信します。Tealium は、変更された内容や更新された内容を探してその情報のみを送信することはありません。<br><br> 
+
+Tealium はユーザー属性の Braze 差分を送信しません。たとえば、EventStream アクションでユーザーの名、メール、および携帯電話番号を追跡している場合、このアクションがトリガーされると、Tealium は3つの属性すべてを Braze に送信します。Tealium は、変更された内容や更新された内容を探してその情報のみを送信することはありません。
+
 **解決策**:<br>バックエンドを確認して、属性が変更されているかどうかを評価し、変更されている場合は、Tealium の関連メソッドを呼び出してユーザープロファイルを更新できます。**これは、Braze を直接統合するユーザーが通常行う作業です。**<br>**または**<br> 自分自身のユーザープロファイルをバックエンドに保存しておらず、属性が変更されたかどうかを判断できない場合は、AudienceStream を使用して
 [エンリッチメントを作成](https://docs.tealium.com/server-side/attributes/manage-enrichments/add-enrichment/) 値が変更されたときにのみユーザー 属性s を送信します。[エンリッチメントルール](https://docs.tealium.com/server-side-connectors/braze-connector/)に関する Tealium のドキュメントを参照してください。
 
 #### 無関係なデータの送信またはデータの不必要な上書き
-同じイベントフィードをターゲットとする複数の EventStream がある場合、1つのアクションがトリガーされるたびに、**そのコネクターで有効になっているすべてのアクション**が自動的に起動します。**その結果、Braze でデータが上書きされ、不要なデータポイントが消費される可能性があります。**<br><br>
+
+同じイベントフィードをターゲットとする複数の EventStream がある場合、1つのアクションがトリガーされるたびに、**そのコネクターで有効になっているすべてのアクション**が自動的に起動します。その結果、Braze でデータが上書きされ、不要なデータポイントが消費される可能性があります。
+
 **解決策**:<br>それぞれのアクションを追跡するために、個別のイベント指定またはフィードを設定します。<br>**または**<br> Tealium ダッシュボードのトグルを使用して、起動しないアクション (またはコネクター) を無効にします。
 
 #### Brazeの初期化が早すぎる
-Braze Web SDK タグを使用して Tealium と統合するユーザーの場合、MAU が大幅に増加する可能性があります。**Braze がページ読み込むで初期化されている場合、Web ユーザーが初めてWeb サイトに移動するたびに、Braze によって匿名プロファイルが作成されます。**ユーザーが"Signed In"または"Watched Video"など、いくつかのアクションを完了したときにのみ、MAU数を減らすためにユーザーの挙動を追跡することを望む人もいるかもしれません。<br><br>
+
+Braze Web SDK タグを使用して Tealium と統合するユーザーの場合、MAU が大幅に増加する可能性があります。**Braze がページ読み込むで初期化されている場合、Web ユーザーが初めてWeb サイトに移動するたびに、Braze によって匿名プロファイルが作成されます。**ユーザーが"Signed In"または"Watched Video"など、いくつかのアクションを完了したときにのみ、MAU数を減らすためにユーザーの挙動を追跡することを望む人もいるかもしれません。
+
 **解決策**:<br>[ 読み込む規則](https://docs.tealium.com/iq-tag-management/load-rules/about/) を設定して、タグ 読み込むがいつどこにあるかを正確に判断します。 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/

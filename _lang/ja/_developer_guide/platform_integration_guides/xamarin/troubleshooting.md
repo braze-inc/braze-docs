@@ -22,7 +22,5 @@ description: "この記事では、XamarinプラットフォームのiOSおよ�
 
 ### カスタム通知ファクトリが正しく設定されていません
 
-カスタム通知ファクトリ (およびすべてのデリゲート) は、C# と Javaの境界を越えて適切に機能するために [`Java.Lang.Object`][2] を拡張する必要があります。詳細については、Javaインターフェイスの実装に関する[Xamarin][1]を参照してください。
+カスタム通知ファクトリ (およびすべてのデリゲート) は、C# と Javaの境界を越えて適切に機能するために [`Java.Lang.Object`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) を拡張する必要があります。詳細については、Javaインターフェイスの実装に関する[Xamarin](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/#Implementing_Interfaces)を参照してください。
 
-[1]: https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/#Implementing_Interfaces
-[2]: https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/

@@ -10,14 +10,14 @@ search_tag: Partner
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) は、世界中で気象予報サービスを提供するメディア企業です。AccuWeather を使用すると、マーケティングキャンペーンを強化、パーソナライズし、Braze \[コネクテッドコンテンツ][60]]を使用して翻訳を自動化できます。 
+> [AccuWeather](https://www.accuweather.com/) は、世界中で気象予報サービスを提供するメディア企業です。AccuWeather を使用すると、マーケティングキャンペーンを強化、パーソナライズし、Braze [コネクテッドコンテンツ][60]]を使用して翻訳を自動化できます。 
 
 ## 前提条件
 
 | 必要条件 | 説明 |
 |---|---|
-| AccuWeather API キー | リクエスト URL で使用する互換性のある API キーについては、AccuWeather アカウントマネージャーにお問い合わせください。<br><br>詳細な手順は、\[AccuWeather Enterprise API][57] page]に記載されている。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| AccuWeather API キー | リクエスト URL で使用する互換性のある API キーについては、AccuWeather アカウントマネージャーにお問い合わせください。<br><br>詳細な手順は、[AccuWeather Enterprise API][57] page]に記載されている。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 利用可能なAccuWeather API
 
@@ -25,16 +25,16 @@ search_tag: Partner
 
 | API | 説明 |
 |---|---|
-|\[Locations][48] | 希望の場所のロケーションキーを取得する。ロケーションキーを使用して、Forecast API または Current Conditions API から気象データを取得します。 |
-| \[Forecast][49] | 特定の場所の予報情報を得る。 |
-| \[Current Conditions][50] | 特定のロケーションの Current Conditions データを取得します。 |
-| \[Indices][51] | 特定の場所の日次指数値を取得する。インデックスの入手可能性は地域によって異なる。 |
-| \[Weather Alarms][52] | 特定の場所の天気アラームを取得する。AccuWeatherの天気予報アラームは、その場所の毎日の予報を使って決定される。天気予報が\[特定のしきい値][58]]を満たしているか超えている場合、そのロケーションにアラームが存在します。 |
-| \[Alerts][53] | 政府の気象庁や世界的な気象警報プロバイダーから悪天候警報を取得します。 |
-| \[Imagery][54] | レーダーと衛星画像を入手する。 |
-| \[Tropical][55] | 世界中の熱帯低気圧の現在位置、過去の位置、予報を取得します。 |
-| \[Translations][56] | 利用可能な言語のリストを取得する。特定のフレーズグループの翻訳を取得します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+|[Locations][48] | 希望の場所のロケーションキーを取得する。ロケーションキーを使用して、Forecast API または Current Conditions API から気象データを取得します。 |
+| [Forecast][49] | 特定の場所の予報情報を得る。 |
+| [Current Conditions][50] | 特定のロケーションの Current Conditions データを取得します。 |
+| [Indices][51] | 特定の場所の日次指数値を取得する。インデックスの入手可能性は地域によって異なる。 |
+| [Weather Alarms][52] | 特定の場所の天気アラームを取得する。AccuWeatherの天気予報アラームは、その場所の毎日の予報を使って決定される。天気予報が[特定のしきい値][58]]を満たしているか超えている場合、そのロケーションにアラームが存在します。 |
+| [Alerts][53] | 政府の気象庁や世界的な気象警報プロバイダーから悪天候警報を取得します。 |
+| [Imagery][54] | レーダーと衛星画像を入手する。 |
+| [Tropical][55] | 世界中の熱帯低気圧の現在位置、過去の位置、予報を取得します。 |
+| [Translations][56] | 利用可能な言語のリストを取得する。特定のフレーズグループの翻訳を取得します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## コネクテッドコンテンツの例
 

@@ -22,7 +22,7 @@ description: "この記事では、「カタログ選択を削除」Braze エン
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete_selection`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete_selection`の権限が必要です。
 
 ## レート制限
 
@@ -30,13 +30,13 @@ description: "この記事では、「カタログ選択を削除」Braze エン
 
 ## パスパラメーター
 
-| パラメーター        | required | データ型 | 説明                    |
+| パラメータ        | required | データ型 | 説明                    |
 | ---------------- | -------- | --------- | ------------------------------ |
-| `catalog_name`   | 必須 | string    | カタログ名。           |
-| `selection_name` | 必須 | string    | カタログセレクションの名前。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name`   | 必須 | 文字列    | カタログ名。           |
+| `selection_name` | 必須 | 文字列    | カタログセレクションの名前。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/selections/favorite_list' \
@@ -46,7 +46,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 応答
 
-このエンドポイントには、`202` と `404` の 2 つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `202` と `404`。
 
 ### 成功応答の例
 
@@ -80,14 +80,14 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-## トラブルシューティング 
+## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー                | トラブルシューティング                                          |
 | -------------------- | -------------------------------------------------------- |
 | `catalog-not-found`  | カタログ名が有効であることを確認する。                    |
 | `invalid-selection`  | セレクション名が有効であることを確認する。                  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

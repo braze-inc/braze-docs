@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 이메일 템플릿 Braze 엔드포인트 참조에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 이메일 템플릿 보기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -34,9 +34,9 @@ description: "이 문서에서는 이메일 템플릿 Braze 엔드포인트 참�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `email_template_id`  | 필수 | 문자열 | [이메일 템플릿 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \

@@ -10,18 +10,18 @@ channel: email
 
 # 동의 및 주소 수집
 
-> 첫 이메일을 발송하기 전에 먼저 고객의 허락을 받는 것이 중요합니다. 이는 일반적인 예의이며 오픈율에 큰 도움이 됩니다!
+> 첫 이메일을 발송하기 전에 먼저 고객의 허락을 받는 것이 중요합니다. 이는 일반적인 예의이며 열람율에 큰 도움이 됩니다!
 
 ## 구독자 상태
 
-사용자의 이메일 구독 상태에는 **옵트인**, **구독, 구독** **취소의** 세 가지가 있습니다. 사용자의 정기구독 상태를 변경하려면 [정기구독 변경에]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions) 대한 도움말을 확인하거나 [정기구독 API를]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) 사용하세요.
+사용자의 이메일 구독 상태에는 **옵트인**, **구독, 구독** **취소**의 세 가지가 있습니다. 사용자의 정기구독 상태를 변경하려면 [정기구독 변경에]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions) 대한 도움말을 확인하거나 [정기구독 API를]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) 사용하세요.
 
 | 구독자 상태 | 설명 |
 |---|---|
 | 옵트인함 | 이러한 고객은 확인 이메일의 링크를 클릭하고 메시지 수신에 적극적으로 동의한 것입니다. |
 | 가입됨 | 기본적으로 사용자는 프로필에 유효한 이메일 주소가 저장되어 있는 한 이메일을 구독하게 됩니다. 사용자는 구독을 취소하거나 옵트인할 때까지 구독 상태를 유지합니다. |
 | 탈퇴됨 | 수신 거부로 표시되려면 고객이 명시적으로 이메일 수신을 거부했거나 이메일을 스팸으로 표시한 경우입니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 주소 수집 방법
 
@@ -47,4 +47,4 @@ channel: email
 
 사용자가 이메일 수신을 요청하는 확인란을 선택하면 옵트인 확인이 이루어지며, 이에 대한 응답으로 확인 메시지가 전송됩니다. 이 방법을 사용하면 사용자가 콘텐츠의 유형과 빈도를 선택할 수 있어 참여도를 높일 수 있습니다. 
 
-참여도가 가장 높은 사용자만 타겟팅하고 있는지 확인하려면 이중 확인 옵트인 방법을 사용할 수도 있습니다. 이 방식은 사용자가 확인 이메일의 버튼이나 링크를 클릭해야 이메일 목록에 배치되는 추가 단계를 추가합니다. 
+인게이지먼트가 가장 높은 사용자만 타겟팅하고 있는지 확인하려면 이중 확인 옵트인 방법을 사용할 수도 있습니다. 이 방식은 사용자가 확인 이메일의 버튼이나 링크를 클릭해야 이메일 목록에 배치되는 추가 단계를 추가합니다. 

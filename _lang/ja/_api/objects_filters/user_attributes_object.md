@@ -17,11 +17,12 @@ Brazeユーザープロファイルフィールド名（以下にリストされ
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) see external user ID,
   "user_alias" : (optional, User alias object),
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
@@ -46,12 +47,12 @@ Brazeユーザープロファイルフィールド名（以下にリストされ
 
 プロファイル属性を削除するには、それを`null`に設定します。いくつかのフィールド、例えば `external_id` や `user_alias` は、ユーザープロファイルに追加された後に削除することはできません。
 
-#### 既存のプロファイルのみを更新
+#### 既存のプロファイルのみを更新する
 
-既存のユーザープロファイルのみをBrazeで更新したい場合は、リクエストの本文内に`_update_existing_only`キーと`true`の値を渡す必要があります。この値が省略された場合、`external_id`が既に存在しない場合、Brazeは新しいユーザープロファイルを作成します。
+Braze で既存のユーザープロファイルのみを更新したい場合は、リクエスト本文の中で、`_update_existing_only` キーと `true` の値を渡す必要があります。この値を省略すると、`external_id` がまだ存在しない場合、Brazeは新しいユーザープロファイルを作成する。
 
 {% alert note %}
-エイリアスのみのユーザープロファイルを`/users/track`エンドポイントを通じて作成する場合、`_update_existing_only`を`false`に設定する必要があります。この値が省略された場合、エイリアスのみのプロファイルは作成されません。
+`/users/track` エンドポイントを通じてエイリアスのみのユーザープロファイルを作成する場合、`_update_existing_only` は `false` に設定しなければなりません。この値が省略された場合、エイリアスのみのプロファイルは作成されない。
 {% endalert %}
 
 #### プッシュトークンインポート
@@ -82,15 +83,30 @@ Brazeは、プッシュトークンを持たない`push_token_import`フラグ�
 
 | データ型 | メモ |
 | --- | --- |
-| 配列 | カスタム属性の配列は一次元のセットです。多次元配列はサポートされていません。カスタム属性配列に要素を追加すると、その要素が配列の最後に追加されます。ただし、既に存在する場合は、現在の位置から配列の最後に移動されます。<br><br>例えば、配列`['hotdog','hotdog','hotdog','pizza']`がインポートされた場合、一意の値のみがサポートされるため、配列属性には`['hotdog', 'pizza']`として表示されます。<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]` のようにして配列の値を設定するだけでなく、`"my_array_custom_attribute" : { "add" : ["Value3"] },` のようにして既存の配列に値を追加したり、`"my_array_custom_attribute" : { "remove" : [ "Value1" ]}` のようにして配列から値を削除したりすることもできます。<br><br>カスタム属性配列の要素の最大数はデフォルトで25ですが、個々の配列では最大100まで増やすことができます。詳細については、[配列][6]を参照してください。 |
+| 配列 | カスタム属性配列がサポートされています。カスタム属性配列に要素を追加すると、その要素が配列の最後に追加されます。ただし、既に存在する場合は、現在の位置から配列の最後に移動されます。<br><br>例えば、配列`['hotdog','hotdog','hotdog','pizza']`がインポートされた場合、一意の値のみがサポートされるため、配列属性には`['hotdog', 'pizza']`として表示されます。<br><br>`"my_array_custom_attribute":[ "Value1", "Value2" ]` のようにして配列の値を設定するだけでなく、`"my_array_custom_attribute" : { "add" : ["Value3"] },` のようにして既存の配列に値を追加したり、`"my_array_custom_attribute" : { "remove" : [ "Value1" ]}` のようにして配列から値を削除したりすることもできます。<br><br>カスタム属性配列の要素の最大数はデフォルトで25ですが、個々の配列では最大100まで増やすことができます。詳細については、[配列][6]を参照してください。 |
+| オブジェクト配列 | オブジェクトの配列では、各オブジェクトに一連の属性が含まれるオブジェクトのリストを定義できます。これは、ホテルの滞在、購入履歴、環境設定など、ユーザーの関連データの複数のセットを保存する必要がある場合に便利です。<br><br> たとえば、`hotel_stays` という名前のユーザープロファイルにカスタム属性を定義できます。このカスタム属性は、各オブジェクトが個別の宿泊を表す配列として定義できます。各宿泊には、例えば `hotel_name`、`check_in_date`、`nights_stayed` などの属性が含まれます。詳細については、[この例](#array-of-objects-example)を参照してください。 |
 | ブール値 | `true` または `false` |
 | 日付 | [ISO 8601][19] 形式または次のいずれかの形式で保存する必要があります。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY`<br><br>「T」は時間指定子であり、プレースホルダーではないことに注意してください。変更または削除しないでください。<br><br>タイムゾーンのない時間属性はデフォルトでUTCの真夜中になります（ダッシュボード上では会社のタイムゾーンのUTCの真夜中に相当する形式で表示されます）。<br><br> タイムスタンプが未来のイベントはデフォルトで現在の時刻になります。<br><br> 通常のカスタム属性の場合、年が0未満または3000を超える場合、Brazeはこれらの値をユーザーに文字列として保存します。 |
-| フロート |  |
+| フロート | float カスタム属性は、小数点付きの正または負の数です。たとえば、浮動小数点を使用して、アカウントの残高や製品またはサービスのユーザー評価を保存できます。 |
 | 整数 | 整数のカスタム属性は、フィールド「inc」とインクリメントしたい値を持つオブジェクトを割り当てることによって、正または負の整数でインクリメントできます。<br><br>例: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| 文字列 |  |
-{: .reset-td-br-1 .reset-td-br-2}
+| 階層化カスタム属性 | ネストされたカスタム属性は、属性のセットを別の属性のプロパティとして定義します。カスタム属性オブジェクトを定義する場合は、そのオブジェクトの追加属性のセットを定義します。詳細については、「[階層化カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)」を参照してください。 |
+| 文字列 | 文字列カスタム属性は、テキストデータを格納するために使用される一連の文字です。たとえば、文字列を使用して、姓名、メールアドレス、好みを保存できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-カスタムイベントとカスタム属性のどちらを使用すべきかについての情報は、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)および[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)に関するそれぞれのドキュメントを参照してください。
+{% alert tip %}
+カスタムイベントとカスタム属性を使用する場合の詳細については、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)および[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)のそれぞれのドキュメントを参照してください。
+{% endalert %}
+
+##### オブジェクトの配列の例 
+
+このオブジェクトの配列を使用すると、宿泊内の特定の条件に基づいてセグメントを作成し、Liquid テンプレートを使用して各宿泊からのデータを使用してメッセージをパーソナライズできます。
+
+```json
+"hotel_stays": [
+  { "hotel_name": "Ocean View Resort", "check_in_date": "2023-06-15", "nights_stayed": 5 },
+  { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
+  ]
+```
 
 #### Braze ユーザープロファイルフィールド {#braze-user-profile-fields}
 
@@ -120,13 +136,13 @@ Brazeは、プッシュトークンを持たない`push_token_import`フラグ�
 | language | (string) 言語は[ISO-639-1標準][24]でBrazeに渡される必要があります。サポートされている言語については、[受け入れ可能な言語のリスト][2]をご覧ください。<br><br>CSV インポートまたは API によってユーザーの `language` を設定すると、Braze は SDK を通じてこの情報を自動的に取得することができなくなります。 |
 | last_name | (string) |
 | marked_email_as_spam_at | （文字列）ユーザーのメールがスパムとしてマークされた日付。ISO 8601 形式または次のいずれかの形式で表示されます。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| phone | (string) |
+| phone | (string) [E.164](https://en.wikipedia.org/wiki/E.164) 形式で電話番号を入力することをお勧めします。詳細は[ユーザー電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting)を参照してください。|
 | push_subscribe | (文字列) 使用できる値は、「opted_in」 (プッシュメッセージを受信するように明示的に登録)、「unsubscribed」 (プッシュメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
 | push_tokens | オブジェクトの配列は`app_id`と`token`の文字列です。このトークンが関連付けられているデバイスに`device_id`を任意で提供することができます。例えば、`[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`。`device_id` が提供されていない場合は、ランダムに生成されます。 |
 | subscription_groups| `subscription_group_id` および `subscription_state` の文字列を持つオブジェクト配列 (`[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`など) 。`subscription_state` の利用可能な値は「subscribed」と「unsubscribed」です。|
 | time_zone | (文字列) [IANA タイムゾーンデータベース][26] (たとえば、「アメリカ/ニューヨーク」または「東部標準時 (アメリカ & カナダ)」) からのタイムゾーン名。有効なタイムゾーン値のみが設定されます。 |
 | ツイッター | `id` (整数)、`screen_name` (文字列、X (旧Twitter) ハンドル)、`followers_count` (整数)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 この API を通じて明示的に設定された言語の値は、Braze がデバイスから自動的に受信するロケール情報よりも優先されます。
 
@@ -172,7 +188,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 コード"
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコード Wiki"
+[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコード ウィキ"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 コード"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 [27]: #braze-user-profile-fields

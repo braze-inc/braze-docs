@@ -1,20 +1,20 @@
 ---
-nav_title: "POST : Envoyer des messages immédiatement via API uniquement"
-article_title: "POST : Envoyer des messages immédiatement via API uniquement"
+nav_title: "POST : Envoyez des messages immédiatement en utilisant uniquement l'API"
+article_title: "POST : Envoyez des messages immédiatement en utilisant uniquement l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des messages immédiatement via API uniquement."
+description: "Cet article présente les détails de l'envoi de messages immédiatement à l'aide de l'API, uniquement l'endpoint Braze."
 
 ---
 {% api %}
-# Envoyer des messages immédiatement via API uniquement
+# Envoyez des messages immédiatement en utilisant uniquement l'API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés via l'API de Braze. 
+> Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés à l'aide de l'API de Braze.
 
 Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
 
@@ -53,15 +53,15 @@ Authorization: Bearer YOUR-REST-API-KEY
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
    "messages": {
-     "apple_push": (optional, apple push object),
      "android_push": (optional, android push object),
+     "apple_push": (optional, apple push object),
+     "content_card": (optional, content card object),
+     "email": (optional, email object),
      "kindle_push": (optional, kindle/fireOS push object),
      "web_push": (optional, web push object),
-     "email": (optional, email object),
      "webhook": (optional, webhook object),
-     "content_card": (optional, content card object),
-     "sms": (optional, SMS object),
-     "whats_app": (optional, WhatsApp object)
+     "whats_app": (optional, WhatsApp object),
+     "sms": (optional, SMS object)
    }
  }
 ```
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`override_frequency_capping`| Facultatif | Valeur booléenne | Ignorez `frequency_capping` pour les campagnes, la valeur par défaut est `false`. |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 |`messages`| Facultatif | Objets Messagerie | Voir les [objets d'envoi de messages disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```
@@ -160,4 +160,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 Les réponses des endpoints d’envoi de messages incluront le `dispatch_id` du message pour y faire référence lors de l’envoi. Le `dispatch_id` est l’identifiant de la transmission du message, c’est un ID unique pour chaque « dispatch » envoyé par Braze. Pour plus d'informations, consultez [Comportement du Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
-

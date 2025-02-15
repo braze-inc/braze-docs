@@ -36,7 +36,7 @@ module JekyllAssetPipeline
 
     def compress
       # YUI::JavaScriptCompressor.new(:munge => true).compress(@content)
-      Uglifier.new(:harmony => true).compile(@content)
+      Uglifier.new(:harmony => true).compile(@content.encode("UTF-8"))
     end
   end
 

@@ -32,7 +32,7 @@ Snowflake の[セキュアデータシェアリング](https://docs.snowflake.co
 
 ## 統合をセットアップする
 
-### ステップ 1:Braze からのデータ共有を依頼する
+### ステップ1:Braze からのデータ共有を依頼する
 
 まず、Brazeアカウントマネージャーまたはカスタマーサクセスマネージャーに連絡して、Brazeアカウント用のSnowflake Data Share Connectorを購入する。データ共有を依頼すると、Braze は共有が購入されたワークスペースから共有をプロビジョニングします。共有がプロビジョニングされると、すべてのデータは Snowflake インスタンス内から受信データ共有の形式ですぐにアクセス可能になります。共有がインスタンスに表示されたら、共有からデータベースを作成し、テーブルを見たり問い合わせたりできるようにする。
 
@@ -44,7 +44,7 @@ Snowflake の[セキュアデータシェアリング](https://docs.snowflake.co
 
 このネイティブアプリを設定するには、LiveRamp のドキュメント[Snowflake での LiveRamp ネイティブアプリの設定](https://docs.liveramp.com/identity/en/set-up-the-liveramp-native-app-in-snowflake.html)に記載されている手順に従います。終わったら、次のステップに進む。
 
-### ステップ 3:データテーブルを作成する
+### ステップ3:データテーブルを作成する
 
 {% alert warning %}
 PII ベースのテーブルを準備する前に、ジョブで実行される [LiveRamp のプライバシーフィルター](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html)を理解し、入力テーブルの属性列 (識別子以外) に非常に独特な値が含まれていないことを確認してください。これは、消費者のプライバシーを維持し、再識別を避けるために重要である。
@@ -58,7 +58,7 @@ PII ベースのテーブルを準備する前に、ジョブで実行される 
 | Eメールのみ      | ユーザーのメールアドレス (`alex-lee@email.com` など)。 |
 | デバイス          | これには、サードパーティのクッキー、モバイル広告ID（MAID）、コネクテッドTV ID（CTV ID）、およびRampID（Household RampIDに解決される）が含まれる。 |
 | CID            | これらは、プラットフォームパートナーまたは LiveRamp との ID 同期からの識別子です (内部顧客 ID など)。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### ブレイズ識別子
 
@@ -66,17 +66,17 @@ Brazeのイベントログには、LiveRampネイティブアプリ内で使用�
 
 | 識別子の種類 | 説明  |
 |-----------------|--------------|
-| `AD_ID` | `ios_idfa`、`google_ad_id`、`roku_ad_id` などの広告 ID は、特定のイベントタイプ内でキャプチャされ、LiveRamp のデバイス解決サービスと組み合わせて使用できます。デフォルトでは広告 ID は収集されませんが、[Braze のドキュメント](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default)に従って追跡を有効にできます。 |
+| `AD_ID` | `ios_idfa`、`google_ad_id`、`roku_ad_id` などの広告 ID は、特定のイベントタイプ内でキャプチャされ、LiveRamp のデバイス解決サービスと組み合わせて使用できます。デフォルトでは広告 ID は収集されませんが、[Braze のドキュメント]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default)に従って追跡を有効にできます。 |
 | `EMAIL_ADDRESS`   | LiveRamp のメール専用解決サービスと併用できるメールアドレス |
 | `TO_PHONE_NUMBER` | LiveRamp の ＰＩＩ 解決サービスと併用できる電話番号 |
 | `EXTERNAL_USER_ID` | ユーザーに関連付けられた external ID。この ID は LiveRamp の Device Resolution サービスと併用できます (CID)。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 LiveRamp のアプリケーション内でクライアントまたはブランド固有のカスタム識別子を使用するには、[LiveRamp との ID 同期](https://docs.liveramp.com/identity/en/getting-started-with-liveramp-identity.html)が必要です。
 {% endalert %}
 
-### ステップ 4:変数を設定する
+### ステップ4:変数を設定する
 
 次に、アプリに用意されている Execution Step ワークシートでジョブの変数を設定します。これには、ターゲット・データベース、関連テーブル（入力データ、メトリクス、ロギング）、出力テーブル名の定義などの詳細が含まれる。完全なウォークスルーは、[LiveRampを参照のこと：変数 ](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#specify-the-variables-43-150727) を指定します。
 

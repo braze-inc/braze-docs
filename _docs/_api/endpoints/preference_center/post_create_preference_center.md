@@ -14,7 +14,7 @@ description: "This article outlines details about the Create a preference center
 /preference_center/v1
 {% endapimethod %}
 
-> Use this endpoint to create a preference center to allow users to manage their notification preferences for your email campaigns. Refer to [Create a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api) for steps on how to build an API-generated preference center.
+> Use this endpoint to create a preference center to allow users to manage their notification preferences for your email campaigns. Refer to [Create a preference center with API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) for steps on how to build an API-generated preference center.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -41,9 +41,18 @@ Authorization: Bearer YOUR-REST-API-KEY
   "confirmation_page_html": "string",
   "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of the following "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values include "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Request parameters
@@ -55,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
-|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
+|`options` | Optional | Object | Attributes: <br>`meta-viewport-content`: When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`.<br><br> `link-tags`: Set a favicon for the page. When set, a `<link>` tag with a rel attribute is added to the page.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}

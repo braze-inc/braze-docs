@@ -25,7 +25,7 @@ Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé p
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
+Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Vous utiliserez l'origine de votre service comme en-tête de `X-Request-Origin`. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de débit
 
@@ -36,7 +36,7 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `userName@example.com` | Requis | Chaîne de caractères | L’adresse e-mail de l’utilisateur. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 

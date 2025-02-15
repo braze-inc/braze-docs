@@ -31,15 +31,15 @@ description: "이 문서에서는 내보내기 캔버스 데이터 시리즈 분
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | 필수 | 문자열 | [캔버스 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
-| `ending_at` | 필수 | 날짜 시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 내보내기가 종료되어야 하는 날짜. 요청 시점으로 기본 설정됩니다. |
-| `starting_at` | 선택 사항* | 날짜 시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 데이터 내보내기를 시작해야 하는 날짜. <br><br>* `length` 또는 `starting_at` 중 하나가 필요합니다. |
+| `ending_at` | 필수 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 내보내기가 종료되어야 하는 날짜. 요청 시점으로 기본 설정됩니다. |
+| `starting_at` | 선택 사항* | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 내보내기를 시작해야 하는 날짜. <br><br>* `length` 또는 `starting_at` 중 하나가 필요합니다. |
 | `length` | 선택 사항* | 문자열 | 반환된 시리즈에 포함할 `ending_at` 전 최대 일수. 1에서 14 사이여야 합니다(포함). <br><br>* `length` 또는 `starting_at` 중 하나가 필요합니다. |
 | `include_variant_breakdown` | 선택 사항 | 부울 | 배리언트 통계를 포함할지 여부(기본값은 `false`).  |
 | `include_step_breakdown` | 선택 사항 | 부울 | 단계 통계를 포함할지 여부(기본값은 `false`). |
 | `include_deleted_step_data` | 선택 사항 | 부울 | 삭제된 단계에 대한 단계 통계를 포함할지 여부(기본값은 `false`). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
 {% raw %}
 ```
@@ -117,7 +117,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

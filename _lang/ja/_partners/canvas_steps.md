@@ -20,15 +20,18 @@ guide_featured_list:
 
 guide_menu_title: "Available sync partners"
 guide_menu_list:
+  - name: Criteo オーディエンスの同期
+    link: /docs/partners/canvas_steps/criteo_audience_sync
+    image: /assets/img/braze_icons/lightning-01.svg
   - name: Facebookオーディエンス同期
     link: /docs/partners/canvas_steps/facebook_audience_sync
     image: /assets/img/braze_icons/facebook.svg
   - name: Google オーディエンスの同期
     link: /docs/partners/canvas_steps/google_audience_sync
     image: /assets/img/braze_icons/google.svg
-  - name: Criteo オーディエンスの同期
-    link: /docs/partners/canvas_steps/criteo_audience_sync
-    image: /assets/img/braze_icons/lightning-01.svg
+  - name: LinkedIn オーディエンス同期
+    link: /docs/partners/canvas_steps/linkedin_audience_sync
+    image: /assets/img/braze_icons/linkedin.svg
   - name: Pinterestオーディエンス同期
     link: /docs/partners/canvas_steps/pinterest_audience_sync
     image: /assets/img/braze_icons/pinterest.svg

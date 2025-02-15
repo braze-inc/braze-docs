@@ -21,7 +21,7 @@ optilyzとBrazeのウェブフック統合を使用して、手紙、はがき�
 |optilyzアカウント | このパートナーシップを活用するには、optilyz アカウントが必要です。 |
 | optilyz APIキー<br><br>`<OPTILYZ_API_KEY>`| optilyz API キーは optilyz カスタマーサクセスマネージャーから提供されます。<br><br>このAPIキーでBrazeとoptilyzのアカウントを接続できる。 |
 | optilyzオートメーションID<br><br>`<OPTILYZ_AUTOMATION_ID>` | オートメーションIDは、ページヘッダーのボックスに記載されている。<br><br>optilyz にログインしたら、データの送信先のオートメーションに移動できます。<br>最初にオートメーションをアクティブにする必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## ユースケース
 
@@ -50,7 +50,7 @@ optilyz と統合するには、[optilyz API][2] を使用して受信者デー�
 
 #### リクエストヘッダと方法
 
-optilyz には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、\[**設定**] タブで `<OPTILYZ_API_KEY>` を optilyz API キーに置き換える必要があります。このキーの直後に「:」が付加されており、またこのキーは64進数でエンコードされている必要があります。 
+optilyz には、認証用の HTTP ヘッダーと HTTP メソッドが必要です。以下の内容はすでにキーと値のペアとしてテンプレートに含まれていますが、[**設定**] タブで `<OPTILYZ_API_KEY>` を optilyz API キーに置き換える必要があります。このキーの直後に「:」が付加されており、またこのキーは64進数でエンコードされている必要があります。 
 
 - **HTTPメソッド**：POST
 - **リクエストヘッダー**:

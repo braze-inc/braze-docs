@@ -31,7 +31,7 @@ description: "이 문서에서는 콘텐츠 블록 정보 보기 Braze 엔드포
 |---|---|---|---|
 | `content_block_id`  | 필수 | 문자열 | 콘텐츠 블록 식별자입니다. <br><br>API 호출을 통해 콘텐츠 블록 정보를 나열하거나 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지로 이동한 다음 하단으로 스크롤하여 콘텐츠 블록 API 식별자를 검색하면 이 정보를 찾을 수 있습니다.|
 | `include_inclusion_data`  | 선택 사항 | 부울 | `true` 로 설정하면 API는 이 콘텐츠 블록이 포함된 캠페인 및 캔버스의 메시지 변형 API 식별자를 반환하여 후속 호출에서 사용할 수 있습니다.  결과에는 보관되거나 삭제된 캠페인 또는 캔버스가 제외됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 {% raw %}
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Content Block ID is invalid for this workspace` | 이 콘텐츠 블록이 존재하지 않거나 다른 회사 계정 또는 워크스페이스에 있습니다. |
 | `Content Block has been deleted—content not available` | 이 콘텐츠 블록은 이전에 존재했을 수 있지만 삭제되었습니다. |
 | `Include Inclusion Data—error` | 이 매개변수는 부울 값(참 또는 거짓)만 허용합니다. `include_inclusion_data` 값이 따옴표(`""`)로 묶이지 않았는지 확인하여 값이 문자열로 대신 전송되도록 합니다. 자세한 내용은 [요청 매개변수를](#request-parameters) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

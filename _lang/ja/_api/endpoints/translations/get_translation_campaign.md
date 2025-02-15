@@ -18,12 +18,12 @@ description: "この記事では、「キャンペーンの翻訳を表示」エ
 > このエンドポイントを使用して、翻訳されたキャンペーンメッセージを表示し、このメッセージがユーザーにとってどのように見えるかを確認する。
 
 {% alert important %}
-API 経由で翻訳されたキャンペーンメッセージを表示することは、現在、早期アクセスの段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
+API 経由で翻訳されたキャンペーンメッセージを表示することは、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.translations.get` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.translations.get`の権限が必要です。
 
 ## レート制限
 
@@ -31,13 +31,14 @@ API 経由で翻訳されたキャンペーンメッセージを表示するこ�
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| 必須 | string | キャンペーンのID。 |
-|`message_variation_id`| 必須 | string | メッセージバリエーションのID。 |
-|`locale_id`| 必須 | string | ロケールのID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`campaign_id`| 必須 | 文字列 | キャンペーンのID。 |
+|`message_variation_id`| 必須 | 文字列 | メッセージバリエーションのID。 |
+|`locale_id`| 必須 | 文字列 | ロケールのID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
 
 ## リクエスト例
 
@@ -49,7 +50,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translatio
 
 ## 応答
 
-このエンドポイントには、`200`、`400`、`404`、`429`という4つのステータスコードの応答があります。
+このエンドポイントには、`200`、`400`、`404`、`429` という 4 つのステータスコードの応答があります。
 
 ## 成功応答の例
 
@@ -99,11 +100,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `INVALID_CAMPAIGN_ID`                   | キャンペーン ID が翻訳するキャンペーンと一致していることを確認します。                   |
 | `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
 | `INVALID_MESSAGE_VARIATION_ID`          | メッセージIDが正しいことを確認する。                                                |
-| `MESSAGE_NOT_FOUND`                     | 翻訳するメッセージを確認します。                                           |
+| `MESSAGE_NOT_FOUND`                     | メッセージが翻訳されていることを確認します。                                           |
 | `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | メールキャンペーンまたはメールが含まれているキャンバスメッセージのみを翻訳できます。             |
 | `UNSUPPORTED_CHANNEL`                   | メールキャンペーン内のメッセージ、またはメールが含まれているキャンバスメッセージのみを翻訳できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -5,8 +5,8 @@ page_order: 2
 alias: /in-app_messages/
 layout: dev_guide
 guide_top_header: "アプリ内メッセージ"
-guide_top_text: "インアプリメッセージは、プッシュ通知で日々を中断することなく、ユーザーに内容を取得するのに役立ちます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスを向上させ、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。"
-description: "このランディングページはアプリ内メッセージのすべてのもののホームページです。ここでは、アプリ内メッセージ s の作成方法、ドラッグアンドドロップエディタ、メッセージのカスタマイズ方法、レポート方法などについて説明します。"
+guide_top_text: "アプリ内メッセージを使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスを向上させ、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。"
+description: "このランディングページには、アプリ内メッセージに関するすべての情報がまとめられています。 ここには、アプリ内メッセージの作成方法、ドラッグ＆ドロップエディター、メッセージのカスタマイズ方法、レポートなどに関する記事があります。"
 channel:
   - in-app messages
 search_rank: 5
@@ -39,7 +39,7 @@ guide_menu_list:
 - name: "App Store評価プロンプト"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
   image: /assets/img/braze_icons/star-01.svg
-- name: "簡易調査"
+- name: "シンプルな調査"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   image: /assets/img/braze_icons/bar-chart-07.svg
 - name: "ベストプラクティス"

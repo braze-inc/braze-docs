@@ -14,7 +14,7 @@ guide_top_text: "このランディングページには、プッシュストー
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: "プッシュ・アクション・ボタン"
+- name: "プッシュアクションボタン"
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
   image: /assets/img/braze_icons/target-05.svg
 - name: "プッシュ通知ストーリー"

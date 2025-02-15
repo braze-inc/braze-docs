@@ -11,23 +11,23 @@ tool:
 
 # 収益および総収益データのエクスポート
 
-> ダッシュボードの \[[収益レポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/revenue_report/)] ページでは、特定の期間の収益、特定の製品の収益、およびアプリの総収益のデータを確認できます。
+> このページでは、ダッシュボードの[Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/revenue_report/) ページについて説明します。ここでは、特定の期間の収益、特定の製品収益、およびアプリの総収益に関するデータを表示できます。
 
-**収益レポート**は \[**分析**] の下にあります。
+**収益レポート**は [**分析**] の下にあります。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**収益**] は \[**データ**] の下にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Revenue** は**Data** にあります。
 {% endalert %}
 
 {% alert tip %}
 収益データを取得する他の方法を探している場合は、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)として、キャンペーンやキャンバスに (製品購入に加えて) 購入行動を追加してみてください。
 {% endalert %}
 
-収益データをエクスポートするには、\[**経時的なパフォーマンス**] の<i class="fas fa-bars" title="[チャート] のコンテキストメニュー"></i>をクリックして、エクスポートオプションを選択します。
+収益データをエクスポートするには、**Performance Over Time**グラフの<i class="fas fa-bars" title="チャートコンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。
 
 ## パフォーマンス経時グラフ
 
-\[**経時的なパフォーマンス**] グラフから、以下のデータにアクセスできます。
+以下のデータは、**Performance Over Time** グラフで表示できます。
 
 - KPI 式
 - 購入
@@ -43,10 +43,12 @@ tool:
 
 ## 総収益
 
-\[[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)] または \[[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)] のページで、ケースバイケースでの収益を確認できます。総収益の統計値は、キャンペーンの 1 次コンバージョン期間内に購入を行ったキャンペーン受信者から生成されます。
+[[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)] または [[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)] のページで、ケースバイケースでの収益を確認できます。 
+
+{% multi_lang_include metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
-収益レポートは API 経由でエクスポートできません。CSV のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+収益レポートをAPI 経由でエクスポートすることはできません。CSV のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% comment %}
@@ -60,11 +62,11 @@ tool:
 - [ユニーク直接購入数][4]
 - [受信者あたりの収益][5]
 
-これらの指標は最終クリックのアトリビューションに基づきます。つまり、収益がキャンペーンに起因するには、そのキャンペーンは次の要件を満たす必要があります。
+これらのメトリクスは、最後のクリック属性に基づいています。つまり、収益は、そのキャンペーンの場合はキャンペーンに帰属されます。
 
-1. ユーザーが購入前にクリックした最後のキャンペーンである
-    <br>**かつ**<br>
-2. 購入前 3 日以内にユーザーがクリックする
+1. 購入前にユーザが最後にクリックしたキャンペーン
+    <br>**および**<br>
+2. 購入前3日以内にユーザがクリックした
 
 {% endcomment %}
 

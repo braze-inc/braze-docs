@@ -25,6 +25,7 @@ Braze のクラウドデータ取り込み (CDI) では、データウェアハ�
    - Amazon Redshift
    - Databricks 
    - Google BigQuery
+   - Microsoft Fabric
    - Snowflake
 
 - ファイルストレージソース 
@@ -180,7 +181,7 @@ FROM EXAMPLE_DATA;
 | 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
 | 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
 | 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 同期が実行され、Braze により「2023-03-16 15:00:00」まで利用可能なすべてのデータを同期したと記録されます。次に、2 日目の朝に ETL が実行され、ユーザーテーブルの一部のフィールドが更新されます(強調表示)。
 
@@ -247,7 +248,7 @@ FROM EXAMPLE_DATA;
 | 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
 | 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
 | 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 CDI は新しい行だけを同期するので、次に実行される同期では最後の 5 行のみが同期されます。
 
@@ -338,7 +339,7 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 
 ## データポイント使用量
 
-クラウドデータ取り込みのデータポイント請求は、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) を介した更新の請求に相当します。詳細については、[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)を参照してください。 
+クラウドデータ取り込みのデータポイント請求は、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) を介した更新の請求に相当します。詳細については、「[データポイント]({{site.baseurl}}/user_guide/data_and_analytics/data_points/)」を参照してください。 
 
 {% alert important %}
 Braze のクラウドデータ取り込みは利用可能なレート制限で考慮されるため、別の方法でデータを送信する場合、レート制限は Braze API とクラウドデータ取り込みの和になります。
@@ -352,17 +353,43 @@ Braze のクラウドデータ取り込みは利用可能なレート制限で�
 
 CDI を使用したデータポイントの消費は、REST API や SDK などの他の取り込み方法と同じであるため、ソーステーブルに新規の属性または更新された属性のみを追加するかどうかはお客様次第です。
 
-### UPDATED_AT 列で UTC タイムスタンプを使用する
+### `UPDATED_AT`列にUTCタイムスタンプを使用します
 
 夏時間に関する問題を防ぐために、`UPDATED_AT` 列は UTC にする必要があります。できる限り、`CURRENT_DATE()` ではなく `SYSDATE()` など、UTC のみの関数を優先します。
 
-### EXTERNAL_ID を PAYLOAD 列から分離する
+### `UPDATED_AT` の時刻が同期と同じでないことを確認します
 
-PAYLOADオブジェクトには、external IDまたは他のIDタイプを含めないでください。 
+`UPDATED_AT` フィールドが前回の同期とまったく同じ時刻にある場合、CDI 同期に重複データがある可能性があります。これは、CDI は以前の同期と同じ時刻の行を検出すると「包含境界」を選択し、それらの行を同期可能にするためです。CDI はこれらの行を再度取り込み、重複データを作成します。 
+
+### `EXTERNAL_ID` を`PAYLOAD` カラムから分離します
+
+`PAYLOAD` オブジェクトには、external IDまたは他のIDタイプを含めないでください。 
 
 ### 属性を削除する
 
-ある属性をユーザープロファイルから完全に削除する場合は、`null` に設定できます。属性を変更せずに残す場合は、更新されるまで Braze に送信しないでください。
+ユーザーのプロファイルから属性を省略する場合は、`null` に設定できます。属性を変更せずに残す場合は、更新されるまで Braze に送信しないでください。属性を完全に削除するには、`TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))` を使用します。
+
+### 増分更新を行う
+
+データのインクリメンタル更新を行うことで、同時更新時の意図しない上書きを防ぐことができます。
+
+次の例では、ユーザーに2 つの属性があります。
+- 色:"グリーン&クォート;
+- サイズ:「大」
+
+次に、Braze は、そのユーザに対して次の2 つの更新を同時に受信します。
+- リクエスト1:色を「赤」に変更する
+- リクエスト2:サイズを「中」に変更する
+
+Request 1 が最初に発生するため、ユーザーの属性は次のように更新されます。
+- 色:「赤」
+- サイズ:「大」
+
+ただし、リクエスト2が発生すると、Braze は元の属性値 (「グリーン」および「大」) で開始し、ユーザーの属性を次のように更新します。
+- 色:"グリーン&クォート;
+- サイズ:「中」
+
+リクエストが終了すると、リクエスト2によりリクエスト1の更新が上書きされます。このため、更新をずらしてリクエストが上書きされないようにすることをお勧めします。
 
 ### 別のテーブルから JSON 文字列を作成する
 
@@ -455,9 +482,30 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE TABLE [braze].[users] (
+    attribute_1 VARCHAR,
+    attribute_2 VARCHAR,
+    attribute_3 VARCHAR,
+    attribute_4 VARCHAR,
+    user_id VARCHAR
+)
+GO
+
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    user_id as EXTERNAL_ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[users] ;
+```
+{% endtab %}
+
 {% endtabs %}
 
-### UPDATED_AT タイムスタンプの使用
+### `UPDATED_AT` タイムスタンプを使用する
 
 Braze に正常に同期されたデータの追跡には、`UPDATED_AT` タイムスタンプを使用します。同期の実行中に同じタイムスタンプを持つ多くの行が書き込まれると、データが重複して Braze に同期される可能性があります。データの重複を回避するための推奨事項をいくつか示します。
 - 同期を`VIEW`に対して設定している場合、`CURRENT_TIMESTAMP`をデフォルト値として使用しないでください。使用すると、同期が実行されるたびにすべてのデータが同期されます。これは、`UPDATED_AT` フィールドの評価結果がクエリの実行時間になるためです。 
@@ -560,7 +608,7 @@ Braze に正常に同期されたデータの追跡には、`UPDATED_AT` タイ�
 
 ### データウェアハウスのクエリのタイムアウトを回避する
 
-最適なパフォーマンスを実現し、潜在的なエラーを回避するために、クエリは 1 時間以内に完了することをお勧めします。クエリがこの時間枠を超える場合は、データウェアハウスの構成を見直すことを検討してください。倉庫に割り当てられたリソースを最適化することで、クエリ実行速度を向上させることができます。 
+最適なパフォーマンスを実現し、潜在的なエラーを回避するために、クエリは 1 時間以内に完了することをお勧めします。クエリがこの時間枠を超える場合は、データウェアハウスの構成を見直すことを検討してください。倉庫に割り当てられたリソースを最適化することで、クエリ実行速度を向上させることができます。
 
 ## 製品の制限事項
 
@@ -573,6 +621,6 @@ Braze に正常に同期されたデータの追跡には、`UPDATED_AT` タイ�
 | データタイプ              | クラウドデータ取り込みを通じて、ユーザー属性、イベント、および購入を同期できます。                                                                                                  |
 | Braze リージョン           | この商品はすべての Braze リージョンで利用可能です。任意の Braze リージョンを任意のソースデータリージョンに接続できます。                                                                              |
 | ソースリージョン       | Braze は、あらゆるリージョンまたはクラウドプロバイダーのデータウェアハウスやクラウド環境に接続できます。                                                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <br><br>

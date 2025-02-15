@@ -27,11 +27,12 @@ description: "この参考記事では、イベント・オブジェクトとは
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
@@ -43,9 +44,9 @@ description: "この参考記事では、イベント・オブジェクトとは
 }
 ```
 
-- [外部ユーザー ID]({{site.baseurl}}/api/basics/#user-ids)
+- [外部ユーザ ID]({{site.baseurl}}/api/basics/#user-ids)
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 タイムコード ウィキ][22]
+- [ISO 8601タイムコード][22]
 
 #### 既存のプロファイルのみを更新する
 
@@ -56,19 +57,19 @@ Braze で既存のユーザープロファイルのみを更新したい場合�
 {% endalert %}
 
 ## イベント・プロパティ・オブジェクト
-カスタムイベントと購入は、イベントプロパティを持つことができます。プロパティ」の値は、キーがプロパティ名、値がプロパティ値であるオブジェクトでなければならない。プロパティ名は、255文字以下の空でない文字列でなければならず、先頭にドル記号（$）は付けない。
+カスタムイベントと購入にはイベントプロパティが含まれる場合があります。「プロパティ」値は、キーがプロパティ名で値がプロパティ値であるオブジェクトである必要があります。プロパティ名は、255文字以下の空でない文字列でなければならず、先頭にドル記号（$）は付けない。
 
 プロパティ値は、次のデータ型のいずれでもかまいません。
 
 | データ型 | 説明 |
 | --- | --- |
 | 数値 | [整数](https://en.wikipedia.org/wiki/Integer)または[浮動小数点数として](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| ブール値 |  |
-| 日付 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としてフォーマットされる。アレイ内ではサポートされていない。 |
-| 文字列 | 255文字以下。 |
+| ブール値 | `true` または `false` |
+| 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としてフォーマットされる。アレイ内ではサポートされていない。 |
+| 文字列 | 255 文字以下。 |
 | 配列 | 配列に日時を含めることはできない。 |
-| オブジェクト | オブジェクトは文字列として取り込まれる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| オブジェクト | オブジェクトは文字列として取り込まれます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 100 KB のイベントプロパティペイロードを設定できます。
 
@@ -108,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 タイムコード ウィキ][19]
+- [ISO 8601 時間コード Wiki][19]
 
 ## イベント・オブジェクト
 
@@ -122,5 +123,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコード ウィキ"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコード"
+[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 時間コード"
 [23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

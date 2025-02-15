@@ -18,20 +18,20 @@ description: "この記事では、エクスポートカスタムイベントBra
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)に`events.get`の権限が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`events.get`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='events' %}
 
-## クエリパラメータ
+## クエリーパラメーター
 
 このエンドポイントへの各呼び出しは50のイベントを返すことに注意してください。50を超えるイベントについては、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
 | パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | string | カスタムイベントのページネーションを決定します。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | カスタムイベントのページネーションを決定します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -71,12 +71,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### 致命的なエラー応答コード {#fatal-export}
+### 致命的なエラーの応答コード {#fatal-export}
 
-ステータスコードと、リクエストが致命的なエラーに遭遇した場合に返される関連エラーメッセージについては、[致命的なエラー]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+リクエストが致命的なエラーに遭遇した場合に返されるステータスコードと関連するエラーメッセージについては、[致命的なエラー]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
-CSVおよびAPIエクスポートのヘルプについては、[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

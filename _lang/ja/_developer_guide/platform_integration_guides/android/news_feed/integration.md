@@ -15,21 +15,19 @@ channel:
 
 > このリファレンス記事では、さまざまなニュースフィードカードの種類、利用可能なカード固有のプロパティ、Android または FireOS アプリケーションのカスタム統合例について説明します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-Android では、ニュースフィードは Braze Android UI プロジェクトで使用可能な[フラグメント][2]として実装されます。アクティビティにフラグメントを追加する方法については、[フラグメントに関する Google のドキュメント][3]を参照してください。
+Android では、ニュースフィードは Braze Android UI プロジェクトで使用可能な[フラグメント](http://developer.android.com/guide/components/fragments.html)として実装されます。フラグメントをアクティビティに追加する方法については、[フラグメントに関するGoogleのドキュメント](https://developer.android.com/guide/fragments#Adding "Androidドキュメント:フラグメント")を参照してください。
 
 `BrazeFeedFragment` クラスは、ニュースフィードの内容を自動的に更新して表示し、使用状況分析をログに記録します。ユーザーのニュースフィードカードに表示できるカードは、Braze ダッシュボードで設定されます。
 
 ## カードのタイプ
 
-Braze には、バナー画像、キャプション付き画像、テキストアナウンス、ショートニュースの 5 種類のユニークなカードタイプがあります。各型はベースモデルから共通のプロパティを継承し、以下の追加プロパティを持ちます。
+Braze には、バナー画像、キャプション付き画像、テキストアナウンス、ショートニュースの 5 種類のユニークなカードタイプがあります。各タイプはベースモデルから共通のプロパティを継承し、次の追加プロパティを持ちます。
 
 ### ベースカードモデルのプロパティ
 
-[ベースカード][29]モデルは、すべてのカードの基本的な動作を規定します。  
+[ベースカード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)モデルは、すべてのカードの基本的な動作を規定します。  
 
 |プロパティ|説明|
 |---|---|
@@ -41,60 +39,60 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `getUpdated()` | Braze ダッシュボードでのカードの最終更新時刻の UNIX タイムスタンプを返します。 |
 | `getCategories()` | カードに割り当てられたカテゴリの一覧を返します。カテゴリなしのカードs には`ABKCardCategoryNoCategory` が割り当てられます。 |
 | `isInCategorySet(EnumSet)` | カードが指定されたカテゴリセットに属する場合に真を返します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### バナー画像カードのプロパティ
 
-[バナー画像カード][30]は、クリック可能なフルサイズの画像です。
+[バナー画像カード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html)は、クリック可能なフルサイズの画像です。
 
 |プロパティ|説明|
 |---|---|
-| `getImageUrl()` | カードの画像の URL を返します。 |
+| `getImageUrl()` | カードの画像のURLを返す。 |
 | `getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。 |
 | `getDomain()` | プロパティ URL のリンクテキストを返します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### キャプション付き画像カードのプロパティ
 
-[キャプション付き画像カード][31]はクリック可能なフルサイズの画像で、説明文が添えられています。
+[キャプション付き画像カード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html)はクリック可能なフルサイズの画像で、説明文が添えられています。
 
 |プロパティ|説明|
 |---|---|
-| `getImageUrl()` | カードの画像の URL を返します。 |
+| `getImageUrl()` | カードの画像のURLを返す。 |
 | `getTitle()` | カードのタイトルテキストを返します。 |
 | `getDescription()` | カードの本文を返します。 |
 | `getUrl()` | カードがクリックされた後に開かれる URL を返します。 HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。 |
-| `getDomain()` | プロパティ URL のリンクテキストを返します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `getDomain()` | プロパティ URL のリンクテキストを返す。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### テキスト通知カード (画像なしのキャプション付き画像) のプロパティ
 
-[テキスト通知カード][32]は、説明的なテキストを含んだクリック可能なカードです。
+[テキスト通知カード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html)は、説明的なテキストを含んだクリック可能なカードです。
 
 |プロパティ|説明|
 |---|---|
 | `getTitle()` | カードのタイトルテキストを返します。 |
 | `getDescription()` | カードの本文を返します。 |
 | `getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。 |
-| `getDomain()` | プロパティ URL のリンクテキストを返します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `getDomain()` | プロパティ URL のリンクテキストを返す。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### ショートニュースカードのプロパティ
 
-[ショートニュースカードは][33]、画像とそれに付随する説明文を含むクリック可能なカードです。
+[ショートニュースカードは](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html)、画像とそれに付随する説明文を含むクリック可能なカードです。
 
 |プロパティ|説明|
 |---|---|
-| `getImageUrl()` | カードの画像の URL を返します。 |
+| `getImageUrl()` | カードの画像のURLを返す。 |
 | `getTitle()` | カードのタイトルテキストを返します。 |
 | `getDescription()` | カードの本文を返します。 |
 | `getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。 |
-| `getDomain()` | プロパティ URL のリンクテキストを返します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `getDomain()` | プロパティ URL のリンクテキストを返す。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## セッション分析
 
-Android UI フラグメントでは、セッション分析は自動的に追跡されません。セッションが[正しく追跡][4]されるようにするには、アプリが開かれたときに `IBraze.openSession()` を呼び出します。
+Android UI フラグメントでは、セッション分析は自動的に追跡されません。セッションが[正しく追跡]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/)されるようにするには、アプリが開かれたときに `IBraze.openSession()` を呼び出します。
 
 ## リンク
 
@@ -138,23 +136,11 @@ Braze.getInstance(context).requestFeedRefresh();
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
-### パート 2:分析のロギング
+### パート 2:分析のログ記録
 
 カスタムビューを使用する場合、分析は Braze ビューを使用する場合にのみ自動的に処理されるため、分析を手動でログに記録する必要があります。
 
-フィードの表示をログに記録するには、[`Braze.logFeedDisplayed()`][6] を呼び出します。
+フィードの表示をログに記録するには、[`Braze.logFeedDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html) を呼び出します。
 
-インプレッションやカードのクリックをログに記録するには、それぞれ [`Card.logClick()`][7] または [`Card.logImpression()`][8] を呼び出します。
+インプレッションやカードのクリックをログに記録するには、それぞれ [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) または [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) を呼び出します。
 
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: https://developer.android.com/guide/fragments#Adding "Android ドキュメント: フラグメント"
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
-[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
-[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[33]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html

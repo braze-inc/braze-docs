@@ -23,7 +23,7 @@ channel:
 - `REST_API_ENDPOINT_URL` - Braze [インスタンス]({{site.baseurl}}/api/basics/#endpoints.にリストされています。ワークスペースがある Braze インスタンスに対応するエンドポイントを使用してください。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- \[**API キー**] は \[**開発者コンソール**] > \[**API 設定**] にあります。<br>\- \[**ユーザー検索**]は、\[**ユーザー**] > \[**ユーザー検索**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- [**API キー**] は [**開発者コンソール**] > [**API 設定**] にあります。<br>\- [**ユーザー検索**]は、[**ユーザー**] > [**ユーザー検索**] にあります。
 {% endalert %}
 
 省略可能なフィールド:
@@ -45,5 +45,3 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR-
 }' https://{REST_API_ENDPOINT_URL}/messages/send 
 ```
 
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

@@ -14,7 +14,7 @@ description: "이 문서에서는 캔버스 목록 내보내기 Braze 엔드포�
 /canvas/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 이름, 캔버스 API 식별자 및 관련 태그를 포함한 캔버스 목록을 내보낼 수 있습니다. 
+> 이 엔드포인트를 사용하여 이름, 캔버스 API 식별자 및 관련 태그를 포함한 캔버스 목록을 내보낼 수 있습니다.
 
 캔버스는 생성 시간별로 정렬된 100개 그룹으로 반환됩니다(기본적으로 가장 오래된 것부터 최신 것까지).
 
@@ -38,7 +38,7 @@ description: "이 문서에서는 캔버스 목록 내보내기 Braze 엔드포�
 | `include_archived` | 선택 사항 | 부울 | 보관된 캔버스를 포함할지 여부의 기본값은 `false` 입니다. |
 | `sort_direction` | 선택 사항 | 문자열 | \- 생성 시간을 최신에서 오래된 순으로 정렬: `desc` 값을 전달합니다.<br> \- 생성 시간을 가장 오래된 것부터 가장 최근 것 순으로 정렬: `asc` 값을 전달합니다. <br><br>`sort_direction` 이 포함되지 않은 경우 기본 순서는 가장 오래된 것부터 최신 것까지입니다. |
 | `last_edit.time[gt]` | 선택 사항 | 시간 | 결과를 필터링하여 지금까지 제공된 시간보다 더 많이 편집한 캔버스만 반환합니다. 형식은 `yyyy-MM-DDTHH:mm:ss` 입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

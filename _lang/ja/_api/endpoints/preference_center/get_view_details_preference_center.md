@@ -20,31 +20,32 @@ description: "この記事では、「ユーザー設定センターの詳細を
 
 ## 前提条件
 
-このエンドポイントを使用するには、`preference_center.get` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`preference_center.get`の権限が必要です。
 
 ## レート制限
 
 このエンドポイントには、1 分あたり、ワークスペース あたり、レート制限 1,000 のリクエストがあります。
 
-## パスパラメータ
+## パスパラメーター
 
 | パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| 必須 | string | ユーザー設定センターの ID。 |
+|`preferenceCenterExternalID`| 必須 | 文字列 | ユーザー設定センターの ID。 |
+{: role="presentation" }
 
 ## リクエストパラメーター
 
 このエンドポイントのリクエストパラメータはありません。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/preference_center_external_id \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## 応答 
-```json 
+## 応答
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

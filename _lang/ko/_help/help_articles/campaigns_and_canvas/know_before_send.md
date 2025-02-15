@@ -1,6 +1,6 @@
 ---
-nav_title: 보내기 전에 알아두세요
-article_title: 보내기 전에 알아두세요
+nav_title: 보내기 전에 알아두어야 할 사항
+article_title: 보내기 전에 알아두어야 할 사항
 description: "사전 출시 가이드를 방문한 후, 콘텐츠 카드, 이메일, 인앱 메시지, 푸시 및 SMS에 대한 최종 확인 목록 또는 '주의 사항'을 참조하세요."
 alias: /know_before_send/
 

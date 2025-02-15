@@ -128,7 +128,7 @@ $(document).ready(function() {
     if ((site_language != 'en') && (card_url.indexOf(`/docs/${site_language}/`) < 0)) {
       card_url = card_url.replace('/docs/',`/docs/${site_language}/`);
     }
-    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).addClass('logo');
+    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).attr('alt',cur_partner['partner_name'] + ' image').addClass('logo');
     var card_title = '';
     if (title) {
       card_title = $('<h5>').html('(' + title + ')');
@@ -137,7 +137,7 @@ $(document).ready(function() {
         }
     }
 
-    var card_speciality =  $('<h6>').html((cur_partner['partner_specialties'] || []).join(' '));
+    var card_speciality =  cur_partner['partner_specialties'] ? $('<h6>').html((cur_partner['partner_specialties'] || []).join(' ')) : null;
     var card_content =  $('<div>').addClass('hover_content').append($('<p>').html(cur_partner['partner_description']));
 
     var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_speciality).append(card_content);
@@ -200,10 +200,10 @@ $(document).ready(function() {
              var toappend = true;
              var filtered = true;
              for (var k = 0 ; k < filter_select.length; k++ ) {
-               var selected_val = $('#' + filter_select[k] +  " option:selected").val();
+             var selected_val = $('#' + filter_select[k] +  " option:selected").val();
                if (selected_val) {
                  toappend = false;
-                 if (cur_partner[filter_map[k]].indexOf(selected_val) < 0 ) {
+                 if ((cur_partner[filter_map[k]] || []).indexOf(selected_val) < 0 ) {
                    filtered = false;
                  }
                }
@@ -305,21 +305,24 @@ $(document).ready(function() {
 
       <div id="partner_filter">
         <div class="partner_filter_div">
-          <input id="partner_search" type="search" placeholder="Search" aria-label="Partner Search"></div>
+          <label for="partner_search">&#8205;<input id="partner_search" type="search" placeholder="Search" aria-label="Partner Search"></label></div>
         <div class="partner_filter_div">
-          <select id="partner_category" class="select" aria-label="Partner Category">
+          <label for="partner_category">&#8205;<select id="partner_category" class="select" aria-label="Partner Category">
             <option value="">All Categories</option>
           </select>
+          </label>
         </div>
         <div class="partner_filter_div">
-          <select id="partner_specialty" class="select" aria-label="Partner Speciality">
+          <label for="partner_specialty">&#8205;<select id="partner_specialty" class="select" aria-label="Partner Speciality">
             <option value="">All Specialties</option>
           </select>
+          </label>
         </div>
         <div class="partner_filter_div">
-          <select id="partner_solutions" class="select" aria-label="Partner Solutions">
+          <label for="partner_solutions">&#8205;<select id="partner_solutions" class="select" aria-label="Partner Solutions">
             <option value="">All Solutions</option>
           </select>
+          </label>
         </div>
       </div>
     </fieldset>

@@ -6,11 +6,11 @@ description: "この参考記事では、コネクテッド・コンテンツに
 
 ---
 
-# 接続されたコンテンツを中止する {#aborting-connected-content}
+# コネクテッドコンテンツの中止{#aborting-connected-content}
 
-> リキッドテンプレートを使えば、条件付きロジックでメッセージを中止するオプションがある。 
+> Liquid テンプレートを使用すると、条件付きロジックでメッセージを中止できます。 
 
-以下の例では、`connected.recommendations.size < 5` と`connected.foo.bar == nil` という条件式が、メッセージを中断させる状況を指定している。
+次の例では、条件 `connected.recommendations.size < 5` および `connected.foo.bar == nil` でメッセージを中止する状況を指定します。
 
 {% raw %}
 ```
@@ -21,7 +21,7 @@ description: "この参考記事では、コネクテッド・コンテンツに
 ```
 {% endraw %}
 
-中止の理由を指定することもでき、その理由は[メッセージアクティビティログに]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)保存される。この中止理由は文字列でなければならず、リキッドを含むことはできない。
+中止の理由も指定することができ、その理由は[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)に保存されます。この中止理由は文字列でなければならず、リキッドを含むことはできない。
 
 {% raw %}
 `{% abort_message('Could not get enough recommendations') %}`

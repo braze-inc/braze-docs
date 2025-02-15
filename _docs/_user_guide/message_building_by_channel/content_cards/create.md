@@ -23,18 +23,16 @@ Not sure whether your message should be sent with a campaign or a Canvas? Campai
 {% tabs %}
 {% tab Campaign %}
 
-**Steps:**
-
-1. Go to **Messaging** > **Campaigns** and select <i class="fas fa-plus"></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
 
 {:start="2"}
-2. Select **Content Cards** or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+2. Select **Content Cards** or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by the relevant tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by the relevant tags.
 5. Add and name as many variants as you like for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -44,15 +42,13 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% tab Canvas %}
 
-**Steps:**
-
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After setting up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
 3. Select **Content Cards** as your messaging channel.
 4. Choose when Braze calculates audience eligibility and personalization for the Content Card. This can be at step entry or at first impression (recommended). Steps containing Content Cards can be scheduled or action-based.
 5. Choose whether to remove Content Cards when users complete a purchase or perform a custom event.
 6. Set an expiration for the Content Card (time in feed). This can be after a duration of time or at a specific time.
-7. Filter your audience, or the receipients, for this step as necessary in the **Delivery Settings**. You can further refine your audience by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+7. Filter your audience, or the recipients, for this step as necessary in the **Delivery Settings**. You can further refine your audience by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 8. Choose any other messaging channels that you want to pair with your message.
 
 {% endtab %}
@@ -60,30 +56,34 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Specify your message types
 
-Select one of three essential Content Card types: Classic, Captioned Image, and Image Only. 
+Select one of three essential Content Card types: **Classic**, **Captioned Image**, and **Image Only**. 
 
 To learn more about the expected behavior and look of each type, refer to [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or check out the links in the following table. These Content Card types are accepted by both mobile apps and web applications.
 
 | Message Type | Example | Description |
 |---|---|---|
-|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Classic Content Card]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
-|[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Captioned Content Card]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
-|[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Image Only Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
+|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
+|[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![A Captioned Content Card with a image of a weightlifter and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
+|[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![An Image Only Content Card with text only.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Step 3: Compose a Content Card
 
 You can edit all aspects of your message's content and behavior in the **Compose** tab of the message editor.
 
-![Sample Content Card details in the Compose tab of the message editor][24]
+![Sample Content Card details in the Compose tab of the message editor.][24]
 
 The content here varies based on the **Card Type** chosen in the previous step, but may include any of the following options:
 
 #### Language
 
-Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported][18].
 
 ![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.][2]{: style="max-width:70%;"}
+
+##### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Title and message
 
@@ -109,8 +109,8 @@ The following actions are available to take for Content Card links:
 |---|---|
 | Redirect to Web URL | Open a non-native web page. |
 | [Deep Link into App]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Deep link into an existing screen in your app. |
-| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another Content Card or trigger additional messaging. |
-| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
+| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) to trigger. Can be used to display another Content Card or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) to set for the current user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 **Note**: The __Log Custom Event__ and __Log Custom Attribute__ options require the following SDK Version compatibility:
@@ -121,11 +121,15 @@ The following actions are available to take for Content Card links:
 Content Card message fields are limited to 2&nbsp;KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key-Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}
 
+{% alert warning %}
+Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this 250 card limit, meaning a high number of dismissed cards can reduce the space available for new ones.
+{% endalert %}
+
 ## Step 4: Configure additional settings (optional)
 
 You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
 
-To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
+To add key-value pairs to your message, go to the **Settings** tab and select **Add New Pair**.
 
 ## Step 5: Build the remainder of your campaign or Canvas
 
@@ -141,7 +145,7 @@ Content Cards can be delivered based on a scheduled time, an action, or an API t
 You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) and determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
 
 {% alert note %}
-Frequency Capping doesn't apply to Content Cards.
+Frequency capping doesn't apply to Content Cards.
 {% endalert %}
 
 ##### Scheduled delivery
@@ -181,18 +185,18 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
 
-If you need to remove old cards, you must first stop the campaign. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you want to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
+If you need to remove old cards, you must first stop the campaign. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. 
+
+If you want to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
 ![Dialog for confirming Content Card deactivation][25]{: style="max-width:75%" }
 
 {% alert tip %}
-Do you want your Content Cards to seem like they're lasting longer than the 30-day max? One way to accomplish this is to:
+Do you want your Content Cards to seem like they're lasting longer than the 30-day max? One way to accomplish this is to do the following:<br><br>
 
 1. Set the duration of the Content Card for 30 days.
 2. Set the campaign re-eligibility to 30 days.
 3. Set the campaign to trigger on "Session Start."
-
-Voila!
 {% endalert %}
 
 ### Card removal events {#action-based-card-removal}
@@ -205,7 +209,7 @@ Within a campaign or Canvas message, you can optionally add a **Removal Event** 
 You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
 {% endalert %}
 
-![Content Card Removal Conditions panel with Content Card Removal Event option]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Content Card Removal Conditions panel with Content Card Removal Event option.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ### Updating launched cards
 

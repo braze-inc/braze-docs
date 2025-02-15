@@ -42,17 +42,17 @@ dependencies {
 }
 ```
 
-次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、\[Braze Android SDK リリース][60] にアクセスしてください。
+次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、[[Braze Android SDK リリース](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)] にアクセスしてください。
 
-![Android Studioが「build.gradle」を表示しています。このスクリーンショットでは、依存関係のコードがファイルの下部に追加されています。][32]
+!["build.gradle" を表示するAndroid studio。ファイルの末尾に依存コードが追加されます。]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Gradle 同期を実行する
 
 Gradle 同期を実行してプロジェクトをビルドし、[依存関係の追加](#add-braze-dependency)を組み込んでください。
 
-![Android Studioがアプリケーションの上部にバナーとボタンを表示して、「Gradleファイルが最後のプロジェクト同期以降に変更されました」と表示しています。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。][38]
+![Android Studio のバナーで、次のように記述されています。「前回のプロジェクトの同期以降、Gradle ファイルが変更されました。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。"]({% image_buster /assets/img_archive/androidstudio3.png %})
 
-## ステップ2:braze.xmlでBraze SDKを構成する
+## ステップ 2:braze.xmlでBraze SDKを構成する
 
 {% alert note %}
 2019 年 12 月をもって、カスタムエンドポイントは提供されなくなりました。既存のカスタムエンドポイントがある場合は、それを引き続き使用できます。詳細については、<a href="{{site.baseurl}}/api/basics/#endpoints">利用可能なエンドポイントのリスト</a>を参照してください。
@@ -60,7 +60,7 @@ Gradle 同期を実行してプロジェクトをビルドし、[依存関係の
 
 ライブラリーが統合されたので、次に `braze.xml` ファイルをプロジェクトの `res/values` フォルダーに作成する必要があります。特定のデータクラスターを使用している場合、または既存のカスタムエンドポイントがある場合は、`braze.xml` ファイルでもエンドポイントを指定する必要があります。 
 
-ファイルの内容は、次のコードスニペットのようになります。Braze ダッシュボードの \[**設定の管理**] ページにある識別子で `YOUR_APP_IDENTIFIER_API_KEY` を置き換えてください。[dashboard.braze.com](https://dashboard.braze.com)にログインして、[クラスターアドレス][1]を見つけてください。 
+ファイルの内容は、次のコードスニペットのようになります。Braze ダッシュボードの [**設定の管理**] ページにある識別子で `YOUR_APP_IDENTIFIER_API_KEY` を置き換えてください。[dashboard.braze.com](https://dashboard.braze.com)にログインして、[クラスターアドレス]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)を見つけてください。 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -79,14 +79,14 @@ API キーを追加したので、次の権限を `AndroidManifest.xml` に追�
 ```
 
 {% alert note %}
-Android M のリリースにより、Android はインストール時権限モデルからランタイム権限モデルに切り替わりました。ただし、これらの権限はどちらも通常の権限であり、アプリのマニフェストにリストされている場合は自動的に付与されます。詳細については、Android の \[権限ドキュメント][46] をご覧ください。
+Android M のリリースにより、Android はインストール時権限モデルから実行時権限モデルに切り替わりました。ただし、これらの権限はどちらも通常の権限であり、アプリのマニフェストにリストされている場合は自動的に付与されます。詳細については、Android の[権限に関するドキュメント](https://developer.android.com/training/permissions/index.html)を参照してください。
 {% endalert %}
 
-## ステップ4: Android でユーザーセッションを追跡する
+## ステップ 4:Android でユーザーセッションを追跡する
 
 ### アクティビティライフサイクルコールバックの統合
 
-`openSession()`、`closeSession()`、\[`ensureSubscribedToInAppMessageEvents()`][64]、および `InAppMessageManager` 登録の呼び出しは、オプションで自動的に処理されます。
+`openSession()`、`closeSession()`、[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)、および `InAppMessageManager` 登録の呼び出しは、オプションで自動的に処理されます。
 
 #### アクティビティライフサイクルコールバックを登録する
 
@@ -120,9 +120,9 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-\[`BrazeActivityLifecycleCallbackListener`][63] で使用できるパラメーターの詳細については、SDK リファレンスドキュメントを参照してください。
+[[`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html)] で使用できるパラメーターの詳細については、SDK リファレンスドキュメントを参照してください。
 
-## ステップ5:位置情報の追跡を有効にする
+## ステップ5: 位置情報の追跡を有効にする
 
 Braze の位置情報収集機能を有効にする場合は、`com_braze_enable_location_collection` を含むように `braze.xml` ファイルを更新し、その値が `true` に設定されていることを確認します。
 
@@ -134,17 +134,9 @@ Braze の位置情報収集機能を有効にする場合は、`com_braze_enable
 Braze Android SDK バージョン3.6.0 以降、Braze の位置情報収集機能はデフォルトで無効になっています。
 {% endalert %}
 
-## SDK の統合が完了
+## SDK 統合の完了
 
 Braze は[アプリケーションから指定されたデータ]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/)を収集できるようになり、基本的な統合が完了しました。
 
 [カスタムイベントトラッキング]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)、[プッシュメッセージング]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)、[コンテンツカード]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)、および Braze 機能の完全なスイートを有効にするには、次の記事にアクセスしてください。
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
-[2]: {{site.baseurl}}/user_guide/introduction/
-[32]: {% image_buster /assets/img_archive/androidstudio2.png %}
-[38]: {% image_buster /assets/img_archive/androidstudio3.png %}
-[46]: https://developer.android.com/training/permissions/index.html
-[60]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-[63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html

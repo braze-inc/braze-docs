@@ -16,7 +16,7 @@ Braze recommends that you only send customer data that you intend to utilize on 
 - **Target** your audiences by building [audience segments]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Trigger** your messages with [action-based]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) or [API-triggered]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) delivery.
 - **Template** and personalize your messages with [Liquid conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
 
 This allows you to optimize the data you send to Braze and will streamline your ability to message your users while guaranteeing against tracking data points your team may not find helpful long-term. 
 
@@ -34,7 +34,9 @@ It's also important to understand your [active users]({{site.baseurl}}/user_guid
 
 ### Feature awareness
 
-If your goal is to draw your users toward a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][7] are generally less disruptive if a user doesn't wish to update immediately. Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
+If your goal is to draw your users toward a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][7] are generally less disruptive if a user doesn't wish to update immediately. 
+
+Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
 
 Persuading users to update their app or change how they use your app can be difficult, so let them know about all the benefits of the new version or features and how it will improve their experience with your app. 
 
@@ -60,10 +62,18 @@ To ensure higher ratings, ask your power users to review your app in the app sto
 - Has used these apps more than 10 times in the last 14 days
 - Has spent more than 50 dollars
 
-![][6]
+![An example of a segment that targets power users of an app.][6]
 
 Visiting the app store takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code. Our article on [data opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) has more information on ways to ensure your request agrees with users' workflow expectations.
 
+## Scheduling your campaigns
+
+When editing campaign schedules or audiences, note the following best practices:
+
+- **One-time schedule campaigns:** You can edit the campaign up until the scheduled send time.
+- **Recurring scheduled Campaigns:** You can edit the campaign up until the scheduled send time.
+- **Local send time campaigns:** Don't make edits 24 hours prior to the scheduled send time.
+- **Optimal send time campaigns:** Don't make edits 24 hours prior to midnight of the day the campaign is scheduled to send on.
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

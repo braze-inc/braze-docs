@@ -16,19 +16,19 @@ search_tag: Partner
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | トレジャーデータのアカウント | このパートナーシップを利用するには、[トレジャーデータ](https://www.treasuredata.com/)のアカウントが必要です。 |
-| Braze データインポートキー | これは、Braze ダッシュボードの \[**パートナー連携**] > \[**テクノロジーパートナー**] からキャプチャされます。その後 \[**Heap**] を選択します。 |
+| Braze データインポートキー | これは、Braze ダッシュボードの [**パートナー連携**] > [**テクノロジーパートナー**] からキャプチャされます。その後 [**Heap**] を選択します。 |
 | Braze REST エンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 | トレジャーデータの静的IPアドレス | トレジャーデータの静的 IP アドレスは、この統合のリンクのアクセスポイントおよびソースです。静的 IP アドレスを確認するには、トレジャーデータのカスタマーサクセス担当者またはトレジャーデータの技術サポートにご連絡ください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## データインポート統合
 
 ### ステップ1:Brazeデータインポートキーを取得する
 
-Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**トレジャーデータ** を選択します。ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成された後、新しいキーを作成するか、既存のキーを無効にすることができます。
+Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**トレジャーデータ** を選択します。ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。
 
 ### ステップ2:データ接続を作成する
 
@@ -40,7 +40,7 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**�
 
 ![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
-### ステップ 3:コホートオーディエンスを定義する
+### ステップ3:コホートオーディエンスを定義する
 
 **Audience Studio** でのアクティベーション、または **Data Workbench** でクエリを実行して、コホートを Braze に同期します。
 
@@ -222,8 +222,12 @@ FROM
 {% endtab %}
 {% endtabs %}
 
-### ステップ 4:Treasure Data Export から Braze セグメントを作成する
+### ステップ4:Treasure Data Export から Braze セグメントを作成する
 
 Brazeで、**Segment**に移動し、新しいセグメントを作成して、フィルターとして**トレジャーデータコホート**を選択します。ここから、どのトレジャーデータコホートを含めるかを選択できます。トレジャーデータのコホートセグメントを作成したら、キャンペーンまたはキャンバスを作成するときにこのセグメントをオーディエンスフィルターとして選択できます。
 
 ![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+
+## ユーザーマッチング
+
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。

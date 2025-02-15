@@ -57,7 +57,7 @@ When you create a new section, you can configure it with or without a landing pa
 
 {% tabs %}
 {% tab with landing page %}
-Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/templates/).
+Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 ```markdown
 ---

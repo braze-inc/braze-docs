@@ -11,14 +11,14 @@ tool: Media
 
 # コンテンツ・カードのクリエイティブ詳細
 
-> キャンペーンの作成プロセス中に、コンテンツカードとそれらが配置されるフィードをカスタマイズすることはできません。カードの作成とカスタマイズを行うには、エンジニアおよび開発者との共同作業が必要です。技術的な詳細については、\[開発者向けドキュメント][7] を参照してください。
+> キャンペーンの作成プロセス中に、コンテンツカードとそれらが配置されるフィードをカスタマイズすることはできません。カードの作成とカスタマイズを行うには、エンジニアおよび開発者との共同作業が必要です。技術的な詳細については、[開発者向けドキュメント][7] を参照してください。
 
 ## コンテンツカードのタイプ
 
 {% tabs %}
 {% tab クラシック %}
 
-クラシックカードは、標準的なメッセージングや通知、あるいはアイコンを使ってメッセージを視覚的に分類するのに適しています。画像は任意だが、1:1の比率でなければならない。  
+クラシックカードは、標準的なメッセージングや通知、あるいはアイコンを使ってメッセージを視覚的に分類するのに適しています。画像は任意だが、1:1の比率でなければならない。
 
 ![推奨されるディテールとクラシックカードのサンプルを持つ、クラシックなカードの画像]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
@@ -28,7 +28,7 @@ tool: Media
 | メッセージテキスト | 13px; 標準の太さ <br> 2行から4行のテキストが理想的だ。<br> ここで Liquid を使ってメッセージをパーソナライズできます。 |
 | リンクテキスト | オプション。<br> 13 px <br> ウェブページへのリンク、またはアプリ内へのディープリンク。 |
 | 画像 | オプション。<br> 1 対 1 の比率でなければなりません。<br> 画質は60×60pxを推奨する。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab キャプション付き画像 %}
@@ -43,7 +43,7 @@ tool: Media
 | メッセージテキスト | 13px; 標準の太さ <br> 2行から4行のテキストが理想的だ。<br> ここで Liquid を使ってメッセージをパーソナライズできます。 |
 | リンクテキスト | オプション。<br> 13 px <br> ウェブページへのリンク、またはアプリ内へのディープリンク。 |
 | 画像 | 4:3 の比率を推奨。<br> 最小幅 600 px。 <br> 高解像度のPNG、JPEG、GIFをサポートする。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab バナー %}
@@ -56,14 +56,14 @@ tool: Media
 | --- | ---|
 | リンク付きカード | オプション。<br> 13 px <br> Web ページまたはアプリ内のディープリンクへの、クリック時動作リンク。 |
 | 画像 | あらゆるアスペクト比に対応しています。<br> 最小幅 600 px。 <br> 高解像度のPNG、JPEG、GIFをサポートする。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
 
 ## グローバル・クリエイティブの詳細 {#general}
 
-コンテンツカードは、最初から素晴らしい機能を備えています。現時点では、カードのスタイリングを Braze アカウントでネイティブに行うことはできませんが、統合時にタイプやコンテンツカードフィードによってコンテンツカードをスタイリングすることができます。詳しくは、\[コンテンツカードのカスタマイズ][4]] を参照してください。
+コンテンツカードは、最初から素晴らしい機能を備えています。現時点では、カードのスタイリングを Braze アカウントでネイティブに行うことはできませんが、統合時にタイプやコンテンツカードフィードによってコンテンツカードをスタイリングすることができます。詳しくは、[コンテンツカードのカスタマイズ][4]] を参照してください。
 
 ### 破棄の動作
 
@@ -84,7 +84,7 @@ tool: Media
 | Android用コンテンツカード | iOS用コンテンツカード | ウェブ用コンテンツカード |
 | --- | --- |---|
 | Android SDK は、デフォルトではアニメーション GIF をサポートしていません。GIF サポートの有効化の詳細については、[GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/) を参照してください。 | Swift SDK では、アニメーション GIF がデフォルトではサポートされていません。GIF サポートの有効化の詳細については、[GIF サポートのチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)を参照してください。 | GIF のサポートは、Web SDK 統合にデフォルトで含まれています。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
 
@@ -94,4 +94,4 @@ tool: Media
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
+[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

@@ -22,13 +22,13 @@ Snowplowの豊富な行動データを活用して、Brazeで強力な顧客中�
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ----------- | ----------- |
 | Snowplow パイプライン | Snowplowパイプラインが稼働している必要があります。 |
 | Google Tag Managerサーバーサイド | GTM-SSをデプロイし、[GTM-SS用のSnowplowクライアント][2]をセットアップする必要があります。 |
-| Braze REST API キー | `users.track`の権限を持つBraze REST APIキー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][3]。あなたのエンドポイントは、インスタンスのBraze URLに依存します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][3]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -60,7 +60,7 @@ Snowplowの高品質な行動データに基づいてBrazeでダイナミック�
 1. **タグ** タブから **新規** を選択し、タグ構成として **Braze タグ** を選択します。
 2. 転送したいイベントのトリガーを選択してBrazeに送信します。
 3. 必要なパラメータを入力し、タグを構成します（詳細は次のカスタマイズセクションにあります）。
-4. \[**保存**] をクリックします。
+4. [**保存**] をクリックします。
 
 ## カスタマイズ
 
@@ -73,7 +73,7 @@ Snowplowの高品質な行動データに基づいてBrazeでダイナミック�
 | Braze REST API エンドポイント | これを Braze REST [エンドポイント][3] の URL に設定します。 |
 | Braze API キー | これを各リクエストに含まれるBraze [API キー][4]に設定します。 |
 | Braze `external_id` | このキーをクライアントイベントプロパティに設定し、ユーザーの`external_id`に対応させ、[Brazeユーザー識別子][5]として使用します。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### イベントマッピング
 
@@ -85,7 +85,7 @@ Snowplowの高品質な行動データに基づいてBrazeでダイナミック�
 | Snowplow イベントコンテキストルール | BrazeタグがSnowplowイベントに関連付けられたコンテキストエンティティをどのように使用するかについて説明します。 |
 | 配列からエンティティを抽出する場合、単一の要素 | 複数の同一エンティティを1つのイベントにアタッチできるため、Snowplow エンティティは常に配列に格納されます。このオプションは、配列に単一の要素しか含まれていない場合、その単一の要素を選択します。 |
 | イベントオブジェクトにすべてのエンティティを含める | デフォルトでオンになっています。Brazeイベントのプロパティオブジェクト内のイベントに含まれるすべてのエンティティを含みます。このオプションを無効にして、個々のエンティティを選択して含めます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 高度なイベントマッピング
 
@@ -99,7 +99,7 @@ Snowplowの高品質な行動データに基づいてBrazeでダイナミック�
 | 追加のユーザー プロパティおよびイベント プロパティ マッピング ルール | クライアントイベントからプロパティキーと、マッピングしたいプロパティオブジェクトのキーを指定します（または、マッピングされたキーを空白のままにして同じ名前を保持します）。ここではキーパス表記を使用できます (たとえば Snowplow イベントプラットフォームの場合は `x-sp-tp2.p`、Snowplow イベントページビュー ID (配列インデックス 0) の場合は `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id`、代替クライアントを使用する場合は Snowplow 以外のプロパティを選択します)。<br><br>イベントプロパティマッピングルールはBrazeイベントプロパティオブジェクトに入力されます。|
 | 一般的なユーザーのプロパティを含める| デフォルトで有効になっているこのオプションは、Brazeユーザー属性オブジェクトに共通イベント定義からの`user_data`プロパティを含めるかどうかを設定します。|
 | イベント時間プロパティ | このオプションを使用すると、イベント時間（ISO-8601形式）を入力するためのクライアントイベントプロパティを指定するか、空のままにして現在の時間（デフォルトの動作）を使用できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### エンティティマッピング
 
@@ -113,7 +113,7 @@ Snowplowエンティティマッピングテーブルを使用すると、エン
 | エンティティマッピングオプション | 説明 |
 | --------- | ----------- |
 | イベントにマッピングされていないエンティティを含める | いくつかのエンティティをユーザー属性にリマップまたは移動する際に、前述のカスタマイズを使用すると、このオプションにより、すべてのマッピングされていないエンティティ（[イベントプロパティルール](#event-property-rules)に見つからないエンティティなど）がBrazeイベントのプロパティオブジェクトに含まれるようにすることができます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: https://snowplowanalytics.com
 [2]: https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/

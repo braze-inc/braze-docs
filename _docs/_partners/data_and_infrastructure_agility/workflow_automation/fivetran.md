@@ -128,7 +128,7 @@ In the [Fivetran dashboard](https://fivetran.com/dashboard), click on **+ Connec
 
 Navigate to your [Google Storage Console](https://console.cloud.google.com/storage/browser) and select the bucket you configured Braze Currents with, and click on **Edit bucket permissions**.
 
-![The Google Storage Console available buckets. Locate a bucket and click the vertical three dot symbol to open the drop down that allows you to edit bucket permissions.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
+![The Google Storage Console available buckets. Locate a bucket and click the vertical three dot icon to open the drop down that allows you to edit bucket permissions.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2) by adding the email as a member. Make a note of the bucket name; you will need it in the next step to configure Fivetran.
 

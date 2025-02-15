@@ -13,9 +13,9 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 ## 이벤트 객체란 무엇인가요?
 
-이벤트 객체는 특정 이벤트가 발생할 때 API를 통해 전달되는 객체입니다. 이벤트 객체는 이벤트 배열에 보관됩니다. 이벤트 배열의 각 이벤트 개체는 지정된 시간 값에 특정 사용자가 커스텀 이벤트의 단일 발생을 나타냅니다. 이벤트 객체에는 메시지, 데이터 수집 및 개인화에서 이벤트 속성정보를 설정하고 사용하여 사용자 지정할 수 있는 다양한 필드가 있습니다.
+이벤트 객체는 특정 이벤트가 발생할 때 API를 통해 전달되는 객체입니다. 이벤트 객체는 이벤트 배열에 보관됩니다. 이벤트 배열의 각 이벤트 개체는 지정된 시간 값에 특정 사용자가 사용자 지정 이벤트의 단일 발생을 나타냅니다. 이벤트 객체에는 메시지, 데이터 수집 및 개인화에서 이벤트 속성을 설정하고 사용하여 사용자 지정할 수 있는 다양한 필드가 있습니다.
 
-[개발자 가이드][1]의 플랫폼 통합 가이드에서 특정 플랫폼에 대한 커스텀 이벤트를 설정하는 방법을 확인할 수 있습니다. 이 정보는 다양한 플랫폼의 **애널리틱스** 탭 아래에 있는 **사용자 지정 이벤트 추적** 페이지에서 찾을 수 있습니다. 몇 가지를 링크해 두었습니다.
+[개발자 가이드의][1] 플랫폼 통합 가이드를 참조하여 특정 플랫폼에 대한 사용자 지정 이벤트를 설정하는 방법을 확인할 수 있습니다. 이 정보는 다양한 플랫폼의 **애널리틱스** 탭 아래에 있는 **사용자 지정 이벤트 추적** 페이지에서 찾을 수 있습니다. 몇 가지를 링크해 두었습니다.
 
 사용자 지정 이벤트 추적하기 문서를 참조하세요:
 
@@ -27,11 +27,12 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
@@ -45,11 +46,11 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 - [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 타임 코드 위키][22]
+- [ISO 8601 시간 코드][22]
 
 #### 기존 프로필만 업데이트
 
-Braze에서 기존 고객 프로필만 업데이트하려면 요청 본문에 `true` 값과 함께 `_update_existing_only` 키를 전달해야 합니다. 이 값을 생략하면 `external_id`가 없는 경우 Braze에서 새 고객 프로필을 생성합니다.
+Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에 `true` 값과 함께 `_update_existing_only` 키를 전달해야 합니다. 이 값을 생략하면 `external_id` 주소가 없는 경우 Braze에서 새 사용자 프로필을 생성합니다.
 
 {% alert note %}
 `/users/track` 엔드포인트를 통해 별칭 전용 사용자 프로필을 만드는 경우 `_update_existing_only` 을 `false` 으로 설정해야 합니다. 이 값을 생략하면 별칭 전용 프로필이 생성되지 않습니다.
@@ -63,17 +64,17 @@ Braze에서 기존 고객 프로필만 업데이트하려면 요청 본문에 `t
 | 데이터 유형 | 설명 |
 | --- | --- |
 | 숫자 | [정수](https://en.wikipedia.org/wiki/Integer) 또는 [부동 소수점](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| 부울 |  |
+| 부울 | `true` 또는 `false` |
 | 데이터 시간 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열로 포맷됩니다. 배열 내에서는 지원되지 않습니다. |
 | 문자열 | 255자 이하. |
 | 배열 | 배열에는 날짜/시간을 포함할 수 없습니다. |
 | 개체 | 오브젝트는 문자열로 수집됩니다. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-배열 또는 개체 값을 포함하는 이벤트 속성 개체는 최대 50KB의 이벤트 속성 페이로드를 가질 수 있습니다.
+배열 또는 개체 값을 포함하는 이벤트 속성 개체는 최대 100KB의 이벤트 속성 페이로드를 가질 수 있습니다.
 
 ### 이벤트 속성 지속성
-이벤트 속성정보는 상위 이벤트에 의해 트리거된 메시지를 필터링하고 Liquid 개인화할 수 있도록 설계되었습니다. 기본적으로 이러한 정보는 Braze 사용자 프로필에 유지되지 않습니다. 세분화에서 이벤트 속성 값을 사용하려면 이벤트 속성 값을 장기 저장하는 다양한 접근 방식에 대해 자세히 설명하는 [커스텀 이벤트][5]를 참조하세요.
+이벤트 속성은 상위 이벤트에 의해 트리거된 메시지를 필터링하고 리퀴드 개인화할 수 있도록 설계되었습니다. 기본적으로 이러한 정보는 Braze 사용자 프로필에 유지되지 않습니다. 세분화에서 이벤트 속성 값을 사용하려면 이벤트 속성 값을 장기 저장하는 다양한 접근 방식에 대해 자세히 설명하는 [사용자 지정 이벤트를][5] 참조하세요.
 
 #### 이벤트 예제 요청
 

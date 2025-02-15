@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour générer une URL pour un centre de préférences. 
+> Utilisez cet endpoint pour générer une URL pour un centre de préférences.
 
 Chaque URL de centre de préférence est unique pour un utilisateur.
 
@@ -34,6 +34,7 @@ Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par esp
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
 |`userID`| Requis | Chaîne de caractères | L'ID utilisateur. |
+{:  role="presentation" }
 
 ## Paramètres de demande
 
@@ -41,7 +42,7 @@ Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par esp
 | --------- | ---------| --------- | ----------- |
 |`preference_center_api_id`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
 |`external_id`| Requis | Chaîne de caractères | L’ID externe pour un utilisateur. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -50,7 +51,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-## Réponse 
+## Réponse
 
 ```json
 {
@@ -61,5 +62,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-Ce point de terminaison génère uniquement des URL pour le nouveau centre de préférences (comme les centres de préférences créés via l'API ou l'éditeur par glisser-déposer).
+Cet endpoint génère uniquement des URL pour le nouveau centre de préférences (comme les centres de préférences créés à l'aide de notre API ou de l'éditeur par glisser-déposer).
 {% endalert %}

@@ -16,13 +16,13 @@ search_rank: 3
 
 > プッシュ通知は、重要なアップデートが発生したときにユーザーの画面に表示されるアラートである。プッシュ通知は、ユーザーのブラウザーであなたの Web ページが開かれていないときでも受け取ることができます。プッシュ通知は、ユーザーにタイムリーで関連性の高いコンテンツを提供したり、サイトへの再アクセスを促したりする貴重な手段だ。この参考記事では、Braze Web プッシュを Braze SDK と統合する方法について説明します。
 
-その他のリソースについては、[プッシュのベストプラクティスを][8]参照のこと。
+その他のリソースについては、[プッシュのベストプラクティスを]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)参照のこと。
 
-![][27]
+![]({{site.baseurl}}/assets/img_archive/web_push2.png)
 
-Web プッシュ通知は、大部分の主要ブラウザーでサポートされている [W3C プッシュ標準][1]を使用します。
+Web プッシュ通知は、大部分の主要ブラウザーでサポートされている [W3C プッシュ標準](http://www.w3.org/TR/push-api/)を使用します。
 
-プッシュプロトコル標準とブラウザーのサポートの詳細については、[Apple][5]、[Mozilla][6]、および [Microsoft][7] のリソースを確認してください。
+プッシュプロトコルの標準とブラウザサポートの詳細については、[Apple](https://developer.apple.com/notifications/safari-push-notifications/ "Safari プッシュ通知")[Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla プッシュAPI ブラウザの互換性")と[Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft プッシュAPI")からリソースを確認できます。
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -33,7 +33,7 @@ Web プッシュ通知は、大部分の主要ブラウザーでサポートさ�
 - まだサービスワーカーを持っていない場合は、以下のスニペットで`service-worker.js` という名前のファイルを新規作成し、ウェブサイトのルートディレクトリに置く。
 - そうではない場合に、サイトでサービスワーカーをすでに登録しているときは、次のスニペットをサービスワーカーファイルに追加し、Web SDK を初期化するときに [`manageServiceWorkerExternally`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) 初期化オプションを `true` に設定します。
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 サービスワーカーのファイル名が `service-worker.js` ではない場合、`serviceWorkerLocation` [初期化オプション](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)を使用する必要があります。
 
@@ -71,21 +71,21 @@ Web プッシュ通知は、大部分の主要ブラウザーでサポートさ�
 
 Mac OS X で Safari 向けのプッシュ通知をサポートする場合は、以下の追加手順に従ってください。
 
-- [Appleへの登録][3]手順に従って、サファリのプッシュ証明書を作成する。
-- Braze ダッシュボードの \[**設定**] ページ (API キーが置かれている場所) で Web アプリを選択します。\[**Safari プッシュ通知を設定**]をクリックして指示に従い、生成したプッシュ証明書をアップロードします。
+- [Appleへの登録](https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33)手順に従って、サファリのプッシュ証明書を作成する。
+- Braze ダッシュボードの [**設定**] ページ (API キーが置かれている場所) で Web アプリを選択します。[**Safari プッシュ通知を設定**]をクリックして指示に従い、生成したプッシュ証明書をアップロードします。
 - `braze.initialize` を呼び出す場合は、オプションの`safariWebsitePushId` 設定オプションに、Safari プッシュ証明書の生成時に使用した Web サイトプッシュ ID を指定します。たとえば、次のようにします。`braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
 ## Safari Mobile のプッシュ {#safari-mobile}
 
-iOS および iPadOS 上の Safari 16.4以降は、\[ホーム画面に追加され]\[add-to-homescreen]、\[Web アプリケーションマニフェスト]\[manifest-file]ファイルを持つアプリの Web プッシュをサポートします。Web プッシュ通知を統合する手順を完了したら、Safari のモバイルプッシュもサポートできるようになります。 
+iOS および iPadOS 上の Safari 16.4 以降は、[[ホーム画面に追加され]](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc)、[[Web アプリケーションマニフェスト]](https://developer.mozilla.org/en-US/docs/Web/Manifest)ファイルを持つアプリの Web プッシュをサポートします。Web プッシュ通知を統合する手順を完了したら、Safari のモバイルプッシュもサポートできるようになります。 
 
-モバイル Safari Web プッシュをサポートするには、\[このガイド]\[safari-mobile-push-guide]の説明に従ってください。
+モバイル Safari Web プッシュをサポートするには、[[このガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)]の説明に従ってください。
 
 ## ソフトプッシュプロンプト
 
 ソフト・プッシュ・プロンプト（「プッシュ・プライマー」とも呼ばれる）は、許可を求める際のオプトイン率を最適化するのに役立つ。
 
-ソフトプッシュプロンプトの設定について詳しくは、\[ソフトプッシュプロンプト]\[push-primer]を参照してください。
+ソフトプッシュプロンプトの設定について詳しくは、[ソフトプッシュプロンプト]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/)を参照してください。
 
 ## HTTPS要件
 
@@ -108,13 +108,13 @@ Braze Webプッシュが基づいているオープンスタンダード仕様�
 
 ### 安全なサイトが利用できない場合はどうするのか？
 
-業界のベストプラクティスは、サイト全体をセキュアにすることですが、サイトドメインをセキュアにできない顧客は、セキュアなモーダルを使用して要件に対処できます。詳細については、\[代替プッシュドメイン][28]を使用するためのガイド、または[作業デモ][4]を確認してください。
+業界のベストプラクティスは、サイト全体をセキュアにすることですが、サイトドメインをセキュアにできない顧客は、セキュアなモーダルを使用して要件に対処できます。詳細については、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain)または[作業デモ](http://appboyj.com/modal-test.html)を表示するガイドを参照してください。
 
 ## サービスワーカーの詳細設定
 
 サービスワーカーファイルは、インストール時に自動的に `skipWaiting` を呼び出します。これを避けたい場合は、Brazeをインポートする前に、以下のコードをサービスワーカーファイルに追加する：
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## トラブルシューティング
 
@@ -123,16 +123,3 @@ Braze Webプッシュが基づいているオープンスタンダード仕様�
 - すべてのブラウザがプッシュメッセージを受信できるわけではない。ブラウザで`braze.isPushSupported()` が`true` を返すことを確認する。
 - ユーザーがサイトのプッシュアクセスを拒否した場合、ブラウザの環境設定から拒否ステータスを削除しない限り、再度許可を求めるプロンプトが表示されることはない。
 
-[1]: http://www.w3.org/TR/push-api/
-[3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
-[4]: http://appboyj.com/modal-test.html
-[5]: https://developer.apple.com/notifications/safari-push-notifications/ "Safariプッシュ通知"
-[6]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push APIのブラウザ互換性"
-[7]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API"
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[27]: {{site.baseurl}}/assets/img_archive/web_push2.png
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
-\[push-primer] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
-\[add-to-homescreen] ： https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
-\[manifest-file] ： https://developer.mozilla.org/en-US/docs/Web/Manifest
-\[safari-mobile-push-guide] ： {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/

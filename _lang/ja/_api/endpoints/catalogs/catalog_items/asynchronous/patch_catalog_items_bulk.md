@@ -1,6 +1,6 @@
 ---
-nav_title: "パッチ:複数のカタログ項目を編集する"
-article_title: "パッチ:複数のカタログ項目を編集する"
+nav_title: "パッチ:複数のカタログアイテムの編集"
+article_title: "パッチ:複数のカタログアイテムの編集"
 alias: /catalogs_items_patch/
 search_tag: Endpoint
 page_order: 2
@@ -24,7 +24,7 @@ description: "この記事では、複数のカタログ項目を編集するBra
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.update_items` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.update_items`の権限が必要です。
 
 ## レート制限
 
@@ -32,19 +32,19 @@ description: "この記事では、複数のカタログ項目を編集するBra
 
 ## パスパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | string | カタログ名。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
 | パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `items` | required | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、カタログに存在するフィールドを含める必要があります。1回のリクエストにつき、アイテムオブジェクトは50個まで認められる。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `items` | required | 配列 | アイテム・オブジェクトを含む配列。アイテムオブジェクトには、カタログに存在するフィールドs が含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -90,7 +90,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## 応答
 
-このエンドポイントには、`202`、`400`、`404` という3つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
@@ -126,7 +126,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
@@ -137,12 +137,12 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 | `invalid-ids` | 項目 ID には、英字、数字、ハイフン、アンダースコアのみを使用できます。 |
 | `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |
 | `invalid-keys-in-value-object` | 項目オブジェクトのキーに `.` または `$` を含めることはできません。 |
-| `items-missing-ids` | アイテムIDを持たないアイテムがある。各項目が項目 ID を持っていることを確認します。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目が項目 ID を持っていることを確認します。 |
 | `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
-| `items-too-large` | 項目値は5,000文字を超えることはできない。 |
-| `request-includes-too-many-items` | リクエスト内に項目が多すぎますリクエストごとの項目の上限は50個です。 |
+| `items-too-large` | 項目値は5000 文字を超えることはできません。 |
+| `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |
 | `too-deep-nesting-in-value-object` | アイテム・オブジェクトは50レベル以上の入れ子を持つことはできない。 |
 | `unable-to-coerce-value` | 項目タイプは変換できません。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

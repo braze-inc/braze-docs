@@ -1,6 +1,6 @@
 ---
-nav_title: "取得:ジョブ同期ステータスのリスト"
-article_title: "取得:ジョブ同期ステータスのリスト"
+nav_title: "取得:ジョブ同期ステータスを表示する"
+article_title: "取得:ジョブ同期ステータスを表示する"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_job_sync/
@@ -25,21 +25,21 @@ description: "この記事では、リストジョブ同期ステータスBraze�
 
 {% multi_lang_include rate_limits.md endpoint='cdi job sync status' %}
 
-## パスパラメータ
+## パスパラメーター
 
 | パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `integration_id` | 必須 | string | 統合 ID。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `integration_id` | 必須 | 文字列 | 統合 ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## クエリパラメータ
+## クエリーパラメーター
 
-このエンドポイントへの各呼び出しは10個のアイテムを返します。10を超える同期のある統合については、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
+このエンドポイントを呼び出すと、10個のアイテムが返される。10を超える同期のある統合については、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
 | パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | string | 同期ステータスのページネーションを決定します。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | 同期ステータスのページネーションを決定します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -63,10 +63,10 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 
 ### 成功応答の例
 
-ステータスコード `200` は次の応答本文を返す可能性があります。
+ステータスコード `200` は、次の応答本文を返す可能性があります。
 
 {% alert note %}
-`Link` ヘッダーは、合計10回以下の同期がある場合には存在しません。カーソルなしの呼び出しの場合、`prev`は表示されません。項目の最後のページを見ると、`next` は表示されません。
+`Link` ヘッダーは、合計10回以下の同期がある場合には存在しません。カーソルのない呼び出しでは、`prev` は表示されません。項目の最後のページを見ると、`next` は表示されません。
 {% endalert %}
 
 ```
@@ -96,7 +96,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `partial` | いくつかの行はエラーのため同期に失敗しました。 |
 | `error` | 行は同期されませんでした。 |
 | `config_error` | 統合構成にエラーがありました。統合セットアップを確認してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## トラブルシューティング
 
@@ -104,10 +104,10 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `400 Invalid cursor` | あなたの`cursor`が有効であることを確認してください。 |
-| `400 Invalid integration ID` | あなたの`integration_id`が有効であることを確認してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
+| `400 Invalid integration ID` | `integration_id` が有効であることを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-追加のステータスコードと関連するエラーメッセージについては、[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+その他のステータスコードと関連するエラーメッセージについては、「[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)」を参照してください。
 
 {% endapi %}

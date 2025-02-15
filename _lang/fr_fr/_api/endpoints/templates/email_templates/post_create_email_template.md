@@ -13,11 +13,11 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mod
 /templates/email/create
 {% endapimethod %}
 
-> Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze. 
+> Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze.
 
 Ces modèles seront disponibles sur la page **Modèles et médias.**  La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
 
-Le statut de l’abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré via Braze à l’aide d’une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
+L'état de l'abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré avec Braze à l'aide d'une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`preheader`|Facultatif|Chaîne de caractères|Accroche d’e-mail utilisée pour générer des aperçus chez certains clients.|
 |`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister.|
 |`should_inline_css`|Facultatif|Valeur booléenne|Active ou désactive la fonction `inline_css` par modèle. S'il n'est pas fourni, Braze utilisera le paramètre par défaut pour le groupe d'applications. `true` ou `false` est attendu.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Exemple de demande
@@ -88,6 +88,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un modèle d’e-mail, la balise doit déjà exister dans Braze. |
 | L’e-mail doit comporter des noms de bloc de contenu valides | L’e-mail peut contenir des blocs de contenu qui n’existent pas dans cet environnement. |
 | Valeur non valide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes (vrai ou faux). Assurez-vous que la valeur de `should_inline_css` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

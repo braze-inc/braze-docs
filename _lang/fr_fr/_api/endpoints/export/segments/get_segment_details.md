@@ -31,7 +31,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre    | Requis | Type de données | Description            |
 | ------------ | -------- | --------- | ---------------------- |
 | `segment_id` | Requis | Chaîne de caractères | Voir l'[identifiant API du segment.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `segment_id` pour un segment donné sur la page des [clés API de]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) votre compte Braze ou vous pouvez utiliser l'[endpoint Exporter la liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 {% raw %}
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "updated_at" : (string) the date last updated as ISO 8601 date,
       "name" : (string) the segment name,
       "description" : (string) a human-readable description of filters,
-      "text_description" : (string) the segment description, 
+      "text_description" : (string) the segment description,
       "tags" : (array) the tag names associated with the segment formatted as strings,
       "teams" : (array) the names of the Teams associated with the campaign
 }

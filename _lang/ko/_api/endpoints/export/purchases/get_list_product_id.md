@@ -31,9 +31,9 @@ description: "이 문서에서는 제품 ID 내보내기 Braze 엔드포인트�
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `page` | 선택 사항 | 문자열 | 보고 싶은 제품 목록 페이지입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 
 {% raw %}
 ```
@@ -57,5 +57,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}

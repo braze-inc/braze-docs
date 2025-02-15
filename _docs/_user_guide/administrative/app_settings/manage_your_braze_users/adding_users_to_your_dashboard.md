@@ -43,6 +43,10 @@ Every email address used in an [instance]({{site.baseurl}}/user_guide/administra
 
 If your team uses Gmail and you're experiencing issues adding an email address, you can create an alias by adding a plus sign (+) like "+1" or "+test" to the email address. For example, `contractor@braze.com` can have an alias of `contractor+1@braze.com`. Emails to `contractor+1@braze.com` will still be delivered to `contractor@braze.com`, but the alias will be recognized as a unique email address.
 
+### Can I change my Braze account's email address?
+
+For security reasons, users cannot change the email address associate with their Braze account. If a user wants to update their email address, an administrator should [create a new account](#adding-braze-users) for them with their preferred email address.
+
 ## Suspending Braze users
 
 Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
@@ -55,13 +59,17 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ![Suspend a user when editing the user details.][5]
 
+## Assigning user access and responsibilities
+
+{% multi_lang_include permissions.md content="Differences" %}
+
 ## Deleting Braze users
 
 To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
 
 ![Delete a user][34]
 
-After a user is deleted, Braze does not keep any of the following data:
+After a user is deleted, Braze does not keep any of the following account data:
 
 - Any attributes that the user had
 - Email address
@@ -72,11 +80,15 @@ After a user is deleted, Braze does not keep any of the following data:
 - Language
 - Other similar data
 
+Braze will keep the following account data:
+
+- Custom attributes or test data associated with their account
+- Campaigns or Canvases they created (but the user's name won't appear in them, such as appearing in the **Last edited by** column)
+
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
 [3]: {% image_buster /assets/img/add_new_user_3.png %}
 [4]: {% image_buster /assets/img_archive/suspend_user.png %}
 [5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-
 [27]: {% image_buster /assets/img/add-user.gif %} "Add a New User Process"
 [34]: {% image_buster /assets/img_archive/delete_user_new.png %}

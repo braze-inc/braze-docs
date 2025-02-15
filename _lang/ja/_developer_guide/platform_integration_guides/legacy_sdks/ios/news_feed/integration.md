@@ -14,9 +14,7 @@ noindex: true
 
 # ニュースフィード統合
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ## ニュースフィードデータモデル
 
@@ -46,7 +44,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // Subscribe to feed updates
@@ -69,7 +67,7 @@ private func feedUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-Braze から送信された後にカードデータを変更したい場合は、カードデータをローカルに保存 （ディープコピー） して更新し、自身で表示することをおすすめします。カードには [`ABKFeedController`][44] 経由でアクセスできます。
+Braze から送信された後にカードデータを変更したい場合は、カードデータをローカルに保存 （ディープコピー） して更新し、自身で表示することをおすすめします。カードには、[`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller") からアクセスできます。
 
 ## ニュースフィードモデル
 
@@ -85,7 +83,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `updated` | (参照のみ) プロパティは、Braze ダッシュボード からのカードの最新更新時刻のUNIX タイムスタンプです。 |
 | `categories` | カードに割り当てられたカテゴリの一覧、カテゴリなしのカードs には、`ABKCardCategoryNoCategory` が割り当てられます。<br><br>利用可能なカテゴリー:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
 | `extras` | `NSString` 値のオプションの `NSDictionary`。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### バナー画像カードのプロパティ
 
@@ -94,7 +92,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `image` | (必須) このプロパティはカードの画像の URL です。| |
 | `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
 | `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのユーザーインターフェイスに表示され、カードをクリックするアクションと方向を示すことができますが、デフォルト Brazeのニュースフィードには表示されません。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### キャプション付き画像カードのプロパティ
 
@@ -105,7 +103,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `description` (必須) カードの本文。 |
 | `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
 | `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### テキスト通知カード (画像なしのキャプション付き画像) のプロパティ
 
@@ -115,7 +113,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `description` | (必須) カードの本文。 |
 | `url` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
 | `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### クラシックカードのプロパティ
 
@@ -126,15 +124,15 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 | `description` | (必須) カードの本文。 |
 | `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
 | `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## カードメソッド
 
 |方法|説明|
 |---|---|
-| `logCardImpression` | 特定のカードのインプレッションを Braze に手動で記録します。 |
+| `logCardImpression` | 特定のカードのインプレッションを手動でBrazeに記録する。 |
 | `logCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。`ABKCard` のすべてのサブクラスには`url` プロパティがあります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## フィード表示を記録する
 
@@ -148,7 +146,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logFeedDisplayed()
@@ -180,7 +178,7 @@ ABKNewsFeedTableViewController *newsFeed = [[ABKNewsFeedTableViewController allo
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let newsFeed = ABKNewsFeedTableViewController()
@@ -194,9 +192,9 @@ self.navigationController?.pushViewController(newsFeed, animated: true)
 
 ### モーダルコンテキスト - AbkFeedView コントローラーモーダルコンテキスト
 
-このモーダルは、ビューコントローラをモーダルビューで表示するために使用され、上部にナビゲーションバーがあり、バーの右側に \[**完了**] ボタンがあります。モーダルのタイトルをカスタマイズするには、`ABKNewsFeedTableViewController` インスタンスの `navigationItem` の `title` プロパティを設定します。 
+このモーダルは、ビューコントローラをモーダルビューで表示するために使用され、上部にナビゲーションバーがあり、バーの右側に [**完了**] ボタンがあります。モーダルのタイトルをカスタマイズするには、`ABKNewsFeedTableViewController` インスタンスの `navigationItem` の `title` プロパティを設定します。 
 
-デリゲートが**設定されていない**場合、\[**完了**] ボタンをクリックすると、モーダルビューが閉じます。デリゲートが**設定されている**場合、\[**完了**] ボタンをクリックするとデリゲートが呼び出され、デリゲート自体によってビューが閉じられます。
+デリゲートが**設定されていない**場合、[**完了**] ボタンをクリックすると、モーダルビューが閉じます。デリゲートが**設定されている**場合、[**完了**] ボタンをクリックするとデリゲートが呼び出され、デリゲート自体によってビューが閉じられます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -207,7 +205,7 @@ ABKNewsFeedViewController *newsFeed = [[ABKNewsFeedViewController alloc] init];
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let newsFeed = ABKNewsFeedViewController()
@@ -217,10 +215,6 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-ビューコントローラーの例については、[ニュースフィードのサンプルアプリ][3]をご覧ください。
+ビューコントローラーの例については、[ニュースフィードのサンプルアプリ](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample)をご覧ください。
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィードコントローラー"
 

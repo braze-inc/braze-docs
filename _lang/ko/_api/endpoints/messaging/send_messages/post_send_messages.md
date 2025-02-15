@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: API를 통해서만 즉시 메시지 보내기"
-article_title: "POST: API를 통해서만 즉시 메시지 보내기"
+nav_title: "POST: API만 사용하여 즉시 메시지 보내기"
+article_title: "POST: API만 사용하여 즉시 메시지 보내기"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 API 전용 Braze 엔드포인트를 통해 즉시 메시지 보내기 기능에 대해 자세히 설명합니다."
+description: "이 문서에서는 API 전용 Braze 엔드포인트를 사용하여 즉시 메시지 보내기 기능에 대해 자세히 설명합니다."
 
 ---
 {% api %}
-# API를 통해서만 즉시 메시지 보내기
+# API만 사용하여 즉시 메시지 보내기
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/send
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 Braze API를 통해 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다. 
+> 이 엔드포인트를 사용하면 Braze API를 사용하여 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다.
 
 요청을 완료하려면 메시징 객체를 본문에 포함시켜야 합니다.
 
@@ -53,15 +53,15 @@ Authorization: Bearer YOUR-REST-API-KEY
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
    "messages": {
-     "apple_push": (optional, apple push object),
      "android_push": (optional, android push object),
+     "apple_push": (optional, apple push object),
+     "content_card": (optional, content card object),
+     "email": (optional, email object),
      "kindle_push": (optional, kindle/fireOS push object),
      "web_push": (optional, web push object),
-     "email": (optional, email object),
      "webhook": (optional, webhook object),
-     "content_card": (optional, content card object),
-     "sms": (optional, SMS object),
-     "whats_app": (optional, WhatsApp object)
+     "whats_app": (optional, WhatsApp object),
+     "sms": (optional, SMS object)
    }
  }
 ```
@@ -70,17 +70,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+|`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 `broadcast: true`을 설정할 때 주의하십시오. 이 플래그를 의도치 않게 설정하면 메시지를 예상보다 더 많은 오디언스에게 보낼 수 있습니다. |
 |`external_user_ids` | 선택 사항 | 문자열 배열 | [외부 사용자 ID를]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조하세요. |
 |`user_aliases`| 선택 사항 | 사용자 별칭 객체 배열| [사용자 별칭 개체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) 참조하세요. |
 |`segment_id `| 선택 사항 | 문자열 | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-|`audience`| 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
+|`audience`| 선택 사항 | 연결된 오디언스 객체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
 |`campaign_id`| 선택 사항* | 문자열 | 자세한 내용은 [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. <br><br>\*Braze 대시보드에서 캠페인 통계(예: 전송, 클릭, 바운스 등)를 추적하려는 경우 필수 항목입니다. |
 |`send_id`| 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/) 참조 |
 |`override_frequency_capping`| 선택 사항 | 부울 | 캠페인의 경우 `frequency_capping` 을 무시하고 기본값은 `false` 입니다. |
 |`recipient_subscription_state`| 선택 사항 | 문자열 | 이를 사용하여 수신 동의한 사용자(`opted_in`), 구독했거나 수신 동의한 사용자(`subscribed`) 또는 구독하지 않은 사용자를 포함한 모든 사용자(`all`)에게만 메시지를 보낼 수 있습니다. <br><br>`all` 사용자를 사용하면 트랜잭션 이메일 메시징에 유용합니다. 기본값은 `subscribed` 입니다. |
 |`messages`| 선택 사항 | 메시징 객체 | [사용 가능한 메시징 개체를]({{site.baseurl}}/api/objects_filters/#messaging-objects) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```
@@ -157,7 +157,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 
 ## 응답 세부 정보
 
-메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id`가 포함됩니다. `dispatch_id`는 메시지 발송의 ID로, Braze에서 보낸 각 '전송'의 고유 ID를 의미합니다. 자세한 내용은 [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)을 참조하세요.
+메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id` 주소가 포함됩니다. `dispatch_id` 은 메시지 발송의 ID로, Braze에서 보낸 각 '전송'의 고유 ID를 의미합니다. 자세한 내용은 [디스패치 ID 동작을]({{site.baseurl}}/help/help_articles/data/dispatch_id/) 참조하세요.
 
 {% endapi %}
-

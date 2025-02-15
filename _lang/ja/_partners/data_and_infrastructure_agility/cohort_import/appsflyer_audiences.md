@@ -14,12 +14,12 @@ search_tag: Partner
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 |---|---|
 | AppsFlyerアカウント | このパートナーシップを活用するには、AppsFlyer アカウントが必要です。 |
 | iOSやAndroid アプリ | この統合では、iOS アプリと Android アプリがサポートされています。ご使用のプラットフォームによっては、アプリケーションでコードスニペットが必要な場合があります。これらの要件の詳細については、統合プロセスのステップ1を参照してください。 |
 | AppsFlyer SDK | 必要なBraze SDKに加えて、[AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/articles/207032126-SDK-integration-overview)をインストールする必要があります。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## データインポート統合
 
@@ -47,7 +47,7 @@ NSDictionary *brazeInfo = @{
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Technology Partners** は**Integrations** にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
 ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyer テクノロジーページの「コホートインポートを使用したデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][5]{: style="max-width:90%;"}
@@ -61,11 +61,15 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**A
 
 ![AppsFlyer Audiences プラットフォームのパートナー接続設定ページ。画像下部で「Braze external ID」ボックスがオンになっている。][6]{: style="max-width:80%;"}
 
-### ステップ 4:Braze でのAppsFlyer オーディエンスコホートの使用
+### ステップ4:Braze でのAppsFlyer オーディエンスコホートの使用
 
 AppsFlyer オーディエンスがアップロードされてBrazeされると、**AppsFlyer Cohorts**フィルターを選択して、BrazeでSegmentsを定義するときにフィルターとして使用できます。
 
 ![ユーザー属性フィルター「AppsFlyer Cohorts」アが選択されている。][7]
+
+## ユーザーマッチング
+
+識別されたユーザーは、`external_id` または`alias` のどちらかによって照合できます。匿名ユーザーは、`device_id` によって照合できます。元々匿名ユーザーとして作成された識別されたユーザーは、`device_id` では識別できず、`external_id` または`alias` で識別しなければなりません。
 
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/

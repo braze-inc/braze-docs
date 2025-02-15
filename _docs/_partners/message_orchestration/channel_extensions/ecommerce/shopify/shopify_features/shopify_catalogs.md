@@ -8,7 +8,7 @@ description: "This reference article covers how to import your products from Sho
 
 # Shopify product sync 
 
-> You can sync your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), automating how you bring in product data for deeper personalization of your messages. 
+> You can sync all products from your Shopify store to a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) for deeper messaging personalization. 
 
 Shopify catalogs will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 
@@ -84,28 +84,31 @@ Modifying the Shopify catalog in any way may unintentionally interfere with real
 
 To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog by doing the following.
 
-1. Go to the Shopify integration page > **Edit configuration**.<br><br>![Shopify integration page.]({% image_buster /assets/img/Shopify/edit_config.png %})
+1. Go to the Shopify integration page and select **Edit configuration**.
+
+![Shopify integration page.]({% image_buster /assets/img/Shopify/edit_config.png %})
 
 {: start="2"}
 2. In the **Sync catalog** step, toggle off the catalog and then update the settings.
-3. Toggle on the catalog and update the settings.<br><br>![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+3. Toggle on the catalog and update the settings.
 
-## Back-in-stock and price-drop use cases 
+![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+
+## Back-in-stock and price-drop use cases
 
 To set up back-in-stock notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
 
-To set up price drop notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications).
+To set up price drop notifications, follow the steps [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/).
 
 Note that with the Shopify integration, you'll need to create a custom event that captures a user's subscription status in your catalog for each use case. The custom event will require an event property that maps to either the [SKU or Shopify variant ID]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier) that you have selected as part of your Shopify product sync. 
 
-
 ## Changing catalog ID
 
-To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
+To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped sending any messages using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
 
 ## Deactivating your product sync {#deactivate}
 
-Deactivating the Shopify product sync feature will delete your entire catalog and products. This can also impact any sends that may be actively using the product data from this catalog. Confirm that you have either updated or paused these sends before deactivation, as this could result in your messaging sending missing product details. Do not delete the Shopify catalog directly on the catalogs page.
+Deactivating the Shopify product sync feature will delete your entire catalog and products. This can also impact any messages that may be actively using the product data from this catalog. Confirm that you have either updated or paused these campaigns or Canvases before deactivation, as this could result in sending messages with no product details. Do not delete the Shopify catalog directly on the catalogs page.
 
 ## Troubleshooting
 If your Shopify product sync runs into an error, it could be a result of the following errors. Follow the instructions on how to correct the issue and resolve the sync:

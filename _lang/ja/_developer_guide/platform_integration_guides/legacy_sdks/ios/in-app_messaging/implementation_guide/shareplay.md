@@ -17,17 +17,17 @@ noindex: true
 
 > SharePlay は、iOS 15 FaceTime ユーザーがデバイス間でメディア体験を共有し、リアルタイムでオーディオと動画を同期することを可能とする新たにリリースされた機能です。SharePlay は、ユーザーが友人や家族と一緒にコンテンツを体験できる優れた方法であり、Braze の顧客に動画コンテンツを利用する新たな手段を提供し、アプリケーションを新しいユーザーに紹介する機会を提供します。
 
-![SharePlay][6]{: style="border:0;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay6.png %}){: style="border:0;margin-top:10px;"}
 ## 概要
 
 iOS 15 更新の一部として Apple によってリリースされた新しい `GroupActivities` フレームワークを使用すると、Braze アプリ内メッセージを利用して SharePlay をアプリケーションに統合することで、FaceTime を活用できるようになります。
-![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay3.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
-ユーザーが FaceTime 通話で SharePlay ビデオを開始すると、全員の画面の上部に \[開く] ボタンが表示されます。開くと、オーディオとビデオがすべての互換性のあるデバイス間で同期され、ユーザーはリアルタイムで動画を一緒に視聴できるようになります。アプリをダウンロードしていない人は、App Store にリダイレクトされます。
+ユーザーが FaceTime 通話で SharePlay ビデオを開始すると、全員の画面の上部に [開く] ボタンが表示されます。開くと、オーディオとビデオがすべての互換性のあるデバイス間で同期され、ユーザーはリアルタイムで動画を一緒に視聴できるようになります。アプリをダウンロードしていない人は、App Store にリダイレクトされます。
 
 **同期されたメディアの再生**<br>
 同期されたメディア再生では、1人が SharePlay ビデオを一時停止すると、すべてのデバイスで一時停止されます。<br><br>
-![SharePlay][5]{: style="border:0"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay7.png %}({: style="border:0"})
 
 ## 統合
 
@@ -130,7 +130,7 @@ struct MediaItemActivity: GroupActivity {
 
 状態が `activationPreferred` に戻ったら、残りのグループアクティビティのライフサイクルをアクティブにする合図です。 
 
-![SharePlay][1]{: style="border:0;"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay.png %}({: style="border:0;"})
 
 ### ステップ 4:SharePlay API からアプリ内メッセージを起動する
 
@@ -218,9 +218,3 @@ override func viewDidLoad() {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/shareplay/shareplay.png %}
-[2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
-[3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
-[4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-[5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.png %}

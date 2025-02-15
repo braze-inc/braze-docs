@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:スケジュールされたメッセージを更新する"
-article_title: "POST:スケジュールされたメッセージを更新する"
+nav_title: "POST:スケジュールされたメッセージを更新"
+article_title: "POST:スケジュールされたメッセージを更新"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -10,11 +10,11 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージを更新する
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
-> スケジュールされたメッセージを更新するには、このエンドポイントを使う。 
+> スケジュールされたメッセージを更新するには、このエンドポイントを使う。
 
 このエンドポイントは、`schedule` または `messages` パラメーターのいずれか、あるいはその両方に対する更新を受け入れます。リクエストには、これら 2 つのキーのうち、少なくとも 1 つが含まれている必要があります。
 
@@ -22,13 +22,13 @@ description: "この記事では、「スケジュールされたメッセージ
 
 ## 前提条件
 
-このエンドポイントを使用するには、`messages.schedule.update`権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`messages.schedule.update`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -50,12 +50,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | 必須 | string | 更新する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
+| `schedule_id` | 必須 | 文字列 | 更新する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
 |`schedule` | オプション | オブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
 |`messages` | オプション | オブジェクト | [利用可能なメッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update' \
 --header 'Content-Type: application/json' \

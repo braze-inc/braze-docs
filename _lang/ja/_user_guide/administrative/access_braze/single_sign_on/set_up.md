@@ -9,7 +9,7 @@ description: "この記事では、Braze アカウントの SAML シングルサ
 
 # サービスプロバイダー (SP) が開始するログイン
 
-> この記事では、Braze アカウントの SAML シングルサインオンを有効にする方法を順に説明します。
+> この記事では、BrazeアカウントのSAMLシングルサインオンを有効にする方法と、SAMLトレースを取得する方法を説明する。
 
 ## 要件
 
@@ -17,16 +17,16 @@ description: "この記事では、Braze アカウントの SAML シングルサ
 
 | 必要条件 | 詳細 |
 |---|---|
-| アサーション・コンシューマー・サービス（ACS）URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br><br> 欧州連合のドメインの場合、ASCのURLは`https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 。<br><br> IdPによっては、これはReply URL、Sign-On URL、Audience URL、または Audience URIとも呼ばれる。 |
-| エンティティID | `braze_dashboard` |
+| アサーションコンシューマーサービス (ACS) の URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br><br> 欧州連合のドメインの場合、ASCのURLは`https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 。<br><br> IdP によっては、これを応答 URL、サインオン URL、オーディエンス URL、またはオーディエンス URI と呼ぶこともあります。 |
+| エンティティ ID | `braze_dashboard` |
 | RelayState APIキー | **Settings（設定）**＞**API Keys（APIキー**）に進み、`sso.saml.login` 権限を持つAPIキーを作成し、生成されたAPIキーをIdP内の`RelayState` パラメータとして入力する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは \[**開発者コンソール**] > \[**API 設定**] の \[**設定**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、API キーは [**開発者コンソール**] > [**API 設定**] の [**設定**] にあります。
 {% endalert %}
 
-## SAML SSO の設定
+## SAML SSOの設定
 
 ### ステップ 1: ID プロバイダーの設定
 
@@ -50,20 +50,20 @@ Braze は SAML アサーションに `email` のみが必要です。
 
 ID プロバイダーでの Braze の設定が完了すると、Braze アカウントに入力するターゲット URL と `x.509` 証明書が ID プロバイダーから提供されます。
 
-アカウントマネージャーがアカウントの SAML SSO をオンにしたら、\[**設定**] > \[**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを \[**オン**] に切り替えます。
+アカウントマネージャーがアカウントの SAML SSO をオンにしたら、[**設定**] > [**管理者設定**] > ［**セキュリティ設定**］ に移動し、［SAML SSO］ セクションを [**オン**] に切り替えます。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、\[**会社の設定**] > \[**セキュリティ設定**] に移動して、\[SAML SSO] セクションを見つけます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動して、[SAML SSO] セクションを見つけます。
 {% endalert %}
 
 そのページで、次の項目を入力します。
 
 | 必要条件 | 詳細 |
 |---|---|
-| `SAML Name` | これはログイン画面のボタンテキストとして表示される。<br>これは通常、「Okta」のようなIDプロバイダの名前である。 |
-| `Target URL` | これは、IdP内でBrazeをセットアップした後に提供される。<br> 一部の IdP は、これを SSO URL または SAML 2.0 Endpoint と呼ぶ。 |
+| `SAML Name` | これは、ログイン画面にボタンのテキストとして表示されます。<br>これは通常、「Okta」のような ID プロバイダーの名前です。 |
+| `Target URL` | これは、IdP 内で Braze を設定した後に提供されます。<br> IdP によってはこれを SSO URL または SAML 2.0 エンドポイントと呼びます。 |
 | `Certificate` | ID プロバイダが提供する`x.509` 証明書。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ダッシュボードに `x.509` 証明書を追加するときに、次の形式になっていることを確認してください。
 
@@ -92,3 +92,30 @@ SSO の利用を選択したメンバーは、以前とは異なり、パスワ�
 ![セキュリティ設定ページの「認証ルール」セクション]({% image_buster /assets/img/sso3.png %})
 
 制限をオンにすると、たとえ以前にパスワードでログインしていたとしても、会社の Braze ユーザーはパスワードを使用したログインができなくなります。
+
+## SAML トレースを取得する。
+
+SSO に関連するログインの問題が発生した場合、SAML トレースを取得することで、SAML要求で送信された内容を特定して、SSO 接続のトラブルシューティングに役立てることができます。
+
+### 前提条件
+
+SAMLトレースを実行するには、SAMLトレーサが必要である。以下は、お使いのブラウザに応じた2つのオプションである：
+
+- [Google Chrome](https://chromewebstore.google.com/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/saml-tracer/)
+
+### ステップ 1: SAML トレーサを開く
+
+ブラウザのナビゲーション・バーから SAML トレーサを選択する。「**一時停止**」が選択されていないことを確認します。一時停止を選択すると、SAML トレーサが SAML リクエストで送信された内容をキャプチャできなくなるためです。SAML トレーサを開くと、トレースに入力されるのがわかります。
+
+![Google Chrome 用 SAML トレーサー]({% image_buster /assets/img/saml_tracer_example.png %})
+
+### ステップ 2: SSOを使ってBrazeにサインインする
+
+Brazeのダッシュボードに行き、SSOを使ってサインインを試みる。エラーが発生した場合は、SAML トレーサを開いて再試行します。`https://dashboard-XX.braze.com/auth/saml/callback` のような URL の行があり、オレンジ色の SAML タグがあれば、SAML トレースは正常に収集されている。
+
+### ステップ 3:エクスポートしてBrazeに送る
+
+[**エクスポート**] を選択します。**Select Cookie-filter profile "**で "**None "**を選択する。次に [**エクスポート**] を選択します。これでJSONファイルが生成され、Brazeサポートに送信してさらにトラブルシューティングを行うことができる。
+
+![[Export SAML-trace preferences] メニューで [None] オプションが選択されている。]({% image_buster /assets/img/export_saml_trace_preferences.png %})

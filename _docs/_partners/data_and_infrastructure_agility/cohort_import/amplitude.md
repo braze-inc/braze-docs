@@ -41,7 +41,7 @@ Once you have created a cohort, click **Sync to...** to export these users to Br
 
 #### Defining sync cadence
 
-Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
+Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/data/data_points/).
 
 ### Step 4: Segment users in Braze
 

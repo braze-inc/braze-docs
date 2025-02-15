@@ -96,7 +96,7 @@ What levers do you have to pull and what are the desired effects? While there ar
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
@@ -136,7 +136,7 @@ If you use random bucket numbers for control groups manually, reference this lis
 [1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
 [6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

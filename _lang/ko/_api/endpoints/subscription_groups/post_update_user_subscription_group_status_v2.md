@@ -3,7 +3,7 @@ nav_title: "POST: 사용자의 구독 그룹 상태 업데이트 V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "이 문서에서는 업데이트 사용자의 구독 그룹 상태 Braze V2 엔드포인트에 대한 세부 정보를 설명합니다."
+description: "이 문서에서는 사용자의 구독 그룹 상태 Braze V2 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
 
 platform: API
 channel:
@@ -16,9 +16,9 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자 구독 상태를 일괄 업데이트할 수 있습니다. 
+> 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자의 구독 상태를 일괄 업데이트할 수 있습니다. 
 
-**구독 그룹**페이지로 이동하여 구독 그룹의 `subscription_group_id`에 액세스할 수 있습니다.
+**구독** 그룹 페이지로 이동하여 구독 그룹의 `subscription_group_id` 에 액세스할 수 있습니다.
 
 **이메일 구독 그룹에** 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음과 같이 하세요:
 
@@ -60,10 +60,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-* `emails` 및 `phones` 매개변수 둘 다 포함할 수는 없습니다. 또한, `emails`, `phones`, `external_ids` 모두 개별적으로 보낼 수 있습니다.
+* `emails` 및 `phones` 매개변수 둘 다 포함할 수는 없습니다. 또한 `emails`, `phones`, `external_ids` 으로 개별적으로 보낼 수도 있습니다.
 
 {% alert tip %}
-[`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)를 통해 새 사용자를 만들 때 사용자 속성 개체 내에서 구독 그룹을 설정할 수 있습니다. 이를 통해 한 번의 API 호출로 사용자를 생성하고 구독 그룹 상태를 설정할 수 있습니다.
+[`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 사용하여 새 사용자를 만들 때 사용자 속성 개체 내에서 구독 그룹을 설정하면 한 번의 API 호출로 사용자를 만들고 구독 그룹 상태를 설정할 수 있습니다.
 {% endalert %}
 
 ## 요청 매개변수
@@ -75,10 +75,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `external_ids` | 필수* | 문자열 배열 | 사용자(또는 사용자)의 `external_id` 에는 최대 50개의 `id`을 포함할 수 있습니다. |
 | `emails` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우 이메일 주소를 공유하는 모든 사용자에게 구독 그룹 변경 사항이 업데이트됩니다. |
 | `phones` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개까지 가능). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-`emails` 및 `phones` 매개변수를 모두 포함할 수는 없습니다. 또한, `emails`, `phones`, `external_ids` 모두 개별적으로 보낼 수 있습니다.
+`emails` 및 `phones` 매개 변수를 모두 포함할 수 없습니다. 또한 `emails`, `phones`, `external_ids` 으로 개별적으로 보낼 수도 있습니다.
 {% endalert %}
 
 ### 요청 예시

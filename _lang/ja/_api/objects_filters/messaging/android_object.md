@@ -24,6 +24,7 @@ description: "このリファレンス記事では、Brazeで使用されてい�
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
    "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
    "priority": (optional, integer) the notification priority value,
+   "android_priority": (optional, string) the FCM sender priority,
    "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
    // Specifying "default" in the sound field will play the standard notification sound
@@ -40,18 +41,19 @@ description: "このリファレンス記事では、Brazeで使用されてい�
 }
 ```
 
-`extra` オブジェクトにキー `appboy_image_url` を指定すると、「Big Picture」通知を送信できます。`appboy_image_url` の値は、画像がホストされている場所にリンクする URL である必要があります。画像は縦横比2:1にトリミングし、600×300px以上であること。通知に使用される画像は、ジェリービーン（Android 4.1）以上を搭載した端末でのみ表示される。
+`extra` オブジェクトにキー `appboy_image_url` を指定すると、「Big Picture」通知を送信できます。`appboy_image_url` の値は、画像がホストされている場所にリンクする URL である必要があります。画像は縦横比2:1にトリミングし、600×300px以上であること。
 
 ### 追加パラメータの詳細
 
-| パラメーター | 詳細 |
+| パラメータ | 詳細 |
 | --------- | ------- |
 | `priority` | このパラメーターには `-2` から `2` までの値を指定できます。`-2` は「MIN」優先度を表し、`2` は「MAX」を表します。`0` は「デフォルト」値です。<br> <br> その範囲外の値が送信された場合、デフォルトは0となる。どの優先度を使うかについては、[Android の通知優先度]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority)を参照してください。 |
+| `android_priority` | このパラメーターは、FCM 送信者の優先順位を指定するために、「normal」または「high」のいずれかの値を受け入れます。デフォルトでは、通知メッセージは高い優先度で送信され、データメッセージは通常の優先度で送信される。<br><br> 値の違いが配信に与える影響の詳細については、[Android メッセージの優先度](https://firebase.google.com/docs/cloud-messaging/android/message-priority)を参照してください。 |
 | `collapse_key` | FCM で同時に保存できるのは、1つのデバイスにつき最大4つの折りたたみキーのみです。4つを超える折りたたみキーを使用する場合、FCM でどの折りたたみキーが保持されるかについては保証されません。Braze はデフォルトでこれらのうちの1つをキャンペーンに使用するため、Android メッセージ用に指定する追加の折りたたみキーは3つまでにしてください。 |
 | `push_icon_image_url` | large icon パラメーターの値は、画像がホストされている場所にリンクする URL である必要があります。<br> <br> イメージは1:1のアスペクト比にトリミングする必要があり、40x40以上にする必要があります。 |
 | `notification_channel` | これが指定されない場合、Brazeは[ダッシュボードのフォールバック][45]チャンネルIDで通知ペイロードを送信しようとする。詳細については、「[通知チャネル][44]」を参照し、統合中に「[通知チャネルを定義する][43]」ステップを参照してください。 |
 | `send_to_sync` | `send_to_sync` メッセージの詳細については、[Android のサイレント通知][28]を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Android プッシュアクションボタンオブジェクト
 

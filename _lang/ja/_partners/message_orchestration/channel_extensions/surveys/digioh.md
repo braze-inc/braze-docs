@@ -22,8 +22,8 @@ Braze と Digioh の統合により、柔軟性の高いドラッグ＆ドロッ
 |---|---|
 |Digioh アカウント | このパートナーシップを活用するには、[Digioh アカウント](https://www.digioh.com/)が必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze API`/users/track/` エンドポイント | `/users/track/` の詳細が付加された REST エンドポイント URL。エンドポイントは\[インスタンスの Braze URL][6] に応じて異なります。<br><br>たとえば、REST API エンドポイントが `https://rest.iad-01.braze.com` の場合、`/users/track/` エンドポイントは `https://rest.iad-01.braze.com/users/track/` になります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Braze API`/users/track/` エンドポイント | `/users/track/` の詳細が付加された REST エンドポイント URL。エンドポイントは[インスタンスの Braze URL][6] に応じて異なります。<br><br>たとえば、REST API エンドポイントが `https://rest.iad-01.braze.com` の場合、`/users/track/` エンドポイントは `https://rest.iad-01.braze.com/users/track/` になります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 統合 
 
@@ -31,13 +31,13 @@ Digioh を統合するには、まず Braze コネクターを設定する必要
 
 ### ステップ1:Digioh 統合を作成する 
 
-Digioh で \[**Integration**] タブをクリックし、次に\[**New Integration**] ボタンをクリックします。\[**Integration**] ドロップダウンから \[**Braze**] を選択し、統合に名前を付けます。 
+Digioh で [**Integration**] タブをクリックし、次に[**New Integration**] ボタンをクリックします。[**Integration**] ドロップダウンから [**Braze**] を選択し、統合に名前を付けます。 
 
 !["ドロップダウンから正しい統合を選択する"][2]{: style="max-width:50%;"}
 
 次に、Braze REST API キーとBraze API `/users/track/` エンドポイントを入力します。 
 
-最後に、マップフィールドセクションを使って、Eメールと名前以外のカスタムフィールドをマッピングする。次のコード・スニペットは、ペイロードの例を示している。完了したら、\[**Create Integration**] を選択します。
+最後に、マップフィールドセクションを使って、Eメールと名前以外のカスタムフィールドをマッピングする。次のコード・スニペットは、ペイロードの例を示している。完了したら、[**Create Integration**] を選択します。
 
 ```json
 {
@@ -57,11 +57,11 @@ Digioh [デザインエディター](https://help.digioh.com/knowledgebase/digio
 
 ### ステップ3:統合を適用する
 
-この統合を Digioh [ライトボックス](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/)に適用するには、\[**Boxes**] ページに移動し、\[**Integrations**] カラムの \[**Add**] または \[**Edit**] リンクを選択します。これはエディターの**Integration**セクションからも追加できる。
+この統合を Digioh [ライトボックス](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/)に適用するには、[**Boxes**] ページに移動し、[**Integrations**] カラムの [**Add**] または [**Edit**] リンクを選択します。これはエディターの**Integration**セクションからも追加できる。
 
 ![「統合をライトボックスに追加する][3]{: style="max-width:90%"}
 
-ここで \[**Add Integration**] を選択し、目的の統合を選択して \[**Save**] をクリックします。Digioh は、キャプチャしたリードをリアルタイムで Braze に渡します。
+ここで [**Add Integration**] を選択し、目的の統合を選択して [**Save**] をクリックします。Digioh は、キャプチャしたリードをリアルタイムで Braze に渡します。
 
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}

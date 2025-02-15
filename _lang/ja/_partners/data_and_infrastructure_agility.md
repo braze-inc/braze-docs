@@ -8,8 +8,6 @@ description: "このページには、さまざまなツールやプロバイダ
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Data & Infrastructure Agility"
 
 valid_partner_list:
@@ -135,4 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

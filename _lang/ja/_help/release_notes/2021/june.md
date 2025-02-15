@@ -24,7 +24,7 @@ Braze で、カスタムイベントおよび購入イベントの[ネストさ�
 
 Brazeでの買い物の内容は気になりますか？詳しくは[購入イベントの]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)記事をご覧いただきたい。
 
-## Braze の新しいパートナーシップ
+## 新しいBrazeのパートナーシップ
 
 ### Nexla - ワークフローの自動化
 

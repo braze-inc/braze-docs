@@ -32,6 +32,7 @@ A valid permissions object is a JSON object with the following key-value pairs:
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `companyPermissions` | Optional | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
+| `roles` | Optional | Array | Array of [role objects](#role-object). |
 | `appGroup` | Required | Array | Array of [workspace permission objects](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -69,6 +70,16 @@ A valid team permission object is a JSON object with the following key-value pai
 | `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+## Role object
+
+A valid role object is a JSON object with the following key value pairs:
+
+| Key | Required | Data type | Description |
+| --- | --- | --- | --- |
+| `roleName` | Optional | String | Name of the role that is being assigned to the user. |
+| `roleId` | Required if `roleName` is missing | String | ID of the role, serving as an alternative method of specifying the role. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## Appendix
 
 ### Company permission strings {#company}
@@ -86,6 +97,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- |
 | Admin | `admin` |
 | Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
+| Approve and Deny Canvases | `approve_deny_campaigns` |
 | Send Campaigns, Canvases | `send_campaigns_canvases` |
 | Publish Cards | `publish_cards` |
 | Edit Segments | `edit_segments` |
@@ -116,6 +128,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- |
 | Admin | `admin` |
 | Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
+| Approve and Deny Canvases | `approve_deny_campaigns` |
 | Send Campaigns, Canvases | `send_campaigns_canvases` |
 | Publish Cards | `publish_cards` |
 | Edit Segments | `edit_segments` |

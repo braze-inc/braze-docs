@@ -14,7 +14,7 @@ search_tag: Partner
 
 The incoming webhook from Front will contain a payload that includes the message sent by the live agent. The request will need to be reformatted before it can be accepted by Braze’s endpoints. The Front Data Transformation template will reformat the payload and write a custom event to the user profile titled **Outbound SMS Sent,** with the message body being passed as an event property.
 
-Before setting up a new transformation in Braze, we recommend reviewing the support matrix for each tier in our [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) documentation. Our Free and Pro tiers offer a different number of active transformations and incoming requests per month. Confirm the current plan you’re on can support your use case.
+Before setting up a new transformation in Braze, we recommend reviewing the support matrix for each tier in our [Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) documentation. Our Free and Pro tiers offer a different number of active transformations and incoming requests per month. Confirm the current plan you’re on can support your use case.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 | Prerequisite             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Front account            | A Front account is required to take advantage of this partnership.|
-| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by Braze’s /users/track endpoint.|
+| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by Braze’s /users/track endpoint.|
 | A Front REST API Key         | A Front REST API key will be used to make an outbound webhook request from Braze to Front. |
 
 ## Use cases
@@ -35,7 +35,7 @@ Before you start, you'll need the following:
 
 ### Step 1: Create a data transformation
 
-First, you'll create a new data transformation in Braze. The following steps are simplified; for a full walkthrough, see [Creating a transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation).
+First, you'll create a new data transformation in Braze. The following steps are simplified; for a full walkthrough, see [Creating a transformation]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/).
 
 1. In Braze, go to **Data Settings** > **Data Transformations**, then select **Create Transformation** .
 2. Under **Editing Experience**, select **Start from scratch**.

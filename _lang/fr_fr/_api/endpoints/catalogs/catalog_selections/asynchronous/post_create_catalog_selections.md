@@ -33,14 +33,14 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre      | Requis | Type de données | Description          |
 | -------------- | -------- | --------- | -------------------- |
 | `catalog_name` | Requis | Chaîne de caractères    | Nom du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
 | Paramètre   | Requis | Type de données | Description                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `selection` | Requis | Objet    | Un objet qui contient des critères de sélection. Les objets de sélection peuvent contenir `name`, `description`, `filters`, `results_limit`, `sort_field`, et `sort_order`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -77,7 +77,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `boolean`  | `is`                                                    |
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Réponse
 
@@ -133,6 +133,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `invalid-sort-field`                 | Vérifier si le champ de tri de la sélection est valide.                                                   |
 | `invalid-sort-order`                 | Vérifier si l'ordre de tri de la sélection est valide.                                                   |
 | `selection-contains-too-many-arrays` | Vérifiez si la sélection contient plus d'un champ de type `array`. Un seul est pris en charge. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

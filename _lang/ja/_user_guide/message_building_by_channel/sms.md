@@ -8,8 +8,8 @@ channel:
   - MMS
 search_rank: 3
 guide_top_header: "SMSとMMS"
-guide_top_text: "SMS（Short Messaging Service）とMMS（Multimedia Messaging Service）は、電話番号を利用するため、他のメッセージング・チャネルよりもダイレクトにユーザーにアプローチでき、リアルタイムで連絡を取ることができる。Braze SMSまたはMMSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMSとMMSは一部のBrazeパッケージでのみ利用可能。まずはアカウント・マネージャーかカスタマー・サクセス・マネージャーに連絡を。"
-description: "このランディング・ページは、SMS（ショート・メッセージング・サービス）とMMS（マルチメディア・メッセージング・サービス）のホーム・ページである。これらのサービスでは、ユーザーの電話番号を利用するため、他のほとんどのメッセージング・チャンネルよりもダイレクトな方法で、リアルタイムで連絡を取ることができる。"
+guide_top_text: "SMS (ショートメッセージングサービス) と MMS (マルチメディアメッセージングサービス) は、他のほとんどのメッセージングチャネルよりも直接的にユーザーにリーチする方法です。ユーザーの電話番号を使用して、リアルタイムでユーザーに到達できるためです。Braze SMSまたはMMSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMSとMMSは一部のBrazeパッケージでのみ利用可能。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
+description: "このランディングページには、SMS (ショートメッセージングサービス) と MMS (マルチメディアメッセージングサービス) がまとめられています。これらのサービスは、ユーザーの電話番号を使用して、リアルタイムでユーザーに到達できるため、他のほとんどのメッセージングチャネルよりも直接的にユーザーにリーチする方法です。"
 
 guide_featured_title: "SMS"
 guide_featured_list:
@@ -22,10 +22,10 @@ guide_featured_list:
 - name: "SMS関連法規"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: "SMS購読グループ"
+- name: "SMS 購読グループ"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg
-- name: "SMSの地理的許可"
+- name: "SMS の地理的許可"
   link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
 - name: "SMSメッセージを作成する"
@@ -52,6 +52,9 @@ guide_featured_list:
 - name: "SMSレポート"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "メッセージ利用ダッシュボード"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
 - name: "SMSに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

@@ -43,13 +43,13 @@ Braze にはユーザーと連絡を取るための多くのオプションが�
 
 | Channel | 詳細 |
 |---|---|
-| アプリ内メッセージ | SDKの実装と、チャンネル固有の手順が必要である。 |
+| アプリ内メッセージ | SDK の実装とチャネル固有のステップが必要である。 |
 | プッシュ | メッセージング認証情報とプッシュトークンに関する適切な処理を提供するSDK実装が必要である。 |
-| メール | これはまったく別のプロセスだ。統合の詳細については、[Eメール設定]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/)セクションをチェックする。 |
+| メール | これはまったく別のプロセスである。統合の詳細については、[Eメール設定]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/)セクションをチェックする。 |
 | コンテンツカードによって促進された | [コンテンツカードを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)使い始めるには、Brazeのカスタマーサクセスマネージャーにご連絡を。 |
 | SMS & MMS | 統合の詳細については、[SMSセットアップの]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup)セクションを参照のこと。 |
 | Webhook | SDKの実装とチャンネル固有のステップが必要である。 | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 Braze を使えば、各チャネルでアクセスしやすいメッセージングキャンペーンを作成できます。開発者と協力して、実装においてアクセシビリティ基準を満たすようにしてください。
@@ -80,7 +80,7 @@ API トリガーによる起動や Connected Content などが必要な場合は
 
 ## 実装後
 
-実装のゴールラインは、1度に100万件のメッセージを送信するためのゴーサインでもないことに注意してください。100万件のプッシュを送信すると、すべての顧客が同じリンクを同時にクリックした場合、アプリが破損する可能性があります。\[**送信**] ボタンをクリックする前に、Braze からのリクエストを処理するための内部設定のキャパシティについて話し合うことをお勧めします。そして、それに基づいて[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting)を設定できます。
+実装のゴールラインは、1度に100万件のメッセージを送信するためのゴーサインでもないことに注意してください。100万件のプッシュを送信すると、すべての顧客が同じリンクを同時にクリックした場合、アプリが破損する可能性があります。[**送信**] ボタンをクリックする前に、Braze からのリクエストを処理するための内部設定のキャパシティについて話し合うことをお勧めします。そして、それに基づいて[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting)を設定できます。
 
 ![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
 

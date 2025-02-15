@@ -14,7 +14,8 @@ tool:
 
 > This reference article covers what can be changed in a Canvas after the initial launch.
 
-For Canvases launched with Canvas Flow or the original editor, you can edit your Canvases after launch by:
+You can edit your Canvases after launch by:
+
 * Inserting new Canvas steps into the user journey
 * Adding new variants and connections
 * Adjusting variant distribution
@@ -28,7 +29,7 @@ Keep in mind the following permissible post-launch Canvas edits depending on whi
 
 You can delete any of the following in your user journey:
 
-- [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Canvas variants 
 - Connections between Canvas steps
 
@@ -66,7 +67,8 @@ Stopping a Canvas will not exit users who are waiting to receive a message. If y
 
 ## Canvas details
 
-You can edit these Canvas settings and information after a Canvas launches using either editor (the original or Canvas Flow): 
+You can edit the following Canvas settings and information after a Canvas launches:
+
 * Canvas name and description
 * Teams and tags
 * Entry type, schedule, and controls
@@ -77,12 +79,16 @@ You can edit these Canvas settings and information after a Canvas launches using
 * Target audience
 
 After a Canvas has launched:
+
 - Conversion events can't be edited. 
-- [Audience paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [experiment paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) can't be added or removed to these steps and can't be reordered to adjust the ranking. As a workaround, edit the active Canvas and duplicate the step, which will be editable until you launch the draft.
+- The following steps can't be added or removed, and can't be reordered to adjust the ranking: [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+  - **Workaround 1:** Create a new Audience Path, Action Path, or Experiment Path and reconfigure the paths to that new step.
+  - **Workaround 2:** Duplicate the Canvas to make your edits.
 
 ### Individual steps
 
 For individual Canvas steps, you can edit the following details after launch:
+
 * Name
 * Message content
 * Triggers
@@ -115,13 +121,18 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 ### Deleting variants
 
 When variants are deleted from a Canvas, the following occurs:
+
 - Steps within the variant (including those shared by other variants) will be deleted. 
 - The step analytics and the top-level analytics for the Canvas, such as _Total Entries_, _Total Exits_, and _Conversion Rate_, will be deleted.
 - Users in deleted variants are exited from the steps, and any following messages are not sent.
 
+### Canvas entry properties
+
+Canvas entry properties aren't templated into steps when sent. This means when Canvas entry properties are edited after a Canvas has launched, these changes will only apply to new users who enter the Canvas. If your Canvas allows users to re-enter the Canvas, any users who re-enter will be determined by the updated Canvas entry properties.
+
 ## Best practices
 
-Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched using Canvas Flow.
+Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched.
 
 ### Disconnected steps
 

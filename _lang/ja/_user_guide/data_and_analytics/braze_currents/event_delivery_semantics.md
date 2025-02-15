@@ -3,35 +3,36 @@ nav_title: イベント配信のセマンティクス
 article_title: イベント配信のセマンティクス
 page_order: 3
 page_type: reference
-description: "このリファレンス記事では、データウェアハウスパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説します。"
+description: "このリファレンス記事では、データウェアハウスストレージパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説および定義します。"
 tool: Currents
 
 ---
 
 # イベント配信のセマンティクス
 
-> この記事では、データウェアハウスパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説します。
+> このページでは、データウェアハウスストレージパートナーに送信するフラットファイルのイベントデータを Currents がどのように管理するかを概説および定義します。
 
-データストレージ用の Currents は、弊社のプラットフォームから、データウェアハウスの[パートナー接続]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)の 1 つにあるストレージバケットに送信されるデータの連続ストリームです。
-
-Currents は、通常のしきい値に達するとストレージバケットに Avro ファイルを書き込むので、独自のビジネスインテリジェンスツールセットを使用してイベントデータの処理および分析ができます。
+データストレージ用の Currents は、弊社のプラットフォームから、データウェアハウスの[パートナー接続]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)の 1 つにあるストレージバケットに送信されるデータの連続ストリームです。Currents は、通常のしきい値に達するとストレージバケットに Avro ファイルを書き込むので、独自のビジネスインテリジェンス (BI) ツールセットを使用してイベントデータの処理および分析ができます。
 
 {% alert important %}
-この内容は、**データウェアハウスパートナー (Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage) に送信するフラットファイルのイベントデータにのみ適用されることに注意してください**。<br><br>他のパートナーに適用される内容については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
+この内容は、**データウェアハウスストレージパートナー (Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage) に送信するフラットファイルのイベントデータにのみ適用されます**。<br><br>他のパートナーに適用される内容については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。
 {% endalert %}
-
 
 ## 1 回以上の配信
 
-Currents 高スループットのシステムであるため、イベントの「1 回以上」の配信を確実に実行します。つまり、たまにストレージバケットにイベントが重複して書き込まれることがあります。これは、何らかの理由でキューからイベントが再処理された場合に起こります。
+Currents は、高スループットのシステムであるため、「1回以上」のイベント配信を実行します。つまり、たまにストレージバケットにイベントが重複して書き込まれることがあります。これは、何らかの理由でキューからイベントが再処理された場合に起こります。
 
-ユースケースで厳密に 1 回の配信が必要な場合は、イベントとともに送信される一意の識別子フィールド (`id`) を使用して、重複するイベントを除外できます。ファイルはストレージバケットに書き込まれた時点で弊社の管理下から離れるため、弊社側で重複を確実に除外する方法はありません。
+ユースケースで「厳密に1回」の配信が必要な場合は、イベントとともに送信される一意の識別子フィールド (`id`) を使用して、重複するイベントを除外できます。ファイルはストレージバケットに書き込まれた時点で弊社の管理下から離れるため、弊社側で重複を確実に除外する方法はありません。
 
 ## タイムスタンプ
 
-Currents がエクスポートするすべてのタイムスタンプは、UTC タイムゾーンで送信されます。タイムスタンプを利用可能な一部のイベントでは、イベント発生時のユーザーのローカルタイムゾーンを IANA 形式で提供する、タイムゾーンフィールドも含まれます。
+Currents がエクスポートするすべてのタイムスタンプは、UTC タイムゾーンで送信されます。それが利用可能ないくつかのイベントでは、タイムゾーンフィールドも 含まれる。これは、インターネット番号割当機構（IANA）のフォーマットで、イ ベントが行われた時点でのユーザーのローカルタイムゾーンを配信する。
 
-## Apache Avro
+### レイテンシー
+
+SDK または API を介して Braze に送信されたイベントには、過去のタイムスタンプが含まれていることがあります。最も顕著な例は、モバイル接続がない場合など、SDKデータがキューに入れられる場合だ。その場合、イベントのタイムスタンプは、そのイベントがいつ生成されたかを反映する。つまり、イベントの何割かは遅延が大きいように見えます。
+
+## Apache Avro 形式
 
 Braze Currents のデータストレージ連携では、`.avro` 形式でデータが出力されます。弊社が [Apache Avro](https://avro.apache.org/) を選択した理由は、スキーマの進化をネイティブにサポートし、さまざまなデータ製品でサポートされている柔軟なデータ形式だからです。 
 
@@ -46,25 +47,25 @@ Currents は、以下の形式で各イベントタイプのファイルを作�
 ```
 
 {% alert tip %}
-スクロールバーがあるために、コードが見えない場合は、[こちら]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)の修正方法を参照してください。
+スクロールバーがあるために、コードが見えない場合は、その解決方法は[こちらで]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)学習しよう。
 {% endalert %}
 
-|ファイル名 Segment |定義|
+|ファイル名セグメント |定義|
 |---|---|
 | `<your-bucket-prefix>` | このCurrents統合のために設定されたプレフィックス。 |
-| `<cluster-identifier>` | Brazeによる内部使用のため。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルは同じクラスタ識別子を持ちます。|
+| `<cluster-identifier>` | Braze 内部で使用されます。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルは同じクラスタ識別子を持ちます。|
 | `<connection-type-identifier>` | 接続の種類の識別子。オプションは「S3」、「AzureBlob」、または「GCS」です。 |
 | `<integration-id>` | このCurrents統合の一意のID。 |
 | `<event-type>` | ファイル内のイベントの種類。 |
-| `<date>` | イベントがUTCタイムゾーンで処理のためにシステムにキューされる時間。書式設定された YYYY-MM-DD-HH。 |
-| `<schema-id>` | 後方互換性とスキーマの進化のために`.avro`スキーマのバージョン管理に使用されます。整数。 |
-| `<zone>` | Brazeによる内部使用のため。 |
-| `<partition>` | Brazeによる内部使用のため。整数。 |
-| `<offset>`| Brazeによる内部使用のため。整数。注意: 同じ時間内に送信された異なるファイルには、異なる`<offset>`パラメータが含まれます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `<date>` | イベントがUTCタイムゾーンで処理のためにシステムにキューされる時間。形式は YYYY-MM-DD-HH です。 |
+| `<schema-id>` | `.avro` スキーマの後方互換性とスキーマ進化のために、そのバージョン管理に使用されます。整数。 |
+| `<zone>` | Braze 内部で使用されます。 |
+| `<partition>` | Braze 内部で使用されます。整数。 |
+| `<offset>`| Braze 内部で使用されます。整数。異なるファイルが同一時刻内に送信される場合、`<offset>` パラメーターが異なることに注意してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-ファイルの命名規則は将来変更される可能性があるため、プレフィックスが <your-bucket-prefix> であるすべてのキーをバケットから検索することを Braze ではお勧めします。
+ファイルの命名規則は将来変更される可能性がある。Brazeは、プレフィックスが<your-bucket-prefix>であるバケット内のすべてのキーを検索することを推奨する。
 {% endalert %}
 
 ### Avro の書き込みしきい値
@@ -77,11 +78,11 @@ Currents は空のファイルの書き込みを行いません。
 
 ### Avro スキーマの変更
 
-Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。Currentsのイベントは、Azure Blob Storage、Google Cloud Storage、およびAmazon S3に書き込まれ、パスに`<schema-id>`を書き込みます。例えば`<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`。
+Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。Azure Blob Storage、Google Cloud Storage、および Amazon S3 に書き込まれる Currents イベントは、パスに `<schema-id>` を書き込みます。例: `<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`
 
 #### 非破壊的な変更
 
-Avro スキーマにフィールドが追加された場合は、非破壊的な変更と見なします。追加されたフィールドは常に Avro の「オプション」フィールド (デフォルト値 `null` を持つものなど) になるため、[Avro スキーマ解決仕様](http://avro.apache.org/docs/current/spec.html#schema+resolution)に従って古いスキーマと「一致」します。このフィールドが ETL プロセスに追加されるまでは、単に無視されるのみなので、このような追加は既存の ETL プロセスに影響を与えないはずです。 
+Avro スキーマにフィールドが追加された場合は、非破壊的な変更と見なします。追加されたフィールドは常に Avro の「オプション」フィールド (デフォルト値 `null` を持つものなど) になるため、[Avro スキーマ解決仕様](http://avro.apache.org/docs/current/spec.html#schema+resolution)に従って古いスキーマと「一致」します。このフィールドは、ETLプロセスに追加されるまで無視されるだけであるため、これらの追加は、既存のETL（Extract, Transform, and Load）プロセスに影響を与えないはずである。 
 
 {% alert important %}
 新規フィールドが追加されたときにフローが破損しないように、ETL の設定で処理するフィールドを明示することをお勧めします。

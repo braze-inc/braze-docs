@@ -54,6 +54,7 @@ For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administ
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
+|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### API limits
@@ -215,9 +216,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% endtab %}
 {% tab News Feed %}
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 | Permission | Endpoint | Description |
 |---|---|---|
@@ -345,11 +344,11 @@ The **API Keys** tab includes the following information for each key:
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
-![][30]
+![The list of API key permissions in the Braze dashboard.][30]
 
 Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![][29]{: style="max-width:30%;"}
+![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.][29]{: style="max-width:30%;"}
 
 ### REST API key security
 
@@ -385,7 +384,7 @@ If you're implementing Braze using Ruby, you can use our [Ruby client library](h
 
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
-{% alert note %}
+{% alert important %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

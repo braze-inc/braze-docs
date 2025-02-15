@@ -12,53 +12,44 @@ search_tag: Partner
 
 # Treasure Data for Currents
 
-
 > [トレジャーデータ][1]は、複数のソースから情報を収集し、マーケティングスタックの他のさまざまな場所に情報をルーティングする顧客データプラットフォーム (CDP) です。
 
 Braze とトレジャーデータの統合により、2 つのシステム間の情報の流れをシームレスに制御できます。Currents では、データをトレジャーデータに接続し、グローススタック全体で実用的なデータにすることもできます。
 
-
 ## 前提条件
-
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Treasure Data | このパートナーシップを活用するには、[トレジャーデータのアカウント][0]が必要です。 |
+| トレジャーデータ | このパートナーシップを活用するには、[トレジャーデータのアカウント][0]が必要です。 |
 | Currents | トレジャーデータにデータを再度エクスポートするには、アカウントに [Braze Currents][2] を設定する必要があります。 |
 | トレジャーデータ URL | これは、トレジャーデータのダッシュボードに移動し、取り込み URL をコピーすることで取得できます。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+トレジャーデータは各イベントを一括してログに記録します。トレジャーデータを照会してイベントカウントを取得する方法の詳細については、「[Braze Currents のインポート統合](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration)」を参照してください。
+{% endalert %}
 
 ## 統合
 
-
 トレジャーデータとの接続には、Postback API を使用することをお勧めします。この方法はデフォルトのコネクターを必要とせず、プッシュ方式でデータを受け取ることができる。1つのデータバッチで送信されるすべてのイベントは、JSON 配列の1つの行の1つのフィールド内にあり、必要なデータを取得するために解析する必要があります。
-
 
 {% alert important %}
 現時点では、イベントコレクターを介したトレジャーデータへの取り込みはリアルタイムでは行われず、最大5分かかることがあります。
 {% endalert %}
 
-
 ### ステップ1:Braze を使用してトレジャーデータの Postback API を設定する
-
 
 Postback API の作成方法については、[トレジャーデータ][3]の Web サイトを参照してください。Braze は、イベントコレクターによる取り込みを除き、更新されたイベントをリアルタイムでトレジャーデータに直接送信します。完了すると、トレジャーデータからデータソース URL が提供されます。この URL をコピーして、次のステップで使用します。
 
-
 ### ステップ2:Current を作成する
 
-
-Braze で \[**Currents**] > \[**\+ Current を作成**] > \[**トレジャーデータのエクスポート**] に移動します。統合名、連絡先メール、およびトレジャーデータ URL を指定します。次に、利用可能なイベントのリストから追跡したいものを選択し、**「Launch Current**」をクリックする。
-
+Braze で [**Currents**] > [**\+ Current を作成**] > [**トレジャーデータのエクスポート**] に移動します。統合名、連絡先メール、およびトレジャーデータ URL を指定します。次に、利用可能なイベントのリストから追跡したいものを選択し、**「Launch Current**」をクリックする。
 
 トレジャーデータに送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。この時点では Braze は、`external_user_id` が設定されていないユーザーのイベントデータをトレジャーデータに送信しません。
-
 
 {% alert important %}
 トレジャーデータ URL を最新の状態に保ちます。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が48時間以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
-
 
 #### イベント・フィールドの値の例
 ```json
@@ -91,7 +82,6 @@ Braze で \[**Currents**] > \[**\+ Current を作成**] > \[**トレジャーデ
 ![4]{: style="max-width:70%;"}
 
 ## 統合の詳細
-
 
 Braze では、「[Currents イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)」にリストされているすべてのデータ ([メッセージエンゲージメント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)イベントおよび[顧客行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)イベントのすべてのプロパティを含む) をトレジャーデータにエクスポートできます。
 

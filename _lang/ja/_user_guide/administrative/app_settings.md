@@ -26,6 +26,9 @@ guide_featured_list:
   - name: 内部グループ
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
+  - name: 識別子フィールドレベル暗号化
+    link: /docs/user_guide/data_and_analytics/field_level_encryption/
+    image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
 guide_menu_list:

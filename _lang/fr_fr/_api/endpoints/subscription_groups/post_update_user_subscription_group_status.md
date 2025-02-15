@@ -77,7 +77,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Cette propriété ne doit pas être utilisée pour mettre à jour les informations de profil d’un utilisateur. Utilisez plutôt la propriété [/users/track.]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 
 
 {% alert tip %}
-Lorsque vous créez de nouveaux utilisateurs via l'endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet des attributs de l'utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement en un seul appel d'API.
+Lorsque vous créez de nouveaux utilisateurs à l'aide de l'endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet des attributs de l'utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement en un seul appel d'API.
 {% endalert %}
 
 ## Paramètres de demande
@@ -89,7 +89,7 @@ Lorsque vous créez de nouveaux utilisateurs via l'endpoint [/users/track]({{sit
 | `external_id` | Obligatoire* | Tableau de chaînes de caractères | L’`external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
 | `email` | Obligatoire* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) d'un même espace de travail partagent la même adresse e-mail, tous les utilisateurs qui partagent cette adresse sont mis à jour en fonction des modifications apportées au groupe d'abonnement. |
 | `phone` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Le numéro de téléphone de l’utilisateur peut être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (maximum 50). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de requêtes
 

@@ -8,9 +8,9 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
-> Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
+> Use Connected Content to insert any information accessible by API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.<br><br>This page covers how to make Connected Content API calls, advanced Connected Content use cases, error handling, and more.
 
-## Connected Content tag
+## Sending a Connected Content call
 
 {% raw %}
 
@@ -47,16 +47,30 @@ If the URL is unavailable and reaches a 404 page, Braze will render an empty str
 
 If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 
-## Performance
+### Unhealthy host detection
 
-Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers do not get overloaded when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
+Connected Content employs an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
+
+If the target host experiences a high rate of significant slowness or overload, Braze temporarily will halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host's health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+
+If requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure that these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
+
+{% alert tip %}
+Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more on how to troubleshoot common error codes.
+{% endalert %}
+
+## Allowing for efficient performance
+
+Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers don't get overloaded when pulling down content. When using public APIs, confirm your usage won't violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than two seconds for performance reasons; if the server takes longer than two seconds to respond, the content won't be inserted.
 
 Braze systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
 
 ## Things to know
 
 * Braze does not charge for API calls and will not count toward your given data point allotment.
-* There is a limit of 1 MB for Connected Content responses.
+* There is a limit of one MB for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
 
@@ -67,14 +81,14 @@ Braze systems may make the same Connected Content API call more than once per re
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones from **Settings** > **Connected Content**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Connected Content** under **Manage Settings**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Connected Content** under **Manage Settings**.
 {% endalert %}
 
-![][34]
+![The 'Connected Content' settings in the Braze dashboard.][34]
 
-To add a new credential, click **Add Credential**. Give your credential a name and enter the username and password.
+To add a new credential, select **Add Credential**. Give your credential a name and enter the username and password.
 
-![][35]{: style="max-width:30%" }
+![The 'Create New Credential' window with the option to enter a name, username, and password.][35]{: style="max-width:30%" }
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
@@ -101,7 +115,7 @@ When using Braze Connected Content, you may find that certain APIs require a tok
      :headers {
        "X-App-Id": "YOUR-APP-ID",
        "X-App-Token": "YOUR-APP-TOKEN"
-  }
+     }
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -113,7 +127,7 @@ When using Braze Connected Content, you may find that certain APIs require a tok
 
 Some API configurations require retrieval of an access token that can then be used to authenticate the API endpoint that you want to access.
 
-#### Retrieve the access token
+#### Step 1: Retrieve the access token
 
 The following example illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
@@ -125,14 +139,14 @@ The following example illustrates retrieving and saving an access token to a loc
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
-  }
+     }
      :cache_max_age 900
      :save token_response
 %}
 ```
 {% endraw %}
 
-#### Authorize the API using the retrieved access token
+#### Step 2: Authorize the API using the retrieved access token
 
 Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
 
@@ -143,7 +157,7 @@ Now that the token is saved, it can be dynamically templated into the subsequent
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "{{token_response}}"
-  }
+     }
      :body key1=value1&key2=value2
      :save response
 %}

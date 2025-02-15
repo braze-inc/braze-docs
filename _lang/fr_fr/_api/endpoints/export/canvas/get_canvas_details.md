@@ -31,7 +31,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
@@ -211,12 +211,6 @@ Voici un exemple de réponse qui inclut les messages Canvas envoyés par différ
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 

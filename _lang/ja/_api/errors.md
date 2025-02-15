@@ -89,11 +89,11 @@ POSTペイロードがサーバーに受け入れられた場合、成功した�
 | `400 Android Push Length Exceeded` | JSONペイロードは4,000バイトを超える。|
 | `400 Bad Request` | `send_at` 日時を解析できません。|
 | `400 Bad Request` | リクエストでは、`in_local_time` は true ですが、会社のタイムゾーンで `time` が経過しています。|
-| `401 Unauthorized` | 無効なAPIキー |
+| `401 Unauthorized` | 無効なAPI キーです。 |
 | `403 Forbidden` | 料金プランが対応していない、またはアカウントが無効になっている。|
 | `403 Access Denied` | 使用しているREST APIキーに十分なパーミッションがないため、**設定**ページでAPIキーのパーミッションを確認する。|
 | `404 Not Found` | 無効な URL です。 |
 | `429 Rate Limited` | レート制限を超える。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}

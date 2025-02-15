@@ -16,12 +16,12 @@ Brazeとloplatの統合により、loplatの位置情報サービス（店舗POI
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | --- | --- |
 | loplat X アカウント | この統合を利用するには、loplat Xアカウントが必要です。<br><br>メール [support@loplat.com][3] にメールして loplat X アカウントをリクエストしてください。 |
 | loplat SDK | loplat SDK はユーザーの店舗訪問を認識し、位置イベントを処理し、ユーザーが場所に滞在しているか移動しているかを区別します。ロプラットSDKを使用して、店舗のフットフォールを分析したり、ユーザーが店舗に入ったときにプッシュメッセージを送信したりすることができます。<br><br>SDKはAndroidとiOSでのみ利用可能です。 |
-| Braze REST API キー | 次の権限を持つBraze REST APIキー:<br>- `users.track`<br>- `campaigns.trigger.send`<br>- `campaigns.list`<br>- `canvas.trigger.send`<br>- `canvas.list`<br><br>これはBrazeダッシュボードの**設定** > **APIキー**から作成できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| Braze REST API キー | 以下の権限を持つBraze REST APIキー：<br>- `users.track`<br>- `campaigns.trigger.send`<br>- `campaigns.list`<br>- `canvas.trigger.send`<br>- `canvas.list`<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 

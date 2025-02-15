@@ -66,7 +66,7 @@ BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 | `WARN`      | 5              | 潜在的に有害な状況を特定するための警告メッセージをログに記録する。     |
 | `ERROR`     | 6              | アプリケーションの失敗や深刻な問題を示すエラーメッセージを記録する。 |
 | `ASSERT`    | 7              | 開発中に条件が偽の場合にアサーションメッセージをログに記録する。     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 たとえば、以下のコードはログレベル`2`、`3`、`4`、`5`、`6`、`7`を `Log` メソッドに転送します。
 
@@ -102,7 +102,7 @@ BrazeLogger.logLevel = Log.VERBOSE
 | `WARN`      | 5              | 潜在的に有害な状況を特定するための警告メッセージをログに記録する。     |
 | `ERROR`     | 6              | アプリケーションの失敗や深刻な問題を示すエラーメッセージを記録する。 |
 | `ASSERT`    | 7              | 開発中に条件が偽の場合にアサーションメッセージをログに記録する。     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 たとえば、以下のコードはログレベル`2`、`3`、`4`、`5`、`6`、`7`を `Log` メソッドに転送します。
 
@@ -114,7 +114,7 @@ BrazeLogger.logLevel = Log.VERBOSE
 
 ### 冗長ログを検証する
 
-ログが `VERBOSE` に設定されていることを確認するには、`V/Braze` がログのどこかで発生するかどうかを確認します。もしそうなら、冗長ログは正常に有効になっている。以下はその例です。
+ログが `VERBOSE` に設定されていることを確認するには、`V/Braze` がログのどこかで発生するかどうかを確認します。もしそうなら、冗長ログは正常に有効になっている。以下に例を示します。
 
 ```
 2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started

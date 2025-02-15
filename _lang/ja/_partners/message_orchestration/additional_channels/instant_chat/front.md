@@ -18,7 +18,7 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
 
 ## 前提条件
 
-始める前に、次のものが必要です:
+開始する前に、次のものが必要になります。
 
 | 前提条件             | 説明                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -102,23 +102,23 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
 
 配信タイプには**アクションベースの配信**を選択し、カスタムイベントトリガーには**送信済みSMS**を選択します。
 
-![\[Schedule Delivery] ページ。]({% image_buster /assets/img/front/custom_event_trigger.png %})
+![[Schedule Delivery] ページ。]({% image_buster /assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
 このカスタムイベントは、ユーザーのプロファイルに書き込むデータ変換です。エージェントメッセージはこのイベントのイベントプロパティとして保存されます。
 {% endalert %}
 
-最後に、\[**配信コントロール**] で再適格性を有効にします。
+最後に、[**配信コントロール**] で再適格性を有効にします。
 
-![\[配信コントロール] で有効になっている再適格性。]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![[配信コントロール] で有効になっている再適格性。]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
-### ステップ 3:カスタムチャネルを作成する
+### ステップ3:カスタムチャネルを作成する
 
 Frontのダッシュボードで、**設定** > **チャネル** > **チャネルを追加** に移動し、**カスタムチャネル** を選択して、新しいBrazeチャネルの名前を入力します。
 
 ![Front ダッシュボードの Braze 用カスタムチャネル]({% image_buster /assets/img/front/front_custom_channel.png %})
 
-### ステップ 4:設定を構成する
+### ステップ4:設定を構成する
 
 アウトバウンド API エンドポイントフィールドに、[以前に作成した](#step-1-set-up-a-data-transformation-in-braze) Data Transformation Webhook URL を入力します。すべてのライブエージェントからの新しいBrazeチャネルの送信メッセージはここに送信されます。このチャネルは、SMSメッセージを転送するためのエンドポイントURLも提供します。Brazeはこれを**受信URL**フィールドに転送します。
 
@@ -186,9 +186,9 @@ Brazeのダッシュボードで、以前に作成したURL[を使用して最�
 
 ![最初のWebhookキャンペーンの「スケジュール配信」ページ。]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
 
-\[**配信コントロール**] で再適格性を有効にします。
+[**配信コントロール**] で再適格性を有効にします。
 
-![最初の Webhook キャンペーンの \[配信コントロール]で再適格性が選択されている。]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![最初の Webhook キャンペーンの [配信コントロール]で再適格性が選択されている。]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 #### ステップ 5.4:2番目のWebhookキャンペーンを作成する
 
@@ -210,7 +210,7 @@ Brazeのダッシュボードで、以前に作成したURL[を使用して最�
 
 1. **キャンペーン**のために、以前作成したSMSキャンペーン[を選択します](#step-2-create-an-outbound-sms-campaign)。
 2. **オペレーター**の場合、**未満**を選択します。
-3. \[**時間枠**] については、顧客からの応答がない状態でチャットを開いたままにしておく期間を選択します。
+3. [**時間枠**] については、顧客からの応答がない状態でチャットを開いたままにしておく期間を選択します。
 
 ![選択したオーディエンスフィルターの設定。]({% image_buster /assets/img/front/front_target_audience.png %})
 

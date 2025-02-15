@@ -26,7 +26,7 @@ EUでウェブフックとコネクテッド・コンテンツのホワイトリ
 ## 購入エンドポイントをエクスポートする
 Brazeに新しい[エンドポイント（`/purchases/product_list` ）が]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/)追加された。このエンドポイントは、製品IDのページ分割されたリストを返す。
 
-## Braze の新しいパートナーシップ
+## 新しいBrazeのパートナーシップ
 
 ### アドビ - 顧客データプラットフォーム
 Braze と [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/#adobe) の統合により、ブランドはリアルタイムで Braze に接続し、Adobe データ (カスタム属性とセグメント) を Braze にマッピングできます。そうすれば、ブランドはこの情報に基づいて行動し、パーソナライズされたなターゲットを絞った体験をユーザーに提供することができる。 

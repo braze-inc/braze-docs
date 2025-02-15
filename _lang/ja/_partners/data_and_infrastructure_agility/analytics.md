@@ -8,8 +8,6 @@ description: "このランディングページには、顧客データに関す
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Behavioral Analytics"
 
@@ -44,4 +42,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 ---

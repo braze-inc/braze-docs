@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-> Utilisez cet endpoint pour planifier des messages Canvas via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message. 
+> Utilisez cet endpoint pour planifier des messages Canvas via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message.
 
 Vous pouvez indiquer les `canvas_entry_properties` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `canvas_entry_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir l'[objet des propriétés de l'entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
 | `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 ```

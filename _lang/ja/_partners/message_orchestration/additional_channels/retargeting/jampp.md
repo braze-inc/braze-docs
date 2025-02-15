@@ -21,16 +21,16 @@ Braze と Jampp の統合により、Braze ユーザーは Braze Webhook イベ�
 
 ## 前提条件
 
-この統合では、iOS アプリと Android アプリがサポートされています。
+この統合はiOSとAndroidアプリをサポートしている。
 
 | 要件 | 説明 |
 |---|---|
 | Jampp アカウント | このパートナーシップを活用するには、[Jampp アカウント](https://www.jampp.com/)が必要です。 |
-| Android アプリ ID | Android用の一意のBraze アプリライケーション識別子("com.example"など)。 |
-| iOS アプリ ID | iOS 用の Braze アプリケーション識別子 (「012345678」など)。 |
-| Braze SDKでのIDFA 収集の有効化 | IDFA 収集は Braze SDK 内ではオプションであり、デフォルトでは無効になっています。 | 
-| カスタム属性によるグーグル広告IDの収集 | Google 広告 ID の収集は顧客向けのオプションであり、\[カスタム属性][5]]として収集できます。
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Android アプリ ID | Android用Brazeアプリケーション固有の識別子（「com.example 」など）。 |
+| iOSアプリID | iOS用のお客様固有のBrazeアプリケーション識別子（"012345678 "など）。 |
+| Braze SDKでIDFAコレクションを有効にする | IDFA 収集は Braze SDK 内ではオプションであり、デフォルトでは無効になっています。 | 
+| カスタム属性によるグーグル広告IDの収集 | Google 広告 ID の収集は顧客向けのオプションであり、[カスタム属性][5]]として収集できます。
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
@@ -39,7 +39,7 @@ Braze と Jampp の統合により、Braze ユーザーは Braze Webhook イベ�
 将来のキャンペーンs またはキャンバスで使用するJampp Webhook テンプレートを作成するには、Braze プラットフォームで**テンプレートs**>**Webhook テンプレートs** に移動します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**Engagement**> **Templates &Media**> **Webフックテンプレート** に移動します。
+[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
 {% endalert %}
 
 一度だけJampp Webhook キャンペーンしたい場合や、既設のテンプレートを使用したい場合は、新規キャンペーン作成時にBrazeで**Webhook**を選択してください。
@@ -71,29 +71,29 @@ Webhook URL で次の操作を行う必要があります。
 ![Braze Webhook ビルダーに表示されるWebhookのURL およびメッセージプレビュー。][2]
 
 {% alert important %}
-Braze ではデバイス IDFA/AAID を自動的に収集しないため、これらの値を各自で保存する必要があります。このデータを収集するには、ユーザーの同意を必要とする場合があることに注意してください。
+BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これらの値を自分で保存する必要がある。このデータを収集するには、ユーザーの同意を必要とする場合があることに注意してください。
 {% endalert %}
 
-#### リクエストヘッダーとメソッド
+#### リクエストヘッダと方法
 
 Jampp WebhookにはHTTP メソッドとリクエストヘッダーが必要です。
 
-- **HTTP メソッド**:GET
+- **HTTPメソッド**：GET
 - **リクエストヘッダー**:
   - **Content-Type**: application/json
 
-![Braze Webhook ビルダに表示されるリクエストヘッダーs、HTTP メソッド、およびメッセージプレビュー。][3]
+![リクエストヘッダ、HTTPメソッド、メッセージプレビューがBraze webhookビルダーに表示される。][3]
 
 #### Request body
 
-このWebhookのリクエストボディを定義する必要はありません。
+このウェブフックのリクエスト・ボディを定義する必要はない。
 
-### ステップ2:リクエストのプレビュー
+### ステップ2:リクエストをプレビューする
 
-リクエストがさまざまなユーザーに対して適切にレンダリングされていることを確認するために、メッセージをプレビューします。Android と iOS の両方のユーザーを対象としたテストリクエストをプレビューして送信することをお勧めします。リクエストが成功した場合、API は`HTTP 204` で応答します。
+メッセージをプレビューして、リクエストがさまざまなユーザーに対して正しくレンダリングされていることを確認する。AndroidとiOSの両方のユーザーに対して、プレビューとテストリクエストの送信を推奨する。リクエストが成功すれば、APIは`HTTP 204` で応答する。
 
 {% alert important %}
-テンプレートを保存してから退場してください！<br>更新されたWebhook テンプレートs は、新しい[Webhook キャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) を作成するときに**保存されたWebhook テンプレートs** 一覧にあります。
+ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid

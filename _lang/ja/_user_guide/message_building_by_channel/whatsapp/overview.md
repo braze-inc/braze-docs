@@ -1,6 +1,6 @@
 ---
-nav_title: WhatsAppの設定
-article_title: WhatsAppの設定
+nav_title: WhatsApp設定
+article_title: WhatsApp設定
 alias: /partners/whatsapp/
 description: "この記事では、Braze WhatsApp チャネルを設定する方法について、前提条件や推奨される次のステップを含めて説明します。"
 page_type: partner
@@ -19,12 +19,12 @@ search_rank: 2
 
 統合を進める前に以下を確認する：
 
-- **オプトインポリシー:** WhatsApp は、顧客がメッセージングにオプトインすることを企業に義務付けています。
-- **WhatsApp のコンテンツルール:** WhatsAppには守るべき[コンテンツルールが](https://www.whatsapp.com/legal/commerce-policy?l=en)いくつかある。
-- **コンプライアンス:** 適用されるすべての Braze および Meta の文書と、適用される [Meta のポリシー](https://www.whatsapp.com/legal/?lang=en)に従います。
-- **24 時間の会話制限:** 企業が最初にテンプレート化されたメッセージを送信した後、あるいはユーザーがメッセージを送信した後、両者がメッセージをやり取りできる24時間のウィンドウが発生する。 
-- **会話を始める:** ユーザーはいつでも会話を始めることができる。企業は、承認されたメッセージテンプレートによってのみ会話を開始することができる。
-- **アカウントの制限:** Brazeの各ワークスペースには1つのWhatsApp Businessアカウント、サブスクリプショングループ、電話番号を保存できる。さらに、WhatsApp Business アカウント 1 つにつき、[サードパーティとの統合は 1 つ](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047)しか行えません。
+- **オプトインポリシー:**WhatsApp は、顧客がメッセージングにオプトインすることを企業に義務付けています。
+- **WhatsApp のコンテンツルール:**WhatsAppには守るべき[コンテンツルールが](https://www.whatsapp.com/legal/commerce-policy?l=en)いくつかある。
+- **コンプライアンス:**適用されるすべての Braze および Meta の文書と、適用される [Meta のポリシー](https://www.whatsapp.com/legal/?lang=en)に従います。
+- **24 時間の会話制限:**企業が最初にテンプレート化されたメッセージを送信した後、あるいはユーザーがメッセージを送信した後、両者がメッセージをやり取りできる24時間のウィンドウが発生する。 
+- **会話を始める:**ユーザーはいつでも会話を始めることができる。企業は、承認されたメッセージテンプレートによってのみ会話を開始することができる。
+- **アカウントの制限:**Brazeの各ワークスペースには1つのWhatsApp Businessアカウント、サブスクリプショングループ、電話番号を保存できる。さらに、WhatsApp Business アカウント 1 つにつき、[サードパーティとの統合は 1 つ](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047)しか行えません。WhatsApp Businessアカウントは、1つのワークスペースにしか存在できず、ワークスペース間で共有することはできません。
 <br><br>
 
 | 必要条件| 説明|
@@ -32,27 +32,27 @@ search_rank: 2
 | Facebook Business Manager アカウント | このメッセージングチャネルを活用するには、Meta Business アカウントが必要です。 |
 | WhatsApp ビジネスアカウント | このメッセージングチャネルを利用するには、WhatsApp Business アカウントが必要です。 |
 | WhatsAppの電話番号 | メッセージングチャネルを利用するには、WhatsApp の[クラウド API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) または[オンプレミス API ](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers)の要件を満たす電話番号を取得する必要があります。  | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ 1:WhatsApp Messenger を Braze に接続する
+### ステップ 1: WhatsApp Messenger を Braze に接続する
 
-Braze の \[**パートナー連携**] > \[**テクノロジーパートナー**] に移動して、\[**WhatsApp**] を検索します。
+Braze の [**パートナー連携**] > [**テクノロジーパートナー**] に移動して、[**WhatsApp**] を検索します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、\[**テクノロジーパートナー**] は \[**統合**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-WhatsApp パートナーページで、\[**統合を開始**] を選択します。
+WhatsApp パートナーページで、[**統合を開始**] を選択します。
 
 ![][1]
 
-開いたウィンドウで \[**次へ**] を選択し、\[**統合を開始**] ボタンが表示されるまで続けます。ボタンを選択し、統合プロセスを開始します。
+開いたウィンドウで [**次へ**] を選択し、[**統合を開始**] ボタンが表示されるまで続けます。ボタンを選択し、統合プロセスを開始します。
 
 ![BrazeとWhatsAppの接続方法。][7]
 
-### ステップ2:WhatsAppのセットアップ
+### ステップ 2: WhatsAppのセットアップ
 
 次に、Brazeセットアップのワークフローが表示される。ステップバイステップのウォークスルーについては、[WhatsApp 埋め込みサインアップ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)を参照してください。 
 
@@ -61,19 +61,15 @@ WhatsApp パートナーページで、\[**統合を開始**] を選択します
 2. WhatsApp Business プロファイルを作成します。
 3. WhatsApp Business 番号を確認します。<br><br>
 
-{% alert note %}
-WhatsAppビジネスアカウント(WABA)は複数のビジネスソリューションプロバイダーと共有することはできない。Brazeのワークスペースごとに特定のWABAが必要になる。
-{% endalert %}	
-
 設定が完了すると、ユーザー専用の WhatsApp 購読グループが作成されます。
 
-### ステップ 3:WhatsAppテンプレートを作成する
+### ステップ 3: WhatsAppテンプレートを作成する
 
 承認された WhatsApp メッセージテンプレートのみを使用して、顧客との会話を開始できます。WhatsApp テンプレートは [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343) で作成できます。Braze でサポートされる WhatsApp メッセージ機能の一覧は、[サポートされる WhatsApp 機能]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#supported-whatsapp-features)を参照してください。
 
-1. \[**[テンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates)**] に移動します。<br>
-Meta Business Manager で、**Account Tools** の下にある \[**メッセージテンプレート**] を選択します。
-次に、\[**テンプレートを作成**] を選択します。<br><br>![][3]{: style="max-width:100%;"}<br><br>
+1. [**[テンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates)**] に移動します。<br>
+Meta Business Manager で、**Account Tools** の下にある [**メッセージテンプレート**] を選択します。
+次に、[**テンプレートを作成**] を選択します。<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **メッセージの設定**<br>
 新しいメッセージ・テンプレート・コンポーザーで、メッセージのカテゴリーを選択し、テンプレートに名前を付け、サポートしたい言語を選択する。後で言語を削除したり追加したりすることもできる。<br><br> 
 	利用可能なメッセージテンプレートのカテゴリーには以下のものがある：
@@ -82,7 +78,7 @@ Meta Business Manager で、**Account Tools** の下にある \[**メッセー�
 	- 認証: 顧客がアカウントにアクセスできるようにするコードを送信する<br><br> 
 	![][4]{: style="max-width:100%;"}<br><br>
 3. **テンプレートを編集する**<br>
-次に、メッセージ・テンプレートを作成するよう促される。<br><br>ここでは、テキストまたはメディアヘッダー、テキスト本文、メッセージフッター、およびボタンを指定できます。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。メッセージのプレビューが右側に表示される。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。\[**\+ 変数を追加**] ボタンを選択します。<br><br>![][5]{: style="max-width:100%;"}<br><br>テンプレートが完成したら、\[**送信**] をクリックします。 
+次に、メッセージ・テンプレートを作成するよう促される。<br><br>ここでは、テキストまたはメディアヘッダー、テキスト本文、メッセージフッター、およびボタンを指定できます。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。メッセージのプレビューが右側に表示される。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。[**\+ 変数を追加**] ボタンを選択します。<br><br>![][5]{: style="max-width:100%;"}<br><br>テンプレートが完成したら、[**送信**] をクリックします。 
 
 #### テンプレート承認時間
 
@@ -92,7 +88,7 @@ Meta Business Manager で、**Account Tools** の下にある \[**メッセー�
 承認されたテンプレートは、好きなだけキャンペーンやキャンバスに使用できる。また、好きなだけ多くのオプトインユーザーに送ることができます。テンプレートの品質が低下しない限り、これは事実である。
 {% endalert %}
 
-### ステップ 4:WhatsAppキャンペーンを作成する
+### ステップ 4: WhatsAppキャンペーンを作成する
 
 WhatsApp テンプレートが承認されたら、ダッシュボードに移動して [WhatsApp キャンバスやキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)を作成できます。 
 

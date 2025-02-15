@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:スケジュールされたメッセージを削除する"
-article_title: "POST:スケジュールされたメッセージを削除する"
+nav_title: "POST:スケジュールされたメッセージを削除"
+article_title: "POST:スケジュールされたメッセージを削除"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -10,7 +10,7 @@ description: "この記事では、Delete scheduled messages Brazeエンドポ�
 ---
 {% api %}
 # スケジュールされたメッセージを削除する
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/delete
 {% endapimethod %}
 
@@ -20,13 +20,13 @@ description: "この記事では、Delete scheduled messages Brazeエンドポ�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`messages.schedule.delete` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`messages.schedule.delete`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -43,10 +43,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | 必須 | string | 削除する`schedule_id` （スケジュール作成のレスポンスから取得）。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `schedule_id` | 必須 | 文字列 | 削除する`schedule_id`（スケジュールの作成に対する応答から取得）。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete' \
 --header 'Content-Type: application/json' \

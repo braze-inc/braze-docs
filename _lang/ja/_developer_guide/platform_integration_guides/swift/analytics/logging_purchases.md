@@ -11,9 +11,9 @@ description: "このリファレンス記事では、アプリ内購入と売上
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
+Braze では、複数の通貨での購入がサポートされています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
-実装前に、[ベストプラクティス][5]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## 購入と売上のトラッキング
 
@@ -46,15 +46,15 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 ### プロパティ {#properties-purchases} の追加
 `Int`、`Double`、`String`、`Bool`、または `Date` の値が入力されたディクショナリを渡すことで、購入に関するメタデータを追加できます。
 
-詳細については、[iOSクラスのドキュメント][7] を参照してください。
+詳細については、[iOS クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation")を参照してください。
 
 ### 数量の追加
 顧客が 1 回のチェックアウト手続きで同じ購入を複数回行う場合は、購入に数量を追加できます。これを行うには、数量として `Int` を渡します。
 
-* SDK で購入を記録するには、数量入力が \[0, 100] の範囲内である必要があります。
+* SDK で購入を記録するには、数量入力が [0, 100] の範囲内である必要があります。
 * 数量入力のないメソッドは、デフォルトの数量の値が 1 になります。
 
-詳細については、[iOSクラスのドキュメント][7] を参照してください。
+詳細については、[iOS クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation")を参照してください。
 
 {% tabs %}
 {% tab SWIFT %}
@@ -97,9 +97,5 @@ AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: 
 
 ### REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント][4]を参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API のドキュメント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent:properties documentation"
-[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation"

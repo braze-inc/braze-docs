@@ -12,7 +12,7 @@ description: "이 문서에서는 이메일 주소 또는 전화번호가 있는
 {% api %}
 # 이메일 주소 또는 전화번호로 구독 상태를 나열합니다.
 {% apimethod get %}
-/사용자/구독
+/users/subscription
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 이메일 주소 또는 전화번호를 기준으로 구독 상태 값을 반환합니다.
@@ -23,7 +23,7 @@ description: "이 문서에서는 이메일 주소 또는 전화번호가 있는
 | --- | --- | --- | --- |
 | `email` | 예 | 문자열 | 사용자의 이메일 주소(최소 1개, 최대 50개의 주소를 포함해야 함). |
 | `phone` | 예 | 문자열 | 사용자의 전화번호(최소 1개에서 최대 50개의 전화번호를 포함해야 함). E.164 형식으로 제공하는 것이 좋습니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

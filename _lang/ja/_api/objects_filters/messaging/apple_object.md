@@ -77,7 +77,7 @@ AppleプッシュオブジェクトにiOSプッシュアクションボタンを
 | `ab_cat_confirm_cancel` | 確認     | `ab_pb_confirm`            | OPEN_APP、URI、またはDEEP_LINK |
 | `ab_cat_confirm_cancel` | キャンセル      | `ab_pb_cancel`             | 閉じる                   |
 | `ab_cat_more`           | もっと        | `ab_pb_more`               | OPEN_APP、URI、またはDEEP_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {

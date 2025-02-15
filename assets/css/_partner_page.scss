@@ -151,6 +151,9 @@
       @media (min-width: $window-large-px) {
         flex: 0 0 23%;
       }
+      label {
+        width: 100%;
+      }
     }
   }
   .btn {
@@ -241,7 +244,7 @@
     }
 
      h6 {
-      color: #999;
+      color: $text-color;
       font-weight: 600;
       text-transform: uppercase;
       margin: 0;
@@ -251,7 +254,7 @@
       text-align: center;
     }
     h5 {
-     color: #999;
+     color: $text-color;
      font-weight: 600;
      text-transform: uppercase;
      margin: 0;
@@ -269,7 +272,7 @@
       transition: all 0.55s ease;
       p {
         margin: 1.5em 0 0;
-        color: #6e6e70;
+        color: $text-color;
         line-height: 1.4em;
         font-size: 14px;
       }

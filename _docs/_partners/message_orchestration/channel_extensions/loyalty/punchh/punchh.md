@@ -320,7 +320,7 @@ Considerations:
 [4]: {% image_buster /assets/img/punchh/punchh4.png %}
 [5]: {% image_buster /assets/img/punchh/punchh5.png %}
 [7]: {% image_buster /assets/img/punchh/punchh6.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [8]: {% image_buster /assets/img/punchh/update1.png %}
 [9]: {% image_buster /assets/img/punchh/update2.png %}
 [10]: {% image_buster /assets/img/punchh/update3.png %}

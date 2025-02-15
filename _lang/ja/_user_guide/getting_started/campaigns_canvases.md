@@ -24,7 +24,7 @@ Braze では、[キャンペーン](#campaigns)または[キャンバス](#canva
 | A/B テスト          | 1 つのチャネルをターゲットとするキャンペーンの場合、同じキャンペーンの複数のバージョンを送信して、どれが一番効果が上がるかを確認できます。[多変量 キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) を使用して、最大8 つのさまざまなバージョンのコピー、パーソナライゼーションなどをテストできます。 |
 | API                  | [API キャンペーン]({{site.baseurl}}/api/api_campaigns/)では、タイムリーなメッセージをできるだけ早く送信できます。他のキャンペーンタイプとは異なり、Braze ダッシュボードではメッセージ、受信者、スケジュールを指定しません。代わりに、これらの識別子を API 呼び出しに渡します。これらは通常、リアルタイムトランザクションメッセージングや最新ニュースに使用されます。  |
 | トランザクションメール | Braze [トランザクションメール]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)は、お客様とお客様の顧客との間で合意したトランザクションを円滑に進めるために、自動化されたプロモーション以外のメールメッセージを送信することを目的としています。ビジネスクリティカルな通知を、スピードが最も重要な1人のユーザーに送信します。*一部のパッケージでご利用いただけます。* |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 定期的なキャンペーンや AB テストキャンペーンをスケジュールすることも (予定されているイベントについてユーザーのリストに通知するなど)、ユーザーのアクションに応じて自動的に送信する (ニュースレターを購読したときにメールを送信するなど) こともできます。[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)の詳細をご覧ください。
@@ -71,16 +71,16 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 | [Web プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Web サイトでアクティブでない場合でも、通知をユーザーのウェブブラウザに配信します。                                                         |
 | [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | ユーザーがモバイルアプリをアクティブに使用している間に、モバイルアプリ内にメッセージを表示します。                                                                             |
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | ユーザーの携帯電話にメールを送信します。                                                                                                            |
-| [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 人気のメッセージング プラットフォームであるWhatsAppを通じて、ユーザーsに手を差し伸べ、エンゲージするように伝言を送る。                                                   |
+| [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 人気のメッセージング プラットフォームであるWhatsAppを通じて、ユーザーに手を差し伸べ、エンゲージするように伝言を送る。                                                   |
 | [コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | ユーザーがメッセージを受信して操作したり、カルーセルにメッセージを表示したり、バナーとしてメッセージを表示したりできる受信トレイをアプリや Web サイト内に用意します。 |
 | [コネクテッド TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | コネクテッド TV プラットフォームでユーザーと交流します。                                                                                                   |
 | [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | カスタムHTTPコールバックを使用して、外部システムとのリアルタイム通信および統合を有効にします。                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*アドオン機能として利用できます。*</sup>
 
 {% alert tip %}
-ほとんどのチャネル (メール、SMS、プッシュ) で送信できる短くて緊急のメッセージについては、[インテリジェントチャネル]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/)フィルターを利用して、各ユーザーに最適なチャネルを介してメッセージを自動的に送信します。
+ほとんどのチャネル (メール、SMS、プッシュ) で送信できる短くて緊急のメッセージについては、[インテリジェントチャネル]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)フィルターを利用して、各ユーザーに最適なチャネルを介してメッセージを自動的に送信します。
 {% endalert %}
 
 [1]: {% image_buster /assets/img/getting_started/channels.png %}

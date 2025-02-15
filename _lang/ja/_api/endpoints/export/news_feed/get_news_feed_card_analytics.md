@@ -16,15 +16,13 @@ description: "この記事では、「ニュースフィードカード分析の
 
 > このエンドポイントを使用して、時間の経過に伴うカードのエンゲージメント統計の日次情報を取得します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`feed.data_series` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`feed.data_series`の権限が必要です。
 
 ## レート制限
 
@@ -34,13 +32,13 @@ description: "この記事では、「ニュースフィードカード分析の
 
 | パラメーター   | required | データ型 | 説明 |
 | ----------- | -------- | --------- | ----------- |
-| `card_id` | 必須 | string | [カード API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 指定したカードの `card_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページやダッシュボード内のカード詳細ページで確認できるほか、[ニュースフィードカードリストのエクスポート]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)エンドポイントも使用できます。|
-| `length` | required | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
-| `unit` | オプション | string | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
-| `ending_at` | オプション | 日時 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | データシリーズが終了する日付。デフォルトはリクエストの時刻です。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `card_id` | required | 文字列 | [カード API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 指定したカードの `card_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページやダッシュボード内のカード詳細ページで確認できるほか、[ニュースフィードカードリストのエクスポート]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)エンドポイントも使用できます。|
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
+| `unit` | オプション | 文字列 | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id={{card_identifier}}&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \

@@ -8,7 +8,7 @@ channel:
   - in-app messages
 ---
 
-# カスタムHTMLアプリ内メッセージ {#custom-html-messages}
+# カスタムの HTML アプリ内メッセージ{#custom-html-messages}
 
 > 標準のアプリ内メッセージは様々な方法でカスタマイズできるが、HTML、CSS、JavaScriptを使ってデザイン・構築されたメッセージを使えば、キャンペーンのルック＆フィールをさらに自由にコントロールできる。簡単な構成で、あらゆるニーズに合ったカスタム機能とブランディングを実現できる。 
 
@@ -18,21 +18,21 @@ HTMLアプリ内メッセージでは、以下のようにメッセージのル�
 - ビデオ
 - 複数の画像
 - オン・クリック行動
-- インタラクティブ・コンポーネント
+- インタラクティブコンポーネント
 - カスタム・アニメーション
 
-カスタムHTMLメッセージは、[JavaScript Bridgeの](#javascript-bridge)メソッドを使って、イベントのログを取ったり、カスタム属性を設定したり、メッセージを閉じたりすることができる！[GitHubのリポジトリには][2]、HTMLアプリ内メッセージの使い方やカスタマイズ方法、HTML5アプリ内メッセージのテンプレートなどが詳しく説明されている。
+カスタムHTMLメッセージは、[JavaScript Bridgeの](#javascript-bridge)メソッドを使って、イベントのログを取ったり、カスタム属性を設定したり、メッセージを閉じたりすることができる！HTML アプリ内メッセージの使用方法と、必要に応じてカスタマイズする方法の詳細手順、および開始に役立つ HTML5 アプリ内メッセージのテンプレートのセットについては、当社の [GitHub リポジトリ][2] を参照してください。
 
 {% alert note %}
-Web SDKでHTMLアプリ内メッセージを有効にするには、Brazeに`allowUserSuppliedJavascript` の初期化オプションを指定する必要がある：例えば`braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})` 。HTMLのアプリ内メッセージはJavaScriptを実行することができるため、セキュリティ上の理由から、サイト管理者に有効にしてもらう必要がある。
+Web SDK を介して HTML アプリ内メッセージを有効にするには、初期化オプション `allowUserSuppliedJavascript` を Braze に指定する必要があります。例: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`。これはセキュリティ上の理由によるもので、HTML のアプリ内メッセージは JavaScript を実行できるため、サイト管理者が有効にする必要があります。
 {% endalert %}
 
 ## JavaScriptブリッジ {#javascript-bridge}
 
-Web、Android、iOS、およびSwift SDK用のHTMLアプリ内メッセージは、Braze SDKとインターフェースするためのJavaScript「ブリッジ」をサポートしており、ユーザーがリンクのある要素をクリックしたり、コンテンツに関与したりしたときに、Brazeのカスタムアクションをトリガーすることができる。これらのメソッドは、グローバル変数`brazeBridge` または`appboyBridge` 。
+Web、Android、iOS、およびSwift SDK用のHTMLアプリ内メッセージは、Braze SDKとインターフェースするためのJavaScript「ブリッジ」をサポートしており、ユーザーがリンクのある要素をクリックしたり、コンテンツに関与したりしたときに、Brazeのカスタムアクションをトリガーすることができる。これらの方法は、グローバル変数 `brazeBridge` または`appboyBridge` とともに存在します。
 
 {% alert important %}
-Brazeでは、グローバル変数`brazeBridge` の使用を推奨している。グローバル変数`appboyBridge` は非推奨だが、既存のユーザーには機能し続ける。`appboyBridge` を使用している場合は、`brazeBridge` に移行することをお勧めする。<br><br> `appboyBridge` は以下のSDKバージョンで非推奨となった：
+Brazeでは、グローバル変数`brazeBridge` の使用を推奨している。グローバル変数 `appboyBridge` は非推奨ですが、既存のユーザー向けに引き続き機能しています。`appboyBridge` を使用している場合は、`brazeBridge` に移行することをお勧めします。<br><br> `appboyBridge` は以下のSDKバージョンで非推奨となった：
 - Web:[3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
 - Android :[14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
 - iOS:[4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
@@ -82,7 +82,7 @@ BrazeのHTMLアプリ内メッセージでは、以下のJavaScriptメソッド�
 </style>
 
 {% alert note %}
-リキッドを参照して挿入することはできない <code>customAttributes</code> をJavaScript Bridgeのメソッドに置き換える。
+Liquid を参照して、 <code>customAttributes</code> をJavaScript Bridge のメソッドに挿入することはできません。
 {% endalert %}
 
 {% multi_lang_include archive/appboyBridge.md %}
@@ -94,20 +94,20 @@ BrazeのHTMLアプリ内メッセージでは、以下のJavaScriptメソッド�
 ### ボタンのクリックトラッキング（非推奨）
 
 {% alert warning %}
-`abButtonID` の使用は、[HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview/) メッセージタイプではサポートされていません。詳しくは、[アップグレードガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes)参照のこと。
+`abButtonID` の使用は、[HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview/) メッセージタイプではサポートされていません。詳細については、当社の[アップグレードガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes)を参照してください。
 {% endalert %}
 
-アプリ内メッセージ分析のためにボタンのクリックを記録するには、ディープリンク、リダイレクトURL、アンカー要素`<a>` のクエリパラメータとして`abButtonId` を追加する。ボタン1」のクリックを記録するには`?abButtonId=0` 、「ボタン2」のクリックを記録するには`?abButtonId=1` 。
+アプリ内メッセージの分析用にボタンのクリックを記録するために、任意のディープリンク、リダイレクト URL、アンカー要素 `<a>` にクエリパラメータとして `abButtonId` を追加できます。「ボタン 1」のクリックを記録するには `?abButtonId=0`、「ボタン 2」のクリックを記録するには `?abButtonId=1` を使用します。
 
 他のURLパラメータと同様に、最初のパラメータはクエスチョンマーク`?` で始め、それ以降のパラメータはアンパサンド`&` で区切る。
 
 #### URLの例
 
-- `https://example.com/?abButtonId=0` - ボタン1クリック
-- `https://example.com/?abButtonId=1` - ボタン2をクリックする
+- `https://example.com/?abButtonId=0` - ボタン 1 のクリック
+- `https://example.com/?abButtonId=1` - ボタン 2 のクリック
 - `https://example.com/?utm_source=braze&abButtonId=0` - 他の既存のURLパラメータでボタン1クリック
 - `myApp://deep-link?page=home&abButtonId=1` - ボタン2クリックでモバイル・ディープリンク
-- `<a href="https://example.com/?abButtonId=1">` - ボタン2クリックでアンカー要素`<a>` 
+- `<a href="https://example.com/?abButtonId=1">` - ボタン 2 のクリックが指定されたアンカー要素`<a>`
 
 {% alert note %}
 アプリ内メッセージはボタン1とボタン2のクリックのみをサポートする。これら2つのボタンIDのいずれかを指定しないURLは、一般的な「ボディクリック」として記録される。
@@ -115,21 +115,21 @@ BrazeのHTMLアプリ内メッセージでは、以下のJavaScriptメソッド�
 
 ### 新しいウィンドウでリンクを開く（モバイルのみ）
 
-アプリ外のリンクを新しいウィンドウで開くには、`?abExternalOpen=true` を設定する。リンク先を開く前にメッセージが消える。
+新しいウィンドウでアプリ外のリンクを開くには、`?abExternalOpen=true` を設定します。リンク先を開く前にメッセージが消える。
 
 ディープリンクの場合、Brazeは`abExternalOpen` の値に関係なくURLを開く。
 
 ### ディープリンクとして開く（モバイルのみ）
 
-BrazeにHTTPまたはHTTPSリンクをディープリンクとして扱わせるには、`?abDeepLink=true`.
+HTTP または HTTPS のリンクをディープリンクとして Braze で処理するには、`?abDeepLink=true` を設定します。
 
-このクエリ文字列パラメータがないか、`false` に設定されている場合、Brazeはホストアプリ内の内部ウェブブラウザでウェブリンクを開こうとする。
+このクエリ文字列パラメーターが存在しないか、`false` に設定されている場合、Braze はホストアプリ内の内部 Web ブラウザーで Web リンクを開こうとします。
 
 ### アプリ内メッセージを閉じる
 
 アプリ内メッセージを閉じるには、`brazeBridge.closeMessage()` javascriptメソッドを使うことができる。
 
-例えば、`<a onclick="brazeBridge.closeMessage()" href="#">Close</a>` 、アプリ内メッセージを閉じる。
+例えば、`<a onclick="brazeBridge.closeMessage()" href="#">Close</a>` はアプリ内メッセージを閉じます。
 
 ## プレビュー付きHTMLアップロード
 
@@ -145,19 +145,19 @@ HTMLで使用している`brazeBridge` JavaScriptメソッドは、ダッシュ�
 
 ### SDK 要件 {#supported-sdk-versions}
 
-アプリ内メッセージのHTMLプレビューを使用するには、以下のBraze SDK最小バージョンにアップグレードする必要がある：
+アプリ内メッセージの HTML プレビューを使用するには、以下のBraze SDK バージョン以降にアップグレードする必要があります。
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert warning %}
-このメッセージタイプは特定のSDKバージョン以降でしか受信できないため、サポートされていないSDKバージョンのユーザーはメッセージを受信できない。このメッセージタイプの採用は、ユーザーベースのかなりの部分が到達可能になってから検討するか、アプリのバージョンが要件より後のユーザーだけをターゲットにする。[アプリの最新バージョンによるフィルタリングの]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)詳細はこちら。
+このメッセージタイプは特定の SDK バージョン以降でしか受信できないため、サポートされていない SDK バージョンを使用しているユーザーはメッセージを受信しません。このメッセージタイプの採用は、ユーザーベースのかなりの部分が到達可能になってから検討するか、アプリのバージョンが要件より後のユーザーだけをターゲットにする。[「最新のアプリバージョンによるフィルター処理」]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)を参照してください。
 {% endalert %}
 
-### キャンペーンを作成する {#instructions}
+### キャンペーンの作成{#instructions}
 
 **カスタムコードを**アプリ内メッセージで作成する場合、カスタムタイプとして**プレビュー付きHTMLアップロードを**選択する。アプリ内メッセージ（ライブまたは下書き）でカスタムコードを作成したことがない場合、このオプションは自動的に適用され、選択する必要はない。
 
-![メッセージタイプ」がカスタムコード、「カスタムタイプ」がプレビュー付きHTMLアップロードの場合、モバイルとウェブブラウザの両方に送信するアプリ内メッセージを作成する]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+![[メッセージタイプ] を [カスタムコード]、[カスタムタイプ] を [プレビューを伴う HTML アップロード] に指定し、モバイルと Web ブラウザーの両方に送信するアプリ内メッセージの作成。]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
 モバイルアプリのユーザーがこのメッセージを受け取るには、サポートされているSDKのバージョンにアップグレードする必要があることを覚えておいてほしい。新しいBraze SDKバージョンに依存するキャンペーンを開始する前に、モバイルアプリを[アップグレードするようユーザーに促す]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/)ことを推奨する。
 
@@ -173,7 +173,7 @@ HTMLアップロードでカスタムコードのアプリ内メッセージを�
 | SVG画像       | `.svg`                            |
 | JavaScriptファイル | `.js`                             |
 | CSSファイル        | `.css`                            |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Brazeは、2つの理由からメディアライブラリにアセットをアップロードすることを推奨している：
 
@@ -184,9 +184,9 @@ Brazeは、2つの理由からメディアライブラリにアセットをア�
 
 キャンペーンに新規または既存のアセットを追加できる。
 
-キャンペーンに新しいアセットを追加するには、ドラッグ＆ドロップセクションを使ってファイルをアップロードする。このセクションで追加されたアセットも、メディアライブラリに自動的に追加される。すでにメディアライブラリにアップロードしたアセットを追加するには、**メディアライブラリから追加を**選択する。
+キャンペーンに新しいアセットを追加するには、ドラッグ＆ドロップセクションを使ってファイルをアップロードする。このセクションで追加されたアセットも、メディアライブラリに自動的に追加される。メディアライブラリにアップロード済みのアセットを追加するには、[**メディアライブラリから追加**] を選択します。
 
-アセットが追加されると、**このキャンペーンのアセットセクションに**表示される。 
+アセットが追加されると、[**このキャンペーンのアセット**] セクションに表示されます。 
 
 アセットのファイル名がローカルのHTMLアセットと一致する場合、自動的に置き換えられる（例えば、`cat.png` がアップロードされ、`<img src="cat.png" />` が存在する場合）。 
 
@@ -199,45 +199,45 @@ HTMLに加えた変更は、入力と同時にプレビュー・パネルに自�
 
 **エディター設定では**、テキストの折り返しの切り替え、フォントサイズの変更、カラーテーマの選択ができる。コード・エディターには、シンタックス・ハイライトのためのさまざまなカラー・テーマが用意されており、メッセージ・コンポーザーで潜在的なコード・エラーを直接発見したり、コードをよりよく整理したりするのに役立つ（スペースとタブのどちらを使うか、あなたがどちらの立場であれ）。
 
-![アプリ内でHTMLメッセージを作成する際、"Editor Settings "ドロップダウンにシンタックスハイライトのオプションがある。]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
+![HTML アプリ内メッセージを作成するときの [エディターの設定] ドロップダウンの構文強調オプション。]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
 {% alert tip %}
 HTMLエディター内で<kbd>Ctrl</kbd>+<kbd>F</kbd>（Windows）または<kbd>Command</kbd>+<kbd>F</kbd>（Mac）を押すと、コード内を検索できる！
 {% endalert %}
 
-### ボタン・トラッキング {#button-tracking-improvements}
+### ボタンの追跡{#button-tracking-improvements}
 
-カスタム・コードのアプリ内メッセージでパフォーマンスを追跡するには [`brazeBridge.logClick(button_id)`][1]JavaScriptメソッドを使う。これにより、`brazeBridge.logClick("0")` 、`brazeBridge.logClick("1")` 、`brazeBridge.logClick()` を使って、「ボタン1」、「ボタン2」、「ボディクリック」をそれぞれプログラムで追跡することができる。
+カスタム・コードのアプリ内メッセージでパフォーマンスを追跡するには [`brazeBridge.logClick(button_id)`][1]JavaScriptメソッドを使う。これにより、`brazeBridge.logClick("0")` 、`brazeBridge.logClick("1")` 、`brazeBridge.logClick()` を使用して、「ボタン 1」、「ボタン 2」、「本文クリック」をそれぞれプログラムで追跡できます。
 
 | クリック数     | 方法                       |
 | ---------- | ---------------------------- |
 | ボタン1   | `brazeBridge.logClick("0")` |
 | ボタン2   | `brazeBridge.logClick("1")` |
-| ボディクリック | `brazeBridge.logClick()`    |
+| 本文クリック | `brazeBridge.logClick()`    |
 | カスタムボタンのトラッキング |`brazeBridge.logClick("your custom name here")`|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-このボタン追跡方法は、以前の自動クリック追跡方法（`?abButtonId=0` など）に取って代わるもので、現在は削除されている。
+このボタン追跡方法は、以前の自動クリック追跡方法 (`?abButtonId=0` など、現在は削除済み) に代わるものです。
 {% endalert %}
 
-インプレッションごとに複数のボタン・クリック・イベントをトラッキングできる。例えば、メッセージを閉じてボタン2のクリックを記録するには、以下のようにする：
+インプレッションごとに複数のボタンクリックイベントを追跡できます。例えば、メッセージを閉じてボタン2のクリックを記録するには、以下のようにする：
 
 ```html
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-また、新しいカスタムボタンの名前を追跡することもできる。`brazeBridge.logClick("blue button")`、`brazeBridge.logClick("viewed carousel page 3")` などがあります。
+また、新しいカスタムボタンの名前 (キャンペーンあたり一意の名前を最大 100 個) も追跡できます。`brazeBridge.logClick("blue button")`、`brazeBridge.logClick("viewed carousel page 3")` などがあります。
 
 #### 制限事項
 
-- 1つのキャンペーンにつき、最大100個のユニークなボタンIDを持つことができる。
-- ボタンIDはそれぞれ255文字まで持つことができる。
-- ボタンIDは、文字、数字、スペース、ダッシュ、アンダースコアのみを含むことができる。
+- キャンペーンあたり最大 100 個の一意のボタン ID を設定できます。
+- ボタン ID はそれぞれ最大 255文字です。
+- ボタン ID には、英字、数字、スペース、ダッシュ、およびアンダースコアのみを使用できます。
 
-### 後方互換性のない変更 {#backward-incompatible-changes}
+### 後方互換性のない変更{#backward-incompatible-changes}
 
-1. この新しいメッセージ・タイプで最も顕著な互換性のない変更は、SDKの要件である。アプリSDKが最小[SDKバージョン要件を満たして](#supported-sdk-versions)いないユーザーには、このメッセージは表示されない。
+1. この新しいメッセージタイプで最も注目すべき互換性のない変更は、SDK 要件です。アプリの SDK が最小[SDK バージョン要件](#supported-sdk-versions) を満たしていないユーザーには、メッセージが表示されません。
 <br>
 
 2. これまでモバイルアプリでサポートされていた`braze://close` のディープリンクは廃止され、JavaScript`brazeBridge.closeMessage()` がサポートされるようになった。ウェブはディープリンクをサポートしていないので、これによってクロスプラットフォームのHTMLメッセージが可能になる。
@@ -246,10 +246,10 @@ HTMLエディター内で<kbd>Ctrl</kbd>+<kbd>F</kbd>（Windows）または<kbd>
 
    | 前 | その後 |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_e4f5f6b6-6766-4ac4-8ee4-445acf534d00/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_0b7e9bf3-06b1-4eba-a81b-c6aa59bb91a7/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_4f5f77d0-92d8-4c8c-82c0-7acf311fa527/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_9fee233d-ab30-48f3-9804-83b49c70eae7/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_9017bac3-a67f-4677-878f-1460fff75950/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_dacc92e9-dbbb-4b2b-8db4-7af35a43e638/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_41010184-55ec-40c7-a047-23f991a8b50e/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_2bb71100-6163-42b7-a837-3eddbf88a2aa/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_2fa66fd9-c5e3-4486-92d8-5b1b66b2ca6d/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_8ecfe0bd-dcb1-4fbb-90de-c37b5646bd80/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates

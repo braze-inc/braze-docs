@@ -34,7 +34,7 @@ description: "이 문서에서는 카탈로그 선택 Braze 엔드포인트 삭�
 | ---------------- | -------- | --------- | ------------------------------ |
 | `catalog_name`   | 필수 | 문자열    | 카탈로그의 이름입니다.           |
 | `selection_name` | 필수 | 문자열    | 카탈로그 선택 항목의 이름입니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -46,7 +46,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202` 및 `404` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202` 와 `404` 두 가지입니다.
 
 ### 성공 응답의 예
 
@@ -80,7 +80,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-## 문제 해결 
+## 문제 해결
 
 다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
 
@@ -88,6 +88,6 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | -------------------- | -------------------------------------------------------- |
 | `catalog-not-found`  | 카탈로그 이름이 유효한지 확인합니다.                    |
 | `invalid-selection`  | 선택 이름이 유효한지 확인합니다.                  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

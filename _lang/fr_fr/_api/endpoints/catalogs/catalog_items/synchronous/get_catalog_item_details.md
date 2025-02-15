@@ -33,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 |---|---|---|---|
 | `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 | `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Paramètres de demande
 
@@ -102,6 +102,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 | `item-not-found` | Vérifiez que ce produit est dans le catalogue. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

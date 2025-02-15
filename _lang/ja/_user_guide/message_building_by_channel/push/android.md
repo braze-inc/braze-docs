@@ -1,15 +1,15 @@
 ---
-nav_title: "アンドロイド・オプション"
-article_title: アンドロイド・プッシュ・オプション
+nav_title: "Android オプション"
+article_title: Android プッシュ通知のオプション
 page_order: 7
 layout: dev_guide
 page_type: landing
 channel: push
 platform: android
-description: "このランディング・ページには、BrazeのAndroidプッシュのすべてが掲載されている。"
+description: "このランディングページには、Braze の Android プッシュ通知専用のすべての情報が一覧されています。"
 
-guide_top_header: "アンドロイド・プッシュ"
-guide_top_text: "以下の記事は、AndroidがBrazeをプッシュしているものすべてをリストアップしたものである。"
+guide_top_header: "Android プッシュ通知"
+guide_top_text: "以下の記事には、Braze の Android プッシュ通知専用のすべての情報が記載されています。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:

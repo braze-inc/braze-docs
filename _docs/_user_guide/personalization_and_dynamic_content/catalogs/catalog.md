@@ -8,9 +8,9 @@ description: "This reference article covers how to create catalogs that referenc
 
 # Creating a catalog
 
-> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.<br><br>This page covers how to prepare and upload a CSV file to create a catalog, how to manage catalogs, and more.
 
-Some common use cases for catalogs include:
+Commons use cases for catalogs include:
 
 - Products
 - Services
@@ -19,7 +19,7 @@ Some common use cases for catalogs include:
 - Music
 - Packages
 
-Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
+After this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 ## Preparing your CSV file
 
@@ -47,14 +47,14 @@ We also recommend formatting all text in your CSV files as lowercase. Make sure 
 To create a catalog, go to **Data Settings** > **Catalogs**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Catalogs** under **Data**.
 {% endalert %}
 
-Click **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
+Select **Create New Catalog**, then choose to either **Upload CSV** or **Create in browser**.
 
 ### Method 1: Upload CSV
 
-1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
 2. Select one of the following data types for each column: boolean, number, string, or time.
 <br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
@@ -62,10 +62,10 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores<br><br>
 4. (optional) Add a description for the catalog.
-5. Click **Process Catalog** to create the catalog.
+5. Select **Process Catalog** to create the catalog.
 
 {% alert note %}
-This data type cannot be edited after you set up your catalog.
+This data type cannot be edited after you set up your catalog. In addition, a `NULL` value isn't supported in CSV upload and will be treated as a string.
 {% endalert %}
 
 You can also use templates in a catalog name. For example, you can use the following:
@@ -73,7 +73,7 @@ You can also use templates in a catalog name. For example, you can use the follo
 ```liquid
 {% assign language = "content_spanish" %}
 
-{% catalog_items language fall_campaign %}
+{% catalog_items {{language}} fall_campaign %}
 {{ items[0].body }}
 ```
 {% endraw %}
@@ -82,18 +82,18 @@ You can also use templates in a catalog name. For example, you can use the follo
 Your CSV file can be rejected if you go above your [tier](#tiers). 
 {% endalert %}
 
-You can also update the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
+You can also update the CSV file after selecting to create a catalog in the browser. Select **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
 ### Method 2: Create in the browser
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
-- Maximum of 250 characters
-- Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
+- Up to 250 characters
+- Can only include numbers, letters, hyphens, and underscores <br> ![A catalog named "my_catalog".][14]{: style="max-width:80%;"} <br><br>
 2. (optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
-5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
+4. Select **Update Catalog** > **Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![Two example fields "rating" and "name".][12]{: style="max-width:50%;"}<br><br>
+5. Select **Update Catalog** > **Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, select **Save Item** or **Save and Add Another** to continue adding your items. <br> ![Add a catalog item.][13]{: style="max-width:50%;"}
 
 You can also upload a CSV file after selecting to create a catalog in the browser.
 
@@ -141,11 +141,11 @@ We'll create the catalog by uploading a CSV file. The data types for `id`, `titl
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-![][9]{: style="max-width:85%;"}
+![Four catalog column names: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
+Next, we'll name this catalog "games_catalog" and select the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
-![][11]{: style="max-width:85%;"}
+![A catalog named "games_catalog".][11]{: style="max-width:85%;"}
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
@@ -181,7 +181,7 @@ The package entitlement shown in the Braze dashboard is rounded to the nearest u
 
 #### Free version
 
-The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
+The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up. There will also be a size mismatch between the CSV catalog data and the representation of that data in our datastore.
 
 #### Catalogs Pro
 

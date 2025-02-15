@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) .
 
 Il vous permet de mettre à jour les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe) et le département.
 
@@ -25,7 +25,7 @@ Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuelle
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
+Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Vous utiliserez l'origine de votre service comme en-tête de `X-Request-Origin`. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de débit
 
@@ -36,13 +36,13 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
 | `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corps de la demande
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```
 ```json
 {
@@ -54,6 +54,14 @@ Authorization: Bearer YOUR-REST-API-KEY
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -86,7 +94,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
 | `department` | Requis | Chaîne de caractères | Chaîne de [caractères]({{site.baseurl}}/scim_api_appendix/#department-strings) valide du département, tirée de la [documentation sur les chaînes de caractères du département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Requis | Object JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Exemple de demande
@@ -94,7 +102,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-SCIM-TOKEN-HERE' \
 --data raw '{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "name": {
@@ -104,6 +112,14 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role"
+            },
+            {
+                "roleId": "2519dafcdba238ae7"
+            }
+        ],
         "appGroup": [
             {
                 "appGroupName": "Test Workspace",
@@ -134,6 +150,43 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
+        "roles": [
+            {
+                "roleName": "Test Role",
+                "roleId": "519dafcdba23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25789fabcded",
+                        "appGroupName": "Some Workspace",
+                        "appGroupPermissions": ["basic_access", "publish_cards"],
+                        "team": [
+                            {
+                                "teamId": "2519dafcdba238ae7",
+                                "teamName": "Some Team",                  
+                                "teamPermissions": ["export_user_data"]
+                            }
+                        ]
+                    } 
+                ]
+            },
+            {
+                "roleName": "Another Test Role",
+                "roleId": "23125dad23dfaae7,
+                "appGroup": [
+                    {
+                        "appGroupId": "241adcd25adfabcded",
+                        "appGroupName": "Production Workspace",
+                        "appGroupPermissionSets": [
+                            {
+                                "appGroupPermissionSetName": "A Permission Set",
+                                "appGroupPermissionSetId": "dfa385109bc38",
+                                "permissions": ["basic_access","publish_cards"]
+                            }
+                        ]
+                    } 
+                ]
+            }
+        ],
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
@@ -167,4 +220,3 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 {% endapi %}
-

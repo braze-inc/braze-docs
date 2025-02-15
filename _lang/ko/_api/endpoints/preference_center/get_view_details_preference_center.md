@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "이 문서에서는 환경설정 센터 Braze 엔드포인트에 대한 세부 정보 보기에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 기본 설정 센터 Braze 엔드포인트의 세부 정보 보기에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
-# 환경설정 센터에 대한 세부정보 보기
+# 환경설정 센터에 대한 세부 정보 보기
 {% apimethod get %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
@@ -24,13 +24,14 @@ description: "이 문서에서는 환경설정 센터 Braze 엔드포인트에 �
 
 ## 사용량 제한
 
-이 엔드포인트에는 워크스페이스당 분당 1,000개 요청의 사용량 제한이 있습니다.
+이 엔드포인트는 작업 공간당 분당 1,000개의 요청에 대한 속도 제한이 있습니다.
 
 ## 경로 매개변수
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
+{: role="presentation" }
 
 ## 요청 매개변수
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## 응답 
-```json 
+## 응답
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

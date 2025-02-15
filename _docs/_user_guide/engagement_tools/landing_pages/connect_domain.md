@@ -10,14 +10,10 @@ alias: /landing_pages/connect_domain/
 
 > Connect your own domain to your Braze workspace to customize your landing page URLs with your brand.
 
-{% alert note %}
-Landing pages are currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
-{% endalert %}
-
-To connect a domain or subdomain to your Braze account, have an administrator follow the steps below.
+To connect a domain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
-2. Enter the domain or subdomain you want to connect and select **Submit**. For example, `forms.example.com`.
+2. Enter the domain you want to connect and select **Submit**. For example, `forms.example.com`.
 3. Copy and paste the **TXT** and **CNAME** records into the DNS settings of your domain provider.
 4. Return to the Braze dashboard to verify the connection.
 
@@ -32,7 +28,7 @@ Depending on your domain provider, the connection can take up to 48 hours. When 
 After your domain verification is completed, it will be used by default in Braze. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
 
 {% alert note %}
-Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your subdomain.
+Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your domain.
 {% endalert %}
 
 ## Resources from domain providers
@@ -60,5 +56,9 @@ Verify that your domain was entered correctly and that it matches what you submi
 ### Can I connect multiple subdomains to my workspace or connect one subdomain to multiple workspaces?
 
 No, you currently can only connect one subdomain to a workspace.
+
+### Can I use the same subdomain that I currently use for my main website or my sending domain?
+
+No, you can't use subdomains that are already in use. While these subdomains are valid, they can't be used for landing pages if they are already assigned to other purposes or have DNS records that conflict with the required CNAME records.
 
 [1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

@@ -3,7 +3,7 @@ nav_title: キャンバスのテスト
 article_title: キャンバスのテスト
 layout: dev_guide
 guide_top_header: "キャンバスのテスト"
-guide_top_text: "キャンバスを送った後は、キャンバスがうまくいったか、今後のメッセージングにポジティブな影響を与えるかを確認するために、常に結果を見るべきである。<br><br> ここでは、ユーザーに対するメッセージングの効果を測定するのに役立つCanvasアナリティクスやその他のレポートに関するリソースを見つけることができる。"
+guide_top_text: "キャンバスを送信した後は、常に結果を確認し、キャンバスがうまく機能し、今後のメッセージングに必ずプラスの影響を与えることを確認する必要があります。<br><br> ここでは、ユーザーに対するメッセージングの効果を測定するのに役立つCanvasアナリティクスやその他のレポートに関するリソースを見つけることができる。"
 page_order: 4
 
 tool: 
@@ -14,6 +14,9 @@ description: "このランディングページには、テストキャンバス
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
+  - name: ユーザーパスのプレビュー
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
   - name: テストキャンバスの送信
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg

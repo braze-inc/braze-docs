@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期セットアップ
+nav_title: SDK の初期設定
 article_title: React Native 向け SDK の初期設定
 platform: React Native
 page_order: 1
@@ -7,7 +7,7 @@ description: "このリファレンスでは、React Native SDK を紹介し、A
 search_rank: 1
 ---
 
-# SDK の初期セットアップ
+# SDK の初期設定
 
 > このリファレンス記事では、React Native 向け Braze SDK のインストール方法について説明します。Braze React Native SDK をインストールすると、基本的な分析機能が提供され、iOS と Android 両方のアプリ内メッセージとコンテンツカードを1つのコードベースで統合できます。
 
@@ -29,7 +29,7 @@ SDKバージョン6.0.0以降、Braze は内部で React Native Turbo Module に
 iOS アプリが `RCTAppDelegate` に準拠し、このドキュメントまたは Braze サンプルプロジェクトの旧 `AppDelegate` 設定に従っていた場合は、Turbo Module でのイベントの購読時にクラッシュが発生しないよう、「[ネイティブ設定の完了](#step-2-complete-native-setup)」のサンプルを必ず参照してください。
 {% endalert %}
 
-## ステップ1:Braze ライブラリーを統合する
+## ステップ 1:Braze ライブラリーを統合する
 
 {% tabs local %}
 {% tab npm %}
@@ -44,7 +44,7 @@ yarn add @braze/react-native-sdk
 {% endtab %}
 {% endtabs %}
 
-## ステップ2:ネイティブセットアップを完了する
+## ステップ 2:ネイティブセットアップを完了する
 
 {% tabs %}
 {% tab Expo %}
@@ -63,9 +63,9 @@ expo install @braze/expo-plugin
 
 | 方法                                        | タイプ    | 説明                                                                                                                                              |
 | --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `androidApiKey`                               | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にある Android アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。 |
-| `iosApiKey`                                   | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にある iOS アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。     |
-| `baseUrl`                                     | ストリング  | 必須です。Braze ダッシュボードの \[**設定の管理**] にあるアプリケーションの [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)。    |
+| `androidApiKey`                               | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にある Android アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。 |
+| `iosApiKey`                                   | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にある iOS アプリケーションの [API キー]({{site.baseurl}}/api/identifier_types/)。     |
+| `baseUrl`                                     | ストリング  | 必須です。Braze ダッシュボードの [**設定の管理**] にあるアプリケーションの [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)。    |
 | `enableBrazeIosPush`                          | ブーリアン | iOSのみ。iOS でのプッシュ通知の処理に Braze を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                       |
 | `enableFirebaseCloudMessaging`                | ブーリアン | Android のみ。プッシュ通知に Firebase Cloud Messaging を使用するかどうか。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。             |
 | `firebaseCloudMessagingSenderId`              | ストリング  | Android のみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
@@ -86,8 +86,7 @@ expo install @braze/expo-plugin
 | `enableBrazeIosRichPush`                      | ブーリアン | iOSのみ。iOSのリッチプッシュ機能を有効にするかどうか。                                                                                                  |
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
-
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 構成例:
 
@@ -156,7 +155,7 @@ buildscript {
 
 これにより、Kotlin がプロジェクトに追加されます。
 
-#### ステップ 2.2:Braze SDK の構成
+#### ステップ2.2: Braze SDK の構成
 
 Braze サーバーに接続するには、プロジェクトの `res/values` フォルダで `braze.xml` ファイルを作成します。次のコードを貼り付け、API [キー]({{site.baseurl}}/api/identifier_types/)および[エンドポイント]({{site.baseurl}}/api/basics/#endpoints)を実際の値に置き換えます。
 
@@ -175,7 +174,11 @@ Braze サーバーに接続するには、プロジェクトの `res/values` フ
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### ステップ 2.3:ユーザーセッショントラッキングの実装
+{% alert tip %}
+Braze SDK バージョン12.2.0 以降では、`importBrazeLocationLibrary=true` を`gradle.properties` ファイルに設定することで、android-sdk-location ライブラリを自動的にプルインできます。
+{% endalert %}
+
+#### ステップ2.3: ユーザーセッショントラッキングの実装
 
 `openSession()` および `closeSession()` への呼び出しは自動的に処理されます。
 `MainApplication` クラスの `onCreate()` メソッドに次のコードを追加します。
@@ -352,7 +355,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-## ステップ3:使用
+## ステップ 3: 使用
 
 インストールしたら、 React Native コードでライブラリーを `import` できます。
 
@@ -364,7 +367,7 @@ import Braze from "@braze/react-native-sdk";
 
 ## 基本的な統合のテスト
 
-この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード (\[**概要**] セクション) に新しいセッションが表示されます。
+この時点で、ダッシュボードでセッション統計を確認することで、SDK が統合されていることを確認できます。いずれかのプラットフォームでアプリケーションを実行すると、ダッシュボード ([**概要**] セクション) に新しいセッションが表示されます。
 
 アプリで次のコードを呼び出すことで、特定のユーザーのセッションを開始できます。
 
@@ -390,9 +393,6 @@ const App = () => {
   )
 ```
 
-その後、ダッシュボードの \[[ユーザー検索][user-search]] で `some-user-id` を使用してユーザーを検索できます。そこで、セッションとデバイスデータがロギングされていることを確認できます。
+その後、ダッシュボードの [[ユーザー検索]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search)] で `some-user-id` を使用してユーザーを検索できます。そこで、セッションとデバイスデータがロギングされていることを確認できます。
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK のインストール"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK のインストール"
-[user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

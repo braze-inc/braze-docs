@@ -39,7 +39,7 @@ tool: Media
 |`Icons`| アイコンを挿入する。カスタム画像もアップロードできます。画像がアップロードされるまで、特大のプレースホルダー・アイコンが使用される。 |
 |`HTML`| 生のHTMLを挿入する。コネクテッドコンテンツや条件文のような高度な Liquid に適しています。 | 
 |`Menu`| デザインするメッセージに合わせたフレキシブルなメニューを作成する。 |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## プロパティ
 
@@ -59,7 +59,7 @@ tool: Media
 |`Line height`| テキストの行間の距離を変更する。 |
 |`Line spacing`| 各文字間の距離を変更する。 |
 |`Text direction`| デフォルトは左から右だが、右から左に編集することもできる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### パラグラフ
 
@@ -77,7 +77,7 @@ tool: Media
 |`Line height`| テキストの行間の距離を変更する。 |
 |`Letter spacing`| 各文字間の距離を変更する。 |
 |`Text direction`| デフォルトは左から右だが、右から左に編集することもできる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### リスト
 
@@ -99,7 +99,7 @@ tool: Media
 |`Line height`| テキストの行間の距離を変更する。 |
 |`Letter spacing`| 各文字間の距離を変更する。 |
 |`Text direction`| デフォルトは左から右だが、右から左に編集することもできる。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### ボタン
 
@@ -109,7 +109,7 @@ tool: Media
 |---|---|
 |`Link Type`| ボタンをクリックしたときの動作を決定し、適切なリンクプロトコルを設定する。 |
 |`URL`| 選択された `Link Type` に応じてダイナミックに変化します。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 区切り線
 
@@ -121,7 +121,7 @@ tool: Media
 |`Line`| 点線、斑点、実線など、さまざまな線形式。 さらに、区切り線の太さや色も変更できます。 |
 |`Width `| 区切り線の幅を 5 刻みで調整します。  |
 |`Align`| 線を左、中央、右向きのいずれかに移動する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### スペーサー
 
@@ -130,7 +130,7 @@ tool: Media
 | プロパティ | 記述 |
 |---|---|
 |`Height`| スペーサーブロックの高さを調整します。デフォルトは60pxである。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 画像
 
@@ -142,7 +142,7 @@ tool: Media
 |`Align`| 画像を左寄り、中央寄り、右寄りのいずれかに移動させる。 |
 |`URL`| 画像のホストアドレス。 |
 |`Alternate text`| 画像の読み込みに失敗したときに、画像の代わりに表示されるコピー。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 `Auto Width` の場合、画像の自動リサイズは、画像の幅とレイアウト内の利用可能なスペースの組み合わせに基づいて、画像に最適なサイズを選ぶ：
@@ -161,7 +161,7 @@ tool: Media
 |`Play Icon Style`| ビデオ画像の上部にある再生ボタンのさまざまなオプションを含む。 |
 |`Play Icon Color`| 再生ボタンの**ライト**または**ダーク**を選択するオプション。 |
 |`Play Icon Size`| 再生ボタンのピクセルサイズを選択する。固定範囲は50pxから80pxまで（5px刻み）。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 Vimeoでホストされている動画は、公開に設定されている場合のみ機能する。Vimeo内で利用可能な他のすべてのセキュリティ設定（たとえば、「Hide fromVimeo.com 」）は、このコンテンツブロックではサポートされていない別のリンク形式を生成する。この種のリンクはビルダーによって変更されるため、Brazeはサムネイルを生成できない。
@@ -177,7 +177,7 @@ Vimeoでホストされている動画は、公開に設定されている場合
 |`Configure icon collection`| 各ソーシャル・アイコンのURLを設定する。タイトルと代替テキストを編集するための**More options**トグルを含む。 |
 |`Align`| ソーシャルアイコンを左、中央、右方向に移動する。
 |`Icon spacing`| 各ソーシャルアイコンの間隔を決める。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### アイコン
 
@@ -195,7 +195,7 @@ Vimeoでホストされている動画は、公開に設定されている場合
 |`Icon size`| アイコンのサイズを決定する。 |
 |`Icon spacing`| アイコンのスペースを変更する。 |
 |`Icon padding`| アイコンのパディングを変更する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML
 
@@ -204,7 +204,7 @@ Vimeoでホストされている動画は、公開に設定されている場合
 | プロパティ | 記述 |
 |---|---|
 |`html editor`| 生のHTMLを入力する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### メニュー
 
@@ -224,7 +224,7 @@ Vimeoでホストされている動画は、公開に設定されている場合
 |`Mobile menu`| モバイル・デバイスで表示する際のアイコンのサイズ、色、アイコンの種類を変更するオプションを含む。 |
 |`Item padding`| **+** または **-** ボタンを使用するか、特定の数値を入力して、埋め込みを変更します。 |
 |`All sides`| `Item padding` が無効の場合、一貫したパディング番号を設定する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### リキッドパーソナライゼーションを追加する
 
@@ -233,4 +233,4 @@ Vimeoでホストされている動画は、公開に設定されている場合
 | 名前 | 記述 |
 |---|---|
 | `Add Personalization` | 標準 (デフォルト) アトリビュート、カスタムアトリビュート、コンテンツブロックなどの標準的な Liquid スニペットを検索できます。 | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -1,5 +1,5 @@
 ---
-nav_title: 送信前の確認
+nav_title: 送る前に知っておこう
 layout: redirect
 redirect_to: /docs/know_before_send/
 ---

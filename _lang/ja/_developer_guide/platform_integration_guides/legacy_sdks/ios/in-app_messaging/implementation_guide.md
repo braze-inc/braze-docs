@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なアプリ内メッセージ開発者統合ガイドをお探しですか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/). でご確認ください。
+基本的なアプリ内メッセージ開発者統合ガイドをお探しですか?ここで見つけてください[here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # アプリ内メッセージング実装ガイド
@@ -81,7 +81,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 
 ### カスタムスライドアップアプリ内メッセージ
 
-![2台のiPhoneを並べて。最初の iPhone では、スライドアップメッセージが画面の下部に表示されます。2台目の iPhone では、スライドアップメッセージが画面の上方に表示され、アプリのナビゲーションボタンが表示されています。][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![2台のiPhoneを並べて。最初の iPhone では、スライドアップメッセージが画面の下部に表示されます。2台目のiPhoneでは、画面上の上にスライドアップメッセージが表示され、アプリのナビゲーションボタンが表示されます。]({% image_buster /assets/img/iam_implementation/slideup.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
 スライドアップのアプリ内メッセージを作成しているときに、デフォルトの方法ではメッセージの配置を変更できないことに気付くかもしれません。このような変更は、`ABKInAppMessageSlideupViewController` をサブクラス化し、独自のカスタム変数で `offset` 変数をオーバーライドすることによって可能になります。右の画像は、これを使用してスライドアップアプリ内メッセージを調整する方法の例を示しています。 
 
@@ -212,7 +212,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 ### カスタムモーダルアプリ内メッセージ
 
-![スポーツチームの一覧を循環させ、好きなチームを選択できるモーダル アプリ内メッセージが表示されたiPhone。このアプリ内メッセージの下部には、大きな青い送信ボタンがあります。][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![スポーツチームの一覧を循環させ、好きなチームを選択できるモーダル アプリ内メッセージが表示されたiPhone。このアプリ内メッセージの下部に、大きな青い送信ボタンがあります。]({% image_buster /assets/img/iam_implementation/modal.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 `ABKInAppMessageModalViewController` をサブクラス化して、貴重なユーザー属性を収集する魅力的な方法を提供する `UIPickerView` を活用できます。カスタムモーダルアプリ内メッセージを使用すると、コネクテッドコンテンツまたは使用可能なリストを使用して、アイテムの動的なリストから属性を表示およびキャプチャできます。 
 
@@ -220,17 +220,17 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 開始するには、[ModalPickerViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/ModalPickerViewController/ModalPickerViewController.swift) にアクセスしてください。
 
-#### ダッシュボードの構成
+#### ダッシュボード設定
 
 ダッシュボードでモーダルアプリ内メッセージを設定するには、コンマ区切り文字列として書式設定された項目のリストを指定する必要があります。この例では、コネクテッドコンテンツを使用してチーム名の JSON リストを取得し、それに応じてフォーマットします。
 
-![in-アプリ メッセージ作成画面には、アプリ内メッセージの外観のプレビューが表示されますが、代わりにBrazeに指定したアイテムの一覧が表示されます。スマートフォンに送信されない限り、Braze UI にはカスタムアプリ内メッセージ UI が表示されないため、プレビューではメッセージがどのように表示されるかを示すものではないので、送信前にテストすることをお勧めします。][4]
+![in-アプリ メッセージ作成画面には、アプリ内メッセージの外観のプレビューが表示されますが、代わりにBrazeに指定したアイテムの一覧が表示されます。スマートフォンに送信されない限り、Braze UI にはカスタムアプリ内メッセージ UI が表示されないため、プレビューではメッセージがどのように表示されるかを示すものではないので、送信前にテストすることをお勧めします。]({% image_buster /assets/img/iam_implementation/dashboard1.png %})
 
 キーと値のペアに `attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
 `ABKInAppMessage` オブジェクト内の `extras` ディクショナリを使用して、表示すべき正しいビューを示す `view_type` キー (存在する場合) をクエリできます。アプリ内メッセージはメッセージごとに設定されるため、カスタムとデフォルトのモーダルビューが調和して機能することに注意してください。
 
-![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアでは「attribute_key」が「お気に入りチーム」に設定され、2番目のペアでは「view_type」が「ピッカー」に設定されています。][5]{: style="max-width:65%;"}
+![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアでは「attribute_key」が「お気に入りチーム」に設定され、2番目のペアでは「view_type」が「ピッカー」に設定されています。]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -324,7 +324,7 @@ override func viewDidLoad() {
 {% tabs %}
 {% tab Swift %}
 **カスタム属性を割り当てる**<br>
-サブクラスを使用して、ユーザーが \[送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
+サブクラスを使用して、ユーザーが [送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
 ```swift
 @IBAction func primaryButtonTapped(_ sender: Any) {
   guard let item = selectedItem, !item.isEmpty, let attributeKey = inAppMessage.extras?[InAppMessageKey.attributeKey.rawValue] as? String else { return }
@@ -335,7 +335,7 @@ override func viewDidLoad() {
 {% endtab %}
 {% tab Objective-C %}
 **カスタム属性を割り当てる**<br>
-サブクラスを使用して、ユーザーが \[送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
+サブクラスを使用して、ユーザーが [送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
 ```objc
 - (IBAction)primaryButtonTapped:(id)sender {
   InAppMessageData *inAppMessageData = [[InAppMessageData alloc] init];
@@ -355,29 +355,21 @@ override func viewDidLoad() {
 
 ### カスタムフルアプリ内メッセージ
 
-![各オプションの横にトグルがある設定オプションの一覧を表示するアプリ内メッセージ。メッセージの一番下には、大きな青い送信ボタンがあります。][6]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![各オプションの横にトグルがある設定オプションの一覧を表示するアプリ内メッセージ。メッセージの下部に、大きな青色の送信ボタンがあります。]({% image_buster /assets/img/iam_implementation/fullscreen.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 カスタムのフルアプリ内メッセージを使用して、インタラクティブで使いやすいプロンプトを作成し、貴重な顧客データを収集します。右の例は、通知設定を備えたインタラクティブなプッシュプライマーとして再構成されたカスタムフルアプリ内メッセージの実装を示しています。 
 
 開始するには、[`FullListViewController`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/FullListViewController/FullListViewController.swift) にアクセスしてください。
 
-#### ダッシュボードの構成
+#### ダッシュボード設定
 
 ダッシュボードでカスタムアプリ内メッセージ全体を設定するには、コンマ区切り文字列形式のタグのリストを指定する必要があります。 
 
 キーと値のペアに、`attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
-![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア「attribute_key」は「プッシュタグ」として設定され、2番目の「subtitle_text」は「通知を有効にすると...」、として設定され、3番目の「view_type」は「テーブルリスト」として設定されます。][7]{: style="max-width:65%;"}
+![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア「attribute_key」は「プッシュタグ」として設定され、2番目の「subtitle_text」は「通知を有効にすると...」、として設定され、3番目の「view_type」は「テーブルリスト」として設定されます。]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### アプリ内メッセージタッチのインターセプト
-![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 カスタムフルアプリ内メッセージボタンを正しく機能させるには、アプリ内メッセージのタッチをインターセプトすることが重要です。デフォルトでは、`ABKInAppMessageImmersive` はメッセージにタップジェスチャ認識機能を追加するので、ユーザーはボタンなしでメッセージを閉じることができます。`UISwitch` またはボタンを `UITableViewCell` ビュー階層に追加すると、タッチはカスタムビューによって処理されるようになります。iOS 6 以降、ジェスチャー認識機能を使用する場合はボタンやその他のコントロールが優先され、カスタムのフルアプリ内メッセージが正常に機能するようになりました。 
 
-[1]: {% image_buster /assets/img/iam_implementation_guide.png %}
-[2]: {% image_buster /assets/img/iam_implementation/slideup.png %}
-[3]: {% image_buster /assets/img/iam_implementation/modal.png %}
-[4]: {% image_buster /assets/img/iam_implementation/dashboard1.png %}
-[5]: {% image_buster /assets/img/iam_implementation/dashboard2.png %}
-[6]: {% image_buster /assets/img/iam_implementation/fullscreen.png %}
-[7]: {% image_buster /assets/img/iam_implementation/dashboard3.png %}
-[8]: {% image_buster /assets/img/iam_implementation/dashboard4.png %}

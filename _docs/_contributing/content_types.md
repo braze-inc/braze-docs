@@ -85,7 +85,7 @@ PAGE_TITLE.md
 
 ### Step 2: Add a template
 
-Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/templates/).
+Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 ### Step 3: Generate a preview (optional)
 
@@ -124,7 +124,7 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 
 ### References
 
-References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary).
+References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
 {% tabs local %}
 {% tab reference template %}

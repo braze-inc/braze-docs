@@ -1,6 +1,6 @@
 ---
-nav_title: "削除:カタログ・フィールドを削除する"
-article_title: "削除:カタログ・フィールドを削除する"
+nav_title: "DELETE:カタログフィールドの削除"
+article_title: "DELETE:カタログフィールドの削除"
 search_tag: Endpoint
 page_order: 1
 
@@ -22,7 +22,7 @@ description: "この記事では、「カタログフィールドの削除」Bra
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete_fields` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete_fields`の権限が必要です。
 
 ## レート制限
 
@@ -30,13 +30,13 @@ description: "この記事では、「カタログフィールドの削除」Bra
 
 ## パスパラメーター
 
-| パラメーター      | required | データ型 | 説明                |
+| パラメータ      | required | データ型 | 説明                |
 | -------------- | -------- | --------- | -------------------------- |
-| `catalog_name` | 必須 | string    | カタログ名。       |
-| `field_name`   | 必須 | string    | カタログ・フィールドの名前。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列    | カタログ名。       |
+| `field_name`   | 必須 | 文字列    | カタログ・フィールドの名前。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/fields/ratings' \
@@ -46,7 +46,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## 応答
 
-このエンドポイントには、`202` と `404` の2つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `202` と `404`。
 
 ### 成功応答の例
 
@@ -80,9 +80,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-## トラブルシューティング 
+## トラブルシューティング
 
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー                           | トラブルシューティング                                                  |
 | ------------------------------- | ---------------------------------------------------------------- |
@@ -90,6 +90,6 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | `field-referenced-by-selection` | カタログフィールドが現在選択によって使用されていることを確認する。 |
 | `field-is-inventory`            | カタログ・フィールドがインベントリ・フィールドとして使用されていることを確認する。      |
 | `invalid-field-name`            | カタログフィールド名が有効であることを確認する。                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

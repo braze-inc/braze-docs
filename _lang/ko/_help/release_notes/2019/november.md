@@ -12,7 +12,7 @@ description: "이 문서에는 2019년 11월의 릴리스 노트가 포함되어
 
 ## 인텔리전스 스위트
 
-Braze의 [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/)는 데이터 기반 인사이트를 통해 의사결정을 자동화할 수 있도록 도와줍니다. 브랜드는 전달 시간부터 다변량 테스트에 이르기까지 이러한 도구와 기능을 사용하여 규모에 맞게 최적화되는 역동적인 크로스채널 경험을 만들 수 있습니다. <br> <br> Intelligence Suite는 세 가지 주요 기능으로 구성되어 있습니다. [인텔리전트 타이밍]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/), [인텔리전트 채널]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/) 및 [인텔리전트 선택]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
+Braze의 [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/)는 데이터 기반 인사이트를 통해 의사결정을 자동화할 수 있도록 도와줍니다. 브랜드는 전달 시간부터 다변량 테스트에 이르기까지 이러한 도구와 기능을 사용하여 규모에 맞게 최적화되는 역동적인 크로스채널 경험을 만들 수 있습니다. <br> <br> Intelligence Suite는 세 가지 주요 기능으로 구성되어 있습니다. [인텔리전트 타이밍]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), [인텔리전트 채널]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/) 및 [인텔리전트 선택]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 {% alert note %}
 "Intelligence Suite"는 이전에 "가장 참여도가 높은 채널", "Intelligent Timing", "다변량 및 A/B 테스트"로 알려진 기능들을 개정하고 그룹화한 것입니다.

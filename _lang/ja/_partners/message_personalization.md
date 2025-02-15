@@ -8,9 +8,6 @@ description: "このランディングページには、Brazeパートナー（A
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Message Personalization"
 
 valid_partner_list:
@@ -71,10 +68,15 @@ valid_partner_list:
 - name: SmarterSends
   url: /docs/partners/message_personalization/dynamic_content/smartersends/
 - name: Tangerine
-  url: /docs/partners/message_personalization/location/tangerine/ 
+  url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages/
-  
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---

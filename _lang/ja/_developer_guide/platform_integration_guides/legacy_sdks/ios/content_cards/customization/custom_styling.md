@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムスタイリング
+nav_title: カスタムスタイル
 article_title: iOS 向けカスタムコンテンツカードスタイル設定
 platform: iOS
 page_order: 1
@@ -56,7 +56,7 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
@@ -79,4 +79,3 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches

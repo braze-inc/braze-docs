@@ -19,7 +19,7 @@ description: "이 도움말 문서에서는 위치 타겟팅을 설정하는 방
 **대상** 아래의 **세그먼트** 페이지로 이동하여 현재 모든 사용자 세그먼트를 확인합니다. 이 페이지에서 새 세그먼트를 만들고 이름을 지정할 수 있습니다. 시작하려면 **세그먼트 생성을** 클릭하고 세그먼트의 이름을 지정합니다.
 
 {% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **세그먼트는** **참여** 아래에 있습니다.
+[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **세그먼트**는 **인게이지먼트** 아래에 있습니다.
 {% endalert %}
 
 ![][1]{: style="max-width:70%;"}
@@ -38,13 +38,17 @@ description: "이 도움말 문서에서는 위치 타겟팅을 설정하는 방
 
 ### 다각형 영역
 
-다각형 영역의 경우 세그먼트에 포함할 영역을 보다 구체적으로 지정할 수 있습니다.
+다각형 지역의 경우 세그먼트에 포함할 영역을 보다 구체적으로 지정할 수 있습니다.
 
 ![선택한 다각형 지역으로서 뉴욕주의 윤곽선입니다.][4]{: style="max-width:70%;"}
 
-{% alert tip %}
-Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신가요? 사용 가능한 Braze [컨텍스트 기반 위치 파트너를]({{site.baseurl}}/partners/message_personalization/location/) 확인하세요.
-{% endalert %}
+## 비콘 및 지오펜스에 대한 파트너십 지원
+
+기존의 비콘 또는 지오펜스 지원과 타겟팅 및 메시징 기능을 결합하면 사용자의 실제 행동에 대한 더 많은 정보를 얻을 수 있으므로 그에 맞는 메시지를 보낼 수 있습니다. 일부 파트너와 함께 위치 추적을 활용할 수 있습니다: 
+
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

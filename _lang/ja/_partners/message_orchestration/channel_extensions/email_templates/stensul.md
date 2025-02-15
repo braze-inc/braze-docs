@@ -16,12 +16,12 @@ Braze と Stensul の統合により、HTML 形式の Stensul メールをエク
 
 ## 前提条件
 
-| 要件 | 説明 |
+| 必要条件 | 説明 |
 | ------------| ----------- |
 | Stensul アカウント | このパートナーシップを活用するには、Stensul アカウントが必要です。 |
-| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys** のBraze ダッシュボードで作成できます。 |
+| Braze REST API キー | 完全な**テンプレート**権限を持つBraze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | クラスタインスタンス | Braze [クラスターインスタンス]({{site.baseurl}}/api/basics/#endpoints)は、Braze ダッシュボードと REST エンドポイントに対応しています。  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
@@ -33,12 +33,12 @@ Braze REST API キーとクラスターインスタンスをStensul カスタマ
 
 ### ステップ1:Stensul メールを作成する
 
-Stensul プラットフォームで Stensul メールを作成し、\[**Complete**] をクリックします。
+Stensul プラットフォームで Stensul メールを作成し、[**Complete**] をクリックします。
 
 ![Stensul の保存オプション]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### ステップ2:Brazeへのテンプレートのエクスポート
-完了ページに表示される新しいダイアログで、\[**Upload to ESP**] を選択します。
+完了ページに表示される新しいダイアログで、[**Upload to ESP**] を選択します。
 
 ![Stensul のアップロードオプション]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
@@ -48,6 +48,6 @@ Stensul プラットフォームで Stensul メールを作成し、\[**Complete
 
 ## 使用
 
-アップロードした Stensul テンプレートを、Braze アカウントの**\[テンプレートとメディア] > \[メールテンプレート]** セクションで確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
+アップロードした Stensul テンプレートを、Braze アカウントの**[テンプレートとメディア] > [メールテンプレート]** セクションで確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

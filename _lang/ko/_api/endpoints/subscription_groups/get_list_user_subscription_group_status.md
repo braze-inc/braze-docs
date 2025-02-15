@@ -47,12 +47,12 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 | `email` | 필수* | 문자열 | 사용자의 이메일 주소입니다. 최대 50개의 문자열 배열로 전달할 수 있습니다.<br><br> 이메일 주소와 전화번호를 모두 제출하면( `external_id` 없이) 오류가 발생합니다. |
 | `phone` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호입니다. 이메일이 포함되지 않은 경우 전화번호를 하나 이상 포함해야 합니다(최대 50개).<br><br> 이메일 주소와 전화번호를 모두 제출하면( `external_id` 없이) 오류가 발생합니다. |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 * `external_id` 또는 `email` 또는 `phone` 중 하나가 사용자당 필요합니다.
 
-- SMS 및 WhatsApp 구독 그룹의 경우 `external_id` 또는 `phone` 이 필요합니다.  둘 다 제출하면 `external_id`만 쿼리에 사용되며 해당 사용자에게 전화번호가 적용됩니다.
-- 이메일 구독 그룹의 경우 `external_id` 또는 `email` 이 필요합니다.  둘 다 제출하면 `external_id`만 쿼리에 사용되며 해당 사용자에게 이메일 주소가 적용됩니다.
+- SMS 및 WhatsApp 구독 그룹의 경우 `external_id` 또는 `phone` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 전화 번호가 적용됩니다.
+- 이메일 구독 그룹의 경우 `external_id` 또는 `email` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 이메일 주소가 적용됩니다.
 
 ## 요청 예시 
 
@@ -84,7 +84,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## 응답
 
-모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown`으로 반환됩니다.
+모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown` 로 반환됩니다.
 
 ```json
 Content-Type: application/json

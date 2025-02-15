@@ -17,7 +17,7 @@ description: "이 문서에서는 카탈로그 필드 생성 Braze 엔드포인�
 
 > 이 엔드포인트를 사용하여 카탈로그에 여러 필드를 생성하십시오.
 {% alert important %}
-이 엔드포인트는 현재 초기 액세스 중입니다. 고객 성공 매니저에게 연락하여 이 얼리 액세스에 참여하고 싶다면 문의하십시오.
+이 엔드포인트는 현재 얼리 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
 {% endalert %}
 
 ## 필수 구성 요소
@@ -32,15 +32,15 @@ description: "이 문서에서는 카탈로그 필드 생성 Braze 엔드포인�
 
 | 매개변수      | 필수 | 데이터 유형 | 설명          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | 필수 | 문자열    | 카탈로그의 이름. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 필수 | 문자열    | 카탈로그의 이름입니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
 
 | 매개변수 | 필수 | 데이터 유형 | 설명                                                                                                  |
 | --------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------ |
 | `fields`  | 필수 | 배열     | 필드 객체를 포함하는 배열. 필드 객체에는 새 필드의 이름과 유형이 포함되어야 합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 
@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -86,7 +86,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ### 오류 응답의 예
 
-`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 오류에 대한 자세한 내용은 [문제 해결](#troubleshooting)을 참조하십시오.
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
 
 ```json
 {
@@ -112,11 +112,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 | 오류                                | 문제 해결                                                                                        |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `arbitrary-error`                    | 임의의 오류가 발생했습니다. 다시 시도하거나 [지원]({{site.baseurl}}/support_contact/)에 문의하십시오. |
-| `catalog-not-found`                  | 카탈로그 이름이 유효한지 확인하십시오.                                                                  |
-| `company-size-limit-already-reached` | 카탈로그 저장 용량 한도에 도달했습니다.                                                             |
+| `arbitrary-error`                    | 임의의 오류가 발생했습니다. 다시 시도하거나 [지원팀에]({{site.baseurl}}/support_contact/) 문의하세요. |
+| `catalog-not-found`                  | 카탈로그 이름이 유효한지 확인합니다.                                                                  |
+| `company-size-limit-already-reached` | 카탈로그 저장소 크기 제한에 도달했습니다.                                                             |
 | `request-includes-too-many-fields`   | 각 요청은 최대 50개의 새 필드를 지원할 수 있습니다.                                                          |
 | `catalog-exceeds-fields-limit`       | 카탈로그에는 500개 이상의 필드를 포함할 수 없습니다.                                                              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

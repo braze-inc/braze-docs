@@ -15,9 +15,11 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -44,14 +46,14 @@ The following outlines the individual minimum SDK requirements for these feature
 | {::nomarkdown}{% sdk_min_versions swift:6.2.0 android:26.0.0 %}{:/} | {::nomarkdown}{% sdk_min_versions web:4.8.1 swift:6.5.0 android:26.0.0 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-*If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
+*If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, selecting the link will close the message and the user will not be able to return to the message to submit the form.
 
 {% enddetails %}
 
 ### Additional prerequisites
 
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
-- If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
+- If you're using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
 
 ## Step 1: Create an in-app message
 
@@ -65,9 +67,9 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 - Use a Braze drag-and-drop in-app message template
 - Select a saved drag-and-drop in-app message template
 
-Click **Build message** to begin designing your in-app message in the drag-and-drop editor.
+Select **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
-![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![The Braze Templates section where you can choose a basic, background image, phone number capture, or blank template.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 You can also access all templates from the **Templates** section of the dashboard.
 
@@ -75,14 +77,14 @@ You can also access all templates from the **Templates** section of the dashboar
 
 Adding pages to your in-app message lets you guide users through a sequential flow, like an onboarding flow or welcome journey. You can manage pages from the **Pages** section of the **Build** tab.
 
-![]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+![An in-app message for a healthcare company that is composed of three pages.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
 {% tab Adding pages %}
 
 In-app messages start with one page by default. To add a new page:
 
-1. Click **+ Add page**.
+1. Select **+ Add page**.
 2. Select from the list of custom or Braze-provided templates.
 3. Name the page something meaningful. This will help you when connecting pages together.
 
@@ -93,7 +95,7 @@ You can add up to 10 pages per in-app message.
 To duplicate an existing page:
 
 1. Hover over the page in the list and select <i class="fas fa-ellipsis-vertical"></i> to open more options.
-2. Click **Duplicate**.
+2. Select **Duplicate**.
 3. Name the page something meaningful. This will help you when connecting pages together.
 
 {% endtab %}
@@ -119,24 +121,27 @@ To connect pages together:
 4. Select the page you want to link to from the starting page.
 5. Continue until all pages are linked.
 
-![]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![A user is editing the primary action button to go to Page 2 of the in-app message.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 If a page is not linked to any other page, the message can't be launched.
 
 {% alert note %}
-Users can press the close X button to exit the message at any time. This button can't be removed.
+Users can select the close X button to exit the message at any time. This button can't be removed.
 {% endalert %}
 
 ## Step 4: Build and design your in-app message
 
-Here's where your message gets to strut down the runway, dressed in your brand's signature style.
+Here's where your message gets to strut down the runway, dressed in your brand's signature style. Using a combination of editor blocks and style settings, you can customize and design your in-app message.
 
 - For a list of available editor blocks and their properties, refer to [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - For help customizing the look and feel of your message, check out [Style settings]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Step 5: Test your in-app message
 
-The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag-and-drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
+The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag-and-drop in-app message campaign. 
+
+It's important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
 
 ### Preview message as a user
 
@@ -147,10 +152,12 @@ To send a test to either Content Test Groups or individual users, push must be e
 You can preview messages from the **Preview & Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user:
 
 - **Random User:** Braze will randomly select a user from the database and preview the in-app message based on their attributes or event information.
-- **Select User:** You can select a specific user based on their email address or external_id. The in-app message will preview based on that user's attributes and event information.
-- **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
+- **Select User:** You can select a specific user based on their email address or `external_id`. The in-app message will preview based on that user's attributes and event information.
+- **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. Enter any information you would like to see in the preview email.
 
 ### Test checklist
+
+Consider the following questions as you test your in-app message:
 
 - Have you tested the message on different devices?
 - Do the images and media show up and act as expected?
@@ -180,6 +187,6 @@ Currently the editor is limited to modal and fullscreen messages only. You can s
 
 Yes. For any in-app message you want to re-use in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
 
-![]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![A preview of an in-app message for signing up for text updates.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 You can also create and save in-app message templates by navigating to **Templates** > **In-App Message Templates**.

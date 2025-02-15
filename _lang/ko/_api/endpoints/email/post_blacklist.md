@@ -16,7 +16,7 @@ description: "이 문서에서는 블랙리스트 이메일 Braze 엔드포인�
 {% endapimethod %}
 
 {% alert important %}
-Braze는 `/email/blacklist` 엔드포인트와 동일한 기능을 갖춘 [`/email/blocklist` 엔드포인트]({{site.baseurl}}/api/endpoints/email/post_blocklist/)를 출시했습니다. 대신 `/email/blocklist` 엔드포인트를 사용하는 것이 좋습니다.
+Braze는 `/email/blacklist` 엔드포인트와 동일한 기능을 갖춘 [`/email/blocklist` 엔드포인트를]({{site.baseurl}}/api/endpoints/email/post_blocklist/) 출시했습니다. 대신 `/email/blocklist` 엔드포인트를 사용하는 것이 좋습니다.
 {% endalert %}
 
 > 이 엔드포인트를 사용하여 사용자의 이메일 수신을 취소하고 하드 바운스로 표시할 수 있습니다.
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | -----------|----------| --------|------- |
 | `email` | 필수 | 문자열 또는 배열 | 블랙리스트에 추가할 이메일 주소를 문자열로 지정하거나 최대 50개의 이메일 주소 배열을 블랙리스트에 추가합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```
@@ -62,5 +62,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 ```
 
 {% endapi %}
-
-

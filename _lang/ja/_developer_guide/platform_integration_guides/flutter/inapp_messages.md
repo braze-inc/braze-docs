@@ -64,7 +64,7 @@ Flutter アプリでアプリ内メッセージデータを受信できるよう
 
 `BrazeInAppMessage` オブジェクトは、`uri`、`message`、`header`、`buttons`、`extras` などを含む、ネイティブモデルオブジェクトで使用可能なフィールドのサブセットをサポートします。
 
-### ステップ1:Dart レイヤーでアプリ内メッセージデータをリッスンする
+### ステップ 1:Dart レイヤーでアプリ内メッセージデータをリッスンする
 
 Dart レイヤーでアプリ内メッセージデータを受信するには、以下のコードを使用して `StreamSubscription` を作成し、`braze.subscribeToInAppMessages()` を呼び出します。不要になったストリームサブスクリプションを忘れずに `cancel()` してください。
 
@@ -135,15 +135,13 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 次のステップに従って、サンプルのアプリ内メッセージをテストします。
 
 1. `braze.changeUser('your-user-id')` メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. ダッシュボードの \[**キャンペーン**] ページに移動し、[このガイド][1]に従って新しいアプリ内メッセージキャンペーンを作成します。
-3. テスト用のアプリ内メッセージングキャンペーンを作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。
+2. ダッシュボードの [**キャンペーン**] ページに移動し、[このガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)に従って新しいアプリ内メッセージキャンペーンを作成します。
+3. テスト用のアプリ内メッセージングキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。
 4. プッシュ通知をタップすると、デバイスにアプリ内メッセージが表示されます。
 
 ## GIFサポート
 
 {% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
 
-![Brazeのアプリ内メッセージキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、アプリ内メッセージをテストすることができる。][2]
+![アプリ内メッセージをテストするため、テスト受信者として自分のユーザー ID を追加できることを示す Braze アプリ内メッセージキャンペーン。]({% image_buster /assets/img/react-native/iam-test.png %}「アプリ内メッセージングテスト」)
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[2]: {% image_buster /assets/img/react-native/iam-test.png %} 「アプリ内メッセージングテスト」

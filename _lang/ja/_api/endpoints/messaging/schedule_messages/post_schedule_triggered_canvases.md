@@ -10,11 +10,11 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 ---
 {% api %}
 # APIトリガーのキャンバスをスケジュールする
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-> このエンドポイントを使用して、API トリガー配信を介してキャンバスメッセージをスケジュールします。これにより、メッセージの送信をトリガーするアクションを決めることができます。 
+> このエンドポイントを使用して、API トリガー配信を介してキャンバスメッセージをスケジュールします。これにより、メッセージの送信をトリガーするアクションを決めることができます。
 
 キャンバスの最初のステップで送信されるメッセージにテンプレート化される `canvas_entry_properties` を渡すことができます。
 
@@ -24,13 +24,13 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 
 ## 前提条件
 
-このエンドポイントを使用するには、`canvas.trigger.schedule.create` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.trigger.schedule.create`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -63,14 +63,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|必須|string| [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `recipients` | オプション | 受信者オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
-| `audience` | オプション | 接続された観客オブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-|`broadcast`| オプション | ブール値 | キャンペーンやキャンバスがターゲットとするセグメント全体にメッセージを送信する場合は、`broadcast` を true に設定する必要がある。このパラメーターはデフォルトで false です (2017年8月31日現在)。<br><br> `broadcast` をtrueに設定すると、`recipients` リストを含めることはできない。ただし、`broadcast: true` 、意図せずこのフラグを設定してしまうと、予想以上に多くの読者にメッセージを送ってしまう可能性があるため、設定には注意が必要である。 |
+| `recipients` | オプション | 受信者s オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
+| `audience` | オプション | 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
+|`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
 | `canvas_entry_properties` | オプション | オブジェクト | この送信に含まれるすべてのユーザーのパーソナライゼーションキーと値のペア。[キャンバスエントリープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)を参照してください。 |
-| `schedule` | required | スケジュールオブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `schedule` | 必須 | Scheduleオブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/create' \
 --header 'Content-Type: application/json' \

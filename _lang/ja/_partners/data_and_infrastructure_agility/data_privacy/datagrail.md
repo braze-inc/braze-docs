@@ -19,19 +19,19 @@ BrazeとDataGrailの統合により、Braze内に収集・保存された消費�
 | 要件 | 説明 |
 |---|---|
 | DataGrailアカウント | このパートナーシップを活用するには、DataGrail アカウントが必要です。<br>統合に関する問題や質問がある場合は、システム管理者にお問い合わせいただくか、または support@datagrail.io までメールでお問い合わせください。 |
-| BrazeのAPIキー | `events.list`、`users.export.ids`、`users.delete`、`users.track` の権限を持つ Braze REST API キー。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| ブレイズインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| BrazeのAPIキー | `events.list`、`users.export.ids`、`users.delete`、`users.track` の権限を持つ Braze REST API キー。<br><br>これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
+| Brazeインスタンス | Braze インスタンスは Braze オンボーディングマネージャーから入手できます。また、[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)でも確認できます。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-DataGrail ポータルにログインし、Braze の統合ページで \[**Connect**] をクリックします。次にインスタンスと Braze API キーを入力し、\[**Connect Braze**] をクリックします。
+DataGrail ポータルにログインし、Braze の統合ページで [**接続**] を選択します。次にインスタンスと Braze API キーを入力し、[**Braze を接続**] を選択します。
 
 統合するBrazeアカウントが追加された場合：
-1. Braze の統合ページで \[**Edit Connection**] をクリックします。
-2. ドロップダウンから \[**+Add New Connection**] を選択します。
+1. Braze の統合ページで [**接続を編集**] を選択します。
+2. ドロップダウンから [**+新しい接続の追加**] を選択します。
 3. **Connection Name（接続名**）の下に、この別個のアカウントを識別するための新しい名前を入力する（例：Braze Training Account）。
 4. この新しいアカウント用に、別のBrazeインスタンスとAPIキーを入力する。
-5. \[**Connect**] をクリックします。
+5. [**接続**] を選択します。
 
 統合に関する問題やご質問がある場合は、DataGrail (support@datagrail.io) までメールでお問い合わせください。

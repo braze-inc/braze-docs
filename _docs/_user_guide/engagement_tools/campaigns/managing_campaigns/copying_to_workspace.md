@@ -10,42 +10,25 @@ tool: Campaigns
 
 # Copying across workspaces
 
-> Copying campaigns across workspaces lets you jumpstart your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
+> Copying campaigns across workspaces lets you jumpstart your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.<br><br>This page covers how to copy campaigns to different workspaces and lists what is and isn't copied over.
 
 {% alert important %}
-Copying campaigns across workspaces is generally available for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Other channel support will be coming soon.
+Copying campaigns across workspaces is generally available for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Other channel support (such as for push and content cards) isn't available yet.
 {% endalert %}
 
 ## How to copy a campaign to a different workspace
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![Menu with "Copy to workspace" option.][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and click **Copy to Workspace**. After copying, we recommend reviewing and testing your campaign to ensure that all fields are working properly.
+Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and select **Copy to workspace**. After copying, we recommend reviewing and testing your campaign to confirm that all fields work properly.
 
 When you copy a campaign across workspaces, fields such as campaign name and description, variants, delivery schedule type, and conversion behaviors are copied. For email campaigns, fields such as email body, subject, and preheader are also copied over to the destination workspace. 
 
 Note that multi-channel campaigns with unsupported channels can't be copied over to a different workspace.
 
-### Copying campaigns that contain Liquid
-
-For message bodies that include Liquid references, the references are copied over to the destination workspace, but they may not function as expected. This means if a campaign from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields like trigger actions and audience filters aren't copied over.
-
-Note the following Liquid references with dependencies when copying campaigns across workspaces:
-
-- Catalog item tags
-- Connected Content tags
-- Content Blocks
-- Custom attributes
-- Preference centers
-- Product recommendations
-- Subscription state tags
-- Voucher and promotion tags
-
-When you copy a campaign across workspaces, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
-
 ### What's copied across workspaces
 
-Note the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign details and test to ensure your campaign works as expected.
+Note the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign details and test to confirm your campaign works as expected.
 
 {% tabs %}
 {% tab Campaigns %}
@@ -154,6 +137,23 @@ Note the following is not a comprehensive list of what is copied across workspac
 
 {% endtab %}
 {% endtabs %}
+
+### Copying campaigns that contain Liquid
+
+For message bodies that include Liquid references, the references are copied over to the destination workspace, but they may not function as expected. This means if a campaign from Workspace A is copied to Workspace B, then Workspace B can't reference Workspace A's details, including Liquid references. For example, fields like trigger actions and audience filters aren't copied over.
+
+Note the following Liquid references with dependencies when copying campaigns across workspaces:
+
+- Catalog item tags
+- Connected Content tags
+- Content Blocks
+- Custom attributes
+- Preference centers
+- Product recommendations
+- Subscription state tags
+- Voucher and promotion tags
+
+When you copy a campaign across workspaces, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

@@ -16,7 +16,7 @@ noindex: true
 
 [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)を使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスが向上し、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。
 
-\[ケーススタディ][31] でアプリ内メッセージの例をチェックしましょう。
+アプリ内メッセージの[事例については、ケーススタディを](https://www.braze.com/customers)ご覧いただきたい。
 
 ## アプリ内メッセージのタイプ
 
@@ -31,7 +31,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 すべてのアプリ内メッセージは、`ABKInAppMessage` のサブクラスであり、すべてのアプリ内メッセージの基本動作と特徴を定義しています。アプリ内メッセージのクラス構造は以下の通りです。
 
-![ABKInAppMessageクラスがABKInAppMessageSlideup、ABKInAppMessageImmersive、ABKInAppMessageHTMLのルートクラスであることを示す図。ABKInAppMessage には、メッセージ、エクストラ、持続時間、クリックアクション、URI、閉じるアクション、アイコンの向き、テキストの配置などのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageSlideup には、シェブロンやスライドアップアンカーなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageImmersive には、ヘッダー、\[閉じる] ボタン、フレーム、アプリ内メッセージボタンなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageHTMLを使うと、HTMLアプリ内メッセージボタンクリックを手動で記録できる。][29]
+![ABKInAppMessageクラスがABKInAppMessageSlideup、ABKInAppMessageImmersive、ABKInAppMessageHTMLのルートクラスであることを示す図。ABKInAppMessage には、メッセージ、エクストラ、持続時間、クリックアクション、URI、閉じるアクション、アイコンの向き、テキストの配置などのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageSlideup には、シェブロンやスライドアップアンカーなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageImmersive には、ヘッダー、[閉じる] ボタン、フレーム、アプリ内メッセージボタンなどのカスタマイズ可能なプロパティが含まれています。ABKInAppMessageHTML を使えば、HTML のアプリ内メッセージボタンクリックを手動で記録できます。]({% image_buster /assets/img_archive/ABKInAppMessage-models.png %})
 
 {% alert important %}
 デフォルトでは、アプリ内メッセージは、GIF サポートを含む標準 SDK インテグレーションを完了した後に有効になります。
@@ -48,7 +48,7 @@ iOS アプリ内メッセージまたはコンテンツカード内の画像を�
 
 [`Slideup`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html) アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
-![携帯電話の画面の下部からスライドして表示されるアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、背景には、同じアプリ内メッセージが Web ページの下端に表示されています。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面の下部からスライドして表示されるアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、同じアプリ内メッセージが Web ページの下端に表示されています。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 
 {% endtab %}
@@ -56,7 +56,7 @@ iOS アプリ内メッセージまたはコンテンツカード内の画像を�
 
 [`Modal`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_modal.html) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングに有用で、最大2つのクリックアクションと分析対応ボタンを装備できます。
 
-![携帯電話の画面中央のモーダルアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に表示されます。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面中央のモーダルアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に表示されています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab フルスクリーン %}
@@ -83,6 +83,3 @@ iOS SDK バージョン 3.19.0 から、以下の JavaScript メソッドは HTM
 {% endtab %}
 {% endtabs %}
 
-[29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

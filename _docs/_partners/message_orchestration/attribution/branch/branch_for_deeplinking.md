@@ -14,9 +14,7 @@ search_tag: Partner
 
 > [Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
 
-The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
-
-If you include a call link (`href=tel:`),
+The Braze and Branch integration allows you to provide better experiences to your customers by allowing you to properly [attribute]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_attribution/) the beginning of their user journey and connect them through deep links to their intended location.
 
 ## Integration
 
@@ -32,7 +30,7 @@ To support sending iOS universal links as deep links from within Braze:
 ### Deep linking in email
 
 Refer to our documentation on [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/)
-or see [Branch's documentation](https://docs.branch.io/pages/integrations/braze/) to set up deep linking from emails sent through Braze.
+or see [Branch's documentation](https://help.branch.io/developers-hub/docs/ios-universal-links#apps-that-always-work) to set up deep linking from emails sent through Braze.
 
 Linking to phone numbers (appending `tel` to `href`) isn't supported in the Gmail app for iOS unless a user grants call permissions to the app.
 

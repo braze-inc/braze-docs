@@ -2,7 +2,7 @@
 nav_title: レポート
 article_title:  電子メール報告
 page_order: 20
-description: "この参考記事では、Eメールレポートのさまざまな構成要素と、ダッシュボードのどこにあるのかを説明する。"
+description: "この記事では、メールレポートのさまざまなコンポーネントと、それらがダッシュボードのどこにあるかを説明します。"
 tool:
   - Reports
 channel:

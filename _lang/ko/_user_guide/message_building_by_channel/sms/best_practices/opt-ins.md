@@ -15,7 +15,7 @@ channel:
 
 ## 옵션 1: 사용자에게 짧은 코드 또는 긴 코드를 문자로 보내도록 요청
 
-사용자에게 "START", "UNSTOP", "YES" 또는 사용자 지정 옵트인 키워드를 문자로 보내도록 요청하면 자동으로 구독 그룹에 추가됩니다. 웹사이트, 모바일 앱 또는 광고에서 사용자에게 옵트인을 요청할 수 있으며, 도움이 된다면 인센티브를 제공할 수 있습니다.
+사용자에게 "START", "UNSTOP", "YES" 또는 커스텀 옵트인 키워드를 문자로 보내도록 요청하면 자동으로 구독 그룹에 추가됩니다. 웹사이트, 모바일 앱 또는 광고에서 사용자에게 옵트인을 요청할 수 있으며, 도움이 된다면 인센티브를 제공할 수 있습니다.
 
 ## 옵션 2: 사용자가 인앱 메시지를 통해 옵트인
 
@@ -23,7 +23,7 @@ channel:
 
 ![][3]{: style="max-width:30%;"}
 
-Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) 기능도 사용할 것을 권장합니다. 이 기능은 앱 내 메시지 전화번호 캡처 양식과 자동으로 연동되어 사용자가 양식을 통해 전화번호를 제출한 후 의사를 확인하는 메시지를 표시합니다.
+Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) 기능도 사용할 것을 권장합니다. 이 기능은 인앱 메시지 전화번호 캡처 양식과 자동으로 연동되어 사용자가 양식을 통해 전화번호를 제출한 후 의사를 확인하는 메시지를 표시합니다.
 
 ## 옵션 3: 가입 흐름
 
@@ -31,7 +31,7 @@ Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_
 
 사용자가 가입한 후 다음을 수행합니다:
 
-1. [`/subscription/status/set` 엔드포인트를]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status) 사용하여 사용자를 생성하고 해당 사용자의 속성을 저장합니다.
+1. [`/subscription/status/set` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status)를 사용하여 사용자를 생성하고 해당 사용자의 속성을 저장합니다.
 
 ```json
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \

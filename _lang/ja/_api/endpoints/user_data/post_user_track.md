@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーを追跡」Braze エンドポ
 ---
 {% api %}
 # ユーザーを追跡
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
 
@@ -24,7 +24,7 @@ Braze は API 経由で渡されたデータを額面通りに処理し、顧客
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.track`の権限が必要です。
+このエンドポイントを使用するには、`users.track` 権限を持つ [API キー]({{site.baseurl}}/api/api_key/)が必要です。
 
 サーバー間の呼び出しに API を使用する顧客がファイアウォールの内側にいる場合には、`rest.iad-01.braze.com` を許可リストに登録する必要が生じることがあります。
 
@@ -32,7 +32,7 @@ Braze は API 経由で渡されたデータを額面通りに処理し、顧客
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
-## Request body
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -53,12 +53,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 次のテーブルに記載されている各リクエストコンポーネントには、`external_id`、`user_alias`、`braze_id`、`email`、または `phone` のいずれかが必要です。
 {% endalert %}
 
-| パラメータ | required | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `attributes` | オプション | 属性オブジェクトの配列 | [ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)を参照してください |
 | `events` | オプション | イベントオブジェクトの配列 | [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)を参照してください |
 | `purchases` | オプション | 購入オブジェクトの配列 | [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)を参照してください |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
             "email": "test@braze.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
-            "integer_attribute": 25,
+            "integer_attribute": 26,
             "array_attribute": [
                 "banana",
                 "apple"
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 電話番号を使用して`/users/track`エンドポイントでユーザープロファイルを更新できます。このエンドポイントは、有効な電話番号を含めた場合にのみ機能します。
 
 {% alert important %}
-リクエストにメールと電話の両方を含めると、Brazeはメールを識別子として使用します。
+`email` と`phone` の両方を含むリクエストを含めると、Braze は電子メールを識別子として使用します。
 {% endalert %}
 
 ```
@@ -220,7 +220,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 
-## 応答
+## 回答
 
 これらのAPIリクエストのいずれかを使用する場合、次の3つの一般的な応答のいずれかを受け取るはずです: [成功メッセージ](#successful-message)、[非致命的なエラーを含む成功メッセージ](#successful-message-with-non-fatal-errors)、または[致命的なエラーを含むメッセージ](#message-with-fatal-errors)。
 
@@ -286,12 +286,22 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 新しいプロファイルが作成され、メール専用のユーザーが作成されます。エイリアスは作成されません。メールフィールドはtest@braze.comに設定されます。これは、メールアドレスによるユーザープロファイルの更新要求の例で示されています。
 
 ### どのようにして`/users/track`を使用してレガシーユーザーデータをインポートしますか？
-まだモバイルアプリを使用していないユーザーのユーザープロファイルを生成するために、Braze APIを通じてデータを送信することができます。ユーザーがその後アプリケーションを使用すると、SDKを介して識別された後のすべての情報が、APIコールを介して作成された既存のユーザープロファイルとマージされます。識別前に SDK によって匿名で記録されたユーザーの行動は、既存の API 生成ユーザープロファイルと統合された時点で失われます。
+まだモバイルアプリを使用していないユーザーのユーザープロファイルを生成するために、Braze APIを通じてデータを送信することができます。ユーザーがその後アプリケーションを使用すると、SDK を介して識別された後のすべての情報が、API コールを介して作成された既存のユーザープロファイルとマージされます。識別前に SDK によって匿名で記録されたユーザーの行動は、既存の API 生成ユーザープロファイルと統合された時点で失われます。
 
 セグメンテーションツールは、ユーザーがアプリを使用したかどうかに関係なく、これらのユーザーを含めます。ユーザー API 経由でアップロードされたものの、アプリをまだ使用していないユーザーを除外する場合は、`Session Count > 0` フィルターを追加します。
 
 ### `/users/track`は重複イベントをどのように処理しますか？
 
 イベント配列内の各イベントオブジェクトは、指定された時間にユーザーによるカスタムイベントの単一の発生を表します。これは、Brazeに取り込まれる各イベントに独自のイベントIDがあることを意味し、「重複」イベントは別々のユニークなイベントとして扱われるということです。
+
+## 1か月あたりのアクティブユーザー数 CY 24-25
+1か月あたりのアクティブユーザー数-CY 24-25 を購入した顧客の場合、Braze は `/users/track` エンドポイントでさまざまなレート制限を管理します。
+- 1時間あたりのレート制限は、アカウントで予想されるデータ取り込みアクティビティに応じて設定されます。このアクティビティは、購入した月間アクティブユーザー数、業界、季節、またはその他の要因に対応する場合があります。
+- Braze は、1 時間あたりのリクエスト数の制限に加えて、1 秒あたりに許可されるリクエスト数にもバースト制限を課します。
+- 各リクエストは、属性、イベント、または購入オブジェクト全体で最大50件の更新をバッチ処理できます。
+
+予想される取り込みに基づく現在の制限は、ダッシュボードの [**設定**] > [**API と識別子**] > [**API 制限**] にあります。システムの安定性を保護するためにレート制限を変更したり、アカウントのデータスループットを向上させる場合があります。毎時または毎秒のリクエスト制限とビジネスのニーズに関する質問や懸念については、Braze Supportまたはカスタマーサクセスマネージャーにお問い合わせください。
+
+
 
 {% endapi %}

@@ -12,9 +12,12 @@ guide_menu_list:
   - name: API를 통해 사용자 삭제하기
     link: /docs/help/help_articles/api/delete_user/
     image: /assets/img/braze_icons/user-minus-01.svg
-  - name: 캠페인과 캔버스 속성의 소스 간 차이점
+  - name: Braze의 캠페인 및 캔버스 속성
     link: /docs/help/help_articles/api/attribute_name_id_across_sources/
     image: /assets/img/braze_icons/info-circle.svg
+  - name: 웹훅 및 연결된 콘텐츠 요청 
+    link: /docs/help/help_articles/api/webhook_connected_content_errors/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 noindex: true
 ---
