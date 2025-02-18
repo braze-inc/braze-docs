@@ -2003,4 +2003,8 @@ validurls['/docs/developer_guide/platforms/xamarin/sdk_integration/'] = '/docs/d
 validurls['/docs/developer_guide/platforms/roku/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=roku';
 validurls['/docs/developer_guide/platforms/unreal_engine/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unreal%20engine';
 
+validurls['/docs/user_guide/engagement_tools/landing_pages/drag_and_drop/'] = '/docs/user_guide/engagement_tools/landing_pages/creating_pages/';
+validurls['/docs/user_guide/engagement_tools/landing_pages/connect_domain'] = '/docs/user_guide/engagement_tools/landing_pages/customizing_urls/';
+validurls['/docs/user_guide/engagement_tools/landing_pages/data_tracking'] = '/docs/user_guide/engagement_tools/landing_pages/about_tracking_data/';
+
 // validurls['OLD'] = 'NEW';
