@@ -1,14 +1,14 @@
 ---
-nav_title: "Relationships"
-article_title: Snowflake and Braze Relationships
+nav_title: "Entity Relationships"
+article_title: Entity Relationships for Snowflake and Braze
 page_order: 10
 page_type: partner
 search_tag: Partner
 ---
 
-# Snowflake and Braze Relationships
+# Entity Relationships for Snowflake and Braze
 
-> These are the list of relationships between Snowflake and Braze for each messaging channel.
+> These are the list of entity relationships between Snowflake and Braze for each messaging channel.
 
 {% sdktabs %}
 {% sdktab Content Cards %}
