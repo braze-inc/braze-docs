@@ -1,14 +1,23 @@
 ---
-nav_title: Connecting Your Domain
-article_title: Connecting Your Domain
-description: "This article covers how to connect your own custom domain to Braze landing pages."
+nav_title: Customizing the URL
+article_title: Customizing landing page URLs
+description: "Learn how to customize your landing page URLs with your company's brand, by connecting your domain to your Braze workspace."
 page_order: 1
-alias: /landing_pages/connect_domain/
 ---
 
-# Connecting your domain
+# Customizing landing page URLs
 
-> Connect your own domain to your Braze workspace to customize your landing page URLs with your brand.
+> Learn how to customize your landing page URLs with your company's brand, by connecting your domain to your Braze workspace.
+
+## How it works
+
+When you [connect your domain to Braze](#connecting-your-domain-to-braze), it will be used as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs would now be `forms.example.com/holiday-sale`.
+
+{% alert note %}
+Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your domain.
+{% endalert %}
+
+## Connecting your domain to Braze
 
 To connect a domain to your Braze account, have an administrator follow the steps below.
 
@@ -23,15 +32,7 @@ To connect a domain to your Braze account, have an administrator follow the step
 Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
 {% endalert %}
 
-## Using your domain in Braze
-
-After your domain verification is completed, it will be used by default in Braze. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
-
-{% alert note %}
-Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your domain.
-{% endalert %}
-
-## Resources from domain providers
+## DNS resources
 
 Listed below are resources for creating and managing DNS records with commonly used domain providers. If you're using a different provider, refer to that provider's documentation or contact their support team for information.
 
@@ -42,7 +43,6 @@ Listed below are resources for creating and managing DNS records with commonly u
 | GoDaddy | [Add a CNAME record](https://www.godaddy.com/help/add-a-cname-record-19236?) |
 | Cloudflare | [Manage DNS records](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
 | Squarespace | [Adding custom DNS settings](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Troubleshooting 

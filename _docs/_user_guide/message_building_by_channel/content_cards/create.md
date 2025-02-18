@@ -81,6 +81,10 @@ Select **Add Languages** to add your desired languages from the provided list. T
 
 ![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.][2]{: style="max-width:70%;"}
 
+##### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 #### Title and message
 
 Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking, the better! We recommend clear and concise titles and message content. Note that these fields aren't provided for Image Only Cards.

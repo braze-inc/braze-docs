@@ -8,7 +8,7 @@ description: "This reference article describes how to create price drop notifica
 
 # Price drop notifications
 
-> Using a combination of price drop notifications through Braze catalogs and a Canvas, you can notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.
+> Use a combination of price drop notifications through Braze catalogs and a Canvas to notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.<br><br>This page covers how price drop notifications work and how you can set up and use them.
 
 When a user triggers a custom event for an item, we'll automatically subscribe them to receive price drop notifications for that item. When the item's price meets your inventory rule (such as a drop larger than 50%), all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 

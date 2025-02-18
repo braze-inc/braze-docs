@@ -102,8 +102,12 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Delivery Failures</i> are when the SMS couldn't be sent because of queues overflowing (sending SMS at a rate higher than your long or short codes can handle).
 {% endif %}
 
+{% if include.metric == "Failed Delivery Rate" %}
+The <i>Failed Delivery Rate</i> is the percentage of sends that failed because the message could not be sent. This can happen for various reasons, including queue overflows, account suspensions, and media errors in the case of MMS.
+{% endif %}
+
 {% if include.metric == "Direct Opens" %}
-<i>Direct Opens</i> is the total number (and percentage) of push notifications that were directly opened from that push.
+<i>Direct Opens</i> is the total number of users who opened your app or website by directly pressing the notification.
 {% endif %}
 
 {% if include.metric == "Emailable" %}
@@ -170,6 +174,10 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Reads</i> is when the user reads the WhatsApp message. The user’s read receipts must be “On” for Braze to track reads.
 {% endif %}
 
+{% if include.metric == "Read Rate" %}
+<i>Read Rate</i> is the percentage of sends that resulted in a read. This is only given for users who have read receipts turned on.
+{% endif %}
+
 {% if include.metric == "Received" %}
 <i>Received</i> is defined differently per channel, and can be when users view the message, users perform a defined trigger action, or the message is sent to the message provider.
 {% endif %}
@@ -198,6 +206,10 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Sends to Carrier</i> is deprecated, but will continue to be supported for users that already have it. It's the sum of <i>Confirmed Deliveries</i>, <i>Rejections</i>, and <i>Sends</i> where delivery or rejection wasn’t confirmed by the carrier. This includes instances where carriers don’t provide delivery or rejected confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of send.
 {% endif %}
 
+{% if include.metric == "Sends to Carrier Rate" %}
+<i>Sends to Carrier Rate</i> is the percentage of total messages sent that were classified as <i>Sends to Carrier</i>. This includes instances where carriers don’t provide delivery or reject confirmation, as some carriers don’t provide this confirmation or can’t do so at the time of sending. This metric is deprecated but will continue to be supported for users who already have it.
+{% endif %}
+
 {% if include.metric == "Spam" %}
 <i>Spam</i> is the total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
 {% endif %}
@@ -211,11 +223,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.
+<i>Total Clicks</i> is the number of unique recipients who clicked on a link in the delivered email.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
-<i>Total Dismissals</i> is the number of times Content Cards from a campaign have been dismissed. If a user dismisses a message twice, they will be only counted once.
+<i>Total Dismissals</i> is the number of times Content Cards from a campaign have been dismissed. 
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
@@ -231,11 +243,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Unique Clicks</i> is the distinct number of recipients who have clicked within a message at least once and is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Unique Clicks</i>  is the distinct number of recipients who have clicked a link within a message at least once and is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
-<i>Unique Dismissals</i> is the number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
+<i>Unique Dismissals</i> is the number of unique recipients who dismissed a Content Card from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
 {% endif %}
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->

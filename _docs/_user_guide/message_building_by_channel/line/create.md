@@ -71,9 +71,15 @@ Write your message using personalization (such as Liquid or Connected Content) a
 
 ![LINE composer with a message displayed in the preview.][1]
 
-{% alert tip %}
+### Tips
+
+#### Using Liquid
+
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".
-{% endalert %}
+
+#### Creating right-to-left messages
+
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Step 3: Preview and test your message
 
