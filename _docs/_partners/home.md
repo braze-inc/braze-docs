@@ -315,5 +315,5 @@ valid_partner_list:
 - name: Justuno
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
 - name: Constructor
-  url: /docs/partners/msessage_personalization/dynamic_content/constructor/
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
 ---
