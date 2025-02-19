@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+# This is script that converts the Entity Relationship JSON from 
+# 'erd_get_json.py' to individual Markdown files and places them in the
+# '_includes' directory. These markdown files are used to create this page:
+# https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/entity_relationships/
+# 
+# Usage: ./scripts/utils/erd_generate_markdown.py
+
 import os
 import json
 import subprocess

@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+# This is script that converts the Entity Relationships raw table schema into a
+# JSON file sorted by key-type. This script, along with
+# 'erd_generate_markdown.py', is used to create this page:
+# https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/entity_relationships/
+# 
+# Usage: ./scripts/utils/erd_get_json.py
+
 import os
 import json
 import re
