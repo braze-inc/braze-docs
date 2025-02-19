@@ -34,7 +34,7 @@ In addition, Braze will hash all data before syncing users with our Audience Syn
 
 ### Why can I select multiple identifiers in one step for some partners, but can only select one identifier per partner for others?
 
-This is determined by the partner integration methods, and not controlled by Braze. Some partners, such as Meta, allow multiple identifiers to be synced, and some partners, like Google, only allow one single identifier to be synced with a user at a time.
+This is determined by the partner integration methods, and not controlled by Braze. Some partners (such as Meta) allow multiple identifiers to be synced, and other partners (such as Google) only allow a single identifier to be synced with a user at any given time.
 
 ### How do I reconnect my integration?
 
