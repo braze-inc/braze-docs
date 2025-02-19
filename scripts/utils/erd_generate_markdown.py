@@ -11,6 +11,7 @@ import os
 import json
 import subprocess
 
+
 def main():
     # 1. Determine project root via Git
     PROJECT_ROOT = subprocess.check_output(

@@ -35,7 +35,10 @@
         "ABORT_LOG",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -80,7 +83,10 @@
         "IS_DROP",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -108,7 +114,6 @@
         "CANVAS_VARIATION_API_ID",
         "CANVAS_STEP_API_ID",
         "CANVAS_STEP_MESSAGE_VARIATION_API_ID",
-        "LINK_ID",
         "APP_GROUP_ID"
     ],
     "native_keys": [
@@ -127,7 +132,10 @@
         "IS_AMP",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -170,7 +178,10 @@
         "FROM_DOMAIN",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -213,7 +224,10 @@
         "FROM_DOMAIN",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -258,7 +272,10 @@
         "IS_AMP",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -301,7 +318,10 @@
         "FROM_DOMAIN",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -345,7 +365,10 @@
         "FROM_DOMAIN",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -385,7 +408,10 @@
         "IP_POOL",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```

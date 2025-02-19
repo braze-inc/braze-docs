@@ -45,7 +45,10 @@
         "ABORT_LOG",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -75,7 +78,6 @@
         "CANVAS_STEP_API_ID",
         "CANVAS_STEP_MESSAGE_VARIATION_API_ID",
         "DEVICE_ID",
-        "BUTTON_ID",
         "APP_GROUP_ID"
     ],
     "native_keys": [
@@ -96,7 +98,10 @@
         "AD_TRACKING_ENABLED",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -147,7 +152,10 @@
         "MESSAGE_EXTRAS",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```

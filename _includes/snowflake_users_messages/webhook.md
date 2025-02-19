@@ -33,7 +33,10 @@
         "ABORT_LOG",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -72,7 +75,10 @@
         "MESSAGE_EXTRAS",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```

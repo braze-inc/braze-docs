@@ -28,7 +28,10 @@
         "ABORT_LOG",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -70,7 +73,10 @@
         "MESSAGE_EXTRAS",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -111,7 +117,10 @@
         "FROM_PHONE_NUMBER",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -152,7 +161,10 @@
         "FROM_PHONE_NUMBER",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -194,7 +206,10 @@
         "PROVIDER_ERROR_CODE",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -233,7 +248,10 @@
         "MEDIA_URLS",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -276,7 +294,10 @@
         "PROVIDER_ERROR_CODE",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```
@@ -314,7 +335,10 @@
         "USER_PHONE_NUMBER",
         "SF_CREATED_AT",
         "AD_ID",
-        "SEND_ID"
+        "SEND_ID",
+        "LINK_ID",
+        "BUTTON_ID",
+        "SLIDE_ID"
     ]
 }
 ```

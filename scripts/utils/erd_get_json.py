@@ -12,14 +12,19 @@ import json
 import re
 import subprocess
 
-# Override lists
+
+# Overrides the logic to force these keys to be foreign:
 FOREIGN_OVERRIDE = [
     "APP_GROUP_ID"
 ]
 
+# Overrides the logic to force these keys to be native:
 NATIVE_OVERRIDE = [
     "AD_ID",
-    "SEND_ID"
+    "SEND_ID",
+    "LINK_ID",
+    "BUTTON_ID",
+    "SLIDE_ID"
 ]
 
 def parse_and_classify(filename):
