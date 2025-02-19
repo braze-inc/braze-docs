@@ -32,7 +32,7 @@ The data you select to send to your Audience Sync destination will be normalized
 
 In addition, Braze will hash all data before syncing users with our Audience Sync partners, ensuring that all PII is hashed using SHA256.
 
-### Why can I select multiple identifiers in one step for some partners, but can only select one identifier per partner for others?
+### Why can I select multiple identifiers in one step for some partners, but can only select one identifier for others?
 
 This is determined by the partner integration methods, and not controlled by Braze. Some partners (such as Meta) allow multiple identifiers to be synced, and other partners (such as Google) only allow a single identifier to be synced with a user at any given time.
 
