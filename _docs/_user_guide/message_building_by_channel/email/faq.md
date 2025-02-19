@@ -85,6 +85,10 @@ Users will be prevented from entering the Canvas and no further messages will be
 
 Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
 
+### When an email address hard bounces, is the user profile's subscription state set to unsubscribed?
+
+No. The user will not be automatically "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we'll resume sending emails to them.
+
 ### Can I add a "view this email in a browser" link to my emails?
 
 No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
