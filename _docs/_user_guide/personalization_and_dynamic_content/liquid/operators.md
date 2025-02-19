@@ -100,7 +100,7 @@ You are formally invited to our next dinner party. Log on next week for another 
 {% endraw %}
 
 {: start="2"}
-2. Use the `elsif` tag with the equals (`==`) operator to check if user's most recent game is Proxy War 3: War of Thirst. Then, create a message to send to those users.
+2. Use the `elsif` tag with the equals (`==`) operator to check if user's most recent game is *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -156,7 +156,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 
 ![A push notification composer with the full Liquid code from the tutorial.][14]
 
-Now, if a user last played Awkward Dinner Party, they'll receive this message:
+Now, if a user last played *Awkward Dinner Party*, they'll receive this message:
 
 ```
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
