@@ -38,7 +38,7 @@ This is determined by the partner integration methods, and not controlled by Bra
 
 ### How do I reconnect my integration?
 
-If the prior user who connected the integration is no longer with your business, you'll need to update the integration with the new user. You can do this by selecting **Confirm**. Note this may disrupt active Canvases.
+If the prior user who connected the integration is no longer with your business, you'll need to update the integration with the new user. You can do this by selecting **Confirm**. Note that this may disrupt active Canvases.
 
 The user reconnecting must have both read and write access to all the audiences so users can successfully be synced over to the partners. Check that the user who is reconnecting the integration has access to the same ad accounts and audiences. There shouldn't be a need to edit any existing Canvas steps. 
 
