@@ -6,7 +6,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Entity Relationships for Snowflake and Braze
+# Entity relationships for Snowflake and Braze
 
 > These are the list of entity relationships between Snowflake and Braze for each messaging channel.
 
