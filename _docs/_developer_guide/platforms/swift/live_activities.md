@@ -321,7 +321,7 @@ First, verify that your payload includes all the required fields described in th
 
 To verify that your push-to-start notification successfully arrived at the device but was not displayed due to rate limits, you can debug your project using the Console app on your Mac. Attach the recording process for your desired device, then filter the logs by `process:liveactivitiesd` in the search bar.
 
-#### After receiving a push-to-start notification, why am I not able to receive updates to my Live Activity?
+#### After starting my Live Activity with push-to-start, why isn't it receiving new updates?
 
 Verify that you have correctly implemented the instructions described [above](#brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
 
