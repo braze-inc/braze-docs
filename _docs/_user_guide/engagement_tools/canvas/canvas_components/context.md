@@ -19,7 +19,7 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ## How it works
 
-Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be be accessed using the Liquid `canvas_variables`.
+Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be be accessed using the Liquid `canvas_context`.
 
 ![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
