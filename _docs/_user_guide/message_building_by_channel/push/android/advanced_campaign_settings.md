@@ -26,9 +26,9 @@ To assign a notification ID, navigate to the composition page of the push you'd 
 
 ## Time to live (TTL) {#ttl}
 
-The time to live field allows you to set a custom length of time to store messages with the push messaging service. If the device remains offline beyond the TTL, the message will expire and not be delivered.
+The **Time to Live** field allows you to set a custom length of time to store messages with the push messaging service. If the device remains offline beyond the TTL, the message will expire and not be delivered.
 
-To edit the time to live for your Android push, navigate to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
+To edit the time to live for your Android push, go to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
 
 The default values for time to live are defined by your admin on the [Push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
 
@@ -42,8 +42,8 @@ Shorter TTLs make sure users receive timely notifications for events or promotio
 
 - **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1–2 hours)
 - **Food delivery:** Notifying users when their order is nearby (TTL: 10–15 minutes)
-- **Transportation apps:** Ride arrival updates (TTL: a few minutes)
-- **Event reminders:** Webinar starting soon (TTL: under 1 hour)
+- **Transportation apps:** Sharing ride arrival updates (TTL: a few minutes)
+- **Event reminders:** Notifying users when a webinar is starting soon (TTL: under 1 hour)
 
 #### When to avoid shorter TTL
 
