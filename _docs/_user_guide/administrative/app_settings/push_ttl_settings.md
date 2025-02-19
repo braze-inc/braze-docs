@@ -10,11 +10,11 @@ channel: push
 
 # Push TTL settings
 
-> Learn about the Push Time-to-Live settings page in the Braze dashboard.
+> Learn about the Push Time to Live settings page in the Braze dashboard.
 
 ## What is Push TTL?
 
-Push Time-to-Live (TTL) controls how long Braze will attempt to deliver a push notification to devices that are offline at the time the campaign sends. If a device reconnects after the TTL expires, the message won’t be delivered. This setting will not remove a notification if it has already been received by the user's device—it only controls how long the push provider attempts to deliver a notification.
+Push Time to Live (TTL) controls how long Braze will attempt to deliver a push notification to devices that are offline at the time the campaign sends. If a device reconnects after the TTL expires, the message won’t be delivered. This setting will not remove a notification if it has already been received by the user's device—it only controls how long the push provider attempts to deliver a notification.
 
 ## Setting default Push TTL values
 
@@ -33,7 +33,7 @@ These settings apply globally to all push campaigns unless a different TTL is se
 To set a different default Push TTL:
 
 1. Navigate to **Settings** > **Manage Settings** > **Push TTL Settings**.
-2. For each Android platform, define a default time-to-live value. You can set smaller increments like hours or seconds for more precise control.
+2. For each Android platform, define a default time to live value. You can set smaller increments like hours or seconds for more precise control.
 3. Select **Save** to apply your changes.
 
 ![Push Time to Live Settings tab under Manage Settings][1]
