@@ -43,7 +43,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 {% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
-When an email address hard bounces, the user will not be automatically "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+When an email address hard bounces, the user's subscription state isn't automatically set to unsubscribed. If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
 ### Updating email subscription states
 
