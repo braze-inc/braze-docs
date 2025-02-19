@@ -35,6 +35,12 @@ The most common way to craft right-to-left messages in Braze is:
 {: start="4"}
 4. Paste the formatted text into Braze.
 
+### Comparison of left-to-right and left-to-right messages
+
+You can often tell if you have the correct right-to-left settings by looking at the punctuation. In the image on the left, the exclamation point and emoji are on the right side of the text, which is the beginning of the sentence for right-to-left languages. In the image on the right, formatted as right-to-left, the message correctly displays the exclamation points and emoji at the end of the sentences.
+
+![A comparison of two Arabic messages to show how right-to-left and left-to-right messages appear.][2]
+
 ## Special considerations for right-to-left messages
  
 ### Long push notifications
@@ -55,4 +61,9 @@ Proper formatting for bi-directional text is especially important when crafting 
 
 Special characters (such as punctuation, mathematical symbols, and currency), numbers, bullet points, and emojis may “jump around” when crafting right-to-left messages in Braze. To work around this, write your copy with proper formatting in an external word processor, and then paste the copy into Braze. It may also help to avoid placing emojis at the beginning of your text and instead separate them (and special characters and numbers) from text with line breaks to avoid alignment issues.
 
+### Arabic messages
+
+When composing Arabic messages, use significantly higher font point sizes for the same readability you'd achieve with other languages. We suggest using a font size about 20% larger than your usual size for languages that use the Latin or Roman alphabet. This is because Arabic fonts are made small to accommodate the vertical space taken up by diacritics (accent marks).
+
 [1]: {% image_buster /assets/img/rtl_button.png %}
+[2]: {% image_buster /assets/img/rtl_comparison.png %}
