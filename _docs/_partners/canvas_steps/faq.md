@@ -16,13 +16,7 @@ Tool:
 
 The time it takes to populate an audience depends on the specific partner. All networks will process the requests from Braze and attempt to match users. This process can typically take anywhere from 6-48 hours.
 
-You can check the specific time range within the Troubleshooting section within the documentation for each Audience Sync partner.
-
-### How do I reconnect my integration?
-
-If the prior user who connected the integration is no longer with your business, you'll need to update the integration with the new user. You can do this by selecting **Confirm**. Note this may disrupt active Canvases.
-
-The user reconnecting must have both read and write access to all the audiences so users can successfully be synced over to the partners. Check that the user who is reconnecting the integration has access to the same ad accounts and audiences. There shouldn't be a need to edit any existing Canvas steps. 
+You can check the specific time range in the Troubleshooting section of the documentation for each Audience Sync partner.
 
 ### What type of first-party data can I use in my Audience Sync?
 
@@ -41,6 +35,12 @@ In addition, Braze will hash all data before syncing users with our Audience Syn
 ### Why can I select multiple identifiers in one step for some partners, but can only select one identifier per partner for others?
 
 This is determined by the partner integration methods, and not controlled by Braze. Some partners, such as Meta, allow multiple identifiers to be synced, and some partners, like Google, only allow one single identifier to be synced with a user at a time.
+
+### How do I reconnect my integration?
+
+If the prior user who connected the integration is no longer with your business, you'll need to update the integration with the new user. You can do this by selecting **Confirm**. Note this may disrupt active Canvases.
+
+The user reconnecting must have both read and write access to all the audiences so users can successfully be synced over to the partners. Check that the user who is reconnecting the integration has access to the same ad accounts and audiences. There shouldn't be a need to edit any existing Canvas steps. 
 
 ### What are the most common errors that can occur when creating and managing my Audience Syncs?
 
