@@ -92,9 +92,13 @@ In your Xcode project, select your app name, then **General**. Under **Framework
 
 ![The BrazeKit framework under Frameworks and Libraries in a sample Xcode project.]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
 
-#### Step 2.2: Add the BrazeLiveActivityAttributes protocol
+#### Step 2.2: Add the BrazeLiveActivityAttributes protocol {#brazeActivityAttributes}
 
-In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` string to your attributes model. You do not need to assign a value to this string.
+In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` property to your attributes model.
+
+{% alert important %}
+iOS will map the `brazeActivityId` property to the corresponding field in your Live Activity push-to-start payload, so it should not be renamed or assigned any other value.
+{% endalert %}
 
 ```swift
 import BrazeKit
@@ -104,6 +108,7 @@ import BrazeKit
 #endif
 
 @available(iOS 16.1, *)
+// 1. Add the `BrazeLiveActivityAttributes` conformance to your `ActivityAttributes` struct.
 struct SportsActivityAttributes: ActivityAttributes, BrazeLiveActivityAttributes {
   public struct ContentState: Codable, Hashable {
     var teamOneScore: Int
@@ -112,6 +117,8 @@ struct SportsActivityAttributes: ActivityAttributes, BrazeLiveActivityAttributes
 
   var gameName: String
   var gameNumber: String
+
+  // 2. Add the `String?` property to represent the activity ID.
   var brazeActivityId: String?
 }
 ```
@@ -313,6 +320,12 @@ Any Live Activity errors will be logged in the Braze dashboard in the [Message A
 First, verify that your payload includes all the required fields described in the [`messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint. The `activity_attributes` and `content_state` fields should match the properties defined in your project's code. If you're certain that the payload is correct, its possible you may be rate-limited by APNs. This limit is imposed by Apple and not by Braze.
 
 To verify that your push-to-start notification successfully arrived at the device but was not displayed due to rate limits, you can debug your project using the Console app on your Mac. Attach the recording process for your desired device, then filter the logs by `process:liveactivitiesd` in the search bar.
+
+#### After starting my Live Activity with push-to-start, why isn't it receiving new updates?
+
+Verify that you have correctly implemented the instructions described [above](#brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
+
+After receiving a Live Activity push-to-start notification, double-check that you can see an outgoing network request to the `/push_token_tag` endpoint of your Braze URL and that it contains the correct activity ID under the `"tag"` field.
 
 #### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 
