@@ -31,9 +31,9 @@ Let's go through a few tutorials to learn how to use these operators for your ma
 
 ### Choose message with an integer custom attribute
 
-Let's send push notifications with personalized promotional discounts to users who have and haven't made purchases. This will use an integer custom attribute called `total_spend` to check a user's total spend.
+Let's send push notifications with personalized promotional discounts to users who have or haven't made purchases. The push notification will use an integer custom attribute called `total_spend` to check a user's total spend.
 
-1. Begin a conditional statement that uses the greater than (`>`) operator checks if a user's total spend is greater than `0` to capture users who've made purchases. Then, create a message to send to those users.
+1. Write a conditional statement using the greater than (`>`) operator to check if a user's total spend is greater than `0`, indicating they've made a purchase. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -90,7 +90,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 
 Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
-1. Begin a conditional statement that uses the equals (`==`) operator to check if a user's most recent game is Awkward Dinner Party. Then, create a message to send to those users.
+1. Write a conditional statement using the equals (`==`) operator to check if a user's most recent game is *Awkward Dinner Party*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -110,7 +110,7 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if user has a recent game (the value isn't blank), and that the game isn't Awkward Dinner Party or Proxy War 3: War of Thirst. Then, create a message to send to those users.
+3. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
@@ -162,13 +162,13 @@ Now, if a user last played Awkward Dinner Party, they'll receive this message:
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 ```
 
-If a user's most recent game is Proxy War 3: War of Thirst, they will receive this message:
+If a user's most recent game is *Proxy War 3: War of Thirst*, they will receive this message:
 
 ```
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-If a user has recently played a game that wasn't Awkward Dinner Party or Proxy War 3: War of Thirst, they'll get this message:
+If a user has recently played a game that wasn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*, they'll get this message:
 
 ```
 Limited Time Deal! Get 15% off our best-selling classics!
@@ -184,7 +184,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 
 You can abort a message based on just about anything. Let's abort a message if a user isn't based in a specified area, as they might not qualify for the promotion, show, or delivery.
 
-1. Begin a conditional statement with the equals (`==`) operator that checks if the user's time zone is `America/Los_Angeles`, then create a message to send to those users. 
+1. Write a conditional statement using the equals (`==`) operator to check if the user's time zone is `America/Los_Angeles`, then create a message to send to those users. 
 
 {% raw %}
 ```liquid
@@ -194,7 +194,7 @@ Stream now!
 {% endraw %}
 
 {: start="2"}
-2. Now use the {% raw %}`{% else %}`{% endraw %} tag to capture users who are outside the `America/Los_Angeles` time zone, follow with {% raw %}`{% abort_message () %}`{% endraw %} to specify that those users shouldn't receive any message, and end the conditional logic with the {% raw %}`{% endif %}`{% endraw %} tag.
+2. To avoid sending messages to users outside the `America/Los_Angeles` time zone, wrap {% raw %}`{% else %}`{% endraw %} and {% raw %}`{% endif %}`{% endraw %} tags around an {% raw %}`{% abort_message () %}`{% endraw %} tag.
 
 {% raw %}
 ```liquid
