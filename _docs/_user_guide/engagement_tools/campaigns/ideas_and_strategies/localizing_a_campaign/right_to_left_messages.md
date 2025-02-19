@@ -37,7 +37,7 @@ The most common way to craft right-to-left messages in Braze is:
 
 ### Comparison of left-to-right and left-to-right messages
 
-Notice in this screenshot how the right-to-left message displays the exclamation point and emoji on the right side of the text, whereas the right-to-left button message correctly displays the exclamation point and emoji on the left side of the text at the end of each sentence.
+You can often tell if you have the correct right-to-left settings by looking at the punctuation. In the screenshot on the left, the exclamation point and emoji are on the right side of the text, which is the beginning of the sentence for right-to-left languages. In the screenshot on the right, formatted as right-to-left, the message correctly displays the exclamation points and emoji at the end of the sentences.
 
 ![A comparison of two Arabic messages to show how right-to-left and left-to-right messages appear.][2]
 
