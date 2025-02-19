@@ -1,4 +1,4 @@
-## About the Reactive Native Braze SDK
+## About the React Native Braze SDK
 
 Integrating the React Native Braze SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
