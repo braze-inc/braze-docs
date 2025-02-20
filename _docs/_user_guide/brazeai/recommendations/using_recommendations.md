@@ -41,7 +41,7 @@ Always start with the assign tag to fetch the `product_recommendation` data and 
 
 {% endraw %}
 
-- `${RECOMMENDATION_NAME}`: Replace this with the name of the AI recommendation you created in Braze.
+- `RECOMMENDATION_NAME`: Replace this with the name of the AI recommendation you created in Braze.
 - `items`: The variable storing the recommended items array.
 
 ### Accessing individual items
@@ -228,7 +228,7 @@ When the recommendation has finished training, you can use it in your messaging.
 {% raw %}
 
 ```liquid
-{% assign items = {{product_recommendation.abandoned_cart}} %}
+{% assign items = {{product_recommendation.${abandoned_cart}}} %}
 {{ items[0].image_url }}
 ```
 
@@ -242,7 +242,7 @@ When the recommendation has finished training, you can use it in your messaging.
 {% raw %}
 
 ```liquid
-{% assign items = {{product_recommendation.abandoned_cart}} %}
+{% assign items = {{product_recommendation.${abandoned_cart}}} %}
 {{ items[0].name }}
 {{ items[0].category }}
 {{ items[0].color }}
