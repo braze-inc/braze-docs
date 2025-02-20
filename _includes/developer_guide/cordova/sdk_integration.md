@@ -37,14 +37,14 @@ Next, adding the following preferences to the `platform` element in your project
 {% tabs %}
 {% tab ios %}
 ```xml
-<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.ios_api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.ios_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 ```
 {% endtab %}
 
 {% tab android %}
 ```xml
-<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.android_api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.android_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 ```
 {% endtab %}
@@ -53,7 +53,7 @@ Next, adding the following preferences to the `platform` element in your project
 Replace the following:
 
 | Value                 | Description                                                                                                                      |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `BRAZE_API_KEY`       | Your [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys).              |
 | `CUSTOM_API_ENDPOINT` | A custom API endpoint. This endpoint is used to route your Braze instance data to the correct App Group in your Braze dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -64,7 +64,7 @@ The `platform` element in your `config.xml` file should be similar to the follow
 {% tab ios %}
 ```xml
 <platform name="ios">
-    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.ios_api_key" value="BRAZE_API_KEY" />
     <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
@@ -73,7 +73,7 @@ The `platform` element in your `config.xml` file should be similar to the follow
 {% tab android %}
 ```xml
 <platform name="android">
-    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.android_api_key" value="BRAZE_API_KEY" />
     <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
@@ -142,27 +142,27 @@ You can add any of the following preferences to the `platform` element in your p
 
 {% tabs %}
 {% tab ios %}
-| Method                                         | Description                                                                                                                                            |
-| -----------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `api_key`                                      | Sets the API key for your application. |
-| `ios_api_endpoint`                             | Sets the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application. |
-| `ios_disable_automatic_push_registration`      | Sets whether automatic push registration should be disabled. |
-| `ios_disable_automatic_push_handling`          | Sets whether automatic push handling should be disabled. |
-| `ios_enable_idfa_automatic_collection`         | Sets whether the Braze SDK should automatically collect the IDFA information. For more information, see [Braze's IDFA method documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/). |
-| `enable_location_collection`                   | Sets whether the automatic location collection is enabled (if the user permits). The `geofence-branch`  |
-| `geofences_enabled`                            | Sets whether geofences are enabled. |
-| `ios_session_timeout`                          | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds. |
-| `sdk_authentication_enabled`                   | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature. |
-| `display_foreground_push_notifications`        | Sets whether push notifications should be displayed while the application is in the foreground. |
-| `ios_disable_un_authorization_option_provisional` | Sets whether `UNAuthorizationOptionProvisional` should be disabled. |
-| `trigger_action_minimum_time_interval_seconds` | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds. |
-| `ios_push_app_group` | Sets the app group ID for iOS push extensions. |
-| `ios_forward_universal_links` | Sets if the SDK should automatically recognize and forward universal links to the system methods. |
-| `ios_log_level` | Sets the minimum logging level for `Braze.Configuration.Logger`. |
-| `ios_use_uuid_as_device_id` | Sets if a randomly generated UUID should be used as the device ID. |
-| `ios_flush_interval_seconds` | Sets the interval in seconds between automatic data flushes. Defaults to 10 seconds. |
-| `ios_use_automatic_request_policy` | Sets whether the request policy for `Braze.Configuration.Api` should be automatic or manual. |
-| `should_opt_in_when_push_authorized` | Sets if a user’s notification subscription state should automatically be set to `optedIn` when push permissions are authorized. |
+| Method                                            | Description                                                                                                                                                                                                                                           |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ios_api_key`                                     | Sets the API key for your application.                                                                                                                                                                                                                |
+| `ios_api_endpoint`                                | Sets the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                                                                                                                                 |
+| `ios_disable_automatic_push_registration`         | Sets whether automatic push registration should be disabled.                                                                                                                                                                                          |
+| `ios_disable_automatic_push_handling`             | Sets whether automatic push handling should be disabled.                                                                                                                                                                                              |
+| `ios_enable_idfa_automatic_collection`            | Sets whether the Braze SDK should automatically collect the IDFA information. For more information, see [Braze's IDFA method documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/). |
+| `enable_location_collection`                      | Sets whether the automatic location collection is enabled (if the user permits). The `geofence-branch`                                                                                                                                                |
+| `geofences_enabled`                               | Sets whether geofences are enabled.                                                                                                                                                                                                                   |
+| `ios_session_timeout`                             | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds.                                                                                                                                                               |
+| `sdk_authentication_enabled`                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                                                                              |
+| `display_foreground_push_notifications`           | Sets whether push notifications should be displayed while the application is in the foreground.                                                                                                                                                       |
+| `ios_disable_un_authorization_option_provisional` | Sets whether `UNAuthorizationOptionProvisional` should be disabled.                                                                                                                                                                                   |
+| `trigger_action_minimum_time_interval_seconds`    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                                                                                   |
+| `ios_push_app_group`                              | Sets the app group ID for iOS push extensions.                                                                                                                                                                                                        |
+| `ios_forward_universal_links`                     | Sets if the SDK should automatically recognize and forward universal links to the system methods.                                                                                                                                                     |
+| `ios_log_level`                                   | Sets the minimum logging level for `Braze.Configuration.Logger`.                                                                                                                                                                                      |
+| `ios_use_uuid_as_device_id`                       | Sets if a randomly generated UUID should be used as the device ID.                                                                                                                                                                                    |
+| `ios_flush_interval_seconds`                      | Sets the interval in seconds between automatic data flushes. Defaults to 10 seconds.                                                                                                                                                                  |
+| `ios_use_automatic_request_policy`                | Sets whether the request policy for `Braze.Configuration.Api` should be automatic or manual.                                                                                                                                                          |
+| `should_opt_in_when_push_authorized`              | Sets if a user’s notification subscription state should automatically be set to `optedIn` when push permissions are authorized.                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
@@ -171,34 +171,34 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 {% endtab %}
 
 {% tab android %}
-| Method                                         | Description                                                                                                                                            |
-| -----------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `api_key`                                      | Sets the API key for your application. |
-| `android_api_endpoint`                         | Sets the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application. |
-| `android_small_notification_icon`              | Sets the notification small icon. |
-| `android_large_notification_icon`              | Sets the notification large icon. |
-| `android_notification_accent_color`            | Sets the notification accent color using a hexadecimal representation. |
-| `android_default_session_timeout`              | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds. |
-| `android_handle_push_deep_links_automatically` | Sets whether the Braze SDK should automatically handle push deep links. |
-| `android_log_level`                            | Sets the log level for your application. The default log level is 4 and will minimally log info. To enable verbose logging for debugging, use log level 2. |
-| `firebase_cloud_messaging_registration_enabled`| Sets whether to use Firebase Cloud Messaging for push notifications. |
-| `android_fcm_sender_id`                        | Sets the Firebase Cloud Messaging sender ID. |
-| `enable_location_collection`                   | Sets whether the automatic location collection is enabled (if the user permits). |
-| `geofences_enabled`                            | Sets whether geofences are enabled. |
-| `android_disable_auto_session_tracking`        | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#disabling-automatic-session-tracking-android-only) |
-| `sdk_authentication_enabled`                   | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature. |
-| `trigger_action_minimum_time_interval_seconds` | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds. |
-| `is_session_start_based_timeout_enabled`       | Sets whether the session timeout behavior to be based either on session start or session end events. |
-| `default_notification_channel_name`            | Sets the user-facing name as seen via `NotificationChannel.getName` for the Braze default `NotificationChannel`. |
-| `default_notification_channel_description`     | Sets the user-facing description as seen via `NotificationChannel.getDescription` for the Braze default `NotificationChannel`. |
-| `does_push_story_dismiss_on_click`             | Sets whether a Push Story is automatically dismissed when clicked. |
-| `is_fallback_firebase_messaging_service_enabled`| Sets whether the use of a fallback Firebase Cloud Messaging Service is enabled. |
-| `fallback_firebase_messaging_service_classpath`| Sets the classpath for the fallback Firebase Cloud Messaging Service. |
-| `is_content_cards_unread_visual_indicator_enabled`| Sets whether the Content Cards unread visual indication bar is enabled. |
-| `is_firebase_messaging_service_on_new_token_registration_enabled`| Sets whether the Braze SDK will automatically register tokens in `com.google.firebase.messaging.FirebaseMessagingService.onNewToken`. |
-| `is_push_deep_link_back_stack_activity_enabled` | Sets whether Braze will add an activity to the back stack when automatically following deep links for push. |
-| `push_deep_link_back_stack_activity_class_name` | Sets the activity that Braze will add to the back stack when automatically following deep links for push. |
-| `should_opt_in_when_push_authorized` | Sets if Braze should automatically opt-in the user when push is authorized. |
+| Method                                                            | Description                                                                                                                                                                                   |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `android_api_key`                                                 | Sets the API key for your application.                                                                                                                                                        |
+| `android_api_endpoint`                                            | Sets the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                                                                         |
+| `android_small_notification_icon`                                 | Sets the notification small icon.                                                                                                                                                             |
+| `android_large_notification_icon`                                 | Sets the notification large icon.                                                                                                                                                             |
+| `android_notification_accent_color`                               | Sets the notification accent color using a hexadecimal representation.                                                                                                                        |
+| `android_default_session_timeout`                                 | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds.                                                                                                       |
+| `android_handle_push_deep_links_automatically`                    | Sets whether the Braze SDK should automatically handle push deep links.                                                                                                                       |
+| `android_log_level`                                               | Sets the log level for your application. The default log level is 4 and will minimally log info. To enable verbose logging for debugging, use log level 2.                                    |
+| `firebase_cloud_messaging_registration_enabled`                   | Sets whether to use Firebase Cloud Messaging for push notifications.                                                                                                                          |
+| `android_fcm_sender_id`                                           | Sets the Firebase Cloud Messaging sender ID.                                                                                                                                                  |
+| `enable_location_collection`                                      | Sets whether the automatic location collection is enabled (if the user permits).                                                                                                              |
+| `geofences_enabled`                                               | Sets whether geofences are enabled.                                                                                                                                                           |
+| `android_disable_auto_session_tracking`                           | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#disabling-automatic-session-tracking-android-only) |
+| `sdk_authentication_enabled`                                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                      |
+| `trigger_action_minimum_time_interval_seconds`                    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                           |
+| `is_session_start_based_timeout_enabled`                          | Sets whether the session timeout behavior to be based either on session start or session end events.                                                                                          |
+| `default_notification_channel_name`                               | Sets the user-facing name as seen via `NotificationChannel.getName` for the Braze default `NotificationChannel`.                                                                              |
+| `default_notification_channel_description`                        | Sets the user-facing description as seen via `NotificationChannel.getDescription` for the Braze default `NotificationChannel`.                                                                |
+| `does_push_story_dismiss_on_click`                                | Sets whether a Push Story is automatically dismissed when clicked.                                                                                                                            |
+| `is_fallback_firebase_messaging_service_enabled`                  | Sets whether the use of a fallback Firebase Cloud Messaging Service is enabled.                                                                                                               |
+| `fallback_firebase_messaging_service_classpath`                   | Sets the classpath for the fallback Firebase Cloud Messaging Service.                                                                                                                         |
+| `is_content_cards_unread_visual_indicator_enabled`                | Sets whether the Content Cards unread visual indication bar is enabled.                                                                                                                       |
+| `is_firebase_messaging_service_on_new_token_registration_enabled` | Sets whether the Braze SDK will automatically register tokens in `com.google.firebase.messaging.FirebaseMessagingService.onNewToken`.                                                         |
+| `is_push_deep_link_back_stack_activity_enabled`                   | Sets whether Braze will add an activity to the back stack when automatically following deep links for push.                                                                                   |
+| `push_deep_link_back_stack_activity_class_name`                   | Sets the activity that Braze will add to the back stack when automatically following deep links for push.                                                                                     |
+| `should_opt_in_when_push_authorized`                              | Sets if Braze should automatically opt-in the user when push is authorized.                                                                                                                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
