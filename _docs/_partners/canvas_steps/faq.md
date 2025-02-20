@@ -12,13 +12,11 @@ Tool:
 
 > This article provides answers to some frequently asked questions about Audience Sync.
 
-### How long does it take for my audiences to populate in my Audience Sync partner dashboard? 
+### How long does it take for my audiences to populate in my Audience Sync partner dashboard?
 
-The time it takes to populate an audience depends on the specific partner.
+The time it takes to populate an audience depends on the specific partner. All networks will process the requests from Braze and attempt to match users. This process can typically take anywhere from 6-48 hours.
 
-All networks will process the requests from Braze and attempt to match users. This process can typically take anywhere from 6-48 hours.
-
-You can check the specific time range within the Troubleshooting section within the documentation for each Audience Sync partner. 
+You can check the specific time range in the Troubleshooting section of the documentation for each Audience Sync partner.
 
 ### What type of first-party data can I use in my Audience Sync?
 
@@ -28,11 +26,21 @@ For example, when you configure an Audience Sync to Facebook, you will be able t
 
 It is important to note that the user fields you can select to sync correlate with Braze standard attributes and the mobile advertising IDs. You must ensure you appropriately pass this data via our SDKs or APIs. 
 
-### What occurs when my data is being processed to send to each Audience Sync partner?
+### What happens when my data is being processed to send to each Audience Sync partner?
 
 The data you select to send to your Audience Sync destination will be normalized. Each partner may have different specifications for data normalization based on their API requirements, so please review each partner-specific endpoint for further details.
 
 In addition, Braze will hash all data before syncing users with our Audience Sync partners, ensuring that all PII is hashed using SHA256.
+
+### Why can I select multiple identifiers in one step for some partners, but can only select one identifier for others?
+
+This is determined by the partner integration methods, and not controlled by Braze. Some partners (such as Meta) allow multiple identifiers to be synced, and other partners (such as Google) only allow a single identifier to be synced with a user at any given time.
+
+### How do I reconnect my integration?
+
+If the prior user who connected the integration is no longer with your business, you'll need to update the integration with the new user. You can do this by selecting **Confirm**. Note that this may disrupt active Canvases.
+
+The user reconnecting must have both read and write access to all the audiences so users can successfully be synced over to the partners. Check that the user who is reconnecting the integration has access to the same ad accounts and audiences. There shouldn't be a need to edit any existing Canvas steps. 
 
 ### What are the most common errors that can occur when creating and managing my Audience Syncs?
 

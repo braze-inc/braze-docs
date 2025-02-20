@@ -53,7 +53,7 @@ Your snippet will be similar to the following:
 
 {% raw %}
 ```ruby
-{% landing_page_url CUSTOM_URL_HANDLE %}
+{% landing_page_url my-custom-url-handle %}
 ```
 {% endraw %}
 
