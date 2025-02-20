@@ -157,7 +157,7 @@ When you copy a campaign across workspaces, Content Blocks won't be copied. Howe
 
 ### Copying campaigns with feature flags
 
-To copy a feature flag campaign between workspaces, make sure the destination workspace has a feature flag experiment configured with an ID that matches the feature flag referenced in the original campaign. If you copy a campaign but a matching feature flag ID doesn't exist in the destination workspace, the feature flag selection in the campaign will be blank when copied, and you'll have to select a different one.
+To copy a feature flag campaign between workspaces, make sure the destination workspace has a [feature flag experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments) configured with an ID that matches the feature flag referenced in the original campaign. If you copy a campaign but a matching feature flag ID doesn't exist in the destination workspace, the feature flag selection in the campaign will be blank when copied, and you'll have to select a different one.
 
 [1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 
