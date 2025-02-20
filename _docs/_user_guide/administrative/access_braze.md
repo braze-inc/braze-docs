@@ -44,7 +44,11 @@ The Braze dashboard supports the following browsers:
 
 ### Browser cache and cookies
 
-If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser:
+If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser.
+
+{% alert important %}
+Clearing cookies will log you out, so unsaved work will be lost.
+{% endalert %}
 
 - [Clear cache & cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
 - [Clear cookies in Safari on Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
