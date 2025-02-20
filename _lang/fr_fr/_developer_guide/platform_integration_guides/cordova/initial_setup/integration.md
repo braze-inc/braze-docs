@@ -43,14 +43,14 @@ Ensuite, ajoutez les préférences suivantes à l'élément `platform` dans le f
 {% tabs %}
 {% tab ios %}
 ```xml
-<preference name="com.braze.ios_api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.ios_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 ```
 {% endtab %}
 
 {% tab android %}
 ```xml
-<preference name="com.braze.android_api_key" value="BRAZE_API_KEY" />
+<preference name="com.braze.api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.android_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 ```
 {% endtab %}
@@ -69,7 +69,7 @@ L'élément `platform` de votre fichier `config.xml` devrait ressembler à ce qu
 {% tab ios %}
 ```xml
 <platform name="ios">
-    <preference name="com.braze.ios_api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
     <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
@@ -78,7 +78,7 @@ L'élément `platform` de votre fichier `config.xml` devrait ressembler à ce qu
 {% tab android %}
 ```xml
 <platform name="android">
-    <preference name="com.braze.android_api_key" value="BRAZE_API_KEY" />
+    <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
     <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
