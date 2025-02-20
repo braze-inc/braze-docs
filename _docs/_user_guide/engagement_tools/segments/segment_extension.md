@@ -10,17 +10,15 @@ tool: Segments
 
 # Segment Extensions
 
-> Braze segmentation allows you to target users based on custom event or purchase behavior stored for the lifetime of that user profile. Examples include finding users who have or have not performed a particular custom event since a specific time, or segmenting users based on which products they have ever purchased or how much money they have spent with your service.
+> Segment Extensions allow you to build very precise segments over an extended period of a user's history. For example, using Segment Extensions you can target users who have purchased a particular product in the last sixteen months or have spent a certain amount of money with your service. Refine this audience by using event properties to make targeting even more granular.
 
-Segment Extensions allow you to build more precise segments over an extended period of a user's history. Using Segment Extensions, you can identify and reach users who have completed any custom event or purchase event any number of times in the past two years (730 days). You can refine this audience by using event properties to make targeting all the more granular.
+Braze segmentation allows you to target users based on custom event or purchase behavior. Segment Extensions enhances this capacity, letting you draw on historic data saved on the user profile. Using Segment Extensions, you can identify and reach users who have completed any custom event or purchase event any number of times in the past two years (730 days). 
 
 ## Why use Segment Extensions?
 
-Segment Extensions further extend your ability to target your audience; they use complex filtering options&mdash;including SQL and the ability to pull data from your own data warehouse&mdash;to target users based on behaviors over the last two years. While our default segmentation capabilities provide filters that narrow down your audience in real-time with default filters, you can use Segment Extensions to target based on more complex logic. You can also create a [CDI Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) in Segment Extensions to bring in data that isn't tracked in Braze, enabling any use case you can think of. Importantly, Segment Extensions are built to provide this lookback functionality while optimizing your data retention and usage. 
+Segment Extensions further extend your ability to target your audience; they use complex filtering options&mdash;including [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) and the ability to pull data from your own [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments)&mdash;to target users based on behaviors over the last two years. While our default segmentation capabilities provide filters that narrow down your audience in real-time with default filters, you can use Segment Extensions to target based on more complex logic. Importantly, Segment Extensions are built to provide this lookback functionality while optimizing your data retention and usage. 
 
-For example, Braze default segmentation allows you to find users who have purchased a specific product in their lifetime, or have purchased a specific color over the last month. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice between 18 to 24 months ago.
-
-Note that Segment Extensions are not required to leverage event properties or nested custom attributes. You can create a real-time [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. In addition, real-time triggering a messaged based on an event property does not require a Segment Extension and can be configured when [setting the schedule of your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+For example, Braze default segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of that specific product at least twice between 18 to 24 months ago.
 
 {% alert note %}
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
@@ -84,10 +82,10 @@ We also support segmentation based on [nested event properties]({{site.baseurl}}
 
 ![Segmenting based on nested event properties.][18]
 
-Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years.
+Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
 
 {% alert note %}
-Using event properties within Segment Extensions does not impact data point usage.
+Note that Segment Extensions are not required to use event properties or nested custom attributes, it just expands the historic window used to create a segment. You can create a real-time [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. In addition, real-time triggering a messaged based on an event property does not require a Segment Extension and can be configured when [setting the schedule of your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 {% endalert %}
 
 ### Step 4: Designate refresh settings (optional)
