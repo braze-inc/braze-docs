@@ -89,7 +89,7 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4,000 bytes.|
 | `400 Bad Request` | Cannot parse `send_at` datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Invalid API key. |
+| `401 Unauthorized` | Invalid API key. This error can also occur if:<br><br> - You're sending the request to the incorrect cluster. For example, if your account is on our EU instance (`https://dashboard-01.braze.eu`), the request should be sent to `https://rest.fra-01.braze.eu`.<br>- The API key syntax is using single or double quotes. The correct syntax is `Authorization: Bearer {YOUR-API-KEY}`. |
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
 | `404 Not Found` | Invalid URL. |
