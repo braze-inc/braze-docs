@@ -16,17 +16,17 @@ When creating a landing page, Braze will automatically track form submission eve
 
 When creating a segment, under the “Retargeting” group, select “Submitted form on Landing Page” as a filter. 
 
-![The landing pages segmentation search]({% image_buster assets/img/landing_pages/segmentation.png %})
+![The landing pages segmentation search]({% image_buster /assets/img/landing_pages/segmentation.png %})
 
 From here, you have the ability to segment users based on whether they have or have not submitted a landing page form for a specific landing page. 
 
-![Landing pages segmentation filter selected] ({% image_buster assets/img/landing_pages/segmentation selected.png %})
+![Landing pages segmentation filter selected] ({% image_buster /assets/img/landing_pages/segmentation selected.png %})
 
 ## Triggering Messages on Landing Page Submissions
 
 For action based delivery of other messaging channels when a user submits a landing page form, select “Action Based Delivery” when selecting your delivery option, select “Submitted Landing Page form” 
 
-![Landing page trigger action in messaging]({% image_buster assets/img/landing_pages/trigger.png %})
+![Landing page trigger action in messaging]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 
 All users who submit this form will then be messaged on the eligible messaging channel. 
