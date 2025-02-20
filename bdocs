@@ -67,12 +67,12 @@ require_new_merges() {
     fi
 }
 
-# If a the 'jq' package is required, pass or fail. This is required for parsing JSON.
+# If a the 'jq' package is required, pass or fail. This is needed to parse JSON.
 # For more info, see: https://jqlang.org/
 require_jq() {
     if ! command -v jq &> /dev/null; then
-        echo "Error: 'jq' is required to run this command. If you're on MacOS, run"
-        echo "brew install jq"
+        echo "Error: 'jq' is required to run this command. On MacOS, run:"
+        echo "  brew install jq"
         exit 1
     fi
 }
