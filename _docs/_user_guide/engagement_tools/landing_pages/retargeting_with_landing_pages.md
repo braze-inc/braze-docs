@@ -24,9 +24,9 @@ From here, you have the ability to segment users based on whether they have or h
 
 ## Triggering Messages on Landing Page Submissions
 
-For action based delivery of other messaging channels when a user submits a landing page form, select “Action Based Delivery” when selecting your delivery option, select “Submitted Landing Page form” 
+Select “Action Based Delivery” when selecting your delivery option and select “Submitted Landing Page form” to trigger a message or canvas based on a landing page submisssion.
 
 ![Landing page trigger action in messaging]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 
-All users who submit this form will then be messaged on the eligible messaging channel. 
+All users who submit this form will then be messaged on the eligible messaging channel or entered into the canvas. 
