@@ -42,7 +42,7 @@ The Braze dashboard supports the following browsers:
 - Safari (version 15.4 or newer)
 - Edge (version 87 or newer)
 
-If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and re-install your browser.
+If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and reinstall your browser.
 
 ### Browser cache and cookies
 
