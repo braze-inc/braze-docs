@@ -67,6 +67,15 @@ require_new_merges() {
     fi
 }
 
+# If a the 'jq' package is required, pass or fail. This is required for parsing JSON.
+# For more info, see: https://jqlang.org/
+require_jq() {
+    if ! command -v jq &> /dev/null; then
+        echo "Error: 'jq' is not installed. Please install 'jq' and retry."
+        exit 1
+    fi
+}
+
 # Fetch the latest changes from the remote quietly.
 require_git_fetch() {
     git fetch origin develop --quiet
@@ -92,6 +101,7 @@ case $1 in
     release)
         require_git_fetch
         require_new_merges
+        require_jq
         "$RELEASE"
         ;;
     tlinks)
