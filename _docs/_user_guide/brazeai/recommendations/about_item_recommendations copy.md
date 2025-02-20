@@ -2,7 +2,7 @@
 nav_title: About Item Recommendations
 article_title: About Item Recommendations
 description: "This reference article describes different use cases for recommending items to customers using Braze."
-page_order: 1
+page_order: 10
 ---
 
 # About item recommendations
