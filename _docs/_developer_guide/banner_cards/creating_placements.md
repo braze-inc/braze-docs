@@ -1,8 +1,8 @@
 ---
-nav_title: Creating placements
-article_title: Creating Banner Card placements for the Braze SDK
+nav_title: Creating Placements
+article_title: Creating Banner Card Placements for the Braze SDK
 hidden: true
-description: "This reference article covers Banner Cards and how to integrate this feature in the Braze SDK."
+description: "This reference article covers Banner Cards and how to integrate them in the Braze SDK."
 platform:
   - iOS
   - Android
