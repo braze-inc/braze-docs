@@ -71,7 +71,8 @@ require_new_merges() {
 # For more info, see: https://jqlang.org/
 require_jq() {
     if ! command -v jq &> /dev/null; then
-        echo "Error: 'jq' is not installed. Please install 'jq' and retry."
+        echo "Error: 'jq' is required to run this command. If you're on MacOS, run"
+        echo "brew install jq"
         exit 1
     fi
 }
