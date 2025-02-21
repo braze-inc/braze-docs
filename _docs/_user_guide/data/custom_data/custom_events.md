@@ -37,7 +37,7 @@ Select the menu next to a custom event for the following actions:
 
 ### Blocklisting
 
-You can blocklist individual custom events through the actions menu, or select and blocklist up to 10 events in bulk. 
+You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
 When you block a custom event:
 
