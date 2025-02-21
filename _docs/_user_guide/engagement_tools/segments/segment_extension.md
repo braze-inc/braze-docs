@@ -16,9 +16,11 @@ Braze segmentation allows you to target users based on custom event or purchase 
 
 ## Why use Segment Extensions?
 
-Segment Extensions further extend your ability to target your audience; they use complex filtering options&mdash;including [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) and the ability to pull data from your own [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments)&mdash;to target users based on behaviors over the last two years. While our default segmentation capabilities provide filters that narrow down your audience in real-time with default filters, you can use Segment Extensions to target based on more complex logic. Importantly, Segment Extensions are built to provide this lookback functionality while optimizing your data retention and usage. 
+Braze segments give you powerful targeting tools that look back 30 days. For most use cases, this is enough to reach your audience effectively.
 
-For example, Braze default segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of that specific product at least twice between 18 to 24 months ago.
+Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) queries or data from your own [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) to refine your audience further.
+
+For example, Braze default segmentation can find users who purchased a specific product in their lifetime. Segment Extensions let you go deeper—like identifying users who bought a particular color of that product at least twice between 18 to 24 months ago. Segment Extensions are an enhancement, not a requirement. If you need more advanced filters or a longer lookback window, they're a great tool to help while keeping your data usage optimized.
 
 {% alert note %}
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
