@@ -39,6 +39,7 @@ You can filter by the following content logged in the **Message Activity Log**:
 - SMS/MMS errors
 - WhatsApp errors
 - Live Activity Errors
+- Bad user trigger errors
 
 These messages can come from our own system, your apps or platforms, or our third-party partners. This can result in an infinite number of messages that can appear in this log.
 
@@ -73,7 +74,7 @@ For example, some potential "Block" messages, in addition to the one listed in t
 - The message was blocked by the receiver as spam.
 - Service unavailable, Client host [_IP_ADDRESS_] blocked using Spamhaus.
 
-## Storage 
+## Storage retention period
 
 Errors from the last 60 hours are available in the Message Activity Logs. Logs that are more than 60 hours old are cleaned and no longer accessible. 
 
@@ -82,13 +83,13 @@ Errors from the last 60 hours are available in the Message Activity Logs. Logs t
 The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors.
 
 Here's an overview of conditions affecting how many logs will be saved:
-- A maximum of 20 Connected Content error logs will be saved for the same campaign within one hour.
-- A maximum of 100 error logs of the same error type will be saved within one hour per workspace for the following error types:
+- A maximum of 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
+- A maximum of 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
     - Aborted message errors
     - Webhook errors
-    - Connected Content errors
     - Push notification errors
     - Live Activity errors
+    - Bad user trigger errors
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}
