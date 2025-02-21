@@ -20,7 +20,7 @@ When creating a segment, under the “Retargeting” group, select “Submitted 
 
 From here, you have the ability to segment users based on whether they have or have not submitted a landing page form for a specific landing page. 
 
-![Landing pages segmentation filter selected] ({% image_buster /assets/img/landing_pages/segmentation selected.png %})
+![Landing pages segmentation filter selected] ({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 ## Triggering Messages on Landing Page Submissions
 
