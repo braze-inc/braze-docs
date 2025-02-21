@@ -106,7 +106,7 @@ For the email drag-and-drop editor:
 
 {% endraw %}
 
-![Image properties panel in the drag-and-drop editor][2]
+![Image properties panel in the drag-and-drop editor]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:60%"}
 
 {:start="5"}
 
