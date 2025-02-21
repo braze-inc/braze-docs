@@ -8,25 +8,27 @@ alias: /landing_pages/retargeting
 
 # Retargeting with Landing Pages
 
-> Learn how to create segments of users who have submitted a landing page form and how to trigger messages on landing page form submission events. 
+> Learn how to create segments of users who have submitted a landing page form and how to trigger messages when a landing page form is submitted. 
 
-When creating a landing page, Braze will automatically track form submission events tied to each landing page. The aggregate count of these form submissions will be shown in your [Landing Page analytics]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/viewing-analytics). For more user specific breakdowns of form submissions, you have the option to create a segment based on whether a user has or has not submitted a landing page form. You can also trigger messages when users submit landing page forms. 
+When creating a landing page, Braze will automatically track form submission events tied to each landing page. The aggregate count of these form submissions will be shown in your [Landing Page analytics]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#viewing-analytics). For more user specific breakdowns of form submissions, you have the option to create a segment based on whether a user has or has not submitted a landing page form. You can also trigger messages when users submit landing page forms. 
 
 ## Segmentation
 
-When creating a segment, under the “Retargeting” group, select “Submitted form on Landing Page” as a filter. 
+When creating a segment, under the “Retargeting” group, select **Submitted form on Landing Page** as a filter. 
 
 ![The landing pages segmentation search]({% image_buster /assets/img/landing_pages/segmentation.png %})
 
 From here, you have the ability to segment users based on whether they have or have not submitted a landing page form for a specific landing page. 
 
-![Landing pages segmentation filter selected] ({% image_buster /assets/img/landing_pages/segmentation selected.png %})
+![Landing pages segmentation filter selected] ({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
-## Triggering Messages on Landing Page Submissions
+## Triggering messages on Landing Page submissions
 
-Select “Action Based Delivery” when selecting your delivery option and select “Submitted Landing Page form” to trigger a message or canvas based on a landing page submisssion.
+
+
+Select **Action Based Delivery** when selecting your delivery option. and select **Submitted Landing Page form** to trigger a message or Canvas based on a landing page submisssion.
 
 ![Landing page trigger action in messaging]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 
-All users who submit this form will then be messaged on the eligible messaging channel or entered into the canvas. 
+All users who submit this form will then be messaged on the eligible messaging channel or entered into the Canvas. 
