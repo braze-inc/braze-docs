@@ -93,7 +93,7 @@ In composers with image fields, add the following Liquid to the respective field
 For the email drag-and-drop editor:
 
 1. Add an image block to your email.
-2. Select the image block to open the **Image properties** panel.
+2. Select the image block (not the **Browse** button) to open the **Image properties** panel.
 3. Turn on **Image with Liquid**. 
 4. Paste the Liquid snippet to the **Dynamic URL** field.
 
