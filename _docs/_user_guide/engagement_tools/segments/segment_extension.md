@@ -85,7 +85,7 @@ We also support segmentation based on [nested event properties]({{site.baseurl}}
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
 
 {% alert note %}
-Note that Segment Extensions are not required to use event properties or nested custom attributes, it just expands the historic window used to create a segment. You can create a real-time [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. In addition, real-time triggering a messaged based on an event property does not require a Segment Extension and can be configured when [setting the schedule of your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a segment. You can create a real-time [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
 {% endalert %}
 
 ### Step 4: Designate refresh settings (optional)
