@@ -11,32 +11,45 @@ search_rank: 1
 
 ## Access the support portal
 
-To contact the Braze Support team, navigate to the Braze dashboard. In the dashboard, select **Support** > **Get Help**.
+To contact the Braze Support team, navigate to the Braze dashboard. In the dashboard, select **Support** > **Get help**.
 
-![]({% image_buster /assets/img_archive/get_help.png %})
+![The "Support" dropdown with the option to get help.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Depending on your Braze permissions, and if you are a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you are unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
+Depending on your Braze permissions, and if you're a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), select **Get Help** > **Support**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), select **Get Help** > **Support**.
 {% endalert %}
+
+## Adding designated support contacts
+
+Designated support contacts can access all support cases for your company, regardless of who submitted them. You can set users as designated support contacts directly from the **Edit user** page. 
+
+1. Go to **Settings** > **Company Users**, then search for the user by their name or email address.
+2. Either select the user name or hover over the user name row to display a menu. 
+3. In the menu, select **Edit** to be redirected to the **Edit user** page.
+4. Check the checkbox for **Set this user as a Designated Support Contact for Braze Support Portal**.
+
+![The checkbox for setting a user as a designated support contact.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
+
+The number of designated support contacts you can set depends on your contact limit. Contact your customer success manager for more information.
 
 ## Provide developer console screenshots
 
 When communicating with support, you may find you need to access your developer console to provide additional information:
 - Chrome
-  1. Right-click on the webpage and click **Inspect**.
-  2. Click the **Console** tab in the window that opens.
+  1. Right-click on the webpage and select **Inspect**.
+  2. Select the **Console** tab in the window that opens.
   3. Take a screenshot of the console tab.<br><br>
 - Firefox
-  1. Right-click on the webpage and click **Inspect Element**.
-  2. Click the **Console** tab in the window that opens.
+  1. Right-click on the webpage and select **Inspect Element**.
+  2. Select the **Console** tab in the window that opens.
   3. Take a screenshot of the console tab.<br><br>
 - Safari
   1. Go to Safari in the menu bar at the top of your screen and then select **Preferences**.
-  2. Click on **Advanced** at the top and then tick the checkbox next to **Show Develop menu in menu bar**. You can then exit the window.
-  3. Right-click on the webpage and click **Inspect Element**.
-  4. Click the **Console** tab in the window that opens.
+  2. Select **Advanced** and then check the checkbox next to **Show Develop menu in menu bar**. You can then exit the window.
+  3. Right-click on the webpage and select **Inspect Element**.
+  4. Select the **Console** tab in the window that opens.
   5. Take a screenshot of the console tab.
 
 ## Best practices for submitting a support case
