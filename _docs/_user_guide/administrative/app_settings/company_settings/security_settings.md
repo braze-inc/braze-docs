@@ -103,63 +103,63 @@ This report only contains the most recent 10,000 security events for your accoun
 
 {% details Reported security events %}
 ### Login and account 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Removed Developer
+- Added Additional Developer
+- Signed In
+- Failed Login
+- Two-Factor Auth Setup Completed
+- Two-Factor Auth Reset Completed
+- Cleared Developer 2FA
+- Developer Suspended
+- Developer Unsuspended
 
 ### Elevated access
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Started Elevated Access Flow
+- Completed Elevated Access Flow
+- Failed 2FA Verification For Elevated Access
 
 ### Campaign
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- Added Campaign
+- Edited Campaign
 
 ### Canvas
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- Added Journey
+- Edited Journey
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Added Segment
+- Edited Segment
+- Exported data to CSV
+- Exported Segment via API
 
 ### REST API key
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- Added REST API key
+- Removed REST API key
 
 ### Basic authentication credential
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Added Basic Auth credential
+- Updated Basic Auth credential
+- Removed Basic Auth credential
 
 ### Permission
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Cleared Developer 2FA
+- Updated Account Permission
 
 ### Company settings
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- Added App Group
+- Added App
 
 ### Email template
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- Added Email Template
+- Updated Email Template
 
 ### Push credential
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Updated Push Credential
+- Removed Push Credential
 
 ### SDK Debugger
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Started SDK Debugger Session
+- Exported SDK Debugger Log
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
