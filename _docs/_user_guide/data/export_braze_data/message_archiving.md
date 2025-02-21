@@ -28,11 +28,15 @@ Turning on this feature will impact the delivery speed of your messages, as the 
 
 The JSON will be saved in your storage bucket using the following key structure:
 
-`sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
+`sent_messages/{channel, one of: email, push, sms}/{MD5 digest of downcased: email address, push token, or E.164 phone number}/{campaign or Canvas step API ID}/{dispatch ID}.json.gz`
 
 An example file may look like this:
 
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
+
+{% alert note %}
+The MD5 digest can only be calculated using a known downcased email address, push token, or E.164 phone number. A known MD5 digest cannot be reversed to obtain the downcased email address, push token, or E.164 phone number.
+{% endalert %}
 
 {% alert note %}
 **Having trouble finding your push tokens in your buckets?**<br>
