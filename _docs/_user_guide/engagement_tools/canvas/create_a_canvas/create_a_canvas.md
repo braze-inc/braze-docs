@@ -81,7 +81,7 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![The Canvas details page, with fields for the Canvas name, description, location, and tags.][53]
+![The Canvas details page, with fields for the Canvas name, description, location, and tags.][53]{: style="max-width:70%;"}
 
 #### Choose conversion events
 
@@ -101,7 +101,7 @@ You can choose one of three ways in which users can enter your Canvas.
   {% tab Scheduled Delivery %}
     With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, enter them into your journey at some point in the future, or on a recurring basis (daily, weekly, or monthly). 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +110,7 @@ You can choose one of three ways in which users can enter your Canvas.
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
@@ -148,15 +148,15 @@ Avoid configuring an action-based campaign or Canvas with the same trigger as th
 
 After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:50%;"}
 
 #### Selecting entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you check the **Limit entrance volume** checkbox and set the **Maximum entries** field to 1,000 users, then the Canvas will sent to 1,000 users per day.
 
-![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit the number of people who will potentially enter this Canvas." The latter allowing you to set the maximum users and whether you'd like to limit every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and whether you'd like to limit daily, for the lifetime of the Canvas, or every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
-Braze doesn't recommend using the **Limit everytime the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+Braze doesn't recommend using the **Every time the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
 
 #### Setting exit criteria
 
@@ -205,7 +205,7 @@ Save time and streamline your Canvas creation by using [Braze Canvas templates](
 
 ### Adding a variant
 
-![A gif that shows a user selecting "Add Variant", then selecting "Add Variant" again from the context menu.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![The "Add Variant" button selected to show a context menu with the option to "Add Variant".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Select **Add Variant**, then add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
@@ -235,7 +235,7 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![The component search window adding a delay step to the Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![The component search window adding a delay step to the Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.

@@ -29,15 +29,15 @@ To target users that fall into multiple previously created segments, add multipl
 
 ### Target users in multiple existing segments and filters {#existing_segment_filter}
 
-You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the following screenshot, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
+You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the following screenshot, which targets users that are in the "Daily Active Users" segment, "Opened push" segment, and made a purchase more than 30 days ago.
 
-![][25]
+![Targeting options for a message that include two segments and have an additional filter for a last purchase made more than 30 days ago.][25]
 
 ### Target users without segments {#without-segment}
 
 To target users without adding a segment, you can use a series of filters. This means you do not need to target a campaign at a pre-existing segment, you can make an impromptu audience during campaign creation by just using the additional filters, and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
-![][26]
+[Additional filters for a message that targets users who've last opened an app within the day, have never received a campaign or Canvas step, and who made a purchase less than 30 days ago.][26]
 
 ## Targeting Seed Groups
 
@@ -47,13 +47,13 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
+![The "User Lookup" section with a button "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
 ## Audience summary
 
-Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
+After you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
-![][27]
+![The "Audience Summary" section with options to set a maximum user cap or rate limit delivery speed.][27]
 
 ## A/B testing
 
@@ -72,7 +72,7 @@ Note that:
 - Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
 - For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
 
-![][24]
+![The "Total Population" section with estimated counts for reachable users in each targeted channel.][24]
 
 To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
 
