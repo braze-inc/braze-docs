@@ -7,7 +7,7 @@ page_order: 20
 
 # Using item recommendations in your messaging
 
-After your recommendation is trained, you can use Liquid to fetch and display recommended items in your messages. The key here is working directly with the `product_recommendation` Liquid object. 
+> After your recommendation is trained, you can use Liquid to fetch and display recommended items in your messages. The key here is working directly with the `product_recommendation` Liquid object. This article covers the `product_recommendation` Liquid object and includes a tutorial to help you put that knowledge into practice.
 
 {% alert tip %}
 This article describes the syntax of the Liquid object in detail. However, you can [insert pre-formatted variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) with defaults through the **Add Personalization** modal located on the top-right of any templated text field.
@@ -212,7 +212,7 @@ Your recommendation will pull items from a catalog. Follow the steps for Creatin
 
 1. From your catalog, select **Create recommendation**.
 2. Follow the steps for [Creating an AI item recommendation][3]. 
-3. For the recommendation type, select AI Personalized.
+3. For the recommendation type, select **AI Personalized**.
 4. Use the catalog you just created to train the recommendation. This might take some time—you'll get an email when the training is complete.
 
 ### Step 3: Create an email
