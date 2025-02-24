@@ -441,7 +441,7 @@ If data doesn't appear as expected after regenerating the schema, the attribute 
 
 ## Data points
 
-Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
+Any key that is sent consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
 ```json
 {
