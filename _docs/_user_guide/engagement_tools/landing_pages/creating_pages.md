@@ -34,7 +34,7 @@ We suggest following these best practices:
 | Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Meta description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
-| URL handle | This is the link users will click to navigate to your landing page. This link is also used to generate [landing page liquid tags]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) that you can embed in a message to automatically identify when they submit your form.| This handle must be unique. |
+| URL handle | This is the link users will click to navigate to your landing page. This link is also used to generate [landing page liquid tags]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) that you can embed in a message to automatically identify when they submit your form.| This handle must be unique. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 3: Customize the page
@@ -64,7 +64,7 @@ You can use these blocks to add content and customize the layout of your landing
 
 #### Form blocks
 
-You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the [confirmation state](#confirmation-state).
+You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
 ![A form block that registers a new customer and will send a discount code to their email.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
@@ -78,7 +78,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-After creating a landing page with a form, be sure to embed its [landing page liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
+After creating a landing page with a form, be sure to embed its [landing page liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
 
 #### Page container styles
