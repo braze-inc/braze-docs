@@ -234,9 +234,9 @@ For customers who have purchased Monthly Active Users - CY 24-25, Braze enforces
 
 ### Finding your rate limits
 
-Current limits based on expected SDK throughput can be found in the dashboard under: **Settings** > **APIs and Identifiers** > **API and SDK limits**.
+To find current limits based on expected SDK throughput, go to **Settings** > **APIs and Identifiers** > **API and SDK limits**.
 
-Historical usage can be found under: **Settings** > **APIs and Identifiers** > **API and SDK dashboard**.
+For historical usage, go to **Settings** > **APIs and Identifiers** > **API and SDK dashboard**.
 
 ### Changes and support
 
