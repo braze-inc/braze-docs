@@ -102,6 +102,10 @@ The following is a `/users/track` example with an "Ordered" custom event. After 
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+For nested custom events, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
+{% endalert %}
+
 ### Liquid templating
 
 The following shows how to create a Liquid template that references the nested properties requested from the [previous API request](#api-request-body).
