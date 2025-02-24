@@ -10,10 +10,6 @@ description: "Este artigo de referência descreve como criar notificações de q
 
 > Usando uma combinação de notificações de queda de preço através de catálogos Braze e uma canva, você pode notificar os clientes quando o preço de um item diminuiu. Sempre que um cliente realiza um evento personalizado selecionado, ele pode ser automaticamente inscrito para ser notificado quando o preço do item for reduzido.
 
-{% alert important %}
-Notificações de queda de preço para catálogos estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta se estiver interessado em participar deste acesso antecipado.
-{% endalert %}
-
 Quando um usuário aciona um evento personalizado para um item, nós automaticamente os inscreveremos para receber notificações de queda de preço para esse item. Quando o preço do item atender à sua regra de inventário (como uma queda maior que 50%), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou Canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
 ## Como funcionam as notificações de queda de preço

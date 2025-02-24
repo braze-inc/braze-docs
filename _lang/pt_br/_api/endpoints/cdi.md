@@ -14,7 +14,7 @@ guide_top_text: "Use os endpoints de Ingestão de Dados em Nuvem da Braze para g
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "OBTER: Listar Integrações"
+  - name: "OBTER: Integrações de listas"
     link: /docs/api/cdi/get_integration_list/
     image: /assets/img/braze_icons/list.svg
   - name: "OBTER: Listar Status de Sincronização de Trabalho"

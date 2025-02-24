@@ -54,9 +54,18 @@ The email insights dashboard tracks where and when your customers are interactin
 
 ### Engagement by Device
 
-The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. 
+The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. This data is based on the user agent string passed from your users' devices.
 
-The "Other" category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT (over-the-top or streaming), and similar. This may also include null or empty values.
+{% alert note %}
+If you use CloudFront as your CDN, make sure your users' user agent is passed along to the ESP. Otherwise, every user agent will be "Amazon Cloudfront".
+{% endalert %}
+
+The “Other” category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT (over-the-top or streaming), and similar. This may also include null or empty values.
+
+To better understand what is in this "Other" category, you can extract the user agents using either of these options:
+
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) will send you the exact user agent string that was retrieve from the your users' devices.
+2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
 ![Enagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 

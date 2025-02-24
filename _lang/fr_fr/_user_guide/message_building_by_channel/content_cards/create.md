@@ -16,7 +16,7 @@ search_rank: 3.9
 
 > Cet article explique comment créer une carte de contenu dans Braze lorsque vous créez des campagnes et des canevas. Nous allons vous aider à choisir un type de message, à composer votre carte et à planifier la réception/distribution de votre message.
 
-## Étape 1 : Choisissez où créer votre message
+## Étape 1 : Choisissez où créer votre message
 
 Vous ne savez pas si votre message doit être envoyé par le biais d'une campagne ou d'un canvas ? Les campagnes conviennent mieux aux campagnes d'envoi de messages simples et uniques (par exemple, informer les utilisateurs d'un nouveau produit avec un seul message), tandis que les Canevas conviennent mieux aux parcours utilisateurs en plusieurs étapes (par exemple, envoyer des suggestions de produits sur mesure en fonction du comportement de l'utilisateur au fil du temps).
 
@@ -87,7 +87,7 @@ Sélectionnez **Ajouter des langues** pour ajouter les langues de votre choix da
 
 #### Image
 
-Ajoutez une image à votre carte de contenu en sélectionnant **Ajouter une image** ou en fournissant l'URL de l'image. En sélectionnant **Ajouter une image**, vous ouvrez la **bibliothèque multimédia**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et de plateforme peut avoir ses propres proportions et exigences. Vérifiez-les avant de commander ou de créer une image à partir de zéro ! N'oubliez pas que la taille totale des champs des messages de la carte de contenu est limitée à 2 Ko.
+Ajoutez une image à votre carte de contenu en sélectionnant **Ajouter une image** ou en fournissant l'URL de l'image. En sélectionnant **Ajouter une image**, vous ouvrez la **bibliothèque multimédia**, où vous pouvez sélectionner une image déjà téléchargée ou en ajouter une nouvelle. Chaque type de message et de plateforme peut avoir ses propres proportions et exigences. Vérifiez-les avant de commander ou de créer une image à partir de zéro ! N'oubliez pas que la taille totale des champs des messages de la carte de contenu est limitée à 2 Ko.
 
 #### Épingler en haut
 
@@ -115,6 +115,10 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 
 {% alert warning %}
 La taille totale des champs des messages de la carte de contenu est limitée à 2 Ko, calculée en additionnant la longueur en octets des champs suivants : Titre, message, URL de l'image, texte du lien, URL du ou des liens et paires clé-valeur (noms + valeurs). Les messages qui dépassent cette taille ne seront pas envoyés. Notez que cela ne concerne pas la taille de l’image mais plutôt la longueur de l’URL de l’image.
+{% endalert %}
+
+{% alert warning %}
+Chaque utilisateur peut avoir jusqu'à 250 cartes de contenu non expirées dans son flux à un moment donné. Lorsque cette limite est dépassée, Braze cesse de renvoyer les cartes les plus anciennes, même si elles ne sont pas lues. Les cartes retirées sont également prises en compte dans cette limite de 250 cartes, ce qui signifie qu'un nombre élevé de cartes retirées peut réduire l'espace disponible pour les nouvelles cartes.
 {% endalert %}
 
 ## Étape 4 : Configurer des paramètres supplémentaires (facultatif)
@@ -163,7 +167,7 @@ Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre 
 
 ## Étape 6 : Revue et déploiement
 
-Une fois que vous avez fini de créer la dernière partie de votre campagne ou de votre Canvas, examinez-en les détails, [testez-la]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), puis envoyez-la lorsque vous êtes prêt.
+Une fois que vous avez fini de créer la dernière partie de votre campagne ou de votre Canvas, passez en revue ses détails, [testez-la]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), puis envoyez-la lorsque vous êtes prêt.
 
 {% alert warning %}
 Une fois qu’une carte de contenu est lancée, elle ne peut plus être modifiée. On peut seulement arrêter de les envoyer à des nouveaux utilisateurs et les retirer des flux des utilisateurs. Reportez-vous à la section [Mise à jour des cartes d'envoi]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards) pour comprendre comment vous pouvez aborder ce scénario.
@@ -220,7 +224,7 @@ Une approche consiste à archiver la campagne et à supprimer les cartes actives
 
 ##### Cas d’utilisation
 
-Supposons que vous ayez configuré une campagne pour qu'elle soit déclenchée par le début d'une session et que la rééligibilité soit fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, vous archivez la campagne et retirez les cartes du flux. Ensuite, vous reproduisez la campagne et la relancez avec le nouveau texte. Si l'utilisateur a une autre session, il recevra immédiatement la nouvelle carte.
+Supposons que vous ayez configuré une campagne pour qu'elle soit déclenchée par le début d'une session et que la rééligibilité soit fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, vous archivez la campagne et retirez les cartes du flux. Ensuite, vous reproduisez la campagne et la lancez à nouveau avec le nouveau texte. Si l'utilisateur a une autre session, il recevra immédiatement la nouvelle carte.
 
 ##### Impact
 

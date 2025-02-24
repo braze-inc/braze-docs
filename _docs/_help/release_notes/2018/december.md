@@ -19,4 +19,4 @@ With Content Blocks, you can:
 
 ## Gmail promotional tool
 
-Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a "card", rather than just the subject line or preheader information. With the [Gmail promotional tool]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/), Braze can help you build the card from our product.
+Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a "card", rather than just the subject line or preheader information. With the [Gmail promotional tool]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/), Braze can help you build the card from our product.

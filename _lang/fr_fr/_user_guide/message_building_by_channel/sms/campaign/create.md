@@ -56,7 +56,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 {% endtab %}
 {% endtabs %}
 
-## Étape 2 : Composez votre message SMS
+## Étape 2 : Composez votre message SMS
 
 Rédigez votre message en utilisant des langues et des personnalisations (Liquid, Contenu Connecté et emojis) selon les besoins. Assurez-vous de respecter nos limites de texte des messages pour réduire vos risques de dépassements.
 
@@ -80,7 +80,7 @@ Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assi
 
 Si vous le souhaitez, vous pouvez ajouter une carte de contact à votre message SMS pour permettre à vos clients d'ajouter facilement votre entreprise et vos coordonnées à leurs contacts. Vous pouvez attribuer des propriétés communes à ces cartes, telles que le nom de votre entreprise, le numéro de téléphone, l’adresse, l’e-mail et une petite photo. Consultez les [cartes de contact]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) pour en savoir plus.
 
-## Étape 3 : Prévisualiser et tester votre message
+## Étape 3 : Prévisualiser et tester votre message
 
 Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Passez à l'onglet **Test** pour envoyer un SMS de test aux [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou à des utilisateurs individuels, ou prévisualisez le message en tant qu'utilisateur directement dans Braze.
 

@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/
   image: /assets/img/braze_icons/users-01.svg
 - name: Back-In-Stock Notifications
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Price Drop Notifications
   link: /docs/price_drop_notifications/
@@ -36,12 +36,12 @@ guide_featured_list:
 
 You can bring in any type of data into a catalog. Typically, the data is metadata about offerings, such as products, discounts, promotions, events, and similar. See the use cases below for a few examples of how you can use this data to target users with highly relevant messaging.
 
-### Retail and ecommerce
+### Retail and eCommerce
 
 - **Seasonal promotions:** Import seasonal product collections and personalize messages to reflect current trends.
 - **Localized messages:** Import your physical location addresses, hours, and services, then personalize notifications based on user locations.
-- **Back-in-stock notifications:** Import product information that includes inventory quantity, then use [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/) and Braze custom events to trigger a campaign or Canvas that sends users a notification that a product is now stocked.
-- **Price drop notifications:** Import product information that includes product prices, then use [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications/) and Braze custom events to trigger a Canvas that sends users a notification that a product's price dropped.
+- **Back-in-stock notifications:** Import product information that includes inventory quantity, then use [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/) and Braze custom events to trigger a campaign or Canvas that sends users a notification that a product is now stocked.
+- **Price drop notifications:** Import product information that includes product prices, then use [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/) and Braze custom events to trigger a Canvas that sends users a notification that a product's price dropped.
 
 ### Entertainment
 

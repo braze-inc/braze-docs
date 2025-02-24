@@ -19,13 +19,13 @@ You can log purchases by passing a [purchase object]({{site.baseurl}}/api/object
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
 
 ## Viewing purchase data
 
@@ -175,7 +175,7 @@ While Sam would have two purchase events on their profile, in reality, they only
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform and are often assigned as key-value pairs.
 
-For example, if you have an ecommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
+For example, if you have an eCommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
 **Example of triggering based on purchase event properties:**
 
@@ -244,6 +244,12 @@ In the first Message step following an Action Path, you can use `event_propertie
 ### Log purchases at the order level
 
 To log purchases at the order level instead of the product level, use the order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
+
+### Product ID naming conventions
+
+At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
+
+This helps make products easy to identify for segmentation and triggering. 
 
 ## Blocklisting purchase events
 

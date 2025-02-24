@@ -34,6 +34,6 @@ If you are transitioning off an existing email provider, make certain that you d
 
 ## Methods for importing
 
-Once you have your email list prepared, there are several ways to import users into Braze, such as via the Braze REST API or CSV files. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) article.
+Once you have your email list prepared, there are several ways to import users into Braze, such as via the Braze REST API or CSV files. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/) article.
 
 [60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

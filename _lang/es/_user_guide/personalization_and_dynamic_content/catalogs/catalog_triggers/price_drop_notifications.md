@@ -10,10 +10,6 @@ description: "Este artículo de referencia describe cómo crear notificaciones d
 
 > Utilizando una combinación de notificaciones de bajada de precios a través de los catálogos Braze y un Canvas, puede notificar a los clientes cuando el precio de un artículo ha bajado. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reduzca el precio del artículo.
 
-{% alert important %}
-Las notificaciones de bajada de precios de los catálogos se encuentran actualmente en fase de acceso anticipado. Póngase en contacto con su gestor de cuenta si está interesado en participar en este acceso anticipado.
-{% endalert %}
-
 Cuando un usuario active un evento personalizado para un artículo, le suscribiremos automáticamente para que reciba notificaciones de bajadas de precio de ese artículo. Cuando el precio del artículo cumpla tu regla de inventario (como una caída superior al 50 %), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
 
 ## Cómo funcionan las notificaciones de bajada de precios

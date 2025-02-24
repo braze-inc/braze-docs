@@ -3,12 +3,12 @@
 > Learn about Content Cards for the Braze Android SDK, including the different data models and card-specific properties available for your Swift application.
 
 {% alert tip %}
-When you're ready to start customizing and using Content Cards, see [Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+When you're ready to start customizing and using Content Cards, see [Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).
 {% endalert %}
 
 ## Prerequisites
 
-Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/) into your app. However, no additional setup is required.
 
 ## Google fragments
 
@@ -87,4 +87,4 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 
 ## Next steps
 
-When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
+When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).

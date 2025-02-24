@@ -218,6 +218,10 @@ glossaries:
     description: Segmente seus usuários por saber se o endereço de e-mail deles teve um hard bounce (como quando o endereço de e-mail é inválido).
     tags:
       - Retargeting
+  - name: Soft bounce
+    description: "Segmente seus usuários de acordo com o número de soft bounces X vezes em Y dias. Os filtros do Segment só podem olhar para trás 30 dias, mas você pode olhar mais para trás com as extensões do Segment.<br><br>Esse filtro funciona de forma diferente de um evento de soft bounce no Currents. O filtro de segmento Soft Bounce conta um soft bounce se não houver uma entrega bem-sucedida durante o período de tentativa de 72 horas. No Currents, cada tentativa malsucedida é enviada como um evento de soft bounce." 
+    tags:
+      - Retargeting
   - name: Marcou sua mensagem como spam
     description: Segmenta seus usuários por se eles marcaram ou não suas mensagens como spam.
     tags:
@@ -267,7 +271,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Feature Flags
-    description: "O segmento de seus usuários que têm um <a href=\"/docs/developer_guide/platform_wide/feature_flags/about\">Feature Flag</a> específico atualmente ativado."
+    description: "O segmento de seus usuários que têm um <a href=\"/docs/developer_guide/feature_flags/\">Feature Flag</a> específico atualmente ativado."
     tags:
       - Retargeting
   - name: Grupo de inscrições

@@ -13,11 +13,13 @@ _Date de révision: 9 décembre 2024_
 
 _(En vigueur à partir de la date de révision ; sous réserve de modifications)_
 
-Les conditions supplémentaires suivantes s'appliquent à l'utilisation du canal SMS par le client : 
+Les conditions supplémentaires suivantes s'appliquent à l'utilisation par le client du canal de messages mobiles :
 
 ## Définitions
 
 **" Agrégateurs ",** **" Transporteurs "** ou **" Intermédiaires de messages mobiles "** désigne les intermédiaires tiers (i) qui transmettent les messages mobiles entre les fournisseurs de messages mobiles et les transporteurs ; (ii) qui sont des fournisseurs de services sans fil (e.g., T-Mobile, AT&T, etc.) ; et/ou (iii) qui sont impliqués dans les transmissions de messages RCS des fournisseurs de messages mobiles vers les utilisateurs finaux.
+
+Les **fournisseurs de SMS/MMS** ou **fournisseurs de messages mobiles** désignent les sous-traitants de Braze utilisés pour la transmission de SMS, MMS et/ou messages RCS, tels qu'identifiés à l'[adressewww.braze.com](http://www.braze.com/subprocessors)/subprocessors.
 
 On entend par **"messages SMS/MMS"** ou **"messages mobiles"** les messages SMS, MMS et/ou RCS.
 
@@ -36,6 +38,10 @@ Nonobstant ce qui précède, dans le cas où le Client envoie des Messages mobil
 ## Conditions d'exception pour l'utilisation de webhook
 
 Applicable aux Clients qui ont souscrit à des crédits de messages à compter du 9 décembre 2024 (selon la date d'entrée en vigueur du Bon de commande) : les restrictions décrites dans la documentation sur la conformité du canal webhooks ne s'appliquent pas à l'utilisation de webhooks pour l'envoi de messages mobiles par l'intermédiaire d'une plateforme d'un fournisseur tiers vers des destinations identifiées comme " SMS/MMS Global " dans le tableau de ratio de crédit applicable pour les crédits de messages.
+
+## Apportez votre propre connecteur SMS (BYO)
+
+Les clients peuvent envoyer des messages mobiles à partir de Braze en utilisant des fournisseurs tiers grâce au modèle "BYO SMS Connector". Nonobstant ce qui précède, les personnalisés ne doivent pas utiliser le modèle BYO SMS Connector pour envoyer des messages mobiles aux États-Unis et au Canada. 
 
 ## Clauses de non-responsabilité
 

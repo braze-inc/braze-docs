@@ -3,7 +3,7 @@
 > With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
 {% alert important %}
-If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
+If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/).
 {% endalert %}
 
 {% multi_lang_include developer_guide/prerequisites/android.md %}
@@ -406,7 +406,7 @@ In your `braze.xml`, specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration:]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/)
+or set via [runtime configuration:]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/)
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -492,7 +492,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
+This flag can also be set via [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
 
 {% tabs %}
 {% tab JAVA %}
@@ -533,7 +533,7 @@ The Braze dashboard supports setting deep links or web URLs in push notification
 
 The Android SDK, by default, will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
-For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/):
+For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/):
 
 {% tabs %}
 {% tab JAVA %}
@@ -594,13 +594,13 @@ At this point, you should be able to see notifications sent from Braze. To test 
 
 ![The 'Test' tab of a push notification campaign in the Braze dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
-For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+For issues related to push display, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
 
 #### Testing analytics
 
 At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) article for a break down on push analytics.
 
-For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/).
+For issues related to push analytics, see our [troubleshooting guide]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/).
 
 #### Testing from command line
 
@@ -631,3 +631,30 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 ```
 
 This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+## FCM quota exceeded errors
+
+When your limit for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. The default limit for FCM is 600,000 requests per minute. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
+
+To check your current limit, go to your **Google Cloud Console** > **APIs & Services** > **Firebase Cloud Messaging API** > **Quotas & System Limits**, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+
+{% alert important %}
+Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
+### Best practices
+
+We recommend these best practices to keep these error volumes low.
+
+#### Request a rate limit increase from FCM
+
+To request a rate limit increase from FCM, you can contact [Firebase Support](https://firebase.google.com/support) directly or do the following:
+
+1. Go to the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+2. Locate the **Send requests per minute** quota.
+3. Select **Edit Quota**. 
+4. Enter a new value and submit your request.
+
+#### Request global rate limiting via Braze
+
+To apply a workspace-wide limit for Android push notifications, contact [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).

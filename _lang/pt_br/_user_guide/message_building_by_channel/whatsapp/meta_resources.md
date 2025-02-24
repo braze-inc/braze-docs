@@ -23,6 +23,33 @@ Consulte a seguinte documentação da Meta para saber mais sobre nomes de exibi�
 
 ## Atualizações de produtos do WhatsApp
 
+### Janeiro de 2025: WhatsApp pausando o envio de mensagens de marketing para usuários dos EUA a partir de 1º de abril
+*Última atualização em janeiro de 2025*
+
+O WhatsApp pausará o envio de mensagens de marketing para usuários dos EUA (pessoas com números de telefone dos EUA) a partir de 1º de abril de 2025. [Utilidade, serviço, autenticação](https://developers.facebook.com/docs/whatsapp/pricing/) e [mensagens de resposta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) ainda serão permitidas nos EUA. 
+
+O envio de mensagens de marketing (além de todos os outros tipos de mensagens) para todos os outros países ou regiões ainda é permitido e não será afetado.
+
+A Meta nos informou que está fazendo essa atualização para manter a integridade do ecossistema do WhatsApp nos EUA, onde o WhatsApp está crescendo rapidamente, mas ainda em um estágio inicial (por exemplo, mensagens de marketing têm um engajamento menor do que em outras regiões). Eles continuarão a avaliar quando o mercado dos EUA estiver pronto para retomar as mensagens de marketing.
+
+A entrega de mensagens de marketing para números de telefone com códigos de área dos EUA será rejeitada pelo WhatsApp e retornará um código de erro 131049. 
+
+### Novembro de 2024: Mudanças na política de aceitação do WhatsApp
+*Última atualização em janeiro de 2025*
+
+A Meta recentemente atualizou sua [política de aceitação](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Em vez de exigir consentimento específico do canal, as empresas agora podem enviar mensagens aos usuários na plataforma se:
+
+1. A pessoa deu seu número de telefone.
+2. A pessoa forneceu aceitação para envio de mensagens gerais, não apenas WhatsApp. 
+
+As empresas ainda precisam cumprir todas as leis locais e seguir os requisitos abaixo ao obter a aceitação:
+
+- As empresas devem deixar claro que uma pessoa está optando por receber comunicação da empresa.
+- As empresas devem declarar claramente o nome da empresa da qual a pessoa está optando por receber mensagens.
+- As empresas devem cumprir a legislação aplicável
+
+Embora o WhatsApp tenha afrouxado sua política, a Braze ainda recomenda coletar a aceitação específica para o canal do WhatsApp a fim de promover a melhor experiência do cliente e taxas de engajamento. Como sempre, consulte sua equipe jurídica para ver o que faz sentido para sua marca.
+
 ### Novembro de 2024: Atualizações no limite do modelo de marketing por usuário para pessoas nos EUA, antes da temporada de festas
 *Última atualização Dezembro 2024*
 

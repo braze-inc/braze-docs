@@ -20,33 +20,31 @@ Para usar localidades em seu envio de mensagens, crie uma campanha de e-mail ou 
 {% tabs %}
 {% tab editor de HTML %}
 
-1. Destaque o texto que você deseja traduzir. Selecione **Inserir tag de tradução**. Isso envolverá seu texto com tags de tradução. <br>![]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. Destaque o texto que você deseja traduzir. Selecione **Inserir tag de tradução**. Isso envolverá seu texto com tags de tradução. <br>![Editor de HTML com uma localização selecionada.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Salve a mensagem como um rascunho.
 3. Selecione **Vários idiomas** e adicione suas localizações para a mensagem usando o menu suspenso.
-4. Selecione **Baixar modelo** para baixar o modelo de tradução como um CSV. Em seguida, preencha as traduções no CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. Selecione **Baixar modelo** para baixar o modelo de tradução como um arquivo CSV. Em seguida, preencha as traduções no arquivo CSV. <br>![Um exemplo de um arquivo CSV de tradução.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. Selecione **Upload translations** para fazer upload do arquivo CSV com as traduções concluídas.
 
 {% endtab %}
 {% tab Editor de arrastar e soltar %}
 
-1. Adicione as tags de tradução {% raw %}`{% translation %}` e `{% endtranslation %}`{% endraw %} para envolver todos os URLs de texto e imagem ou link a serem traduzidos.<br>![]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
-2. Depois de adicionar as tags, salve sua mensagem como rascunho.
-3. Selecione **Vários idiomas** e adicione suas localizações para a mensagem usando o menu suspenso.
-4. Selecione **Baixar modelo** para baixar o modelo de tradução como um CSV. Em seguida, preencha as traduções no CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-5. Selecione **Upload translations** para fazer upload do arquivo CSV com as traduções concluídas.
+1. Adicione as tags de tradução {% raw %}`{% translation %}` e `{% endtranslation %}`{% endraw %} para envolver todos os URLs de texto e imagem ou link a serem traduzidos. 
+2. Adicione uma tag de ID a cada tag de tradução. Um exemplo é: {% raw %}`{% translation id_1 %}`{% endraw %} <br>![Editor de arrastar e soltar com dois IDs de tradução.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
+3. Depois de adicionar as tags, salve sua mensagem como rascunho.
+4. Selecione **Vários idiomas** e adicione suas localizações para a mensagem usando o menu suspenso.
+5. Selecione **Baixar modelo** para baixar o modelo de tradução como um arquivo CSV. 
+6. Preencha as traduções no arquivo CSV. Se tiver copiado e colado as tags de tradução diretamente da etapa 1, talvez seja necessário remover `<code>` da coluna **Translation tags** do arquivo CSV.
+7. Selecione **Upload translations** para fazer upload do arquivo CSV com as traduções concluídas.
 
 {% endtab %}
 {% endtabs %}
 
-Para atualizar as traduções, atualize o CSV e faça upload do arquivo novamente. Isso significa que qualquer alteração nas IDs ou localizações no CSV não será atualizada automaticamente em sua mensagem.
-
-{% alert tip %}
-Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) para gerenciar e atualizar traduções em suas campanhas e canvas.
-{% endalert %}
+Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atualizadas automaticamente em sua mensagem. Para atualizar as traduções, atualize o arquivo CSV e faça upload do arquivo novamente.
 
 ## Faça uma prévia de suas localidades
 
-Na seção **Preview & Test (Pré-visualização e teste** ), selecione **Multi-language User (Usuário multilíngue** ) para pré-visualizar a mensagem e verificar se a mensagem foi traduzida conforme o esperado.
+Na seção **Prévia e teste**, selecione **Usuário multilíngue** para verificar se a mensagem foi traduzida conforme o esperado.
 
 ## Perguntas frequentes
 
@@ -56,10 +54,13 @@ Faça a edição no arquivo CSV e, em seguida, faça upload do arquivo novamente
 #### Posso aninhar tags de tradução?
 Não.
 
+#### Posso usar localidades em meus modelos de e-mail?
+Não. As localidades são compatíveis apenas com o editor de e-mail para campanhas e etapas de mensagens no Canva.
+
 #### Posso adicionar estilo HTML nas tags de tradução?
 Sim. No entanto, confira se o estilo HTML não está traduzido com o conteúdo.
 
-#### Que validações ou verificações extras o Braze faz?
+#### Que validações ou verificações extras o Braze faz para as traduções?
 
 | Cenário                                                                                                                                                 | Validação em Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|

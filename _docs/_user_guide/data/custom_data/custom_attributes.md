@@ -3,7 +3,7 @@ nav_title: Custom Attributes
 article_title: Custom Attributes
 page_order: 10
 page_type: reference
-description: "This reference article describes custom attributes, and explains the various custom attribute data types."
+description: "This page describes custom attributes and explains the various custom attribute data types."
 search_rank: 1
 ---
 
@@ -23,13 +23,17 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can fin
 
 ![Four custom attributes that are booleans.]({% image_buster /assets/img/export_custom_attributes.png %})
 
-The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active. 
+The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
+
+{% alert important %}
+For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute.
+{% endalert %}
 
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
 ### Marking as personally identifiable information (PII)
 
@@ -54,7 +58,7 @@ There are two ways you can remove custom attributes from user profiles:
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
 ### Exporting data
 
@@ -66,13 +70,13 @@ The following lists methods across various platforms that are used to set custom
 
 {% details Expand for documentation by platform %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
 
 {% enddetails %}
 

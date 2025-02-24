@@ -62,7 +62,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 This returns as the following:
 
-> Get the ultimate trio Tales, Teslagrad, and Acaratus today!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
@@ -72,24 +72,7 @@ Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_c
 
 You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
 
-To do this, you'll use a Liquid `if` statement in a format like this:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
-
-#### Use case: Liquid `if` snippet
-
-In this scenario, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+To do this, you'll use a Liquid `if` statement, such as in this example:
 
 {% raw %}
 ```liquid
@@ -103,6 +86,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. If `venue_name` is `blank`, nothing will display. 
+
+Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
 
 ### Using images {#using-images}
 
@@ -138,6 +125,10 @@ You can also use templating to dynamically pull catalog items based on custom at
     ]
 }
 ```
+
+{% alert note %}
+JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
+{% endalert %}
 
 Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
 

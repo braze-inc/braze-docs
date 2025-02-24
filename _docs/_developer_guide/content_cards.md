@@ -18,7 +18,7 @@ description: "This landing page links to various ways to customize Braze SDK Con
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Customizing Content Card Styles
-    link: /docs/developer_guide/content_cards/
+    link: /docs/developer_guide/content_cards/customizing_styles
     image: /assets/img/braze_icons/brush-02.svg
   - name: Customizing Content Card Behavior
     link: /docs/developer_guide/content_cards/customizing_behavior/
@@ -27,9 +27,9 @@ guide_featured_list:
     link: /docs/developer_guide/content_cards/customizing_feed/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Logging Analytics 
-    link: /docs/developer_guide/content_cards/
+    link: /docs/developer_guide/content_cards/logging_analytics
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Creating Custom Content Cards
-    link: /docs/developer_guide/content_cards/
+    link: /docs/developer_guide/content_cards/creating_custom_content_cards
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---

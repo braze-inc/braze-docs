@@ -16,6 +16,7 @@ Custom events are actions taken by, or updates about, your users. When custom ev
 ## Use cases
 
 Some common custom event use cases include:
+
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
 - Using dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
@@ -36,7 +37,7 @@ Select the menu next to a custom event for the following actions:
 
 ### Blocklisting
 
-You can blocklist individual custom events through the actions menu, or select and blocklist up to 10 events in bulk. 
+You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
 When you block a custom event:
 
@@ -58,15 +59,11 @@ You can add tags to a custom event after it's created if you have the "Manage Ev
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
 
 ## Exporting data
 
 To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
-
-{% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Logging custom events
 
@@ -74,13 +71,13 @@ Custom events require additional setup. Refer to the list below for documentatio
 
 {% details Expand for documentation by platform %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
 
 {% enddetails %}
 
@@ -167,7 +164,7 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an ecommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
@@ -208,11 +205,16 @@ For a full list of Liquid tags that will cause in-app messages to deliver as tem
 
 Use event property segmentation to target users based on custom events taken and the properties associated with those events. This increases your filtering options when segmenting by purchase and custom events.
 
-Event properties for custom events are updated in real-time for any segment that uses them. You can manage properties by going to **Data Settings** > **Custom Events** and selecting **Manage Properties** for the associated custom event. Custom event properties used in certain segment filters have a maximum look-back history of 30 days.
+Event properties for custom events are updated in real-time for any segment that uses them. You can manage properties by going to **Data Settings** > **Custom Events** and selecting **Manage properties** for the associated custom event. Custom event properties used in certain segment filters have a maximum look-back history of 30 days.
 
-{% alert note %}
-If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting.
-{% endalert %}
+##### Adding event properties for segmentation
+
+You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+To add event properties for segmentation, do the following:
+
+1. Go to your custom event and select **Manage properties**.
+2. Select the **Enable segmentation** toggle to add the event property for segmentation. You can access additional filtering options when segmenting.
 
 The event property segmentation filters include:
 

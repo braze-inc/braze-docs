@@ -28,7 +28,7 @@ Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience 
 
 Pour accéder au modèle d'intention abandonnée, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de l'**intention abandonnée**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -43,7 +43,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![Le nouveau nom, la nouvelle description et le nouveau tag de la toile.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
-### Étape 2 : Attribuez vos événements de conversion
+### Étape 2 : Attribuez vos événements de conversion
 
 Ensuite, attribuons notre événement de conversion. Étant donné que nous nous concentrons sur notre produit "Enormous Paper Plate", nous procéderons comme suit pour l'**événement de conversion principal A :**
 
@@ -53,7 +53,7 @@ Ensuite, attribuons notre événement de conversion. Étant donné que nous nous
 
 ![Événement de conversion principal - A avec le type de conversion "Effectue un achat" avec le nom de produit "Enormous Paper Plate". Le délai de conversion est de 3 jours.][1]
 
-### Étape 3 : Définir une planification d'entrée
+### Étape 3 : Définir une planification d'entrée
 
 Bien que la planification d'entrée de ce modèle soit définie sur **API-Triggered**, notre cas d'utilisation bénéficiera davantage d'une entrée basée sur l'action pour ce Canvas puisque nous voulons nous concentrer sur les utilisateurs qui ont abandonné leur panier (ce qui est une action).
 
@@ -70,7 +70,7 @@ Ensuite, définissons notre audience cible comme les utilisateurs qui ont effect
 
 !["Segment des acheteurs en ligne - 90 jours" comme segment d'utilisateurs à cibler pour ce Canvas.][3]
 
-Nous laisserons les contrôles d'entrée tels quels, de sorte que les utilisateurs ne soient pas autorisés à entrer à nouveau dans ce canvas et qu'il n'y ait pas de limite au nombre de personnes pouvant potentiellement entrer dans ce canvas.
+Nous laisserons les contrôles d'entrée tels quels, de sorte que les utilisateurs ne soient pas autorisés à entrer à nouveau dans ce canvas et qu'il n'y ait pas de limite au nombre de personnes qui peuvent potentiellement entrer dans ce canvas.
 
 En ce qui concerne les critères de sortie, les utilisateurs quitteront la toile s'ils ont acheté l'"énorme assiette en papier". Ainsi, ils ne recevront pas d'autres messages concernant un article qu'ils ont déjà acheté.
 

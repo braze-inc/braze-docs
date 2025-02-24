@@ -1,8 +1,4 @@
-# Integrating the Braze Android SDK
-
-> Learn how to integrate the Braze Android SDK. To learn more about the SDK in general, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
-
-## Integrating the SDK
+## Integrating the Android SDK
 
 ### Step 1: Configure `braze.xml`
 
@@ -281,7 +277,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 ```
 
 {% alert tip %}
-To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/).
+To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/platforms/android/initialization/runtime_configuration/).
 {% endalert %}
 
 ### Enable exclusive in-app message TalkBack

@@ -13,11 +13,13 @@ _Data de Revisão: 9 de dezembro de 2024_
 
 _(Válido a partir da data de revisão; sujeito a alterações)_
 
-Os seguintes termos adicionais se aplicam em relação ao uso do Canal SMS pelo Cliente: 
+Os seguintes termos adicionais se aplicam em relação ao uso do Canal de envio de mensagens pelo Cliente:
 
 ## Definições
 
 **"Agregadores",** **"Operadoras"** ou **"Intermediários de Mensagens Móveis"** significam intermediários terceiros (i) que transmitem Mensagens Móveis entre Provedores de Mensagens Móveis e Operadoras; (ii) que são prestadores de serviços sem fio (e.g., T-Mobile, AT&T, etc.); e/ou (iii) que estão envolvidos nas transmissões de Mensagens RCS dos Provedores de Mensagens Móveis para os Usuários Finais.
+
+**Provedores de SMS/MMS** ou **Provedores de Mensagens Móveis** significam os subprocessadores da Braze usados na transmissão de mensagens SMS, MMS e/ou RCS, conforme identificados em [www.braze.com/subprocessors](http://www.braze.com/subprocessors).
 
 **"Envio de mensagens SMS/MMS"** ou **"Mensagens móveis"** significa mensagens SMS, MMS e/ou RCS.
 
@@ -36,6 +38,10 @@ Não obstante o acima exposto, caso o Cliente envie Mensagens Móveis utilizando
 ## Termos de exceção de uso do webhook
 
 Aplicável a Clientes que tenham assinado Créditos de Mensagens em ou após 9 de dezembro de 2024 (conforme a Data de Vigência do Formulário de Pedido): as restrições descritas na Documentação de Conformidade do Canal de Envio de Mensagens não se aplicam ao uso de webhooks para o envio de Mensagens Móveis por meio de uma plataforma de Provedor Terceirizado para destinos identificados como "SMS/MMS Global" na Tabela de Proporção de Crédito aplicável para Créditos de Mensagens.
+
+## Traga seu próprio conector SMS (BYO)
+
+Os clientes podem enviar mensagens móveis do Braze usando provedores de terceiros por meio do modelo "BYO SMS Connector". Não obstante o acima exposto, os Clientes não devem usar o modelo BYO SMS Connector para enviar mensagens móveis para os EUA e o Canadá. 
 
 ## Isenções de responsabilidade
 

@@ -27,14 +27,14 @@ A tabela a seguir lista as notificações disponíveis:
 
 | Notificação | Descrição | Canais de notificação disponíveis |
 |--------------|-------------|-----------------|
-| Erros de credenciais do AWS | Notifica os destinatários quando a Braze recebe um erro ao tentar usar suas credenciais do Amazon Web Services para uma exportação de dados. | e-mail, Webhook |
+| Erros de credenciais do AWS | Notifica os destinatários quando a Braze recebe um erro ao tentar usar suas credenciais do Amazon Web Services para uma exportação de dados. Isso também inclui notificações de erros de credenciais para o Google Cloud Services e o Azure (Microsoft Cloud Services). | e-mail, Webhook |
 | Campanha interrompida automaticamente | Notifica os destinatários quando a Braze interrompe uma campanha. | E-mail |
 | Expiração da interação da campanha | Notifica os destinatários sobre qualquer campanha que esteja prestes a expirar os dados de interação da campanha, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que a referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
 | Campanha/canva atualizado | Notifica os destinatários quando uma campanha/canva ativa é atualizada ou desativada, assim como quando uma campanha/canva inativa é reativada ou quando rascunhos são lançados. | E-mail |
 | Expiração da interação do canva | Notifica os destinatários sobre qualquer canva que esteja prestes a expirar os dados de interação do canva, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que o referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
 | Cartão do feed de notícias publicado/ativo | Notifica os destinatários quando os cards do feed de notícias são agendados ou publicados. | e-mail, Webhook |
 | Erros de credenciais de push | Notifica os destinatários quando as credenciais de push de um app são inválidas e quando elas estão prestes a expirar. | e-mail, Webhook |
-| Campanha agendada enviada/não enviada | Notifica os destinatários quando as campanhas agendadas começam a ser enviadas ou quando as campanhas agendadas tentaram enviar, mas não tinham usuários elegíveis para enviar. | e-mail, Webhook |
+| Campanha agendada enviada/não enviada | Notifica os destinatários quando as campanhas programadas começam a ser enviadas ou quando as campanhas programadas tentam enviar, mas não têm usuários elegíveis para enviar. | e-mail, Webhook |
 | Limite de campanha agendada atingido | Notifica os destinatários quando o limite de uma campanha agendada recorrente é atingido. | e-mail, Webhook |
 | Campanha agendada concluiu os envios | Notifica os destinatários quando uma campanha agendada conclui os envios. | e-mail, Webhook |
 | Relatório semanal de análise de dados | Toda segunda, envia para os destinatários um resumo das atividades da semana anterior ocorridas no espaço de trabalho. Os destinatários recebem um resumo de todos os espaços de trabalho dos quais fazem parte. | E-mail |
@@ -66,8 +66,7 @@ Slack tem um [app de webhook de entrada][67] que permite que mensagens sejam pos
     ![Selecione as notificações do Slack para ativar][65]{: style="max-width:60%;"}<br><br>
 5. Digite a URL que o Slack gerou para você.
 
-Pronto! Você deve começar a receber notificações sobre sua empresa neste canal do Slack. Você também pode conferir o artigo de ajuda do Slack sobre este tópico: [Envio de mensagens com o Webhooks de entrada][62]].
-
+Pronto! Você deve começar a receber notificações sobre sua empresa nesse canal do Slack. Você também pode conferir o artigo de ajuda do Slack sobre este tópico: [Envio de mensagens com o Webhooks de entrada][62]].
 
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [63]: {% image_buster /assets/img_archive/slack_f.png %}

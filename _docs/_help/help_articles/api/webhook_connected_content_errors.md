@@ -153,13 +153,9 @@ If you believe the unhealthy host detection may be causing issues, contact [Braz
 
 ## Automated emails and Message Activity Log entries
 
-{% alert important %}
-Automated emails and Message Activity Log entries are currently in early access. Contact your customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 ### Setting up automated emails
 
-If you experience more than 100,000 webhook or Connected Content endpoint errors in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
 
 - Name of the workspace
 - A link to the Canvas or campaign
@@ -168,10 +164,14 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 - Time the error was last observed
 - Links to the Message Activity Log and related documentation
 
+{% alert note %}
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
 The endpoint errors are:
 
 - **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
-- **`5XX`:** `500`, `502`, `503`, `504`, `599`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
 
 These emails are only sent once per day at the workspace level. If no users sign up for these emails, then all company administrators will be notified.
 

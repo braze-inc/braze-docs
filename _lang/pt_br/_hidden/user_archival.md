@@ -85,7 +85,7 @@ Se necessário, você pode excluir os usuários por meio do [endpoint `/users/de
 
 ## Personalização da política de arquivamento do usuário
 
-O Braze fornece recursos de orquestrações de dados que permitem personalizar a política de arquivamento do usuário. Crie uma política de arquivamento de usuários que ofereça o melhor dos dois mundos com o componente Canva [User Update]({{site.baseurl}}/user_update/).
+O Braze fornece recursos de orquestrações de dados que permitem personalizar a política de arquivamento do usuário. Crie uma política de arquivamento de usuários que ofereça o melhor dos dois mundos com o componente Canva [Atualização de usuário]({{site.baseurl}}/user_update/).
 
 Isso permite que você:
 
@@ -94,7 +94,7 @@ Isso permite que você:
 
 ### Etapas
 
-1. Direcionamento de usuários que atendam aos critérios de arquivamento e que você gostaria de manter.<br><br>
+1. Alvo usuários que atendem aos critérios de arquivamento da sua marca e que você gostaria de reter.<br><br>
       ![Usuários-alvo que receberam qualquer mensagem pela última vez há mais de 23 semanas, nunca receberam uma mensagem de uma campanha ou etapa do Canva, usaram esses aplicativos pela última vez há mais de 23 semanas e usaram esses aplicativos exatamente zero vezes.][2]<br><br>
 2. Defina a reelegibilidade para um período de pouco menos de 6 meses.<br><br>
       ![Controles de entrada com a reelegibilidade ativada e a janela de reelegibilidade definida para 23 semanas.][3]<br><br>

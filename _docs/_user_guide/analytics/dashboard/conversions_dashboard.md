@@ -37,6 +37,8 @@ After the page loads, select a **Conversion Event** to filter the report for con
 
 ### Using custom events
 
+For custom event metrics to appear on the conversions dashboard, you must have a conversion event and a Canvas entry event in the date range specified on the page. 
+
 To calculate conversions of an event that wasn't set up as a conversion event on the campaign or Canvas, select a specific custom event to use as a conversion event. 
 
 1. When setting up your report, turn on **Use custom events**.
@@ -65,7 +67,7 @@ The conversion details table always shows one column for *Recipients* and anothe
 | Conversion Rate (Recipients) | Calculated as: (Number of conversions) / (Number of recipients) |
 | Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
 | Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report. If multiple channels are selected, this defaults to last-touch attribution. |
-{: .reset-td-br-1 .reset-td-br-2 }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
@@ -109,4 +111,5 @@ To download the time series data, select <i class="fas fa-bars"></i> and then se
 
 | Term | Definition |
 | --- | --- |
-| Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Delivery</li></ul>{:/} |
+| Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Click</li></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

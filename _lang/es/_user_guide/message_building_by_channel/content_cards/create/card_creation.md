@@ -99,7 +99,7 @@ En esta sección se describen las principales diferencias entre la creación de 
   <tr>
     <td class="leftHeader">Análisis</td>
     <td class="tg-0pky"><em>Mensajes Enviados</em> se refiere al número de tarjetas creadas y disponibles para ser vistas. Esto no cuenta si los usuarios vieron la tarjeta.</td>
-    <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas mostradas a los usuarios. <br><br>Aunque sus usuarios alcanzables e impresiones no cambiarán, puede esperar ver una disminución en el volumen de envíos<em>(Mensajes Enviados</em>) cuando una tarjeta se crea en la primera impresión en comparación con si la misma tarjeta se creara en el lanzamiento de la campaña o en la entrada del paso Canvas.</td>
+    <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas enviadas a un usuario tras el inicio de una sesión. En Canvas, a los usuarios que entran en el paso sin iniciar una sesión no se les envía una tarjeta, por lo que esta métrica puede no coincidir con el número de usuarios que entran en un paso.<br><br>Aunque sus usuarios alcanzables e impresiones no cambiarán, puede esperar ver una disminución en el volumen de envíos<em>(Mensajes Enviados</em>) cuando una tarjeta se crea en la primera impresión en comparación con si la misma tarjeta se creara en el lanzamiento de la campaña o en la entrada del paso Canvas.</td>
   </tr>
   <tr>
     <td class="leftHeader">Tiempo de procesamiento</td>

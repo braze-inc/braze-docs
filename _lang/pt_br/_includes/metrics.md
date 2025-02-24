@@ -54,6 +54,10 @@ Os <i>cliques no corpo da mensagem</i> ocorrem quando um usuário clica em uma m
 A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que foram abertos por um único usuário ou máquina pelo menos uma vez, e está disponível apenas no <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>Fechar mensagem</i> é o número total de cliques no botão Fechar da mensagem. Isso só existe para mensagens no app criadas no editor de arrastar e soltar, não no editor tradicional.
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 <i>Entregas confirmadas</i> são quando a operadora confirma que a mensagem foi entregue ao número de telefone de destino.
 {% endif %}
@@ -123,7 +127,7 @@ As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada por
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-<i>O valor do tempo de vida por usuário</i> é a média da soma da campanha e da receita do Canva em um determinado dia.
+O <i>valor do tempo de vida por usuário</i> é a média da soma da campanha e da receita do Canva em um determinado dia.
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}

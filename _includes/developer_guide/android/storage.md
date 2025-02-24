@@ -30,6 +30,6 @@ The following example showcases allowlisting the device object to only include t
 ```
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-Visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article to read more about the automatically collected device properties.
+Visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) article to read more about the automatically collected device properties.
 
 

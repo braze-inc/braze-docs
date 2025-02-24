@@ -20,7 +20,7 @@ Formulas, especially when combined with custom events, can help you understand u
 The following are some examples of the kinds of behavior patterns that can be detected using formulas:
 
 - **Ride-sharing apps:** If you have a custom event for when the user cancels a ride, you can configure a function for Canceled Rides / DAU to find if certain user segments tend to cancel more rides than others.
-- **Ecommerce apps:** By configuring a function for purchases of a certain product ID / MAU, you can compare the popularity of a recently promoted product between segments, even if all the promotions couldn't be tracked using Braze.
+- **eCommerce apps:** By configuring a function for purchases of a certain product ID / MAU, you can compare the popularity of a recently promoted product between segments, even if all the promotions couldn't be tracked using Braze.
 - **Media apps using ads:** If the users' experience is interrupted by ads between video or audio clips, recording mid-ad exits as a custom event and calculating the ratio of mid-ad exits / DAU can help find the best segments to target with a campaign for ad-free premium subscriptions.
 
 ## Creating formulas

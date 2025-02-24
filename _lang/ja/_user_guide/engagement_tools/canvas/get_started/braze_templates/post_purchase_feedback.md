@@ -90,7 +90,7 @@ tool: Canvas
 4. [**メッセージを編集**] を選択して、テンプレートのメールメッセージをフィードバック調査メッセージに置き換えます。これには、ユーザー・ジャーニーのアクション・パスのステップで参照される、どのオプションが選択されたかをキャプチャするための各コール・トゥ・アクションのリンクの置き換えも含まれる。
 
 {% alert tip %}
-[キャンバスエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)を使用して、どの商品を参照しているかに応じてキャンバスのメッセージをカスタマイズできます。
+[キャンバスエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)を使用して、参照している製品に基づいてキャンバス内のメッセージをカスタマイズできます。
 {% endalert %}
 
 #### フィードバック調査を設定する

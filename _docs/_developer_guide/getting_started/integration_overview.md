@@ -136,7 +136,8 @@ During SDK implementation, you will:
 
 ### Using the Braze API
 
-You will use our REST API for different tasks at different points throughout your time using Braze. The Braze API is useful for: 
+You will use our REST API for different tasks at different points throughout your time using Braze. The Braze API is useful for:
+
 1. Importing historical data; and
 2. Continuous updates that aren’t triggered in Braze. For example, a user profile upgrades to VIP without them logging into an app, so the API needs to communicate this info to Braze.
 
@@ -150,7 +151,7 @@ While using the API, ensure you batch your requests and only send delta values. 
 
 Braze is all about data. Data in Braze is stored on the user profile. 
 
-Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points).
+Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data/data_points/).
 
 ### Migrating legacy user data
 
@@ -160,14 +161,14 @@ You can also import users and update customer attribute values through a one-tim
 
 ### Setting up session tracking
 
-The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/)).
+The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)).
 
 ### Tracking custom events, attributes, and purchase events
 
-Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
+Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
 
 {% alert tip %}
-User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) article for best practices.
+User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) article for best practices.
 {% endalert %}
 
 ### Other tools

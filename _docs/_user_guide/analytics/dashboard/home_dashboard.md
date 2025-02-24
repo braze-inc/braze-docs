@@ -62,7 +62,7 @@ A low MAU-to-user ratio may indicate that you need to diversify your messaging c
 ### Lifetime sessions
 
 *Lifetime sessions* is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app or visits your website. For a more precise definition on how sessions are defined by platform, view the corresponding 
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) session tracking developer articles.
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) session tracking developer articles.
 
 ### Monthly active users
 

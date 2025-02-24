@@ -7,8 +7,8 @@
 
 To use this feature, you'll need to complete the following:
 
-- [Integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true)
-- [Set up push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
+- [Integrate the Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration)
+- [Set up push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
 
 ## Setting up push notifications
 

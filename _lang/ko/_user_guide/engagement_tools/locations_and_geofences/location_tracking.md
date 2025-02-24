@@ -54,12 +54,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 비콘 및 지오펜스에 대한 파트너십 지원
+## 파트너십 지원을 위한 비콘 및 지오펜스
 
 기존의 비콘 또는 지오펜스 지원을 타겟팅 및 메시징 기능과 결합하면 사용자의 물리적 행동에 대한 더 많은 정보를 얻을 수 있어 그에 따라 메시지를 보낼 수 있습니다. 당신은 일부 파트너와 함께 위치 추적을 활용할 수 있습니다: 
 
 - [Radar][6]
-- [Gimbal][10]
+- [Infillion][10]
 - [Foursquare][7]
 
 ## 자주 묻는 질문
@@ -74,5 +74,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

@@ -18,7 +18,7 @@ This article includes information on News Feed, which is being deprecated. Braze
 
 ## Custom manager listener
 
-The `BrazeInAppMessageManager` automatically handles the display and lifecycle of in-app messages. If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [extras]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/customization/key_value_pairs/), and much more.
+The `BrazeInAppMessageManager` automatically handles the display and lifecycle of in-app messages. If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [extras]({{site.baseurl}}/developer_guide/platforms/android/news_feed/customization/key_value_pairs/), and much more.
 
 ### Step 1: Implement an in-app message manager listener
 
@@ -62,14 +62,14 @@ However, if there is no in-app message being displayed, the following delegate m
 {% tab JAVA %}
 ```java
 @Override
-public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessageBase) {
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
   return InAppMessageOperation.DISPLAY_NOW;
 }
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InAppMessageOperation {
+override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
   return InAppMessageOperation.DISPLAY_NOW
 }
 ```

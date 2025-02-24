@@ -182,7 +182,7 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 | 헤더 | 콘텐츠 |
 | --- | --- |
-| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_a9aa44c2-8cf4-475a-81fd-574aaf78933c/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_902b769b-ec1e-4583-9e19-a004ed1eefc2/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

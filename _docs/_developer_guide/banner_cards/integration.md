@@ -187,6 +187,14 @@ This feature is not currently supported on Roku.
 {% tabs %}
 {% tab JavaScript %}
 
+Create a container element for the banner. Be sure to set its width and height.
+
+```html
+<div id="global-banner-container" style="width: 100%; height: 450px;"></div>
+```
+
+Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -199,6 +207,9 @@ braze.subscribeToBannersUpdates((banners) => {
    
     // get this placement's banner. If it's `null` the user did not qualify for one.
     const globalBanner = braze.getBanner("global_banner");
+    if (!globalBanner) {
+        return;
+    }
 
     // choose where in the DOM you want to insert the banner HTML
     const container = document.getElementById("global-banner-container");
@@ -229,12 +240,42 @@ AppDelegate.braze?.banners.getBanner(for: "global_banner", { banner in
 
 // If you simply want the Banner view, you may initialize a `UIView` with the placement ID:
 if let braze = AppDelegate.braze {
-  let bannerUIView = BrazeBannerUI.BannerUIView(placementId: "global_banner", braze: braze)
+  let bannerUIView = BrazeBannerUI.BannerUIView(
+    placementId: "global_banner",
+    braze: braze,
+    // iOS does not perform automatic resizing or visibility changes.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
+    processContentUpdates: { result in
+      switch result {
+      case .success(let updates):
+        if let height = updates.height {
+          // Adjust the visibility and/or height.
+        }
+      case .failure(let error):
+        // Handle the error.
+      }
+    }
+  )
 }
 
 // Similarly, if you want a Banner view in SwiftUI, use the corresponding `BannerView` initializer:
 if let braze = AppDelegate.braze {
-  let bannerView = BrazeBannerUI.BannerView(placementId: "global_banner", braze: braze)
+  let bannerView = BrazeBannerUI.BannerView(
+    placementId: "global_banner",
+    braze: braze,
+    // iOS does not perform automatic resizing or visibility changes.
+    // Use the `processContentUpdates` parameter to adjust the size and visibility of your Banner Card according to your use case.
+    processContentUpdates: { result in
+      switch result {
+      case .success(let updates):
+        if let height = updates.height {
+          // Adjust the visibility and/or height according to your parent controller.
+        }
+      case .failure(let error):
+        // Handle the error.
+      }
+    }
+  )
 }
 ```
 {% endtab %}
@@ -395,6 +436,14 @@ This feature is not currently supported on Roku.
 {% endtabs %}
 
 {% enddetails %}
+
+## Handling test sends
+
+Use test sends to verify Banner Card integrations before launching a campaign. Test Banner Cards are stored in a separate in-memory cache and do not persist across app restarts. While no extra setup is needed, the device must be able to receive foreground push notifications to display test Banner Cards.
+
+{% alert important %}
+A test banner is treated like any other banner except it's removed at the next app session. You must have its placement set up in your app for the test banner to display.
+{% endalert %}
 
 ## Dimensions and sizing
 

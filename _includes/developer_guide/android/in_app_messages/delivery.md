@@ -7,7 +7,7 @@
 Our in-app message product allows you to trigger an in-app message display due to several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/).
+Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). Make sure to check out how to [log custom events]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/).
 {% endalert %}
 
 ## Delivery semantics
@@ -79,7 +79,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 ### Step 2: Create a push campaign
 
-Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/) triggered via the server sent event.
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) triggered via the server sent event.
 
 ![]({% image_buster /assets/img_archive/serverSentPush.png %})
 

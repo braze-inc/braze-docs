@@ -55,7 +55,7 @@ As with other custom styles, the entire style must be copied over to your local 
 
 ## Setting a fixed orientation
 
-To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/). Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
+To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/listeners/). Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
 
 {% tabs %}
 {% tab JAVA %}

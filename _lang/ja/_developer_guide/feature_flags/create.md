@@ -37,9 +37,9 @@ platform:
 
 ### ステップ 1:新しいフィーチャー・フラッグを作成する
 
-[**メッセージング**] > [**フィーチャーフラグ**] に進み、[**フィーチャーフラグを作成**] を選択します。
+**メッセージング** > **フィーチャーフラグ** に進み、**フィーチャーフラグを作成** を選択します。
 
-![Braze ダッシュボード] ({% image_buster /assets/img/feature_flags/feature-flags-list.png %}) で以前に作成された機能フラグのリスト{: style="max-width:75%"}
+![Braze ダッシュボード で以前に作成された機能フラグのリスト]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
 
 ### ステップ 2:詳細を記入する
 

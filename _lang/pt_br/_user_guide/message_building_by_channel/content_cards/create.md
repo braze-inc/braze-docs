@@ -31,7 +31,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode
 {:start="2"}
 2\. Selecione **Cartões de Conteúdo** ou, para campanhas de direcionamento em múltiplos canais, selecione **Multicanal**.
 3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
+4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Construtor de Relatórios]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar pelos tags relevantes.
 5. Adicione e nomeie quantas variantes desejar para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para mais informações sobre variantes, consulte [multivariante e Testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -115,6 +115,10 @@ As seguintes ações estão disponíveis para os links do cartão de conteúdo:
 
 {% alert warning %}
 Os campos de mensagem do cartão de conteúdo são limitados a 2 KB de tamanho total, calculado pela adição do tamanho em bytes dos seguintes campos: Título, Mensagem, URL da Imagem, Texto do Link, URL(s) do Link, e Pares Chave-Valor (nomes + valores). As mensagens que excederem esse tamanho não serão enviadas. Observe que isso não inclui o tamanho da imagem, mas sim o comprimento do URL da imagem.
+{% endalert %}
+
+{% alert warning %}
+Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Os cartões descartados também contam para esse limite de 250 cartões, o que significa que um grande número de cartões descartados pode reduzir o espaço disponível para novos cartões.
 {% endalert %}
 
 ## Etapa 4: Configurar definições adicionais (opcional)

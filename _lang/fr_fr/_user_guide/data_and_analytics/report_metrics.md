@@ -78,8 +78,8 @@ Ces utilisateurs ont été automatiquement désabonnés de toutes les notificati
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Rebonds</i>:Compter</li>
-        <li><i>Taux de rebond (Bounce %</i> ) ou <i>taux de rebond (Bounce Rate %)</i>: (Envoi - Bounces) / (Envois)</li>
+        <li><i>Rebonds</i> : Total</li>
+        <li><i>Taux de rebond (Bounce %</i> ) ou <i>taux de rebond (Bounce Rate %)</i>: (Rebonds)/(Envois)</li>
     </ul>
 </span>
 {:/}

@@ -95,7 +95,7 @@ You can view Global Control Group membership by going to the **Miscellaneous** s
 
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 

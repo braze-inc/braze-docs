@@ -112,6 +112,15 @@ Você precisa de permissões de administrador ou de todas as seguintes permissõ
 - Criar rascunhos de landing page
 - Publicar landing page
 
+## Níveis de planos
+
+O número de landing pages publicadas e domínios personalizados que você pode usar depende do seu tipo de plano: gratuito ou pago (incremental).
+
+| Recurso                                                                                                   | Nível gratuito     | Nível pago (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Landing pages publicadas                                                                 | Cinco por empresa | 20 adicionais |
+| Domínios personalizados          | Um por empresa | Cinco adicionais |
+
 ## Perguntas frequentes
 
 ### O que acontece quando um usuário envia suas informações na landing page?
@@ -129,10 +138,6 @@ Você pode editar o HTML de uma landing page usando o bloco Custom Code.
 ### Há relatórios disponíveis para landing pages?
 
 Não, isso não está disponível no momento.
-
-### Existe um editor de HTML para landing pages?
-
-Não, isso não está disponível no momento. Você pode usar o bloco Código personalizado no editor.
 
 ### Posso criar um webhook dentro de uma landing page?
 

@@ -20,7 +20,7 @@ To obtain the Content Card data models, subscribe to Content Card updates. There
 * **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard. 
 
-All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/).
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android]({{site.baseurl}}/developer_guide/platforms/android/content_cards/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/), [Web]({{site.baseurl}}/developer_guide/platforms/web/content_cards/).
 
 
 {% tabs %}

@@ -94,7 +94,7 @@ Ceci vous permet de :
 
 ### Étapes
 
-1. Cibler les utilisateurs qui correspondent aux critères d’archivage que vous souhaitez conserver.<br><br>
+1. Ciblez les utilisateurs qui répondent aux critères d'archivage de votre marque et que vous souhaitez conserver.<br><br>
       ![Cibler des utilisateurs qui ont reçu un message il y a plus de 23 semaines, n’ont jamais reçu un message d’une campagne ou d’une étape de Canvas, a utilisé ces applications il y a plus de 23 semaines et ont utilisé ces applications exactement zéro fois.][2]<br><br>
 2. Définissez la rééligibilité pour être d’un peu moins de 6 mois.<br><br>
       ![Les contrôles d’entrée avec la rééligibilité activée et sa fenêtre définie sur 23 semaines.][3]<br><br>
