@@ -103,7 +103,7 @@ The following is a `/users/track` example with an "Ordered" custom event. After 
 {% endtabs %}
 
 {% alert note %}
-For nested custom events, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
+For nested custom event properties, if the year is less than 0 or greater than 3000, Braze doesn't store these values on the user.
 {% endalert %}
 
 ### Liquid templating
