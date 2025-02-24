@@ -38,7 +38,7 @@ An example file may look like this:
 The MD5 digest can only be calculated using a known downcased email address, push token, or E.164 phone number. A known MD5 digest can't be reversed to obtain the downcased email address, push token, or E.164 phone number.
 {% endalert %}
 
-{% alert note %}
+{% alert tip %}
 **Having trouble finding your push tokens in your buckets?**<br>
 Braze downcases your push tokens before we hash them. This results in the push token `Test_Push_Token12345` being downcased to `test_push_token12345` in the key path with the hash `32b802170652af2b5624b695f34de089`.
 {% endalert %}
