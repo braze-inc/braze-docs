@@ -17,14 +17,18 @@ tool:
 
 You can review the details of your campaign or Canvas in the final step of your editor. For campaigns, this is **Review Summary**, and for Canvases, this is **Summary**. When you turn on the approval workflow, you must approve each section of the summary before the message can launch. The default status for each section is **Pending Approval**.
 
-For campaigns, you must approve these key components:
+### For campaigns
+
+To launch a campaign, you must approve these key components:
 
 - **Messages:** This is the campaign message.
 - **Delivery:** This is the delivery type and determines when users will receive the campaign.
 - **Target Audience:** This determines who will receive the campaign.
 - **Conversion Events:** This is the metric you're tracking for engagement and reporting purposes.
 
-For Canvas, you must approve these key components:
+### For Canvas
+
+To launch a Canvas, you must approve these key components:
 
 - **Conversion Events:** This is the metric you're tracking for engagement and reporting purposes.
 - **Entry Schedule:** This includes the type of entry schedule and when users should enter the Canvas.

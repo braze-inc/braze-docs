@@ -27,6 +27,12 @@ In the case of triggered campaigns with re-eligibility turned on, users who [did
 
 Additionally, if you're trying to send a message immediately with a re-eligibility of zero minutes, we'll always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
+#### Re-eligibility with API-triggered campaigns
+
+The number of times a user receives an API-triggered campaign can be limited using re-eligibility settings. This means the user will receive the campaign only once or once in a given window, regardless of how many times the API trigger is fired.
+
+For example, let’s say you’re using an API-triggered campaign to send the user a campaign about an item they recently viewed. In this case, you can limit the campaign to send a maximum of one message a day regardless of how many items they viewed while firing the API trigger for each item. On the other hand, if your API-triggered campaign is transactional, you will want to make sure that the user receives the campaign every time they do the transaction by setting the delay to zero minutes.
+
 ### For Canvas
 
 To turn on re-eligibility for a Canvas, select **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
@@ -47,7 +53,7 @@ Re-eligibility for both campaigns and Canvases are calculated in seconds, not ca
 
 Similarly, a month counts as exactly 2,592,000 seconds, equal to approximately 30 days.
 
-### Use case
+### Example
 
 Consider the following scenario:
 

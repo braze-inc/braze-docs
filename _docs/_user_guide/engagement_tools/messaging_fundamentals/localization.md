@@ -17,12 +17,12 @@ tool:
 
 Braze automatically collects locale information from user devices after integrating the SDK. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**.
 
-Visit the following [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) resources for technical details on how locale is receive based on your platform.
+Refer to the following [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) resources for technical details on how locale is receive based on your platform.
 
 ### Orchestration options
 
-- [Campaign](#campaign) (one template for all versus one template per country)
-- [Canvas](#canvas) (one journey for all versus one journey per country)
+- [Campaign](#for-campaign) (one template for all versus one template per country)
+- [Canvas](#for-canvas) (one journey for all versus one journey per country)
 
 ### Personalization options
 
@@ -35,7 +35,7 @@ Visit the following [iOS](https://developer.apple.com/library/ios/documentation/
 
 ## Orchestration
 
-### Campaign
+### For campaign
 
 {% tabs local %}
 {% tab One template for all %}
@@ -65,7 +65,7 @@ The "one template per country" approach separates templating into different send
 {% endtab %}
 {% endtabs %}
 
-### Canvas
+### For Canvas
 
 {% tabs local %}
 {% tab One journey for all %}
@@ -84,7 +84,8 @@ After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{s
 
 In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
 
-Localization can be achieved through the following methods:
+Localization can be achieved with the following methods:
+
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
 - Bespoke user journeys per country, the implementation of [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to intuitively segment users on a large scale for each journey by creating separate message threads for each country in a single Canvas
 
