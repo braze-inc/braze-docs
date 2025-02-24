@@ -35,7 +35,7 @@ An example file may look like this:
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert note %}
-The MD5 digest can only be calculated using a known downcased email address, push token, or E.164 phone number. A known MD5 digest cannot be reversed to obtain the downcased email address, push token, or E.164 phone number.
+The MD5 digest can only be calculated using a known downcased email address, push token, or E.164 phone number. A known MD5 digest can't be reversed to obtain the downcased email address, push token, or E.164 phone number.
 {% endalert %}
 
 {% alert note %}
