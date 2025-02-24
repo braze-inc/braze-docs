@@ -206,22 +206,22 @@ You will track updates to the Braze platform via the Braze [GitHub](https://gith
 
 ## SDK Rate Limits 
 
-### Monthly Active Users CY 24-25. 
-For customers who have purchased **Monthly Active Users - CY 24-25**, Braze enforces server side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and maintain fast, reliable service. 
+### Monthly Active Users CY 24-25 
+For customers who have purchased **Monthly Active Users - CY 24-25**, Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and maintain fast, reliable service. 
 
 * Steady (hourly) rate limits are set according to the expected SDK traffic on your account, which may correspond to the number of Monthly Active Users (MAU) you have purchased, industry, seasonality, or other factors. Once the steady rate limit is reached, Braze will throttle requests until the next hour.
 * All rate limited requests are automatically retried by the SDK.
 * SDK requests are correlated with the amount of custom data collected in your implementation. If you are consistently near or at your steady rate limit, consider:
     * Reviewing your SDK integration to reduce excessive data collection.
     * Blocklisting custom data that is not essential for your marketing use cases.
-* Burst rate limits are short-lived rate limits that apply when a high volume of requests arrive in a very short period (e.g., within seconds). You do not need to take action when burst limits occur, the SDK will retry shortly after.
+* Burst rate limits are short-lived rate limits that apply when a high volume of requests arrive in a very short period (that is, within seconds). You do not need to take action when burst limits occur, the SDK will retry shortly after.
 
 ### Finding your rate limits
 * Current limits based on expected SDK throughput can be found in the dashboard under: Settings > APIs and Identifiers > API and SDK limits.
 * Historical usage can be found under: Settings > APIs and Identifiers > API and SDK dashboard.
 
 ### Changes and support
-Braze may modify rate limits to protect system stability or allow for increased data throughput on your account. If you have questions about rate limits and how they impact your business, please contact Braze Support or your Customer Success Manager.
+Braze may modify rate limits to protect system stability or allow for increased data throughput on your account. If you have questions about rate limits and how they impact your business, please contact Braze Support or your customer success manager.
 
 
 
