@@ -59,7 +59,7 @@ You can add tags to a custom event after it's created if you have the "Manage Ev
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
 
 ## Exporting data
 

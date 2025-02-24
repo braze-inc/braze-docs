@@ -58,7 +58,7 @@ There are two ways you can remove custom attributes from user profiles:
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
 ### Exporting data
 
