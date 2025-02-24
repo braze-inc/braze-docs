@@ -59,6 +59,9 @@ The status code element of a server response is a 3-digit number where the first
 - The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
 - The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal errors chart for a full list of 4XX error codes and descriptions.
 - The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, for example, the server you're trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff. In the event of an incident or outage, Braze is not able to replay any REST API call that failed during the incident window. You will need to retry any calls that failed during the incident window.
+  - A **502 error** is a failure before it even makes it to the destination server.
+  - A **503 error** means that the request made it to the destination server but we can't complete the request because there isn't enough capacity, there is a network issue, or similar.
+  - A **504 error** indicates a server did not receive a response from another server upstream.
 
 ### Fatal errors
 
