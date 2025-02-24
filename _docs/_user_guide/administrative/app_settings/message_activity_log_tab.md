@@ -38,7 +38,7 @@ You can filter by the following content logged in the **Message Activity Log**:
 - A/B testing errors
 - SMS/MMS errors
 - WhatsApp errors
-- Live Activity Errors
+- Live Activity errors
 - Bad user trigger errors
 
 These messages can come from our own system, your apps or platforms, or our third-party partners. This can result in an infinite number of messages that can appear in this log.
@@ -83,8 +83,8 @@ Errors from the last 60 hours are available in the Message Activity Logs. Logs t
 The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors.
 
 Here's an overview of conditions affecting how many logs will be saved:
-- A maximum of 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
-- A maximum of 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
+- Up to 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
+- Up to 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
     - Aborted message errors
     - Webhook errors
     - Push notification errors
