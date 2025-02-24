@@ -240,10 +240,3 @@ Historical usage can be found under: **Settings** > **APIs and Identifiers** > *
 ### Changes and support
 
 Braze may modify rate limits to protect system stability or allow for increased data throughput on your account. Contact Braze Support or your customer success manager for questions or concerns regarding rate limits and how they impact your business.
-
-
-
-
-
-
-
