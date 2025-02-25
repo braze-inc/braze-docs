@@ -11,13 +11,13 @@ page_order: 2
 
 ## How it works
 
-You can add a landing page liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link that data to their existing profile, rather than create a new profile for that user.
+You can add a landing page Liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link that data to their existing profile, rather than create a new profile for that user.
 
 {% alert tip %}
 You can also use landing pages for lead generation by embedding the page URL into your external channels. After you create a landing page, go to **Landing Page Details** to get the unique URL for your landing page.
 {% endalert %}
 
-## Using landing page liquid tags
+## Using landing page Liquid tags
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ Before you start, you'll need to create a [landing page]({{site.baseurl}}/user_g
 
 ### Step 1: Verify the URL handle
 
-Braze will use your landing page's URL handle to generate its unique liquid tag. If you want to change the current URL handle, go to **Messaging** > **Landing Pages**, then open your landing page. Under **URL handle**, you can enter a new URL handle.
+Braze will use your landing page's URL handle to generate its unique Liquid tag. If you want to change the current URL handle, go to **Messaging** > **Landing Pages**, then open your landing page. Under **URL handle**, you can enter a new URL handle.
 
 {% alert warning %}
 If you change the URL handle after sending your message, any user that attempts to visit your landing page using the old URL will be sent to a `404` page.
@@ -33,21 +33,21 @@ If you change the URL handle after sending your message, any user that attempts 
 
 ![An example URL handle for a landing page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
-### Step 2: Generate the liquid tag
+### Step 2: Generate the Liquid tag
 
 Go to **Messaging** > **Campaigns**, then choose a campaign. In your message editor, select **Personalization**.
 
 ![The 'Add personalization' button in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
-Braze will automatically generate a liquid tag using your [landing page's URL handle](#step-1-verify-your-url-handle). Refer to the following table to generate your tag:
+Braze will automatically generate a Liquid tag using your [landing page's URL handle](#step-1-verify-your-url-handle). Refer to the following table to generate your tag:
 
 |**Personalization type**| Choose **Landing Page**.|
 |**Landing page**|Choose the landing page [you previously created](#prerequisites).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-To add the liquid tag to your message, you can either select **Insert**, or copy the snippet to your clipboard and add it manually.
+To add the Liquid tag to your message, you can either select **Insert**, or copy the snippet to your clipboard and add it manually.
 
-![An auto-generated liquid tag for the selected landing page.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+![An auto-generated Liquid tag for the selected landing page.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
 
 Your snippet will be similar to the following:
 
@@ -59,4 +59,4 @@ Your snippet will be similar to the following:
 
 ### Step 3: Finalize and send your message
 
-Embed the liquid snippet into your message, then finalize the rest of your message. When you're ready, you can send the message to start tracking users through your landing page.
+Embed the Liquid snippet into your message, then finalize the rest of your message. When you're ready, you can send the message to start tracking users through your landing page.

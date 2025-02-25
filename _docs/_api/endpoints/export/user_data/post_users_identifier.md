@@ -141,7 +141,7 @@ For an example of the data that is accessible through this endpoint see the foll
 
 ### Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
+User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
