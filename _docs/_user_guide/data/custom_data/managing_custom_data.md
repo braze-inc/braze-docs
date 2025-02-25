@@ -59,7 +59,7 @@ When an event or attribute is blocklisted, any segment, campaign, or Canvas usin
 To stop tracking a specific custom attribute, event, or product, follow these steps:
 
 1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
-2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 10 to blocklist at a time.
+2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 100 to blocklist at a time.
 3. Select **Blocklist**.
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -131,7 +131,7 @@ Forcing data types does not apply to event properties or purchase properties.
 ![Custom attributes data type dropdown][75]
 
 {% alert warning %}
-If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
+If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
 {% endalert %}
 
 ### Data type coercion

@@ -37,7 +37,7 @@ Select the menu next to a custom event for the following actions:
 
 ### Blocklisting
 
-You can blocklist individual custom events through the actions menu, or select and blocklist up to 10 events in bulk. 
+You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
 When you block a custom event:
 
@@ -59,15 +59,11 @@ You can add tags to a custom event after it's created if you have the "Manage Ev
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
 
-You can view up to 10 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
+You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
 
 ## Exporting data
 
 To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
-
-{% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Logging custom events
 
