@@ -30,7 +30,7 @@ In order to render the Liquid passback properly, you must put the {% raw %}`${la
 ```
 {% endraw %}
 {% alert important %}
-Remember that the `:rerender` flag option is only one level deep. If the Connected Content response itself has more Connected Content tags, Braze will not re-render those additional tags.
+Remember that the `:rerender` flag option is only one level deep. If the Connected Content response itself has more Connected Content tags or any Catalogs tags, Braze will not re-render those additional tags.
 {% endalert %}
 
 ## Best practices
