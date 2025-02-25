@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Update Catalog Item"
-article_title: "PUT: Update Catalog Item"
+nav_title: "PUT: Replace Catalog Item"
+article_title: "PUT: Replace Catalog Item"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update catalog item Braze endpoint."
+description: "This article outlines details about the Replace catalog item Braze endpoint."
 
 ---
 {% api %}
-# Update catalog item
+# Replace catalog item
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Use this endpoint to update an item in your catalog.
+> Use this endpoint to replace an item in your catalog.
 
 If the `item_id` isn't found, this endpoint will create the item in your catalog. This endpoint is synchronous.
 

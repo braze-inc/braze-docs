@@ -59,7 +59,7 @@ When an event or attribute is blocklisted, any segment, campaign, or Canvas usin
 To stop tracking a specific custom attribute, event, or product, follow these steps:
 
 1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
-2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 10 to blocklist at a time.
+2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 100 to blocklist at a time.
 3. Select **Blocklist**.
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
