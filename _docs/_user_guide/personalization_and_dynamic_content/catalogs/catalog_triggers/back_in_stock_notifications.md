@@ -29,7 +29,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
     - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event.
     - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user for back-in-stock notifications. When this event occurs, the user that performed the event will be subscribed.
-    - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user does not perform this event, they will be unsubscribed after 90 days or when the back-in-stock event triggers, whichever happens first.
+    - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
     - **Item ID event property** is the property on the above custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an Item ID, that is present in a catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
     
     - A sample custom event would look like
