@@ -76,7 +76,7 @@ Starting February 25, 2025, a deferred event will no longer log a soft bounce ev
 You will notice a sizable drop in the volume of soft bounce events starting on February 25, 2025, resulting in the following potential changes:
 
 - Decrease in soft bounces for any reports built using Query Builder
-- Smaller segment size using SQL Extension if you’re targeting users that have soft bounced X times over Y period
+- Smaller segment size using SQL Extensions if you’re targeting users that have soft bounced X times over Y period
 - Drop in the number of Soft Bounce events delivered using Currents and any of our features using Snowflake
 - Drop in the number of soft bounces for Transactional Email product
 
