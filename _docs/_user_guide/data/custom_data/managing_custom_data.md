@@ -131,7 +131,7 @@ Forcing data types does not apply to event properties or purchase properties.
 ![Custom attributes data type dropdown][75]
 
 {% alert warning %}
-If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
+If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
 {% endalert %}
 
 ### Data type coercion
