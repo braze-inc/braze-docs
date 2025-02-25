@@ -2,8 +2,7 @@
 nav_title: Segment Extensions
 article_title: Segment Extensions
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilities."
 tool: Segments
 ---
@@ -154,6 +153,16 @@ To view the extension criteria, select **View Extension Details** to show the de
 ![""][8]{: style="max-width:70%;"}
 
 Now you can proceed as usual with [creating your segment][11].
+
+## Frequently asked questions
+
+### How many custom event property values can I add if I select "Performed a Custom Event" and add property filters?
+
+You can add one custom event property value for each custom event. You can then add both into your segment using the **AND** filter.
+
+### Can I archive Segment Extensions if they exist in an active campaign?
+
+No. Before you can archive a Segment Extension, you need to remove it from all active messaging.
 
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension1.png %}
