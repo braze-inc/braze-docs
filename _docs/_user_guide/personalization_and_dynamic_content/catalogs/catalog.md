@@ -86,6 +86,8 @@ You can also update the CSV file after selecting to create a catalog in the brow
 
 ### Method 2: Create in the browser
 
+To edit or create catalogs in the browser, you'll need the `manageCatalogsDashboardPermission` permission.
+
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Up to 250 characters
