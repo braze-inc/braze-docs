@@ -30,6 +30,10 @@ A <i>Hard Bounce</i> is when an email fails to deliver to the recipient due to a
 A <i>Soft Bounce</i> is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox.
 {% endif %}
 
+{% if include.metric == "Deferral" %}
+A <i>Deferral</i> is when an email was not immediately delivered, but Braze retries the email for up to 72 hours after this temporary delivery failure to maximize the chances of successful delivery before attempts for that specific campaign are stopped.
+{% endif %}
+
 {% if include.metric == "Body Click" %}
 Push Story Notifications record a <i>Body Click</i> when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
 {% endif %}
