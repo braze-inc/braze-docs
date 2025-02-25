@@ -156,9 +156,11 @@ Now you can proceed as usual with [creating your segment][11].
 
 ## Frequently asked questions
 
-### How many custom event property values can I add if I select "Performed a Custom Event" and add property filters?
+### Can I create a Segment Extension that uses multiple custom events?
 
-You can add one custom event property value for each custom event. You can then add both into your segment using the **AND** filter.
+Yes. You can add multiple events or reference multiple Snowflake tables when using [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction; however, when creating the segment, you can combine multiple segment extensions with an AND or OR.
 
 ### Can I archive Segment Extensions if they exist in an active campaign?
 
