@@ -163,7 +163,7 @@ For example, if you want to edit an individual catalog item, you can use the [`/
 
 ## Catalog tiers {#tiers}
 
-The Free version of catalogs supports CSV file size of up to 100 MB for all CSV files combined across your company, whereas the Catalogs Pro version suports CSV file sizes of up to 2 GB for a single CSV file.
+The free version of catalogs supports CSV file sizes of up to 100 MB for all CSV files combined across your company, whereas the Catalogs Pro version supports CSV file sizes of up to 2 GB for a single CSV file.
 
 ### Catalog storage
 
