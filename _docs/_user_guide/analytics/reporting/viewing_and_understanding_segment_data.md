@@ -78,7 +78,21 @@ The **Messaging Use** section shows which segments, currently enabled campaigns,
 ### Historical membership
 The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range. 
 
-The historical segment membership count is an estimate, similar to how the segment size is an estimate before you click **Calculate Exact Statistics**. Braze estimates the membership count by querying users in a random bucket range. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
+The historical segment membership count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. Braze estimates the membership count by querying users in a random bucket range daily at 4 am in your company time zone. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
+
+#### Reasons for signficant changes
+
+The membership count may significantly change for a number of reasons, such as those in this table.
+
+| Reason | Example |
+| --- | --- |
+| Normal user behavior | Users subscribe after a particularly successful campaign. |
+| Users are imported by CSV | A CSV file of users was imported that significantly increased segment membership. |
+| Segment audience criteria is modified | An existing segment's audience rules (such as filters) were changed, causing significant changes in the segment membership. |
+| Users are deleted | A signficant number of users were deleted. |
+| A partner integration synced with Braze | A third-party sent data to Braze that significantly influenced segment membership. |
+| Dormant users are archived | A significant number of inactive profiles were archived. For example, a large number of CSV-imported users never log activity and get archived at the same time. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ![Use the Historical Membership dropdown to filter segment membership by date range.][10]
 
