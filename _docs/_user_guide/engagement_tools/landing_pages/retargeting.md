@@ -15,7 +15,7 @@ Before you start, you'll need to create a [landing page]({{site.baseurl}}/user_g
 
 ## Retargeting users
 
-Braze automatically tracks when a user submits a landing page form. You can view the total number of submissions for a form under [landing page analytics]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#viewing-analytics). However, for user-specific analytics, you'll need to retarget users through your landing page form using one of the following methods:
+Braze automatically tracks when a user submits a landing page form. You can view the total number of submissions for a form under [landing page analytics]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#viewing-analytics). However, for user-specific retargeting, you'll need to retarget users through your landing page form using one of the following methods:
 
 - **Using a segment:** You can create a new segment to automatically identify users who have or haven't submitted a landing page form.
 - **Using a message trigger:** You can set up a message trigger to automatically message users or enter them into a Canvas after they submit the form.
