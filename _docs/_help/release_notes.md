@@ -59,7 +59,7 @@ guide_featured_list:
 
 ## Deferrals
 
-Braze has updated our definition for what is a soft bounce and is sending a new event called **Deferrals** starting on February 25, 2025 at 10am EST. 
+Braze has updated our definition for what is a soft bounce and is sending a new event called [Deferrals]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) starting on February 25, 2025 at 10am EST. 
 
 For Sendgrid customers, we made a change to separate out deferral events from our soft bounce events. We count deferred events as a soft bounce event. This impacts any Sendgrid customer using Currents, Query Builder, SQL Extension, Snowflake Data Sharing, or our Transactional Email product.
 
