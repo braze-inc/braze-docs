@@ -1,3 +1,13 @@
+---
+nav_title: VWO
+article_title: VWO
+description: "Learn how to integrate VWO with Braze."
+alias: /partners/vwo/
+page_type: partner
+search_tag: Partner
+layout: dev_guide
+---
+
 # VWO
 
 VWO is a powerful experimentation platform that helps brands enhance key business metrics by enabling teams to run conversion optimization programs backed by customer behavior data. With VWO, you can unify customer data, gain behavioral insights, build hypotheses, run A/B tests across multiple platforms (server, web, and mobile), roll out features, personalize experiences, and optimize the entire customer journey.
@@ -77,7 +87,7 @@ The custom event properties can be used for segmentation and targeting.
 The integration currently doesn't support real-time sync of test data. There may be a delay of up to 15 minutes for test data to appear in Braze.
 
 
-##Troubleshooting
+## Troubleshooting
 
 If you're not seeing VWO data in Braze:
 1. Right-click on the page, where your test campaign is running and select **Inspect Element**.
