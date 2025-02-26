@@ -1,19 +1,4 @@
----
-nav_title: Content Cards
-article_title: Content Cards for Xamarin
-platform: 
-  - Xamarin
-  - iOS
-  - Android
-channel: content cards
-page_order: 3
-description: "This reference article covers Content Card implementation guidelines for the Xamarin platform."
-
----
-
-# Content Cards
-
-> Learn how to set up iOS, Android, and FireOS Content Cards for the Xamarin platform. The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
+Learn how to set up iOS, Android, and FireOS Content Cards for the Xamarin platform. The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 

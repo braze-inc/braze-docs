@@ -1,15 +1,3 @@
----
-page_order: 3
-nav_title: Content Cards
-description: "Learn how to setup Content Cards for the Braze Web SDK."
-platform: Web
-channel: content cards
----
-
-# Content Cards
-
-> This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods.
-
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Prerequisites

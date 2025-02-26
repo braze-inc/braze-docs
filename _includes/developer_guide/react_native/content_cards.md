@@ -1,17 +1,4 @@
----
-nav_title: Content Cards
-article_title: Content Cards for React Native
-platform: React Native
-page_order: 3
-page_type: reference
-description: "This article covers how to get started with Content Cards for React Native apps."
-channel: content cards
-
----
-
-# Content Cards
-
-> This article covers how to set up Content Cards for React Native. The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+This article covers how to set up Content Cards for React Native. The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 

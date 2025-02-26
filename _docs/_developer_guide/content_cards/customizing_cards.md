@@ -1,8 +1,8 @@
 ---
-nav_title: Custom Content Cards
-article_title: Creating Custom Content Cards
-page_order: 5
-description: "This article covers components of creating a custom Content Card UI"
+nav_title: Custom Cards
+article_title: Custom Content Cards
+page_order: 1
+description: "This article covers components of creating a custom Content Card UI."
 channel:
   - content cards
 platform:
