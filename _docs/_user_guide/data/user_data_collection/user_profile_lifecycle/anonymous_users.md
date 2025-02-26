@@ -31,7 +31,7 @@ If a user is identified on a device where they **have never** been identified be
 
 ### When users are identified on old devices
 
-If a user is identified on a device where they **have been** identified before, any previous activity that was already sent to the server from the anonymous user on that device will become "orphaned". In other words, that activity won't be linked to any future users. These "orphaned" users aren't included in user counts and won't receive any messages. This is because their activity isn't associated with an identified user, so there's no way to attribute their actions to a specific user.
+If a user is identified on a device where they **have been** identified before, previous activity that was already sent to the server from the anonymous user on that device will be merged into the identified profile and fill in the [respective fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior). Fields that already exist on the identified profile won't be overwritten.
 
 ## Assigning user aliases
 
