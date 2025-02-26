@@ -121,7 +121,7 @@ Total number of clicks on Button 2 of the message.
 Feature Flags
 {% endapitags %}
 
-The performance of the message across various dimensions. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
+The performance of the message across various channels. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
 
 {% endapi %}
 
