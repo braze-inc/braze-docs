@@ -94,6 +94,8 @@ Add another item to the array using the `$add` operator. The following example s
 
 Update values for specific objects within an array using the `_merge_objects` parameter and the `$update` operator. Similar to updates to simple [nested custom attribute]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) objects, this performs a deep merge.
 
+Note that `$update` cannot be used to remove a nested property from an object inside an array. In order to do this, you will need to remove the entire item from the array, and then add the object back without that specific key (using a combination of `$remove` and `$add`).
+
 The following example shows updating the `breed` property to `goldfish` for the object with an `id` of `4`. This request example also updates the object with `id` equals `5` with a new `name` of `Annette`. Since the `_merge_objects` parameter is set to `true`, all other fields for these two objects remain the same.
 
 ```json
