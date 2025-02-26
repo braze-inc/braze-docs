@@ -123,7 +123,7 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 ```
 
 {% alert note %}
-This approach cannot be used to delete a nested key inside an [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
+This approach can't be used to delete a nested key inside an [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects).
 {% endalert %}
 
 {% endtab %}
