@@ -1,7 +1,7 @@
 ---
 nav_title: "Email Love"
 article_title: Email Love
-description: "Learn how to integrate Email Love with Braze."
+description: "Learn how to integrate Braze with Email Love, a Figma plugin that enables you to design and export responsive and accessible HTML emails directly from Figma."
 alias: /partners/email_love/
 page_type: partner
 search_tag: Partner
@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Email Love: Figma Plugin for HTML Emails
 
-> [Email Love](https://emaillove.com/) is a Figma Plugin that enables you to design and export responsive and accessible HTML emails directly from Figma.
+> [Email Love](https://emaillove.com/) is a Figma plugin that empowers you to design and export responsive and accessible HTML emails directly from Figma.
 
-Email Love’s **Export to Braze** feature uses the Braze API to seamlessly upload your email templates to Braze.
+Email Love’s Export to Braze feature uses the Braze API to seamlessly upload your email templates to Braze.
 
 ## Prerequisites
 
@@ -23,48 +23,47 @@ Email Love’s **Export to Braze** feature uses the Braze API to seamlessly uplo
 
 ## Implementation
 
-### Step 1: Running the Plugin
+### Step 1: Run the plugin
 
-You will now need to load the plugin so that you can use it to design your email template. For more detailed instructions, please refer to [Email Love’s documentation](https://help.emaillove.com/exporting-an-email-design/6rcR6LPWq6BoYseKZf41nS/uploading-your-email-to-braze-/3ZcmGaGz6a8azeZQxWgKzm).
+To design your email template, you'll first need to load the plugin. For more detailed instructions, refer to Email Love’s documentation for [uploading your email to Braze](https://help.emaillove.com/exporting-an-email-design/6rcR6LPWq6BoYseKZf41nS/uploading-your-email-to-braze-/3ZcmGaGz6a8azeZQxWgKzm).
 
-### Step 2: Creating Your First Frame
+### Step 2: Create your first frame
 
-Click the **[+ No Template Selected]** button in the plugin interface to create a new frame for your email design.
+In the plugin, select the **[+ No Template Selected]** button to create a new frame for your email design.
 
-### Step 3: Designing the Template Using Email Love's Pre-Built Components
+### Step 3: Design the template with Email Love's pre-built components
 
-Select the frame and start adding components like **headers, content blocks, CTAs, and footers** from the plugin’s Assets library to structure your email.
+Select the frame you created and begin adding components (headers, content blocks, CTAs, and footers) from the plugin’s **Assets** library to structure your email.
 
-![Email Love's Pre-Built Components]({% image_buster /assets/img/email_love/emaillove1_content.png %})
+![Email Love's pre-built components.]({% image_buster /assets/img/email_love/emaillove1_content.png %})
 
-### Step 4: Customizing the Components
+### Step 4: Customize the Components
 
-Modify components using Figma’s design tools by adjusting text, images, colors, and layout elements, ensuring the design matches your brand. If a Footer component is added, a Braze Unsubscribe link will be automatically included during export.
+Modify components using Figma's tools to adjust your text, images, colors, and layout elements to align the template's design with your brand. If you add a footer component, a Braze unsubscribe link will automatically be included when you export.
 
-![Customize Components]({% image_buster /assets/img/email_love/emaillove2_components.png %})
+![Customize compoments in Figma.]({% image_buster /assets/img/email_love/emaillove2_components.png %})
 
-### Step 5: Exporting Your Email to Braze
+### Step 5: Create a Braze API Key
 
-#### 1. Create Braze API Key:
+1. Log into your Braze Account and go to **Settings** > **API & Identifiers**.
+2. Select the **New API Key** button.
+3. Give your API key a name and select **Templates** in the **Permissions** section. 
+4. Select **Create API Key**.
 
-- Login to your Braze Account and navigate to **Settings > API & Identifiers**.
-- Click the **"New API Key"** button.
-- Give your API key a name and select **Templates** in the Permissions section. Click **Create API Key.**
+### Step 6: Export your email template to Braze
 
-#### 2. Export Configuration in Email Love:
+1. Review your finalized email design to confirm it's ready for export, then select the frame you want to export. Note that you'll need to use an Email Love footer that contains an unsubscribe link for the export to work.
+2. Select the **Export** button in the plugin and select **Braze** from the dropdown menu.
+3. Copy and paste your API key into the **Braze API Key** box within the Email Love Figma plugin.
+4. Select the **Set API Key** button.
+5. Select **Change Instance ID** and then select your Braze instance ID.
 
-- Ensure that your email design is finalized and ready for export, then click on the frame you want to export to ensure it is selected.  
-  *Note: You will need to use an Email Love Footer with an Unsubscribe link for the export to work.*
-- Click the **Export** button located in the top right corner of the Plugin interface and select **"Braze"** from the dropdown menu.
-- Copy and paste your API key into the **"Braze API Key"** box in the Email Love Figma Plugin. Click the **"Set API Key"** button.
-- Click **"Change Instance ID"** and select your Braze instance ID.
+![Exporting a template to Braze from the Email Love plugin.]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %}){: style="max-width:50%;"}
 
-![Export Template to Braze]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %})
+### Step 7: Edit your email in Braze
 
-### Step 6: Edit Your Email Inside of Braze
+After you have exported your email, go to **Templates** > **Edit Templates** > **Edit Message**. Inside the template editor, you can either edit your email HTML or use the **Rich Text editor** in the **Classic** tab.
 
-Once you have exported your email, navigate to **Templates > Edit Templates > Edit Message**. Inside the template editor, you will have the option to either edit your email HTML or use a **Rich Text editor** when you click on the **"Classic"** tab.
+## Support and troubleshooting
 
-## Support and Troubleshooting
-
-For more detailed instructions, please refer to [Email Love’s documentation](https://help.emaillove.com/exporting-an-email-design/6rcR6LPWq6BoYseKZf41nS/uploading-your-email-to-braze-/3ZcmGaGz6a8azeZQxWgKzm). For additional support, contact the Email Love support team.
+For more detailed instructions, refer to Email Love’s documentation on [exporting an email design](https://help.emaillove.com/exporting-an-email-design/6rcR6LPWq6BoYseKZf41nS/uploading-your-email-to-braze-/3ZcmGaGz6a8azeZQxWgKzm). For additional support, contact the Email Love support team.
