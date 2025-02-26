@@ -15,8 +15,10 @@ All persistent data associated with a user is stored in their user profile. Afte
 
 These parameters include:
 
-* `braze_id`
+* `braze_id` (assigned by Braze)
 * `external_id`
+* `email`
+* `phone`
 * Any number of custom user aliases that you set
 
 ## Anonymous user profiles
