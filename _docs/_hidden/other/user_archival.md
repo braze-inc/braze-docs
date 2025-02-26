@@ -61,7 +61,7 @@ Users in the Global Control Group will never be archived, even if they meet the 
 
 ### Treatment sample group
 
-Treatment sample group users within a Global Control Group Report are excluded from archiving.
+Treatment sample group users in a Global Control Group Report are excluded from archiving.
 
 ## Test users
 
