@@ -115,7 +115,7 @@ To rename your workspace:
 To delete your workspace or app instance:
 
 1. Go to **Settings** > **App Settings**.
-2. Select **Delete workspace** to delete the respective workspace, or the trash can icon next to the respective app instance. 
+2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
 
 You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/help/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
