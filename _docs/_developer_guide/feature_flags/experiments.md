@@ -78,9 +78,7 @@ After you’ve finished building the last of your experiment, review its details
 
 ## Reviewing the results
 
-After your feature flag experiment is finished, you can review impression data for your experiment.
-
-Go to **Messaging** > **Campaigns** and select the campaign with your feature flag experiment.
+After your feature flag experiment is finished, you can review impression data for your experiment. Go to **Messaging** > **Campaigns** and select the campaign with your feature flag experiment.
 
 ### Campaign analytics
 
