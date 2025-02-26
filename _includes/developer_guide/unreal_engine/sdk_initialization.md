@@ -1,14 +1,3 @@
----
-nav_title: Initialization
-article_title: Initializing the Unreal Engine Braze SDK
-description: Learn how to initialize the Unreal Engine Braze SDK. 
-page_order: 1
----
-
-# Initializing the SDK
-
-> Learn how to initialize the Unreal Engine Braze SDK.
-
 {% multi_lang_include developer_guide/prerequisites/unreal_engine.md %}
 
 ## Initializing the SDK
