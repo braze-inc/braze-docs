@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Feature Flags
-    link: docs/developer_guide/platform_wide/feature_flags/experiments/
+    link: /docs/developer_guide/feature_flags/experiments/
     image: /assets/img/braze_icons/flag-06.svg
   - name: In-App Messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
