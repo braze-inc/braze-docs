@@ -28,14 +28,14 @@ By integrating VWO with Braze, you can leverage VWO experiment data to create ta
 1. Log in to your VWO account.
 2. Navigate to **Configurations > Integrations** from the left panel of your VWO dashboard. This section allows you to enable integrations at the workspace level, applying them to all future test campaigns by default.
 
-   ![VWO Integration Configuration](images/image2.png)
+   ![VWO Integration Configuration](/assets/img/vwo/vwo1_settings.png)
 
-3. Click on the Braze integration and enable it.
-4. If you wish to enable Braze integration for existing campaigns, select the specific campaign, go to **Configuration > Integrations**, and enable Braze.
+4. Click on the Braze integration and enable it.
+5. If you wish to enable Braze integration for existing campaigns, select the specific campaign, go to **Configuration > Integrations**, and enable Braze.
 
-   ![Enable Braze Integration](images/image1.png)
+   ![Enable Braze Integration](/assets/img/vwo/vwo2_enable_braze.png)
 
-5. Once enabled, VWO will start sending experiment data to Braze at the campaign level.
+6. Once enabled, VWO will start sending experiment data to Braze at the campaign level.
 
 ### Step 2: Create a segment in Braze using VWO event properties
 
@@ -48,11 +48,11 @@ By integrating VWO with Braze, you can leverage VWO experiment data to create ta
 7. Select the relevant VWO property and specify the required value.
 8. Configure the number of visits and time frame as needed, then click **Save**.
 
-   ![Braze Segment Creation](images/image3.png)
+   ![Braze Segment Creation](/assets/img/vwo/vwo3_braze_segment.png)
 
 9. Click **Calculate Exact Statistics** to view the number of users that match your segment criteria.
 
-   ![Braze Segment Statistics](images/image4.png)
+   ![Braze Segment Statistics](/assets/img/vwo/vwo4_braze_segment_calculate_size.png)
 
 ## Data flow
 
@@ -96,5 +96,7 @@ If you're not seeing VWO data in Braze:
 4. Select a network call to view further details.
 5. Go to the **Request Payload** section in the **Payload** tab, where you can find events: that has name: **ce**, indicating Custom Event.
 6. Expand 0: and data: to see n: “VWO” (name of the Custom Event) and p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”}. These indicate that the values are being pushed by VWO to Braze.
+
+ ![Braze Troubleshooting](/assets/img/vwo/vwo5_troubleshooting.png)
 
 For additional support, contact your VWO customer success manager.
