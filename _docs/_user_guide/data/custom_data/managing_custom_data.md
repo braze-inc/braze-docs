@@ -84,6 +84,10 @@ Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than
 
 ## Deleting custom data
 
+{% alert important %}
+Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
+{% endalert %}
+
 As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
 
 {% alert important %}
@@ -104,10 +108,6 @@ When you delete custom data, the following occurs:
 - **For custom events:** Permanently removes the event metadata from every user's profile.
 
 When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore it after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
-
-{% alert important %}
-Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.
-{% endalert %}
 
 Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
 
