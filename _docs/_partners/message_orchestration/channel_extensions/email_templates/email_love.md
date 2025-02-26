@@ -35,9 +35,13 @@ Click the **[+ No Template Selected]** button in the plugin interface to create 
 
 Select the frame and start adding components like **headers, content blocks, CTAs, and footers** from the plugin’s Assets library to structure your email.
 
+![Email Love's Pre-Built Components]({% image_buster /assets/img/email_love/emaillove1_content.png %})
+
 ### Step 4: Customizing the Components
 
 Modify components using Figma’s design tools by adjusting text, images, colors, and layout elements, ensuring the design matches your brand. If a Footer component is added, a Braze Unsubscribe link will be automatically included during export.
+
+![Customize Components]({% image_buster /assets/img/email_love/emaillove2_components.png %})
 
 ### Step 5: Exporting Your Email to Braze
 
@@ -54,6 +58,8 @@ Modify components using Figma’s design tools by adjusting text, images, colors
 - Click the **Export** button located in the top right corner of the Plugin interface and select **"Braze"** from the dropdown menu.
 - Copy and paste your API key into the **"Braze API Key"** box in the Email Love Figma Plugin. Click the **"Set API Key"** button.
 - Click **"Change Instance ID"** and select your Braze instance ID.
+
+![Export Template to Braze]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %})
 
 ### Step 6: Edit Your Email Inside of Braze
 
