@@ -19,19 +19,13 @@
     },
     settings = $.extend(defaults, options);
 
-    function fixedEncodeURIComponent (str) {
-      return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-        return '%' + c.charCodeAt(0).toString(16);
-      });
-    }
-
     var headers = $(settings.headers).filter(function() {
       // get all headers with an ID
       var previousSiblingName = $(this).prev().attr( "name" );
       if (!this.id && previousSiblingName) {
         this.id = $(this).attr( "id", previousSiblingName.replace(/\./g, "-") );
       }
-      if ($(this).html().length == 0) {
+      if ($(this).html().length == 0 || !$(this).is(":visible")) {
         return false;
       }
       return this.id;
@@ -63,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = " <"+ settings.listType + settings.bootstrapStyling +"><div class='" + settings.toc_header_class + "'>" + settings.toc_header + "</div><div class='" + settings.toc_container_class + "'>";
+      html = " <"+ settings.listType + settings.bootstrapStyling +" aria-label='Table of Content' title='Table of Content'><div class='" + settings.toc_header_class + "'>" + settings.toc_header + "</div><div class='" + settings.toc_container_class + "'>";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
@@ -77,18 +71,18 @@
       }
       // extra div tags at html += before <a> to prevent highlighting of parent
       if (this_level === level) // same level as before; same indenting
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       else if (this_level <= level){ // higher level than before; end parent ol
         for(i = this_level; i < level; i++) {
           html += "</"+settings.listType+">"
         }
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
-          html += "<"+ settings.listType + settings.bootstrapStyling +">"
+          html += "<"+ settings.listType + settings.bootstrapStyling +" aria-label='ToC " + header.innerHTML + "'>"
         }
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       }
       level = this_level; // update for the next one
     });

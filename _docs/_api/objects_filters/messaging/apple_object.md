@@ -11,7 +11,7 @@ description: "This reference article lists and explains the different Apple obje
 
 # Apple push object
 
-> The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `apple_push` object allows you to define or request information related to Apple Push and Apple Push Alert content through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Apple push object
 
@@ -27,6 +27,7 @@ description: "This reference article lists and explains the different Apple obje
    "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
    "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
    "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,
@@ -35,7 +36,7 @@ description: "This reference article lists and explains the different Apple obje
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
 }
 ```
 
@@ -62,6 +63,27 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
 }
 ```
 
+#### Example
+
+```json
+{
+  "broadcast": false,
+  "external_user_ids": ["PushTest12"],
+  "campaign_id": "9c2fefcd-9115-3932-f771-c7f43d18d6b6",
+  "override_frequency_capping": "false",
+  "recipient_subscription_state": "all",
+  "messages": {
+    "apple_push": {
+      "alert": {
+        "title": "Hello!",
+        "body": "Message here"
+      },
+      "message_variation_id": "iosPush-640"
+    }
+  }
+}
+```
+
 ## Apple push action button object
 
 You must include the `category` field in the Apple push object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use shown in the following table. You can also use your own buttons if they have been registered in your app.
@@ -77,7 +99,7 @@ You must include the `category` field in the Apple push object to use iOS push a
 | `ab_cat_confirm_cancel` | Confirm     | `ab_pb_confirm`            | OPEN_APP, URI, or DEEP_LINK |
 | `ab_cat_confirm_cancel` | Cancel      | `ab_pb_cancel`             | CLOSE                   |
 | `ab_cat_more`           | More        | `ab_pb_more`               | OPEN_APP, URI, or DEEP_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {

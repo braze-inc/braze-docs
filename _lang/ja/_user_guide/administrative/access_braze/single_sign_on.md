@@ -4,22 +4,22 @@ article_title: SAML とシングルサインオン
 page_order: 5
 layout: dev_guide
 guide_top_header: "SAML とシングルサインオン"
-guide_top_text: "シングルサインオン (SSO) は、Braze ダッシュボードへのアクセスを制御する安全かつ一元化された方法を企業に提供します。つまり、単一の認証情報セットを使用して、Braze を含むさまざまなアプリケーションにアクセスできます。<br> <br>Braze は、SAML SSO をサポートしています。これは、最新の業界標準である Security Assertion Markup Language (SAML 2.0) をサポートし、さらに Azure Active Directory、Okta、OneLogin もサポートするものです。"
+guide_top_text: "シングルサインオン (SSO) は、Braze ダッシュボードへのアクセスを制御する安全かつ一元化された方法を企業に提供します。つまり、1 組の認証情報を使用して、Braze を含むさまざまなアプリケーションにアクセスできます。<br> <br> Braze は、SAML SSO をサポートしています。これは、最新の業界標準である Security Assertion Markup Language (SAML 2.0) をサポートし、さらに Azure Active Directory、Okta、OneLogin もサポートするものです。"
 
 page_type: landing
 description: "このランディングページには、シングルサインオン (SSO) に関する記事がまとめられています。ここで、サポートされている ID プロバイダーの設定やカスタム設定の実行に関するヘルプを見つけることができます。"
 
 guide_featured_title: "SAML SSO のトピック"
 guide_featured_list:
-- name: Custom SAML SSO Set Up
+- name: カスタムSAML SSOのセットアップ
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/
-  fa_icon: fas fa-fingerprint
-- name: Restrict to SAML SSO
+  image: /assets/img/braze_icons/fingerprint-03.svg
+- name: SAML SSOに制限する
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction
-  fa_icon: fas fa-lock
-- name: Azure AD
-  link: /docs/user_guide/administrative/access_braze/single_sign_on/azure_ad/
-  image: /assets/img/azure_ad.png
+  image: /assets/img/braze_icons/lock-01.svg
+- name: Microsoft Entra SSO
+  link: /docs/user_guide/administrative/access_braze/single_sign_on/entra/
+  image: /assets/img/entra.png
 - name: Okta
   link: /docs/user_guide/administrative/access_braze/single_sign_on/okta/
   image: /assets/img/okta.png

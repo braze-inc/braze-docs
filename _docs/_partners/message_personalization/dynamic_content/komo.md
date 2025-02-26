@@ -26,19 +26,19 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 | Komo account | You will need an active Komo account to take advantage of this partnership. Visit [Komo][7] to start a trial now. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance.<br><br>For example, it should look something like: https://rest.iad-03.braze.com |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Use cases
 
 {% tabs local %}
-{% tab Data Capture (Form Submission) %}
+{% tab Data Capture - Form Submission %}
 
 When a user submits a customizable data capture form in Komo, the Komo fields mapped in the Braze integration will be passed to Braze via the `/users/track/` API call.
 
 Data capture forms exist either at the start or end of Cards.
 
 {% endtab %}
-{% tab Market Research (Coming soon) %}
+{% tab Market Research - Coming soon %}
 
 Coming soon, Komo will be adding the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, etc. This data will enable you to enhance a user's profile beyond data captured in form submissions.
 

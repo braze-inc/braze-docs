@@ -13,7 +13,7 @@ description: "This article covers how to create, set up, and manage your workspa
 
 ## What is a workspace?
 
-Workspaces are a shared environment for you to track and manage engagement for related mobile apps or websites. Workspaces group the same or very similar apps together: for example, the Android and iOS versions of your mobile app. Everything you do in Braze happens within a workspace.
+Everything you do in Braze happens within a workspace. Workspaces are a shared environment for you to track and manage engagement for related mobile apps or websites. Workspaces group the same or very similar apps together: for example, the Android and iOS versions of your mobile app. 
 
 ## Creating a workspace
 
@@ -37,7 +37,7 @@ You might want to adopt a naming convention so that others in your company can e
 {% endalert %}
 
 {:start="3"}
-3. Click **Create**. It may take a few seconds for Braze to create your workspace.
+3. Select **Create**. It may take a few seconds for Braze to create your workspace.
 
 ![][2]
 
@@ -69,7 +69,7 @@ You must create separate app instances for each version of your app on each plat
 
 #### Live SDK version
 
-The Live SDK Version displayed on the App Settings page for a specific app is the highest app version with at least 5% of your total daily sessions and has at least 500 sessions in the past day.
+The live SDK version displayed on the App Settings page for a specific app is the highest app version with at least 5% of your total daily sessions and has at least 500 sessions in the past day.
 
 This field appears after you have integrated the Braze SDK with your app or website. If a newer version of the Braze SDK is available for your platform, it will be noted here with the tag "Newer Version Available."
 
@@ -79,9 +79,9 @@ This field appears after you have integrated the Braze SDK with your app or webs
 
 Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a best practice, we recommend that you create a testing workspace for integration and campaign testing.
 
-#### Tip: Add a testing workspace
-
-You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and when you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
+{% alert tip %}
+**Add a testing workspace**<br>You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and when you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
+{% endalert %}
 
 ## Managing workspaces
 
@@ -93,10 +93,10 @@ You can add favorite workspaces to access the workspaces you use the most even f
 
 To add favorite workspaces:
 
-1. Select your profile dropdown and click **Manage your account**.
+1. Select your profile dropdown, then select **Manage your account**.
 2. In the **Account Profile** section, locate the **Favorite workspaces** field.
 3. Select your workspaces from the list.
-4. Click **Save changes**.
+4. Select **Save changes**.
 
 There's no limit to the number of workspaces you can favorite, but we recommend keeping this list short for convenience.
 
@@ -105,8 +105,8 @@ There's no limit to the number of workspaces you can favorite, but we recommend 
 To rename your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Hover over your workspace’s name and click <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
-3. Give your workspace a new name, then click <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
+2. Hover over your workspace’s name and select <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
+3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
 ![][8]
 
@@ -116,7 +116,7 @@ To rename your workspace:
 To delete your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Click **Delete workspace**.
+2. Select **Delete workspace**.
 
 {% alert warning %}
 Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored.

@@ -22,7 +22,7 @@ description: "This article will walk you through how to configure Braze to use O
 | Okta admin privileges | Make sure you have admin privileges before setting up Okta. |
 | Braze admin privileges | Make sure you have admin privileges before setting up Okta. |
 | RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
@@ -32,7 +32,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Step 1a: Navigate to Security Settings in Braze
 
-After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**
+After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), select your account icon and go to **Company Settings** > **Security Settings** to find the SAML SSO section.
@@ -42,16 +42,16 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), select you
 
 ### Step 1b: Edit SAML SSO settings
 
-From your Okta Admin dashboard, you will be provided a target URL (login URL) and `x.509` certificate under **SAML Signing Certificate** which you must input into your Braze account.
+From your Okta Admin dashboard, you will be provided a target URL (login URL) and `x.509` certificate, which you must input into your Braze account's **Security Settings** page.
 
 ![][7]{: style="max-width:75%"}
 
 | Requirement | Details |
 |---|---|
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, For example, "Okta". |
-| `Target URL` | This is the login URL provided by Okta Admin dashboard.|
-| `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. You must copy and paste it into this field. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| `Target URL` | This is the login URL provided by Okta Admin dashboard. Find it by going to **Applications** > your application > **General** tab > **App Embed Link** > **Embed Link**. |
+| `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. You must copy and paste it into this field. Retrieve it in Okta by going to **SAML Signing Certificates** and selecting **Actions** > **Download certificate**. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Select **Save Changes** at the bottom of the page when completed.
 

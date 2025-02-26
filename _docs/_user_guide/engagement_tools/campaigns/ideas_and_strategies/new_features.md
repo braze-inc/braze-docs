@@ -65,7 +65,7 @@ Once Braze receives data from version 2.0.0 of your app, you can target users wi
 | Greater than 2.0.0 | 2.5.1 | The user and all future installs will be in the segment. |
 | Greater than 2.0.0 | 1.9.9 | The user is not in the segment. |
 | Less than or equal to 2.0.0 | 3.0.1 | The user is not in the segment. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### App version name
 

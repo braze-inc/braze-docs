@@ -46,7 +46,7 @@ A webhook consists of the following three parts:
 | [HTTP method](#methods) | Like APIs, webhooks need request methods. These are given to the URL the webhook hits, and tells the endpoint what to do with the information given. There are four HTTP methods you can specify: POST, GET, PUT, and DELETE. |
 | HTTP URL | The URL address of your webhook endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. |
 | Request body | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTTP methods {#methods}
 
@@ -58,7 +58,7 @@ The following table describes the four different HTTP methods you can specify in
 | GET | This method retrieves existing information, as opposed to writing new information. This is the most common method used when asking for data from a server. For example, consider the [`/segments/list` endpoint]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). If you were to make a GET request, it would return a list of your segments.
 | PUT | This method updates information on the endpoint, replacing any existing information with what's in the request body. 
 | DELETE | This method deletes the resource in the HTTP URL. 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Webhooks in Braze
 

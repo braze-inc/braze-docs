@@ -2,7 +2,7 @@
 nav_title: 統合
 article_title: iOS のコンテンツカード統合
 platform: Swift
-page_order: 1
+page_order: 0
 description: "この記事では、Swift SDK で利用できる統合ステップ、データモデル、カード固有プロパティについて説明します。"
 channel:
   - content cards
@@ -11,11 +11,9 @@ channel:
 
 # コンテンツカードの統合
 
-> このリファレンス記事では、コンテンツカードの統合と、Swift アプリケーションで利用できるさまざまなデータモデルおよびカード固有プロパティについて説明します。
+> このリファレンス記事では、コンテンツカードの統合と、Swift アプリケーションで利用できるさまざまなデータモデルおよびカード固有プロパティについて説明します。実装とカスタマイズを開始する準備ができたら、「[コンテンツカードのカスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards)」を参照してください。
 
-{% alert note %}
-実装とカスタマイズを開始する準備ができたら、「[コンテンツカードのカスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards)」を参照してください。
-{% endalert %}
+## 統合について
 
 デフォルトのコンテンツカード UI は、Braze SDK の `BrazeUI` ライブラリーから統合できます。`braze` インスタンスを使用して、コンテンツカードビューコントローラーを作成します。コンテンツカードの UI ライフサイクルをインターセプトして対応するには、[`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) を `BrazeContentCardUI.ViewController` のデリゲートとして実装します。
 
@@ -23,14 +21,18 @@ channel:
 iOS ビューコントローラーのオプションに関する詳細については、[Apple の開発者向けドキュメント](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers)を参照してください。
 {% endalert %}
 
-Swift SDK の `BrazeUI` ライブラリーでは、ナビゲーションとモーダルという2つのデフォルトビューコントローラーコンテキストが提供されています。つまり、アプリやサイトに数行のコードを追加することで、これらのコンテキストにおいてコンテンツカードを統合できます。「[カスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios)」で説明されているように、どちらのビューにもカスタマイズとスタイル指定のオプションが用意されています。Braze の標準ビューコントローラーの代わりにカスタムコンテンツカードビューコントローラーを作成して、カスタマイズオプションをさらに増やすこともできます。例については、[コンテンツカードの UI チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)を参照してください。 
+Swift SDK の `BrazeUI` ライブラリーでは、ナビゲーションとモーダルという2つのデフォルトビューコントローラーコンテキストが提供されています。つまり、アプリやサイトに数行のコードを追加することで、これらのコンテキストにおいてコンテンツカードを統合できます。「[カスタマイズガイド]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios)」で説明されているように、どちらのビューにもカスタマイズとスタイル指定のオプションが用意されています。Braze の標準ビューコントローラーの代わりにカスタムコンテンツカードビューコントローラーを作成して、カスタマイズオプションをさらに増やすこともできます。例については、[コンテンツカードの UI チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)を参照してください。
+
+{% alert important %}
+カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。
+{% endalert %}
 
 ## ナビゲーションコンテキスト
 
 ナビゲーションコントローラーは、ナビゲーションインターフェイス内の1つ以上の子ビューコントローラーを管理するビューコントローラーです。以下は、`BrazeContentCardUI.ViewController` インスタンスをナビゲーションコントローラーにプッシュする例です。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func pushViewController() {
@@ -62,7 +64,7 @@ func pushViewController() {
 モーダルプレゼンテーションを使用して、ユーザーに重要情報の入力を求める場合などに、アプリのワークフローを一時的に中断させることができます。このモデルビューでは、上部にナビゲーションバーがあり、バーの横に [**完了**] ボタンがあります。以下は、`BrazeContentCard.ViewController` インスタンスをモーダルコントローラーにプッシュする例です。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func presentModalViewController() {
@@ -105,15 +107,15 @@ Braze には、画像のみ、キャプション付き画像、クラシック�
 
 各カードは、カードの状態を管理するためのさまざまなメソッドを含む `Context` オブジェクトを使用して初期化されます。特定のカードオブジェクトの対応する状態プロパティを変更する場合は、これらのメソッドを呼び出します。
 
-| メソッド                             | 説明                                                                                                                              |
+| 方法                               | 説明                                                                                                                              |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `card.context?.logImpression()`      | コンテンツカードのインプレッションイベントをロギングします。                                                             |
-| `card.context?.logClick()`           | コンテンツカードのクリックイベントをロギングします。                                                                     |
-| `card.context?.processClickAction()` | 指定された [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) の入力を処理します。|
-| `card.context?.logDismissed()`       | コンテンツカードを閉じたイベントをロギングします。                                                                           |
-| `card.context?.logError()`           | コンテンツカードに関連するエラーをロギングします。                                                                      |
-| `card.context?.loadImage()`          | URL から特定のコンテンツカード画像を読み込みます。コンテンツカードに画像がない場合、このメソッドは nil になることがあります。                 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `card.context?.logImpression()`      | コンテンツカードのインプレッションイベントを記録する。                                                                                                   |
+| `card.context?.logClick()`           | コンテンツカードのクリックイベントを記録する。                                                                                                        |
+| `card.context?.processClickAction()` | 指定された [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) の入力を処理します。 |
+| `card.context?.logDismissed()`       | コンテンツカードを閉じたイベントをロギングします。                                                                                                    |
+| `card.context?.logError()`           | コンテンツカードに関するエラーを記録する。                                                                                                |
+| `card.context?.loadImage()`          | 指定されたコンテンツカードの画像をURLから読み込む。コンテンツカードに画像がない場合、このメソッドはゼロになる。                         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 詳細については、[`Context` クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)を参照してください。
 

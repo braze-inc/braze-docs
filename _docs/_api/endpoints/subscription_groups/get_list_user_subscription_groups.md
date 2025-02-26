@@ -45,7 +45,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. Must include at least one phone number (with a maximum of 50). |
 | `limit` | Optional | Integer | The limit on the maximum number of results returned. Default (and maximum) `limit` is 100. |
 | `offset`  |  Optional | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert tip %}
 If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
@@ -76,4 +76,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
+## Example response
+
+```json
+{
+  "success": true,
+  "subscription_groups": [
+    {
+      "subscription_group_id": "group_id_1",
+      "subscription_status": "subscribed"
+    },
+    {
+      "subscription_group_id": "group_id_2",
+      "subscription_status": "unsubscribed"
+    }
+  ]
+}
+```
+
 {% endapi %}

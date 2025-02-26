@@ -39,7 +39,13 @@ If you notice that your target audience is smaller than expected, try using "Mat
 
 ### Identify entry settings and race conditions
 
-A race condition can occur when you've used the same entry criteria in both your **Entry Schedule** and **Target Audience** settings. If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+A race condition can occur when you've used the same entry criteria in both your **Entry Schedule** and **Target Audience** settings. 
+
+If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+
+{% alert tip %}
+Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
+{% endalert %}
 
 ### Check Canvas entry properties and event properties
 
@@ -64,7 +70,7 @@ For a Message component in multi-channel messaging, we recommend the following:
 
 You've launched your Canvas! Now, what? Use this checklist to see how you can review and adjust your Canvas in the event of discrepancies after launch based on these scenarios.
 
-### Lots of entries, but few sends
+### Many entries, but few sends
 
 For example, let's say that you've noticed a disparity between your number of messages sent versus total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
 
@@ -82,7 +88,7 @@ Review the distribution of users between your variants and your control group. I
 
 ### An empty total audience
 
-If you're noticing that messages have been sent, but aren't seeing any entry data for your Canvas, the main reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters. 
+If you aren’t seeing any entry data for your Canvas, the reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters.
 
 If you're using action-based entry in your entry schedule, check that you haven't used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
 
@@ -93,11 +99,11 @@ Additionally, check that the selected segment has users in it by reviewing the *
 Another apparent way to identify areas of adjustment for your Canvas can occur when there's a large drop-off from one Canvas step to the next. In this case, check that your audience filters and exception events don't have any misspellings or capitalization errors. And as always, check that your audience filters aren't so strict as to omit a majority of your users from entering the Canvas. 
 
 Next, it's important to identify these settings that can affect when and if messages are sent to your users:
-- [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)
+- [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Suspicious send volumes between paths
 

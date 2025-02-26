@@ -1,17 +1,17 @@
 ---
-nav_title: レポーティング
-article_title: プッシュレポート
+nav_title: レポート
+article_title: プッシュ・レポート
 page_order: 21
 page_type: reference
-description: "この記事では、プッシュキャンペーンの成功を確認および分析するために使用できるプッシュレポートについて説明します。"
+description: "この記事では、プッシュ・キャンペーンの成功を確認・分析するためのプッシュ・レポートについて説明する。"
 channel: push
 tool: Reports
 
 ---
 
-# プッシュレポート
+# プッシュ通知レポート
 
-> この記事では、プッシュキャンペーンの成功を確認および分析するために使用できるプッシュレポートについて説明します。
+> この記事では、プッシュ・キャンペーンの成功を確認・分析するためのプッシュ・レポートについて説明する。
 
 {% multi_lang_include campaign_analytics.md channel="push" %}
 

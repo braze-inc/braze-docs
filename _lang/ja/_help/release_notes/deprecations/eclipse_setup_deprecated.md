@@ -1,76 +1,76 @@
 ---
-nav_title: Eclipse による初期 SDK セットアップ
+nav_title: EclipseでSDKを初期セットアップする
 page_order: 1
 
 page_type: update
-description: "このアーカイブ記事では、Eclipse で SDK の初期セットアップを実行する方法について説明します。Braze は Eclipse IDE のサポートを廃止しました。"
+description: "このアーカイブ記事では、EclipseでSDKの初期セットアップを行う方法を説明する。BrazeはEclipse IDEのサポートを廃止した。"
 ---
 
-# Eclipse での初期 SDK セットアップ
+# EclipseでSDKを初期セットアップする
 
 {% alert update %}
-[Google が Eclipse Android デベロッパーツールプラグインのサポートを終了したため、Braze は Eclipse IDE のサポートを終了しました](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html)。移行前に Eclipse 統合についてサポートが必要な場合は、[サポートにメールしてください]({{site.baseurl}}/support_contact/)。
+Google が Eclipse Android Developer Tools プラグインの[サポートを終了](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html)したため、Braze は Eclipse IDE のサポートを中止しました。移行前に Eclipse の統合に関するサポートが必要な場合は、[サポートにメールで]({{site.baseurl}}/support_contact/)お問い合わせください。
 {% endalert %}
 
 ## ステップ 1
-コマンドラインで [Braze アンドロイド GitHub リポジトリのクローンを作成します][03]。
+コマンドラインで、[Braze Android GitHub リポジトリ][03]を複製します。
 
 ```bash
 $ git clone git@github.com:braze-inc/braze-android-sdk.git
 ```
 
 ## ステップ 2
-Braze プロジェクトをローカルワークスペースにインポートする
+Brazeプロジェクトをローカルのワークスペースにインポートする。
 
-エクリプスでは:
+Eclipse の場合:
 
   - [ファイル] > [インポート] に移動します。
 
     ![ファイルインポート][04]
-  - [アンドロイド] > [既存の Android コードをワークスペースに追加] を選択します。
+  - [Android] > [ワークスペースに存在する Android コード] を選択します。
 
     ![Androidドインポート][05]
-  - 「ブラウズ」をクリックします。」
+  - [参照] をクリックします。
 
     ![参照][06]
-  - Braze UI プロジェクトフォルダと「プロジェクトをワークスペースにコピー」を確認し、「完了」をクリックします。」
+  - Braze UI プロジェクトフォルダーを確認し、「プロジェクトをワークスペースにコピー」して、[終了] をクリックします。
 
-    ![アンドロイド UI プロジェクトを選択][07]
+    ![Android UI プロジェクトを選択する][07]
 
 ## ステップ 3
-自分のプロジェクトで Braze を参考にしてください。
-エクリプスでは:
+自分のプロジェクトでBrazeを参照する。
+Eclipse の場合:
 
-  - プロジェクトを右クリックし、[プロパティ] を選択します。」
+  - プロジェクトを右クリックし、"Properties "を選択する。
 
-    ![[プロパティ] をクリックします。][08]
-  - [Android] の下にある [追加...] をクリックします。「ライブラリ」セクションで android-sdk-ui をライブラリとしてアプリに追加します。
+    ![プロパティをクリックする][08]
+  - [Android] で、[ライブラリー] セクションの [追加...]" をクリックし、android-sdk-ui をライブラリーとしてアプリに追加します。
 
-    ![ブレイズアッド][09]
+    ![Braze 追加][09]
 
 ## ステップ 4
-依存関係エラーを解決し、ビルドターゲットを修正します。
+依存性エラーを解決し、ビルドターゲットを修正する。
 
-現時点では、Braze コードでエラーが発生することがあります。これは、依存関係が入力されておらず、ビルドターゲットが正しくない可能性があるためです。
+このとき、Brazeのコードでエラーが出るかもしれないが、これは依存関係が入力されておらず、ビルドターゲットが間違っている可能性があるためだ：
 
-   - Braze UI プロジェクトを右クリックし、[プロパティ]-> [Android] を選択して、ビルドターゲットが Braze の現在のビルドツールバージョンに設定されていることを確認します。
+   - Braze UI プロジェクトを右クリックし、[プロパティ] -> [Android] を選択して、ビルドターゲットが Braze の最新ビルドツールバージョンに設定されていることを確認します。
 
       ![ビルドターゲット][10]
-   - Braze UI プロジェクトを右クリックし、「プロパティ」->「Java ビルドパス」->「JAR を追加...」を選択し、メインアプリケーションから「android-support-v4.jar」をライブラリとして追加します。
+   - Braze UI プロジェクトを右クリックし、[プロパティ] -> [Java ビルドパス] -> [JAR を追加...] を選択して、メインアプリケーションから「android-support-v4.jar」をライブラリーとして追加します。
 
       ![サポート][11]
 
-## ステップ 5
+## ステップ5
 
-最後のピースを追加します。
+最終ピースを追加します。
 
-  - SDK バージョン 1.10.0 以降では、追加する必要があります
+  - SDK バージョン1.10.0以降の場合は、
   `<service android:name="com.appboy.services.AppboyDataSyncService" />`
-  Eclipse はマニフェストのマージをサポートしていないため、AndroidManifest.xml に送ってください。
+  を AndroidManifest.xml に追加する必要があります。Eclipse ではマニフェストマージがサポートされていないためです。
 
-  - SDK バージョン 1.7.0 以降では、ライブラリプロジェクトから「assets/fontawesome-webfont.ttf」をアプリケーションにコピーする必要があります。Eclipse はライブラリのアセットフォルダーを自動的に含めません。
+  - SDK バージョン1.7.0以降では、「assets/fontawesome-webfont.ttf」をライブラリープロジェクトからアプリケーションにコピーする必要があります。Eclipse には、ライブラリーのアセットフォルダは自動的には含まれません。
 
-[03]: https://github.com/braze-inc/braze-android-sdk "アプリボーイアンドロイド GitHub リポジトリ"
+[03]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHubリポジトリ"
 [04]: {{site.baseurl}}/assets/img_archive/file_import.png
 [05]: {{site.baseurl}}/assets/img_archive/android_import.png
 [06]: {{site.baseurl}}/assets/img_archive/click_browse.png

@@ -3,7 +3,7 @@ nav_title: Link Aliasing
 article_title: Link Aliasing
 alias: /link_aliasing/
 page_order: 3
-description: "This article describes how link aliasing works and what your links will look like."
+description: "This article describes how link aliasing works and provides examples for what your links will look like."
 channel:
   - email
 
@@ -11,112 +11,112 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Link aliasing
  
-> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
+> Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics.
+
+## About link aliasing
+
+With link aliasing, you can create user-generated names to identify and track links sent in emails. This way, you can efficiently use these recognizable link aliases in your emails to track engagement and analyze campaign performance, without needing to reference the full link.
+
+With link aliasing, you can:
+
+- **Retarget users who have clicked specific links:** Identify and target users who have clicked a link.
+- **Create action-based triggers:** Send an email when a user clicks a link.
+- **Analyze metrics:** Compare how many users have clicked Link A versus Link B.
+
+### How it works
+
+Braze uniquely identifies links within emails by appending an extra parameter called the `lid` (also known as the link identifier) to every link URL. This `lid` value allows Braze to track, monitor, and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide insights into how users engage with the content in your email campaigns.
 
 ## Creating a link alias
 
-Link aliasing works by decorating a Braze-generated query parameter on links in the email channel. To create a link alias, follow these steps: 
+To create a link alias, follow these steps: 
 
-1. Open your email body.
-2. Click the **Link Management** tab.
+1. In your campaign or Canvas component, go to your email body.
+2. Select the **Link Management** tab.
 3. Braze automatically generates unique default link aliases for each of your links.
 4. Give the alias a name. Aliases must be uniquely named per email campaign variant or Canvas component. 
 
 You can also set an alias that will be used to reference a specific link when dealing with reporting or segmentation. 
 
-![][2]
+![Link Management page with four link aliases.][2]
 
-Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+{% alert note %}
+Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best practice to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+{% endalert %}
 
-### Managing link aliases
+## Managing link aliases
 
-Follow these steps to view all of your tracked link aliases:
+To view all of your tracked link aliases, do the following:
 
 1. Go to **Settings** > **Email Preferences** under **Workspace Settings**.
-2. Click the **Link Aliasing Settings** tab.
+2. Select the **Link Aliasing Settings** tab.
 
 {% alert important %}
 If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), these settings are under **Manage Settings**.
 {% endalert %}
 
-Here, you can also sort and search through all link aliases.
+Here, you can sort, search, and turn off tracking for link aliases.
 
-![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
+![Tracked Link Aliases page that shows two link aliases named "TechPartners" and "Help" that are associated with a campaign named "Email_Survey".][8]
 
-#### Untracking link aliases
-
-On the **Link Aliasing Settings** tab, you can turn off tracking for link aliases.
-
-1. Select the link alias.
-2. Click **Turn off tracking**.  
-
-#### Link aliases and user profile data
-
-In Braze, if you have a link alias in your app or website and a user clicks on it, the event is recorded in the user's profile with the alias. Later, if you decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the the new link alias, it will not include the data from the previous link alias.
-
-### Checking workflows
+{% alert tip %}
+Use the [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) and [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
+{% endalert %}
 
 Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
 
-When link aliasing is enabled, messages, Content Blocks, and link templates are not modified. Any existing messages using link templates or Content Blocks will be the same. However, when you update a message, link alias markup will apply to all of the links, so you'll need to reapply the link templates for the links to be visible.
+When link aliasing is turned on, messages, Content Blocks, and link templates are not modified. Any existing messages using link templates or Content Blocks will be the same. However, when you update a message, link alias markup will apply to all of the links, so you'll need to reapply the link templates for the links to be visible.
 
-### Extracting data
+## How links are updated with link aliasing
 
-Use the [List link alias for campaign][3] and [List link alias for Canvas][4] endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
+The following tables provide examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
 
-## Link aliasing in Content Blocks
+### Permalink
 
-New Content Blocks will have their links modified where Braze will append a `lid={{placeholder}}` to each link where applicable. This placeholder value is resolved when inserted into an email message variant.
+**Logic:** Braze inserts a question mark (?) and adds the first query parameter into the URL.
 
-To modify the links within existing Content Blocks that were created before Braze enabled link aliasing, duplicate the existing Content Blocks, then modify the links within the duplicated Content Blocks.
+| Link in Email Body    | Link with Aliasing                     |
+|-----------------------|----------------------------------------|
+| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an "old" message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
+### Link with more query parameters
 
-{% alert tip %}
-For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be done by bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
-{% endalert %}
+**Logic:** Braze detects other query parameters and appends `lid=` to the end of the URL.
 
-## Examples
+| Link in Email Body                                            | Link with Aliasing                                                             |
+|---------------------------------------------------------------|--------------------------------------------------------------------------------|
+| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-The following table provides examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
+### HTML link
 
-| Link in Email Body | Link with Aliasing | Logic |
-|---|---|---|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
-| {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+**Logic:** Braze recognizes a link is a URL and already has a question mark (?) present, so the `lid` query parameter is appended after the question mark.
 
-## Link aliasing for URLs generated via Liquid
+| Link in Email Body                                                | Link with Aliasing                                                                |
+|-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For URLs that are generated by an `assign` statement in the HTML or in a Content Block, we recommend adding a question mark (?) into the anchor tag. This will help Braze append query parameters (`lid = somevalue`) so link aliasing can work properly. Without identifying where to append query parameters, link aliasing will not recognize these URLs.
+### Link with anchor
 
-### Example
+**Logic:** Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, the question mark and `lid` value are appended before the anchor.
 
-Check out this link aliasing example for the recommended formatting of the anchor tag:
+| Link in Email Body                               | Link with Aliasing                                                |
+|--------------------------------------------------|-------------------------------------------------------------------|
+| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% raw %}
-```liquid
-{% assign link1 = "https://www.braze1.com" %}
+### Link with anchor and capture tag
 
-<a href="{{link1}}?">{{link1}}</a>
-```
-{% endraw %}
+**Logic:** When using link aliasing with URLs that contain anchors (#), Braze expects the anchor to be placed after the query parameters. This means that the `lid` value must be appended before the anchor for proper tracking, and since Braze reads the URL from left to right, the question mark (?) and `lid` should come before the anchor.
 
-## Link templates
+| Link in Email Body                                                                        | Link with Aliasing                                                                                           |
+|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For new message variants, any existing [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/) can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
-
-{% alert note %}
-Link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as "old" Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying "old" Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
-{% endalert %}
-
-## Link segmentation
-
-The retargeting of aliases filters allow you to create segmentation filters based on your customers clicking a specifically tracked alias from either an email campaign or Canvas component. This filter is only available for campaigns or Canvases that have tracked aliases present.
-
-### Tracking links
+## Tracking link aliases
 
 In the **Link Management** tab, select which aliases you would like to be "tracked" for segmentation purposes and to be present in segmentation filters. Note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes.
 
@@ -143,41 +143,33 @@ Braze allows you to select unlimited links to track, though you may only retarge
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
 {% endalert %}
 
-### Untracking links
+### Action-based filters
+ 
+You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component.
 
-Untracking a link will not reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it's replaced by newer data. The following segmentation filters will continue to exist, but new segments cannot be created with that filter.
+![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.][6]
+
+### Segmentation filters
+
+In Braze, if you have a link alias in your email and a user clicks on it, the event is recorded in the user's profile with the alias.
+
+If you use the "Clicked Alias in Any Campaign or Canvas Step" segmentation filter and later decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the the new link alias, it will not include the data from the previous link alias.
+
+If you use the "Clicked Alias in Campaign" or "Clicked Alias in Canvas" segmentation filter, this will filter your users by whether they clicked a specific alias in a specific campaign or Canvas. If multiple users share the same email address and the link alias is clicked, all other users who share the email address will have their user profiles updated. 
+
+The following segmentation filters apply to click events that are tracked at the time the event is processed. This means untracking links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+
+#### Untracking links
+
+Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data.
 
 For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
-![][1]
-
-### Segment filters
-
-The following segment filters apply to click events that are tracked at the time the event is processed. This means untracking links won't remove existing data and tracking a link won't backfill the data.
-
-#### Clicked Alias in Campaign
-
-Retarget users based on the specific alias that was clicked in a campaign. Only the campaigns that have aliases which were tracked will be reflected here.
-
-#### Clicked Alias in Canvas Step
-
-Retarget users based on the specific alias that was clicked in a Canvas component. A pipe delimited filter option displays the Canvas and Canvas component, followed by the alias within the Canvas component. Only Canvas steps with tracked aliases will be shown here.
-
-#### Clicked Alias in Campaign or Canvas
-
-Retarget users based on any alias that was clicked in the campaign or Canvas component. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
-
-![][5]
-
-### Action-based filters
- 
-You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
-
-![][6]
+![Campaign Analytics tab that displays three link aliases and their total clicks.][1]
 
 ### Email clicks event
 
-The [email clicks event][7] occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. There are two additional fields for the email clicks event when link aliasing is enabled: `link_id` and `link_alias`.
+If you export your engagement data with Currents, an email click event will be slightly different if you have link aliasing enabled. It will have two additional fields for the [email clicks event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/) when link aliasing is turned on: `link_id` and `link_alias`.
 
 ```json
 // Email Click: users.messages.email.Click
@@ -214,12 +206,47 @@ The behavior for `dispatch_id` differs between Canvas and campaigns because Braz
 _Update noted in August 2019._
 {% endalert %}
 
+## Link aliasing in Content Blocks
+
+New Content Blocks will have their links modified where Braze will append a `lid={{placeholder}}` to each link where applicable. This placeholder value is resolved when inserted into an email message variant.
+
+To modify the links within existing Content Blocks that were created before Braze enabled link aliasing, duplicate the existing Content Blocks, then modify the links within the duplicated Content Blocks.
+
+When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an "old" message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
+
+{% alert tip %}
+For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be done by bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
+{% endalert %}
+
+## Link aliasing for URLs generated by Liquid
+
+For URLs that are generated by an `assign` statement in the HTML or in a Content Block, you must add a question mark (`?`) to the anchor tag. This allows Braze to append query parameters (`lid = somevalue`) so that link aliasing can work properly. Without identifying where to append query parameters, link aliasing will not recognize these URLs and link templates won't apply.
+
+### Example
+
+Check out this link aliasing example for the recommended formatting of the anchor tag:
+
+{% raw %}
+```liquid
+{% assign link1 = "https://www.braze1.com" %}
+
+<a href="{{link1}}?">Click Here</a>
+```
+{% endraw %}
+
+If the link has parameters within it that contain a question mark (`?`), you can replace it in the anchor tag with an ampersand (`&`), such as in this example:
+
+{% raw %}
+```liquid
+{% assign link_with_params = "https://www.braze1.com?param_1&param_2" %}
+
+<a href="{{link_with_params}}&">Click Here</a>
+```
+{% endraw %}
+
 
 [1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
 [2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[3]: {{site.baseurl}}/get_campaign_link_alias/ 
-[4]: {{site.baseurl}}/get_canvas_link_alias/
 [5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
 [6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/
 [8]: {% image_buster /assets/img/tracked_aliases.png %}

@@ -21,7 +21,7 @@ The Braze and RudderStack integration allows you to leverage Braze Currents to e
 | RudderStack account | A [RudderStack account](https://app.rudderstack.com/login) is required to take advantage of this partnership. |
 | Braze destination | We suggest having [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack/#integration) in RudderStack. |
 | Currents | To export data back into RudderStack, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -43,6 +43,6 @@ All events sent to RudderStack will include the user’s `external_user_id`. At 
 
 ## Integration details
 
-Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) to RudderStack.
+Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data/braze_currents/) to RudderStack.
 
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).

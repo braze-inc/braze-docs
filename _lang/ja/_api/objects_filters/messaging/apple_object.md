@@ -1,19 +1,19 @@
 ---
-nav_title: "アップルオブジェクト"
-article_title: Apple メッセージングオブジェクト
+nav_title: "Apple オブジェクト"
+article_title: Apple メッセージング Object
 page_order: 1
 page_type: reference
 channel: push
 platform: iOS
-description: "この参考記事では、Braze で使われているさまざまな Apple オブジェクトを一覧表示して説明しています。"
+description: "このリファレンス記事では、Brazeで使用されるさまざまなAppleオブジェクトを一覧表示し、説明しています。"
 
 ---
 
-# アップルプッシュオブジェクト
+# Apple プッシュオブジェクト
 
-> `apple_push`このオブジェクトを使用すると、Apple Push および Apple Push Alert [コンテンツに関連する情報をメッセージングエンドポイント経由で定義またはリクエストできます]({{site.baseurl}}/api/endpoints/messaging)。
+> `apple_push`オブジェクトを使用すると、[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)を介してApple PushおよびApple Push Alertコンテンツに関連する情報を定義または要求できます。
 
-## アップルプッシュオブジェクト
+## Apple プッシュオブジェクト
 
 ```json
 {
@@ -35,19 +35,19 @@ description: "この参考記事では、Braze で使われているさまざま
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
 }
 ```
 
-ターゲットとするユーザーに `messages` iOS デバイスでプッシュを受信させるには、Apple Push オブジェクトを含める必要があります。`alert`文字列、`extra`オブジェクト、およびその他のオプションパラメータの合計バイト数は、1912 を超えないようにしてください。Appleが許可するメッセージサイズを超えると、Messaging APIはエラーを返します。`ab``aps``extra`キーを含むメッセージやオブジェクトに含まれるメッセージは拒否されます。
+iOSデバイスでプッシュ通知を受信するためには、ターゲットユーザーにAppleプッシュオブジェクトを`messages`に含める必要があります。お客様の`alert`文字列、`extra`オブジェクト、およびその他のオプションパラメータの合計バイト数は1912を超えてはなりません。メッセージングAPIは、Appleが許可するメッセージサイズを超えるとエラーを返します。`extra` オブジェクトに `ab` または `aps` キーが含まれているメッセージは拒否されます。
 
 {% alert note %}
-Apple Push オブジェクトを Live Activities ペイロードの一部として送信する場合は、`sound``alert`必ずオブジェクトに文字列を含めてください。
+Apple PushオブジェクトをLive Activitiesペイロードの一部として送信する場合は、`sound`文字列を`alert`オブジェクトに含めるようにしてください。
 {% endalert %}
 
-### Apple プッシュアラートオブジェクト
+### Appleプッシュアラートオブジェクト
 
-ほとんどの場合、`alert``apple_push`オブジェクト内の文字列として指定できます。
+ほとんどの場合、`alert`は`apple_push`オブジェクト内の文字列として指定できます。
 
 ```json
 {
@@ -62,22 +62,22 @@ Apple Push オブジェクトを Live Activities ペイロードの一部とし�
 }
 ```
 
-## Apple プッシュアクションボタンオブジェクト
+## Appleプッシュアクションボタンオブジェクト
 
-iOS プッシュアクションボタンを使用するには、Apple Push `category` オブジェクトにフィールドを含める必要があります。`category`フィールドを含めると、関連するすべてのプッシュアクションボタンが表示されます。ボタンの個々のクリックアクションを追加で定義する場合のみ、`buttons`フィールドを含めてください。Braze SDK には、次の表に示すように、使用できるデフォルトのプッシュアクションボタンのセットが用意されています。アプリに登録されている独自のボタンを使用することもできます。
+AppleプッシュオブジェクトにiOSプッシュアクションボタンを使用するには、`category`フィールドを含める必要があります。`category`フィールドを含めると、関連するプッシュアクションボタンが表示されます。ボタンの個々のクリックアクションを追加で定義したい場合は、`buttons`フィールドのみを含めてください。Braze SDKは、次の表に示すように、使用するためのデフォルトのプッシュアクションボタンのセットを提供します。アプリに登録されている場合は、独自のボタンも使用できます。
 
-### Braze デフォルトボタン用の Apple プッシュアクションボタンオブジェクト
+### AppleプッシュアクションボタンオブジェクトforBrazeデフォルトボタン
 
-| カテゴリ識別子 | ボタンテキスト | ボタンアクション識別子 | 許可されるアクション |
+| カテゴリ識別子   | ボタンテキスト | ボタン アクション 識別子 | 許可されたアクション         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | 同意する | `ab_pb_accept` |  OPEN\_APP, URI, or DEEP\_LINK |
-| `ab_cat_accept_decline` | 拒否 | `ab_pb_decline` | 閉じる |
-| `ab_cat_yes_no` | はい | `ab_pb_yes` | OPEN\_APP, URI, or DEEP\_LINK |
-| `ab_cat_yes_no` | いいえ | `ab_pb_no` | 閉じる |
-| `ab_cat_confirm_cancel` | 確認 | `ab_pb_confirm` | OPEN\_APP, URI, or DEEP\_LINK |
-| `ab_cat_confirm_cancel` | キャンセル | `ab_pb_cancel` | 閉じる |
-| `ab_cat_more` | 詳細 | `ab_pb_more` | OPEN\_APP, URI, or DEEP\_LINK |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `ab_cat_accept_decline` | 受け入れる      | `ab_pb_accept`             | OPEN_APP、URI、またはDEEP_LINK |
+| `ab_cat_accept_decline` | 辞退する     | `ab_pb_decline`            | 閉じる                   |
+| `ab_cat_yes_no`         | はい         | `ab_pb_yes`                | OPEN_APP、URI、またはDEEP_LINK |
+| `ab_cat_yes_no`         | いいえ          | `ab_pb_no`                 | 閉じる                   |
+| `ab_cat_confirm_cancel` | 確認     | `ab_pb_confirm`            | OPEN_APP、URI、またはDEEP_LINK |
+| `ab_cat_confirm_cancel` | キャンセル      | `ab_pb_cancel`             | 閉じる                   |
+| `ab_cat_more`           | もっと        | `ab_pb_more`               | OPEN_APP、URI、またはDEEP_LINK |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
 {
@@ -88,7 +88,7 @@ iOS プッシュアクションボタンを使用するには、Apple Push `cate
 }
 ```
 
-### アプリで定義されたカテゴリのAppleプッシュアクションボタンオブジェクト
+### Appleプッシュアクションボタンオブジェクトは、アプリによって定義されたカテゴリ用です
 
 ```json
 {

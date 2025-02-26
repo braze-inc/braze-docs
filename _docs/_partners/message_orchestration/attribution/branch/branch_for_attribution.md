@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
 
-The Braze and Branch integration will help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
+The Braze and Branch integration will help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ The Braze and Branch integration will help you understand exactly when and where
 | Branch account | A Branch account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
 | Branch SDK | In addition to the required Braze SDK, you must install the [Branch SDK](https://help.branch.io/developers-hub/docs/native-sdks-overview). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

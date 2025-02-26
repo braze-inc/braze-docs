@@ -29,7 +29,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 | Punchh account | You need an active Punchh account to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][6]. Your endpoint depends on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## What else should I know?
 
@@ -320,7 +320,7 @@ Considerations:
 [4]: {% image_buster /assets/img/punchh/punchh4.png %}
 [5]: {% image_buster /assets/img/punchh/punchh5.png %}
 [7]: {% image_buster /assets/img/punchh/punchh6.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [8]: {% image_buster /assets/img/punchh/update1.png %}
 [9]: {% image_buster /assets/img/punchh/update2.png %}
 [10]: {% image_buster /assets/img/punchh/update3.png %}

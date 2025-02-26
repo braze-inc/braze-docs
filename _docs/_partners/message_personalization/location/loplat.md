@@ -21,7 +21,7 @@ The Braze and loplat integration allows you to use loplat's location services (s
 | loplat X account | A loplat X account is required to take advantage of this integration.<br><br>Email [support@loplat.com][3] to request a loplat X account. |
 | loplat SDK | loplat SDK recognizes users' store visits, processes location events, and distinguishes whether users are staying at a place or moving. You can use loplat SDK to analyze your store's footfall, send push messages when users enter your store, etc.<br><br>Note that the SDK is only available for Android and iOS. |
 | Braze REST API key | A Braze REST API key with the following permissions:<br>- `users.track`<br>- `campaigns.trigger.send`<br>- `campaigns.list`<br>- `canvas.trigger.send`<br>- `canvas.list`<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

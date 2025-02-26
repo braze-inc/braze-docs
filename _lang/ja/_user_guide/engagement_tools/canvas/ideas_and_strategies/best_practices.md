@@ -14,16 +14,16 @@ tool: Canvas
 ## 目的を特定する
 
 「何を」、「誰が」、「なぜ」を詳しく調べてみましょう。
-\- ユーザーに何を行い、何を達成してもらいたいか?
-\- リーチしようとしているユーザーは誰か?
-\- なぜこのキャンバスを作るのか?
+- ユーザーに何を達成してもらいたいのか?
+- リーチしようとしているユーザーは誰か?
+- なぜこのキャンバスを作るのか？
 
 ## 組み合わせる
 
 [キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)で、ユーザージャーニーの新たな組み合わせを実現しましょう。
-- [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) を使用してユーザーを分割し、さまざまなワークフローを構築する。
-- [遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)ステップでユーザージャーニーの間隔を空ける。
-\- キャンバスフローの任意のタイミングに[スタンドアロンメッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)を追加する。 
+- [条件分岐]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/)でユーザーを分割し、異なるワークフローを作成します。
+- [遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)ステップでユーザージャーニーの間隔を空けます。
+- キャンバスフローの好きな場所に[スタンドアロンメッセージを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)追加できる。 
 
 ## より充実したメッセージを作成する
 

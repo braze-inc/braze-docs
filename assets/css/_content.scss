@@ -19,8 +19,8 @@
 		display: block !important;
 	}
 
-	strong,
-	b {
+	b,
+	strong {
 		font-weight: normal;
 		font-family: $braze-medium;
 	}
@@ -33,12 +33,9 @@
 
 	#article-main {
 		padding-bottom: $base_font_size * 6;
-		@media (min-width: $window-small-px) {
-		}
+		@media (min-width: $window-small-px) {}
 		@media (min-width: $window-medium-px) {
-			min-height: calc(
-				100vh - #{$calc_offset_view + $footer_height + ($base_font_size * 4)}
-			);
+			min-height: calc(100vh - #{$calc_offset_view + $footer_height + ($base_font_size * 4)});
 		}
 		@media (min-width: $window-xlarge-px) {
 			max-width: $main_max_width;
@@ -47,11 +44,11 @@
 		}
 		// Hack the sticky header
 		> h1[id],
-		> h2[id],
-		> h3[id],
-		> h4[id],
-		> h5[id],
-		> h6[id] {
+		 > h3[id],
+		 > h4[id],
+		 > h5[id],
+		 > h6[id],
+		> h2[id] {
 			pointer-events: none;
 
 			> div,
@@ -72,6 +69,7 @@
 				}
 			}
 		}
+
 		&.has_breadcrumb {
 			> h1:first-of-type {
 				&::before {
@@ -79,29 +77,31 @@
 				}
 			}
 		}
-
 		$content_transition_time: 0.2s;
+
 		*,
-		*::before,
-		*::after {
+		*::after,
+		*::before {
 			border-width: 0;
 			border-style: solid;
 		}
+
 		.gist-it-gist {
 			.prettyprint {
-				font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-					"Courier New", monospace;
+				font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 				font-size: 11.5px;
 				font-weight: 700;
 				line-height: 23px;
 				color: $grey-dust;
 			}
 		}
+
 		.gist-meta {
 			a {
 				color: $black-shark !important;
 			}
 		}
+
 		a {
 			font-family: $braze-medium;
 			display: inline;
@@ -116,9 +116,11 @@
 			transition: all ease $content_transition_time;
 			-webkit-transition: all ease $content_transition_time;
 			-moz-transition: all ease $content_transition_time;
+
 			&:hover {
 				background-color: transparent !important;
 				border-color: $black;
+
 				img {
 					background-color: transparent;
 				}
@@ -129,13 +131,19 @@
 			}
 		}
 
+    span.inline-link {
+      display: inline-block;
+    }
+
 		ul {
 			list-style: square;
 			margin-left: 20px;
+
 			> li {
 				p {
 					display: inline-block;
 				}
+
 				&::before {
 					content: none;
 					color: $black-shark;
@@ -146,6 +154,7 @@
 					display: inline-block;
 					font-family: $braze-medium;
 				}
+
 				div {
 					&.highlighter-rouge {
 						margin-top: 15px;
@@ -158,11 +167,14 @@
 			list-style: none;
 			counter-reset: li;
 			margin-left: 20px;
+
 			> li {
 				counter-increment: li;
+
 				p {
 					display: inline;
 				}
+
 				&::before {
 					content: counter(li) "."; // Add a period right after the counter value
 					font-family: $braze-medium;
@@ -172,6 +184,7 @@
 					margin-top: auto;
 					margin-bottom: auto;
 				}
+
 				div {
 					&.highlighter-rouge {
 						margin-top: 15px;
@@ -179,16 +192,23 @@
 				}
 			}
 		}
-		@for $oli from 1 through 9 {
+		@for $oli from 1 through 12 {
 			ol[start="#{$oli}"] {
 				counter-reset: li #{$oli - 1};
 			}
 		}
+
+		p + ol,
+		p + ul {
+			margin-top: -10px;
+		}
+
 		img {
 			border: 1px solid $grey-ghost;
 			border-width: 1px;
 			border-style: solid;
 		}
+
 		iframe {
 			&.media_embed {
 				margin-bottom: 15px;
@@ -198,13 +218,14 @@
 				@media (min-width: $window-xlarge-px) {
 					&.right {
 						margin-left: 45px;
-						margin-right: 0px;
+						margin-right: 0;
 						margin-bottom: 30px;
 						max-width: 50%;
 						float: right;
 					}
+
 					&.left {
-						margin-left: 0px;
+						margin-left: 0;
 						margin-right: 45px;
 						margin-bottom: 30px;
 						max-width: 50%;
@@ -213,14 +234,17 @@
 				}
 			}
 		}
+
 		.footnote {
 			&::before {
 				content: "[";
 			}
+
 			&::after {
 				content: "]";
 			}
 		}
+
 		.footnotes {
 			li {
 				&::before {
@@ -235,26 +259,30 @@
 			font-size: 16px;
 			color: #212123;
 		}
-		p,
+
 		ol,
+		p,
 		ul {
-			padding: 5px 0 0 0px;
+			padding: 5px 0 0;
 			font-size: 16px;
 		}
+
 		.detail_div {
 			border: 1px solid $grey-ghost !important;
-			padding: 30px 30px 0 30px;
+			padding: 30px 30px 0;
 		}
 	}
 
 	#featured_video {
 		width: 100%;
+
 		.fixed_video {
 			width: 100%;
 			height: calc(100vw * 0.5625);
+
+			embed,
 			iframe,
-			object,
-			embed {
+			object {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -262,15 +290,16 @@
 				height: calc(100vw * 0.5625);
 			}
 		}
-
 		@media (min-width: $window-medium-px) {
 			width: 100%;
+
 			.fixed_video {
 				width: 100%;
 				height: calc((100vw - #{$nav_width}) * 0.5625);
+
+				embed,
 				iframe,
-				object,
-				embed {
+				object {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -282,15 +311,17 @@
 		@media (min-width: $window-xxlarge-px) {
 			max-width: 45%;
 			padding-right: 3%;
+
 			.fixed_video {
 				position: fixed;
 				width: 44%;
 				height: calc(100vw * 0.5625 * 0.44);
 				top: #{$header_height + $banner_height + 15px};
 				right: 15px;
+
+				embed,
 				iframe,
-				object,
-				embed {
+				object {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -310,10 +341,9 @@
 			}
 		}
 	}
-
 	@mixin heading-margin-top($size) {
 		margin-top: $size;
-	  }
+	}
 
 	h1,
 	h2,
@@ -322,38 +352,59 @@
 	h5,
 	h6 {
 		font-family: $braze-regular;
-		margin: 40px 0 4px 0;
-	}
+		margin: 40px 0 4px;
 
+		code {
+			font-size: inherit !important;
+		}
+	}
 	// Target the first h2 after h1, regardless of intervening elements
 	h1 ~ h2:not(:first-of-type) {
-    	margin-top: 4rem; // Reset to default if there's another h2 that is not the first
+		margin-top: 4rem; // Reset to default if there's another h2 that is not the first
 	}
 
 	h1 ~ h2:first-of-type {
-  		margin-top: 2.5rem; // Reduced top margin for the first h2
+		margin-top: 2.5rem; // Reduced top margin for the first h2
 	}
-
 	// h1 is excluded here to avoid adding extra space above page titles
-	h3{
-  		@include heading-margin-top(3rem); 
+	h3 {
+		@include heading-margin-top(3rem);
 	}
-
 	// smaller heading levels have a reduced top margin
-	h4, h5, h6{
-  		@include heading-margin-top(2.25rem); 
+	h4,
+	h5,
+	h6 {
+		@include heading-margin-top(2.25rem);
 	}
-
 	// Directly adjacent headings should have reduced top margin
 	// Starting from h2 to handle cases where headings follow h1
-	h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
-	h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
-	h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
-	h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
-	h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
-		  @include heading-margin-top(1.5rem); // Smaller space for back to back headings
+	h2 + h2,
+	h2 + h3,
+	h2 + h4,
+	h2 + h5,
+	h2 + h6,
+	h3 + h2,
+	h3 + h3,
+	h3 + h4,
+	h3 + h5,
+	h3 + h6,
+	h4 + h2,
+	h4 + h3,
+	h4 + h4,
+	h4 + h5,
+	h4 + h6,
+	h5 + h2,
+	h5 + h3,
+	h5 + h4,
+	h5 + h5,
+	h5 + h6,
+	h6 + h2,
+	h6 + h3,
+	h6 + h4,
+	h6 + h5,
+	h6 + h6 {
+		@include heading-margin-top(1.5rem); // Smaller space for back to back headings
 	}
-
 
 	h1 {
 		font-size: 2.5rem;
@@ -400,22 +451,26 @@
 		font-size: 16px;
 		color: $black-shark;
 	}
+
 	p {
 		margin-bottom: 25px;
+
 		.highlighter-rouge {
 			padding: 2px 4px;
 			border-width: 1px !important;
 			border-color: $grey-ghost;
 		}
 	}
+
 	.highlighter-rouge {
-		font-size: 14px !important;
+		font-size: 14px;
 		font-family: $braze-code;
 		font-weight: bold;
 		color: $grey-dust;
 		background-color: $grey-athens;
 		border: 1px solid $grey-ghost;
 	}
+
 	div {
 		.highlighter-rouge {
 			margin-bottom: 25px;
@@ -425,16 +480,20 @@
 
 div.highlight {
 	border: 1px solid $grey-ghost;
+
 	.rouge-table {
 		width: 100%;
 	}
+
 	.rouge-code {
 		position: relative;
-		max-width: 1px; /* fix some odd overflow alignment issue */
+		max-width: 1px;
+		/* fix some odd overflow alignment issue */
 		pre {
 			padding-right: 50px;
 			color: $grey-dust;
 		}
+
 		.btn {
 			/* -webkit-transition:opacity .3s ease-in-out; */
 			-o-transition: opacity 0.3s ease-in-out;
@@ -445,11 +504,13 @@ div.highlight {
 			top: 5px;
 			right: 2px;
 			background-color: transparent;
+
 			img {
 				width: 26px;
 				border-width: 0 !important;
 			}
 		}
+
 		div {
 			/* -webkit-transition:opacity .3s ease-in-out; */
 			-o-transition: opacity 0.3s ease-in-out;
@@ -471,6 +532,7 @@ div.highlight {
 		}
 	}
 }
+
 #breadcrumb {
 	margin-top: 45px;
 	padding-bottom: 15px;
@@ -479,12 +541,14 @@ div.highlight {
 	font-family: $braze-regular;
 	line-height: 1.7;
 	color: $grey-boulder;
+
 	a {
 		border-bottom-width: 1px !important;
 		border-bottom-color: transparent !important;
 		font-weight: normal !important;
 		font-family: $braze-regular !important;
 		color: $grey-boulder !important;
+
 		&:hover {
 			background-color: transparent !important;
 			border-bottom-width: 1px !important;
@@ -492,6 +556,7 @@ div.highlight {
 		}
 	}
 }
+
 #basic_page {
 	padding-top: $base_font_size * 2;
 	padding-left: $base_font_size * 2;
@@ -502,15 +567,10 @@ div.highlight {
 	@media (min-width: $window-medium-px) {
 		padding-top: $base_font_size / 2;
 	}
-	@media (min-width: 992px) {
-	}
-	min-height: calc(
-		100vh - #{$calc_offset_view + $footer_height + ($base_font_size * 4)}
-	);
+	@media (min-width: 992px) {}
+	min-height: calc(100vh - #{$calc_offset_view + $footer_height + ($base_font_size * 4)});
 }
-
 @import "bottom_nav";
-
 /*
 * Tables
 */
@@ -521,6 +581,7 @@ table {
 	max-width: 100%;
 	margin-bottom: 20px;
 	border: 1px solid $grey-ghost !important;
+
 	> thead {
 		font-size: 15px;
 		text-transform: none;
@@ -529,16 +590,19 @@ table {
 		border: 1px solid $grey-ghost;
 		background-color: $grey-athens;
 	}
+
 	td {
 		border: 1px solid $grey-ghost !important;
 		font-size: 15px;
 		word-break: break-all;
 		@media (max-width: $window-large-px) {
 			word-break: break-word;
+
 			a {
 				word-break: initial;
 			}
 		}
+
 		code.highlighter-rouge {
 			word-break: initial;
 		}
@@ -549,33 +613,38 @@ table {
 				word-break: initial;
 			}
 		}
+
 		&.reset-td-br-2 {
 			td:nth-child(2) {
 				word-break: initial;
 			}
 		}
+
 		&.reset-td-br-3 {
 			td:nth-child(3) {
 				word-break: initial;
 			}
 		}
+
 		&.reset-td-br-4 {
 			td:nth-child(4) {
 				word-break: initial;
 			}
 		}
+
 		&.ws-td-nw-1 {
 			td:nth-child(1) {
 				white-space: nowrap;
 			}
 		}
 	}
+
 	> tbody > tr > td,
-	> tbody > tr > th,
-	> tfoot > tr > td,
-	> tfoot > tr > th,
-	> thead > tr > td,
-	> thead > tr > th {
+	 > tfoot > tr > td,
+	 > tfoot > tr > th,
+	 > thead > tr > td,
+	 > thead > tr > th,
+	> tbody > tr > th {
 		padding: 10px;
 		line-height: 1.5;
 		vertical-align: top;
@@ -583,6 +652,7 @@ table {
 		/* then would need to update all the table code to remove the :---: from the tables */
 		text-align: left !important;
 	}
+
 	> thead > tr > th {
 		vertical-align: bottom;
 	}
@@ -600,10 +670,21 @@ table td code.highlighter-rouge {
 		word-break: initial;
 	}
 }
-.highlight table {
-	margin-bottom: 0px;
-}
 
+code {
+  font-size: 14px;
+  font-family: $braze-code;
+  font-weight: bold;
+  color: $grey-dust;
+  background-color: $grey-athens;
+  border: 1px solid $grey-ghost;
+}
+legend {
+	font-size: 15px;
+}
+.highlight table {
+	margin-bottom: 0;
+}
 /**
  * Clearfix
  */
@@ -614,7 +695,6 @@ table td code.highlighter-rouge {
 		clear: both;
 	}
 }
-
 /*
  * Wrapper
  */
@@ -624,26 +704,22 @@ table td code.highlighter-rouge {
 	padding-right: 4rem;
 	padding-left: 4rem;
 	@extend .clearfix;
-
 	@media (max-width: $window-large-px) {
 		padding-right: 2rem;
 		padding-left: 2rem;
 	}
 }
-
 /*
 * Blockquotes
 */
-
 blockquote {
 	color: $black-shark;
 	border-left: 2px solid $braze-purple-dark !important;
-	padding: 20px 20px 2px 20px;
+	padding: 20px 20px 2px;
 	font-size: 16px;
 	font-style: normal;
 	background-color: $grey-athens;
 }
-
 /* Sub intro */
 .subintro {
 	background-color: $grey-athens;
@@ -651,9 +727,8 @@ blockquote {
 	font-size: 16px;
 	font-style: normal;
 	color: $black-shark;
-	padding: 20px 20px 20px 20px;
+	padding: 20px;
 }
-
 /*
  * Code highlighting
  */
@@ -661,7 +736,7 @@ blockquote {
 	pre {
 		padding: 0;
 		line-height: 23px;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		white-space: pre;
 		overflow-x: auto;
 		word-break: inherit;
@@ -672,257 +747,330 @@ blockquote {
 		.c {
 			color: #666666;
 			font-style: italic;
-		} /* Comment */
+		}
+		/* Comment */
 		.err {
 			background-color: initial;
 			color: inherit;
-		} /* Error */
+		}
+		/* Error */
 		.k {
 			color: $blue-ocean;
 			font-weight: bold;
-		} /* Keyword */
+		}
+		/* Keyword */
 		.o {
 			color: #333333;
-		} /* Operator */
+		}
+		/* Operator */
 		.ch {
 			color: #666666;
 			font-style: italic;
-		} /* Comment.Hashbang */
+		}
+		/* Comment.Hashbang */
 		.cm {
 			color: #666666;
 			font-style: italic;
-		} /* Comment.Multiline */
+		}
+		/* Comment.Multiline */
 		.cp {
 			color: #557799;
-		} /* Comment.Preproc */
+		}
+		/* Comment.Preproc */
 		.cpf {
 			color: #666666;
 			font-style: italic;
-		} /* Comment.PreprocFile */
+		}
+		/* Comment.PreprocFile */
 		.c1 {
 			color: #666666;
 			font-style: italic;
-		} /* Comment.Single */
+		}
+		/* Comment.Single */
 		.cs {
 			color: #cc0000;
 			font-weight: bold;
 			font-style: italic;
-		} /* Comment.Special */
+		}
+		/* Comment.Special */
 		.gd {
 			color: #a00000;
-		} /* Generic.Deleted */
+		}
+		/* Generic.Deleted */
 		.ge {
 			font-style: italic;
-		} /* Generic.Emph */
+		}
+		/* Generic.Emph */
 		.gr {
 			color: #ff0000;
-		} /* Generic.Error */
+		}
+		/* Generic.Error */
 		.gh {
 			color: #000080;
 			font-weight: bold;
-		} /* Generic.Heading */
+		}
+		/* Generic.Heading */
 		.gi {
 			color: #00a000;
-		} /* Generic.Inserted */
+		}
+		/* Generic.Inserted */
 		.go {
 			color: #888888;
-		} /* Generic.Output */
+		}
+		/* Generic.Output */
 		.gp {
 			color: #c65d09;
 			font-weight: bold;
-		} /* Generic.Prompt */
+		}
+		/* Generic.Prompt */
 		.gs {
 			font-weight: bold;
-		} /* Generic.Strong */
+		}
+		/* Generic.Strong */
 		.gu {
 			color: #800080;
 			font-weight: bold;
-		} /* Generic.Subheading */
+		}
+		/* Generic.Subheading */
 		.gt {
 			color: #0044dd;
-		} /* Generic.Traceback */
+		}
+		/* Generic.Traceback */
 		.kc {
 			color: $blue-ocean;
 			font-weight: bold;
-		} /* Keyword.Constant */
+		}
+		/* Keyword.Constant */
 		.kd {
 			color: $blue-ocean;
 			font-weight: bold;
-		} /* Keyword.Declaration */
+		}
+		/* Keyword.Declaration */
 		.kn {
 			color: $blue-ocean;
 			font-weight: bold;
-		} /* Keyword.Namespace */
+		}
+		/* Keyword.Namespace */
 		.kp {
 			color: #0088ff;
 			font-weight: bold;
-		} /* Keyword.Pseudo */
+		}
+		/* Keyword.Pseudo */
 		.kr {
 			color: $blue-ocean;
 			font-weight: bold;
-		} /* Keyword.Reserved */
+		}
+		/* Keyword.Reserved */
 		.kt {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Keyword.Type */
+		}
+		/* Keyword.Type */
 		.m {
 			color: #6600ee;
 			font-weight: bold;
-		} /* Literal.Number */
+		}
+		/* Literal.Number */
 		.s {
 			color: $red-rose;
-		} /* Literal.String */
+		}
+		/* Literal.String */
 		.n {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Literal.Name */
+		}
+		/* Literal.Name */
 		.na {
 			color: #000077;
-		} /* Name.Attribute */
+		}
+		/* Name.Attribute */
 		.nb {
 			color: $green-grass;
-		} /* Name.Builtin */
+		}
+		/* Name.Builtin */
 		.nc {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Name.Class */
+		}
+		/* Name.Class */
 		.no {
 			color: $blue-scooter;
 			font-weight: bold;
-		} /* Name.Constant */
+		}
+		/* Name.Constant */
 		.nd {
 			color: #555555;
 			font-weight: bold;
-		} /* Name.Decorator */
+		}
+		/* Name.Decorator */
 		.ni {
 			color: #880000;
-		} /* Name.Entity */
+		}
+		/* Name.Entity */
 		.ne {
 			color: #ff0000;
 			font-weight: bold;
-		} /* Name.Exception */
+		}
+		/* Name.Exception */
 		.nf {
 			color: $blue-scooter;
 			font-weight: bold;
-		} /* Name.Function */
+		}
+		/* Name.Function */
 		.nl {
 			color: #997700;
 			font-weight: bold;
-		} /* Name.Label */
+		}
+		/* Name.Label */
 		.nn {
 			color: #0e84b5;
 			font-weight: bold;
-		} /* Name.Namespace */
+		}
+		/* Name.Namespace */
 		.nx {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Name.Class.Other */
+		}
+		/* Name.Class.Other */
 		.nt {
 			color: #007700;
-		} /* Name.Tag */
+		}
+		/* Name.Tag */
 		.nv {
 			color: #003366;
-		} /* Name.Variable */
+		}
+		/* Name.Variable */
 		.ow {
 			color: #000000;
 			font-weight: bold;
-		} /* Operator.Word */
+		}
+		/* Operator.Word */
 		.w {
 			color: #bbbbbb;
-		} /* Text.Whitespace */
+		}
+		/* Text.Whitespace */
 		.mb {
 			color: #6600ee;
 			font-weight: bold;
-		} /* Literal.Number.Bin */
+		}
+		/* Literal.Number.Bin */
 		.mf {
 			color: #6600ee;
 			font-weight: bold;
-		} /* Literal.Number.Float */
+		}
+		/* Literal.Number.Float */
 		.mh {
 			color: #005588;
 			font-weight: bold;
-		} /* Literal.Number.Hex */
+		}
+		/* Literal.Number.Hex */
 		.mi {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Literal.Number.Integer */
+		}
+		/* Literal.Number.Integer */
 		.mo {
 			color: #4400ee;
 			font-weight: bold;
-		} /* Literal.Number.Oct */
+		}
+		/* Literal.Number.Oct */
 		.sa {
 			color: $red-rose;
-		} /* Literal.String.Affix */
+		}
+		/* Literal.String.Affix */
 		.sb {
 			color: $red-rose;
-		} /* Literal.String.Backtick */
+		}
+		/* Literal.String.Backtick */
 		.sc {
 			color: #8888ff;
-		} /* Literal.String.Char */
+		}
+		/* Literal.String.Char */
 		.dl {
 			color: $red-rose;
-		} /* Literal.String.Delimiter */
+		}
+		/* Literal.String.Delimiter */
 		.sd {
 			color: #dd4422;
-		} /* Literal.String.Doc */
+		}
+		/* Literal.String.Doc */
 		.s2 {
 			color: $red-rose;
-		} /* Literal.String.Double */
+		}
+		/* Literal.String.Double */
 		.se {
 			color: #666666;
 			font-weight: bold;
 			background-color: $red-rose;
-		} /* Literal.String.Escape */
+		}
+		/* Literal.String.Escape */
 		.sh {
 			background-color: $red-rose;
-		} /* Literal.String.Heredoc */
+		}
+		/* Literal.String.Heredoc */
 		.si {
 			background-color: #eeeeee;
-		} /* Literal.String.Interpol */
+		}
+		/* Literal.String.Interpol */
 		.sx {
 			background-color: initial;
 			color: inherit;
-		} /* Literal.String.Other */
+		}
+		/* Literal.String.Other */
 		.sr {
 			background-color: initial;
 			color: inherit;
-		} /* Literal.String.Regex */
+		}
+		/* Literal.String.Regex */
 		.s1 {
 			color: $red-rose;
-		} /* Literal.String.Single */
+		}
+		/* Literal.String.Single */
 		.ss {
 			color: #ffcc88;
-		} /* Literal.String.Symbol */
+		}
+		/* Literal.String.Symbol */
 		.bp {
 			color: $green-grass;
-		} /* Name.Builtin.Pseudo */
+		}
+		/* Name.Builtin.Pseudo */
 		.fm {
 			color: $blue-scooter;
 			font-weight: bold;
-		} /* Name.Function.Magic */
+		}
+		/* Name.Function.Magic */
 		.vc {
 			color: #ccccff;
-		} /* Name.Variable.Class */
+		}
+		/* Name.Variable.Class */
 		.vg {
 			color: #ff8844;
-		} /* Name.Variable.Global */
+		}
+		/* Name.Variable.Global */
 		.vi {
 			color: #aaaaff;
-		} /* Name.Variable.Instance */
+		}
+		/* Name.Variable.Instance */
 		.vm {
 			color: #003366;
-		} /* Name.Variable.Magic */
+		}
+		/* Name.Variable.Magic */
 		.il {
 			color: $navy-cove;
 			font-weight: bold;
-		} /* Literal.Number.Integer.Long */
-
+		}
+		/* Literal.Number.Integer.Long */
 		&.prewrap {
-			white-space: pre-wrap; /* Since CSS 2.1 */
-			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-			white-space: -pre-wrap; /* Opera 4-6 */
-			white-space: -o-pre-wrap; /* Opera 7 */
-			word-wrap: break-word; /* Internet Explorer 5.5+ */
+			white-space: pre-wrap;
+			/* Since CSS 2.1 */
+			white-space: -moz-pre-wrap;
+			/* Mozilla, since 1999 */
+			white-space: -pre-wrap;
+			/* Opera 4-6 */
+			white-space: -o-pre-wrap;
+			/* Opera 7 */
+			word-wrap: break-word;
+			/* Internet Explorer 5.5+ */
 		}
 	}
 
@@ -932,13 +1080,11 @@ blockquote {
 
 	.gl {
 		width: 2rem;
-
 		font-family: $braze-code;
 		font-weight: medium;
 		font-size: 14px;
 		color: $grey-dust;
 		background-color: $white;
-
 		/* Stop line numbers being visually selected */
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
@@ -946,10 +1092,12 @@ blockquote {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+
 		pre {
 			color: $grey-dust;
 		}
 	}
+
 	.rouge-code {
 		font-size: 14px;
 		font-family: $braze-code;
@@ -965,6 +1113,7 @@ blockquote {
 	top: auto;
 	width: 1px;
 	z-index: -999;
+
 	&:active,
 	&:focus {
 		--tw-bg-opacity: 1;
@@ -986,6 +1135,6 @@ blockquote {
 
 .noimgborder {
 	img {
-		border: 0px !important;
+		border: 0 !important;
 	}
 }

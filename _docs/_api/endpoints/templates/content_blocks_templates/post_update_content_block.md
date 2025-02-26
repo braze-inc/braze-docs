@@ -52,8 +52,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `description` | Optional | String | Description of the Content Block. Must be less than 250 characters. |
 | `content` | Optional | String | HTML or text content within Content Blocks.
 | `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
-| `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) must already exist. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```json
@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "content_block_id" :"content_block_id", 
+  "content_block_id" :"content_block_id",
   "name": "content_block",
   "description": "This is my Content Block",
   "content": "HTML or text content within block",
@@ -107,7 +107,7 @@ The following table lists possible returned errors and their associated troubles
 | `Tags must be an array` | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. |
 | `All tags must be strings` | Make sure your tags are encapsulated in quotes (`""`). |
 | `Some tags could not be found` | To add a tag when creating a Content Block, the tag must already exist in Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

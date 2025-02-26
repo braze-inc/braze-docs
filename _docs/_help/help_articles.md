@@ -4,7 +4,7 @@ article_title: Help Articles
 page_order: 1
 layout: dev_guide
 guide_top_header: "Help Articles"
-guide_top_text: "We have plenty of help articles that can help you solve issues and reveal dependencies in your campaigns. If you have a suggestion for a new help article, leave feedback at the bottom of this or any help article page. Or, you can write an article yourself by going to the <a href='https://github.com/braze-inc/braze-docs/wiki'>Braze Docs repository</a> on GitHub. <br> <br>Choose from the following popular topics or see other articles listed in the navigation panel."
+guide_top_text: "We have plenty of help articles that can help you solve issues and reveal dependencies in your campaigns. If you have a suggestion for a new help article, leave feedback at the bottom of this or any help article page. Or, you can learn how to write an article yourself by going to the <a href='https://www.braze.com/docs/contributing/home'>Braze Contributor Guide</a>. <br> <br>Choose from the following popular topics or see other articles listed in the navigation panel."
 
 page_type: landing
 description: "This landing page is home to help articles that can help you solve issues and reveal dependencies when using Braze."
@@ -32,9 +32,6 @@ guide_featured_list:
   - name: Email
     link: /docs/help/help_articles/email/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: In-App Messages
-    link: /docs/help/help_articles/in-app_messages/
-    image: /assets/img/braze_icons/phone-02.svg
   - name: Push
     link: /docs/help/help_articles/push/
     image: /assets/img/braze_icons/message-square-02.svg

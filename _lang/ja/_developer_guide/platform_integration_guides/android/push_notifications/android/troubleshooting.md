@@ -32,13 +32,13 @@ Firebase Cloud Messaging (FCM) サービスは、Android アプリケーショ�
 ### ステップ 4:無効なトークンを削除する
 メッセージを送信しようとしたプッシュトークンのいずれかが無効であると FCM から通知された場合は、関連付けられていたユーザープロファイルからそれらのトークンを削除します。ユーザーが他にプッシュトークンを持っていない場合は、[**セグメント**] ページの下に「プッシュ登録済み」として表示されなくなります。
 
-FCM の詳細については、[クラウドメッセージング][6]を参照してください。
+FCM の詳細については、[クラウドメッセージング](https://firebase.google.com/docs/cloud-messaging/)を参照してください。
 
 ## プッシュエラーログの活用
 
 Braze は、プッシュ通知エラーをメッセージアクティビティログに出力します。このエラーログは、キャンペーンが期待どおりに機能していない理由を特定するのに非常に役立つさまざまな警告を提供します。エラーメッセージをクリックすると、特定のインシデントのトラブルシューティングに役立つ関連ドキュメントにリダイレクトされます。
 
-![][11]
+![]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 ## トラブルシューティングのシナリオ
 
@@ -65,7 +65,7 @@ FCM 登録は Braze の外部で処理されるため、登録の失敗は次の
 1. FCM への登録中
 2. FCM で生成されたプッシュトークンを Braze に渡すとき
 
-ブレークポイントを設定するか、ログを記録して、FCM で生成されたプッシュトークンが Braze に送信されていることを確認してください。トークンが正しく生成されない場合、またはまったく生成されない場合は、[FCM ドキュメント][1]を参照することをお勧めします。
+ブレークポイントを設定するか、ログを記録して、FCM で生成されたプッシュトークンが Braze に送信されていることを確認してください。トークンが正しく生成されない場合、またはまったく生成されない場合は、[FCM ドキュメント](https://firebase.google.com/docs/cloud-messaging/android/client)を参照することをお勧めします。
 
 #### Google Play 開発者サービスが存在しない
 
@@ -85,7 +85,7 @@ FCM プッシュが正しく機能するためには、Google Play 開発者サ�
 
 ### プッシュ通知がバウンスされる
 
-プッシュ通知が配信されない場合は、[開発者コンソール][2]を見て、通知がバウンスされていないことを確認してください。以下は、開発者コンソールに記録される可能性のある一般的なエラーの説明です。
+プッシュ通知が配信されない場合は、[開発者コンソール]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs)を見て、通知がバウンスされていないことを確認してください。以下は、開発者コンソールに記録される可能性のある一般的なエラーの説明です。
 
 #### エラー:MismatchSenderID
 
@@ -95,7 +95,7 @@ FCM プッシュが正しく機能するためには、Google Play 開発者サ�
 
 `InvalidRegistration` は、不正な形式のプッシュトークンが原因で発生する可能性があります。
 
-1. [Firebase Cloud Messaging][21] からの有効なプッシュトークンを Braze に渡すようにしてください。
+1. [[Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token)] からの有効なプッシュトークンを Braze に渡すようにしてください。
 
 #### エラー:NotRegistered
 
@@ -130,7 +130,7 @@ Wi-Fi 経由でプッシュをテストしている場合は、FCM がメッセ�
 
 #### カスタム通知ファクトリーが null を返す
 
-[カスタム通知ファクトリー][16] を実装している場合は、`null` を返していないことを確認します。null が返されると、通知が表示されなくなります。
+[[カスタム通知ファクトリー]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications)] を実装している場合は、`null` を返していないことを確認します。null が返されると、通知が表示されなくなります。
 
 ### 「プッシュ登録済み」ユーザーがメッセージ送信後に有効でなくなる
 
@@ -144,7 +144,7 @@ Wi-Fi 経由でプッシュをテストしている場合は、FCM がメッセ�
 
 Braze ダッシュボードで提供された Firebase Cloud Messaging サーバーキーが無効です。提供された送信者 ID は、アプリの `braze.xml` ファイルで参照されている送信者 ID と一致する必要があります。サーバーキーと送信者 ID は、Firebase コンソールの次の場所にあります。
 
-![Firebase プラットフォームの [設定]、[クラウドメッセージング] にサーバー ID とサーバーキーが表示されます。][20]
+![Firebase プラットフォームの [設定]、[クラウドメッセージング] にサーバー ID とサーバーキーが表示されます。]({% image_buster /assets/img_archive/finding_firebase_server_key.png %}「FirebaseServerKey」)
 
 ### プッシュクリックが記録されない
 
@@ -156,7 +156,7 @@ Braze はプッシュクリックを自動的に記録するため、このシ�
 
 #### ディープリンク構成を確認する
 
-ディープリンクは [ADB でテスト][17] できます。次のコマンドを使用してディープリンクをテストすることをお勧めします。
+ディープリンクは、[[ADBでテスト](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters)] することができます。次のコマンドを使用してディープリンクをテストすることをお勧めします。
 
 `adb shell am start -W -a android.intent.action.VIEW -d "THE_DEEP_LINK" THE_PACKAGE_NAME`
 
@@ -164,24 +164,13 @@ Braze はプッシュクリックを自動的に記録するため、このシ�
 
 #### カスタム処理ロジックを検証する
 
-ディープリンクが [ADBでは正しく動作する][17] が、Braze プッシュからは機能しない場合は、[カスタムプッシュオープン処理][18] が実装されているかどうかを確認します。実装されている場合は、カスタム処理コードが受信ディープリンクを適切に処理していることを確認してください。
+ディープリンクが [[ADB では正しく動作する](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters)] が、Braze プッシュからは機能しない場合は、[[カスタムプッシュ開封処理]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback)] が実装されているかどうかを確認します。実装されている場合は、カスタム処理コードが受信ディープリンクを適切に処理していることを確認してください。
 
 #### バックスタック動作を無効にする
 
-ディープリンクが [ADB では正常に動作する][17] が、Braze プッシュでは動作しない場合は、[バックスタック][22] を無効にしてみてください。これを行うには、**braze.xml** ファイルを更新して以下を含めます。
+ディープリンクが [[ADB では正しく動作する](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters)] が、Braze プッシュでは機能しない場合は、[[バックスタック](https://developer.android.com/guide/components/activities/tasks-and-back-stack)] を無効にしてみてください。そのためには、**braze.xml** を更新して以下を含めます。
 
 ```xml
 <bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>
 ```
 
-[1]: https://firebase.google.com/docs/cloud-messaging/android/client
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs
-[4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
-[6]: https://firebase.google.com/docs/cloud-messaging/
-[11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
-[17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
-[20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
-[22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack

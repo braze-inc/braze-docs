@@ -1,8 +1,8 @@
 ---
-nav_title: SMS メッセージの作成
-article_title: SMS メッセージの作成
+nav_title: SMSメッセージを作成する
+article_title: SMSメッセージを作成する
 page_order: 5
-description: "この参考記事では、SMS メッセージの作成と作成に必要な手順について説明しています。"
+description: "この参考記事では、SMSメッセージの構築と作成に関わるステップをカバーしている。"
 page_type: reference
 tool:
   - Campaigns
@@ -11,130 +11,130 @@ channel:
 search_rank: 1
 ---
 
-# SMS メッセージの作成
+# SMSメッセージを作成する
 
-> SMSキャンペーンは、顧客と直接連絡を取り、プログラムで会話するのに最適です。Liquidやその他の動的コンテンツを使用して、ユーザーとの個人的な体験を創出し、ブランドでの目立たないユーザー体験を促進および強化する環境を作成できます。 
+> SMS キャンペーンは、顧客に直接リーチしてプログラムを使って会話を行うのに適しています。Liquid などのダイナミックコンテンツを使用して、ユーザー一人ひとりに合わせた体験を作り出し、控えめなブランド体験を強化する環境を作ることができます。 
 
-## ステップ 1:メッセージを作成する場所を選択してください
+## ステップ 1: メッセージを作成する場所を選択する
 
-メッセージをキャンペーンとキャンバスのどちらを使用して送信すべきかわからない?キャンペーンは単一のシンプルなメッセージキャンペーンに適していますが、キャンバスは複数段階のユーザージャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
 **ステップ:**
 
-1. [**メッセージング**] > [**キャンペーン**] に移動し、[<i class=「fas fa-plus」> </i> **キャンペーンを作成**] をクリックします。
+1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 {% alert note %}
-[古いナビゲーションを使用している場合は]({{site.baseurl}}/navigation)、[**エンゲージメント**] に [**キャンペーン**] が表示されます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**キャンペーン**] が表示されます。
 {% endalert %}
 
-{:start=“2"}
-2\.[**SMS**] を選択します。複数のチャネルをターゲットとするキャンペーンの場合は [**マルチチャネルキャンペーン**] を選択します。
-3\.キャンペーンには明確で意味のある名前を付けてください。
-4\.[[必要に応じてチームとタグを追加します]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)。
-   \* タグを使うと、キャンペーンを簡単に見つけてレポートを作成できます。たとえば、[レポートビルダーを使用する場合]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)、特定のタグでフィルタリングできます。
-5\.キャンペーンに必要な数だけバリエーションを追加して名前を付けてください。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、およびレイアウトを選択できます。このトピックの詳細については、「[多変量分析と]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) A/B テスト」を参照してください。
-6\.[購読グループを選択して]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、メッセージを適切なユーザーに送信するようにしてください。サブスクリプショングループを選択すると、Brazeは自動的にセグメントフィルターを追加し、サブスクライブしたユーザーのみがキャンペーンを受け取れるようにします。対象ユーザーへのSMS送信には、そのサブスクリプショングループに属するロングコードとショートコードのみが使用されます。
+{: start="2"}
+2\.**SMS**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は**Multichannel**を選択します。
+3\.キャンペーンに、明確で意味のある名前を付けます。
+4. 必要に応じて[チームや]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)追加する。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
+6. [[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)] を選択して、メッセージを送信するユーザーが適切であることを確認します。サブスクリプショングループを選択すると、Braze によって自動的にセグメンテーションフィルターが追加され、配信登録済みのユーザーのみがキャンペーンを受信できるようになります。そのサブスクリプショングループに属する長いコードと短いコードのみを使用して、対象ユーザーに SMS が送信されます。
 
 {% alert tip %}
-キャンペーン内のすべてのメッセージが類似または同じ内容になる場合は、バリエーションを追加する前にメッセージを作成してください。次に、「**バリエーションを追加**」**ドロップダウンから「バリアントからコピー**」を選択できます。
+キャンペーン内のすべてのメッセージが類似しているか、同じ内容になる場合は、メッセージを作成してからバリアントを追加します。その後、[**バリアントを追加**] ドロップダウンから [**バリアントをコピー**] を選択できます。
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
+{% tab キャンバス %}
 
 **ステップ:**
 
-1. [Canvas コンポーザーを使用して Canvas を作成します]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)。
-2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに明確で意味のある名前を付けてください。
-3. [ステップスケジュールを選択し]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)、必要に応じて遅延を指定します。
-4. このステップでは、必要に応じてオーディエンスを絞り込んでください。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込みます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
-5. [昇進行動を選択してください]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)。
-6. メッセージとペアリングしたい他のメッセージングチャネルを選択してください。
+1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
+2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
+3. [[ステップスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)] を選択し、必要に応じて遅延を指定します。
+4. 必要に応じて、このステップのオーディエンスをフィルターします。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込むことができます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
+5. [[昇進動作]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)] を選択します。
+6. メッセージと組み合わせる他のメッセージングチャネルを選択します。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2:SMS を作成
+## ステップ 2: SMSを作成する
 
-必要に応じて、言語とパーソナライズ（Liquid、コネクテッドコンテンツ、絵文字）を使用してメッセージを書きます。超過料金が発生する可能性を減らすため、メッセージコピーの制限を必ず守ってください。
+必要に応じて言語やパーソナライズ（リキッド、コネクテッド・コンテンツ、絵文字）を使ってメッセージを書きます。超過料金を請求される可能性を減らすため、メッセージのコピー数制限を必ず守ってください。
 
 {% alert important %}
-先に進む前に、[SMS メッセージセグメントとコピー制限に関するガイドラインをお読みください]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)。SMS メッセージセグメントは、電話会社がテキストメッセージの測定に使用する文字バッチです。メッセージはメッセージセグメントごとに課金されるため、メッセージがどのように分割されるかの微妙な違いを理解しておくとよいでしょう。
+先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/)ガイドラインを読みましょう。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことです。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておきましょう。
 {% endalert %}
 
-![SMS composer in Braze with the message "Hi first_name, we appreciate your support! Why not stop by one of our stores and show them this SMS for an exclusive discount? Reply STOP to stop receiving messages from us."]({% image_buster /assets/img/sms_campaign_compose.png %})
+![次のメッセージを含む Braze の SMS コンポーザー: 「first_name さん、いつも応援していただきありがとうございます。このSMSを見せれば、特別割引が適用されます。メッセージの受信を中止するには STOP と返信してください。」]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 {% alert tip %}
 {% raw %}
-Liquidを使用する予定の場合は、選択したパーソナライゼーションのデフォルト値を必ず含めてください。そうすれば、受信者のユーザープロファイルが不完全な場合でも、`Hi, !`名前や一貫した文章の代わりに空白のプレースホルダーが届きません。
+Liquidを使用する場合は、受信者のユーザープロファイルが不完全な場合、名前やまとまった文章の代わりに空白のプレースホルダー`Hi, !` を受信しないように、選択したパーソナライズのデフォルト値を必ず含めてください。
 {% endraw %}
 {% endalert %}
 
-素晴らしいコピーを作成するのに助けが必要ですか？[AIコピーライティングアシスタントを使ってみてください]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)。商品名または説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用できます。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-![Launch AI Copywriter button, located in the Message field of the SMS composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+![SMS コンポーザーのメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 ### 連絡先カード
 
-必要に応じて、SMSメッセージに連絡先カードを追加して、顧客が連絡先にビジネス情報や連絡先情報を簡単に追加できるようにすることができます。これらのカードには、会社の名前、電話番号、住所、電子メール、小さな写真などの一般的なプロパティを割り当てることができます。詳細については、「[連絡先カード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)」を参照してください。
+必要に応じて、連絡先カードをSMSメッセージに追加して、顧客がビジネスや連絡先情報を簡単に連絡先に追加できるようにすることができます。これらのカードには、会社名、電話番号、住所、Eメール、小さな写真など、一般的なプロパティを割り当てることができます。詳しくは、[お問い合わせカード]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/)をご覧ください。
 
 ## ステップ 3:メッセージをプレビューしてテストする
 
-Braze では、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テストタブに切り替えて**、[コンテンツテストグループまたは個々のユーザーにテスト]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) SMS を送信したり、メッセージをユーザーとして Braze で直接プレビューしたりできます。
+Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューしましょう。
 
-![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %})
+![コンポーザーのテストタブからの SMS コピーのプレビュー。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビュー・セクションでは、SMSに "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %}) と表示されるようになりました。
 
 {% alert tip %}
-SMSが分割されるセグメント数をテストしたい場合は、[SMSセグメント計算ツールでコピーの長さをテストしてください]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)。
+SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみましょう。
 {% endalert %}
 
-## ステップ 4: 残りのキャンペーンやキャンバスを作成
+## ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
-次に、残りのキャンペーンを作成します。当社のツールを最大限に活用して SMS メッセージを作成する方法の詳細については、以下のセクションを参照してください。
+次に、キャンペーンの残りの部分を作成します。SMSメッセージの作成に最適なツールの使い方については、以下のセクションを参照してください。
 
-#### 配送スケジュールまたはトリガーを選択
+#### 配信スケジュールまたはトリガーを選択する
 
-SMS メッセージは、スケジュールされた時間、アクション、または API トリガーに基づいて配信できます。詳細については、「[キャンペーンのスケジュール]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)」を参照してください。
+SMS メッセージは、スケジュールされた時刻、アクション、または API トリガーに基づいて配信することができます。詳細については、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を参照してください。
 
-アクションベースの配信では、[キャンペーンの期間と待機時間を設定することもできます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)。
+アクションベースの配信では、キャンペーンの継続時間と [[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
 
-このステップでは、[ユーザーにキャンペーンの再受領を許可したり]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)、[フリークエンシーキャップルールを有効にするなどの配信制御を指定することもできます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)。
+このステップでは、配信コントロールを指定できます。例えば、ユーザーを[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)してキャンペーンを受信できるようにしたり、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)ルールを有効にしたりできます。
 
-#### ターゲットにするユーザーを選択
+#### ターゲットとするユーザーを選択する
 
-次に、[セグメントまたはフィルターを選択してユーザーをターゲットにし]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)、オーディエンスを絞り込む必要があります。購読グループはすでに選択されているはずです。これにより、ユーザーが希望するコミュニケーションのレベルまたはカテゴリでユーザーが絞り込まれます。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してそのセグメントをさらに絞り込みます。現在のおおよそのセグメント人口がどのようになっているかのスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)し、オーディエンスを絞り込む必要があります。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。このステップでは、セグメントからより多くのオーディエンスを選択し、必要であればフィルターを使ってさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 {% alert tip %}
-SMSリターゲティングに興味がありますか？詳しくは、[SMSリターゲティングの記事をご覧ください]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/)。
+SMSリターゲティングに興味がある？詳しくはSMS[リターゲティングの記事を]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/)ご覧いただきたい。
 {% endalert %}
 
 #### コンバージョンイベントを選択する
 
-Brazeでは、キャンペーンを受け取った後、[ユーザーが特定のアクションやコンバージョンイベントを実行する頻度を追跡できます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間を最大 30 日間設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
-コンバージョンイベントは、キャンペーンの成功を測定するのに役立ちます。例えば:
+コンバージョンイベントにより、キャンペーンの成否を測定できます。以下に例を示します。
 
-- ジオターゲティングを使用して、ユーザーが購入することを最終目標とする SMS メッセージをトリガーする場合は、コンバージョンイベントをに設定します。`Purchase`
-- ユーザーをアプリに誘導しようとする場合は、コンバージョンイベントをに設定します`Starts Session`。
+- ジオターゲティングを使用して、ユーザーが購入するという最終目標を持つSMSメッセージをトリガーする場合、コンバージョンイベントを`Purchase` 。
+- ユーザーをアプリに誘導しようとしている場合は、コンバージョンイベントを`Starts Session` に設定する。
 
-特定のユースケースに基づいてカスタムコンバージョンイベントを設定することもできます。クリエイティブになって、このキャンペーンの成功を本当にどのように測定したいかを考えてください。
+独自のユースケースに基づいて、カスタムコンバージョンイベントを設定することもできます。このキャンペーンの真の成功を測定する方法について独創的に考えてみましょう。
 
 {% endtab %}
 
-{% tab Canvas %}
+{% tab キャンバス %}
 
-まだ行っていない場合は、Canvas コンポーネントの残りのセクションを完了してください。Canvasの残りの部分を構築する方法、多変量分析テストやインテリジェントセレクションを実装する方法などの詳細については、[Canvasドキュメントの「キャンバスの構築]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)」ステップを参照してください。
+キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照のこと。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 5: 確認とデプロイ
+## ステップ 5: レビューと展開
 
-最後のキャンペーンやキャンバスの作成が終わったら、詳細を確認してテストし、送信しましょう！
+キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認しテストしてから送信してください。
 
-次に、[SMSレポートを確認して]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)、SMSキャンペーンの結果にアクセスする方法を確認してください。
+次に、[SMS レポート]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)をチェックして、SMS キャンペーンの結果にアクセスする方法を確認します。

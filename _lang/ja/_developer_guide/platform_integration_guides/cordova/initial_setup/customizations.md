@@ -43,7 +43,7 @@ page_order: 1
 {% endalert %}
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 | メソッド                                         | 説明                                                                                                                                            |
 | -----------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `api_key`                                      | アプリケーションの API キーを設定します。 |
@@ -106,7 +106,7 @@ page_order: 1
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ```xml
 <platform name="android">
     <preference name="com.braze.android_small_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
@@ -154,7 +154,7 @@ page_order: 1
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 Cordova 8.0.0 以降のフレームワークによる設定の処理方法に従って、整数のみの設定 (送信者 ID など) は、次の例のように先頭に `str_` が付加された文字列に設定する必要があります。
 
 ```xml
@@ -180,7 +180,7 @@ Cordova 8.0.0 以降のフレームワークによる設定の処理方法に従
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ブール値の設定は、次の例のように、`true` および `false` キーワードを文字列表現として使用して SDK によって読み取られます。
 
 ```xml

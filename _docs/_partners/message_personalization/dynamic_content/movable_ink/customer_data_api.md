@@ -25,8 +25,8 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Movable Ink API credentials | Movable Ink's Solutions team will generate API credentials for you. The API credentials consist of:{::nomarkdown}<ul><li>An endpoint URL (where the data will be sent to)</li><li>Username and password (used to authenticate the API)</li></ul>{:/} If desired, Movable Ink can supply the username and password as a base64-encoded value to be used as a basic authorization header value. |
 | Behavioral event payloads | You will need to share your event payloads with your Movable Ink Client Experience team. See [Sharing event payloads](#event-payloads) with Movable Ink for details. |
-| Creative assets and business logic | You will need to share creative assets with Movable Ink, including Adobe Photoshop (PSD) files directing Movable Ink on how to build the block and a fallback image. You will also need to provide business logic for how and when to display the partner-activated content block. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Creative assets and business logic | You will need to share creative assets with Movable Ink, including Adobe Photoshop (PSD) files directing Movable Ink on how to build the block and a fallback image. You will also need to provide business logic for how and when to display the partner-activated Content Block. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -52,14 +52,14 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | --- | --- |
 | Content-Type | application/json |
 | Authorization | Enter the Basic Authentication you received from Movable Ink. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Settings tab of the webhook composer in Braze with key-value pairs for Content-Type and Authorization.][img2]{: style="max-width:75%" }
 
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
-2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard ecommerce events.
+2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard eCommerce events.
 
 ![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.][img3]{: style="max-width:75%" }
 

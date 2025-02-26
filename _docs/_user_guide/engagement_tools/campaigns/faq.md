@@ -52,7 +52,7 @@ For example, a London-based company sending a campaign at 12 pm will reach users
 
 Braze will automatically determine a user's time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK. 
 
-You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard.
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) on the dashboard.
 
 ### When does Braze evaluate users for local time zone delivery?
 
@@ -101,6 +101,10 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after it is launched.
 
+### I updated my scheduled campaign. Why didn't it launch?
+
+This can happen when a campaign is scheduled to launch at the exact time that it was updated. For example, if it's currently 3:10pm and you changed the campaign to launch at 3:10pm and selected **Update campaign**, it's now past 3:10pm, meaning the scheduled time for launch has passed. Instead of scheduling the campaign for the same time, select **Send as soon as campaign launch**.
+
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
 You can safely make changes to messages within the following safe zones:
@@ -126,6 +130,10 @@ Make sure to re-adjust campaign schedule times to allow for time zone sending.
 ### Why does the number of users entering a campaign not match the expected number?
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if not initially part of your selected audience before any trigger actions are evaluated.
+
+{% alert tip %}
+For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
 
 ### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
@@ -159,7 +167,7 @@ Action-based delivery campaigns or event-triggered campaigns are very effective 
 | Pros | Cons | 
 | ---- | ---- |
 | • Visibility of incoming JSON payloads into the platform (if event triggered by test user) via the **Message Activity Log**<br><br>• Personalization elements are included in the custom event properties<br><br>• Custom event can be used to create Segments of users eligible for the message | • Consumes data points |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### API-triggered
 
@@ -168,5 +176,5 @@ API-triggered or server-trigger campaigns are ideal for more advanced transactio
 | Pros | Cons | 
 | ---- | ---- |
 | • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads via the **Message Activity Log**|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

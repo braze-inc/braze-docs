@@ -10,13 +10,13 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 既読 / 未読インジケーター
 
 ## 未閲覧インジケーターを無効にする
 
-![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![2つのコンテンツカードが並んで表示されます。左側のカードの下に青い線が表示され、表示されていないことを示します。右側のカードには、すでに表示されていることを示す青い線がありません。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 カードが閲覧されたかどうかを示すカード下部の青い線を無効にするには、`ABKContentCardsTableViewController` の `disableUnviewedIndicator` プロパティを `YES` に設定します。
 

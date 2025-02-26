@@ -21,7 +21,7 @@ The Braze and SmarterSends partnership allows you to combine the power of Braze 
 | Braze REST API key | A Braze REST API key with these permissions: {::nomarkdown}<ul><li><code>users.track</code></li><li><code>users.export.ids</code></li><li><code>messages.schedule.create</code></li><li><code>messages.schedule.update</code></li> <li><code>messages.schedule.delete</code></li><li><code>sends.id.create</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>sends.data_series</code></li></ul>{:/} This can be created in the Braze dashboard from **Settings** > **API Keys**. For additional security, allowlist the SmarterSends IP address (available in your instance). |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze API campaign ID | The [Braze API campaign ID]({{site.baseurl}}/api/api_campaigns/) is the unique identifier for all campaigns sent through SmarterSends. This can be created in the Braze dashboard at **Messaging** > **Campaigns**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.

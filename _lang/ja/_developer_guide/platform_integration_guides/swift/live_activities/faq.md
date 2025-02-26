@@ -1,8 +1,8 @@
 ---
 nav_title: FAQ
-article_title: ライブ活動FAQ
+article_title: ライブアクティビティのよくある質問
 page_order: 20
-description: "このページでは、Swift SDK のライブアクティビティに関するよくある質問への回答を提供します。"
+description: "このページでは、Swift SDK のライブアクティビティに関するよくある質問に対する回答を提供します。"
 tool: Live Activities
 platform:
   - iOS
@@ -10,68 +10,73 @@ platform:
 
 # よくある質問
 
-> この記事では、Live Activitiesに関するよくある質問の回答を紹介します。
+> この記事では、ライブ・アクティビティに関するよくある質問に対する回答を紹介する。
 
 ## 機能性とサポート
 
-### ライブアクティビティをサポートするプラットフォームは?
+### ライブアクティビティをサポートしているプラットフォームは？
 
-Live Activities は現在、iOS 固有の機能です。Live Activitiesの記事では、Braze Swift SDKを使用してLive Activitiesを管理するための[前提条件][2]について説明します。
+ライブアクティビティは現在、iOS 特有の機能です。ライブアクティビティの記事では、Braze Swift SDK を使用してライブアクティビティを管理するための[前提条件]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites)について説明しています。
 
-### React NativeアプリはLive Activitiesをサポートしていますか?
+### React Nativeアプリはライブ・アクティビティをサポートしているか？
 
-はい、React Native SDK 3.0.0+ は、Braze Swift SDK 経由のライブアクティビティをサポートしています。つまり、React Native iOS コードをBraze Swift SDK の上に直接書き込む必要があります。 
+はい、React Native SDK 3.0.0 以降は、Braze Swift SDK 経由でライブアクティビティをサポートしています。つまり、Braze Swift SDK の上に直接 React Native iOS のコードを記述する必要があります。 
 
-Apple が提供するLive Activities 機能では、JavaScript で変換できない言語が使用されるため、React ネイティブ固有のJavaScript コンビニエンスAPI はありません(たとえば、Swift 同時実行性、ジェネリック、SwiftUI)。
+Apple が提供するライブアクティビティ機能は、JavaScript では翻訳不可能な言語 (例えば、Swift Concurrency、generics、SwiftUI) を使用しているため、ライブアクティビティ用の React Native 固有のJavaScript の便利な API は存在しません。
 
-###  Braze はキャンペーンまたはキャンバスステップとしてライブアクティビティをサポートしていますか?
+### Brazeはキャンペーンやキャンバスのステップとしてのライブ活動をサポートしているか？
 
-いいえ、これは現在サポートされていません。
+いや、これは現在サポートされていない。
 
-## プッシュ通知とライブアクティビティ
+## プッシュ通知とライブ活動
 
-### ライブアクティビティがアクティブな間にプッシュ通知が送信されると、どうなりますか? 
+### ライブ・アクティビティがアクティブな状態でプッシュ通知が送信された場合はどうなるのか？ 
 
-![ブルズ対ベアーズのスポーツゲームのライブアクティビティを画面の中央に向けて表示し、画面の下部にある通知lorem ipsumテキストをプッシュします。][4]{: style="max-width:30%;float:right;margin-left:15px;"}
+![ブルズ対ベアーズのスポーツ中継が画面中央に、プッシュ通知 lorem ipsum のテキストが画面下部に表示された携帯電話の画面。]({% image_buster /assets/img/push-vs-live-activities.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
-ライブアクティビティとプッシュ通知は、異なる画面の不動産を占有し、ユーザの画面上で競合しません。
+ライブアクティビティとプッシュ通知は、異なる画面領域を占有するため、ユーザーの画面上で競合することはありません。
 
-### Live Activities がプッシュメッセージ機能を活用する場合、プッシュ通知はLive Activities を受信するために有効にする必要がありますか?
+### ライブ・アクティビティがプッシュ・メッセージ機能を活用する場合、ライブ・アクティビティを受信するためにプッシュ通知を有効にする必要があるか？
 
-Live Activities は更新のプッシュ通知に依存しますが、異なるユーザ設定によって制御されます。ユーザはLive Activities を選択することはできますが、プッシュ通知は行わず、その逆も可能です。 
+ライブアクティビティはプッシュ通知に依存して更新を行いますが、それらは異なるユーザー設定によってコントロールされています。ユーザーはライブアクティビティにオプトインできますが、プッシュ通知はオプトアウトでき、その逆も可能です。
 
-Apple では、たとえば注文するなどして、App で何らかのアクションを実行して、ユーザーがLive Activity を開始する必要があります。このLive Activity トークンは8 時間後に期限切れになります。 
+ライブアクティビティ更新トークンは8 時間後に期限切れになります。
 
-### ライブアクティビティにはプッシュプライマーが必要ですか?
+### ライブアクティビティにはプッシュプライマーが必要ですか？
 
-[プッシュプライマー][1] は、アプリから通知をプッシュすることを選択するようにユーザーに促すベストプラクティスです。ただし、Live Activities を選択するシステムプロンプトはありません。ユーザーは、iOS 16.1+ にアップグレードすると、デフォルトでLive Activities に選択されます。
+[プッシュプライマーは]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)、ユーザーにアプリからのプッシュ通知をオプトインするよう促すベストプラクティスです。しかし、ライブアクティビティにオプトインするためのシステムプロンプトはありません。デフォルトでは、ユーザーが iOS 16.1 以降にアプリをインストールすると、個々のアプリのライブアクティビティにオプトインされます。この権限は、アプリごとにデバイス設定で無効化または再有効化することができます。
 
-## 技術的なトピックとトラブルシューティング
+## 技術的な話題とトラブルシューティング
 
-### Live Activities にエラーがあるかどうかは、どうすればわかりますか?
+### ライブアクティビティにエラーがあるかどうかを知るには？
 
-ライブアクティビティエラーは、[Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) にあるBraze ダッシュボードに記録されます。ここで、"LiveActivity Errors" でフィルタリングできます。
+ライブアクティビティエラーは、Braze ダッシュボードの[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)に記録されます。ここでは、「LiveActivity Errors」でフィルターできます。
 
-### `live_activity/update` エンドポイントを使用しようとすると、Access Denied レスポンスを受け取ります。その理由は?
+### Push-to-start 通知を送信した後、Live Activity を受信していないのはなぜですか?
 
-使用するAPI キーには、異なるBraze API エンドポイントにアクセスするための正しい権限が付与されている必要があります。以前に作成したAPIキーを使用している場合は、その権限の更新を怠った可能性があります。リフレッシュを行うには、[APIキーセキュリティ概要][3]をお読みください。
+まず、[`messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) エンドポイントで説明されているすべての必須フィールドがペイロードに含まれていることを確認します。`activity_attributes` および `content_state` フィールドは、プロジェクトのコードで定義されているプロパティと一致する必要があります。ペイロードが正しいことが確かな場合は、APN によってレート制限されている可能性があります。この制限は、Braze ではなく Apple によって課されます。
 
-### `messages/send` エンドポイント共有レート制限は`messages/live_activity/update` エンドポイントにありますか? 
+プッシュ・トゥ・スタート通知がデバイスに正常に届いたが、レート制限のために表示されなかったことを確認するには、Macのコンソール・アプリを使用してプロジェクトをデバッグします。目的のデバイスの録音プロセスをアタッチし、検索バーの`process:liveactivitiesd` でログをフィルタリングします。
 
-`messages/live_activity/update` エンドポイントには、他の Braze エンドポイントとは別のレート制限があります。デフォルトでは、`messages/live_activity/update` エンドポイントのレート制限は、1 時間あたりのワークスペースあたり250,000 リクエストです。詳しくは[レートリミット記事][5]を参照してください。
+### `live_activity/update` エンドポイントを使おうとすると、アクセス拒否応答が表示されます。なぜでしょう？
 
-### プッシュトークンが生成されないのはなぜですか?
+使用するAPIキーには、さまざまなBraze APIエンドポイントにアクセスするための適切なパーミッションを与える必要がある。以前に作成したAPIキーを使用している場合、その権限の更新を怠っている可能性がある。[API キーセキュリティの概要]({{site.baseurl}}/api/basics/#rest-api-key-security)を読んで再確認してください。
 
-iOS 17.2 以降では、Apple は`pushToStartToken` および`pushToStartTokenUpdates` API を制限しています。実際には、最初のインストール後の`application(_:didFinishLaunchingWithOptions:)` での最初のアプリの起動時にのみ、プッシュ開始トークンが生成されます。この手順を繰り返す必要がある場合は、アプリを再起動して再インストールした後、またはLive Activity の新しいインスタンスを手動で作成した後にのみ、トークンを生成できます。
+### `messages/send` エンドポイントは、`messages/live_activity/update` エンドポイントとレート制限を共有しているか？ 
 
-### トラブルシューティングの際には、他にどのようなことに注意する必要がありますか?
+デフォルトでは、`messages/live_activity/update` エンドポイントのレート制限は、ワークスペースごとに、複数のエンドポイントにわたって、1時間あたり250,000リクエストです。詳細については、[APIレート制限]({{site.baseurl}}/api/api_limits/)を参照してください。
 
-- 認証に`.p8` キーを使用していることを確認します。
-- プッシュプロビジョニングプロファイルがテスト対象の環境と一致することを確認します。ユニバーサル証明書は、開発環境または本番環境のApple Push Notification サービス(APNs)環境のいずれかに送信するように、Braze ダッシュボードで設定できます。実稼働アプリ用の開発証明書または開発アプリ用の実稼働証明書は動作しません。
+### なぜプッシュ・トゥ・スタートのトークンが生成されないのか？
+
+Apple は、iOS 17.2 で導入された`pushToStartToken` および`pushToStartTokenUpdates` API を制限しています。実際には、「push-to-start」トークンは、初回インストール後のアプリケーション `application(_:didFinishLaunchingWithOptions:)` での初回アプリ起動時にのみ生成されます。この手順を繰り返す必要がある場合は、そのLive Activity の新しいインスタンスを手動で作成するか、アプリを再起動して再インストールした後にのみ、トークンを再度生成できます。
+
+### アプリでライブアクティビティをいくつ開始できますか？
+
+制限はApple によって定義されており、さまざまな要因に基づいて異なる場合があります。将来変更される可能性もあります。実際には、一度にアプリごとに起動できる同時アクティビティインスタンスは5つに制限されています。その後、その制限を超えて新しいインスタンスを起動しようとすると、システムによって無視されます。
+
+### トラブルシューティング中に他に気をつけるべきことは？
+
+- `.p12` または`.pem` ファイルではなく、`.p8` キーを認証に使用していることを確認します。
+- プッシュ・プロビジョニング・プロファイルがテストしている環境と一致していることを確認する。ユニバーサル証明書は、開発または実稼働の Apple Push Notification service (APNs) 環境のいずれかに送信するように Braze ダッシュボードで構成できます。実稼働アプリ用の開発証明書または開発アプリ用の実稼働証明書は動作しません。
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites
-[3]: {{site.baseurl}}/api/basics/#rest-api-key-security
-[4]: {% image_buster /assets/img/push-vs-live-activities.png %}
-[5]: {{site.baseurl}}/api/api_limits/

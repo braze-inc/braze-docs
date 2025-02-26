@@ -59,11 +59,11 @@ The **Overview** tab contains basic information about a user and their interacti
 | Recent devices | How many devices they logged in on, details on each device, and their associated advertising IDs (if any). |
 | Custom events | Which custom events this user has performed, how many times, and when they last performed each event. |
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more information on this data, see [User Data Collection][12].
 
-![][2]
+![The Overview tab of a user profile.][2]
 
 ### Engagement tab {#engagement-tab}
 
@@ -72,16 +72,16 @@ The **Engagement** tab contains information about a user's interactions with the
 | Engagement category | Contains |
 | --- | --- |
 | Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
-| Campaigns received | Campaigns this user has received and when. Select a campaign from the list to view it. |
+| Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
+| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![The Engagement tab of a user profile displaying their contact settings and communication statistics.][3]
 
 ### Messaging History tab
 
@@ -91,7 +91,7 @@ The **Message History** tab of the user profile shows recent messaging related e
 If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![][5]
+![The Messaging History tab showing which campaigns and Canvases a user has received.][5]
 
 #### Viewing and understanding events
 
@@ -99,7 +99,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Channel | Engagement events available |
 | --- | --- |
@@ -109,7 +109,7 @@ The following message engagement events are available for email, SMS, push, in-a
 | In-app message | Click<br>Impression |
 | Content Cards | Click<br>Dismiss<br>Impression<br>Send |
 | Webhooks | Send |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### Message abort events
 
@@ -149,6 +149,5 @@ While email open statistics can be useful in aggregate, for example to compare t
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

@@ -9,7 +9,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # カスタムアプリ内メッセージトリガー
 
@@ -52,29 +52,25 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 
 ## ステップ2:プッシュキャンペーンを作成する
 
-サーバー送信イベントを介してトリガーされるサイレントプッシュキャンペーンを作成します。サイレントプッシュキャンペーンの作成の詳細については、「[サイレントプッシュ通知][39]」を参照してください。
+サーバー送信イベントを介してトリガーされるサイレントプッシュキャンペーンを作成します。サイレントプッシュキャンペーンの作成の詳細については、「[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/)」を参照してください。
 
-![カスタムイベント「server\_event」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンです。][40]
+![カスタムイベント"server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})を実行するユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーン
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![nキーと値のペアが2つあるアクションベースの配信アプリ内メッセージキャンペーン。"CAMPAIGN\_NAME" を "アプリ内メッセージ名の例" に設定し、"IS\_SERVER\_EVENT" を "true" に設定します。][41]
+![n アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。「キャンペーン_NAME」を「アプリ内メッセージ名の例」に設定し、「IS_SERVER_EVENT」を「true」に設定します。]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内のコードはキー `IS_SERVER_EVENT` をチェックし、SDK カスタムイベントがあればログに記録します。
 
 プッシュペイロードのキーと値のペアエクストラ内で目的の値を送信することで、イベント名またはイベントプロパティのいずれかを変更できます。カスタムイベントを記録する場合、これらのエクストラはイベント名のパラメータまたはイベントプロパティとして使用できます。
 
-## ステップ 3:アプリ内メッセージキャンペーンを作成する
+## ステップ3: アプリ内メッセージキャンペーンを作成する
 
 Braze ダッシュボード内から、ユーザーに表示されるアプリ内メッセージキャンペーンを作成します。このキャンペーンにはアクションベースの配信があり、`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内から記録されたカスタムイベントからトリガーされる必要があります。
 
 以下の例では、イベントプロパティを最初のサイレントプッシュの一部として送信することで、トリガーされる特定のアプリ内メッセージが設定されています。
 
-![カスタムイベント「アプリ内メッセージトリガー」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンです。"campaign\_name" は "アプリ内メッセージ名の例" です。][42]
+![カスタムイベント「アプリ内メッセージトリガー」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンで、「campaign_name」が「アプリ内メッセージ名の例」と等しい場合に配信されます。]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 SDK のログに記録されたカスタムイベントの記録にプッシュメッセージが使用されているため、Braze はこのソリューションを有効にするには、ユーザーごとにプッシュトークンを格納する必要があります。iOS と Android の両方で、Braze はユーザーが OS のプッシュプロンプトを受け取った時点からのトークンのみを保存します。これ以前では、ユーザーはプッシュを使用して到達できず、先行ソリューションも実行できません。
 
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
-[41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
-[42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

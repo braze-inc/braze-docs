@@ -20,18 +20,18 @@ description: "この記事では、多変量キャンペーンや AB キャン�
 
 キャンペーンの設定時に [**最適化なし**] を選択した場合、アナリティクスの表示は変わりません。キャンペーンの [**キャンペーン分析**] ページには、コントロールグループ (コントロールグループが含まれている場合) に対するバリアントのパフォーマンスが表示されます。
 
-![Performance section of the Campaign Analytics for an email campaign with multiple variants. The table lists various performance metrics for each variant, such as recipients, bounces, clicks, and conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![複数のバリアントがあるメールキャンペーンのキャンペーンアナリティクスのパフォーマンスセクション。この表には、各バリアントの受信者数、バウンス数、クリック数、コンバージョン数など、さまざまなパフォーマンス指標が記載されている。]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 詳細については、メッセージングチャネルの[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)記事を参照してください。
 
 ### 勝者バリアント
 
-キャンペーンの設定時に最適化対象として**勝者バリアント**を選択した場合は、キャンペーン分析の {**AB テスト結果**] という別のタブにアクセスできます。勝者バリアントがテストの残りのユーザーに送信されると、このタブにはその送信の結果が表示されます。
+キャンペーンの設定時に最適化対象として**勝者バリアント**を選択した場合は、キャンペーン分析の **AB テスト結果**] という別のタブにアクセスできます。勝者バリアントがテストの残りのユーザーに送信されると、このタブにはその送信の結果が表示されます。
 
-**AB テストの結果**は、tabs:**初期テスト**と**勝者バリアント**の2つに分かれています。
+**A/Bテスト結果は**2つのタブに分かれている：[**最初のテスト**] と [**勝者バリアント**]。
 
 {% tabs local %}
-{% tab Initial Test %}
+{% tab 初回テスト %}
 
 [**初期テスト**] タブには、ターゲットセグメントの一部に送信された初期 AB テストの各バリアントの指標が表示されます。すべてのバリアントのパフォーマンスと、テスト中に勝者が出たかどうかの概要を確認できます。
 
@@ -39,7 +39,7 @@ description: "この記事では、多変量キャンペーンや AB キャン�
 
 95% の信頼度で他のすべてのバリアントを上回るバリエーションがなく、それでも最もパフォーマンスの高いバリアントを送信することを選択した場合でも、最もパフォーマンスの高いバリアントが送信され、「勝者」というラベルが付きます。
 
-![Results of an initial test sent to determine the Winning Variant where no variant performed better than the others with enough confidence to meet the 95 percent confidence threshold for statistical significance.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![いずれのバリアントも統計的有意性を示す 95% の信頼しきい値を満たす十分な信頼性で他よりも優れた性能を示さなかった場合に勝者バリアントを決定するために送られた最初のテストの結果。]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### 勝者バリアントの選択方法
 
@@ -50,11 +50,11 @@ Braze は、[ピアソンのカイ二乗検定](https://en.wikipedia.org/wiki/Pe
 バリアントはコントロールグループよりも優れている場合がありますが、カイ二乗検定では、1つのバリアントが他のすべてのバリアントよりも優れているかどうかを確認します。[フォローアップテスト](#recommended-follow-ups)により、より詳細な情報が得られる場合があります。
 
 {% endtab %}
-{% tab Winning Variant %}
+{% tab 勝者バリアント %}
 
 [**勝者バリアント**] タブには、2回目の送信の結果が表示されます。残りの各ユーザーには、最初のテストで最もパフォーマンスの高いバリアントが送信されます。**オーディエンス率**を合計すると、勝者バリアントグループ用に予約したターゲットセグメントの割合になります。
 
-![Results of the Winning Variant sent to the Winning Variant group.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![勝者バリアントグループに送られた勝者バリアントの結果。]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -63,37 +63,37 @@ AB テスト送信を含むキャンペーン全体での勝者バリアント�
 
 ### パーソナライズされたバリアント {#personalized-variant}
 
-キャンペーンの設定時に最適化のために**パーソナライズされたバリアント**を選択した場合、**AB テスト結果**はtabs:** 初期テスト**と**パーソナライズされたバリアント**の2つに分かれます。
+キャンペーンを設定する際に、最適化のために**パーソナライズド・バリアントを**選択した場合、**A/Bテスト**結果は2つのタブに分けられる：**初期テストと** **パーソナライズド・バリアント**。
 
 {% tabs local %}
-{% tab Initial Test %}
+{% tab 初回テスト %}
 
 [**初期テスト**] タブには、ターゲットセグメントの一部に送信された初期 AB テストの各バリアントの指標が表示されます。
 
-![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![各ユーザーの最高パフォーマンスのバリアントを判別するために送られた最初のテストの結果。テーブルには、ターゲットチャネルのさまざまな指標に基づく各バリアントのパフォーマンスが表示されます。]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 デフォルトでは、テストではユーザーのカスタムイベントとメッセージバリアント設定との関連が検索されます。この分析では、カスタムイベントが特定のメッセージバリアントに応答する可能性を高めたり下げたりするかどうかを検出します。次に、これらの関係を使用して、最終送信時にどのユーザーがどのメッセージバリアントを受け取るかが決まります。
 
 カスタムイベントとメッセージ設定の関係は、[**初期送信**] タブの表に表示されます。
 
-![\]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
 テストでカスタムイベントとバリアント設定の間に意味のある関係が見つからない場合、テストはセッションベースの分析方法にフォールバックします。
 
-{% details Fallback analysis method %}
+{% details フォールバック分析法 %}
 
 **セッションベースの分析方法**<br>
 フォールバック方式を使用してパーソナライズされたバリアントを決定する場合、[**初期テスト**] タブには、特定の特性の組み合わせに基づいてユーザーが好むバリアントの内訳が表示されます。 
 
 これらの特徴は以下のとおりです。
 
-- **最終購入日:** 最後にセッションを行った日時
-- **頻度:** セッションの頻度
-- **使用期間:** ユーザーになってからの期間
+- **リーセンシー:**最後にセッションを行った日時
+- **頻度:**セッションの頻度
+- **使用期間:**ユーザーになってからの期間
 
 たとえば、このテストでは、ほとんどのユーザーがバリアント A を好むことがわかりましたが、約3日から12日前にセッションを行ったユーザー、セッションの間隔が1日から12日のユーザー、過去67日から577日以内に作成されたユーザーは、バリアント Bを好む傾向があります。したがって、その部分母集団のユーザーは2回目の送信でバリアント B を受信し、残りのユーザーはバリアント A を受信しました。
 
-![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![[ユーザー特性] テーブル。ユーザーが、リーセンシー、頻度、および使用期間の 3 つのバケットでどう分類されるかに基づいて、どのユーザーがバリアント 1 およびバリアント 2 を優先するかの予測を示します。]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **パーソナライズされたバリアントの選択方法**<br>
 この方法では、個々のユーザーの推奨メッセージは、特定のリーセンシー、頻度、および使用期間の効果の合計です。**ユーザー特性表**に示すように、リーセンシー、頻度、および使用期間は、バケットに分割されます。各バケットの時間範囲は、個々の各キャンペーンのユーザーデータによって決定され、キャンペーンごとに異なります。 
@@ -103,7 +103,7 @@ AB テスト送信を含むキャンペーン全体での勝者バリアント�
 {% enddetails %}
 
 {% endtab %}
-{% tab Personalized Variant %}
+{% tab パーソナライズされたバリアント %}
 
 [**パーソナライズされたバリアント**] タブには、2回目の送信結果が表示されます。残りの各ユーザーには、最も関心を持つ可能性の高いバリアントが送信されます。
 
@@ -111,13 +111,13 @@ AB テスト送信を含むキャンペーン全体での勝者バリアント�
 
 - **予想される上昇:**標準の AB テストではなくパーソナライズされたバリアントを使用したことによって、この送信で選択された最適化指標の向上 (残りのユーザーが勝利バリアントのみを受信した場合)。
 - **全体的な結果:**選択した最適化指標 (*ユニークオープン*、*ユニーククリック*、または*プライマリコンバージョンイベント*) に基づく2回目の送信の結果。
-- **予測結果:**代わりに勝利バリアントのみを送信した場合の、選択した最適化指標に基づく2番目の送信の予測結果。 
+- **予測結果:**代わりに勝利バリアントのみを送信した場合の、選択した最適化指標に基づく 2 番目の送信の予測結果。 
 
-![Personalized Variant tab for a campaign optimized for unique opens. The cards show the Projected Lift, Overall Unique Opens (with Personalized Variant), and Projected Unique Opens (with Winning Variant).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![ユニーク開封数のために最適化されたキャンペーンの「パーソナライズされたバリアント」タブ。カードには、予想リフト、全体のユニーク開封数 (パーソナライズされたバリアントを使用)、および予想されるユニーク開封率 (勝者バリアントを使用) が表示されます。]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 このページの表には、パーソナライズされたバリアント送信の各バリアントの指標が表示されます。**オーディエンス率**を合計すると、パーソナライズされたバリアントグループ用に予約したターゲットセグメントの割合になります。
 
-![\]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
+![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
 {% endtab %}
 {% endtabs %}

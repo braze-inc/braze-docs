@@ -14,7 +14,7 @@ description: "This article outlines details about the Export users by identifier
 /users/export/ids
 {% endapimethod %}
 
-> Use this endpoint to export data from any user profile by specifying a user identifier. 
+> Use this endpoint to export data from any user profile by specifying a user identifier.
 
 Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of any identifier can be included per request.
 
@@ -43,22 +43,26 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (optional, array of strings) Name of user data fields to export. Defaults to all if not provided
+  "fields_to_export": (required, array of strings) Name of user data fields to export
 }
 ```
 
+{% alert note %}
+For customers who have onboarded with Braze on or after August 22, 2024, the request parameter `fields_to_export` is required.
+{% endalert %}
+
 ## Request parameters
 
-| Parameter | Required | Data Type | Description |
-|-----|-----|-----|-----|
-|`external_ids` | Optional | Array of strings | External identifiers for users you wish export. |
-|`user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for users to export. |
-|`device_id` | Optional | String | Device identifier, as returned by various SDK methods such as `getDeviceId`. |
-|`braze_id` | Optional | String | Braze identifier for a particular user. |
-|`email_address` | Optional | String | Email address of user. |
-|`phone` | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user. |
-|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Parameter          | Required | Data Type                                                     | Description                                                                                  |
+| ------------------ | -------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `external_ids`     | Optional | Array of strings                                              | External identifiers for users you wish export.                                              |
+| `user_aliases`     | Optional | Array of user alias object                                    | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for users to export. |
+| `device_id`        | Optional | String                                                        | Device identifier, as returned by various SDK methods such as `getDeviceId`.                 |
+| `braze_id`         | Optional | String                                                        | Braze identifier for a particular user.                                                      |
+| `email_address`    | Optional | String                                                        | Email address of user.                                                                       |
+| `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user.                                                                        |
+| `fields_to_export` | Required | Array of strings                                              | Name of user data fields to export.                                                          |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -85,41 +89,41 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
-| Field to export | Data type | Description |
-|---|---|---|
-| `apps` | Array | Apps this user has logged sessions for, which includes the fields:<br><br>- `name`: app name<br>- `platform`: app platform, such as iOS, Android, or Web<br>- `version`: app version number or name <br>- `sessions`: total number of sessions for this app<br>- `first_used`: date of first session<br>- `last_used`: date of last session<br><br>All fields are strings. |
-| `attributed_campaign` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign. |
-| `attributed_source` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on. |
-| `attributed_adgroup` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign. |
-| `attributed_ad` | String | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and ad group. |
-| `braze_id` | String | Device-specific unique user identifier set by Braze for this user. |
-| `country` | String | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard. |
-| `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |
-| `custom_attributes` | Object | Custom attribute key-value pairs for this user. |
-| `custom_events` | Array | Custom events attributed to this user in the last 90 days. |
-| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
-| `dob` | String | User's date of birth in the format `YYYY-MM-DD`. |
-| `email` | String | User's email address. |
-| `external_id` | String | Unique user identifier for identified users. |
-| `first_name` | String | User's first name. |
-| `gender` | String | User's gender. Possible values are:<br><br>- `M`: male<br>- `F`: female<br>- `O`: other<br>- `N`: not applicable<br>- `P`: prefer not to say<br>- `nil`: unknown |
-| `home_city` | String | User's home city. |
-| `language` | String | User's language in ISO-639-1 standard. |
-| `last_coordinates` | Array of floats | User's most recent device location, formatted as `[longitude, latitude]`. |
-| `last_name` | String | User's last name. |
-| `phone` | String | User's telephone number in E.164 format. |
-| `purchases` | Array | Purchases this user has made in the last 90 days. |
-| `push_tokens` | Array | Unique anonymous identifier that specifies where to send an app's notifications. |
-| `random_bucket` | Integer | User's [random bucket number]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event), used to create uniformly distributed segments of random users. |
-| `time_zone` | String | User's time zone in the same format as the IANA Time Zone Database. |
-| `total_revenue` | Float | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received. |
-| `uninstalled_at` | Timestamp | Date and time the user uninstalls the app. Omitted if the app has not been uninstalled. |
-| `user_aliases` | Object | [User aliases object]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) containing the `alias_name` and `alias_label`, if exists. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Field to export       | Data type       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apps`                | Array           | Apps this user has logged sessions for, which includes the fields:<br><br>- `name`: app name<br>- `platform`: app platform, such as iOS, Android, or Web<br>- `version`: app version number or name <br>- `sessions`: total number of sessions for this app<br>- `first_used`: date of first session<br>- `last_used`: date of last session<br><br>All fields are strings.                                                                                                                                                                                                                                                                                       |
+| `attributed_campaign` | String          | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for a particular ad campaign.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `attributed_source`   | String          | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for the platform the ad was on.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `attributed_adgroup`  | String          | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `attributed_ad`       | String          | Data from [attribution integrations]({{site.baseurl}}/partners/message_orchestration/attribution), if set up. Identifier for an optional sub-grouping below campaign and ad group.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `braze_id`            | String          | Device-specific unique user identifier set by Braze for this user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `country`             | String          | User's country using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `created_at`          | String          | Date and time for when the user profile was created, in ISO 8601 format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `custom_attributes`   | Object          | Custom attribute key-value pairs for this user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `custom_events`       | Array           | Custom events attributed to this user in the last 90 days.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `devices`             | Array           | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
+| `dob`                 | String          | User's date of birth in the format `YYYY-MM-DD`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `email`               | String          | User's email address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `external_id`         | String          | Unique user identifier for identified users.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `first_name`          | String          | User's first name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `gender`              | String          | User's gender. Possible values are:<br><br>- `M`: male<br>- `F`: female<br>- `O`: other<br>- `N`: not applicable<br>- `P`: prefer not to say<br>- `nil`: unknown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `home_city`           | String          | User's home city.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `language`            | String          | User's language in ISO-639-1 standard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `last_coordinates`    | Array of floats | User's most recent device location, formatted as `[longitude, latitude]`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `last_name`           | String          | User's last name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `phone`               | String          | User's telephone number in E.164 format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `purchases`           | Array           | Purchases this user has made in the last 90 days.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `push_tokens`         | Array           | Unique anonymous identifier that specifies where to send an app's notifications.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `random_bucket`       | Integer         | User's [random bucket number]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event), used to create uniformly distributed segments of random users.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `time_zone`           | String          | User's time zone in the same format as the IANA Time Zone Database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `total_revenue`       | Float           | Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `uninstalled_at`      | Timestamp       | Date and time the user uninstalls the app. Omitted if the app has not been uninstalled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `user_aliases`        | Object          | [User aliases object]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) containing the `alias_name` and `alias_label`, if exists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
-Depending on the data requested, this API endpoint may not be sufficient to meet your needs due to the 2,500 requests per minute rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.
+Depending on the data requested, this API endpoint may not be sufficient to meet your needs due to the 250 requests per minute rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.
 
 ## Response
 
@@ -133,11 +137,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-For an example of the data that is accessible via this endpoint see the following example.
+For an example of the data that is accessible through this endpoint see the following example.
 
 ### Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
+User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
@@ -199,7 +203,7 @@ User export object (we will include the least data possible - if a field is miss
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -207,7 +211,9 @@ User export object (we will include the least data possible - if a field is miss
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -226,18 +232,18 @@ User export object (we will include the least data possible - if a field is miss
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -248,7 +254,7 @@ User export object (we will include the least data possible - if a field is miss
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {
@@ -310,10 +316,10 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -373,12 +379,12 @@ User export object (we will include the least data possible - if a field is miss
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -422,7 +428,7 @@ User export object (we will include the least data possible - if a field is miss
 {% endtabs %}
 
 {% alert tip %}
-For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

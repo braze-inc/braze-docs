@@ -13,7 +13,7 @@ tool: Campaigns
 > Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. 
 
 {% alert important %}
-Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). These steps must be scheduled.
+Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). These steps must be scheduled.
 {% endalert %}
 
 ## Setting up a triggered campaign
@@ -96,11 +96,11 @@ You may also elect to send the campaign on either a specific day of the week (by
 
 ### Step 3: Select exception events
 
-Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. Exception events can be making a purchase, starting a session, performing one of a campaign's designated [conversion events][18], or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/).
+Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. Exception events can be making a purchase, starting a session, performing one of a campaign's designated [conversion events][18], or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/).
 
 ![][20]
 
-You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
+You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
 > If you send a campaign with a trigger event that matches the exception event, Braze will cancel the campaign and automatically re-schedule a new campaign based on the exception event's message delivery time. For example, if your first trigger event starts at five minutes and the exception event starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time.
 
@@ -114,7 +114,7 @@ Assign the campaign's duration by specifying a start time and optional end time.
 
 ![][21]
 
-If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
+If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
 ### Step 5: Select time frame
 
@@ -126,7 +126,7 @@ In the case where a user completes the trigger event within the time frame, but 
 
 ![][31]
 
-If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
+If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
 
 If you have also assigned the campaign a certain duration, then a user must qualify within both the duration and the specific portion of the day to receive the message.
 
@@ -149,6 +149,7 @@ In addition, when creating welcome campaigns, you can trigger messages to send a
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 
 - The user completed the exception event before the time delay had fully elapsed.
+- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
 - The user has already received the campaign, and users do not become re-eligible.
@@ -162,10 +163,17 @@ As a best practice, ensure that the attribute on which the campaign is segmented
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 
+If your campaign is triggered by a specific custom event and you select a segment as the audience, users must perform the same custom event to be included in the segment. This means users need to be part of the audience before an action-based campaign can be triggered. The general workflow for a triggered campaign is as follows:
+
+1. **Join the audience:** When a user performs the custom event, they're added to the campaign's target audience.
+2. **Trigger the email:** A user must perform the custom event again to trigger the email, as they need to be part of the audience before the email can be sent.
+
+We recommend either changing the target audience to include all users, or checking that the users expected to perform the event are already part of the campaign's audience for the message to be triggered.
+
 ![][51]
 
 [5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
@@ -181,7 +189,7 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

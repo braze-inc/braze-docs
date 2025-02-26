@@ -65,7 +65,7 @@ To better understand the expected behavior for channels, refer to the following 
 |**Company XYZ** updates to an SDK that supports Android O <br>**Company XYZ** does not add any channels to the Braze dashboard<br>**Company XYZ** renames their SDK default channel to "Marketing" | Push notifications sent to Android O devices will create a channel called "Marketing" and notifications will be sent through the "Marketing" channel
 |**Company LMN** updates to an SDK that supports Android O <br>**Company LMN** defines two channels in their application code, "Promotions" and "Order Updates" <br>**Company LMN** adds the channel IDs for "Promotions" and "Order Updates" to the Braze dashboard <br>**Company LMN** designates "Promotions" as the dashboard fallback channel<br>**Company LMN** renames their SDK default channel to "Marketing" | Push notifications sent to Android O devices will not create a channel<br><br>Unless the marketer explicitly specifies that notifications should send through the "Order Updates" or "Marketing" channel, all notifications created before the channels were added to the dashboard will send through the "Promotions" channel<br><br>The SDK default channel, "Marketing" is only created and used if the company attempts to send a notification through an invalid channel ID or if explicitly selected
 |**Company HIJ** updates to Android O but does not update to Braze Android SDK to 2.1.0 or later | Notifications sent to users running Android O or later do not appear |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Adding channels to the Braze dashboard
 

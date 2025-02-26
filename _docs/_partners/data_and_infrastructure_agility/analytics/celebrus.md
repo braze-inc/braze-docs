@@ -15,7 +15,7 @@ description: "Integrating Braze and Celebrus."
 | Celebrus account | A Celebrus account is required to take advantage of this partnership. |
 | Data warehouse (optional) | When using the Celebrus connector for Braze custom attributes, you must have a data warehouse that is supported by the Braze Cloud Data Ingestion (CDI) integration, and configure CDI in the Braze dashboard. |
 | Braze SDK configuration settings (optional) | When using the Celebrus connector for Braze SDK, you must pass the SDK endpoint and SDK API Key. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Implementation
 After installing your Celebrus implementation, use the Celebrus connectors for Braze to integrate Celebrus data into Braze. There are two elements to the Celebrus integration for Braze: the Braze SDK and Braze custom attributes. You can deploy either or both depending on how you use Braze and the use cases you need.
@@ -35,7 +35,7 @@ The connector deploys and configures the Braze SDK in your channel, so you will 
 ```
 
 {% alert important %}
-The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) or take advantage of other Braze SDK-supported features. 
+The Celebrus connector for Braze SDK will insert and initialize the Braze SDK to identify the user and add the identifier to Celebrus' Identity Graph. This connector will not log data to the user profile or trigger other Braze SDK methods. <br><br>You can call any desired methods directly within your code base to log data via the [Braze SDK]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/) or take advantage of other Braze SDK-supported features. 
 {% endalert%}
 
 ### Celebrus connector for Braze custom attributes
@@ -46,7 +46,7 @@ The Celebrus connector for Braze custom attributes sends custom attributes to an
 
 #### Step 2: Configure Cloud Data Ingestion in your Braze dashboard
 
-This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) according to the type of warehouse you are using. 
+This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) according to the type of warehouse you are using. 
 
 #### Step 3: Sync data from Celebrus to Braze
 

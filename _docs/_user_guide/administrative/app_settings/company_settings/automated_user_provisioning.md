@@ -32,6 +32,6 @@ This SCIM endpoint does not directly integrate with identity providers.
 
 ![][1]
 
-Once you have completed the required fields, you can generate a SCIM token and see your SCIM API endpoint. **This token will only be presented once.** Braze expects all SCIM requests to contain the SCIM API bearer token attached via an HTTP `Authorization` header.
+After completing the required fields, you can generate a SCIM token and see your SCIM API endpoint. **This token will only be presented once.** Braze expects all SCIM requests to contain the SCIM API bearer token attached via an HTTP `Authorization` header.
 
 [1]: {% image_buster /assets/img/scim.png %}

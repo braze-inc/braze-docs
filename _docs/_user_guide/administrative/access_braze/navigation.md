@@ -27,7 +27,7 @@ You can turn on the new navigation at any time by selecting **Switch to new nav*
 
 ## What to expect next
 
-You will still be able to switch back and forth between the new and old navigation until **January 2024**.
+You will still be able to switch back and forth between the new and old navigation until **January 2025**.
 
 ## What's changed
 
@@ -52,10 +52,12 @@ Easily access the **Canvas**, **Campaigns**, and **Segments** pages with quick l
 
 1. **Workspace selector** - The name of the workspace you're currently in. Select this dropdown to change workspaces.
 2. **Tour new navigation** - Retake the navigation tour or expand the dropdown to access options for documentation or to send us feedback on the new navigation.
-3. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
-4. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
-5. **Notifications** – View your dashboard notifications.
-6. **Your profile** - View your account profile, change the language the dashboard appears in, or sign out.
+3. **Search** - Search for pages and find your work by name or API ID.
+4. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
+5. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
+6. **Language** - Select this dropdown to change the language of your Braze dashboard.
+7. **Notifications** – View your dashboard notifications.
+8. **Your profile** - View your account profile, change the language the dashboard appears in, or sign out.
 
 {% endtab %}
 {% tab Old navigation %}
@@ -190,7 +192,7 @@ The following table lists where each page is located in the new navigation. Some
 | User Import                   | Import Users                | **Audience** > **Import Users**                                  |
 | User Search                   | Search Users                | **Audience** > **Search Users**                                  |
 | Webhook Templates             | N/A                         | **Templates** > **Webhook Templates**                            |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% endtabs %}

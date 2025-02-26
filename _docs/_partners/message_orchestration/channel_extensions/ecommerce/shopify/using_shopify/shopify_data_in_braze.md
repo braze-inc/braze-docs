@@ -21,7 +21,7 @@ After the app installation is complete, Braze automatically creates your webhook
 {% subtabs global %}
 {% subtab Product Viewed %}
 **Event**: `shopify_product_viewed`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -40,7 +40,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Product Clicked %}
 **Event**: `shopify_product_clicked`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -57,12 +57,13 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Abandoned Cart %}
 **Event**: `shopify_abandoned_cart`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Cart ID | `{{event_properties.${cart_id}}}` |
 | Item ID | `{{event_properties.${line_items}[0].product_id}}` |
 | Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
@@ -77,14 +78,14 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Abandoned Checkout %}
 **Event**: `shopify_abandoned_checkout`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
 | Checkout ID | `{{event_properties.${checkout_id}}}` |
-| Abandoned Card URL | `{{event_properties.${abandoned_checkout_url}}}` |
+| Abandoned Cart URL | `{{event_properties.${abandoned_checkout_url}}}` |
 | Discount Code | `{{event_properties.${discount_code}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
 | Discount Amount | `{{event_properties.${applied_discount}[0].amount}}` |
@@ -107,76 +108,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 
 **Event**: `shopify_created_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
-
-{% raw %}
-```json
-{
-"name": "shopify_created_order",
-    "time": "2024-03-26T11:03:55-04:00",
-    "properties": {
-      "order_id": 5603014377622,
-      "line_items": [
-        {
-          "fulfillment_status": null,
-          "name": "Blue Silk Tuxedo - xs",
-          "price": 78,
-          "product_id": 5847345004694,
-          "properties": [],
-          "quantity": 1,
-          "sku": "",
-          "title": "Blue Silk Tuxedo",
-          "variant_id": 36790647521430,
-          "variant_title": "xs",
-          "vendor": "Liam Fashions"
-        }
-      ],
-      "fulfillments": [],
-      "shipping": [
-        {
-          "title": "First Class Package International",
-          "price": 33.85
-        }
-      ],
-      "shopify_storefront": "example-store.myshopify.com",
-      "total_price": 111.85,
-      "confirmed": true,
-      "total_discounts": 0,
-      "discount_codes": [],
-      "order_number": 1005,
-      "order_status_url": "https://example-store.myshopify.com/50699042966/orders/6e43c91d84b8e7832990502aca637a13/authenticate?key=d8184818cd06f09ac680ea82da78ce3e",
-      "cancelled_at": null,
-      "tags": "",
-      "closed_at": null,
-      "fulfillment_status": null,
-      "referring_site": "",
-      "payment_gateway_names": [
-        "bogus"
-      ],
-      "shipping_address": {
-        "address1": "1111 street",
-        "address2": null,
-        "city": "New York",
-        "country": "United States",
-        "first_name": "John",
-        "last_name": "Doe",
-        "province": "New York",
-        "zip": "11111"
-      },
-      "billing_address": {
-        "address1": "1111 street",
-        "address2": null,
-        "city": "New York",
-        "country": "United States",
-        "first_name": "John",
-        "last_name": "Doe",
-        "province": "New York",
-        "zip": "11111"
-      }
-    }
-  }
-```
-{% endraw %}
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -229,7 +161,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 
 **Event**: Purchase<br>
-**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+**Type**: [Braze Purchase Event]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/)
 
 
 {% raw %}
@@ -247,7 +179,7 @@ After the app installation is complete, Braze automatically creates your webhook
 {% endsubtab %}
 {% subtab Paid Order %}
 **Event**: `shopify_paid_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -279,7 +211,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Partially Fulfilled Order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -328,7 +260,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Fulfilled Order %}
 **Event**: `shopify_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -377,7 +309,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Cancelled Order %}
 **Event**: `shopify_cancelled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -411,7 +343,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 {% subtab Created Refund %}
 **Event**: `shopify_created_refund`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 
 
 {% raw %}
@@ -871,17 +803,35 @@ After the app installation is complete, Braze automatically creates your webhook
 | `shopify_last_order_name` | The name of the customer's last order. This is directly related to the `name` field on the order resource. |
 | `shopify_zipcode` | The customer's zipcode from their default address. |
 | `shopify_province` | The customer's province from their default address. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Liquid personalization
 
-To add liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
+To add Liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
 
 ![The "Add Personalization" section with the "Attribute" dropdown extended.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
 After selecting your custom attribute, input a default value and copy the Liquid snippet into your message.
 
 ![Pasting a Liquid snippet into a message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+
+#### Example payload
+
+```json
+{
+  "attributes": [
+    {
+      "shopify_tags": "VIP_customer",
+      "shopify_total_spent": "60.00",
+      "shopify_order_count": "3",
+      "shopify_last_order_id": "1234567",
+      "shopify_last_order_name": "test_order",
+      "shopify_zipcode": "10001",
+      "shopify_province": "null"
+    }
+  ]
+}
+```
 
 {% endtab %}
 {% tab Example Payload %}
@@ -922,7 +872,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 ## Segmentation
 
-You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
+You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in Segmentation. 
 
 ![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.][12]{: style="max-width:80%;"}
 
@@ -946,7 +896,7 @@ With Shopify custom events in Braze, you can trigger Canvases or campaigns like 
 
 ![Action-based Canvas that enters users who perform the custom event "shopify_checkouts_abandon".][5]
 
-With Nested Object Support for Custom Event Properties, customers can now trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event. Make sure to use `list_items[].product_id` to index your item list and access the product ID.
+With nested object support for custom event properties, customers can trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event. Make sure to use `list_items[0].product_id` to index your item list and access the product ID.
 
 ![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.][26]
 

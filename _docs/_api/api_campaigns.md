@@ -21,12 +21,12 @@ You'll then send that information to your development team to use in the API req
 After the campaign begins, you can view the results in the dashboard. API campaigns use the Braze [messaging APIs]({{site.baseurl}}/api/endpoints/messaging/), which have the same detailed reporting and retargeting options as campaigns created completely through the dashboard.
 
 {% alert warning %}
-Because API campaigns are typically transactional, all users are eligible for API campaigns, even those in your Global Control Group.
+Because API campaigns are typically transactional, all users are eligible for API campaigns, even those in your Global Control Group. A [one-click list-unsubscribe]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe) header is not added to these sends. If you'd like to add a one-click list-unsubscribe header to all API campaigns, contact your customer success manager.
 {% endalert %}
 
 ## Create a new campaign
 
-Go to **Messaging** > **Campaigns** and click **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
+Go to **Messaging** > **Campaigns** and select **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
 
 An [API-triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) is different from an API campaign.
 

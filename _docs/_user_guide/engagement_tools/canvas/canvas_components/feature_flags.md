@@ -13,6 +13,8 @@ local_redirect:
 
 > Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas][1] and track the impact of feature rollout on conversions. Moreover, [Experiment Paths][2] allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
+Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/) articles.
+
 ## Creating a feature flag
 
 ![][3]{: style="float:right;max-width:40%;margin-left:15px;"}
@@ -36,8 +38,6 @@ Go to **Messaging** > **Feature Flags** to edit, add, or remove additional prope
 Canvas and a feature flag rollout (dragging the slider) can work independently of each other. An important caveat is entry to a Canvas step will overwrite any default rollout configuration. This means if a user doesn't qualify for a feature flag, a Canvas step can enable the feature for that user.
 
 Similarly, if a user qualifies for a feature flag rollout with certain properties, if they also enter into the Canvas step, they will receive any overwritten values from that Canvas step.
-
-For more information about feature flags, check out our dedicated [Feature Flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/) articles.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths

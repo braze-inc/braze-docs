@@ -11,24 +11,24 @@ description: "このランディングページには、ユーザーデータの
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: SDK Data Collection
+  - name: SDK によるデータ収集
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
-    fa_icon: fas fa-chart-bar
-  - name: User Profile Lifecycle
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: ユーザープロファイルのライフサイクル
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-    fa_icon: fas fa-sync
-  - name: Data Collection Use Case Example
+    image: /assets/img/braze_icons/refresh-ccw-05.svg
+  - name: データ収集のユースケース例
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
-    fa_icon: fas fa-taxi
-  - name: Data Collection Best Practices
+    image: /assets/img/braze_icons/data.svg
+  - name: データ収集のベストプラクティス
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
-    fa_icon: fa fa-thumbs-up
-  - name: User Import
+    image: /assets/img/braze_icons/thumbs-up.svg
+  - name: ユーザーインポート
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-    fa_icon: fas fa-user
-  - name: User Language Codes
+    image: /assets/img/braze_icons/users-01.svg
+  - name: ユーザー言語コード
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
-    fa_icon: fas fa-language
+    image: /assets/img/braze_icons/globe-04.svg
 ---
 
 <br>

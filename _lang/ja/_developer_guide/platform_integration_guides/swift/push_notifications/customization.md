@@ -1,36 +1,36 @@
 ---
 page_order: 1
 nav_title: カスタマイズ
-article_title: Swift Push のカスタマイズ
+article_title: Swift Push カスタマイズ
 layout: featured
 platform: Swift
 channel:
   - push
 
-guide_top_header: "Swift Push のカスタマイズ"
+guide_top_header: "Swift Push カスタマイズ"
 guide_top_text: ""
-description: "このランディングページには、Swiftプッシュのカスタマイズに関連するすべてのものが掲載されています。"
+description: "このランディングページには、Swift のプッシュカスタマイズに関連するすべての情報が掲載されています。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Action Buttons
+  - name: アクションボタン
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
-    fa_icon: fa fa-exclamation
-  - name: Custom Sounds
+    image: /assets/img/braze_icons/annotation-alert.svg
+  - name: カスタムサウンド
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/
-    fa_icon: fa-regular fa-file-audio
-  - name: Rich Notifications
+    image: /assets/img/braze_icons/play-square.svg
+  - name: リッチプッシュ通知
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
-    fa_icon: fa fa-paint-brush
-  - name: Badges
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: バッジ
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/
-    fa_icon: fa fa-id-badge
-  - name: Ignoring Internal Push
+    image: /assets/img/braze_icons/key-01.svg
+  - name: 内部プッシュ通知の無視
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-    fa_icon: fa fa-eye-slash
-  - name: Advanced Settings
+    image: /assets/img/braze_icons/eye-off.svg
+  - name: 高度な設定
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

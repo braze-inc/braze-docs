@@ -9,7 +9,7 @@ search_rank: 1
 
 # SDK の初期セットアップ
 
-> このリファレンス記事では、Flutter 向け Braze SDK のインストール方法について説明します。以下の手順に従って、[Braze Flutter SDK][1] をインストールします。これには、Dart で記述された [Flutter アプリ][2]でインテグレーターが Braze API を使用できるようにするパッケージが含まれています。
+> このリファレンス記事では、Flutter 向け Braze SDK のインストール方法について説明します。以下の手順に従って、[Braze Flutter SDK](https://pub.dev/packages/braze_plugin) をインストールします。これには、Dart で記述された [Flutter アプリ](https://flutter.dev/)でインテグレーターが Braze API を使用できるようにするパッケージが含まれています。
 
 このプラグインには、基本的な分析機能が用意されており、iOS と Android 両方のアプリ内メッセージとコンテンツカードを1つのコードベースで統合できます。
 
@@ -19,9 +19,9 @@ search_rank: 1
 
 ## 前提条件
 
-インストールを完了するには、[アプリ識別子 API キー]({{site.baseurl}}/api/identifier_types/)と [SDK エンドポイント][4]が必要です。どちらもダッシュボードの [**設定の管理**] の下にあります。
+インストールを完了するには、[アプリ識別子 API キー]({{site.baseurl}}/api/identifier_types/)と [SDK エンドポイント]({{site.baseurl}}/api/basics/#endpoints)が必要です。どちらもダッシュボードの [**設定の管理**] の下にあります。
 
-これらの手順を実行する前に、[Flutter SDK][5] をインストールしてセットアップします。マシンとプロジェクトで、必要な最小限の Flutter バージョンと Dart バージョン ([こちらに記載][7]) が実行されていることを確認します。
+これらの手順を実行する前に、[Flutter SDK](https://docs.flutter.dev/get-started/install) をインストールしてセットアップします。マシンとプロジェクトで、必要な最小限の Flutter バージョンと Dart バージョン ([こちらに記載](https://github.com/braze-inc/braze-flutter-sdk#readme)) が実行されていることを確認します。
 
 ## ステップ 1:Braze ライブラリーを統合する
 
@@ -40,7 +40,7 @@ flutter pub add braze_plugin
 
 Braze サーバーに接続するには、プロジェクトの `android/res/values` フォルダで `braze.xml` ファイルを作成します。以下のコードを貼り付けて、API 識別子キーとエンドポイントを値で置き換えます。
 
-\`\`\`xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
@@ -67,63 +67,63 @@ import braze_plugin
 
 同じファイルで、`application(_:didFinishLaunchingWithOptions:)` メソッドで Braze 構成オブジェクトを作成し、API キーとエンドポイントをアプリの値に置き換えます。次に、構成を使用して Braze インスタンスを作成し、簡単にアクセスできるよう `AppDelegate` で静的プロパティを作成します。
 
-\`\`\`swift
-static var braze:Braze? = nil
+```swift
+static var braze: Braze? = nil
 
 func application(
-  _ application:UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey :Any]? = nil
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
   // Setup Braze
-let configuration = Braze.Configuration(
-apiKey: "<BRAZE_API_KEY>",
-endpoint: "<BRAZE_ENDPOINT>"
-)
-// - Enable logging or customize configuration here
+  let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>"
+  )
+  // - Enable logging or customize configuration here
   configuration.logger.level = .info
-    let braze = BrazePlugin.initBraze(configuration)
-    AppDelegate.braze = braze
+  let braze = BrazePlugin.initBraze(configuration)
+  AppDelegate.braze = braze
 
   return true
 }
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-Import `BrazeKit` at the top of the `AppDelegate.m` file:
+`AppDelegate.m` ファイルの先頭に `BrazeKit` をインポートします。
 ```objc
 @import BrazeKit;
-\`\`\`
+```
 
 同じファイルで、`application:didFinishLaunchingWithOptions:` メソッドで Braze 構成オブジェクトを作成し、API キーとエンドポイントをアプリの値に置き換えます。次に、構成を使用して Braze インスタンスを作成し、簡単にアクセスできるよう `AppDelegate` で静的プロパティを作成します。
 
-\`\`\`objc
-\- (BOOL)application:(UIApplication \*)application
-    didFinishLaunchingWithOptions:(NSDictionary \*)launchOptions {
+```objc
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze
-BRZConfiguration *configuration =
-[[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
-endpoint:@"<BRAZE_ENDPOINT>"];
-// - Enable logging or customize configuration here
+  BRZConfiguration *configuration =
+      [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
+                                      endpoint:@"<BRAZE_ENDPOINT>"];
+  // - Enable logging or customize configuration here
   configuration.logger.level = BRZLoggerLevelInfo;
-      Braze \*braze = [BrazePlugin initBraze:configuration];
-                                      AppDelegate.braze = braze;
+  Braze *braze = [BrazePlugin initBraze:configuration];
+  AppDelegate.braze = braze;
 
   [self.window makeKeyAndVisible];
   return YES;
 }
 
-\#pragma mark - AppDelegate.braze
+#pragma mark - AppDelegate.braze
 
-static Braze \*_braze = nil;
+static Braze *_braze = nil;
 
-+ (Braze \*)braze {
-  return \_braze;
++ (Braze *)braze {
+  return _braze;
 }
 
-+ (void)setBraze:(Braze \*)braze {
-  \_braze = braze;
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -138,7 +138,7 @@ Dart コードにプラグインをインポートするには、以下を使用
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-次に、[サンプルアプリ][6]のように `new BrazePlugin()` を呼び出して、Braze プラグインのインスタンスを初期化します。
+次に、[サンプルアプリ](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart)のように `new BrazePlugin()` を呼び出して、Braze プラグインのインスタンスを初期化します。
 
 ## 基本的な統合のテスト
 
@@ -157,10 +157,3 @@ braze.changeUser("{some-user-id}");
 [以前のナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**ユーザー**] > [**ユーザー検索**] からユーザーを検索できます。
 {% endalert %}
 
-[1]: https://pub.dev/packages/braze_plugin
-[2]: https://flutter.dev/
-[3]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[4]: {{site.baseurl}}/api/basics/#endpoints
-[5]: https://docs.flutter.dev/get-started/install
-[6]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart
-[7]: https://github.com/braze-inc/braze-flutter-sdk#readme

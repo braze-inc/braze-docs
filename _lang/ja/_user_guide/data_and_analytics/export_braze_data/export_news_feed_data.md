@@ -6,14 +6,13 @@ page_type: reference
 description: "このリファレンス記事では、ニュースフィードデータのエクスポート方法について説明します。"
 tool: Reports
 channel: news feed
+hidden: true
 
 ---
 
 # ニュースフィードデータのエクスポート
 
-{% alert note %}
-ニュースフィードは非推奨です。Braze では、ニュースフィードツールを利用しているお客様に、コンテンツカードのメッセージングチャネルへの移行をお勧めしています。移行により、柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)を参照してください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 特定のニュースフィードカードのパフォーマンスを分析する場合、パフォーマンスの内訳グラフにある以下のデータをエクスポートできます。
 

@@ -1,9 +1,9 @@
 ---
 nav_title: "通知オプション"
-article_title: Android 通知オプション
+article_title: Androidの通知オプション
 page_order: 2
 page_type: reference
-description: "このリファレンス記事では、いくつかのAndroid通知オプションと、それらをブレーズキャンペーン内で最適に使用する方法について説明します。"
+description: "この参考記事では、いくつかのAndroid通知オプションと、Brazeのキャンペーンでそれらを最適に使用する方法について説明する。"
 
 platform: Android
 channel:
@@ -13,17 +13,25 @@ channel:
 
 # 通知オプション
 
-> メッセージを分類し、ユーザーの通知トレイにグループ化する場合は、Braze を使用してAndroid の通知チャネル機能を利用できます。
+> これらは、Brazeで利用可能なAndroid特有のプッシュ通知オプションの一部である。
 
-Android プッシュキャンペーンを作成し、**Notification Channel** ドロップダウンの**Compose** タブの最上部を探します。
+## サイレント通知
+
+[プッシュ通知メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message)際、Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1つしか含まれていない場合、無音のプッシュ通知として送信されることを覚えておいてほしい。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/)通知を参照のこと。
+
+## 通知グループ
+
+メッセージを分類してユーザーの通知トレイにグループ分けしたい場合は、Brazeを通じてAndroidの通知チャンネル機能を利用できる。
+
+まず、Androidプッシュ通知キャンペーンを作成し、[**メール作成]**タブの一番上にある[**通知チャネル**]ドロップダウンを探す。
 
 ![][28]{: style="max-width:60%;" }
 
-ドロップダウンから通知チャネルを選択します。また、通知チャネル設定が誤動作した場合は、フォールバックチャネルを選択する必要があります。
+ドロップダウンから通知チャンネルを選択する。また、[通知チャネル] 設定で不具合が生じた場合に備えて、フォールバックチャネルを選択する必要があります。
 
-ここにリストされている[Notification Channels]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) がない場合は、Notification Channel ID を使用して追加できます。開発者に問い合わせて、通知チャネルID が何であるかを確認するか、必要に応じて新しいID を作成します。 
+ここに[通知チャンネルが]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/)ない場合は、通知チャンネルIDを使って追加できる。社内の開発者に連絡し、通知チャネル ID を確認するか、必要に応じて新しい ID を作成します。 
 
-Notification ID をNotification Channel に追加するには、**Notification Channel** ドロップダウンメニューで**Manage Notification Channel** をクリックし、必要なフィールドに入力します。Notification Channels は、Braze プラットフォームで使用する前にアプリで定義する必要があります。
+通知 ID を通知チャネル に追加するには、[**通知チャネル**] ドロップダウンメニューの [**通知チャネルを管理**] をクリックし、必須フィールドに入力します。通知チャネルを Braze プラットフォームで使用するには、アプリ上で通知チャネルを定義する必要があります。
 
 ![][29]{: style="max-width:80%;" }
 

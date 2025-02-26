@@ -19,7 +19,7 @@ The Sheetlabs and Braze integration allows you to leverage [Connected Content][2
 | Requirement | Description |
 | ----------- | ----------- |
 | Sheetlabs account | A [Sheetlabs account][1] is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -70,6 +70,6 @@ For more examples and advice on integrating with Sheetlabs, refer to [Sheetlabs 
 
 
 [1]: https://sheetlabs.com/
-[2]: https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [3]: https://app.sheetlabs.com/docs/producers/braze/
 [4]: https://sheetlabs.com/ACME/email1_translations?country=en

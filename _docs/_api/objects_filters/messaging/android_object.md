@@ -10,7 +10,7 @@ description: "This reference article lists and explains the different Android ob
 ---
 # Android object
 
-> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Android push object
 
@@ -24,34 +24,37 @@ You must include an Android push object in `messages` if you want users you have
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
    "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
    "priority": (optional, integer) the notification priority value,
+   "android_priority": (optional, string) the FCM sender priority,
    "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
    // Specifying "default" in the sound field will play the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to false,
    "summary_text": (optional, string),
    "time_to_live": (optional, integer (maximum of 2,419,200 seconds)),
    "notification_id": (optional, integer),
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
-   "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
+   "buttons" : (optional, array of Android push action button objects) push action buttons to display
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push
 }
 ```
 
-You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
+You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px.
 
 ### Additional parameter details
 
 | Parameter | Details |
 | --------- | ------- |
 | `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent outside of that range will default to 0. For more information on which priority level to use, see [Android notification priority]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
+| `android_priority` | This parameter will accept values either "normal" or "high" to specify the FCM sender priority. By default, notification messages are sent with high priority, and data messages are sent with normal priority.<br><br> For more information on how different values impact delivery, see [Android message priority](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
 | `collapse_key` | FCM can simultaneously store only up to four collapse keys per device. If you use more than four collapse keys, FCM does not make any guarantees as to which ones will be kept. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional collapse keys for Android messages. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
 | `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more, see [Notification channels][44] and refer to the steps for [defining notification channels][43] during integration. |
 | `send_to_sync` | For more information on `send_to_sync` messages, see [silent Android notifications][28]. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Android push action button object
 

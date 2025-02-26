@@ -1,36 +1,36 @@
 ---
-nav_title: "iOS オプション"
-article_title: iOS プッシュオプション
+nav_title: "iOSオプション"
+article_title: iOSプッシュオプション
 page_order: 8
 layout: dev_guide
 
 page_type: landing
 channel: push
 platform: iOS
-description: "このランディング ページには、Braze の iOS プッシュのみに関するすべての情報がリストされています。"
+description: "このランディングページには、Braze の Android プッシュ通知専用のすべての情報が記載されています。"
 
-guide_top_header: "iOS プッシュ通知"
-guide_top_text: "以下の記事には、Braze の iOS プッシュに関するすべての情報がリストされています。"
+guide_top_header: "iOS プッシュ"
+guide_top_text: "以下の記事には、Braze の Android プッシュ通知専用のすべての情報が記載されています。"
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: "Push Primer Campaign"
+- name: "プッシュプライマーキャンペーン"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-  fa_icon: fas fa-comment-alt
-- name: "Customizable App Icons"
+  image: /assets/img/braze_icons/message-square-02.svg
+- name: "アプリのアイコンをカスタマイズできる"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
-  fa_icon: fas fa-mobile-alt
-- name: "Notification Options"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "通知オプション"
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
-  fa_icon: fas fa-cog
-- name: "Rich Notifications"
+  image: /assets/img/braze_icons/settings-01.svg
+- name: "リッチプッシュ通知"
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
-  fa_icon: fas fa-vial
-- name: "Advanced Campaign Settings"
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: "キャンペーンの詳細設定"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
-  fa_icon: fas fa-chart-bar
-- name: "Utilizing Badge Count"
+  image: /assets/img/braze_icons/bar-chart-01.svg
+- name: "バッジ数の活用"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
-  fa_icon: fas fa-bell
+  image: /assets/img/braze_icons/bell-03.svg
 ---
 <br><br>

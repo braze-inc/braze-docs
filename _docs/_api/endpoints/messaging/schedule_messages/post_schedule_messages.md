@@ -10,11 +10,11 @@ description: "This article outlines details about the Create scheduled messages 
 ---
 {% api %}
 # Create scheduled messages
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/create
 {% endapimethod %}
 
-> Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. 
+> Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": { 
+  "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
@@ -79,12 +79,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
+| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```
@@ -178,4 +178,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 {% endapi %}
-

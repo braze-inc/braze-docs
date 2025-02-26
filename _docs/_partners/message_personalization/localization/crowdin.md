@@ -22,7 +22,7 @@ The Braze and Crowdin integration allows you to translate email templates and Co
 | Crowdin translation project | To connect your Braze account with Crowdin or Crowdin Enterprise, you will first need to sign up and create a translation project. |
 | Braze REST API key | A Braze REST API key with all templates and Content Blocks permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze SDK endpoint | Your SDK endpoint URL will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
 
@@ -31,7 +31,7 @@ The Braze and Crowdin integration allows you to translate email templates and Co
 #### Crowdin
 To set up the Braze app in Crowdin, follow these steps:
 
-1. Go to the [Braze app in the marketplace](https://crowdin.com/resources#marketplace/braze).
+1. Go to the [Braze app in the marketplace](https://store.crowdin.com/braze-app).
 2. Click **Install** to add it to your account.
 3. Open the project you created for your Braze content localization.
 4. Go to **Settings > Integrations** tab.

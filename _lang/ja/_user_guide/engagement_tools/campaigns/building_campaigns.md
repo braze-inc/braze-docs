@@ -3,7 +3,7 @@ nav_title: キャンペーンの構築
 article_title: キャンペーンの構築
 layout: dev_guide
 guide_top_header: "キャンペーンの構築"
-guide_top_text: "このランディングページには、キャンペーンの構築に関するリソースがあります。<a href='/docs/user_guide/engagement_tools/segments/'>セグメント</a>を作成したら、こちらのリソースを使用してキャンペーンを設定し、利用可能なさまざまなオプションについて確認してください。<br><br><a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>キャンペーンの設定</a>の Braze ラーニングコースもぜひご覧ください。"
+guide_top_text: "このランディングページには、キャンペーンの構築に関するリソースがあります。<a href='/docs/user_guide/engagement_tools/segments/'>セグメントを</a>作成したら、ここにあるリソースを使ってキャンペーンを設定し、さまざまなオプションについて学んでみよう。<br><br>また、<a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>キャンペーン・セットアップ・ブレイズ・ラーニングの</a>コースもぜひご覧いただきたい。"
 page_order: 2
 
 tool: Campaigns
@@ -12,29 +12,29 @@ description: "このランディングページには、キャンペーンの構
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Creating a Campaign
+  - name: キャンペーンを作成する
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
-    fa_icon: fas fa-list
-  - name: Time-Based Functionalities
+    image: /assets/img/braze_icons/list.svg
+  - name: 時間ベースの機能
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
-    fa_icon: fas fa-clock
-  - name: Scheduling Your Campaign
+    image: /assets/img/braze_icons/clock.svg
+  - name: キャンペーンのスケジュール設定
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-    fa_icon: fas fa-chart-line
-  - name: Targeting Users
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: ユーザーへのターゲット設定
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-    fa_icon: fas fa-bullseye
-  - name: Conversion Events
+    image: /assets/img/braze_icons/target-04.svg
+  - name: コンバージョンイベント
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-    fa_icon: fas fa-calendar-check
-  - name: Rate Limiting and Frequency Capping
+    image: /assets/img/braze_icons/calendar-check-02.svg
+  - name: レート制限とフリークエンシーキャップ
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
-    fa_icon: fas fa-exclamation-triangle
+    image: /assets/img/braze_icons/alert-triangle.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: AI Copywriting Assistant
-    link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+  - name: AIコピーライティング・アシスタント
+    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    image: /assets/img/braze_icons/edit-05.svg
 
 ---

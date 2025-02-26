@@ -18,8 +18,8 @@ search_tag: Partner
 | Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
 | [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) | Confirm that link shortening is turned on. | 
-| Contact Card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Contact card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -31,9 +31,9 @@ Follow the respective steps below to send dynamic SMS links for iOS and Android 
 To allow link preview images for iOS, users must add your brand (the sender) as a contact.
 {% endalert %}
 
-#### Step 1: Create a Contact Card campaign
+#### Step 1: Create a contact card campaign
 
-After users save your brand as a contact, either through a Braze [content card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
+After users save your brand as a contact, either through a [contact card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
 
 ![1]{: style="max-width:30%;"}
 
@@ -59,13 +59,15 @@ After users load the link preview, a personalized image will render with the abi
 
 ![4]{: style="max-width:30%;"}
 
-### Android (Google & Samsung devices)
+### Android (Google and Samsung devices)
 
 Android users aren't required to save your brand as a contact in order to receive dynamic SMS link previews. However, it is still recommended so that the device can automatically load the link previews.
 
 ![5]{: style="max-width:30%;"}
 
-Users who haven't saved your brand as a contact and have turned on automatic previews will have to select **Tap to load preview** to load the preiew image. <br>![6]{: style="max-width:30%;"}
+Users who haven't saved your brand as a contact and have turned on automatic previews will have to select **Tap to load preview** to load the preview image.
+
+![6]{: style="max-width:30%;"}
 
 ## Considerations
 

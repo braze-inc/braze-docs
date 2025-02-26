@@ -22,7 +22,7 @@ The Braze and Amplitude bi-directional integration allows you to [import your Am
 |---|---|
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Amplitude, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Choose an integration 
 
@@ -57,7 +57,11 @@ Use Audiences to send user properties and computations to Braze as custom attrib
 
 When a user's property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
 
-User trait and computation syncs will create new users for user IDs that do not yet exist within Braze. Computations and user traits can only be synced using user ID.
+User trait and computation syncs will create new users for user identifiers that do not yet exist within Braze. Computations and user traits can only be synced using user identifiers. A user identifier can be any of the following:
+- External ID
+- Braze ID
+- User alias
+- Email address
 
 Refer to Amplitude's documentation to learn more about [syncing properties, recommendations, and cohorts to third-party destinations](https://help.amplitude.com/hc/en-us/articles/360060055531).
 

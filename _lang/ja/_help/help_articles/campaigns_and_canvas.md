@@ -1,39 +1,43 @@
 ---
 page_order: 2
-nav_title: キャンペーン & キャンバス
+nav_title: キャンペーンとキャンバス
 layout: dev_guide
-guide_top_header: "キャンペーン & キャンバスのヘルプ記事"
-guide_top_text: "役立つ情報をお探しですか?もう探す必要はありません!キャンバスやキャンペーンのトラブルシューティングに役立つヘルプ記事をご覧ください。<br><br> ユーザーとのエンゲージメントの構築と最適化の詳細については、<a href='/docs/user_guide/engagement_tools/campaigns/'>Campaigns</a> と <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a> の記事をご覧ください。"
+guide_top_header: "キャンペーンとキャンバスのヘルプ記事"
+guide_top_text: "役に立つ情報をお探しですか? これで十分です。キャンバスやキャンペーンのトラブルシューティングに役立つヘルプ記事をご覧ください。<br><br> ユーザーとのエンゲージメントの構築および最適化の詳細については、<a href='/docs/user_guide/engagement_tools/campaigns/'>キャンペーン</a>および<a href='/docs/user_guide/engagement_tools/canvas/'>キャンバス</a>の記事を参照してください。"
 
 page_type: landing
-description: "このランディングページには、キャンペーンやキャンバスに関する一般的な問題に関連するヘルプ記事が表示されます。"
+description: "このランディングページは、キャンペーンやキャンバスの一般的な問題に関連するヘルプ記事のホームです。"
 tool:
 - Campaigns
 - Canvas
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: Canvas Delivery Issues
+  - name: キャンバス配信の問題
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
-    fa_icon: far fa-paper-plane
-  - name: Checking Location Data
+    image: /assets/img/braze_icons/send-01.svg
+  - name: 位置データを確認する
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
-    fa_icon: fas fa-location-arrow
-  - name: Handling a Large Control Group
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
+  - name: 大きなコントロールグループを処理する
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
-    fa_icon: far fa-dot-circle
-  - name: Logging Custom Event Properties
+    image: /assets/img/braze_icons/target-05.svg
+  - name: カスタムイベントプロパティをロギングする
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-    fa_icon: fas fa-code
-  - name: Low Campaign or Canvas Conversions
+    image: /assets/img/braze_icons/code-02.svg
+  - name: キャンペーンまたはキャンバスの低コンバージョン
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
-    fa_icon: fas fa-cart-arrow-down
-  - name: Untriggered Campaign or Canvas
+    image: /assets/img/braze_icons/shopping-cart-03.svg
+  - name: 非トリガーキャンペーンまたはキャンバス
     link: /docs/help/help_articles/campaigns_and_canvas/not_triggering/
-    fa_icon: far fa-times-circle
-  - name: Using Event Logging
+    image: /assets/img/braze_icons/x-circle.svg
+  - name: イベントロギングを使用する
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
-    fa_icon: fas fa-clipboard-list
+    image: /assets/img/braze_icons/list.svg
 
     
 ---
+
+{% alert tip %}
+キャンペーンのトラブルシューティングについては、過去30日分の診断ログしか残っていないため、問題発生から30日以内に必ずBrazeサポートに連絡すること。
+{% endalert %}

@@ -4,73 +4,79 @@ article_title: メール
 page_order: 2
 layout: dev_guide
 guide_top_header: "メール"
-guide_top_text: "Braze でのメールを使用すると、キャンペーンまたはキャンバスのいずれかで完全にカスタマイズされたカスタマイズされたメールメッセージを作成し、ユーザのアテンションを迅速に把握することができます。詳しくは、以下の記事を参照してください。"
-description: "このランディングページは、Braze Eメールのホームページです。ここでは、メールキャンペーンの作成方法、ドラッグアンドドロップエディタの使用方法、ユーザーサブスクリプションの管理方法、環境設定センターなどについて説明します。"
+guide_top_text: "Braze のメールでは、キャンペーンとキャンバスのいずれかで、十分にカスタマイズとパーソナライゼーションを行ってメールメッセージを作成でき、ユーザーの関心をただちに引くことができます。詳しくは以下の記事をご覧いただきたい。"
+description: "このランディングページはBrazeのEメールのホームである。ここでは、メールキャンペーンの作成方法、ドラッグ＆ドロップエディターの使用方法、ユーザー購読の管理方法、ユーザー設定センターなどを学ぶことができます。"
 channel:
   - email
 search_rank: 2
-guide_featured_title: "有名な記事"
+guide_featured_title: "よく読まれている記事"
 guide_featured_list:
-- name: About Email
+- name: Eメールについて
   link: /docs/user_guide/message_building_by_channel/email/about/
-  fa_icon: fas fa-check
-- name: Managing User Subscriptions
+  image: /assets/img/braze_icons/check-square-broken.svg
+- name: ユーザー購読の管理
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  fa_icon: fas fa-users
-- name: Link Aliasing
+  image: /assets/img/braze_icons/users-01.svg
+- name: リンクのエイリアシング
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
-  fa_icon: fas fa-link
-- name: Create an Email Campaign
+  image: /assets/img/braze_icons/link-03.svg
+- name: Eメールキャンペーンを作成する
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-  fa_icon: fas fa-envelope
-- name: Drag-And-Drop Editor
+  image: /assets/img/braze_icons/mail-01.svg
+- name: ドラッグ・アンド・ドロップ・エディター
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  fa_icon: fas fa-paint-brush
-- name: Templates
+  image: /assets/img/braze_icons/brush-02.svg
+- name: テンプレート
   link: /docs/user_guide/message_building_by_channel/email/templates/
-  fa_icon: fas fa-table
-- name: Email Reporting
+  image: /assets/img/braze_icons/table.svg
+- name: 電子メール報告
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
-- name: Email Setup
+- name: メール設定
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
-  fa_icon: fas fa-envelope
-- name: Preference Center
+  image: /assets/img/braze_icons/mail-01.svg
+- name: メッセージのロケール
+  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  image: /assets/img/braze_icons/users-01.svg
+- name: ユーザー設定センター
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
-  fa_icon: fa-solid fa-list-check
-- name: CSS Inlining
+  image: /assets/img/braze_icons/list.svg
+- name: CSSインライン化
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
-  fa_icon: fas fa-align-left
-- name: Custom Email Footer
+  image: /assets/img/braze_icons/align-left.svg
+- name: メールのカスタムフッター
   link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
-  fa_icon: fas fa-envelope-circle-check
-- name: Inbox Vision
+  image: /assets/img/braze_icons/message-check-circle.svg
+- name: 受信トレイビジョン
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
-- name: Transactional Emails
+  image: /assets/img/braze_icons/inbox-01.svg
+- name: トランザクションメール
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
-  fa_icon: fas fa-money-bill
-- name: Gmail Promotion Tool
+  image: /assets/img/braze_icons/bank-note-02.svg
+- name: 識別子フィールドレベル暗号化
+  link: /docs/user_guide/data_and_analytics/field_level_encryption/
+  image: /assets/img/braze_icons/database-01.svg
+- name: Gmailプロモーションツール
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
-  fa_icon: fas fa-trophy
+  image: /assets/img/braze_icons/trophy-01.svg
 - name: Apple Private Relay SSO
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
-  fa_icon: fab fa-apple
-- name: Apple Mail Privacy Protection
+  image: /assets/img/braze_icons/apple.svg
+- name: Apple Mail のプライバシー保護
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
-  fa_icon: fab fa-apple
-- name: Email Analytics Glossary
+  image: /assets/img/braze_icons/apple.svg
+- name: メール分析用語集
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
-  fa_icon: fas fa-chart-pie
-- name: Best Practices
+  image: /assets/img/braze_icons/pie-chart-01.svg
+- name: ベストプラクティス
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
-  fa_icon: fas fa-check-square
-- name: Frequently Asked Questions
+  image: /assets/img/braze_icons/check-square-broken.svg
+- name: よくある質問
   link: /docs/user_guide/message_building_by_channel/email/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 ---

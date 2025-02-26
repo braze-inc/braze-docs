@@ -11,7 +11,7 @@ channel:
 
 # インライン画像プッシュ
 
-![\]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
+![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
 > インライン画像プッシュを使用して Android プッシュ通知内で大きな画像を表示します。この設計により、ユーザーは画像を拡大するために手動でプッシュを拡大する必要がなくなります。 
 
@@ -31,4 +31,4 @@ Android 12 を実行しているデバイスでは、カスタムプッシュ通
 
 Android プッシュメッセージを作成する場合、この機能は [**通知タイプ**] ドロップダウンで使用できます。
 
-![The push campaign editor showing the location of the "Notification Type" dropdown (above the standard push preview).]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
+![「通知タイプ」ドロップダウン (標準のプッシュプレビューの上) の場所を示すプッシュキャンペーンエディター。]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})

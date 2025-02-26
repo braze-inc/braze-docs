@@ -1,30 +1,30 @@
 ---
-nav_title: "Canvas エントリ プロパティ オブジェクト"
-article_title: API Canvas エントリプロパティオブジェクト
+nav_title: "キャンバス・エントリー・プロパティ・オブジェクト"
+article_title: API キャンバスエントリのプロパティオブジェクト
 page_order: 2
 page_type: reference
 tool:
   - Canvas
-description: "この記事では、Braze Canvas エントリ プロパティ オブジェクトについて説明します。"
+description: "この記事では、Braze Canvasのエントリー・プロパティ・オブジェクトについて説明する。"
 
 ---
 
-# Canvas エントリのプロパティ オブジェクト
+# キャンバスエントリー・プロパティ・オブジェクト
 
-> エンドポイントの 1 つを使用して API 経由で Canvas をトリガーまたはスケジュールする場合、Canvas の最初のステップで送信されるメッセージをカスタマイズするためのキーと値のマップを名前空間に `canvas_entry_properties` 指定できます。
+> API を通じてキャンバスをトリガーまたはスケジューリングするためのエンドポイントの1つを使用する場合、キャンバスの最初のステップによって送信されるメッセージをカスタマイズするためのキーと値のマップを、`canvas_entry_properties` 名前空間に提供することができます。
 
 {% alert note %}
-Canvas エントリのプロパティ オブジェクトの最大サイズ制限は 50 KB です。
+キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。
 {% endalert %}
 
 ## オブジェクト本体
 
-このオブジェクト本体には、要求の例が含まれています。
+このオブジェクトボディはリクエスト例を含む。
 
 ```json
 "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
 ```
 
 {% raw %}
-たとえば、要求 `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` に追加することで ```{{canvas_entry_properties.${product_name}}}``` 、メッセージに "shoes" という単語を追加できます。
+例えば、`"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` を使ったリクエストの場合、```{{canvas_entry_properties.${product_name}}}``` をリクエストに追加して、「shoes」という単語をメッセージに追加できます。
 {% endraw %}

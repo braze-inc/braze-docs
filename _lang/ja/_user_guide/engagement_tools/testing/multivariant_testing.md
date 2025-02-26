@@ -9,9 +9,9 @@ search_rank: 2
 
 # 多変量テストと AB テスト
 
-> このページでは、多変量テストと AB テストとは何か、およびその利点について説明します。多変量テストと AB テストを作成する方法のステップについては/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to  [Braze での多変量および AB テストの作成]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)を参照してください 
+> このページでは、多変量テストと AB テストとは何か、およびそれらの利点について説明します。多変量またはA/Bテストの作成手順については、[Brazeを使用した多変量およびA/Bテストの作成]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)を参照してください。 
 
-多変量テストおよび AB テストは、[インテリジェントセレクション]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)を使用して迅速に利用できます。
+多変量とABテストは[インテリジェントセレクション]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)を使用して使用できます。
 
 ## 多変量テストとABテストとは
 
@@ -61,9 +61,9 @@ Braze のドキュメントでは、「多変量テスト」は「AB テスト�
 
 アプリ内メッセージで AB テストを実行すると、あるバリアントと別のバリアントの間で、割合が均等に分割されている場合でも、分析でバリアント分布が高いように表示されることがあります。たとえば、バリアント A とバリアント C の*ユニーク受信者*の次のグラフを考えてみます。
 
-![Graph of Unique Recipients for two variants with a similar shape between Variant A and Variant C, where Variant A has a higher Unique Recipients count per day]({% image_buster /assets/img/variant_distribution_iam.png %})
+![バリアント A とバリアント C の間に類似した形状を持つ 2 つのバリアントのユニーク受信者のグラフ。バリアント A の方が 1 日あたりのユニーク受信者数が高い]({% image_buster /assets/img/variant_distribution_iam.png %})
 
-バリアント A は、バリアント C よりもユニーク受信者の数が一貫して多いです。これは、バリアント分布によるものではなく、アプリ内メッセージの*ユニーク受信者数*の計算方法によるものです。アプリ内メッセージの場合、*ユニーク受信者数*は実際には*ユニークインプレッション数*で、アプリ内メッセージを受け取って閲覧した人の合計数です。つまり、ユーザーが何らかの理由でメッセージを受け取らなかったり、メッセージを閲覧しないことにした場合、そのユーザーは*ユニーク受信者*数に含まれず、バリアント分布が偏っているように見える可能性があります。
+バリアント A は、バリアント C よりも*ユニーク受信者*の数が一貫して多いです。これは、バリアント分布によるものではなく、アプリ内メッセージの*ユニーク受信者数*の計算方法によるものです。アプリ内メッセージの場合、*ユニーク受信者数*は実際には*ユニークインプレッション数*で、アプリ内メッセージを受け取って閲覧した人の合計数です。つまり、ユーザーが何らかの理由でメッセージを受け取らなかったり、メッセージを閲覧しないことにした場合、そのユーザーは*ユニーク受信者*数に含まれず、バリアント分布が偏っているように見える可能性があります。
 
 ## 多変量テストと AB テストの5つのルール {#five-rules-for}
 
@@ -101,5 +101,5 @@ Braze のドキュメントでは、「多変量テスト」は「AB テスト�
 [10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
 [272]: #intelligent-selection
 [273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[intelselection] ：{{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

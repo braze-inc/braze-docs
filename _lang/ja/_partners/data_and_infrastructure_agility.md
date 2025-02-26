@@ -1,15 +1,13 @@
 ---
-nav_title: "データとインフラのアジリティ"
+nav_title: "データとインフラの俊敏性"
 article_title: データ＆インフラ・アジリティ・パートナー
 page_order: 5
 
 page_type: landing
-description: "このページでは、異なるツールやプロバイダー間でデータの送信、保存、その他の調整を可能にするBrazeパートナー（Alloys）をリストアップしています。"
+description: "このページには、さまざまなツールやプロバイダー間でデータを送信、保存、調整できるようにする Braze パートナー (Alloys) が一覧表示されています。"
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Data & Infrastructure Agility"
 
 valid_partner_list:
@@ -39,7 +37,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
-- name: Segment
+- name: セグメント
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
@@ -47,17 +45,17 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-- name: Census
+- name: 国勢調査
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
-- name: Treasure Data
+- name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
-- name: Amperity
+- name: アンペア
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
@@ -131,4 +129,12 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
+- name: トレジャーデータ
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

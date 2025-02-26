@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Wunderkind
 
-> [Wunderkind](https://www.wunderkind.co) is a platform that scales ecommerce revenue through high-performing, one-to-one email sends. Using Wunderkind's Identification technology, you can enable brands to recognize more anonymous users across devices, down to an actionable email address. On average, Wunderkind scales the Identification percentage from 3-5% of website traffic to ~40-60%.
+> [Wunderkind](https://www.wunderkind.co) is a platform that scales eCommerce revenue through high-performing, one-to-one email sends. Using Wunderkind's Identification technology, you can enable brands to recognize more anonymous users across devices, down to an actionable email address. On average, Wunderkind scales the Identification percentage from 3-5% of website traffic to ~40-60%.
 
 The Braze and Wunderkind integration allows you to analyze the performance lift and identify more anonymous users, significantly scaling one-to-one messages sent via Braze and contacts added directly to Braze.
 
@@ -19,7 +19,7 @@ The Braze and Wunderkind integration allows you to analyze the performance lift 
 | Requirement | Description |
 | ----------- | ----------- |
 | Wunderkind account | A Wunderkind account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

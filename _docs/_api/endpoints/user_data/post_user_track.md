@@ -17,7 +17,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed via API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
+Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/). 
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -58,7 +58,7 @@ For each request component listed in the following table, one of `external_id`, 
 | `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
 
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
             "email": "test@braze.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
-            "integer_attribute": 25,
+            "integer_attribute": 26,
             "array_attribute": [
                 "banana",
                 "apple"
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, Braze will use the email as the identifier.
+If you include a request with both `email` and `phone`, Braze will use the email as the identifier.
 {% endalert %}
 
 ```
@@ -277,6 +277,8 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 
 ## Frequently asked questions
 
+{% multi_lang_include email-via-sms-warning.md %}
+
 ### What happens when multiple profiles with the same email address are found?
 If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
 
@@ -284,12 +286,22 @@ If the `external_id` exists, the most recently updated profile with an external 
 A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 
 Each event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so "duplicate" events are treated as separate, unique events.
+
+## Monthly Active Users CY 24-25
+For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:
+- Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
+- In addition to the hourly limit, Braze enforces a burst limit on the number of requests that can be sent every three seconds.
+- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
+
+Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+
+
 
 {% endapi %}

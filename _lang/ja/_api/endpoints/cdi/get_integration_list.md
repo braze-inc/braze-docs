@@ -1,41 +1,41 @@
 ---
-nav_title: "取得:リストインテグレーション"
-article_title: "取得:リストインテグレーション"
+nav_title: "取得:リスト統合"
+article_title: "取得:リスト統合"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_integration_list/
 layout: api_page
 page_type: reference
-description: "この記事では、List インテグレーション Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「リスト統合」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# インテグレーションを一覧表示
+# リストの統合
 {% apimethod get %}
 /cdi/integrations
 {% endapimethod %}
 
-> このエンドポイントを使用して、既存のインテグレーションのリストを返します。
+> 既存の統合のリストを返すには、このエンドポイントを使う。
 
 
 {% alert note %}
-このエンドポイントを使用するには、`cdi.integration_list`権限のある API キーを生成する必要があります。
+このエンドポイントを使用するには、`cdi.integration_list` 権限を持つ API キーを生成する必要があります。
 {% endalert %}
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='cdi list integrations' %}
 
-## クエリパラメーター
+## クエリーパラメーター
 
-このエンドポイントを呼び出すたびに、10 個の項目が返されます。インテグレーションが 10 個を超えるリストの場合は、レスポンス例に示すように、`Link`ヘッダーを使用して次のページのデータを取得します。
+このエンドポイントを呼び出すと、10個のアイテムが返される。10を超える統合のあるリストについては、応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `cursor` | オプション | 文字列 | 統合リストのページネーションを決定します。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | 統合リストのページネーションを決定する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ### カーソルなし
 
@@ -55,12 +55,12 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations?cu
 
 ## 応答
 
-### 成功レスポンスの例
+### 成功応答の例
 
-`200`ステータスコードは次のレスポンスボディを返す可能性があります。
+ステータスコード `200` は、次の応答本文を返す可能性があります。
 
 {% alert note %}
-合計でインテグレーションの数が 10 以下の場合、`Link`ヘッダーは存在しません。`prev`カーソルのない呼び出しでは表示されません。商品の最終ページを見ても、`next`表示されません。
+`Link` ヘッダーは、統合の合計が10以下の場合は存在しません。カーソルのない呼び出しでは、`prev` は表示されません。項目の最後のページを見ると、`next` は表示されません。
 {% endalert %}
 
 ```
@@ -90,13 +90,13 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 
 ## トラブルシューティング
 
-次の表は、返される可能性のあるエラーとそれに関連するトラブルシューティング手順を示しています。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
 | エラー | トラブルシューティング |
 | --- | --- |
-| `400 Invalid cursor` | `cursor` あなたのが有効であることを確認してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードおよび関連するエラーメッセージについては、「[致命的なエラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)」を参照してください。
+その他のステータスコードと関連するエラーメッセージについては、[致命的なエラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% endapi %}

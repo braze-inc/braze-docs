@@ -1,51 +1,51 @@
 ---
 nav_title: Android
-article_title: ユニティ用 SDK アンドロイドインテグレーション
+article_title: Unity向けSDK Androidインテグレーション
 platform: 
   - Unity
   - Android
 page_order: 0
-description: "このリファレンス記事では、Unity プラットフォームの Android SDK インテグレーションについて説明しています。"
+description: "このリファレンス記事では、Unity プラットフォームのAndroid SDKインテグレーションについて説明します。"
 search_rank: .9
 ---
 
-# SDK アンドロイド統合
+# SDK Androidインテグレーション
 
-> このリファレンス記事では、Unity プラットフォームの Android SDK インテグレーションについて説明しています。以下の手順に従って、お使いの Unity アプリケーションで Braze を実行してください。
+> このリファレンス記事では、Unity プラットフォームのAndroid SDKインテグレーションについて説明します。Braze を Unity アプリケーションで実行するには、以下の指示に従ってください。
 
-## ステップ 1:Braze ユニティパッケージをお選びください
+## ステップ1:Braze Unity パッケージの選択
 
-Brazeには、[`.unitypackage`][41]AndroidおよびiOSプラットフォーム用のネイティブバインディングとC＃インターフェイスがバンドルされています。
+Braze [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) は、Android プラットフォームと iOS プラットフォーム向けのネイティブバインディングを C# インターフェイスとともにバンドルします。
 
-Braze Unity [のリリースページでは、いくつかの Braze Unity][42] パッケージをダウンロードできます。
+[Braze Unity リリースページ](https://github.com/Appboy/appboy-unity-sdk/releases)でいくつかの Braze Unity パッケージをダウンロードできます。
  
 - `Appboy.unitypackage`
-    - このパッケージには、Braze Android SDK と iOS SDK と iOS SDK のほか、[Braze アプリ内メッセージングの適切な機能と iOS でのコンテンツカード機能の適切な機能に必要な iOS SDK の SDWebImage][unity-1] 依存関係がバンドルされています。SDWebImageフレームワークは、GIFを含む画像のダウンロードと表示に使用されます。Braze の全機能を利用したい場合は、このパッケージをダウンロードしてインポートしてください。
+    - このパッケージは、Braze Android および iOS SDK と、iOS SDK の [SDWebImage](https://github.com/SDWebImage/SDWebImage) 依存関係をバンドルします。これは、Braze アプリ内メッセージングと、iOS 上のコンテンツカード機能を適切に機能させるために必要です。SDWebImage フレームワークは、GIF を含む画像のダウンロードと表示に使用されます。完全なBraze機能を使用する場合は、このパッケージを読み込むしてインポートします。
 - `Appboy-nodeps.unitypackage`
-    - このパッケージは、[SDWebImage `Appboy.unitypackage`][unity-1] フレームワークが存在しない点を除いてと似ています。このパッケージは、SDWebImage フレームワークを iOS アプリに表示したくない場合に便利です。
+    - このパッケージは `Appboy.unitypackage` に似ていますが、[SDWebImage](https://github.com/SDWebImage/SDWebImage) フレームワークが存在しない点が異なります。このパッケージは、iOS アプリに SDWebImage フレームワークが存在しないようにする場合に便利です。
 
-**iOS**:iOS プロジェクトに [SDWebImage][unity-1] 依存関係が必要かどうかを確認するには、[iOS アプリ内メッセージドキュメント] [unity-4] を参照してください。<br>
-**Android**:[Unity 2.6.0 以降、バンドルされている Braze Android SDK アーティファクトには AndroidX の依存関係が必要です。][unity-3]以前にを使用していた場合は`jetified unitypackage`、対応するバージョンに安全に移行できます`unitypackage`。
+**iOS**:iOS プロジェクトに [SDWebImage](https://github.com/SDWebImage/SDWebImage) の依存関係が必要かどうかを確認するには、[iOS アプリ内メッセージドキュメント]を参照してください。({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/).] <br>
+**Android**:Unity 2.6.0 以降、バンドルされた Braze Android SDK アーティファクトには [AndroidX](https://developer.android.com/jetpack/androidx) 依存関係が必要です。以前に`jetified unitypackage` を使用していた場合は、対応する`unitypackage` に安全に移行できます。
 
-## ステップ 2: パッケージをインポートする
+## ステップ2:パッケージをインポートする
 
-Unity エディターで、「**アセット」>「パッケージのインポート」>「カスタムパッケージ」に移動して、パッケージを Unity プロジェクトにインポートします**。次に、[**インポート**] をクリックします。
+Unity エディターで Unity プロジェクトにパッケージをインポートするには、**[アセット] > [パッケージをインポート] > [カスタムパッケージ]** の順に移動します。次に、**Import**をクリックします。
 
-または、[Unity アセットパッケージのインポート手順に従って][41]、カスタム Unity パッケージのインポートに関する詳細なガイドを参照してください。 
+または、カスタム Unity パッケージのインポートに関して詳しくは、[Unity アセットパッケージのインポート](https://docs.unity3d.com/Manual/AssetPackages.html)の説明を参照してください。 
 
 {% alert note %}
-iOS または Android プラグインのみをインポートする場合は、Braze `Plugins/Android` `Plugins/iOS` をインポートするときにまたはサブディレクトリの選択を解除してください。`.unitypackage`
+iOS またはAndroid プラグインのみをインポートする場合は、Braze`.unitypackage` をインポートするときに`Plugins/Android` または`Plugins/iOS` サブディレクトリの選択を解除します。
 {% endalert %}
 
-## ステップ 3: AndroidManifest.xml を更新中
+## ステップ3:AndroidManifest.xml を更新する
 
-Android Unity プロジェクトでは、アプリケーションを実行するにはが必要です。[`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html)さらに、Brazeが機能するにはいくつかの追加機能が必要です。[`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html)
+Android Unity プロジェクトでは、アプリケーションを実行するために [`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html) が必要です。さらに、Braze が機能するには、[`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html) にいくつかの追加が必要です。
 
-### AndroidManifest.xml を設定する
+### AndroidManifest.xml の設定
 
-アプリにがない場合は`AndroidManifest.xml`、以下をテンプレートとして使用できます。それ以外の場合は、すでにセクションがある場合は`AndroidManifest.xml`、次の欠落しているセクションのいずれかが既存のセクションに追加されていることを確認してください`AndroidManifest.xml`。
+アプリに`AndroidManifest.xml` がない場合は、以下をテンプレートとして使用できます。それ以外の場合、すでに`AndroidManifest.xml` がある場合は、次のいずれかの欠落セクションが既存の`AndroidManifest.xml` に追加されていることを確認します。
 
-\`\`\`xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="REPLACE_WITH_YOUR_PACKAGE_NAME">
@@ -81,83 +81,53 @@ Android Unity プロジェクトでは、アプリケーションを実行する
 </manifest>
 ```
 
-> `AndroidManifest.xml``Assets/Plugins/Android/AndroidManifest.xml`お前は下に存在するはずだ詳細については、[Unity Androidマニフェストのドキュメントを参照してください](https://docs.unity3d.com/Manual/android-manifest.html)。
+> `AndroidManifest.xml` は`Assets/Plugins/Android/AndroidManifest.xml` の下に存在する必要があります。詳細については、[Unity OMAnifest ドキュメント](https://docs.unity3d.com/Manual/android-manifest.html)を参照してください。
 
-> `AndroidManifest.xml`ファイルに登録されているすべてのアクティビティクラスは、Braze Android SDKと完全に統合されている必要があります。独自の Activity クラスを追加する場合は、[Unity Activity の統合手順に従ってアナリティクスが収集されていることを確認する必要があります](#extending-braze-unity-player)。
+> `AndroidManifest.xml` に登録されているすべてのアクティビティクラスは、Braze Android SDK と完全に統合されている必要があります。独自のアクティビティクラスを追加する場合は、[Unity アクティビティ統合手順](#extending-braze-unity-player)に従って、分析が収集されるようにする必要があります。
 
 {% alert note %}
-決勝戦には、`AndroidManifest.xml``"android.intent.category.LAUNCHER"`プレゼント付きのアクティビティが1つだけ含まれている必要があります。
+最終的な`AndroidManifest.xml` には、`"android.intent.category.LAUNCHER"` が存在する単一のアクティビティのみを含める必要があります。
 {% endalert %}
 
-### AndroidManifest.xml をパッケージ名で更新してください
+### AndroidManifest.xmlをパッケージ名で更新します
 
-パッケージ名を確認するには、[**ファイル] > [ビルド設定] > [プレーヤー設定] > [Android] タブをクリックします**。
-![\]({% image_buster /assets/img_archive/UnityPackageName.png %})
+パッケージ名を確認するには、**[ファイル] > [ビルド設定] > [プレーヤー設定] > [Android タブ]**を選択します。
+![]({% image_buster /assets/img_archive/UnityPackageName.png %})
 
-で`AndroidManifest.xml`、`REPLACE_WITH_YOUR_PACKAGE_NAME``Package Name`のすべてのインスタンスを前のステップで作成したインスタンスに置き換える必要があります。
+`AndroidManifest.xml` では、`REPLACE_WITH_YOUR_PACKAGE_NAME` のすべてのインスタンスを前のステップの `Package Name` に置き換える必要があります。
 
-## ステップ 4: グラドル依存関係の追加 {#unity-android-gradle-configuration}
+## ステップ4: グレードル依存関係の追加 {#unity-android-gradle-configuration}
 
-以下の依存関係が必要です。
+Unity プロジェクトに gradle の依存関係を追加するには、まず公開設定で [[Custom Main Gradle テンプレート]](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) を有効にします。これにより、プロジェクトで使用するテンプレートグラドルファイルが作成されます。gradle ファイルは、依存関係の設定やその他のビルド時のプロジェクト設定を処理します。詳細については、Braze Unity サンプルアプリの[mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle) を参照してください。
 
-\`\`\`groovy
-実装「org.jetbrains.kotlin: kotlin-stdlib: 1.5.21"
-実装「org.jetbrains.kotlinx: kotlinx-coroutines-android: 1.5.2"
-
-//Android でデフォルトのコンテンツカードアクティビティを使用する場合は両方が必要です
-実装「layout:androidx.スワイプリフレッシュスワイプリフレッシュ+」layout:
-実装「アンドロイドxリサイクルビュー：リサイクルビュー：+」
-\`\`\`
-
-Unity を使用してこれらの依存関係を追加する方法の例を以下に示します。 tools:
-
-##### [カスタム Gradle テンプレート](https://docs.unity3d.com/Manual/android-gradle-overview.html)
+次の依存関係が必要です。
 
 ```groovy
-dependencies {
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
-  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
-}
-```
-##### [Unity の外部依存関係マネージャー](https://github.com/googlesamples/unity-jar-resolver)
-
-```xml
-<dependencies>
-  <androidPackages>
-    <androidPackage spec="org.jetbrains.kotlin:kotlin-stdlib:1.5.21" />
-    <androidPackage spec="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2" />
-  </androidPackages>
-</dependencies>
+implementation 'com.google.firebase:firebase-messaging:22.0.0'
+implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+implementation "androidx.recyclerview:recyclerview:1.2.1"
+implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.0"
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+implementation 'androidx.core:core:1.6.0'
 ```
 
-## ステップ 5: SDK を設定する {#unity-static-configuration}
+これらの依存関係は、[External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver)を使用して設定することもできます。
 
-Braze は Unity Android との統合を自動化するためのネイティブ Unity ソリューションを提供しています。 
+## ステップ5:SDK の設定 {#unity-static-configuration}
 
-1. Unity エディターで、Braze **> Braze 設定に移動して Braze** 設定を開きます。
-2. 「**Unity Android インテグレーションの自動化**」ボックスをチェックしてください。
-3. **Braze API キーフィールドに**、Braze ダッシュボードの **[設定の管理]** にあるアプリケーションの API キーを入力します。
+Braze は、Unity Android 統合を自動化するためのネイティブ Unity ソリューションを提供しています。 
+
+1. Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[Braze 構成設定] を開きます。
+2. [**Unity Android 統合の自動化**] ボックスにチェックマークを入れます。
+3. **Braze API キー**フィールドで、**設定の管理**にあるアプリアプリケーションのAPI キーをBraze ダッシュボードから入力します。
 
 {% alert note %}
-この自動統合は、プロジェクトの構築中に設定値が競合する可能性があるため、`braze.xml`手動で作成したファイルでは使用しないでください。マニュアルが必要な場合は`braze.xml`、自動統合を無効にしてください。
+手動で作成した `braze.xml` ファイルでは、プロジェクトのビルド中に設定値が競合する可能性があるため、この自動統合は使用しないでください。手動の`braze.xml` が必要な場合は、自動統合を無効にします。
 {% endalert %}
 
-## \## 基本的な SDK 統合の完了
+## 基本的な SDK 統合の完了
 
-これで、Braze はアプリケーションからデータを収集しており、基本的な統合は完了しているはずです。統合プッシュについて詳しくは、以下の記事をご覧ください。[Android][53] と [iOS][50]、[アプリ内メッセージ][34]、[コンテンツカード][40]
+Braze はアプリケーションからデータを収集しており、基本的な統合は完了しているはずです。プッシュ統合の詳細については、次の記事を参照してください。[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/)と[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/)、[アプリ内メッセージs]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/)、[コンテンツカード]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/)。
 
-高度な SDK 統合オプションについては、「[高度な実装][54]」をご覧ください。
+高度なSDKインテグレーションオプションについては、[高度なインプリメンテーション]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#android-sdk-advanced)を参照してください。
 
-[5]: #transitioning-from-manual-to-automated-integration
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/news_feed/
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/
-[41]: https://docs.unity3d.com/Manual/AssetPackages.html
-[42]: https://github.com/Appboy/appboy-unity-sdk/releases
-[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
-[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
-[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#android-sdk-advanced
-[unity-1]: https://github.com/SDWebImage/SDWebImage
-[unity-2]: https://firebase.google.com/docs/unity/setup
-[unity-3]: https://developer.android.com/jetpack/androidx
-[unity-4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/

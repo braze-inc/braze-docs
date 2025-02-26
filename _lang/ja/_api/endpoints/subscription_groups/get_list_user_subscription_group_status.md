@@ -1,70 +1,70 @@
 ---
-nav_title: "得る：ユーザーのサブスクリプショングループステータスを一覧表示する"
-article_title: "得る：ユーザーのサブスクリプション グループのステータスを一覧表示する"
+nav_title: "取得:ユーザのサブスクリプショングループステータスの一覧表示"
+article_title: "取得:ユーザーのサブスクリプション・グループ・ステータスをリストする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、リスト ユーザーのサブスクリプション グループ ステータス Braze エンドポイントの詳細について説明します。"
+description: "本稿では、List ユーザー のサブスクリプショングループ ステータス Braze エンドポイントの概要について説明します。"
 
 ---
 {% api %}
-# ユーザーのサブスクリプション グループのステータスを一覧表示する
+# ユーザーのサブスクリプショングループ ステータスの一覧表示
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
 
-> このエンドポイントを使用して、サブスクリプション グループ内のユーザーのサブスクリプション状態を取得します。
+> このエンドポイントを使用して、サブスクリプショングループ内のユーザーのサブスクリプションステートを取得します。
 
-これらのグループは **、サブスクリプション グループ** ページで利用できるようになります。このエンドポイントからの応答には、API 呼び出しで要求された特定のサブスクリプション グループの外部 ID と、サブスクライブ済み、サブスクライブ解除済み、または不明のいずれかが含まれます。これを使用して、後続の API 呼び出しでサブスクリプション グループの状態を更新したり、ホストされた Web ページに表示したりできます。
+これらのグループは、**サブスクリプショングループ**ページで使用できます。このエンドポイントからの応答には、外部ID と、API 呼び出しで要求された固有のサブスクリプショングループの配信登録済み、配信停止済み、または不明のいずれかが含まれます。これは、後続のAPI 呼び出しでサブスクリプショングループステートを更新したり、ホストWeb ページに表示したりするために使用できます。
 
-**電子メールサブスクリプショングループ**の例を確認したり、このエンドポイントをテストしたりする場合は、次の手順に従ってください。
+例を見たり、このエンドポイントをテストしたりする場合は、**メールサブスクリプショングループ**をご覧ください。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2 {% endapiref %}
 
-**SMS サブスクリプション グループ**の例を確認したり、このエンドポイントをテストしたりする場合は、次の手順に従ってください。
+**SMSサブスクリプショングループ**用のこのエンドポイントをテストするか例を見たい場合:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-**WhatsApp グループ**の例を確認したり、このエンドポイントをテストしたりする場合は、次の手順に従ってください。
+このエンドポイントの例を見たり、**WhatsAppグループ**をテストしたりする場合:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `subscription.status.get` 許可。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`subscription.status.get`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `subscription_group_id`| 必須 | 文字列 | `id` サブスクリプション グループの。 |
-| `external_id`| 必須* | 文字列 | `external_id` ユーザーの（少なくとも1つ、最大50個の `external_ids`）。<br><br>両方が `external_id` そして `email`/`phone` 提出された場合、 `external_id`提供された (s) は結果クエリに適用されます。 |
-| `email`| 必須* | 文字列 | ユーザーの電子メール アドレス。最大 50 個の文字列の配列として渡すことができます。<br><br> メールアドレスと電話番号の両方を送信すると（ `external_id`) はエラーになります。 |
-| `phone`| 必須* |[E.164](https://en.wikipedia.org/wiki/E.164) 形式の文字列 | ユーザーの電話番号。電子メールが含まれていない場合は、少なくとも 1 つの電話番号 (最大 50 個) を含める必要があります。<br><br> メールアドレスと電話番号の両方を送信すると（ `external_id`) はエラーになります。 |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | 必須 | 文字列 | サブスクリプショングループの`id`。 |
+| `external_id`  |  必須* | 文字列 | ユーザーの `external_id` (少なくとも 1 つ、最大 50 の `external_ids` を含める必要があります)。<br><br>`external_id` と `email`/`phone` の両方が送信されると、指定された `external_id` (s) のみが結果クエリに適用されます。 |
+| `email` | 必須* | 文字列 | ユーザーのメールアドレス。これは、最大50個の文字列の配列として渡すことができます。<br><br> メールアドレスと電話番号(`external_id` なし)の両方をサブミットすると、エラーが発生します。 |
+| `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。メールが含まれていない場合は、少なくとも1 つの電話番号を含める必要があります(最大50)。<br><br> メールアドレスと電話番号(`external_id` なし)の両方をサブミットすると、エラーが発生します。 |
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-\*の一つ `external_id` または `email` または `phone` 各ユーザーごとに必要です。
+\* ユーザーごとに`external_id` または`email` または`phone` のいずれかが必要です。
 
-- SMSおよびWhatsAppサブスクリプショングループの場合、 `external_id` または `phone` が必要です。 両方提出した場合、 `external_id` クエリに使用され、電話番号がそのユーザーに適用されます。
-- メール購読グループの場合、 `external_id` または `email` が必要です。 両方提出した場合、 `external_id` クエリに使用され、そのユーザーに電子メール アドレスが適用されます。
+- SMS およびWhatsApp サブスクリプショングループ s の場合、`external_id` または`phone` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、電話番号はそのユーザーに適用されます。
+- メール サブスクリプショングループs の場合、`external_id` または`email` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、メールアドレスはそのユーザーに適用されます。
 
-## リクエスト例 
+## 例のリクエスト 
 
 {% tabs %}
-{% tab Multiple Users %}
+{% tab 複数のユーザー %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS and WhatsApp %}
+{% tab SMSとWhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab Email %}
+{% tab メール %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -84,7 +84,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## 応答
 
-成功した応答はすべて返されます `Subscribed`、 `Unsubscribed`、 または `Unknown` サブスクリプション グループのステータスとユーザー履歴に応じて異なります。
+すべての成功したレスポンスは、サブスクリプショングループのステータスとユーザー履歴に応じて、`Subscribed`、`Unsubscribed`、または`Unknown` を返します。
 
 ```json
 Content-Type: application/json

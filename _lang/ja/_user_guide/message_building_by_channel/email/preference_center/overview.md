@@ -1,99 +1,101 @@
 ---
 nav_title: 概要
-article_title: プリファレンスセンターの概要
+article_title: ユーザー設定センターの概要
 page_order: 1
-description: "この記事では、メール設定センターとそのカスタマイズ方法について説明します。"
+description: "この記事では、Eメール・プリファレンス・センターとそのカスタマイズ方法について説明する。"
 channel:
   - email
 ---
 
-# プリファレンスセンターの概要
+# ユーザー設定センターの概要
 
-> プリファレンスセンターを設定すると、ユーザーが [メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集および管理するためのワンストップショップが提供されます。<br><br>次の記事では、API で生成された設定センターを構築する方法について説明しますが、 [ドラッグ アンド ドロップ エディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使用して設定センターを構築することもできます。
+> ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事では、API で生成されたユーザー設定センターの作成手順を説明しますが、[ドラッグ＆ドロップエディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使ってユーザー設定センターを作成することもできます。
 
-Braze ダッシュボードで、**メール設定センターの** **Audience** > **Subscriptions** >に移動します。
+Braze ダッシュボードで、[**オーディエンス**] > [**購読**] > [**メールユーザー設定センター**] に移動します。
 
 {% alert note %}
-[以前のナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは **[ユーザー**] > **[サブスクリプション グループ] > [メール設定センター**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは [**ユーザー**] > [**購読グループ**] > [**メールユーザー設定センター**] にあります。
 {% endalert %}
 
-ここでは、各サブスクリプション グループを管理および表示できます。作成した各サブスクリプショングループは、このプリファレンスセンターリストに追加されます。複数のプリファレンスセンターを作成できます。
+ここで各サブスクリプショングループを管理し、見ることができる。作成した各購読グループは、このユーザー設定センターリストに追加されます。複数のユーザー設定センターを作成することができます。
 
 {% alert important %}
-プリファレンスセンターは、Brazeメールチャネル内で使用するためのものです。プリファレンスセンターのリンクは、各ユーザーに基づいて動的であり、外部でホストすることはできません。
+ユーザー設定センターは、Braze のメールチャネル内で使用するために用意されています。ユーザー設定センターのリンクは、各ユーザーに基づいて動的に設定されるため、外部でホストすることはできません。
 {% endalert %}
 
-## API経由で設定センターを作成
+## API を使用してユーザー設定センターを作成する
 
-[プリファレンスセンターの Braze エンドポイント]({{site.baseurl}}/api/endpoints/preference_center)を使用すると、ユーザーのサブスクリプションの状態とサブスクリプショングループのステータスを表示できるプリファレンスセンター (Braze がホストする Web サイト) を作成できます。HTML と CSS を使用すると、開発者チームは HTML と CSS を使用して設定センターを構築し、ページのスタイルをブランドガイドラインに合わせることができます。
+[ユーザー設定センターの Braze エンドポイント]({{site.baseurl}}/api/endpoints/preference_center)を使用することで、ユーザー設定センター （Braze がホストする Web サイト） を作成し、ユーザーの購読状態や購読グループのステータスを表示することができます。開発者チームは HTML と CSS を使ってユーザー設定センターを作成することにより、ページのスタイルをブランドガイドラインに合わせることができます。
 
-Liquidを使用すると、サブスクリプショングループの名前と各ユーザーのステータスを取得できます。このようにして、Brazeはページがロードされたときにこのデータを保存し、取得します。
+Liquid を使うことで、購読グループの名前と各ユーザーのステータスを取得できます。こうすることで、Brazeはページがロードされたときにこのデータを保存・取得する。
 
-### 前提 条件
+### 前提条件
 
-|応募資格 |説明 |
+| 必要条件 | 説明 |
 |---|---|
-|有効化されたプリファレンスセンター |Brazeダッシュボードには、プリファレンスセンター機能を使用する権限があります。|
-|メール、SMS、または WhatsApp サブスクリプション グループを含む有効なワークスペース |有効なユーザーとメール、SMS、または WhatsApp サブスクリプション グループを含む作業ワークスペース。|
-|有効なユーザー |メールアドレスと外部 ID を持つユーザー。 |
-|プリファレンスセンターの権限で生成されたAPIキー |Brazeダッシュボードで、[ **設定** ]> **[APIキー** ]に移動して、プリファレンスセンターの権限を持つAPIキーにアクセスできることを確認します。|
-{: .reset-td-br-1 .reset-td-br-2}
+| ユーザー設定センターが有効になっている | Braze ダッシュボードには、ユーザー設定センター機能を使用する権限があります。 |
+| Eメール、SMS、またはWhatsAppの購読グループで有効なワークスペース | 有効なユーザーと、Eメール、SMS、またはWhatsAppの購読グループを持つ作業ワークスペース。 |
+| 有効なユーザー | メールアドレスと外部IDを持つユーザー。 |
+| ユーザー設定センターの権限を持つ API キーを生成済みである | Brazeダッシュボードで、**[設定]>**[**APIキー]**に進み、プリファレンスセンターの権限を持つAPIキーにアクセスできることを確認する。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**開発者コンソール**の **[API 設定**] > API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] から API キーを作成できます。
 {% endalert %}
 
-### ステップ 1:API経由で設定センターを作成
+### ステップ1:ユーザー設定センターの作成エンドポイントを使用する
 
-[設定センターの作成]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)エンドポイントを使用して、設定センターの構築を始めましょう。プリファレンスセンターをカスタマイズするには、ブランディング `preference_center_page_html` に合わせたHTMLをフィールドと `confirmation_page_html` フィールドに含めることができます。
+[ユーザー設定センターの作成エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)を使って、ユーザー設定センターの作成を開始します。ユーザー設定センターをカスタマイズするには、`preference_center_page_html` フィールドと `confirmation_page_html` フィールドにブランディングに沿った HTML を含めることができます。
 
-[設定センターのURLを生成]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)エンドポイントを使用すると、Brazeを介して送信される電子メールの外部にある特定のユーザーの設定センターのURLを取得できます。
+[ユーザー設定センターの URL の生成エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)を使用すると、Braze を通じて送信されるメールの外で、特定のユーザーのユーザー設定センター URL を取得できます。
 
-### ステップ 2:メールキャンペーンに含める
+### ステップ 2: メールキャンペーンに含める
 
-メールにプリファレンスセンターへのリンクを配置するには、登録解除URLを挿入する方法と同様に、メール内の目的の場所で次のLiquidタグを使用します。
+{% multi_lang_include preference_center_warning.md %}
+
+メールにユーザー設定センターへのリンクを配置するには、配信停止 URL を挿入する方法と同様に、メール内の適切な場所で以下の Liquid タグを使用します。
 
 {% raw %}
 ```liquid
-{{preference_center.${preference_center_name_example}}}
+{{preference_center.${kitchenerie_preference_center_example}}}
 ```
 {%endraw%}
 
-また、Liquid を含む HTML を組み合わせて使用することもできます。たとえば、HTML エディターまたはドラッグ アンド ドロップ エディターで URL として以下を貼り付けることができます。これにより、すべてのメール購読グループが自動的に一覧表示される基本的な設定センターのレイアウトが表示されます。 
+リキッドを含むHTMLを組み合わせて使うこともできる。例えば、HTMLエディターでもドラッグ＆ドロップ・エディターでも、URLとして次のように貼り付けることができる。これにより、すべてのメール購読グループを自動的にリストアップする基本的なユーザー設定センターのレイアウトが表示されます。 
 
 {% raw %}
 ```html
-<a href="{{preference_center.${preference_center_name_example}}}">Edit your preferences</a>
+<a href="{{preference_center.${kitchenerie_preference_center_example}}}">Edit your preferences</a>
 ```
 {%endraw%}
 
-プリファレンスセンターには、ユーザーがすべてのメールの購読を解除できるチェックボックスがあります。これらの設定をテストメッセージとして送信した場合、保存できないことに注意してください。
+ユーザー設定センターには、ユーザーがすべてのメールの配信を停止できるチェックボックスがあります。テスト・メッセージとして送信された場合、これらの設定を保存することはできないので注意すること。
 
 {% alert important %}
-上記のLiquidタグは、キャンペーンまたはキャンバスを起動するときにのみ機能します。テストメールを送信しても、有効なリンクは生成されません。
+上記のリキッドタグは、キャンペーンやキャンバスを立ち上げるときにのみ機能する。テストメールを送信しても、有効なリンクは生成されない。
 {% endalert %}
 
-#### プリファレンスセンターの編集
+#### ユーザー設定センターの編集
 
-プリファレンスセンターを編集および更新するには、 [プリファレンスセンターの更新エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/)を使用します。 
+[ユーザー設定センターの更新のエンドポイント]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/)を使って、ユーザー設定センターを編集・更新できます。 
 
-#### プリファレンスセンターと詳細の識別
+#### ユーザー設定センターと詳細の確認
 
-プリファレンスセンターを特定するには、 [プリファレンスセンター]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) エンドポイントの詳細を表示を使用して、最終更新タイムスタンプ、プリファレンスセンターIDなどの関連情報を返します。
+ユーザー設定センターを特定するには、[ユーザー設定センターの詳細を表示エンドポイント]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/)を使用して、最終更新タイムスタンプ、ユーザー設定センター ID などの関連情報を返します。
 
 ## カスタマイズ
 
-Brazeは、プリファレンスセンターからサブスクリプション状態の更新を管理し、プリファレンスセンターの同期を維持します。ただし、次のオプションで [サブスクリプショングループ API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、独自のプリファレンスセンターを作成およびホストすることもできます。
+Braze は、ユーザー設定センターからの購読状態の更新を管理し、ユーザー設定センターの同期を保ちます。ただし、[購読グループ API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、以下のオプションで独自のユーザー設定センターを作成し、ホストすることも可能です。
 
-### オプション 1:文字列クエリ パラメーターとのリンク
+### オプション 1: 文字列クエリパラメータを持つリンク
 
-URL の本文でクエリ文字列のフィールドと値のペアを使用して、ユーザー ID とメール カテゴリをページに渡すと、ユーザーは登録解除の選択を確認するだけで済みます。このオプションは、ユーザー識別子をハッシュ形式で保存し、サブスクリプション センターをまだ持っていないユーザーに適しています。
+URL の本文でクエリ文字列フィールドと値のペアを使用して、ユーザーの ID とメールカテゴリをページに渡します。これにより、ユーザーは配信を停止する選択肢を確認するだけで済みます。このオプションは、ユーザー識別子をハッシュ形式で保存し、まだサブスクリプション・センターを持っていない人に適している。
 
-このオプションでは、各メールカテゴリに固有の登録解除が必要です link:<br>
+このオプションでは、各メールのカテゴリーごとに固有の配信停止リンクが必要となる：<br>
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
-また、Liquidフィルターを使用して、送信時にユーザーの外部IDをハッシュ化することもできます。これにより、次のように が `user_id` MD5 ハッシュ値に変換されます。
+Liquid フィルターを使って、送信時にユーザーの外部 ID をハッシュ化することも可能です。これは例えば、`user_id` をMD5ハッシュ値に変換する：
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}
@@ -102,11 +104,11 @@ My encoded string is: {{my_string}}
 {% endraw %}
 {% endalert %}
 
-### オプション 2:JSON Web トークンによる認証
+### オプション 2: JSONウェブトークンで認証する
 
-[JSON Web トークン](https://auth0.com/learn/json-web-tokens/)を使用して、通常はユーザー名やパスワードによるログインなどの認証レイヤーの背後にある Web サーバーの一部 (アカウント設定など) に対してユーザーを認証します。 
+[JSONウェブトークンを使って](https://auth0.com/learn/json-web-tokens/)、通常はユーザー名とパスワードによるログインのような認証レイヤーの後ろにあるウェブサーバーの一部（例えば、アカウント設定）でユーザーを認証する。 
 
-このアプローチでは、クエリ文字列の値のペアを JSON Web トークンのペイロードで渡すことができるため、URL に埋め込む必要はありません。
+このアプローチでは、URLに埋め込まれたクエリー文字列のバリュー・ペアを必要としないため、例えばJSONウェブトークンのペイロードで渡すことができる：
 
 ```json
 {
@@ -115,3 +117,11 @@ My encoded string is: {{my_string}}
     "category": offers
 }
 ```
+
+## よくある質問
+
+### ユーザー設定センターをまだ作成していません。ダッシュボードに "PreferenceCenterBrazeDefault "が表示されるのはなぜか？
+
+これは、レガシー Liquid {%raw%}`${preference_center_url}`{%endraw%} が仕様されている場合にユーザー設定センターをレンダリングするために使用されます。つまり、{%raw%}`${preference_center_url}` または `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} のいずれかを参照するキャンバスステップまたはテンプレートは機能しません。これは、レガシーLiquidや "PreferenceCenterBrazeDefault "をメッセージの一部として含む、過去に送信されたメッセージにも適用される。 
+
+新しいメッセージで {%raw%}`${preference_center_url}`{%endraw%} を再度参照すると、「PreferenceCenterBrazeDefault」という名前のユーザー設定センターが再度作成されます。

@@ -46,18 +46,31 @@
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
 
-<link type="text/css" rel="stylesheet" href="https://cdn-prod.securiti.ai/consent/cookie-consent.css" />
-
-
 {%- css_asset_tag global -%}
 - /assets/css/application.scss
-- /assets/css/securitiai.css
+
 {%- endcss_asset_tag -%}
 
 {%- case site.language -%}
+{%- when "es" -%}
+{%- css_asset_tag multi_lang -%}
+- /assets/css/_lang_es.scss
+{%- endcss_asset_tag -%}
 {%- when "fr" -%}
 {%- css_asset_tag multi_lang -%}
 - /assets/css/_lang_fr.scss
+{%- endcss_asset_tag -%}
+{%- when "ja" -%}
+{%- css_asset_tag multi_lang -%}
+- /assets/css/_lang_ja.scss
+{%- endcss_asset_tag -%}
+{%- when "ko" -%}
+{%- css_asset_tag multi_lang -%}
+- /assets/css/_lang_ko.scss
+{%- endcss_asset_tag -%}
+{%- when "pt-br" -%}
+{%- css_asset_tag multi_lang -%}
+- /assets/css/_lang_pt-br.scss
 {%- endcss_asset_tag -%}
 {%- endcase -%}
 
@@ -94,10 +107,8 @@
 - /assets/js/documents.js
 - /assets/js/feedback.js
 - /assets/js/contentcards.js
-- /assets/js/securitiai.js
 {% endjavascript_asset_tag %}
 
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js?{{site.time | date: '%s'}}' ></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
@@ -160,7 +171,9 @@
   var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
   var algolia_doc_index = '{{ site.algolia.index_name }}';
   var algolia_learning_index = '{{ site.learning_index_name }}';
+  var max_redirects = 10;
 
+  var query_params = new URLSearchParams(window.location.search);
 </script>
 
 <!-- Adds LaTeX support -->

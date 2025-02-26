@@ -62,7 +62,7 @@ hide_breadcrumb: false
           <i class="{{help_list.fa_icon}}"></i>
           {%- else -%}
             {%- if help_list.image -%}
-            <img src="{{site.baseurl}}{{ help_list.image}} " />
+            <img src="{{site.baseurl}}{{ help_list.image}} " alt="Help List" />
             {%- endif -%}
           {%- endif -%}
         </div>
@@ -88,7 +88,7 @@ hide_breadcrumb: false
       <div id="{{ user_list.name | handle }}" class="user_item">
         <div class="user_img" style="background-color: {{ user_list.bg_color}}">
         {%- if user_list.image -%}
-        <img src="{{site.baseurl}}{{ user_list.image}} " />
+        <img src="{{site.baseurl}}{{ user_list.image}} " alt="User List" />
         {%- endif -%}
         </div>
         <div class="user_info">
@@ -120,15 +120,14 @@ hide_breadcrumb: false
     </div>
 
   </div>
-
-    {%- unless hide_bottom_nav -%}
-    <div id="bottom_nav" >
-      {%- unless hide_feedback -%}
-      {% include feedback.html  %}
-      {%- endunless -%}
-    </div>
-
-    {%- endunless -%}
-
-    {% include footer.html class="footer_help" %}
 </div>
+{%- unless hide_bottom_nav -%}
+<div id="bottom_nav" >
+  {%- unless hide_feedback -%}
+  {% include feedback.html  %}
+  {%- endunless -%}
+</div>
+
+{%- endunless -%}
+
+{% include footer.html class="footer_help" %}

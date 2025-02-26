@@ -6,13 +6,13 @@ page_type: reference
 description: "This reference article describes News Feed Categories, which make it possible to integrate multiple instances of the News Feed into your application."
 tool: Dashboard
 channel: news feed
+hidden: true
+
 ---
 
 # News Feed categories
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > News Feed categories make it possible to integrate multiple instances of the News Feed into your application. It's possible to integrate feeds within different windows that only display News Feed cards of a certain category.
 

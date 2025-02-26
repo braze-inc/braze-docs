@@ -8,7 +8,7 @@ description: "この参照記事では、iOS 用 Carthage を使用して Braze 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Carthage 統合
 
@@ -20,9 +20,9 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "SDWebImage/SDWebImage"
 ```
 
-SDK のインポートの詳細については、[Carthage クイックスタートガイド][1]を参照してください。
+SDK のインポートの詳細については、[Carthage クイックスタートガイド](https://github.com/Carthage/Carthage#quick-start)を参照してください。
 
-`4.4.0` 以前のバージョンから移行する場合は、[XCFrameworks 用 Carthage 移行ガイド][2]を参照してください。
+`4.4.0` 以前のバージョンから移行する場合は、[XCFrameworks 用 Carthage 移行ガイド](https://github.com/Carthage/Carthage#migrating-a-project-from-framework-bundles-to-xcframeworks)を参照してください。
 
 {% alert note %}
 `Cartfile` の構文やバージョンピン留めなどの機能の詳細については、[Carthage ドキュメント](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile)を参照してください。
@@ -41,11 +41,11 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
 
-`<BRAZE_IOS_SDK_VERSION>` は「x.y.z」形式の[適切なバージョン][4]の Braze iOS SDK に置き換えてください。
+`<BRAZE_IOS_SDK_VERSION>` は「x.y.z」形式の[適切なバージョン](https://github.com/Appboy/appboy-ios-sdk/releases)の Braze iOS SDK に置き換えてください。
 
-## 次のステップ
+## 次のステップ:
 
-指示に従って[統合を完了][5]します。
+指示に従って[統合を完了]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/)します。
 
 ## コアのみの統合
 
@@ -55,8 +55,3 @@ UIコンポーネントや依存関係なしで Core SDK を使用する場合�
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_core.json"
 ```
 
-[1]: https://github.com/Carthage/Carthage#quick-start
-[2]: https://github.com/Carthage/Carthage#migrating-a-project-from-framework-bundles-to-xcframeworks
-[4]: https://github.com/Appboy/appboy-ios-sdk/releases
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
-[6]: https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile

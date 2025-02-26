@@ -1,34 +1,34 @@
 ---
-nav_title: "ポスト:スケジュールされたメッセージを作成する"
-article_title: "ポスト:スケジュールされたメッセージを作成する"
+nav_title: "POST:スケジュールされたメッセージの作成"
+article_title: "POST:スケジュールされたメッセージの作成"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、スケジュールされたメッセージを作成する Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「スケジュールされたメッセージの作成」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# スケジュールされたメッセージを作成する
+# スケジュールされたメッセージの作成
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/create
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンペーン、キャンバス、またはその他のメッセージを指定した時間に送信するようにスケジュールし、そのメッセージを参照して更新を行うための識別子を提供します。 
+> このエンドポイントを使用して、指定した時刻に送信されるようにキャンペーン、キャンバス、または他のメッセージをスケジュールし、更新時にそのメッセージを参照するための識別子を提供します。
 
-セグメントをターゲットにしている場合、スケジュールされたすべてのメッセージが送信された後に、[リクエストの記録が開発者コンソールに保存されます](https://dashboard.braze.com/app_settings/developer_console/activitylog/)。
+セグメントををターゲットにする場合、スケジュールされたすべてのメッセージが送信された後、リクエストのレコードが[開発者コンソール](https://dashboard.braze.com/app_settings/developer_console/activitylog/)に保存されます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`messages.schedule.create`権限のある [API キーが必要です]({{site.baseurl}}/api/basics#rest-api-key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`messages.schedule.create`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -50,8 +50,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": { 
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+  "schedule": {
+    "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
@@ -70,23 +70,23 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `broadcast` | オプション | Boolean | キャンペーンまたはキャンバスのターゲットとなるセグメント全体にメッセージを送信する場合は、true `broadcast` に設定する必要があります。このパラメーターのデフォルトは false です (2017 年 8 月 31 日現在)。<br><br> が true `broadcast` に設定されている場合、`recipients`リストを含めることはできません。ただし、意図せずにこのフラグを設定すると`broadcast: true`、予想よりも多くのユーザーにメッセージが送信される可能性があるため、設定するときは注意してください。|
-| `external_user_ids` | オプション | 文字列の配列 | [外部ユーザー識別子を参照してください]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)。|
-| `user_aliases` | オプション | ユーザーエイリアスオブジェクトの配列 | [ユーザーエイリアスオブジェクトを参照してください]({{site.baseurl}}/api/objects_filters/user_alias_object/)。|
-| `audience` | オプション | コネクテッドオーディエンスオブジェクト | [コネクテッドオーディエンスを参照してください]({{site.baseurl}}/api/objects_filters/connected_audience/)。|
-| `segment_id` | オプション | 文字列 | [セグメント識別子を参照してください]({{site.baseurl}}/api/identifier_types/)。|
-[| `campaign_id` |オプション|文字列| キャンペーン識別子を参照してください。]({{site.baseurl}}/api/identifier_types/)|
-| `recipients` | オプション | 受信者オブジェクトの配列 | [受信者オブジェクトを参照してください]({{site.baseurl}}/api/objects_filters/recipient_object/)。|
-| `send_id` | オプション | 文字列 | [送信識別子を参照してください]({{site.baseurl}}/api/identifier_types/)。|
-| `override_messaging_limits` | オプション | ブール値 | キャンペーンのグローバルレート制限を無視、デフォルトは false |
-| `recipient_subscription_state` | オプション | 文字列 | これを使用して、オプトインしたユーザーのみ (`opted_in`)、サブスクライブしたユーザーまたはオプトインしているユーザーのみ (`subscribed`)、またはサブスクライブしていないユーザーを含むすべてのユーザーにメッセージを送信します ()。`all`<br><br>`all`ユーザーの使用は、トランザクションメールメッセージングに役立ちます。`subscribed`デフォルトはです。|
-| `schedule` | 必須 | スケジュールオブジェクト | [スケジュールオブジェクトを参照]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | オプション | メッセージングオブジェクト | [使用可能なメッセージングオブジェクトを参照してください]({{site.baseurl}}/api/objects_filters/#messaging-objects)。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
+| `external_user_ids` | オプション | 文字列の配列 | [外部ユーザー 識別子]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照。 |
+| `user_aliases` | オプション | ユーザー別名オブジェクトの配列 | [ユーザー別名オブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。 |
+| `audience` | オプション | 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
+| `segment_id` | オプション | 文字列 | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `campaign_id`|オプション|文字列| [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `recipients` | オプション | 受信者s オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
+| `send_id` | オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `override_messaging_limits` | オプション | ブール値 | キャンペーンのグローバルレート制限を無視します。デフォルトは false です |
+|`recipient_subscription_state`| オプション | 文字列 | これを使用して、オプトインしたユーザーのみ (`opted_in`)、配信登録済みかオプトインしているユーザーのみ (`subscribed`)、または配信停止済みのユーザーを含むすべてのユーザー (`all`) にメッセージを送信します。<br><br>`all` ユーザーは、トランザクションメールメッセージングに使用すると便利です。デフォルトは `subscribed` です。 |
+| `schedule` | 必須 | Scheduleオブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照 |
+| `messages` | オプション | メッセージングオブジェクト | [利用可能なメッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --data-raw '{
@@ -167,7 +167,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 ## 応答
 
-### 成功レスポンスの例
+### 成功応答の例
 
 ```json
 {
@@ -178,4 +178,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 {% endapi %}
-

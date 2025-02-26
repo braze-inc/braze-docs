@@ -21,63 +21,63 @@ local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segme
 layout: dev_guide
 
 #Required
-description: "このランディングページには、Braze メッセージングエンドポイントが一覧表示されます。"
+description: "このランディングページには、Braze メッセージングエンドポイントがリストされます。"
 page_type: landing
 
 guide_top_header: "メッセージングエンドポイント"
-guide_top_text: "Braze Messaging API には、ユーザーにメッセージを送信するための2 つの異なるオプションがあります。API リクエストでは、<code class='highlighter-rouge'>/messages/send</code>および`/messages/schedule` エンドポイントを使用してメッセージの内容と設定を指定できます。または、メッセージの詳細を、API トリガキャンペーンを使用してBraze ダッシュボードで管理し、`/campaigns/trigger/send` および`/campaigns/trigger/schedule` エンドポイントとともに送信される時期と宛先を制御することもできます。以下のセクションでは、両方のメソッドのリクエスト仕様について詳しく説明します。<br><br>他のキャンペーンと同様に、Brazeダッシュボードで[re-eligibility settings](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-trigBraze は、送信されるAPI リクエストの数に関係なく、キャンペーンの対象になっていないユーザにAPI メッセージを配信しません。<br><br>Send Message エンドポイントでは、指定されたユーザに即時メッセージを送信できます。セグメントをターゲットにする場合、リクエストのレコードは**Message Activity Log** に保存されます。スケジュールメッセージエンドポイントを使用して、指定した時間にメッセージを送信し、すでにスケジュールされているメッセージを変更またはキャンセルします。"
+guide_top_text: "Braze メッセージング API でユーザーにメッセージを送信する方法は、2 種類あります。および `/messages/schedule` エンドポイントを使用して、API リクエストで <code class='highlighter-rouge'>/messages/send</code> メッセージの内容と構成を指定できます。あるいは、Braze ダッシュボードで API トリガーのキャンペーンを使用してメッセージの詳細を管理し、`/campaigns/trigger/send` および `/campaigns/trigger/schedule` エンドポイントを使用してメッセージを送信するタイミングと送信者をコントロールすることもできます。以下のセクションでは、両方のメソッドのリクエスト指定について詳しく説明します。<br> <br> 他のキャンペーンと同様に、Braze ダッシュボードで [再資格設定](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) を構成することで、特定のユーザーがメッセージング API キャンペーンを受信できる回数を制限できます。Braze は、送信されたAPI リクエスト数に関係なく、キャンペーンの再受信を設定していないユーザーには API メッセージを配信しません。<br> <br> 「メッセージを送信」エンドポイントでは、指定したユーザーに即時メッセージを送信できます。セグメントをターゲットにしている場合、リクエストの記録は **メッセージアクティビティログ** に保存されます。「メッセージをスケジュール」エンドポイントを使用して、指定した時間にメッセージを送信するか、すでにスケジュールしたメッセージを変更またはキャンセルします。"
 
-guide_featured_title: "メッセージエンドポイントのスケジュール"
+guide_featured_title: "「メッセージをスケジュール」エンドポイント"
 guide_featured_list:
-  - name: "GET: List Upcoming Scheduled Campaigns and Canvases"
+  - name: "取得:今後スケジュールされているキャンペーンとキャンバスをリスト"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
-    fa_icon: fas fa-calendar
-  - name: "POST: Delete Scheduled Messages"
+    image: /assets/img/braze_icons/calendar-date.svg
+  - name: "POST:スケジュールされたメッセージを削除"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
-    fa_icon: fas fa-calendar-minus
-  - name: "POST: Delete Scheduled API-Triggered Campaigns"
+    image: /assets/img/braze_icons/calendar-minus-01.svg
+  - name: "POST:スケジュールされた API トリガーキャンペーンを削除"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
-    fa_icon: fas fa-calendar-minus
-  - name: "POST: Delete Scheduled API-Triggered Canvases"
+    image: /assets/img/braze_icons/calendar-minus-01.svg
+  - name: "POST:スケジュールされた API トリガーキャンバスを削除"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
-    fa_icon: fas fa-calendar-minus
-  - name: "POST: Schedule Messages"
+    image: /assets/img/braze_icons/calendar-minus-01.svg
+  - name: "POST:メッセージをスケジュール"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
-    fa_icon: fas fa-calendar-plus
-  - name: "POST: Schedule API-Triggered Campaign Messages"
+    image: /assets/img/braze_icons/calendar-plus-01.svg
+  - name: "POST:API トリガーキャンペーンメッセージをスケジュール"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
-    fa_icon: fas fa-calendar-alt
-  - name: "POST: Schedule API-Triggered Canvas Messages"
+    image: /assets/img/braze_icons/calendar-check-02.svg
+  - name: "POST:API トリガーキャンバスメッセージをスケジュール"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
-    fa_icon: fas fa-calendar-alt
-  - name: "POST: Update Scheduled Messages"
+    image: /assets/img/braze_icons/calendar-check-02.svg
+  - name: "POST:スケジュールされたメッセージを更新"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
-    fa_icon: fas fa-calendar
-  - name: "POST: Update Scheduled API-Triggered Campaign Messages"
+    image: /assets/img/braze_icons/calendar-date.svg
+  - name: "POST:スケジュールされた API トリガーキャンペーンメッセージを更新"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
-    fa_icon: fas fa-calendar
-  - name: "POST: Update Scheduled API-Triggered Canvas Messages"
+    image: /assets/img/braze_icons/calendar-date.svg
+  - name: "POST:スケジュールされた API トリガーキャンバスメッセージを更新"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "Send messages endpoints"
 guide_menu_list:
-  - name: "POST: Create Send IDs"
+  - name: "POST:送信 ID を作成"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
-    fa_icon: fas fa-id-card
-  - name: "POST: Send Messages Immediately"
+    image: /assets/img/braze_icons/user-square.svg
+  - name: "POST:メッセージをすぐに送信"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
-    fa_icon: fas fa-paper-plane
-  - name: "POST: Send API-Triggered Campaign Messages Immediately"
+    image: /assets/img/braze_icons/send-01.svg
+  - name: "POST:API トリガーキャンペーンメッセージをすぐに送信"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-    fa_icon: fas fa-inbox
-  - name: "POST: Send API-Triggered Canvas Messages Immediately"
+    image: /assets/img/braze_icons/inbox-01.svg
+  - name: "POST:API トリガーキャンバスメッセージをすぐに送信"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Live Activity endpoints"
 guide_menu_list2:
-  - name: "POST: Update Live Activity"
+  - name: "POST:ライブアクティビティを更新"
     link: /docs/api/endpoints/messaging/live_activity/update/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 ---

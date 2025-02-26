@@ -20,8 +20,8 @@ The Braze and Adjust integration lets you import non-organic install attribution
 |---|---|
 | Adjust account | An Adjust account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
-| Adjust SDK | In addition to the required Braze SDK, you must install the [Adjust SDK](https://docs.adjust.com/en/getting-started/#integrate-the-adjust-sdk). |
-{: .reset-td-br-1 .reset-td-br-2}
+| Adjust SDK | In addition to the required Braze SDK, you must install the [Adjust SDK](https://dev.adjust.com/en/sdk). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -29,7 +29,7 @@ The Braze and Adjust integration lets you import non-organic install attribution
 
 #### Android
 
-If you have an Android app, you will need to pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addSessionPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.onCreate.`
+If you have an Android app, you must pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addSessionPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.onCreate.`
 
 ```
 Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
@@ -39,12 +39,12 @@ Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplic
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Adjust upon install as there will be no disruption of service. 
+Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
-If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Adjust upon app install in order for Braze to appropriately match iOS attributions.
+If set to `true`, you must implement the iOS device ID mapping for Swift to pass the Braze `device_id` to Adjust upon app installation in order for Braze to match iOS attributions appropriately.
 --->
 
 {% tabs local %}
@@ -52,12 +52,12 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 
 If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/android_12/). Otherwise, the IDFV will be used as a fallback identifier to map users.
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platforms/swift/archived_updates/ios_14/). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/).
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/).
 
 {% endtab %}
 {% endtabs %}
@@ -98,7 +98,7 @@ Assuming you configure your integration as suggested, Braze will map Adjust's da
 | `{campaign_name}` | Attributed Campaign |
 | `{adgroup_name}` | Attributed Adgroup |
 | `{creative_name}` | Attributed Ad |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Facebook and X (formerly Twitter) attribution data
 
@@ -112,7 +112,7 @@ To get started with Adjust click tracking links, visit their [documentation](htt
 
 {% tabs local %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -137,7 +137,7 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **This recommendation is purely optional**<br>
-If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
+If you currently do not use any device identifiers-such as the IDFV or GAID-in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/attribution/adjust.png %}

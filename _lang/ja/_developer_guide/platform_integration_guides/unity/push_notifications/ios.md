@@ -1,127 +1,112 @@
 ---
 nav_title: iOS
-article_title: Unity のプッシュ通知
+article_title: Unityのプッシュ通知
 platform:
   - Unity
   - iOS
 channel: push
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
-description: "この参考記事では、Unity プラットフォームの iOS プッシュ通知統合について説明します。"
+description: "この参考記事では、UnityプラットフォームにおけるiOSプッシュ通知の統合について説明する。"
 
 ---
 
-# iOS プッシュ通知の統合
+# iOSプッシュ通知の統合
 
-> この参考記事では、Unity プラットフォームの iOS プッシュ通知統合について説明します。
+> この参考記事では、UnityプラットフォームにおけるiOSプッシュ通知の統合について説明する。
 
-## ステップ 1:自動または手動のプッシュ統合を選択
+## ステップ1:自動または手動プッシュ統合を選択する
 
-Braze は iOS プッシュ統合を自動化するためのネイティブ Unity ソリューションを提供しています。
+Braze は、iOS プッシュ統合を自動化するための Unity ネイティブソリューションを提供します。
 
-- ビルドした Xcode プロジェクトを変更して手動で統合を完了したい場合は、[ネイティブの iOS プッシュ手順に従ってください][8]。
-- 手動インテグレーションから自動インテグレーションに移行する場合は、「[自動インテグレーションへの移行][2]」の指示に従ってください。
-- 当社の自動プッシュ通知ソリューションはiOS 12の仮承認機能を利用しているため、ネイティブのプッシュプロンプトポップアップでは使用できません。
+- ビルドしたXcodeプロジェクトを修正して手動で統合を完了したい場合は、[ネイティブのiOSプッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)手順に従ってほしい。
+- 手動統合から自動統合に移行する場合は、[自動統合への移行]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios)の指示に従ってください。
+- 当社の自動プッシュ通知ソリューションは、iOS 12の暫定認証機能を利用しており、ネイティブのプッシュプロンプトポップアップでは使用できない。
 
-## ステップ 2: 自動プッシュ統合の実装
+## ステップ2:自動プッシュ統合を導入する
 
 ### プッシュ通知を構成する
 
-[iOS プッシュ通知設定ドキュメントに従い][8]、`.p8`ファイルを使用して Braze を設定します。
+[iOSプッシュ通知設定ドキュメントに従って]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)、`.p8` ファイルを使用してBrazeを設定する。
 
 ### 自動プッシュ統合を有効にする
 
-Unity エディターで Braze **> Braze 設定に移動して Braze** 設定を開きます。
+Unity エディターで **[Braze] > [Braze 構成]** の順に移動して、[Braze 構成設定] を開きます。
 
-「**Integrate Push With Braze**」をオンにすると、プッシュ通知へのユーザーの登録、Braze へのプッシュトークンの受け渡し、プッシュオープンの分析の追跡、およびデフォルトのプッシュ通知処理を利用することができます。
+[**プッシュと Braze を統合する**] をチェックして、プッシュ通知用に自動的にユーザーを登録し、プッシュトークンを Braze に渡し、プッシュ開封の分析を追跡し、デフォルトのプッシュ通知処理を利用します。
 
-### バックグラウンドプッシュを有効にする (オプション)
+### バックグラウンドプッシュを有効にする（オプション）
 
-**プッシュ通知を有効にする場合は、「バックグラウンドプッシュを有効にする**`background mode`」にチェックを入れます。これにより、`suspended`システムはプッシュ通知が到着したときの状態からアプリケーションを復帰させ、アプリケーションがプッシュ通知に応答してコンテンツをダウンロードできるようになります。アンインストール追跡機能を使用するには、このオプションをチェックする必要があります。
+プッシュ通知で `background mode` を有効にする場合は、[**バックグラウンドプッシュを有効にする**] をオンにします。これにより、プッシュ通知が到着したときにシステムがアプリケーションを `suspended` 状態から復帰させ、アプリケーションがプッシュ通知に応答してコンテンツをダウンロードできるようになります。アンインストールの追跡機能を使用するには、このオプションをオンにする必要があります。
 
-![Unity エディターには Braze の設定オプションが表示されます。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと braze の統合」、「バックグラウンドプッシュを有効にする」が有効になっています。] [29]
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと Braze の統合」、および「バックグラウンドプッシュの有効化」が有効になっています。]({% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %})
 
-### 自動登録を無効にする (オプション)
+### 自動登録を無効にする（オプション）
 
-プッシュ通知をまだ選択していないユーザーは、アプリケーションを開くと自動的にプッシュが承認されます。この機能を無効にしてユーザーをプッシュ対象に手動で登録するには、「**自動プッシュ登録を無効にする**」にチェックを入れてください。
+まだプッシュ通知をオプトインしていないユーザーは、アプリケーションを開くと自動的にプッシュ通知が許可されます。この機能を無効にし、手動でユーザーをプッシュ登録するには、[**Disable Automatic Push Registration (自動プッシュ登録を無効にする)**] をチェックします。
 
-- iOS 12 以降で「**仮認証を無効にする**」にチェックが入っていない場合、ユーザーは暫定的に（サイレントに）クワイエットプッシュを受信する権限を与えられます。オンにすると、ユーザーにはネイティブプッシュプロンプトが表示されます。
-- 実行時にプロンプトが表示されるタイミングを正確に設定する必要がある場合は、Braze `AppboyBinding.PromptUserForPushPermissions()` 設定エディターからの自動登録を無効にして代わりに使用してください。
+- IOS 12 以降で [**暫定承認を無効にする**] がオンになっていない場合、ユーザーはサイレントプッシュを受信することを暫定的に (サイレントに) 承認されます。チェックした場合、ユーザーにネイティブのプッシュプロンプトが表示される。
+- 実行時にプロンプトが表示されるタイミングを正確に設定する必要がある場合は、Braze 構成エディターから自動登録を無効にし、代わりに `AppboyBinding.PromptUserForPushPermissions()` を使用します。
 
-![Unity エディターには Braze の設定オプションが表示されます。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと braze の統合」、「自動プッシュ登録の無効化」が有効になっています。] [28]
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「Unity iOS 統合の自動化」、「プッシュと Braze の統合」、および「プッシュの自動登録の無効化」が有効になっています。]({% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %})
 
-## ステップ 3: プッシュリスナーを設定する
+## ステップ3: プッシュリスナーを設定する
 
-プッシュ通知ペイロードを Unity に渡したり、ユーザーがプッシュ通知を受け取ったときに追加の手順を実行したりする場合、Braze にはプッシュ通知リスナーを設定するオプションが用意されています。
+プッシュ通知のペイロードをUnityに渡したり、ユーザーがプッシュ通知を受信したときに追加の処理を行いたい場合、Brazeはプッシュ通知リスナーを設定するオプションを提供する。
 
 ### プッシュ受信リスナー
 
-プッシュ受信リスナーは、ユーザーがアプリケーションをアクティブに使用している間（アプリがフォアグラウンド状態になったときなど）にプッシュ通知を受け取ったときに起動されます。Braze 設定エディターでプッシュ受信リスナーを設定します。実行時にゲームオブジェクトリスナーを設定する必要がある場合は`AppboyBinding.ConfigureListener()`、を使用して指定してください`BrazeUnityMessageType.PUSH_RECEIVED`。
+プッシュ受信リスナーは、ユーザーがアプリケーションをアクティブに使用しているとき（アプリがフォアグラウンドになっているときなど）にプッシュ通知を受信すると起動する。Brazeコンフィギュレーションエディターでプッシュ受信リスナーを設定する。ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.PUSH_RECEIVED` を指定します。
 
-![Unity エディターには Braze の設定オプションが表示されます。このエディターでは、「プッシュ受信リスナーの設定」オプションが拡張され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationReceivedCallback) が提供されています。] [30]
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「プッシュ受信リスナーの設定」オプションが展開され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationReceivedCallback) が指定されます。]({% image_buster /assets/img/unity/ios/unity_ios_push_received.png %})
 
-### プッシュオープンリスナー
+### プッシュ開封済みリスナー
 
-プッシュオープンリスナーは、ユーザーがプッシュ通知をクリックしてアプリを起動したときに起動されます。プッシュペイロードを Unity に送信するには、ゲームオブジェクトの名前を設定し、Set Push Opened Listener **オプションでオープンされたリスナーのコールバックメソッドをプッシュします**。
+ユーザーがプッシュ通知をクリックしてアプリを起動すると、プッシュ開封済みリスナーが起動します。Unity にプッシュペイロードを送信するには、ゲームオブジェクトの名前を設定し、[**プッシュ開封済みリスナーを設定する**] オプションの下にある開封済みリスナーのコールバックメソッドをプッシュします。
 
-![Unity エディターには Braze の設定オプションが表示されます。このエディターでは、「プッシュ受信リスナーの設定」オプションが拡張され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationOpenedCallback) が提供されています。] [31]
+![UnityエディターはBrazeの設定オプションを表示する。このエディターでは、「プッシュ受信リスナーの設定」オプションが展開され、「ゲームオブジェクト名」(AppBoyCallback) と「コールバックメソッド名」(PushNotificationOpenedCallback) が指定されます。]({% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %})
 
-実行時にゲームオブジェクトリスナーを設定する必要がある場合は`AppboyBinding.ConfigureListener()`、を使用して指定してください`BrazeUnityMessageType.PUSH_OPENED`。
+ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.PUSH_OPENED` を指定します。
 
-### プッシュリスナーの実装例
+### プッシュ・リスナーの実装例
 
-次の例では`PushNotificationOpenedCallback`、`AppboyCallback``PushNotificationReceivedCallback`それぞれとというコールバックメソッド名を使用してゲームオブジェクトを実装しています。
+次の例では、コールバックメソッド名 `PushNotificationReceivedCallback`、および `PushNotificationOpenedCallback` をそれぞれ使用して、`AppboyCallback` ゲームオブジェクトを実装します。
 
-![この実装例の図は、前のセクションで説明した Braze 設定オプションと C# コードスニペットを示しています。] [32]
+![この実装例の図は、前のセクションで述べた Braze の構成オプションと、C# のコードスニペットを示しています。]({% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %})
 
-\`\`\`csharp
-パブリッククラスのメインメニュー:MonoBehaviour {
+```csharp
+public class MainMenu : MonoBehaviour {
   void PushNotificationReceivedCallback(string message) {
-\#if ユニティ\_アンドロイド
+#if UNITY_ANDROID
     Debug.Log("PushNotificationReceivedCallback message: " + message);
     PushNotification pushNotification = new PushNotification(message);
     Debug.Log("Push Notification received: " + pushNotification);   
-\#elif UNITY\_IOS
+#elif UNITY_IOS
     ApplePushNotification pushNotification = new ApplePushNotification(message);
     Debug.Log("Push received Notification event: " + pushNotification);   
-\`endif\`  
-  ()
+#endif  
+  }
 
   void PushNotificationOpenedCallback(string message) {
-\#if ユニティ\_アンドロイド
+#if UNITY_ANDROID
     Debug.Log("PushNotificationOpenedCallback message: " + message);
     PushNotification pushNotification = new PushNotification(message);
     Debug.Log("Push Notification opened: " + pushNotification);  
-\#elif UNITY\_IOS
+#elif UNITY_IOS
     ApplePushNotification pushNotification = new ApplePushNotification(message);
     Debug.Log("Push opened Notification event: " + pushNotification);   
-\`endif\`  
-  ()
+#endif  
+  }
 }
-\`\`\`
+```
 
 ## 高度な機能
 
-### プッシュトークンのコールバック
+### プッシュトークンコールバック
 
-OS から Braze デバイストークンのコピーを受け取るには、を使用してデリゲートを設定します。`AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`
+OS から Braze デバイストークンのコピーを受け取るには、`AppboyBinding.SetPushTokenReceivedFromSystemDelegate()` を使用してデリゲートを設定します。
 
-### その他の機能
+### その他の特徴
 
-ディープリンク、バッジカウント、カスタムサウンドなどの高度な機能を実装するには、[iOSのネイティブプッシュ手順をご覧ください][8]。
+ディープリンク、バッジカウント、カスタムサウンドなどの高度な機能を実装するには、[iOS ネイティブプッシュの説明]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)をご覧ください。
 
-[1]: #manual-push-integration
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[9]: https://developer.apple.com/ios/manage/overview/index.action "iOS プロビジョニングポータル"
-[10]: {% image_buster /assets/img_archive/ios_provisioning.png %} 「pushNotification2.png」
-[11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} 「AppleProvisioningOptions.png」
-[12]: {% image_buster /assets/img_archive/push_cert_gen.png %} 「pushNotification3.png」
-[15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/iOS/Roll-A-Ball-Ios/Classes/UnityAppController.mm "sample AppController.mm"
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
-[28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}
-[29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %}
-[30]: {% image_buster /assets/img/unity/ios/unity_ios_push_received.png %}
-[31]: {% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %}
-[32]: {% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %}

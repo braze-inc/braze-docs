@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 複数のコンテンツカードフィードを使用する
 
@@ -57,62 +57,62 @@ NotificationCenter.default.addObserver(self, selector:
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
-\- (void)contentCardsUpdatedNotificationReceived:(NSNotification \*)notification {
+```objc
+- (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
-    // エクストラに "Transactional" フィードタイプが設定されているカードのみを含む配列を取得する。
-    NSArray<ABKContentCard \*> \*filteredArray = [self getCardsForFeedType:@"Transactional"]；
-    NSLog(@"Got filtered array of length: %lu", [filteredArray count])；
+    // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+    NSArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
+    NSLog(@"Got filtered array of length: %lu", [filteredArray count]);
 
     // Pass filteredArray to your UI layer for display.
   }
 }
 
-- (NSArray<ABKContentCard \*> \*)getCardsForFeedType:(NSString \*)type {
-  NSArray<ABKContentCard \*> \*cards = [Appboy.sharedInstance.contentCardsController getContentCards]；
+- (NSArray<ABKContentCard *> *)getCardsForFeedType:(NSString *)type {
+  NSArray<ABKContentCard *> *cards = [Appboy.sharedInstance.contentCardsController getContentCards];
 
-  NSArray<ABKContentCard \*> \*filteredArray = [cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary \*bindings) {
-NSDictionary *extras = [card extras];
-if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
-NSLog(@"Got card: %@ ", card.idString);
-return YES;
-}
+  NSArray<ABKContentCard *> *filteredArray = [cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary *bindings) {
+    NSDictionary *extras = [card extras];
+    if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
+      NSLog(@"Got card: %@ ", card.idString);
+      return YES;
+    }
     return NO;
-    }]];
+  }]];
 
   return filteredArray;
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab SWIFT %}
 
-\`\`\`swift
-@objc private func contentCardsUpdatedNotificationReceived(notification:NSNotification) {
-    guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as?Bool else { return }
+```swift
+@objc private func contentCardsUpdatedNotificationReceived(notification: NSNotification) {
+    guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
     if updateSuccessful {
-        // エクストラに "Transactional" フィードタイプが設定されているカードのみを含む配列を取得する。
-        let filteredArray = getCards(forFeedType:"Transactional")
-        NSLog("Got filtered array of length: %@",filteredArray?.count ??0)
+        // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+        let filteredArray = getCards(forFeedType: "Transactional")
+        NSLog("Got filtered array of length: %@",filteredArray?.count ?? 0)
 
         // Pass filteredArray to your UI layer for display.
     }
 }
 
-func getCards(forFeedType type:String) -> [ABKContentCard]? {
+func getCards(forFeedType type: String) -> [ABKContentCard]? {
     guard let allCards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKContentCard] else { return nil }
-    // フィルタリングされたカードを返す
+    // return filtered cards
     return allCards.filter {
-if $0.extras?["feed_type"] as? String == type {
-NSLog("%@","Got card: ($0.idString)")
-return true
-} else {
-        return false
-            }
-            }
+        if $0.extras?["feed_type"] as? String == type {
+            NSLog("%@","Got card: \($0.idString)")
+            return true
+        } else {
+            return false
         }
-            \`\`\`
+    }
+}
+```
 
 {% endtab %}
 {% endtabs %}

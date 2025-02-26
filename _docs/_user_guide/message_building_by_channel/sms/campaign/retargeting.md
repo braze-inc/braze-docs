@@ -35,7 +35,7 @@ Users can be filtered by when they last received an SMS or if they have received
 Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
 ![Segmentation filter Has received message from campaign "SMS retargeting".][1]
 
-### Trigger messages as users receive SMS
+### Trigger messages as users receive SMS {#trigger-messages}
 
 To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS campaign you would like to use.
 
@@ -90,7 +90,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 When evaluating if an inbound message meets a defined trigger event, the leading and trailing spaces are removed before evaluation begins.
 
 {% alert tip %} 
-If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in any Canvas step until the next action path.
 {% endalert %}
 
 **Trigger by inbound keyword category**<br>

@@ -18,11 +18,11 @@ This optional [iOS integration SDK guide]({{site.baseurl}}/developer_guide/platf
 
 ## Predictive Purchases
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) doc to learn more. 
+Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a purchase prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) doc to learn more. 
 
 ## Drag-and-drop editor
 
-With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 

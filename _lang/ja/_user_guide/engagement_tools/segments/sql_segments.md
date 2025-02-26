@@ -29,7 +29,7 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 ## SQL セグメントエクステンションの作成
 
 {% tabs local %}
-{% tab Full refresh %}
+{% tab フルリフレッシュ %}
 
 完全更新 SQL セグメントエクステンションを作成するには:
 
@@ -40,13 +40,13 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 
 {:start="2"}
 2\.[**エクステンションを新規作成**] をクリックし、[**完全に更新**] を選択します。<br><br>
-   ![\]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3. セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
-   ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4. セグメントエクステンションを保存します。
+   ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
+3\.セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
+   ![SQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
+4\.セグメントエクステンションを保存します。
 
 {% endtab %}
-{% tab Incremental refresh %}
+{% tab 増分更新 %}
 
 増分更新 SQL エディターを使用すると、特定の時間枠内のイベントについて、日付ごとにユーザークエリ集計を行うことができます。増分更新 SQL セグメントエクステンションを作成するには以下を実行します。
 
@@ -58,17 +58,17 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 
 {:start="2"}
 2\.[**エクステンションを新規作成**] をクリックし、[**増分更新**] を選択します。<br><br>
-   ![\]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3. セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
-   ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
-4. 必要に応じて、[**エクステンションを毎日再生成する**] を選択します。<br><br>
-   ![Checkbox to regenerate the extension daily.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
+   ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
+3\.セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
+   ![インクリメンタルSQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
+4\.必要に応じて、[**エクステンションを毎日再生成する**] を選択します。<br><br>
+   ![エクステンションを毎日再生成するチェックボックス。]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    選択すると、Braze はセグメントメンバーシップを毎日自動的に更新します。つまり、毎日会社のタイムゾーンの午前0時 (1時間遅れる可能性があります) に、Braze はセグメントの新規ユーザーを確認し、自動的にセグメントに追加します。セグメントエクステンションを 7 日間使用しなかった場合、Braze は毎日の再生成を自動的に一時停止します。未使用のセグメントエクステンションとは、キャンペーンやキャンバスの一部ではないエクステンションです (エクステンションが「使用済み」と見なされるには、キャンペーンまたはキャンバスがアクティブでなくてもかまいません)。<br><br>
 5. セグメントエクステンションを保存します。
 
 {% endtab %}
 
-{% tab AI SQL Generator %}
+{% tab AI SQLジェネレーター %}
 
 {% alert note %}
 AI SQL ジェネレーターは現在、ベータ機能としてご利用いただけます。このベータトライアルへの参加に興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
@@ -76,7 +76,7 @@ AI SQL ジェネレーターは現在、ベータ機能としてご利用いた�
 
 AI SQL ジェネレーターは OpenAI を搭載した [GPT](https://openai.com/gpt-4) を活用して、お客様の SQL セグメントに SQL を推奨します。
 
-![AI SQL generator with the prompt "Users that received a notification last month"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![「先月に通知を受信したユーザー」というプロンプトが表示された AI SQL ジェネレーター]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 AI SQL ジェネレーターを使用するには、以下を実行します。
 
@@ -89,13 +89,13 @@ AI SQL ジェネレーターを使用するには、以下を実行します。
 - 過去1年間に購入回数が5回未満のユーザー
 
 ### ヒント
-- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/sql_segments_tables/)についての理解を深めてください。これらのテーブルに存在しないデータを要求すると、ChatGPT が偽のテーブルを作成する可能性があります。
-- この機能の [SQL 記述ルール]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql)についての理解を深めてください。これらのルールに従わないと、エラーが発生します。たとえば、SQL コードでは `user_id` 列を選択する必要があります。プロンプトの冒頭に「user who」と入力すると役に立ちます。
+- 利用可能な [Snowflake データテーブル]({{site.baseurl}}/sql_segments_tables/)をよく理解してください。これらのテーブルに存在しないデータを要求すると、ChatGPT が正しくないテーブルを作成する可能性があります。
+- この機能の [SQL 記述ルール]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql)をよく理解してください。これらのルールに従わないと、エラーが発生します。たとえば、SQL コードでは `user_id` 列を選択する必要があります。プロンプトの冒頭に「user who」と入力すると役に立ちます。
 - AI SQL ジェネレーターでは、1分あたり最大20のプロンプトを送信できます。
 
 ### 私のデータはどのように使用され、OpenAI に送信されるのですか？
 
-SQL を生成するために、Braze はプロンプトを OpenAI の API プラットフォームに送信します。Braze から OpenAI に送信されるすべてのクエリは匿名化されます。つまり、提供するコンテンツに一意に識別できる情報を含めない限り、OpenAI はクエリの送信元を特定できません。[OpenAI の API プラットフォームコミットメント](https://openai.com/policies/api-data-usage-policies)に詳述されているように、Braze 経由で OpenAI の API に送信されたデータは、モデルのトレーニングや改善には使用されず、30日後に削除されます。[使用ポリシー](https://openai.com/policies/usage-policies)など、お客様に関連する OpenAI のポリシーを必ず遵守してください。Braze は AI が生成したコンテンツに関していかなる種類の保証も行いません。
+SQL を生成するために、Braze はプロンプトを OpenAI の API プラットフォームに送信します。Braze から OpenAI に送信されるすべてのクエリは匿名化されます。つまり、提供するコンテンツに一意に識別できる情報を含めない限り、OpenAI はクエリの送信元を特定できません。[OpenAI の API プラットフォームコミットメント](https://openai.com/policies/api-data-usage-policies)に詳述されているように、Braze 経由で OpenAI の API に送信されたデータは、モデルのトレーニングや改善には使用されず、30日後に削除されます。[使用ポリシー](https://openai.com/policies/usage-policies)など、お客様に関連する OpenAI のポリシーを必ず順守してください。Braze は AI が生成したコンテンツに関していかなる種類の保証も行いません。
 {% endtab %}
 {% endtabs %}
 
@@ -103,7 +103,7 @@ SQL を生成するために、Braze はプロンプトを OpenAI の API プラ
 実行に20分以上かかる SQL クエリはタイムアウトします。
 {% endalert %}
 
-エクステンションの処理が完了したら、セグメントエクステンションを使用して [セグメントを作成][4] し、この新しいセグメントをキャンペーンとキャンバスでターゲットにすることができます。
+エクステンションの処理が完了したら、セグメントエクステンションを使用して [セグメントを作成][4] し、この新しいセグメントをキャンペーンやキャンバスでターゲットにすることができます。
 
 ## SQL の記述
 
@@ -114,7 +114,7 @@ SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-referenc
 {% endalert %} 
 
 {% tabs %}
-{% tab SQL Editor %}
+{% tab SQLエディタ %}
 
 SQL はさらに、次のルールに従う必要があります。
 
@@ -130,24 +130,24 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
    2. セグメント内のセグメントエクステンションを参照する場合、`doesn't include` を選択すると結果が反転します。
 
 {% endtab %}
-{% tab Incremental SQL Editor %}
+{% tab 増分 SQL エディター %}
 
 すべての増分更新クエリは、クエリとスキーマの詳細という2つの部分で構成されます。
 
 1. エディターで、目的のテーブルから `user_id` を選択するクエリを記述します。
 2. エディターの上のフィールドから [**演算子**]、[**回数**]、および [**期間**] を選択して、スキーマの詳細を追加します。クエリでは、集計列の合計が {% raw %}`{{operator}}` および `{{number of times}}`{% endraw %} プレースホルダーで指定された特定の条件を満たすかどうかが確認されます。これは、従来のセグメントエクステンションを作成するワークフローと同様に機能します。<br><br>
    - **演算子:**イベントの発生回数が、発生回数よりも多いか、少ないか、等しいかを示します。<br>
-   ![Operator field with "More than" selected.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   ![「超 (過去)」が選択された演算子フィールド。]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **回数:**演算子に関してイベントを評価したい回数。<br>
-   ![Number of times with "5" entered.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   ![「5」が入力された回数フィールド。]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **期間:**イベントのインスタンスを確認する日数 (1 ～ 730日)。この期間は、現在の日を基準とした過去の日数を指します。次の例は、過去365日間にイベントを5回以上実行したユーザーのクエリを示しています。<br>
-   ![Time period field with "365" entered.]({% image_buster /assets/img_archive/sql_segments_period.png %})
+   ![「365」が入力された期間フィールド。]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
 次の例では、結果のセグメントには、指定した日付以降の過去3日間に `favorited` イベントを3回以上実行したユーザーが含まれます。
 
-![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
+![インクリメンタルSQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
 
-![SQL preview of an incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![増分 SQL セグメントエクステンションの SQL プレビュー。]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
 ### その他の規則
 
@@ -176,7 +176,7 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 
 SQL セグメントエクステンションを選択すると、そのエクステンションが使用されている場所を表示したり、エクステンションをアーカイブしたり、[セグメントのメンバーシップを手動で更新](#refreshing-segment-membership)したりできます。
 
-![SQL エディターのメッセージング使用セクション。SQL セグメントが使用されている場所が表示されます。][3]
+![SQL セグメントの使用場所を示す SQL エディターの「Messaging Use」セクション。][3]
 
 ### セグメントのメンバーシップの更新
 
@@ -191,7 +191,7 @@ SQL を使用して作成されたセグメントエクステンションのセ�
 各 Braze ワークスペースには、1か月あたり5つのSnowflake クレジットが利用可能です。さらにクレジットが必要な場合は、アカウントマネージャーにお問い合わせください。クレジットは、SQL Segment のメンバーシップを更新または保存して更新するたびに使用されます。SQL セグメント内でプレビューを実行したり、従来のセグメントエクステンションを保存または更新したりする場合、クレジットは使用されません。
 
 {% alert note %}
-Snowflake クレジットは機能間で共有されません。たとえば、SQL セグメントエクステンションとクエリビルダーのクレジットは互いに独立しています。
+Snowflake クレジットは機能間で共有されません。例えば、SQL セグメントエクステンションとクエリビルダーのクレジットは互いに独立しています。
 {% endalert %}
 
 クレジット使用量は SQL クエリの実行時間と相関しています。実行時間が長くなるほど、クエリにかかるクレジット数は多くなります。実行時間は、時間の経過に伴うクエリの複雑さとサイズによって異なる場合があります。実行するクエリが複雑で頻繁になればなるほど、リソースの割り当てが大きくなり、実行時間が短縮されます。

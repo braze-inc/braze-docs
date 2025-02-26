@@ -1,34 +1,34 @@
 ---
-nav_title: "ポスト:ユーザーを結合"
-article_title: "ポスト:ユーザーを結合"
+nav_title: "POST:ユーザーをマージする"
+article_title: "POST:ユーザーをマージする"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "この記事では、Merge ユーザーの Braze エンドポイントについて詳しく説明します。"
+description: "この記事では、「ユーザーのマージ」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# ユーザーを結合
+# ユーザーをマージする
 {% apimethod post %}
 /users/merge
 {% endapimethod %}
 
-> このエンドポイントを使用して、あるユーザーを別のユーザーに統合します。 
+> このエンドポイントを使用して、あるユーザーを別のユーザーにマージする。 
 
-1 つのリクエストで最大 50 のマージを指定できます。このエンドポイントは非同期です。
+マージはリクエストごとに50個まで指定できます。このエンドポイントは非同期である。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.merge`権限のある [API キーが必要です]({{site.baseurl}}/api/api_key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`users.merge`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -43,20 +43,20 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `merge_updates` | 必須 | 配列 | オブジェクト配列。各オブジェクトには、`identifier_to_merge``identifier_to_keep`オブジェクトとオブジェクトが含まれている必要があります。オブジェクトはそれぞれ`external_id`、`user_alias`またはでユーザーを参照する必要があります`email`。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `merge_updates` | required | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### マージ動作
 
-以下に記載されている動作は、*Snowflakeを搭載していないすべてのBraze機能に当てはまります*。ユーザーマージは、[**メッセージング履歴**] タブ、[セグメント拡張]、[クエリビルダー]、および [カレント] には反映されません。
+以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、[セグメント拡張]、[クエリビルダー]、および[カレント]では、ユーザーのマージが反映されない。
 
 {% alert important %}
-エンドポイントは、`merge_updates`更新されるオブジェクトの順序を保証しません。
+エンドポイントは、`merge_updates` オブジェクトが更新される順序を保証しない。
 {% endalert %}
 
-このエンドポイントは、ターゲットユーザーで次のフィールドが見つからない場合、それらのいずれかをマージします。
+このエンドポイントは、ターゲットユーザーで見つからない場合、次のフィールドをマージします。
 
 - 名
 - 姓
@@ -65,48 +65,54 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 生年月日
 - 電話番号
 - タイムゾーン
-- 自宅の都市
+- 市区町村
 - 国
 - 言語
-- セッション数 (両方のプロファイルからのセッションの合計)
-- 最初のセッションの日付（Brazeは2つの日付のうち早い日付を選択します）
-- 最後のセッションの日付（Brazeは2つの日付のうち遅い日付を選択します）
-- カスタム属性 (ターゲットプロファイルの既存のカスタム属性は保持され、ターゲットプロファイルに存在しなかったカスタム属性も含まれます)
-- カスタムイベントと購入イベントデータ
-- 「Y日でX回」セグメンテーション用のカスタムイベントおよび購入イベントプロパティ（X<=50、Y<=30）
-- セグメント化可能なカスタムイベントの概要
-  - イベント数 (両方のプロファイルの合計)
-  - イベントが最初に発生しました（Brazeは2つの日付のうち早い日付を選択します）
-  - 最後に発生したイベント（Brazeは2つの日付のうち遅い日付を選択します）
-- アプリ内購入合計 (セント) (両方のプロファイルの合計)
+- デバイス情報
+- セッション数 （両方のプロファイルのセッションの合計）
+- 初回セッションの日付 (Braze は2つの日付のうち早い方を選択します)
+- 最終セッションの日付 (Braze は2つの日付のうち遅い方の日付を選択します)
+- カスタム属性（ターゲットプロファイル上の既存のカスタム属性は保持され、ターゲットプロファイル上に存在しなかったカスタム属性も含まれる）
+- カスタム・イベントと購入イベントのデータ
+- Y日間にX回」のセグメンテーション（X<=50、Y<=30）のためのカスタムイベントと購入イベントのプロパティ。
+- セグメント可能なカスタム・イベントのサマリー
+  - イベント数（両プロファイルの合計）
+  - イベントが最初に発生した日（Brazeは2つの日付のうち早い方を選ぶ）
+  - イベントが最後に発生した日（Brazeは2つの日付のうち遅い方を選ぶ）
+- アプリ内購入の合計（セント単位）（両方のプロファイルの合計)
 - 購入総数 (両方のプロファイルの合計)
-- 初回購入日（Brazeは2つの日付のうち早い方の日付を選択します）
-- 最終購入日（Brazeは2つの日付のうち遅い日付を選択します）
-- アプリ概要
-- last\_x\_at フィールド（孤立したプロファイルフィールドが最新の場合、Braze はフィールドを更新します）
-- キャンペーンのインタラクションデータ (Braze が最新の日付フィールドを選択します)
-- ワークフローの概要 (Braze が最新の日付フィールドを選択します)
-- メッセージとメッセージエンゲージメント履歴
+- 初回購入日 (Braze は2つの日付のうち早い方を選択します)
+- 最終購入日 (Braze は2つの日付のうち遅い方を選択します)
+- アプリの概要
+- Last_X_atフィールド（Brazeは、孤児となったプロファイルフィールドがより新しいものであれば、フィールドを更新する）
+- キャンペーンのインタラクションデータ（Brazeは最新の日付フィールドを選ぶ）
+- ワークフローのサマリー（Brazeは最新の日付フィールドを選ぶ）
+- メッセージとメッセージのエンゲージメント履歴
+- セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
 
-セッションデータは、アプリが両方のユーザープロファイルに存在する場合にのみマージされます。このエンドポイントはサブスクリプショングループまたはサブスクリプションをマージしないことに注意してください。
+{% alert note %}
+ユーザーをマージする場合、`/users/merge` エンドポイントを使用すると、[`changeUser()` メソッドを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)使用した場合と同じように機能します。
+{% endalert %}
 
-#### カスタムイベント日付と購入イベント日の動作
-これらの統合フィールドにより、「Y日以内にX件のイベントが発生する」フィルターが更新されることに注意してください。購入イベントの場合、これらのフィルターには「Y 日間の購入数」と「過去 Y 日間の購入金額」が含まれます。
+#### カスタムイベント日と購入イベント日の動作
 
-### メールによるユーザーの結合
+これらの統合されたフィールドは、「Y日以内にXイベント」フィルターを更新する。購入イベントの場合、これらのフィルターには、「Y日間の購入回数」と「過去Y日間の使用金額」が含まれる。
 
-識別子として an を指定する場合、`email``prioritization`識別子には追加の値が必要です。は、`prioritization`複数のユーザーが見つかった場合にどのユーザーをマージするかを指定する配列でなければなりません。`prioritization`は順序付けされた配列です。つまり、優先順位付けで複数のユーザーが一致した場合、マージは行われません。
+### 電子メールまたは電話番号でユーザーをマージする
 
-配列に指定できる値は`identified`、`unidentified`、`most_recently_updated`です。`most_recently_updated`最後に更新されたユーザーを優先することを指します。
+識別子として `email` または `phone` が指定された場合、識別子にはさらに `prioritization` の値が必要になります。`prioritization` は、複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する配列でなければならない。`prioritization` は順序付き配列である。つまり、優先順位付けから複数のユーザーがマッチした場合、マージは行われない。
 
-優先順位付け配列には、一度に次のオプションのうち 1 つしか存在できません。
--`identified` ユーザーに優先順位を付けることを指します `external_id`
--`unidentified` 何もないユーザーを優先することを指します `external_id`
+配列に使用できる値は、`identified`、`unidentified`、`most_recently_updated` です。`most_recently_updated` は、最も最近更新されたユーザーを優先することを意味します。
 
-## リクエスト例
+優先配列には、一度に以下のオプションのうち1つしか存在できません。
+- `identified` を持つユーザーを優先することである。 `external_id`
+- `unidentified` のないユーザーを優先することである。 `external_id`
 
-### 基本要求
-これはリクエストのパターンを示すための基本的なリクエストボディです。
+## 例のリクエスト
+
+### 基本リクエスト
+
+これはリクエストのパターンを示す基本的なリクエストボディである。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -125,10 +131,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     },
     {
       "identifier_to_merge": {
-        "email": "user1@braze.com"
+        "email": "user1@braze.com",
+        "prioritization": ["unidentified", "most_recently_updated"]
       },
-      "identifier_to_keep": {
-        "email": "user2@braze.com"
+      "identifier_to_keep":  {
+        "email": "user2@braze.com",
+        "prioritization": ["identified", "most_recently_updated"]
       }
     },
     {
@@ -149,9 +157,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### 身元不明ユーザーの結合
+### 未確認ユーザーをマージする
 
-次のリクエストは、メールアドレスが「john.smith@braze.com」で最後に更新された正体不明のユーザーを `external_id`「john」のユーザーに統合します。を使用すると、クエリーが 1 `most_recently_updated` 人の身元不明ユーザーのみにフィルタリングされます。したがって、このメールアドレスを持つ正体不明のユーザーが2人いる場合、`external_id`「john」のユーザーに統合されるのは1人だけです。
+以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` を使用して、クエリを1人のみの未確認ユーザーに絞り込みます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -173,9 +181,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### 未確認ユーザーを識別済みユーザーへの統合
+### 未確認ユーザーを識別されたユーザーにマージする
 
-次の例では、電子メールアドレスが「john.smith@braze.com」で最後に更新された正体不明ユーザーを、電子メールアドレス「john.smith@braze.com」を持つ最後に更新された識別済みユーザーに統合します。を使用すると、クエリーが 1 人のユーザ（1 人の身元不明のユーザとの `identifier_to_merge` 1 人の識別されたユーザ`identifier_to_keep`）`most_recently_updated`だけにフィルタされます。
+この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` を使用して、クエリを1人のみのユーザーに絞り込みます (`identifier_to_merge` の場合は未確認ユーザー1人、`identifier_to_keep` の場合は識別されたユーザー1人）。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -198,9 +206,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### 「最新」の優先順位付けを含めずに身元不明のユーザーを統合する
+### most_recently_updated の優先順位付けを含めずに、未確認ユーザーをマージする
 
-メールアドレスが「john.smith@braze.com」の正体不明のユーザーが2人いる場合、この例のリクエストでは、そのメールアドレスを持つ身元不明のユーザーが2人いるため、ユーザーは統合されません。このリクエストは、メールアドレスが「john.smith@braze.com」の身元不明のユーザーが1人しかいない場合にのみ機能します。
+メールアドレス"john.smith@braze.com"を持つ正体不明のユーザーが2人いる場合、このリクエスト例では、そのメールアドレスを持つ正体不明のユーザーが2人いるため、どのユーザーもマージしない。このリクエストは、メールアドレス"john.smith@braze.com"を持つ未確認ユーザーが1人しかいない場合にのみ機能する。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -224,11 +232,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ## 応答
 
-このエンドポイントには、`202`との 2 つのステータスコード応答があります`400`。
+このエンドポイントには2つのステータスコード応答があります: `202` と `400`。
 
-### 成功レスポンスの例
+### 成功応答の例
 
-`202`ステータスコードは次のレスポンスボディを返す可能性があります。
+ステータスコード `202` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -236,9 +244,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }
 ```
 
-### エラーレスポンスの例
+### エラー応答例
 
-`400`ステータスコードは次のレスポンスボディを返す可能性があります。発生する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照してください。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -248,15 +256,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ## トラブルシューティング
 
-次の表は、発生する可能性のあるエラーメッセージの一覧です。
+以下の表は、起こりうるエラーメッセージの一覧である。
 
 | エラー | トラブルシューティング |
 | --- |
-| `'merge_updates' must be an array of objects` | `merge_updates` それがオブジェクトの配列であることを確認してください。|
-| `a single request may not contain more than 50 merge updates` | 1 回のリクエストで指定できるマージ更新は 50 件までです。|
-| `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | リクエスト内の識別子を確認してください。|
-| `identifiers must be objects of the same type` | 識別子のオブジェクトタイプが一致していることを確認する。|
-| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | 2 `merge_updates` `identifier_to_merge` つのオブジェクトのみが含まれていることを確認し、`identifier_to_keep`.|
-{: .reset-td-br-1 .reset-td-br-2}
+| `'merge_updates' must be an array of objects` | `merge_updates` がオブジェクトの配列であることを確認する。 |
+| `a single request may not contain more than 50 merge updates` | 1回のリクエストで指定できるマージ更新は50件までです。 |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | リクエストの識別子をチェックする。 |
+| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | `merge_updates` に `identifier_to_merge` と `identifier_to_keep` という2つのオブジェクトしか含まれていないことを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

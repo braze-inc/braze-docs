@@ -1,36 +1,36 @@
 ---
-nav_title: AMP サポート
-article_title: ウェブ向けAMPサポート
+nav_title: AMPサポート
+article_title: Web 向けの AMP サポート
 platform: Web
 page_order: 5
 page_type: reference
-description: "このリファレンス記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。"
+description: "この参考記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。"
 
 ---
 
-# AMP サポート
+# AMPサポート
 
 {% alert note %}
-Braze を AMP ページに統合しようとしている場合を除き、このセクションを統合する必要はありません。
+このセクションは、AMPページにBrazeを統合しようとしている場合を除いて、統合する必要はありません。
 {% endalert %}
 
-> このリファレンス記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。Accelerated Mobile Pages (AMP) は、JavaScript の使用制限を含む特定の標準を適用することで、モバイル デバイスでのページの読み込み時間を短縮することを目的として設計された、Google が支援するプロジェクトです。
+> この参考記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。Accelerated Mobile Pages (AMP) は、JavaScript の使用を制限するなど、特定の基準を適用することで、モバイル端末のページ読み込み時間を改善するように設計された Google が支援するプロジェクトです。
 
-その結果、Braze SDK を AMP ページに読み込むことができません。ただし、AMP プロジェクトでは Web プッシュをサポートするコンポーネントが提供されています。[以下の手順では、](https://www.ampproject.org/docs/reference/components/amp-web-push) そのコンポーネントの設定方法と、次のドキュメントの参照方法を詳しく説明します。 `amp-web-push` 成分。
+その結果、Braze SDK を AMP ページに読み込むことはできません。ただし、AMP プロジェクトには Web プッシュをサポートするコンポーネントが用意されています。[以下の手順](https://www.ampproject.org/docs/reference/components/amp-web-push) では、そのコンポーネントを設定し、`amp-web-push` コンポーネントに関する以下のドキュメントを参照する方法を説明しています。
 
-## ステップ 1:AMP ウェブプッシュスクリプトを含める
+## ステップ 1:AMP Web プッシュスクリプトを含める
 
-次の非同期スクリプト タグをヘッドに追加します。
+次の非同期スクリプトタグをヘッドに追加します：
 
-\`\`\`js
+```js
 <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>
 ```
 
-## ステップ 2: 購読と購読解除のウィジェットを追加する
+## ステップ2:サブスクリプションとサブスクリプション解除ウィジェットを追加
 
-ユーザーがプッシュを購読および購読解除できるようにするウィジェットを追加する必要があります。これは HTML の本文内に記述する必要があり、必要に応じてスタイルを設定できます。 
+プッシュ通知の購読と配信停止をユーザーが行えるウィジェットを追加する必要があります。これはHTMLの本文内に配置され、好きなようにスタイルを適用できます。
 
-\`\`\`js
+```js
 <!-- A subscription widget -->
 <amp-web-push-widget visibility="unsubscribed" layout="fixed" width="250" height="80">
   <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
@@ -42,30 +42,30 @@ Braze を AMP ページに統合しようとしている場合を除き、この
 </amp-web-push-widget>
 ```
 
-## ステップ 3: ダウンロードヘルパー iFrame と許可ダイアログ
+## ステップ 3:ダウンロードヘルパーiFrameと許可ダイアログ
 
-AMP Web Push コンポーネントは、プッシュ サブスクリプションを処理するポップアップを作成することで機能します。そのため、プロジェクトにいくつかのヘルパー ファイルを含める必要があります。[helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) ファイルと [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) ファイルをダウンロードし、サイトに保存します。 
+AMP Web プッシュコンポーネントは、プッシュサブスクリプションを処理するポップアップを作成することで機能します。その結果、プロジェクトにいくつかのヘルパーファイルを含める必要があります。[helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) ファイルおよび [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) ファイルをダウンロードして、サイトに保存してください。
 
-## ステップ 4: サービスワーカーファイルを作成する
+## ステップ 4:サービスワーカーファイルを作成する
 
-作成する `service-worker.js` 次の内容のファイルを作成し、Web サイトのルート ディレクトリに配置します。
+次の内容の`service-worker.js`ファイルを作成し、Web サイトのルートディレクトリに配置します:
 
-<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+<script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-## ステップ 5: AMPウェブプッシュHTML要素を構成する
+## ステップ 5: AMP Web プッシュ HTML 要素を構成する
 
-次に、 `amp-web-push` ページに HTML 要素を追加します。次の HTML コードをドキュメントの本文に挿入します。
+これで、ページに`amp-web-push` HTML要素を追加する必要があります。次のHTMLコードをドキュメントの本文にドロップします:
 
-\`\`\`js
+```js
 <amp-web-push
-レイアウト="表示なし"
+layout="nodisplay"
 id="amp-web-push"
-helper-iframe-url="FILE\_PATH\_TO\_YOUR\_HELPER\_IFRAME"
-permission-dialog-url="許可ダイアログへのファイルパス"
-service-worker-url="FILE\_PATH\_TO\_YOUR\_SERVICE\_WORKER?apiKey={YOUR\_API\_KEY}&baseUrl={YOUR\_BASE\_URL}"
+helper-iframe-url="FILE_PATH_TO_YOUR_HELPER_IFRAME"
+permission-dialog-url="FILE_PATH_TO_YOUR_PERMISSION_DIALOG"
+service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseUrl={YOUR_BASE_URL}"
 >
-\`\`\`
+```
 
-特に、 `service-worker-URL` 追加が必要です `apiKey` そして `baseUrl` （https://dev.appboy.com/api/v3) as query parameters.
+特に、`service-worker-URL` はクエリパラメーターして `apiKey` と `baseUrl` (https://dev.appboy.com/api/v3) を追加する必要があります。
 
-これで、AMP ページでプッシュ サブスクリプションとサブスクリプション解除が構成されるはずです。 
+AMP ページでプッシュサブスクリプションとサブスクリプション解除の設定が完了しました。

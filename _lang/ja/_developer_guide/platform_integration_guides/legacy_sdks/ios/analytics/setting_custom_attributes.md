@@ -8,13 +8,13 @@ description: "このリファレンス記事では、iOS アプリケーショ�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のカスタム属性の設定
 
 Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性に従って、ユーザーのフィルター処理とセグメント化を行うことができます。
 
-実装前に、[ベストプラクティス][1]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## デフォルトユーザー属性の割り当て
 
@@ -136,7 +136,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### 日付値のカスタム属性
 
-このメソッドで Braze に渡される日付は、[ISO 8601][2] フォーマット (例: `2013-07-16T19:20:30+01:00`) または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` フォーマット (`2016-12-14T13:32:31.601-0800`) のいずれかである必要があります。
+この方法でBrazeに渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)形式（e.g `2013-07-16T19:20:30+01:00`）または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式（`2016-12-14T13:32:31.601-0800`）でなければなりません。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### 配列値のカスタム属性
 
-[カスタム属性配列][8]内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。 
+[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。 
 
 
 {% tabs %}
@@ -233,7 +233,7 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key",
 
 ### REST API によるカスタム属性の設定
 
-REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API のドキュメント][3]を参照してください。
+REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API のドキュメント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ### カスタム属性値の制限
 
@@ -241,19 +241,19 @@ REST API を使用してユーザー属性を設定することもできます�
 
 #### 追加情報
 
-- 詳細は [`ABKUser.h` ファイル][5]を参照してください。
-- 詳細については、[`ABKUser` のドキュメント][6]を参照してください。
+- 詳細は [`ABKUser.h` ファイル](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h)を参照してください。
+- 詳細については、[`ABKUser` のドキュメント](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 
 ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType` または `setPushNotificationSubscriptionType` を呼び出します。これらの関数では、いずれも引数として列挙型 `ABKNotificationSubscriptionType` が使用されます。この型には、次の 3 つの状態があります。
 
-| サブスクリプションステータス | 定義 |
+| サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
 | `ABKOptedin` | 配信登録済み、かつ明示的にオプトイン済み |
-| `ABKSubscribed` | 配信登録済みだが、明示的なオプトインは未実行 |
+| `ABKSubscribed` | 購読済み、ただし明示的に選択されていない |
 | `ABKUnsubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 アプリにプッシュ通知の送信を許可するユーザーは、iOS で明示的なオプトインが必要であるため、ステータス `ABKOptedin` にデフォルト設定されます。
 
@@ -299,11 +299,3 @@ Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificatio
 
 詳細については、「[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)」を参照してください。
 
-[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
-[8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

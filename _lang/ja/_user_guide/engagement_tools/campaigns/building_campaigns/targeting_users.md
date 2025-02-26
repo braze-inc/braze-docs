@@ -47,7 +47,7 @@ description: "この参考記事では、キャンペーン作成の「ターゲ
 
 オーディエンスにセグメントとフィルターを追加したら、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/)してオーディエンスの条件と一致するかどうかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
-![\]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
 ## オーディエンスの概要
 
@@ -63,11 +63,18 @@ description: "この参考記事では、キャンペーン作成の「ターゲ
 
 ## オーディエンス統計
 
-Braze は、ターゲットチャンネルの詳細な視聴者統計をフッターに表示します。
+Braze は、ターゲットチャンネルの詳細な視聴者統計をフッターに表示します。 
+
+ユーザーベースが大きいほど、**リーチ可能なユーザー数**は概算になる可能性が高くなります。到達可能なユーザーの数は、[グローバルコントロールグループ]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)を使用するか、メッセージの適格性を設定すると減少する可能性があります。[Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics)を選択して、到達可能なユーザの正確な数を決定します。これにより、ユーザベースのすべてのユーザが検索されます。 
+
+注意事項:
+
+- 正確な統計の計算には数分かかる。この関数は、フィルターやフィルターグループレベルではなく、セグメントレベルでの正確な統計を計算するだけである。
+- 大きなセグメントでは、正確な統計を計算しても、通常はわずかな変動が見られます。この機能の精度は、99.999% 以上であることが期待されます。
 
 ![][24]
 
-このセグメントのユーザーベースの何パーセントがターゲットになっているか、またはライフタイムバリュー　(LTV) がターゲットになっているかを確認するには、統計フッターの後ろにある [**その他の統計を表示**] をクリックします。
+ユーザーベースのターゲットの割合またはこのセグメントのライフタイム値(LTV) を確認するには、**Show Additional Statistics** を選択します。
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/

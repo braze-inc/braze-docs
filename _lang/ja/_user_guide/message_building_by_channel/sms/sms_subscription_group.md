@@ -1,73 +1,73 @@
 ---
-nav_title: "SMS サブスクリプショングループ"
-article_title: SMS サブスクリプショングループ
+nav_title: "SMS 購読グループ"
+article_title: SMS 購読グループ
 page_order: 4
-description: "この参考資料では、SMSサブスクリプショングループ、サブスクリプションの状態、およびサブスクリプショングループのセットアッププロセスについて説明します。"
+description: "この参考文献は、SMSのサブスクリプショングループ、サブスクリプションの状態、およびサブスクリプショングループのセットアッププロセスについて説明している。"
 page_type: reference
 channel:
   - SMS
   
 ---
 
-# SMS サブスクリプショングループ
+# SMS 購読グループ
 
-> サブスクリプショングループは、Brazeを通じてSMSやMMSを送信するための基盤です。サブスクリプショングループは、特定のタイプのメッセージング目的のために使用される[送信電話番号][2]（ショートコード、ロングコード、および/または英数字の送信者IDなど）の集まりである。例えば、ブランドがトランザクションとプロモーションの両方のSMSメッセージングを送信する計画がある場合、Brazeダッシュボード内で、送信電話番号の別々のプールを持つ2つのサブスクリプショングループを設定する必要があります。
+> サブスクリプショングループは、Brazeを通じてSMSやMMSを送信するための基盤である。購読グループは、特定の種類のメッセージング目的で使用される[送信側の電話番号][2] (ショートコード、ロングコード、英数字の送信者 ID) のコレクションです。例えば、ブランドがトランザクションとプロモーションの両方のSMSメッセージングを送信する計画がある場合、Brazeダッシュボード内で、送信電話番号の別々のプールを持つ2つのサブスクリプショングループを設定する必要がある。
 
-## SMSの購読状態
+## SMS の購読状態
 
-SMSユーザーには、`subscribed` と`unsubscribed` の2つの購読状態がある。ユーザーのサブスクリプションの状態は、サブスクリプショングループ間で共有されません。つまり、ユーザーはトランザクションサブスクリプショングループに`subscribed` 、プロモーションサブスクリプショングループに`unsubscribed` 。ブランドにとっては、このように状態を分けることで、ユーザーに適切なSMSメッセージを送り続けることができる。
+SMS ユーザーには、`subscribed` と`unsubscribed` の 2 つの購読状態があります。ユーザーの購読状態は購読グループ間で共有されません。つまり、あるユーザーはトランザクション購読グループでは `subscribed` で、プロモーション購読グループでは `unsubscribed` になることがあります。ブランドにとって、このような状態の分離は、ユーザーに適切なSMSメッセージを送り続けることを保証する。
 
-| 状態｜定義
+| 状態 | 定義 |
 | --------- | ---------- |
-| Subscribed（購読中）｜ユーザーは、特定の購読グループからSMSを受信することを明示的に確認した。ユーザーは、Braze購読APIを通じて購読状態を更新するか、オプトインキーワード応答をテキスト送信することで購読できます。ユーザーがSMSを受信するには、SMS受信グループに登録されていなければならない。|
-| 配信停止｜ユーザは、SMSの受信グループおよび受信グループ内の送信電話番号からのメッセージ送信を明示的に停止しました。ユーザーは、オプトアウトキーワード応答をテキストで送信することで配信を停止したり、ブランドが[Braze subscription API][4]を通じてユーザーの配信を停止したりすることができます。SMS購読グループから退会したユーザーは、購読グループに属する送信電話番号からのSMSを受信しなくなります。
-{: .reset-td-br-1 .reset-td-br-2}
+| サブスクリプション登録済み | ユーザーが、特定の購読グループから SMS を受信する意志を明示的に示しました。ユーザーは、Braze の購読 API を介して購読状態を更新するか、オプトインのキーワード応答テキストを送信することで、購読に登録できます。ユーザーがSMSを受信するには、SMS受信グループに登録されていなければならない。 |
+| 配信停止済み | ユーザーが、SMS受信グループおよび受信グループ内の送信電話番号からのメッセージ送信を明示的にオプトアウトした。ユーザーはオプトアウトのキーワード応答テキストを送信することで購読解除できます。また、ブランドは [Braze の購読 API][4] を通じてユーザーを購読解除できます。SMS購読グループから登録解除されたユーザーは、その購読グループに属する送信電話番号からのSMSを受信しなくなる。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### ユーザーのSMS購読グループの設定方法 
+### ユーザーのSMS購読グループはどのように設定されるか 
 
-- **Rest API:**ユーザープロファイルはプログラムによって設定することができます。/subscription/status/set` endpoint][4] by using the Braze REST API.
-- **SDKインテグレーション** [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-)、[iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)、または[Web][11]の`addToSubscriptionGroup` メソッドを使用して、EメールまたはSMS購読グループにユーザーを追加できます。
-- **ユーザーのオプトイン/オプトアウト時に自動的に処理されます：**ユーザーがデフォルトのオプトインまたはオプトアウト[キーワード][7]をテキスト入力することで、Brazeはユーザーの購読状態を自動的に設定・更新します。
-- **ユーザー輸入**：ユーザは、**ユーザをインポートする**ことでEメールまたはSMS購読グループに追加できます。購読グループのステータスを更新する場合、CSV に`subscription_group_id` と`subscription_state` の 2 つのカラムが必要です。詳しくは[ユーザーインポートを]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status)参照。
+- **Rest API:**Braze REST API を使用することで、ユーザープロファイルは[`/subscription/status/set` エンドポイント][4] によってプログラムで設定できます。
+- **SDKインテグレーション** [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-)、[iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287)、または[Web][11]]の`addToSubscriptionGroup` メソッドを使用して、ユーザーをEメールまたはSMS購読グループに追加できる。
+- **ユーザーのオプトイン / オプトアウト時に自動的に処理される:**ユーザーがデフォルトのオプトインまたはオプトアウト[キーワード][7]]をテキスト入力することで、Brazeはユーザーの購読状態を自動的に設定・更新する。
+- **ユーザー輸入**：ユーザは、**Import Users（ユーザのインポート**）により、EメールまたはSMS購読グループに追加することができる。購読グループのステータスを更新する場合、CSV には `subscription_group_id` と `subscription_state` の2 列が必要です。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status)を参照してください。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは「**ユーザーインポート**」と呼ばれ、「**ユーザー**」の下にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは [**ユーザーインポート**] と呼ばれ、[**ユーザー**] にあります。
 {% endalert %}
 
-ユーザープロファイルで電話番号が更新されると、新しい電話番号はそのユーザーの契約グループステータスを継承します。電話番号がBrazeに既に存在する番号に更新された場合、その既存の電話番号の契約ステータスが継承されます。
+ユーザープロファイルで電話番号が更新されると、新しい電話番号はそのユーザーの契約グループステータスを継承する。電話番号が Braze に既に存在する番号に更新された場合、その既存の電話番号の購読ステータスが継承されます。
 
-例えば、ユーザーAがいくつかのサブスクリプショングループにサブスクライブしている電話番号を持っていて、その電話番号がユーザーBに追加された場合、ユーザーBは同じサブスクリプショングループにサブスクライブすることになる。ユーザーが既存の購読を継承しないようにするには、ユーザーが番号を変更するたびに、REST APIを介して古い番号の購読グループをリセットすることができます。複数のユーザーがこの電話番号を共有している場合、すべてのユーザーが配信停止になります。
+例えば、ユーザー A の電話番号が複数の購読グループに登録されていて、その電話番号がユーザー B に追加された場合、ユーザー B は同じ購読グループに登録されます。ユーザーによる既存の購読の継承を防ぐには、ユーザーが番号を変更するたびに、REST API を使用して古い番号の購読グループをリセットします。複数のユーザーがこの電話番号を共有している場合、その全員が登録解除される。
 
-### ユーザーのSMS受信グループを確認する方法
+### ユーザーの SMS 購読グループを確認する方法
 
-- **ユーザープロフィール:**個々のユーザープロフィールは、Brazeダッシュボードからサイドバーのユーザー検索を選択してアクセスできます。ここでは、電子メールアドレス、電話番号、または外部ユーザーIDによってユーザープロファイルを検索することができます。ユーザープロファイルのEngagementタブで、ユーザーのSMS購読グループを見ることができます。 
-- **Rest API:**Braze REST APIを使用し、[List user's subscription groups endpoint][9]または[List user's subscription group status endpoint][8]で、個々のユーザープロファイルの契約グループを確認することができます。 
+- **ユーザープロフィール:**Braze ダッシュボードのサイドバーにある [ユーザー検索] を使用して、個々のユーザープロファイルにアクセスできます。ここでは、電子メールアドレス、電話番号、外部ユーザーIDでユーザープロファイルを検索できる。ユーザープロファイルの [エンゲージメント] タブに、ユーザーの SMS 購読グループが表示されます。 
+- **Rest API:**Braze REST API を使用することで、[ユーザーの購読グループをリストするエンドポイント][9]または[ユーザーの購読グループのステータスをリストするエンドポイント][8]で、個々のユーザープロファイルの購読グループを確認できます。 
 
-## 購読グループでの送信
+## 購読グループを使用する送信
 
-Brazeを通じてSMSキャンペーンを開始するには、以下の画像に示すように、ドロップダウンで購読グループを選択する必要があります。選択されると、キャンペーンまたはキャンバスにオーディエンスフィルターが自動的に追加され、選択された購読グループのユーザー（`subscribed` ）だけがターゲットオーディエンスになるようにします。国際的な[通信コンプライアンスとガイドライン][3]を遵守するため、Brazeは選択された購読グループに加入していないユーザーにSMSを送信することはありません。  
+Braze 経由で SMS キャンペーンを開始するには、次の画像に示すように、ドロップダウンで購読グループを選択する必要があります。購読グループを選択すると、オーディエンスフィルターがキャンペーンまたはキャンバスに自動的に追加され、選択した購読グループを購読している (`subscribed`) ユーザーのみが確実にターゲットオーディエンスに含まれます。国際的な[通信コンプライアンスとガイドライン]][3] を遵守するため、Brazeは選択した購読グループに加入していないユーザーにSMSを送信することはない。  
 
-![SMSコンポーザーで、契約グループのドロップダウンを開き、"Messaging Service A for SMS "をユーザーがハイライトした状態][6]。
+![ユーザーが購読グループのドロップダウンを開き、[Messaging Service A for SMS] を強調表示した SMS 作成画面。][6]
 
 ## セットアッププロセス
 
-SMSオンボーディングプロセスで、Brazeオンボーディングマネージャーがお客様のダッシュボードアカウントにサブスクリプショングループを設定します。必要な購読グループの数を決定し、適切な送信電話番号を購読グループに追加します。購読グループの設定スケジュールは、追加する電話番号の種類によって異なります。例えば、ショートコードの申請には8～12週間かかるが、ロングコードは1日で設定できる。Brazeダッシュボードの設定についてご質問がある場合は、Brazeの担当者にお問い合わせください。  
+お客様の SMS オンボーディングプロセスで、Braze のオンボーディングマネージャーがお客様のダッシュボードアカウントに購読グループを設定します。お客様に協力して、必要な購読グループの数を決定し、適切な送信電話番号を購読グループに追加します。サブスクリプショングループのセットアップにかかる時間は、追加する電話番号のタイプによって異なる。例えば、ショートコードの申請には8～12週間かかるが、ロングコードは1日で設定できる。Brazeダッシュボードの設定について質問がある場合は、Brazeの担当者に連絡してサポートを受ける。  
 
 ## サブスクリプション・グループのMMS有効化
 
-MMSメッセージを送信するには、契約グループ内の少なくとも1つの番号がMMS送信を有効にしている必要があります。これは購読グループの隣にあるタグで示される。 
+MMS メッセージを送信するには、購読グループ内の少なくとも 1 つの番号で MMS の送信を有効にする必要があります。これは、購読グループの横にあるタグによって示されます。 
 
-![サブスクリプショングループのドロップダウンで、"メッセージングサービスA for SMS "を強調表示します。エントリーの先頭に "MMS "というタグが付く][10]。{: style="max-width:40%"}
+![[Messaging Service A for SMS] が強調表示された購読グループのドロップダウン。エントリーの先頭に "MMS "というタグが付く。][10]{: style="max-width:40%"}
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
-[2]:{{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-[3]:{{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-[4]:{{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+[4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [6]: {% image_buster /assets/img/sms/sms_subgroup_select.png %}
-[7]:{{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/
-[8]:{{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]:{{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
 [10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
 [11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup

@@ -1,57 +1,59 @@
 ---
 nav_title: アプリ内メッセージング
-article_title: Unity のアプリ内メッセージング
+article_title: Unityのアプリ内メッセージ
 channel: in-app messaging
 platform: 
   - Unity
   - iOS
   - Android
 page_order: 2
-description: "このリファレンス記事では、Unity プラットフォームのアプリ内メッセージング構成ガイドラインについて説明します。"
+description: "このリファレンス記事では、Unityプラットフォームのアプリ内メッセージング構成ガイドラインについて説明する。"
 
 ---
 
 # アプリ内メッセージング統合
 
-> このリファレンス記事では、Unity プラットフォームのアプリ内メッセージング構成ガイドラインについて説明します。
+> このリファレンス記事では、Unityプラットフォームのアプリ内メッセージング構成ガイドラインについて説明する。
 
-## デフォルトのアプリ内メッセージの動作を構成する
+## デフォルトのアプリ内メッセージの動作を設定する
 
 {% tabs %}
 {% tab Android %}
 
-Android では、Braze からのアプリ内メッセージは自動的にネイティブに表示されます。この機能を無効にするには、Braze 構成エディタで **「アプリ内メッセージを自動的に表示する」の** 選択を解除します。
+Androidでは、Brazeからのアプリ内メッセージが自動的にネイティブ表示される。この機能を無効にするには、Brazeコンフィギュレーションエディターで「**アプリ内メッセージを自動的に表示する**」の選択を解除する。
 
-代わりに設定することもできます `com_braze_inapp_show_inapp_messages_automatically` に `false` Unityプロジェクトの `braze.xml`。
+代わりに、Unity プロジェクトの `braze.xml` で `com_braze_inapp_show_inapp_messages_automatically` を`false` に設定することもできます。
 
-アプリ内メッセージの初期表示操作は、Braze 設定の「アプリ内メッセージ マネージャーの初期表示操作」で設定できます。
+アプリ内メッセージの初期表示動作は、Braze 設定の「アプリ内メッセージマネージャー初期表示動作」で設定できます。
 
 {% endtab %}
 {% tab iOS %}
 
-iOS では、Braze からのアプリ内メッセージは自動的にネイティブに表示されます。この機能を無効にするには、Braze 構成エディターでゲーム オブジェクト リスナーを設定し、**「Braze Displays In-App Messages」** が選択されていないことを確認します。
+iOSでは、Brazeからのアプリ内メッセージは自動的にネイティブ表示される。この機能を無効にするには、Braze 設定エディターでゲームオブジェクトリスナーを設定し、[**Braze でアプリ内メッセージを表示する**] が選択されていないことを確認します。
+
+アプリ内メッセージの初期表示動作は、Braze 設定の「アプリ内メッセージマネージャー初期表示動作」で設定できます。
 
 {% endtab %}
 {% endtabs %}
 
-## アプリ内メッセージの表示動作の設定
+## アプリ内メッセージの表示動作を設定する
 
-オプションで、実行時にアプリ内メッセージの表示動作を次のように変更できます。
+オプションで、アプリ内メッセージの表示動作を実行時に以下の方法で変更することができます。
 
-\`\`\`csharp
-// トリガーされたときにすぐに表示されるアプリ内メッセージを設定します。
-Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM\_DISPLAY\_NOW);
+```csharp
+// Sets in-app messages to display immediately when triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_NOW);
 
-// アプリ内メッセージを後で表示し、スタックに保存するように設定します。
-Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM\_DISPLAY\_LATER);
+// Sets in-app messages to display at a later time and be saved in a stack.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER);
 
-// トリガーされた後に破棄されるアプリ内メッセージを設定します。
-Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM\_DISCARD);
-\`\`\`
+// Sets in-app messages to be discarded after being triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
+```
 
-## オンデマンドでアプリ内メッセージを表示する
+## アプリ内メッセージをオンデマンドで表示する
 
-スタック内の次の利用可能なアプリ内メッセージを表示するには、 `DisplayNextInAppMessage()` 方法。メッセージは、次の場合にこの保存済みメッセージスタックに追加されます。 `DISPLAY_LATER` または `BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` アプリ内メッセージ表示アクションとして選択されます。
+`DisplayNextInAppMessage()` メソッドを使って、スタック内の次に利用可能なアプリ内メッセージを表示できます。アプリ内メッセージ表示アクションとして`DISPLAY_LATER` または`BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER` が選択された場合、メッセージはこの保存されたメッセージのスタックに追加される。
 
 ```csharp
 Appboy.AppboyBinding.DisplayNextInAppMessage();
@@ -59,17 +61,17 @@ Appboy.AppboyBinding.DisplayNextInAppMessage();
 
 ## Unityでアプリ内メッセージデータを受信する
 
-アプリ内メッセージの受信を通知するために Unity ゲーム オブジェクトを登録できます。ゲーム オブジェクト リスナーは、Braze 構成エディターから設定することをお勧めします。構成エディターでは、Android と iOS のリスナーを個別に設定する必要があります。
+Unity ゲームオブジェクトを登録して、アプリ内メッセージの受信について通知を受けることができます。Brazeコンフィギュレーションエディターからゲームオブジェクトリスナーを設定することを推奨する。コンフィギュレーション・エディターでは、リスナーをAndroidとiOSで別々に設定する必要がある。
 
-実行時にゲームオブジェクトリスナーを設定する必要がある場合は、 `AppboyBinding.ConfigureListener()` 指定する `BrazeUnityMessageType.IN_APP_MESSAGE`。
+ゲームオブジェクトのリスナーを実行時に設定する必要がある場合は、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.IN_APP_MESSAGE` を指定します。
 
-## アプリ内メッセージの解析
+## アプリ内メッセージを解析する
 
-着信 `string` アプリ内メッセージ ゲーム オブジェクト コールバックで受信したメッセージは、便宜上、事前に用意されたモデル オブジェクトに解析できます。
+アプリ内メッセージゲームオブジェクトのコールバックで受け取った受信 `string` メッセージは、便宜上、事前に提供されているモデルオブジェクトに解析できます。
 
-使用 `InAppMessageFactory.BuildInAppMessage()` アプリ内メッセージを解析します。結果のオブジェクトは、 [`IInAppMessage.cs`][13] または [`IInAppMessageImmersive.cs`][12] 種類によって異なります。
+`InAppMessageFactory.BuildInAppMessage()` を使ってアプリ内メッセージを解析しよう。結果として得られるオブジェクトはそのタイプに応じて [`IInAppMessage.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) または [`IInAppMessageImmersive.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) のインスタンスになります。
 
-### アプリ内メッセージコールバックの例
+### アプリ内メッセージのコールバック例
 
 ```csharp
 // Automatically logs a button click, if present.
@@ -84,49 +86,50 @@ void InAppMessageReceivedCallback(string message) {
 }
 ```
 
+## GIFサポート
+
+{% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
+
 ## 分析
 
-Braze によって直接表示されないアプリ内メッセージのクリックとインプレッションは手動で記録する必要があります。
+Brazeが直接表示しないアプリ内メッセージについては、クリック数とインプレッション数を手動で記録する必要がある。
 
-使用 `LogClicked()` そして `LogImpression()` の上 [`IInAppMessage`][13] メッセージのクリック数と表示回数を記録します。
+[`IInAppMessage`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) で `LogClicked()` と `LogImpression()` を使用して、メッセージのクリック数とインプレッション数をログに記録します。
 
-使用 `LogButtonClicked(int buttonID)` の上 [`IInAppMessageImmersive`][12] ボタンのクリックを記録します。ボタンはリストとして表されることに注意してください。[`InAppMessageButton`][8] インスタンスにはそれぞれ `ButtonID`。
+[`IInAppMessageImmersive`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) で `LogButtonClicked(int buttonID)` を使用して、ボタンのクリック数をログに記録します。ボタンは [`InAppMessageButton`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs) インスタンスのリストとして表され、各インスタンスには `ButtonID` が含まれます。
 
-## カスタムアクションリスナー
+## カスタム・アクション・リスナー
 
-ユーザーがアプリ内メッセージをどのように操作するかをより細かく制御する必要がある場合は、 `BrazeInAppMessageListener` そしてそれを割り当てる `Appboy.AppboyBinding.inAppMessageListener`。使用したくないデリゲートについては、そのままにしておくことができます。 `null`。
+ユーザーがアプリ内メッセージを操作する方法をより細かくコントロールする必要がある場合は、`BrazeInAppMessageListener` を使用してそれを `Appboy.AppboyBinding.inAppMessageListener` に割り当てます。使用しないデリゲートについては、単に `null` のままにしておくことができます。
 
-\`\`\`csharp
+```csharp
 BrazeInAppMessageListener listener = new BrazeInAppMessageListener() {
-  BeforeInAppMessageDisplayed = BeforeInAppMessageDisplayed、
-  OnInAppMessageButtonClicked = OnInAppMessageButtonClicked、
-  OnInAppMessageClicked = OnInAppMessageClicked、
-  OnInAppMessageHTMLクリック = OnInAppMessageHTMLクリック、
-  OnInAppMessageDismissed = OnInAppMessageDismissed、
-()
-Appboy.AppboyBinding.inAppMessageListener = リスナー;
+  BeforeInAppMessageDisplayed = BeforeInAppMessageDisplayed,
+  OnInAppMessageButtonClicked = OnInAppMessageButtonClicked,
+  OnInAppMessageClicked       = OnInAppMessageClicked,
+  OnInAppMessageHTMLClicked   = OnInAppMessageHTMLClicked,
+  OnInAppMessageDismissed     = OnInAppMessageDismissed,
+};
+Appboy.AppboyBinding.inAppMessageListener = listener;
 
 public void BeforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
-  // アプリ内メッセージが表示される前に実行されます。
-()
+  // Executed before an in-app message is displayed.
+}
 
 public void OnInAppMessageButtonClicked(IInAppMessage inAppMessage, InAppMessageButton inAppMessageButton) {
-  // アプリ内メッセージボタンがクリックされるたびに実行されます。
-()
+  // Executed whenever an in-app message button is clicked.
+}
 
 public void OnInAppMessageClicked(IInAppMessage inAppMessage) {
-  // アプリ内メッセージがクリックされるたびに実行されます。
-()
+  // Executed whenever an in-app message is clicked.
+}
 
 public void OnInAppMessageHTMLClicked(IInAppMessage inAppMessage, Uri uri) {
-  // HTML アプリ内メッセージがクリックされるたびに実行されます。
-()
+  // Executed whenever an HTML in-app message is clicked.
+}
 
 public void OnInAppMessageDismissed(IInAppMessage inAppMessage) {
-  // アプリ内メッセージがクリックされずに閉じられるたびに実行されます。
-()
-\`\`\`
+  // Executed whenever an in-app message is dismissed without a click.
+}
+```
 
-[8]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs
-[12]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs
-[13]: https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs

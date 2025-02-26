@@ -15,3 +15,17 @@
 # Liquid use case library: Validate that new and updated use cases are tested before merging them in. Rachel will validate. Josh is added as code owner in case Rachel is out of office to avoid blockers.
 
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @josh-mccrowell-braze @rachel-feinberg
+
+# Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints. They are added as codeowners so they can watch for changes to these endpoints. So their codeownership doesn't block style changes to the docs, Lydia is added as a codeowner as the primary API tech writer. In case she's out, the rest of the Docs Team is also added so that changes are not inappropriately blocked.
+
+/_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_campaigns.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_canvases.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+
+# Currents Event Docs: Currents owns event payload auto-generation templates for these endpoints, and are codeowners to be notified when changes are made so that the templates can be kept in-sync.
+/_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events.md @braze-inc/currents @braze-inc/docs-team
+/_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events.md @braze-inc/currents @braze-inc/docs-team

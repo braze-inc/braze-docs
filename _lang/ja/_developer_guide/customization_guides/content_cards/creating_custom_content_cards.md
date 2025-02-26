@@ -14,7 +14,7 @@ platform:
 
 # カスタムコンテンツカードの作成
 
-> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、バナー画像、メッセージ受信トレイ、画像のカルーセルの3つの一般的なユースケースについて説明します。
+> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、バナー画像、メッセージ受信トレイ、画像のカルーセルの3つの一般的なユースケースについて説明します。コンテンツ・カードのカスタマイズ・ガイドの他の記事をすでに読んで、デフォルトでできることと、カスタム・コードが必要なことを理解していることを前提としている。特に、カスタム・コンテンツ・カードの[アナリティクスを記録]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics)する方法を理解することである。 
 
 Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`control`といったさまざまな[コンテンツカードタイプ][1]が用意されています。これらは実装の出発点として使用でき、ルックアンドフィールを調整できます。 
 
@@ -33,7 +33,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 2. データの更新をリッスンする
 3. 分析を手動でログに記録する
 
-### ステップ1: カスタム UI を作成する 
+### ステップ1:カスタム UI を作成する 
 
 {% tabs %}
 {% tab Android %}
@@ -53,19 +53,19 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: カードの更新情報を購読する
+### ステップ2:カードの更新情報を購読する
 
 次に、カードの更新時に[データ更新を購読][6]するコールバック関数を登録します。 
 
-### ステップ3: 分析を実装する
+### ステップ3:分析を実装する
 
-コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。すべての指標が Braze ダッシュボードの分析に適切にログバックされるように、[それぞれのメソッドを実装][3]する必要があります。
+コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。すべての指標が Braze ダッシュボードの分析に適切に記録されるように、[それぞれのメソッドを実装][3]する必要があります。
 
 ## コンテンツカードの配置
 
 コンテンツカードはさまざまな方法で使用できます。一般的な3つの実装は、メッセージセンター、バナー広告、または画像カルーセルとして使用することです。これらの配置ごとに、[キーと値のペア][7] (データモデルの`extras`プロパティ) をコンテンツカードに割り当て、その値に基づいて、ランタイム時にカードの動作、外観、または機能を動的に調整します。 
 
-![\]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### メッセージの受信トレイ
 
@@ -73,30 +73,30 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 
 以下は、2つのメッセージカードを作成するために使用できるダッシュボード構成例です。1つのメッセージは、的を絞った読書レコメンデーションをユーザーが受け取るためのプレファレンスを追加する行動喚起であり、もう1つは新規購読者のセグメントにクーポンコードを提供するものです。 
 
-![\]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps.png %}){: style="max-width:20%;float:right;margin-left:15px;border:0px;"}
+![]({% image_buster /assets/img/content_cards/content-card-message-inbox-with-kvps.png %}){: style="max-width:20%;float:right;margin-left:15px;border:0px;"}
 
 読書レコメンデーションカードのキーと値のペアの例は次のとおりです。
 
 - body: Politer Weekly のプロファイルに興味のある内容を追加して、個人的な読書レコメンデーションを手に入れましょう。
 - style: info
-- class\_type: notification\_center
-- card\_priority: 1
+- class_type: notification_center
+- card_priority:1
 
 新規購読者のクーポンのキーと値のペアの例は次のとおりです。
 
-- title: 無制限のゲームを購読する
+- title:無制限のゲームに登録する
 - body: 夏の終わりスペシャル - Politer ゲームが10%オフ
 - buttonText: 今すぐ購読する
 - style: promo
-- class\_type: notification\_center
-- card\_priority: 2
-- terms: new\_subscribers\_only
+- class_type: notification_center
+- card_priority:2
+- terms: new_subscribers_only
 
 マーケターは、このコンテンツカードを一部の新規ユーザーにのみ提供することができます。 
 
 それぞれの値を扱うことになります。`body`、`title`、`buttonText`などのキーは、マーケターが設定できる単純な文字列値を持つ場合があります。`terms`のようなキーは、法務部門が承認したフレーズの小さなコレクションを提供する値を持つ場合があります。アプリやサイトで`style`や`class_type`をどのようにレンダリングするかを決めることになります。 
 
-{% details Further explanation for Android %}
+{% details Android に関する詳細説明 %}
 
 Android と FireOS SDK では、メッセージセンターのロジックは Braze のキーと値のペアが提供する`class_type`値によって駆動されます。[`createContentCardable`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide)メソッドを使用すると、これらのクラスタイプをフィルタリングして識別できます。
 
@@ -121,70 +121,70 @@ Android と FireOS SDK では、メッセージセンターのロジックは Br
 
 次に、メッセージリストに対するユーザーの操作を処理するときに、メッセージのタイプを使用して、ユーザーに表示するビューを決定できます。
 
-\`\`\`kotlin
-override fun onCreate(savedInstanceState:Bundle?) {
-super.onCreate(savedInstanceState)
-//...
-listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-when (val card = dataProvider[position]){
-is WebViewMessage -> {
-val intent = Intent(this, WebViewActivity::class.java)
-val bundle = Bundle()
-bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.contentString)
-intent.putExtras(bundle)
-startActivity(intent)
-}
-        is FullPageMessage -> {
-val intent = Intent(this, FullPageContentCard::class.java)
-val bundle = Bundle()
-bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.icon)
-bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.messageTitle)
-bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.cardDescription)
-intent.putExtras(bundle)
-startActivity(intent)
-}
-        }
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //...
+        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+           when (val card = dataProvider[position]){
+                is WebViewMessage -> {
+                    val intent = Intent(this, WebViewActivity::class.java)
+                    val bundle = Bundle()
+                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.contentString)
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+                is FullPageMessage -> {
+                    val intent = Intent(this, FullPageContentCard::class.java)
+                    val bundle = Bundle()
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.icon)
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.messageTitle)
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.cardDescription)
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+            }
 
         }
     }
-\`\`\`
+```
 {% endtab %}
 {% tab Java %}
 **クリック時の動作に`class_type`を使用する**<br>
 コンテンツカードのデータをカスタムクラスにインフレートするときに、データの`ContentCardClass`プロパティを使用して、データの格納に使用する具象サブクラスを決定します。
 
-\`\`\`java
+```java
 private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
-switch(type){
-case ContentCardClass.AD:{
-return new Ad(metadata);
-}
-    case ContentCardClass.MESSAGE\_WEB\_VIEW:{
-        return new WebViewMessage(metadata);
-            }
-        case ContentCardClass.NOTIFICATION\_CENTER:{
-        return new FullPageMessage(metadata);
-            }
-        case ContentCardClass.ITEM\_GROUP:{
-        return new Group(metadata);
-            }
-        case ContentCardClass.ITEM\_TILE:{
-        return new Tile(metadata);
-            }
+    switch(type){
+        case ContentCardClass.AD:{
+            return new Ad(metadata);
+        }
+        case ContentCardClass.MESSAGE_WEB_VIEW:{
+            return new WebViewMessage(metadata);
+        }
+        case ContentCardClass.NOTIFICATION_CENTER:{
+            return new FullPageMessage(metadata);
+        }
+        case ContentCardClass.ITEM_GROUP:{
+            return new Group(metadata);
+        }
+        case ContentCardClass.ITEM_TILE:{
+            return new Tile(metadata);
+        }
         case ContentCardClass.COUPON:{
-        return new Coupon(metadata);
-            }
+            return new Coupon(metadata);
+        }
         default:{
-        return null;
-            }
+            return null;
         }
-        }
+    }
+}
 
-\`\`\`
+```
 
 次に、メッセージリストに対するユーザーの操作を処理するときに、メッセージのタイプを使用して、ユーザーに表示するビューを決定できます。
 
-\`\`\`java
+```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState)
@@ -196,16 +196,16 @@ protected void onCreate(Bundle savedInstanceState) {
                if (card instanceof WebViewMessage){
                     Bundle intent = new Intent(this, WebViewActivity.class);
                     Bundle bundle = new Bundle();
-                    bundle.putString(WebViewActivity.INTENT\_PAYLOAD, card.getContentString());
+                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.getContentString());
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }
                 else if (card instanceof FullPageMessage){
                     Intent intent = new Intent(this, FullPageContentCard.class);
                     Bundle bundle = Bundle();
-                    bundle.putString(FullPageContentCard.CONTENT\_CARD\_IMAGE, card.getIcon());
-                    bundle.putString(FullPageContentCard.CONTENT\_CARD\_TITLE, card.getMessageTitle());
-                    bundle.putString(FullPageContentCard.CONTENT\_CARD\_DESCRIPTION, card.getCardDescription());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.getIcon());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.getMessageTitle());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.getCardDescription());
                     intent.putExtras(bundle)
                     startActivity(intent)
                 }
@@ -213,7 +213,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
         });
     }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -227,11 +227,11 @@ protected void onCreate(Bundle savedInstanceState) {
 
 そうは言っても、さまざまな方法で追加の表示ロジックを注文して適用することができます。たとえば、配列から最初の5つのコンテンツカードオブジェクトを選択したり、キーと値のペアを導入して条件付きロジックを構築したりできます。
 
-セカンダリコンテンツカードフィードとしてカルーセルを実装する場合は、[デフォルトのコンテンツカードフィードのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)を参照して、キーと値のペアに基づいてカードが正しいフィードにソートされるようにします。
+セカンダリコンテンツカードフィードとしてカルーセルを実装する場合は、[デフォルトのコンテンツカードフィードのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)を参照して、キーと値のペアに基づいてカードを正しいフィードにソートする方法を確認してください。
 
 ### バナー
 
-コンテンツカードは「カード」のように見せる必要はありません。 たとえば、コンテンツカードは動的なバナーとして表示され、ホームページや指定ページの上部に永続的に表示されます。
+コンテンツカードは「カード」のように見せる必要はありません。たとえば、コンテンツカードは動的なバナーとして表示され、ホームページや指定ページの上部に永続的に表示されます。
 
 これを実現するために、マーケターは**画像のみ**タイプのコンテンツカードでキャンペーンまたはキャンバスステップを作成します。次に、[コンテンツカードを補足コンテンツとして][4]使用するのに適したキーと値のペアを設定します。
 

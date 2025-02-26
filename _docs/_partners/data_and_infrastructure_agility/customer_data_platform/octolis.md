@@ -27,7 +27,7 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 | Braze REST API key | A Braze REST API key with [**users.track**][1] permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze app key | Your app identifier key. This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -83,10 +83,10 @@ Here is a specific definition of settings fields.
 | Where do you want to sync the audience to? | Braze's entity where you will create or update records. |
 | Which field is used to identify a record? | The field will use Octolis to identify a record if it already exists in Braze. |
 | How often do you want to send each record? | By default, the sync will be incremental for all integrations (API, database, FTP). This means that only new values since the last update will be updated. If necessary, you can also send whole tables at regular intervals. On initiation, Octolis will send the complete table. |
-| Which fields should be synced? | Octolis to Braze fields mapping. The list of all available fields appears in the drop-down menu. To send a computed field to Braze, you must first ensure that you created the corresponding column within your Braze entity. |
+| Which fields should be synced? | Octolis to Braze fields mapping. The list of all available fields appears in the dropdown menu. To send a computed field to Braze, you must first ensure that you created the corresponding column within your Braze entity. |
 | When do you want to sync the audience? | How the data will be sent to Braze: manually, in real-time, or programmed.  |
 | Sync when record is... | Create: For opt-ins, it is important that the Braze table remains master. You don't want Octolis to trigger a sync when the field is updated.<br><br>Update: On the other hand, for a first name field, for example, you want to be able to update the field in your Braze table each time a customer gives you a new entry. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Multi-keys deduplication
 

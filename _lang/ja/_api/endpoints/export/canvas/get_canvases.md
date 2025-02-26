@@ -1,53 +1,53 @@
 ---
-nav_title: "取得:キャンバスリストの書き出し"
-article_title: "取得:キャンバスリストの書き出し"
+nav_title: "取得:キャンバスリストをエクスポートする"
+article_title: "取得:キャンバスリストをエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「キャンバスを書き出し」リストの「Braze」エンドポイントについて説明します。"
+description: "この記事では、「キャンバスリストのエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# キャンバスリストの書き出し
+# キャンバスリストをエクスポートする
 {% apimethod get %}
 /canvas/list
 {% endapimethod %}
 
-> このエンドポイントを使用して、名前、Canvas API ID、および関連するタグを含むCanvase のリストをエクスポートします。 
+> このエンドポイントを使用して、名前、キャンバスAPI識別子、関連タグを含むキャンバスのリストをエクスポートする。
 
-キャンバスは、作成時にソートされた100 個のグループで返されます(デフォルトでは最も古いものから最新のもの)。
+キャンバスは、作成時刻順 (デフォルトでは古い順) で並べられた 100 個のグループで返されます。
 
-アーカイブされたキャンバスは、`include_archived` フィールドが指定されていない限り、API 応答に含まれません。ただし、停止しているがアーカイブされていないキャンバスは、デフォルトで返されます。
+`include_archived` フィールドが指定されていない限り、アーカイブされたキャンバスは API 応答に含まれません。ただし、停止しているがアーカイブされていないキャンバスは、デフォルトで返却される。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`canvas.list` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`canvas.list`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `page` | オプション| 整数| 返されるキャンバスのページ。デフォルトは`0` (100 までの最初のセットを返します) |
-| `include_archived` | オプション| ブール| アーカイブされたキャンバスを含めるかどうかに関係なく、デフォルトは`false` | です。
-| `sort_direction` | オプション| String | - 作成時刻を最新から最も古い順に並べ替えます。値`desc` を渡します。<br> \- 作成時刻を最も古いものから最新のものにソートするには、`asc` の値を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は最も古い順から最新の順になります。|
-| `last_edit.time[gt]` | Optional | Time | 結果をフィルタリングし、これまでに指定された時間よりも大きい時間に編集されたキャンバスのみを返します。フォーマットは`yyyy-MM-DDTHH:mm:ss`です。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `page` | オプション | 整数 | 返すキャンバスのページ、デフォルトは`0` （最大100枚までの最初のセットを返す） |
+| `include_archived` | オプション | ブール値 | アーカイブされたキャンバスを含めるかどうか。デフォルトは`false` 。 |
+| `sort_direction` | オプション | 文字列 | \- 作成時刻を新しいものから古いものへと並べ替える: 値 `desc` を渡します。<br> \- 作成時刻を古いものから新しいものへと並べ替える: 値 `asc` を渡します。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
+| `last_edit.time[gt]` | オプション | 時刻 | 結果をフィルターし、現在までに指定された時間より長く編集されたキャンバスのみを返します。形式は `yyyy-MM-DDTHH:mm:ss` です。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## レスポンス
+## 応答
 
 ```json
 Content-Type: application/json
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV およびAPI エクスポートのヘルプについては、[トラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) をエクスポートしてください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

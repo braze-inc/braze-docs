@@ -8,9 +8,6 @@ description: "This landing page lists Braze partners (Alloys) who allow you to a
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Message Personalization"
 
 valid_partner_list:
@@ -36,8 +33,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: Infillion
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -64,17 +61,26 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
   url: /docs/partners/message_personalization/localization/phrase/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Smartling
   url: /docs/partners/message_personalization/localization/smartling/
 - name: SmarterSends
   url: /docs/partners/message_personalization/dynamic_content/smartersends/
 - name: Tangerine
-  url: /docs/partners/message_personalization/location/tangerine/ 
+  url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages/
-  
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Odicci
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
+- name: Trustpilot
+  url: /docs/partners/message_personalization/dynamic_content/trustpilot/
+- name: Constructor
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
 ---

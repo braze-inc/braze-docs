@@ -1,41 +1,41 @@
 ---
-nav_title: "得る：キャンペーンの詳細をエクスポート"
-article_title: "得る：キャンペーンの詳細をエクスポート"
+nav_title: "取得:キャンペーンの詳細のエクスポート"
+article_title: "取得:キャンペーンの詳細のエクスポート"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、Braze エンドポイントのキャンペーン詳細のエクスポートについて詳しく説明します。"
+description: "この記事では、「キャンペーンの詳細のエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# キャンペーンの詳細をエクスポートする
+# キャンペーンのエクスポートの詳細
 {% apimethod get %}
 /campaigns/details
 {% endapimethod %}
 
-> このエンドポイントを使用して、指定されたキャンペーンの関連情報を取得します。 `campaign_id`。 
+> このエンドポイントを使用して、`campaign_id` で識別できる、指定されたキャンペーンの関連情報を取得します。
 
-Canvas データを取得する場合は、[Canvas の詳細のエクスポート]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) エンドポイントを参照してください。
+キャンバスデータを取得する場合は、「[キャンバス詳細のエクスポート]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)」エンドポイントを参照してください。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `campaigns.details` 許可。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.details`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id`| 必須 | 文字列 | [キャンペーン API 識別子を]({{site.baseurl}}/api/identifier_types/)参照してください。<br><br> の `campaign_id` API キャンペーンの情報は、ダッシュボード内の [API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページと **キャンペーンの詳細** ページにあります。または、 [キャンペーン リストのエクスポート エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例 
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -43,7 +43,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ```
 {% endraw %}
 
-## 反応
+## 回答
 
 ```json
 Content-Type: application/json
@@ -73,17 +73,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### チャネル別メッセージ
+### チャネル別のメッセージ
 
-の `messages` 応答には各メッセージに関する情報が含まれます。以下に、各チャネルのメッセージ応答の例を示します。
+`messages` レスポンスには、各メッセージに関する情報が含まれます。チャネルごとのメッセージレスポンスの例を次に示します。
 
-#### プッシュ通知
+#### プッシュ
 
 ```json
 {
     "channel": (string) the description of the channel, such as "ios_push" or "android_push"
     "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click
 }
 ```
 
@@ -92,16 +94,23 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
     "channel": "email",
+    "name": (string) the name of the variant,
+    "extras": (array) the email extras,
     "subject": (string) the subject,
     "body": (string) the HTML body,
     "from": (string) the from address and display name,
     "reply_to": (string) the reply-to for message, if different than "from" address,
     "title": (string) the name of the email,
-    "extras": (hash) any key-value pairs provided
+    "amp_body": (string) the AMP HTML body,
+    "preheader": (string) the preheader,
+    "custom_plain_text": (string) the custom plain text,
+    "should_inline_css": (boolean) whether there should be inline CSS,
+    "should_whitespace_header": (boolean) whether there should be a whitespace header,
+    "email_headers": (array) list of email headers
 }
 ```
 
-#### アプリ内メッセージ数
+#### アプリ内メッセージ
 
 ```json
 {
@@ -109,17 +118,17 @@ Authorization: Bearer YOUR-REST-API-KEY
     "data": {
         "pages": [
             {
-                "header": 
+                "header":
                     {
                          "text":(string) the display text for the header of the survey,
                     }
                 "choices": [
                     {
                        "choice_id": (string) the choice identifier,
-                       "text": (string) the display text, 
-                       "custom_attribute_key": (string) the custom attribute key, 
+                       "text": (string) the display text,
+                       "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign, 
+                       "deleted": (boolean) deleted from live campaign,
                     },
                     ...
                 ]
@@ -129,7 +138,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### コンテンツカード
+#### コンテンツカードによって促進された
 
 ```json
 {
@@ -185,7 +194,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "channel": "whats_app",
-  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message,
   "from": (array) list of strings of the numbers associated with the subscription group,
   "layout": (string) the name of the WhatsApp template being sent (text or media or quick-reply),
   "header_text": (string, optional) the text, if present, of the header of the message being sent,
@@ -204,9 +213,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### コンバージョン行動
+### 変換動作
 
-の `conversion_behaviors` 配列には、キャンペーンに設定された各コンバージョン イベント動作に関する情報が含まれます。これらの動作はキャンペーンで設定された順序に従います。たとえば、コンバージョン イベント A は配列の最初の項目になり、コンバージョン イベント B は 2 番目の項目になります。以下に、コンバージョン イベントの動作応答の例を示します。
+`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目などです。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
 
 #### メールをクリック
 
@@ -226,7 +235,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 購入する（あらゆる購入）
+#### 購入 (任意の購入)
 
 ```json
 {
@@ -235,7 +244,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 購入する（特定の商品）
+#### 購入 (特定の製品)
 
 ```json
 {
@@ -245,7 +254,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### <b>カスタムイベントの実行</b>
+#### カスタムイベントの実行
 
 ```json
 {
@@ -255,7 +264,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### アプリをアップグレードする
+#### アップグレードアプリ
 
 ```json
 {
@@ -265,7 +274,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### アプリを使用する
+#### アプリの使用
 
 ```json
 {
@@ -276,7 +285,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API エクスポートに関するヘルプについては、[「エクスポートのトラブルシューティング」]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)をご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

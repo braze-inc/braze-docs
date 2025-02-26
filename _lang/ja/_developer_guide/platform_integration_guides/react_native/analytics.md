@@ -11,7 +11,7 @@ description: "この記事では、React Native アプリで、セッション�
 
 > この記事では、React Native アプリで基本的な分析を設定し、追跡する方法を説明します。
 
-始める前に、[分析の概要][0]の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則][1]についてもよく理解しておくことをお勧めします。
+始める前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## セッショントラッキング
 
@@ -23,7 +23,7 @@ Braze SDK は、Braze ダッシュボードで使用されるセッションデ�
 Braze.changeUser("user_id");
 ```
 
-## カスタムイベントを記録する
+## カスタムイベントのログ記録
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンについて詳しく知ることができ、ダッシュボードでの行動によってユーザーを分類できます。
 
@@ -69,7 +69,7 @@ Braze.setFirstName("Name");
 
 ### カスタムユーザー属性
 
-Braze は、定義済みのユーザー属性メソッドに加えて、アプリケーションからのデータを追跡するための[カスタム属性](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)も提供しています。 
+Braze は、定義済みのユーザー属性メソッドに加えて、アプリケーションからのデータを追跡するための[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)も提供しています。 
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
@@ -88,28 +88,28 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 #### カスタム属性配列
 
-\`\`\`javascript
+```javascript
 
-// カスタム属性の文字列配列に文字列を追加するか、その配列が存在しない場合は作成します。
+// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
-// カスタム属性の文字列配列から文字列を削除する。
+// Removes a string from a custom attribute string array.
 
 
 Braze.removeFromCustomUserAttributeArray("my-attribute-array", "existing value", optionalCallback);
-\`\`\`
+```
 
 ## 購入のロギング
 
-アプリ内での購入を記録して、売上を経時的に追跡したり、収入源を横断して追跡したりできます。また、ユーザーを生涯価値で分類することもできます。
+アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
+Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
 ```javascript
 Braze.logPurchase(productId, price, currencyCode, quantity, properties);
 ```
 
-例:
+以下に例を示します。
 
 ```javascript
 Braze.logPurchase("product_id", 9.99, "USD", 1, {
@@ -118,7 +118,7 @@ Braze.logPurchase("product_id", 9.99, "USD", 1, {
 ```
 
 {% alert tip %}
-値 `10 USD` と数量 `3` を渡すと、10ドルの購入3件、合計30ドルがユーザーのプロフィールに記録されます。数量は100以下でなければなりません。購入額がマイナスになることもあります。
+値 `10 USD` と数量 `3` を渡すと、10 ドルの購入 3 件、合計 30 ドルがユーザープロファイルに記録されます。数量は 100 以下でなければなりません。購入額がマイナスになることもあります。
 {% endalert %}
 
 ### 注文レベルで購入を記録する
@@ -135,5 +135,3 @@ Braze.logPurchase("product_id", 9.99, "USD", 1, {
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

@@ -11,7 +11,7 @@ description: "この記事では、Flutter アプリでの基本的な分析の�
 
 > この記事では、Flutter アプリでの基本的な分析の設定方法と追跡方法について説明します。
 
-始める前に、[分析の概要][0]の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則][1]についてもよく理解しておくことをお勧めします。
+始める前に、[分析の概要]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)の記事を読んで、Braze 分析の詳細と、デフォルトで追跡されている内容を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## セッショントラッキング
 
@@ -23,7 +23,7 @@ Braze SDK では、ユーザーエンゲージメントやユーザーの理解�
 braze.changeUser('user_id');
 ```
 
-## カスタムイベントを記録する
+## カスタムイベントのログ記録
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンについて詳しく知ることができ、ダッシュボードでの行動によってユーザーを分類できます。
 
@@ -72,14 +72,14 @@ braze.setFirstName('Name');
 Braze では、デフォルトユーザー属性以外にも、複数の異なるデータ型を使用してカスタム属性を定義できます。
 
 {% tabs %}
-{% tab Boolean Value %}
+{% tab ブール値 %}
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 
 {% endtab %}
-{% tab Integer %}
+{% tab 整数 %}
 
 ```dart
 // Set Integer Attribute
@@ -102,13 +102,13 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab Date %}
+{% tab 日付 %}
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab Array %}
+{% tab 配列 %}
 
 ```dart
 // Adding to an Array
@@ -161,5 +161,3 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

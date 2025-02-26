@@ -1,49 +1,49 @@
 ---
-nav_title: "ポスト:カタログを作成"
-article_title: "ポスト:カタログを作成"
+nav_title: "POST:カタログを作成する"
+article_title: "POST:カタログを作成する"
 search_tag: Endpoint
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "この記事では、Create catalog Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「カタログを作成」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログの作成
+# カタログを作成する
 {% apimethod post %}
-カタログ
+/catalogs
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログを作成します。
+> このエンドポイントを使用してカタログを作成する。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.create` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.create`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalogs` | 必須| 配列| カタログオブジェクトを含む配列。この要求に使用できるカタログオブジェクトは1 つだけです。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalogs` | required | 配列 | カタログ・オブジェクトを含む配列。このリクエストでは、カタログオブジェクトは 1 つのみ許可されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-### カタログオブジェクトパラメータ
+### カタログ・オブジェクトのパラメータ
 
-| パラメータ| 必須| データ型| 説明|
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `name` | Required | String | 作成するカタログの名前。|
-| `description` | Required | String | 作成するカタログの説明。|
-| `fields` | 必須| 配列| オブジェクトがキー`name` と`type`. | を含むオブジェクトの配列。
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `name` | 必須 | 文字列 | 作成したいカタログの名前。 |
+| `description` | 必須 | 文字列 | 作成したいカタログの説明。 |
+| `fields` | required | 配列 | オブジェクトにキー `name` と `type` が含まれるオブジェクト配列。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Content-Type: application/json' \
@@ -83,6 +83,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "object"
         },
         {
+          "name": "Top_Dishes",
+          "type": "array"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -92,13 +96,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 }'
 ```
 
-## レスポンス
+## 応答
 
-このエンドポイントには、`201` と`400` の2 つのステータスコード応答があります。
+このエンドポイントには2つのステータスコード応答があります: `201` と `400`。
 
 ### 成功応答の例
 
-ステータスコード`201` は、以下のレスポンスボディを返す可能性があります。
+ステータスコード `201` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -135,6 +139,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "object"
         },
         {
+          "name": "Top_Dishes",
+          "type": "array"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -148,9 +156,9 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 }
 ```
 
-### エラーレスポンス例
+### エラー応答例
 
-ステータスコード`400` は、以下のレスポンスボディを返す可能性があります。発生する可能性のあるエラーの詳細については、[トラブルシューティング](#troubleshooting)を参照してください。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -172,23 +180,23 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## トラブルシューティング
 
-次の表に、返される可能性のあるエラーと関連するトラブルシューティング手順を示します。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| エラー| トラブルシューティング|
+| エラー | トラブルシューティング |
 | --- | --- |
-| `catalog-array-invalid` | `catalogs` はオブジェクトの配列である必要があります。|
-| `catalog-name-already-exists` | その名前のカタログが既に存在します。|
-| `catalog-name-too-large` | カタログ名の文字制限は250 です。|
-| `description-too-long` | 説明の文字制限は250 です。|
-| `field-names-not-unique` | 同じフィールド名が2 回参照されます。|
-| `field-names-too-large` | フィールド名の文字数制限は250 です。|
-| `id-not-first-column` | `id` は配列の最初のフィールドでなければなりません。型が文字列であることを確認します。|
-| `invalid-catalog-name` | カタログ名には、文字、数字、ハイフン、およびアンダースコアのみを使用できます。|
-| `invalid-field-names` | 文字、数字、ハイフン、アンダースコアのみを含めることができます。|
-| `invalid-field-types` | フィールドタイプが有効であることを確認します。|
-| `invalid-fields` | `fields` が正しくフォーマットされていません。|
-| `too-many-catalog-atoms` | 要求ごとに1つのカタログのみ作成できます。|
-| `too-many-fields` | フィールド数の制限は500 です。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `catalog-array-invalid` | `catalogs` はオブジェクト配列でなければなりません。 |
+| `catalog-name-already-exists` | その名前のカタログはすでに存在する。 |
+| `catalog-name-too-large`  | カタログ名の文字数制限は250文字である。 |
+| `description-too-long` | 説明文の文字数制限は250文字である。 |
+| `field-names-not-unique` | 同じフィールド名が2回参照されている。 |
+| `field-names-too-large` | フィールド名の文字数制限は250文字である。 |
+| `id-not-first-column` | `id` は、配列の最初のフィールドである必要があります。型が文字列であることを確認する。 |
+| `invalid-catalog-name` | カタログ名にはアルファベット、数字、ハイフン、アンダースコアのみを含めることができる。 |
+| `invalid-field-names` | フィールドに含めることができるのは、アルファベット、数字、ハイフン、アンダースコアのみである。 |
+| `invalid-field-types` | フィールドタイプが有効であることを確認する。 |
+| `invalid-fields` | `fields` が正しくフォーマットされていない。 |
+| `too-many-catalog-atoms` | 1つのリクエストにつき1つのカタログしか作成できない。 |
+| `too-many-fields` | フィールド数の上限は500である。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

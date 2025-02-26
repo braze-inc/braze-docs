@@ -17,7 +17,7 @@ channel:
 
 ### Select your subscription group
 
-SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
+SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
 ### Input message body
 
@@ -41,7 +41,7 @@ Want to learn how to create an SMS campaign? Check out our step-by-step guide on
 
 Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, short codes can only send SMS to phone numbers from the same country the short code was created in. 
 
-To overcome this limitation, during the Subscription Groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
+To overcome this limitation, during the subscription groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
 
 ![SMS payloads are sent using the same country code as the target user's phone number][2]
 

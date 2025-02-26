@@ -21,7 +21,7 @@ description: "このリファレンス記事では、階層化カスタム属性
 }
 ```
 
-この階層化されたデータにより、カスタム属性オブジェクトからの情報を使用してセグメントを作成したり、カスタム属性オブジェクトと Liquid を使用してメッセージをパーソナライズしたりできます。
+この階層化データにより、カスタム属性オブジェクトの情報を使用してセグメントを作成し、カスタム属性オブジェクトと Liquid を使用してメッセージをパーソナライズできます。
 
 カスタム属性オブジェクトは、次のような[データ型][1]を格納できます。
 
@@ -45,8 +45,8 @@ description: "このリファレンス記事では、階層化カスタム属性
 
 ## API の例
 
-{% tabs local %}
-{% tab Create %}
+{% tabs ローカル %}
+{% tab 作成 %}
 以下は、「再生回数が最も多い曲」オブジェクトを使用した `/users/track` の例です。曲のプロパティをキャプチャするために、`most_played_song` をオブジェクトとして、また一連のオブジェクトプロパティのセットとともにリストする API リクエストを送信します。
 
 ```json
@@ -70,7 +70,7 @@ description: "このリファレンス記事では、階層化カスタム属性
 ```
 
 {% endtab %}
-{% tab Update %}
+{% tab 更新 %}
 既存のオブジェクトを更新するには、リクエストに `_merge_objects` パラメーターを含む POST を `users/track` に送信します。これにより、更新内容が既存のオブジェクトデータとディープマージされます。ディープマージでは、オブジェクトの最初のレベルのみではなく、すべてのレベルが別のオブジェクトに確実にマージされます。この例では、すでに `most_played_song` オブジェクトが Braze にあり、ここでは新規フィールド `year_released` を `most_played_song` オブジェクトに追加します。
 
 ```json
@@ -108,7 +108,7 @@ description: "このリファレンス記事では、階層化カスタム属性
 {% endalert %}
 
 {% endtab %}
-{% tab Delete %}
+{% tab 削除 %}
 カスタム属性オブジェクトを削除するには、カスタム属性オブジェクトを `null` に設定して、POST を `users/track` に送信します。
 
 ```json
@@ -129,37 +129,37 @@ description: "このリファレンス記事では、階層化カスタム属性
 
 {% sdk_min_versions android:25.0.0 ios:6.1.0 web:4.7.0 %}
 
-{% tabs local %}
+{% tabs ローカル %}
 {% tab Android SDK %}
 
 **作成**
-\`\`\`kotlin
+```kotlin
 val json = JSONObject()
-    .put("song\_name", "Solea")
-    .put("artist\_name", "Miles Davis")
-    .put("album\_name", "Sketches of Spain")
+    .put("song_name", "Solea")
+    .put("artist_name", "Miles Davis")
+    .put("album_name", "Sketches of Spain")
     .put("genre", "Jazz")
     .put(
-        "play\_analytics",
+        "play_analytics",
         JSONObject()
             .put("count", 1000)
-            .put("top\_10\_listeners", true)
+            .put("top_10_listeners", true)
     )
 
 braze.getCurrentUser { user ->
-    user.setCustomUserAttribute("most\_played\_song", json)
+    user.setCustomUserAttribute("most_played_song", json)
 }
-\`\`\`
+```
 
 **更新**
-\`\`\`kotlin
+```kotlin
 val json = JSONObject()
-    .put("year\_released", 1960)
+    .put("year_released", 1960)
 
 braze.getCurrentUser { user ->
-    user.setCustomUserAttribute("most\_played\_song", json, true)
+    user.setCustomUserAttribute("most_played_song", json, true)
 }
-\`\`\`
+```
 
 **削除**
 ```kotlin
@@ -169,32 +169,32 @@ braze.getCurrentUser { user ->
 ```
 
 {% endtab %}
-{% tab Swift SDK %}
+{% tab SWIFT SDK %}
 
 **作成**
-\`\`\`swift
-let json: [String:Any?] = [
-  "song\_name":"Solea",
-  "artist\_name":"Miles Davis",
-  "album\_name":"Sketches of Spain",
-  "genre":"Jazz",
-  "play\_analytics": [
-    "count":1000,
-    "top\_10\_listeners": true,
+```swift
+let json: [String: Any?] = [
+  "song_name": "Solea",
+  "artist_name": "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "genre": "Jazz",
+  "play_analytics": [
+    "count": 1000,
+    "top_10_listeners": true,
   ],
 ]
 
-braze.user.setCustomAttribute(key: "most\_played\_song", dictionary: json)
-\`\`\`
+braze.user.setCustomAttribute(key: "most_played_song", dictionary: json)
+```
 
 **更新**
-\`\`\`swift
-let json: [String:Any?] = [
-  "year\_released":1960
+```swift
+let json: [String: Any?] = [
+  "year_released": 1960
 ]
 
-braze.user.setCustomAttribute(key: "most\_played\_song", dictionary: json, merge: true)
-\`\`\`
+braze.user.setCustomAttribute(key: "most_played_song", dictionary: json, merge: true)
+```
 
 **削除**
 ```swift
@@ -221,14 +221,14 @@ braze.getUser().setCustomUserAttribute("most_played_song", json);
 ```
 
 **更新**
-\`\`\`javascript
+```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
-"year_released": 1960
+  "year_released": 1960
 };
-  braze.getUser().setCustomUserAttribute("most\_played\_song", json, true);
+braze.getUser().setCustomUserAttribute("most_played_song", json, true);
 
-\`\`\`
+```
 
 **削除**
 ```javascript
@@ -253,8 +253,8 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
     {
       "external_id": "time_with_nca_test",
       "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "birthday": {"$time" : "1980-01-01"},
+        "wedding_anniversary": {"$time" : "2020-05-28"}
       }
     }
   ]
@@ -275,7 +275,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
-![Liquid を使用して、曲名とリスナーがその曲を再生した回数をメッセージにテンプレート化][5]
+![Liquidを使用して、曲名とリスナーがその曲を再生した回数をメッセージにテンプレート化する][5]
 
 ## セグメンテーション
 
@@ -283,7 +283,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 プロパティにパスを追加したら、[**検証**] をクリックして、パスフィールドの値が有効であることを確認します。
 
-![リスナーがある曲を指定回数再生したという、再生回数の最も多い曲のカスタム属性に基づくフィルターの適用] [6]
+![リスナーがある曲を指定回数再生したという、再生回数の最も多い曲のカスタム属性に基づくフィルターの適用][6]
 
 階層化カスタム属性を使用してセグメント化するには、[**階層化カスタム属性**] フィルターを選択してドロップダウンを表示し、そこから特定の階層化カスタム属性を選択します。
 
@@ -291,7 +291,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 階層化カスタム属性でのセグメンテーションを使用する場合、データ型ごとにグループ化された新しい比較演算子にアクセスできます。例えば、`play_analytics.count` は数値なので、[**数値**] カテゴリで比較演算子を選択できます。
 
-![階層化カスタム属性のデータ型に基づく演算子の選択][7]
+![データ型に基づいて階層化カスタム属性のオペレーターを選択するユーザー][7]
 
 ### 時間データ型へのフィルター適用
 
@@ -305,7 +305,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 [**セグメントの Liquid をコピー**] 機能を使用してこのセグメントの Liquid コードを生成し、メッセージで使用することもできます。例えば、口座オブジェクトの配列と、アクティブで課税対象口座を持つ顧客を対象とするセグメントがあるとします。アクティブで課税対象口座のいずれかに関連する口座の目標について、顧客に貢献してもらうには、顧客に働きかけるメッセージを作成する必要があります。 
 
-![[多条件セグメンテーション] チェックボックスがオンの状態のセグメント例][14]
+![選択されたチェックボックスを使用したマルチ基準セグメンテーションの例のセグメント。][14]
 
 [**セグメントの Liquid をコピー**] を選択すると、Braze によりアクティブで課税対象の口座のみを含むオブジェクト配列を返す Liquid コードが自動的に生成されます。
 
@@ -353,7 +353,7 @@ Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit usi
 Braze ダッシュボードで、[**データ設定**] > [**カスタム属性**] に移動します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**設定の管理**] の下に [**カスタム属性**] があります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**カスタム属性**] は [**設定の管理**] の下にあります。
 {% endalert %}
 
 オブジェクトまたはオブジェクト配列を検索します。[**属性名**] 列の [**スキーマを生成**] をクリックします。

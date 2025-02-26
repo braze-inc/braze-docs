@@ -12,24 +12,28 @@ search_rank: 1
 
 > このリファレンス記事では、Roku 向け Braze SDK のインストール方法について説明します。Braze Roku SDK をインストールすると、基本的な分析およびセグメンテーション機能が提供されます。
 
-## ステップ1: ファイルの追加
+{% alert tip %}
+GitHubのサンプルRokuアプリをチェックしよう：[TorchieTV](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)。
+{% endalert %}
 
-Braze SDK ファイルは、[Braze Roku SDK リポジトリ][1] の `sdk_files` ディレクトリにあります。
+## ステップ1:ファイルの追加
+
+Braze SDK ファイルは、[Braze Roku SDK リポジトリ](https://github.com/braze-inc/braze-roku-sdk) の `sdk_files` ディレクトリにあります。
 
 1. `source` ディレクトリで、アプリに `BrazeSDK.brs` を追加します。
 2. `components` ディレクトリで、アプリに `BrazeTask.brs` と `BrazeTask.xml` を追加します。
 
-## ステップ2: 参照の追加
+## ステップ 2:参照の追加
 
 次の `script` 要素を使用して、メインシーンに `BrazeSDK.brs` への参照を追加します。
 
-\`\`\`
-<script type="text/brightscript" uri="pkg:/source/BrazeSDK.brs"></script>
+```
+<script type="text/brightscript" uri="pkg:/source/BrazeSDK.brs"/>
 ```
 
-## ステップ3: 構成
+## ステップ3:構成
 
-「main.brs」内で、グローバルノードの Braze 構成を設定します。
+`main.brs` 内で、グローバルノードにBrazeのコンフィギュレーションを設定する：
 
 ```brightscript
 globalNode = screen.getGlobalNode()
@@ -42,7 +46,7 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
-[SDK エンドポイント]({{site.baseurl}})/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze dashboard. が見つかります
+[SDK エンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)と API キーは、Braze ダッシュボード内にあります。
 
 ## ステップ4: Braze の初期化
 
@@ -53,21 +57,16 @@ m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```
 
-## Enable Logging (optional) {#logging}
+## ロギングを有効にする (オプション) {#logging}
 
-Braze 統合をデバッグするため、Braze ログの Roku デバッグコンソールを表示できます。[デバッグコード] を参照してください (https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers to learn more.
+Braze 統合をデバッグするため、Braze ログの Roku デバッグコンソールを表示できます。詳細については、Roku Developers の [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) を参照してください。
 
-## Basic SDK integration complete
+## 基本的な SDK 統合の完了
 
-Braze で、Braze Roku SDK を使用してアプリケーションからデータが収集されるようになりました。
+Braze で、Braze Roku SDK を使用してアプリケーションからデータが収集されるようになりました。 
 
-SDK への [属性][2]、[イベント][3]、[購入][4] のロギング方法については、以下の記事を参照してください。
+当社のSDKに[属性]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)、[イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)、[購入を]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)記録する方法については、以下の記事を参照のこと。
 
-Roku のアプリ内メッセージングの詳細については、[アプリ内メッセージ統合ガイド][5] を参照してください。
+Roku のアプリ内メッセージングについて詳しくは、[アプリ内メッセージ統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/)をご覧ください。
 
 
-[1]: https://github.com/braze-inc/braze-roku-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/

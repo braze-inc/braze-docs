@@ -31,6 +31,10 @@ Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl
 
 Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method.
 
+### Exclude users from feature flags
+
+You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+
 ## Create a Global Control Group
 
 ### Step 1: Navigate to the Global Control Group Settings
@@ -75,17 +79,23 @@ After disabling your Control Group, you can save a new one. When you enter a per
 
 ## Export your control group members {#export-group-members}
 
-If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. 
+If you'd like to see which users are in your Global Control Group, you can export your Group's members by CSV or API. 
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export by API, use the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
 {% endalert %}
 
+## View whether a user is in a Global Control Group
+
+You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
+
+![A "Miscellaneous" section reporting that the user has a random bucket number is 2030 and is in the Global Control Group.][1]{: style="max-width:60%;"}
+
 ## Reporting
 
-Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/) for information on report metrics.
+Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/reporting/global_control_group_reporting/) for information on report metrics.
 
 ## Troubleshooting
 
@@ -98,7 +108,7 @@ As you set up your global control groups and view reporting, here are errors you
 | Global Control Group report does not have any data. | If you access the Global Control Group Report without having saved a Global Control Group, you will not see any data in the report. Create and save a Global Control Group and try again. |
 | My conversion rate is 0% or I'm not seeing the graph display, even though there are more than zero events occurring. | If the number of conversions is very small and your control or treatment groups are very large, then the conversion rate may round to 0%, and thus not show up in the graph. You can verify this by checking the Total Number of Events metric. You could compare the effectiveness of your two groups using the incremental uplift percent metric.  |
 | My conversion rate (or other metrics) are changing drastically depending on the time period I'm viewing data for. | If you're viewing data over short time periods, it's possible for your metrics to fluctuate day to day or week to week. We recommend that you view metrics over the course of at least one month. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Things to watch out for {#things-to-watch-for}
 
@@ -145,7 +155,7 @@ How long to run your experiment before reshuffling control group membership depe
 
 To determine the appropriate length of time for your experiment, consider what questions you're hoping to answer. For instance, are you looking to see if there's a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
 
-Or, you might be interested in purchasing behaviors, so your experiment would most likely need to run for longer than an experiment where you're examining sessions since it's likely your users make purchases less frequently.
+Or, you might be interested in a custom event, so your experiment may need to run for longer than an experiment where you're examining sessions if it's likely your users trigger that custom event less frequently.
 
 {% alert tip %}
 The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.
@@ -159,6 +169,7 @@ You should decide how long to run your experiment before beginning it, and then 
 
 Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

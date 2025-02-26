@@ -3,47 +3,44 @@ nav_title: Amazon S3 から Snowflake へのデータ転送
 article_title: Amazon S3 から Snowflake へのデータ転送
 page_order: 7
 page_type: tutorial
-description: "このハウツー記事では、ETL プロセスを使用してクラウドストレージ (Amazon S3 など) からウェアハウス (Snowflake など) にデータを転送する手順を説明します。"
+description: "このハウツー記事では、ETL（Extract, Transform, Load）プロセスを使用して、クラウドストレージ（Amazon S3など）からデータウェアハウス（Snowflakeなど）にデータを転送する手順を説明する。"
 tool: Currents
 
 ---
 
 # Amazon S3 から Snowflake へのデータ転送
 
-> 現在データが Amazon S3 にある場合は、 ELT (抽出、読み込み、変換) プロセスを使用して、Snowflake や他のリレーショナルデータウェアハウスに転送できます。
+> 現在データが Amazon S3 にある場合は、抽出、読み込み、変換 (ELT) プロセスを使用して、Snowflake や他のリレーショナルデータウェアハウスに転送できます。このページではその方法を説明する。
 
 {% alert note %}
 より具体的なユースケースがあり、 Currents インスタンスのサービスを Braze に希望する場合は、Braze アカウントマネージャーに Braze データプロフェッショナルサービスについてお問い合わせください。
 {% endalert %}
 
-## 自動読み込みプロセス
+## CDI の仕組み
 
-この自動読み込みプロセスでは、データを [Snowflake](https://www.snowflake.com/) に移動します。これにより、[Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory)を使用して Looker でそのデータを可視化し、インサイトやフィードバックをキャンペーン、キャンバス、およびセグメントで活用できます。
+抽出、読み込み、変換 (ELT) プロセスは、データを [Snowflake](https://www.snowflake.com/) に移動する自動プロセスです。これにより、[Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory)を使用して Looker でそのデータを可視化し、インサイトやフィードバックをキャンペーン、キャンバス、およびセグメントで活用できます。
 
 Currents から S3 へのエクスポートを設定し、ライブイベントデータを受信したら、次のコンポーネントを設定することにより Snowflake でライブ ELT パイプラインを設定できます。
 
 -   [AWS SQS キュー](#aws-sqs-queues)
 -   [自動取り込み Snowpipe](#auto-ingest-snowpipes)
 
-### AWS SQS キューの設定
+## AWS SQS キューの設定
 
 **自動取り込み Snowpipe** は、S3 からSnowpipe への通知の送信を SQS キューに依存します。このプロセスは、SQS の設定後に Snowflake によって管理されます。
 
-#### ステップ 1: 外部 S3 ステージの設定
+### ステップ 1: 外部 S3 ステージの設定
 
 {% alert note %}
-データベース内のテーブルはこのステージから作成されます。
+この段階でデータベースのテーブルが作成される。
 {% endalert %}
 
-Braze で Currents を設定するときに、S3 バケットに転送する Currents ファイルのフォルダーのパスを指定します。ここでは、デフォルトのフォルダーのパスである ```currents``` を使用します。
+1. Braze で Currents を設定するときに、S3 バケットに転送する Currents ファイルのフォルダーのパスを指定します。ここでは、デフォルトのフォルダーのパスである ```currents``` を使用します。
 
-次に、リストされた順序で以下を作成します。
-
-1. AWSで、目的の S3 バケットの新しい**公開キーと秘密キーのペア**を作成します。このときに、組織のセキュリティ要件に応じて権限を付与します。
-
-2. Snowflake で、任意のデータベースとスキーマ (次の例では ```currents``` と ```public``` という名前) を作成します。
-
-3. Snowflake S3 ステージ (`braze_data` という名前) を作成します。
+2. 以下の順番で作成する：
+  2.1 AWS で、目的の S3 バケットの新しい**公開キーと秘密キーのペア**を作成します。このときに、組織のセキュリティ要件に応じて権限を付与します。
+  2.2.Snowflake で、任意のデータベースとスキーマ (次の例では ```currents``` と ```public``` という名前) を作成します。
+  2.3.Snowflake S3 ステージ (`braze_data` という名前) を作成します。
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -53,7 +50,8 @@ CREATE OR REPLACE STAGE
 show stages;
 ```
 
-次に、ステージの AVRO ファイル形式を定義します。
+{: start="3"}
+3\.ステージのAVROファイルフォーマットを定義する。
 
 ```sql
 CREATE FILE FORMAT
@@ -69,56 +67,59 @@ SET
     file_format = currents.public.currents_avro;
 ```
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_messages\_pushnotification\_open
-    auto\_ingest=true AS
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
 
 COPY INTO
-  users\_messages\_pushnotification\_open
+  users_messages_pushnotification_open
           FROM
            (SELECT
              $1:id::STRING,
-             $1:user\_id::STRING,
-             $1:external\_user\_id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
               $1:time::INT,
               $1:timezone::STRING,
-              $1:app\_id::STRING,
-              $1:campaign\_id::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
               $1:campaign_name::STRING,
-              $1:message\_variation\_id::STRING,
-              $1:canvas\_id::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
               $1:canvas_name::STRING,
-              $1:canvas\_variation\_id::STRING,
-              $1:canvas\_step\_id::STRING,
-              $1:canvas\_step\_message\_variation\_id::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING,
-              $1:send\_id::STRING,
-              $1:device\_id::STRING,
-              $1:button\_action\_type::STRING,
-              $1:button\_string::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
 
-最後に、`show pipes;` コマンドを使用して SQS 情報を表示します。このパイプは自動取り込みパイプとして作成されたため、SQS キューの名前は `NOTIFICATION_CHANNEL` という新しい列に表示されます。
+{: start="4"}
+4\.最後に、`show pipes;` コマンドを使用して SQS 情報を表示します。このパイプは自動取り込みパイプとして作成されたため、SQS キューの名前は `NOTIFICATION_CHANNEL` という新しい列に表示されます。
 
-#### ステップ 2: バケットイベントの作成
+### ステップ 2: バケットイベントの作成
 
-AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
+1. AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
 
 ![AWS の [プロパティ] タブ][1]{: height="50%" width="50%"}
 
-必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
+{: start="2"}
+2\.必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
-![AWS での新規イベントの作成][2]{: height="50%" width="50%"}
+![AWSで新しいイベントを作成する][2]{: height="50%" width="50%"}
 
-オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。
+{: start="3"}
+3\.オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。
 
-### 自動取り込み Snowpipe の設定{#auto-ingest-snowpipes}
+## 自動取り込み Snowpipe の設定{#auto-ingest-snowpipes}
 
 AWS SQS の構成で正しいテーブルが生成されるようにするには、[メッセージエンゲージメントイベントまたはメッセージングイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、[ユーザー行動イベントまたは顧客行動イベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)、あるいはその両方について、以下の例と Currents ドキュメントで決定されているスキーマを使用して、受信データの構造を適切に定義する必要があります。
 
@@ -129,9 +130,9 @@ Braze Currents は特定のデータ型を持つ特定のフィールドを介�
 {% endalert %}
 
 {% tabs %}
-  {% tab User Behavior Events %}
+  {% tab ユーザー行動イベント %}
 
-まず、Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
+1. Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
 
 ```sql
 CREATE TABLE
@@ -154,47 +155,48 @@ CREATE TABLE
     );
 ```
 
-次に、`auto_ingest` パイプを作成し、以下の項目を指定します。
-1\.読み込み先のテーブル
-2. 以下のテーブルに読み込む方法
+{: start="2"}
+2\.`auto_ingest` パイプを作成し、指定する：
+  2.1.読み込み先のテーブル
+  2.2 以下のテーブルに読み込む方法
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_behaviors\_app\_firstsession
-    auto\_ingest=true AS
+  pipe_users_behaviors_app_firstsession
+    auto_ingest=true AS
 
 COPY INTO
-  users\_behaviors\_app\_firstsession
+  users_behaviors_app_firstsession
           FROM
             (SELECT
               $1:id::STRING,
-              $1:user\_id::STRING,
-              $1:external\_user\_id::STRING,
-              $1:app\_id::STRING,
+              $1:user_id::STRING,
+              $1:external_user_id::STRING,
+              $1:app_id::STRING,
               $1:time::INT,
-              $1:session\_id::STRING,
+              $1:session_id::STRING,
               $1:gender::STRING,
               $1:country::STRING,
               $1:timezone::STRING,
               $1:language::STRING,
-              $1:device\_id::STRING,
-              $1:sdk\_version::STRING,
+              $1:device_id::STRING,
+              $1:sdk_version::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
+```
 
 {% alert warning %}
 すべてのイベントタイプについて、`CREATE TABLE` コマンドと `CREATE PIPE` コマンドを繰り返す必要があります。
 {% endalert %}
 
  {% endtab %}
- {% tab Messaging Events %}
+ {% tab メッセージング・イベント %}
 
-まず、Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
+1. Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
 
 ```sql
 CREATE TABLE
@@ -223,44 +225,45 @@ CREATE TABLE
         );
 ```
 
-次に、AUTO 連続読み込みパイプを作成し、以下の項目を指定します。
-1\.読み込み先のテーブル
-2. 以下のテーブルに読み込む方法
+{: start="2"}
+2\.AUTO 連続読み込みパイプを作成し、以下の項目を指定する
+  2.1.読み込み先のテーブル
+  2.2 以下のテーブルに読み込む方法
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_messages\_pushnotification\_open
-    auto\_ingest=true AS
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
 
 COPY INTO
-  users\_messages\_pushnotification\_open
+  users_messages_pushnotification_open
           FROM
            (SELECT
              $1:id::STRING,
-             $1:user\_id::STRING,
-             $1:external\_user\_id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
               $1:time::INT,
               $1:timezone::STRING,
-              $1:app\_id::STRING,
-              $1:campaign\_id::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
               $1:campaign_name::STRING,
-              $1:message\_variation\_id::STRING,
-              $1:canvas\_id::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
               $1:canvas_name::STRING,
-              $1:canvas\_variation\_id::STRING,
-              $1:canvas\_step\_id::STRING,
-              $1:canvas\_step\_message\_variation\_id::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING,
-              $1:send\_id::STRING,
-              $1:device\_id::STRING,
-              $1:button\_action\_type::STRING,
-              $1:button\_string::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
 
 {% alert warning %}
 すべてのイベントタイプについて、`CREATE TABLE` コマンドと `CREATE PIPE` コマンドを繰り返す必要があります。

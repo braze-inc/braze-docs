@@ -1,9 +1,9 @@
 ---
-nav_title: "Web プッシュ"
-article_title: Web プッシュ通知
+nav_title: "Webプッシュ"
+article_title: Webプッシュ通知
 page_order: 8.5
 page_type: reference
-description: "この参照ページでは、Web プッシュ通知と、それを作成するために必要なステップへのリンクアウトについて簡単に説明します。"
+description: "このリファレンスページでは、Web プッシュ通知について簡単に説明し、それを作成するために必要なステップへのリンクを示します。"
 platform: Web
 channel:
   - push
@@ -12,62 +12,62 @@ channel:
 
 # Web プッシュ
 
-> Braze でWeb プッシュ通知について学習し、独自に作成するためのリソースを見つけます。
+> Braze の Web プッシュ通知について学習し、独自に作成するためのリソースを理解します。
 
-Web プッシュは、Web アプリケーションのユーザーと連携するもう1 つのすばらしい方法です。[supported browsers](#supported-browsers)からウェブサイトを訪れるお客様は、ウェブページがロードされているかどうかにかかわらず、ウェブアプリケーションからウェブプッシュを受信するためにオプトインできます。
+Web プッシュは、御社の Web アプリライケーションのユーザーとエンゲージするもう 1 つの優れた方法です。[サポートされているブラウザ](#supported-browsers) からWeb サイトにアクセスするお客様は、ウェブページが読み込むされているかどうかにかかわらず、ウェブアプリライケーションからWeb プッシュを受信することを選択できます。
 
 ## 概要
 
-Webプッシュ通知は、迅速な変換を可能にする緊急の実用的な更新を提供します。Web プッシュでは、次の操作を実行できます。
+Web プッシュ通知は、迅速なコンバージョンを促進する緊急のアクション可能な更新を配信します。Web プッシュを使用すると、次のことができます。
 
 - 価格が下がるなど、重要なデータが変化したときにメッセージを正しくトリガーします
-- 簡単なコール・ツー・アクション・ボタンで人々をウェブサイトに戻す
-- 製品情報と顧客情報でプッシュをカスタマイズし、メッセージを関連づけます
+- シンプルな行動喚起ボタンで Web サイトにユーザーを呼び戻します
+- 製品と顧客の情報を使用してプッシュをパーソナライズし、メッセージの関連性を向上させます
 
-Web プッシュは、スマートフォンでアプリプッシュ通知を操作するのと同じように機能します。Web プッシュの作成の詳細については、[プッシュ通知の作成][11]を参照してください。
+Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成の詳細については、[プッシュ通知の作成][11]を参照してください。
 
-![ノートパソコンと携帯電話に同じプッシュメッセージが表示されたWebプッシュ例][12]{: style="border:none"}
+![Webプッシュサンプルは、ラップトップと電話機に表示されるのと同じプッシュメッセージを使用します。][12]{: style="border:none"}
 
-## 潜在的なユースケース
+## 潜在ユースケースs
 
-一般的なWeb プッシュメッセージのユースケースの例を次に示します。
+以下に、一般的な Web プッシュメッセージのユースケースの例をいくつか示します。
 
-| 使用例| 説明|
-| --- | --- |
-| 無料トライアル| ウェブサイトの新規訪問者に無料トライアルに登録するように促します。ユーザーに特別なことを体験する機会を与えれば、有料の顧客になる可能性が高くなる。|
-| App download | Web ユーザをモバイルアプリに描画して、製品からさらに大きな価値を得ることができます。パーソナライゼーションを活用して、現在のエンゲージメントパターンに基づいてアプリの利点を強調することを検討します。|
-| 割引と販売| 時間に敏感なイベントやプロモーションに対する顧客の意識を高める。ブランドのプロモーションに対する認知度を高めるために、ウェブプッシュを含む複数のチャネルにわたるメッセージ。|
-| カート放棄| トランザクションを完了していないユーザーに自動リマインダーを送信して、チェックアウトフローに戻します。<br><br>Brazeが実施した調査によると、ウェブプッシュはEメールよりも53%効果が高く、受信者が戻ってきて購入を完了する際のモバイルプッシュよりも23%影響が大きいことがわかりました。|
-{: .reset-td-br-1 .reset-td-br-2}
+| ユースケース | 説明 |
+| --- | --- | 
+| 無料トライアル | Web サイトの新規訪問者に、無料トライアルに登録するように促します。御社独自の特別なものを体験する機会を提供して、ユーザーと繋がることで、そのようなユーザーが有料顧客になる可能性を上昇させることができます。 |
+| アプリのダウンロード | Web ユーザーをモバイルアプリに誘導して、御社製品からユーザーがさらに高い価値を享受できるようにします。パーソナライゼーションを活用して、ユーザーの現在のエンゲージメントパターンに基づきアプリのメリットを強調することを検討します。 |
+| 割引およびセール | 時間的制約のあるイベントやプロモーションに対する顧客の認知度を上昇させます。Web プッシュを含む複数チャネルにわたるメッセージングにより、自社ブランドのプロモーションに対する認知度を上昇させます。 |
+| カート放棄 | 取引を完了していないユーザーに自動リマインダーを送信して、購入手続きフローに呼び戻します。<br><br>Brazeが行った調査によると、Web プッシュはメールよりも53%効果が高く、モバイルのプッシュよりも23%影響が大きいことがわかった。これは、受信者を買い戻して完成させるためのものである。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Web プッシュを使用するための前提条件
 
-Brazeを使用してプッシュメッセージを作成して送信する前に、開発者と協力してウェブサイトにプッシュを統合する必要があります。詳細な手順については、[Webプッシュ統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)を参照してください。
+Braze を使用してプッシュメッセージの作成および送信を行うには、開発者と協力してプッシュを Web サイトに統合する必要があります。ステップの詳細については、[Webプッシュインテグレーションガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)を参照してください。
 
 ### プッシュ許可
 
-どのブランドでも、ウェブサイトでウェブプッシュ通知を統合し、使用することができます。通知は、Web ブラウザが開いている限り、現在のWeb 訪問者と以前のWeb 訪問者の両方に到達できますが、従来のモバイルアプリプッシュと同様に、通知を受信するには[opt in が必要です。
+いずれのブランドでも、自社の Web サイトに Web プッシュ通知を統合して、使用できます。Web 訪問者が Web ブラウザーを開いている限り、通知は現在および以前のいずれの Web 訪問者に到達できますが、従来のモバイルアプリのプッシュと同様に、Web 訪問者は[通知受信にオプトイン]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-permission)する必要があります。
 
 {% alert tip %}
-ブラウザ内のメッセージを使用して、Web プッシュを選択するようにユーザーをプライミングすることを検討します。これは、[プッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) とも呼ばれます。
+ユーザーに Web プッシュへのオプトインを促すブラウザー内メッセージ ([プッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)とも呼ばれる) を使用することを検討します。
 {% endalert %}
 
-## 対応ブラウザ
+## サポートされているブラウザー
 
-次のブラウザは、Web プッシュ通知をサポートしています。ただし、プライベートブラウジングウィンドウでは、現在Web プッシュはサポートされていません。
+次のブラウザは、Web プッシュ通知に対応しています。ただし、プライベートブラウズウィンドウは現在Web プッシュに対応していません。
 
-- Chrome (およびAndroid モバイル用のChrome)
+- Chrome (および Chrome for Android モバイル)
 - Safari
-- Firefox (およびAndroidモバイル版Firefox)
+- Firefox(およびAndroid携帯用Firefox)
 - Opera
 - Edge
 
-プッシュプロトコルの標準とブラウザのサポートの詳細については、ブラウザに基づいてリソースを確認できます。
+プッシュプロトコル標準とブラウザーのサポートの詳細については、ブラウザーに基づくリソースを確認してください。
 
 - [Safari(デスクトップ)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari(モバイル)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Safari (モバイル)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
-- [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)
+- [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

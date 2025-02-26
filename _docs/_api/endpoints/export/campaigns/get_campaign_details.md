@@ -14,7 +14,7 @@ description: "This article outlines details about the Export campaign details Br
 /campaigns/details
 {% endapimethod %}
 
-> Use this endpoint to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. 
+> Use this endpoint to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`.
 
 If you want to retrieve Canvas data, refer to the [Export Canvas details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) endpoint.
 
@@ -33,9 +33,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page and the **Campaign Details** page within your dashboard; or you can use the [Export campaigns list endpoint](#campaign-list-endpoint). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Example request 
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -83,7 +83,9 @@ The `messages` response will contain information about each message. The followi
 {
     "channel": (string) the description of the channel, such as "ios_push" or "android_push"
     "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click
 }
 ```
 
@@ -116,17 +118,17 @@ The `messages` response will contain information about each message. The followi
     "data": {
         "pages": [
             {
-                "header": 
+                "header":
                     {
                          "text":(string) the display text for the header of the survey,
                     }
                 "choices": [
                     {
                        "choice_id": (string) the choice identifier,
-                       "text": (string) the display text, 
-                       "custom_attribute_key": (string) the custom attribute key, 
+                       "text": (string) the display text,
+                       "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign, 
+                       "deleted": (boolean) deleted from live campaign,
                     },
                     ...
                 ]
@@ -283,7 +285,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 ```
 
 {% alert tip %}
-For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

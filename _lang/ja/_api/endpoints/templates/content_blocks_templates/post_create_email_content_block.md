@@ -1,31 +1,31 @@
 ---
-nav_title: "ポスト:コンテンツブロックを作成"
-article_title: "ポスト:コンテンツブロックを作成"
+nav_title: "POST:コンテンツ・ブロックを作成する"
+article_title: "POST:コンテンツ・ブロックを作成する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、Create Content Blocks Brazeエンドポイントの詳細について説明します。"
+description: "この記事では、Create Content Blocks Brazeエンドポイントの詳細について概説する。"
 
 ---
 {% api %}
-# コンテンツブロックを作成
+# コンテンツ・ブロックを作成する
 {% apimethod post %}
 /content_blocks/create
 {% endapimethod %}
 
-> [コンテンツ・ブロックを]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)作成するには、このエンドポイントを使用します。
+> このエンドポイントを使用して、[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)を作成します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
 ## 前提条件
-このエンドポイントを使用するには、`content_blocks.create` パーミッションを持つ[API キーが]({{site.baseurl}}/api/api_key/)必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`content_blocks.create`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -42,18 +42,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-|`name` ｜必須｜文字列｜コンテンツブロックの名前。100文字以下でなければならない。|
-|`description` ｜任意｜文字列｜コンテンツブロックの説明。250文字以内であること。|
-|`content` ｜必須｜文字列｜コンテンツブロック内のHTMLまたはテキストコンテンツ。|
-|`state` ｜任意｜文字列｜`active` または`draft` 。指定がない場合のデフォルトは`active` である。|
-|`tags` ｜任意｜文字列の配列｜[タグは]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)すでに存在していなければならない。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `name` | 必須 | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
+| `description` | オプション | 文字列 | コンテンツブロックの説明。250 文字未満でなければなりません。 |
+| `content` | 必須 | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。 |
+| `state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
+| `tags` | オプション | 文字列の配列 | [タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)はすでに存している必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
@@ -82,27 +82,27 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## トラブルシューティング
 
-次の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものです。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| トラブルシューティング
+| エラー | トラブルシューティング |
 | --- | --- |
 | `Content cannot be blank` | |
-|`Content must be a string` | コンテンツが引用符(`""`)で囲まれていることを確認してください。|
-|`Content must be smaller than 50kb` | コンテンツブロック内のコンテンツは、合計50kb以下でなければなりません。|
-|`Content contains malformed liquid` | 指定されたリキッドは有効でないか、解析できません。有効なリキッドで再試行するか、サポートまでご連絡ください。|
+| `Content must be a string` | コンテンツが引用符 (`""`) で囲まれていることを確認する。 |
+| `Content must be smaller than 50kb` | コンテンツブロック内のコンテンツは、合計 50kb 未満でなければなりません。 |
+| `Content contains malformed liquid` | 指定されたリキッドは有効でも解析可能でもない。有効な Liquid を使用してもう一度やり直すか、サポートにお問い合わせください。 |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
-|`Content Block description must be a string` | コンテンツブロックの説明が引用符 (`""`) で囲まれていることを確認してください。|
+| `Content Block description must be a string` | コンテンツ・ブロックの説明が引用符 (`""`) で囲まれていることを確認する。 |
 | `Content Block description must be shorter than 250 characters` | |
 | `Content Block name cannot be blank` | |
 | `Content Block name must be shorter than 100 characters` | |
-|`Content Block name can only contain alphanumeric characters` ｜コンテンツブロック名には、次のいずれかの文字を含めることができます：文字（大文字または小文字）`A` ～`Z` 、数字`0` ～`9` 、ダッシュ`-` 、アンダースコア`_` 。絵文字、`!` 、`@` 、`~` 、`&` 、その他の「特殊」文字など、英数字以外の文字を含めることはできません。|
-|`Content Block with this name already exists` | 別の名前を試してみてください。|
+| `Content Block name can only contain alphanumeric characters` | コンテンツブロック名には、文字 (大文字または小文字) `A` ～ `Z`、数字 `0` ～ `9`、ダッシュ `-`、アンダースコア `_` のいずれかを含められます。絵文字、`!` 、`@` 、`~` 、`&` 、その他の「特殊」文字など、英数字以外の文字を含むことはできない。 |
+| `Content Block with this name already exists` | 別の名前を試してみよう。 |
 | `Content Block state must be either active or draft` | |
-`Tags must be an array` | タグは文字列の配列としてフォーマットされなければならない。例えば、`["marketing", "promotional", "transactional"]` 。| |
-｜`All tags must be strings` ｜タグが引用符で囲まれていることを確認してください（`""` ）。|
-|`Some tags could not be found` ｜コンテンツブロックの作成時にタグを追加するには、そのタグがすでにBrazeに存在している必要があります。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `Tags must be an array` | タグは文字列の配列としてフォーマットされなければならない。例えば、`["marketing", "promotional", "transactional"]` 。 | |
+| `All tags must be strings` | タグが引用符 (`""`) で囲まれていることを確認すること。 |
+| `Some tags could not be found` | コンテンツブロックの作成時にタグを追加するには、そのタグがすでにBrazeに存在している必要がある。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

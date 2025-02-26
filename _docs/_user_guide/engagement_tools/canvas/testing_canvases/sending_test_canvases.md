@@ -29,23 +29,23 @@ Next, identify a set of test users that will go through the Canvas steps without
 
 ## Step 3: Set up your Canvas
 
-Next, it's time to test your Canvas! To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes. 
+Next, it's time to test your Canvas! To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes.
 
-![][1]
+There are two ways you can test your Canvas. 
 
-In this duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
-
-In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
+- **Method 1:** In the duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
 
 ![][2]
 
+- **Method 2:** [Preview your user paths]({{site.baseurl}}/preview_user_paths/) by selecting the **Test Canvas** button in the footer of the Canvas builder.
+
 ## Step 4: Launch your test
 
-Launch your test Canvas to allow users to start entering. Next, complete the user behaviors on your application that would send users through the respective Canvas journey. 
+Launch your test Canvas to allow users to start entering. Complete the user behaviors on your application that would send users through the respective Canvas journey.
 
 Verify that your test users are receiving the intended messages from your Canvas steps. Note that your test users may not receive a message due to reasons not limited to:
 
-- Not eligible for the global control group
+- Not eligible for the Global Control Group
 - Frequency capping limitations
 - Mismatched segment membership
 - Aborted messages
@@ -61,7 +61,7 @@ In some cases, a user can potentially receive multiple messages when going throu
 
 ### Create an Internal Group
 
-Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
+Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
 
 ### Reduce time delays
 

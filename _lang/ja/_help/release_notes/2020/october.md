@@ -3,39 +3,39 @@ nav_title: 10月
 page_order: 3
 noindex: true
 page_type: update
-description: "この記事には、2020 年 10 月のリリースノートが含まれています。"
+description: "この記事には2020年10月のリリースノートが含まれている。"
 ---
 
-# 2020 年 10 月
+# 2020年10月
 
 ## レポートビルダー
 
-![キャンペーン比較例] [5]{: style="max-width:80%;"}
+![キャンペーン比較例][5]{: style="max-width:80%;"}
 
-[レポートビルダーでは]({{site.baseurl}}/report_builder)、複数のキャンペーンの結果を1つのビューで比較できるため、どのエンゲージメント戦略が主要指標に最も影響を与えたかを簡単に判断できます。
+[レポートビルダーでは]({{site.baseurl}}/report_builder)、複数のキャンペーンの結果を1つのビューで比較できるため、どのエンゲージメント戦略が主要な指標に最も影響を与えたかを簡単に判断できる。
 
-## iOS 14 アップグレードガイド
+## iOS 14アップグレードガイド
 
-iOS 14アップグレードガイドには、iOS 14で導入されたBraze関連の変更点と、Braze iOS SDK統合に必要なアップグレード手順が記載されています。注意すべき変更点としては、今後のIDFA権限要件、ジオフェンスのサポート、必要なXcodeのアップグレードなどがあります。詳細については、[アップグレードガイドをご覧ください]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)。 
+iOS 14アップグレードガイドでは、iOS 14で導入されたBraze関連の変更と、Braze iOS SDK統合に必要なアップグレード手順について説明している。注意すべき変更点としては、今後のIDFAの許可要件、ジオフェンスのサポート、必要なXcodeのアップグレードなどがある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)ご覧いただきたい。 
 
-## アンドロイド 11 アップグレードガイド
+## Android 11アップグレードガイド
 
-Android 11 ガイドには、Android 11 リリースで導入された関連する変更点と、Braze Android SDK を統合するために必要なアップグレード手順が記載されています。一部の変更は、ディープリンク、HTML アプリ内メッセージ、位置情報権限に関するものです。詳細については、[アップグレードガイドをご覧ください]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)。
+『Android 11 ガイド』では、Android 11 リリースで導入された関連する変更点と、Braze Android SDK インテグレーションに必要なアップグレード ステップs について説明します。ディープリンク、HTMLアプリ内メッセージ、ロケーション許可に関する変更もある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)ご覧いただきたい。
 
-## アトリビューションパートナー-クリックトラッキングガイド
+## アトリビューション・パートナー - クリック追跡ガイド
 
-オプションのアトリビューションパートナーのクリックトラッキングドキュメントが各アトリビューションパートナーページに追加されました。これには、キャンペーンでクリックトラッキングを機能させるためのベストプラクティスと実装ガイドラインが含まれています。詳細については、[アトリビューションパートナーのページをご覧ください]({{site.baseurl}}/partners/advertising_technologies/attribution/)。 
+各アトリビューション・パートナーのページに、オプションでクリックトラッキングのドキュメントが追加された。このドキュメントには、キャンペーンでクリックトラッキングを機能させるためのベストプラクティスと実装ガイドラインが含まれている。詳細については、[アトリビューションパートナー]({{site.baseurl}}/partners/advertising_technologies/attribution/)ページをご覧ください。 
 
 ## 新しい説明フィールド
 
-ユーザーはキャンペーンやキャンバスに説明を追加できるようになりました！この新しいフィールドは、既存のキャンペーンまたはキャンバスを作成または編集するときに、キャンペーン名フィールドまたはキャンバス名フィールドの下に表示されます。 
+キャンペーンとキャンバスに説明文を追加できるようになった！この新しいフィールドは、既存のキャンペーンやキャンバスの作成または編集時に、[キャンペーンまたはキャンバス名] フィールドの下に表示されます。 
 
-## キャンバス例外イベント
+## キャンバスの例外イベント
 
-[Canvasesの例外イベントの予想される動作を説明する新しいドキュメントが追加されました]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)。 
+キャンバスにおける[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)の予想される動作を説明する新しいドキュメントが追加されました。 
 
-## ユーザー削除更新
+## ユーザーが更新を削除する
 
-Braze は API を改善して、お客様がデータの削除を要求しているデータ主体のエンドユーザープロフィールだけでなく、データ主体の電話番号またはメールアドレスに関連するサブスクリプション状態も、お客様が追加の操作なしで同時に削除できるようにしました。[更新されたドキュメントはここにあります]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
+Braze は API を改良し、追加のアクションを実行しなくても、データの削除を要求するデータ主体のエンドユーザープロファイルだけでなく、データ主体の電話番号やメールアドレスに関連付けられたサブスクリプションの状態も同時に削除できるようにしました。更新されたドキュメントは[ここで見つかります]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

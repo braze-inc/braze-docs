@@ -11,18 +11,18 @@ page_type: reference
 
 guide_featured_title: "記事"
 guide_featured_list:
-- name: Data Protection Technical Assistance
+- name: データ保護のテクニカルサポート
   link: /docs/dp-technical-assistance
-  fa_icon: fas fa-database
-- name: Spam Regulations
+  image: /assets/img/braze_icons/database-01.svg
+- name: スパム規制
   link: /docs/user_guide/administrative/privacy/spam_regulations
-  fa_icon: fas fa-envelope-circle-check
-- name: SMS Laws and Regulations
+  image: /assets/img/braze_icons/message-check-circle.svg
+- name: SMSの法律と規制
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations
-  fa_icon: fas fa-sms
-- name: Managing Consent
+  image: /assets/img/braze_icons/channel-sms.svg
+- name: 同意の管理
   link: /docs/user_guide/administrative/privacy/managing_consent
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 ---
 
 ## 法的免責事項

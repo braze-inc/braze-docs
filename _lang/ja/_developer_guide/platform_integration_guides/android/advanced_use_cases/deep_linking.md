@@ -11,26 +11,26 @@ description: "この記事では、Android または FireOS アプリにユニ�
 
 # ディープリンク
 
-> [Android SDK 実装プロセスの][1]一環として、アプリがディープリンクを使用する機能を設定します。この記事では、ディープリンクのユースケースの追加例を紹介します。
+> [Android SDK 実装プロセスの]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links)一環として、アプリがディープリンクを使用する機能を設定します。この記事では、ディープリンクのユースケースの追加例を紹介します。
 
-ディープリンクの基本情報については、[ユーザーガイドの記事][4]を参照してください。
+ディープリンクの基本情報については、[ユーザーガイドの記事]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)を参照してください。
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## ユニバーサルディープリンクデリゲート
 
 Android SDK は、コンテンツカード、アプリ内メッセージ、プッシュ通知にわたって Braze によって開かれたすべてのディープリンクをカスタム処理するように単一のデリゲートオブジェクトを設定する機能を提供しています。
 
-デリゲートオブジェクトは[`IBrazeDeeplinkHandler`][udl-3]インターフェイスを実装し、[`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]を使用して設定する必要があります。ほとんどの場合、デリゲートはアプリの`Application.onCreate()`で設定する必要があります。
+デリゲートオブジェクトは[`IBrazeDeeplinkHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html)インターフェイスを実装し、[`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html)を使用して設定する必要があります。ほとんどの場合、デリゲートはアプリの`Application.onCreate()`で設定する必要があります。
 
-以下は、カスタムインテントフラグと YouTube URL のカスタム動作でデフォルトの[`UriAction`][udl-1]動作を上書きする例です。
+以下は、カスタムインテントフラグと YouTube URL のカスタム動作でデフォルトの[`UriAction`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html)動作を上書きする例です。
 
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
@@ -42,7 +42,7 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
-    // 私たちのアプリではなく YouTube アプリで YouTube の URL を開く
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.setUseWebView(false);
     }
@@ -69,21 +69,21 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
     }
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
+```kotlin
+class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
-  override fun gotoNewsFeed(context:Context, newsfeedAction:NewsfeedAction) {
+  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
     newsfeedAction.execute(context)
   }
 
-  override fun gotoUri(context:Context, uriAction:UriAction) {
+  override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
-    // 私たちのアプリではなく YouTube アプリで YouTube の URL を開く
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.useWebView = false
     }
@@ -92,7 +92,7 @@ class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
     customUriAction.execute(context)
   }
 
-  class CustomUriAction(uriAction:UriAction) :UriAction(uriAction) {
+  class CustomUriAction(uriAction: UriAction) : UriAction(uriAction) {
 
     override fun openUriWithActionView(context: Context, uri: Uri, extras: Bundle) {
       val intent = getActionViewIntent(context, uri, extras)
@@ -106,10 +106,10 @@ class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
   }
 
   companion object {
-private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
+    private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
+  }
 }
-    }
-  \`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -121,15 +121,15 @@ private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     final Bundle extras = uriAction.getExtras();
-    if (extras.containsKey("open\_notification\_page")) {
+    if (extras.containsKey("open_notification_page")) {
       Intent intent = new Intent();
-      intent.setAction("android.settings.APP\_NOTIFICATION\_SETTINGS");
-      intent.setFlags(Intent.FLAG\_ACTIVITY\_NEW\_TASK);
+      intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
       //for Android 5-7
       intent.putExtra("app_package", context.getPackageName());
@@ -144,19 +144,19 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
   @Override
   public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
-  override fun gotoUri(context:Context, uriAction:UriAction) {
+```kotlin
+BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
+  override fun gotoUri(context: Context, uriAction: UriAction) {
     val extras = uriAction.extras
-    if (extras.containsKey("open\_notification\_page")) {
+    if (extras.containsKey("open_notification_page")) {
       val intent = Intent()
-      intent.action = "android.settings.APP\_NOTIFICATION\_SETTINGS"
-      intent.flags = Intent.FLAG\_ACTIVITY\_NEW\_TASK
+      intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
+      intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
       //for Android 5-7
       intent.putExtra("app_package", context.packageName)
@@ -168,28 +168,26 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
     }
   }
 
-  override fun gotoNewsFeed(context:Context, newsfeedAction:NewsfeedAction) {}
+  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
 
 ## ニュースフィードへのディープリンク{#Android_Deep_Advance}
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
-プッシュ通知から Braze ニュースフィードにディープリンクするには、ニュースフィードアクティビティの[カスタムディープリンクを作成][1]します。
+プッシュ通知から Braze ニュースフィードにディープリンクするには、ニュースフィードアクティビティの[カスタムディープリンクを作成]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links)します。
 
-次に、プッシュ通知キャンペーンを設定する際に ([ダッシュボード][2]または [API][3] を通じて) 、 ニュースフィードのディープリンクに移動するように通知を構成します。
+次に、プッシュ通知キャンペーンを設定する際に ([ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)または [API]({{site.baseurl}}/api/endpoints/messaging/) を通じて) 、 ニュースフィードのディープリンクに移動するように通知を構成します。
 
 ## カスタム WebView アクティビティ{#Custom_Webview_Activity}
 
-デフォルトでは、Braze によってアプリ内でウェブサイトのディープリンクが開かれると、[`BrazeWebViewActivity`][udl-4]によって処理されます。これを変更するには、以下を行います。
+デフォルトでは、Braze によってアプリ内でウェブサイトのディープリンクが開かれると、[`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html)によって処理されます。これを変更するには、以下を行います。
 
-**1\.**キー`com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`で`Intent.getExtras()`から対象の URL を扱うアクティビティを新規作成します。例については、[`BrazeWebViewActivity.java`][udl-8]を参照してください。<br><br>
+**1\.**キー`com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`で`Intent.getExtras()`から対象の URL を扱うアクティビティを新規作成します。例については、[`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt)を参照してください。<br><br>
 **2\.**そのアクティビティを`AndroidManifest.xml`に追加し、`exported`を`false`に設定します。
 
 ```xml
@@ -198,7 +196,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
     android:exported="false" />
 ```
 
-**3\.**カスタムアクティビティを`BrazeConfig`[ビルダーオブジェクト][udl-6]に設定します。ビルダーをビルドし、[`Application.onCreate()`][udl-7]内の[`Braze.configure()`][udl-5]に渡します。
+**3\.**カスタムアクティビティを`BrazeConfig`[ビルダーオブジェクト](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html)に設定します。ビルダーをビルドし、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())内の[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721)に渡します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -226,15 +224,3 @@ Braze.configure(this, brazeConfig)
  {% endtabs %}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[3]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[udl-1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
-[udl-2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html
-[udl-3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
-[udl-4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
-[udl-5]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
-[udl-6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
-[udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[udl-8]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt

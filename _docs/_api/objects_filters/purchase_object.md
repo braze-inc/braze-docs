@@ -19,11 +19,12 @@ A purchase object is an object that gets passed through the API when a purchase 
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
@@ -45,7 +46,7 @@ A purchase object is an object that gets passed through the API when a purchase 
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
 
-## Purchase product_id
+## Purchase product ID
 
 Within the purchase object, the `product_id` is an identifier for the purchase (such as `Product Name` or `Product Category`):
 
@@ -101,7 +102,7 @@ Property values can be any of the following data types:
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
 | Objects | Objects will be ingested as strings. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 

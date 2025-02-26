@@ -13,7 +13,7 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 > Learn how to how to use, interpret, and share Segment Insights. 
 
-Segment Insights allows you to quickly see how one segment is performing compared to another across a set of pre-selected KPIs.
+Segment Insights shows you how one segment is performing compared to another across a set of pre-selected KPIs.
 
 ## Viewing Segment Insights
 
@@ -35,7 +35,7 @@ The baseline segment can either be a specific segment you select, or a segment c
 | Lifetime Revenue | Average lifetime revenue for segment users | user lifetime spend |
 | Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase – date of first session |
 | Time Since Last Purchase | Average time between segment users' last purchase and now | today – date of last purchase |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 You can easily share specific comparisons with your teammates using the page's unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between workspaces.
 
@@ -68,7 +68,7 @@ To improve conversions among speakers of languages other than English, a good fi
 
 ### Understanding indicators of higher revenue
 
-Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an ecommerce app.
+Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. For example, you can chart out the impact on purchases different behaviors within an eCommerce app.
 
 ![][7]
 

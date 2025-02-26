@@ -28,6 +28,9 @@ guide_featured_list:
 - name: Pulling User Profile Data
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg
+- name: Troubleshooting Connected Content Requests 
+  link: /docs/help/help_articles/api/webhook_connected_content_errors/
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
 <br><br>

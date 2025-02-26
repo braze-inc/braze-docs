@@ -10,31 +10,31 @@ description: "この記事には2019年3月のリリースノートが含まれ�
 
 ## アプリ内メッセージ - 第3世代
 
-Brazeは、最新のUXとUIのベストプラクティスに準拠するため、アプリ内メッセージのルック＆フィールを改善したことをお知らせいたします。最新のアプリ内メッセージでは、ユーザーとメッセージのやりとりが期待できます：
-\- より大きなフォントサイズ
-\- 洗練されたスペーシング
-\- 新しいクローズ`x` アセット
-\- すべてのメッセージタイプのレスポンシブ動作が改善され、ビューポートによりフィットするようになりました。
-\- ボタン間のカスタムコントラストを作成するためのボタンボーダー
+Brazeは、最新のUXおよびUIのベストプラクティスに準拠するために、アプリ内メッセージの外観と操作性を改善したことを誇りに思います。最新のアプリ内メッセージでは、ユーザーによるメッセージの操作に関して以下の改善が予定されています。
+- より大きなフォントサイズ
+- 洗練された間隔
+- 新しい閉じる `x` アセット
+- すべてのメッセージタイプに対するレスポンシブな動作が改善され、ビューポートにより適合するようになりました
+- ボタンの境界線を使用して、ボタン間のカスタムコントラストを作成する
 
-私たちの[新しいアプリ内メッセージは]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/)、ユーザーとのやり取りを良いものから素晴らしいものに変えます！
+[新しいアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/)は、ユーザーとのインタラクションを劇的に改善します。
 
-![Full Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![全画面表示の動作]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-### やるべきこと
+### あなたがする必要があること
 
-[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)用のBraze SDKの最新バージョンへのアップデートを強くお勧めします。
+最新バージョンのBraze SDKを[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)用に更新することを強くお勧めします。
 
-その後は問題ない！
+その後、準備完了です！
 
-## コンテンツ・ブロック・アーカイブ更新
+## コンテンツブロックアーカイブの更新
 
-[コンテンツブロックの]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks)アーカイブとアンアーカイブができるようになりました。
+これで[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks)をアーカイブおよびアーカイブ解除できます。
 
-## インキット・パートナー追加
+## パートナーとしての Inkit の追加
 
-[Inkitを]({{site.baseurl}}/partners/inkit/)デザイン済みのWebhookテンプレートとして使用したり、新しいWebhookキャンペーンを作成したりできるようになりました。
+[Inkit]({{site.baseurl}}/partners/inkit/) を事前に設計された Webhook テンプレートとして使用するか、新しい Webhook キャンペーンを作成できます。
 
 ## Google Cloud Storage
 
-[グーグル・クラウド・ストレージは]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/)ベータ版ではなくなった！Brazeは、Google Cloud StorageをBrazeプラットフォーム内でご利用いただけることを発表いたします。Brazeアカウントの**Technology Partnersに**アクセスし、Google Cloud Storageを検索してください。
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/) はベータ版ではなくなりました！関心のあるお客様が、Braze プラットフォーム内で Google Cloud Storage をご利用いただけるようになりました。Brazeアカウントの**Technology Partners**に移動し、Google Cloud Storageを検索します。

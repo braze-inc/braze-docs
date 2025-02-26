@@ -7,7 +7,7 @@ page_order: 3
 noindex: true
 ---
 
-# Compliance Documentation for Webhooks
+# Compliance Documentation for Webhooks ("Webhooks Channel")
 
 _Revision Date: 22 May 2024_
 
@@ -15,7 +15,7 @@ _(Effective as of the Revision Date; subject to change)_
 
 The following additional terms apply in relation to Customer’s use of the Webhooks Channel:
 
-## Webhook Use Terms
+## Webhooks Channel Use Terms
 
 Unless otherwise permitted in the applicable Channel Compliance Documentation, 
 (a) Customer shall not use webhooks where Braze offers native capabilities to achieve the same outcome, and

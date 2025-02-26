@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # 分析のロギング 
 
-> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。 
+> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)一般的な方法がわかります。 
 
 ## カード更新のリスニング
 
@@ -28,7 +28,7 @@ toc_headers: "h2"
 {% subtabs local %}
 {% subtab Java %}
 
-### ステップ1: プライベートサブスクライバー変数を作成する
+### ステップ1:プライベートサブスクライバー変数を作成する
 
 カード更新を購読するには、まずカスタムクラスでサブスクライバーを保持するプライベート変数を宣言します。
 
@@ -37,17 +37,17 @@ toc_headers: "h2"
 private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
 ```
 
-### ステップ2: 更新を購読する
+### ステップ2:更新を購読する
 
 次に、通常はカスタムコンテンツカードアクティビティの`Activity.onCreate()`内で、以下のコードを追加して、Braze のコンテンツカードの更新を購読します。
 
-\`\`\`java
-//新しいアクティビティで新しいサブスクライバーを再構築する前に、以前のサブスクライバーを削除します。
+```java
+// Remove the previous subscriber before rebuilding a new one with our new activity.
 Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
-        //すべてのコンテンツカードのリスト
+        // List of all Content Cards
         List<Card> allCards = event.getAllCards();
 
         // Your logic below
@@ -55,9 +55,9 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
 };
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
 Braze.getInstance(context).requestContentCardsRefresh();
-\`\`\`
+```
 
-### ステップ3: 購読解除
+### ステップ3:購読解除
 
 また、カスタムアクティビティが表示されなくなったら、購読を解除することをおすすめします。アクティビティの`onDestroy()`ライフサイクルメソッドに次のコードを追加します。
 
@@ -68,7 +68,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% endsubtab %}
 {% subtab Kotlin %}
 
-### ステップ1: プライベートサブスクライバー変数を作成する
+### ステップ1:プライベートサブスクライバー変数を作成する
 
 カード更新を購読するには、まずカスタムクラスでサブスクライバーを保持するプライベート変数を宣言します。
 
@@ -76,24 +76,24 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
-### ステップ2: 更新を購読する
+### ステップ2:更新を購読する
 
 次に、通常はカスタムコンテンツカードアクティビティの`Activity.onCreate()`内で、以下のコードを追加して、Braze のコンテンツカードの更新を購読します。
 
-\`\`\`kotlin
+```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
 Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
 Braze.getInstance(context).requestContentCardsRefresh()
-// List of all Content Cards
-val allCards = event.allCards
+  // List of all Content Cards
+  val allCards = event.allCards
 
-  //以下のロジック
+  // Your logic below
 }
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
 Braze.getInstance(context).requestContentCardsRefresh(true)
-\`\`\`
+```
 
-### ステップ3: 購読解除
+### ステップ3:購読解除
 
 また、カスタムアクティビティが表示されなくなったら、購読を解除することをおすすめします。アクティビティの`onDestroy()`ライフサイクルメソッドに次のコードを追加します。
 
@@ -115,8 +115,8 @@ Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscribe
 let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
 ```
 
-さらに、購読を維持して、コンテンツカードの変更を観察することもできます。これには次の2つの方法があります。
-1. キャンセル可能な状態を維持する。または、
+さらに、購読を維持して、コンテンツカードの変更を観察することもできます。これには次の2つの方法があります。 
+1. キャンセル可能な状態を維持する。または、 
 2. `AsyncStream`を維持する。
 
 ### キャンセル可能 
@@ -159,27 +159,27 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 
 カードが更新されたときに更新を購読するコールバック関数を登録します。
 
-\`\`\`javascript
+```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToContentCardsUpdates((updates) => {
   const cards = updates.cards;
 // For example:
-cards.forEach(card => {
-if (card.isControl) {
-// Do not display the control card, but remember to call `logContentCardImpressions([card])`
-  }
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
     else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
-      //`card.title``card.imageUrl`などを使用
+      // Use `card.title`, `card.imageUrl`, etc.
     }
     else if (card instanceof braze.ImageOnly) {
-      //`card.imageUrl`などを使用
+      // Use `card.imageUrl`, etc.
     }
-    })
-      });
+  })
+});
 
 braze.openSession();
-\`\`\`
+```
 
 {% alert note %}
 コンテンツカードは、`openSession()`の前にサブスクライブリクエストが呼び出された場合にのみ、セッション開始時に更新されます。[フィードを手動で更新]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed)することもいつでも選択できます。
@@ -187,9 +187,6 @@ braze.openSession();
 
 {% endtab %}
 {% endtabs %}
-
-
-
 
 ## イベントのロギング
 
@@ -209,9 +206,9 @@ braze.openSession();
 {% subtabs local %}
 {% subtab Java %}
 
-例えば:
+以下はその例です。
 
-\`\`\`java
+```java
 BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
   @Override
   public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
@@ -223,89 +220,94 @@ BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IConten
 
   }
 });
-\`\`\`
+```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
-例えば:
+以下はその例です。
 
-\`\`\`kotlin
-BrazeContentCardsManager.getInstance().contentCardsActionListener = object :IContentCardsActionListener {
-override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
-return false
-}
+```kotlin
+BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
+  override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
+    return false
+  }
 
-  override fun onContentCardDismissed(context:Context, card:Card) {
+  override fun onContentCardDismissed(context: Context, card: Card) {
 
   }
 }
-\`\`\`
+```
 
 {% endsubtab %}
 {% endsubtabs %}
+
+{% alert important %}
+カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。{% endalert %}
+
 {% endtab %}
 {% tab iOS %}
 
-[`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate)プロトコルを実装し、デリゲートオブジェクトを`BrazeContentCardUI.ViewController`の`delegate`プロパティとして設定します。このデリゲートは、カスタムオブジェクトのデータを Braze に渡してログに記録するように処理します。
+[`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate)プロトコルを実装し、デリゲートオブジェクトを`BrazeContentCardUI.ViewController`の`delegate`プロパティとして設定します。このデリゲートは、カスタムオブジェクトのデータを Braze に渡してログに記録するように処理します。例については、[コンテンツカードUIチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)を参照してください。
 
 {% subtabs local %}
 {% subtab Swift %}
 
-\`\`\`swift
-//コンテンツカードコントローラーの作成時にデリゲートを設定します
+```swift
+// Set the delegate when creating the Content Cards controller
 contentCardsController.delegate = delegate
 
 // Method to implement in delegate
 func contentCard(
-_ controller: BrazeContentCardUI.ViewController,
-shouldProcess clickAction: Braze.ContentCard.ClickAction,
-card: Braze.ContentCard
-) -> Bool {
-// Intercept the content card click action here.
-return true
-    }
-    \`\`\`
+    _ controller: BrazeContentCardUI.ViewController,
+    shouldProcess clickAction: Braze.ContentCard.ClickAction,
+    card: Braze.ContentCard
+  ) -> Bool {
+  // Intercept the content card click action here.
+  return true
+}
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-\`\`\`objc
-//コンテンツカードコントローラーの作成時にデリゲートを設定します
+```objc
+// Set the delegate when creating the Content Cards controller
 contentCardsController.delegate = delegate;
 
 // Method to implement in delegate
 - (BOOL)contentCardController:(BRZContentCardUIViewController *)controller
-shouldProcess:(NSURL *)url
-card:(BRZContentCardRaw *)card {
-// Intercept the content card click action here.
-return YES;
-                }
-                         \`\`\`
-
+                shouldProcess:(NSURL *)url
+                         card:(BRZContentCardRaw *)card {
+  // Intercept the content card click action here.
+  return YES;
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 
-例については、[コンテンツカードの UI チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)を参照してください。 
-
+{% alert important %}
+カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。
+{% endalert %}
 {% endtab %}
+
 {% tab Web %}
 
 [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)以下を使用して、ユーザーがカードを閲覧したときのインプレッションイベントをログに記録します。
 
-\`\`\`javascript
+```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.logContentCardImpressions([card1, card2, card3]);
-\`\`\`
+```
 
 [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)を使用して、ユーザーがカードを操作したときのカードクリックイベントをログに記録します。
 
-\`\`\`javascript
+```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.logContentCardClick(card);
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}

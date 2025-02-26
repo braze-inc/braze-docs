@@ -15,7 +15,7 @@ description: "This article outlines details about the Start Live Activity endpoi
 /messages/live_activity/start
 {% endapimethod %}
 
-> Use this endpoint to remotely start [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed in your iOS app. This endpoint requires additional setup.
+> Use this endpoint to remotely start [Live Activities]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/) displayed in your iOS app. This endpoint requires additional setup.
 
 After you create a Live Activity, you can make a POST request to remotely start your activity for any given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
@@ -26,7 +26,7 @@ After you create a Live Activity, you can make a POST request to remotely start 
 To use this endpoint, you'll need to complete the following:
 
 - Generate an API key with the `messages.live_activity.start` permission.
-- [Create a Live Activity]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity) using the Braze Swift SDK.
+- [Create a Live Activity]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#step-1-create-an-activity) using the Braze Swift SDK.
 
 ## Rate limit
 
@@ -39,7 +39,7 @@ To use this endpoint, you'll need to complete the following:
   "app_id": "(required, string) App API identifier retrieved from the Developer Console.",
   "activity_id": "(required, string) Define a custom string as your `activity_id`. You will use this ID when you wish to send update or end events to your Live Activity.",
   "activity_attributes_type": "(required, string) The activity attributes type you define within `liveActivities.registerPushToStart` in your app",
-  "activity_attributes": "(required, object) The static attribute values for the activity type (i.e. the sports team names which don't change)",
+  "activity_attributes": "(required, object) The static attribute values for the activity type (such as the sports team names, which don't change)",
   "content_state": "(required, object) You define the ContentState parameters when you create your Live Activity. Pass the updated values for your ContentState using this object. The format of this request must match the shape you initially defined.",
   "dismissal_date": "(optional, datetime in ISO-8601 format) The time to remove the Live Activity from the user’s UI. If this time is in the past, the Live Activity will be removed immediately.",
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
@@ -58,7 +58,7 @@ To use this endpoint, you'll need to complete the following:
 | `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page.  |
 | `activity_id` | Required | String  | Define a custom string as your `activity_id`. You will use this ID when you wish to send update or end events to your Live Activity.  |
 | `activity_attributes_type`  | Required | String | The activity attributes type you define within `liveActivities.registerPushToStart` in your app.  |
-| `activity_attributes` | Required | Object  | The static attribute values for the activity type (i.e. the sports team names which don't change). |
+| `activity_attributes` | Required | Object  | The static attribute values for the activity type (such as the sports team names, which don't change). |
 | `content_state` | Required | Object  | You define the `ContentState` parameters when you create your Live Activity. Pass the updated values for your `ContentState` using this object.<br><br>The format of this request must match the shape you initially defined. |
 | `dismissal_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter defines the time to remove the Live Activity from the user's UI. |
 | `stale_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter tells the system when the Live Activity content is marked as outdated in the user's UI. |
@@ -66,7 +66,7 @@ To use this endpoint, you'll need to complete the following:
 | `external_user_ids` | Optional if `segment_id` or `audience` is provided | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Optional if `external_user_ids` or `audience` is provided | String    | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Optional if `external_user_ids` or `segment_id` is provided | Connected audience object  | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 

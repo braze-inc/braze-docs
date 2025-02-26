@@ -1,9 +1,9 @@
 ---
 nav_title: トラブルシューティング
-article_title: iOSのアプリ内メッセージのトラブルシューティング
+article_title: iOSのアプリ内メッセージングのトラブルシューティング
 platform: Swift
 page_order: 6
-description: "このリファレンス記事では、Swift SDKのiOSアプリ内メッセージのトラブルシューティングのトピックについて説明します。"
+description: "この参考記事では、Swift SDK に関する、潜在的な iOS アプリ内メッセージのトラブルシューティングについてのトピックを取り上げます。"
 channel:
   - in-app messages
 
@@ -11,77 +11,72 @@ channel:
 
 # トラブルシューティング
 
-> このリファレンス記事では、iOS のアプリ内メッセージのトラブルシューティングに関する潜在的なトピックを取り上げます。
+{% multi_lang_include inapp_message_troubleshooting.md sdk="iOS" %}
 
-## インプレッション
+### アセット読み込みのトラブルシューティング (`NSURLError` コード `-1008`)
 
-### インプレッション分析やクリック分析が記録されていない
+Braze とサードパーティのネットワークロギングライブラリを統合する場合、開発者はドメインコード `-1008` の `NSURLError` に遭遇することがよくあります。このエラーは、画像やフォントなどのアセットが取得できなかったか、キャッシュできなかったことを示しています。このようなケースを回避するには、BrazeのCDN URLを、これらのライブラリによって無視されるべきドメインのリストに登録する必要がある。
 
-メッセージの表示やクリックのアクションを手動で処理するようにアプリ内メッセージのデリゲートを設定している場合は、アプリ内メッセージのクリック数と[インプレッション](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:))数を手動で[記録](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:))する必要があります。
+#### ドメイン
 
-### インプレッションが予想より低い
+CDNドメインの全リストは以下の通り：
 
-トリガーはセッション開始時にデバイスへの同期に時間がかかるため、ユーザーがセッション開始直後にイベントや購入を記録すると競合状態が発生する可能性があります。考えられる回避策の 1 つは、キャンペーンを変更してセッションの開始をトリガーし、目的のイベントまたは購入をセグメント化することです。なお、イベント発生後の次回セッション開始時にアプリ内メッセージが配信されることに注意してください。
+* `"appboy-images.com"`
+* `"braze-images.com"`
+* `"cdn.braze.eu"`
+* `"cdn.braze.com"`
 
-## 予期したアプリ内メッセージが表示されなかった
+#### 例
 
-ほとんどのアプリ内メッセージの問題は、配信と表示の2つの主要なカテゴリに分けることができます。予想されるアプリ内メッセージがデバイスで表示されない原因をトラブルシューティングするには、まず [アプリ内メッセージがデバイスに配信された][iam\_11] ことを確認してから [メッセージ表示のトラブルシューティング][iam\_12] を行う必要があります。
+以下は、Brazeのアセットキャッシュと競合することが知られているライブラリと、その問題を回避するためのサンプルコードである。使用できないリソース・エラーを引き起こすライブラリを使用しているプロジェクトで、以下にリストアップされていない場合は、そのライブラリのドキュメントを参照して、同様の使用APIを確認してほしい。
 
-### アプリ内メッセージ配信のトラブルシューティング {#troubleshooting-in-app-message-delivery}
+##### Netfox
 
-SDK はセッション開始時に Braze サーバーからアプリ内メッセージを要求します。アプリ内メッセージがデバイスに配信されているかどうかを確認するには、アプリ内メッセージが SDK によってリクエストされ、Braze サーバーによって返されていることを確認する必要があります。
+{% tabs %}
+{% tab Swift %}
+```swift
+NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[NFX.sharedInstance ignoreURLs:@[@"https://cdn.braze.com"]];
+```
+{% endtab %}
+{% endtabs %}
 
-#### メッセージが要求され、返されたかどうかを確認する
+##### NetGuard
 
-1. ダッシュボードで [テストユーザー][iam\_1] として自分自身を追加します。
-2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
-3. アプリケーションで新しいセッションが発生することを確認します。
-4. [イベントユーザーログ][iam\_3] を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
-  - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
-  - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、［**レスポンスデータ］**］ の ［**リクエスト済みレスポンス**］ フィールドに `in_app` が表示されます。
-5. [イベントユーザーログ][iam\_3] を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![][iam\_5]
+{% tabs %}
+{% tab Swift %}
+```swift
+NetGuard.blackListHosts.append(contentsOf: ["cdn.braze.com"])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+NSMutableArray<NSString *> *blackListHosts = [NetGuard.blackListHosts mutableCopy];
+[blackListHosts addObject:@"cdn.braze.com"];
+NetGuard.blackListHosts = blackListHosts;
+```
+{% endtab %}
+{% endtabs %}
 
-#### 要求されていないメッセージ
+##### XNLogger
 
-アプリ内メッセージがリクエストされていない場合、アプリ内メッセージはセッション開始時にリフレッシュされるため、アプリがセッションを正しくトラッキングしていない可能性があります。また、アプリのセッションタイムアウトセマンティクスに基づいて、アプリが実際にセッションを開始していることを確認してください:
+{% tabs %}
+{% tab Swift %}
+```swift
+let brazeAssetsHostFilter = XNHostFilter(host: "https://cdn.braze.com")
+XNLogger.shared.addFilters([brazeAssetsHostFilter])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"https://cdn.braze.com"];
+[XNLogger.shared addFilters:@[brazeAssetsHostFilter]];
+```
+{% endtab %}
+{% endtabs %}
 
-![成功したセッション開始イベントを表示するイベントユーザーログで見つかった SDK リクエスト。][iam\_10]
-
-#### メッセージが返されない
-
-アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
-
-##### セグメントにユーザーが含まれていない。
-ユーザーの [\*\*エンゲージメント**][iam_6] タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
-
-##### ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-**キャンペーン作成ツール**の**配信**ステップの [キャンペーン再適格性設定][iam\_7] を確認し、再適格性設定がテスト設定と整合していることを確認します。
-
-##### ユーザーがキャンペーンのフリークエンシーキャップに達した。
-キャンペーン [フリークエンシーキャップ設定][iam\_8] を確認し、テスト設定と整合していることを確認します。
-
-##### ユーザーがコントロール母集団から外れた
-キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。 
-
-統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。
-
-### アプリ内メッセージ表示のトラブルシューティング {#troubleshooting-in-app-message-display}
-
-アプリがアプリ内メッセージのリクエストと受信に成功しているのに表示されない場合は、デバイス側のロジックによって表示が妨げられている可能性があります。
-
-- トリガーされたアプリ内メッセージは、[トリガー間の最小時間間隔]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers) (デフォルトは30秒) に基づいてレート制限されます。
-- アプリ内メッセージ処理をカスタマイズするようにデリゲートを設定している場合は、デリゲートがアプリ内メッセージ表示に影響していないことを確認してください。
-- 画像のダウンロードに失敗すると、画像付きのアプリ内メッセージが表示されなくなります。画像のダウンロードに失敗していないか、デバイスのログを確認してください。
-- 端末の向きがアプリ内メッセージで指定された向きと一致しなかった場合、アプリ内メッセージは表示されません。デバイスの向きが正しいことを確認してください。
-
-[iam\_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[iam\_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam\_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam\_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[iam\_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/user_profiles/#engagement-tab
-[iam\_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[iam\_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[iam\_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[iam\_11]: #troubleshooting-in-app-message-delivery
-[iam\_12]: #Troubleshooting-in-app-message-display
 

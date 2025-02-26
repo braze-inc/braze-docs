@@ -19,18 +19,18 @@ Braze のリアルタイム位置情報サービスの中核となるのが、[�
 iOS 14以降、おおよその位置情報の提供許可を選択したユーザーについては、ジオフェンスの信頼性が低下しました。
 {% endalert %}
 
-## ステップ1: バックグラウンドのプッシュを有効にする
+## ステップ1:バックグラウンドのプッシュを有効にする
 
-ジオフェンスの同期戦略を最大限に活用するには、標準のプッシュ統合を完了することに加えて、 [サイレントプッシュ通知][6]を有効にする必要があります。
+ジオフェンスの同期戦略を最大限に活用するには、標準のプッシュ統合を完了することに加えて、 [サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/)を有効にする必要があります。
 
-## ステップ2: Braze の位置情報サービスを有効にする
-Braze の位置情報サービスは、SDK を介して[有効にする必要があります][1]。これらはデフォルトでは有効になっていません。
+## ステップ 2:Braze の位置情報サービスを有効にする
+Braze の位置情報サービスは、SDK を介して[有効にする必要があります](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/)。これらはデフォルトでは有効になっていません。
 
 ## ステップ3: ジオフェンスを有効にする
 
-ジオフェンスを有効にするには、[`Braze`][1] インスタンスを初期化する `configuration` オブジェクトで `location.geofencesEnabled` を `true` に設定します。その他の `location` 設定オプションは[こちら][2]で確認できます。
+ジオフェンスを有効にするには、[`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) インスタンスを初期化する `configuration` オブジェクトで `location.geofencesEnabled` を `true` に設定します。その他の `location` 設定オプションは[こちら](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class)で確認できます。
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -41,6 +41,11 @@ configuration.location.brazeLocationProvider = BrazeLocationProvider()
 configuration.location.automaticLocationCollection = true
 configuration.location.geofencesEnabled = true
 configuration.location.automaticGeofenceRequests = true
+
+// Configurations for background geofence reporting with `When In Use` authorization.
+configuration.location.allowBackgroundGeofenceUpdates = true
+configuration.location.distanceFilter = 8000
+
 let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
@@ -57,6 +62,11 @@ configuration.location.brazeLocationProvider = [[BrazeLocationProvider alloc] in
 configuration.location.automaticLocationCollection = YES;
 configuration.location.geofencesEnabled = YES;
 configuration.location.automaticGeofenceRequests = YES;
+
+// Configurations for background geofence reporting with `When In Use` authorization.
+configuration.location.allowBackgroundGeofenceUpdates = YES;
+configuration.location.distanceFilter = 8000;
+
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
@@ -64,39 +74,71 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-## ステップ4: Braze のバックグラウンドプッシュの確認
+### バックグラウンドレポート用のジオフェンスの設定
 
-Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。[サイレントプッシュの無視][7]に関する記事に従って、Braze のジオフェンス同期通知を受信したときにアプリケーションで不要なアクションが実行されないようにします。
+デフォルトでは、ジオフェンスは、アプリがフォアグラウンドにある場合、または `Always` 権限 (すべてのアプリケーション状態を監視する権限) を持つ場合にのみ監視されます。
 
-## ステップ5: Info.plist への位置情報の使用説明文字列の追加
+ただし、`Background Mode -> Location updates` 機能を Xcode プロジェクトに追加し、`allowBackgroundGeofenceUpdates` を有効にすることで、アプリがバックグラウンドにあるとき、または `When In Use` 権限があるときに、ジオフェンスイベントを監視するように選択できます。これにより、Braze は位置情報の更新を継続的に監視することで、アプリの「使用中」状態を拡張できます。
+
+`allowBackgroundGeofenceUpdates` は、アプリがバックグラウンドにある場合にのみ機能します。再度開かれると、既存のバックグラウンド処理が一時停止されるため、フォアグラウンド処理を優先することができます。
+
+{% alert important %}
+バッテリーの消耗やレート制限を防ぐには、必ず`distanceFilter` をアプリ固有のニーズに合った値に設定してください。`distanceFilter` をより高い値に設定すると、アプリがユーザーの場所を要求しすぎないようにします。
+{% endalert %}
+
+## ステップ 4:Braze のバックグラウンドプッシュを確認する
+
+Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。[サイレントプッシュの無視]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/)に関する記事に従って、Braze のジオフェンス同期通知を受信したときにアプリケーションで不要なアクションが実行されないようにします。
+
+## ステップ5:位置情報の使用状況を説明する文字列を Info.plist に追加する
 
 アプリケーションで位置情報を追跡する必要がある理由の説明を含む `String` 値が含まれる `info.plist` に、キー `NSLocationAlwaysUsageDescription`、`NSLocationAlwaysAndWhenInUseUsageDescription` または `NSLocationWhenInUseUsageDescription` を追加します。
 
 この説明は、システムの位置情報プロンプトで権限がリクエストされ、ユーザーに位置情報の追跡の利点を明確に説明する必要がある場合に表示されます。
 
-## ステップ6: ユーザーに対する権限のリクエスト
+## ステップ 6: ユーザーに権限をリクエストする
 
-ジオフェンス機能は、`Always` 位置情報権限か、`Background Mode -> Location updates` 機能が有効な `AuthorizedWhenInUse` が付与されている場合にのみ動作します。
+ユーザーから承認をリクエストする場合、[`When In Use`](#when-in-use) または[`Always`](#always) 承認をリクエストできます。
 
-`Always` または `AuthorizedWhenInUse` 位置情報権限をリクエストするには、次のコードを使用します。
+### 使用時
+
+`When In Use` 権限を要求するには、`requestWhenInUseAuthorization()` メソッドを使用します。
 
 {% tabs %}
-{% tab swift %}
-
+{% tab SWIFT %}
 ```swift
 var locationManager = CLLocationManager()
 locationManager.requestWhenInUseAuthorization()
-// or
-locationManager.requestAlwaysAuthorization()
 ```
-
 {% endtab %}
-{% tab OBJECTIVE-C %}
 
+{% tab OBJECTIVE-C %}
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestWhenInUseAuthorization];
-// or
+```
+{% endtab %}
+{% endtabs %}
+
+### 常に
+
+デフォルトでは、`requestAlwaysAuthorization()` はアプリに `When In Use` 権限のみを付与し、しばらく経過した後に、`Always` 権限をユーザーにもう一度要求します。ただし、まず `requestWhenInUseAuthorization()` を呼び出し、最初の `When In Use` 権限を受け取った後に `requestAlwaysAuthorization()` を呼び出すことで、ユーザーに即時にプロンプトで要求することもできます。
+
+{% alert important %}
+`Always` 権限を求める即時プロンプトを出せるのは一度のみです。
+{% endalert %}
+
+{% tabs %}
+{% tab SWIFT %}
+```swift
+var locationManager = CLLocationManager()
+locationManager.requestAlwaysAuthorization()
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestAlwaysAuthorization];
 ```
 {% endtab %}
@@ -114,13 +156,13 @@ iOS では、1つのアプリに保存できるジオフェンスは20個まで�
 
 1. [**オーディエンス**] > [**場所**] に移動します。
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**場所**] が表示されます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] の下に [**位置情報**] が表示されます。
 {% endalert %}
 
 {:start="2"}
 2\.ジオフェンスが現在有効になっているワークスペース内のアプリの数が、マップの下に表示されます。たとえば、[**ジオフェンスが有効になっているアプリ0/1**] と表示されます。このテキストをクリックします。
 3\.ジオフェンスを有効にするアプリを選択します。[**完了**] をクリックします。
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Braze 場所ページのジオフェンスオプション。]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### [設定の管理] ページからジオフェンスを有効にする
 
@@ -135,14 +177,14 @@ iOS では、1つのアプリに保存できるジオフェンスは20個まで�
 2\.ジオフェンスを有効にするアプリを選択します。
 3\.[**ジオフェンスは有効です**] チェックボックスを選択します。[**保存**] をクリックします。
 
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Braze の設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## 自動ジオフェンスリクエストを無効にする
 
-`[init(configuration)]`[4] に渡される `configuration` オブジェクトで、自動ジオフェンスリクエストを無効にできます。`automaticGeofenceRequests` を `false` に設定します。以下はその例です。
+[`init(configuration)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/init(configuration:)) に渡される `configuration` オブジェクトで、自動ジオフェンスリクエストを無効にできます。`automaticGeofenceRequests` を `false` に設定します。以下に例を示します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -178,7 +220,7 @@ Braze SDK からジオフェンスにバックエンドからの監視がリク�
 最も関連性の高いジオフェンスを受信するために、SDK でレポートされる位置情報をコントロールするには、位置の緯度と経度を指定して、ジオフェンスを手動でリクエストできます。この方法を使用する場合は、自動ジオフェンスリクエストを無効にすることをお勧めします。そのためには、次のコードを使用します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
@@ -195,8 +237,3 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-[support]: {{site.baseurl}}/braze_support/

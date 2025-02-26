@@ -23,7 +23,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 | Tealium EventStream or Tealium AudienceStream | A [Tealium account](https://my.tealiumiq.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Tealium, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | Tealium URL | These can be obtained by navigating to your Tealium dashboard and copying the ingestion URL.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -43,6 +43,6 @@ It's important to keep your Tealium URL up to date. If your connector's URL is i
 
 ## Integration details
 
-Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.
+Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data/braze_currents/) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.
 
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).

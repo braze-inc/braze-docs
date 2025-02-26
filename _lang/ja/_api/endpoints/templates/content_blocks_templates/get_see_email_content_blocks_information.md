@@ -1,39 +1,39 @@
 ---
-nav_title: "取得:コンテンツブロック情報を参照"
-article_title: "取得:コンテンツブロック情報を参照"
+nav_title: "取得:コンテンツブロックの情報を見る"
+article_title: "取得:コンテンツブロックの情報を見る"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、See Content Blocks 情報Braze エンドポイントの詳細について説明します。"
+description: "この記事では、コンテンツブロック情報を見るBrazeエンドポイントの詳細について概説する。"
 ---
 
 {% api %}
-# コンテンツブロック情報を参照
+# コンテンツ・ブロックの情報を見る
 {% apimethod get %}
 /content_blocks/info
 {% endapimethod %}
 
-> このエンドポイントを使用して、既存の[Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) の情報を呼び出します。
+> このエンドポイントを使用して、既存の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)の情報を呼び出します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 ## 前提条件
-このエンドポイントを使用するには、`content_blocks.info` 権限を持つ[API キー]({{site.baseurl}}/api/api_key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/api_key/)と`content_blocks.info`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `content_block_id`  | Required | String | The Content Block identifier.<br><br>これは、API コールでコンテンツブロック情報を一覧表示するか、[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページに移動し、一番下までスクロールしてコンテンツブロックAPI 識別子を検索することで確認できます。|
-| `include_inclusion_data` | Optional | Boolean | `true` に設定すると、API は、このコンテンツブロックが含まれているキャンペーンおよびキャンバスのメッセージバリエーションAPI 識別子を返し、後続のコールで使用します。 アーカイブまたは削除されたキャンペーンまたはキャンバスは除外されます。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `content_block_id`  | 必須 | 文字列 | コンテンツブロックの識別子。<br><br>これは、API コールでコンテンツブロックの情報をリストアップするか、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)のページに行き、一番下までスクロールしてコンテンツブロックの API 識別子を検索することで見つけることができます。|
+| `include_inclusion_data`  | オプション | ブール値 | `true` に設定された場合、API はこのコンテンツブロックが含まれるキャンペーンとキャンバスのメッセージバリエーション API 識別子を返し、以降の呼び出しで使用できるようにします。 結果は、アーカイブまたは削除されたキャンペーンやキャンバスを除外する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=false' \
@@ -41,7 +41,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 ```
 {% endraw %}
 
-## レスポンス
+## 応答
 
 ```json
 Content-Type: application/json
@@ -63,15 +63,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## トラブルシューティング
 
-次の表に、返される可能性のあるエラーと関連するトラブルシューティング手順を示します。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| エラー| トラブルシューティング|
+| エラー | トラブルシューティング |
 | --- | --- |
-| `Content Block ID cannot be blank` | コンテンツブロックがリクエストにリストされ、引用符で囲まれていることを確認します(`""`)。|
-| `Content Block ID is invalid for this workspace` | このコンテンツブロックは存在しないか、別の会社アカウントまたはワークスペースにあります。|
-| `Content Block has been deleted—content not available` | このコンテンツブロックは以前に存在していたかもしれませんが、削除されました。|
-| `Include Inclusion Data—error` | このパラメータはブール値(true またはfalse) のみを受け入れます。`include_inclusion_data` の値が引用符で囲まれていないことを確認します(`""`)。この値は文字列として送信されます。詳細については、[リクエストパラメータ](#request-parameters)を参照してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `Content Block ID cannot be blank` | コンテンツブロックがリクエストにリストされ、引用符 (`""`) で囲まれていることを確認します。 |
+| `Content Block ID is invalid for this workspace` | このコンテンツブロックが存在しないか、別の会社アカウントまたはワークスペースにある。 |
+| `Content Block has been deleted—content not available` | このコンテンツブロックは、以前は存在していたかもしれませんが、削除されました。 |
+| `Include Inclusion Data—error` | このパラメータはブーリアン値（trueまたはfalse）のみを受け付ける。`include_inclusion_data` の値が引用符（`""` ）で囲まれていないことを確認すること。この場合、値は文字列として送信される。詳細については、[リクエストパラメーター](#request-parameters)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endapi %}

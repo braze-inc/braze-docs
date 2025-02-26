@@ -1,0 +1,39 @@
+<!--
+Thank you for contributing to Braze Docs! Read comments like this one for help filling out your Pull Request (PR). For more information about contributing to Braze Docs, see:
+braze.com/docs/contributing/.
+-->
+
+### Why are you making this change? (required)
+<!-- In one or two sentences, describe your changes. -->
+_Your reason here..._
+
+### Related PRs, issues, or features (optional)
+<!--
+For related GitHub issues and features, add "Fixes #ISSUE_NUMBER".
+For Jira tickets, add the ticket number and a link to the ticket, like:
+[BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
+-->
+- N/A
+
+### Feature release date (optional)
+<!-- If this PR is related to an upcoming Braze feature, add the date below, like: 15 May 2024. -->
+- N/A
+
+### Contributor checklist
+<!-- After you've filled out the previous sections, select "Create Draft Pull Request", then review your PR before filling out the following checklist. -->
+- [ ] I confirm that my PR meets the following:
+    - I signed the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla).
+    - My style and voice follows the [Braze Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub).
+    - My content contains correct spelling and grammar.
+    - All links are working correctly.
+    - If I renamed or moved a file or directory, I set up [URL redirects](https://www.braze.com/docs/contributing/content_management/redirecting_urls) for each file.
+    - If I updated or replaced an image, I did not remove the original image file from the repository. (For more information, see [Updating an image](https://www.braze.com/docs/contributing/content_management/images/#updating-an-image)).
+    - If my PR is related to a paid SKU, third party, SMS, AI, or privacy, I have received written approval from Braze Legal.
+
+### Submitting for review
+
+If your PR meets the above requirements, select **Ready for review**, then add a reviewer:
+- **Non-Braze contributors:** Tag `@braze-inc/docs-team` in a comment below.
+- **Braze employees:** Have any relevant subject matter experts (like engineers or product managers) review your work first, then add the [tech writer assigned to your specific vertical](https://confluence.braze.com/pages/viewpage.action?pageId=75039896). If you're not sure which tech writer to add, you can add `braze-inc/docs-team` instead. 
+
+Thanks for contributing! We look forward to reading your work.

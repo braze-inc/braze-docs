@@ -31,9 +31,9 @@ This use case shows how to calculate a user's app anniversary based on their ini
 ```liquid
 {% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
-{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
-{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+{% assign anniversary_month = {{custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = {{custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = {{custom_attribute.${registration_date}}} | date: "%Y" %}
 
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
@@ -773,7 +773,7 @@ This use case will display the current date, month, and year, with the month in 
 
 ### Display an image based on a user's language {#language-image-display}
 
-This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze Media Library.
+This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze media library.
 
 {% raw %}
 ```liquid
@@ -889,7 +889,7 @@ This use case takes a customer's subscription state to send personalized content
 
 {% raw %}
 ```liquid
-{% if {{subscribed_state.${subscription_group_id}}}} == 'subscribed' %}
+{% if {{subscribed_state.${subscription_group_id}}} == 'subscribed' %}
 This is an exclusive message for subscribed users!
 {% else %} This is the default message for other users.
 {% endif %}
@@ -1502,9 +1502,19 @@ This use case will take the current month and display the previous month to be u
 {% assign month = "October" %}
 {% elsif last_month == 11 %}
 {% assign month = "November" %}
-{% elsif last_month == 12 %}
+{% elsif last_month == 0 %}
 {% assign month = "December" %}
 {% endif %}
+
+Here's an overview of what your spending looked like in {{month}}.
+```
+{% endraw %}
+
+You can alternatively use the following to get the same result.
+
+{% raw %}
+```liquid
+{% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
 Here's an overview of what your spending looked like in {{month}}.
 ```

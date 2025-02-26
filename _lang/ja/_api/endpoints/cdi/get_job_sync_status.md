@@ -1,47 +1,47 @@
 ---
-nav_title: "GET：リストジョブの同期ステータス"
-article_title: "GET：リストジョブの同期ステータス"
+nav_title: "取得:ジョブ同期ステータスを表示する"
+article_title: "取得:ジョブ同期ステータスを表示する"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
 page_type: reference
-description: "この記事では、List job sync status Brazeエンドポイントの詳細について概説します。"
+description: "この記事では、リストジョブ同期ステータスBrazeエンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# ジョブの同期状況を一覧表示
+# ジョブ同期ステータスのリスト
 {% apimethod get %}
 /cdi/integrations/{integration_id}/job_sync_status
 {% endapimethod %}
 
-> このエンドポイントを使用して、指定した統合の過去の同期ステータスのリストを返します。
+> このエンドポイントを使用して、指定された統合の過去の同期ステータスのリストを返します。
 
 {% alert note %}
-このエンドポイントを使用するには、`cdi.integration_job_status` パーミッションを持つ API キーを生成する必要があります。
+このエンドポイントを使用するには、`cdi.integration_job_status` 権限を持つ API キーを生成する必要があります。
 {% endalert %}
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='cdi job sync status' %}
 
-## 経路パラメータ
+## パスパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-|`integration_id` | 必須 | 文字列 | 統合 ID。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `integration_id` | 必須 | 文字列 | 統合 ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## クエリパラメーター
+## クエリーパラメーター
 
-このエンドポイントを呼び出すと、10個のアイテムが返される。10回以上の同期がある統合では、次の応答例に示すように、`Link` ヘッダーを使用して、次のページのデータを取得します。
+このエンドポイントを呼び出すと、10個のアイテムが返される。10を超える同期のある統合については、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメータ｜必須｜データ型｜説明
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-|`cursor` ｜オプション｜文字列｜同期ステータスのページ分割を決定します。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `cursor` | オプション | 文字列 | 同期ステータスのページネーションを決定します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ### カーソルなし
 
@@ -61,12 +61,12 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations/00
 
 ## 応答
 
-### 成功応答例
+### 成功応答の例
 
-ステータスコード`200` 、以下のレスポンスボディを返すことができる。
+ステータスコード `200` は、次の応答本文を返す可能性があります。
 
 {% alert note %}
-`Link` ヘッダーは、シンクの合計が10以下の場合は存在しない。カーソルのない通話では、`prev` 。アイテムの最後のページを見るとき、`next` は表示されません。
+`Link` ヘッダーは、合計10回以下の同期がある場合には存在しません。カーソルのない呼び出しでは、`prev` は表示されません。項目の最後のページを見ると、`next` は表示されません。
 {% endalert %}
 
 ```
@@ -89,25 +89,25 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-｜job\_status｜ジョブステータス
+| job_status | 説明 |
 | --- | --- |
-|`running` | ジョブは現在実行中です。|
-|`success` ｜すべての行が正常に同期されました。|
-|`partial` | エラーにより一部の行の同期に失敗しました。|
-|`error` | 同期された行はありません。|
-|`config_error` ｜統合設定にエラーが発生しました。統合設定を確認してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `running` | ジョブは現在実行中です。 |
+| `success` | すべての行が正常に同期されました。 |
+| `partial` | いくつかの行はエラーのため同期に失敗しました。 |
+| `error` | 行は同期されませんでした。 |
+| `config_error` | 統合構成にエラーがありました。統合セットアップを確認してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## トラブルシューティング
 
-次の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものです。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| トラブルシューティング
+| エラー | トラブルシューティング |
 | --- | --- |
-|`400 Invalid cursor` ｜`cursor` ｜が有効であることを確認する。|
-|`400 Invalid integration ID` ｜`integration_id` ｜が有効であることを確認する。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
+| `400 Invalid integration ID` | `integration_id` が有効であることを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[致命的なエラーと]({{site.baseurl}}/api/errors/#fatal-errors)応答を参照してください。
+その他のステータスコードと関連するエラーメッセージについては、「[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)」を参照してください。
 
 {% endapi %}

@@ -1,5 +1,5 @@
 ---
-nav_title: ワークフロー自動化
+nav_title: ワークフローの自動化
 article_title: ワークフロー自動化パートナー
 page_order: 10
 
@@ -8,8 +8,6 @@ description: "このランディングページには、サービスとアプリ
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Workflow Automation"
 
@@ -22,7 +20,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
-- name: Census
+- name: 国勢調査
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
 - name: Airbyte
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/

@@ -56,6 +56,9 @@ guide_menu_list:
 - name: Transactional Emails
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
+- name: Identifier Field-Level Encryption
+  link: /docs/user_guide/analytics/field_level_encryption/
+  image: /assets/img/braze_icons/database-01.svg
 - name: Gmail Promotion Tool
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
   image: /assets/img/braze_icons/trophy-01.svg

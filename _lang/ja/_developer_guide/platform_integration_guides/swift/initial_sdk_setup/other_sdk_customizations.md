@@ -1,38 +1,38 @@
 ---
 nav_title: その他の SDK カスタマイズ
-article_title: iOS 向けのその他の SDK カスタマイズ
+article_title: Swift用のその他のSDKカスタマイズ
 platform: Swift
-description: "本書では、Braze Swift SDK を設定するための追加手順について説明します。"
+description: "このドキュメントでは、Braze Swift SDK を設定するための追加手順を説明します。"
 page_order: 3
 
 ---
 
-# その他の SDK のカスタマイズ
+# Swift用のその他のSDKカスタマイズ
 
-> Braze Swift SDK は、Braze インスタンスにアタッチされた`Braze.Configuration` オブジェクトのメンバープロパティを変更することで設定できます。設定は、`Braze(configuration:)` でBraze インスタンスを初期化する前にのみ行うことができます。
+> Braze Swift SDK は、Braze インスタンスに付加されている `Braze.Configuration` オブジェクトのメンバープロパティを変更することで設定できます。設定は、`Braze(configuration:)` を使用して Braze インスタンスを初期化する前にのみ行えます。
 
-使用可能な設定の完全なリストについては、[Braze.Configurationクラスのドキュメント][1]を参照してください。
+使用可能な設定の完全なリストについては、[Braze.Configuration クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class)を参照してください。
 
 ## Braze ログレベル
 
-Braze Swift SDK のデフォルトのログレベルは、次のチャートの`.error` です。このレベルは、完全に無効化されたロギングを上回る最小レベルです。
+Braze Swift SDK のデフォルトのログレベルは、次の表の `.error` です。このレベルは、完全に無効化されるロギングを上回る最小のレベルです。
 
 次の使用可能なログレベルのリストを参照してください。
 
-| Swift | Objective-C | 説明|
+| Swift       | Objective-C              | 説明                                                       |
 |-------------|--------------------------|-------------------------------------------------------------------|
-| `.debug` | `BRZLoggerLevelDebug` | デバッグ情報+ `.info` + `.error` |
-| `.info` | `BRZLoggerLevelInfo` | 一般的なSDK 情報(ユーザーの変更など) + `.error`. |
-| `.error` | `BRZLoggerLevelError` | ログエラー|
-| `.disabled` | `BRZLoggerLevelDisabled` | ロギングは発生しません。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| `.debug`    | `BRZLoggerLevelDebug`    | デバッグ情報 + `.info` + `.error` をロギングする                    |
+| `.info`     | `BRZLoggerLevelInfo`     | 一般的なSDK情報（ユーザーの変更など）を記録する +`.error` 。 |
+| `.error`    | `BRZLoggerLevelError`    | エラーをロギングする。                                                       |
+| `.disabled` | `BRZLoggerLevelDisabled` | ロギングは行われない。                                                |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### ログレベルの設定
 
-ログレベルは、`Braze.Configuration` オブジェクトで実行時に割り当てることができます。
+ログレベルは、`Braze.Configuration` オブジェクトでの実行時に割り当てることができます。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -58,7 +58,5 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 {% endtab %}
 {% endtabs %}
 
-ろう付けロガーの使用については、[ロガークラスのドキュメント][2]を参照してください。
+Braze Logger のすべての使用法については、[ロガークラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class)を参照してください。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class

@@ -5,9 +5,6 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
 description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
@@ -27,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -123,16 +118,16 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: Infillion
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
@@ -251,8 +246,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/
 - name: Smartling
@@ -301,4 +294,26 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: mypostcard
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: Justuno
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
+- name: Constructor
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
 ---

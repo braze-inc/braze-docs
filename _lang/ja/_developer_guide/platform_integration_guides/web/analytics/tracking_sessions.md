@@ -1,9 +1,9 @@
 ---
 nav_title: セッションを追跡する
-article_title: Web のセッションの追跡
+article_title: ウェブのセッションをトラッキングする
 platform: Web
 page_order: 0
-description: "このリファレンス記事では、Web のセッションを追跡する方法について説明します。"
+description: "この参考記事では、Web のセッションを追跡する方法について説明します。"
 
 ---
 
@@ -13,7 +13,7 @@ description: "このリファレンス記事では、Web のセッションを�
 
 ## セッションライフサイクル
 
-デフォルトでは、セッションは最初に呼び出されたときに `braze.openSession()` 開始され、少なくとも 30 分間非アクティブになるまで開いたままになります。つまり、ユーザーがサイトから移動し、30 分以内に戻ってきた場合、同じセッションが続行されます。30 分が経過した後にユーザーが戻ると、移動した時間に対して「セッションを閉じる」データポイントが自動的に生成され、新しいセッションが開きます。
+デフォルトでは、セッションは `braze.openSession()` が最初に呼び出されたときに開始され、少なくとも30分間非アクティブになるまで開いたままになります。つまり、ユーザーがサイトから移動し、30分以内に戻った場合、同じセッションが続行されます。30分が経過した後にユーザーが戻った場合、ユーザーが離れた時間に応じて「セッション終了」のデータポイントが自動的に生成され、新しいセッションが開きます。
 
 {% alert note %}
 新しいセッションを強制する必要がある場合、ユーザーを変更することで強制が可能になります。
@@ -21,7 +21,7 @@ description: "このリファレンス記事では、Web のセッションを�
 
 ## セッションタイムアウトをカスタマイズする
 
-セッションタイムアウトをカスタマイズするには、このオプションを `sessionTimeoutInSeconds` ['initialize'][session_tracking_5] 関数に渡します。`sessionTimeoutInSeconds` の最小値は 1 秒です。
+セッションタイムアウトをカスタマイズするには、`sessionTimeoutInSeconds` オプションを[`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) 関数に渡します。`sessionTimeoutInSeconds` の最小値は 1 秒です。
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30
@@ -34,11 +34,5 @@ braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。][session\_tracking\_7]
+![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%"}
 
-[session\_tracking\_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/#customizing-braze-on-startup
-[session\_tracking\_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session\_tracking\_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session\_tracking\_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session\_tracking\_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session\_tracking\_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

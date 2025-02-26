@@ -1,70 +1,70 @@
 ---
-nav_title: グルパルー
+nav_title: Grouparoo
 page_order: 1
-description: "この記事では、データウェアハウスのデータを使用してマーケティング、セールス、サポートツールに簡単に電力を供給できるオープンソースのリバースETL ツールであるBraze とGrouparoo のパートナーシップについて説明します。"
+description: "この記事では、BrazeとGrouparooのパートナーシップについて概説している。GrouparooはオープンソースのリバースETLツールで、データウェアハウスのデータを使ってマーケティング、セールス、サポートの各ツールに簡単にパワーを与えることができる。"
 page_type: update
 
 ---
 
-# グルパルー
+# Grouparoo
 
 {% alert update %}
-Grouparooのサポートは、2022年4月に廃止されました。
+Grouparoo のサポートは、2022年4月に終了しました。
 {% endalert %}
 
-> [Grouparoo][1]はオープンソースのリバースETLツールで、倉庫内のデータを使用してマーケティング、販売、サポートツールを簡単に動かすことができます。設定は、モデル中心のUI で行われるため、非テクニカルチームメンバーは、オペレーションをサポートするデータ同期を設定およびスケジュールできます。
+> [Grouparoo][1]は、開封ソースのリバースETLツールで、倉庫内のデータを使用してマーケティング、販売、サポートツールに簡単に電力を供給します。設定はモデル中心のUIで行われるため、技術者でないチームメンバーでも、運用をサポートするためのデータ同期の設定やスケジュールを立てることができる。
 
-Braze とGrouparoo の統合により、Braze に送信することで、倉庫に保存されているデータを簡単に操作できるようになります。自動同期スケジュールを設定すると、最新の情報を使用して顧客とのコミュニケーションを一貫して強化できます。
+BrazeとGrouparooの統合により、倉庫に保存されているデータをBrazeに送信することで、簡単に運用することができる。自動同期スケジュールを設定すると、最新の情報により顧客とのコミュニケーションを一貫して強化できます。
 
 ## 前提条件
 
-| 要件| 説明|
+| 必要条件 | 説明 |
 | ----------- | ----------- |
-| Grouparooアカウントとプロジェクト| このパートナーシップを活用するには、Grouparooアカウントとプロジェクトが必要です。<br><br>この統合は、Grouparooが提供する無料のコミュニティエディションおよびエンタープライズソリューションで使用できます。設定は、Grouparoo 設定ユーザインタフェースで行われます。|
-| Raze REST API キー| ユーザーとトラッキング権限を持つBraze REST API キー。<br><br> これは、**Settings** > **API Keys**.| からBraze ダッシュボードで作成できます。
-| Raze REST エンドポイント| [Your REST エンドポイントURL][1]。エンドポイントは、インスタンスのBraze URL によって異なります。|
-{: .reset-td-br-1 .reset-td-br-2}
+| Grouparooのアカウントとプロジェクト | このパートナーシップを利用するには、Grouparooアカウントとプロジェクトが必要である。<br><br>この統合は、Grouparooが提供する無料のコミュニティーエディションおよびエンタープライズソリューションで使用できます。セットアップはGrouparooコンフィギュレーション・ユーザーインターフェイスで行われる。 |
+| Braze REST API キー | ユーザーとトラック権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
-### ステップ1:Grouparoo でのブレーズアプリの作成
+### ステップ 1:GrouparooでBrazeアプリを作成する
 
-Grouparoo で、**Apps** に移動し、**Braze** を選択して新しいBraze アプリを作成します。表示されるモーダルで、Braze API キーとREST エンドポイントを指定します。
+Grouparoo で、[**Apps**] に移動し、[**Braze**] を選択して新しいBraze アプリを作成します。表示されたモーダルで、Braze APIキーとRESTエンドポイントを入力する。
 
 ![][2]
 
-### ステップ2:モデルとデータソースの設定
+### ステップ2:モデルとデータソースをセットアップする
 
-この統合では、次のステップに進む前に、既存のモデルとデータソースが設定されている必要があります。この設定がない場合は、Grouparoo のドキュメントを参照して、[model](https://www.grouparoo.com/docs/config/models) および[データソース](https://www.grouparoo.com/docs/config/sources) の設定方法を確認してください。
+この統合では、次のステップに進む前に、既存のモデルとデータソースをセットアップしておく必要がある。この設定がない場合は、Grouparoo ドキュメントにアクセスして、[model](https://www.grouparoo.com/docs/config/models) および[データソース](https://www.grouparoo.com/docs/config/sources) の設定方法を確認してください。
 
-### ステップ3:Grouparoo でのブレーズ送信先の作成
+### ステップ 3:GrouparooでBrazeの目的地を作成する
 
-#### 同期モードの選択
+#### 同期モードを選択する
 
-Grouparooで、ナビゲーションバーからモデルを選択します。次に、**Destinations**セクションまでスクロールし、**Add new Destination**をクリックします。
+Grouparooで、ナビゲーションバーからモデルを選択する。次に、**Destinations**セクションまでスクロールし、**Add new Destination**をクリックします。
 
-次に、作成した**Braze** アプリを選択し、宛先に名前を付け、次の中から目的の同期モードを選択します。
-- **同期**:必要に応じて、ブレーズユーザーを追加、更新、および削除します。このオプションは、新しいレコード、既存のレコードへの変更、および削除を検索します。
-- **加算**:必要に応じてブレーズユーザーを追加および更新しますが、誰も削除しないでください。このオプションは、ブレーズに追加する新規ユーザーと既存のブレーズユーザーの変更を検索しますが、削除の追跡は行いません。
-- **Enrich**:Braze にすでに存在するユーザーのみを更新します。ユーザーを追加または削除しないでください。このオプションは、Braze の既存ユーザーのみを更新します。
+次に、作成した**Braze**アプリを選択し、保存先に名前を付け、希望の同期モードを以下から選択する：
+- **同期**:必要に応じてBrazeユーザーを追加、更新、削除する。このオプションでは、新しいレコード、既存レコードの変更、および削除を検索します。
+- **Additive**: 必要に応じてBrazeユーザーを追加・更新するが、誰も削除しないこと。このオプションは、Brazeに追加する新規ユーザーと既存のBrazeユーザーの変更を探すが、削除は追跡しない。
+- **Enrich**: Brazeにすでに存在するユーザーのみをアップデートする。ユーザを追加または削除しない。このオプションは、Brazeの既存ユーザーのみを更新する。
 
-#### プロパティフィールドのマッピング
+#### プロパティ・フィールドのマッピング
 
-次に、GrouparooプロパティフィールドをBrazeプロパティフィールドにマップする必要があります。 
+次に、Grouparooのプロパティ・フィールドをBrazeのプロパティ・フィールドにマッピングする必要がある。 
 
-![プロパティマッピングフィールドの例。Grouparoo userID is set to map to external\_id. email, firstName, and lastName are set as equivalent "email", "first\_name", and "last\_name" grouparoo fields.][3]{: style="max-width:80%;"}
+![プロパティのマッピングフィールドの例。Grouparoo userID は、external_id にマップするように設定されます。email、firstName、lastName は、対応する「email」、「first_name」、および「last_name」 Grouparoo フィールドとして設定されます。][3]{: style="max-width:80%;"}
 
-Braze `external_id` フィールドがソーステーブルのプライマリキーにマッピングされていることを確認します。ユースケースに応じて、残りのフィールドを必要に応じてマップします。
+Braze`external_id` フィールドがソーステーブルの主キーにマッピングされていることを確認する。ユースケースでの必要に応じて、残りのフィールドをマッピングします。
 
-**レコードプロパティの送信**セクション:データのマッピングに使用できるプリセットユーザープロファイルフィールドのリスト。これらのいずれかをGrouparoo プロパティから同期できます。
+[**Send Record Properties**] セクション:データのマッピングに使用できるプリセットユーザープロファイルフィールドのリスト。これらのいずれかをGrouparoo プロパティから同期できます。
 
-**オプションのブレーズユーザープロファイルフィールド**セクション:オプションのカスタムブレーズユーザープロファイルフィールドを作成します。**Add New Braze User Profile Field**をクリックすると、Brazeにマッピングできるすべてのプロパティが表示されます。作成する新しいフィールドの名前は、Grouparoo プロパティと同じですが、名前を変更することができます。
+**Optional Braze User Profile Fields**セクション:オプションのカスタムBrazeユーザープロファイルフィールドを作成する。[**Add New Braze User Profile Field**] を選択すると、Braze にマッピングできるすべてのプロパティが表示されます。新しく作成するフィールドの名前はGrouparooプロパティと同じになるが、名前を変更することができる。
 
 #### Grouparooグループ
 
-マッピングに加えて、GrouparooグループをBrazeサブスクリプショングループに追加することもできます。 
+マッピングに加えて、Grouparoo グループを Braze 購読グループに追加することもできます。 
 
-![Under "Braze Subscription Groups" in the Grouparoo destination configuration window, the "High value with recent automotive purchase" Grouparoo group will be added to the "High value with recent automotive purchase" Braze subscription group.][4]{: style="max-width:80%;"}
+![Grouparoo宛先設定ウィンドウの "Braze Subscription Groups "で、"High value with recent automotive purchase "Grouparooグループが "High value with recent automotive purchase "Brazeサブスクリプショングループに追加される。][4]{: style="max-width:80%;"}
 
 {% alert important %}
 この統合に関する詳細および更新は、[Grouparooのドキュメント](https://www.grouparoo.com/docs/integrations/grouparoo-braze)にあります。

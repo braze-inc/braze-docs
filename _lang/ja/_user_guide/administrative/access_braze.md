@@ -11,34 +11,34 @@ description: "このランディングページには、Braze アカウントま
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Navigation
+- name: ナビゲーション
   link: /docs/user_guide/administrative/access_braze/navigation/
-  fa_icon: fas fa-list
-- name: Searching Your Dashboard
+  image: /assets/img/braze_icons/list.svg
+- name: ダッシュボードを検索する
   link: /docs/user_guide/administrative/access_braze/global_search/
-  fa_icon: fas fa-search
-- name: API and SDK Endpoints
+  image: /assets/img/braze_icons/search-sm.svg
+- name: API と SDK のエンドポイント
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  fa_icon: fas fa-location-arrow
-- name: Accessing Your Account
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
+- name: アカウントへのアクセス
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-  fa_icon: fas fa-user-circle
-- name: Language Settings
+  image: /assets/img/braze_icons/user-circle.svg
+- name: 言語設定
   link: /docs/user_guide/administrative/access_braze/language/
-  fa_icon: fas fa-language
-- name: SAML and Single Sign-On
+  image: /assets/img/braze_icons/globe-04.svg
+- name: SAML とシングルサインオン
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
-  fa_icon: fas fa-sign-in-alt
-- name: Product Portal
+  image: /assets/img/braze_icons/log-in-01.svg
+- name: 製品ポータル
   link: /docs/user_guide/administrative/access_braze/portal/
-  fa_icon: fa-solid fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 ## サポートされているブラウザー
 
 Braze ダッシュボードは次のブラウザーをサポートしています。
-\- Chrome (バージョン 87 以降)
-\- Firefox (バージョン 85 以降)
-\- Safari (バージョン 15.4 以降)
-\- Edge (バージョン 87 以降)
+- Chrome（バージョン87以降）
+- Firefox（バージョン85以降）
+- Safari (バージョン 15.4 以降)
+- Edge (バージョン 87 以降)
 
 <br><br>

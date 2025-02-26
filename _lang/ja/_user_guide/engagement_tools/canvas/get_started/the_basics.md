@@ -10,51 +10,53 @@ tool: Canvas
 
 # キャンバスの基本
 
-> この参照記事では、キャンバスの基本について説明し、初めてキャンバスを設定する際に確認すべきさまざまな質問を取り上げています。
+> この参照記事では、キャンバスの基本について説明し、初めてキャンバスを設定する際に確認すべきさまざまな質問を取り上げています。また、ビジュアライゼーションの5つのW（What、When、Who、Why、Where）を説明し、これがどのようにキャンバスを構築し、定義するかを説明する。
 
 ## キャンバスの構造について
 
 [キャンバスのセットアップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)の詳細に取り組む前に、キャンバスを構成する主要なパーツを確認しておきましょう。
 
 {% tabs %}
-  {% tab Canvas %}
-  キャンバスは、マーケターが複数のメッセージとステップでキャンペーンを設定し、一貫性のあるジャーニーを形成するための統合インターフェイスです。
+  {% tab キャンバス %}
+  キャンバスは、マーケティング担当者が複数のメッセージを使ったキャンペーンを作成するための統一インターフェースである。いわばビジュアルプログラミングツールのようなもので、一連のステップを使って一貫したユーザージャーニーを作成できます。
+
+  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
-  {% tab Journey %}
+  {% tab ジャーニー %}
 
-  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![\]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
-
-  {% endtab %}
-
-  {% tab Entry Wizard %}
-  エントリウィザードには、キャンバスを作成する最初のステップが含まれています。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。エントリウィザードは基本的に、キャンバスの作成を開始する前に必要となる重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![\]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Variants %}
-  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントに名前を付け、各バリアントをたどるターゲットオーディエンスの分布をコントロール できます。<br><br> ![\]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
+  {% tab キャンバスビルダー %}
+  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Steps %}
-  キャンバスのステップは、ユーザージャーニーを決定するマーケティング上の意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用して、ユーザージャーニーのステップを構築できます。<br>ステップ内では、トリガーの設定や配信の予約、フィルターの追加や[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)のマーキングによるターゲットの絞り込み、メールからチャネルを追加してWebhookへプッシュするなどができます。<br><br> ![\]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
+  {% tab バリアント %}
+  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントをたどるオーディエンスのセグメントを制御できます。<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+
+  {% endtab %}
+
+  {% tab ステップ %}
+  キャンバスにおけるステップとは、「A の場合は B」というようなマーケティングの意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用してユーザージャーニーのステップを作成します。<br>ステップ内で、トリガーや配信スケジュールを設定し、フィルターを追加したり[例外イベントを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)マークすることでターゲティングを絞り込み、プッシュ通知やウェブフック・イベントのような異なるチャンネルを指定する。<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
 
   {% endtab %}
 {% endtabs %}
 
 ## カスタマージャーニーを構築する
 
-視覚化の 5 つの W を使用することで、ユーザーごとにパーソナライズされたメッセージジャーニーを作成する方法について、顧客エンゲージメント戦略を特定できます。この 5 つの W とは、「何を」、「いつ」、「誰が」、「なぜ」、「どこで」を意味します。 
+可視化の5つのW（What、When、Who、Why、Where）を使うことで、各ユーザーにパーソナライズされたメッセージ・ジャーニーをどのように作成するかという顧客エンゲージメント戦略を明確にすることができる。
 
 ### 「何を」：キャンバスに名前を付ける
 
 > ユーザーに何を行い、何を理解してもらいたいか。
 
-名前の力をあなどってはいけません。Braze はコラボレーションのために作られているので、この機会に基礎を固めて、チームに目標を伝える方法を考えましょう。 
+名前の力をあなどってはいけません。Braze はコラボレーションのために作られているので、この機会に基礎を固めて、チームに目標を伝える方法を考えましょう。
 
-キャンバス内でタグを追加して、ステップとバリアントの両方に名前を付けることができます。カスタマージャーニーの詳細については、Brazeラーニングコース「[ユーザーのライフサイクルをマッピングする](https://learning.braze.com/mapping-customer-lifecycles)」をご覧ください。
+キャンバスにタグを追加し、ステップやバリアントに名前を付けることができる。カスタマージャーニーの詳細については、[ユーザーライフサイクルのマッピングに関する](https://learning.braze.com/mapping-customer-lifecycles)Braze Learningのコースをチェックしよう。
 
 ### 「なぜ」：コンバージョンイベントを特定する
 
@@ -67,7 +69,7 @@ tool: Canvas
 * **セッションを開始**:ユーザーに再度アプリを使ってもらいたい。
 * **購入**:ユーザーに購入してもらいたい。
 * **カスタムイベントを実行**:カスタムイベントとして追跡している特定のアクションをユーザーに実行してもらいたい。
-* **アプリをアップグレードする**:ユーザーにアプリのバージョンをアップグレードしてもらいたい。
+* **アプリをアップグレードする:**ユーザーにアプリのバージョンをアップグレードしてもらいたい。
 
 ### 「いつ」：開始条件を作成する
 
@@ -87,15 +89,14 @@ tool: Canvas
 
 「誰が」を定義するには、キャンバスで利用可能な定義済みセグメントを使用できます。さらにフィルターを追加して、ターゲットオーディエンスとのつながりをさらに絞り込むこともできます。これらのセグメントを構築すると、ターゲットオーディエンスの条件に一致するユーザーのみがキャンバスジャーニーに入れるので、よりパーソナライズされた体験につながります。利用可能なフィルターと、ユースケースに応じてユーザーをセグメント化する方法については、この表を参照してください。
 
-|フィルター|説明|
-|---|---|
-| カスタムデータ | 定義したイベントや属性に基づいてユーザーをセグメント化する。製品固有の機能を使用できる。 |
-| ユーザーアクティビティ | アクションと購入に基づいて顧客をセグメント化する。 |
-| リターゲティング | 過去にキャンバスを送信、受信、またはインタラクションした顧客をセグメントする。 |
-| マーケティングアクティビティ | 前回のエンゲージメントなど、普遍的な行動に基づいて顧客をセグメント化する。 |
-| ユーザー属性 | 一定の属性と特性で顧客をセグメント化する。 |
-| インストールアトリビューション | 最初のソース、広告グループ、キャンペーン、広告で顧客をセグメント化する。 |
-{: .reset-td-br-1 .reset-td-br-2}
+| フィルター              | 説明                                                                                         |
+|---------------------|-----------------------------------------------------------------------------------------------------|
+| カスタムデータ         | 定義したイベントや属性に基づいてユーザーをセグメント化する。商品に固有の機能を使用できます。 |
+| ユーザーアクティビティ       | 顧客の行動と購入に基づいて顧客をセグメント化します。                                             |
+| リターゲティング         | 過去にキャンバスを送信された、受信した、またはインタラクションを行った顧客をセグメント化します。               |
+| マーケティング活動  | 前回のエンゲージメントなど、普遍的な行動に基づいて顧客をセグメント化する。                         |
+| ユーザー属性     | 顧客を一定の属性や特性によってセグメント化します。                                 |
+| 帰属をインストールする | 最初のソース、広告グループ、キャンペーン、広告によって顧客をセグメント化します。                                 |
 
 ### 「どこで」: オーディエンスを見つける
 
@@ -103,9 +104,9 @@ tool: Canvas
 
 ここで、ユーザージャーニーにとってどのメッセージングチャネルが最も理にかなっているかを判断します。理想としては、ユーザーが最もアクセスしやすい場所でリーチするのが最適です。その点を考慮して、キャンバスでは次のチャンネルのいずれかを使用できます。
 * [メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)
-* [プッシュ通知]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
+* [プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
-* [コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
+* [コンテンツカードによって促進された]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
 * [SMS または MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
@@ -115,7 +116,18 @@ tool: Canvas
 
 「どのように」には、キャンバスを作成する方法と、メッセージでユーザーにリーチする方法が含まれます。例えば、メッセージを効果的にするには、異なるユーザー間のタイムゾーンに応じて、メッセージングのタイミングを最適化する必要があります。
 
-「どのように」に答えることで、オーディエンスにキャンバスを送る頻度 (週 1 回、隔週など) も決まります。 
+また、「how」に答えることで、オーディエンスにキャンバスを送る頻度 (週 1 回、隔週など) と、「where」の説明に従って作成する各キャンバスにどのメッセージングチャネルを活用するかも決まります。
+
+## ユースケース:顧客のオンボーディングフロー
+
+例えば、あなたがオンラインストリーミングサービス会社MovieCanonのマーケターで、アプリの新規ユーザー向けのオンボーディングフローの作成を担当しているとしよう。5 つの W をガイドラインとして、次のようにキャンバスを作成できます。
+
+* **What**: キャンバスの名前は「新しいオンボーディングジャーニー」にします。
+* **Why**: キャンバスの目標は、ユーザーを歓迎し、ユーザーにアプリとのエンゲージメントを継続してもらうことです。
+* **When**: ユーザーが初めてアプリを開いた後、歓迎のメールを送りたい。 
+* **Who**: ここではアプリを初めて使用する新しいユーザーをターゲットに設定します。
+* **Where**: 過去のメッセージングもすべてメールで行ってきたため、メールを通じて新しいユーザーに到達できるという確信があります。
+* **How**: 新しいユーザーが通知で圧倒されないように、1 日の遅延を設定したいと考えています。この遅延の後、最も人気のある映画やテレビ番組のリストをメールで送り、アプリの継続利用を促す。
 
 ## 一般的なヒント
 

@@ -11,11 +11,11 @@ description: "This article contains release notes for April 2020."
 
 Movable Ink provides Braze customers the ability to use Intelligent Creative features like countdown timers, polls, and scratch offs in their push, in-app message and Content Card campaigns. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
-Start [integrating Movable Ink]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/) into your campaigns!
+Start [integrating Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) into your campaigns!
 
 ## Intelligent Timing
 
-When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
+When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
 
 Updates to this feature include:
 - **Clarification of Quiet Hours**: Quiet Hours functionality remains the same, but the UI has been adjusted for clarification.

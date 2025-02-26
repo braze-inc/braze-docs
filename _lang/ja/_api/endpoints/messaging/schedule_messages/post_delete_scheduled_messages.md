@@ -1,11 +1,11 @@
 ---
-nav_title: "ポスト:スケジュールされたメッセージの削除"
-article_title: "ポスト:スケジュールされたメッセージの削除"
+nav_title: "POST:スケジュールされたメッセージを削除"
+article_title: "POST:スケジュールされたメッセージを削除"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、スケジュールされたメッセージの削除Brazeエンドポイントについて詳しく説明します。"
+description: "この記事では、Delete scheduled messages Brazeエンドポイントの詳細について概説する。"
 
 ---
 {% api %}
@@ -14,19 +14,19 @@ description: "この記事では、スケジュールされたメッセージの
 /messages/schedule/delete
 {% endapimethod %}
 
-> このエンドポイントを使用して、送信前に以前にスケジュールしたメッセージをキャンセルします。
+> このエンドポイントを使用して、以前にスケジュールしたメッセージを送信前にキャンセルします。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
-## 前提 条件
+## 前提条件
 
-このエンドポイントを使用するには、アクセス許可を持つ `messages.schedule.delete` [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`messages.schedule.delete`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -39,14 +39,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 要求パラメーター
+## リクエストパラメーター
 
-|パラメータ |必須項目 |データ型 |説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` |必須項目 |文字列 |to `schedule_id` delete (スケジュールを作成する応答から取得)。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `schedule_id` | 必須 | 文字列 | 削除する`schedule_id`（スケジュールの作成に対する応答から取得）。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 要求の例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete' \
 --header 'Content-Type: application/json' \

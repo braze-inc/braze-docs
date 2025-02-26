@@ -47,6 +47,8 @@ Braze のジオフェンスは、デバイスで使用可能な位置情報の�
 
 標準精度は 20～50m の範囲で、ベストケースの精度は 5～10m の範囲です。地方では、精度が大幅に低下し、数キロメートルに達する可能性があります。Braze は、地方では半径の大きいジオフェンスを作成することを推奨しています。
 
+ジオフェンスの精度に関する詳細については、[Android](https://developer.android.com/develop/sensors-and-location/location/geofencing)および[iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1)のドキュメントを参照してください。
+
 ### ジオフェンスはバッテリーの駆動時間にどのように影響しますか? 
 
 当社のジオフェンシングソリューションは、iOS と Android のネイティブジオフェンスシステムサービスを使用し、精度と電力をインテリジェントにトレードオフするよう調整されており、基盤となるサービスの向上に伴い、クラス最高のバッテリー駆動時間とパフォーマンスを向上しています。

@@ -78,13 +78,17 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Fullscreen on larger screens {#fullscreen}
 
-On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices.
+On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices. 
 
 ![]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
-### Customize background image
+### Adding a background image
 
-You can add an image to the background of your message from the **Message styles** tab. The scrollable section of your message must be selected to add a background for the entire message.
+You can add an image to the background of your message from the **Message styles** tab. 
+
+1. In the canvas area, select the background container. This is the scrollable section of your message.
+2. In the **Message styles** tab, turn on **Background image**.
+3. Add an image from your media library, or enter the URL where your image is hosted.
 
 {% alert tip %}
 If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
@@ -100,7 +104,7 @@ Next, take your generated Liquid snippet and insert it into your message. After 
 
 ### Using the AI copywriter
 
-When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
 
 {% alert tip %}
 You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool, and copy will be generated immediately.
@@ -134,4 +138,4 @@ You can also use keyboard shortcuts to copy and paste styles:
 | ------------ | ---------------------------------------------- | ------------------------------------------------- |
 | Copy styles  | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
 | Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

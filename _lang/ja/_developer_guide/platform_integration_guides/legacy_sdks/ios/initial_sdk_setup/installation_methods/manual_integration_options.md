@@ -8,7 +8,7 @@ description: "この参考記事では、iOS 用 Braze SDK を手動で統合す
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 手動統合
 

@@ -5,14 +5,13 @@ page_order: 3
 page_type: reference
 description: "This reference article lists helpful News Feed use cases."
 channel: news feed
+hidden: true
 
 ---
 
 # News Feed use cases {#news-feed-use-cases}
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > At Braze, we value the customization that News Feed brings to the table. Here are some of our favorite use cases to help you get ideas on how to get the most out of Braze.
 

@@ -9,7 +9,7 @@ description: "このページには、Braze iOS Swift SDK 変更ログの更新�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS Swift SDK 変更ログ
 

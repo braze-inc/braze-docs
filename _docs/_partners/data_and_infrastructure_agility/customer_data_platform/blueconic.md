@@ -28,7 +28,7 @@ When using the integration, BlueConic will send deltas (changing data) on each s
 | S3 authentication | You will need access to an Amazon Web Services (S3) server to export and import the data. |
 | Access key ID<br>Secret access key | The access key ID and secret access key will allow you to authenticate your S3 server for importing and exporting. |
 | AWS bucket | You will need to connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu. This is where files to be imported or exported are stored. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration
 
@@ -47,7 +47,7 @@ To configure the connection between BlueConic and Braze, you must add your Braze
 1. In BlueConic, select **Set up and run** in the **Setup** section in the left panel.<br><br>
 2. In the Braze authentication page that opens, enter your Braze REST API endpoint and Braze API key.<br>
 ![]({% image_buster /assets/img/blueconic/braze2.png %}){: style="max-width:80%;"}<br><br>
-3. In the S3 setup and authentication section, enter the Amazon Web Services (S3) access key ID, secret access key, and S3 bucket. Save your settings. <br>![]({% image_buster /assets/img/blueconic/braze3.png %}){: style="max-width:80%;"}
+3. In the S3 setup and authentication section, enter these credentials: Amazon Web Services (S3) access key ID, secret access key, and S3 bucket. They need to be the [same credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/) you configured when setting up your Braze and Amazon S3 integration. Save your settings. <br>![]({% image_buster /assets/img/blueconic/braze3.png %}){: style="max-width:80%;"}
 
 ### Step 3: Creating import or export goals (import mapping)
 

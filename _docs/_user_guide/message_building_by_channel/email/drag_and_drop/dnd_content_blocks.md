@@ -37,14 +37,13 @@ To add a Content Block in the editor, do the following:
 
 1. Go to the the **Rows** tab in the editor and select **Content Blocks**. 
 2. Drag and drop your Content Block into the email editor. 
+3. (Optional) Adjust the width of your Content Block by selecting the button in the navigation menu. The default width is 100%. <br><br>![A double-sided arrow with an option to edit the width.][1]{: style="max-width:30%;" }<br><br>
 
-After the Content Block is added to the email editor via drag and drop, you can make edits to the Content Block that won't affect the original Content Block you created in **Templates & Media**. This is because Content Blocks added via drag and drop aren't linked to the original Content Block. To view any changes made to the original Content Block, drag it into the email editor again. 
+After adding the Content Block to the email editor, you can make edits to the Content Block that won't affect the original Content Block you created in **Templates & Media**. This is because Content Blocks added by drag and drop aren't linked to the original Content Block. To view any changes made to the original Content Block, drag it into the email editor again. 
 
 Misalignment in the drag-and-drop editor can occur when multiple Content Blocks are added to a single row block. Try using separate row blocks to maintain alignment across your content at the row level.
 
 ### Using Liquid to add a Content Block
-
-![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
 
 To add a Content Block by using Liquid, do the following:
 
@@ -52,12 +51,12 @@ To add a Content Block by using Liquid, do the following:
 2. Click <i class="fas fa-plus"></i> **Personalization**.
 3. Locate the **Add Personalization** tab and select **Content Blocks** in the **Personalization Type** dropdown.
 4. Select the name of your Content Block in the **Attribute** field. The Liquid snippet field will populate with your Content Block Liquid Tag. 
-5. Copy and paste the Liquid snippet into a text editor block. 
+5. Copy and paste the Liquid snippet into a text editor block. <br>![The Add Personalization tab with options.][2]{: style="max-width:30%;"}
 
 When you preview your email messaging, the Liquid snippet will display as the drag-and-drop editor Content Block. 
 
 {% alert important %}
-When a Content Block is added into the email editor via Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes to the original Content Block template.
+When a Content Block is added into the email editor with Liquid, this Content Block is linked to the original Content Block created in **Templates & Media**. This means the Content Block will be updated to reflect any changes to the original Content Block template.
 {% endalert %}
 
 ## Updating Content Blocks
@@ -66,4 +65,5 @@ To update an existing Content Block, you can either edit the original Content Bl
 
 To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-ellipsis-vertical"></i> vertical ellipsis icon for the Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. However, archived Content Blocks are read-only, so unarchive the Content Block before editing. 
 
+[1]: {% image_buster /assets/img_archive/content_block_width.png %}
 [2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

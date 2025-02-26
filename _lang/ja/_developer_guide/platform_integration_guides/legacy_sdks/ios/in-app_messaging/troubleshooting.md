@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # アプリ内メッセージのトラブルシューティング
 
@@ -22,11 +22,11 @@ noindex: true
 
 #### インプレッションが予想より低い
 
-トリガーはセッション開始時にデバイスへの同期に時間がかかるため、ユーザーがセッション開始直後にイベントや購入を記録すると競合状態が発生する可能性があります。考えられる回避策の1つは、キャンペーンを変更してセッションの開始をトリガーし、目的のイベントまたは購入をセグメント化することです。なお、イベント発生後の次回セッション開始時にアプリ内メッセージが配信されることに注意してください。
+トリガーはセッション開始時にデバイスへの同期に時間がかかるため、ユーザーがセッション開始直後にイベントや購入を記録すると競合状態が発生する可能性があります。考えられる回避策の 1 つは、キャンペーンを変更してセッションの開始をトリガーし、目的のイベントまたは購入をセグメント化することです。なお、イベント発生後の次回セッション開始時にアプリ内メッセージが配信されることに注意してください。
 
 ## 予期したアプリ内メッセージが表示されなかった
 
-ほとんどのアプリ内メッセージの問題は、配信と表示の2つの主要なカテゴリに分けることができます。予想されるアプリ内メッセージがデバイスで表示されない原因をトラブルシューティングするには、まず [アプリ内メッセージがデバイスに配信された][iam\_11] ことを確認してから [メッセージ表示のトラブルシューティング][iam\_12] を行う必要があります。
+ほとんどのアプリ内メッセージの問題は、配信と表示の 2 つの主要なカテゴリに分けることができます。予想されるアプリ内メッセージがデバイスで表示されない原因をトラブルシューティングするには、まず [[アプリ内メッセージがデバイスに配信された](#troubleshooting-in-app-message-delivery)] ことを確認してから [[メッセージ表示のトラブルシューティング](#troubleshooting-in-app-message-display)] を行う必要があります。
 
 ### アプリ内メッセージ配信 {#troubleshooting-in-app-message-delivery}
 
@@ -34,30 +34,30 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 
 #### メッセージが要求され、返されたかどうかを確認する
 
-1. ダッシュボードで [テストユーザー][iam\_1] として自分自身を追加します。
+1. ダッシュボードで [テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) として自分自身を追加します。
 2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
 3. アプリケーションで新しいセッションが発生することを確認します。
-4. [イベントユーザーログ][iam\_3] を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
-  - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、［**レスポンスデータ**］ の [**リクエスト済みレスポンス**］ フィールドに `trigger` が表示されます。
-  - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、［**レスポンスデータ］**］ の ［**リクエスト済みレスポンス**］ フィールドに `in_app` が表示されます。
-5. [イベントユーザーログ][iam\_3] を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![][iam\_5]
+4. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
+  - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
+  - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、[**レスポンスデータ］**] の [**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
+5. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### リクエストされていないメッセージのトラブルシューティング
 
 アプリ内メッセージがリクエストされていない場合、アプリ内メッセージはセッション開始時にリフレッシュされるため、アプリがセッションを正しくトラッキングしていない可能性があります。また、アプリのセッションタイムアウトセマンティクスに基づいて、アプリが実際にセッションを開始していることを確認してください:
 
-![成功したセッション開始イベントを表示するイベントユーザーログで見つかった SDK リクエスト。][iam\_10]
+![成功したセッション開始イベントを表示するイベントユーザーログで見つかったSDKリクエスト。]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ### メッセージが返されない問題のトラブルシューティング
 
 アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
 
-- セグメントにユーザーが含まれていません。
-  - ユーザーの [\*\*エンゲージメント**][iam_6] タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
+- セグメントにユーザーが含まれていない。
+  - ユーザーの [\*\*エンゲージメント**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
 - ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-  - **キャンペーン作成ツール**の**配信**ステップの [キャンペーン再適格性設定][iam\_7] を確認し、再適格性設定がテスト設定と整合していることを確認します。
+  - **キャンペーン作成ツール**の**配信**ステップの [キャンペーン再適格性設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) を確認し、再適格性設定がテスト設定と整合していることを確認します。
 - ユーザーがキャンペーンのフリークエンシーキャップに達した。
-  - キャンペーン [フリークエンシーキャップ設定][iam\_8] を確認し、テスト設定と整合していることを確認します。
+  - キャンペーン [フリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) を確認し、テスト設定と整合していることを確認します。
 - キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。
   - キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
   - 統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。
@@ -71,14 +71,4 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 - 画像のダウンロードに失敗すると、画像付きのアプリ内メッセージが表示されなくなります。`SDWebImage` フレームワークが正しく統合されていない場合、画像のダウンロードは常に失敗します。画像のダウンロードに失敗していないか、デバイスのログを確認してください。
 - 端末の向きがアプリ内メッセージで指定された向きと一致しなかった場合、アプリ内メッセージは表示されません。デバイスの向きが正しいことを確認してください。
 
-[iam\_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[iam\_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam\_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam\_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[iam\_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[iam\_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[iam\_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[iam\_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[iam\_11]: #troubleshooting-in-app-message-delivery
-[iam\_12]: #troubleshooting-in-app-message-display
 

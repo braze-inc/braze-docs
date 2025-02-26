@@ -21,7 +21,7 @@ Your Braze and Stylitics integration allows you to enhance your existing email c
 | Requirement | Description |
 | ----------- | ----------- |
 | Stylitics account | A [Stylitics](https://stylitics.com/) account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

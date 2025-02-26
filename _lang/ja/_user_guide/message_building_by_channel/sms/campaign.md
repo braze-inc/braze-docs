@@ -1,5 +1,5 @@
 ---
-nav_title: SMS のキャンペーン
+nav_title: SMSキャンペーン
 config_only: true
 noindex: true
 layout: blank_config

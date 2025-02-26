@@ -2,7 +2,7 @@
 nav_title: "OfferFit"
 article_title: OfferFit
 alias: /partners/offerfit/
-description: "OfferFit’s Automated Experimentation Platform is a fast and scalable way to accelerate testing and learning. Automatically discover the right message, creative, incentive, channel, and timing for every customer to unlock the full value of your customer data."
+description: "OfferFit replaces manual A/B testing with AI testing. Lifecycle marketers use OfferFit’s AI testing to make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes."
 page_type: partner
 search_tag: OfferFit
 
@@ -11,7 +11,7 @@ search_tag: OfferFit
 
 # OfferFit
 
-> [OfferFit](https://www.offerfit.ai/) is a self-learning platform that automates the experimentation process that is traditionally done through A/B testing. 
+> [OfferFit](https://www.offerfit.ai/) replaces manual A/B testing with AI testing. Lifecycle marketers use OfferFit’s AI testing to make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes.
 
 The OfferFit and Braze integration allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
 
@@ -22,7 +22,7 @@ The OfferFit and Braze integration allows you to automatically discover the righ
 | OfferFit License | An active OfferFit license is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with the following permissions: {::nomarkdown}<ul><li><code>users.export.ids</code></li><li><code>users.export.segment</code></li><li><code>messages.send</code></li><li><code>campaigns.trigger.send</code></li> <li><code>campaigns.list</code></li><li><code>campaigns.data_series</code></li><li><code>campaigns.details</code></li><li><code>canvas.trigger.send</code></li><li><code>canvas.list</code></li><li><code>canvas.data_series</code></li><li><code>canvas.details</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>templates.create</code></li><li><code>templates.update</code></li><li><code>templates.info</code></li><li><code>templates.list</code></li></ul>{:/} This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST API endpoint | [Your REST API endpoint URL][1]. Your endpoint depends on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
@@ -34,25 +34,26 @@ Your OfferFit license and use case will determine the Braze REST API endpoints y
 
 | Braze REST API endpoint | OfferFit usage |
 |--------------|----------------|
-| [POST /users/export/ids](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) | Retrieve the list of customers to be targeted by a campaign or canvas. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the data attributes agreed together with the platform user. |
-| [POST /users/export/segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) | Retrieve all the users that are part of a specific segment. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the non-PII fields agreed together with the platform user. |
-| [POST /messages/send](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/) | Trigger an API Campaign in Braze. |
-| [POST /campaigns/trigger/send](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Trigger a send for a campaign that is configured for API-triggered delivery. |
-| [GET /campaigns/list](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns/) | Retrieve the list of all the campaigns configured in Braze and their associated metadata. |
-| [GET /campaigns/data_series](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics/) | Retrieve the analytics data of a specific Braze campaign. |
-| [GET /campaigns/details](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_details/) | Retrieve the details of a specific Braze campaign. |
-| [POST /canvas/trigger/sed](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger a send for a Canvas that is configured for API-triggered delivery. |
-| [GET /canvas/list](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases/) | Retrieve the list of all the Canvases configured in Braze and their associated metadata. |
-| [GET /canvas/data_series](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics/) | Retrieve the analytics data of a specific Canvas. |
-| [GET /canvas/details](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details/) | Retrieve the details of a specific Canvas. |
-| [GET /segments/list](https://www.braze.com/docs/api/endpoints/export/segments/get_segments/) | Retrieve the list of all the segments configured in Braze and their associated metadata. |
-| [GET /segments/data_series](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_analytics/) | Retrieve the size of the Braze segment. |
-| [GET /segments/details](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_details/) | Retrieve the details of a specific Braze segment. |
-| [POST /templates/email/create](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_create_email_template/) | Create a new Braze HTML email template. |
-| [POST /templates/email/update](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_update_email_template/) | Update an existing Braze HTML email template. |
-| [GET /templates/email/info](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
-| [GET /templates/email/list](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_list_email_templates/) | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
-{: .reset-td-br-1 .reset-td-br-2}
+| [POST /users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)                          | Retrieve the list of customers to be targeted by a campaign or Canvas. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the data attributes agreed together with the platform user. |
+| [POST /users/export/segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)                         | Retrieve all the users that are part of a specific segment. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the non-PII fields agreed together with the platform user. |
+| [POST /users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)                                            | OfferFit can use this endpoint to update user profiles with custom data attributes that can be used to personalize messaging.                                                                                                                                            |
+| [POST /messages/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)                         | Trigger an API Campaign in Braze. |
+| [POST /campaigns/trigger/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)     | Trigger a send for a campaign that is configured for API-triggered delivery. |
+| [GET /campaigns/list]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)                                     | Retrieve the list of all the campaigns configured in Braze and their associated metadata. |
+| [GET /campaigns/data_series]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)                     | Retrieve the analytics data of a specific Braze campaign. |
+| [GET /campaigns/details]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)                           | Retrieve the details of a specific Braze campaign. |
+| [POST /canvas/trigger/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)         | Trigger a send for a Canvas that is configured for API-triggered delivery. |
+| [GET /canvas/list]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)                                            | Retrieve the list of all the Canvases configured in Braze and their associated metadata. |
+| [GET /canvas/data_series]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics/)                             | Retrieve the analytics data of a specific Canvas. |
+| [GET /canvas/details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)                                   | Retrieve the details of a specific Canvas. |
+| [GET /segments/list]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)                                        | Retrieve the list of all the segments configured in Braze and their associated metadata. |
+| [GET /segments/data_series]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/)                        | Retrieve the size of the Braze segment. |
+| [GET /segments/details]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/)                              | Retrieve the details of a specific Braze segment. |
+| [POST /templates/email/create]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)      | Create a new Braze HTML email template. |
+| [POST /templates/email/update]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)      | Update an existing Braze HTML email template. |
+| [GET /templates/email/info]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
+| [GET /templates/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)           | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -80,7 +81,7 @@ The OfferFit AI will learn from every customer interaction and apply those insig
 | **Referral** | Maximize new accounts opened through business credit card referrals from existing customers. | Fixed email sequence for all customers, with extensive A/B testing to determine the best sending times, cadence, etc. for the customer population. | Automate experimentation to determine ideal email, creative, sending time, and credit card to offer specific customers. |
 | **Lead Nurturing & Conversion** | Drive incremental revenue and pay the right amount for each customer. | As privacy policies change at Facebook and other platforms, prior approaches to personalized paid ads become last effective. | Leverage robust first-party data to automatically experiment on customer segments, biding methodology, bid levels, and creative. |
 | **Loyalty & Engagement** | Maximize purchases by new enrollees in customer loyalty program. | Customers received fixed sequence of emails in response to their actions. For example, all new enrollees in the loyalty program receive the same journey. | Experiment automatically with different email offers, creative, sending time, and frequency to maximize purchase and repurchase for each customer. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 
 ## Integration

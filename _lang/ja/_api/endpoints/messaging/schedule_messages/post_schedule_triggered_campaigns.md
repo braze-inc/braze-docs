@@ -1,36 +1,36 @@
 ---
-nav_title: "ポスト:APIトリガーキャンペーンのスケジュール"
-article_title: "ポスト:APIトリガーキャンペーンのスケジュール"
+nav_title: "POST:APIトリガーキャンペーンをスケジュールする"
+article_title: "POST:APIトリガーキャンペーンをスケジュールする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、スケジュール API によってトリガーされるキャンペーンの Braze エンドポイントについて詳しく説明します。"
+description: "この記事では、「API トリガーキャンペーンのスケジュール」Brazeエンドポイントについての詳細を概説します。"
 
 ---
 {% api %}
-# APIトリガーキャンペーンをスケジュールする
+# API トリガー・キャンペーンのスケジュール
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> このエンドポイントを使用すると、ダッシュボードで作成されたキャンペーン メッセージを API トリガー配信経由で送信し、メッセージを送信するトリガーとなるアクションを決定できます。 
+> このエンドポイントを使用して、ダッシュボードで作成したキャンペーンメッセージをAPI トリガー配信で送信します。これにより、メッセージの送信をトリガーするアクションを決めることができます。
 
-通行できます `trigger_properties` メッセージ自体にテンプレート化されます。
+メッセージ自体にテンプレート化される `trigger_properties` を渡すことができます。
 
-このエンドポイントを使用してメッセージを送信するには、[API トリガー キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)を作成するときに作成された [キャンペーン ID が]({{site.baseurl}}/api/identifier_types/)必要であることに注意してください。
+このエンドポイントを使用してメッセージを送信するには、[API トリガーキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)を構築する際に[キャンペーン ID]({{site.baseurl}}/api/identifier_types/) を作成しておく必要があります。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `campaigns.trigger.schedule.create` 許可。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.trigger.schedule.create`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -57,20 +57,20 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|必須|文字列| [キャンペーン識別子を]({{site.baseurl}}/api/identifier_types/)参照 |
-| `send_id`| オプション | 文字列 | [送信識別子を]({{site.baseurl}}/api/identifier_types/)参照してください。 |
-| `recipients`| オプション | 受信者オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
-| `audience`| オプション | 接続されたオーディエンス オブジェクト | [接続されたオーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-|`broadcast`| オプション | ブール値 | 設定する必要があります `broadcast` キャンペーンまたはキャンバスがターゲットとするセグメント全体にメッセージを送信する場合は true に設定します。このパラメータのデフォルトは false です (2017 年 8 月 31 日現在)。<br><br> もし `broadcast` がtrueに設定されている場合、 `recipients` リストを含めることはできません。ただし、設定する際には注意してください `broadcast: true`意図せずにこのフラグを設定すると、予想よりも多くの対象者にメッセージが送信される可能性があります。 |
-| `trigger_properties`| オプション | オブジェクト | この送信内のすべてのユーザーのパーソナライズ キーと値のペア。[トリガーのプロパティを]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)参照してください。 |
-| `schedule`| 必須 | スケジュール オブジェクト | [スケジュール オブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`campaign_id`|必須|文字列| [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください|
+| `send_id` | オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `recipients` | オプション | 受信者s オブジェクトの配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。 |
+| `audience` | オプション | 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
+|`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
+| `trigger_properties` | オプション | オブジェクト | この送信に含まれるすべてのユーザーのパーソナライゼーションキーと値のペア。[トリガープロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)を参照してください。 |
+| `schedule` | 必須 | Scheduleオブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \
@@ -144,7 +144,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## 応答
 
-### 成功レスポンスの例
+### 成功応答の例
 
 ```json
 Content-Type: application/json

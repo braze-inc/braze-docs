@@ -8,7 +8,7 @@ description: "この記事では、iOS アプリケーションのきめ細か�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # きめ細かなネットワークトラフィック制御
 
@@ -53,7 +53,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 - このプロトコルは、次の点を除いて自動リクエスト処理と同じです。
     - カスタム属性とカスタムイベントデータが、ユーザーセッションを通じてサーバーに自動でフラッシュされません。
-- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、[`Appboy.h`][4] で `ABKRequestProcessingPolicy` の宣言を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
+- Braze で、アプリ内メッセージのリクエスト、アプリ内メッセージの Liquid テンプレート、ジオフェンス、位置情報の追跡などの内部機能に対する自動ネットワークリクエストが実行されます。詳細については、[`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) で `ABKRequestProcessingPolicy` の宣言を参照してください。これらの内部リクエストが実行されると、リクエストのタイプによっては、ローカルに保存されたカスタム属性とカスタムイベントデータが Braze サーバーにフラッシュされる場合があります。
 
 データは、次の方法を使用して、いつでも手動で Braze サーバーにフラッシュできます。
 
@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### 起動時のリクエストポリシーの設定
 
-これらのポリシーは、アプリの起動時に [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] メソッドから設定できます。`appboyOptions` ディクショナリで、次のコードスニペットに示すように `ABKRequestProcessingPolicyOptionKey` を設定します。
+これらのポリシーは、アプリの起動時に [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) メソッドから設定できます。`appboyOptions` ディクショナリで、次のコードスニペットに示すように `ABKRequestProcessingPolicyOptionKey` を設定します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -149,5 +149,3 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 
 このメソッドを呼び出した後、リクエスト処理モードを自動にリセットする必要があります。そのため、OS がバックグラウンドタスクなどの停止を強制している場合にのみ、これを呼び出すことをお勧めします。
 
-[3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

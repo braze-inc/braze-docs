@@ -27,27 +27,28 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 | AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started).
 | Email domain setup complete | You must have completed the [IP and domain setup step]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) of setting up your email during Braze onboarding. |
 | SSL certificate | Your [SSL certificate]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) must be configured. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Step 1: Map device ID
 
-#### Android
-
+{% tabs local %}
+{% tab Android %}
 If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
 
 Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
-```java
-HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
-customData.put("brazeCustomerId", deviceId);
-AppsFlyerLib.setAdditionalData(customData);
+```kotlin
+val customData = HashMap<String, Any>()
+Braze.getInstance(context).getDeviceIdAsync { deviceId ->
+   customData["brazeCustomerId"] = deviceId
+   setAdditionalData(customData)
+}
 ```
+{% endtab %}
 
-#### iOS
-
+{% tab ios %}
 {% alert important %}
 Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service. 
 {% endalert%}
@@ -56,51 +57,34 @@ For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
-{% tabs local %}
-{% tab Objective-C %}
+{% subtabs local %}
+{% subtab Swift %}
 
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
+```
+{% endsubtab %}
+
+{% subtab Objective-C %}
 ```objc
 BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
 [configurations setUseUUIDAsDeviceId:NO];
 Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
-[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
-    NSLog(@">>[BRZ]: %@", brazeDeviceId);
-    [[AppsFlyerLib shared] setAdditionalData:@{
-        @"brazeDeviceId": brazeDeviceId
-    }];
+[[AppsFlyerLib shared] setAdditionalData:@{
+    @"brazeDeviceId": braze.deviceId
 }];
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab Swift %}
 
-##### Swift completion handler
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-braze.deviceId {
-    brazeDeviceId in
-    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-}
-```
-##### Swift await
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-let brazeDeviceId = await braze.deviceId()
-AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-```
-
-{% endtab %}
-{% endtabs %}
-
-#### Unity
+{% tab unity %}
+To map the device ID in Unity, use the following:
 
 ```
 Appboy.AppboyBinding.getDeviceId()
@@ -108,6 +92,8 @@ Dictionary<string, string> customData = new Dictionary<string, string>();
 customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Get the Braze data import key
 
@@ -146,7 +132,7 @@ Assuming you configure your integration as suggested, Braze will map all non-org
 | `campaign` | Attributed Campaign |
 | `af_adset` | Attributed Adgroup |
 | `af_ad` | Attributed Ad |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
@@ -367,7 +353,7 @@ When a click on an App Link occurs, your app is opened and the SDK is initiated.
 {% endtab %}
 {% endtabs %}
 
-Once you've completed the integration steps, you can perform QA and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
+Once you've completed the integration steps, you can perform quality assurance and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 

@@ -4,42 +4,42 @@ article_title: ヘルプ記事
 page_order: 1
 layout: dev_guide
 guide_top_header: "ヘルプ記事"
-guide_top_text: "問題を解決したり、キャンペーンの依存関係を明らかにするのに役立つヘルプ記事がたくさんあります。新しいヘルプ記事への提案がある場合は、このヘルプ記事またはヘルプ記事のページの下にフィードバックを残してください。または、GitHub の <a href='https://github.com/braze-inc/braze-docs/wiki'>Braze Docs リポジトリ</a> にアクセスして、自分で記事を書くこともできます。 <br> <br> 以下の人気のあるトピックから選択するか、ナビゲーションパネルに表示されている他の記事をご覧ください。"
+guide_top_text: "問題を解決し、キャンペーンの依存関係を明らかにするのに役立つ多くのヘルプ記事があります。新しいヘルプ記事の提案がある場合は、このヘルプ記事ページまたは他のヘルプ記事ページの下部にフィードバックを残してください。または、<a href='https://www.braze.com/docs/contributing/home'>Braze Contributor Guide</a>にアクセスして、自分で記事を書く方法を学ぶことができます。<br> <br>次の人気トピックから選択するか、ナビゲーションパネルに表示されている他の記事をご覧ください。"
 
 page_type: landing
-description: "このランディングページには、Brazeを使用する際の問題解決や依存関係の解明に役立つヘルプ記事が掲載されています。"
+description: "このランディングページは、Brazeを使用する際の問題解決や依存関係の明示に役立つヘルプ記事のホームです。"
 
 guide_featured_title: "トピック"
 guide_featured_list:
-  - name: Account
+  - name: アカウント
     link: /docs/help/help_articles/account/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
-    fa_icon: fas fa-plug
-  - name: Campaigns and Canvas
+    image: /assets/img/braze_icons/terminal-square.svg
+  - name: キャンペーンとキャンバス
     link: /docs/help/help_articles/campaigns_and_canvas/
-    fa_icon: fas fa-comments
-  - name: Content Cards
+    image: /assets/img/braze_icons/annotation.svg
+  - name: コンテンツカードによって促進された
     link: /docs/help/help_articles/content_cards/
-    fa_icon: fas fa-stream
-  - name: Data
+    image: /assets/img/braze_icons/sticker-square.svg
+  - name: データ
     link: /docs/help/help_articles/data/
-    fa_icon: fas fa-chart-line
-  - name: Docs
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: ドキュメント
     link: /docs/help/help_articles/docs/
-    fa_icon: fas fa-file-alt
-  - name: Email
+    image: /assets/img/braze_icons/file-06.svg
+  - name: メール
     link: /docs/help/help_articles/email/
-    fa_icon: fas fa-envelope
-  - name: In-App Messages
+    image: /assets/img/braze_icons/mail-01.svg
+  - name: アプリ内メッセージ
     link: /docs/help/help_articles/in-app_messages/
-    fa_icon: fas fa-mobile-alt
-  - name: Push
+    image: /assets/img/braze_icons/phone-02.svg
+  - name: プッシュ
     link: /docs/help/help_articles/push/
-    fa_icon: fas fa-comment-alt
-  - name: Segments
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: セグメント
     link: /docs/help/help_articles/segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 ---
 

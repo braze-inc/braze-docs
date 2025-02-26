@@ -2,22 +2,22 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze 開発者ガイド"
-guide_top_text: "ここで、開発者は Braze で利用可能なすべての統合を見つけることができます。<br>追加のリソースについて、また Braze 開発者コミュニティに参加するには、<a href='https://www.braze.com/dev-portal'>Braze 開発者ポータル</a>にアクセスしてください。"
+guide_top_text: "開発者はここで、Brazeで利用可能なすべての統合を見つけることができる。Braze を使用している他の開発者とつながり、学習し、刺激を受けるには、<a href='https://www.braze.com/dev-portal'>Braze開発者コミュニティ</a>に参加してください。"
 article_title: Braze 開発者ガイド
 description: "このランディングページでは、開発者は Braze で利用可能なすべての統合を見つけることができます。"
 
 guide_featured_title: "注目の統合"
 guide_featured_list:
-- name: Android and FireOS
-  image: /assets/img/android.png
+- name: Android と FireOS
+  image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: Swift
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
-  fa_icon: fa-brands fa-swift
+  image: /assets/img/braze_icons/swift.svg
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  fa_icon: fas fa-globe
+  image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"
@@ -30,7 +30,7 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     image: /assets/img/cordova.png
     nav_link: cordova
-  - name: Flutter Android and iOS
+  - name: Flutter AndroidとiOS
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
     nav_link: flutter

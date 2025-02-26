@@ -3,7 +3,7 @@ nav_title: Card Creation
 article_title: Card Creation
 alias: /card_creation/
 description: "This article describes the differences between Content Card creation at campaign launch or Canvas step entry versus at first impression."
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards
@@ -32,8 +32,10 @@ You can choose when Braze creates a card on the **Delivery** step when creating 
 
 The following options are available:
 
-- **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app.
+- **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app. 
 - **At first impression (recommended):** When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card. This option will usually see better performance in card deliveries.
+
+Regardless of your selected option, the Content Card expiration date countdown will begin when the campaign launches.
 
 {% endtab %}
 {% tab Canvas %}
@@ -46,6 +48,12 @@ The following options are available:
 
 - **At step entry:** The previous default behavior for Content Cards. Braze calculates audience eligibility when the user enters the Canvas step, then creates the card and stores it until the user opens your app.
 - **At first impression (recommended):** Braze calculates audience eligibility when the user enters the Canvas step. When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze templates any personalization like Liquid or Connected Content, then creates the card. This option will see better performance in card deliveries and more up to date personalization.
+
+Regardless of your selected option, the Content Card expiration date countdown will begin when the user enters the Canvas step.
+
+{% alert tip %}
+If you want anonymous users to see a Content Card in their very first session, use a campaign instead of a Canvas. This is because when an anonymous user enters a Canvas, their session has already started, so they won't get the Content Card until they start a new session.
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -91,7 +99,7 @@ This section describes the main differences between card creation at campaign la
   <tr>
     <td class="leftHeader">Analytics</td>
     <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards created and available to be seen. This doesn't count whether the users viewed the card.</td>
-    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards displayed to users. <br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch or Canvas step entry.</td>
+    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards sent to a user after a session start. In Canvas, users entering the step without starting a session will not have a card sent, which is why this metric may not align with the number of users entering a step.<br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch or Canvas step entry.</td>
   </tr>
   <tr>
     <td class="leftHeader">Processing time</td>

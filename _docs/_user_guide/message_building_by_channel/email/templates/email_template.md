@@ -29,7 +29,7 @@ Select between **Drag-And-Drop Editor** or **HTML Editor** for your editing expe
 
 Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive][8]).
 
-![][2]
+![An email template for a company's spring sale with options to select the drag-and-drop editor or HTML editor, or to select from Braze templates.][2]
 
 {% alert note %}
 Any existing custom HTML templates will need to be re-created using the drag-and-drop editor.

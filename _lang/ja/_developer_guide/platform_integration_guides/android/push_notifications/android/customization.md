@@ -15,18 +15,18 @@ channel: push
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Android Inline Image Push
+  - name: Android インライン画像プッシュ
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
-    fa_icon: fa-regular fa-image
-  - name: HTML Push Notifications
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: HTML プッシュ通知
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push/
-    fa_icon: fa fa-pencil
-  - name: Advanced Settings
+    image: /assets/img/braze_icons/pencil-01.svg
+  - name: 高度な設定
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-    fa_icon: fa fa-cog
-  - name: Push Event Callback
+    image: /assets/img/braze_icons/settings-01.svg
+  - name: プッシュイベントコールバック
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: Overview
+nav_title: Creating an Email
 article_title: Creating an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
@@ -17,11 +17,9 @@ search_rank: 1
 To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
 
 {% alert tip %}
-If this is your first time creating an email campaign, we highly recommend that you check out the following Braze Learning courses:<br>
-
-- [Email](https://learning.braze.com/messaging-channels-email)
+If this is your first time creating an email campaign, we highly recommend checking out these Braze Learning courses:<br><br>
+- [Email Opt-Ins and Permissions](https://learning.braze.com/messaging-channels-email)
 - [Project: Build a basic email marketing program](https://learning.braze.com/project-build-a-basic-email-marketing-program)
-
 {% endalert %}
 
 ## Step 1: Choose where to build your message
@@ -31,18 +29,17 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 {% tabs %}
 {% tab Campaign %}
 
-**Steps:**
+1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 
-1. Go to **Messaging** > **Campaigns** and click **+ Create Campaign**.
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
 
 {:start=“2"}
-2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -50,8 +47,6 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endalert %}
 {% endtab %}
 {% tab Canvas %}
-
-**Steps:**
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
@@ -64,19 +59,23 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. 
+Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Choose the appropriate tile for the editing experience you'd prefer. 
 
-![Choosing between drag-and-drop editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
-We recommend selecting one editing experience per email campaign. For example, choose either the HTML Classic or Block editor in a single email campaign rather than switching between editors.
+We recommend selecting one editing experience per email campaign. For example, choose either the **HTML Classic** or **Block editor** in a single email campaign rather than switching between editors.
 {% endalert %}
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
+After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
+
+![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
 {% alert tip %}
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
@@ -89,18 +88,31 @@ Braze will automatically remove HTML event handlers referenced as attributes. Th
 {% endalert %}
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-### Step 3a: Add email headers and extras
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
 
-To add email headers, click **Edit Sending Info** and select **Add New Header**.
+### Step 3a: Add your sending information
 
-Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+After you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
 
-You can also select the **Add whitespace after preheader** checkbox to hide the text or HTML of the email body in the email preheader. 
+1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
+2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
+3. Next, select an email as the **BCC Address** to make your email visible to this address.
+4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
+
+A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
+
+#### Advanced
+
+Under **Sending Settings** > **Advanced**, you can turn on inline CSS and add personalization for email headers and email extras, which allows you to send additional data back to other email service providers.
+
+##### Email headers
+
+To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
 Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
@@ -150,11 +162,11 @@ Avoid using the following keys:
 </tbody>
 </table>
 
-#### Adding email extras
+##### Adding email extras
 
 Email extras allows you to send additional data back to other email service providers. This is only applicable for advanced use cases, so you should only use email extras if your company already has this set up.
 
-To add email extras, go to the **Sending Info** and click **Add New Extra**.
+To add email extras, go to the **Sending Info** and select **Add New Extra**.
 
 {% alert warning %}
 The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
@@ -164,9 +176,9 @@ Email extra values are not published to Currents or Snowflake. If you're looking
 
 ### Step 3b: Preview and test your message
 
-After you finish composing your perfect email, you need to test it before sending it out.
+After you finish composing your perfect email, you need to test it before sending it out. From the bottom of the overview screen, select **Preview and Test**. 
 
-From the bottom of the overview screen, click **Preview and Test**. Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
 
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
@@ -178,7 +190,7 @@ When you're ready for a final check, select **Test Send** and send a test messag
 
 ![Test Send option and example email preview when composing your email.][15]
 
-If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
+If you see any issues with your email, or want to make any changes, select **Edit Email** to return to the editor.
 
 {% alert tip %}
 Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimized.
@@ -208,7 +220,7 @@ The editor will call out any problems it catches with your message before you se
 
 {% tabs %}
 {% tab Campaign %}
-Next, build the remainder of your campaign! See the following sections for further details on how to best utilize our tools to build your email campaign.
+Next, build the remainder of your campaign! See the following sections for further details on how to best use our tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
 
@@ -251,7 +263,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 - Performs specific custom event
 - Opens email
 
-You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
+You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 {% endtab %}
 
 {% tab Canvas %}
@@ -261,20 +273,21 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 5: Review and deploy
 
-The final page will give you a summary of the campaign you've just designed. Confirm all the relevant details and click **Launch Campaign** to enable it for sending.
+The final section will give you a summary of the campaign you've just designed. Confirm all the relevant details and select **Launch Campaign**. Now, it's time to wait for all the data to roll in! 
 
-Now just wait for all the data to roll in! Next, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) to learn how you can access the results of your email campaigns.
+To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
+[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
 [22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

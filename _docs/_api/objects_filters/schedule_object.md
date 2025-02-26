@@ -43,4 +43,4 @@ If you use the API for server-to-server calls, you may need to allowlist the app
 
 Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch (unique ID for each 'transmission' sent from Braze).
 
-[33]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
+[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

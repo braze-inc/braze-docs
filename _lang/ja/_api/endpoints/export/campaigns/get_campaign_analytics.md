@@ -1,11 +1,11 @@
 ---
-nav_title: "取得:キャンペーン分析をエクスポート"
-article_title: "取得:キャンペーン分析をエクスポート"
+nav_title: "取得:キャンペーン分析をエクスポートする"
+article_title: "取得:キャンペーン分析をエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、キャンペーン分析をエクスポートする Braze エンドポイントの詳細について説明します。"
+description: "この記事では、キャンペーン分析のエクスポートBrazeエンドポイントの詳細について概説する。"
 
 ---
 {% api %}
@@ -14,15 +14,15 @@ description: "この記事では、キャンペーン分析をエクスポート
 /campaigns/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンペーンのさまざまな統計情報を時系列で毎日取得できます。 
+> このエンドポイントを使用して、一定期間にわたるキャンペーンのさまざまな統計の日次情報を取得します。 
 
-返されるデータには、メッセージングチャネルによって送信された、開かれた、クリックされた、または変換されたメッセージの数が含まれます。
+返されるデータには、メッセージング・チャネル別に、送信、開封、クリック、変換されたメッセージの数が含まれる。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.data_series`権限のある [API キーが必要です]({{site.baseurl}}/api/basics#rest-api-key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.data_series`の権限が必要です。
 
 ## レート制限
 
@@ -30,14 +30,14 @@ description: "この記事では、キャンペーン分析をエクスポート
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 必須 | 文字列 | [キャンペーン API 識別子を参照してください]({{site.baseurl}}/api/identifier_types/)。<br><br> `campaign_id`for APIキャンペーンは、[**ダッシュボードのAPIキーページとキャンペーンの詳細ページにあります**]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)。または、[リストキャンペーンエンドポイントを使用することもできます]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)。|
-| `length` | 必須 | 整数 | `ending_at` 返される系列に含めるまでの最大日数。1 ～ 100 (両端を含む) の範囲でなければなりません。|
-| `ending_at` | オプション | 日時 <br>([ISO-8601文字列](https://en.wikipedia.org/wiki/ISO_8601)) | データ系列を終了する日付。デフォルトはリクエストの時間です。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンをリスト」エンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)を使用することもできます。 |
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例 
+## 例のリクエスト 
 
 {% raw %}
 ```
@@ -46,9 +46,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ```
 {% endraw %}
 
-## 応答
+## 回答
 
-### マルチチャネル対応
+### マルチチャンネル対応
 
 ```json
 Content-Type: application/json
@@ -285,10 +285,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-指定できるメッセージタイプは`email`、、`in_app_message`、`webhook`、`android_push`、`ios_push`、`kindle_push`、`web_push`です。に表示される統計情報は、`android_push`どのプッシュメッセージタイプでも同じです。
+可能なメッセージタイプは、`email`、`in_app_message`、`webhook`、`android_push`、`ios_push`、`kindle_push`、`web_push` です。すべてのプッシュメッセージタイプは、`android_push` に同じ統計が表示されます。
 
 {% alert tip %}
-CSV と API のエクスポートに関するヘルプは、「[エクスポートのトラブルシューティング」を参照してください]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

@@ -20,23 +20,23 @@ Tool:
 位置情報の追跡を有効にするには、アプリケーション構成ページの [**一般**] タブで `BrazeLocation` モジュールを追加します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 `AppDelegate.swift` ファイルの先頭にある `BrazeLocation` モジュールをインポートします。Braze の構成に `BrazeLocationProvider` インスタンスを追加し、構成に対するすべての変更が `Braze(configuration:)` を呼び出す前に実行されるようにします。利用可能な構成については、`Braze.Configuration.Location` を参照してください。
 
-\`\`\`swift
+```swift
 import UIKit
 import BrazeKit
 import BrazeLocation
 
 @main
-class AppDelegate:UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  static var braze:Braze? = nil
+  static var braze: Braze? = nil
 
   func application(
-    _ application:UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey:Any]?
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Setup Braze
     let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
@@ -53,27 +53,27 @@ class AppDelegate:UIResponder, UIApplicationDelegate {
 
 }
 
-\`\`\`
+```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 `AppDelegate.m` ファイルの先頭にある `BrazeLocation` モジュールをインポートします。Braze の構成に `BrazeLocationProvider` インスタンスを追加し、構成に対するすべての変更が Braze(configuration:) を呼び出す前に実行されるようにします。利用可能な構成については、`BRZConfigurationLocation` を参照してください。
 
-\`\`\`objc
-\#import "AppDelegate.h"
+```objc
+#import "AppDelegate.h"
 
 @import BrazeKit;
 @import BrazeLocation;
 
 @implementation AppDelegate
 
-\#pragma mark - Lifecycle
+#pragma mark - Lifecycle
 
-- (BOOL)application:(UIApplication \*)application
-    didFinishLaunchingWithOptions:(NSDictionary \*)launchOptions {
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze
-  BRZConfiguration \*configuration =
+  BRZConfiguration *configuration =
       [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
                                       endpoint:brazeEndpoint];
   configuration.logger.level = BRZLoggerLevelInfo;
@@ -81,27 +81,27 @@ class AppDelegate:UIResponder, UIApplicationDelegate {
   configuration.location.automaticLocationCollection = YES;
   configuration.location.geofencesEnabled = YES;
   configuration.location.automaticGeofenceRequests = YES;
-  Braze \*braze = [[Braze alloc] initWithConfiguration:configuration];
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
   AppDelegate.braze = braze;
 
   [self.window makeKeyAndVisible];
   return YES;
 }
 
-\#pragma mark - AppDelegate.braze
+#pragma mark - AppDelegate.braze
 
-static Braze \*_braze = nil;
+static Braze *_braze = nil;
 
-+ (Braze \*)braze {
-  return \_braze;
++ (Braze *)braze {
+  return _braze;
 }
 
-+ (void)setBraze:(Braze \*)braze {
-  \_braze = braze;
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
 }
 
 @end
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -113,7 +113,7 @@ static Braze \*_braze = nil;
 
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
@@ -131,25 +131,24 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
+```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude
                                                longitude:longitude
                                       horizontalAccuracy:horizontalAccuracy];
 
-\`\`\`
+```
 
-\`\`\`objc
+```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude
                                                longitude:longitude
                                       horizontalAccuracy:horizontalAccuracy
                                                 altitude:altitude
                                         verticalAccuracy:verticalAccuracy];
 
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
 
-詳細については、[`Braze.User.swift`][5] を参照してください。
+詳細については、[`Braze.User.swift`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/) を参照してください。
 
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/

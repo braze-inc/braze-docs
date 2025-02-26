@@ -83,19 +83,19 @@ Use this filter to find users who are or are not in the control group of your ta
 
 ### In Canvas Control Group 
 
-Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the drop-down.
+Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the dropdown.
 
 ![][19]
 
 ### Last received message from specific campaign 
 
-Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
+Use this filter to find users who last received a specific campaign before or after a specified date or number of days. This filter doesn't consider when users received other campaigns.
 
 ![][14]
 
 ### Last received message from specific campaign or Canvas with tag 
 
-Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days.
+Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases.
 
 ![][17]
 

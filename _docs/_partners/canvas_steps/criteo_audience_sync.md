@@ -2,7 +2,7 @@
 nav_title: Criteo
 article_title: Canvas Audience Sync to Criteo
 description: "This reference article will cover how to use Braze Audience Sync to Criteo, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-page_order: 4
+page_order: 1
 alias: "/audience_sync_criteo/"
 
 Tool:
@@ -35,19 +35,19 @@ You will need to ensure that you have the following items created and/or complet
 | --- | --- | --- |
 | Criteo ad account | [Criteo](https://marketing.criteo.com/) | An active Criteo ad account tied to your brand.<br><br>Ensure that your Criteo admin has granted you the appropriate permissions to access Audiences. |
 | [Criteo Advertising Guidelines](https://www.criteo.com/advertising-guidelines/)<br>and<br>[Criteo Brand Safety Guidelines](https://www.criteo.com/wp-content/uploads/2017/11/Criteo-Brand-Safety-Guidelines-UK-March-2016.pdf) | Criteo | As an active Criteo customer, you must ensure that you can comply with Criteo’s Advertising and Brand Safety Guidelines prior to launching any Criteo campaigns. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration 
 
 ### Step 1: Connect to Criteo
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. In the Criteo Audience Export module, click **Connect Criteo**.
+In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.][5]{: style="max-width:80%;"}
+![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.][5]{: style="max-width:80%;"}
 
 A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
 
@@ -100,7 +100,7 @@ Enter a name for the new audience, select **Add Users to Audience** and select w
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![An alert that appears once a new audience is created in the Canvas component.]({% image_buster /assets/img/criteo/criteo1.png %})
+![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/criteo/criteo1.png %})
 
 When you launch a Canvas with a new audience, Braze sync users in near real-time as they enter the Audience Sync component.
 {% endtab %}
@@ -140,7 +140,7 @@ The following table includes metrics and descriptions to help you better underst
 | Users Pending | Number of users currently being processed by Braze to sync into Criteo. |
 | Users Errored | Number of users who were not synced to Criteo due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Criteo token or if the audience was deleted on Criteo. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is an Audience Sync component. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
@@ -153,7 +153,7 @@ You can simply disconnect and reconnect your Criteo account on the Criteo partne
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
-Please ensure that your Criteo ad account has successfully connected to Braze on the Criteo partner page.
+Make sure that your Criteo ad account has successfully connected to Braze on the Criteo partner page.
 
 Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
 {% enddetails %}

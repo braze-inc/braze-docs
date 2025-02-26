@@ -31,9 +31,10 @@ A valid permissions object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `companyPermissions` | Required | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
+| `companyPermissions` | Optional | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
+| `roles` | Optional | Array | Array of [role objects](#role-object). |
 | `appGroup` | Required | Array | Array of [workspace permission objects](#workspace-permission-object). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Workspace permissions object {#workspace-permission-object}
 
@@ -46,7 +47,7 @@ A valid app group permission object is a JSON object with the following key-valu
 | `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](#workspace-permissions-set-object). |
 | `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](#workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
 | `team` | Optional | Array | Array of [Team permission objects](#team-permissions-object). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Workspace permissions set object {#workspace-permissions-set-object}
 
@@ -56,7 +57,7 @@ A valid workspace permissions set object is a JSON object with the following key
 | --- | --- | --- | --- |
 | `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
 | `appGroupPermissionSetID` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Team permissions object
 
@@ -67,7 +68,17 @@ A valid team permission object is a JSON object with the following key-value pai
 | `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
 | `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
 | `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](#team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+## Role object
+
+A valid role object is a JSON object with the following key value pairs:
+
+| Key | Required | Data type | Description |
+| --- | --- | --- | --- |
+| `roleName` | Optional | String | Name of the role that is being assigned to the user. |
+| `roleId` | Required if `roleName` is missing | String | ID of the role, serving as an alternative method of specifying the role. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Appendix
 
@@ -78,7 +89,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Administrator | `admin` |
 | Can Manage Company Settings | `manage_company_settings` |
 | Can Add/Remove Workspaces| `add_remove_app_groups` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Workspace permission strings {#workspace-strings}
 
@@ -86,6 +97,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- |
 | Admin | `admin` |
 | Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
+| Approve and Deny Canvases | `approve_deny_campaigns` |
 | Send Campaigns, Canvases | `send_campaigns_canvases` |
 | Publish Cards | `publish_cards` |
 | Edit Segments | `edit_segments` |
@@ -98,6 +110,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Import and Update User Data | `import_update_user_data` |
 | View Billing Details | `view_billing_details` |
 | Access Dev Console | `dev_console` |
+| Launch Content Blocks | `launch_content_blocks` |
 | Manage External Integrations | `manage_external_integrations` |
 | Manage Apps | `manage_apps` |
 | Manage Teams | `manage_teams` |
@@ -107,7 +120,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Manage Subscription Groups | `manage_subscription_groups` |
 | Manage Approval Settings | `manage_approval_settings` |
 | Manage Catalogs Dashboard Permission | `manage_catalogs_dashboard_permission` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Team permission strings {#team}
 
@@ -115,6 +128,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- |
 | Admin | `admin` |
 | Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
+| Approve and Deny Canvases | `approve_deny_campaigns` |
 | Send Campaigns, Canvases | `send_campaigns_canvases` |
 | Publish Cards | `publish_cards` |
 | Edit Segments | `edit_segments` |
@@ -122,7 +136,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | View User Profile | `view_user_profile` |
 | Manage Dashboard Users | `manage_dashboard_users` |
 | Manage Media Library Assets | `manage_media_library` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Department strings
 
@@ -135,4 +149,4 @@ A valid team permission object is a JSON object with the following key-value pai
 | Finance | `finance` |
 | Marketing / Editorial | `marketing` |
 | Product Management | `pm` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

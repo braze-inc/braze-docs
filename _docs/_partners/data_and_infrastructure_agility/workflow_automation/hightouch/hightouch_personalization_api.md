@@ -12,7 +12,7 @@ search_tag: Partner
 
 ![][3]
 
-The Braze and Hightouch integration allows you to use the API with [Braze Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to pull up-to-date customer or object data into your campaigns or Canvases at the time-of-send.
+The Braze and Hightouch integration allows you to use the API with [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to pull up-to-date customer or object data into your campaigns or Canvases at the time-of-send.
 
 Hightouch's Personalization API provides a REST endpoint to use within your Braze configuration. Specifically, you can use Braze's Connected Content offering to make a GET request to the Personalization API to retrieve all information related to a particular identifier. The data exposed by this API could represent customer, product, or any other object data. 
 
@@ -26,7 +26,7 @@ Hightouch's Personalization API provides a REST endpoint to use within your Braz
 | Defined use cases | Before setting up the API, you must determine your use case for this integration. Reference the following list for common use cases. |
 | Data stored in a cloud data warehouse or other source | Hightouch integrates with [over 25+ data sources](https://hightouch.com/integrations) |
 | Hightouch API key | This can be created within **Hightouch > Settings > API keys > Add API key**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
 {% tab Use Cases %}
@@ -170,7 +170,7 @@ The following Liquid references would return this example data:
 | {% raw %}`{{artists.recommendations.concerts[0].artist}}`{% endraw %}| Aphex Twin |
 | {% raw %}`{{artists.recommendations.concerts[0].location}}`{% endraw %}| San Francisco, CA |
 | {% raw %}`{{artists.recommendations.upcoming_album_release.title}}`{% endraw %}| Universal Language |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Troubleshooting
 

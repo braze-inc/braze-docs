@@ -11,7 +11,7 @@ tool:
 
 # Localization
 
-> Braze automatically collects locale information from user devices after integrating the SDK. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**. 
+> Braze automatically collects locale information from user devices after integrating the SDK. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**.
 
 Visit the following [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) resources for technical details on how locale is receive based on your platform.
 
@@ -35,31 +35,27 @@ For companies with customers in many countries, handling localization early in y
 {% tabs local %}
 {% tab One template for all %}
 
-In the "one template for all" approach, localization is applied to a single template in Braze using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-
-Once sent, the dashboard provides aggregated campaign analytics. User-level engagement can be measured using custom segment funnels, for example, by combining **Country** and **Received Campaign** filters.
+In the "one template for all" approach, localization is applied to a single template in Braze using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). After sending, the dashboard provides aggregated campaign analytics. User-level engagement can be measured using custom segment funnels, for example, by combining **Country** and **Received Campaign** filters.
 
 | Advantages | Considerations |
 | --- | --- |
 | - Centralized approach<br>- Reduced email build time, no need to build out an email multiple times | - Manual report building<br>- Campaign report shows aggregated metrics rather than metrics per country<br>- Need to thoroughly test Liquid to ensure it populates as expected<br>- Depending on how you pull in the country value or how many counties you have set up, it could be tricky to test each country<br>- Harder to schedule sends for specific times across time zones<br>- Harder to use if you want to send separate content per country. |
 | --- | --- | --- |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab One template per country %}
 
-The "one template per country" approach separates templating into different sending locals.
+The "one template per country" approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign.
 
-Once sent, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign. 
-
-- Templates benefit from implementing [Braze Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
-- Campaigns can inherit the configurations from the same [Braze Template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (such as [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template?redirected=true#creating-an-email-template) built with the use of Liquid).
+- Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
+- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (such as [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) that contain Liquid).
 - Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/) to allow a faster time time-to-value.
 
 | Advantages | Considerations |
 | --- | --- |
 | - Scalable to multiple locations<br>- Reporting on revenue per country within Braze (such as per campaign)<br>- Flexibility if there is drastically different content per country | - Requires strategic structuring<br>- More build effort required (such as separate campaigns for each country) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -71,17 +67,17 @@ Once sent, the dashboard reports sending analytics based on each country separat
 
 In the "one journey for all" approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-Once sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [Segment Funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
+After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |
 | - Centralized approach<br>- Reduced email build time - no need to build out an email multiple times. | - Manual report building<br>- Canvas report shows aggregated metrics rather than metrics per country<br>- Need to thoroughly test Liquid to ensure it populates as expected<br>- Depending on how you pull in the country value or how many counties you have set up, it could be tricky to test each country<br>- Harder to schedule sends for specific times across time zones<br>- Harder to use if you want to send separate content per country. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab One journey per country %}
 
-In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas Components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
+In the "one journey per country" approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-canvases) at the component and overall journey level.
 
 Localization can be achieved through the following methods:
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
@@ -92,7 +88,7 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 | Advantages | Considerations |
 | --- | --- |
 | - Reporting on revenue per country within Braze (such as per Canvas, variant, or step)<br>- Flexibility if there is drastically different content per country<br>- Can add other channels as part of the journey in the future | - Requires strategic structuring<br>- More build effort required (such as separate message steps for each country)<br>- Canvas can become large and difficult to read if you have custom, complex journeys for each country in a single Canvas. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -131,9 +127,9 @@ We always recommend including a {% raw %}`{% else %}`{% endraw %} statement in y
 
 ### Option 2: Content Blocks
 
-Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, everywhere that references that block changes. For example, an email header or footer used in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
+Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
 
-When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be utilized.
+When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be used.
 
 Content Blocks can also be utilized as a translation management process where content that requires translation is housed within a Content Block, fetched, translated, and then updated:
 1. Manually create a Content Block in the dashboard with the tag "Needs Translation".
@@ -248,7 +244,16 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 ```
 {% endraw %}
 
-### Option 4: Localization partners
+### Option 4: Add a locale
+
+Add and use [locales in your messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales) to target users in different languages all within a single email campaign or Canvas. 
+
+{% alert important %}
+This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+
+### Option 5: Localization partners
 
 Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
 
@@ -273,7 +278,7 @@ For example, the following Connected Content calls call Transifex and Crowdin to
 {% endtab %}
 {% endtabs %}
 
-### Option 5: Translations in a public Google Sheet 
+### Option 6: Translations in a public Google Sheet 
 
 Another translation option includes housing translations in Google Sheets; often, this may be handled in partnership with a translation agency. Translations housed here can be queried using Connected Content. Relevant translation for a user based on their language will then be pulled into the campaign body at the time of sending. 
 
@@ -281,7 +286,7 @@ Another translation option includes housing translations in Google Sheets; often
 The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
 {% endalert %}
 
-### Option 6: Google spreadsheet into a JSON API via SheetDB  
+### Option 7: Google spreadsheet into a JSON API via SheetDB  
 
 This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via SheetDB, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
 
@@ -301,7 +306,7 @@ First, build out the Google sheet so that the languages are different objects:
 
 #### Step 2: Use the language Liquid tag in a Connected Content call
 
-Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
+Next, implement the {% raw %}`{{${language}}}`{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
 
 {% raw %}
 ```liquid
@@ -326,4 +331,3 @@ Lastly, use Liquid for templating your messages:
 - Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
 - SheetDB offers a limited free account and multiple paying options that should be considered based on your campaign strategy. 
 - Connected Content calls can be cached. We recommend measuring the projected cadence of the API calls and investigating an alternative approach of calling the main SheetDB endpoint instead of using the search method.
-

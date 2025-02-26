@@ -13,9 +13,17 @@ channel:
 
 # Notification options
 
-> If you want to categorize your messages and group them in your user's notification tray, you can utilize Android's Notification Channels feature through Braze.
+> These are the some of the Android-specific push notification options available through Braze.
 
-Create your Android push campaign, then look to the top of the **Compose** tab for the **Notification Channel** dropdown.
+## Silent notifications
+
+When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message), you **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, see [Silent push notifications]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
+
+## Notification groups
+
+If you want to categorize your messages and group them in your user's notification tray, you can utilize Android's Notification Channels feature through Braze.
+
+First, create your Android push campaign, then look to the top of the **Compose** tab for the **Notification Channel** dropdown.
 
 ![][28]{: style="max-width:60%;" }
 

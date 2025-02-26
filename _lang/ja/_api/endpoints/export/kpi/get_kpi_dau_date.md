@@ -1,41 +1,41 @@
 ---
-nav_title: "得る：日付別に毎日のアクティブユーザーをエクスポート"
-article_title: "得る：日付別に毎日のアクティブユーザーをエクスポート"
+nav_title: "取得:デイリーアクティブユーザーを日付別にエクスポートする"
+article_title: "取得:デイリーアクティブユーザーを日付別にエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、Braze エンドポイントの毎日のアクティブ ユーザーのエクスポートについて詳しく説明します。"
+description: "この記事では、Brazeのエンドポイント「Export daily active users」の詳細について概説する。"
 
 ---
 {% api %}
-# 日付別に毎日のアクティブユーザーをエクスポートする
+# デイリーアクティブユーザーを日付別にエクスポートする
 {% apimethod get %}
 /kpi/dau/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、各日付のユニーク アクティブ ユーザーの合計数の日次系列を取得します。
+> このエンドポイントを使用して、各日付の固有アクティブユーザーの総数の日次情報を取得します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `kpi.dau.data_series` 許可。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`kpi.dau.data_series`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須 | データ型 | 説明 |
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-| `length`| 必須 | 整数 | 最大日数 `ending_at` 返されるシリーズに含めるもの。1 から 100 までの範囲で指定する必要があります。 |
-| `ending_at`| オプション | 日時 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データ シリーズを終了する日付。デフォルトはリクエストの時刻です。 |
-| `app_id`| オプション | 文字列 |[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから取得されたアプリ API 識別子。除外すると、ワークスペース内のすべてのアプリの結果が返されます。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+| `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外した場合、ワークスペース内のすべてのアプリの結果が返される。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/dau/data_series?length=10&ending_at=2018-06-28T23:59:59-5:00&app_id={{app_identifier}}' \
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API エクスポートに関するヘルプについては、[「エクスポートのトラブルシューティング」]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)をご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # サイレントプッシュ通知
 
@@ -28,9 +28,9 @@ noindex: true
 タイトルと本文の両方を `content-available=1` でアタッチすることは、未定義の動作につながる可能性があるため、推奨されません。通知が本当にサイレントであることを確認するには、`content-available` フラグを `1.` に設定するときに、タイトルと本文の両方を除外します。詳細については、[バックグラウンド更新に関するAppleの公式ドキュメント](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app)を参照してください。
 {% endalert %}
 
-`content-available` フラグは、Braze ダッシュボードおよび[メッセージング API][1] の [Apple プッシュオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)内で設定できます。
+`content-available` フラグは、Braze ダッシュボードおよび[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) の [Apple プッシュオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)内で設定できます。
 
-![プッシュコンポーザーの [設定] タブにある [コンテンツ利用可能] チェックボックスを表示する Braze ダッシュボード。][2]
+![プッシュコンポーザーの [設定] タブにある [利用可能なコンテンツ] チェックボックスを表示する Braze ダッシュボード。]({% image_buster /assets/img_archive/remote_notification.png %}「利用可能なコンテンツ」)
 
 ## サイレントプッシュ通知を使用してバックグラウンド作業をトリガーする
 
@@ -38,13 +38,13 @@ noindex: true
 
 サイレントプッシュ通知を使用してバックグラウンド作業をトリガーするには、前述の手順に従って、メッセージやサウンドなしで `content-available` フラグを設定します。アプリのバックグラウンドモードを設定して、プロジェクト設定の [**機能**] タブで `remote notifications` を有効にします。リモート通知は、`content-available` フラグが設定された通常のプッシュ通知です。 
 
-![Xcode の [機能] の下に [リモート通知] モードのチェックボックスが表示されています。][3]
+![Xcode の [機能] の下に [リモート通知] モードのチェックボックスが表示されています。]({% image_buster /assets/img_archive/background_mode.png %}「バックグラウンドモードが有効になりました」)
 
-[アンインストール追跡][6] には、リモート通知のバックグラウンドモードを有効にする必要があります。
+[アンインストールトラッキング]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/)では、リモート通知のバックグラウンドモードを有効にする必要があります。
 
 リモート通知バックグラウンドモードが有効になっている場合でも、ユーザーがアプリケーションを強制終了した場合、システムはアプリをバックグラウンドで起動しません。システムによってアプリがバックグラウンドで自動的に起動される前に、ユーザーはアプリケーションを明示的に起動するか、デバイスを再起動する必要があります。
 
-詳細については、[バックグラウンド更新のプッシュ][4] および [\`application:didReceiveRemoteNotification:fetchCompletionHandler:\`][5] を参照してください。
+詳細については、[[バックグラウンド更新のプッシュ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc)] および [[`application:didReceiveRemoteNotification:fetchCompletionHandler:`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:)] を参照してください。
 
 ## iOS のサイレント通知の制限事項
 
@@ -54,17 +54,10 @@ Braze には、iOS サイレントプッシュ通知に依存するいくつか�
 
 |機能|ユーザーエクスペリエンス|
 |---|---|
-|アンインストール追跡 |ユーザーはサイレントな夜間アンインストール追跡プッシュを受け取ります。|
-|ジオフェンス |サーバーからデバイスへのジオフェンスのサイレント同期。|
-{: .reset-td-br-1 .reset-td-br-2}
+|アンインストール追跡 | ユーザーはサイレントな夜間アンインストール追跡プッシュを受け取ります。|
+|ジオフェンス | サーバーから装置へのジオフェンスのサイレント同期。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-詳細については、Apple の [インスタンスメソッド][7] および [未受信通知][8] のドキュメントを参照してください。
+詳細については、Apple の[instance method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application) および[未受信通知](https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23) のドキュメントを参照してください。
 
-[1]: {{site.baseurl}}/api/endpoints/messaging/
-[2]: {% image_buster /assets/img_archive/remote_notification.png %} 「利用可能なコンテンツ」
-[3]: {% image_buster /assets/img_archive/background_mode.png %} 「バックグラウンドモードが有効になりました」
-[4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc
-[5]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[7]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application
 [8]:https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23

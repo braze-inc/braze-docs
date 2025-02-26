@@ -5,77 +5,77 @@ page_order: 3
 hide_toc: true
 layout: dev_guide
 guide_top_header: "ベストプラクティスとよくある質問"
-guide_top_text: "このランディングページには、Brazeダッシュボードとその機能に関するよくある質問とベストプラクティスに関する記事が掲載されています。"
+guide_top_text: "このランディングページには、Brazeダッシュボードとその機能に関するよくある質問とベストプラクティスに関する記事が掲載されている。"
 
 guide_featured_title: "FAQ記事"
 guide_featured_list:
-  - name: Canvas FAQ
+  - name: キャンバスに関する FAQ
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-brush
-  - name: Campaign FAQ
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: キャンペーンに関する FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-paper-plane
-  - name: "Email and Link Templates FAQ"
+    image: /assets/img/braze_icons/send-01.svg
+  - name: "Eメールとリンクのテンプレート FAQ"
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
-    fa_icon: fas fa-link
-  - name: "Export FAQ"
+    image: /assets/img/braze_icons/link-03.svg
+  - name: "エクスポートに関してよくある質問"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-file-export
-  - name: "In-App Messages FAQ"
+    image: /assets/img/braze_icons/file-download-01.svg
+  - name: "アプリ内メッセージ FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-    fa_icon: fas fa-mobile-alt
-  - name: "Locations and Geofences FAQ"
+    image: /assets/img/braze_icons/channel-in-app-messages.svg
+  - name: "位置情報とジオフェンスに関する FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-map-marker-alt
-  - name: "Media Library FAQ"
+    image: /assets/img/braze_icons/marker-pin-01.svg
+  - name: "メディアライブラリに関するよくある質問"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-images
+    image: /assets/img/braze_icons/image-01.svg
   - name: "MMS FAQ"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-    fa_icon: fas fa-comment
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: "SMS FAQ"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
-    fa_icon: fas fa-comment-dots
+    image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-    fa_icon: fa-brands fa-whatsapp
-  - name: "Intelligence FAQ"
+    image: /assets/img/braze_icons/whatsapp.svg
+  - name: "インテリジェンスFAQ"
     link: /docs/user_guide/intelligence/faqs/
-    fa_icon: fa-regular fa-lightbulb
-  - name: "Email Drag-and-Drop Editor FAQ"
+    image: /assets/img/braze_icons/lightbulb-05.svg
+  - name: "メール ドラッグ＆ドロップ エディター FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
-    fa_icon: fa-regular fa-lightbulb
-  - name: "API and CSV Export FAQ"
+    image: /assets/img/braze_icons/channel-email.svg
+  - name: "APIとCSVエクスポートFAQ"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fa-solid fa-file-export
-  - name: "Feature Flag FAQ"
+    image: /assets/img/braze_icons/file-download-01.svg
+  - name: "フィーチャーフラグに関する FAQ"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
-    fa_icon: fa-solid fa-flag
-  - name: "Live Activities FAQ"
+    image: /assets/img/braze_icons/flag-01.svg
+  - name: "ライブアクティビティに関する FAQ"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
-    fa_icon: fa-brands fa-swift
-  - name: "Liquid FAQ"
+    image: /assets/img/braze_icons/swift.svg
+  - name: "Liquid に関する FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
-    fa_icon: fas fa-flask
+    image: /assets/img/braze_icons/beaker-02.svg
 
 
 guide_menu_title: "Best practices"
 guide_menu_list:
-  - name: "Content Card Best Practices"
+  - name: "コンテンツ・カードのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/
-    fa_icon: fas fa-stream
-  - name: "Email Best Practices"
+    image: /assets/img/braze_icons/sticker-square.svg
+  - name: "電子メールのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
-    fa_icon: fas fa-envelope
-  - name: "In-App Message Best Practices"
+    image: /assets/img/braze_icons/mail-01.svg
+  - name: "アプリ内メッセージのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
-    fa_icon: fas fa-mobile-alt
-  - name: "Push Best Practices"
+    image: /assets/img/braze_icons/phone-02.svg
+  - name: "プッシュのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
-    fa_icon: fas fa-comment-alt
-  - name: "SMS Best Practices"
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: "SMSのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
-    fa_icon: fa-solid fa-comment-sms
+    image: /assets/img/braze_icons/message-text-circle-01.svg
 
 
 local_redirect: #what-does-local-time-zone-delivery-offer

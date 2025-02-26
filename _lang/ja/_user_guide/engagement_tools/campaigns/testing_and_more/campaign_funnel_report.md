@@ -1,5 +1,5 @@
 ---
-nav_title: 目標到達プロセスレポート
+nav_title: ファネルレポート
 page_order: 7
 noindex: true
 layout: redirect

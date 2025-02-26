@@ -5,6 +5,8 @@ $(document).ready(function(){
     var feedback_config = {
       dest: 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback',
       site: feedback_site,
+      article_title: feedback_article_title,
+      nav_title: feedback_nav_title,
       params: null,
       helpful: '',
       postdate: null,
@@ -36,10 +38,25 @@ $(document).ready(function(){
         $('#feedback_answer').fadeOut("slow");
 
         if (typeof (appboy) !== 'undefined') {
-          appboy.logCustomEvent("Documentations Feedback", {"Feedback": helpful,"URL": feedback_config['site']});
+          appboy.logCustomEvent(
+            "Documentations Feedback", {
+              "Feedback": helpful,
+              "Article Title": feedback_config['article_title'],
+              "Nav Title": feedback_config['nav_title'],
+              "URL": feedback_config['site'],
+              "Language": page_language
+            }
+          )
         }
 
-        var submit_data = {'Helpful': helpful,'URL':feedback_config['site'],'Params':window.location.search};
+        var submit_data = {
+          'Helpful': helpful,
+          'URL':feedback_config['site'],
+          'Article Title': feedback_config['article_title'],
+          'Nav Title': feedback_config['nav_title'],
+          'Params':window.location.search,
+          "Language": page_language
+        };
         var jqxhr = $.ajax({
           url: feedback_config['dest'],
           method: "GET",
@@ -76,9 +93,28 @@ $(document).ready(function(){
 
     $('#feedback_submit_button').on('click',function(e){
       $('#feedback_comment_div').fadeOut('slow');
-      var submit_data = {'Helpful': feedback_config['helpful'],'URL':feedback_config['site'],'Params': feedback_config['params'],'ID': feedback_config['ID'],'postdate':feedback_config['postdate'],'Feedback':$('#feedback_comment').val()};
+      var submit_data = {
+        'Helpful': feedback_config['helpful'],
+        'URL':feedback_config['site'],
+        'Article Title': feedback_config['article_title'],
+        'Nav Title': feedback_config['nav_title'],
+        'Params': feedback_config['params'],
+        'ID': feedback_config['ID'],
+        'postdate':feedback_config['postdate'],
+        "Language": page_language,
+        'Feedback':$('#feedback_comment').val()
+      };
       if (typeof (appboy) !== 'undefined') {
-        appboy.logCustomEvent("Documentations Feedback Comment", {"Feedback": feedback_config['helpful'],"URL": feedback_config['site'],"Comment": $('#feedback_comment').val()});
+        appboy.logCustomEvent(
+          "Documentations Feedback Comment", {
+            "Feedback": feedback_config['helpful'],
+            "Article Title": feedback_config['article_title'],
+            "Nav Title": feedback_config['nav_title'],
+            "URL": feedback_config['site'],
+            "Language": page_language,
+            "Comment": $('#feedback_comment').val()
+          }
+        );
       }
       var jqxhr = $.ajax({
         url: feedback_config['dest'] + '/comment',

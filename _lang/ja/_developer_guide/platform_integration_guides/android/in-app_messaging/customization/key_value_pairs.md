@@ -32,6 +32,5 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-詳細については、この [KDoc][44] を参照してください。
+詳細については、この [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721) を参照してください。
 
-[44]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721

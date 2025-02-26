@@ -8,7 +8,7 @@ description: "このリファレンス記事では、iOS アプリケーショ�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のセッショントラッキング
 
@@ -22,11 +22,11 @@ Braze SDK では、ユーザーエンゲージメントなど、ユーザーに�
 新しいセッションを強制する必要がある場合、ユーザーを変更することで強制が可能になります。
 {% endalert %}
 
-## セッションタイムアウトをカスタマイズする
+## セッションタイムアウトのカスタマイズ
 
-Braze iOS SDK v3.14.1 以降では、Info.plist ファイルを使用してセッションタイムアウトを設定できます。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` ディクショナリ内に `SessionTimeout` 番号サブエントリを追加し、値をカスタムセッションタイムアウトに設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
+Braze iOS SDK v3.14.1から、Info.plist ファイルを使用してセッションタイムアウトを設定できるようになった。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` ディクショナリ内に `SessionTimeout` 番号サブエントリを追加し、値をカスタムセッションタイムアウトに設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
 
-または、[`startWithApiKey`][session_tracking_1] に渡される `appboyOptions` オブジェクト内の `ABKSessionTimeoutKey` キーを目的の整数値に設定することもできます。
+または、[`startWithApiKey`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#afd911d60dfe7e5361afbfb364f5d20f9) に渡される `appboyOptions` オブジェクト内の `ABKSessionTimeoutKey` キーを目的の整数値に設定することもできます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -62,11 +62,5 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![セッション数、最終使用日、初回使用日が表示されるユーザープロファイルのアプリの利用状況セクション。][session\_tracking\_7]
+![セッション数、最終使用日、初回使用日が表示されるユーザープロファイルのアプリの利用状況セクション。]({% image_buster /assets/img_archive/test_session.png %})
 
-[session_tracking_1]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#afd911d60dfe7e5361afbfb364f5d20f9
-[session\_tracking\_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session\_tracking\_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session\_tracking\_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session\_tracking\_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session\_tracking\_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

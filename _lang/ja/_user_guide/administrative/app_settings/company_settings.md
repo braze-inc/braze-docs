@@ -4,25 +4,25 @@ article_title: 管理者設定
 page_order: 20
 layout: dev_guide
 guide_top_header: "管理者設定"
-guide_top_text: "このページは、[<b>設定</b>] > [<b>管理者設定</b>] にあります。次に、それぞれのタブを選択して、管理する設定に移動できます。<br> <br>[<b>管理者設定</b>] のほとんどの機能は、Braze アカウント管理者のみが利用できます。アクセス権を持たないが必要だと思われる場合は、会社の Braze アカウント管理者に問い合わせてください。"
+guide_top_text: "このページは、[<b>設定</b>] > [<b>管理者設定</b>] にあります。次に対応するタブを選択して、管理する設定に移動できます。<br> <br> <b>管理者設定</b>内のほとんどの機能は、Brazeアカウント管理者のみが利用できる。アクセス権を持たないが必要だと思われる場合は、会社の Braze アカウント管理者に問い合わせてください。"
 
 page_type: landing
 description: "このランディングページには、管理者設定に関する記事の一覧があります。ここから、連絡先情報、通知設定、およびセキュリティ設定に関する記事を見つけることができます。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Contact Information
+- name: 連絡先情報
   link: /docs/user_guide/administrative/app_settings/company_settings/contact_information/
-  fa_icon: fas fa-address-book
-- name: Notification Preferences
+  image: /assets/img/braze_icons/book-open-01.svg
+- name: 通知設定
   link: /docs/user_guide/administrative/app_settings/company_settings/notification_preferences/
-  fa_icon: far fa-dot-circle
-- name: Security Settings
+  image: /assets/img/braze_icons/target-05.svg
+- name: セキュリティ設定
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
-  fa_icon: fas fa-shield-alt
-- name: Automated User Provisioning
+  image: /assets/img/braze_icons/shield-01.svg
+- name: 自動ユーザープロビジョニング
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
-  fa_icon: fas fa-user-plus
+  image: /assets/img/braze_icons/user-plus-01.svg
 ---
 
 {% alert warning %}

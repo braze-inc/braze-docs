@@ -5,53 +5,53 @@ page_order: 3
 layout: dev_guide
 
 guide_top_header: "データ＆分析"
-guide_top_text: "Braze では、キャンペーンのパフォーマンスを測定するための幅広い指標を提供しています。また、必要な数値を確実に取得できるレポート機能と追跡機能も複数提供しています。<br><br>さらに、 Braze のデータを活用し、データストリーミングエクスポートツールである <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a> を使用して、他のクラス最高のレポートプラットフォームで BI および分析の取り組みを強化することもできます。これにより、チームは大量の詳細な顧客データに基づいて行動できます。"
+guide_top_text: "Braze には、キャンペーン パフォーマンスを測定するための幅広い測定基準が用意されています。また、必要な数値を確実に取得できるように、レポート機能と追跡機能も複数提供しています。<br><br>Braze データを活用し、<a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a> を使用して、他のクラス最高のレポート作成プラットフォームからのビジネスインテリジェンス (BI) および分析業務を補完します。Currents は、大量の詳細な顧客データを処理するためにチームで使用できるデータストリーミングエクスポートツールです。"
 description: "Braze では、キャンペーンの成功度の測定に使用できる幅広い指標を提供しています。また、必要な数値を確実に取得できるように、レポート機能と追跡機能も複数提供しています。" 
 
 guide_featured_title: "トピック"
 guide_featured_list:
-  - name: Data Points Overview
+  - name: データポイントの概要
     link: /docs/user_guide/data_and_analytics/data_points/
-    fa_icon: fa-solid fa-check
-  - name: Report Metrics Glossary
+    image: /assets/img/braze_icons/check-square-broken.svg
+  - name: レポート指標の用語集
     link: /docs/user_guide/data_and_analytics/report_metrics/
-    fa_icon: fas fa-book-open
-  - name: Cloud Data Ingestion
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: クラウドデータ取り込み
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
-  - name: Creating a Formula
+    image: /assets/img/braze_icons/upload-cloud-01.svg
+  - name: 式の作成
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
-    fa_icon: fas fa-flask
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/
-    fa_icon: fas fa-swimmer
-  - name: User Data Collection
+    image: /assets/img/braze_icons/waves.svg
+  - name: ユーザーデータの収集
     link: /docs/user_guide/data_and_analytics/user_data_collection/
-    fa_icon: fas fa-users
-  - name: Custom Data
+    image: /assets/img/braze_icons/users-01.svg
+  - name: カスタムデータ
     link: /docs/user_guide/data_and_analytics/custom_data/
-    fa_icon: fas fa-wrench
-  - name: Tracking
+    image: /assets/img/braze_icons/tool-01.svg
+  - name: 追跡
     link: /docs/user_guide/data_and_analytics/tracking/
-    fa_icon: fas fa-chart-line
-  - name: Exporting Braze Data
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: Braze データのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/
-    fa_icon: fas fa-file-export
-  - name: Data Transformation
+    image: /assets/img/braze_icons/file-download-01.svg
+  - name: データ変換
     link: /docs/user_guide/data_and_analytics/data_transformation/
-    fa_icon: fa-solid fa-database
-  - name: Your Analytics Dashboard
+    image: /assets/img/braze_icons/database-01.svg
+  - name: Analytics ダッシュボード
     link: /docs/user_guide/data_and_analytics/analytics/
-    fa_icon: fa-solid fa-chart-simple
-  - name: Your Reports
+    image: /assets/img/braze_icons/trend-up-01.svg
+  - name: レポート
     link: /docs/user_guide/data_and_analytics/reporting/
-    fa_icon: fas fa-chart-bar
-  - name: Catalogs
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: カタログ
     link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-    fa_icon: fas fa-list-ul
-  - name: Query Builder
+    image: /assets/img/braze_icons/list.svg
+  - name: クエリビルダー
     link: /docs/user_guide/data_and_analytics/query_builder/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
 
 ---
 <br><br>

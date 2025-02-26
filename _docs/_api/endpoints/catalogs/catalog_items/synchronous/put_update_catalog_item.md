@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Update Catalog Item"
-article_title: "PUT: Update Catalog Item"
+nav_title: "PUT: Replace Catalog Item"
+article_title: "PUT: Replace Catalog Item"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update catalog item Braze endpoint."
+description: "This article outlines details about the Replace catalog item Braze endpoint."
 
 ---
 {% api %}
-# Update catalog item
+# Replace catalog item
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Use this endpoint to update an item in your catalog. 
+> Use this endpoint to replace an item in your catalog.
 
 If the `item_id` isn't found, this endpoint will create the item in your catalog. This endpoint is synchronous.
 
@@ -35,14 +35,14 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
 | `item_id` | Required | String | The ID of the catalog item. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `items` | Required | Array | An array that contains item objects. The item objects should contain fields that exist in the catalog except for the `id` field. Only one item object is allowed per request. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -59,6 +59,10 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
@@ -116,11 +120,11 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `item-already-exists` | The item already exists in the catalog. |
-| `item-array-invalid` | `items` must be an array of objects. | 
+| `item-array-invalid` | `items` must be an array of objects. |
 | `items-too-large` | Character limit for each item is 5,000 characters. |
 | `request-includes-too-many-items` | You can only create one catalog item per request. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 | `unable-to-coerce-value` | Item types can't be converted. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -38,8 +38,8 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to the **Campaigns** page and click <i class="fas fa-plus"></i> **Create Campaign**.
 2. Select **WhatsApp**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -58,12 +58,16 @@ If all of the messages in your campaign are similar or have the same content, co
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels you want to pair with your message.
 
+{% alert tip %}
+If an action-based Canvas is triggered by an inbound WhatsApp message, you can reference WhatsApp properties in any Canvas step until the next action path.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
 ## Step 2: Compose your WhatsApp message
 
-Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window. 
+Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window.
 
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 
@@ -80,9 +84,11 @@ Each template has an assigned language, so you need to create a campaign or Canv
 
 ![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
 
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+
 #### Variables
 
-If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, upload or add images from the media library.
+If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL.
 
 Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
 
@@ -99,10 +105,6 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
 
 ### Response messages
-
-{% alert note %}
-Response messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
@@ -179,11 +181,14 @@ Message feature    | Details
 ----------- |---------------- 
 Headers | 
 Text | Supports variable parameters
-Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to 5 MB for any type 
+Images (JPEG and PNG) | Must be 8-bit, RGB or RGBA, and up to five MB for any type 
+Videos | Currently, must be hosted on a URL and less than sixteen MB. Must also have a video type of 3GPP or MP4. <br><br>Video messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Audio | Supported only for response messaging. Must be AAC, AMR, MP3, MP4 audio, or OGG, hosted on a URL, and less than sixteen MB. <br><br>Audio messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Documents | Must be hosted on a URL and less than 100 MB. Must also have a document type of text (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`), or PDF (`.pdf`). <br><br>Document messages are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 Body text | Supports variable parameters
 Footer text | Supports variable parameters 
 CTAs | See [Calls to actions](#ctas).
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Calls to actions {#ctas}
 
@@ -191,11 +196,13 @@ You can add the following calls to action in your WhatsApp messages:
 
 CTA type    | Details
 ----------- |---------------- 
-Visit website | Available for message templates only. <br>One button maximum (including variable parameters).
+Visit website | One button maximum (including variable parameters).
 Call phone number | Available for message templates only. <br>One button maximum.
 Custom quick reply buttons | Three buttons maximum. 
 Marketing opt-out button | This option does not automatically update subscription statuses. <br><br>For setup instructions, see [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection).
-{: .reset-td-br-1 .reset-td-br-2}
+Coupon code message templates | Available for message templates only. <br>These can be opened and edited like other message templates, and are compatible with Liquid and Braze promotion codes. 
+CTA response messages  | Create a response message that includes a call to action button.
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Inbound messages
 
@@ -209,7 +216,7 @@ Audio| audio/aac<br>audio/mp4<br>audio/mpeg<br>audio/amr<br>audio/ogg (only Opus
 Documents | text/plain<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 CTAs | See [Calls to actions](#ctas).
 Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec are supported. We support videos with a single audio stream or no audio stream.
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 

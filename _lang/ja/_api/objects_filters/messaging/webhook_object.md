@@ -1,17 +1,17 @@
 ---
-nav_title: "ウェブフックオブジェクト"
-article_title: Webhook メッセージングオブジェクト
+nav_title: "ウェブフック・オブジェクト"
+article_title: ウェブフック・メッセージング・オブジェクト
 page_order: 13
 page_type: reference
 channel: 
   - webhook
-description: "この参考記事では、Braze Webhook オブジェクトの概要を説明しています。"
+description: "このリファレンス記事では、BrazeのWebhookオブジェクトについて概説している。"
 
 ---
 
-# ウェブフックオブジェクト
+# ウェブフック・オブジェクト
 
-> `webhook`このオブジェクトを使用すると、[メッセージングエンドポイントを介してWebhookメッセージを変更または作成できます]({{site.baseurl}}/api/endpoints/messaging)。
+> `webhook` オブジェクトを使うと、[メッセージング・エンドポイント]({{site.baseurl}}/api/endpoints/messaging)経由でウェブフック・メッセージを変更したり作成したりできる。
 
 ```json
 {
@@ -23,4 +23,4 @@ description: "この参考記事では、Braze Webhook オブジェクトの概�
 }
 ```
 
-送信者とサーバーは時間とともに変化する可能性があるため、Braze はベストプラクティスとして `Content-Type` in the `request_headers` field に明示的な値を指定することを推奨しています。一貫性のある予測可能な動作を実現するためです。`Content-Type`ヘッダーに値が指定されていない場合は、リクエスト本文から値が推測されます。
+ベストプラクティスとして、Braze は、送信者やサーバーが時間とともに変更される可能性があるため、一貫性のある予測可能な動作を確保するために、`request_headers` フィールドに `Content-Type` の明示的な値を提供することを推奨します。`Content-Type` ヘッダーに値が指定されなければ、リクエストボディから推測されます。

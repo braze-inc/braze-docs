@@ -4,7 +4,7 @@ article_title: レポート
 page_order: 7
 layout: dev_guide
 guide_top_header: "レポート"
-guide_top_text: "収集したデータは重要な意味を持つため、Braze はいくつかのレポートオプションを装備しています (<a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a> を除く)。<br><br>どこから始めたらよいかわからない場合は、「<a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>レポートの概要</a>」に、マーケティング戦略に関する一般的な質問に答えるために使用できるレポートと分析のガイダンスがあります。"
+guide_top_text: "貴社のデータは貴社にとって多くの意味を持つため、当社は Braze 内にいくつかのレポート処理のオプションが用意されています (ただし <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>を除く)。<br><br> 何から始めたらよいかわからない場合は、<a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>レポート概要を</a>チェックして、マーケティング戦略に関する一般的な質問に答えるためにどのレポートやアナリティクスを使用できるかのガイダンスを得よう。"
 
 page_type: landing
 description: "このランディングページには、セグメントレポート、エンゲージメントレポート、レポートビルダーなど、Braze (Currents を含まない) で利用可能なレポートオプションに関する記事がまとめられています。"
@@ -12,52 +12,52 @@ tool: Reports
 search_rank: 2
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Reports Overview
+  - name: レポートの概要
     link: /docs/user_guide/data_and_analytics/reporting/reports_overview
-    fa_icon: fas fa-list
-  - name: Segment Data
+    image: /assets/img/braze_icons/list.svg
+  - name: セグメントデータ
     link: /docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
-    fa_icon: fas fa-chart-pie
-  - name: Engagement Reports
+    image: /assets/img/braze_icons/pie-chart-01.svg
+  - name: エンゲージメントレポート
     link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
-    fa_icon: fas fa-chart-line
-  - name: Report Builder
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: レポートビルダー
     link: /docs/user_guide/data_and_analytics/reporting/report_builder/
-    fa_icon: fas fa-wrench
+    image: /assets/img/braze_icons/tool-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Configuring Reporting
+  - name: レポートの設定
     link: /docs/user_guide/data_and_analytics/reporting/configuring_reporting/
-    fa_icon: fas fa-cog
-  - name: Campaign Analytics
+    image: /assets/img/braze_icons/settings-01.svg
+  - name: キャンペーン分析
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
-    fa_icon: fas fa-chart-bar
-  - name: Canvas Analytics
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: キャンバス分析
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
-    fa_icon: fas fa-chart-area
-  - name: Custom Events
+    image: /assets/img/braze_icons/line-chart-down-01.svg
+  - name: カスタムイベント
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics
-    fa_icon: fas fa-calendar-check
-  - name: Funnel Report
+    image: /assets/img/braze_icons/calendar-check-02.svg
+  - name: 目標到達プロセスレポート
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/
-    fa_icon: fas fa-filter
-  - name: Global Control Report
+    image: /assets/img/braze_icons/flag-02.svg
+  - name: グローバルコントロールレポート
     link: /docs/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting
-    fa_icon: fas fa-globe-americas
-  - name: Retention Report
+    image: /assets/img/braze_icons/globe-04.svg
+  - name: リテンションレポート
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-    fa_icon: fas fa-user-check
-  - name: Revenue Data
+    image: /assets/img/braze_icons/user-check-01.svg
+  - name: 収益データ
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-    fa_icon: fas fa-piggy-bank
-  - name: Revenue Report
+    image: /assets/img/braze_icons/piggy-bank-02.svg
+  - name: 収益レポート
     link: /docs/user_guide/data_and_analytics/reporting/revenue_report/
-    fa_icon: fas fa-piggy-bank
-  - name: Segment Insights
+    image: /assets/img/braze_icons/piggy-bank-02.svg
+  - name: セグメントインサイト
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
-    fa_icon: fas fa-chart-pie
-  - name: Global Control Group Report
+    image: /assets/img/braze_icons/pie-chart-01.svg
+  - name: グローバルコントロールグループレポート
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
-    fa_icon: fa-solid fa-earth-americas
+    image: /assets/img/braze_icons/globe-slated-02.svg
 ---

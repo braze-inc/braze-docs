@@ -12,7 +12,7 @@ description: "このリファレンス記事では、Braze SDK を介して Roku
 
 > Braze では、ユーザーに属性を割り当てるメソッドが提供されています。ダッシュボードでこれらの属性に基づき、ユーザーをフィルターおよびセグメント化できます。
 
-実装前に、[ベストプラクティス][7]記事のカスタムイベント、ユーザー属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
+実装前に、[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)記事のカスタムイベント、ユーザー属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 ## デフォルトユーザー属性の割り当て
 
@@ -45,12 +45,12 @@ Braze では、デフォルトユーザー属性以外にも、複数の異な�
 m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
-{% tab Integer %}
+{% tab 整数 %}
 ```brightscript
 m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
-{% tab Float/Double %}
+{% tab フロートまたはダブル %}
 ```brightscript
 m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
@@ -61,14 +61,14 @@ Braze では、FLOAT 値と DOUBLE 値がデータベースでまったく同じ
 m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
-{% tab Date %}
+{% tab 日付 %}
 ```brightscript
 dateAttribute = CreateObject("roDateTime")
 dateAttribute.fromISO8601String("1992-11-29 00:00:00.000")
 m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
-{% tab Array %}
+{% tab 配列 %}
 ```brightscript
 stringArray = createObject("roArray", 3, true)
 stringArray.Push("string1")
@@ -79,7 +79,7 @@ m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 {% endtab %}
 {% endtabs %}
 
-### インクリメント/デクリメントカスタム属性
+### カスタム属性のインクリメント / デクリメント
 
 このコードは、インクリメントカスタム属性の例です。カスタム属性の値は、正または負の整数値でインクリメントできます。
 
@@ -97,7 +97,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### REST API によるカスタム属性の設定
 
-REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API][4] のドキュメントを参照してください。
+REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) のドキュメントを参照してください。
 
 ### カスタム属性値の制限
 
@@ -107,23 +107,19 @@ REST API を使用してユーザー属性を設定することもできます�
 
 SDK から、ユーザーに対して以下のメールのサブスクリプションステータスをプログラムで設定できます。
 
-| サブスクリプションステータス | 定義 |
+| サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `OptedIn` | サブスクリプション登録済み、かつ明示的にオプトイン済み |
-| `Subscribed` | サブスクリプション登録済み、ただし明示的なオプトイン未実行 |
-| `UnSubscribed` | 配信停止済みおよび/または明示的にオプトアウト済み |
-{: .reset-td-br-1 .reset-td-br-2}
+| `OptedIn` | 配信登録済み、かつ明示的にオプトイン済み |
+| `Subscribed` | 購読済み、ただし明示的に選択されていない |
+| `UnSubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 >  これらの型は `BrazeConstants().SUBSCRIPTION_STATES` に属します
 
-メールのサブスクリプションステータスを設定するメソッドは `setEmailSubscriptionState()` です。ユーザーは、有効なメールアドレスを取得すると自動的に `Subscribed` に設定されます 。ただし、明示的なオプトインのプロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を `OptedIn` に設定することをお勧めします。詳細については、「[ユーザーサブスクリプションの管理][10]」を参照してください。
+メールのサブスクリプションステータスを設定するメソッドは `setEmailSubscriptionState()` です。ユーザーは、有効なメールアドレスを取得すると自動的に `Subscribed` に設定されます 。ただし、明示的なオプトインのプロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を `OptedIn` に設定することをお勧めします。詳細については、「[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)」を参照してください。
 
 使用例:
 ```brightscript
 m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

@@ -71,13 +71,13 @@ $ git commit -m "Fixing a typo in the recommended software doc
 Finally, push your changes to the Braze Docs GitHub repository.
 
 ```bash
-git push -u origin BRANCH_NAME
+git push -u upstream BRANCH_NAME
 ```
 
 Replace `BRANCH_NAME` with the name of your branch. The output is similar to the following:
 
 ```bash
-$ git push -u origin fixing-typo-in-recommended-software
+$ git push -u upstream fixing-typo-in-recommended-software
 Enumerating objects: 14, done.
 ...
 To github.com:braze-inc/braze-docs.git
@@ -98,6 +98,16 @@ In the PR description, you'll see Markdown comments similar to the following. Us
 When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
 ![The Braze Docs GitHub repository showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
+
+## Allowing changes to pull requests
+
+In GitHub, go to the Braze Docs repository page and select **Pull requests**.
+
+![Braze Docs repository page with navigation menu containing Pull requests.]({% image_buster /assets/img/contributing/github/menu_pull_requests.png %})
+
+Open the relevant pull request, then check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content.
+
+![A Pull Request showing the allow edits from maintainers checkbox.]({% image_buster /assets/img/contributing/github/allow_maintainers_to_edit.png %}){: style="max-width:50%;"}
 
 ## Requesting a review
 

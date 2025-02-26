@@ -34,17 +34,21 @@ description: "この記事では、ロケーションターゲティングを設
 
 円形領域の場合は、原点を移動し、セグメンテーションの位置半径を調整できます。
 
-![ニュージャージーとニューヨークの間の都市の円形のアウトライン][3]{: style="max-width:70%;"}
+![ニュージャージー州とニューヨーク州の間の都市の円形の輪郭。][3]{: style="max-width:70%;"}
 
 ### 多角形領域
 
 多角形領域の場合、セグメントに含めたい領域をより具体的に指定できます。
 
-![選択された多角形領域としてのニューヨーク州のアウトライン][4]{: style="max-width:70%;"}
+![選択された多角形領域としてのニューヨーク州の概要。][4]{: style="max-width:70%;"}
 
-{% alert tip %}
-Braze パートナーによる支援を受けながら、ロケーションターゲティングを活用することに興味がありますか?Braze の利用可能な[状況に即したロケーションパートナー]({{site.baseurl}}/partners/message_personalization/location/)をご覧ください。
-{% endalert %}
+## パートナーシップによるビーコンとジオフェンスのサポート
+
+既存のビーコンやジオフェンスのサポートを Braze のターゲティング機能やメッセージング機能と組み合わせることで、ユーザーの物理的な行動に関する詳細な情報が判明し、それに応じてユーザーにメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
+
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [インフィリオン]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}

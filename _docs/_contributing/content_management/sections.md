@@ -35,7 +35,7 @@ Replace the following:
 | `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/contributing/content_management/#subsections).                                                                              |
 | `NEW_DIRECTORY`   | The name of your new section, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.       |
 | `NEW_FILE`        | The name of your new section, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your directory structure should be similar to the following:
 
@@ -57,7 +57,7 @@ When you create a new section, you can configure it with or without a landing pa
 
 {% tabs %}
 {% tab with landing page %}
-Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/templates/).
+Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 ```markdown
 ---
@@ -84,7 +84,7 @@ Replace the following:
 | `SHORT_DESCRIPTION`  | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
 | `HEADING`            | The title of your Heading 2 section.                                                                                                                                                                                                        |
 | `CONTENT`            | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.

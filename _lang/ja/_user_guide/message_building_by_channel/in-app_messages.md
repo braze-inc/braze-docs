@@ -1,52 +1,52 @@
 ---
-nav_title: "アプリ内メッセージ数"
-article_title: アプリ内メッセージ数
+nav_title: "アプリ内メッセージ"
+article_title: アプリ内メッセージ
 page_order: 2
 alias: /in-app_messages/
 layout: dev_guide
-guide_top_header: "アプリ内メッセージ数"
-guide_top_text: "アプリ内メッセージを使用すると、プッシュ通知でユーザーの日常生活を中断することなく、ユーザーにコンテンツを届けることができます。カスタマイズされ、調整されたアプリ内メッセージは、ユーザー エクスペリエンスを向上させ、ユーザーがアプリから最大限の価値を引き出すのに役立ちます。さまざまなレイアウトとカスタマイズ ツールを選択できるため、アプリ内メッセージはこれまで以上にユーザーの関心を引き付けます。"
-description: "このランディング ページには、アプリ内メッセージに関するすべての情報が掲載されています。ここでは、アプリ内メッセージの作成方法、ドラッグ アンド ドロップ エディター、メッセージのカスタマイズ方法、レポートなどに関する記事を見つけることができます。"
+guide_top_header: "アプリ内メッセージ"
+guide_top_text: "アプリ内メッセージを使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスを向上させ、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。"
+description: "このランディングページには、アプリ内メッセージに関するすべての情報がまとめられています。 ここには、アプリ内メッセージの作成方法、ドラッグ＆ドロップエディター、メッセージのカスタマイズ方法、レポートなどに関する記事があります。"
 channel:
   - in-app messages
 search_rank: 5
-guide_featured_title: "人気記事"
+guide_featured_title: "よく読まれている記事"
 guide_featured_list:
-- name: "About In-App Messages"
+- name: "アプリ内メッセージについて"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
-  fa_icon: fas fa-check
-- name: "Drag-And-Drop Editor"
+  image: /assets/img/braze_icons/check-square-broken.svg
+- name: "ドラッグアンドドロップエディタ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  fa_icon: fas fa-mobile-alt
-- name: "Traditional Editor"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "従来のエディタ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  fa_icon: fas fa-mobile-alt
-- name: "Creative Details"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "クリエイティブディテール"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
-- name: "Testing"
+- name: "テスト"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon: fas fa-vial
-- name: "Reporting"
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: "レポート"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  fa_icon: fas fa-chart-bar
-- name: "Dark Mode"
+  image: /assets/img/braze_icons/bar-chart-01.svg
+- name: "ダークモード"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-mobile
-- name: "App Store Rating Prompt"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "App Store評価プロンプト"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  fa_icon: fas fa-star
-- name: "Simple Survey"
+  image: /assets/img/braze_icons/star-01.svg
+- name: "シンプルな調査"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-poll
-- name: "Best Practices"
+  image: /assets/img/braze_icons/bar-chart-07.svg
+- name: "ベストプラクティス"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

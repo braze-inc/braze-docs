@@ -3,44 +3,44 @@ nav_title: 4月
 page_order: 9
 noindex: true
 page_type: update
-description: "この記事には、2020 年 4 月のリリースノートが含まれています。"
+description: "この記事には、2020年4月のリリースノートが含まれています。"
 ---
-# 2020 年 4 月
+# 2020年4月
 
-## ムーバブル・インクのパートナーシップ
+## Movable Ink のパートナーシップ
 
-Movable Ink により、Braze のお客様は、プッシュ通知、アプリ内メッセージ、コンテンツカードキャンペーンで、カウントダウンタイマー、投票、スクラッチオフなどのインテリジェントクリエイティブ機能を使用できます。Movable InkとBrazeは、データ主導型の動的なメッセージへのより包括的なアプローチを強化し、重要なことに関するリアルタイムの要素をユーザーに提供します。
+Movable Ink は、プッシュ、アプリ内メッセージ、およびコンテンツカードキャンペーンでカウントダウンタイマー、投票、スクラッチオフなどのインテリジェントクリエイティブ機能を使用するための機能を Braze のお客様に提供します。Movable Ink と Braze は、ダイナミックなデータドリブン型のメッセージに対するより包括的なアプローチを実現し、重要事項に関するリアルタイムのエレメントをユーザーに提供します。
 
-[Movable Inkをキャンペーンに統合し始めましょう]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/)！
+キャンペーンに[ Movable Ink を統合]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/)しましょう。
 
 ## インテリジェントタイミング
 
-キャンペーンをスケジュールする際、[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)（以前はインテリジェントデリバリー）を使用して、Braze が個人がエンゲージメントする可能性が最も高いと判断した時間に各ユーザーにメッセージを配信できます。
+キャンペーンのスケジュールを設定する場合、[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)(以前はインテリジェント配信)を使用して、Brazeが個人が参加する可能性が最も高いと判断したときに、それぞれのユーザーにメッセージを配信できます。
 
-この機能の更新には以下が含まれます。
--**クワイエットアワーの明確化**:Quiet Hoursの機能は同じままですが、わかりやすいようにUIが調整されています。
--**プレビューチャートの追加**:これで、インテリジェントタイミングを使用して 1 日の各時間にメッセージを受信するユーザーの数と、最適な時間を計算するのに十分なデータを持っているユーザーの割合を確認できるグラフを生成できます。
--**カスタムフォールバックの追加**:最適な時間を計算するのに十分なエンゲージメントデータがない場合に、ユーザーにメッセージを送信するローカル時間を選択できるようになりました
+この機能の更新内容は次のとおりです。
+- **サイレント時間の明確化**:サイレント時間機能に変更はありませんが、UI は明確化のために調整されています。
+- **プレビューチャートの追加**:インテリジェントタイミングを使用して、1日の各時間にメッセージを受信するユーザー数と、最適な時間を計算するのに十分なデータがあるユーザーの割合を確認するためのチャートを生成できるようになりました。
+- **カスタムフォールバックの追加**:最適な時刻を計算するのに十分なエンゲージメント情報がない場合に、ユーザーがメッセージを送信するローカル時刻を選択できるようになりました
 
-## Facebook オーディエンスのエクスポート
+## Facebook オーディエンス輸出
 
-Braze では、Braze セグメントページから手動でユーザーをエクスポートして Facebook カスタムオーディエンスを作成することができます。これは 1 回限りの静的オーディエンスのエクスポートで、新しい [Facebook カスタムオーディエンスのみが作成されます]({{site.baseurl}}/partners/facebook/)。
+Braze では、Braze セグメントページからユーザーを手動でエクスポートして Facebook カスタムオーディエンスを作成する機能が提供されています。これは1回限りの静的オーディエンスエクスポートであり、新しい [Facebook カスタムオーディエンス]({{site.baseurl}}/partners/facebook/)のみが作成されます。
 
-現在、すべてのクラスターで利用できる新しいBraze Facebookオーディエンスエクスポートプロセスがあり、簡単な統合手順でプロセスを合理化できます。カスタムオーディエンスを送信するためにOAuthリダイレクトURIをホワイトリストに登録したり、Facebookアプリの設定をいじって統合したりする必要はもうありません。
+現在、すべてのクラスターで利用可能な新しいBraze Facebook オーディエンスエクスポートプロセスがあり、シンプルなインテグレーションステップs でプロセスを合理化しています。カスタムオーディエンスを送信するために OAuth リダイレクト URI をホワイトリストに登録したり、統合するために Facebook アプリ設定内で操作したりする必要がなくなります。
 
 {% alert important %}
-なお、現在Facebookカスタムオーディエンスを使用しているすべてのクライアントは、この新しい手順でブレイズセグメントを再統合する必要があります。
+現在 Facebook カスタムオーディエンスを使用しているすべてのクライアントが、これらの新しいステップを使用して Braze セグメントを再統合する必要があることに注意してください。
 {% endalert%}
 
 
-## コンテンツブロックとメールテンプレート API の更新
+## コンテンツブロックおよびメール テンプレート API 更新
 
-[/email/listテンプレートと]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) [content\_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API エンドポイントが更新され、新しいフィールドが追加されました。`tags`このフィールドには、現在のブロックまたはメールテンプレートに適用されるすべてのタグが配列として一覧表示されます。
+[template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)および[content_ブロック/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/)API エンドポイントsは、新しい`tags`フィールドを含むように更新されました。このフィールドは、現行のブロックまたはメール テンプレートにアプリする任意のタグs を配列として列挙します。
 
-## パーソナライズされた差出人住所
+## パーソナライズされた差出人アドレス
 
-Braze でメールメッセージを作成する際、メール作成の「**送信情報」セクションでメッセージの送信元アドレスをカスタマイズできるようになりました**。[サポートされているパーソナライゼーションタグのいずれかを使用できます]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
+メール メッセージをBraze 内で作成するときに、メール構成の**送信情報** セクションでメッセージのFrom Address をパーソナライズできるようになりました。サポートされている任意の[パーソナライゼーション タグs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用できます。
 
-![個人設定送信者住所] [0]{: style="max-width:80%"}
+![パーソナライズされた差出人アドレス][0]{: style="max-width:80%"}
 
 [0]: {% image_buster /assets/img/personalized-from-name.png %}

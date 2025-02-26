@@ -3,7 +3,7 @@ nav_title: リッチプッシュ通知
 article_title: iOS のリッチプッシュ通知
 platform: Swift
 page_order: 5
-description: "この記事では、Swift SDK の豊富なiOS プッシュ通知の実装について説明します。"
+description: "この記事では、SWIFT SDK 用のリッチ iOS プッシュ通知の実装について説明します。"
 channel:
   - push
 
@@ -11,73 +11,73 @@ channel:
 
 # リッチプッシュ通知
 
-> 豊富な通知は、画像、GIF、およびビデオを含むプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードを表示する前に変更できる拡張の一種です。サポートされているファイルタイプとサイズのリストについては、Apple の[\`UNNotificationAttachment\`][28] を参照してください。
+> リッチプッシュ通知は、画像、GIF、および動画を持つプッシュ通知です。この機能を有効にするには、通知サービス拡張を作成する必要があります。これは、プッシュペイロードが表示される前に変更できる拡張機能です。サポートされているファイルタイプとサイズのリストについては、Apple の [[`UNNotificationAttachment`](https://developer.apple.com/reference/usernotifications/unnotificationattachment)] を参照してください。
 
-## ステップ 1:サービス拡張の作成
+## ステップ1:サービス拡張の作成
 
-[通知サービス拡張][23]を作成するには、Xcodeの**File > New > Target**に移動し、**通知サービス拡張**を選択します。
+[ 通知 サービス拡張](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension) を作成するには、Xコード で**File > New > Target** に移動し、** 通知 サービス拡張** を選択します。
 
-![][26]{: style="max-width:90%"}
+![]({% image_buster /assets/img_archive/ios10_se_at.png %}){: style="max-width:90%"}
 
 アプリケーションに拡張機能を埋め込むように [**アプリケーションに埋め込む**] が設定されていることを確認します。
 
-## ステップ 2: 通知サービス拡張の設定
+## ステップ2:通知 保守拡張機能のセットアップ
 
-通知サービス拡張機能は、アプリにバンドルされている独自のバイナリです。[Apple Developer Portal][27] で、独自のアプリ ID とプロビジョニングプロファイルを使用して設定する必要があります。
+通知サービスエクステンションは、アプリにバンドルされている独自のバイナリーです。[Apple Developer Portalで](https://developer.apple.com)独自のアプリIDとプロビジョニングプロファイルを設定する必要がある。
 
-通知サービス拡張のバンドルID は、メインアプリターゲットのバンドルID とは異なる必要があります。たとえば、アプリのバンドル ID が `com.company.appname` の場合、サービス拡張に `com.company.appname.AppNameServiceExtension` を使用できます。
+通知サービス拡張機能のバンドル ID は、メインアプリターゲットのバンドル ID とは異なる必要があります。たとえば、アプリのバンドル ID が `com.company.appname` の場合、サービス拡張に `com.company.appname.AppNameServiceExtension` を使用できます。
 
-## ステップ 3: リッチプッシュ通知の統合
+## ステップ3:豊富なプッシュ通知の統合
 
-`BrazeNotificationService`とリッチプッシュ通知を統合する手順については、[チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications)を参照してください。
+リッチプッシュ通知s と`BrazeNotificationService` の統合に関するステップガイドについては、[チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) を参照してください。
 
-サンプルを確認するには、サンプルアプリの[`NotificationService`][1] の使用法を参照してください。
+サンプルを確認するには、サンプルアプリの[`NotificationService`](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/PushNotificationsServiceExtension/NotificationService.swift) の使用法を参照してください。
 
-### アプリにリッチプッシュフレームワークを追加する
+### アプリへのリッチプッシュフレームワークの追加
 
 {% tabs local %}
 {% tab Swift Package Manager %}
 
-[Swift Package Manager 統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)の後、以下を実行して`BrazeNotificationService` を`Notification Service Extension` に追加します。
+[Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/)に従って、以下を実行して `BrazeNotificationService` を `Notification Service Extension` に追加します。
 
-1. Xcode では、フレームワークとライブラリの下で、<i class="fas fa-plus"></i> 追加アイコンを選択してフレームワークを追加します。<br><br>![The plus icon is located under frameworks and libraries in Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. Xコードでは、フレームワークとライブラリの下で、<i class="fas fa-plus"></i>追加アイコンを選択してフレームワークを追加します。<br><br>![プラスアイコンは、Xcode のフレームワークとライブラリの下にあります。]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. "BrazeNotificationService"フレームワークを選択します。<br><br>![The "BrazeNotificationService framework can be selected in the modal that opens.]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. "BrazeNotificationService"フレームワークを選択します。<br><br>![開いたモーダルで「BrazeNotificationService」フレームワークを選択できます。]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
 
-以下をPodfile に追加します。
+以下を Podfile に追加します。
 
-\`\`\`ruby
+```ruby
 target 'YourAppTarget' do
-  ポッド『ブラゼキット』
-  ポッド「BrazeUI」
-  ポッド「BrazeLocation」
+  pod 'BrazeKit'
+  pod 'BrazeUI'
+  pod 'BrazeLocation'
 end
 
-ターゲット'YourNotificationServiceExtensionTarget'は
-  ポッド「BrazeNotificationService」
+target 'YourNotificationServiceExtensionTarget' do
+  pod 'BrazeNotificationService'
 end
 
-# プッシュストーリーを統合したい場合にのみ、以下を含める
-ターゲット「YourNotificationContentExtensionTarget」は
-  ポッド「BrazePushStory」
+# Only include the below if you want to also integrate Push Stories
+target 'YourNotificationContentExtensionTarget' do
+  pod 'BrazePushStory'
 end
-\`\`\`
+```
 {% alert note %}
-プッシュストーリーを実装する手順については、[documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager)を参照してください。
+プッシュストーリーを実装する手順については、[ドキュメント]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager)を参照してください。
 {% endalert %}
 
 Podfile を更新したら、ターミナル内で Xcode アプリプロジェクトのディレクトリーに移動し、`pod install`　を実行します。
 
 {% endtab %}
 
-{% tab Manual %}
+{% tab マニュアル %}
 
 `BrazeNotificationService.xcframework` を`Notification Service Extension` に追加するには、[手動統合]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/) を参照してください。
 
-({% image_buster /assets/img/swift/rich_push/manual1.png %})
+![]({% image_buster /assets/img/swift/rich_push/manual1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -85,33 +85,28 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 #### 独自のUNNotificationServiceExtensionの使用
 独自のUNNotificationServiceExtension を使用する必要がある場合は、`didReceive` メソッドで[`brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)) を呼び出すことができます。
 
-\`\`\`swift
-BrazeNotificationServiceをインポートする
-UserNotificationをインポートする
+```swift
+import BrazeNotificationService
+import UserNotifications
 
-クラス通知サービス:UNNotificationServiceExtension {
+class NotificationService: UNNotificationServiceExtension {
 
   override func didReceive(
-    _ リクエスト:未通知要求、
+    _ request: UNNotificationRequest,
     withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void
-  ({
-if brazeHandle(request: request, contentHandler: contentHandler) {
-return
-})
+  ) {
+    if brazeHandle(request: request, contentHandler: contentHandler) {
+      return
+    }
 
     // Custom handling here
 
     contentHandler(request.content)
-  ()
+  }
 }
-\`\`\`
+```
 
-## ステップ 4: ダッシュボードでリッチプッシュ通知を作成する
+## ステップ4: ダッシュボードでリッチプッシュ通知を作成する
 
-マーケティングチームは、ダッシュボードから豊富な通知を作成することもできます。プッシュコンポーザーを介してプッシュ通知を作成し、イメージまたはGIF を添付するか、イメージ、GIF、またはビデオをホストするURL を指定します。アセットはプッシュ通知の受信時にダウンロードされるため、コンテンツをホスティングしている場合は、要求が大規模に同期的に急増することを想定する必要があります。
+マーケティングチームは、ダッシュボードからリッチプッシュ通知を作成することもできます。プッシュコンポーザーを介してプッシュ通知を作成し、単に画像または GIF を添付するか、画像、GIF、または動画をホストする URL を指定します。アセットはプッシュ通知の受信時にダウンロードされるため、コンテンツをホスティングしている場合は、要求が大規模に同期的に急増することを想定する必要があります。
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/PushNotificationsServiceExtension/NotificationService.swift
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

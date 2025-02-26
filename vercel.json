@@ -10,6 +10,18 @@
 			"destination": "/:path*"
 		},
 		{
+			"source": "/docs/es/:path*",
+			"destination": "/:path*"
+		},
+		{
+			"source": "/docs/fr/:path*",
+			"destination": "/:path*"
+		},
+		{
+			"source": "/docs/pt-br/:path*",
+			"destination": "/:path*"
+		},
+		{
 			"source": "/docs/:path*",
 			"destination": "/:path*"
 		},
@@ -18,9 +30,6 @@
 			"destination": "/api/404.html"
 		}
 	],
-	"github": {
-		"silent": true
-	},
 	"headers": [
 		{
 			"source": "/(.*)",

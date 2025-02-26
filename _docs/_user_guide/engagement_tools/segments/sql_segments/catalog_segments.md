@@ -18,18 +18,6 @@ Catalog segments are currently in early access. Contact your customer success ma
 
 Catalog segments use SQL to join data from catalogs and data from custom events or purchases. To do so, you must have a common identifier field across your catalogs and your custom events or purchases. For example, the value of an item ID in a catalog must match the value of a property in a custom event.
 
-## Use cases
-
-### Ecommerce
-
-- Catalog of products where the item ID value is equal to the Shopify ID
-- Custom event `Made Order` with a property (such as `shopify_id`) that has the same value as the Shopify ID
-
-### Health app
-
-- Catalog of different doctors a patient can book, each with an item ID  
-- Custom event `Booked Visit` with a property that has the same value as the item ID
-
 ## Creating a catalog segment
 
 1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select the template **Catalog segment**. <br>![Modal with "Catalog segment" selected as the template to create.][1]{: style="max-width:70%" }
@@ -44,10 +32,10 @@ Here are guidelines to select the variables:
 | Variable field | Description |
 | --- | --- |
 | `Catalog` | The name of the catalog you’re using to target users. |
-| `Catalog field`| The field in your catalog that contains the same values as your `Custom event property`. This is often a type of ID. In the ecommerce use case, this would be `shopify_id`. |
-| `Custom event` | The name of your custom event, which is the same event that contains a property with values matching your `Catalog field`. In the ecommerce use case, this would be `Made Order`. |
-| `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the ecommerce example use case, this would be `Shopify_ID.`|
-{: .reset-td-br-1 .reset-td-br-2}
+| `Catalog field`| The field in your catalog that contains the same values as your `Custom event property`. This is often a type of ID. In the eCommerce use case, this would be `shopify_id`. |
+| `Custom event` | The name of your custom event, which is the same event that contains a property with values matching your `Catalog field`. In the eCommerce use case, this would be `Made Order`. |
+| `Custom event property` | The name of your custom event property, which matches values with your `Catalog field`. In the eCommerce example use case, this would be `Shopify_ID.`|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
 4. If needed, fill in additional optional fields for your use case to segment by a particular field value within your catalog:
@@ -56,13 +44,15 @@ Here are guidelines to select the variables:
 
 5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), managing [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
-## Use case
+## Use cases
 
-Let's say you have health app and want to segment users who have booked a visit for the dentist. You also have the following:
+### Health app
+
+Let's say you have a health app and want to segment users who have booked a visit for the dentist. You also have the following:
 
 - A catalog `Doctors` that contains the different doctors a patient can book, each assigned with a `doctor ID`
 - A custom event `Booked Visit` with a `doctor ID` property that shares the same values as the `doctor ID` field in your catalog
-- A `speciality` field within your catalog that contains `dental` value
+- A `speciality` field within your catalog that contains the `dental` value
 
 You would set up a catalog segment by using the following variables:
 
@@ -74,7 +64,27 @@ You would set up a catalog segment by using the following variables:
 | `Custom event property` | doctor ID |
 | `(Under Filter SQL Results) Catalog field` | Specialty |
 | `(Under Filter SQL Results) Value`| Dental |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### SaaS platform
+
+Let’s say you have B2B SaaS platform and want to segment users who are employees of an existing customer. You also have the following:
+
+- A catalog `Accounts` that contains the different accounts that are currently using your SaaS platform, each assigned with an `account ID`
+- A custom event `Event Attendance` with an "account ID" property that shares the same values as the "account ID" field in your catalog
+- A `Classification` field within your catalog that contains the `enterprise` value
+
+You would set up a catalog segment by using the following variables:
+
+| Variable | Property |
+| --- | --- |
+| `Catalog` | Accounts |
+| `Catalog field `| account ID |
+| `Custom event` | Event Attendance |
+| `Custom event property` | account ID |
+| `(Under Filter SQL Results) Catalog field` | Classification |
+| `(Under Filter SQL Results) Value` | Enterprise |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Frequently asked questions
 

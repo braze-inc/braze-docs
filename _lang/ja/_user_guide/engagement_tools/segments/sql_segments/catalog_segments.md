@@ -18,36 +18,24 @@ tool: Segments
 
 カタログセグメントは、SQL を使用して、カタログのデータとカスタムイベントまたは購入のデータとを結合します。これを行うには、カタログとカスタムイベントまたは購入に共通の識別子フィールドが必要です。たとえば、カタログ内のアイテム ID の値は、カスタム イベントのプロパティの値と一致する必要があります。
 
-## ユースケース
-
-### e コマース
-
-- アイテム ID の値が Shopify IDと等しい製品のカタログ
-- Shopify ID と同じ値を持つプロパティ (`shopify_id`など) を持つカスタムイベント `Made Order`
-
-### ヘルスケアアプリ
-
-- 患者が予約できるさまざまな医師のカタログで、それぞれに項目 ID が付けられています  
-- 項目 ID と同じ値を持つプロパティを持つカスタムイベント `Booked Visit`
-
 ## カタログセグメントの作成
 
 1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレート [**カタログセグメント**] を選択します。<br>![作成するテンプレートとして「カタログセグメント」を選択したモーダル。][1]{: style="max-width:70%" }
 
 {: start="2"}
-2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前に生成されたテンプレートを使用した SQL エディター。][2]{: style="max-width:70%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
+2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前生成されたテンプレートを持つSQL エディタ。][2]{: style="max-width:70%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
 
 3. [**変数**] タブを使用して、セグメントを生成する前にテンプレートに必要なフィールドを指定します。<br>Braze がカタログアイテムへのエンゲージメントに基づいてユーザーを識別するには、次のことを行う必要があります。<br> \- カタログフィールドを含むカタログを選択します <br> \- イベントプロパティを含むカスタムイベントを選択します <br> \- カタログフィールドとイベントプロパティの値を一致させる
 
 変数を選択するためのガイドラインを次に示します。
 
-| 変数フィールド |説明 |
+| 可変フィールド | 説明 |
 | --- | --- |
-| `Catalog` |ユーザーのターゲット設定に使用しているカタログの名前。|
-| `Catalog field`| `Custom event property` と同じ値を含むカタログ内のフィールド。これは多くの場合、ID の一種です。e コマースのユースケースでは、これは `shopify_id` になります。 |
-| `Custom event` | カスタムイベントの名前。これは、`Catalog field` と一致する値を持つプロパティを含む同じイベントです。e コマースのユースケースでは、これは `Made Order` になります。 |
-| `Custom event property` | カスタムイベントプロパティーの名前。値を `Catalog field` と一致させます。e コマースの例のユースケースでは、これは `Shopify_ID.` です|
-{: .reset-td-br-1 .reset-td-br-2}
+| `Catalog` | ユーザーのターゲット設定に使用しているカタログの名前。 |
+| `Catalog field`| `Custom event property` と同じ値を含むカタログ内のフィールド。これは多くの場合、ID の一種です。e コマースのユースケースでは `shopify_id` になります。 |
+| `Custom event` | カスタムイベントの名前。これは、`Catalog field` と一致する値を持つプロパティを含む同じイベントです。e コマースのユースケースでは `Made Order` になります。 |
+| `Custom event property` | カスタムイベントプロパティの名前。値を `Catalog field` と一致させます。e コマースのサンプルユースケースでは、`Shopify_ID.` になります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
 4\.必要に応じて、ユースケースの追加のオプションフィールドに入力して、カタログ内の特定のフィールド値でセグメント化します。
@@ -58,23 +46,45 @@ tool: Segments
 
 ## ユースケース
 
-たとえば、ヘルスケアアプリがあり、歯科医院の受診を予約したユーザーをセグメント化したいとします。また、次のものもあります。
+### ヘルスケアアプリ
+
+医療アプリを持っていて、歯科医のために訪問を予約した人をSegment ユーザーしたいとしましょう。また、次のものもあります。
 
 - 患者が予約できるさまざまな医師を含むカタログ `Doctors`。それぞれに `doctor ID` が割り当てられています。
 - カタログの `doctor ID` フィールドと同じ値を共有する `doctor ID` プロパティを持つカスタムイベント `Booked Visit`
-- `dental` 値を含むカタログ内の `speciality` フィールド
+- `dental` 値を含むカタログ内の`speciality` フィールド
 
 カタログセグメントは、次の変数を使用して設定します。
 
-|変数 |プロパティ |
+| 変数 | プロパティ |
 | --- | --- |
-| `Catalog`|ドクター |
-| `Catalog field` | ドクターID |
-| `Custom event`|予約された訪問|
-| `Custom event property` | ドクターID |
-| `(Under Filter SQL Results) Catalog field` |専門科 |
-| `(Under Filter SQL Results) Value`| 歯科医院 |
-{: .reset-td-br-1 .reset-td-br-2}
+| `Catalog`| 医師 |
+| `Catalog field` | 医師 ID |
+| `Custom event`| 予約訪問|
+| `Custom event property` | 医師 ID |
+| `(Under Filter SQL Results) Catalog field` | スペシャリティ |
+| `(Under Filter SQL Results) Value`| 歯科 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### SaaS プラットフォーム
+
+たとえば、B2B SaaSプラットフォームがあり、既存の顧客の従業員であるユーザーをセグメント化したいとします。また、次のものもあります。
+
+- 現在SaaS プラットフォームを使用しているさまざまなアカウントを含むカタログ`Accounts`。それぞれに次のように割り当てられます `account ID`
+- カタログの "アカウント ID" フィールドと同じ値を共有する "アカウント ID" プロパティを持つカスタムイベント `Event Attendance`
+- `enterprise` 値を含むカタログ内の`Classification` フィールド
+
+カタログセグメントは、次の変数を使用して設定します。
+
+| 変数 | プロパティ |
+| --- | --- |
+| `Catalog` | アカウント |
+| `Catalog field `| アカウントID |
+| `Custom event` | イベント参加 |
+| `Custom event property` | アカウントID |
+| `(Under Filter SQL Results) Catalog field` | 分類 (Classification) |
+| `(Under Filter SQL Results) Value` | 企業 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## よくある質問
 

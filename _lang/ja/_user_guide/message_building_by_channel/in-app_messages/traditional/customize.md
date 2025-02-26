@@ -1,33 +1,33 @@
 ---
 nav_title: カスタマイズ
-article_title: カスタムアプリ内メッセージ
+article_title: カスタムのアプリ内メッセージ
 page_order: 2
 layout: dev_guide
-guide_top_header: "カスタムアプリ内メッセージ"
-guide_top_text: "Brazeは、標準のアプリ内メッセージテンプレートに加えて、カスタムHTML、カスタムCSSを使用したモーダル、メールキャプチャフォーム、ビデオなどを可能にするカスタマイズされたメッセージングテンプレートも提供しています。"
-description: "このランディングページでは、カスタムHTML、カスタムCSSを使用したモーダル、ビデオ、メールキャプチャフォームなどを可能にするカスタマイズされたアプリ内メッセージテンプレートについて説明します。"
+guide_top_header: "カスタムのアプリ内メッセージ"
+guide_top_text: "Brazeでは、通常のアプリ内メッセージ テンプレートに加えて、カスタムHTML、カスタムCSSを使用したモーダルs、メールキャプチャフォーム、動画などを使用できるカスタマイズされたメッセージング テンプレートも提供しています。"
+description: "このランディングページには、カスタム HTML、カスタム CSS 付きのモーダル、動画、メールキャプチャフォームなど、カスタマイズしたアプリ内メッセージングテンプレートの項目があります。"
 
 channel:
   - in-app messages
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 
 guide_featured_list:
-- name: "Custom HTML"
+- name: "カスタムHTML"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/
-  fa_icon: fas fa-code
-- name: "Web Modal with CSS"
+  image: /assets/img/braze_icons/code-02.svg
+- name: "CSS付きWebモーダル"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css
-  fa_icon: fa-brands fa-css3-alt
-- name: "Email Capture Form"
+  image: /assets/img/braze_icons/css3.svg
+- name: "電子メールキャプチャフォーム"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/
-  fa_icon: fa-solid fa-envelope-open-text
-- name: "Color Profiles and CSS"
+  image: /assets/img/braze_icons/mail-04.svg
+- name: "カラープロファイルとCSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/
-  fa_icon: fa-solid fa-palette
-- name: "Video"
+  image: /assets/img/braze_icons/palette.svg
+- name: "動画"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video/
-  fa_icon: fa-solid fa-video
+  image: /assets/img/braze_icons/video-recorder.svg
 
 local_redirect: # Local hash url redirect list
   custom-html-messages: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/'

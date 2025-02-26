@@ -12,7 +12,7 @@ noindex: true
 
 ## Methodology
 
-Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
+Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, view [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
 
 ![The Braze Docs repository's home page on GitHub.]({% image_buster /assets/img/contributing/github/home_page.png %})
 
@@ -29,7 +29,7 @@ As a contributor, you'll primarily work within the following directories.
 | [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
 | [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                            |
 | [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 For a full walkthrough, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/).
@@ -54,7 +54,7 @@ Replace the following.
 | `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/). |
 | `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                           |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs local %}
 {% tab example input %}
@@ -98,9 +98,9 @@ Replace the following.
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line image should be similar to the following:
 
@@ -296,7 +296,7 @@ Replace the following:
 |-------------|----------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                  |
 | `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your cross-reference link should be similar to the following:
 
@@ -324,7 +324,7 @@ Replace the following:
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `RELATIVE_PATH` | (Optional) The relative path to the file from the `_includes` directory. This is only needed if you're including a file from a directory inside the `_includes` directory, such as `_includes/braze/upgrade_notice.md`. |
 | `FILE`          | The name of the file including the file extension.                                                                                                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs local %}
 {% tab example input %}

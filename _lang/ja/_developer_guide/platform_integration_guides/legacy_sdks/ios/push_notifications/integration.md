@@ -26,11 +26,11 @@ local_redirect:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # プッシュ統合
 
-## ステップ 1プッシュ通知を構成する
+## ステップ1:プッシュ通知を構成する
 
 Braze を使用して iOS のプッシュ通知を送信する前に、Apple が提供する `.p8` のプッシュ通知ファイルを用意する必要があります。Apple の[開発者向けドキュメント](https://developer.apple.com/documentation/usernotifications)に記載されているように、
 
@@ -50,20 +50,20 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 
 プロジェクト設定で、［**機能**］ タブの ［**プッシュ通知**］ 機能がオンになっていることを確認します。
 
-![][24]
+![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 開発用と実稼働用のプッシュ証明書が別々にある場合は、[**全般**] タブの [**署名を自動的に管理する**] チェックボックスをオフにしてください。これにより、Xcode の自動コード署名機能は開発署名のみを行うため、ビルド構成ごとに異なるプロビジョニングプロファイルを選択できるようになります。
 
-! [ [一般] タブが表示されているXcode プロジェクトの設定。このタブでは、[署名を自動的に管理する] オプションはオフになっています。][34]
+![[一般] タブが表示されているXcode プロジェクトの設定。このタブでは、[署名を自動的に管理する] オプションはオフになっています。]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
-## ステップ3:プッシュ通知に登録する
+## ステップ3: プッシュ通知に登録する
 
 ユーザーのデバイスを APNs に登録するには、アプリの `application:didFinishLaunchingWithOptions:` デリゲートメソッド内に適切なコードサンプルが含まれている必要があります。アプリケーションのメインスレッドですべてのプッシュ統合コードを呼び出すようにしてください。
 
-Braze には、プッシュアクションボタンをサポートするデフォルトのプッシュカテゴリーも用意されており、プッシュ登録コードに手動で追加する必要があります。その他の統合手順については [プッシュアクションボタン][35] を参照してください。
+Braze には、プッシュアクションボタンをサポートするデフォルトのプッシュカテゴリーも用意されており、プッシュ登録コードに手動で追加する必要があります。その他の統合ステップについては、[プッシュアクションボタンを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/)参照のこと。
 
 {% alert warning %}
-当社の[プッシュ通知のベストプラクティス]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/)の説明に従ってカスタムプッシュプロンプトを実装している場合は、アプリにプッシュ許可を付与した後、アプリが**実行される**たびに次のコードを呼び出すようにしてください。**](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)デバイストークンは任意に変更される可能性がある[ため、アプリは APNs に再登録する必要があります**。
+当社の[プッシュ通知のベストプラクティス]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/)の説明に従ってカスタムプッシュプロンプトを実装している場合は、アプリにプッシュ許可を付与した後、アプリが**実行される**たびに次のコードを呼び出すようにしてください。**[デバイストークンは任意に変更される可能性がある](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)ため、アプリは APNs に再登録する必要があります。**
 {% endalert %}
 
 ### UserNotification フレームワークの使用（iOS 10以降）
@@ -155,7 +155,7 @@ UIApplication.shared.registerForRemoteNotifications()
 {% endtabs %}
 
 
-## ステップ4:Braze にプッシュトークンを登録する
+## ステップ 4:Braze にプッシュトークンを登録する
 
 APNs の登録が完了したら、次のメソッドを変更し結果として得られる `deviceToken` を Braze に渡し、ユーザーがプッシュ通知を使用できるようにする必要があります。
 
@@ -169,7 +169,7 @@ APNs の登録が完了したら、次のメソッドを変更し結果として
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 アプリの `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` メソッドに次のコードを追加します。
 
@@ -184,7 +184,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 `application:didRegisterForRemoteNotificationsWithDeviceToken:` デリゲートメソッドは、`[[UIApplication sharedApplication] registerForRemoteNotifications]` の呼び出し後に毎回呼び出されます。他のプッシュサービスから Braze に移行する場合、ユーザーのデバイスがすでに APNs に登録されていれば、このメソッドは次にこのメソッドが呼び出されたときに既存の登録からトークンを収集し、ユーザーはプッシュするために再オプトインする必要はありません。
 {% endalert %}
 
-## ステップ 5プッシュ処理を有効にする
+## ステップ5: プッシュ処理を有効にする
 
 以下のコードは受信したプッシュ通知を Braze に渡すコードで、プッシュ分析とリンク処理のログを取るために必要です。アプリケーションのメインスレッドですべてのプッシュ統合コードを呼び出すようにしてください。
 
@@ -230,7 +230,7 @@ iOS 10以降に対してビルドする場合は、`UserNotifications` フレー
 フォアグラウンド通知がクリックされると、iOS 10のプッシュデリゲート `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` が呼び出され、Braze はプッシュクリックイベントをログに記録します。
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 
@@ -294,7 +294,7 @@ iOS 10でプッシュ分析をサポートするには、アプリの `applicati
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 プッシュ通知でオープントラッキングを有効にするには、アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 
@@ -314,16 +314,11 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-## ステップ 6ディープリンク
+## ステップ 6: ディープリンク
 
-プッシュからアプリへのディープリンクは、標準のプッシュ統合ドキュメントを介して自動的に処理されます。アプリ内の特定の場所にディープリンクを追加する方法について詳しくは、[高度なユースケース][10]を参照してください。
+プッシュからアプリへのディープリンクは、標準のプッシュ統合ドキュメントを介して自動的に処理されます。アプリ内の特定の場所にディープリンクを追加する方法について詳しくは、[高度なユースケース]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation)を参照してください。
 
 ## ステップ 7:単体テスト (オプション)
 
-今行った統合手順のテストカバレッジを追加するには、[プッシュ単体テスト][36] を実装します。
+今行った統合手順のテストカバレッジを追加するには、[[プッシュ単体テスト]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/)] を実装します。
 
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/

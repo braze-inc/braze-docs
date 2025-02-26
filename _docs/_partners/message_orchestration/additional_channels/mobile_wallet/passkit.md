@@ -22,7 +22,7 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 | `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the `userDefinedID`. This `userDefinedID` will be used when making API calls to the PassKit endpoints. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
 
@@ -64,7 +64,7 @@ There are many different components you can include in your payload, but here as
 | --------- | -------- | ---- | ----------- |
 |`person.externalId` | Required | String | Set as the Braze external ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
 | `members.member.externalId` | Optional | String | Set as the Braze external ID, you may use your external ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit GitHub documentation][10].
 
@@ -220,7 +220,7 @@ Before you get started, here are the common JSON payload parameters that you can
 | `campaignId` (coupon) <br><br> `programId` (membership) | String | The ID for the campaign or program template you created in PassKit. To find this, head to the **Settings** tab in your PassKit pass project. |
 | `expiryDate` | IO8601 datetime | The pass expiry date. After the expiry date, the pass is automatically voided (see `isVoided`). This value will override the template and campaign end date value. |
 | `status` | String | The current status of a coupon, such as `REDEEMED` or `UNREDEEMED`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 1: Create your Braze webhook template
 
@@ -280,7 +280,7 @@ In addition to creating and updating passes, you can also retrieve your users' p
 **Liquid example responses**
 
 {% tabs local %}
-{% tab {{passes.redemptionDetails}} %}
+{% tab passes redemptionDetails %}
 
 ```json
 {
@@ -297,7 +297,7 @@ In addition to creating and updating passes, you can also retrieve your users' p
 ```
 
 {% endtab %}
-{% tab {{passes.status}} %}
+{% tab passes status %}
 ```
 UNREDEEMED 
 ```
@@ -309,7 +309,7 @@ UNREDEEMED
 [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
 [4]: {% image_buster /assets/img/passkit/passkit4.png %}
 [5]: {% image_buster /assets/img/passkit/passkit5.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints
 [7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks

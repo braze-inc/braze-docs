@@ -5,14 +5,14 @@ page_order: 3
 page_type: reference
 description: "This reference article covers how to create a News Feed item. News Feed items allow you to insert permanent content directly into your app from our web dashboard."
 channel: news feed
+hidden: true
+
 
 ---
 
 # Creating a News Feed item
 
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
@@ -64,7 +64,7 @@ Banner cards consist of:
 |          Classic         | 1:1 (110 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
 |          Captioned image         | 4:3 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
 |          Banner         | 6:1 (600 pixels wide minimum) |          500&nbsp;KB         |         1&nbsp;MB        | PNG, JPEG, GIF |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 - PNG files are recommended.
 - A custom image loading library is required to display GIFs on Android. We recommend Glide.

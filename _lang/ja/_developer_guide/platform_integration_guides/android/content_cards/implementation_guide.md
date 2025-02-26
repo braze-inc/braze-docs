@@ -31,13 +31,13 @@ Braze SDK から`ContentCardable`インスタンスを初期化する場合、`c
 これらのコードに関する考慮事項をしっかりと理解したら、[ユースケース](#sample-use-cases)をチェックして、独自のカスタムオブジェクトの実装を開始します。
 
 {% tabs local %}
-{% tab No Card Dependencies %}
+{% tab カードに依存しない %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **`Card`依存関係なし**<br>
 `ContentCardData` は、`Card` の解析された共通の値を表します。
 
-\`\`\`kotlin
+```kotlin
 abstract class ContentCardable (){
 
     var cardData: ContentCardData? = null
@@ -65,17 +65,17 @@ abstract class ContentCardable (){
     }
 }
 
-data class ContentCardData (var contentCardId:String,
-                            var contentCardClassType:ContentCardClass,
-                            var createdAt:Long,
-                            var dismissable:Boolean)
-\`\`\`
+data class ContentCardData (var contentCardId: String,
+                            var contentCardClassType: ContentCardClass,
+                            var createdAt: Long,
+                            var dismissable: Boolean)
+```
 {% endsubtab %}
 {% subtab Java %}
 **`Card`依存関係なし**<br>
 `ContentCardData` は、`Card` の解析された共通の値を表します。
 
-\`\`\`java
+```java
 public abstract class ContentCardable{
 
   private ContentCardData cardData = null;
@@ -121,11 +121,11 @@ public class ContentCardData{
   public long createdAt;
   public boolean dismissable;
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Custom Objects %}
+{% tab カスタムオブジェクト %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **カスタムオブジェクトイニシャライザ**<br>
@@ -152,7 +152,7 @@ class Tile: ContentCardable {
 **カスタムオブジェクトイニシャライザ**<br>
 `Card` からの MetaData は、具象サブクラスの変数を入力するために使用されます。サブクラスによっては、初期化時に異なる値を抽出する必要があります。Braze ダッシュボードで設定されたキーと値のペアは、「extras」ディクショナリに表示されます。
 
-\`\`\`java
+```java
 public class Tile extends ContentCardable {
 
     public Tile(Map<String, Object> metadata){
@@ -168,25 +168,25 @@ public class Tile extends ContentCardable {
         }
     }
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Identifying Types %}
+{% tab タイプの識別 %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **タイプの識別**<br>
 `ContentCardClass` enum は、Braze ダッシュボードの`class_type`値を表し、SDK によって提供される文字列から enum を初期化するメソッドを提供します。
 
-\`\`\`kotlin
+```kotlin
 enum class ContentCardClass{
     AD,
     COUPON,
     NONE,
-    ITEM\_TILE,
-    ITEM\_GROUP,
-    MESSAGE\_FULL\_PAGE,
-    MESSAGE\_WEB\_VIEW;
+    ITEM_TILE,
+    ITEM_GROUP,
+    MESSAGE_FULL_PAGE,
+    MESSAGE_WEB_VIEW;
 
     companion object {
         // This value must be synced with the `class_type` value that has been set up in your
@@ -204,21 +204,21 @@ enum class ContentCardClass{
         }
     }
 }
-\`\`\`
+```
 {% endsubtab %}
 {% subtab Java %}
 **タイプの識別**<br>
 `ContentCardClass` enum は、Braze ダッシュボードの`class_type`値を表し、SDK によって提供される文字列から enum を初期化するメソッドを提供します。
 
-\`\`\`java
+```java
 enum ContentCardClass {
     AD,
     COUPON,
     NONE,
-    ITEM\_TILE,
-    ITEM\_GROUP,
-    MESSAGE\_FULL\_PAGE,
-    MESSAGE\_WEB\_VIEW
+    ITEM_TILE,
+    ITEM_GROUP,
+    MESSAGE_FULL_PAGE,
+    MESSAGE_WEB_VIEW
 
     public static valueFrom(String val){
         switch(val.toLowerCase()){
@@ -246,7 +246,7 @@ enum ContentCardClass {
         }
     }
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -262,14 +262,14 @@ enum ContentCardClass {
 {% subtabs %}
 {% subtab JAVA %}
 
-\`\`\`java
+```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
   // Interface that must be implemented and provided as a public CREATOR
-// field that generates instances of your Parcelable class from a Parcel.
+  // field that generates instances of your Parcelable class from a Parcel.
   public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
-  public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
-    return new DefaultContentCardsViewBindingHandler();
-      }
+    public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsViewBindingHandler();
+    }
 
     public DefaultContentCardsViewBindingHandler[] newArray(int size) {
       return new DefaultContentCardsViewBindingHandler[size];
@@ -277,9 +277,9 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   };
 
   /**
-* A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
-*/
-   private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
+   * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
+   */
+  private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
 
   @Override
   public ContentCardViewHolder onCreateViewHolder(Context context, List<? extends Card> cards, ViewGroup viewGroup, int viewType) {
@@ -301,80 +301,80 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   }
 
   /**
-* Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
-   \* {@link CardType} がキャッシュ内に見つからない場合、その {@link CardType} のビューバインディング実装
-   \* が作成され、キャッシュに追加されます。
+   * Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
+   * If the {@link CardType} is not found in the cache, then a view binding implementation for that {@link CardType}
+   * is created and added to the cache.
    */
-@VisibleForTesting
-BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
-if (!mContentCardViewCache.containsKey(cardType)) {
-// Create the view here
-   BaseContentCardView contentCardView;
-  switch (cardType) {
-case BANNER:
-contentCardView = new BannerImageContentCardView(context);
-break;
-case CAPTIONED_IMAGE:
-contentCardView = new CaptionedImageContentCardView(context);
-break;
-case SHORT_NEWS:
-contentCardView = new ShortNewsContentCardView(context);
-break;
-case TEXT_ANNOUNCEMENT:
-contentCardView = new TextAnnouncementContentCardView(context);
-break;
-default:
-contentCardView = new DefaultContentCardView(context);
-break;
-}
-  mContentCardViewCache.put(cardType, contentCardView);
-    }
-      return mContentCardViewCache.get(cardType);
+  @VisibleForTesting
+  BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
+    if (!mContentCardViewCache.containsKey(cardType)) {
+      // Create the view here
+      BaseContentCardView contentCardView;
+      switch (cardType) {
+        case BANNER:
+          contentCardView = new BannerImageContentCardView(context);
+          break;
+        case CAPTIONED_IMAGE:
+          contentCardView = new CaptionedImageContentCardView(context);
+          break;
+        case SHORT_NEWS:
+          contentCardView = new ShortNewsContentCardView(context);
+          break;
+        case TEXT_ANNOUNCEMENT:
+          contentCardView = new TextAnnouncementContentCardView(context);
+          break;
+        default:
+          contentCardView = new DefaultContentCardView(context);
+          break;
       }
+      mContentCardViewCache.put(cardType, contentCardView);
+    }
+    return mContentCardViewCache.get(cardType);
+  }
 
-  // パーセル可能なインターフェイス方式
+  // Parcelable interface method
   @Override
   public int describeContents() {
     return 0;
   }
 
   // Parcelable interface method
-@Override
-public void writeToParcel(Parcel dest, int flags) {
-// Retaining views across a transition could lead to a
-  // リソースがリークするため、パーセルが変更されないままになります
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
   }
-    }
-    \`\`\`
+}
+```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
-\`\`\`kotlin
-class DefaultContentCardsViewBindingHandler :IContentCardsViewBindingHandler {
+```kotlin
+class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   // Interface that must be implemented and provided as a public CREATOR
-// field that generates instances of your Parcelable class from a Parcel.
-  val CREATOR:Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object :Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
-  override fun createFromParcel(`in`:Parcel):DefaultContentCardsViewBindingHandler? {
-    return DefaultContentCardsViewBindingHandler()
-      }
+  // field that generates instances of your Parcelable class from a Parcel.
+  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
+    override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
+      return DefaultContentCardsViewBindingHandler()
+    }
 
     override fun newArray(size: Int): Array<DefaultContentCardsViewBindingHandler?> {
       return arrayOfNulls(size)
     }
   }
 
-  /\**
-    \* [RecyclerView] 内の項目のバインドに使用されるビューのキャッシュ。
+  /**
+    * A cache for the views used in binding the items in the [RecyclerView].
     */
-  private val mContentCardViewCache:MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
+  private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
 
-  override fun onCreateViewHolder(context:Context?, cards:List<Card?>?, viewGroup:ViewGroup?, viewType:Int):ContentCardViewHolder? {
+  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
     val cardType = CardType.fromValue(viewType)
     return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
   }
 
-  override fun onBindViewHolder(context:Context?, cards:Context?, cards:ContentCardViewHolder?, adapterPosition:Int) {
+  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return
     }
@@ -385,7 +385,7 @@ class DefaultContentCardsViewBindingHandler :IContentCardsViewBindingHandler {
     }
   }
 
-  override fun getItemViewType(context:Context?, cards:List<Card>, adapterPosition:Int):Int {
+  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return -1
     }
@@ -394,65 +394,65 @@ class DefaultContentCardsViewBindingHandler :IContentCardsViewBindingHandler {
   }
 
   /**
-* Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-    \* [CardType] がキャッシュに見つからない場合、その [CardType] のビューバイディング実装
-    \* が作成され、キャッシュに追加されます。
+    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
     */
-    @VisibleForTesting
-  fun getContentCardsViewFromCache(context:Context?, cardType:CardType):BaseContentCardView<Card>? {
-  if (!mContentCardViewCache.containsKey(cardType)) {
-    // ここでビューを作成します
-      val contentCardView:BaseContentCardView<*> = when (cardType) {
-      CardType.BANNER -> BannerImageContentCardView(context)
-        CardType.CAPTIONED\_IMAGE -> CaptionedImageContentCardView(context)
-        CardType.SHORT\_NEWS -> ShortNewsContentCardView(context)
-        CardType.TEXT\_ANNOUNCEMENT -> TextAnnouncementContentCardView(context)
+  @VisibleForTesting
+  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
+    if (!mContentCardViewCache.containsKey(cardType)) {
+      // Create the view here
+      val contentCardView: BaseContentCardView<*> = when (cardType) {
+        CardType.BANNER -> BannerImageContentCardView(context)
+        CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
+        CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
+        CardType.TEXT_ANNOUNCEMENT -> TextAnnouncementContentCardView(context)
         else -> DefaultContentCardView(context)
-        }
-      mContentCardViewCache[cardType] = contentCardView
       }
-    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
+      mContentCardViewCache[cardType] = contentCardView
     }
+    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
+  }
 
-  // パーセル可能なインターフェイス方式
-  override fun describeContents():Int {
+  // Parcelable interface method
+  override fun describeContents(): Int {
     return 0
   }
 
   // Parcelable interface method
-override fun writeToParcel(dest: Parcel?, flags: Int) {
-// Retaining views across a transition could lead to a
-  // リソースがリークするため、パーセルが変更されないままになります
-    }
-    }
-  \`\`\`
+  override fun writeToParcel(dest: Parcel?, flags: Int) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
+  }
+}
+```
 
 {% endsubtab %}
 {% endsubtabs %}
 
-このコードは [\`DefaultContentCardsViewBindingHandler\`][56] にもあります。
+このコードはここにもある。 [`DefaultContentCardsViewBindingHandler`](https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java).
 
 次に、このクラスの使用方法を示します。
 
 {% subtabs %}
 {% subtab JAVA %}
 
-\`\`\`java
+```java
 IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
 
 ContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardsViewBindingHandler(viewBindingHandler);
-\`\`\`
+```
 
 {% endsubtab %}
 {% subtab KOTLIN %}
 
-\`\`\`kotlin
+```kotlin
 val viewBindingHandler = DefaultContentCardsViewBindingHandler()
 
 val fragment = getMyCustomFragment()
 fragment.setContentCardsViewBindingHandler(viewBindingHandler)
-\`\`\`
+```
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -468,9 +468,9 @@ Jetpack Compose でカードを完全にカスタマイズする場合、カス�
 
 次の例では、Composable 関数は`TEXT_ANNOUNCEMENT`カードをレンダリングし、Braze は残りを自動的にレンダリングします。
 
-\`\`\`kotlin
+```kotlin
 val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
-    if (card.cardType == CardType.TEXT\_ANNOUNCEMENT) {
+    if (card.cardType == CardType.TEXT_ANNOUNCEMENT) {
         val textCard = card as TextAnnouncementCard
         Box(
             Modifier
@@ -482,7 +482,7 @@ val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
                 modifier = Modifier
                     .align(Alignment.Center)
                     .fillMaxWidth()
-                    .basicMarquee(iterations = Int.MAX\_VALUE),
+                    .basicMarquee(iterations = Int.MAX_VALUE),
                 fontSize = 35.sp,
                 text = textCard.description
             )
@@ -496,13 +496,13 @@ val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
 ContentCardsList(
     customCardComposer = myCustomCardRenderer
 )
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ## カードの却下
 
-スワイプして閉じる機能を無効にするには、[\`card.isDismissibleByUser()\`][9] メソッドを使用してカードごとに行います。[\`ContentCardsFragment.setContentCardUpdateHandler()\`][8] メソッドを使用して、表示前にカードをインターセプトできます。
+スワイプして閉じる機能を無効にするには、[[`card.isDismissibleByUser()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html)] メソッドを使用してカードごとに行います。カードは、[[`ContentCardsFragment.setContentCardUpdateHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)] メソッドを使って表示前にインターセプトできます。
 
 ## ダークテーマのカスタマイズ
 
@@ -541,8 +541,8 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
 **`Card`関数を呼び出す**<br>
 [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt)は、コンテンツカードオブジェクト配列リストなどの Braze SDK 依存関係を参照して、`Card`にロギングメソッドを呼び出させることができます。
 
-\`\`\`kotlin
-    fun logContentCardClicked(idString:String?) {
+```kotlin
+    fun logContentCardClicked(idString: String?) {
         getContentCard(idString)?.logClick()
     }
 
@@ -556,8 +556,8 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
 ```
 {% endtab %}
 {% tab Java %}
-**Custom objects call the logging methods**<br>
-Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be non-null if the object came from a Content Card. 
+**カスタムオブジェクトによるロギングメソッドの呼び出し**<br>
+`ContentCardable` ベースクラス内で、必要に応じて`BrazeManager`を直接呼び出すことができます。この例では、オブジェクトがコンテンツ・カードから来たものであれば、`cardData` プロパティが非NULLになることを覚えておいてほしい。 
 ```java
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {
@@ -565,7 +565,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
         tile.logContentCardImpression();
         ...
     }
-\`\`\`
+```
 
 **`ContentCardId`からコンテンツカードを取得する**<br>
 `ContentCardable`ベースクラスは、`BrazeManager`を呼び出し、カスタムオブジェクトに関連付けられたコンテンツカードから一意の識別子を渡すという負荷の大きい処理を行います。
@@ -581,10 +581,10 @@ public View getView(int position, View convertView, ViewGroup parent) {
 **`Card`関数を呼び出す**<br>
 [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt)は、コンテンツカードオブジェクト配列リストなどの Braze SDK 依存関係を参照して、`Card`にロギングメソッドを呼び出させることができます。
 
-\`\`\`java
+```java
     public void logContentCardClicked(String idString) {
-getContentCard(idString).ifPresent(Card::logClick);
-}
+        getContentCard(idString).ifPresent(Card::logClick);
+    }
 
     public void logContentCardImpression(String idString) {
         getContentCard(idString).ifPresent(Card::logImpression);
@@ -593,7 +593,7 @@ getContentCard(idString).ifPresent(Card::logClick);
     private Optional<Card> getContentCard(String idString) {
         return cardList.filter(c -> c.id.equals(idString)).findAny();
     }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -603,7 +603,7 @@ getContentCard(idString).ifPresent(Card::logClick);
 
 ## ヘルパーファイル
 
-{% details ContentCardKey Helper File %}
+{% details ContentCardKeyヘルパーファイル %}
 {% tabs %}
 {% tab Kotlin %}
 ```kotlin
@@ -628,20 +628,3 @@ public static final String DISMISSABLE = "dismissable";
 {% endtabs %}
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/cc_implementation/android_supplemental_content.png %}
-[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
-[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
-[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %}
-[7]: {% image_buster /assets/img/cc_implementation/discount.png %}
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
-[9]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html
-[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[42]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[44]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
-[45]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
-[46]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
-[49]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
-[56]: https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java

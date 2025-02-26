@@ -4,12 +4,9 @@ article_title: メッセージオーケストレーションパートナー
 page_order: 2
 
 page_type: landing
-description: "このランディング ページには、リターゲティング、電子メール テンプレート、プロモーション、アトリビューションなどを使用してメッセージを調整できる Braze パートナー (Alloys) がリストされています。"
+description: "このランディングページには、リターゲティング、メールテンプレート、プロモーション、アトリビューションなどを使用してメッセージを調整できるBrazeパートナー（Alloys）が一覧表示されています。"
 layout: partner_page
 search_tag: Partner
-
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Message Orchestration"
 
@@ -92,7 +89,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
@@ -110,4 +107,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
+- name: マイポストカード
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 ---

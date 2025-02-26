@@ -14,14 +14,13 @@ noindex: true
 
 ## Create a cross-reference
 
-When creating a cross-reference, you can either use the in-line method or reference-style method. The in-line method prioritizes clarity, while the reference-style method prioritizes readability.
+{% alert important %}
+Because Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
+{% endalert %}
 
 {% tabs %}
-{% tab in-line %}
+{% tab Markdown %}
 Open the relevant Markdown file, then create your in-line link.
-
-{% subtabs %}
-{% subtab Markdown %}
 
 {% raw %}
 ```markdown
@@ -35,7 +34,7 @@ Replace the following:
 |-------------|----------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                  |
 | `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line link should be similar to the following:
 
@@ -44,9 +43,10 @@ Your in-line link should be similar to the following:
 Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
 ```
 {% endraw %}
-{% endsubtab %}
+{% endtab %}
 
-{% subtab HTML %}
+{% tab HTML %}
+Open the relevant Markdown file, then create your in-line link.
 
 {% raw %}
 ```markdown
@@ -60,63 +60,13 @@ Replace the following:
 |-------------|----------------------------------------------------|
 | `LINK_TEXT` | The page title or related action.                  |
 | `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line link should be similar to the following:
 
 {% raw %}
 ```markdown
 To learn about the different custom attribute data types you can use to segment users, view <a href="/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types">Custom attribute data types</a>.
-```
-{% endraw %}
-{% endsubtab %}
-{% endsubtabs %}
-
-{% endtab %}
-
-{% tab reference-style %}
-Open the relevant Markdown file, then create your reference-style link.
-
-```markdown
-[LINK_TEXT][REFERENCE_NUMBER]
-```
-
-Replace the following:
-
-| Placeholder        | Description                                                              |
-|--------------------|--------------------------------------------------------------------------|
-| `LINK_TEXT`        | The page title or related action.                                        |
-| `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your references should be similar to the following:
-
-```markdown
-Before continuing, [create your SSH token][2]. When you're finished, see [Step 2: Uploading your token][5].
-```
-
-At the bottom of the page, you'll add the related links.
-
-{% raw %}
-```markdown
-[REFERENCE_NUMBER]: {{site.baseurl}}SHORT_URL
-```
-{% endraw %}
-
-Replace the following:
-
-| Placeholder        | Description                                             |
-|--------------------|---------------------------------------------------------|
-| `REFERENCE_NUMBER` | The number of the reference you'd like to link to.      |
-| `SHORT_URL`        | The page URL with `https://www.braze.com/docs` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your links should be similar to the following:
-
-{% raw %}
-```markdown
-[2]: {{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/
-[5]: {{site.baseurl}}/developer_guide/platform_wide/swift#step-2-uploading-your-token
 ```
 {% endraw %}
 {% endtab %}

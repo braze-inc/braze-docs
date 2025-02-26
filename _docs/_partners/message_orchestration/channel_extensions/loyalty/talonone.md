@@ -21,7 +21,7 @@ The Braze and Talon.One integration can help take your loyalty or coupon program
 | ----------- | ----------- |
 |Talon.One account | A Talon.One account is required to take advantage of this partnership. |
 |Talon.One API key | In Talon.One, under **Settings** > **Developer Settings**, create a Braze 3rd party API key for the integration. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert warning %}
 Talon.One **_requires_** a maximum rate limit of 2,500 messages per minute. This rate limit can be [modified]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) in the Braze dashboard.

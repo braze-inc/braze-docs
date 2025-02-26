@@ -11,7 +11,7 @@ search_rank: 2
 
 > This page explains what multivariate and A/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to [Creating multivariate and A/B tests with Braze]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/). 
 
-Multivariate and A/B testing can be quickly utilized using [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
+Multivariate and A/B testing can be  used using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 ## What are multivariate and A/B testing?
 
@@ -65,9 +65,9 @@ When running A/B test on in-app messages, your analytics may appear to show a hi
 
 Variant A has a consistently higher count of *Unique Recipients* than Variant C. This isn't due to variant distribution, but rather how *Unique Recipients* are calculated for in-app messages. For in-app messages, *Unique Recipients* are actually *Unique Impressions*, which is the total number of people who received and viewed the in-app message. This means if a user doesn't receive the message for whatever reason or decides not to view it, they are not included in the *Unique Recipients* count, and the variant distribution can appear skewed.
 
-## Five rules for multivariate and A/B testing {#five-rules-for}
+## Tips for multivariate and A/B testing
 
-Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users' behaviors, follow these guidelines.
+Multivariate and A/B testing can unveil powerful insights regarding your users. To receive test results that are truly reflective of your users' behaviors, follow these guidelines.
 
 #### Run the test on a large number of users
 
@@ -85,6 +85,15 @@ Multivariate and A/B testing allows you to test the differences between several 
 
 Before you begin the test, decide how long it will run for and stick to it. Marketers are often tempted to stop tests after they see results that they like, biasing their findings. Resist the temptation to peek and never end your test early!
 
+#### Add your test to campaigns before they launch, not after
+
+If you add your test to a campaign after it has launched, the test won't run properly and you may receive incorrect or misleading statistics. For example, if you add a test to a launched campaign that allows re-entry, users who re-enter the campaign will always go through the same path to prevent data inaccuracies with the test. Additionally, if you change any of the variants while the test is running, the change will invalidate your test and restart it.
+
+For accurate test results:
+1. Clone the launched campaign.
+2. Stop the original campaign.
+3. Then, add the test to the cloned campaign. 
+
 #### If possible, include a control group
 
 Including a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) lets you know whether your messages have a greater impact on user conversion than sending no message at all.
@@ -101,5 +110,5 @@ Including a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing
 [10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
 [272]: #intelligent-selection
 [273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[intelselection]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

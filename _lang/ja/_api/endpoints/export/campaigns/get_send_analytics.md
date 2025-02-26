@@ -1,44 +1,44 @@
 ---
-nav_title: "取得：送信分析のエクスポート"
-article_title: "取得：送信分析のエクスポート"
+nav_title: "取得:送信分析をエクスポートする"
+article_title: "取得:送信分析をエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、エクスポート送信分析の Braze エンドポイントについて詳しく説明します。"
+description: "この記事では、「送信分析をエクスポートする」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# 送信分析のエクスポート
+# 送信分析をエクスポートする
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、追跡対象 `send_id` の API キャンペーンのさまざまな統計を毎日取得します。
+> このエンドポイントを使用して、API キャンペーンに関して追跡された `send_id` のさまざまな統計の日次情報を取得します。
 
-Brazeストアは、送信後14日間アナリティクスを送信します。キャンペーンのコンバージョンは、特定のユーザーがキャンペーンから獲得した最新の `send_id` コンバージョンに関連付けられます。
+Braze は送信後14日間、送信分析を保存します。キャンペーンのコンバージョンは、特定のユーザーがキャンペーンから受け取った直近の `send_id` に起因します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-## 前提 条件
+## 前提条件
 
-このエンドポイントは API キャンペーン専用です。このエンドポイントを使用するには、アクセス許可を持つ `sends.data_series` [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントはAPIキャンペーン専用である。このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`sends.data_series`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 要求パラメーター
+## リクエストパラメーター
 
-|パラメータ |必須項目 |データ型 |説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` |必須項目 |文字列 | [詳しくは、キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。|
-| `send_id` |必須項目 |文字列 |「 [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)」を参照してください。|
-| `length` |必須項目 |整数型 |返される系列に含めるまでの `ending_at` 最大日数。1 以上 100 以下である必要があります。|
-| `ending_at` |オプション |日時 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) |データ系列が終了する日付。既定値は、要求の時刻です。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `send_id` | 必須 | 文字列 | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 要求の例 
+## 例のリクエスト
 
 {% raw %}
 ```
@@ -99,7 +99,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV と API のエクスポートに関するヘルプについては、 [エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)をご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

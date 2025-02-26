@@ -14,6 +14,10 @@ Push notifications are powerful tools for engaging with your app's users, but th
 Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more. Learn more about [Mobile push regulations]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#mobile-push-regulations-for-apps).
 {% endalert %}
 
+## Compose your push message
+
+As a best practice, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification. Note that the character counter in the composer doesn't account for Liquid characters. This means the final character count of a message depends on how Liquid renders for each user. When in doubt, keep it short and sweet.
+
 ## Optimize targeting
 
 ### Collect relevant user data

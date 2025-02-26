@@ -47,14 +47,15 @@ The policy you have in your DMARC record will tell the participating recipient e
 | None | Tell the mailbox provider to perform no actions against messages that fail. |
 | Quarantine | Tell the mailbox provider to send messages that fail to the spam folder. |
 | Reject | Tell the mailbox provider that messages that fail will go to the spam folder and should be blocked. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### How to check your domain's DMARC authentication
 
 There are two options to check your domain's DMARC authentication:
 
-* **Option 1:** You can input your parent domain or subdomain in any third-party DMARC checker, such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx), to audit whether you have a DMARC policy in place and what that policy is set to.
-* **Option 2:** Open up an email from your domain or subdomain in your mailbox, and find the original message to check whether DMARC is passing authentication on this email.
+- **Option 1:** You can input your parent domain or subdomain into any third-party DMARC checker, such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx), to audit whether you have a DMARC policy in place and what that policy is set to.
+    - **MXToolbox**: If you set your DMARC as the root domain, enter that into MXToolbox. If you set the DMARC at the subdomain, enter the sub-domain into MXToolbox. Be aware that MXToolbox doesn't "look up or down" when performing lookups. This means if you set the DMARC at the root domain and enter the subdomain, MXToolbox will show a failure as it doesn't know the DMARC has been set at the root domain.
+- **Option 2:** Open an email from your domain or subdomain in your mailbox, and find the original message to check whether DMARC is passing authentication on this email.
 
 For example, if you’re using Gmail, follow these steps:
 

@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # アプリ内メッセージ配信
 
@@ -24,7 +24,7 @@ noindex: true
 
 ## 配信セマンティクス
 
-ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。1つのイベントによって2つのアプリ内メッセージがトリガーされた場合、優先度の高いアプリ内メッセージが表示されます。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル][45]に関する記事をお読みください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
+ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。1つのイベントによって2つのアプリ内メッセージがトリガーされた場合、優先度の高いアプリ内メッセージが表示されます。SDK のセッション開始セマンティクスの詳細については、[セッションライフサイクル]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle)に関する記事をお読みください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 
@@ -32,7 +32,7 @@ noindex: true
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、高品質のユーザー エクスペリエンスを確保するために、アプリ内メッセージのレートが30秒に1回に制限されています。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが30秒に1回に制限されています。
 
 この値は、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡された `appboyOptions` パラメーター内の `ABKMinimumTriggerTimeIntervalKey` を使用してオーバーライドできます。`ABKMinimumTriggerTimeIntervalKey` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
@@ -89,14 +89,14 @@ Braze が特定のイベントに一致するトリガーを検出できない�
 
 - アプリがバックグラウンドにあるときに、アプリ内メッセージがトリガーされた。
 - 別のアプリ内メッセージが現在表示されている。
-- 非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]は実装されておらず、キーボードが現在表示されています。
-- `beforeInAppMessageDisplayed:` [デリゲートメソッド][30]または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]が `ABKDisplayInAppMessageLater` を返しました。
+- 非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)は実装されておらず、キーボードが現在表示されています。
+- `beforeInAppMessageDisplayed:` [デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate)または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)が `ABKDisplayInAppMessageLater` を返しました。
 
 #### アプリ内メッセージの破棄
 
 トリガーされたアプリ内メッセージは、次の状況では破棄されます。
 
-- `beforeInAppMessageDisplayed:` [デリゲートメソッド][30]または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド][38]が `ABKDiscardInAppMessage` を返しました。
+- `beforeInAppMessageDisplayed:` [デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate)または非推奨の `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI デリゲートメソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate)が `ABKDiscardInAppMessage` を返しました。
 - アプリ内メッセージのアセット (画像または ZIP ファイル) のダウンロードに失敗しました。
 - アプリ内メッセージを表示する準備ができていますが、タイムアウト時間が経過しました。
 - デバイスの向きが、トリガーされたアプリ内メッセージの向きと一致しません。
@@ -153,6 +153,3 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 {% endtab %}
 {% endtabs %}
 
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate
-[45]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle

@@ -38,11 +38,11 @@ Here are some examples of common web push message use cases.
 | App download | Draw web users to your mobile app to help them get even more value out of your products. Consider leveraging personalization to highlight app benefits based on their current engagement patterns. |
 | Discounts and sales | Increase customer awareness of time-sensitive events and promotions. Message across multiple channels, including web push, to increase awareness of your brand's promotions. |
 | Cart abandonment | Send automated reminders to users who haven't finished their transactions to bring them back to the checkout flow. <br><br>Research conducted by Braze found that web push is 53% more effective than email and 23% more impactful than mobile push at getting recipients to come back and complete a purchase. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Prerequisites to use web push
 
-Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
+Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
 
 ### Push permission
 
@@ -65,9 +65,9 @@ The following browsers support web push notifications. However, private browsing
 For more information on the push protocol standards and browser support, you can review resources based on your browser:
 
 - [Safari (desktop)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari (mobile)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Safari (mobile)]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/safari_push/)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
-- [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)
+- [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

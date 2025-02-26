@@ -10,11 +10,11 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # アプリ内メッセージ表示のカスタム処理
 
-[`ABKInAppMessageControllerDelegate`][16] を設定すると、アプリ内メッセージが表示される前に次のデリゲートメソッドが呼び出されます。
+[`ABKInAppMessageControllerDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h) を設定すると、アプリ内メッセージが表示される前に次のデリゲートメソッドが呼び出されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -33,7 +33,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 {% endtab %}
 {% endtabs %}
 
-[`ABKInAppMessageUIDelegate`][34] を実装しただけの場合は、代わりに次の UI デリゲートメソッドが呼び出されます。
+[`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) を実装しただけの場合は、代わりに次の UI デリゲートメソッドが呼び出されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -54,16 +54,16 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsU
 
 このデリゲートメソッドを実装し、`ABKInAppMessageDisplayChoice` に対して次のいずれかの値を返すことで、アプリ内メッセージ処理をカスタマイズできます。
 
-| `ABKInAppMessageDisplayChoice` | Behavior |
+| `ABKInAppMessageDisplayChoice` | 動作 |
 | -------------------------- | -------- |
-| Objective-C: `ABKDisplayInAppMessageNow`<br>Swift: `displayInAppMessageNow` | メッセージはすぐに表示されます。|
-| Objective-C: `ABKDisplayInAppMessageLater`<br>Swift: `displayInAppMessageLater` | メッセージは表示されず、スタックの最上部に戻されます。|
-| Objective-C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage` | メッセージは破棄され、表示されません。|
-{: .reset-td-br-1 .reset-td-br-2}
+| OBJECTIVE-C： `ABKDisplayInAppMessageNow`<br>SWIFT： `displayInAppMessageNow` | メッセージはすぐに表示される。 |
+| OBJECTIVE-C： `ABKDisplayInAppMessageLater`<br>SWIFT： `displayInAppMessageLater` | メッセージは表示されず、スタックの一番上に戻される。 |
+| OBJECTIVE-C： `ABKDiscardInAppMessage`<br>SWIFT： `discardInAppMessage`| メッセージは破棄され、表示されない。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 `beforeInAppMessageDisplayed:` デリゲートメソッドを使用して、アプリ内メッセージ表示ロジックを追加したり、Braze によって表示される前にアプリ内メッセージをカスタマイズしたり、Braze のアプリ内メッセージ表示ロジックと UI を完全にオプトアウトしたりできます。
 
-実装例については、[サンプルアプリケーション][36]をご覧ください。
+実装例については、[サンプルアプリケーション](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m)をご覧ください。
 
 ## 表示前のアプリ内メッセージの上書き
 
@@ -78,9 +78,9 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsU
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
+```objc
 // ABKInAppMessageControllerDelegate
-\- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage \*)inAppMessage {
+- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
   ...
   inAppMessage.enableDarkTheme = NO;
   ...
@@ -88,21 +88,21 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsU
 }
 
 // ABKInAppMessageUIDelegate
-\- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage \*)inAppMessage
+- (ABKInAppMessageDisplayChoice)beforeInAppMesssageDisplayed:(ABKInAppMessage *)inAppMessage
                                             withKeyboardIsUp:(BOOL)keyboardIsUp {
   ...
   inAppMessage.enableDarkTheme = NO;
   ...
   return ABKDisplayInAppMessageNow;
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab swift %}
 
-\`\`\`swift
+```swift
 // ABKInAppMessageControllerDelegate
-func before(inAppMessageDisplayed inAppMessage:ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
   ...
   inAppMessage.enableDarkTheme = false
   ...
@@ -110,13 +110,13 @@ func before(inAppMessageDisplayed inAppMessage:ABKInAppMessage) -> ABKInAppMessa
 }
 
 // ABKInAppMessageUIDelegate
-func before(inAppMessageDisplayed inAppMessage:ABKInAppMessage, withKeyboardIsUp keyboardIsUp:Bool) -> ABKInAppMessageDisplayChoice {
+func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage, withKeyboardIsUp keyboardIsUp: Bool) -> ABKInAppMessageDisplayChoice {
   ...
   inAppMessage.enableDarkTheme = false
   ...
   return ABKInAppMessageDisplayChoice.displayInAppMessageNow
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -152,7 +152,7 @@ func logInAppMessageClicked()
 {% endtab %}
 {% endtabs %}
 
-さらに、`ABKInAppMessageImmersive` のサブクラス (*つまり*、`Modal` と `Full` のアプリ内メッセージなど) のボタンクリック数を記録する必要があります。
+さらに、`ABKInAppMessageImmersive` のサブクラス (*i.e*、`Modal` と `Full` のアプリ内メッセージなど) のボタンクリック数を記録する必要があります。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -175,18 +175,14 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 
 ## メソッド宣言
 
-追加情報については、以下のヘッダーファイルを参照してください。
+詳細については、次のヘッダー ファイルを参照してください。
 
-- [`ABKInAppMessage.h`][14]
-- [`ABKInAppMessageControllerDelegate.h`][16]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
+- [`ABKInAppMessageControllerDelegate.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h)
 
 ## 実装サンプル
 
-[`AppDelegate.m`][36] アプリ内メッセージサンプルアプリを参照してください。
+[`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) アプリ内メッセージサンプルアプリを参照してください。
 
 
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h
-[36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
 

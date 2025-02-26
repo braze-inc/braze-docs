@@ -15,17 +15,6 @@ destination: _site/docs/ja
 # Source dir
 source: '.'
 
-lab_index_name: "DocSearch_Japanese"
-
-# Allows the DocSearch element to be inspected. Set to true locally, but don't
-# check in in that state, or it will cause undesirable behavior in prod.
-search_debug: false
-
-# For local testing, set to false to increase build time by not pulling partner api
-# and markdown data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
-partner_api: true
-markdown_api: true
-
 # GitHub config
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/ja/'
 

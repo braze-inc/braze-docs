@@ -11,23 +11,23 @@ alias: /shareplay/
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # SharePlay アプリ内メッセージ実装ガイド
 
 > SharePlay は、iOS 15 FaceTime ユーザーがデバイス間でメディア体験を共有し、リアルタイムでオーディオと動画を同期することを可能とする新たにリリースされた機能です。SharePlay は、ユーザーが友人や家族と一緒にコンテンツを体験できる優れた方法であり、Braze の顧客に動画コンテンツを利用する新たな手段を提供し、アプリケーションを新しいユーザーに紹介する機会を提供します。
 
-![SharePlay][6]{: style="border:0;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay6.png %}){: style="border:0;margin-top:10px;"}
 ## 概要
 
 iOS 15 更新の一部として Apple によってリリースされた新しい `GroupActivities` フレームワークを使用すると、Braze アプリ内メッセージを利用して SharePlay をアプリケーションに統合することで、FaceTime を活用できるようになります。
-![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay3.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
 ユーザーが FaceTime 通話で SharePlay ビデオを開始すると、全員の画面の上部に [開く] ボタンが表示されます。開くと、オーディオとビデオがすべての互換性のあるデバイス間で同期され、ユーザーはリアルタイムで動画を一緒に視聴できるようになります。アプリをダウンロードしていない人は、App Store にリダイレクトされます。
 
 **同期されたメディアの再生**<br>
 同期されたメディア再生では、1人が SharePlay ビデオを一時停止すると、すべてのデバイスで一時停止されます。<br><br>
-![SharePlay][5]{: style="border:0"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay7.png %}({: style="border:0"})
 
 ## 統合
 
@@ -41,16 +41,16 @@ iOS 15 更新の一部として Apple によってリリースされた新しい
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
-override var nibName:String {
+```swift
+override var nibName: String {
   return "ModalVideoViewController"
 }
    
-/// ABKInAppMessageModalViewController から loadView() をオーバーライドして、アプリ内メッセージに独自のビューを提供します
+/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the in-app message
 override func loadView() {
-Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
+  Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
-  \`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -60,13 +60,13 @@ Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
+```swift
 func configureVideoPlayer() {
-guard let urlString = inAppMessage.extras?["video_url"] as? String,
-let url = URL(string: urlString) else { return }
+  guard let urlString = inAppMessage.extras?["video_url"] as? String,
+        let url = URL(string: urlString) else { return }
      
-  let videoTitle = inAppMessage.extras?["video\_title"] as?String
-  mediaItem = MediaItem(title: videoTitle ??"Video Content", url: url)
+  let videoTitle = inAppMessage.extras?["video_title"] as? String
+  mediaItem = MediaItem(title: videoTitle ?? "Video Content", url: url)
      
   let asset = AVAsset(url: url)
   let playerItem = AVPlayerItem(asset: asset)
@@ -77,7 +77,7 @@ let url = URL(string: urlString) else { return }
   videoPlayerContainer.addSubview(playerViewController.view)
   playerViewController.didMove(toParent: self)
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -97,19 +97,19 @@ let url = URL(string: urlString) else { return }
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
-struct MediaItem:Hashable, Codable {
-let title: String
-let url: URL
+```swift
+struct MediaItem: Hashable, Codable {
+  let title: String
+  let url: URL
 }
  
-@available(iOS 15, \*)
-struct MediaItemActivity:GroupActivity {
+@available(iOS 15, *)
+struct MediaItemActivity: GroupActivity {
   static let activityIdentifier = "com.book-demo.GroupWatching"
  
-  let mediaItem:MediaItem
+  let mediaItem: MediaItem
    
-  var metadata:GroupActivityMetadata {
+  var metadata: GroupActivityMetadata {
     var metadata = GroupActivityMetadata()
     metadata.type = .watchTogether
     metadata.title = mediaItem.title
@@ -117,32 +117,32 @@ struct MediaItemActivity:GroupActivity {
     return metadata
   }
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 #### 再生の準備をする
 
 メディア項目の再生の準備をするとき、各グループアクティビティの `prepareForActivation()` の状態には以下の3つがあります。
-- `.activationDisabled` - 個別に表示
+- `.activationDisabled` - 個別閲覧
 - `.activationPreferred` - 一緒に見る
 - `.cancelled` - 無視して適切に処理する
 
 状態が `activationPreferred` に戻ったら、残りのグループアクティビティのライフサイクルをアクティブにする合図です。 
 
-![SharePlay][1]{: style="border:0;"}
+]SharePlay{% image_buster /assets/img/shareplay/shareplay.png %}({: style="border:0;"})
 
-### ステップ4:SharePlay API からアプリ内メッセージを起動する
+### ステップ 4:SharePlay API からアプリ内メッセージを起動する
 
 `GroupActivities` API は動画が存在するかどうかを判別します。その場合は、カスタムイベントをトリガーして、SharePlay 対応のアプリ内メッセージを起動する必要があります。`CoordinationManager`は、ユーザーが通話から離れた場合や通話に参加した場合など、SharePlay の状態変更を行います。 
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
+```swift
 private var subscriptions = Set<AnyCancellable>()  
-private var selectedMediaItem:MediaItem? {
+private var selectedMediaItem: MediaItem? {
   didSet {
-    // UI の選択が常に現在再生中のメディアを表すようにします。
+    // Ensure the UI selection always represents the currently playing media.
     guard let _ = selectedMediaItem else { return }
  
     if !BrazeManager.shared.inAppMessageCurrentlyVisible {
@@ -152,14 +152,14 @@ private var selectedMediaItem:MediaItem? {
 }  
  
 private func launchVideoPlayerIfNecessary() {
-CoordinationManager.shared.$enqueuedMediaItem
-.receive(on: DispatchQueue.main)
-.compactMap { $0 }
-  .assign(to: .selectedMediaItem, on: self)
+  CoordinationManager.shared.$enqueuedMediaItem
+      .receive(on: DispatchQueue.main)
+      .compactMap { $0 }
+      .assign(to: \.selectedMediaItem, on: self)
       .store(in: &subscriptions)
-      }
-      \`\`\`
-      {% endtab %}
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### ステップ5:アプリ内メッセージの終了時にグループセッションを終了する
@@ -168,8 +168,8 @@ CoordinationManager.shared.$enqueuedMediaItem
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
-override func viewDidDisappear(_ animated:Bool) {
+```swift
+override func viewDidDisappear(_ animated: Bool) {
   super.viewDidDisappear(animated)
   groupSession?.leave()
   CoordinationManager.shared.leave()
@@ -177,18 +177,18 @@ override func viewDidDisappear(_ animated:Bool) {
  
 class CoordinationManager() {
 ...
-  // プレーヤーおよびその他の UI 項目が監視する公開された値。
-  @Published var enqueuedMediaItem:MediaItem?
-  @Published var groupSession:GroupSession<MediaItemActivity>?
+  // Published values that the player, and other UI items, observe.
+  @Published var enqueuedMediaItem: MediaItem?
+  @Published var groupSession: GroupSession<MediaItemActivity>?
  
-  // ユーザーが離れるとアクティビティをクリアします
+  // Clear activity when the user leaves
   func leave() {
     groupSession = nil
     enqueuedMediaItem = nil
   }
 ...
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -198,8 +198,8 @@ SharePlay インジケーターを動的に非表示または表示すること�
 
 {% tabs %}
 {% tab Swift %}
-\`\`\`swift
-private var isEligibleForSharePlay:Bool = false {
+```swift
+private var isEligibleForSharePlay: Bool = false {
   didSet {
     sharePlayButton.isHidden = !isEligibleForSharePlay
   }
@@ -208,19 +208,13 @@ private var isEligibleForSharePlay:Bool = false {
 override func viewDidLoad() {
   super.viewDidLoad()
  
-  // SharePlay ボタンの資格
+  // SharePlay button eligibility
   groupStateObserver.$isEligibleForGroupSession
-    .receive(on:DispatchQueue.main)
-    .assign(to: .isEligibleForSharePlay, on: self)
+    .receive(on: DispatchQueue.main)
+    .assign(to: \.isEligibleForSharePlay, on: self)
     .store(in: &subscriptions)
 }
-\`\`\`
+``` 
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/shareplay/shareplay.png %}
-[2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
-[3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
-[4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-[5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.png %}

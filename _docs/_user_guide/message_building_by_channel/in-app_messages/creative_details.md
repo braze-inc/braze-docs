@@ -56,7 +56,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 |--- | --- | --- |
 | Image + Text | 6:5 aspect ratio<br>High-res 1200 x 1000&nbsp;px<br> Minimum 600 x 500&nbsp;px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
 | Image Only | 3:5 aspect ratio<br>High-res 1200 x 2000&nbsp;px<br> Minimum 600 x 1000&nbsp;px | Cropping can occur on the left and right edges on taller devices |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Further details for fullscreens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
 
@@ -70,7 +70,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 |--- | --- | ------ |
 | Image + Text | 29:10 aspect ratio<br>High-res 1450 x 500&nbsp;px<br> Minimum 600 x 205&nbsp;px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
 | Image Only | Nearly any aspect ratio<br>High-res up to 1200 x 2000&nbsp;px<br> Minimum 600 x 600&nbsp;px | The message will resize to fit images of most aspect ratios. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Further details for modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
@@ -82,7 +82,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
 | Image + Text | 1:1 aspect ratio<br>High-res 150 x 150&nbsp;px<br> Minimum 50 x 50&nbsp;px | Images of various aspect ratios will fit into a square image container, without cropping. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Further details for slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
 
@@ -91,10 +91,10 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 
 ### GIFs and videos
 
-Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 ## Additional considerations
 
-Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
+Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/) page.
 
 <br>

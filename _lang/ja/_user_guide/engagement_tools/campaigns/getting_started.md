@@ -12,13 +12,13 @@ description: "このセクションでは、キャンペーンの紹介と、メ
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Campaign Basics
+  - name: キャンペーンの基本
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/campaign_basics/
-    fa_icon: fas fa-list
-  - name: Understanding Campaign Status
+    image: /assets/img/braze_icons/list.svg
+  - name: キャンペーンのステータスを理解する
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
-    fa_icon: fas fa-envelope
-  - name: Campaign FAQ
+    image: /assets/img/braze_icons/mail-01.svg
+  - name: キャンペーンに関する FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---

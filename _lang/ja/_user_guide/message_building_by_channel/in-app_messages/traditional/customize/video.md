@@ -1,16 +1,16 @@
 ---
 nav_title: 動画
-article_title: アプリ内メッセージ内の動画
+article_title: アプリ内メッセージの動画
 page_order: 4
 page_type: reference
-description: "この記事では、HTML アプリ内メッセージに動画を埋め込む方法について説明します。"
+description: "この記事では、ビデオをHTMLアプリ内メッセージに埋め込む方法について説明します。"
 channel:
   - in-app messages
 ---
 
 # ビデオ {#video}
 
-> HTML アプリ内メッセージで動画を再生するには、HTML `<video>` に次の要素を含め、動画名をファイル名 (またはリモートアセットのURL) に置き換えます。[MDN Web Docs `<video>`][9] には他にも可能なオプションがあります。
+> HTML アプリ内メッセージでビデオを再生するには、HTML に次の `<video>` 要素を含め、動画名を実際のファイル名 (またはリモートアセットの URL) に置き換えます。他の可能な`<video>`オプションは[MDN Web Docs][9]で見つけることができます。
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -20,21 +20,22 @@ channel:
 </video>
 ```
 
-ローカル動画アセットを使用するには、キャンペーンにアセットをアップロードするときにこのファイルを必ず含めてください。
+ローカル動画アセットを使用するには、アセットをキャンペーンにアップロードする際にこのファイルを含めるようにしてください。
 
 {% alert note %}
-ビデオコンテンツは、ビデオがデバイスからローカルに供給されている場合を除き、デバイスのネットワーク速度が適度な場合にのみ利用できます。
+動画コンテンツは、デバイスが適切なネットワーク速度を持っている場合にのみ利用可能です。ただし、動画がデバイスからローカルに供給されている場合を除きます。
 {% endalert %}
 
-## アンドロイドに関する注意事項
+## Androidに関する考慮事項
 
-Android の HTML アプリ内メッセージに動画やその他の HTML5 コンテンツを埋め込むには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションを有効にする必要があります。詳細については、[Android デベロッパーガイドを参照してください]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/)。
+Android 上の HTML アプリ内メッセージに動画およびその他の HTML5 コンテンツを埋め込むには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションを有効にする必要があります。詳細については、[Android開発者ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/)を参照してください。
 
-## iOS に関する注意事項
+## iOSの考慮事項
 
-iOS デバイスをサポートするには、`playsinline`この属性を含める必要があります。フルスクリーン再生は現時点ではサポートされていないためです。
+iOS デバイスをサポートするには:
 
-- iOSはデフォルトでは自動再生をサポートしていません。このデフォルトオプションを更新するには、以下を変更します。 [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
-- フルスクリーンビデオは iOS では正しくレンダリングされないため、現時点ではサポートされていません。代わりに、HTML `playsinline` メッセージ内に動画を表示する属性を含める必要があります。
+- この時点ではフルスクリーン再生がサポートされていないため、`playsinline`属性を含める必要があります。
+- iOSはデフォルトで自動再生をサポートしていません。このデフォルトオプションを更新するには、[`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)を変更できます。
+
 
 [9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

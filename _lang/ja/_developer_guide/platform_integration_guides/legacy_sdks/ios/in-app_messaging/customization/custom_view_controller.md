@@ -9,7 +9,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # カスタムビューコントローラにアプリ内メッセージを表示する
 
@@ -37,19 +37,15 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-[アプリ内メッセージビューコントローラー][37]はカスタマイズ可能です。サブクラスまたはカテゴリを使用して、アプリ内メッセージの表示や動作をカスタマイズできます。
+[アプリ内メッセージビューコントローラー](https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers)はカスタマイズ可能です。サブクラスまたはカテゴリを使用して、アプリ内メッセージの表示や動作をカスタマイズできます。
 
 ## メソッド宣言
 
-追加情報については、以下のヘッダーファイルを参照してください。
+詳細については、次のヘッダー ファイルを参照してください。
 
-- [`ABKInAppMessage.h`][14]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
 
 ## 実装サンプル
 
-アプリ内メッセージサンプルアプリの [`ViewController.m`][35] および [`CustomInAppMessageViewController.m`][19] を参照してください。
+アプリ内メッセージサンプルアプリの [`ViewController.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m) および [`CustomInAppMessageViewController.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/) を参照してください。
 
-[37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
-[19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/
-[35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m

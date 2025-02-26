@@ -1,38 +1,38 @@
 ---
-nav_title: "ポスト:トリガ同期"
-article_title: "ポスト:トリガ同期"
+nav_title: "POST:トリガー同期"
+article_title: "POST:トリガー同期"
 search_tag: Endpoint
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
 page_type: reference
-description: "この記事では、トリガ同期Brazeエンドポイントの詳細について説明します。"
+description: "この記事では、「同期をトリガー」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# 同期のトリガ
+# 同期をトリガー
 {% apimethod post %}
 /cdi/integrations/{integration_id}/sync
 {% endapimethod %}
 
-> このエンドポイントを使用して、特定の統合の同期をトリガします。
+> このエンドポイントを使用して、特定のインテグレーションのシンクをトリガーします。
 
 {% alert note %}
-このエンドポイントを使用するには、`cdi.integration_sync` 権限を持つAPI キーを生成する必要があります。
+このエンドポイントを使用するには、`cdi.integration_sync` 権限を持つ API キーを生成する必要があります。
 {% endalert %}
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='cdi job sync' %}
 
-## パスパラメータ
+## パスパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `integration_id` | 必須| 文字列| 統合ID. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `integration_id` | 必須 | 文字列 | 統合 ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/00000000-0000-0000-0000-000000000000/sync' \
@@ -40,11 +40,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## レスポンス
+## 応答
 
 ### 成功応答の例
 
-ステータスコード`202` は、以下のレスポンスボディを返す可能性があります。
+ステータスコード `202` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -54,15 +54,15 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 
 ## トラブルシューティング
 
-次の表に、返される可能性のあるエラーと関連するトラブルシューティング手順を示します。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| エラー| トラブルシューティング|
+| エラー | トラブルシューティング |
 | --- | --- |
-| `400 Invalid integration ID` | `integration_id` が有効であることを確認します。|
-| `404 Integration not found` | 指定された統合ID には統合が存在しません。統合ID が有効であることを確認します。|
-| `429 Another job is in progress` | この統合のために現在実行中の同期があります。同期が完了したら、再試行します。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `400 Invalid integration ID` | `integration_id` が有効であることを確認します。 |
+| `404 Integration not found` | 指定された統合 ID には統合が存在しません。統合ID が有効であることを確認します。 |
+| `429 Another job is in progress` | この統合のために現在実行されている同期があります。同期が完了したら、もう一度試してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+その他のステータスコードと関連するエラーメッセージについては、「[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)」を参照してください。
 
 {% endapi %}

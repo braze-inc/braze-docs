@@ -24,6 +24,10 @@ This is a great place to get a high-level overview to check how your Canvas is p
 
 ![][24]
 
+### Changes Since Last Viewed
+
+The number of updates to the Canvas from other members of your team is tracked by the *Changes Since Last Viewed* metric on the Canvas overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the Canvas name, schedule, tags, message, audience, approval status, or team access configuration. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your Canvases.
+
 ## Performance visualization
 
 As you move down the **Canvas Details** page, you can see the performance for each component such as how many users entered, proceeded to the next step, or exited the Canvas. 

@@ -9,7 +9,7 @@ platform: iOS
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Braze iOS SDK 統合ガイド
 
@@ -21,7 +21,7 @@ noindex: true
 
 ## 統合の概要
 
-以下の手順は、プロダクション・コードが呼び出す `BrazeManager` ヘルパー・ファイルの作成に役立ちます。このヘルパーファイルは、リストされている以下の統合トピックのさまざまな拡張機能を追加することで、Braze 関連のすべての依存関係を処理します。各トピックには、Swift と Objective-C の両方の水平タブステップとコードスニペットが含まれます。アプリケーションでこれらのチャネルを使用する予定がない場合、統合にはコンテンツカードとアプリ内メッセージの手順は必要ありません。
+以下の手順は、プロダクション・コードが呼び出す `BrazeManager` ヘルパー・ファイルの作成に役立ちます。このヘルパーファイルは、リストされている以下の統合トピックのさまざまな拡張機能を追加することで、Braze 関連のすべての依存関係を処理します。各トピックには、Swift と Objective-C の両方の水平タブステップとコードスニペットが含まれます。アプリケーションでこれらのチャネルを使用する予定がない場合、統合にはコンテンツカードとアプリ内メッセージのステップは必要ありません。
 
 - [BrazeManager.swift の作成](#create-brazemanagerswift)
 - [SDK の初期化](#initialize-the-sdk)
@@ -35,14 +35,14 @@ noindex: true
 ### BrazeManager.swift の作成
 
 {% tabs local %}
-{% tab Create BrazeManager.swift %}
+{% tab BrazeManager swift を作成する %}
 
 ##### BrazeManager.swift の作成
 `BrazeManager.swift` ファイルを作成するには、_BrazeManager_ という名前の新しい Swift ファイルを作成し、目的の場所のプロジェクトに追加します。次に、`import Foundation` を SPM の `import AppboyUI` に置き換えてから (CocoaPods の場合は `import Appboy_iOS_SDK`)、`BrazeManager` クラスを作成します。これは、すべての Braze 関連のメソッドと変数をホストするために使用されます。`Appboy_iOS_SDK`
 
 {% alert note %}
 - `BrazeManager` は `NSObject` クラスであり、構造体ではないため、`ABKInAppMessageUIDelegate` などの ABK デリゲートに準拠できます。
-- `BrazeManager` は、このクラスのインスタンスが1つだけ使用されるように設計されたシングルトンクラスです。これは、オブジェクトへの統合されたアクセスポイントを提供するために行われます。
+- `BrazeManager` は、このクラスのインスタンスが1 つだけ使用されるように設計されたシングルトンクラスです。これは、オブジェクトへの統合されたアクセスポイントを提供するために行われます。
 {% endalert %} 
 
 1. `BrazeManager`クラスを初期化する _shared_ という名前の静的変数を追加します。これは、一度だけ遅延開始されることが保証されています。
@@ -52,8 +52,8 @@ noindex: true
 {% subtabs global %}
 {% subtab Swift %}
 
-\`\`\`swift
-class BrazeManager:NSObject {
+```swift
+class BrazeManager: NSObject {
   // 1
   static let shared = BrazeManager()
   
@@ -62,10 +62,10 @@ class BrazeManager:NSObject {
   
   // 3
   private var appboyOptions: [String:Any] {
-return [:]
+    return [:]
+  }
 }
-    }
-  ```
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
@@ -73,25 +73,25 @@ return [:]
  
 // 1
 + (instancetype)shared {
-static BrazeManager *shared = nil;
-static dispatch_once_t onceToken;
-dispatch_once(&onceToken, ^{
-shared = [[BrazeManager alloc] init];
-// Do any other initialisation stuff here
-});
+    static BrazeManager *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[BrazeManager alloc] init];
+        // Do any other initialisation stuff here
+    });
     return shared;
-    }
+}
  
 // 2
-\- (NSString \*)apiKey {
+- (NSString *)apiKey {
   return @"YOUR-API-KEY";
 }
  
 // 3
-\- (NSDictionary \*)appboyOptions {
+- (NSDictionary *)appboyOptions {
   return [NSDictionary dictionary];
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -100,9 +100,9 @@ shared = [[BrazeManager alloc] init];
 ### SDK の初期化
 
 {% tabs local %}
-{% tab Step 1: Initialize SDK from BrazeManager.swift %}
+{% tab ステップ 1:BrazeManager swift から SDK を初期化する %}
 
-##### BrazeManager.swift から SDK を初期化します
+##### BrazeManager.swift から SDK を初期化する
 次に、SDK を初期化する必要があります。このガイドでは、すでに [SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) を Xcode プロジェクトに追加していることを前提としています。また、[ワークスペース SDK エンドポイント]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) および [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) を `Info.plist` ファイルまたは `appboyOptions` に設定する必要があります。
 
 `didFinishLaunchingWithOptions` メソッドを `AppDelegate.swift` ファイルから `BrazeManager.swift` ファイルに戻りタイプなしで追加します。`BrazeManager.swift` ファイルに同様のメソッドを作成すると、`import AppboyUI` ステートメントは `AppDelegate.swift` ファイルにはありません。 
@@ -131,20 +131,20 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Step 2: Handle Appboy Initialization %}
+{% tab ステップ 2:Appboy の初期化処理 %}
 
-##### AppDelegate.swift での Appboy の初期化の処理
+##### AppDelegate.swift での Appboy の初期化処理
 次に、`AppDelegate.swift` ファイルに戻り、AppDelegate の `didFinishLaunchingWithOptions` メソッドに以下のコードスニペットを追加して、`BrazeManager.swift` ヘルパーファイルから Appboy の初期化を処理します。`AppDelegate.swift` に `import AppboyUI` ステートメントを追加する必要はありません。
 
 {% subtabs global %}
 {% subtab Swift %}
 
-\`\`\`swift
+```swift
 func application(
-  _ application:UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey:Any]?
+  _ application: UIApplication, 
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 ) -> Bool {
-  // アプリケーション起動後のカスタマイズ用のオーバーライドポイント
+  // Override point for customization after application launch
 
   BrazeManager.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
@@ -154,14 +154,14 @@ func application(
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-\- (BOOL)application:(UIApplication \*)application didFinishLaunchingWithOptions:(NSDictionary \*)launchOptions {
-  // アプリケーション起動後のカスタマイズ用のオーバーライドポイント
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Override point for customization after application launch
  
   [[BrazeManager shared] application:application didFinishLaunchingWithOptions:launchOptions];
    
   return YES;
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -174,16 +174,16 @@ func application(
 ### プッシュ通知
 
 {% tabs local %}
-{% tab Step 1: Add Push Certificate %}
+{% tab ステップ 1:プッシュ証明書の追加 %}
 
 ##### プッシュ証明書の追加
 
 Braze ダッシュボードで既存のワークスペースに移動します。**プッシュ通知設定 ngs** で、プッシュ証明書ファイルを Braze ダッシュボードにアップロードして保存します。 
 
-![\]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Step 2: Register for Notifications %}
+{% tab ステップ 2:通知を登録する %}
 
 {% alert important %}
 この手順の最後にある専用チェックポイントをお見逃しなく！
@@ -202,53 +202,53 @@ Braze ダッシュボードで既存のワークスペースに移動します�
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\`swift
-func application(_ application:UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey:Any]?) {
-Appboy.start(withAPIKey: apikey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
-// 1
-let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-// 2
-UNUserNotificationCenter.current().requestAuthorization(option: options) { (granted, error) in
-// 3
-Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-}
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey:Any]?) {
+  Appboy.start(withAPIKey: apikey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
+  // 1 
+  let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+  // 2 
+  UNUserNotificationCenter.current().requestAuthorization(option: options) { (granted, error) in
+  // 3 
+    Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
+  }
   
-  // 4
+  // 4 
   UIApplications.shared.registerForRemoteNotificiations()
 }
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-\- (void)application:(UIApplication \*)application didFinishLaunchingWithOptions:(NSDictionary \*)launchOptions {
+- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [Appboy startWithApiKey:[self apiKey] inApplication:application withLaunchOptions:launchOptions withAppboyOptions:[self appboyOptions]];
    
   // 1
   UNAuthorizationOptions options = (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
    
   // 2
-[[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
-// 3
-  [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+  // 3
+    [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
   }];
  
   // 4
   [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 
 {% alert checkpoint %}
 コードのコンパイルとアプリケーションの実行に進みます。
-\- アプリで、プッシュ通知を求めるプロンプトが表示されていることを確認してから、先に進みます。
-\- メッセージが表示されない場合は、アプリの削除と再インストールを試して、プッシュ通知のプロンプトが以前に表示されていないことを確認します。
+- アプリで、プッシュ通知を求めるプロンプトが表示されていることを確認してから、先に進みます。
+- プロンプトが表示されない場合は、アプリの削除と再インストールを試して、プッシュ通知のプロンプトが以前に表示されていないことを確認します。
 
 プッシュ通知を求めるプロンプトが表示されていることを確認してから、先に進みます。
 {% endalert %}
 
 {% endtab %}
-{% tab Step 3: Forward Methods %}
+{% tab ステップ 3:転送方式 %}
 
 ##### プッシュ通知メソッドの転送
 
@@ -291,9 +291,9 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### ステップ2:リモート通知のサポート
-[**署名および機能**] タブで、[**バックグラウンドモード**] サポートを追加し、[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+[**署名および機能**] タブで、[**バックグラウンドモード**] サポートを追加し、[**リモート通知**] を選択して、Braze から発信されるリモートプッシュ通知のサポートを開始します。<br><br>![署名 & 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
-###### ステップ3:リモート通知処理
+###### ステップ3: リモート通知処理
 Braze SDK は、Braze から発信されるリモートプッシュ通知を処理できます。Braze にリモート通知を転送します。SDK は Braze から発信されたものではないプッシュ通知を自動的に無視します。プッシュ通知拡張子で、`BrazeManager.swift` ファイルに次のメソッドを追加します。
 
 {% subtabs global %}
@@ -321,7 +321,7 @@ func application(
 {% endsubtab %}
 {% endsubtabs %}
 
-###### ステップ4:通知応答の転送
+###### ステップ 4:通知応答の転送
 
 Braze SDK は、Braze から発信されるプッシュ通知の応答を処理できます。通知の応答を Braze に転送します。SDK は、Braze から発信されていないプッシュ通知からの応答を自動的に無視します。以下のメソッドを `BrazeManager.swift` ファイルに追加します。
 
@@ -364,7 +364,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 ### ユーザー変数とメソッドへのアクセス
 
 {% tabs local %}
-{% tab Create User Variables and Methods %}
+{% tab ユーザー変数およびメソッドの作成 %}
 
 ##### ユーザー変数とメソッドの作成
 
@@ -377,21 +377,21 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 {% subtabs global %}
 {% subtab Swift %}
 
-\`\`\`swift
+```swift
 // MARK: - User
 extension BrazeManager {
-// 1
-var user:ABKUser? {
-  return Appboy.sharedInstance()?.user
+  // 1
+  var user: ABKUser? {
+    return Appboy.sharedInstance()?.user
   }
 
-  // 2
-  var userId:String? {
+  // 2 
+  var userId: String? {
     return user?.userID
   }
 
   // 3
-  func changeUser(_ userId:String) {
+  func changeUser(_ userId: String) {
     Appboy.sharedInstance()?.changeUser(userId)
   }
 }
@@ -400,21 +400,21 @@ var user:ABKUser? {
 {% subtab Objective-C %}
 ```objc
 // MARK: - User
-// 1
-  \- (ABKUser \*)user {
-return [[Appboy sharedInstance] user];
-  }
+  // 1
+- (ABKUser *)user {
+  return [[Appboy sharedInstance] user];
+}
    
-   // 2
-\- (NSString \*)userId {
+   // 2 
+- (NSString *)userId {
   return [self user].userID;
 }
  
   // 3
-\- (void)changeUser:(NSString \*)userId {
-[[Appboy sharedInstance] changeUser:userId];
+- (void)changeUser:(NSString *)userId {
+  [[Appboy sharedInstance] changeUser:userId];
 }
-  \`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -427,7 +427,7 @@ return [[Appboy sharedInstance] user];
 ### ログ分析
 
 {% tabs local %}
-{% tab Step 1: Custom Events %}
+{% tab ステップ 1:カスタムイベント %}
 
 ##### カスタムイベント記録メソッドの作成
 
@@ -460,7 +460,7 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 2: Custom Attributes %}
+{% tab ステップ 2:カスタム属性 %}
 
 ##### カスタム属性記録メソッドの作成 
 
@@ -525,7 +525,7 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 3: Purchases %}
+{% tab ステップ 3:購入 %}
 
 ##### 購入記録メソッドの作成
 
@@ -543,21 +543,21 @@ open func logPurchase(_ productIdentifier: String, inCurrency currency: String, 
 {% subtabs global %}
 {% subtab Swift %}
 
-\`\`\`swift
-func logPurchase(_ productIdentifier:String, inCurrency currency:String, atPrice price:
-String, withQuantity quantity:Int) {
+```swift
+func logPurchase(_ productIdentifier: String, inCurrency currency: String, atPrice price:
+String, withQuantity quantity: Int) {
 
-  Appboy.sharedInstance()?.logPurchase(productIdentifier, inCurrency: currency, atPrice:NSDecimalNumber(string: price), withQuantity:UInt(quantity))
+  Appboy.sharedInstance()?.logPurchase(productIdentifier, inCurrency: currency, atPrice: NSDecimalNumber(string: price), withQuantity: UInt(quantity))
 
 }
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-\- (void)logPurchase:(NSString \*)productIdentifier inCurrency:(nonnull NSString \*)currencyCode atPrice:(nonnull NSDecimalNumber \*)price withQuantity:(NSUInteger)quantity {
-[[Appboy sharedInstance] logPurchase:productIdentifier inCurrency:currencyCode atPrice:price withQuantity:quantity];
+- (void)logPurchase:(NSString *)productIdentifier inCurrency:(nonnull NSString *)currencyCode atPrice:(nonnull NSDecimalNumber *)price withQuantity:(NSUInteger)quantity {
+  [[Appboy sharedInstance] logPurchase:productIdentifier inCurrency:currencyCode atPrice:price withQuantity:quantity];
 }
-  \`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -570,7 +570,7 @@ String, withQuantity quantity:Int) {
 ### アプリ内メッセージ
 
 {% tabs local %}
-{% tab Step 1: Conform to Delegate %}
+{% tab ステップ 1:デリゲートに適合 %}
 
 {% alert important %}
 アプリケーションでこのチャネルを使用する予定がない場合、以下のアプリ内メッセージセクションは統合には必要ありません。
@@ -584,15 +584,15 @@ String, withQuantity quantity:Int) {
 
 {% subtabs global %}
 {% subtab swift %}
-\`\`\`swift
-func application(_ application:UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey:Any]?) {
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
   Appboy.start(withApiKey: apiKey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
 
-  let options:UNAuthorizationOptions = [.alert, .sound, .badge]
+  let options: UNAuthorizationOptions = [.alert, .sound, .badge]
   UNUserNotificationCenter.current().requestAuthorization(options: options) { (granted, error) in
-Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-}
-    UIApplication.shared.registerForRemoteNotifications()
+    Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
+  }
+  UIApplication.shared.registerForRemoteNotifications()
 
   Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
 }
@@ -600,22 +600,22 @@ Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-\- (void)application:(UIApplication \*)application didFinishLaunchingWithOptions:(NSDictionary \*)launchOptions {
+- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [Appboy startWithApiKey:[self apiKey] inApplication:application withLaunchOptions:launchOptions withAppboyOptions:[self appboyOptions]];
    
   UNAuthorizationOptions options = (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
-  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * \_Nullable error) {
-[[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
-}];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
+  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+  }];
+  [[UIApplication sharedApplication] registerForRemoteNotifications];
    
   [[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 2: Add Delegate Methods %}
+{% tab ステップ 2:デリゲートメソッドの追加 %}
 
 ##### デリゲートメソッドの追加
 次に、`ABKInAppMessageUIDelegate` に準拠する拡張子を作成します。
@@ -674,7 +674,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 ### コンテンツカード
 
 {% tabs local %}
-{% tab Create Content Card Variables and Methods %}
+{% tab コンテンツカードの変数とメソッドの作成 %}
 
 {% alert important %}
 アプリケーションでこのチャネルを使用する予定がない場合、以下のコンテンツカードセクションは統合には必要ありません。
@@ -691,12 +691,12 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\`swift
-// MARK: -コンテンツカード
+```swift
+// MARK: - Content Cards
 extension BrazeManager {
 
-  // 1
-  func displayContentCards(navigationController:UINavigationController?) {
+  // 1 
+  func displayContentCards(navigationController: UINavigationController?) {
       
     // 2 
     let contentCardsVc = ABKContentCardsTableViewController()
@@ -709,18 +709,18 @@ extension BrazeManager {
 {% subtab Objective-C %}
 ```objc
 // MARK: - Content Cards
-// 1
-  \- (void)displayContentCards:(UINavigationController \*)navigationController {
-// 2
-ABKContentCardsTableViewController *contentCardsVc = [[ABKContentCardsTableViewController alloc] init];
-contentCardsVc.title = @"Content Cards";
-[navigationController pushViewController:contentCardsVc animated:YES];
+  // 1
+- (void)displayContentCards:(UINavigationController *)navigationController {
+  // 2
+  ABKContentCardsTableViewController *contentCardsVc = [[ABKContentCardsTableViewController alloc] init];
+  contentCardsVc.title = @"Content Cards";
+  [navigationController pushViewController:contentCardsVc animated:YES];
 }
-\`\`\`
-  {% endsubtab %}
-  {% endsubtabs %}
-  {% endtab %}
-  {% endtabs %}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 {% alert checkpoint %}
 コードのコンパイルとアプリケーションの実行に進みます。<br><br>アプリケーションで `ABKContentCardsTableViewController` を表示してみてから先に進んでください。
@@ -735,5 +735,3 @@ contentCardsVc.title = @"Content Cards";
 - [高度なアプリ内メッセージ実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [高度なコンテンツカード実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
-[2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %}
-[3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 

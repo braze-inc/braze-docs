@@ -19,7 +19,7 @@ The Braze and Tinyclues integration offers users a path to better CRM planning a
 | Requirement | Description |
 |---|---|
 | Tinyclues account | A Tinyclues account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Data import integration
 
@@ -59,6 +59,10 @@ Having trouble locating your cohort? Check out our [troubleshooting](#troublesho
 To use your Tinyclues segment, create a Braze campaign or Canvas and select the segment as your target audience. 
 
 ![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Tinyclues cohort".][5]{: style="max-width:90%;"}
+
+## User Matching
+
+Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. Identified users who were originally created as anonymous users can't be identified by their `device_id`, and must be identified by their `external_id` or `alias`.
 
 ## Troubleshooting
 

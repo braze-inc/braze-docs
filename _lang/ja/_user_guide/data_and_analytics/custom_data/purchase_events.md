@@ -59,7 +59,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 各フィルターの詳細については、[セグメンテーションフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters)の用語集を参照し、「購入行動」でフィルター処理してください。
 
-![厳密に 3 回購入したユーザーのフィルター適用] [1]{: style="max-width:80%;"}
+![ちょうど 3 回購入したユーザーのフィルター適用][1]{: style="max-width:80%;"}
 
 {% alert tip %}
 特定の購入の発生回数に基づいてセグメンテーションを行う場合は、その購入を個別に[増分カスタム属性]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage)として記録する必要があります。
@@ -111,11 +111,50 @@ Braze はセグメンテーション用に購入指標を追跡するだけで�
 
 このデータは [[収益レポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data)] ページで確認できます。
 
+### 収益計算の理解
+
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>指標</th>
+            <th>定義</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">生涯収益</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">ユーザーあたりの生涯価値</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー一人当たりの生涯価値' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='平均日収' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">日割り購入数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='1日の購入額' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">ユーザーあたりの日割り収益</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザー1人あたりの日次収益' %}</td>
+        </tr>
+    </tbody>
+</table>
+
 #### 生涯収益の計算
 
 Braze は購入イベントを使用してユーザーの生涯収益 (生涯価値または LTV とも呼ばれる) を計算します。これは、顧客との将来の関係全体にわたって見込まれる純利益の予測です。これにより、顧客の獲得およびリテンション戦略について、情報に基づく意思決定に役立ちます。
 
-$$\\text{生涯収益} = \\frac{\\text{総支出金額}}{\\text{購入イベントの合計数}}$$
+$$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$  
 
 Braze には、ユーザーの LTV を把握するために参照できる主な場所が 2 か所あります。
 
@@ -153,9 +192,9 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 ![][6]{: style="max-width:80%;margin-left:15px;"}
 
 これらのセグメンテーションフィルターには次のようなものがあります。
-\- 過去 Y 日間に、プロパティ Y とその値 V を持つカスタムイベントを X 回実行した。
-\- 過去 Y 日間に、プロパティ Y とその値 V を持つ購入を X 回行った。
-\- 1、3、7、14、21、30 日以内にセグメント化する機能を追加。
+- 最後のY 日間に、V X 倍のプロパティ Y でカスタムイベントを実行しました。
+- 過去 Y 日間に、プロパティ Y とその値 V を持つ購入を X 回行った。
+- 1、3、7、14、21、30 日以内に、セグメントに加えられる条件を満たした。
 
 [セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)とは異なり、使用されるセグメントはリアルタイムで更新され、サポートされるセグメントの数に制限はなく、最大 30 日間の履歴を確認でき、データポイントが使用されます。データポイントが追加で消費されるため、カスタムイベントのイベントプロパティを有効にするように、Braze カスタマーサクセスマネージャーに依頼してください。
 
@@ -164,7 +203,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 ### キャンバスエントリのプロパティとイベントプロパティ
 
 {% alert important %}
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスを作成または複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
+2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用するとき場合の参考として用意されています。
 {% endalert %}
 
 キャンバスのユーザージャーニーで `canvas_entry_properties` と `event_properties` を活用できます。詳細と例については、「[キャンバスエントリのプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)」を参照してください。
@@ -174,25 +213,25 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 {% endalert %}
 
 {% tabs local %}
-{% tab Canvas Entry Properties %}
+{% tab キャンバスエントリのプロパティ %}
 
 [キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 50 KB であることに注意してください。
 
-{% alert note %}
+{% alert important %}
 特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として元のエディターで永続的なエントリプロパティを有効にしている場合、キャンバスフローと元のキャンバスエディターでのみ `canvas_entry_properties` を参照できます。
 {% endalert %}
 
-キャンバスフローメッセージングでは、いずれのメッセージステップでも `canvas_entry_properties` を Liquid で使用できます。これらのプロパティを参照するときには、``{% raw %} canvas_entry_properties${property_name} {% endraw %}`` のLiquid を使用してください。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければならないことに注意してください。 
+キャンバスフローメッセージングでは、いずれのメッセージステップでも `canvas_entry_properties` を Liquid で使用できます。これらのプロパティを参照するときには、``{% raw %} canvas_entry_properties${property_name} {% endraw %}`` の Liquid を使用してください。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければならないことに注意してください。 
 
 {% raw %}
-例えば, 次のリクエストを考えてみます。`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`。Liquid `{{canvas_entry_properties.${product_name}}}` を使用して、メッセージに「靴」という語を追加できます。
+例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` というリクエストを考えてみます。`{{canvas_entry_properties.${product_name}}}` という Liquid でメッセージに「靴」という単語を追加できます。
 {% endraw %}
 
 元のエディターで作成されたキャンバスの場合、`canvas_entry_properties` はキャンバスの最初のフルステップでのみ参照できます。
 
 {% endtab %}
 
-{% tab Event Properties %}
+{% tab イベントプロパティ %}
 イベントプロパティとは、カスタムイベントと購入に設定したプロパティを指します。これらの `event_properties` は、アクションベースの配信やキャンバスを含むキャンペーンで使用できます。
 
 キャンバスフローでは、アクションパスステップに続く任意のメッセージステップで、カスタムイベントと購入イベントのプロパティを Liquid で使用できます。キャンバスフローでこれらの `event_properties` を参照する場合は、必ず {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} を使用してください。メッセージコンポーネントでこのように使用するには、これらのイベントがカスタムイベントまたは購入イベントである必要があります。

@@ -10,14 +10,14 @@ Tool:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 位置情報とジオフェンス
 
 iOS のジオフェンスをサポートするには:
 
 1. 統合がバックグラウンドプッシュ通知に対応している必要があります。
-2. Braze ジオフェンスを有効にするには、SDK を通じて位置情報の収集を有効にするか (暗示的)、ジオフェンスの収集を有効にする (明示的) 必要があります。これらはデフォルトでは有効になっていません。
+2. Braze ジオフェンスを有効にするには、SDK を通じて位置情報の収集を有効にするか (暗示的)、ジオフェンスの収集を[有効にする (明示的) 必要があります]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/#enabling-automatic-location-tracking)。これらはデフォルトでは有効になっていません。
 
 {% alert important %}
 iOS 14 の時点では、おおよその位置情報の提供許可を選択しているユーザーの場合、ジオフェンスが確実に機能しないことがあります。
@@ -25,13 +25,13 @@ iOS 14 の時点では、おおよその位置情報の提供許可を選択し�
 
 ## ステップ 1:バックグラウンドのプッシュを有効にする
 
-ジオフェンスの同期戦略を最大限に活用するには、標準のプッシュ統合を完了することに加えて、[バックグラウンドプッシュ][6]を有効にする必要があります。
+ジオフェンスの同期戦略を最大限に活用するには、標準のプッシュ統合を完了することに加えて、[バックグラウンドプッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work)を有効にする必要があります。
 
 ## ステップ 2:ジオフェンスを有効にする
 
 デフォルトでは、ジオフェンスは位置情報の自動収集が有効かどうかに基づいて有効になります。ジオフェンスを有効にするには、`Info.plist` ファイルを使用します。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` ディクショナリ内にブール値の `EnableGeofences` サブエントリを追加し、値を `YES` に設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
 
-[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] メソッドを使用して、アプリの起動時にジオフェンスを有効にすることもできます。`appboyOptions` ディクショナリで、`ABKEnableGeofencesKey` を `YES` に設定します。以下に例を示します。
+[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) メソッドを使用して、アプリの起動時にジオフェンスを有効にすることもできます。`appboyOptions` ディクショナリで、`ABKEnableGeofencesKey` を `YES` に設定します。以下に例を示します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -56,11 +56,11 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3:Braze のバックグラウンドプッシュを確認する
+## ステップ 3: Braze のバックグラウンドプッシュを確認する
 
-Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。[iOS のカスタマイズ][7]に関する記事に従って、Braze のジオフェンス同期通知を受信したときにアプリケーションで不要なアクションが実行されないようにします。
+Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。[iOS のカスタマイズ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/)に関する記事に従って、Braze のジオフェンス同期通知を受信したときにアプリケーションで不要なアクションが実行されないようにします。
 
-## ステップ 4:NSLocationAlwaysUsageDescription を Info.plist に追加する
+## ステップ 4:NSLocationAlwaysUsageDescriptionをInfo.plistに追加します
 
 アプリケーションで位置情報を追跡する必要がある理由の説明を含んだ `String` 値を使用して、キー `NSLocationAlwaysUsageDescription` および `NSLocationAlwaysAndWhenInUseUsageDescription` を `info.plist` に追加します。iOS 11 以降では両方のキーが必要です。
 この説明は、システムの位置情報プロンプトで権限がリクエストされ、ユーザーに位置情報の追跡の利点を明確に説明する必要がある場合に表示されます。
@@ -98,17 +98,17 @@ iOS では、1 つのアプリに保存できるジオフェンスは 20 個ま�
 
 ### 場所ページからジオフェンスを有効にする
 
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Brazeの位置情報ページのジオフェンスオプション]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### 設定ページからジオフェンスを有効にする
 
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Braze の設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## 自動ジオフェンスリクエストを無効にする
 
 iOS SDK バージョン 3.21.3 以降では、ジオフェンスが自動的にリクエストされないようにすることができます。これを行うには、`Info.plist` ファイルを使用します。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` ディクショナリ内にブール値の `DisableAutomaticGeofenceRequests` サブエントリを追加し、値を `YES` に設定します。
 
-[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] メソッドを使用して、アプリの起動時に位置情報の自動追跡を有効にすることもできます。`appboyOptions` ディクショナリで、`ABKDisableAutomaticGeofenceRequestsKey` を `YES` に設定します。以下に例を示します。
+[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) メソッドを使用して、アプリの起動時に位置情報の自動追跡を有効にすることもできます。`appboyOptions` ディクショナリで、`ABKDisableAutomaticGeofenceRequestsKey` を `YES` に設定します。以下に例を示します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -159,9 +159,4 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/#enabling-automatic-location-tracking
-[4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
-[support]: {{site.baseurl}}/braze_support/
 

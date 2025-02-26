@@ -15,13 +15,11 @@ channel:
 
 > このリファレンス記事では、Android または FireOS アプリケーションにカスタムニュースフィードスタイルを追加する方法について説明します。 
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Braze の UI 要素は、Android 標準の UI ガイドラインにマッチしたデフォルトのルックアンドフィールで提供され、シームレスな体験を提供します。これらのデフォルトのスタイルは、Braze SDK ディストリビューション内の `res/values/style.xml` ファイルで確認できます。
 
-\`\`\`xml
+```xml
   <style name="Braze"/>
   <!-- Feed -->
   <style name="Braze.Feed"/>
@@ -40,9 +38,9 @@ Braze の UI 要素は、Android 標準の UI ガイドラインにマッチし�
 必要に応じて、これらのスタイルをオーバーライドし、アプリにより適したルックアンドフィールを作成することができます。スタイルをオーバーライドするには、スタイル全体をプロジェクトの `styles.xml` ファイルにコピーし、変更を加えます。すべての属性が正しく設定されるようにするには、スタイル全体をローカルの `styles.xml` にコピーする必要があります。
 
 {% tabs local %}
-{% tab Correct style override %}
+{% tab 正しいスタイルのオーバーライド %}
 
-\`\`\`xml
+```xml
 <style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
@@ -54,9 +52,9 @@ Braze の UI 要素は、Android 標準の UI ガイドラインにマッチし�
 </style>
 ```
 {% endtab %}
-{% tab Incorrect style override %}
+{% tab スタイルのオーバーライドが正しくない %}
 
-\`\`\`xml
+```xml
 <style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
@@ -76,13 +74,13 @@ Braze の UI 要素は、Android 標準の UI ガイドラインにマッチし�
 
 ## カスタムフォントの設定
 
-Braze では、[フォントファミリガイド][40]を使用してカスタムフォントを設定することができます。これを使用するには、カードのスタイルをオーバーライドし、`fontFamily` 属性を使用してカスタムフォントファミリを使用するように Braze に指示します。
+Braze では、[フォントファミリガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization)を使用してカスタムフォントを設定することができます。これを使用するには、カードのスタイルをオーバーライドし、`fontFamily` 属性を使用してカスタムフォントファミリを使用するように Braze に指示します。
 
-たとえば、短いニュースカードのすべてのタイトルのフォントを更新するには、`Braze.Cards.ShortNews.Title` スタイルをオーバーライドし、カスタムフォントファミリを参照します。属性値は、`res/font` ディレクトリのフォントファミリを指す必要があります。
+たとえば、短いニュースカードのすべてのタイトルのフォントを更新するには、`Braze.Cards.ShortNews.Title` スタイルをオーバーライドし、カスタムフォントファミリを参照します。属性値は、`res/font`ディレクトリのフォントファミリを指す必要があります。
 
 以下は、最後の行でカスタムフォントファミリ `my_custom_font_family` が参照されている部分的なコード例です。
 
-\`\`\`
+```
 <style name="Braze.Cards.ShortNews.Title">
   <item name="android:layout_height">wrap_content</item>
   ...
@@ -91,4 +89,3 @@ Braze では、[フォントファミリガイド][40]を使用してカスタ�
 </style>
 ```
 
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

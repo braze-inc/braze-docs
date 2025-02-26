@@ -1,45 +1,45 @@
 ---
-nav_title: "削除:カタログ項目を削除"
-article_title: "削除:カタログ項目を削除"
+nav_title: "DELETE:カタログ項目を削除する"
+article_title: "DELETE:カタログ項目を削除する"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "この記事では、Delete カタログアイテムBraze エンドポイントの詳細について説明します。"
+description: "この記事では、「カタログ項目を削除」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログアイテムの削除
+# カタログ項目を削除する
 {% apimethod delete %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログ内の項目を削除します。 
+> カタログの項目を削除するには、このエンドポイントを使う。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.delete_item` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.delete_item`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
-## パスパラメータ
+## パスパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須| 文字列| カタログの名前。|
-| `item_id` | Required | String | カタログアイテムのID。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+| `item_id` | 必須 | 文字列 | カタログ項目のID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 要求パラメータ
+## リクエストパラメーター
 
-このエンドポイントのリクエストボディはありません。
+このエンドポイントにはリクエストボディがない。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
@@ -47,13 +47,13 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## レスポンス
+## 応答
 
-このエンドポイントには、`202`、`400`、`404` の3 つのステータスコード応答があります。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
 ### 成功応答の例
 
-ステータスコード`202` は、以下のレスポンスボディを返す可能性があります。
+ステータスコード `202` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -61,9 +61,9 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 }
 ```
 
-### エラーレスポンス例
+### エラー応答例
 
-ステータスコード`400` は、以下のレスポンスボディを返す可能性があります。発生する可能性のあるエラーの詳細については、[トラブルシューティング](#troubleshooting)を参照してください。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -85,13 +85,13 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## トラブルシューティング
 
-次の表に、返される可能性のあるエラーと関連するトラブルシューティング手順を示します。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| エラー| トラブルシューティング|
+| エラー | トラブルシューティング |
 | --- | --- |
-| `arbitrary-error` | 任意のエラーが発生しました。もう一度やり直すか、[Support]({{site.baseurl}}/support_contact/)にお問い合わせください。|
-| `catalog-not-found` | カタログ名が有効であることを確認します。|
-| `item-not-found` | 削除するアイテムがカタログに存在することを確認します。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `arbitrary-error` | 任意のエラーが発生した。もう一度試すか、[サポートに]({{site.baseurl}}/support_contact/)連絡する。 |
+| `catalog-not-found` | カタログ名が有効であることを確認する。 |
+| `item-not-found` | 削除する項目がカタログに存在することを確認します。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

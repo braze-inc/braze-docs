@@ -1,6 +1,6 @@
 <div class="gitedit_div">
     <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank">
-        <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" /> &nbsp; {{ site.data.i18n[site.language]['edit_github'] | default: "Edit this page on GitHub" }}
+        <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="Github" /> &nbsp; {{ site.data.i18n[site.language]['edit_github'] | default: "Edit this page on GitHub" }}
     </a>
 </div>
 
@@ -13,11 +13,11 @@
 
     <div id="feedback_answer">
       <ul class="list-inline rating-list">
-        <li class="inline-star"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i></li>
-        <li class="inline-star"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
-        <li class="inline-star"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i></li>
-        <li class="inline-star"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
-        <li class="inline-star"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
       </ul>
     </div>
     <div id="feedback_comment_div">
@@ -35,4 +35,6 @@
 
 <script type="text/javascript">
     var feedback_site = '{{site.baseurl}}{{page.url}}';
+    var feedback_article_title = '{{page.article_title}}';
+    var feedback_nav_title = '{{page.nav_title}}';
 </script>

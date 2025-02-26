@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # プッシュプライマーの統合
 
@@ -78,7 +78,7 @@ if #available(iOS 10, *) {
 {% endtab %}
 {% endtabs %}
 
-## ステップ2: AppDelegate.m ファイルにカスタムイベントチェッカーを追加する
+## ステップ2:カスタム・イベント・チェッカーをAppDelegate.m ファイルに追加する。
 
 次のコードスニペットは、カスタムイベントを起動する必要があるかどうかをチェックします。`AppDelegate.m` に次のコード行を追加します。
 

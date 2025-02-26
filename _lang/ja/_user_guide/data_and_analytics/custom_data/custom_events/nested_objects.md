@@ -15,7 +15,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 ## 制限事項
 
 - 階層化トされたデータは、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)と[購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)の両方でサポートされていますが、他のイベントタイプではサポートされていません。
-- 配列またはオブジェクト値を含むイベントプロパティオブジェクトは、最大 50 KB のイベントプロパティペイロードを持つことができます。
+- 配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 10 KB のイベントプロパティペイロードを設定できます。
 - 購入イベントに対してイベントプロパティスキーマを生成することはできません。
 - イベントプロパティスキーマは、過去 24 時間のカスタムイベントをサンプリングすることで生成されます。
 
@@ -31,7 +31,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 1. [**データ設定**] > [**カスタムイベント**] に移動します。
 2. 階層化プロパティを持つイベントについて、[**プロパティの管理**] を選択します。
-3. アイコンをクリックしてスキーマを生成します。スキーマを表示するには、 <i class="fas fa-plus"></i> プラスボタンをクリックします。
+3. スキーマを生成するには、<i class="fas fa-arrows-rotate"></i> ボタンを選択する。スキーマを表示するには、<i class="fas fa-plus"></i> プラスボタンを選択する。
 
 ![][6]{: style="max-width:80%;"}
 
@@ -39,17 +39,16 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 スキーマを生成すると、セグメンテーション中およびパーソナライゼーション中に階層化データを参照できます。使用例については、以下のセクションを参照してください。
 
-- API リクエストの本文
-- Liquid のテンプレート作成
-- メッセージトリガー
-- セグメンテーション
-- パーソナライゼーション
-- イベントプロパティのセグメンテーション
+- [API リクエストの本文](#api-request-body)
+- [Liquid のテンプレート作成](#liquid-templating)
+- [メッセージのトリガー](#message-triggering)
+- [セグメンテーション](#segmentation)
+- [パーソナライゼーション](#personalization)
 
 ### API リクエストの本文
 
 {% tabs %}
-{% tab Music Example %}
+{% tab 音楽の例 %}
 
 以下は、「Created Playlist」(作成された再生リスト) カスタムイベントの `/users/track` の例です。再生リストが作成されたら、再生リストのプロパティを収集するために、プロパティとして「songs」(曲) と 曲の階層化プロパティの配列をリストする API リクエストを送信します。
 
@@ -78,9 +77,9 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 ...
 ```
 {% endtab %}
-{% tab Restaurant Example%}
+{% tab レストランの例%}
 
-以下は、「Ordered」(注文を受けた) カスタムイベントの`/users/track` の例です。注文が完了した後、その注文のプロパティを収集するために、プロパティとして「r\_details」とその注文の階層化プロパティをリストする API リクエストを送信します。
+以下は、「Ordered」(注文を受けた) カスタムイベントの`/users/track` の例です。注文が完了した後、その注文のプロパティを収集するために、プロパティとして「r_details」とその注文の階層化プロパティをリストする API リクエストを送信します。
 
 ```
 ...
@@ -104,7 +103,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 次の Liquid テンプレートの例は、前述の API リクエストから保存された階層化プロパティを参照し、Liquid メッセージングで使用する方法を示しています。Liquid とドット表記を使用して、階層化されたデータを詳細に検索し、メッセージに含める特定のノードを検出します。
 
 {% tabs %}
-{% tab Music Example %}
+{% tab 音楽の例 %}
 「Created Playlist」(作成した再生リスト) イベントによってトリガーされるメッセージ内の Liquid でのテンプレート。
 
 {% raw %}
@@ -113,7 +112,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 {% endraw %}
 
 {% endtab %}
-{% tab Restaurant Example %}
+{% tab レストランの例 %}
 「Ordered」(注文を受けた) イベントによってトリガーされるメッセージ内の Liquid でのテンプレート:
 
 {% raw %}
@@ -128,19 +127,24 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 これらのプロパティを使用してキャンペーンをトリガーするには、カスタムイベントまたは購入を選択し、**階層化プロパティ**フィルターを追加します。メッセージのトリガーはまだアプリ内メッセージでサポートされていませんが、メッセージ内の Liquid パーソナライゼーションの階層化プロパティは引き続き表示されます。
 
 {% tabs %}
-{% tab Music Example %}
+{% tab 音楽の例 %}
 
 「Created Playlist」イベントから階層化プロパティを持つキャンペーンをトリガーします。
 
-![A user choosing a nested property for property filters on a custom event.]({% image_buster /assets/img/nested_object2.png %})
+![ユーザーがカスタムイベントでプロパティフィルター用にネストされたプロパティを選択。]({% image_buster /assets/img/nested_object2.png %})
 
-トリガー条件 `songs[].album.yearReleased` [である] 「1968」は、1968 年にリリースされたアルバムに収録されたいずれかの曲があるイベントと一致します。配列の内部を詳しく調べるために大かっこ (`[]`) の表記を使用し、その配列内の**いずれかの**項目がイベントプロパティと一致すれば、「一致」になります。<br>
+トリガー条件 `songs[].album.yearReleased` [である] 「1968」は、1968 年にリリースされたアルバムに収録されたいずれかの曲があるイベントと一致します。配列の内部を詳しく調べるために大かっこ (`[]`) の表記を使用し、その配列内の**いずれかの**項目がイベントプロパティと一致すれば、「一致」になります。
+
+{% alert important %}
+**does not equal**フィルターは、配列内のどのプロパティも指定された値と等しくない場合にのみマッチする。<br><br>たとえば、キャンバス A のアクションベースのカスタムイベントの階層化プロパティフィルターが「smartwatch」と**等しく**、キャンバス B のアクションベースのカスタムイベントの階層化プロパティフィルターが「simphone」と**等しくない**とします。プロパティに「smartwatch」と「simphone」があれば、両方のキャンバスがトリガーされます。しかし、プロパティに "simphone "や "sim only "があれば、どちらのキャンバスもトリガーしない。
+{% endalert %}
+
 {% endtab %}
-{% tab Restaurant Example %}
+{% tab レストランの例 %}
 
 「Ordered」 (注文された) イベントから階層化プロパティを持つキャンペーンをトリガーします。
 
-![A user adding the property filter r_details.name is McDonalds for a custom event.]({% image_buster /assets/img/nested_object1.png %})
+![ユーザーがカスタムイベントのプロパティフィルター「r_details.name is McDonalds」を追加。]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`:"Mcdonalds"<br>
 `r_details.location.city`:"Montclair"
@@ -173,7 +177,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 ### 送信できる階層化データの量はどの程度ですか?
 
-イベントの 1 つ以上のプロパティに階層化されたデータが含まれている場合、イベントのすべてのプロパティを合計した最大ペイロードは 50 KB です。そのサイズ制限を超えたリクエストは拒否されます。
+1 つ以上のイベントのプロパティにネストされたデータが含まれている場合、1 つのイベントのすべての組み合わせプロパティの最大ペイロードは100KB です。そのサイズ制限を超えたリクエストは拒否されます。
 
 [4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}

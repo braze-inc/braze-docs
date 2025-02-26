@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze Learning Login
     link: https://learning.braze.com/
@@ -44,8 +44,6 @@ popular_topic_list:
     link: /docs/help/help_articles/api/delete_user/
   - name: Changing Custom Data Type
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: In-App Messages Not Displaying
-    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

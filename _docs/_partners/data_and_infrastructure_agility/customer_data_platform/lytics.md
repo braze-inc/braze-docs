@@ -31,7 +31,7 @@ Connect Braze to Lytics to [import](#importing-data-from-braze-to-lytics) email,
 | Lytics API Token | A Lytics REST API Token with Data Manager permissions. <br><br> This can be created within the Lytics dashboard from **Account Settings Console** > **Access Tokens** > **Create New Token**. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Contact your Braze onboarding manager for this information if you aren't sure. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -180,7 +180,7 @@ In the **Configure Authorization** prompt that appears, provide a label and a de
 
 #### Step 2: Export your segment data to CSV
 
-In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv).
+In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
 
 #### Step 3: Configure a CSV Import Job
 

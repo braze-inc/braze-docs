@@ -13,15 +13,14 @@ tool: Canvas
 
 > Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. 
 
-Delays can make your Canvas look cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
-
-You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week.
+Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Create a delay
 
-To create a delay, first add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
+To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
 
 There are several details to consider when creating a delay in your Canvas journey.
+
 - The delay limit is 30 days.
 - A Delay component can only connect to one next step.
 
@@ -32,12 +31,14 @@ You can choose the type of delay before the next message in your Canvas. You can
 {% tabs %}
   {% tab After a duration %}
 
-  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day. 
+  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days, or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
   
-  Note the difference between how "days" and "calendar days" are calculated. 
+  Note the difference between how "days" and "calendar days" are calculated.
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
-    - A "calendar day" defines a day as 24 hours after a specified time, meaning you can choose to delay at company time or at a user's local time. If a time is not specified, the user will be delayed until midnight the next day in company time.
+    - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
+
+  You can also select **At a specific time** to specify when the users will advance in the Canvas. This option takes into account the time the user entered the Delay step. If this time is beyond the time configured in the settings, we'll append more hours to the delay. As an example, let's say today is December 11, and our Delay step is set to **After a duration** of one week at 8 am UTC. If a user enters the Delay step on December 4, they would be released from the Delay step to continue their journey today if they originally entered the Delay step at a time before 8 am UTC. If they entered the Delay step after this time, the user will be delayed until the next day (the next occurrence of this time). 
 
   {% endtab %}
   {% tab Until a specific date %}
@@ -56,11 +57,15 @@ You can choose the type of delay before the next message in your Canvas. You can
   {% endtab %}
 {% endtabs %}
 
-## Using delay steps
+## Using Delay steps
 
 Let's say that it's June 10. On June 11, you'd like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3 pm local time. At 3 pm local time on June 17, you want to send users a reminder message about the promotion.
 
-You'd start by adding a full step that sends immediately after users enter the Canvas on June 11. Then, you'd create a delay step that holds users in the step until 3 pm local time on June 17. After that, you'd link the delay step to a full step that sends its message immediately.
+The sequence Canvas steps could look like the following:
+
+1. Start by adding a Message step that sends immediately after users enter the Canvas on June 11.
+2. Create a Delay step that holds users until 1 pm local time on June 17.
+3. Link the Delay step to another Message step that sends its message immediately.
 
 ### Delay components at the end of a Canvas {#delay-as-last-step}
 
@@ -72,10 +77,10 @@ Delays have three statistics available in the analytics view of an active or pre
 
 | Metric | Description |
 |---|---|
-| `Entered` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a delay step twice, two entries will be recorded. |
+| `Entered` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Delay step twice, two entries will be recorded. |
 | `Proceeded to Next Step` | Reflects the number of entries that proceeded to the next step in the Canvas. |
 | `Exited Canvas` | Reflects the number of entries that exited the Canvas and did not proceed to the next step. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Time series for these analytics are available in the expanded component view.
 

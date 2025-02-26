@@ -5,13 +5,17 @@ page_order: 8
 page_type: reference
 description: "この記事では、キャンバスでフィーチャーフラグを使用する方法について説明します。"
 tool: Canvas
+local_redirect:
+  create-a-feature-flag: '/docs/user_guide/engagement_tools/canvas/canvas_components/feature_flags/#creating-a-feature-flag'
 ---
 
 # フィーチャーフラグ
 
 > フィーチャーフラグを使用して、新しいフィーチャーに関する仮説を実験で確認することができます。マーケターはフィーチャーフラグを使用して、[キャンバス][1]でオーディエンスをセグメント化し、フィーチャーの展開がコンバージョンに与える影響を追跡できます。さらに、[実験パス][2]では、異なるメッセージやパスを対比させてテストし、どれが最も効果的かを判断することで、コンバージョンを最適化することができます。フィーチャーを徐々により多くのユーザーに展開していく際には、勝者パスを使用します。
 
-## フィーチャーフラグを作成する
+フィーチャーフラグと Braze での使用方法の詳細については、[フィーチャーフラグ]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/)の記事を参照してください。
+
+## フィーチャー・フラッグを作成する
 
 ![][3]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -25,7 +29,7 @@ tool: Canvas
 
 フィーチャーフラグを作成するとき、デフォルトのプロパティを指定します。フィーチャーフラグのキャンバスステップを設定する際は、デフォルト値を維持するか、このステップに入るユーザー用に値を上書きすることができます。
 
-![][4]{: style="max-width:80%"}
+![][4]{: style="max-width:85%"}
 
 [**メッセージング**] > [**フィーチャーフラグ**] に移動して、追加のプロパティを編集、追加、または削除します。
 
@@ -34,8 +38,6 @@ tool: Canvas
 キャンバスとフィーチャーフラグのロールアウト (スライダーをドラッグ) は、それぞれ独立して機能することができます。ここで重要なのは、キャンバスステップに入ると、デフォルトのロールアウト設定が上書きされる点です。したがって、ユーザーがフィーチャーフラグの対象にならない場合、キャンバスステップによってそのユーザーのフィーチャーを有効にすることができます。
 
 同様に、ユーザーが特定のプロパティを持つフィーチャーフラグのロールアウトの資格を得て、キャンバスステップにも入った場合、そのキャンバスステップから上書きされた値を受け取ります。
-
-フィーチャーフラグの詳細については、[フィーチャーフラグ]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/)に関する記事の特集をご覧ください。
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths

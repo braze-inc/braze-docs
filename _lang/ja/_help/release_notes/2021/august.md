@@ -3,63 +3,63 @@ nav_title: 8月
 page_order: 4
 noindex: true
 page_type: update
-description: "この記事には2021年8月のリリースノートが含まれている。"
+description: "この記事には2021年8月のリリースノートが含まれています。"
 ---
 
 # 2021年8月
 
-## Google Audience Sync
+## Google オーディエンスの同期
 
-Braze[Audience Sync to Googleの]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)統合により、ブランドはGoogle検索、Googleショッピング、Gmail、YouTube、Googleディスプレイにクロスチャネルのカスタマージャーニーのリーチを拡大することができます。ファーストパーティの顧客データを使用することで、動的な行動トリガーやセグメンテーションなどに基づいた広告を安全に配信することができます。Brazeキャンバスの一部としてメッセージ（例えば、プッシュ、Eメール、SMSなど）をトリガーするために通常使用する基準はすべて、GoogleのCustomer Matchを介してそのユーザーに広告をトリガーするために使用することができます。
+Braze [オーディエンス同期をGoogleに]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)統合により、ブランドはクロスチャネルの顧客ジャーニーの範囲をGoogle検索、Googleショッピング、Gmail、YouTube、およびGoogleディスプレイに拡張できます。ファーストパーティの顧客データを使用して、ダイナミックな行動トリガー、セグメンテーションなどに基づいて安全に広告を配信できます。通常、Braze キャンバスの一部としてメッセージ (プッシュ、メール、SMS など) をトリガーするために使用する基準は、Google のカスタマーマッチを介してそのユーザーに広告をトリガーするために使用できます。
 
-## ベストプラクティスiOS SDKインテグレーションガイド
+## ベストプラクティスiOS SDK統合ガイド
 
-このオプションの[iOS統合SDKガイドでは]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewios_sdk_integration/)、iOS SDKとそのコアコンポーネントをアプリケーションに初めて統合する際のセットアップのベストプラクティスについて、ステップバイステップで説明します。`BrazeManager.swift` このガイドでは、Braze iOS SDKへの依存を本番コードの他の部分から切り離し、アプリケーション全体で`import AppboyUI` 。このアプローチは、過剰なSDKインポートから発生する問題を制限し、コードの追跡、デバッグ、変更を容易にする。 
+このオプションの[iOS統合SDKガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewios_sdk_integration/)は、iOS SDKとそのコアコンポーネントをアプリケーションに初めて統合する際のセットアップのベストプラクティスについて、ステップバイステップで案内します。このガイドは、`BrazeManager.swift` ヘルパーファイルを作成する際に役立ちます。このヘルパーファイルは、Braze iOS SDK への依存関係をプロダクションコードの残りの部分から切り離し、アプリケーション全体で 1 つの `import AppboyUI` を生成します。このアプローチでは、過剰な SDK インポートから発生する問題が制限されるため、コードの追跡、デバッグ、および変更が容易になります。 
 
-## 予測購買
+## 予測購入
 
-Predictive Purchasesは、マーケティング担当者が購入する可能性に基づいてユーザーを特定し、メッセージを送るための強力なツールを提供します。購買予測を作成すると、Brazeは[勾配ブースティング決定木を](https://en.wikipedia.org/wiki/Gradient_boosting)使用して機械学習モデルを訓練し、過去の購買活動から学習して将来の購買活動を予測します。詳しくは[予測購買を]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/)ご覧ください。 
+予測購入は、マーケティング担当者に購入の可能性に基づいてユーザーを特定し、メッセージングするための強力なツールを提供します。購入予測を作成すると、Brazeは[勾配ブースト決定木](https://en.wikipedia.org/wiki/Gradient_boosting)を使用して機械学習モデルをトレーニングし、過去の購入活動から学習し、将来の購入活動を予測します。[予測購入]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/)ドキュメントをご覧ください。 
 
-## ドラッグ＆ドロップ・エディター
+## ドラッグアンドドロップエディタ
 
-Braze Emailでは、新しい[ドラッグ＆ドロップ編集機能]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/)を使って、キャンペーンまたはキャンバスに、完全にカスタム化されたパーソナライズされたメールメッセージを作成することができます。エディタブロックをメールにドラッグできるようになり、より直感的なカスタマイズが可能になりました。 
+Braze メールでは、新しい[ドラッグ＆ドロップ編集エクスペリエンス]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/)を使用して、キャンペーンとキャンバスのいずれかで完全なカスタムメールメッセージおよびパーソナライズされたメールメッセージを作成できます。ユーザーはエディターブロックをメールにドラッグできるようになり、より直感的なカスタマイズが可能になりました。 
 
-## ユーザーエイリアスのインポート
+## ユーザーエイリアスインポート
 
-`external_id` を持っていないユーザーをターゲットにするには、[ユーザーエイリアスを持つ ユーザーのリストをインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias)することができます。エイリアスは、代替の一意なユーザー識別子の役割を果たす。あなたのアプリにサインアップしていない、あるいはアカウントを作っていない匿名のユーザーに対してマーケティングを行おうとしている場合に役立つ。 
+`external_id`を持たないユーザーを対象にするには、[ユーザー別名を持つユーザーの一覧をインポートすることができます]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias)エイリアスは、代替の一意のユーザー識別子として機能します。これは、アプリにサインアップしていないか、アカウントを作成していない匿名ユーザーを対象とするマーケティングを行う場合に役立ちます。 
 
-## iOS 15アップグレードガイド
+## iOS 15 アップグレード ガイド
 
-この[iOS 15アップグレードガイドは]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_15/)、iOS 15 (WWDC21)で導入された変更点の概要と、Braze iOS SDKインテグレーションに必要なアップグレード手順を説明しています。
+この[iOS 15 アップグレードガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_15/)は、iOS 15（WWDC21）で導入された変更点と、Braze iOS SDK統合のために必要なアップグレード手順を概説しています。
 
-## アンドロイド12アップグレードガイド
+## Android 12 アップグレード ガイド
 
-この[Android 12アップグレードガイドでは]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/)、Android 12 (2021)で導入された関連する変更点と、Braze Android SDKインテグレーションに必要なアップグレード手順について説明します。
+この[Android 12 アップグレードガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/)は、Android 12（2021年）で導入された関連する変更点と、Braze Android SDK統合のために必要なアップグレード手順について説明しています。
 
 ## A2P 10DLC
 
-A2P 10DLCとは、企業が標準的な10桁のロングコード（10DLC）電話番号を使ってアプリケーション・ツー・パーソン（A2P）タイプのメッセージングを送信できる米国のシステムを指す。10桁のロングコードは従来、個人間（P2P）トラフィック用に設計されてきたため、スループットの制限やフィルタリングの強化によってビジネスが制約を受ける原因となっていた。このサービスはこれらの問題を軽減し、全体的なメッセージの配信性を向上させ、ブランドはリンクや行動喚起を含む大規模なメッセージの送信を可能にし、さらに消費者を迷惑メッセージから保護するのに役立つ。 
+A2P 10DLCとは、企業が標準的な10桁のロングコード（10DLC）電話番号を使ってアプリケーション・ツー・パーソン（A2P）タイプのメッセージングを送信できる米国のシステムを指す。10桁のロングコードは従来、個人間（P2P）トラフィック用に設計されてきたため、スループットの制限やフィルタリングの強化によってビジネスが制約を受ける原因となっていた。このサービスはこれらの問題を軽減し、全体的なメッセージの配信率を向上させ、ブランドがリンクやアクションを含むメッセージを大量に送信できるようにし、消費者を望まないメッセージからさらに保護するのに役立ちます。 
 
-現在、米国のロングコードをお持ちのお客様、または米国のお客様に送信するために米国のロングコードを使用しているお客様は、10DLCにロングコードを登録する必要があります。10DLCの詳細と、なぜ10DLCが必要なのかについては、[10DLCの]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/)専門[記事を]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/)ご覧ください。
+米国のロングコードを現在所有しているか、米国の顧客に送信するために使用しているすべてのお客様が、10DLC のロングコードを登録する必要があります。10DLCの詳細とその必要性について詳しくは、専用の[10DLC記事]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/)をご覧ください。
 
-## 二要素認証のリセット
+## 2要素認証のリセット
 
-二要素認証によるログインに問題があるユーザーは、会社の管理者に連絡して[二要素認証をリセット]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset)することができる。
+2 要素認証を使用してログインに問題が発生しているユーザーは、会社の管理者に連絡して[2 要素認証をリセット]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset)できます。
 
-## 新しいブレイズ・パートナーシップ
+## 新しいBrazeのパートナーシップ
 
-### ハイタッチ - ワークフローの自動化
+### Hightouch - ワークフローオートメーション
 
-Brazeと[Hightouchの]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/)統合により、貴社のデータウェアハウスから最新の顧客データを使用して、Braze上でより良いキャンペーンを構築することができます。お客様に適切でタイムリーなインタラクションを提供するためには、Brazeアカウントのデータが正確で新鮮であることが重要です。データウェアハウスからBrazeに顧客データを自動的に同期させることで、データの整合性を心配する必要がなくなり、ワールドクラスの顧客体験の構築に集中することができます。
+Brazeと[Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/)の統合により、データウェアハウスからの最新の顧客データを使用して、Brazeでより良いキャンペーンを構築できます。お客様に関連性があり、タイムリーなやり取りを提供したいと考えており、そのためにはBrazeアカウントのデータが正確で新鮮であることが非常に重要です。顧客データをデータウェアハウスから Braze に自動的に同期させることで、データの整合性を心配する必要がなくなり、世界レベルのカスタマーエクスペリエンスの構築に集中して取り組むことができます。
 
-### トランセンド - データプライバシーとコンプライアンス
+### Transcend - データプライバシーとコンプライアンス
 
-Brazeと[Transcendの]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/transcend/)パートナーシップは、数十のデータシステムにわたるデータをオーケストレーションすることで、ユーザーがプライバシー要求を自動化できるよう支援します。最終的には、GDPRやCCPAのような規制への準拠を支援し、データに関しては個人を運転席に座らせる。
+Brazeと[Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/transcend/)のパートナーシップは、数十のデータシステムにわたるデータを調整することで、ユーザーがプライバシーリクエストを自動化するのに役立ちます。最終的に、これはチームが GDPR や CCPA などの規制に準拠するのに役立ち、個人が自分のデータに関して主導権を握ることができます。
 
-### ティニクル - コーホート・インポート
+### Tinyclues - コホートインポート
 
-[Tinycluesは]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/tinyclues/)、顧客体験を損なうことなくキャンペーン数と収益を増加させる機能と、オンラインとオフラインの両方でCRMキャンペーンのパフォーマンスを追跡する分析機能を提供するオーディエンス構築機能です。BrazeとTinycluesの統合は、より良いCRMプランニングと戦略への道筋をユーザーに提供し、ユーザーはよりターゲットを絞ったキャンペーンを送信し、新しい製品機会を見つけ、驚くほどユーザーフレンドリーなUIを使用して収益を向上させることができます。
+[Tinyclues]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/tinyclues/)は、カスタマーエクスペリエンスを損なうことなくキャンペーン数と収益を増加させる機能を提供するオーディエンス構築機能であり、オンラインおよびオフラインのCRMキャンペーンのパフォーマンスを追跡するための分析を提供します。一緒に、BrazeとTinycluesの統合はユーザーにより良いCRM計画と戦略へのパスを提供し、ユーザーがよりターゲティングされたキャンペーンを送信し、新しい製品機会を見つけ、非常にユーザーフレンドリーなUIを使用して収益を向上させることを可能にします。
 
 ### optilyz - ダイレクトメール
 
-[optilyzは]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/)、より顧客中心の、持続可能で収益性の高いダイレクトメールキャンペーンの実施を可能にするダイレクトメール自動化プラットフォームです。optilyzはヨーロッパ中の何百もの企業で使用されており、手紙、はがき、セルフメーラーをクロスチャネルマーケティングに統合し、キャンペーンを自動化し、よりパーソナライズすることを可能にします。optilyzとBrazeのウェブフック統合を使用して、お客様にダイレクトメールを送信できます。
+[optilyz]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/)は、より顧客中心で持続可能かつ収益性の高いダイレクトメールキャンペーンを実行できるダイレクトメールオートメーションプラットフォームです。optilyzはヨーロッパ中の何百もの企業で使用されており、手紙、はがき、セルフメーラーをクロスチャネルのマーケティングに統合し、キャンペーンを自動化してよりパーソナライズすることができます。optilyzとBrazeのWebhook統合を使用して、顧客にダイレクトメールを送信します。

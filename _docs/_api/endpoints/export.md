@@ -45,6 +45,9 @@ guide_menu_list:
 
 guide_menu_title2: "Export custom events endpoints"
 guide_menu_list2:
+  - name: "GET: Custom Events"
+    link: /docs/api/endpoints/export/custom_events/get_custom_events_data/
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: "GET: Custom Events List"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
     image: /assets/img/braze_icons/line-chart-up-01.svg
@@ -120,4 +123,10 @@ guide_menu_list8:
   - name: "POST: User Data by Global Control Group"
     link: /docs/api/endpoints/export/user_data/post_users_global_control_group/
     image: /assets/img/braze_icons/users-01.svg
+
+guide_menu_title9: "Export custom attributes endpoints"
+guide_menu_list9:
+  - name: "GET: Custom Attributes"
+    link: /docs/api/endpoints/export/custom_attributes/get_custom_attributes/
+    image: /assets/img/braze_icons/line-chart-up-01.svg
 ---

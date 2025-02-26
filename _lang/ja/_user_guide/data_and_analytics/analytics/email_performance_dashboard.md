@@ -11,7 +11,7 @@ tool:
 
 # チャネルパフォーマンスダッシュボード
 
-> チャネルパフォーマンスダッシュボードでは、キャンペーンとキャンバスの両方から、チャネル全体の累計パフォーマンス指標を表示できます。これらのダッシュボードは現在、メールと SMS に使用できます。
+> チャネルパフォーマンスダッシュボードは、キャンペーンとキャンバスの両方から、チャネル全体の集約パフォーマンスメトリクスを表示する。これらのダッシュボードは現在、メールと SMS に使用できます。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、チャネルパフォーマンスダッシュボードは [**概要**] の下にあります。
@@ -19,37 +19,54 @@ tool:
 
 ![過去 30 日間のメールチャネルのエンゲージメントを表示するメールパフォーマンスダッシュボード。][1]
 
+以下のダッシュボードを見ることができる：
+- [メールパフォーマンスダッシュボード](#email-performance-dashboard)
+- [メールインサイトダッシュボード](#email-insights-dashboard)
+- [SMS パフォーマンスダッシュボード](#sms-performance-dashboard)
+
 ## メールパフォーマンスダッシュボード
 
-メールパフォーマンスダッシュボードを使用するには、［**分析**］ > ［**メールパフォーマンス**］ に移動して、データを表示する期間の日付範囲を選択します。日付範囲は過去 1 年間までです。
+メールパフォーマンスダッシュボードを表示するには、「**分析」**>「**メールパフォーマンス**」と進み、データを表示したい期間の日付範囲を選択する。日付範囲は過去 1 年間までです。
 
-### 指標の計算
+### メトリクスの計算方法
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 メールパフォーマンスダッシュボードにおけるさまざまな指標の計算方法は、個々のメッセージレベル (キャンペーン分析など) の計算と同じです。このダッシュボードでは、選択した日付範囲のすべてのキャンペーンとキャンバスの指標が集約されます。これらの定義の詳細については、「[メールの指標]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics)」を参照してください。
 
-各タイルには、最初に比率の指標が表示され、次にカウント指標が表示されます (_送信数_は例外で、カウント指標の後に 1 日あたりの平均が表示されます)。例えば、ユニーククリックのタイルには、選択した期間の_ユニーククリック率_と、その期間のユニーククリックの総数が表示されます。各タイルには[前期との比較](#comparison-to-last-period-change-in-totals-or-rates)も表示されます。
+各タイルには、最初に比率の指標が表示され、次にカウント指標が表示されます (*送信数*は例外で、カウント指標の後に 1 日あたりの平均が表示されます)。例えば、ユニーククリックのタイルには、選択した期間の*ユニーククリック率*と、その期間のユニーククリックの総数が表示されます。各タイルには[前期との比較](#comparison-to-last-period-change-in-totals-or-rates)も表示されます。
 
 | 指標 | タイプ | 計算 |
 | --- | --- | ---- |
-| 送信数 | カウント数 | 日付範囲内の毎日の合計送信数 |
-| 配信率 | 比率 | (日付範囲内の毎日の合計配信数) / (Total number of sends across each day in the date range) |
-| Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
-| 配信停止率 | 比率 | (日付範囲内の毎日のユニーク配信停止数の合計) / (日付範囲内の配信数の合計)<br><br>ここで使用されているユニーク配信停止数は、キャンペーン分析、概要、レポートビルダーでも使用されます。 |
-| ユニーク開封率 | 比率 | (日付範囲内の毎日のユニーク開封数の合計) / (Total number of deliveries for date range) |
-| Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>その他の開封には、ユーザーがメールを開封した場合など、マシン開封として識別されないメールが含まれます。この指標はユニークではなく、総開封数のサブ指標です。  |
-| ユニーククリック率 | 比率 | (日付範囲内の毎日のユニーククリック数の合計) / (Total number of deliveries for date range) |
-| Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| 送信数 | カウント | 日付範囲内の毎日の総送信数 |
+| 配信率 | レート | 日付範囲内の毎日の総配信数) / (日付範囲内の毎日の総送信数) |
+| 直帰率 | レート | (日付範囲内の毎日の総バウンス数) / (日付範囲内の毎日の総送信数) |
+| 購読解除率 | レート | (日付範囲内の毎日のユニーク購読解除数の合計) / (日付範囲内の総配信数)<br><br>ここで使用されているユニーク配信停止数は、キャンペーン分析、概要、レポートビルダーでも使用されます。 |
+| ユニーク開封率 | レート | (日付範囲内の毎日のユニーク開封数の合計) / (日付範囲内の総配信数) |
+| その他の開封率 | レート | (日付範囲内の毎日のその他の開封数の合計) / (日付範囲内の総配信数)<br><br>その他の開封には、ユーザーがメールを開封した場合など、マシン開封として識別されないメールが含まれます。この指標はユニークではなく、総開封数のサブ指標です。  |
+| ユニーククリック率 | レート | (日付範囲内の毎日のユニーククリック数の合計) / (日付範囲内の総配信数) |
+| ユニーククリック開封率 | レート | (日付範囲内の毎日の総ユニーククリック数) / (日付範囲内の毎日の総ユニーク開封数) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## メールインサイトダッシュボード 
 
-メールインサイトダッシュボードは、顧客がメールを操作している場所と時間を追跡して理解を深めるために役立ちます。これらのレポートは、エンゲージメントを高めるためにメールを最適化する方法について、マーケターに充実した詳細データを提供できます。このダッシュボードにアクセスするには、[**分析**] > [**メールパフォーマンス**] > [**メールインサイト**] に移動します。
+メールインサイトダッシュボードは、顧客がメールを操作している場所と時間を追跡します。これらのレポートは、エンゲージメントを高めるためにメールを最適化する方法について、充実した詳細データを提供できます。メールインサイトダッシュボードには、過去6か月分のデータが含まれています。このダッシュボードにアクセスするには、[**分析**] > [**メールパフォーマンス**] > [**メールインサイト**] に移動します。
+
+### デバイス別エンゲージメント
+
+**デバイス別エンゲージメントレポートでは**、ユーザーがどのようなデバイスを使ってメールに参加しているのかがわかる。このデータは、モバイル、デスクトップ、タブレット、および他のデバイスタイプのメールエンゲージメントを追跡します。 
+
+その他」のカテゴリーには、デスクトップ、モバイル、タブレットとして識別できないユーザー文字列が含まれます。たとえば、テレビ、自動車、ビデオゲームコンソール、OTT (オーバーザトップまたはストリーミング) などです。これには NULL や空の値も含まれます。
+
+![モバイル、デスクトップ、タブレット、その他のクリック数を示すデバイス別エンゲージメントレポート。クリック数が最も多いのはモバイルデバイスです。]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+
+メールの開封については、Braze は Google Image Proxy、Apple Image Proxy、Yahoo Mail Proxy を分けて扱います。これらのサービスは、受信者に配信される前に、メールに埋め込まれたすべての画像をキャッシュし、読み込む。その結果、受信者のサーバーではなく、メールボックス・プロバイダーのサーバーからメールが開封されることになり、メールの開封数が膨れ上がる可能性がある。これらのサービスは、画像を読み込む際のプライバシー、セキュリティ、パフォーマンス、効率を高めることを目的としています。これらのプロキシサービスはユーザーエージェントをマスクするため、受信者からの実際の開封も含まれる可能性があり、弊社ではユーザーエージェントを使用してプロキシデータを分類しています。
+
+![モバイル、デスクトップ、タブレット、Apple Privacy Proxy、Google Image Proxy、Yahoo Mail Proxy、Otherのクリック数を表示するデバイス別エンゲージメントレポート。開封数が最も多いのはモバイルデバイスです。]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### メールボックスプロバイダーによるエンゲージメント
 
-**メールボックスプロバイダーによるエンゲージメント**レポートには、クリックまたは開封に寄与した上位のメールボックスプロバイダーが表示されます。特定のプレミアメールボックスプロバイダーをクリックして、特定の受信ドメインの内訳を調べることができます。例えば、Microsoft がこのレポートにメールボックスプロバイダーの上位指標の 1 つとして記載されている場合、「outlook.com」 、 「hotmail.com」、「live.com」などの受信ドメインの詳細をさらに確認できます。
+**メールボックスプロバイダーによるエンゲージメント**レポートには、クリックまたは開封に寄与した上位のメールボックスプロバイダーが表示されます。特定のプレミアメールボックスプロバイダーをクリックして、特定の受信ドメインの内訳を調べることができます。たとえば、このレポートに Microsoft が上位のメールボックスプロバイダーの 1 つとして表示されている場合、さらに「outlook.com」、「hotmail.com」、「live.com」などの受信ドメインの詳細を確認できます。
 
 ![][5]{: style="max-width:70%;"}
 
@@ -71,7 +88,7 @@ tool:
 
 SMS パフォーマンスダッシュボードを使用するには、 ［**分析**］ > ［**SMS パフォーマンス**］ に移動し、データを表示する期間の日付範囲を選択します。日付範囲は過去 1 年間までです。
 
-### 指標の計算
+### メトリクスの計算方法
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
@@ -81,30 +98,32 @@ SMS パフォーマンスダッシュボードにおけるさまざまな指標�
 
 | 指標 | タイプ | 計算 |
 | --- | --- | ---- |
-| 送信数 | カウント数 | 日付範囲内の毎日の合計送信数 |
-| 確認済み配信率 | 比率 | (日付範囲内の毎日の合計配信数) / (Total number of sends across each day in the date range) |
-| Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
-| 拒否率 | 比率 | (日付範囲内の毎日の合計拒否数) / (Total number of sends across each day in the date range) |
-| Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
-| オプトイン合計 | 比率 | 日付範囲内における毎日のインバウンドメッセージのオプトイン数の合計 |
-| オプトアウト合計 | 比率 | 日付範囲内における毎日のインバウンドメッセージのオプトアウト数の合計 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| 送信数 | カウント | 日付範囲内の毎日の総送信数 |
+| 確認済み配信率 | レート | 日付範囲内の毎日の総配信数) / (日付範囲内の毎日の総送信数) |
+| 配信失敗率 | レート | (日付範囲内の毎日の総失敗数) / (日付範囲内の毎日の総送信数) |
+| 拒否率 | レート | (日付範囲内の毎日の総拒否数) / (日付範囲内の毎日の総送信数) |
+| クリック率 | レート | (日付範囲内の各日におけるクリック数の合計）/（日付範囲内の各日における配達数の合計） |
+| 合計オプトイン数 | レート | 日付範囲内の各日におけるインバウンドメッセージのオプトイン総数 |
+| オプトアウト合計 | レート | 日付範囲内の各日におけるインバウンドメッセージのオプトアウト総数 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## ダッシュボードフィルター
 
 次のフィルターオプションを使用して、ダッシュボードのデータにフィルターを適用できます。
 
-- **タグ:** タグを 1 つ選択します。適用すると、ダッシュボードには選択したタグのみの指標が表示されます。
-- **キャンバス：** キャンバスを最大 10 個選択します。適用すると、ダッシュボードには選択したキャンバスのみの指標が表示されます。最初にタグフィルターを選択した場合、キャンバスフィルターのオプションには、選択したタグを含むキャンバスのみが含まれます。
-- **キャンペーン:** キャンペーンを最大 10 個選択します。適用すると、ダッシュボードには選択したキャンペーンの指標のみが表示されます。最初にタグフィルターを選択した場合、キャンペーンフィルターのオプションには、選択したタグを含むキャンペーンのみが含まれます。
+- **タグ:**タグを 1 つ選択します。適用すると、ダッシュボードには選択したタグのみの指標が表示されます。
+- **キャンバス：**キャンバスを最大 10 個選択します。適用すると、ダッシュボードには選択したキャンバスのみの指標が表示されます。最初にタグフィルターを選択した場合、キャンバスフィルターのオプションには、選択したタグを含むキャンバスのみが含まれます。
+- **キャンペーン:**キャンペーンを最大 10 個選択します。適用すると、ダッシュボードには選択したキャンペーンの指標のみが表示されます。最初にタグフィルターを選択した場合、キャンペーンフィルターのオプションには、選択したタグを含むキャンペーンのみが含まれます。
 
-![フィルターを適用するタグとキャンバスのリストを選択できる、チャネルパフォーマンスダッシュボードの [フィルター] オプション。][3]
+![フィルターを適用するタグとキャンバスのリストを選択できる、チャネルパフォーマンスダッシュボードのフィルターオプション。][3]
 
-## 前期との比較: 合計または比率の変化
+## 期間を比較する
 
 チャネルパフォーマンスダッシュボードでは、日付範囲で選択した期間と、同じ日数を持つ前期が自動的に比較されます。例えば、ダッシュボードで日付範囲として [過去 7 日間] を選択すると、前期との比較では、過去 7 日間の指標とその前の 7 日間の指標が比較されます。カスタムの日付範囲 (例えば 5 月 10 日から 5 月 15 日、つまり 6 日分のデータ) を選択すると、ダッシュボードではその期間の指標と 5 月 4 日から 5 月 9 日までの指標が比較されます。
 
 比較対象は過去の期間と現在の期間の割合の変化であり、2 つの期間の差を、過去の期間の指標で除算することにより計算されます。
+
+### 合計カウント数と比率の変化を確認する
 
 2 つの期間の合計カウント数 (配信されたメール数など) を比較する [**合計の変化を表示**] と、比率 (配信率など) を比較する [**変化率を表示**] を切り替えることができます。
 
@@ -136,11 +155,11 @@ This means Braze recorded zero for that particular metric during the time frame 
 
 #### If a metric displays "N/A"
 
-This means that while Braze recorded positive counts for a particular metric for the time frame you've selected, the denominator for the rate calculation (either sends or deliveries in most cases) was zero. This can occur when emails are sent out on one day and opens and clicks are recorded the following days, if your selected time frame does not include the date the messages were sent.
+This means that while Braze recorded positive counts for a particular metric for the time frame you've selected, the denominator for the rate calculation (either sends or deliveries in most cases) was zero. This can occur when emails are sent out on one day and opens and clicks are recorded the following days if your selected time frame does not include the date the messages were sent.
 
 #### If a metric displays "--"
 
-This means Braze hasn't recorded any data for that metric during the time period you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
+This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
 
 --->
 

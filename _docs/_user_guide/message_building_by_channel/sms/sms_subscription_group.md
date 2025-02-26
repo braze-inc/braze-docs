@@ -2,7 +2,7 @@
 nav_title: "SMS Subscription Groups"
 article_title: SMS Subscription Groups
 page_order: 4
-description: "This reference article covers SMS Subscription Groups, subscription states, and the subscription group setup process."
+description: "This reference article covers SMS subscription groups, subscription states, and the subscription group setup process."
 page_type: reference
 channel:
   - SMS
@@ -15,18 +15,18 @@ channel:
 
 ## SMS subscription states
 
-There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
+There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across subscription groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
 
 | State | Definition |
 | --------- | ---------- |
 | Subscribed | User has explicitly confirmed that they want to receive SMS from a specific subscription group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS subscription group in order to receive an SMS. |
 | Unsubscribed | User has explicitly opt-ed out of messaging from your SMS subscription group and the sending-phone numbers inside the subscription group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API][4]. Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the subscription group.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### How users' SMS subscription groups get set 
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] by using the Braze REST API.
-- **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
+- **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)), or [Web][11].
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
 - **User import**: Users can be added into email or SMS subscription groups via **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 

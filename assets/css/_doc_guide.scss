@@ -108,25 +108,22 @@ $doc_transition_time: 0.25s;
 			font-size: 15px;
 			font-family: $braze-regular;
 			overflow: hidden;
-			border-radius: 2px;
+			border-radius: 8px;
 
 			.doc_img {
-				height: 145px;
-				width: 90px;
+				width: 75px;
 				display: block;
-				margin: auto;
-				img {
+        padding-top: 30px;
+
+        img {
 					display: block;
 					margin: auto;
 					width: 30px;
 					height: 30px;
-					position: relative;
-					top: 50%;
-					transform: translateY(-50%);
 				}
 			}
 			.arrow {
-				margin-right: -15px;
+				margin-right: 0px;
 				visibility: hidden;
 			}
 		}
@@ -198,7 +195,7 @@ $doc_transition_time: 0.25s;
 			#doc_help {
 				border: 1px solid $grey-ghost;
 				box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
-				border-radius: 2px;
+				border-radius: 8px;
 				padding: 17px 25px 30px 25px;
 				a {
 					display: inline-block;
@@ -304,7 +301,7 @@ $doc_transition_time: 0.25s;
 	#doc_status {
 		// border: 1px solid $grey-ghost;
 		// box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-		border-radius: 2px;
+		border-radius: 8px;
 	}
 
 	#gradient {

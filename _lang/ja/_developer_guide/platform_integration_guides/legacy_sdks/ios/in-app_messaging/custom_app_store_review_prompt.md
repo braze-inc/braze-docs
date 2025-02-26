@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # カスタム App Store レビュープロンプト
 
@@ -20,7 +20,7 @@ noindex: true
 
 アプリ内メッセージの一般的な用途として、ユーザーに App Store でのレビューを依頼するキャンペーンの作成があります。
 
-まず、アプリで[アプリ内メッセージのデリゲート][30]を設定します。次に、次のデリゲートメソッドを実装して、デフォルトの App Store レビューメッセージを無効にします。
+まず、アプリで[アプリ内メッセージのデリゲート](#in-app-message-controller-delegate)を設定します。次に、次のデリゲートメソッドを実装して、デフォルトの App Store レビューメッセージを無効にします。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -90,8 +90,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 次に、以下を使用してアプリ内メッセージングキャンペーンを作成します。
 
-- キーと値のペア`"Appstore Review" : "true"`
-- ディープリンク `{YOUR-APP-SCHEME}:appstore-review`を使用してクリック時の動作は、「アプリへのディープリンク」に設定します。
+- キーと値のペア `"Appstore Review" : "true"`
+- ディープリンク `{YOUR-APP-SCHEME}:appstore-review` を使用して、クリック時動作を [アプリにディープリンクする] に設定します。
 
 {% endraw %}
 
@@ -99,4 +99,3 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 Appleは、App Storeのレビュープロンプトをユーザーごとに年間最大3回に制限しているため、キャンペーンの[レートは]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)ユーザーごとに年間3回に制限する必要があります。<br><br>ユーザーは、App Store のレビュープロンプトをオフにできます。そのため、カスタムレビュープロンプトでは、App Store のネイティブレビュープロンプトが表示されることを約束したり、直接のレビューを求めたりしないでください。
 {% endalert %}
 
-[30]: #in-app-message-controller-delegate

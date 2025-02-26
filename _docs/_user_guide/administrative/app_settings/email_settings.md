@@ -93,7 +93,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## List-unsubscribe header
+## List-unsubscribe header {#list-unsubscribe}
 
 {% alert note %}
 Beginning on February 15, 2024, new companies will have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
@@ -118,7 +118,7 @@ The following table summarizes mailbox provider support for “mailto:” header
 | Apple Mail | Supported | Not supported | Not supported |
 | Outlook.com | Supported | Not supported | Not supported |
 | Yahoo! Mail | Supported* | Not supported | Supported |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 _*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
@@ -154,7 +154,7 @@ Braze supports the following versions of the list-unsubscribe header:
 | One-click (RFC 8058) | Offers a straightforward way for recipients to opt-out from emails with a single click. This is a requirement from Yahoo and Gmail for bulk senders. |
 | List-unsubscribe URL or HTTPS | Provides recipients with a link that directs the recipient to a web page where they can unsubscribe. |
 | Mailto | Specifies an email address as the destination for the unsubscribe request message to be sent to from the recipient to the brand. <br><br> _To process mailto list-unsubscribe requests, such unsubscribe requests need to include the email address as stored in Braze for the End User who is unsubscribing. This may be provided by the "from-address" of the email from where the End User is unsubscribing, the encoded subject or the encoded body from the email received by the End User that they are unsubscribing from. In very limited cases, some inbox providers don't adhere to the [RFC 2368](https://datatracker.ietf.org/doc/html/rfc2368) protocol resulting in the email address not being properly passed. This can lead to an unsubscribe request not being able to be processed in Braze._ |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 When Braze receives a list-unsubscribe request from a user via any of the above methods, this user’s global email subscription state is set to unsubscribed. If there isn’t a match, Braze will not process this request.
 

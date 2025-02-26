@@ -1,37 +1,37 @@
 ---
-nav_title: "取得:カタログを一覧表示"
-article_title: "取得:カタログを一覧表示"
+nav_title: "取得:リストカタログ"
+article_title: "取得:リストカタログ"
 search_tag: Endpoint
 page_order: 2
 
 layout: api_page
 page_type: reference
-description: "この記事では、リストカタログBrazeエンドポイントの詳細について説明します。"
+description: "この記事では、「カタログのリスト」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログを一覧表示する
+# カタログをリストアップする
 {% apimethod get %}
-カタログ
+/catalogs
 {% endapimethod %}
 
-> このエンドポイントを使用して、ワークスペース内のカタログのリストを返します。
+> ワークスペース内のカタログのリストを返すには、このエンドポイントを使用する。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.get`権限のある [API キーが必要です]({{site.baseurl}}/api/basics#rest-api-key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.get`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## パスとリクエストのパラメーター
+## パスとリクエストのパラメータ
 
-このエンドポイントにはパスまたはリクエストパラメータはありません。
+このエンドポイントには、パスまたはリクエストパラメータはありません。
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
@@ -41,9 +41,9 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ## 応答
 
-### 成功レスポンスの例
+### 成功応答の例
 
-`200`ステータスコードは次のレスポンスボディを返す可能性があります。
+ステータスコード `200` は、次の応答本文を返す可能性があります。
 
 ```json
 {

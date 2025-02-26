@@ -10,13 +10,11 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # ニュースフィード統合
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを使用しているお客様に、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することをお勧めします。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 ## ニュースフィードデータモデル
 
@@ -69,7 +67,7 @@ private func feedUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-Braze から送信された後にカードデータを変更したい場合は、カードデータをローカルに保存 （ディープコピー） して更新し、自身で表示することをおすすめします。カードには [`ABKFeedController`][44] 経由でアクセスできます。
+Braze から送信された後にカードデータを変更したい場合は、カードデータをローカルに保存 （ディープコピー） して更新し、自身で表示することをおすすめします。カードには、[`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller") からアクセスできます。
 
 ## ニュースフィードモデル
 
@@ -79,66 +77,66 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-| `idString` | (読み取り専用) Braze によって設定されたカードの ID。|
-| `viewed` | このプロパティは、ユーザーがカードを読んだか、それとも未読かを反映します。|
-| `created` | (読み取り専用) このプロパティは Braze ダッシュボードからのカード作成時刻の UNIX タイムスタンプです。|
-| `updated` | (読み取り専用) このプロパティは、Braze ダッシュボードからのカードの最新更新時刻の UNIX タイムスタンプです。|
-| `categories` | カードに割り当てられているカテゴリーのリスト、カテゴリーのないカードは `ABKCardCategoryNoCategory` が割り当てられます。<br><br>利用可能なカテゴリー:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
-| `extras` | `NSString` 値のオプションの `NSDictionary`。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `idString` | (参照のみ) Brazeで設定されたカードのID。 |
+| `viewed` | このプロパティは、カードがユーザーによって読み取られたか、または読み取られなかったかを反映します。 |
+| `created` | (参照のみ) プロパティは、Braze ダッシュボード からのカードの作成時刻のUNIX タイムスタンプです。 |
+| `updated` | (参照のみ) プロパティは、Braze ダッシュボード からのカードの最新更新時刻のUNIX タイムスタンプです。 |
+| `categories` | カードに割り当てられたカテゴリの一覧、カテゴリなしのカードs には、`ABKCardCategoryNoCategory` が割り当てられます。<br><br>利用可能なカテゴリー:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
+| `extras` | `NSString` 値のオプションの `NSDictionary`。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### バナー画像カードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができますが、デフォルトの Braze ニュースフィードでは非表示になっています。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `image` | (必須) このプロパティはカードの画像の URL です。| |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのユーザーインターフェイスに表示され、カードをクリックするアクションと方向を示すことができますが、デフォルト Brazeのニュースフィードには表示されません。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### キャプション付き画像カードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `title` | (必須) カードのタイトルテキスト。|
-| `description` (必須) カードの本文テキスト。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `image` | (必須) このプロパティはカードの画像の URL です。| |
+| `title` | (必須) カードのタイトルテキスト。 |
+| `description` (必須) カードの本文。 |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### テキスト通知カード (画像なしのキャプション付き画像) のプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `title` | (必須) カードのタイトルテキスト。|
-| `description` | (必須) カードの本文テキスト。 |
-| `url` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `title` | (必須) カードのタイトルテキスト。 |
+| `description` | (必須) カードの本文。 |
+| `url` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### クラシックカードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `title` | (オプション) カードのタイトルテキスト。|
-| `description` | (必須) カードの本文テキスト。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `image` | (必須) このプロパティはカードの画像の URL です。| |
+| `title` | (オプション) カードのタイトルテキスト。 |
+| `description` | (必須) カードの本文。 |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP (S) URL でもプロトコル URL でもかまいません。| |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。| |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## カードメソッド
 
-|メソッド|説明|
+|方法|説明|
 |---|---|
-| `logCardImpression` | 特定のカードのインプレッションを Braze に手動で記録します。|
-| `logCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。`ABKCard` のすべてのサブクラスには `url` プロパティがあります。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `logCardImpression` | 特定のカードのインプレッションを手動でBrazeに記録する。 |
+| `logCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。`ABKCard` のすべてのサブクラスには`url` プロパティがあります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## フィード表示を記録する
 
-独自のユーザーインターフェイスでニュースフィードを表示する場合、`- (void)logFeedDisplayed;` を使用してニュースフィードのインプレッションを手動で記録できます。例:
+独自のユーザーインターフェイスでニュースフィードを表示する場合、`- (void)logFeedDisplayed;` を使用してニュースフィードのインプレッションを手動で記録できます。以下に例を示します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -217,10 +215,6 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-ビューコントローラーの例については、[ニュースフィードのサンプルアプリ][3]をご覧ください。
+ビューコントローラーの例については、[ニュースフィードのサンプルアプリ](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample)をご覧ください。
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィードコントローラー"
 

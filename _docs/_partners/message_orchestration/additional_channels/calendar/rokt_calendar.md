@@ -1,11 +1,13 @@
 ---
 nav_title: Rokt Calendar
 article_title: Rokt Calendar
-alias: /partners/rokt_calendar/
+alias: /partners/rokt_calendar
 description: "This reference article outlines the partnership between Braze and Rokt Calendar, a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications, in the form of calendar events and notifications."
 page_type: partner
 search_tag: Partner
 
+layout: redirect
+redirect_to: /docs/partners/home
 ---
 
 # Rokt Calendar
@@ -24,7 +26,7 @@ The Braze and Rokt Calendar integration allows your Rokt Calendar subscribers an
 | Braze REST API key | A Braze REST API key with `users.track` permissions. You will need to provide this key to your Rokt Calendar account manager.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | [Braze REST endpoint]({{site.baseurl}}/api/basics/#endpoints) | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 | External subscriber ID | This is the identifier used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something you pass to Rokt Calendar.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Audience segmentation {#audience-segmentation}
 
@@ -48,7 +50,7 @@ When Rokt Calendar creates a new user or matches an existing subscriber with a B
 | `rokt:subscription_id` | The subscription ID, serving as a unique identifier, related to the created subscription | `06423672-b6ba-4536-aa36-70788a7a0a36` |
 | `rokt:subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
 | `rokt:tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Rokt Calendar will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas component.
 
@@ -182,7 +184,7 @@ The following fields include information that can be customized at the event lev
 | `eventEnd` <br>***Required**  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
 | `eventTz` <br>***Required**  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found [here](https://roktcalendar-api.readme.io/docs/timezones). | `Eastern Standard Time` |
 | `notifyBefore` <br>***Required**  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
 

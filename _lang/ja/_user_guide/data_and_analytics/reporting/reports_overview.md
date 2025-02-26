@@ -15,14 +15,14 @@ search_rank: 1
 ## 最良のバリアントの特定
 
 {% tabs local %}
-{% tab Campaign Analytics %}
+{% tab キャンペーン分析 %}
 **キャンペーン分析**
 
 [[キャンペーン分析]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/)] を使用すると、各キャンペーンとその中にあるバリアントの結果の概要、およびメッセージレベルのリアルタイムの最新情報を取得できます。期間を調整して経時的なキャンペーンのパフォーマンスを把握したり、メッセージのプレビューを表示して、テストしていた内容を確認したりできます。
 
 {% endtab %}
 
-{% tab Canvas Analytics %}
+{% tab キャンバス分析 %}
 **キャンバス分析**
 
 キャンバスの最上位の統計情報を取得し、メッセージング戦略のパフォーマンスを確認するには、[[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/)] を使用します。ライブのキャンバスを開いて、次のような主要なパフォーマンス統計情報を表示します。
@@ -46,7 +46,7 @@ search_rank: 1
 
 {% endtab %}
 
-{% tab Report Builder %}
+{% tab レポートビルダー %}
 **レポートビルダー**
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。
@@ -67,10 +67,10 @@ search_rank: 1
 {% endtab %}
 {% endtabs %}
 
-## リテンションに最も影響を与えたバリアントの特定
+## リテンションに最も影響を与えたバリアントはどれですか?
 
 {% tabs local %}
-{% tab Retention Reports %}
+{% tab 保持レポート %}
 **リテンションレポート**
 
 特定のキャンペーンで選択したイベントを実行したユーザーのリテンションを測定するには、[キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)または[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/)のリテンションレポートを使用します。
@@ -89,7 +89,7 @@ search_rank: 1
 {% alert note %} リテンションレポートは、SMS およびAPI トリガーのキャンペーンでは使用できません。 {% endalert %}
 
 {% endtab %}
-{% tab Funnel Report %}
+{% tab ファンネルレポート %}
 
 キャンペーンの受信後に顧客がたどったジャーニーを分析するには、[キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/)または[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/)目標到達プロセスレポートを使用します。目標到達プロセスの分析に含めるネイティブイベントまたはカスタムイベントを選択し、選択したコンバージョンの目標到達に対する各バリアントのパフォーマンスを調べることができます。
 
@@ -110,7 +110,7 @@ search_rank: 1
 ## ユーザーのエンゲージメントの把握
 
 {% tabs local %}
-{% tab Report Builder %}
+{% tab レポートビルダー %}
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。
 
@@ -127,7 +127,7 @@ search_rank: 1
 - コンバージョンが最も多かったニュースレターは、どの月のものでしたか?
 
 {% endtab %}
-{% tab Overview Data %}
+{% tab 概要データ %}
 **概要データ**
 
 [[概要]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/)] ページを使用すると、アプリのパフォーマンスに関する重要な指標の概要と、アプリのユーザー群に関するインサイトが得られます。
@@ -150,22 +150,22 @@ search_rank: 1
 - 今月の全体的なメール量はどうなっていますか?
 
 {% endtab %}
-{% tab Engagement Reports %}
+{% tab エンゲージメントレポート %}
 **エンゲージメントレポート**
 
 [エンゲージメントレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/)を使用すると、選択したキャンペーンおよびキャンバスのエンゲージメント統計情報を定期的にメールでエクスポートするように設定できます。このレポートは、カスタマイズ可能な項目が最も多く詳細なレポートであり、ダッシュボードから使用できます。
 
 メッセージチャネルに応じて、次の統計情報をエクスポートできます。
 
-| チャネル | 使用できる統計情報 |
+| チャネル| 利用可能な統計|
 | ------| --------------|
-| メール | 送信数、開封数、ユニーク開封数、クリック数、ユニーククリック数、クリック開封数、配信停止数、バウンス数、配信数、スパムとして報告されたメール数 |
-| プッシュ | 送信数、開封数、誘発された開封数、バウンス数、本文クリック数 |
+| メール | 送信、オープン、一意のオープン、クリック、一意のクリック、オープン、サブスクライブ解除、バウンス、配信、レポートされたスパム |
+| プッシュ  | 送信数、開封数、誘発された開封数、バウンス数、本文クリック数 |
 | Web プッシュ | 送信数、開封数、バウンス数、本文クリック数 |
-| アプリ内メッセージ | インプレッション数、クリック数、最初のボタンのクリック数、2 番目のボタンのクリック数 |
-| Webhook  |  送信数、エラー数 |
-| SMS | 送信数、キャリアへの送信数、確認済み配信数、配送失敗数、拒否数 |
-{: .reset-td-br-1 .reset-td-br-2}
+| アプリ内メッセージ | 印象、クリック、第1ボタンクリック、第2ボタンクリック |
+| Webhook  |  送信、エラー |
+| SMS | 運送業者への送付・送付・配達確認・配達不履行・拒否 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 このレポートを使用すると、より多くの質問に答えることができます。
 
@@ -180,7 +180,7 @@ search_rank: 1
 ## セグメント別ユーザー行動の差異の把握
 
 {% tabs local %}
-{% tab Segment Data %}
+{% tab セグメントデータ %}
 **セグメントデータ**
 
 セグメントの[分析の追跡]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/)を有効にしている場合は、そのセグメントを開いて[セグメントデータ]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/)を表示します。セグメントデータは、該当するユーザーの経時的なセッション数、カスタムイベント数、および収益を追跡します。
@@ -196,7 +196,7 @@ search_rank: 1
 - セグメントインサイト
 
 {% endtab %}
-{% tab Segment Insights %}
+{% tab セグメント洞察 %}
 **セグメントインサイト**
 
 [[セグメントインサイト]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/)] を使用すると、セグメントを比較して、以下の指標がライフサイクルの長さやセッションの頻度などに与える影響を把握できます。
@@ -213,7 +213,7 @@ search_rank: 1
 - プッシュをオプトインしたユーザーのライフサイクルの長さは、メールをオプトインしたユーザー、およびプッシュとメールの両方をオプトインしたユーザーと比較して、どの程度の差がありますか?
 
 {% endtab %}
-{% tab Custom Events %}
+{% tab カスタムイベント %}
 **カスタムイベント**
 
 [[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics)] ページを使用すると、カスタムイベントが発生した頻度、および各ユーザーがカスタムイベントを最後に実行した時刻を監視して、セグメンテーションに使用できます。
@@ -232,7 +232,7 @@ search_rank: 1
 ## キャンペーンの費用対効果の測定
 
 {% tabs local %}
-{% tab Revenue Data %}
+{% tab 収益データ %}
 **収益データ**
 
 [[収益]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data)] ページを使用すると、特定期間における収益と購入数、またはアプリの総収益または購入数を追跡できます。
@@ -248,7 +248,7 @@ search_rank: 1
 - ユーザーあたりの収益
 
 {% endtab %}
-{% tab Global Control Group Report %}
+{% tab グローバルコントロールグループレポート %}
 **グローバルコントロールグループレポート**
 
 [グローバルコントロールグループ]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/)を設定してから[グローバルコントロールレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/global_control_group_reporting/)を使用すると、Braze マーケティング全体の影響を評価できます。このレポートでは、メッセージングを受信したユーザーの行動を、受信しなかったユーザーの行動と比較できます。これにより、キャンペーンとキャンバスによるビジネス目標への貢献度をよりよく把握できます。
@@ -270,7 +270,7 @@ search_rank: 1
 ## 次に実行すべきキャンペーン
 
 {% tabs local %}
-{% tab Funnel Report %}
+{% tab ファンネルレポート %}
 
 キャンペーンの受信後に顧客がたどったジャーニーを分析するには、[キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/)または[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/)目標到達プロセスレポートを使用します。目標到達プロセスの分析に含めるネイティブイベントまたはカスタムイベントを選択し、選択したコンバージョンの目標到達に対する各バリアントのパフォーマンスを調べることができます。
 
@@ -286,7 +286,7 @@ search_rank: 1
 - マーケティング戦略をどのように改善すればよいですか?
 
 {% endtab %}
-{% tab Predictive Churn %}
+{% tab 解約予測 %}
 **解約予測**
 
 [解約予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) は [Braze Predictive Suite]({{site.baseurl}}/user_guide/predictive_suite/) の最初のモデルです。解約予測を使用して予測の定義と生成を行うと、将来の解約を最小限に抑えるための先を見越したアプローチを提供できます。
@@ -299,7 +299,7 @@ search_rank: 1
 - 危険のあるユーザーに共通する行動や属性は何ですか?
 
 {% endtab %}
-{% tab Report Builder %}
+{% tab レポートビルダー %}
 **レポートビルダー**
 
 [レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用すると、複数のキャンペーンまたはキャンバスの結果を単一のビューで比較して、主要な指標に最も影響を与えたエンゲージメント戦略を迅速に決定できます。

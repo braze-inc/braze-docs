@@ -13,14 +13,13 @@ What do you do when a message from your email campaign bounces back from your us
 
 ## Hard bounces
 
-When an email message hard bounces, the email address is either invalid or does not exist. When this occurs, Braze marks the email address as invalid but does not update the user's [subscription status][1]. At this point, Braze will not attempt to send messages to these email addresses marked as invalid.
+{% multi_lang_include metrics.md metric='Hard Bounce' %}
+
+For more information, see [Hard bounce]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#hard-bounce).
 
 ## Soft bounces
 
-Soft bounces occur when your recipient's email address is valid or when the email message reaches the recipient's email server, but the message was rejected for a temporary issue. These temporary issues may occur when:
-- Your recipient's inbox is full
-- The message is too large for your recipient's inbox  
-- An email server was down
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
 If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
 

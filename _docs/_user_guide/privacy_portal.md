@@ -20,15 +20,33 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
+  image: /assets/img/braze_icons/mail-01.svg
+- name: Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
+  image: /assets/img/braze_icons/mail-01.svg
+- name: Managing Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
+  image: /assets/img/braze_icons/users-01.svg
+- name: Email Preference Center
+  link: /docs/user_guide/message_building_by_channel/email/preference_center
+  image: /assets/img/braze_icons/list.svg
 - name: SMS Subscription Groups
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/users-01.svg
 - name: SMS Laws and Regulations
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
-  image: /assets/img/braze_icons/mail-01.svg
+- name: WhatsApp Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: Push Subscriptions
+  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-sub-states
+  image: /assets/img/braze_icons/users-01.svg
+- name: Message Archiving
+  link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
+  image: /assets/img/braze_icons/clock-rewind.svg
 - name: Default and Minimum SDK Data Collection
-  link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
+  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations

@@ -11,39 +11,39 @@ local_redirect: #event-object-specification #purchase-object-specification
 layout: dev_guide
 
 #Required
-description: "このランディングページには、Braze ユーザーデータエンドポイントが一覧表示されます。"
+description: "このランディングページは、Brazeユーザーデータのエンドポイントを一覧表示する。"
 page_type: landing
 
 guide_top_header: "ユーザーデータエンドポイント"
-guide_top_text: "Braze User Data エンドポイントでは、モバイルアプリ外からのユーザーに関するデータをログに記録することで、ユーザーに関する情報を追跡できます。この API を使用して、テストやその他の目的でユーザーを削除することもできます。<br><br>すべての API エンドポイントのデータペイロード制限は 4 MB です。4 MB を超えるデータを投稿しようとすると、HTTP 413 リクエストエンティティが大きすぎるため失敗します。<br><br>このセクションの例には https://rest.iad-01.braze.com というURLが含まれていますが、別のエンドポイント URL を使用する必要がある場合があります（たとえば、Braze EU データセンターでホストされている場合や、専用の Braze をインストールしている場合）。別のエンドポイント URL を使用するかどうかは、Braze カスタマーサクセスマネージャーから通知されます。"
+guide_top_text: "Braze ユーザーデータエンドポイントを使用すると、モバイルアプリの外部から入力されるユーザーに関するデータを記録することによって、ユーザーに関する情報を追跡することができます。このAPIを使って、テストやその他の目的でユーザーを削除することもできる。<br> <br> すべてのAPIエンドポイントには、4MBのデータペイロード制限がある。4MBを超えるデータを投稿しようとすると、HTTP 413 Request Entity Too Largeで失敗します。<br> <br> このセクションの例には URL https://rest.iad-01.braze.com が含まれていますが、別のエンドポイント URL を使用する必要が生じる可能性もあります （例えば、Braze EU データセンターでホストされている場合や、専用の Braze インストール済み環境がある場合など）。別のエンドポイントURLを使用する必要がある場合は、Brazeカスタマーサクセスマネージャーがお知らせする。"
 
 guide_featured_title: "ユーザーデータエンドポイント"
 guide_featured_list:
-  - name: "POST: Create a New User Alias"
+  - name: "POST:新しいユーザーエイリアスを作成する"
     link: /docs/api/endpoints/user_data/post_user_alias/
-    fa_icon: fas fa-user
-  - name: "POST: Update a User Alias"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "POST:ユーザーエイリアスを更新する"
     link: /docs/api/endpoints/user_data/post_users_alias_update/
-    fa_icon: fas fa-user-edit
-  - name: "POST: Delete User Data"
+    image: /assets/img/braze_icons/user-edit.svg
+  - name: "POST:ユーザーデータを削除する"
     link: /docs/api/endpoints/user_data/post_user_delete/
-    fa_icon: fas fa-user-minus
-  - name: "POST: Identify a User"
+    image: /assets/img/braze_icons/user-minus-01.svg
+  - name: "POST:ユーザーを特定する"
     link: /docs/api/endpoints/user_data/post_user_identify/
-    fa_icon: fas fa-user-circle
-  - name: "POST: Track Users"
+    image: /assets/img/braze_icons/user-circle.svg
+  - name: "POST:ユーザーを追跡する"
     link: /docs/api/endpoints/user_data/post_user_track/
-    fa_icon: fas fa-database
-  - name: "POST: Merge Users"
+    image: /assets/img/braze_icons/database-01.svg
+  - name: "POST:ユーザーをマージする"
     link: /docs/api/endpoints/user_data/post_users_merge/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "External ID migration endpoints"
 guide_menu_list:
-  - name: "POST: Rename External IDs"
+  - name: "POST:外部ID の名前変更"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
-    fa_icon: fas fa-user
-  - name: "POST: Remove Deprecated External IDs"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "POST:非推奨の外部ID の削除"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
 ---

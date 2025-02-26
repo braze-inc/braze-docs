@@ -18,12 +18,16 @@ Braze SDK にはデフォルトのカードフィードが含まれています�
 
 以下の追加メソッドを使用して、アプリ内にカスタムコンテンツカードフィードを構築できます。
 
-|メソッド | 説明 |
+|方法 | 説明 |
 |---|---|
-|`requestContentCardsRefresh()`|Braze SDK サーバーから最新のコンテンツカードを要求するバックグラウンドリクエストを送信します。|
-|`getContentCardsFromServer(successCallback, errorCallback)`|Braze SDK からコンテンツカードを取得します。これにより、サーバーから最新のコンテンツカードが要求され、完了時にカードのリストが返されます。|
-|`getContentCardsFromCache(successCallback, errorCallback)`|Braze SDK からコンテンツカードを取得します。これにより、前回の更新時に更新された最新のカードリストがローカルキャッシュから返されます。|
-|`logContentCardClicked(cardId)`|指定されたコンテンツカード ID のクリックを記録します。|
-|`logContentCardImpression(cardId)`|指定されたコンテンツカード ID のインプレッションを記録します。|
+|`requestContentCardsRefresh()`|Braze SDKサーバーから最新のコンテンツカードを要求するためのバックグラウンドリクエストを送信する。|
+|`getContentCardsFromServer(successCallback, errorCallback)`|Braze SDKからコンテンツカードを取得する。これにより、サーバーから最新のコンテンツカードが要求され、完了時にカードのリストが返されます。||
+|`getContentCardsFromCache(successCallback, errorCallback)`|Braze SDKからコンテンツカードを取得する。これは、前回の更新時に更新されたローカルキャッシュから最新のカードリストを返す。|
+|`logContentCardClicked(cardId)`|指定されたコンテンツカードIDのクリックを記録する。|
+|`logContentCardImpression(cardId)`|与えられたコンテンツカードIDのインプレッションを記録する。|
 |`logContentCardDismissed(cardId)`|指定されたコンテンツカード ID が閉じられたことを記録します。|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## GIFサポート
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}

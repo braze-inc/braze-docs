@@ -45,7 +45,7 @@ page_order: 3
 {% endtab %}
 
 {% tab new location %}
-After you move or rename the relevant Markdown file, navigate to the `assets/js/` directory and open the global redirect file.
+Move or rename the relevant Markdown file, then navigate to the `assets/js/` directory and open the global redirect file.
 
 ```bash
 braze-docs
@@ -53,6 +53,10 @@ braze-docs
     └── js
         └── broken_redirect_list.js
 ```
+
+{% alert tip %}
+If you don't plan on moving or renaming the file, you can also set up the redirect directly in your file's YAML front matter with [`layout: redirect`]({{site.baseur}}/contributing/yaml_front_matter/page_layouts/#redirect), instead of creating a new one in the global redirect file.
+{% endalert %}
 
 At the of the file, create a redirect on a new line using the following syntax:
 
@@ -66,7 +70,7 @@ Replace the following:
 |-----------------|------------------------------------------------------------------------------------------------|
 | `REDIRECT_FROM` | The URL you want to redirect _from_ with `https://www.braze.com/` removed from the URL string. |
 | `REDIRECT_TO`   | The URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.   |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
 
@@ -93,7 +97,7 @@ Replace the following:
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | `OLD_HEADING`     | The old heading in [Markdown syntax](https://www.markdownguide.org/basic-syntax/#an-example-putting-the-parts-together) with the `#` removed. |
 | `NEW_HEADING_URL` | The new heading URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
 
@@ -107,3 +111,37 @@ description: "If you're new to the Braze SDK, learn how to get started."
 local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
+
+## Testing redirects
+
+You can use [`bdocs`]({{site.baseurl}}/contributing/bdocs) to lists all of the old URLs you set up using a base URL of your choice.
+
+{% tabs local %}
+{% tab usage example %}
+The following example uses the [Sage AI rebrand PR](https://github.com/braze-inc/braze-docs/pull/8040).
+
+```terminal
+$ git checkout bd-3442
+$ ./bdocs redirects https://braze-docs-gtcavota9-braze.vercel.app/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
+{% endalert %}
+
+## Troubleshooting
+
+{% multi_lang_include contributing/troubleshooting/redirects.md %}

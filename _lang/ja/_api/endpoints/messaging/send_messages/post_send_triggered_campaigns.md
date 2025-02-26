@@ -1,11 +1,11 @@
 ---
-nav_title: "ポスト:API トリガ配信を使用したキャンペーンの送信"
-article_title: "ポスト:API トリガ配信を使用したキャンペーンの送信"
+nav_title: "POST:API トリガー配信でキャンペーンを送信する"
+article_title: "POST:API トリガー配信でキャンペーンを送信する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、API トリガー配信Braze エンドポイントを使用した送信キャンペーンの詳細について説明します。"
+description: "この記事では、API トリガー配信 Braze エンドポイントを使用したキャンペーンの送信の詳細について説明します。"
 
 ---
 {% api %}
@@ -14,23 +14,23 @@ description: "この記事では、API トリガー配信Braze エンドポイ�
 /campaigns/trigger/send
 {% endapimethod %}
 
-> このエンドポイントを使用して、API トリガー配信を介して、指定されたユーザに即時のワンオフメッセージを送信します。 
+> このエンドポイントを使用して、API トリガー配信を使用して、指定したユーザーに即時の1回限りのメッセージを送信します。
 
-API トリガー配信では、メッセージが送信されたとき、およびAPI 経由で誰に送信されるかを指示しながら、Braze ダッシュボード内にメッセージコンテンツを保存できます。
+API トリガー配信を使用すると、メッセージの内容を Braze ダッシュボード内に保存し、メッセージが送信されるタイミングと送信先を API を使用して指定できます。
 
-セグメントをターゲットとしている場合、リクエストのレコードは[Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) に保存されます。このエンドポイントでメッセージを送信するには、[キャンペーンID](https://www.braze.com/docs/api/identifier_types/) を作成し、[API トリガキャンペーン]({{site.baseurl}}/api/api_campaigns/) を作成する必要があります。
+セグメントをターゲットとしている場合、リクエストのレコードは[Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) に保存されます。このエンドポイントを使用してメッセージを送信するには、[API トリガーキャンペーン]({{site.baseurl}}/api/api_campaigns/)を構築する際に[キャンペーン ID](https://www.braze.com/docs/api/identifier_types/) を作成しておく必要があります。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`campaigns.trigger.send` 権限を持つAPI キーを生成する必要があります。
+このエンドポイントを使用するには、`campaigns.trigger.send` 権限を持つ API キーを生成する必要があります。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,36 +48,50 @@ Authorization: Bearer YOUR-REST-API-KEY
   "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
     [
       {
-      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
+      "email": (optional, string) email address of user to receive message,
+      "prioritization": (optional, array) prioritization array; required when using email,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }
-  ]
+  ],
+  "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
+    [
+      {  
+       "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
+       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+      }
+    ]
 }
 ```
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|必須|文字列|参照[キャンペーン識別子]({{site.baseurl}}/api/identifier_types/).|
-|`send_id`| オプション| 文字列| [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照|
-|`trigger_properties`| オプション| オブジェクト| [トリガプロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)を参照してください。この要求のすべてのユーザーに適用されるカスタマイズキーと値のペア。|
-||`broadcast`| オプション| ブール| キャンペーンまたはキャンバスがターゲットとするセグメント全体にメッセージを送信するときは、`broadcast` をtrue に設定する必要があります。このパラメーターのデフォルトはfalse です(2017年8 月31 日現在)。<br><br> `broadcast` がtrue に設定されている場合、`recipients` リストを含めることはできません。ただし、`broadcast: true` を設定するときは注意が必要です。意図せずにこのフラグを設定すると、期待した視聴者よりも大きな視聴者にメッセージが送信される可能性があります。|
-|`audience`| オプション| 接続されたオーディエンスオブジェクト| [接続されたオーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照|
-|`recipients`| オプション| 配列| [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。<br><br>`send_to_existing_only` が`false` の場合、属性オブジェクトを含める必要があります。<br><br>`recipients` が指定されず、`broadcast` がtrue に設定されている場合、メッセージはキャンペーンの対象となるセグメント全体に送信されます。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`campaign_id`|必須|文字列|[キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`send_id`| オプション | 文字列 | [送信識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+|`trigger_properties`| オプション | オブジェクト | [トリガープロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)を参照してください。このリクエストのすべてのユーザーにアプリするパーソナライゼーションキーと値のペア。 |
+|`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、設定 `broadcast: true` の場合は注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きなオーディエンスにメッセージが送信される可能性があるためです。 |
+|`audience`| オプション | 接続されたオーディエンスオブジェクト| [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
+|`recipients`| オプション | 配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。<br><br>`send_to_existing_only` が `false` の場合、属性オブジェクトが含まれていなければなりません。<br><br>`recipients` が指定されず、`broadcast` がtrue に設定されている場合、メッセージはキャンペーンの対象となるセグメント全体に送信されます。 |
+|`attachments`| オプション | 配列 | `broadcast` が true に設定されている場合、`attachments` リストを含めることはできません。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- recipients 配列には、最大50 個のオブジェクトを含めることができます。各オブジェクトには、単一の`external_user_id` 文字列と`trigger_properties` オブジェクトが含まれます。
-- `send_to_existing_only` が`true` の場合、Braze はメッセージを既存のユーザにのみ送信します。ただし、このフラグはユーザーエイリアスでは使用できません。 
-- `send_to_existing_only` が`false` の場合、属性を含める必要があります。Braze は、`id` と属性を持つユーザを作成してからメッセージを送信します。
+- 受信者配列には最大50個のオブジェクトを含めることができ、各オブジェクトには1つの `external_user_id` 文字列と `trigger_properties` オブジェクトが含まれます。
+- `send_to_existing_only` が`true` の場合、Braze は既存ユーザーにのみメッセージを送信します。ただし、このフラグは、ユーザーのエイリアスでは使えません。
+- `send_to_existing_only` が`false` の場合、属性が含まれていなければなりません。Brazeは、メッセージを送信する前に、`id` と属性を持つユーザーを作成する。
+
+{% alert important %}
+メールアドレスによる受信者の指定は、現在早期アクセス中です。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
+{% endalert %}
 
 ユーザのサブスクリプショングループのステータスは、`subscription_groups` パラメータを`attributes` オブジェクトに含めることで更新できます。詳細については、[ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object)を参照してください。
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/send' \
 --header 'Content-Type: application/json' \
@@ -147,22 +161,28 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
         "first_name" : "Alex"
       }
     }
+  ],
+  "attachments": [
+    {
+      "file_name" : "YourFileName",
+      "url" : "https://exampleurl.com/YourFileName.pdf"
+    }
   ]
 }'
 ```
 
 ## 対応内容
 
-メッセージ送信エンドポイント応答には、メッセージのディスパッチへの参照のためのメッセージの`dispatch_id` が含まれます。`dispatch_id` はメッセージディスパッチのID で、Braze から送信される各送信の一意のID です。このエンドポイントを使用すると、バッチ処理されたユーザーのセット全体に対して単一の`dispatch_id` を受け取ります。`dispatch_id` の詳細については、[ Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) のドキュメントを参照してください。
+メッセージ送信エンドポイントの応答には、メッセージのディスパッチを参照できるように、メッセージの `dispatch_id` が含まれます。`dispatch_id` はメッセージディスパッチの ID で、Braze から送信される各送信に固有の ID です。このエンドポイントを使用すると、バッチ処理されたユーザーセット全体に対して1つの `dispatch_id` を受け取ります。`dispatch_id` の詳細については、[ディスパッチ ID の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)に関するドキュメントを参照してください。
 
-## 送信エンドポイントの作成
+リクエストで致命的なエラーが発生した場合のエラーコードと説明については、[エラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
-**キャンペーンでの属性オブジェクトの使用**
+## キャンペーンの属性オブジェクト
 
-Braze には、`attributes` というメッセージングオブジェクトがあり、API トリガキャンペーンを送信する前に、ユーザの属性と値を追加、作成、または更新できます。このAPI コールとして`campaign/trigger/send` エンドポイントを使用すると、ユーザー属性オブジェクトが処理され、キャンペーンが送信される前に処理されます。これにより、[race conditions]({{site.baseurl}}/help/best_practices/race_conditions/)に起因する問題が発生するリスクを最小限に抑えることができます。 
+Brazeには、`attributes` というメッセージングオブジェクトがあり、APIトリガーのキャンペーンを送る前に、ユーザーの属性や値を追加、作成、更新することができる。この API 呼び出しとして `campaign/trigger/send` エンドポイントを使用すると、キャンペーンを処理して送信する前に、ユーザー属性オブジェクトが処理されます。これにより、[競合]({{site.baseurl}}/help/best_practices/race_conditions/) による問題が発生するリスクを最小限に抑えることができます。ただし、デフォルトでは、サブスクリプショングループをこの方法で更新することはできません。
 
 {% alert important %}
-このエンドポイントのキャンバスバージョンを探していますか?[APIトリガー配信によるキャンバスメッセージの送信]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint)を確認してください。
+このエンドポイントのキャンバスバージョンをお探し？[APIトリガー配信を使用したキャンバスメッセージの送信]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint)をチェックしてください。
 {% endalert %}
 
 {% endapi %}

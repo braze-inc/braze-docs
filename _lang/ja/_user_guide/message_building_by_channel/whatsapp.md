@@ -6,48 +6,51 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsAppは、世界中で使用されている人気のあるピアツーピアメッセージングプラットフォームであり、企業に会話ベースのメッセージングを提供しています。WhatsAppメッセージングチャネルは、WhatsAppプラットフォーム上のユーザーや顧客にリーチするための直接的な方法を提供します。<br><br>**WhatsAppへのアクセスは、一部のBrazeパッケージでのみ利用できます。開始するには、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
-description: "このランディングページには、WhatsAppキャンペーンの作成方法、オプトインとオペストアウト、クイック返信、レポートなど、WhatsAppに関するすべての情報が掲載されています。"
+guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>** WhatsApp アクセスは、一部の Braze パッケージでのみ使用できます。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。**"
+description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイック返信、レポートなど、WhatsApp のすべての機能のホームページです。"
 search_rank: 3
 alias: /whatsapp/
 
 guide_featured_title: "WhatsApp"
 guide_featured_list:
-- name: "WhatsApp Setup"
+- name: "WhatsApp設定"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
-  fa_icon: fa-brands fa-whatsapp
-- name: "WhatsApp Subscription Group"
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "WhatsAppサブスクリプショングループ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
-  fa_icon: fas fa-table
-- name: "User Phone Numbers"
+  image: /assets/img/braze_icons/table.svg
+- name: "ユーザーの電話番号"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
-  fa_icon: fa-solid fa-phone
-- name: "Create a WhatsApp Campaign"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "WhatsApp キャンペーンの作成"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
-  fa_icon: fas fa-mobile-alt
-- name: "User Retargeting"
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "ユーザーのリターゲット"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
-  fa_icon: fa-solid fa-user
-- name: "Opt-in and Opt-outs"
+  image: /assets/img/braze_icons/users-01.svg
+- name: "オプトインとオプトアウト"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
-  fa_icon: fas fa-commenting
-- name: "Messaging Users"
+  image: /assets/img/braze_icons/message-dots-circle.svg
+- name: "ユーザーへのメッセージング"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-  fa_icon: fa-solid fa-comments
-- name: "Handling Unknown Phone Numbers"
+  image: /assets/img/braze_icons/message-chat-circle.svg
+- name: "不明な電話番号の処理"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
-- name: "WhatsApp Marketing Experiment"
+- name: "WhatsApp販売試験"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
-  fa_icon: fas fa-vials
-- name: "WhatsApp Reporting"
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: "WhatsApp報告"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-  fa_icon: fas fa-file-alt
-- name: "WhatsApp Best Practices"
+  image: /assets/img/braze_icons/file-06.svg
+- name: "メッセージ利用ダッシュボード"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
+  image: /assets/img/braze_icons/file-07.svg
+- name: "WhatsAppのベストプラクティス"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
-  fa_icon: fas fa-check-square
-- name: "WhatsApp FAQ"
+  image: /assets/img/braze_icons/check-square-broken.svg
+- name: "WhatsAppに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

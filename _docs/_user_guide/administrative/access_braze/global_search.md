@@ -18,6 +18,7 @@ You can search for the following items and actions:
 
 - Campaign names
 - Canvas names
+- Content Blocks
 - Segment names
 - Email template names
 - [Pages within Braze](#find-pages-that-have-been-renamed)
@@ -55,7 +56,7 @@ table td {
 | Move between search results | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
 | Select a search result      | <kbd>Enter</kbd>    |
 | Close the search menu       | <kbd>Esc</kbd>  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Content type and status tags
 
@@ -81,11 +82,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 --->
 
-### Filter for archived content
+### Filter for active and draft content
 
-You can include archived content in your search results by selecting **Show Archived Content**. By default, the toggle is off, and archived content isn't included.
+You can include active and draft content in your search results by selecting **Show active and draft only**. By default, the toggle is on, and all content, including archived, is shown.
 
-![The "Show Archived Content" toggle.][4]
+![The "Show active and draft only" toggle.][4]
 
 ### Search for emojis
 
@@ -95,4 +96,4 @@ Do you use emojis when naming your work in Braze? Search for them! You can use e
 [1]: {% image_buster /assets/img/global_search/global_search.png %}
 [2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
 [3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/archived_content.png %}
+[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}

@@ -6,7 +6,7 @@ page_type: reference
 page_order: 4.8
 ---
 
-# Use cases
+# API use cases
 
 > The [Braze REST API]({{site.baseurl}}/api/basics/) provides a wide range of endpoints designed to help manage and optimize your customer engagement strategy. In this article, we’ll explore several use cases for each endpoint collection: catalogs, email lists and addresses, export, messages, preference center, SMS, subscription groups, templates, and user data.<br><br>Each section introduces a scenario with a step-by-step guide, code sample, and expected outcome. By the end of this article, you’ll better understand how to use the Braze REST API to enhance your customer engagement efforts.
 
@@ -239,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template via API. The email template in the Braze dashboard will reflect these edits.
+After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template through the API. The email template in the Braze dashboard will reflect these edits.

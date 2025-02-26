@@ -1,49 +1,49 @@
 ---
-nav_title: "設置:複数のカタログアイテムを更新します"
-article_title: "設置:複数のカタログアイテムを更新します"
+nav_title: "PUT:複数のカタログ項目を更新"
+article_title: "PUT:複数のカタログ項目を更新"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "この記事では、複数のカタログ項目を更新するBrazeエンドポイントの詳細について概説します。"
+description: "この記事では、「複数のカタログ項目を更新」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログ項目を更新
+# カタログ項目のアップデート
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログ内の複数のアイテムを更新します。 
+> このエンドポイントを使用して、カタログ内の複数の項目を更新します。
 
-カタログ項目が存在しない場合、このエンドポイントはカタログに項目を作成します。各リクエストは最大50のカタログ項目をサポートすることができます。このエンドポイントは非同期である。
+カタログアイテムが存在しない場合、このエンドポイントはカタログ内にアイテムを作成します。1つのリクエストにつき、最大50個のカタログアイテムに対応できます。このエンドポイントは非同期である。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#ab30a4fc-60bc-4460-885c-1b92af8bc061 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`catalogs.replace_items` パーミッションを持つ[API キーが]({{site.baseurl}}/api/basics#rest-api-key/)必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`catalogs.replace_items`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
-## 経路パラメータ
+## パスパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-|`catalog_name` ｜必須｜文字列｜カタログ名。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-|`items` ｜必須｜配列｜アイテム・オブジェクトを含む配列。各オブジェクトはIDを持たなければならない。アイテム・オブジェクトは、カタログに存在するフィールドを含んでいなければならない。1回のリクエストにつき、アイテムオブジェクトは50個まで許可される。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| `items` | required | 配列 | アイテム・オブジェクトを含む配列。各オブジェクトにはID が必要です。アイテムオブジェクトには、カタログに存在するフィールドs が含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -59,12 +59,20 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
       "id": "restaurant3",
       "City": "San Francisco",
-      "Rating": 2
+      "Rating": 2,
+      "Top_Dishes": [
+        "Hot Dog",
+        "French Fries"
+      ]
     }
   ]
 }'
@@ -72,11 +80,11 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 応答
 
-このエンドポイントには、`202` 、`400` 、`404` の3つのステータスコード・レスポンスがある。
+このエンドポイントには、`202`、`400`、`404` という 3 つのステータスコード応答があります。
 
-### 成功応答例
+### 成功応答の例
 
-ステータスコード`202` 、以下のレスポンスボディを返すことができる。
+ステータスコード `202` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -86,7 +94,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### エラー応答例
 
-ステータスコード`400` 、以下のレスポンスボディを返すことができる。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照してください。
+ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
 
 ```json
 {
@@ -108,23 +116,23 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## トラブルシューティング
 
-次の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものです。
+次のテーブルに、返される可能性のあるエラーと、関連するトラブルシューティングステップを示します。
 
-| トラブルシューティング
+| エラー | トラブルシューティング |
 | --- | --- |
-|`catalog-not-found` | カタログ名が有効であることを確認する。|
-|`ids-not-string` ｜各アイテムIDが文字列であることを確認する。|
-|`ids-not-unique` ｜各アイテムIDが一意であることを確認する。|
-|`ids-too-large` ｜各アイテムIDの文字数制限は250文字です。|
-|`item-array-invalid` |`items` はオブジェクトの配列でなければならない。|
-|`items-missing-ids` ｜各アイテムがIDを持っていることを確認する。|
-|`items-too-large` ｜項目値は5,000文字を超えることはできません。|
-|`invalid-ids` ｜アイテムID名に使用できる文字は、アルファベット、数字、ハイフン、アンダースコアです。|
-|`invalid-fields` ｜APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これはエラーにあるIDフィールドとは関係ない。|
-|`invalid-keys-in-value-object` | アイテム・オブジェクト・キーに`.` または`$` を含めることはできない。|
-|`too-deep-nesting-in-value-object` | アイテムオブジェクトは50レベル以上の入れ子を持つことができない。|
-|`request-includes-too-many-items` | リクエストの項目数が多すぎます。1回のリクエストの上限は50個です。|
-|`unable-to-coerce-value` ｜アイテムタイプは変換できません。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `catalog-not-found` | カタログ名が有効であることを確認する。 |
+| `ids-not-string` | 各項目ID が文字列であることを確認します。 |
+| `ids-not-unique` | 各項目の ID が一意であることを確認します。 |
+| `ids-too-large` | 各アイテムIDの文字数制限は250文字である。 |
+| `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目にIDがあることを確認します。 |
+| `items-too-large` | 項目値は5000 文字を超えることはできません。 |
+| `invalid-ids` | アイテムID名に使用できる文字は、アルファベット、数字、ハイフン、アンダースコアである。 |
+| `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |
+| `invalid-keys-in-value-object` | 項目オブジェクトのキーに `.` または `$` を含めることはできません。 |
+| `too-deep-nesting-in-value-object` | アイテム・オブジェクトは50レベル以上の入れ子を持つことはできない。 |
+| `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |
+| `unable-to-coerce-value` | 項目タイプは変換できません。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

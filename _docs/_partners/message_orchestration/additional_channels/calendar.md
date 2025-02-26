@@ -8,12 +8,9 @@ description: "This landing page lists Braze partners (Alloys) who allow you to p
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Calendar"
 
-valid_partner_list:
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
+hidden: true
+noindex: true
 ---

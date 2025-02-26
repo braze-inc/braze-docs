@@ -8,7 +8,7 @@ description: "このリファレンス記事では、iOS アプリでユーザ�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のユーザー ID の設定
 
@@ -40,7 +40,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 {% endtabs %}
 
 {% alert warning %}
-**ユーザーがログアウトするときに `changeUser()` を呼び出さないでください。`changeUser()` の呼び出しは、ユーザーがアプリケーションにログインするときにのみ行う必要があります。**[`changeUser()`][5] を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
+**ユーザーがログアウトするときに `changeUser()` を呼び出さないでください。`changeUser()` の呼び出しは、ユーザーがアプリケーションにログインするときにのみ行う必要があります。**[`changeUser()`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69%20%22changeuser%22) を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
 {% endalert %}
 
 このメソッドはアプリケーションのメインスレッドで呼び出してください。メソッドを非同期的に呼び出すと、定義されていない動作が生じる可能性があります。
@@ -55,7 +55,3 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"

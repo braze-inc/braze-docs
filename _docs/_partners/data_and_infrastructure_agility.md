@@ -8,8 +8,6 @@ description: "This page lists Braze partners (Alloys) who allow you to send, sto
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Data & Infrastructure Agility"
 
 valid_partner_list:
@@ -53,8 +51,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Amperity
@@ -133,4 +131,16 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: Odicci
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/odicci/
+- name: Optimizely
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/optimizely/
+- name: Justuno
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/ 
 ---

@@ -20,8 +20,15 @@ You might have gotten here from searching a term for an integration or feature t
 - [Twilio webhook integration]({{site.baseurl}}/help/release_notes/deprecations/twilio/)
 - [Apptimize partnership]({{site.baseurl}}/help/release_notes/deprecations/apptimize/)
 - [Grouparoo partnership]({{site.baseurl}}/help/release_notes/deprecations/grouparoo)
+- [Shopify `checkout.liquid` deprecation]({{site.baseurl}}/help/release_notes/deprecations/shopify_checkout/)
 
 ## Deprecations log
+
+### Shopify `checkout.liquid`
+
+**Support withdrawn**: August 2024 (phase 1), August 2025 (phase 2)
+
+Support for Shopify `checkout.liquid` will begin deprecation in August 2024 and finish in August 2025. Shopify will be transitioning to [Checkout Extensibility](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions), which is more secure, performant, and customizable.
 
 ### Custom push broadcast receiver for Android
 
@@ -121,9 +128,9 @@ If you need assistance with your Eclipse integration prior to migration, contact
 ### The Raw Event Stream (RES)
 
 **Support withdrawn**: July 2018<br>
-**Replaced by**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Replaced by**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and was deprecated to make room for the future of Braze data.
 
 ### Delay while idle - GCM feature
 

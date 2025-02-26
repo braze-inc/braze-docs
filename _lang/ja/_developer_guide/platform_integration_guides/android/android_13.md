@@ -13,23 +13,23 @@ description: "この記事では、Android 13の更新、SDK の更新、プッ�
 
 > このガイドでは、Android 13 (2022) で導入された関連のある変更と、Braze Android SDK 統合に必要なアップグレード手順について説明します。
 
-完全な移行ガイドについては、[Android 13開発者向けドキュメント][2]を参照してください。
+完全な移行ガイドについては、[Android 13開発者向けドキュメント](https://developer.android.com/about/versions/13)を参照してください。
 
 ## Android 13 Braze SDK
 
-Android 13に備えるには、Braze SDK を[最新バージョン (v21.0.0以降)][1] にアップグレードしてください。そうすることで、新しい[「コードなし」プッシュプライマー機能][7]を利用できるようになります。
+Android 13に備えるには、Braze SDK を[最新バージョン (v21.0.0以降)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300) にアップグレードしてください。そうすることで、新しい[「コードなし」プッシュプライマー機能]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)を利用できるようになります。
 
 ## Android 13での変更点
 
 ### プッシュアクセス許可{#push-permission}
 
-Android 13では、ユーザーがプッシュ通知を送信するアプリを管理する方法に[大きな変更][3]が導入されています。Android 13では、アプリはプッシュ通知を表示する前にアクセス許可を取得する必要があります。 
+Android 13では、ユーザーがプッシュ通知を送信するアプリを管理する方法に[大きな変更](https://developer.android.com/about/versions/13/changes/notification-permission)が導入されています。Android 13では、アプリはプッシュ通知を表示する前にアクセス許可を取得する必要があります。 
 
-![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons "Allow" and "Don't allow" at the bottom of the message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![アンドロイドのプッシュメッセージで、「Kitchenerieからの通知を許可しますか」という問いかけがあり、メッセージの下に「許可する」と「許可しない」の2つのボタンがある。]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 この新しいアクセス許可は、iOS および Web プッシュと同様のパターンに従い、許可の取得を1回試行するだけです。ユーザーが`Don't Allow`を選択した場合、またはプロンプトを無視すると、アプリは再度許可を求めることができなくなります。
 
-Android 13に更新する前にプッシュ通知を有効にしていたユーザーに対しては、アプリには[除外が適用][4]されることに注意してください。これらのユーザーは、Android 13に更新しても、許可をリクエストしなくてもプッシュを受け取ることが[可能][8]です。
+Android 13に更新する前にプッシュ通知を有効にしていたユーザーに対しては、アプリには[除外が適用](https://developer.android.com/about/versions/13/changes/notification-permission#eligibility)されることに注意してください。これらのユーザーは、Android 13に更新しても、許可をリクエストしなくてもプッシュを受け取ることが[可能](https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps)です。
 
 #### アクセス許可プロンプトのタイミング {#push-permission-timing}
 
@@ -39,7 +39,7 @@ Android 13をターゲットとするアプリは、アクセス許可をリク�
 
 アプリが以前にインストールされており、すでにプッシュを送信していた場合、ユーザーが Android 12から13にアップグレードすると、システムは対象となるすべてのアプリに新しい通知権限を自動的に事前に付与します。つまり、これらのアプリはユーザーに通知を送信し続けることができ、ユーザーには実行時の許可プロンプトが表示されません。
 
-詳細については、Android の開発者向けドキュメントで [既存のアプリの更新への影響][8]を参照してください。
+詳細については、Android の開発者向けドキュメントで [既存のアプリの更新への影響](https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps)を参照してください。
 
 **Android 12以前を対象としています**
 
@@ -53,15 +53,7 @@ Braze SDK v23.0.0は、プッシュ通知を受信したときにデフォルト
 
 ユーザーにプッシュアクセス許可を求めるプロンプトをいつ表示するかを制御するために、アプリが Android 13をターゲットにすることを強くお勧めします。
 
-これにより、さらに適切なタイミングでユーザーにプロンプ​​トを表示することで、[プッシュ通知のオプトイン率][6]を最適化し、アプリがプッシュアクセス許可を求める方法とタイミングに関するユーザーエクスペリエンスの向上につながります。
+これにより、さらに適切なタイミングでユーザーにプロンプ​​トを表示することで、[プッシュ通知のオプトイン率](https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps)を最適化し、アプリがプッシュアクセス許可を求める方法とタイミングに関するユーザーエクスペリエンスの向上につながります。
 
-新しい[「コードなし」プッシュプライマー機能][7]の使用を開始するには、Android SDK [を最新バージョン (v23.0.0以降)][1] にアップグレードしてください。
+新しい[「コードなし」プッシュプライマー機能]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)の使用を開始するには、Android SDK [を最新バージョン (v23.0.0以降)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300) にアップグレードしてください。
 
-[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
-[2]: https://developer.android.com/about/versions/13
-[3]: https://developer.android.com/about/versions/13/changes/notification-permission
-[4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
-[5]: https://developer.android.com/about/versions/13/overview#platform_stability
-[6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps

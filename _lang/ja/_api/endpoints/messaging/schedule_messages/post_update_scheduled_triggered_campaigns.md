@@ -1,37 +1,37 @@
 ---
-nav_title: "ポスト:スケジュールされた API トリガー キャンペーンの更新"
-article_title: "ポスト:スケジュールされた API トリガー キャンペーンの更新"
+nav_title: "POST:スケジュールされた API トリガーキャンペーンの更新"
+article_title: "POST:スケジュールされた API トリガーキャンペーンの更新"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "この記事では、スケジュールされた API トリガー キャンペーンの更新の Braze エンドポイントについて詳しく説明します。"
+description: "この記事では、「スケジュールされた API トリガーキャンペーンの更新」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# スケジュールされた API トリガー キャンペーンを更新する
+# スケジュールされた API トリガーキャンペーンの更新
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-> このエンドポイントを使用して、ダッシュボードで作成されたスケジュールされた API トリガー キャンペーンを更新し、メッセージを送信するトリガーとなるアクションを決定できるようにします。
+> このエンドポイントを使用して、ダッシュボードで作成した、API でトリガーされるスケジュール済みキャンペーンを更新します。これにより、メッセージの送信をトリガーするアクションを決めることができます。
 
-通行できます `trigger_properties` メッセージ自体にテンプレート化されます。
+メッセージ自体にテンプレート化される `trigger_properties` を渡すことができます。
 
-このエンドポイントを使用してメッセージを送信するには、[API トリガー キャンペーン]({{site.baseurl}}/api/api_campaigns/)の作成時に作成されたキャンペーン ID が必要であることに注意してください。
+このエンドポイントでメッセージを送信するには、[API-Triggered キャンペーン]({{site.baseurl}}/api/api_campaigns/) をビルドするときに作成されるキャンペーン ID が必要です。
 
-任意のスケジュールは、スケジュール作成リクエストまたは以前のスケジュール更新リクエストで指定したスケジュールを完全に上書きします。例えば、最初に `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` そしてアップデートでは `"schedule" : {"time" : "2015-02-20T14:14:47"}`、メッセージはユーザーの現地時間ではなく、UTC で指定された時間に送信されるようになります。送信されるはずの時間に非常に近い時間またはその間に更新されるスケジュールされたトリガーは、最大限の努力で更新されるため、土壇場での変更が対象ユーザーのすべて、一部、またはまったく適用されない可能性があります。
+どのスケジュールも、スケジュール作成リクエストや以前のスケジュール更新リクエストで提供したものを完全に上書きする。例えば、最初に`"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` を指定し、更新時に`"schedule" : {"time" : "2015-02-20T14:14:47"}` を指定した場合、メッセージはユーザーのローカル時間ではなく、UTCで指定された時間に送信されるようになる。送信予定時刻に非常に近いか、送信予定時刻に更新されたスケジュールされたトリガーは、ベストエフォートで更新されます。このため、直前の変更は、ターゲットユーザーの全員または一部に適用されるか、あるいはまったく適用されない可能性があります。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `campaigns.trigger.schedule.update` 許可。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`campaigns.trigger.schedule.update`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -48,16 +48,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|必須|文字列| [キャンペーン識別子を]({{site.baseurl}}/api/identifier_types/)参照 |
-| `schedule_id`| 必須 | 文字列 | `schedule_id` 更新する（スケジュールを作成するための応答から取得）。 |
-|`schedule`| 必須 | オブジェクト | [スケジュール オブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`campaign_id`|必須|文字列| [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください|
+| `schedule_id` | 必須 | 文字列 | 更新する`schedule_id` (スケジュールを作成するレスポンスから取得)。 |
+|`schedule` | 必須 | オブジェクト | [スケジュールオブジェクト]({{site.baseurl}}/api/objects_filters/schedule_object/)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update' \
 --header 'Content-Type: application/json' \

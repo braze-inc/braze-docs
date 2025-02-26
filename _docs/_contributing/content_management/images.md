@@ -32,7 +32,7 @@ Replace the following:
 |-------------|-------------------------------------------------------------------------------------------|
 | `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
 | `FILE`      | The name of the file including the file extension.                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your image file should be similar to the following:
 
@@ -46,10 +46,10 @@ braze-docs
 
 ### Step 2: Link to the image
 
-When linking to your new image, you can either use in-line or reference-style syntax. In-line syntax prioritizes clarity, while reference-style syntax prioritizes readability.
+{% alert important %}
+Since Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
+{% endalert %}
 
-{% tabs local %}
-{% tab in-line %}
 In your Markdown file, link to your new image using the in-line syntax.
 
 {% raw %}
@@ -62,9 +62,9 @@ Replace the following:
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your in-line image should be similar to the following:
 
@@ -73,58 +73,24 @@ Your in-line image should be similar to the following:
 ![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
 ```
 {% endraw %}
-{% endtab %}
 
-{% tab reference-style %}
-In your Markdown file, link to your new image using the reference-style syntax.
+### Step 3: Set the image's maximum width (optional)
 
-{% raw %}
-```markdown
-![ALT_TEXT.][REFERENCE_NUMBER]
-```
-{% endraw %}
-
-Replace the following:
-
-| Placeholder        | Description                                                                                                             |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`         | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
-| `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page.                   |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your in-line image should be similar to the following:
+You can set the image's maximum width by appending the following Liquid code to your image link:
 
 {% raw %}
 ```markdown
-![The form for creating a new pull request on GitHub.][10]
+{: style="max-width:NUMBER%;"}
 ```
 {% endraw %}
 
-At the bottom of the page, add your reference.
+Replace `NUMBER` with the maximum width you'd like to set as a percentage. Your image link should be similar to the following:
 
 {% raw %}
 ```markdown
-[REFERENCE_NUMBER]: {% image_buster /assets/img/DIRECTORY/IMAGE.png %}
+![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}){: style="max-width:65%;"}
 ```
 {% endraw %}
-
-Replace the following:
-
-| Placeholder        | Description                                             |
-|--------------------|---------------------------------------------------------|
-| `REFERENCE_NUMBER` | The number of the reference you'd like to link to.      |
-| `IMAGE` | The relative path to your image starting from the `img` directory. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your links should be similar to the following:
-
-{% raw %}
-```markdown
-[10]: {% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}
-```
-{% endraw %}
-{% endtab %}
-{% endtabs %}
 
 ## Updating an image
 
@@ -184,7 +150,7 @@ Replace the following:
 |-------------|-------------------------------------------------------------------------------------------|
 | `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
 | `FILE`      | The name of the file including the file extension.                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your image file should be similar to the following:
 

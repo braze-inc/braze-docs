@@ -13,7 +13,7 @@ channel:
 
 > MMS and SMS are both tied to the Braze SMS channel. To access MMS on your account requires the purchase of SMS for those who have not yet purchased access. Existing SMS customers can access MMS after they purchase it. 
 
-MMS is currently supported for US short codes (5-6 digit numbers), US and CA long codes (10-digit numbers), and US and Canada customer numbers. Sending numbers to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/).
+MMS is currently supported for US short codes (5-6 digit numbers), US and CA long codes (10-digit numbers), and US and Canada customer numbers. Sending numbers to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
 
 ## MMS short codes
 

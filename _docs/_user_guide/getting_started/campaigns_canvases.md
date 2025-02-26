@@ -24,13 +24,13 @@ While campaigns can be built uniquely depending on the channel, there are four m
 | A/B testing          | For campaigns targeting a single channel, you can send more than one version of the same campaign and see which one comes out on top. You can test copy, personalization, and more for up to eight different versions with a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/). |
 | API                  | [API campaigns]({{site.baseurl}}/api/api_campaigns/) let you send timely messages as quickly as possible. Unlike other campaign types, you don't specify the message, recipients, or schedule in the Braze dashboard. Instead, you pass these identifiers into your API calls. These are typically used for real-time transactional messaging or breaking news.  |
 | Transactional Emails | Braze [Transactional Emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/) are purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. They send business-critical notifications to a single user where speed is of the utmost importance. *Available for select packages.* |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/data_and_analytics/reporting) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
 
 Check out these additional resources to learn more about campaigns at Braze:
 
@@ -73,14 +73,14 @@ The following table outlines our supported channels.
 | [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | Send text messages to users' mobile phones.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
 | [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
-| [Connected TV]({{site.baseurl}}/developer_guide/platform_wide/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
+| [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>**Available as an add-on feature.*</sup>
 
 {% alert tip %}
-For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
+For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/getting_started/channels.png %}

@@ -10,11 +10,11 @@ description: "This article outlines the details about the Change user's email su
 ---
 {% api %}
 # Change email subscription status
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/status
 {% endapimethod %}
 
-> Use this endpoint to set the email subscription state for your users. 
+> Use this endpoint to set the email subscription state for your users.
 
 Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
 | `subscription_state` | Required | String | Either "subscribed", "unsubscribed", or "opted_in". |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

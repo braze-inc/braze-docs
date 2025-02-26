@@ -1,9 +1,9 @@
 ---
-nav_title: "iOS リッチ通知を作成する"
-article_title: リッチプッシュ通知を作成する
+nav_title: "リッチプッシュ通知の作成"
+article_title: "iOSのリッチプッシュ通知の作成"
 page_order: 3
 page_type: tutorial
-description: "このチュートリアルでは、Braze キャンペーン用の iOS リッチ通知を作成するための要件と手順について説明します。"
+description: "このチュートリアルでは、Brazeキャンペーン用のiOSリッチ通知を作成するための要件と手順を説明する。"
 
 platform: iOS
 channel:
@@ -13,137 +13,133 @@ tool:
 
 ---
 
-# iOSのリッチ通知を作成する
+# iOSのリッチプッシュ通知の作成
 
-> リッチ通知を使用すると、コピー以外のコンテンツを追加することで、プッシュ通知をさらにカスタマイズできます。Android の通知では、以前からプッシュ通知に画像が含まれており、「拡張通知画像」としてメッセージが表示されています。iOS 10 以降では、顧客は GIF、画像、ビデオ、またはオーディオを含む iOS プッシュ通知を受信できるようになります。
+> リッチ・ノーティフィケーションでは、コピー以外のコンテンツを追加することで、プッシュ通知をよりカスタマイズすることができる。Androidの通知には、以前からプッシュ通知に画像が含まれており、「拡張通知画像」として表示されている。iOS 10 以降、御社の顧客は GIF、画像、動画、音声を含む iOS プッシュ通知を受信できるようになりました。
 
-## 要件
+## 前提条件
 
-- アプリがリッチ通知を送信できるようにするには、開発者がアプリにサービス拡張機能を追加する必要があるため、[iOS プッシュ統合の][1] 手順に従ってください。
-- メディアの制限と仕様については [、Apple のドキュメント][2] も参照してください。
+iOS のリッチプッシュ通知を作成する前に、次の詳細に注意してください。
 
-> 2020 年 1 月現在、iOS リッチ プッシュ通知では 10 MB 未満であれば 1038x1038 の画像を処理できますが、できるだけ小さいファイル サイズを使用することをお勧めします。実際には、大きなファイルを送信すると、ネットワークに不要なストレスが発生し、ダウンロードのタイムアウトが頻繁に発生する可能性があります。
+- アプリからリッチプッシュ通知を送信できるようにするには、御社の開発者がアプリにサービス拡張機能を追加する必要があるため、「[iOS プッシュ連携][1]」の手順に従います。
+- 現在、Braze ダッシュボードで直接アップロードがサポートされているファイル形式には、JPEG、PNG、GIFがあります。これらのファイルは、これらの追加ファイルタイプとともに、テンプレート可能なURLフィールドに入力することもできる：AIF、M4A、MP3、MP4、またはWAV。
+- メディアの制限と仕様については、[Apple のドキュメント][2] を参照してください。
+- iOSのリッチ通知は、クイックプッシュキャンペーン作成時には利用できない。
+- iOS では画面に収まるように画像を拡大縮小し、リッチ画像の場合はアクティブなビューまたはロックされたビューに合わせて拡大縮小します。
 
-- iOS は、画面に収まるように画像を拡大縮小し、アクティブまたはロックされたビューに合わせてリッチ画像を拡大縮小します。
-- 現在、ダッシュボード内で直接アップロードできるファイルの種類には、JPEG、PNG、GIF などがあります。これらのファイルは、次の追加ファイル タイプとともに、テンプレート可能な URL フィールドに入力することもできます。AIF、M4A、MP3、MP4、または WAV。
+{% alert note %}
+2020年1月現在、iOSのリッチ・プッシュ通知は1038x1038で10MB以下の画像を扱うことができるが、できるだけ小さいファイルサイズを使うことを推奨する。実際、大きなファイルを送信すると、不要なネットワークストレスを引き起こしたり、ダウンロードのタイムアウトがより頻繁に発生する可能性があります。
+{% endalert %}
 
-### 文字カウント
+### 文字数
 
-プッシュに含める文字数の正確な数について厳格なルールを提供することはできませんが、iOS メッセージを設計する際に考慮すべき [ガイドラインをいくつか提供します]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) 。画像の有無、ユーザーの端末の通知状態や表示設定、端末のサイズなどにより多少の差異が生じる場合があります。疑問がある場合は、簡潔にまとめましょう。
+プッシュに含めるべき正確な文字数について厳密なルールを提供することはできないが、iOSのメッセージをデザインする際に考慮すべき[いくつかのガイドラインを提供する]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)。画像の有無、ユーザーの端末の通知状態や表示設定、端末の大きさによって多少の誤差が生じる場合がある。迷ったときには、簡潔にまとめます。
 
-> 一般的な目安として、Braze では、モバイル プッシュ通知のオプションのタイトルとメッセージ本文の両方について、各行のテキストを約 30 ～ 40 文字に抑えることを推奨しています。
+Braze はベストプラクティスとして、モバイルプッシュ通知では、オプションのタイトルとメッセージ本文の両方で、各行のテキストを約30～40文字に抑えることを推奨しています。
 
-#### 通知の状態
+#### 通知内容
 
-ユーザーはさまざまな状況でプッシュ通知を表示する可能性があり、次のようにテキストの長さも異なる場合があります。
+ユーザーは様々な状況でプッシュ通知を見る可能性があり、以下のように異なる長さのテキストを見る可能性がある。
 
 <table>
 <thead>
   <tr>
     <th>ロック画面または通知センター</th>
-    <th>展開済み</th>
-    <th>デバイスがアクティブです</th>
+    <th>拡大</th>
+    <th>デバイス・アクティブ</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td width="33%">これは最も一般的なシナリオです。<br><br><b>Title:</b>1行のテキスト<br><b>体：</b>4行のテキスト<br><b>画像:</b> 正方形のサムネイル</td>
-    <td width="33%">ユーザーがメッセージを長押ししたとき。<br><br><b>Title:</b>1行のテキスト<br><b>体：</b>7行のテキスト<br><b>画像：</b>2:1 アスペクト比 (推奨、以下の注記を参照)</td>
-    <td width="33%">携帯電話がロック解除されアクティブなときにユーザーがプッシュを受信した場合。<br><br><b>Title:</b>1行のテキスト<br><b>体：</b>2行のテキスト</td>
+    <td width="33%">これが最も一般的なシナリオだ。<br><br><b>Title:</b>テキスト1行<br><b>Body:</b>テキスト4行<br><b>画像：</b>正方形のサムネイル</td>
+    <td width="33%">ユーザーがメッセージを長押ししたとき。<br><br><b>Title:</b>テキスト1行<br><b>Body:</b>本文 7 行<br><b>Image:</b>2:1 のアスペクト比 (推奨。後述する注を参照)</td>
+    <td width="33%">携帯電話のロックが解除され、アクティブな状態でプッシュを受信した場合。<br><br><b>Title:</b>テキスト1行<br><b>Body:</b>テキスト 2 行</td>
   </tr>
 </tbody>
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-![Example push notifications for push displayed on the lock screen, when expanded, and when device is active.]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
+![ロック画面に表示されるプッシュ通知の例。展開した場合と、デバイスがアクティブな場合。]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
 
 {% alert note %}
-拡張プッシュ通知には 2:1 のアスペクト比を推奨しますが、ほぼすべてのアスペクト比がサポートされています。画像は常に通知の幅全体に広がり、高さはそれに応じて調整されます。
+プッシュ通知の拡大には2:1のアスペクト比を推奨しているが、ほぼすべてのアスペクト比に対応している。画像は常に通知の幅いっぱいに表示され、高さはそれに応じて調整される。
 {% endalert %}
 
 #### テキスト切り捨ての変数
 
-コンテンツを作成するときは、表示されるテキストの量に影響する可能性のある次のシナリオを考慮してください。
+コンテンツを作成する際には、テキストの表示量に影響する可能性のある以下のシナリオを考慮すること。
 
 {% tabs %}
-{% tab Timing %}
+{% tab タイミング %}
 
-##### タイミング
+ユーザーがプッシュ通知に反応したタイミングに応じて、タイムスタンプではタイトルテキストを短くすることができます。
 
-ユーザーがプッシュ通知にいつ反応するかに応じて、タイムスタンプによってタイトルテキストが短縮されることがあります。
+![タイムスタンプ "now"、タイトル文字数35のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+<br>タイトルの文字数：**35**
 
-![Example push notification with a timestamp of "now" and title character count of 35.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
-<br>タイトルの文字数:**35**
+![タイムスタンプが "3h ago"、タイトル文字数が33のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+<br>タイトルの文字数：**33**
 
-![Example push notification with a timestamp of "3h ago" and title character count of 33.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
-<br>タイトルの文字数:**33**
-
-![Example push notification with a timestamp of "Yesterday, 8:37 AM" and title character count of 22.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
-<br>タイトルの文字数:**22**
+![タイムスタンプが "Yesterday, 8:37 AM"、タイトル文字数が22のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+<br>タイトルの文字数：**22**
 
 {% endtab %}
-{% tab Images %}
+{% tab 画像 %}
 
-##### 画像
+画像がある場合、本文は1行につき約10文字短くなる。
 
-画像がある場合、本文は 1 行あたり約 10 文字短縮されます。
+![画像なし、本文文字数179のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_179.png %})
+<br>本文の文字数: **179**
 
-![Example push notification with no image and a body character count of 179.]({% image_buster/assets/img_archive/push_ios_images_179.png %})
-<br>本文の文字数:**179**
-
-![Example push notification with an image and a body character count of 154.]({% image_buster/assets/img_archive/push_ios_images_154.png %})
-<br>本文の文字数:**154**
+![画像と本文の文字数が154のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+<br>本文の文字数: **154**
 
 {% endtab %}
-{% tab Interruption level %}
+{% tab 中断レベル %}
 
-##### 中断レベル（iOS 15）
+iOS15では、Time Sensitive とCritical の表記は、タイトルをタイムスタンプのない新しい行に押し下げ、少しスペースを与える。
 
-Time Sensitive および Critical の指定では、タイトルがタイムスタンプなしで新しい行に押し下げられ、少しスペースが増えます。
+![]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %}) 「Time Sensitive」または「Critical」の表記がなく、タイトル文字数が35のプッシュ通知例。
+<br>タイトルの文字数：**35**
 
-![Example push notification with no Time Sensitive or Critical denotation and a title character count of 35.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
-<br>タイトルの文字数:**35**
-
-![Example push notification with a Time Sensitive denotation and a title character count of 39.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
-<br>タイトルの文字数:**39**
+![「Time Sensitive」の表記があり、タイトル文字数が 39 のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+<br>タイトルの文字数：**39**
 
 {% endtab %}
-{% tab More %}
+{% tab もっと見る %}
 
-##### その他
+以下の詳細は、テキストの切り捨てにも影響します。
 
-次のこともテキストの切り捨てに影響します。
-
-- **電話の表示設定:** ユーザーは、通常はアクセシビリティ上の理由から、電話のグローバル UI フォント サイズを拡大または縮小できます。
-- **デバイスの幅:** メッセージは、小さな携帯電話でも、幅の広い iPad でも表示できます。
-- **コンテンツ タイプ:** 絵文字や「m」や「w」などの幅の広い文字は、「i」や「t」よりも多くのスペースを占め、「engagement」などの長い単語は短い単語よりも急に行が折り返されることがあります。
+- **電話の表示設定:** ユーザーは、通常アクセシビリティ上の理由から、自分の電話のグローバル UI のフォントサイズを増減できます。
+- **デバイスの幅：**メッセージは小さな携帯電話でも、幅の広いiPadでも表示できる。
+- **コンテンツタイプ:** 絵文字、および「m」や「w」のような幅の広い文字は、「i」や「t」よりもスペースを取ります。また、「engagement」のように長い単語は、短い単語よりも突然改行されることがあります。
 
 {% endtab %}
 {% endtabs %}
 
 ## iOSのリッチ通知を設定する
 
-### ステップ 1:キャンペーンを作成する
+### ステップ 1: プッシュキャンペーンを作成する
 
-[キャンペーンの手順][3] に従って、iOS 用のプッシュ通知を作成します。リッチ コンテンツを含まないプッシュ通知を設定するために使用するのと同じコンポーザーを使用します。
+[キャンペーンの][3]手順に従って、iOS用のプッシュ通知を作成する。リッチコンテンツを含まないプッシュ通知の設定に使うのと同じコンポーザーを使うことになる。
 
-### ステップ 2:メディアを追加
+### ステップ2:メディアを追加する
 
-メッセージの作成者の **「リッチ通知メディア」** フィールドに画像、GIF、オーディオ、またはビデオ ファイルを追加します。コンテンツ ファイルを追加する方法については、 [要件](#requirements) を参照してください。
+メッセージのコンポーザーにある**Rich Notification Media**フィールドに画像、GIF、オーディオ、ビデオファイルを追加する。コンテンツファイルを追加する方法については、「[要件](#requirements)」を参照してください。
 
-![][4]{: style="max-width:70%;" }
+![プッシュ通知のサマリーテキストの例。][4]{: style="max-width:70%;" }
 
-このメッセージを、iOS 10 を実行するデバイスを持つユーザーにのみ送信するように制限することもできます。iOS 10 にアップグレードしていないユーザーの場合、**「リッチ通知をサポートするデバイスにのみ送信する」の** チェックを外すと、リッチ コンテンツのないテキストのみの通知が表示されます。
+このメッセージは、iOS 10を搭載したデバイスを持っているユーザーだけに送信するよう制限することもできる。iOS10にアップグレードしていないユーザーの場合、「**リッチ通知をサポートするデバイスにのみ送信**」のチェックを外しておくと、リッチコンテンツを含まないテキストのみの通知として表示される。
 
-![][5]{: style="max-width:70%;" }
+![画像を追加したり、画像のURLを入力したりすることができる、拡張された通知画像セクションです。][5]{: style="max-width:70%;" }
 
 ### ステップ 3:キャンペーンの作成を続ける
 
-リッチ通知コンテンツがダッシュボードにアップロードされたら、[キャンペーンのスケジュール設定][6]を続行できます。
+リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング][6]を続行できます。
 
-ユーザーがプッシュ通知を受信すると、プッシュ メッセージを強く押すと画像を拡大できます。
+プッシュ通知を受信したユーザーは、プッシュメッセージを長押しして画像を拡大できます。
 
-![ユーザーがプッシュ通知を受信し、メッセージを強く押すと、「Hello!」という拡大画像が表示されます。][8]{: style="max-width:50%;" }
+![プッシュ通知を受信したユーザーがメッセージを長押しすると、「Hello!」という拡大画像が表示されます。][8]{: style="max-width:50%;" }
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

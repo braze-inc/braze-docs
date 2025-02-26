@@ -63,6 +63,7 @@
     color: $black-shark;
     margin: 8px 40px;
   }
+
   .glossary_text {
     margin-top: auto;
     color: $text-color;
@@ -88,6 +89,16 @@
       &:hover {
         background-color: $braze-link-color;
       }
+    }
+  }
+
+  legend {
+    &.glossary_text {
+      font-size: 30px;
+      line-height: 1.4;
+      color: $braze-purple-dark;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   }
 
@@ -140,7 +151,7 @@
         vertical-align: middle;
         color: $text-color;
 
-        line-height: 1.8;
+        line-height: 1.25;
         display: inline-block;
       }
 
@@ -148,7 +159,7 @@
     a {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       margin-bottom: 30px;
 
       flex: 0 0 100%;
@@ -236,6 +247,9 @@
     }
     @media (min-width: $window-large-px) {
       margin-bottom: 30px;
+    }
+    #glossary_label {
+      width: 100%;
     }
     #glossary_search {
       border: 1px solid $grey-ghost;
@@ -374,12 +388,7 @@
     }
 
     // Hack the sticky header
-    > h1[id],
-    > h2[id],
-    > h3[id],
-    > h4[id],
-    > h5[id],
-    > h6[id] {
+    .anchor {
       pointer-events: none;
 
       > div,
@@ -387,13 +396,10 @@
         pointer-events: auto;
       }
 
-      &::before {
-        display: block;
-        height: $calc_offset_top;
-        margin-top: -$calc_offset_top;
-        visibility: hidden;
-        content: "";
-      }
+      display: block;
+      height: $calc_offset_top;
+      margin-top: -$calc_offset_top;
+      visibility: hidden;
       @media print {
         &::before {
           display: none;
@@ -407,7 +413,6 @@
         }
       }
     }
-
   }
 
 

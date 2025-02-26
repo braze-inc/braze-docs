@@ -28,7 +28,7 @@ These are the most engaging, but also the most intrusive since they cover your u
 
 - Header and body text
 - A large image
-- Up to two call to action buttons with separate on click behavior and deep links
+- Up to two call to action buttons with separate on-click behavior and deep links
 - Different colors for the header and body text, buttons and background
 - Key-value pairs
 
@@ -42,7 +42,7 @@ These messages aren't as intrusive as fullscreen messages, as they still allow u
 
 - Header and body text
 - An image or customizable badge icon
-- Up to two call to action buttons with separate on click behavior and deep links
+- Up to two call to action buttons with separate on-click behavior and deep links
 - Different colors for the header and body text, buttons and background
 - Key-value pairs
 
@@ -68,7 +68,7 @@ These are the least intrusive message type, though they can be more or less atte
 
 ## Web
 
-This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 {% details Email capture message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
@@ -140,7 +140,7 @@ For all of the in-app message types listed in the following table, the following
 | Slideup                            |     1:1      |         140         |
 | Modal (Image Only)                 |     1:1      |         140         |
 | Modal (With Text)                  |    29:10     |         140         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Keeping in-app message file sizes small
 

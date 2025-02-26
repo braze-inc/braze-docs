@@ -1,29 +1,29 @@
 ---
 nav_title: 統合の完了
-article_title: Swift SDK統合の完了
+article_title: Swift SDKの統合を完了する
 platform: Swift
-description: "この参考記事では、統合オプションの1つを使用して Braze SDK をインストールした後に統合を完了する方法を示します。"
+description: "この参考記事では、統合オプションの1つを使用して Braze Swift SDK をインストールした後に統合を完了する方法を示します。"
 page_order: 2
 
 ---
 
 # 統合の完了
 
-> これらの手順を実行する前に、 [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) または [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/) を使用して iOS 用 Swift SDK を統合していることを確認してください。
+> これらのステップに従う前に、[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) または [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/) のいずれかを使用して iOS 用の Swift SDK の統合が完了していることを確認してください。
 
 ## アプリデリゲートを更新する
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
-次のコード行をファイルに追加し `AppDelegate.swift` て、Braze Swift SDKに含まれる機能をインポートします。
+`AppDelegate.swift` ファイルに以下のコード行を追加して Braze Swift SDK に含まれる機能をインポートします。
 
 ```swift
 import BrazeKit
 ```
 
 
-次に、静的プロパティをクラスに追加し `AppDelegate` て、アプリケーションの有効期間を通じてBrazeインスタンスへの強い参照を維持します。
+次に、`AppDelegate` クラスに static プロパティを追加し、アプリケーションの有効期間を通して Braze インスタンスへの強い参照を保持します。
 
 ```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-最後に、 で `AppDelegate.swift`、次のスニペットをメソッドに追加します `application:didFinishLaunchingWithOptions:` 。
+最後に、`AppDelegate.swift` で、`application:didFinishLaunchingWithOptions:` メソッドに次のスニペットを追加します。
 
 ```swift
 let configuration = Braze.Configuration(
@@ -42,7 +42,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 
-`YOUR-BRAZE-ENDPOINT` **アプリ設定**ページから正しい値で更新`YOUR-APP-IDENTIFIER-API-KEY`します。アプリ識別子の API キーの場所の詳細については、 [API 識別子の種類]({{site.baseurl}}/api/identifier_types/?tab=app%20ids) をご覧ください。
+**アプリの設定**ページから、`YOUR-APP-IDENTIFIER-API-KEY` と`YOUR-BRAZE-ENDPOINT` を正しい値に更新する。アプリ識別子のAPIキーがどこにあるかについては、[API識別子の種類を]({{site.baseurl}}/api/identifier_types/?tab=app%20ids)チェックしてほしい。
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
@@ -53,23 +53,23 @@ AppDelegate.braze = braze
 @import BrazeKit;
 ```
 
-次に、静的変数 `AppDelegate.m` をファイルに追加して、アプリケーションの存続期間を通じて Braze インスタンスへの参照を保持します。
+次に、`AppDelegate.m` ファイルに静的変数を追加して、アプリケーションのライフタイムを通してBrazeインスタンスへの参照を保持する：
 
-\`\`\`objc
-static Braze \*_braze;
+```objc
+static Braze *_braze;
 
 @implementation AppDelegate
-\+ (Braze \*)braze {
-  return \_braze;
++ (Braze *)braze {
+  return _braze;
 }
 
-+ (void)setBraze:(Braze \*)braze {
-  \_braze = braze;
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
 }
 @end
-\`\`\`
+```
 
-次に、`AppDelegate.m` ファイル内の `application:didFinishLaunchingWithOptions:` メソッド内に以下のスニペットを追加します。
+最後に、`AppDelegate.m` ファイル内で、`application:didFinishLaunchingWithOptions:` メソッド内に以下のスニペットを追加する：
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:"YOUR-APP-IDENTIFIER-API-KEY"
@@ -78,7 +78,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
 
-[`YOUR-BRAZE-ENDPOINT`**設定の管理**] ページから正しい値で更新`YOUR-APP-IDENTIFIER-API-KEY`します。アプリ識別子の API キーの場所について詳しくは、[API ドキュメント]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)をご覧ください。
+**Manage Settings**ページから、`YOUR-APP-IDENTIFIER-API-KEY` と`YOUR-BRAZE-ENDPOINT` を正しい値で更新する。アプリ識別子の API キーの場所について詳しくは、[API ドキュメント]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)をご覧ください。
 
 {% endtab %}
 {% endtabs %}
@@ -86,10 +86,9 @@ AppDelegate.braze = braze;
 
 ## SDK 統合の完了
 
-この時点で、基本的な統合は完了しているはずです。これで、Brazeはアプリケーションからデータを収集しているはずです。この統合ガイドの他の記事に従って、Brazeの全機能とメッセージングチャネルを実装およびカスタマイズしてください。
+この時点で、基本的な統合は完了しているはずだ。これでBrazeはアプリケーションからデータを収集するようになるはずだ。この統合ガイドの他の記事に従って、Brazeの全機能とメッセージングチャンネルを実装し、カスタマイズする。
 
 ## その他のリソース
 
-[SDK リファレンス ドキュメント][1]には、各 SDK シンボルに関する追加情報とガイダンスが記載されています。
+[SDK リファレンスドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOS クラスの完全なドキュメント")には、各 SDK シンボルに関する追加情報とガイダンスが記載されています。
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "iOS クラスの完全なドキュメント"

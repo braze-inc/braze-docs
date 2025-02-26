@@ -16,9 +16,9 @@ table td {
 
 # Google Play プライバシーアンケート
 
-> 2022年4月現在、Android 開発者は、プライバシーとセキュリティの方針を開示するために、Google Play の[データセーフティフォーム][4]に記入する必要があります。このガイドでは、Braze によるアプリデータの処理方法に関する情報をこの新しいフォームに記入する方法について説明します。 
+> 2022年4月現在、Android 開発者は、プライバシーとセキュリティの方針を開示するために、Google Play の[データセーフティフォーム](https://support.google.com/googleplay/android-developer/answer/10787469)に記入する必要があります。このガイドでは、Braze によるアプリデータの処理方法に関する情報をこの新しいフォームに記入する方法について説明します。 
 
-アプリ開発者は、どのデータを Braze に送信するかを制御しています。Braze が受け取ったデータは、指示に従って処理されます。これは、Google が[サービスプロバイダー][3]として分類したものです。 
+アプリ開発者は、どのデータを Braze に送信するかを制御しています。Braze が受け取ったデータは、指示に従って処理されます。これは、Google が[サービスプロバイダー](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform)として分類したものです。 
 
 {% alert important %}
 この記事では、Google のセーフティセクションのアンケートについて、Braze SDK により処理されるデータに関連する情報を提供します。この記事は法律上のアドバイスを提供していないため、Google に情報を提出する前に、法務チームに相談することをお勧めします。
@@ -26,17 +26,17 @@ table td {
 
 ## 質問
 
-|質問|Braze SDK の回答|
+|質問|Braze SDKの回答|
 |---|---|
-|アプリは必要なユーザーデータタイプのいずれかを収集または共有していますか?|はい、Braze Android SDK はアプリ開発者によって設定されたデータを収集しています。|
-|アプリによって収集されたすべてのユーザーデータが転送中に暗号化されていますか?|はい。|
-|ユーザーがデータの削除を要求する方法を提供していますか?|はい。|
+|お使いのアプリは、必要なユーザーデータの種類を収集または共有しますか？|はい、Braze Android SDK はアプリ開発者によって設定されたデータを収集します。 |
+|あなたのアプリが収集するすべてのユーザーデータは転送中に暗号化されていますか？|そうです。|
+|ユーザーがデータの削除を要求する方法を提供していますか？|そうです。|
 
-データおよび削除に対するユーザー要求の処理の詳細については、[Braze データのリテンション情報][1]を参照してください。
+データおよび削除に対するユーザー要求の処理の詳細については、[Braze データのリテンション情報]({{site.baseurl}}/api/data_retention/)を参照してください。
 
 ## データ収集
 
-Braze によって収集されるデータは、特定の統合と収集するユーザーデータによって決まります。デフォルトで収集されるデータの詳細、および特定の属性を無効にする方法については、[SDK データ収集オプション][5]を参照してください。
+Braze によって収集されるデータは、特定の統合と収集するユーザーデータによって決まります。デフォルトで収集されるデータの詳細、および特定の属性を無効にする方法については、[SDK データ収集オプション]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration)を参照してください。
 
 <table id="datatypes">
     <thead>
@@ -192,10 +192,5 @@ Braze によって収集されるデータは、特定の統合と収集する�
     </tbody>
 </table>
 
-Google Play のデータセーフティガイドラインの対象外となる可能性がある Braze が収集するその他のデバイスデータの詳細については、[Android ストレージの概要][2]および [SDK データ収集オプション][5]を参照してください。
+Google Play のデータセーフティガイドラインの対象外となる可能性がある Braze が収集するその他のデバイスデータの詳細については、[Android ストレージの概要]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage)および [SDK データ収集オプション]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration)を参照してください。
 
-[1]: {{site.baseurl}}/api/data_retention/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/storage
-[3]: https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform
-[4]: https://support.google.com/googleplay/android-developer/answer/10787469
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration

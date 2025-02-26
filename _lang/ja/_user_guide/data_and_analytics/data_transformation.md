@@ -10,14 +10,14 @@ description: "このランディングページには、データ変換やユー
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Overview and Best Practices
+  - name: 概要とベストプラクティス
     link: /docs/user_guide/data_and_analytics/data_transformation/overview/
-    fa_icon: fa-solid fa-database
-  - name: Creating a Transformation
+    image: /assets/img/braze_icons/database-01.svg
+  - name: 変換の作成
     link: /docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/
-    fa_icon: fa-solid fa-arrows-turn-to-dots
-  - name: Use Cases
+    image: /assets/img/braze_icons/flip-forward.svg
+  - name: ユースケース
     link: /docs/user_guide/data_and_analytics/data_transformation/use_cases/
-    fa_icon: fa-solid fa-users
+    image: /assets/img/braze_icons/users-01.svg
 ---
 <br><br>

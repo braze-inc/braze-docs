@@ -11,11 +11,11 @@ description: "このリファレンス記事には、利用可能な Braze イ�
 
 > Braze インスタンスにより、Braze へのログイン、API へのアクセス、および SDK の連携に必要な URL が決まります。Braze SDK の詳細については、Braze ラーニングコース「[Braze 101][1]」を参照してください。
 
-Braze は、ダッシュボード、SDK、REST エンドポイントのさまざまなインスタンスを管理しており、これを「クラスター」と呼びます。 Braze のオンボーディングマネージャーが、あなたの所属するクラスターを通知します。
+Braze は、ダッシュボード、SDK、REST エンドポイントのさまざまなインスタンスを管理しており、これを「クラスター」と呼びます。Braze のオンボーディングマネージャーが、あなたの所属するクラスターを通知します。
 
 [dashboard.braze.com](https://dashboard.braze.com) にログインすると、自動的に適切なクラスターアドレスに移動します。
 
-|インスタンス|URL|REST エンドポイント|SDK エンドポイント|
+|インスタンス|URL|RESTエンドポイント|SDKエンドポイント|
 |---|---|---|
 |US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
 |US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
@@ -27,7 +27,8 @@ Braze は、ダッシュボード、SDK、REST エンドポイントのさまざ
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 SDK を連携する場合は、SDK エンドポイントを使用してください。REST API を呼び出す場合は、REST エンドポイントを使用してください。

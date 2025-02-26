@@ -1,81 +1,101 @@
 ---
-nav_title: カスタムメールフッター
-article_title: カスタムメールフッター
+nav_title: メールのカスタムフッター
+article_title: メールのカスタムフッター
 page_order: 6.5
-description: "この記事では、ワークスペース全体のカスタムメールフッターを設定する方法について説明します。"
+description: "この記事では、ワークスペース全体にカスタムEメールフッターを設定する方法を説明する。"
 channel:
   - email
 
 ---
 
-# カスタムメールフッター
+# メールのカスタムフッター
 
-> ワークスペース全体のカスタムメールフッターを設定し、Liquid属性を使用して {% raw %}`{{${email_footer}}}`{% endraw %} すべてのメールにテンプレート化できます。
+> Liquid 属性 {% raw %}`{{${email_footer}}}`{% endraw %} を使用して個々のメールにテンプレート化できるカスタムメールフッターを、ワークスペース全体で設定できます。
 
-カスタムメールフッターを使用すると、使用するメールテンプレートやメールキャンペーンごとに新しいフッターを作成する必要がなくなります。カスタムフッターに加えた変更は、新規および既存のすべてのメールキャンペーンに反映されます。[2003年のCAN-SPAM法](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)に準拠するには、会社の住所と登録解除リンクをメールに含める必要があります。
+カスタムメールフッターを使うことで、メールテンプレートやメールキャンペーンごとに新しいフッターを作成する必要がなくなる。カスタムフッターに加えた変更は、新規および既存のすべてのメールキャンペーンに反映される。[CAN-SPAM法（2003年）を](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)遵守するためには、Eメールにあなたの会社の物理的な住所と配信停止リンクを含める必要があることを覚えておいてほしい。
 
 {% alert warning %}
-カスタムフッターが前述の要件を満たしていることを確認するのは、お客様の責任です。
+前述の要件を満たすカスタムフッターにすることは、お客様の責任です。
 {% endalert %}
 
-## カスタムフッターの作成
+## カスタムフッターを作成する
 
-カスタムフッターを作成または編集するには、次の操作を行います。
+カスタムフッターを作成または編集するには、以下のようにする：
 
-1. [ **設定** ] > **[メール設定**] に移動します。
+1. [**設定**] > [**メール設定**] に移動します。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは **[電子メールの設定**] と呼ばれ、[**設定の管理**] の下にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、このページは**Email Settings** と呼ばれ、**Manage Settings** の下にあります。
 {% endalert %}
 
 {: start="2"}
-2\.**[カスタムフッター**]セクションに移動し、[カスタムフッター]をオンにします。
-3\.[ **作成** ] セクションでフッターを編集し、テスト メッセージを送信します。 
+2\.**カスタムフッターセクションに**行き、カスタムフッターをオンにする。
+3\.**Compose**セクションでフッタを編集します。
+4. テストメッセージを送信します。 
 
-![][20]
+![カスタムフッタの例。][20]
 
-デフォルトのフッターは、 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} 属性と物理的な郵送先住所を使用します。CAN-SPAM規制に準拠するには、カスタムフッター {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}に.この属性がないとカスタムフッターを保存できません。
+デフォルトのフッターでは、属性 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} と物理的な住所を使用しています。このデフォルトを使用する場合は、必ず**<other>**を**Protocol**に選択してください。
 
-属性を使用する{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}デフォルトのフッターを使用する場合は、必ず **[プロトコル**] で **<other>** を選択してください。
+{% alert important %}
+CAN-SPAM規制に準拠するため、カスタムフッターには{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} を含める必要がある。この属性がないと、カスタムフッターを保存することができない。
+{% endalert %}
 
-![カスタム フッターに必要なプロトコルと URL の値。[24]{: style="max-width:50%;"}
+![カスタムフッターに必要なプロトコルとURLの値。][24]{: style="max-width:50%;"}
 
-## 登録解除リンクのないフッター
+## 配信停止リンクのないフッター
 
-カスタムフッター {% raw %}`{{${email_footer}}}` でテンプレートを使用し、登録解除リンクタグを使用しない場合は `{{${set_user_to_unsubscribed_url}}}`{% endraw %} 、十分に注意してください。警告が表示されますが、登録解除リンクの有無にかかわらずメールを送信するかどうかは、お客様の選択次第です。
+カスタムフッター {% raw %}`{{${email_footer}}}` を含むが `{{${set_user_to_unsubscribed_url}}}`{% endraw %} の購読解除リンクがないテンプレートを使用するときには、十分に注意してください。警告が表示されるが、配信停止リンクのあるメールを送るか、ないメールを送るかはあなたの選択となる。
 
-**メールコンポーザー内の警告:**<br>![フッターなしで作成されたメールの例][21]
+メール作成者の警告は次のとおりです。
 
-**キャンペーンコンポーザー内の警告:**<br>![フッターなしのキャンペーン構成][22]
+![フッターなしで構成された電子メールの例。][21]
 
-## おすすめの方法
+キャンペーンコンポーザーの警告は次のとおりです。
 
-Brazeは、カスタムフッターを作成および使用する際の次のベストプラクティスを提案しています。
+![フッターなしで作成されたキャンペーン。][22]
 
-### 属性によるパーソナライゼーション
+### カスタム配信停止リンクの作成
 
-カスタムフッターを作成する際、Brazeは [パーソナライゼーションに属性]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用することを提案しています。デフォルト属性とカスタム属性の完全なセットを使用できますが、ここでは役立つものをいくつか紹介します。
-
-|属性 |タグ |
-| --------- | --- |
-|ユーザーのメールアドレス | {% raw %}`{{${email_address}}}`{% endraw %} |
-|ユーザーのカスタム登録解除 URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}<br><br>このタグは、前の {% raw %}`{{${unsubscribe_url}}}`{% endraw %} タグを置き換えます。代わりに新しい {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} タグを使用することをおすすめします。 |
-|ユーザーのカスタムオプトイン URL | {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} |
-|ユーザーのカスタム購読 URL | {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}|
-|ユーザーカスタムBrazeプリファレンスセンターURL | {% raw %}`{{${preference_center_url}}}`{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2}
-
-### 登録解除リンクとオプトインリンクを含める
-
-{% raw  %}
-ベストプラクティスとして、Brazeでは、カスタムフッターに登録解除リンク( など ``{{${set_user_to_unsubscribed_url}}}``)とオプトインリンク( など ``{{${set_user_to_opted_in_url}}}``)の両方を含めることをお勧めします。これにより、ユーザーは登録解除またはオプトインの両方を行うことができ、一部のユーザーのオプトインデータを受動的に収集できます。
+カスタム配信停止リンクを追加するには、カスタムフッターの配信停止リンクを、{% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} から、クエリパラメーターにユーザー ID を含む自社の Web サイトへのリンクに変更することができます。例は次のとおりです。
+{% raw %} 
+> https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
 
-### プレーンテキストメールのカスタムフッターの設定
+次に、[`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) を呼び出して、ユーザーのサブスクリプションステータスを更新します。詳細については、「[メールサブスクリプションステータスの変更]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions)」のドキュメントを参照してください。。
 
-また、HTMLメールのカスタムフッターと同じルールに従って、[**メール設定**]ページの[**購読ページとフッター**]タブから、プレーンテキストメールのカスタムフッターを設定することもできます。プレーンテキストのフッターを含めない場合、BrazeはHTMLフッターから自動的にフッターを作成します。カスタムフッターが気に入ったら、ページ下部の [ **保存** ] をクリックします。
+次に、この新しいリンクを保存します。Braze のデフォルトの配信停止タグ {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} をフッターに含める必要があります。つまり、デフォルトのリンクを"hiding" に含める必要があります。これは、タグをコメントに配置するか、非表示の`<div>` タグに配置することによって行います。
 
-![カスタムプレーンテキストフッターの設定オプションが選択されたメール][23]{: style="max-width:70%" }
+## ベストプラクティス
+
+カスタムフッタを作成および使用する際には、以下のベストプラクティスを推奨します。
+
+### 属性でパーソナライズする
+
+カスタムフッターを作成するときに、Braze では[パーソナライゼーション用の属性]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用することをお勧めしています。デフォルト属性とカスタム属性のフルセットが利用可能だが、ここでは役に立つと思われるものをいくつか紹介しよう：
+
+| 属性 | タグ |
+| --------- | --- |
+| ユーザーのメールアドレス | {% raw %}`{{${email_address}}}`{% endraw %} |
+| ユーザーのカスタム配信停止URL | {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}<br><br>このタグは、以前の {% raw %}`{{${unsubscribe_url}}}`{% endraw %} タグを置き換えるものです。代わりに、より新しい{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} タグを使用することをお勧めする。 |
+| ユーザーのカスタムオプトインURL | {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} |
+| ユーザーのカスタム購読 URL | {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}|
+| ユーザーのカスタム Braze ユーザー設定センターの URL | {% raw %}`{{${preference_center_url}}}`{% endraw %} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### 配信停止リンクとオプトインリンクを含む
+
+{% raw  %}
+ベストプラクティスとして、Braze はカスタムフッターに購読解除リンク (``{{${set_user_to_unsubscribed_url}}}`` など) とオプトインリンク (``{{${set_user_to_opted_in_url}}}`` など) の両方を含めることをお勧めしています。これにより、ユーザーは購読解除とオプトインの両方を行うことができ、お客様は一部のユーザーのオプトインデータを受動的に収集できます。
+{% endraw %}
+
+### プレーンテキスト・メールにカスタム・フッターを設定する
+
+また、[**メール設定**] ページの [**購読ページおよびフッター**] タブからも、プレーンテキストメール用のカスタムフッターを設定できます。これは、HTML メールのカスタムフッターと同じルールに従います。 
+
+プレーンテキストのフッターを含めない場合、Brazeは自動的にHTMLフッターからフッターを作成する。カスタムフッターの作成が完了したら、[**保存**] をクリックする。
+
+![[カスタムプレーンテキストフッターを設定] オプションを選択したメール。][23]{: style="max-width:70%" }
 
 [20]: {% image_buster /assets/img_archive/custom_footer.png %}
 [21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}

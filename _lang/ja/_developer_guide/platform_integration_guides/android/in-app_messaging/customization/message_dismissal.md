@@ -17,19 +17,19 @@ channel:
 
 ## [戻る] ボタンによる却下の無効化
 
-デフォルトでは、ハードウェアの [戻る] ボタンにより Braze のアプリ内メッセージは閉じます。この動作は、[`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]を使用してメッセージごとに無効にできます。 
+デフォルトでは、ハードウェアの [戻る] ボタンにより Braze のアプリ内メッセージは閉じます。この動作は、[`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html)を使用してメッセージごとに無効にできます。 
 
 次の例にある`disable_back_button`は、アプリ内メッセージに設定されているカスタムのキーと値のペアで、[戻る] ボタンでメッセージを閉じることを許可するかどうかを示します。
 
 {% tabs %}
 {% tab JAVA %}
-\`\`\`java
+```java
 BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(new DefaultInAppMessageManagerListener() {
   @Override
   public void beforeInAppMessageViewOpened(View inAppMessageView, IInAppMessage inAppMessage) {
     super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage);
     final Map<String, String> extras = inAppMessage.getExtras();
-    if (extras != null && extras.containsKey("disable\_back\_button")) {
+    if (extras != null && extras.containsKey("disable_back_button")) {
       BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false);
     }
   }
@@ -44,21 +44,21 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(new 
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object :DefaultInAppMessageManagerListener() {
-override fun beforeInAppMessageViewOpened(inAppMessageView: View, inAppMessage: IInAppMessage) {
-super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage)
-val extras = inAppMessage.extras
-if (extras != null && extras.containsKey("disable_back_button")) {
-BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false)
-}
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : DefaultInAppMessageManagerListener() {
+  override fun beforeInAppMessageViewOpened(inAppMessageView: View, inAppMessage: IInAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage)
+    val extras = inAppMessage.extras
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false)
+    }
   }
 
-  override fun afterInAppMessageViewClosed(inAppMessage:IInAppMessage) {
+  override fun afterInAppMessageViewClosed(inAppMessage: IInAppMessage) {
     super.afterInAppMessageViewClosed(inAppMessage)
     BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true)
   }
 })
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -74,4 +74,3 @@ BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(fa
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-[96]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html

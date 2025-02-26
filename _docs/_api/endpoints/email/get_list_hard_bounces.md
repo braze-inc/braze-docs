@@ -35,13 +35,13 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
 | `email` | Optional<br>(see note) | String | If provided, we will return whether or not the user has hard bounced. Check that the email strings are formatted properly. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 You must provide either a `start_date` and `end_date`, OR an `email`. If you provide all three, `start_date`, `end_date`, and an `email`, we prioritize the emails given and disregard the date range.
 {% endalert %}
 
-If your date range has more than the `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results. Including `offset` and `limit` parameters with `email` can return an empty response. 
+If your date range has more than the `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results. Including `offset` and `limit` parameters with `email` can return an empty response.
 
 ## Example request
 ```
@@ -59,15 +59,15 @@ Authorization: Bearer YOUR-REST-API-KEY
   "emails": [
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     },
     {
       "email": (string) an email that has hard bounced,
-      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
+      "hard_bounced_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"

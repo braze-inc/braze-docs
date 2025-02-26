@@ -20,7 +20,7 @@ The Braze and Judo integration provides bespoke experiences in your campaigns an
 |---|---|
 | Judo Account | A [Judo](https://www.judo.app/) account is required to take advantage of this partnership. |
 | Judo SDK | The Judo SDK must be integrated into your [iOS](https://github.com/judoapp/judo-ios/) and/or [Android](https://github.com/judoapp/judo-android) apps. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 
@@ -80,7 +80,7 @@ Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dy
 <br><br>
 ### Step 3: Finishing the campaign
 
-Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on the different components of a Braze in-app message.
+Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) on the different components of a Braze in-app message.
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}

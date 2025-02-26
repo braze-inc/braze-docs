@@ -16,6 +16,7 @@ search_tag: Partner
 > [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
+
 - Sync [Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to Braze's REST APIs
 - [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
@@ -26,7 +27,7 @@ The Braze and Segment integration allows you to track your users and route data 
 | ----------- | ----------- |
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Installed source and Segment source [libraries](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful `Source > Destination` flow. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -38,7 +39,7 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 ### Step 2: Choose destination framework and connection type {#integration-options}
 
-In Segment, navigate to **Destinations > Braze > Configure Braze > Select your Source > Setup**.
+In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
 ![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
 
@@ -50,7 +51,7 @@ Your choice of connection mode will be determined by the type of Source the dest
 | ----------- | ------- |
 | [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze's native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
 | [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Visit [Segment](https://segment.com/docs/destinations/#connection-modes) to learn more about the two integration options (connection modes), including the benefits of each.
@@ -79,14 +80,12 @@ The Braze SDK you use will depend on which Segment SDK you use:
 | - | ----------- | --------- |
 | Preferred | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
 | Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endalert %}
 
-To set up Braze as a device-mode destination for your Android source, choose **Classic** as the Destination framework and click **Save**. 
-
-![]({% image_buster /assets/img/segment/android.png %})
+To set up Braze as a device-mode destination for your Android source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
 
@@ -105,12 +104,10 @@ The Braze SDK you use will depend on which Segment SDK you use:
 | - | ----------- | --------- |
 | Preferred | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
 | Legacy | [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
-To set up Braze as a device-mode destination for your iOS source, choose **Classic** as the Destination framework and click **Save**. 
-
-![]({% image_buster /assets/img/segment/ios.png %})
+To set up Braze as a device-mode destination for your iOS source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
 To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze Segment pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
 
@@ -119,9 +116,9 @@ The source code for the [iOS device mode](https://github.com/braze-inc/braze-seg
 {% endtab %}
 {% tab Web or JavaScript %}
 
-Segment's new Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your Web source. 
+Segment's Braze Web Mode (Actions) framework is recommended for setting up Braze as a device-mode destination for your web source. 
 
-Within the setup UI, choose **Actions** as your destination framework and **Device Mode** as your Connection mode.
+In Segment, select **Actions** as your destination framework and **Device Mode** as your connection mode.
 
 ![]({% image_buster /assets/img/segment/website.png %})
 
@@ -139,14 +136,14 @@ When a push token is registered from a device and sent to Braze, it is associate
 If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
 {% endalert %}
 
-To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
+To set up Braze as a device-mode destination for each source, choose **Actions** as the **Destination framework**, then select **Save**.
 
 {% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
 
-Also called cloud-mode, this integration forwards data from Segment to Braze's REST APIs. Use Segment's new [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
+Also called cloud-mode, this integration forwards data from Segment to Braze's REST APIs. Use Segment's [Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) framework to set up a cloud-mode destination for any of your sources. 
 
 Unlike the side-by-side integration, the server-to-server integration does not support Braze's UI features, such as in-app messaging, Content Cards, or automatic push token registration. There also exists [automatically captured]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) data (such as anonymous users and device-level fields) that are not available through cloud-mode.
 
@@ -167,7 +164,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Custom API endpoint<br>(SDK endpoint) | Your Braze SDK endpoint that corresponds to your instance (such as `sdk.iad-01.braze.com`) | 
 | Endpoint region | Your Braze instance (such as US 01, US 02, EU 01, etc.) | 
 | Enable automatic in-app message registration | Disable this if you want to manually register in-app messages. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Web Device-Mode %}
@@ -202,7 +199,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send only page calls to Braze with a name associated with them. |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
 | Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Cloud-Mode %}
@@ -213,7 +210,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | REST API key | This can be found in your Braze dashboard under **Settings** > **API Keys**. | 
 | Custom REST API endpoint | Your Braze REST endpoint that corresponds to your instance (such as rest.iad-01.braze.com). | 
 | Update existing users only | **Classic Destination Cloud-Mode (Maintenance) Only**<br><br>Segment recommends migrating to the Cloud Actions Framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Determines whether to update existing users only. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -231,9 +228,9 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | `userId` (`external_id`) | All |
 | Anonymous user | Device mode destinations |
 | User alias | Cloud mode destinations |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
+The Cloud Mode (Actions) Destination offers a [Create Alias action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#identify-user) can be used alongside the Create Alias action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -260,7 +257,7 @@ Certain Segment special traits map to standard attribute profile fields in Braze
 | `address.country` | `country` |
 | `address.city` | `home_city` |
 | `gender` | `gender` |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
 
@@ -340,7 +337,7 @@ analytics.identify(
 
 ##### Custom attributes
 
-All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
+All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 
 | Segment method | Braze method | Example |
 |---|---|---|
@@ -348,7 +345,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 | Identify with reserved traits | Set user attributes | Segment: `analytics.identify({email: "dawei@braze.com"});`<br> Braze: `Braze.getUser().setEmail("dawei@braze.com");`
 | Identify with custom traits | Set custom attributes | Segment: `analytics.identify({fav_cartoon: "Naruto"});`<br>Braze: `Braze.getUser().setCustomAttribute("fav_cartoon": "Naruto")`;
 | Identify with user ID and traits | Segment: Set External ID and Attribute | Combine preceding methods. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
@@ -363,7 +360,7 @@ When passing user attribute data, check that you only pass values for attributes
 
 When you track an event, we will record that event as a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) using the name provided. 
 
-Metadata sent within the properties object of the track call will be logged in Braze as the custom event properties for the associated event. All [custom event property data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
+Metadata sent within the properties object of the track call will be logged in Braze as the custom event properties for the associated event. All [custom event property data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event) destinations, the above mappings can be set using the Track Event Action.
 
@@ -371,12 +368,12 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segment: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
 | [Track with properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| [Track with product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/). | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ##### Order completed {#order-completed}
 
-When you track an event with the name `Order Completed` using the format described in Segment's [Ecommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the Track Purchase Action.
 
@@ -436,7 +433,7 @@ Segment **does not** limit the number of data elements clients send to them. Seg
 | ----------------- | ------------------ |
 | Braze SDK endpoint | Custom API endpoint |
 | Braze REST endpoint | Custom REST API endpoint |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Your Braze API endpoint (called the "Custom API Endpoint" in Segment) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API endpoint (for example, `https://rest.iad-03.braze.com`)
 {% enddetails %}
@@ -447,7 +444,7 @@ Your Braze API endpoint (called the "Custom API Endpoint" in Segment) is the SDK
 | ----------------- | ------------------ |
 | Braze SDK endpoint | Custom API endpoint |
 | Braze REST endpoint | Custom REST API endpoint |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The proper format must be followed to ensure that you input your Braze SDK endpoint correctly. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with an invalid endpoint `https://https://sdk.iad-03.braze.com`.
 
@@ -458,7 +455,7 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
 
   {% alert note %}
   Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.

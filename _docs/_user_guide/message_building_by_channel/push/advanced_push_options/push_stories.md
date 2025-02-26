@@ -16,7 +16,7 @@ channel:
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
 | ![][1] | ![][2] |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. Ensure that your message copy prompts users to expand the push to see the images.
@@ -61,7 +61,7 @@ The following image and text specifications apply to the photo carousel portion 
 
 - **Image ratio:** 2:1 (required)
 - **Recommended image size:** 500 KB
-- **Max image size:** 5 MB
+- **Maximum image size:** 5 MB
 - **File types:** PNG, JPEG
 
 {% endtab %}

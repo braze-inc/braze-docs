@@ -274,7 +274,7 @@ $(document).ready(function() {
             <i class="{{menu_list.fa_icon}}"></i>
             {%- else -%}
               {%- if menu_list.image -%}
-              <img src="{{site.baseurl}}{{ menu_list.image}} " />
+              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
               {%- endif -%}
             {%- endif -%}
             <div class="menu_description">
@@ -285,34 +285,34 @@ $(document).ready(function() {
         </a>
         {%- endif %}
       {%- endfor -%}
-      <b class="glossary_text">  {{ page.glossary_mid_text }} </b>
     </div>
-    <div id="glossary_filter">
-        <input id="glossary_search" type="search" placeholder="Search" />
+    <fieldset id="glossary_filter">
+        <legend class="glossary_text">  {{ page.glossary_mid_text }} </legend>
+        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" aria-label="Glassary Search" /></label>
         <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
-          <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="input_filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
+          <label for="filter_{{ tag.name | slugify }}"> <input type="checkbox" name="filter_{{ tag.name | slugify }}" id="filter_{{ tag.name | slugify }}" value="{{tag.name | downcase }}" />
             {{tag.name}}
           </label>
         </div>
         {%- endfor -%}
 
-    </div>
+    </fieldset>
 
     <div id="glossary_list" class="flex mx-auto">
       <div class="d-flex" style="width: 100%;">
-        <div class="col-3" style="background-color: #CDCDCD;color: #333333;font-weight:bold;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Endpoint</div>
-        <div class="col-9" style="background-color: #CDCDCD;color: #333333;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Description</div>
+        <div class="col-6" style="background-color: #CDCDCD;color: #333333;font-weight:bold;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Endpoint</div>
+        <div class="col-6" style="background-color: #CDCDCD;color: #333333;font-family: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif">Description</div>
       </div>
       {%- assign glossary_sorted = page.glossaries | sort: 'name' -%}
       {%- for glossary in glossary_sorted -%}
       {%- assign glossary_id = glossary['name'] | slugify | downcase -%}
         <div id="filter_{{ glossary_id }}" class="term flex">
-          <h2 id="{{ glossary_id }}"></h2>
-          <div class="col-3" style="word-break: break-all;"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
+          <div id="{{ glossary_id }}" class="anchor"></div>
+          <div class="col-6" style="word-break: break-all;"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link"></i></a><span id="dv_cp_{{glossary_id}}"></span></p>
           </div>
-          <div class="col-9">{{ glossary['description'] }}
+          <div class="col-6">{{ glossary['description'] }}
           </div>
         </div>
         {%- endfor -%}
@@ -342,4 +342,3 @@ $(document).ready(function() {
   <div id="toc" ></div>
 </div>
 {%- endunless -%}
-

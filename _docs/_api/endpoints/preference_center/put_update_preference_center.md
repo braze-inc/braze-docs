@@ -31,7 +31,7 @@ This endpoint has a rate limit of 10 requests per minute, per workspace.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## Request body
@@ -48,9 +48,20 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "unknown macro": {links-tags}
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of: "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values: "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Request parameters
@@ -61,8 +72,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`.|
-|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`options` | Optional | Object | Attributes: <br>`meta-viewport-content`: When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`.<br><br> `link-tags`: Set a favicon for the page. When set, a `<link>` tag with a rel attribute is added to the page.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 

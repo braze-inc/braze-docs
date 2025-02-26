@@ -1,72 +1,72 @@
 ---
-nav_title: "ポスト:セグメント別にユーザープロファイルをエクスポート"
-article_title: "ポスト:セグメント別にユーザープロファイルをエクスポート"
+nav_title: "POST:セグメント別ユーザープロファイルのエクスポート"
+article_title: "POST:セグメント別ユーザープロファイルのエクスポート"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、セグメント別にユーザーをエクスポートする Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「セグメントごとにユーザーをエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# セグメント別にユーザープロファイルをエクスポート
+# Segmentによるユーザープロファイルのエクスポート
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
 
-> このエンドポイントを使用して、セグメント内のすべてのユーザーをエクスポートします。 
+> このエンドポイントを使用して、Segment内のすべてのユーザーs をエクスポートします。 
 
 {% alert important %}
-2021 年 12 月から、この API について以下が変更されました。<br><br>1\.この API `fields_to_export` **リクエストのフィールドは必須です**。すべてのフィールドをデフォルトにするオプションは削除されました。<br>2\.`custom_events`、、`purchases`、のフィールドには`campaigns_received`、過去 90 `canvases_received` 日間のデータのみが含まれます。
+このエンドポイントを使用する場合は、次の点に注意してください。<br><br>1\.このAPI リクエストの`fields_to_export` フィールドは**required** です。<br>2\.`custom_events`、`purchases`、`campaigns_received`、`canvases_received` のフィールドには、過去 90 日間のデータのみが含まれます。
 {% endalert %}
 
-ユーザーデータは、改行で区切られたユーザー JSON オブジェクトの複数のファイルとしてエクスポートされます (1 行に 1 つの JSON オブジェクトなど)。データは自動的に生成されたURLにエクスポートされるか、この統合がすでに設定されている場合はS3バケットにエクスポートされます。
+ユーザーデータは、新しい行で区切られたユーザーのJSONオブジェクトの複数のファイルとしてエクスポートされます(1行に1つのJSONオブジェクトなど)。データは、自動生成されたURL にエクスポートされるか、この統合がすでに設定されている場合は、S3 バケットにエクスポートされます。
 
-企業がこのエンドポイントを使用して一度に実行できるエクスポートは、セグメントごとに最大 1 回であることに注意してください。エクスポートが完了するのを待ってから、やり直してください。 
+企業は、このエンドポイントを使用するセグメントごとに、特定の時刻に最大 1 つのエクスポートを実行できます。エクスポートが完了するのを待ってから、再試行してください。 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`users.export.segment`権限のある [API キーが必要です]({{site.baseurl}}/api/basics#rest-api-key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`users.export.segment`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 認証情報ベースの回答詳細
+## 認証情報ベースの応答の詳細
 
-[S3][1]、[Azure][2]、または [Google クラウドストレージの認証情報を][3] Braze に追加した場合、`segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`各ファイルは次のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure **パートナー概要ページの [これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認してください。通常、処理を最適化するために、ユーザー5,000人につき1つのファイルを作成します。大きなワークスペース内の小さなセグメントをエクスポートすると、複数のファイルが作成されることがあります。その後、必要に応じてファイルを抽出し、`json`すべてのファイルを 1 つのファイルに連結できます。`output_format`of を指定すると`gzip`、`.gz`ファイル拡張子はの代わりになります`.zip`。
+[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.gz` ではなく `.zip` になります。
 
-{% details Export pathing breakdown for ZIP %}
-**ZIP フォーマット:**
+{% details ZIP のエクスポートパスの内訳 %}
+**ZIP 形式:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
-**郵便番号の例:**
+**ZIP の例:**
 `braze.docs.bucket/segment-export/abc56c0c-rd4a-pb0a-870pdf4db07q/2019-04-25/d9696570-dfb7-45ae-baa2-25e302r2da27-1556044807/114f0226319130e1a4770f2602b5639a.zip`
 
-| プロパティ | 詳細 | 例では次のようになります。
+| プロパティ | 詳細 | 例に示す |
 |---|---|
-| `bucket-name` | バケット名に基づいて修正されました。| `braze.docs.bucket` |
-| `segment-export` | 修正されました。`segment-export`
-| `SEGMENT_ID` | エクスポートリクエストに含まれています。| `abc56c0c-rd4a-pb0a-870pdf4db07q` |
-`YYYY-MM-dd`| | 成功したコールバックを受信した日付 | | `2019-04-25`
-| `RANDOM_UUID` | リクエスト時に Braze によって生成されたランダムな UUID。| | `d9696570-dfb7-45ae-baa2-25e302r2da27`
-| `TIMESTAMP_WHEN_EXPORT_STARTED` | UTC でエクスポートがリクエストされた Unix 時間 (2017 年から 01:00:00:00 Z までの秒数)。| `1556044807`
-| `filename` | ファイルごとにランダム。| `114f0226319130e1a4770f2602b5639a` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| `bucket-name` | バケット名に基づいて修正されました。 | `braze.docs.bucket` |
+| `segment-export` | 固定。 | `segment-export` |
+| `SEGMENT_ID` | エクスポートリクエストに含まれます。 | `abc56c0c-rd4a-pb0a-870pdf4db07q` |
+| `YYYY-MM-dd` | コールバックが正常に受信された日付。 | `2019-04-25` |
+| `RANDOM_UUID` | リクエスト時にBrazeによって生成されるランダムUUID。 | `d9696570-dfb7-45ae-baa2-25e302r2da27` |
+| `TIMESTAMP_WHEN_EXPORT_STARTED` | UTC でエクスポートが要求された Unix 時間 (2017-01-01:00:00:00Z からの秒数)。 | `1556044807` |
+| `filename` | ファイルごとにランダム。 | `114f0226319130e1a4770f2602b5639a` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% enddetails %}
 
-このエンドポイントを使用するときは、独自のS3またはAzure認証情報を設定して、エクスポートに独自のバケットポリシーを適用することを強くお勧めします。クラウドストレージの認証情報がない場合は、リクエストへの応答に、すべてのユーザーファイルを含むZIPファイルをダウンロードできるURLが表示されます。この URL は、エクスポートの準備ができて初めて有効な場所になります。 
+このエンドポイントを使用してエクスポートに独自のバケットポリシーを適用する場合は、独自の S3 または Azure 資格情報を設定することを強くお勧めします。クラウドストレージの認証情報がない場合は、リクエストへの応答で、すべてのユーザーファイルを含む ZIP ファイルをダウンロードできる URL が提供されます。URL は、エクスポートの準備ができた後でのみ有効な場所になります。 
 
-クラウドストレージの認証情報を提供しない場合、このエンドポイントからエクスポートできるデータ量に制限があることに注意してください。エクスポートするフィールドとユーザー数によっては、サイズが大きすぎるとファイル転送が失敗する場合があります。ベストプラクティスは、`fields_to_export`どのフィールドを使用してエクスポートするかを指定し、転送のサイズを小さく抑えるために必要なフィールドのみを指定することです。ファイルの生成でエラーが発生した場合は、ランダムなバケット番号に基づいてユーザーベースをさらにセグメントに分割することを検討してください (たとえば、ランダムなバケット番号が 1,000 未満、または 1,000 ～ 2,000 のセグメントを作成します)。
+クラウドストレージ認証情報s を提供しない場合は、このエンドポイントからエクスポートできるデータ量に制限があることに注意してください。エクスポートするフィールドやユーザーの個数によっては、大きすぎるとファイル転送が失敗することがあります。ベストプラクティスは、`fields_to_export` を使用してエクスポートするフィールドを指定し、転送のサイズを低く保つために必要なフィールドs のみを指定することです。ファイルを生成するエラーを取得する場合は、乱数バケット番号に基づいてユーザー群をより多くのSegments に分割することを検討します(たとえば、乱数バケット番号が1000 未満、または1000 から2000 の間のSegmentを作成します)。
 
-どちらのシナリオでも、`callback_endpoint`オプションでエクスポートの準備が整ったときに通知するように指定できます。`callback_endpoint`が提供されている場合、ダウンロードの準備が整い次第、提供されたアドレスへの投稿リクエストを行います。投稿の本文は「成功」: true になります。BrazeにS3認証情報を追加していない場合、`url`投稿の本文にはダウンロードURLを値とする属性が追加されます。
+どちらのシナリオでも、オプションで`callback_endpoint` を指定して、エクスポートの準備が整ったときに通知することができます。`callback_endpoint` が指定されている場合は、ダウンロードの準備ができたときに指定されたアドレスに POST リクエストを送信します。投稿の本文は"success":true になります。Braze に S3 認証情報を追加していない場合、投稿の本文にはダウンロード URL を値として持つ属性 `url` が追加されます。
 
-ユーザーベースが大きくなると、エクスポート時間が長くなります。たとえば、ユーザー数が 2,000 万人のアプリの場合、1 時間以上かかる場合があります。
+ユーザー群s を大きくすると、エクスポート時間が長くなります。例えば、2,000 万人のユーザーを持つアプリの場合、1 時間以上かかることもあります。
 
-## リクエスト本文
+## 要求本文:
 
 ```
 Content-Type: application/json
@@ -77,27 +77,27 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "segment_id" : (required, string) identifier for the segment to be exported,
   "callback_endpoint" : (optional, string) endpoint to post a download URL when the export is available,
-  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. New accounts must specify specific fields to export,
   "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to ZIP file format
 }
 ```
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `segment_id` | 必須 | 文字列 | エクスポートするセグメントの識別子。[セグメント識別子を参照してください]({{site.baseurl}}/api/identifier_types/)。<br><br>`segment_id`特定のセグメントのは、Braze アカウントの [API キーページから確認するか]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)、[セグメントリストエンドポイントを使用できます]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)。|
-| `callback_endpoint` | オプション | 文字列 | エクスポートが可能になったときにダウンロード URL を投稿するエンドポイント。|
-| `fields_to_export` | 必須* | 文字列の配列 | エクスポートするユーザーデータフィールドの名前。`custom_attributes`このパラメータに含めることで、すべてのカスタムアトリビュートをエクスポートすることもできます。<br><br>\* 2021 年 4 月以降、新規アカウントではエクスポートする特定のフィールドを指定する必要があります。|
-| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大 500 のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性を作成して管理するには、**[データ設定] > [****カスタム属性**] に移動します。|
-| `output_format` | オプション | 文字列 | ファイルの出力形式。`zip`デフォルトはファイルフォーマットです。独自の S3 バケットを使用している場合は、`zip`またはを指定できます`gzip`。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`segment_id` | 必須 | 文字列 | エクスポートするSegmentのID。[セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br>特定のSegmentの`segment_id` は、Braze アカウントの[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから見つけることができます。または、[ Segment一覧エンドポイント]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) を使用することもできます。|
+|`callback_endpoint` | オプション | 文字列 | エクスポートが利用可能になった場合に、ダウンロード URL を投稿するエンドポイント。 |
+|`fields_to_export` | 必須* | 文字列の配列 | エクスポートするユーザーデータ フィールドの名前。また、このパラメータに`custom_attributes` を含めることで、すべてのカスタム属性s をエクスポートすることもできます。<br><br>\*2021 年 4 月以降、新しいアカウントでは、エクスポートする特定のフィールドを指定する必要があります。 |
+| `custom_attributes_to_export` | オプション | 文字列の配列 | エクスポートする特定のカスタム属性の名前。最大500 個のカスタム属性をエクスポートできます。ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 |
+|`output_format` | オプション | 文字列 | ファイルの出力形式。デフォルトは `zip` ファイル形式です。独自のS3 バケットを使用している場合は、`zip` または`gzip` を指定できます。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-`fields_to_export`をパラメータに含めると`custom_attributes`、何が入っているかに関係なく、すべてのカスタムアトリビュートがエクスポートされます`custom_attributes_to_export`。特定の属性をエクスポートすることが目的の場合は、`custom_attributes``fields_to_export`パラメータに含めないでください。代わりに、`custom_attributes_to_export`パラメーターを使用してください。
+`fields_to_export` パラメーターに `custom_attributes` が含まれている場合、`custom_attributes_to_export` の内容に関係なく、すべてのカスタム属性がエクスポートされます。特定の属性をエクスポートすることが目的の場合は、`custom_attributes` を `fields_to_export` パラメーターに含めないでください。代わりに、`custom_attributes_to_export` パラメータを使用します。
 {% endalert %}
 
-## すべてのカスタム属性をエクスポートするリクエストの例
+## すべてのカスタム属性をエクスポートするサンプルリクエスト
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
@@ -110,7 +110,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 }'
 ```
 
-## 特定のカスタム属性をエクスポートするリクエストの例
+## 具体的なカスタム属性をエクスポートするリクエスト例
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
@@ -126,46 +126,46 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 
 ## エクスポートするフィールド
 
-以下は有効なリストです`fields_to_export`。`fields_to_export`を使用して返されるデータを最小限に抑えると、この API エンドポイントの応答時間を短縮できます。
+以下は、有効な`fields_to_export`のリストです。`fields_to_export` を使用して返されるデータを最小限に抑えると、このAPI エンドポイントのレスポンスタイムを改善できます。
 
-| エクスポートするフィールド | データ型 | 説明 |
+| エクスポートするフィールド | データタイプ | 説明 |
 |---|---|---|
-| `apps` | Array | このユーザーがセッションをログに記録したアプリ。これには次のフィールドが含まれます。<br><br>-`name`: アプリ名<br>-`platform`: iOS、Android、ウェブなどのアプリプラットフォーム<br>-`version`: アプリのバージョン番号または名前 <br>-`sessions`: このアプリの合計セッション数<br>-`first_used`: 最初のセッションの日付<br>-`last_used`: 最終セッションの日付<br><br>すべてのフィールドは文字列です。|
-| `attributed_campaign` | 文字列 | [アトリビューション統合からのデータ]({{site.baseurl}}/partners/message_orchestration/attribution)（設定されている場合）特定の広告キャンペーンの識別子。|
-| `attributed_source` | 文字列 | [アトリビューション統合からのデータ]({{site.baseurl}}/partners/message_orchestration/attribution)（設定されている場合）広告が掲載されたプラットフォームの識別子。|
-| `attributed_adgroup` | 文字列 | [アトリビューション統合からのデータ]({{site.baseurl}}/partners/message_orchestration/attribution)（設定されている場合）キャンペーンの下にあるオプションのサブグループの識別子。|
-| `attributed_ad` | 文字列 | [アトリビューション統合からのデータ]({{site.baseurl}}/partners/message_orchestration/attribution)（設定されている場合）キャンペーンと広告グループの下にあるオプションのサブグループの識別子。|
-| `braze_id` | 文字列 | Braze がこのユーザーに設定したデバイス固有のユーザー識別子。|
-| `country` | 文字列 | [ISO 3166-1アルファ2標準を使用するユーザーの国](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)。|
-| `created_at` | 文字列 | ユーザープロファイルが作成された日付と時刻（ISO 8601形式）。|
-| `custom_attributes` | オブジェクト | このユーザーのカスタム属性キーと値のペア。| |
-| `custom_events` | 配列 | 過去 90 日間にこのユーザーに発生したカスタムイベント。|
-| `devices` | Array | ユーザーのデバイスに関する情報。プラットフォームによっては以下が含まれる場合があります。<br><br>`model`デバイスのモデル名<br>`os`デバイスのオペレーティングシステム<br>`carrier`デバイスのサービスキャリア (利用可能な場合)<br>-`idfv`: (iOS) Braze デバイス識別子、ベンダー用の Apple 識別子 (存在する場合)<br>-`idfa`: (iOS) 広告の識別子 (存在する場合)<br>`device_id`(アンドロイド) Braze デバイス識別子<br>`google_ad_id`(Android) Google Play 広告識別子 (存在する場合)<br>`roku_ad_id`(ロク) ロク広告識別子<br>`ad_tracking_enabled`デバイスで広告トラッキングが有効になっている場合は、true または false を指定できます。|
-| `dob` | 文字列 | 形式でのユーザーの生年月日`YYYY-MM-DD`。|
-| `email` | 文字列 | ユーザーのメールアドレス。|
-| `external_id` | 文字列 | 識別されたユーザーの一意のユーザー識別子。|
-| `first_name` | 文字列 | ユーザーの名。|
-| `gender` | 文字列 | ユーザーの性別。指定できる値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>-`nil`: 不明 |
-| `home_city` | 文字列 | ユーザーの出身地。|
-| `language` | 文字列 | ISO-639-1 標準におけるユーザーの言語。|
-| `last_coordinates` | 浮動小数点数の配列 | ユーザーの最新のデバイス位置をとしてフォーマットします。`[longitude, latitude]`|
-| `last_name` | 文字列 | ユーザーの姓。|
-| `phone` | 文字列 | E.164形式のユーザーの電話番号。|
-| `purchases` | 配列 | このユーザーが過去 90 日間に購入したもの。|
-| `push_tokens` | 配列 | ユーザーのプッシュトークンに関する情報。|
-| `random_bucket` | Integer | [ユーザーのランダムなバケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)。ランダムなユーザーのセグメントを均一に分散させるために使用されます。|
-| `time_zone` | 文字列 | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。|
-| `total_revenue` | Float | このユーザーに帰属する総収益。総収益は、ユーザーが受け取ったキャンペーンやキャンバスのコンバージョン期間中に行った購入に基づいて計算されます。|
-| `uninstalled_at` | タイムスタンプ | ユーザーがアプリをアンインストールした日付と時刻。アプリがアンインストールされていない場合は省略されます。|
-| `user_aliases` | オブジェクト | [`alias_name`およびを含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification)（`alias_label`存在する場合）。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| `apps` | 配列 | このユーザーがセッションを記録したアプリケーション。これには次のフィールドが含まれます。<br><br>-`name`: アプリ名<br>- `platform`: アプリ プラットフォーム(iOS、Android、またはWeb など)<br>- `version`:アプリのバージョン番号または名前 <br>-`sessions`: このアプリの総セッション数<br>-`first_used`: 初回セッションの日付<br>-`last_used`: 最終セッションの日付<br><br>すべてのフィールドsはストリングです。 |
+| `attributed_campaign` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
+| `attributed_source` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
+| `attributed_adgroup` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
+| `attributed_ad` | 文字列 | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
+| `braze_id` | 文字列 | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
+| `country` | 文字列 | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
+| `created_at` | 文字列 | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
+| `custom_attributes` | オブジェクト | このユーザーのカスタム属性キーと値のペア。 |
+| `custom_events` | 配列 | 過去 90 日間にこのユーザーに帰属するカスタム イベント。 |
+| `devices` | 配列 | ユーザーのデバイスに関する情報。プラットフォームに応じて、次の情報が含まれます。<br><br>- `model`:デバイスのモデル名<br>- `os`:装置のオペレーティングシステム<br>- `carrier`:デバイスのサービスキャリア (利用可能な場合)<br>- `idfv`: (iOS) Braze デバイス識別子、ベンダーの Apple 識別子 (存在する場合)<br>- `idfa`: (iOS) Advertising の識別子(存在する場合)<br>- `device_id`:(Android)Braze機器識別子<br>- `google_ad_id`:(Android)グーグルプレイ広告識別子(存在する場合)<br>- `roku_ad_id`:(Roku） Roku 広告識別子<br>- `ad_tracking_enabled`:デバイスで広告"トラッキングが有効になっている場合、真または偽になることがあります |
+| `dob` | 文字列 | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
+| `email` | 文字列 | ユーザーのメールアドレス。 |
+| `external_id` | 文字列 | 識別されたユーザー固有のユーザー識別子。 |
+| `first_name` | 文字列 | ユーザーの名。 |
+| `gender` | 文字列 | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
+| `home_city` | 文字列 | ユーザーの所在地。 |
+| `language` | 文字列 | ISO-639-1 規格のユーザー言語。 |
+| `last_coordinates` | 浮動小数点の配列 | `[longitude, latitude]` としてフォーマットされたユーザーの最新のデバイスの場所。 |
+| `last_name` | 文字列 | ユーザの姓。 |
+| `phone` | 文字列 | E.164 形式のユーザーの電話番号。 |
+| `purchases` | 配列 | このユーザーは過去90日間に購入しました。 |
+| `push_tokens` | 配列 | ユーザーのプッシュトークンについての説明。 |
+| `random_bucket` | 整数 | ユーザーの[乱数バケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)。乱数ユーザーsの一様分布Segmentsを作成するために使用されます。 |
+| `time_zone` | 文字列 | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
+| `total_revenue` | フロート | このユーザーに帰属する総収益。総収益は、受領したキャンペーンおよびキャンバスのコンバージョン期間中に行われたユーザーの購入に基づいて計算されます。 |
+| `uninstalled_at` | タイムスタンプ | ユーザーがアプリをアンインストールした日時。アプリがアンインストールされていない場合は省略されます。 |
+| `user_aliases` | オブジェクト | [`alias_name` および`alias_label` を含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) (存在する場合)。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## 重要な注意事項
+## 重要なお知らせ
 
-- `custom_events`、、`purchases``campaigns_received`、`canvases_received`のフィールドには、過去 90 日間のデータのみが含まれます。
-- `custom_events``purchases``first`とには両方におよびのフィールドが含まれます`count`。これらのフィールドは両方とも過去の情報を反映し、過去 90 日間のデータだけに限定されません。たとえば、特定のユーザーが90日前に初めてイベントを行った場合、これはフィールドに正確に反映され、`first``count`フィールドには過去90日より前に発生したイベントも考慮されます。
-- 企業がエンドポイントレベルで実行できるセグメントの同時エクスポート数は 100 に制限されています。この制限を超える試行はエラーになります。
-- 最初のエクスポートジョブの実行中にセグメントをもう一度エクスポートしようとすると、429 エラーが発生します。
+- `custom_events`、`purchases`、`campaigns_received`、および`canvases_received` のフィールドには、過去90 日間のデータのみが含まれます。
+- `custom_events` と`purchases` の両方に、`first` と`count` のフィールドs が含まれています。これら両方のフィールドには、過去 90 日間のデータだけに限定されず、すべての期間の情報が反映されます。たとえば、特定のユーザーが 90 日前に初回のイベントを実行した場合、これは `first` フィールドに正確に反映され、`count` フィールドでは過去 90 日より前に発生したイベントも考慮されます。
+- 企業がエンドポイント レベルで実行できる同時セグメント エクスポートの数は 100 に制限されています。この制限を超える試みはエラーになります。
+- 初回のエクスポートジョブがまだ実行されている間にセグメントを 2 回目にエクスポートしようとすると、429 エラーが発生します。
 
 ## 応答
 
@@ -179,14 +179,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-URL が公開されると、その有効期間は数時間です。そのため、Braze には独自の S3 認証情報を追加することを強くお勧めします。
+URL が使用可能になった後、数時間のみ有効になります。そのため、独自のS3 認証情報をBraze に追加することを強くお勧めします。
 
-## ユーザー・エクスポート・ファイル出力の例
+## サンプルユーザーのエクスポートファイルアウトプット
 
-ユーザーエクスポートオブジェクト (可能な限り少ないデータを含めます。オブジェクトにフィールドがない場合は、null、false、または空とみなす必要があります):
+ユーザエクスポートオブジェクト(できるだけ少ないデータを含みます。オブジェクトにフィールドがない場合は、null、false、または空であると見なされます):
 
 {% tabs %}
-{% tab All fields %}
+{% tab すべてのフィールド %}
 
 ```json
 {
@@ -245,7 +245,7 @@ URL が公開されると、その有効期間は数時間です。そのため�
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "ad_tracking_enabled" : (bool)
+        "ad_tracking_enabled" : (boolean)
       },
       ...
     ],
@@ -253,7 +253,9 @@ URL が公開されると、その有効期間は数時間です。そのため�
       {
         "app" : (string) app name,
         "platform" : (string),
-        "token" : (string)
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
@@ -274,16 +276,16 @@ URL が公開されると、その有効期間は数時間です。そのため�
         "last_received" : (string) date,
         "engaged" : 
          {
-           "opened_email" : (bool),
-           "opened_push" : (bool),
-           "clicked_email" : (bool),
-           "clicked_triggered_in_app_message" : (bool)
+           "opened_email" : (boolean),
+           "opened_push" : (boolean),
+           "clicked_email" : (boolean),
+           "clicked_triggered_in_app_message" : (boolean)
           },
-          "converted" : (bool),
+          "converted" : (boolean),
           "api_campaign_id" : (string),
           "variation_name" : (optional, string) exists only if it is a multivariate campaign,
           "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-          "in_control" : (optional, bool) exists only if it is a multivariate campaign
+          "in_control" : (optional, boolean) exists only if it is a multivariate campaign
         },
       ...
     ],
@@ -294,7 +296,7 @@ URL が公開されると、その有効期間は数時間です。そのため�
         "last_received_message": (string) date,
         "last_entered": (string) date,
         "variation_name": (string),
-        "in_control": (bool),
+        "in_control": (boolean),
         "last_exited": (string) date,
         "steps_received": [
           {
@@ -326,7 +328,7 @@ URL が公開されると、その有効期間は数時間です。そのため�
 ```
 
 {% endtab %}
-{% tab Sample output %}
+{% tab 出力例 %}
 
 ```json
 {
@@ -468,7 +470,7 @@ URL が公開されると、その有効期間は数時間です。そのため�
 {% endtabs %}
 
 {% alert tip %}
-CSV と API のエクスポートに関するヘルプは、「[エクスポートのトラブルシューティング」を参照してください]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 [1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3

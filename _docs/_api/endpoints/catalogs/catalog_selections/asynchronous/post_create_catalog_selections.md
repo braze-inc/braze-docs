@@ -16,9 +16,6 @@ description: "This article outlines details about the Create catalog selection B
 {% endapimethod %}
 
 > Use this endpoint to create a selection in your catalog.
-{% alert important %}
-This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Prerequisites
 
@@ -33,14 +30,14 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter      | Required | Data Type | Description          |
 | -------------- | -------- | --------- | -------------------- |
 | `catalog_name` | Required | String    | Name of the catalog. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
 | Parameter   | Required | Data Type | Description                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `selection` | Required | Object    | An object that contains selection criteria. The selection objects could contain `name`, `description`, `filters`, `results_limit`, `sort_field`, and `sort_order`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example Request
 
@@ -77,7 +74,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `boolean`  | `is`                                                    |
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Response
 
@@ -124,7 +121,6 @@ The following table lists possible returned errors and their associated troubles
 | `catalog-not-found`                  | Check that the catalog name is valid.                                                         |
 | `company-size-limit-already-reached` | The catalog storage size limit is reached.                                                    |
 | `selection-limit-reached`            | The catalog selections limit is reached.                                                      |
-| `catalog-in-process`                 | Catalog is currently processing. Please try again later.                                      |
 | `invalid-selection`                  | Check that the selection is valid.                                                            |
 | `too-many-filters`                   | Check if the selection has too many filters.                                                  |
 | `selection-name-already-exists`      | Check if the selection name already exists in the catalog.                                    |
@@ -134,6 +130,6 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-sort-field`                 | Check if the selection sort field is valid.                                                   |
 | `invalid-sort-order`                 | Check if the selection sort order is valid.                                                   |
 | `selection-contains-too-many-arrays` | Check if the selection contains more than one field with `array` type. Only one is supported. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -10,21 +10,22 @@ tool: Canvas
 
 # Action Paths 
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
-
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
 Using Action Paths, you can:
+
+![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
 ## Create an action path
 
-To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
+To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
 ### Action settings
 
-In the **Action Settings** module, you can choose how long you'd like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas. Note the maximum evaluation window for an action path is 31 days.
+In the **Action Settings**, set the **Evaluation Window** to determine how long users are held in the step. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas. The maximum evaluation window for an action path is 31 days.
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
@@ -48,7 +49,19 @@ Note that Canvas entry properties differ from event properties. Canvas entry pro
 
 ### Action groups
 
-Add a trigger or multiple triggers to define your action groups. Here, you can select a range of trigger events such as [custom events][2], engagement events like interactions with your app, and more.
+Add a trigger or multiple triggers to define your action groups. Here, you can select a range of triggers such as if users:
+
+- Make a purchase
+- Start a session
+- Perform a [custom event][2]
+- Perform a conversion event
+- Add an email address
+- Change a custom attribute value
+- Update their subscription status or subscription group status
+- Interact with a campaign or Content Card
+- Enter a location
+- Trigger a geofence
+- Send an SMS or WhatsApp inbound message
 
 ![][3]
 
@@ -62,9 +75,9 @@ If users enter into an action path multiple times and have multiple entries in t
 |---|--------------|
 | **Off** | When a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group. <br><br/> When a relevant action is not performed, all entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 | **On** | All entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %} 

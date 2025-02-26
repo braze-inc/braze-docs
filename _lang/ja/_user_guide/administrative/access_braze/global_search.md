@@ -18,12 +18,13 @@ description: "Braze のグローバル検索について学習しましょう。
 
 - キャンペーン名
 - キャンバス名
+- コンテンツブロック
 - セグメント名
 - メールテンプレート名
 - [Braze 内のページ](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
-完全に一致するテキストを検索するには、検索語を引用符 ("") で囲みます。例えば、“すべてのユーザー“ を検索すると、“すべてのユーザー“ と完全に一致する語句を名前に含むすべての項目が返されます。
+完全に一致するテキストを検索するには、検索語を引用符 ("") で囲みます。例えば、["すべてのユーザー"] を検索すると、「すべてのユーザー」と完全に一致する語句を名前に含むすべての項目が返されます。
 {% endalert %}
 
 ## 主な機能
@@ -49,13 +50,13 @@ table td {
 
 <div class="small_table"></div>
 
-| アクション                      | キーボードショートカット                                                             |
+| アクション (Action)                      | キーボードショートカット                                                             |
 | --------------------------- | ----------------------------------------------------------------------------- |
 | 検索メニューを開く        | {::nomarkdown}<ul> <li> Mac: <kbd>⌘</kbd> + <kbd>K</kbd></li> <li>Windows:<kbd>Ctrl</kbd> + <kbd>K</kbd></li> </ul> {:/}  |
-| 検索結果間を移動 | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
+| 検索結果間の移動 | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
 | 検索結果を選択      | <kbd>Enter</kbd>    |
 | 検索メニューを閉じる       | <kbd>Esc</kbd>  |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### コンテンツタイプとステータスタグ
 
@@ -81,11 +82,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 --->
 
-### アーカイブ済みコンテンツのフィルター
+### 有効および下書き内容のフィルター
 
-[**アーカイブ済みコンテンツを表示**] を選択すると、アーカイブ済みコンテンツを検索結果に含めることができます。デフォルトでトグルはオフになっており、アーカイブ済みコンテンツは含まれません。
+**Show active and 下書き only**を選択すると、検索結果にアクティブコンテンツと下書きコンテンツを含めることができます。デフォルトでは、切り替えが有効になっており、アーカイブ済みの内容を含むすべてのコンテンツが表示されます。
 
-!{[アーカイブ済みコンテンツを表示] トグル。] [4]
+!["有効と下書きのみを表示"を切り替えます。][4]
 
 ### 絵文字の検索
 
@@ -95,4 +96,4 @@ Braze で作業に名前を付けるときに絵文字を使用している場�
 [1]: {% image_buster /assets/img/global_search/global_search.png %}
 [2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
 [3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/archived_content.png %}
+[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}

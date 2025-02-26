@@ -67,7 +67,7 @@ The following two features, Intelligent Timing and Time to Live, can be used in 
 
 ### Intelligent Timing
 
-Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) is turned on. Intelligent Timing can calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
+Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) is turned on. Intelligent Timing can calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
 
 ### Time to Live (TTL)
 

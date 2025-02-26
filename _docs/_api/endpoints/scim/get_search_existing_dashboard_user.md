@@ -25,7 +25,7 @@ Note that when the query parameter is URL encoded it will read like this:
 
 ## Prerequisites
 
-To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+To use this endpoint, you'll need a SCIM token. You'll use your service origin as the `X-Request-Origin` header. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 
@@ -36,7 +36,7 @@ To use this endpoint, you'll need a SCIM token. For more information, refer to [
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `userName@example.com` | Required | String | The user's email. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 

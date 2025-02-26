@@ -22,7 +22,7 @@ The Braze and Vizbee integration allows you to use a single console to schedule 
 | Vizbee account | A [Vizbee][1] account is required to take advantage of this partnership. You must register your app in Vizbee and have an assigned Vizbee ID. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. |
 | Vizbee SDK | In addition to the required Braze SDK, you must install the Vizbee SDK. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

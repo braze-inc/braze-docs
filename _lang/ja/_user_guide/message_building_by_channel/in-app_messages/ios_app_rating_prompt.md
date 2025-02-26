@@ -1,47 +1,47 @@
 ---
-nav_title: iOSのアプリ内評価プロンプト
-article_title: iOSのアプリ内評価プロンプト
+nav_title: iOS向けアプリ内レーティング・プロンプト
+article_title: iOS向けアプリ内レーティング・プロンプト
 page_order: 6
-description: "この記事では、Braze を使用してユーザーにアプリのレビューを依頼するためのアプローチとインプリケーションについて説明します。"
+description: "この記事では、Brazeを使ってユーザーにアプリのレビューを依頼する際のアプローチとその意味について説明する。"
 channel:
   - in-app messages
 
 ---
 
-# iOSのアプリ内レーティングプロンプト
+# iOS向けアプリ内評価プロンプト
 
-> この記事では、Braze を使用してユーザーにアプリのレビューを依頼するためのアプローチとインプリケーションについて説明します。効果的なアプリ評価キャンペーンの作り方についてのヒントは、[The Do's and Don'ts of Customer App Ratings](https://www.braze.com/resources/articles/the-dos-and-donts-of-customer-app-ratings)をご覧ください。
+> この記事では、Brazeを使ってユーザーにアプリのレビューを依頼する際のアプローチとその意味について説明する。効果的なアプリ評価キャンペーンを行うためのヒントについては、「[顧客アプリ評価の注意点](https://www.braze.com/resources/articles/the-dos-and-donts-of-customer-app-ratings)」を参照のこと。
 
-Apple は、iOS 10.3 で導入されたネイティブプロンプトを提供しており、アプリ自体からアプリを評価できます。iOS でアプリ内メッセージを使用してユーザーからアプリ評価をリクエストする場合は、Apple がカスタムレビュープロンプトを許可しないため、ネイティブプロンプトを使用する必要があります([App Store レビューガイドライン](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct)、セクション5.6.1 を参照)。
+アップルは、iOS 10.3で導入されたネイティブ・プロンプトを提供しており、ユーザーはアプリ自体からアプリを評価することができる。iOSのアプリ内メッセージを使用してユーザーにアプリの評価を要求したい場合、Appleはカスタムレビュープロンプトを許可していないため、ネイティブプロンプトを使用する必要がある（[App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct)、セクション5.6.1を参照）。
 
-Appleのガイドラインに従って、アプリレビュープロンプトを年に3回までユーザーに表示できるため、アプリレビューキャンペーンでは[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)を利用する必要があります。ユーザーは、アプリ設定でアプリレビュープロンプトを完全に表示しないこともできます。App Store の定格の詳細については、Apple の記事[定格、レビュー、およびレスポンス](https://developer.apple.com/app-store/ratings-and-reviews/) を参照してください。
+Apple のガイドラインによると、アプリのレビュープロンプトはユーザーに対して年に最大 3 回表示できるため、アプリのレビューキャンペーンでは[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)を活用する必要があります。ユーザーは、アプリの設定でアプリのレビュープロンプトを全く表示しないようにすることもできます。App Store のレーティングについては、Apple の[レーティング、レビュー、レスポンス](https://developer.apple.com/app-store/ratings-and-reviews/)に関する記事を参照してください。
 
-## Braze を使用してユーザーにアプリのレビューを依頼する
+## Brazeを使ってユーザーにアプリのレビューを依頼する
 
-Apple ではネイティブプロンプトを使用する必要がありますが、Braze キャンペーンを利用して、ユーザーにアプリの評価とレビューを適時に依頼することができます。2つの主なアプローチがあります。
+アップルはネイティブのプロンプトを使用することを義務付けているが、Brazeのキャンペーンを活用すれば、適切なタイミングでユーザーにアプリの評価やレビューを求めることができる。主に2つのアプローチがある。
 
-### アプローチ1:App Storeへのディープリンク
+### アプローチ1：App Storeへのディープリンク
 
-このアプローチでは、ユーザがApp Store にアクセスしてレビューを追加することを奨励します。そのためには、[Deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)をApp Storeにリンクするアプリ内メッセージキャンペーンを作成します。
+このアプローチでは、ユーザーがApp Storeを訪れてレビューを追加するよう促したい。そのためには、App Storeに[ディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)するアプリ内メッセージキャンペーンを作成する。
 
-![2つのモバイルスクリーンを並べて。1つ目はアプリ内メッセージで、App Storeでアプリを評価するようユーザーに求めます。2つ目は、そのアプリのiOS App Storeページです。][1]
+![2 つのモバイル画面を並べて表示。1つ目は、App Storeでアプリを評価するようユーザーに求めるアプリ内メッセージだ。もうひとつは、そのアプリのiOS App Storeページだ。][1]
 
-### アプローチ2:ソフトプライム
+### アプローチ2：ソフトプライミング
 
-ユーザーがアプリを離れたくない場合は、まず別のアプリ内メッセージでユーザーをプライムできます。プライミングは、ネイティブのApp Store レビュープロンプトを送信する前に、ユーザーに許可を求める方法です。そのためには、アプリ内メッセージキャンペーンを登録し、クリック時に`requestReview` メソッドを呼び出すカスタムディープリンクを追加します。 
+ユーザーをアプリから離脱させたくない場合は、まずアプリ内の個別メッセージでユーザーに呼びかけることができます。プライミングとは、ネイティブのApp Storeレビュープロンプトを送信する前に、ユーザーに許可を求める方法である。そのためには、アプリ内メッセージキャンペーンを作成し、クリックされると`requestReview` メソッドを呼び出すカスタムディープリンクを追加する。 
 
-詳細な手順については、[カスタムApp Store レビュープロンプト]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/)を参照してください。
+詳しい手順については、[カスタム App Store レビュープロンプト]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/)を参照してください。
 
-![アプリ内メッセージを並べて2つ。最初に、アプリを評価する瞬間があるかどうかを尋ねることで、アプリの評価をユーザーにプライムします。2つ目は、iOS App Storeのネイティブレビューメッセージで、ユーザーがアプリを評価するために選択できる5つ星のスケールが表示されます。[2]
+![2 つのアプリ内メッセージを並べて表示。1 つ目は、アプリを評価する時間があるかどうかを尋ね、ユーザーにアプリを評価してもらうよう促します。2 つ目は、iOS App Store のネイティブレビューメッセージで、ユーザーがアプリを評価するために選択できる 5 つ星のスケールが表示されます。][2]
 
-ユーザーはネイティブのApp Storeレビュープロンプトを介して評価を送信し、アプリを離れることなくレビューを書き込み、送信することができます。
+ユーザーはネイティブの App Store レビュープロンプトを介して評価を提出し、アプリを離れることなく、レビューを書き込んで提出することができます。
 
 ### 考慮事項
 
-ソフトプライミングの代わりに、前に表示されたブレーズソフトプライマーメッセージなしで、iOSアプリの評価プロンプトを直接表示することもできます。この利点は、ユーザーがアプリレビュープロンプトからオプトアウトされた場合、アプリケーションを評価しようとしても、プロンプトが表示されないという最適なユーザーエクスペリエンスが得られないことです。
+ソフトプライミングの代わりに、事前に Braze のソフトプライマーメッセージを表示せずに、iOS アプリのレーティングプロンプトを直接表示することもできます。この利点は、ユーザーがアプリのレビュープロンプトをオプトアウトしている場合、アプリを評価しようとしても、そのためのプロンプトが表示されないという、最適とは言えないユーザー体験が発生しないことだ。
 
 {% alert important %}
-Apple のガイドラインに違反するため、ネイティブiOS アプリ評価プロンプトを模倣したカスタムHTML インアプリメッセージを作成しないでください。
+iOS ネイティブのアプリレーティングプロンプトを模倣したカスタムの HTML アプリ内メッセージは作成しないでください。これは Apple のガイドラインに違反する行為です。
 {% endalert %}
 
 [1]: {% image_buster /assets/img_archive/app_store_app_review.png %}

@@ -23,7 +23,7 @@ Looking for guidance on creating subscription groups? Check out our articles for
 |---|---|
 | Ketch Account | A [Ketch](https://www.ketch.com) account with admin privileges is required activate this integration. |
 | Braze API key | A Braze REST API key with `users.track`, `subscription.status.get`, `subscription.status.set`, `users.delete`, `users.alias.new`, `users.export.ids`, `email.unsubscribe`, and `email.blacklist` permissions. <br><br> This can be created in the Braze dashboard (**Developer Console** > **REST API Key** > **Create New API Key**). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -55,7 +55,7 @@ A user can only see the marketing preference center when Ketch can confirm that 
 
 1. To configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
 2. Go to **Experience Server** > **Properties**, and edit the desired property. Under the data layer for that property, make sure to enable the custom identity space. Then, configure how the marketing preference identity is captured on this site.
-3. Once you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
+3. After you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
 
 
 [1]: {% image_buster /assets/img/ketch/ketch1.png %}

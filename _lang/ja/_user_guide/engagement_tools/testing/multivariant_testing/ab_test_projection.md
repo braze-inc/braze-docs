@@ -9,9 +9,9 @@ description: "この記事では、AB テスト予測の仕組み、予測の実
 
 # AB テスト予測
 
-> A/B test projection uses neural networks to predict which subject lines perform best. Our model extracts linguistic features from winning A/B tests performed on Braze and uses those statistical language patterns to teach our AI what makes better subject lines.
+> AB テスト予測は、ニューラルネットワークを使用して、最高のパフォーマンスを示す件名を予測します。私たちのモデルは、Brazeで実施されたA/Bテストの勝者から言語的特徴を抽出し、それらの統計的言語パターンを使用して、何がより良い件名になるかをAIに教える。
 
-{% alert note %}
+{% alert important %}
 この機能は現在早期アクセス段階です。早期アクセスへの参加に興味がある場合は、Braze カスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
 {% endalert %}
 
@@ -27,10 +27,14 @@ description: "この記事では、AB テスト予測の仕組み、予測の実
 
 AI が最良と予測した件名には、「**予想される勝者**」ラベルが付けられます。
 
+{% alert note %}
+[クイックプッシュキャンペーンでは]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/quick_push/)、複数のプラットフォームを選択した場合、A/Bテストがサポートされる。
+{% endalert %}
+
 ### 予測の精度はどの程度でしょうか。
 
 テストでは、実際の AB テストでメッセージのペアを選ぶ際に、予測の精度が約70% であることがわかりました。このことは、モデルが勝つと予測するメッセージを解釈するときに考慮してください。
 
 ### データはどのように利用されるのか？
 
-この機能は、過去の A/B tests carried out on Braze. The actual copy of your or any Braze customers' messages is never provided to the model. We first extract the high-level language patterns that predict winning messages in A/B tests. Then, we provide those patterns to our AI to teach it to discern which linguistic features constitute superior subject lines. から学習します。
+この機能は、Brazeで実施された過去のA/Bテストから学習する。あなたやBrazeの顧客のメッセージの実際のコピーがモデルに提供されることはない。私たちはまず、A/Bテストで勝つメッセージを予測するハイレベルな言語パターンを抽出する。そして、そのパターンをAIに提供し、どの言語的特徴が優れた件名であるかを見分けるよう学習させる。

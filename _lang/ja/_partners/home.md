@@ -5,12 +5,9 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
-partner_top_header: "テクノロジーパートナー"
-partner_top_text: "Alloys（盟友、親友、パートナー）のリストへようこそ！テクノロジーパートナーの Braze SDK への実装に役立つ技術ドキュメントを検索するのにご利用ください。<br> <br> Braze を使用して顧客体験とマーケティングを近代化する有力者のコミュニティである Firebrands への参加に関する情報をお探しの場合は、情報ページ<a href='https://brazefirebrands.splashthat.com/'>こちら</a> をご覧ください。"
-description: "このランディングページには、すべての Braze パートナーが含まれています。テクノロジーパートナーを Braze SDK に実装するのに役立つ技術文書を検索するのにご利用ください。"
+partner_top_header: "Technology Partners"
+partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
+description: "このランディングページにはすべてのBrazeパートナーが含まれています。テクノロジーパートナーを Braze SDK に実装する際に役立つ技術ドキュメントを探すときにご利用ください。"
 
 valid_partner_list:
 - name: Jampp
@@ -93,17 +90,17 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
-- name: Segment
+- name: セグメント
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
-- name: Rudderstack
+- name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-- name: Census
+- name: 国勢調査
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
-- name: Treasure Data
+- name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
@@ -113,13 +110,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
   url: /docs/partners/message_personalization/dynamic_content/movable_ink/
-- name: LiftIgniter
+- name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
-- name: AccuWeather
+- name: Accuweather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
@@ -131,15 +128,15 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
-- name: Amperity
+- name: アンペア
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
@@ -301,4 +298,22 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: トレジャーデータ
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: マイポストカード
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Dixa
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
+- name: Narvar
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
+- name: Outgrow
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

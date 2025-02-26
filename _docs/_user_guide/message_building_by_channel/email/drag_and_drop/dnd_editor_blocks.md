@@ -39,7 +39,7 @@ The following table describes how users can use each editor block type.
 |`Icons`| Inserts an icon. Custom images can be uploaded. An oversized placeholder icon will be used until an image is uploaded. |
 |`HTML`| Inserts raw HTML. Great for advanced Liquid such as Connected Content or conditional statements. | 
 |`Menu`| Creates a flexible menu for the message you're designing. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Properties
 
@@ -59,7 +59,7 @@ Details for each editor block's properties are provided in the following tables.
 |`Line height`| Modifies the distance between lines of text. |
 |`Line spacing`| Modifies the distance in between each character. |
 |`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Paragraph
 
@@ -77,7 +77,7 @@ Refer to the following table for details on the `Paragraph` editor block propert
 |`Line height`| Modifies the distance between lines of text. |
 |`Letter spacing`| Modifies the distance in between each character. |
 |`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### List
 
@@ -99,7 +99,7 @@ Refer to the following table for details on the `List` editor block properties.
 |`Line height`| Modifies the distance between lines of text. |
 |`Letter spacing`| Modifies the distance in between each character. |
 |`Text direction`| Default left-to-right, but can be edited to be right-to-left. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Button
 
@@ -109,7 +109,7 @@ Refer to the following table for details on the `Button` editor block.
 |---|---|
 |`Link Type`| Determines the action when clicking the button and sets the appropriate link protocol. |
 |`URL`| Dynamic based on the selected `Link Type`.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divider
 
@@ -121,7 +121,7 @@ Refer to the following table for details on the `Divider` editor block.
 |`Line`| The different line formats, whether dotted, spotted, or solid.  In addition, you can modify the thickness and color of the divider line. |
 |`Width `| Adjusts the spread of the divider in increments of 5.  |
 |`Align`| Moves the line to be either left, center, or right-oriented. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Spacer
 
@@ -130,7 +130,7 @@ Refer to the following table for details on the `Spacer` editor block.
 | properties | description |
 |---|---|
 |`Height`| Adjusts the height of the spacer block. The default is 60px.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image
 
@@ -142,7 +142,7 @@ Refer to the following table for details on the `Image` editor block. For dynami
 |`Align`| Moves the image to be either left, center or right-oriented. |
 |`URL`| The hosted address for your image. |
 |`Alternate text`| The written copy that appears in place of an image when the image fails to load. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 For `Auto Width`, automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
@@ -161,7 +161,7 @@ Refer to the following table for details on the `Video` editor block.
 |`Play Icon Style`| Includes different options for the play button located at the top of a video image. |
 |`Play Icon Color`| Option to select either **Light** or **Dark** for the play button. |
 |`Play Icon Size`| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
 Videos hosted by Vimeo will only work if they are set to public. All other security settings available within Vimeo (for example, "Hide from Vimeo.com") will generate a different link format that is not supported by this Content Block. These types of links are altered by the builder, which prevents Braze from generating a thumbnail.
@@ -177,7 +177,7 @@ Refer to the following table for details on the `Social` editor block.
 |`Configure icon collection`| Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
 |`Align`| Moves the social icon to be left, center or right-oriented.
 |`Icon spacing`| Determines the spacing between each social icon. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Icons
 
@@ -195,7 +195,7 @@ Refer to the following table for details on the `Icons` editor block.
 |`Icon size`| Determines the size of your icon. |
 |`Icon spacing`| Modifies the space of the icon. |
 |`Icon padding`| Modifies the padding of the icon. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML
 
@@ -204,7 +204,7 @@ Refer to the following table for details on the `HTML` editor block.
 | properties | description |
 |---|---|
 |`html editor`| Enter the raw HTML. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Menu
 
@@ -224,7 +224,7 @@ Refer to the following table for details on the `Menu` editor block.
 |`Mobile menu`| Includes options to modify the icon size, color, and icon type when shown on a mobile device. |
 |`Item padding`| Modifies the padding by using either the **+** or **-** button, or by entering a specific number. |
 |`All sides`| Sets a consistent padding number if `Item padding` is disabled. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Add Liquid personalization
 
@@ -233,4 +233,4 @@ Refer to the following table for details on `Add Personalization`.
 | name | description |
 |---|---|
 | `Add Personalization` | Allows you to lookup standard Liquid snippets such as standard (default) attributes, custom attributes, Content Blocks, and more. | 
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

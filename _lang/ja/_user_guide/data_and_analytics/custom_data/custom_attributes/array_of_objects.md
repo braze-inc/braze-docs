@@ -19,10 +19,14 @@ description: "このリファレンス記事では、オブジェクト配列を
 
 配列内の項目の更新または削除を行うには、キーと値を使用して項目を特定する必要があります。したがって、配列内の各項目に一意の識別子を含めることを検討してください。一意性の範囲は配列のみに限定されるため、配列から特定のオブジェクトの更新および削除を行う場合に役立ちます。これは Braze での強制事項ではありません。
 
+{% alert tip %}
+ユーザー属性オブジェクトにオブジェクトの配列を使用する方法については、「[ユーザー属性オブジェクトを]({{site.baseurl}}/api/objects_filters/user_attributes_object)」を参照してください。
+{% endalert %}
+
 ## API の例
 
-{% tabs local %}
-{% tab Create %}
+{% tabs ローカル %}
+{% tab 作成 %}
 
 以下は、`pets` 配列を含む `/users/track` の例です。ペットのプロパティを取得するには、オブジェクトの配列として `pets` をリストする API リクエストを送信します。各オブジェクトには一意の `id` 属性が割り当てられていることに注意してください。この属性は、後で更新するときに参照できます。
 
@@ -50,7 +54,7 @@ description: "このリファレンス記事では、オブジェクト配列を
 }
 ```
 {% endtab %}
-{% tab Add %}
+{% tab 追加 %}
 
 `$add` 演算子を使用して、別の項目を配列に追加します。 次の例は、ユーザーの `pets` 配列にさらに 3 つのペットオブジェクトを追加することを示しています。
 
@@ -86,7 +90,7 @@ description: "このリファレンス記事では、オブジェクト配列を
 }
 ```
 {% endtab %}
-{% tab Update %}
+{% tab 更新 %}
 
 `_merge_objects` パラメーターと `$update` 演算子を使用して、配列内の特定オブジェクトの値を更新します。単純な[階層化カスタム属性]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body)オブジェクトの更新と同様に、これは深いレベルでマージを実行します。
 
@@ -126,7 +130,7 @@ description: "このリファレンス記事では、オブジェクト配列を
 {% endalert %}
 
 {% endtab %}
-{% tab Remove %}
+{% tab 削除 %}
 
 配列からオブジェクトを削除するには、`$remove` 演算子と、一致するキー (`$identifier_key`) と値 (`$identifier_value`) を組み合わせて使用します。
 
@@ -164,11 +168,11 @@ description: "このリファレンス記事では、オブジェクト配列を
 
 ## SDK の例
 
-{% tabs local %}
+{% tabs ローカル %}
 {% tab Android SDK %}
 
 **作成**
-\`\`\`kotlin
+```kotlin
 val json = JSONArray()
     .put(JSONObject()
         .put("id", 1)
@@ -185,12 +189,12 @@ val json = JSONArray()
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json)
 }
-\`\`\`
+```
 
 **追加**
-\`\`\`kotlin
+```kotlin
 val json = JSONObject()
-    .put("\\$add", JSONArray()
+    .put("\$add", JSONArray()
         .put(JSONObject()
             .put("id", 3)
             .put("type", "dog")
@@ -212,23 +216,23 @@ val json = JSONObject()
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
-\`\`\`
+```
 
 **更新**
-\`\`\`kotlin
+```kotlin
 val json = JSONObject()
-    .put("\\$update", JSONArray()
+    .put("\$update", JSONArray()
         .put(JSONObject()
-            .put("\\$identifier\_key", "id")
-            .put("\\$identifier\_value", 4)
-            .put("\\$new\_object", JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 4)
+            .put("\$new_object", JSONObject()
                 .put("breed", "goldfish")
             )
         )
         .put(JSONObject()
-            .put("\\$identifier\_key", "id")
-            .put("\\$identifier\_value", 5)
-            .put("\\$new\_object", JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 5)
+            .put("\$new_object", JSONObject()
                 .put("name", "Annette")
             )
         )
@@ -237,127 +241,127 @@ val json = JSONObject()
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
-\`\`\`
+```
 
 **削除**
-\`\`\`kotlin
+```kotlin
 val json = JSONObject()
-    .put("\\$remove", JSONArray()
+    .put("\$remove", JSONArray()
         .put(JSONObject()
-            .put("\\$identifier\_key", "id")
-            .put("\\$identifier\_value", 1)
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 1)
         )
         .put(JSONObject()
-            .put("\\$identifier\_key", "id")
-            .put("\\$identifier\_value", 2)
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 2)
         )
         .put(JSONObject()
-            .put("\\$identifier\_key", "type")
-            .put("\\$identifier\_value", "dog")
+            .put("\$identifier_key", "type")
+            .put("\$identifier_value", "dog")
         )
     )
 
 braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
-\`\`\`
+```
 
 {% endtab %}
-{% tab Swift SDK %}
+{% tab SWIFT SDK %}
 
 **作成**
-\`\`\`swift
-let json: [[String:Any?]] = [
+```swift
+let json: [[String: Any?]] = [
   [
-      "id":1,
+    "id": 1,
     "type": "dog",
     "breed": "beagle",
-    "name":"Gus"
+    "name": "Gus"
   ],
-[
-    "id":2,
+  [
+    "id": 2,
     "type": "cat",
     "breed": "calico",
-    "name":"Gerald"
+    "name": "Gerald"
   ]
 ]
 
 braze.user.setCustomAttribute(key: "pets", array: json)
-\`\`\`
+```
 
 **追加**
-\`\`\`swift
-let json: [String:Any?] = [
+```swift
+let json: [String: Any?] = [
   "$add": [
     [
-          "id":3,
-          "type": "dog",
-        "breed": "corgi",
-      "name":"Doug"
+      "id": 3,
+      "type": "dog",
+      "breed": "corgi",
+      "name": "Doug"
     ],
-[
-      "id":4,
+    [
+      "id": 4,
       "type": "fish",
       "breed": "salmon",
-      "name":"Larry"
+      "name": "Larry"
     ],
-[
-      "id":5,
+    [
+      "id": 5,
       "type": "bird",
       "breed": "parakeet",
-      "name":"Mary"
+      "name": "Mary"
     ]
-]
+  ]
 ]
 
-braze.user.setCustomAttribute(key: "ペット", dictionary: json, merge: true)
-\`\`\`
+braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
+```
 
 **更新**
-\`\`\`swift
-let json: [String:Any?] = [
+```swift
+let json: [String: Any?] = [
   "$update": [
     [
-      "$identifier\_key": "id",
-      "$identifier\_value":4,
-      "$new\_object": [
-            "breed": "goldfish"
-          ]
-      ],
-      [
-      "$identifier\_key": "id",
-    "$identifier\_value":5,
-  "$new\_object": [
-        "name":"Annette"
+      "$identifier_key": "id",
+      "$identifier_value": 4,
+      "$new_object": [
+        "breed": "goldfish"
       ]
-]
-]
+    ],
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 5,
+      "$new_object": [
+        "name": "Annette"
+      ]
+    ]
+  ]
 ]
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
-\`\`\`
+```
 
 **削除**
-\`\`\`swift
-let json: [String:Any?] = [
+```swift
+let json: [String: Any?] = [
   "$remove": [
     [
-          "$identifier\_key": "id",
-          "$identifier\_value":1,
-      ],
-[
-      "$identifier\_key": "id",
-      "$identifier\_value":2,
+      "$identifier_key": "id",
+      "$identifier_value": 1,
     ],
-[
-      "$identifier\_key": "type",
-      "$identifier\_value": "dog",
+    [
+      "$identifier_key": "id",
+      "$identifier_value": 2,
+    ],
+    [
+      "$identifier_key": "type",
+      "$identifier_value": "dog",
     ]
-]
+  ]
 ]
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
-\`\`\`
+```
 
 {% alert important %}
 階層化カスタム属性は AppboyKit ではサポートされていません。
@@ -461,13 +465,13 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 この `pets` 配列を使用して、メッセージをパーソナライズできます。次の Liquid のテンプレート作成例では、前述した API リクエストから保存されたカスタム属性オブジェクトのプロパティを参照し、メッセージングでそれらを使用する方法を示します。
 
 {% raw %}
-\`\`\`liquid
-{% assign pets = {{custom\_attribute.${pets}}} %} 
+```liquid
+{% assign pets = {{custom_attribute.${pets}}} %} 
  
 {% for pet in pets %}
-私は {{pet.name}} という名前の {{pet.type}} を飼っています。品種は {{pet.breed}} です。
-{% endfor %}
-\`\`\`
+I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
+{% endfor %} 
+```
 {% endraw %}
 
 このシナリオでは、Liquid を使用して `pets` 配列全体をループし、各ペット用の分を出力できます。カスタム属性 `pets` に[変数を割り当て]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables)、ドット表記を使用してオブジェクトのプロパティにアクセスします。オブジェクト名を指定し、その後にピリオド `.` を付け、プロパティ名を指定します。
@@ -478,17 +482,17 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 
 新規のセグメントを作成し、フィルターとして [**階層化カスタム属性**] を選択します。次に、オブジェクト配列の名前を検索して選択します。
 
-![オブジェクト配列を基準にしたフィルターの適用][1]
+![オブジェクトの配列でフィルターをかける。][1]
 
 ドット表記を使用して、使用するオブジェクト配列内のフィールドを指定します。テキストフィールドは空の大かっこのセット (`[]`) で始まり、これはオブジェクト配列の内部を見ていることを Braze に伝えます。その後にピリオド (`.`) と、使用するフィールドの名前を入力します。
 
 例えば、`type` フィールドを基準にしてオブジェクト配列 `pets` にフィルターを適用する場合は、`[].type` を選択して、フィルターを適用する `snake` などのペットのタイプを選択します。
 
-![「ペットのタイプがヘビに等しい」のフィルターを適用][3]
+![ペットの種類イコールヘビでフィルターをかける。][3]
 
 または、`type` が `dog` であるペットのフィルターを適用することもできます。ここで、あるユーザーは少なくとも 1 頭の犬を飼っているため、ユーザーは「タイプが犬のペットを少なくとも 1 頭飼っているユーザー」のセグメントに該当します。
 
-![ペットのタイプが犬に等しいフィルターの適用][2]
+![ペットの種類イコール犬でフィルターをかける。][2]
 
 ### 階層化のレベル
 
@@ -532,8 +536,8 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 
 データポイントの消費方法は、プロパティの作成、更新、または削除のいずれを実行するかに応じて異なります。
 
-{% tabs local %}
-{% tab Create %}
+{% tabs ローカル %}
+{% tab 作成 %}
 
 新規の配列を作成すると、オブジェクト内の属性ごとにデータポイントが 1 消費されます。次の例ではデータポイント 8 が必要です。各ペットオブジェクトには属性が 4 つあり、オブジェクトが 2 つあります。
 
@@ -561,7 +565,7 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 }
 ```
 {% endtab %}
-{% tab Update %}
+{% tab 更新 %}
 
 既存の配列を更新すると、追加されたプロパティごとにデータポイントが 1 消費されます。次の例では、2 つのオブジェクトのそれぞれでプロパティを 1 つのみ更新するため、データポイント 2 を消費します。
 
@@ -594,7 +598,7 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 }
 ```
 {% endtab %}
-{% tab Remove %}
+{% tab 削除 %}
 
 配列からオブジェクトを削除するときには、送信する削除条件ごとにデータ ポイントが 1 消費されます。次の例では、このステートメントで複数の犬を削除できるにもかかわらず、データポイントが 3 消費されます。
 

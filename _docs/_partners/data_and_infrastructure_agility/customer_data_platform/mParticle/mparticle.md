@@ -1,6 +1,6 @@
 ---
-nav_title: mParticle
-article_title: mParticle
+nav_title: mParticle by Rokt
+article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# mParticle
+# mParticle by Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,10 +24,10 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | Requirement | Description |
 | ----------- | ----------- |
 | mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
-| Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). (For example: US-01, US-02, etc.) |
+| Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints) (for example, `US-01` or `US-02`). |
 | Braze app identifier key | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 | Workspace REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -68,7 +68,7 @@ mParticle creates a single custom array attribute in Braze for each user, called
 For example, if a user is a member of three mParticle audiences with the audience IDs of "13053", "13052", and "13051", you can segment for users who match one of those audience with the filter `SegmentMembershipArray` — `includes value` — `13051`.
 
 {% alert note %}
-Braze array attributes have a maximum length of 25. If any of your users are members of over 25 audiences, membership information will be truncated by Braze. To work around this, contact your Braze representative to increase your max array length threshold.
+Braze array attributes have a maximum length of 25. If any of your users are members of over 25 audiences, membership information will be truncated by Braze. To work around this, contact your Braze representative to increase your maximum array length threshold.
 {% endalert %}
 
 ##### One attribute per segment {#per-segment}
@@ -109,7 +109,7 @@ To create an audience in mParticle:
 | External identity type   | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.                                          |
 | Email identity type      | The mParticle user identity type to forward as the email to Braze.                                                                                                            |
 | Braze instance           | Specify which cluster your Braze data will be forwarded to.                                                                                                                   |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {:start="3"}
 3. Lastly **Save** your audience.
@@ -147,8 +147,8 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 | External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
 | Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |
-| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/basics/#api-limits). |
-{: .reset-td-br-1 .reset-td-br-2}
+| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/api_limits/). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][10]
 
@@ -212,8 +212,8 @@ Before enabling "Enriched User Attributes" or "Enriched User Identities" we reco
 
 #### Data types
 Not all data types are supported between both platforms.
-- [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
-- [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
+- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
+- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
 
 {% alert note %}
 Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze will ingest these values when they are sent by mParticle but the value will be stored as a string.
@@ -228,7 +228,7 @@ Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type
 | Custom event | Custom event | mParticle custom events are recognized by Braze as a custom event. Event attributes are forwarded as custom event properties.<br><br>Event attributes passed to Braze as event properties support string, numeric, boolean, or date objects but do not support arrays or nested objects. |
 | Purchase commerce event | Purchase event | Purchase commerce events will be mapped to Braze purchase events. <br><br>Toggle the setting value for bundle commerce event data to log purchases at the order-level or product-level. For example, if `false`, a single incoming event with two unique products, promotions, or impressions would result in at least two outgoing Braze events. If set to `true`, it would result in a single outgoing event with a nested products, promotions or impressions array, respectively.<br><br>For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#purchase-events). <br><br>When setting "bundle commerce event data" as `false` product attributes passed to Braze as purchase event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects.|
 | All other commerce events | Custom event | All other commerce events will be mapped to custom events. <br><br>Toggle the setting value for bundle commerce event data to log purchases at the order-level or product-level. For example, if `false`, a single incoming event with two unique products, promotions, or impressions would result in at least two outgoing Braze events. If set to `true`, it would result in a single outgoing event with a nested products, promotions or impressions array, respectively.<br><br>In addition to certain default commerce values, product attributes will be logged as Braze event properties. For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#other-commerce-events)<br><br>When setting "bundle commerce event data" as `false` product attributes passed to Braze as event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### User identity mapping
 For each mParticle output, you can select the external identity type to send to Braze as the `external_id`. While the default value is customer ID, you can choose to map another ID, such as `MPID`, to send to Braze as the `external_id`. Be aware that choosing an identifier other than customer ID may influence how data is sent in Braze. 

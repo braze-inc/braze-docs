@@ -4,12 +4,9 @@ article_title: ダイナミックコンテンツパートナー
 page_order: 2
 
 page_type: landing
-description: "このランディングページには、メッセージに動的コンテンツを含めることを許可するBrazeパートナー（Alloys）が一覧表示されています。"
+description: "このランディングページには、メッセージにダイナミックコンテンツを含めることができるBrazeのパートナー（合金）がリストアップされている。"
 layout: partner_page
 search_tag: Partner
-
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Dynamic Content"
 
@@ -50,4 +47,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: SEEN
+  url: /docs/partners/message_personalization/dynamic_content/seen
+- name: Contentful
+  url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---

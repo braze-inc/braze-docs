@@ -31,6 +31,7 @@ This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+{: role="presentation" }
 
 ## Request parameters
 
@@ -43,8 +44,8 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Response 
-```json 
+## Response
+```json
 {
   "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",

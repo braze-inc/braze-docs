@@ -93,7 +93,7 @@ If users choose to "Turn Off" provisional push from you, they won't see any more
 {% endalert %}
 
 {% alert important %}
-If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), reach out to your Braze representative for additional guidance.
+If you use additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), reach out to your Braze representative for additional guidance.
 {% endalert %}
 
 #### Set up provisional push notifications
@@ -148,7 +148,7 @@ Refer to the following table for interruption levels and their descriptions.
 |[Active](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (default)|Will only make a sound, vibration, and turn on the screen if the user is not in Focus Mode.|Notifications that require immediate attention, unless the user has Focus Mode enabled.|No|
 |[Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the **Time Sensitive Notifications capability** is added your app in Xcode|Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification.|Yes|
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
 

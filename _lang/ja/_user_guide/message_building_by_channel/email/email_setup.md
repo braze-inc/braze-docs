@@ -1,64 +1,64 @@
 ---
-nav_title: Eメール設定
-article_title: オンボーディングメールの設定
+nav_title: メール設定
+article_title: オンボーディングメールセットアップ
 layout: dev_guide
 page_order: 1
-guide_top_header: "Eメール設定"
-guide_top_text: "BrazeはEメールキャンペーンを開始するお手伝いをいたします。ガイドに従うか、<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learningコースをチェックしてください。"
+guide_top_header: "メール設定"
+guide_top_text: "Brazeは、メールキャンペーンの送信を開始するのに役立ちます。ガイドに従うか、<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>メールオンボーディング</a>の Braze ラーニングコースを参照してください。"
 page_type: landing
-description: "このランディングページには、IPやドメインの設定、IPウォーミングアップ、メール検証など、メールキャンペーンを始めるためのリソースが含まれています。"
+description: "このランディングページには、メールキャンペーンの開始に関するリソースが含まれており、IPやドメインの設定、IPウォーミング、メールの検証などが含まれています。"
 channel: email
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: "Setting Up IPs and Domains"
+- name: "IPとドメインの設定"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/
-  fa_icon: far fa-dot-circle
-- name: "IP Warming"
+  image: /assets/img/braze_icons/target-05.svg
+- name: "IP ウォームアップ"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/
-  fa_icon: fas fa-exclamation
-- name: "Email Validation"
+  image: /assets/img/braze_icons/annotation-alert.svg
+- name: "メール検証"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
-  fa_icon: fas fa-check-square
-- name: "Email Authentication"
+  image: /assets/img/braze_icons/check-square-broken.svg
+- name: "メール認証"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
-  fa_icon: fas fa-user-shield
-- name: "Importing Your Email List"
+  image: /assets/img/braze_icons/user-square.svg
+- name: "メールリストのインポート"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
-  fa_icon: fas fa-list
-- name: "SSL Overview"
+  image: /assets/img/braze_icons/list.svg
+- name: "SSLの概要"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
-- name: "Consent and Address Collection"
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
+- name: "同意と住所の収集"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
-  fa_icon: fas fa-address-book
-- name: "Deliverability Pitfalls and Spam Traps"
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "配信の落とし穴とスパムトラップ"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## 要件
 
-Eメールの送信を始める前に、必要なものがいくつかあります。これらの要件の詳細については、以下の表を参照のこと。
+メールを送信し始める前に、いくつか必要なものがあります。これらの要件について詳しく知るには、次の図を参照してください。
 
-| 要件｜説明｜ソース
+| 要件 | 説明 | ソース |
 |---|---|---|
-| 専用IP（インターネットプロトコル）｜専用IPとは、1つのホスティングアカウントだけに提供されるユニークなインターネットアドレスです。| Brazeでは、お客様に専用IPを提供することで、メール送信者のレピュテーションを確実に管理することができます。Brazeのオンボーディングで設定します。
-| ホワイトラベル・ドメイン｜ドメインとサブドメインからなる。ホワイトラベルを使用することで、DKIMとSPFのメール認証チェックをパスすることができます。| Brazeオンボーディングチームがこれらのドメインを生成しますが、ドメイン名はお客様が選択する必要があります。|
-| サブドメイン｜メールアドレスの中にあるドメイン（「@news.company.com」など）を細分化したもの。サブドメインを持つことで、貴社の公式Eメールの評判を落とすようなエラーを防ぐことができます。| サブドメインはオンボーディングチームが作成いたしますが、サブドメイン名はご自身でお決めください。現在Braze以外で使用されているサブドメインは使用できません。|
-| IPプールとは、異なるタイプのメール（例えば「プロモーション」と「トランザクション」）のレピュテーションを分離し、一方のレピュテーションが他方のレピュテーションに影響するのを防ぎ、より高い配信性をサポートするためのオプション設定です。| プールの設定はオンボーディングチームが行います。次に、メールを作成する際に、**Target Users**ページの**IP Pool**ドロップダウンからメールのIPプールを選択します。
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| 専用IP（インターネットプロトコル）| 専用 IP は、単一のホスティングアカウント用に提供される一意のインターネットアドレスです。 | Brazeは顧客に専用のIPを提供し、メール送信者の評判をコントロールできるようにします。これは Braze のオンボーディングによって設定されます。|
+| ホワイトラベルドメイン | これらはドメインとサブドメインで構成されています。ホワイトラベルを使用することで、DKIM および SPF のメール認証検査を通過できます。 | これらのドメインは Braze オンボーディングチームによって生成されますが、ドメインの名前は選択する必要があります。 |
+| サブドメイン | これは、メールアドレス内のドメイン（「@news.company.com」など）のサブディビジョンです。サブドメインを持つことで、会社の公式メールの評判を損なう可能性のあるエラーを防ぐことができます。 | これはオンボーディングチームによって生成されますが、サブドメインの名前は決定する必要があります。Brazeの外部で現在使用されているサブドメインは使用できません。 |
+| IP プール | これらは、1つのメールの評判が他のメールに影響を与えるのを防ぎ、より高い配信率をサポートするために、異なる種類のメール（「プロモーション」や「トランザクション」など）の評判を分けるために使用されるオプションの設定です。 | オンボーディングチームがプールを設定します。次に、メールを作成するときに、**IP Pool** ドロップダウンからメールのIPプールを選択し、**Target Users** ページで選択します。|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## IP ウォームアップ
+## IPウォーミング
 
 {% alert important %}
-IPウォーミングは、Eメール設定プロセスで**最も重要なステップ**です。これは最初のステップではありませんが（実際には最後のステップです）、IPアドレスをウォームアップしておく必要があります。
+IP ウォーミングはメール設定のプロセスにおける**最も重要なステップ**です。これは最初のステップではありませんが（実際には最後のステップです）、ここでお知らせするのは、IPアドレスをウォームアップしなければ、送信するメールがスパムに送られたり、他の送信障害に遭遇したりする可能性があるためです。
 {% endalert %}
 
-[IPウォーミングとは]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)、最初のバッチで比較的少ない数のメールを送信し、その後時間をかけて、1日の典型的なボリュームに達するまで、次のバッチのボリュームを少しずつ増やしていくことです。これはメール設定プロセスの一番最後に行います。
+[IPウォーミング]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)とは、最初のバッチで比較的少数のメールを送信し、その後、次のバッチで徐々に量を増やしていき、通常の1日の量に達するまでのプロセスです。これは、メールの設定プロセスの最後に行われます。
 
-少量のメールから始めることで、メールプロバイダーとの信頼関係を確立し、関連性の高いユーザーにのみメールを送信していることを示すことができます。最初のEメールを最もエンゲージメントの高いユーザーに送ることで、プロバイダーからの信頼をより早く得ることができます。
+少量のメールから始めることで、メールプロバイダーとの信頼関係を確立し、関連のあるユーザーにのみメールを送信していることを示します。最初のバッチを最もエンゲージメントの高いユーザーに送信することで、プロバイダーの信頼をより迅速に得ることができます。
 
-IPのウォームアップが終わったら、[メールの作成と送信を始めましょう]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)！
+IPのウォームアップが完了したら、[メールの作成と送信を開始できます]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)！
 
 <br><br>

@@ -32,7 +32,7 @@ hide_breadcrumb: false
 
 {% unless hide_nav %}
 <script type="text/javascript">
-var alloy_partners = {%- alloy_partner {{ page.partner_api }}  -%};
+var alloy_partners = {%- alloy_partner -%};
 
 {%- assign vp = '' -%}
 
@@ -69,8 +69,8 @@ var valid_partners = {
 }
 
 var alloy_data;
-if ('data' in alloy_partners) {
-    alloy_data = alloy_partners['data'];
+if ('result' in alloy_partners) {
+    alloy_data = alloy_partners['result'];
     alloy_data.push({
   		"slug": "facebookzapier",
   		"integration_partner_id": "d0fe0680-6abe-41d2-bb88-27c3075847d7",
@@ -110,7 +110,7 @@ $(document).ready(function() {
     return str;
   }
   var partner_div = $('#partner_list');
-  var basehref = 'https://www.braze.com/product/alloys/partners/';
+  var basehref = 'https://www.braze.com/partners/technology-partners/';
   // category, speciality, solution
   var filter_map = ['partner_categories','partner_specialties','partner_solutions'];
   var partner_selects = [{},{},{}];
@@ -128,7 +128,7 @@ $(document).ready(function() {
     if ((site_language != 'en') && (card_url.indexOf(`/docs/${site_language}/`) < 0)) {
       card_url = card_url.replace('/docs/',`/docs/${site_language}/`);
     }
-    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).addClass('logo');
+    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).attr('alt',cur_partner['partner_name'] + ' image').addClass('logo');
     var card_title = '';
     if (title) {
       card_title = $('<h5>').html('(' + title + ')');
@@ -137,7 +137,7 @@ $(document).ready(function() {
         }
     }
 
-    var card_speciality =  $('<h6>').html(cur_partner['partner_specialties'].join(' '));
+    var card_speciality =  cur_partner['partner_specialties'] ? $('<h6>').html((cur_partner['partner_specialties'] || []).join(' ')) : null;
     var card_content =  $('<div>').addClass('hover_content').append($('<p>').html(cur_partner['partner_description']));
 
     var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_speciality).append(card_content);
@@ -145,13 +145,13 @@ $(document).ready(function() {
     return append_html;
   }
 
-  function set_filters () {
+  function set_filters() {
     if (alloy_data) {
       for (var i = 0; i < alloy_data.length;i++){
         var cur_partner = alloy_data[i];
          if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
            for (var j = 0; j < filter_map.length; j++) {
-             var fil = cur_partner[filter_map[j]];
+             var fil = cur_partner[filter_map[j]] || [];
              for (var q = 0; q < fil.length; q++ ) {
                partner_selects[j][ fil[q]] = fil[q];
              }
@@ -183,8 +183,10 @@ $(document).ready(function() {
         var cur_filter_text = partner_hash['search'][partner_hash['sorted'][i]];
          if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
            if (initialize) {
-             var vp = valid_partners[cur_partner['partner_name'].toLowerCase()]
-             partner_div.append(generate_card(cur_partner,vp[0][1],vp[0][2],false));
+             var vp = valid_partners[cur_partner['partner_name'].toLowerCase()] || [];
+             if (vp[0]) {
+               partner_div.append(generate_card(cur_partner,vp[0][1],vp[0][2],false));
+             }
 
              // append alternative partner links
 
@@ -200,10 +202,10 @@ $(document).ready(function() {
              var toappend = true;
              var filtered = true;
              for (var k = 0 ; k < filter_select.length; k++ ) {
-               var selected_val = $('#' + filter_select[k] +  " option:selected").val();
+             var selected_val = $('#' + filter_select[k] +  " option:selected").val();
                if (selected_val) {
                  toappend = false;
-                 if (cur_partner[filter_map[k]].indexOf(selected_val) < 0 ) {
+                 if ((cur_partner[filter_map[k]] || []).indexOf(selected_val) < 0 ) {
                    filtered = false;
                  }
                }
@@ -260,9 +262,9 @@ $(document).ready(function() {
         partner_hash['data'][partner_key] = alloy_data[i];
         partner_hash['search'][partner_key] = partner_key +
           alloy_data[i]['partner_description'].toLowerCase() +
-          alloy_data[i]['partner_specialties'].join(' ').toLowerCase() +
-          alloy_data[i]['partner_categories'].join(' ').toLowerCase() +
-          alloy_data[i]['partner_solutions'].join(' ').toLowerCase() ;
+          (alloy_data[i]['partner_specialties'] || []).join(' ').toLowerCase() +
+          (alloy_data[i]['partner_categories'] || []).join(' ').toLowerCase() +
+          (alloy_data[i]['partner_solutions'] || []).join(' ').toLowerCase() ;
         partner_hash['sorted'].push(partner_key);
       }
       partner_hash['sorted'].sort();
@@ -299,27 +301,33 @@ $(document).ready(function() {
     {%- endunless -%}
 
     <h1> {{ page.partner_top_header | markdownify }} </h1>
-    <p class="partner_text">  {{ page.partner_top_text }} </p>
 
-    <div id="partner_filter">
-      <div class="partner_filter_div">
-        <input id="partner_search" type="search" placeholder="Search"></div>
-      <div class="partner_filter_div"><select id="partner_category" class="select">
-        <option value="">All Categories</option>
-      </select>
+    <fieldset class="partner_text">
+      <legend>  {{ page.partner_top_text }} </legend>
 
-  </div>
-      <div class="partner_filter_div"><select id="partner_specialty" class="select">
-        <option value="">All Specialties</option>
-      </select>
-  </div>
-      <div class="partner_filter_div"><select id="partner_solutions" class="select">
-        <option value="">All Solutions</option>
-      </select>
-  </div>
-
-    </div>
-
+      <div id="partner_filter">
+        <div class="partner_filter_div">
+          <label for="partner_search">&#8205;<input id="partner_search" type="search" placeholder="Search" aria-label="Partner Search"></label></div>
+        <div class="partner_filter_div">
+          <label for="partner_category">&#8205;<select id="partner_category" class="select" aria-label="Partner Category">
+            <option value="">All Categories</option>
+          </select>
+          </label>
+        </div>
+        <div class="partner_filter_div">
+          <label for="partner_specialty">&#8205;<select id="partner_specialty" class="select" aria-label="Partner Speciality">
+            <option value="">All Specialties</option>
+          </select>
+          </label>
+        </div>
+        <div class="partner_filter_div">
+          <label for="partner_solutions">&#8205;<select id="partner_solutions" class="select" aria-label="Partner Solutions">
+            <option value="">All Solutions</option>
+          </select>
+          </label>
+        </div>
+      </div>
+    </fieldset>
     <div id="partner_list" class="flex mx-auto">
 
     </div>

@@ -1,39 +1,39 @@
 ---
-nav_title: "ポスト:ユーザーのサブスクリプショングループステータスの更新"
-article_title: "ポスト:ユーザーのサブスクリプショングループステータスの更新"
+nav_title: "POST:ユーザーのサブスクリプション・グループ・ステータスを更新する"
+article_title: "POST:ユーザーのサブスクリプション・グループ・ステータスを更新する"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、ユーザーのサブスクリプショングループのステータスを更新する Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「ユーザーのサブスクリプショングループステータスの更新」Braze エンドポイントの詳細について説明します。"
 ---
 {% api %}
-# ユーザーのサブスクリプショングループのステータスを更新
+# ユーザーのサブスクリプショングループステータスの更新
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /subscription/status/set
 {% endapimethod %}
 
-> このエンドポイントを使用して、Braze ダッシュボードで最大 50 人のユーザーのサブスクリプション状態を一括更新します。 
+> このエンドポイントを使用して、Braze ダッシュボード上で最大50ユーザーのサブスクリプション状態を一括更新します。 
 
-サブスクリプショングループページに移動すると、**サブスクリプショングループにアクセスできます**。`subscription_group_id`
+サブスクリプショングループの`subscription_group_id` にアクセスするには、**サブスクリプショングループ** ページに移動します。
 
-**メール購読グループの例を確認したり**、このエンドポイントをテストしたりするには:
+例を見たり、このエンドポイントをテストしたりする場合は、**メールサブスクリプショングループ**をご覧ください。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-**SMS サブスクリプショングループの例を確認したり**、このエンドポイントをテストしたりするには:
+**SMSサブスクリプショングループ**用のこのエンドポイントをテストするか例を見たい場合:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`subscription.status.set`権限のある [API キーが必要です]({{site.baseurl}}/api/basics#rest-api-key/)。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`subscription.status.set`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## リクエスト本文
+## 要求本文:
 
 {% tabs %}
 {% tab SMS %}
@@ -51,10 +51,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    // SMS subscription group - one of external_id or phone is required
  }
 ```
-SMS サブスクリプショングループ`external_id``phone`またはのみ受け付けます。
+\* SMSサブスクリプショングループ:`external_id` または`phone` のみが受け入れられます。
 
 {% endtab %}
-{% tab Email %}
+{% tab メール %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -70,28 +70,28 @@ Authorization: Bearer YOUR-REST-API-KEY
    // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
-\* メール購読グループ:`email``external_id`またはのいずれかが必須です。
+\* 電子メールサブスクリプショングループ:`email` または`external_id` のいずれかが必要です。
 {% endtab %}
 {% endtabs %}
 
-このプロパティは、ユーザーのプロファイル情報の更新には使用しないでください。[/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)代わりにプロパティを使用してください。
+このプロパティは、ユーザーのプロファイル情報の更新には使用しないでください。代わりに、[/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)プロパティを使用します。
 
 {% alert tip %}
-[/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント経由で新しいユーザーを作成する場合、ユーザー属性オブジェクト内でサブスクリプショングループを設定できます。これにより、1 回の API 呼び出しでユーザーを作成し、サブスクリプショングループの状態を設定できます。
+[users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイントを使用して新規ユーザーを作成する際、ユーザー属性オブジェクト内にサブスクリプショングループを設定することができる。これにより、1回のAPIコールでユーザーを作成し、サブスクリプショングループの状態を設定することができる。
 {% endalert %}
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `subscription_group_id` | 必須 | 文字列 | `id` サブスクリプショングループの。|
-| `subscription_state` | 必須 | 文字列 | 使用可能な値は `unsubscribed` (サブスクリプショングループ以外) または `subscribed` (サブスクリプショングループ内)。|
-| `external_id` | 必須* | 文字列の配列 | 1 `external_id` 人または複数のユーザーの、最大 50 `id` 秒まで含めることができます。|
-| `email` | Required* | 文字列または文字列の配列 | ユーザーの電子メールアドレスは、文字列の配列として渡すことができます。少なくとも 1 つの電子メールアドレス (最大 50) を含める必要があります。<br><br>同じワークスペースの複数のユーザー (`external_id`) が同じメールアドレスを共有している場合、そのメールアドレスを共有するすべてのユーザーは、サブスクリプショングループの変更に応じて更新されます。|
-| `phone` | 必須* | [E.164形式の文字列](https://en.wikipedia.org/wiki/E.164) | ユーザーの電話番号は、文字列の配列として渡すことができます。少なくとも 1 つの電話番号 (最大 50) を含める必要があります。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | 必須 | 文字列 | サブスクリプショングループの`id`。 |
+| `subscription_state` | 必須 | 文字列 | 使用できる値は、`unsubscribed` (サブスクリプショングループに含まれない) または `subscribed` (サブスクリプショングループに含まれる) です。 |
+| `external_id` | 必須* | 文字列の配列 | ユーザーの `external_id` には、最大で 50 個の `id` を含めることができます。 |
+| `email` | 必須* | 文字列または文字列の配列 | ユーザーのメールアドレスは、文字列の配列として渡すことができます。少なくとも 1 件のメールアドレス (最大 50件 まで) を含める必要があります。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じメールアドレスを共有している場合、そのメールアドレスを共有するすべてのユーザーは、サブスクリプショングループの変更で更新されます。 |
+| `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号は文字列の配列として渡すことができます。少なくとも1つの電話番号を含める必要があります（最大50まで）。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 
 ### メール
 
@@ -123,9 +123,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## 成功レスポンスの例
+## 成功応答の例
 
-`201`ステータスコードは次のレスポンスボディを返す可能性があります。
+ステータスコード `201` は、次の応答本文を返す可能性があります。
 
 ```json
 {
@@ -134,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 ```
 
 {% alert important %}
-エンドポイントは `email` or `phone` 値のみを受け入れ、両方は受け付けません。両方を指定すると、次の応答が返されます。 `{"message":"Either an email address or a phone number should be provided, but not both."}`
+エンドポイントは、`email` または`phone` 値のみを受け入れ、両方を受け入れません。両方を指定した場合、次のレスポンスが返されます。 `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

@@ -26,7 +26,7 @@ description: "この参考ページでは、コンテンツカレンダーの構
 
 レポート内の特定の日の上にカーソルを置くと、レポートの特定の日のメッセージング分析を表示できます。
 
-![The 'Upcoming Message Types' and 'Messages Sent' graphs within Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+![[メッセージング分析] 内の「今後のメッセージタイプ」と「送信済みメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
 データのコピーをダウンロードするには、<i class="fa-solid fa-bars" style="color: #2e7487;"></i>[**チャートコンテキストメニュー**] を選択し、希望のファイル形式を選択します。
 
@@ -40,12 +40,12 @@ description: "この参考ページでは、コンテンツカレンダーの構
 
 <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i>[**前月を表示**] または<i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> [**来月を表示**] を選択して月を変更できます。現在の月に戻るには、[**今日**] を選択します。
 
-![The Send Calendar displaying all scheduled campaigns in the current month.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
+![当月に予定されているすべてのキャンペーンを表示する送信カレンダー]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
 カレンダー上の各色は、予定されているキャンペーンの種類を示しています。
 
-- **赤:** シングルチャネルの定期キャンペーン。
-- **青:** マルチチャネルスケジュールキャンペーン
-- **金:** 停止したキャンペーン。過去の参照用にカレンダーに含まれています。
+- **赤:**シングルチャネルの定期キャンペーン。
+- **青:**マルチチャネルスケジュールキャンペーン
+- **金:**停止したキャンペーン。過去の参照用にカレンダーに含まれています。
 
 カレンダーでキャンペーンを選択すると、キャンペーンを表示または変更できます。詳細については、[[キャンペーンの管理]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns)] を参照してください。

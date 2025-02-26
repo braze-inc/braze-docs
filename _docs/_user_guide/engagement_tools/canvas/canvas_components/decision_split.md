@@ -33,7 +33,7 @@ By default, segments and filters for a Decision Split component are checked righ
 
 ## Use your split
 
-Using a decision split can help you distinguish paths for your users based on their segment or their attributes, even whether they utilize certain messaging channels to receive your messages!
+Using a decision split can help you distinguish paths for your users based on their segment or their attributes, even whether they use certain messaging channels to receive your messages!
 
 Let's say that you're creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 
@@ -56,7 +56,7 @@ Refer to the following table for descriptions of analytics for this step:
 | Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split step twice, two entries will be recorded. |
 | Yes | The number of entries that met the specified criteria and proceeded down the "yes" path. |
 | No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [1]: {% image_buster /assets/img/decision-split-1.png %}
 [2]: {% image_buster /assets/img/define-split-2.png %}

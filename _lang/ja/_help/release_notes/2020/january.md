@@ -1,16 +1,16 @@
 ---
-nav_title: "1"
+nav_title: 1月
 page_order: 12
 noindex: true
 page_type: update
-description: "この記事には、2020 年 1 月のリリースノートが含まれています。"
+description: "この記事には2020年1月のリリースノートが含まれている。"
 ---
-# 2020 年 1 月
+# 2020年1月
 
-新しい年と新しい10年へようこそ！ 
+新たな年と新たな10年へようこそ。 
 
-## SMS 機能が追加されました
+## SMS機能を追加
 
-Braze で [頻度を制限する] ことができるようになりました ({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages. You can also implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
+Braze では、SMS メッセージの頻度を[cap the frequency]({{ site.baseurl}}/user_guide/エンゲージメント_tools/campaigns/testing_and_more/rate-limiting/) とすることができます。追加された[セグメントフィルター]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS")を実装することもできる。
 
-ユーザー設定と行動の詳細については、「[SMS キーワード処理](/docs/user_guide/message_building_by_channel/sms/keywords/)」をご覧ください。
+ユーザー設定と動作の詳細については、[SMSキーワード](/docs/user_guide/message_building_by_channel/sms/keywords/)処理を参照のこと。

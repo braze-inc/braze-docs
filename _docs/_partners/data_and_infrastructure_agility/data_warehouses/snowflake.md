@@ -41,14 +41,14 @@ If you are interested in this integration, reach out to your Braze Account or cu
 | Requirement | Description |
 | ----------- | ----------- |
 | Snowflake account | A Snowflake account with admin-level permissions is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
-To set Secure Data Sharing with your Braze account, follow these steps. 
+To set Secure Data Sharing with your Braze account, follow these steps.
 
 1. Navigate to **Partner Integrations** > **Data Sharing** in the Braze dashboard.
-2. Enter your Snowflake account details. You can find your Snowflake account ID by executing `SELECT CURRENT_ACCOUNT()` in the destination account.
+2. Enter your Snowflake account details and locator. To get your account locator, run `SELECT CURRENT_ACCOUNT()` in the destination account.
 3. If you're using a CRR share, specify the cloud provider and region.
 4. Select **Create Datashare**.
 
@@ -60,7 +60,7 @@ In the context of data sharing, Braze is a [data provider](https://docs.snowflak
 
 ## Usage and visualization
 
-Once the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
+After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
 
 Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Create complex reports
@@ -75,11 +75,11 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
 Note the following differences between Braze and Snowflake naming conventions for user IDs.
 
-| Braze schema | Snowflake schema | Description | 
+| Braze schema | Snowflake schema | Description |
 | ----------- | ----------- | ----------- |
 | `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
 | `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Important information and limitations
 
@@ -103,8 +103,15 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 ### Snowflake regions
 Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
-### Historical data
-Braze's historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data there, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
+### Data Retention
+
+#### Retention Policy
+Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
+
+You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
+
+#### Historical data
+The archive of historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data in Snowflake, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
 
 ### General Data Protection Regulation (GDPR) compliance
 Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
@@ -116,9 +123,9 @@ The speed, performance, and cost of any query run on top of the data are determi
 
 Benchmarks, [a data tool built by Braze](https://www.braze.com/perspectives/benchmarks), allows Braze prospects and customers to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
 
-The initial industries include: 
+The initial industries include:
 - Delivery services
-- Ecommerce
+- eCommerce
 - Education
 - Entertainment
 - Finance

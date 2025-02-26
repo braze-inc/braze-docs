@@ -175,9 +175,7 @@ permalink_custom_vars: ["nav_title"]
 
 # List of pages(path) to auto expand
 nav_expand_list:
-  - "/developer_guide/platform_integration_guides"
-  - "/developer_guide/platform_wide"
-  - "/developer_guide/customization_guides"
+  - "/developer_guide/platforms"
 
 # Don't serve non-jekyll files
 exclude:
@@ -236,32 +234,28 @@ learning_index_name: "BrazeLearningCourses"
 
 # Algolia Search index
 algolia:
-  algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
+  algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b" # Read only algolia public search key
   application_id: "1T770XQJ1A"
   index_name: "DocSearch" # You can replace that with whatever name you want
   nodes_to_index: "p,h1,h2,h3,h4,h5,h6,tr,pre,details"
   max_record_size: 20000
   settings:
-    attributesForFaceting:
-      - searchable(article_title)
-      - searchable(collection)
-      - searchable(type)
-      - searchable(category)
-      - searchable(platform)
-      - searchable(url)
-      - searchable(nav_title)
-      - searchable(channel)
     searchableAttributes:
       - article_title
-      - description
-      - search_rank
       - nav_title
-      - url
-      - Path_01
-      - collection,tags
+      - unordered(headings)
       - unordered(content)
-      - unordered(platform)
-      - channel
+      - unordered(description)
+    attributesForFaceting:
+      - searchable(article_title)
+      - searchable(category)
+      - searchable(channel)
+      - searchable(collection)
+      - searchable(headings)
+      - searchable(nav_title)
+      - searchable(platform)
+      - searchable(type)
+      - searchable(url)
     customRanking:
       - desc(article_title)
       - desc(custom_ranking.heading)

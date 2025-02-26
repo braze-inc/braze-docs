@@ -55,6 +55,10 @@ When viewing your results, you can compare the conversion rates of your variants
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won't receive the message, those users cannot perform any opens or clicks. Therefore, that group's conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
+#### Control groups with A/B testing
+
+When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
+
 #### Control groups with Intelligent Selection
 
 The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
@@ -89,10 +93,10 @@ What levers do you have to pull and what are the desired effects? While there ar
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app message | Aspects listed for "push" <br> [Message format][7] | Click <br> Conversion Rate |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
@@ -110,7 +114,7 @@ For instance, while active users may have equal response rates to "This deal exp
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 
 {% alert tip %}
-As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to a [sample size calculator](https://www.calculator.net/sample-size-calculator.html).
 {% endalert %}
 
 ### Bias and randomization
@@ -129,10 +133,10 @@ For example, if you send a push message to a wide audience with a control, the t
 If you use random bucket numbers for control groups manually, reference this list of [things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
 [5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

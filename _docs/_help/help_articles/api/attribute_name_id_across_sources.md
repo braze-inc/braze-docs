@@ -1,6 +1,6 @@
 ---
-nav_title: How campaign and Canvas attributes differ across sources
-article_title: How campaign and Canvas attributes differ across sources in Braze 
+nav_title: Differences between Campaign and Canvas Attributes in Braze
+article_title: Differences between Campaign and Canvas Attributes in Braze
 page_order: 1
 
 page_type: reference
@@ -24,7 +24,7 @@ Campaign and Canvas attributes are also available in the [Export campaign detail
 
 ### Currents
 
-Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) from Currents. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
+Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) from Currents. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
 
 ## Campaign attributes
 
@@ -34,7 +34,7 @@ Campaign and Canvas attributes are tied to [message engagement events]({{site.ba
 | Campaign ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | N/A (used as an input for the API call itself) | campaign_id |
 | Variant name | {% raw %}`{{campaign.${message_name}}}`{% endraw %} | `messages.message_variation_id.name` | N/A (map variant name to variant ID using the Export campaign details endpoint) |
 | Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `messages.message_variation_id` | `message_variation_api_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Canvas attributes
 
@@ -48,4 +48,4 @@ Campaign and Canvas attributes are tied to [message engagement events]({{site.ba
 | Step ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | `steps.id` | `canvas_step_id` |
 | Message channel | N/A | `steps.messages.message_variation_id.channel` | N/A (inherent from event type, such as push send or email open) |
 | Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `steps.message.message_variation_id` | `canvas_step_message_variation_api_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

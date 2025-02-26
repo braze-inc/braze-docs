@@ -1,32 +1,32 @@
 ---
-nav_title: ドラッグ＆ドロップエディター
-article_title: 電子メールのドラッグアンドドロップエディタ
+nav_title: ドラッグ・アンド・ドロップ・エディター
+article_title: メール用ドラッグ＆ドロップ・エディター
 alias: /dnd/
 page_order: 3
-description: "このランディングページには、Braze が提供するドラッグアンドドロップエディタの設定方法と適切な使用方法に関する記事がリストされています。"
+description: "このランディング・ページでは、Brazeが提供するドラッグ＆ドロップ・エディターの設定方法と正しい使い方を取り上げた記事を掲載している。"
 layout: dev_guide
-guide_top_header: "電子メールのドラッグアンドドロップエディタ"
-guide_top_text: "ドラッグアンドドロップエディタを使用すると、HTML を使用せずに、完全にカスタムでパーソナライズされたメールメッセージを作成できます。"
+guide_top_header: "メール用ドラッグ＆ドロップ・エディター"
+guide_top_text: "ドラッグ＆ドロップエディターを使用すると、HTML を使用せずに、完全にカスタムでパーソナライズされたメールメッセージを作成できます。"
 channel: email
 tool: Media
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Creating a Drag-and-Drop Email
+- name: ドラッグ＆ドロップでメールを作成する
   link: /docs/dnd/overview/
-  fa_icon: fas fa-paint-brush
-- name: Creating an Email Template
+  image: /assets/img/braze_icons/brush-02.svg
+- name: メールテンプレートの作成
   link: /docs/dnd/email_template/
-  fa_icon: fas fa-table
-- name: Editor Blocks
+  image: /assets/img/braze_icons/table.svg
+- name: エディターブロック
   link: /docs/dnd/editor_blocks/
-  fa_icon: fas fa-align-left
-- name: Global Style Settings
+  image: /assets/img/braze_icons/align-left.svg
+- name: グローバルスタイル設定
   link: /docs/dnd/global_style_settings/
-  fa_icon: fas fa-cogs
-- name: Inbox Vision
+  image: /assets/img/braze_icons/settings-01.svg
+- name: 受信トレイビジョン
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 
 
 ---

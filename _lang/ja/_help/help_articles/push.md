@@ -1,30 +1,33 @@
 ---
 page_order: 5
-nav_title: プッシュ通知
+nav_title: プッシュ
 layout: dev_guide
-guide_top_header: "プッシュ・ヘルプ"
-guide_top_text: "プッシュメッセージに関する一般的な問題のトラブルシューティングについては、以下のヘルプ記事をご覧ください。"
+guide_top_header: "プッシュに関するヘルプ記事"
+guide_top_text: "プッシュメッセージに関する一般的な問題のトラブルシューティングのサポートについては、以下のヘルプ記事を確認してください。"
 
 page_type: landing
-description: "このランディングページには、プッシュメッセージに関する一般的な問題に関するヘルプ記事が掲載されています。"
+description: "このランディング・ページには、プッシュ・メッセージに関する一般的な問題に関するヘルプ記事が掲載されている。"
 channel: push
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: Common Push Error Messages
+  - name: 一般的なプッシュ・エラー・メッセージ
     link: /docs/help/help_articles/push/push_error_codes/
-    fa_icon: fas fa-exclamation-circle
-  - name: Defining Push Enablement
+    image: /assets/img/braze_icons/alert-circle.svg
+  - name: プッシュ有効の定義
     link: /docs/help/help_articles/push/defining_push_enablement/
-    fa_icon: fas fa-book-open
-  - name: Missing Push Notifications
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: プッシュ通知を受信しない
     link: /docs/help/help_articles/push/no_push_notification_was_received/
-    fa_icon: fas fa-comment-slash
-  - name: Migrating Push Tokens
+    image: /assets/img/braze_icons/message-x-circle.svg
+  - name: プッシュトークンを移行する
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-map-signs
-  - name: Resetting Push Permissions
+    image: /assets/img/braze_icons/map-01.svg
+  - name: プッシュ権限をリセットする
     link: /docs/help/help_articles/push/resetting_push_permissions/
-    fa_icon: fas fa-circle-check
+    image: /assets/img/braze_icons/check-circle.svg
+  - name: プッシュの配信停止をトラッキングする
+    link: /docs/help/help_articles/push/push_unsubscribes/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

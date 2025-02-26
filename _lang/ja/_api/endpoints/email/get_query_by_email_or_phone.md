@@ -1,31 +1,31 @@
 ---
-nav_title: "GET：Eメールアドレスまたは電話番号付きリスト購読州"
-article_title: "GET：Eメールアドレスまたは電話番号付きリスト購読州"
+nav_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
+article_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
 search_tag: Endpoint
 page_order: 2
 hidden: true
 layout: api_page
 page_type: reference
-description: "この記事では、電子メールアドレスまたは電話番号を持つBrazeエンドポイントのリスト購読状態に関する詳細について概説します。"
+description: "この記事では、メールアドレスまたは電話番号を持つBrazeエンドポイントのリスト購読状態についての詳細を概説する。"
 
 ---
 {% api %}
-# 電子メールアドレスまたは電話番号で購読状態をリストする
+# メールアドレスまたは電話番号でサブスクリプションの状態をリストする
 {% apimethod get %}
 /users/subscription
 {% endapimethod %}
 
-> このエンドポイントを使用して、電子メールアドレスまたは電話番号に基づいてサブスクリプション状態の値を返します。
+> このエンドポイントを使用して、電子メールアドレスまたは電話番号に基づく購読状態の値を返す。
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメーター | required | データ型 | 説明 |
 | --- | --- | --- | --- |
-|`email` ｜はい｜文字列｜ユーザーの電子メールアドレス（少なくとも1つ、最大50のアドレスを含める必要があります）。|
-|`phone` ｜はい｜文字列｜ユーザーの電話番号（少なくとも1つ、最大50の電話番号を含める必要があります）。E.164形式で提供することを推奨する。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `email` | はい | 文字列 | ユーザーのメールアドレス （最低1個、最大50個のアドレスを含むこと）。 |
+| `phone` | はい | 文字列 | ユーザーの電話番号 （最低1個、最大50個の電話番号を含むこと）。これは、E.164 形式で指定することをお勧めします。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## リクエスト例
+## 例のリクエスト
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions?phone=+12123355555&email=example%40braze.com' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
@@ -33,7 +33,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 
 ## 応答
 
-エントリーは降順で表示される。
+エントリは降順で表示されます。
 
 ```json
 Content-Type: application/json

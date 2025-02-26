@@ -1,23 +1,23 @@
 ---
 page_order: 20
-nav_title: ベスト・プラクティス
-article_title: コンテンツカードのベストプラクティス
+nav_title: ベストプラクティス
+article_title: コンテンツ・カードのベストプラクティス
 layout: dev_guide
-guide_top_header: "コンテンツカードのベストプラクティス"
-guide_top_text: "コンテンツカードメッセージを送信する前に、次の記事を参照して、知っておくべきことと確認しておく必要があります。"
+guide_top_header: "コンテンツ・カードのベストプラクティス"
+guide_top_text: "コンテンツカードメッセージを送信する前に、以下の記事を参照し、知っておくべき情報と確認事項をチェックしてください。"
 
 page_type: landing
-description: "このランディングページには、カードを送る前に知っておくべきことや確認しておくべきことを強調したベストプラクティスが掲載されています。"
+description: "このランディングページには、カード送付前に知っておくべきこと、チェックすべきことを強調したベストプラクティスが掲載されている。"
 channel: Content Card
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: "Know Before You Send"
+- name: "送る前に知っておこう"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
-- name: "Sending Test Messages"
+  image: /assets/img/braze_icons/send-01.svg
+- name: "テストメッセージの送信"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 <br><br>

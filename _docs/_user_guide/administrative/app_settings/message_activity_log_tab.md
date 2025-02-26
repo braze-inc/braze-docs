@@ -16,7 +16,7 @@ You can see API campaign transactions, troubleshoot details on failed messages, 
 To access the log, go to **Settings** > **Message Activity Log**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** under **Settings** > **Developer Console**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** under **Settings** > **Developer Console**.
 {% endalert %}
 
 ![Message Activity Log][2]
@@ -37,6 +37,9 @@ You can filter by the following content logged in the **Message Activity Log**:
 - User aliasing errors
 - A/B testing errors
 - SMS/MMS errors
+- WhatsApp errors
+- Live Activity errors
+- Bad user trigger errors
 
 These messages can come from our own system, your apps or platforms, or our third-party partners. This can result in an infinite number of messages that can appear in this log.
 
@@ -58,7 +61,7 @@ The following messages listed are for example purposes and may not exactly match
 | Hard Bounce | The email account that you tried to reach does not exist. Try double-checking the recipient's email address for typos or unnecessary spaces. | Your message never reached this person's inbox because there was no inbox to reach. If you want to dig further in, messages like this can sometimes have links in the **View Details** column that will allow you to view the intended recipient's profile.|
 | Block | Spam message is rejected because of anti-spam policy. | Your message got categorized as spam. This mail error is logged for a user if we’ve received an event from the ESP indicating the email was dropped. It might just might be for that intended recipient, but if you're seeing this message a lot, you might want to re-evaluate your send habits or the content of your message. Also, think back—did you [warm up your IP][8]? If not, reach out to Braze for advice on getting this going.|
 | Aborted Message Error | empty-cart_web | If you have an app with a cart or you create a send with an abort message in the Liquid, you can customize what message is returned to you if the send is aborted. In this case, the message returned is empty-cart_web.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Why isn't my message listed here?
 
@@ -70,6 +73,23 @@ For example, some potential "Block" messages, in addition to the one listed in t
 - Message rejected due to local policy.
 - The message was blocked by the receiver as spam.
 - Service unavailable, Client host [_IP_ADDRESS_] blocked using Spamhaus.
+
+## Storage retention period
+
+Errors from the last 60 hours are available in the Message Activity Logs. Logs that are more than 60 hours old are cleaned and no longer accessible. 
+
+### Number of error logs stored
+
+The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors.
+
+Here's an overview of conditions affecting how many logs will be saved:
+- Up to 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
+- Up to 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
+    - Aborted message errors
+    - Webhook errors
+    - Push notification errors
+    - Live Activity errors
+    - Bad user trigger errors
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

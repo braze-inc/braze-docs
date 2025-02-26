@@ -9,11 +9,11 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 <br>
 {% alert important %}
-基本的なプッシュ通知開発者統合ガイドを探していますか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)にあります。
+基本的なプッシュ通知開発者統合ガイドをお探しの場合は、ここで見つけてください[here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
 # プッシュ通知実装ガイド
@@ -22,7 +22,7 @@ noindex: true
 
 ## 通知コンテンツアプリの拡張
 
-![2つのプッシュメッセージが並んで表示されます。右側のメッセージは、デフォルトのUI でプッシュがどのように表示されるかを示しています。右側のメッセージには、カスタムプッシュ UI [1]{: style="max-width:65%;border:0;margin-top:10px"} を実装して作成したコーヒーパンチカードプッシュが表示されます。
+![2つのプッシュ・メッセージが並んで表示されている。右側のメッセージは、デフォルトのUI でプッシュがどのように表示されるかを示しています。右側のメッセージには、カスタムプッシュ UI を実装して作成したコーヒーパンチカードプッシュが表示されます。]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
 プッシュ通知は、さまざまなプラットフォームで標準のように思われるものの、デフォルトの UI に通常実装されているものを超えて、膨大なカスタマイズオプションが提供されています。プッシュ通知が展開されると、コンテンツ通知拡張により、展開されたプッシュ通知のカスタムビューが有効になります。 
 
@@ -31,10 +31,10 @@ noindex: true
 これらのカスタムビューでは、顧客を引き付けるスマートな方法が提供され、対話型の通知、ユーザーデータを含む通知、電話などの情報を取得できるプッシュメッセージなど、さまざまな種類のコンテンツを表示できます。この方法でプッシュを実装することに慣れていない人もいるかもしれませんが、Braze でよく知られている機能の1つである [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/) は、通知コンテンツアプリ拡張機能のカスタムビューがどのように表示されるかを示す良い例です。
 
 #### 要件
-![][15]{: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
-- [プッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) がアプリに正常に統合されました
-\- iOS 10以上
-\- ご利用のコード言語に基づいて Xcode によって生成される以下のファイル:
+![]({% image_buster /assets/img/push_implementation_guide/push15.png %}){: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
+- [プッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)がアプリに正常に統合されました
+- iOS 10以上
+- あなたのコーディング言語に基づいてXcodeが生成する以下のファイル：
 
 Swift<br>
 - `NotificationViewController.swift`<br>
@@ -48,8 +48,8 @@ Objective-C<br>
 
 ダッシュボードでカスタムビューを設定するには、通知ボタンを切り替えてカスタムカテゴリーを入力する必要があります。指定したあらかじめ登録されたカスタムiOS カテゴリーは、通知コンテンツ拡張ターゲットの`.plist` の`UNNotificationExtensionCategory` と照合されます。ここで指定される値は、Braze ダッシュボードで設定されている値と一致する必要があります。
 
-![プッシュメッセージコンポーザーの設定にある通知ボタンのオプション][16]{: style="max-width:75%;border:0;margin-top:10px"}
-![][17]{: style="max-width:75%;border:0;margin-top:10px"}
+![]({% image_buster /assets/img/push_implementation_guide/push16.png %}) プッシュメッセージ作成画面の設定にある通知ボタンのオプション。{: style="max-width:75%;border:0;margin-top:10px"}
+![]({% image_buster /assets/img/push_implementation_guide/push17.png %}){: style="max-width:75%;border:0;margin-top:10px"}
 
 {% alert tip %}
 コンテンツ拡張を使用したプッシュは必ずしも明らかではないため、プッシュ通知を展開するようにユーザーに促すための行動喚起を含めることをお勧めします。
@@ -58,7 +58,7 @@ Objective-C<br>
 ## ユースケースと実装のチュートリアル
 
 3つのプッシュ通知コンテンツアプリ拡張タイプが用意されています。各タイプには、概念のチュートリアル、潜在的なユースケース、および Braze ダッシュボードでプッシュ通知変数がどのように表示され、どのように使用されるかの考察があります。
-- [インタラクティブプッシュ通知](#interactive-push-notification)
+- [インタラクティブなプッシュ通知](#interactive-push-notification)
 - [パーソナライズされたプッシュ通知](#personalized-push-notifications)
 - [情報キャプチャプッシュ通知](#information-capture-push-notification)
 
@@ -66,32 +66,32 @@ Objective-C<br>
 
 プッシュ通知は、コンテンツ拡張内のユーザアクションに応答できます。iOS 12以降を使用しているユーザーの場合、これはプッシュメッセージを完全にインタラクティブなプッシュ通知に変換できることを意味します。このインタラクティブな機能により、ユーザーを通知に引き付ける可能性が増します。次の例は、ユーザーが展開された通知内でマッチゲームをプレイできるプッシュ通知を示しています。
 
-![インタラクティブなプッシュ通知のフェーズがどのように見えるかを示す図。画像は、インタラクティブなマッチングゲームを表示するプッシュ通知を押すユーザーを示しています。][12]{: style="border:0"}
+![インタラクティブなプッシュ通知のフェーズがどのように見えるかの図。画像, 写真には、インタラクティブなマッチングゲームを表示するプッシュ通知をユーザーが押している様子が写っている。]({% image_buster /assets/img/push_implementation_guide/push12.png %}){: style="border:0"}
 
 #### ダッシュボード設定
 
 ダッシュボードでカスタムビューを設定するには、通知ボタン設定で表示する特定のカテゴリーを入力します。次に、通知コンテンツ拡張の`.plist` で、カスタムカテゴリーを `UNNotificationExtensionCategory` 属性に設定する必要があります。ここで指定される値は、Braze ダッシュボードで設定されている値と一致する必要があります。最後に、プッシュ通知でユーザインタラクションを有効にするには、`UNNotificationExtensionInteractionEnabled` キーを「true」に設定します。
 
-![][3]{: style="float:right;max-width:45%;"}
+![]({% image_buster /assets/img/push_implementation_guide/push3.png %}){: style="float:right;max-width:45%;"}
 
-![プッシュメッセージコンポーザーの設定にある通知ボタンのオプション][14]{: style="max-width:50%;"}
+![]({% image_buster /assets/img/push_implementation_guide/push14.png %}) プッシュメッセージ作成画面の設定にある通知ボタンのオプション。{: style="max-width:50%;"}
 
 #### その他のユースケース
 プッシュコンテンツ拡張は、プロモーションやアプリケーションにインタラクティビティを導入するエキサイティングなオプションです。例としては、ユーザーがプレイできるゲーム、割引のためのスピン・トゥ・ウィン・ホイール、リストや曲を保存するための「いいね」ボタンなどがあります。
 
-##### 分析をログに記録する準備ができましたか。
+##### 分析をログに記録する準備ができましたか?
 [以下のセクション](#logging-analytics)を参照して、データのフローがどうあるべきかを理解してください。
 
 ### パーソナライズされたプッシュ通知
-![2 台の iPhone を並べて表示。最初の iPhone には、プッシュメッセージの展開されていないビューが表示されます。2台目の iPhone には、プッシュメッセージの展開されたバージョンが表示されます。コースの進行状況、次のセッション、次のセッションの期限を示す「進捗」ショットが表示されます。][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![2台のiPhoneが並んで表示されています。最初の iPhone には、プッシュメッセージの展開されていないビューが表示されます。2つ目のiPhoneは、プッシュメッセージの拡大版で、コースがどこまで進んでいるか、次のセッションはいつまでか、次のセッションのIDはいつまでか、といった「進捗」ショットを表示している。]({% image_buster /assets/img/push_implementation_guide/push6.png %}){: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
-プッシュ通知では、コンテンツ拡張の内部にユーザ固有の情報を表示できます。右の例では、ユーザーが特定のタスク (Braze ラーニングコース) を完了し、この通知を展開して進捗状況を確認するように求められた後のプッシュ通知を示しています。ここで提供される情報はユーザー固有であり、セッションが完了するか、API トリガーを利用して特定のユーザーアクションが実行されると、起動できます。 
+プッシュ通知では、コンテンツ拡張の内部にユーザ固有の情報を表示できます。右の例では、ユーザーが特定のタスク (Braze ラーニングコース) を完了し、この通知を展開して進捗状況を確認するように求められた後のプッシュ通知を示しています。ここで提供される情報はユーザー固有であり、セッションが完了するか、API トリガーを利用して特定のユーザーアクションが実行されたときに呼び出すことができます。 
 
 #### ダッシュボード設定
 
 ダッシュボードでパーソナライズされたプッシュを設定するには、表示する特定のカテゴリーを登録し、標準の Liquid を使用してキーと値のペア内で、メッセージに表示する適切なユーザー属性を設定する必要があります。これらのビューは、特定のユーザープロファイルの特定のユーザー属性に基づいてカスタマイズできます。
 
-![キーと値のペアの4つのセット。ここでは、「next\_session\_name」および「next\_session\_complete\_date」は、Liquid を使用して API トリガープロパティとして設定され、「completed\_session count」および「total\_session\_count」は、Liquid を使用してカスタムユーザー属性として設定されます。][5]{: style="max-width:60%;"}
+![4組のキーと値のペア。"next_session_name" と "next_session_complete_date" はLiquidを利用してAPIトリガーのプロパティとして設定され、"completed_session count" と "total_session_count" はLiquidを利用してカスタムユーザー属性として設定される。]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### キーと値のペアの処理
 
@@ -101,12 +101,12 @@ Objective-C<br>
 
 {% tabs %}
 {% tab Swift %}
-\`\`\` swift
-func didReceive(_ notification:UNNotification) {
+``` swift 
+func didReceive(_ notification: UNNotification) {
   let userInfo = notification.request.content.userInfo
      
-  guard let value = userInfo["YOUR-KEY-VALUE-PAIR"] as?String,
-        let otherValue = userInfo["YOUR-OTHER-KEY-VALUE-PAIR"] as?String,
+  guard let value = userInfo["YOUR-KEY-VALUE-PAIR"] as? String,
+        let otherValue = userInfo["YOUR-OTHER-KEY-VALUE-PAIR"] as? String,
   else { fatalError("Key-Value Pairs are incorrect.")}
  
   ...
@@ -115,18 +115,18 @@ func didReceive(_ notification:UNNotification) {
 {% endtab %}
 {% tab Objective-C %}
 ```objc
-\- (void)didReceiveNotification:(nonnull UNNotification \*)notification {
-  NSDictionary \*userInfo = notification.request.content.userInfo;
+- (void)didReceiveNotification:(nonnull UNNotification *)notification {
+  NSDictionary *userInfo = notification.request.content.userInfo;
    
   if (userInfo[@"YOUR-KEY-VALUE-PAIR"] && userInfo[@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
  
   ...
  
   } else {
-[NSException raise:NSGenericException format:@"Key-Value Pairs are incorrect"];
+    [NSException raise:NSGenericException format:@"Key-Value Pairs are incorrect"];
+  }
 }
-    }
-  \`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -134,7 +134,7 @@ func didReceive(_ notification:UNNotification) {
 
 進捗ベースでユーザーにフォーカスしたプッシュコンテンツ拡張のアイデアは無限にあり、いくつかの例としては、異なるプラットフォーム間で進捗状況を共有するオプションの追加、アンロックされた成果の表現、パンチカード、またはオンボーディングチェックリストさえも含まれています。 
 
-##### 分析をログに記録する準備ができましたか。
+##### 分析をログに記録する準備ができましたか?
 [以下のセクション](#logging-analytics)を参照して、データのフローがどうあるべきかを理解してください。
 
 ### 情報取得プッシュ通知
@@ -146,7 +146,7 @@ func didReceive(_ notification:UNNotification) {
 3. 情報が提供され、有効な場合は、登録ボタンが表示されます。
 3. 確認画面が表示され、プッシュが解除されます。 
 
-![][8]{: style="border:0;"}
+![]({% image_buster /assets/img/push_implementation_guide/push8.png %}){: style="border:0;"}
 
 ここで要求される情報は、SMS 番号のキャプチャなどの広範なものである可能性があり、電子メール固有である必要はないことに注意してください。
 
@@ -154,7 +154,7 @@ func didReceive(_ notification:UNNotification) {
 
 ダッシュボードで情報キャプチャ対応プッシュを設定するには、カスタムカテゴリーを登録および設定し、必要なキーと値のペアを指定する必要があります。例にあるように、プッシュに画像を含めることもできます。これを行うには、[リッチプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/)を統合し、キャンペーンの通知スタイルをリッチプッシュ通知に設定し、リッチプッシュ画像を含める必要があります。
 
-![3組のキーと値のペアを含むプッシュメッセージ。1\.「Braze\_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert\_title」は「Braze マーケター認証」として設定されます。3\.「Cert\_description」は、「認定 Braze マーケタードライブ...」として設定されます][9]
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### ボタンアクションの処理
 
@@ -195,21 +195,20 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 2. `completion(.doNotDismiss)` - 通知は開いたままです
 3. `completion(.dismissAndForward)` - プッシュが解除され、ユーザーがアプリケーションに転送されます。
 
-
 #### その他のユースケース
 
 プッシュ通知を介してユーザー入力を要求することは、多くの企業が利用していない魅力的な機会です。これらのプッシュメッセージでは、名前、メール、または番号などの基本的な情報を要求できるだけでなく、ユーザープロファイルが未完了の場合は完了するようにユーザーに促したり、フィードバックを送信するように促すこともできます。 
 
-##### 分析をログに記録する準備ができましたか。
+##### 分析をログに記録する準備ができましたか?
 [以下のセクション](#logging-analytics)を参照して、データのフローがどうあるべきかを理解してください。 
 
-## ロギング分析
+## 分析のログ記録
 
 ### Braze API を使用したロギング (推奨)
 
 ロギング分析は、[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントに到達する顧客のサーバーの助けを借りて、リアルタイムでのみ実行できます。分析をログに記録するには、`braze_id` 値をキーと値のペアフィールド (次のスクリーンショットを参照) に送信し、更新するユーザープロファイルを識別します。
 
-![3組のキーと値のペアを含むプッシュメッセージ。1\.「Braze\_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert\_title」は「Braze マーケター認証」として設定されます。3\.「Cert\_description」は、「認定 Braze マーケタードライブ...」として設定されます][18]{: style="max-width:80%;"}
+![キーと値のペアが3セットあるプッシュメッセージ。1\.「Braze_id」は、Braze ID を取得するための Liquid 呼び出しとして設定されます。2.「cert_title」は「Braze マーケター認証」として設定されます。3\.「Cert_description」は、「認定 Braze マーケタードライブ...」として設定されます]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### 手動ロギング
 
@@ -217,18 +216,18 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 また、モバイルアプリケーションが後で起動されるまで、分析は Braze に送信されないことに注意してください。つまり、削除設定に応じて、プッシュ通知が破棄されてモバイルアプリが起動し、分析が取得されるまでに不確定な期間が存在することがよくあります。この時間バッファーがすべてのユースケースに影響するとは限りませんが、ユーザーは影響を考慮し、必要に応じて、アプリケーションを開いてこの問題に対処するようにユーザー体験を調整する必要があります。 
 
-![Braze で分析がどのように処理されるかを説明するグラフィック。1\.分析データが作成されます。2\.分析データが保存されます。3\.プッシュ通知を解除します。4\.プッシュ通知が解除されてからモバイルアプリが起動するまでの不確定な期間。5\.モバイルアプリが起動します。6\.分析データを受信します。7\.分析データが Braze に送信されます。][13]
+![Brazeで分析がどのように処理されるかを説明する図。1\.分析データが作成されます。2\.分析データが保存されます。3\.プッシュ通知を解除します。4\.プッシュ通知が解除されてからモバイルアプリが起動するまでの不確定な期間。5\.モバイルアプリが起動します。6\.分析データを受信します。7. 分析データは Braze に送信されます。]({% image_buster /assets/img/push_implementation_guide/push13.png %})
 
 #### ステップ1:Xcode 内でのアプリケーショングループの設定
 機能 `App Groups` を追加します。アプリにアプリグループがない場合は、メインアプリターゲットの機能に移動し、`App Groups` をオンにして、「+」をクリックします。アプリのバンドル ID を使用してアプリグループを作成します。たとえば、アプリのバンドル ID が`com.company.appname` の場合、アプリグループに `group.com.company.appname.xyz` という名前を付けることができます。メインアプリターゲットとコンテンツ拡張ターゲットの両方で `App Groups` がオンになっていることを確認します。
 
-![][19]
+![]({% image_buster /assets/img/ios/push_story/add_app_groups.png %})
 
-#### ステップ2:コードスニペットの統合
+#### ステップ 2:コードスニペットの統合
 以下のコードスニペットは、カスタムイベント、カスタム属性、およびユーザー属性を保存および送信する方法についての役立つ参考情報です。このガイドでは UserDefaults の観点から説明しますが、コード表現はヘルパーファイル `RemoteStorage` の形式になります。また、追加のヘルパーファイル `UserAttributes` と`EventName Dictionary` もあり、ユーザー属性の送信と保存に使用されます。ヘルパーファイルはすべて、このガイドの末尾にあります。
 
 {% tabs local %}
-{% tab Custom Events %}
+{% tab カスタムイベント %}
 
 ##### カスタムイベントの保存
 
@@ -241,47 +240,47 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
-func saveCustomEvent(with properties: [String:Any]? = nil) {
+``` swift 
+func saveCustomEvent(with properties: [String: Any]? = nil) {
   // 1
-  let customEventDictionary = Dictionary(eventName:"YOUR-EVENT-NAME", properties: properties)
+  let customEventDictionary = Dictionary(eventName: "YOUR-EVENT-NAME", properties: properties)
   
   // 2
   let remoteStorage = RemoteStorage(storageType: .suite)
   
   // 3   
-  if var pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String:Any]] {
-pendingEvents.append(contentsOf: [customEventDictionary])
-remoteStorage.store(pendingEvents, forKey: .pendingCustomEvents)
-} else {
-// 4
-remoteStorage.store([customEventDictionary], forKey: .pendingCustomEvents)
+  if var pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String: Any]] {
+    pendingEvents.append(contentsOf: [customEventDictionary])
+    remoteStorage.store(pendingEvents, forKey: .pendingCustomEvents)
+  } else {
+  // 4
+    remoteStorage.store([customEventDictionary], forKey: .pendingCustomEvents)
+  }
 }
-    }
-    ```
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-  \- (void)saveCustomEvent:(NSDictionary<NSString \*, id> \*)properties {
-  // 1
-    NSDictionary<NSString \*, id> \*customEventDictionary = [[NSDictionary alloc] initWithEventName:@"YOUR-EVENT-NAME" properties:properties];
+- (void)saveCustomEvent:(NSDictionary<NSString *, id> *)properties {
+  // 1 
+  NSDictionary<NSString *, id> *customEventDictionary = [[NSDictionary alloc] initWithEventName:@"YOUR-EVENT-NAME" properties:properties];
   
   // 2
-  RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-  NSMutableArray \*pendingEvents = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents] mutableCopy];
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingEvents = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents] mutableCopy];
   
-  // 3
-if (pendingEvents) {
-[pendingEvents addObject:customEventDictionary];
-[remoteStorage store:pendingEvents forKey:RemoteStorageKeyPendingCustomAttributes];
-} else {
-// 4
-  [remoteStorage store:@[ customEventDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
-    }
-    }
-  \`\`\`
-  {% endsubtab %}
-    {% endsubtabs %}
+  // 3 
+  if (pendingEvents) {
+    [pendingEvents addObject:customEventDictionary];
+    [remoteStorage store:pendingEvents forKey:RemoteStorageKeyPendingCustomAttributes];
+  } else {
+  // 4
+    [remoteStorage store:@[ customEventDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 ##### カスタムイベントの Braze への送信
 
@@ -296,35 +295,35 @@ SDK の初期化後は、通知コンテンツアプリの拡張機能から、�
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
+``` swift 
 func logPendingCustomEventsIfNecessary() {
-let remoteStorage = RemoteStorage(storageType: .suite)
-guard let pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String: Any]] else { return }
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String: Any]] else { return }
   
   // 1    
   for event in pendingEvents {
-    var eventName:String?
-    var properties: [AnyHashable:Any] = [:]
+    var eventName: String?
+    var properties: [AnyHashable: Any] = [:]
     
   // 2
-for (key, value) in event {
-if key == PushNotificationKey.eventName.rawValue {
-// 3      
-    if let eventNameValue = value as?String {
-      eventName = eventNameValue
-  } else {
-        print("Invalid type for event\_name key")
-          }
+    for (key, value) in event {
+      if key == PushNotificationKey.eventName.rawValue {
+  // 3      
+        if let eventNameValue = value as? String {
+          eventName = eventNameValue
         } else {
-          // 4
-properties[key] = value
-}
-}
-// 5    
-        if let eventName = eventName {
-logCustomEvent(eventName, withProperties: properties)
-}
+          print("Invalid type for event_name key")
+        }
+      } else {
+  // 4 
+        properties[key] = value
       }
+    }
+  // 5    
+    if let eventName = eventName {
+      logCustomEvent(eventName, withProperties: properties)
+    }
+  }
 
   // 6    
   remoteStorage.removeObject(forKey: .pendingCustomEvents)
@@ -333,43 +332,43 @@ logCustomEvent(eventName, withProperties: properties)
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-\- (void)logPendingEventsIfNecessary {
-  RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-  NSArray \*pendingEvents = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents];
+- (void)logPendingEventsIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingEvents = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents];
   
-  // 1
-  for (NSDictionary<NSString \*, id> \*event in pendingEvents) {
-    NSString \*eventName = nil;
-    NSMutableDictionary \*properties = [NSMutableDictionary dictionary];
+  // 1 
+  for (NSDictionary<NSString *, id> *event in pendingEvents) {
+    NSString *eventName = nil;
+    NSMutableDictionary *properties = [NSMutableDictionary dictionary];
     
-  // 2
-for (NSString* key in event) {
-if ([key isEqualToString:@"event_name"]) {
-// 3       
-    if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
-eventName = [event objectForKey:key];
-} else {
-      NSLog(@"Invalid type for event\_name key");
-  }
+  // 2 
+    for (NSString* key in event) {
+      if ([key isEqualToString:@"event_name"]) {
+  // 3       
+        if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
+          eventName = [event objectForKey:key];
         } else {
-          // 4
-properties[key] = event[key];
-}
-}
-// 5  
-        if (eventName != nil) {
-[[Appboy sharednstance] logCustomEvent:eventName withProperties:properties];
-}
-          }
+          NSLog(@"Invalid type for event_name key");
+        }
+      } else {
+  // 4 
+        properties[key] = event[key];
+      }
+    }
+  // 5  
+    if (eventName != nil) {
+      [[Appboy sharednstance] logCustomEvent:eventName withProperties:properties];
+    }
+  }
 
   // 6  
   [remoteStorage removeObjectForKey:RemoteStorageKeyPendingCustomEvents];
 }
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Custom Attributes %}
+{% tab カスタム属性 %}
 
 ##### カスタム属性の保存
 
@@ -382,47 +381,47 @@ properties[key] = event[key];
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
+``` swift 
 func saveCustomAttribute() {
-  // 1
-  let customAttributeDictionary: [String:Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY":"YOUR-CUSTOM-ATTRIBUTE-VALUE"]
+  // 1 
+  let customAttributeDictionary: [String: Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY": "YOUR-CUSTOM-ATTRIBUTE-VALUE"]
   
-  // 2
+  // 2 
   let remoteStorage = RemoteStorage(storageType: .suite)
   
-  // 3
-if var pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] {
-pendingAttributes.append(contentsOf: [customAttributeDictionary])
-remoteStorage.store(pendingAttributes, forKey: .pendingCustomAttributes)
-} else {
-// 4
-  remoteStorage.store([customAttributeDictionary], forKey: .pendingCustomAttributes)
-    }
-    }
-  ```
+  // 3 
+  if var pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] {
+    pendingAttributes.append(contentsOf: [customAttributeDictionary])
+    remoteStorage.store(pendingAttributes, forKey: .pendingCustomAttributes)
+  } else {
+  // 4 
+    remoteStorage.store([customAttributeDictionary], forKey: .pendingCustomAttributes)
+  }
+}
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ``` objc
-  \- (void)saveCustomAttribute {
-// 1
-NSDictionary<NSString *, id> *customAttributeDictionary = @{ @"YOUR-CUSTOM-ATTRIBUTE-KEY": @"YOUR-CUSTOM-ATTRIBUTE-VALUE" };
+- (void)saveCustomAttribute {
+  // 1 
+  NSDictionary<NSString *, id> *customAttributeDictionary = @{ @"YOUR-CUSTOM-ATTRIBUTE-KEY": @"YOUR-CUSTOM-ATTRIBUTE-VALUE" };
   
   // 2  
-  RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-  NSMutableArray \*pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes] mutableCopy];
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes] mutableCopy];
   
   // 3
-if (pendingAttributes) {
-[pendingAttributes addObject:customAttributeDictionary];
-[remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingCustomAttributes];
-} else {
-// 4
-  [remoteStorage store:@[ customAttributeDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
-    }
-    }
-  \`\`\`
-  {% endsubtab %}
-    {% endsubtabs %}
+  if (pendingAttributes) {
+    [pendingAttributes addObject:customAttributeDictionary];
+    [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingCustomAttributes];
+  } else {
+  // 4 
+    [remoteStorage store:@[ customAttributeDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 ##### カスタム属性の Braze への送信
 
@@ -435,58 +434,58 @@ SDK の初期化後は、通知コンテンツアプリの拡張機能から、�
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
+``` swift 
 func logPendingCustomAttributesIfNecessary() {
-let remoteStorage = RemoteStorage(storageType: .suite)
-guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] else { return }
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] else { return }
      
   // 1
   pendingAttributes.forEach { setCustomAttributesWith(keysAndValues: $0) }
   
-  // 4
+  // 4 
   remoteStorage.removeObject(forKey: .pendingCustomAttributes)
 }
    
-func setCustomAttributesWith(keysAndValues: [String:Any]) {
-// 2
-for (key, value) in keysAndValues {
-// 3
-if let value = value as? [String] {
-setCustomAttributeArrayWithKey(key, andValue: value)
-} else {
-setCustomAttributeWithKey(key, andValue: value)
+func setCustomAttributesWith(keysAndValues: [String: Any]) {
+  // 2 
+  for (key, value) in keysAndValues {
+  // 3
+    if let value = value as? [String] {
+      setCustomAttributeArrayWithKey(key, andValue: value)
+    } else {
+      setCustomAttributeWithKey(key, andValue: value)
+    }
+  }
 }
-  }
-  }
-  ```
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-    \- (void)logPendingCustomAttributesIfNecessary {
-      RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-    NSArray \*pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes];
+- (void)logPendingCustomAttributesIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes];
    
   // 1
-  for (NSDictionary<NSString\*, id> \*attribute in pendingAttributes) {
-[self setCustomAttributeWith:attribute];
-}
+  for (NSDictionary<NSString*, id> *attribute in pendingAttributes) {
+    [self setCustomAttributeWith:attribute];
+  }
 
-  // 4
+  // 4 
   [remoteStorage removeObjectForKey:RemoteStorageKeyPendingCustomAttributes];
 }
  
-- (void)setCustomAttributeWith:(NSDictionary<NSString \*, id> \*)keysAndValues {
-// 2
-for (NSString *key in keysAndValues) {
-// 3
-[self setCustomAttributeWith:key andValue:[keysAndValues objectForKey:key]];
-}
+- (void)setCustomAttributeWith:(NSDictionary<NSString *, id> *)keysAndValues {
+  // 2
+  for (NSString *key in keysAndValues) {
+  // 3 
+    [self setCustomAttributeWith:key andValue:[keysAndValues objectForKey:key]];
   }
-  \`\`\`
-  {% endsubtab %}
-    {% endsubtabs %}
-  {% endtab %}
-{% tab User Attributes %}
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab ユーザー属性 %}
 
 ##### ユーザー属性の保存
 
@@ -499,53 +498,53 @@ for (NSString *key in keysAndValues) {
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
+``` swift 
 func saveUserAttribute() {
-  // 1
-  guard let data = try?PropertyListEncoder().encode(UserAttribute.userAttributeType("USER-ATTRIBUTE-VALUE")) else { return }
+  // 1 
+  guard let data = try? PropertyListEncoder().encode(UserAttribute.userAttributeType("USER-ATTRIBUTE-VALUE")) else { return }
   
   // 2       
   let remoteStorage = RemoteStorage(storageType: .suite)
   
   // 3    
   if var pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] {
-pendingAttributes.append(contentsOf: [data])
-remoteStorage.store(pendingAttributes, forKey: .pendingUserAttributes)
-} else {
-// 4
-remoteStorage.store([data], forKey: .pendingUserAttributes)
+    pendingAttributes.append(contentsOf: [data])
+    remoteStorage.store(pendingAttributes, forKey: .pendingUserAttributes)
+  } else {
+  // 4 
+    remoteStorage.store([data], forKey: .pendingUserAttributes)
+  }
 }
-    }
-    ```
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-  \- (void)saveUserAttribute {
-  // 1
-    UserAttribute \*userAttribute = [[UserAttribute alloc] initWithUserField:@"USER-ATTRIBUTE-VALUE" attributeType:UserAttributeTypeEmail];
+- (void)saveUserAttribute {
+  // 1 
+  UserAttribute *userAttribute = [[UserAttribute alloc] initWithUserField:@"USER-ATTRIBUTE-VALUE" attributeType:UserAttributeTypeEmail];
    
-  NSError \*error;
-  NSData \*data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
+  NSError *error;
+  NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
 
   if (error != nil) {
     // log error
-}
-// 2  
-  RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-  NSMutableArray \*pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes] mutableCopy];
+  }
+  // 2  
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes] mutableCopy];
   
-  // 3
-if (pendingAttributes) {
-[pendingAttributes addObject:data];
-[remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
-} else {
-// 4
-  [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
-    }
-    }
-  \`\`\`
-  {% endsubtab %}
-    {% endsubtabs %}
+  // 3 
+  if (pendingAttributes) {
+    [pendingAttributes addObject:data];
+    [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
+  } else {
+  // 4 
+    [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 ##### Braze へのユーザー属性の送信
 
@@ -558,39 +557,39 @@ SDK の初期化後は、通知コンテンツアプリの拡張機能から、�
 
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\` swift
+``` swift 
 func logPendingUserAttributesIfNecessary() {
-let remoteStorage = RemoteStorage(storageType: .suite)
-guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] else { return }
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] else { return }
   
   // 1    
   for attributeData in pendingAttributes {
-// 2
-guard let userAttribute = try? PropertyListDecoder().decode(UserAttribute.self, from: attributeData) else { continue }
+  // 2 
+    guard let userAttribute = try? PropertyListDecoder().decode(UserAttribute.self, from: attributeData) else { continue }
     
   // 3    
     switch userAttribute {
-case .email(let email):
-user?.email = email
-}
+    case .email(let email):
+      user?.email = email
     }
-      // 4   
-    remoteStorage.removeObject(forKey: .pendingUserAttributes)
   }
-  ```
+  // 4   
+  remoteStorage.removeObject(forKey: .pendingUserAttributes)
+}
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-  \- (void)logPendingUserAttributesIfNecessary {
-RemoteStorage \*remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
-NSArray \*pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes];
+- (void)logPendingUserAttributesIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes];
   
   // 1  
-  for (NSData \*attributeData in pendingAttributes) {
-    NSError \*error;
+  for (NSData *attributeData in pendingAttributes) {
+    NSError *error;
   
-  // 2
-    UserAttribute \*userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
+  // 2 
+    UserAttribute *userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
 
     if (error != nil) {
       // log error
@@ -598,34 +597,34 @@ NSArray \*pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPend
     
   // 3  
     if (userAttribute) {
-switch (userAttribute.attributeType) {
-case UserAttributeTypeEmail:
-[self user].email = userAttribute.userField;
-break;
+      switch (userAttribute.attributeType) {
+        case UserAttributeTypeEmail:
+          [self user].email = userAttribute.userField;
+          break;
+      }
+    }
+  }
+  // 4 
+  [remoteStorage removeObjectForKey:RemoteStorageKeyPendingUserAttributes];
 }
-      }
-        }
-          // 4
-          [remoteStorage removeObjectForKey:RemoteStorageKeyPendingUserAttributes];
-      }
-    \`\`\`
-  {% endsubtab %}
-  {% endsubtabs %}
-  {% endtab %}
-{% tab Helper Files %}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab ヘルパーファイル %}
 
 ##### ヘルパーファイル
 
-{% details RemoteStorage Helper File %}
+{% details RemoteStorageヘルパーファイル %}
 {% subtabs global %}
 {% subtab Swift %}
-\`\`\`swift
-enum RemoteStorageKey:String, CaseIterable {
+```swift
+enum RemoteStorageKey: String, CaseIterable {
    
-  // MARK: - 通知内容拡張分析
-  case pendingCustomEvents = "pending\_custom\_events"
-  case pendingCustomAttributes = "pending\_custom\_attributes"
-  case pendingUserAttributes = "pending\_user\_attributes"
+  // MARK: - Notification Content Extension Analytics
+  case pendingCustomEvents = "pending_custom_events"
+  case pendingCustomAttributes = "pending_custom_attributes"
+  case pendingUserAttributes = "pending_user_attributes"
 }
  
 enum RemoteStorageType {
@@ -633,47 +632,47 @@ enum RemoteStorageType {
   case suite
 }
  
-class RemoteStorage:NSObject {
-private var storageType: RemoteStorageType = .standard
-private lazy var defaults: UserDefaults = {
-switch storageType {
-case .standard:
-return .standard
-case .suite:
-return UserDefaults(suiteName: "YOUR-DOMAIN-IDENTIFIER")!
-}
+class RemoteStorage: NSObject {
+  private var storageType: RemoteStorageType = .standard
+  private lazy var defaults: UserDefaults = {
+    switch storageType {
+    case .standard:
+      return .standard
+    case .suite:
+      return UserDefaults(suiteName: "YOUR-DOMAIN-IDENTIFIER")!
+    }
   }()
    
-  init(storageType:RemoteStorageType = .standard) {
+  init(storageType: RemoteStorageType = .standard) {
     self.storageType = storageType
   }
    
-  func store(_ value:Any, forKey key:RemoteStorageKey) {
-defaults.set(value, forKey: key.rawValue)
-}
+  func store(_ value: Any, forKey key: RemoteStorageKey) {
+    defaults.set(value, forKey: key.rawValue)
+  }
    
-  func retrieve(forKey key:RemoteStorageKey) -> Any? {
-return defaults.object(forKey: key.rawValue)
-}
+  func retrieve(forKey key: RemoteStorageKey) -> Any? {
+    return defaults.object(forKey: key.rawValue)
+  }
    
-  func removeObject(forKey key:RemoteStorageKey) {
-defaults.removeObject(forKey: key.rawValue)
-}
+  func removeObject(forKey key: RemoteStorageKey) {
+    defaults.removeObject(forKey: key.rawValue)
+  }
    
   func resetStorageKeys() {
-for key in RemoteStorageKey.allCases {
-defaults.removeObject(forKey: key.rawValue)
-}
+    for key in RemoteStorageKey.allCases {
+      defaults.removeObject(forKey: key.rawValue)
     }
-      }
-    ```
+  }
+}
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-  @interface RemoteStorage ()
+@interface RemoteStorage ()
  
 @property (nonatomic) StorageType storageType;
-@property (nonatomic, strong) NSUserDefaults \*defaults;
+@property (nonatomic, strong) NSUserDefaults *defaults;
  
 @end
  
@@ -687,69 +686,69 @@ defaults.removeObject(forKey: key.rawValue)
 }
  
 - (void)store:(id)value forKey:(RemoteStorageKey)key {
-[[self defaults] setValue:value forKey:[self rawValueForKey:key]];
+  [[self defaults] setValue:value forKey:[self rawValueForKey:key]];
 }
  
 - (id)retrieveForKey:(RemoteStorageKey)key {
-return [[self defaults] objectForKey:[self rawValueForKey:key]];
+  return [[self defaults] objectForKey:[self rawValueForKey:key]];
 }
  
 - (void)removeObjectForKey:(RemoteStorageKey)key {
-[[self defaults] removeObjectForKey:[self rawValueForKey:key]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:key]];
 }
  
 - (void)resetStorageKeys {
-[[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomEvents]];
-[[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomAttributes]];
-[[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingUserAttributes]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomEvents]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomAttributes]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingUserAttributes]];
 }
  
-- (NSUserDefaults \*)defaults {
-if (!self.defaults) {
-switch (self.storageType) {
-case StorageTypeStandard:
-return [NSUserDefaults standardUserDefaults];
-break;
-case StorageTypeSuite:
-return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
-}
+- (NSUserDefaults *)defaults {
+  if (!self.defaults) {
+    switch (self.storageType) {
+      case StorageTypeStandard:
+        return [NSUserDefaults standardUserDefaults];
+        break;
+      case StorageTypeSuite:
+        return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
+    }
   } else {
     return self.defaults;
-      }
-        }
- 
-- (NSString\*)rawValueForKey:(RemoteStorageKey)remoteStorageKey {
-switch(remoteStorageKey) {
-case RemoteStorageKeyPendingCustomEvents:
-return @"pending_custom_events";
-case RemoteStorageKeyPendingCustomAttributes:
-return @"pending_custom_attributes";
-case RemoteStorageKeyPendingUserAttributes:
-return @"pending_user_attributes";
-default:
-[NSException raise:NSGenericException format:@"Unexpected FormatType."];
+  }
 }
-    }
-    ```
+ 
+- (NSString*)rawValueForKey:(RemoteStorageKey)remoteStorageKey {
+    switch(remoteStorageKey) {
+    case RemoteStorageKeyPendingCustomEvents:
+      return @"pending_custom_events";
+    case RemoteStorageKeyPendingCustomAttributes:
+      return @"pending_custom_attributes";
+    case RemoteStorageKeyPendingUserAttributes:
+      return @"pending_user_attributes";
+    default:
+      [NSException raise:NSGenericException format:@"Unexpected FormatType."];
+  }
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details UserAttribute Helper File %}
+{% details UserAttribute ヘルパーファイル %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-      enum UserAttribute:Hashable {
-    case email(String?)
-      }
- 
-// MARK:-コード可能
-拡張 UserAttribute:コード可能 {
-private enum CodingKeys: String, CodingKey {
-case email
+enum UserAttribute: Hashable {
+  case email(String?)
 }
+ 
+// MARK: - Codable
+extension UserAttribute: Codable {
+  private enum CodingKeys: String, CodingKey {
+    case email
+  }
    
-  func encode(to encoder:Encoder) throws {
-    var 値= encoder.container(keyedBy:CodingKeys.self)
+  func encode(to encoder: Encoder) throws {
+    var values = encoder.container(keyedBy: CodingKeys.self)
      
     switch self {
     case .email(let email):
@@ -757,8 +756,8 @@ case email
     }
   }
    
-  init(from decoder:Decoder) throws {
-    let values = try decoder.container(keyedBy:CodingKeys.self)
+  init(from decoder: Decoder) throws {
+    let values = try decoder.container(keyedBy: CodingKeys.self)
      
     let email = try values.decode(String.self, forKey: .email)
     self = .email(email)
@@ -770,7 +769,7 @@ case email
 ```objc
 @implementation UserAttribute
  
-- (id)initWithUserField:(NSString \*)userField attributeType:(UserAttributeType)attributeType {
+- (id)initWithUserField:(NSString *)userField attributeType:(UserAttributeType)attributeType {
   if (self = [super init]) {
     self.userField = userField;
     self.attributeType = attributeType;
@@ -778,12 +777,12 @@ case email
   return self;
 }
  
-- (void)encodeWithCoder:(NSCoder \*)encoder {
-[encoder encodeObject:self.userField forKey:@"userField"];
-[encoder encodeInteger:self.attributeType forKey:@"attributeType"];
+- (void)encodeWithCoder:(NSCoder *)encoder {
+  [encoder encodeObject:self.userField forKey:@"userField"];
+  [encoder encodeInteger:self.attributeType forKey:@"attributeType"];
 }
  
-- (id)initWithCoder:(NSCoder \*)decoder {
+- (id)initWithCoder:(NSCoder *)decoder {
   if (self = [super init]) {
     self.userField = [decoder decodeObjectForKey:@"userField"];
      
@@ -798,12 +797,12 @@ case email
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details EventName Dictionary Helper File %}
+{% details EventName Dictionary ヘルパーファイル %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
 extension Dictionary where Key == String, Value == Any {
-  init(eventName:String, properties: [String:Any]? = nil) {
+  init(eventName: String, properties: [String: Any]? = nil) {
     self.init()
     self[PushNotificationKey.eventName.rawValue] = eventName
      
@@ -820,10 +819,10 @@ extension Dictionary where Key == String, Value == Any {
 ```objc
 @implementation NSDictionary (Helper)
  
-- (id)initWithEventName:(NSString \*)eventName properties:(NSDictionary \*)properties {
+- (id)initWithEventName:(NSString *)eventName properties:(NSDictionary *)properties {
   self = [self init];
   if (self) {
-    dict[@"event\_name"] = eventName;
+    dict[@"event_name"] = eventName;
      
     for(id key in properties) {
       dict[key] = properties[key];
@@ -833,7 +832,7 @@ extension Dictionary where Key == String, Value == Any {
 }
  
 @end
-\`\`\`
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
@@ -841,17 +840,3 @@ extension Dictionary where Key == String, Value == Any {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/push_implementation_guide/push1.png %}
-[3]: {% image_buster /assets/img/push_implementation_guide/push3.png %}
-[5]: {% image_buster /assets/img/push_implementation_guide/push5.png %}
-[6]: {% image_buster /assets/img/push_implementation_guide/push6.png %}
-[8]: {% image_buster /assets/img/push_implementation_guide/push8.png %}
-[9]: {% image_buster /assets/img/push_implementation_guide/push9.png %}
-[12]: {% image_buster /assets/img/push_implementation_guide/push12.png %}
-[13]: {% image_buster /assets/img/push_implementation_guide/push13.png %}
-[14]: {% image_buster /assets/img/push_implementation_guide/push14.png %}
-[15]: {% image_buster /assets/img/push_implementation_guide/push15.png %}
-[16]: {% image_buster /assets/img/push_implementation_guide/push16.png %}
-[17]: {% image_buster /assets/img/push_implementation_guide/push17.png %}
-[18]: {% image_buster /assets/img/push_implementation_guide/push18.png %}
-[19]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}

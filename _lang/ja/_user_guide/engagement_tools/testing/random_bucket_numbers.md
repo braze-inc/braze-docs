@@ -13,27 +13,25 @@ tool:
 
 # ランダムバケット番号
 
-> この記事では、ランダムバケット番号の概念と、それを使用してバリアントとコントロールグループを作成する方法について説明します。
+> ランダムバケット番号は、ランダムユーザーの均一に分散したセグメントを作成するために使用できるユーザー属性です。Braze でユーザープロファイルを作成すると、そのユーザーには0から9999までのランダムなバケット番号が自動的に割り当てられます。これらのセグメンテーションを使用して、複数のキャンペーンやキャンバスの効果をユーザーグループに対して長期的にテストすることができる。
 
 ## 概要
 
-Braze でユーザープロファイルを作成すると、そのユーザーには0から9999までのランダムなバケット番号が自動的に割り当てられます。ランダムバケット番号は、ランダムユーザーの均一に分散したセグメントを作成するために使用できるユーザー属性です。これらのセグメントを活用して、ユーザーのグループに対する複数のキャンペーンまたはキャンバスの効果を長期的にテストできます。
+ランダムバケット番号は、グローバルコントロールグループ（キャンペーンやキャンバスを受け取らないユーザーグループ）で使用される。Braze はランダムなバケット番号の複数の範囲をランダムに選択し、選択されたバケットのユーザーを含めます。 
 
-ランダムなバケット番号は、キャンペーンやキャンバスを受信しないユーザーのグループであるグローバルコントロールグループでも使用されます。Braze はランダムなバケット番号の複数の範囲をランダムに選択し、選択されたバケットのユーザーを含めます。グローバルコントロールグループを設定していて、ランダムなバケット番号を他の用途に使用したい場合は、[注意すべきこと]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for)を確認してください。
+グローバルコントロールグループを設定し、他のユースケースでランダムバケット番号を使用したい場合は、「[注意すべきこと]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for)」をチェックしてほしい。
 
 ### ランダムなバケット番号を使用する場合
 
-複数のキャンペーンやキャンバスの効果を長期的にテストする場合は、ランダムなバケット番号を使用してユーザーをセグメント化できます。
+複数のキャンペーンやキャンバスの効果を長期にわたってテストしたい場合、ランダムなバケット番号を使ってユーザーをセグメンテーションすることができる。
 
 ### 他のものを使用する場合
 
-1つのキャンペーンまたは1つのキャンバス内でテストするユーザーをセグメント化する場合は、代わりにキャンペーンの [AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)を使用してください。キャンバスでは、ジャーニーレベルのテスト用に異なる[バリアント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#adding-a-variant)を作成したり、ステップレベルのテスト用に[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を使用することもできます。
+1つのキャンペーンまたは1つのキャンバス内でユーザーをセグメンテーションしてテストしたい場合は、キャンペーン用の[ABテストを]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)使用する。キャンバスでは、ジャーニーレベルのテスト用に異なる[バリアント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#adding-a-variant)を作成したり、ステップレベルのテスト用に[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を使用することもできます。
 
 ## ランダムなバケット番号を使用してセグメントを作成する
 
-[セグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)するときは、`Random Bucket #` フィルターを追加します。フィルターラベルが**統計サンプリング ID** に変わります。その後、セグメントに含める番号または番号の範囲を指定できます。
-
-![][1]
+[セグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)するときに、[ランダムバケット番号] フィルターを追加します。次に、セグメンテーションに含める数値または数値範囲を指定する。
 
 ![][2]
 
@@ -46,8 +44,17 @@ Braze でユーザープロファイルを作成すると、そのユーザー�
 
 必要なセグメントの数や各セグメント内のユーザーの分布によって、プランが異なる場合があります。
 
-コントロールグループを含むランダムバケット番号セグメントごとに、[[分析トラッキング]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking)] をオンにします。コントロールグループに関連してバリアントの成功を評価する場合、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data)ページに移動し、各セグメントが特定のカスタムイベントを完了した頻度を表示できます。
+コントロールグループを含むランダムバケット番号セグメントごとに、[[分析トラッキング]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking)] をオンにします。コントロールグループに対するバリアントの成功を評価する場合、[カスタムイベントページに]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data)行き、各セグメントが特定のカスタムイベントを完了した頻度を見ることができる。
+
+### ランダムバケット番号を使用したランダムなオーディエンス再エントリ
+
+ランダムなオーディエンス再エントリは、[AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#what-are-multivariate-and-ab-testing)や、キャンペーンで特定のユーザーグループをターゲットにするときに役立ちます。ランダムバケット番号によるランダムなオーディエンスの再エントリを実行するには、次の手順を実行します。
+
+1. [セグメントを作成します]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment)。
+2. ランダムバケットを定義します。キャンペーンまたはキャンバスで、ランダムバケットフィルターを使ってオーディエンスを異なるグループに分けよう。例えば、オーディエンスを正確に分割するランダムバケットを2つ指定できます (バケットあたり50%のユーザー)。
+3. キャンペーンまたはキャンバスの**「ターゲットオーディエンス」**セクションで、ランダムバケットの設定を指定する。これにより、Brazeは定義されたパーセンテージに基づいて、ユーザーを自動的に適切なバケツに割り当てることができる。
+4. ユーザーがセグメントに再エントリできるようにするロジックを設定します。例えば、ユーザーが15日間にわたりアプリにエンゲージしていない場合に、セグメントに再エントリできるようにすることができます。
+5. キャンペーンを開始し、各バケットのパフォーマンスをモニターします。エンゲージメント率やコンバージョン率などの指標を分析することで、ランダムなオーディエンス再エントリがユースケースに対してどれだけ効果的かを判断できます。
 
 
-[1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

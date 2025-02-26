@@ -12,7 +12,7 @@ channel:
 
 # Uploading an HTML email template
 
-> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
+> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) using our editor.
 
 ## Prerequisites {#upload-requirements}
 
@@ -54,7 +54,7 @@ There are several email error messages you may receive when uploading an HTML te
 |Images over 5&nbsp;MB| Reduce the number of images and try uploading again. |
 |Extra Images| There may be additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, then check the content, correct any errors, and try uploading again.|
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Step 4: Finish and save your template
 
@@ -72,7 +72,7 @@ To use your email for an API campaign, you need the `email_template_id`, which c
 
 ## Managing email templates
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) email templates! Learn more about creating and managing templates and creative content in [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Frequently asked questions
 

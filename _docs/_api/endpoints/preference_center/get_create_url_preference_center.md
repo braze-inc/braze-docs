@@ -14,7 +14,7 @@ description: "This article outlines details about the Generate preference center
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
-> Use this endpoint to generate a URL for a preference center. 
+> Use this endpoint to generate a URL for a preference center.
 
 Each preference center URL is unique to each user.
 
@@ -34,6 +34,7 @@ This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
 |`userID`| Required | String | The user ID. |
+{:  role="presentation" }
 
 ## Request parameters
 
@@ -41,7 +42,7 @@ This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 | --------- | ---------| --------- | ----------- |
 |`preference_center_api_id`| Required | String | The ID for your preference center. |
 |`external_id`| Required | String | The external ID for a user. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -50,7 +51,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-## Response 
+## Response
 
 ```json
 {
@@ -61,5 +62,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-This endpoint only generates URLs for the new preference center (such as preference centers created via API or the drag-and-drop editor).
+This endpoint only generates URLs for the new preference center (such as preference centers created using our API or the drag-and-drop editor).
 {% endalert %}

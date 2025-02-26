@@ -2,14 +2,14 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "This reference article outlines the partnership between Braze and Yotpo, a leading ecommerce marketing platform that helps thousands of forward-thinking brands accelerate direct-to-consumer growth."
+description: "This reference article outlines the partnership between Braze and Yotpo, a leading eCommerce marketing platform that helps thousands of forward-thinking brands accelerate direct-to-consumer growth."
 page_type: partner
 search_tag: Partner
 ---
 
 # Yotpo
 
-> [Yotpo](https://www.yotpo.com/), the leading ecommerce marketing platform, helps thousands of forward-thinking brands accelerate direct-to-consumer growth. Yotpo's single-platform approach integrates data-driven solutions for reviews, loyalty, SMS marketing, and more, empowering brands to create smarter, higher-converting customer experiences.
+> [Yotpo](https://www.yotpo.com/), the leading eCommerce marketing platform, helps thousands of forward-thinking brands accelerate direct-to-consumer growth. Yotpo's single-platform approach integrates data-driven solutions for reviews, loyalty, SMS marketing, and more, empowering brands to create smarter, higher-converting customer experiences.
 
 With the Braze and Yotpo integration, you can dynamically pull and display star ratings, top reviews, and visual user-generated content (UGC) on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 
@@ -20,7 +20,7 @@ With the Braze and Yotpo integration, you can dynamically pull and display star 
 | Yotpo account | A Yotpo account is required to take advantage of this partnership. |
 | Yotpo reviews API key | This API will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your Yotpo app key and secret key](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
 | Yotpo loyalty API key | This API key and GUID will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your loyalty & referrals API key and GUID](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Before continuing, confirm that the Yotpo product ID is the same as the `product_id` that will be pulled dynamically from Braze. This is mandatory for the integration to work. 
 
@@ -65,7 +65,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the ecommerce parent product ID).
+Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the eCommerce parent product ID).
 
 ![Replace YOTPO-API-KEY with your Yotpo Reviews API key][2]
 
@@ -88,7 +88,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the ecommerce parent product ID).
+Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the eCommerce parent product ID).
 
 Here's what the snippet in your email editor will look like:
 
@@ -117,7 +117,7 @@ Image return NULL
 ```
 {% endraw %}
 
-Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the ecommerce parent product ID).
+Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the eCommerce parent product ID).
 
 The snippet will look something like this:
 

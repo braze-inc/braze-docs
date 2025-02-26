@@ -1,8 +1,8 @@
 ---
-nav_title: WhatsAppメッセージの作成
-article_title: WhatsAppメッセージの作成
+nav_title: WhatsAppメッセージを作成する
+article_title: WhatsAppメッセージを作成する
 page_order: 4
-description: "このリファレンス記事では、WhatsApp メッセージの構築と作成に必要な手順について説明します。"
+description: "この記事では、WhatsApp メッセージの構築と作成に関連するステップについて説明します。"
 page_type: reference
 tool:
   - Campaigns
@@ -11,205 +11,211 @@ channel:
 search_rank: 1
 ---
 
-# WhatsAppメッセージの作成
+# WhatsAppメッセージを作成する
 
-> WhatsApp キャンペーンは、顧客に直接アプローチし、プログラム的に会話するのに最適です。Liquid やその他の動的コンテンツを使用すると、ユーザーとのパーソナルなエクスペリエンスを生み出し、ブランドのユーザー エクスペリエンスを邪魔にならない形で促進し強化する環境を作り出すことができます。 
+> WhatsApp キャンペーンは、顧客に直接リーチしてプログラムを使って会話を行うのに適しています。Liquid などのダイナミックコンテンツを使用して、ユーザー一人ひとりに合わせた体験を作り出し、控えめなブランド体験を強化する環境を作ることができます。 
 
 ## 前提条件
 
-WhatsApp メッセージを作成し、WhatsApp チャネルを活用するには、まず WhatsApp の [概要]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) を読み、次の操作を行う必要があります。
-  \- ポリシー、制限、コンテンツルールを理解する
-  \- WhatsApp接続を設定する
-  \- メッセージで使用するための初期テンプレートをMetaで作成する
+WhatsApp メッセージを作成して WhatsApp チャネルを活用するには、まず WhatsApp の[概要]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)を読み、以下のことを行う必要があります。
+  - ポリシー、制限、コンテンツのルールを認識する
+  - WhatsApp接続を設定する
+  - メッセージに使用する初期テンプレートをMetaで作成する
 
-## ステップ 1:メッセージを構築する場所を選択する
+## ステップ 1: メッセージを作成する場所を選択する
 
 {% alert note %}
-WhatsApp は言語ごとに異なる [メッセージ テンプレート](#template-messages) を作成します。ユーザーに適切なテンプレートを提供するために、セグメンテーションを使用して各言語のキャンペーンを作成するか、Canvas を使用します。
+WhatsAppは言語ごとに異なる[メッセージテンプレートを](#template-messages)作成する。ユーザーに適切なテンプレートを提供するために、セグメンテーションを使って言語ごとにキャンペーンを作成するか、キャンバスを使う。
 {% endalert %}
 
-メッセージをキャンペーンを使用して送信するべきか、キャンバスを使用して送信するべきか分からない場合キャンペーンは単一のシンプルなメッセージング キャンペーンに適しており、キャンバスは複数ステップのユーザー ジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
 **ステップ:**
 
-1. **キャンペーン** ページに移動してクリックします <i class="fas fa-plus"></i>**キャンペーンを作成します**。
-2. **WhatsApp**を選択するか、複数のチャネルを対象とするキャンペーンの場合は、 **マルチチャネルキャンペーン**を選択します。
-3. キャンペーンには明確で意味のある名前を付けます。
-4. 必要に応じて [チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) と [タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 追加します。
-   * タグを使用すると、キャンペーンを簡単に見つけてレポートを作成できるようになります。たとえば、 [レポート ビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)を使用する場合、特定のタグでフィルターできます。
-5. キャンペーンに必要な数のバリエーションを追加して名前を付けます。追加したバリエーションごとに、異なるプラットフォーム、メッセージ タイプ、レイアウトを選択できます。このトピックの詳細については、[「多変量テストと A/B テスト」]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を参照してください。
+1. [**キャンペーン**] ページに移動して、<i class="fas fa-plus"></i> [**キャンペーンを作成**] をクリックします。
+2. [**WhatsApp**] を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は [**マルチチャンネルキャンペーン**] を選択します。
+3. キャンペーンに、明確で意味のある名前を付けます。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% alert tip %}
-キャンペーン内のすべてのメッセージが類似しているか、同じ内容である場合は、バリエーションを追加する前にメッセージを作成してください。次に、**「バリアントの追加」** ドロップダウンから **「バリアントからコピー」を** 選択できます。
+キャンペーン内のすべてのメッセージが類似しているか、同じコンテンツを持っている場合、バリアントを追加する前にメッセージを作成する。その後、[**バリアントを追加**] ドロップダウンから [**バリアントをコピー**] を選択できます。
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
+{% tab キャンバス %}
 
 **ステップ:**
 
-1. Canvas コンポーザーを使用して[Canvas を作成します]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) 。
-2. キャンバスを設定したら、キャンバス ビルダーにステップを追加します。ステップに明確で意味のある名前を付けます。
-3. [ステップ スケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) を選択し、必要に応じて遅延を指定します。
-4. 必要に応じて、このステップの対象者をフィルタリングします。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込みます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
-5. [前進行動を]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)選択してください。
-6. メッセージと組み合わせるその他のメッセージング チャネルを選択します。
+1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
+2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
+3. [[ステップスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)] を選択し、必要に応じて遅延を指定します。
+4. 必要に応じて、このステップのオーディエンスをフィルターします。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込むことができます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
+5. [[昇進動作]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)] を選択します。
+6. このメッセージと組み合わせる他のメッセージングチャネルを選択します。
+
+{% alert tip %}
+アクションベースのキャンバスがインバウンド WhatsApp メッセージによってトリガーされる場合、次のアクションパスまで、どのキャンバスステップでも WhatsApp プロパティを参照できます。
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2:WhatsAppメッセージを作成する
+## ステップ 2: WhatsAppメッセージを作成する
 
-使用事例に応じて、WhatsApp [テンプレート メッセージ](#template-messages) または応答メッセージを作成するかどうかを選択します。ビジネスで開始される会話はすべて承認されたテンプレートから開始する必要がありますが、応答メッセージは 24 時間以内にユーザーからの受信メッセージに応答するために使用できます。 
+ユースケースに応じて WhatsApp [テンプレートメッセージ](#template-messages)を作成するか、応答メッセージを作成します。ビジネス主導の会話は承認されたテンプレートから始めなければならないが、応答メッセージは24時間以内のユーザーからのインバウンドメッセージへの応答で使用できる。
 
-![メッセージ バリアント セクションでは、サブスクリプション グループと 2 つのメッセージ タイプのいずれかを選択できます。WhatsApp テンプレートメッセージと応答メッセージ。][5]{: style="max-width:80%;"}
+{% alert note %}
+現在、WhatsAppテンプレートはクーポンコードボタンをサポートしていない。
+{% endalert %}
+
+![「メッセージバリアント」セクションでは、サブスクリプショングループを 1 つと、2 つのメッセージタイプのいずれかを選択できます。WhatsApp テンプレートメッセージとレスポンスメッセージ。][5]{: style="max-width:80%;"}
 
 ### テンプレートメッセージ
 
-[承認された WhatsApp テンプレート メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
-) を使用して、WhatsApp でユーザーとの会話を開始できます。これらのメッセージはコンテンツの承認のために事前に WhatsApp に送信され、承認には最大 24 時間かかる場合があります。コピーに加えた編集はすべて編集して WhatsApp に再送信する必要があります。
+[承認済みの WhatsApp テンプレートメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
+)を使って WhatsApp ユーザーと会話を始めることができます。これらのメッセージは事前に WhatsApp に提出され、コンテンツの承認を受けますが、承認には最大 24 時間かかります。コピーを編集した場合は、WhatsApp に再送信する必要があります。
 
-無効なテキスト フィールド (灰色で強調表示) は、承認された WhatsApp テンプレートの一部であるため、編集できません。無効になったテキストを更新するには、テンプレートを編集して再承認を受ける必要があります。
+無効なテキストフィールド(灰色でハイライト)は、承認されたWhatsAppテンプレートの一部であるため、編集することはできない。無効化されたテキストを更新するには、テンプレートを編集し、再承認を得る必要がある。
 
 #### 言語
 
-各テンプレートには言語が割り当てられているため、ユーザー マッチングを正しく設定するには、言語ごとにキャンペーンまたはキャンバス ステップを作成する必要があります。たとえば、インドネシア語と英語が割り当てられたテンプレートを使用する Canvas を構築する場合は、インドネシア語テンプレート用の Canvas ステップと英語テンプレート用の Canvas ステップを作成する必要があります。
+各テンプレートには言語が割り当てられているため、ユーザーマッチングを正しく設定するには、言語ごとにキャンペーンまたはキャンバスのステップを作成する必要がある。例えば、インドネシア語と英語が割り当てられたテンプレートを使用するキャンバスを作成する場合、インドネシア語テンプレート用のキャンバスステップと英語テンプレート用のキャンバスステップを作成する必要があります。
 
-![メッセージのプレビュー、割り当てられた言語、承認ステータスを含むテンプレートのリスト。][8]{: style="max-width:80%;"}
+![メッセージのプレビュー、割り当てられた言語、承認されたステータスを含むテンプレートのリスト。][8]{: style="max-width:80%;"}
 
 #### 変数
 
-Meta Business Manager で WhatsApp テンプレートを作成するときに変数を追加した場合、それらの変数はメッセージ コンポーザーで空白として表示されます。これらの空白を Liquid またはプレーンテキストに置き換えます。プレーンテキストを使用するには、二重中括弧で囲まれた「text here」という形式を使用します。テンプレートを作成するときに画像を含めることを選択した場合は、メディア ライブラリから画像をアップロードまたは追加します。
+Meta Business Manager で WhatsApp テンプレートを作成する際に変数を追加した場合、それらはメッセージ作成画面に空白として表示されます。これらの空白をリキッドまたはプレーンテキストに置き換える。プレーン・テキストを使うには、二重中括弧で囲まれた "text here "という書式を使う。テンプレートのビルド時にイメージを含めることを選択した場合は、メディアライブラリからイメージをアップロードまたは追加するか、イメージのURL を参照することができます。
 
-無効なテキスト フィールド (灰色で強調表示) は、承認された WhatsApp テンプレートの一部であるため、編集できないことに注意してください。無効になっているテキストを更新する場合は、テンプレートを編集して再承認を受ける必要があります。
+無効化されたテキストフィールド(灰色でハイライト)は、承認されたWhatsAppテンプレートの一部であるため、編集することはできない。無効化されたテキストを更新したい場合は、テンプレートを編集し、再承認を得る必要がある。
 
 {% alert tip %}
 {% raw %}
-Liquid を使用する予定の場合は、選択したパーソナライズのデフォルト値を必ず含めてください。そうすれば、受信者のユーザー プロファイルが不完全な場合に、受信者はメッセージを受信しません。Liquid 変数が欠落しているメッセージは WhatsApp 経由で送信されません。
+Liquidを使用する場合は、受信者のユーザープロファイルが不完全な場合、メッセージを受信しないように、選択したパーソナライゼーションのデフォルト値を必ず含めること。Liquid変数が欠落しているメッセージはWhatsAppで送信されない。
 {% endraw %}
 {% endalert %}
 
-![属性「first\_name」とデフォルト値「you」を持つパーソナライゼーションの追加ツール。][2]{: style="max-width:80%;"}
+![属性 "first_name" とデフォルト値 "you" を使用したパーソナライゼーション追加ツール。][2]{: style="max-width:80%;"}
 
-### ダイナミックリンク 
+### ダイナミック・リンク 
 
-行動喚起のURLには変数を含めることができますが、MetaではURLの末尾に変数を置く必要があります。 `{% raw %}https://example.com/{{variable}}{% endraw %}`ここで、変数は Braze で Liquid に置き換えることができます。リンクはテンプレートの一部として本文テキストとして含めることもできます。現時点では、どちらのリンクも短縮できません。 
+コールトゥアクション URL は、Meta では `{% raw %}https://example.com/{{variable}}{% endraw %}` のように URL の末尾になければなりませんが、URL に変数を含めることができます。この変数は Braze で Liquid に置き換えることができます。リンクはテンプレートの一部として本文に含めることもできる。現時点では、どちらのリンクも短縮することはできない。 
 
 ### 応答メッセージ
 
-{% alert note %}
-応答メッセージは現在早期アクセス段階です。早期アクセスへの参加にご興味がある場合は、Braze アカウント マネージャーにお問い合わせください。
-{% endalert %}
+ユーザーからのインバウンドメッセージに返信するために、応答メッセージを使うことができます。これらのメッセージは、作成中に Braze のアプリ内で作成され、いつでも編集できます。Liquid を使えば、応答メッセージの言語を適切なユーザーに合わせることができます。
 
-応答メッセージを使用して、ユーザーからの受信メッセージに返信できます。これらのメッセージは、Braze のアプリ内で作成され、いつでも編集できます。Liquid を使用すると、応答メッセージの言語を適切なユーザーに一致させることができます。
+使用できるレスポンス・メッセージのレイアウトは3種類ある：
+- クイック返信
+- テキストメッセージ
+- メディア・メッセージ
 
-使用できる応答メッセージ レイアウトは 3 つあります。
-\- 素早い返信
-\- メール
-\- メディアメッセージ
+![新規ユーザーを割引コードで歓迎する返信メッセージの作成者。][6]{: style="max-width:80%;"}
 
-![割引コードで新規ユーザーを歓迎する返信メッセージの応答メッセージ作成者。][6]{: style="max-width:80%;"}
+## ステップ 3: メッセージをプレビューしてテストする
 
-## ステップ 3:メッセージをプレビューしてテストする
+Brazeでは、メッセージを送信する前にプレビューしてテストすることを常に推奨している。[**テスト**] タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテスト用の WhatsApp メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
 
-Braze では、メッセージを送信する前に必ずプレビューしてテストすることをお勧めします。**[テスト]** タブに切り替えて、 [コンテンツ テスト グループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) または個々のユーザーにテスト WhatsApp メッセージを送信するか、Braze でユーザーとして直接メッセージをプレビューします。
-
-![Suzanne という既存のユーザーへのプレビュー メッセージ。][3]{: style="max-width:80%;"}
+![Suzanne という名前の既存ユーザー用のプレビューメッセージ。][3]{: style="max-width:80%;"}
 
 {% alert note %}
-テスト メッセージを含む応答メッセージを送信するには、会話ウィンドウが必要です。会話ウィンドウを開始するには、このメッセージに使用しているサブスクリプション グループに関連付けられている電話番号に WhatsApp メッセージを送信します。関連付けられている電話番号は、**[テスト]** タブのアラートに表示されます。
+テストメッセージを含む応答メッセージを送信するには、会話ウィンドウが必要です。会話ウィンドウを開くには、このメッセージに使用する購読グループに関連付けられている電話番号にWhatsAppメッセージを送信する。関連する電話番号は、**Test**タブのアラートに表示される。
 {% endalert %}
 
-![「テストするには、まず +1 631-202-0907 に WhatsApp メッセージを送信して会話ウィンドウを開いてください」という警告が表示されます。次に、応答メッセージをテストユーザーに送信します。"][7]{: style="max-width:80%;"}
+![テストするには、まずWhatsAppメッセージを+1 631-202-0907に送信して会話ウィンドウを開いてください」というアラート。その後、テストユーザーに応答メッセージを送信します。」][7]{: style="max-width:80%;"}
 
 ## ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
-次に、キャンペーンの残りの部分を構築します。WhatsApp メッセージを作成するために当社のツールを最適に使用する方法の詳細については、次のセクションを参照してください。
+次に、キャンペーンの残りの部分を作成します。WhatsAppメッセージ作成に最適なツールの使い方については以下のセクションを参照。
 
 #### 配信スケジュールまたはトリガーを選択する
 
-WhatsApp メッセージは、スケジュールされた時間、アクション、または API トリガーに基づいて配信できます。詳細については、[「キャンペーンのスケジュール設定」]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を参照してください。
+WhatsApp メッセージは、スケジュールされた時刻、アクション、または API トリガーに基づいて配信することができます。詳細については、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を参照してください。
 
-アクションベースの配信では、キャンペーンの期間と [休止時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)を設定することもできます。
+アクションベースの配信では、キャンペーンの継続時間と [[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
 
-このステップでは、ユーザーがキャンペーンを [再度]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) 受信できるようにする、 [フリークエンシー キャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) ルールを有効にするなどの配信コントロールを指定することもできます。
+このステップでは、配信コントロールを指定できます。例えば、ユーザーを[再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)してキャンペーンを受信できるようにしたり、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)ルールを有効にしたりできます。
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントまたはフィルターを選択してオーディエンスを絞り込み、 [ユーザーをターゲットにする]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 必要があります。すでにサブスクリプション グループを選択しているはずです。これにより、ユーザーがあなたとのコミュニケーションを希望するレベルまたはカテゴリによって、ユーザーが絞り込まれます。このステップでは、セグメントからより大きなオーディエンスを選択し、フィルターを使用してそのセグメントをさらに絞り込みます。おおよそのセグメント人口が現在どのような状態であるかを示すスナップショットが自動的に表示されます。正確なセグメント メンバーシップは常に、メッセージが送信される直前に計算されることに注意してください。
+次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)し、オーディエンスを絞り込む必要があります。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。このステップでは、セグメントからより多くのオーディエンスを選択し、フィルターを使ってさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 #### コンバージョンイベントを選択する
 
-Braze を使用すると、キャンペーンを受け取った後にユーザーが特定のアクション、 [つまりコンバージョン イベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定されたアクションを実行した場合にコンバージョンがカウントされる期間を最大 30 日間に設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定されたアクションを取った場合、コンバージョンがカウントされる最大30日間のウィンドウを許可することができる。
 
-特定のユースケースに基づいてカスタム変換イベントを設定することもできます。創造力を働かせて、このキャンペーンの成功を実際にどのように測定したいか考えてみましょう。
+独自のユースケースに基づいて、カスタムコンバージョンイベントを設定することもできます。このキャンペーンの真の成功を測定する方法について独創的に考えてみましょう。
 
 {% endtab %}
 
-{% tab Canvas %}
+{% tab キャンバス %}
 
-まだ行っていない場合は、Canvas コンポーネントの残りのセクションを完了します。キャンバスの残りの部分を構築する方法、多変量テストとインテリジェント選択を実装する方法などの詳細については、キャンバスのドキュメントの [キャンバスの構築]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/) 手順を参照してください。
+キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)ステップを参照のこと。
 
-会話ウィンドウは受信メッセージごとに 24 時間しか持続しないため、Braze は受信メッセージと応答メッセージの間に 24 時間を超える遅延がないことを確認します。 
+対話ウィンドウはインバウンドメッセージごとに 24 時間しか継続できないため、Braze はインバウンドメッセージと応答メッセージの間に 24 時間を超える遅延がないことを確認します。 
 
 {% endtab %}
 {% endtabs %}
 
 ## ステップ 5: レビューと展開
 
-キャンペーンまたはキャンバスの最後の部分の作成が完了したら、詳細を確認し、テストしてから送信してください。
+キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認し、テストしてから送信する！
 
-次に、[WhatsApp レポート]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/) をチェックして、WhatsApp キャンペーンの結果にアクセスする方法を学びます。
+次に、[WhatsAppのレポート]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/)機能を使ってWhatsAppキャンペーンの結果を確認しよう。
 
-## サポートされているWhatsApp機能
+## サポートされているWhatsAppの機能
 
-Braze は次の WhatsApp メッセージング機能をサポートしています。
+Brazeは以下のWhatsAppメッセージ機能をサポートしている。
 
-### 送信メッセージ
+### アウトバウンドメッセージ
 
-WhatsApp メッセージでユーザーに次の内容を送信できます。
+WhatsAppのメッセージで以下の内容をユーザーに送ることができる：
 
-メッセージ機能 | 詳細
------------ |----------------
-ヘッダー |
-テキスト | 可変パラメータをサポート
-画像 (JPEG および PNG) | 8 ビット、RGB または RGBA で、どのタイプでも最大 5 MB である必要があります。
-本文 | 可変パラメータをサポート
-フッターテキスト | 可変パラメータをサポート
-CTA | 「CTA[(行動喚起)」を](#ctas)参照してください。
-{: .reset-td-br-1 .reset-td-br-2}
+メッセージ機能    | 詳細
+----------- |---------------- 
+ヘッダー | 
+テキスト | 可変パラメーターをサポートする
+画像（JPEGおよびPNG） | 8 ビット、RGB または RGBA である必要があり、全タイプで最大 5 MB 
+本文テキスト | 可変パラメーターをサポートする
+フッターテキスト | 可変パラメーターをサポートする 
+CTA | [コールトゥアクション](#ctas)を参照してください。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 行動喚起 {#ctas}
+#### コールトゥアクション {#ctas}
 
-WhatsApp メッセージに次の行動喚起を追加できます。
+WhatsAppメッセージに次のような行動喚起を追加できる：
 
-CTAタイプ | 詳細
------------ |----------------
-ウェブサイトにアクセス | メッセージ テンプレートのみで利用可能です。<br>ボタンは最大 1 つ (可変パラメータを含む)。
-電話番号に電話する | メッセージ テンプレートでのみ使用できます。<br>ボタンは最大 1 つ。
-カスタム クイック返信ボタン | 最大 3 つのボタン。
-マーケティング オプトアウト ボタン | このオプションでは、サブスクリプション ステータスは自動的に更新されません。<br><br>セットアップ手順については、[「オプトインとオプトアウト」]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)を参照してください。
-{: .reset-td-br-1 .reset-td-br-2}
+CTAタイプ    | 詳細
+----------- |---------------- 
+ウェブサイトを見る | 最大1ボタン（可変パラメーターを含む）。
+電話番号にかける | メッセージテンプレートのみで利用可能。<br>ボタンは最大 1 つ。
+カスタムクイック返信ボタン | ボタンは最大 3 つ。 
+マーケティング・オプトアウト・ボタン | このオプションは、購読ステータスを自動的に更新しません。<br><br>設定方法については、[オプトインとオプトアウト]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)を参照してください。
+クーポンコードメッセージテンプレート | メッセージテンプレートのみで利用可能。<br>これらのテンプレートは、他のメッセージテンプレートと同様に開いたり編集したりできます。また、Liquid と Braze のプロモーションコードと互換性があります。 
+CTA応答メッセージ  | アクションへの呼び出しボタンを含む応答メッセージを作成します。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 受信メッセージ
+### インバウンドメッセージ
 
-ユーザーは WhatsApp メッセージで次の内容を送信できます。
+ユーザーはWhatsAppのメッセージで以下の内容を送ることができる：
 
-メッセージ機能 | 詳細
------------ |----------------
-テキスト |
-画像（JPEG および PNG）| 8 ビット、RGB または RGBA で、どのタイプでも最大 5 MB である必要があります。
-オーディオ| audio/aac<br>オーディオ/mp4<br>オーディオ/mpeg<br>オーディオ/AMR<br>オーディオ/ogg (only Opus Codecs, base audio/ogg is not supported)
-ドキュメント | テキスト/プレーン<br>アプリケーション/pdf<br>アプリケーション/vnd.ms-powerpoint<br>アプリケーション/msword<br>アプリケーション/vnd.ms-excel<br>アプリケーション/vnd.openxmlformats-officedocument.wordprocessingml.document<br>アプリケーション/vnd.openxmlformats-officedocument.presentationml.presentation<br>アプリケーション/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-CTA | 「CTA[(行動喚起)」を](#ctas)参照してください。
-ビデオ | ビデオ/mp4, video/3gp<br><br>H.264 ビデオ コーデックと AAC オーディオ コーデックのみがサポートされます。単一のオーディオ ストリームまたはオーディオ ストリームのないビデオをサポートします。
-{: .reset-td-br-1 .reset-td-br-2}
+メッセージ機能    | 詳細
+----------- |---------------- 
+テキスト | 
+画像（JPEGおよびPNG）| 8 ビット、RGB または RGBA である必要があり、全タイプで最大 5 MB 
+オーディオ| オーディオ/AAC<br>オーディオ/mp4<br>オーディオ/MPEG<br>オーディオ/AMR<br>audio/ogg (Opus Codec のみ、ベースオーディオ/ogg は非対応)
+文書 | テキスト/プレーン<br>application/pdf<br>application/vnd.ms-powerpoint<br>application/msword<br>application/vnd.ms-excel<br>application/vnd.openxmlformats-officedocument.wordprocessingml.document<br>application/vnd.openxmlformats-officedocument.presentationml.presentation<br>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+CTA | [コールトゥアクション](#ctas)を参照してください。
+動画 | ビデオ/MP4、ビデオ/3GP<br><br>H.264 ビデオコーデックと AAC オーディオコーデックのみがサポートされます。オーディオストリームが 1 つだけの動画や、オーディオストリームがない動画もサポートされます。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 

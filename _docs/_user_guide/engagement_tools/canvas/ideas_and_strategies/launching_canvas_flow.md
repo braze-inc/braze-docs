@@ -44,11 +44,11 @@ Make your requests in the same API call, rather than multiple calls, to confirm 
 
 Another option to avoid race conditions is to use the Delay step (ideally set for 5 minutes) as the first step of your Canvas. 
 
-This allows time for attributes, email addresses, and push tokens to be processed to new user profiles before they're targeted for the following Canvas steps. Without this Delay step, it's possible for an email to be sent to a user whose email hasn't updated yet.
+This allows time for attributes, email addresses, and push tokens to be processed to new user profiles before they're targeted for the following Canvas steps. Without this Delay step, it's possible for an email to be sent to a user whose email hasn't been updated yet.
 
 ## Delivery times
 
-By setting a Canvas delivery time in real time, this can lead to increasing engagement and conversion rates. Take note of which delivery time you've set for your Canvas. To help increase engagement and conversion rates, it's best to have Canvases trigger in real time as opposed to a scheduled, recurring basis.
+Setting a Canvas delivery time in real-time can lead to increasing engagement and conversion rates. Take note of which delivery time you've set for your Canvas. To help increase engagement and conversion rates, it's best to trigger Canvases in real-time instead of on a scheduled, recurring basis.
 
 If you selected a scheduled delivery for your Canvas, Braze recommends scheduling your Canvas at least 24 hours before you want it to launch to allow for any adjustments to your Canvas.
 
@@ -77,7 +77,7 @@ The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_
 
 ### Experiment Paths
 
-Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
+Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
 
 ## Testing before launch
 
@@ -88,7 +88,7 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 {% details Why are my users not receiving my Canvas messages? %}
 - Check that their push subscription state is "subscribed" or "opted-in" **and** that their **Push Enabled** status is set to "true". If you added these as Canvas entry rules, it's possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
 - If global frequency capping is enabled for your Canvas, depending on your specific rules, this can limit how many times each user should receive a message from a specific channel. 
-- If Quiet Hours are enabled, this can impact your message send time, meaning that your message may send a the next available time (when the Quiet Hours end) or cancel the message entirely.
+- If Quiet Hours are enabled, this can impact your message send time, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancel the message entirely.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

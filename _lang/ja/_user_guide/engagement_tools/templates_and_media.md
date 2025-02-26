@@ -12,23 +12,23 @@ tool:
 - Media
 description: "このランディングページには、テンプレートとメディアの記事が掲載されています。ここでは、メディアライブラリのリソース、テンプレートの管理方法、画像のアップロード方法、コンテンツブロックの作成方法などを確認できます。"
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Media Library
+  - name: メディアライブラリ
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
-    fa_icon: fas fa-book-open
-  - name: Content Blocks
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: コンテンツブロック
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-    fa_icon: fas fa-columns
-  - name: Managing Templates
+    image: /assets/img/braze_icons/columns-01.svg
+  - name: キャンバステンプレート
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
+    image: /assets/img/braze_icons/palette.svg
+  - name: テンプレートを管理する
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
-    fa_icon: fas fa-archive
-  - name: Image Specifications
-    link: /docs/user_guide/engagement_tools/templates_and_media/image_specs/
-    fa_icon: fas fa-image    
-  - name: Frequently Asked Questions
+    image: /assets/img/braze_icons/archive.svg
+  - name: よくある質問
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## テンプレートとメディアについて

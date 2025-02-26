@@ -35,14 +35,14 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `items` | Required | Array | An array that contains item objects. The item objects should contain fields that exist in the catalog. Up to 50 item objects are allowed per request. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
 
@@ -60,16 +60,33 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": {
+        "$add": [
+          "Biscuits",
+          "Coleslaw"
+        ],
+        "$remove": [
+          "French Fries"
+        ]
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
       "id": "restaurant3",
       "City": "San Francisco",
-      "Rating": 2
+      "Rating": 2,
+      "Top_Dishes": [
+        "Buffalo Wings",
+        "Philly Cheesesteak"
+      ]
     }
   ]
 }'
 ```
+
+{% alert note %}
+The `$add` and `$remove` operators are only applicable to array type fields, and are only supported by PATCH endpoints.
+{% endalert %}
 
 ## Response
 
@@ -120,12 +137,12 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
 | `invalid-fields` | Confirm that all fields you are sending in the API request already exist in the catalog. This is not related to the ID field mentioned in the error. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
+| `items-missing-ids` | Some items don't have item IDs. Check that each item has an item ID. |
 | `item-array-invalid` | `items` must be an array of objects. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 | `unable-to-coerce-value` | Item types can't be converted. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

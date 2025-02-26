@@ -24,7 +24,7 @@ This reference article will help you understand the use cases Amazon Personalize
 | Amazon Web Service account | An AWS account is required to take advantage of this partnership. After you have an AWS account, you can access Amazon Personalize through the Amazon Personalize console, the AWS Command Line Interface (AWS CLI), or the AWS SDKs. |
 | Defined use cases | Before creating a model, you must determine your use case for this integration. Reference the following list for common use cases. |
 | Datasets | Amazon Personalize recommendation models require three different types of datasets, interactions, users, and items. Reference the following details to see the requirements for each dataset. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
 {% tab Use Cases %}
@@ -79,10 +79,10 @@ Additionally, Amazon Personalize offers automatic hyperparameter tuning by runni
 
 Once a solution finishes training, you are ready to evaluate it and compare different versions. Each solution version displays computed metrics. Some of the available metrics include:
 
-- `Normalize discounted cumulative gain`: compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
-- `Precision @k`: the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
-- `Mean reciprocal rank`: focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
-- `Coverage`: the proportion of unique recommended items to the total number of unique items in the dataset
+- **Normalize discounted cumulative gain:** compares the recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
+- **Precision @k:** the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
+- **Mean reciprocal rank:** focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
+- **Coverage:** the proportion of unique recommended items to the total number of unique items in the dataset
 
 ## Getting Recommendations
 

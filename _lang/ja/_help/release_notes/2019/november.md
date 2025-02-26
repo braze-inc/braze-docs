@@ -3,31 +3,31 @@ nav_title: 11月
 page_order: 2
 noindex: true
 page_type: update
-description: "この記事には、2019 年 11 月のリリース ノートが含まれています。"
+description: "この記事には2019年11月のリリースノートが含まれています。"
 ---
 
 # 2019年11月
 
-今後もさらに続きます!今月後半にまた更新情報をチェックしてください!
+今後も追加予定です。今月後半にまたチェックして、さらに更新情報をお待ちください！
 
 ## Intelligence Suite
 
-Braze の [Intelligence Suite は、]({{site.baseurl}}/user_guide/intelligence/) データに基づく洞察によって意思決定を自動化するのに役立ちます。配信時間から多変量テストまで、ブランドはこれらのツールと機能を使用して、大規模に最適化された動的なクロスチャネル エクスペリエンスを作成できます。<br> <br> Intelligence Suite は、次の 3 つの主要機能で構成されています。[インテリジェント タイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)、 [インテリジェント チャネル]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/)、 [インテリジェント選択]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)。
+Brazeの[インテリジェンススイート]({{site.baseurl}}/user_guide/intelligence/)は、データに基づく洞察で意思決定を自動化するのに役立ちます。配信時間から多変量テストまで、ブランドはこれらのツールと機能を使用して、大規模に最適化されるダイナミックなクロスチャネルのエクスペリエンスを構築できます。<br> <br> Intelligence Suite は、[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), [インテリジェントチャネル]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/), and [インテリジェントセレクション]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 {% alert note %}
-「インテリジェンス スイート」は、以前は「最もエンゲージメントの高いチャネル」、「インテリジェント タイミング」、「多変量テストと A/B テスト」と呼ばれていた機能を改訂してグループ化したものです。
+「インテリジェンススイート」は、以前「最もエンゲージされたチャネル」、「インテリジェントタイミング」、および「多変量およびABテスト」として知られていた機能の改訂およびグループ化です。
 {% endalert %}
 
 ## アプリ内メッセージのダークモードテーマ
 
-iOS 13とAndroid 10はどちらも、携帯電話のカラーテーマを「ダークモード」に変更できる設定を導入しました。この機能に合わせて、Braze は [アプリ内メッセージにダーク モード]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)を導入しました。この機能を使用すると、「ライト」テーマと「ダーク」テーマを使用してアプリ内メッセージを作成できます。送信先のデバイスで「ダーク モード」が有効になっている場合、メッセージには選択したダーク モード テーマが表示されます。
+iOS 13とAndroid 10の両方が、携帯電話のカラーテーマを「ダークモード」に変更できる設定を導入しました。この機能に合わせて、Brazeは[アプリ内メッセージのダークモード]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)を導入しました！この機能を使用すると、「ライト」と「ダークテーマ」のアプリ内メッセージを作成できます。デバイスで「ダークモード」が有効になっている場合、メッセージは選択したダークモードテーマで表示されます。
 
 <img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-## エンゲージメントレポートの SMS 指標
+## エンゲージメントレポートのSMSメトリクス
 
-SMS メトリックが [エンゲージメント レポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/)で利用できるようになりました。
+SMSメトリクスは現在[エンゲージメントレポート]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/)で利用可能です！
 
-## Braze ユーザーのチームを削除する
+## Brazeユーザーのチームを削除する
 
-Braze ユーザーのアカウントからチームを削除できるようになりました。
+Brazeユーザーのアカウントからチームを削除できるようになりました！

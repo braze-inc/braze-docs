@@ -5,49 +5,49 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、カスタムイベントのエクスポート分析Brazeエンドポイントの詳細について説明します。"
+description: "この記事では、「カスタムイベント分析のエクスポート」Braze エンドポイントの詳細について概説します。"
 
 ---
 {% api %}
-# カスタムイベント分析のエクスポート
+# カスタムイベント分析をエクスポートする
 {% apimethod get %}
 /events/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、指定した期間にアプリ内で発生したカスタムイベントの数の連続を取得します。
+> このエンドポイントを使用して、指定された期間にわたり、アプリ内でカスタムイベントが発生した回数を取得します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`events.data_series` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`events.data_series`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-| `event` | Required | String | 分析を返すカスタムイベントの名前。|
-| `length` | Required | Integer | `ending_at` より前の最大単位数(日数または時間数) が返された系列に含まれます。1 ～100 (両端を含む) である必要があります。|
-| `unit` | オプション| 文字列| データポイント間の時間の単位。`day`または`hour`にすることができます。デフォルトは`day`です。|
-| `ending_at` | オプション| 日時 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string)| データ系列が終了する日付。デフォルトは要求の時刻です。|
-| `app_id` | オプション| 文字列| [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから取得されたアプリケーションAPI 識別子。分析を特定のアプリに制限します。|
-| `segment_id` | オプション| String | [セグメントAPI 識別子]({{site.baseurl}}/api/identifier_types/) を参照してください。イベント分析を返す分析が有効なセグメントを示すセグメントID。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `event` | 必須 | 文字列 | アナリティクスを返すカスタムイベントの名前。 |
+| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
+| `unit` | オプション | 文字列 | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
+| `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
+| `app_id` | オプション | 文字列 | 特定のアプリに分析を限定するために、[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。 |
+| `segment_id` | オプション | 文字列 | [セグメントAPI 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。イベント分析が返されるべき、分析可能なセグメントを示すセグメント ID。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## リクエスト例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id={{app_identifier}}&segment_id={{segment_identifier}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
-{% endraw %} 
+{% endraw %}
 
-## レスポンス
+## 応答
 
 ```json
 Content-Type: application/json
@@ -64,12 +64,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### 致命的なエラー応答コード {#fatal-export}
+### 致命的なエラーの応答コード {#fatal-export}
 
-リクエストで致命的なエラーが発生した場合に返されるステータスコードと関連するエラーメッセージについては、[Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors) を参照してください。
+ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
-CSV およびAPI エクスポートのヘルプについては、[トラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) をエクスポートしてください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

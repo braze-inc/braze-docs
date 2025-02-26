@@ -8,21 +8,21 @@ description: "この記事では、iOS アプリケーションのアンイン�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のアンインストール追跡
 
 > この記事では、iOS アプリケーションのアンインストール追跡を構成する方法と、Braze アンインストール追跡プッシュの受信時にアプリで不要な自動アクションが実行されないことを確認するためのテスト方法について説明します。
 
-アンインストール追跡では、ペイロードに Braze フラグを含むバックグラウンドプッシュ通知を利用します。詳細については、ユーザーガイドの[アンインストール追跡][6]を参照してください。
+アンインストール追跡では、ペイロードに Braze フラグを含むバックグラウンドプッシュ通知を利用します。詳細については、ユーザーガイドの[アンインストール追跡]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking)を参照してください。
 
 ## ステップ 1:バックグラウンドプッシュを有効にする
 
-Xcode プロジェクトの [**機能**] タブの **[バックグラウンドモード**] セクションで、[**リモート通知**] オプションが有効になっていることを確認します。詳細については、[サイレントプッシュ通知][5]のドキュメントを参照してください。
+Xcode プロジェクトの [**機能**] タブの **[バックグラウンドモード**] セクションで、[**リモート通知**] オプションが有効になっていることを確認します。詳細については、[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/)のドキュメントを参照してください。
 
 ## ステップ 2:Braze バックグラウンドプッシュを確認する
 
-Braze では、バックグラウンドプッシュ通知を使用してアンインストール追跡分析を収集します。アンインストール追跡通知の受信時に、アプリケーションで[不要なアクションが実行されない][4]ようにしてください。
+Braze では、バックグラウンドプッシュ通知を使用してアンインストール追跡分析を収集します。アンインストール追跡通知の受信時に、アプリケーションで[不要なアクションが実行されない]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/)ようにしてください。
 
 ## ステップ 3:ダッシュボードからテストする
 
@@ -39,10 +39,5 @@ Braze では、バックグラウンドプッシュ通知を使用してアン�
 
 ## ステップ 4:アンインストール追跡を有効にする
 
-[アンインストール追跡を有効にする][6]手順に従ってください。
+[アンインストール追跡を有効にする]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking)手順に従ってください。
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
-[9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
-[10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

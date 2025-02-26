@@ -1,11 +1,11 @@
 ---
-nav_title: "取得：ニュースフィードカードの詳細をエクスポート"
-article_title: "取得：ニュースフィードカードの詳細をエクスポート"
+nav_title: "取得:輸出ニュースフィードカードの詳細"
+article_title: "取得:輸出ニュースフィードカードの詳細"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、ニュースフィードカードの詳細をエクスポートするBrazeエンドポイントについて詳しく説明します。"
+description: "この記事では、「ニュースフィードカードの詳細のエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
@@ -14,30 +14,28 @@ description: "この記事では、ニュースフィードカードの詳細を
 /feed/details
 {% endapimethod %}
 
-> このエンドポイントを使用して、カード上の関連情報を取得します。この情報は、 `card_id`.
+> このエンドポイントを使用して、`card_id` で識別できるカードの関連情報を取得します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Brazeでは、ニュースフィードツールをご利用のお客様には、柔軟性、カスタマイズ性、信頼性に優れたコンテンツカードメッセージングチャネルへの移行を推奨しています。詳しくは、 [移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
-## 前提 条件
+## 前提条件
 
-このエンドポイントを使用するには、アクセス許可を持つ `feed.details` [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`feed.details`の権限が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 要求パラメーター
+## リクエストパラメーター
 
-|パラメータ |必須項目 |データ型 |説明 |
+| パラメーター | required | データ型 | 説明            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` |必須項目 |文字列 | [「カード API 識別子]({{site.baseurl}}/api/identifier_types/)」を参照してください。<br><br> 特定のカードの API `card_id` [キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページとダッシュボード内のカードの詳細ページ、または [ニュースフィード カード リストのエクスポート エンドポイント]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)を使用できます。|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| `card_id` | required | 文字列 | [カード API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> 指定したカードの `card_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページやダッシュボード内のカード詳細ページで確認できるほか、[ニュースフィードカードリストのエクスポート]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)エンドポイントも使用できます。|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 要求の例
+## 例のリクエスト
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/details?card_id={{card_identifier}}' \
@@ -68,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV と API のエクスポートに関するヘルプについては、 [エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)をご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

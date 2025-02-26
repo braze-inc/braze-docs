@@ -17,12 +17,10 @@ description: "このリファレンス記事では、Android または FireOS �
 
 この時点で、Braze 統合でセッショントラッキングが機能しているはずです。これをテストするには、[**概要**] に移動し、選択したアプリ名のドロップダウンからアプリケーションを選択して (デフォルトは「すべてのアプリ」)、[**表示データ**] を「今日」に設定します。次に、アプリを開いてページを更新します。メインの指標がすべて 1 増加しているはずです。
 
-![][55]
+![]({% image_buster /assets/img_archive/android_sessions.png %})
 
 アプリケーション内を移動し、1 つのセッションのみがログに記録されていることを確認して、統合のテストを続行する必要があります。次に、アプリを少なくとも 10 秒間バックグラウンドにしてから、再びフォアグラウンドに戻します。デフォルトでは、アプリがバックグラウンドになった後、または 10 秒以上閉じられた後にフォアグラウンドに移動すると、新しいセッションが作成されます。これが完了したら、別のセッションがログに記録されたことを確認します。
 
 ## セッショントラッキングのデバッグ
-セッショントラッキングが予期せぬ動作をしている場合は、[詳細なログ記録][56]をオンにして、セッションをトリガーする手順を再現しながらアプリを観察してください。llogcat 内の Braze ステートメントを観察して、アクティビティ内の `openSession` および `closeSession` 呼び出しのログ記録を見逃している可能性がある場所を検出します。
+セッショントラッキングが予期せず動作している場合は、[詳細なロギング]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#enabling-logs)をオンにして、セッショントリガーステップを再現しながらアプリを監視します。llogcat 内の Braze ステートメントを観察して、アクティビティ内の `openSession` および `closeSession` 呼び出しのログ記録を見逃している可能性がある場所を検出します。
 
-[55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#android-verbose-logging

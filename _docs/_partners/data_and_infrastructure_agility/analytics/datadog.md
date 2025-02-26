@@ -20,7 +20,7 @@ The Braze and Datadog integration allows customers to collect Braze data in Data
 | Requirement | Description |
 |---|---|
 | Datadog account | A Datadog account is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 

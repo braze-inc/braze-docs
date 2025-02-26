@@ -1,21 +1,21 @@
 ---
-nav_title: カスタムスタイル
-article_title: Web 用アプリ内メッセージカスタムスタイリング
+nav_title: カスタムスタイリング
+article_title: Web向けアプリ内メッセージのカスタムスタイリング
 platform: Web
 channel: in-app messages
 page_order: 1
 page_type: reference
-description: "この記事では、ウェブアプリケーションのアプリ内メッセージングのカスタムスタイルについて説明します。"
+description: "この記事では、Webアプリケーションのアプリ内メッセージングのカスタムスタイリングについて説明します。"
 
 ---
 
-# カスタムスタイル
+# カスタムスタイリング
 
-> Braze UI要素には、ニュートラルなアプリ内メッセージエクスペリエンスを実現し、他のBrazeモバイルプラットフォームとの一貫性を保つことを目的としたデフォルトのルックアンドフィールが付属しています。Braze のデフォルトスタイルは、Braze SDK 内の CSS で定義されます。 
+> BrazeのUI要素はデフォルトの外観と操作感を備えており、ニュートラルなアプリ内メッセージ体験を提供し、他のBrazeモバイルプラットフォームとの一貫性を目指しています。Brazeのデフォルトスタイルは、Braze SDK内のCSSで定義されています。 
 
-アプリケーションで選択したスタイルをオーバーライドすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して、標準のアプリ内メッセージタイプをカスタマイズできます。 
+アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準アプリ内メッセージタイプをカスタマイズできます。 
 
-たとえば、以下はアプリ内メッセージのヘッダーを斜体で表示するオーバーライドの例です。
+たとえば、次の例はアプリ内メッセージのヘッダーをイタリックで表示する上書きを示しています。
 
 ```css
   body .ab-in-app-message .ab-message-header {
@@ -23,11 +23,11 @@ description: "この記事では、ウェブアプリケーションのアプリ
   }
 ```
 
-詳細については、[JSDocs][2] を参照してください。
+詳細については[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html)を参照してください。
 
-## アプリ内メッセージのデフォルト Z インデックス
+## アプリ内メッセージ デフォルト z-index
 
-デフォルトでは、`z-index: 9001`アプリ内メッセージはを使用して表示されます。これは、ウェブサイトがそれよりも高い値を持つ要素のスタイルを設定するシナリオでは、`inAppMessageZIndex `[初期化オプションを使用して設定できます][41]。
+デフォルトでは、アプリ内メッセージは `z-index: 9001` を使用して表示されます。これは、`inAppMessageZIndex ` [初期化オプション](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)を使用して構成可能であり、あなたのWeb サイトがそれよりも高い値で要素をスタイルするシナリオで使用されます。
 
 ```javascript
 braze.initialize("YOUR-API-KEY", {
@@ -37,9 +37,6 @@ braze.initialize("YOUR-API-KEY", {
 ```
 
 {% alert important %}
-このオプションは Web SDK v3.3.0 で導入されました。このオプションを使用するには、古い SDK をアップグレードする必要があります。
+このオプションはWeb SDK v3.3.0で導入されました。このオプションを使用するには、従来の SDK をアップグレードする必要があります。
 {% endalert %}
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[15]: https://fontawesome.com/?from=io
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

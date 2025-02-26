@@ -1,46 +1,37 @@
 ---
-nav_title: スマートTV統合
-article_title: Web向けスマートTV統合
+nav_title: スマートTVとの統合
+article_title: Web 向けスマート TV の統合
 platform: Web
 page_order: 20
-description: "この記事では、Braze Web SDK を使用してスマートテレビ(Samsung およびLG) と統合する方法について説明します。"
+description: "この記事では、Braze Web SDKを使用してスマートテレビ（サムスンおよびLG）と統合する方法について説明する。"
 
 ---
 
-# スマートTV統合
+# スマートTVとの統合
 
-> Braze Web SDK では、[Samsung Tizen TVs][1] と[LG TVs (webOS)][2] を含む、アプリ内の豊富なメッセージとコンテンツカードメッセージをスマートTV ユーザーに収集して表示できます。この記事では、Braze Web SDK を使用してスマートテレビに統合する方法について説明します。
+> Braze Web SDK を使えば、[Samsung Tizen TV](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html) や [LG TV (webOS)](https://webostv.developer.lge.com/discover) を含むスマート TV ユーザーに対して、分析を収集し、リッチなアプリ内メッセージやコンテンツカードメッセージを表示できます。この記事では、Braze Web SDKを使用してスマートTVと統合する方法について説明する。
 
-完全なテクニカルリファレンスについては、弊社の[JavaScript Documentation][3] または弊社の[サンプルアプリ][9] をチェックして、テレビで実行されているWeb SDK をご覧ください。
+完全なテクニカル・リファレンスについては、[JavaScriptドキュメンテーションや](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)、TV上で動作するWeb SDKを確認するための[サンプル・アプリケーションを](https://github.com/Appboy/smart-tv-sample-apps)チェックしてほしい。
 
-## Braze SDK の取り付け
+## Braze SDKをインストールする
 
-開始するには、Web SDK の[初期SDK セットアップ][4] ガイドに従ってください。
+開始するには、Web SDK の[初期 SDK 設定]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)ガイドに従ってください。
 
-スマートテレビとの統合には、次の2 つの変更が必要です。
+スマートTVとの統合には2つの変更が必要だ：
 
-1. Web SDK をダウンロードまたはインポートする場合は、必ず "core" bundle (https://js.appboycdn.com/web-sdk/x.y/braze.core.min.js, where x.y is the desired version). We recommend using the CDN version of our Web SDK, since the NPM version is written in native ES modules whereas the CDN version is transpiled down to ES5. If you prefer to use the [NPM version][6] で使用可能) を使用してください。未使用のコードを削除する webpack などのバンドラーを使用していて、コードが ES5 にトランスパイルドダウンされていることを確認してください。
-2. Web SDK を初期化する場合は、`disablePushTokenMaintenance` および`manageServiceWorkerExternally` 初期化オプションを`true` に設定する必要があります。
+1. Web SDK をダウンロードまたはインポートする際は、必ず「コア」バンドル (https://js.appboycdn.com/web-sdk/x.y/braze.core.min.js で入手可能、x.y は任意のバージョン) を使用してください。NPM バージョンはネイティブ ES モジュールで記述されているのに対し、CDN バージョンは ES5 にトランスパイルされるため、Web SDK の CDN バージョンを使用することをおすすめします。[NPMバージョンを](https://www.npmjs.com/package/@braze/web-sdk)使いたい場合は、webpackのようなバンドルツールを使って、未使用のコードを削除し、コードがES5にトランスパイルされていることを確認すること。
+2. Web SDK を初期化する際には、`disablePushTokenMaintenance` と`manageServiceWorkerExternally` の初期化オプションを `true` に設定する必要があります。
 
 ## 分析
 
-分析用の同じWeb SDK メソッドはすべて、スマートテレビで使用できます。
+アナリティクスのための同じWeb SDKメソッドはすべて、スマートTVで使用できる。
 
-カスタムイベント、カスタム属性などを追跡するための完全なガイドについては、[Analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) のドキュメントを参照してください。
+カスタムイベントやカスタム属性などのトラッキングに関する完全なガイドについては、[分析]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/)ドキュメントを参照してください。
 
 ## アプリ内メッセージとコンテンツカード
 
-Braze Web SDK は、スマートテレビで[アプリ内メッセージ][7] と[コンテンツカード][8] の両方をサポートしています。["Core"Web SDK][6]をアプリ内メッセージのレンダリングとして使用する必要があります。また、コンテンツカードは標準のUI ディスプレイを使用することはサポートされておらず、代わりにTV アプリの体験に合わせてアプリでカスタマイズする必要があります。
+Braze Web SDK は、[アプリ内メッセージ]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/)とスマート TV 上の[コンテンツカード]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/)の両方をサポートしています。アプリ内メッセージとコンテンツカードのレンダリングは、標準の UI 表示ではサポートされていないため、[「Core」Web SDK](https://www.npmjs.com/package/@braze/web-sdk) を使用する必要があります。代わりに、TV アプリのエクスペリエンスに合わせてアプリでカスタマイズする必要があります。
 
-スマートTVアプリがアプリ内メッセージを受信および表示する方法の詳細については、[アプリ内の手動メッセージ表示][5]をご覧ください。
+Smart TVアプリがアプリ内メッセージを受信して表示する方法の詳細については、[アプリ内メッセージ表示マニュアルを]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display)参照のこと。
 
 
-[1]: https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html
-[2]: https://webostv.developer.lge.com/discover
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#manual-in-app-message-display
-[6]: https://www.npmjs.com/package/@braze/web-sdk
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/
-[9]: https://github.com/Appboy/smart-tv-sample-apps

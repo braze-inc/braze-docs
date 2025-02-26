@@ -4,21 +4,21 @@ nav_title: ベストプラクティス
 article_title: アプリケーション内メッセージのベストプラクティス
 layout: dev_guide
 guide_top_header: "アプリケーション内メッセージのベストプラクティス"
-guide_top_text: "アプリ内メッセージを送信する前に、以下の記事を参照して確認してください。"
+guide_top_text: "アプリ内メッセージを送る前に、知っておくべきことや確認すべきことについて、以下の記事を参照してください。"
 page_type: landing
-description: "このランディングページは、アプリ内メッセージの構築と送信に関するベストプラクティスのホームページです。"
+description: "このランディングページには、アプリ内メッセージの作成と送信に関するベストプラクティスがまとめられています。"
 channel: in-app messages
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Prep Guide
+- name: 準備ガイド
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-  fa_icon: fas fa-book-open
-- name: "Sending Test Messages"
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "テストメッセージの送信"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
-- name: "Know Before You Send"
+  image: /assets/img/braze_icons/mail-01.svg
+- name: "送る前に知っておこう"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
   
 ---

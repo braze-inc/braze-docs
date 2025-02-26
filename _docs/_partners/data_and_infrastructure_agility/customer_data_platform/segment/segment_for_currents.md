@@ -23,7 +23,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Braze destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Currents | In order to export data back into Segment, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -41,11 +41,17 @@ It's important to keep your Segment write key up to date. If your connector's cr
 2. Click **+ Create New Current** > **Segment Data Export**.
 3. Next, provide an integration name, contact email, Segment write key, and Segment region.
 
-![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
+![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][1]
 
 ### Step 3: Export message engagement events
 
-Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
+Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId` and the user's `braze_id` as the `anonymousId`.
+
+Keep in mind, Braze only sends event data for users without an `external_user_id` if **Include events from anonymous users** is checked.
+
+{% alert important %}
+Anonymous user export is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
 
 ![List of all available message engagement events on the Segment Currents page in Braze.][2]
 
@@ -63,7 +69,7 @@ To read more, visit Segment [documentation](https://segment.com/docs/connections
 
 ## Supported Currents events
 
-Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to Segment:
+Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) event glossaries to Segment:
  
 ### Behaviors
 - Uninstall: `users.behaviors.Uninstall`
@@ -132,6 +138,5 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
 
-[1]: {% image_buster /assets/img/segment/segment_currents1.png %}
-[2]: {% image_buster /assets/img/segment/segment_currents.png %}
-[3]: {% image_buster /assets/img/segment/segment.png %}
+[1]: {% image_buster /assets/img/segment/segment_currents_integration_config.png %}
+[2]: {% image_buster /assets/img/segment/segment_currents_data_config.png %}

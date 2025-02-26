@@ -24,7 +24,7 @@ The Braze and Zendesk server-to-server integration allows you to utilize:
 | Zendesk API token | A Zendesk [API token][2] is required to send requests from Braze to the Zendesk ticket endpoint. |
 | Common identifier (recommended) | A [common identifier](#common-identifier) between Braze and Zendesk is recommended. |
 | Braze API key | A Braze API key is required to send requests from Zendesk to a Braze endpoint. Ensure that the API key you use has the correct permissions for the Braze endpoint your Zendesk webhook is using. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Braze to Zendesk integration
 
@@ -35,15 +35,15 @@ To create a webhook:
 - **Campaigns:** Go to the **Campaigns** page in the Braze dashboard. Click **Create Campaign** and select **Webhook**.
 - **Canvas:** From a new or existing Canvas, create a full or message step in the Canvas builder. Next, click **Messages** and select **Webhook** from the message options.
 
-In your Webhook, fill out the following fields:
+In your webhook, fill out the following fields:
 - **Webhook URL**: `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
 - **Request Body**: Raw Text
 
-Further use cases can be handled through [Zendesk support APIs][4], which would change the `/api/v2/` endpoint accordingly at the end of the Webhook URL.
+Further use cases can be handled through [Zendesk support APIs][4], which would change the `/api/v2/` endpoint accordingly at the end of the webhook URL.
 
 #### Request header and method
 
-Zendesk requires an HTTP Header for authorization and an HTTP method. In the **Settings** tab, replace the <email_address> with your Zendesk admin email and <api_token> with your Zendesk API token.
+Zendesk requires an HTTP header for authorization and an HTTP method. In the **Settings** tab, replace the <email_address> with your Zendesk admin email and <api_token> with your Zendesk API token.
 
 - **HTTP Method**: POST
 - **Request Headers**:
@@ -82,7 +82,7 @@ Define the ticket details like type, subject, and status in your webhook payload
 
 ### Step 2: Preview your request
 
-Your raw text will automatically highlight if it is an applicable Braze tag.
+Your raw text will automatically highlight if it's an applicable Braze tag.
 
 Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user or an existing user or customize your own to test your webhook.
 
@@ -105,8 +105,8 @@ If you have a common identifier between Braze and Zendesk, it is recommended to 
 - Select POST as the webhook's request method and set the request format to JSON.
 - Select the bearer token authentication method for the webhook and provide your [Braze API key](https://www.braze.com/docs/api/basics/#creating-and-managing-rest-api-keys).
   - Make sure that the API key you are using has the [correct permissions](https://www.braze.com/docs/api/basics/#rest-api-key-permissions) for the Braze endpoint your webhook is using.<br><br>
-5. (Recommended) Test the webhook to ensure it's working properly.<br><br>
-6. For trigger and automation webhooks, you must connect the webhook to a trigger or automation before finishing the setup. See the following step for our example of creating a trigger for the webhook. After the trigger has been created, you can return to this page and click **Finish setup**.
+5. (Recommended) Test the webhook to check it's working properly.<br><br>
+6. For trigger and automation webhooks, you must connect the webhook to a trigger or automation before finishing the setup. Refer to the following step for our example of creating a trigger for the webhook. After the trigger is created, you can return to this page and select **Finish setup**.
 
 ### Step 2: Create a trigger or automation
 
@@ -115,12 +115,12 @@ If you have a common identifier between Braze and Zendesk, it is recommended to 
 Our example below will use a trigger to invoke the webhook when a support case status has been changed to "Solved" or "Closed". 
 
 1. In the **Admin Center**, click **Objects and rules** in the sidebar, then select **Business rules > Triggers**.<br><br>
-2. Click **Add trigger**.<br><br>
+2. Select **Add trigger**.<br><br>
 3. Name your trigger and select a category.<br><br>
-4. Click **Add condition** to set up which conditions should trigger the webhook. For example, "Status category changed to closed" or "Status category changed to solved".![][8]{: style="max-width:70%;"}<br><br>
-5. Click **Add action**, choose **Notify active webhook**, and select from the dropdown the webhook created in the previous step.<br><br>
+4. Select **Add condition** to set up which conditions should trigger the webhook. For example, "Status category changed to closed" or "Status category changed to solved".![][8]{: style="max-width:70%;"}<br><br>
+5. Select **Add action**, choose **Notify active webhook**, and select from the dropdown the webhook created in the previous step.<br><br>
 6. Define the JSON body to conform to your Braze endpoint, using Zendesk variable placeholders to dynamically populate the relevant fields.<br>![][10]{: style="max-width:70%;"}<br><br>
-7. Click **Create**.<br><br>
+7. Select **Create**.<br><br>
 8. Return to your webhook and click **Finish setup**.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/

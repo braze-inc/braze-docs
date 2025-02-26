@@ -12,24 +12,20 @@ tool:
 
 # Creating a push message
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app.
-
-To see examples of push notifications, check out our [Case Studies][8].
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies][8].
 
 ## Step 1: Choose where to build your message {#create-new-campaign-push}
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+{% alert tip %}
+Not sure whether to use a campaign or a Canvas? Campaigns are better for simple, single messaging campaigns, while Canvases are better for multi-step user journeys.
+{% endalert %}
 
 {% tabs %}
 {% tab Campaign %}
-
-**Steps:**
-
-1. Go to **Messaging** > **Campaigns** and click **Create Campaign**.
-2. Select **Push Notification**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+1. Go to **Messaging** > **Campaigns**, then select **Create Campaign**.
+2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push Notification**. If you're still not sure, refer to **Deciding between regular or multichannel push campaign** below.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. **Tip:** Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Deciding between regular or multichannel push campaign %}
@@ -58,9 +54,6 @@ If all of the messages in your campaign are going to be similar or have the same
 
 {% endtab %}
 {% tab Canvas %}
-
-**Steps:**
-
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
@@ -80,9 +73,9 @@ There are a few different ways to do this depending on your previous selections:
 | Previous selection | Options |
 | --- | --- | 
 | Push notification campaign | Select one or more platforms and devices. If you choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. This provides an editing experience optimized for crafting one message for all selected platforms in a single editor. See [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what's different in this editing experience. |
-| Multichannel campaign | Click **Add Messaging Channel** to add additional push platforms. Because platform selections are specific to each variant, you can try testing message engagement per platform.
-| Canvas | In your Message step, click **+ Add more** to add additional push platforms. Similar to multichannel campaigns, platform selections are specific to each variant. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Multichannel campaign | Select **Add Messaging Channel** to add additional push platforms. Because platform selections are specific to each variant, you can try testing message engagement per platform.
+| Canvas | In your Message step, select **+ Add more** to add additional push platforms. Similar to multichannel campaigns, platform selections are specific to each variant. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 3: Select notification type (iOS and Android)
 
@@ -108,20 +101,36 @@ The content of the **Compose** tab varies based on your chosen notification type
 
 #### Notification channel or group (iOS and Android)
 
-For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/).
 
 #### Language
 
-Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported][18].
+
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Title and body
 
-Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. To add a headline to an iOS push notification, use the **Title** field.
+{% tabs local %}
+{% tab ios %}
+Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. 
+
+Add a headline using the **Title** field. To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
+{% endtab %}
+
+{% tab android %}
+Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. 
 
 To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
+{% alert important %}
+You **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, refer to [Silent push notifications]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
+{% endalert %}
+{% endtab %}
+{% endtabs %}
+
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body field of the push composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -137,7 +146,7 @@ For additional guidance on using images in your push notifications, refer to the
 
 #### On-click behavior
 
-Specify what happens when a user clicks the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
+Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Here, you can also set up button prompts within your push notification, such as:
 
@@ -156,18 +165,18 @@ There is some nuance for this setting. If this option is selected, Braze will li
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
-### Step 4a: Preview and test your message
+## Step 5: Preview and test your message (optional)
 
 ![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
 
-## Step 5: Build the remainder of your campaign or Canvas
+## Step 6: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the following sections for further details on how to best utilize our tools to build push notifications.
+Build the remainder of your campaign; see the following sections for further details on how to best use our tools to build push notifications.
 
 #### Choose delivery schedule or trigger
 
@@ -179,7 +188,7 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, click **Show Additional Stats**.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 {% details Why does my Total Reachable Users metric not match the sum of all channels? %}
 
@@ -222,7 +231,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 {% endtab %}
 {% endtabs %}
 
-## Step 6: Review and deploy {#review-and-deploy-push}
+## Step 7: Review and deploy {#review-and-deploy-push}
 
 After you've finished building the last of your campaign or Canvas, review its details. For campaigns, the final page will give you a summary of the campaign you've just designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
 

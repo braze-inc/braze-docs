@@ -19,11 +19,11 @@ page_order: 5
 エントリプロパティは、アクションベースおよび API トリガーのキャンバスで使用できます。これらのエントリプロパティは、キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされた時点で定義されます。詳細については、次の記事を参照してください。
 - [キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [イベントのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)
-- [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
+- [購入対象]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 これらのオブジェクトから渡されるプロパティは、Liquid タグ `canvas_entry_properties` を使用して参照できます。例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` を使ったリクエストの場合、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} という Liquid を追加して、メッセージに「shoes」という単語を追加できます。
 
-キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出すると削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)を使用します。
+キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出したときに削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)を使用します。
 
 {% alert note %}
 キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。
@@ -50,7 +50,7 @@ Liquid を使用したメッセージの中止の詳細については、[Liquid
 
 `canvas_entry_properties` では、すべてのユーザーに適用されるグローバルプロパティを設定するか、指定のユーザーのみに適用されるユーザー固有のプロパティを設定することができます。ユーザー固有のプロパティは、そのユーザーのグローバルプロパティより優先されます。
 
-### 例
+### リクエスト例
 
 ```
 url -X POST \
@@ -76,7 +76,7 @@ url -X POST \
     }' \
 ```
  
-このリクエストでは、「food allergies」のグローバル値は「none」です。Customer\_123 の場合、値は「dairy」です。Liquid スニペットの {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージでは、「Customer_123」に「dairy」、他のすべてのユーザーには「none」がテンプレート化されます。 
+このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123 の場合、値は「dairy」です。Liquid スニペットの {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージでは、「Customer_123」に「dairy」、他のすべてのユーザーには「none」がテンプレート化されます。 
 
 ## ユースケース
 

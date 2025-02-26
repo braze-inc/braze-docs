@@ -19,10 +19,10 @@ description: "この記事では、Braze アカウントの取得方法、アク
 
 ログインの必要な場所が用意されたので、すでにわかっているかもしれませんが、ログイン方法を説明します。会社の最初のユーザーの場合は、前のセクションのガイダンスに従ってください。そうでない場合は、会社の Braze 管理者がアカウントを作成した後に自由にログインできます。
 
-[Braze.com](https://www.braze.com) のホームサイトからログインすることも、特定の [Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/)に対応するダッシュボード URL を使用することもできます。便利なように、Braze には以下のようないくつかのシングルサインオンオプションがあります。
+[Braze.com](https://www.braze.com) のホームサイトからログインするか、特定の [Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/)に対応するダッシュボード URL を使用する方法もあります。便利なように、Braze には以下のようないくつかのシングルサインオンオプションがあります。
 
 * [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
-* [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
+* [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 
@@ -30,6 +30,6 @@ description: "この記事では、Braze アカウントの取得方法、アク
 
 パスワードを再設定するには、ダッシュボードの [ログイン] ページの [**パスワードをお忘れですか?**] リンクをクリックします。その後、パスワードをリセットするリンクを受け取るメールアドレスの入力が求められます。
 
-![[パスワードを再設定] ボタン][45]
+![パスワード再設定ボタン][45]
 
 [45]: {% image_buster /assets/img_archive/enable_reset.png %}

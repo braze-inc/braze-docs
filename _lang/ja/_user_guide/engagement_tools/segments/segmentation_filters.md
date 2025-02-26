@@ -15,539 +15,559 @@ glossary_filter_text: "Select a category to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:
-  - name: Segment or CSV membership
-  - name: Custom attributes
-  - name: Custom events
-  - name: Sessions
-  - name: Retargeting
-  - name: Channel subscription behavior
-  - name: Purchase behavior
-  - name: Demographic attributes
-  - name: App
+  - name: セグメントまたはCSVメンバーシップ
+  - name: カスタム属性
+  - name: カスタムイベント
+  - name: セッション
+  - name: リターゲット
+  - name: チャンネルサブスクリプションの動作
+  - name: 購買行動
+  - name: 人口統計属性
+  - name: アプリ
   - name: Uninstall
-  - name: Devices
-  - name: Location
-  - name: Cohort membership
-  - name: Install attribution
-  - name: Intelligence and predictive
-  - name: Social activity
-  - name: Other Filters
+  - name: デバイス
+  - name: ロケーション
+  - name: コホート会員
+  - name: アトリビューションのインストール
+  - name: インテリジェンスと予測
+  - name: 社会活動
+  - name: その他のフィルタ
 
 glossaries:
-  - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included/nested into other segments. You must recreate the segment you're trying to include by using the same filters.
+  - name: セグメントのメンバーシップ
+    description: フィルターが使用されている任意のセグメントメンバーシップ (セグメントやキャンペーンなど) に基づいてフィルターし、1 つのキャンペーン内で複数の異なるセグメントをターゲットにすることができます。<br><br>すでにこのフィルターを使用しているセグメントは、他のセグメントに追加しり、ネストしたりできないことに注意してください。同じフィルターを使用して、含めるセグメントを再作成する必要があります。
     tags:
       - Segment or CSV membership
-  - name: Braze Segment Extensions
-    description: After creating a Segment Extension in the Braze dashboard, you can choose to include/exclude those extensions in your segment.
+  - name: Braze のセグメントエクステンション
+    description: セグメントエクステンションを Braze ダッシュボードで作成した後、それらのエクステンションをセグメントに含めたり除外したりできます。
     tags:
       - Segment or CSV membership
-  - name: Updated/Imported from CSV
-    description: Segments your users based on whether they were a part of a CSV upload or not.
+  - name: CSV から更新/インポート
+    description: CSV アップロードの一部であるかどうかに基づいてユーザーをセグメント化します。
     tags:
       - Segment or CSV membership
-  - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
+  - name: カスタム属性
+    description: "ユーザーが、記録されたカスタム属性値と一致するかどうかを決定します。(24時間) <br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Custom attributes
-  - name: Nested Custom Attributes
-    description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
+  - name: "作成日時:"
+    description: ユーザープロファイルが作成された時期でユーザーをセグメンテーションする。ユーザーがCSVまたはAPIによって追加された場合、このフィルターは追加された日付を反映する。ユーザーがCSVまたはAPIによって追加されておらず、SDKによって最初のセッションがトラッキングされている場合、このフィルターはその最初のセッションの日付を反映する。
+    tags:
+      - Other Filters
+  - name: 階層化カスタム属性
+    description: "カスタム属性のプロパティである属性。<br><br>階層化された時間のカスタム属性にフィルターを適用する場合、基準として [年間通算日] または [時刻] を選択できます。[年間通算日] では、比較対象として月と日のみがチェックされます。[時刻] では、年を含むタイムスタンプ全体が比較されます。"
     tags:
       - Custom attributes
-  - name: Day of Recurring Event
-    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
+  - name: 定期的なイベントの日
+    description: "このフィルターでは、データタイプが\"date\"のカスタム属性の月と日を調べますが、年は調べません。このフィルターは毎年発生するイベントに役立ちます。<br><br>タイムゾーン:<br>このフィルターは、ユーザーがどのタイムゾーンにあるかを調整します。"
     tags:
       - Custom attributes
-  - name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+  - name: カスタムイベント
+    description: "ユーザーが特別に記録された行動を実行したかどうかを決定します。<br><br> 例: <br>プロパティ activty_name で完了したアクティビティー。<br><br>タイムゾーン:<br>UTC - 暦日 = 1 暦日は、ユーザー履歴の 24 ～ 48 時間を含みます"
     tags:
       - Custom events
-  - name: First Did Custom Event
-    description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+  - name: 最初にカスタムイベントを実行した
+    description: "ユーザーが特別に記録された行動を実行した最も早い時刻を決定します。(24時間) <br><br>例: <br> 初回のカート放棄が過去 1 日未満<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Custom events
-  - name: Last Did Custom Event 
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に実行したカスタムイベント 
+    description: "ユーザーが特別に記録された行動を最後に実行した時刻を決定します。(24時間) <br><br>例: <br> 最後のカート放棄が過去 1 日未満<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Custom events
-  - name: X Custom Event In Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, and so on.
+  - name: X Y日間のカスタムイベント
+    description: "ユーザーが、最後に指定された暦日数 (1 ～ 30 日) の間に、特別に記録されたイベントを 0 ～ 50 回実行したかどうかを決定します。(暦日 = 1 暦日は、ユーザー履歴の 24 ～ 48 時間を含みます)<br> <a href=\"/docs/x-in-y-behavior/\"> ここでは、X-in-Y の動作について詳しく説明します。</a><br><br>例: <br>過去 1 暦日内にカートをちょうど 0 回放棄した<br><br>タイムゾーン:<br>UTC - すべてのタイムゾーンを考慮すると、1 暦日はユーザー履歴の24 ～48 時間を、Segmentが評価される時刻に応じて、2 暦日はユーザー履歴の48 ～72 時間を、などと表示します。"
     tags:
       - Custom events
-  - name: X Custom Event Property In Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, and so on.
+  - name: X Y 日間のカスタムイベントプロパティ
+    description: "ユーザーが、最後に指定された暦日数 (1 ～ 30 日) の間に、特別に記録されたイベントを特定のプロパティについて 0 ～ 50 回実行したかどうかを決定します。(暦日 = 1 暦日は、ユーザー履歴の 24 ～ 48 時間を含みます)<br><a href=\"/docs/x-in-y-behavior/\">ここでは、X-in-Y の動作について詳しく説明します。</a><br><br>例: <br> 過去 1 暦日内にカートをちょうど 0 回お気に入りに追加した<br><br>タイムゾーン:<br>UTC - すべてのタイムゾーンを考慮すると、1 暦日はユーザー履歴の24 ～48 時間を、Segmentが評価される時刻に応じて、2 暦日はユーザー履歴の48 ～72 時間を、などと表示します。"
     tags:
       - Custom events
-  - name: Email Address 
-    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter.
+  - name: 電子メールアドレス 
+    description: テスト用に個々のメールアドレスによってキャンペーン 受信者を指定できます。これは、「メールアドレスが空白でない」指定子を使用して、トランザクションメールをすべてのユーザー (配信停止済みユーザーを含む) に送信するためにも使用できます。
     tags:
       - Other Filters
-  - name: External User ID
-    description: Allows you to designate your campaign recipients by individual user IDs for testing.
+  - name: 外部ユーザーID
+    description: テストのために、キャンペーン受信者を個々のユーザー ID で指定することができます。
     tags:
       - Other Filters
-  - name: "Random Bucket #"
-    description: Segments your users by a randomly assigned number (0 to 9999 inclusive). It can enable the creation of uniformly distributed segments of truly random users for A/B and multivariate testing.
+  - name: "ランダムバケット番号"
+    description: ユーザーをランダムに割り当てられた番号(0～9999を含む)でセグメント化します。これにより、AB テストと多変量テストに対する真のランダムユーザーの一様分布セグメントを生成できるようになります。
     tags:
       - Other Filters
-  - name: Session Count
-    description: Segments your users by the number of sessions they have had in any of your apps within your workspace.
+  - name: セッション数
+    description: ユーザーをワークスペース内のいずれかのアプリでこれまでに行ったセッション数でセグメント化します。
     tags:
       - Sessions
-  - name: Session Count For App
-    description: Segments your users by the number of sessions they have had in a specific, designated app.
+  - name: アプリのセッション数
+    description: 指定されたアプリ内でこれまでに行ったセッション数によってユーザーをセグメント化します。
     tags:
       - Sessions
-  - name: X Sessions In Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+  - name: 過去 Y 日間の X 回のセッション
+    description: "最後に指定された暦日数 (1 ～ 30 日) の間に、貴社のアプリで行ったセッション数 (0 ～ 50 回) によってユーザーをセグメント化します。<br> <a href=\"/docs/x-in-y-behavior/\">ここでは、X-in-Y の動作について詳しく説明します。</a>"
     tags:
       - Sessions
-  - name: First Used App
-    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最初に使用したアプリ
+    description: "アプリを開封した記録の最も早い時刻によってユーザーをセグメント化します。<em>これは、ユーザーが Braze SDK を統合したアプリを使用した最初のセッションをキャプチャすることに注意してください。</em>(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Sessions
-  - name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your workspace. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最初に使用した特定のアプリ
+    description: "ワークスペース内の任意のアプリを開封した記録の最も早い時刻によってユーザーをセグメント化します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Sessions
-  - name: Last Used App
-    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に使用したアプリ
+    description: "アプリを開封した最後の時刻によってユーザーをセグメント化します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Sessions
-  - name: Last Used Specific App
-    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 特定のアプリの最終使用
+    description: "指定されたアプリを開封した最後の時刻によってユーザーをセグメント化します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Sessions
-  - name: Median Session Duration
-    description: Segments your users by the median length of their sessions in your app.
+  - name: セッション時間の中央値
+    description: アプリ内のセッションの長さの中央値によってユーザーをセグメント化します。
     tags:
       - Sessions
-  - name: Received Message from Campaign
-    description: 
+  - name: キャンペーンから受信したメッセージ
+    description: "指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
-  - name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received.
+  - name: キャンペーンバリアントを受信
+    description: "受信した多変量キャンペーンのバリアントによってユーザーをセグメント化します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
-  - name: Received Message from Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas component.
+  - name: キャンバスステップからメッセージを受信
+    description: "特定のキャンバスコンポーネントを受信したかどうかによってユーザーをセグメント化します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
-  - name: Last Received Message from Specific Canvas Step
-    description: Segments your users by when they received a specific Canvas component.
+  - name: 特定のキャンバスステップから最後に受信したメッセージ
+    description: 特定のキャンバスコンポーネントを受信した日時によってユーザーをセグメント化します。このフィルターでは、ユーザーが他のキャンバスコンポーネントをいつ受信したかは考慮されません。
     tags:
       - Retargeting
-  - name: Last Received Message from Specific Campaign
-    description: Segments your users by whether or not they have received a specific campaign.
+  - name: 特定のキャンペーンから最後に受信したメッセージ
+    description: 指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。このフィルターは、ユーザーがいつ他のキャンペーンを受けたかを考慮しない。
     tags:
       - Retargeting
-  - name: Received Message from Campaign or Canvas with Tag
-    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
+  - name: キャンペーンまたはキャンバスからタグ付きで受信したメッセージ
+    description: "指定したキャンペーンを受信したかどうか、または指定したタグのキャンバスを受信したかどうかによって、ユーザーを分割します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
-  - name: Last Received Message from Campaign or Canvas With Tag
-    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)
+  - name: キャンペーンまたはCanvas With Tagから最後に受信したメッセージ
+    description: 特定のタグを持つ特定のキャンペーンまたはキャンバスを受信した日時によってユーザーをセグメント化します。このフィルターは、ユーザーが他のキャンペーンやキャンバスを受け取った場合は考慮しない。(24時間)
     tags:
       - Retargeting
-  - name: Has Never Received a Message from Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or Canvas component.
+  - name: キャンペーンステップまたはキャンバスステップからメッセージを受信していない
+    description: キャンペーンまたはキャンバスコンポーネントを受信したかどうかによって、ユーザーをセグメント化します。
     tags:
       - Retargeting
-  - name: Last Received Email
-    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に受信したメール
+    description: "最後にメールを受信したときに、ユーザーをセグメント化します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last Received Push
-    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に受信したプッシュ
+    description: "ユーザーを最後にプッシュ通知のいずれかを受信したときにセグメント化します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last In App Message Impression
-    description: Segments your users by the last time they viewed an in-app message.
+  - name: 最後のアプリ内メッセージインプレッション
+    description: ユーザーを最後にアプリ内メッセージを表示したときにセグメント化します。
     tags:
       - Retargeting
-  - name: Last Received SMS
-    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に受信した SMS
+    description: "最後のメッセージがSMSプロバイダーに配信された時刻までにユーザーをセグメント化します。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last Received Webhook
-    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に受信した Webhook
+    description: "ユーザーを、BrazeがそのユーザーのWebhookを最後に送信した時刻までに分割します。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last Received WhatsApp
-    description: Segments your users by the last time that they have received a WhatsApp message. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: 最後に受信した WhatsApp
+    description: "最後にWhatsAppを受信したときに、ユーザーをセグメント化します。これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。(24時間)<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time they viewed News Feed.
+  - name: 最後に閲覧したニュースフィード
+    description: 最後にニュースフィードを表示したときに、ユーザーをセグメント化します。
     tags:
       - Retargeting
-  - name: News Feed View Count
-    description: Segments your users by how many times they viewed News Feed.
+  - name: ニュースフィードの閲覧数
+    description: ニュースフィードを表示した何回によってユーザーをセグメント化します。
     tags:
       - Retargeting
-  - name: Clicked/Opened Campaign
-    description: Filter by interaction with a specific campaign.
+  - name: クリックされた/開封されたキャンペーン
+    description: "特定のキャンペーンとのインタラクションでフィルタリングします。<br><br> メールとして、複数のユーザーが同じメールアドレスを共有している場合:<br>- メールを開封またはクリックすると、同じメールアドレスを持つ他のすべてのユーザーのプロファイルも更新されます。<br>- 元のユーザーがメッセージの送信後にメールアドレスを変更し、開封/クリックをまだ行っていない場合、元のユーザーではなく、そのメールアドレスを持つすべての残りのユーザーに開封またはクリックが適用されます。<br><br>SMSの場合、インターアクションは次のように定義されます。<br>- ユーザーは、指定されたキーワードカテゴリに一致するリプライSMSを最後に送信しました。これは、この電話番号を持つすべてのユーザーが受信した最新のキャンペーンに属性されます。キャンペーンは、過去4時間以内に受信されている必要があります。<br>- ユーザーは、指定のキャンペーンから、ユーザーのクリック追跡が有効になっている SMS メッセージ内の短縮リンクを最後に選択しました。"
     tags:
       - Retargeting
-  - name: Clicked/Opened Campaign or Canvas With Tag
-    description: Filter by interaction with a specific campaign that has a specific tag.
+  - name: クリック/開いたキャンペーンまたはタグ付きキャンバス
+    description: "特定のタグを持つ特定のキャンペーンとのインタラクションでフィルタリングします。<br><br> 複数のユーザーが同じメールアドレスを共有している場合:<br>- メールを開封またはクリックすると、同じメールアドレスを持つ他のすべてのユーザーのプロファイルも更新されます。<br>- 元のユーザーがメッセージの送信後にメールアドレスを変更し、開封/クリックをまだ行っていない場合、元のユーザーではなく、そのメールアドレスを持つすべての残りのユーザーに開封またはクリックが適用されます。<br><br>SMSの場合、インターアクションは次のように定義されます。<br>- ユーザーは、指定されたキーワードカテゴリに一致するリプライSMSを最後に送信しました。これは、この電話番号を持つすべてのユーザーが受信した最新のキャンペーンに属性されます。キャンペーンは、過去4時間以内に受信されている必要があります。<br>- ユーザーがタグを持つ指定のキャンペーンまたはキャンバスステップから、ユーザーのクリック追跡が有効になっている SMS メッセージ内の短縮リンクを最後に選択した日時。"
     tags:
       - Retargeting
-  - name: Clicked/Opened Step
-    description: Filter by interaction with a specific Canvas component.
+  - name: クリックされた/開封されたステップ
+    description: 特定のキャンバスコンポーネントとのインタラクションでフィルタリングします。<br><br>SMSの場合、インターアクションは次のように定義されます。<br>- ユーザーは、指定されたキーワードカテゴリに一致するリプライSMSを最後に送信しました。これは、この電話番号を持つすべてのユーザーが受信した最新のキャンペーンに属性されます。キャンペーンは、過去4時間以内に受信されている必要があります。<br>- ユーザーは、指定のキャンバスステップから、ユーザーのクリック追跡が有効になっている SMS メッセージ内の短縮リンクを最後に選択しました。
     tags:
       - Retargeting
-  - name: Clicked Alias in Campaign
-    description: Filter your users by whether they clicked a specific alias in a specific campaign.
+  - name: キャンペーンでクリックしたエイリアス
+    description: "指定したキャンペーンの特定の別名をクリックしたかどうかによって、ユーザーをフィルタリングします。これはメールメッセージだけに適用されます。<br><br> 複数のユーザーが同じメールアドレスを共有している場合:<br>- メールを開封またはクリックすると、同じメールアドレスを持つ他のすべてのユーザーのプロファイルも更新されます。<br>- 元のユーザーがメッセージの送信後にメールアドレスを変更し、開封/クリックをまだ行っていない場合、元のユーザーではなく、そのメールアドレスを持つすべての残りのユーザーに開封またはクリックが適用されます。"
     tags:
       - Retargeting
-  - name: Clicked Alias in Canvas Step
-    description: Filter your users by whether they clicked a specific alias in a specific Canvas.
+  - name: キャンバスステップでクリックしたエイリアス
+    description: "特定のキャンバスで特定のエイリアスをクリックしたかどうかによって、ユーザーをフィルタリングします。これはメールメッセージだけに適用されます。<br><br> 複数のユーザーが同じメールアドレスを共有している場合:<br>- メールを開封またはクリックすると、同じメールアドレスを持つ他のすべてのユーザーのプロファイルも更新されます。<br>- 元のユーザーがメッセージの送信後にメールアドレスを変更し、開封/クリックをまだ行っていない場合、元のユーザーではなく、そのメールアドレスを持つすべての残りのユーザーに開封またはクリックが適用されます。"
     tags:
       - Retargeting
-  - name: Clicked Alias in Any Campaign or Canvas Step
-    description: Filter your users by whether they clicked a specific alias in any campaign or Canvas.
+  - name: キャンペーンステップまたはキャンバスステップでクリックしたエイリアス
+    description: "ユーザーを、任意のキャンペーンまたはキャンバス内で特定のエイリアスをクリックしたかどうかによってフィルタリングします。これはメールメッセージだけに適用されます。<br><br> 複数のユーザーが同じメールアドレスを共有している場合:<br>- メールを開封またはクリックすると、同じメールアドレスを持つ他のすべてのユーザーのプロファイルも更新されます。<br>- 元のユーザーがメッセージの送信後にメールアドレスを変更し、開封/クリックをまだ行っていない場合、元のユーザーではなく、そのメールアドレスを持つすべての残りのユーザーに開封またはクリックが適用されます。"
     tags:
       - Retargeting
-  - name: Hard Bounced
-    description: Segment your users by whether or not their email address has hard bounced (such as the email address is invalid).
+  - name: ハードバウンス
+    description: ユーザーを、メールアドレスがハードバウンスされたかどうか (メールアドレスが不正な場合など) によってセグメント化します。
     tags:
       - Retargeting
-  - name: Has Marked You As Spam
-    description: Segments your users by whether or not they have marked your messages as spam.
+  - name: ソフトバウンス
+    description: Y日間にX回バウンスしたかどうかでユーザーをセグメントします。セグメントフィルターでは30日間しか遡ることができないが、セグメントエクステンションを使えばさらに遡ることができる。<br><br>このフィルターは、Currents のソフトバウンスイベントとは異なる動作をします。ソフトバウンスセグメンテーションフィルターは、72時間のリトライ期間中に配信が成功しなかった場合、ソフトバウンスをカウントします。Currents では、失敗した再試行はすべてソフトバウンスイベントとして送信されます。 
     tags:
       - Retargeting
-  - name: Invalid Phone Number 
-    description: Segments your users by whether or not their phone number is invalid.
+  - name: スパムとしてマークされた
+    description: メッセージをスパムとしてマークしたかどうかによってユーザーをセグメント化します。
     tags:
       - Retargeting
-  - name: Last Sent Specific SMS Inbound Keyword Category
-    description: Segments your users by when they last sent an SMS to a specific subscription group within a specific keyword category.
+  - name: 不正な電話番号 
+    description: 電話番号が不正かどうかによってユーザーをセグメント化します。
     tags:
       - Retargeting
-  - name: Converted From Campaign
-    description: Segments your users by whether or not they have converted on a specific campaign. This filter doesn't include users that are in the control group.
+  - name: 最後に送信された特定の SMS インバウンドキーワードカテゴリ
+    description: 特定のキーワードカテゴリ内の特定のサブスクリプショングループにSMSを最後に送信したときに、ユーザーをセグメント化します。 
     tags:
       - Retargeting
-  - name: Converted From Canvas
-    description: Segments your users by whether or not they have converted on a specific Canvas. This filter doesn't include users that are in the control group.
+  - name: キャンペーンからコンバージョン済み
+    description: 特定のキャンペーンでコンバージョンしたかどうかによってユーザーをセグメント化します。このフィルターには、コントロールグループに含まれるユーザーは含まれません。
     tags:
       - Retargeting
-  - name: In Campaign Control Group
-    description: Segments your users by whether or not they were in the control group for a specific multivariate campaign.
+  - name: キャンバスからコンバージョン済み
+    description: 特定のキャンバスでコンバージョンしたかどうかによってユーザーをセグメント化します。このフィルターには、コントロールグループに含まれるユーザーは含まれません。
     tags:
       - Retargeting
-  - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas.
+  - name: キャンペーンのコントロールグループ内
+    description: ユーザーを、指定した多変量 キャンペーンのコントロールグループにあるかどうかによってセグメント化します。
     tags:
       - Retargeting
-  - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: キャンバスのコントロールグループ内
+    description: ユーザーを、指定したキャンバスのコントロールグループにあるかどうかによって分割します。このフィルターは、キャンバスに入ったユーザーのみを評価します。<br><br>たとえば、キャンバスのユーザーをフィルターすると、キャンバスに入ったがコントロールグループには入っていないすべてのユーザーが表示されます。
     tags:
       - Retargeting
-  - name: Entered Canvas Variation
-    description: Segments your users by whether or not they have entered a variation path of a specific Canvas.
+  - name: 任意のコントロールグループに最後に登録された
+    description: "キャンペーンで最後にコントロールグループに割り当てられた時刻によってユーザーをセグメント化します。<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
+  - name: 入力したキャンバスバリエーション
+    description: 特定のキャンバスのバリエーションパスを入力したかどうかによって、ユーザーをセグメント化します。このフィルターはすべてのユーザーを評価します。<br><br>たとえば、キャンバスのバリエーションコントロールグループを入力していないユーザーをフィルターすると、キャンバスに入力したかどうかに関係なく、コントロールグループにないすべてのユーザーが表示されます。
     tags:
       - Retargeting
-  - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). Includes option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+  - name: メッセージの最終受信
+    description: "最後に受信したメッセージを判別して、ユーザーをセグメント化します。(24時間)<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが最後に送信されたときではなく、ユーザーが最後にインプレッションを記録したときです。<br><br>プッシュおよびwebhookの場合、これは、任意のメッセージがユーザーに送信されたときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されたときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されたときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。<br><br>例: <br>前回受信メール1日未満=24時間未満<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Clicked card 
-    description: Segments your users by whether or not they have clicked a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
+  - name: メッセージへの最終エンゲージ
+    description: "メッセージングチャネルのいずれか (コンテンツカード、メール、アプリ内、SMS、プッシュ通知、WhatsApp) を最後にクリックまたは開封した日時によって、ユーザーをセグメント化します。マシン開封数またはメールのその他の開封数でフィルタリングするオプションが含まれています。(24時間)<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。複数のユーザーが同じメールアドレスを共有している場合:<br>- 最初の送信では、指定されたターゲットユーザーのプロファイルのみが更新されます。<br>- メールが配信されたとき、またはユーザーがメールまたはメール内のリンクを開封する場合、そのユーザーアドレスを共有するすべてのユーザーは、メッセージを受信するように耳を傾けます。<br><br>SMSの場合、ユーザークリック\"トラッキングが有効になっているメッセージ内の短縮リンクを最後に選択したユーザー。<br><br>タイムゾーン:<br>会社のタイムゾーン"
     tags:
       - Retargeting
-  - name: Feature Flags
-    description: The segment of your users that have a particular <a href="/docs/developer_guide/platform_wide/feature_flags/about">feature flag</a> currently enabled.
+  - name: クリックされたカード 
+    description: 特定のコンテンツカードをクリックしたかどうかによってユーザーをセグメント化します。このフィルターは、「キャンペーンをクリック/開封」、「タグ付きのキャンペーンまたはキャンバスをクリック/開封」、および「ステップをクリック/開封」のサブフィルターとして使用できます。
     tags:
       - Retargeting
-  - name: Subscription Group
-    description: Segments your users by their subscription group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
+  - name: フィーチャーフラグ
+    description: "現在有効になっている特定の<a href=\"/docs/developer_guide/feature_flags/\">フィーチャーフラグ</a>を持つユーザーのSegment。"
+    tags:
+      - Retargeting
+  - name: サブスクリプショングループ
+    description: メール、SMS/MMS、またはWhatsAppのサブスクリプショングループでユーザーを分割します。アーカイブ済みグループは表示されず、使用できません。
     tags:
       - Channel subscription behavior
-  - name: Email Available
-    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
+  - name: 利用可能なメール
+    description: ユーザーを、有効なメールアドレスを持っているかどうか、およびメールにサブスクライブ/オプトインしているかどうかによってセグメント化します。「メールが利用可能」フィルターは、ユーザーがメールを配信停止したかどうか、Braze がハードバウンスを受信したかどうか、およびスパムとしてマークされたかどうかの 3 つの基準を確認します。これらの基準のいずれかが満たされている場合、またはメールがユーザーに存在しない場合、ユーザーは含まれません。
     tags:
       - Channel subscription behavior
-  - name: Email Opt In Date
-    description: Segments your users by the date on which they opted into email.
+  - name: メールオプトイン日
+    description: メールをオプトインした日付によってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Email Subscription Status
-    description: Segments your users by their subscription status for email.
+  - name: メールサブスクリプションステータス
+    description: メールの購読ステータスによってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Email Unsubscribed Date 
-    description: Segments your users by the date on which they unsubscribed from future emails.
+  - name: メールの配信停止日 
+    description: 今後のメールを配信停止した日付によってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Push Enabled
-    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your workspace. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+  - name: プッシュ通知が有効
+    description: 暫定的なプッシュ認証があるか、フォアグラウンドプッシュが有効になっているユーザーをセグメント化します。具体的には、このカウントには以下が含まれます。<br>1. 暫定的にプッシュが承認されている iOS ユーザー。<br>2.ワークスペース内の任意のアプリに対してプッシュ通知を明示的にアクティブ化したユーザー。これらのユーザーの場合、この数にはフォアグラウンドプッシュのみが含まれます。<br><br>「プッシュ通知が有効」には、配信停止済みのユーザーは含まれません。<br><br>このSegmentでフィルターを実行すると、<em>Reachable Users</em> という名前のAndroid、iOS、ウェブサイトのユーザーの内訳が下部に表示されます。
     tags:
       - Channel subscription behavior
-  - name: Push Enabled For App
-    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized foreground and background push tokens.
+  - name: アプリのプッシュ有効化
+    description: デバイス上のアプリでプッシュ通知を有効にしているかどうかによってユーザーをセグメント化します。これらのユーザーはプッシュで到達可能ですが、オプトインされない可能性があります。この数には、仮にフォアグラウンドおよびバックグラウンドのプッシュトークンを暫定的に承認されたユーザーが含まれます。
     tags:
       - Channel subscription behavior
-  - name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.
+  - name: バックグラウンドプッシュ有効
+    description: バックグラウンドプッシュが有効になっているかどうかに基づいて、ユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Push Opt In Date
-    description: Segments your users by the date on which they opted into push.
+  - name: プッシュ通知のオプトイン日
+    description: プッシュ通知をオプトインした日付によってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Push Subscription Status
-    description: Segments your users by their <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">subscription status</a> for push.
+  - name: プッシュ通知のサブスクリプションのステータス
+    description: "ユーザーを<a href=\"/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state\">サブスクリプション ステータス</a> でセグメント化してプッシュします。"
     tags:
       - Channel subscription behavior
-  - name: Push Unsubscribed Date
-    description: Segments your users by the date on which they unsubscribed from future push notifications.
+  - name: プッシュ通知の配信停止日
+    description: 今後のプッシュ通知を配信停止した日付によってユーザーをセグメント化します。
     tags:
       - Channel subscription behavior
-  - name: Purchased Product
-    description: Segments your users by products purchased in your app.
+  - name: 購入した製品
+    description: アプリで購入した商品ごとにユーザーを分割します。
     tags:
       - Purchase behavior
-  - name: Total Number of Purchases
-    description: Segments your users by how many purchases they have made in your app.
+  - name: 購入数の合計
+    description: アプリでの購入数によってユーザーをセグメント化します。
     tags:
       - Purchase behavior
-  - name: X Product Purchased In Y Days
-    description: Filter users by times a specific product was purchased.
+  - name: Y 日間に購入した製品 X
+    description: 指定の商品を購入した回数でユーザーをフィルターします。
     tags:
       - Purchase behavior
-  - name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+  - name: 過去 Y 日間の X 回の購入
+    description: "最後に指定された暦日数 (1 ～ 30 日) の間に、購入を行った回数 (0 ～ 50 回) によってユーザーをセグメント化します。<br> <a href=\"/docs/x-in-y-behavior/\">ここでは、X-in-Y の動作について詳しく説明します。</a>"
     tags:
       - Purchase behavior
-  - name: X Purchase Property In Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+  - name: X Y日以内に物件を購入
+    description: "最後に指定された暦日数 (1 ～ 30 日) の間に、特定の購入プロパティに関連して購入を行った回数 (0 ～ 50 回) によってユーザーをセグメント化します。<br> <a href=\"/docs/x-in-y-behavior/\">ここでは、X-in-Y の動作について詳しく説明します。</a>"
     tags:
       - Purchase behavior
-  - name: First Made Purchase
-    description: Segments your users by the earliest time that a user made a purchase in your app.
+  - name: 最初に行った購入
+    description: アプリ内で購入を行った最も早い時刻によってユーザーをセグメント化します。
     tags:
       - Purchase behavior
-  - name: First Purchase For App
-    description: Segments your users by the earliest time that a user made a purchase from your app.
+  - name: アプリでの最初の購入
+    description: アプリから購入を行った最も早い時刻によってユーザーをセグメント化します。
     tags:
       - Purchase behavior
-  - name: Last Purchased Product
-    description: Filter users by when they first purchased a specific product.
+  - name: 前回購入
+    description: 前回購入時までにユーザーを絞り込みます。
+    tags: 
+      - Purchase behavior
+  - name: 最後に購入した製品
+    description: 特定の商品を最後に購入した時点でユーザーを絞り込みます。
     tags:
       - Purchase behavior
-  - name: Money Spent
-    description: Segments your users by the amount of money that they have spent in your app.
+  - name: 支出金額
+    description: アプリで費やした金額によってユーザーをセグメント化します。
     tags:
       - Purchase behavior
-  - name: X Money Spent in Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+  - name: X 日間に支出した金額
+    description: "最後に指定された暦日数 (1 ～ 30 日) の間に、アプリで費やした金額によってユーザーをセグメント化します。この金額には、最後の50 回の購入の合計のみが含まれます。<br> <a href=\"/docs/x-in-y-behavior/\">ここでは、X-in-Y の動作について詳しく説明します。</a>"
     tags:
       - Purchase behavior
-  - name: Country
-    description: Segments your users by their last indicated country location.
+  - name: 国
+    description: ユーザーを最後に示された国の場所でセグメント化します。
     tags:
       - Demographic attributes
-  - name: City
-    description: Segments your users by their last indicated city location.
+  - name: 市区町村
+    description: 最後に示された市区町村の場所によってユーザーをセグメント化します。
     tags:
       - Demographic attributes
-  - name: Language
-    description: Segments your users by their preferred language.
+  - name: 言語
+    description: ユーザーを好みの言語でセグメント化します。
     tags:
       - Demographic attributes
-  - name: Age
-    description: Segments your users by their age, as they indicated from within your app.
+  - name: 年齢
+    description: ユーザーをアプリ内で示した年齢によってセグメント化します。
     tags:
       - Demographic attributes
-  - name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.<br><br>To target December or January birthdays, only insert filter logic within the 12-month span of the year you're targeting. In other words, do not insert logic that looks back to the previous calendar year's December or forward to the next year's January. For example, to target December birthdays, you can filter for "on December 31", "before December 31", or "after November 30".
+  - name: 生年月日
+    description: ユーザーをアプリ内で示した誕生日によってセグメント化します。<br> 2 月 29 日に誕生日を迎えるユーザーは、3 月 1 日を含むセグメントに含まれます。<br><br>12 月または 1 月の誕生日をターゲットにするには、ターゲットとする年の 12 か月の期間内のフィルターロジックのみを挿入してください。言い換えれば、前の暦年の12月を振り返るロジックや、翌年の1月までのフォワードロジックを挿入しないでください。たとえば、12 月の誕生日をターゲットにするには、「12 月 31 日」、「12 月 31 日の前」、または「11 月 30 日の後」でフィルタリングすることができます。
     tags:
       - Demographic attributes
-  - name: Gender
-    description: Segments your users by gender, as they indicated from within your app.
+  - name: 性別
+    description: アプリ内から示されたとおり、ユーザーを性別でセグメント化します。
     tags:
       - Demographic attributes
-  - name: Phone Number
-    description: Segments your users by their phone number. Only use digits [0-9]. Do not include parenthesis, dashes, and similar.
+  - name: 電話番号
+    description: "ユーザーを電話番号でセグメント化します。数字[0-9]のみを使用してください。括弧、ダッシュなどは使用しないでください。"
     tags:
       - Demographic attributes
-  - name: First Name
-    description: Segments your users by their first name, as they indicated from within your app.
+  - name: 名
+    description: ユーザーをアプリ内で示した名によってセグメント化します。
     tags:
       - Demographic attributes
-  - name: Last Name
-    description: Segments your users by their last name, as they indicated from within your app.
+  - name: 姓
+    description: ユーザーをアプリ内で示した姓でセグメント化します。
     tags:
       - Demographic attributes
-  - name: Has App
-    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. This generally requires users to open the app (start a session) to be included in this filter. However, there are some exceptions, such as if a user was imported into Braze and manually associated with your app.
+  - name: アプリあり
+    description: ユーザーがアプリをインストールしたことがあるかどうかによって分割されます。これには、現在アプリがインストールされているユーザーと、以前にアンインストールされたものが含まれます。通常、このフィルターに一致するには、ユーザーがアプリを開封する (セッションを開始する) 必要があります。ただし、ユーザーがBraze にインポートされ、アプリに手動で関連付けられた場合など、いくつかの例外があります。
     tags:
       - App
-  - name: Most Recent App Version Name
-    description: Segments by the recent name of the user's app.
+  - name: 最新のアプリバージョン名
+    description: ユーザーのアプリの最新の名前によってセグメント化します。
     tags:
       - App 
-  - name: Most Recent App Version Number
-    description: Segments by the recent app version number of the user's app.
+  - name: 最新のアプリバージョン番号
+    description: ユーザーのアプリの最新バージョン番号によってセグメント化します。
     tags:
       - App 
-  - name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
+  - name: アンインストール
+    description: アプリをアンインストールした後、再インストールしていないかどうかによって、ユーザーをセグメント化します。
     tags:
       - Uninstall 
-  - name: Device Carrier
-    description: Segments your users by their device carrier.
+  - name: デバイスの通信事業者
+    description: デバイスの通信事業者によってユーザーをセグメント化します。
     tags:
       - Devices
-  - name: Device Count
-    description: Segments your users by how many devices they have used your app on.
+  - name: デバイス数
+    description: アプリを使用したデバイスの数でユーザーをセグメント化します。
     tags:
       - Devices
-  - name: Device Model
-    description: Segments your users by their mobile phone's model version.
+  - name: デバイスモデル
+    description: 携帯電話機の機種別にユーザーを分割します。
     tags:
       - Devices
-  - name: Device OS
-    description: Segments your users that have one or more devices with the specified operating system.
+  - name: デバイス OS
+    description: 指定のオペレーティングシステムを持つ 1 台以上のデバイスを持つユーザーをセグメント化します。
     tags:
       - Devices
-  - name: Most Recent Device Locale
-    description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
+  - name: 最新のデバイスロケール
+    description: "最後に使用した機器の<a href=\"/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/\">ロケール情報</a>でユーザーを分割します。"
     tags:
       - Devices      
-  - name: Most Recent Watch Model
-    description: Segments your users by their most recent smartwatch model.
+  - name: 最新のウォッチモデル
+    description: ユーザーを最新のスマートウォッチモデルでセグメント化します。
     tags:
       - Devices    
-  - name: Provisionally Authorized on iOS
-    description: Allows you to find users who are provisionally authorized on iOS 12 for a given app.
+  - name: iOS で暫定的に承認済み
+    description: iOS 12 で特定のアプリに対して暫定的に許可されているユーザーを検索できます。
     tags:
       - Devices   
-  - name: Web Browser
-    description: Segments your users by the web browser they use to access your website.
+  - name: Webブラウザー
+    description: Web サイトにアクセスするために使用するウェブブラウザによって、ユーザーをセグメント化します。
     tags:
       - Devices
-  - name: Device IDFA
-    description: Allows you to designate your campaign recipients by IDFA for testing.
+  - name: デバイスIDFA
+    description: テスト用のキャンペーン受信者を IDFA で指定できます。
     tags:
       - Advertising use cases
-  - name: Device IDFV
-    description: Allows you to designate your campaign recipients by IDFV for testing.
+  - name: デバイス IDFV
+    description: テスト用にIDFV でキャンペーン 受信者を指定できます。
     tags:
       - Advertising use cases 
-  - name: Device Google Ad ID
-    description: Segments your users by the Google ad ID.
+  - name: デバイスの Google 広告 ID
+    description: ユーザーをグーグルの広告ID でセグメント化します。
     tags:
       - Advertising use cases
-  - name: Device Roku Ad ID
-    description: Segments your users by the Roku ad ID.
+  - name: デバイスの Roku 広告 ID
+    description: ユーザーを Roku 広告 ＩＤ でセグメント化します。
     tags:
       - Advertising use cases
-  - name: Device Windows Ad ID
-    description: Segments your users by the Windows ad ID.
+  - name: デバイスのWindows Ad ID
+    description: ユーザーをWindows アドID でセグメント化します。
     tags:
       - Advertising use cases  
-  - name: Ad Tracking Enabled
-    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
+  - name: 広告の追跡が有効
+    description: ユーザーが広告の追跡をオプトインしているかどうかに基づいてフィルターできます。広告の追跡は IDFA または Apple によってすべての iOS 機器に割り当てられている「広告主用の識別子」に関連します。これは SDK によって設定できます。この識別子により、広告主はユーザーを追跡し、ターゲット広告を提供することができます。
     tags:
       - Advertising use cases
-  - name: Most Recent Location
-    description: Segments your users by the last recorded location at which they have used your app.
+  - name: 最新の場所
+    description: ユーザーを、アプリを使用した最後に記録された場所でセグメント化します。
     tags:
       - Location
-  - name: Location Available
-    description: Segments your users by whether or not they have reported their locations. In order to use this filter, your app needs to have <a href="/docs/search/?query=location%20tracking">location tracking integrated.</a>
+  - name: 利用可能な場所
+    description: "ユーザーの位置がレポートされているかどうかによって、それらをセグメント化します。このフィルターを使用するには、アプリに<a href=\"/docs/search/?query=location%20tracking\">位置情報の追跡が統合</a>されている必要があります。"
     tags:
       - Location
-  - name: Amplitude Cohorts
-    description: Clients who use Amplitude can supplement their segments by choosing and importing their cohorts in Amplitude.
+  - name: Amplitude コホート
+    description: Amplitude を使用するクライアントは、Amplitude でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Census Cohorts
-    description: Clients who use Census can supplement their segments by choosing and importing their cohorts in Census.
+  - name: Census コホート
+    description: Census を使用するクライアントは、Census でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Heap Cohorts
-    description: Clients who use Heap can supplement their segments by choosing and importing their cohorts in Heap.
+  - name: Heap コホート
+    description: Heap を使用するクライアントは、Heap 内のコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Hightouch Cohorts
-    description: Clients who use Hightouch can supplement their segments by choosing and importing their cohorts in Hightouch.
+  - name: Hightouch コホート
+    description: Hightouch を使用するクライアントは、Hightouch でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Kubit Cohorts
-    description: Clients who use Kubit can supplement their segments by choosing and importing their cohorts in Kubit.
+  - name: Kubitコホート
+    description: Kubit を使用するクライアントは、Kubit でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Mixpanel Cohorts
-    description: Clients who use Mixpanel can supplement their segments by choosing and importing their cohorts in Mixpanel.
+  - name: Mixpanel コホート
+    description: Mixpanel を使用するクライアントは、Mixpanel でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Segment Cohorts
-    description: Clients who use Segment can supplement their segments by choosing and importing their cohorts in Segment.
+  - name: セグメントコホート
+    description: Segment を使用するクライアントは、Segment でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Tinyclues Cohorts
-    description: Clients who use Tinyclues can supplement their segments by choosing and importing their cohorts in Tinyclues.
+  - name: Tinyclues コホート
+    description: Tinyclues を使用するクライアントは、Tinyclues でコホートを選択してインポートすることで、セグメントを補完できます。
     tags:
       - Cohort membership
-  - name: Install Attribution Ad
-    description: Segments your users by the ad that their install was attributed to.
+  - name: インストールアトリビューション広告
+    description: インストールアトリビューションとなった広告によってユーザーをセグメント化します。
     tags:
       - User Attributes
-  - name: Install Attribution Adgroup
-    description: Segments your users by the ad group that their install was attributed to.
+  - name: インストールアトリビューション広告グループ
+    description: インストールアトリビューションとなった広告グループによってユーザーをセグメント化します。
     tags:
       - Install Attribution
-  - name: Install Attribution Campaign
-    description: Segments your users by the ad campaign that their install was attributed to.
+  - name: インストールアトリビューションキャンペーン
+    description: インストール先が属性である広告キャンペーンによって、ユーザーをセグメント化します。
     tags:
       - Install Attribution
-  - name: Install Attribution Source
-    description: Segments your users by the source that their install was attributed to.
+  - name: インストールアトリビューションソース
+    description: インストールアトリビューションとなったソースによってユーザーをセグメント化します。
     tags:
       - Install Attribution
-  - name: Churn Risk Category
-    description:  Segments your users by churn risk category according to a specific prediction.
+  - name: 解約リスクカテゴリ
+    description:  ユーザーを、具体的な予測に応じて、解約リスクカテゴリ別にセグメント化します。
     tags:
       - Intelligence and predictive
-  - name: Churn Risk Score
-    description: Segments your users by churn risk score according to a specific prediction.
+  - name: 解約リスクスコア
+    description: ユーザーを、具体的な予測に応じて、チャーンリスクスコア別にセグメント化します。
     tags:
       - Intelligence and predictive
-  - name: Event Likelihood Category
-    description: Segments your users by likelihood of performing an event according to a specific prediction.
+  - name: 事象発生可能性区分
+    description: ユーザーを、特定の予測に従ってイベントを実行する可能性によってセグメント化します。
     tags:
       - Intelligence and predictive
-  - name: Event Likelihood Score
-    description: Segments your users by likelihood of performing an event according to a specific prediction.
+  - name: イベント尤度スコア
+    description: ユーザーを、特定の予測に従ってイベントを実行する可能性によってセグメント化します。
     tags:
       - Intelligence and predictive
-  - name: Intelligent Channel
-    description: Segment your users by their most active channel in the last three months.
+  - name: インテリジェントチャネル
+    description: 過去3 カ月間で最も有効なチャネルごとにユーザーを分割します。
     tags:
       - Intelligence and predictive
-  - name: Number of Facebook Friends Using App
-    description: Segments your users by how many Facebook friends they have who use the same app.
+  - name: メッセージ開封の可能性
+    description: 指定したチャネルに0 ～100% の範囲で開封する可能性に基づいてユーザーをフィルタリングします。チャネルの可能性を測定するのに十分なデータがないユーザーは、「空白である」を使用して選択できます。
+    tags:
+      - Intelligence and predictive
+  - name: アプリを使用している Facebook の友達の人数
+    description: 同じアプリを使用している Facebook の友達の人数でユーザーをセグメント化します。
     tags:
       - Social activity
-  - name: Connected Facebook
-    description: Segments your users by whether they connected your app to Facebook.
+  - name: Facebook でつながりがある
+    description: アプリを Facebook に接続したかどうかによって、ユーザーをセグメント化します。
     tags:
       - Social activity
-  - name: Connected Twitter
-    description: Segments your users by whether they connected your app to X (formerly Twitter).
+  - name: Twitter でつながりがある
+    description: アプリをX(以前のTwitter)に接続したかどうかによって、ユーザーをセグメント化します。
     tags:
       - Social activity
-  - name: Number of Twitter Followers
-    description: Segments your users by how many X (formerly Twitter) followers they have.
+  - name: Twitterフォロワー数
+    description: ユーザーをX (以前のTwitter) フォロワーの数でセグメント化します。
     tags:
       - Social activity
+  - name: 送信電話番号
+    description: "e.164 送信電話番号フィールドでユーザーをセグメント化します。<br><br>電話番号がBrazeに送信されると、BrazeはそれをSMSやWhatsAppチャネルで使用される<a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164</a>フォーマットに変換しようとする。番号が適切にフォーマットされていない場合、強制処理は失敗する可能性がある。その結果、ユーザープロファイルは電話番号を持つが、送信電話番号は持たないことになる。<br><br>ユースケース:<br> - このフィルターで正規表現（regex）を使って、特定の国コードを持つ電話番号をセグメンテーションする。<br>- このフィルターを使用して、e.164強制処理に失敗した電話番号でユーザーをセグメンテーションする。"
+    tags:
+      - Other filters
 ---

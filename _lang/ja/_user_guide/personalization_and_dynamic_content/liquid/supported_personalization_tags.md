@@ -1,86 +1,88 @@
 ---
 nav_title: 対応パーソナライズタグ
-article_title: 対応リキッドパーソナライゼーションタグ
+article_title: 対応リキッド・パーソナライゼーション・タグ
 page_order: 1
-description: "この参考記事では、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしています。"
+description: "このリファレンス記事は、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしている。"
 search_rank: 1
 ---
 
 # 対応パーソナライズタグ
 
-> この参考記事では、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしています。
+> このリファレンス記事は、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしている。
 
-便宜上、サポートされているパーソナライゼーション・タグの概要を示す。各タグの詳細とベストプラクティスについては、続きをお読みください。
+## 対応タグの概要
+
+便宜上、サポートされているパーソナライゼーション・タグの概要を示す。各タイプのタグとベストプラクティスの詳細については、以下のセクションを参照してください。
 
 {% raw %}
 
-| パーソナライゼーション タグタイプ
+| パーソナライゼーション・タグタイプ | tags |
 | -------------  | ---- |
-| 標準（デフォルト）属性 `{{${city}}}`<br> `{{${country}}}`<br> `{{${date_of_birth}}}`<br> `{{${email_address}}}`<br> `{{${first_name}}}`<br> `{{${gender}}}`<br> `{{${language}}}`<br> `{{${last_name}}}`<br> `{{${last_used_app_date}}}`<br> `{{${most_recent_app_version}}}`<br> `{{${most_recent_locale}}}`<br> `{{${most_recent_location}}}`<br> `{{${phone_number}}}`<br> `{{${time_zone}}}`<br> `{{${user_id}}}`<br> `{{${braze_id}}}`<br> `{{${random_bucket_number}}}`<br> `{{subscribed_state.${email_global}}}`<br> `{{subscribed_state.${subscription_group_id}}}` |
-| デバイス属性 `{{most_recently_used_device.${carrier}}}`<br> `{{most_recently_used_device.${id}}}`<br> `{{most_recently_used_device.${idfa}}}`<br> `{{most_recently_used_device.${model}}}`<br> `{{most_recently_used_device.${os}}}`<br> `{{most_recently_used_device.${platform}}}`<br> `{{most_recently_used_device.${google_ad_id}}}`<br> `{{most_recently_used_device.${roku_ad_id}}}`<br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| 電子メールリストの属性][43]｜電子メールリストの属性 `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の`{{${unsubscribe_url}}}` 。古いタグは以前作成されたメールでも使用できますが、代わりに新しいタグを使用することをお勧めします。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
-| [SMSの属性][48] | [SMSの属性 `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsAppアトリビュート][46] | [WhatsAppアトリビュート `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
-| キャンペーン属性 `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
-| Canvas Attributes | `{{canvas.${name}}}`<br> `{{canvas.${api_id}}}`<br> `{{canvas.${variant_name}}}`<br> `{{canvas.${variant_api_id}}}` |
-| キャンバスのステップ属性 `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
-| カード属性 `{{card.${api_id}}}`<br> `{{card.${name}}}` |
-| Geofencing Events｜ジオフェンシング・イベント `{{event_properties.${geofence_name}}}`<br> `{{event_properties.${geofence_set_name}}}` |
-イベントプロパティ <br> (これらはワークスペースのカスタムです。)|`{{event_properties.${your_custom_event_property}}}` |
-| キャンバスエントリーのプロパティ|`{{canvas_entry_properties}}` |
-カスタム属性 <br> (これらはワークスペースによって異なります) |`{{custom_attribute.${your_custom_attribute}}}` |.
-{: .reset-td-br-1 .reset-td-br-2}
+| 標準（デフォルト）属性 | `{{${city}}}`<br> `{{${country}}}`<br> `{{${date_of_birth}}}`<br> `{{${email_address}}}`<br> `{{${first_name}}}`<br> `{{${gender}}}`<br> `{{${language}}}`<br> `{{${last_name}}}`<br> `{{${last_used_app_date}}}`<br> `{{${most_recent_app_version}}}`<br> `{{${most_recent_locale}}}`<br> `{{${most_recent_location}}}`<br> `{{${phone_number}}}`<br> `{{${time_zone}}}`<br> `{{${user_id}}}`<br> `{{${braze_id}}}`<br> `{{${random_bucket_number}}}`<br> `{{subscribed_state.${email_global}}}`<br> `{{subscribed_state.${subscription_group_id}}}` |
+| デバイス属性 | `{{most_recently_used_device.${carrier}}}`<br> `{{most_recently_used_device.${id}}}`<br> `{{most_recently_used_device.${idfa}}}`<br> `{{most_recently_used_device.${model}}}`<br> `{{most_recently_used_device.${os}}}`<br> `{{most_recently_used_device.${platform}}}`<br> `{{most_recently_used_device.${google_ad_id}}}`<br> `{{most_recently_used_device.${roku_ad_id}}}`<br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
+| [メールリストの属性][43] | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
+| [SMS の属性][48] | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
+| [WhatsApp の属性][46] | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
+| キャンペーン属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
+| キャンバスの属性 | `{{canvas.${name}}}`<br> `{{canvas.${api_id}}}`<br> `{{canvas.${variant_name}}}`<br> `{{canvas.${variant_api_id}}}` |
+| キャンバス・ステップの属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
+| カード属性 | `{{card.${api_id}}}`<br> `{{card.${name}}}` |
+| ジオフェンス関連イベント | `{{event_properties.${geofence_name}}}`<br> `{{event_properties.${geofence_set_name}}}` |
+| イベントプロパティ <br> (ワークスペースによって異なる)| `{{event_properties.${your_custom_event_property}}}` |
+| キャンバスエントリのプロパティ| `{{canvas_entry_properties}}` |
+| カスタム属性 <br> (ワークスペースによって異なる) | `{{custom_attribute.${your_custom_attribute}}}` |
+| [API トリガープロパティ][75] |`{{api_trigger_properties}}` |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-[Brazeのソース間でこれらの属性がどのように異なるかについては]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/)、このヘルプ記事を参照してください。
+詳細については、[Braze のソース間におけるこれらの属性の違い]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/)に関するヘルプ記事を参照してください。
 
 {% alert important %}
-キャンペーン、カード、およびキャンバスの属性は、対応するメッセージングテンプレートでのみサポートされます（たとえば、`dispatch_id` はアプリ内メッセージキャンペーンでは利用できません）。
+キャンペーン、カード、キャンバスの各属性は、対応するメッセージングテンプレートでのみサポートされる（例えば、`dispatch_id` はアプリ内メッセージキャンペーンでは利用できない）。
 {% endalert %}
 
-#### キャンバスとキャンペーンタグの違い 
+### キャンバスとキャンペーンタグの違い 
 
-以下のタグはキャンバスとキャンペーンで動作が異なります：
+以下のタグはキャンバスとキャンペーンで動作が異なる：
 {% raw %}
--`dispatch_id` キャンバスとキャンペーンで異なるのは、Brazeはキャンバスのステップを、たとえ「スケジュール」されていても、トリガーされたイベントとして扱うからです（スケジュール可能なエントリーステップを除く）。詳しくは【派遣IDの動作】[50]を参照。
-\- Canvasで`{{campaign.${name}}}` タグを使用すると、Canvasコンポーネント名が表示されます。キャンペーンでこのタグを使用すると、キャンペーン名が表示されます。
+- `dispatch_id` の動作は、キャンバスとキャンペーンで異なります。これは、Braze がキャンバスのステップ (スケジュール可能なエントリステップを除く) を、スケジュール済みの場合でもトリガーイベントとして扱うためです。詳細については、[ディスパッチ ID の動作][50]を参照してください。
+- キャンバスで `{{campaign.${name}}}` タグを使用すると、キャンバスコンポーネント名が表示されます。このタグをキャンペーンで使用すると、キャンペーン名が表示される。
 {% endraw %}
 
-## 最近使用したデバイス情報
+## 最近使用されたデバイス情報
 
-すべてのプラットフォームで、ユーザーの最新のデバイスについて以下の属性をテンプレート化できます。ユーザがアプリケーションを使用していない場合 (たとえば、REST API 経由でユーザをインポートした場合)、これらの値はすべて`null` になります。
+すべてのプラットフォームで、ユーザーの最新のデバイスに関する次の属性をテンプレート化できます。ユーザーがアプリケーションを使用していない場合 (REST API 経由でユーザーをインポートした場合など)、これらの値はすべて `null` になります。
 
 {% raw %}
 
-|タグ
+|タグ | 説明 |
 |---|---|
-|`{{most_recently_used_device.${browser}}}` ｜ユーザーの端末で最近使用されたブラウザ。例えば、"Chrome "や "Safari "など。|
-|`{{most_recently_used_device.${id}}}` ｜これはBrazeのデバイス識別子です。iOSの場合、これはApple Identifier for Vendor（IDFV）またはUUIDとなる。Androidやその他のプラットフォームでは、ランダムに生成されるUUIDとなる。|
-|`{{most_recently_used_device.${carrier}}}` ｜最近使用したデバイスの電話サービスキャリア（利用可能な場合）。例としては、"Verizon "や "Orange "などがある。|
-|`{{most_recently_used_device.${ad_tracking_enabled}}}` ｜デバイスが広告トラッキングを有効にしているかどうか。これはブーリアン値（`true` または`false` ）である。|
-｜`{{most_recently_used_device.${idfa}}}` ｜iOSデバイスの場合、アプリケーションが私たちの[オプションのIDFAコレクション][40]で構成されている場合、この値は広告用識別子（IDFA）になります。iOS以外のデバイスの場合、この値はNULLになる。|
-｜`{{most_recently_used_device.${google_ad_id}}}` ｜Androidデバイスの場合、アプリケーションがオプションのGoogle Play Advertising IDコレクションで設定されている場合、この値はGoogle Play Advertising Identifierになります。Android以外のデバイスの場合、この値はNULLになります。|
-|`{{most_recently_used_device.${roku_ad_id}}}` ｜Rokuデバイスの場合、この値はアプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierになります。Roku以外のデバイスの場合、この値はNULLになります。|
-|`{{most_recently_used_device.${model}}}` ｜もしあれば、デバイスのモデル名。例としては、"iPhone 6S "や "Nexus 6P"、"Firefox "などがある。|
-|`{{most_recently_used_device.${os}}}` ｜もしあれば、デバイスのオペレーティング・システム。例としては、"iOS 9.2.1 "や "Android (Lollipop)"、"Windows "などがある。|
-|`{{most_recently_used_device.${platform}}}` ｜もしあれば、デバイスのプラットフォーム。設定された場合、値は`ios`,`android`,`kindle`,`android_china`,`web`,`tvos` のいずれかとなる。|
-{: .reset-td-br-1 .reset-td-br-2}
+|`{{most_recently_used_device.${browser}}}` | ユーザーの端末で最近使用されたブラウザ。Chrome」や「Safari」などがその例だ。 |
+|`{{most_recently_used_device.${id}}}` | Braze デバイス識別子。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Androidやその他のプラットフォームでは、ランダムに生成されるUUIDとなる。 |
+| `{{most_recently_used_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
+| `{{most_recently_used_device.${ad_tracking_enabled}}}` | デバイスが広告トラッキングを有効にしているかどうか。これはブーリアン値（`true` または`false` ）である。 |
+| `{{most_recently_used_device.${idfa}}}` | iOSデバイスの場合、アプリケーションが[オプションのIDFAコレクション][40]]で構成されている場合、この値は広告用識別子（IDFA）になる。iOS以外のデバイスの場合、この値はNULLになる。 |
+| `{{most_recently_used_device.${google_ad_id}}}` | Android デバイスの場合、当社オプションの Google Play 広告 ID コレクションでお客様のアプリケーションが設定されていれば、この値は Google Play の広告識別子になります。Android以外のデバイスの場合、この値はNULLになる。 |
+| `{{most_recently_used_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
+| `{{most_recently_used_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
+| `{{most_recently_used_device.${os}}}` | もしあれば、デバイスのオペレーティングシステム。例えば、「iOS 9.2.1」や「アンドロイド（ロリポップ）」、「ウィンドウズ」などだ。 |
+| `{{most_recently_used_device.${platform}}}` | もしあれば、デバイスのプラットフォーム。設定されている場合、値は `ios`、`android`、`kindle`、`android_china`、`web`、または `tvos` のいずれかになります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+デバイスの通信事業者、モデル名、オペレーティングシステムは多岐にわたるため、条件付きでこれらのいずれかの値に依存する Liquid を徹底的にテストすることをお勧めします。特定のデバイスについてこれらの値が該当しない場合、値は `null` になります。
 
-デバイスのキャリア、モデル名、オペレーティングシステムは多岐にわたるため、これらの値のいずれかに条件依存するリキッドを徹底的にテストすることをお勧めします。これらの値は、特定のデバイスで利用できない場合、`null` 。
+## 対象アプリの情報
 
-## ターゲティングされたアプリ情報
+アプリ内メッセージでは、Liquid内で以下のアプリ属性を使用できる。この値は、アプリがメッセージングをリクエストするために使用する SDK API キーに基づきます。
 
-アプリ内メッセージでは、Liquid内で以下のアプリ属性を使用できます。値は、アプリがメッセージングを要求するために使用するSDK APIキーに基づいています。
-
-|タグ
+|タグ | 説明 |
 |------------------|---|
-|`{{app.${api_id}}}` | メッセージをリクエストするアプリのAPIキー。例えば、このキーを`abort_message()` Liquid と組み合わせて使用することで、TV プラットフォームや開発ビルドなど、別の SDK API キーを使用する特定のアプリへのアプリ内メッセージの送信を回避できます。
-|`{{app.${name}}}` ｜メッセージを要求するアプリの名前（Brazeダッシュボードで定義されている）。
-{: .reset-td-br-1 .reset-td-br-2}
+| `{{app.${api_id}}}` | メッセージを要求するアプリのAPIキー。例えば、このキーを Liquid の `abort_message()` と組み合わせて使用して、別の SDK API キーを使用する TV プラットフォームや開発ビルドなどの特定のアプリケーションに対して、アプリ内メッセージの送信を防止します。|
+| `{{app.${name}}}` | メッセージを要求するアプリ名（Brazeダッシュボードで定義されている）。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-例えば、このリキッドコードは、リクエストアプリがリストにある2つのAPIキーのうちの1つでない場合、メッセージを中止します：
+例えば、このリキッドコードは、リクエストアプリがリストにある2つのAPIキーのうちの1つでない場合、メッセージを中止する：
 
 ```liquid
 {% assign allowed_api_keys = 'sdk_api_key_1,sdk_api_key_2' | split: ',' %}
@@ -91,40 +93,42 @@ User is in list of apps
 {% endif %}
 ```
 
-## ターゲット・デバイス情報
+## ターゲットデバイス情報
 
-プッシュ通知およびアプリ内メッセージ・チャネルでは、メッセージ送信先のデバイスについて、以下の属性をテンプレート化できます。つまり、プッシュ通知やアプリ内メッセージには、メッセージを読む端末の端末属性を含めることができる。これらの属性はコンテンツ・カードでは機能しないことに注意してください。 
+プッシュ通知およびアプリ内メッセージチャネルについて、メッセージの送信先デバイスの以下の属性でテンプレートを作成できます。つまり、プッシュ通知またはアプリ内メッセージに、メッセージが表示されているデバイスのデバイス属性を含めることができます。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
 
-|タグ
+|タグ | 説明 |
 |------------------|---|
-|`{{targeted_device.${id}}}` ｜これはBrazeのデバイス識別子です。iOSの場合、これはApple Identifier for Vendor（IDFV）またはUUIDとなる。Androidやその他のプラットフォームでは、ランダムに生成されるUUIDとなる。|
-|`{{targeted_device.${carrier}}}` ｜最近使用したデバイスの電話サービスキャリア（利用可能な場合）。例としては、"Verizon "や "Orange "などがある。|
-｜`{{targeted_device.${idfa}}}` ｜iOSデバイスの場合、アプリケーションが私たちの[オプションのIDFAコレクション][40]で構成されている場合、この値は広告用識別子（IDFA）になります。iOS以外のデバイスの場合、この値はNULLになる。|
-｜`{{targeted_device.${google_ad_id}}}` ｜Androidデバイスの場合、アプリケーションが[オプションのGoogle Play Advertising IDコレクション]で設定されている場合、この値はGoogle Play Advertising Identifierになります。Android以外のデバイスの場合、この値はNULLになります。|
-|`{{targeted_device.${roku_ad_id}}}` ｜Rokuデバイスの場合、この値はアプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierになります。Roku以外のデバイスの場合、この値はNULLになります。|
-|`{{targeted_device.${model}}}` ｜もしあれば、デバイスのモデル名。例としては、"iPhone 6S "や "Nexus 6P"、"Firefox "などがある。|
-|`{{targeted_device.${os}}}` ｜もしあれば、デバイスのオペレーティング・システム。例としては、"iOS 9.2.1 "や "Android (Lollipop)"、"Windows "などがある。|
-|`{{targeted_device.${platform}}}` ｜もしあれば、デバイスのプラットフォーム。設定されている場合、値は`ios` 、`android` 、`kindle` 、`android_china` 、`web` 、`tvos` のいずれかとなる。また、`most_recently_used_device` パーソナライズタグを使用することもできます。|
-|`{{targeted_device.${foreground_push_enabled}}}` ｜この値は、対象デバイスがフォアグラウンド・プッシュを有効にしている場合は`true` 、そうでない場合は`false` 。|
-{: .reset-td-br-1 .reset-td-br-2}
-
+| `{{targeted_device.${id}}}` | これはBrazeのデバイス識別子である。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Androidやその他のプラットフォームでは、ランダムに生成されるUUIDとなる。 |
+| `{{targeted_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
+| `{{targeted_device.${idfa}}}` | iOSデバイスの場合、アプリケーションが[オプションのIDFAコレクション][40]]で構成されている場合、この値は広告用識別子（IDFA）になる。iOS以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${google_ad_id}}}` | Android デバイスの場合、当社オプションの Google Play 広告 ID コレクションでお客様のアプリケーションが設定されていれば、この値は Google Play の広告識別子になります。Android以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
+| `{{targeted_device.${os}}}` | もしあれば、デバイスのオペレーティングシステム。例えば、「iOS 9.2.1」や「アンドロイド（ロリポップ）」、「ウィンドウズ」などだ。 |
+| `{{targeted_device.${platform}}}` | もしあれば、デバイスのプラットフォーム。設定されている場合、値は `ios`、`android`、`kindle`、`android_china`、`web`、または `tvos` のいずれかになります。パーソナライゼーションタグ `most_recently_used_device` も使用できます。 |
+| `{{targeted_device.${foreground_push_enabled}}}` | この値は、対象デバイスでフォアグラウンドのプッシュ通知を有効にしている場合に `true`、無効の場合に `false` になります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
+デバイスのキャリア、モデル名、オペレーティングシステムは多岐にわたるため、これらの値に条件依存するロジックは徹底的にテストすることをお勧めする。特定のデバイスについてこれらの値が該当しない場合、値は `null` になります。 
 
-デバイスのキャリア、モデル名、オペレーティングシステムは多岐にわたるため、これらの値に条件依存するロジックは徹底的にテストすることをお勧めします。これらの値は、特定のデバイスで利用できない場合、`null` 。さらに、プッシュ通知の場合、プッシュトークンがAPI経由でインポートされた場合など、特定の状況下でBrazeがプッシュ通知に接続されたデバイスを識別できない可能性があり、その結果、これらのメッセージの値が`null` 。
+さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-プッシュ・メッセージでファースト・ネーム変数を使うとき、デフォルト値として "there "を使う例][4]。
+![プッシュ・メッセージでファーストネーム変数を使うときにデフォルト値「there」を使う例。][4]
 
-状況によっては、デフォルト値を設定する代わりに[条件付きロジック][17]を使用することもできます。条件付きロジックでは、カスタム属性の値によって異なるメッセージを送信することができます。
+### デフォルト値の代わりに条件付きロジックを使う
 
-さらに、条件付きロジックを使用して、NULLまたは空白の属性値を持つ顧客への[メッセージを中止する][18]ことができます。
+状況によっては、デフォルト値を設定する代わりに[条件付きロジック][17]]を使用することもできます。条件付きロジックでは、カスタム属性の値によって異なるメッセージを送信することができる。さらに、条件付きロジックを使用して、NULL または空白の属性値を持つ顧客への[メッセージを中止][18]できます。 
 
-例えば、顧客に特典残高通知を送信する場合、デフォルト値を使用して残高の少ない顧客や残高のない顧客を考慮する良い方法はありません。
+#### ユースケース
 
-この場合、デフォルト値を設定するよりも有効なオプションが2つある：
+たとえば、顧客に報酬残高通知を送信するとします。低い残高と NULL 残高を持つ顧客を考慮するために、デフォルト値を使用する適切な方法はありません。
 
-1. 残高が少ない、ゼロ、空白の顧客に対するメッセージを中止する。
+この場合、デフォルト値を設定するよりも効果的なオプションが2つある：
+
+1. 残高が少ない、null、および空白の顧客に対するメッセージを中止します。
 
 {% raw %}
 
@@ -150,15 +154,30 @@ User is in list of apps
    {% endif %}
    ```
 
-この例では、姓が空白またはNULLのユーザーは、"Thanks for downloading "というメッセージを受け取る。名字には[デフォルト値][47]を入れて、万が一間違えても顧客にリキッドが表示されないようにしてください。
+このユースケースでは、名が空白または NULL のユーザーは「Thanks for downloading」というメッセージを受け取ります。顧客の名には[デフォルト値][47]を含めて、間違いがあった場合に Liquid が表示されないようにする必要があります。
 
 {% endraw %}
 
 ## 可変タグ
 
-`assign` タグを使って、メッセージ・コンポーザーに変数を作成することができます。変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照することができます。
+メッセージ作成画面で、`assign` タグを使用して変数を作成できます。変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。
 
-例えば、顧客がリワードポイントを100ポイント獲得したら、賞品と交換できるようにしたとしよう。そのため、追加で購入した場合、ポイント残高が100以上になる顧客だけにメッセージを送りたい：
+このタグは、[Connected Content][4] ]機能から返されたコンテンツを再フォーマットしたいときに便利だ。詳しくは、Shopifyの[変数タグに関する][31]ドキュメントを参照されたい。
+
+{% alert tip %}
+すべてのメッセージに同じ変数を割り当てていることに気づいているか？`assign` タグを何度も書き出す代わりに、そのタグをコンテンツブロックとして保存し、メッセージの先頭に置くことができます。
+
+1. [コンテンツブロックの作成]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block)を行います。
+2. コンテンツブロックに名前をつける（スペースや特殊文字は使わない）。
+3. ページ下部の [**編集**] をクリックします。
+4. `assign` タグを入力する。
+
+コンテンツ・ブロックがメッセージの先頭にある限り、変数がオブジェクトとしてメッセージに挿入されるたびに、選択したカスタム属性を参照することになる！
+{% endalert %}
+
+### ユースケース
+
+例えば、顧客が 100 ポイントの報酬ポイントを獲得した後に、報酬ポイントを換金できるようにするとします。つまり、追加購入をした場合、ポイント残高が100以上になる顧客だけにメッセージを送りたいわけだ：
 
 {% raw %}
 ```liquid
@@ -169,27 +188,16 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 {% abort_message('not enough points') %}
 {% endif %}
 ```
-このタグは、[コネクテッド・コンテンツ][4]機能から返されたコンテンツを再フォーマットしたい場合に便利です。詳しくはShopifyの[変数タグに関する][31]ドキュメントをご覧ください。
-
 {% endraw %}
-
-{% alert tip %}
-すべてのメッセージに同じ変数を割り当てていませんか？`assign` タグを何度も書き出す代わりに、そのタグをコンテンツ・ブロックとして保存し、メッセージの先頭に置くことができます。
-
-1. [コンテンツブロックを作成]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block)する。
-2. コンテンツブロックに名前を付けます（スペースや特殊文字は使用しないでください）。
-3. ページ下部の**Editを**クリック。
-4. `assign` タグを入力する。
-
-コンテンツ・ブロックがメッセージの先頭にある限り、変数がオブジェクトとしてメッセージに挿入されるたびに、選択したカスタム属性を参照します！
-{% endalert %}
 
 ## 反復タグ
 
 {% raw %}
-反復タグは、コードのブロックを繰り返し実行するために使うことができる。この例では、`for` 。
+反復タグは、コードのブロックを繰り返し実行するために使うことができる。以下のユースケースでは、`for` タグを使用している。
 
-例えば、ナイキのスニーカーのセールを開催し、ナイキに興味を示した顧客にメッセージを送るとしよう。各顧客のプロフィールには、さまざまな商品ブランドが表示されています。この配列には最大25の製品ブランドを含めることができますが、直近の5つの製品ビューの1つとしてナイキ製品を見た顧客だけにメッセージを送りたいのです。
+### ユースケース
+
+例えば、ナイキのスニーカーのセールを開催し、ナイキに興味を示した顧客にメッセージを送信するとします。各顧客のプロファイルには、さまざまな商品ブランドの配列が表示されます。この配列には、最大 25 の製品ブランドが含まれている可能性がありますが、最新の製品ビュー 5 つのうち、その 1 つとしてナイキ製品を表示した顧客にのみメッセージを送信します。
 
 ```liquid
 {% for items in {{custom_attribute.${Brands Viewed}}} limit:5 %}
@@ -204,21 +212,21 @@ Sale on Converse!
 {% endif %}
 ```
 
-この例では、閲覧されたスニーカーブランド配列の最初の5項目をチェックします。その中にconverseという項目があれば、converse\_viewerという変数を作り、trueをセットする。
+このユースケースでは、閲覧されたスニーカーブランドの配列の最初の5項目をチェックする。これらの項目のいずれかがコンバージョンであれば、`converse_viewer` 変数を作成し、それをtrueに設定する。
 
-そして、converse\_viewerがtrueの時にセールメッセージを送る。そうでなければ、メッセージを中止する。
+そして、`converse_viewer` が true のときにセールメッセージを送信します。それ以外の場合は、メッセージを中止します。
 
-これは、Brazeメッセージコンポーザーでの反復タグの使い方の簡単な例です。Shopifyの[イテレーションタグに関する][32]ドキュメントに詳しい情報があります。
+これは、Brazeメッセージコンポーザーでの反復タグの使い方の簡単な例である。詳細については、Shopify の[反復タグ][32]のドキュメントを参照してください。
 
 ## 構文タグ
 
-構文タグは、リキッドがどのようにレンダリングされるかを制御するために使用することができます。`echo` タグを使って式を返すことができる。これは、中括弧を使って式をラップするのと同じですが、リキッドタグの中でこのタグを使うことができます。また、`liquid` タグを使用すると、各タグに区切り文字のないリキッドのブロックを持つことができます。`liquid` タグを使用する場合は、各タグを独立した行にする必要がある。より詳細な情報と例については、Shopifyの[構文タグに関する][33]ドキュメントをチェックしてください。
+構文タグを使用して、Liquid のレンダリング方法を制御できます。`echo` タグを使用して式を返すことができます。これは、中括弧を使って式をラップするのと同じだが、リキッドタグの中でこのタグを使うことができる。また、`liquid` タグを使用して、各タグに区切り文字を使用せずにLiquid のブロックを設定することもできます。`liquid` タグを使用する場合、各タグは個別の行に配置する必要があります。より詳細な情報と例については、Shopifyの[構文タグに関する][33]ドキュメントをチェックしよう。
 
-空白コントロール][49]を使うと、タグの周りの空白を取り除くことができます。
+[空白コントロール][49]を使用すると、タグの周りの空白を削除でき、Liquid 出力の外観をさらにコントロールするために役立ちます。
 
 ## HTTPステータスコード {#http-personalization}
 
-まずローカル変数として保存し、`__http_status_code__` キーを使用することで、[Connected Content][38]呼び出しからの HTTP ステータスを利用することができます。例えば、こうだ：
+[コネクテッドコンテンツ][38]の呼び出しから HTTP ステータスを使用するには、まず HTTP ステータスをローカル変数として保存してから、`__http_status_code__` キーを使用します。以下に例を示します。
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
@@ -229,14 +237,16 @@ Sale on Converse!
 {% endraw %}
 
 {% alert note %}
-  このキーは、エンドポイントが JSON オブジェクトを返した場合にのみ、Connected Content オブジェクトに自動的に追加されます。エンドポイントが配列や他の型を返す場合、そのキーをレスポンスに自動的に設定することはできない。
+このキーは、エンドポイントが JSON オブジェクト返す場合にのみ、コネクテッドコンテンツオブジェクトに自動的に追加されます。エンドポイントが配列や他の型を返す場合、そのキーはレスポンシブで自動的に設定することはできない。
 {% endalert %}
 
-## 言語、最新のロケール、タイムゾーンに基づいたメッセージ送信
+## 言語、最新のロケール、タイムゾーンに基づいてメッセージを送信する
 
-状況によっては、特定のロケールに特化したメッセージを送りたい場合もあるでしょう。例えば、ブラジルのポルトガル語は、一般的にヨーロッパのポルトガル語とは異なる。
+状況によっては、特定のロケールに特化したメッセージを送りたい場合もあるだろう。例えば、ブラジルのポルトガル語は一般的にヨーロッパのポルトガル語とは異なる。
 
-ここでは、国際化されたメッセージをさらにローカライズするために、最新のロケールを使用する方法の例を示します。
+### ユースケース:最新のロケールに基づいてローカライズする
+
+国際化されたメッセージをさらにローカライズするために、最新のロケールを使うユースケースを紹介しよう。
 
 {% raw %}
 
@@ -262,9 +272,13 @@ Message in default language
 {% endif %}
 ```
 
-この例では、最新のロケールが「pt\_BR」の顧客にはブラジルのポルトガル語のメッセージが届き、最新のロケールが「pt\_PT」の顧客にはヨーロッパのポルトガル語のメッセージが届きます。最初の2つの条件を満たさないが、言語がポルトガル語に設定されている顧客には、デフォルトのポルトガル語の言語タイプでメッセージが表示されます。
+このユースケースでは、直近のロケールが`pt_BR` の顧客にはブラジル系ポルトガル語のメッセージが、直近のロケールが`pt_PT` の顧客には欧州系ポルトガル語のメッセージが表示される。最初の 2 つの条件を満たさないが、言語をポルトガル語に設定している顧客は、お客様がデフォルトに設定したポルトガル語のタイプでメッセージを受け取ります。
 
-また、タイムゾーンでユーザーをターゲットにすることもできます。例えば、相手が東部標準時をベースにしている場合は1通のメッセージを送り、東部標準時をベースにしている場合は別のメッセージを送る。これを行うには、現在時刻をUTCで保存し、if/else文でユーザーの現在時刻と比較し、正しいタイムゾーンに正しいメッセージを送信していることを確認します。ユーザーが適切な時間にキャンペーンを受け取れるように、ユーザーのローカルタイムゾーンで送信するようにキャンペーンを設定する必要があります。午後2時から午後3時の間に発信されるメッセージで、各タイムゾーンに特化したメッセージを書く方法については、次の例を参照してください。
+### ユースケース:タイムゾーン別のターゲットユーザー
+
+また、タイムゾーンでターゲットのユーザーを設定することもできます。例えば、EST のユーザーにはあるメッセージ、PST のユーザーには別のメッセージを送信します。そのためには、現在時刻をUTCで保存し、if/else文でユーザーの現在時刻と比較し、適切なタイムゾーンに適切なメッセージを送信する。ユーザーのローカルタイムゾーンでキャンペーンを送信するように設定し、適切な時間にキャンペーンを提供する必要がある。 
+
+午後2時から3時の間に発信され、各タイムゾーンに固有のメッセージを書く方法については、以下のユースケースを参照のこと。
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
@@ -285,13 +299,14 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 [33]: https://shopify.dev/api/liquid/tags#syntax-tags
 [38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[17]:{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[18]:{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
+[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[40]:{{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
-[43]:{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[46]:{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-[47]:{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-[48]:{{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
+[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
+[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
+[48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
 [49]: https://shopify.github.io/liquid/basics/whitespace/
-[50]:{{site.baseurl}}/help/help_articles/data/dispatch_id/
+[50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/
+[75]: {{site.baseurl}}/api/objects_filters/trigger_properties_object/

@@ -1,80 +1,80 @@
 ---
-nav_title: よくある質問
+nav_title: FAQ
 article_title: よくある質問
-page_order: 11
-description: "この記事では、Liquidに関するよくある質問への回答を提供します。"
+page_order: 12
+description: "この記事では、Liquid に関してよくある質問にお答えします。"
 
 ---
 
 # よくある質問
 
-> このページでは、Liquidに関するよくある質問への回答をご覧いただけます。<br><br>Brazeは現在、Shopifyのリキッドを100％サポートしているわけではなく、ドキュメントで概説しようとした特定の部分のみをサポートしています。エラーやサポートされていないLiquidの使用のリスクを減らすために、送信前にすべてのメッセージをLiquidでテストすることを強くお勧めします。
+> このページでは、Liquidに関するよくある質問への回答を見つけることができます。<br><br>Brazeは現在、ShopifyのLiquidの100%をサポートしているわけではなく、ドキュメントで概説しようとした特定の部分のみをサポートしています。すべてのメッセージを送信する前にLiquidを使用してテストすることを強くお勧めします。これにより、エラーのリスクやサポートされていないLiquidの使用を減らすことができます。
 
-### Braze でリキッドスニペットを使用するにはどうすればよいですか？
+### Braze で Liquid スニペットを使用するにはどうすればよいですか?
 
-多くの場合、キャンペーンやキャンバスに移動し、メールメッセージ本文やセグメントなどのパーソナライゼーションモーダルにLiquidを挿入することで、Liquidスニペットを組み込むことができます。 
+多くの場合、キャンペーンやキャンバスに移動し、パーソナライゼーションモーダルのメールメッセージ本文やセグメントなどの領域にLiquidを挿入することで、Liquidスニペットを組み込むことができます。 
 
-#### 詳細はどこで確認できますか?
+#### もっと詳しく知るにはどこで学べますか？
 
-Liquidの詳細については、Liquid [Brazeによるダイナミックパーソナライゼーションのガイド付きラーニングパスをご覧ください](https://learning.braze.com/path/dynamic-personalization-with-liquid)！また、[Liquidのユースケースライブラリを参照してインスピレーションを得たり]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/)、Liquidを使ったさまざまなパーソナライゼーションの例を確認したりすることもできます。
+Liquid の詳細については、Braze ラーニングのガイド付きパス「[Liquid を使用したダイナミックなパーソナライゼーション](https://learning.braze.com/path/dynamic-personalization-with-liquid)」を参照してください。また、インスピレーションやLiquidを使用したさまざまなパーソナライゼーションの例については、[Liquidユースケースライブラリー]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/)を参照することもできます。
 
-### パーソナライゼーションにLiquidとコネクテッドコンテンツを使用する場合の違いは何ですか？
+### Liquid とコネクテッドコンテンツをパーソナライゼーションに使用する場合の違いは何ですか?
 
-ブレイズコネクテッドコンテンツはリキッドタグの一例です。パーソナライゼーションにも使用されますが、このデータは Braze 内に保存されているデータではなく、外部のエンドポイントから取得されます。メッセージをパーソナライズする方法の拡張について詳しくは、専用の「[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)」セクションをご覧ください。
+Braze コネクテッドコンテンツは Liquid タグの一例です。これはパーソナライゼーションにも使用されますが、このデータは Braze 内の保存データではなく、外部のエンドポイントから取得されます。専用の[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)セクションをご覧になり、メッセージのパーソナライズ方法を拡張する方法について詳しく学んでください。
 
 ### Liquid テンプレートとは何ですか?
 
-これは Braze でリキッドを使用する最も一般的な方法です。Liquid テンプレートでは、ユーザーのプロファイルからメッセージにデータを取り込みます。このデータは、ユーザーの名前からイベントトリガーメッセージからのカスタムイベントまでさまざまです。
+これは、Braze で Liquid を使用する最も一般的な方法です。Liquid テンプレートでは、ユーザーのプロファイルからデータをメッセージに引き出します。このデータは、ユーザーの名からイベントトリガーメッセージのカスタムイベントまで多岐にわたっています。
 
-[サポートされているLiquidタグの完全なリストについては、「サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」を参照してください。
+[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)の完全なリストについては、サポートされているLiquidタグを参照してください。
 
-### Liquidで変数を割り当てるにはどうすればいいですか？
+### Liquidで変数をどのように割り当てますか？
 
-`assign`タグを使用して変数を作成して割り当てることができます。これにより、メッセージコンポーザーに変数が作成され、メッセージ全体で参照することもできます。
+`assign`タグを使用して変数を作成および割り当てることができます。これにより、メッセージ作成画面で変数が作成され、メッセージ全体で参照できるようになります。
 
 ### Liquidを使用するとデータポイントが消費されますか？
 
 いいえ。
 
-### Liquidを使ってパーソナライズされたグリーティングを送るにはどうすればいいですか？
+### Liquid を使用してパーソナライズされた挨拶を送信するにはどうすればよいですか?
 
-ユーザーのファーストネームを使用してパーソナライズされたグリーティングの場合は、{% raw %}`{{${first_name}}}`、`{{${last_name}}}`などの標準ユーザープロファイル属性を取得できます。
+パーソナライズされた挨拶にユーザーの名を使用する場合、標準的なユーザープロファイル属性を {% raw %} `{{${first_name}}}`、`{{${last_name}}}`のように取得することができます。
 
-Liquid `{% if X %}` {% endraw %} ステートメントを使用して、曜日やカスタム属性など、あらゆる条件に基づいて条件付きレンダリングを行うこともできます。[条件文で使用できるサポート対象のLiquid演算子の詳細については]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/)、「演算子」を参照してください。
+Liquidを使用して、曜日やカスタム属性などに基づいて条件付きレンダリングを行う`{% if X %}` {% endraw %}ステートメントを使用することもできます。サポートされているLiquid演算子の条件文で使用できる演算子の詳細については、[演算子]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/operators/)をチェックしてください。
 
-### 顧客の位置情報に基づいてメッセージをパーソナライズする方法を教えてください。
-
-{% raw %}
-ユーザーの場所にはデフォルト属性があります:`{{${most_recent_location}}}`.
-
-### What's the difference between {{campaign.${name}}} and {{campaign.${message\_name}}}?
-
-`{{campaign.${name}}}``{{campaign.${message_name}}}`との両方が Liquid パーソナライゼーションタグに対応しています。どちらのタグもキャンペーン属性を参照しています。`{{campaign.${name}}}`キャンペーンの名前を表し、`{{campaign.${message_name}}}`はメッセージバリアントの名前です。
-{% endraw %}
-
-### ネストされたオブジェクトでLiquidを使用するにはどうすればよいですか?
-
-Braze には、メッセージで使用できるセグメントの Liquid コードを生成する機能が組み込まれています。具体的には、オブジェクト内の複数の条件に一致するセグメントを作成できます。
-
-詳しくは、「[複数条件セグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#multi-criteria-segmentation)」をご覧ください。
-
-### イベント属性を使用して、イベントがトリガーされているメッセージをパーソナライズする方法を教えてください。
+### 顧客の所在地に基づいてメッセージをパーソナライズするにはどうすればよいですか？
 
 {% raw %}
-API でトリガーされたイベントのプロパティには、:`api_triggered_property`というタグでアクセスできます`{{api_trigger_properties.${attribute_key}}}`。  
+ユーザーの位置情報にはデフォルトの属性があります: `{{${most_recent_location}}}`。
+
+### {{campaign.${name}}}と{{campaign.${message_name}}}の違いは何ですか？
+
+両方`{{campaign.${name}}}`と`{{campaign.${message_name}}}`はサポートされているLiquidパーソナライゼーションタグです。両方のタグはキャンペーン属性を参照しています。`{{campaign.${name}}}`はキャンペーンの名前を示し、`{{campaign.${message_name}}}`はメッセージバリアントの名前を示します。
 {% endraw %}
 
-### アボートロジックとは何ですか? また、どのように使用できますか?
+### Liquidをネストされたオブジェクトでどのように使用しますか？
 
-中止ロジックを使用すると、条件が満たされた場合にメッセージの送信を停止できます。これは、不完全なメッセージがユーザーに送信されるのを防ぐのに特に役立ちます。マーケティングキャンペーンの中止ロジックの例については、「[メッセージを中止する]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/)」で詳細をご覧ください。
+Brazeには、メッセージで使用できるセグメントのLiquidコードを生成する組み込み機能があります。具体的には、オブジェクト内の複数の基準に一致するSegmentを作成できます。
 
-### forループロジックとは何ですか? また、どのように使用できますか?
+詳細については、[マルチ基準セグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#multi-criteria-segmentation)をご覧ください。
 
-for [ループは反復タグとも呼ばれます](https://shopify.github.io/liquid/tags/iteration/)。Liquidスニペットでforループロジックを使用すると、条件が満たされるまでLiquidのブロックを循環させることができます。 
+### イベント属性を使用して、イベントがトリガーしているメッセージをどのようにパーソナライズしますか？
 
-Brazeでは、これを配列のカスタム属性内の項目や、[カタログやConnected]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) [Contentの呼び出し応答によって返された値とオブジェクトのリストを確認するために使用できます]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)。具体的には、for ループロジックをメッセージの一部として使用して、商品の在庫があるかどうか、または商品に最低評価があるかどうかを確認できます。 
+{% raw %}
+API トリガーイベントのプロパティにアクセスするには、`api_triggered_property` タグ: `{{api_trigger_properties.${attribute_key}}}` を使用できます。  
+{% endraw %}
 
-例えば、Get Going という名前の靴会社の全画像を含めて 100 行のカタログを検索したい場合、次の Liquid スニペットを使用できます。
+### 中止ロジックとは何ですか、それをどのように使用できますか？
+
+中止ロジックにより、条件が満たされている場合、メッセージの送信を停止できます。これは、未完成のメッセージがユーザーに送信されるのを防ぐのに特に役立ちます。マーケティングキャンペーンにおける中止ロジックの例については、[メッセージの中止]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/)をお読みください。
+
+### ループロジックとは何ですか、それはどのように使用できますか?
+
+For loops are also known as [反復タグ](https://shopify.github.io/liquid/tags/iteration/).Liquid スニペットで for ループロジックを使用すると、条件が満たされるまで Liquid のブロックを反復実行できます。 
+
+Brazeでは、これは配列のカスタム属性、または[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)や[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)の呼び出し応答によって返される値やオブジェクトのリストをチェックするために使用できます。具体的には、メッセージングの一環としてforループロジックを使用して、製品が在庫にあるかどうか、または製品が最低評価を持っているかどうかを確認できます。 
+
+例えば、Get Goingという名前の靴会社のすべての画像を含む100行のカタログを検索したい場合は、次のLiquidスニペットを使用できます:
 
 {% raw %}
 
@@ -88,4 +88,4 @@ Brazeでは、これを配列のカスタム属性内の項目や、[カタロ�
 
 {% endraw %}
 
-設定した条件が満たされると、メッセージを続行できます。このロジックを使用すると、さまざまな条件でLiquidブロックを繰り返す代わりに、時間を節約できるので便利です。
+設定された条件が満たされると、メッセージを進めることができます。さまざまな条件で Liquid ブロックを繰り返す代わりに、このロジックを使用すると、時間を節約できて便利です。

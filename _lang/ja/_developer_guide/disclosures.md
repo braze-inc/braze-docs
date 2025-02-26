@@ -2,7 +2,7 @@
 nav_title: 情報開示
 article_title: 情報開示と資格
 layout: dev_guide
-page_order: 4
+page_order: 100
 guide_top_header: "情報開示"
 guide_top_text: "Braze にお任せください。以下の記事をぜひチェックしてみてください。"
 
@@ -11,20 +11,20 @@ description: "このランディングページは、Braze の情報開示と資
 
 guide_featured_title: "情報開示と資格"
 guide_featured_list:
-  - name: Security Vulnerability Disclosure
+  - name: セキュリティ脆弱性の公開
     link: /docs/developer_guide/disclosures/security_and_vulnerability_disclosure/
-    fa_icon: fas fa-shield-alt
-  - name: Open Source Software Disclosure
+    image: /assets/img/braze_icons/shield-01.svg
+  - name: オープンソースソフトウェアの開示
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
-    fa_icon: fas fa-globe
-  - name: Innovation Statement
+    image: /assets/img/braze_icons/globe-02.svg
+  - name: イノベーションステートメント
     link: /docs/help/innovation_statement/
-    fa_icon: fas fa-asterisk
-  - name: Security Qualifications
+    image: /assets/img/braze_icons/asterisk-01.svg
+  - name: セキュリティ資格
     link: /docs/developer_guide/disclosures/security_qualifications/
-    fa_icon: fas fa-user-shield
-  - name: Data Protection Technical Assistance
+    image: /assets/img/braze_icons/user-square.svg
+  - name: データ保護技術支援
     link: /docs/help/dp-technical-assistance/
-    fa_icon: fas fa-globe-europe
+    image: /assets/img/braze_icons/globe-04.svg
 
 ---

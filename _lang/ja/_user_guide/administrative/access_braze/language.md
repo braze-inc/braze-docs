@@ -18,7 +18,7 @@ Braze ダッシュボードは、[複数言語](#supported-languages)で使用�
 1. グローバルヘッダーで、[<i class="fa-solid fa-globe" aria-label="言語を選択"></i>] を選択します。
 2. リストから言語を選択します。
 
-![][1]
+![][1]{: style="max-width:60%"}
 
 ダッシュボードが再度読み込まれるまで、少し時間のかかる場合があります。
 
@@ -26,10 +26,12 @@ Braze ダッシュボードは、[複数言語](#supported-languages)で使用�
 
 次のサポートされている言語から選択できます。
 
-- 英語 (English)
-- 日本語
+- 英語
+- スペイン語 (Español)
 - フランス語 (Français)
+- 日本語
 - 韓国語 (한국어)
+- ポルトガル語（ブラジル）
 
 <!--
 Note: This content is pending development

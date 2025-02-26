@@ -11,17 +11,17 @@ description: "このランディングページには、開封ピクセル追跡
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Open Pixel and Click Tracking
+  - name: 開封ピクセルとクリック追跡
     link: /docs/user_guide/data_and_analytics/tracking/email_tracking/
-    fa_icon: fas fa-user
-  - name: Uninstall Tracking
+    image: /assets/img/braze_icons/users-01.svg
+  - name: アンインストール追跡
     link: /docs/user_guide/data_and_analytics/tracking/uninstall_tracking/
-    fa_icon: fas fa-undo
-  - name: Influenced Opens
+    image: /assets/img/braze_icons/refresh-ccw-01.svg
+  - name: 誘発された開封数
     link: /docs/user_guide/data_and_analytics/tracking/influenced_opens/
-    fa_icon: far fa-dot-circle
-  - name: Segment Analytics Tracking
+    image: /assets/img/braze_icons/target-05.svg
+  - name: セグメント分析の追跡
     link: /docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
     
 ---

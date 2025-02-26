@@ -13,16 +13,16 @@ Tool:
 
 # 位置情報とジオフェンス
 
-> [ジオフェンスは]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/)、一部の Braze パッケージでのみ利用できます。利用するには、[サポートチケット][support]を作成するか、Braze カスタマーサクセスマネージャーにご相談ください。
+> [ジオフェンスは]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/)、一部の Braze パッケージでのみ利用できます。利用するには、[サポートチケット]({{site.baseurl}}/braze_support/)を作成するか、Braze カスタマーサクセスマネージャーにご相談ください。
 
 Android のジオフェンスをサポートするには、以下の条件を満たす必要があります。
 
 1. 統合はバックグラウンドプッシュ通知に対応している必要があります。
 2. Braze のジオフェンスまたは位置情報収集機能が有効になっている必要があります。
 
-## ステップ1: build.gradle を更新する
+## ステップ 1:更新 build.gradle
 
-`android-sdk-location`をアプリレベル`build.gradle`に追加します。また、Google Play Services [セットアップガイド][10]を使用して、Google Play Services の[位置情報パッケージ][3]を追加します。
+`android-sdk-location`をアプリレベル`build.gradle`に追加します。また、Google Play Services [セットアップガイド](https://developers.google.com/android/guides/setup)を使用して、Google Play Services の[位置情報パッケージ](https://developers.google.com/android/reference/com/google/android/gms/location/package-summary)を追加します。
 
 ```
 dependencies {
@@ -31,7 +31,7 @@ dependencies {
 }
 ```
 
-## ステップ2: マニフェストを更新する
+## ステップ2:マニフェストを更新する
 
 `AndroidManifest.xml`にブート、精度の高い位置情報、バックグラウンド位置情報の権限を追加します。
 
@@ -55,7 +55,7 @@ dependencies {
 </receiver>
 ```
 
-## ステップ3: Braze の位置情報収集機能を有効にする
+## ステップ 3:Braze の位置情報収集機能を有効にする
 
 まだ Braze の位置情報収集機能を有効にしていない場合は、`com_braze_enable_location_collection`を含むように`braze.xml`ファイルを更新し、その値が`true`に設定されていることを確認します。
 
@@ -64,7 +64,7 @@ dependencies {
 ```
 
 {% alert important %}
-Braze Android SDK バージョン3.6.0から、Braze の位置情報収集機能はデフォルトで無効になっています。
+Braze Android SDK バージョン3.6.0 以降、Braze の位置情報収集機能はデフォルトで無効になっています。
 {% endalert %}
 
 Braze のジオフェンスは、Braze の位置情報収集機能が有効になっている場合に有効になります。デフォルトの位置情報収集機能をオプトアウトしながらも、ジオフェンスを使用したい場合は、`com_braze_enable_location_collection`の値とは別に、`braze.xml`のキー`com_braze_geofences_enabled`の値を`true`に設定することで、選択的に有効にすることができます。
@@ -73,7 +73,7 @@ Braze のジオフェンスは、Braze の位置情報収集機能が有効に�
 <bool name="com_braze_geofences_enabled">true</bool>
 ```
 
-## ステップ4: エンドユーザーから位置情報の許可を得る
+## ステップ 4:エンドユーザーから位置情報の許可を得る
 
 Android M 以降のバージョンでは、位置情報を収集したりジオフェンスを登録したりする前に、エンドユーザーに位置情報の許可を求める必要があります。
 
@@ -98,82 +98,82 @@ Braze.getInstance(context).requestLocationInitialization()
 
 これにより、SDK は Braze サーバーにジオフェンスを要求し、ジオフェンスの追跡を初期化します。
 
-実装例については、[`RuntimePermissionUtils.java`][4]を参照してください。
+実装例については、[`RuntimePermissionUtils.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt)を参照してください。
 
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 public class RuntimePermissionUtils {
   private static final String TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils.class);
-  public static final int DROIDBOY\_PERMISSION\_LOCATION = 40;
+  public static final int DROIDBOY_PERMISSION_LOCATION = 40;
 
   public static void handleOnRequestPermissionsResult(Context context, int requestCode, int[] grantResults) {
-switch (requestCode) {
-case DROIDBOY_PERMISSION_LOCATION:
-// In Android Q, we require both FINE and BACKGROUND location permissions. Both
-// are requested simultaneously.
-if (areAllPermissionsGranted(grantResults)) {
-Log.i(TAG, "Required location permissions granted.");
-Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
-Braze.getInstance(context).requestLocationInitialization();
-} else {
-    Log.i(TAG, "Required location permissions NOT granted.");
-      Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH\_SHORT).show();
+    switch (requestCode) {
+      case DROIDBOY_PERMISSION_LOCATION:
+        // In Android Q, we require both FINE and BACKGROUND location permissions. Both
+        // are requested simultaneously.
+        if (areAllPermissionsGranted(grantResults)) {
+          Log.i(TAG, "Required location permissions granted.");
+          Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
+          Braze.getInstance(context).requestLocationInitialization();
+        } else {
+          Log.i(TAG, "Required location permissions NOT granted.");
+          Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show();
         }
         break;
-        default:
-          break;
-          }
-          }
+      default:
+        break;
+    }
+  }
 
   private static boolean areAllPermissionsGranted(int[] grantResults) {
-for (int grantResult : grantResults) {
-if (grantResult != PackageManager.PERMISSION_GRANTED) {
-return false;
-}
-    }
-      return true;
-        }
+    for (int grantResult : grantResults) {
+      if (grantResult != PackageManager.PERMISSION_GRANTED) {
+        return false;
       }
-    \`\`\`
+    }
+    return true;
+  }
+}
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
+```kotlin
 object RuntimePermissionUtils {
   private val TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils::class.java!!)
-  val DROIDBOY\_PERMISSION\_LOCATION = 40
+  val DROIDBOY_PERMISSION_LOCATION = 40
 
-  fun handleOnRequestPermissionsResult(context:Context, requestCode:Int, grantResults:IntArray) {
+  fun handleOnRequestPermissionsResult(context: Context, requestCode: Int, grantResults: IntArray) {
     when (requestCode) {
-      DROIDBOY\_PERMISSION\_LOCATION ->
+      DROIDBOY_PERMISSION_LOCATION ->
         // In Android Q, we require both FINE and BACKGROUND location permissions. Both
-// are requested simultaneously.
+        // are requested simultaneously.
         if (areAllPermissionsGranted(grantResults)) {
-        Log.i(TAG, "Required location permissions granted.")
-          Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH\_SHORT).show()
+          Log.i(TAG, "Required location permissions granted.")
+          Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
           Braze.getInstance(context).requestLocationInitialization()
-          } else {
-        Log.i(TAG, "Required location permissions NOT granted.")
-          Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH\_SHORT).show()
-          }
-        else -> {
-      }
+        } else {
+          Log.i(TAG, "Required location permissions NOT granted.")
+          Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
+        }
+      else -> {
       }
     }
+  }
 
-  private fun areAllPermissionsGranted(grantResults:IntArray):Boolean {
+  private fun areAllPermissionsGranted(grantResults: IntArray): Boolean {
     for (grantResult in grantResults) {
-      if (grantResult != PackageManager.PERMISSION\_GRANTED) {
+      if (grantResult != PackageManager.PERMISSION_GRANTED) {
         return false
       }
     }
     return true
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -237,13 +237,13 @@ Braze 位置情報製品が正しく動作するには、アプリが利用可�
 
 ### ロケーションページからジオフェンスを有効にする
 
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Brazeの位置情報ページのジオフェンスオプション]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### 設定ページからジオフェンスを有効にする
 
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
+![Braze の設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
-## ステップ6: ジオフェンスの更新を手動でリクエストする (オプション)
+## ステップ 6: ジオフェンスの更新を手動でリクエストする (オプション)
 
 デフォルトでは、Braze は自動的にデバイスの位置情報を取得し、その取得した位置情報に基づいてジオフェンスを要求します。しかし、代わりに近接する Braze ジオフェンスを取得するために使用される GPS 座標を手動で指定することもできます。手動で Braze ジオフェンスをリクエストするには、自動 Braze ジオフェンスリクエストを無効にし、リクエスト用に GPS 座標を指定する必要があります。
 
@@ -280,7 +280,7 @@ Braze.configure(applicationContext, brazeConfigBuilder.build())
 
 #### パート2: GPS 座標で Braze のジオフェンスを手動でリクエストする
 
-Braze のジオフェンスは、[`requestGeofences()`][11]メソッドを使用して手動でリクエストします。
+Braze のジオフェンスは、[`requestGeofences()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html)メソッドを使用して手動でリクエストします。
 
 {% tabs %}
 {% tab JAVA %}
@@ -309,8 +309,3 @@ Braze では、バックグラウンドプッシュを使用してジオフェ�
 
 しかし、アプリケーションが停止している場合にバックグラウンドプッシュを受信すると、バックグラウンドで起動し、その`Application.onCreate()`メソッドが呼び出されることに注意してください。カスタムの`Application.onCreate()`実装がある場合は、自動サーバーコールやバックグラウンドプッシュでトリガーしないアクションを延期する必要があります。
 
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt
-[10]: https://developers.google.com/android/guides/setup
-[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
-[support]: {{site.baseurl}}/braze_support/

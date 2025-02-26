@@ -1,81 +1,81 @@
 ---
-nav_title: フレンドバイ
-article_title: フレンドバイ
-description: "FriendbuyをBrazeと統合する方法をご覧ください。"
+nav_title: Friendbuy
+article_title: Friendbuy
+description: "FriendbuyとBrazeを統合する方法を学ぶ。"
 alias: /partners/friendbuy/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# フレンドバイ
+# Friendbuy
 
-> FriendbuyとBrazeの統合を活用すると、紹介やロイヤルティプログラムのコミュニケーションを簡単に自動化しながら、メールやSMSの機能を拡張できます。Brazeは、Friendbuyを通じて収集されたすべてのオプトイン電話番号の顧客プロファイルを生成します。
+> FriendbuyとBrazeの統合により、EメールやSMSの機能を拡張し、紹介やロイヤルティプログラムのコミュニケーションを簡単に自動化することができる。Braze では、Friendbuy 経由で収集されたすべてのオプトイン電話番号の顧客プロファイルが生成されます。
 
 ## 前提条件
 
-始める前に、次のものが必要です。
+開始する前に、次のものが必要になります。
 
-| 前提条件         | 説明                                                                                                                    |
+| 前提条件          | 説明                                                                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Friendbuyアカウント | このパートナーシップを利用するには、[Friendbuyアカウントが必要です][1]。|
-| Braze REST API キー | `users.track` 権限付きの Braze REST API キー。これはBrazeダッシュボードの**Settings**>**API Keys**から作成できる。        |
-| Braze REST エンドポイント | [お客様の REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。これは Braze インスタンスの URL によって異なります。|
-{: .reset-td-br-1 .reset-td-br-2}
+| Friendbuyアカウント   | このパートナーシップを活用するには、[Friendbuy アカウント][1]が必要です。                                                              |
+| Braze REST API キー  | `users.track` 権限を持つ Braze REST API キー。これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。        |
+| Braze RESTエンドポイント | [REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。これは Braze インスタンスの URL に応じて異なります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-[古いナビゲーションを使用している場合は]({{site.baseurl}}/navigation)、**開発者コンソール** > API **設定で API** キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**デベロッパコンソール**> **API設定**でAPI キーを作成できます。
 {% endalert %}
 
-## フレンドバイの統合
+## Friendbuy の統合
 
-[Friendbuyで][1]**、**デベロッパーセンター** > **インテグレーションに移動し**、Brazeインテグレーションカードで [インテグレーションを追加] を選択します。**
+[Friendbuy][1] で [**Developer Center**] > [**Integrations**] に移動し、Braze 統合カードで [**Add integration**] を選択します。
 
-![フレンドバイのブレイズインテグレーションカード。] [100]{: style="max-width:75%;"}
+![Friendbuy の Braze 統合カード。][100]{: style="max-width:75%;"}
 
-フォームに REST エンドポイントと API キーを入力し、[**インテグレーションをインストール**] を選択します。
+フォームに REST エンドポイントと API キーを入力し、[**Install Integration**] を選択します。
 
-![フレンドバイ統合フォーム] [101]{: style="max-width:55%;"}
+![Friendbuy 統合フォーム。][101]{: style="max-width:55%;"}
 
-[Friendbuyアカウントに戻り][1]、ページを更新してください。統合が成功すると、次のようなメッセージが表示されます。
+[Friendbuy アカウント][1]に戻り、ページを更新します。統合が成功すれば、以下のようなメッセージが表示される：
 
-![統合がインストールされた][102]。{: style="max-width:55%;"}
+![統合がインストールされた][102]{: style="max-width:55%;"}
 
 ### カスタム属性
 
-| カスタム属性名 | 定義 | データ型 |
+| カスタム属性名            | 定義                                                                                                                                         | データ型 |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-*| **Friendbuy紹介ステータス** | *紹介者は支持者*、紹介者は紹介友として分類されます | 文字列 |*
-| **Friendbuy 顧客名** | 顧客が紹介ウィジェットを通じて情報を送信するときに入力した名前 | 文字列 |
-| **Friendbuy紹介リンク** | 支援者向けに生成された個人紹介リンク (PURL)たとえば、https://fbuy.io/EzcW                                                       | String    |
-| **Friendbuyの最終シェア日** | アドボケイトが任意の共有チャンネルで最後に友だちと共有した日付と時刻。支援者がまだ共有していない場合、プロパティは表示されません。| Time |
-| **Friendbuy キャンペーン ID** | 支援者用に生成された個人紹介リンクに関連付けられたキャンペーン ID | 文字列 |
-| **Friendbuy キャンペーン名** | 支援者用に生成された個人紹介リンクに関連付けられたキャンペーン名 | 文字列 |
-| **Friendbuyクーポンコード|** 顧客に配布された最新の紹介クーポンコード。注:1 つのコードのみが表示されます。| 文字列 |
-| **Friendbuy クーポンの価値** | お客様に配布された最新のクーポンコードの通貨値 | 番号 |
-| **Friendbuyクーポンステータス** | お客様に配布された最新のクーポンコードのステータス。注:ステータスは「配布済み」または「償還済み」になります。| 文字列 |
-| **Friendbuy クーポン通貨** | お客様に配布された最新のクーポンコードに関連する通貨コード (USD、CAD など) またはパーセント (%)。| 文字列 |
-| **Friendbuy クーポンキャンペーン ID** | お客様用に生成されたクーポンコードに関連付けられたキャンペーン ID | 文字列 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| **Friendbuy Referral Status**    | 紹介者は *Advocate*、被紹介者は *Referred Friend* に分類されます。                                                          | String    |
+| **Friendbuy Customer Name**      | 顧客が紹介ウィジェットから情報を送信する際に入力した名前                                                                 | String    |
+| **Friendbuy Referral Link**      | Advocate に対して生成されるパーソナル紹介リンク (PURL)。例: https://fbuy.io/EzcW                                                       | String    |
+| **Friendbuy Date of Last Share** | 共有チャネルを通じて最後に Advocate が Friend と共有した時点の日時。Advocate がまだ共有していない場合、このプロパティはて表示されません。 | 時刻      |
+| **Friendbuy Campaign ID**        | アドボケートのために生成された個人紹介リンクに関連するキャンペーンID                                                               | String    |
+| **フレンドバイキャンペーン名**      | アドボケートのために生成された個人紹介リンクに関連するキャンペーン名                                                             | String    |
+| **Friendbuy クーポンコード**        | 顧客に配布された最新の紹介クーポンコード。注：表示されるコードは1つだけです。                                            | String    |
+| **Friendbuy Coupon Value**       | 顧客に配布された最新のクーポンコードの通貨価値。                                                                     | 数値    |
+| **Friendbuy Coupon Status**      | 顧客に配布された最新のクーポンコードのステータス。注：ステータスは「distributed」または「redeemed」です。                            | String    |
+| **Friendbuy Coupon Currency**    | 顧客に配布された最新のクーポンコードに関連する通貨コード（USD、CADなど）またはパーセント（%）。                             | String    |
+| **FriendbuyクーポンキャンペーンID** | 顧客のために生成されたクーポンコードに関連するキャンペーンID。                                                                          | String    |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## デフォルト動作
 
-顧客データを Braze に送信する前に、顧客は次のボックスのうちの 1 つまたは複数のチェックボックスをオンにして、紹介ウィジェットからオプトインする必要があります。
+顧客データを Braze に送信する前に、顧客は紹介ウィジェットで以下の1つ以上のボックスをオンにして、オプトインする必要があります。
 
-![紹介ウィジェット] [103]
+![紹介ウィジェット][103]
 
 {% alert note %}
-Friendbuyは国際規格（E.164）を使用して実際の電話番号を認証します。`555-555-5555`などの無効な番号は Braze に送信されません。
+Friendbuyは国際標準規格(E.164)を採用し、実在する電話番号を検証している。`555-555-5555` のような無効な番号はBrazeに送られない。
 {% endalert %}
 
-### 例
+### チェックボックスの動作
 
-| チェックボックスが選択されました | 動作 |
+| チェックボックスが選択されている | 動作                                                        |
 |-------------------|-----------------------------------------------------------------|
-| メールのみ | お客様のメールアドレスのみが Braze に送信されます。|
-| 電話のみ | お客様の電話番号のみが Braze に送信されます。|
-| どちらでもない | 顧客データは Braze に送信されません。|
-| 両方 | お客様のメールアドレスと電話番号が Braze に送信されます。|
+| Eメールのみ        | 顧客のメールアドレスだけが Braze に送信されます。             |
+| 電話のみ        | 顧客の電話番号だけが Braze に送信されます。              |
+| Neither           | 顧客データがBrazeに送信されることはない。                              |
+| どちらも              | 顧客のメールアドレスと電話番号が Braze に送信されます。 |
 
 [1]: https://retailer.friendbuy.io/
 [100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}

@@ -18,7 +18,7 @@ tool: Media
 {% tabs %}
 {% tab Classic %}
 
-The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
+The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.
 
 ![Image of a classic card with recommended details and a classic card example]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
@@ -28,7 +28,7 @@ The classic card is great for standard messaging and notifications or even visua
 | Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
 | Link Text | Optional. <br> 13&nbsp;px <br> Link to web page or deep link to within  your app. |
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60 x 60&nbsp;px. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Captioned Image %}
@@ -43,7 +43,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 | Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
 | Link Text | Optional. <br> 13&nbsp;px <br> Link to web page or deep link to within your app. |
 | Image | Suggested be 4:3 ratio. <br> 600&nbsp;px minimum width.  <br> Supports high-resolution PNG, JPEG, and GIF. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab Banner %}
@@ -56,7 +56,7 @@ If you want fancy, the banner card is for you. This is completely customized to 
 | --- | ---|
 | Linked Card | Optional. <br> 13&nbsp;px <br> On-click behavior link to a web page or a deep link to within your app. |
 | Image | Any aspect ratio supported. <br> 600&nbsp;px minimum width.  <br> Supports high-resolution PNG, JPEG, and GIF. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
@@ -84,7 +84,7 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
 | The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to the [GIF support tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
 
@@ -94,4 +94,4 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 [4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
+[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

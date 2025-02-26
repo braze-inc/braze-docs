@@ -23,7 +23,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 | Definition |  Time Zone |
 | --- | --- |
 | Send message immediately after the user receives the previous step, or if this is the first step, immediately after the user enters the Canvas. | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][1]
 
@@ -32,7 +32,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 | Definition |  Time Zone |
 | --- | --- |
 | Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks.  | N/A |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][2]
 
@@ -41,7 +41,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 | Definition |  Time Zone |
 | --- | --- |
 | Send message on the next specified day of the week, at a selected time of day.  | Select between **user's local time** or **company time** |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For example, suppose you select "Send on the next Saturday at 3:15 pm". If a user enters the Canvas on a Saturday, they would receive that message on the next Saturday in seven days. If they enter on a Friday, the next Saturday would be in one day.
 
@@ -61,8 +61,8 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 | Definition | Time Zone |
 | ---------- | ----- |
-| [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user's past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
-{: .reset-td-br-1 .reset-td-br-2}
+| [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user's past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][5]
 
@@ -71,7 +71,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 | Definition | Time Zone |
 | --- | --- |
 | Limit how many times each user should receive the Canvas within a certain time frame, which can be measured in minutes, days, weeks (seven days), and months. | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 [Frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11 pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
 

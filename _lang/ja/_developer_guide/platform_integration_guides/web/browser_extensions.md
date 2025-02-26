@@ -1,66 +1,66 @@
 ---
-nav_title: ブラウザ拡張機能
-article_title: Web用のブラウザ拡張機能の統合
+nav_title: ブラウザーエクステンション
+article_title: Web のブラウザーエクステンション統合
 platform: Web
 page_order: 20
 page_type: reference
-description: "この記事では、ブラウザ拡張機能(Google Chrome、Firefox)内でBraze Web SDKを使用する方法について説明します。"
+description: "この記事では、Braze Web SDK をブラウザーエクステンション (Google Chrome、Firefox) 内で使用する方法について説明します。"
 
 ---
 
-# ブラウザ拡張機能
+# ブラウザ拡張子
 
-> この記事では、ブラウザ拡張機能(Google Chrome、Firefox)内でBraze Web SDKを使用する方法について説明します。
+> この記事では、Braze Web SDK をブラウザーエクステンション (Google Chrome、Firefox) 内で使用する方法について説明します。
 
-Braze Web SDKをブラウザ拡張機能に統合して、分析を収集し、リッチメッセージをユーザーに表示します。これには **、Google Chrome 拡張機能** と **Firefox アドオンの両方が含まれます**。
+Braze Web SDK をブラウザーエクステンション内に統合し、分析を収集して、豊富なメッセージをユーザーに表示します。これには、**Google Chrome Extensions**と**Firefox Add-Ons**の両方が含まれます。
 
-## サポート対象
+## サポートされるもの
 
-一般に、拡張機能はHTMLとJavaScriptであるため、Brazeは次の目的で使用できます。
+通常、拡張機能はHTML およびJavaScript であるため、以下にBraze を使用できます。
 
-* **アナリティクス**:カスタムイベントや属性をキャプチャし、拡張機能内のリピートユーザーを特定することもできます。これらのプロファイル特性を使用して、クロスチャネルメッセージングを強化します。
-* **アプリ内メッセージ**:ユーザーが拡張機能内でアクションを起こしたときに、ネイティブまたはカスタムのHTMLメッセージを使用してアプリ内メッセージをトリガーします。
-* **コンテンツカード**:ネイティブ カードのフィードを拡張機能に追加して、オンボーディング コンテンツやプロモーション コンテンツを作成します。
-* **Webプッシュ**:Webページが現在開いていないときでも、タイムリーに通知を送信します。
+* **分析**:カスタムイベント、属性をキャプチャし、エクステンション内の繰り返しユーザーの識別も行います。これらのプロファイル特性を使用して、クロスチャネルメッセージングを強化します。
+* **アプリ内メッセージ**:ユーザーがネイティブまたはカスタムの HTML メッセージングを使用してエクステンション内でアクションを取ったときに、アプリ内メッセージをトリガーします。
+* **コンテンツカード**:オンボーディングまたはプロモーションコンテンツの拡張機能に、ネイティブカードのフィードを追加します。
+* **Web プッシュ**:Web ページが現在開かれていない場合でも、タイムリーに通知を送信します。
 
 ## サポートされていないもの
 
-* Manifest v3 Service Worker は、Web 環境向けのモジュールのインポートをサポートしていません。
+* サービスワーカーは Braze Web SDK ではサポートされていませんが、このサポートについては将来検討される予定です。
 
-## 拡張機能の種類
+## 拡張子の種類
 
-Brazeは、拡張機能の次の領域に含めることができます。
+Braze は、エクステンションの以下の領域に含めることができます。
 
-|エリア |詳細 |サポート対象 |
+| エリア | 詳細 | サポートされるもの |
 |--------|-------|------|
-|ポップアップページ | [ポップアップ][1] ページは、ブラウザツールバーの拡張機能のアイコンをクリックしたときにユーザーに表示できるダイアログです。|アナリティクス、アプリ内メッセージ、コンテンツカード |
-|バックグラウンド スクリプト | [バックグラウンド スクリプト][2] (Manifest v2 のみ) を使用すると、拡張機能でユーザー ナビゲーションを検査して操作したり、Web ページを変更したりできます (たとえば、広告ブロッカーがページ上のコンテンツを検出して変更する方法)。|分析、アプリ内メッセージ、コンテンツカード。<br><br>バックグラウンドスクリプトはユーザーには表示されないため、メッセージングの場合、メッセージを表示するときにブラウザーのタブまたはポップアップページと通信する必要があります。|
-|オプション ページ | [[オプション] ページで][3] は、ユーザーは拡張機能内の設定を切り替えることができます。これは、新しいタブを開くスタンドアロンの HTML ページです。 |アナリティクス、アプリ内メッセージ、コンテンツカード |
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
+| ポップアップページ | [ポップアップ](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)ページは、ブラウザーのツールバーで拡張機能のアイコンをクリックするとユーザーに表示されるダイアログです。| 分析、アプリ内メッセージ、およびコンテンツカード |
+| バックグラウンドスクリプト | [バックグラウンドスクリプト](https://developer.chrome.com/extensions/background_pages) (マニフェスト v2のみ) は、エクステンションで、ユーザーナビゲーションの調査および相互作用や、Web ページの変更を行えるようにします (広告ブロッカーがページ上のコンテンツを検出および変更する方法など)。 | 分析、アプリ内メッセージ、コンテンツカード。<br><br>バックグラウンドスクリプトはユーザーには表示されないため、メッセージングを行う場合は、メッセージを表示するときにブラウザーのタブやポップアップページで通信する必要があります。 |
+| オプションページ | [[オプションページ](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)] を使用して、ユーザーはエクステンション内で設定を切り替えることができます。これは、新しいタブを開封するスタンドアロンのHTMLページです。 | 分析、アプリ内メッセージ、およびコンテンツカード |
+{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
 
 ## 権限
 
-Braze SDK(`braze.min.js`)を拡張機能にバンドルされたローカルファイルとして統合する場合、追加の権限は必要ありません`manifest.json`。 
+Braze SDK (`braze.min.js`) をエクステンションとバンドルされたローカルファイルとして統合する場合、`manifest.json` で追加の権限は必要ありません。 
 
-ただし、[Google Tag Manager][8]を使用している場合、外部URLからBraze SDKを参照している場合、または拡張機能に厳格なコンテンツセキュリティポリシーを設定している場合は、リモートスクリプトソースを許可するように設定`manifest.json`を調整する[`content_security_policy`][6]必要があります。
+ただし、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), を使用するか、外部 URL から Braze SDK を参照するか、拡張子に厳密なコンテンツセキュリティポリシーを設定した場合は、`manifest.json` の [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を調整して、リモートスクリプトソースを許可する必要があります。
 
-## 開始:
+## はじめに
 
 {% alert tip %}
-開始する前に、Web SDK の初期 [SDK セットアップ ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) を読んで、JavaScript 統合全般の詳細を確認してください。 <br><br>また、 [JavaScript SDK リファレンス](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) をブックマークして、さまざまな SDK メソッドと構成オプションの詳細を確認することもできます。
+作業を始める前に、Web SDKの[初期SDK設定ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)を読んで、JavaScriptの統合全般について理解してください。 <br><br>また、[JavaScript SDK リファレンス](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) をブックマークして、さまざまなSDK方法と設定オプションの詳細を確認することもできます。
 {% endalert %}
 
-BrazeのWeb SDKを統合するには、まず最新のJavaScriptライブラリのコピーをダウンロードする必要があります。これは、NPMを使用するか、 [BrazeのCDN][7]から直接ダウンロードして行うことができます。
+Braze の Web SDK を統合するには、まず、最新の JavaScript ライブラリーのコピーをダウンロードする必要があります。これは、NPMを使用するか、[BrazeのCDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js)から直接的に読み込むすることで実行できます。
 
-また、[Google Tag Manager][8]を使用したり、Braze SDKの外部でホストされているコピーを使用したりする場合は、外部リソース[`content_security_policy`][6]`manifest.json`を読み込むには、.
+または、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) を使用するか、Braze SDK の外部でホストされたコピーを使用する場合は、外部リソースを読み込むには [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を `manifest.json` で調整する必要があることに注意してください。
 
-ダウンロードしたら、必ずファイルを拡張機能のディレクトリのどこかにコピー `braze.min.js` してください。
+ダウンロードしたら、`braze.min.js` ファイルをエクステンションのディレクトリーの任意の場所にコピーします。
 
-### 拡張機能のポップアップ {#popup}
+### 拡張機能ポップアップ {#popup}
 
-Braze を拡張機能のポップアップに追加するには、通常の Web サイトの場合と同様に、 で `popup.html`ローカルの JavaScript ファイルを参照します。Googleタグマネージャーを使用している場合は、代わりに[Googleタグマネージャーテンプレート][8]を使用してBrazeを追加できます。
+拡張ポップアップにBrazeを追加するには、通常のWeb サイトと同様に、`popup.html` でローカルJavaScript ファイルを参照します。Google Tag Manager を使用している場合は、代わりに[Google Tag Manager テンプレート]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/)) を使用してBraze を追加できます。
 
-\`\`\`html
+```html
 <html>
     <title>popup.html</title>
     <!-- Add the Braze library -->
@@ -71,9 +71,9 @@ Braze を拡張機能のポップアップに追加するには、通常の Web 
 </html>
 ```
 
-### バックグラウンド スクリプト (マニフェスト v2 のみ) {#background-script}
+### バックグラウンドスクリプト(マニフェストv2 のみ) {#background-script}
 
-拡張機能のバックグラウンドスクリプト内で Braze を使用するには、Braze ライブラリ `manifest.json` を配列に追加します `background.scripts` 。これにより、グローバル `braze` 変数がバックグラウンドスクリプトのコンテキストで使用できるようになります。
+エクステンションのバックグラウンドスクリプト内で Braze を使用するには、Braze ライブラリーを `background.scripts` 配列の `manifest.json` に追加します。これにより、グローバル`braze` 変数がバックグラウンド スクリプトコンテキストで使用できるようになります。
 
 
 ```json
@@ -88,15 +88,15 @@ Braze を拡張機能のポップアップに追加するには、通常の Web 
 }
 ```
 
-### [オプション] ページ {#options-page}
+### オプションページ {#options-page}
 
-オプションページ(または`options``options_ui`マニフェストプロパティを使用)を使用する場合は、手順と同じように[`popup.html`](#popup)Brazeを含めることができます。
+オプションページを (`options` または `options_ui` マニフェストプロパティを介して)使用する場合、[`popup.html` の説明](#popup)で行ったのと同じ方法で Braze を組み込むことができます。
 
 ## 初期化
 
-SDK が含まれたら、通常どおりライブラリを初期化できます。 
+SDK が組み込まれると、通常どおりにライブラリーを初期化できるようになります。 
 
-Cookieはブラウザ拡張機能ではサポートされていないため、で初期化 `noCookies: true`することでCookieを無効にすることができます。
+Cookie はブラウザーエクステンションではサポートされていないため、`noCookies: true` で初期化することで Cookie を無効にできます。
 
 ```javascript
 braze.initialize("YOUR-API-KEY-HERE", {
@@ -106,17 +106,9 @@ braze.initialize("YOUR-API-KEY-HERE", {
 });
 ```
 
-サポートされている初期化オプションの詳細については、[Web SDK リファレンス][10] を参照してください。
+サポートされている初期化オプションの詳細については、[[Web SDK リファレンス](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)] を参照してください。
 
 ## プッシュ
 
-拡張機能のポップアップ ダイアログでは、プッシュ プロンプトは使用できません (ナビゲーションに URL バーがありません)。そのため、拡張機能のポップアップダイアログでプッシュ権限を登録してリクエストするには、[代替プッシュドメイン][11]で説明されているように、代替ドメインの回避策を利用する必要があります。
+拡張ポップアップダイアログでは、プッシュプロンプトは使用できません(ナビゲーションにURL バーはありません)。このため、エクステンションのポップアップダイアログ内でプッシュ通知の権限を登録して要求するには、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain). で説明されているように、代替ドメインの回避策を使用する必要があります。
 
-[1]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
-[2]: https://developer.chrome.com/extensions/background_pages
-[3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-[6]: https://developer.chrome.com/extensions/contentSecurityPolicy
-[7]: https://js.appboycdn.com/web-sdk/latest/braze.min.js
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/
-[10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain

@@ -10,11 +10,11 @@ description: "This article outlines details about the Update scheduled messages 
 ---
 {% api %}
 # Update scheduled messages
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/update
 {% endapimethod %}
 
-> Use this endpoint to update scheduled messages. 
+> Use this endpoint to update scheduled messages.
 
 This endpoint accepts updates to either the `schedule` or `messages` parameter or both. Your request must contain at least one of those two keys.
 
@@ -53,7 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule_id` | Required | String | The `schedule_id` to update (obtained from the response to create schedule). |
 |`schedule` | Optional | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 |`messages` | Optional | Object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
 ```

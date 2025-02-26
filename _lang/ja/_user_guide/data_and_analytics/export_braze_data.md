@@ -4,7 +4,7 @@ article_title: Braze データのエクスポート
 page_order: 6
 layout: dev_guide
 guide_top_header: "Braze データのエクスポート"
-guide_top_text: "Braze は、Braze ダッシュボードデータの CSV エクスポートを提供しており、これをさまざまなツールで使用してデータの分析ができます。以下の記事では、ダッシュボードからエクスポートできるさまざまなデータのタイプや、データを Excel で開いたり、API を使用してエクスポートしたりするときのヒントを説明しています。<br><br>エクスポートを実行する前に、データを表示する期間を正しく選択していることを確認してください。"
+guide_top_text: "Braze は、Braze ダッシュボードデータの CSV エクスポートを提供しており、これをさまざまなツールで使用してデータの分析ができます。以下の記事では、ダッシュボードからエクスポートできるさまざまな種類のデータと、データをエクセルで開いたり、APIを使用してエクスポートを実行するためのヒントについて説明する。<br><br>エクスポートを実行する前に、データを表示したい時間枠が正しく選択されていることを確認する。"
 
 page_type: landing
 description: "このランディングページには、キャンペーンやキャンバスの結果、セグメントデータ、概要、収益データなど、Braze データのエクスポートに関するリソースがまとめられています。"
@@ -13,58 +13,55 @@ tool: Reports
 guide_featured_title: "よく読まれている記事"
 
 guide_featured_list:
-  - name: Export Campaign Results
+  - name: キャンペーン結果をエクスポートする
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
-    fa_icon: fas fa-chart-bar
-  - name: Export Canvas Results
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: キャンバスの結果をエクスポートする
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
-    fa_icon: fas fa-palette
-  - name: Export Segment Data
+    image: /assets/img/braze_icons/palette.svg
+  - name: セグメントデータのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
-    fa_icon: fas fa-file-csv
+    image: /assets/img/braze_icons/file-download-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Message Archiving
+  - name: メッセージのアーカイブ
     link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/
-    fa_icon: fa-solid fa-clock-rotate-left
-  - name: Export Overview Data
+    image: /assets/img/braze_icons/clock-rewind.svg
+  - name: 概要データをエクスポートする
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
-    fa_icon: far fa-dot-circle
-  - name: Export Revenue Data
+    image: /assets/img/braze_icons/target-05.svg
+  - name: 収益データのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-    fa_icon: fas fa-hand-holding-usd
-  - name: Export News Feed Data
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    fa_icon: fas fa-newspaper
-  - name: Export Custom Event Data
+    image: /assets/img/braze_icons/coins-hand.svg
+  - name: カスタムイベントデータのエクスポート
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
-    fa_icon: fas fa-cog
-  - name: Export APIs
+    image: /assets/img/braze_icons/settings-01.svg
+  - name: エクスポート API
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
-    fa_icon: fas fa-server
-  - name: Opening CSV Exports in Excel
+    image: /assets/img/braze_icons/server-01.svg
+  - name: CSVエクスポートをエクセルで開く
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
-    fa_icon: fas fa-file-excel
-  - name: Export Troubleshooting
+    image: /assets/img/braze_icons/file-02.svg
+  - name: エクスポートに関するトラブルシューティング
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
-    fa_icon: far fa-question-circle
-  - name: Frequently Asked Questions
+    image: /assets/img/braze_icons/help-circle.svg
+  - name: よくある質問
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title2: Data export with Currents
 guide_menu_description2: "Looking to take advantage of data export with Braze Currents? The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. Check out these articles for more."
 guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents
-    fa_icon: fas fa-database
-  - name: Setting up Currents
+    image: /assets/img/braze_icons/database-01.svg
+  - name: Currents の設定
     link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-    fa_icon: fas fa-warehouse
-  - name: How Braze uses Currents
+    image: /assets/img/braze_icons/building-01.svg
+  - name: Braze で Currents を使用する方法
     link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
-    fa_icon: fas fa-arrows-alt
+    image: /assets/img/braze_icons/expand-05.svg
 
 ---
 <br><br>

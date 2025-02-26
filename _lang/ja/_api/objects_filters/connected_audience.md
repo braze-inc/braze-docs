@@ -3,15 +3,15 @@ nav_title: "コネクテッド・オーディエンス フィルター＆オブ�
 article_title: API接続オーディエンス・オブジェクト
 page_order: 3
 page_type: reference
-description: "この記事では、コネクテッドオーディエンスオブジェクトのさまざまなコンポーネントと、それを作成するフィルターについて説明します。"
+description: "この記事では、接続オーディエンスオブジェクトのさまざまなコンポーネントと、それを作成するフィルターについて説明します。"
 
 ---
 
-# 接続された観客オブジェクト
+# 接続されたオーディエンスオブジェクト
 
-> 接続されたオーディエンスオブジェクトは、メッセージを送信するオーディエンスを特定するセレクタです。 
+> 接続されたオーディエンス・オブジェクトは、メッセージを送信するオーディエンスを特定するセレクタである。 
 
-このオブジェクトは、`AND` または`OR` 演算子を使用した論理式で、1つの接続された視聴者フィルタ、または複数の接続された視聴者フィルタで構成されます。
+このオブジェクトは、`AND` または `OR` 演算子を使用した論理式で、1つの接続オーディエンスフィルター、または複数の接続オーディエンスフィルターで構成されます。
 
 **複数フィルターの例：**
 
@@ -32,13 +32,13 @@ description: "この記事では、コネクテッドオーディエンスオブ
 }
 ```
 
-## 接続された視聴者フィルター
+## 接続オーディエンスフィルター
 
-複数のカスタム属性フィルタを組み合わせると、連結オーディエンスフィルタが作成されます。`AND` および`OR` 演算子と組み合わせると、連結オーディエンスフィルタが作成されます。
+複数のカスタム属性フィルターを組み合わせると、接続オーディエンスフィルターが作成され、`AND` および `OR` 演算子と組み合わせると、接続オーディエンスフィルターが作成されます。
 
 ### カスタム属性フィルター
 
-このフィルターを使用すると、ユーザーのカスタム属性に基づいてセグメント化することができます。これらのフィルターには最大3つのフィールドが含まれる：
+このフィルターによって、ユーザーのカスタム属性に基づいてセグメント化することができる。これらのフィルターには最大3つのフィールドが含まれる：
 
 ```json
 {
@@ -51,62 +51,62 @@ description: "この記事では、コネクテッドオーディエンスオブ
 }
 ```
 
-#### データ型による比較
+#### データ型による比較を許可する
 
-カスタム属性のデータ型は、与えられたフィルターで有効な比較を決定します。
+カスタム属性のデータ型は、与えられたフィルターで有効な比較を決定する。
 
-| カスタム属性タイプ｜許可される比較
+| カスタム属性タイプ | 許容される比較 |
 | ---------------------| --------------- |
-| 文字列｜`equals`,`not_equal`,`matches_regex`,`does_not_match_regex`,`exists`,`does_not_exist` |
-| 配列｜`includes_value`,`does_not_include_value`,`exists`,`does_not_exist` |
-| 数値｜`equals`,`not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists`,`does_not_exist` |
-| ブーリアン｜`equals`,`does_not_equal`,`exists`,`does_not_exist` |
-| 時間｜`less_than_x_days_ago`,`greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists`,`does_not_exist` |
-{: .reset-td-br-1 .reset-td-br-2}
+| 文字列 | `equals``not_equal`,`matches_regex`,`does_not_match_regex`,`exists` 、 `does_not_exist` |
+| 配列 | `includes_value``does_not_include_value`,`exists` 、 `does_not_exist` |
+| 数値 | `equals``not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists` 、 `does_not_exist` |
+| ブール値 | `equals``does_not_equal`,`exists` 、 `does_not_exist` |
+| 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 属性比較の注意点
 
-| 比較
+| 比較 | その他の考慮事項 |
 | --- | --- |
-|`value` |`exists` または`does_not_exist` の比較を使用する場合、`value` は必須ではありません。`before` および`after` の比較を使用する場合、`value` は ISO 8601 の日付文字列でなければなりません。|
-|`matches_regex` ｜`matches_regex` ｜比較を使用する場合、渡される値は文字列でなければならない。Brazeでの正規表現の使用については、[正規表現と]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) [カスタム属性データタイプを]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types)参照してください。|
-{: .reset-td-br-1 .reset-td-br-2}
+| `value` | `exists` または `does_not_exist` の比較を使用する場合、`value` は必要ありません。`before` および `after` の比較を使用する場合、`value` は ISO 8601 日時文字列である必要があります。 |
+|`matches_regex` | `matches_regex` 比較を使う場合、渡される値は文字列でなければならない。Braze での正規表現の使用については、[正規表現]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze)と[カスタム属性のデータ型]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types)を参照してください。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### カスタム属性の例
 
-\`\`\`json
+```json
 {
-"custom_attribute":
-{
-"custom_attribute_name": "eye_color",
-"comparison": "equals",
-"value": "blue"
+  "custom_attribute":
+    {
+      "custom_attribute_name": "eye_color",
+      "comparison": "equals",
+      "value": "blue"
+    }
 }
-  }
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "favorite_foods",
-"comparison": "includes_value",
-"value": "pizza"
+  "custom_attribute":
+  {
+    "custom_attribute_name": "favorite_foods",
+    "comparison": "includes_value",
+    "value": "pizza"
+  }
 }
-  }
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "last_purchase_time",
-"comparison": "less_than_x_days_ago",
-"value": 2
+  "custom_attribute":
+  {
+    "custom_attribute_name": "last_purchase_time",
+    "comparison": "less_than_x_days_ago",
+    "value": 2
+  }
 }
-  }
-  \`\`\`
-### プッシュ購読フィルター
+```
+### プッシュ通知のサブスクリプションのフィルター
 
-このフィルターを使用すると、ユーザーのプッシュ購読状況に基づいてセグメント化することができます。
+このフィルターによって、ユーザーのプッシュ通知のサブスクリプションステータスに基づいてセグメント化することができます。
 
-#### フィルター本体
+#### フィルター本文
 
 ```json
 {
@@ -119,13 +119,13 @@ description: "この記事では、コネクテッドオーディエンスオブ
 ```
 
 - **許容される比較：** `is`, `is_not`
-- **許可された値** `opted_in` `subscribed` 、 `unsubscribed`
+- **許容される値** `opted_in` `subscribed` 、 `unsubscribed`
 
-### メール購読フィルター
+### メール通知のサブスクリプションのフィルター
 
-このフィルターは、ユーザーのメール購読状況に基づいてセグメントすることができます。
+このフィルターによって、ユーザーのメール通知のサブスクリプションステータスに基づいてセグメント化することができます。
 
-#### フィルター本体
+#### フィルター本文
 
 ```json
 {
@@ -138,13 +138,13 @@ description: "この記事では、コネクテッドオーディエンスオブ
 ```
 
 - **許容される比較：** `is`, `is_not`
-- **許可された値** `opted_in` `subscribed` 、 `unsubscribed`
+- **許容される値** `opted_in` `subscribed` 、 `unsubscribed`
 
 ### 最後に使用したアプリフィルター
 
-このフィルターにより、ユーザーが最後にアプリを使用した時間に基づいてセグメントすることができます。これらのフィルターには2つのフィールドがある：
+このフィルターにより、ユーザーが最後にアプリを利用したのはいつなのかに基づいてセグメントすることができる。これらのフィルターには2つのフィールドがある：
 
-#### フィルター本体
+#### フィルター本文
 ```json
 {
   "last_used_app":

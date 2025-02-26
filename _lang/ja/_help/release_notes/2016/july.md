@@ -3,34 +3,34 @@ nav_title: 7月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事には2016年7月のリリースノートが含まれています。"
+description: "この記事には2016年7月のリリースノートが含まれている。"
 ---
 
 # 2016年7月
 
-## エラータイプによるDeveloper Consoleのエラーログのフィルタリング
+## エラータイプによる開発者コンソールのエラーログのフィルタリング
 
-このアップグレードにより、Developer Consoleのメッセージエラーログを使用して、Brazeの統合に関する問題のトラブルシューティングが容易になります。これは、メッセージエラーログをタイプ別にフィルタリングできるようにするユーザビリティの更新であり、特定の統合の問題を見つけ、特定することがより簡単になります。
+このアップグレードにより、開発者コンソールのメッセージエラーログを使用して、Braze 統合の問題をトラブルシューティングしやすくなります。これは、ユーザビリティ更新で、メッセージエラーログを種類別にフィルターし、具体的なインテグレーションの問題を簡単に見つけて特定することができます。
 
-## 最後に送信されたアンインストール追跡プッシュのタイムスタンプを追加
+## 最後に送信されたアンインストール追跡プッシュのタイムスタンプを追加した。
 
-Brazeは、顧客のアプリにサイレントプッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検出します。この機能により、アンインストール追跡が最後に実行された日時を示すタイムスタンプが控えめに追加されます。このタイムスタンプは、アンインストール追跡が設定されている設定ページで確認できます。[アンインストール・トラッキングについて]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)詳しくはこちらをご覧ください。
+Brazeは、顧客のアプリにサイレント・プッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検知する。この機能により、アアンインストール追跡が最後に実行された日時を示す、目立たないタイムスタンプが追加されます。このタイムスタンプは、アンインストール追跡が設定されている「設定」ページで確認できる。詳細については、[トラッキングのアンインストール]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)を参照してください。
 
-トラッキング・チェックボックスのアンインストール][6]。
+![トラッキング・チェックボックスをアンインストールする][6]
 
-## ウェブフック・テストの強化
+## ウェブフック・テストの機能強化
 
-キャンペーンを開始する前に、Brazeからライブウェブフックメッセージをテスト送信できるようになりました。テスト・メッセージを送信することで、メッセージとサーバー・エンドポイントが安全なサンドボックス環境で適切に設定されていることを確認することができます。[ウェブフックについて]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook)詳しくはこちら
+キャンペーンを本番に設定する前に、Braze からライブ Webhook をテスト送信できるようになりました。テスト・メッセージを送信することで、安全なサンドボックス環境で、メッセージとサーバー・エンドポイントが適切に設定されていることを確認することができる。[webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook) について詳しく説明します。
 
 ## キャンペーン受信者のCSVエクスポートに受信メッセージのバリエーションを追加
 
-キャンペーン受信者のCSVエクスポートに、受信したメッセージのバリエーションを示す列を追加しました。Brazeからの[データエクスポートについては]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data)こちらをご覧ください。
+キャンペーン受信者CSVエクスポートに、受信したメッセージのバリエーションを示すカラムを追加した。Brazeからの[データエクスポートについて]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data)詳しく知る。
 
 ## インプレッション数のおおよその制限
 
-アプリ内メッセージが一定数のインプレッションを獲得すると、Brazeはユーザーにメッセージを受け取る資格を与えることを停止します。[インプレッションの]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap)おおよその[上限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap)設定についてはこちらをご覧ください。
+アプリ内メッセージが一定数のインプレッションを獲得すると、Brazeはユーザーにメッセージを受け取る資格を与えることを停止する。インプレッションのおおよその制限の設定について詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap)をご覧ください。
 
-IAMインプレッションキャップ][11]。
+![IAM インプレッション上限][11]
 
 [6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
 [11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

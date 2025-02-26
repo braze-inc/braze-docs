@@ -62,6 +62,10 @@ You can also perform bulk actions–specifically, bulk archiving and bulk taggin
 
 ![Multiple segments selected with "CRM" selected in the "Tag As" dropdown field.][3]{: style="max-width:45%;"}
 
+### Changes Since Last Viewed
+
+The number of updates to the segments from other members of your team is tracked by the *Changes Since Last Viewed* metric on the segment overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the segment's name, description, and target audience. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your segment.
+
 ## Searching for segments
 Search for segment names by entering terms into the search field. 
 

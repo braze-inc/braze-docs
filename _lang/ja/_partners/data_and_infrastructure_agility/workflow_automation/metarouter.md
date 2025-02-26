@@ -1,62 +1,62 @@
 ---
-nav_title: メタルーター
-article_title: メタルーター
-description: "MetaRouter を使用して、Braze での顧客データ管理を強化します。 この高性能なサーバー側タグ管理ソリューションは、MetaRouter がホストするプライベート クラウドでも、独自のインフラストラクチャでも、シームレスな導入オプションにより最大限のコンプライアンスと制御を実現します。"
+nav_title: MetaRouter
+article_title: MetaRouter
+description: "MetaRouter を使用して、Braze で顧客データ管理を強化します。この高性能なサーバーサイドタグ管理ソリューションは、MetaRouter がホストするプライベートクラウドでもお客様のインフラストラクチャでも、シームレスな導入オプションによって最大限のコンプライアンスと制御を提供します。"
 alias: /partners/MetaRouter/
 page_type: partner
 search_tag: Partner
 ---
 
-# メタルーター
+# MetaRouter
 
-> [MetaRouter は](https://www.metarouter.io/) 、強力なサーバー側タグ管理プラットフォームとしてシームレスに統合することで、Braze エクスペリエンスを向上させます。これにより、最大 30% 強化された信頼性の高い完全なファーストパーティ データ収集から、パーソナライズされたジャーニーのためのリアルタイム イベント ストリームのアクティブ化まで、Braze 内で完全な顧客データ ジャーニーを調整できるようになります。さらに、MetaRouter は Braze タグやその他のサードパーティ タグの必要性を排除することで実装を合理化し、Braze に流入するデータをパラメータごとに細かく制御できるようにします。
+> [MetaRouter](https://www.metarouter.io/) は、強力なサーバーサイドタグ管理プラットフォームとしてシームレスに統合して、Braze エクスペリエンスを向上させます。これにより、最大30 %強化される信頼性の高いファーストパーティデータ収集から、パーソナライズされたジャーニーのリアルタイムのイベントストリームアクティベーションまで、Braze 内で完全な顧客データジャーニーをオーケストレーションできます。さらに ＭetaRouter は、Braze タグやその他のサードパーティタグの必要性を解消することで実装を合理化し、Braze へのデータ流入をより細かくパラメーター単位で制御できるようにします。
 
 ## サポートされている機能
 
-- 再試行を組み込むことができます。
+- リトライを組み込むこともできる。
 - リクエストはバッチ処理されます。
-- レート制限の問題は再試行によって処理されます。
-- 外部 ID と PII がサポートされています。MetaRouter は、クライアントが希望する匿名 ID と PII (電子メール、電話番号、名前) を渡します。
-- Braze の購入とカスタム イベントのデータを送信できます。
-  - イベント プロパティがサポートされています。
-  - ネストされたイベント プロパティはサポートされていません。
+- レート制限の問題はリトライで処理される。
+- 外部IDとPIIに対応している。MetaRouter は、クライアントが必要とする匿名 ID と PII (メール、電話番号、名前) を渡します。
+- Brazeの購入データやカスタムイベントデータを送信できる。
+  - イベント・プロパティがサポートされている。
+  - ネストされたイベント・プロパティはサポートされていない。
 
 ## 前提条件
 
-始める前に、次のものが必要です。
+開始する前に、次のものが必要になります。
 
-| 要件 | 説明 |
+| 要件           | 説明                                                                                                                                          |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MetaRouter アカウント |[MetaRouter Enterprise アカウント](https://enterprise.metarouter.io/)|
-| Braze REST APIキー | Braze REST APIキー `users.track` 権限。作成するには、**[設定]**>**[API キー]**に移動します。 |
-| Braze REST エンドポイント |[REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントはインスタンスの Braze URL によって異なります。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| MetaRouterアカウント  | [MetaRouter Enterpriseアカウント](https://enterprise.metarouter.io/)。                                                                                |
+| Braze REST API キー    | `users.track` 権限を持つ Braze REST API キー。作成するには、**「設定」**>「**APIキー**」を選択する。                                                |
+| Braze RESTエンドポイント | [RESTエンドポイントのURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、 **開発者コンソール** >**API 設定**で API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**開発者コンソール**] > [**API 設定**] で API キーを作成できます。
 {% endalert %}
 
-## MetaRouterの設定
+## MetaRouterをセットアップする
 
-Braze 統合用に MetaRouter を設定するには:
+Brazeとの統合用にMetaRouterをセットアップする：
 
-1. MetaRouter に移動して、新しいクラスターを作成します。
-2. 追跡したいイベントを選択します。
-3. MetaRouter SDK をインストールし、イベントを Web サイトに統合します。
-4. クラスターを Web サイトの UI に接続します。
-5. 新しいパイプラインを作成します。
-6. ウェブサイトが MetaRouter にイベントを送信していることを確認します。
+1. MetaRouterに行き、新しいクラスタを作成する。
+2. 追跡したいイベントを選択する。
+3. MetaRouter SDK をインストールし、Web サイトにイベントを統合します。
+4. クラスターをウェブサイトのUIに接続する。
+5. 新しいパイプラインを作る。
+6. ウェブサイトがMetaRouterにイベントを送信していることを確認する。
 
 ## Braze を統合する
 
-### ステップ 1: Braze統合を追加する
+### ステップ1:Brazeとの統合を追加する
 
-Enterprise MetaRouter で、**「統合」**>**「新しい統合」**>**「Braze」**を選択し、統合に名前を付けます。次に、インスタンス URL と API キーを入力し、**「変更を適用」**を選択します。
+Enterprise MetaRouter で [**Integrations**] > [**New Integration**] > [**Braze**] を選択し、統合に名前を付けます。次に、インスタンスの URL と API キーを入力し、[**Apply Changes**] を選択します。
 
-![Adding Braze as an integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
+![MetaRouter で Braze を統合として追加する。]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
 
-### ステップ 2: イベントマッピングを追加する
+### ステップ2:イベントマッピングを追加する
 
-各 ID 出力にイベント マッピングを追加し、Braze に送信するイベントを構成します。完了したら、**「新しいリビジョンとして保存」**を選択します。
+各ID出力にイベントマッピングを追加し、Brazeに送信したいイベントを設定する。終了したら、[**Save as New Revision**] を選択します。
 
-![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
+![ID 出力ごとにイベントマッピングを追加する。]({% image_buster /assets/img/metarouter/img2.png %})
