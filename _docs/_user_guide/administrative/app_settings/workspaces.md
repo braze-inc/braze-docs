@@ -33,17 +33,17 @@ You can create new workspaces or switch between existing workspaces from the wor
 2. Give your workspace a name.
 
 {% alert tip %}
-You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: "Athleisure US – Production" and "Athleisure US – Staging".
+You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: "Upon Voyage US – Production" and "Upon Voyage US – Staging".
 {% endalert %}
 
 {:start="3"}
 3. Select **Create**. It may take a few seconds for Braze to create your workspace.
 
-!["Create Workspace" modal with the name "Athlesiure US - Staging".][2]{: style="max-width:60%" }
+!["Create Workspace" modal with the name "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 You will be taken to the **App Settings** page to begin adding your app instances. You can access this page at any time from **Settings** > **App Settings**.
 
-!["App Settings" page for the Athlesiure US - Staging workspace with a button for adding an app.][3]
+!["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.][3]
 
 ### Step 3: Add your app instances
 
@@ -52,7 +52,7 @@ We refer to the different sites and apps that are collected within a workspace a
 1. From the **App Settings** page, select **+ Add app**.
 2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze will create one app instance for each platform.
 
-!["Add New App to Athleisure US - Staging" modal with options to select app details.][4]{: style="max-width:60%" }
+!["Add New App to Upon Voyage US - Staging" modal with options to select app details.][4]{: style="max-width:60%" }
 
 {:start="3"}
 3. Select **Add app** to confirm.
@@ -61,7 +61,7 @@ We refer to the different sites and apps that are collected within a workspace a
 
 After adding your app instance, you will have access to its API key. The API key is used when making requests between your app instance and the Braze API. The API key is also important for integrating the Braze SDK with your app or website.
 
-![Settings page for the Athleisure iOS app with fields for the API Key and SDK Endpoint.][5]
+![Settings page for the Upon Voyage iOS app with fields for the API Key and SDK Endpoint.][5]
 
 {% alert note %}
 You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android, create four app instances within your workspace (Free iOS app, free Android app, pro iOS app, and pro Android app). This will give you four API keys to use, one for each app instance.
@@ -108,7 +108,7 @@ To rename your workspace:
 2. Hover over your workspace’s name and select <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
-![The pencil icon appearing next to the workspace name.][8]{: style="max-width:30%;"}
+![The pencil icon appearing next to the workspace name.][8]{: style="max-width:50%;"}
 
 ### Deleting workspaces and app instances
 
@@ -145,7 +145,7 @@ To make sure your message only targets a specific app, add a segment that only t
 
 By default, a segment targets all apps and websites in the workspace. To set up a segment that only targets one app or website:
 
-1. Create a segment with a meaningful name. At Braze, we use the format "All Users ({Name} {Platform})". For example, "All Users (Athleisure iOS)".
+1. Create a segment with a meaningful name. At Braze, we use the format "All Users ({Name} {Platform})". For example, "All Users (Upon Voyage iOS)".
 2. For **Apps and websites targeted**, select **Users from specific apps**.
 3. In the **Specific apps** dropdown, select your app or site.
 
