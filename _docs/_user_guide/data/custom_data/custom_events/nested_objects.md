@@ -35,7 +35,7 @@ You can access the nested data in your custom event by generating a schema for e
 
 ![][6]{: style="max-width:80%;"}
 
-If new properties are sent in the future they will not be in the schema until it is regenerated. Schemas can be regenerated every 24 hours.
+If new properties are sent in the future, they won't be in the schema until it is regenerated. Schemas can be regenerated every 24 hours.
 
 ## Step 2: Use the nested object
 
