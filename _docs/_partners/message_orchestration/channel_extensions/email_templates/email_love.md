@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Email Love: Figma Plugin for HTML Emails
+# Email Love
 
 > [Email Love](https://emaillove.com/) is a Figma plugin that empowers you to design and export responsive and accessible HTML emails directly from Figma.
 
