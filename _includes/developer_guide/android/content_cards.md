@@ -1,11 +1,3 @@
-# Content Cards
-
-> Learn about Content Cards for the Braze Android SDK, including the different data models and card-specific properties available for your Swift application.
-
-{% alert tip %}
-When you're ready to start customizing and using Content Cards, see [Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).
-{% endalert %}
-
 ## Prerequisites
 
 Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/) into your app. However, no additional setup is required.
@@ -84,7 +76,3 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 |`logClick()` | Manually log a click to Braze for a particular card. |
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## Next steps
-
-When you're ready to start customizing and using Content Cards, see[Content Card customization]({{site.baseurl}}/developer_guide/content_cards/).

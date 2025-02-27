@@ -1,6 +1,6 @@
 ---
-nav_title: Customizing Feed
-article_title: Customizing the Default Content Card Feed
+nav_title: Feed
+article_title: Customizing the feed for Content Cards
 page_order: 3
 description: "This article covers Content Card feed customization options."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Customizing the default Content Card feed
+# Customizing the feed for Content Cards
 
 > A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 

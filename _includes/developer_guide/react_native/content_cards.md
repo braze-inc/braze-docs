@@ -1,8 +1,10 @@
-This article covers how to set up Content Cards for React Native. The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+## About React Native Content Cards
+
+The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## Customizing Content Cards
+## Cards methods
 
 To build your own UI, you can get a list of available cards, and listen for updates to cards:
 
@@ -52,7 +54,7 @@ For more integrations, follow the [Android integration instructions]({{site.base
 
 A sample implementation of this can be found in BrazeProject within the [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk).
 
-## Content Card data model
+## Card types and properties
 
 The Content Cards data model is available in the React Native SDK and offers the following Content Cards card types: [Image Only](#image-only), [Captioned Image](#captioned-image), and [Classic](#classic). There's also a special [Control](#control) card type, which is returned to users that are in the control group for a given card. Each type inherits common properties from a base model in addition to its own unique properties.
 

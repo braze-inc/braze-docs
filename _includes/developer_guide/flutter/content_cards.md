@@ -1,8 +1,10 @@
+## About Flutter Content Cards
+
 The Braze SDK includes a default card feed to get you started with Content Cards. To show the card feed, you can use the `braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## Customizing Content Cards
+## Card methods
 
 You can use these additional methods to build a custom Content Cards Feed within your app by using the following methods available on the [plugin public interface](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart):
 

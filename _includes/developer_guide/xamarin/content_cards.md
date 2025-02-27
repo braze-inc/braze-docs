@@ -1,20 +1,10 @@
-Learn how to set up iOS, Android, and FireOS Content Cards for the Xamarin platform. The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
+## About Xamarin Content Cards
+
+The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Content Card methods
-
-You can use these additional methods to build a custom Content Cards Feed within your app:
-
-| Method                                   | Description                                                                                            |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
-| `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID. This method is used only for analytics.                    |
-| `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
-| `logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
-
-## Content Card data model
+## Card types and properties
 
 The Braze Xamarin SDK has three unique Content Cards card types that share a base model: [Banner](#banner), [Captioned Image](#captioned-image), and [Classic](#classic). Each type inherits common properties from a base model and has the following additional properties.
 
@@ -80,7 +70,18 @@ Classic cards have a title, description, and an optional image on the left of th
 
 For a full reference of the classic (text announcement) Content Card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) documentation. For a full reference of the classic image (short news) card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) documentation.
 
+## Card methods
+
+You can use these additional methods to build a custom Content Cards Feed within your app:
+
+| Method                                   | Description                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
+| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID. This method is used only for analytics.                    |
+| `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
+| `logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
+
 ## GIF Support
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
-
