@@ -24,6 +24,18 @@ There are several details to consider when creating a delay in your Canvas journ
 - The delay limit is 30 days.
 - A Delay component can only connect to one next step.
 
+### Personalized delays
+
+{% alert important %}
+Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
+
+#### Extended delays
+
+You can now extend Delay steps up to two years. This allows you to create a longer user journey.
+
 ### Time delay options
 
 You can choose the type of delay before the next message in your Canvas. You can either set a delay for your users to last until after a designated time period, or delay your users until a specific date and time.
