@@ -1,6 +1,6 @@
 # Braze and Movable Ink Da Vinci Integration
 
-The Braze and Movable Ink Da Vinci integration empowers brands to deliver highly personalized messaging by leveraging Da Vinci’s AI-driven content decisioning engine. Da Vinci curates the most relevant content for each user and seamlessly deploys messages through Braze.
+The Braze and Movable Ink [Da Vinci](https://movableink.com/da-vinci) integration empowers brands to deliver highly personalized messaging by leveraging Da Vinci’s AI-driven content decisioning engine. Da Vinci curates the most relevant content for each user and seamlessly deploys messages through Braze.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ The Braze and Movable Ink Da Vinci integration empowers brands to deliver highly
 | Movable Ink Da Vinci | A Movable Ink Da Vinci account is required to take advantage of this partnership. |
 | Braze Currents - Message Engagement Events | A Braze Custom Currents Export is required to send message engagement event data to Movable Ink. |
 | Braze REST API key | A Braze REST API key with `messages.send`, `sends.id.create`, and `campaigns.details` permissions. This can be created in the Braze dashboard from **Settings > API Keys**. |
-| Da Vinci app instance in Braze | Create a dedicated Da Vinci app instance in Braze. A new app can be created in the Braze dashboard by going to **Settings > App Settings > + Add App**. Name the app "Da Vinci - [Customer Name]" and select any platform (a platform selection is required but the type does not impact functionality). Learn more about how to add a new app [here](https://www.braze.com/docs/user_guide/administrative/app_settings/workspaces/#step-3-add-your-app-instances). |
+| Da Vinci app instance in Braze | Create a dedicated Da Vinci app instance in Braze. A new app can be created in the Braze dashboard by going to **Settings > App Settings > + Add App**. Name the app "**Da Vinci - [Customer Name]**" and select any platform (a platform selection is required but the type does not impact functionality). Learn more about how to add a new app [here](https://www.braze.com/docs/user_guide/administrative/app_settings/workspaces/#step-3-add-your-app-instances). |
 
 ## Integration
 
