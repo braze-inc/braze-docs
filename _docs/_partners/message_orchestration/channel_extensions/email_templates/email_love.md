@@ -10,18 +10,17 @@ search_tag: Partner
 
 # Email Love
 
-> [Email Love](https://emaillove.com/) is a Figma plugin that empowers you to design and export responsive and accessible HTML emails directly from Figma.
-
-Email Love’s Export to Braze feature uses the Braze API to seamlessly upload your email templates to Braze.
+> [Email Love](https://emaillove.com/) is a Figma plugin that empowers you to design and export responsive and accessible HTML emails directly from Figma. Email Love’s Export to Braze feature uses the Braze API to seamlessly upload your email templates to Braze.
 
 ## Prerequisites
 
 | Requirement            | Description                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Email Love account** | An Email Love account is required to take advantage of this partnership. |
-| **Braze REST API key** | A Braze REST API key with full `Templates` permission enabled. |
+| **Braze REST API key** | A Braze REST API key with full `Templates` permission enabled. This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-## Implementation
+## Using Email Love with Braze
 
 ### Step 1: Run the plugin
 
@@ -43,26 +42,19 @@ Modify components using Figma's tools to adjust your text, images, colors, and l
 
 ![Customize compoments in Figma.]({% image_buster /assets/img/email_love/emaillove2_components.png %})
 
-### Step 5: Create a Braze API Key
+### Step 5: Export your email template to Braze
 
-1. Log into your Braze Account and go to **Settings** > **API & Identifiers**.
-2. Select the **New API Key** button.
-3. Give your API key a name and select **Templates** in the **Permissions** section. 
-4. Select **Create API Key**.
-
-### Step 6: Export your email template to Braze
-
-1. Review your finalized email design to confirm it's ready for export, then select the frame you want to export. Note that you'll need to use an Email Love footer that contains an unsubscribe link for the export to work.
+1. When you're finished, select the frame you want to export. Note that you'll need to use an Email Love footer that contains an unsubscribe link for the export to work.
 2. Select the **Export** button in the plugin and select **Braze** from the dropdown menu.
 3. Copy and paste your API key into the **Braze API Key** box within the Email Love Figma plugin.
 4. Select the **Set API Key** button.
-5. Select **Change Instance ID** and then select your Braze instance ID.
+5. Select **Change Instance ID**, then select your Braze instance ID.
 
 ![Exporting a template to Braze from the Email Love plugin.]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %}){: style="max-width:50%;"}
 
-### Step 7: Edit your email in Braze
+### Step 6: Edit your email in Braze
 
-After you have exported your email, go to **Templates** > **Edit Templates** > **Edit Message**. Inside the template editor, you can either edit your email HTML or use the **Rich Text editor** in the **Classic** tab.
+In Braze, go to **Templates** > **Edit Templates** > **Edit Message**. Inside the template editor, you can either edit your email HTML or use the **Rich Text editor** in the **Classic** tab.
 
 ## Support and troubleshooting
 
