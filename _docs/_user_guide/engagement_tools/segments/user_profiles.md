@@ -18,6 +18,7 @@ description: "This reference article describes how to access a user's profile in
 To access a user's profile, go to the **Search Users** page and search for a user by any of the following:
 
 - External user ID
+- Braze ID
 - Email
 - Phone number
 - Push token
@@ -37,7 +38,7 @@ User profiles are a great resource for troubleshooting and testing because you c
 
 For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
 
-You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment, and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
+You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
 ## Elements of user profile
 
@@ -85,10 +86,10 @@ The **Engagement** tab contains information about a user's interactions with the
 
 ### Messaging History tab
 
-The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
+The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
 
 {% alert note %}
-If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
+If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
 ![The Messaging History tab showing which campaigns and Canvases a user has received.][5]
@@ -126,7 +127,7 @@ Abort events are currently not available for in-app messages and Content Cards.
 
 ##### Frequency cap events
 
-A frequency cap event occurs when a user is qualified to receive a message, but did not actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
+A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can manage frequency capping from **Engagement** > **Global Message Settings**.
@@ -140,9 +141,9 @@ Content Cards sends are logged when the card is available to be viewed. Because 
 
 #### Note on email open event {#note-on-email-open-event}
 
-Email open tracking is error prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
+Email open tracking is error-prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
 
-While email open statistics can be useful in aggregate, for example to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
+While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
 
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
