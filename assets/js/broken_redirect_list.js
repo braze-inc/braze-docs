@@ -2009,7 +2009,7 @@ validurls['/docs/user_guide/engagement_tools/landing_pages/data_tracking'] = '/d
 
 validurls['/docs/developer_guide/platforms/android/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/android/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
-validurls['/docs/developer_guide/platforms/android/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
 validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
 validurls['/docs/developer_guide/platforms/swift/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initialization'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
