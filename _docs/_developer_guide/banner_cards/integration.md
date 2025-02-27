@@ -313,7 +313,7 @@ In your React Native application, insert the following JSX into your view hierar
 
 ```javascript
 <Braze.BrazeBannerView
-  placementID='dynamic-height'
+  placementID='global_banner'
 />
 ```
 
