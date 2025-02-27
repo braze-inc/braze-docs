@@ -66,4 +66,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Email Love
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
 ---

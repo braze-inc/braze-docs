@@ -32,7 +32,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
     <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
     - **Fallback Catalog:** The catalog used for the subscription if there isn't a `catalog_name` property in the custom event.
     - **Custom event for subscribing:** The Braze custom event used to subscribe a user for catalog notifications. When this event occurs, the user who performed the event will be subscribed.
-    - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications.
+    - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the price drop event triggers, whichever occurs first.
     - **Item ID event property:** The property on the above custom event used to determine the item for a subscription or unsubscription. This property on the custom event should contain an item ID that exists in a catalog. The custom event must contain a `catalog_name` property to specify which catalog this item is in.
    
     - A sample custom event would look like

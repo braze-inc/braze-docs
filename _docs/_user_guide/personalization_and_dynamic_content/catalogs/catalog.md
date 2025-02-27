@@ -86,6 +86,8 @@ You can also update the CSV file after selecting to create a catalog in the brow
 
 ### Method 2: Create in the browser
 
+To edit or create catalogs in the browser, you'll need "Manage Catalogs Dashboard" permission.
+
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Up to 250 characters
@@ -163,15 +165,7 @@ For example, if you want to edit an individual catalog item, you can use the [`/
 
 ## Catalog tiers {#tiers}
 
-The following table describes the differences between the free and pro version of catalogs:
-
-| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
-| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
-| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+The free version of catalogs supports CSV file sizes of up to 100 MB for all CSV files combined across your company, whereas the Catalogs Pro version supports CSV file sizes of up to 2 GB for a single CSV file.
 
 ### Catalog storage
 

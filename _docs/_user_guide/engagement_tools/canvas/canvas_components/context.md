@@ -53,21 +53,8 @@ For example, if the context variable data type is set to **Date** but the value 
 
 ## Using context variables with other Canvas steps
 
-You can add personalized delay options with the information from the Context step, meaning you can select the variable that delays users.
-
-Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
-
-- **Context variable name:** product_reminder_interval
-- **Data type:** Time
-- **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
-
-![The "product_reminder_interval" and its value.][2]
-
-Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context variable.
-
-![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".][3]
+You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 
 
 [1]: {% image_buster /assets/img/context_step3.png %}
-[2]: {% image_buster /assets/img/context_step1.png %}
-[3]: {% image_buster /assets/img/context_step2.png %}
+

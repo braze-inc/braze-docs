@@ -144,6 +144,18 @@ In-App Message
 
 {% api %}
 
+### Campaign analytics
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+The performance of the message across various channels. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
+
+{% endapi %}
+
+{% api %}
+
 ### Choices Submitted
 
 {% apitags %}
@@ -429,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} Failures are included in the <i>Sends</i> count but not in the <i>Deliveries</i> count.</td>
 
 <span class="calculation-line">Calculation (<i>Failure Rate</i>): (Failures) / (Sends)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Feature flag experiment performance
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+Performance metrics for the message in a Feature Flag experiment. The specific metrics shown will vary depending on the messaging channel, and whether or not the experiment was a multivariate test.
 
 {% endapi %}
 
