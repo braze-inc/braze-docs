@@ -46,7 +46,7 @@ Next, because we want to remind our customers 30 days from now, we'll select **U
 
 #### Extended delays
 
-You can now extend Delay steps up to two years. This allows you to create a longer user journey.
+You can now extend Delay steps up to two years. For example, if you're onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven't started a session.
 
 ### Time delay options
 
