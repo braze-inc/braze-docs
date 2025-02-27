@@ -316,4 +316,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
 - name: Constructor
   url: /docs/partners/message_personalization/dynamic_content/constructor/
+- name: Email Love
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
 ---
