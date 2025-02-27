@@ -24,7 +24,7 @@ Before you can integrate Banner Cards, you'll need to [create Banner Card placem
 
 In addition, these are the minimum SDK versions needed to start using Banner Cards:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 reactnative:14.0.0 %}
 
 ## Integrating Banner Cards
 
@@ -88,7 +88,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-This feature is not yet available in Flutter.
+This feature is not currently supported on Flutter.
 ```
 {% endtab %}
 
