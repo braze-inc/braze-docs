@@ -290,7 +290,7 @@ Banner(placementId = "global_banner")
 {% endtab %}
 {% tab React Native %}
 
-If you're using React Native's New Architecture, you need to register `BrazeBannerView` as a Fabric component in your `AppDelegate.mm`
+If you're using [React Native's New Architecture](https://reactnative.dev/architecture/landing-page), you need to register `BrazeBannerView` as a Fabric component in your `AppDelegate.mm`.
 
 ```swift
 #ifdef RCT_NEW_ARCH_ENABLED
@@ -309,7 +309,7 @@ To get the Banner in React Native, use:
 const banner = await Braze.getBanner("global_banner");
 ```
 
-In your React Native application, insert the following JSX into your view hierarchy:
+In your React Native application, add the following JavaScript XML (JSX) snippet into your view hierarchy.
 
 ```javascript
 <Braze.BrazeBannerView
