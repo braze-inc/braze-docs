@@ -559,6 +559,12 @@ $(document).ready(function() {
         if (tab_cookie && (curtab_name == tab_cookie)) {
           setTabClass(tabtype,'', '_tab', curtab)
         }
+        else {
+          $('#toc').toc({
+            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+          });
+        }
       }
     }
 
@@ -584,6 +590,12 @@ $(document).ready(function() {
         let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
         if (tab_cookie && (curtab_name == tab_cookie)) {
           setTabClass(tabtype,'', '_tab', partab,  curtab)
+        }
+        else {
+          $('#toc').toc({
+            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+          });
         }
       }
     }
