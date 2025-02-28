@@ -16,7 +16,7 @@ Bevor Sie weiterlesen, beachten Sie bitte, dass das Braze Web SDK keine Daten im
 
 Außerdem können sich diese Werte ändern und sollten nicht direkt über Ihre Integration abgerufen werden. Sehen Sie sich stattdessen unsere [JavaScript-Dokumentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) für unsere öffentlichen API-Schnittstellen an.
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Cookies {#cookies}
 
