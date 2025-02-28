@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_ABORT_SHARED
+// An originally scheduled email message was aborted for some reason.
 
 {
     "primary_key": {
@@ -39,10 +40,11 @@
 }
 ```
 
-### `BOUNCE_SHARED`
+### BOUNCE_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_BOUNCE_SHARED
+// An Email Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
 
 {
     "primary_key": {
@@ -83,10 +85,11 @@
 }
 ```
 
-### `CLICK_SHARED`
+### CLICK_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_CLICK_SHARED
+// When a user clicks a link in an email.
 
 {
     "primary_key": {
@@ -129,10 +132,11 @@
 }
 ```
 
-### `DELIVERY_SHARED`
+### DELIVERY_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_DELIVERY_SHARED
+// When an email is delivered.
 
 {
     "primary_key": {
@@ -171,10 +175,11 @@
 }
 ```
 
-### `MARKASSPAM_SHARED`
+### MARKASSPAM_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED
+// When an email is marked as spam.
 
 {
     "primary_key": {
@@ -213,10 +218,11 @@
 }
 ```
 
-### `OPEN_SHARED`
+### OPEN_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_OPEN_SHARED
+// When a user begins opens an email.
 
 {
     "primary_key": {
@@ -257,10 +263,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_SEND_SHARED
+// When we send an email to a user.
 
 {
     "primary_key": {
@@ -299,10 +306,11 @@
 }
 ```
 
-### `SOFTBOUNCE_SHARED`
+### SOFTBOUNCE_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED
+// When an email soft bounces.
 
 {
     "primary_key": {
@@ -342,10 +350,11 @@
 }
 ```
 
-### `UNSUBSCRIBE_SHARED`
+### UNSUBSCRIBE_SHARED
 
 ```json
 // USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED
+// When a user unsubscribes from email.
 
 {
     "primary_key": {

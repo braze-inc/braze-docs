@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_PURCHASE_SHARED
+// When a user makes a purchase.
 
 {
     "primary_key": {

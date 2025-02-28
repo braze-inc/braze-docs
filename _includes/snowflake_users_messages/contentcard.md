@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_CONTENTCARD_ABORT_SHARED
+// An originally scheduled contentcard message was aborted for some reason.
 
 {
     "primary_key": {
@@ -37,10 +38,11 @@
 }
 ```
 
-### `CLICK_SHARED`
+### CLICK_SHARED
 
 ```json
 // USERS_MESSAGES_CONTENTCARD_CLICK_SHARED
+// When a user clicks a content card.
 
 {
     "primary_key": {
@@ -86,10 +88,11 @@
 }
 ```
 
-### `DISMISS_SHARED`
+### DISMISS_SHARED
 
 ```json
 // USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED
+// When a user dismisses a content card.
 
 {
     "primary_key": {
@@ -135,10 +138,11 @@
 }
 ```
 
-### `IMPRESSION_SHARED`
+### IMPRESSION_SHARED
 
 ```json
 // USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED
+// When a user views a content card.
 
 {
     "primary_key": {
@@ -184,10 +188,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_CONTENTCARD_SEND_SHARED
+// When we send a content card to a user.
 
 {
     "primary_key": {

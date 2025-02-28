@@ -1,7 +1,8 @@
-### `STATECHANGE_SHARED`
+### STATECHANGE_SHARED
 
 ```json
 // USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED
+// When a user is subscribed or unsubscribed to/from a subscription group.
 
 {
     "primary_key": {

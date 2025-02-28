@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED
+// An originally scheduled pushnotification message was aborted for some reason.
 
 {
     "primary_key": {
@@ -39,10 +40,11 @@
 }
 ```
 
-### `BOUNCE_SHARED`
+### BOUNCE_SHARED
 
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED
+// When a push notification bounces.
 
 {
     "primary_key": {
@@ -82,10 +84,11 @@
 }
 ```
 
-### `INFLUENCEDOPEN_SHARED`
+### INFLUENCEDOPEN_SHARED
 
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED
+// When a user opens the app after receiving a notification without clicking on the notification.
 
 {
     "primary_key": {
@@ -127,10 +130,11 @@
 }
 ```
 
-### `IOSFOREGROUND_SHARED`
+### IOSFOREGROUND_SHARED
 
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED
+// When a user receives a push notification while the app is open.
 
 {
     "primary_key": {
@@ -182,10 +186,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED
+// When we send a push notification to a user.
 
 {
     "primary_key": {

@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED
+// When a user installs an app and we attribute it to a partner.
 
 {
     "primary_key": {

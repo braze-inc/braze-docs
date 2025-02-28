@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_CUSTOMEVENT_SHARED
+// When a user performs a custom event.
 
 {
     "primary_key": {

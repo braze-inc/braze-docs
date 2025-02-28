@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_UNINSTALL_SHARED
+// When a user uninstalls an app.
 
 {
     "primary_key": {

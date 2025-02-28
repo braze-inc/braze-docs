@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED
+// An originally scheduled inappmessage message was aborted for some reason.
 
 {
     "primary_key": {
@@ -50,10 +51,11 @@
 }
 ```
 
-### `CLICK_SHARED`
+### CLICK_SHARED
 
 ```json
 // USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED
+// When a user clicks an in app message.
 
 {
     "primary_key": {
@@ -101,10 +103,11 @@
 }
 ```
 
-### `IMPRESSION_SHARED`
+### IMPRESSION_SHARED
 
 ```json
 // USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED
+// When a user views an in app message.
 
 {
     "primary_key": {

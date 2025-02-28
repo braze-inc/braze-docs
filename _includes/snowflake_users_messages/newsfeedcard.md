@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED
+// An originally scheduled newsfeedcard message was aborted for some reason.
 
 {
     "primary_key": {
@@ -36,10 +37,11 @@
 }
 ```
 
-### `CLICK_SHARED`
+### CLICK_SHARED
 
 ```json
 // USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED
+// When a user clicks a news feed card.
 
 {
     "primary_key": {
@@ -72,10 +74,11 @@
 }
 ```
 
-### `IMPRESSION_SHARED`
+### IMPRESSION_SHARED
 
 ```json
 // USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED
+// When a user views a news feed card.
 
 {
     "primary_key": {

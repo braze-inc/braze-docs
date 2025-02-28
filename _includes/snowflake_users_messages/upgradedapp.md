@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_UPGRADEDAPP_SHARED
+// When a user upgrades the app.
 
 {
     "primary_key": {

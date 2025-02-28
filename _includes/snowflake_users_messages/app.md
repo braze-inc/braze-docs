@@ -1,7 +1,8 @@
-### `FIRSTSESSION_SHARED`
+### FIRSTSESSION_SHARED
 
 ```json
 // USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED
+// When a user has their first session.
 
 {
     "primary_key": {
@@ -31,10 +32,11 @@
 }
 ```
 
-### `NEWSFEEDIMPRESSION_SHARED`
+### NEWSFEEDIMPRESSION_SHARED
 
 ```json
 // USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED
+// When a user views the news feed.
 
 {
     "primary_key": {
@@ -59,10 +61,11 @@
 }
 ```
 
-### `SESSIONEND_SHARED`
+### SESSIONEND_SHARED
 
 ```json
 // USERS_BEHAVIORS_APP_SESSIONEND_SHARED
+// When a user ends a session on an app.
 
 {
     "primary_key": {
@@ -89,10 +92,11 @@
 }
 ```
 
-### `SESSIONSTART_SHARED`
+### SESSIONSTART_SHARED
 
 ```json
 // USERS_BEHAVIORS_APP_SESSIONSTART_SHARED
+// When a user begins a session on an app.
 
 {
     "primary_key": {

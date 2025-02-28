@@ -1,7 +1,8 @@
-### `IMPRESSION_SHARED`
+### IMPRESSION_SHARED
 
 ```json
 // USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED
+// When a user views an feature flag.
 
 {
     "primary_key": {

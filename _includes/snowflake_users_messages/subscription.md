@@ -1,7 +1,8 @@
-### `GLOBALSTATECHANGE_SHARED`
+### GLOBALSTATECHANGE_SHARED
 
 ```json
 // USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED
+// When a user is subscribed or unsubscribed globally from a channel such as email.
 
 {
     "primary_key": {

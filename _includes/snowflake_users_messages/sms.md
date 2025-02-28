@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_ABORT_SHARED
+// An originally scheduled sms message was aborted for some reason.
 
 {
     "primary_key": {
@@ -31,10 +32,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_SEND_SHARED
+// When a SMS message is sent.
 
 {
     "primary_key": {
@@ -72,10 +74,11 @@
 }
 ```
 
-### `CARRIERSEND_SHARED`
+### CARRIERSEND_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_CARRIERSEND_SHARED
+// When a SMS message is sent to carrier.
 
 {
     "primary_key": {
@@ -112,10 +115,11 @@
 }
 ```
 
-### `DELIVERY_SHARED`
+### DELIVERY_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_DELIVERY_SHARED
+// When a SMS message is delivered.
 
 {
     "primary_key": {
@@ -152,10 +156,11 @@
 }
 ```
 
-### `DELIVERYFAILURE_SHARED`
+### DELIVERYFAILURE_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED
+// When Braze is unable to deliver the SMS message to the SMS service provider.
 
 {
     "primary_key": {
@@ -193,10 +198,11 @@
 }
 ```
 
-### `INBOUNDRECEIVE_SHARED`
+### INBOUNDRECEIVE_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED
+// When a SMS message is received from a user.
 
 {
     "primary_key": {
@@ -230,10 +236,11 @@
 }
 ```
 
-### `REJECTION_SHARED`
+### REJECTION_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_REJECTION_SHARED
+// When a SMS message is not delivered to a user.
 
 {
     "primary_key": {
@@ -272,10 +279,11 @@
 }
 ```
 
-### `SHORTLINKCLICK_SHARED`
+### SHORTLINKCLICK_SHARED
 
 ```json
 // USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED
+// When a user clicks a Braze shortened URL included in an SMS message.
 
 {
     "primary_key": {

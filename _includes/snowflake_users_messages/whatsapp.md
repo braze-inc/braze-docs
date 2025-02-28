@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_ABORT_SHARED
+// When a scheduled WhatsApp message cannot be delivered, before sending to Meta.
 
 {
     "primary_key": {
@@ -35,10 +36,11 @@
 }
 ```
 
-### `DELIVERY_SHARED`
+### DELIVERY_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED
+// When a WhatsApp message is delivered to the end user.
 
 {
     "primary_key": {
@@ -71,10 +73,11 @@
 }
 ```
 
-### `FAILURE_SHARED`
+### FAILURE_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_FAILURE_SHARED
+// When a WhatsApp message cannot be delivered, after sending to Meta.
 
 {
     "primary_key": {
@@ -109,10 +112,11 @@
 }
 ```
 
-### `INBOUNDRECEIVE_SHARED`
+### INBOUNDRECEIVE_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED
+// When a WhatsApp message is received from a user.
 
 {
     "primary_key": {
@@ -148,10 +152,11 @@
 }
 ```
 
-### `READ_SHARED`
+### READ_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_READ_SHARED
+// When a WhatsApp message is read by the user.
 
 {
     "primary_key": {
@@ -184,10 +189,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_WHATSAPP_SEND_SHARED
+// When a WhatsApp message is sent to Meta.
 
 {
     "primary_key": {

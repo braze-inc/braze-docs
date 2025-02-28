@@ -1,7 +1,8 @@
-### `SHARED`
+### SHARED
 
 ```json
 // USERS_BEHAVIORS_LOCATION_SHARED
+// When a user records a location.
 
 {
     "primary_key": {

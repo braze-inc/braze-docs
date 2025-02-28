@@ -1,7 +1,8 @@
-### `ABORT_SHARED`
+### ABORT_SHARED
 
 ```json
 // USERS_MESSAGES_WEBHOOK_ABORT_SHARED
+// An originally scheduled webhook message was aborted for some reason.
 
 {
     "primary_key": {
@@ -37,10 +38,11 @@
 }
 ```
 
-### `SEND_SHARED`
+### SEND_SHARED
 
 ```json
 // USERS_MESSAGES_WEBHOOK_SEND_SHARED
+// When we send a webhook for a user.
 
 {
     "primary_key": {
