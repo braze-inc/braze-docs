@@ -19,7 +19,7 @@ Dies kann ohne SDK-Anpassung mit unserem neuen [No Code Push Primer]({{site.base
 
 Wenn Sie eine spezielle, angepasste Handhabung einbauen möchten, können Sie auch unsere [getriggerten In-App-Nachrichten]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) verwenden, anstatt `requestPushPermission()` direkt aufzurufen, wie in der Standard [Web-Push Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) beschrieben:
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Schritt 1: Push-Primer-Kampagne erstellen
 
