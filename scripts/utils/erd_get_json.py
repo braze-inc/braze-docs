@@ -1,17 +1,9 @@
 #!/usr/bin/env python3
 
-# This is script that converts the Entity Relationships raw table schema into a
-# JSON file sorted by key-type. This script, along with
-# 'erd_generate_markdown.py', is used to create this page:
-# https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/entity_relationships/
-# 
-# Usage: ./scripts/utils/erd_get_json.py
-
 import os
 import json
 import re
 import subprocess
-
 
 # Overrides the logic to force these keys to be foreign:
 FOREIGN_OVERRIDE = [
@@ -28,71 +20,77 @@ NATIVE_OVERRIDE = [
 ]
 
 def parse_and_classify(filename):
-    """
-    Reads the text file and returns a dictionary of the form:
+    # Regex for lines that might contain table info
+    table_line_pattern = re.compile(r'^(.*?)\s*:\s*(.*)$')
 
-        {
-            "<TABLE_NAME>": {
-                "primary_key": [...],
-                "foreign_keys": [...],
-                "native_keys": [...],
-                "unknown": [...]
-            },
-            ...
-        }
-
-    BUT only includes tables that start with `USERS_MESSAGES`.
-
-    Initial Classification Rules (before overrides):
-        - primary_key: column == "ID"
-        - foreign_keys: column ends with "_ID" or "_API_ID"
-        - native_keys: everything else
-    """
-    table_name_pattern = re.compile(r'^(.*?)\s*:\s*(.*)$')
     tables_dict = {}
+    column_comments = {}
     current_table = None
 
     with open(filename, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
+        for raw_line in f:
+            line = raw_line.strip()
             if not line:
-                current_table = None
+                # If it's a blank line, ignore it, but don't reset current_table
                 continue
-            
-            header_match = table_name_pattern.match(line)
-            if header_match:
+
+            # Check if this line might be a table header
+            header_match = table_line_pattern.match(line)
+            # Its only a table header if it does NOT have '(' or '):'
+            if header_match and '(' not in line and '):' not in line:
                 potential_table = header_match.group(1).strip()
-                if potential_table.startswith("USERS_MESSAGES"):
+                # Only track if table name starts with "USERS_MESSAGES" or "USERS_BEHAVIORS"
+                if (potential_table.startswith("USERS_MESSAGES") or
+                    potential_table.startswith("USERS_BEHAVIORS")):
                     tables_dict[potential_table] = {
                         "primary_key": [],
                         "foreign_keys": [],
                         "native_keys": [],
                         "unknown": []
                     }
+                    column_comments[potential_table] = {}
                     current_table = potential_table
                 else:
                     current_table = None
                 continue
-            
-            if current_table:
-                column_name = line.split('(')[0].strip()
-                
-                if column_name == "ID":
-                    tables_dict[current_table]["primary_key"].append(column_name)
-                elif column_name.endswith("_ID") or column_name.endswith("_API_ID"):
-                    tables_dict[current_table]["foreign_keys"].append(column_name)
-                else:
-                    tables_dict[current_table]["native_keys"].append(column_name)
 
-    return tables_dict
+            # If we have a valid table in context, parse for columns
+            if current_table:
+                # Check if it looks like a column line (has '(')
+                if '(' in line:
+                    # The column name is everything before the first '('
+                    parts = line.split('(', 1)
+                    column_name = parts[0].strip()
+
+                    # If there's a '):', then everything after it is the comment
+                    comment_text = ""
+                    if '):' in line:
+                        splitted = line.split('):', 1)
+                        comment_text = splitted[1].strip()
+
+                    # Store comment separately
+                    column_comments[current_table][column_name] = comment_text
+
+                    # Classify column
+                    if column_name == "ID":
+                        tables_dict[current_table]["primary_key"].append(column_name)
+                    elif column_name.endswith("_ID") or column_name.endswith("_API_ID"):
+                        tables_dict[current_table]["foreign_keys"].append(column_name)
+                    else:
+                        tables_dict[current_table]["native_keys"].append(column_name)
+                else:
+                    # If it doesn't match our column expectation
+                    tables_dict[current_table]["unknown"].append(line)
+
+    return tables_dict, column_comments
 
 def main():
-    # 1. Determine project root via Git
+    # Determine project root
     PROJECT_ROOT = subprocess.check_output(
         ['git', 'rev-parse', '--show-toplevel']
     ).decode('utf-8').strip()
 
-    # 2. Build paths relative to PROJECT_ROOT
+    # Build paths
     txt_filepath = os.path.join(
         PROJECT_ROOT,
         "assets",
@@ -101,35 +99,59 @@ def main():
     )
     json_outpath = os.path.join(PROJECT_ROOT, "scripts", "temp", "table_mappings.json")
 
-    # 3. Parse and classify
-    table_classification = parse_and_classify(txt_filepath)
+    # Parse and classify
+    tables_dict, column_comments = parse_and_classify(txt_filepath)
 
-    # 4. Apply overrides
-    for table_name, categories in table_classification.items():
+    # For each col in FOREIGN_OVERRIDE, move it from native_keys -> foreign_keys if present
+    for table_name, categories in tables_dict.items():
         for col in FOREIGN_OVERRIDE:
-            for cat_name in ["primary_key", "foreign_keys", "native_keys", "unknown"]:
-                if col in categories[cat_name]:
-                    categories[cat_name].remove(col)
-            categories["foreign_keys"].append(col)
+            if col in categories["native_keys"]:
+                categories["native_keys"].remove(col)
+                categories["foreign_keys"].append(col)
 
-    for table_name, categories in table_classification.items():
+    # For each col in NATIVE_OVERRIDE, move it from foreign_keys -> native_keys if present
+    for table_name, categories in tables_dict.items():
         for col in NATIVE_OVERRIDE:
-            for cat_name in ["primary_key", "foreign_keys", "native_keys", "unknown"]:
-                if col in categories[cat_name]:
-                    categories[cat_name].remove(col)
-            categories["native_keys"].append(col)
+            if col in categories["foreign_keys"]:
+                categories["foreign_keys"].remove(col)
+                categories["native_keys"].append(col)
 
-    # 5. Remove "unknown" key if empty across all tables
-    any_unknown = any(len(tbl_data["unknown"]) > 0 for tbl_data in table_classification.values())
+    # Convert each raw column name in the classification lists into
+    #    objects with { "name": x, "comment": y }
+    for table_name, categories in tables_dict.items():
+        for cat_name in ["primary_key", "foreign_keys", "native_keys", "unknown"]:
+            new_list = []
+            for col_name in categories[cat_name]:
+                cmt = column_comments[table_name].get(col_name, "")
+                new_list.append({"name": col_name, "comment": cmt})
+            categories[cat_name] = new_list
+
+    # Remove "unknown" if empty
+    any_unknown = any(len(tbl_data["unknown"]) > 0 for tbl_data in tables_dict.values())
     if not any_unknown:
-        for tbl_data in table_classification.values():
+        for tbl_data in tables_dict.values():
             del tbl_data["unknown"]
 
-    # 6. Write output JSON
+    # Convert each category from list-of-objects -> dictionary { col_name: col_comment }
+    for table_name, categories in tables_dict.items():
+        for cat_name in ["primary_key", "foreign_keys", "native_keys", "unknown"]:
+            if cat_name not in categories:
+                continue
+            dct = {}
+            for col_info in categories[cat_name]:
+                col_nm = col_info["name"]
+                col_cmt = col_info["comment"]
+                dct[col_nm] = col_cmt
+            categories[cat_name] = dct
+
+    # Write final output JSON with minimal indentation (or single line if you prefer)
     os.makedirs(os.path.dirname(json_outpath), exist_ok=True)
     with open(json_outpath, "w", encoding="utf-8") as out:
-        json.dump(table_classification, out, indent=4)
-    
-    
+        # To make format only a single line, do:
+        #   json.dump(tables_dict, out, indent=None, separators=(',',':'))
+        # To make format more compact but still multi-line, do:
+        #   indent=2:
+        json.dump(tables_dict, out, indent=2)
+
 if __name__ == "__main__":
     main()
