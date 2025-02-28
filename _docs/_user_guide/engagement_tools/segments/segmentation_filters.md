@@ -83,7 +83,7 @@ glossaries:
     tags:
       - Custom events
   - name: Email Address 
-    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter.
+    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter, so that you can maximize delivery of emails regardless of opt-in status. <br><br>This filter only checks if user profiles have an email address, whereas the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available">Email Available</a> filter checks for additional criteria.
     tags:
       - Other Filters
   - name: External User ID
@@ -279,7 +279,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
+    description: Segments your users by whether they have a valid email address, and if they are subscribed or opted-in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.<br><br>Note that if you send a transactional message, users whose "Email Available" is <code>false</code> won't be included in the audience calculation but could still receive a message. However, the audience calculation will include only subscribed or opted-in users. <br><br>For emails where the opt-in status is important, we suggest using the "Email Available" filter instead of the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a> filter; the additional criteria can help you target users who truly want to see your messages.
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date
