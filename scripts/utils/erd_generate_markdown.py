@@ -43,7 +43,7 @@ def main():
                 rest_of_name = "_".join(parts[3:]) if len(parts) > 3 else ""
 
                 # Heading
-                md_file.write(f"### {rest_of_name}\n\n")
+                md_file.write(f"### `{rest_of_name}`\n\n")
 
                 # Extract description (if any), ensure first char uppercase, end with period
                 desc = table_json.get("description", "").strip()

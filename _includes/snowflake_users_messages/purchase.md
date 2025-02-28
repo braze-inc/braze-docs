@@ -1,4 +1,4 @@
-### SHARED
+### `SHARED`
 
 ```json
 // USERS_BEHAVIORS_PURCHASE_SHARED
