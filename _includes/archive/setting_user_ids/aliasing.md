@@ -16,7 +16,7 @@ For more information on setting user aliases against a user profile, refer to [U
  [[Appboy sharedInstance].user addAlias:ALIAS_NAME withLabel:ALIAS_LABEL];
 ```
 
- {% endtab %}
+{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -51,6 +51,12 @@ For more information, see [KDoc](https://braze-inc.github.io/braze-android-sdk/k
 
 ```javascript
 braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+
+{% elsif include.platform == "Swift" %}
+
+```swift
+AppDelegate.braze?.user.add(alias: ALIAS_NAME, label: ALIAS_LABEL)
 ```
 
 {% elsif include.platform == "REST" %}

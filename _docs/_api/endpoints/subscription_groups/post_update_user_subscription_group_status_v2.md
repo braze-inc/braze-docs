@@ -74,7 +74,7 @@ When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_ids` | Required* | Array of strings | The `external_id` of the user or users,  may include up to 50 `id`s. |
 | `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, all users that share the email address are updated with the subscription group changes. |
-| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (with a maximum of 50). |
+| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
 | `use_double_opt_in_logic` | Optional | Boolean | If this parameter is omitted, users won't be entered into the SMS double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
