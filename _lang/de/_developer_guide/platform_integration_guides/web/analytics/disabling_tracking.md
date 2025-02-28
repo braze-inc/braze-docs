@@ -10,7 +10,7 @@ description: "Dieser Artikel beschreibt die Deaktivierung des Web-SDK-Trackings,
 
 # Web-SDK-Tracking deaktivieren
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 > Zur Einhaltung von Datenschutzvorschriften kann das Tracking von Daten im Web SDK mit der Methode [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) gänzlich unterbunden werden. 
 
