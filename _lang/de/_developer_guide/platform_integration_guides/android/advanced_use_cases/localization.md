@@ -1,0 +1,207 @@
+---
+nav_title: Lokalisierung
+article_title: Lokalisierung für Android und FireOS
+platform: 
+  - Android
+  - FireOS
+page_order: 1
+description: "Dieser Referenzartikel behandelt die Lokalisierung von Android und FireOS und listet alle derzeit von Braze unterstützten Sprachen auf."
+
+---
+
+# Lokalisierung
+
+> Die Lokalisierung wird im Braze Android SDK unterstützt. Außer Englisch unterstützt Braze noch weitere Sprachen für die integrierten SDK-Nachrichten. Diese beziehen sich auf die Standardmeldungen, die in den mit Braze integrierten Anwendungen angezeigt werden, wie z.B. die Stellen in der App, an denen es Probleme mit der Verbindung gibt (z.B. "Netzwerkverbindung kann nicht hergestellt werden. Bitte versuchen Sie es später noch einmal.") 
+
+Wenn die Sprache des Telefons auf eine der unterstützten Sprachen eingestellt ist, wird jede der Braze-Standardzeichenfolgen, die innerhalb einer integrierten Anwendung ausgelöst werden, automatisch in dieser Sprache angezeigt.
+
+Wenn Sie eine vollständige Liste der unterstützten Sprachen suchen, die Sie Ihren Benutzern in deren Profilen zuweisen können, sehen Sie sich unsere [Liste der Benutzersprachen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/) an.
+
+## Unterstützte Sprachen
+
+- Afrikaans
+- Aghem
+- Akan
+- Albanisch
+- Amharisch
+- Arabisch
+- Armenisch
+- Assamesisch
+- Asu
+- Aymara
+- Aserbaidschanisch
+- Bafia
+- Bambara
+- Basa
+- Baskisch
+- Weißrussisch
+- Bemba
+- Bena
+- Bengali
+- Bodo
+- Bosnisch
+- Bretonisch
+- Bulgarisch
+- Birmanisch
+- Kambodschanisch
+- Katalanisch
+- Zentralatlas tamazight
+- Cherokee
+- Chiga
+- Chinesisch
+- Kongo swahili
+- Kornisch
+- Kapverdisches Kreol
+- Kroatisch
+- Tschechisch
+- Dänisch
+- Taita
+- Duala
+- Niederländisch
+- Dzongkha
+- Ekegusii
+- Englisch
+- Esperanto
+- Estnisch
+- Ewe
+- Ewondo
+- Färöisch
+- Farsi
+- Filipino
+- Finnisch
+- Französisch
+- Galicisch
+- Luganda
+- Georgisch
+- Deutsch
+- Schweizerdeutsch
+- Griechisch
+- Grönländisch
+- Guaraní
+- Gujarati
+- Hausa
+- Hawaiianisch
+- Hebräisch
+- Hindi
+- Ungarisch
+- Isländisch
+- Igbo
+- Indonesisch
+- Inuktitut
+- Irisch
+- Italienisch
+- Japanisch
+- Javanisch
+- Jola fonyi
+- Kabylisch
+- Kalenjin
+- Kamba
+- Kannada
+- Kashmiri
+- Kasachisch
+- Embu
+- Kikuyu
+- Kinyarwanda
+- Kirgisisch
+- Konkani
+- Koreanisch
+- Koyraboro senni
+- Kurdisch
+- Laotisch
+- Lateinisch
+- Lettisch
+- Lingala
+- Litauisch
+- Luba katanga
+- Luo
+- Luxemburgisch
+- Luhya
+- Mazedonisch
+- Machame
+- Makhuwa meetto
+- Chimakonde
+- Madegassisch
+- Malaiisch
+- Malayalam
+- Maltesisch
+- Manx
+- Marathi
+- Maa
+- Meru
+- Moldawisch
+- Mongolisch
+- Morisyen
+- Mundang
+- Nama
+- Nepali
+- Nord-Ndebele
+- Norwegisch
+- Nuer
+- Nyankole
+- Neunorwegisch
+- Oriya
+- Oromo
+- Paschtu
+- Fula
+- Polnisch
+- Portugiesisch
+- Punjabi
+- Quechua
+- Raeto-Romanze
+- Rumänisch
+- Rombo
+- Kirundi
+- Russisch
+- Rwa
+- Samburu
+- Samisch
+- Sangu
+- Sanskrit
+- Schottisch
+- Sena
+- Serbisch
+- Shambala
+- Shona
+- Sichuan yi
+- Sindhi
+- Singhalesisch
+- Slowakisch
+- Slowenisch
+- Soga
+- Somali
+- Songhai
+- Spanisch
+- Sundanesisch
+- Swahili
+- Schwedisch
+- Tachelhit
+- Tagalog
+- Tadschikisch
+- Tamil
+- Tasawaq
+- Tatarisch
+- Telugu
+- Teso
+- Thai
+- Tibetisch
+- Tigrinisch
+- Tongaisch
+- Türkisch
+- Turkmenisch
+- Uigurisch
+- Ukrainisch
+- Urdu
+- Usbekisch
+- Vai
+- Vietnamesisch
+- Vunjo
+- Walisisch
+- Xhosa
+- Yangben
+- Jiddisch
+- Yoruba
+- Zarma
+- Zulu
+
+Weitere Informationen finden Sie in unserem Artikel zur [Android-Lokalisierung](http://developer.android.com/guide/topics/resources/localization.html).
+
