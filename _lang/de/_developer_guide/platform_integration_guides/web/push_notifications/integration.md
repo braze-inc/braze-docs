@@ -24,7 +24,7 @@ Web-Push-Benachrichtigungen werden mithilfe des [W3C-Push-Standards](http://www.
 
 Weitere Informationen zu den Push-Protokollstandards und der Browserunterstützung finden Sie in den Ressourcen von [AppleSafari](https://developer.apple.com/notifications/safari-push-notifications/ "Push-Benachrichtigungen") [MozillaMozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Push API Browser-Kompatibilität") und [MicrosoftMicrosoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Push API")
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Integration
 
