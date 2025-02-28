@@ -13,7 +13,7 @@ search_rank: 1
 
 > Dieser Artikel beschreibt die Content-Card-Integration für das Web und befasst sich mit Content-Card-Datenmodellen, Standard-Feed-UI-Optionen und zusätzlichen Karten-Methoden.
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 Das Braze Web SDK enthält eine Content-Card-Feed-UI, um den Integrationsvorgang zu beschleunigen. Wenn Sie stattdessen lieber Ihre eigene Benutzeroberfläche erstellen möchten, lesen Sie die [Anleitung zur Anpassung von Inhaltskarten]({{site.baseurl}}/developer_guide/customization_guides/content_cards).
 
