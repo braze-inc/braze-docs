@@ -10,7 +10,7 @@ page_type: reference
 
 > Dieser Referenzartikel beschreibt, wie Sie das Braze Web SDK installieren. Mit dem Braze Web SDK können Sie Analysen sammeln und Ihren Webbenutzern umfangreiche In-App-Nachrichten, Push-Nachrichten und Content Card-Nachrichten anzeigen. In unserer [](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JavaScript-DokumentationJSDocs") finden Sie eine vollständige technische Referenz.
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Schritt 1: Installieren Sie die Braze-Bibliothek
 
