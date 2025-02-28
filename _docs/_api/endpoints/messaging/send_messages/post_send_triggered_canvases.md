@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-For the `recipients` parameter, when `send_to_existing_only` is `true`, Braze will only send the message to existing users—however, this flag can't be used with user aliases. <br><br>If `send_to_existing_only` is `false`, an attribute object must be included. When `send_to_existing_only` is `false` **and** a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.
+For the `recipients` parameter, when `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. <br><br>If `send_to_existing_only` is `false`, an attribute object must be included. When `send_to_existing_only` is `false` **and** a user with the given `id` does not exist, Braze will create a user with that ID and attributes before sending the message.
 {% endalert %}
 
 Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
