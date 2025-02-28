@@ -219,7 +219,7 @@ Content Cards can't be edited after they are sent. If you find you need to make 
 When a Content Card becomes re-eligible, there's a possibility it will be sent again when the original card is still in a user's app. To avoid having duplicate cards in a user's app, either turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.
 {% endalert %}
 
-Also note that Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility&#8212;however, all other Content Cards use whichever send time or impression time is latest.
+Also note that Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility&#8212;however, Content Cards created at campaign launch or Canvas step entry use whichever send time or impression time is latest.
 
 #### Option 1: Duplicating the campaign
 
