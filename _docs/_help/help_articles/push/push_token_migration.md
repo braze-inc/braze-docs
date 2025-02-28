@@ -24,7 +24,7 @@ Due to the nature of web push tokens, be sure you consider the following when im
 
 |Consideration|Details|
 |----------------------|------------|
-| **Service workers**  | By default, the Web SDK will look for a service worker at `./service-worker` unless another option is specified, such as `manageServiceWorkerExternally` or `serviceWorkerLocation`. If your service work isn't set up properly, it may lead to expired push tokens for your users. |
+| **Service workers**  | By default, the Web SDK will look for a service worker at `./service-worker` unless another option is specified, such as `manageServiceWorkerExternally` or `serviceWorkerLocation`. If your service worker isn't set up properly, it may lead to expired push tokens for your users. |
 | **Expired tokens**   | If a user hasn't started a web session within 60 days, their push token will expire. Since Braze can't migrate expired push tokens, you'll need to send a [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) to re-engage them. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
