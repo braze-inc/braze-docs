@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die für das Braze Web SDK benötigten H
 Dieser Artikel richtet sich an Entwickler, die an Websites arbeiten, die CSP-Regeln durchsetzen und mit Braze integriert sind. Es ist nicht als Ratschlag gedacht, wie Sie die Sicherheit angehen sollten.
 {% endalert %}
 
-{% multi_lang_include archiv/web-v4-rename.md %}
+{% multi_lang_include archive/web-v4-rename.md %}
 
 ## Nonce-Attribute {#nonce}
 
