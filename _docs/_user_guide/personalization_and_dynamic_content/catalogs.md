@@ -68,4 +68,4 @@ Catalogs data storage is limited based on the size of the catalog items and sele
 
 For the free version of catalogs, the amount of storage allowed is up to 100&nbsp;MB. You can have unlimited items as long as the storage space does not exceed 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
 
-For Catalogs Pro, The storage size options are: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
+For Catalogs Pro, The storage size options are: 5&nbsp;GB, 10&nbsp;GB, 15&nbsp;GB or 50&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
