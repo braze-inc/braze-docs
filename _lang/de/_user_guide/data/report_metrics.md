@@ -176,7 +176,7 @@ E-Mail
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.mdmetric='Confirmed Deliveries' %} Als Kund:in von Braze werden die Zustellungen auf Ihr SMS-Kontingent angerechnet. 
+{% multi_lang_include metrics.md metric='Confirmed Deliveries' %} Als Kund:in von Braze werden die Zustellungen auf Ihr SMS-Kontingent angerechnet. 
 
 <span class="calculation-line">Kalkulation: Anzahl</span>
 
