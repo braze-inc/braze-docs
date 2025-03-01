@@ -1,7 +1,7 @@
 ---
 nav_title: Navigation
 article_title: Braze Navigation
-permalink: /navigation_refresh/
+permalink: /navigating_braze/
 hidden: true
 page_type: reference
 description: "This guide explains how to use the updated navigation."
