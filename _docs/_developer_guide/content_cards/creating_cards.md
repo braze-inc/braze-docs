@@ -46,6 +46,16 @@ Then, register a callback function to [subscribe for data updates]({{site.baseur
 
 Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#logging-events) to properly log all metrics back to Braze dashboard analytics.
 
+### Step 4: Test your card (optional)
+
+To test your Content Card:
+
+1. Set an active user in your application by calling the [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
+2. In Braze, go to **Campaigns**, then [create a new Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
+3. In your campaign, select **Test**, then enter the test user's `user-id`. When you're ready, select **Send Test**. You'll be able to launch a Content Card on your device shortly.
+
+![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
+
 ## Content Card placements
 
 Content Cards can be used in many different ways. Three common implementations are to use them as a message center, a banner ad, or an image carousel. For each of these placements, you will assign [key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (the `extras` property in the data model) to your Content Cards, and based on the values, dynamically adjust the card's behavior, appearance, or functionality during runtime. 

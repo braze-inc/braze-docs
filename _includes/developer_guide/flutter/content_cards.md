@@ -68,19 +68,6 @@ To store any Content Cards triggered before the callback is available and replay
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
-## Testing a sample Content Card
-
-Follow these steps to test a sample Content Card.
-
-1. Set an active user in the React application by calling `braze.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create) to create a new Content Card campaign.
-3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
-4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
-
-![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
-
-For more details on each platform, follow the [Android integration]({{site.baseurl}}/developer_guide/platforms/android/content_cards/) or [iOS integration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui) guides.
-
 ## GIF Support
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
