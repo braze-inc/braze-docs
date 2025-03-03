@@ -20,7 +20,7 @@ description: ""
 {% endsdktab %}
 
 {% sdktab web %}
-At this time, Content Card deep linking is not supported for the Web Braze SDK is not supported.
+At this time, Content Card deep links are not supported for the Web Braze SDK.
 {% endsdktab %}
 
 {% sdktab fireos %}
