@@ -8,7 +8,7 @@ description: ""
 
 # Deep Linking in Content Cards
 
-> Learn how deep link within a Content Card using the Braze SDK.
+> Learn how deep link within a Content Card using the Braze SDK. To learn more about deep links, check out [What is deep linking?]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% sdktabs %}
 {% sdktab android %}
