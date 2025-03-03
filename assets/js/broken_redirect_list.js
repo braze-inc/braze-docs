@@ -2022,9 +2022,8 @@ validurls['/docs/developer_guide/platforms/android/content_cards/deep_linking/']
 validurls['/docs/developer_guide/platforms/swift/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/fireos/content_cards/deep_linking/'] = '/docs/developer_guide/content_cards/deep_linking/?sdktab=fireos';
 
-validurls['/docs/developer_guide/platforms/android/content_cards/gifs/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=android';
-validurls['/docs/developer_guide/platforms/swift/content_cards/gifs/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=swift';
-validurls['/docs/developer_guide/platforms/fireos/content_cards/gifs/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/android/content_cards/gif/'] = '/docs/developer_guide/content_cards/embedding_gifs/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/content_cards/gif/'] = '/docs/developer_guide/content_cards/gifs/?sdktab=fireos';
 
 validurls['/docs/developer_guide/content_cards/creating_custom_content_cards'] = '/docs/developer_guide/content_cards/creating_cards';
 validurls['/docs/developer_guide/content_cards/customizing_behavior'] = '/docs/developer_guide/content_cards/customizing_cards/behavior';
