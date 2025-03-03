@@ -11,11 +11,11 @@ Tool:
 
 # Audience Sync to Criteo
 
-Using the Braze Audience Sync to Criteo, brands can elect to add user data from their own Braze integration to Criteo customer lists to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your Criteo customer lists.
+Using the Braze Audience Sync to Criteo, brands can elect to add user data from their own Braze integration to Criteo customer lists to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in your Criteo customer lists.
 
 **Common use cases for audience syncing include:**
 
-- Targeting high value users via multiple channels to drive purchases or engagement
+- Targeting high-value users via multiple channels to drive purchases or engagement
 - Retargeting users who are less responsive to other marketing channels
 - Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand
 - Creating Lookalike Audiences to acquire new users more efficiently
@@ -69,7 +69,7 @@ If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/deve
 
 ![][11]
 
-If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share` or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
 ![][12]
 
@@ -94,7 +94,7 @@ Then select your desired Criteo ad account. Under the **Choose a New or Existing
 {% tabs %}
 {% tab Create a New Audience %}
 **Create a New Audience**<br>
-Enter a name for the new audience, select **Add Users to Audience** and select which fields you would like to sync with Criteo. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
+Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with Criteo. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/criteo/criteo3.png %})
 
@@ -102,11 +102,11 @@ Users will be notified at the top of the step editor if the audience is created 
 
 ![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/criteo/criteo1.png %})
 
-When you launch a Canvas with a new audience, Braze sync users in near real-time as they enter the Audience Sync component.
+When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync component.
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Sync with an Existing Audience**<br>
-Braze also offers the ability to either add users to existing Criteo audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then either add users in near real-time as they enter the Audience Sync component.
+Braze also offers the ability to add users to existing Criteo audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the Audience Sync component.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/criteo/criteo8.png %})
 
@@ -115,7 +115,7 @@ Braze also offers the ability to either add users to existing Criteo audiences t
 
 ### Step 5: Launch Canvas
 
-Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Criteo. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
+Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who go through the Audience Sync step will be passed into this audience on Criteo. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
 You can view the audience in Criteo by going into your ads manager account and then selecting Segments from the **Audience Library** of the navigation. From the **Segments** page, you can see the size of each audience after it reaches ~1,000.
 
@@ -123,9 +123,9 @@ You can view the audience in Criteo by going into your ads manager account and t
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Criteo's API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Snapchat.
+As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Criteo's API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Criteo.
 
-Criteo's API rate limit states no more than 250 requests minute. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric. 
+Criteo's API rate limit states no more than 250 requests per minute. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric. 
 
 ## Understanding analytics
 
