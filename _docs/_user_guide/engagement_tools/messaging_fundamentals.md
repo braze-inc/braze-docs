@@ -21,13 +21,13 @@ guide_featured_list:
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Localization
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
-    image: /assets/img/braze_icons/annotation-question.svg
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Re-eligibility
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligiblity/
-    image: /assets/img/braze_icons/annotation-question.svg
+    image: /assets/img/braze_icons/users-01.svg
   - name: Targeting Users
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
-    image: /assets/img/braze_icons/annotation-question.svg
+    image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title: "Management"
 guide_menu_list:
@@ -36,10 +36,10 @@ guide_menu_list:
     image: /assets/img/braze_icons/brush-02.svg
   - name: Archiving Messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
-    image: /assets/img/braze_icons/dataflow-03.svg 
+    image: /assets/img/braze_icons/archive.svg
   - name: Duplicating Messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
-    image: /assets/img/braze_icons/target-04.svg
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Messaging Statuses
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
     image: /assets/img/braze_icons/book-closed.svg
