@@ -638,10 +638,6 @@ When your limit for Firebase Cloud Messaging (FCM) is exceeded, Google returns "
 
 To check your current limit, go to your **Google Cloud Console** > **APIs & Services** > **Firebase Cloud Messaging API** > **Quotas & System Limits**, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 
-{% alert important %}
-Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 ### Best practices
 
 We recommend these best practices to keep these error volumes low.
