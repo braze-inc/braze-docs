@@ -67,7 +67,3 @@ To store any Content Cards triggered before the callback is available and replay
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
-
-## GIF Support
-
-{% multi_lang_include wrappers/gif_support/content_cards.md %}

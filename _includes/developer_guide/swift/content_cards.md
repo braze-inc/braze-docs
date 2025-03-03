@@ -113,9 +113,3 @@ Each card is initialized with a `Context` object, which contains various methods
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
-
-{% alert important %}
-The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`.
-
-For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
-{% endalert %}

@@ -122,7 +122,3 @@ Control cards include all of the base properties, with a few important differenc
 - The `extras` property is guaranteed to be empty.
 
 For a full reference of the control card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct) documentation.
-
-## GIF Support
-
-{% multi_lang_include wrappers/gif_support/content_cards.md %}
