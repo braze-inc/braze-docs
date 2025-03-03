@@ -2,8 +2,14 @@
 nav_title: Deep Linking
 article_title: Deep Linking in Content Cards
 page_order: 4
-description: ""
-
+description: "Learn how deep link within a Content Card using the Braze SDK."
+channel:
+  - content cards
+platform:
+  - Android
+  - Swift
+  - Web
+  - FireOS
 ---
 
 # Deep Linking in Content Cards
