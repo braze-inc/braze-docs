@@ -62,9 +62,9 @@ Catalogs are a data storage feature. They contain large sets of data that can be
 
 For examples of how you can use Liquid to pull catalog information, see the additional use cases in [Creating a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
 
-#### Limits
+#### Data storage limitations
 
-Catalogs data storage is limited based on the size of the catalog items and selections, which may be different from the sizes of uploaded CSV files.
+Data storage for catalogs is limited based on the size of the catalog items and selections, which may be different from the sizes of uploaded CSV files.
 
 For the free version of catalogs, the amount of storage allowed is up to 100&nbsp;MB. You can have unlimited items as long as the storage space does not exceed 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
 
