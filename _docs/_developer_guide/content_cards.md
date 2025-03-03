@@ -1,5 +1,5 @@
 ---
-page_order: 2.1
+page_order: 2.2
 nav_title: Content Cards
 article_title: Content Cards in the Braze SDK
 channel:

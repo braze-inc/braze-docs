@@ -24,11 +24,11 @@ Before you can integrate Banner Cards, you'll need to [create Banner Card placem
 
 In addition, these are the minimum SDK versions needed to start using Banner Cards:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.6.0 reactnative:14.0.0 %}
 
 ## Integrating Banner Cards
 
-### Step 2: Refresh placements in your app {#requestBannersRefresh}
+### Step 1: Refresh placements in your app {#requestBannersRefresh}
 
 Placements can be requested each session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
@@ -71,7 +71,7 @@ Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native.
+Braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
@@ -88,7 +88,7 @@ This feature is not currently supported on Cordova.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-This feature is not yet available in Flutter.
+This feature is not currently supported on Flutter.
 ```
 {% endtab %}
 
@@ -99,7 +99,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Listen for updates {#subscribeToBannersUpdates}
+### Step 2: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
 If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically. If you want to manually render the HTML, [let us know](mailto:banners-feedback@braze.com).
@@ -154,7 +154,16 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 {% tab React Native %}
 
 ```javascript
-This feature is not currently supported on React Native.
+const bannerCardsSubscription = Braze.addListener(
+  Braze.Events.BANNER_CARDS_UPDATED,
+  data => {
+    const banners = data.banners;
+    console.log(
+      `Received ${banners.length} Banner Cards with placement IDs:`,
+      banners.map(banner => banner.placementId),
+    );
+  },
+);
 ```
 
 {% endtab %}
@@ -182,7 +191,7 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Insert cards by placement ID {#insertBanner}
+### Step 3: Insert cards by placement ID {#insertBanner}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -322,8 +331,31 @@ Banner(placementId = "global_banner")
 {% endtab %}
 {% tab React Native %}
 
+If you're using [React Native's New Architecture](https://reactnative.dev/architecture/landing-page), you need to register `BrazeBannerView` as a Fabric component in your `AppDelegate.mm`.
+
+```swift
+#ifdef RCT_NEW_ARCH_ENABLED
+/// Register the `BrazeBannerView` for use as a Fabric component.
+- (NSDictionary<NSString *,Class<RCTComponentViewProtocol>> *)thirdPartyFabricComponents {
+  NSMutableDictionary * dictionary = [super thirdPartyFabricComponents].mutableCopy;
+  dictionary[@"BrazeBannerView"] = [BrazeBannerView class];
+  return dictionary;
+}
+#endif
+```
+
+To get the Banner in React Native, use:
+
 ```javascript
-This feature is not currently supported on React Native.
+const banner = await Braze.getBanner("global_banner");
+```
+
+In your React Native application, add the following JavaScript XML (JSX) snippet into your view hierarchy.
+
+```javascript
+<Braze.BrazeBannerView
+  placementID='global_banner'
+/>
 ```
 
 {% endtab %}

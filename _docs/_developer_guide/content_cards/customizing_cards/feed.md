@@ -20,7 +20,7 @@ platform:
 
 By default, the Content Card feed will refresh automatically in the following instances: 
 1. A new session is started
-2. When the feed is opened and more than 60 seconds have elapsed since the last refresh
+2. When the feed is opened, and more than 60 seconds have passed since the last refresh. This applies only to the default Content Card feed and occurs only once per feed opening.
 
 You can configure the SDK to refresh manually at specific times as well.
 

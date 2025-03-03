@@ -78,7 +78,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/identifying_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
+After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
 
 #### Page container styles

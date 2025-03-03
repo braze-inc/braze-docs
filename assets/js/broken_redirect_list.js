@@ -2030,4 +2030,12 @@ validurls['/docs/developer_guide/content_cards/customizing_behavior'] = '/docs/d
 validurls['/docs/developer_guide/content_cards/customizing_feed'] = '/docs/developer_guide/content_cards/customizing_cards/feed';
 validurls['/docs/developer_guide/content_cards/customizing_styles'] = '/docs/developer_guide/content_cards/customizing_cards/style';
 
+validurls['/docs/developer_guide/platforms/android/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configuration'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=fireos';
+validurls['/docs/developer_guide/platforms/swift/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initialization'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
+validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/docs/developer_guide/sdk_initalization/?sdktab=unreal%20engine';
+
 // validurls['OLD'] = 'NEW';

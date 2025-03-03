@@ -27,7 +27,7 @@ You can turn on the new navigation at any time by selecting **Switch to new nav*
 
 ## What to expect next
 
-You will still be able to switch back and forth between the new and old navigation until **January 2025**.
+You will still be able to switch back and forth between the new and old navigation until **March 2025**.
 
 ## What's changed
 
