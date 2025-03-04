@@ -3195,6 +3195,7 @@ This event occurs when a Content Card gets sent to a user.
 {% endtabs %}
 
 #### Property details
+
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 
