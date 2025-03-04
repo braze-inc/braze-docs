@@ -58,7 +58,7 @@ Because the goal of this graph is to give you a sense of overall segment members
 All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces is to be expected.
 {% endalert %}
 
-Braze estimates the membership count by querying users in a random bucket range daily at 4 am in your company time zone. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
+Braze estimates the membership count by querying users in a random bucket range daily at 4 am in your company time zone and extrapolated to estimate the total count. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
 
 ### Reasons for signficant changes
 
