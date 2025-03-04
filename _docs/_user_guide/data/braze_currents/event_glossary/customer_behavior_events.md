@@ -166,6 +166,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
 {% endtabs %}
 
 #### Property details
+
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platforms/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
