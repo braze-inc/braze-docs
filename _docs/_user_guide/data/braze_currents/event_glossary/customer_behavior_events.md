@@ -52,7 +52,7 @@ Random Bucket Number
 This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. Use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants.
 
 {% alert important %}
-This Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (Amazon S3, Microsoft Azure, and Google Cloud Storage).
+This Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (such as Amazon S3, Microsoft Azure, and Google Cloud Storage).
 <br><br>To enable this event and schedule the backfill for existing users' random bucket numbers in your workspace, contact your customer success manager.
 {% endalert %}
 
