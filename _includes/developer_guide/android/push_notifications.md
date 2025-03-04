@@ -441,7 +441,7 @@ For general information about Android notification icons, visit the [Notificatio
 
 Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha and transparency channels in action icons and the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome except for transparent regions.
 
-To properly create a notification small icon asset:
+To create a notification small icon asset that displays properly:
 - Remove all colors from the image except for white.
 - All other non-white regions of the asset should be transparent.
 
@@ -637,10 +637,6 @@ This example uses the `US-01` instance. If you are not on this instance, replace
 When your limit for Firebase Cloud Messaging (FCM) is exceeded, Google returns "quota exceeded" errors. The default limit for FCM is 600,000 requests per minute. Braze retries sending according to Google's recommended best practices. However, a large volume of these errors can prolong sending time by several minutes. To mitigate potential impact, Braze will send you an alert that the rate limit is being exceeded and steps you can take to prevent the errors.
 
 To check your current limit, go to your **Google Cloud Console** > **APIs & Services** > **Firebase Cloud Messaging API** > **Quotas & System Limits**, or visit the [FCM API Quotas page](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
-
-{% alert important %}
-Setting up alerts for exceeding FCM rate limit for Android push notifications is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 ### Best practices
 

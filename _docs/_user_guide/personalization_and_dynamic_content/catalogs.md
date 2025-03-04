@@ -61,3 +61,11 @@ You can bring in any type of data into a catalog. Typically, the data is metadat
 Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To actually reference the data, you'll use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) as the templating language. In other words, catalogs is storage where the data is held, and Liquid is the language that pulls the relevent data from the storage.
 
 For examples of how you can use Liquid to pull catalog information, see the additional use cases in [Creating a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
+
+#### Data storage limitations
+
+Data storage for catalogs is limited based on the size of the catalog items and selections, which may be different from the sizes of uploaded CSV files.
+
+For the free version of catalogs, the amount of storage allowed is up to 100&nbsp;MB. You can have unlimited items as long as the storage space does not exceed 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
+
+For Catalogs Pro, The storage size options are: 5&nbsp;GB, 10&nbsp;GB, 15&nbsp;GB or 50&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
