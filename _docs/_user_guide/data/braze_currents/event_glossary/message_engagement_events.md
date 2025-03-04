@@ -4756,6 +4756,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 {% endtabs %}
 
 #### Property details
+
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
