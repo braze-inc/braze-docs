@@ -24,9 +24,6 @@ guide_featured_list:
   - name: Using Braze Canvas Templates
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Localization
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
-    image: /assets/img/braze_icons/globe-02.svg
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
@@ -34,4 +31,9 @@ guide_featured_list:
     link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
 
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: Localization
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
+    image: /assets/img/braze_icons/globe-02.svg
 ---
