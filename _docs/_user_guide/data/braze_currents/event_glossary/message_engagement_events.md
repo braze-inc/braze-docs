@@ -10085,6 +10085,25 @@ This event occurs when an WhatsApp message is read by the end user.
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+`state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
+
+| Source | Description |
+| --- | --- |
+| SDK | SDK endpoints |
+| Dashboard | When a user's subscription state is updated from the **User Profile** page in the dashboard |
+| Subscription Page | When a user unsubscribes through an email link that is not the preference center |
+| REST API | REST API endpoints |
+| CSV import | CSV user import |
+| Preference Center | When a user is updated from the preference center |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels, such as SMS |
+| Migration | When a user is updated by internal migrations or maintenance scripts |
+| User Merge | When a user is updated by the merging users process |
+| Canvas User Update Step | When a user is updated by the Canvas User Update step |
+| List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
 {% endapi %}
 
 {% api %}
