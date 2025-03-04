@@ -394,6 +394,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 {% endtabs %}
 
 #### Property details
+
 - `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
 
 | Source | Description |
