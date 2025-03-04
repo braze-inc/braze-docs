@@ -16,7 +16,7 @@ This document is for informational purposes only. It is not intended to provide,
 
 ## Subscription states {#subscription-states}
 
-Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
+Braze has three global subscription states for email users (listed in the following table), which are the final gatekeepers between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze does not count subscription state changes against your data points, global
 
 Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in your **Sending Configuration** settings, normal email sending will resume.
 
-If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
+If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refer to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
