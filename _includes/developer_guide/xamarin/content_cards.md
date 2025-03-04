@@ -6,7 +6,7 @@ The Braze Xamarin SDK includes a default card feed to get you started with Conte
 
 ## Card types and properties
 
-The Braze Xamarin SDK has three unique Content Cards card types that share a base model: [Banner](#banner), [Captioned Image](#captioned-image), and [Classic](#classic). Each type inherits common properties from a base model and has the following additional properties.
+The Braze Xamarin SDK has three unique Content Cards card types that share a base model: [Banner](#xamarin_banner), [Captioned Image](#xamarin_captioned-image), and [Classic](#xamarin_classic). Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base card model
 
