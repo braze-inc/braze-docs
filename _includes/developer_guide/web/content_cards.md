@@ -151,7 +151,3 @@ To determine if a Content Card is in the Control group for an A/B test, check th
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
-
-{% alert note %}
-Ready to go further? When you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/) to get started with customization.
-{% endalert %}
