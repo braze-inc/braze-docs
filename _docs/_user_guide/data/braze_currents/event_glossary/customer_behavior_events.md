@@ -49,7 +49,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 Random Bucket Number
 {% endapitags %}
 
-This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants.
+This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. Use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants.
 
 {% alert important %}
 This Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (Amazon S3, Microsoft Azure, and Google Cloud Storage).
