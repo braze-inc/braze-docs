@@ -28,6 +28,6 @@ To get started with the integration, contact your Movable Ink account team for a
 
 When connected, Movable Ink will:
 
-- Work with the client and Braze to set up the brand’s Da Vinci account to successfully deploy via Braze.
+- Work with the client and Braze to set up the brand’s Da Vinci account to successfully deploy with Braze.
 - Capture brand-specific configurations to align with your messaging use cases.
 - Conduct comprehensive testing and quality assurance to validate that emails are delivered as intended and meet all performance and operational standards.
