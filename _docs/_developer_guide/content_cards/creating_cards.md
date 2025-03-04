@@ -1,8 +1,8 @@
 ---
-nav_title: Custom Content Cards
-article_title: Creating Custom Content Cards
-page_order: 5
-description: "This article covers components of creating a custom Content Card UI"
+nav_title: Creating Cards
+article_title: Creating Content Cards
+page_order: 0
+description: "This article covers components of creating a custom Content Card UI."
 channel:
   - content cards
 platform:
@@ -12,21 +12,11 @@ platform:
   - Web
 ---
 
-# Custom Content Cards
+# Creating Content Cards
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It is especially to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
 
-## About Content Cards
-
-Braze provides different [Content Card types]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details): `imageOnly`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
-
-You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
-
-{% alert note %}
-Each default Content Card type is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the Card class documentation for full details ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)). 
-{% endalert %}
-
-## Creating a custom card
+## Creating a card
 
 ### Step 1: Create a custom UI 
 
@@ -55,6 +45,16 @@ Then, register a callback function to [subscribe for data updates]({{site.baseur
 ### Step 3: Implement analytics
 
 Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#logging-events) to properly log all metrics back to Braze dashboard analytics.
+
+### Step 4: Test your card (optional)
+
+To test your Content Card:
+
+1. Set an active user in your application by calling the [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
+2. In Braze, go to **Campaigns**, then [create a new Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
+3. In your campaign, select **Test**, then enter the test user's `user-id`. When you're ready, select **Send Test**. You'll be able to launch a Content Card on your device shortly.
+
+![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Content Card placements
 

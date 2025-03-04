@@ -1,21 +1,10 @@
----
-nav_title: Content Cards
-article_title: Content Cards for React Native
-platform: React Native
-page_order: 3
-page_type: reference
-description: "This article covers how to get started with Content Cards for React Native apps."
-channel: content cards
+## About React Native Content Cards
 
----
-
-# Content Cards
-
-> This article covers how to set up Content Cards for React Native. The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `Braze.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## Customizing Content Cards
+## Cards methods
 
 To build your own UI, you can get a list of available cards, and listen for updates to cards:
 
@@ -51,21 +40,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Testing a Content Card
-
-To test a sample Content Card:
-
-1. Set an active user in the React application by calling the [`Braze.changeUser('your-user-id')`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
-2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create) to create a new Content Card campaign.
-3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch a Content Card on your device shortly.
-
-![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
-
-For more integrations, follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platforms/android/content_cards/) or the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui), depending on your platform.
-
-A sample implementation of this can be found in BrazeProject within the [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk).
-
-## Content Card data model
+## Card types and properties
 
 The Content Cards data model is available in the React Native SDK and offers the following Content Cards card types: [Image Only](#image-only), [Captioned Image](#captioned-image), and [Classic](#classic). There's also a special [Control](#control) card type, which is returned to users that are in the control group for a given card. Each type inherits common properties from a base model in addition to its own unique properties.
 
@@ -147,7 +122,3 @@ Control cards include all of the base properties, with a few important differenc
 - The `extras` property is guaranteed to be empty.
 
 For a full reference of the control card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct) documentation.
-
-## GIF Support
-
-{% multi_lang_include wrappers/gif_support/content_cards.md %}

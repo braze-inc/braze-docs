@@ -1,6 +1,4 @@
-# Deep linking
-
-> Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps. For general information about deep links, see [FAQ: Deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). 
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
 ## Handling deep links
 

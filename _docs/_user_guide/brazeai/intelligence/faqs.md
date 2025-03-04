@@ -77,7 +77,7 @@ To calculate the optimal time, Intelligent Timing:
 
 #### Are Machine Opens included when calculating optimal time?
 
-No, machine opens—automated system interactions—are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
+No, [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens) are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
 
 #### How precise is the optimal time?
 

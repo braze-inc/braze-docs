@@ -1,15 +1,6 @@
----
-nav_title: tvOS Customizations
-article_title: Customizing Content Cards for tvOS
-platform: tvOS
-page_type: reference
-description: "Learn how to customize your Content Cards for Apple's tvOS platform."
-page_order: 1
----
+## Prerequisites
 
-# Customizing Content Cards for tvOS
-
-> Learn how to customize your Content Cards for Apple's tvOS platform.
+Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) into your app. Then you'll need to complete the steps for setting up your tvOS app.
 
 {% alert important %}
 Keep in mind, you'll need to implement your own custom UI since Content Cards are supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
