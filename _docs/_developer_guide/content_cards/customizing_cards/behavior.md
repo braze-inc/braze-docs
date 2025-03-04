@@ -1,6 +1,6 @@
 ---
-nav_title: Customizing Card Behavior
-article_title: Customizing Content Card Behavior
+nav_title: Behavior
+article_title: Customizing the behavior of Content Cards
 page_order: 2
 description: "This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Customizing Content Card behavior
+# Customizing the behavior of Content Cards
 
 > This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 

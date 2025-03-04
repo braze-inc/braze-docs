@@ -1,15 +1,3 @@
----
-page_order: 3
-nav_title: Content Cards
-description: "Learn how to setup Content Cards for the Braze Web SDK."
-platform: Web
-channel: content cards
----
-
-# Content Cards
-
-> This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods.
-
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Prerequisites
@@ -163,7 +151,3 @@ To determine if a Content Card is in the Control group for an A/B test, check th
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
-
-{% alert note %}
-Ready to go further? When you understand the basics of Content Cards, see the [Content Card Customization Guide]({{site.baseurl}}/developer_guide/content_cards/) to get started with customization.
-{% endalert %}

@@ -1,6 +1,6 @@
 ---
-nav_title: Customizing Card Styles
-article_title: Customizing Content Card Styles
+nav_title: Style
+article_title: Customizing the style of Content Cards
 page_order: 1
 description: "This article covers styling options for your Content Cards."
 channel:
@@ -12,11 +12,11 @@ platform:
   - Web
 ---
 
-# Customizing Content Card styles
+# Customizing the style of Content Cards
 
 > Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
-## Customizing styling
+## Creating a custom style
 
 The default Content Cards UI is imported from the UI layer of the Braze SDK. From there, you can tweak certain parts of the card's styling, the order in which cards are displayed, and how the feed is shown to your users.
 
@@ -211,9 +211,7 @@ body .ab-feed {
 {% endtab %}
 {% endtabs %}
 
-## Customization recipes 
-
-Here are some recipes for common customization use cases.
+## Customization examples
 
 ### Custom font
 
@@ -529,4 +527,3 @@ Hide the unread indicator bar by adding the following style to your `css`:
 
 {% endtab %}
 {% endtabs %}
-

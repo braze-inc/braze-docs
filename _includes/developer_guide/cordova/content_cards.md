@@ -1,13 +1,3 @@
----
-nav_title: Content Cards
-article_title: Content Cards integration
-page_order: 3
----
-
-# Content Cards integration
-
-> Learn how to integrate Content Cards for the Cordova Braze SDK.
-
 {% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
 ## Card Feeds
@@ -27,7 +17,3 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## GIF Support
-
-{% multi_lang_include wrappers/gif_support/content_cards.md %}
