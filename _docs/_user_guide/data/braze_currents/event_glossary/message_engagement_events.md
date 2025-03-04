@@ -9920,6 +9920,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |
+| List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
