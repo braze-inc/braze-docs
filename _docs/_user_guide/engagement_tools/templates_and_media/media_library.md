@@ -44,7 +44,7 @@ Using the media library provides better caching and performance for in-app messa
 
 ## Image specifications
 
-All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, and GIF. For specific image recommendations by messaging channel, refer to the following sections.
+All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, and SVG. For specific image recommendations by messaging channel, refer to the following sections.
 
 ### Content Cards
 
