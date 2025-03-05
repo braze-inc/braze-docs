@@ -8,10 +8,10 @@ search_tag: Partner
 
 # Default user profile attributes
 
-> This document serves as a reference for the default attribute views in Snowflake. Three views are available, each designed for a specific use case with its own performance considerations and trade-offs.
+> This page serves as a reference for the default attribute views in Snowflake. There are three views, each designed for a specific use case with its own performance considerations.
 
 {% alert important %} 
-User profile attributes are currently available in beta for Snowflake Data Sharing customers. If you're using Snowflake Data Sharing and would like access to the beta, contact your customer success manager or Braze Support. 
+User profile attributes are currently in beta for Snowflake Data Sharing customers. If you're using Snowflake Data Sharing and would like access to this beta, contact your customer success manager or Braze Support.
 {% endalert %}
 
 ## Available views
@@ -22,7 +22,7 @@ User profile attributes are currently available in beta for Snowflake Data Shari
 
 ### `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
 
-This view provides a periodic snapshot of user profile default attributes. The data is delayed by up to 8 hours, making it useful for queries that do not require real-time updates.
+This view provides a periodic snapshot of user profile default attributes. The data is delayed by up to 8 hours, making it useful for queries that don't require real-time updates.
 
 #### Schema
 
@@ -48,13 +48,14 @@ This view provides a periodic snapshot of user profile default attributes. The d
 
 #### Usage notes
 
-* Provides a **snapshot** of user attributes with up to an **8-hour delay**.
-* Performs well for queries that do not require real-time accuracy.
-* **Faster query execution**, particularly when filtering on attributes other than USER_ID.
-* **Limitation**: Data is not up to date in real time.
+* Provides a snapshot of user attributes with up to an **8-hour delay**.
+* Performs well for queries that don't require real-time accuracy.
+* Faster query execution, particularly when filtering on attributes other than `USER_ID`.
+* **Limitation:** Data is not up to date in real time.
 
-### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
-This view provides near real-time updates on user profile attributes, with data delayed by up to **10 minutes** after an update occurs in Braze.
+### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED`
+
+This view provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
 
 #### Schema
 
@@ -80,16 +81,16 @@ This view provides near real-time updates on user profile attributes, with data 
 
 #### Usage notes
 
-* Provides **up-to-date user attributes** with minimal delay (~10 minutes).
-* Useful for **real-time analysis** and scenarios where recent data is required.
-* Performance considerations:
-    * Queries on individual users are **faster** (under a minute using a large warehouse).
-    * Queries without USER_ID filters require **aggregation across all users**, leading to significantly longer execution times.
-    * Queries on a **large dataset** (e.g., 100M+ users) may take **many minutes**.
+* Provides up-to-date user attributes with minimal delay (~10 minutes).
+* Useful for real-time analysis and scenarios where recent data is required.
+* **Performance considerations:**
+    * Queries on individual users are faster (under a minute using a large warehouse).
+    * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
+    * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
 ### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED`
 
-This view stores **historical change logs** of user attributes, capturing changes with an **8-hour granularity**.
+This view stores historical change logs of user attributes, capturing changes with an 8-hour granularity.
 
 #### Schema
 
@@ -117,9 +118,9 @@ This view stores **historical change logs** of user attributes, capturing change
 
 #### Usage notes
 
-* Provides **a record of historical changes** to user attributes.
-* Data is **snapshotted every 8 hours**, meaning multiple updates within this window are combined into a single record. Individual changes within this period are not separately retained.
-* `EFF_DT` and `END_DT` mark the **start and end** of a user’s attribute state.
+* Provides a record of historical changes to user attributes.
+* Data is snapshotted every eight hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
+* `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
 ## Best practices
 
@@ -134,8 +135,8 @@ This view stores **historical change logs** of user attributes, capturing change
 
 ### Performance considerations
 
-* Queries on `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` should return in **under 10 seconds** for large datasets (~1B users) on a large warehouse.
-* Queries on `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` for a single user return in **under a minute** but scale poorly without `USER_ID`filtering.
-* Queries on **100M+** users in `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` may take **several minutes** due to per-user aggregation.
+* Queries on `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` should return in under 10 seconds for large datasets (~1 billion users) on a large warehouse.
+* Queries on `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` for a single user return in under a minute but scale poorly without `USER_ID` filtering.
+* Queries on over 100 million users in `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` may take several minutes due to per-user aggregation.
 
 
