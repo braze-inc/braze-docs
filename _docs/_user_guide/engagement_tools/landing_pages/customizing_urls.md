@@ -30,7 +30,7 @@ Depending on your domain provider, the connection can take up to 48 hours. When 
 
 ## Removing your domain
 
-If you're a Braze administrator, you can remove a previously-configured domain by:
+If you're a Braze administrator, you can remove a previously-configured domain by completing the following steps:
 
 1. Go to **Settings** > **Landing Page Settings**.
 2. Select **Remove Custom Domain**
