@@ -35,7 +35,7 @@ If you're a Braze administrator, you can remove a previously-configured domain b
 1. Go to **Settings** > **Landing Page Settings**.
 2. Select **Remove Custom Domain**
 3. Confirm removal of the domain.
-4. Remove the DNS records listed from your domain settings.
+4. Remove the listed DNS records from your domain settings.
 
 {% alert important %}
 When you remove a custom domain, that URL will no longer be valid. Any landing pages that were using this domain will automatically revert back to the default domain set by Braze.
