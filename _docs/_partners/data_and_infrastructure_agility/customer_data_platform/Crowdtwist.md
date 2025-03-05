@@ -15,22 +15,22 @@ CrowdTwist’s Data Push feature allows for user or event metadata to be passed 
 
 This guide outlines how to integrate CrowdTwist’s User Profile, User Activity, and User Redemption Live Push feeds into your Braze environment. At the time of writing, there are two additional Data Push types available which are not explicitly covered in this documentation, but whose setup would follow the same principles as are laid out below. 
 
-##[Live Push User Profile][1]: Includes creations of new profiles and updates to existing profiles.
+* [Live Push User Profile][1]: Includes creations of new profiles and updates to existing profiles.
 
-##[Live Push User Activity][2]: Includes data on user activity completions.
+* [Live Push User Activity][2]: Includes data on user activity completions.
 
-##[Live Push User Redemption][3]: Includes data on user reward redemptions. 
+* [Live Push User Redemption][3]: Includes data on user reward redemptions. 
 
 By using a Braze Data Transformation template, we can filter out the elements of the Data Push that aren’t relevant to Braze, and assign the values that are needed in Braze in such a way so that they can be leveraged by the available “destinations”.
 
 For example, a Data Push can be used to pass relevant custom events and attributes to Braze, like when a user changes loyalty tier or redeems a reward. It can also be used to log custom attributes in Braze as soon as that data is updated on a member’s user profile, like a user’s points balance. 
 
-##Prerequisites
+## Prerequisites
 
 
 | Requirement | Description |
 | --- | --- |
-| CrowdTwist account | A [CrowdTwist Account[0]] is required to take advantage of this partnership. |
+| CrowdTwist account | A [CrowdTwist Account][0] is required to take advantage of this partnership. |
 | Braze Data Transformation Endpoint| This integration will rely on Braze’s [Data Transformation Tool][5]. When a Data Transformation is created, Braze will generate a unique endpoint which can be added as a destination for CrowdTwists Data Push|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -38,7 +38,7 @@ For example, a Data Push can be used to pass relevant custom events and attribut
 
 Braze and CrowdTwist have created [Data Transformation templates][6] to help our customers develop their own Data Transformations which leverage the User Profile, User Redemption, and User Activity events. 
 
-### Step 1: Create Data Transformation from Crowdtwist Template
+## Step 1: Create Data Transformation from Crowdtwist Template
 
 Navigate to Data Settings > Data Transformation > Create Transformations > Use a Template > Select 	“BRAZE <> CROWDTWIST” template of your choice. 
 
@@ -46,23 +46,23 @@ You will find four templates - one each for transforming User Profile, User Acti
 
 As can be seen from [CrowdTwist’s Data Push documentation][4], Data Push objects contain different meta-data so each requires their own transformation code to create appropriate Braze objects. The Master template illustrates how a single Data Transformation could be set up to accept each of the three types of object and will create an appropriate output with values from each object.
 
-###Step 2: Update and Test Template
+## Step 2: Update and Test Template
 
 Below you will see the annotated templates. The body of these templates is designed as if they were being applied to the /users/track destination.  Annotations are marked by the “//” line-start and green text, and can be deleted without affecting the operation of the transformation code. 
 
 The transformation is written in Javascript, which builds an object, called “brazecall”. This object is where we create the request body that will be sent to a Braze REST API endpoint. Guidance on the required structures of the requests to these destinations can be found through the links of the “destinations” section.    
 
 {% alert note %} 
-Notice that the “values” of each “key” start with `payload.`. The payload represents the data object that has been received from Crowdtwist. We use Javascript dot notation to choose what piece of data we want to populate the elements of our Braze object. Further information about the schema, or makeup of the objects coming from Crowdtwist can be found here[2]
+Notice that the “values” of each “key” start with `payload.`. The payload represents the data object that has been received from Crowdtwist. We use Javascript dot notation to choose what piece of data we want to populate the elements of our Braze object. Further information about the schema, or makeup of the objects coming from Crowdtwist can be found [here][2]
 
-For example, when we see "external_id": payload.thirdPartyId”, this means that the Braze external ID is going to be set by the “third_party_id” value stored in Crowdtwist.
+For example, when we see ` external_id: payload.thirdPartyId `, this means that the Braze external ID is going to be set by the `third_party_id` value stored in Crowdtwist.
 {% endalert %}
 
 {% alert important %}
- The objects sent from Crowdtwist can be used to create users in Braze. By including the “update_existing_only” key with the value “false”, if an attribute or event object includes an identifier which does not currently exist in Braze, a user profile will be created with the attributes included in the event or attribute object. If you would prefer that Crowdtwist only update profiles that already exist in Braze, set this attribute as “true” in each attribute or event object. 
+ The objects sent from Crowdtwist can be used to create users in Braze. By including the `update_existing_only` key with the value `false`, if an attribute or event object includes an identifier which does not currently exist in Braze, a user profile will be created with the attributes included in the event or attribute object. If you would prefer that Crowdtwist only update profiles that already exist in Braze, set this attribute as `true` in each attribute or event object. 
 {% endalert %}
 
-###Data Transformation Templates
+### Data Transformation Templates
 {% tabs %}
 {% tab User Profile Event Template%}
 ```javascript
@@ -237,11 +237,11 @@ return brazecall;
 {%endtab%}
 {% endtabs %}
 
-####Destinations
+### Destinations
 
 The templates in this guide have been created as if they are being delivered to the “Track Users” destination, but your template can be designed to send to any of the endpoints listed [here][7], with the support of the associated [Rest API documentation][8].
 
-####Testing
+### Testing
 
 Once you have modified the template to your liking, you must validate that it is operating correctly. Click “Validate” to return a preview of your code’s output and to check if it is an acceptable request for your chosen destination. 
 
