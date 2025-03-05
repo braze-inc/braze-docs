@@ -469,6 +469,17 @@ This feature is not currently supported on Roku.
 
 {% enddetails %}
 
+## Prioritizing Banner Cards
+
+If two Banner Card campaigns or Canvas steps share the same placement, the one with the highest priority will appear. 
+
+To sort your Banner Cards, select **Priority sorter** in the **Banner Cards in this placement** section. Drag and drop the Banner Cards in the table to set their order from highest to lowest priority.
+
+**High Priority:** These Banner Cards are shown before other messages.
+**Medium Priority:** These Banner Cards are shown from top to bottom.
+
+By default, the Banner Card priority is set to medium, with the most recently created Banner Cards having the highest relative property.
+
 ## Handling test sends
 
 Use test sends to verify Banner Card integrations before launching a campaign. Test Banner Cards are stored in a separate in-memory cache and do not persist across app restarts. While no extra setup is needed, the device must be able to receive foreground push notifications to display test Banner Cards.
