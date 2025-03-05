@@ -245,7 +245,7 @@ The templates in this guide have been created as if they are being delivered to 
 
 Once you have modified the template to your liking, you must validate that it is operating correctly. Click “Validate” to return a preview of your code’s output and to check if it is an acceptable request for your chosen destination. 
 
-![Screenshot of Braze Data transformation UI]({% image_buster /assets/img/DIRECTORY/IMAGE.png %}){: style="max-width:70%;margin-bottom:15px;border:none;"}
+![Screenshot of Braze Data transformation UI]({% image_buster /assets/img/crowdtwist_tools/assets/img/crowdtwist_tools/screenshot.png %}){: style="max-width:70%;margin-bottom:15px;border:none;"}
 
 Once you’re happy with the object you see in the “output” field, click “Activate” so that the Data Transformation endpoint will be ready to accept data. 
 
