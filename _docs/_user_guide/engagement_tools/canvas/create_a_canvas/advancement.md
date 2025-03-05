@@ -17,7 +17,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 > The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
-![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to advance the audience after delay.][1]
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
 
 Users must meet the step's criteria in order to be advanced through the step. With [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps, you can turn on delivery validations to check that your audience meets your delivery criteria at message send. This will count toward the step's criteria when using Canvas Flow. So, if a user doesn't meet the delivery validation criteria, they will exit from the Canvas.
 
