@@ -1,87 +1,38 @@
 {% multi_lang_include developer_guide/prerequisites/unity.md %}
 
-## Setting default user attributes
+## Default user attributes
 
-To set user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
+To set user attributes, you need to call the appropriate method on the `BrazeBinding` object. The following is a list of built-in attributes that can be called using this method.
 
-### First name
+| Attribute                 | Code Sample |
+|---------------------------|-------------|
+| First name                | `AppboyBinding.SetUserFirstName("first name");` |
+| Last name                 | `AppboyBinding.SetUserLastName("last name");` |
+| User email                | `AppboyBinding.SetUserEmail("email@email.com");` |
+| Gender                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
+| Birth date                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
+| User country              | `AppboyBinding.SetUserCountry("country name");` |
+| User home city            | `AppboyBinding.SetUserHomeCity("city name");` |
+| User email subscription   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
+| User push subscription    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
+| User phone number         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-```csharp
-AppboyBinding.SetUserFirstName("first name");
-```
+## Custom user attributes
 
-### Last name
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
 
-```csharp
-AppboyBinding.SetUserLastName("last name");
-```
-
-### User email
-
-```csharp
-AppboyBinding.SetUserEmail("email@email.com");
-```
-
-{% alert tip %}
-It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
-{% endalert %}
-
-### Gender
-
-```csharp
-AppboyBinding.SetUserGender(Appboy.Models.Gender);
-```
-
-### Birth date
-
-```csharp
-AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
-```
-
-### User country
-
-```csharp
-AppboyBinding.SetUserCountry("country name");
-```
-
-### User home city
-
-```csharp
-AppboyBinding.SetUserHomeCity("city name");
-```
-
-### User email subscription
-
-```csharp
-AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
-```
-
-### User push subscription
-
-```csharp
-AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
-```
-
-### User phone number
-```csharp
-AppboyBinding.SetUserPhoneNumber("phone number");
-```
-
-## Setting custom user attributes
-
-Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
-For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection) within this section.
-
-### Setting custom attribute values
+### Setting custom attributes
 
 {% tabs %}
-{% tab Boolean Value %}
+{% tab String %}
 
 ```csharp
-AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
+AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
 ```
 
 {% endtab %}
+
 {% tab Integer %}
 
 ```csharp
@@ -90,8 +41,8 @@ AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value'
 // Increment Integer Attribute
 AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
-
 {% endtab %}
+
 {% tab Double %}
 
 ```csharp
@@ -99,13 +50,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 ```
 
 {% endtab %}
-{% tab String %}
+
+{% tab Boolean %}
 
 ```csharp
-AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
+AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
-
 {% endtab %}
+
 {% tab Date %}
 
 ```csharp
@@ -121,6 +73,7 @@ Dates passed to Braze must either be in the [ISO 8601](http://en.wikipedia.org/w
 {% endalert %}
 
 {% endtab %}
+
 {% tab Array %}
 
 ```csharp
@@ -134,25 +87,35 @@ AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a custom attribute
+{% alert important %}
+Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
+{% endalert %}
 
-Custom attributes can also be unset using the following method:
+### Unsetting custom attributes
+
+To unset a custom user attribute, use the following method:
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 ```
 
-## Setting a custom attribute via the REST API
+### Using the REST API
 
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Custom attribute value limits
+## Setting user subscriptions
 
-Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
+To set up an email or push subscription for your users, call one of the following functions.
 
-## Setting up user subscriptions
+```csharp
+// Email notifications
+AppboyBinding.SetUserEmailNotificationSubscriptionType()
 
-To set up a subscription for your users (either email or push), call the functions `AppboyBinding.SetUserEmailNotificationSubscriptionType()` or `AppboyBinding.SetPushNotificationSubscriptionType()`, respectively. Both of these functions take the parameters `Appboy.Models.AppboyNotificationSubscriptionType` as arguments. This type has three different states:
+// Push notifications
+AppboyBinding.SetPushNotificationSubscriptionType()`
+```
+
+Both functions take `Appboy.Models.AppboyNotificationSubscriptionType` as arguments, which has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
@@ -175,15 +138,13 @@ No explicit opt-in is required by Windows to send users push notifications. When
 These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
 {% endalert %}
 
-## Example code
-
-### Email subscription:
+### Setting email subscriptions
 
 ```csharp
 AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
 ```
 
-### Push notification subscription:
+### Setting push notification subscriptions
 
 ```csharp
 AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);

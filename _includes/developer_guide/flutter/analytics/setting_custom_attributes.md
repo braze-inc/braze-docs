@@ -1,10 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## Setting custom attributes
-
-Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
-
-### Default user attributes
+## Default user attributes
 
 To set user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
 
@@ -24,21 +20,27 @@ The following attributes are supported:
 - Language
 - Email
 
+{% alert important %}
 All string values such as first name, last name, country, and home city are limited to 255 characters.
+{% endalert %}
 
-### Setting custom attribute values
+## Custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
+### Setting custom attributes
+
+In addition to the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
 
 {% tabs %}
-{% tab Boolean Value %}
+{% tab String %}
+To set a custom attribute with a `string` value:
 
 ```dart
-braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
+braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
 ```
 
 {% endtab %}
 {% tab Integer %}
+To set a custom attribute with an `integer` value:
 
 ```dart
 // Set Integer Attribute
@@ -49,25 +51,30 @@ braze.incrementCustomUserAttribute("key", integer);
 
 {% endtab %}
 {% tab Double %}
+To set a custom attribute with a `double` value:
+
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab String %}
+{% tab Boolean %}
+To set a custom attribute with a `boolean` value:
 
 ```dart
-braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
+braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
-
 {% endtab %}
+
 {% tab Date %}
+To set a custom attribute with a `date` value:
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
 {% tab Array %}
+To set a custom attribute with an `array` value:
 
 ```dart
 // Adding to an Array
@@ -77,6 +84,10 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 ```
 {% endtab %}
 {% endtabs %}
+
+{% alert important %}
+Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
+{% endalert %}
 
 ### Unsetting a custom attribute
 

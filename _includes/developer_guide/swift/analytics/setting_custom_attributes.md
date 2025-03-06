@@ -8,14 +8,14 @@ To set user attributes, you need to set the appropriate field on the shared `ABK
 {% tab swift %}
 
 ```swift
-AppDelegate.braze?.user.set(firstName: "first_name")
+AppDelegate.braze?.user.set(firstName: "Alex")
 ```
 
 {% endtab %}
 {% tab objective-c %}
 
 ```objc
-[AppDelegate.braze.user setFirstName:@"first_name"];
+[AppDelegate.braze.user setFirstName:@"Alex"];
 ```
 
 {% endtab %}
@@ -35,7 +35,7 @@ The following attributes should be set on the `Braze.User` object:
 
 ## Custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
 
 {% alert important %}
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated. For more information, refer to [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).
@@ -211,9 +211,9 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 ### Using the REST API
 
-You can also use our REST API to set user attributes. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Setting up user subscriptions
+## Setting user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `set(emailSubscriptionState:)` or `set(pushNotificationSubscriptionState:)`, respectively. Both of these functions take the enum type `Braze.User.SubscriptionState` as arguments. This type has three different states:
 

@@ -56,10 +56,10 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Setting custom attribute values
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
+In addition to the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
 
 {% tabs %}
-{% tab Boolean Value %}
+{% tab Boolean %}
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);

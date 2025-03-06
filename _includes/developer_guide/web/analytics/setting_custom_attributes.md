@@ -1,10 +1,26 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %}
 
-## Setting user attributes
+## Default user attributes
 
-To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
+To assign a default user attribute to a user, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
-### Default user attributes
+{% tabs local %}
+{% tab First name %}
+```javascript
+braze.getUser().setFirstName("SomeFirstName");
+```
+{% endtab %}
+{% tab Gender %}
+```javascript
+braze.getUser().setGender(braze.User.Genders.FEMALE);
+```
+{% endtab %}
+{% tab Date of birth %}
+```javascript
+braze.getUser().setDateOfBirth(2000, 12, 25);
+```
+{% endtab %}
+{% endtabs %}
 
 Braze provides predefined methods for setting the following user attributes within the [`User` class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html):
 
@@ -18,39 +34,12 @@ Braze provides predefined methods for setting the following user attributes with
 - Home City
 - Phone Number
 
-### Implementation examples
+## Custom user attributes
 
-#### Setting a first name
+In addition to the default user attribute methods, you can also set [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for your users. Full method specifications, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
-```javascript
-braze.getUser().setFirstName("SomeFirstName");
-```
-
-#### Setting a gender
-
-```javascript
-braze.getUser().setGender(braze.User.Genders.FEMALE);
-```
-
-#### Setting a date of birth
-
-```javascript
-braze.getUser().setDateOfBirth(2000, 12, 25);
-```
-
-## Setting custom user attributes
-
-In addition to our predefined user attribute methods, Braze also provides [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
-
-Full method specifications for custom attributes can be found here within the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
-
-### Custom attribute length
-
-Custom attribute keys and values can have up to 255 characters. Refer to the [full technical documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) for details about valid custom attribute values.
-
-### Implementation examples
-
-#### Setting a custom attribute with a string value
+{% tabs local %}
+{% tab String %}
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -59,7 +48,8 @@ braze.getUser().setCustomUserAttribute(
 );
 ```
 
-#### Setting a custom attribute with an integer value
+{% endtab %}
+{% tab Integer %}
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -74,7 +64,8 @@ braze.getUser().incrementCustomUserAttribute(
 );
 ```
 
-#### Setting a custom attribute with a date value
+{% endtab %}
+{% tab Date %}
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -95,11 +86,8 @@ braze.getUser().setCustomUserAttribute(
 );
 ```
 
-{% alert important %}
-Dates passed to Braze with this method must be JavaScript Date objects.
-{% endalert %}
-
-#### Setting a custom attribute with an array value
+{% endtab %}
+{% tab Array %}
 
 You can have up to 25 elements in custom attribute arrays. Individual arrays that are manually set (not automatically detected) for **Data Type** can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your Braze account manager.
 
@@ -115,6 +103,16 @@ braze.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new string
 braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value to be removed");
 ```
 
+{% alert important %}
+Dates passed to Braze with this method must be JavaScript Date objects.
+{% endalert %}
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+Custom attribute keys and values can only have a maximum of 255 characters. For more information about valid custom attribute values, refer to the [reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+{% endalert %}
+
 ### Unsetting a custom attribute
 
 Custom attributes can be unset by setting their value to `null`.
@@ -123,11 +121,11 @@ Custom attributes can be unset by setting their value to `null`.
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 ```
 
-### Setting a custom attribute via the REST API
+### Using the REST API
 
-You can also use our REST API to set user attributes. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Setting up user subscriptions
+## Setting user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both functions take the `enum` type `braze.User.NotificationSubscriptionTypes` as arguments. This type has three different states:
 
@@ -142,15 +140,13 @@ When a user is registered for push, the browser forces them to choose to allow o
 
 Visit [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
 
-### Example code
-
-#### Unsubscribing a user from email
+### Unsubscribing a user from email
 
 ```javascript
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-#### Unsubscribing a user from push
+### Unsubscribing a user from push
 
 ```java
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);

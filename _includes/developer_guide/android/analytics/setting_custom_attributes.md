@@ -1,26 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Setting user attributes
+## Default user attributes
 
-To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
-
-### Default user attributes
-
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Refer to our KDoc for [method specifications](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html):
-
-- First name
-- Last name
-- Country
-- Language
-- Date of birth
-- Email
-- Gender
-- Home city
-- Phone number
-
-All string values such as first name, last name, country, and home city are limited to 255 characters.
-
-#### Setting default attribute value
+To assign a default user attribute to a user, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
 {% tabs %}
 {% tab JAVA %}
@@ -46,10 +28,32 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-#### Setting custom attribute values
+Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). For method specifications, refer to [our KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- First name
+- Last name
+- Country
+- Language
+- Date of birth
+- Email
+- Gender
+- Home city
+- Phone number
+
+{% alert note %}
+All string values such as first name, last name, country, and home city are limited to 255 characters.
+{% endalert %}
+
+## Custom user attributes
+
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+
+### Setting custom attributes
 
 {% tabs local %}
 {% tab String %}
+To set a custom attribute with a `string` value:
+
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -74,7 +78,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Integer %}
+{% tab Integers %}
+To set a custom attribute with an `int` value:
+
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -104,33 +110,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Boolean %}
-{% subtabs global %}
-{% subtab JAVA %}
 
-```java
-Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
-  @Override
-  public void onSuccess(BrazeUser brazeUser) {
-    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
-  }
-});
-```
+To set a custom attribute with a `long` integer value:
 
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).getCurrentUser { brazeUser ->
-  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
-}
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Long %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -155,7 +137,34 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Float %}
+{% tab Floating-points %}
+To set a custom attribute with a `boolean` value:
+
+{% subtabs global %}
+{% subtab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
+  }
+});
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+To set a custom attribute with a `float` value:
+
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -179,8 +188,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Double %}
+
+To set a custom attribute with a `double` value:
+
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -205,6 +215,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
 {% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
@@ -282,7 +293,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-#### Unsetting a custom attribute
+### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -310,11 +321,11 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-#### Custom attribute via the REST API
+### Using the REST API
 
-You can also use our REST API to set user attributes. To do so, refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Setting up user subscriptions
+## Setting user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type `NotificationSubscriptionType` as arguments. This type has three different states:
 
