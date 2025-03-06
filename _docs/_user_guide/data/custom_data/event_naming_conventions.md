@@ -31,3 +31,12 @@ The most common naming structure is `group_noun_action`. Events should all be lo
 ### Properties
 
 Tag one event and then identify differences by using properties. This is helpful for events that are inherently the same but have minor differences, such as channels for a campaign. We can also easily see how users flow through events. Refer to the [event properties object]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) for an example and additional context.
+
+## Examples
+
+Let's say you're part of an eCommerce company and interested in tracking when customers have signed up for your app and when they have subscribed to your newsletter. Here are examples of effective event names:
+
+- `user_signup`
+- `newsletter_sunscribed`
+
+These two event names clearly indicate the event they're tracking. As you create more custom events, be sure to keep your naming conventions understandable. For example, avoid using event names such as `signup_event_1` as that lacks clarity and doesn't convey what the event is tracking, compared to `user_signup`.

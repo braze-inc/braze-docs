@@ -58,7 +58,7 @@ To add a string or URL before the links in your email message, do the following:
 2. Set the **Template Position** to **Before URL**. 
 3. Enter a string that will always get prepended to your URL. 
 
-A preview section is provided to give you an example of the insertion process.
+The **Template preview** is provided to give you an example of how the link template will be inserted before a URL.
 
 ![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
