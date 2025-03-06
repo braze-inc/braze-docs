@@ -469,20 +469,6 @@ This feature is not currently supported on Roku.
 
 {% enddetails %}
 
-## Prioritizing Banner Cards
-
-If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones.
-
-You can choose between the following Banner Card priorities:
-
-- Low priority (shown after other messages)
-- Medium priority
-- High priority (shown before other messages)
-
-By default, the Banner Card priority is set to medium, with the most recently created Banner Cards having the highest relative property.
-
-The high, medium, and low options are buckets, and as such multiple messages could have the same selected priority. To set priorities in these buckets, select **Set Exact Priority**, then drag and drop the campaigns to order them with the correct priority.
-
 ## Handling test sends
 
 Use test sends to verify Banner Card integrations before launching a campaign. Test Banner Cards are stored in a separate in-memory cache and do not persist across app restarts. While no extra setup is needed, the device must be able to receive foreground push notifications to display test Banner Cards.
