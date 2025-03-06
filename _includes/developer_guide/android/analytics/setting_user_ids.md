@@ -1,4 +1,3 @@
- 
 ## Setting user IDs
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
@@ -7,7 +6,7 @@
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
-### Assigning a user ID
+### Setting a user ID
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:
 

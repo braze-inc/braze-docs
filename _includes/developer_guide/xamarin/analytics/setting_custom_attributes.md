@@ -1,12 +1,12 @@
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Logging custom attributes
+## Setting user attributes
 
 Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
 
 ### Default user attributes
 
-To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK. For example, you can set the user's first name:
+To set user attributes automatically collected by Braze, you can use setter methods that come with the SDK. For example, you can set the user's first name:
 
 {% tabs %}
 {% tab Android %}

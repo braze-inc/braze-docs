@@ -6,7 +6,7 @@ Braze provides methods for assigning attributes to users. You'll be able to filt
 
 ### Default user attributes
 
-To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
+To set user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
 
 ```javascript
 Braze.setFirstName("Name");

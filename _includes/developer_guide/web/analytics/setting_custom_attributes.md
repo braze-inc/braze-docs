@@ -1,8 +1,10 @@
-## Referencing the current user
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
-In order to assign attributes to your users, you'll need to get a reference to the current user of your app. To get a reference, call the `braze.getUser()` method. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
+## Setting user attributes
 
-## Assigning predefined user attributes
+To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
+
+### Default user attributes
 
 Braze provides predefined methods for setting the following user attributes within the [`User` class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html):
 
@@ -36,7 +38,7 @@ braze.getUser().setGender(braze.User.Genders.FEMALE);
 braze.getUser().setDateOfBirth(2000, 12, 25);
 ```
 
-## Assigning custom user attributes
+## Setting custom user attributes
 
 In addition to our predefined user attribute methods, Braze also provides [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
@@ -95,7 +97,7 @@ braze.getUser().setCustomUserAttribute(
 
 {% alert important %}
 Dates passed to Braze with this method must be JavaScript Date objects.
-{% endalert }
+{% endalert %}
 
 #### Setting a custom attribute with an array value
 

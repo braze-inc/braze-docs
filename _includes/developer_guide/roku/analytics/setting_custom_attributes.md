@@ -1,4 +1,6 @@
-## Assigning default user attributes
+{% multi_lang_include developer_guide/prerequisites/roku.md %}
+
+## Setting default user attributes
 
 User attributes will be assigned to the currently active user. The following default fields may be set:
 
@@ -12,17 +14,18 @@ User attributes will be assigned to the currently active user. The following def
 - `HomeCity`
 - `PhoneNumber`
 
-**Implementation Example**<br>This is what setting a first name would look like in code:
+For example, you could set up a first name using the following approach:
 
 ```brightscript
-m.Braze.setFirstName("User's First Name")
+m.Braze.setFirstName("Alex")
 ```
 
-## Assigning custom user attributes
+## Setting custom user attributes
 
 Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types.
 
 ### Settings custom attribute values
+
 {% tabs %}
 {% tab Boolean %}
 ```brightscript
@@ -63,7 +66,7 @@ m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 {% endtab %}
 {% endtabs %}
 
-### Incrementing/decrementing custom attributes
+### Incrementing and decrementing custom attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
@@ -71,7 +74,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
-### Unsetting a custom attribute
+## Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 

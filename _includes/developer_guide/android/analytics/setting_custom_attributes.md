@@ -1,8 +1,10 @@
-## Assigning user attributes
+{% multi_lang_include developer_guide/prerequisites/android.md %}
+
+## Setting user attributes
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
-### Standard user attributes
+### Default user attributes
 
 Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Refer to our KDoc for [method specifications](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html):
 
@@ -18,7 +20,7 @@ Braze provides predefined methods for setting the following user attributes with
 
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 
-#### Setting standard attribute value
+#### Setting default attribute value
 
 {% tabs %}
 {% tab JAVA %}

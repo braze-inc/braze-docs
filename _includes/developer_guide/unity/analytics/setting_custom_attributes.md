@@ -1,6 +1,8 @@
-## Assigning default user attributes
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
 
-To assign user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
+## Setting default user attributes
+
+To set user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
 
 ### First name
 
@@ -65,7 +67,7 @@ AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscrip
 AppboyBinding.SetUserPhoneNumber("phone number");
 ```
 
-## Assigning custom user attributes
+## Setting custom user attributes
 
 Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection) within this section.
