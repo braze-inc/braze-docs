@@ -29,7 +29,7 @@ Because Banner Cards personalize each time a user starts a new session and can b
 
 ## Prerequisites
 
-Before you can create Banner Cards, you'll need to [create Banner Card placements](https://braze.com/docs/developer_guide/banner_cards/creating_placements) in your app.
+Before you can create Banner Cards, you'll need to [create Banner Card placements]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in your app.
 
 ## Creating a Banner Card
 
@@ -42,7 +42,7 @@ To create a new campaign in Braze:
 3. Name your campaign something clear and meaningful.
 4. Add teams and tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select a [placement](#prerequisite-determine-placement) to associate with your campaign. This is where the Banner Card will appear in your app or site.
-6. Add and name as many variants as you like for your campaign. You can choose different message types and layouts for each added variant. For more information on variants, refer to [Multivariate and A/B testing](https://braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/).
+6. Add and name as many variants as you like for your campaign. You can choose different message types and layouts for each added variant. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 ### Step 2: Compose a Banner Card
 
@@ -121,13 +121,13 @@ Placement IDs must be unique to a workspace, and should not be edited after laun
 
 ### Analytics
 
-The following table defines key Banner Card metrics. For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary](https://braze.com/docs/user_guide/data_and_analytics/report_metrics/).
+The following table defines key Banner Card metrics. For a full list of metrics, definitions, and calculations, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 | Metric | Definition |
 | --- | --- |
-| [Total Impressions](https://braze.com/docs/user_guide/data_and_analytics/report_metrics#total-impressions) | _Total Impressions_ is the number of times the message has been loaded and appears on a user’s screen, regardless of prior interaction (for example, if a user is shown a message twice, they will be counted twice). |
+| [Total Impressions]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics#total-impressions) | _Total Impressions_ is the number of times the message has been loaded and appears on a user’s screen, regardless of prior interaction (for example, if a user is shown a message twice, they will be counted twice). |
 | [Unique Impressions](https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#unique-impressions) | _Unique Impressions_ is the total number of users who received and viewed a given message in a day. Each user is only counted once. |
 | [Total Clicks](https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#total-clicks) | _Total Clicks_ is the total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times. |
-| [Unique Clicks](https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#unique-clicks) | _Unique Clicks_ is the distinct number of recipients who have clicked within a message at least once and is measured by [dispatch_id](https://braze.com/docs/help/help_articles/data/dispatch_id/). Each user is only counted once. |
+| [Unique Clicks](https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#unique-clicks) | _Unique Clicks_ is the distinct number of recipients who have clicked within a message at least once and is measured by [dispatch_id]({{site.baseurl}}/help/help_articles/data/dispatch_id/). Each user is only counted once. |
 | [Primary Conversions](https://www.braze.com/docs/user_guide/data_and_analytics/report_metrics#primary-conversions-a-or-primary-conversion-event) | _Primary Conversions (A) or Primary Conversion Event_ is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
