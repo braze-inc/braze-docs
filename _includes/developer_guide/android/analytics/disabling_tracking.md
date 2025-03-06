@@ -1,8 +1,11 @@
-# Disabling SDK Tracking
+## Disabling data tracking
 
-> This article shows how to disable data collection for your Android or FireOS application.
+To disable data-tracking activity on the Android SDK, use the method [`disableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-sdk.html). This will cause all network connections to be canceled, meaning the Braze SDK will no longer pass any data to Braze servers.
 
-In order to comply with data privacy regulations, data tracking activity on the Android SDK can be stopped entirely using the method [`disableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-sdk.html). This method will cause all network connections to be canceled, and the Braze SDK will not pass any data to Braze servers. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method in the future to resume data collection.
+## Wiping previously-stored data
 
-Additionally, you can use the method [`wipeData()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/wipe-data.html) to fully clear all client-side data stored on the device.
+You can use the method [`wipeData()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/wipe-data.html) to fully clear all client-side data stored on the device.
 
+## Resuming data tracking
+
+To resume data collection, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method. Keep in mind, this will not restore any previously wiped data.
