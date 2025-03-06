@@ -15,11 +15,14 @@ channel: push
 
 Experiencing delivery challenges with push notifications? There are a number of steps you can take to troubleshoot this issue by checking the:
 
-* [Push subscription status](#push-subscription-status)
-* [Segment](#segment)
-* [Push notification caps](#push-notification-caps)
-* [Rate limits](#rate-limits)
-* [Control group status](#control-group-status)
+- [Push subscription status](#push-subscription-status)
+- [Segment](#segment)
+- [Push notification caps](#push-notification-caps)
+- [Rate limits](#rate-limits)
+- [Control group status](#control-group-status)
+- [Valid push token](#valid-push-token)
+- [Push notification type](#push-notification-type)
+- [Current app](#current-app)
 
 #### Push subscription status
 
@@ -71,13 +74,11 @@ Check that you're using the correct type of push notification. For example, if y
 - [Apple Push Notification][10]
 - [Firebase Cloud Messaging][11]
 
-#### Logged into the relevant app
+#### Current app
 
 When testing push sends with internal users, make sure that the user who you want to receive the push notification is currently logged into the relevant app. This can lead to the user either not receiving a push or receiving a push you believe they aren't segmented for.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
-
-_Last updated on January 21, 2021_
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}
