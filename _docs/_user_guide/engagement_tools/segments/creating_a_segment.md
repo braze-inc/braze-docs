@@ -124,7 +124,7 @@ However, the segmentation stats or preview may not show this individual user bec
 
 Braze has testing filters to target specific users by user ID or email address.
 
-### Step 5: Save your segment
+## Step 5: Save your segment
 
 Select **Save**. Now you're ready to start sending messages to your users!
 
