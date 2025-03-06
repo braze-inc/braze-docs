@@ -40,6 +40,7 @@ In addition to the default user attribute methods, you can also set [custom attr
 
 {% tabs local %}
 {% tab String %}
+To set a custom attribute with a `string` value:
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -50,6 +51,7 @@ braze.getUser().setCustomUserAttribute(
 
 {% endtab %}
 {% tab Integer %}
+To set a custom attribute with a `integer` value:
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -66,6 +68,7 @@ braze.getUser().incrementCustomUserAttribute(
 
 {% endtab %}
 {% tab Date %}
+To set a custom attribute with a `date` value:
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -92,6 +95,8 @@ braze.getUser().setCustomUserAttribute(
 You can have up to 25 elements in custom attribute arrays. Individual arrays that are manually set (not automatically detected) for **Data Type** can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your Braze account manager.
 
 [Arrays]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+
+To set a custom attribute with an `array` value:
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
