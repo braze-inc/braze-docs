@@ -48,7 +48,7 @@ For steps on how to launch a Banner Card campaign, refer to [Creating a Banner C
 
 ## Prioritizing your Banner Cards
 
-You can view which campaigns have Banner Cards using a specific placement. If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones. For more details, refer to [Setting Banner Cards prioritization]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#setting-banner-card-prioritization).
+You can view which campaigns have Banner Cards using a specific placement. If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones. For more details, refer to [Setting Banner Cards prioritization]({{site.baseurl}}/developer_guide/banner_cards/creating_banner_cards/#prioritize-banner-cards).
 
 ## Next steps
 

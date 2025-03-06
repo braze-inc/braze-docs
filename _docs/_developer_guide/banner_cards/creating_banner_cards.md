@@ -27,7 +27,7 @@ Banner Cards are great for:
 
 Because Banner Cards personalize each time a user starts a new session and can be configured to never expire, they’re a helpful tool to add to your engagement strategy.
 
-## Prerequisites
+## Prerequisites {#prerequisite-determine-placement}
 
 Before you can create Banner Cards, you'll need to [create Banner Card placements]({{site.baseurl}}/developer_guide/banner_cards/creating_placements) in your app.
 
@@ -53,7 +53,7 @@ To edit the details of your message’s content:
 3. Drag and drop blocks into the row to build your message.
 4. Define the [style](#styles) of your message.
 
-#### Styles
+#### Styles {#styles}
 
 Select **Style** to adjust the settings to apply to all blocks in the message.
 
@@ -77,19 +77,7 @@ Select the start date and time for the Banner Card campaign.
 
 By default, Banner Cards last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.
 
-#### Choose users to target
-
-Next, target users by choosing segments or filters to narrow down your audience. You’ll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
-
-#### Choose conversion events
-
-Braze allows you to track how often users perform specific actions, and conversion events, after receiving a campaign. You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action.
-
-### Step 4: Test and deploy
-
-After building your campaign, test and review it to make sure your campaign works as expected. Then, you’re ready to launch your Banner Card campaign!
-
-## Setting Banner Card prioritization
+#### Prioritize Banner Cards {#prioritize-banner-cards}
 
 If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones.
 
@@ -106,6 +94,18 @@ The high, medium, and low options are buckets, and as such multiple messages cou
 1. Select **Priority sorter**.
 2. Drag and drop the campaigns to order them with the correct priority.
 3. Select **Apply sort**.
+
+#### Choose users to target
+
+Next, target users by choosing segments or filters to narrow down your audience. You’ll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+#### Choose conversion events
+
+Braze allows you to track how often users perform specific actions, and conversion events, after receiving a campaign. You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+
+### Step 4: Test and deploy
+
+After building your campaign, test and review it to make sure your campaign works as expected. Then, you’re ready to launch your Banner Card campaign!
 
 ## Things to know
 
