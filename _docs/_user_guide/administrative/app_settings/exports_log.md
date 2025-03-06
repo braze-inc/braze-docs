@@ -26,10 +26,6 @@ Share an export log by selecting the **Export ID** and then selecting **Share Lo
 
 ![A dropdown window with the link to share the page.][3]{: style="max-width:45%;"}
 
-{% alert note %}
-If you have feedback on exports log, feel free to share it with your customer success manager.
-{% endalert %} 
-
 [1]: {% image_buster /assets/img/export_logs.png %}
 [2]: {% image_buster /assets/img/export_logs_cancel.png %}
 [3]: {% image_buster /assets/img/export_logs_share.png %}
