@@ -45,7 +45,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 {% tabs local %}
 {% tab string %}
-To set a custom attribute with a string value:
+To set a custom attribute with a `string` value:
 
 {% subtabs %}
 {% subtab swift %}
@@ -63,7 +63,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endtab %}
 
 {% tab integer %}
-To set a custom attribute with an integer value:
+To set a custom attribute with an `integer` value:
 
 {% subtabs %}
 {% subtab swift %}
@@ -80,7 +80,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab double %}
+{% tab floating-points %}
 Braze treats `float` and `double` values the same within our database. To set a custom attribute with a double value:
 
 {% subtabs %}
@@ -99,7 +99,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab boolean %}
-To set a custom attribute with a boolean value:
+To set a custom attribute with a `boolean` value:
 
 {% subtabs %}
 {% subtab swift %}
@@ -117,7 +117,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endtab %}
 
 {% tab date %}
-To set a custom attribute with a date value:
+To set a custom attribute with a `date` value:
 
 {% subtabs %}
 {% subtab swift %}
@@ -137,7 +137,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% tab array %}
 The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager.
 
-To set a custom attribute with an array value:
+To set a custom attribute with an `array` value:
 
 {% subtabs %}
 {% subtab swift %}
@@ -169,7 +169,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 
 ### Incrementing or decrementing custom attributes
 
-This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer or long value:
+This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any `integer` or `long` value:
 
 {% tabs %}
 {% tab swift %}
@@ -267,4 +267,3 @@ AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.Subscr
 {% endtabs %}
 
 Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) for more details.
-
