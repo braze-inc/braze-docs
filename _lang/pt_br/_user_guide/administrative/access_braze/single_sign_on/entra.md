@@ -9,7 +9,7 @@ description: "Este artigo o orientará sobre como configurar os recursos de logo
 
 # Microsoft Entra SSO
 
-> [O Microsoft Entra SSO](https://learn.microsoft.com/en-us/entra/identity/saas-apps/braze-tutorial) é o serviço de gerenciamento de identidade e acesso baseado em nuvem da Microsoft, que ajuda seus colaboradores a fazer login e acessar recursos. Você pode usar o Entra SSO para controlar o acesso aos seus apps e aos recursos do seu app, com base nos seus requisitos de negócios.
+> O [Microsoft Entra SSO](https://learn.microsoft.com/en-us/entra/identity/saas-apps/braze-tutorial) é o serviço de gerenciamento de identidade e acesso baseado em nuvem da Microsoft, que ajuda seus colaboradores a fazer login e acessar recursos. Você pode usar o Entra SSO para controlar o acesso aos seus apps e aos recursos do seu app, com base nos seus requisitos de negócios.
 
 ## Solicitações
 
@@ -32,7 +32,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 ### Etapa 1: Adicionar Braze da galeria
 
 1. No centro de administração do Microsoft Entra, acesse **Identidade** > **Aplicativos** > **Aplicativos empresariais** e selecione **Novo aplicativo**.
-2. Pesquise **Braze** na caixa de pesquisa, selecione-o no painel de resultados e, em seguida, selecione **Add (Adicionar**).
+2. Pesquise **Braze** na caixa de pesquisa, selecione-o no painel de resultados e, em seguida, selecione **Add (Adicionar)**.
 
 ### Etapa 2: Configurar o Microsoft Entra SSO
 
@@ -91,7 +91,7 @@ Você pode gerenciar essas reivindicações e valores do usuário na seção **G
 
 ### Etapa 3: Configurar o SSO do Microsoft Entra no Braze {#step-3}
 
-Depois que você configurar o Braze no centro de administração do Microsoft Entra, o Microsoft Entra fornecerá um URL de direcionamento (URL de login) e um certificado **x.509** certificado que você inserirá em sua conta do Braze.
+Depois que você configurar o Braze no centro de administração do Microsoft Entra, o Microsoft Entra fornecerá um URL de direcionamento (URL de login) e um certificado **x.509** que você inserirá em sua conta do Braze.
 
 Depois que seu gerente de conta ativar o SAML SSO para sua conta, faça o seguinte:
 

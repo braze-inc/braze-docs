@@ -39,9 +39,9 @@ Si vous utilisez l'[ancienne version de la navigation]({{site.baseurl}}/navigati
 
 ### Étape 2 : Activer les fonctionnalités de notification push
 
-Dans Xcode, ajoutez la capacité Notifications push à l'aide du volet **Signature et capacités** pour la cible d’appli principale.
+Dans Xcode, accédez à la section **Signage et capacités de** la cible principale de l'app et ajoutez la capacité de notifications push.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![La section "Signing & Capabilities" dans un projet Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## Intégration automatique de la poussée
 

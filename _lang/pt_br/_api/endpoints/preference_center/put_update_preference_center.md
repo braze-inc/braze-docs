@@ -48,9 +48,20 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "unknown macro": {links-tags}
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of: "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values: "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Parâmetros de solicitação
@@ -61,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Opcional | String | O título da central de preferências e das páginas de confirmação. Se um título não for especificado, o título das páginas terá como padrão "Central de Preferências". |
 |`confirmation_page_html`| Obrigatória | String | O HTML da página de confirmação. |
 |`state` | Opcional | String | Escolha `active` ou `draft`.|
-|`options` | Opcional | Objeto | Atribuições: `meta-viewport-content`. Quando presente, uma meta tag `viewport` será adicionada à página com `content= <value of attribute>`. |
+|`options` | Opcional | Objeto | Atribuições: <br>`meta-viewport-content`: Quando presente, uma meta tag `viewport` será adicionada à página com `content= <value of attribute>`.<br><br> `link-tags`: Defina um favicon para a página. Quando definido, uma tag `<link>` com uma atribuição rel é adicionada à página.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação

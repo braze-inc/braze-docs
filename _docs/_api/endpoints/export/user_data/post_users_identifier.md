@@ -141,7 +141,7 @@ For an example of the data that is accessible through this endpoint see the foll
 
 ### Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
+User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
@@ -428,7 +428,7 @@ User export object (we will include the least data possible - if a field is miss
 {% endtabs %}
 
 {% alert tip %}
-For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

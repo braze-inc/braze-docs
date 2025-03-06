@@ -177,11 +177,7 @@ Actuellement, les liquides ne peuvent pas être utilisés dans les catalogues. S
 
 Comme pour le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), vous devez utiliser l'indicateur `:rerender` dans une étiquette Liquid pour rendre le contenu Liquid d'un article de catalogue. Notez que l'indicateur `:rerender` ne s'applique qu'à un seul niveau, ce qui signifie qu'il ne s'appliquera pas aux appels d'étiquettes Liquid imbriqués.
 
-{% alert important %}
-La création de modèles pour les produits de catalogue qui incluent des étiquettes Liquid est en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l'accès anticipé.
-{% endalert %}
-
-Si un article de catalogue contient des champs de profil d'utilisateur (dans une étiquette Liquid de personnalisation), ces valeurs doivent être définies dans Liquid plus tôt dans le message et avant la mise en page pour que le rendu de Liquid soit correct. Si le drapeau `:rerender` n'est pas fourni, le contenu brut du liquide sera rendu.
+Si un article de catalogue contient des champs de profil d'utilisateur (dans une étiquette Liquid de personnalisation), ces valeurs doivent être définies dans Liquid plus tôt dans le message et avant la mise en page pour que le rendu de Liquid soit correct. Si l’indicateur `:rerender` n'est pas fourni, le contenu brut Liquid sera restitué.
 
 Par exemple, si un catalogue nommé « Messages » possède un produit avec ce Liquid :
 

@@ -208,7 +208,7 @@ Consulte a [seção a seguir](#logging-analytics) para entender melhor como o fl
 
 A análise de dados de registro só pode ser feita em tempo real com a ajuda do servidor do cliente que chega ao nosso [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Para análise de registros, envie o valor `braze_id` no campo de pares de chave/valor (como visto na captura de tela a seguir) para identificar qual perfil de usuário deve ser atualizado.
 
-![Uma mensagem push com três conjuntos de pares de valores-chave. 1\. "Braze_id" definido como uma chamada Liquid para recuperar a ID do Braze. 2\. "cert_title" definido como "Braze Marketer Certification". 3\. Cert_description" set as "Certified Braze marketers drive...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![Uma mensagem push com três conjuntos de pares de valores-chave. 1\. "Braze_id" definido como uma chamada Liquid para recuperar a ID do Braze. 2\. "cert_title" definido como "Braze Marketer Certification". 3\. "Cert_description" definido como "Certified Braze marketers drive...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### Registro manual
 

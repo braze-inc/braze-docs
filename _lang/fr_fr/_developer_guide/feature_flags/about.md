@@ -95,7 +95,7 @@ Avec des indicateurs de fonctionnalité, nous pouvons laisser Braze alimenter le
 
 Pour configurer à distance cette fonctionnalité, nous allons créer un indicateur de fonctionnalité appelé `navigation_promo_link` et définissez les propriétés initiales suivantes :
 
-![Drapeau de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente générique.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
+![Indicateur de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente générique.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 Dans notre application, nous utiliserons les méthodes getter de Braze pour récupérer les propriétés de ce drapeau de fonctionnalité et créer les liens de navigation en fonction de ces valeurs :
 
@@ -123,7 +123,7 @@ return (<>
 
 Aujourd'hui, veille de Thanksgiving, il nous suffit de modifier ces valeurs de propriété dans le tableau de bord de Braze.
 
-![Drapeau de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente de Thanksgiving.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
+![Indicateur de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente de Thanksgiving.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 Ainsi, la prochaine fois que quelqu'un chargera l'application, il verra les nouvelles offres de Thanksgiving.
 
@@ -167,11 +167,11 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Nous mettrons en place notre test A/B dans le cadre d'une [expérience de drapeau de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+Nous mettrons en place notre test A/B dans le cadre d'une [expérience d’indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
 
 Désormais, 50 % des utilisateurs verront l'ancienne expérience, tandis que les 50 % restants verront la nouvelle expérience. Nous pouvons ensuite analyser les deux variantes pour déterminer quel flux de paiement a permis d'obtenir un taux de conversion plus élevé. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
-![Une expérience de drapeau de fonctionnalité divisant le trafic en deux groupes de 50 %.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![Une expérience d’indicateur de fonctionnalité divisant le trafic en deux groupes de 50 %.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
 Une fois que nous aurons déterminé le gagnant, nous pourrons arrêter cette campagne et augmenter le pourcentage de déploiement du drapeau de fonctionnalité à 100 % pour tous les utilisateurs pendant que notre équipe d'ingénieurs codera en dur cette fonctionnalité dans la prochaine version de l'application.
 

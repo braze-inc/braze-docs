@@ -81,6 +81,14 @@ description: "이 참조 문서에서는 인증 규칙, IP 허용 목록, PII, 2
 
 재설정을 통해 인증 앱 문제, 이메일 인증 미전송, SMS 중단 또는 사용자 오류로 인한 로그인 실패 등과 같은 일반적인 인증 문제를 해결할 수 있습니다.
 
+## 향상된 액세스
+
+향상된 액세스 권한은 Braze 대시보드의 민감한 작업에 대한 보안을 한층 더 강화합니다. 활성화된 경우, 사용자는 세그먼트를 내보내거나 API 키를 보기 전에 계정을 다시 인증해야 합니다. 상승된 액세스를 사용하려면 **설정** > **관리자 설정** > **보안 설정으로** 이동하여 이 기능을 켜세요. 
+
+사용자가 다시 인증할 수 없으면 중단한 지점으로 리디렉션되어 민감한 작업을 계속할 수 없습니다. 재인증에 성공하면 먼저 로그아웃하지 않는 한 다음 한 시간 동안은 다시 인증할 필요가 없습니다.
+
+![고급 액세스 토글.][5]
+
 ## 보안 이벤트 보고서 다운로드하기
 
 보안 이벤트 보고서는 계정 초대, 계정 삭제, 로그인 시도 실패 및 성공, 기타 활동 등의 보안 이벤트에 대한 CSV 보고서입니다. 내부 감사를 수행하는 데 사용할 수 있습니다.
@@ -147,7 +155,7 @@ description: "이 참조 문서에서는 인증 규칙, IP 허용 목록, PII, 2
 
 ### 푸시 자격증명
 - 업데이트_푸시_크레덴셜
-- 제거된_푸시_크레덴셜
+- 제거된_푸시_자격증명
 
 ### SDK 디버거
 - 시작된_SDK_디버거_세션
@@ -214,12 +222,12 @@ description: "이 참조 문서에서는 인증 규칙, IP 허용 목록, PII, 2
 
 작업 공간별로 환경설정을 사용자 지정하려면 기본 설정과 다른 설정으로 환경설정 그룹을 추가할 수 있습니다. 향후에 생성되는 워크스페이스를 포함하여 추가 환경설정 그룹에 추가되지 않은 모든 워크스페이스에는 기본 설정이 적용됩니다.  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![데이터 삭제 기본 설정 섹션에서 토글을 켜서 작업 공간별 데이터 삭제 기본 설정을 사용자 지정할 수 있습니다.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

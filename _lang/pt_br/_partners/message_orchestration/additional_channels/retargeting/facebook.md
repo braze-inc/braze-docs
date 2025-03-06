@@ -47,7 +47,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 {% endalert %}
 
 {: start="2"}
-2\.  <br><br>![Página de parceiros de tecnologia do Facebook na plataforma Braze.][6]{: style="max-width:70%;"}
+2\. No módulo Facebook Audience Export, selecione **Connect Facebook**. <br><br>![Página de parceiros de tecnologia do Facebook na plataforma Braze.][6]{: style="max-width:70%;"}
 
 {: start="3"}
 3\. Na janela de diálogo oAuth do Facebook, autorize o Braze a criar públicos personalizados em suas contas de anúncios do Facebook. <br><br>![A primeira caixa de diálogo do Facebook solicitando para "Conectar como X", em que X é seu nome de usuário do Facebook.][8]{: style="max-width:30%;"}  ![A segunda caixa de diálogo do Facebook solicitando permissão para gerenciar anúncios de suas contas de anúncios.][7]{: style="max-width:40%;"}
@@ -66,11 +66,11 @@ Para os clientes que já passaram pelo processo de revisão do app do Facebook p
 
 No Braze, a exportação do público do Facebook pode ser acessada por meio da página **Segmentos**. 
 
-1. 
-2.  <br><br>
+1. Na página **Segments (Segmentos)**, selecione o segmento que você deseja exportar.
+2. Selecione **Dados do usuário** e, em seguida, selecione **Exportar como público do Facebook**. <br><br>![A seção "Segment Details" (Detalhes do segmento) de um segmento com "User Data" (Dados de usuários) selecionado para exibir um menu suspenso de opções que inclui "Export as Facebook Audience" (Exportar como público do Facebook).][11]
 
 {: start="3"}
-3\. Se ainda não tiver ativado o Facebook na Braze, você verá uma indicação para acessar a página de parceiros de tecnologia do Facebook no dashboard.  <br><br> Há três campos de usuário possíveis que podem ser exportados:
+3\. Se ainda não tiver ativado o Facebook na Braze, você verá uma indicação para acessar a página de parceiros de tecnologia do Facebook no dashboard. Se já tiver ativado o Facebook por meio de **Technology Partners** > **Facebook**, poderá selecionar sua conta de anúncios do Facebook e os campos de usuário a serem exportados. <br><br> Há três campos de usuário possíveis que podem ser exportados:
 - IDFA do dispositivo
 - Número de telefone 
 - E-mail
@@ -80,7 +80,7 @@ Só é possível selecionar um campo de usuário em uma única exportação. Se 
 {% endalert %}
 
 {: start="4"}
-4\.  Assim como as exportações CSV, você receberá um e-mail quando o segmento terminar de ser exportado para o Facebook.
+4\. Depois de selecionar o campo do usuário, selecione **Export Segment (Exportar segmento)**. Assim como as exportações CSV, você receberá um e-mail quando o segmento terminar de ser exportado para o Facebook.
 5\. Visualize o público personalizado no [Gerenciador de Anúncios do Facebook][13].
 
 {% alert important %}
@@ -117,6 +117,6 @@ Depois de exportar com êxito um segmento como um público do Facebook, você po
 [9]: {% image_buster /assets/img/fb/afb_4.png %}
 [10]: {% image_buster /assets/img/fb/afb_5.png %}
 [11]: {% image_buster /assets/img/fb/afb_6.png %}
-Daqui a [13]: https://www.facebook.com/ads/manager/audiences/manage/
+[13]: https://www.facebook.com/ads/manager/audiences/manage/
 [15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
 [16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

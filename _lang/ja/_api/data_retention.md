@@ -58,9 +58,9 @@ Braze によって特定のサブプロセッサーに送信されたデータ�
 
 #### Braze データレイクデータリテンション
 
-Braze ダッシュボード内で顧客が利用できるデータは、ほとんどが集約されています。詳細なログは、Braze によって作成された別のデータベース("Data Lake") に保存されます。データレイクのデータは、集計レポートやその他の高度な機能に使用されます。Braze は、2 年後にData Lake に保存されたイベントデータから個人識別可能な情報を削除します(詳細については、[Snowflake Data Retention]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention#snowflake-data-retention/) ページを参照してください)。
+Braze ダッシュボード内で顧客が利用できるデータは、ほとんどが集約されています。詳細なログは、Braze によって作成された別のデータベース (「Data Lake」) に保存されます。データレイクのデータは、集計レポートやその他の高度な機能に使用されます。Braze は、2年後に Data Lake に保存されたイベントデータから個人を特定できる情報を削除します (詳細については、[Snowflake のデータ保持]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention#snowflake-data-retention/)に関するページを参照してください)。
 
-弊社のAPIを使用してユーザープロファイルを削除したり、ユーザープロファイルから属性を削除または修正したりする場合、そのデータがBrazeのData Lakeから削除されるまでに最大3週間かかることがあります。Data Lake 内のデータを削除しても、セグメンテーションまたはパーソナライゼーションには影響しませんが、データがすべての Braze システムから確実に削除されます。
+当社のAPIを使用してユーザープロファイルを削除した場合、またはユーザープロファイルの属性を削除もしくは修正した場合、そのデータがBrazeのデータレイクから削除されるまで最大3週間かかる場合がある。Data Lake 内のデータを削除しても、セグメンテーションまたはパーソナライゼーションには影響しませんが、データがすべての Braze システムから確実に削除されます。
 
 #### Brazeバックアップサーバー
 

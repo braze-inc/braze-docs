@@ -113,7 +113,7 @@ This is a message from Braze! This is going to go to anyone who didn't match the
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+!['이름' 속성이 널인 Braze 대시보드의 메시지 예시입니다.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

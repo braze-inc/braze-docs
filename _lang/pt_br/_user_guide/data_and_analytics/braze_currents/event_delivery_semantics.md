@@ -3,39 +3,36 @@ nav_title: Semântica de entrega de eventos
 article_title: Semântica de entrega de eventos
 page_order: 3
 page_type: reference
-description: "Este artigo de referência descreve como o Currents gerencia os dados de eventos de arquivo simples que enviamos aos parceiros do Data Warehouse Storage."
+description: "Este artigo de referência descreve e define como o Currents gerencia os dados de eventos de arquivo simples que enviamos aos parceiros do Data Warehouse Storage."
 tool: Currents
 
 ---
 
 # Semântica de entrega de eventos
 
-> Este artigo descreve como o Currents gerencia os dados de eventos de arquivo simples que enviamos aos parceiros do Data Warehouse Storage.
+> Esta página descreve e define como a Currents gerencia os dados de eventos de arquivo simples que enviamos aos parceiros do Data Warehouse Storage.
 
-O Currents for Data Storage é um fluxo contínuo de dados de nossa plataforma para um bucket de armazenamento em uma das [conexões de nossos parceiros de data warehouse]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
-
-O Currents grava arquivos Avro em seu bucket de armazenamento em limites regulares, permitindo que você processe e analise os dados do evento usando seu próprio conjunto de ferramentas de Business Intelligence.
+O Currents for Data Storage é um fluxo contínuo de dados de nossa plataforma para um bucket de armazenamento em uma das [conexões de nossos parceiros de data warehouse]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/). O Currents grava arquivos Avro em seu bucket de armazenamento em limites regulares, permitindo que você processe e analise os dados do evento usando seu próprio conjunto de ferramentas de Business Intelligence.
 
 {% alert important %}
 Note que esse conteúdo **se aplica apenas aos dados de eventos de arquivo simples que enviamos aos parceiros do Data Warehouse Storage (Google Cloud Storage, Amazon S3 e Microsoft Azure Blob Storage)**. <br><br>Para obter o conteúdo que se aplica a outros parceiros, consulte nossa lista de [parceiros disponíveis]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) e verifique suas respectivas páginas.
 {% endalert %}
 
-
 ## Entrega pelo menos uma vez
 
-Como um sistema de alto rendimento, o Currents garante a entrega de eventos "pelo menos uma vez", o que significa que eventos duplicados podem ocasionalmente ser gravados em seu bucket de armazenamento. Isso pode ocorrer quando os eventos são reprocessados de nossa fila por qualquer motivo.
+Como um sistema de alto rendimento, o Currents oferece uma entrega de eventos "pelo menos uma vez", o que significa que eventos duplicados podem ocasionalmente ser gravados em seu bucket de armazenamento. Isso pode ocorrer quando os eventos são reprocessados de nossa fila por qualquer motivo.
 
 Se os seus casos de uso exigirem uma entrega exatamente única, você poderá usar o campo identificador exclusivo que é enviado com cada evento (`id`) para desduplicar os eventos. Como o arquivo sai do nosso controle quando é gravado no seu bucket de armazenamento, não temos como garantir a deduplicação do nosso lado.
 
 ## Carimbos de data/hora
 
-Todos os registros de data e hora exportados pelo Currents são enviados no fuso horário UTC. Para alguns eventos em que está disponível, também é incluído um campo de fuso horário, que fornece o formato IANA do fuso local do usuário no momento do evento.
+Todos os registros de data e hora exportados pelo Currents são enviados no fuso horário UTC. Para alguns eventos em que está disponível, também é incluído um campo de fuso horário, que fornece o formato IANA (Internet Assigned Numbers Authority) do fuso local do usuário no momento do evento.
 
 ### Latência
 
 Os eventos enviados ao Braze por meio do SDK ou da API podem incluir um registro de data e hora do passado. O exemplo mais notável é quando os dados do SDK são enfileirados, por exemplo, quando não há conectividade móvel. Nesse caso, o registro de data e hora do evento refletirá quando o evento foi gerado. Isso significa que uma porcentagem de eventos parecerá ter alta latência.
 
-## Apache Avro
+## Formato Apache Avro
 
 As integrações de armazenamento de dados do Braze Currents geram dados no formato `.avro`. Escolhemos o [Apache Avro](https://avro.apache.org/) porque ele é um formato de dados flexível que suporta nativamente a evolução de esquemas e é compatível com uma ampla variedade de produtos de dados: 
 
@@ -50,7 +47,7 @@ O Currents criará um arquivo para cada tipo de evento usando o seguinte formato
 ```
 
 {% alert tip %}
-Não é possível ver o código por causa da barra de rolagem? Veja como corrigir isso [aqui]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
+Não é possível ver o código por causa da barra de rolagem? Saiba como corrigir isso [aqui]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
 {% endalert %}
 
 |Segmento de nome de arquivo |Definição|
@@ -68,7 +65,7 @@ Não é possível ver o código por causa da barra de rolagem? Veja como corrigi
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-As convenções de nomes de arquivos podem mudar no futuro. O Braze recomenda pesquisar todas as chaves em seu bucket que tenham o prefixo <seu-prefixo-do-bucket>.
+As convenções de nomenclatura de arquivos podem mudar no futuro. O Braze recomenda pesquisar todas as chaves em seu bucket que tenham o prefixo <seu-bucket-prefix>.
 {% endalert %}
 
 ### Limite de gravação Avro
@@ -85,7 +82,7 @@ De tempos em tempos, a Braze poderá fazer alterações no esquema Avro quando o
 
 #### Alterações ininterruptas
 
-Quando um campo é adicionado ao esquema Avro, consideramos isso uma alteração ininterrupta. Os campos adicionados serão sempre campos Avro "opcionais" (por exemplo, com um valor padrão de `null`), portanto, eles "corresponderão" a esquemas mais antigos de acordo com a [especificação de resolução de esquemas Avro](http://avro.apache.org/docs/current/spec.html#schema+resolution). Essas adições não devem afetar os processos de ETL existentes, pois o campo será simplesmente ignorado até que seja adicionado ao seu processo de ETL. 
+Quando um campo é adicionado ao esquema Avro, consideramos isso uma alteração ininterrupta. Os campos adicionados serão sempre campos Avro "opcionais" (por exemplo, com um valor padrão de `null`), portanto, eles "corresponderão" a esquemas mais antigos de acordo com a [especificação de resolução de esquemas Avro](http://avro.apache.org/docs/current/spec.html#schema+resolution). Essas adições não devem afetar os processos de extração, transformação e carga (ETL) existentes, pois o campo será simplesmente ignorado até que seja adicionado ao seu processo de ETL. 
 
 {% alert important %}
 Recomendamos que sua configuração de ETL seja explícita sobre os campos que processa para evitar a interrupção do fluxo quando novos campos forem adicionados.

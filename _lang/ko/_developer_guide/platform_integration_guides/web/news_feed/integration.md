@@ -13,9 +13,7 @@ channel: news feed
 
 > 이 문서에서는 Braze 웹 SDK에 대한 뉴스피드 설정 방법을 다룹니다.
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 뉴스피드는 사용자를 위한 완전히 맞춤화할 수 있는 인앱 콘텐츠 피드입니다. 우리의 타겟팅 및 세분화는 각 사용자의 관심사에 맞춘 콘텐츠 스트림을 생성할 수 있게 해줍니다. 사용자 생애주기에서 위치와 앱의 특성에 따라, 온보딩 콘텐츠 서버, 광고 센터, 교육 지원 센터 또는 일반 뉴스 센터일 수 있습니다.
 

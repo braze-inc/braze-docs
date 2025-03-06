@@ -50,7 +50,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 Você pode adicionar metadados sobre as compras transmitindo uma [matriz de propriedades de eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou transmitindo um `NSDictionary` preenchido com os valores `NSNumber`, `NSString` ou `NSDate`.
 
-Para obter mais detalhes, consulte a [documentação da classe iOSlogpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "w/ properties").
+Consulte a [documentação da classe iOS logpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "c/ documentação da classe propriedades") para obter mais detalhes.
 
 ### Adição de quantidade
 Você pode adicionar uma quantidade às suas compras se os clientes fizerem a mesma compra várias vezes em um único checkout. Você pode fazer isso passando um `NSUInteger` para a quantidade.
@@ -59,7 +59,7 @@ Você pode adicionar uma quantidade às suas compras se os clientes fizerem a me
 * Os métodos sem uma entrada de quantidade terão um valor de quantidade padrão de 1.
 * Os métodos com uma entrada de quantidade não têm valor padrão e **devem** receber uma entrada de quantidade para que o SDK registre uma compra.
 
-Consulte a [documentação da classe iOSlogpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "c/ documentação da classe quantidade") para obter mais detalhes.
+Consulte a [documentação da classe iOS logpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "c/ documentação da classe quantidade") para obter mais detalhes.
 
 {% tabs %}
 {% tab OBJECTIVE C %}

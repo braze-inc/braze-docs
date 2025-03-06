@@ -17,7 +17,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 
 Estas plantillas estarán disponibles en la **página Plantillas y medios.**  La respuesta de este punto final incluirá un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
 
-El estado de suscripción al correo electrónico de los usuarios puede actualizarse y recuperarse a través de Braze mediante una API RESTful. Puedes utilizar la API para configurar la sincronización bidireccional entre Braze y otros sistemas de correo electrónico o tu propia base de datos. Todas las solicitudes a la API se realizan a través de HTTPS.
+El estado de suscripción al correo electrónico de los usuarios puede actualizarse y recuperarse con Braze utilizando una API RESTful. Puedes utilizar la API para configurar la sincronización bidireccional entre Braze y otros sistemas de correo electrónico o tu propia base de datos. Todas las solicitudes a la API se realizan a través de HTTPS.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 

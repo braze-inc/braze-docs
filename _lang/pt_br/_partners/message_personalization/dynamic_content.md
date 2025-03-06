@@ -47,10 +47,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
-- name: Hino do futuro
+- name: Hino Futuro
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: VISTO
   url: /docs/partners/message_personalization/dynamic_content/seen
-- name: ""
+- name: Contentful
   url: /docs/partners/message_personalization/dynamic_content/contentful/
 ---

@@ -168,7 +168,7 @@ Siga estas etapas para testar uma mensagem no app de exemplo.
 
 ![Uma mensagem no app Braze mostrando que você pode adicionar seu próprio ID de usuário como um destinatário de teste para testar sua mensagem no app.]({% image_buster /assets/img/react-native/iam-test.png %} "Teste de Mensagens no App")
 
-Uma implementação de exemplo pode ser encontrada no BrazeProject, dentro do [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk). Amostras adicionais de implementação do Android e iOS podem ser encontradas no [Android](https://github.com/braze-inc/braze-android-sdk) e no [iOS](https://github.com/braze-inc/braze-swift-sdk) SDK.
+Uma implementação de exemplo pode ser encontrada no BrazeProject, dentro do [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk). Amostras adicionais de implementação do Android e iOS podem ser encontradas no SDK [Android](https://github.com/braze-inc/braze-android-sdk) e no SDK [iOS](https://github.com/braze-inc/braze-swift-sdk).
 
 ## modelo de dados de mensagem no app
 
@@ -196,7 +196,7 @@ O modelo de mensagem no app fornece a base para todas as mensagens no app.
 |`toString()`      | A mensagem como uma string de representação.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para uma referência completa do modelo de mensagem no app, consulte a [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) e a [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage) documentação.
+Para uma referência completa do modelo de mensagem no app, consulte a documentação para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) e para [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
 
 ### propriedades do modelo de botão de mensagem no app
 
@@ -212,7 +212,7 @@ Botões podem ser adicionados às mensagens no app para realizar ações e regis
 |`toString()`      | A representação do botão como uma string.                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para uma referência completa do modelo de botão, consulte a [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) e a [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button) documentação.
+Para uma referência completa do modelo de botão, consulte a documentação para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) e para [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button).
 
 ## Suporte a GIFs
 

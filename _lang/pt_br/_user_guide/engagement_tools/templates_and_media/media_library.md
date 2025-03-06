@@ -76,7 +76,7 @@ A biblioteca de mídia atua como o local centralizado do seu dashboard para ativ
 
 ## Gerar uma imagem usando IA {#generate-ai}
 
-Você pode gerar imagens para sua biblioteca de mídia usando [o DALL-E 3](https://openai.com/index/dall-e-3/), um sistema de IA da OpenAI, um provedor terceirizado do Braze. Este sistema pode criar imagens e arte realistas a partir de uma descrição em linguagem natural. Cada solicitação gera quatro variações do seu prompt, e sua empresa pode gerar imagens 10 vezes por dia. Este total se aplica a todos os usuários da sua empresa.
+Você pode gerar imagens para sua biblioteca de mídia usando o [DALL-E 3](https://openai.com/index/dall-e-3/), um sistema de IA da OpenAI, um provedor terceirizado do Braze. Este sistema pode criar imagens e arte realistas a partir de uma descrição em linguagem natural. Cada solicitação gera quatro variações do seu prompt, e sua empresa pode gerar imagens 10 vezes por dia. Este total se aplica a todos os usuários da sua empresa.
 
 1. Na biblioteca de mídia, selecione <i class="fas fa-wand-magic-sparkles"></i> **Gerador de Imagens de IA**.
 2. Digite uma descrição da imagem que você deseja gerar, com até 300 caracteres. Quanto mais detalhada a descrição, melhor será o seu resultado.

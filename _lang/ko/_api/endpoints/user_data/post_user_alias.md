@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "이 문서에서는 새 사용자 별칭 Braze 만들기 엔드포인트에 대해 자세히 설명합니다."
+description: "이 문서에서는 새 사용자 별칭 Braze 엔드포인트 만들기에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,13 +14,13 @@ description: "이 문서에서는 새 사용자 별칭 Braze 만들기 엔드포
 /users/alias/new
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 식별된 기존 사용자에 대한 새 사용자 별칭을 추가하거나 식별되지 않은 새 사용자를 만들 수 있습니다.
+> 이 엔드포인트를 사용하여 기존 식별된 사용자에 대한 새 사용자 별칭을 추가하거나 식별되지 않은 새 사용자를 만들 수 있습니다.
 
 요청당 최대 50개의 사용자 별칭을 지정할 수 있습니다.
 
-**기존 사용자에 대한 사용자 별칭을 추가하려면** 새 사용자 별칭 개체에 `external_id`를 포함해야 합니다. 객체에 `external_id`가 있지만 해당 `external_id`가 있는 사용자가 없는 경우 별칭은 사용자에게 추가되지 않습니다. `external_id`가 없는 경우 사용자는 계속 생성되지만 나중에 식별해야 합니다. "사용자 식별" 및 `users/identify` 엔드포인트를 사용하여 이 작업을 수행할 수 있습니다.
+**기존 사용자의 사용자 별칭을 추가하려면** 새 사용자 별칭 객체에 `external_id` 을 포함해야 합니다. 객체에 `external_id` 이 있지만 해당 `external_id` 을 가진 사용자가 없는 경우 별칭은 사용자에게 추가되지 않습니다. `external_id` 이 없으면 사용자는 계속 생성되지만 나중에 식별해야 합니다. '사용자 식별' 및 `users/identify` 엔드포인트를 사용하여 이 작업을 수행할 수 있습니다.
 
-**새 별칭 전용 사용자를 만들려면** 새 사용자 별칭 개체에서 `external_id`를 생략해야 합니다. 사용자가 생성된 후 `/users/track` 엔드포인트를 사용하여 별칭 전용 사용자를 속성, 이벤트 및 구매와 연결하고 `/users/identify` 엔드포인트를 사용하여 `external_id`가 있는 사용자를 식별합니다.
+**별칭 전용 사용자를 새로 만들려면** 새 사용자 별칭 객체에서 `external_id` 을 생략해야 합니다. 사용자가 생성된 후 `/users/track` 엔드포인트를 사용하여 별칭 전용 사용자를 속성, 이벤트 및 구매와 연결하고 `/users/identify` 엔드포인트를 사용하여 `external_id`가 있는 사용자를 식별합니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 

@@ -1,16 +1,16 @@
 ---
-nav_title: "POST: Envía correos electrónicos transaccionales mediante la entrega desencadenada por la API"
-article_title: "POST: Envía correos electrónicos transaccionales mediante la entrega desencadenada por la API"
+nav_title: "POST: Envía correos electrónicos transaccionales utilizando la entrega desencadenada por la API"
+article_title: "POST: Envía correos electrónicos transaccionales utilizando la entrega desencadenada por la API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Enviar mensajes de correo electrónico transaccionales mediante entrega desencadenada por API de Braze."
+description: "Este artículo describe en detalle el punto final Braze de Envío de mensajes de correo electrónico transaccional mediante entrega desencadenada por API."
 
 ---
 
 {% api %}
-# Envía correos electrónicos transaccionales a través de la entrega desencadenada por la API
+# Envía correos electrónicos transaccionales utilizando la entrega desencadenada por la API
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}

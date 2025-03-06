@@ -246,10 +246,10 @@ HTML 편집기 내에서 <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) 또는 <kbd>Co
 
    | 이전 | 이후 |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_4460049c-9ed2-4caf-9979-3b0efec98d99/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_d698124f-d633-4b5f-bc70-5364e79b4f4e/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_8b3f4593-1edf-422d-aae4-4ad7a8fccd7c/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_c7947a71-7864-437a-ac01-da8875567e60/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_6afdb8c8-eb60-4e0d-b05b-362589591544/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_eaf3596d-5203-4261-8446-1acdb2a0fc0b/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_30b43e01-5311-4934-9057-7772849a765e/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_fa0c5f11-7f4d-447a-968b-cd505b395e7f/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_1e476a1a-899f-4be8-9eef-3dfcd3dd70e7/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_88947021-6733-4bda-a7c3-97a9fff3d991/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates

@@ -51,8 +51,8 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 
 * `external_id` 또는 `email` 또는 `phone` 중 하나가 사용자당 필요합니다.
 
-- SMS 및 WhatsApp 구독 그룹의 경우 `external_id` 또는 `phone` 이 필요합니다.  둘 다 제출하면 `external_id`만 쿼리에 사용되며 해당 사용자에게 전화번호가 적용됩니다.
-- 이메일 구독 그룹의 경우 `external_id` 또는 `email` 이 필요합니다.  둘 다 제출하면 `external_id`만 쿼리에 사용되며 해당 사용자에게 이메일 주소가 적용됩니다.
+- SMS 및 WhatsApp 구독 그룹의 경우 `external_id` 또는 `phone` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 전화 번호가 적용됩니다.
+- 이메일 구독 그룹의 경우 `external_id` 또는 `email` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 이메일 주소가 적용됩니다.
 
 ## 요청 예시 
 
@@ -84,7 +84,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## 응답
 
-모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown`으로 반환됩니다.
+모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown` 로 반환됩니다.
 
 ```json
 Content-Type: application/json

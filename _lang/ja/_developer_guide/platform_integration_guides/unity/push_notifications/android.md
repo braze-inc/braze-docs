@@ -113,6 +113,6 @@ Braze はデフォルトで標準的なディープリンク (Web サイトのUR
 
 設定ガイダンスについては、[[アプリ内リソースへのディープリンク](https://developer.android.com/training/app-links/deep-linking)] を参照してください。
 
-## ブレーズプッシュ通知アイコンの追加
+## Braze プッシュ通知アイコンの追加
 
 プロジェクトにプッシュアイコンを追加するには、アイコンイメージファイルを含むAndroid アーカイブ(AAR) プラグインまたはAndroid ライブラリを作成します。手順と情報については、Unity のドキュメントを参照してください。[AndroidライブラリプロジェクトとAndroidアーカイブプラグイン](https://docs.unity3d.com/Manual/AndroidAARPlugins.html)。

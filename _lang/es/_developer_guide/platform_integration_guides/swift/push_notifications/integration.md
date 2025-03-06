@@ -39,9 +39,9 @@ Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes subir
 
 ### Paso 2: Habilitar las capacidades push
 
-En Xcode, añade la capacidad de Notificaciones push utilizando el panel de **Firmas y capacidades** al objetivo principal de la aplicación.
+En Xcode, ve a la sección **Firma y capacidades** del objetivo principal de la aplicación y añade la capacidad de notificaciones push.
 
-![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![La sección "Firma y capacidades" en un proyecto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## Integración push automática
 

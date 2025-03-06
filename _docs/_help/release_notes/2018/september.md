@@ -19,7 +19,7 @@ Campaigns now also use Quiet Time instead of "send this message during a specifi
 
 ## Adjust customers
 
-Braze Customers using [Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/) are now able to see their Braze API Key and Braze instance URL, which they will then use in the Adjust platform to integrate.
+Braze Customers using [Adjust]({{site.baseurl}}/partners/message_orchestration/attribution/adjust/) are now able to see their Braze API Key and Braze instance URL, which they will then use in the Adjust platform to integrate.
 
 ## Not in segment filter
 
@@ -27,7 +27,7 @@ Customers can now create a segment out of users who are [not included in a certa
 
 ## Canvas recipient CSV exports
 
-Customers can now [export data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) on the users that have entered a Canvas. The CSV generated will be similar to the campaign CSV.
+Customers can now [export data]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/) on the users that have entered a Canvas. The CSV generated will be similar to the campaign CSV.
 
 ## Provisionally authorized iOS 12 segment filter
 

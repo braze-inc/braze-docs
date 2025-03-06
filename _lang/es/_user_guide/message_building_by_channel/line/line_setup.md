@@ -57,9 +57,9 @@ Para configurar actualizaciones de usuario coherentes, traslada los ID de LINE d
 
 1. [Importar o actualizar usuarios conocidos existentes](#step-1-import-or-update-existing-line-users)
 2. [Integrar el canal LINE](#step-2-integrate-line-channel)
-3. [Solicitar sincronización del estado de la suscripción](#step-3-request-a-subscription-status-sync)
-4. [Actualizar los métodos de actualización del usuario](#step-4-change-your-user-update-methods)
-5. [(Opcional) Fusionar usuarios](#step-5-merge-profiles-optional)
+3. [Conciliar ID de usuario](#step-3-reconcile-user-ids)
+4. [Cambiar los métodos de actualización del usuario](#step-4-change-your-user-update-methods)
+5. [(Opcional) Fusionar perfiles de usuario](#step-5-merge-profiles-optional)
 
 ## Paso 1: Importar o actualizar usuarios existentes de LINE
 

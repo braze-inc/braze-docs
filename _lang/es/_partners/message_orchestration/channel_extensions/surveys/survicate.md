@@ -1,9 +1,8 @@
 ---
 nav_title: Survicate
 article_title: Survicate
-description: "Este artículo de referencia describe la asociación entre Braze y Survicate, un software de cuestionarios NPS y de opiniones de clientes que te ayuda a obtener un flujo constante de información sobre los usuarios en todas las fases del embudo."
+description: "Este artículo de referencia describe la asociación entre Braze y Survicate, una plataforma de opiniones de clientes que te ayuda a recopilar, analizar y actuar sobre la información de los clientes en múltiples canales y a lo largo del recorrido del usuario."
 alias: /partners/survicate/
-
 page_type: partner
 search_tag: Partner
 
@@ -13,49 +12,74 @@ search_tag: Partner
 
 ![Un ejemplo de lo que podría ser un cuestionario HTML incrustado (primera pregunta) en un correo electrónico Braze.][2]{: style="float:right;max-width:40%;border:0; margin-left:8px;"}
 
-> [Survicate][1] es un software de cuestionarios NPS y de opiniones de clientes que te ayuda a obtener un flujo constante de información sobre los usuarios en todas las fases del embudo. 
+> [Survicate][1] es una plataforma de opiniones de clientes que te ayuda a recopilar, analizar y actuar sobre la información de los clientes en múltiples canales y a lo largo del recorrido del usuario.  
 
-La integración de Braze y Survicate te permite incluir enlaces a cuestionarios en tus correos electrónicos o incrustar directamente fragmentos de cuestionarios para aumentar la tasa de respuesta. Una vez finalizadas los cuestionarios, vuelve a Survicate para identificar y analizar los atributos y las respuestas de los encuestados.
+Con la integración de Braze y Survicate, puedes incrustar cuestionarios directamente en tus correos electrónicos Braze para aumentar las tasas de respuesta. Las respuestas a los cuestionarios se sincronizan automáticamente con los perfiles de usuario Braze como atributos o eventos personalizados. La información en tiempo real facilita el seguimiento y el análisis de las opiniones junto con los datos de clientes y la creación de seguimientos específicos.
+
+## Casos prácticos
+
+Braze y Survicate trabajan juntos para cubrir una amplia gama de casos de uso, ayudándote a recopilar información accionable de los usuarios y a mejorar la experiencia del cliente:
+
+- Medir la satisfacción del cliente (como CSAT, NPS o CES)
+- Recoger opiniones sobre el producto
+- Realizar estudios de usuarios o de mercado
+- Recopila información en las fases críticas del recorrido del cliente
+- Desencadena flujos de trabajo personalizados y automatiza campañas de seguimiento basadas en las opiniones de los clientes.
+
+## Características principales de la integración
+
+La integración de Survicate y Braze ofrece sincronización de datos en tiempo real, por lo que la información más actualizada de los cuestionarios de Survicate está disponible inmediatamente en Braze. Basándote en las respuestas a los cuestionarios, puedes utilizar estos datos para emprender acciones oportunas y personalizadas.
+
+- **Envía las respuestas de los cuestionarios a Braze como atributos personalizados de usuario**: Enriquece los perfiles de usuario de Braze con datos procedentes de respuestas a cuestionarios.
+- **Desencadena eventos personalizados en Braze**: Utiliza eventos basados en respuestas a cuestionarios para dirigirte a grupos específicos o iniciar campañas de seguimiento.
+- **Construye segmentos detallados**: Crea segmentos Braze utilizando los datos de los cuestionarios Survicate para personalizar aún más tu alcance.
 
 ## Requisitos previos
 
 | Requisito | Descripción |
 | ----------- | ----------- |
-| Cuenta Survicate | Se necesita una cuenta Survicate para beneficiarse de esta asociación. |
-
-## Casos prácticos
-
-Survicate puede cubrir una amplia gama de casos prácticos para ayudar a descubrir información accionable para tomar decisiones más inteligentes y entregar una mejor experiencia del cliente:
-- Mide la satisfacción del cliente
-- NPS (puntuación neta del promotor)
-- Recoger opiniones sobre el producto
-- Realizar estudios de usuarios o de mercado
+| Cuenta Survicate | Necesitas una cuenta de Survicate para activar esta integración. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
 
-Con Survicate, puedes empezar a recoger opiniones en Braze en cuestión de minutos, sin necesidad de conocimientos técnicos para ponerlo en marcha.
-
 ### Paso 1: Crea tu cuestionario en Survicate
 
-Accede a tu cuenta de Survicate y haz clic en el botón **Crear nuevo cuestionario**. Selecciona el tipo de **cuestionario por correo electrónico o enlace compartible**, y empieza a diseñar tu cuestionario desde cero o elige entre más de 100 plantillas de cuestionarios listos para usar.
+1. En tu panel de Survicate, selecciona **Crear nuevo cuestionario**.
+2. Elige tu canal de encuesta: **correo electrónico, enlace, sitio web, encuestas en el producto y en la aplicación móvil**. 
+3. Diseña tu cuestionario desde cero, utiliza el creador de cuestionarios de IA o selecciona entre más de 100 plantillas listas para usar.
 
-### Paso 2: Conecta tu cuestionario a Braze
+![Cuatro opciones para crear un cuestionario: empezar desde cero, utilizar una plantilla, creación asistida por IA e importar preguntas.][4]
 
-Una vez que el cuestionario esté listo, ve a la pestaña **Configurar** del creador del cuestionario y selecciona **Braze** en la lista desplegable de herramientas, debajo del campo **Identificar a los encuestados con**. Ahora no tendrás que pedir a los encuestados sus datos de contacto.
+### Paso 2: Identifica automáticamente a los encuestados con los correos electrónicos Braze
 
-![][3]{: style="max-width:70%;" }
+1. Cuando tu cuestionario esté listo, ve a la pestaña **Configurar**.
+2. Para *Identificar a los encuestados con*, selecciona **Braze**. Esto vincula automáticamente las respuestas a tus perfiles de cliente Braze, por lo que no hay necesidad de pedir datos de contacto en tu cuestionario.
 
-### Paso 3: Comparte tu cuestionario
+![Se selecciona a Braze como encuestado.][5]
 
-Ve a la pestaña **Compartir**, y elige la opción preferida de colocación de un cuestionario. Puedes obtener un enlace directo (que luego puedes ocultar bajo un botón o hipervínculo en Braze) o incrustar la primera pregunta en el cuerpo del correo electrónico utilizando el código HTML.
+### Paso 3: Conecta la integración
 
-![][4]{: style="max-width:70%;" }
+1. A continuación, en la **pestaña Conectar**, busca Braze y selecciona **Conectar** para integrar. 
+2. Introduce la clave de API del espacio de trabajo de tu cuenta Braze y la URL de la instancia de Braze.
 
-### Paso 4: Añade el cuestionario a tu campaña de correo electrónico en Braze
+![Campos para introducir la clave de API del espacio de trabajo y la URL de la instancia de Braze.][3]
 
-En Braze, añade el enlace de tu cuestionario o el código HTML en el contenido de tu campaña de correo electrónico. ¡Empieza a hacer cuestionarios a tus clientes y analiza los resultados en Survicate!
+### Paso 4: Comparte tu cuestionario
 
-[1]: https://survicate.com/
+1. A continuación, en la pestaña **Compartir**, elige dónde quieres colocar tu cuestionario. Las opciones incluyen:
+- **Enlace directo**: Copia el enlace para utilizarlo en Braze como botón o hipervínculo.
+- **Embed primera pregunta**: Copia el código HTML para incrustar la primera pregunta del cuestionario directamente en el cuerpo de un correo electrónico Braze.
+- **Lanza un cuestionario en tu sitio web o dentro del producto**: Instala el código de seguimiento una vez, y configura los cuestionarios en vivo directamente desde el panel de Survicate.
+
+### Paso 5: Añade el cuestionario a tu campaña de correo electrónico Braze
+
+1. En Braze, pega el enlace de la encuesta o el código HTML en el contenido de tu campaña de correo electrónico.
+2. Empieza a recoger opiniones y haz un seguimiento de las respuestas directamente en Survicate.
+
+
+[1]: https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter
 [2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}
-[3]:  {% image_buster /assets/img/survicate/survicate_asset_2.png %}
+[3]:  {% image_buster /assets/img/survicate/image1.png %}
 [4]:  {% image_buster /assets/img/survicate/survicate_asset_3.png %}
+[5]:  {% image_buster /assets/img/survicate/survicate_asset_2.png %}

@@ -42,13 +42,13 @@ Braze Audience Sync to Pinterest は Audience Sync Pro 統合です。この統�
 
 ### ステップ1:Pinterest に接続する
 
-Braze ダッシュボードで、**Partner Integrations**> **Technology Partners**に移動し、**Pinterest**を選択します。Pinterest Audience Sync で、**Connect Pinterest** を選択します。
+Braze ダッシュボードで、**Partner Integrations**> **Technology Partners**に移動し、**Pinterest**を選択します。Pinterest オーディエンス同期で、[**Pinterest を接続**] を選択します。
 
 {% alert note %}
 [古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
 {% endalert %}
 
-![Braze のPinterest テクノロジページ。Overview セクションとPinterest Audience Sync セクションとConnected Pinterest ボタンが含まれます。][1]{: style="max-width:80%;"}
+![Braze の Pinterest テクノロジーページ。「概要」セクション、「Pinterest オーディエンス同期」セクション、「接続済みの Pinterest 」ボタンが表示されている。][1]{: style="max-width:80%;"}
 
 その後、広告アカウント管理とオーディエンス管理を Braze に許可する [Pinterest OAuth] ページにリダイレクトされます。
 

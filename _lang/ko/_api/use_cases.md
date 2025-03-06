@@ -8,15 +8,15 @@ page_order: 4.8
 
 # API 사용 사례
 
-> [Braze REST API]({{site.baseurl}}/api/basics/)는 고객 참여 전략을 관리하고 최적화하는 데 도움이 되도록 설계된 다양한 엔드포인트를 제공합니다. 이 문서에서는 카탈로그, 이메일 목록 및 주소, 내보내기, 메시지, 환경설정 센터, SMS, 구독 그룹, 템플릿 및 사용자 데이터 등 각 엔드포인트 컬렉션의 여러 사용 사례를 살펴봅니다.<br><br>각 섹션에서는 단계별 가이드, 코드 샘플 및 예상 결과와 함께 시나리오를 소개합니다. 이 글을 마치면 Braze REST API를 사용하여 고객 참여 노력을 강화하는 방법을 더 잘 이해할 수 있을 것입니다.
+> [Braze REST API]({{site.baseurl}}/api/basics/)는 고객 참여 전략을 관리하고 최적화하는 데 도움이 되도록 설계된 다양한 엔드포인트를 제공합니다. 이 문서에서는 카탈로그, 이메일 목록 및 주소, 내보내기, 메시지, 환경설정 센터, SMS, 수신 그룹, 템플릿 및 사용자 데이터 등 각 엔드포인트 컬렉션의 여러 사용 사례를 살펴봅니다.<br><br>각 섹션에서는 단계별 가이드, 코드 샘플 및 예상 결과와 함께 시나리오를 소개합니다. 이 글을 마치면 Braze REST API를 사용하여 고객 참여 노력을 강화하는 방법을 더 잘 이해할 수 있을 것입니다.
 
 ## 카탈로그에서 여러 항목 삭제하기
 
-주방용품 전문 리테일 브랜드인 Kitchenerie에서 새해를 맞이하여 신제품을 출시합니다. Braze 대시보드에서 Kitchenerie에는 "Dishware"라는 식기류 컬렉션에 대한 카탈로그가 설정되어 있습니다. 이번 새해에는 식기 컬렉션에서 다음 제품도 제외됩니다.
+주방용품 전문 리테일 브랜드인 키친어리에서 새해를 맞이하여 신제품을 출시합니다. Braze 대시보드에서 키친리에는 "식기류"라는 식기류 컬렉션에 대한 카탈로그가 설정되어 있습니다. 새해에는 식기 컬렉션에서 다음 제품도 제외됩니다.
 
 * 플레인 비스크
 * 진주 도자기
-* 핑크 시머
+* 핑크 쉬머
 
 이러한 제품을 카탈로그에서 제거하기 위해 Kitchener는 [`/catalogs/{catalog_name}/items` 엔드포인트를]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) 사용하여 품목 ID를 전달할 수 있습니다.
 
@@ -78,11 +78,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 모든 캔버스 감사
 
-Siege Valley Health는 수천 명의 환자를 진료하는 10개의 병원과 연구 센터를 운영하는 병원 시스템입니다. 마케팅 팀은 환자에게 독감 예방주사 예약을 상기시키기 위해 보낸 캔버스를 지난 3년간의 Braze 사용 기간과 비교하고자 합니다. Siege Valley Health의 마케팅 팀은 또한 캔버스 목록과 분석 요약을 모두 빠르고 효율적으로 볼 수 있는 방법을 원했습니다.
+시즈 밸리 헬스는 수천 명의 환자를 진료하는 10개의 병원과 연구 센터를 운영하는 병원 시스템입니다. 마케팅 팀은 환자에게 독감 예방주사 예약을 상기시키기 위해 보낸 캔버스를 지난 3년간의 Braze 사용 기간과 비교하고자 합니다. 시즈 밸리 헬스의 마케팅 팀은 또한 캔버스 목록과 분석 요약을 모두 빠르고 효율적으로 볼 수 있는 방법을 원했습니다.
 
-Siege Valley Health에서 Braze 대시보드를 통해 필터링하지 않고 엔드포인트 조합을 사용하여 이 두 가지 작업을 수행하는 방법을 자세히 알아봅시다.
+시즈 밸리 헬스에서 Braze 대시보드를 통해 필터링하지 않고 엔드포인트 조합을 사용하여 이 두 가지 작업을 수행하는 방법에 대해 자세히 알아보겠습니다.
 
-캔버스를 감사하는 첫 번째 작업의 경우 [`/canvas/list` 엔드포인트]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)를 사용하여 이름과 태그가 포함된 캔버스 목록을 내보냅니다. 다음은 요청 예시입니다:
+캔버스를 감사하는 첫 번째 작업의 경우 [`/canvas/list` 엔드포인트를]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) 사용하여 이름과 태그가 포함된 캔버스 목록을 내보냅니다. 다음은 요청 예시입니다:
 
 {% details 시즈 밸리 헬스 마케팅 팀이 받을 수 있는 반응은 다음과 같습니다. %}
 ```json
@@ -113,9 +113,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% enddetails %}
 
-Siege Valley Health의 캔버스 목록에서 첫 번째 캔버스에 대한 분석 요약을 보는 다음 작업으로 넘어가겠습니다. 이를 위해 다음 요청 매개변수와 함께 [`/canvas/data_summary` 엔드포인트]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/)를 사용합니다.
+시즈 밸리 헬스의 캔버스 목록에서 첫 번째 캔버스에 대한 분석 요약을 보는 다음 작업으로 넘어가겠습니다. 이를 위해 다음 요청 매개변수와 함께 [`/canvas/data_summary` 엔드포인트를]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) 사용합니다:
 
-* `canvas_id`: "canvas_identifier_2"
+* `canvas_id`: "캔버스_식별자_2"
 * `ending_at`: 2023-07-10T23:59:59
 * `starting_at`: 2020-07-10T23:59:59
 
@@ -175,7 +175,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 
 ## 유효하지 않은 전화번호 제거하기
 
-CashBlastr의 주요 목표는 사람들이 빠른 결제를 주고받을 수 있는 방법을 간소화하는 것입니다. 금융 서비스 회사인 CashBlastr는 고객의 전화번호 목록을 최신의 정확한 상태로 유지하고자 합니다. 개발자 팀은 마케팅 팀의 SMS 메시지가 적절한 CashBlastr 고객에게 전달될 수 있도록 '유효하지 않음'으로 표시된 다음 전화번호 목록을 제거해야 하는 임무를 받았습니다.
+CashBlastr의 주요 목표는 사람들이 빠른 결제를 주고받을 수 있는 방법을 간소화하는 것입니다. 금융 서비스 회사로서 CashBlastr는 고객의 전화번호 목록을 최신의 정확한 상태로 유지하고자 합니다. 개발자 팀은 마케팅 팀의 SMS 메시지가 적절한 CashBlastr 고객에게 전달될 수 있도록 '유효하지 않음'으로 표시된 다음 전화번호 목록을 제거해야 하는 임무를 받았습니다.
 
 - 12223135467
 - 12183095514
@@ -202,7 +202,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 사용자의 구독 그룹 상태 보기
 
-미국의 퀵서비스 레스토랑 체인인 SandwichEmperor의 마케팅 팀은 무작위로 선정된 사용자 목록에 대한 SMS 구독 그룹 상태를 확인하려고 합니다. [`/subscription/status/get` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)를 사용하여 SandwichEmperor는 다음 예제 요청을 통해 개별 사용자에 대해 이 작업을 수행할 수 있습니다.
+미국의 퀵서비스 레스토랑 체인인 SandwichEmperor의 마케팅 팀은 무작위로 선정된 사용자 목록에 대한 SMS 구독 그룹 상태를 확인하려고 합니다. [`/subscription/status/get` 엔드포인트를]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) 사용하면 샌드위치엠퍼러는 다음 예제 요청을 통해 개별 사용자에 대해 이 작업을 수행할 수 있습니다:
 
 {% raw %}
 ```

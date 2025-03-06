@@ -35,18 +35,26 @@ braze.initialize(apiKey, {
 
 ### connect-src {#connect-src}
 
-- `connect-src https://sdk.iad-01.braze.com`: SDK が Braze API と通信できるようにします。
-  - このURL を変更して、`baseUrl` 初期化オプションの[API SDKエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) に合わせます。
+|URL|インフォメーション|
+|---|-----------|
+|`connect-src https://sdk.iad-01.braze.com`|SDK が Braze API と通信できるようにします。このURL を、選択した`baseUrl` 初期化オプションの[API SDK エンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) に一致するように変更します。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### script-src {#script-src}
 
-- `script-src https://js.appboycdn.com`: CDN ホスト統合を使用する場合に必要です。
-- `script-src 'unsafe-eval'`: `appboyQueue` への参照を含む統合スニペットを使用する場合に必要です。
-  - このディレクティブの使用を避けるには、代わりにNPMを使用して統合します。
-- `script-src 'nonce-...'` または`script-src 'unsafe-inline'`:特定のアプリ内メッセージs (カスタムHTMLなど) に必要です。
+|URL|インフォメーション|
+|---|-----------|
+|`script-src https://js.appboycdn.com`|CDN ホスト統合を使用する場合に必要です。|
+|`script-src 'unsafe-eval'`|`appboyQueue` への参照を含む統合スニペットを使用する場合に必要です。このディレクティブの使用を避けるには、[代わりにNPM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=package%20manager)を使用してSDKを統合します。|
+|`script-src 'nonce-...'`<br>または<br>`script-src 'unsafe-inline'`|カスタムHTML など、特定のアプリ内メッセージに必要です。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### img-src {#img-src}
-- `img-src: appboy-images.com braze-images.com cdn.braze.eu`: Braze CDN ホスト画像を使用する場合に必要です。これらのホスト名は、ダッシュボードクラスターによって異なります。
+
+|URL|インフォメーション|
+|---|-----------|
+|`img-src: appboy-images.com braze-images.com cdn.braze.eu`|Braze CDN ホスト画像を使用する場合に必要です。ホスト名はダッシュボードクラスタによって異なる場合があります。<br><br>**重要:**カスタムフォントを使用している場合は、`font-src` も含める必要があります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Font Awesome {#font-awesome}
 
@@ -63,6 +71,6 @@ braze.initialize(apiKey, {
 
 Font Awesome を使用する場合は、次の CSP ディレクティブが必要です。
 
+- `font-src https://use.fontawesome.com`
 - `style-src https://use.fontawesome.com`
 - `style-src 'nonce-...'` または `style-src 'unsafe-inline'`
-- `font-src https://use.fontawesome.com`

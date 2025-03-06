@@ -84,7 +84,7 @@ Defina os detalhes do ticket, como tipo, assunto e status, na sua carga útil do
 
 Seu texto bruto será automaticamente destacado se for uma tag Braze aplicável.
 
-Prévia sua solicitação no painel de **Prévia** ou navegue até a guia **Testar**, onde você pode selecionar um usuário aleatório ou um usuário existente ou personalizar o seu próprio para testar seu webhook.
+Pré-visualize a solicitação no painel **Preview (Pré-visualização)** ou navegue até a guia **Test (Teste)**, onde é possível selecionar um usuário aleatório, um usuário existente ou personalizar o seu próprio usuário para testar o webhook.
 
 Por fim, verifique se o ticket foi criado no lado do Zendesk.
 
@@ -106,7 +106,7 @@ Se você tem um identificador comum entre a Braze e a Zendesk, é recomendável 
 - Selecione o método de autenticação do token portador para o webhook e forneça sua [chave de API da Braze](https://www.braze.com/docs/api/basics/#creating-and-managing-rest-api-keys).
   - Certifique-se de que a chave de API que você está usando tem as [permissões corretas](https://www.braze.com/docs/api/basics/#rest-api-key-permissions) para o endpoint Braze que seu webhook está usando.<br><br>
 5. (Recomendado) Teste o webhook para verificar se está funcionando corretamente.<br><br>
-6. Para disparar e automatizar webhooks, você deve conectar o webhook a um gatilho ou automação antes de finalizar a configuração. Consulte a  seguinte  para o nosso exemplo de criar um  para o webhook. Depois que o disparador é criado, você pode voltar a esta página e selecionar **Finalizar configuração**.
+6. Para disparar e automatizar webhooks, você deve conectar o webhook a um gatilho ou automação antes de finalizar a configuração. Consulte a seguinte para o nosso exemplo de criar um para o webhook. Depois que o disparador é criado, você pode voltar a esta página e selecionar **Finalizar configuração**.
 
 ### Etapa 2: Criar um disparar ou automação
 
@@ -126,9 +126,9 @@ Nosso exemplo abaixo usará um disparar para invocar o webhook quando o status d
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [2]: https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\
 [3]: {% image_buster /assets/img_archive/zendesk_step1.gif %}
-Daqui a [4]: https://developer.zendesk.com/rest_api/docs/support/introduction
+[4]: https://developer.zendesk.com/rest_api/docs/support/introduction
 [5]: {% image_buster /assets/img_archive/zendesk_step2.png %}
-Daqui a [6]: https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket
+[6]: https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket
 [7]: {% image_buster /assets/img_archive/zdfinal.gif %}
 
 [8]: {% image_buster /assets/img_archive/zendesk1.png %}

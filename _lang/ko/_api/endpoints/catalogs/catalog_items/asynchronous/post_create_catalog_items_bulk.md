@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 등 세 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
 ### 성공 응답의 예
 
@@ -156,7 +156,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `invalid-fields` | API 요청에서 전송하려는 모든 필드가 카탈로그에 이미 존재하는지 확인합니다. 이는 오류에 언급된 ID 필드와는 관련이 없습니다. |
 | `invalid-keys-in-value-object` | 항목 객체 키에는 `.` 또는 `$` 을 포함할 수 없습니다. |
 | `item-array-invalid` | `items` 는 객체의 배열이어야 합니다. |
-| `items-missing-ids` | 항목 ID가 없는 항목이 있습니다. 각 항목에 항목 ID가 있는지 확인합니다. |
+| `items-missing-ids` | 일부 품목에는 품목 ID가 없습니다. 각 항목에 항목 ID가 있는지 확인합니다. |
 | `items-too-large` | 항목 값은 5,000자를 초과할 수 없습니다. |
 | `request-includes-too-many-items` | 요청에 항목이 너무 많습니다. 요청당 아이템 한도는 50개입니다. |
 | `too-deep-nesting-in-value-object` | 아이템 객체는 50개 이상의 중첩 레벨을 가질 수 없습니다. |

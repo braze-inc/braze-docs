@@ -96,7 +96,7 @@ What levers do you have to pull and what are the desired effects? While there ar
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.

@@ -44,9 +44,9 @@ main() {
         COMMIT_TITLE=$(echo "$commit" | jq -r '.title')
         COMMIT_BODY=$(echo "$commit" | jq -r '.body')
 
-        # Print the deploy text for each deployment.
+        # Print the deploy text for each deployment using the sourced DEPLOY.
         echo "## $COMMIT_BODY"
-        ./scripts/create_deploy_text.sh "$PREV_COMMIT_DATE" "$COMMIT_DATE"
+        "$DEPLOY" "$PREV_COMMIT_DATE" "$COMMIT_DATE"
         echo ""
 
         # Get the next range of commits by increasing 'PREV_COMMIT_DATE'.

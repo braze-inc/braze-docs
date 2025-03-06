@@ -52,12 +52,12 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/). Otherwise, the IDFV will be used as a fallback identifier to map users.
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platforms/swift/archived_updates/ios_14/). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/).
+If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Adjust to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/).
 
 {% endtab %}
 {% endtabs %}
@@ -112,7 +112,7 @@ To get started with Adjust click tracking links, visit their [documentation](htt
 
 {% tabs local %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}

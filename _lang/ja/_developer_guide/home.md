@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze 開発者ガイド"
-guide_top_text: "開発者はここで、Brazeで利用可能なすべての統合を見つけることができる。<br>その他のリソースや Braze 開発者コミュニティへの参加については、<a href='https://www.braze.com/dev-portal'>Braze 開発者ポータル</a>にアクセスしてください。"
+guide_top_text: "開発者はここで、Brazeで利用可能なすべての統合を見つけることができる。Braze を使用している他の開発者とつながり、学習し、刺激を受けるには、<a href='https://www.braze.com/dev-portal'>Braze開発者コミュニティ</a>に参加してください。"
 article_title: Braze 開発者ガイド
 description: "このランディングページでは、開発者は Braze で利用可能なすべての統合を見つけることができます。"
 

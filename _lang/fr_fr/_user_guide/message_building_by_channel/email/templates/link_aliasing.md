@@ -153,7 +153,7 @@ Vous pouvez créer des messages par événement ciblant n’importe quel lien (s
 
 Dans Braze, si vous avez un alias de lien dans votre e-mail et qu'un utilisateur clique dessus, l'événement est enregistré dans le profil de l'utilisateur avec l'alias.
 
-Si vous utilisez le filtre de segmentation "Alias cliqué dans n'importe quelle campagne ou étape du canvas" et que vous décidez par la suite de renommer cet alias de lien, les données relatives au clic précédent dans le profil utilisateur **ne seront pas** mises à jour, ce qui signifie qu'il s'agira toujours de l'ancien alias de lien. Donc, si vous ciblez les utilisateurs en fonction du nouvel alias de lien, il n'inclura pas les données de l'ancien alias de lien.
+Si vous utilisez le filtre de segmentation "Alias cliqué dans n'importe quelle campagne ou étape du canvas" et que vous décidez par la suite de renommer cet alias de lien, les données relatives aux clics précédents dans le profil utilisateur **ne seront pas** mises à jour, ce qui signifie qu'il s'agira toujours de l'ancien alias de lien. Donc, si vous ciblez les utilisateurs en fonction du nouvel alias de lien, il n'inclura pas les données de l'ancien alias de lien.
 
 Si vous utilisez le filtre de segmentation "Alias cliqué dans la campagne" ou "Alias cliqué dans le canevas", vos utilisateurs seront filtrés selon qu'ils ont cliqué sur un alias spécifique dans une campagne ou un canevas spécifique. Si plusieurs utilisateurs partagent la même adresse e-mail et que l'on clique sur l'alias du lien, tous les autres utilisateurs qui partagent l'adresse e-mail verront leur profil utilisateur mis à jour. 
 
@@ -161,7 +161,7 @@ Les filtres de segmentation suivants s'appliquent aux événements de clics qui 
 
 #### Abandon du suivi des liens
 
-La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront sur les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes.
+La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront dans les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes.
 
 Par défaut et à des fins de segmentation, seuls 100 liens peuvent faire l’objet d’un suivi par espace de travail. Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
 

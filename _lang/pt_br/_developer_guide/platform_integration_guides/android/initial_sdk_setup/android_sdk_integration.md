@@ -42,15 +42,15 @@ dependencies {
 }
 ```
 
-O exemplo a seguir mostra onde colocar a linha de dependência em seu site `build.gradle`. Note que a versão usada no exemplo usa uma versão antiga. Visite [as versões do Braze Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) SDK para obter a versão mais atualizada do Braze Android SDK.
+O exemplo a seguir mostra onde colocar a linha de dependência em seu site `build.gradle`. Note que a versão usada no exemplo usa uma versão antiga. Visite as [versões do Braze Android](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) SDK para obter a versão mais atualizada do Braze Android SDK.
 
-![O Android Studio exibe a mensagem "build.gradle". Nesta captura de tela, o código de dependência é adicionado à parte inferior do arquivo.]({% image_buster /assets/img_archive/androidstudio2.png %})
+![O Android Studio está exibindo o arquivo "build.gradle", com o código de dependência adicionado à ponta do arquivo.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Realizar a sincronização do Gradle
 
 Certifique-se de executar uma sincronização do Gradle para criar seu projeto e incorporar as [adições de dependência](#add-braze-dependency).
 
-![O Android Studio exibe um banner e um botão na parte superior do aplicativo que diz: "Os arquivos do Gradle foram alterados desde a última sincronização do projeto. Pode ser necessária uma sincronização de projeto para que o IDE funcione corretamente. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Um banner no Android Studio informando: "Os arquivos do Gradle foram alterados desde a última sincronização do projeto. Pode ser necessária uma sincronização de projeto para que o IDE funcione corretamente. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## Etapa 2: Configure o SDK da Braze em braze.xml
 
@@ -86,7 +86,7 @@ Com o lançamento do Android M, o Android mudou de um modelo de permissões de t
 
 ### Integração do retorno de chamada do ciclo de vida da atividade
 
-As chamadas para `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)e `InAppMessageManager` são opcionalmente tratadas automaticamente.
+As chamadas para `openSession()`, `closeSession()`, [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html) e `InAppMessageManager` são opcionalmente tratadas automaticamente.
 
 #### Registrar retornos de chamada do ciclo de vida da atividade
 

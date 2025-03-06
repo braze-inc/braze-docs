@@ -89,13 +89,13 @@ Utilisez ce filtre pour trouver des utilisateurs qui font ou ne font pas partie 
 
 ### Dernier message reçu de la campagne donnée 
 
-Utilisez ce filtre pour trouver les utilisateurs qui ont reçu une campagne spécifique avant ou après une date ou un nombre de jours spécifié.
+Utilisez ce filtre pour trouver les utilisateurs qui ont reçu une campagne spécifique avant ou après une date ou un nombre de jours spécifié. Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres campagnes.
 
 ![][14]
 
 ### Dernier message reçu à partir d’une campagne ou d’un Canvas avec une balise 
 
-Utilisez ce filtre pour trouver les utilisateurs qui ont reçu une campagne spécifique ou un Canvas comportant une balise donnée avant ou après une date ou un nombre de jours spécifié.
+Utilisez ce filtre pour trouver les utilisateurs qui ont reçu une campagne spécifique ou un Canvas comportant une balise donnée avant ou après une date ou un nombre de jours spécifié. Ce filtre ne tient pas compte du fait que les utilisateurs ont reçu d'autres campagnes ou canevas.
 
 ![][17]
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 만들기에 대한 자세한 내용을 설명합니다."
+description: "이 기사는 Braze 엔드포인트에 대한 기본 설정 센터 만들기 세부정보를 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 만�
 /preference_center/v1
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 사용자가 이메일 캠페인에 대한 알림 기본 설정을 관리할 수 있는 기본 설정 센터를 만들 수 있습니다. API로 생성된 환경설정 센터를 구축하는 방법에 대한 단계는 [API를 통한 환경설정 센터 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api)를 참조하세요.
+> 이 엔드포인트를 사용하여 사용자가 이메일 캠페인에 대한 알림 기본 설정을 관리할 수 있는 기본 설정 센터를 만들 수 있습니다. [API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api)를 사용하여 API로 생성된 선호 센터를 구축하는 방법에 대한 단계에 참조하십시오.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -24,7 +24,7 @@ description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 만�
 
 ## 사용량 제한
 
-이 엔드포인트는 워크스페이스당 분당 10건의 요청으로 사용량 제한이 있습니다.
+이 엔드포인트는 작업 공간당 분당 10개의 요청으로 속도 제한이 있습니다.
 
 ## 요청 본문
 
@@ -41,9 +41,18 @@ Authorization: Bearer YOUR-REST-API-KEY
   "confirmation_page_html": "string",
   "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of the following "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values include "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## 요청 매개변수
@@ -55,11 +64,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| 필수 | 문자열 | 환경설정 센터 페이지의 HTML입니다. |
 |`confirmation_page_html`| 필수 | 문자열 | 확인 페이지의 HTML입니다. |
 |`state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
-|`options` | 선택 사항 | 객체 | 속성: `meta-viewport-content`. 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다. |
+|`options` | 선택 사항 | 객체 | 속성: <br>`meta-viewport-content`: 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다.<br><br> `link-tags`: 페이지에 파비콘을 설정하세요. 설정되면, `<link>` 태그에 rel 속성이 추가됩니다.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-환경설정 센터 이름은 생성한 후에는 편집할 수 없습니다.
+선호 센터 이름은 생성된 후에 편집할 수 없습니다.
 {% endalert %}
 
 ### 리퀴드 태그

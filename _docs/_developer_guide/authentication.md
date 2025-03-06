@@ -1,7 +1,7 @@
 ---
+page_order: 4.2
 nav_title: SDK Authentication
 article_title: SDK Authentication
-page_order: 12
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - iOS
@@ -208,7 +208,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab Objective-C %}
 
-Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
+Supply the JWT Token when calling [`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
 
 ```objc
 [AppDelegate.braze changeUser:@"userId" sdkAuthSignature:@"signature"];
@@ -222,7 +222,7 @@ Or, when you have refreshed the user's token mid-session:
 {% endtab %}
 {% tab Swift %}
 
-Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
+Supply the JWT Token when calling [`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "userId", sdkAuthSignature: "signature")

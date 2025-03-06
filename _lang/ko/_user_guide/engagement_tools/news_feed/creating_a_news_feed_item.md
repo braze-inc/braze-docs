@@ -12,9 +12,7 @@ hidden: true
 
 # 뉴스피드 항목 만들기
 
-{% alert note %}
-뉴스피드는 사용 중지될 예정입니다. Braze는 뉴스피드 도구를 사용하는 고객에게 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환할 것을 권장합니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > 뉴스피드 항목을 사용하면 웹 대시보드에서 앱에 영구 콘텐츠를 바로 삽입할 수 있습니다. 더 좋은 점은 뉴스피드도 다른 모든 메시지 유형과 마찬가지로 개별 세그먼트로 타겟팅할 수 있다는 점입니다. 즉, 피드에 표시되는 내용이 개인마다 완전히 다를 수 있습니다. 뉴스 피드의 가능성은 거의 무한합니다.
 

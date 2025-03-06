@@ -68,7 +68,7 @@ Você verá as seguintes estatísticas de segmento, que são atualizadas em temp
 
 ### Insights de segmento
 
-É possível ver a performance de um segmento em comparação com outro em um conjunto de KPIs pré-selecionados visitando a página [Segment Insights (Insights de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/) ) do seu dashboard.
+É possível ver a performance de um segmento em comparação com outro em um conjunto de KPIs pré-selecionados visitando a página [Segment Insights (Insights de segmento)]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/) do seu dashboard.
 
 ### envio de mensagens uso
 A seção **Envio de Mensagens Use** mostra quais segmentos, campanhas atualmente habilitadas e canvases atualmente habilitados estão direcionando seu segmento.

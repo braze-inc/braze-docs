@@ -20,9 +20,9 @@ page_order: 1
 
 ## Implementing the Web SDK on your Shopify website {#implement-web-sdk}
 
-The [Braze Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. You can also unlock native messaging channels like in-browser messages.
+The [Braze Web SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. You can also unlock native messaging channels like in-browser messages.
 
-Although the Shopify integration offers a robust set of default features, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
+Although the Shopify integration offers a robust set of default features, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
 
 Before you begin onboarding the integration, please review the following with your team on which path you want to take to implement the Web SDK.
 
@@ -184,7 +184,7 @@ During the installation process, Braze will check if instances of the Web SDK ar
 
 #### How to enable
 
-To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
+To manually implement the Web SDK, view [Initial SDK setup]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/). To implement the Web SDK via Google Tag Manager, view [Google Tag Manager for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager#google-tag-manager). 
 
 With either implementation path, make sure that your Web SDK integration includes the following or the Shopify integration will not be supported: 
 - Web SDK version of v4.0+
@@ -293,7 +293,7 @@ The Braze Shopify ScriptTag integration is incompatible with headless Shopify si
 
 #### How to enable
 
-To directly integrate the Web SDK to your headless Shopify site, refer to [Inital SDK Setup for Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
+To directly integrate the Web SDK to your headless Shopify site, refer to [Inital SDK Setup for Web]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/).
 
 Make sure that your Web SDK integration includes the following: 
 - Web SDK version should be v4.0+
@@ -301,7 +301,7 @@ Make sure that your Web SDK integration includes the following:
 
 #### Setting up Shopify forms for user reconciliation
 
-Ecommerce brands likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
+eCommerce brands likely have experiences on their Shopify site to capture identifiable information from customers ahead of checkout, like email capture forms.
 
 The Web SDK tracks Shopify onsite behavior and anonymous users with the `device_id`. To confirm that email addresses are added to the anonymous user profile, add the following to either a newsletter or email capture form: 
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) 
@@ -330,7 +330,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 
 1. Randomly assign a unique [user alias]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) for your site visitor upon a new session.
 
-2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events) or [capture user attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email into a Shopify form, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
+2. As users perform actions on your site, log them as [custom events]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/) or [capture user attributes]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/). When the user proceeds to checkout and inputs their email into a Shopify form, a Shopify customer ID is created. Braze will process Shopify webhooks and create a new user profile if the email, phone, or Shopify alias doesn’t match an existing user.
 
 {% raw %}
 ```javascript

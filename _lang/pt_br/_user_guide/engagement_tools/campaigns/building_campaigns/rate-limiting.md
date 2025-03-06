@@ -46,7 +46,7 @@ Anexar esse filtro a todos os segmentos direcionados por campanhas faria com que
 
 #### Definição de um limite máximo de usuários
 
-Na etapa **Target Users (Usuários-alvo** ) da composição da campanha, também é possível limitar o número total de usuários que receberão a mensagem. Isso serve como uma verificação independente dos filtros da campanha, permitindo que você segmente livremente os usuários sem se preocupar com o excesso de spam.
+Na etapa **Target Users (Usuários-alvo)** da composição da campanha, também é possível limitar o número total de usuários que receberão a mensagem. Isso serve como uma verificação independente dos filtros da campanha, permitindo que você segmente livremente os usuários sem se preocupar com o excesso de spam.
 
 ![Resumo do público com uma caixa de seleção marcada para limitar o número de pessoas que recebem a campanha.][2]
 

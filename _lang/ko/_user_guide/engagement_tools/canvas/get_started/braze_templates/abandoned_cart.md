@@ -18,7 +18,7 @@ tool: Canvas
 이 템플릿을 성공적으로 사용하려면 다음이 필요합니다:
 
 - 이 캔버스에서 구매하면 사용자가 캔버스에서 나가게 되므로 별도의 구매 후 사용자 여정 캔버스가 필요합니다.
-- 구성된 [Braze 오]({{site.baseurl}}/partners/canvas_steps) 디언스는 사용하는 파트너 및 오디언스와 [동기화됩니다]({{site.baseurl}}/partners/canvas_steps).
+- 구성된 [Braze 오디언스]({{site.baseurl}}/partners/canvas_steps)는 사용하는 파트너 및 오디언스와 동기화됩니다.
 
 ## 필요에 맞게 템플릿 조정하기
 
@@ -55,7 +55,7 @@ tool: Canvas
 
 ### 3단계: 참가 일정 설정
 
-이 템플릿의 입력 일정은 **API 트리거로** 설정되어 있지만, 이 사용 사례에서는 장바구니를 포기한 사용자(액션)에 집중하고자 하므로 이 캔버스에 액션 기반 항목을 사용하면 더 많은 이점을 얻을 수 있습니다.
+이 템플릿의 입력 일정은 **API 트리거로** 설정되어 있지만, 이 사용 사례에서는 장바구니를 포기한 사용자(액션)에 집중하고자 하므로 이 캔버스에 액션 기반 항목을 추가하는 것이 더 유용합니다.
 
 1. 입력 일정 유형으로 **작업 기반을** 선택합니다.
 2. **버려진 카트를** 트리거로 선택합니다.
@@ -109,7 +109,7 @@ tool: Canvas
 캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 캔버스 **시작을** 선택하여 캔버스를 실행합니다. 이제 개인화된 사용자 여정을 통해 신중하게 사용자를 타겟팅하여 장바구니에 추가한 제품을 결제하도록 유도할 수 있습니다!
 
 {% alert tip %}
-캔버스를 시작하기 전과 후에 고려해야 할 사항은 출시 전후 [체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
+캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}

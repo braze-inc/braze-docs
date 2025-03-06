@@ -30,14 +30,14 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento**).
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {:start="2"}
 2\. Selecione **Webhook** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
 3\. Dê à sua campanha um nome claro e significativo.
 4\. (Opcional) Adicione uma descrição para descrever como essa campanha será usada.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
+4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher modelos diferentes de webhook para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -62,7 +62,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 
 ## Etapa 2: Crie seu webhook
 
-Você pode optar por criar um webhook do zero, usar um modelo existente ou usar um de nossos modelos existentes. Em seguida, crie seu webhook na guia **Compose (Criar** ) do editor.
+Você pode optar por criar um webhook do zero, usar um modelo existente ou usar um de nossos modelos existentes. Em seguida, crie seu webhook na guia **Compose (Criar)** do editor.
 
 A guia **Criador** consiste nos seguintes campos:
 
@@ -75,7 +75,7 @@ A guia **Criador** consiste nos seguintes campos:
 
 #### Idioma {#internationalization}
 
-[A internacionalização][16] é compatível com o URL e o corpo da solicitação. Para internacionalizar sua mensagem, selecione **Adicionar idiomas** e preencha os campos obrigatórios. 
+A [internacionalização][16] é compatível com o URL e o corpo da solicitação. Para internacionalizar sua mensagem, selecione **Adicionar idiomas** e preencha os campos obrigatórios. 
 
 Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para ver a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
@@ -111,7 +111,7 @@ Os pares de valores-chave JSON permitem que você escreva facilmente uma solicit
 
 A opção de texto bruto lhe dá a flexibilidade de escrever uma solicitação para um ponto de extremidade que espera um corpo de qualquer formato. Por exemplo, você pode usar isso para escrever uma solicitação para um ponto de extremidade que espera que sua solicitação esteja no formato XML. 
 
-Tanto [a personalização][15] quanto [a internacionalização][16] usando Liquid são suportadas em texto bruto.
+Tanto a [personalização][15] quanto a [internacionalização][16] usando Liquid são suportadas em texto bruto.
 
 ![Um exemplo de um corpo de solicitação com texto bruto usando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 

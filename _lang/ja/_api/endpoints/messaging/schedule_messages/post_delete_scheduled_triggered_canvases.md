@@ -10,7 +10,7 @@ description: "この記事では、「スケジュールされた API トリガ�
 ---
 {% api %}
 # スケジュールされた API トリガーキャンバスを削除
-{% apimethod post core_endpoint|{1} %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
@@ -44,11 +44,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| 必須 | 文字列 | [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `canvas_id`| 必須 | string | [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `schedule_id` | 必須 | 文字列 | 削除する`schedule_id`（スケジュールの作成に対する応答から取得）。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 例のリクエスト

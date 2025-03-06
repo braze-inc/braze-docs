@@ -10,7 +10,7 @@ description: "Este artigo contém notas de versão de agosto de 2017."
 
 ## Atualização para botões de ação por push
 
-Adicionamos suporte a [botões de ação por push][70] aos nossos pontos de extremidade de envio de mensagens da API REST.
+Adicionamos suporte a [botões de ação por push][70] aos nossos endpoints de envio de mensagens da API REST.
 
 ## Atualização do modelo Liquid
 
@@ -25,7 +25,7 @@ Agora você pode [personalizar uma mensagem][69] com base em:
 
 ## Canvas disparado por API
 
-Agora é possível disparar um [Canva][68] por meio de pontos de extremidade da API (enviar, programar, atualizar, excluir) que correspondem aos existentes para campanhas, o que permite automatizar e otimizar ainda mais o seu marketing.
+Agora é possível disparar um [Canva][68] por meio de endpoints da API (enviar, programar, atualizar, excluir) que correspondem aos existentes para campanhas, o que permite automatizar e otimizar ainda mais o seu marketing.
 
 ## Botões de ação por push na Web
 
@@ -33,7 +33,7 @@ Adicionamos suporte para botões de ação por push no SDK da Web para o Chrome,
 
 ## Novos pontos de extremidade da API
 
-Expusemos novos endpoints da API, /email/hard_bounces, que permite extrair hard bounces por endereço de e-mail ou em um determinado intervalo de datas, e /messages/scheduled_broadcasts, que permite extrair o próximo horário de início de início de campanhas agendadas e entrada agendada em canvas. Esses novos pontos de extremidade permitem a personalização e a otimização adicionais de suas campanhas. Saiba mais sobre nossos [pontos de extremidade de API][65].
+Expusemos novos endpoints da API, /email/hard_bounces, que permite extrair hard bounces por endereço de e-mail ou em um determinado intervalo de datas, e /messages/scheduled_broadcasts, que permite extrair o próximo horário de início de início de campanhas agendadas e entrada agendada em canvas. Esses novos pontos de extremidade permitem a personalização e a otimização adicionais de suas campanhas. Saiba mais sobre nossos [API endpoints][65].
 
 ## Geofences
 
@@ -57,11 +57,11 @@ Os canvas agora têm Intelligent Selection, permitindo que você teste seus canv
 
 ## Atualização dos nomes de exibição de e-mail
 
-Adicionamos suporte a caracteres UTF-8 especiais em nomes de exibição de e-mail, para que você possa criar e-mails ainda mais personalizados para seus clientes. Saiba mais sobre [as práticas recomendadas de e-mail][67].
+Adicionamos suporte a caracteres UTF-8 especiais em nomes de exibição de e-mail, para que você possa criar e-mails ainda mais personalizados para seus clientes. Saiba mais sobre as [práticas recomendadas de e-mail][67].
 
 ## Agregação de CSV de relatórios de engajamento
 
-Agora, é possível receber dados consolidados de cada campanha e de cada Canvas em dois arquivos separados, independentemente do número de campanhas ou Canvas selecionados, permitindo que você tenha todos os dados de que precisa, quando precisar. Saiba mais sobre [os relatórios de engajamento][59].
+Agora, é possível receber dados consolidados de cada campanha e de cada Canvas em dois arquivos separados, independentemente do número de campanhas ou Canvas selecionados, permitindo que você tenha todos os dados de que precisa, quando precisar. Saiba mais sobre os [relatórios de engajamento][59].
 
 > Conforme observado em nossas [notas de versão de setembro de 2017]({{site.baseurl}}/help/release_notes/2017/september/), agora é possível agregar dados de um período específico, bem como agendar exportações para serem executadas de forma recorrente.
 

@@ -14,9 +14,7 @@ noindex: true
 
 # Definição de uma categoria do Feed de notícias
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Para saber mais, consulte o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 As instâncias do Braze News Feed podem ser configuradas para receber apenas cartões de uma determinada categoria. Isso permite a integração eficaz de vários fluxos do Feed de notícias em um único aplicativo. Para saber mais sobre esse recurso, visite nossas [práticas recomendadas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) do Feed de notícias.
 

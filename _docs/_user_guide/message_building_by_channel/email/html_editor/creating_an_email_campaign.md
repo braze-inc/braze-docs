@@ -38,8 +38,8 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can fin
 {:start=“2"}
 2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -61,7 +61,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Choose the appropriate tile for the editing experience you'd prefer. 
 
-![Choosing between drag-and-drop editor or HTML editor for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
 
 Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
 
@@ -71,7 +71,11 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. 
+After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
+
+![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
 {% alert tip %}
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
@@ -84,10 +88,12 @@ Braze will automatically remove HTML event handlers referenced as attributes. Th
 {% endalert %}
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
 
 ### Step 3a: Add your sending information
 
@@ -271,6 +277,7 @@ The final section will give you a summary of the campaign you've just designed. 
 
 To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

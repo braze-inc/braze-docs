@@ -274,5 +274,5 @@ Braze SWIFT SDKを使用してvisionOSと統合します。iOSで利用可能な
 
 **Web SDK**
 - [アプリ内メッセージ カスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
-- [コンテンツカードのカスタマイズ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
+- [コンテンツカードのカスタマイズ](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
 

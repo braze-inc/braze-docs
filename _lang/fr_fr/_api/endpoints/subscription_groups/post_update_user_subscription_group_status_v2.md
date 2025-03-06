@@ -63,7 +63,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 \* Notez que vous ne pouvez pas inclure à la fois les paramètres `emails` et `phones`. De plus, `emails`, `phones` et `external_ids` peuvent tous être envoyés individuellement.
 
 {% alert tip %}
-Lorsque vous créez de nouveaux utilisateurs via l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet des attributs de l'utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement en un seul appel d'API.
+Lorsque vous créez de nouveaux utilisateurs à l'aide de l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet des attributs de l'utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement en un seul appel d'API.
 {% endalert %}
 
 ## Paramètres de demande

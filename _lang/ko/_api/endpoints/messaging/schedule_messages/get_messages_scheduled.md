@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "이 문서에서는 예정된 캠페인 목록과 캔버스 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 예정된 캠페인 목록과 캔버스 브레이즈 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -33,7 +33,7 @@ description: "이 문서에서는 예정된 캠페인 목록과 캔버스 Braze 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | 필수 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 형식의 문자열 | 예정된 캠페인 및 캔버스를 검색할 범위의 종료일입니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

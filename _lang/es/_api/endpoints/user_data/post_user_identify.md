@@ -15,17 +15,18 @@ description: "En este artículo se describen los detalles del punto final Identi
 /users/identify
 {% endapimethod %}
 
-> Utiliza este punto final para identificar a un usuario no identificado (sólo alias). 
+> Utiliza este punto final para identificar a un usuario no identificado (sólo alias o sólo correo electrónico) utilizando el ID externo proporcionado.
 
-{% alert important %}
-A partir del 7 de agosto de 2023, este punto final fusionará los datos de todas las llamadas. Esto significa que [`merge_behavior`](#merge) se establecerá en `merge` para todas las llamadas.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-La llamada a `/users/identify` combina el perfil de sólo alias con el perfil identificado y elimina el perfil de sólo alias.
+## Cómo funciona
 
-Para identificar a un usuario es necesario incluir un `external_id` en el objeto `aliases_to_identify`. Si no hay ningún usuario con ese `external_id`, el `external_id` se añadirá al registro del usuario aliaseado, y éste se considerará identificado. Puedes añadir hasta 50 alias de usuario por solicitud.
+La llamada a `/users/identify` combina un perfil de usuario que está identificado por un alias (perfil de sólo alias) o una dirección de correo electrónico (perfil de sólo correo electrónico) con un perfil de usuario que tiene un `external_id` (perfil identificado), y luego elimina el perfil de sólo alias. 
 
-Posteriormente, puedes asociar varios alias de usuario adicionales a un único `external_id`. 
+Para identificar a un usuario es necesario incluir un `external_id` en el objeto `aliases_to_identify` o `emails_to_identify`. Si no hay ningún usuario con ese `external_id`, el `external_id` se añadirá al registro del usuario aliaseado, y éste se considerará identificado.
+
+Toma nota de lo siguiente:
+
 - Cuando estas asociaciones posteriores se realizan con el campo `merge_behavior` configurado como `none`, sólo se conservan los tokens de notificaciones push y el historial de mensajes asociados al alias de usuario; cualquier atributo, evento o compra quedará "huérfano" y no estará disponible para el usuario identificado. Una solución consiste en exportar los datos del usuario alias antes de la identificación mediante el [punto final`/users/export/ids` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), y luego volver a asociar los atributos, eventos y compras con el usuario identificado.
 - Cuando se realizan asociaciones con el campo `merge_behavior` configurado como `merge`, este punto final fusionará [campos específicos](#merge) encontrados en el usuario anónimo con el usuario identificado.
 
@@ -33,14 +34,13 @@ Posteriormente, puedes asociar varios alias de usuario adicionales a un único `
 Para evitar la pérdida inesperada de datos al identificar a los usuarios, te recomendamos encarecidamente que primero consultes [las mejores prácticas de recopilación de datos]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) para saber cómo capturar datos de usuario cuando ya existe información de usuario sólo con alias.
 {% endalert %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
-
 ## Requisitos previos
 
 Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/api_key/) con el permiso `users.identify`.
 
-## Límite de velocidad 
-Se aplica un límite de velocidad a las solicitudes realizadas a este punto final para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021. Para más información, consulta [Límites de la API]({{site.baseurl}}/api/basics/#api-limits).
+## Límite de velocidad
+
+{% multi_lang_include rate_limits.md endpoint='usuarios identificadores' %}
 
 ## Cuerpo de la solicitud
 
@@ -51,22 +51,28 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-   "aliases_to_identify" : (required, array of alias to identify objects), 
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "email_addresses": (optional, array of string) User emails for the users to identify,
    "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
 }
 ```
 
 ### Parámetros de la solicitud
 
+Puedes añadir hasta 50 alias de usuario por solicitud. Puedes asociar varios alias de usuario adicionales a un único `external_id`.
+
 | Parámetro             | Obligatoria | Tipo de datos                           | Descripción                                                                                                                                                                 |
-| --------------------- | -------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify` | Obligatoria | Conjunto de alias para identificar objetos | Ver [alias para identificar objeto]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) y [alias de usuario objeto]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `merge_behavior`      | Opcional | Cadena                              | Se espera una de `merge` o .                                                                                                                                       |
+| `emails_to_identify`  | Obligatoria | Conjunto de alias para identificar objetos | Ver [Identificador de usuarios por correo electrónico](#identifying-users-by-email).                                                                                                              |
+| `merge_behavior`      | Opcional | Cadena                              | Se espera una de `none` o `merge`.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 #### Campo Comportamiento_fusión {#merge}
 
-Si se define el campo `merge_behavior` como `merge`, el punto final fusionará cualquiera de los siguientes campos que se encuentren **exclusivamente** en el usuario anónimo con el usuario identificado. 
+Si configuras el campo `merge_behavior` como `merge`, el punto final fusionará la siguiente lista de campos que se encuentran **exclusivamente** en el usuario anónimo con el usuario identificado. Si configuras el campo como `none`, no se fusionará ningún dato de usuario con el perfil de usuario identificado.
+
+{% details Lista de campos que se fusionan %}
 - Nombre
 - Apellido
 - Correo electrónico
@@ -96,16 +102,14 @@ Si se define el campo `merge_behavior` como `merge`, el punto final fusionará c
 - Resúmenes de campaña (Braze elegirá los campos de fecha más recientes)
 - Resúmenes del flujo de trabajo (Braze elegirá los campos de fecha más recientes)
 - Historial de interacción de mensajes y mensajería
-
-Cualquiera de los siguientes campos del usuario anónimo al usuario identificado:
 - Evento personalizado y recuento de eventos de compra y marcas de tiempo de primera fecha y última fecha 
   - Estos campos fusionados actualizarán los filtros "para X eventos en Y días". Para los eventos de compra, estos filtros incluyen "número de compras en Y días" y "dinero gastado en los últimos Y días".
-
-Los datos de la sesión solo se fusionarán si la aplicación existe en ambos perfiles de usuario. Por ejemplo, si nuestro usuario de destino no tiene un resumen de aplicación para "ABCApp" pero nuestro usuario original sí, el usuario de destino tendrá el resumen de aplicación "ABCApp" en su perfil después de la fusión. 
-
-Si configuras el campo como `none`, no se fusionará ningún dato de usuario con el perfil de usuario identificado.
+- Datos de sesión si la aplicación existe en ambos perfiles de usuario
+  - Por ejemplo, si nuestro usuario de destino no tiene un resumen de aplicación para "ABCApp" pero nuestro usuario original sí, el usuario de destino tendrá el resumen de aplicación "ABCApp" en su perfil después de la fusión.
+{% enddetails %}
 
 ### Identificador de usuarios por correo electrónico
+
 Si se especifica un `email` como identificador, se requiere un valor `prioritization` adicional en el identificador. `prioritization` debe ser una matriz que especifique qué usuario fusionar si se encuentran varios usuarios. `prioritization` es una matriz ordenada, lo que significa que si más de un usuario coincide a partir de una priorización, no se producirá la fusión.
 
 Los valores permitidos para la matriz son: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` se refiere a dar prioridad al usuario actualizado más recientemente.

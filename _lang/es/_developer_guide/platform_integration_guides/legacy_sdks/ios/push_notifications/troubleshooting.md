@@ -35,7 +35,7 @@ No cambies el entorno del certificado push (desarrollo frente a producción). Ca
 
 #### Paso 2: Los dispositivos se registran para APN y proporcionan a Braze tokens de notificaciones push
 
-Cuando los usuarios abran tu aplicación, se les pedirá que acepten notificaciones push. Si aceptan esta indicación, los APN generarán un token de notificaciones push para ese dispositivo concreto. El SDK de iOS enviará de forma inmediata y asíncrona el token de notificaciones push para las aplicaciones que utilicen la [política]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing) predeterminada [de descarga automática]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing). Una vez que tengamos un token de notificaciones push asociado a un usuario, aparecerá como "Registrado push" en el panel de su perfil de usuario, en la pestaña de **interacción**, y será elegible para recibir notificaciones push de las campañas Braze.
+Cuando los usuarios abran tu aplicación, se les pedirá que acepten notificaciones push. Si aceptan esta indicación, los APN generarán un token de notificaciones push para ese dispositivo concreto. El SDK de iOS enviará de forma inmediata y asíncrona el token de notificaciones push para las aplicaciones que utilicen la [política predeterminada de descarga automática]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing). Una vez que tengamos un token de notificaciones push asociado a un usuario, aparecerá como "Registrado push" en el panel de su perfil de usuario, en la pestaña de **interacción**, y será elegible para recibir notificaciones push de las campañas Braze.
 
 {% alert note %}
 A partir de Xcode 14, puedes probar las notificaciones push remotas en un simulador de iOS.
@@ -147,7 +147,7 @@ Para añadir verificación a la gestión push de tu aplicación, implementa [pru
 
 #### Los clics push no se registran {#push-clicks-not-logged}
 
-- Si esto sólo ocurre en iOS [10]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling), asegúrate de que has seguido los pasos de integración push para [iOS 10]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling).
+- Si esto sólo ocurre en iOS 10, asegúrate de que has seguido los pasos de integración push para [iOS 10]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling).
 - Braze no gestiona las notificaciones push recibidas silenciosamente en primer plano (por ejemplo, el comportamiento push predeterminado en primer plano antes del marco `UserNotifications` ). Esto significa que los enlaces no se abrirán y los clics push no se registrarán. Si tu aplicación aún no ha integrado el framework `UserNotifications`, Braze no gestionará las notificaciones push cuando el estado de la aplicación sea `UIApplicationStateActive`. Debes asegurarte de que tu aplicación no retrasa las llamadas a nuestros [métodos de gestión push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling); de lo contrario, el SDK de iOS puede tratar las notificaciones push como eventos push silenciosos en primer plano y no gestionarlas.
 
 #### Los enlaces Web de los clics push no se abren
@@ -160,4 +160,12 @@ La mayor parte del código que gestiona los vínculos en profundidad también ge
 
 Si se registran aperturas, comprueba si se trata de un problema con el vínculo en profundidad en general o con la gestión de los clics push de vinculación en profundidad. Para ello, prueba a ver si funciona un vínculo profundo desde un clic de mensaje dentro de la aplicación.
 
+#### Pocas o ninguna apertura directa
+
+Si al menos un usuario abre tu notificación push de iOS, pero se registran pocas o ninguna _Direct Opens_ en Braze, puede haber un problema con tu [integración de SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview). Ten en cuenta que _las Direct Opens_ no se registran en los envíos de prueba ni en las notificaciones push silenciosas.
+
+- Asegúrate de que los mensajes no se envían como [notificaciones push silenciosas]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/#sending-silent-push-notifications). El mensaje debe tener texto en el título o en el cuerpo para que no se considere silencioso.
+- Comprueba los siguientes pasos de la [guía de integración push]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration):
+   - [Regístrate para el push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns): En cada inicio de la aplicación, preferiblemente en `application:didFinishLaunchingWithOptions:`, debe aparecer el código del paso 3. La propiedad delegada de `UNUserNotificationCenter.current()` debe asignarse a un objeto que implemente `UNUserNotificationCenterDelegate` y contenga el método `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:`.
+   - [Habilita la manipulación push]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/push_notifications/integration/#step-5-enable-push-handling): Comprueba que se ha aplicado el método `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:`.
 

@@ -17,7 +17,7 @@ description: "Este artículo explica cómo implementar la inicialización retard
 
 Por predeterminado, si un usuario final abre tu notificación push mientras tu aplicación está en estado finalizado, la notificación push no puede procesarse antes de que se inicialice el SDK.
 
-A partir de [la versión 10.1.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) y posteriores [del SDK de Braze Swift](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0), puedes manejar esto utilizando el método estático de ayuda: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)). Este método preparará el SDK para la inicialización retardada configurando el sistema de automatización push.
+A partir de [la versión de Braze Swift 10.1.0 del SDK](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) y posteriores, puedes manejar esto utilizando el método estático de ayuda: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)). Este método preparará el SDK para la inicialización retardada configurando el sistema de automatización push.
 
 Antes de inicializar el SDK, todas las notificaciones push procedentes de Braze serán capturadas y puestas en cola. Una vez inicializado el SDK, esas notificaciones push serán procesadas por el SDK. Este método debe llamarse lo antes posible en el ciclo de vida de tu aplicación, ya sea en el método `application(_:didFinishLaunchingWithOptions:)` de tu `AppDelegate` o antes.
 

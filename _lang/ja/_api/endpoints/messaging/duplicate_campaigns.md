@@ -9,15 +9,15 @@ description: "この記事では、Duplicate campaigns（キャンペーンの�
 
 ---
 {% api %}
-# API を介したキャンペーンの複製
-APIMETHOD POST CORE_ENDPOINT| {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+# API を使用したキャンペーンの複製
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/duplicate
 {% endapimethod %}
 
 > キャンペーンを複製するには、このエンドポイントを使用する。このAPIエンドポイントは、[Brazeダッシュボードでキャンペーンを複製する][1]のと似ている。
 
 {% alert important %}
-API を介したキャンペーンの複製は、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
+API を使用したキャンペーンの複製は、現在、早期アクセスの段階です。早いアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
@@ -26,7 +26,7 @@ API を介したキャンペーンの複製は、現在、早期アクセスの�
 
 ## レート制限
 
-このエンドポイントは、1分間に100回のAPI呼び出しに制限されている。
+このエンドポイントは、1分あたり100個のAPIコールに制限されます。
 
 ## 要求本文:
 
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| 必須 | 文字列 | [キャンペーン識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 |`name`| 必須 | 文字列 | 結果のキャンペーン名。 |

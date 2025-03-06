@@ -66,7 +66,7 @@ Os registros de eventos do Braze contêm identificadores que podem ser usados no
 
 | Tipo de identificador | Descrição  |
 |-----------------|--------------|
-| `AD_ID` | IDs de publicidade, como `ios_idfa`, `google_ad_id`, `roku_ad_id`, capturados em tipos de eventos específicos, que podem ser usados em conjunto com os serviços de resolução de dispositivos da LiveRamp. Por padrão, os IDs de publicidade não são coletados—no entanto, você pode ativar o rastreamento seguindo [Braze documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default). |
+| `AD_ID` | IDs de publicidade, como `ios_idfa`, `google_ad_id`, `roku_ad_id`, capturados em tipos de eventos específicos, que podem ser usados em conjunto com os serviços de resolução de dispositivos da LiveRamp. Por padrão, os IDs de publicidade não são coletados—no entanto, você pode ativar o rastreamento seguindo a [documentação do Braze]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default). |
 | `EMAIL_ADDRESS`   | Endereço de e-mail que pode ser usado em conjunto com os serviços de resolução somente por e-mail da LiveRamp |
 | `TO_PHONE_NUMBER` | Número de telefone, que pode ser usado em conjunto com os serviços de resolução de IPI da LiveRamp. |
 | `EXTERNAL_USER_ID` | A ID externa associada a um usuário, que pode ser usada em conjunto com os serviços de resolução de dispositivos (CID) do LiveRamp. |

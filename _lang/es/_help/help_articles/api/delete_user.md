@@ -15,14 +15,14 @@ Cuando [eliminas a un usuario a través de la API REST de Braze][1], se borran (
 - Cualquier atributo que tuviera el usuario
 - Dirección de correo electrónico
 - Número de teléfono
-- ID usuario externo 
+- ID de usuario externo 
 - Género
 - País
 - Idioma
 
 Cuando [eliminas a un usuario a través de la API REST de Braze][1], se producen los siguientes eventos:
 - El perfil de usuario se ha borrado (anulado).
-- El recuento de [usuarios de toda la vida][2] se actualizará para tener en cuenta los usuarios recién eliminados.	
+- El recuento de [usuarios de toda la vida][2] se actualizará para tener en cuenta a los nuevos usuarios eliminados.	
 - El usuario eliminado seguirá contando para el porcentaje de conversión agregado. Los recuentos de eventos personalizados y de compras no se actualizarán para los usuarios eliminados.
 
 ## Múltiples perfiles con una dirección de correo electrónico compartida

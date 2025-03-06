@@ -54,6 +54,10 @@ Las notificaciones push de historias registran un <i>clic en el cuerpo</i> cuand
 <i>La tasa de clics abiertos</i> es el porcentaje de correos electrónicos entregados que han sido abiertos por un único usuario o máquina al menos una vez, y sólo está disponible en el <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>generador de informes</a>.
 {% endif %}
 
+{% if include.metric == "Close Message" %}
+<i>Cerrar mensaje</i> es el número total de clics en el botón de cierre del mensaje. Esto sólo existe para los mensajes dentro de la aplicación creados en el editor de arrastrar y soltar, no en el editor tradicional.
+{% endif %}
+
 {% if include.metric == "Confirmed Deliveries" %}
 Las <i>entregas confirmadas</i> se producen cuando el operador ha confirmado que el mensaje se ha entregado en el número de teléfono de destino.
 {% endif %}

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 캔버스 내보내기 세부 정보 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 대한 세부정보를 설명합니다."
 
 ---
 {% api %}
@@ -45,7 +45,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 응답
 
 {% alert note %}
-모든 캔버스 단계에는 `{name, next_step_id}` 데이터 배열인 `next_paths` 필드가 있습니다. 전체 단계 및 메시지 단계의 경우 필드가 `next_step_ids` 표시되지만 다른 캔버스 흐름 단계에 대한 데이터는 포함되지 않습니다.
+모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 전체 단계 및 메시지 단계의 경우 `next_step_ids` 필드가 존재하지만 다른 캔버스 흐름 단계에 대한 데이터는 포함되지 않습니다.
 {% endalert %}
 
 ```json
@@ -211,17 +211,11 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     }
   ],
-  "entry_criteria": {
-    "segment_id": "new_users_segment"
-  },
-  "exit_criteria": {
-    "event_name": "completed_profile"
-  }
 }
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

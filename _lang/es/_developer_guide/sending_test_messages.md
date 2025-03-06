@@ -77,7 +77,7 @@ Puedes enviar una sola notificación a través del terminal mediante CURL y la [
 Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), estas páginas se encuentran en una ubicación diferente: <br>- **Las claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API** <br>- **Buscar usuarios** se encuentra en **Usuarios** > **Búsqueda de usuarios**
 {% endalert %}
 
->  Los siguientes ejemplos muestran los puntos finales de API adecuados para los clientes en la instancia `US-01`. Si no estás en esta instancia, consulta [la documentación de]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) nuestra [API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) para saber a qué punto final debes hacer las solicitudes.
+>  Los siguientes ejemplos muestran los puntos finales de API adecuados para los clientes en la instancia `US-01`. Si no estás en esta instancia, consulta [la documentación de nuestra API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) para saber a qué punto final debes hacer las solicitudes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -102,7 +102,7 @@ Puedes enviar una sola notificación a través del terminal mediante cURL y la [
 - `YOUR_KEY1` (opcional)
 - `YOUR_VALUE1` (opcional)
 
->  Los siguientes ejemplos muestran los puntos finales de API adecuados para los clientes en la instancia `US-01`. Si no estás en esta instancia, consulta [la documentación de]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) nuestra [API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) para saber a qué punto final debes hacer las solicitudes.
+>  Los siguientes ejemplos muestran los puntos finales de API adecuados para los clientes en la instancia `US-01`. Si no estás en esta instancia, consulta [la documentación de nuestra API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) para saber a qué punto final debes hacer las solicitudes.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{

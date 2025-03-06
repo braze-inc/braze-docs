@@ -9,7 +9,7 @@ description: "Cet article présente en détail l’endpoint Dupliquer des campag
 
 ---
 {% api %}
-# Dupliquer des campagnes via l'API
+# Dupliquer des campagnes à l'aide de l'API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campagnes/duplicate
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint Dupliquer des campag
 > Utilisez cet endpoint pour dupliquer des campagnes. Cet endpoint de l'API est similaire à la [duplication des campagnes dans le tableau de bord de Braze][1].
 
 {% alert important %}
-La duplication d'une campagne via l'API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+La duplication d'une campagne à l'aide de l'API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
 ## Conditions préalables

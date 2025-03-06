@@ -4,7 +4,7 @@ article_title: Solução de problemas de solicitações de Webhook e Connected C
 page_order: 3
 channel:
   - webhooks
-description: "Este artigo aborda como solucionar problemas de códigos de erro de webhook e Connected Content, incluindo o que são os erros e as etapas para resolvê-los."
+description: "Este artigo aborda como solucionar problemas de códigos de erro do webhook e do Connected Content, incluindo quais são os erros e as etapas para resolvê-los."
 ---
 
 # Solução de problemas de solicitações de webhook e Connected Content
@@ -117,14 +117,16 @@ table td {
 
 ## Erros 5XX
 
-`5XX` indicam que há um problema com o ponto de extremidade. Esses erros geralmente são causados por problemas no lado do servidor.
+`5XX` indicam que há um problema com o endpoint. Esses erros geralmente são causados por problemas no lado do servidor.
 
 | Código de erro                    | O que isso significa                                                                                                                                         |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Erro interno do servidor 500** | O endpoint encontrou uma condição inesperada que o impediu de concluir a solicitação.                                                       |
 | **502 Gateway ruim**           | O ponto de extremidade recebeu uma resposta inválida do servidor upstream.                                                                                   |
-| **503 Serviço indisponível**   | O endpoint não está conseguindo processar a solicitação devido a uma sobrecarga temporária ou manutenção.                                                    |
+| **503 Serviço indisponível**   | O ponto de extremidade não está conseguindo processar a solicitação devido a uma sobrecarga temporária ou manutenção.                                                    |
 | **504 Tempo limite do gateway**       | O ponto de extremidade não recebeu uma resposta oportuna do servidor upstream.                                                                               |
+| **529 Host sobrecarregado**       | O host do endpoint está sobrecarregado e não pôde responder. |
+| **598 Host não saudável**        | O Braze simulou a resposta porque o host do endpoint está temporariamente marcado como não saudável. Consulte [Detecção de host não saudável](#unhealthy-host-detection) para saber mais. |
 | **599 Erro de conexão**      | O Braze apresentou um erro de tempo limite de conexão de rede ao tentar estabelecer uma conexão com o endpoint, o que significa que o endpoint pode estar instável ou inativo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -132,5 +134,19 @@ table td {
 
 Aqui estão algumas dicas para solucionar erros comuns do site `5XX`:
 
-- Revise a mensagem de erro para obter detalhes específicos disponíveis no **registro de atividades de mensagens**. Para webhooks, acesse a seção **Performance ao longo do tempo** na página inicial do Braze e selecione as estatísticas para webhooks. Aqui, você pode encontrar o carimbo de data/hora que indica quando os erros ocorreram.
+- Revise a mensagem de erro para obter detalhes específicos disponíveis no **registro de atividades de mensagens**. Para webhooks, acesse a seção **Performance ao longo do tempo** na página inicial do Braze e selecione as estatísticas para webhooks. Aqui, você pode encontrar o registro de data e hora que indica quando os erros ocorreram.
 - Certifique-se de que não esteja enviando muitas solicitações que sobrecarreguem o endpoint. Você pode enviar em lotes ou ajustar o limite de frequência para verificar se isso reduz os erros.
+
+## Detecção de host não saudável
+
+Os webhooks do Braze e o Connected Content empregam um mecanismo de detecção de host insalubre para detectar quando o host de destino apresenta uma alta taxa de lentidão significativa ou sobrecarga, resultando em tempos limite, excesso de solicitações ou outros resultados que impedem que o Braze se comunique com sucesso com o endpoint de destino. Ele atua como uma salvaguarda para reduzir a carga desnecessária que pode estar causando dificuldades ao host de destino. Ele também serve para estabilizar a infraestrutura do Braze e manter velocidades rápidas de envio de mensagens.
+
+Em geral, se o número de **falhas exceder 3.000 em qualquer janela de tempo móvel de um minuto** (por combinação exclusiva de nome de host e grupo de app - **não** por jornada de endpoint), o Braze interromperá temporariamente as solicitações ao host de destino por um minuto, simulando respostas com um código de erro `598` para indicar a integridade ruim. Após um minuto, o Braze retomará as solicitações em velocidade máxima se o host for considerado saudável. Se o host ainda não estiver saudável, o Braze aguardará mais um minuto antes de tentar novamente.
+
+Os códigos de erro a seguir contribuem para a contagem de falhas do detector de host não íntegro: `408`, `429`, `502`, `503`, `504`, `529`.
+
+Para webhooks, o Braze repetirá automaticamente as solicitações HTTP que foram interrompidas pelo detector de host não saudável. Essa nova tentativa automática usa backoff exponencial e tentará apenas algumas vezes antes de falhar. Para saber mais sobre erros de webhook, consulte [Erros, lógica de repetição e tempos limite]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
+
+Para o Connected Content, se as solicitações ao host de destino forem interrompidas pelo detector de host não saudável, o Braze continuará a renderizar mensagens e a seguir sua lógica Liquid como se tivesse recebido um código de resposta de erro. Se você quiser garantir que essas solicitações de Connected Content sejam repetidas quando forem interrompidas pelo detector de host não saudável, use a opção `:retry`. Para saber mais sobre a opção `:retry`, consulte [Tentativas de Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+
+Se achar que a detecção de host não saudável pode estar causando problemas, entre em contato com o [suporte da Braze]({{site.baseurl}}/support_contact/).

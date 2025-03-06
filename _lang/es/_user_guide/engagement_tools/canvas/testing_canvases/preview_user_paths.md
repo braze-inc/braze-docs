@@ -3,7 +3,7 @@ nav_title: Vista previa de las rutas de usuario
 article_title: Vista previa de las rutas de usuario
 page_order: 0.3
 alias: /preview_user_paths/
-description: "Este artículo de referencia explica cómo previsualizar las rutas de usuario en Canvas."
+description: "Esta página explica cómo puedes obtener una vista previa de las rutas de usuario en Canvas."
 Tool:
   - Canvas
 ---
@@ -45,6 +45,8 @@ Para ver más detalles sobre los criterios de entrada, seleccione **Ver más**. 
 
 La lógica Liquid se procesará durante una ejecución de prueba, aunque no envíes un mensaje de prueba real. Esto significa que la [lógica del mensaje de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) y otra lógica de Liquid se reflejan y podrían afectar al recorrido del usuario de Canvas.
 
+Si tu vista previa envía el último paso de tu recorrido de usuario en lugar de abortarlo, es posible que la vista previa esté utilizando la hora actual como la hora que se está probando para la evaluación de Liquid, y no la hora real en la que el usuario estaría en el paso según la hora de entrada en Canvas.
+
 ## Vistas previas para la sincronización
 
 Para los lienzos programados, el usuario de la prueba entrará a la siguiente hora de entrada programada. Para los lienzos basados en acciones con fechas de inicio, el usuario de la prueba entrará en la fecha y hora de inicio. 
@@ -55,12 +57,12 @@ Los pasos de Mensaje y Retraso muestran el momento en el que un usuario progresa
 
 ## Cuando los usuarios entran y salen
 
-Los usuarios de prueba entrarán en la vista previa aunque no sean elegibles en la vida real. Si no reúnen los requisitos, se puede entender por qué no habrían cumplido los criterios. Puede ver los resultados en la barra lateral para cuando los usuarios entran y salen del Canvas.
+Los usuarios de prueba entrarán en la vista previa aunque no sean elegibles en la vida real. Si no son elegibles, puedes ver por qué no habrían cumplido los criterios. Puede ver los resultados en la barra lateral para cuando los usuarios entran y salen del Canvas.
 
 - Si prueba una Ruta de Acción con acciones que corresponden a criterios de salida (incluyendo propiedades de eventos), se activarán los criterios de salida y finalizará la ejecución de la prueba.
 - Si prueba un paso de Mensaje que corresponde a criterios de salida, se activarán los criterios de salida y finalizará la ejecución de la prueba.
 - En este momento, no puede seleccionar un evento o propiedad específicos dentro de una ruta de acción para activar los criterios de salida (sólo la ruta en su conjunto). Si un usuario puede cumplir varios criterios de salida, se mostrará como resultado el primero que se procese y que cumpla.
-- Los eventos, los activadores de la API y las propiedades de la entrada del lienzo no se aplican en función de la entrada del lienzo. No afectarán a los resultados de los pasos siguientes.
+- Los eventos, los desencadenantes de la API, los atributos personalizados y las propiedades de la entrada en el Canvas se aplican en función de la entrada en el Canvas. La ejecución de la prueba simula el recorrido del usuario sin aplicar estos elementos para cambiar el perfil de usuario real o el flujo del Canvas. Por ejemplo, durante las pruebas, cuando se utiliza un atributo personalizado como desencadenante de Canvas, los criterios de desencadenamiento se aplican a la vista previa del usuario **como si** éste hubiera desencadenado el cambio del atributo personalizado. 
 
 ## Rutas de experimentos y variantes en Canvas
 
@@ -70,9 +72,9 @@ Los usuarios de prueba entrarán en la vista previa aunque no sean elegibles en 
 
 ## Envíos de prueba
 
-Puede optar por enviar mensajes de prueba a un grupo de prueba interno o a un usuario individual a medida que se completa la ejecución de la prueba. Esto significa que sólo se enviarán los mensajes que el usuario encuentre a lo largo de la ruta de prueba. Por defecto, los destinatarios recibirán los mensajes con sus propios atributos, pero puede sustituirlos por los atributos del usuario de prueba.
+Puede optar por enviar mensajes de prueba a un grupo de prueba interno o a un usuario individual a medida que se completa la ejecución de la prueba. Esto significa que sólo se enviarán los mensajes que el usuario encuentre a lo largo de la ruta de prueba. Por defecto, los destinatarios recibirán los mensajes con sus atributos, pero puedes sustituirlos por los atributos del usuario de prueba.
 
-Para enviar todos los mensajes de prueba de un lienzo a la vez, independientemente de la ruta y sin previsualizar la ruta, puede seleccionar **Enviar todos los mensajes de prueba** en la pestaña **Envíos de prueba**.
+Para enviar todos los mensajes de prueba de un Canvas a la vez, independientemente de la ruta, y sin vista previa de la ruta, puedes seleccionar **Enviar todos los mensajes de prueba** en la pestaña **Envíos de prueba**.
 
 ## Capacidad de respuesta
 
@@ -84,11 +86,13 @@ Consulte los [Criterios de salida]({{site.baseurl}}/user_guide/engagement_tools/
 
 ## Contenido conectado
 
-El Contenido Conectado se ejecutará si está incluido en el Lienzo. Si su Lienzo incluye Contenido Conectado, elimine el Contenido Conectado que esté configurado para alterar perfiles de usuario o datos a los que se haga referencia en otros Lienzos o campañas. También puede optar por no previsualizar el recorrido del usuario.
+El Contenido Conectado se ejecutará si está incluido en el Lienzo. Esto significa que si pruebas un Canvas que tiene llamadas a Contenido conectado o Bloques de contenido que contienen Contenido conectado, el Canvas puede enviar las llamadas a Contenido conectado, lo que modificaría los datos referenciados en otras campañas o Canvases.
+
+Al previsualizar las rutas de usuario, considera la posibilidad de eliminar el Contenido conectado que altera los perfiles de usuario o los datos referenciados en otros Lienzos o campañas.
 
 ## Webhooks
 
-Los webhooks se ejecutarán cuando se envíen los mensajes de prueba, pero no durante la ejecución de la prueba. De forma similar al Contenido Conectado, considere eliminar los webhooks que estén configurados para alterar los perfiles de usuario o los datos a los que se hace referencia en otros Canvases o campañas.
+Los webhooks se ejecutarán cuando se envíen los mensajes de prueba, pero no durante la ejecución de la prueba. De forma similar al Contenido conectado, considera la posibilidad de eliminar webhooks que alteren perfiles de usuario o datos referenciados en otros Lienzos o campañas.
 
 ## Casos de uso
 

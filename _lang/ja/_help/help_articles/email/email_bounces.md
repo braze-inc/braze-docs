@@ -19,7 +19,7 @@ channel: email
 
 ## ソフトバウンス数
 
-{% multi_lang_include metrics.md metric='ソフトバウンス' %} 
+{% multi_lang_include metrics.md metric='Soft Bounce' %} 
 
 メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。
 

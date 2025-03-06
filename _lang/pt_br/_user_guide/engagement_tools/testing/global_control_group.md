@@ -79,13 +79,19 @@ Depois de desativar o grupo de controle, é possível salvar um novo. Quando voc
 
 ## Exportar os membros do grupo de controle {#export-group-members}
 
-Se quiser ver quais usuários estão no seu grupo de controle global, é possível exportar os membros do grupo via CSV ou API. 
+Se quiser ver quais usuários estão no seu grupo de controle global, é possível exportar os membros do grupo por CSV ou API. 
 
-Para executar uma exportação CSV, navegue até a guia **Configurações do grupo de controle global** e clique em <i class="fas fa-download"></i> **Export**. Para exportar via API, use o [ponto de extremidade`/users/export/global_control_group` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+Para executar uma exportação CSV, navegue até a guia **Configurações do grupo de controle global** e clique em <i class="fas fa-download"></i> **Export**. Para exportar por API, use o [ponto de extremidade`/users/export/global_control_group` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
 Os grupos de controle históricos não são preservados, portanto, só é possível exportar os membros do grupo atual. Certifique-se de exportar todas as informações necessárias antes de desativar um grupo de controle.
 {% endalert %}
+
+## Ver se um usuário está em um Grupo de Controle Global
+
+É possível visualizar a associação ao Grupo de Controle Global acessando a seção **Diversos** na guia **Engajamento** do perfil de um usuário individual.
+
+![Uma seção "Diversos" informando que o usuário tem um número de balde aleatório é 2030 e está no Grupo de controle global.][1]{: style="max-width:60%;"}
 
 ## Relatórios
 
@@ -163,6 +169,7 @@ Você deve decidir por quanto tempo executar seu experimento antes de iniciá-lo
 
 Considere quaisquer comportamentos de linha de base para as métricas nas quais você está mais interessado. Você quer apenas as taxas de compra para planos de inscrição que são renovados apenas anualmente? Ou os clientes têm um hábito semanal para o evento que você gostaria de medir? Pense em quanto tempo os usuários levam para alterar potencialmente seus comportamentos devido ao envio de mensagens. Depois de decidir quanto tempo o experimento deve durar, certifique-se de não encerrar o experimento nem registrar os resultados finais antes do tempo, ou suas descobertas poderão ser tendenciosas.
 
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}
 [5]: {% image_buster /assets/img/control_group/control_group5.png %}

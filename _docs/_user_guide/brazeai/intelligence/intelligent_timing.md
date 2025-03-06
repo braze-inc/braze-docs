@@ -18,11 +18,17 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 ## How it works
 
-Braze calculates the optimal send time based on a statistical analysis of your user's past interactions with your app, and their interactions with each messaging channel.
+Braze calculates the optimal send time based on a statistical analysis of your user's past interactions with your app, and their interactions with each messaging channel. The following interaction data is used: 
+
+- Session times
+- Push Direct Opens
+- Push Influenced Opens
+- Email Clicks
+- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics#machine-opens))
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
-If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time). Additionally, machine opens are excluded from consideration for the purpose of computing an optimal time.
+If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time).
 
 ## Using Intelligent Timing
 
@@ -90,7 +96,7 @@ Learn more about [when Braze checks the eligibility criteria for segments and fi
 
 ##### A/B tests with optimizations
 
-If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), such as automatically sending the Winning Variant after the A/B test is over, the duration of the campaign will increase. By default, Intelligent Timing campaigns will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
+If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), such as automatically sending the Winning Variant after the A/B test is over, the duration of the campaign will increase. By default, Intelligent Timing campaigns will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
 We recommend that if you're using both Intelligent Timing and A/B testing, schedule the Winning Variant to send 2 days after the initial test instead of 1 day.
 
@@ -195,7 +201,7 @@ Braze needs a certain amount of engagement data to make a good estimate. If ther
 
 ### Sending past the scheduled date
 
-Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
 If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the Winning Variant to send for 2 days after the initial test instead of 1 day.
 

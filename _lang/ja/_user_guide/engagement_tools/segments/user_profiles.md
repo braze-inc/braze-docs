@@ -35,7 +35,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ユーザープロファイルは、ユーザーのエンゲージメント履歴、セグメントメンバーシップ、デバイス、オペレーティングシステムに関する情報に簡単にアクセスできるため、トラブルシューティングやテストに最適なリソースです。
 
-たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった[多言語キャンペーン][13]のトラブルシューティングを行う場合に役立ちます。
+たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった多言語キャンペーン][13]のトラブルシューティングを行う場合に役立ちます。
 
 [[エンゲージメント](#engagement-tab)] タブを使用して、特定のユーザーがキャンペーンを受け取ったかどうかを確認できます。さらに、この特定のユーザーがキャンペーンを受け取った場合は、そのユーザーがいつキャンペーンを受け取ったかを確認できます。また、ユーザーが特定のセグメントに属しているかどうか、ユーザーがプッシュ、メール、またはその両方にオプトインしているかどうかを確認することもできます。この情報はトラブルシューティングに役立ちます。たとえば、ユーザーが受け取るはずのキャンペーンを受け取っていない場合や、受け取るはずではなかったキャンペーンを受け取っている場合は、この情報を確認する必要があります。
 
@@ -61,9 +61,9 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 購入 | このユーザーに帰属する生涯収益、前回の購入、購入の合計数、および各購入のリスト。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-このデータの詳細については、「[ユーザーデータ収集][12]」を参照してください。
+このデータの詳細については、「ユーザーデータ収集][12]」を参照してください。
 
-![][2]
+![ユーザープロファイルの「概要」タブ。][2]
 
 ### 「エンゲージメント」タブ {#engagement-tab}
 
@@ -71,9 +71,9 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 | エンゲージメントカテゴリー | 含有 |
 | --- | --- |
-| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループsは、これら3つのチャネルsに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプション s およびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
-| 受信したキャンペーン | このユーザーが受信したキャンペーンとその時期。一覧からキャンペーンを選択して表示します。 |
-| セグメント | このユーザーはセグメントに含まれています。一覧からSegmentを選択して表示します。 |
+| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
+| 受信したキャンペーン | 受信したキャンペーンは、ユーザーがキャンペーンを受け取ったとき、またはユーザーとのインタラクションデータを最初に検出したときにマークされます。一覧からキャンペーンを選択して表示します。 |
+| セグメント | このユーザーはセグメントに含まれています。一覧からセグメントを選択して表示します。 |
 | コミュニケーション統計 | このユーザーが各チャネルから御社からのメッセージを最後に受信した時期。 |
 | アトリビューションのインストール | ユーザーがアプリをインストールした方法と日時に関する情報。[ユーザーインストールの理解]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)について詳しく説明します。 |
 | その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)。 |
@@ -81,7 +81,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn)および[イベント予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases)のスコア。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。][3]
 
 ### [メッセージ履歴] タブ
 
@@ -91,7 +91,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 このテーブルにフィードバックがある場合、または具体的なイベントを表示したい場合は、件名行"Messaging History Tab フィードバック" で[ユーザー-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) をメールしてください。
 {% endalert %}
 
-![][5]
+![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。][5]
 
 #### イベントの表示と理解
 
@@ -149,6 +149,5 @@ description: "この参考記事では、ダッシュボードでユーザーの
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

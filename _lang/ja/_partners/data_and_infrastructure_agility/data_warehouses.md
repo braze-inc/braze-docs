@@ -1,6 +1,6 @@
 ---
-nav_title: データウェアハウス ストレージ
-article_title: データウェアハウス・ストレージ・パートナー
+nav_title: データウェアハウスストレージ
+article_title: データウェアハウスストレージパートナー
 page_order: 7
 
 page_type: landing

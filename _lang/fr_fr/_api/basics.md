@@ -34,7 +34,7 @@ Voici un aperçu des termes que vous pouvez rencontrer dans la documentation de 
 
 ### Endpoints
 
-Braze gère un certain nombre d'instances différentes pour notre tableau de bord et nos endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. Si vous n'êtes pas sûr, ouvrez un \[ticket d'assistance]\[support] ou utilisez le tableau suivant pour faire correspondre l'URL du tableau de bord que vous utilisez au point de terminaison REST correct.
+Braze gère un certain nombre d'instances différentes pour notre tableau de bord et nos endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. Si vous n'êtes pas sûr, ouvrez un [ticket d'assistance][support] ou utilisez le tableau suivant pour faire correspondre l'URL du tableau de bord que vous utilisez au point de terminaison REST correct.
 
 {% alert important %}
 Lorsque vous utilisez des endpoints pour les appels API, utilisez l'endpoint REST.
@@ -215,9 +215,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {% endtab %}
 {% tab Fil d'actualité %}
 
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -330,7 +328,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 
 ### Gestion des clés API REST
 
-Vous pouvez afficher les détails des clés API REST existantes ou les supprimer à partir de **Paramètres** > **API et identifiants** > onglet Clés API. Notez que les clés API REST ne peuvent pas être modifiées après leur création.
+Vous pouvez afficher les détails des clés API REST existantes ou les supprimer à partir de **Paramètres** > **API et identifiants** > onglet **Clés API**. Notez que les clés API REST ne peuvent pas être modifiées après leur création.
 
 L'onglet **Clés API** contient les informations suivantes pour chaque clé :
 
@@ -345,11 +343,11 @@ L'onglet **Clés API** contient les informations suivantes pour chaque clé :
 
 Pour afficher les détails d'une clé API, passez la souris sur la clé et sélectionnez <i class="fa-solid fa-eye" alt="View"></i> **View.** Cela comprend toutes les autorisations dont dispose cette clé, les adresses IP inscrites sur la liste blanche (le cas échéant) et si cette clé est inscrite sur la liste blanche des adresses IP de Braze.
 
-![][30]
+![La liste des autorisations de la clé API dans le tableau de bord de Braze.][30]
 
 Notez que lors de la [suppression d'un utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), les clés API associées qu'il a créées ne seront pas supprimées. Pour supprimer une clé, survolez-la et sélectionnez <i class="fa-solid fa-trash-can" alt="Delete"></i> **Supprimer**.
 
-![][29]{: style="max-width:30%;"}
+![Une clé API nommée "Last Seen" avec l'icône de la corbeille en surbrillance, indiquant "Delete".][29]{: style="max-width:30%;"}
 
 ### Sécurité clé API REST
 
@@ -363,7 +361,7 @@ Une bonne pratique de sécurité est d’accorder à un utilisateur uniquement l
 Étant donné que les clés d'API REST permettent d'accéder à des endpoints d'API REST potentiellement sensibles, assurez-vous qu'elles sont stockées et utilisées en toute sécurité. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ou pour l’exposer autrement de façon publique.
 {% endalert %}
 
-En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la console de développement. Pour obtenir de l'aide dans cette procédure, ouvrez un \[ticket d'assistance]\[assistance].
+En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la console de développement. Pour obtenir de l'aide dans cette procédure, ouvrez un [ticket d'assistance][assistance].
 
 ### Liste d’adresses IP autorisées
 

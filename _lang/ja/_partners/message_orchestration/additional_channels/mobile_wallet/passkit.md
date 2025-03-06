@@ -280,7 +280,7 @@ Webhookをセットアップするには、リクエストボディに新しい�
 **Liquid の応答の例**
 
 {% tabs local %}
-{% tab 償還明細を渡す %}
+{% tab passes redemptionDetails %}
 
 ```json
 {
@@ -297,7 +297,7 @@ Webhookをセットアップするには、リクエストボディに新しい�
 ```
 
 {% endtab %}
-{% tab パスステータス %}
+{% tab passes status %}
 ```
 UNREDEEMED 
 ```

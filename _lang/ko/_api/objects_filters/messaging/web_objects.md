@@ -1,6 +1,6 @@
 ---
 nav_title: "웹 개체"
-article_title: 웹 메시징 객체
+article_title: 웹 메시징 개체
 page_order: 12
 page_type: reference
 channel: push

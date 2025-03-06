@@ -2,7 +2,7 @@
 nav_title: About Item Recommendations
 article_title: About Item Recommendations
 description: "This reference article describes different use cases for recommending items to customers using Braze."
-page_order: 1
+page_order: 10
 ---
 
 # About item recommendations
@@ -225,7 +225,7 @@ Highlight items that have gained attention across your user base through views t
 
 This scenario doesn't rely directly on user actions but rather on catalog data. You can filter for new items based on their addition date to the catalog and promote these through targeted campaigns or Canvases without needing to train a recommendation model.
 
-For example, a tech ecommerce platform could alert tech enthusiasts about the latest gadgets or upcoming pre-orders, using filters to target items that have been recently added to the catalog.
+For example, a tech eCommerce platform could alert tech enthusiasts about the latest gadgets or upcoming pre-orders, using filters to target items that have been recently added to the catalog.
 
 {% details Requirements %}
 
@@ -346,7 +346,7 @@ Promote items that users have recently interacted with, including views, clicks,
 
 ### Trending purchased items
 
-Highlight items that your users have recently purchased with increased frequency. For example, an ecommerce business could recommend seasonal items that users are starting to stock up on during their preparations for the next season. 
+Highlight items that your users have recently purchased with increased frequency. For example, an eCommerce business could recommend seasonal items that users are starting to stock up on during their preparations for the next season. 
 
 {% details Requirements %}
 

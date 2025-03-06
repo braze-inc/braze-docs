@@ -12,7 +12,7 @@ tool:
 
 # Exportar dados da campanha
 
-> Na página **Campaigns (Campanhas** ) do dashboard, selecione a campanha que deseja visualizar e role para baixo até os gráficos de performance histórica, que podem ser exportados.<br><br>Esta página aborda como exportar dados de resultados de campanhas de campanhas únicas, multicanais e multivariantes e como exportar dados de usuários dos destinatários.
+> Na página **Campaigns (Campanhas)** do dashboard, selecione a campanha que deseja visualizar e role para baixo até os gráficos de performance histórica, que podem ser exportados.<br><br>Esta página aborda como exportar dados de resultados de campanhas de campanhas únicas, multicanais e multivariantes e como exportar dados de usuários dos destinatários.
 
 ## Campanhas multicanais
 

@@ -1,24 +1,24 @@
 ---
-nav_title: "POST: API 트리거 전송을 통해 캠페인 보내기"
-article_title: "POST: API 트리거 전송을 통해 캠페인 보내기"
+nav_title: "POST: API 트리거 전송을 사용하여 캠페인 보내기"
+article_title: "POST: API 트리거 전송을 사용하여 캠페인 보내기"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 API 트리거 전달 Braze 엔드포인트를 통한 캠페인 전송에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 API 트리거 배달 Braze 엔드포인트를 사용하여 캠페인을 보내는 방법에 대해 자세히 설명합니다."
 
 ---
 {% api %}
-# API 트리거 전달을 통한 캠페인 메시지 전송
+# API 트리거 전송을 사용하여 캠페인 메시지 보내기
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/send
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 API 트리거 배달을 통해 지정된 사용자에게 즉각적인 일회성 메시지를 보낼 수 있습니다.
+> 이 엔드포인트를 사용하면 API 트리거 배달을 사용하여 지정된 사용자에게 즉각적인 일회성 메시지를 보낼 수 있습니다.
 
-API 트리거 전송을 사용하면 메시지 콘텐츠를 Braze 대시보드 내에 보관하는 동시에 API를 통해 메시지 전송 시기와 수신자를 지정할 수 있습니다.
+API 트리거 전송을 사용하면 메시지 콘텐츠를 Braze 대시보드 내에 보관하면서 API를 사용하여 메시지 전송 시기와 수신자를 지정할 수 있습니다.
 
-세그먼트를 타겟팅하는 경우 요청에 대한 기록이 [개발자 콘솔](https://dashboard.braze.com/app_settings/developer_console/activitylog/)에 저장됩니다. 이 엔드포인트로 메시지를 보내려면 [API 트리거 캠페인]({{site.baseurl}}/api/api_campaigns/)을 구축할 때 생성한 [캠페인 ID](https://www.braze.com/docs/api/identifier_types/)가 있어야 합니다.
+세그먼트를 타겟팅하는 경우 요청에 대한 기록이 [개발자 콘솔에](https://dashboard.braze.com/app_settings/developer_console/activitylog/) 저장됩니다. 이 엔드포인트로 메시지를 보내려면 [API 트리거 캠페인]({{site.baseurl}}/api/api_campaigns/)을 구축할 때 생성한 [캠페인 ID](https://www.braze.com/docs/api/identifier_types/)가 있어야 합니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -72,24 +72,24 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|필수|문자열|[캠페인 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
+|`campaign_id`|필수|문자열|[캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 |`send_id`| 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
 |`trigger_properties`| 선택 사항 | 객체 | 트리거 속성을 참조하십시오. 개인화 키-값 쌍은 이 요청의 모든 사용자에게 적용됩니다. |
 |`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 `broadcast: true`을 설정할 때 주의하십시오. 이 플래그를 의도치 않게 설정하면 메시지를 예상보다 더 많은 오디언스에게 보낼 수 있습니다. |
 |`audience`| 선택 사항 | 연결된 오디언스 객체| [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
-|`recipients`| 선택 사항 | 배열 | 수신자 객체를 참조하십시오.<br><br>`send_to_existing_only`가 `false`인 경우 속성 객체를 포함해야 합니다.<br><br>`recipients`이(가) 제공되지 않고 `broadcast`이(가) true로 설정된 경우, 메시지는 캠페인에 의해 타겟팅된 전체 세그먼트에 전송됩니다. |
-|`attachments`| 선택 사항 | 배열 | `broadcast`이(가) true로 설정된 경우 `attachments` 목록을 포함할 수 없습니다. |
+|`recipients`| 선택 사항 | 배열 | 수신자 객체를 참조하십시오.<br><br>`send_to_existing_only`가 `false`인 경우 속성 객체를 포함해야 합니다.<br><br>`recipients` 을 제공하지 않고 `broadcast` 을 true로 설정하면 캠페인이 타겟팅하는 전체 세그먼트에 메시지가 전송됩니다. |
+|`attachments`| 선택 사항 | 배열 | `broadcast` 이 true로 설정되어 있으면 `attachments` 목록은 포함할 수 없습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- 수신자 배열에는 최대 50개의 객체가 포함될 수 있으며, 각 객체에는 단일 `external_user_id` 문자열과 `trigger_properties` 객체가 포함됩니다.
-- `send_to_existing_only`가 `true`일 경우, Braze는 기존 사용자에게만 메시지를 보냅니다. 그러나 이 플래그는 사용자 별칭과 함께 사용할 수 없습니다.
-- `send_to_existing_only`가 `false`인 경우 속성을 포함해야 합니다. Braze는 메시지를 보내기 전에 `id` 및 속성을 가진 사용자를 생성합니다.
+- 수신자 배열에는 최대 50개의 개체가 포함될 수 있으며, 각 개체에는 단일 `external_user_id` 문자열과 `trigger_properties` 개체가 포함됩니다.
+- `send_to_existing_only` 이 `true` 일 경우, Braze는 기존 사용자에게만 메시지를 보냅니다. 그러나 이 플래그는 사용자 별칭과 함께 사용할 수 없습니다.
+- `send_to_existing_only` 이 `false` 인 경우 속성을 포함해야 합니다. Braze는 메시지를 보내기 전에 `id` 및 속성을 가진 사용자를 생성합니다.
 
 {% alert important %}
-이메일 주소로 수신자를 지정하는 것은 현재 초기 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
+이메일 주소로 수신자를 지정하는 기능은 현재 얼리 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 관리자에게 문의하세요.
 {% endalert %}
 
-사용자의 구독 그룹 상태는 `attributes` 객체 내에 `subscription_groups` 매개변수를 포함시켜 업데이트할 수 있습니다. 자세한 내용은 [사용자 속성 개체]({{site.baseurl}}/api/objects_filters/user_attributes_object)를 참조하십시오.
+사용자의 구독 그룹 상태는 `attributes` 객체 내에 `subscription_groups` 매개변수를 포함하여 업데이트할 수 있습니다. 자세한 내용은 [사용자 속성 개체]({{site.baseurl}}/api/objects_filters/user_attributes_object)를 참조하십시오.
 
 ## 요청 예시
 ```
@@ -173,16 +173,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## 응답 세부 정보
 
-메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id`가 포함됩니다. `dispatch_id`는 메시지 발송의 ID로, Braze에서 전송되는 각 전송의 고유 ID입니다. 이 엔드포인트를 사용하면 일괄 처리된 배치된 사용자 집합에 대해 단일 `dispatch_id`를 받게 됩니다. `dispatch_id`에 대한 자세한 내용은 [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)에 대한 설명서를 참조하세요.
+메시지를 보내는 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id` 주소가 포함됩니다. `dispatch_id` 은 메시지 발송의 ID로, Braze에서 전송되는 각 전송의 고유 ID입니다. 이 엔드포인트를 사용하면 전체 배치된 사용자 집합에 대해 단일 `dispatch_id` 을 받게 됩니다. 자세한 내용은 `dispatch_id` 에서 [디스패치 ID 동작에]({{site.baseurl}}/help/help_articles/data/dispatch_id/) 대한 문서를 참조하세요.
 
-요청이 심각한 오류에 직면하면 [오류 및 응답]({{site.baseurl}}/api/errors/#fatal-errors)에서 오류 코드 및 설명을 참조하십시오.
+요청에 치명적인 오류가 발생하면 오류 코드와 설명은 오류 [및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
-## 캠페인용 속성 객체
+## 캠페인용 속성 개체
 
-Braze에는 API 트리거 캠페인을 보내기 전에 사용자에 대한 속성 및 값을 추가, 생성 또는 업데이트할 수 있는 `attributes`라는 메시징 객체가 있습니다. 이 API 호출로 `campaign/trigger/send` 엔드포인트를 사용하면 캠페인을 처리하고 전송하기 전에 사용자 속성 객체를 처리합니다. 이것은 [경쟁 조건]({{site.baseurl}}/help/best_practices/race_conditions/)으로 인해 발생할 수 있는 문제의 위험을 최소화하는 데 도움이 됩니다.
+Braze에는 API 트리거 캠페인을 보내기 전에 사용자에 대한 속성 및 값을 추가, 생성 또는 업데이트할 수 있는 `attributes` 이라는 메시징 개체가 있습니다. 이 API 호출로 `campaign/trigger/send` 엔드포인트를 사용하면 캠페인을 처리하고 전송하기 전에 사용자 속성 개체를 처리합니다. 이것은 [경쟁 조건]({{site.baseurl}}/help/best_practices/race_conditions/)으로 인해 발생할 수 있는 문제의 위험을 최소화하는 데 도움이 됩니다. 그러나 기본적으로 구독 그룹은 이 방법으로 업데이트할 수 없습니다.
 
 {% alert important %}
-이 엔드포인트의 캔버스 버전을 찾고 있습니까? [API 트리거 배달을 통한 캔버스 메시지 보내기]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint)를 확인하세요.
+이 엔드포인트의 캔버스 버전을 찾고 있습니까? [API 트리거 배달을 사용하여 캔버스 메시지 보내기를]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint) 확인하세요.
 {% endalert %}
 
 {% endapi %}

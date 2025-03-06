@@ -63,6 +63,27 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
 }
 ```
 
+#### Example
+
+```json
+{
+  "broadcast": false,
+  "external_user_ids": ["PushTest12"],
+  "campaign_id": "9c2fefcd-9115-3932-f771-c7f43d18d6b6",
+  "override_frequency_capping": "false",
+  "recipient_subscription_state": "all",
+  "messages": {
+    "apple_push": {
+      "alert": {
+        "title": "Hello!",
+        "body": "Message here"
+      },
+      "message_variation_id": "iosPush-640"
+    }
+  }
+}
+```
+
 ## Apple push action button object
 
 You must include the `category` field in the Apple push object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use shown in the following table. You can also use your own buttons if they have been registered in your app.

@@ -32,7 +32,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode encontrar **Campanhas** sob **engajamento**.
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
 {% endalert %}
 
 {:start=“2"}
@@ -46,9 +46,9 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conteúdo, crie sua mensagem antes de adicionar variantes adicionais. Em seguida, você pode selecionar **Copiar da variante** no menu suspenso **Adicionar variante**.
 {% endalert %}
 {% endtab %}
-{% tab Canvas %}
+{% tab Canva %}
 
-1. [Crie seu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
+1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
 3. Escolha uma [programação de etapas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) e especifique uma postergação, conforme necessário.
 4. Filtre seu público para esta etapa, conforme necessário. Você pode refinar ainda mais os destinatários dessa etapa especificando segmentos e adicionando filtros adicionais. As opções do público serão conferidas após a postergação, no momento em que as mensagens forem enviadas.
@@ -239,8 +239,8 @@ Opcionalmente, também é possível limitar a entrega a um número especificado 
 Para campanhas em vários canais direcionadas tanto para e-mail quanto para canais de envio de mensagens, talvez você queira limitar sua campanha para que somente os usuários com aceitação explícita recebam a mensagem (excluindo usuários inscritos ou cancelados). Por exemplo, digamos que você tenha três usuários com diferentes status de aceitação:
 
 - **O usuário A** está inscrito no e-mail e tem a capacitação push ativada. Esse usuário não recebe o e-mail, mas receberá o push.
-- **O usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
-- **O usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
+- O **usuário B** tem aceitação de e-mail, mas não tem a capacitação push ativada. Esse usuário receberá o e-mail, mas não receberá o push.
+- O **usuário C** tem aceitação de e-mail e está ativado para push. Esse usuário receberá tanto o e-mail quanto o push.
 
 Para fazer isso, em **Resumo do público**, selecione enviar essa campanha apenas para "usuários com aceitação". Essa opção verificará se apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que têm a capacitação push ativada por padrão.
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 캠페인 세부 정보 내보내기 Braze 엔드포인트에 대한 세부 정보를 간략하게 설명합니다."
+description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "이 문서에서는 캠페인 세부 정보 내보내기 Braze 엔
 /캠페인/세부정보
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 지정된 캠페인에 대한 관련 정보를 검색할 수 있으며, 이 정보는 `campaign_id`로 식별할 수 있습니다.
+> 이 엔드포인트를 사용하여 지정된 캠페인에 대한 관련 정보를 검색할 수 있으며, 이 정보는 `campaign_id` 에서 확인할 수 있습니다.
 
 캔버스 데이터를 검색하려면 [캔버스 세부 정보 내보내기]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) 엔드포인트를 참조하세요.
 
@@ -35,7 +35,7 @@ description: "이 문서에서는 캠페인 세부 정보 내보내기 Braze 엔
 | `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 예시 요청
+## 요청 예시
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -215,7 +215,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 전환 행동
 
-`conversion_behaviors` 배열에는 캠페인에 설정된 각 전환 이벤트 행동에 대한 정보가 포함됩니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어 전환 이벤트 A는 배열의 첫 번째 항목이고 전환 이벤트 B는 두 번째 항목입니다. 다음은 전환 이벤트 동작 응답의 예입니다.
+`conversion_behaviors` 배열에는 캠페인에 대해 설정된 각 전환 이벤트 동작에 대한 정보가 포함됩니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어, 전환 이벤트 A는 배열의 첫 번째 항목이 되고 전환 이벤트 B는 두 번째 항목이 되는 식입니다. 다음은 전환 이벤트 동작 응답의 예시입니다:
 
 #### 이메일 클릭
 
@@ -285,7 +285,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)을 참조하세요.
+CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
 {% endapi %}

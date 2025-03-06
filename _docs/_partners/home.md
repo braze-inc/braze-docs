@@ -24,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -120,8 +118,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: Infillion
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -248,8 +246,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/
 - name: Smartling
@@ -316,5 +312,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/contentful/
 - name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
-
+- name: Justuno
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
+- name: Constructor
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
+- name: Email Love
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
 ---

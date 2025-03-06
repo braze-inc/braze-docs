@@ -65,7 +65,7 @@ Selecciona **Crear nuevo catálogo** y, a continuación, elige **Cargar CSV** o 
 5. Haga clic en **Procesar catálogo** para crear el catálogo.
 
 {% alert note %}
-Este tipo de datos no se puede editar una vez configurado el catálogo.
+Este tipo de datos no se puede editar una vez configurado el catálogo. Además, un valor `NULL` no es compatible con la carga de CSV y se tratará como una cadena.
 {% endalert %}
 
 También puede utilizar plantillas en un nombre de catálogo. Por ejemplo, puede utilizar lo siguiente:

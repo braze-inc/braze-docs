@@ -60,6 +60,12 @@ You may be seeing more clicks than opens for any of the following reasons:
 - Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
 - Users reopen an email that they previewed earlier.
 
+### Why am I seeing zero email opens and clicks?
+
+You may be seeing zero email opens and clicks if there's a misconfiguration with your tracking domain. This can be due to any of the following reasons:
+- There is an SSL issue where tracking URLs are `http` instead of `https`.
+- There is an issue with your CDN where the user agent string on the open events, click events, or both aren't populating.
+
 ### What are the potential risks of triggering server clicks?
 
 Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in users unsubscribing. 

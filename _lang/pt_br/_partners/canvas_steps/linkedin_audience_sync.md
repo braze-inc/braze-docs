@@ -43,7 +43,7 @@ No dashboard da Braze, acesse **Parceiros de tecnologia** e selecione **LinkedIn
 
 ![A página de tecnologia do LinkedIn em Braze inclui uma seção de Visão Geral e uma seção de Sincronização de Público do LinkedIn com o botão LinkedIn Conectado.][3]{: style="max-width:75%;"}
 
-Em seguida, você será redirecionado para a página do LinkedIn OAuth para autorizar a Braze a conceder as permissões relacionadas à integração do Audience Sync. Depois de selecionar **Confirm (Confirmar**), você será redirecionado de volta ao Braze para selecionar com quais contas de anúncios do LinkedIn você deseja sincronizar. 
+Em seguida, você será redirecionado para a página do LinkedIn OAuth para autorizar a Braze a conceder as permissões relacionadas à integração do Audience Sync. Depois de selecionar **Confirm (Confirmar)**, você será redirecionado de volta ao Braze para selecionar com quais contas de anúncios do LinkedIn você deseja sincronizar. 
 
 !["Braze Self Service" é selecionado como a conta de anúncio para conectar.][7]{: style="max-width:75%;"}
 
@@ -92,7 +92,7 @@ Digite um nome para o novo público, selecione **Add Users to Audience (Adiciona
 - Nome e sobrenome
 - GAID para Android
 
-Em seguida, salve seu público clicando no botão **Create Audience (Criar público** ) na parte inferior do editor de etapas.
+Em seguida, salve seu público clicando no botão **Create Audience (Criar público)** na parte inferior do editor de etapas.
 
 ![Um exemplo de público "leads" com a conta de anúncio Braze selecionada, público "leads", a ação de adicionar usuários ao público, e e-mail, GAID do Android e primeiro e último nome como campos para correspondência.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 

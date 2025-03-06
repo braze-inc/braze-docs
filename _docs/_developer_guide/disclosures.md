@@ -1,8 +1,8 @@
 ---
+page_order: 99
 nav_title: Disclosures
 article_title: Disclosures and Qualifications
 layout: dev_guide
-page_order: 100
 guide_top_header: "Disclosures"
 guide_top_text: "Braze has you covered! Check out the following articles!"
 
@@ -18,13 +18,13 @@ guide_featured_list:
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Innovation Statement
-    link: /docs/help/innovation_statement/
+    link: /docs/innovation_statement/
     image: /assets/img/braze_icons/asterisk-01.svg
   - name: Security Qualifications
     link: /docs/developer_guide/disclosures/security_qualifications/
     image: /assets/img/braze_icons/user-square.svg
   - name: Data Protection Technical Assistance
-    link: /docs/help/dp-technical-assistance/
+    link: /docs/dp-technical-assistance/
     image: /assets/img/braze_icons/globe-04.svg
 
 ---

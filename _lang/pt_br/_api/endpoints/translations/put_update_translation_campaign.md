@@ -38,11 +38,11 @@ Não há parâmetros de jornada para este endpoint.
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obrigatória | String | O ID de sua campanha. |
-| `message_variation_id` | Obrigatória | String | O ID da sua mensagem. |
+| `message_variation_id` | Obrigatória | String | O ID de sua mensagem. |
 |`locale_id`| Obrigatória | String | O ID da localização. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Nota todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados em **Suporte Multilíngue** configurações ou na resposta da solicitação GET.
+Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações do **Suporte multilíngue** ou na resposta da solicitação GET.
 
 ## Exemplo de solicitação
 
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Exemplo de resposta de erro
 
-O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [Resolução de problemas](#troubleshooting) para saber mais sobre os erros que você pode encontrar.
+O código de status `400` poderia retornar o seguinte corpo de resposta. Consulte [Solução de problemas](#troubleshooting) para obter mais informações sobre os erros que você pode encontrar.
 
 ```json
 {
@@ -87,18 +87,18 @@ O código de status `400` pode retornar o seguinte corpo de resposta. Consulte [
 
 ## Solução de problemas
 
-A tabela a seguir lista os possíveis erros retornados e suas etapas de solução de problemas associadas.
+A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas.
 
 | Mensagem de erro                           | Solução de problemas                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirme se o ID da campanha corresponde à campanha que você está traduzindo.                   |
 | `INVALID_LOCALE_ID`                     | Confirme se o ID da localização existe na tradução da mensagem.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirme se o seu ID de mensagem está correto.                                                |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirme se o ID da mensagem está correto.                                                |
 | `INVALID_TRANSLATION_OBJECT`            | IDs de tradução não correspondem ou o texto traduzido excede os limites.                  |
 | `MESSAGE_NOT_FOUND`                     | Verifique se a mensagem a ser traduzida está correta.                                           |
 | `LOCALE_NOT_FOUND`                      | Confirme se a localização existe em suas configurações de vários idiomas.                         |
 | `MISSING_TRANSLATIONS`                  | Os IDs de tradução devem corresponder à mensagem.                                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | As configurações de vários idiomas não estão ativadas para o seu espaço de trabalho.                       |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | As configurações de vários idiomas não estão ativadas em seu espaço de trabalho.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Somente as campanhas de e-mail ou as mensagens de canva com e-mails podem ser traduzidas.             |
 | `UNSUPPORTED_CHANNEL`                   | Somente mensagens em campanhas de mensagens ou mensagens de canvas com e-mails podem ser traduzidas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

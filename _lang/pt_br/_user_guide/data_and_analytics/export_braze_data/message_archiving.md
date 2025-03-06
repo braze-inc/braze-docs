@@ -176,7 +176,7 @@ Se seu bucket de armazenamento em nuvem não puder ser acessado, o Braze tentar�
 
 ### O que acontecerá se minhas credenciais forem inválidas?
 
-Se suas credenciais de armazenamento em nuvem se tornarem inválidas em algum momento, o Braze não poderá salvar nenhuma mensagem em seu bucket de armazenamento em nuvem, e essas mensagens serão perdidas. Recomendamos configurar a preferência [de notificação de erros de credenciais da AWS]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences) para que você receba alertas sobre qualquer problema com as credenciais.
+Se suas credenciais de armazenamento em nuvem se tornarem inválidas em algum momento, o Braze não poderá salvar nenhuma mensagem em seu bucket de armazenamento em nuvem, e essas mensagens serão perdidas. Recomendamos configurar a preferência de [notificação de erros de credenciais da AWS]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences) para que você receba alertas sobre qualquer problema com as credenciais.
 
 ### Por que o registro de data e hora do meu arquivo `sent_at` é ligeiramente diferente do registro de data e hora enviado no Currents?
 

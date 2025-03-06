@@ -134,7 +134,7 @@ Com as tags e os disparadores configurados, você também precisará implementar
 
 Depois que o Google Tag Manager estiver instalado em seu app, adicione um provedor de tag personalizado para chamar os métodos do Braze SDK com base nas tags que você configurou no Google Tag Manager.
 
-Certifique-se de anotar o "Caminho da Classe" para o arquivo - é isso que você irá inserir ao configurar uma tag no [Google Tag Manager](https://tagmanager.google.com/) console.
+Certifique-se de anotar o "Caminho da Classe" para o arquivo - é isso que você irá inserir ao configurar uma tag no console do [Google Tag Manager](https://tagmanager.google.com/).
 
 Este exemplo mostra uma das muitas maneiras de estruturar seu provedor de tag personalizado, em que determinamos qual método do Braze SDK deve ser chamado com base no par de valores-chave `actionType` enviado pela tag GTM.
 

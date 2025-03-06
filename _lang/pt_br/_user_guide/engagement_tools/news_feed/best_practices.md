@@ -11,9 +11,7 @@ hidden: true
 
 # Práticas recomendadas do feed de notícias
 
-{% alert note %}
-O feed de notícias será descontinuado. A Braze recomenda que os clientes que usam nossa ferramenta de feed de notícias migrem para o canal de envio de mensagens Content Cards - é mais flexível, personalizável e confiável. Confira o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para saber mais.
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 > O feed de notícias do Braze é um fluxo dinâmico e direcionado de conteúdo rico. Ele oferece uma maneira eficiente de alcançar os usuários com conteúdo continuamente atualizado que não exige trabalho de desenvolvimento adicional. Esse conteúdo pode ser direcionado a vários segmentos e programado da mesma forma que outras mensagens do Braze. Cada cartão consiste em um título, um resumo, uma imagem e, opcionalmente, um URL. O feed também inclui a capacidade de fazer deep linking dentro do app, fazer link diretamente para a App Store, Google Play, etc. ou direcionar os usuários para uma visualização na Web. Esse elemento exclusivo da interface do usuário do Braze deve ser ativado durante a [integração][1]. Não deixe de discutir isso com seus desenvolvedores.
 

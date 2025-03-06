@@ -7,7 +7,7 @@
 {% endif %}
 
 {% if include.metric == "Audience" %}
-<i>O público</i> é a porcentagem de usuários que receberam uma determinada mensagem. Esse número é recebido do Braze.
+O <i>público</i> é a porcentagem de usuários que receberam uma determinada mensagem. Esse número é recebido do Braze.
 {% endif %}
 
 {% if include.metric == "Bounces" %}
@@ -15,7 +15,7 @@
 {% endif %}
 
 {% if include.metric == "Estimated Real Opens" %}
-A estimativa de aberturas <i>reais</i> é uma estimativa de quantas aberturas únicas haveria se as aberturas de máquina não existissem, e é o resultado de um modelo estatístico proprietário da Braze.
+A <i>estimativa de aberturas reais</i> é uma estimativa de quantas aberturas únicas haveria se as aberturas de máquina não existissem, e é o resultado de um modelo estatístico proprietário da Braze.
 {% endif %}
 
 {% if include.metric == "Help" %}
@@ -31,11 +31,11 @@ Um <i>Soft Bounce</i> é quando um e-mail não é entregue ao destinatário devi
 {% endif %}
 
 {% if include.metric == "Body Click" %}
-As notificações por push de histórias registram um <i>clique no corpo</i> quando a notificação é clicada. Ele não será gravado quando uma mensagem for expandida ou para cliques em botões de ação.
+As notificações por push de histórias registram um <i>clique no corpo da mensagem</i> quando a notificação é clicada. Ele não será gravado quando uma mensagem for expandida ou para cliques em botões de ação.
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>Os cliques no corpo</i> ocorrem quando um usuário clica em uma mensagem que não tem botões (Botão 1, Botão 2) e foi criada com o editor tradicional, e quando uma mensagem criada com o editor de HTML ou o editor de arrastar e soltar usa <code>brazeBridge.logClick()</code> sem argumentos.
+Os <i>cliques no corpo da mensagem</i> ocorrem quando um usuário clica em uma mensagem que não tem botões (Botão 1, Botão 2) e foi criada com o editor tradicional, e quando uma mensagem criada com o editor de HTML ou o editor de arrastar e soltar usa <code>brazeBridge.logClick()</code> sem argumentos.
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
@@ -52,6 +52,10 @@ As notificações por push de histórias registram um <i>clique no corpo</i> qua
 
 {% if include.metric == "Click-to-Open Rate" %}
 A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que foram abertos por um único usuário ou máquina pelo menos uma vez, e está disponível apenas no <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
+{% endif %}
+
+{% if include.metric == "Close Message" %}
+<i>Fechar mensagem</i> é o número total de cliques no botão Fechar da mensagem. Isso só existe para mensagens no app criadas no editor de arrastar e soltar, não no editor tradicional.
 {% endif %}
 
 {% if include.metric == "Confirmed Deliveries" %}
@@ -79,7 +83,7 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Conversions (B, C, D)" %}
-<i>As conversões (B, C, D)</i> são eventos de conversão adicionais adicionados após o evento de conversão primária. Esse é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha do Braze.
+As <i>conversões (B, C, D)</i> são eventos de conversão adicionais adicionados após o evento de conversão primária. Esse é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha do Braze.
 {% endif %}
 
 {% if include.metric == "Total Conversions" %}
@@ -95,7 +99,7 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Delivery Failures" %}
-<i>As falhas de entrega</i> ocorrem quando o SMS não pode ser enviado devido ao transbordamento das filas (envio de SMS em uma taxa maior do que os códigos longos ou curtos podem suportar).
+As <i>falhas de entrega</i> ocorrem quando o SMS não pode ser enviado devido ao transbordamento das filas (envio de SMS em uma taxa maior do que os códigos longos ou curtos podem suportar).
 {% endif %}
 
 {% if include.metric == "Direct Opens" %}
@@ -111,7 +115,7 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Failures" %}
-<i>As falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada porque o prestador de serviço de Internet retornou um hard bounce. Um hard bounce significa uma falha permanente de entregabilidade.
+As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada porque o prestador de serviço de Internet retornou um hard bounce. Um hard bounce significa uma falha permanente de entregabilidade.
 {% endif %}
 
 {% if include.metric == "Influenced Opens" %}
@@ -119,11 +123,11 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>A receita vitalícia</i> é o total de <code>PurchaseEvents</code> valor do preço (em USD) recebido desde o início.
+<i>A receita vitalícia</i> é o total de  <code>PurchaseEvents</code> valor do preço (em USD) recebido desde o início.
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-<i>O valor do tempo de vida por usuário</i> é a média da soma da campanha e da receita do Canva em um determinado dia.
+O <i>valor do tempo de vida por usuário</i> é a média da soma da campanha e da receita do Canva em um determinado dia.
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
@@ -131,7 +135,7 @@ A <i>receita média diária</i> é a <i>receita vitalícia</i> dividida pelo tot
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-<i>As compras diárias</i> são a média do total de compras únicas <code>PurchaseEvents</code> durante o período de tempo.
+As <i>compras diárias</i> são a média do total de compras únicas <code>PurchaseEvents</code> durante o período de tempo.
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -139,7 +143,7 @@ A <i>receita média diária</i> é a <i>receita vitalícia</i> dividida pelo tot
 {% endif %}
 
 {% if include.metric == "Machine Opens" %}
-<i>As aberturas por máquina</i> incluem a proporção de "aberturas" que são afetadas pela proteção de privacidade de e-mail (MPP) da Apple para iOS 15. Por exemplo, se um usuário abrir um e-mail usando o app Mail em um dispositivo Apple, isso será registrado como uma <i>abertura de máquina</i>.
+As <i>aberturas por máquina</i> incluem a proporção de "aberturas" que são afetadas pela proteção de privacidade de e-mail (MPP) da Apple para iOS 15. Por exemplo, se um usuário abrir um e-mail usando o app Mail em um dispositivo Apple, isso será registrado como uma <i>abertura de máquina</i>.
 {% endif %}
 
 {% if include.metric == "Other Opens" %}
@@ -147,7 +151,7 @@ A <i>receita média diária</i> é a <i>receita vitalícia</i> dividida pelo tot
 {% endif %}
 
 {% if include.metric == "Opens" %}
-<i>As aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>aberturas por influência</i> nas quais o SDK da Braze determinou, usando um algoritmo proprietário, que uma notificação por push fez com que um usuário abrisse o aplicativo.
+As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>aberturas por influência</i> nas quais o SDK da Braze determinou, usando um algoritmo proprietário, que uma notificação por push fez com que um usuário abrisse o aplicativo.
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
@@ -155,7 +159,7 @@ A <i>receita média diária</i> é a <i>receita vitalícia</i> dividida pelo tot
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
-<i>Pending Retry (Tentativa pendente</i> ) é o número de solicitações que foram temporariamente rejeitadas pelo servidor de recebimento, mas que ainda tentaram ser reentregues pelo provedor de serviço de e-mail (ESP). O ESP tentará novamente a entrega até que um período de tempo limite seja atingido (normalmente após 72 horas).
+<i>Pending Retry (Tentativa pendente)</i> é o número de solicitações que foram temporariamente rejeitadas pelo servidor de recebimento, mas que ainda tentaram ser reentregues pelo provedor de serviço de e-mail (ESP). O ESP tentará novamente a entrega até que um período de tempo limite seja atingido (normalmente após 72 horas).
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
@@ -171,7 +175,7 @@ O <i>recebimento</i> é definido de forma diferente por canal e pode ser quando 
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>As rejeições</i> ocorrem quando o SMS é rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
+As <i>rejeições</i> ocorrem quando o SMS é rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -241,7 +245,7 @@ O <i>envio para a operadora</i> está obsoleto, mas continuará a ter suporte pa
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Unique Recipients (Destinatários únicos</i> ) é o número de destinatários diários únicos, ou usuários que receberam uma mensagem específica em um dia.
+<i>Unique Recipients (Destinatários únicos)</i> é o número de destinatários diários únicos, ou usuários que receberam uma mensagem específica em um dia.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
@@ -249,7 +253,7 @@ O <i>envio para a operadora</i> está obsoleto, mas continuará a ter suporte pa
 {% endif %}
 
 {% if include.metric == "Unsubscribers or Unsub" %}
-Cancelamento <i>de</i> inscrição ou <i>Unsub</i> é o número de mensagens que resultaram em um cancelamento de inscrição. Os cancelamentos de inscrição ocorrem quando um usuário clica no ink de cancelamento de inscrição da Braze.
+<i>Cancelamentos de inscrição</i> ou <i>Unsub</i> é o número de mensagens que resultaram em um cancelamento de inscrição. Os cancelamentos de inscrição ocorrem quando um usuário clica no ink de cancelamento de inscrição da Braze.
 {% endif %}
 
 {% if include.metric == "Unsubscribes" %}

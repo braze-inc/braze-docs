@@ -168,7 +168,7 @@ Se o deep linking [funcionar corretamente com o ADB](https://developer.android.c
 
 #### Desativar o comportamento da pilha traseira
 
-Se o deep linking [funcionar corretamente com o ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters), mas não funcionar com o Braze push, tente desativar [a pilha traseira](https://developer.android.com/guide/components/activities/tasks-and-back-stack). Para fazer isso, atualize seu arquivo **braze.xml** para incluir:
+Se o deep linking [funcionar corretamente com o ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters), mas não funcionar com o Braze push, tente desativar a [pilha traseira](https://developer.android.com/guide/components/activities/tasks-and-back-stack). Para fazer isso, atualize seu arquivo **braze.xml** para incluir:
 
 ```xml
 <bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>

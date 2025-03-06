@@ -8,11 +8,7 @@ description: "This reference article describes how to create price drop notifica
 
 # Price drop notifications
 
-> Using a combination of price drop notifications through Braze catalogs and a Canvas, you can notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.
-
-{% alert important %}
-Price drop notifications for catalogs are currently in early access. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
+> Use a combination of price drop notifications through Braze catalogs and a Canvas to notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.<br><br>This page covers how price drop notifications work and how you can set up and use them.
 
 When a user triggers a custom event for an item, we'll automatically subscribe them to receive price drop notifications for that item. When the item's price meets your inventory rule (such as a drop larger than 50%), all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 
@@ -36,7 +32,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
     <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
     - **Fallback Catalog:** The catalog used for the subscription if there isn't a `catalog_name` property in the custom event.
     - **Custom event for subscribing:** The Braze custom event used to subscribe a user for catalog notifications. When this event occurs, the user who performed the event will be subscribed.
-    - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications.
+    - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the price drop event triggers, whichever occurs first.
     - **Item ID event property:** The property on the above custom event used to determine the item for a subscription or unsubscription. This property on the custom event should contain an item ID that exists in a catalog. The custom event must contain a `catalog_name` property to specify which catalog this item is in.
    
     - A sample custom event would look like

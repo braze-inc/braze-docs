@@ -11,7 +11,7 @@ tool: Canvas
 
 > Use o modelo de usuário desistente para lembrar os usuários do valor que sua marca traz para eles e incentive o retorno com ofertas e incentivos interessantes com base nos engajamentos anteriores.
 
-Este artigo o guiará por um caso de uso do modelo **Lapsed User (Usuário caduco** ), que foi projetado para a etapa de retenção e fidelidade do ciclo de vida do usuário. Ao terminar, você terá criado um Canva que incentiva os usuários a retornarem ao seu aplicativo com promoções que variam de acordo com o comportamento deles, como, por exemplo, se eles iniciaram uma sessão no aplicativo após receberem uma mensagem promocional.
+Este artigo o guiará por um caso de uso do modelo **Lapsed User (Usuário caduco)**, que foi projetado para a etapa de retenção e fidelidade do ciclo de vida do usuário. Ao terminar, você terá criado um Canva que incentiva os usuários a retornarem ao seu aplicativo com promoções que variam de acordo com o comportamento deles, como, por exemplo, se eles iniciaram uma sessão no aplicativo após receberem uma mensagem promocional.
 
 ## Pré-requisitos
 
@@ -23,7 +23,7 @@ Digamos que estejamos trabalhando para a MovieCanon, um serviço de streaming qu
 
 Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
-Para acessar o modelo de usuário de lapidação, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos de Braze**. Em seguida, ao lado de **Lapsing User**, selecione **Apply Template (Aplicar modelo**). Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
+Para acessar o modelo de usuário de lapidação, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos de Braze**. Em seguida, ao lado de **Lapsing User**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
 ### Etapa 1: Configurar os detalhes 
 

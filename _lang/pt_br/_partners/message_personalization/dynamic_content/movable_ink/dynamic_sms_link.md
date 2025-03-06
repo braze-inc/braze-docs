@@ -65,7 +65,7 @@ Os usuários do Android não precisam salvar sua marca como um contato para rece
 
 ![5]{: style="max-width:30%;"}
 
-Os usuários que não salvaram a sua marca como um contato e ativaram as prévias automáticas terão que selecionar **Toque para carregar** a **prévia** para carregar a imagem da prévia.
+Os usuários que não salvaram a sua marca como um contato e ativaram as prévias automáticas terão que selecionar **Toque para carregar a prévia** para carregar a imagem da prévia.
 
 ![6]{: style="max-width:30%;"}
 

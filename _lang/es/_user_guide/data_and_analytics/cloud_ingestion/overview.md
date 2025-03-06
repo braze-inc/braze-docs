@@ -25,6 +25,7 @@ La ingesta de datos en la nube puede sincronizar datos de las siguientes fuentes
    - Amazon Redshift
    - Databricks 
    - Google BigQuery
+   - Microsoft Fabric
    - Snowflake
 
 - Fuentes de almacenamiento de archivos 
@@ -481,6 +482,27 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE TABLE [braze].[users] (
+    attribute_1 VARCHAR,
+    attribute_2 VARCHAR,
+    attribute_3 VARCHAR,
+    attribute_4 VARCHAR,
+    user_id VARCHAR
+)
+GO
+
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    user_id as EXTERNAL_ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[users] ;
+```
+{% endtab %}
+
 {% endtabs %}
 
 ### Utiliza la marca de tiempo `UPDATED_AT` 

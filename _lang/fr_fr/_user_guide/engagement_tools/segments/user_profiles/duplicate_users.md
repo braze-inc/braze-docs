@@ -78,7 +78,7 @@ Dans l'exemple suivant, Braze utilise l'ID externe de l'utilisateur pour signale
 
 Braze remplit les champs vides du profil conservé avec les valeurs du profil fusionné. Pour obtenir une liste des champs qui seront remplis, reportez-vous à la section [Comportement de fusion.]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior)
 
-### Étape 3 : Fusionner vos doublons
+### Étape 3 : Fusionner vos doublons
 
 Si vous êtes satisfait des résultats de votre aperçu, sélectionnez **Fusionner tous les profils dupliqués**.
 

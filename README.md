@@ -34,7 +34,15 @@ bundle install
 To start your local docs server on localhost `http://127.0.0.1:4000`, run:
 
 ```bash
+# for 'en' language:
 rake
+
+# for other langauges:
+rake es
+rake fr
+rake ja
+rake ko
+rake pt_br
 ```
 
 To stop your server, reopen the terminal and press **Control**+**C**.

@@ -80,7 +80,7 @@ Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dy
 <br><br>
 ### Step 3: Finishing the campaign
 
-Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on the different components of a Braze in-app message.
+Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) on the different components of a Braze in-app message.
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}

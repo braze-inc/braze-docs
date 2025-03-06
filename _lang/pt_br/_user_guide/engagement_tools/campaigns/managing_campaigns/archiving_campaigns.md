@@ -28,11 +28,11 @@ Também há ações em massa que podem ser usadas marcando as caixas de seleçã
 Embora a seleção de uma campanha arquivada permita que você visualize seus resultados anteriores, não será possível editar a campanha. Você precisará desarquivar a campanha para editá-la. Para desarquivar uma campanha:
 
 2. Passe o mouse sobre a linha da campanha arquivada e selecione o menu <i class="fas fa-ellipsis-vertical"></i>. 
-3. Selecione **Unarchive (Desarquivar**).
+3. Selecione **Unarchive (Desarquivar)**.
 
-O desarquivamento de uma campanha não a torna ativa. Isso apenas atualiza o status de sua campanha para **Active (Ativo**). Nesse ponto, você pode editar e revisar como a campanha está configurada, e sua campanha será interrompida e não enviará nenhuma mensagem.
+O desarquivamento de uma campanha não a torna ativa. Isso apenas atualiza o status de sua campanha para **Active (Ativo)**. Nesse ponto, você pode editar e revisar como a campanha está configurada, e sua campanha será interrompida e não enviará nenhuma mensagem.
 
-Se quiser retomar a campanha e começar a enviar mensagens, selecione o ícone de engrenagem ao lado da campanha e selecione **Resume (Retomar**).
+Se quiser retomar a campanha e começar a enviar mensagens, selecione o ícone de engrenagem ao lado da campanha e selecione **Resume (Retomar)**.
 
 {% alert warning %}
 Quando você arquivar um segmento, todas as campanhas que o utilizarem também serão arquivadas.

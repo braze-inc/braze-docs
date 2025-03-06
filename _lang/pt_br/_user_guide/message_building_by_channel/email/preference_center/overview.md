@@ -45,7 +45,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 
 ### Etapa 1: Use o ponto de extremidade Criar centro de preferências
 
-Vamos começar a criar um centro de preferências usando o [ponto de extremidade Criar centro de preferências]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Para personalizar a Central de Preferências, é possível incluir HTML que se alinhe à sua marca nos campos `preference_center_page_html` e `confirmation_page_html`.
+Vamos começar a criar um centro de preferências usando o [endpoint Criar centro de preferências]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Para personalizar a Central de Preferências, é possível incluir HTML que se alinhe à sua marca nos campos `preference_center_page_html` e `confirmation_page_html`.
 
 O [endpoint Gerar URL do centro de preferências]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) permite obter o URL do centro de preferências de um usuário específico fora de um e-mail enviado pelo Braze.
 

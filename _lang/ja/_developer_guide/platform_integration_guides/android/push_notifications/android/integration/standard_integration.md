@@ -402,7 +402,7 @@ Braze.configure(this, brazeConfig)
 
 Braze ダッシュボードは、通知がクリックされたときに開くプッシュ通知キャンペーンとキャンバスでのディープリンクまたは Web URL の設定をサポートしています。
 
-![]({% image_buster /assets/img_archive/deep_link_click_action.png %}「ディープリンククリックアクション」)
+![Braze ダッシュボードの「On Click Behavior」設定。ドロップダウンから「Deep Link Into Application」を選択。]({% image_buster /assets/img_archive/deep_link_click_action.png %}"Deep Link Click Action")
 
 #### バックスタックの動作のカスタマイズ
 
@@ -444,7 +444,7 @@ Braze.configure(this, brazeConfig)
 
 ### ステップ5:通知チャネルを定義する
 
-Braze Android SDK は[Android 通知チャネル](https://developer.android.com/preview/features/notification-channels.html) をサポートしています。Braze の通知に通知チャネルの ID が含まれていない場合、または Braze の通知に無効なチャネル ID が含まれている場合、Braze は SDK で定義されているデフォルトの通知チャネルで通知を表示します。ブレーズユーザーは、プラットフォーム内で[Android 通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) を使用して通知をグループ化します。
+Braze Android SDK は[Android 通知チャネル](https://developer.android.com/preview/features/notification-channels.html) をサポートしています。Braze の通知に通知チャネルの ID が含まれていない場合、または Braze の通知に無効なチャネル ID が含まれている場合、Braze は SDK で定義されているデフォルトの通知チャネルで通知を表示します。Braze ユーザーは、プラットフォーム内で[Android 通知チャネル]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) を使用して通知をグループ化します。
 
 デフォルトの Braze 通知チャネルのユーザー向けの名前を設定するには、[`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html) を使用します。
 
@@ -467,7 +467,7 @@ Braze Android SDK は[Android 通知チャネル](https://developer.android.com/
 
 この時点で、Braze から送信された通知を表示できるはずです。これをテストするには、Braze ダッシュボードの [**キャンペーン**] ページにアクセスし、**プッシュ通知**キャンペーンを作成します。[**Android プッシュ**] を選択し、メッセージをデザインします。次に、作成画面で目のアイコンをクリックしてテスト送信者を取得します。現在のユーザーのユーザー ID またはメールアドレスを入力し、[**テストを送信**] をクリックします。デバイスにプッシュが表示されます。
 
-![]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![Braze ダッシュボードのプッシュ通知キャンペーンの'Test' タブ。]({% image_buster /assets/img_archive/android_push_test.png %}"Android Push Test")
 
 プッシュ表示に関する問題については、[トラブルシューティングガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/)を参照してください。
 

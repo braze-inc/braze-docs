@@ -15,6 +15,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Con el editor de arrastrar y soltar, puedes crear mensajes dentro de la aplicación completamente personalizados, tanto en campañas como en Canvas, utilizando la experiencia de edición de arrastrar y soltar.
 
+{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
 Si desea utilizar sus plantillas HTML personalizadas existentes o plantillas creadas por terceros, deberá volver a crearlas en el editor de arrastrar y soltar.
 
 ¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.

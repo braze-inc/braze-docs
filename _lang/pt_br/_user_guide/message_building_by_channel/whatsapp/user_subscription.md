@@ -41,7 +41,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation)
 
 ## Processo de aceitação e recusa do WhatsApp
 
-Atualmente, os usuários podem se inscrever e [aceitação e recusa]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) ao envio de mensagens do WhatsApp de várias maneiras, incluindo [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), através de um site, um thread do WhatsApp, telefone ou pessoalmente. Observe que a aceitação é obrigatória.
+Atualmente, os usuários podem se inscrever e [optar pela aceitação e recusa]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/) ao envio de mensagens do WhatsApp de várias maneiras, incluindo [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), através de um site, um thread do WhatsApp, telefone ou pessoalmente. Observe que a aceitação é obrigatória.
 
 No momento, não há suporte para palavras-chave de aceitação para o canal do WhatsApp, portanto, caberá a você manter uma lista de usuários. O WhatsApp tem uma abordagem retrospectiva para aceitação e limites de frequência, ou seja, se os usuários começarem a denunciar ou bloquear você, seu limite de frequência será reduzido. 
 

@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 업데이트에 대한 자세한 내용을 설명합니다."
+description: "이 기사는 Braze 엔드포인트의 기본 설정 업데이트에 대한 세부 정보를 설명합니다."
 
 ---
 {% api %}
-# 환경설정 센터 업데이트
+# 환경 설정 센터 업데이트
 {% apimethod put %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
@@ -24,7 +24,7 @@ description: "이 문서에서는 환경설정 센터 Braze 엔드포인트 업�
 
 ## 사용량 제한
 
-이 엔드포인트는 워크스페이스당 분당 10건의 요청으로 사용량 제한이 있습니다.
+이 엔드포인트는 작업 공간당 분당 10개의 요청으로 속도 제한이 있습니다.
 
 ## 경로 매개변수
 
@@ -48,9 +48,20 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "unknown macro": {links-tags}
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of: "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values: "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## 요청 매개변수
@@ -61,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| 선택 사항 | 문자열 | 환경설정 센터 및 확인 페이지의 제목입니다. 제목을 지정하지 않으면 페이지의 제목은 기본적으로 "환경설정 센터"로 설정됩니다. |
 |`confirmation_page_html`| 필수 | 문자열 | 확인 페이지의 HTML입니다. |
 |`state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다.|
-|`options` | 선택 사항 | 객체 | 속성: `meta-viewport-content`. 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다. |
+|`options` | 선택 사항 | 객체 | 속성: <br>`meta-viewport-content`: 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다.<br><br> `link-tags`: 페이지에 파비콘을 설정하세요. 설정되면, `<link>` 태그에 rel 속성이 추가됩니다.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시

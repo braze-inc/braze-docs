@@ -1,7 +1,7 @@
 ---
 nav_title: Logging Analytics  
 article_title: Logging Analytics 
-page_order: 4
+page_order: 1
 description: "This article covers how to manually log clicks, events, and analytics for your customized Content Cards."
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Logging analytics 
 
-> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using the default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from the Braze data models and manually log analytics like impressions and clicks. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards). 
+> If you would like to display the Content Cards in a completely custom manner, you can implement your own Content Cards presentation UI. However, data such as impressions, clicks, and dismissals are only handled automatically when using the default card models. When implementing completely custom UI, you will need to handle this data manually. To do this, populate your custom UI with data from the Braze data models and manually log analytics like impressions and clicks. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/). 
 
 ## Listening for card updates
 
@@ -20,7 +20,7 @@ To obtain the Content Card data models, subscribe to Content Card updates. There
 * **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard. 
 
-All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/).
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android]({{site.baseurl}}/developer_guide/platforms/android/content_cards/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/), [Web]({{site.baseurl}}/developer_guide/platforms/web/content_cards/).
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed) as well.
+Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/content_cards/customizing_feed/) as well.
 {% endalert %}
 
 {% endtab %}

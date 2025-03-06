@@ -25,7 +25,7 @@ Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience 
 
 Pour accéder au modèle d'utilisateur de laçage, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de **Utilisateur défaillant**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails 
+### Étape 1 : Régler les détails 
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
@@ -40,13 +40,13 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 ![Étape "Configurer les détails du canvas" avec le nom du canvas "Lapsed User - Visit App" et une brève description du canvas.][1]
 
-### Étape 2 : Attribuez vos événements de conversion
+### Étape 2 : Attribuez vos événements de conversion
 
 Mettez à jour l'**événement de conversion principal - A** pour cibler les utilisateurs de notre application (MovieCanon), et laissez l'**événement de conversion principal - B** comme valeur par défaut de tout achat.
 
 ![" Attribuer des événements de conversion " avec un événement de conversion principal d'un utilisateur qui démarre une session dans une appli spécifique.][2]
 
-### Étape 3 : Adapter la planification de l'entrée
+### Étape 3 : Adapter la planification de l'entrée
 
 Gardons la planification de l'entrée en tant que **Planifié** et les options par défaut basées sur le temps, de sorte que le Canvas vérifie quotidiennement les utilisateurs déchus.
 
@@ -86,7 +86,7 @@ Nous allons maintenant créer notre canvas en personnalisant les étapes du cane
 {: start="2"}
 2\. Personnalisez le composant du parcours d'action intitulé "Démarrer la session ?" en sélectionnant notre application pour le parcours **Démarrer la session**. 
 
-![Parcours d'action pour les sessions lancées dans une application spécifique.][7]
+![Parcours d'action pour les sessions démarrées dans une application spécifique.][7]
 
 {: start="3"}
 3\. Conservez la valeur par défaut de l'étape de l'arbre décisionnel intitulée "Sessions ?", qui définit le groupe ">1 session" comme les utilisateurs qui ont utilisé notre application plus d'une fois au cours du dernier jour calendrier.

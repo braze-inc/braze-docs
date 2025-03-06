@@ -113,7 +113,7 @@ La siguiente etiqueta permite especificar un mensaje para los usuarios con un at
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![Un mensaje de ejemplo en el panel de Braze, utilizando un atributo "nombre" nulo.][36]{: style="max-width:60%;"}
 
 {% raw %}
 ```liquid

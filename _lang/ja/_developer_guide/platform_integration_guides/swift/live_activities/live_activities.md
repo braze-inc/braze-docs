@@ -75,7 +75,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 まず、アクティビティの登録方法を選択します。
 
-- **リモート:**アプリケーションとユーザーのライフサイクル(Push to Start トークンが必要になる前) でできるだけ早く、[`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) メソッドを使用します。次に、[`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) エンドポイントを使用してアクティビティを開始します。
+- **リモート:**アプリケーションとユーザーのライフサイクルのできるだけ早い段階 (およびP ush to Start トークンが必要になる前) に、[`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) メソッドを使用します。次に、[`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) エンドポイントを使用してアクティビティを開始します。
 - **ローカル:**Live Activity のインスタンスを作成し、[`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) メソッドを使用して、管理するBrazeのプッシュトークンs を作成します。
 
 {% tabs local %}

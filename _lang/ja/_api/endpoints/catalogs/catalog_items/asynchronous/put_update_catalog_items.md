@@ -125,7 +125,7 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
 | `ids-not-unique` | 各項目の ID が一意であることを確認します。 |
 | `ids-too-large` | 各アイテムIDの文字数制限は250文字である。 |
 | `item-array-invalid` | `items` はオブジェクト配列でなければなりません。 |
-| `items-missing-ids` | 各項目にIDがあることを確認します。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目にIDがあることを確認します。 |
 | `items-too-large` | 項目値は5000 文字を超えることはできません。 |
 | `invalid-ids` | アイテムID名に使用できる文字は、アルファベット、数字、ハイフン、アンダースコアである。 |
 | `invalid-fields` | APIリクエストで送信するすべてのフィールドが、すでにカタログに存在していることを確認する。これは、エラーに記載されている ID フィールドとは関係ありません。 |

@@ -77,6 +77,6 @@ _Last updated on January 21, 2021_
 [8]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv
 [9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting
+[11]: {{site.baseurl}}/developer_guide/platforms/android/push_notifications/troubleshooting/
 [12]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier
 [13]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment

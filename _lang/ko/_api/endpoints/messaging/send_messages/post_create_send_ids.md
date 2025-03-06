@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: ID 보내기 만들기"
-article_title: "POST: ID 보내기 만들기"
+nav_title: "POST: 보내기 ID 만들기"
+article_title: "POST: 보내기 ID 만들기"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 문서에서는 ID 보내기 만들기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 보내기 ID 만들기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
-# ID 보내기 만들기
+# 보내기 ID 만들기
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하면 각 전송에 대한 캠페인을 만들지 않고도 프로그래밍 방식으로 메시지를 전송하고 메시지 실적을 추적하는 데 사용할 수 있는 전송 ID를 만들 수 있습니다. 
+> 이 엔드포인트를 사용하면 각 전송에 대한 캠페인을 만들지 않고도 프로그래밍 방식으로 메시지를 전송하고 메시지 실적을 추적하는 데 사용할 수 있는 전송 ID를 만들 수 있습니다.
 
 보내기 식별자를 사용하여 메시지를 추적하고 전송하는 것은 프로그래밍 방식으로 콘텐츠를 생성하고 전송하려는 경우에 유용합니다.
 
@@ -47,8 +47,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-|`send_id`| 선택 사항 | 문자열 | [식별자 전송을]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|`send_id`| 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
 ```

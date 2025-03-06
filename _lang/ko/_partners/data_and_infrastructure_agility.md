@@ -133,6 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 - name: LiveRamp
   url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
-- name: 받은편지함 몬스터
+- name: 받은 편지함 몬스터
   url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+- name: 아웃그로우
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
 ---

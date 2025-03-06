@@ -37,8 +37,9 @@ Para añadir un Bloque de Contenido en el editor, haga lo siguiente:
 
 1. Vaya a la pestaña **Filas** del editor y seleccione **Bloques de contenido**. 
 2. Arrastre y suelte su Bloque de contenido en el editor de correo electrónico. 
+3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es 100%. <br><br>![Una flecha de doble cara con una opción para editar la anchura.][1]{: style="max-width:30%;" }<br><br>
 
-Después de añadir el bloque de contenido al editor de correo electrónico mediante la función de arrastrar y soltar, puedes realizar modificaciones en el bloque de contenido que no afectarán al bloque de contenido original que creaste en **Plantillas y medios**. Esto se debe a que los bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
+Después de añadir el Bloque de contenido al editor de correo electrónico, puedes realizar ediciones en el Bloque de contenido que no afectarán al Bloque de contenido original que creaste en **Plantillas y medios.** Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
 
 Puede producirse una desalineación en el editor de arrastrar y soltar cuando se añaden varios bloques de contenido a un único bloque de fila. Pruebe a utilizar bloques de fila separados para mantener la alineación del contenido a nivel de fila.
 
@@ -64,4 +65,5 @@ Para actualizar un Bloque de Contenido existente, puedes editar el Bloque de Con
 
 Para archivar un bloque de contenido, vaya a **Plantillas** > **Bloques de contenido**, seleccione el icono de elipsis vertical <i class="fas fa-ellipsis-vertical"></i> del bloque de contenido y haga clic en **Archivar**. Cuando archivas un Bloque de Contenido, tus mensajes seguirán incluyendo el contenido del bloque archivado. Sin embargo, los bloques de contenido archivados son de sólo lectura, por lo que debe desarchivarlos antes de editarlos. 
 
+[1]: {% image_buster /assets/img_archive/content_block_width.png %}
 [2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

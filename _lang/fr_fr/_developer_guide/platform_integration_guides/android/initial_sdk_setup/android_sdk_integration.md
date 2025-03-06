@@ -44,13 +44,13 @@ dependencies {
 
 L’exemple suivant montre où placer la ligne de dépendance dans votre `build.gradle`. Remarquez que la version utilisée dans l’exemple est ancienne. Consultez les [versions du](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) SDK Android de Braze pour obtenir la version la plus récente du SDK Android de Braze.
 
-![Studio Android affichant le « build.gradle ». Dans cette capture d'écran, le code de dépendance est ajouté au bas du fichier.]({% image_buster /assets/img_archive/androidstudio2.png %})
+![Android studio affiche le fichier "build.gradle", avec le code de dépendance ajouté à la fin du fichier.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Effectuer la synchronisation de Gradle
 
 Veillez à effectuer une synchronisation Gradle pour créer votre projet et intégrer les [ajouts de dépendances](#add-braze-dependency).
 
-![Studio Android affichant une bannière et un bouton en haut de l’application qui dit : « Les fichiers Gradle ont changé depuis la dernière synchronisation du projet. Une synchronisation de projet peut être nécessaire pour que l’EDI fonctionne correctement. Sync Now".]({% image_buster /assets/img_archive/androidstudio3.png %})
+![Une bannière dans Android Studio indiquant : "Les fichiers Gradle ont changé depuis la dernière synchronisation du projet. Une synchronisation de projet peut être nécessaire pour que l’EDI fonctionne correctement. Sync Now".]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## Étape 2 : Configurez le SDK de Braze dans braze.xml
 

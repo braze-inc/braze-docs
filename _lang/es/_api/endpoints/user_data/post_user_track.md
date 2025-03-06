@@ -286,9 +286,9 @@ Si existe `external_id`, el perfil actualizado más recientemente con un ID exte
 Se creará un nuevo perfil y un usuario sólo por correo electrónico. No se creará un alias. El campo de correo electrónico se configurará en test@braze.com, como se indica en el ejemplo de solicitud de actualización de un perfil de usuario por correo electrónico.
 
 ### ¿Cómo se utiliza `/users/track` para importar datos de usuario heredados?
-Puedes enviar datos a través de la API de Braze de un usuario que aún no haya utilizado tu aplicación móvil para generar un perfil de usuario. Si el usuario utiliza posteriormente la aplicación, toda la información posterior a su identificación a través del SDK se fusionará con el perfil de usuario existente que creaste a través de la llamada a la API. Cualquier comportamiento de usuario registrado anónimamente por el SDK antes de la identificación se perderá al fusionarse con el perfil de usuario existente generado por la API.
+Puedes enviar datos a través de la API de Braze de un usuario que aún no haya utilizado tu aplicación móvil para generar un perfil de usuario. Si el usuario utiliza posteriormente la aplicación, toda la información posterior a su identificación mediante el SDK se fusionará con el perfil de usuario existente que creaste mediante la llamada a la API. Cualquier comportamiento de usuario registrado anónimamente por el SDK antes de la identificación se perderá al fusionarse con el perfil de usuario existente generado por la API.
 
-La herramienta de segmentación incluirá a estos usuarios independientemente de si han interactuado o no con la aplicación. Si quieres excluir a los usuarios subidos a través de la API de usuario que aún no han interactuado con la aplicación, añade el filtro `Session Count > 0`.
+La herramienta de segmentación incluirá a estos usuarios independientemente de si han interactuado o no con la aplicación. Si quieres excluir a los usuarios subidos mediante la API de usuario que aún no han interactuado con la aplicación, añade el filtro `Session Count > 0`.
 
 ### ¿Cómo gestiona `/users/track` los eventos duplicados?
 

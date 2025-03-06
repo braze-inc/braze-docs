@@ -116,7 +116,7 @@ Cada solicitud de API enviada a Braze devuelve la siguiente información en los 
 Esta información se incluye intencionadamente en el encabezado de la respuesta a la solicitud API en lugar de en el panel de Braze. Esto permite que tu sistema reaccione mejor en tiempo real mientras interactúas con nuestra API. Por ejemplo, si el valor de `X-RateLimit-Remaining` cae por debajo de un determinado umbral, puede que quieras ralentizar el envío para asegurarte de que se envían todos los correos electrónicos transaccionales. O, si llega a cero, es conveniente pausar todos los envíos hasta que transcurra el tiempo especificado en `X-RateLimit-Reset`.
 
 {% alert note %}
-Las cabeceras HTTP se devolverán en minúsculas. Este comportamiento se ajusta al protocolo HTTP/2, que exige que todos los nombres de los campos de encabezado estén en minúsculas. Esto difiere de HTTP/1.X, donde los nombres de los encabezados no distinguían entre mayúsculas y minúsculas, pero se solían escribir con varias mayúsculas.
+Las cabeceras HTTP se devolverán en minúsculas. Este comportamiento se ajusta al protocolo HTTP/2, que exige que todos los nombres de los campos de encabezado estén en minúsculas. Esto difiere de HTTP/1.X, donde los nombres de los encabezados no distinguían entre mayúsculas y minúsculas, pero solían escribirse con varias mayúsculas.
 {% endalert %}
 
 Si tienes preguntas sobre los límites de la API, ponte en contacto con tu administrador del éxito del cliente o abre un [ticket de soporte][support].

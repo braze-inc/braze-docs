@@ -63,7 +63,7 @@ A guia **Visão geral** contém informações básicas sobre um usuário e suas 
 
 Para saber mais sobre esses dados, consulte [Coleta de dados de usuários][12].
 
-![][2]
+![A guia Visão geral de um perfil de usuário.][2]
 
 ### Guia Engajamento {#engagement-tab}
 
@@ -72,7 +72,7 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 | Categoria de engajamento | Contém |
 | --- | --- |
 | Configurações de contato | Status da inscrição para e-mail, SMS e push, e os grupos de inscrições aos quais esse usuário está associado para esses três canais. Esta seção também inclui informações de changelog para tokens por push. Consulte [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) e [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) para saber como configurar inscrições e aceitações. |
-| Campanhas recebidas | Campanhas que esse usuário recebeu e quando. Selecione uma campanha na lista para visualizá-la. |
+| Campanhas recebidas | As campanhas recebidas são marcadas quando o usuário recebe a campanha ou quando detectamos pela primeira vez os dados de interação de um usuário. Selecione uma campanha na lista para visualizá-la. |
 | Segmentos | Segmentos em que esse usuário está incluído. Selecione um segmento da lista para visualizá-lo. |
 | Estatísticas de comunicação | Quando esse usuário recebeu as últimas mensagens suas de cada canal. |
 | Atribuição da instalação | Informações sobre como e quando um usuário instalou seu app. Saiba mais sobre [como entender as instalações do usuário]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
@@ -81,7 +81,7 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 | Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) e [previsão de eventos]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) para esse usuário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![][3]
+![A guia Engajamento de um perfil de usuário exibe suas configurações de contato e estatísticas de comunicação.][3]
 
 ### Guia Histórico de mensagens
 
@@ -91,7 +91,7 @@ A guia **Histórico de mensagens** do perfil do usuário mostra eventos recentes
 Se tiver comentários sobre essa tabela ou se quiser ver eventos específicos, envie um e-mail para [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) com a linha de assunto "Messaging History Tab Feedback".
 {% endalert %}
 
-![][5]
+![A guia Histórico de mensagens mostra quais campanhas e Canvas um usuário recebeu.][5]
 
 #### Visualização e compreensão de eventos
 
@@ -149,6 +149,5 @@ Embora as estatísticas de abertura de e-mail possam ser úteis de forma agregad
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
+[13]: {{site.baseurl}}/user_guide/engajamento_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

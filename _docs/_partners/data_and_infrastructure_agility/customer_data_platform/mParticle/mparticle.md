@@ -1,6 +1,6 @@
 ---
-nav_title: mParticle
-article_title: mParticle
+nav_title: mParticle by Rokt
+article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# mParticle
+# mParticle by Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,7 +24,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | Requirement | Description |
 | ----------- | ----------- |
 | mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
-| Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). (For example: US-01, US-02, etc.) |
+| Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints) (for example, `US-01` or `US-02`). |
 | Braze app identifier key | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 | Workspace REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -147,7 +147,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 | External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
 | Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |
-| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/basics/#api-limits). |
+| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/api_limits/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![][10]
@@ -212,8 +212,8 @@ Before enabling "Enriched User Attributes" or "Enriched User Identities" we reco
 
 #### Data types
 Not all data types are supported between both platforms.
-- [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
-- [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
+- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
+- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
 
 {% alert note %}
 Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze will ingest these values when they are sent by mParticle but the value will be stored as a string.

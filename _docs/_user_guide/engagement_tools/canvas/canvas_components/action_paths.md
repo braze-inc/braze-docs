@@ -77,7 +77,7 @@ If users enter into an action path multiple times and have multiple entries in t
 | **On** | All entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %} 

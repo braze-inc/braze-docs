@@ -228,6 +228,6 @@ Braze에서 **세그먼트**로 이동하고 새 세그먼트를 생성한 후 *
 
 ![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
-## 사용자 매칭
+## 사용자 일치
 
-식별된 사용자는 `external_id` 또는 `alias` 으로 일치시킬 수 있습니다. 익명 사용자는 `device_id`. 원래 익명 사용자로 생성된 식별된 사용자는 `device_id` 으로 식별할 수 없으며 `external_id` 또는 `alias` 으로 식별해야 합니다.
+식별된 사용자는 `external_id` 또는 `alias`로 일치할 수 있습니다. 익명 사용자는 `device_id`로 매칭될 수 있습니다. 익명 사용자로 처음 생성된 식별된 사용자는 `device_id`로 식별할 수 없으며, `external_id` 또는 `alias`로 식별해야 합니다.

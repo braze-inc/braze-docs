@@ -17,7 +17,7 @@ search_tag: Partner
 |-----------------------|-----------------------------------------------------------------------------------------------|
 | Conta Narvar        | É necessário ter uma conta Narvar para aproveitar essa parceria.                           |
 | Chave da API REST do Braze    | Uma chave da API REST do Braze com permissão `messages.send`. Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**.                                            |
-| Ponto de extremidade REST do Braze   | [O URL do endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), que depende do URL para sua instância da Braze.         |
+| Endpoint REST  do Braze   | O [URL do endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), que depende do URL para sua instância da Braze.         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Recursos suportados

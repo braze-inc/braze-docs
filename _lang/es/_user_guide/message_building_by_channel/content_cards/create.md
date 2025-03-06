@@ -117,6 +117,10 @@ Las siguientes acciones están disponibles para los enlaces de la tarjeta de con
 El tamaño total de los campos de mensaje de la tarjeta de contenido está limitado a 2 KB, calculado sumando la longitud en bytes de los siguientes campos: Título, mensaje, URL de la imagen, texto del enlace, URL(s) del enlace y pares clave-valor (nombres + valores). Los mensajes que superen este tamaño no se enviarán. Tenga en cuenta que esto no incluye el tamaño de la imagen, sino la longitud de la URL de la imagen.
 {% endalert %}
 
+{% alert warning %}
+Cada usuario puede tener hasta 250 tarjetas de contenido no caducadas en su fuente en un momento dado. Cuando se supere este límite, Braze dejará de devolver las tarjetas más antiguas, aunque no se hayan leído. Las tarjetas descartadas también cuentan para este límite de 250 tarjetas, lo que significa que un número elevado de tarjetas descartadas puede reducir el espacio disponible para las nuevas.
+{% endalert %}
+
 ## Paso 4: Configurar ajustes adicionales (opcional)
 
 Puedes utilizar [pares clave-valor][19] para crear categorías para tus tarjetas, crear [múltiples fuentes de tarjetas de contenido]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) y personalizar cómo se ordenan las tarjetas.

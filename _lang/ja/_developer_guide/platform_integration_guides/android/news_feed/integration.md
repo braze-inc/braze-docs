@@ -15,9 +15,7 @@ channel:
 
 > このリファレンス記事では、さまざまなニュースフィードカードの種類、利用可能なカード固有のプロパティ、Android または FireOS アプリケーションのカスタム統合例について説明します。
 
-{% alert note %}
-ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
-{% endalert %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Android では、ニュースフィードは Braze Android UI プロジェクトで使用可能な[フラグメント](http://developer.android.com/guide/components/fragments.html)として実装されます。フラグメントをアクティビティに追加する方法については、[フラグメントに関するGoogleのドキュメント](https://developer.android.com/guide/fragments#Adding "Androidドキュメント:フラグメント")を参照してください。
 

@@ -93,7 +93,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), os m
 
 Depois de selecionar o modelo, você verá uma visão geral do e-mail em **Variantes de e-mail**, que inclui as informações de envio e o corpo do e-mail. 
 
-Em seguida, selecione **Edit Email Body (Editar corpo do e-mail** ) para começar a projetar a estrutura do e-mail no editor de arrastar e soltar. 
+Em seguida, selecione **Edit Email Body (Editar corpo do e-mail)** para começar a projetar a estrutura do e-mail no editor de arrastar e soltar. 
 
 ![A seção "Email Variants" (Variantes de e-mail) com um exemplo de corpo de e-mail.][8]
 

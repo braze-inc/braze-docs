@@ -45,7 +45,7 @@ O resultado é o seguinte:
 
 ### Vários itens
 
-Você não está limitado a apenas um item em uma única mensagem. Você pode usar o modal **Add Personalization** para adicionar até três itens de catálogo por vez. Para adicionar mais itens à sua mensagem, selecione **Add Personalization (Adicionar personalização** ) no criador de mensagens e selecione os itens adicionais do catálogo e as informações a serem exibidas.
+Você não está limitado a apenas um item em uma única mensagem. Você pode usar o modal **Add Personalization** para adicionar até três itens de catálogo por vez. Para adicionar mais itens à sua mensagem, selecione **Add Personalization (Adicionar personalização)** no criador de mensagens e selecione os itens adicionais do catálogo e as informações a serem exibidas.
 
 Veja este exemplo em que adicionamos o endereço `id` de três jogos, Tales, Teslagrad e Acaratus, para **Catalog Items** e selecionamos `title` para **Information to Display**.
 
@@ -176,10 +176,6 @@ Atualmente, o Liquid não pode ser usado dentro de catálogos. Se a personaliza�
 #### Modelo de itens de catálogo, incluindo Liquid
 
 Semelhante ao [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), você deve usar o sinalizador `:rerender` em uma tag Liquid para renderizar o conteúdo Liquid de um item de catálogo. Observe que o sinalizador `:rerender` tem apenas um nível de profundidade, o que significa que não se aplicará a nenhuma chamada de tag Liquid aninhada.
-
-{% alert important %}
-O modelo de itens de catálogo com Liquid está em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
 
 Se um item de catálogo contiver campos de perfil de usuário (dentro de uma tag de personalização do Liquid), esses valores deverão ser definidos no Liquid no início da mensagem e antes do modelo para que o Liquid seja renderizado corretamente. Se o sinalizador `:rerender` não for fornecido, ele renderizará o conteúdo bruto do Liquid.
 

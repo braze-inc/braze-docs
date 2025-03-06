@@ -118,6 +118,7 @@ var custom_word_mapping = {
 };
 // Track Specific tabs to remember on reload
 var tab_track = {
+  'android': 'tb_android',
   'swift': 'tb_ios',
   'objective-c': 'tb_ios',
   'java': 'tb_android',
@@ -292,8 +293,18 @@ $(document).ready(function() {
     else {
       window.history.replaceState(null, null,  window.location.pathname + query_str);
     }
-    if (tab_track[tab_norm]){
-      Cookies.set(tab_track[tab_norm],tab_norm, { expires: 365 });
+    switch(query_name) {
+      case 'sdktab': {
+        Cookies.set('sdktab',tab_norm, { expires: 365 });
+      }
+      case 'sdksubtab': {
+        Cookies.set('sdksubtab',tab_norm, { expires: 365 });
+      }
+      default: {
+        if (tab_track[tab_norm]){
+          Cookies.set(tab_track[tab_norm],tab_norm, { expires: 365 });
+        }
+      }
     }
   }
 
@@ -406,121 +417,242 @@ $(document).ready(function() {
     $('#sidebar_toggle').trigger('click');
   }
 
-  function setTabClass(prefix, postfix, curtab){
-    $('.' + prefix +'tab_toggle_ul.ab-' + prefix +'nav-' + prefix +'tabs li').removeClass(prefix + 'active');
-    $('.' + prefix +'tab_toggle_ul.ab-' + prefix +'nav-' + prefix +'tabs li.' + curtab).addClass(prefix + 'active');
-    $('div.' + prefix +'tab_toggle_div div.ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
-    $('div.' + prefix +'tab_toggle_div div.' + curtab + postfix).addClass(prefix + 'active');
+  function setTabClass(tabtype, prefix, postfix, curtab){
+    var tab_selecter = '.' + tabtype + prefix +'tab_toggle_ul.' + tabtype + 'ab-' + prefix +'nav-' + prefix +'tabs';
+    var content_selecter ='div.' + tabtype + prefix +'tab_toggle_div';
+
+    var last_active_tab = {};
+    var last_active_content = {};
+    $(tab_selecter).each(function (k,v) {
+      var el = $(v);
+      var li = el.children('li')
+      var last_active = li.filter('.' + prefix + 'active');
+      if (last_active.length) {
+        last_active_tab[el.attr('id')] = last_active.first().attr('id');
+      }
+      else {
+        last_active_tab[el.attr('id')] = li.first().attr('id');
+      }
+    });
+
+    $(content_selecter).each(function (k,v) {
+      var el = $(v);
+      var div = el.children('div')
+      var last_active = div.filter('.' + tabtype + 'ab-' + prefix + 'tab-pane ' +  prefix + 'active');
+      if (last_active.length) {
+        last_active_content[el.attr('id')] = last_active.first().attr('id');
+      }
+      else {
+        last_active_content[el.attr('id')] = div.first().attr('id');
+      }
+    });
+
+    $(tab_selecter + ' li').removeClass(prefix + 'active');
+    $(tab_selecter + ' li.' + curtab).addClass(prefix + 'active');
+    $(content_selecter + ' div.' + tabtype + 'ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
+    $('div.' + tabtype + prefix +'tab_toggle_div div.' + curtab + postfix).addClass(prefix + 'active');
+
+    $(tab_selecter).each(function (k,v) {
+      var el = $(v);
+      var li = el.children('li')
+      var last_active = li.filter('.' + prefix + 'active');
+      if (!last_active.length) {
+        $('#' + last_active_tab[el.attr('id')]).addClass(prefix + 'active');
+      }
+    });
+    $(content_selecter).each(function (k,v) {
+      var el = $(v);
+      var div = el.children('div')
+      var last_active = div.filter('.' + tabtype + 'ab-' + prefix + 'tab-pane.' +  prefix + 'active');
+      if (!last_active.length) {
+        $('#' + last_active_content[el.attr('id')]).addClass(prefix + 'active');
+      }
+    });
+    // Refresh Toc
+    $('#toc').toc({
+      headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+      minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+    });
   }
-  function setTabOnlyClass(prefix, postfix, partab, curtab){
-      $('#' + partab + '_nav li').removeClass(prefix + 'active');
-      $('#' + partab + '_nav li.' + curtab).addClass(prefix + 'active');
-      $('#' + partab + ' div.ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
-      $('#' + partab + ' div.' + curtab + postfix).addClass(prefix + 'active');
+
+  function setTabOnlyClass(tabtype, prefix, postfix, partab, curtab){
+    $('#' + partab + '_nav li').removeClass(prefix + 'active');
+    $('#' + partab + '_nav li.' + curtab).addClass(prefix + 'active');
+    $('#' + partab + ' div.' + tabtype + 'ab-' + prefix + 'tab-pane').removeClass(prefix + 'active');
+    $('#' + partab + ' div.' + curtab + postfix).addClass(prefix + 'active');
   }
+
   // Updated Tab switcher
-  $('.tab_toggle').click(function(e){
+  $('.tab_toggle, .sdk-tab_toggle').click(function(e){
     e.preventDefault();
     var $this = $(this);
-    var curtab = $this.attr('data-tab');
-    setTabClass('', '_tab', curtab)
-    setTabState($this.text(), 'tab');
-  });
-  $('.tab_toggle_only').click(function(e){
-    e.preventDefault();
-
-    var $this = $(this);
-    var curtab = $this.attr('data-tab');
-    var partab = $this.attr('data-tab-target');
-    setTabOnlyClass('','_tab', partab, curtab)
-    setTabState($this.text(), 'tab');
-  });
-  $('.ab-tab-content .ab-tab-pane:first-child').addClass('active');
-
-  $('.sub_tab_toggle').click(function(e){
-    e.preventDefault();
-    var $this = $(this);
-    var curtab = $this.attr('data-sub_tab');
-    setTabClass('sub_', '', curtab)
-    setTabState($this.text(), 'subtab');
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype  + 'tab');
+    var tabstate = $this.attr("class").includes('sdk-') ? 'sdktab' : 'tab';
+    setTabClass(tabtype,'', '_tab', curtab)
+    setTabState($this.text(), tabstate);
   });
 
-  $('.sub_tab_toggle_only').click(function(e){
+  $('.tab_toggle_only, .sdk-tab_toggle_only').click(function(e){
     e.preventDefault();
 
     var $this = $(this);
-    var curtab = $this.attr('data-sub_tab');
-    var partab = $this.attr('data-sub_tab-target');
-
-    setTabOnlyClass('sub_','', partab, curtab)
-    setTabState($this.text(), 'subtab');
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype + 'tab');
+    var partab = $this.attr('data-' + tabtype + 'tab-target');
+    var tabstate = $this.attr("class").includes('sdk-') ? 'sdktab' : 'tab';
+    setTabOnlyClass(tabtype,'','_tab', partab, curtab)
+    setTabState($this.text(), tabstate);
   });
-  $('.ab-sub_tab-content .ab-sub_tab-pane:first-child').addClass('sub_active');
 
+  $('.ab-tab-content .ab-tab-pane:first-child, .sdk-tab-content .sdk-ab-tab-pane:first-child').addClass('active');
+
+  $('.sub_tab_toggle, sub_sdk-tab_toggle').click(function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
+    var tabstate = $this.attr("class").includes('sdk-') ? 'sdksubtab' : 'subtab';
+
+    setTabClass('','sub_', '', curtab)
+    setTabState($this.text(), tabstate);
+  });
+
+  $('.sub_tab_toggle_only, .sub_sdk-tab_toggle_only').click(function(e){
+    e.preventDefault();
+
+    var $this = $(this);
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
+    var partab = $this.attr('data-' + tabtype + 'sub_tab-target');
+    var tabstate = $this.attr("class").includes('sdk-') ? 'sdksubtab' : 'subtab';
+
+    setTabOnlyClass(tabtype,'sub_','', partab, curtab)
+    setTabState($this.text(), tabstate);
+  });
+  $('.ab-sub_tab-content .ab-sub_tab-pane:first-child, .sdk-ab-sub_tab-content .sdk-ab-sub_tab-pane:first-child').addClass('sub_active');
 
   let tab_query = (new URLSearchParams(window.location.search).get('tab') || '').replace('_sub_tab','');
   let sub_tab_query = (new URLSearchParams(window.location.search).get('subtab') || '').replace('_sub_tab','');
+  let sdk_tab_query = (new URLSearchParams(window.location.search).get('sdktab') || '').replace('_sub_tab','');
+  let sdk_sub_tab_query = (new URLSearchParams(window.location.search).get('sdksubtab') || '').replace('_sub_tab','');
 
   // if tab is set via param or cookied, activate tab
-  $('.tab_toggle').each(function(e,v){
+  $('.tab_toggle, .sdk-tab_toggle').each(function(e,v){
     var $this = $(v);
-    var curtab = $this.attr('data-tab');
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype + 'tab');
     var curtab_name = $this.text().toLowerCase();
-    if (tab_query && (tab_query == curtab_name)){
-      setTabClass('', '_tab', curtab)
+
+    if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
+      setTabClass(tabtype,'', '_tab', curtab)
     }
     else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie))
-      setTabClass('', '_tab', curtab)
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdktab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', curtab)
+        }
+        else {
+          $('#toc').toc({
+            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+          });
+        }
+      }
+    }
+
+  });
+
+  $('.tab_toggle_only, .sdk-tab_toggle_only').each(function(e,v){
+    var $this = $(v);
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
+    var curtab = $this.attr('data-' + tabtype + 'tab');
+    var partab = $this.attr('data-' + tabtype + 'tab-target');
+    var curtab_name = $this.text().toLowerCase();
+    if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
+      setTabOnlyClass(tabtype,'', '_tab', partab, curtab)
+    }
+    if (tab_track[curtab_name]){
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdktab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', partab, curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'', '_tab', partab,  curtab)
+        }
+        else {
+          $('#toc').toc({
+            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
+            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
+          });
+        }
+      }
     }
   });
 
-  $('.tab_toggle_only').each(function(e,v){
+  $('.sub_tab_toggle, .sub_sdk-tab_toggle').each(function(e,v){
     var $this = $(v);
-    var curtab = $this.attr('data-tab');
-    var partab = $this.attr('data-tab-target');
-    var curtab_name = $this.text().toLowerCase();
-    if (tab_query && (tab_query == curtab_name)){
-      setTabOnlyClass('', '_tab', partab, curtab)
-    }
-    else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie))
-      setTabOnlyClass('', '_tab', partab, curtab)
-    }
-  });
-  $('.sub_tab_toggle').each(function(e,v){
-    var $this = $(v);
-    var curtab = $this.attr('data-sub_tab');
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk' : '';
+    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
     var curtab_name = $this.text().toLowerCase();
     if ((tab_query && (tab_query == curtab_name)) ||
       (sub_tab_query && (sub_tab_query == curtab_name))
       ){
-
-      setTabClass('sub_','', curtab)
+      setTabClass(tabtype,'sub_','', curtab)
     }
     else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie))
-      setTabClass('sub_','', curtab)
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdksubtab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','', curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','', curtab)
+        }
+      }
     }
   });
 
-  $('.sub_tab_toggle_only').each(function(e,v){
+  $('.sub_tab_toggle_only, .sub_sdk-tab_toggle_only').each(function(e,v){
     var $this = $(v);
-    var curtab = $this.attr('data-sub_tab');
-    var partab = $this.attr('data-sub_tab-target');
     var curtab_name = $this.text().toLowerCase();
+    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk' : '';
+
+    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
+    var partab = $this.attr('data-' + tabtype + 'sub_tab-target');
+
     if ((tab_query && (tab_query == curtab_name)) ||
       (sub_tab_query && (sub_tab_query == curtab_name))
       ){
-      setTabOnlyClass('sub_','', partab, curtab)
+      setTabOnlyClass(tabtype,'sub_','', partab, curtab)
     }
     else if (tab_track[curtab_name]){
-      let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-      if (tab_cookie && (curtab_name == tab_cookie))
-      setTabOnlyClass('sub_','', partab, curtab)
+      if (tabtype == 'sdk-') {
+        let tab_cookie = Cookies.get('sdksubtab') || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','',partab, curtab)
+        }
+      }
+      else {
+        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
+        if (tab_cookie && (curtab_name == tab_cookie)) {
+          setTabClass(tabtype,'sub_','',partab, curtab)
+        }
+      }
     }
   });
 
@@ -575,6 +707,7 @@ $(document).ready(function() {
     }
     if (is_external){
       $(this).after(' <i class="fas fa-external-link-alt"></i>');
+      $(this).attr('target', '_blank');
     }
   });
   $('.highlight .highlight .rouge-code pre').each(function(k) {

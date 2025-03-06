@@ -86,7 +86,6 @@ Em `app.json`, adicione o plug-in Braze Expo. Você pode fornecer as seguintes o
 | `enableBrazeIosRichPush`                      | booleano | Somente iOS. Define se deve ativar recursos avançados de push para iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | booleano | Somente iOS. Se deseja ativar os stories por push da Braze para iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | Somente iOS. O grupo de app usado para o iOS Push Stories.                                                                                                       |
-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Exemplo de configuração:

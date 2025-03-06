@@ -18,11 +18,11 @@ Adicionamos atualizações para prévias de notificações por push da Web, incl
 
 ## Configurações de segurança aprimoradas
 
-Adicionamos a capacidade de os clientes definirem regras de complexidade de senha, lista de permissões de IP do dashboard e autenticação de dois fatores, proporcionando mais controle. Saiba mais sobre [as configurações de segurança][46].
+Adicionamos a capacidade de os clientes definirem regras de complexidade de senha, lista de permissões de IP do dashboard e autenticação de dois fatores, proporcionando mais controle. Saiba mais sobre as [configurações de segurança][46].
 
 ## Importações simultâneas de CSV
 
-Agora você pode fazer upload de vários CSVs e processá-los ao mesmo tempo, o que vai ajudar você a agir mais rápido. Saiba mais sobre [as importações de usuários][50].
+Agora você pode fazer upload de vários CSVs e processá-los ao mesmo tempo, o que vai ajudar você a agir mais rápido. Saiba mais sobre as [importações de usuários][50].
 
 ## Atribuições do modelo de tela
 

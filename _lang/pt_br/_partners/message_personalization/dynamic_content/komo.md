@@ -25,7 +25,7 @@ A integração entre a Braze e a Komo permite coletar dados primários e de terc
 | ----------- | ----------- |
 | Conta Komo | Você precisará de uma conta Komo ativa para aproveitar essa parceria. Visite [Komo][7] para iniciar um teste agora. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância.<br><br>Por exemplo, deve ficar parecido com: https://rest.iad-03.braze.com |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância.<br><br>Por exemplo, deve ficar parecido com: https://rest.iad-03.braze.com |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Casos de uso

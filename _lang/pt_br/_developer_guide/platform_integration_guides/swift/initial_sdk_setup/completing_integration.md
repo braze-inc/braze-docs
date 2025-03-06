@@ -90,5 +90,5 @@ Neste ponto, sua integração básica deve estar completa. Braze deve agora esta
 
 ## Recursos adicionais
 
-Nossa [documentação de referência do SDK -](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "documentação completa da classe iOS") \- fornece informações e orientações adicionais sobre cada símbolo do SDK.
+Nossa [documentação de referência do SDK - ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "documentação completa da classe iOS") \- fornece informações e orientações adicionais sobre cada símbolo do SDK.
 

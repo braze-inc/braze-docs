@@ -24,7 +24,7 @@ Esse recurso está temporariamente com disponibilidade limitada. Entre em contat
 
 ## Atualização da landing page de cancelamento de inscrição de e-mail personalizado
 
-A [págin padrão de cancelamento de inscrição de e-mail personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) foi atualizada com um visual mais moderno e elegante.
+A [página padrão de cancelamento de inscrição de e-mail personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) foi atualizada com um visual mais moderno e elegante.
 
 ## SDK do iOS: Melhoria do suporte telefônico para "notched"
 

@@ -153,7 +153,7 @@ O modelo GTM não oferece suporte a propriedades aninhadas em eventos ou compras
 
 ### Atribuições padrão do usuário {#standard-attributes}
 
-Os atributos padrão do usuário, como o nome do usuário, devem ser registrados da mesma forma que os atributos personalizados do usuário. Certifique-se de que os valores que está passando para as atribuições padrão correspondam ao formato esperado especificado na documentação [da classe User](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+Os atributos padrão do usuário, como o nome do usuário, devem ser registrados da mesma forma que os atributos personalizados do usuário. Certifique-se de que os valores que está passando para as atribuições padrão correspondam ao formato esperado especificado na documentação da [classe User](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 Por exemplo, o atributo gender pode aceitar qualquer um dos seguintes valores: `"m" | "f" | "o" | "u" | "n" | "p"`. Portanto, para definir o gênero de um usuário como feminino, crie uma tag HTML personalizada com o seguinte conteúdo:
 

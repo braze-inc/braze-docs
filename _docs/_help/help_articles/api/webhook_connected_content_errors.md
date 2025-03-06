@@ -150,3 +150,36 @@ For webhooks, Braze will automatically retry HTTP requests that were halted by t
 For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
+
+## Automated emails and Message Activity Log entries
+
+### Setting up automated emails
+
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+
+- Name of the workspace
+- A link to the Canvas or campaign
+- Endpoint URL
+- Error code
+- Time the error was last observed
+- Links to the Message Activity Log and related documentation
+
+{% alert note %}
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+The endpoint errors are:
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+These emails are only sent once per day at the workspace level. If no users sign up for these emails, then all company administrators will be notified.
+
+To sign up to receive these emails, do the following:
+
+1. Go to **Settings** > **Admin Settings** > **Notification Preferences**.
+2. Select **Connected Content Errors** and **Webhook Errors** in the **Canvas & Campaigns** section.
+
+### Message Activity Log entries
+
+There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.

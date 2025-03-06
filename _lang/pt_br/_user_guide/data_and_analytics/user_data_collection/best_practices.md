@@ -24,7 +24,7 @@ Se um usuário desconhecido visualizar seu site e, posteriormente, criar uma con
 Quando um usuário insere conteúdo por meio de um formulário da Web, verifique se já existe um usuário com esse e-mail em seu banco de dados. Isso pode ser feito de duas maneiras:
 
 - **Verifique o banco de dados interno (recomendado):** Se houver um registro ou banco de dados externo contendo as informações de usuário fornecidas que exista fora do Braze, consulte-o no momento do envio do e-mail ou da criação da conta para confirmar que as informações ainda não foram capturadas.
-- **[`/users/track` ponto final]({{site.baseurl}}/api/endpoints/user_data/post_user_track/):** Use `email` como identificador, e um novo perfil de usuário será criado se o endereço de e-mail ainda não existir.
+- **[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/):** Use `email` como identificador, e um novo perfil de usuário será criado se o endereço de e-mail ainda não existir.
 
 ### Etapa 2: Registrar ou atualizar o usuário
 
@@ -32,7 +32,7 @@ Quando um usuário insere conteúdo por meio de um formulário da Web, verifique
   - Não crie um novo perfil.
   - Registre um atributo personalizado (por exemplo, `newsletter_subscribed: true`) no perfil do usuário para indicar que o usuário enviou seu e-mail por meio de uma inscrição em boletim informativo. Se houver vários perfis de usuário Braze com o mesmo endereço de e-mail, todos os perfis serão exportados.<br><br>
 - **Se um usuário não existir:**
-  - Crie um perfil somente de alias por meio do [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Esse endpoint  aceitará um [objeto `user_alias`]({{site.baseurl}}/api/objects_filters/user_alias_object/) e criará um perfil somente de alias quando `update_existing_only` estiver definido como `false`. Defina o e-mail do usuário como o alias do usuário para fazer referência a esse usuário no futuro (já que o usuário não terá um `external_id`).
+  - Crie um perfil somente de alias por meio do [endpoint `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Esse endpoint aceitará um [objeto `user_alias`]({{site.baseurl}}/api/objects_filters/user_alias_object/) e criará um perfil somente de alias quando `update_existing_only` estiver definido como `false`. Defina o e-mail do usuário como o alias do usuário para fazer referência a esse usuário no futuro (já que o usuário não terá um `external_id`).
 
 ![Diagrama que mostra o processo de atualização de um perfil de usuário somente de alias. Um usuário envia seu endereço de e-mail e um atributo personalizado, seu código postal, em uma landing page de marketing. Uma seta apontando da coleção da landing page para um perfil de usuário somente de alias mostra uma solicitação da Braze API para o endpoint Track user (Rastrear usuário), com o corpo da solicitação contendo o nome do alias do usuário, o rótulo do alias, o e-mail e o código postal. O perfil tem o rótulo "Alias Apenas usuário criado na Braze" com as atribuições do corpo da solicitação para mostrar os dados que estão sendo refletidos no perfil recém-criado.][3]{: style="max-width:90%;"}
 
@@ -47,7 +47,7 @@ Ao identificar usuários na criação da conta, os usuários somente de alias po
 Para verificar se um usuário é somente de alias, [verifique se o usuário existe](#step-1-check-if-user-exists) em seu banco de dados. 
 - Se houver um registro externo, é possível chamar o endpoint `/users/identify/`. 
 - Se o [endpoint `/users/export/id`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) retornar um `external_id`, você poderá chamar o endpoint `/users/identify/`.
-- Se o ponto de extremidade não retornar nada, não deverá ser feita uma chamada para `/users/identify/`.
+- Se o endpoint não retornar nada, não deverá ser feita uma chamada para `/users/identify/`.
 
 ## Captura de dados de usuários quando as informações de usuário somente de alias já estão presentes
 
@@ -57,7 +57,7 @@ Quando um usuário cria uma conta ou se identifica por meio do envio de e-mail, 
 
 À medida que os dados de seus usuários aumentam, é possível mesclar perfis de usuários duplicados a partir do dashboard do Braze. Esses perfis duplicados devem ser encontrados usando a mesma consulta de pesquisa. Para saber mais sobre como duplicar perfis de usuário, consulte [Mesclar perfis]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#merge-profiles).
 
-Você também pode usar o [ponto de extremidade Merge users (Mesclar usuários]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) ) para mesclar um perfil de usuário em outro. 
+Você também pode usar o [endpoint Merge users (Mesclar usuários)]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) para mesclar um perfil de usuário em outro. 
 
 {% alert note %}
 Depois que os perfis de usuário são mesclados, essa ação não pode ser desfeita.

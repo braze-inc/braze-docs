@@ -14,7 +14,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 /preference_center/v1
 {% endapimethod %}
 
-> Utiliza este punto final para crear un centro de preferencias que permita a los usuarios gestionar sus preferencias de notificación para tus campañas de correo electrónico. Consulta [Crear un centro de preferencias a través de la]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api) API para saber cómo crear un centro de preferencias generado por la API.
+> Utiliza este punto final para crear un centro de preferencias que permita a los usuarios gestionar sus preferencias de notificación para tus campañas de correo electrónico. Consulta [Crear un centro de preferencias con API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) para saber cómo crear un centro de preferencias generado por API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -41,9 +41,18 @@ Authorization: Bearer YOUR-REST-API-KEY
   "confirmation_page_html": "string",
   "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,
   "options": {
-    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag,
+    "links-tags": [
+      {
+        "rel": "string", (required) One of the following "icon", "shortcut icon", or "apple-touch-icon",
+        "type": "string", (optional) Valid values include "image/png", "image/svg", "image/gif", "image/x-icon", "image/svg+xml", "mask-icon",
+        "sizes": "string", (optional),
+        "color": "string", (optional) Use when type="mask-icon",
+        "href": "string", (required)
+      }
+    ]
   }
-}
+} 
 ```
 
 ## Parámetros de la solicitud
@@ -55,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Obligatoria | Cadena | El HTML de la página del centro de preferencias. |
 |`confirmation_page_html`| Obligatoria | Cadena | El HTML de la página de confirmación. |
 |`state` | Opcional | Cadena | Elige `active` o `draft`. Predetermina `active` si no se especifica. |
-|`options` | Opcional | Objeto | Atributos: `meta-viewport-content`. Cuando esté presente, se añadirá una metaetiqueta `viewport` a la página con `content= <value of attribute>`. |
+|`options` | Opcional | Objeto | Atributos: <br>`meta-viewport-content`: Cuando esté presente, se añadirá una metaetiqueta `viewport` a la página con `content= <value of attribute>`.<br><br> `link-tags`: Establece un favicon para la página. Cuando se establece, se añade a la página una etiqueta `<link>` con un atributo rel.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}

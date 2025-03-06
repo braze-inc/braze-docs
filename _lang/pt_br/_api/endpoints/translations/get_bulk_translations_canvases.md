@@ -37,7 +37,7 @@ Esse endpoint tem um limite de frequência de 250.000 solicitações por hora.
 |`message_variation_id`| Obrigatória | String | O ID de sua mensagem. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações **do Suporte multilíngue** ou na resposta da solicitação.
+Note que todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados nas configurações do **Suporte multilíngue** ou na resposta da solicitação.
 
 ## Exemplo de solicitação
 

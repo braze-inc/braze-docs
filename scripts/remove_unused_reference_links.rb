@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Removes unused reference-style links from the bottom of a file, such as:
 #   [1]: {{site.baseurl}}/contributing/your_first_contribution/
 # 

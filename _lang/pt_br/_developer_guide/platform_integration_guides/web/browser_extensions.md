@@ -42,7 +42,7 @@ O Braze pode ser incluído nas seguintes áreas de sua extensão:
 
 O `manifest.json` não requer permissões adicionais como um arquivo de localização empacotado com sua extensão ao integrar o SDK da Braze (`braze.min.js`). 
 
-No entanto, se você usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou referenciar o SDK do Braze a partir de uma URL externa, ou tiver definido uma Política de Segurança de Conteúdo rigorosa para sua extensão, você precisará ajustar a [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) configuração em seu `manifest.json` para permitir fontes de script remotas.
+No entanto, se você usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou referenciar o SDK do Braze a partir de uma URL externa, ou tiver definido uma Política de Segurança de Conteúdo rigorosa para sua extensão, você precisará ajustar a configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu `manifest.json` para permitir fontes de script remotas.
 
 ## Primeiros passos
 
@@ -52,13 +52,13 @@ Antes de começar, leia o [guia de configuração inicial do Web SDK]({{site.bas
 
 Para integrar o Web SDK da Braze, primeiro você precisará baixar uma cópia da biblioteca JavaScript mais recente. Isso pode ser feito usando o NPM ou baixando-o diretamente do [CDN da Braze](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
 
-Alternativamente, se você preferir usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou usar uma cópia do SDK Braze hospedada externamente, tenha em mente que carregar recursos externos exigirá que você ajuste sua [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) configuração em seu `manifest.json`.
+Alternativamente, se você preferir usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou usar uma cópia do SDK Braze hospedada externamente, tenha em mente que carregar recursos externos exigirá que você ajuste sua configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu `manifest.json`.
 
 Depois de baixar, copie o arquivo `braze.min.js` em algum lugar do diretório de sua extensão.
 
 ### Popups de extensão {#popup}
 
-Para adicionar a Braze a uma extensão pop-up, faça referência ao arquivo JavaScript local em seu site `popup.html`, como faria em um site normal. Se você estiver usando o Google Tag Manager, pode adicionar Braze usando nossos [modelos do Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) em vez disso.
+Para adicionar a Braze a uma extensão pop-up, faça referência ao arquivo JavaScript local em seu site `popup.html`, como faria em um site normal. Se você estiver usando o Google Tag Manager, pode adicionar Braze usando nossos [modelos do Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/).
 
 ```html
 <html>

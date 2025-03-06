@@ -81,6 +81,14 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 リセットすることで、認証アプリのトラブル、メール認証が送信されない、SMS の停止やユーザーエラーによるログイン失敗など、よくある認証の問題を解決できます。
 
+## Elevated アクセス
+
+Elevated Accessは、Brazeダッシュボードで機密性の高いアクションを行う際のセキュリティをさらに強化する。アクティブユーザーである場合、ユーザーはセグメンテーションをエクスポートしたりAPIキーを表示したりする前に、アカウントを再確認する必要がある。Elevated アクセスを使用するには、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、[オン] に切り替えます。 
+
+ユーザーが再確認できない場合、中断した場所にリダイレクトされ、機密性の高いアクションを続けることができない。再認証に成功すると、ログアウトしない限り、次の1時間は再認証の必要はない。
+
+![Elevated アクセスのトグル。][5]
+
 ## セキュリティイベントレポートのダウンロード
 
 セキュリティイベントレポートは、アカウントの招待、アカウントの削除、ログイン試行の失敗と成功、その他のアクティビティなどのセキュリティイベントを含む CSV レポートです。これは内部監査を実施するときに利用できます。
@@ -214,12 +222,12 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 ワークスペースごとに環境設定をカスタマイズするには、デフォルトとは異なる設定を持つ環境設定グループを追加します。デフォルト 設定sを、将来作成されるワークスペースsを含め、追加のプリファレンスグループに追加されない任意のワークスペースsにアプリします。  
 
-![]({% image_buster /assets/img/deletion_preferences_1.png %})
+![]({% image_buster /assets/img/deletion_preferences_1.png %}) ワークスペースごとにデータ削除設定をカスタマイズするためのトグルがオンになっている [データ削除設定] セクション。
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} 「ユーザープロファイルの難読化 2」
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} 「ユーザープロファイルの難読化 3」
-
+[5]: {% image_buster /assets/img/elevated_access.png %}
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

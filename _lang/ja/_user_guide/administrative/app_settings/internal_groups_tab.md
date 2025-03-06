@@ -51,7 +51,7 @@ description: "このリファレンス記事では、内部グループについ
 | :------------- | :------------- |
 | 特定ユーザー |外部ユーザーIDまたは電子メールアドレスでユーザーを検索する。|
 |匿名ユーザー| IPアドレスで検索する。次に、追加する各テストユーザーの名前を指定します。これは、[[イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/)] ページですべてのイベントログが関連付けられる名前です。|
-|ユーザーを一括追加する|メールアドレスまたは外部IDのリストをコピーし、所定のセクションに貼り付ける。ダッシュボードでは既知のユーザーのみを追加できます.詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)を参照してください。|
+|ユーザーを一括追加する|メールアドレスまたは外部IDのリストをコピーし、所定のセクションに貼り付ける。ダッシュボードでは既知のユーザーのみを追加できます。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)を参照してください。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### コンテンツテストグループ

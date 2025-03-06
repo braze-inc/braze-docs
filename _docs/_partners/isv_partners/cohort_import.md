@@ -24,6 +24,7 @@ Braze hosts our application on multiple clusters throughout the US and EU. The U
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
+| AU-01 | `https://rest.au-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Endpoint URLs

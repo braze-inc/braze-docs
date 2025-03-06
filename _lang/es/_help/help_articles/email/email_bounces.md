@@ -17,7 +17,7 @@ channel: email
 
 Para más información, consulta [Rebote duro]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#hard-bounce).
 
-## Rebotes blandos
+## Rebotes suaves
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} 
 

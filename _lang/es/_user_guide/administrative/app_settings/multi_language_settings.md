@@ -17,15 +17,40 @@ Para editar y administrar el soporte multilingüe, debes tener el permiso de usu
 ## Añadir una configuración regional
 
 1. Vaya a **Configuración** > **Soporte multilingüe** en **Configuración del espacio de trabajo**.
-2. Selecciona **Añadir configuración regional**.
+2. Selecciona **Añadir configuración regional** y, a continuación, selecciona **Configuración regional predeterminada** o **Atributos personalizados**.<br><br>![El desplegable "Añadir localización" con opciones para seleccionar la localización predeterminada o atributos personalizados.][1]{: style="max-width:40%;"}
 3. Introduce un nombre para la configuración regional.
-4. Para los **atributos de usuario**, seleccione el idioma que desea añadir utilizando el menú desplegable **Idioma**.
-5. (opcional) Seleccione el país que se asociará al idioma.
-6. Selecciona **Añadir configuración regional**. 
+4. Selecciona los atributos de usuario correspondientes a la opción de localización que hayas elegido.
 
-![Ejemplo de francés añadido como configuración regional para usuarios cuyo país es Canadá.][2]{: style="max-width:80%;"}
+{% tabs %}
+{% tab Localización predeterminada %}
+
+En **Configuración regional predeterminada**, utiliza los desplegables para seleccionar el idioma que se va a añadir y, opcionalmente, el país que se va a asociar al idioma.<br><br>![Una ventana llamada "Añadir localización - Idioma y país predeterminados" para especificar el idioma y el país.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% tab Atributos personalizados %}
+
+Para los **atributos personalizados**, utiliza el desplegable para seleccionar el atributo personalizado asociado y, en el campo de texto, introduce el valor.<br><br>![Una ventana llamada "Añadir localización - Atributos personalizados" para especificar el atributo personalizado y el valor.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
+
+{: start="5"}
+5\. Selecciona **Añadir configuración regional**. 
 
 Para conocer los pasos necesarios para utilizar estas configuraciones regionales en sus campañas de correo electrónico y Canvas, consulte [Utilización de configuraciones regionales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/).
+
+## Consideraciones
+
+Al configurar una localización, puedes seleccionar los idiomas a partir de los atributos predeterminados del usuario o de atributos personalizados. No puedes elegir entre ambos.
+
+Puedes seleccionar hasta dos atributos personalizados en una única localización, o hasta dos idiomas predeterminados para atributos de usuario. En ambos casos, el segundo atributo es opcional.
+
+### Apoyo y priorización
+
+- Los usuarios que coinciden con la localización de un atributo personalizado tienen prioridad sobre los usuarios que coinciden con un atributo predeterminado de usuario.
+- La compatibilidad con atributos personalizados se limita a los tipos de cadena y a la clave de comparación `equals`.
+- Si el Soporte elimina un atributo personalizado o cambia el tipo, el usuario ya no podrá pertenecer a esa localización y bajará en la lista de prioridades de las localizaciones a las que pertenezca o recibirá traducciones de marketing predeterminadas.
+- Si una localización no es válida (el atributo personalizado ha cambiado o se ha eliminado), el error aparecerá en la página de **Soporte multilingüe**.
 
 ## Preguntas más frecuentes
 
@@ -38,7 +63,4 @@ Los archivos de traducción se almacenan a nivel de campaña, lo que significa q
 #### ¿El nombre de la configuración regional tiene que seguir un patrón o formato específico?
 No. Puedes utilizar la convención de nomenclatura que prefieras. El nombre de la configuración regional se utiliza al seleccionar la configuración regional en el editor y aparecerá en los encabezados del archivo que descargue con los identificadores de traducción.
 
-#### ¿Puedo utilizar atributos personalizados para definir una configuración regional?
-Actualmente no. Póngase en contacto con el gestor de su cuenta o deje [un comentario sobre el producto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) con más detalles sobre cómo definiría las localidades.
-
-[2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}
+[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

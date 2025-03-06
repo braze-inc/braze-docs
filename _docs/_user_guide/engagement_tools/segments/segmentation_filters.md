@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments. You must recreate the segment you're trying to include by using the same filters.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included or nested into other segments because this may create a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it. Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
     tags:
       - Segment or CSV membership
   - name: Braze Segment Extensions
@@ -216,6 +216,10 @@ glossaries:
       - Retargeting
   - name: Hard Bounced
     description: Segment your users by whether or not their email address has hard bounced (such as the email address is invalid).
+    tags:
+      - Retargeting
+  - name: Soft Bounced
+    description: Segment your users by whether they soft bounced X times in Y days. Segment filters can only look back 30 days, but you can look back further with Segment Extensions.<br><br>This filter operates differently than a soft bounce event in Currents. The Soft Bounced segment filter counts a soft bounce if there was no successful delivery during the 72 hour retry period. In Currents, every unsuccessful retry is sent as a soft bounce event. 
     tags:
       - Retargeting
   - name: Has Marked You As Spam
