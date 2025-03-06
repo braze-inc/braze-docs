@@ -23,15 +23,15 @@ You can also use landing pages for lead generation by embedding the page URL int
 
 Before you start, you'll need to create a [landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/) and a [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
-### Step 1: Verify the URL handle
+### Step 1: Verify the page URL {#page-url}
 
-Braze will use your landing page's URL handle to generate its unique Liquid tag. If you want to change the current URL handle, go to **Messaging** > **Landing Pages**, then open your landing page. Under **URL handle**, you can enter a new URL handle.
+Braze will use your landing page's page URL to generate its unique Liquid tag. If you want to change the current page URL, go to **Messaging** > **Landing Pages**, then open your landing page. Under **page URL**, you can enter a new page URL.
 
 {% alert warning %}
-If you change the URL handle after sending your message, any user that attempts to visit your landing page using the old URL will be sent to a `404` page.
+If you change the page URL after sending your message, any user that attempts to visit your landing page using the old URL will be sent to a `404` page.
 {% endalert %}
 
-![An example URL handle for a landing page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+![An example page URL for a landing page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
 ### Step 2: Generate the Liquid tag
 
@@ -39,7 +39,7 @@ Go to **Messaging** > **Campaigns**, then choose a campaign. In your message edi
 
 ![The 'Add personalization' button in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
-Braze will automatically generate a Liquid tag using your [landing page's URL handle](#step-1-verify-your-url-handle). Refer to the following table to generate your tag:
+Braze will automatically generate a Liquid tag using your [landing page URL](#page-url). Refer to the following table to generate your tag:
 
 |**Personalization type**| Choose **Landing Page**.|
 |**Landing page**|Choose the landing page [you previously created](#prerequisites).|
