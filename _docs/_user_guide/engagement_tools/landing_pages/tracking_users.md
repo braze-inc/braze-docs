@@ -25,7 +25,7 @@ Before you start, you'll need to create a [landing page]({{site.baseurl}}/user_g
 
 ### Step 1: Verify the page URL {#page-url}
 
-Braze will use your landing page's page URL to generate its unique Liquid tag. If you want to change the current page URL, go to **Messaging** > **Landing Pages**, then open your landing page. Under **page URL**, you can enter a new page URL.
+Braze will use your landing page's URL to generate its unique Liquid tag. If you want to change the current page URL, go to **Messaging** > **Landing Pages**, then open your landing page. Under **page URL**, you can enter a new page URL.
 
 {% alert warning %}
 If you change the page URL after sending your message, any user that attempts to visit your landing page using the old URL will be sent to a `404` page.
