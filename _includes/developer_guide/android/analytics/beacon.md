@@ -1,18 +1,3 @@
----
-nav_title: Beacon Integration
-article_title: Beacon Integration for Android and FireOS
-platform: 
-  - Android
-  - FireOS
-page_order: 2
-description: "This reference article covers how to log custom events using Infillion Beacons for Android or FireOS."
-
----
-
-# Beacon integration
-
-> This article will walk you through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.
-
 ## Infillion Beacons
 
 Once you have your Infillion Beacons set up and integrated into your app, you can log custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.

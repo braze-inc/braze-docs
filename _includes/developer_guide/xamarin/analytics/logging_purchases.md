@@ -1,10 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Logging purchases
+## Tracking purchases and revenue
 
-Record in-app purchases using `LogPurchase` to track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+To track purchases and revenue, call the `logPurchase()` method after a successful purchase in your app.
 
-Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
+Keep in mind, Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported. For example:
 
 {% tabs %}
 {% tab Android %}
@@ -25,7 +25,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% endtab %}
 {% endtabs %}
 
-### Log purchases at the order level
+### Logging purchases at the order level
 
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 

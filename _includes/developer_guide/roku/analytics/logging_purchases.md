@@ -1,6 +1,6 @@
 ## Tracking purchases and revenue
 
-To use this feature, add this method call after a successful purchase in your app:
+To track purchases and revenue, add this method call after a successful purchase in your app:
 
 ```brightscript
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity)

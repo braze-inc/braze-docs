@@ -1,6 +1,6 @@
-## Logging purchases
+## Tracking purchases and revenue
 
-To use this feature, add the [`logPurchase()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) call after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
+To tracking purchases and review, call the [`logPurchase()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) method after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);

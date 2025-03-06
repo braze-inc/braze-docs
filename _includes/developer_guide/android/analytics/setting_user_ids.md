@@ -1,7 +1,5 @@
  
-# Setting user IDs
- 
-> This reference article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices.
+## Setting user IDs
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

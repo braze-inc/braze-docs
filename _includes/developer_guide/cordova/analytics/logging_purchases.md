@@ -1,8 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
-## Logging purchases
+## Tracking purchases and revenue
 
-To log purchases, use the `logPurchase()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/) guides for logging purchases.
+To track purchases and revenue, use the `logPurchase()` method. For more in-depth instructions, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/) guides for logging purchases.
 
 ```javascript
 var properties = {};

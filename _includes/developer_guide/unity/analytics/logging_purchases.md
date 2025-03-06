@@ -1,6 +1,6 @@
-## Logging purchases
+## Tracking purchases and revenue
 
-To log purchases, add the following method call after a successful purchase in your app:
+To tracking purchases and review, call the `logPurchase` method after a successful purchase in your app.
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));

@@ -1,7 +1,3 @@
-# Tracking Sessions
-
-> The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the following session semantics. This reference article shows how to subscribe to session updates for your Android or FireOS application.
-
 ## Session lifecycle
 
 If you have integrated Braze using our recommended [activity lifecycle callback integration]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android), `openSession()` and `closeSession()` will be called automatically for each activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds. Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (for example, by navigating to another activity) in the interim.

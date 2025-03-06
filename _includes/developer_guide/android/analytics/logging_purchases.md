@@ -1,15 +1,6 @@
- 
-# Logging purchases
-
-> Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value. This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android or FireOS application.
-
-Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
-
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
-
 ## Tracking purchases and revenue
 
-To use this feature, call [`logPurchase()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
+To track purchases and revenue, call [`logPurchase()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
 
 {% tabs %}
 {% tab JAVA %}

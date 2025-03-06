@@ -1,15 +1,11 @@
-# Location tracking
+## Tracking location
 
-> This article shows how to configure location tracking for your Android or FireOS application.
+Add at least one of the following location permissions to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
 
-Add at least one of the following permissions to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-```
-```xml
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-```
+| Coarse Location | Fine Location |
+|----------|----------|
+| `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />` | `<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />` |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 `ACCESS_FINE_LOCATION` includes GPS data in reporting user location while `ACCESS_COARSE_LOCATION` includes data from the most battery-efficient non-GPS provider available (for example, the network). Coarse location will likely be sufficient for most location data use-cases; however, under the runtime permissions model, receiving location permission from the user implicitly authorizes the collection of fine location data. Take a look at [Location Strategies](https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html) from Android Developers to read more about the differences between these location permissions and how you should use them.
 
