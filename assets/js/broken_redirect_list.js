@@ -1266,6 +1266,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user
 validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/home/';
 validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
+validurls['/docs/help/help_articles/push/no_push_notification_was_received/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
 
 validurls['/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/';
 

@@ -50,5 +50,8 @@ guide_menu_list:
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Troubleshooting
+  link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>
