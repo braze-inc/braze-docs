@@ -471,14 +471,17 @@ This feature is not currently supported on Roku.
 
 ## Prioritizing Banner Cards
 
-If two Banner Card campaigns or Canvas steps share the same placement, the one with the highest priority will appear. 
+If two Banner Card campaigns share the same placement, priority determines which one appears first. Higher-priority messages will be shown before lower-priority ones.
 
-To sort your Banner Cards, select **Priority sorter** in the **Banner Cards in this placement** section. Drag and drop the Banner Cards in the table to set their order from highest to lowest priority.
+You can choose between the following Banner Card priorities:
 
-**High Priority:** These Banner Cards are shown before other messages.
-**Medium Priority:** These Banner Cards are shown from top to bottom.
+- Low priority (shown after other messages)
+- Medium priority
+- High priority (shown before other messages)
 
 By default, the Banner Card priority is set to medium, with the most recently created Banner Cards having the highest relative property.
+
+The high, medium, and low options are buckets, and as such multiple messages could have the same selected priority. To set priorities in these buckets, select **Set Exact Priority**, then drag and drop the campaigns to order them with the correct priority.
 
 ## Handling test sends
 
