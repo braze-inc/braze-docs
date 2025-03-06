@@ -316,7 +316,7 @@ Braze detected invalid encrypted email addresses. Confirm that all email address
 
 There are a few reasons why the number of users imported might not match the total rows in your CSV file:
 
-- **Duplicate external IDs, user alises, Braze IDs, email addresses, or phone numbers:** If there are duplicate external ID columns, this may cause malformed or unimported rows even if the rows are correctly formatted. In some cases this may not report a specific error. Check if there are any duplicate external IDs in your CSV. If so, remove the duplicates and try uploading again.
+- **Duplicate external IDs, user aliases, Braze IDs, email addresses, or phone numbers:** If there are duplicate external ID columns, this may cause malformed or unimported rows even if the rows are correctly formatted. In some cases, this may not report a specific error. Check if there are any duplicate external IDs in your CSV. If so, remove the duplicates and try uploading again.
 - **Accented characters:** Your CSV may have names or attributes that include accents. Ensure your file is UTF-8 encoded to prevent any issues.
 - **Braze ID belongs to an orphaned user:** When a user is orphaned, the remaining user with whom the orphan was merged may still not associate the orphaned user's Braze ID with the profile. In this case, Braze won't find a user to update, so the row won't count as imported.
 - **Empty row:** There is a blank row in the CSV file. This can be checked if you open the CSV in a text editor program (don't use Excel or Sheets). If you upload the CSV with an empty row, there will be an error message saying there are rows with malformed data.
@@ -340,13 +340,13 @@ If a piece of default user data (such as `email` or `first_name`) is imported as
 
 Braze expects each value in a column to be of the same data type. Values that don't match their attribute's data type will cause errors in segmenting.
 
-Additionally, beginning a number attribute with zero will cause issues because numbers starting with zeros are considered strings. When Braze converts that string, it may be treated like an octal value (which uses digits from zero to seven), meaning it will be converted to its corresponding decimal value. For example, if the value in the CSV file is 0130, the Braze profile will show 88. To prevent this issue, use attributes with string datatypes; however, this datatype isn't available in segmentation number comparison.
+Additionally, beginning a number attribute with zero will cause issues because numbers starting with zeros are considered strings. When Braze converts that string, it may be treated like an octal value (which uses digits from zero to seven), meaning it will be converted to its corresponding decimal value. For example, if the value in the CSV file is 0130, the Braze profile will show 88. To prevent this issue, use attributes with string datatypes. However, this data type isn't available in the segmentation number comparison.
 
 ### Default attribute types
 
 Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
 
-Trailing spaces and differences in capitalization can cause a value to be interpreted as invalid. For example, in the following CSV file, only the user in the first row (`brazetest1`) will have their email and push statuses updated successfully, because the accepted values are `unsubscribed`, `subscribed`, and `opted_in`. 
+Trailing spaces and differences in capitalization can cause a value to be interpreted as invalid. For example, in the following CSV file, only the user in the first row (`brazetest1`) will have their email and push statuses updated successfully because the accepted values are `unsubscribed`, `subscribed`, and `opted_in`. 
 
 ```
 external_id,email,email_subscribe,push_subscribe
