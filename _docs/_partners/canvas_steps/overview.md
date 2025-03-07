@@ -1,6 +1,6 @@
 ---
-nav_title: Overview
-article_title: Overview
+nav_title: About Audience Sync
+article_title: About Audience Sync
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 0
 Tool:
@@ -8,9 +8,13 @@ Tool:
 
 ---
 
-# Audience sync overview
+# About Audience Sync
 
 > The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. Through [Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas), brands can dynamically and securely sync first-party user data into the advertising ecosystem to drive marketing and operational efficiencies.
+
+## Feature availability
+
+All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you will need to purchase Audience Sync Pro. Contact your Braze account manager for more details.
 
 ## Use cases
 
@@ -19,21 +23,25 @@ Tool:
 - Retargeting users with ads who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand.
 
+## Overview
+
+<style>
+table td {
+    word-break: break-word;
+}
+</style>
+
 | Destination | Time to sync | Rate limit | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
-| Facebook <br> Instagram | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
-| Google Ads <br> YouTube | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b>Use either mobile ad, or email adress or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
-| TikTok | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
-| Snapchat | -- | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
-| Pinterest | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. | 
-| Criteo | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
-| LinkedIn | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match the rate in the Braze dashboard.</li></ul>{:/} |
+| [Facebook or Instagram](({site.baseurl})/partners/canvas_steps/overview/#use-cases:~:text=Criteo-,Facebook,-Google) | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
+| [Google Ads or YouTube]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email adress or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
+| [TikTok]({{site.baseurl}}/partners/canvas_steps/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
+| [Snapchat]({{site.baseurl}}/partners/canvas_steps/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
+| [Pinterest]({{site.baseurl}}/partners/canvas_steps/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. | 
+| [Criteo]({{site.baseurl}}/partners/canvas_steps/criteo_audience_sync) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
+| [LinkedIn]({{site.baseurl}}/partners/canvas_steps/linkedin_audience_sync) | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match the rate in the Braze dashboard.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
 <sup>When the rate limit is reached, Braze will retry syncs for 13 hours.</sup>
-
-## Feature availability
-
-All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you will need to purchase Audience Sync Pro. Contact your Braze account manager for more details.
 
 ## How it works
 
