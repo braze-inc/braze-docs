@@ -18,7 +18,9 @@ Braze updates the user's segment membership as data is sent back to our servers 
 
 ### Total reachable users calculation
 
-Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel.
+Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
+
+It is possible that the number of total users is different than the number of users reachable by each channel. In addition, not all channels are listed in the reachable users table. For example, Content Cards, webhooks, and WhatsApp aren't shown in the breakdown. This means that the total reachable users count could be greater than the sum of the users for each displayed channel.
 
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][3]
 
@@ -30,7 +32,9 @@ A single user may belong to different reachable user groups. For example, a user
 
 ## Statistics for segment size
 
-Braze provides the following statistics on segment size. All estimated statistics are within 1% above or below the actual value, and the exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
+Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
+
+Braze provides the following statistics on segment size. 
 
 ### Filter statistics
 
@@ -54,11 +58,11 @@ For all segments with [advanced analytics tracking]({{site.baseurl}}/user_guide/
 
 Because the goal of this graph is to give you a sense of overall segment membership trends, the daily count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. 
 
+Braze estimates the segment membership count by querying a subset of your users, and then extrapolating those results to your entire audience. This means that the graph's results provide only an estimate of what segment membership might be on that day, and is expected to also fluctuate from day-to-day because a different sample of users may get queried for this estimate each day.
+
 {% alert note %}
 All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces is to be expected.
 {% endalert %}
-
-Braze estimates the membership count by querying users in a random bucket range daily at 4 am in your company time zone and extrapolated to estimate the total count. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
 
 ### Reasons for signficant changes
 
