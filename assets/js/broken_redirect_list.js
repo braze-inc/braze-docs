@@ -2039,3 +2039,9 @@ validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initiali
 validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/docs/developer_guide/sdk_initalization/?sdktab=unreal%20engine';
 
 // validurls['OLD'] = 'NEW';
+
+if (typeof module !== 'undefined' && module.exports) {
+  // export so i can import validurls from another file
+  module.exports = validurls;
+
+}
