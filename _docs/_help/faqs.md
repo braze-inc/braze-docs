@@ -57,6 +57,9 @@ guide_featured_list:
   - name: "Liquid FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: "Push FAQ"
+    link: /docs/user_guide/message_building_by_channel/push/faq/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 
 guide_menu_title: "Best practices"
