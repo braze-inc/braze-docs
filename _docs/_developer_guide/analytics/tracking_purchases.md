@@ -1,14 +1,14 @@
 ---
-nav_title: Logging Purchases
-article_title: Logging purchases through the Braze SDK
-page_order: 5
-description: "Learn how to log purchases through the Braze SDK."
+nav_title: Tracking Purchases
+article_title: Tracking purchases through the Braze SDK
+page_order: 3.3
+description: "Learn how to track purchases through the Braze SDK."
 
 ---
 
-# Logging purchases
+# Tracking purchases
 
-> Learn how to log in-app purchases through the Braze SDK, so you can track your revenue over time and across revenue sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/) using custom events, custom attributes, and purchase events.
+> Learn how to track in-app purchases through the Braze SDK, so you can track your revenue over time and across revenue sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/) using custom events, custom attributes, and purchase events.
 
 {% sdktabs %}
 {% sdktab android %}
