@@ -1,6 +1,6 @@
 ---
-nav_title: Example implementations
-article_title: Example push notification implementations for the Braze Swift SDK
+nav_title: Dynamic APNs Gateway Management
+article_title: Dynamic APNs Gateway Management
 platform: Swift
 page_order: 30
 description: "This page covers how to leverage dynamic APNs gateway management to eliminate the need for manual gateway selection."
