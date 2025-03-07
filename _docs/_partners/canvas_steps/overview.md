@@ -21,14 +21,15 @@ Tool:
 
 | Destination | Time to sync | Rate limit | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
-| Facebook <br> Instagram | Up to 24 hours | 190,000 ad accounts per hour | Yes |  |
-| Google Ads <br> YouTube | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No |  |
-| TikTok | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes |  |
+| Facebook <br> Instagram | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul> |
+| Google Ads <br> YouTube | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b>Use either mobile ad, or email adress or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul> |
+| TikTok | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul> |
 | Snapchat | -- | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
 | Pinterest | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. | 
-| Criteo | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes |  |
-| LinkedIn | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences |  |
+| Criteo | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul> |
+| LinkedIn | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match the rate in the Braze dashboard.</li></ul> |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
+<sup>When the rate limit is reached, Braze will retry syncs for 13 hours.</sup>
 
 ## Feature availability
 
@@ -38,15 +39,15 @@ All Braze customers will immediately have access to Audience Sync to Google and 
 
 To use Audience Sync to Google or Facebook, connect your ad account by searching for the partner on the **Technology Partners** page.
 
-![][3]{: style="max-width:35%;"} ![][4]{: style="max-width:35%;"}
+![Facebook technology partner.][3]{: style="max-width:35%;"} ![Google Ads technology partner.][4]{: style="max-width:35%;"}
 
 After connecting your ads account, you can create a Canvas with an Audience Sync step.
 
-![][22]{: style="max-width:75%;"}
+![Canvas component menu to add the Audience Sync step to the user journey.][22]{: style="max-width:75%;"}
 
 Next, select the partner to sync audiences.
 
-![][19]{: style="max-width:85%;"}
+![Option to select your audience sync partner in the Audience Sync step.][19]{: style="max-width:85%;"}
 
 For each partner, you’ll need to configure the following as part of your Audience Sync step: 
 
@@ -63,17 +64,17 @@ For each Audience Sync destination, the partner may have different requirements 
 
 To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Criteo, you’ll be able to select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
 
-![][5]{: style="max-width:75%;"}
+![Audience Sync Pro with no partners selected yet.][5]{: style="max-width:75%;"}
 
 First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro will provide you 3 allotted Audience Sync Pro destinations, which will be available within each of your workspaces within your dashboard.
 
-![][6]{: style="max-width:65%;"}
+![Option to select up to three partners to connect to Braze.][6]{: style="max-width:65%;"}
 
 After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking on the partner tile.
 
-![][7]{: style="max-width:70%;"}
+![An example of Snapchat and TikTok selected as partners for Audience Sync.][7]{: style="max-width:70%;"}
 
-![][9]{: style="max-width:70%;"}
+![Snapchat Audience Sync settings with the message: "You successfully connected 1 Snapchat account".][9]{: style="max-width:70%;"}
 
 Lastly, create your Audience Sync step in Canvas using this Audience Sync Pro destination.
 
@@ -95,11 +96,11 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the "Ads Tracking Enabled" filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in.
 
-![][2]
+![A Canvas with an entry audience of "Ad Tracking Enabled is true".][2]
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".][1]
+![A Canvas with an entry audience of "opted_in_marketing equals true".][1]
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
