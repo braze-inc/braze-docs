@@ -160,7 +160,7 @@ Now you can proceed as usual with [creating your segment][11].
 
 Yes. You can add multiple events or reference multiple Snowflake tables when using [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
-When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction; however, when creating the segment, you can combine multiple segment extensions with an AND or OR.
+When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction. However, you can combine multiple segment extensions with an AND or OR when creating the segment.
 
 ### Can I archive Segment Extensions if they exist in an active campaign?
 
