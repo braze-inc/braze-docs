@@ -12,42 +12,42 @@ description: "Learn how to track purchases through the Braze SDK."
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/android/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/web/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-{% multi_lang_include developer_guide/android/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/android/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-{% multi_lang_include developer_guide/cordova/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/cordova/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-{% multi_lang_include developer_guide/flutter/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/flutter/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-{% multi_lang_include developer_guide/react_native/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/react_native/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-{% multi_lang_include developer_guide/roku/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/roku/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-{% multi_lang_include developer_guide/unity/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/unity/analytics/tracking_purchases.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-{% multi_lang_include developer_guide/xamarin/analytics/logging_purchases.md %}
+{% multi_lang_include developer_guide/xamarin/analytics/tracking_purchases.md %}
 {% endsdktab %}
 {% endsdktabs %}
