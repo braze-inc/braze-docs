@@ -19,6 +19,17 @@ Tool:
 - Retargeting users with ads who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they’re already loyal consumers of your brand.
 
+| Destination | Time to sync | Rate limit | Lookalike or actalike | Tips |
+| --- | --- | --- | --- | --- |
+| Facebook <br> Instagram | Up to 24 hours | 190,000 ad accounts per hour | Yes |  |
+| Google Ads <br> YouTube | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No |  |
+| TikTok | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes |  |
+| Snapchat | -- | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
+| Pinterest | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. | 
+| Criteo | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes |  |
+| LinkedIn | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences |  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
+
 ## Feature availability
 
 All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you will need to purchase Audience Sync Pro. Contact your Braze account manager for more details.
@@ -38,6 +49,7 @@ Next, select the partner to sync audiences.
 ![][19]{: style="max-width:85%;"}
 
 For each partner, you’ll need to configure the following as part of your Audience Sync step: 
+
 - Ad account
 - Audience 
 - Action to either add or remove users 
