@@ -158,7 +158,7 @@ Each line of frequency caps will be connected using the `AND` operator, and you 
 
 #### Behavior when users are frequency capped on a Canvas step
 
-If a Canvas step has **Advance Audience After Delay (1 hour)** as the advancement behavior and a user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
+If a Canvas user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
 
 ### Delivery rules
 
