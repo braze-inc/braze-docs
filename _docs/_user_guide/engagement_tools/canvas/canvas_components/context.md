@@ -51,6 +51,8 @@ For example, if the context variable data type is set to **Date** but the value 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
 - In your Canvas step analytics, this will be counted as *Not Updated*.
 
+Note that if the context variable doesn't return to any value, or an embedded Connected Content call fails, or types don't match, Braze will exit the user at that particular step.
+
 ## Using context variables with Delay steps
 
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
