@@ -64,7 +64,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 
 Refer to our [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) for more information.
 
-### Logging purchases at the order level
+### Tracking at the order level
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### Reserved keys

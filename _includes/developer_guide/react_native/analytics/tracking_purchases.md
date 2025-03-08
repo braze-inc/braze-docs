@@ -20,7 +20,7 @@ Braze.logPurchase("product_id", 9.99, "USD", 1, {
 If you pass in a value of `10 USD` and a quantity of `3`, this will log three purchases of 10 dollars for a total of 30 dollars to the user's profile. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
 
-### Logging purchases at the order level
+### Tracking at the order level
 
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
