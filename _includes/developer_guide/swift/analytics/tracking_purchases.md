@@ -93,7 +93,7 @@ AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: 
 If you pass in a value of 10 USD and a quantity of 3, that will log to the user's profile as three purchases of 10 dollars for a total of 30 dollars.
 {% endalert %}
 
-### Log purchases at the order level
+### Logging purchases at the order level
 
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 

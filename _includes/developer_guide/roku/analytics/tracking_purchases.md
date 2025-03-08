@@ -16,7 +16,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity, {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
 
-### Log purchases at the order level
+### Logging purchases at the order level
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
 ### REST API
