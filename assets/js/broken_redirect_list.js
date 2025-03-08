@@ -2042,3 +2042,9 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
 // validurls['OLD'] = 'NEW';
+
+if (typeof module !== 'undefined' && module.exports) {
+  // export so i can import validurls from another file
+  module.exports = validurls;
+
+}
