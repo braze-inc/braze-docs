@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Events
+nav_title: Tracking Custom Events
 article_title: Tracking custom events through the Braze SDK
 page_order: 3.1
 description: "Learn how to track custom events through the Braze SDK."
@@ -10,3 +10,209 @@ description: "Learn how to track custom events through the Braze SDK."
 
 > Learn how to track custom events through the Braze SDK.
 
+## Tracking a custom event
+
+To track a custom event, use the event-logging method for your specific SDK. If you're using a wrapper SDK that isn't listed, use the corresponding Android or Swift method instead.
+
+{% tabs %}
+{% tab android %}
+{% subtabs %}
+{% subtab JAVA %}
+```java
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
+```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
+```swift
+AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
+```
+{% endsubtab %}
+{% subtab objective-c %}
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR_EVENT_NAME"];
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab web %}
+```javascript
+braze.logCustomEvent("YOUR_EVENT_NAME");
+```
+{% endtab %}
+
+{% tab flutter %}
+```dart
+braze.logCustomEvent('YOUR_EVENT_NAME');
+```
+{% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.logCustomEvent("YOUR_EVENT_NAME");
+```
+{% endtab %}
+
+{% tab roku %}
+```brightscript
+m.Braze.logEvent("YOUR_EVENT_NAME")
+```
+{% endtab %}
+
+{% tab unity %}
+```csharp
+AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
+```
+{% endtab %}
+{% endtabs %}
+
+## Adding metadata properties
+
+When you track a custom event, you have the option to add metadata about that custom events by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects.
+
+To add metadata properties, use the event-logging method for your specific SDK. If you're using a wrapper SDK that isn't listed, use the corresponding Android or Swift method instead.
+
+{% tabs %}
+{% tab android %}
+{% subtabs %}
+{% subtab java %}
+```java
+Braze.logCustomEvent("YOUR-EVENT-NAME",
+    new BrazeProperties(new JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", new Date())
+        .put("or", new JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", new JSONObject()
+            .put("deeply", new JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+));
+```
+{% endsubtab %}
+{% subtab kotlin %}
+```kotlin
+Braze.logCustomEvent("YOUR-EVENT-NAME",
+    BrazeProperties(JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", Date())
+        .put("or", JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", JSONObject()
+            .put("deeply", JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+))
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
+```swift
+AppDelegate.braze?.logCustomEvent(
+  name: "YOUR-EVENT-NAME",
+  properties: [
+    "you": "can",
+    "pass": false,
+    "orNumbers": 42,
+    "orDates": Date(),
+    "or": ["any", "array", "here"],
+    "andEven": [
+      "deeply": ["nested", "json"]
+    ]
+  ]
+)
+```
+{% endsubtab %}
+{% subtab objective-c %}
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR-EVENT-NAME"
+                       properties:@{
+  @"you": @"can",
+  @"pass": @(NO),
+  @"orNumbers": @42,
+  @"orDates": [NSDate date],
+  @"or": @[@"any", @"array", @"here"],
+  @"andEven": @{
+    @"deeply": @[@"nested", @"json"]
+  }
+}];
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab web %}
+```javascript
+braze.logCustomEvent("YOUR-EVENT-NAME", {
+  you: "can", 
+  pass: false, 
+  orNumbers: 42,
+  orDates: new Date(),
+  or: ["any", "array", "here"],
+  andEven: {
+     deeply: ["nested", "json"]
+  }
+});
+```
+{% endtab %}
+
+{% tab flutter %}
+```dart
+braze.logCustomEvent('custom_event_with_properties', properties: {
+    'key1': 'value1',
+    'key2': ['value2', 'value3'],
+    'key3': false,
+});
+```
+{% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.logCustomEvent("custom_event_with_properties", {
+    key1: "value1",
+    key2: ["value2", "value3"],
+    key3: false,
+});
+```
+{% endtab %}
+
+{% tab roku %}
+```brightscript
+m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
+```
+{% endtab %}
+
+{% tab unity %}
+```csharp
+AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+The `time` and `event_name` keys are reserved and cannot be used as custom event properties.
+{% endalert %}
