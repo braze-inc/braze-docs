@@ -1,8 +1,12 @@
-## Enabling automatic location tracking
+## Enabling location tracking
 
-Go over [Requesting Authorization for Location Services](https://developer.apple.com/documentation/corelocation/requesting_authorization_to_use_location_services) and make sure to configure your application purpose strings. When using Braze location features, your application is responsible for requesting authorization for using location services. 
+### Step 1: Configure your project
 
-To enable location tracking, add the `BrazeLocation` module in the **General** tab of your application configuration page.
+{% alert important %}
+When using Braze location features, your application is responsible for requesting authorization for using location services. Be sure to review [Apple Developer: Requesting authorization to user location services](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).
+{% endalert %}
+
+To enable location tracking, open your Xcode project and select your app. In the **General** tab, add the `BrazeLocation` module.
 
 {% tabs %}
 {% tab swift %}
@@ -41,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab objective-c %}
 
-In your `AppDelegate.m` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling Braze(configuration:). See `BRZConfigurationLocation` for the available configurations.
+In your `AppDelegate.m` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling `Braze(configuration:)`. See `BRZConfigurationLocation` for the available configurations.
 
 ```objc
 #import "AppDelegate.h"
@@ -91,11 +95,9 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-### Passing location data to Braze
+### Step 2: Log the user's location
 
-The following methods can be used to manually set the last known location for the user. These examples assume you’ve assigned the Braze instance as a variable in the AppDelegate.
-
-
+Next, log the user's last-known location to Braze. The following examples assume you’ve assigned the Braze instance as a variable in your `AppDelegate`.
 
 {% tabs %}
 {% tab swift %}
@@ -114,7 +116,7 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude
@@ -135,5 +137,6 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 {% endtab %}
 {% endtabs %}
 
-Refer to [`Braze.User.swift`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/) for more information.
-
+{% alert tip %}
+For more information, see [`Braze.User.swift`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/).
+{% endalert %}
