@@ -50,9 +50,16 @@ In the **Preview & Test** section, select **Multi-language User** to check if yo
 
 ### Editing translations for launched campaigns and Canvases
 
-After a campaign or Canvas has been launched, you can still modify translations when you're in the post-launch draft mode. This applies whether you're editing translations directly in the composer, through CSV upload, or through the API. 
+After a campaign or Canvas has been launched, you can still modify translations when you're in the draft mode. This applies whether you're editing translations directly in the composer, through CSV upload, or through the API. 
 
-Before making any translation updates, the campaign or Canvas must first be saved as a draft. For more details on managing campaigns and Canvases after launch, refer to [Editing launched campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) and [Canvas drafts and post-launch editing]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+Before making any translation updates, the campaign or Canvas must first be saved as a draft.
+
+1. Select **Edit campaign/Canvas** and then make your edits in the composer.
+2. Select **Save as draft**, and then select **Yes** in the modal.
+3. Go to the **Review Summary** step and select **Update campaign/Canvas**.
+4. Select **Update campaign/Canvas** in the modal.
+
+For more details on managing campaigns and Canvases after launch, refer to [Editing launched campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) and [Canvas drafts and post-launch editing]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
 
 ### Duplicating Canvas steps or campaigns, and translations
 
@@ -60,7 +67,7 @@ When duplicating a canvas step or a campaign, whether in the post-launch draft m
 
 ### Using the multi-language API with Canvases
 
-To use the multi-language API with Canvases, you must include the `workflow_id` in the parameter list.
+To use the [multi-language API with Canvases]({{site.baseurl}}/api/endpoints/translations/), you must include the `workflow_id`, `step_id`, and `message_variation_id` in the parameter list.
 
 #### Canvas steps added to post-launch drafts
 
