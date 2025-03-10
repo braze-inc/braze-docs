@@ -53,7 +53,7 @@ For example, if the context variable data type is set to **Date** but the value 
 
 ### JSON types and Connected Content responses
 
-Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. As a workaround, you'll need to enter these results into the this Liquid filter: `as_json_string`. An example is:
+Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. To prevent context variables from being evaluated as strings, enter these results into this Liquid filter: `as_json_string`. An example is:
 
 {%raw%}
 ```liquid
