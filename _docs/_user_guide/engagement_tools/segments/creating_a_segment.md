@@ -128,39 +128,9 @@ Braze has testing filters to target specific users by user ID or email address.
 
 Select **Save**. Now you're ready to start sending messages to your users!
 
-## Segment membership calculation {#segment-membership-calculation}
+## Measuring segment size
 
-Braze updates the user's segment membership as data is sent back to our servers and processed, typically instantaneously. A user's segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
-
-### Total reachable users calculation
-
-Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel.
-
-![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][10]
-
-For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
-
-A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable via those communication channels.
-
-### Statistics for segment size
-
-Braze provides the following statistics on segment size. All estimated statistics are within 1% above or below the actual value, and the exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
-
-#### Filter statistics
-
-For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
-
-![A filter group with a filter for a gender that isn't unknown.][4]{: style="max-width:80%;"}
-
-#### Segment statistics
-
-For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by selecting **Calculate exact statistics**.
-
-Note that:
-- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
-- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+To learn about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Archiving segments
 
@@ -197,13 +167,11 @@ You can specify that only one push notification is sent to each user. When [comp
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
