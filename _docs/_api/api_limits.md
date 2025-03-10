@@ -229,5 +229,5 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
 [45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
 [46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
-[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
-[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/
+[47]: {{site.baseurl}}/api/endpoints/cdi/get_job_sync_status/
+[48]: {{site.baseurl}}/api/endpoints/cdi/post_job_sync/
