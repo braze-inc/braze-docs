@@ -51,7 +51,11 @@ For example, if the context variable data type is set to **Date** but the value 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
 - In your Canvas step analytics, this will be counted as *Not Updated*.
 
-Note that if the context variable doesn't return to any value, or an embedded Connected Content call fails, or types don't match, Braze will exit the user at that particular step.
+Braze will exit a user at the step if:
+
+- The context variable doesn't return to any value.
+- An embedded Connected Content call fails.
+- The context variable types don't match.
 
 ## Using context variables with Delay steps
 

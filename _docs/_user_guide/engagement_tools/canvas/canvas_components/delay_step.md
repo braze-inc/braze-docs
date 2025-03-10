@@ -32,7 +32,11 @@ Personalized delays and extended delays are in early access. Contact your Braze 
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
 
-Note that if the context variable doesn't return to any value, or an embedded Connected Content call fails, or types don't match, Braze will exit the user at that particular step.
+Braze will exit a user at the step if:
+
+- The context variable doesn't return to any value.
+- An embedded Connected Content call fails.
+- The context variable types don't match.
 
 Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
 
