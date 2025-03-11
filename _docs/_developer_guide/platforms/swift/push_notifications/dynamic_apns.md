@@ -55,8 +55,8 @@ This feature improves delivery rates by ensuring push tokens are always routed t
 
 ### Does this feature impact push notification latency?
 
-No, the feature does not introduce additional latency. It simply ensures that notifications are sent through the appropriate APNs gateway.
+No, the feature does not introduce additional latency. It makes sure that notifications are sent through the appropriate APNs gateway.
 
 ### Can I disable this feature?
 
-Dynamic APNs Gateway Management is enabled by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact Braze support.
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact Braze Support.
