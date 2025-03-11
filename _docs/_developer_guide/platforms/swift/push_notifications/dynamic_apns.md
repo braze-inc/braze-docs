@@ -20,11 +20,15 @@ Previously, you would manually selected APNs environments (development or produc
 - **Simplified Configuration:** Developers and marketers no longer need to manually manage APNs gateway settings.
 - **Error Resilience:** Invalid or missing gateway values are gracefully handled, ensuring uninterrupted service.
 
+## Prerequisites
+
+Braze supports Dynamic APNs gateway management for push notifications on iOS with the following SDK version requirement:
+
+{% sdk_min_versions swift:10.0.0 %}
+
 ## How it works
 
-### Device registration
-
-When an iOS app integrates with the Braze Swift SDK (version 10.0.0 or later), it sends device-related data—including apns_gateway (if available)—to the Braze SDK API (v3/data endpoint).
+When an iOS app integrates with the Braze Swift SDK, it sends device-related data, including `apns_gateway` if available, to the Braze SDK API.
 
 The `apns_gateway` value indicates whether the app is using the:
 - Development (dev) APNs environment
@@ -39,13 +43,13 @@ Braze stores the reported gateway value for each device. If a new, valid gateway
 When Braze sends a push notification:
 
 - If a valid gateway value (dev or prod) is stored for the device, Braze uses it to determine the correct APNs environment.
-- If no gateway value is stored, Braze defaults to the APNs environment configured in the App Settings page (manually set by the customer).
+- If no gateway value is stored, Braze defaults to the APNs environment configured in the **App Settings** page.
 
 ## Turning on dynamic APNs gateway management
 
 1. Upgrade to the latest Braze iOS SDK to start using this feature.
-2. Check your APNs credentials in the Braze App Settings page to ensure proper configuration.
-3. Monitor push notification delivery rates in Braze’s reporting dashboard.
+2. Check your APNs credentials in the **App Settings** page to ensure proper configuration.
+3. Monitor push notification delivery rates in the Braze reporting dashboard.
 
 ## Frequently asked questions
 
