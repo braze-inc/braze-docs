@@ -61,7 +61,7 @@ Because the goal of this graph is to give you a sense of overall segment members
 Braze estimates the segment membership count by querying a subset of your users, and then extrapolating those results to your entire audience. This means that the graph's results provide only an estimate of what segment membership might be on that day, and is expected to also fluctuate from day-to-day because a different sample of users may get queried for this estimate each day.
 
 {% alert note %}
-All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces is to be expected.
+All estimates may be higher or lower than the shown value by approximately 1% of your workspace’s entire population size. Larger workspaces with more users are more likely to have estimates that may differ from exact calculations by a higher numerical amount, even if the difference is still 1% of the workspace’s user population. This means that bigger differences between estimates and exact counts among large workspaces are to be expected.
 {% endalert %}
 
 ### Reasons for signficant changes
