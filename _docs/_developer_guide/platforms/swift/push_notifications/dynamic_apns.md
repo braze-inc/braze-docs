@@ -10,15 +10,13 @@ channel:
 
 # Dynamic APNs gateway management for push notifications
 
-> Dynamic Apple Push Notification Service (APNs) gateway management enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment, which eliminates the need for manual gateway selection.
-
-Previously, you would manually selected APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and `BadDeviceToken` errors. The Braze iOS SDK detects and updates the correct APNs gateway based on device-reported data.
+> Dynamic Apple Push Notification Service (APNs) gateway management enhances the reliability and efficiency of iOS push notifications by automatically detecting the correct APNs environment. Previously, you would manually selected APNs environments (development or production) for your push notifications, which sometimes led to incorrect gateway configurations, delivery failures, and `BadDeviceToken` errors.
 
 ## Benefits
 
 - **Improved reliability:** Notifications are always delivered to the correct APNs environment, reducing failed deliveries.
-- **Simplified Configuration:** Developers and marketers no longer need to manually manage APNs gateway settings.
-- **Error Resilience:** Invalid or missing gateway values are gracefully handled, ensuring uninterrupted service.
+- **Simplified configuration:** You no longer need to manually manage APNs gateway settings.
+- **Error resilience:** Invalid or missing gateway values are gracefully handled, ensuring uninterrupted service.
 
 ## Prerequisites
 
@@ -45,17 +43,11 @@ When Braze sends a push notification:
 - If a valid gateway value (dev or prod) is stored for the device, Braze uses it to determine the correct APNs environment.
 - If no gateway value is stored, Braze defaults to the APNs environment configured in the **App Settings** page.
 
-## Turning on dynamic APNs gateway management
-
-1. Upgrade to the latest Braze iOS SDK to start using this feature.
-2. Check your APNs credentials in the **App Settings** page to ensure proper configuration.
-3. Monitor push notification delivery rates in the Braze reporting dashboard.
-
 ## Frequently asked questions
 
 ### Why was this feature introduced?
 
-Previously, customers had to manually configure the APNs gateway, which led to `BadDeviceToken` errors, token invalidation, and potential APNs rate-limiting issues. Dynamic APNs Gateway Management solves these issues by automatically selecting the correct environment.
+With dynamic APNs gateway management, you can automatically select the correct environment. Previously, you had to manually configure the APNs gateway, which could lead to `BadDeviceToken` errors, token invalidation, and potential APNs rate-limiting issues.
 
 ### How does this impact push delivery performance?
 
