@@ -51,10 +51,25 @@ For example, if the context variable data type is set to **Date** but the value 
 - The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
 - In your Canvas step analytics, this will be counted as *Not Updated*.
 
+Braze will exit a user at the step if:
+
+- The context variable doesn't return any value.
+- A call to an embedded Connected Content fails.
+- The context variable types don't match.
+
+### JSON types and Connected Content responses
+
+Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. To prevent context variables from being evaluated as strings, enter these results into this Liquid filter: `as_json_string`. An example is:
+
+{%raw%}
+```liquid
+{% connected_content http://example.com :save product %}
+{{ product | as_json_string }}
+```
+{%endraw%}
+
 ## Using context variables with Delay steps
 
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 
-
 [1]: {% image_buster /assets/img/context_step3.png %}
-

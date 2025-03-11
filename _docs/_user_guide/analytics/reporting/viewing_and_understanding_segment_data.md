@@ -76,11 +76,10 @@ The **Messaging Use** section shows which segments, currently enabled campaigns,
 ![Under Messaging Use, view the campaigns that your segment is being used in.][4]
 
 ### Historical membership
-The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range. 
 
-The historical segment membership count is an estimate, similar to how the segment size is an estimate before you click **Calculate Exact Statistics**. Braze estimates the membership count by querying users in a random bucket range. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
+The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
 
-![Use the Historical Membership dropdown to filter segment membership by date range.][10]
+To learn more about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### User preview
 
@@ -145,5 +144,4 @@ If your company turned on this feature on October 2, and turned on analytics tra
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}
