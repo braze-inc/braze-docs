@@ -132,21 +132,21 @@ Select **Export**. For **Select cookie-filter profile**, select **None**. Then, 
 
 ## Troubleshooting
 
-### Your company incorrectly set up the user's email address
+### Is the user's email address correctly set up?
 
 Confirm in the SAML trace that the `saml2:Attribute Name="email"` field matches the email address the user is using to log in. If you use Microsoft Entra ID, the attribute mapping is `email = user.userprincipalname`.
 
 The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Azure Active Directory, and others).
 
-### Your company doesn't have a valid SAML certificate (x.509 certificate)
+### Do you have a valid SAML certificate (x.509 certificate)?
 
 You can validate your SAML certificate using [this SAML validation tool](https://www.samltool.com/validate_response.php). Note that an expired SAML certificate is also an invalid SAML certificate.
 
-### Your company uploaded the incorrect SAML certificate (x.509 certificate)
+### Did you upload a correct SAML certificate (x.509 certificate)?
 
 Confirm that the certificate in the `ds:X509Certificate` section of the SAML trace matches the one you uploaded to Braze. This doesn't include the `-----BEGIN CERTIFICATE-----` header and `-----END CERTIFICATE-----` footer.
 
-### Your company mistyped or misformatted your SAML certificate (x.509 certificate)
+### Did you mistype or misformat your SAML certificate (x.509 certificate)?
 
 Confirm that there are no white spaces or extra characters in the certificate that you submitted in the Braze dashboard.
 
@@ -160,20 +160,20 @@ THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNy
 -----END CERTIFICATE-----
 ```
 
-### The user has an invalid session token
+### Is the user's session token valid?
 
 Have the affected user [clear their browser's cache and cookies](https://its.uiowa.edu/services/how-clear-cache-and-cookies-your-web-browser), and then try to log in with SAML SSO again.
 
-### Your company hasn't set the RelayState
+### Did you set your RelayState?
 
 To authenticate using your identity provider (IdP), your company needs to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate).
 
-### The user is stuck in a sign-in loop between Okta and Braze
+### Is the user stuck in a sign-in loop between Okta and Braze?
 
 If you're using Okta and the user is stuck in a sign-in loop (in other words, is cycling through SSO and Braze dashboard), you need to set the destination to `https://dashboard-dashboard-instance-here.braze.com`. 
 
 If you're using another IdP, check if your company uploaded the correct SAML or x.509 certificate to Braze.
 
-### Your company is using a manual integration
+### Are you using a manual integration?
 
 If your company didn't download the Braze app from your IdP's app store, you need to download the pre-built integration. For example, if Okta is your IdP, you'd download the Braze app from their [integration page](https://www.okta.com/integrations/braze/).
