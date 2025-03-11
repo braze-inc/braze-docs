@@ -36,7 +36,7 @@ The following SDK versions are required to receive Push Stories:
 To use Push Stories, do the following:
 
 1. Create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/).
-2. Then, select **Push Stories** as your **Notification Type**.
+2. For your **Notification Type**, select **Push Stories**.
 3. Select **iOS** or **Android**. Note that if you select both for a push message, the option to create a Push Story won't appear. 
 
 ### Push Story composer
