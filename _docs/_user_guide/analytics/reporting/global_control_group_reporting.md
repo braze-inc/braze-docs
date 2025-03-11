@@ -36,10 +36,7 @@ Lastly, as with several other reports on our platform, this report displays a [c
 
 Before May 2024, the Global Control Group was excluded from user archival, but the treatment sample group was not. Starting May 2024, both groups are excluded from user archival. This could result in your treatment sample group and Global Control Group having significantly different sizes. The next time you reset your Global Control Group, this discrepancy will resolve and you'll see similar group sizes.
 
-### Considerations 
-
-- Each workspace has a maximum of one Global Control Group and one treatment sample group. The treatment sample group is the same group of users regardless of how you configure your Global Control reporting.
-- There isn't a way to run a Global Control Group report in the dashboard that compares the control group to the entire non-control population. A treatment sample is always used to generate this report. However, if you have Snowflake data sharing, you can use the Random Bucket Number event in conjunction with the Global Control Group event to identify which users are not in the control group and thus can run their own analysis. 
+Note that each workspace has a maximum of one Global Control Group and one treatment sample group. The treatment sample group is the same group of users regardless of how you configure your Global Control reporting.
 
 ## Report metrics
 
