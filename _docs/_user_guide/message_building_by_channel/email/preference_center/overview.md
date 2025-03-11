@@ -128,16 +128,20 @@ If you reference {%raw%}`${preference_center_url}`{%endraw%} in a new message ag
 
 ### Do preference centers support multiple languages?
 
-No. However, you can leverage Liquid when writing the HTML for custom opt-in and opt-out pages. If you're using dynamic links to manage unsubscribes, this is a single link. For example, if you're tracking the unsubscribe rate for Spanish-speaking users, you would need to have either separate campaigns or leverage analytics around Currents, such as looking at when a user unsubscribes and checking the preferred language of that user.
+No. However, you can leverage Liquid when writing the HTML for custom opt-in and opt-out pages. If you're using dynamic links to manage unsubscribes, this is a single link. 
+
+For example, if you're tracking the unsubscribe rate for Spanish-speaking users, you would need either separate campaigns or leverage analytics around Currents (such as looking at when a user unsubscribes and checking the preferred language of that user).
 
 As another example, for tracking unsubscribe rates for Spanish-speaking users, you could add a query parameter string like `?Spanish=true` to the unsubscribe URL if the users' language is German and use a regular unsubscribe link if they aren't:
 
-```
+{%raw%}
+```liquid
 {% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
 {% else %}
 ${unsubscribe_url}
 {% endif %}
 ```
+{%endraw%}
 
 Then, through Currents, you could identify which users speak Spanish and how many click events there were for that unsubscribe link.
 
