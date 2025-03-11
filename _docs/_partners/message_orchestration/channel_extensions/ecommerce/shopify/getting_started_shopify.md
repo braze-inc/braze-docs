@@ -10,12 +10,12 @@ page_order: 1
 
 # Getting started with Shopify
 
-> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
+> This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify) to learn how to finish setting up the Shopify integration with Braze.
 
 ## Integration setup checklist
 
 1. [Implement the Braze Web SDK](#implement-web-sdk)
-2. [Set up Shopify in Braze]({{site.baseurl}}//partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
+2. [Set up Shopify in Braze]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify)
 3. Test the Shopify integration
 
 ## Implementing the Web SDK on your Shopify website {#implement-web-sdk}

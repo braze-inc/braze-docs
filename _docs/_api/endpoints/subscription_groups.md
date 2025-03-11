@@ -10,7 +10,7 @@ page_type: landing
 search_tag: Endpoint
 
 guide_top_header: "Subscription Groups Endpoints"
-guide_top_text: "Use the Subscription Group REST APIs to programmatically manage the subscription groups that you have stored on the Braze dashboard, on the **Subscription Group** page. This applies to both SMS and email subscription groups.<br><br> Looking for guidance on creating subscription groups? Check out our articles for <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS subscription groups</a> and <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>email subscription groups</a>."
+guide_top_text: "Use the Subscription Group REST APIs to programmatically manage the subscription groups that you have stored on the Braze dashboard, on the **Subscription Group** page. This applies to both SMS and email subscription groups.<br><br> Looking for guidance on creating subscription groups? Check out our articles for <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>SMS subscription groups</a> and <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>email subscription groups</a>."
 
 guide_featured_title: ""
 guide_featured_list:
