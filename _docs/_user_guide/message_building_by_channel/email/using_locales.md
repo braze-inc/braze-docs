@@ -63,7 +63,7 @@ For more details on managing campaigns and Canvases after launch, refer to [Edit
 
 ### Duplicating Canvas steps or campaigns, and translations
 
-When duplicating a canvas step or a campaign, whether in the post-launch draft mode or during initial creation, the translations associated with that step won't be carried over. Any necessary translations need to be added to the new step or campaign. Be sure to review and update translations accordingly when making modifications to your Canvas or campaign.
+When duplicating a Canvas step or a campaign, whether in the draft mode after launch or during initial creation, the translations associated with that step won't be carried over. Any necessary translations need to be added to the new step or campaign. Be sure to review and update translations accordingly when making modifications to your Canvas or campaign.
 
 ### Using the multi-language API with Canvases
 
