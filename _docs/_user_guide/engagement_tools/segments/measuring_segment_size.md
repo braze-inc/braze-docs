@@ -73,8 +73,8 @@ The membership count may significantly change for a number of reasons, such as t
 | Normal user behavior | Users subscribe after a particularly successful campaign. |
 | Users are imported by CSV | A CSV file of users was imported that significantly increased segment membership. |
 | Segment audience criteria is modified | An existing segment's audience rules (such as filters) were changed, causing significant changes in the segment membership. |
-| Users are deleted | A signficant number of users were deleted. |
-| A partner integration synced with Braze | A third-party sent data to Braze that significantly influenced segment membership. |
+| Users are deleted | A significant number of users were deleted. |
+| A partner integration synced with Braze | A third party sent data to Braze that significantly influenced segment membership. |
 | Dormant users are archived | A significant number of inactive profiles were archived. For example, a large number of CSV-imported users never log activity and get archived at the same time. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
