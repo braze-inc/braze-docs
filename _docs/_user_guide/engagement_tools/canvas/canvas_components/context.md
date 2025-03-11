@@ -53,7 +53,7 @@ For example, if the context variable data type is set to **Date** but the value 
 
 Braze will exit a user at the step if:
 
-- The context variable doesn't return to any value.
+- The context variable doesn't return any value.
 - An embedded Connected Content call fails.
 - The context variable types don't match.
 
