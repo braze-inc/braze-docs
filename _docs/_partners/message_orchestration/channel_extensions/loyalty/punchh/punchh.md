@@ -49,9 +49,11 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 
 Punchh offers several endpoints available to Braze customers to help add external IDs to the Punchh platform using the following Punchh API endpoints. After the external IDs have been added, create an adapter in Punchh, provide your Braze credentials, and select which events you'd like to sync. Next, you can take the Punchh segment ID and use it to build a Punchh webhook to trigger customer syncing in a Canvas journey.
 
-Note that the Punchh `user_id` will need to be added to the Braze user profile as a custom attribute "punchh_user_id" for the integration to be used. Similarly, the `external_id` being used in Braze will need to be included as an `external_source_id` field on the Punchh user profile. 
+Note that the Punchh `user_id` and Braze `external_id` need to be available in either platform for the integration to sync properly. 
+- Events sent from Punchh to Braze will include the Braze `external_id` as the identifier. If Punchh is configured to use the `external_source_id`, that value will be set as the Braze `external_id`. Otherwise, the integration will default to setting the Punchh `user_id` as the Braze `external_id`.
+- To send webhooks from Braze to Punchh, the Punchh `user_id` must be available on the Braze user profile. If Punchh `user_id` is not used as the Braze `external_id`, it should be set as a custom attribute "punchh_user_id". 
 
-### Step 1: Set up external ID ingestion endpoints
+### Step 1: Set up external ID ingestion endpoints (optional)
 
 External IDs from Braze can be added using the following endpoints for new and existing Punchh users.
 
