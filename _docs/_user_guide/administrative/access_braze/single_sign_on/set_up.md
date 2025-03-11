@@ -19,7 +19,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 |---|---|
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> For European Union domains, the ASC URL is `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> For some IdPs, this can also be referred to as the Reply URL, Sign-On URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard` |
-| RelayState API key | Go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. |
+| RelayState API key | Go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions, and then input the generated API key as the `RelayState` parameter within your IdP. For detailed steps, refer to [Setting up your RelayState](#setting-up-your-relaystate). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -81,6 +81,16 @@ Save your security settings and log out. Then, sign back in with your identity p
 
 ![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
+## Setting up your RelayState
+
+1. In Braze, go to **Settings** > **APIs and Identifiers**.
+2. In the **API Keys** tab, select the **Create API key** button.
+3. In the **API key name** field, enter a name for your key.
+4. Extend the **SSO** dropdown under **Permissions** and check **sso.saml.login**.<br><br>![The "Permissions" section with sso.saml.login checked.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+5. Select **Create API key**.
+6. In the **API Keys** tab, copy the identifier next to the API key you created.
+7. Paste the RelayState API Key into your IdP's RelayState (it may also appear as "Relay State" or "Default Relay State" depending on your IdP).
+
 ## SSO behavior
 
 Members who opt to use SSO will no longer be able to use their password as they did prior. Users who continue to use their password will be able to unless restricted by the following settings.
@@ -122,7 +132,6 @@ Select **Export**. For **Select cookie-filter profile**, select **None**. Then, 
 
 ## Troubleshooting
 
-
 ### Your company incorrectly set up the user's email address
 
 Confirm in the SAML trace that the `saml2:Attribute Name="email"` field matches the email address the user is using to log in. If you use Microsoft Entra ID, the attribute mapping is `email = user.userprincipalname`.
@@ -157,15 +166,7 @@ Have the affected user [clear their browser's cache and cookies](https://its.uio
 
 ### Your company hasn't set the RelayState
 
-To authenticate using your identity provider (IdP), your company needs to set your RelayState in your IdP management system.
-
-1. In Braze, go to **Settings** > **APIs and Identifiers**.
-2. In the **API Keys** tab, select the **Create API key** button.
-3. In the **API key name** field, enter a name for your key.
-4. Extend the **SSO** dropdown under **Permissions** and check **sso.saml.login**.<br><br>![The "Permissions" section with sso.saml.login checked.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
-5. Select **Create API key**.
-6. In the **API Keys** tab, copy the identifier next to the API key you created.
-7. Paste the RelayState API Key into your IdP's RelayState (it may also appear as "Relay State" or "Default Relay State" depending on your IdP).
+To authenticate using your identity provider (IdP), your company needs to set your RelayState in your IdP management system. For steps, refer to [Setting up your RelayState](#setting-up-your-relaystate).
 
 ### The user is stuck in a sign-in loop between Okta and Braze
 
