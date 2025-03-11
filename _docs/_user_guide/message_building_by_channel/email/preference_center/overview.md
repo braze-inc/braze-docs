@@ -134,14 +134,14 @@ For example, if you're tracking the unsubscribe rate for Spanish-speaking users,
 
 As another example, for tracking unsubscribe rates for Spanish-speaking users, you could add a query parameter string like `?Spanish=true` to the unsubscribe URL if the users' language is German and use a regular unsubscribe link if they aren't:
 
-{%raw%}
+{% raw %}
 ```liquid
 {% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
 {% else %}
 ${unsubscribe_url}
 {% endif %}
 ```
-{%endraw%}
+{% endraw %}
 
 Then, through Currents, you could identify which users speak Spanish and how many click events there were for that unsubscribe link.
 
