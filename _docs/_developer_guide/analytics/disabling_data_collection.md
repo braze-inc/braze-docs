@@ -26,4 +26,8 @@ description: "Learn how to disable data collection for the Braze SDK."
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/android/analytics/disabling_data_collection.md %}
 {% endsdktab %}
+
+{% sdktab unreal engine %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/disabling_data_collection.md %}
+{% endsdktab %}
 {% endsdktabs %}

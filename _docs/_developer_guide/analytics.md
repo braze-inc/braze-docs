@@ -10,9 +10,9 @@ description: "This reference article covers user data collection including what 
 
 > This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
 
-Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. 
-
-Reference our case of a [Taxi/Ride-Sharing App](#example-case) at the end of this guide for an example of this process.
+{% alert tip %}
+Before completing your Braze implementation, your team should discuss your marketing goals, so you can best decided what you want to track and how you want to track it with Braze. For an example, see our [Taxi/Ride-Sharing App](#example-case) case study at the end of this guide.
+{% endalert %}
 
 ## Automatically collected data
 
@@ -42,7 +42,9 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ![A custom event analytics graph showing stats on users who added a credit card and made a search across a period of a thirty days.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
-> [Incrementing custom attributes]({{site.baseurl}}/api/endpoints/messaging/) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+{% alert note %}
+[Incrementing custom attributes]({{site.baseurl}}/api/endpoints/messaging/) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+{% endalert %}
 
 ### Custom event storage
 
@@ -73,6 +75,7 @@ Talk to villagers for essential tips on how to beat levels!
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team, as this may incur additional data costs.
 
 ## Custom attributes
+
 Custom attributes are extraordinarily flexible tools that allow you to target users with greater specificity than you would with standard attributes. Custom attributes are great for storing brand-specific information about your users. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based on them like the preceding example for custom events.
 
 ### Custom attribute storage
@@ -80,9 +83,11 @@ Custom attributes are extraordinarily flexible tools that allow you to target us
 All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active.
 
 ### Custom attribute data types
+
 The following data types may be stored as custom attributes:
 
 #### Strings (alphanumeric characters)
+
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
 
 The following table describes available segmentation options for string attributes.
@@ -111,20 +116,20 @@ More resources on regex:
 {% endalert %}
 
 #### Arrays
+
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
 Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. **Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.** For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.
 
 If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. The following lists some example code showing the array behavior in the web SDK:
 
-```
+```js
 var abUser = appboy.getUser();
 // initialize array for this user, assuming max length of favorite_foods is set to 4.
 abUser.setCustomUserAttribute('favorite_foods', ['pizza', 'wings', 'pasta']); // => ['pizza', 'wings', 'pasta']
 abUser.addToCustomAttributeArray('favorite_foods', 'fries'); // => ['pizza', 'wings', 'pasta', 'fries']
 abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pasta', 'fries', 'pizza']
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
-
 ```
 
 The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
@@ -140,12 +145,17 @@ The following table describes available segmentation options for array attribute
 | Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
->  We use [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+{% alert note %}
+We use [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+{% endalert %}
 
 #### Dates
+
 Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
-> The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
+{% alert note %}
+The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
+{% endalert %}
 
 Date filters using relative dates (for example, more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
@@ -164,9 +174,12 @@ The following table describes available segmentation options for time attributes
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Numbers {#integers}
+
 Numeric attributes have a wide variety of use cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, such as recording shoe size, waist size, or the number of times a user has viewed a certain product feature or category.
 
-> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking).
+{% alert note %}
+Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking).
+{% endalert %}
 
 The following table describes available segmentation options for numeric attributes.
 
@@ -181,6 +194,7 @@ The following table describes available segmentation options for numeric attribu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Booleans (true/false)
+
 Boolean attributes are useful for storing subscription statuses and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a boolean in addition to those that don't have any record of that attribute recorded yet.
 
 The following table describes available segmentation options for boolean attributes.
@@ -212,9 +226,12 @@ The following table describes available segmentation options for purchase events
 | Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
->  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute](#integers).
+{% alert note %}
+If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute](#integers).
+{% endalert %}
 
 ## Taxi/ride-sharing app use case {#example-case}
+
 For this example, let's consider a ride-sharing app that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 **Case Question #1: What is the goal?**
@@ -300,6 +317,7 @@ These should not be used as user IDs:
 {% multi_lang_include sdk_auth_alert.md %}
 
 #### Give custom events and attributes readable names
+
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:
 
 - Do not begin a custom event with a numeric character. The dropdown list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
@@ -307,15 +325,19 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute should be sent to Braze as something like `user_country` to lend some clarity to a marketer using the dashboard down the line.
 
 #### Only log attributes when they change
+
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and supports a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating event names
+
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events ("Watched a Video" or "Read an Article") instead of highly specific events such as ("Watched Gangnam Style" or "Read Article: Best 10 Lunch Spots in Midtown Manhattan"). The specific data about the event should be included as an event property, not as part of the event name.
 
 ### Technical limitations and constraints
+
 Be mindful of the following limitations and constraints when implementing custom events:
 
 #### Length constraints
+
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
 #### Content constraints
@@ -331,6 +353,7 @@ The following content will be trimmed programmatically from your attributes and 
   -  "My \x80 Field" would be condensed to "My Field"
 
 #### Reserved keys
+
 The following keys are reserved and cannot be used as custom event properties:
 
 - `time`
