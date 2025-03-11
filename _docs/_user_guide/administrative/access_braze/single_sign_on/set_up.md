@@ -122,7 +122,6 @@ Select **Export**. For **Select cookie-filter profile**, select **None**. Then, 
 
 ## Troubleshooting
 
-If you're having issues with SAML or SSO, the following scenarios might have occured.
 
 ### Your company incorrectly set up the user's email address
 
@@ -162,13 +161,13 @@ To authenticate using your identity provider (IdP), your company needs to set yo
 
 1. In Braze, go to **Settings** > **APIs and Identifiers**.
 2. In the **API Keys** tab, select the **Create API key** button.
-3. Enter a key name in the field **API key name**.
+3. In the **API key name** field, enter a name for your key.
 4. Extend the **SSO** dropdown under **Permissions** and check **sso.saml.login**.<br><br>![The "Permissions" section with sso.saml.login checked.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Select **Create API key**.
 6. In the **API Keys** tab, copy the identifier next to the API key you created.
-7. Paste the RelayState API Key into your IdP's RelayState (it may also appear as Relay State or Default Relay State) depending on your IdP.
+7. Paste the RelayState API Key into your IdP's RelayState (it may also appear as "Relay State" or "Default Relay State" depending on your IdP).
 
-### The user is stuck in a sign-in loop
+### The user is stuck in a sign-in loop between Okta and Braze
 
 If you're using Okta and the user is stuck in a sign-in loop (in other words, is cycling through SSO and Braze dashboard), you need to set the destination to `https://dashboard-dashboard-instance-here.braze.com`. 
 
