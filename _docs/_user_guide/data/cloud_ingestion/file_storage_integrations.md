@@ -102,6 +102,10 @@ Append the following statement to the queue's access policy, being careful to re
 2. Give the configuration a name. Optionally, specify a prefix or suffix to target if you only want a subset of files to be ingested by Braze.
 3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
+{% alert note %}
+If you upload your files to the root folder of an S3 bucket then move some of the files to a specific folder in the bucket, you may encounter an unexpected error. Instead, you can change the event notifications to send for only files in the prefix, avoid placing files in the S3 bucket outside that prefix, or update the integration with no prefix, which will then ingest all files.
+{% endalert %}
+
 ### Step 5: Create an IAM policy
 
 Create an IAM policy to allow Braze to interact with your source bucket. To get started, sign in to the AWS management console as an account administrator. 
