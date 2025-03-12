@@ -1,8 +1,4 @@
-## Platform availability
-
-This feature is only available for Android&#8212;not FireOS.
-
-## How it works
+## About HTML push notifications
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multiplier text in push notifications.
 

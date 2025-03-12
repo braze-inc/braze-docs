@@ -1,6 +1,6 @@
 ## About Safari push notifications for mobile
 
-Learn how to send push notifications to iOS and iPadOS users using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
+You can send push notifications to iOS and iPadOS users using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
 
 ## Prerequisites
 

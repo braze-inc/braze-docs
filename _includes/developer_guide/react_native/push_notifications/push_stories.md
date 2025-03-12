@@ -1,8 +1,6 @@
-## Enabling push stories for iOS
+## Enabling push stories
 
-{% alert tip %}
-For the React Native SDK, push stories are available for Android by default.
-{% endalert %}
+For the React Native SDK, **push stories are available for Android by default**.
 
 To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
 
