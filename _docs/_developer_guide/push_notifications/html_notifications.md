@@ -1,12 +1,12 @@
 ---
 page_order: 5
 nav_title: HTML Notifications
-article_title: Setting up HTML push notifications for the Braze SDK
+article_title: HTML push notifications for the Braze SDK
 channel:
   - push notifications
 ---
 
-# Setting up HTML push notifications
+# HTML push notifications for Android
 
 > Learn how to set up HTML push notifications for the Braze SDK.
 
