@@ -49,11 +49,7 @@ To set up Apple Private Relay for SparkPost, follow these steps:
 
 1. Sign in with Apple.
 2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
-3. Apple will automatically check the domains and show which ones are verified, and provide the option to reverify or delete the domains.
-
-{% alert important %}
-Make sure you complete this process within two to three days of the verification files being created, or else they will expire. Apple does not disclose how long they're valid for.
-{% endalert %}
+3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
 
 ### Considerations
 
