@@ -11,35 +11,44 @@ page_type: reference
 
 > This page covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
 
+## How it works
+
 You can use Cloud Data Ingestion (CDI) for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files, and attributes, event, purchase, and user delete data.
+Cloud Data Ingestion supports the following:
+
+- JSON files
+- CSV files
+- Parquet files
+- Attributes, event, purchase, and user delete data
+
+## Prerequisites
 
 The integration requires the following resources:
+
  - S3 bucket for data storage 
  - SQS queue for new file notifications 
  - IAM role for Braze access  
 
-
-## AWS definitions
+### AWS definitions
 
 First, let's define some of the terms used during this task.
 
-| Word | Definition |
+| Term | Definition |
 | --- | --- |
 | Amazon Resource Name (ARN) | The ARN is a unique identifier for AWS resources. |
 | Identity and Access Management (IAM) | IAM is a web service that lets you securely control access to AWS resources. In this tutorial, you will create an IAM policy and assign it to an IAM role to integrate your S3 bucket with Braze Cloud Data Ingestion. |
 | Amazon Simple Queue Service (SQS) | SQS is a hosted queue that lets you integrate distributed software systems and components. |
-{: .reset-td-br-1 .reset-td-br-2 }
- 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Setting up Cloud Data Ingestion in AWS
 
 ### Step 1: Create a source bucket
 
-Create a general purpose S3 bucket with default settings in your AWS account. 
+Create a general purpose S3 bucket with default settings in your AWS account. S3 buckets can be reused across syncs as long as the folder is unique.
 
 The default settings are:
+
   - ACLs Disabled
   - Block all public access
   - Disable bucket versioning
@@ -49,15 +58,17 @@ Take note of the region you’ve created the bucket in, as you will create an SQ
 
 ### Step 2: Create SQS queue
 
-Create an SQS queue to track when objects are added to the bucket you’ve created. Use the default configuration settings for now.
+Create an SQS queue to track when objects are added to the bucket you’ve created. Use the default configuration settings for now. 
+
+An SQS queue must be unique globally (for example, only one can be used for a CDI sync and cannot be reused in another workspace).
 
 {% alert important %}
-Be sure to create this SQS in the same region you created the bucket in. 
+Be sure to create this SQS in the same region you created the bucket in.
 {% endalert %}
 
-Make sure you take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration. 
-<br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
-<br><br>
+Make sure you take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration.
+
+![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
 ### Step 3: Set up access policy
 
@@ -88,9 +99,7 @@ Append the following statement to the queue's access policy, being careful to re
 ### Step 4: Add an event notification to the S3 bucket
 
 1. In the bucket created in step 1, go to **Properties** > **Event notifications**.
-
 2. Give the configuration a name. Optionally, specify a prefix or suffix to target if you only want a subset of files to be ingested by Braze.
-
 3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
 ### Step 5: Create an IAM policy
@@ -144,11 +153,8 @@ Create an IAM policy to allow Braze to interact with your source bucket. To get 
 To complete the setup on AWS, you will create an IAM role and attach the IAM policy from step 4 to it. 
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. <br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
-
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, click **Create New Data Sync** and select **S3 Import**. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
-
-3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use. Select **Next** when complete. <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)
-
+3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use. Select **Next** when complete. <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)<br><br>
 4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>Give the role a name and a description, and click **Create Role**.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
 
 {: start="5"}
@@ -157,44 +163,46 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 ## Setting up Cloud Data Ingestion in Braze
 
 1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
-
 2. Input the information from the AWS setup process to create a new sync. Specify the following:
-- Role ARN
-- External ID
-- SQS URL (must be unique for each new integration)
-- Bucket Name
-- Folder Path (optional)
-- Region  
+
+  - Role ARN
+  - External ID
+  - SQS URL (must be unique for each new integration)
+  - Bucket name
+  - Folder path (optional, must be unique across syncs in a workspace)
+  - Region
 
 ![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
-3. Give your integration a name, and select the data type for this integration. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
-
+3. Name your integration, and select the data type for this integration. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. <br><br> ![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
 5. Finally, test the connection and save the sync. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
-
 ## Required file formats
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string. 
+Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string.
 
-- User identifiers. Your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types. 
-    - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
-    - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
-    - `BRAZE_ID` - The Braze user identifier. This is generated by the Braze SDK, and new users cannot be created using a Braze ID through Cloud Data Ingestion. To create new users, specify an external user ID or user alias.
-    - `EMAIL` - The user's email address. If multiple profiles with the same email address exist, the most recently updated profile will be prioritized for updates. If you include both email and phone, we will use the email as the primary identifier.
-    - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
-- `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
+Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
+
+### User identifiers
+
+Your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types.
+
+| Identifier | Description |
+| --- | --- |
+| `EXTERNAL_ID` | This identifies the user you want to update. This should match the `external_id` value used in Braze. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`. |
+| `BRAZE_ID` | The Braze user identifier. This is generated by the Braze SDK, and new users cannot be created using a Braze ID through Cloud Data Ingestion. To create new users, specify an external user ID or user alias. |
+| `EMAIL` | The user's email address. If multiple profiles with the same email address exist, the most recently updated profile will be prioritized for updates. If you include both email and phone, we will use the email as the primary identifier. |
+| `PHONE` | The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. |
+|`PAYLOAD` | This is a JSON string of the fields you want to sync to the user in Braze. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
 Unlike with data warehouse sources, the `UPDATED_AT` column is not required nor supported. 
-{% endalert %}
-
-{% alert note %}
-Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and won't be synced to Braze.
 {% endalert %}
 
 {% tabs %}
@@ -241,4 +249,25 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 {% endtab %}
 {% endtabs %}  
 
-For examples of all supported file types, please see the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+For examples of all supported file types, refer to the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+
+## Things to know
+
+- Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and won't be synced to Braze.
+- There's no additional limit on the number of rows per file.
+- There's no additional limit on the number of files uploaded in a given period of time.
+- Ordering isn't suppoerted in or between files. We recommende batching updates periodically if you're monitoring for any expected race conditions.
+
+## Troubleshooting
+
+### Uploading files and processing
+
+CDI will only process files that are added after the sync is created. In this process, Braze looks for new files to be added, which triggers a new message to SQS. This will kick off a new sync to process the new file.
+
+Existing files can be used to validate the data structure in test connection, but they will not be synced to Braze. Any existing files that should be synced must be reuploaded to S3 in order to be processed by CDI.
+
+### Handling unexpected file errors
+
+If you're observing a high number of errors or failed files, it’s possible that you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
+
+When files are uploaded to the source bucket but not in the source folder, CDI will process the SQS notification but does not take any action on the file, so this may appear as an error.
