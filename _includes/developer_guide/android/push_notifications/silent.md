@@ -1,6 +1,4 @@
-# Silent push notifications
-
-> Silent notifications allow you to notify your app in the background when important events occur. You might have new instant messages to deliver, new issues of a magazine to publish, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Silent notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable.
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
 ## Setting up silent push notifications
 
@@ -9,4 +7,3 @@ Silent notifications are available through the Braze [Messaging API]({{site.base
 {% alert tip %}
 When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message), you can send a silent Android push notification by sending a message with only a single space. Keep in mind, this is **not** the recommended method for sending push notifications, but can be helpful in some cases.
 {% endalert %}
-

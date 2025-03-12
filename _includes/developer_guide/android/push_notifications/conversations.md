@@ -1,6 +1,8 @@
-# Conversation push notifications
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
-> This application covers how to implement android conversation push in your Android application.
+## About conversation push notifications
+
+This application covers how to implement android conversation push in your Android application.
 
 ![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
