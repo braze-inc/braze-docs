@@ -2,7 +2,7 @@ import { existsSync, link } from 'fs';
 import path, { resolve } from 'path';
 import fs from 'fs';
 
-const redirectList: string[] = Object.keys(require('./assets/js/broken_redirect_list.js'));
+const redirectList: string[] = Object.keys(require('../assets/js/broken_redirect_list.js'));
 
 interface LinkData {
   sourceFile: string;
@@ -168,7 +168,7 @@ let totalFiles = 0;
 const links: LinkData[] = [];
 const aliases: string[] = [];
 const permalinks: string[] = [];
-const ignored_files = ['_docs/_hidden/other/support_contact.md'];
+const ignored_files = ['../_docs/_hidden/other/support_contact.md'];
 function getLinksRecursive(dir: string) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -188,11 +188,12 @@ function getLinksRecursive(dir: string) {
   }
 }
 
-getLinksRecursive('_docs');
+getLinksRecursive('../_docs');
 console.log(`Found ${links.length} links`);
 
 // Create CSV header
-const csv: string[] = ['Source,Link,Expected Path'];
+const headers = ['Source', 'Link', 'Expected Path'];
+const csv: string[] = [];
 
 // Process each result
 for (const item of links) {
@@ -241,4 +242,4 @@ const deduplicated = Array.from(new Set(csv)).sort();
 
 console.log(`\n\nFound ${deduplicated.length - 1} broken links in ${totalFiles} files`);
 // console.log(redirectList)
-fs.writeFileSync('broken-links.csv', deduplicated.join('\n'));
+fs.writeFileSync('broken-links.csv', [headers, ...deduplicated].join('\n'));
