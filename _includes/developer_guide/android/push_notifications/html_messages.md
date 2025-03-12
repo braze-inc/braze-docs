@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
+
 ## About HTML push notifications
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multiplier text in push notifications.

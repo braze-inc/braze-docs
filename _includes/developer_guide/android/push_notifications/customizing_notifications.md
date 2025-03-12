@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
+
 ## Using a callback for push events
 
 Braze provides a [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.

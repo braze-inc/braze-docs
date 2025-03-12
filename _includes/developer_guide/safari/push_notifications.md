@@ -1,10 +1,4 @@
-## About Safari push notifications for mobile
-
-You can send push notifications to iOS and iPadOS users using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
-
-## Prerequisites
-
-Before you can set up Safari push notifications on mobile, you'll need to [set up push notifications for the Braze Web SDK]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) for the Swift SDK. Note that you can only send push notifications to iOS and iPadOS users that are using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
 
 ## Setting up Safari push for mobile
 

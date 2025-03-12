@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
+
 ## Setting up silent push notifications
 
 To use silent push notifications to trigger background work, you must configure your app to receive notifications even when it is in the background. To do this, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target in Xcode. Select the **Remote notifications** checkbox.

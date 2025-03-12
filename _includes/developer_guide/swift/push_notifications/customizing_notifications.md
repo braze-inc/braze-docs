@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
+
 ## Customizing action buttons {#push-action-buttons-integration}
 
 The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. To create your own custom notification categories, see [action button customization](#push-category-customization).

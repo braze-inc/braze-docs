@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
+
 {% alert note %}
 This implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 {% endalert %}

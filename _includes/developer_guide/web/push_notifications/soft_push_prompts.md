@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/web.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
+
 ## About soft push prompts
 
 It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.

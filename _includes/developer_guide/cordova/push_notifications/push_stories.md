@@ -1,3 +1,5 @@
+{% multi_lang_include developer_guide/prerequisites/cordova.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=cordova).
+
 ## Setting up push stories
 
 ### Step 1: Create a notification content extension
