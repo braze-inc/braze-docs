@@ -113,6 +113,17 @@
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
 
+<script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
+<script>
+  $(document).ready(function () {
+    mermaid.initialize({
+      startOnLoad:true,
+      theme: "default",
+    });
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  });
+</script>
+
 <script type="text/javascript">
 
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
