@@ -1,11 +1,9 @@
-# Troubleshooting
-
-> This article provides several Android troubleshooting scenarios.
-
 ## Understanding the Braze workflow
+
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 
 ### Step 1: Configuring your Google Cloud API key
+
 In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
 {% alert note %}
@@ -13,12 +11,15 @@ A common mistake during this step is using the app identifier API key instead of
 {% endalert %}
 
 ### Step 2: Devices register for FCM and provide Braze with push tokens
+
 In typical integrations, the Braze Android SDK will handle registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with an FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user, and that user will become "push registered" if they previously did not have a push token for any of your apps.
 
 ### Step 3: Launching a Braze push campaign
+
 When a push campaign is launched, Braze will make requests to FCM to deliver your message. Braze will use the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
 
 ### Step 4: Removing invalid tokens
+
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
@@ -164,4 +165,3 @@ If the deep link [works correctly with ADB](https://developer.android.com/traini
 ```xml
 <bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>
 ```
-

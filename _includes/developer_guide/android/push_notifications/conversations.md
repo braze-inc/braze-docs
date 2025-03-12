@@ -1,6 +1,6 @@
-# Conversation push notifications
+## About conversation push notifications
 
-> This application covers how to implement android conversation push in your Android application.
+This application covers how to implement android conversation push in your Android application.
 
 ![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 

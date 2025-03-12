@@ -1,0 +1,25 @@
+## Enabling rich push notifications for iOS
+
+{% alert tip %}
+For the React Native SDK, rich push notifications are available for Android by default.
+{% endalert %}
+
+To enable rich push notifications on iOS using Expo, configure the `enableBrazeIosRichPush` property to `true` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosRichPush": true
+        }
+      ]
+    ]
+  }
+}
+```
+
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).

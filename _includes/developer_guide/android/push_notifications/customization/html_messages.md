@@ -1,7 +1,3 @@
-# HTML push notifications
-
-> This reference article covers how to implement HTML push notifications in your Android application.
-
 ## Platform availability
 
 This feature is only available for Android&#8212;not FireOS.

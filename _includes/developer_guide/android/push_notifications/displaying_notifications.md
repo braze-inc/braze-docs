@@ -1,7 +1,3 @@
-# Displaying push notifications
-
-> Learn how to receive and display push notifications sent by Braze using the Braze Android SDK.
-
 ## Prerequisites
 
 To use this feature, you'll need to complete the following:

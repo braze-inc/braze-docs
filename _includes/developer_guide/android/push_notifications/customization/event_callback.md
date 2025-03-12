@@ -1,7 +1,3 @@
-# Push event callback {#android-push-listener-callback}
-
-> This reference article covers how to use a callback for Android push events.
-
 ## Platform availability
 
 This feature is only available for Android&#8212;not FireOS.

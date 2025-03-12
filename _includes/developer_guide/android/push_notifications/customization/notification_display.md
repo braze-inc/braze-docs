@@ -1,7 +1,3 @@
-# Customizing the notification display
-
-> Learn how to customize the notification display for the Braze Android SDK.
-
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Customizing notification display

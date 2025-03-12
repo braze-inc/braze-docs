@@ -1,12 +1,8 @@
-# Push notifications
-
-> With push notifications, you can re-engage your app users by sending time-sensitive and relevant content directly to their device screen&#8212;even if their app is closed. When you're finished integrating push for your app, be sure to check out our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
+{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 {% alert important %}
 If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/migrating_to_firebase_cloud_messaging/).
 {% endalert %}
-
-{% multi_lang_include developer_guide/prerequisites/android.md %}
 
 ## Built-in features
 
