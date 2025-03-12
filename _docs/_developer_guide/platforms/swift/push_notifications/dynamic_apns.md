@@ -51,7 +51,7 @@ With dynamic APNs gateway management, the correct environment is selected automa
 
 ### How does this impact push delivery performance?
 
-This feature improves delivery rates by ensuring push tokens are always routed to the correct APNs environment, avoiding failures caused by misconfigured gateways.
+This feature improves delivery rates by always routing push tokens to the correct APNs environment, avoiding failures caused by misconfigured gateways.
 
 ### Can I disable this feature?
 
