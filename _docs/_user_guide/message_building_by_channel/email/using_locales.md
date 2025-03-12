@@ -50,7 +50,7 @@ In the **Preview & Test** section, select **Multi-language User** to check if yo
 
 ### Editing translations for launched campaigns and Canvases
 
-After a campaign or Canvas has been launched, you can still modify translations when you're in the draft mode. This applies whether you're editing translations directly in the composer, through CSV upload, or through the API. 
+After a campaign or Canvas has been launched, you can still modify translations when you're in draft mode. This applies whether you're editing translations directly in the composer, by CSV upload, or through the API. 
 
 Before making any translation updates, the campaign or Canvas must first be saved as a draft.
 
