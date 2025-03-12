@@ -40,13 +40,41 @@ When users open your app, they will be prompted to accept push notifications. If
 Starting in macOS 13, on certain devices, you can test push notifications on an iOS 16 Simulator running on Xcode 14. For further details, refer to the [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
+#### Considerations for push token generation
+
+- If users install your app on another device, another token will be created and captured in the same way. 
+- If users reinstall your app, a new token will be generated and again passed to Braze, but the original token may still be logged as valid by APNs and Braze.
+- If users uninstall your app, Braze doesn't get explicitly notified of this and the token will still appear as valid until it is retired by APNs. 
+- At some point, APNs will retire old tokens. Braze doesn't have control or visibility of this. 
+
 ### Step 3: Launching a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to APNs to deliver your message. Braze will use the SSL push certificate uploaded in the dashboard to authenticate and verify that we are allowed to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. Note that Braze sets the default APNs [expiration date](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) for notifications to 30 days.
+When a push campaign is launched, Braze will make requests to APNs to deliver your message. Specifically, the requests are passed to APNs for each current valid push token unless **Send to a user's most recent device** is selected. Braze logs a successful delivery on the user profile at this point, though the user may not have received the actual message for reasons including:
+- Their device is powered off.
+- Their device isn't connected to the internet (Wi-Fi or cellular).
+- They recently uninstalled the app.
+
+Braze will use the SSL push certificate uploaded in the dashboard to authenticate and verify that we are allowed to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. Note that Braze sets the default APNs [expiration date](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) for notifications to 30 days.
 
 ### Step 4: Removing invalid tokens
 
 If [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with.
+
+## Using uninstall tracking to determine if tokens are valid
+
+[Uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/) can help determine when push tokens are still valid. If push tracking is turned on, Braze will send silent push requests to APNs at regular intervals. If a push fails, we will mark the token as invalid and won't try to send any messages to that token or device again. This isn't logged as a send or a bounce.
+
+When a user uninstalls an app, Braze needs to wait for a "push bounce", which indicates that the push token for that specific user is no longer valid. Only when we have received the "push bounce" will the user's profile be updated with the timestamp of the uninstall.
+
+If an app has already turned on uninstall tracking, Braze sends the silent push daily to the user. However, APNs can continue to return a "Success" response to any push notifications sent to the device even if it doesn’t or can’t deliver the notification. This isn’t controlled by Braze. Eventually, APNs will return an "Unregistered" response, which will cause Braze to mark that user as having uninstalled the app. Braze has no visibility into how long it might take before this occurs. This means that a "Successful" push delivery isn't a consistent indicator that the user still has the app installed and is reachable.
+
+### iOS uninstalls
+
+For iOS, bounces—including bounces for silent pushes—takes time for APNs to report to Braze in feedback. That’s why tokens aren't removed from the Braze dashboard immediately and why uninstalls aren't templated in. This means user profiles also won't immediately update with details of when the app was uninstalled.
+
+### Uninstall time
+
+Braze takes the bounce time (when the bounce was logged) as the uninstall time because there is no feedback mechanism from APNs about uninstall timing when we receive the bounce response.
 
 ## Using the push error logs
 
