@@ -1,16 +1,6 @@
----
-nav_title: Settings
-article_title: Push Notification Settings for the Braze Swift SDK
-platform: Swift
-description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more, for the Swift SDK."
-channel:
-  - push
+## About advanced settings
 
----
-
-# Push notification settings
-
-> When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
+When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
 
 ![]({% image_buster /assets/img_archive/ios_advanced_settings.png %})
 
