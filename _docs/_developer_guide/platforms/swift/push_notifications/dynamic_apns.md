@@ -53,9 +53,6 @@ With dynamic APNs gateway management, the correct environment is selected automa
 
 This feature improves delivery rates by ensuring push tokens are always routed to the correct APNs environment, avoiding failures caused by misconfigured gateways.
 
-### Does this feature impact push notification latency?
-
-No, the feature does not introduce additional latency. It makes sure that notifications are sent through the appropriate APNs gateway.
 
 ### Can I disable this feature?
 
