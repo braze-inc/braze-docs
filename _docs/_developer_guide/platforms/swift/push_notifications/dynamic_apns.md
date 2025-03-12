@@ -53,7 +53,6 @@ With dynamic APNs gateway management, the correct environment is selected automa
 
 This feature improves delivery rates by ensuring push tokens are always routed to the correct APNs environment, avoiding failures caused by misconfigured gateways.
 
-
 ### Can I disable this feature?
 
 Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact Braze Support.
