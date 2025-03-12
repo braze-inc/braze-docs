@@ -47,7 +47,7 @@ When Braze sends a push notification:
 
 ### Why was this feature introduced?
 
-With dynamic APNs gateway management, you can automatically select the correct environment. Previously, you had to manually configure the APNs gateway, which could lead to `BadDeviceToken` errors, token invalidation, and potential APNs rate-limiting issues.
+With dynamic APNs gateway management, the correct environment is selected automatically. Previously, you had to manually configure the APNs gateway, which could lead to `BadDeviceToken` errors, token invalidation, and potential APNs rate-limiting issues.
 
 ### How does this impact push delivery performance?
 
