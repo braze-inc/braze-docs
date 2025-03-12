@@ -26,7 +26,7 @@ Braze supports Dynamic APNs gateway management for push notifications on iOS wit
 
 ## How it works
 
-When an iOS app integrates with the Braze Swift SDK, it sends device-related data, including `apns_gateway` if available, to the Braze SDK API.
+When an iOS app integrates with the Braze Swift SDK, it sends device-related data, including [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) if available, to the Braze SDK API.
 
 The `apns_gateway` value indicates whether the app is using the:
 - Development (dev) APNs environment
