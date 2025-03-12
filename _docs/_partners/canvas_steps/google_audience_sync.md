@@ -126,7 +126,9 @@ Add a component in your Canvas, then select **Audience Sync**.
 
 ![The Audience Sync step settings with the option to select a partner to start the sync.][19]{: style="max-width:80%;"}
 
-Select the desired Google ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
+{: start="3"}
+3. Select the desired Google ad account. 
+4. In the **Choose a New or Existing Audience** dropdown, enter the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
