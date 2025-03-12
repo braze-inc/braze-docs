@@ -156,7 +156,7 @@ The processing order is not 100% predictable. For example, if there are multiple
 
 ## What are the security measures for CDI?
 
-### Braze's measures
+### Our measures
 
 Braze has the following measures in place for CDI:
 

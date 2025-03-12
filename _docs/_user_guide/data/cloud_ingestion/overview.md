@@ -34,7 +34,7 @@ Cloud Data Ingestion can sync data from the following sources to Braze:
 ## Supported data types 
 
 Cloud Data Ingestion supports the following data types: 
-- User attributes, including: 
+- User attributes, including:
    - Nested custom attributes
    - Arrays of objects
    - Subscription statuses
@@ -570,7 +570,6 @@ Note that you can only sync one event per row.
 {% endtab %}
 {% tab Purchase %}
 To sync purchase events, `product_id`, `currency`, and `price` are required. The `time` field, which is optional, should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields, including `app_id`, `quantity` and `properties` are optional.
-
 
 Note that you can only sync one purchase event per row.
 
