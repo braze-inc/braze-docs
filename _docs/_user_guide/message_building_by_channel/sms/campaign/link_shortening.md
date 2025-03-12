@@ -128,29 +128,27 @@ Link shortening also allows you to use your own domain to personalize the look a
 
 ## Frequently asked questions
 
-### Link shortening
-
-#### Are the links I receive when test sending real URLs?
+### Are the links I receive when test sending real URLs?
 
 If the campaign has been saved as a draft before test sending, yes. Otherwise, it is a placeholder link. Note that the exact URL sent in a launched campaign may differ from the one sent in a test send.
 
-#### Does the Braze SDK need to be installed in order to shorten links?
+### Does the Braze SDK need to be installed in order to shorten links?
 
 No. Link shortening works without any SDK integration.
 
-#### Do I know which individual users are clicking on a URL?
+### Do I know which individual users are clicking on a URL?
 
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
-#### Can I add UTM parameters to a URL before it is shortened?
+### Can I add UTM parameters to a URL before it is shortened?
 
 Yes. Both static and dynamic parameters can be added. 
 
-#### How long do shortened URLs remain valid?
+### How long do shortened URLs remain valid?
 
 Static URLs are valid for one year from the time of URL registration, such as first send. Dynamic URLs are valid for two months from the time of URL registration.
 
-#### Does link shortening work with deep links or universal links?
+### Does link shortening work with deep links or universal links?
 
 Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
 
