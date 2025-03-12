@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
 ## Enabling push stories
 

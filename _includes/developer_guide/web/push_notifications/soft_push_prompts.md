@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Additionally, you'll need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
+{% multi_lang_include developer_guide/prerequisites/web.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
 ## About soft push prompts
 

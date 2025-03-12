@@ -1,5 +1,5 @@
 ---
-page_order: 10
+page_order: 10.9
 nav_title: Troubleshooting
 article_title: Troubleshooting push notifications for the Braze SDK
 channel:
