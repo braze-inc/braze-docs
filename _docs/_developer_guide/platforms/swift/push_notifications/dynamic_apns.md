@@ -16,7 +16,7 @@ channel:
 
 - **Improved reliability:** Notifications are always delivered to the correct APNs environment, reducing failed deliveries.
 - **Simplified configuration:** You no longer need to manually manage APNs gateway settings.
-- **Error resilience:** Invalid or missing gateway values are gracefully handled, ensuring uninterrupted service.
+- **Error resilience:** Invalid or missing gateway values are gracefully handled, providing uninterrupted service.
 
 ## Prerequisites
 
