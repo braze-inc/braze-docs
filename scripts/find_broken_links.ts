@@ -3,7 +3,7 @@ import path, { resolve } from 'path';
 import fs from 'fs';
 
 const redirectList: string[] = Object.keys(require('../assets/js/broken_redirect_list.js'));
-
+const docsBasePath = '../_docs';
 interface LinkData {
   sourceFile: string;
   link: string;
@@ -24,17 +24,17 @@ const convertLinkToMarkdownPath = (link: string): string => {
 
   // If there's only one segment, return simple _docs path
   if (segments.length === 1) {
-    return `_docs/${segments[0]}.md`;
+    return path.join(docsBasePath, `${segments[0]}.md`);
   }
 
-  // Add _docs prefix and underscore to first segment
-  const docPath = `_docs/_${segments[0]}`;
+  // Add underscore to first segment
+  const docPath = path.join(docsBasePath, `_${segments[0]}`);
 
   // Add remaining path segments
   const remainingPath = segments.slice(1).join('/');
 
   // Combine paths and add .md extension
-  return `${docPath}/${remainingPath}.md`;
+  return path.join(docPath, `${remainingPath}.md`);
 };
 
 const getLinks = (filePath: string): {links: LinkData[], aliases: string[], permalinks: string[]} => {
@@ -156,10 +156,6 @@ const getLinks = (filePath: string): {links: LinkData[], aliases: string[], perm
   return {links: results, aliases, permalinks}
 };
 
-// const filePath = process.argv[2];
-// if (filePath) {
-//     module.exports.getLinks(filePath);
-// }
 
 // recursively get all files in _docs and call getLinks on each file
 // if the file is a directory, recursively call getLinks on each file in the directory
@@ -188,7 +184,7 @@ function getLinksRecursive(dir: string) {
   }
 }
 
-getLinksRecursive('../_docs');
+getLinksRecursive(docsBasePath);
 console.log(`Found ${links.length} links`);
 
 // Create CSV header
@@ -210,7 +206,8 @@ for (const item of links) {
 
   // For each link in the result
   // Add to CSV if link exists is false
-  let exists = fs.existsSync(item.markdownFile);
+  let exists = fs.existsSync(path.join(item.markdownFile));
+  console.log(item.markdownFile, exists);
   if (!exists) {
     // Check if any redirect matches the link pattern
     const redirectRegex = new RegExp(`(/docs)?${item.link.replace(/\/$/, '')}/?`);
