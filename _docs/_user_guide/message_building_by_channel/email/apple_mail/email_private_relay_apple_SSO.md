@@ -64,7 +64,7 @@ If a sending domain is also used as a bounce domain, you won't be able to store 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-To avoid SPF failures, you must create the MX and TXT records and have them propogated in the DNS **before** deleting the CNAME record.
+To avoid SPF failures, you must create the MX and TXT records and have them propagated in the DNS **before** deleting the CNAME record.
 {% endalert %}
 
 {:start="2"}
