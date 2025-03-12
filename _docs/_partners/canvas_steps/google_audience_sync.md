@@ -121,9 +121,8 @@ Add a component in your Canvas, then select **Audience Sync**.
 
 ### Step 3: Sync setup
 
-Select **Custom Audience** to open the component editor.
-
-Select **Google** as the desired Audience Sync partner.
+1. Select **Custom Audience** to open the component editor.
+2. Select **Google** as the Audience Sync partner.
 
 ![The Audience Sync step settings with the option to select a partner to start the sync.][19]{: style="max-width:80%;"}
 
