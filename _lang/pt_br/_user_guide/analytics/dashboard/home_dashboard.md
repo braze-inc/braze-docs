@@ -62,7 +62,7 @@ Uma baixa relação MAU/usuário pode indicar que é necessário diversificar se
 ### Sessões vitalícias
 
 *Sessões vitalícias* é a contagem total de sessões que o Braze registrou desde a integração. Em termos simples, uma sessão é cada vez que um usuário usa o app ou visita seu site. Para obter uma definição mais precisa sobre como as sessões são definidas por plataforma, consulte o
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android e FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), ou artigos de desenvolvedores sobre rastreamento de sessões na [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android e FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), ou artigos de desenvolvedores sobre rastreamento de sessões na [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
 
 ### Usuários ativos mensais
 
