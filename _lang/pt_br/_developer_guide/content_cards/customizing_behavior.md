@@ -14,7 +14,7 @@ platform:
 
 # Personalização do comportamento do cartão de conteúdo
 
-> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para obter uma visão geral básica dos tipos de opções de personalização que você tem com os cartões de conteúdo, consulte [Visão geral da personalização]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para uma visão geral básica dos tipos de opções de personalização que você tem com os cartões de Conteúdo, consulte [Visão geral da personalização]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Pares chave-valor
 
