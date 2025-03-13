@@ -68,7 +68,7 @@ Depois de criar seu bloco de conteúdo, você pode inseri-lo em suas mensagens s
 2. Insira a tag Content Block Liquid na mensagem. Você também pode começar a digitar o Liquid e fazer com que a tag seja preenchida automaticamente.
 
 {% alert note %}
-As propriedades de entrada do Canvas e as propriedades de evento são compatíveis apenas com um Canvas, não com o bloco de conteúdo.
+As propriedades do evento Canvas só são compatíveis com um Canvas. Se você fizer referência a um bloco de conteúdo com propriedades de entrada de tela em uma campanha, ele não será preenchido.
 {% endalert %}
 
 ### Atualização e cópia de blocos de conteúdo
@@ -77,11 +77,11 @@ Se você optar por atualizar um bloco de conteúdo, ele será atualizado em toda
 
 Se quiser atualizar um bloco de conteúdo para uma única mensagem ou fazer uma cópia para usar em outras mensagens, é possível copiar o HTML da mensagem original para a nova mensagem ou editar o bloco de conteúdo original (ele já deve ter sido usado em uma mensagem) e salvá-lo. Você receberá um aviso que permitirá salvá-lo como um novo bloco de conteúdo.
 
-Depois de fazer edições em um bloco de conteúdo, você pode salvar e iniciar o bloco de conteúdo atualizado clicando em **Lançar bloco de conteúdo**. Ou, você pode selecionar **Mais** > **Duplicar**para criar uma duplicata do seu bloco de conteúdo.
+Depois de fazer edições em um bloco de conteúdo, você pode salvar e iniciar o bloco de conteúdo atualizado selecionando **Lançar bloco de conteúdo**. Ou, você pode selecionar **Mais** > **Duplicar**para criar uma duplicata do seu bloco de conteúdo.
 
-![][2]
+![Um bloco de conteúdo que diz "Welcome to our newsletter" (Bem-vindo ao nosso boletim informativo).][2]
 
-Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) um bloco de conteúdo. Isso cria uma cópia de rascunho do bloco de conteúdo.
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) um bloco de conteúdo. Isso cria uma cópia de rascunho do bloco de conteúdo.
 
 ### Pré-visualização de blocos de conteúdo
 
@@ -89,7 +89,7 @@ Depois de adicionar um bloco de conteúdo em uma campanha ou canvas ativo, é po
 
 Essa prévia inclui informações sobre o bloco de conteúdo, como quem o criou, tags, data de criação, data da última edição, descrição, tipo de editor, contagem de inclusão com detalhes e uma prévia real do bloco de conteúdo.
 
-![][7]{: style="max-width:60%;"} 
+![Uma prévia de um bloco de conteúdo "Workout_Promo" para ciclismo e dança que tem seis inclusões.][7]{: style="max-width:60%;"} 
 
 ### Aninhamento de blocos de conteúdo
 
@@ -105,12 +105,12 @@ Além disso, os blocos de conteúdo não podem ser usados em um rodapé de e-mai
 
 ![Menu suspenso Configurações expandido que mostra três opções: Arquivar, Duplicar e Copiar para o espaço de trabalho.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na página [Modelos e mídias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
+Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na página [Modelos e mídias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
 
 #### Melhores práticas
 
 - Quando seu bloco for usado apenas em alguns e-mails, recomendamos arquivar o bloco desatualizado e atualizar suas mensagens ao vivo com um bloco mais recente que não tenha sido arquivado.
-- Quando seu bloco tiver apenas um erro de digitação ou precisar de uma pequena alteração, não recomendamos arquivar o bloco. Basta atualizar e enviar!
+- Quando seu bloco tiver apenas um erro de digitação ou precisar de uma pequena alteração, não recomendamos arquivar o bloco. Em vez disso, atualize o bloco e comece a enviar!
 - Quando seu bloco for usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco e arquivá-lo. Isso garantirá que nenhuma informação desatualizada seja incluída em qualquer e-mail recém-enviado.
 - Se você arquivar acidentalmente um bloco de conteúdo, poderá desarquivá-lo.
 
