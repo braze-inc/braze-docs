@@ -46,7 +46,7 @@ Les journaux d’événements utilisateurs resteront dans le tableau de bord pen
 
 ### Journaux SDK manquants pour les utilisateurs test
 
-Si vous avez ajouté un utilisateur à un groupe interne, mais qu’il n’affiche aucun journal SDK dans le journal d’événements utilisateurs, cela peut être le résultat d’une option de configuration manquante. Pour capturer les journaux des SDK, veillez à sélectionner **Enregistrer les événements utilisateurs pour les membres du groupe** dans les **paramètres du groupe** [interne]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) en question.
+Si vous avez ajouté un utilisateur à un groupe interne, mais qu’il n’affiche aucun journal SDK dans le journal d’événements utilisateurs, cela peut être le résultat d’une option de configuration manquante. Pour capturer les journaux des SDK, veillez à sélectionner **Enregistrer les événements utilisateurs pour les membres du groupe** dans les **paramètres du groupe** [interne]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/) en question.
 
 ### Retard dans les mises à jour des journaux
 
