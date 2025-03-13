@@ -170,7 +170,7 @@ let totalFiles = 0;
 const links: LinkData[] = [];
 const aliases: string[] = [];
 const permalinks: string[] = [];
-const ignored_files = ['../_docs/_hidden/other/support_contact.md'];
+const ignored_files = [path.join(PROJECT_ROOT, '_docs/_hidden/other/support_contact.md')];
 function getLinksRecursive(dir: string) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -191,10 +191,9 @@ function getLinksRecursive(dir: string) {
 }
 
 getLinksRecursive(docsBasePath);
-console.log(`Found ${links.length} links`);
 
 // Create CSV header
-const headers = ['Source', 'Link', 'Expected Path'];
+const headers = ['File', 'Broken Link', 'Path to Broken Link'];
 const csv: string[] = [];
 
 // Process each result
@@ -229,5 +228,6 @@ for (const item of links) {
 
 const deduplicated = Array.from(new Set(csv)).sort();
 
-console.log(`\n\nFound ${deduplicated.length - 1} broken links in ${totalFiles} files`);
-fs.writeFileSync('./temp/broken-links.csv', [headers, ...deduplicated].join('\n'));
+fs.writeFileSync(path.join(PROJECT_ROOT, './scripts/temp/broken-links.csv'), [headers, ...deduplicated].join('\n'));
+
+console.log(`${deduplicated.length - 1} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, './scripts/temp/broken-links.csv')}`);
