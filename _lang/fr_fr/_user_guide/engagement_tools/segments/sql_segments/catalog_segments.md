@@ -32,9 +32,9 @@ Voici des directives pour sélectionner les variables :
 | Champ de variable | Description |
 | --- | --- |
 | `Catalog` | Le nom du catalogue que vous utilisez pour cibler les utilisateurs. |
-| `Catalog field`| Le champ de votre catalogue qui contient les mêmes valeurs que votre `Custom event property`. Il s’agit souvent d’un type d'identifiant. Dans le cas de l’e-commerce, ce serait `shopify_id`. |
-| `Custom event` | Le nom de votre événement personnalisé, qui est le même événement contenant une propriété avec des valeurs correspondant à votre `Catalog field`. Dans le cas de l’e-commerce, ce serait `Made Order`. |
-| `Custom event property` | Le nom de votre propriété d'événement personnalisée, qui correspond aux valeurs de votre `Catalog field`. Dans le cas de l’e-commerce, cela correspondrait à `Shopify_ID.`|
+| `Catalog field`| Le champ de votre catalogue qui contient les mêmes valeurs que votre `Custom event property`. Il s’agit souvent d’un type d'identifiant. Dans le cas du commerce électronique, il s'agit de `shopify_id`. |
+| `Custom event` | Le nom de votre événement personnalisé, qui est le même événement contenant une propriété avec des valeurs correspondant à votre `Catalog field`. Dans le cas du commerce électronique, il s'agit de `Made Order`. |
+| `Custom event property` | Le nom de votre propriété d'événement personnalisée, qui correspond aux valeurs de votre `Catalog field`. Dans l'exemple d'utilisation du commerce électronique, il s'agirait de `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
