@@ -35,6 +35,7 @@ While Live Activities and push notifications are similar, their system permissio
 {% endalert %}
 
 ## Sequence Diagram
+{% details Show template %}
 ```mermaid
 ---
 config:
@@ -67,6 +68,7 @@ sequenceDiagram
   Note right of BrazeAPI: Activity can be ended via:<br> - User manually dismisses<br>- Times out after 12 hours<br>- `dismissal_date` is now in the past<br>- Setting `end_activity: true`
   APNS ->> App: Live activity is dismissed
 ```
+{% enddetails %}
 
 ## Implementing a Live Activity
 
