@@ -13,7 +13,7 @@ platform:
 
 # Criação de feature flags
 
-> Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção de usuários. Crie um novo feature flag no dashboard da Braze. Forneça um nome e um endereço `ID`, um público-alvo e uma porcentagem de usuários para os quais ativar esse recurso. Em seguida, usando o mesmo `ID` no código do seu app ou site, você pode executar condicionalmente determinadas partes da sua lógica de negócios. Para saber mais sobre os feature flags e como você pode usá-los no Braze, consulte [Sobre os feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).
+> Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção de usuários. Crie um novo feature flag no dashboard da Braze. Forneça um nome e um endereço `ID`, um público-alvo e uma porcentagem de usuários para os quais ativar esse recurso. Em seguida, usando o mesmo `ID` no código do seu app ou site, você pode executar condicionalmente determinadas partes da sua lógica de negócios. Para saber mais sobre os feature flags e como você pode usá-los no Braze, consulte [Sobre os feature flags]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Pré-requisitos
 
