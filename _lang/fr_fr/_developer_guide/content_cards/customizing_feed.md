@@ -14,13 +14,13 @@ platform:
 
 # Personnaliser le flux par défaut de la carte de contenu
 
-> Un flux de cartes de contenu correspond à la séquence de cartes de contenu dans vos applications mobiles ou Web. Cet article traite de la configuration du moment où le flux est actualisé, de l'ordre des cartes, de la gestion de plusieurs flux et des messages d'erreur "flux vide". Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Un flux de cartes de contenu correspond à la séquence de cartes de contenu dans vos applications mobiles ou Web. Cet article traite de la configuration du moment où le flux est actualisé, de l'ordre des cartes, de la gestion de plusieurs flux et des messages d'erreur "flux vide". Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Rafraîchir le flux
 
 Par défaut, le flux de cartes de contenu s'actualise automatiquement dans les instances suivantes : 
 1. Une nouvelle session est lancée
-2. Lorsque le flux est ouvert et que plus de 60 secondes se sont écoulées depuis la dernière actualisation.
+2. Lorsque le flux est ouvert et que plus de 60 secondes se sont écoulées depuis la dernière actualisation. Cela ne s'applique qu'au flux par défaut de la carte de contenu et ne se produit qu'une seule fois par ouverture du flux.
 
 Vous pouvez également configurer le SDK pour qu'il s'actualise manuellement à des moments précis.
 
@@ -354,7 +354,7 @@ Le style utilisé pour afficher ce message peut être trouvé via [`Braze.Conten
 </style>
 ```
 
-Pour plus d'informations sur la personnalisation des éléments de style des cartes de contenu, voir [Personnaliser le style]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
+Pour plus d'informations sur la personnalisation des éléments de style des cartes de contenu, voir [Personnaliser le style]({{site.baseurl}}/developer_guide/content_cards/customizing_styles/).
 {% endtab %}
 {% tab Jetpack Compose %}
 Pour personnaliser le message d'erreur de flux vide avec Jetpack Compose, vous pouvez transmettre une `emptyString` à `ContentCardsList`. Vous pouvez également transmettre `emptyTextStyle` à `ContentCardListStyling` pour personnaliser davantage ce message.
@@ -419,7 +419,7 @@ Les cartes de contenu peuvent être filtrées sur votre application afin que seu
 
 ### Étape 1 : Définir des paires clé-valeur sur les cartes
 
-Lors de la création d'une campagne de cartes de contenu, définissez des [données de type paire clé-valeur]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/) sur chaque carte. Vous utiliserez cette paire clé-valeur pour classer les cartes. Les paires clé-valeur sont stockées dans la propriété `extras` du modèle de données de la carte.
+Lors de la création d'une campagne de cartes de contenu, définissez des [données de type paire clé-valeur]({{site.baseurl}}/developer_guide/content_cards/customizing_behavior/) sur chaque carte. Vous utiliserez cette paire clé-valeur pour classer les cartes. Les paires clé-valeur sont stockées dans la propriété `extras` du modèle de données de la carte.
 
 Pour cet exemple, nous allons définir une paire clé-valeur avec la clé `feed_type` qui désignera dans quel flux la carte de contenu doit s’afficher. La valeur sera celle de vos flux personnalisés, par exemple `home_screen` ou `marketing`.
 
