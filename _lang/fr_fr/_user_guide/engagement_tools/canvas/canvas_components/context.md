@@ -54,5 +54,5 @@ Par exemple, si le type de données de la variable contextuelle est défini sur 
 Vous pouvez ajouter des [options de retard personnalisées]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) avec les informations de l'étape Contexte, ce qui signifie que vous pouvez sélectionner la variable qui retarde les utilisateurs.
 
 
-[1] : {% image\_buster /assets/img/context\_step3.png %}
+[1]: {% image_buster /assets/img/context_step3.png %}
 
