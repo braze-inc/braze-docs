@@ -24,18 +24,4 @@ guide_featured_list:
 
 ## Quais são as diferenças entre equipes, conjuntos de permissões e funções? 
 
-É possível usar equipe, conjuntos de permissões e funções de usuário para gerenciar o acesso e as responsabilidades do usuário do dashboard no Braze. Cada recurso engloba um conjunto diferente de permissões e controles de acesso.
-
-### Principais diferenças
-
-Em um nível elevado, cada recurso tem um escopo diferente:
-- Os conjuntos de permissões controlam o que os usuários do dashboard podem fazer em todos os espaços de trabalho.
-- As funções controlam o que os usuários do dashboard podem fazer em espaços de trabalho específicos.
-- As equipes controlam os públicos para os quais os usuários do dashboard podem enviar mensagens.
-
-| Recurso | O que você pode fazer
-| - | - |
-| [Conjuntos de permissões]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-permission-set): agrupe permissões relacionadas a áreas temáticas ou ações específicas (como para "Desenvolvedores" e "Profissionais de marketing") e, em seguida, aplique-as aos usuários do dashboard que precisam das mesmas permissões em diferentes espaços de trabalho. |
-| [Funções]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) | agrupe permissões personalizadas individuais e controles de acesso ao espaço de trabalho em funções predefinidas (como "Profissional de marketing - Marcas de moda" e "Profissional de marketing - Marcas de cuidados com a pele") e, em seguida, atribua uma função aos usuários do dashboard para conceder-lhes diretamente o acesso e as permissões do espaço de trabalho associado. |
-| [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) | Limite o acesso do usuário do dashboard aos recursos com base no público (como localização da base de clientes, idioma e atributos personalizados). |
-{: .reset-td-br-1 .reset-td-br-2 }
+{% multi_lang_include permissions.md content="Differences" %}
