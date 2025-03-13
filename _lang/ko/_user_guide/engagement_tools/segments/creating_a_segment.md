@@ -80,7 +80,9 @@ Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하�
 ![세그먼트 필터 그룹은 AND 연산자와 함께 사용됩니다.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-이미 **세그먼트 멤버십** 필터를 사용 중인 세그먼트는 다른 세그먼트에 추가되거나 중첩될 수 없습니다.
+이미 **세그먼트 멤버십** 필터를 사용 중인 세그먼트는 다른 세그먼트에 추가되거나 중첩될 수 없습니다. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
+
+Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
 {% endalert %}
 
 #### 제외 그룹 (선택 사항) {#exclusion}
