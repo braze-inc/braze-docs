@@ -16,7 +16,7 @@ table td {
 
 # Référence des tables SQL
 
-Cette page est une référence des tables et des colonnes disponibles pour être interrogées dans le [générateur de requêtes]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) ou lors de la génération d'[extensions de segments SQL.]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) 
+Cette page est une référence des tables et des colonnes disponibles pour être interrogées dans le [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder/) ou lors de la génération d'[extensions de segments SQL.]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) 
 
 ## Sommaire
 
