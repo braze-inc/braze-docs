@@ -103,63 +103,63 @@ Esse relatório contém apenas os 10.000 eventos de segurança mais recentes de 
 
 {% details Eventos de segurança relatados %}
 ### Login e conta 
-- EVENTO_DO_DESENVOLVEDOR REMOVIDO
-- EVENTO_DO_DESENVOLVEDOR_ADICIONADO
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- Desenvolvedor removido
+- Desenvolvedor adicional adicionado
+- Fazendo login
+- Falha no login
+- Configuração da autenticação de dois fatores concluída
+- Reinicialização da autenticação de dois fatores concluída
+- Desenvolvedor liberado 2FA
+- Desenvolvedor suspenso
+- Desenvolvedor não suspenso
 
 ### Acesso elevado
-- EVENTO_DE_FLUXO_DE_ACESSO_ELEVADO_INICIADO
-- EVENTO_DE_FLUXO_DE_ACESSO_ELEVADO_COMPLETADO
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Fluxo de acesso elevado iniciado
+- Fluxo de acesso elevado concluído
+- Falha na verificação 2FA para acesso elevado
 
 ### Campanha interrompida
-- EVENTO_DE_CAMPANHA_ADICIONADO
-- EVENTO_DE_CAMPANHA_EDITADO
+- Campanha adicionada
+- Campanha editada
 
 ### Canva
-- EVENTO_DE_FLUXO_ADICIONADO
-- EVENTO_DE_FLUXO_DE_TRABALHO_EDITADO
+- Jornada adicionada
+- Jornada editada
 
 ### Segmento
-- EVENTO_DE_SEGMENTO_ADICIONADO
-- EVENTO_DE_SEGMENTO_EDITADO
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- Segmento adicionado
+- Segmento editado
+- Dados exportados para CSV
+- Segmento exportado via API
 
 ### Chave da API REST
-- CHAVE_DE_API_ADICIONADA
-- REMOVED_REST_API_KEY
+- Adicionada a chave da API REST
+- Remoção da chave da API REST
 
 ### Credencial de autenticação básica
-- CREDENCIAL_BASIC_AUTH_ADICIONADA
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- Adição da credencial de autenticação básica
+- Credencial de autenticação básica atualizada
+- Remoção da credencial de autenticação básica
 
 ### Permissão
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- Desenvolvedor liberado 2FA
+- Permissão de conta atualizada
 
 ### Configurações da empresa
-- GRUPO_APP_ADICIONADO
-- EVENTO_APLICATIVO_ADICIONADO
+- Grupo de app adicionado
+- Aplicativo adicionado
 
 ### Modelo de e-mail
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- Modelo de e-mail adicionado
+- Modelo de e-mail atualizado
 
 ### Credencial push
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- Credencial push atualizada
+- Credencial push removida
 
 ### Depurador do SDK
-- STARTED_SDK_DEBUGGER_SESSION
-- EXPORTED_SDK_DEBUGGER_LOGS
+- Iniciou a sessão do depurador do SDK
+- Registro do depurador SDK exportado
 {% enddetails %}
 
 ## Visualização de informações de identificação pessoal (IPI) {#view-pii}
