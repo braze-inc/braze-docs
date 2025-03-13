@@ -43,7 +43,7 @@ Best for when you don't want to use SQL.
 - **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
 - **Full refresh:** Write a Snowflake SQL segment that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
 
-![""][20]{: style="max-width:50%"}
+![Table with different Segment Extension creation experiences to select from.][20]{: style="max-width:50%"}
 
 If you select an experience that uses SQL, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information.
 
@@ -61,7 +61,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
 
-![""][3]
+![Segmentation criteria for users who performed a custom event, "# of aaa", more than 0 times in the date fage of August 1st, 2023 through August 10, 2023.][3]
 
 #### Event property segmentation
 
@@ -130,27 +130,43 @@ Segments could require up to 60 minutes to refresh because of data processing ti
 - Only one refresh can occur at a time for a specific Segment Extension. If there is a conflict where a new refresh is initiated when an existing refresh has already begun processing, Braze will cancel the new refresh request and continue the in-progress processing. 
 {% endalert %}
 
+#### Criteria to automatically disable stale extensions
+
+Scheduled refreshes are automatically disabled once a Segment Extension is stale. A Segment Extension is stale if it meets the following criteria:
+
+- Not used in any active campaigns or Canvases
+- Not used in any segment that is in an active campaign or Canvas
+- Not used in any segment that has [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) turned on
+- Hasn't been modified in over seven days
+- Hasn't been added to a campaign or Canvas (including drafts), or segment in over seven days
+
+If the scheduled refresh is disabled for a Segment Extension, that extension will have a notification that says so.
+
+![A notification stating that "Scheduled refreshes have been turned off for this extension because it's not used in any active campaigns, Canvases, or segments. The segment extension was disabled February 23, 2025 at 12:00 AM."][1]
+
+When you're ready to use a stale Segment Extension, [review the refresh settings](#step-4-designate-refresh-settings-optional), select the refresh schedule that matches your use case, and then save any modifications.
+
 ### Step 5: Save your Segment Extension
 
 Once you select **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 
 While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
 
-![""][5]
+!["Segment Extensions" page with two active extensions.][5]
 
 ### Step 6: Use your extension in a segment
 
 Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
-![""][6]
+!["Filters" section with a filter dropdown showing "Braze Segment Extensions".][6]
 
 From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
 
-![""][7]
+![A "Braze Segment Extensions" filter that includes a segment "Online Shoppers Ext...".][7]
 
 To view the extension criteria, select **View Extension Details** to show the details in a modal popup.
 
-![""][8]{: style="max-width:70%;"}
+![Extension details for the "Online Shoppers Extension - 90 Days".][8]{: style="max-width:70%;"}
 
 Now you can proceed as usual with [creating your segment][11].
 
@@ -166,6 +182,7 @@ When using **Simple extension** Segment Extensions, you can select one custom ev
 
 No. Before you can archive a Segment Extension, you need to remove it from all active messaging.
 
+[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension1.png %}
 [5]: {% image_buster /assets/img/segment/segment_extension5.png %}

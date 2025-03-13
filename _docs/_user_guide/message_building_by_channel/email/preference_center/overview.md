@@ -125,3 +125,26 @@ This approach does not require query string value-pairs embedded in the URL as t
 This is used to render the preference center when legacy Liquid {%raw%}`${preference_center_url}`{%endraw%} is used, meaning Canvas steps or templates that reference either {%raw%}`${preference_center_url}` or `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} won't work. This also applies to previously sent messages that included the legacy Liquid or "PreferenceCenterBrazeDefault" as part of the message. 
 
 If you reference {%raw%}`${preference_center_url}`{%endraw%} in a new message again, a preference center named "PreferenceCenterBrazeDefault" will be created again.
+
+### Do preference centers support multiple languages?
+
+No. However, you can leverage Liquid when writing the HTML for custom opt-in and opt-out pages. If you're using dynamic links to manage unsubscribes, this is a single link. 
+
+For example, if you're tracking the unsubscribe rate for Spanish-speaking users, you would need to either use separate campaigns or leverage analytics around Currents (such as looking at when a user unsubscribes and checking the preferred language of that user).
+
+As another example, for tracking unsubscribe rates for Spanish-speaking users, you could add a query parameter string like `?Spanish=true` to the unsubscribe URL if the users' language is German and use a regular unsubscribe link if they aren't:
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+Then, through Currents, you could identify which users speak Spanish and how many click events there were for that unsubscribe link.
+
+### Are both unsubscribe links and email preference centers required for sending?
+
+No. If you see the message "Your Email Body does not include an unsubscribe link" when composing an email campaign, this warning is expected if your unsubscribe link is in a Content Block.

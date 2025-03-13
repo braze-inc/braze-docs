@@ -1,6 +1,6 @@
 ---
-nav_title: Example implementations
-article_title: Example push notification implementations for the Braze Swift SDK
+nav_title: Example Implementations
+article_title: Example Push Notification Implementations for the Braze Swift SDK
 platform: Swift
 page_order: 30
 description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages with the Swift SDK."
