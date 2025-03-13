@@ -13,7 +13,7 @@ local_redirect:
 
 > 기능 플래그를 사용하면 새로운 기능에 대한 가설을 실험하고 확인할 수 있습니다. 마케터는 기능 플래그를 사용하여 [캔버스][1]에서 오디언스를 세분화하고 기능 출시가 전환에 미치는 영향을 추적할 수 있습니다. 또한 [실험 경로를][2] 사용하면 서로 다른 메시지 또는 경로를 테스트하고 가장 효과적인 경로를 결정하여 이러한 전환을 최적화할 수 있습니다. 더 많은 오디언스에게 기능을 점진적으로 출시할 때 성공 경로를 사용하세요.
 
-기능 플래그와 Braze에서 사용하는 방법에 대한 자세한 정보를 찾고 계신가요? [기능 플래그]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/) 전용 문서를 확인하세요.
+기능 플래그와 Braze에서 사용하는 방법에 대한 자세한 정보를 찾고 계신가요? Check out our dedicated [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/) articles.
 
 ## 기능 플래그 만들기
 
