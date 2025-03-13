@@ -1,5 +1,8 @@
 ---
-nav\_title : Using Item Recommendations article\_title: Using Item Recommendations In Your Messaging description: "Cet article décrit comment utiliser les recommandations d'articles dans votre message." page\_order : 20
+nav_title: Using Item Recommendations
+article_title: Using Item Recommendations In Your Messaging
+description: "Cet article décrit comment utiliser les recommandations d'articles dans votre message." 
+page_order : 20
 ---
 
 # Utiliser les recommandations d'articles dans vos messages
@@ -84,7 +87,7 @@ Pour l'éditeur par glisser-déposer de l'e-mail :
 
 {% endraw %}
 
-\![Panneau des propriétés de l'image dans l'éditeur glisser-déposer\]({% image\_buster /assets/img/image\_with\_liquid.png %}){ : style="max-width:60%"}.
+![Panneau des propriétés de l'image dans l'éditeur glisser-déposer]({% image_buster /assets/img/image_with_liquid.png %}){ : style="max-width:60%"}.
 
 {:start="5"}
 
@@ -98,7 +101,10 @@ Pour les références d'images HTML, définissez l'attribut image `src` sur le c
 
 {% raw %}
 
-```html {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} <img src="{{ items[0].IMAGE_URL_FIELD }}" alt="{{ items[0].name }}"> ```
+```html
+{% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %}
+<img src="{{ items[0].IMAGE_URL_FIELD }}" alt="{{ items[0].name }}">
+```
 
 {% endraw %}
 
@@ -212,7 +218,7 @@ Lorsque la recommandation a terminé sa formation, vous pouvez l'utiliser dans v
 { : start="7"}
 
 7. Pour les deux extraits de code, remplacez `abandoned_cart` par le nom de votre recommandation dans Braze.
-8. Vérifiez que les noms des champs des éléments`({{ items[0].field_name }}`) correspondent aux noms des colonnes de votre catalogue.
+8. Vérifiez que les noms des champs des éléments (`{{ items[0].field_name }}`) correspondent aux noms des colonnes de votre catalogue.
 9. Incrémentez le tableau d'une unité à chaque fois que vous répétez le bloc afin d'extraire du catalogue l'élément recommandé suivant. Par exemple, le tableau commence par `{{ items[0].name }}`, de sorte que l'élément suivant serait `{{ items[1].name }}.`
 
 ### Étape 4 : Prévisualisez votre message
@@ -234,4 +240,5 @@ Si la recommandation n'apparaît pas dans l'aperçu, vérifiez les points suivan
 
 
 [1]: https://learning.braze.com/ai-item-recommendations-use-case/1996254
-\[2]: {% image\_buster /assets/img/image\_with\_liquid.png %} \[3]: {{site.baseurl}}/user\_guide/brazeai/recommendations/ai\_item\_recommendations#creating-an-ai-item-recommendation
+[2]: {% image_buster /assets/img/image_with_liquid.png %}
+[3]: {{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations#creating-an-ai-item-recommendation
