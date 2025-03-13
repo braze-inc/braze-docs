@@ -1,5 +1,5 @@
 ---
-nav\_title : Lignes directrices de la marque article\_title : Lignes directrices de la marque page\_order : 1 page\_type : référence description : "Cet article de référence décrit comment créer, gérer et utiliser les buidelines de marque qui peuvent être appliquées à vos messages grâce à l'assistant de rédaction de l'intelligence artificielle."
+nav\_title: Lignes directrices de la marque article\_title: Lignes directrices de la marque page\_order: 1 page\_type: reference description: "Cet article de référence décrit comment créer, gérer et utiliser les buidelines de marque qui peuvent être appliquées à vos messages grâce à l'assistant de rédaction de l'intelligence artificielle."
 ---
 
 # Lignes directrices de la marque
@@ -18,13 +18,13 @@ Sur la page **Lignes directrices de la marque**, sélectionnez **Créer un nouve
 
 Pour la **personnalité de la marque**, réfléchissez à ce qui rend votre marque unique. Incluez les caractéristiques, les valeurs, la voix et tous les archétypes qui définissent votre marque. Voici quelques caractéristiques à prendre en compte :
 
-| **Caractéristique** | **Définition** | **Exemple** | |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------| | Réputation | Comment vous souhaitez que votre marque soit perçue sur le marché. | Nous sommes connus pour être la marque la plus fiable et la plus orientée vers le client dans notre secteur d'activité. | Traits de personnalité | Caractéristiques humaines qui décrivent le caractère de votre marque. | Nous sommes connus pour être la marque la plus fiable et la plus orientée vers le client dans notre secteur d'activité. | Valeurs - Les valeurs fondamentales qui guident les actions et les décisions de votre marque. | Nous accordons de l'importance à la durabilité, à la transparence et à la communauté. | Différenciation - Qualités uniques qui distinguent votre marque de ses concurrents. | Nous nous distinguons en offrant un service client personnalisé qui va au-delà des attentes. | Voix de la marque | Le ton et le style de communication utilisés par votre marque. | Notre voix est décontractée mais informative, assurant la clarté sans être trop formelle. | La voix de votre marque est celle d'une personne qui s'identifie à votre marque et qui la représente. | Nous incarnons l'archétype de l'explorateur, toujours à la recherche de nouveaux défis et de nouvelles aventures. | { : .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+| **Caractéristique** | **Définition** | **Exemple** | |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------| | Réputation | Comment vous souhaitez que votre marque soit perçue sur le marché. | Nous sommes connus pour être la marque la plus fiable et la plus orientée vers le client dans notre secteur d'activité. | Traits de personnalité | Caractéristiques humaines qui décrivent le caractère de votre marque. | Nous sommes connus pour être la marque la plus fiable et la plus orientée vers le client dans notre secteur d'activité. | Valeurs - Les valeurs fondamentales qui guident les actions et les décisions de votre marque. | Nous accordons de l'importance à la durabilité, à la transparence et à la communauté. | Différenciation - Qualités uniques qui distinguent votre marque de ses concurrents. | Nous nous distinguons en offrant un service client personnalisé qui va au-delà des attentes. | Voix de la marque | Le ton et le style de communication utilisés par votre marque. | Notre voix est décontractée mais informative, assurant la clarté sans être trop formelle. | La voix de votre marque est celle d'une personne qui s'identifie à votre marque et qui la représente. | Nous incarnons l'archétype de l'explorateur, toujours à la recherche de nouveaux défis et de nouvelles aventures. | {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Étape 3 : Définir le langage à éviter (facultatif)
 
 Pour les **exclusions**, énumérez tout langage ou style qui ne correspond pas à votre marque. Par exemple, vous voudrez peut-être éviter le « sarcasme », les « attitudes négatives » ou le ton « condescendant ».
 
-La fenêtre "Créer une ligne directrice de marque" avec des champs pour saisir le nom, la description, la personnalité, les exclusions et le ton]\[1].
+\![La fenêtre "Créer une ligne directrice de marque" avec des champs pour saisir le nom, la description, la personnalité, les exclusions et le ton]\[1].
 
 ### Étape 4 : Tester vos directives
 
@@ -40,7 +40,7 @@ Lorsque vous êtes satisfait de vos directives, sélectionnez **Enregistrer la d
 
 Vous pouvez modifier les directives de marque en les sélectionnant sur la page **Directives de marque.**  Archivez une directive de marque pour la rendre inactive et la supprimer de l'assistant de rédaction de l'intelligence artificielle. Pour la rendre à nouveau active et sélectionnable, vous pouvez filtrer les directives de marque archivées et les désarchiver.
 
-La page "Lignes directrices de la marque" a filtré les lignes directrices de la marque archivées]\[4].
+\![La page "Lignes directrices de la marque" a filtré les lignes directrices de la marque archivées]\[4].
 
 ## Utiliser les lignes directrices de la marque
 
@@ -52,4 +52,4 @@ Lors de la rédaction d'un message, ouvrez l'[assistant de rédaction de l'intel
 
 Pour générer des copies à l'aide d'une ligne directrice de marque, Braze enverra votre requête, y compris le contenu de votre ligne directrice, à OpenAI. Toutes les requêtes envoyées à OpenAI depuis Braze sont anonymisées, ce qui signifie qu'OpenAI ne sera pas en mesure d'identifier l’origine de la requête, à moins que vous n'incluiez des informations identifiables dans les données que vous fournissez ou dans les données de vos compagnes antérieures si vous activez l’option « Faire référence aux données d’anciennes campagnes ». Conformément à la [politique d'](https://openai.com/policies/api-data-usage-policies)OpenAI, les données envoyées à l'API d'OpenAI à l'aide de Braze ne sont pas utilisées pour former ou améliorer leurs modèles et seront supprimées après 30 jours. Entre vous et Braze, tout contenu généré à l'aide de GPT constitue votre propriété intellectuelle. Braze ne fera valoir aucune revendication de propriété intellectuelle sur ce contenu et ne donne aucune garantie de quelque nature que ce soit concernant tout contenu généré par l’IA.
 
-\[1] : {% image\_buster /assets/img/guidelines\_create.png %} \[2] : {% image\_buster /assets/img/guidelines\_ai\_assistant.png %} \[4] : {% image\_buster /assets/img/unarchive\_brand\_guideline.png %}
+\[1]: {% image\_buster /assets/img/guidelines\_create.png %} \[2]: {% image\_buster /assets/img/guidelines\_ai\_assistant.png %} \[4]: {% image\_buster /assets/img/unarchive\_brand\_guideline.png %}
