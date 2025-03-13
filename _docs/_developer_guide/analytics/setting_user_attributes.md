@@ -26,23 +26,15 @@ description: "Learn how to set user attributes through the Braze SDK."
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab cordova %}
-{% multi_lang_include developer_guide/cordova/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
-{% sdktab flutter %}
-{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
-{% sdktab roku %}
-{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
 {% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab other wrappers %}
+For Cordova, Flutter, React Native, Roku, and Xamarin, set user attributes using the relevant Android and Swift methods.
 {% endsdktab %}
 {% endsdktabs %}

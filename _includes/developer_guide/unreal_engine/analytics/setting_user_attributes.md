@@ -1,9 +1,7 @@
 ## Default User Attributes
 
-To assign a default user attribute to a user, call the `GetCurrentUser()` method on the shared `UBrazeUser` object to get a reference to the current user of your app. Then you can call methods to set a user attribute.
+To set a default attribute for a user, call the `GetCurrentUser()` method on the shared `UBrazeUser` object to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
-{% tabs %}
-{% tab Unreal Engine %}
 ```cpp
 UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
     if (BrazeUser) {
@@ -11,8 +9,6 @@ UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
     }
 });
 ```
-{% endtab %}
-{% endtabs %}
 
 The following attributes should be set on the `UBrazeUser` object:
 

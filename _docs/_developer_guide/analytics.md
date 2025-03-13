@@ -1,17 +1,17 @@
 ---
 nav_title: Analytics
-article_title: Analytics Overview
+article_title: About Analytics for the Braze SDK
 page_order: 2.4
-description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
+description: "Learn about the Braze SDK's analytics, so you can better understand which data Braze collects, the difference between custom events and custom attributes, and best practices for managing analytics."
 
 ---
 
-# Analytics overview
+# About Analytics
 
-> This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
+> Learn about the Braze SDK's analytics, so you can better understand which data Braze collects, the difference between custom events and custom attributes, and best practices for managing analytics.
 
 {% alert tip %}
-Before completing your Braze implementation, your team should discuss your marketing goals, so you can best decided what you want to track and how you want to track it with Braze. For an example, see our [Taxi/Ride-Sharing App](#example-case) case study at the end of this guide.
+During your Braze implementation, be sure to discuss marketing goals with your team, so you can best decided the data you want to track and how you want to track it with Braze. For an example, see our [Taxi/Ride-Sharing App](#example-case) case study at the end of this guide.
 {% endalert %}
 
 ## Automatically collected data

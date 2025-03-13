@@ -2049,4 +2049,55 @@ validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/d
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
+// android
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/beacon/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
+validurls['/docs/developer_guide/platforms/android/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
+
+// swift
+validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/swift/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// web
+validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/web/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// cordova
+validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/cordova/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// flutter
+validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// react_native
+validurls['/docs/developer_guide/platforms/react_native/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/react_native/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/react_native/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// roku
+validurls['/docs/developer_guide/platforms/roku/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/roku/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/roku/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// unity
+validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unity/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
+// unreal_engine
+validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+validurls['/docs/developer_guide/platforms/unreal_engine/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';
+
 // validurls['OLD'] = 'NEW';
