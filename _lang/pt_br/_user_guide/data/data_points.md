@@ -75,6 +75,10 @@ Além disso, como as alterações no estado da inscrição não consomem pontos 
 
 ## Pontos de dados
 
+{% alert note %}
+As tabelas a seguir têm caráter ilustrativo. Para conhecer as convenções exatas de nomenclatura, capitalização e valores aceitos para determinados campos, consulte a documentação relevante do seu método de ingestão.
+{% endalert %}
+
 {% tabs %}
 {% tab Não faturável %}
 
@@ -166,3 +170,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+
