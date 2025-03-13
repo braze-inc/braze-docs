@@ -14,7 +14,7 @@ platform:
 
 # Personnalisation du comportement des cartes de contenu
 
-> Ce guide de mise en œuvre aborde la modification du comportement des cartes de contenu, l'ajout d'éléments supplémentaires tels que des paires clé-valeur à votre charge utile, ainsi que des recettes pour des personnalisations courantes. Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Ce guide de mise en œuvre aborde la modification du comportement des cartes de contenu, l'ajout d'éléments supplémentaires tels que des paires clé-valeur à votre charge utile, ainsi que des recettes pour des personnalisations courantes. Pour obtenir un aperçu des types d'options de personnalisation dont vous disposez avec les cartes de contenu, voir [Aperçu de la personnalisation]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Paires clé-valeur
 
