@@ -16,9 +16,9 @@ Référez-vous à notre cas d'application [de Taxi/Ride-Sharing](#example-case) 
 
 ## Données collectées automatiquement
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l’exception du début et de la fin de session, toutes les autres données automatiquement suivies ne sont pas prises en compte dans votre compte de points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l’exception du début et de la fin de session, toutes les autres données automatiquement suivies ne sont pas prises en compte dans votre compte de points de données.
 
-Consultez notre article sur [l’amorce SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) pour établir une liste des processus qui bloquent la collecte par défaut de certains éléments de données.
+Consultez notre article sur [l’amorce SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) pour établir une liste des processus qui bloquent la collecte par défaut de certains éléments de données.
 
 ## Événements personnalisés
 
