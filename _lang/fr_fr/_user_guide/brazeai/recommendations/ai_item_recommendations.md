@@ -36,7 +36,7 @@ Vous pouvez également choisir de créer une recommandation directement à parti
 
 Donnez à votre recommandation un nom et une description facultative.
 
-![][1]
+![L'étape "Détails de la recommandation" avec les champs nom et description.][1]
 
 ### Étape 2 : Définissez votre recommandation {#recommendation-type}
 
@@ -55,7 +55,7 @@ Lors de l'utilisation de **Plus récent** ou **Personnalisé par l'intelligence 
 
 Pour éviter de suggérer des articles qu'un utilisateur a déjà achetés ou avec lesquels il a déjà interagi, sélectionnez **Ne pas recommander d'articles avec lesquels les utilisateurs ont déjà interagi.** Cette option n'est disponible que lorsque le **type de** recommandation est défini sur **Intelligence artificielle personnalisée**.
 
-![][2-3]
+![Étape "Définir votre recommandation" avec "Le plus populaire" comme type et l'option "Ne pas recommander des éléments avec lesquels les utilisateurs ont déjà interagi" sélectionnée.][2-3]
 
 Ce paramètre empêche les messages de réutiliser les éléments qu'un utilisateur a déjà achetés ou avec lesquels il a interagi, à condition que la recommandation ait été mise à jour récemment. Les articles achetés ou ayant fait l'objet d'une interaction entre les mises à jour des recommandations peuvent encore apparaître. Pour la version gratuite des recommandations de produits, les mises à jour sont hebdomadaires. Pour la version pro des recommandations de produits avec l’IA, les mises à jour ont lieu toutes les 24 heures.
 
@@ -69,7 +69,7 @@ S'il n'est pas déjà indiqué, sélectionnez le [catalogue][catalogue] à parti
 
 Si vous souhaitez mieux contrôler votre recommandation, choisissez une [sélection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) pour appliquer des filtres personnalisés. Les sélections filtrent les recommandations en fonction de colonnes spécifiques de votre catalogue, telles que la marque, la taille ou l'emplacement/localisation. Les sélections qui contiennent du liquide ne peuvent pas être utilisées dans votre recommandation.
 
-![][2-2]
+![Exemple de la sélection "en stock" choisie pour la recommandation.][2-2]
 
 {% alert tip %}
 Si vous ne trouvez pas votre sélection, vérifiez qu’elle est configurée dans votre catalogue.
@@ -87,7 +87,7 @@ Vous pouvez optimiser pour :
 
 Si vous choisissez un **événement personnalisé**, sélectionnez votre événement dans la liste.
 
-![][3]
+![L'événement personnalisé "Achat terminé" a été sélectionné en fonction de la manière dont les événements sont actuellement suivis.][3]
 
 ### Étape 4 : Choisissez le nom de la propriété correspondante {#property-name}
 
@@ -97,7 +97,7 @@ Sélectionnez ce champ pour le **nom de la propriété**.
 
 Le champ **Nom de la propriété** sera pré-rempli avec une liste de champs envoyés par le SDK à Braze. Si suffisamment de données sont fournies, ces propriétés seront également classées par ordre de probabilité d'être la propriété correcte. Sélectionnez celle qui correspond au champ `id` du catalogue.
 
-![][4]
+![Le nom de la propriété "purchase_item" sélectionnée qui correspond aux ID des articles dans le catalogue.][4]
 
 #### Conditions {#requirements}
 
@@ -302,7 +302,7 @@ Vous pouvez consulter l'analyse/analytique de votre recommandation pour voir que
 
 En haut de la page, vous trouverez des statistiques sur votre recommandation, telles que la précision et la couverture.
 
-![][5]
+![Les indicateurs d'audience de la recommandation montrent la précision (21,1 %), la couverture (83,0 %) et les types de recommandation répartis entre les articles personnalisés et les articles les plus populaires.][5]
 
 Ces indicateurs sont définis dans le tableau suivant. 
 
@@ -318,15 +318,15 @@ La section suivante présente une ventilation des produits du catalogue, divisé
 - **Produits personnalisés** ou **Produits les plus récents :** Cette colonne répertorie chaque produit du catalogue par ordre décroissant de recommandation aux utilisateurs. Cette colonne indique également le nombre d'utilisateurs auxquels le modèle a attribué chaque élément.
 - **Produits les plus populaires :** Cette colonne présente chaque article du catalogue par ordre décroissant de popularité. La popularité fait ici référence aux éléments du catalogue avec lesquels les utilisateurs interagissent le plus souvent dans l'ensemble de l'espace de travail. Le plus populaire est utilisé comme solution de repli lorsque la personnalisation ou le plus récent ne peuvent être calculés pour un utilisateur individuel.
 
-![][6]
+![Tableaux côte à côte répertoriant les éléments attribués aux utilisateurs, séparés par les recommandations personnalisées et les recommandations les plus populaires.][6]
 
 L'**aperçu de la recommandation** présente un résumé de la configuration de la recommandation que vous avez choisie, y compris la date de la dernière mise à jour de la recommandation.
 
-![][7]{: style="max-width:45%" }
+![Tableau d'aperçu des recommandations affichant le type, le catalogue, le type d'événement, le nom de l'événement personnalisé, le nom de la propriété et la date de la dernière mise à jour.][7]{: style="max-width:45%" }
 
 ## Utilisation des recommandations dans les messages
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+![Modale "Ajouter une personnalisation" avec la recommandation d'articles comme type de personnalisation.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Une fois l’entraînement de votre recommandation terminé, vous pouvez personnaliser vos messages avec Liquid pour y insérer les produits les plus populaires de ce catalogue. Le liquide peut être généré pour vous par la fenêtre de personnalisation qui se trouve dans les compositeurs de messages :
 
@@ -361,6 +361,10 @@ Cela se produit dans quelques conditions spécifiques :
 - Le modèle trouve moins de 30 produits correspondant à vos critères.
 - Les articles concernés ne sont plus disponibles ou en stock.
 - Les produits ne répondent pas aux critères de sélection actuels, peut-être en raison d'un changement au niveau des stocks ou des préférences de l'utilisateur.
+
+### Les recommandations existantes font-elles l'objet d'une formation hebdomadaire après la mise à niveau vers Item Recommendations Pro ?
+
+Non, les recommandations existantes ne seront pas automatiquement mises à jour pour s'entraîner chaque semaine ou prédire chaque jour après la mise à niveau. Vous pouvez vérifier les prochaines heures d'entraînement et de prédictions dans la section **Recommandation** en sélectionnant une recommandation. Pour les planifications mises à jour, nous vous suggérons de recréer vos recommandations.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
