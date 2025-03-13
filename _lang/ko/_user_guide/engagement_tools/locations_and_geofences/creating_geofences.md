@@ -40,7 +40,7 @@ Braze 대시보드에서 지오펜스를 정의하고 사용자가 경계를 출
 
 ![사용자가 함부르크 공항의 지도에 반경 2,000미터를 그려 설정한 독일 공항의 지오펜스 세트.][1]
 
-지오펜스 세트를 생성한 후에는 지도에 지오펜스를 그려서 수동으로 추가할 수 있습니다. 최적의 기능을 위해 반경 최소 200미터의 지오펜스를 만드는 것을 권장합니다. 자세한 구성 옵션에 대한 정보는 [지오펜스 구성]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/)을 참조하세요.
+지오펜스 세트를 생성한 후에는 지도에 지오펜스를 그려서 수동으로 추가할 수 있습니다. 최적의 기능을 위해 반경 최소 200미터의 지오펜스를 만드는 것을 권장합니다. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
 ### 대량 업로드를 통해 세트 생성 {#creating-geofence-sets-via-bulk-upload}
 
