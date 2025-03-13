@@ -1,5 +1,5 @@
 ---
-nav\_title : Utilisation des recommandations d'articles article\_title : Utiliser les recommandations d'articles dans votre description d'envoi de messages : "Cet article décrit comment utiliser les recommandations d'articles dans votre message." page\_order : 20
+nav\_title : Using Item Recommendations article\_title: Using Item Recommendations In Your Messaging description: "Cet article décrit comment utiliser les recommandations d'articles dans votre message." page\_order : 20
 ---
 
 # Utiliser les recommandations d'articles dans vos messages
@@ -30,11 +30,11 @@ Commencez toujours par l'étiquette assign pour récupérer les données `produc
 
 {% raw %}
 
-```liquide {% assign items = {{produit_recommandation.${RECOMMANDATION_NAME}} %} ```
+```liquid {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} ```
 
 {% endraw %}
 
-- `NOM_DE_LA_RECOMMANDATION`: Remplacez ce nom par celui de la recommandation d'intelligence artificielle que vous avez créée dans Braze.
+- `RECOMMENDATION_NAME`: Remplacez ce nom par celui de la recommandation d'intelligence artificielle que vous avez créée dans Braze.
 - `articles`: Variable contenant le tableau des éléments recommandés.
 
 ### Accéder à des éléments individuels
@@ -43,7 +43,7 @@ Une fois les données de recommandation affectées, vous pouvez faire référenc
 
 {% raw %}
 
-```liquid {% assign items = {{produit_recommandation.${RECOMMANDATION_NAME}} %} {{ items[0].name }} for {{ items[0].price }} ```
+```liquid {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} {{ items[0].name }} for {{ items[0].price }} ```
 
 {% endraw %}
 
@@ -51,7 +51,7 @@ Pour inclure plusieurs éléments, référencez chaque élément individuellemen
 
 {% raw %}
 
-```liquid {% assign items = {{produit_recommandation.${RECOMMANDATION_NAME}} %} {{ items[0].name }} pour {{ items[0].price }} {{ articles[1].name }} pour {{ articles[1].price }} {{ articles[2].name }} pour {{ articles[2].price }} ```
+```liquid {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} {{ items[0].name }} for {{ items[0].price }} {{ items[1].name }} for {{ items[1].price }} {{ items[2].name }} for {{ items[2].price }} ```
 
 {% endraw %}
 
@@ -61,13 +61,13 @@ Les recommandations de l'intelligence artificielle renvoient plusieurs produits 
 
 Si le catalogue utilisé par votre recommandation comporte des liens vers des images, vous pouvez faire référence à ces images dans votre message. 
 
-{% onglets %}
+{% tabs %}
 
-{% onglet Glisser-déposer%} Dans les compositeurs avec des champs d'image, ajoutez le Liquid suivant au champ correspondant dans le compositeur :
+{% tab Drag-and-drop%} Dans les compositeurs avec des champs d'image, ajoutez le Liquid suivant au champ correspondant dans le compositeur :
 
 {% raw %}
 
-```liquid {% assign items = {{product_recommendation.${RECOMMANDATION_NAME}} %} {{ items[0].IMAGE_URL_FIELD }} ```
+```liquid {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} {{ items[0].IMAGE_URL_FIELD }} ```
 
 {% endraw %}
 
@@ -80,7 +80,7 @@ Pour l'éditeur par glisser-déposer de l'e-mail :
 
 {% raw %}
 
-```liquid {% assign items = {{product_recommendation.${RECOMMANDATION_NAME}} %} {{ items[0].IMAGE_URL_FIELD }} ```
+```liquid {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} {{ items[0].IMAGE_URL_FIELD }} ```
 
 {% endraw %}
 
@@ -98,7 +98,7 @@ Pour les références d'images HTML, définissez l'attribut image `src` sur le c
 
 {% raw %}
 
-```html {% assign items = {{product_recommendation.${RECOMMANDATION_NAME}} %} <img src="{{ items[0].IMAGE_URL_FIELD }}" alt="{{ items[0].name }}"> ```
+```html {% assign items = {{product_recommendation.${RECOMMENDATION_NAME}}} %} <img src="{{ items[0].IMAGE_URL_FIELD }}" alt="{{ items[0].name }}"> ```
 
 {% endraw %}
 
@@ -120,7 +120,7 @@ Supposons que vous soyez marketeur chez "Flash & Thread", un détaillant de vêt
 
 Votre recommandation tirera des articles d'un catalogue. Suivez les étapes de la création d'un catalogue. Assurez-vous que votre catalogue comprend ces champs :
 
-| Champ | Type de données | Description | --- | --- | | | id | Chaîne | Un identifiant unique pour chaque article dans votre catalogue | | name | Chaîne | Le nom du produit, comme "Pull en tricot rayé". | prix | Nombre | Le prix du produit, par exemple, "49.99". | Image\_url - Chaîne de caractères - URL pointant vers l'image du produit. Doit être sécurisé par HTTPS. Si vos images sont hébergées dans la bibliothèque multimédia, survolez une ressource pour copier son URL. | | catégorie | Chaîne | La catégorie du produit, comme "Pulls" ou "Accessoires". | | couleur | Chaîne | Une couleur descriptive pour le produit, comme "Marine/Gris". | { : .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+| Champ | Type de données | Description | --- | --- | | | id | Chaîne | Un identifiant unique pour chaque article dans votre catalogue | | name | Chaîne | Le nom du produit, comme "Pull en tricot rayé". | prix | Nombre | Le prix du produit, par exemple, "49.99". | Image\_url | Chaîne de caractères | URL pointant vers l'image du produit. Doit être sécurisé par HTTPS. Si vos images sont hébergées dans la bibliothèque multimédia, survolez une ressource pour copier son URL. | | catégorie | Chaîne | La catégorie du produit, comme "Pulls" ou "Accessoires". | | couleur | Chaîne | Une couleur descriptive pour le produit, comme "Marine/Gris". | { : .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
 #### Exemple de catalogue
@@ -137,8 +137,8 @@ Votre recommandation tirera des articles d'un catalogue. Suivez les étapes de l
     <th>nom</th>
     <th>prix</th>
     <th>image_url</th>
-    <th>catégorie</th>
-    <th>couleur</th>
+    <th>category</th>
+    <th>color</th>
   </tr>
   <tr>
     <td>1001</td>
@@ -162,7 +162,7 @@ Votre recommandation tirera des articles d'un catalogue. Suivez les étapes de l
     <td>89.99</td>
     <td>https://{{media_library}}/images/67a41370f542c1006798c26e/original.png?1738806128</td>
     <td>Chaussures</td>
-    <td>rose/doré</td>
+    <td>Pink/Gold</td>
   </tr>
   <tr>
     <td>1004</td>
@@ -194,7 +194,7 @@ Lorsque la recommandation a terminé sa formation, vous pouvez l'utiliser dans v
 
 {% raw %}
 
-```liquid {% assign items = {{product_recommendation.${abandoned_cart}} %} {{ items[0].image_url }} ```
+```liquid {% assign items = {{product_recommendation.${abandoned_cart}}} %} {{ items[0].image_url }} ```
 
 {% endraw %}
 
@@ -205,7 +205,7 @@ Lorsque la recommandation a terminé sa formation, vous pouvez l'utiliser dans v
 
 {% raw %}
 
-```liquid {% assign items = {{produit_recommandation.${abandoned_cart}} %} {{ items[0].name }} {{ items[0].category }} {{ items[0].color }} ${{ items[0].price }} ```
+```liquid {% assign items = {{product_recommendation.${abandoned_cart}}} %} {{ items[0].name }} {{ items[0].category }} {{ items[0].color }} ${{ items[0].price }} ```
 
 {% endraw %}
 
@@ -234,4 +234,4 @@ Si la recommandation n'apparaît pas dans l'aperçu, vérifiez les points suivan
 
 
 [1]: https://learning.braze.com/ai-item-recommendations-use-case/1996254
-\[2] : {% image\_buster /assets/img/image\_with\_liquid.png %} \[3] : {{site.baseurl}}/user\_guide/brazeai/recommendations/ai\_item\_recommendations#creating-an-ai-item-recommendation
+\[2]: {% image\_buster /assets/img/image\_with\_liquid.png %} \[3]: {{site.baseurl}}/user\_guide/brazeai/recommendations/ai\_item\_recommendations#creating-an-ai-item-recommendation
