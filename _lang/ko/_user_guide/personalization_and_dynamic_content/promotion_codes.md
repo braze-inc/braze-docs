@@ -9,7 +9,7 @@ description: "이 참조 문서에서는 프로모션 코드 목록을 생성하
 
 # 프로모션 코드
 
-> 프로모션 코드라고도 하는 프로모션 코드는 구매에 중점을 둔 상호 작용을 유도하여 사용자의 참여를 유지하는 좋은 방법입니다.
+> 프로모션 코드라고도 하는 프로모션 코드는 구매에 중점을 둔 상호 작용을 유도하여 사용자의 참여를 유지하는 좋은 방법입니다.<br><br>This page covers how to create promotion code lists and add them to your campaigns and Canvases.
 
 Braze Liquid 기능을 통해 광범위한 프로모션 코드를 간편하게 사용할 수 있는 방법을 제공하여, 이제 사용자가 제공한 프로모션 목록에서 자동으로 직관적으로 메시지를 가져올 수 있습니다. 프로모션 코드 기능은 최대 6개월의 유효기간과 목록당 최대 20밀리미터의 개별 코드를 지원합니다.
 
@@ -59,7 +59,7 @@ Braze Liquid 기능을 통해 광범위한 프로모션 코드를 간편하게 �
 
 ### 4단계: 프로모션 코드 업로드
 
-Braze는 코드 생성 또는 교환을 관리하지 않으므로 프로모션 코드를 CSV 파일로 생성하여 Braze에 업로드해야 합니다. CSV 파일이 다음 가이드라인을 따르는지 확인하세요:
+Braze doesn't manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. CSV 파일이 다음 가이드라인을 따르는지 확인하세요:
 
 - 프로모션 코드 열을 포함합니다.
 - 행당 하나의 프로모션 코드가 있습니다.
@@ -81,7 +81,7 @@ Braze는 코드 생성 또는 교환을 관리하지 않으므로 프로모션 �
 ![][8]
 
 {% alert note %}
-대용량 파일은 가져오는 데 몇 분 정도 걸립니다. 기다리는 동안 페이지에서 나가서 가져오기가 진행되는 동안 다른 작업을 할 수 있습니다. 가져오기가 완료되면 표에서 상태가 **완료**로 변경되는 것을 확인할 수 있습니다.
+대용량 파일은 가져오는 데 몇 분 정도 걸립니다. 기다리는 동안 페이지에서 나가서 가져오기가 진행되는 동안 다른 작업을 할 수 있습니다. When the import finishes, the status will change to **Complete** in the table.
 {% endalert %}
 
 #### 프로모션 코드 목록 업데이트
