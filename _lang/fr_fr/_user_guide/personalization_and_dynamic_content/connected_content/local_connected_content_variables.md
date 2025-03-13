@@ -8,11 +8,13 @@ search_rank: 1
 
 # Variables du contenu connecté local
 
+> Cette page donne un aperçu des variables locales du contenu connecté et de la manière de les utiliser et de les stocker.
+
 Braze effectue une demande GET standard à l’heure d’envoi au endpoint spécifié dans la balise `connected_content`. Si l’endpoint retourne JSON, il est automatiquement analysé et stocké dans une variable appelée `connected`. Si l’endpoint renvoie le texte, il sera directement inséré dans le message à la place de la balise `connected_content`.
 
-Si vous souhaitez enregistrer votre réponse à une variable, il est recommandé de retourner des objets JSON. Si vous souhaitez que la réponse du contenu connecté remplace l’étiquette par le texte, assurez-vous que la réponse n’est pas un JSON valide (tel que défini par [json.org][46])
+Si vous souhaitez enregistrer votre réponse à une variable, il est recommandé de retourner des objets JSON. Et si vous voulez que la réponse du contenu connecté remplace l'étiquette par le texte, assurez-vous que la réponse n'est pas un JSON valide (tel que défini par [json.org][46])
 
-Vous pouvez également spécifier `:save your_variable_name` après l’URL afin d’enregistrer les données comme autre chose. Par exemple, les `connected_content` la balise enregistrera la réponse à une variable locale appelée `localweather` (vous pouvez enregistrer plusieurs `connected_content` variables JSON) :
+Vous pouvez également spécifier `:save your_variable_name` après l'URL pour enregistrer les données sous un autre nom. Par exemple, les `connected_content` la balise enregistrera la réponse à une variable locale appelée `localweather` (vous pouvez enregistrer plusieurs `connected_content` variables JSON) :
 
 {% raw %}
 ```js
@@ -97,7 +99,6 @@ Par défaut, le contenu connecté définit un `Content-Type` en-tête d’une de
 Par défaut, le contenu connecté fait une demande HTTP GET à l’URL spécifiée. Pour effectuer une demande POST, précisez `:method post`.
 
 Vous pouvez éventuellement fournir un corps POST en spécifiant `:body` suivi d’une chaîne de caractères de requête du format `key1=value1&key2=value2&...` ou une référence à des valeurs capturées. Type de contenu par défaut `application/x-www-form-urlencoded`. Si vous spécifiez `:content_type application/json` et fournir un corps sous forme de code-urétroté, comme `key1=value1&key2=value2`, Braze jSON automatiquement le code de l’organisme avant d’envoyer.
-
 
 #### Type de contenu par défaut
 {% raw %}
@@ -198,7 +199,6 @@ Cet exemple se cache pendant 900 secondes (ou 15 minutes).
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
-
 
 #### Mise en cache du cache
 
