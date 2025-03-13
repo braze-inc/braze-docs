@@ -45,7 +45,7 @@ Para campanhas de e-mail, é possível direcionar os grupos de teste na seção 
 
 ## Testar seu público
 
-Depois de adicionar segmentos e filtros ao seu público, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar se ele corresponde aos critérios do público.
+Depois de adicionar segmentos e filtros ao seu público, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:60%"}
 
