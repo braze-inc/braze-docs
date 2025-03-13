@@ -1,5 +1,11 @@
 ---
-nav\_title : Titre de l'article contextuel : Alias de contexte : /context/ page\_order : 1.5 page\_type : référence description : "Cet article de référence explique comment créer et utiliser des étapes du canvas dans votre outil Canvas" : Canvas
+nav_title: Context 
+article_title: Context 
+alias: /context/
+page_order: 1.5
+page_type : référence
+description: "Cet article de référence explique comment créer et utiliser des étapes du canvas dans votre outil Canvas" 
+tool: Canvas
 
 ---
 
@@ -13,7 +19,7 @@ nav\_title : Titre de l'article contextuel : Alias de contexte : /context/ page\
 
 Chaque étape du canvas est composée d'un nom de variable et d'un type de données associé, ou variables de contexte (précédemment appelées propriétés d'entrée du canvas). Ces variables suivent l'utilisateur dans le canvas et sont accessibles à l'aide du `contexte` Liquid.
 
-\![Une étape du Contexte comme première étape d'un Canvas.]\[1]{ : style="float:right;max-width:40%;margin-left:15px ;"}
+![Une étape du Contexte comme première étape d'un Canvas.][1]{ : style="float:right;max-width:40%;margin-left:15px ;"}
 
 Il existe deux façons de définir des variables de contexte :
 
@@ -48,5 +54,5 @@ Par exemple, si le type de données de la variable contextuelle est défini sur 
 Vous pouvez ajouter des [options de retard personnalisées]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) avec les informations de l'étape Contexte, ce qui signifie que vous pouvez sélectionner la variable qui retarde les utilisateurs.
 
 
-\[1] : {% image\_buster /assets/img/context\_step3.png %}
+[1] : {% image\_buster /assets/img/context\_step3.png %}
 
