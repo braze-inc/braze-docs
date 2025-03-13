@@ -14,7 +14,7 @@ platform:
 
 # 콘텐츠 카드 스타일 사용자 지정
 
-> Braze 콘텐츠 카드에는 기본 모양과 느낌이 제공됩니다. 이 문서에서는 브랜드 정체성에 맞는 콘텐츠 카드의 스타일 옵션을 다룹니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)를 참조하세요. 
+> Braze 콘텐츠 카드에는 기본 모양과 느낌이 제공됩니다. 이 문서에서는 브랜드 정체성에 맞는 콘텐츠 카드의 스타일 옵션을 다룹니다. 콘텐츠 카드에서 사용할 수 있는 사용자 지정 옵션 유형에 대한 기본 개요는 [사용자 지정 개요]({{site.baseurl}}/developer_guide/getting_started/customization_overview)를 참조하세요. 
 
 ## 스타일링 사용자 지정
 
