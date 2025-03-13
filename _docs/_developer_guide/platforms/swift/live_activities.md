@@ -35,6 +35,7 @@ While Live Activities and push notifications are similar, their system permissio
 {% endalert %}
 
 ## Sequence Diagram
+{% tab Live Activities Sequence %}
 {% details Show template %}
 ```mermaid
 ---
@@ -69,6 +70,7 @@ sequenceDiagram
   APNS ->> App: Live activity is dismissed
 ```
 {% enddetails %}
+{% endtab %}
 
 ## Implementing a Live Activity
 
