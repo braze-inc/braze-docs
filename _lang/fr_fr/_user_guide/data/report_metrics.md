@@ -144,6 +144,18 @@ in-app Message
 
 {% api %}
 
+### Analyse de campagne
+
+{% apitags %}
+Indicateurs de fonctionnalité
+{% endapitags %}
+
+La performance du message sur les différents canaux. Les indicateurs affichés dépendent du canal de communication sélectionné et du fait que l'[expérience Feature Flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) est un test multivarié.
+
+{% endapi %}
+
+{% api %}
+
 ### Choix soumis
 
 {% apitags %}
@@ -178,7 +190,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} En tant que client de Braze, les livraisons sont imputées sur votre quota de SMS. 
 
-<span class="calculation-line">Calcul : Total</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calcul :
+    <ul>
+        <li><i>Réceptions/distributions confirmées</i>: Total</li>
+        <li><i>Taux de réception/distribution confirmé</i>: (Réceptions/distributions confirmées) / (Envois)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 
 {% api %}
 
+### Taux de réceptions échouées
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Taux de réception/distribution échouée' %}
+
+Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
+
+<span class="calculation-line">Calcul : (échecs de réception/distribution) / (envois)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Ouvertures directes
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} Les échecs sont inclus dans le décompte des <i>envois</i> mais pas dans celui des <i>réception/distributions</i>.</td>
 
 <span class="calculation-line">Calcul<i>(taux d'échec</i>) : (échecs) / (envois)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Fonctionnalité de l'expérience du drapeau
+
+{% apitags %}
+Indicateurs de fonctionnalité
+{% endapitags %}
+
+Indicateurs de performance pour l'expérience de l'envoi de messages dans une fonctionnalité. Les indicateurs spécifiques affichés varient en fonction du canal de communication et du fait que l'expérience était ou non un test multivarié.
 
 {% endapi %}
 
@@ -604,6 +652,20 @@ WhatsApp
 
 {% api %}
 
+### Taux de lecture
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md indicateurs='Taux de lecture' %}
+
+<span class="calculation-line">Calcul : (lectures avec accusés de réception) / (envois)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Reçu
 
 {% apitags %}
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Rejections' %} En tant que client de Braze, les rejets sont imputés sur votre quota de SMS.
 
-<span class="calculation-line">Calcul : Total</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calcul :
+    <ul>
+        <li><i>Rejets</i>: Total</li>
+        <li><i>Taux de rejet</i>: (Rejets) / (Envois)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">Calcul : Total</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calcul :
+    <ul>
+        <li><i>Envoi au transporteur</i>: Total</li>
+        <li><i>Envoie à Carrier Rate :</i> (Envoie au transporteur) / (Envoie)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -783,7 +861,7 @@ in-app Message
 E-mail, cartes de contenu, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} Pour LINE, ce suivi est effectué après qu'un seuil minimum de 20 messages par jour a été atteint. Pour les e-mails AMP, il s'agit du nombre total de clics dans les versions HTML et en texte clair.
+{% multi_lang_include metrics.md metric='Total Clicks' %} Pour LINE, ce suivi est effectué après qu'un seuil minimum de 20 messages par jour a été atteint. Les e-mails AMP comprennent les clics enregistrés à la fois dans les versions HTML et en texte clair. Ce chiffre peut être artificiellement gonflé par des outils anti-spam. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +884,17 @@ E-mail, cartes de contenu, SMS, LINE
 Cartes de contenu
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} Si un utilisateur reçoit deux cartes différentes de la même campagne et les rejette toutes les deux, ce nombre sera multiplié par deux. La réadmissibilité vous permet d'incrémenter le _nombre total de renvois_ une fois chaque fois qu'un utilisateur reçoit une carte ; chaque carte est un message différent.
 
-<span class="calculation-line">Calcul : Total</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calcul :
+    <ul>
+        <li><i>Total des licenciements :</i> Total</li>
+        <li><i>Taux de licenciement total :</i> Total des rejets / Total des impressions</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +957,7 @@ Cartes de contenu, e-mail, message in-app, notification push Web, notification p
 E-mail, cartes de contenu, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} Ce suivi est effectué sur une période de sept jours pour les e-mails. Cela inclut les clics sur les liens de désinscription fournis par Braze. Pour LINE, ce suivi est effectué après qu'un seuil minimum de 20 messages par jour a été atteint.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} Ceci inclut les clics sur les liens de désinscription fournis par Braze. Ce suivi est effectué sur une période de sept jours pour les e-mails. Pour LINE, ce suivi est effectué après qu'un seuil minimum de 20 messages par jour a été atteint.
 
 {::nomarkdown}
 <span class="calculation-line">
