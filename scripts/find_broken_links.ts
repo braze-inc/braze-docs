@@ -1,9 +1,12 @@
 import { existsSync, link } from 'fs';
 import path, { resolve } from 'path';
 import fs from 'fs';
+import { execSync } from 'child_process';
 
-const redirectList: string[] = Object.keys(require('../assets/js/broken_redirect_list.js'));
-const docsBasePath = '../_docs';
+const PROJECT_ROOT = execSync('git rev-parse --show-toplevel', { encoding: 'utf8' }).trim();
+
+const redirectList: string[] = Object.keys(require(path.join(PROJECT_ROOT, 'assets/js/broken_redirect_list.js')));
+const docsBasePath = path.join(PROJECT_ROOT, '_docs');
 interface LinkData {
   sourceFile: string;
   link: string;
