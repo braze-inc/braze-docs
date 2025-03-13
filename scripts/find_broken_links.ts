@@ -230,4 +230,4 @@ for (const item of links) {
 const deduplicated = Array.from(new Set(csv)).sort();
 
 console.log(`\n\nFound ${deduplicated.length - 1} broken links in ${totalFiles} files`);
-fs.writeFileSync('./scripts/temp/broken-links.csv', [headers, ...deduplicated].join('\n'));
+fs.writeFileSync('./temp/broken-links.csv', [headers, ...deduplicated].join('\n'));
