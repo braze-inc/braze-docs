@@ -23,7 +23,7 @@ Les propriétés d’entrées peuvent être utilisées dans des Canvas par évé
 
 Les propriétés transférées à partir de ces objets peuvent être référencées à l’aide de la `canvas_entry_properties` Balise Liquid. Par exemple, une demande avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` pourrait ajouter le terme « chaussures » à un message en ajoutant le Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-Lorsqu'un Canvas inclut un message avec l'étiquette Liquid `canvas_entry_properties`, les valeurs associées à ces propriétés sont enregistrées pour la durée du parcours de l'utilisateur dans le Canvas et supprimées lorsque l'utilisateur quitte le Canvas. Notez que les propriétés d’entrée de Canvas sont uniquement disponibles pour référence dans Liquid. Pour filtrer sur les propriétés du canvas, utilisez plutôt la [segmentation des propriétés d'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Lorsqu'un Canvas inclut un message avec l'étiquette Liquid `canvas_entry_properties`, les valeurs associées à ces propriétés sont enregistrées pour la durée du parcours de l'utilisateur dans le Canvas et supprimées lorsque l'utilisateur quitte le Canvas. Notez que les propriétés d’entrée de Canvas sont uniquement disponibles pour référence dans Liquid. Pour filtrer sur les propriétés du canvas, utilisez plutôt la [segmentation des propriétés d'événement]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 {% alert note %}
 La limite maximale de taille de l’objet Propriétés d’entrées de Canvas est de 50 Ko.
@@ -80,7 +80,7 @@ Dans cette demande, la valeur globale pour « allergies alimentaires » est «
 
 ## Cas d’utilisation
 
-Si vous avez un Canvas qui se déclenche lorsqu'un utilisateur parcourt un article sur votre site de commerce électronique mais ne l'ajoute pas à son panier, la première étape du Canvas pourrait être une notification push lui demandant s'il est intéressé par l'achat de l'article. Vous pourriez faire référence au nom du produit en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+Si vous avez un Canvas qui se déclenche lorsqu'un utilisateur parcourt un article sur votre site eCommerce mais ne l'ajoute pas à son panier, la première étape du Canvas pourrait être une notification push lui demandant s'il est intéressé par l'achat de l'article. Vous pourriez faire référence au nom du produit en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 
