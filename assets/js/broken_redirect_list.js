@@ -2088,15 +2088,15 @@ validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-custom-att
 validurls['/docs/developer_guide/platforms/cordova/analytics/#setting-user-ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=cordova';
 
 // fireos
-validurls['/docs/developer_guide/platforms/android/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/beacon/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
-validurls['/docs/developer_guide/platforms/android/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/tracking_sessions/'] = '/docs/developer_guide/analytics/tracking_sessions/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/setting_user_ids/'] = '/docs/developer_guide/analytics/setting_user_ids/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/beacon/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/tracking_custom_events/'] = '/docs/developer_guide/analytics/tracking_events/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/tracking_purchases/?tab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/location_tracking/'] = '/docs/developer_guide/analytics/tracking_location/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/uninstall_tracking/'] = '/docs/developer_guide/analytics/tracking_uninstalls/?sdktab=android';
+validurls['/docs/developer_guide/platforms/fireos/analytics/disabling_tracking/'] = '/docs/developer_guide/analytics/disabling_data_collection/?sdktab=android';
 
 // flutter
 validurls['/docs/developer_guide/platforms/flutter/analytics/PATH/'] = '/docs/developer_guide/analytics/PATH';

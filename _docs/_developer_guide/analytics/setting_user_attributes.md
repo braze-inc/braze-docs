@@ -22,10 +22,6 @@ description: "Learn how to set user attributes through the Braze SDK."
 {% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab fireos %}
-{% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
