@@ -7,6 +7,8 @@ search_rank: 1
 guide_top_header: "Recomendações"
 guide_top_text: "Dê um passo à frente em seu jogo de recomendações com o Braze. Aqui está uma coletânea do que você precisa saber sobre a configuração de mecanismos de recomendação para que possa sugerir itens ou conteúdo que os usuários realmente desejam. Desde a personalização de experiências com IA até a criação de seus próprios mecanismos com Liquid ou Connected Content, você encontrará tudo o que precisa para fazer com que cada recomendação seja importante."
 description: "Esta landing page contém artigos relacionados à criação e ao uso de mecanismos de recomendação no Braze."
+local_redirect: #property-name
+  property-name: '/docs/user_guide/brazeai/recommendations/ai_item_recommendations/#property-name'
 
 guide_featured_title: "Artigos"
 guide_featured_list:
