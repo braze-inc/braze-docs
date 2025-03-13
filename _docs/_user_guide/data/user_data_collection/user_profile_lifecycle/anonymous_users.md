@@ -23,15 +23,11 @@ You can do the following with captured anonymous users:
 
 ## How it works
 
-When a user first uses Braze on a device, they are considered "anonymous". This user will remain anonymous until an `external_id` is assigned to that user's profile by a `changeuser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)), and then will become known. Once an anonymous user becomes known, they can't reverted to an anonymous user, but uninstalling and reinstalling an app will generate a new anonymous user ID for that user. 
+When a user first uses Braze on a device, they are considered "anonymous". This user will remain anonymous until an `external_id` is assigned to that user's profile by a `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)), and then will become known. Once an anonymous user becomes known, they can't reverted to an anonymous user, but uninstalling and reinstalling an app will generate a new anonymous user ID for that user. 
 
 ### When users are identified on new devices
 
-If a user is identified on a device where they **have never** been identified before, all their previous activity on that device as an anonymous user will be saved and linked to their newly identified profile. This means that all their attributes, events, and history will be attributed to them, even though they were anonymous at the time.
-
-### When users are identified on old devices
-
-If a user is identified on a device where they **have been** identified before, previous activity that was already sent to the server from the anonymous user on that device will be merged into the identified profile and fill in the [respective fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior). Fields that already exist on the identified profile won't be overwritten.
+If a user is identified on a device where they have never been identified before, all their previous activity on that device as an anonymous user will be saved and linked to their newly identified profile. This means that all their attributes, events, and history will be attributed to them, even though they were anonymous at the time.
 
 ## Assigning user aliases
 
