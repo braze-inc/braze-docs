@@ -39,7 +39,13 @@ Si vous remarquez que votre audience cible est plus petite que prévu, essayez d
 
 ### Identifier les paramètres d’entrée et les conditions de course
 
-Une condition de concurrence peut se produire lorsque vous avez utilisé les mêmes critères d'entrée dans les paramètres de la **planification d'entrée** et de l' **audience cible**. Si vous utilisez une entrée basée sur des actions, vérifiez que vous n’avez pas utilisé la même action de déclenchement ici que dans votre audience cible. Une condition de concurrence peut se produire lorsque l’utilisateur ne figure pas dans l’audience au moment de l’événement déclencheur, ce qui signifie qu’il ne pourra pas accéder au Canvas.
+Une condition de concurrence peut se produire lorsque vous avez utilisé les mêmes critères d'entrée dans les paramètres de la **planification d'entrée** et de l' **audience cible**. 
+
+Si vous utilisez une entrée basée sur des actions, vérifiez que vous n’avez pas utilisé la même action de déclenchement ici que dans votre audience cible. Une condition de concurrence peut se produire lorsque l’utilisateur ne figure pas dans l’audience au moment de l’événement déclencheur, ce qui signifie qu’il ne pourra pas accéder au Canvas.
+
+{% alert tip %}
+Consultez les [meilleures pratiques]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) pour éviter cette condition de concurrence lors de la configuration d'un Canvas basé sur une action avec le même déclencheur que le filtre d'audience.
+{% endalert %}
 
 ### Vérifiez les propriétés d’entrée et propriétés de l’événement Canvas
 
@@ -97,7 +103,7 @@ Ensuite, il est important d’identifier ces paramètres qui peuvent affecter qu
 - Heures calmes
 - Validation des distributions
 
-En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s'applique pour utiliser soit le timing intelligent, soit la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), mais pas les deux. Pour plus d'informations sur la meilleure façon d'utiliser l'Intelligence Suite, lisez notre [FAQ sur l'intelligence]({{site.baseurl}}/user_guide/intelligence/faqs/).
+En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s'applique pour utiliser soit le timing intelligent, soit la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), mais pas les deux. Pour plus d'informations sur la meilleure façon d'utiliser l'Intelligence Suite, lisez notre [FAQ sur l'intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### Volumes d’envoi suspects entre chemins
 
