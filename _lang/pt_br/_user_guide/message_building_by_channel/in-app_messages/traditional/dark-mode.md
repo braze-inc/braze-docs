@@ -22,7 +22,7 @@ Quando o Modo escuro é ativado, os menus e as telas nativas do dispositivo (not
 
 ## Configuração de um tema do modo escuro
 
-A nova opção Modo escuro, localizada na guia Estilo ao [criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), permite adicionar facilmente um tema de cor alternativo para usuários que estão no Modo escuro em seus dispositivos.
+A nova opção Modo escuro, localizada na guia Estilo ao [criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), permite adicionar facilmente um tema de cor alternativo para usuários que estão no Modo escuro em seus dispositivos.
 
 ![Envio de mensagens pelo usuário entre os estilos Modo Claro e Modo Escuro na guia Estilo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

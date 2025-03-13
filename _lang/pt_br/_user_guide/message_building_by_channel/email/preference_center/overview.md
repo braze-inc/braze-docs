@@ -85,7 +85,7 @@ Para identificar seus centros de preferência, use o [ponto de extremidade Exibi
 
 ## Personalização
 
-O Braze gerencia as atualizações do estado da inscrição a partir do centro de preferências, o que mantém o centro de preferências sincronizado. No entanto, você também pode criar e hospedar seu próprio centro de preferências usando as [APIs de grupos de inscrições]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) com as seguintes opções.
+O Braze gerencia as atualizações do estado da inscrição a partir do centro de preferências, o que mantém o centro de preferências sincronizado. No entanto, você também pode criar e hospedar seu próprio centro de preferências usando as [APIs de grupos de inscrições]({{site.baseurl}}/api/endpoints/subscription_groups/) com as seguintes opções.
 
 ### Opção 1: Link com parâmetros de consulta de string
 

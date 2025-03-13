@@ -32,7 +32,7 @@ Há duas etapas principais para criar um fluxo de trabalho de pontuação de lea
 1. Prossiga para a etapa **Entry Schedule (Programação de entrada** ) e selecione uma programação de entrada **baseada em ação**. Isso inserirá os usuários no Canva quando eles realizarem ações específicas.
 
 2. Em **Action-Based Options (Opções baseadas em ações**), adicione essas duas ações:
-    - **Altere o valor do atributo personalizado** com o nome de seu atributo de pontuação de leads (como `lead score`). Se você ainda não criou um atributo de pontuação de leads, siga as etapas em [Atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). Isso inserirá os usuários no Canva sempre que a pontuação de seus leads for alterada.
+    - **Altere o valor do atributo personalizado** com o nome de seu atributo de pontuação de leads (como `lead score`). Se você ainda não criou um atributo de pontuação de leads, siga as etapas em [Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Isso inserirá os usuários no Canva sempre que a pontuação de seus leads for alterada.
     - **Adicionar um endereço de e-mail**
 
 ![Etapa 2 da criação de um Canva com o cronograma de entrada "Baseado em ação" e opções baseadas em ação para alterar um atributo personalizado "pontuação de leads" e adicionar um endereço de e-mail.][2]{: style="max-width:80%;"}
@@ -132,13 +132,13 @@ Como sua ferramenta de marketing, o Braze contém dados extremamente relevantes 
 
 Por exemplo, os dados de engajamento com mensagens (como aberturas e cliques de e-mail, engajamento da landing page e outros) podem determinar o nível de engajamento de um lead. Você pode passar esses dados de volta para seu data warehouse na nuvem e disponibilizá-los como entrada para seus modelos de pontuação de leads usando as soluções de exportação de dados enviando dados para a Braze:
 
-- [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Compartilhamento seguro de dados da Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze como um destino %}
 
-Depois que suas equipes internas criarem e executarem seu modelo de pontuação de leads, você poderá puxar esses dados de volta para o Braze para poder segmentar e direcionar melhor os leads para o envio de mensagens relevantes. Você pode fazer isso com a [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
+Depois que suas equipes internas criarem e executarem seu modelo de pontuação de leads, você poderá puxar esses dados de volta para o Braze para poder segmentar e direcionar melhor os leads para o envio de mensagens relevantes. Você pode fazer isso com a [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
 Com a ingestão de dados na nuvem, suas equipes internas criarão uma nova tabela ou exibição com os identificadores de usuários, as pontuações de leads mais recentes e os carimbos de data e hora em que as pontuações foram atualizadas. O Braze pegará a tabela ou visualização e adicionará as pontuações de leads aos perfis de usuário.
 
@@ -182,7 +182,7 @@ Para atualizar o registro do lead no Salesforce com o status do lead da Braze, r
 
 | Cabeçalho | Conteúdo |
 | --- | --- |
-| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_7a0d227e-d162-4e16-9e18-5952e430e0e9/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_f04626e4-f897-43f5-a5e2-44efea3b9d3d/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

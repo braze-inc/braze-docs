@@ -4,7 +4,7 @@ article_title: Envio de mensagens no app no Canva
 alias: "/canvas_in-app_messages/"
 page_order: 2
 page_type: reference
-description: "Este artigo de referência descreve os recursos e as nuances específicas das mensagens no app do Canvas, que podem ser adicionadas ao Canvas para exibir envios de mensagens sofisticadas."
+description: "Este artigo de referência descreve os recursos e as nuances específicos das mensagens no app que podem ser adicionados ao Canvas para exibir envios de mensagens sofisticadas."
 tool: Canvas
 channel: in-app messages
 
@@ -12,19 +12,28 @@ channel: in-app messages
 
 # Mensagens no app no Canva
 
-> As mensagens no app podem ser adicionadas como parte da jornada do canva para mostrar mensagens ricas quando o cliente se engaja com o aplicativo. Este artigo descreve os recursos e as nuances específicas das mensagens no app do Canva.
+> É possível adicionar mensagens no app como parte da jornada do Canva para mostrar mensagens ricas quando o cliente se engaja com o aplicativo.
 
-Antes de continuar, você já deve ter [criado seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) e configurado as opções de postergação e público. 
 
-Agora você pode adicionar uma mensagem no app ao seu Canva. Adicione uma etapa de [Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) e escolha **Mensagem no app** para seu **canal de envio de mensagens**. Depois que as postergações passarem e as opções de público forem verificadas, a mensagem no app será ativada e os usuários a verão se abrirem o aplicativo. As mensagens no app no Canvas só podem ser disparadas pelo evento de gatilho `start session` - elas não podem ser disparadas por eventos personalizados em um componente do Canvas.
+## Como funciona?
+
+Antes de poder usar mensagens no app em seu Canvas, certifique-se de ter um [canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) configurado com opções de postergação e público.
+
+Depois que as postergações passarem e as opções de público forem verificadas, a mensagem no app será ativada e os usuários a verão se abrirem o aplicativo. As mensagens no app no Canvas só podem ser disparadas pelo evento de gatilho `start session` — elas não podem ser disparadas por eventos personalizados em um componente do Canvas.
 
 Para etapas do Canva que têm entrada acionada por ação, os usuários podem entrar no Canvas no meio da sessão. No entanto, conforme notado acima, as mensagens no app não serão disparadas até o início da próxima sessão, portanto, esses usuários perderiam a mensagem inicial no app, pois não eram elegíveis para entrar no Canvas antes do início da sessão.
 
-Você pode personalizar [quando sua mensagem expirará](#in-app-message-expiration) e qual [comportamento de avanço](#advancement-behavior-options) ela terá.
+## Adicionar uma mensagem no app à jornada do usuário
 
-## Expiração de mensagens no app
+Para adicionar uma mensagem no app ao seu Canva, faça o seguinte:
 
-No criador de mensagens no app, você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará aguardando para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
+1. Adicione uma etapa de [Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) à jornada do usuário.
+2. Selecione **Mensagem no app** para seu **canal de envio de mensagens**. 
+3. Determine [quando sua mensagem expirará](#in-app-message-expiration) e qual [comportamento de avanço](#advancement-behavior-options) ela terá.
+
+### Expiração de mensagens no app
+
+No editor de mensagens no app, você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará "parada" e aguardará para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
 
 ![][1]
 
@@ -34,9 +43,9 @@ No criador de mensagens no app, você pode escolher quando a mensagem no app exp
 | A mensagem expira em uma data específica | A segunda opção permite que você escolha uma data e hora específicas em que a mensagem no app não estará mais disponível. | Por exemplo, se você tiver uma venda que terminou em uma data e hora específicas, poderá selecionar essa opção para que os usuários não vejam mais a mensagem no app associada quando a venda terminar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Casos de uso
+## Casos de uso
 
-Quando você deve usar esse recurso? A Braze recomenda enfaticamente que você considere o uso desse recurso em suas canvas promocionais e de integração.
+Você pode usar mensagens no app em seus Canvas promocionais e de integração.
 
 {% tabs %}
   {% tab Promocional %}
@@ -146,16 +155,14 @@ Como você pode ver, as mensagens push são espaçadas em torno de uma mensagem 
   {% endtab %}
 {% endtabs %}
 
-## Opções de comportamento de avanço
+### Opções de comportamento de avanço
 
-### Canvas Flow
+No Canva, as etapas de mensagens avançam automaticamente todos os usuários que entram na etapa. Para usar a opção **Avançar quando uma mensagem for enviada**, adicione uma [jornada do público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) separada para filtrar os usuários que não receberam a etapa anterior.
 
-No Canvas Flow, os componentes de mensagem avançam automaticamente todos os usuários que entram na etapa do canva. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral. Se quiser implementar a opção **Advance when message sent**, adicione uma [jornada do público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) separada para filtrar os usuários que não receberam a etapa anterior.
-
-### Editor de tela original
+{% details Comportamento do editor de tela original %}
 
 {% alert important %}
-Desde 28 de fevereiro de 2023, não é mais possível criar ou duplicar canvas usando o editor original. Esta seção está disponível para referência ao entender como o comportamento de avanço funciona para etapas com mensagens no app.
+Não é mais possível criar ou duplicar Canvas usando o editor original. Esta seção está disponível para referência ao entender como o comportamento de avanço funciona para etapas com mensagens no app.
 {% endalert %}
 
 As telas criadas no editor original precisam especificar um comportamento de avanço - os critérios para avançar em seu componente Canvas. [As etapas com apenas mensagens no app](#steps-iam-only) têm opções de avanço diferentes das [etapas com vários tipos de mensagens](#steps-multiple-channels) (push, e-mail etc.). Para mensagens no app em um fluxo de trabalho do Canvas Flow, essa opção é definida para sempre avançar imediatamente o público.
@@ -190,13 +197,15 @@ As etapas com uma mensagem no app e outro canal têm as seguintes opções de av
 Quando a opção **Todo o público** for selecionada, a mensagem no app ficará disponível até expirar, mesmo que o usuário tenha passado para as etapas seguintes. Se não quiser que a mensagem no app esteja ativa quando as próximas etapas do canva forem entregues, verifique se a expiração é mais curta do que a postergação nas etapas subsequentes.
 {% endalert %}
 
+{% enddetails %}
+
 ## Priorização de mensagens no app
 
 Um cliente pode disparar duas mensagens no app em seu canva ao mesmo tempo. Quando isso acontecer, o Braze seguirá a seguinte ordem de prioridade para determinar qual mensagem no app será exibida. Arraste diferentes etapas do Canva para reordenar sua prioridade. Por padrão, as primeira etapas de uma variante do canva serão exibidas antes das últimas.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
-Navegue até a seção **Configurações de envio** do Canvas para priorizar as mensagens no app de um Canvas em relação às mensagens no app de outros Canvases e campanhas.
+Acesse as **Configurações de envio** da seção Canvas para priorizar as mensagens no app de um Canvas em relação às mensagens no app de outros Canvases e campanhas.
 
 ![]({% image_buster /assets/img_archive/canvas_send_settings.png %})
 
@@ -210,7 +219,9 @@ Ao editar um rascunho de um Canva ativo, as alterações na prioridade de mensag
 
 ## Propriedades de eventos personalizados em um Canva
 
-Devido ao fato de a entrega baseada em ação não estar disponível para etapas do Canva com mensagens no app, você também não pode usar propriedades de eventos personalizados para essas etapas. Para modelar as propriedades do evento no Canvas, recomendamos armazenar as propriedades do evento como atributos personalizados em sua primeira etapa do Canva e, em seguida, personalizar sua mensagem no app com os atributos personalizados na segunda etapa.
+A entrega baseada em ação não está disponível para etapas do Canva com mensagens no app. Isso significa que você também não pode usar propriedades de eventos personalizados para essas etapas. 
+
+Para modelar as propriedades do evento no Canvas, recomendamos armazenar as propriedades do evento como atributos personalizados em sua primeira etapa do Canva e personalizar sua mensagem no app com os atributos personalizados na segunda etapa.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"

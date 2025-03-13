@@ -43,14 +43,14 @@ Há dois métodos para criar e gerenciar seus objetos de negócios no Braze: cat
 | Método | Descrição |
 | --- | --- |
 | [Catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Esses são objetos de dados independentes (objetos de dados suplementares) no perfil do usuário principal no Braze. Em um contexto B2B, você provavelmente teria catálogos para suas contas e oportunidades. |
-| [Fontes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/) | Isso permite que o Braze consulte diretamente seu data warehouse. É provável que você já esteja sincronizando regularmente seus objetos de lead, contato, oportunidade e conta com o data warehouse, de modo que possa apontar a segmentação do Braze diretamente para esse data warehouse e ativá-la em um ambiente de cópia zero. |
+| [Fontes conectadas]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Isso permite que o Braze consulte diretamente seu data warehouse. É provável que você já esteja sincronizando regularmente seus objetos de lead, contato, oportunidade e conta com o data warehouse, de modo que possa apontar a segmentação do Braze diretamente para esse data warehouse e ativá-la em um ambiente de cópia zero. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Opção 1: Usar catálogos para contas e oportunidades
 
 Os catálogos são tabelas de dados hospedadas e gerenciadas no Braze. Embora os dados de contas e oportunidades sejam originários do sistema de CRM de vendas de sua escolha, você os duplicaria no Braze para serem usados para fins de marketing: segmentação baseada em contas, marketing baseado em contas, gerenciamento de leads e muito mais.
 
-Para essa opção, recomendamos criar um catálogo para suas contas e outro para suas oportunidades e atualizá-los com frequência enviando atualizações do Braze por meio de nossa [API de catálogos]({{site.baseurl}}/api/endpoints/catalogs/) ou da [CDI (Cloud Data Ingestion) de catálogos]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/). Ao criar esses catálogos, certifique-se de que a `id` (primeira coluna) de seu catálogo corresponda à `id` em seu sistema CRM de vendas.
+Para essa opção, recomendamos criar um catálogo para suas contas e outro para suas oportunidades e atualizá-los com frequência enviando atualizações do Braze por meio de nossa [API de catálogos]({{site.baseurl}}/api/endpoints/catalogs/) ou da [CDI (Cloud Data Ingestion) de catálogos]({{site.baseurl}}/user_guide/data/cloud_ingestion/sync_catalogs_data/). Ao criar esses catálogos, certifique-se de que a `id` (primeira coluna) de seu catálogo corresponda à `id` em seu sistema CRM de vendas.
 
 #### Mapeie seus campos de CRM
 
@@ -145,7 +145,7 @@ Para configurar fontes conectadas, consulte [Integração de fontes conectadas](
 
 ## Etapa 2: Relacione seus business objects aos perfis de usuário
 
-Os perfis de usuário são o principal objeto no Braze, que alimenta a maior parte de sua segmentação demográfica, disparo e personalização. Os perfis de usuários incluem [dados de usuários padrão]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) coletados por nosso SDK e outras fontes, incluindo [dados personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/), que assumem a forma de atributos (dados demográficos), eventos (dados comportamentais) ou compras (dados transacionais).
+Os perfis de usuário são o principal objeto no Braze, que alimenta a maior parte de sua segmentação demográfica, disparo e personalização. Os perfis de usuários incluem [dados de usuários padrão]({{site.baseurl}}/user_guide/data/user_data_collection/) coletados por nosso SDK e outras fontes, incluindo [dados personalizados]({{site.baseurl}}/user_guide/data/custom_data/), que assumem a forma de atributos (dados demográficos), eventos (dados comportamentais) ou compras (dados transacionais).
 
 ### Etapa 2.1: Mapear IDs de CRM de vendas para o Braze
 

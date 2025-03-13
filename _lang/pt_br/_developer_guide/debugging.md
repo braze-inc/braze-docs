@@ -1,25 +1,25 @@
 ---
+page_order: 4.3
 nav_title: Depuração do SDK
 article_title: Depuração do SDK do Braze 
 description: "Saiba como usar o depurador do Braze SDK para solucionar problemas em seus canais com SDK, sem ativar manualmente o registro detalhado em seu app."
-page_order: 13
 ---
 
 # Depuração do SDK do Braze
 
 > Saiba como usar o depurador integrado do Braze SDK para solucionar problemas em seus canais com SDK, sem precisar ativar o registro detalhado em seu app.
 
-{% alert important %}
-Atualmente, esse recurso está disponível apenas para aplicativos nativos para iOS e Android. Para ativar a depuração do Braze Web SDK, você pode [usar um parâmetro de URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
-{% endalert %}
-
 ## Pré-requisitos
 
-Para usar o depurador Braze SDK, certifique-se de que seus SDKs estejam atualizados com pelo menos essas versões mínimas:
+Para usar o depurador do Braze SDK, você precisará das permissões `View PII` e `Export User Data`. Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
 ## Depuração do SDK do Braze
+
+{% alert tip %}
+Para ativar a depuração do Braze Web SDK, você pode [usar um parâmetro de URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
+{% endalert %}
 
 ### Etapa 1: Feche seu aplicativo
 

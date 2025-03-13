@@ -19,7 +19,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 Se quiser usar seus modelos HTML personalizados existentes ou modelos criados por terceiros, eles deverão ser recriados no editor de arrastar e soltar.
 
-Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.
+Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.
 
 ## Pré-requisitos
 
@@ -135,6 +135,7 @@ Os usuários podem selecionar o botão fechar X para sair da mensagem a qualquer
 
 - Para obter uma lista dos blocos de editor disponíveis e suas propriedades, consulte [Blocos de editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - Para obter ajuda na personalização da aparência de sua mensagem, consulte [Configurações de estilo]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
+- Para conhecer as práticas recomendadas de criação de mensagens da direita para a esquerda, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 ## Etapa 5: Teste sua mensagem no app
 

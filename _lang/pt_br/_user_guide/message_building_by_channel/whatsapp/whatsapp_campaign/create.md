@@ -38,8 +38,8 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 1. Acesse a página **Campaigns (Campanhas** ) e clique em <i class="fas fa-plus"></i> **Create Campaign (Criar campanha**).
 2. Selecione **WhatsApp** ou, para campanhas com direcionamento para vários canais, selecione **Multichannel Campaign (Campanha multicanal**).
 3. Dê à sua campanha um nome claro e significativo.
-4. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
-   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+4. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -69,10 +69,6 @@ Se um Canvas baseado em ação for disparado por uma mensagem recebida do WhatsA
 
 Selecione se deseja criar uma [mensagem modelo](#template-messages) do WhatsApp ou uma mensagem de resposta, dependendo do seu caso de uso. Qualquer conversa iniciada pela empresa deve começar com um modelo aprovado, enquanto as mensagens de resposta podem ser usadas em respostas a mensagens recebidas de usuários dentro de um período de 24 horas.
 
-{% alert note %}
-Atualmente, os modelos do WhatsApp não oferecem suporte a botões de código de cupom.
-{% endalert %}
-
 ![A seção Variantes de mensagem permite selecionar um grupo de inscrições e um dos dois tipos de mensagem: Mensagem modelo do WhatsApp e mensagem de resposta.][5]{: style="max-width:80%;"}
 
 ### Envio de mensagens de modelo
@@ -87,6 +83,8 @@ Os campos de texto desativados (destacados em cinza) não podem ser editados, po
 Cada modelo tem um idioma atribuído, portanto, é necessário criar uma campanha ou etapa do Canva para cada idioma para configurar corretamente a correspondência de usuários. Por exemplo, se estiver criando um canva que usa modelos atribuídos com indonésio e inglês, será necessário criar uma etapa do canva para o modelo indonésio e uma etapa do canvas para o modelo inglês.
 
 ![Lista de modelos, incluindo prévias de suas mensagens, idiomas atribuídos e status de aprovação.][8]{: style="max-width:80%;"}
+
+Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
 
 #### Variáveis
 
@@ -183,7 +181,10 @@ Recurso de mensagens    | Informações
 ----------- |---------------- 
 Cabeçalhos | 
 Texto | Suporta parâmetros variáveis
-Imagens (JPEG e PNG) | Deve ser de 8 bits, RGB ou RGBA, e até 5 MB para qualquer tipo 
+Imagens (JPEG e PNG) | Deve ser de 8 bits, RGB ou RGBA, e até cinco MB para qualquer tipo 
+Vídeos | Atualmente, deve estar hospedado em uma URL e ter menos de dezesseis MB. Também deve ter um tipo de vídeo 3GPP ou MP4. <br><br>As mensagens de vídeo estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
+Áudio | Suportado apenas para envio de mensagens de resposta. Deve ser de áudio AAC, AMR, MP3, MP4 ou OGG, hospedado em um URL e com menos de dezesseis MB. <br><br>As mensagens de áudio estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
+Documentos | Deve estar hospedado em um URL e ter menos de 100 MB. Também deve ter um tipo de documento de texto (`.txt`), Microsoft Excel (`.xls`, `.xlsx`), Microsoft Word (`.doc`, `.docx`), Microsoft PowerPoint (`.ppt`, `pttx`) ou PDF (`.pdf`). <br><br>As mensagens do documento estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
 Texto do corpo | Suporta parâmetros variáveis
 Texto do rodapé | Suporta parâmetros variáveis 
 CTAs | Consulte [Chamadas para ações](#ctas).

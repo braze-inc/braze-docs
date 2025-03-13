@@ -29,7 +29,7 @@ Tenha em mente as seguintes edições permitidas do Canvas após o lançamento, 
 
 Você pode excluir qualquer um dos itens a seguir em sua jornada de usuário:
 
-- [Etapas do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Etapas do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Variantes da tela 
 - Conexões entre as etapas do Canva
 

@@ -77,7 +77,7 @@ A etapa [divisão de decisão]({{site.baseurl}}/user_guide/engagement_tools/canv
 
 ### Jornadas do experimento
 
-Semelhante às jornadas de ação, você pode aproveitar as etapas de [jornadas de experimentação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_paths/) no seu canva para testar vários caminhos de canva entre si, junto com um grupo de controle. Isso rastreia a performance da jornada, permitindo que você tome decisões informadas ao construir seu canva. 
+Semelhante às jornadas de ação, você pode aproveitar as etapas de [jornadas de experimentação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) no seu canva para testar vários caminhos de canva entre si, junto com um grupo de controle. Isso rastreia a performance da jornada, permitindo que você tome decisões informadas ao construir seu canva. 
 
 ## Testando antes do lançamento
 

@@ -16,7 +16,7 @@ Você pode ver as transações da campanha de mensagens API, solucionar problema
 Para acessar o registro, acesse **Configurações** > **Registro de atividade de mensagens**.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o **Message Activity Log** em **Settings** > **Developer Console**.
+Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o **registro de atividade de mensagens** em **Configurações** > **Console do desenvolvedor**.
 {% endalert %}
 
 ![Registro de atividade de mensagens][2]
@@ -37,6 +37,9 @@ Além deste artigo, também recomendamos conferir nosso curso do Braze Learning 
 - Erros de aliasing de usuário
 - Erros nos Testes A/B
 - Erros de SMS/MMS
+- Erros do WhatsApp
+- Erros de atividade ao vivo
+- Erros de disparo de usuário ruim
 
 Essas mensagens podem vir de nosso próprio sistema, de seus apps ou plataformas, ou de nossos parceiros terceirizados. Isso pode resultar em um número infinito de mensagens que podem aparecer nesse registro.
 
@@ -70,6 +73,23 @@ Por exemplo, algumas mensagens de "Bloqueio" em potencial, além das listadas na
 - Mensagem rejeitada devido à política local.
 - A mensagem foi bloqueada pelo destinatário como spam.
 - Serviço indisponível, host do cliente [_IP_ADDRESS_] bloqueado usando Spamhaus.
+
+## Período de retenção de armazenamento
+
+Os erros das últimas 60 horas estão disponíveis nos registros de atividades de mensagens. Os registros com mais de 60 horas são limpos e não podem mais ser acessados. 
+
+### Número de registros de erros armazenados
+
+O número de registros salvos é influenciado por várias condições. Por exemplo, se uma campanha programada for enviada a milhares de usuários, é possível que vejamos uma amostra dos erros no registro de atividades de mensagens em vez de todos os erros.
+
+Aqui está uma visão geral das condições que afetam o número de registros que serão salvos:
+- Até 20 registros de erros da Connected Content serão salvos para a mesma campanha dentro de uma hora fixa.
+- Até 100 registros de erro do mesmo tipo serão salvos em uma hora fixa por espaço de trabalho para os seguintes tipos de erro:
+    - Erros de mensagens abortadas
+    - Erros de webhook
+    - Erros de notificação por push
+    - Erros de atividade ao vivo
+    - Erros de disparo de usuário ruim
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/message_activity_log.png %}

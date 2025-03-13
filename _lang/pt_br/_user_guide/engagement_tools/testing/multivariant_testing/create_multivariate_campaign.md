@@ -96,7 +96,7 @@ Que alavancas você precisa acionar e quais são os efeitos desejados? Embora ex
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Ao executar Testes A/B, não se esqueça de gerar [relatórios de funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) que lhe permitam entender como cada variante afetou seu funil de conversão, especialmente se a "conversão" para sua empresa envolver várias etapas ou ações.
+Ao executar Testes A/B, não se esqueça de gerar [relatórios de funil]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) que lhe permitam entender como cada variante afetou seu funil de conversão, especialmente se a "conversão" para sua empresa envolver várias etapas ou ações.
 {% endalert %}
 
 Além disso, a duração ideal de seu teste também pode variar dependendo do canal. Tenha em mente o tempo médio que a maioria dos usuários pode precisar para se engajar em cada canal.

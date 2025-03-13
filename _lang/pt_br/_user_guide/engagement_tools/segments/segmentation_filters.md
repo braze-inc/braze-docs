@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Inscrição em segmento
-    description: "Permite filtrar com base na associação de segmento em qualquer lugar onde os filtros são usados (como segmentos, campanhas e outros) e segmentar vários segmentos diferentes dentro de uma campanha. <br><br>Nota que segmentos já usando este filtro não podem ser mais incluídos ou aninhados em outros segmentos. Você deve recriar o segmento que está tentando incluir usando os mesmos filtros."
+    description: "Permite filtrar com base na associação de segmento em qualquer lugar onde os filtros são usados (como segmentos, campanhas e outros) e segmentar vários segmentos diferentes dentro de uma campanha. <br><br>Observe que os segmentos que já estão usando esse filtro não podem ser incluídos ou aninhados em outros segmentos, pois isso pode criar um ciclo em que o Segmento A inclui o Segmento B, que, por sua vez, tenta incluir o Segmento A novamente. Se isso acontecesse, o segmento continuaria fazendo referência a si mesmo, tornando impossível calcular quem realmente pertence a ele. Além disso, o aninhamento de segmentos como esse aumenta a complexidade e pode tornar as coisas mais lentas. Em vez disso, recrie o segmento que está tentando incluir usando os mesmos filtros."
     tags:
       - Segment or CSV membership
   - name: Extensões de segmento da Braze

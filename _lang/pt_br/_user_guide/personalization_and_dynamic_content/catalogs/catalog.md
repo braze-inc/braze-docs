@@ -8,9 +8,9 @@ description: "Este artigo de referência aborda como criar catálogos que fazem 
 
 # Criação de um catálogo
 
-> A criação de um catálogo envolve a importação de um arquivo CSV de dados de não usuários para o Braze. Isso lhe permite acessar essas informações para enriquecer suas mensagens. Você pode trazer qualquer tipo de dados para um catálogo. Normalmente, esses dados são algum tipo de metadados da sua empresa, como informações sobre produtos para uma empresa de comércio eletrônico ou informações sobre cursos para um provedor de educação.
+> A criação de um catálogo envolve a importação de um arquivo CSV de dados de não usuários para o Braze. Isso lhe permite acessar essas informações para enriquecer suas mensagens. Você pode trazer qualquer tipo de dados para um catálogo. Normalmente, esses dados são algum tipo de metadados da sua empresa, como informações sobre produtos para uma empresa de comércio eletrônico ou informações sobre cursos para um provedor de educação.<br><br>Esta página aborda como preparar e fazer upload de um arquivo CSV para criar um catálogo, como gerenciar catálogos e muito mais.
 
-Alguns casos de uso comuns para catálogos incluem:
+Os casos de uso do Commons para catálogos incluem:
 
 - Produtos
 - Serviços
@@ -47,14 +47,14 @@ Também recomendamos a formatação de todo o texto em seus arquivos CSV em letr
 Para criar um catálogo, acesse **Configurações de dados** > **Catálogos**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os Catálogos** em **Dados**.
+Se você estiver usando a [navegação antiga]({{site.baseurl}}/navigation), poderá encontrar **Catálogos** em **Dados**.
 {% endalert %}
 
 Selecione **Criar novo catálogo** e, em seguida, escolha fazer **upload de CSV** ou **criar no navegador**.
 
 ### Método 1: Fazer upload de CSV
 
-1. Arraste e solte seu arquivo na zona de upload ou clique em **Upload CSV** e escolha seu arquivo. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Arraste e solte seu arquivo na zona de upload ou selecione **Fazer upload de CSV** e escolha seu arquivo. <br>![][1]{: style="max-width:80%;"} <br><br>
 2. Selecione um dos seguintes tipos de dados para cada coluna: booleano, número, string ou hora.
 <br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Dê um nome ao seu catálogo. Tenha em mente os seguintes requisitos para um nome de catálogo:
@@ -62,7 +62,7 @@ Selecione **Criar novo catálogo** e, em seguida, escolha fazer **upload de CSV*
 - Máximo de 250 caracteres
 - Só pode incluir números, letras, hífens e sublinhados<br><br>
 4. (opcional) Adicione uma descrição para o catálogo.
-5. Clique em **Processar catálogo** para criar o catálogo.
+5. Selecione **Processar catálogo** para criar o catálogo.
 
 {% alert note %}
 Esse tipo de dados não pode ser editado após a configuração do catálogo. Além disso, o valor `NULL` não é compatível com o upload de CSV e será tratado como uma string.
@@ -82,9 +82,11 @@ Também é possível usar modelos em um nome de catálogo. Por exemplo, você po
 Seu arquivo CSV pode ser rejeitado se você ultrapassar seu [nível](#tiers).
 {% endalert %}
 
-Você também pode atualizar o arquivo CSV depois de selecionar a criação de um catálogo no navegador. Clique em **Atualizar catálogo > Fazer upload de CSV** e, em seguida, selecione se deseja atualizar, adicionar ou excluir itens em seu catálogo.
+Você também pode atualizar o arquivo CSV depois de selecionar a criação de um catálogo no navegador. Selecione **Fazer upload de catálogo > Fazer upload de CSV** e, em seguida, selecione se deseja atualizar, adicionar ou excluir itens em seu catálogo.
 
 ### Método 2: Criar no navegador
+
+Para editar ou criar catálogos no navegador, você precisará da permissão "Manage Catalogs Dashboard".
 
 1. Digite um nome para seu catálogo. Tenha em mente os seguintes requisitos para o nome do seu catálogo:
 - Deve ser exclusivo
@@ -143,7 +145,7 @@ Esse tipo de dados não pode ser editado após a configuração do catálogo.
 
 ![Quatro nomes de colunas de catálogo: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Em seguida, nomearemos esse catálogo como "games_catalog" e clicaremos no botão **Process Catalog (Processar catálogo)**. Em seguida, a Braze verificará se há erros no catálogo antes da criação do catálogo.
+Em seguida, nomearemos esse catálogo como "games_catalog" e selecionaremos o botão **Processar catálogo**. Em seguida, a Braze verificará se há erros no catálogo antes da criação do catálogo.
 
 ![Um catálogo chamado "games_catalog".][11]{: style="max-width:85%;"}
 
@@ -163,15 +165,7 @@ Por exemplo, para editar um item de catálogo individual, use o [endpoint `/cata
 
 ## Níveis de catálogo {#tiers}
 
-A tabela a seguir descreve as diferenças entre as versões gratuita e profissional dos catálogos:
-
-| Área                                  | Versão gratuita                                                                                                                                            | Catálogos Pro                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tamanho do arquivo CSV                         | Até 100 MB para todos os arquivos CSV combinados em sua empresa                                                                                        | Até 2 GB para um único arquivo CSV                                                                                                                   |
-| Limite de caracteres para o valor do item       | Até 5.000 caracteres em um valor. Por exemplo, se você tiver um campo rotulado como `description`, o máximo de caracteres no campo será 5.000. | Até 5.000 caracteres em um valor. Por exemplo, se você tiver um campo rotulado como `description`, o máximo de caracteres no campo será 5.000. |
-| Limite de caracteres para o nome da coluna do item | Até 250 caracteres                                                                                                                                    | Até 250 caracteres                                                                                                                                    |
-| Seleções                            | Até 30 seleções por catálogo                                                                                                                         | Até 30 seleções por catálogo                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+A versão gratuita do Catalogs suporta tamanhos de arquivo CSV de até 100 MB para todos os arquivos CSV combinados em sua empresa, enquanto a versão Catalogs Pro suporta tamanhos de arquivo CSV de até 2 GB para um único arquivo CSV.
 
 ### Armazenamento do catálogo
 

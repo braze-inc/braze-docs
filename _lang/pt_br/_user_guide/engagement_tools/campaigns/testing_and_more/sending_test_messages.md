@@ -23,7 +23,7 @@ Antes de testar a campanha de mensagens, é importante identificar os usuários 
 
 ### Opcional: Criar um grupo de teste de conteúdo
 
-Uma maneira conveniente de organizar seus usuários de teste é criar um [Grupo de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), que inclui um grupo de usuários que receberão mensagens de teste das campanhas. Você pode adicionar esse grupo de teste no campo **Adicionar grupos de teste de conteúdo** em **Destinatários de teste** na sua campanha e iniciar seus testes sem criar ou adicionar usuários de teste individuais.
+Uma maneira conveniente de organizar seus usuários de teste é criar um [Grupo de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que inclui um grupo de usuários que receberão mensagens de teste das campanhas. Você pode adicionar esse grupo de teste no campo **Adicionar grupos de teste de conteúdo** em **Destinatários de teste** na sua campanha e iniciar seus testes sem criar ou adicionar usuários de teste individuais.
 
 ## Etapa 2: Enviar mensagens de teste específicas do canal
 
@@ -126,7 +126,7 @@ Depois de configurar um segmento de teste, você pode usar esses canais de envio
 
 1. Acesse a página **Segments (Segmentos** ) e [crie um novo segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Clique no menu suspenso em **Add Filter (Adicionar filtro** ) e localize os filtros de teste na parte inferior da lista <br><br>![Teste de filtros]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Use os filtros de teste para selecionar usuários com endereços de e-mail específicos ou [IDs de usuários]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) externos.<br><br>![Teste das opções de filtro]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Use os filtros de teste para selecionar usuários com endereços de e-mail específicos ou [IDs de usuários]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) externos.<br><br>![Teste das opções de filtro]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>Esses filtros têm as seguintes opções:
 - **É igual a**: Procura uma correspondência exata do e-mail ou ID de usuário fornecido. Use essa opção se quiser enviar as campanhas de teste apenas para dispositivos associados a um único e-mail ou ID de usuário.
 - **Não é igual**: Exclui um e-mail ou ID de usuário específico das campanhas de teste.

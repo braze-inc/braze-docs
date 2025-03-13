@@ -37,7 +37,7 @@ guide_featured_list:
 - name: "Como lidar com números de telefone desconhecidos"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "Experiência de marketing no WhatsApp"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Relatórios do WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/

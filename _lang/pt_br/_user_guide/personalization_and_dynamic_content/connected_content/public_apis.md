@@ -7,12 +7,12 @@ description: "Este artigo aborda uma lista de APIs disponíveis publicamente que
 
 # APIs públicas
 
-> Há uma variedade de APIs disponíveis publicamente que podem ser usadas para conteúdos conectados. As APIs públicas permitem que você insira dados personalizados nas mensagens. Compilamos uma lista de APIs públicas que podem ser usadas para conteúdos conectados. No entanto, há muito mais APIs disponíveis, fornecendo uma ampla variedade de usos potenciais de conteúdos conectados.  
+> Há uma variedade de APIs disponíveis publicamente que podem ser usadas para conteúdos conectados. As APIs públicas permitem que você insira dados personalizados nas mensagens. Esta página compila uma lista de APIs públicas que podem ser usadas para Connected Content. No entanto, há muito mais APIs disponíveis, fornecendo uma ampla variedade de usos potenciais de conteúdos conectados.  
 
 Entre em contato conosco pelo e-mail [success@braze.com](mailto:success@braze.com) e informe-nos se tiver uma API para compartilhar!
 
 {% alert note %}
-As APIs públicas podem estar sujeitas a restrições de uso e limites de frequência.  Leia as documentações da API e entrar em contato com os provedores de API sobre o uso pretendido.
+As APIs públicas podem estar sujeitas a restrições de uso e limites de frequência. Leia as documentações da API e entrar em contato com os provedores de API sobre o uso pretendido.
 {% endalert %}
 
 ## Notícias e informações

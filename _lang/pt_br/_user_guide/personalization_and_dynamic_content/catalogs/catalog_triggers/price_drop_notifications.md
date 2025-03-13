@@ -8,7 +8,7 @@ description: "Este artigo de referência descreve como criar notificações de q
 
 # Notificações de queda de preço
 
-> Usando uma combinação de notificações de queda de preço através de catálogos Braze e uma canva, você pode notificar os clientes quando o preço de um item diminuiu. Sempre que um cliente realiza um evento personalizado selecionado, ele pode ser automaticamente inscrito para ser notificado quando o preço do item for reduzido.
+> Use uma combinação de notificações de queda de preço através dos catálogos Braze e um Canva para notificar os clientes quando o preço de um item diminuir. Sempre que um cliente realiza um evento personalizado selecionado, ele pode ser automaticamente inscrito para ser notificado quando o preço do item for reduzido.<br><br>Esta página cobre como funcionam as notificações de queda de preço e como você pode configurá-las e usá-las.
 
 Quando um usuário aciona um evento personalizado para um item, nós automaticamente os inscreveremos para receber notificações de queda de preço para esse item. Quando o preço do item atender à sua regra de inventário (como uma queda maior que 50%), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou Canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
@@ -32,7 +32,7 @@ Siga estas etapas para configurar notificações de queda de preço em um catál
     <br> ![Gaveta de configurações do catálogo.][2]{: style="max-width:70%;"}
     - **Catálogo de fallback:** O catálogo usado para a inscrição se não houver uma propriedade `catalog_name` no evento personalizado.
     - **Evento personalizado para inscrição:** O evento personalizado do Braze usado para inscrever um usuário para notificações de catálogo. Quando este evento ocorrer, o usuário que realizou o evento será inscrito.
-    - **Evento personalizado para cancelamento de inscrição:** O evento personalizado do Braze usado para cancelar a inscrição de um usuário das notificações.
+    - **Evento personalizado para cancelamento de inscrição:** O evento personalizado do Braze usado para cancelar a inscrição de um usuário das notificações. Este evento é opcional. Se o usuário não realizar este evento, ele será desinscrito após 90 dias ou quando o evento de queda de preço for acionado, o que ocorrer primeiro.
     - **ID do item propriedade do evento:** A propriedade no evento personalizado acima usada para determinar o item para uma inscrição ou cancelamento de inscrição. Esta propriedade no evento personalizado deve conter um ID de item que existe em um catálogo. O evento personalizado deve conter uma propriedade `catalog_name` para especificar em qual catálogo este item está.
    
     - Um exemplo de evento personalizado seria

@@ -1,7 +1,7 @@
 ---
 nav_title: Enviando Mensagens de Teste
 article_title: Enviando Mensagens de Teste
-page_order: 6
+page_order: 4.1
 description: "Este artigo de referência cobre o envio de mensagens de teste para diferentes canais."
 
 ---

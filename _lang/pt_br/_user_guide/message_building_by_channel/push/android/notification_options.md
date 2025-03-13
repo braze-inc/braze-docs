@@ -17,7 +17,7 @@ channel:
 
 ## Notificações silenciosas
 
-Quando você [compõe sua notificação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message), você **não pode** enviar uma mensagem push do Android sem um título—no entanto, você pode inserir um único espaço em vez disso. Tenha em mente que, se sua mensagem contiver apenas um único espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, veja [Notificações push silenciosas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+Quando você [compõe sua notificação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message), você **não pode** enviar uma mensagem push do Android sem um título—no entanto, você pode inserir um único espaço em vez disso. Tenha em mente que, se sua mensagem contiver apenas um único espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, veja [Notificações push silenciosas]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/).
 
 ## Grupos de notificação
 

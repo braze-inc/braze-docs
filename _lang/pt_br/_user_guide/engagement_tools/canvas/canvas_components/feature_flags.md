@@ -13,7 +13,7 @@ local_redirect:
 
 > Os Feature Flags permitem que você experimente e confirme suas hipóteses sobre novos recursos. Os profissionais de marketing podem usar sinalizadores de recursos para segmentar seu público no [Canva][1] e rastrear o impacto da implementação de recursos nas conversões. Além disso, [os caminhos experimentais][2] permitem que você otimize essas conversões testando diferentes mensagens ou jornadas umas contra as outras e determinando qual é a mais eficaz. Use a Jornada Vencedora ao implementar progressivamente seu recurso para um público mais amplo.
 
-Está procurando mais informações sobre os feature flags e como eles podem ser usados na Braze? Confira nossos artigos dedicados sobre [Feature Flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/).
+Está procurando mais informações sobre os feature flags e como eles podem ser usados na Braze? Confira nossos artigos dedicados sobre [Feature Flag]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Criação de um Feature Flag
 

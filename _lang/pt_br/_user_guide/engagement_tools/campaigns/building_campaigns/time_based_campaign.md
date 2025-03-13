@@ -138,7 +138,7 @@ O limite de frequência é baseado em dias de calendário, não em um período d
 
 | Definição | Fuso horário |
 | ---------- | --------- |
-| A quantidade máxima de tempo que pode passar entre um usuário receber uma campanha e realizar a ação atribuída para que seja considerada uma conversão. Para saber mais, consulte [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/). | N/D |
+| A quantidade máxima de tempo que pode passar entre um usuário receber uma campanha e realizar a ação atribuída para que seja considerada uma conversão. Para saber mais, consulte [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). | N/D |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

@@ -12,7 +12,7 @@ channel:
 
 # Pares chave-valor
 
-> Braze permite que você envie cargas úteis de dados extras para dispositivos de usuários via pares chave-valor. Este recurso está disponível nos canais de envio de mensagens push, in-app, e-mail e cartão de conteúdo. 
+> Esta página cobre como usar pares de chave-valor para enviar cargas úteis de dados extras para dispositivos de usuários. Este recurso está disponível nos canais de envio de mensagens push, in-app, e-mail e cartão de conteúdo.
 
 Use pares de valores-chave para adicionar metadados estruturados às mensagens. Essas cargas úteis de dados extras podem enriquecer as mensagens com informações contextuais adicionais que podem influenciar a forma como uma mensagem é renderizada ou processada.
 
@@ -41,7 +41,7 @@ Aqui estão alguns exemplos de casos de uso para adicionar metadados com pares d
 
 Os pares de valores-chave podem ser adicionados a notificações por push para Android, iOS e web push. Você pode usar pares de valores-chave para atualizar métricas internas e o conteúdo do app ou personalizar as propriedades da notificação por push, como priorização de alertas, localização e sons.
 
-No criador de mensagem, selecione a **guia de Configurações**, clique em **Adicionar Novo Par** e especifique seus pares chave-valor.
+No criador de mensagem, selecione a guia **Configurações**, selecione **Adicionar novo par** e especifique seus pares de chave-valor.
 
 ### iOS
 
@@ -109,11 +109,11 @@ Quando a Braze envia uma notificação por push para a APNs, a carga útil será
 
 ##### Pares de chave-valor personalizados
 
-Além dos valores de carga útil da biblioteca ```aps```, você pode enviar pares de chave-valor personalizados para o dispositivo de um usuário. Os valores nesses pares são restritos a tipos primitivos: dicionário (objeto), vetor, string, número e Booleano.
+Além dos valores de carga útil da biblioteca ```aps```, você pode enviar pares de chave-valor personalizados para o dispositivo de um usuário. Os valores nesses pares são restritos a tipos primitivos: dicionário (objeto), array, string, número e booleano.
 
 ![][17]
 
-Casos de uso para pares chave-valor personalizados incluem, mas não estão limitados a, manutenção de métricas internas e definição do contexto para a interface do usuário. Braze permite que você envie pares de chave-valor adicionais junto com uma notificação por push para serem usados como quiser em seu aplicativo dentro da [chave extras][1]. Se você preferir usar outra chave, certifique-se de que seu app possa lidar com essa chave personalizada.
+Os casos de uso para pares de chave-valor personalizados incluem, mas não se limitam a, manter métricas internas e definir o contexto para a interface do usuário. O Braze permite que você envie pares de chave-valor adicionais junto com uma notificação por push para serem usados em seu aplicativo dentro da [chave extras][1]. Se você preferir usar outra chave, confirme que seu app pode lidar com essa chave personalizada.
 
 {% alert warning %}
 Você deve evitar lidar com uma chave de nível superior ou dicionário chamado ab em seu aplicativo.
@@ -122,7 +122,7 @@ Você deve evitar lidar com uma chave de nível superior ou dicionário chamado 
 A Apple aconselha os clientes a evitar incluir informações de clientes ou quaisquer dados sensíveis como dados de carga útil personalizados. Além disso, a Apple recomenda que qualquer ação associada a uma mensagem de alerta não deve excluir dados em um dispositivo.
 
 {% alert warning %}
-Se você estiver usando a API do provedor HTTP/2, qualquer carga útil individual que você enviar para o APNs não pode exceder um tamanho de 4096 bytes. A interface binária legada, que em breve será depreciada, suporta apenas um tamanho de carga útil de 2048 bytes.
+Se você estiver usando a API do provedor HTTP/2, qualquer carga útil individual que você enviar para APNs não pode exceder um tamanho de 4096 bytes. A interface binária legada, que em breve será depreciada, suporta apenas um tamanho de carga útil de 2048 bytes.
 {% endalert %}
 
 ###### campanhas acionadas por API
@@ -167,7 +167,7 @@ O sistema operacional iOS pode [bloquear notificações]({{site.baseurl}}/develo
 
 ## Mensagem no app
 
-Para adicionar um par chave-valor a uma mensagem no app, selecione a guia **Configurações** no criador de mensagem, clique em **Adicionar Novo Par** e especifique seus pares chave-valor.
+Para adicionar um par de chave-valor a uma mensagem no app, selecione a guia **Configurações** no criador de mensagem, selecione **Adicionar novo par** e especifique seus pares de chave-valor.
 
 ![][21]
 
@@ -187,7 +187,7 @@ E-mails devolvidos não entregarão pares chave-valor para SparkPost ou SendGrid
 
 ## Cartões de conteúdo
 
-Para adicionar um par chave-valor a um cartão de conteúdo, acessar a **Configurações** guia no criador de mensagem Braze e clicar em **Adicionar Novo Par**.
+Para adicionar um par de chave-valor a um cartão de conteúdo, acesse a guia **Configurações** no criador de mensagem do Braze e selecione **Adicionar novo par**.
 
 ![Adicionar par chave-valor ao cartão de conteúdo][24]{: style="max-width:70%;"}
 

@@ -15,8 +15,10 @@ Todos os dados persistentes associados a um usuário são armazenados em seu per
 
 Esses parâmetros incluem:
 
-* `braze_id`
+* `braze_id` (atribuído por Braze)
 * `external_id`
+* `email`
+* `phone`
 * Qualquer número de aliases de usuário personalizados que você definir
 
 ## Perfis de usuários anônimos
@@ -27,7 +29,7 @@ Inicialmente, quando um usuário é reconhecido pelo SDK, um perfil de usuário 
 
 ## Perfis de usuários identificados
 
-Depois que um usuário for reconhecido em seu app (fornecendo uma forma de ID de usuário ou endereço de e-mail), sugerimos atribuir um `external_id` ao perfil desse usuário usando o método `changeUser` [(Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). Um `external_id` permite identificar o mesmo perfil de usuário em vários dispositivos. 
+Depois que um usuário for reconhecido em seu app (fornecendo uma forma de ID de usuário ou endereço de e-mail), sugerimos atribuir um `external_id` ao perfil desse usuário usando o método `changeUser` [(Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html)). Um `external_id` permite identificar o mesmo perfil de usuário em vários dispositivos.
 
 Os benefícios adicionais de usar um `external_id` incluem o seguinte: 
 
@@ -36,11 +38,20 @@ Os benefícios adicionais de usar um `external_id` incluem o seguinte:
 - Ative a importação de dados de usuários de fontes externas ao app usando os [Endpoints de dados do usuário]({{site.baseurl}}/api/endpoints/user_data/) e direcione os usuários com mensagens transacionais usando nossos [endpoints de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/).
 - Pesquise usuários individuais usando nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Testing" (Teste) no segmentador e na página [**User Search (Pesquisa de usuários)**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/).
 
+### Considerações sobre IDs externas
+
 {% alert warning %}
 Não atribua um `external_id` a um perfil de usuário antes de poder identificá-lo exclusivamente. Depois de identificar um usuário, não é possível revertê-lo para anônimo.
 <br><br>
 Além disso, um `external_id` é imutável depois de ter sido definido em relação a um perfil de usuário. Qualquer tentativa de definir um `external_id` diferente durante a sessão de um usuário criará um novo perfil de usuário com o novo `external_id` associado a ele. Nenhum dado será transmitido entre os dois perfis.
 {% endalert %} 
+
+#### Risco de usar um e-mail ou um e-mail com hash como uma ID externa
+
+O uso de um endereço de e-mail ou de um endereço de e-mail com hash como sua ID externa Braze pode simplificar o gerenciamento de identidade em todas as suas fontes de dados; no entanto, é importante considerar os possíveis riscos à privacidade do usuário e à segurança dos dados.
+
+- **Informações que podem ser adivinhadas:** Os endereços de e-mail são facilmente adivinháveis, o que os torna vulneráveis a ataques.
+- **Risco de exploração:** Se um usuário mal-intencionado alterar seu navegador da Internet para enviar o endereço de e-mail de outra pessoa como sua ID externa, ele poderá acessar mensagens confidenciais ou informações de conta.
 
 ### O que acontece quando você identifica usuários anônimos
 

@@ -14,13 +14,13 @@ platform:
 
 # Personalização do feed padrão do cartão de conteúdo
 
-> Um feed de cartão de conteúdo é a sequência de cartões de conteúdo em seus aplicativos móveis ou da Web. Este artigo aborda a configuração de quando o feed é atualizado, a ordem dos cartões, o gerenciamento de vários feeds e as mensagens de erro de "feed vazio". Para obter uma visão geral básica dos tipos de opções de personalização que você tem com os cartões de conteúdo, consulte [Visão geral da personalização]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
+> Um feed de cartão de conteúdo é a sequência de cartões de conteúdo em seus aplicativos móveis ou da Web. Este artigo aborda a configuração de quando o feed é atualizado, a ordem dos cartões, o gerenciamento de vários feeds e as mensagens de erro de "feed vazio". Para uma visão geral básica dos tipos de opções de personalização que você tem com os cartões de Conteúdo, consulte [Visão geral da personalização]({{site.baseurl}}/developer_guide/getting_started/customization_overview). 
 
 ## Atualizar o feed
 
 Por padrão, o feed do cartão de conteúdo será atualizado automaticamente nas seguintes instâncias: 
 1. Uma nova sessão é iniciada
-2. Quando o feed é aberto e mais de 60 segundos se passaram desde a última atualização
+2. Quando o feed é aberto e mais de 60 segundos se passaram desde a última atualização. Isso se aplica somente ao feed padrão do cartão de conteúdo e ocorre apenas uma vez por abertura de feed.
 
 Você também pode configurar o SDK para atualizar manualmente em horários específicos.
 
@@ -354,7 +354,7 @@ O estilo usado para exibir essa mensagem pode ser encontrado em [`Braze.ContentC
 </style>
 ```
 
-Para saber mais sobre como personalizar os elementos de estilo do cartão de conteúdo, consulte [Personalização de estilo]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
+Para saber mais sobre como personalizar os elementos de estilo do cartão de conteúdo, consulte [Personalização de estilo]({{site.baseurl}}/developer_guide/content_cards/customizing_styles/).
 {% endtab %}
 {% tab Criador do Jetpack %}
 Para personalizar a mensagem de erro "feed vazio" com o Jetpack Compose, você pode passar um `emptyString` para `ContentCardsList`. Você também pode enviar `emptyTextStyle` para `ContentCardListStyling` para personalizar ainda mais essa mensagem.
@@ -419,7 +419,7 @@ Os cartões de conteúdo podem ser filtrados em seu app para que apenas cartões
 
 ### Etapa 1: Definir pares de valores-chave nos cartões
 
-Ao criar uma campanha de cartão de conteúdo, defina [os dados do par chave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/) em cada cartão. Você usará esse par chave-valor para categorizar os cartões. Os pares de valores-chave são armazenados na propriedade `extras` no modelo de dados do cartão.
+Ao criar uma campanha de cartão de conteúdo, defina [os dados do par chave-valor]({{site.baseurl}}/developer_guide/content_cards/customizing_behavior/) em cada cartão. Você usará esse par chave-valor para categorizar os cartões. Os pares de valores-chave são armazenados na propriedade `extras` no modelo de dados do cartão.
 
 Para este exemplo, definiremos um par de valores chave com a chave `feed_type` que designará em qual feed do cartão de conteúdo o cartão deve ser exibido. O valor será o valor de seus feeds personalizados, como `home_screen` ou `marketing`.
 

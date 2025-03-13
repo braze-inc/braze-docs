@@ -16,7 +16,7 @@ A Braze recomenda que você envie apenas dados de clientes que pretenda utilizar
 - **Direcione** seu público criando [segmentos de público]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Acione** suas mensagens com entrega [baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) ou [acionada por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 - **Modele** e personalize suas mensagens com a [lógica condicional do Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Acompanhe** a eficácia de suas campanhas com o [rastreamento de conversões]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Acompanhe** a eficácia de suas campanhas com o [rastreamento de conversões]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
 
 Isso permite otimizar os dados enviados ao Braze e agilizará sua capacidade de enviar mensagens aos usuários, ao mesmo tempo em que garante o não rastreamento de pontos de dados que sua equipe pode não considerar úteis a longo prazo. 
 
@@ -72,8 +72,12 @@ Ao editar programações de campanhas ou públicos, observe as seguintes prátic
 
 - **Campanhas de programação única:** Você pode editar a campanha até o horário de envio programado.
 - **Campanhas programadas recorrentes:** Você pode editar a campanha até o horário de envio programado.
-- **Campanhas de fuso local:** Não faça edições 24 horas antes do horário de envio programado.
+- **Campanhas de fuso local:** Não faça edições 24 horas antes do horário programado de envio.
 - **Campanhas com tempo de envio ideal:** Não faça edições 24 horas antes da meia-noite do dia em que a campanha está programada para ser enviada.
+
+{% alert note %}
+Editar uma campanha ativa e mudar a entrega para o **Tempo de envio local** fará com que um novo lote de mensagens seja enfileirado, o que significa que seus usuários receberão a mensagem duas vezes devido à mensagem sendo enfileirada duas vezes. Para evitar isso, primeiro pare a campanha original, depois lance uma duplicata após atualizar o cronograma.
+{% endalert %}
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

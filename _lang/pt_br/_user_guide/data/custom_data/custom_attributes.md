@@ -33,7 +33,7 @@ A partir desta página, você pode visualizar, gerenciar, criar ou bloquear atri
 
 ### Colocando na lista de bloqueio
 
-Os atributos personalizados podem ser incluídos em uma lista de bloqueio individualmente no menu de ações ou até 10 atributos podem ser selecionados e incluídos em uma lista de bloqueio em massa. Se você bloquear um atributo personalizado, nenhum dado será coletado em relação a esse atributo, os dados existentes ficarão indisponíveis a menos que sejam reativados, e os atributos na lista de bloqueio não aparecerão em filtros ou gráficos. Além disso, se a atribuição estiver sendo referenciada por filtros ou disparadores em outras áreas do dashboard do Braze, será exibido um modal de aviso explicando que todas as instâncias dos filtros ou disparadores que fazem referência a ela serão removidas e arquivadas.
+Os atributos personalizados podem ser incluídos em uma lista de bloqueio individualmente no menu de ações ou até 100 atributos podem ser selecionados e incluídos em uma lista de bloqueio em massa. Se você bloquear um atributo personalizado, nenhum dado será coletado em relação a esse atributo, os dados existentes ficarão indisponíveis a menos que sejam reativados, e os atributos na lista de bloqueio não aparecerão em filtros ou gráficos. Além disso, se a atribuição estiver sendo referenciada por filtros ou disparadores em outras áreas do dashboard do Braze, será exibido um modal de aviso explicando que todas as instâncias dos filtros ou disparadores que fazem referência a ela serão removidas e arquivadas.
 
 ### Marcação como informações de identificação pessoal (IPI)
 
@@ -58,7 +58,7 @@ Existem duas maneiras de remover atributos personalizados dos perfis de usuário
 
 O relatório de uso lista todas as canvas, campanhas e segmentos que utilizam um atributo personalizado específico. Essa lista não inclui os usos do Liquid. 
 
-Você pode visualizar até 10 relatórios de uso por vez, selecionando as caixas de seleção ao lado dos respectivos atributos personalizados e, em seguida, selecionando **Ver relatório de uso**.
+Você pode visualizar até 100 relatórios de utilização por vez, marcando as caixas de seleção ao lado dos respectivos atributos personalizados e, em seguida, selecionando **Visualizar relatório de utilização**.
 
 ### Exportação de dados
 
@@ -70,13 +70,13 @@ A seguir estão listados métodos em várias plataformas que são usados para de
 
 {% details Expandir para documentação por plataforma %}
 
-- [Android e FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [Android e FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
 
 {% enddetails %}
 

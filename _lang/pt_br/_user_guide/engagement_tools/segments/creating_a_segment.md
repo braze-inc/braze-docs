@@ -80,7 +80,9 @@ O Braze não gera perfis para os usuários até que eles tenham usado o aplicati
 ![Grupos de filtros do segmentador com o operador AND.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Os segmentos que já usam o filtro **Inscrição em segmento** não podem ser incluídos ou aninhados em outros segmentos.
+Os segmentos que já usam o filtro **Inscrição em segmento** não podem ser incluídos ou aninhados em outros segmentos. Isso evita um ciclo em que o Segmento A inclui o Segmento B, que, por sua vez, tenta incluir o Segmento A novamente. Se isso acontecesse, o segmento continuaria fazendo referência a si mesmo, tornando impossível calcular quem realmente pertence a ele.
+
+Além disso, o aninhamento de segmentos como esse aumenta a complexidade e pode tornar as coisas mais lentas. Em vez disso, recrie o segmento que está tentando incluir usando os mesmos filtros.
 {% endalert %}
 
 #### Grupos de exclusão (opcional) {#exclusion}

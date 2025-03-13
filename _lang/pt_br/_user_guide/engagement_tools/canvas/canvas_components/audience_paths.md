@@ -17,7 +17,7 @@ Este componente de canva substitui a necessidade de criar etapas completas basea
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
-Os caminhos do público são semelhantes a funis de classificação com critérios de classificação. Os usuários são avaliados para cada critério em ordem de prioridade e enviados pela jornada dos critérios de maior classificação para os quais se qualificam. Isso reduz a ambiguidade de onde os usuários irão e quais mensagens eles receberão. Nota que os rankings não são [editáveis após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
+Os caminhos do público são semelhantes a funis de classificação com critérios de classificação. Os usuários são avaliados para cada critério em ordem de prioridade e enviados pela jornada dos critérios de maior classificação para os quais se qualificam. Isso reduz a ambiguidade de onde os usuários irão e quais mensagens eles receberão. Nota que os rankings não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
 Com as jornadas do público, você pode:
 
@@ -54,7 +54,7 @@ Depois que a etapa Jornada do público estiver concluída, cada grupo de públic
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-Depois de adicionar segmentos e filtros ao seu público, você pode testar se seus grupos de público estão configurados conforme o esperado [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) para confirmar se eles correspondem aos critérios do público. 
+Depois de adicionar segmentos e filtros ao seu público, você pode testar se seus grupos de público estão configurados conforme o esperado [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se eles correspondem aos critérios do público. 
 
 ## Uso de jornadas do público
 
@@ -74,7 +74,7 @@ Você também pode ver a performance desta etapa usando [canva análise de dados
 
 Se o seu canva usar um [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (como limitar o total de usuários que receberão o canva), a Braze recomenda que você não use números de bucket aleatórios para segmentar seus caminhos de público. 
 
-Um [número de balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) é um atributo de usuário que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. Braze usa o número do bucket aleatório para agrupar usuários durante a fase de segmentação da entrada do canva, e cada grupo é processado separadamente. Dependendo de quais grupos terminam o processamento primeiro, alguns usuários podem ser limitados na entrada devido ao limite de frequência, o que pode causar uma distribuição desigual de usuários quando eles alcançam a etapa de Caminhos do Público.
+Um [número de balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) é um atributo de usuário que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. Braze usa o número do bucket aleatório para agrupar usuários durante a fase de segmentação da entrada do canva, e cada grupo é processado separadamente. Dependendo de quais grupos terminam o processamento primeiro, alguns usuários podem ser limitados na entrada devido ao limite de frequência, o que pode causar uma distribuição desigual de usuários quando eles alcançam a etapa de Caminhos do Público.
 
 Neste cenário, tente usar [Caminhos de Experimento]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) em vez disso.
 

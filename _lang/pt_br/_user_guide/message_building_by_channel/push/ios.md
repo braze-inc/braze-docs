@@ -15,7 +15,7 @@ guide_top_text: "Os artigos a seguir listam tudo o que o iOS empurra para a Braz
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
 - name: "Campanha Push Primer"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Ícones de aplicativos personalizáveis"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/

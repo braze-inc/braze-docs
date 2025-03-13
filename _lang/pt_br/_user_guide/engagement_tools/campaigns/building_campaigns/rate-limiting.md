@@ -86,6 +86,8 @@ Como outro exemplo, se estiver tentando enviar 75.000 mensagens com um limite de
 
 Observe que as mensagens com limite de frequência podem não ser enviadas uniformemente ao longo de cada minuto. Usando o exemplo de um limite de frequência de 10.000 por minuto, isso significa que o Braze garante que não sejam enviadas mais de 10.000 mensagens por minuto. Isso pode significar que uma porcentagem maior das 10.000 mensagens é enviada no primeiro meio minuto em comparação com o último meio minuto. 
 
+Além disso, observe que o limite de frequência é aplicado no início da tentativa de envio de mensagens. Quando há flutuações no tempo que leva para o envio ser concluído, o número de envios concluídos pode exceder ligeiramente o limite de frequência em alguns minutos. Com o passar do tempo, o número de envios por minuto atingirá a média de não mais do que o limite de frequência.
+
 {% alert important %}
 Tenha cuidado com a postergação de mensagens sensíveis ao tempo com essa forma de limite de frequência. Se o segmento contiver 30 milhões de usuários, mas definirmos o limite de frequência para 10.000 por minuto, uma grande parte da sua base de usuários não receberá a mensagem até o dia seguinte.
 {% endalert %}

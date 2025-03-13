@@ -8,7 +8,9 @@ description: "Este artigo de referência aborda como lidar com as novas tentativ
 
 # Outras tentativas no conteúdo conectado
 
-> Como o recurso depende do recebimento de dados de APIs, existe a possibilidade de que uma API esteja intermitentemente indisponível enquanto a Braze faz a chamada. Nesse caso, a Braze oferece suporte à lógica de tentar novamente para tentar novamente a solicitação usando o backoff exponencial. 
+> Como o recurso depende do recebimento de dados de APIs, existe a possibilidade de que uma API esteja intermitentemente indisponível enquanto a Braze faz a chamada. Nesse caso, a Braze oferece suporte à lógica de tentar novamente para tentar novamente a solicitação usando o backoff exponencial. <br><br> Esta página aborda como adicionar novas tentativas às suas chamadas de Connected Content.
+
+## Como ativar as novas tentativas
 
 Para ativar as novas tentativas, adicione `:retry` na chamada do conteúdo conectado, conforme mostrado no seguinte trecho de código:
 {% raw %}
@@ -18,7 +20,13 @@ Para ativar as novas tentativas, adicione `:retry` na chamada do conteúdo conec
 ```
 {% endraw %}
 
+## Resultados de novas tentativas
+
+### Quando a chamada à API falhar e as novas tentativas estiverem ativadas
+
 Se a chamada API falhar e isso estiver ativado, o Braze tentará novamente a chamada, respeitando o [limite de frequência][47] que você definiu para cada reenvio. O Braze moverá todas as mensagens com falha para o final da fila e adicionará minutos adicionais, se necessário, ao total de minutos necessários para enviar sua mensagem.
+
+### Quando uma nova tentativa for bem-sucedida
 
 Se uma nova tentativa for bem-sucedida, a mensagem será enviada e nenhuma outra tentativa será feita para essa mensagem. Se a chamada do conteúdo conectado errar 5 vezes, a mensagem será abortada de modo semelhante ao que ocorreria se uma [tag de mensagem abortada][1] fosse disparada.
 

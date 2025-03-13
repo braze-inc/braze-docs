@@ -25,9 +25,9 @@ Antes de começar, certifique-se de ter trabalhado com sua equipe e com o gerent
 
 Você pode criar novos espaços de trabalho ou alternar entre espaços de trabalho existentes no menu suspenso de espaços de trabalho no cabeçalho global.
 
-1. Selecione o menu suspenso do espaço de trabalho e clique em <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Criar espaço de trabalho**.
+1. Selecione o menu suspenso do espaço de trabalho e, em seguida, selecione <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Criar espaço de trabalho**.
 
-![][1]
+![O menu suspenso do espaço de trabalho com o botão "Criar espaço de trabalho".][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. Dê um nome ao seu espaço de trabalho.
@@ -39,29 +39,29 @@ Talvez você queira adotar uma convenção de nomes para que outras pessoas da e
 {:start="3"}
 3\. Selecione **Criar**. Pode levar alguns segundos para que a Braze crie seu espaço de trabalho.
 
-![][2]
+![Modal "Criar espaço de trabalho" com o nome "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 Você será levado à página **Configurações do aplicativo** para começar a adicionar suas instâncias do app. Você pode acessar essa página a qualquer momento em **Configurações** > **Configurações do app**.
 
-![][3]
+![Página "Configurações do aplicativo" para o espaço de trabalho Upon Voyage US - Staging com um botão para adicionar um aplicativo.][3]
 
 ### Etapa 3: Adicione suas instâncias do app
 
 Referimo-nos aos diferentes sites e aplicativos que são coletados em um espaço de trabalho como "instâncias do app".
 
-1. Na página **Configurações do aplicativo**, clique em **\+ Adicionar aplicativo**.
+1. Na página **Configurações do aplicativo**, selecione **\+ Adicionar aplicativo**.
 2. Dê um nome à instância do app e selecione em qual plataforma ou plataformas essa instância do app está. Se você selecionar várias plataformas, a Braze criará uma instância do app para cada plataforma.
 
-![][4]{: style="max-width:60%" }
+![Modal "Adicionar aplicativo a Upon Voyage US - Staging" com opções para selecionar detalhes do aplicativo.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. Clique em **Add app (Adicionar aplicativo** ) para confirmar.
+3\. Selecione **Adicionar aplicativo** para confirmar.
 
 #### Chaves de API do app
 
 Depois de adicionar a instância do app, você terá acesso à chave de API dele. A chave de API é usada ao fazer solicitações entre a instância do app e a API do Braze. A chave de API também é importante para a integração do SDK da Braze com seu app ou site.
 
-![][5]
+![Página de configurações do app Upon Voyage para iOS com campos para a Chave da API e o Endpoint de SDK.][5]
 
 {% alert note %}
 Você deve criar instâncias do app separadas para cada versão do seu aplicativo em cada plataforma. Por exemplo, se você tiver versões Free e Pro do seu aplicativo no iOS e no Android, crie quatro instâncias do app em seu espaço de trabalho (aplicativo gratuito para iOS, aplicativo gratuito para Android, aplicativo pro para iOS e aplicativo pro para Android). Isso dará quatro chaves de API para usar, uma para cada instância do app.
@@ -73,7 +73,7 @@ A versão do SDK ativo exibida na página Configurações do aplicativo para um 
 
 Esse campo aparece após a integração do SDK da Braze com seu app ou site. Se uma versão mais recente do SDK da Braze estiver disponível para sua plataforma, ela será notada aqui com a tag "Versão mais nova disponível".
 
-![][6]
+![Seção "Live SDK Version" com um valor de campo de "5.4.0" e um ícone que diz que uma nova versão está disponível.][6]
 
 ### Etapa 4: Repetir conforme necessário
 
@@ -89,7 +89,7 @@ Repita as etapas 2 e 3 para configurar quantos espaços de trabalho seu plano ex
 
 Você pode adicionar espaços de trabalho favoritos para acessar ainda mais rapidamente os espaços de trabalho que mais usa.
 
-![][7]
+![Menu suspenso Espaço de trabalho com a guia "Espaços de trabalho favoritos".][7]{: style="max-width:50%;"}
 
 Para adicionar espaços de trabalho favoritos:
 
@@ -108,21 +108,22 @@ Para renomear seu espaço de trabalho:
 2. Passe o mouse sobre o nome de seu espaço de trabalho e selecione <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Dê um novo nome ao seu espaço de trabalho e selecione <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
-![][8]
+![O ícone de lápis que aparece ao lado do nome do espaço de trabalho.][8]{: style="max-width:50%;"}
 
-### Exclusão de espaços de trabalho
+### Exclusão de espaços de trabalho e instâncias do app
 
-
-Para excluir seu espaço de trabalho:
+Para excluir seu espaço de trabalho ou instância do app:
 
 1. Acesse **Configurações** > **Configurações do app**.
-2. Selecione **Excluir espaço de trabalho**.
+2. Selecione **Excluir espaço de trabalho** para excluir o respectivo espaço de trabalho ou selecione o ícone da lixeira ao lado da respectiva instância do app.
+
+Não é possível excluir instâncias do app ou espaços de trabalho que estejam sendo usados atualmente para direcionamento de usuários ou que tenham mais de 1.000 usuários. Se tentar fazer isso, você receberá uma mensagem de erro. Para prosseguir e excluí-los, [crie um caso de suporte]({{site.baseurl}}/help/support/) que inclua um link do dashboard e o nome da instância do app ou do espaço de trabalho a ser excluído.
 
 {% alert warning %}
 Tenha cuidado ao excluir espaços de trabalho! Depois que um espaço de trabalho é excluído, ele não pode ser restaurado.
 {% endalert %}
 
-![][9]
+![A página Configurações do aplicativo com um botão para excluir um espaço de trabalho e um ícone de lixeira para excluir um aplicativo.][9]
 
 ## Perguntas frequentes
 
@@ -148,7 +149,7 @@ Por padrão, um segmento direciona todos os apps e sites no espaço de trabalho.
 2. Para **aplicativos e sites direcionados**, selecione **Usuários de aplicativos específicos**.
 3. No menu suspenso **Aplicativos específicos**, selecione seu aplicativo ou site.
 
-![][10]{: style="max-width:75%" }
+![Segmento que direciona usuários de apps específicos.][10]
 
 Em seguida, você pode adicionar esse segmento à sua mensagem e começar a refinar ainda mais seu público com segmentos e filtros adicionais, se necessário.
 

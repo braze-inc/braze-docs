@@ -48,7 +48,7 @@ Esse recurso está atualmente em acesso antecipado. Entre em contato com seu ger
 
 Os rastreamentos podem ser uma ferramenta organizacional útil para manter o controle das táticas de engajamento. Você pode vincular segmentos e campanhas a objetivos de negócios, estágios de funil e similares.
 
-Veja a seguir um exemplo de tags que podem ser úteis para um app de comércio eletrônico:
+O seguinte é um exemplo de tags que um aplicativo de eCommerce pode achar útil:
 
 <style>
 table td {

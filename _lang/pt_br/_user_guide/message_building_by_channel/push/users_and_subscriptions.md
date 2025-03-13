@@ -133,7 +133,7 @@ Como resultado, você deve pedir permissão somente quando um usuário clicar em
 Há duas maneiras de classificar um [push token][push-tokens] ] que são essenciais para entender como uma notificação por push pode ser enviada aos seus usuários.
 
 1. **O push em primeiro plano** oferece a capacidade de enviar notificações por push visíveis regularmente para o primeiro plano do dispositivo do usuário.
-2. **O push em segundo plano** está disponível independentemente do fato de um dispositivo específico ter aceitado receber notificações por push dessa marca. O push em segundo plano permite que as marcas enviem notificações por push silenciosas - notificações que intencionalmente não são exibidas - aos dispositivos para oferecer suporte a funcionalidades importantes, como [rastreamento de desinstalação]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/).
+2. **O push em segundo plano** está disponível independentemente do fato de um dispositivo específico ter aceitado receber notificações por push dessa marca. O push em segundo plano permite que as marcas enviem notificações por push silenciosas - notificações que intencionalmente não são exibidas - aos dispositivos para oferecer suporte a funcionalidades importantes, como [rastreamento de desinstalação]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
 Quando um perfil de usuário tem um token por push de primeiro plano válido associado a um aplicativo, o Braze considera o usuário "registrado por push" para o aplicativo em questão. OA Braze, então, fornece um filtro de segmentação específico, `Push Enabled for App,`, para ajudar a identificar esses usuários.
 

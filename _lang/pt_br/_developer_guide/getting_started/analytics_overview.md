@@ -16,9 +16,9 @@ Consulte nosso caso de um [aplicativo de táxi/viagem por aplicativo](#example-c
 
 ## Dados coletados automaticamente
 
-Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e término da sessão, todos os outros dados rastreados automaticamente não contam para sua alocação de pontos de dados.
+Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e término da sessão, todos os outros dados rastreados automaticamente não contam para sua alocação de pontos de dados.
 
-Consulte nosso artigo [SDK primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/) para processos de lista de permissão que bloqueiam a coleta padrão de certos itens de dados.
+Consulte nosso artigo [SDK primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) para processos de lista de permissão que bloqueiam a coleta padrão de certos itens de dados.
 
 ## Eventos personalizados
 

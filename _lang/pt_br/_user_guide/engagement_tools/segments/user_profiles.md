@@ -18,6 +18,7 @@ description: "Este artigo de referência descreve como acessar o perfil de um us
 Para acessar o perfil de um usuário, acesse a página **Pesquisar usuários** e pesquise um usuário por qualquer uma das seguintes opções:
 
 - ID de usuário externo
+- ID da Braze
 - E-mail
 - Número de telefone
 - Token por push
@@ -37,7 +38,7 @@ Os perfis de usuário são um ótimo recurso para solução de problemas e teste
 
 Por exemplo, se um usuário relatar um problema e você não tiver certeza de qual dispositivo e sistema operacional ele está usando, poderá usar a [guia Overview (Visão geral](#overview-tab) ) para encontrar essas informações (desde que tenha o e-mail ou a ID do usuário). Também é possível visualizar o idioma de um usuário, o que pode ser útil se você estiver solucionando problemas de uma [campanha multilíngue][13] que não se comportou como esperado.
 
-É possível usar a [guia Engajamento](#engagement-tab) para verificar se um determinado usuário recebeu uma campanha. Além disso, se esse usuário específico tiver recebido a campanha, você poderá ver quando ele a recebeu. Também é possível verificar se um usuário está em um determinado segmento e se ele tem aceitação para push, envio de e-mail ou ambos. Essas informações são úteis para fins de solução de problemas. Por exemplo, você deve verificar essas informações se um usuário não receber uma campanha que você esperava que ele recebesse ou se receber uma campanha que você não esperava que ele recebesse.
+É possível usar a [guia Engajamento](#engagement-tab) para verificar se um determinado usuário recebeu uma campanha. Além disso, se esse usuário específico tiver recebido a campanha, você poderá ver quando ele a recebeu. Também é possível verificar se um usuário está em um determinado segmento e se há aceitação de push, e-mail ou ambos. Essas informações são úteis para fins de solução de problemas. Por exemplo, você deve verificar essas informações se um usuário não receber uma campanha que você esperava que ele recebesse ou se receber uma campanha que você não esperava que ele recebesse.
 
 ## Elementos do perfil do usuário
 
@@ -76,9 +77,9 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 | Segmentos | Segmentos em que esse usuário está incluído. Selecione um segmento da lista para visualizá-lo. |
 | Estatísticas de comunicação | Quando esse usuário recebeu as últimas mensagens suas de cada canal. |
 | Atribuição da instalação | Informações sobre como e quando um usuário instalou seu app. Saiba mais sobre [como entender as instalações do usuário]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Diversos | O [número do balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) do usuário. |
+| Diversos | O [número do balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) do usuário. |
 | Envio de mensagens do Canva recebidas | Mensagens de canvas que esse usuário recebeu e quando. Selecione uma mensagem da lista para visualizá-la. |
-| Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) e [previsão de eventos]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) para esse usuário. |
+| Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) e [previsão de eventos]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) para esse usuário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![A guia Engajamento de um perfil de usuário exibe suas configurações de contato e estatísticas de comunicação.][3]
@@ -88,7 +89,7 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 A guia **Histórico de mensagens** do perfil do usuário mostra eventos recentes relacionados a envio de mensagens (cerca de 40) para um usuário individual nos últimos 30 dias. Esses eventos incluem as mensagens que o usuário enviou, recebeu, com as quais interagiu e muito mais. Note que os dados dessa guia não são atualizados depois que um usuário é mesclado.
 
 {% alert note %}
-Se tiver comentários sobre essa tabela ou se quiser ver eventos específicos, envie um e-mail para [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) com a linha de assunto "Messaging History Tab Feedback".
+Se tiver comentários sobre essa tabela ou quiser ver eventos específicos, envie um e-mail para [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) com a linha de assunto "Feedback sobre a Guia Histórico de mensagens".
 {% endalert %}
 
 ![A guia Histórico de mensagens mostra quais campanhas e Canvas um usuário recebeu.][5]
@@ -99,7 +100,7 @@ Para cada evento na tabela **Histórico de mensagens**, é possível ver o canal
 
 ##### Eventos de engajamento com mensagens
 
-Os seguintes eventos de engajamento com mensagens estão disponíveis para e-mail, SMS, push, mensagens no app, cartões de conteúdo e webhooks. Para saber mais sobre como eventos específicos são rastreados, consulte o [glossário de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+Os seguintes eventos de engajamento com mensagens estão disponíveis para e-mail, SMS, push, mensagens no app, cartões de conteúdo e webhooks. Para saber mais sobre como eventos específicos são rastreados, consulte o [glossário de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 | Canal | Eventos de engajamento disponíveis |
 | --- | --- |
@@ -126,7 +127,7 @@ No momento, os eventos de abortar não estão disponíveis para mensagens no app
 
 ##### Eventos de limite de frequência
 
-Um evento de limite de frequência ocorre quando um usuário está qualificado para receber uma mensagem, mas não a recebeu de fato devido às configurações [de limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Você pode personalizar as configurações de limitação de frequência em **Settings** > **Frequency Capping Rules**.
+Um evento de limite de frequência ocorre quando um usuário está qualificado para receber uma mensagem, mas não a recebe de fato devido às configurações de [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Você pode personalizar as configurações de limitação de frequência em **Settings** > **Frequency Capping Rules**.
 
 {% alert note %}
 Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá gerenciar o limite de frequência em **Engajamento** > Configurações de mensagens globais **.**
@@ -140,7 +141,7 @@ Os envios de cartões de conteúdo são registrados quando o cartão está dispo
 
 #### Nota sobre o evento aberto por e-mail {#note-on-email-open-event}
 
-O rastreamento de abertura de e-mails é propenso a erros em qualquer ferramenta, inclusive na Braze. Com uma variedade de recursos de proteção de privacidade oferecidos por diferentes clientes de e-mail que bloqueiam o carregamento automático de imagens ou as carregam proativamente no servidor, os eventos de abertura de e-mail são suscetíveis a falsos positivos e falsos negativos.
+O rastreamento de abertura de e-mails é propenso a erros em qualquer ferramenta, inclusive no Braze. Com uma variedade de recursos de proteção de privacidade oferecidos por diferentes clientes de e-mail que bloqueiam o carregamento automático de imagens ou as carregam proativamente no servidor, os eventos de abertura de e-mail são suscetíveis a falsos positivos e falsos negativos.
 
 Embora as estatísticas de abertura de e-mail possam ser úteis de forma agregada, por exemplo, para comparar a eficácia de diferentes linhas de assunto, não se deve presumir que um evento de abertura individual para um usuário individual seja significativo.
 

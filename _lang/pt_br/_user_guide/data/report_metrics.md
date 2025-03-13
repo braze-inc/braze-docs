@@ -144,6 +144,18 @@ Mensagem no app
 
 {% api %}
 
+### Análise de dados de campanha
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+O desempenho da mensagem em vários canais. As métricas mostradas dependem do canal de envio de mensagens selecionado e se o [experimento do Feature Flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) é um teste multivariado.
+
+{% endapi %}
+
+{% api %}
+
 ### Opções enviadas
 
 {% apitags %}
@@ -178,7 +190,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} Como cliente Braze, as entregas são cobradas em sua cota de SMS. 
 
-<span class="calculation-line">Cálculo: Contagem</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Cálculo:
+    <ul>
+        <li><i>Entregas Confirmadas:</i> Contagem</li>
+        <li><i>Taxa de Entrega Confirmada:</i> (Entregas Confirmadas) / (Envios)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ Entre em contato com o <a href="/docs/braze_support/">suporte da Braze</a> para 
 
 {% api %}
 
+### Taxa de entregas com falhas
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
+
+Entre em contato com o <a href="/docs/braze_support/">suporte da Braze</a> para obter assistência na compreensão dos motivos das falhas de entrega.
+
+<span class="calculation-line">Cálculo: (Falhas de Entrega) / (Envios)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Aberturas diretas
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} As falhas são incluídas na contagem de <i>envios</i>, mas não na contagem de <i>entregas</i>.</td>
 
 <span class="calculation-line">Cálculo<i>(taxa de falha)</i>: (Falhas) / (Envios)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Desempenho do experimento de Feature Flag
+
+{% apitags %}
+Feature Flags
+{% endapitags %}
+
+Métricas de desempenho da mensagem em um experimento de Feature Flag. As métricas específicas mostradas variarão dependendo do canal de envio de mensagens e se o experimento foi um teste multivariado ou não.
 
 {% endapi %}
 
@@ -604,6 +652,20 @@ WhatsApp
 
 {% api %}
 
+### Taxa de leitura
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Read Rate' %}
+
+<span class="calculation-line">Cálculo: (Leituras com recibos de leitura) / (Envios)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Recebido
 
 {% apitags %}
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Rejections' %} Como cliente do Braze, as rejeições são cobradas em sua cota de SMS.
 
-<span class="calculation-line">Cálculo: Contagem</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Cálculo:
+    <ul>
+        <li><i>Rejeições:</i> Contagem</li>
+        <li><i>Taxa de Rejeição:</i> (Rejeições) / (Envios)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">Cálculo: Contagem</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Cálculo:
+    <ul>
+        <li><i>Envios para operadora:</i> Contagem</li>
+        <li><i>Taxa de envios para operadora:</i> (Envia para a operadora) / (Envia)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -783,7 +861,7 @@ Mensagem no app
 Envio de e-mail, cartões de conteúdo, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} Para o LINE, isso é rastreado depois que um limite mínimo de 20 mensagens por dia é atingido. Para envios de e-mail AMP, esse é o total de cliques nas versões HTML e de texto simples.
+{% multi_lang_include metrics.md metric='Total Clicks' %} Para o LINE, isso é rastreado depois que um limite mínimo de 20 mensagens por dia é atingido. Os e-mails AMP incluem cliques registrados nas versões HTML e texto simples. Esse número pode ser artificialmente inflacionado por ferramentas anti-spam. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +884,17 @@ Envio de e-mail, cartões de conteúdo, SMS, LINE
 Cartões de conteúdo
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} Se um usuário receber dois cartões diferentes da mesma campanha e descartar ambos, essa contagem aumentará em dois. A re-eligibilidade permite que você incremente o _Total de Descartes_ toda vez que um usuário receber um cartão; cada cartão é uma mensagem diferente.
 
-<span class="calculation-line">Cálculo: Contagem</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Cálculo:
+    <ul>
+        <li><i>Total de Descartes:</i> Contagem</li>
+        <li><i>Taxa Total de Descartes:</i> Total de Descartes / Total de Impressões</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +957,7 @@ Cartões de conteúdo, e-mail, mensagem no app, Web Push, iOS Push, Android Push
 Envio de e-mail, cartões de conteúdo, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} Isso é rastreado em um período de sete dias para o envio de e-mail. Isso inclui cliques em links de cancelamento de inscrição fornecidos pela Braze. Para o LINE, isso é rastreado depois que um limite mínimo de 20 mensagens por dia é atingido.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} Isso inclui cliques em links de cancelar inscrição fornecidos pelo Braze. Isso é rastreado ao longo de um período de sete dias para e-mail. Para o LINE, isso é rastreado depois que um limite mínimo de 20 mensagens por dia é atingido.
 
 {::nomarkdown}
 <span class="calculation-line">

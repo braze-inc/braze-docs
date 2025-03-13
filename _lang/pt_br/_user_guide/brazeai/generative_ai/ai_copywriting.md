@@ -21,7 +21,7 @@ Para gerar um texto usando o Assistente de Copywriting de IA, siga estas etapas:
 5. (Opcional) Escolha um tom de mensagem entre as opções disponíveis. Isso determinará o estilo da cópia gerada.
 6. (Opcional) Disponível para notificações por push: Selecione **Reference past campaign data (Referência a dados de campanhas** anteriores) para usar suas mensagens push para celular anteriores (campanhas e etapas do Canva) como referência estilística para gerar novas cópias. Quando selecionada, a saída imitará o estilo de suas mensagens anteriores.
 7. Selecione o idioma de saída. Isso pode ser diferente do seu idioma de entrada.
-8. Clique em **Generate (Gerar**).
+8. Selecione **Generate (Gerar**).
 
 Usamos as informações que você fornece para solicitar que a GPT escreva um texto para você. A resposta será obtida da OpenAI e fornecida a você. 
 

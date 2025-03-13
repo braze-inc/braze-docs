@@ -1,7 +1,7 @@
 ---
 nav_title: Tipos de mensagens
 article_title: Tipos de Mensagem LINE
-page_order: 1
+page_order: 0
 description: "Este artigo cobre os diferentes tipos de mensagens LINE."
 page_type: reference
 tool:

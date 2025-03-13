@@ -36,7 +36,7 @@ guide_menu_list:
 
 O Intelligence Suite oferece recursos avançados para analisar o histórico do usuário e a performance da campanha e do Canva e, em seguida, fazer ajustes automáticos para aumentar o engajamento, a visualização e as conversões. Para obter alguns exemplos de como esses recursos podem beneficiar diferentes setores, veja os casos de uso abaixo.
 
-### E-commerce
+### e-commerce
 
 - **Promoções relâmpago:** Use o [filtro Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) para estudar o histórico do usuário e identificar os usuários que respondem mais às notificações por push do que aos e-mails e, em seguida, envie notificações por push e e-mails para os respectivos usuários. Opcionalmente, selecione um canal específico para usuários que não têm dados suficientes para determinar seu canal preferido.
 - **Banners promocionais:** Use o [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) para analisar a performance de diferentes banners promocionais em uma campanha recorrente e, em seguida, selecione e envie automaticamente o banner que gera as maiores taxas de cliques.
