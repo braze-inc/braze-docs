@@ -24,7 +24,7 @@ Para a **personalidade da marca**, pense no que torna sua marca única. Inclua c
 
 Para **Exclusões**, liste qualquer linguagem ou estilo que não esteja alinhado com sua marca. Por exemplo, talvez você queira evitar "sarcasmo", "atitudes negativas" ou tons "condescendentes".
 
-A janela "Criar diretriz da marca" com campos para inserir o nome, a descrição, a personalidade, as exclusões e o tom]\[1].
+\![A janela "Criar diretriz da marca" com campos para inserir o nome, a descrição, a personalidade, as exclusões e o tom]\[1].
 
 ### Etapa 4: Teste suas diretrizes
 
