@@ -35,6 +35,7 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
   syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
@@ -211,12 +212,45 @@ Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github
 
 It should not be used to redirect URLs on an existing Braze Docs page to another existing Braze Docs page. Instead, these URLs should be updated with the newest possible link. We want to avoid cases in which someone reading an existing Braze Docs page clicks a link and is redirected from one page, to another page, to another page, and so on. `ulinks` helps solves this issue, improving the end-user experience.
 
+### `fblinks`
+
+`fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
+
+{% alert important %}
+To use `fblinks`, you'll need to install the dependencies using `yarn`. In the docs repository, run `brew install yarn && yarn install`. This only needs to be done a single time.
+{% endalert %}
+
+{% tabs local %}
+{% tab usage example %}
+#### Example command
+
+```bash
+$ braze-docs git:(404s) ✓ ./bdocs fblinks                           
+59 broken links were found. The full list can be found at:
+  /Users/Alex.Lee/braze-docs/scripts/temp/broken-links.csv
+```
+
+{% alert tip %}
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> the link to open the CSV file in a new tab.
+{% endalert %}
+
+#### Example CSV file
+
+```plaintext
+File,Broken Link,Path to Broken Link
+/Users/Isaiah.Robinson/braze-docs/_docs/_api/api_limits.md,/docs/api/endpoints/email/bounce/remove,/Users/Isaiah.Robinson/braze-docs/_docs/_api/endpoints/email/bounce/remove.md
+/Users/Isaiah.Robinson/braze-docs/_docs/_api/endpoints/messaging.md,/docs/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/,/Users/Isaiah.Robinson/braze-docs/_docs/_docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
+/Users/Isaiah.Robinson/braze-docs/_docs/_contributing/bdocs.md,/docs/resources/articles,/Users/Isaiah.Robinson/braze-docs/_docs/_resources/articles.md
+```
+{% endtab %}
+{% endtabs %}
+
 ### `lredirects`
 
 `lredirects` (short for "list redirects") checks if any new redirects have been added to [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js), then lists all of the old URLs using a base URL of your choice. For more general information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls).
 
 {% alert tip %}
-If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 {% endalert %}
 
 {% tabs local %}
